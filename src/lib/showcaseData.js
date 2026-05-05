@@ -11,7 +11,7 @@ export const showcaseProjects = [
     slug: "metal-fence-centreville",
     title: "INSTALLING NEW METAL FENCE",
     location: "Centreville, February 2025",
-    image: "/images/img02.jpeg"
+    image: "/fence.webp"
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const showcaseProjects = [
     slug: "fence-gate-falls-church",
     title: "CUSTOM FENCE AND GATE",
     location: "Falls Church, November 2024",
-    image: "/images/img06.jpeg"
+    image: "/fence2.avif"
   },
   {
     id: 7,
@@ -53,14 +53,14 @@ export const showcaseProjects = [
     slug: "custom-wood-fence-ashburn",
     title: "NEW CUSTOM WOOD FENCE",
     location: "Ashburn, October 2024",
-    image: "/images/img08.jpeg"
+    image: "/fence2.avif"
   },
   {
     id: 10,
     slug: "wood-multi-level-deck-chantilly",
     title: "WOOD MULTI LEVEL DECK",
     location: "Chantilly, November 2024",
-    image: "/images/img09.jpeg"
+    image: "/images/img11.jpeg"
   },
   {
     id: 11,
@@ -70,17 +70,10 @@ export const showcaseProjects = [
     image: "/images/img10.jpeg"
   },
   {
-    id: 12,
-    slug: "rooftop-deck-washington-dc",
-    title: "CONSTRUCTION ROOFTOP DECK",
-    location: "Washington DC, August 2024",
-    image: "/images/img11.jpeg"
-  },
-  {
     id: 13,
     slug: "multi-level-deck-alexandria",
     title: "MULTI LEVEL DECK BALCONY",
     location: "Alexandria, July 2024",
-    image: "/images/img12.jpeg"
+    image: "/images/img19.jpeg"
   }
 ];

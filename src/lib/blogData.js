@@ -43,7 +43,7 @@ export const blogPosts = [
     id: 5,
     title: 'How Much Does a Deck Cost in Northern Virginia in 2026?',
     slug: 'how-much-does-deck-cost-northern-virginia',
-    image: '/images/img100.jpg',
+    image: '/images/img57.jpeg',
     date: 'September 10, 2026',
     author: 'Nick - Loudoun Decks',
     excerpt: 'Explore the 2026 pricing breakdowns for new deck construction, materials, and labor in Loudoun and Fairfax County.',

@@ -60,7 +60,7 @@ export default function LoudounCountyPage() {
         description="Whether you live in Ashburn, Leesburg, or Middleburg, we provide high-quality workmanship and end-to-end support. Our team understands Loudoun's unique neighborhood styles and property layouts."
         listTitle="Services We Provide in Loudoun:"
         listItems={services}
-        image1="/images/img11.jpeg"
+        image1="/images/img03.jpeg"
         image2="/images/img32.jpeg"
       />
       <section className={styles.permitSection}>
@@ -76,6 +76,7 @@ export default function LoudounCountyPage() {
                 <li>Preparing basic plans for permitting</li>
                 <li>Coordinating with the county for necessary approvals</li>
                 <li>Building according to local standards and guidelines</li>
+                <li>Ensuring all work meets VUSBC (Virginia Uniform Statewide Building Code)</li>
               </ul>
               <p className={styles.permitFooter}>
                 This means you don&apos;t have to worry about paperwork or code compliance we include this as part of a smooth, start-to-finish experience.
@@ -84,7 +85,7 @@ export default function LoudounCountyPage() {
           </div>
         </div>
       </section>
-      <ServiceVisual image="/images/img34.jpeg" />
+      <ServiceVisual image="/images/img58.jpeg" />
 
       {/* Deep local content — SEO content expansion for authority */}
       <article style={{ padding: '4rem 0' }}>
