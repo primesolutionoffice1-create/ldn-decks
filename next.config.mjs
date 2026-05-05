@@ -101,6 +101,10 @@ const nextConfig = {
       { source: '/services/outdoor-power-washing/:path*', destination: '/services/outdoor-washing', permanent: true },
       { source: '/services/gazebos-and-pergolas', destination: '/services/gazebo-pergola', permanent: true },
       { source: '/services/fences', destination: '/services/fence', permanent: true },
+      { source: '/deck-replacement', destination: '/services/deck-replacement', permanent: true },
+      { source: '/fence-builder-northern-virginia', destination: '/services/fence', permanent: true },
+      { source: '/fire-pit-builder-northern-virginia', destination: '/services/fire-pits', permanent: true },
+      { source: '/pergola-builder-northern-virginia', destination: '/services/gazebo-pergola', permanent: true },
 
       // Location Hubs
       { source: '/top-decks-build-near-you', destination: '/near-you', permanent: true },
