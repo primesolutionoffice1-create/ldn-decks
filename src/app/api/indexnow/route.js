@@ -80,7 +80,7 @@ function buildAllUrls() {
     '/multi-level-deck-builder-northern-virginia',
     '/pool-deck-builder-northern-virginia',
     '/outdoor-kitchen-builder-northern-virginia',
-    '/pergola-builder-northern-virginia',
+    '/services/gazebo-pergola',
     '/fence-builder-northern-virginia',
     '/fire-pit-builder-northern-virginia',
     '/pressure-washing-deck-northern-virginia',
