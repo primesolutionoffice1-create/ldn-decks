@@ -64,7 +64,7 @@ export default function StaffordDeckBuilderPage() {
               { title: 'Composite Decks', range: '$15k–$40k', link: '/services/new-decks' },
               { title: 'Deck Resurfacing', range: '$8k–$20k', link: '/services/deck-resurfacing' },
               { title: 'Screened Porches', range: '$18k–$45k', link: '/services/porches' },
-              { title: 'Pergolas', range: '$7k–$20k', link: '/pergola-builder-northern-virginia' },
+              { title: 'Pergolas', range: '$7k–$20k', link: '/services/gazebo-pergola' },
               { title: 'Patios', range: '$6k–$16k', link: '/services/patios' },
               { title: 'Fencing', range: '$3.5k–$10k', link: '/fence-builder-northern-virginia' },
             ].map((item) => (
