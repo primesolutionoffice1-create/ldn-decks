@@ -130,7 +130,8 @@ export default function Header() {
               alt="ldndecks logo"
               width={200}
               height={100}
-              style={{ objectFit: "contain" }}
+              style={{ objectFit: "contain", width: 'auto', height: 'auto' }}
+              sizes="(max-width: 768px) 160px, 200px"
               priority
             />
           </Link>

@@ -1,9 +1,10 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import React from "react";
 import { usePathname } from "next/navigation";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+const Footer = dynamic(() => import("../components/Footer"), { ssr: true });
 import ScrollToTop from "../components/ScrollToTop";
 import FloatingCallButton from "../components/FloatingCallButton";
 import Breadcrumbs from "../components/Breadcrumbs";

@@ -1,21 +1,26 @@
+import dynamic from 'next/dynamic';
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import CalculatorCTA from "@/components/CalculatorCTA";
-import HandCraftedDecks from "@/components/HandCraftedDecks";
 import Introduction from "@/components/Introduction";
-import PromoModal from "@/components/PromoModal";
-import HowItWorks from "@/components/HowItWorks";
 import MaterialPartners from "@/components/MaterialPartners";
-import ServicesHome from "@/components/ServicesHome";
-import Testimonials from "@/components/Testimonials";
-import FAQ from "@/components/FAQ";
-import TrustLogos from "@/components/TrustLogos";
-import ContactMap from "@/components/ContactMap";
-import ContactHome from "@/components/ContactHome";
-import RelatedGuides from "@/components/RelatedGuides";
-import HomeQuickLinks from "@/components/HomeQuickLinks";
-import HomeSEOContent from "@/components/HomeSEOContent";
-import JsonLd from "@/components/JsonLd";
+
+// Dynamic imports for below-the-fold components
+const PromoModal = dynamic(() => import("@/components/PromoModal"), { ssr: false });
+const HowItWorks = dynamic(() => import("@/components/HowItWorks"));
+const HandCraftedDecks = dynamic(() => import("@/components/HandCraftedDecks"));
+const ServicesHome = dynamic(() => import("@/components/ServicesHome"));
+const Testimonials = dynamic(() => import("@/components/Testimonials"));
+const FAQ = dynamic(() => import("@/components/FAQ"));
+const TrustLogos = dynamic(() => import("@/components/TrustLogos"));
+const ContactMap = dynamic(() => import("@/components/ContactMap"), { ssr: false });
+const ContactHome = dynamic(() => import("@/components/ContactHome"));
+const RelatedGuides = dynamic(() => import("@/components/RelatedGuides"));
+const HomeQuickLinks = dynamic(() => import("@/components/HomeQuickLinks"));
+const HomeSEOContent = dynamic(() => import("@/components/HomeSEOContent"));
+const BlogFeed = dynamic(() => import("@/components/BlogFeed"));
+const JsonLd = dynamic(() => import("@/components/JsonLd"), { ssr: false });
+
 import styles from "./page.module.css";
 import { buildMetadata } from "@/lib/seo";
 
@@ -90,7 +95,7 @@ const businessSchema = {
   ]
 };
 
-// Homepage-specific WebPage schema — tells Google this is the main landing page
+// Homepage-specific WebPage schema
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -120,8 +125,6 @@ const homepageSchema = {
     "https://ldndecks.com/contact"
   ]
 };
-
-import BlogFeed from "@/components/BlogFeed";
 
 export default function Home() {
     return (
