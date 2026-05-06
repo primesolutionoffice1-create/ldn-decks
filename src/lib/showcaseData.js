@@ -75,5 +75,12 @@ export const showcaseProjects = [
     title: "MULTI LEVEL DECK BALCONY",
     location: "Alexandria, July 2024",
     image: "/images/img19.jpeg"
+  },
+  {
+    id: 14,
+    slug: "rooftop-deck-washington-dc",
+    title: "ROOFTOP DECK CONSTRUCTION",
+    location: "Washington, DC, March 2025",
+    image: "/showcase/img07.jpeg"
   }
 ];
