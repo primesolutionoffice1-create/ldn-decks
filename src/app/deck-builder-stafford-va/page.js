@@ -66,7 +66,7 @@ export default function StaffordDeckBuilderPage() {
               { title: 'Screened Porches', range: '$18k–$45k', link: '/services/porches' },
               { title: 'Pergolas', range: '$7k–$20k', link: '/services/gazebo-pergola' },
               { title: 'Patios', range: '$6k–$16k', link: '/services/patios' },
-              { title: 'Fencing', range: '$3.5k–$10k', link: '/fence-builder-northern-virginia' },
+              { title: 'Fencing', range: '$3.5k–$10k', link: '/services/fence' },
             ].map((item) => (
               <Link key={item.title} href={item.link} style={{ display: 'block', background: '#f9f9f9', borderRadius: 8, padding: '1rem', textDecoration: 'none', color: 'inherit' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.25rem', fontSize: '0.95rem' }}>{item.title}</h3>

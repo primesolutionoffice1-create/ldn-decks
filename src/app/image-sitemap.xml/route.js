@@ -62,11 +62,11 @@ export async function GET() {
   // Gallery images mapped to their actual display pages
   const galleryImages = [
     { page: '/deck-builder-reston-va', image: '/images/img01.jpeg', title: 'Custom deck installation in Reston, VA' },
-    { page: '/fence-builder-northern-virginia', image: '/images/img02.jpeg', title: 'Metal fence installation in Centreville, VA' },
+    { page: '/services/fence', image: '/images/img02.jpeg', title: 'Metal fence installation in Centreville, VA' },
     { page: '/deck-builder-manassas-va', image: '/images/img03.jpeg', title: 'Deck construction in Manassas, VA' },
     { page: '/deck-resurfacing-vs-replacement', image: '/images/img04.jpeg', title: 'Deck resurfacing project in Sterling, VA' },
     { page: '/deck-repair-loudoun-county', image: '/images/img05.jpeg', title: 'Balcony reconstruction in Chantilly, VA' },
-    { page: '/fence-builder-northern-virginia', image: '/images/img06.jpeg', title: 'Custom fence and gate in Falls Church, VA' },
+    { page: '/services/fence', image: '/images/img06.jpeg', title: 'Custom fence and gate in Falls Church, VA' },
     { page: '/deck-builder-manassas-va', image: '/images/img07.jpeg', title: 'New deck build in Manassas, VA' },
     { page: '/deck-builder-ashburn-va', image: '/images/img08.jpeg', title: 'Custom wood fence in Ashburn, VA' },
     { page: '/multi-level-deck-builder-northern-virginia', image: '/images/img09.jpeg', title: 'Wood multi-level deck in Chantilly, VA' },
