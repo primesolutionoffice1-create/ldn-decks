@@ -130,8 +130,7 @@ export default function Header() {
               alt="ldndecks logo"
               width={200}
               height={100}
-              style={{ objectFit: "contain", width: 'auto', height: 'auto' }}
-              sizes="(max-width: 768px) 160px, 200px"
+              style={{ objectFit: "contain" }}
               priority
             />
           </Link>
@@ -165,18 +164,6 @@ export default function Header() {
               <Link href="/team">Our Team</Link>
               <Link href="/blog">News</Link>
               <Link href="/faqs">FAQs</Link>
-              <a 
-                href="https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241/#sealclick" 
-                target="_blank" 
-                rel="nofollow"
-                className={styles.bbbTopSeal}
-              >
-                <img 
-                  src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png" 
-                  style={{ border: 0, height: '32px', width: 'auto', marginLeft: '15px', verticalAlign: 'middle' }} 
-                  alt="Loudoun Decks BBB Business Review" 
-                />
-              </a>
             </div>
           </div>
 

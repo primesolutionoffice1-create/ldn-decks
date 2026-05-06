@@ -20,6 +20,7 @@ const HomeQuickLinks = dynamic(() => import("@/components/HomeQuickLinks"));
 const HomeSEOContent = dynamic(() => import("@/components/HomeSEOContent"));
 const BlogFeed = dynamic(() => import("@/components/BlogFeed"));
 const JsonLd = dynamic(() => import("@/components/JsonLd"));
+const TrustSection = dynamic(() => import("@/components/TrustSection"));
 
 import styles from "./page.module.css";
 import { buildMetadata } from "@/lib/seo";
@@ -133,6 +134,7 @@ export default function Home() {
       <JsonLd data={homepageSchema} />
       <PromoModal />
             <Hero />
+            <TrustSection />
             <Features />
             <CalculatorCTA />
             <MaterialPartners />

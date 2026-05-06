@@ -15,7 +15,7 @@ export default function Hero() {
         fill
         priority
         fetchPriority="high"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1920px"
+        sizes="100vw"
       />
       <div className={styles.overlay}></div>
       <div className={styles.content}>
@@ -42,20 +42,6 @@ export default function Hero() {
           <button onClick={openContact} className={styles.ctaButtonAlt}>
             Get Free Estimate
           </button>
-        </div>
-        
-        <div className={styles.bbbSeal}>
-          <a 
-            href="https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241/#sealclick" 
-            target="_blank" 
-            rel="nofollow"
-          >
-            <img 
-              src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png" 
-              style={{ border: 0 }} 
-              alt="Loudoun Decks BBB Business Review" 
-            />
-          </a>
         </div>
       </div>
     </section>

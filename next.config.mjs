@@ -9,6 +9,7 @@ const nextConfig = {
       { source: '/composite-deck-builder-loudoun-2', destination: '/deck-builders-loudoun', permanent: true },
       { source: '/contact-us', destination: '/contact', permanent: true },
       { source: '/best-composite-decking-virginia-trex-timbertech-fiberon', destination: '/trex-vs-timbertech-vs-azek', permanent: true },
+      { source: '/rooftop-deck-washington-dc', destination: '/showcase/rooftop-deck-washington-dc', permanent: true },
       
       // Batch 2 - Legacy & WordPress Remnants
       { source: '/elementskit-content/:path*', destination: '/', permanent: true },

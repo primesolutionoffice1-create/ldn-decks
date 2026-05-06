@@ -100,18 +100,6 @@
   opacity: 0.8;
 }
 
-.bbbTopSeal {
-  display: flex;
-  align-items: center;
-  border-right: none !important;
-}
-
-@media screen and (max-width: 900px) {
-  .bbbTopSeal {
-    display: none;
-  }
-}
-
 /* --- Main Nav --- */
 .mainNav {
   display: flex;

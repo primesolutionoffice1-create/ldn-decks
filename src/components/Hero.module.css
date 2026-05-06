@@ -148,25 +148,6 @@
   transform: translateY(-3px);
 }
 
-.bbbSeal {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bbbSeal a {
-  display: inline-block;
-  background: white;
-  padding: 10px;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-}
-
-.bbbSeal a:hover {
-  transform: scale(1.05);
-}
-
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 1024px) {
   .title {
