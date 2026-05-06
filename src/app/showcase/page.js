@@ -9,8 +9,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/showcase',
-  title: 'Deck Project Gallery | Northern Virginia | Loudoun Decks',
-  description: 'Browse 50+ custom deck, porch, patio, and fence projects built across Loudoun, Fairfax & Prince William counties. Before/after photos and project details.',
+  title: 'Custom Deck Project Gallery | Trex Deck Designer & Showcase',
+  description: 'Explore our portfolio of custom deck, porch, and patio projects across Northern Virginia. See why we are the leading Trex deck designer in the region.',
 });
 
 export default function ShowcasePage() {

@@ -169,6 +169,58 @@ export default function DeckCostCalculator() {
             </div>
           </div>
 
+          <article style={{ marginTop: '4rem', lineHeight: 1.8, color: '#333' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-dark)' }}>How Much Does a Deck Cost in Northern Virginia? (2026 Guide)</h2>
+            <p>
+              If you are planning a backyard renovation in Fairfax, Loudoun, or Prince William County, understanding the <strong>cost to build a deck</strong> is likely your first priority. In 2026, Northern Virginia remains one of the most competitive and premium markets for outdoor construction in the United States. 
+            </p>
+            <p>
+              The average <strong>deck installation cost</strong> for a professional project in our region typically ranges from <strong>$15,000 to $45,000</strong>. However, high-end luxury builds with integrated kitchens, masonry, and multi-level architecture can exceed $80,000. Use our calculator above to get a baseline estimate for your specific square footage and material preferences.
+            </p>
+
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Breaking Down Deck Price per Square Foot</h3>
+            <p>
+              When comparing quotes from different contractors, you will often hear about <strong>deck price per square foot</strong>. This metric varies significantly based on the height of the structure, soil conditions, and the complexity of the framing.
+            </p>
+            <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Pressure-Treated Wood:</strong> $25 - $40 per sq. ft. (installed)</li>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Standard Composite (Trex Enhance):</strong> $45 - $65 per sq. ft.</li>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Premium PVC (TimberTech AZEK):</strong> $70 - $95 per sq. ft.</li>
+            </ul>
+
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>The Cost of Trex Decking vs. Traditional Wood</h3>
+            <p>
+              Many homeowners ask: <em>Is the cost of Trex decking worth it?</em> While the upfront <strong>composite deck cost</strong> is 40% to 60% higher than pressure-treated pine, the long-term ROI is indisputable. A wood deck requires professional power-washing, sanding, and staining every two years—a service that costs roughly $1,500 - $2,500 per visit in Northern Virginia. 
+            </p>
+            <p>
+              Over a 10-year period, the "cheaper" wood deck actually becomes more expensive than a premium composite installation due to these hidden maintenance taxes. Additionally, composite materials like Trex and TimberTech carry 25-year to 50-year fade and stain warranties, protecting your home's appraisal value far better than natural wood.
+            </p>
+
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Deck Replacement Cost: Resurfacing vs. Full Tear-Down</h3>
+            <p>
+              If you have an existing structure that is fading or splintering, you may be looking for the <strong>deck replacement cost</strong>. If your underlying frame (posts, beams, and joists) is still structurally sound, we can often perform a "resurface." This involves removing the old boards and installing new composite decking and railings on the existing skeleton. 
+            </p>
+            <p>
+              A resurface project can save you 30% to 50% compared to a full tear-down and rebuild. However, if your deck was built before modern Virginia building codes or shows signs of deep-seated rot, a full replacement is required for safety and permit compliance.
+            </p>
+
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Factors Influencing Deck Costs in NoVA</h3>
+            <ol style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
+              <li style={{ marginBottom: '1rem' }}>
+                <strong>Elevation & Height:</strong> Second-story decks require massive 6x6 engineered posts and increased labor for safety rigging, adding $3,000 - $7,000 to the base price.
+              </li>
+              <li style={{ marginBottom: '1rem' }}>
+                <strong>Permits & HOAs:</strong> Fairfax and Loudoun County have some of the strictest permitting offices in the country. Professional architectural drawings and permit fees typically range from $800 - $1,500.
+              </li>
+              <li style={{ marginBottom: '1rem' }}>
+                <strong>Lighting & Add-ons:</strong> Low-voltage LED lighting systems, custom built-in benches, and picture-frame borders are the details that transform a standard deck into a luxury retreat.
+              </li>
+            </ol>
+            <p>
+              Ready for a precise estimate? <Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600, textDecoration: 'underline' }}>Schedule a free on-site design consultation</Link> with the Loudoun Decks team today.
+            </p>
+          </article>
+
           {/* Embed Code Section this is what makes it a LINKABLE ASSET */}
           <div style={{ marginTop: '4rem', padding: '2rem', background: '#fafafa', borderRadius: 12, border: '1px solid #eee' }}>
             <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Embed This Calculator on Your Website</h2>

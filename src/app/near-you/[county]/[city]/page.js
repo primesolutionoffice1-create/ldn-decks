@@ -45,6 +45,30 @@ const cityLocalContent = {
     intro: "Fairfax City and the surrounding Fairfax County unincorporated communities represent one of the densest and most established residential markets in Northern Virginia. Fairfax homeowners tend to be long-term residents with significant equity in mature properties — exactly the type of homeowner who is ready to invest in a premium outdoor living space that will deliver lasting value. Neighborhoods like Mantua, Fair Lakes, and Burke provide the archetypal Northern Virginia backdrop for custom deck and porch work.",
     localContext: "Fairfax County has detailed deck and porch building code requirements that our team navigates daily. Depending on your property's location, HOA status, and whether you're in an incorporated area like Fairfax City, permitting requirements and review processes vary. We handle all of this from Fairfax City Special Use Permits to Fairfax County Building Permits and have established relationships with the relevant building departments. For properties with established tree canopy, steep grade changes, or complex lot configurations, we offer site-specific engineering solutions.",
     projectTypes: "In Fairfax, our most common projects include full structural deck replacements on 15-25 year old wood decks, composite deck resurfacing with TimberTech Vintage, premium screened porch additions on colonial and split-level homes, and multi-level outdoor living systems combining deck, porch, and patio zones."
+  },
+  Vienna: {
+    headline: "Custom Deck & Patio Builder in Vienna, VA",
+    intro: "Vienna is known for its beautiful residential streets, active community life, and high standards for home maintenance. From the historic homes near the W&OD Trail to the newer custom builds in the northern part of town, Vienna homeowners demand quality that matches the town's prestigious reputation. Whether you're looking to replace an aging wood deck or install a modern entertainment hub, Loudoun Decks provides the expert craftsmanship Vienna requires.",
+    localContext: "Navigating the Town of Vienna's specific zoning and architectural requirements can be complex. We handle the entire process, including compliance with the Board of Architectural Review where necessary. Our designs are tailored to the elegant, often wooded lots found in Vienna, ensuring your new [screened porch or deck](/services) feels like a natural extension of your home.",
+    projectTypes: "Popular Vienna projects include large multi-level Trex decks, custom bluestone patios for sloped yards, and premium screened-in porches that offer protection from Virginia's summer humidity while maximizing outdoor time."
+  },
+  Mclean: {
+    headline: "Luxury Outdoor Living in McLean, VA",
+    intro: "McLean represents the pinnacle of luxury residential living in Northern Virginia. Home to some of the most impressive estates in the D.C. metro area, McLean requires a deck builder who understands high-end materials, complex engineering, and sophisticated design. At Loudoun Decks, we specialize in the 'McLean standard' — delivering flawlessly executed outdoor kitchens, multi-tier composite decks, and architectural pergolas.",
+    localContext: "Working in McLean often involves managing large-scale projects on properties with significant grade changes and dense landscaping. We are experts in 'treehouse' cantilevered decks and integrated [outdoor kitchen systems](/services). We manage all Fairfax County permitting and work seamlessly with your existing landscape architects to ensure a cohesive, high-end result.",
+    projectTypes: "Common McLean projects include massive TimberTech AZEK decks with hidden fasteners, integrated outdoor kitchens with granite countertops, custom-built pergolas for poolside shade, and sophisticated low-voltage lighting systems."
+  },
+  Sterling: {
+    headline: "Deck Builder in Sterling, VA | Custom Wood & Composite Solutions",
+    intro: "Sterling is a diverse community with a wide range of home styles, from the established neighborhoods of Sterling Park to the newer planned communities of Cascades and Lowes Island. As Sterling homes age, many owners are looking to upgrade their original builder-grade decks to high-performance composite materials that can withstand the Virginia elements with zero maintenance.",
+    localContext: "We have extensive experience working with Sterling's major HOAs, including Cascades and Lowes Island, to ensure your project meets all community guidelines. Our team is familiar with the specific soil conditions and building codes across the 20164 and 20165 zip codes, providing a [stress-free construction process](/services) from design to final inspection.",
+    projectTypes: "In Sterling, we frequently perform full deck resurfacing, converting old wood decks to modern Trex or TimberTech systems, as well as building new screened porches and custom paver patios for active families."
+  },
+  Centreville: {
+    headline: "The Top Deck Builder in Centreville, VA",
+    intro: "Centreville is a hub of family life in Fairfax County, featuring a mix of colonial-style homes, townhouses, and newer developments. With its rolling hills and wooded buffers, Centreville backyards often require creative engineering to maximize usable space. Loudoun Decks has been the go-to contractor for Centreville homeowners looking for durable, beautiful, and HOA-compliant outdoor living solutions.",
+    localContext: "Our office is located right here in Centreville, making us your true local partner. We know the specific requirements of communities like Little Rocky Run, Sully Station, and Virginia Run. We specialize in navigating [Fairfax County building permits](/services) and ensuring your project is completed quickly and professionally.",
+    projectTypes: "Centreville projects often include multi-level decks for sloped lots, townhome deck replacements, and custom patios with integrated fire pits that become the focal point of neighborhood gatherings."
   }
 };
 

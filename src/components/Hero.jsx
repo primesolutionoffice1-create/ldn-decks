@@ -29,11 +29,11 @@ export default function Hero() {
           <span className={styles.ratingText}>5.0 Google Rating | 41 Reviews</span>
         </div>
         <h1 className={styles.title}>
-          Custom Deck Builder Serving Northern Virginia
+          Custom Deck Builder & Contractor Serving Northern Virginia
         </h1>
         <p className={styles.heroDescription}>
-          Custom-designed decks, screened porches & outdoor living spaces.
-          Trex & TimberTech certified. Serving Loudoun, Fairfax & Prince William Counties.
+          Custom-designed composite decks, screened porches & patios. 
+          Trex Platinum Partner serving Loudoun, Fairfax & Prince William Counties.
         </p>
         <div className={styles.buttonGroup}>
           <a href="tel:+15716557207" className={styles.ctaButton} onClick={trackPhoneClick}>

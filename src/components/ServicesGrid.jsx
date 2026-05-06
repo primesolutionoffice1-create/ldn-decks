@@ -6,29 +6,29 @@ import styles from './ServicesGrid.module.css';
 const servicesContent = [
   {
     id: 1,
-    title: 'Custom Deck Design & Build',
-    desc: 'From concept to completion, we design and build fully custom decks tailored to your space, style, and budget no templates, no shortcuts.',
+    title: 'Custom Deck Builder & Design',
+    desc: 'As the premier custom deck builder in Northern Virginia, we design and build fully tailored outdoor spaces from concept to completion. No templates, no shortcuts — just 5-Star craftsmanship.',
     image: '/showcase/img08.jpeg',
     link: '/services/new-decks'
   },
   {
     id: 2,
-    title: 'Deck Resurfacing',
-    desc: 'For homeowners with an existing deck, deck resurfacing is an option to update the look and usability of the space. This service focuses on improving the surface and appearance of an existing deck without building a completely new structure. Deck resurfacing can be a practical solution for extending the use of an outdoor space.',
+    title: 'Deck Resurfacing & Repair',
+    desc: 'Save on the cost of a full build with our expert deck resurfacing and repair services. We replace old boards with premium Trex or wood while ensuring your underlying structure is safe and stable.',
     image: '/images/img25.jpeg',
     link: '/services/deck-resurfacing'
   },
   {
     id: 3,
-    title: 'Bluestone Patios',
-    desc: 'Upgrade your outdoor space with a high-end bluestone patio — natural beauty, unmatched durability, and a timeless look.',
+    title: 'Patio Contractor & Bluestone Patios',
+    desc: 'Looking for a professional patio contractor? We specialize in high-end bluestone and paver patios that offer natural beauty, unmatched durability, and a timeless look for your backyard.',
     image: '/showcase/img11.jpeg',
     link: '/services/patios'
   },
   {
     id: 4,
-    title: 'Porches',
-    desc: 'Our porch projects are designed to create a comfortable transition between indoor and outdoor living. Porches can add usable outdoor space while maintaining a close connection to the home. We work with homeowners to plan porch layouts that fit their property and intended use.',
+    title: 'Screened Porch Builder',
+    desc: 'Experience the best of Northern Virginia outdoors as a leading screened porch builder. We create comfortable, bug-free transitions between indoor and outdoor living that add massive value to your home.',
     image: '/images/img03.jpeg',
     link: '/services/porches'
   },

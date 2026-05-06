@@ -7,9 +7,9 @@ const HomeSEOContent = () => {
       <div className={styles.container}>
         <div className={styles.grid}>
           <div className={styles.item}>
-            <h2 className={styles.heading}>Custom Deck Design in Northern Virginia</h2>
+            <h2 className={styles.heading}>Top-Rated Deck Builder & Contractor in Northern Virginia</h2>
             <p className={styles.text}>
-              Every home in Northern Virginia is unique, from the classic colonials in Vienna to the modern estates in Ashburn. We provide bespoke <strong>custom deck design</strong> that complements your home's architecture while maximizing your outdoor living potential. Whether you need a multi-level composite masterpiece or a cozy wood retreat, our design team ensures your project is a perfect fit.
+              Every home in Northern Virginia is unique, from the classic colonials in Vienna to the modern estates in Ashburn. We are the region's premier <strong>deck builder</strong> and <strong>deck contractor</strong>, providing bespoke designs that complement your home's architecture while maximizing your outdoor living potential. Whether you need a multi-level composite masterpiece or a professional <strong>patio installation</strong>, our team ensures your project is a perfect fit.
             </p>
           </div>
           <div className={styles.item}>
@@ -25,9 +25,9 @@ const HomeSEOContent = () => {
             </p>
           </div>
           <div className={styles.item}>
-            <h2 className={styles.heading}>Trex Deck Builder in Ashburn & Leesburg</h2>
+            <h2 className={styles.heading}>Trex Deck Builder in Fairfax, Ashburn & Leesburg</h2>
             <p className={styles.text}>
-              As a certified <strong>Trex deck builder</strong>, we bring the world's #1 decking brand to your backyard. Our platinum-tier expertise means you get the best warranties and precision installation on Trex Transcend, Enhance, and Lineage collections. We are the top-rated choice for homeowners in Ashburn, Leesburg, and across Loudoun County seeking a zero-maintenance outdoor sanctuary.
+              As a certified <strong>Trex deck builder</strong>, we bring the world's #1 decking brand to your backyard. Our platinum-tier expertise means you get the best warranties and precision installation on Trex Transcend, Enhance, and Lineage collections. We are the top-rated choice for homeowners in Fairfax, Ashburn, Leesburg, and across Northern Virginia seeking a zero-maintenance outdoor sanctuary.
             </p>
           </div>
         </div>

@@ -50,11 +50,11 @@ export default function HandCraftedDecks() {
       <div className={styles.bgOverlay}></div>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2>Hand Crafted Decks</h2>
+          <h2>Professional Deck Building & Design</h2>
           <div className={styles.checkmarks}>
-            <span className={styles.checkItem}><CheckIcon /> High-Quality</span>
-            <span className={styles.checkItem}><CheckIcon /> Custom Designs</span>
-            <span className={styles.checkItem}><CheckIcon /> Custom-Engineered Construction</span>
+            <span className={styles.checkItem}><CheckIcon /> Trex Platinum Partner</span>
+            <span className={styles.checkItem}><CheckIcon /> Custom Deck Designer</span>
+            <span className={styles.checkItem}><CheckIcon /> Licensed & Insured Contractor</span>
           </div>
         </div>
 

@@ -8,8 +8,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/about',
-  title: 'About LDN Decks',
-  description: "Learn about LDN Decks - Northern Virginia's trusted deck builder serving Loudoun, Fairfax, and Prince William County with Trex-certified craftsmanship.",
+  title: 'About Loudoun Decks | 5-Star Deck Builder & Contractor Northern VA',
+  description: "Learn why LDN Decks is Northern Virginia's most trusted deck builder and patio contractor. Trex Platinum Partner serving Loudoun, Fairfax, and Prince William County.",
 });
 
 export default function AboutPage() {

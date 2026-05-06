@@ -8,24 +8,24 @@ import { trackPhoneClick } from '@/lib/tracking';
 const servicesData = [
   {
     id: 1,
-    title: 'New Decks',
-    description: 'Custom-designed and structurally engineered decks using premium composite or natural wood materials to expand your outdoor space.',
+    title: 'Custom Deck Builder',
+    description: 'Transform your backyard with a custom-designed deck. As a Trex Platinum builder, we offer the best warranties and craftsmanship in Northern Virginia.',
     image: '/images/img58.jpeg',
     link: '/services/new-decks'
   },
   {
     id: 2,
-    title: 'Deck Resurfacing',
-    description: 'Breathe new life into your existing deck frame with completely refreshed surface boards, modern railings, and updated stairs.',
+    title: 'Deck Resurfacing & Repair',
+    description: 'Save 40% on costs with our expert deck resurfacing and repair. We refresh your existing frame with modern composite boards and railings.',
     image: '/showcase/img04.jpg',
     link: '/services/deck-resurfacing'
   },
   {
     id: 3,
-    title: 'Outdoor Washing',
-    description: 'Professional high-pressure washing and treatment services to remove years of grime, mold, and weather damage from your wood.',
+    title: 'Patio Contractor Services',
+    description: 'Professional bluestone and paver patio installation. We create durable, beautiful ground-level outdoor living spaces that last a lifetime.',
     image: '/homeimg4.webp',
-    link: '/services/outdoor-washing'
+    link: '/services/patios'
   }
 ];
 

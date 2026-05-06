@@ -31,23 +31,23 @@ const HandshakeIcon = () => (
 const featuresData = [
   {
     icon: <RibbonIcon />,
-    title: '10+ YEARS',
-    subtitle: 'Experience'
+    title: 'TREX PLATINUM',
+    subtitle: 'Partner Status'
   },
   {
     icon: <LeafIcon />,
-    title: 'PREMIUM',
+    title: 'NO MAINTENANCE',
     subtitle: 'Composite Materials'
   },
   {
     icon: <LicensedIcon />,
     title: 'FULLY LICENSED',
-    subtitle: '& Insured'
+    subtitle: 'VA Class A Contractor'
   },
   {
     icon: <HandshakeIcon />,
-    title: 'FREE',
-    subtitle: 'Design Consultation'
+    title: 'FREE QUOTE',
+    subtitle: 'Within 24 Hours'
   }
 ];
 
