@@ -12,13 +12,23 @@
 
 .accreditationRow {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 3rem;
+  justify-content: center;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 900px) {
+  .accreditationRow {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 .bbbBlock {
   text-align: center;
+  flex: 1;
+  max-width: 300px;
 }
 
 .label {
@@ -45,11 +55,36 @@
 
 .trexBlock {
   width: 100%;
-  max-width: 1200px;
+  max-width: 600px;
+  text-align: center;
+  padding: 2rem;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  background: #fff;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+.trexBlock h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.trexLink {
+  display: inline-block;
+  color: #E65C2B;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.trexLink:hover {
+  transform: translateX(5px);
 }
 
 .trexIframe {

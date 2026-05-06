@@ -188,6 +188,10 @@ export default function Header() {
                 </div>
 
                 <div className={styles.navItem}>
+                  <Link href="/trex-performance-products" className={isActive("/trex-performance-products")}>Trex Products</Link>
+                </div>
+
+                <div className={styles.navItem}>
                   <Link href="/services" className={isActive("/services")}>Services <CaretDownIcon /></Link>
                   <div className={styles.dropdown}>
                     {/* Pillar 1: New Decks */}

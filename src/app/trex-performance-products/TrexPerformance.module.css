@@ -1,0 +1,102 @@
+.main {
+  background-color: #fcfcfc;
+}
+
+.hero {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 span {
+  color: #E65C2B; /* Site primary color */
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.iframeSection {
+  padding: 4rem 0;
+  margin-top: -3rem; /* Overlap slightly with hero for better flow */
+}
+
+.iframeWrapper {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.iframe {
+  width: 100%;
+  height: 900px; /* Taller for better catalog browsing */
+  border: none;
+}
+
+.ctaBanner {
+  background-color: #f7f6f1;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.ctaBanner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.ctaBanner p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: #E65C2B;
+  color: #fff;
+  padding: 1.2rem 3rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  
+  .hero {
+    padding: 3rem 0;
+  }
+  
+  .iframe {
+    height: 700px;
+  }
+}

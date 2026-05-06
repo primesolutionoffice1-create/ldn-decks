@@ -22,12 +22,15 @@ export default function TrustSection() {
           </div>
           
           <div className={styles.trexBlock}>
-             <iframe 
-                id="dealer-frame" 
-                src="https://dealer.trex.com/?utm_id=001RN00000MDR90YAH&max_width=1200" 
-                className={styles.trexIframe}
-                title="Trex Dealer Profile"
-              ></iframe>
+            <p className={styles.label}>Trex® Partner</p>
+            <h3>Engineering Excellence</h3>
+            <p className={styles.description}>
+              Discover the technology behind the world’s #1 decking brand. 
+              Explore the full Trex performance-engineered product line.
+            </p>
+            <a href="/trex-performance-products" className={styles.trexLink}>
+              View Trex Products →
+            </a>
           </div>
         </div>
       </div>
