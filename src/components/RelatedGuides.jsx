@@ -24,7 +24,7 @@ const CORNERSTONE_GUIDES = [
   { path: '/deck-maintenance-checklist-virginia', title: 'Deck Maintenance Checklist', desc: 'Seasonal care guide for Virginia climate.' },
   { path: '/deck-railing-options-northern-virginia', title: 'Deck Railing Options & Costs', desc: 'Composite, aluminum, cable, glass compared.' },
   { path: '/fire-pit-builder-northern-virginia', title: 'Fire Pit Design & Costs', desc: 'Gas vs wood-burning integration tips.' },
-  { path: '/pergola-builder-northern-virginia', title: 'Pergola & Shade Guide', desc: 'Attached vs freestanding costs and permits.' },
+  { path: '/services/gazebo-pergola', title: 'Pergola & Shade Guide', desc: 'Attached vs freestanding costs and permits.' },
   { path: '/paver-vs-flagstone-patio-northern-virginia', title: 'Paver vs Flagstone', desc: 'Cost and durability comparison for Virginia patios.' },
   { path: '/eco-friendly-composite-decking', title: 'Eco-Friendly Decking Guide', desc: 'Recycled materials and sustainability facts.' },
   { path: '/pool-deck-builder-northern-virginia', title: 'Pool Deck Design & Safety', desc: 'Slip-resistant materials for Northern Virginia pools.' },
