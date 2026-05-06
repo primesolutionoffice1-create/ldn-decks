@@ -46,20 +46,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={outfit.variable}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* AI content discovery — llms.txt standard */}
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms.txt" title="LLM content index" />
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms-full.txt" title="LLM full content" />
-                    <link rel="preload" href="/home-page-ldn.webp" as="image" fetchpriority="high" />
+        <link rel="preload" href="/home-page-ldn.webp" as="image" fetchpriority="high" />
+        
         {/* Google Tag Manager - dataLayer init */}
-                    <Script id="gtm-init" strategy="afterInteractive">
+        <Script id="gtm-init" strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || [];`}
         </Script>
+        
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -68,12 +68,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-N87MG6QS');`,
           }}
         />
+        
         {/* Ahrefs Analytics */}
         <Script
           id="ahrefs-analytics"
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="3i7ZUj2Ik0UT5pH1a3mooQ"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
       </head>
       <body>
