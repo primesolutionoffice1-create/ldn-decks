@@ -6,20 +6,20 @@ import Introduction from "@/components/Introduction";
 import MaterialPartners from "@/components/MaterialPartners";
 
 // Dynamic imports for below-the-fold components
-const PromoModal = dynamic(() => import("@/components/PromoModal"), { ssr: false });
+const PromoModal = dynamic(() => import("@/components/PromoModal"));
 const HowItWorks = dynamic(() => import("@/components/HowItWorks"));
 const HandCraftedDecks = dynamic(() => import("@/components/HandCraftedDecks"));
 const ServicesHome = dynamic(() => import("@/components/ServicesHome"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const FAQ = dynamic(() => import("@/components/FAQ"));
 const TrustLogos = dynamic(() => import("@/components/TrustLogos"));
-const ContactMap = dynamic(() => import("@/components/ContactMap"), { ssr: false });
+const ContactMap = dynamic(() => import("@/components/ContactMap"));
 const ContactHome = dynamic(() => import("@/components/ContactHome"));
 const RelatedGuides = dynamic(() => import("@/components/RelatedGuides"));
 const HomeQuickLinks = dynamic(() => import("@/components/HomeQuickLinks"));
 const HomeSEOContent = dynamic(() => import("@/components/HomeSEOContent"));
 const BlogFeed = dynamic(() => import("@/components/BlogFeed"));
-const JsonLd = dynamic(() => import("@/components/JsonLd"), { ssr: false });
+const JsonLd = dynamic(() => import("@/components/JsonLd"));
 
 import styles from "./page.module.css";
 import { buildMetadata } from "@/lib/seo";
