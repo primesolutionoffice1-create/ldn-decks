@@ -165,6 +165,18 @@ export default function Header() {
               <Link href="/team">Our Team</Link>
               <Link href="/blog">News</Link>
               <Link href="/faqs">FAQs</Link>
+              <a 
+                href="https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241/#sealclick" 
+                target="_blank" 
+                rel="nofollow"
+                className={styles.bbbTopSeal}
+              >
+                <img 
+                  src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png" 
+                  style={{ border: 0, height: '32px', width: 'auto', marginLeft: '15px', verticalAlign: 'middle' }} 
+                  alt="Loudoun Decks BBB Business Review" 
+                />
+              </a>
             </div>
           </div>
 
@@ -479,7 +491,18 @@ export default function Header() {
             </div>
           </div>
 
-          <div style={{ marginTop: 'auto', padding: '40px 20px' }}>
+          <div style={{ marginTop: 'auto', padding: '40px 20px', display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
+            <a 
+              href="https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241/#sealclick" 
+              target="_blank" 
+              rel="nofollow"
+            >
+              <img 
+                src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png" 
+                style={{ border: 0, height: '50px', width: 'auto' }} 
+                alt="Loudoun Decks BBB Business Review" 
+              />
+            </a>
             <a href="tel:+15716557207" className={styles.callNowBtn} style={{ width: '100%', justifyContent: 'center' }} onClick={trackPhoneClick}>
               <PhoneIcon />
               <span>Call Us Now</span>
