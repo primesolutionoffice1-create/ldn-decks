@@ -134,7 +134,7 @@ export default function OutdoorLivingTrendsPage() {
 
           {/* ===== Trend 9 ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>9. Louvered Pergolas</h2>
-          <p style={S.p}>Motorized louvered <Link href="/pergola-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>pergolas</Link> are the premium shade solution for 2026. Unlike fixed pergolas or fabric canopies, louvered systems feature adjustable aluminum slats that rotate from fully open (full sun) to fully closed (rain protection) at the touch of a button.</p>
+          <p style={S.p}>Motorized louvered <Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>pergolas</Link> are the premium shade solution for 2026. Unlike fixed pergolas or fabric canopies, louvered systems feature adjustable aluminum slats that rotate from fully open (full sun) to fully closed (rain protection) at the touch of a button.</p>
           <p style={S.p}>Brands like StruXure and Azenco are the most installed in our market. They integrate with LED lighting, heaters, and even retractable screens. The investment is significant, but homeowners who install them consistently report they use their outdoor space 2&ndash;3 times more frequently.</p>
           <p style={S.p}><strong>Cost:</strong> $15,000&ndash;$40,000 | <strong>ROI:</strong> 50&ndash;65% | <strong>Build time:</strong> 1&ndash;2 weeks</p>
 
