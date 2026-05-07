@@ -53,7 +53,7 @@ export default async function sitemap() {
                 { path: "/deck-builder-ashburn-va",      priority: 0.92, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-leesburg-va",     priority: 0.92, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-reston-va",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
-                { path: "/deck-design-ideas-northern-virginia-2026", priority: 0.92, lastMod: TIER1, freq: "weekly" },
+                // REMOVED: non-canonical (canonical is /deck-design-ideas-2026)
                 { path: "/deck-repair-loudoun-county",             priority: 0.92, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 2 - Core service pages
@@ -77,8 +77,8 @@ export default async function sitemap() {
                 { path: "/near-you/loudoun-county",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
                 { path: "/near-you/fairfax-county",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
                 { path: "/near-you/prince-william-county", priority: 0.85, lastMod: TIER2, freq: "weekly" },
-                { path: "/near-you/arlington-county",    priority: 0.80, lastMod: TIER1, freq: "weekly" },
-                { path: "/near-you/stafford-county",     priority: 0.80, lastMod: TIER1, freq: "weekly" },
+                // REMOVED: 308-redirects to /deck-builder-arlington-va
+                // REMOVED: 308-redirects to /deck-builder-stafford-va
 
                 // Tier 3 - Secondary & support pages
                 { path: "/services/patios",              priority: 0.80, lastMod: TIER3, freq: "monthly" },
