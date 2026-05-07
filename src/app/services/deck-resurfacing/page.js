@@ -87,7 +87,7 @@ const serviceSchemaData = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Custom Deck Resurfacing",
-  "provider": { "@type": "LocalBusiness", "name": "Loudoun Decks" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://ldndecks.com/#organization", "name": "Loudoun Decks", "url": "https://ldndecks.com", "telephone": "+1-571-655-7207", "address": { "@type": "PostalAddress", "streetAddress": "13704 Winding Oak Cir", "addressLocality": "Centreville", "addressRegion": "VA", "postalCode": "20121", "addressCountry": "US" } },
   "areaServed": [{ "@type": "State", "name": "Virginia" }],
   "description": "Professional deck resurfacing services utilizing TimberTech Vintage Collection composite boards, structural reinforcement, and aluminum railings in Northern Virginia."
 };
