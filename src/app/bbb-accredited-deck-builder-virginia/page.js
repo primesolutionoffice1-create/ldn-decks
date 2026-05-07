@@ -46,7 +46,7 @@ const businessSchema = {
       "name": "Virginia DPOR Contractor License",
       "identifier": "2705191673",
       "recognizedBy": { "@type": "Organization", "name": "Virginia Department of Professional and Occupational Regulation" },
-      "validThrough": "2027-02-28"
+      "description": "Valid through 2027-02-28"
     },
     {
       "@type": "EducationalOccupationalCredential",
