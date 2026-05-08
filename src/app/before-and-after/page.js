@@ -30,7 +30,7 @@ const imageGallerySchema = {
   "about": {
     "@type": "Service",
     "serviceType": "Deck Building & Renovation",
-    "provider": { "@type": "LocalBusiness", "name": "Loudoun Decks" }
+    "provider": { "@type": "LocalBusiness", "@id": "https://ldndecks.com/#organization", "name": "Loudoun Decks", "url": "https://ldndecks.com", "telephone": "+1-571-655-7207", "address": { "@type": "PostalAddress", "streetAddress": "13704 Winding Oak Cir", "addressLocality": "Centreville", "addressRegion": "VA", "postalCode": "20121", "addressCountry": "US" } }
   },
   "image": [
     { "@type": "ImageObject", "url": "https://ldndecks.com/Projectsbeforeandafter/project1after.jpeg", "name": "Wood to composite resurfacing Leesburg, VA", "description": "Worn wood deck transformed with gray Trex composite resurfacing in Leesburg, Virginia." },
