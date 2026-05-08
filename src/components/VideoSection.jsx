@@ -16,9 +16,8 @@ const VideoSection = () => {
             className={styles.video} 
             controls 
             preload="metadata"
-            poster="/home-page-ldn.webp"
           >
-            <source src="/introvideo.mp4" type="video/mp4" />
+            <source src="/introvideo.mp4#t=1" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
