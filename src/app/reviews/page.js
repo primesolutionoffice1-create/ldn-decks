@@ -17,13 +17,6 @@ const reviewSchema = {
   "@type": "LocalBusiness",
   "@id": "https://ldndecks.com/#organization",
   "name": "Loudoun Decks",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "41",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "review": [
     { "@type": "Review", "author": { "@type": "Person", "name": "Sarah J." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Loudoun Decks built our 400 sqft Trex deck in Ashburn. From design to final walkthrough, everything was professional and on schedule. The crew was respectful, clean, and skilled. Our deck looks amazing and we use it every evening now.", "datePublished": "2026-03-15" },
     { "@type": "Review", "author": { "@type": "Person", "name": "Michael T." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Best contractor experience we've had in 15 years of homeownership. Nick and his team replaced our old wood deck with Trex Transcend in Leesburg. Handled the HOA submission, pulled all permits, and finished a day early. Highly recommend.", "datePublished": "2026-02-28" },

@@ -14,54 +14,7 @@ export const metadata = buildMetadata({
 
 const BBB_PROFILE_URL = 'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241';
 
-const businessSchema = {
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "@id": "https://ldndecks.com/#organization",
-  "name": "Loudoun Decks",
-  "alternateName": "LDN Decks",
-  "url": "https://ldndecks.com",
-  "telephone": "+15716557207",
-  "email": "office@ldndecks.com",
-  "priceRange": "$$-$$$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "13704 Winding Oak Cir",
-    "addressLocality": "Centreville",
-    "addressRegion": "VA",
-    "postalCode": "20121",
-    "addressCountry": "US"
-  },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" },
-    { "@type": "AdministrativeArea", "name": "Arlington County, VA" },
-    { "@type": "AdministrativeArea", "name": "Stafford County, VA" }
-  ],
-  "hasCredential": [
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "license",
-      "name": "Virginia DPOR Contractor License",
-      "identifier": "2705191673",
-      "recognizedBy": { "@type": "Organization", "name": "Virginia Department of Professional and Occupational Regulation" },
-      "description": "Valid through 2027-02-28"
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "membership",
-      "name": "BBB Accredited Business",
-      "recognizedBy": { "@type": "Organization", "name": "Better Business Bureau", "url": "https://www.bbb.org" }
-    }
-  ],
-  "sameAs": [
-    BBB_PROFILE_URL,
-    "https://www.google.com/maps/place/Loudoun+Decks/",
-    "https://www.houzz.com/pro/ldndecks"
-  ]
-};
-
+// Breadcrumbs and other page-specific schema below
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -166,7 +119,6 @@ const cities = [
 export default function BBBPage() {
   return (
     <>
-      <JsonLd data={businessSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={webPageSchema} />
       <JsonLd data={faqSchema} />

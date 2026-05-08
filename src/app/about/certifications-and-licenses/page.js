@@ -13,26 +13,13 @@ export const metadata = buildMetadata({
 
 const credentialSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "LocalBusiness",
   "@id": "https://ldndecks.com/#organization",
-  "name": "Loudoun Decks",
   "hasCredential": [
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Virginia Class A Contractor License", "recognizedBy": { "@type": "GovernmentOrganization", "name": "Virginia Department of Professional and Occupational Regulation (DPOR)" } },
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Trex Platinum Partner", "recognizedBy": { "@type": "Organization", "name": "Trex Company" } },
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "TimberTech Certified Installer", "recognizedBy": { "@type": "Organization", "name": "TimberTech / AZEK" } },
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Deck Building Services",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Deck Building", "description": "Licensed and insured custom deck construction in Northern Virginia" } },
-    ],
-  },
-  "areaServed": [
-    { "@type": "County", "name": "Loudoun County, VA" },
-    { "@type": "County", "name": "Fairfax County, VA" },
-    { "@type": "County", "name": "Prince William County, VA" },
-  ],
+  ]
 };
 
 export default function CertificationsPage() {

@@ -38,11 +38,34 @@ export default function StructuredData() {
       'https://x.com/ldndecks',
       'https://g.page/ldndecks',
     ],
+    email: 'office@ldndecks.com',
+    openingHoursSpecification: [
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '07:00', closes: '19:00' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '17:00' }
+    ],
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
       reviewCount: '41',
+      bestRating: '5',
+      worstRating: '1'
     },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'James R.' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: 'Nick and his team built us a 500 sqft Trex Transcend deck in Ashburn — exceptional craftsmanship.',
+        datePublished: '2025-08-15'
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Maria S.' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: 'Loudoun Decks handled the HOA submission and permits themselves. Deck was done in 10 days.',
+        datePublished: '2025-09-22'
+      }
+    ],
   };
 
   return (

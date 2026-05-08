@@ -21,12 +21,7 @@ const imageGallerySchema = {
   "name": "Before & After Deck Projects LDN Decks",
   "description": "Real before and after deck transformation photos from Loudoun Decks projects across Northern Virginia.",
   "url": "https://ldndecks.com/before-and-after",
-  "publisher": {
-    "@type": "LocalBusiness",
-    "name": "Loudoun Decks",
-    "@id": "https://ldndecks.com/#organization",
-    "telephone": "+15716557207"
-  },
+  "publisher": { "@id": "https://ldndecks.com/#organization" },
   "about": {
     "@type": "Service",
     "serviceType": "Deck Building & Renovation",

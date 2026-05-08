@@ -32,71 +32,6 @@ export const metadata = buildMetadata({
   description: 'Trex Pro & TimberTech certified deck builders in Loudoun, Fairfax & Prince William VA. Custom composite decks, screened porches & patios. ★ 5.0 rated. Free quote.',
 });
 
-const businessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://ldndecks.com/#organization",
-  "name": "Loudoun Decks",
-  "alternateName": "LDN Decks",
-  "url": "https://ldndecks.com",
-  "logo": "https://ldndecks.com/ldndecks-logo.webp",
-  "image": "https://ldndecks.com/images/img64.jpeg",
-  "telephone": "+15716557207",
-  "email": "office@ldndecks.com",
-  "priceRange": "$$-$$$$",
-  "address": { "@type": "PostalAddress", "streetAddress": "13704 Winding Oak Cir", "addressLocality": "Centreville", "addressRegion": "VA", "postalCode": "20121", "addressCountry": "US" },
-  "geo": { "@type": "GeoCoordinates", "latitude": "38.8404", "longitude": "-77.4289" },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "19:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "17:00" }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "41",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "John D." },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "Loudoun Decks built our composite deck in Ashburn — exceptional craftsmanship and on-time delivery.",
-      "datePublished": "2025-08-15"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Sarah M." },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "Best deck builder in Loudoun County. Trex Platinum quality at a fair price. Highly recommend.",
-      "datePublished": "2025-09-22"
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Michael R." },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "reviewBody": "Professional from start to finish. Pulled all permits, beautiful screened porch in Reston.",
-      "datePublished": "2025-10-10"
-    }
-  ],
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" },
-    { "@type": "AdministrativeArea", "name": "Arlington County, VA" },
-    { "@type": "AdministrativeArea", "name": "Stafford County, VA" }
-  ],
-  "sameAs": [
-    "https://x.com/ldndecks",
-    "https://www.instagram.com/loudoundecks/",
-    "https://www.facebook.com/profile.php?id=61573750423712",
-    "https://www.google.com/maps/place/Loudoun+Decks/",
-    "https://www.houzz.com/pro/ldndecks",
-    "https://www.yelp.com/biz/loudoun-decks-centreville"
-  ]
-};
-
 // Homepage-specific WebPage schema
 const homepageSchema = {
   "@context": "https://schema.org",
@@ -131,7 +66,6 @@ const homepageSchema = {
 export default function Home() {
     return (
           <main className={styles.main}>
-      <JsonLd data={businessSchema} />
       <JsonLd data={homepageSchema} />
       <PromoModal />
             <Hero />

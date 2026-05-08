@@ -21,29 +21,23 @@ export default function RatingBadge() {
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <div
-        data-speakable="true"
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '0.5rem',
-          background: '#fff8f0',
-          border: '1px solid #f0d0a0',
-          borderRadius: 8,
-          padding: '0.5rem 1rem',
-          fontSize: '0.85rem',
-          color: '#333',
-        }}
-      >
-        <span style={{ color: '#f59e0b', fontSize: '1rem' }}>★★★★★</span>
-        <span style={{ fontWeight: 600 }}>5.0</span>
-        <span style={{ color: '#888' }}>from 41+ Google reviews</span>
-      </div>
-    </>
+    <div
+      data-speakable="true"
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '0.5rem',
+        background: '#fff8f0',
+        border: '1px solid #f0d0a0',
+        borderRadius: 8,
+        padding: '0.5rem 1rem',
+        fontSize: '0.85rem',
+        color: '#333',
+      }}
+    >
+      <span style={{ color: '#f59e0b', fontSize: '1rem' }}>★★★★★</span>
+      <span style={{ fontWeight: 600 }}>5.0</span>
+      <span style={{ color: '#888' }}>from 41+ Google reviews</span>
+    </div>
   );
 }

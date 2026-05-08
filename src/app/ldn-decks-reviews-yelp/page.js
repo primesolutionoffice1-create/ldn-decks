@@ -27,12 +27,6 @@ const reviewSchema = {
     "postalCode": "20121",
     "addressCountry": "US"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "41",
-    "bestRating": "5"
-  },
   "sameAs": [
     "https://www.yelp.com/biz/loudoun-decks-centreville",
     "https://www.google.com/maps/place/Loudoun+Decks/",
