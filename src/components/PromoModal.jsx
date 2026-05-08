@@ -23,13 +23,21 @@ export default function PromoModal() {
 
   useEffect(() => {
     // Only show once per session so it isn't an annoyance when navigating
-    const hasSeenModal = sessionStorage.getItem('promoModalSeen');
-    if (!hasSeenModal) {
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-        sessionStorage.setItem('promoModalSeen', 'true');
-      }, 10000); // Trigger after exactly 10 seconds
-      return () => clearTimeout(timer);
+    try {
+      const isBrowser = typeof window !== 'undefined';
+      const hasSeenModal = isBrowser && window.sessionStorage ? sessionStorage.getItem('promoModalSeen') : 'true';
+      
+      if (!hasSeenModal || hasSeenModal === 'false') {
+        const timer = setTimeout(() => {
+          setIsOpen(true);
+          if (isBrowser && window.sessionStorage) {
+            sessionStorage.setItem('promoModalSeen', 'true');
+          }
+        }, 10000); // Trigger after exactly 10 seconds
+        return () => clearTimeout(timer);
+      }
+    } catch (e) {
+      console.warn("Session storage not available", e);
     }
   }, []);
 

@@ -19,7 +19,7 @@ const RelatedGuides = dynamic(() => import("@/components/RelatedGuides"));
 const HomeQuickLinks = dynamic(() => import("@/components/HomeQuickLinks"));
 const HomeSEOContent = dynamic(() => import("@/components/HomeSEOContent"));
 const BlogFeed = dynamic(() => import("@/components/BlogFeed"));
-const JsonLd = dynamic(() => import("@/components/JsonLd"));
+const JsonLd = dynamic(() => import("@/components/JsonLd"), { ssr: true });
 const TrustSection = dynamic(() => import("@/components/TrustSection"));
 const VideoSection = dynamic(() => import("@/components/VideoSection"));
 

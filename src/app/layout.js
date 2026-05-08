@@ -49,17 +49,16 @@ export default function RootLayout({ children }) {
         {/* AI content discovery — llms.txt standard */}
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms.txt" title="LLM content index" />
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms-full.txt" title="LLM full content" />
-        <link rel="preload" href="/home-page-ldn.webp" as="image" fetchpriority="high" />
         
         {/* Google Tag Manager - dataLayer init */}
-        <Script id="gtm-init" strategy="lazyOnload">
+        <Script id="gtm-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500,'region':['BE','BG','CZ','DK','DE','EE','IE','GR','ES','FR','HR','IT','CY','LV','LT','LU','HU','MT','NL','AT','PL','PT','RO','SI','SK','FI','SE','IS','LI','NO','GB','CH']}); gtag('consent','default',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});`}
         </Script>
         
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -74,7 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           id="ahrefs-analytics"
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="3i7ZUj2Ik0UT5pH1a3mooQ"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
       </head>
       <body>
