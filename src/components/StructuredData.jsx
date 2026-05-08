@@ -38,6 +38,11 @@ export default function StructuredData() {
       'https://x.com/ldndecks',
       'https://g.page/ldndecks',
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '41',
+    },
   };
 
   return (

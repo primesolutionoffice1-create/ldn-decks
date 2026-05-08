@@ -21,11 +21,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Trex Railing Installation",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Loudoun Decks",
-    "@id": "https://ldndecks.com/#business"
-  },
+  "provider": { "@id": "https://ldndecks.com/#organization" },
   "areaServed": [
     { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
     { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },

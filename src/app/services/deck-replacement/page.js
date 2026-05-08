@@ -21,14 +21,13 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Deck Replacement and Rebuilding",
-  "provider": { "@id": "https://ldndecks.com/#business" },
+  "provider": { "@id": "https://ldndecks.com/#organization" },
   "areaServed": [
     { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
     { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
     { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
   ],
-  "description": "Professional deck replacement services including structural assessment, old deck removal, and premium composite rebuilds using Trex and TimberTech.",
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "41" }
+  "description": "Professional deck replacement services including structural assessment, old deck removal, and premium composite rebuilds using Trex and TimberTech."
 };
 
 const replacementSections = [

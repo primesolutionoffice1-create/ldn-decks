@@ -16,24 +16,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Custom Deck Construction",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Loudoun Decks",
-    "@id": "https://ldndecks.com/#business",
-    "telephone": "+15716557207",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Manassas",
-      "addressRegion": "VA",
-      "postalCode": "20110"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "41",
-      "bestRating": "5"
-    }
-  },
+  "provider": { "@id": "https://ldndecks.com/#organization" },
   "areaServed": [
     { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
     { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
