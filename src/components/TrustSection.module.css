@@ -54,37 +54,78 @@
 }
 
 .trexBlock {
+  position: relative;
   width: 100%;
   max-width: 600px;
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 2rem;
   border-radius: 12px;
-  background: #f9f9f9;
-  border: 1px solid #eee;
+  background-image: url('/images/img10.jpeg');
+  background-size: cover;
+  background-position: center;
+  border: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.trexBlock::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(26, 26, 26, 0.4) 100%);
+  z-index: 1;
+}
+
+.trexBlock > * {
+  position: relative;
+  z-index: 2;
 }
 
 .trexBlock h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #fff;
+}
+
+.trexLabel {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ccc;
+  margin-bottom: 1rem;
 }
 
 .description {
-  color: #666;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
+  color: #eee;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
 }
 
 .trexLink {
   display: inline-block;
-  color: #E65C2B;
+  background-color: #E65C2B;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
   font-weight: 700;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .trexLink:hover {
-  transform: translateX(5px);
+  background-color: #fff;
+  color: #E65C2B;
+  transform: translateY(-3px);
 }
 
 .trexIframe {

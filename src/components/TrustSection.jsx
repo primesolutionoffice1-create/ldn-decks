@@ -22,7 +22,7 @@ export default function TrustSection() {
           </div>
           
           <div className={styles.trexBlock}>
-            <p className={styles.label}>Trex® Partner</p>
+            <p className={styles.trexLabel}>Trex® Partner</p>
             <h3>Engineering Excellence</h3>
             <p className={styles.description}>
               Discover the technology behind the world’s #1 decking brand. 

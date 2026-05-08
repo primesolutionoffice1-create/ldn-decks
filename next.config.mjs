@@ -70,6 +70,7 @@ const nextConfig = {
       { source: '/deck-projects-showcase/new-custom-wood-fence-ashburn', destination: '/services/fence', permanent: true },
 
       // Batch 5 - /feed/ cleanup and specific tags
+      { source: '/top-decks-build-near-you/deck-builder-in-ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
       { source: '/tag/deck-in-fairfax/feed', destination: '/near-you/fairfax-county', permanent: true },
       { source: '/tag/:path*/feed', destination: '/', permanent: true },
       { source: '/tag/vienna', destination: '/deck-builder-vienna-va', permanent: true },

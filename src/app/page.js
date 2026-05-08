@@ -21,6 +21,7 @@ const HomeSEOContent = dynamic(() => import("@/components/HomeSEOContent"));
 const BlogFeed = dynamic(() => import("@/components/BlogFeed"));
 const JsonLd = dynamic(() => import("@/components/JsonLd"));
 const TrustSection = dynamic(() => import("@/components/TrustSection"));
+const VideoSection = dynamic(() => import("@/components/VideoSection"));
 
 import styles from "./page.module.css";
 import { buildMetadata } from "@/lib/seo";
@@ -149,6 +150,7 @@ export default function Home() {
             <FAQ />
             <TrustLogos />
             <RelatedGuides currentPath="/" />
+            <VideoSection />
             <ContactMap />
             <ContactHome />
       </main>
