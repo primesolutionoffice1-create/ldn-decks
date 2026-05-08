@@ -36,6 +36,9 @@ metadata.icons = {
 };
 metadata.verification = {
   google: "KqDI0PPrY8iiZYZI-hk1ikIKVqCtIcTrO3dHSM7U-Eg",
+  other: {
+    'ahrefs-site-verification': 'eddf8f999fb0d48dab6897a61b8add479805023f0cd0c0632e7cc0ad0a2a48ee',
+  }
 };
 // NOTE: Bing verification requires manual step — see instructions below layout
 
