@@ -490,7 +490,9 @@ export default function Header() {
             >
               <img 
                 src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png" 
-                style={{ border: 0, height: '50px', width: 'auto' }} 
+                width="154"
+                height="50"
+                style={{ border: 0 }} 
                 alt="Loudoun Decks BBB Business Review" 
               />
             </a>

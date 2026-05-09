@@ -1,93 +1,154 @@
-I have diagnosed the exact problem. Here are the **step-by-step instructions** to fix it.
+I have the full picture. The repo is **already very well-optimized** — much better than I expected. Here is the precise diagnosis and the exact patches needed.
 
-## Diagnosis
+## ✅ What's already correctly done in the repo
+- Next.js 16 + React 19 (latest, fastest)
+- `next.config.mjs` has AVIF + WebP, cache headers for `/images/`, `.webp`, etc.
+- Hero already uses `next/image` with `priority` and `fetchPriority="high"`
+- GTM + Ahrefs scripts already loaded with `strategy="lazyOnload"` ✅
+- Below-the-fold components already dynamically imported in `page.js` ✅
+- Comprehensive 301 redirects, security headers, `Outfit` font with `display: 'swap'`
+- Lean dependency tree (no Bootstrap, jQuery, etc.)
 
-On the `/services/new-decks` page you have 3 JSON-LD blocks. The third block contains the problem:
+## 🎯 Real causes of the 3.0s mobile LCP
 
-```json
-{
-  "@context":"https://schema.org",
-  "@type":"Service",
-  "serviceType":"Custom Deck Construction",
-  "provider":{"@id":"https://ldndecks.com/#business"},   ← BUG #1
-  "areaServed":[...],
-  "description":"...",
-  "aggregateRating":{                                     ← BUG #2 (the cause of the error)
-    "@type":"AggregateRating",
-    "ratingValue":"5.0",
-    "reviewCount":"41"
-  }
-}
-```
+After reviewing the actual code, the LCP issue is **NOT** caused by missing optimizations — it's caused by these specific things:
 
-**Why it fails:**
-1. `provider` references `@id`: `https://ldndecks.com/#business`, but your Organization actually has `@id`: `https://ldndecks.com/#organization`. The reference is broken.
-2. More importantly: Google does not accept `aggregateRating` directly on `Service` as an eligible review snippet — it must be on a self-standing type (Product, LocalBusiness, Organization, etc.). This produces the error "Invalid object type for field `<parent_node>`".
+### Cause 1: Hero is `"use client"` because of `useContact`
+`Hero.jsx` is a client component (`"use client"`) just to call `openContact()` on a button click. That delays hydration and pushes LCP later on mobile.
 
-## Concrete remediation steps
+### Cause 2: Hero image is 169 KB at 1536×1024 — a bit large for mobile
+Mobile devices download 169 KB but only use ~390px wide. The `sizes="100vw"` + `next/image` should be serving smaller variants — verify it actually is.
 
-**Step 1 — Log in to Squarespace**
-Open https://account.squarespace.com and access the ldndecks site.
+### Cause 3: `PromoModal` is dynamically imported but renders early
+A modal at the top of `<main>` can interfere with hero paint timing if it renders any DOM during hydration.
 
-**Step 2 — Navigate to the affected page**
-In the editor: `Pages → Services → New decks` (or go directly to ldndecks.com/services/new-decks in edit mode).
-
-**Step 3 — Find the Code Injection block**
-The JSON-LD code is injected either in:
-- `Settings → Advanced → Code Injection → Header/Footer` (global code), OR
-- `Page Settings (gear icon) → Advanced → Page Header Code Injection` (per-page code)
-
-The /services/new-decks page has page-specific markup, so it is most likely in **Page Settings → Advanced**.
-
-**Step 4 — Replace the Service block**
-Find the block that starts with `"@type":"Service"` and replace it with this corrected version:
-
-```html
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Service",
-  "name":"Custom Deck Construction",
-  "serviceType":"Custom Deck Construction",
-  "provider":{"@id":"https://ldndecks.com/#organization"},
-  "areaServed":[
-    {"@type":"AdministrativeArea","name":"Loudoun County, VA"},
-    {"@type":"AdministrativeArea","name":"Fairfax County, VA"},
-    {"@type":"AdministrativeArea","name":"Prince William County, VA"}
-  ],
-  "description":"From concept to completion, we design and build fully custom decks tailored to your space, style, and budget in Northern Virginia."
-}
-</script>
-```
-
-**Two key changes:**
-- `provider.@id` changed from `#business` → `#organization` (to match the existing Organization).
-- Removed `aggregateRating` from `Service`. The aggregate rating should be on `GeneralContractor` (Organization) — added in step 5.
-
-**Step 5 — Move aggregateRating onto the Organization (in global Code Injection → Header)**
-Find the `"@type":"GeneralContractor"` block and add before the final `}`:
-
-```json
-,"aggregateRating":{
-  "@type":"AggregateRating",
-  "ratingValue":"5.0",
-  "reviewCount":"41"
-}
-```
-
-⚠️ **Important:** To remain compliant with Google's policies, make sure you have at least a few real reviews visibly displayed on the page (Google verifies this). Otherwise, other warnings may appear.
-
-**Step 6 — Save & publish**
-Click Save in Code Injection, then publish the page.
-
-**Step 7 — Verify**
-1. Open https://search.google.com/test/rich-results
-2. Enter: `https://ldndecks.com/services/new-decks`
-3. Confirm that no more errors appear.
-
-**Step 8 — Validate Fix in Search Console**
-Return to the Search Console tab and click the **VALIDATE FIX** button. Google will recrawl the pages over the next few days.
+### Cause 4: `image/avif` format may not actually be served
+The next.config has `formats: ['image/avif', 'image/webp']`, but the hero file is `.webp` (not auto-optimized through `_next/image`). If Next.js isn't generating an AVIF variant at runtime, the browser downloads the WebP.
 
 ---
 
-Let me know if you want me to guide you through Squarespace (open the Squarespace tab), or if you want me to also check the `www.ldndecks.com/services/new-decks` URL (the second affected entry — it's likely the same page served on www, so it will be resolved together with the first one).
+## 📝 Exact patches to apply
+
+### **Patch 1** — `src/components/Hero.jsx` — Make Hero a server component (biggest win)
+
+**Replace the whole file with:**
+```jsx
+import styles from './Hero.module.css';
+import Image from 'next/image';
+import HeroCTA from './HeroCTA';
+
+export default function Hero() {
+  return (
+    <section className={styles.heroSection}>
+      <Image
+        src="/home-page-ldn.webp"
+        alt="Custom deck builder Northern Virginia"
+        fill
+        priority
+        fetchPriority="high"
+        sizes="(max-width: 768px) 100vw, 100vw"
+        quality={70}
+      />
+      <div className={styles.overlay}></div>
+      <div className={styles.content}>
+        <div className={styles.subtextWrapper}>
+          <span className={styles.line}></span>
+          <span className={styles.subtext}>BUILDING MEMORIES TOGETHER</span>
+          <span className={styles.line}></span>
+        </div>
+        <div className={styles.trustBadge}>
+          <span className={styles.stars}>★★★★★</span>
+          <span className={styles.ratingText}>5.0 Google Rating | 41 Reviews</span>
+        </div>
+        <h1 className={styles.title}>
+          Custom Deck Builder &amp; Contractor Serving Northern Virginia
+        </h1>
+        <p className={styles.heroDescription}>
+          Custom-designed composite decks, screened porches &amp; patios. Trex Platinum Partner serving Loudoun, Fairfax &amp; Prince William Counties.
+        </p>
+        <HeroCTA />
+      </div>
+    </section>
+  );
+}
+```
+
+### **Patch 2** — `src/components/HeroCTA.jsx` — New tiny client island
+```jsx
+"use client";
+import { useContact } from '@/context/ContactContext';
+import { trackPhoneClick } from '@/lib/tracking';
+import styles from './Hero.module.css';
+
+export default function HeroCTA() {
+  const { openContact } = useContact();
+  return (
+    <div className={styles.buttonGroup}>
+      <a href="tel:+15716557207" className={styles.ctaButton} onClick={trackPhoneClick}>
+        Call Now: (571) 655-7207
+      </a>
+      <button onClick={openContact} className={styles.ctaButtonAlt}>
+        Get Free Estimate
+      </button>
+    </div>
+  );
+}
+```
+**Why:** This isolates the client-side code to just the CTA buttons. The hero text + image now render as a **server component** — the H1, image, and trust badge ship as static HTML, paint immediately, no hydration delay. This typically shaves **400–800 ms** off mobile LCP.
+
+### **Patch 3** — `src/app/page.js` — Reorder PromoModal and add preload
+```js
+// 1) Move PromoModal AFTER Hero (already true visually, but make it the LAST in DOM)
+// 2) Preload hero image
+```
+At the top of the `Home()` JSX, replace:
+```jsx
+<PromoModal />
+<Hero />
+```
+with:
+```jsx
+<Hero />
+<PromoModal />
+```
+This guarantees the hero is the first DOM element parsed.
+
+### **Patch 4** — `src/app/layout.js` — Add explicit hero preload + DNS prefetch
+In the `<head>`, add at the very top (before the GTM scripts):
+```jsx
+<link rel="preload" as="image" href="/home-page-ldn.webp" fetchPriority="high" />
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+<link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
+<link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+```
+
+### **Patch 5** — `next.config.mjs` — Add explicit responsive image sizes
+In the existing `images` block, replace:
+```js
+images: {
+  formats: ['image/avif', 'image/webp'],
+  minimumCacheTTL: 2592000,
+},
+```
+with:
+```js
+images: {
+  formats: ['image/avif', 'image/webp'],
+  minimumCacheTTL: 31536000,
+  deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+  imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+},
+```
+
+### **Patch 6** — Optimize the source hero image (manual, one-time)
+The file `public/home-page-ldn.webp` is 1536×1024 / 169 KB. Replace it with a re-encoded version:
+- Resolution: 1600×1067 (approx 3:2)
+- Quality: 70
+- Target: under **100 KB**
+
+Tools: `cwebp -q 70 input.jpg -o home-page-ldn.webp` or any online WebP optimizer (Squoosh.app).
+
+### **Patch 7** — `src/app/layout.js` — Defer Vercel Analytics
+The `<Analytics />` and `<SpeedInsights />` from Vercel are already deferred internally, but you can remove them on mobile entirely if Performance score is critical (they cost ~10–20 KB JS). Skip if you want to keep tracking — the wins above are larger.
+
+---

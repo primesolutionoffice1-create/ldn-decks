@@ -49,6 +49,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={outfit.variable}>
       <head>
+        <link rel="preload" as="image" href="/home-page-ldn.webp" fetchPriority="high" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        
         {/* AI content discovery — llms.txt standard */}
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms.txt" title="LLM content index" />
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms-full.txt" title="LLM full content" />

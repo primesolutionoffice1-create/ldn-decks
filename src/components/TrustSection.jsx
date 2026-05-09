@@ -17,6 +17,8 @@ export default function TrustSection() {
                 src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png" 
                 className={styles.bbbSealImg}
                 alt="Loudoun Decks BBB Business Review" 
+                width="200"
+                height="65"
               />
             </a>
           </div>

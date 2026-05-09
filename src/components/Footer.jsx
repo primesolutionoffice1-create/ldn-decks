@@ -72,7 +72,7 @@ export default function Footer() {
             </div>
             <div className={styles.bbbSealFooter} style={{ marginTop: '15px' }}>
               <a href="https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241/#sealclick" target="_blank" rel="nofollow">
-                <img src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png" style={{ border: 0, height: '40px', width: 'auto' }} alt="Loudoun Decks BBB Business Review" />
+                <img src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png" style={{ border: 0 }} width="123" height="40" alt="Loudoun Decks BBB Business Review" />
               </a>
             </div>
             <p className={styles.brandPitch}>

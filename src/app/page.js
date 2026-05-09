@@ -67,8 +67,8 @@ export default function Home() {
     return (
           <main className={styles.main}>
       <JsonLd data={homepageSchema} />
-      <PromoModal />
             <Hero />
+            <PromoModal />
             <TrustSection />
             <Features />
             <CalculatorCTA />
