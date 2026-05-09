@@ -17,8 +17,8 @@ const LocationIcon = () => (
 
 export const metadata = buildMetadata({
     path: "/near-you/fairfax-county",
-    title: "Deck Builder in Fairfax County, VA | Reston & Vienna",
-    description: "Professional deck and outdoor living contractor serving Fairfax County, VA. Custom decks, patios, and porches in Reston, Vienna, Mclean, and Alexandria.",
+    title: "5-Star Deck Builder Fairfax County VA | Get a Free Quote in 24h",
+    description: "Top-rated deck and outdoor living contractor in Fairfax County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Reston, Vienna, Mclean, and Alexandria.",
 });
 
 const fairfaxCities = [

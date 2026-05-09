@@ -8,8 +8,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-design-ideas-2026',
-  title: '15 Best Deck Design Ideas for 2026 (NoVA Trends & Costs)',
-  description: 'Looking for deck inspiration? See 15 trending Northern Virginia deck designs for 2026. Includes pricing, material colors, and expert design tips. Get inspired today!',
+  title: '2026 Deck Design Ideas | 15+ Trending Photos & Costs (NoVA)',
+  description: 'Looking for deck inspiration? See 15+ trending Northern Virginia deck designs for 2026. View photos, pricing, and expert design tips. Get inspired today!',
 });
 
 const designs = [

@@ -83,7 +83,8 @@ export default function ContactHome() {
 
         <div className={styles.rightCol}>
             <form onSubmit={handleSubmit} className={styles.contactForm}>
-              <h3>Request Your Free Design Consultation</h3>
+              <h3>Get Your 100% Free Design Consultation</h3>
+              <p className={styles.formSubtext}>Licensed & Insured | Trex Platinum Partner | 5.0★ Google Rated</p>
               {status === "error" && <p style={{color: 'red', fontSize: '14px', marginBottom: '10px'}}>There was an error sending your message. Please try again.</p>}
               <div className={styles.formGrid}>
                 <div className={styles.inputGroup}>
@@ -116,11 +117,12 @@ export default function ContactHome() {
                   </div>
                 </div>
               <div className={styles.inputGroup}>
-                <textarea name="message" placeholder="Tell us about your project..." rows="5" required aria-label="Project Details"></textarea>
+                <textarea name="message" placeholder="Tell us about your project (size, materials, location)..." rows="5" required aria-label="Project Details"></textarea>
               </div>
               <button type="submit" disabled={status === "submitting"} className={styles.submitBtn}>
-                {status === "submitting" ? "Sending..." : "Send Message"}
+                {status === "submitting" ? "Sending..." : "Get My Free Quote →"}
               </button>
+              <p className={styles.privacyNote}>We value your privacy. No spam, only helpful deck experts.</p>
             </form>
         </div>
       </div>

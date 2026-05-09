@@ -28,8 +28,8 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   path: "/",
-  title: 'Custom Deck Builder in Northern Virginia | Trex Platinum | LDN Decks',
-  description: 'Trex Pro & TimberTech certified deck builders in Loudoun, Fairfax & Prince William VA. Custom composite decks, screened porches & patios. ★ 5.0 rated. Free quote.',
+  title: 'Top-Rated Deck Builder Northern Virginia | 5.0★ | Free Estimate',
+  description: 'Trex Platinum & TimberTech certified deck builders in NoVA. Custom composite decks & screened porches. ★ 5.0 Google Rated. Get your free estimate in 24 hours!',
 });
 
 // Homepage-specific WebPage schema

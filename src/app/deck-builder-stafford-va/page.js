@@ -10,8 +10,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-stafford-va',
-  title: 'Deck Builder in Stafford, VA | Custom Composite Decks | LDN Decks',
-  description: 'Top-rated deck builder in Stafford, VA. 5.0★ Google. Trex & TimberTech decks, screened porches. Best value in the NoVA region. Free estimate. (571) 655-7207.',
+  title: '5-Star Deck Builder Stafford VA | Get a Free Quote in 24h',
+  description: 'Top-rated deck builder in Stafford, VA. ★ 5.0 Google Rated. Trex & TimberTech composite decks, screened porches. Best value in the NoVA region. Free estimate!',
 });
 
 const faqSchema = {

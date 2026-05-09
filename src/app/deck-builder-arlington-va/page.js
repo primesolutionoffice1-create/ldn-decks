@@ -5,13 +5,12 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import RatingBadge from '@/components/RatingBadge';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-arlington-va',
-  title: 'Deck Builder in Arlington, VA | Custom Composite Decks | LDN Decks',
-  description: 'Top-rated deck builder in Arlington, VA. 5.0★ Google. Custom composite decks & screened porches. Ballston, Clarendon, Rosslyn, Shirlington. Free estimate.',
+  title: '5-Star Deck Builder Arlington VA | Get a Free Quote in 24h',
+  description: 'Top-rated deck builder in Arlington, VA. ★ 5.0 Google Rated. Custom composite decks & screened porches in Ballston, Clarendon & Rosslyn. Free 24h estimate.',
 });
 
 const faqSchema = {

@@ -59,10 +59,10 @@
     width: 50px;
     height: 50px;
   }
-  
-  /* Disable pulse on mobile for cleaner UX and less battery drain */
+}
+
+@media screen and (max-width: 768px) {
   .floatingBtn {
-    animation: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: none;
   }
 }

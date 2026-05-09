@@ -17,8 +17,8 @@ const LocationIcon = () => (
 
 export const metadata = buildMetadata({
   path: "/near-you/loudoun-county",
-  title: "Best Deck Builder in Loudoun County VA | Top-Rated Designs & Costs",
-  description: "Trusted deck contractor in Loudoun County. We handle all HOA permits & county codes. 5.0 Rated. See custom designs & 2026 pricing for Ashburn, Leesburg & more.",
+  title: "5-Star Deck Builder Loudoun County VA | Get a Free Quote in 24h",
+  description: "Trusted deck contractor in Loudoun County. ★ 5.0 Google Rated. We handle all HOA permits & county codes. Get your free itemized estimate in 24 hours!",
 });
 
 const loudounCities = [

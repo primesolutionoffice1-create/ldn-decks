@@ -39,7 +39,7 @@ export default function PaverVsFlagstonePage() {
               priority
             />
           </div>
-          <h1 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Pavers vs. Flagstone Choosing the Right Hardscape</h1>
+          <h1 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Pavers vs. Flagstone: Choosing the Right Hardscape</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Cost, durability, and look compared for Northern Virginia patios</p>
         </div>
       </section>

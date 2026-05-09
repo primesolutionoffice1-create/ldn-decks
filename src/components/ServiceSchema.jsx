@@ -12,9 +12,7 @@ export default function ServiceSchema({ name, description, price, areaServed }) 
     name,
     description,
     provider: {
-      '@type': 'LocalBusiness',
       '@id': 'https://ldndecks.com/#organization',
-      name: 'Loudoun Decks', url: 'https://ldndecks.com', telephone: '+1-571-655-7207', address: { '@type': 'PostalAddress', streetAddress: '13704 Winding Oak Cir', addressLocality: 'Centreville', addressRegion: 'VA', postalCode: '20121', addressCountry: 'US' },
     },
     areaServed: areaServed || [
       { '@type': 'AdministrativeArea', name: 'Loudoun County, VA' },
@@ -34,12 +32,6 @@ export default function ServiceSchema({ name, description, price, areaServed }) 
         },
       },
     } : {}),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '41',
-      bestRating: '5',
-    },
   };
 
   return React.createElement('script', {

@@ -17,8 +17,8 @@ const LocationIcon = () => (
 
 export const metadata = buildMetadata({
   path: "/near-you/prince-william-county",
-  title: "Deck Builder in Prince William County, VA | Manassas & Woodbridge",
-  description: "Professional deck and outdoor living contractor serving Prince William County, VA. Custom decks, patios, and porches in Manassas, Woodbridge, and Haymarket.",
+  title: "5-Star Deck Builder Prince William County VA | Free Quote in 24h",
+  description: "Professional deck contractor in Prince William County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Manassas, Woodbridge, and Haymarket. Free estimates.",
 });
 
 const pwcCities = [

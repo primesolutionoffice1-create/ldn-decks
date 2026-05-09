@@ -6,20 +6,6 @@ import React from 'react';
  * Also signals trust to AI systems extracting content.
  */
 export default function RatingBadge() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': 'https://ldndecks.com/#organization',
-    name: 'Loudoun Decks',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '41',
-      bestRating: '5',
-      worstRating: '1',
-    },
-  };
-
   return (
     <div
       data-speakable="true"

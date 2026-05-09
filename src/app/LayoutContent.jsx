@@ -7,6 +7,7 @@ import Header from "../components/Header";
 const Footer = dynamic(() => import("../components/Footer"), { ssr: true });
 import ScrollToTop from "../components/ScrollToTop";
 import FloatingCallButton from "../components/FloatingCallButton";
+import StickyMobileCTA from "../components/StickyMobileCTA";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function LayoutContent({ children }) {
@@ -33,6 +34,7 @@ export default function LayoutContent({ children }) {
       <Footer />
       <ScrollToTop />
       <FloatingCallButton />
+      <StickyMobileCTA />
     </>
   );
 }

@@ -162,6 +162,22 @@
   transform: translateY(-2px);
 }
 
+.formSubtext {
+  font-size: 14px;
+  color: #666;
+  margin-top: -25px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.privacyNote {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  margin-top: 15px;
+  font-style: italic;
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 1fr;

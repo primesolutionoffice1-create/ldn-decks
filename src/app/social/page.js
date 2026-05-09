@@ -14,7 +14,7 @@ export const metadata = buildMetadata({
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://ldndecks.com/#business",
+  "@id": "https://ldndecks.com/#organization",
   "name": "LDN Decks",
   "url": "https://ldndecks.com",
   "telephone": "+15716557207",

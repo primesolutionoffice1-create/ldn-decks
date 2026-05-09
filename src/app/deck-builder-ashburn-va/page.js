@@ -9,7 +9,6 @@ import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import RatingBadge from '@/components/RatingBadge';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
