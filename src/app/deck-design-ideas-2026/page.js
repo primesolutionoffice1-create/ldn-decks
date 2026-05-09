@@ -8,8 +8,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-design-ideas-2026',
-  title: '15 Stunning Deck Design Ideas for 2026 | Northern Virginia Trends',
-  description: 'Explore the top deck design trends for 2026 in Northern Virginia. From multi-level composite layouts to luxury outdoor kitchens. See real project photos and budget ranges.',
+  title: '15 Best Deck Design Ideas for 2026 (NoVA Trends & Costs)',
+  description: 'Looking for deck inspiration? See 15 trending Northern Virginia deck designs for 2026. Includes pricing, material colors, and expert design tips. Get inspired today!',
 });
 
 const designs = [
@@ -50,7 +50,9 @@ const gallerySchema = {
       "@type": "CreativeWork",
       "name": d.title,
       "description": d.desc,
-      "image": `https://ldndecks.com${d.image}`
+      "image": `https://ldndecks.com${d.image}`,
+      "author": { "@id": "https://ldndecks.com/#organization" },
+      "publisher": { "@id": "https://ldndecks.com/#organization" }
     }
   }))
 };
@@ -62,8 +64,43 @@ export default function DeckDesignIdeasPage() {
       <JsonLd data={gallerySchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>15 Deck Design Ideas for Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>2026 trends and inspiration from real projects find the design that fits your home</p>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>15 Trending Deck Design Ideas for 2026</h1>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Expert inspiration and pricing for Northern Virginia homeowners. Find the perfect design for your backyard transformation.</p>
+        </div>
+      </section>
+
+      {/* Quick Summary Table for CTR / Fast Scanning */}
+      <section style={{ padding: '2rem 0', background: '#f9fafb', borderBottom: '1px solid #e5e7eb' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '1rem' }}>2026 Design Quick-View</h2>
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem', background: '#fff' }}>
+              <thead>
+                <tr style={{ textAlign: 'left', borderBottom: '2px solid #eee' }}>
+                  <th style={{ padding: '0.75rem' }}>Design Type</th>
+                  <th style={{ padding: '0.75rem' }}>Best For</th>
+                  <th style={{ padding: '0.75rem' }}>Est. Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '0.75rem' }}>Multi-Level Deck</td>
+                  <td style={{ padding: '0.75rem' }}>Sloped Yards</td>
+                  <td style={{ padding: '0.75rem' }}>$35k+</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid #eee' }}>
+                  <td style={{ padding: '0.75rem' }}>Deck + Porch Combo</td>
+                  <td style={{ padding: '0.75rem' }}>All-Season Use</td>
+                  <td style={{ padding: '0.75rem' }}>$45k+</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: '0.75rem' }}>Smart Deck</td>
+                  <td style={{ padding: '0.75rem' }}>Tech Lovers</td>
+                  <td style={{ padding: '0.75rem' }}>$30k+</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -82,7 +119,7 @@ export default function DeckDesignIdeasPage() {
             {designs.map((d, i) => (
               <div key={i} style={{ background: '#fff', borderRadius: 12, overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', border: '1px solid #eee' }}>
                 <div style={{ position: 'relative', height: '200px' }}>
-                  <Image src={d.image} alt={d.title} fill style={{ objectFit: 'cover' }} />
+                  <Image src={d.image} alt={`${d.title} - Northern Virginia deck design idea`} fill style={{ objectFit: 'cover' }} />
                   <div style={{ position: 'absolute', top: 10, left: 10, background: 'var(--color-primary)', color: '#fff', padding: '2px 8px', borderRadius: 4, fontSize: '0.8rem', fontWeight: 700 }}>#{i + 1}</div>
                 </div>
                 <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>

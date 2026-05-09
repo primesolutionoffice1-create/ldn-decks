@@ -94,7 +94,7 @@ export default function Features() {
               {feature.icon}
             </div>
             <div className={styles.textContent}>
-              <h4 className={styles.title}>{feature.title}</h4>
+              <h3 className={styles.title}>{feature.title}</h3>
               <p className={styles.subtitle}>{feature.subtitle}</p>
             </div>
           </div>

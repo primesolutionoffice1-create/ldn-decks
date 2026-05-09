@@ -42,7 +42,7 @@ export default function CalculatorCTA() {
           <div className={styles.mockupContainer}>
             <div className={styles.miniCalc}>
               <div className={styles.calcHeader}>
-                <h4>Instant Estimator</h4>
+                <h3>Instant Estimator</h3>
               </div>
               <div className={styles.calcBody}>
                 <div className={styles.inputGroup}>

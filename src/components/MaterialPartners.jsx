@@ -15,7 +15,7 @@ export default function MaterialPartners() {
   return (
     <section className={styles.partnersSection}>
       <div className={styles.container}>
-        <h3 className={styles.heading}>Our Trusted Material Partners</h3>
+        <h2 className={styles.heading}>Our Trusted Material Partners</h2>
         <div className={styles.ticker}>
           <div className={styles.tickerTrack}>
             {allPartners.map((partner, index) => (

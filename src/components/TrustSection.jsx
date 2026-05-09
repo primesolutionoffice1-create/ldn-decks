@@ -23,7 +23,7 @@ export default function TrustSection() {
           
           <div className={styles.trexBlock}>
             <p className={styles.trexLabel}>Trex® Partner</p>
-            <h3>Engineering Excellence</h3>
+            <h2>Engineering Excellence</h2>
             <p className={styles.description}>
               Discover the technology behind the world’s #1 decking brand. 
               Explore the full Trex performance-engineered product line.
