@@ -26,7 +26,7 @@ export async function GET() {
     <url>
       <loc>${SITE_URL}</loc>
       <image:image>
-        <image:loc>${SITE_URL}/home-page-ldn.png</image:loc>
+        <image:loc>${SITE_URL}/home-page-ldn.webp</image:loc>
         <image:title>Loudoun Decks Custom Deck Builder Northern Virginia</image:title>
         <image:caption>Custom composite deck building in Northern Virginia by Loudoun Decks. Trex Platinum Partner.</image:caption>
       </image:image>
@@ -36,12 +36,12 @@ export async function GET() {
   const contentImages = [
     { page: '/how-much-does-a-deck-cost-northern-virginia', image: '/images/img10.jpeg', title: 'Deck Cost Guide Northern Virginia 2026' },
     { page: '/composite-deck-cost-northern-virginia', image: '/images/img11.jpeg', title: 'Composite Deck Cost Northern Virginia Brand-by-Brand Pricing' },
-    { page: '/trex-vs-timbertech-vs-azek', image: '/og-default.webp', title: 'Trex vs TimberTech vs AZEK Comparison' },
+    { page: '/trex-vs-timbertech-vs-azek', image: '/home-page-ldn.webp', title: 'Trex vs TimberTech vs AZEK Comparison' },
     { page: '/trex-transcend-review-northern-virginia', image: '/images/img36.jpeg', title: 'Trex Transcend Review Honest Assessment After 500+ Installs' },
     { page: '/composite-deck-vs-wood-deck-virginia', image: '/images/img16.jpeg', title: 'Composite Deck vs Wood Deck Virginia Comparison' },
     { page: '/deck-design-ideas-northern-virginia-2026', image: '/images/img36.jpeg', title: 'Deck Design Ideas 2026 Northern Virginia' },
     { page: '/screened-porch-cost-northern-virginia', image: '/images/img23.jpeg', title: 'Screened Porch Cost Northern Virginia' },
-    { page: '/northern-virginia-deck-building-guide', image: '/og-default.webp', title: 'Complete Deck Building Guide Northern Virginia' },
+    { page: '/northern-virginia-deck-building-guide', image: '/home-page-ldn.webp', title: 'Complete Deck Building Guide Northern Virginia' },
     { page: '/before-and-after', image: '/images/img04.jpeg', title: 'Before and After Deck Transformations Northern Virginia' },
     { page: '/deck-permit-loudoun-county-virginia', image: '/images/img20.jpeg', title: 'Loudoun County Deck Permit Guide 2026' },
     { page: '/get-estimate', image: '/images/img36.jpeg', title: 'Free Deck Estimate LDN Decks Northern Virginia' },

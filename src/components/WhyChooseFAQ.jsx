@@ -28,8 +28,22 @@ export default function WhyChooseFAQ() {
     setOpenIndex(openIndex === idx ? null : idx);
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": { "@type": "Answer", "text": item.a },
+    })),
+  };
+
   return (
     <section className={styles.faqSection}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className={styles.container}>
          <h2 className={styles.title}>Why Choose Loudoun Decks — FAQs</h2>
          <div className={styles.accordionContainer}>

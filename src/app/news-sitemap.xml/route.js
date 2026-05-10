@@ -5,12 +5,14 @@ import { SITE_URL } from '@/lib/seo';
 // https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap
 
 export async function GET() {
+  // Google News requires posts within 2 days. Older posts cause sitemap rejection.
+  const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000;
+  const now = Date.now();
   const entries = blogPosts
     .map(post => {
       const date = new Date(post.date);
       if (isNaN(date.getTime())) return null;
-      // Only include posts from the last 2 days (Google News requirement: max 2 days old)
-      // But we include all for initial submission Google will filter
+      if (now - date.getTime() > TWO_DAYS_MS) return null;
       const isoDate = date.toISOString();
       return `
     <url>

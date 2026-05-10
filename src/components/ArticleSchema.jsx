@@ -17,13 +17,22 @@ export default function ArticleSchema({
   title,
   description,
   path,
-  image = '/og-default.webp',
+  image = '/home-page-ldn.webp',
+  imageWidth,
+  imageHeight,
   datePublished = '2025-01-15',
   dateModified = '2026-04-18',
   speakable = ['[data-speakable]', '.quick-answer'],
 }) {
   const url = `https://ldndecks.com${path}`;
   const imageUrl = image.startsWith('http') ? image : `https://ldndecks.com${image}`;
+
+  // Only declare dimensions when caller has verified them.
+  const imageObject = { '@type': 'ImageObject', url: imageUrl };
+  if (imageWidth && imageHeight) {
+    imageObject.width = imageWidth;
+    imageObject.height = imageHeight;
+  }
 
   const schema = {
     '@context': 'https://schema.org',
@@ -32,12 +41,7 @@ export default function ArticleSchema({
     headline: title,
     description,
     url,
-    image: {
-      '@type': 'ImageObject',
-      url: imageUrl,
-      width: 1200,
-      height: 630,
-    },
+    image: imageObject,
     author: [
       {
         '@type': 'Person',

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getAllCityPaths, getCityData } from '@/data/cityData';
+import { getAllCityPaths, getCityData, canonicalCities } from '@/data/cityData';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceVisual from '@/components/ServiceVisual';
@@ -72,10 +72,12 @@ const cityLocalContent = {
   }
 };
 
-// Pre-render all city pages at build time
+// Pre-render only non-canonical cities. Canonical cities (Ashburn, Leesburg, etc.)
+// have their own /deck-builder-{city}-va routes; the matching /near-you/{county}/{city}
+// paths are 301-redirected in next.config.mjs, so prerendering them just wastes build output.
 export async function generateStaticParams() {
   const paths = await getAllCityPaths();
-  return paths;
+  return paths.filter(p => !canonicalCities.has(p.city));
 }
 
 export async function generateMetadata({ params }) {

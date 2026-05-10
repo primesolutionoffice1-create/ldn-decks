@@ -26,14 +26,13 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Loudoun Decks',
-    images: ['/og-default.webp'],
+    images: ['/home-page-ldn.webp'],
   },
   robots: { index: true, follow: true, 'max-image-preview': 'large' },
 };
-metadata.icons = {
-  icon: "/ldndecks-logo.webp",
-  apple: "/ldndecks-logo.webp",
-};
+// Icons are now auto-detected from app/icon.png (32px) and app/apple-icon.png (180px)
+// — Next.js metadata file convention. The previous WebP favicon broke on Safari < 17
+// and several RSS aggregators that don't accept WebP icons.
 metadata.verification = {
   google: "KqDI0PPrY8iiZYZI-hk1ikIKVqCtIcTrO3dHSM7U-Eg",
   other: {

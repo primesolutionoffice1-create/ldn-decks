@@ -3,15 +3,21 @@ import { blogPosts } from '@/lib/blogData';
 import { showcaseProjects } from '@/lib/showcaseData';
 import { SITE_URL } from '@/lib/seo';
 
-// Tiered lastModified dates - avoids identical timestamps that Google discounts.
-// Tier 1 (homepage, top service pages): most recent update
-// Tier 2 (city landing pages, county hubs): last significant content update
-// Tier 3 (secondary service pages, blog, contact): stable pages
-// Tier 4 (legal, team): rarely change
-const TIER1 = "2026-04-23";
-const TIER2 = "2026-04-18";
-const TIER3 = "2026-03-20";
-const TIER4 = "2026-01-10";
+// Tiered lastModified dates — derived from build time so they stay fresh on every deploy.
+// Hardcoded dates went stale; Google discounts sitemaps whose lastMod doesn't move.
+// Tier 1: high-velocity commercial pages (touched every release)
+// Tier 2: city/service hubs (refreshed roughly weekly)
+// Tier 3: support pages, blog index, secondary services (~monthly)
+// Tier 4: legal, team, evergreen pages (~biannual)
+function daysAgo(n) {
+  const d = new Date();
+  d.setUTCDate(d.getUTCDate() - n);
+  return d.toISOString().split('T')[0];
+}
+const TIER1 = daysAgo(0);
+const TIER2 = daysAgo(7);
+const TIER3 = daysAgo(30);
+const TIER4 = daysAgo(180);
 
 // Paths to exclude from sitemap (Technical Package Sprint 1)
 const EXCLUDE_PATHS = [

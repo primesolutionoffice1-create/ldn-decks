@@ -3,18 +3,19 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Breadcrumbs.module.css';
+import { labelFor } from '@/lib/breadcrumbLabels';
 
 export default function Breadcrumbs() {
   const pathname = usePathname();
-  
+
   if (pathname === '/') return null;
 
   const pathSegments = pathname.split('/').filter(segment => segment !== '');
-  
+
   const breadcrumbs = pathSegments.map((segment, index) => {
     const href = `/${pathSegments.slice(0, index + 1).join('/')}`;
-    const label = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-    
+    const label = labelFor(segment);
+
     return { label, href };
   });
 

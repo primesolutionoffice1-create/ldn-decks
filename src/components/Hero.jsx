@@ -2,6 +2,8 @@ import styles from './Hero.module.css';
 import Image from 'next/image';
 import HeroCTA from './HeroCTA';
 
+// Server component. The image, headline, and trust badge render at build time.
+// The two CTAs are isolated in HeroButtons (client) so only that subtree hydrates.
 export default function Hero() {
   return (
     <section className={styles.heroSection}>

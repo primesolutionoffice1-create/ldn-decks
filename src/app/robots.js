@@ -15,70 +15,48 @@ export default function robots() {
     }
   }
 
+  // Tracking-parameter URLs should never be indexed (duplicate canonical risk).
+  // Wildcard disallows are honored by Google + Bing; AI crawlers vary, so we
+  // apply the same list to every UA rather than relying on a single * block.
+  const TRACKING_DISALLOWS = [
+    '/*?*utm_',
+    '/*?*gclid=',
+    '/*?*fbclid=',
+    '/*?*msclkid=',
+  ];
+
+  // AI crawlers explicitly allowed for citation visibility.
+  const AI_BOTS = [
+    'GPTBot',
+    'ChatGPT-User',
+    'Google-Extended',
+    'PerplexityBot',
+    'Amazonbot',
+    'ClaudeBot',
+    'Bytespider',
+    'CCBot',
+    'Applebot-Extended',
+    'cohere-ai',
+  ];
+
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/private/', '/*?*utm_', '/*?*gclid=', '/*?*fbclid=', '/*?*msclkid='],
+        disallow: TRACKING_DISALLOWS,
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: '/private/',
+        disallow: TRACKING_DISALLOWS,
         crawlDelay: 1,
       },
-      // AI crawlers — explicitly allowed for AI citation visibility
-      {
-        userAgent: 'GPTBot',
+      ...AI_BOTS.map(userAgent => ({
+        userAgent,
         allow: '/',
-        disallow: '/private/',
-      },
-      {
-        userAgent: 'ChatGPT-User',
-        allow: '/',
-        disallow: '/private/',
-      },
-      {
-        userAgent: 'Google-Extended',
-        allow: '/',
-        disallow: '/private/',
-      },
-      {
-        userAgent: 'PerplexityBot',
-        allow: '/',
-        disallow: '/private/',
-      },
-      {
-        userAgent: 'Amazonbot',
-        allow: '/',
-        disallow: '/private/',
-      },
-      {
-        userAgent: 'ClaudeBot',
-        allow: '/',
-        disallow: '/private/',
-      },
-      {
-        userAgent: 'Bytespider',
-        allow: '/',
-        disallow: '/private/',
-      },
-      {
-        userAgent: 'CCBot',
-        allow: '/',
-        disallow: '/private/',
-      },
-      {
-        userAgent: 'Applebot-Extended',
-        allow: '/',
-        disallow: '/private/',
-      },
-      {
-        userAgent: 'cohere-ai',
-        allow: '/',
-        disallow: '/private/',
-      },
+        disallow: TRACKING_DISALLOWS,
+      })),
     ],
     sitemap: [`${SITE_URL}/sitemap.xml`, `${SITE_URL}/news-sitemap.xml`, `${SITE_URL}/image-sitemap.xml`],
     host: SITE_URL,

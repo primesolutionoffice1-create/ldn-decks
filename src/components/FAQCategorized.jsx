@@ -114,8 +114,24 @@ export default function FAQCategorized() {
     }));
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.flatMap(cat =>
+      cat.items.map(item => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": { "@type": "Answer", "text": item.a },
+      }))
+    ),
+  };
+
   return (
     <section className={styles.faqSection}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className={styles.container}>
         {faqData.map((cat, catIdx) => (
           <div key={catIdx} className={styles.categoryRow}>

@@ -32,7 +32,9 @@ export const metadata = buildMetadata({
   description: 'Trex Platinum & TimberTech certified deck builders in NoVA. Custom composite decks & screened porches. ★ 5.0 Google Rated. Get your free estimate in 24 hours!',
 });
 
-// Homepage-specific WebPage schema
+// Homepage-specific WebPage schema — tells Google this is the main landing page.
+// Org schema is emitted globally from StructuredData (rooted at @id: #organization);
+// this page references that single source of truth instead of redefining it.
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
