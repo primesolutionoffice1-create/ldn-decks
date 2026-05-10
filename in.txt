@@ -1,154 +1,65 @@
-I have the full picture. The repo is **already very well-optimized** — much better than I expected. Here is the precise diagnosis and the exact patches needed.
+Da. Dă-i la developer să facă Faza 1 în cod, nu mai mult.
 
-## ✅ What's already correctly done in the repo
-- Next.js 16 + React 19 (latest, fastest)
-- `next.config.mjs` has AVIF + WebP, cache headers for `/images/`, `.webp`, etc.
-- Hero already uses `next/image` with `priority` and `fetchPriority="high"`
-- GTM + Ahrefs scripts already loaded with `strategy="lazyOnload"` ✅
-- Below-the-fold components already dynamically imported in `page.js` ✅
-- Comprehensive 301 redirects, security headers, `Outfit` font with `display: 'swap'`
-- Lean dependency tree (no Bootstrap, jQuery, etc.)
+Please implement Phase 1 only.
 
-## 🎯 Real causes of the 3.0s mobile LCP
+1. Add noindex, follow to all /near-you/* pages
+    Preferred: meta robots in the page/template:
+    <meta name="robots" content="noindex,follow">
 
-After reviewing the actual code, the LCP issue is **NOT** caused by missing optimizations — it's caused by these specific things:
+Do not delete these pages yet.
 
-### Cause 1: Hero is `"use client"` because of `useContact`
-`Hero.jsx` is a client component (`"use client"`) just to call `openContact()` on a button click. That delays hydration and pushes LCP later on mobile.
+2. Remove from sitemap:
 
-### Cause 2: Hero image is 169 KB at 1536×1024 — a bit large for mobile
-Mobile devices download 169 KB but only use ~390px wide. The `sizes="100vw"` + `next/image` should be serving smaller variants — verify it actually is.
+* all /near-you/* URLs
+* /llms.txt
+* /llms-full.txt
+* legacy junk URLs if present
 
-### Cause 3: `PromoModal` is dynamically imported but renders early
-A modal at the top of `<main>` can interfere with hero paint timing if it renders any DOM during hydration.
+3. Fix future blog dates
+    Find all BlogPosting schema where datePublished is after today and replace with the real publish date.
+4. Fix broken showcase page:
 
-### Cause 4: `image/avif` format may not actually be served
-The next.config has `formats: ['image/avif', 'image/webp']`, but the hero file is `.webp` (not auto-optimized through `_next/image`). If Next.js isn't generating an AVIF variant at runtime, the browser downloads the WebP.
+* /showcase/rooftop-deck-washington-dc
 
----
+If real project exists: rebuild it later.
+For now, set noindex, follow or remove from sitemap until rebuilt.
 
-## 📝 Exact patches to apply
+5. Fix trailing slash duplicates
+    Make sure only one version resolves as 200. Preferred canonical version: no trailing slash.
+    Redirect slash version → non-slash version with 301.
 
-### **Patch 1** — `src/components/Hero.jsx` — Make Hero a server component (biggest win)
+Check:
 
-**Replace the whole file with:**
-```jsx
-import styles from './Hero.module.css';
-import Image from 'next/image';
-import HeroCTA from './HeroCTA';
+* /composite-decks/
+* /deck-repair/
+* /trex-decks/
+* /deck-remodeling/
+* /services/porches/front-porch/
 
-export default function Hero() {
-  return (
-    <section className={styles.heroSection}>
-      <Image
-        src="/home-page-ldn.webp"
-        alt="Custom deck builder Northern Virginia"
-        fill
-        priority
-        fetchPriority="high"
-        sizes="(max-width: 768px) 100vw, 100vw"
-        quality={70}
-      />
-      <div className={styles.overlay}></div>
-      <div className={styles.content}>
-        <div className={styles.subtextWrapper}>
-          <span className={styles.line}></span>
-          <span className={styles.subtext}>BUILDING MEMORIES TOGETHER</span>
-          <span className={styles.line}></span>
-        </div>
-        <div className={styles.trustBadge}>
-          <span className={styles.stars}>★★★★★</span>
-          <span className={styles.ratingText}>5.0 Google Rating | 41 Reviews</span>
-        </div>
-        <h1 className={styles.title}>
-          Custom Deck Builder &amp; Contractor Serving Northern Virginia
-        </h1>
-        <p className={styles.heroDescription}>
-          Custom-designed composite decks, screened porches &amp; patios. Trex Platinum Partner serving Loudoun, Fairfax &amp; Prince William Counties.
-        </p>
-        <HeroCTA />
-      </div>
-    </section>
-  );
-}
-```
+6. Fix legacy migration URLs
+    301 redirect to the closest modern equivalent.
+    If no equivalent exists, return 410.
 
-### **Patch 2** — `src/components/HeroCTA.jsx` — New tiny client island
-```jsx
-"use client";
-import { useContact } from '@/context/ContactContext';
-import { trackPhoneClick } from '@/lib/tracking';
-import styles from './Hero.module.css';
+Examples:
 
-export default function HeroCTA() {
-  const { openContact } = useContact();
-  return (
-    <div className={styles.buttonGroup}>
-      <a href="tel:+15716557207" className={styles.ctaButton} onClick={trackPhoneClick}>
-        Call Now: (571) 655-7207
-      </a>
-      <button onClick={openContact} className={styles.ctaButtonAlt}>
-        Get Free Estimate
-      </button>
-    </div>
-  );
-}
-```
-**Why:** This isolates the client-side code to just the CTA buttons. The hero text + image now render as a **server component** — the H1, image, and trust badge ship as static HTML, paint immediately, no hydration delay. This typically shaves **400–800 ms** off mobile LCP.
+* /home-2/ → 410
+* /deck-construction-in-reston/ → /deck-builder-reston-va
+* /deck-balcony-resurfacing-in-sterling/ → relevant Sterling/showcase page or 410 if no real page
 
-### **Patch 3** — `src/app/page.js` — Reorder PromoModal and add preload
-```js
-// 1) Move PromoModal AFTER Hero (already true visually, but make it the LAST in DOM)
-// 2) Preload hero image
-```
-At the top of the `Home()` JSX, replace:
-```jsx
-<PromoModal />
-<Hero />
-```
-with:
-```jsx
-<Hero />
-<PromoModal />
-```
-This guarantees the hero is the first DOM element parsed.
+7. After deploy:
 
-### **Patch 4** — `src/app/layout.js` — Add explicit hero preload + DNS prefetch
-In the `<head>`, add at the very top (before the GTM scripts):
-```jsx
-<link rel="preload" as="image" href="/home-page-ldn.webp" fetchPriority="high" />
-<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-<link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
-<link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-```
+* verify noindex on /near-you/loudoun-county/aldie
+* verify sitemap no longer contains /near-you/, llms.txt, or llms-full.txt
+* verify trailing slash redirects return 301
+* submit updated sitemap once in GSC
 
-### **Patch 5** — `next.config.mjs` — Add explicit responsive image sizes
-In the existing `images` block, replace:
-```js
-images: {
-  formats: ['image/avif', 'image/webp'],
-  minimumCacheTTL: 2592000,
-},
-```
-with:
-```js
-images: {
-  formats: ['image/avif', 'image/webp'],
-  minimumCacheTTL: 31536000,
-  deviceSizes: [640, 750, 828, 1080, 1200, 1920],
-  imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-},
-```
+Do NOT:
 
-### **Patch 6** — Optimize the source hero image (manual, one-time)
-The file `public/home-page-ldn.webp` is 1536×1024 / 169 KB. Replace it with a re-encoded version:
-- Resolution: 1600×1067 (approx 3:2)
-- Quality: 70
-- Target: under **100 KB**
+* delete city pages
+* noindex city pages
+* noindex service pages
+* rebuild all showcase pages in bulk
+* publish new city pages
+* request indexing for dozens of URLs
 
-Tools: `cwebp -q 70 input.jpg -o home-page-ldn.webp` or any online WebP optimizer (Squoosh.app).
-
-### **Patch 7** — `src/app/layout.js` — Defer Vercel Analytics
-The `<Analytics />` and `<SpeedInsights />` from Vercel are already deferred internally, but you can remove them on mobile entirely if Performance score is critical (they cost ~10–20 KB JS). Skip if you want to keep tracking — the wins above are larger.
-
----
+This is a controlled crawl-trust cleanup only.

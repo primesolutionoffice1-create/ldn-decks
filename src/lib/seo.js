@@ -10,6 +10,12 @@ export function buildMetadata({
     image = "/og-default.webp",
     noIndex = false,
 }) {
+    // Phase 1 cleanup: noindex redundant /near-you/* paths and broken showcase
+    let finalNoIndex = noIndex;
+    if (path.startsWith('/near-you/') || path === '/showcase/rooftop-deck-washington-dc') {
+        finalNoIndex = true;
+    }
+
     const url = `${SITE_URL}${path}`;
 
   return {
@@ -20,7 +26,7 @@ export function buildMetadata({
                 canonical: url,
         },
         robots: {
-                index: !noIndex,
+                index: !finalNoIndex,
                 follow: true,
         },
         openGraph: {

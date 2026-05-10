@@ -38,6 +38,11 @@ const EXCLUDE_PATHS = [
   '/deck-builder-in-loudoun-county',
   '/deck-builder-in-fairfax-county',
   '/deck-builder-in-prince-william-county',
+  // Phase 1 Cleanup Exclusions
+  '/near-you',
+  '/llms.txt',
+  '/llms-full.txt',
+  '/showcase/rooftop-deck-washington-dc',
 ];
 
 export default async function sitemap() {
@@ -229,7 +234,13 @@ export default async function sitemap() {
                 }));
 
         // Blog posts — dynamically generated from blogData with real publish dates
-        const blogPaths = blogPosts.map(post => {
+        const today = new Date();
+        const blogPaths = blogPosts
+                .filter(post => {
+                        const postDate = new Date(post.date);
+                        return postDate <= today;
+                })
+                .map(post => {
                 // Parse date like "April 4, 2026" to ISO
                 const parsed = new Date(post.date);
                 const lastMod = isNaN(parsed.getTime()) ? TIER3 : parsed.toISOString().split('T')[0];
