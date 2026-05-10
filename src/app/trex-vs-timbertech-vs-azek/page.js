@@ -8,8 +8,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/trex-vs-timbertech-vs-azek',
-  title: 'Trex vs TimberTech vs AZEK: Best Composite Decking (2026)',
-  description: 'Side-by-side comparison of Trex, TimberTech & AZEK composite decking. Price, warranty, heat resistance for Virginia climate. We install all three.',
+  title: '2026 Trex vs TimberTech vs AZEK | NoVA Comparison & Costs',
+  description: 'Which composite decking is best for Virginia? Trex vs TimberTech vs AZEK side-by-side comparison. See 2026 pricing, heat resistance & warranty info!',
 });
 
 const faqSchema = {

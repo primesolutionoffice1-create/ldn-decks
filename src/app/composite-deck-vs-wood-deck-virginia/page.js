@@ -10,8 +10,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/composite-deck-vs-wood-deck-virginia',
-  title: 'Composite Deck vs Wood Deck: Complete Virginia Comparison (2026)',
-  description: 'Composite vs wood deck cost, maintenance, lifespan, ROI compared for Virginia homeowners. 15-year total cost analysis shows composite wins long-term.',
+  title: 'Composite vs Wood Deck: 2026 Virginia Cost Comparison',
+  description: 'Is composite decking cheaper than wood? 15-year total cost analysis for Northern Virginia homeowners. See lifespan, maintenance & ROI head-to-head.',
   image: '/images/img16.jpeg',
 });
 

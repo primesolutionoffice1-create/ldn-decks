@@ -15,10 +15,10 @@ const nextConfig = {
       { source: '/how-much-does-it-cost-to-build-a-deck-in-northern-virginia', destination: '/how-much-does-a-deck-cost-northern-virginia', permanent: true },
       { source: '/deck-resurfacing-vs-replacement-northern-virginia', destination: '/deck-resurfacing-vs-replacement', permanent: true },
       { source: '/terms-and-conditions', destination: '/privacy-policy', permanent: true },
+      { source: '/choosing-right-deck-material-wood-vs-composite', destination: '/composite-deck-vs-wood-deck-virginia', permanent: true },
       
       // Batch 2 - Legacy & WordPress Remnants
-      { source: '/elementskit-content/:path*', destination: '/', permanent: true },
-      { source: '/comments/feed', destination: '/', permanent: true },
+
       { source: '/blog-deck-tips/2', destination: '/blog', permanent: true },
       { source: '/ldn-decks-reviews-yelp', destination: '/reviews', permanent: true },
       { source: '/new-composite-deck-in-ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
@@ -40,7 +40,7 @@ const nextConfig = {
       
       // Batch 3 - More Location & Tag Fixes
       { source: '/tag/split-rail-fencing', destination: '/services/fence', permanent: true },
-      { source: '/tag/deck', destination: '/', permanent: true },
+
       { source: '/tag/deck-companies', destination: '/near-you', permanent: true },
       { source: '/deck-builder-in-loudoun-county/landing', destination: '/near-you/loudoun-county', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-dale-city', destination: '/near-you/prince-william-county/dale-city', permanent: true },
@@ -48,7 +48,7 @@ const nextConfig = {
       { source: '/tag/deck-installers', destination: '/near-you', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-bristow', destination: '/deck-builder-bristow-va', permanent: true },
       { source: '/deck-resurfacing', destination: '/services/deck-resurfacing', permanent: true },
-      { source: '/tag/loudoun-decks', destination: '/', permanent: true },
+
       { source: '/new-decks-installation', destination: '/services/new-decks', permanent: true },
       { source: '/the-ultimate-deck-building-guide-avoid-these-common-mistakes', destination: '/blog', permanent: true },
       { source: '/composite-decks-essential-tips-for-choosing-the-perfect-builder', destination: '/how-to-choose-a-deck-builder-northern-virginia', permanent: true },
@@ -69,7 +69,7 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-fort-belvoir', destination: '/near-you/fairfax-county/fort-belvoir', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-merrifield', destination: '/near-you/fairfax-county/merrifield', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-mount-vernon', destination: '/near-you/fairfax-county/mount-vernon', permanent: true },
-      { source: '/top-decks-build-near-you/feed', destination: '/', permanent: true },
+
       { source: '/top-decks-build-near-you/deck-builder-in-hillsboro', destination: '/near-you/loudoun-county/hillsboro', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-occoquan', destination: '/near-you/prince-william-county/occoquan', permanent: true },
       { source: '/deck-projects-showcase/new-custom-wood-fence-ashburn', destination: '/services/fence', permanent: true },
@@ -77,17 +77,16 @@ const nextConfig = {
       // Batch 5 - /feed/ cleanup and specific tags
       { source: '/top-decks-build-near-you/deck-builder-in-ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
       { source: '/tag/deck-in-fairfax/feed', destination: '/near-you/fairfax-county', permanent: true },
-      { source: '/tag/:path*/feed', destination: '/', permanent: true },
+
       { source: '/tag/vienna', destination: '/deck-builder-vienna-va', permanent: true },
       { source: '/tag/wood-fences', destination: '/services/fence', permanent: true },
-      { source: '/tag/northern-virginia-decks', destination: '/', permanent: true },
+
       { source: '/deck-balcony-resurfacing-in-sterling', destination: '/deck-builder-sterling-va', permanent: true },
       { source: '/deck-projects-showcase/deck-builder-ashburn-va', destination: '/deck-builder-ashburn-va', permanent: true },
       { source: '/deck-projects-showcase/deck-builder-ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
 
       // Batch 6 - Path Normalization & Final Tag Cleanup
-      { source: '/tag/:path*/feed/:path*', destination: '/', permanent: true },
-      { source: '/drafts', destination: '/', permanent: true },
+
       { source: '/deck-repair-loudoun-county-va', destination: '/deck-repair-loudoun-county', permanent: true },
       { source: '/tag/:path*', destination: '/near-you', permanent: true }, // Catch-all for any remaining tag URLs
       { source: '/about-loudoun-deck-company', destination: '/about', permanent: true },
@@ -98,7 +97,7 @@ const nextConfig = {
       { source: '/contacts', destination: '/contact', permanent: true },
       { source: '/blog-deck-tips', destination: '/blog', permanent: true },
       { source: '/free-estimates', destination: '/contact', permanent: true },
-      { source: '/home-2', destination: '/', permanent: true },
+
       { source: '/the-ultimate-deck-building-guide', destination: '/blog', permanent: true },
       { source: '/deck-replacement', destination: '/services/deck-replacement', permanent: true },
 
@@ -283,7 +282,7 @@ const nextConfig = {
       // Legacy WordPress image redirects (broken 404s from old WP upload paths)
       { source: '/wp-content/uploads/2024/09/ldndecks-logo-new-e1731874431860.webp', destination: '/ldndecks-logo.webp', permanent: true },
       { source: '/wp-content/uploads/2024/09/ldndecks-logo-new.png', destination: '/ldndecks-logo.webp', permanent: true },
-      { source: '/wp-content/:path*', destination: '/', permanent: true },
+
 
       // Single-hop www → non-www canonical redirect
       // Eliminates 2-hop chain: http://www → https://www → https://non-www

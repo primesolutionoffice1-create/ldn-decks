@@ -14,8 +14,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/composite-decks',
-      title: 'Composite Deck Builder | Loudoun County VA | LDN Decks',
-  description: 'Premier composite deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom low-maintenance decks from $15k+. Free estimate.',
+  title: '5-Star Composite Deck Builder NoVA | Free Quote in 24h',
+  description: 'Premier composite deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom low-maintenance decks. 5.0★ Google Rated. Free estimate!',
   image: '/images/img10.jpeg',
 });
 

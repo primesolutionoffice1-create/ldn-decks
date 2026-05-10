@@ -12,8 +12,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/deck-resurfacing",
-      title: "Deck Resurfacing Loudoun VA | TimberTech | LDN Decks",
-  description: "Transform your old deck with premium composite resurfacing. Save up to 40% by upgrading your existing frame with TimberTech Vintage Collection in Northern Virginia."
+  title: '5-Star Deck Resurfacing NoVA | TimberTech Vintage Experts',
+  description: 'Save up to 40% with professional deck resurfacing in Northern Virginia. Upgrade your old frame to TimberTech Vintage. ★ 5.0 Google Rated. Free estimates.',
 });
 
 const expansionSections = [

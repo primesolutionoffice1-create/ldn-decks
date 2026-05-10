@@ -9,8 +9,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/wood-decks',
-  title: 'Wood Decks in Northern Virginia | Pressure-Treated, Cedar & Hardwood',
-  description: 'Custom wood decks in Northern Virginia from $18-$45/sqft. Pressure-treated, cedar, redwood, ipe & exotic hardwoods. Compare to composite. Free estimate.',
+  title: '5-Star Wood Deck Builder NoVA | Cedar & Hardwood Decks',
+  description: 'Expert wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks. ★ 5.0 Google Rated. Free estimates in 24h. Licensed & Insured.',
 });
 
 const faqSchema = {

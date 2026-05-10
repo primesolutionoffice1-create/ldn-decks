@@ -84,8 +84,9 @@ export async function generateMetadata({ params }) {
   if (!data) return { title: 'Location Not Found', robots: { index: false, follow: false } };
   return buildMetadata({
     path: `/near-you/${county}/${city}`,
-            title: `Deck Builder in ${data.cityName} VA | LDN Decks`,
-    description: `5-Star deck builder in ${data.cityName}, VA. Custom Trex, composite & wood decks, screened porches & pergolas across ${data.countyName}. Free estimate.`
+    title: `Best Deck Builder in ${data.cityName} VA | Custom Decks & Patios`,
+    description: `Searching for a top-rated deck builder in ${data.cityName}, VA? Loudoun Decks offers premium custom composite decks, screened porches, and patio installations. Licensed & Insured. Get a free estimate today.`,
+    robots: { index: false, follow: true }
   });
 }
 

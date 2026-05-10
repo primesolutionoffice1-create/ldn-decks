@@ -9,8 +9,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/screened-porch-cost-northern-virginia',
-  title: 'Screened Porch Cost in Northern Virginia (2026 Guide)',
-  description: 'Screened porches in Northern Virginia cost $25,000-$70,000+. Pricing by size, material tiers, real projects, screened porch vs open deck comparison.',
+  title: '2026 Screened Porch Cost NoVA | See Real Project Prices',
+  description: 'Screened porches in Northern Virginia cost $25,000-$70,000+. See 2026 price tables, EZE-Breeze costs & project examples. Get a free itemized quote today!',
 });
 
 const faqSchema = {

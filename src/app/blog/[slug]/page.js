@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
   if (!post) return { title: 'Post Not Found', robots: { index: false, follow: false } };
   const base = buildMetadata({
     path: `/blog/${post.slug}`,
-    title: post.title,
+    title: `${post.title} | Loudoun Decks Expert Insights`,
     description: post.excerpt,
     image: post.image,
   });
@@ -44,13 +44,17 @@ export default async function SingleBlogPage({ params }) {
   // Pre-split the content by double newline to render paragraphs cleanly
   const paragraphs = post.content.split('\n\n');
 
-  const articleSchema = {
+    const postDate = new Date(post.date);
+    const today = new Date();
+    const clampedDate = postDate > today ? today : postDate;
+
+    const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
     "image": [`https://ldndecks.com${post.image}`],
-    "datePublished": new Date(post.date).toISOString(),
-    "dateModified": new Date(post.date).toISOString(),
+    "datePublished": clampedDate.toISOString(),
+    "dateModified": clampedDate.toISOString(),
     "author": [{
       "@type": "Organization",
       "name": post.author,

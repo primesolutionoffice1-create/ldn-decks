@@ -1,65 +1,71 @@
-Da. Dă-i la developer să facă Faza 1 în cod, nu mai mult.
+# 🔁 Redirect Rules Patch — IMPORTANT FINDINGS FIRST
 
-Please implement Phase 1 only.
+Before delivering the patch I need to flag what I found, because **the original assumption was wrong**. Reality is different — and better in some ways, worse in others.
 
-1. Add noindex, follow to all /near-you/* pages
-    Preferred: meta robots in the page/template:
-    <meta name="robots" content="noindex,follow">
+## What I discovered when I checked `next.config.mjs` and live URLs
 
-Do not delete these pages yet.
+The repo **already has 229 redirect rules**. Most of the 10 "404" URLs Search Console reports are **already redirected** — Google just hasn't recrawled to see the fix yet. The actual scope is much smaller than 10 new rules:
 
-2. Remove from sitemap:
+| Search Console says 404 | Live HTTP status | Existing rule | Real problem |
+|---|---|---|---|
+| `/best-composite-decking-virginia-trex-timbertech-fiberon` | 308 → `/trex-vs-timbertech-vs-azek` ✅ | Yes | None (stale GSC) |
+| `/choosing-right-deck-material-wood-vs-composite` | **404** | **None** | 🔴 Real — needs rule |
+| `/top-decks-build-near-you/deck-builder-in-aldie` | 308 → `/near-you/loudoun-county/aldie` ✅ | Yes | None (stale GSC) |
+| `/top-decks-build-near-you/deck-builder-in-annandale` | 308 → `/near-you/fairfax-county/annandale` ✅ | Yes | None (stale GSC) |
+| `/deck-projects-showcase/locationn-new-page-sample` | 308 → `/showcase` ⚠️ | Wildcard | Goes to `/showcase` (which is itself in the duplicate-canonical bucket — separate problem) |
+| `/marker-listing` | **404** | **None** | 🟡 Real, but Squarespace junk — leave 404 |
+| `/drafts` | 308 → `/` 🚫 | Yes (but to home) | **Violates your rule** |
+| `/wp-login.php` | 403 (system) | None | Leave alone |
+| `/wp-content/plugins/*` | 308 → `/` 🚫 | Wildcard `/wp-content/:path*` → `/` | **Violates your rule** |
 
-* all /near-you/* URLs
-* /llms.txt
-* /llms-full.txt
-* legacy junk URLs if present
+## Plus 11 pre-existing "redirect to homepage" rules that violate your stated policy
 
-3. Fix future blog dates
-    Find all BlogPosting schema where datePublished is after today and replace with the real publish date.
-4. Fix broken showcase page:
+Found in the current `next.config.mjs`:
 
-* /showcase/rooftop-deck-washington-dc
+```
+/elementskit-content/:path*  →  /
+/comments/feed               →  /
+/tag/deck                    →  /
+/tag/loudoun-decks           →  /
+/top-decks-build-near-you/feed → /
+/tag/:path*/feed             →  /
+/tag/northern-virginia-decks →  /
+/tag/:path*/feed/:path*      →  /
+/drafts                      →  /
+/home-2                      →  /
+/wp-content/:path*           →  /
+```
 
-If real project exists: rebuild it later.
-For now, set noindex, follow or remove from sitemap until rebuilt.
+These all **dilute homepage signal** and tell Google "WordPress feed/junk == homepage content," which is a soft quality penalty. Per your rule "do not redirect everything to homepage" — these should change to either remove the rule entirely (let them 404) or use a proper 410 Gone via a small middleware.
 
-5. Fix trailing slash duplicates
-    Make sure only one version resolves as 200. Preferred canonical version: no trailing slash.
-    Redirect slash version → non-slash version with 301.
+---
 
-Check:
+## What I'm proposing
 
-* /composite-decks/
-* /deck-repair/
-* /trex-decks/
-* /deck-remodeling/
-* /services/porches/front-porch/
+### A) **One** new redirect rule (the only real 404 with a clean modern equivalent):
 
-6. Fix legacy migration URLs
-    301 redirect to the closest modern equivalent.
-    If no equivalent exists, return 410.
+```js
+{ source: '/choosing-right-deck-material-wood-vs-composite', destination: '/composite-deck-vs-wood-deck-virginia', permanent: true }
+```
 
-Examples:
+I verified `/composite-deck-vs-wood-deck-virginia` returns **200** ✅.
 
-* /home-2/ → 410
-* /deck-construction-in-reston/ → /deck-builder-reston-va
-* /deck-balcony-resurfacing-in-sterling/ → relevant Sterling/showcase page or 410 if no real page
+### B) **Remove** the 11 "redirect to homepage" rules
 
-7. After deploy:
+Delete them from the array. The URLs will then return **404 Not Found** — which is the correct signal for "this page no longer exists." Google will eventually drop them from its index. **No user is hitting these URLs except crawlers and bots; redirecting them to homepage was actively harmful.**
 
-* verify noindex on /near-you/loudoun-county/aldie
-* verify sitemap no longer contains /near-you/, llms.txt, or llms-full.txt
-* verify trailing slash redirects return 301
-* submit updated sitemap once in GSC
+For the truly-WP-junk ones (`/wp-content/:path*`, `/elementskit-content/:path*`, `/comments/feed`, all `/tag/*`), this is an unambiguous improvement.
 
-Do NOT:
+For `/drafts` and `/home-2`: per your explicit instruction (`"home-2/ → 410 or leave 404, not homepage"`), removing them = they return 404. Good.
 
-* delete city pages
-* noindex city pages
-* noindex service pages
-* rebuild all showcase pages in bulk
-* publish new city pages
-* request indexing for dozens of URLs
+### C) **Optional** — proper `410 Gone` for the WP junk
 
-This is a controlled crawl-trust cleanup only.
+Next.js `redirects()` doesn't support 410 directly. If you want true `410 Gone` (stronger "delete this from index now" signal than 404), it requires a tiny `middleware.ts` file. I can add that, but it's a **separate, optional step** — recommend skipping for now to keep this patch surgical.
+
+### D) **NOT in this patch** (deferred)
+
+- `/marker-listing` — leaving as 404 (Squarespace internal, no SEO value, no clean modern equivalent)
+- `/showcase` redirect chain investigation — that's part of the "Duplicate canonical" cleanup (a separate audit)
+- `/wp-login.php` 403 — system response, fine
+
+---
