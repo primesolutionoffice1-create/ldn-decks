@@ -11,6 +11,10 @@ const nextConfig = {
       { source: '/contact-us', destination: '/contact', permanent: true },
       { source: '/best-composite-decking-virginia-trex-timbertech-fiberon', destination: '/trex-vs-timbertech-vs-azek', permanent: true },
       { source: '/rooftop-deck-washington-dc', destination: '/showcase/rooftop-deck-washington-dc', permanent: true },
+      { source: '/trex-deck-builder-loudoun', destination: '/deck-builders-loudoun', permanent: true },
+      { source: '/how-much-does-it-cost-to-build-a-deck-in-northern-virginia', destination: '/how-much-does-a-deck-cost-northern-virginia', permanent: true },
+      { source: '/deck-resurfacing-vs-replacement-northern-virginia', destination: '/deck-resurfacing-vs-replacement', permanent: true },
+      { source: '/terms-and-conditions', destination: '/privacy-policy', permanent: true },
       
       // Batch 2 - Legacy & WordPress Remnants
       { source: '/elementskit-content/:path*', destination: '/', permanent: true },

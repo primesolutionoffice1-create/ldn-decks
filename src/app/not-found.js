@@ -11,7 +11,11 @@ export default function NotFound() {
 
       <div className={styles.container}>
         <div className={styles.textWrap}>
-          <h1 className={styles.glitch}>404</h1>
+          <h1 className={styles.glitch}>
+            <span>4</span>
+            <span>0</span>
+            <span>4</span>
+          </h1>
         </div>
 
         <div className={styles.contentArea}>
