@@ -53,7 +53,21 @@ export default async function sitemap() {
 
         const staticPages = [
                 // Tier 1 - Homepage & top commercial pages
-                { path: "",                              priority: 1.00, lastMod: TIER1, freq: "daily" },
+                { 
+                  path: "", 
+                  priority: 1.00, 
+                  lastMod: TIER1, 
+                  freq: "daily",
+                  videos: [
+                    {
+                      thumbnail_loc: `${baseUrl}/og-default.webp`,
+                      title: 'Craftsmanship in Motion | Loudoun Decks',
+                      description: 'See how Loudoun Decks transforms Northern Virginia backyards into luxury outdoor living spaces with custom Trex decks and screened porches.',
+                      content_loc: `${baseUrl}/introvideo.mp4`,
+                      publication_date: '2026-04-23T08:00:00.000Z',
+                    }
+                  ]
+                },
                 { path: "/deck-builders-loudoun",        priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-ashburn-va",      priority: 0.92, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-leesburg-va",     priority: 0.92, lastMod: TIER1, freq: "weekly" },
@@ -263,10 +277,11 @@ export default async function sitemap() {
         const allPages = [...staticPages, ...cityPaths, ...blogPaths, ...showcasePaths]
                 .filter(p => !isExcluded(p.path));
 
-        return allPages.map(({ path, priority, lastMod, freq }) => ({
+        return allPages.map(({ path, priority, lastMod, freq, videos }) => ({
                 url: `${baseUrl}${path}`,
                 changeFrequency: freq,
                 priority,
                 lastModified: lastMod,
+                ...(videos && { videos }),
         }));
 }
