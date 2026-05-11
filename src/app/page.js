@@ -43,10 +43,10 @@ const homepageSchema = {
   "name": "Loudoun Decks — Custom Deck Builder in Northern Virginia",
   "description": "Top-rated custom deck builder in Loudoun County, Northern Virginia. Trex Platinum Partner and TimberTech Certified. Composite and wood decks, screened porches, patios, pergolas. 5.0-star Google rating. Free estimates.",
   "isPartOf": { "@type": "WebSite", "@id": "https://ldndecks.com/#website" },
-  "about": { "@type": "LocalBusiness", "@id": "https://ldndecks.com/#organization" },
+  "about": { "@id": "https://ldndecks.com/#organization" },
   "primaryImageOfPage": {
     "@type": "ImageObject",
-    "url": "https://ldndecks.com/images/img64.jpeg"
+    "url": "https://ldndecks.com/home-page-ldn.webp"
   },
   "speakable": {
     "@type": "SpeakableSpecification",
