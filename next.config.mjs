@@ -287,11 +287,16 @@ const nextConfig = {
       // Single-hop www → non-www canonical redirect
       // Eliminates 2-hop chain: http://www → https://www → https://non-www
       // Now: http://www → https://non-www (1 hop)
+      // Using explicit statusCode 301 (was permanent:true / 308). 301 is the
+      // historic canonical-permanent code; some legacy bots / link aggregators
+      // still treat it as a stronger signal than 308 even though Google handles
+      // both. Middleware (src/middleware.js) is the fallback for any other
+      // www.* host this rule doesn't cover.
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.ldndecks.com' }],
         destination: 'https://ldndecks.com/:path*',
-        permanent: true,
+        statusCode: 301,
       },
     ];
   },

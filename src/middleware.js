@@ -16,7 +16,8 @@ export function middleware(request) {
   return NextResponse.next();
 }
 
-// Only run on document requests, not static assets or APIs
+// Skip the middleware entirely for assets and metadata routes so they don't
+// pay the redirect-evaluation cost and aren't accidentally rewritten.
 export const config = {
   matcher: [
     /*
