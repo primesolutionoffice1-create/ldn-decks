@@ -51,6 +51,13 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
 
     const result = await sendContactEmail(formData);
 
+    // Honeypot-triggered submissions return { success: true, skipped: true }.
+    // Tell the form it succeeded (no error UI) but DO NOT fire analytics
+    // and DO NOT navigate to /thank-you (which would fire lead_confirmed).
+    if (result?.skipped) {
+      return { success: true, skipped: true };
+    }
+
     if (result?.success) {
       // hasTracked guards against React Strict Mode double-fire and
       // any future double-submit edge cases. Same-instance only;

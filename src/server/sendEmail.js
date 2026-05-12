@@ -5,6 +5,23 @@ import { sendMetaLeadEvent } from './metaCapi';
 
 export async function sendContactEmail(formData) {
   try {
+    // Honeypot guard — both ContactForm and ContactHome render a hidden
+    // company_website input. Real users never fill it; bots that auto-fill
+    // every input do. Return success so the bot moves on instead of
+    // retrying. No email is sent, no Meta CAPI event is fired, no client
+    // tracking is triggered downstream (the client still navigates to
+    // /thank-you, but Smart Bidding sees zero bot-driven conversions in
+    // the offline-import pipeline because no gclid/event_id record exists
+    // in the inbox / CRM).
+    if (formData.get('company_website')) {
+      console.log('[sendContactEmail] honeypot triggered, silently dropping submission');
+      // Return success-shaped response with `skipped` flag so the client
+      // hook doesn't fire trackFormSubmit and doesn't navigate to /thank-you
+      // (which would otherwise fire lead_confirmed). Bot sees no error,
+      // moves on. No conversion enters the analytics pipeline.
+      return { success: true, skipped: true };
+    }
+
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 465,

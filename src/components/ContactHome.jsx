@@ -76,6 +76,16 @@ export default function ContactHome() {
 
         <div className={styles.rightCol}>
             <form onSubmit={handleSubmit} className={styles.contactForm}>
+              {/* Honeypot — bots auto-fill every input, real users never see this.
+                  Server-side check in sendEmail.js silently accepts then drops. */}
+              <input
+                type="text"
+                name="company_website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+              />
               <h3>Get Your 100% Free Design Consultation</h3>
               <p className={styles.formSubtext}>Licensed & Insured | Trex Platinum Partner | 5.0★ Google Rated</p>
               {status === "error" && <p style={{color: 'red', fontSize: '14px', marginBottom: '10px'}}>There was an error sending your message. Please try again.</p>}

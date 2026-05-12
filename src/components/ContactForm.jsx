@@ -54,6 +54,16 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
           )}
           <div className={`${styles.formCol} ${noPadding ? styles.formColNoPadding : ''}`}>
             <form onSubmit={handleSubmit} className={styles.formBlock} aria-label="Project Inquiry Form">
+              {/* Honeypot — bots auto-fill every input, real users never see this.
+                  Server-side check in sendEmail.js silently accepts then drops. */}
+              <input
+                type="text"
+                name="company_website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+              />
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
                   <label htmlFor="firstName">First Name <span className={styles.req}>*</span></label>
