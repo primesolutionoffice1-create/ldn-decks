@@ -5,6 +5,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/bbb-accredited-deck-builder-virginia',
@@ -250,9 +251,9 @@ export default function BBBPage() {
             Ready to build a deck with a trusted Northern Virginia contractor? We provide free on-site consultations, custom design renderings, and itemized written quotes &mdash; with no obligation to proceed. Most homeowners decide within 1&ndash;2 weeks of meeting our team.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
-            <a href="tel:+15716557207" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '0.9rem 1.6rem', borderRadius: 8, fontWeight: 700, textDecoration: 'none' }}>
+            <CallLink style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '0.9rem 1.6rem', borderRadius: 8, fontWeight: 700, textDecoration: 'none' }}>
               Call (571) 655-7207
-            </a>
+            </CallLink>
             <Link href="/contact" style={{ display: 'inline-block', background: 'var(--color-dark)', color: '#fff', padding: '0.9rem 1.6rem', borderRadius: 8, fontWeight: 700, textDecoration: 'none' }}>
               Get Free Estimate
             </Link>

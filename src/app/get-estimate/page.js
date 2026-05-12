@@ -4,6 +4,7 @@ import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/get-estimate',
@@ -66,9 +67,9 @@ export default function GetEstimatePage() {
               ))}
             </div>
 
-            <a href="tel:+15716557207" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '1rem 2rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1.1rem' }}>
+            <CallLink style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '1rem 2rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1.1rem' }}>
               Call (571) 655-7207
-            </a>
+            </CallLink>
             <p style={{ color: '#777', fontSize: '0.8rem', marginTop: '0.5rem' }}>Or fill out the form below we respond within 2 hours</p>
           </div>
 
@@ -170,9 +171,9 @@ export default function GetEstimatePage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Ready to Start Your Deck Project?</h2>
           <p style={{ color: '#ccc', marginBottom: '1.5rem' }}>Free on-site consultation. 3D design rendering. Itemized written quote. No obligation.</p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="tel:+15716557207" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '1rem 2rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1.1rem' }}>
+            <CallLink style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '1rem 2rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1.1rem' }}>
               Call (571) 655-7207
-            </a>
+            </CallLink>
             <Link href="/deck-cost-calculator" style={{ display: 'inline-block', background: 'transparent', color: '#fff', padding: '1rem 2rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem', border: '2px solid rgba(255,255,255,0.3)' }}>
               Try Cost Calculator
             </Link>

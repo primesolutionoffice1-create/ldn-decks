@@ -53,12 +53,19 @@ export function trackFormSubmit({
 
 /**
  * Track phone number click
- * Fires: GA4 phone_call_click + Google Ads Call Lead
+ * Fires: GA4 phone_call_click (engagement signal).
+ *
+ * Note: phone_click is a vanity event — click != actual call. Use Google
+ * Ads call asset + website call-tracking forwarding numbers as the real
+ * phone-conversion signal. Keep this event for GA4 reporting and
+ * audience building only.
  */
 export function trackPhoneClick() {
+  if (typeof window === 'undefined') return;
   push({
     event: 'phone_click',
-    phone: '+15716557207',
+    phone_source: 'tel_link',
+    page: window.location.pathname,
   });
 }
 

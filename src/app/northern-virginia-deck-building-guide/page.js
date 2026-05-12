@@ -5,6 +5,7 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/northern-virginia-deck-building-guide',
@@ -74,7 +75,7 @@ export default function MegaGuidePage() {
                   <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ready to Start Your Project?</h3>
                   <p style={{ marginBottom: '1rem', opacity: 0.9 }}>Free on-site consultation · Detailed estimate in 48 hours · We handle permits &amp; HOA</p>
                   <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                    <a href="tel:+15716557207" style={{ background: '#fff', color: 'var(--color-primary)', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
+                    <CallLink style={{ background: '#fff', color: 'var(--color-primary)', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
                     <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
                   </div>
                 </div>
@@ -85,7 +86,7 @@ export default function MegaGuidePage() {
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '2rem', marginTop: '2rem' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>About This Guide</h2>
             <p style={{ lineHeight: 1.7, marginBottom: '1rem' }}>This guide is written and maintained by <strong>Loudoun Decks</strong>, a Virginia Class A Licensed contractor and certified Trex Pro installer based in Centreville, VA. We&apos;ve built 200+ decks across Loudoun, Fairfax, and Prince William counties with a perfect 5.0★ Google rating (41+ reviews).</p>
-            <p style={{ lineHeight: 1.7 }}>Every data point reflects current 2026 Northern Virginia pricing, permit timelines, and market conditions. We update this guide quarterly. Questions? <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</a> or <Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free consultation</Link>.</p>
+            <p style={{ lineHeight: 1.7 }}>Every data point reflects current 2026 Northern Virginia pricing, permit timelines, and market conditions. We update this guide quarterly. Questions? <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink> or <Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free consultation</Link>.</p>
           </div>
         </div>
       </article>

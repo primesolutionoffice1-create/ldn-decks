@@ -68,7 +68,7 @@ import { counties, slugify, getCanonicalCityUrl } from '@/data/cityData';
 
 
 import { useContact } from '@/context/ContactContext';
-import { trackPhoneClick } from '@/lib/tracking';
+import CallLink from '@/components/CallLink';
 
 export default function Header() {
   const { isContactOpen, openContact, closeContact, toggleContact } = useContact();
@@ -154,10 +154,10 @@ export default function Header() {
                 </a>
               </div>
               <div className={styles.topBarItem}>
-                 <a href="tel:+15716557207" aria-label="Call Loudoun Decks" onClick={trackPhoneClick}>
+                 <CallLink aria-label="Call Loudoun Decks">
                     <PhoneIcon />
                     <span>(571) 655-7207</span>
-                 </a>
+                 </CallLink>
               </div>
             </div>
             <div className={styles.topBarRight}>
@@ -275,10 +275,10 @@ export default function Header() {
                 </div>
               </nav>
 
-              <a href="tel:+15716557207" className={styles.callNowBtn} aria-label="Call Us" onClick={trackPhoneClick}>
+              <CallLink className={styles.callNowBtn} aria-label="Call Us">
                 <PhoneIcon />
                 <span>Call Now</span>
-              </a>
+              </CallLink>
             </div>
 
             {/* Mobile Toggle Button */}
@@ -496,10 +496,10 @@ export default function Header() {
                 alt="Loudoun Decks BBB Business Review" 
               />
             </a>
-            <a href="tel:+15716557207" className={styles.callNowBtn} style={{ width: '100%', justifyContent: 'center' }} onClick={trackPhoneClick}>
+            <CallLink className={styles.callNowBtn} style={{ width: '100%', justifyContent: 'center' }}>
               <PhoneIcon />
               <span>Call Us Now</span>
-            </a>
+            </CallLink>
           </div>
         </div>
       </div>

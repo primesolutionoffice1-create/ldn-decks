@@ -8,6 +8,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-centreville-va',
@@ -43,7 +44,7 @@ export default function CentrevilleDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Centreville Expanding Your Outdoor Potential</h2>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Loudoun Decks is headquartered right here in Centreville. Visit our showroom for material samples.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
+            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Visit Our Showroom</Link>
           </div>
           <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · 41 reviews · 13704 Winding Oak Cir, Centreville, VA 20121</p>
@@ -60,7 +61,7 @@ export default function CentrevilleDeckBuilderPage() {
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Loudoun Decks Showroom</p>
             <p style={{ marginBottom: '0.25rem' }}>13704 Winding Oak Cir, Centreville, VA 20121</p>
-            <p style={{ marginBottom: '0.25rem' }}>Phone: <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</a></p>
+            <p style={{ marginBottom: '0.25rem' }}>Phone: <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink></p>
             <p style={{ marginBottom: '0.5rem' }}>Hours: Mon–Sat 8:00 AM – 6:00 PM (by appointment recommended)</p>
             <p style={{ fontSize: '0.9rem', color: '#555' }}>See and touch samples of Trex Transcend, Trex Enhance, TimberTech AZEK, railing systems, lighting options, and color swatches. Compare materials side by side before deciding.</p>
           </div>

@@ -4,6 +4,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
 import { getAllCityPaths } from '@/data/cityData';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/areas-we-serve',
@@ -40,7 +41,7 @@ export default function AreasWeServePage() {
 
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <p>We serve <strong>Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County</strong> in Northern Virginia. If your city is listed below, we build there. If it&apos;s not listed, <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>call us</a> we likely serve your area too.</p>
+          <p>We serve <strong>Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County</strong> in Northern Virginia. If your city is listed below, we build there. If it&apos;s not listed, <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>call us</CallLink> we likely serve your area too.</p>
         </div>
       </section>
 
@@ -111,7 +112,7 @@ export default function AreasWeServePage() {
 
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h2 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.75rem' }}>Don&apos;t See Your City?</h2>
-            <p style={{ lineHeight: 1.7 }}>We serve most of Northern Virginia. If your city isn&apos;t listed, call <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</a> or <Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free estimate</Link> we&apos;ll confirm availability for your area within 24 hours.</p>
+            <p style={{ lineHeight: 1.7 }}>We serve most of Northern Virginia. If your city isn&apos;t listed, call <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink> or <Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free estimate</Link> we&apos;ll confirm availability for your area within 24 hours.</p>
           </div>
 
         </div>

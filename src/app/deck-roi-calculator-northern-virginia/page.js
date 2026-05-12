@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/deck-roi-calculator-northern-virginia',
@@ -61,7 +62,7 @@ export default function DeckROICalculatorPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>A composite deck in Northern Virginia recoups <strong>65&ndash;80% of its cost at resale</strong> &mdash; well above the national average of 50&ndash;65%. Wood decks recoup <strong>50&ndash;65%</strong>. The investment sweet spot is <strong>$25,000&ndash;$45,000</strong> in composite decking, which delivers the highest percentage return while meeting buyer expectations in Loudoun, Fairfax, and Prince William counties. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> for a free estimate.</p>
+          <p>A composite deck in Northern Virginia recoups <strong>65&ndash;80% of its cost at resale</strong> &mdash; well above the national average of 50&ndash;65%. Wood decks recoup <strong>50&ndash;65%</strong>. The investment sweet spot is <strong>$25,000&ndash;$45,000</strong> in composite decking, which delivers the highest percentage return while meeting buyer expectations in Loudoun, Fairfax, and Prince William counties. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a free estimate.</p>
         </div>
       </section>
 

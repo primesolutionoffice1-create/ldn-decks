@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './ServicesHeader.module.css';
 import { useContact } from '@/context/ContactContext';
-import { trackPhoneClick } from '@/lib/tracking';
+import CallLink from '@/components/CallLink';
 
 export default function ServicesHeader({
   subtext = "What We DO",
@@ -28,14 +28,12 @@ export default function ServicesHeader({
           >
             Get a Free Estimate
           </button>
-          <a
-            href="tel:+15716557207"
+          <CallLink
             className={styles.ctaSecondary}
             aria-label="Call Loudoun Decks"
-            onClick={trackPhoneClick}
           >
             Call (571) 655-7207
-          </a>
+          </CallLink>
         </div>
         <p className={styles.trustText}>Free estimate &bull; No obligation &bull; Fully permitted builds</p>
       </div>

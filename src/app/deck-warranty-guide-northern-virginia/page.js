@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/deck-warranty-guide-northern-virginia',
@@ -61,7 +62,7 @@ export default function DeckWarrantyGuidePage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Trex offers a <strong>25-year fade and stain warranty</strong> on most lines (50 years on Lineage). TimberTech/AZEK provides <strong>30&ndash;50 year coverage</strong>. But manufacturer warranties only cover materials &mdash; not installation errors. That&apos;s why our <strong>2-year workmanship warranty</strong> and Trex Platinum installer status matter. As a certified Trex Platinum partner, we activate the full warranty tier that uncertified installers cannot. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> to discuss warranty-backed installation.</p>
+          <p>Trex offers a <strong>25-year fade and stain warranty</strong> on most lines (50 years on Lineage). TimberTech/AZEK provides <strong>30&ndash;50 year coverage</strong>. But manufacturer warranties only cover materials &mdash; not installation errors. That&apos;s why our <strong>2-year workmanship warranty</strong> and Trex Platinum installer status matter. As a certified Trex Platinum partner, we activate the full warranty tier that uncertified installers cannot. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> to discuss warranty-backed installation.</p>
         </div>
       </section>
 

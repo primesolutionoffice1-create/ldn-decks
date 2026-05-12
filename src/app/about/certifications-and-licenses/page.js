@@ -4,6 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/about/certifications-and-licenses',
@@ -83,7 +84,7 @@ export default function CertificationsPage() {
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <p style={{ marginBottom: '0.5rem' }}><strong>Loudoun Decks LLC</strong></p>
             <p style={{ marginBottom: '0.5rem' }}>13704 Winding Oak Cir, Centreville, VA 20121</p>
-            <p style={{ marginBottom: '0.5rem' }}>Phone: <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</a></p>
+            <p style={{ marginBottom: '0.5rem' }}>Phone: <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink></p>
             <p style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:office@ldndecks.com" style={{ color: 'var(--color-primary)' }}>office@ldndecks.com</a></p>
             <p>Hours: Monday–Saturday 8:00 AM – 6:00 PM</p>
           </div>

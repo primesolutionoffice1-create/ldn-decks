@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { useContact } from '@/context/ContactContext';
 import styles from './ContactForm.module.css';
-import { trackPhoneClick } from '@/lib/tracking';
 import { useLeadSubmit } from '@/hooks/useLeadSubmit';
+import CallLink from '@/components/CallLink';
 
 export default function ContactForm({ hideInfoCol = false, noPadding = false }) {
   const [status, setStatus] = useState(null);
@@ -33,7 +33,7 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               <div className={styles.contactPoint}>
                 <strong>Phone:</strong>
                 <br/>
-                <a href="tel:+15716557207" aria-label="Call Loudoun Decks" onClick={trackPhoneClick}>(571) 655-7207</a>
+                <CallLink aria-label="Call Loudoun Decks">(571) 655-7207</CallLink>
               </div>
               <div className={styles.contactPoint}>
                 <strong>Email:</strong>

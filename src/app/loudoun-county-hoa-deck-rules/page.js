@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/loudoun-county-hoa-deck-rules',
@@ -61,7 +62,7 @@ export default function LoudounCountyHOADeckRulesPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Most Loudoun County HOAs require <strong>architectural review committee (ARC) approval before building a deck</strong>. Approval takes 2&ndash;6 weeks depending on the community. Common restrictions include color limitations (earth tones only), material requirements (composite preferred or required), and height/setback rules. We handle <strong>100% of the HOA submission process</strong> and have a 100% approval rate across Loudoun County communities. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> to get started.</p>
+          <p>Most Loudoun County HOAs require <strong>architectural review committee (ARC) approval before building a deck</strong>. Approval takes 2&ndash;6 weeks depending on the community. Common restrictions include color limitations (earth tones only), material requirements (composite preferred or required), and height/setback rules. We handle <strong>100% of the HOA submission process</strong> and have a 100% approval rate across Loudoun County communities. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> to get started.</p>
         </div>
       </section>
 
@@ -120,7 +121,7 @@ export default function LoudounCountyHOADeckRulesPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ ...S.p, fontSize: '0.85rem', color: '#777' }}>This data reflects our direct experience and may not capture every recent policy change. We verify current ARC guidelines before every submission. Don&apos;t see your community? <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call us</a> — we likely have experience with your HOA.</p>
+          <p style={{ ...S.p, fontSize: '0.85rem', color: '#777' }}>This data reflects our direct experience and may not capture every recent policy change. We verify current ARC guidelines before every submission. Don&apos;t see your community? <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call us</CallLink> — we likely have experience with your HOA.</p>
 
           {/* ===== SECTION 3: General HOA Submission Process ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>The HOA Submission Process: What Documents Are Needed</h2>

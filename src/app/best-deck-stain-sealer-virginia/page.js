@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/best-deck-stain-sealer-virginia',
@@ -61,7 +62,7 @@ export default function BestDeckStainSealerPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>For most Virginia decks, we recommend <strong>TWP 1500 Semi-Transparent</strong> or <strong>Defy Extreme Semi-Transparent</strong>. Both are water-based, handle Virginia&apos;s 70%+ summer humidity, resist mildew, and last 2&ndash;3 years between coats. For maximum durability on older wood, <strong>Benjamin Moore Arborcoat Solid</strong> is our top solid stain pick. Need professional application? <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> for a free quote.</p>
+          <p>For most Virginia decks, we recommend <strong>TWP 1500 Semi-Transparent</strong> or <strong>Defy Extreme Semi-Transparent</strong>. Both are water-based, handle Virginia&apos;s 70%+ summer humidity, resist mildew, and last 2&ndash;3 years between coats. For maximum durability on older wood, <strong>Benjamin Moore Arborcoat Solid</strong> is our top solid stain pick. Need professional application? <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a free quote.</p>
         </div>
       </section>
 
