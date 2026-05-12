@@ -13,10 +13,17 @@ const servicesContent = [
   },
   {
     id: 2,
-    title: 'Deck Resurfacing & Repair',
-    desc: 'Save on the cost of a full build with our expert deck resurfacing and repair services. We replace old boards with premium Trex or wood while ensuring your underlying structure is safe and stable.',
+    title: 'Deck Resurfacing',
+    desc: 'Save on the cost of a full build with our expert deck resurfacing. We replace old boards with premium Trex or wood while ensuring your underlying structure is safe and stable.',
     image: '/images/img25.jpeg',
     link: '/services/deck-resurfacing'
+  },
+  {
+    id: 11,
+    title: 'Deck Repair & Structural Maintenance',
+    desc: 'Specialized structural repair for rotted support posts, sinking decks, and code violations. We fix "red-tagged" projects and ensure your deck is safe for years to come.',
+    image: '/images/img04.jpeg',
+    link: '/services/deck-repair-and-structural-maintenance'
   },
   {
     id: 3,

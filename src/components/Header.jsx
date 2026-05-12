@@ -226,6 +226,7 @@ export default function Header() {
                       </div>
                     </div>
                     
+                    <Link href="/services/deck-repair-and-structural-maintenance" style={{ padding: '10px 20px', display: 'block' }}>Deck Repair &amp; Structural Maintenance</Link>
                     <Link href="/services/deck-resurfacing" style={{ padding: '10px 20px', display: 'block' }}>Deck Resurfacing</Link>
                     <Link href="/services/trex-calm-shell" style={{ padding: '10px 20px', display: 'block' }}>Trex Calm Shell</Link>
                     <Link href="/services/deck-stair-lighting" style={{ padding: '10px 20px', display: 'block' }}>Deck Stair Lighting</Link>
@@ -398,6 +399,7 @@ export default function Header() {
                      </div>
                   </div>
 
+                  <Link href="/services/deck-repair-and-structural-maintenance" onClick={() => setIsMobileOpen(false)}>Deck Repair &amp; Structural Maintenance</Link>
                   <Link href="/services/deck-resurfacing" onClick={() => setIsMobileOpen(false)}>Deck Resurfacing</Link>
                   <Link href="/services/trex-calm-shell" onClick={() => setIsMobileOpen(false)}>Trex Calm Shell</Link>
                   <Link href="/services/deck-stair-lighting" onClick={() => setIsMobileOpen(false)}>Deck Stair Lighting</Link>

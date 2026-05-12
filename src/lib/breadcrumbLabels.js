@@ -39,6 +39,7 @@ export const SEGMENT_LABELS = {
   // Service sub-pages
   'new-decks': 'New Decks',
   'deck-replacement': 'Deck Replacement',
+  'deck-repair-and-structural-maintenance': 'Deck Repair & Structural Maintenance',
   'deck-resurfacing': 'Deck Resurfacing',
   'deck-maintenance': 'Deck Maintenance',
   'deck-inspection': 'Deck Inspection',
