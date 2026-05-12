@@ -29,6 +29,8 @@ export function trackFormSubmit({
   firstName,
   lastName,
   zip,
+  city,
+  state,
   formType = 'quote',
   clickIds = {},
   eventId,
@@ -43,6 +45,8 @@ export function trackFormSubmit({
     first_name: firstName || null,
     last_name: lastName || null,
     zip: zip || null,
+    city: city || null,
+    state: state || null,
     country: 'US',
     gclid: clickIds.gclid || null,
     gbraid: clickIds.gbraid || null,
@@ -110,12 +114,3 @@ export function trackLeadConfirmed({ eventId } = {}) {
   });
 }
 
-// Analytics tracking helper alias for compatibility
-export function trackEvent(action, category, label, value) {
-  push({
-    event: action,
-    event_category: category,
-    event_label: label,
-    value: value || 1
-  });
-}

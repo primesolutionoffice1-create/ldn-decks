@@ -6,31 +6,79 @@ Each item includes: severity, business impact, affected conversions, estimated r
 
 ---
 
-## Phase 1 status (2026-05-11)
+## Phase 1 status (2026-05-11) and P2 polish (2026-05-12)
 
-Five pure-code fixes implemented on `feat/ads-tracking-instrumentation`:
+Original Phase 1 (5 fixes):
 
 | # | Status | Commit | Item |
 |---|---|---|---|
 | 1 | ✅ Done | `c9cefd8` | useLeadSubmit hook + wire ContactHome |
 | 2 | ✅ Done | `8e0ef30` | CallLink component + sweep 53 of 55 tel: links |
 | 3 | ✅ Done | `5f86dce` | Consent defaults beforeInteractive, GTM afterInteractive |
-| 4 | ⏸ Deferred | — | GTM dedup verification (requires GTM access) |
-| 5 | ⏸ Deferred | — | GA4 SPA page_view trigger (requires GTM access) |
-| 6 | ⏸ Deferred | — | Enhanced Conversions hashing in GTM (requires GTM access; dataLayer fields ready) |
-| 7 | ⏸ Deferred | — | Demote phone_click from primary conversion (requires Google Ads UI access) |
 | 8 | ✅ Done | `2774d7f` | Honeypot spam protection |
-| 9 | Pending P2 | — | Service selector on ContactForm |
 | 10 | ✅ Done | `dca4820` | sessionStorage anti-replay |
 
-**Build status:** ✅ `npm run build` exits clean. 235 static pages generated.
-**Lint status:** ⚠️ `npm run lint` fails — pre-existing ESLint v9 config issue, not caused by Phase 1 changes.
+Doc + hardening (2 commits):
 
-Excluded from #2 (CallLink sweep) due to unrelated uncommitted SEO edits:
+| Commit | Item |
+|---|---|
+| `c365b89` | Phase 1 completion notes + QA/deploy doc updates |
+| `3cf7454` | 4 operator runbooks (GTM-VALIDATION-REPORT, ADS-CONVERSION-INTEGRITY, ENHANCED-CONVERSIONS-VERIFICATION, FINAL-ATTRIBUTION-SIGNOFF) + window.__ldnAttr debug helper + smoke-test script |
+
+P2 polish (this round):
+
+| # | Status | Item |
+|---|---|---|
+| 11 | ✅ Done | `_fbp` cookie capture client-side + `source_url` already in `useLeadSubmit` |
+| 12 | ✅ Done | IP + User-Agent read via `headers()` in `sendEmail.js`, passed to Meta CAPI |
+| 13 | ✅ Verified | www→apex redirect preserves gclid (308 with `Location:` carrying full query) |
+| 14 | ✅ Done | Removed dead `trackEvent` function |
+| EC §5 | ✅ Done | `city` + `state` added to `trackFormSubmit` dataLayer push for higher EC match rate |
+
+Deferred (GTM/Ads UI — operator):
+
+| # | Status | Item |
+|---|---|---|
+| 4 | ⏸ | GTM dedup verification (`transaction_id` mapping + "Don't allow duplicates") |
+| 5 | ⏸ | GA4 SPA page_view trigger (History Change) |
+| 6 | ⏸ | Enhanced Conversions hashing toggle in Lead tag (dataLayer fields ready) |
+| 7 | ⏸ | Demote `phone_click` from primary Google Ads conversion goal |
+| 9 | Pending | Service selector on ContactForm (UX change — defer to user) |
+
+**Build status:** ✅ `npm run build` exits clean. 236 static pages generated.
+**Lint status:** ⚠️ Pre-existing ESLint v9 config gap — unrelated.
+
+Excluded from #2 (CallLink sweep) due to unrelated uncommitted SEO edits at the time:
 - `src/app/deck-builder-fairfax-va/page.js`
 - `src/app/trex-vs-timbertech-vs-azek/page.js`
 
-These 2 of 55 files retain raw `<a href="tel:...">` until the SEO branch merges.
+These 2 of 55 files retain raw `<a href="tel:...">`. Re-sweep when SEO branch merges (or as a separate small follow-up).
+
+---
+
+### Item #13 verification record (2026-05-12)
+
+Tested via `curl -sI` on production:
+
+```
+GET https://www.ldndecks.com/?gclid=CURLTEST_PHASE2&utm_source=test
+→ HTTP/2 308
+→ Location: https://ldndecks.com/?gclid=CURLTEST_PHASE2&utm_source=test
+                                    ↑ gclid preserved
+                                    ↑ utm_source preserved
+
+GET https://www.ldndecks.com/deck-builder-ashburn-va?gclid=CURLTEST_DEEP
+→ HTTP/2 308
+→ Location: https://ldndecks.com/deck-builder-ashburn-va?gclid=CURLTEST_DEEP
+                                    ↑ gclid preserved on deep path
+
+GET https://ldndecks.com/?gclid=CURLTEST_APEX
+→ HTTP/2 200  (no redirect; direct hit)
+```
+
+**Conclusion:** paid traffic landing on `www.*` correctly preserves `gclid` (and all other query parameters) through the 308 to apex. Attribution chain is intact at the redirect layer.
+
+The `statusCode: 301` in `next.config.mjs` line 302 is rendered as 308 in production — likely because Next.js maps `statusCode` to permanent-redirect semantics and the platform (Vercel) emits 308. Functionally equivalent to 301 for crawlers and ad-platform attribution.
 
 ---
 

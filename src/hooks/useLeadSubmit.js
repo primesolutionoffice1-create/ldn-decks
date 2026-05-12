@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { sendContactEmail } from '@/server/sendEmail';
 import { trackFormSubmit } from '@/lib/tracking';
-import { getClickIds, CLICK_ID_KEYS } from '@/lib/clickIds';
+import { getClickIds, getFbp, CLICK_ID_KEYS } from '@/lib/clickIds';
 
 // Shared submission pipeline for every lead form on the site.
 // Owns: click-ID forwarding to server, event_id generation, dedup guard,
@@ -23,6 +23,13 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
     CLICK_ID_KEYS.forEach((k) => {
       if (clickIds[k]) formData.append(k, clickIds[k]);
     });
+
+    // Meta _fbp browser ID — only present after a Meta Pixel has set it
+    // client-side. Sent server-side to Meta CAPI to raise match quality.
+    // Today this is typically null (no client Pixel installed yet); when
+    // a Pixel is added, this starts populating without any further wiring.
+    const fbp = getFbp();
+    if (fbp) formData.append('_fbp', fbp);
 
     // event_id anchors dedup across:
     //   - client form_submit dataLayer event (this submit)
@@ -48,6 +55,12 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
     const lastName =
       formData.get('lastName') || rawName.split(' ').slice(1).join(' ') || '';
     const zip = formData.get('zip') || '';
+    // city + state lift Enhanced Conversions match rate from ~70% to
+    // ~80%+. Both fields exist on ContactForm; ContactHome doesn't
+    // collect them, so they'll be empty for homepage submits — that's
+    // fine, Google Ads accepts partial user_data.
+    const city = formData.get('city') || '';
+    const state = formData.get('state') || '';
 
     const result = await sendContactEmail(formData);
 
@@ -70,6 +83,8 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
           firstName,
           lastName,
           zip,
+          city,
+          state,
           formType,
           clickIds,
           eventId,
