@@ -78,9 +78,26 @@ export function trackPhoneClick() {
  * event_id matches the one passed into ContactForm's form_submit event,
  * enabling client-side dedup in GTM and server-side dedup if CAPI/Google
  * Ads Conversions API is added later.
+ *
+ * Anti-replay: useEffect re-runs on /thank-you reload or back-forward
+ * navigation; without a guard, each re-mount fires another conversion
+ * with the same event_id. GTM transaction_id dedup catches this in the
+ * tag layer, but we block at the source too — belt-and-braces. The
+ * sessionStorage key is scoped to event_id, so legitimate new
+ * submissions (different event_id, even from the same user) still fire.
  */
 export function trackLeadConfirmed({ eventId } = {}) {
   if (typeof window === 'undefined') return;
+  if (eventId) {
+    const key = `lead_fired_${eventId}`;
+    try {
+      if (window.sessionStorage && window.sessionStorage.getItem(key)) return;
+      if (window.sessionStorage) window.sessionStorage.setItem(key, '1');
+    } catch (e) {
+      // sessionStorage unavailable (Safari private mode, embedded
+      // contexts) — fall through and let GTM transaction_id handle dedup.
+    }
+  }
   push({
     event: 'lead_confirmed',
     event_id: eventId || null,
