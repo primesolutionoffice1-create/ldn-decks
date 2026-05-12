@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import styles from './ContactHome.module.css';
-import { sendContactEmail } from '@/server/sendEmail';
+import { useLeadSubmit } from '@/hooks/useLeadSubmit';
 
 const PhoneIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -26,19 +25,13 @@ const MapIcon = () => (
 
 export default function ContactHome() {
   const [status, setStatus] = useState(null);
-  const router = useRouter();
+  const submit = useLeadSubmit({ formType: 'homepage' });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("submitting");
-    const formData = new FormData(e.target);
-    const result = await sendContactEmail(formData);
-    
-    if (result && result.success) {
-      router.push('/thank-you');
-    } else {
-      setStatus("error");
-    }
+    const result = await submit(e.target);
+    if (!result.success) setStatus("error");
   };
 
   return (

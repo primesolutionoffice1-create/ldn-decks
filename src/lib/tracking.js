@@ -15,15 +15,33 @@ function push(event) {
  * Fires: GA4 generate_lead + Google Ads Form Lead + Enhanced Conversions.
  * Click IDs (gclid/gbraid/wbraid/fbclid/msclkid) are pushed to dataLayer so GTM
  * can forward them to Google Ads conversion tags and store for offline import.
+ *
+ * firstName/lastName/zip carry user-provided data for Google Ads Enhanced
+ * Conversions for Web. GTM's Google Ads conversion tag template hashes
+ * these client-side before the conversion request leaves the browser; no
+ * plaintext PII reaches Google.
  */
-export function trackFormSubmit({ email, phone, formType = 'quote', clickIds = {}, eventId } = {}) {
+export function trackFormSubmit({
+  email,
+  phone,
+  firstName,
+  lastName,
+  zip,
+  formType = 'quote',
+  clickIds = {},
+  eventId,
+} = {}) {
   if (typeof window === 'undefined') return;
   push({
     event: 'form_submit',
     event_id: eventId || null,
     form_type: formType,
-    email: email,
-    phone: phone,
+    email: email || null,
+    phone: phone || null,
+    first_name: firstName || null,
+    last_name: lastName || null,
+    zip: zip || null,
+    country: 'US',
     gclid: clickIds.gclid || null,
     gbraid: clickIds.gbraid || null,
     wbraid: clickIds.wbraid || null,
