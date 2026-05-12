@@ -63,15 +63,24 @@ export default function RootLayout({ children }) {
           {`(function(){try{var u=new URL(window.location.href);var ids=['gclid','gbraid','wbraid','fbclid','msclkid'];var ttl=60*60*24*90;ids.forEach(function(k){var v=u.searchParams.get(k);if(v){document.cookie=k+'='+encodeURIComponent(v)+'; max-age='+ttl+'; path=/; SameSite=Lax';}});}catch(e){}})();`}
         </Script>
 
-        {/* Google Tag Manager - dataLayer init */}
-        <Script id="gtm-init" strategy="lazyOnload">
-          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500,'region':['BE','BG','CZ','DK','DE','EE','IE','GR','ES','FR','HR','IT','CY','LV','LT','LU','HU','MT','NL','AT','PL','PT','RO','SI','SK','FI','SE','IS','LI','NO','GB','CH']}); gtag('consent','default',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});`}
+        {/* Consent Mode defaults — MUST run before the GTM container script
+            so tags fire with explicit consent state from the very first event.
+            beforeInteractive guarantees this script executes before any
+            afterInteractive / lazyOnload script regardless of network order.
+            Audience is US-only (NoVA), so the EU/UK denial branch was dead
+            code without a CMP — dropped. If a CMP is added later, restore the
+            region-scoped denied defaults and wire a consent.update callback. */}
+        <Script id="gtm-consent-defaults" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('consent','default',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});`}
         </Script>
-        
-        {/* Google Tag Manager */}
+
+        {/* Google Tag Manager — afterInteractive (not lazyOnload) so the
+            container loads close to user interaction. Earlier loading means
+            phone_click / form_submit events on fast-bouncing mobile traffic
+            are processed instead of being orphaned in the dataLayer queue. */}
         <Script
           id="gtm-script"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
