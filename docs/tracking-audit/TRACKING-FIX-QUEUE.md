@@ -6,6 +6,34 @@ Each item includes: severity, business impact, affected conversions, estimated r
 
 ---
 
+## Phase 1 status (2026-05-11)
+
+Five pure-code fixes implemented on `feat/ads-tracking-instrumentation`:
+
+| # | Status | Commit | Item |
+|---|---|---|---|
+| 1 | ✅ Done | `c9cefd8` | useLeadSubmit hook + wire ContactHome |
+| 2 | ✅ Done | `8e0ef30` | CallLink component + sweep 53 of 55 tel: links |
+| 3 | ✅ Done | `5f86dce` | Consent defaults beforeInteractive, GTM afterInteractive |
+| 4 | ⏸ Deferred | — | GTM dedup verification (requires GTM access) |
+| 5 | ⏸ Deferred | — | GA4 SPA page_view trigger (requires GTM access) |
+| 6 | ⏸ Deferred | — | Enhanced Conversions hashing in GTM (requires GTM access; dataLayer fields ready) |
+| 7 | ⏸ Deferred | — | Demote phone_click from primary conversion (requires Google Ads UI access) |
+| 8 | ✅ Done | `2774d7f` | Honeypot spam protection |
+| 9 | Pending P2 | — | Service selector on ContactForm |
+| 10 | ✅ Done | `dca4820` | sessionStorage anti-replay |
+
+**Build status:** ✅ `npm run build` exits clean. 235 static pages generated.
+**Lint status:** ⚠️ `npm run lint` fails — pre-existing ESLint v9 config issue, not caused by Phase 1 changes.
+
+Excluded from #2 (CallLink sweep) due to unrelated uncommitted SEO edits:
+- `src/app/deck-builder-fairfax-va/page.js`
+- `src/app/trex-vs-timbertech-vs-azek/page.js`
+
+These 2 of 55 files retain raw `<a href="tel:...">` until the SEO branch merges.
+
+---
+
 ## Status legend
 
 - 🔴 Critical — Smart Bidding cannot run safely until fixed
