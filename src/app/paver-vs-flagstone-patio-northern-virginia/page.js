@@ -27,20 +27,27 @@ export default function PaverVsFlagstonePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
+      {/* Full-width Hero Image Section */}
+      <section style={{ position: 'relative', width: '100%', height: '70vh', minHeight: '500px', overflow: 'hidden' }}>
+        <Image
+          src="/showcase/img22.jpg"
+          alt="Premium custom flagstone patio design in Northern Virginia"
+          fill
+          style={{ objectFit: 'cover' }}
+          sizes="100vw"
+          priority
+        />
+      </section>
+
+      {/* Title Section below Hero */}
+      <section style={{ padding: '4rem 0 2rem', background: '#fff' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-            <Image
-              src="/images/img32.jpeg"
-              alt="Comparison of paver and flagstone patios in Northern Virginia"
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes="(max-width: 900px) 100vw, 900px"
-              priority
-            />
-          </div>
-          <h1 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Pavers vs. Flagstone: Choosing the Right Hardscape</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Cost, durability, and look compared for Northern Virginia patios</p>
+          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, marginBottom: '1.5rem', color: '#111', lineHeight: 1.2 }}>
+            Pavers vs. Flagstone: Choosing the Right Hardscape
+          </h1>
+          <p style={{ color: '#444', fontSize: '1.25rem', lineHeight: 1.6, maxWidth: '700px' }}>
+            A comprehensive guide to cost, durability, and aesthetics for Northern Virginia homeowners.
+          </p>
         </div>
       </section>
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
