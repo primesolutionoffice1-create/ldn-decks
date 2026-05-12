@@ -1,6 +1,8 @@
 // src/lib/tracking.js
 // GTM dataLayer helpers for ldndecks.com - SSR safe
 
+import { recordDedupHit } from '@/lib/attribution-debug';
+
 /**
  * Push event to GTM dataLayer - no-ops on server render
  */
@@ -91,7 +93,10 @@ export function trackLeadConfirmed({ eventId } = {}) {
   if (eventId) {
     const key = `lead_fired_${eventId}`;
     try {
-      if (window.sessionStorage && window.sessionStorage.getItem(key)) return;
+      if (window.sessionStorage && window.sessionStorage.getItem(key)) {
+        recordDedupHit();
+        return;
+      }
       if (window.sessionStorage) window.sessionStorage.setItem(key, '1');
     } catch (e) {
       // sessionStorage unavailable (Safari private mode, embedded
