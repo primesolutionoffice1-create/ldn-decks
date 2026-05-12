@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -119,14 +120,15 @@ export default function TrexDecksPage() {
         description="Loudoun Decks is the premier certified Trex installer in Loudoun County, Fairfax County, and Prince William County. Experience the ultimate in low-maintenance luxury."
       />
 
+      <AboveFoldCTA headline="Planning a Trex Transcend, Select or Enhance deck in NoVA? Talk to a certified Trex Platinum specialist today." />
+
       {/* Pricing Anchor - Conversion Filtering */}
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Project Minimum: $5,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>New Trex build minimum: $5,000+</strong>
             <br />
-            We specialize in <strong style={{ color: '#111' }}>full builds and large scale projects</strong> only. 
-            We do <strong style={{ color: '#111' }}>NOT</strong> offer small repairs or minor fixes.
+            On this page we focus on <strong style={{ color: '#111' }}>full custom Trex builds</strong>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
         </div>
       </section>

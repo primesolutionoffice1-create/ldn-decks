@@ -10,6 +10,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
+import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -128,14 +129,15 @@ export default function CompositeDecksPage() {
         description="Loudoun Decks is the premier composite deck builder in Loudoun County, Fairfax County, and Prince William County. High-performance, low-maintenance outdoor luxury."
       />
 
+      <AboveFoldCTA headline="Planning a custom composite deck in Northern Virginia? Talk to a 5-star Trex Platinum specialist today." />
+
       {/* Pricing Anchor - Conversion Filtering */}
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Project Minimum: $5,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>New composite build minimum: $5,000+</strong>
             <br />
-            We specialize in <strong style={{ color: '#111' }}>full builds and large scale projects</strong> only. 
-            We do <strong style={{ color: '#111' }}>NOT</strong> offer small repairs or minor fixes.
+            On this page we focus on <strong style={{ color: '#111' }}>full custom composite builds</strong>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
         </div>
       </section>

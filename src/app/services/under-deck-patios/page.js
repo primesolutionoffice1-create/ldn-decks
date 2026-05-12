@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import SimpleCTA from '@/components/SimpleCTA';
+import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -117,6 +118,7 @@ export default function UnderDeckPatiosPage() {
         title="Turn the Space Under Your Deck Into a Beautiful, Dry Patio"
         description="Maximize your outdoor living space with a custom under-deck patio system - protected from rain, clean, and perfect for relaxing or entertaining year-round."
       />
+      <AboveFoldCTA headline="Under-deck patio or dry-deck system in Northern Virginia? Talk to a NoVA outdoor-living specialist today." />
       <ServiceMain
         subtitle="Double Your Outdoor Living Space"
         title="What is an Under Deck Patio?"

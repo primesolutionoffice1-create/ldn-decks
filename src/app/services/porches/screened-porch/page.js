@@ -9,6 +9,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
 import SimpleCTA from '@/components/SimpleCTA';
+import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -57,6 +58,7 @@ export default function ScreenedPorchPage() {
           title="Custom Screened-In Porches"
           description="Enjoy the beauty of the outdoors without the nuisance of insects or direct elements in a custom-built screened porch."
         />
+      <AboveFoldCTA headline="Planning a screened-in porch in Northern Virginia? Talk to a Class A licensed porch specialist today." />
                   <ServiceMain
           subtitle="Relaxation Redefined"
           title="Professional Screened-In Porch Solutions"
