@@ -14,8 +14,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/composite-decks',
-  title: '5-Star Composite Deck Builder NoVA | Free Quote in 24h',
-  description: 'Premier composite deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom low-maintenance decks. 5.0★ Google Rated. Free estimate!',
+  title: 'Premier Composite Deck Builder NoVA | 5-Star Custom Decks',
+  description: 'Looking for a 5-star composite deck builder in Northern Virginia? Trex Platinum Partner specializing in custom, low-maintenance decks in Ashburn, Fairfax & Leesburg.',
   image: '/images/img10.jpeg',
 });
 
@@ -124,8 +124,8 @@ export default function CompositeDecksPage() {
       <ServiceSchema name="Composite Deck Installation" description="Expert composite deck installation in Northern Virginia. Trex Platinum Partner and TimberTech Certified. 25-50 year warranties." price="20000" />
       <ServicesHeader 
         subtext="5-Star Google Rated Specialist"
-        title="Custom Composite Deck Building"
-        description="Loudoun Decks is the premier composite deck builder in Loudoun County, Fairfax County, and Prince William County. High-performance, low-maintenance outdoor luxury."
+        title="Premier Composite Deck Builder in Northern Virginia"
+        description="Loudoun Decks is the leading composite deck builder in Loudoun County, Fairfax County, and Prince William County. High-performance, low-maintenance outdoor luxury."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
