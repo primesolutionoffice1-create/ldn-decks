@@ -5,6 +5,7 @@ import { useContact } from '@/context/ContactContext';
 import styles from './ContactForm.module.css';
 import { sendContactEmail } from '@/server/sendEmail';
 import { trackFormSubmit, trackPhoneClick } from '@/lib/tracking';
+import { getClickIds, CLICK_ID_KEYS } from '@/lib/clickIds';
 
 export default function ContactForm({ hideInfoCol = false, noPadding = false }) {
   const [status, setStatus] = useState(null);
@@ -18,14 +19,26 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
     const formData = new FormData(e.target);
     const email = formData.get('email') || '';
     const phone = formData.get('phone') || '';
+    const clickIds = getClickIds();
+    CLICK_ID_KEYS.forEach((k) => {
+      if (clickIds[k]) formData.append(k, clickIds[k]);
+    });
+    // Shared event_id deduplicates the pre-navigation form_submit (here)
+    // against the authoritative lead_confirmed event fired on /thank-you,
+    // plus any future server-side CAPI calls. Crypto-safe when available;
+    // timestamp fallback covers older browsers.
+    const eventId = (typeof crypto !== 'undefined' && crypto.randomUUID)
+      ? crypto.randomUUID()
+      : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    formData.append('event_id', eventId);
     const result = await sendContactEmail(formData);
     if (result && result.success) {
       if (!hasTracked.current) {
         hasTracked.current = true;
-        trackFormSubmit({ email, phone, formType: 'quote' });
+        trackFormSubmit({ email, phone, formType: 'quote', clickIds, eventId });
       }
       closeContact();
-      router.push('/thank-you');
+      router.push(`/thank-you?eid=${encodeURIComponent(eventId)}`);
     } else {
       alert("Failed to send message. Please try again.");
       setStatus(null);

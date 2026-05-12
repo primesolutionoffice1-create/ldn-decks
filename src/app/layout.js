@@ -57,6 +57,12 @@ export default function RootLayout({ children }) {
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms.txt" title="LLM content index" />
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms-full.txt" title="LLM full content" />
         
+        {/* Ad click ID capture — runs before GTM so click IDs are available
+            for Enhanced Conversions and offline-conversion gclid imports. */}
+        <Script id="click-id-capture" strategy="beforeInteractive">
+          {`(function(){try{var u=new URL(window.location.href);var ids=['gclid','gbraid','wbraid','fbclid','msclkid'];var ttl=60*60*24*90;ids.forEach(function(k){var v=u.searchParams.get(k);if(v){document.cookie=k+'='+encodeURIComponent(v)+'; max-age='+ttl+'; path=/; SameSite=Lax';}});}catch(e){}})();`}
+        </Script>
+
         {/* Google Tag Manager - dataLayer init */}
         <Script id="gtm-init" strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500,'region':['BE','BG','CZ','DK','DE','EE','IE','GR','ES','FR','HR','IT','CY','LV','LT','LU','HU','MT','NL','AT','PL','PT','RO','SI','SK','FI','SE','IS','LI','NO','GB','CH']}); gtag('consent','default',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});`}

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './thank-you.module.css';
 import { buildMetadata } from '@/lib/seo';
+import ThankYouTracking from '@/components/ThankYouTracking';
 
 export const metadata = {
   ...buildMetadata({
@@ -16,6 +17,9 @@ export const metadata = {
 export default function ThankYouPage() {
   return (
     <div className={styles.thankYouWrapper}>
+      <Suspense fallback={null}>
+        <ThankYouTracking />
+      </Suspense>
       <div className={styles.container}>
         <div className={styles.imageCol}>
           <Image
