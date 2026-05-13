@@ -213,10 +213,6 @@ export default function LoudounPermitPage() {
 
       <SimpleCTA title="Ready to Build in Loudoun?" buttonText="Get Your Blueprint Started" link="/contact" />
       <RelatedGuides currentPath="/deck-permit-loudoun-county-virginia" />
-      <ContactHome />
-    </>
-  );
-}
 
       <ContactHome />
     </>
