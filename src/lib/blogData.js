@@ -274,7 +274,7 @@ export const blogPosts = [
     id: 28,
     title: 'Navigating the 2026 Loudoun County Deck Permit Process: A Homeowner’s Blueprint for Approval',
     slug: 'loudoun-county-deck-permit-guide-2026',
-    image: '/images/img29.jpeg',
+    image: '/images/blog-permit-guide.png',
     date: 'May 13, 2026',
     author: 'Nick - Loudoun Decks',
     excerpt: 'Everything you need to know about the 2026 Virginia Deck Building Code. From LandMARC digital submissions to 24-inch footing depths and ledger board rules.',
