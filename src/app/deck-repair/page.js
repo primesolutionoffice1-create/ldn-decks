@@ -133,6 +133,13 @@ export default function DeckRepairPage() {
         </div>
       </section>
 
+      <section style={{ background: '#fff8f1', borderLeft: '4px solid var(--color-primary)', padding: '1.25rem 1.5rem', maxWidth: 900, margin: '1.5rem auto', borderRadius: 8 }}>
+        <p style={{ margin: 0, lineHeight: 1.7 }}>
+          <strong>Deep dive into structural repair scope, cost ranges, permit triggers, and the repair-vs-replace decision framework:</strong>{' '}
+          <a href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full Northern Virginia Deck Repair Hub →</a>
+        </p>
+      </section>
+
       <ServiceMain
         subtitle="Safety First"
         title="Expert Deck Contractor Serving Northern Virginia"
