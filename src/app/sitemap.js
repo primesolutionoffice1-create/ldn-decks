@@ -88,13 +88,14 @@ export default async function sitemap() {
                 // /deck-replacement removed — redirects to /services/deck-replacement (already in sitemap below)
                 { path: "/deck-remodeling",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
                 { path: "/deck-repair",                  priority: 0.90, lastMod: TIER2, freq: "weekly" },
-                { path: "/services",                     priority: 0.85, lastMod: TIER2, freq: "weekly" },
+                { path: "/services",                     priority: 0.90, lastMod: TIER2, freq: "weekly" },
                 { path: "/services/new-decks",           priority: 0.85, lastMod: TIER2, freq: "weekly" },
                 { path: "/services/deck-resurfacing",    priority: 0.85, lastMod: TIER2, freq: "weekly" },
-                { path: "/services/porches",             priority: 0.85, lastMod: TIER2, freq: "weekly" },
+                { path: "/services/deck-repair-and-structural-maintenance", priority: 0.90, lastMod: TIER2, freq: "weekly" },
+                { path: "/services/porches",             priority: 0.90, lastMod: TIER2, freq: "weekly" },
                 { path: "/services/porches/front-porch", priority: 0.80, lastMod: TIER2, freq: "monthly" },
                 { path: "/services/porches/open-porch",  priority: 0.80, lastMod: TIER2, freq: "monthly" },
-                { path: "/services/porches/screened-porch", priority: 0.80, lastMod: TIER2, freq: "monthly" },
+                { path: "/services/porches/screened-porch", priority: 0.85, lastMod: TIER2, freq: "monthly" },
                 { path: "/services/gazebo-pergola",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
                 { path: "/services/deck-maintenance",    priority: 0.80, lastMod: TIER2, freq: "monthly" },
                 { path: "/services/deck-inspection",     priority: 0.80, lastMod: TIER2, freq: "monthly" },
@@ -106,11 +107,11 @@ export default async function sitemap() {
                 // REMOVED: 308-redirects to /deck-builder-stafford-va
 
                 // Tier 3 - Secondary & support pages
-                { path: "/services/patios",              priority: 0.80, lastMod: TIER3, freq: "monthly" },
-                { path: "/services/fence",               priority: 0.75, lastMod: TIER3, freq: "monthly" },
+                { path: "/services/patios",              priority: 0.85, lastMod: TIER3, freq: "monthly" },
+                { path: "/services/fence",               priority: 0.85, lastMod: TIER3, freq: "monthly" },
                 { path: "/services/fence-cleaning",      priority: 0.70, lastMod: TIER3, freq: "monthly" },
                 { path: "/services/deck-washing",        priority: 0.75, lastMod: TIER3, freq: "monthly" },
-                { path: "/services/deck-replacement",    priority: 0.80, lastMod: TIER3, freq: "monthly" },
+                { path: "/services/deck-replacement",    priority: 0.85, lastMod: TIER3, freq: "monthly" },
                 { path: "/services/concrete-washing",    priority: 0.70, lastMod: TIER3, freq: "monthly" },
                 { path: "/services/outdoor-washing",     priority: 0.70, lastMod: TIER3, freq: "monthly" },
                 { path: "/services/house-siding-washing", priority: 0.65, lastMod: TIER3, freq: "monthly" },

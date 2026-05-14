@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { showcaseProjects } from '@/lib/showcaseData';
 import ContactHome from '@/components/ContactHome';
+import JsonLd from '@/components/JsonLd';
 import styles from './ProjectPage.module.css';
 
 export async function generateStaticParams() {
@@ -36,8 +37,41 @@ export default async function ProjectPage({ params }) {
 
   if (!project) notFound();
 
+  const city = project.location.split(',')[0];
+  const date = project.location.split(',')[1]?.trim();
+
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://ldndecks.com/#organization",
+    "name": "Loudoun Decks",
+    "image": project.image,
+    "description": `${project.title} project completed in ${city}. Professional deck and fence construction by Loudoun Decks.`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": city,
+      "addressRegion": "VA",
+      "addressCountry": "US"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Deck & Fence Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": project.title,
+            "description": `Custom ${project.title.toLowerCase()} installation in ${city}, VA.`
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <main className={styles.projectMain}>
+      <JsonLd data={projectSchema} />
       <section className={styles.hero}>
         <div className={styles.container}>
           <Link href="/showcase" className={styles.backLink}>← Back to Showcase</Link>

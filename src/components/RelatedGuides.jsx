@@ -32,6 +32,9 @@ const CORNERSTONE_GUIDES = [
   { path: '/pool-deck-builder-northern-virginia', title: 'Pool Deck Design & Safety', desc: 'Slip-resistant materials for Northern Virginia pools.' },
   { path: '/stamped-concrete-patio-northern-virginia', title: 'Stamped Concrete Patio Guide', desc: 'Colors, patterns, and cost per square foot.' },
   { path: '/under-deck-ceiling-ideas', title: 'Under-Deck Ceiling Ideas', desc: 'Dry-space solutions for multi-level decks.' },
+  { path: '/services/deck-repair-and-structural-maintenance', title: 'Deck Repair & Structural Maintenance', desc: 'Fixing rotted posts and failed inspections in Loudoun & Fairfax.' },
+  { path: '/blog/deck-structural-repair-rot-prevention', title: 'Deck Repair & Rot Prevention Guide', desc: 'Surgical structural fixes for Northern Virginia homes.' },
+  { path: '/blog/loudoun-county-deck-permit-guide-2026', title: '2026 Loudoun Deck Permit Blueprint', desc: 'Everything you need to know for LandMARC approval.' },
 ];
 
 export default function RelatedGuides({ currentPath }) {

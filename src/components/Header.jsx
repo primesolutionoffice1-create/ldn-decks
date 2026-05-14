@@ -162,7 +162,7 @@ export default function Header() {
             </div>
             <div className={styles.topBarRight}>
               <Link href="/team">Our Team</Link>
-              <Link href="/blog">News</Link>
+              <Link href="/blog">Education</Link>
               <Link href="/faqs">FAQs</Link>
             </div>
           </div>
@@ -198,6 +198,7 @@ export default function Header() {
                     <Link href="/services/new-decks" style={{ padding: '10px 20px', display: 'block' }}>New Decks</Link>
                     <Link href="/services/deck-replacement" style={{ padding: '10px 20px', display: 'block' }}>Deck Replacement</Link>
                     <Link href="/services/deck-inspection" style={{ padding: '10px 20px', display: 'block' }}>Deck Inspection</Link>
+                    <Link href="/deck-permit-loudoun-county-virginia" style={{ padding: '10px 20px', display: 'block', color: 'var(--color-primary)', fontWeight: '700' }}>Loudoun Permit Guide</Link>
                     <Link href="/services/deck-maintenance" style={{ padding: '10px 20px', display: 'block' }}>Deck Maintenance</Link>
                     <Link href="/services/gazebo-pergola" style={{ padding: '10px 20px', display: 'block' }}>Gazebo and Pergola</Link>
                     <Link href="/services/porches" style={{ padding: '10px 20px', display: 'block' }}>Porches</Link>
@@ -226,6 +227,7 @@ export default function Header() {
                       </div>
                     </div>
                     
+                    <Link href="/services/deck-repair-and-structural-maintenance" style={{ padding: '10px 20px', display: 'block' }}>Deck Repair &amp; Structural Maintenance</Link>
                     <Link href="/services/deck-resurfacing" style={{ padding: '10px 20px', display: 'block' }}>Deck Resurfacing</Link>
                     <Link href="/services/trex-calm-shell" style={{ padding: '10px 20px', display: 'block' }}>Trex Calm Shell</Link>
                     <Link href="/services/deck-stair-lighting" style={{ padding: '10px 20px', display: 'block' }}>Deck Stair Lighting</Link>
@@ -271,7 +273,7 @@ export default function Header() {
                 </div>
 
                 <div className={styles.navItem}>
-                  <Link href="/blog" className={isActive("/blog")}>Blog</Link>
+                  <Link href="/blog" className={isActive("/blog")}>Education</Link>
                 </div>
               </nav>
 
@@ -354,6 +356,7 @@ export default function Header() {
                   <Link href="/services/new-decks" onClick={() => setIsMobileOpen(false)}>New Decks</Link>
                   <Link href="/services/deck-replacement" onClick={() => setIsMobileOpen(false)}>Deck Replacement</Link>
                   <Link href="/services/deck-inspection" onClick={() => setIsMobileOpen(false)}>Deck Inspection</Link>
+                  <Link href="/deck-permit-loudoun-county-virginia" onClick={() => setIsMobileOpen(false)} style={{ color: 'var(--color-primary)', fontWeight: '700' }}>Loudoun Permit Guide</Link>
                   <Link href="/services/deck-maintenance" onClick={() => setIsMobileOpen(false)}>Deck Maintenance</Link>
                   <Link href="/services/gazebo-pergola" onClick={() => setIsMobileOpen(false)}>Gazebo and Pergola</Link>
                   <Link href="/services/porches" onClick={() => setIsMobileOpen(false)}>Porches</Link>
@@ -398,6 +401,7 @@ export default function Header() {
                      </div>
                   </div>
 
+                  <Link href="/services/deck-repair-and-structural-maintenance" onClick={() => setIsMobileOpen(false)}>Deck Repair &amp; Structural Maintenance</Link>
                   <Link href="/services/deck-resurfacing" onClick={() => setIsMobileOpen(false)}>Deck Resurfacing</Link>
                   <Link href="/services/trex-calm-shell" onClick={() => setIsMobileOpen(false)}>Trex Calm Shell</Link>
                   <Link href="/services/deck-stair-lighting" onClick={() => setIsMobileOpen(false)}>Deck Stair Lighting</Link>
@@ -478,7 +482,7 @@ export default function Header() {
 
           <div className={styles.mobileNavItem}>
             <div className={`${styles.mobileNavLink} ${isActive('/blog')}`}>
-              <Link href="/blog" onClick={() => setIsMobileOpen(false)}>Blog</Link>
+              <Link href="/blog" onClick={() => setIsMobileOpen(false)}>Education</Link>
             </div>
           </div>
 

@@ -27,20 +27,27 @@ export default function StampedConcretePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
+      {/* Full-width Hero Image Section */}
+      <section style={{ position: 'relative', width: '100%', height: '70vh', minHeight: '500px', overflow: 'hidden' }}>
+        <Image
+          src="/showcase/img14.jpg"
+          alt="Premium stamped concrete patio installation in Northern Virginia"
+          fill
+          style={{ objectFit: 'cover' }}
+          sizes="100vw"
+          priority
+        />
+      </section>
+
+      {/* Title Section below Hero */}
+      <section style={{ padding: '4rem 0 2rem', background: '#fff' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-            <Image
-              src="/images/img11.jpeg"
-              alt="Premium stamped concrete patio built by LDN Decks in Northern Virginia"
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes="(max-width: 900px) 100vw, 900px"
-              priority
-            />
-          </div>
-          <h1 style={{ fontSize: '2.25rem', fontWeight: 700, marginBottom: '1rem', color: '#fff' }}>Stamped Concrete Patio in Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>The most affordable patio option patterns, colors, costs, and what to know before you build</p>
+          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, marginBottom: '1.5rem', color: '#111', lineHeight: 1.2 }}>
+            Stamped Concrete Patio in Northern Virginia
+          </h1>
+          <p style={{ color: '#444', fontSize: '1.25rem', lineHeight: 1.6, maxWidth: '700px' }}>
+            The most affordable patio option patterns, colors, costs, and what to know before you build.
+          </p>
         </div>
       </section>
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>

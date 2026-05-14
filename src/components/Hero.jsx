@@ -9,7 +9,7 @@ export default function Hero() {
     <section className={styles.heroSection}>
       <Image
         src="/home-page-ldn.webp"
-        alt="Custom deck builder Northern Virginia"
+        alt="Luxury custom composite deck with Trex Transcend boards built by Loudoun Decks in Northern Virginia"
         fill
         priority
         fetchPriority="high"

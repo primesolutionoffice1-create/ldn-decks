@@ -10,8 +10,8 @@ import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/wood-decks',
-  title: '5-Star Wood Deck Builder NoVA | Cedar & Hardwood Decks',
-  description: 'Expert wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks. ★ 5.0 Google Rated. Free estimates in 24h. Licensed & Insured.',
+  title: 'Expert Wood Deck Builder NoVA | Cedar & Hardwood Decks',
+  description: 'The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax & Prince William counties.',
 });
 
 const faqSchema = {
@@ -44,7 +44,7 @@ export default function WoodDecksPage() {
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.45) 100%)' }} />
         <div style={{ position: 'relative', zIndex: 1, color: '#fff', padding: '5rem 0' }}>
           <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-            <h1 style={{ fontSize: '2.75rem', fontWeight: 700, marginBottom: '1rem', lineHeight: 1.15 }}>Wood Decks in Northern Virginia</h1>
+            <h1 style={{ fontSize: '2.75rem', fontWeight: 700, marginBottom: '1rem', lineHeight: 1.15 }}>Expert Wood Deck Builder in Northern Virginia</h1>
             <p style={{ color: '#eee', fontSize: '1.15rem', maxWidth: 640, lineHeight: 1.5 }}>Pressure-treated, cedar, redwood &amp; exotic hardwood decks — natural beauty meets honest craftsmanship for Loudoun, Fairfax &amp; Prince William counties</p>
             <div style={{ marginTop: '1.75rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>

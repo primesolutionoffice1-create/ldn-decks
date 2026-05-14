@@ -47,7 +47,7 @@ export default function Introduction() {
           <div className={styles.subImgWrapper}>
             <Image
               src="/images/img53.jpeg"
-              alt="Custom composite deck in Northern Virginia"
+              alt="Custom Trex Transcend composite deck installation in Northern Virginia"
               fill
               className={styles.imgProps}
               sizes="(max-width: 768px) 50vw, 300px"
@@ -57,7 +57,7 @@ export default function Introduction() {
           <div className={styles.mainImgWrapper}>
             <Image
               src="/images/img31.jpeg"
-              alt="Loudoun County deck construction experts"
+              alt="Loudoun Decks professional crew building a custom deck in Leesburg VA"
               fill
               className={styles.imgProps}
               sizes="(max-width: 768px) 80vw, 400px"
