@@ -6,7 +6,6 @@
 // Promote `Content-Security-Policy-Report-Only` to `Content-Security-Policy`
 // (enforcing) once this endpoint goes ~30 days quiet.
 
-export const runtime = 'edge';
 export const dynamic = 'force-dynamic';
 
 export async function POST(request) {
