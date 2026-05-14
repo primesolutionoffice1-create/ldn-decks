@@ -162,7 +162,7 @@ export default function Header() {
             </div>
             <div className={styles.topBarRight}>
               <Link href="/team">Our Team</Link>
-              <Link href="/blog">News</Link>
+              <Link href="/blog">Education</Link>
               <Link href="/faqs">FAQs</Link>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default function Header() {
                 </div>
 
                 <div className={styles.navItem}>
-                  <Link href="/blog" className={isActive("/blog")}>Blog</Link>
+                  <Link href="/blog" className={isActive("/blog")}>Education</Link>
                 </div>
               </nav>
 
@@ -482,7 +482,7 @@ export default function Header() {
 
           <div className={styles.mobileNavItem}>
             <div className={`${styles.mobileNavLink} ${isActive('/blog')}`}>
-              <Link href="/blog" onClick={() => setIsMobileOpen(false)}>Blog</Link>
+              <Link href="/blog" onClick={() => setIsMobileOpen(false)}>Education</Link>
             </div>
           </div>
 
