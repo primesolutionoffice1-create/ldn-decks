@@ -492,12 +492,13 @@ export default function Header() {
               target="_blank" 
               rel="nofollow"
             >
-              <img 
-                src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png" 
+              <img
+                src="/badges/bbb-a-plus-seal.png"
                 width="154"
                 height="50"
-                style={{ border: 0 }} 
-                alt="Loudoun Decks BBB Business Review" 
+                loading="lazy"
+                style={{ border: 0 }}
+                alt="Loudoun Decks BBB Business Review"
               />
             </a>
             <CallLink className={styles.callNowBtn} style={{ width: '100%', justifyContent: 'center' }}>

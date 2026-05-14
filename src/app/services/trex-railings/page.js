@@ -11,6 +11,7 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/trex-railings",
   title: "Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades",
@@ -122,6 +123,9 @@ export default function TrexRailingsPage() {
         title="Trex Railings with Cocktail Top - Style Meets Function"
         description="Upgrade your deck with modern Trex railing systems and a custom cocktail top - perfect for entertaining, relaxing, and adding a premium finish to your outdoor space."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+      </section>
       <ServiceMain
         subtitle="More Than Just a Railing"
         title="What is a Cocktail Top?"

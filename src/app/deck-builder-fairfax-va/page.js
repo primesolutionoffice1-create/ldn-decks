@@ -5,12 +5,13 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-fairfax-va',
-  title: 'Deck Builder in Fairfax, VA | Trex Certified | Loudoun Decks',
-  description: 'Fairfax deck builder serving Mosby Woods, Country Club Hills, Fair Lakes, Mantua and Fairfax Station. Trex Certified composite decks. City of Fairfax + County permits.',
+  title: 'Deck Contractor Fairfax VA | Class A Licensed | Loudoun Decks',
+  description: 'Licensed Virginia Class A deck contractor in Fairfax, VA. Trex Platinum Partner serving Mosby Woods, Country Club Hills, Fair Lakes, Mantua, Fairfax Station. City of Fairfax + County permits handled.',
   image: '/images/img37.jpeg',
 });
 
@@ -76,8 +77,8 @@ export default function FairfaxDeckBuilderPage() {
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Builder in Fairfax, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Trex Certified composite decks, screened porches and outdoor living for the City of Fairfax, Fair Lakes, Mantua and Fairfax Station.</p>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Contractor in Fairfax, VA</h1>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Virginia Class A licensed deck contractor and Trex Platinum Partner serving the City of Fairfax, Fair Lakes, Mantua and Fairfax Station. Composite and wood deck construction, screened porches, full permit handling.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
@@ -90,8 +91,10 @@ export default function FairfaxDeckBuilderPage() {
 
           <div style={{ borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
-            <p style={{ margin: 0, lineHeight: 1.65 }}>A custom composite deck in Fairfax typically costs $25,000 to $50,000 installed. Fairfax County permits run 3 to 5 weeks; City of Fairfax 2 to 3 weeks. We're Trex Certified and prepare the structural drawings both jurisdictions require for first-round approval.</p>
+            <p style={{ margin: 0, lineHeight: 1.65 }} data-speakable>A custom composite deck in Fairfax, VA typically costs $25,000 to $50,000 installed. Fairfax County permits run 3 to 5 weeks; City of Fairfax 2 to 3 weeks. Loudoun Decks is a Virginia Class A licensed deck contractor in Fairfax, Trex Platinum Partner and TimberTech Certified Installer, with first-round permit approval on structural deck submissions in both jurisdictions.</p>
           </div>
+
+          <NamedAuthor context="Fairfax County and the City of Fairfax" />
 
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2.5rem' }}>
             <Image
@@ -103,6 +106,9 @@ export default function FairfaxDeckBuilderPage() {
               priority
             />
           </div>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>What to Look For in a Deck Contractor in Fairfax, VA</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>A deck contractor working in Fairfax, VA needs three credentials before anything else: a current Virginia Class A contractor license (verifiable at <em>dpor.virginia.gov</em>), full liability and workers&apos; comp insurance, and a track record submitting through both the City of Fairfax Building Department and Fairfax County&apos;s Building Development Division. The two jurisdictions overlap geographically — the 22030, 22031 and 22032 zip codes straddle both — and a contractor who only files in one will guess wrong about a third of the time. We file in both every week, and the manufacturer credentials (Trex Platinum Partner, TimberTech Certified Installer) attached to our company are verifiable on each manufacturer&apos;s installer locator.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Custom Deck Builder Serving Fairfax Homeowners</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax is two markets stitched together. The City of Fairfax is an independent jurisdiction with its own building department, its own zoning, and its own architectural reviews around Old Town. Fairfax County wraps around the city and runs one of the more rigorous deck-permitting processes in Northern Virginia. Build a deck on the wrong side of Chain Bridge Road and you've filed with the wrong department. We handle this every week, and the first thing we do on any Fairfax project is verify which jurisdiction your parcel actually sits in.</p>

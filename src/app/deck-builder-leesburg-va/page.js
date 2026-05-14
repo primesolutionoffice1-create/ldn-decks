@@ -12,8 +12,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
-import JsonLd from '@/components/JsonLd';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -65,19 +63,6 @@ const leesburgFAQs = [
   }
 ];
 
-const leesburgFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": leesburgFAQs.map(({ q, a }) => ({
-    "@type": "Question",
-    "name": q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": a
-    }
-  }))
-};
-
 const expansionSections = [
   {
     title: "Why Leesburg Homeowners Choose Loudoun Decks",
@@ -121,8 +106,6 @@ const expansionSections = [
 export default function DeckBuilderLeesburgPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Leesburg" url="https://ldndecks.com/deck-builder-leesburg-va" />
-      <JsonLd data={leesburgFaqSchema} />
       <ServicesHeader
         subtext="Leesburg, VA's Trusted Deck Company"
         title="Custom Deck Builder in Leesburg, VA"
@@ -166,6 +149,7 @@ export default function DeckBuilderLeesburgPage() {
       <ServicesFAQ
         title="Deck Builder Leesburg VA  -  FAQs"
         faqs={leesburgFAQs}
+        canonicalUrl="https://ldndecks.com/deck-builder-leesburg-va"
       />
       <ServiceAreasGrid />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

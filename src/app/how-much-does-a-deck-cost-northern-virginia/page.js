@@ -155,6 +155,9 @@ export default function DeckCostPage() {
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Best Composite Decking'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck Complete Comparison'],
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost in Northern Virginia'],
+              ['/deck-cost-calculator', 'Northern Virginia Deck Cost Calculator'],
+              ['/deck-financing-northern-virginia', 'Deck Financing in Northern Virginia'],
+              ['/how-tariffs-affect-deck-prices-2026', 'How 2026 Tariffs Affect Deck Prices'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value to Your Home?'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
             ].map(([href, text]) => (

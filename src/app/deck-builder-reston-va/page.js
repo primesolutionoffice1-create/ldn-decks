@@ -12,8 +12,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
-import JsonLd from '@/components/JsonLd';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -65,19 +63,6 @@ const restonFAQs = [
   }
 ];
 
-const restonFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": restonFAQs.map(({ q, a }) => ({
-    "@type": "Question",
-    "name": q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": a
-    }
-  }))
-};
-
 const expansionSections = [
   {
     title: "Why Reston Homeowners Choose Loudoun Decks",
@@ -121,8 +106,6 @@ const expansionSections = [
 export default function DeckBuilderRestonPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Reston" url="https://ldndecks.com/deck-builder-reston-va" />
-      <JsonLd data={restonFaqSchema} />
       <ServicesHeader
         subtext="Reston, VA's Trusted Deck Company"
         title="Custom Deck Builder in Reston, VA"
@@ -166,6 +149,7 @@ export default function DeckBuilderRestonPage() {
       <ServicesFAQ
         title="Deck Builder Reston VA  -  FAQs"
         faqs={restonFAQs}
+        canonicalUrl="https://ldndecks.com/deck-builder-reston-va"
       />
       <ServiceAreasGrid />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

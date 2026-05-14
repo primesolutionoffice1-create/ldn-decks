@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/trex-calm-shell",
   title: "Trex Clam Shell Deck Resurfacing Loudoun VA | Clean Modern Looks",
@@ -77,6 +78,9 @@ export default function TrexCalmShellPage() {
         title="Upgrade Your Deck with Trex Calm Shell Resurfacing"
         description="Give your old deck a fresh, modern look with Trex Calm Shell - a premium composite color designed for durability, style, and low maintenance."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+      </section>
       <ServiceMain
         subtitle="A Smarter Alternative to Full Replacement"
         title="What is Deck Resurfacing?"

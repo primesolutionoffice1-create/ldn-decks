@@ -11,6 +11,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/porches/open-porch",
   title: "Open Porch Builder & Design | Northern Virginia",
@@ -107,6 +108,9 @@ export default function OpenPorchPage() {
         title="Custom Open Porch Design & Construction"
         description="Enjoy maximum airflow, unobstructed views, and premium outdoor living with a custom open porch built by Loudoun Decks. Ideal for outdoor kitchens, fire features, and year-round entertaining in Northern Virginia."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+      </section>
 
       {/* Pricing Anchor */}
       <section style={{ backgroundColor: '#f9f9f9', padding: '20px', borderBottom: '1px solid #eee', textAlign: 'center' }}>
@@ -138,7 +142,7 @@ export default function OpenPorchPage() {
         description="Our end-to-end open porch builds are fully managed from engineering to final inspection."
         items={inclusions}
       />
-      <ServicesFAQ title="Open Porch FAQs" faqs={faqs} />
+      <ServicesFAQ withSchema={false} title="Open Porch FAQs" faqs={faqs} />
 
       {/* Navigation to porch types */}
       <section style={{ padding: '40px 20px', background: '#f9f9f9', borderTop: '1px solid #eee' }}>

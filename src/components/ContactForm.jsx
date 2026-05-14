@@ -77,16 +77,16 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
                   <label htmlFor="email">Email Address <span className={styles.req}>*</span></label>
-                  <input id="email" name="email" type="email" required placeholder="you@example.com" autoComplete="email" />
+                  <input id="email" name="email" type="email" required placeholder="name@email.com" autoComplete="email" aria-label="Your email address" />
                 </div>
                 <div className={styles.inputGroup}>
                   <label htmlFor="phone">Phone Number <span className={styles.req}>*</span></label>
-                  <input id="phone" name="phone" type="tel" required placeholder="(555) 123-4567" autoComplete="tel" />
+                  <input id="phone" name="phone" type="tel" required placeholder="(571) 555-0100" autoComplete="tel" aria-label="Your phone number" />
                 </div>
               </div>
               <div className={styles.inputGroup}>
                 <label htmlFor="address">Address</label>
-                <input id="address" name="address" type="text" placeholder="123 Main St" autoComplete="street-address" />
+                <input id="address" name="address" type="text" placeholder="Street address" autoComplete="street-address" aria-label="Your street address" />
               </div>
               <div className={styles.row}>
                 <div className={styles.inputGroup}>

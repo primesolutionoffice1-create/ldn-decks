@@ -12,6 +12,7 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/new-decks",
   title: "Custom Deck Builder Loudoun VA | Design & Build Services",
@@ -90,6 +91,9 @@ export default function NewDecksPage() {
         title="Custom Deck Design Built Around Your Home & Lifestyle"
         description="From concept to completion, we design and build fully custom decks tailored to your space, style, and budget - no templates, no shortcuts."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, Prince William, and Arlington counties" lastUpdated="May 2026" />
+      </section>
 
       {/* Pricing Anchor */}
       <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>

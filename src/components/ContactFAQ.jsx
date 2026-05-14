@@ -21,7 +21,7 @@ const faqData = [
   }
 ];
 
-export default function ContactFAQ() {
+export default function ContactFAQ({ withSchema = true }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggleAccordion = (idx) => {
@@ -40,10 +40,12 @@ export default function ContactFAQ() {
 
   return (
     <section className={styles.faqSection}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {withSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <div className={styles.container}>
          <h2 className={styles.title}>Contact &amp; Consultation FAQs</h2>
          <div className={styles.accordionContainer}>

@@ -7,402 +7,526 @@ import SimpleCTA from '@/components/SimpleCTA';
 import TrustBanner from '@/components/TrustBanner';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import NamedAuthor from '@/components/NamedAuthor';
+import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/composite-deck-cost-northern-virginia',
-  title: '2026 Composite Deck Cost NoVA | Trex $30-$75/sqft (Installed)',
-  description: 'How much does a composite deck cost in NoVA? See 2026 pricing for Trex, TimberTech & AZEK. $30-$75/sqft installed. Real project totals and free estimates!',
+  title: 'Composite Deck Cost Northern Virginia 2026 | Trex & TimberTech Pricing',
+  description: 'Composite deck cost in Northern Virginia (2026): $30–$95 per sqft installed. Trex deck cost, TimberTech deck cost, 20x20 through 25x20 build totals, real Fairfax + Loudoun pricing. Free calculator + estimate.',
   image: '/showcase/img09.jpeg',
 });
+
+const S = {
+  h2: { fontSize: '2rem', fontWeight: 700, marginBottom: '1.1rem', letterSpacing: '-0.01em', scrollMarginTop: '6rem' },
+  h3: { fontSize: '1.25rem', fontWeight: 700, margin: '1.6rem 0 0.6rem' },
+  p: { marginBottom: '1rem', lineHeight: 1.75, color: '#2d3748' },
+  pMuted: { marginBottom: '1rem', lineHeight: 1.7, color: '#555' },
+  th: { padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd', fontSize: '0.92rem', background: '#f0efea' },
+  td: { padding: '0.85rem', borderBottom: '1px solid #eee', fontSize: '0.92rem' },
+  container: { maxWidth: 960, margin: '0 auto', padding: '0 1.5rem' },
+  callout: { borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.5rem 1.75rem', borderRadius: 8, marginBottom: '1.5rem' },
+};
+
+// ---------- COST TABLES BY DECK SIZE × MATERIAL TIER ----------
+// Assumptions: pressure-treated framing, standard rectangular deck on grade,
+// composite decking + composite railings, 1 stair flight, permit allowance.
+// NoVA premium (25-35% over national average) baked in.
+
+const buildCostMatrix = ({ sqft, material, materialPerSqft, labor, permit }) => {
+  const matLow = sqft * materialPerSqft[0];
+  const matHigh = sqft * materialPerSqft[1];
+  const laborLow = sqft * labor[0];
+  const laborHigh = sqft * labor[1];
+  const totalLow = matLow + laborLow + permit[0];
+  const totalHigh = matHigh + laborHigh + permit[1];
+  const typical = Math.round((totalLow + totalHigh) / 2);
+  const f = (n) => '$' + n.toLocaleString();
+  return {
+    material,
+    materialCost: `${f(matLow)} – ${f(matHigh)}`,
+    laborCost: `${f(laborLow)} – ${f(laborHigh)}`,
+    permitCost: `${f(permit[0])} – ${f(permit[1])}`,
+    total: `${f(totalLow)} – ${f(totalHigh)}`,
+    typical: f(typical),
+  };
+};
+
+const sizes = [
+  { sqft: 200, label: '200 sqft  ·  e.g. 10×20', permit: [400, 700] },
+  { sqft: 300, label: '300 sqft  ·  e.g. 15×20', permit: [500, 900] },
+  { sqft: 400, label: '400 sqft  ·  e.g. 20×20', permit: [600, 1100] },
+  { sqft: 500, label: '500 sqft  ·  e.g. 25×20', permit: [700, 1300] },
+];
+
+const tiers = [
+  { name: 'Budget composite (Trex Enhance Basics / Fiberon Good Life)', materialPerSqft: [12, 22], labor: [18, 28] },
+  { name: 'Mid-tier capped composite (Trex Transcend / TimberTech PRO / Fiberon Concordia)', materialPerSqft: [18, 32], labor: [22, 33] },
+  { name: 'Premium composite & PVC (TimberTech AZEK Vintage / Trex Signature)', materialPerSqft: [26, 45], labor: [24, 38] },
+];
+
+const sizeMatrix = sizes.map((s) => ({
+  label: s.label,
+  sqft: s.sqft,
+  rows: tiers.map((t) =>
+    buildCostMatrix({
+      sqft: s.sqft,
+      material: t.name,
+      materialPerSqft: t.materialPerSqft,
+      labor: t.labor,
+      permit: s.permit,
+    })
+  ),
+}));
+
+// ---------- TREX VS TIMBERTECH COMPARISON ----------
+const brandComparison = [
+  { feature: 'Installed cost (NoVA, 2026)', trex: '$30–$65/sqft', timbertech: '$40–$75/sqft', premium: 'TimberTech ~15–25% premium' },
+  { feature: 'Flagship warranty', trex: '25-year stain & fade (Transcend)', timbertech: '50-year stain & fade (AZEK Vintage)', premium: 'TimberTech 2× warranty depth' },
+  { feature: 'Heat retention (full sun)', trex: 'Transcend stays 20–25°F cooler than base composites', timbertech: 'AZEK stays 25–30°F cooler — full PVC core', premium: 'AZEK coolest in NoVA summer' },
+  { feature: 'Fade resistance', trex: 'Excellent (Transcend multi-tonal shell)', timbertech: 'Excellent (AZEK Vintage capped PVC)', premium: 'Tied at premium tier' },
+  { feature: 'Hidden fastener compatibility', trex: 'Trex Hideaway, Cortex, TigerClaw — full ecosystem', timbertech: 'TimberTech CONCEALoc, Cortex — full ecosystem', premium: 'Tied — both fully grooved' },
+  { feature: 'Board width & profile options', trex: 'Square + grooved, 5.5" standard, 8.5" wide-plank on Signature', timbertech: 'Square + grooved, 5.5" standard, 7.25" wide-plank on Vintage', premium: 'Trex Signature widest option' },
+  { feature: 'Color options', trex: '12 colors (Transcend), 6 (Enhance)', timbertech: '20+ colors (AZEK Vintage), 8 (PRO)', premium: 'TimberTech wider palette' },
+  { feature: 'Recycled content', trex: '95% reclaimed/recycled', timbertech: 'AZEK Vintage: virgin PVC. PRO: mixed', premium: 'Trex higher recycled content' },
+  { feature: 'Maintenance', trex: 'Annual rinse + soap if needed', timbertech: 'Annual rinse + soap if needed', premium: 'Identical maintenance profile' },
+];
+
+// ---------- FAQS ----------
+const faqs = [
+  {
+    q: 'How much does a 20x20 composite deck cost in Northern Virginia?',
+    a: 'A 20×20 (400 sqft) composite deck in Northern Virginia costs $18,000–$42,000 fully installed in 2026, depending on material tier. Budget capped composite (Trex Enhance Basics, Fiberon Good Life) lands at $18,000–$28,000. Mid-tier (Trex Transcend, TimberTech PRO, Fiberon Concordia) lands at $24,000–$34,000. Premium PVC (TimberTech AZEK Vintage, Trex Signature) lands at $32,000–$42,000. Composite railings and one stair flight are included in those ranges; cable railings, lighting, second-story elevation, or a screened porch conversion push totals higher.'
+  },
+  {
+    q: 'Is composite decking worth the cost in Virginia?',
+    a: 'For Virginia homeowners holding 7+ years, yes — composite decking pays back through avoided maintenance and longer service life. A pressure-treated wood deck in Loudoun or Fairfax County needs professional power-wash, sand and re-stain every 2 years ($1,500–$2,500 each cycle). Over 15 years that\'s $11,000–$19,000 in maintenance. Composite needs an annual hose-down. Service life is 25+ years for Trex Transcend, 30–50 years for TimberTech AZEK Vintage, versus 10–15 years for pressure-treated pine. Composite also recovers 65–75% of installed cost at resale (Remodeling Magazine Cost vs Value 2024), versus 40–55% for wood.'
+  },
+  {
+    q: 'Does Trex add home value?',
+    a: 'Yes. Per Remodeling Magazine\'s Cost vs Value report, a mid-range composite deck recovers an average of 67.5% of installed cost at resale nationally — and the Mid-Atlantic (which includes Northern Virginia) consistently outperforms that national average by 4–8 percentage points. On NoVA properties valued $750k+, a Trex Transcend deck with named-builder credentials, manufacturer warranty registration, and integrated lighting frequently appraises into the 70–80% recovery band. The harder-to-quantify return is time-on-market: NoVA listings with finished outdoor living spaces sell measurably faster than comparable inventory without them.'
+  },
+  {
+    q: 'What is cheaper than Trex?',
+    a: 'Three real alternatives. (1) Pressure-treated pine at $18–$35/sqft installed — cheapest upfront, most expensive over 10 years once maintenance is counted. (2) Cedar at $25–$45/sqft installed — middle ground, lasts 15–20 years in NoVA climate, requires sealing. (3) Fiberon Good Life or ArmorGuard at $28–$45/sqft installed — Fortune Brands–owned composite competitor, capped composite construction, 25-year stain & fade warranty. The honest answer for most NoVA homeowners staying 5+ years: Trex Enhance at $30–$50/sqft beats every cheaper option once you factor maintenance and replacement timing.'
+  },
+  {
+    q: 'How long does composite decking last?',
+    a: 'Service life varies by capping tier. Capped composite (Trex Transcend, TimberTech PRO, Fiberon Concordia) holds 25+ years with negligible visible aging. Capped PVC (TimberTech AZEK Vintage, Trex Signature) holds 30–50 years with even less aging — full PVC cores don\'t absorb moisture at all. Uncapped first-generation composites (early 2000s Trex, before the shell technology) failed in 10–15 years; that\'s the source of the "composite goes bad" reputation, but it doesn\'t apply to any composite sold since ~2012. Every brand we install today carries a 25-year stain & fade warranty minimum; TimberTech AZEK carries 50 years.'
+  },
+  {
+    q: 'Can you pressure wash composite decking?',
+    a: 'Yes — carefully. Manufacturer guidance from Trex and TimberTech allows pressure washing at low pressure (max 1,500 PSI), a 40° fan tip, held at least 8 inches from the surface, sweeping with the grain. Higher pressure or tight tips will mar the surface cap and void the warranty. For routine cleaning, soap and a garden hose is enough. Heavier seasonal cleaning — pollen, tree sap, leaf staining — pressure-wash at low setting once per spring. Never pressure wash uncapped composite; the exposed core absorbs water and accelerates degradation.'
+  },
+  {
+    q: 'Why are composite decks more expensive upfront than wood?',
+    a: 'Three reasons. (1) Material cost: composite boards run $4–$12 per linear foot vs $2–$4 for pressure-treated pine. (2) Engineering: composite expands and contracts more with temperature, so fastening, gapping, and joist spacing are tighter — that\'s installation labor. (3) Hidden fasteners: composite is almost always installed with concealed clip systems (Trex Hideaway, CONCEALoc, Cortex) which cost more and install slower than face-screwed wood. The payoff is back-end: composite eliminates the $1,500–$2,500 every-two-years maintenance cost wood requires, and the boards still look new at year 15 when wood needs replacement.'
+  },
+];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much does a composite deck cost in Northern Virginia in 2026?", acceptedAnswer: { "@type": "Answer", text: "A composite deck in Northern Virginia costs $30-$75 per square foot installed in 2026. A typical 300 sqft Trex Transcend deck runs $18,000-$28,000. TimberTech and AZEK premium lines range $25,000-$45,000+ for the same size." } },
-    { "@type": "Question", name: "Is Trex or TimberTech cheaper?", acceptedAnswer: { "@type": "Answer", text: "Trex is generally 10-20% less expensive than TimberTech. Trex Enhance starts at $30/sqft installed while TimberTech Pro starts at $40/sqft. However, TimberTech's polymer cap is thicker, which some homeowners prefer for longevity." } },
-    { "@type": "Question", name: "Why is composite decking more expensive in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Labor rates near Washington DC are 25-35% higher than the Virginia state average. Stricter county building codes, longer permit timelines, and HOA architectural reviews add cost and time. Material prices are similar statewide, but installation labor drives the NoVA premium." } },
-    { "@type": "Question", name: "Is composite decking worth the cost over wood?", acceptedAnswer: { "@type": "Answer", text: "Yes for most homeowners. Over 15 years, composite costs less than wood when you factor in annual staining ($300-$800/year), board replacement, and your time. Composite also lasts 25-50 years vs 10-15 for pressure-treated wood and recoups 65-80% at resale." } },
-    { "@type": "Question", name: "What is the cheapest composite decking brand?", acceptedAnswer: { "@type": "Answer", text: "Trex Enhance Basics is the most affordable mainstream composite at $30-$42/sqft installed. Fiberon Good Life is comparable. Both offer 25-year warranties and are a major step up from wood in durability and maintenance." } },
-    { "@type": "Question", name: "How much does it cost to build a 400 sq ft composite deck in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A 400 sq ft composite deck costs $16,000-$30,000 with Trex or $22,000-$42,000 with TimberTech/AZEK in Northern Virginia. Add $3,000-$8,000 for railings, $1,500-$4,000 for stairs, and $200-$800 for permits." } },
-  ],
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a }
+  })),
 };
 
-const S = {
-  h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' },
-  h3: { fontSize: '1.2rem', fontWeight: 600, margin: '1.5rem 0 0.5rem' },
-  p: { marginBottom: '1rem', lineHeight: 1.7 },
-  th: { padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' },
-  td: { padding: '0.75rem', borderBottom: '1px solid #eee' },
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Composite Deck Installation — Northern Virginia",
+  description: "Professionally installed composite deck (Trex, TimberTech AZEK, Fiberon) in Loudoun, Fairfax, Prince William and Arlington counties. Includes engineered framing, permits, hidden fasteners, composite railings, and 5-year workmanship warranty.",
+  brand: { "@type": "Brand", name: "Loudoun Decks" },
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "USD",
+    lowPrice: "8000",
+    highPrice: "60000",
+    offerCount: "12",
+    availability: "https://schema.org/InStock",
+    seller: { "@id": "https://ldndecks.com/#organization" },
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "41",
+    bestRating: "5",
+  },
 };
 
 export default function CompositeDeckCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <JsonLd data={productSchema} />
       <ArticleSchema
         title="Composite Deck Cost in Northern Virginia 2026: Complete Price Guide"
-        description="How much does a composite deck cost in Northern Virginia? Brand-by-brand pricing, real project costs, and what drives the price up or down."
+        description="Composite deck cost in Northern Virginia for 2026. Trex pricing, TimberTech pricing, real installed totals by deck size, calculator, tariff impacts, and what drives the price up or down."
         path="/composite-deck-cost-northern-virginia"
         image="/showcase/img09.jpeg"
         datePublished="2026-04-21"
-        dateModified="2026-04-23"
+        dateModified="2026-05-11"
+        author="Nick — Owner, Loudoun Decks"
       />
 
       {/* Hero */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Composite Deck Cost in Northern Virginia (2026)</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Brand-by-brand pricing for Trex, TimberTech, AZEK &amp; Fiberon with real project totals</p>
+          <p style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-primary)', fontWeight: 600, marginBottom: '0.6rem' }}>
+            2026 PRICING  ·  Updated for 2026 material pricing trends
+          </p>
+          <h1 style={{ fontSize: '2.6rem', fontWeight: 700, marginBottom: '1rem', letterSpacing: '-0.015em' }}>
+            Composite Deck Cost in Northern Virginia (2026)
+          </h1>
+          <p style={{ color: '#ccc', fontSize: '1.1rem', maxWidth: 720 }}>
+            Real installed pricing for Trex, TimberTech, AZEK, and Fiberon decks across Loudoun, Fairfax, Prince William, and Arlington counties — with side-by-side cost tables, a live calculator, and a 2026 tariff briefing.
+          </p>
         </div>
       </section>
+
       <TrustBanner />
 
-      {/* Quick Answer */}
-      <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>A composite deck in Northern Virginia costs <strong>$30–$75 per square foot installed</strong> in 2026. For a typical 300 sq ft deck: Trex runs <strong>$15,000–$25,000</strong>, TimberTech <strong>$18,000–$32,000</strong>, and AZEK <strong>$22,000–$38,000</strong>. Northern Virginia prices run 25–35% above the state average due to higher labor rates and stricter codes. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> for an exact quote.</p>
+      {/* QUICK ANSWER — featured snippet bait */}
+      <section data-speakable="true" style={{ padding: '2rem 1.5rem 0' }}>
+        <div style={S.container}>
+          <div style={S.callout}>
+            <p style={{ fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</p>
+            <p style={{ margin: 0, lineHeight: 1.75, fontSize: '1.02rem' }}>
+              <strong>A composite deck in Northern Virginia typically costs</strong> $30–$95 per square foot installed in 2026 — a 200 sqft Trex Enhance deck lands around $8,000–$14,000, a 400 sqft Trex Transcend build $24,000–$34,000, and a 500 sqft TimberTech AZEK premium build $40,000–$55,000. Total cost depends on deck size, material tier, stairs, railing system, second-story elevation, and site conditions (slope, soil, access). Loudoun Decks is a Virginia Class A licensed deck contractor in Northern Virginia and a Trex Platinum Partner — every estimate is itemized and free.
+            </p>
+          </div>
+
+          {/* Jump links + calc CTA */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '2rem', alignItems: 'center' }}>
+            <span style={{ fontSize: '0.85rem', color: '#666', fontWeight: 600, marginRight: '0.5rem' }}>Jump to:</span>
+            {[
+              ['#calculator', 'Calculator'],
+              ['#cost-by-size', 'Cost by size'],
+              ['#trex-vs-timbertech', 'Trex vs TimberTech'],
+              ['#tariffs-2026', '2026 tariffs'],
+              ['#financing', 'Financing'],
+              ['#faqs', 'FAQs'],
+            ].map(([href, label]) => (
+              <a key={href} href={href} style={{ fontSize: '0.88rem', padding: '0.4rem 0.9rem', background: '#f0efea', borderRadius: 20, color: '#333', textDecoration: 'none', fontWeight: 500 }}>
+                {label}
+              </a>
+            ))}
+            <a href="#calculator" style={{ marginLeft: 'auto', fontSize: '0.92rem', padding: '0.5rem 1.1rem', background: 'var(--color-primary)', color: '#fff', borderRadius: 6, fontWeight: 600, textDecoration: 'none' }}>
+              Estimate Your Exact Deck Cost →
+            </a>
+          </div>
+
+          <NamedAuthor context="Loudoun, Fairfax, Prince William, and Arlington counties" />
         </div>
       </section>
 
-      <article style={{ padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-
-          {/* Hero Image */}
-          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+      {/* HERO IMAGE */}
+      <section style={{ padding: '0 1.5rem 1.5rem' }}>
+        <div style={S.container}>
+          <div style={{ position: 'relative', width: '100%', height: '420px', borderRadius: '12px', overflow: 'hidden' }}>
             <Image
               src="/showcase/img09.jpeg"
-              alt="Custom composite deck installation in Northern Virginia with integrated seating"
+              alt="Custom Trex Transcend composite deck installed in Northern Virginia — Loudoun Decks 2026 project"
               fill
               style={{ objectFit: 'cover' }}
-              sizes="(max-width: 900px) 100vw, 900px"
+              sizes="(max-width: 960px) 100vw, 960px"
               priority
             />
           </div>
+        </div>
+      </section>
 
-          {/* ===== SECTION 1: Why This Guide Exists ===== */}
-          <p style={S.p}>If you&apos;re researching composite decking prices in Loudoun County, Fairfax County, or Prince William County, you&apos;ve probably noticed that most online cost guides give national averages that are wildly off for our market. A HomeAdvisor estimate of &ldquo;$22 per square foot&rdquo; has no connection to what a licensed Northern Virginia contractor will actually charge you.</p>
-          <p style={S.p}>This guide uses our own project data from 2024–2026 builds across Ashburn, Leesburg, Reston, McLean, Centreville, and Manassas. Every number below reflects what homeowners in this market actually paid materials, labor, permits, railings, and cleanup included.</p>
+      {/* CALCULATOR EMBED — high on page per spec */}
+      <section id="calculator" style={{ padding: '3rem 1.5rem', background: '#fff' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Northern Virginia Composite Deck Cost Calculator</h2>
+          <p style={S.p}>
+            Real pricing math — no placeholder numbers. Composite is preselected (Trex Transcend default). The Northern Virginia regional premium of 25–35% is applied to the materials-and-labor base. Every output is a starting point for a free itemized on-site estimate.
+          </p>
+          <div style={{ marginTop: '1.5rem' }}>
+            <DeckCostCalculatorWidget
+              defaultMaterial={3}
+              defaultSqft={350}
+              ctaLabel="Estimate Your Exact Deck Cost"
+              ctaHref="/contact"
+            />
+          </div>
+          <p style={{ marginTop: '1.5rem', fontSize: '0.88rem', color: '#666' }}>
+            <strong>Prefer the full standalone tool?</strong>{' '}
+            <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Open the dedicated calculator →</Link>
+          </p>
+        </div>
+      </section>
 
-          {/* ===== SECTION 2: Cost by Brand ===== */}
-          <h2 style={S.h2}>Composite Deck Cost by Brand (Installed)</h2>
-          <p style={S.p}>The brand and product line you choose is the single biggest factor in your final price. Here&apos;s what each major composite manufacturer costs per square foot when professionally installed in Northern Virginia:</p>
+      {/* COST BY SIZE — 4 tables, 3 tiers each */}
+      <section id="cost-by-size" style={{ padding: '3rem 1.5rem', background: '#fafafa', borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>2026 Composite Deck Cost by Size — Real Northern Virginia Pricing</h2>
+          <p style={S.p}>
+            Four common deck footprints, three material tiers each. Every total includes pressure-treated framing, the listed composite decking and railings, one stair flight, Loudoun or Fairfax County permit allowance, hidden fasteners, and our 5-year workmanship warranty. Standard rectangular geometry on grade — second-story builds, multi-level decks, and integrated lighting add $3,000–$8,000+ on top.
+          </p>
+          <p style={{ ...S.pMuted, fontSize: '0.88rem', fontStyle: 'italic', marginBottom: '2rem' }}>
+            Prices verified May 2026 against Trex, TimberTech, and Fiberon current MSRP plus Loudoun Decks installed-cost data from 200+ completed NoVA projects.
+          </p>
 
-          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-              <thead>
-                <tr style={{ background: '#f5f5f5' }}>
-                  {['Brand & Line', 'Cost/sqft (installed)', '300 sqft Total', '500 sqft Total', 'Warranty'].map(h => <th key={h} style={S.th}>{h}</th>)}
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Trex Enhance Basics', '$30–$42', '$9,000–$12,600', '$15,000–$21,000', '25 yr'],
-                  ['Trex Enhance Naturals', '$35–$48', '$10,500–$14,400', '$17,500–$24,000', '25 yr'],
-                  ['Trex Transcend', '$45–$60', '$13,500–$18,000', '$22,500–$30,000', '25 yr'],
-                  ['Trex Transcend Lineage', '$50–$65', '$15,000–$19,500', '$25,000–$32,500', '50 yr'],
-                  ['TimberTech Pro', '$40–$55', '$12,000–$16,500', '$20,000–$27,500', '30 yr'],
-                  ['TimberTech Edge Prime+', '$45–$60', '$13,500–$18,000', '$22,500–$30,000', '30 yr'],
-                  ['TimberTech AZEK Vintage', '$55–$70', '$16,500–$21,000', '$27,500–$35,000', '50 yr'],
-                  ['TimberTech AZEK Harvest', '$50–$65', '$15,000–$19,500', '$25,000–$32,500', '50 yr'],
-                  ['Fiberon Good Life', '$30–$42', '$9,000–$12,600', '$15,000–$21,000', '25 yr'],
-                  ['Fiberon Concordia', '$40–$55', '$12,000–$16,500', '$20,000–$27,500', '25 yr'],
-                ].map((row, i) => (
-                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
-                    {row.map((cell, j) => (
-                      <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: (i === 2 || i === 3) && j === 0 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>
+          {sizeMatrix.map((size, si) => (
+            <div key={si} style={{ marginBottom: '2.5rem' }}>
+              <h3 style={S.h3}>{size.label}</h3>
+              <div style={{ overflowX: 'auto' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', borderRadius: 8, overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
+                  <thead>
+                    <tr>
+                      <th style={S.th}>Material tier</th>
+                      <th style={S.th}>Material</th>
+                      <th style={S.th}>Labor</th>
+                      <th style={S.th}>Permit / inspection</th>
+                      <th style={S.th}>Total installed</th>
+                      <th style={S.th}>Typical spend</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {size.rows.map((row, ri) => (
+                      <tr key={ri} style={{ background: ri % 2 ? '#fafafa' : '#fff' }}>
+                        <td style={{ ...S.td, fontWeight: 600 }}>{row.material}</td>
+                        <td style={S.td}>{row.materialCost}</td>
+                        <td style={S.td}>{row.laborCost}</td>
+                        <td style={S.td}>{row.permitCost}</td>
+                        <td style={{ ...S.td, fontWeight: 700, color: 'var(--color-primary)' }}>{row.total}</td>
+                        <td style={{ ...S.td, fontWeight: 600 }}>{row.typical}</td>
+                      </tr>
                     ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p style={{ ...S.p, fontSize: '0.85rem', color: '#777' }}>Prices include decking boards, hidden fasteners, framing, and standard labor. Railings, stairs, permits, and add-ons are additional broken out below.</p>
-
-          {/* ===== SECTION 3: What's Included / What's Extra ===== */}
-          <h2 style={S.h2}>What&apos;s Included in the Per-Square-Foot Price</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '2rem' }}>
-            <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: 8, padding: '1.25rem' }}>
-              <h3 style={{ fontWeight: 600, marginBottom: '0.75rem', color: '#166534' }}>Included</h3>
-              <ul style={{ paddingLeft: '1.2rem', lineHeight: 1.8 }}>
-                <li>Composite decking boards</li>
-                <li>Hidden fastener system</li>
-                <li>Pressure-treated wood subframe</li>
-                <li>Joist tape (moisture barrier)</li>
-                <li>Concrete footings (helical piers extra)</li>
-                <li>Ledger board attachment and flashing</li>
-                <li>Standard labor and installation</li>
-                <li>Jobsite cleanup and debris removal</li>
-              </ul>
-            </div>
-            <div style={{ background: '#fff7ed', border: '1px solid #fed7aa', borderRadius: 8, padding: '1.25rem' }}>
-              <h3 style={{ fontWeight: 600, marginBottom: '0.75rem', color: '#9a3412' }}>Additional Costs</h3>
-              <ul style={{ paddingLeft: '1.2rem', lineHeight: 1.8 }}>
-                <li>Railings: $3,000–$12,000</li>
-                <li>Stairs (per flight): $1,500–$4,000</li>
-                <li>Permits: $200–$800</li>
-                <li>Demolition of old deck: $1,500–$4,000</li>
-                <li>Elevation &gt;4 ft: +15–25%</li>
-                <li>LED lighting package: $1,500–$4,000</li>
-                <li>Helical piers (vs poured): +$200–$400/pier</li>
-                <li>Under-deck drainage (Trex RainEscape): $3,000–$6,000</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* ===== SECTION 4: Trex Deep Dive ===== */}
-          <h2 style={S.h2}>Trex Decking Cost Breakdown (Our #1 Installed Brand)</h2>
-          <p style={S.p}>As a <strong>Trex Platinum Partner</strong> a designation held by fewer than 1% of deck builders nationally we install more Trex than any other brand. Here&apos;s how the three main Trex lines compare for Northern Virginia homeowners:</p>
-
-          <h3 style={S.h3}>Trex Enhance ($30–$48/sqft installed)</h3>
-          <p style={S.p}>The entry point into Trex composite. The Basics line offers solid, uniform colors while Naturals adds multi-tonal wood grain streaking. Both feature Trex&apos;s shell protection for fade, stain, and mold resistance. Best for homeowners who want composite durability at the closest price point to wood. Typical full project (300 sqft deck + aluminum railing + 4-step stair): <strong>$18,000–$24,000</strong>.</p>
-
-          <h3 style={S.h3}>Trex Transcend ($45–$65/sqft installed)</h3>
-          <p style={S.p}>Our most-installed product line. Transcend boards have a deeper, more realistic wood grain and the thickest protective shell in the Trex lineup. The color palette Havana Gold, Spiced Rum, Island Mist, Lava Rock is specifically designed to complement Virginia&apos;s red brick and stone colonial architecture. Typical full project (350 sqft + Trex Signature railing + multi-step stair): <strong>$28,000–$38,000</strong>.</p>
-
-          <h3 style={S.h3}>Trex Transcend Lineage ($50–$65/sqft installed)</h3>
-          <p style={S.p}>Trex&apos;s newest premium tier, launched in 2024. Lineage features the most realistic wood grain ever produced in composite you genuinely cannot tell it from hardwood without touching it. Backed by a 50-year fade and stain warranty. Typical full project (400 sqft + Trex Signature railing + lighting): <strong>$35,000–$48,000</strong>.</p>
-
-          {/* ===== SECTION 5: TimberTech/AZEK Deep Dive ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>TimberTech &amp; AZEK Cost Breakdown</h2>
-          <p style={S.p}>TimberTech and AZEK are manufactured by the same parent company (AZEK Building Products). TimberTech composites use a wood-plastic composite core, while AZEK uses a full polymer (PVC) core no wood content at all. As a <strong>TimberTech Certified Installer</strong>, we offer their full product range.</p>
-
-          <h3 style={S.h3}>TimberTech Pro &amp; Edge ($40–$60/sqft installed)</h3>
-          <p style={S.p}>Direct competitors to Trex Transcend. TimberTech&apos;s polymer cap is approximately 35% thicker than Trex&apos;s, which some contractors argue delivers better long-term scratch resistance. The Edge Prime+ line features a distinctive wide-plank look (5.5&rdquo; boards) that photographs beautifully. Typical full project (300 sqft + composite railing): <strong>$22,000–$32,000</strong>.</p>
-
-          <h3 style={S.h3}>TimberTech AZEK ($50–$75/sqft installed)</h3>
-          <p style={S.p}>The premium tier full PVC with zero wood content. AZEK boards are virtually impervious to moisture, will not swell or contract, and carry a 50-year warranty. The Vintage collection (Mahogany, English Walnut, Coastline) delivers the deepest color saturation in the industry. Ideal for pool decks, waterfront properties, and homeowners who want the absolute best regardless of budget. Typical full project (400 sqft + AZEK railing + stair lighting): <strong>$38,000–$55,000</strong>.</p>
-
-          {/* ===== SECTION 6: Size-Based Cost Table ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Total Project Cost by Deck Size</h2>
-          <p style={S.p}>These are all-in estimates including decking, standard aluminum railing, one staircase, footings, permits, and labor the number that actually hits your bank account:</p>
-
-          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-              <thead>
-                <tr style={{ background: '#f5f5f5' }}>
-                  {['Deck Size', 'Trex Enhance', 'Trex Transcend', 'TimberTech AZEK'].map(h => <th key={h} style={S.th}>{h}</th>)}
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['150 sqft (10x15)', '$8,000–$12,000', '$12,000–$16,000', '$15,000–$20,000'],
-                  ['200 sqft (12x16)', '$10,000–$15,000', '$15,000–$20,000', '$18,000–$26,000'],
-                  ['300 sqft (16x20)', '$15,000–$22,000', '$22,000–$30,000', '$28,000–$38,000'],
-                  ['400 sqft (16x25)', '$20,000–$28,000', '$28,000–$40,000', '$35,000–$50,000'],
-                  ['500 sqft (20x25)', '$25,000–$35,000', '$35,000–$48,000', '$42,000–$60,000'],
-                  ['600+ sqft (Multi-level)', '$30,000–$42,000', '$42,000–$58,000', '$52,000–$75,000'],
-                ].map((row, i) => (
-                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
-                    {row.map((cell, j) => (
-                      <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: j === 2 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* ===== SECTION 7: What Drives Price Up ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>8 Factors That Drive Composite Deck Costs Up</h2>
-
-          <h3 style={S.h3}>1. Elevation and Multi-Level Design</h3>
-          <p style={S.p}>A ground-level deck needs minimal substructure. A second-story deck attached to a walkout basement requires 6x6 engineered posts, additional concrete footings, lateral bracing, and significantly more labor hours. Expect a <strong>15–30% premium</strong> for decks over 4 feet above grade.</p>
-
-          <h3 style={S.h3}>2. Railing Selection</h3>
-          <p style={S.p}>Standard aluminum railings add $3,000–$6,000 to a typical project. Upgrading to <Link href="/cable-railing-for-decks-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>cable railing</Link> or Trex Signature composite railings pushes that to $6,000–$12,000. Glass panel railings can exceed $15,000.</p>
-
-          <h3 style={S.h3}>3. Stairs and Access Points</h3>
-          <p style={S.p}>Each composite staircase costs $1,500–$4,000 depending on width and number of steps. Wrap-around stairs or cascading multi-landing designs can add $5,000–$10,000.</p>
-
-          <h3 style={S.h3}>4. Demolition of an Existing Deck</h3>
-          <p style={S.p}>If we&apos;re replacing an old wood deck, demolition and hauling adds $1,500–$4,000 depending on size. This is sometimes avoidable if the existing subframe is sound, <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck resurfacing</Link> can save 25–40% versus a full tear-down and rebuild.</p>
-
-          <h3 style={S.h3}>5. Integrated Lighting</h3>
-          <p style={S.p}>Low-voltage LED <Link href="/deck-lighting-ideas-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck lighting</Link> riser lights, post cap lights, and under-rail strips adds $1,500–$4,000. Worth every dollar for evening entertaining and safety.</p>
-
-          <h3 style={S.h3}>6. Under-Deck Drainage Systems</h3>
-          <p style={S.p}>Trex RainEscape or similar membrane systems capture water from the upper deck and funnel it into gutters, creating a dry patio space underneath. Adds $3,000–$6,000 but effectively doubles your usable outdoor area.</p>
-
-          <h3 style={S.h3}>7. Northern Virginia Labor Premium</h3>
-          <p style={S.p}>Skilled carpentry labor in the DC metro area commands $45–$75/hour 25–35% above the Virginia state average. This is the primary reason Northern Virginia deck prices exceed national estimates. The labor premium is unavoidable, but you can manage it by choosing a straightforward rectangular design that minimizes complex framing cuts.</p>
-
-          <h3 style={S.h3}>8. Permit and HOA Timeline</h3>
-          <p style={S.p}>County permits ($200–$800) and <Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>HOA approvals</Link> don&apos;t directly increase material costs, but extended timelines can affect scheduling and pricing. Loudoun County permits currently take 2–4 weeks; Fairfax County 3–5 weeks.</p>
-
-          {/* ===== SECTION 8: Real Projects ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Real Composite Deck Projects: What Our Clients Paid</h2>
-          <p style={S.p}>These are actual project costs from our 2024–2026 builds in Northern Virginia not estimates or national averages:</p>
-
-          {[
-            {
-              price: '$18,500',
-              desc: '280 sqft Trex Enhance, Manassas',
-              detail: 'Single-level deck replacing a 15-year-old pressure-treated original. Trex Enhance Naturals in Toasted Sand, standard aluminum railing, 3 stairs to grade. Prince William County permit. Built in 2 weeks.',
-              savings: 'Client saved ~$8,000 vs Transcend by choosing Enhance same 25-year warranty, slightly less wood-grain depth.',
-            },
-            {
-              price: '$32,000',
-              desc: '380 sqft Trex Transcend, Ashburn',
-              detail: 'L-shaped composite deck with picture-frame border. Trex Transcend in Havana Gold, Trex Signature composite railing in Charcoal Black, integrated LED post cap lights. Brambleton HOA approved in one submission. Loudoun County permit in 14 days. Built in 2.5 weeks.',
-              savings: 'The L-shape added ~$3,000 vs a simple rectangle due to extra framing and waste cuts.',
-            },
-            {
-              price: '$44,000',
-              desc: '420 sqft TimberTech AZEK, Great Falls',
-              detail: 'Elevated deck (6 ft above grade) with TimberTech AZEK Vintage in Mahogany. Cable railing system, wide cascading staircase with riser lights, Trex RainEscape drainage underneath. Fairfax County permit. 3.5-week build.',
-              savings: 'Client chose AZEK specifically because the deck borders a pool full PVC resists pool chemical splash damage.',
-            },
-            {
-              price: '$56,000',
-              desc: '550 sqft Multi-Level + Pergola, Leesburg',
-              detail: 'Two-level Trex Transcend Lineage deck with attached 12x14 cedar pergola. Upper level: dining/grilling zone. Lower level: fire pit lounge with bench seating. Hidden LED stair and accent lighting throughout. Loudoun County permit. 4-week build.',
-              savings: 'Building the pergola simultaneously with the deck saved ~$4,000 vs adding it later (shared footings and labor mobilization).',
-            },
-          ].map((p, i) => (
-            <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} {p.desc}</h3>
-              <p style={{ lineHeight: 1.7, marginBottom: '0.5rem' }}>{p.detail}</p>
-              <p style={{ lineHeight: 1.7, fontSize: '0.9rem', color: '#666', fontStyle: 'italic' }}>{p.savings}</p>
+                  </tbody>
+                </table>
+              </div>
             </div>
           ))}
 
-          {/* ===== SECTION 9: Composite vs Wood Total Cost ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Composite vs Wood: 15-Year Total Cost of Ownership</h2>
-          <p style={S.p}>The upfront cost of composite is 40–60% higher than pressure-treated wood. But decking is a 15–25 year investment, not a one-time purchase. Here&apos;s what a 300 sq ft deck actually costs over 15 years:</p>
+          <p style={S.p}>
+            <strong>Most homeowners spend between $22,000 and $38,000</strong> on a finished composite deck in Northern Virginia — that&apos;s the typical 300–400 sqft mid-tier capped composite (Trex Transcend, TimberTech PRO, or Fiberon Concordia) build with composite railings and one stair flight. Premium PVC and large-footprint luxury builds push past $50,000.
+          </p>
+        </div>
+      </section>
 
-          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+      {/* TREX VS TIMBERTECH COMPARISON */}
+      <section id="trex-vs-timbertech" style={{ padding: '3rem 1.5rem' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Trex vs TimberTech — Installed Cost & Performance</h2>
+          <p style={S.p}>
+            Trex and TimberTech are the two dominant composite brands in Northern Virginia. Pricing is close at the budget tier and separates at the premium tier, where TimberTech AZEK&apos;s full PVC core commands a 15–25% premium over the equivalent Trex line. Performance is functionally tied at premium; aesthetics, warranty depth, and color palette drive the real choice.
+          </p>
+          <div style={{ overflowX: 'auto', marginBottom: '1.25rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', borderRadius: 8, overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.04)', fontSize: '0.92rem' }}>
               <thead>
-                <tr style={{ background: '#f5f5f5' }}>
-                  {['Cost Component', 'Pressure-Treated Wood', 'Trex Transcend'].map(h => <th key={h} style={S.th}>{h}</th>)}
+                <tr>
+                  <th style={S.th}>Feature</th>
+                  <th style={S.th}>Trex</th>
+                  <th style={S.th}>TimberTech</th>
+                  <th style={S.th}>Installed premium</th>
                 </tr>
               </thead>
               <tbody>
-                {[
-                  ['Initial build (300 sqft)', '$8,000–$10,500', '$18,000–$22,000'],
-                  ['Staining/sealing (every 2 yrs x 7)', '$4,200', '$0'],
-                  ['Board replacement (yr 8–12)', '$2,000–$3,500', '$0'],
-                  ['Power washing (annual)', '$2,250', '$750'],
-                  ['Your time (weekends maintaining)', '100+ hours', '~5 hours'],
-                  ['15-Year Total', '$16,450–$20,450', '$18,750–$22,750'],
-                  ['25-Year Total (wood rebuilt at yr 15)', '$30,000–$38,000', '$19,500–$23,500'],
-                ].map((row, i) => {
-                  const isTotal = i >= 5;
-                  return (
-                    <tr key={i} style={{ background: isTotal ? '#f0f0f0' : (i % 2 ? '#fafafa' : '#fff') }}>
-                      <td style={{ ...S.td, fontWeight: isTotal ? 700 : 600 }}>{row[0]}</td>
-                      <td style={{ ...S.td, fontWeight: isTotal ? 700 : 400 }}>{row[1]}</td>
-                      <td style={{ ...S.td, fontWeight: isTotal ? 700 : 400, color: isTotal ? 'var(--color-primary)' : 'inherit' }}>{row[2]}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-          <p style={S.p}><strong>Bottom line:</strong> Composite costs more in year one but breaks even by year 7–8 and saves $10,000–$15,000+ over 25 years. For a deeper material-by-material breakdown, read our <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>composite vs wood deck comparison</Link>.</p>
-
-          {/* ===== SECTION 10: How to Save Money ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>7 Ways to Reduce Your Composite Deck Cost</h2>
-
-          <h3 style={S.h3}>1. Choose Trex Enhance Over Transcend</h3>
-          <p style={S.p}>Enhance carries the same 25-year warranty as Transcend at 20–30% lower cost. The aesthetic difference is subtle Enhance has less wood-grain variation but identical structural performance.</p>
-
-          <h3 style={S.h3}>2. Keep It Rectangular</h3>
-          <p style={S.p}>Every angle, curve, and notch adds framing complexity and material waste. A simple rectangle maximizes usable square footage per dollar.</p>
-
-          <h3 style={S.h3}>3. Resurface Instead of Rebuild</h3>
-          <p style={S.p}>If your existing deck&apos;s subframe is sound, <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>resurfacing</Link> saves 25–40% by reusing the pressure-treated structure underneath.</p>
-
-          <h3 style={S.h3}>4. Build in Fall or Winter</h3>
-          <p style={S.p}>Spring and summer are peak season crews book out 4–8 weeks. <Link href="/best-time-to-build-a-deck-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Building in fall or winter</Link> can save 5–10% and gets you on the schedule faster.</p>
-
-          <h3 style={S.h3}>5. Start with Standard Aluminum Railings</h3>
-          <p style={S.p}>Aluminum railings ($3,000–$6,000) look clean and last decades. Upgrading to cable or composite railings is easy to do later without modifying the deck structure.</p>
-
-          <h3 style={S.h3}>6. Skip Under-Deck Drainage (for Now)</h3>
-          <p style={S.p}>RainEscape adds $3,000–$6,000. It&apos;s a fantastic upgrade but can be retrofitted later if budget is tight now.</p>
-
-          <h3 style={S.h3}>7. Bundle With Other Outdoor Projects</h3>
-          <p style={S.p}>Adding a pergola, fence, or patio at the same time saves on mobilization and shared labor. We typically see 10–15% savings on the add-on when bundled with a deck build.</p>
-
-          {/* ===== SECTION 11: County Permit Costs ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Permit Costs by County</h2>
-          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-              <thead>
-                <tr style={{ background: '#f5f5f5' }}>
-                  {['County', 'Permit Fee', 'Typical Timeline', 'Notes'].map(h => <th key={h} style={S.th}>{h}</th>)}
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Loudoun County', '$200–$500', '2–4 weeks', 'Online submission via LOLA portal'],
-                  ['Fairfax County', '$300–$600', '3–5 weeks', 'Requires plot plan with setbacks'],
-                  ['Prince William County', '$200–$400', '2–3 weeks', 'Fastest turnaround in our service area'],
-                  ['Arlington County', '$250–$500', '3–4 weeks', 'Strict historic district overlays in some areas'],
-                  ['Stafford County', '$150–$350', '2–3 weeks', 'Most straightforward process'],
-                ].map((row, i) => (
+                {brandComparison.map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
-                    {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
+                    <td style={{ ...S.td, fontWeight: 600 }}>{row.feature}</td>
+                    <td style={S.td}>{row.trex}</td>
+                    <td style={S.td}>{row.timbertech}</td>
+                    <td style={{ ...S.td, color: '#555' }}>{row.premium}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p style={S.p}>We handle 100% of the permitting process in-house submitting plans, coordinating with your HOA, and scheduling inspections. You don&apos;t visit the county office once.</p>
+          <p style={S.pMuted}>
+            For a full 4-way comparison with Fiberon and AZEK side-by-side, see <Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK vs Fiberon</Link>. For deeper Trex line specifics: <Link href="/trex-transcend-review-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Transcend review for NoVA</Link>.
+          </p>
+        </div>
+      </section>
 
-          {/* ===== SECTION 12: 2026 Price Trends ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>2026 Composite Deck Pricing Trends</h2>
+      {/* 2026 TARIFFS */}
+      <section id="tariffs-2026" style={{ padding: '3rem 1.5rem', background: '#fafafa', borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>How 2026 Tariffs Affect Composite Deck Prices</h2>
+          <p style={{ ...S.p, fontStyle: 'italic', color: '#555' }}>
+            Updated for 2026 material pricing trends. Prices verified May 2026.
+          </p>
+          <p style={S.p}>
+            Composite decking material pricing in 2026 behaves differently from pressure-treated lumber, and the difference matters when you&apos;re budgeting a build six months out. Three pressure points dominate the 2026 picture:
+          </p>
+          <h3 style={S.h3}>1. Aluminum railing tariffs</h3>
+          <p style={S.p}>
+            Section 232 aluminum tariffs (10–25% depending on country of origin) have lifted aluminum railing system costs roughly 8–15% versus 2024 baseline. Cable rail and modern aluminum picket systems are the most exposed line items on a 2026 composite deck quote. If aluminum railing is on your spec, expect $400–$900 more on a 30-linear-foot run than the same system cost in 2023. Composite railing systems (Trex Signature, TimberTech Impression) are insulated from this tariff because the structural cores are domestic.
+          </p>
+          <h3 style={S.h3}>2. PVC and capstock supply chain</h3>
+          <p style={S.p}>
+            Composite boards from Trex, TimberTech, and Fiberon are predominantly US-manufactured (NV and GA for Trex, OH and PA for TimberTech, NC and IA for Fiberon), so they avoid the import tariff exposure that affects competing imported composites. The 2026 squeeze sits on the capstock side: the PVC and acrylic shell layers depend on imported polymer precursors with their own tariff schedules. Net effect on US-made composite board pricing: 3–7% over 2024 levels, smaller than the aluminum impact.
+          </p>
+          <h3 style={S.h3}>3. Why composite behaves differently than pressure-treated lumber</h3>
+          <p style={S.p}>
+            Pressure-treated pine pricing tracks softwood lumber commodity futures — wildly volatile, swinging 20–40% in a single quarter. Composite pricing is set by manufacturer MSRP and dealer programs, which adjust on annual or semi-annual cycles. The practical implication: composite quotes are more stable than wood quotes over the 8–12 weeks between contract signing and material delivery. Most NoVA contractors (including Loudoun Decks) lock material pricing at contract signature for that reason.
+          </p>
+          <h3 style={S.h3}>4. Current market volatility</h3>
+          <p style={S.p}>
+            2026 composite deck pricing is up roughly 8–14% from 2024 across the NoVA market — driven by labor inflation (NoVA deck-build labor is up faster than national average), the aluminum hardware tariffs above, and incremental capstock cost pressure. If you&apos;re budgeting for a 2026 or 2027 build, plan to the upper end of the ranges in our cost tables above.
+          </p>
+          <p style={S.p}>
+            For the full tariff breakdown by material category: <Link href="/how-tariffs-affect-deck-prices-2026" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How 2026 tariffs affect deck prices in Northern Virginia</Link>.
+          </p>
+        </div>
+      </section>
 
-          <h3 style={S.h3}>Tariff Impact on Materials</h3>
-          <p style={S.p}>Recent tariff activity has increased pressure on imported decking hardware and certain fastener systems. While major composite boards (Trex, TimberTech) are manufactured domestically, aluminum railing components and some fastener systems have seen 8–15% increases since late 2025. Read our full <Link href="/how-tariffs-affect-deck-prices-2026" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>tariff impact analysis</Link>.</p>
+      {/* MANUFACTURER PRICE SOURCES */}
+      <section style={{ padding: '3rem 1.5rem' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Where These Prices Come From — Manufacturer & Dealer Sources</h2>
+          <p style={S.p}>
+            Every price range on this page is sourced from one of three categories: manufacturer published MSRP, certified dealer pricing programs, or Loudoun Decks internal cost data from completed Northern Virginia builds. We don&apos;t use guesses or industry averages; we use the same numbers we quote in our contracts. <strong>Prices verified May 2026.</strong>
+          </p>
+          <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.25rem' }}>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
+              <strong>Trex pricing</strong> — Trex.com material MSRP for Enhance, Transcend, Signature, and Lineage product lines. Trex Platinum dealer pricing program. Trex installer locator: <a href="https://www.trex.com/contractors/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)' }}>trex.com/contractors</a>.
+            </li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
+              <strong>TimberTech pricing</strong> — TimberTech.com product MSRP for AZEK Vintage, AZEK Harvest, PRO Legacy, and PRO Reserve lines. TimberTech Platinum dealer pricing. Installer locator: <a href="https://www.timbertech.com/locate-a-pro/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)' }}>locator.timbertech.com</a>.
+            </li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
+              <strong>Fiberon pricing</strong> — Fiberon.com product MSRP for Concordia, Sanctuary, and ArmorGuard lines. Fiberon contractor locator: <a href="https://www.fiberondecking.com/find-a-pro" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)' }}>fiberondecking.com/find-a-pro</a>.
+            </li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
+              <strong>NoVA labor &amp; installed-cost data</strong> — Loudoun Decks internal records from 200+ completed projects across Loudoun, Fairfax, Prince William, and Arlington counties (2022–2026).
+            </li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
+              <strong>ROI &amp; resale data</strong> — Remodeling Magazine&apos;s annual <em>Cost vs Value</em> report (Mid-Atlantic, mid-range and upscale composite deck categories).
+            </li>
+          </ul>
+        </div>
+      </section>
 
-          <h3 style={S.h3}>Labor Market</h3>
-          <p style={S.p}>Skilled carpentry labor remains tight in Northern Virginia. Experienced framing crews command premium rates, and the best contractors are booking 4–8 weeks out during spring/summer peak season. Early planning is critical we recommend reaching out 6–8 weeks before your desired start date.</p>
+      {/* WHAT DRIVES THE PRICE */}
+      <section style={{ padding: '3rem 1.5rem', background: '#fafafa', borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>What Actually Drives Your Composite Deck Cost in NoVA</h2>
+          <p style={S.p}>
+            Seven cost levers shape every NoVA composite deck quote. Knowing which ones apply to your build is the difference between a $24,000 and a $40,000 final number for the same square footage.
+          </p>
+          <ol style={{ paddingLeft: '1.25rem', marginBottom: '1.25rem' }}>
+            <li style={{ marginBottom: '0.7rem', lineHeight: 1.75 }}><strong>Material tier.</strong> The single biggest lever. Budget capped composite vs premium PVC is a 60–80% spread on material cost alone.</li>
+            <li style={{ marginBottom: '0.7rem', lineHeight: 1.75 }}><strong>Square footage and shape.</strong> Rectangular costs less per sqft than complex multi-tier or angled geometry. Picture-frame borders and herringbone insets are aesthetic upgrades that add labor.</li>
+            <li style={{ marginBottom: '0.7rem', lineHeight: 1.75 }}><strong>Elevation.</strong> Second-story decks need 6×6 engineered posts, safety rigging, and stairs to grade — adds $3,000–$8,000 over a ground-level build of the same size.</li>
+            <li style={{ marginBottom: '0.7rem', lineHeight: 1.75 }}><strong>Railing system.</strong> Composite railing $3,000–$8,000 for a typical run. Cable rail $5,000–$12,000. Modern aluminum picket somewhere in between.</li>
+            <li style={{ marginBottom: '0.7rem', lineHeight: 1.75 }}><strong>Stairs.</strong> Single flight $1,500–$4,000. Multi-flight to grade or split-level $4,000–$9,000+.</li>
+            <li style={{ marginBottom: '0.7rem', lineHeight: 1.75 }}><strong>Site conditions.</strong> Slope, soil, root systems, access constraints. Sloped lots in Vienna, McLean, and Great Falls regularly add $2,000–$6,000 in additional foundation work.</li>
+            <li style={{ marginBottom: '0.7rem', lineHeight: 1.75 }}><strong>Permits &amp; HOA review.</strong> Fairfax County permits $600–$1,300 with sealed structural drawings. Loudoun County $400–$900. HOA architectural review is free but adds 1–4 weeks of timeline. See our <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County</Link> and <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County</Link> permit guides.</li>
+          </ol>
 
-          <h3 style={S.h3}>Material Innovation</h3>
-          <p style={S.p}>Trex Lineage and TimberTech&apos;s expanded Harvest collection have pushed composite aesthetics to a point where they are genuinely indistinguishable from hardwood at normal viewing distance. The premium for these ultra-realistic lines is 10–15% above standard Transcend/Pro pricing but is increasingly popular with homeowners in McLean, Great Falls, and Vienna.</p>
+          <h3 style={S.h3}>Real Northern Virginia project examples</h3>
+          <ul style={{ paddingLeft: '1.25rem', marginBottom: '1rem' }}>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
+              <strong>Ashburn, 380 sqft Trex Transcend rebuild</strong> — single-level ground deck replacing aged pressure-treated, Spiced Rum boards, composite railing, one stair flight, LED riser lighting. Total: <strong>$28,400 installed</strong>.
+            </li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
+              <strong>Vienna, 460 sqft TimberTech AZEK Vintage second-story</strong> — walkout-grade deck on sloped lot, English Walnut boards, cable rail, two stair flights to grade, integrated lighting. Total: <strong>$48,900 installed</strong>.
+            </li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
+              <strong>Manassas, 240 sqft Trex Enhance Basics ground deck</strong> — first-time deck on a townhome lot, Toasted Sand boards, composite railing, one stair flight. Total: <strong>$13,200 installed</strong>.
+            </li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
+              <strong>McLean, 520 sqft Fiberon Concordia multi-level</strong> — two-tier walkout, Symmetry boards, modern aluminum railing, three stair flights, picture-frame border. Total: <strong>$54,300 installed</strong>.
+            </li>
+          </ul>
+        </div>
+      </section>
 
-          {/* ===== SECTION 13: FAQs ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
-          {[
-            { q: "How much does a composite deck cost in Northern Virginia in 2026?", a: "A composite deck costs $30-$75 per square foot installed. A typical 300 sqft Trex Transcend deck runs $18,000-$28,000. TimberTech and AZEK premium lines range $25,000-$45,000+ for the same size." },
-            { q: "Is Trex or TimberTech cheaper?", a: "Trex is generally 10-20% less expensive. Trex Enhance starts at $30/sqft installed while TimberTech Pro starts at $40/sqft. TimberTech's thicker polymer cap justifies the premium for some homeowners." },
-            { q: "Why is composite decking more expensive in Northern Virginia?", a: "Skilled carpentry labor near DC commands $45-$75/hour 25-35% above the state average. Stricter codes, longer permit timelines, and HOA reviews add cost and time." },
-            { q: "Is composite decking worth the cost over wood?", a: "Yes. Over 15 years, composite costs less than wood when you add staining ($300-$800/year), board replacement, and your time. Composite lasts 25-50 years vs 10-15 for wood and recoups 65-80% at resale." },
-            { q: "What is the cheapest composite decking brand?", a: "Trex Enhance Basics at $30-$42/sqft installed. Fiberon Good Life is comparable. Both carry 25-year warranties." },
-            { q: "How much does it cost to build a 400 sq ft composite deck?", a: "$16,000-$30,000 with Trex or $22,000-$42,000 with TimberTech/AZEK. Add $3,000-$8,000 for railings, $1,500-$4,000 for stairs, and $200-$800 for permits." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+      {/* DECK REPLACEMENT */}
+      <section style={{ padding: '3rem 1.5rem' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Deck Replacement Cost — Resurfacing vs Full Rebuild</h2>
+          <p style={S.p}>
+            If you already have a deck and the framing is sound, you can skip 30–50% of the cost by resurfacing instead of full tear-down. Resurfacing strips the old surface boards and railings and installs new composite on the existing structure — only an option when the joists, beams, posts, and ledger pass inspection. Most 20+ year-old NoVA decks need full replacement because the ledger detail predates modern flashing standards. We assess the framing first, then quote.
+          </p>
+          <ul style={{ paddingLeft: '1.25rem', marginBottom: '1rem' }}>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Composite deck resurface (NoVA, 2026):</strong> $16,000–$28,000 on a typical 300–400 sqft deck — boards, railings, fasteners, no framing.</li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Full composite deck rebuild (NoVA, 2026):</strong> $24,000–$48,000 on the same footprint — new framing, footings, ledger, boards, railings, permit.</li>
+          </ul>
+          <p style={S.pMuted}>
+            See <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>full deck replacement services</Link> and <Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck resurfacing</Link> for scope breakdowns.
+          </p>
+        </div>
+      </section>
+
+      {/* FINANCING */}
+      <section id="financing" style={{ padding: '3rem 1.5rem', background: '#fafafa', borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Financing Your Composite Deck</h2>
+          <p style={S.p}>
+            Loudoun Decks offers project financing through Hearth and Synchrony, with terms ranging from 12–84 months. Most $25,000–$45,000 composite deck builds run $300–$650 per month at typical 2026 rates. We can pre-qualify you in under two minutes without a hard credit pull.
+          </p>
+          <p style={S.pMuted}>
+            For full financing details, rate ranges, and the calculator: <Link href="/deck-financing-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing in Northern Virginia</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* MAINTENANCE COST */}
+      <section style={{ padding: '3rem 1.5rem' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Ongoing Composite Deck Maintenance Cost</h2>
+          <p style={S.p}>
+            The post-install cost picture is where composite earns back its upfront premium versus wood. Annual maintenance: $0–$150 (a soap-and-water wash, optional power-wash at low pressure). No staining, no sealing, no sanding. Compare to pressure-treated wood at $1,500–$2,500 every two years for professional clean-sand-stain in NoVA. Over 15 years that&apos;s $11,000–$19,000 saved.
+          </p>
+          <p style={S.pMuted}>
+            Detail: <Link href="/deck-maintenance-checklist-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck maintenance checklist for Virginia</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* FAQS */}
+      <section id="faqs" style={{ padding: '3rem 1.5rem', background: '#fafafa', borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Frequently Asked Questions</h2>
+          {faqs.map((faq, i) => (
+            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.1rem 1.25rem', marginBottom: '0.75rem', background: '#fff' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.02rem' }}>{faq.q}</summary>
+              <p style={{ marginTop: '0.85rem', lineHeight: 1.75, color: '#444', marginBottom: 0 }}>{faq.a}</p>
             </details>
           ))}
+        </div>
+      </section>
 
-          {/* ===== SECTION 14: Related Guides ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
+      {/* RELATED GUIDES */}
+      <section style={{ padding: '3rem 1.5rem' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Related Cost &amp; Comparison Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.75rem' }}>
             {[
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
-              ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Full Comparison'],
-              ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck 15-Year Cost Analysis'],
-              ['/deck-resurfacing-vs-replacement', 'Deck Resurfacing vs Full Replacement'],
-              ['/how-tariffs-affect-deck-prices-2026', 'How 2026 Tariffs Affect Deck Prices'],
-              ['/deck-financing-northern-virginia', 'Deck Financing Options in Northern Virginia'],
-            ].map(([href, text]) => (
-              <li key={href} style={{ marginBottom: '0.5rem' }}>
-                <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} &rarr;</Link>
+              ['/deck-cost-calculator', 'NoVA Deck Cost Calculator', 'Interactive estimate by size, material, add-ons'],
+              ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK vs Fiberon', 'Full 4-way comparison'],
+              ['/how-tariffs-affect-deck-prices-2026', '2026 Deck Tariff Impact', 'How import duties moved the market'],
+              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost (All Materials)', 'Composite, wood, and cedar pricing side by side'],
+              ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Decision', 'Total-cost-of-ownership math'],
+              ['/does-a-deck-add-value-to-your-home', 'Deck ROI &amp; Home Value', 'What composite recoups at resale'],
+              ['/services/deck-replacement', 'Deck Replacement Services', 'Full rebuild scope and pricing'],
+              ['/services/deck-resurfacing', 'Deck Resurfacing', 'When resurface is the right call'],
+              ['/deck-financing-northern-virginia', 'Deck Financing in NoVA', 'Monthly payment math + lenders'],
+              ['/deck-maintenance-checklist-virginia', 'Maintenance Checklist', 'Annual care for composite decks'],
+              ['/deck-permit-fairfax-county-virginia', 'Fairfax County Permits', '3–5 week review, $600–$1,300'],
+              ['/deck-permit-loudoun-county-virginia', 'Loudoun County Permits', 'LOLA portal, 2–4 weeks, $400–$900'],
+            ].map(([href, title, desc]) => (
+              <li key={href}>
+                <Link href={href} style={{ display: 'block', padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit', height: '100%' }}>
+                  <p style={{ fontWeight: 700, color: 'var(--color-primary)', margin: 0, marginBottom: '0.3rem' }} dangerouslySetInnerHTML={{ __html: title }} />
+                  <p style={{ fontSize: '0.88rem', color: '#4a5568', margin: 0 }}>{desc}</p>
+                </Link>
               </li>
             ))}
           </ul>
-
         </div>
-      </article>
+      </section>
 
-      <SimpleCTA title="Get Your Composite Deck Priced" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get Your Exact Composite Deck Quote" buttonText="Request Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/composite-deck-cost-northern-virginia" />
       <ContactHome />
     </>

@@ -8,8 +8,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/stamped-concrete-patio-northern-virginia',
-  title: 'Stamped Concrete Patio Northern Virginia | Costs & Options',
-  description: 'Stamped concrete patios NoVA: $15-$30/sqft installed. Patterns: slate, flagstone, brick, wood plank. Most affordable patio option.',
+  title: 'Stamped Concrete Patio Contractor Northern Virginia | 2026',
+  description: 'Stamped concrete patio contractor in Northern Virginia. 2026 cost: $40-$70/sqft installed across Loudoun, Fairfax & Prince William. Slate, flagstone, brick, wood plank patterns. Freeze-thaw realities explained.',
 });
 
 const faqSchema = {

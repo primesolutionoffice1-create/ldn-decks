@@ -10,6 +10,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/concrete-washing",
   title: "Professional Concrete Washing NoVA | Driveway & Walkway Cleaning",
@@ -39,6 +40,9 @@ export default function ConcreteWashingPage() {
         title="Concrete Washing Services"
         description="Loudoun Decks provides expert concrete washing for homeowners in Northern Virginia, restoring the bright, clean look of your masonry."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+      </section>
 
       <ServiceMain
         subtitle="Hardscape Refresh"

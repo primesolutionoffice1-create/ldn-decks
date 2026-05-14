@@ -12,6 +12,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/deck-washing",
   title: "Professional Deck Washing Loudoun VA | Safe Soft-Wash Restoration",
@@ -145,6 +146,9 @@ export default function DeckWashingPage() {
         title="Professional Deck Washing Services"
         description="Safely strip away years of grime, dangerous mildew, and gray oxidation without damaging your wood or composite boards."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+      </section>
 
       <ServiceMain
         subtitle="Protect Your Investment"
@@ -174,7 +178,7 @@ export default function DeckWashingPage() {
         items={inclusions}
       />
 
-      <ServicesFAQ
+      <ServicesFAQ withSchema={false}
         title="Deck Washing FAQs"
         faqs={deckWashingFAQs}
       />

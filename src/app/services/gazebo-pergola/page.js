@@ -13,6 +13,7 @@ import AboveFoldCTA from '@/components/AboveFoldCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/gazebo-pergola",
       title: "Gazebo & Pergola Builder | Loudoun VA | LDN Decks",
@@ -140,6 +141,9 @@ export default function GazeboPergolaPage() {
         title="Custom Built Shade & Structure"
         description="Add lasting value, incredible shade, and stunning architectural character to your outdoor space with a custom gazebo or pergola engineered by Loudoun Decks."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+      </section>
 
       <AboveFoldCTA headline="Custom gazebo or pergola in Northern Virginia? Talk to a NoVA outdoor-structure specialist today." />
 
@@ -198,7 +202,7 @@ export default function GazeboPergolaPage() {
         items={inclusions}
       />
 
-      <ServicesFAQ
+      <ServicesFAQ withSchema={false}
         title="Gazebos and Pergolas FAQs"
         faqs={faqs}
       />

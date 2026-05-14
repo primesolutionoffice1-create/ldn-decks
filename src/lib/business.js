@@ -51,6 +51,21 @@ export const BUSINESS = {
 export const ORG_ID = `${BUSINESS.url}/#organization`;
 export const WEBSITE_ID = `${BUSINESS.url}/#website`;
 
+// Builds the WebSite JSON-LD object.
+// Use this once in the root layout alongside buildOrganizationSchema.
+// Resolves the dangling "#website" @id references some pages emit (e.g., WebPage.isPartOf).
+export function buildWebSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': WEBSITE_ID,
+    url: BUSINESS.url,
+    name: BUSINESS.name,
+    publisher: { '@id': ORG_ID },
+    inLanguage: 'en-US',
+  };
+}
+
 // Builds the full GeneralContractor JSON-LD object.
 // Use this once in the root layout. All other surfaces should reference {"@id": ORG_ID} only.
 export function buildOrganizationSchema() {

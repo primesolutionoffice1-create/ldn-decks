@@ -1,78 +1,127 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
-import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
-import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import NamedAuthor from '@/components/NamedAuthor';
+import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/patios",
-  title: '5-Star Patio Builder NoVA | Custom Bluestone & Paver Patios',
-  description: 'Expert patio installation in Northern Virginia. Bluestone, natural stone & concrete pavers. ★ 5.0 Google Rated. Free estimates in 24h. Licensed & Insured.',
+  title: 'Patio Contractor Northern Virginia | Paver, Stone & Stamped',
+  description: 'Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone & natural stone. Loudoun, Fairfax, Prince William, Arlington. Free 24h estimate.',
+  image: '/showcase/img12.jpeg',
 });
 
-const expansionSections = [
+const S = {
+  h2: { fontSize: '1.95rem', fontWeight: 700, marginBottom: '1.1rem', letterSpacing: '-0.01em' },
+  h3: { fontSize: '1.2rem', fontWeight: 600, margin: '1.4rem 0 0.55rem' },
+  p: { marginBottom: '1rem', lineHeight: 1.75, color: '#333' },
+  pMuted: { marginBottom: '1rem', lineHeight: 1.7, color: '#555' },
+  section: { padding: '3rem 1.5rem' },
+  container: { maxWidth: 980, margin: '0 auto' },
+  th: { padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd', fontSize: '0.92rem' },
+  td: { padding: '0.85rem', borderBottom: '1px solid #eee', fontSize: '0.92rem' },
+  callout: { borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' },
+};
+
+const patioCostRows = [
+  ['Concrete pavers (entry)', '200–300 sqft', 'Standard paver, basic 6\" base, simple rectangular layout', '$14,000–$22,000', '$60–$80/sqft'],
+  ['Stamped concrete (mid)', '300–400 sqft', 'Slate or flagstone stamp pattern, integral color, sealer', '$15,000–$25,000', '$40–$65/sqft'],
+  ['Natural stone — flagstone (mid-premium)', '300–400 sqft', 'Irregular Pennsylvania flagstone, hand-fit, polymeric joints', '$22,000–$38,000', '$70–$95/sqft'],
+  ['Bluestone — natural cleft (premium)', '300–450 sqft', 'Full pattern bluestone, dimensional cut, sealed border', '$28,000–$48,000', '$90–$115/sqft'],
+  ['Bluestone — thermal finish (luxury)', '350–500 sqft', 'Thermal-flat bluestone, mortar set, integrated steps & lighting', '$45,000–$75,000', '$120–$165/sqft'],
+  ['Luxury hardscape suite', '500+ sqft', 'Bluestone or travertine, seating walls, fire feature, outdoor kitchen', '$75,000–$160,000+', 'project-based'],
+];
+
+const materialComparison = [
   {
-    title: "Why Choose a Bluestone Patio in Northern Virginia",
-    paragraphs: [
-      "Bluestone is uniquely suited for the Northern Virginia climate. It easily withstands the freezing winters and scorching, humid summers of Loudoun and Fairfax counties without cracking, provided it is installed with a proper architectural base. Many of our patio projects are designed to integrate perfectly with a [new composite deck](/services/new-decks) or a custom [screened porch](/services/porches).",
-      "Custom stonework is also one of the highest ROI hardscaping investments you can make. It immediately elevates your backyard into a luxury entertainment space that appeals to homebuyers across the DC metro region."
-    ],
-    listItems: [
-      { label: "Aesthetics", text: "Rich, natural earth tones including deep blues, grays, and rust colors." },
-      { label: "High Durability", text: "Withstands freeze-thaw cycles indefinitely when properly jointed." },
-      { label: "Low Maintenance", text: "Requires minimal upkeep compared to wood decks; simply power wash annually." },
-      { label: "Increased Value", text: "Premium natural stone adds significant measurable value to your property." },
-      { label: "Temperature Control", text: "Absorbs heat slower than pure concrete, making it comfortable during summer." }
-    ]
+    name: 'Concrete Pavers',
+    cost: '$60–$90/sqft installed',
+    durability: '30+ years',
+    freezeThaw: 'Excellent — individually flexible',
+    look: 'Uniform, engineered',
+    repair: 'Lift and replace individual pavers',
+    bestFor: 'Geometric layouts, modern homes, budget-flexible builds',
   },
   {
-    title: "Understanding Your Design & Layout Options",
-    paragraphs: [
-      "A bluestone patio layout dictates the entire feel of your outdoor space. Whether you live in a modern estate in Ashburn or a rustic property in Middleburg, we tailor the stone cut to match your home's architecture."
-    ],
-    listItems: [
-      { label: "1. Natural Cleft Dimensional", text: "The most popular choice. Cut into perfect squares and rectangles, but retaining the natural, slightly uneven flaking texture of the stone quarry." },
-      { label: "2. Thermal Finish", text: "The stone is subjected to intense heat to pop off the natural cleft, resulting in a perfectly smooth, flat surface ideal for dining areas where wobbly chairs are a concern." },
-      { label: "3. Irregular / Flagstone Pattern", text: "Uncut, jagged organic shapes fit together like a puzzle. This 'crazy paving' style is perfect for rustic garden walkways and fire pit surrounds." },
-      { label: "4. Borders and Banding", text: "We often incorporate complementary stones like brick or Pennsylvania fieldstone to create distinctive borders that frame the bluestone canvas." }
-    ]
+    name: 'Stamped Concrete',
+    cost: '$40–$70/sqft installed',
+    durability: '15–25 years',
+    freezeThaw: 'Vulnerable — cracks if base settles',
+    look: 'Mimics stone or brick patterns',
+    repair: 'Patch and re-stamp; rarely invisible',
+    bestFor: 'Larger footprints, budgets under $25k, walkway connectors',
   },
   {
-    title: "Custom Outdoor Living Features",
-    paragraphs: [
-      "A patio is just the foundation. Loudoun Decks turns your surface into a fully functional outdoor living room by integrating premium architectural elements."
-    ],
-    listItems: [
-      { label: "Retaining & Seating Walls", text: "Built-in masonry walls wrapped in natural stone veneer to provide structural support for sloped yards and permanent seating for guests." },
-      { label: "Custom Fire Features", text: "Wood-burning stone fire pits or integrated gas fireplaces that make your patio usable deep into the autumn and winter months." },
-      { label: "Outdoor Kitchens", text: "Built-in grilling stations, bar tops, and refrigerators seamlessly integrated into your patio layout." },
-      { label: "Landscape Lighting", text: "Low-voltage LED lighting cast into the stone steps and seating walls to provide safety and ambiance at night." }
-    ]
-  }
+    name: 'Natural Stone (Bluestone / Flagstone)',
+    cost: '$90–$165/sqft installed',
+    durability: '50+ years',
+    freezeThaw: 'Excellent — natural stone, replaceable piece by piece',
+    look: 'Premium, distinctive, color depth no synthetic can match',
+    repair: 'Lift and replace individual stones',
+    bestFor: 'Luxury estates, premium NoVA neighborhoods, long-hold homes',
+  },
+  {
+    name: 'Travertine',
+    cost: '$85–$130/sqft installed',
+    durability: '40+ years',
+    freezeThaw: 'Excellent — naturally cool, low absorption when sealed',
+    look: 'European, soft cream to walnut tones',
+    repair: 'Stone-by-stone, sealing every 3–5 years',
+    bestFor: 'Pool decks, formal designs, light/cream palettes',
+  },
 ];
 
 const patioProcess = [
-  { title: "Step 1: On-Site Evaluation", desc: "We review your property's soil composition, grading, and drainage to determine the necessary sub-base requirements." },
-  { title: "Step 2: 3D Design & Permitting", desc: "We provide detailed layouts and handle all Loudoun County grading and zoning permits required for the hardscape project." },
-  { title: "Step 3: Excavation & Base Prep", desc: "The most critical step. We excavate and compress layers of crushed stone and gravel to create an immovable foundation resistant to freezing." },
-  { title: "Step 4: Stone Installation", desc: "Our masons precision-cut and lay each piece of stone, ensuring perfect leveling and water runoff." },
-  { title: "Step 5: Polymeric Jointing", desc: "We fill the gaps with high-grade polymeric sand or mortar to lock the stones together and prevent weed growth." },
-  { title: "Step 6: Final Seal & Review", desc: "An optional invisible sealant is applied to protect the stone from stains before a final client walkthrough." }
+  { title: 'Step 1 — Site evaluation & grading review', desc: 'On-site walk of your soil profile, existing grade, drainage patterns and tree-root constraints. We measure pitch back to the house and identify any standing-water issues before design begins.' },
+  { title: 'Step 2 — Design, layout & permitting', desc: 'Scaled drawing of the patio footprint, material selection, integrated features (fire pit, kitchen, seating walls), and county or HOA submission packets where required.' },
+  { title: 'Step 3 — Excavation & engineered base', desc: 'We excavate 6 to 10 inches and lay compacted gravel and crushed-stone aggregate in lifts. The base is where every patio either succeeds for 50 years or fails in five — we never cut it.' },
+  { title: 'Step 4 — Drainage infrastructure', desc: 'French drains, catch basins, and perimeter pitch detailing per Virginia clay-soil drainage standards. Pitch is 1/8\" per foot away from the house, invisible to the eye but absolute for water management.' },
+  { title: 'Step 5 — Stone or paver installation', desc: 'Hand-set or mortar-set installation by our masonry crew. Each stone leveled to the adjacent piece, every joint dimensioned to spec, integrated lighting roughed in before final set.' },
+  { title: 'Step 6 — Polymeric jointing & sealing', desc: 'Polymeric sand or mortar joints, swept and watered to a hardened cure. Optional invisible sealer on stone or stamped concrete to protect against staining and freeze-spalling.' },
+  { title: 'Step 7 — Final walkthrough & 5-year workmanship warranty', desc: 'Itemized punch-list walkthrough with you on-site, photo documentation filed to your project record, and our written 5-year workmanship warranty on every patio we install.' },
 ];
 
 const patioFAQs = [
-  { question: "Do I need a permit for a patio in Northern Virginia?", answer: "Most ground-level patios that do not alter the major grading or drainage of the property do not require a building permit. However, if your patio includes retaining walls over 2 feet, electrical lines for kitchens, or sits in a designated RPA (Resource Protection Area), county permits are required. Loudoun Decks handles all of this compliance for you." },
-  { question: "How much does a custom patio cost?", answer: "Custom patio projects in Northern Virginia typically start at $15,000+ for natural stone and premium pavers. Pricing varies based on square footage, material selection, grading requirements, and integrated features like fire pits or outdoor kitchens." },
-  { question: "How much does a bluestone patio cost compared to stamped concrete?", answer: "Bluestone is a premium natural material, so the upfront material and labor costs are higher than poured or stamped concrete. However, stamped concrete is highly prone to cracking during Virginia's freeze-thaw cycles. Bluestone, laid on a flexible aggregate base, rarely cracks and can be easily repaired stone-by-stone, offering a vastly superior long-term ROI." },
-  { question: "How do you handle water runoff and drainage?", answer: "Proper drainage is the hallmark of professional hardscaping. We grade all our patios with a subtle, imperceptible slope (typically 1/8 inch per foot) directing water away from your home's foundation. If your yard has existing water pooling issues, we integrate French drains and catch basins beneath the patio structure." },
-  { question: "Can I put a hot tub on my patio?", answer: "Absolutely. If you plan to install a hot tub, we simply adjust the depth and compaction of our crushed stone aggregate base in that specific footprint to support the immense weight (often exceeding 4,000 lbs filled) without shifting the surrounding stones." }
+  {
+    question: 'How much does a patio cost in Northern Virginia in 2026?',
+    answer: 'A custom patio in Loudoun, Fairfax or Prince William County typically runs $14,000–$48,000 installed, depending on material and footprint. Concrete pavers at 250–300 sqft start near $14,000–$22,000. Stamped concrete runs $15,000–$25,000. Premium bluestone in the 350–450 sqft range lands at $28,000–$48,000. Full luxury hardscape suites with seating walls, fire features and outdoor kitchens run $75,000–$160,000+. Every Loudoun Decks estimate is itemized, written, and delivered within 48 hours of an on-site visit.'
+  },
+  {
+    question: 'Pavers vs stamped concrete vs natural stone — which is best for NoVA?',
+    answer: 'For long-term value in Northern Virginia\'s freeze-thaw climate, concrete pavers and natural stone outperform stamped concrete by a wide margin. Stamped concrete is a single rigid slab — if the base settles or freezes unevenly, cracks propagate across the surface and are nearly impossible to repair invisibly. Pavers and natural stone are individual pieces resting on a flexible aggregate base; they flex with seasonal soil movement, and a damaged piece can be lifted and replaced without touching the rest of the patio. For luxury homes in Vienna, McLean or Great Falls, bluestone is the long-cycle ROI play. For budget-flexible builds in Ashburn, Manassas or Gainesville, pavers deliver near-identical longevity at 30–40% lower cost.'
+  },
+  {
+    question: 'Do I need a permit for a patio in Loudoun, Fairfax or Prince William County?',
+    answer: 'Most at-grade patios under 256 sqft do not trigger a building permit in NoVA. Permits are required when the patio includes retaining walls over 2 feet (Fairfax and Loudoun), runs electrical or gas lines for outdoor kitchens, sits inside an RPA (Resource Protection Area) along stream corridors, or alters site grading and drainage. HOA architectural review is separate and applies in most planned communities — Brambleton, Lansdowne, Reston, Burke Centre and others — regardless of permit status. We handle every submission for our clients.'
+  },
+  {
+    question: 'How does Northern Virginia clay soil affect patio installation?',
+    answer: 'NoVA sits on heavy red clay that expands when wet and contracts when dry. A patio built on poorly compacted clay will heave through the first winter and sink through the first dry summer. The fix is engineered base prep: excavate 6 to 10 inches below grade, install a geotextile separation fabric, then 4 to 6 inches of crushed-stone aggregate compacted in 2-inch lifts. We pitch the entire patio 1/8 inch per foot away from the house and tie surface drainage into either daylight or a perimeter French drain. This base detail is the line between a patio that lasts 5 years and a patio that lasts 50.'
+  },
+  {
+    question: 'How long does it take to build a patio in Northern Virginia?',
+    answer: 'From signed contract to completed build: typically 6–10 weeks. The design and permit phase runs 2–4 weeks (longer if Fairfax County structural review is triggered by an attached fire feature or kitchen). HOA architectural review runs 1–4 weeks in parallel. Construction itself runs 2–4 weeks once the crew mobilizes — base prep is 3–5 days, stone or paver installation is 3–8 days depending on size and material, and jointing/sealing closes out in 1–2 days.'
+  },
+  {
+    question: 'How do you handle drainage around a new patio?',
+    answer: 'Every patio we build pitches 1/8 inch per foot away from the house — imperceptible visually but absolute for water management. Where existing yards already have pooling problems, we integrate French drains beneath the patio base tied into either daylight or a dry well sized to your average storm event. For patios within 10 feet of a house foundation, we run a perimeter drain along the back edge to catch roof runoff before it reaches the foundation wall. Drainage is engineered into the base, not retrofitted later.'
+  },
+  {
+    question: 'Can a patio be added to an existing deck or screened porch?',
+    answer: 'Yes — combined deck-and-patio builds are one of our most-requested projects in Vienna, McLean, Reston and Great Falls. The patio typically sits below an elevated deck (under-deck patio system with a dry ceiling) or extends off a ground-level deck into the yard. For under-deck installations we install a waterproof drainage ceiling between the joists so the patio space below stays dry through every storm. Pergolas and screened porches integrate directly onto the patio footprint, sharing footings and creating a unified outdoor living suite.'
+  },
+  {
+    question: 'What is the ROI on a custom patio in Northern Virginia?',
+    answer: 'A premium hardscape patio recovers 55–75% of its installed cost at resale in the NoVA market, with luxury bluestone and integrated outdoor-kitchen builds often exceeding 75% cost recovery on properties valued at $1M+ (Remodeling Magazine and National Association of Realtors Outdoor Features Reports). The bigger return is on time-on-market: NoVA homes with finished outdoor living spaces sell measurably faster than comparable inventory without them. For owners holding 7+ years, a patio is among the highest-ROI outdoor additions you can make — second only to a full composite deck plus screened porch combination.'
+  },
 ];
 
 const faqSchemaData = {
@@ -88,146 +137,252 @@ const faqSchemaData = {
 const serviceSchemaData = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Custom Patio Installation",
+  "name": "Custom Patio Design & Installation",
+  "serviceType": "Hardscape Patio Construction",
   "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": { "@type": "State", "name": "Virginia" },
-  "description": "Premium patio installation specializing in bluestone, natural stone, concrete pavers, fire pits, and outdoor kitchens in Northern Virginia."
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+    { "@type": "AdministrativeArea", "name": "Prince William County, VA" },
+    { "@type": "AdministrativeArea", "name": "Arlington County, VA" },
+  ],
+  "description": "Premium patio installation in Northern Virginia. Concrete pavers, stamped concrete, bluestone, flagstone, travertine. Drainage engineering, retaining walls, fire features, outdoor kitchens.",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "14000",
+    "highPrice": "160000",
+  },
 };
 
-const whyLdnDecks = [
-  { title: "Master Masons", desc: "Our teams specialize heavily in natural stone layout and precision dry-laid and wet-laid applications." },
-  { title: "Structural Integrity", desc: "We never cut corners on the base aggregate—guaranteeing your patio will not sink or heave after harsh winters." },
-  { title: "Turnkey Service", desc: "From design and drainage engineering to the final sealing, we manage the entire project in-house." },
-  { title: "Local Compliance", desc: "Deep understanding of Loudoun, Fairfax, and Prince William County HOA restrictions and zoning laws." },
-  { title: "Ironclad Warranty", desc: "We stand behind our hardscaping foundations with robust workmanship guarantees." }
-];
-
-const authorityLinks = [
-  { text: "Loudoun County Paving & Grading", url: "https://www.loudoun.gov/" },
-  { text: "Fairfax County Hardscape Guide", url: "https://www.fairfaxcounty.gov/landdevelopment/typical-deck-details" }
+const neighborhoods = [
+  { county: 'Loudoun County', cities: 'Ashburn, Leesburg, Sterling, Brambleton, South Riding, Purcellville, Lansdowne, Aldie, Middleburg' },
+  { county: 'Fairfax County', cities: 'Vienna, McLean, Reston, Herndon, Fairfax, Great Falls, Oakton, Burke, Centreville, Chantilly, Tysons, Falls Church' },
+  { county: 'Prince William County', cities: 'Manassas, Gainesville, Haymarket, Bristow, Woodbridge' },
+  { county: 'Arlington County', cities: 'Arlington, Rosslyn, Clarendon, Ballston' },
 ];
 
 export default function PatiosPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }} />
+      <JsonLd data={faqSchemaData} />
+      <JsonLd data={serviceSchemaData} />
 
       <ServicesHeader
-        subtext="Custom Patio Builder Northern Virginia"
-        title="Custom Patio Design & Installation in Northern Virginia"
-        description="Transform your backyard with a premium custom patio. From natural bluestone and flagstone to concrete pavers and full outdoor living builds — we design and install high-performance hardscapes for Northern Virginia homeowners."
+        subtext="Patio Builder & Contractor — Northern Virginia"
+        title="Custom Patio Contractor in Northern Virginia"
+        description="Virginia Class A licensed patio contractor serving Loudoun, Fairfax, Prince William, and Arlington counties. Paver patios, stamped concrete, bluestone, flagstone, and travertine hardscapes engineered for NoVA clay soil and freeze-thaw climate. Trex Platinum Partner — outdoor living suites that integrate seamlessly with decks, pergolas, and screened porches."
       />
 
       <AboveFoldCTA headline="Planning a paver, flagstone or bluestone patio in NoVA? Talk to a custom hardscape specialist today." />
 
-      {/* Pricing Anchor */}
-      <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
-            <strong style={{ color: '#222' }}>Custom patio projects typically start at $15,000+</strong>
-            {' '}— materials, size, grading, and integrated features affect final pricing.{' '}
-            <strong>Free estimate included.</strong>
+      <section style={{ padding: '2.5rem 1.5rem 1rem' }}>
+        <div style={S.container}>
+          <div style={S.callout}>
+            <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
+            <p style={{ margin: 0, lineHeight: 1.7 }} data-speakable>
+              A custom patio in Northern Virginia typically costs $14,000–$48,000 installed for a 250–450 sqft build, with material running the largest cost lever — concrete pavers from $60/sqft, stamped concrete from $40/sqft, premium bluestone from $90/sqft. Loudoun Decks is a Virginia Class A licensed patio contractor and Trex Platinum Partner. We handle every county and HOA submission, engineer drainage into the base, and deliver an itemized written estimate within 48 hours of the on-site visit. Service area: Loudoun, Fairfax, Prince William, and Arlington counties.
+            </p>
+          </div>
+
+          <NamedAuthor context="Loudoun, Fairfax, Prince William and Arlington counties" lastUpdated="May 2026" />
+
+          <h2 style={S.h2}>The Premier Patio Builder for Luxury Homes in Northern Virginia</h2>
+          <p style={S.p}>
+            A patio is the single most-used architectural feature in any NoVA backyard — used more days per year than the deck above it, the screened porch beside it, or the pool deck across from it. That utility makes the difference between a patio that quietly carries the property and one that becomes a maintenance line-item brutal at year five. Loudoun Decks builds the first kind. We work in bluestone, flagstone, travertine, and premium concrete pavers, on engineered bases designed for the freeze-thaw realities of Virginia clay soil, with drainage detailing that holds through the worst late-spring NoVA storm.
+          </p>
+          <p style={S.p}>
+            Our work spans the corridor from Leesburg and Ashburn through Vienna and McLean down to Manassas and Haymarket. The properties differ — historic homes in Old Town Fairfax, modern estates in Great Falls, townhomes in South Riding, custom rebuilds in Reston — but the standard is constant: a Virginia Class A licensed crew, sealed structural drawings where the county requires them, manufacturer-certified materials, and a 5-year workmanship warranty on every patio we hand off.
+          </p>
+
+          <h2 style={S.h2}>2026 Patio Cost in Northern Virginia</h2>
+          <p style={S.p}>
+            Patio pricing in NoVA runs 25–35% above the national average, driven by Fairfax County&apos;s permit documentation standards, NoVA labor rates, and the engineered base and drainage required to perform on heavy clay soil. The table below reflects real 2026 builds we&apos;ve delivered across Loudoun, Fairfax, Prince William and Arlington — full-project costs, not material-only.
+          </p>
+          <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', borderRadius: 8, overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
+              <thead>
+                <tr style={{ background: '#f0efea' }}>
+                  <th style={S.th}>Build tier</th>
+                  <th style={S.th}>Footprint</th>
+                  <th style={S.th}>Spec</th>
+                  <th style={S.th}>Installed cost</th>
+                  <th style={S.th}>$/sqft</th>
+                </tr>
+              </thead>
+              <tbody>
+                {patioCostRows.map((row, i) => (
+                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                    <td style={{ ...S.td, fontWeight: 600 }}>{row[0]}</td>
+                    <td style={S.td}>{row[1]}</td>
+                    <td style={{ ...S.td, color: '#555' }}>{row[2]}</td>
+                    <td style={{ ...S.td, fontWeight: 600, color: 'var(--color-primary)' }}>{row[3]}</td>
+                    <td style={S.td}>{row[4]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ fontSize: '0.85rem', color: '#666', fontStyle: 'italic', marginBottom: '2rem' }}>
+            Ranges include base prep, drainage, materials, labor, permit fees, and our 5-year workmanship warranty. Excludes lighting electrical service, gas-line installation for outdoor kitchens, and tree removal where required by site conditions.
+          </p>
+
+          <h2 style={S.h2}>Pavers vs Stamped Concrete vs Natural Stone</h2>
+          <p style={S.p}>
+            Four material classes dominate the NoVA patio market. The right one for your project depends on budget tier, design aesthetic, and how long you plan to own the home.
+          </p>
+          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', borderRadius: 8, overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.04)', fontSize: '0.9rem' }}>
+              <thead>
+                <tr style={{ background: '#f0efea' }}>
+                  <th style={S.th}>Material</th>
+                  <th style={S.th}>Installed cost</th>
+                  <th style={S.th}>Service life</th>
+                  <th style={S.th}>Freeze-thaw</th>
+                  <th style={S.th}>Repairability</th>
+                </tr>
+              </thead>
+              <tbody>
+                {materialComparison.map((m, i) => (
+                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                    <td style={{ ...S.td, fontWeight: 600 }}>{m.name}</td>
+                    <td style={S.td}>{m.cost}</td>
+                    <td style={S.td}>{m.durability}</td>
+                    <td style={S.td}>{m.freezeThaw}</td>
+                    <td style={S.td}>{m.repair}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={S.pMuted}>
+            For a deeper material comparison: <Link href="/paver-vs-flagstone-patio-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>paver vs flagstone</Link>, <Link href="/stamped-concrete-patio-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>stamped concrete patio guide</Link>, and <Link href="/deck-vs-patio-which-is-right" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck vs patio decision framework</Link>.
+          </p>
+
+          <h2 style={S.h2}>Patio Permits in Loudoun, Fairfax & Prince William</h2>
+          <p style={S.p}>
+            Most at-grade patios under 256 sqft do not trigger a building permit in NoVA. The exceptions are common enough to matter:
+          </p>
+          <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Retaining walls over 2 feet</strong> trigger a permit in Loudoun, Fairfax and Prince William counties. Walls over 4 feet require sealed engineering drawings.</li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Outdoor kitchen electrical and gas lines</strong> require separate electrical and plumbing permits from the county.</li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patios inside an RPA</strong> (Resource Protection Area — stream corridors and Chesapeake Bay buffer zones) require county environmental review.</li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>HOA architectural review</strong> applies regardless of permit status in Brambleton, Lansdowne, Reston, Burke Centre, South Riding, Broadlands, Belmont and most other planned NoVA communities.</li>
+          </ul>
+          <p style={S.pMuted}>
+            We handle every submission for our clients. See the full <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun</Link>, <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County</Link>, and <Link href="/deck-permit-prince-william-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Prince William County</Link> permit guides for fee schedules and timelines.
+          </p>
+
+          <h2 style={S.h2}>NoVA Clay Soil, Drainage & the Engineered Base</h2>
+          <p style={S.p}>
+            Every Northern Virginia patio sits on heavy red clay. Clay expands when wet and contracts when dry — a 200 sqft patio over poorly prepped clay can heave half an inch through the first winter and crack the surface beyond repair. The base is the most important thing about your patio and the part you&apos;ll never see.
+          </p>
+          <p style={S.p}>
+            Our base detail: excavate 6–10 inches below finished grade, lay geotextile separation fabric across the subsoil, then 4–6 inches of #57 crushed stone compacted in 2-inch lifts with a plate compactor. We pitch the entire patio 1/8 inch per foot away from the house — imperceptible to the eye, absolute for water management. Where existing yards already pool water, we integrate a perimeter French drain along the back edge tied into either daylight or a sized dry well. For patios within 10 feet of a foundation wall, the drain catches roof runoff before it reaches the basement.
+          </p>
+          <p style={S.p}>
+            This is the line between a patio that lasts 5 years and a patio that lasts 50. Almost every patio failure we&apos;re called to remediate failed at the base — not at the surface stone.
+          </p>
+
+          <h2 style={S.h2}>Best Patio Materials for the NoVA Freeze-Thaw Climate</h2>
+          <p style={S.p}>
+            Northern Virginia delivers 50 to 80 freeze-thaw cycles per winter. Water seeps into joints, freezes, expands, and lifts material. The materials that handle this best are the ones built to flex with seasonal soil movement: concrete pavers (individual units on flexible base), natural bluestone and flagstone (lift-and-replace pieces), and travertine (low-absorption when sealed). Stamped concrete is the freeze-thaw weak link — a single rigid slab cracks when the base settles unevenly, and the cracks are visually impossible to hide.
+          </p>
+          <p style={S.p}>
+            Our default recommendation for clients planning to stay 7+ years is natural bluestone with polymeric or mortar joints on a fully engineered base. For shorter-hold homes, premium concrete pavers from manufacturers like Techo-Bloc, Belgard, or Unilock deliver near-identical longevity at 30–40% lower installed cost.
+          </p>
+
+          <h2 style={S.h2}>How Patios Combine With Decks, Pergolas & Screened Porches</h2>
+          <p style={S.p}>
+            The highest-value backyard transformations in NoVA are not single-element builds — they&apos;re integrated outdoor living suites. We design and build complete systems:
+          </p>
+          <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patio + composite deck</strong>: ground-level patio extending off a raised <Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex or TimberTech deck</Link>, sharing footings and creating multi-level outdoor zoning.</li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patio + under-deck system</strong>: dry, fully usable <Link href="/services/under-deck-patios" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>under-deck patio</Link> with waterproof drainage ceiling between the joists.</li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patio + pergola</strong>: shaded patio with structural <Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>pergola</Link> overhead — most-requested combination for west-facing yards in Vienna, McLean and Great Falls.</li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patio + screened porch</strong>: open patio space adjacent to a <Link href="/services/porches/screened-porch" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>screened porch</Link>, sharing the same footing line and finish floor elevation.</li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patio + fire feature + outdoor kitchen</strong>: the full luxury hardscape suite, with <Link href="/services/fire-pits" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>built-in fire pit</Link>, integrated grill station, and seating walls finished in the same stone.</li>
+          </ul>
+          <p style={S.pMuted}>
+            See the <Link href="/outdoor-living-trends-northern-virginia-2026" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2026 NoVA outdoor living trends</Link> for the design directions driving these integrated builds.
+          </p>
+
+          <h2 style={S.h2}>Patio ROI & Resale Value in Northern Virginia</h2>
+          <p style={S.p}>
+            A premium hardscape patio recovers 55–75% of its installed cost at resale in the NoVA market (Remodeling Magazine and NAR Outdoor Features Reports). On properties valued at $1M+ in Great Falls, McLean, Vienna and Ashburn, luxury bluestone builds with integrated fire features and outdoor kitchens often exceed 75% cost recovery. The under-reported value is time-on-market: NoVA homes with finished outdoor living spaces sell measurably faster than comparable inventory.
+          </p>
+          <p style={S.p}>
+            For owners holding 7+ years, a patio is among the highest-ROI outdoor additions you can make — second only to a full composite deck plus screened porch combination. The longer you own the home, the more the freeze-thaw resilience of natural stone and premium pavers pays back.
+          </p>
+
+          <h2 style={S.h2}>Our Layout & Build Process</h2>
+          <p style={S.p}>
+            Seven steps from on-site visit to final walkthrough. Every patio we hand off has been through each one.
           </p>
         </div>
       </section>
 
-      {/* Material Options Section */}
-      <section style={{ padding: '48px 20px', maxWidth: '900px', margin: '0 auto' }}>
-        <h2 style={{ fontSize: '26px', fontWeight: '800', marginBottom: '12px', textAlign: 'center' }}>Patio Material Options</h2>
-        <p style={{ textAlign: 'center', color: '#555', marginBottom: '28px', fontSize: '16px' }}>
-          We build with the materials that perform best in Northern Virginia&apos;s climate and match your home&apos;s architecture.
-        </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
-          {[
-            { name: 'Bluestone', note: 'Premium natural stone, classic NoVA choice' },
-            { name: 'Flagstone', note: 'Irregular organic layout, rustic character' },
-            { name: 'Concrete Pavers', note: 'Versatile, budget-flexible, durable' },
-            { name: 'Travertine', note: 'Elegant European aesthetic' },
-          ].map((mat, i) => (
-            <div key={i} style={{ background: '#f9f9f9', border: '1px solid #e8e8e8', borderRadius: '6px', padding: '20px 16px', textAlign: 'center' }}>
-              <div style={{ fontWeight: '700', fontSize: '16px', marginBottom: '6px', color: '#111' }}>{mat.name}</div>
-              <div style={{ fontSize: '13px', color: '#666' }}>{mat.note}</div>
+      <ServiceInclusions
+        title="Engineered for NoVA Climate"
+        description="Each step exists because the patio failures we&apos;re called to remediate failed at one of them."
+        items={patioProcess}
+      />
+
+      <section style={{ padding: '3.5rem 1.5rem', background: '#fafafa', borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Where We Build — NoVA Patio Service Area</h2>
+          <p style={S.p}>
+            We build patios across Northern Virginia. Cluster density is heaviest in Loudoun, Fairfax and Prince William; we also serve Arlington and Stafford on a case-by-case basis.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+            {neighborhoods.map((n) => (
+              <div key={n.county} style={{ background: '#fff', border: '1px solid #ececec', borderRadius: 8, padding: '1.2rem' }}>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.4rem', color: 'var(--color-primary)' }}>{n.county}</h3>
+                <p style={{ margin: 0, fontSize: '0.92rem', color: '#555', lineHeight: 1.6 }}>{n.cities}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ marginTop: '1.5rem', fontSize: '0.92rem' }}>
+            <Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full NoVA service map →</Link>
+          </p>
+        </div>
+      </section>
+
+      <section style={{ padding: '3.5rem 1.5rem' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Patio Project Gallery</h2>
+          <p style={S.pMuted}>A closer look at recent NoVA hardscape builds.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+            <div style={{ position: 'relative', height: '380px', borderRadius: 8, overflow: 'hidden' }}>
+              <Image src="/showcase/img11.jpeg" alt="Custom bluestone patio installation Northern Virginia — Loudoun County build" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
+            <div style={{ position: 'relative', height: '380px', borderRadius: 8, overflow: 'hidden' }}>
+              <Image src="/showcase/img12.jpeg" alt="Premium natural stone patio with integrated fire feature — Fairfax County" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 50vw" />
+            </div>
+            <div style={{ position: 'relative', height: '380px', borderRadius: 8, overflow: 'hidden' }}>
+              <Image src="/showcase/img13.jpg" alt="Hand-laid flagstone patio detail with polymeric joints — NoVA luxury hardscape" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 50vw" />
+            </div>
+            <div style={{ position: 'relative', height: '380px', borderRadius: 8, overflow: 'hidden' }}>
+              <Image src="/showcase/img14.jpg" alt="Outdoor living suite with patio, pergola, and seating wall — Vienna VA" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 50vw" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: '3.5rem 1.5rem', background: '#fafafa' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Patio Builder & Contractor FAQs</h2>
+          {patioFAQs.map((faq, index) => (
+            <details key={index} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.1rem 1.25rem', marginBottom: '0.75rem', background: '#fff' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.02rem' }}>{faq.question}</summary>
+              <p style={{ marginTop: '0.85rem', lineHeight: 1.7, color: '#444', marginBottom: 0 }}>{faq.answer}</p>
+            </details>
           ))}
         </div>
       </section>
 
-      <ServiceMain
-        subtitle="Natural Stone. Timeless Design."
-        title="Custom Patio Contractor in Northern Virginia"
-        description="Loudoun Decks is the premier custom hardscaper in Northern Virginia. We specialize in premium patio builds using bluestone, flagstone, and concrete pavers — engineered for Virginia's demanding climate and built for decades of performance."
-        listItems={[
-          "Bluestone, flagstone, travertine, and concrete paver options",
-          "Naturally slip-resistant surfaces for pool decks and walkways",
-          "Ideal for patios, walkways, pool decks, and fire pits",
-          "Decades of proven weather resistance"
-        ]}
-        image1="/images/img36.jpeg"
-        image2="/showcase/img12.jpeg"
-      />
-      <ServiceContentExpansion sections={expansionSections} />
-      <ServiceInclusions
-        title="Our Layout & Build Process"
-        description="A patio is only as good as what's underneath it. We employ a rigorous, engineered approach to base layering."
-        items={patioProcess}
-      />
-      <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
-        <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From a plain grass backyard to a premium outdoor living space.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
-          <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img11.jpeg" alt="Before patio installation" fill style={{ objectFit: 'cover' }} />
-          </div>
-          <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img12.jpeg" alt="After custom stone patio" fill style={{ objectFit: 'cover' }} />
-          </div>
-        </div>
-      </section>
-      <section style={{ background: '#f9f9f9', padding: '60px 20px' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: '32px', marginBottom: '30px', textAlign: 'center' }}>Patio Design FAQs</h2>
-          {patioFAQs.map((faq, index) => (
-            <div key={index} style={{ marginBottom: '20px', background: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
-              <h3 style={{ fontSize: '20px', marginBottom: '10px', color: '#B58E3B' }}>{faq.question}</h3>
-              <p style={{ lineHeight: '1.6', color: '#444' }}>{faq.answer}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section style={{ padding: '20px 20px 60px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>Project Gallery</h2>
-        <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>A closer look at our custom stone installations and finishes.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
-          <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img13.jpg" alt="Bluestone layout detail" fill style={{ objectFit: 'cover' }} />
-          </div>
-          <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img14.jpg" alt="Custom patio finish" fill style={{ objectFit: 'cover' }} />
-          </div>
-        </div>
-      </section>
-      <ServiceInclusions
-        title="Why LDN Decks for Hardscaping"
-        description="Local experts delivering high-end, indestructible architecture."
-        items={whyLdnDecks}
-      />
-      <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-          <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Official Resources & Safety Standards</h3>
-          <p style={{ marginBottom: '20px', color: '#666' }}>We build all our patios to exceed local Northern Virginia building codes and hardscape specifications.</p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-            {authorityLinks.map((link, idx) => (
-              <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer"
-                style={{ color: 'var(--site-color)', fontWeight: '600', textDecoration: 'underline', fontSize: '14px' }}>
-                {link.text}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
       <ServiceAreasGrid />
-      <SimpleCTA title="Design Your Dream Patio" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Northern Virginia Patio" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/services/patios" />
       <ContactHome />
     </main>

@@ -10,7 +10,6 @@ import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -58,16 +57,6 @@ const faqs = [
   }
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(({ q, a }) => ({
-    "@type": "Question",
-    "name": q,
-    "acceptedAnswer": { "@type": "Answer", "text": a }
-  }))
-};
-
 const expansionSections = [
   {
     title: "Why Northern Virginia Needs Screened Porches",
@@ -95,10 +84,8 @@ const expansionSections = [
 export default function ScreenedPorchBuilderNovaPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Northern Virginia" url="https://ldndecks.com/screened-porch-builder-northern-virginia" />
       <ServiceSchema name="Screened Porch Construction" description="Custom screened porches and 3-season rooms in Northern Virginia. Protect your outdoor living space from insects and weather." price="25000" />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      
+
       <ServicesHeader
         subtext="Northern Virginia's Premier Porch Builder"
         title="Screened Porch Builder Northern Virginia"
@@ -131,9 +118,10 @@ export default function ScreenedPorchBuilderNovaPage() {
       
       <ProcessSteps />
       
-      <ServicesFAQ 
-        title="Screened Porch FAQs" 
-        faqs={faqs} 
+      <ServicesFAQ
+        title="Screened Porch FAQs"
+        faqs={faqs}
+        canonicalUrl="https://ldndecks.com/screened-porch-builder-northern-virginia"
       />
       
       <ServiceAreasGrid />

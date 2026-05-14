@@ -13,12 +13,13 @@ export default function TrustSection() {
               target="_blank" 
               rel="nofollow"
             >
-              <img 
-                src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png" 
+              <img
+                src="/badges/bbb-a-plus-seal.png"
                 className={styles.bbbSealImg}
-                alt="Loudoun Decks BBB Business Review" 
+                alt="Loudoun Decks BBB Business Review"
                 width="200"
                 height="65"
+                loading="lazy"
               />
             </a>
           </div>

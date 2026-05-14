@@ -5,6 +5,7 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import TrustBanner from '@/components/TrustBanner';
+import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -42,6 +43,10 @@ export default function ScreenedPorchCostPage() {
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p>A screened porch in Northern Virginia costs <strong>$25,000–$70,000+</strong>. Basic 150 sqft: $25k. Mid-range 250 sqft with EZE-Breeze: $40k–$55k. Premium 300+ sqft with fireplace: $60k–$80k+.</p>
         </div>
+      </section>
+
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
       </section>
 
       <article style={{ padding: '4rem 0' }}>
@@ -138,9 +143,14 @@ export default function ScreenedPorchCostPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
+              ['/services/porches/screened-porch', 'Screened Porch Builder Services'],
               ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
+              ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost Brand-by-Brand'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],
               ['/services/porches', 'Our Porch Building Services'],
+              ['/deck-cost-calculator', 'NoVA Deck Cost Calculator'],
+              ['/deck-financing-northern-virginia', 'Financing in Northern Virginia'],
+              ['/how-tariffs-affect-deck-prices-2026', '2026 Tariff Impact on Deck Prices'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value?'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>

@@ -1,0 +1,23 @@
+{
+  "_comment_USAGE": "Person identity for Nick. Emit ONCE globally (add to the @graph in src/components/StructuredData.jsx), then reference via @id from blog articles, NamedAuthor, and TeamGrid.",
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://ldndecks.com/#nick",
+  "name": "Nick",
+  "jobTitle": "Project Lead",
+  "image": "https://ldndecks.com/team/Nick.jpg",
+  "worksFor": { "@id": "https://ldndecks.com/#organization" },
+  "knowsAbout": [
+    "Custom Deck Construction",
+    "Composite Decking Systems",
+    "Trex Platinum Installation",
+    "TimberTech Certified Installation",
+    "Northern Virginia HOA Compliance",
+    "Loudoun County Building Permits",
+    "Fairfax County Building Permits",
+    "Screened Porch Construction"
+  ],
+  "sameAs": [
+    "_comment_TODO": "Add LinkedIn, Houzz Pro profile, and any verifiable third-party identity"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "_comment_USAGE": "Mirror of homepage WebPage pattern, adapted per canonical city page. Substitute {CITY}, {SLUG}, {COUNTY}.",
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://ldndecks.com/deck-builder-{SLUG}-va/#webpage",
+  "url": "https://ldndecks.com/deck-builder-{SLUG}-va",
+  "name": "Deck Builder in {CITY}, VA — Loudoun Decks",
+  "description": "Top-rated custom deck builder in {CITY}, {COUNTY}, Virginia. Trex Platinum Partner. Custom composite decks, screened porches, and patios.",
+  "isPartOf": { "@type": "WebSite", "@id": "https://ldndecks.com/#website" },
+  "about": { "@id": "https://ldndecks.com/#organization" },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://ldndecks.com/images/{CITY_HERO}.jpeg"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "h2", "[data-speakable]"]
+  },
+  "breadcrumb": { "@id": "https://ldndecks.com/deck-builder-{SLUG}-va/#breadcrumb" }
+}

@@ -5,6 +5,7 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ServicesFooterInfo from '@/components/ServicesFooterInfo';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import RelatedGuides from '@/components/RelatedGuides';
+import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -17,6 +18,11 @@ export default function ServicesPage() {
   return (
     <main>
        <ServicesHeader />
+
+       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+         <NamedAuthor context="Loudoun, Fairfax, Prince William, and Arlington counties" lastUpdated="May 2026" />
+       </section>
+
        <ServicesGrid />
 
        <section style={{ padding: '4rem 0', background: '#fff', borderTop: '1px solid #eee' }}>

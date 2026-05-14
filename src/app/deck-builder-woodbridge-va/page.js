@@ -12,8 +12,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
-import JsonLd from '@/components/JsonLd';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -65,19 +63,6 @@ const woodbridgeFAQs = [
   }
 ];
 
-const woodbridgeFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": woodbridgeFAQs.map(({ q, a }) => ({
-    "@type": "Question",
-    "name": q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": a
-    }
-  }))
-};
-
 const expansionSections = [
   {
     title: "Why Woodbridge Homeowners Choose Loudoun Decks",
@@ -121,8 +106,6 @@ const expansionSections = [
 export default function DeckBuilderWoodbridgePage() {
   return (
     <main>
-      <LocalBusinessSchema city="Woodbridge" url="https://ldndecks.com/deck-builder-woodbridge-va" />
-      <JsonLd data={woodbridgeFaqSchema} />
       <ServicesHeader
         subtext="Woodbridge, VA's Trusted Deck Company"
         title="Custom Deck Builder in Woodbridge, VA"
@@ -166,6 +149,7 @@ export default function DeckBuilderWoodbridgePage() {
       <ServicesFAQ
         title="Deck Builder Woodbridge VA  -  FAQs"
         faqs={woodbridgeFAQs}
+        canonicalUrl="https://ldndecks.com/deck-builder-woodbridge-va"
       />
       <ServiceAreasGrid />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
