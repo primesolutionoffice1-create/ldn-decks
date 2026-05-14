@@ -492,11 +492,10 @@ export default function Header() {
               target="_blank" 
               rel="nofollow"
             >
-              <img
+              <Image
                 src="/badges/bbb-a-plus-seal.png"
-                width="154"
-                height="50"
-                loading="lazy"
+                width={154}
+                height={50}
                 style={{ border: 0 }}
                 alt="Loudoun Decks BBB Business Review"
               />

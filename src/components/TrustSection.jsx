@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './TrustSection.module.css';
 
 export default function TrustSection() {
@@ -13,13 +14,12 @@ export default function TrustSection() {
               target="_blank" 
               rel="nofollow"
             >
-              <img
+              <Image
                 src="/badges/bbb-a-plus-seal.png"
                 className={styles.bbbSealImg}
                 alt="Loudoun Decks BBB Business Review"
-                width="200"
-                height="65"
-                loading="lazy"
+                width={200}
+                height={65}
               />
             </a>
           </div>
