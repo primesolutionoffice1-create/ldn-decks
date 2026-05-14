@@ -22,7 +22,6 @@ export async function POST(request) {
     // Log a compact, single-line summary. Vercel log search will find these.
     // Keep payload small so we don't blow log budgets if a misconfigured
     // policy spams reports for a chatty third-party script.
-    // eslint-disable-next-line no-console
     console.warn('[csp-report]', JSON.stringify(body)?.slice(0, 1024) || '(empty)');
   } catch {
     // Swallow; never let a violation report crash the route.

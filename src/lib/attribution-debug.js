@@ -73,7 +73,6 @@ export function installAttributionDebug() {
         dedupHits: state.dedupHits,
         dataLayerLength: window.dataLayer ? window.dataLayer.length : 0,
       };
-      // eslint-disable-next-line no-console
       console.table(snap.history);
       return snap;
     },
@@ -84,7 +83,6 @@ export function installAttributionDebug() {
     _state: state, // escape hatch for tests
   };
 
-  // eslint-disable-next-line no-console
   console.info(
     '[ldnAttr] attribution debug installed. Try window.__ldnAttr.snapshot()'
   );

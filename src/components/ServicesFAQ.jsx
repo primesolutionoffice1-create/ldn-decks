@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useId, useEffect } from 'react';
+import React, { useState, useId, useEffect, useMemo } from 'react';
 import styles from './ServicesFAQ.module.css';
 
 // -----------------------------------------------------------------------------
@@ -114,9 +114,11 @@ export default function ServicesFAQ({
   withSpeakable = false,
 }) {
   // Defensive filter: drop malformed entries before render or schema emission.
-  const safeFaqs = Array.isArray(faqs)
-    ? faqs.filter((f) => f && typeof f.q === 'string' && typeof f.a === 'string' && f.q.trim() && f.a.trim())
-    : [];
+  const safeFaqs = useMemo(() => (
+    Array.isArray(faqs)
+      ? faqs.filter((f) => f && typeof f.q === 'string' && typeof f.a === 'string' && f.q.trim() && f.a.trim())
+      : []
+  ), [faqs]);
 
   const [openIndex, setOpenIndex] = useState(0);
   // useId yields a deterministic SSR-safe ID base shared between server and
@@ -131,19 +133,16 @@ export default function ServicesFAQ({
     if (process.env.NODE_ENV === 'production') return;
     if (safeFaqs.length === 0) return;
     if (withSchema && !canonicalUrl) {
-      // eslint-disable-next-line no-console
       console.warn('[ServicesFAQ] withSchema=true but canonicalUrl is missing — FAQPage @id will be omitted. Pass canonicalUrl for stable entity-graph IDs.');
     }
     const seen = new Map();
     safeFaqs.forEach((item, idx) => {
       const cleanA = sanitizeAnswerText(item.a);
       if (cleanA.length < 120) {
-        // eslint-disable-next-line no-console
         console.warn(`[ServicesFAQ] FAQ #${idx + 1} answer is short (${cleanA.length} chars). Recommend ≥120 chars for AI extraction quality. Q: "${item.q}"`);
       }
       const key = sanitizeAnswerText(item.q).toLowerCase();
       if (seen.has(key)) {
-        // eslint-disable-next-line no-console
         console.warn(`[ServicesFAQ] Duplicate question detected at #${idx + 1} (also #${seen.get(key) + 1}): "${item.q}"`);
       } else {
         seen.set(key, idx);
