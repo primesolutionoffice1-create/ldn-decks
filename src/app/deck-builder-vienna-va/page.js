@@ -127,7 +127,7 @@ export default function ViennaDeckBuilderPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: $5,000+</strong>
             <br />
-            We focus on <strong style={{ color: '#111' }}>full custom Vienna builds</strong>. Need a repair instead? Visit our <a href="/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
+            We focus on <strong style={{ color: '#111' }}>full custom Vienna builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
           </p>
         </div>
       </section>

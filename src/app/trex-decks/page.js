@@ -126,9 +126,9 @@ export default function TrexDecksPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>New Trex build minimum: $5,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>New Trex deck projects from $15,000+</strong>
             <br />
-            On this page we focus on <strong style={{ color: '#111' }}>full custom Trex builds</strong>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
+            On this page we focus on <strong style={{ color: '#111' }}>full custom Trex builds</strong>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
         </div>
       </section>
@@ -170,4 +170,3 @@ export default function TrexDecksPage() {
     </main>
   );
 }
-

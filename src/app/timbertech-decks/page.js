@@ -141,7 +141,7 @@ export default function TimberTechDecksPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: 500 }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>TimberTech and AZEK projects typically start around $20,000+</strong>
             <br />
-            This page is for <strong style={{ color: '#111' }}>full TimberTech, AZEK, replacement, and resurfacing projects</strong>. For board repair or small fixes, see our <Link href="/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link>.
+            This page is for <strong style={{ color: '#111' }}>full TimberTech, AZEK, replacement, and resurfacing projects</strong>. For board repair or small fixes, see our <Link href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link>.
           </p>
         </div>
       </section>

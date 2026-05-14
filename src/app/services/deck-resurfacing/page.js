@@ -14,7 +14,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/deck-resurfacing",
   title: '5-Star Deck Resurfacing NoVA | TimberTech Vintage Experts',
-  description: 'Save up to 40% with professional deck resurfacing in Northern Virginia. Upgrade your old frame to TimberTech Vintage. ★ 5.0 Google Rated. Free estimates.',
+  description: 'Premium deck resurfacing in Northern Virginia from $15k+. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options.',
 });
 
 const expansionSections = [
@@ -88,8 +88,12 @@ const serviceSchemaData = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Custom Deck Resurfacing",
-  "provider": { "@type": "LocalBusiness", "@id": "https://ldndecks.com/#organization", "name": "Loudoun Decks", "url": "https://ldndecks.com", "telephone": "+1-571-655-7207", "address": { "@type": "PostalAddress", "streetAddress": "13704 Winding Oak Cir", "addressLocality": "Centreville", "addressRegion": "VA", "postalCode": "20121", "addressCountry": "US" } },
-  "areaServed": [{ "@type": "State", "name": "Virginia" }],
+  "provider": { "@id": "https://ldndecks.com/#organization" },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
+  ],
   "description": "Professional deck resurfacing services utilizing TimberTech Vintage Collection composite boards, structural reinforcement, and aluminum railings in Northern Virginia."
 };
 
@@ -127,9 +131,9 @@ export default function DeckResurfacingPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Full resurfacing minimum: $5,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Full resurfacing projects from $15,000+</strong>
             <br />
-            On this page we focus on <strong style={{ color: '#111' }}>full surface conversions</strong>. Need a few boards swapped, railings reinforced, or rot patched? See our <a href="/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
+            On this page we focus on <strong style={{ color: '#111' }}>full surface conversions</strong> with composite boards, upgraded railings, fascia, stairs, and safety review. Need a few boards swapped, railings reinforced, or rot patched? See our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
         </div>
       </section>
