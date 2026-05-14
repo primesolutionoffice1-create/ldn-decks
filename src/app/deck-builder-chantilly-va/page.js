@@ -12,8 +12,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
-import JsonLd from '@/components/JsonLd';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -65,19 +63,6 @@ const chantillyFAQs = [
   }
 ];
 
-const chantillyFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": chantillyFAQs.map(({ q, a }) => ({
-    "@type": "Question",
-    "name": q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": a
-    }
-  }))
-};
-
 const expansionSections = [
   {
     title: "Why Chantilly Homeowners Choose Loudoun Decks",
@@ -121,8 +106,6 @@ const expansionSections = [
 export default function DeckBuilderChantillyPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Chantilly" url="https://ldndecks.com/deck-builder-chantilly-va" />
-      <JsonLd data={chantillyFaqSchema} />
       <ServicesHeader
         subtext="Chantilly, VA's Trusted Deck Company"
         title="Custom Deck Builder in Chantilly, VA"
@@ -166,6 +149,7 @@ export default function DeckBuilderChantillyPage() {
       <ServicesFAQ
         title="Deck Builder Chantilly VA  -  FAQs"
         faqs={chantillyFAQs}
+        canonicalUrl="https://ldndecks.com/deck-builder-chantilly-va"
       />
       <ServiceAreasGrid />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

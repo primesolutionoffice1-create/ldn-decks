@@ -72,7 +72,7 @@ export default function Footer() {
             </div>
             <div className={styles.bbbSealFooter} style={{ marginTop: '15px' }}>
               <a href="https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241/#sealclick" target="_blank" rel="nofollow">
-                <img src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png" style={{ border: 0 }} width="123" height="40" alt="Loudoun Decks BBB Business Review" />
+                <img src="/badges/bbb-a-plus-seal.png" style={{ border: 0 }} width="123" height="40" loading="lazy" alt="Loudoun Decks BBB Business Review" />
               </a>
             </div>
             <p className={styles.brandPitch}>
@@ -85,6 +85,12 @@ export default function Footer() {
             <ul>
               <li><Link href="/about">About</Link></li>
               <li><Link href="/services">Our Services</Link></li>
+              <li><Link href="/services/new-decks">New Decks</Link></li>
+              <li><Link href="/services/windows">Windows</Link></li>
+              <li><Link href="/services/porches/front-porch">Front Porches</Link></li>
+              <li><Link href="/services/porches/open-porch">Open Porches</Link></li>
+              <li><Link href="/trex-decks">Trex Decks</Link></li>
+              <li><Link href="/deck-builders-loudoun">Loudoun Deck Builders</Link></li>
               <li><Link href="/showcase">Recent Projects</Link></li>
               <li><Link href="/houzz-deck-projects">Houzz Projects</Link></li>
               <li><Link href="/before-and-after">Before &amp; After</Link></li>
@@ -103,9 +109,13 @@ export default function Footer() {
             <ul>
               <li><Link href="/northern-virginia-deck-building-guide">Deck Building Guide</Link></li>
               <li><Link href="/how-much-does-a-deck-cost-northern-virginia">Deck Cost Guide</Link></li>
+              <li><Link href="/composite-deck-cost-northern-virginia">Composite Deck Cost</Link></li>
+              <li><Link href="/screened-porch-cost-northern-virginia">Screened Porch Cost</Link></li>
               <li><Link href="/trex-vs-timbertech-vs-azek">Trex vs TimberTech vs AZEK</Link></li>
               <li><Link href="/timbertech-decks">TimberTech Decks</Link></li>
               <li><Link href="/composite-deck-vs-wood-deck-virginia">Composite vs Wood</Link></li>
+              <li><Link href="/composite-decks">Composite Decks</Link></li>
+              <li><Link href="/how-tariffs-affect-deck-prices-2026">2026 Tariff Impact</Link></li>
               <li><Link href="/does-a-deck-add-value-to-your-home">Deck ROI &amp; Home Value</Link></li>
               <li><Link href="/how-to-choose-a-deck-builder-northern-virginia">Choosing a Builder</Link></li>
             </ul>
@@ -117,7 +127,12 @@ export default function Footer() {
               <li><Link href="/loudoun-county-hoa-deck-rules">HOA Deck Rules</Link></li>
               <li><Link href="/deck-financing">Deck Financing</Link></li>
               <li><Link href="/outdoor-living-northern-virginia">Outdoor Living</Link></li>
+              <li><Link href="/deck-financing-northern-virginia">Financing in NoVA</Link></li>
               <li><Link href="/deck-warranty-guide-northern-virginia">Warranty Guide</Link></li>
+              <li><Link href="/services/porches/screened-porch">Screened Porches</Link></li>
+              <li><Link href="/deck-permit-loudoun-county-virginia">Loudoun Deck Permits</Link></li>
+              <li><Link href="/deck-permit-fairfax-county-virginia">Fairfax Deck Permits</Link></li>
+              <li><Link href="/deck-permit-prince-william-county-virginia">Prince William Deck Permits</Link></li>
               <li><Link href="/areas-we-serve">Areas We Serve</Link></li>
               <li><Link href="/scholarship">Scholarship</Link></li>
               <li><Link href="/social">Social Media</Link></li>

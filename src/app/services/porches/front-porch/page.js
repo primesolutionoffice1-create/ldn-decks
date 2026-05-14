@@ -11,6 +11,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/porches/front-porch",
   title: "Front Porch Builder Northern Virginia | Custom Curb Appeal Upgrades",
@@ -107,6 +108,9 @@ export default function FrontPorchPage() {
         title="Custom Front Porch Design & Construction"
         description="Transform your home's entrance and curb appeal with a professionally designed and built front porch. Loudoun Decks serves homeowners in Loudoun County, Fairfax County, and Prince William County."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+      </section>
 
       {/* Pricing Anchor */}
       <section style={{ backgroundColor: '#f9f9f9', padding: '20px', borderBottom: '1px solid #eee', textAlign: 'center' }}>
@@ -138,7 +142,7 @@ export default function FrontPorchPage() {
         description="End-to-end construction management from design to certificate of occupancy."
         items={inclusions}
       />
-      <ServicesFAQ title="Front Porch FAQs" faqs={faqs} />
+      <ServicesFAQ withSchema={false} title="Front Porch FAQs" faqs={faqs} />
 
       {/* Navigation to porch types */}
       <section style={{ padding: '40px 20px', background: '#f9f9f9', borderTop: '1px solid #eee' }}>

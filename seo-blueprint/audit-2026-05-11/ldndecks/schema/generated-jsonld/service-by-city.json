@@ -1,0 +1,36 @@
+{
+  "_comment_USAGE": "Replacement for LocalBusinessSchema.jsx emission on city pages. Emits a Service entity that REFERENCES the global Organization via @id rather than duplicating it. Substitute {CITY}, {COUNTY}, {SLUG} per-page.",
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://ldndecks.com/deck-builder-{SLUG}-va/#service",
+  "name": "Custom Deck Builder in {CITY}, VA",
+  "description": "Premium custom deck construction, screened porches, and outdoor living spaces in {CITY}, {COUNTY}, Virginia. Trex Platinum Partner and TimberTech Certified installer.",
+  "serviceType": "Deck Construction",
+  "provider": { "@id": "https://ldndecks.com/#organization" },
+  "areaServed": {
+    "@type": "City",
+    "name": "{CITY}, VA",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "{COUNTY}"
+    }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Outdoor Living Services in {CITY}",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Composite Deck Construction" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Screened Porch Addition" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wood Deck Construction" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck Replacement" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pergola Construction" } }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "41",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}

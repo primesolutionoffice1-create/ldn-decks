@@ -10,7 +10,6 @@ import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
-import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 import CallLink from '@/components/CallLink';
 
@@ -71,19 +70,6 @@ const pageFAQs = [
   }
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": pageFAQs.map(({ q, a }) => ({
-    "@type": "Question",
-    "name": q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": a
-    }
-  }))
-};
-
 const expansionSections = [
   {
     title: "Loudoun County's Trusted Deck Repair Contractor",
@@ -128,7 +114,6 @@ const expansionSections = [
 export default function DeckRepairLoudounCountyPage() {
   return (
     <main>
-      <JsonLd data={faqSchema} />
       <ServicesHeader
         subtext="Loudoun County's 5-Star Rated Repair Team"
         title="Deck Repair Loudoun County"
@@ -179,6 +164,7 @@ export default function DeckRepairLoudounCountyPage() {
       <ServicesFAQ
         title="Deck Repair Loudoun County - FAQs"
         faqs={pageFAQs}
+        canonicalUrl="https://ldndecks.com/deck-repair-loudoun-county"
       />
       <section style={{ padding: '3rem 0', background: '#fafafa' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

@@ -12,6 +12,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/under-deck-patios",
   title: "Under Deck Patio Systems Loudoun VA | Waterproofing & Ceilings",
@@ -119,6 +120,9 @@ export default function UnderDeckPatiosPage() {
         description="Maximize your outdoor living space with a custom under-deck patio system - protected from rain, clean, and perfect for relaxing or entertaining year-round."
       />
       <AboveFoldCTA headline="Under-deck patio or dry-deck system in Northern Virginia? Talk to a NoVA outdoor-living specialist today." />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+      </section>
       <ServiceMain
         subtitle="Double Your Outdoor Living Space"
         title="What is an Under Deck Patio?"

@@ -12,6 +12,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/deck-maintenance",
   title: "Professional Deck Maintenance NoVA | Staining & Sealing Services",
@@ -77,6 +78,9 @@ export default function DeckMaintenancePage() {
         title="Professional Deck Maintenance & Care"
         description="Routine maintenance is the key to extending the life of your deck. Protect your outdoor living investment from sun damage, moisture, and extreme seasonal weather."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+      </section>
 
       <ServiceMain
         subtitle="Protect Your Outdoor Living Space"

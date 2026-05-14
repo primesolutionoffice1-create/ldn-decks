@@ -103,7 +103,7 @@ const faqData = [
   }
 ];
 
-export default function FAQCategorized() {
+export default function FAQCategorized({ withSchema = true }) {
   const [openStates, setOpenStates] = useState({});
 
   const toggleAccordion = (catIdx, itemIdx) => {
@@ -128,10 +128,12 @@ export default function FAQCategorized() {
 
   return (
     <section className={styles.faqSection}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {withSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <div className={styles.container}>
         {faqData.map((cat, catIdx) => (
           <div key={catIdx} className={styles.categoryRow}>

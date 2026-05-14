@@ -1,0 +1,11 @@
+{
+  "_comment_USAGE": "BreadcrumbList for a canonical city page. Substitute {CITY}, {SLUG}.",
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://ldndecks.com/deck-builder-{SLUG}-va/#breadcrumb",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldndecks.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Areas We Serve", "item": "https://ldndecks.com/areas-we-serve" },
+    { "@type": "ListItem", "position": 3, "name": "Deck Builder in {CITY}, VA", "item": "https://ldndecks.com/deck-builder-{SLUG}-va" }
+  ]
+}

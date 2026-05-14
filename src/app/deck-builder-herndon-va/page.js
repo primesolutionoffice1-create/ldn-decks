@@ -12,8 +12,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
-import JsonLd from '@/components/JsonLd';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -65,19 +63,6 @@ const herndonFAQs = [
   }
 ];
 
-const herndonFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": herndonFAQs.map(({ q, a }) => ({
-    "@type": "Question",
-    "name": q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": a
-    }
-  }))
-};
-
 const expansionSections = [
   {
     title: "Why Herndon Homeowners Choose Loudoun Decks",
@@ -121,8 +106,6 @@ const expansionSections = [
 export default function DeckBuilderHerndonPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Herndon" url="https://ldndecks.com/deck-builder-herndon-va" />
-      <JsonLd data={herndonFaqSchema} />
       <ServicesHeader
         subtext="Herndon, VA's Trusted Deck Company"
         title="Custom Deck Builder in Herndon, VA"
@@ -166,6 +149,7 @@ export default function DeckBuilderHerndonPage() {
       <ServicesFAQ
         title="Deck Builder Herndon VA  -  FAQs"
         faqs={herndonFAQs}
+        canonicalUrl="https://ldndecks.com/deck-builder-herndon-va"
       />
       <ServiceAreasGrid />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

@@ -11,6 +11,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/outdoor-washing",
   title: "Professional Outdoor Power Washing NoVA | Deck & Patio Cleaning",
@@ -59,6 +60,9 @@ export default function OutdoorWashingPage() {
         title="Outdoor Power Washing Services"
         description="Loudoun Decks provides professional outdoor power washing for homeowners across Northern Virginia. Refresh your deck, patio, and fences with our trusted cleaning solutions."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+      </section>
 
       <ServiceMain
         subtitle="Refresh & Clean"

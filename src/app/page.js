@@ -4,6 +4,7 @@ import Features from "@/components/Features";
 import CalculatorCTA from "@/components/CalculatorCTA";
 import Introduction from "@/components/Introduction";
 import MaterialPartners from "@/components/MaterialPartners";
+import NamedAuthor from "@/components/NamedAuthor";
 
 // Dynamic imports for below-the-fold components
 const PromoModal = dynamic(() => import("@/components/PromoModal"));
@@ -18,6 +19,7 @@ const ContactHome = dynamic(() => import("@/components/ContactHome"));
 const RelatedGuides = dynamic(() => import("@/components/RelatedGuides"));
 const HomeQuickLinks = dynamic(() => import("@/components/HomeQuickLinks"));
 const HomeSEOContent = dynamic(() => import("@/components/HomeSEOContent"));
+const NoVAPermitTimeline = dynamic(() => import("@/components/NoVAPermitTimeline"));
 const BlogFeed = dynamic(() => import("@/components/BlogFeed"));
 const JsonLd = dynamic(() => import("@/components/JsonLd"), { ssr: true });
 const TrustSection = dynamic(() => import("@/components/TrustSection"));
@@ -117,6 +119,10 @@ export default function Home() {
             <Testimonials />
             <BlogFeed />
             <HomeSEOContent />
+            <div style={{ maxWidth: 900, margin: '2rem auto 0', padding: '0 1.5rem' }}>
+              <NamedAuthor context="Loudoun, Fairfax and Prince William counties" />
+            </div>
+            <NoVAPermitTimeline />
             <HomeQuickLinks />
             <FAQ />
             <TrustLogos />

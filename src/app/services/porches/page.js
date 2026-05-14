@@ -12,6 +12,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/porches",
   title: '5-Star Porch Builder NoVA | Screened & Open Porch Design',
@@ -101,6 +102,9 @@ export default function PorchesPage() {
         title="Custom Porch Design & Construction"
         description="Loudoun Decks builds premium screened-in porches, open pavilions, and custom front porches across Loudoun County, Fairfax County, and Prince William County. Most custom porch projects start at $25,000+."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+      </section>
 
       {/* Pricing Anchor */}
       <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
@@ -169,7 +173,7 @@ export default function PorchesPage() {
         description="Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our porches are built to weather the elements gracefully."
         items={inclusions}
       />
-      <ServicesFAQ title="Porch Construction & Design FAQs" faqs={porchFAQs} />
+      <ServicesFAQ withSchema={false} title="Porch Construction & Design FAQs" faqs={porchFAQs} />
       <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
           <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Official Resources & Safety Standards</h3>

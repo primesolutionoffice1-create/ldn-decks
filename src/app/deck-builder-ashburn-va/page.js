@@ -12,8 +12,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
-import JsonLd from '@/components/JsonLd';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -65,19 +63,6 @@ const ashburnFAQs = [
   }
 ];
 
-const ashburnFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": ashburnFAQs.map(({ q, a }) => ({
-    "@type": "Question",
-    "name": q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": a
-    }
-  }))
-};
-
 const expansionSections = [
   {
     title: "Why Ashburn Homeowners Choose Loudoun Decks",
@@ -121,8 +106,6 @@ const expansionSections = [
 export default function DeckBuilderAshburnPage() {
   return (
     <main>
-      <LocalBusinessSchema city="Ashburn" url="https://ldndecks.com/deck-builder-ashburn-va" />
-      <JsonLd data={ashburnFaqSchema} />
       <ServicesHeader
         subtext="Ashburn, VA's #1 Rated Builder"
         title="Custom Deck Builder in Ashburn, VA"
@@ -166,6 +149,7 @@ export default function DeckBuilderAshburnPage() {
       <ServicesFAQ
         title="Deck Builder Ashburn VA  -  FAQs"
         faqs={ashburnFAQs}
+        canonicalUrl="https://ldndecks.com/deck-builder-ashburn-va"
       />
       <ServiceAreasGrid />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

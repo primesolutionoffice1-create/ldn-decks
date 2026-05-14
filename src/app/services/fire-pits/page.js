@@ -11,6 +11,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/fire-pits",
   title: "Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment",
@@ -117,6 +118,9 @@ export default function FirePitsPage() {
         title="Custom Fire Pits Built for Comfort, Style & Year-Round Enjoyment"
         description="Transform your backyard into a warm, inviting space with a custom-built fire pit - perfect for relaxing nights, entertaining guests, and adding value to your home."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+      </section>
       <ServiceMain
         subtitle="More Than Just a Feature - It's the Centerpiece"
         title="What is a Custom Fire Pit?"

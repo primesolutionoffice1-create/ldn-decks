@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/deck-inspection",
       title: "Deck Inspection Loudoun VA | $350 Safety Audit | LDN Decks",
@@ -25,6 +26,9 @@ export default function DeckInspectionPage() {
         title="Comprehensive Deck Inspection for $350"
         description="Ensure the safety, structural integrity, and longevity of your deck with our professional inspection services. We identify hidden rot, structural issues, and potential safety hazards."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+      </section>
       <section style={{ padding: '80px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '36px', marginBottom: '20px', fontWeight: '700' }}>Providing Expert Deck Restoration Services</h2>
         <p style={{ fontSize: '18px', color: '#555', maxWidth: '800px', margin: '0 auto 50px', lineHeight: '1.6' }}>

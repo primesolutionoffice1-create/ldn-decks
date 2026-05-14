@@ -25,7 +25,7 @@ const faqsData = [
   }
 ];
 
-export default function FAQ() {
+export default function FAQ({ withSchema = true }) {
   const [openIndex, setOpenIndex] = useState(0); // Open first one by default
 
   const toggleFAQ = (index) => {
@@ -44,10 +44,12 @@ export default function FAQ() {
 
   return (
     <section className={styles.faqSection}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {withSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.subtextWrapper}>

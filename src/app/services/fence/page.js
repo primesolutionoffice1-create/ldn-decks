@@ -12,6 +12,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/fence",
       title: "Fence Installation Loudoun County | LDN Decks",
@@ -129,6 +130,9 @@ export default function FencePage() {
         title="Custom Fence Design & Installation"
         description="Loudoun Decks provides premier fence construction for homeowners in Loudoun County, Fairfax County, and Prince William County. Secure, private, and beautiful yard sanctuaries."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+      </section>
 
       <ServiceMain
         subtitle="Privacy & Beauty"
@@ -164,7 +168,7 @@ export default function FencePage() {
         items={inclusions}
       />
 
-      <ServicesFAQ
+      <ServicesFAQ withSchema={false}
         title="Fence Installation & Design FAQs"
         faqs={fenceFAQs}
       />

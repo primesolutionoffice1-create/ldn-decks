@@ -19,6 +19,9 @@ const nextConfig = {
       { source: '/composite-deck-builder-loudoun-2', destination: '/deck-builders-loudoun', permanent: true },
       { source: '/contact-us', destination: '/contact', permanent: true },
       { source: '/best-composite-decking-virginia-trex-timbertech-fiberon', destination: '/trex-vs-timbertech-vs-azek', permanent: true },
+      // BEAST plan Cluster H: legacy /blog/ URL competing with apex owner at #4
+      // Explicit 301 (matches canonical-signal convention used for www→apex above)
+      { source: '/blog/trex-vs-timbertech-vs-azek', destination: '/trex-vs-timbertech-vs-azek', statusCode: 301 },
       { source: '/rooftop-deck-washington-dc', destination: '/showcase/rooftop-deck-washington-dc', permanent: true },
       { source: '/trex-deck-builder-loudoun', destination: '/deck-builders-loudoun', permanent: true },
       { source: '/how-much-does-it-cost-to-build-a-deck-in-northern-virginia', destination: '/how-much-does-a-deck-cost-northern-virginia', permanent: true },
@@ -314,6 +317,30 @@ const nextConfig = {
     const headers = [];
     
     // Security headers
+    //
+    // CSP shipped as Report-Only so the policy can be observed in production
+    // without breaking pages. Violations POST to /api/csp-report for 30 days,
+    // then promote to enforcing `Content-Security-Policy` once the report
+    // stream is clean. Allowlist covers: Vercel infra, GTM + GA + Google
+    // Fonts + AdSense, Ahrefs analytics, Google Maps embed, YouTube/Vimeo
+    // (if/when embedded), Next.js inline-style/script needs, and image
+    // sources used by next/image including the BBB seal (self-hosted).
+    const csp = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googletagservices.com https://analytics.ahrefs.com https://*.vercel-scripts.com https://va.vercel-scripts.com https://www.google.com https://www.gstatic.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com data:",
+      "img-src 'self' data: blob: https://*.googleusercontent.com https://www.google-analytics.com https://*.google.com https://*.googletagmanager.com https://maps.gstatic.com https://maps.googleapis.com",
+      "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.ahrefs.com https://*.vercel-insights.com https://vitals.vercel-insights.com https://www.googletagmanager.com",
+      "frame-src 'self' https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "frame-ancestors 'self'",
+      "upgrade-insecure-requests",
+      "report-uri /api/csp-report",
+    ].join('; ');
+
     headers.push({
       source: '/:path*',
       headers: [
@@ -323,6 +350,7 @@ const nextConfig = {
         { key: 'X-Content-Type-Options', value: 'nosniff' },
         { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
         { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+        { key: 'Content-Security-Policy-Report-Only', value: csp },
       ],
     });
 

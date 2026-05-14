@@ -285,10 +285,13 @@ export default async function sitemap() {
         const allPages = [...staticPages, ...cityPaths, ...blogPaths, ...showcasePaths]
                 .filter(p => !isExcluded(p.path));
 
-        return allPages.map(({ path, priority, lastMod, freq, videos }) => ({
+        // Google has officially ignored <priority> and <changefreq> since at least
+        // 2017. Emitting them just bloats the sitemap and offers no SEO benefit.
+        // The `priority` and `freq` fields above remain in the page-config tables
+        // as human-readable tier labels — they're not serialized here. Only
+        // `lastModified` (which Google does still use) ships in the output.
+        return allPages.map(({ path, lastMod, videos }) => ({
                 url: `${baseUrl}${path}`,
-                changeFrequency: freq,
-                priority,
                 lastModified: lastMod,
                 ...(videos && { videos }),
         }));

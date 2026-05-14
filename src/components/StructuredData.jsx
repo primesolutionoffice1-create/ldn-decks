@@ -1,13 +1,19 @@
 import React from 'react';
-import { buildOrganizationSchema } from '@/lib/business';
+import { buildOrganizationSchema, buildWebSiteSchema } from '@/lib/business';
 
 export default function StructuredData() {
-  const orgSchema = buildOrganizationSchema();
+  const graph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      buildOrganizationSchema(),
+      buildWebSiteSchema(),
+    ],
+  };
 
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
     />
   );
 }

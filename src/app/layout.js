@@ -41,6 +41,15 @@ metadata.verification = {
 };
 // NOTE: Bing verification requires manual step — see instructions below layout
 
+// In Next.js 14+, themeColor and viewport settings moved out of `metadata` into
+// a dedicated `viewport` export. Browsers + PWA installers read this to color
+// the address bar / app shell.
+export const viewport = {
+  themeColor: '#d14817',
+  width: 'device-width',
+  initialScale: 1,
+};
+
 import { ContactProvider } from "@/context/ContactContext";
 import LayoutContent from "./LayoutContent";
 
@@ -48,7 +57,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={outfit.variable}>
       <head>
-        <link rel="preload" as="image" href="/home-page-ldn.webp" fetchPriority="high" />
+        {/* Hero image preload is handled by next/image priority in <Hero />.
+            A site-wide manual <link rel="preload"> here fires on every route,
+            wasting bandwidth on non-homepage pages and creating a duplicate
+            preload on the homepage. */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />

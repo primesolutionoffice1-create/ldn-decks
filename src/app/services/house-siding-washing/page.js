@@ -10,6 +10,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/house-siding-washing",
   title: "Professional House Siding Washing NoVA | Safe Exterior Cleaning",
@@ -39,6 +40,9 @@ export default function HouseSidingWashingPage() {
         title="House Siding Washing"
         description="Loudoun Decks provides professional house siding washing for homeowners in Northern Virginia, helping restore the original beauty of your home's exterior."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+      </section>
 
       <ServiceMain
         subtitle="Home Refresh"

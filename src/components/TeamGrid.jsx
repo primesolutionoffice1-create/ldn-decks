@@ -27,7 +27,13 @@ const teamMembers = [
 ];
 
 export default function TeamGrid() {
-  // PersonSchema for the owner — critical for E-E-A-T and AI citations
+  // PersonSchema for the owner — critical for E-E-A-T and AI citations.
+  // Single source of truth for #nick; every other surface references the @id only.
+  //
+  // sameAs: only verified URLs. Houzz comes from the org's documented profile.
+  // LinkedIn / BBB / TrexPro installer-locator profile URLs are TODO — pending
+  // Daniel Agrici confirmation. Do NOT add fabricated profile URLs (white-hat
+  // guardrail per CODEX.md). When verified, add to the sameAs array below.
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -35,9 +41,67 @@ export default function TeamGrid() {
     "name": "Nick",
     "jobTitle": "Owner & Lead Designer",
     "worksFor": { "@type": "Organization", "@id": "https://ldndecks.com/#organization" },
-    "knowsAbout": ["Composite decking installation", "Trex deck building", "TimberTech AZEK", "Custom deck design", "Northern Virginia building codes", "HOA architectural review"],
     "image": "https://ldndecks.com/team/Nick.jpg",
-    "description": "Founder of Loudoun Decks with 10+ years of custom deck building experience in Northern Virginia. Virginia Class A Licensed Contractor, Trex Platinum Certified.",
+    "url": "https://ldndecks.com/team",
+    "description": "Founder of Loudoun Decks with 10+ years of custom deck building experience in Northern Virginia. Virginia Class A Licensed Contractor, Trex Platinum Partner, TimberTech Certified Installer. 200+ completed custom deck projects across Loudoun, Fairfax, and Prince William counties.",
+    "knowsAbout": [
+      "Composite decking installation",
+      "Trex Transcend installation",
+      "Trex Enhance installation",
+      "Trex Signature installation",
+      "TimberTech AZEK Vintage installation",
+      "TimberTech PRO installation",
+      "Fiberon Concordia installation",
+      "Custom deck design",
+      "Screened porch construction",
+      "Patio and hardscape construction",
+      "Deck structural engineering",
+      "Ledger flashing and deck-to-house attachment",
+      "Northern Virginia residential building codes",
+      "Fairfax County deck permitting",
+      "Loudoun County LOLA portal permitting",
+      "Prince William County deck permitting",
+      "HOA architectural review submissions",
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional License",
+        "name": "Virginia Class A Contractor License",
+        "recognizedBy": { "@type": "Organization", "name": "Virginia Department of Professional and Occupational Regulation (DPOR)" }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Manufacturer Certification",
+        "name": "Trex Platinum Partner",
+        "recognizedBy": { "@type": "Organization", "name": "Trex Company, Inc." }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Manufacturer Certification",
+        "name": "TimberTech Certified Installer",
+        "recognizedBy": { "@type": "Organization", "name": "TimberTech (The AZEK Company)" }
+      }
+    ],
+    "award": [
+      "Trex Platinum Partner — highest installer tier",
+      "TimberTech Certified Installer",
+      "5.0★ Google Business Profile rating (41+ reviews)"
+    ],
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+      { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+      { "@type": "AdministrativeArea", "name": "Prince William County, VA" },
+      { "@type": "AdministrativeArea", "name": "Arlington County, VA" },
+      { "@type": "AdministrativeArea", "name": "Stafford County, VA" }
+    ],
+    "sameAs": [
+      "https://www.houzz.com/pro/ldndecks"
+      // TODO: add when Daniel confirms verified URLs:
+      //   "https://www.linkedin.com/in/<nick-handle>",
+      //   "https://www.bbb.org/us/va/<region>/profile/<...>",
+      //   "https://www.trex.com/contractors/<trex-pro-profile>"
+    ],
   };
 
   return (

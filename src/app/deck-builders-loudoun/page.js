@@ -8,7 +8,6 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import JsonLd from '@/components/JsonLd';
 import { buildMetadata, SITE_URL } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -68,19 +67,6 @@ const loudounFAQs = [
         }
 ];
 
-const loudounFaqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": loudounFAQs.map(({ q, a }) => ({
-                "@type": "Question",
-                "name": q,
-                "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": a
-                }
-        }))
-};
-
 const expansionSections = [
         {
                 title: "Loudoun County's Premier Outdoor Living Specialist",
@@ -125,7 +111,6 @@ const expansionSections = [
 export default function DeckBuildersLoudounPage() {
         return (
                 <main>
-                        <JsonLd data={loudounFaqSchema} />
                         <ServicesHeader
                                 subtext="Loudoun's Premier Choice"
                                 title="Custom Deck Builders Serving Loudoun County"
@@ -155,6 +140,7 @@ export default function DeckBuildersLoudounPage() {
                         <ServicesFAQ
                                 title="Loudoun County Deck Building FAQs"
                                 faqs={loudounFAQs}
+                                canonicalUrl="https://ldndecks.com/deck-builders-loudoun"
                         />
                         <ServiceAreasGrid />
                         <RelatedGuides currentPath="/deck-builders-loudoun" />

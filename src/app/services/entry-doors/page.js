@@ -12,6 +12,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
+import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/entry-doors",
       title: "Entry Door Installation Loudoun VA | LDN Decks",
@@ -135,13 +136,16 @@ export default function EntryDoorsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
       />
 
-      <ServicesHeader 
+      <ServicesHeader
         subtext="Entry & Exterior Doors"
         title="Custom Entry Door Installation"
         description="Dramatically improve the curb appeal, security, and total energy efficiency of your property with professional entry door installation in Northern Virginia."
       />
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+      </section>
 
-      <ServiceMain 
+      <ServiceMain
         subtitle="Make a Lasting First Impression"
         title="The Gateway to Your Home"
         description="Your entry door is the most hard-working mechanical component of your home's exterior. It opens and closes thousands of times a year while constantly enduring harsh sun, driving rain, and freezing temperatures. Upgrading your entry door is an investment in both your home's security footprint and its architectural stature."
@@ -160,13 +164,13 @@ export default function EntryDoorsPage() {
 
       <ServiceVisual image="/images/img18.jpeg" />
 
-      <ServiceInclusions 
+      <ServiceInclusions
         title="The Professional Difference"
         description="Door installation requires millimeter precision. Here is how our carpentry experts do it right the first time."
         items={inclusions}
       />
 
-      <ServicesFAQ 
+      <ServicesFAQ withSchema={false}
         title="Entry Door FAQs"
         faqs={faqs}
       />
