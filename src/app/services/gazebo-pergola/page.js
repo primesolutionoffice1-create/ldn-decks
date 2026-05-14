@@ -9,6 +9,7 @@ import ServiceVisual from '@/components/ServiceVisual';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
+import AboveFoldCTA from '@/components/AboveFoldCTA';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -139,6 +140,8 @@ export default function GazeboPergolaPage() {
         title="Custom Built Shade & Structure"
         description="Add lasting value, incredible shade, and stunning architectural character to your outdoor space with a custom gazebo or pergola engineered by Loudoun Decks."
       />
+
+      <AboveFoldCTA headline="Custom gazebo or pergola in Northern Virginia? Talk to a NoVA outdoor-structure specialist today." />
 
       <ServiceMain
         subtitle="Vertical Outdoor Living"

@@ -1,44 +1,21 @@
 "use client";
-import React, { useState, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { useState } from 'react';
 import { useContact } from '@/context/ContactContext';
 import styles from './ContactForm.module.css';
-import { sendContactEmail } from '@/server/sendEmail';
-import { trackFormSubmit, trackPhoneClick } from '@/lib/tracking';
-import { getClickIds, CLICK_ID_KEYS } from '@/lib/clickIds';
+import { useLeadSubmit } from '@/hooks/useLeadSubmit';
+import CallLink from '@/components/CallLink';
 
 export default function ContactForm({ hideInfoCol = false, noPadding = false }) {
   const [status, setStatus] = useState(null);
-  const router = useRouter();
   const { closeContact } = useContact();
-  const hasTracked = useRef(false);
+  const submit = useLeadSubmit({ formType: 'quote' });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("submitting");
-    const formData = new FormData(e.target);
-    const email = formData.get('email') || '';
-    const phone = formData.get('phone') || '';
-    const clickIds = getClickIds();
-    CLICK_ID_KEYS.forEach((k) => {
-      if (clickIds[k]) formData.append(k, clickIds[k]);
-    });
-    // Shared event_id deduplicates the pre-navigation form_submit (here)
-    // against the authoritative lead_confirmed event fired on /thank-you,
-    // plus any future server-side CAPI calls. Crypto-safe when available;
-    // timestamp fallback covers older browsers.
-    const eventId = (typeof crypto !== 'undefined' && crypto.randomUUID)
-      ? crypto.randomUUID()
-      : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-    formData.append('event_id', eventId);
-    const result = await sendContactEmail(formData);
-    if (result && result.success) {
-      if (!hasTracked.current) {
-        hasTracked.current = true;
-        trackFormSubmit({ email, phone, formType: 'quote', clickIds, eventId });
-      }
+    const result = await submit(e.target);
+    if (result.success) {
       closeContact();
-      router.push(`/thank-you?eid=${encodeURIComponent(eventId)}`);
     } else {
       alert("Failed to send message. Please try again.");
       setStatus(null);
@@ -56,7 +33,7 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               <div className={styles.contactPoint}>
                 <strong>Phone:</strong>
                 <br/>
-                <a href="tel:+15716557207" aria-label="Call Loudoun Decks" onClick={trackPhoneClick}>(571) 655-7207</a>
+                <CallLink aria-label="Call Loudoun Decks">(571) 655-7207</CallLink>
               </div>
               <div className={styles.contactPoint}>
                 <strong>Email:</strong>
@@ -77,6 +54,16 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
           )}
           <div className={`${styles.formCol} ${noPadding ? styles.formColNoPadding : ''}`}>
             <form onSubmit={handleSubmit} className={styles.formBlock} aria-label="Project Inquiry Form">
+              {/* Honeypot — bots auto-fill every input, real users never see this.
+                  Server-side check in sendEmail.js silently accepts then drops. */}
+              <input
+                type="text"
+                name="company_website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+              />
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
                   <label htmlFor="firstName">First Name <span className={styles.req}>*</span></label>

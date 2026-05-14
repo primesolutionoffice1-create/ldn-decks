@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './PromoModal.module.css';
 import { useContact } from '@/context/ContactContext';
-import { trackPhoneClick } from '@/lib/tracking';
+import CallLink from '@/components/CallLink';
 
 const CloseIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -100,10 +100,10 @@ export default function PromoModal() {
           <p className={styles.highlightText}>Unlock your free, no-obligation estimate today!</p>
 
           <div className={styles.buttonGroup}>
-            <a href="tel:+15716557207" className={styles.callBtn} onClick={trackPhoneClick}>
+            <CallLink className={styles.callBtn}>
               <PhoneIcon />
               Call Us
-            </a>
+            </CallLink>
             <button onClick={handleGetEstimate} className={styles.estimateBtn}>
               Get Free Estimate
             </button>

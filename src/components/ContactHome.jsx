@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import styles from './ContactHome.module.css';
-import { sendContactEmail } from '@/server/sendEmail';
+import { useLeadSubmit } from '@/hooks/useLeadSubmit';
 
 const PhoneIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -26,19 +25,13 @@ const MapIcon = () => (
 
 export default function ContactHome() {
   const [status, setStatus] = useState(null);
-  const router = useRouter();
+  const submit = useLeadSubmit({ formType: 'homepage' });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("submitting");
-    const formData = new FormData(e.target);
-    const result = await sendContactEmail(formData);
-    
-    if (result && result.success) {
-      router.push('/thank-you');
-    } else {
-      setStatus("error");
-    }
+    const result = await submit(e.target);
+    if (!result.success) setStatus("error");
   };
 
   return (
@@ -83,6 +76,16 @@ export default function ContactHome() {
 
         <div className={styles.rightCol}>
             <form onSubmit={handleSubmit} className={styles.contactForm}>
+              {/* Honeypot — bots auto-fill every input, real users never see this.
+                  Server-side check in sendEmail.js silently accepts then drops. */}
+              <input
+                type="text"
+                name="company_website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+              />
               <h3>Get Your 100% Free Design Consultation</h3>
               <p className={styles.formSubtext}>Licensed & Insured | Trex Platinum Partner | 5.0★ Google Rated</p>
               {status === "error" && <p style={{color: 'red', fontSize: '14px', marginBottom: '10px'}}>There was an error sending your message. Please try again.</p>}

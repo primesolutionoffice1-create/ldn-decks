@@ -6,6 +6,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/wood-decks',
@@ -46,7 +47,7 @@ export default function WoodDecksPage() {
             <h1 style={{ fontSize: '2.75rem', fontWeight: 700, marginBottom: '1rem', lineHeight: 1.15 }}>Expert Wood Deck Builder in Northern Virginia</h1>
             <p style={{ color: '#eee', fontSize: '1.15rem', maxWidth: 640, lineHeight: 1.5 }}>Pressure-treated, cedar, redwood &amp; exotic hardwood decks — natural beauty meets honest craftsmanship for Loudoun, Fairfax &amp; Prince William counties</p>
             <div style={{ marginTop: '1.75rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <a href="tel:+15716557207" style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
+              <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
               <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
             </div>
             <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#ddd' }}>★★★★★ 5.0 on Google · 41 reviews · Licensed &amp; Insured · 5-Year Warranty</p>
@@ -147,7 +148,7 @@ export default function WoodDecksPage() {
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.75rem' }}>Get Your Wood Deck Estimate</h2>
             <p style={{ marginBottom: '1.5rem', opacity: 0.95 }}>Free on-site consultation &middot; Honest pricing &middot; All wood species available</p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href="tel:+15716557207" style={{ background: '#fff', color: 'var(--color-primary)', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</a>
+              <CallLink style={{ background: '#fff', color: 'var(--color-primary)', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
               <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
             </div>
           </div>

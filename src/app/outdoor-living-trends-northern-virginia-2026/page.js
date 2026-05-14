@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/outdoor-living-trends-northern-virginia-2026',
@@ -61,7 +62,7 @@ export default function OutdoorLivingTrendsPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>The three biggest outdoor living trends in Northern Virginia for 2026 are <strong>multi-level step-down decks</strong>, <strong>deck + screened porch combos</strong>, and <strong>integrated outdoor kitchens</strong>. Cable railings, mixed material designs, and hidden LED lighting are close behind. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> to discuss your project.</p>
+          <p>The three biggest outdoor living trends in Northern Virginia for 2026 are <strong>multi-level step-down decks</strong>, <strong>deck + screened porch combos</strong>, and <strong>integrated outdoor kitchens</strong>. Cable railings, mixed material designs, and hidden LED lighting are close behind. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> to discuss your project.</p>
         </div>
       </section>
 

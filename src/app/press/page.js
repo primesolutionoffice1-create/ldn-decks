@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/press',
@@ -106,7 +107,7 @@ export default function PressPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Media Contact</h2>
           <p style={{ marginBottom: '0.5rem' }}><strong>Nick</strong> Owner & Lead Designer</p>
           <p style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:office@ldndecks.com" style={{ color: 'var(--color-primary, #d14817)' }}>office@ldndecks.com</a></p>
-          <p style={{ marginBottom: '2rem' }}>Phone: <a href="tel:+15716557207" style={{ color: 'var(--color-primary, #d14817)' }}>(571) 655-7207</a></p>
+          <p style={{ marginBottom: '2rem' }}>Phone: <CallLink style={{ color: 'var(--color-primary, #d14817)' }}>(571) 655-7207</CallLink></p>
 
           <div style={{ background: '#f8f9fa', padding: '2rem', borderRadius: 12, marginBottom: '2rem' }}>
             <h3 style={{ fontWeight: 700, marginBottom: '0.75rem' }}>Suggested Citation</h3>

@@ -1,0 +1,5 @@
+Campaign,Campaign type,Budget,Budget type,Bid strategy type,Networks,Status
+SRCH | Composite | 3 Counties | Calls,Search,90,Daily,Maximize conversions,Google search; Search partners: off; Display network: off,Paused
+SRCH | Replacement + Resurfacing | 3 Counties | Calls,Search,45,Daily,Maximize conversions,Google search; Search partners: off; Display network: off,Paused
+SRCH | Branded | 3 Counties | Calls,Search,15,Daily,Maximize conversions,Google search; Search partners: off; Display network: off,Paused
+RMKT | PMax | Visitors 30/60/90d | Calls,Performance Max,10,Daily,Maximize conversions,All,Paused

@@ -351,3 +351,158 @@ Overall: APPROVE / REJECT
 Blocking issues found: ____________
 Non-blocking issues for follow-up: ____________
 ```
+
+---
+
+## 5. Phase 1 fix verification (added 2026-05-11)
+
+Tests for the five code fixes from `docs/tracking-audit/TRACKING-FIX-QUEUE.md`
+items #1, #2, #3, #8, #10. Run after Section 2 baseline passes.
+
+### 5.1 #1 — ContactHome (homepage) form is now tracked
+
+Visit `/?gclid=PHASE1TEST` to seed the click ID. Submit the **homepage** form
+(not the modal). Watch the dataLayer panel and Network tab.
+
+**PASS criteria:**
+- `dataLayer` has a `form_submit` event with `form_type: 'homepage'` and a
+  non-null `event_id` (UUID format)
+- Same `event_id` appears in URL as `?eid=<UUID>` on `/thank-you`
+- `dataLayer` has a `lead_confirmed` event on `/thank-you` with matching
+  `event_id`
+- Lead email arrives in inbox with the "Attribution (paid ad click)" block
+  including `gclid: PHASE1TEST`
+
+**FAIL signals:**
+- `form_submit` event missing from dataLayer (the regression we just fixed)
+- `event_id: null` anywhere in the chain
+- `/thank-you` URL has no `?eid=` param
+- Email missing the Attribution block
+
+### 5.2 #2 — Every phone CTA fires `phone_click`
+
+Open a city page like `/deck-builder-ashburn-va`, the homepage, the floating
+call button, the sticky mobile CTA, the header phone link, and any inline
+"Call (571) 655-7207" link in an article. Click each. Watch dataLayer.
+
+**PASS criteria:**
+- Every click adds a `phone_click` event to dataLayer
+- Each event has `phone_source: 'tel_link'` and the current page in `page`
+- No event has `phone: '+15716557207'` (old hardcoded payload removed)
+- Visually inspect 3-5 city pages: phone CTAs render with the same styling
+  as before (no CSS regression from the JSX swap)
+
+**FAIL signals:**
+- Click adds no event (location missed by the sweep)
+- Style regression visible (button colors, padding, font weight changed)
+- Console error referencing `trackPhoneClick` undefined (means an
+  import was over-pruned)
+
+**Known excluded files:** `deck-builder-fairfax-va/page.js` and
+`trex-vs-timbertech-vs-azek/page.js` were excluded from the sweep because they
+had unrelated SEO edits uncommitted at the time of fix #2. These two pages
+still use raw `<a href="tel:...">` and **will not fire phone_click yet.**
+They get re-swept when the SEO branch merges.
+
+### 5.3 #3 — Consent defaults set before GTM container loads
+
+DevTools → Network → reload any page. Filter by "js". Note the order of:
+
+1. The inline `gtm-consent-defaults` script (in document head, executes
+   before React hydration)
+2. `gtm.js?id=GTM-N87MG6QS` (afterInteractive)
+
+**PASS criteria:**
+- Inline `gtag('consent','default',...)` call appears in document HTML and
+  executes before any GTM request is made
+- `window.dataLayer[0]` (first entry) is the consent default push
+- GTM container loads earlier than before (around `afterInteractive`, not
+  `lazyOnload`)
+- No console error about `gtag is not defined` from any tag
+
+**FAIL signals:**
+- GTM container fires a tag before the consent default appears in dataLayer
+- Console error from GTM about missing consent mode signals
+
+### 5.4 #8 — Honeypot blocks bot submissions
+
+Open DevTools → Console → run:
+
+```js
+// Simulate a bot filling the honeypot field
+const form = document.querySelector('form[aria-label*="Project Inquiry"]') ||
+             document.querySelector('form.contactForm') ||
+             document.querySelector('form');
+form.querySelector('[name="company_website"]').value = 'http://bot-example.com';
+// Fill the rest minimally and submit
+form.querySelector('[name="firstName"], [name="name"]').value = 'Bot';
+form.querySelector('[name="email"]').value = 'bot@example.com';
+form.querySelector('[name="phone"]').value = '5555555555';
+form.querySelector('[name="message"]').value = 'spam';
+form.requestSubmit();
+```
+
+**PASS criteria:**
+- Server log shows: `[sendContactEmail] honeypot triggered, silently
+  dropping submission`
+- **NO email arrives** in the inbox
+- **NO `form_submit` event** in dataLayer
+- **NO navigation to /thank-you** (URL stays on the form page)
+- Form button returns to enabled state (no error UI shown)
+- **NO Meta CAPI request** in Network tab (graph.facebook.com)
+
+**FAIL signals:**
+- Email arrives (honeypot bypassed)
+- `form_submit` or `lead_confirmed` fired (skipped flag not threaded
+  through useLeadSubmit)
+- User navigated to /thank-you
+
+Then verify legitimate submissions still work: reload page, fill the form
+normally (leaving `company_website` empty), submit. All section 2 tests
+should still pass.
+
+### 5.5 #10 — `lead_confirmed` does not re-fire on reload
+
+Submit a form → land on `/thank-you?eid=<UUID>` → confirm one
+`lead_confirmed` in dataLayer.
+
+Reload the page (Cmd+R / Ctrl+R) **two more times**.
+
+**PASS criteria:**
+- `dataLayer` still has only **one** `lead_confirmed` event for that
+  `event_id` after all three loads
+- `sessionStorage.getItem('lead_fired_<UUID>')` returns `'1'`
+- Console shows no error from sessionStorage access
+
+Now navigate away and back via browser back button. Check dataLayer.
+
+**PASS criteria:**
+- Still only one `lead_confirmed` for the original `event_id`
+
+Close the tab, open a new tab, paste the same `/thank-you?eid=<UUID>` URL.
+
+**PASS criteria:**
+- A new tab = new sessionStorage = `lead_confirmed` fires once. This is
+  expected — bookmark-replay across sessions is the GTM transaction_id
+  dedup gate's job, not ours.
+
+### 5.6 No regression on existing tests
+
+Re-run Sections 2, 3, 4 fully. **All previous passes must remain passing.**
+The Phase 1 fixes are additive and should not have changed any existing
+behavior except where called out above.
+
+---
+
+## Section 5 sign-off
+
+```
+- 5.1 ContactHome tracking: PASS / FAIL [notes]
+- 5.2 Phone CTA sweep: PASS / FAIL [notes]
+- 5.3 Consent load order: PASS / FAIL [notes]
+- 5.4 Honeypot: PASS / FAIL [notes]
+- 5.5 Anti-replay: PASS / FAIL [notes]
+- 5.6 No regression: PASS / FAIL [notes]
+
+Phase 1 overall: APPROVE / REJECT
+```

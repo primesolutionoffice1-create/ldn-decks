@@ -123,10 +123,9 @@ export default function DeckResurfacingPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Project Minimum: $5,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Full resurfacing minimum: $5,000+</strong>
             <br />
-            We specialize in <strong style={{ color: '#111' }}>full builds and large scale projects</strong> only. 
-            We do <strong style={{ color: '#111' }}>NOT</strong> offer small repairs or minor fixes.
+            On this page we focus on <strong style={{ color: '#111' }}>full surface conversions</strong>. Need a few boards swapped, railings reinforced, or rot patched? See our <a href="/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
         </div>
       </section>

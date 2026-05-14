@@ -80,6 +80,7 @@ function buildAllUrls() {
     '/multi-level-deck-builder-northern-virginia',
     '/pool-deck-builder-northern-virginia',
     '/outdoor-kitchen-builder-northern-virginia',
+    '/outdoor-living-northern-virginia',
     '/services/gazebo-pergola',
     '/services/fence',
     '/services/fire-pits',
@@ -96,7 +97,7 @@ function buildAllUrls() {
     '/deck-permit-prince-william-county-virginia',
     '/deck-repair-loudoun-county',
     '/deck-builders-loudoun',
-    '/composite-decks', '/trex-decks', '/deck-repair', '/deck-replacement', '/deck-remodeling',
+    '/composite-decks', '/trex-decks', '/timbertech-decks', '/deck-repair', '/services/deck-replacement', '/deck-remodeling',
   ];
 
   for (const path of staticPages) {

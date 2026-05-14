@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/before-and-after',
@@ -147,7 +148,7 @@ export default function BeforeAndAfterPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <p style={S.p}>Every deck project starts somewhere sometimes a bare backyard, sometimes a rotting 20-year-old structure that&apos;s become a safety hazard. Below are real transformations from our builds across Northern Virginia. Each project includes the materials used, total cost, timeline, and what made it unique.</p>
-          <p style={{ ...S.p, marginBottom: '3rem' }}>Want to see your backyard on this page? <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> for a free design consultation.</p>
+          <p style={{ ...S.p, marginBottom: '3rem' }}>Want to see your backyard on this page? <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a free design consultation.</p>
 
           {/* Project Cards */}
           {projects.map((project, idx) => (

@@ -7,6 +7,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import EnhancifyWidget from '@/components/EnhancifyWidget';
 import FinancingCalculator from '@/components/FinancingCalculator';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/deck-financing',
@@ -130,9 +131,9 @@ export default function DeckFinancingPage() {
             <Link href="/contact" style={{ display: 'inline-block', background: 'var(--color-primary)', color: 'var(--white)', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', boxShadow: '0 4px 14px rgba(0,0,0,0.2)' }}>
               Schedule Free Consultation
             </Link>
-            <a href="tel:+15716557207" style={{ display: 'inline-block', background: 'transparent', color: 'var(--white)', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', border: '2px solid rgba(255,255,255,0.3)' }}>
+            <CallLink style={{ display: 'inline-block', background: 'transparent', color: 'var(--white)', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', border: '2px solid rgba(255,255,255,0.3)' }}>
               Call (571) 655-7207
-            </a>
+            </CallLink>
           </div>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', margin: 0, display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
             <span style={{ color: 'var(--color-primary)' }}>●</span> Soft credit check only
@@ -381,9 +382,9 @@ export default function DeckFinancingPage() {
               <Link href="/contact" style={{ display: 'inline-block', background: 'var(--color-primary)', color: 'var(--white)', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', boxShadow: '0 4px 14px rgba(0,0,0,0.3)' }}>
                 Schedule Free Consultation
               </Link>
-              <a href="tel:+15716557207" style={{ display: 'inline-block', background: 'transparent', color: 'var(--white)', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', border: '2px solid rgba(255,255,255,0.3)' }}>
+              <CallLink style={{ display: 'inline-block', background: 'transparent', color: 'var(--white)', padding: '1.05rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem', border: '2px solid rgba(255,255,255,0.3)' }}>
                 Call (571) 655-7207
-              </a>
+              </CallLink>
             </div>
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginTop: '1.5rem', marginBottom: 0 }}>
               Most consultations scheduled within 48 hours

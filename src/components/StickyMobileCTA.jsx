@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
 import styles from './StickyMobileCTA.module.css';
-import { trackPhoneClick } from '@/lib/tracking';
 import { useContact } from '@/context/ContactContext';
+import CallLink from '@/components/CallLink';
 
 const PhoneIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -22,10 +22,10 @@ export default function StickyMobileCTA() {
 
   return (
     <div className={styles.stickyBar}>
-      <a href="tel:+15716557207" className={styles.callBtn} onClick={trackPhoneClick}>
+      <CallLink className={styles.callBtn}>
         <PhoneIcon />
         <span>Call Now</span>
-      </a>
+      </CallLink>
       <button onClick={openContact} className={styles.estimateBtn}>
         <EstimateIcon />
         <span>Free Estimate</span>

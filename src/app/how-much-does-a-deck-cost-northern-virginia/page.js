@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/how-much-does-a-deck-cost-northern-virginia',
@@ -50,7 +51,7 @@ export default function DeckCostPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>A standard composite deck in Northern Virginia costs <strong>$30–$75 per square foot installed</strong>, or <strong>$15,000–$45,000</strong> for a typical 300–500 sq ft project. Pressure-treated wood decks start at $18–$35/sqft. Northern Virginia runs 25–35% above the state average. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> for a free, itemized quote.</p>
+          <p>A standard composite deck in Northern Virginia costs <strong>$30–$75 per square foot installed</strong>, or <strong>$15,000–$45,000</strong> for a typical 300–500 sq ft project. Pressure-treated wood decks start at $18–$35/sqft. Northern Virginia runs 25–35% above the state average. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a free, itemized quote.</p>
         </div>
       </section>
 

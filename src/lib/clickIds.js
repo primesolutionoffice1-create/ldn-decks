@@ -17,3 +17,12 @@ export function getClickIds() {
     return acc;
   }, {});
 }
+
+// _fbp is Meta's browser ID cookie — set by the Meta Pixel client-side
+// (if/when a Pixel is added) and consumed by Meta's Conversions API as a
+// match-quality signal. Returning null when absent is correct: Meta's
+// Graph API rejects payloads that include a null _fbp field, so the
+// server-side caller must omit it entirely when this returns null.
+export function getFbp() {
+  return readCookie('_fbp');
+}

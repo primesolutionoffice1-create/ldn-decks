@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ServicesHome.module.css';
-import { trackPhoneClick } from '@/lib/tracking';
+import CallLink from '@/components/CallLink';
 
 const servicesData = [
   {
@@ -67,9 +67,9 @@ export default function ServicesHome() {
           ))}
         </div>
         <div className={styles.btnWrapper} style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="tel:+15716557207" className={styles.ctaButton} onClick={trackPhoneClick}>
+          <CallLink className={styles.ctaButton}>
             Call To Discuss Properties
-          </a>
+          </CallLink>
           <Link
             href="/services"
             className={styles.ctaButton}

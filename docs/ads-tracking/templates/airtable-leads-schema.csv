@@ -1,0 +1,48 @@
+table,field_name,field_type,required,allowed_values_or_formula,owner_can_edit,notes
+Leads,lead_id,Record ID / formula,yes,Airtable record ID,no,Canonical internal lead key; never sent to ad platforms.
+Leads,event_id,Single line text,yes,,no,Shared dedup key from form_submit / lead_confirmed / Meta CAPI.
+Leads,created_at,Created time,yes,,no,Airtable native created timestamp.
+Leads,stage,Single select,yes,"New Lead|Qualified|Estimate Scheduled|Estimate Completed|Proposal Sent|Won|Lost|Closed Paid",yes,Canonical sales stage.
+Leads,stage_changed_at,Last modified time,yes,Watch stage,no,Used as conversion time for stage-based uploads.
+Leads,gclid,Single line text,no,,no,Primary Google click ID for offline uploads.
+Leads,gbraid,Single line text,no,,no,Google iOS privacy click ID.
+Leads,wbraid,Single line text,no,,no,Google web-to-app click ID.
+Leads,fbclid,Single line text,no,,no,Meta click ID; construct fbc when needed.
+Leads,msclkid,Single line text,no,,no,Microsoft Ads click ID.
+Leads,landing_page,URL,yes,,no,URL where the lead converted.
+Leads,source,Single line text,no,,no,UTM source or inferred source.
+Leads,medium,Single line text,no,,no,UTM medium or inferred medium.
+Leads,campaign,Single line text,no,,no,UTM campaign if present.
+Leads,keyword,Single line text,no,,no,Only available if tracking template passes keyword.
+Leads,first_name,Single line text,yes,,yes,PII; required for sales workflow and enhanced matching.
+Leads,last_name,Single line text,no,,yes,PII.
+Leads,email,Email,yes,,yes,PII; used for Enhanced Conversions / hashed matching.
+Leads,phone,Phone,yes,,yes,PII; used for sales and hashed matching.
+Leads,city,Single line text,no,,yes,Geo profitability analysis.
+Leads,state,Single line text,no,VA,yes,Default VA where possible.
+Leads,zip,Single line text,no,,yes,Geo profitability analysis and enhanced matching.
+Leads,service_type,Single select,yes,"Deck|Composite Deck|Wood Deck|Deck Resurfacing|Deck Repair|Screened Porch|Patio|Pergola|Outdoor Living|Unknown",yes,Used for service profitability analysis.
+Leads,estimated_project_value,Currency,no,,yes,Early value estimate; not final revenue.
+Leads,closed_revenue_value,Currency,no,,yes,Required before Won / Closed Paid upload.
+Leads,lost_reason,Single select,no,"Price|Timing|No Response|Wrong Service|Competitor|Financing|Spam|Other",yes,Required when stage = Lost.
+Leads,notes,Long text,no,,yes,Short sales context only.
+Jobs,job_id,Formula / text,yes,"JOB-{lead_id}",no,Generated when a lead becomes a job.
+Jobs,lead,Linked record,yes,Leads,no,Join back to source lead.
+Jobs,job_stage,Single select,yes,"Won|In Production|Completed|Paid",yes,Operational project status.
+Jobs,contract_value,Currency,yes,,yes,Contracted revenue value.
+Jobs,final_paid_amount,Currency,no,,yes,Use when paid value differs from contract.
+Jobs,project_city,Single line text,no,,yes,Copied from lead if blank.
+Jobs,project_type,Single select,no,"Deck|Composite Deck|Wood Deck|Deck Resurfacing|Deck Repair|Screened Porch|Patio|Pergola|Outdoor Living|Unknown",yes,Copied from lead if blank.
+Conversion Uploads,upload_id,Autonumber,yes,,no,Audit key.
+Conversion Uploads,lead,Linked record,yes,Leads,no,Required.
+Conversion Uploads,conversion_name,Single select,yes,"Qualified Lead|Estimate Scheduled|Contract Signed|Closed Paid",no,Must match Google Ads conversion action naming.
+Conversion Uploads,transaction_id,Formula / text,yes,"{event_id}::{conversion_name}",no,Duplicate prevention key.
+Conversion Uploads,platform,Single select,yes,"Google Ads|Meta|Microsoft",no,Upload destination.
+Conversion Uploads,click_id_type,Single select,yes,"gclid|gbraid|wbraid|enhanced_lead|fbclid|msclkid",no,Indicates upload matching basis.
+Conversion Uploads,click_id_value,Single line text,no,,no,Click ID used for upload; blank when enhanced_lead only.
+Conversion Uploads,conversion_time,Date/time,yes,America/New_York,no,Use explicit timezone in export transformation.
+Conversion Uploads,conversion_value,Currency,yes,,no,500 / 1000 / contract value / paid value.
+Conversion Uploads,upload_method,Single select,yes,"Manual CSV|API",no,V1 = Manual CSV.
+Conversion Uploads,upload_status,Single select,yes,"Pending|Uploaded|Accepted|Rejected|Adjusted",yes,Operator updates after import diagnostics.
+Conversion Uploads,error_message,Long text,no,,yes,Paste Google Ads import error here.
+Conversion Uploads,uploaded_at,Date/time,no,,yes,When upload was sent.

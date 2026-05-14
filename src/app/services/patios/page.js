@@ -8,6 +8,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
+import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -117,6 +118,8 @@ export default function PatiosPage() {
         title="Custom Patio Design & Installation in Northern Virginia"
         description="Transform your backyard with a premium custom patio. From natural bluestone and flagstone to concrete pavers and full outdoor living builds — we design and install high-performance hardscapes for Northern Virginia homeowners."
       />
+
+      <AboveFoldCTA headline="Planning a paver, flagstone or bluestone patio in NoVA? Talk to a custom hardscape specialist today." />
 
       {/* Pricing Anchor */}
       <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>

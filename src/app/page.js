@@ -28,8 +28,8 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   path: "/",
-  title: 'Top-Rated Deck Builder Northern Virginia | 5.0★ | Free Estimate',
-  description: 'Trex Platinum & TimberTech certified deck builders in NoVA. Custom composite decks & screened porches. ★ 5.0 Google Rated. Get your free estimate in 24 hours!',
+  title: 'Deck Contractor Northern Virginia | Composite Deck Builder',
+  description: 'Northern Virginia deck contractor for composite decks, Trex builds, replacement, resurfacing, screened porches, permits and HOA. 5.0 Google rated.',
 });
 
 // Homepage-specific WebPage schema — tells Google this is the main landing page.
@@ -41,7 +41,7 @@ const homepageSchema = {
   "@id": "https://ldndecks.com/#webpage",
   "url": "https://ldndecks.com",
   "name": "Loudoun Decks — Custom Deck Builder in Northern Virginia",
-  "description": "Top-rated custom deck builder in Loudoun County, Northern Virginia. Trex Platinum Partner and TimberTech Certified. Composite and wood decks, screened porches, patios, pergolas. 5.0-star Google rating. Free estimates.",
+  "description": "Top-rated deck contractor and composite deck builder serving Loudoun County, Fairfax County, Prince William County, and Northern Virginia. Trex Platinum Partner and TimberTech Certified. Deck replacement, resurfacing, screened porches, patios, pergolas, permits, and HOA support.",
   "isPartOf": { "@type": "WebSite", "@id": "https://ldndecks.com/#website" },
   "about": { "@id": "https://ldndecks.com/#organization" },
   "primaryImageOfPage": {
@@ -53,6 +53,10 @@ const homepageSchema = {
     "cssSelector": ["h1", "[data-speakable]"]
   },
   "significantLink": [
+    "https://ldndecks.com/composite-decks",
+    "https://ldndecks.com/services/deck-replacement",
+    "https://ldndecks.com/deck-resurfacing-vs-replacement",
+    "https://ldndecks.com/screened-porch-builder-northern-virginia",
     "https://ldndecks.com/services",
     "https://ldndecks.com/northern-virginia-deck-building-guide",
     "https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia",
@@ -62,7 +66,38 @@ const homepageSchema = {
     "https://ldndecks.com/reviews",
     "https://ldndecks.com/deck-cost-calculator",
     "https://ldndecks.com/contact"
-  ]
+  ],
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "@id": "https://ldndecks.com/#organization",
+    "name": "Loudoun Decks",
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
+      { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
+      { "@type": "AdministrativeArea", "name": "Prince William County, VA" },
+      { "@type": "Place", "name": "Northern Virginia" }
+    ],
+    "knowsAbout": [
+      "deck contractor Northern Virginia",
+      "composite deck builder",
+      "Trex deck builder",
+      "deck replacement",
+      "deck resurfacing",
+      "screened porch builder",
+      "deck permits",
+      "HOA deck approval"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Northern Virginia deck services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Composite deck building", "url": "https://ldndecks.com/composite-decks" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck replacement", "url": "https://ldndecks.com/services/deck-replacement" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck resurfacing", "url": "https://ldndecks.com/services/deck-resurfacing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Screened porch building", "url": "https://ldndecks.com/screened-porch-builder-northern-virginia" } }
+      ]
+    }
+  }
 };
 
 export default function Home() {

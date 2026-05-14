@@ -104,6 +104,7 @@ export default function Footer() {
               <li><Link href="/northern-virginia-deck-building-guide">Deck Building Guide</Link></li>
               <li><Link href="/how-much-does-a-deck-cost-northern-virginia">Deck Cost Guide</Link></li>
               <li><Link href="/trex-vs-timbertech-vs-azek">Trex vs TimberTech vs AZEK</Link></li>
+              <li><Link href="/timbertech-decks">TimberTech Decks</Link></li>
               <li><Link href="/composite-deck-vs-wood-deck-virginia">Composite vs Wood</Link></li>
               <li><Link href="/does-a-deck-add-value-to-your-home">Deck ROI &amp; Home Value</Link></li>
               <li><Link href="/how-to-choose-a-deck-builder-northern-virginia">Choosing a Builder</Link></li>
@@ -115,6 +116,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/loudoun-county-hoa-deck-rules">HOA Deck Rules</Link></li>
               <li><Link href="/deck-financing">Deck Financing</Link></li>
+              <li><Link href="/outdoor-living-northern-virginia">Outdoor Living</Link></li>
               <li><Link href="/deck-warranty-guide-northern-virginia">Warranty Guide</Link></li>
               <li><Link href="/areas-we-serve">Areas We Serve</Link></li>
               <li><Link href="/scholarship">Scholarship</Link></li>

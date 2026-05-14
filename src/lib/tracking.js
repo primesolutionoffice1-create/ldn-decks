@@ -1,6 +1,8 @@
 // src/lib/tracking.js
 // GTM dataLayer helpers for ldndecks.com - SSR safe
 
+import { recordDedupHit } from '@/lib/attribution-debug';
+
 /**
  * Push event to GTM dataLayer - no-ops on server render
  */
@@ -15,15 +17,37 @@ function push(event) {
  * Fires: GA4 generate_lead + Google Ads Form Lead + Enhanced Conversions.
  * Click IDs (gclid/gbraid/wbraid/fbclid/msclkid) are pushed to dataLayer so GTM
  * can forward them to Google Ads conversion tags and store for offline import.
+ *
+ * firstName/lastName/zip carry user-provided data for Google Ads Enhanced
+ * Conversions for Web. GTM's Google Ads conversion tag template hashes
+ * these client-side before the conversion request leaves the browser; no
+ * plaintext PII reaches Google.
  */
-export function trackFormSubmit({ email, phone, formType = 'quote', clickIds = {}, eventId } = {}) {
+export function trackFormSubmit({
+  email,
+  phone,
+  firstName,
+  lastName,
+  zip,
+  city,
+  state,
+  formType = 'quote',
+  clickIds = {},
+  eventId,
+} = {}) {
   if (typeof window === 'undefined') return;
   push({
     event: 'form_submit',
     event_id: eventId || null,
     form_type: formType,
-    email: email,
-    phone: phone,
+    email: email || null,
+    phone: phone || null,
+    first_name: firstName || null,
+    last_name: lastName || null,
+    zip: zip || null,
+    city: city || null,
+    state: state || null,
+    country: 'US',
     gclid: clickIds.gclid || null,
     gbraid: clickIds.gbraid || null,
     wbraid: clickIds.wbraid || null,
@@ -35,12 +59,19 @@ export function trackFormSubmit({ email, phone, formType = 'quote', clickIds = {
 
 /**
  * Track phone number click
- * Fires: GA4 phone_call_click + Google Ads Call Lead
+ * Fires: GA4 phone_call_click (engagement signal).
+ *
+ * Note: phone_click is a vanity event — click != actual call. Use Google
+ * Ads call asset + website call-tracking forwarding numbers as the real
+ * phone-conversion signal. Keep this event for GA4 reporting and
+ * audience building only.
  */
 export function trackPhoneClick() {
+  if (typeof window === 'undefined') return;
   push({
     event: 'phone_click',
-    phone: '+15716557207',
+    phone_source: 'tel_link',
+    page: window.location.pathname,
   });
 }
 
@@ -53,9 +84,29 @@ export function trackPhoneClick() {
  * event_id matches the one passed into ContactForm's form_submit event,
  * enabling client-side dedup in GTM and server-side dedup if CAPI/Google
  * Ads Conversions API is added later.
+ *
+ * Anti-replay: useEffect re-runs on /thank-you reload or back-forward
+ * navigation; without a guard, each re-mount fires another conversion
+ * with the same event_id. GTM transaction_id dedup catches this in the
+ * tag layer, but we block at the source too — belt-and-braces. The
+ * sessionStorage key is scoped to event_id, so legitimate new
+ * submissions (different event_id, even from the same user) still fire.
  */
 export function trackLeadConfirmed({ eventId } = {}) {
   if (typeof window === 'undefined') return;
+  if (eventId) {
+    const key = `lead_fired_${eventId}`;
+    try {
+      if (window.sessionStorage && window.sessionStorage.getItem(key)) {
+        recordDedupHit();
+        return;
+      }
+      if (window.sessionStorage) window.sessionStorage.setItem(key, '1');
+    } catch (e) {
+      // sessionStorage unavailable (Safari private mode, embedded
+      // contexts) — fall through and let GTM transaction_id handle dedup.
+    }
+  }
   push({
     event: 'lead_confirmed',
     event_id: eventId || null,
@@ -63,12 +114,3 @@ export function trackLeadConfirmed({ eventId } = {}) {
   });
 }
 
-// Analytics tracking helper alias for compatibility
-export function trackEvent(action, category, label, value) {
-  push({
-    event: action,
-    event_category: category,
-    event_label: label,
-    value: value || 1
-  });
-}

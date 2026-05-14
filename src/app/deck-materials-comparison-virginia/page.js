@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/deck-materials-comparison-virginia',
@@ -61,7 +62,7 @@ export default function DeckMaterialsComparisonPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Composite decking wins for most Northern Virginia homeowners</strong> &mdash; it balances cost, lifespan, and zero maintenance better than any other option. If budget is the top priority, pressure-treated pine at <strong>$18&ndash;$28/sqft</strong> installed gets you a functional deck. If longevity and premium aesthetics matter most, <strong>TimberTech AZEK ($50&ndash;$75/sqft)</strong> or <strong>Trex Lineage ($50&ndash;$65/sqft)</strong> deliver 50-year performance. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> for material recommendations tailored to your project.</p>
+          <p><strong>Composite decking wins for most Northern Virginia homeowners</strong> &mdash; it balances cost, lifespan, and zero maintenance better than any other option. If budget is the top priority, pressure-treated pine at <strong>$18&ndash;$28/sqft</strong> installed gets you a functional deck. If longevity and premium aesthetics matter most, <strong>TimberTech AZEK ($50&ndash;$75/sqft)</strong> or <strong>Trex Lineage ($50&ndash;$65/sqft)</strong> deliver 50-year performance. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for material recommendations tailored to your project.</p>
         </div>
       </section>
 

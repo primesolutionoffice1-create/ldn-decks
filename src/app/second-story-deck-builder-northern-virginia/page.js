@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/second-story-deck-builder-northern-virginia',
@@ -61,7 +62,7 @@ export default function SecondStoryDeckBuilderPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Second-story decks in Northern Virginia cost <strong>$35,000&ndash;$75,000+</strong> depending on size and material. They require <strong>engineered plans</strong>, <strong>deeper footings</strong>, <strong>lateral bracing</strong>, and <strong>42-inch railings</strong>. The elevation premium adds 25&ndash;40% over ground-level construction. With <strong>Trex RainEscape</strong>, you can create dry living space underneath &mdash; effectively doubling your outdoor square footage. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a> for a consultation on your elevated deck project.</p>
+          <p>Second-story decks in Northern Virginia cost <strong>$35,000&ndash;$75,000+</strong> depending on size and material. They require <strong>engineered plans</strong>, <strong>deeper footings</strong>, <strong>lateral bracing</strong>, and <strong>42-inch railings</strong>. The elevation premium adds 25&ndash;40% over ground-level construction. With <strong>Trex RainEscape</strong>, you can create dry living space underneath &mdash; effectively doubling your outdoor square footage. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a consultation on your elevated deck project.</p>
         </div>
       </section>
 

@@ -5,6 +5,7 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/deck-safety-inspection-checklist',
@@ -128,7 +129,7 @@ export default function DeckInspectionPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Hosting a large gathering (50+ lbs/sqft loading)</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Deck was built without permits (unknown construction quality)</li>
           </ul>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>We offer <strong>free deck inspections</strong>. We check every structural element and give you an honest assessment with photos repair, resurface, or replace. No obligation. <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</a>.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>We offer <strong>free deck inspections</strong>. We check every structural element and give you an honest assessment with photos repair, resurface, or replace. No obligation. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink>.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[

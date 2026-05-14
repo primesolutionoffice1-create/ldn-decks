@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Introduction.module.css';
-import { trackPhoneClick } from '@/lib/tracking';
+import CallLink from '@/components/CallLink';
 
 const CheckIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.checkIcon}>
@@ -109,9 +109,9 @@ export default function Introduction() {
               </div>
             </div>
           </div>
-          <a href="tel:+15716557207" className={styles.ctaButton} onClick={trackPhoneClick}>
+          <CallLink className={styles.ctaButton}>
             Call For A Free Quote
-          </a>
+          </CallLink>
         </div>
       </div>
     </section>

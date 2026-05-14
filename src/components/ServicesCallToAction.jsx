@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { trackPhoneClick } from '@/lib/tracking';
 import styles from './ServicesCallToAction.module.css';
+import CallLink from '@/components/CallLink';
 
 export default function ServicesCallToAction() {
   return (
@@ -13,9 +13,9 @@ export default function ServicesCallToAction() {
           Get in touch with our experts today to schedule your free consultation and transform your outdoor living space.
         </p>
         <div className={styles.buttonGroup}>
-          <a href="tel:+15716557207" className={styles.phoneButton} onClick={trackPhoneClick}>
+          <CallLink className={styles.phoneButton}>
             Call Now: (571) 655-7207
-          </a>
+          </CallLink>
           <Link href="/contact" className={styles.estimateButton}>
             Get Free Estimate
           </Link>

@@ -1,0 +1,7 @@
+slot,city_neighborhood,month_year,repair_type,failure_found,work_performed,permit_required,permit_jurisdiction,photo_before,photo_after,scope,code_item_corrected,evidence_status,notes
+1,,,Structural stair rebuild + railing code upgrade,,,,,,,,IRC R311.7 / R507.10,draft,Leave blank if unknown — do not fabricate
+2,,,Ledger re-flashing + joist sistering on north-facing deck,,,,,,,,IRC R507.9,draft,
+3,,,Composite resurface on sound pressure-treated framing,,,,,,,,n/a,draft,Verify framing inspection notes exist
+4,,,Post-base replacement + footing bell rebuild,,,,,,,,IRC R403.1.4 / R507.4,draft,Confirm footing depth measurement
+5,,,Full railing replacement to current IRC R507.10,,,,,,,,IRC R507.10 / R312.1.3,draft,
+6,,,Emergency stabilization → permitted structural rebuild,,,,,,,,IRC R507.9,draft,Date of stabilization vs date of permitted rebuild

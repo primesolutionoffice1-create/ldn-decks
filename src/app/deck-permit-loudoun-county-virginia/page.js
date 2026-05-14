@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/deck-permit-loudoun-county-virginia',
@@ -55,6 +56,14 @@ export default function LoudounPermitPage() {
         <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 1.5rem', textAlign: 'center' }}>
           <h1 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '-1px' }}>2026 Loudoun Permit Guide</h1>
           <p style={{ color: '#fff', fontSize: '1.4rem', maxWidth: '800px', margin: '0 auto', fontWeight: 300, opacity: 0.9 }}>Technical compliance for Virginia residential deck construction. From LandMARC portals to structural load paths.</p>
+        </div>
+      </section>
+
+      {/* Quick Answer */}
+      <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
+          <p><strong>Yes, you need a permit.</strong> Any deck attached to your house, over 256 sqft, or more than 16.5&quot; above grade requires a Loudoun County building permit. Plan review takes <strong>2–4 weeks</strong> via the LOLA portal. Permit costs <strong>$150–$500</strong>. <strong>We handle the entire process</strong> plans, submission, and inspections. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink>.</p>
         </div>
       </section>
 
@@ -222,4 +231,3 @@ export default function LoudounPermitPage() {
     </>
   );
 }
-

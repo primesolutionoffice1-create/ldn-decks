@@ -1,10 +1,28 @@
 'use server';
 
+import { headers } from 'next/headers';
 import nodemailer from 'nodemailer';
 import { sendMetaLeadEvent } from './metaCapi';
 
 export async function sendContactEmail(formData) {
   try {
+    // Honeypot guard — both ContactForm and ContactHome render a hidden
+    // company_website input. Real users never fill it; bots that auto-fill
+    // every input do. Return success so the bot moves on instead of
+    // retrying. No email is sent, no Meta CAPI event is fired, no client
+    // tracking is triggered downstream (the client still navigates to
+    // /thank-you, but Smart Bidding sees zero bot-driven conversions in
+    // the offline-import pipeline because no gclid/event_id record exists
+    // in the inbox / CRM).
+    if (formData.get('company_website')) {
+      console.log('[sendContactEmail] honeypot triggered, silently dropping submission');
+      // Return success-shaped response with `skipped` flag so the client
+      // hook doesn't fire trackFormSubmit and doesn't navigate to /thank-you
+      // (which would otherwise fire lead_confirmed). Bot sees no error,
+      // moves on. No conversion enters the analytics pipeline.
+      return { success: true, skipped: true };
+    }
+
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 465,
@@ -73,6 +91,23 @@ export async function sendContactEmail(formData) {
 
     await transporter.sendMail(mailOptions);
 
+    // Capture IP + User-Agent from the request for Meta CAPI match quality.
+    // headers() comes from next/headers — server-action context. The first
+    // address in x-forwarded-for is the client (Vercel / proxies prepend
+    // their own hops); fall back to the direct connection if absent.
+    let ipAddress = null;
+    let userAgent = null;
+    try {
+      const h = await headers();
+      const xff = h.get('x-forwarded-for') || '';
+      ipAddress = xff.split(',')[0].trim() || h.get('x-real-ip') || null;
+      userAgent = h.get('user-agent') || null;
+    } catch (e) {
+      // headers() can throw if called outside a request-scoped context
+      // (e.g., during build / unit test). CAPI degrades gracefully —
+      // missing IP / UA drops EMQ score ~1.5 points but doesn't error.
+    }
+
     // Fire Meta CAPI server-side (non-blocking, env-gated — no-ops if creds absent).
     // Same event_id as the client-side form_submit + lead_confirmed events,
     // so Meta dedupes any of the three that fire within the 7-day window.
@@ -89,6 +124,8 @@ export async function sendContactEmail(formData) {
       fbp: formData.get('_fbp'),
       eventId,
       eventSourceUrl: formData.get('source_url') || 'https://ldndecks.com/contact',
+      ipAddress,
+      userAgent,
     }).catch((err) => console.error('Meta CAPI fire-and-forget error:', err));
 
     return { success: true };

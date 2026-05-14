@@ -1,0 +1,37 @@
+{
+  "schema_version": "lead-ingest.v1",
+  "event_id": "9f3f7fbb-4d95-4ef8-9447-3283ea55cbed",
+  "submitted_at": "2026-05-13T15:45:00.000-04:00",
+  "form_type": "homepage",
+  "landing_page": "https://ldndecks.com/",
+  "page_path": "/",
+  "referrer": "",
+  "source": "direct",
+  "medium": "none",
+  "campaign": null,
+  "keyword": null,
+  "click_ids": {
+    "gclid": null,
+    "gbraid": null,
+    "wbraid": null,
+    "fbclid": null,
+    "msclkid": null
+  },
+  "lead": {
+    "first_name": "Alex",
+    "last_name": "Smith",
+    "email": "alex@example.com",
+    "phone": "5715559876",
+    "address": "",
+    "city": "Leesburg",
+    "state": "VA",
+    "zip": "20176",
+    "service_type": "Deck Repair",
+    "message": "Looking for deck repair after inspection."
+  },
+  "technical": {
+    "user_agent": "Mozilla/5.0 test fixture",
+    "ip_hash": null,
+    "consent_state": "granted_or_unknown"
+  }
+}
