@@ -16,7 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/composite-decks',
   title: '5-Star Composite Deck Builder NoVA | Free Quote in 24h',
-  description: 'Premier composite deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom low-maintenance decks. 5.0★ Google Rated. Free estimate!',
+  description: 'Premier composite deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom low-maintenance decks from $15k+. 5.0★ Google Rated.',
   image: '/images/img10.jpeg',
 });
 
@@ -135,9 +135,9 @@ export default function CompositeDecksPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>New composite build minimum: $5,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Custom composite deck projects from $15,000+</strong>
             <br />
-            On this page we focus on <strong style={{ color: '#111' }}>full custom composite builds</strong>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
+            On this page we focus on <strong style={{ color: '#111' }}>full custom composite builds</strong>. Comparing brands? See our <a href="/trex-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Trex deck page</a> or <a href="/timbertech-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>TimberTech/AZEK deck page</a>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
         </div>
       </section>
@@ -183,4 +183,3 @@ export default function CompositeDecksPage() {
     </main>
   );
 }
-

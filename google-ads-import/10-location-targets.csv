@@ -1,0 +1,13 @@
+Campaign,Location,Location option,Status
+SRCH | Composite | 3 Counties | Calls,"Loudoun County, Virginia, United States",Presence,Paused
+SRCH | Composite | 3 Counties | Calls,"Fairfax County, Virginia, United States",Presence,Paused
+SRCH | Composite | 3 Counties | Calls,"Prince William County, Virginia, United States",Presence,Paused
+SRCH | Replacement + Resurfacing | 3 Counties | Calls,"Loudoun County, Virginia, United States",Presence,Paused
+SRCH | Replacement + Resurfacing | 3 Counties | Calls,"Fairfax County, Virginia, United States",Presence,Paused
+SRCH | Replacement + Resurfacing | 3 Counties | Calls,"Prince William County, Virginia, United States",Presence,Paused
+SRCH | Branded | 3 Counties | Calls,"Loudoun County, Virginia, United States",Presence,Paused
+SRCH | Branded | 3 Counties | Calls,"Fairfax County, Virginia, United States",Presence,Paused
+SRCH | Branded | 3 Counties | Calls,"Prince William County, Virginia, United States",Presence,Paused
+RMKT | PMax | Visitors 30/60/90d | Calls,"Loudoun County, Virginia, United States",Presence,Paused
+RMKT | PMax | Visitors 30/60/90d | Calls,"Fairfax County, Virginia, United States",Presence,Paused
+RMKT | PMax | Visitors 30/60/90d | Calls,"Prince William County, Virginia, United States",Presence,Paused

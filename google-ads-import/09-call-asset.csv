@@ -1,0 +1,5 @@
+Campaign,Phone number,Country,Schedule,Conversion action,Status
+SRCH | Composite | 3 Counties | Calls,+15716557207,US,Mon-Fri 08:00-18:00,Qualified Call (Ads) - 60s,Paused
+SRCH | Replacement + Resurfacing | 3 Counties | Calls,+15716557207,US,Mon-Fri 08:00-18:00,Qualified Call (Ads) - 60s,Paused
+SRCH | Branded | 3 Counties | Calls,+15716557207,US,Mon-Fri 08:00-18:00,Qualified Call (Ads) - 60s,Paused
+RMKT | PMax | Visitors 30/60/90d | Calls,+15716557207,US,Mon-Fri 08:00-18:00,Qualified Call (Ads) - 60s,Paused

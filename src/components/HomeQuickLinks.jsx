@@ -4,6 +4,16 @@ import Link from 'next/link';
 
 const links = [
   {
+    href: '/composite-decks',
+    title: 'Composite Deck Builder',
+    desc: 'Trex, TimberTech and AZEK decks for NoVA homes.',
+  },
+  {
+    href: '/services/deck-replacement',
+    title: 'Deck Replacement',
+    desc: 'Tear-down, resurfacing and wood-to-composite upgrades.',
+  },
+  {
     href: '/before-and-after',
     title: 'Before & After',
     desc: 'See real deck transformations with costs and timelines.',
@@ -22,6 +32,11 @@ const links = [
     href: '/areas-we-serve',
     title: 'Areas We Serve',
     desc: '70+ cities across Loudoun, Fairfax & Prince William.',
+  },
+  {
+    href: '/screened-porch-builder-northern-virginia',
+    title: 'Screened Porch Builder',
+    desc: 'Targeted page for screened porch builder searches.',
   },
   {
     href: '/team',

@@ -10,12 +10,13 @@ import RelatedGuides from '@/components/RelatedGuides';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import ServicesCallToAction from '@/components/ServicesCallToAction';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/deck-replacement",
   title: "Professional Deck Replacement Northern Virginia | Rebuild & Remodel",
-  description: "Breathe new life into your backyard with professional deck replacement services in Northern Virginia. We specialize in transforming old wood decks into luxury composite spaces."
+  description: "Deck replacement and resurfacing in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite upgrades."
 });
 
 const serviceSchema = {
@@ -62,7 +63,9 @@ const replacementBenefits = [
   { title: "Code Compliance", desc: "We ensure every rebuild meets or exceeds current VA building codes." },
   { title: "Trex Specialists", desc: "Authorized installers for the world's #1 decking brand." },
   { title: "Clean Jobsite", desc: "No debris left behind; we respect your lawn and landscaping." },
-  { title: "Fast Turnaround", desc: "Most basic replacements are completed in under 7 business days." },
+  { title: "Permits & HOA Handled", desc: "We coordinate county permit requirements and HOA architectural review details." },
+  { title: "Typical Timeline: 2-4 Weeks", desc: "Most full replacement builds take 2-4 weeks once permits and material selections are complete." },
+  { title: "Before & After Results", desc: "See completed deck transformations so you can compare old wood decks with finished composite rebuilds." },
   { title: "Fixed Pricing", desc: "Detailed, itemized quotes with no hidden 'extra' fees during construction." }
 ];
 
@@ -71,9 +74,9 @@ export default function DeckReplacementPage() {
     <main>
       <JsonLd data={serviceSchema} />
       <ServicesHeader
-        subtext="Old to New Transformation"
+        subtext="Projects from $15,000+"
         title="Professional Deck Replacement in Northern Virginia"
-        description="Don't let an aging, splintering deck hold you back. We specialize in tearing down old structures and building premium, low-maintenance outdoor retreats."
+        description="Don't let an aging, splintering deck hold you back. We specialize in tearing down old structures and building premium, low-maintenance outdoor retreats. Permits and HOA handled. Typical build timeline: 2-4 weeks."
       />
 
       <AboveFoldCTA headline="Aging deck in Northern Virginia? Get a free structural evaluation and replacement estimate today." />
@@ -82,7 +85,7 @@ export default function DeckReplacementPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>New replacement build minimum: $5,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Replacement and resurfacing projects from $15,000+</strong>
             <br />
             On this page we focus on <strong style={{ color: '#111' }}>full tear-down and rebuild projects</strong>. Looking for board replacement, railing or structural fixes on an otherwise sound deck? See our <a href="/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
@@ -93,9 +96,9 @@ export default function DeckReplacementPage() {
       <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
-            <strong style={{ color: '#222' }}>Deck replacement projects typically start at $18,000+</strong>
+            <strong style={{ color: '#222' }}>Full deck replacement projects typically range from $20,000-$50,000</strong>
             {' '}— deck size, structural condition, materials, and railing upgrades affect final pricing.{' '}
-            <strong>Free structural evaluation included.</strong>
+            <strong>Free structural evaluation, permit guidance, and HOA coordination included.</strong>
           </p>
         </div>
       </section>
@@ -109,7 +112,9 @@ export default function DeckReplacementPage() {
           "Verification of framing and footing integrity",
           "High-end composite and PVC board options",
           "Modern railing and lighting upgrades",
-          "Comprehensive HOA and permit coordination"
+          "Comprehensive HOA and permit coordination",
+          "Typical build timeline: 2-4 weeks",
+          "Before & after transformation planning"
         ]}
         image1="/images/img05.jpeg"
         image2="/images/img06.jpeg"
@@ -148,6 +153,7 @@ export default function DeckReplacementPage() {
         items={replacementBenefits}
       />
       <ServiceAreasGrid />
+      <ServicesCallToAction />
       <RelatedGuides currentPath="/services/deck-replacement" />
       <SimpleCTA title="Ready for a New Deck?" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />

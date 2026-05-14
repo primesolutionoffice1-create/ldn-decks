@@ -1,0 +1,37 @@
+{
+  "schema_version": "lead-ingest.v1",
+  "event_id": "53c844e3-379c-4a03-905b-95b19d03bb18",
+  "submitted_at": "2026-05-13T14:30:00.000-04:00",
+  "form_type": "quote",
+  "landing_page": "https://ldndecks.com/deck-builder-ashburn-va?gclid=TEST_GCLID_PHASE2",
+  "page_path": "/deck-builder-ashburn-va",
+  "referrer": "https://www.google.com/",
+  "source": "google",
+  "medium": "cpc",
+  "campaign": "LDN-City-Search-NoVA",
+  "keyword": "deck builder ashburn va",
+  "click_ids": {
+    "gclid": "TEST_GCLID_PHASE2",
+    "gbraid": null,
+    "wbraid": null,
+    "fbclid": null,
+    "msclkid": null
+  },
+  "lead": {
+    "first_name": "Jane",
+    "last_name": "Homeowner",
+    "email": "jane@example.com",
+    "phone": "5715551234",
+    "address": "123 Main St",
+    "city": "Ashburn",
+    "state": "VA",
+    "zip": "20148",
+    "service_type": "Composite Deck",
+    "message": "Interested in replacing an old wood deck with Trex."
+  },
+  "technical": {
+    "user_agent": "Mozilla/5.0 test fixture",
+    "ip_hash": null,
+    "consent_state": "granted_or_unknown"
+  }
+}

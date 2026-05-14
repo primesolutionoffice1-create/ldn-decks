@@ -7,6 +7,7 @@ import { buildMetadata } from '@/lib/seo';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesHome from '@/components/ServicesHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import CallLink, { BUSINESS_PHONE_DISPLAY } from '@/components/CallLink';
 import styles from './BlogContent.module.css';
 
 // Pre-render all blog posts at build time for proper indexing
@@ -20,8 +21,8 @@ export async function generateMetadata({ params }) {
   if (!post) return { title: 'Post Not Found', robots: { index: false, follow: false } };
   const base = buildMetadata({
     path: `/blog/${post.slug}`,
-    title: `${post.title} | Loudoun Decks Expert Insights`,
-    description: post.excerpt,
+    title: post.metaTitle || `${post.title} | Loudoun Decks Expert Insights`,
+    description: post.metaDescription || post.excerpt,
     image: post.image,
   });
   return {
@@ -31,6 +32,38 @@ export async function generateMetadata({ params }) {
       type: 'article',
     },
   };
+}
+
+// Lightweight inline renderer: handles **bold** and [label](url) without
+// pulling in a markdown lib. Anchors that begin with "/" are routed through
+// next/link; external links render as plain anchors.
+function renderInline(text, keyPrefix = 'i') {
+  const nodes = [];
+  let cursor = 0;
+  const linkBoldRegex = /(\*\*([^*]+)\*\*)|(\[([^\]]+)\]\(([^)]+)\))/g;
+  let match;
+  let n = 0;
+  while ((match = linkBoldRegex.exec(text)) !== null) {
+    if (match.index > cursor) {
+      nodes.push(text.slice(cursor, match.index));
+    }
+    if (match[1]) {
+      nodes.push(<strong key={`${keyPrefix}-b-${n++}`}>{match[2]}</strong>);
+    } else if (match[3]) {
+      const href = match[5];
+      const label = match[4];
+      if (href.startsWith('/')) {
+        nodes.push(<Link key={`${keyPrefix}-l-${n++}`} href={href}>{label}</Link>);
+      } else {
+        nodes.push(
+          <a key={`${keyPrefix}-a-${n++}`} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
+        );
+      }
+    }
+    cursor = match.index + match[0].length;
+  }
+  if (cursor < text.length) nodes.push(text.slice(cursor));
+  return nodes;
 }
 
 export default async function SingleBlogPage({ params }) {
@@ -82,12 +115,46 @@ export default async function SingleBlogPage({ params }) {
     }
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldndecks.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ldndecks.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://ldndecks.com/blog/${post.slug}` },
+    ],
+  };
+
+  const faqSchema = post.faq && post.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": post.faq.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        // Strip basic markdown out of the answer text for the schema payload
+        "text": item.a.replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
+      },
+    })),
+  } : null;
+
   return (
     <article className={styles.articlePage}>
        <script
          type="application/ld+json"
          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
        />
+       <script
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+       />
+       {faqSchema && (
+         <script
+           type="application/ld+json"
+           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+         />
+       )}
 
        {/* Hero Image Block */}
        <div className={styles.heroSection}>
@@ -111,22 +178,43 @@ export default async function SingleBlogPage({ params }) {
        <div className={styles.contentSection}>
           <div className={styles.containerNarrow}>
              <div className={styles.contentBody}>
-               <p className={styles.leadParagraph}>{post.excerpt}</p>
+               <p className={styles.leadParagraph}>{renderInline(post.excerpt, 'lead')}</p>
                {paragraphs.map((para, idx) => {
-                 // Check if it's an H2 or H3 heading
                  if (para.startsWith('## ')) {
-                   return <h2 key={idx} style={{ marginTop: '40px', marginBottom: '20px', color: '#111' }}>{para.replace('## ', '')}</h2>
+                   return <h2 key={idx} style={{ marginTop: '40px', marginBottom: '20px', color: '#111' }}>{para.replace('## ', '')}</h2>;
                  }
                  if (para.startsWith('### ')) {
-                   return <h3 key={idx} style={{ marginTop: '30px', marginBottom: '15px', color: '#222' }}>{para.replace('### ', '')}</h3>
+                   return <h3 key={idx} style={{ marginTop: '30px', marginBottom: '15px', color: '#222' }}>{para.replace('### ', '')}</h3>;
                  }
-                 return <p key={idx}>{para}</p>
+                 return <p key={idx}>{renderInline(para, `p${idx}`)}</p>;
                })}
-               
+
+               {post.faq && post.faq.length > 0 && (
+                 <section style={{ marginTop: '60px' }}>
+                   <h2 style={{ marginBottom: '20px', color: '#111' }}>Frequently Asked Questions</h2>
+                   {post.faq.map((item, i) => (
+                     <div key={i} style={{ marginBottom: '24px' }}>
+                       <h3 style={{ marginBottom: '10px', color: '#222' }}>{item.q}</h3>
+                       <p>{renderInline(item.a, `faq${i}`)}</p>
+                     </div>
+                   ))}
+                 </section>
+               )}
+
+               {post.disclaimer && (
+                 <p style={{ marginTop: '40px', fontSize: '14px', color: '#777', fontStyle: 'italic', borderTop: '1px solid #eee', paddingTop: '20px' }}>
+                   {post.disclaimer}
+                 </p>
+               )}
+
                <div className={styles.conclusionBox}>
-                 <h3>Ready to upgrade your outdoor living space?</h3>
-                 <p>Contact Loudoun Decks today for a free estimate and planning consultation.</p>
-                 <Link href="/contact" className={styles.ctaBtn}>Get Started</Link>
+                 <h3>Plan Your Northern Virginia Deck Project With Loudoun Decks</h3>
+                 <p>
+                   Get a free, no-pressure consultation from a licensed Northern Virginia deck builder. Call{' '}
+                   <CallLink style={{ color: 'var(--button-color)', fontWeight: 700 }} />{' '}
+                   or visit <Link href="/contact" style={{ color: 'var(--button-color)', fontWeight: 700 }}>ldndecks.com/contact</Link>.
+                 </p>
+                 <Link href="/contact" className={styles.ctaBtn}>Get a Free Estimate</Link>
                </div>
              </div>
           </div>

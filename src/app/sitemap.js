@@ -45,7 +45,6 @@ const EXCLUDE_PATHS = [
   '/deck-builder-in-fairfax-county',
   '/deck-builder-in-prince-william-county',
   // Phase 1 Cleanup Exclusions
-  '/near-you',
   '/llms.txt',
   '/llms-full.txt',
   '/showcase/rooftop-deck-washington-dc',
@@ -84,6 +83,7 @@ export default async function sitemap() {
                 // Tier 2 - Core service pages
                 { path: "/composite-decks",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
                 { path: "/trex-decks",                   priority: 0.90, lastMod: TIER2, freq: "weekly" },
+                { path: "/timbertech-decks",             priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/wood-decks",                   priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 // /deck-replacement removed — redirects to /services/deck-replacement (already in sitemap below)
                 { path: "/deck-remodeling",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
@@ -147,6 +147,7 @@ export default async function sitemap() {
                 { path: "/deck-permit-fairfax-county-virginia",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-mclean-va",                     priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-kitchen-builder-northern-virginia",   priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/outdoor-living-northern-virginia",             priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-staining-northern-virginia",            priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-financing-northern-virginia",           priority: 0.80, lastMod: TIER1, freq: "weekly" },
 

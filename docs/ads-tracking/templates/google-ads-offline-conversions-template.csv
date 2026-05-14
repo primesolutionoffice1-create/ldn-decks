@@ -1,0 +1,5 @@
+Google Click ID,Conversion Name,Conversion Time,Conversion Value,Conversion Currency,Order ID
+TEST_GCLID_REPLACE_ME,Qualified Lead,2026-05-13 10:30:00-0400,500,USD,EVENT_ID_REPLACE_ME::Qualified Lead
+TEST_GCLID_REPLACE_ME,Estimate Scheduled,2026-05-13 11:00:00-0400,1000,USD,EVENT_ID_REPLACE_ME::Estimate Scheduled
+TEST_GCLID_REPLACE_ME,Contract Signed,2026-05-20 14:15:00-0400,42000,USD,EVENT_ID_REPLACE_ME::Contract Signed
+TEST_GCLID_REPLACE_ME,Closed Paid,2026-06-10 16:45:00-0400,42000,USD,EVENT_ID_REPLACE_ME::Closed Paid
