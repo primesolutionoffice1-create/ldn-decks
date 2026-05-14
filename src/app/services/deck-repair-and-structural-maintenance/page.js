@@ -10,7 +10,6 @@ import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -88,7 +87,6 @@ export default function DeckRepairPage() {
         description="Specialized structural deck repair in Northern Virginia. Fix rotted posts, sinking decks, and code violations. Expert remediation for failed inspections." 
         price="2500" 
       />
-      <Breadcrumbs />
       <ServicesHeader 
         subtext="Structural Integrity Specialist"
         title="Deck Repair & Structural Maintenance"

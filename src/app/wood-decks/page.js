@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -30,7 +29,6 @@ export default function WoodDecksPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <Breadcrumbs />
       {/* Hero with full-width background image */}
       <section style={{ position: 'relative', minHeight: 520, overflow: 'hidden' }}>
         <Image
