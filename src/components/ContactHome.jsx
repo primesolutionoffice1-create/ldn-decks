@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import styles from './ContactHome.module.css';
 import { useLeadSubmit } from '@/hooks/useLeadSubmit';
+import CallLink from '@/components/CallLink';
 
 const PhoneIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -52,7 +53,7 @@ export default function ContactHome() {
               <div className={styles.iconBox}><PhoneIcon /></div>
               <div className={styles.infoText}>
                 <span>Call Us Anytime</span>
-                <strong>+1 (571) 655-7207</strong>
+                <CallLink display="+1 (571) 655-7207" />
               </div>
             </div>
             

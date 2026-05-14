@@ -93,6 +93,17 @@
   font-weight: 800;
 }
 
+.infoText a {
+  font-size: 19px;
+  color: var(--black);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.infoText a:hover {
+  color: var(--site-color);
+}
+
 /* Right Column Form */
 .rightCol {
   background-color: #fcfbf9;

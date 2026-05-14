@@ -150,9 +150,9 @@ export default function GetEstimatePage() {
             {[
               { title: 'Custom Composite Decks', price: 'From $15K', desc: 'Trex, TimberTech & AZEK', href: '/composite-deck-cost-northern-virginia' },
               { title: 'Screened Porches', price: 'From $25K', desc: 'Bug-free 3-season rooms', href: '/screened-porch-cost-northern-virginia' },
-              { title: 'Deck Resurfacing', price: 'From $12K', desc: 'Wood to composite upgrade', href: '/deck-resurfacing-vs-replacement' },
+              { title: 'Deck Resurfacing', price: 'From $15K', desc: 'Wood to composite upgrade', href: '/deck-resurfacing-vs-replacement' },
               { title: 'Pergolas & Gazebos', price: 'From $8K', desc: 'Shade structures', href: '/services/gazebo-pergola' },
-              { title: 'Deck Repair', price: 'From $500', desc: 'Rot, railings & structural', href: '/deck-repair-loudoun-county' },
+              { title: 'Structural Repair', price: 'From $2.5K', desc: 'Posts, ledger & inspection fixes', href: '/services/deck-repair-and-structural-maintenance' },
               { title: 'Patios & Hardscape', price: 'From $10K', desc: 'Pavers, flagstone, stamped', href: '/services/patios' },
             ].map(s => (
               <Link key={s.href} href={s.href} style={{ display: 'block', background: '#fff', borderRadius: 8, padding: '1.25rem', textDecoration: 'none', color: 'inherit', border: '1px solid #e5e5e5' }}>

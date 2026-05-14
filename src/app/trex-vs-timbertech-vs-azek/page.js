@@ -5,6 +5,7 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import NamedAuthor from '@/components/NamedAuthor';
+import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -42,7 +43,7 @@ export default function TrexVsTimberTechPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Our Recommendation:</p>
-          <p><strong>Best overall:</strong> Trex Transcend ($45–$65/sqft). <strong>Best premium:</strong> TimberTech AZEK ($50–$75/sqft, 50-yr warranty). <strong>Best value:</strong> Trex Enhance ($30–$50/sqft). <strong>Best Trex alternative:</strong> Fiberon Concordia ($48–$70/sqft). We install all four <a href="tel:+15716557207" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>call for samples</a>.</p>
+          <p><strong>Best overall:</strong> Trex Transcend ($45–$65/sqft). <strong>Best premium:</strong> TimberTech AZEK ($50–$75/sqft, 50-yr warranty). <strong>Best value:</strong> Trex Enhance ($30–$50/sqft). <strong>Best Trex alternative:</strong> Fiberon Concordia ($48–$70/sqft). We install all four <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>call for samples</CallLink>.</p>
         </div>
       </section>
 
