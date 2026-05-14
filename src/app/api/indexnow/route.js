@@ -97,7 +97,8 @@ function buildAllUrls() {
     '/deck-permit-prince-william-county-virginia',
     '/deck-repair-loudoun-county',
     '/deck-builders-loudoun',
-    '/composite-decks', '/trex-decks', '/timbertech-decks', '/deck-repair', '/services/deck-replacement', '/deck-remodeling',
+    '/composite-decks', '/trex-decks', '/timbertech-decks', '/deck-repair',
+    '/services/deck-replacement', '/services/deck-repair-and-structural-maintenance', '/deck-remodeling',
   ];
 
   for (const path of staticPages) {

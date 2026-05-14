@@ -112,6 +112,7 @@ const nextConfig = {
 
       // Services
       { source: '/services/new-decks-installation', destination: '/services/new-decks', permanent: true },
+      { source: '/services/deck-repair', destination: '/services/deck-repair-and-structural-maintenance', permanent: true },
       { source: '/services/outdoor-power-washing', destination: '/services/outdoor-washing', permanent: true },
       { source: '/services/outdoor-power-washing/:path*', destination: '/services/outdoor-washing', permanent: true },
       { source: '/services/gazebos-and-pergolas', destination: '/services/gazebo-pergola', permanent: true },
