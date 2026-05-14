@@ -303,7 +303,7 @@ const nextConfig = {
       // Using explicit statusCode 301 (was permanent:true / 308). 301 is the
       // historic canonical-permanent code; some legacy bots / link aggregators
       // still treat it as a stronger signal than 308 even though Google handles
-      // both. Middleware (src/middleware.js) is the fallback for any other
+      // both. Proxy (src/proxy.js) is the fallback for any other
       // www.* host this rule doesn't cover.
       {
         source: '/:path*',
