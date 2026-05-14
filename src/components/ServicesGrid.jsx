@@ -80,13 +80,6 @@ const servicesContent = [
     desc: 'Give your old deck a fresh, modern look with Trex Calm Shell a premium composite color designed for durability, style, and low maintenance.',
     image: '/images/img26.jpeg',
     link: '/services/trex-calm-shell'
-  },
-  {
-    id: 11,
-    title: 'Deck Repair & Structural Restoration',
-    desc: 'Inspection-first deck repair across Northern Virginia. Ledger flashing, joist sistering, post rot, stair stringers, and code-compliant railing rebuilds. Composite resurfacing when the framing is sound, full structural rebuild when it is not.',
-    image: '/torndeck.webp',
-    link: '/services/deck-repair'
   }
 ];
 
