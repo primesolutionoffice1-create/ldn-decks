@@ -134,7 +134,7 @@ export default function DeckRepairLoudounCountyPage() {
       <section style={{ background: '#fff8f1', borderLeft: '4px solid var(--color-primary)', padding: '1.25rem 1.5rem', maxWidth: 900, margin: '1.5rem auto', borderRadius: 8 }}>
         <p style={{ margin: 0, lineHeight: 1.7 }}>
           <strong>Beyond Loudoun-specific guidance:</strong> see the full Northern Virginia repair hub for structural decision frameworks, cost ranges by repair type, permit triggers across all NoVA counties, and the repair-vs-replace decision math.{' '}
-          <a href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Open the NoVA Deck Repair Hub →</a>
+          <a href="/services/deck-repair-and-structural-maintenance" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Open the NoVA Structural Repair Hub →</a>
         </p>
       </section>
 
