@@ -4,6 +4,45 @@
 **Scope:** HIGH-1 (Google Ads dedup) + HIGH-2 (GA4 SPA reliability)
 **Audience:** the operator who has GTM container edit access. Every step is concrete; no ambiguous "ensure that…" instructions.
 
+## Post-publish status — 2026-05-15
+
+**Status:** HIGH-1 is live.
+
+**Published GTM version:** `25`
+**Version name:** `Ads tracking: lead_confirmed + event_id dedup`
+**Published:** 2026-05-15 by `loudoundecks@gmail.com`
+
+Published changes:
+
+| Item | Type | Change | Status |
+|---|---|---|---|
+| `DLV - event_id` | Variable | Added | LIVE |
+| `Google Ads - Form Lead Conversion` | Tag | Modified | LIVE |
+| `lead_confirmed - Custom Event` | Trigger | Modified | LIVE |
+
+Live Version 25 tag state:
+
+| Tag | Trigger | Status |
+|---|---|---|
+| `GA4 Event - generate_lead` | `lead_confirmed - Custom Event` | LIVE |
+| `Google Ads - Form Lead Conversion` | `lead_confirmed - Custom Event` | LIVE |
+| `Google Ads - User Provided Data - Form Lead` | `lead_confirmed - Custom Event` | LIVE |
+| `Google Ads - Call Lead Conversion` | `phone_click` | unchanged |
+| `Phone clicks - GA4` | `phone_click` | unchanged |
+
+Preview validation before publish:
+
+| Check | Result |
+|---|---|
+| Test URL `/thank-you?eid=codex-test-1778875877482` produced `lead_confirmed` | PASS |
+| `GA4 Event - generate_lead` fired once | PASS |
+| `Google Ads - Form Lead Conversion` fired once | PASS |
+| `Google Ads - User Provided Data - Form Lead` fired once | PASS |
+| `Google Ads - Form Lead Conversion` Transaction ID resolved to `codex-test-1778875877482` | PASS |
+| Phone tags did not fire during thank-you test | PASS |
+
+Important note: the preview test used a direct `/thank-you?eid=...` URL to validate the GTM mapping without submitting a real sales form. The next required validation is with 5-10 real production leads.
+
 This is a **runbook**, not a report. The "report" half lives at the bottom — a fill-in section the operator completes after running each step. The whole document, once filled, becomes the validation report.
 
 ---

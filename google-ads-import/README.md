@@ -33,15 +33,17 @@ Google Ads Editor imports structure well, but these settings should be confirmed
 - Display expansion: Off for Search.
 - PMax final URL expansion: Off.
 - Conversion goal: `Qualified Call (Ads) - 60s`.
-- Campaigns and ads remain paused until tracking QA is complete.
+- Campaigns and ads remain paused until real-lead validation and Google Ads diagnostics are complete.
+- GTM Version 25 is live per `docs/tracking-audit/FINAL-ATTRIBUTION-SIGNOFF.md`, but campaigns should still stay paused until 5-10 real leads and Google Ads Enhanced Conversions diagnostics are reviewed.
 - GBP location asset is connected.
 - Call asset schedule is Monday-Friday, 8am-6pm.
 - Shared negative list is attached to all Search campaigns.
-- Repair/refinishing/restoration negatives are attached at the Composite and Replacement campaign level only. Keep repair in a separate campaign if it is ever tested.
+- Repair/refinishing/restoration negatives are attached at the Composite and Replacement campaign level.
+- Repair, patio, porch, fence, hardscaping, and broad construction negatives are attached at the Deck Builders campaign level. Keep those services in separate campaigns if they are tested.
 
 ## Files
 
-- `01-campaigns.csv` - 3 Search campaigns + 1 PMax remarketing campaign.
+- `01-campaigns.csv` - 4 Search campaigns + 1 PMax remarketing campaign.
 - `02-ad-groups.csv` - Search ad groups.
 - `03-keywords.csv` - Exact and phrase keywords only.
 - `04-responsive-search-ads.csv` - 2 RSAs per ad group.
@@ -51,4 +53,4 @@ Google Ads Editor imports structure well, but these settings should be confirmed
 - `08-pmax-remarketing-assets.csv` - PMax remarketing asset group copy.
 - `09-call-asset.csv` - phone asset setup values.
 - `10-location-targets.csv` - 3-county presence targeting.
-- `11-campaign-negative-keywords.csv` - campaign-level repair/refinishing negatives for high-ticket Search.
+- `11-campaign-negative-keywords.csv` - campaign-level repair/refinishing and adjacent-intent negatives for high-ticket Search.

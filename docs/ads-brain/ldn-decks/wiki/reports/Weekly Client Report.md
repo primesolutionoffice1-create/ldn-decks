@@ -41,7 +41,7 @@ sources:
 - Client: LDN Decks
 - Platforms covered: Google Ads
 - Source summaries: 22
-- Day 0 tracking/privacy gate: **operator_verification_pending**
+- Day 0 tracking/privacy gate: **real_lead_validation_pending**
 - Ads Health Score: **57 (D)**
 - Attribution caveat: reported ROAS is **reported, not incremental** unless a holdout or incrementality source is linked.
 - Modeled vs. observed conversion split: unknown unless explicitly supplied by source exports.
@@ -49,6 +49,11 @@ sources:
 ## 1. Tracking Health
 
 LDN Decks has an Ads Health Score of **57 (D)** based on 22 imported source summaries.
+
+GTM Version 25 is live per the local final sign-off: Google Ads Form Lead, GA4
+`generate_lead`, and User Provided Data fired once on `lead_confirmed` in
+Preview, with `event_id` used as the Google Ads transaction ID. The remaining
+blocker is real production validation, not code wiring.
 
 ![[tracking-trust-by-platform.svg]]
 
@@ -97,9 +102,9 @@ is not `trusted`.
 - SpyFu showed the largest useful PPC cluster around deck builders/contractors/installation near-me searches.
 - The Google Ads import pack now includes `SRCH | Deck Builders | 3 Counties | Calls` at $45/day, mapped to `/deck-builders-loudoun/`.
 - The new campaign has 2 ad groups, 30 exact/phrase keywords, 4 RSAs, call/location assets, sitelinks, callouts, and campaign-level negatives for repair, patio, porch, fence, hardscaping, and broad construction intent.
-- This is ready for operator review as a paused import, not ready for live optimization until GTM/Google Ads/GA4 verification is complete.
+- This is ready for operator review as a paused import, not ready for live optimization until real-lead validation and Google Ads diagnostics are complete.
 
-- X-PI1 (critical, fail): Tracking/privacy gate must be closed before optimization actions are trusted. Evidence: Day 0 gate status: operator_verification_pending
+- X-PI1 (critical, fail): Tracking/privacy gate must be closed before optimization actions are trusted. Evidence: Day 0 gate status: real_lead_validation_pending
 - X-CLK1 (high, fail): Imported clicks are zero or missing. Evidence: Clicks 0.0.
 - X-ST1 (medium, warning): No search-term hygiene candidates detected or no search-term export imported. Evidence: Negative keyword candidate queues are empty.
 - G-TRK1 (critical, warning): Conversion action evidence present for Google Ads. Evidence: column: missing
@@ -217,7 +222,7 @@ is not `trusted`.
 
 | ID | Platform | Severity | Status | Check | Evidence | Source |
 | --- | --- | --- | --- | --- | --- | --- |
-| X-PI1 | cross-platform | critical | fail | Tracking/privacy gate must be closed before optimization actions are trusted. | Day 0 gate status: operator_verification_pending | wiki/flows/Day 0 Tracking and Privacy Gate.md |
+| X-PI1 | cross-platform | critical | fail | Tracking/privacy gate must be closed before optimization actions are trusted. | Day 0 gate status: real_lead_validation_pending | wiki/flows/Day 0 Tracking and Privacy Gate.md |
 | X-SRC1 | cross-platform | critical | pass | Every platform summary must cite immutable raw source path and hash. | 22 imported source summaries checked. | .raw/sources/exports/google/2026-05-15-01-campaigns-2.csv, .raw/sources/exports/google/2026-05-15-01-campaigns.csv, .raw/sources/exports/google/2026-05-15-02-ad-groups-2.csv, .raw/sources/exports/google/2026-05-15-02-ad-groups.csv, .raw/sources/exports/google/2026-05-15-03-keywords-2.csv, .raw/sources/exports/google/2026-05-15-03-keywords.csv, .raw/sources/exports/google/2026-05-15-04-responsive-search-ads-2.csv, .raw/sources/exports/google/2026-05-15-04-responsive-search-ads.csv, .raw/sources/exports/google/2026-05-15-05-shared-negative-keywords-2.csv, .raw/sources/exports/google/2026-05-15-05-shared-negative-keywords.csv, .raw/sources/exports/google/2026-05-15-06-sitelinks-2.csv, .raw/sources/exports/google/2026-05-15-06-sitelinks.csv, .raw/sources/exports/google/2026-05-15-07-callouts-2.csv, .raw/sources/exports/google/2026-05-15-07-callouts.csv, .raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets-2.csv, .raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets |
 | X-CTX1 | cross-platform | medium | pass | Landing-page, query, or SERP context should be present before strategic recommendations. | 2 enrichment/context sources found. | .raw/sources/research/2026-05-09-ads-brain-production-research.md, wiki/sources/Market Context 2026-05-15.md |
 | X-CV1 | cross-platform | critical | pass | Imported conversion totals are non-zero or no spend is present. | Cost 0.0, conversions 0.0. | .raw/sources/exports/google/2026-05-15-01-campaigns-2.csv, .raw/sources/exports/google/2026-05-15-01-campaigns.csv, .raw/sources/exports/google/2026-05-15-02-ad-groups-2.csv, .raw/sources/exports/google/2026-05-15-02-ad-groups.csv, .raw/sources/exports/google/2026-05-15-03-keywords-2.csv, .raw/sources/exports/google/2026-05-15-03-keywords.csv, .raw/sources/exports/google/2026-05-15-04-responsive-search-ads-2.csv, .raw/sources/exports/google/2026-05-15-04-responsive-search-ads.csv, .raw/sources/exports/google/2026-05-15-05-shared-negative-keywords-2.csv, .raw/sources/exports/google/2026-05-15-05-shared-negative-keywords.csv, .raw/sources/exports/google/2026-05-15-06-sitelinks-2.csv, .raw/sources/exports/google/2026-05-15-06-sitelinks.csv, .raw/sources/exports/google/2026-05-15-07-callouts-2.csv, .raw/sources/exports/google/2026-05-15-07-callouts.csv, .raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets-2.csv, .raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets |

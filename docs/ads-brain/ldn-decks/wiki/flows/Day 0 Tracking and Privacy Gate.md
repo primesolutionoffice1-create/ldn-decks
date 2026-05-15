@@ -3,7 +3,7 @@ brain_schema: ads-brain.v1
 created: "2026-05-15"
 type: flow
 title: "Day 0 Tracking and Privacy Gate"
-status: operator-verification-pending
+status: real-lead-validation-pending
 updated: "2026-05-15"
 ---
 
@@ -32,7 +32,7 @@ and attribution are understood.
 
 ## Structured Status
 
-- gate_status: operator_verification_pending
+- gate_status: real_lead_validation_pending
 - owner: LDN Decks
 - evidence_note: ../../../../docs/tracking-audit/FINAL-ATTRIBUTION-SIGNOFF.md
 - accepted_risk: false
@@ -54,7 +54,13 @@ spots in homepage form attribution, sitewide phone CTA tracking, and Consent
 Mode timing. Code-side fixes are now in place and `npm run build` passed on
 2026-05-15 with 246 static pages generated.
 
-The remaining blocker is operator-side verification in GTM, Google Ads, GA4,
-and conversion action settings. Until those checks are signed off, SpyFu and
-keyword exports may guide structure, copy, negatives, and landing-page mapping,
-but not budget scaling, broad match, tCPA/tROAS, or Smart Bidding expansion.
+`FINAL-ATTRIBUTION-SIGNOFF.md` now records GTM Version 25 live in container
+`GTM-N87MG6QS`: `lead_confirmed` triggers Google Ads Form Lead, GA4
+`generate_lead`, and Google Ads User Provided Data once in Preview, with
+`Transaction ID = {{DLV - event_id}}`.
+
+The remaining blocker is production evidence: 5-10 real leads, Google Ads
+Enhanced Conversions diagnostics after the 24-48h processing window, and
+conversion-action review. Until that evidence is signed off, SpyFu and keyword
+exports may guide structure, copy, negatives, and landing-page mapping, but not
+budget scaling, broad match, tCPA/tROAS, or Smart Bidding expansion.

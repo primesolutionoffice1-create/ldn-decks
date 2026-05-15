@@ -2,6 +2,25 @@
 
 **Scope:** HIGH-3 — turn on Google Ads Enhanced Conversions for Web, verify hashing happens client-side, prove no plaintext PII leaves the browser, and map the full available user-provided data set.
 
+## 2026-05-15 status
+
+GTM Version `25` is live with `Google Ads - User Provided Data - Form Lead`
+firing on `lead_confirmed - Custom Event`.
+
+Preview validation confirmed the User Provided Data event fired once on the
+`lead_confirmed` test event. Full Enhanced Conversions diagnostics still need
+the normal Google Ads post-processing window and real production leads.
+
+Current status:
+
+| Check | Status |
+|---|---|
+| User-provided data tag fires only after confirmed lead | PASS |
+| Test event fired in Tag Assistant | PASS |
+| Google Ads diagnostics shows Enhanced Conversions active | PENDING, allow 24-48h after real leads |
+| Match quality from real leads | PENDING, requires 5-10 real leads minimum |
+| Full no-plaintext network inspection with real form submit | PENDING, run during next controlled QA submit |
+
 This is a follow-up to `GTM-VALIDATION-REPORT.md`. **Do not run this document until HIGH-1 is signed off** — Enhanced Conversions attach to the Lead conversion tag, which must already be firing on `lead_confirmed`.
 
 ---

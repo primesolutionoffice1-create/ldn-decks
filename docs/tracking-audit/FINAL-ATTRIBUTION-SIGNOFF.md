@@ -5,6 +5,21 @@
 **Last code verification:** 2026-05-15
 **Scope:** the single document that determines whether the attribution layer is production-ready for Smart Bidding decisions.
 
+## 2026-05-15 GTM publish update
+
+The HIGH-1 GTM conversion migration is now live in container `GTM-N87MG6QS`.
+
+| Gate | Status | Evidence |
+|---|---|---|
+| GTM version published | PASS | Version `25`, `Ads tracking: lead_confirmed + event_id dedup`, published 2026-05-15 by `loudoundecks@gmail.com` |
+| Lead trigger migrated | PASS | `lead_confirmed - Custom Event` has 3 lead tags attached in Version 25 |
+| Google Ads form conversion trigger | PASS | `Google Ads - Form Lead Conversion` fires on `lead_confirmed - Custom Event` |
+| Google Ads dedup key | PASS | `Transaction ID = {{DLV - event_id}}`; Preview resolved to `codex-test-1778875877482` |
+| Enhanced Conversions event trigger | PASS | `Google Ads - User Provided Data - Form Lead` fires on `lead_confirmed - Custom Event` |
+| Preview validation | PASS | Tag Assistant showed GA4 generate_lead, Google Ads Form Lead, and User Provided Data firing once on `lead_confirmed` |
+| Production real-lead validation | PENDING | Requires 5-10 real leads after publish |
+| Smart Bidding changes | BLOCKED | Do not change budgets, bid strategies, tCPA, tROAS, or Max Conversions until real-lead validation passes |
+
 This document has two halves:
 - **Section A — Code Layer Sign-off**: conditions I can verify autonomously. Pre-filled below; the operator only checks the record.
 - **Section B — Operator Layer Sign-off**: conditions that require GTM container / Google Ads UI access. The operator (or their PPC consultant) fills these in after running the three preceding runbooks.

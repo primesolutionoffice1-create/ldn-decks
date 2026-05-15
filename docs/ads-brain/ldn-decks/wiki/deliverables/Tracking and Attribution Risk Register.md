@@ -40,8 +40,16 @@ Tracking/privacy readiness is not automatically proven by platform exports.
 
 ## Gate Status
 
-- Day 0 gate status: **operator_verification_pending**
-- Optimization actions are blocked until the gate is `closed` or `approved`.
+- Day 0 gate status: **real_lead_validation_pending**
+- Structure/import actions may be prepared while paused. Optimization actions are blocked until 5-10 real leads and Google Ads diagnostics are reviewed.
+
+## Current Evidence
+
+- Code-side tracking fixes pass `npm run build` with 246 static pages.
+- GTM Version 25 is live in container `GTM-N87MG6QS` per `FINAL-ATTRIBUTION-SIGNOFF.md`.
+- Preview validation showed GA4 `generate_lead`, Google Ads Form Lead, and Google Ads User Provided Data firing once on `lead_confirmed`.
+- Google Ads Form Lead transaction ID maps to `{{DLV - event_id}}`.
+- Remaining risk: production real-lead validation, Enhanced Conversions diagnostics, and conversion-action settings review.
 
 ## Tracking Trust by Platform
 
@@ -63,7 +71,7 @@ Tracking/privacy readiness is not automatically proven by platform exports.
 
 | ID | Platform | Severity | Status | Check | Evidence | Source |
 | --- | --- | --- | --- | --- | --- | --- |
-| X-PI1 | cross-platform | critical | fail | Tracking/privacy gate must be closed before optimization actions are trusted. | Day 0 gate status: operator_verification_pending | wiki/flows/Day 0 Tracking and Privacy Gate.md |
+| X-PI1 | cross-platform | critical | fail | Tracking/privacy gate must be closed before optimization actions are trusted. | Day 0 gate status: real_lead_validation_pending | wiki/flows/Day 0 Tracking and Privacy Gate.md |
 | G-TRK1 | google | critical | warning | Conversion action evidence present for Google Ads. | column: missing | .raw/sources/exports/google/2026-05-15-01-campaigns-2.csv |
 | G-CM2 | google | critical | warning | Consent Mode v2 status documented when relevant. | column missing | .raw/sources/exports/google/2026-05-15-01-campaigns-2.csv |
 | G-EC1 | google | critical | warning | Enhanced conversions/offline conversion quality documented. | column missing | .raw/sources/exports/google/2026-05-15-01-campaigns-2.csv |
