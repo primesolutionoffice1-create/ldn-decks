@@ -1,6 +1,6 @@
 # Enhanced Conversions Verification — Loudoun Decks
 
-**Scope:** HIGH-3 — turn on Google Ads Enhanced Conversions for Web, verify hashing happens client-side, prove no plaintext PII leaves the browser, and add city/state to the user-provided data set.
+**Scope:** HIGH-3 — turn on Google Ads Enhanced Conversions for Web, verify hashing happens client-side, prove no plaintext PII leaves the browser, and map the full available user-provided data set.
 
 This is a follow-up to `GTM-VALIDATION-REPORT.md`. **Do not run this document until HIGH-1 is signed off** — Enhanced Conversions attach to the Lead conversion tag, which must already be firing on `lead_confirmed`.
 
@@ -35,8 +35,13 @@ The following dataLayer fields are pushed by `trackFormSubmit` after commit `c9c
   phone: '5715551234',                 // plaintext, normalized by GTM
   first_name: 'Jane',                  // plaintext
   last_name: 'Doe',                    // plaintext
+  street: '123 Main St',               // plaintext when provided
   zip: '20148',                        // plaintext
+  city: 'Ashburn',                     // plaintext when provided
+  state: 'VA',                         // plaintext when provided
   country: 'US',                       // constant
+  service: 'Composite Decks',          // non-PII lead quality field
+  timeline: '1-3 Months',              // non-PII lead quality field
   gclid: 'ABC...',
   gbraid: null,
   wbraid: null,
@@ -45,12 +50,9 @@ The following dataLayer fields are pushed by `trackFormSubmit` after commit `c9c
 }
 ```
 
-Fields **missing** from the current dataLayer that Google Ads accepts (optional but improves match rate):
-- `street` (street address — present in formData as `address`, but not pushed to dataLayer)
-- `city` (present in formData, not pushed)
-- `state` (present in formData, not pushed)
-
-**Action item:** if you want city/state in user_data, follow Section 5 below. If you skip it, match rate is still good (~60-70%) — adding city/state typically nudges to 70-80%.
+Fields now available in dataLayer for richer matching and reporting:
+- `street`, `city`, `state`, `zip`, `country` for Google Ads user-provided address data.
+- `service` and `timeline` for GA4/GTM lead-quality reporting. These are not Enhanced Conversions identity fields.
 
 ---
 
@@ -66,8 +68,11 @@ Open GTM → Variables → User-Defined → New → Data Layer Variable. Create 
 | `DLV - last_name` | `last_name` | 2 | |
 | `DLV - zip` | `zip` | 2 | |
 | `DLV - country` | `country` | 2 | will be constant "US" but pass via dataLayer for consistency |
-| `DLV - city` | `city` | 2 | only after Section 5 code change |
-| `DLV - state` | `state` | 2 | only after Section 5 code change |
+| `DLV - street` | `street` | 2 | optional; only populated by forms that collect address |
+| `DLV - city` | `city` | 2 | optional; only populated by forms that collect city |
+| `DLV - state` | `state` | 2 | optional; only populated by forms that collect state |
+| `DLV - service` | `service` | 2 | non-PII reporting dimension |
+| `DLV - timeline` | `timeline` | 2 | non-PII reporting dimension |
 
 For each, leave "Default value" empty (Google Ads treats empty string as missing, not invalid). Save.
 
@@ -90,11 +95,11 @@ Configure the new variable:
 | Phone Number | `{{DLV - phone}}` |
 | Address → First Name | `{{DLV - first_name}}` |
 | Address → Last Name | `{{DLV - last_name}}` |
+| Address → Street | `{{DLV - street}}` |
 | Address → Postal Code | `{{DLV - zip}}` |
+| Address → City | `{{DLV - city}}` |
+| Address → Region | `{{DLV - state}}` |
 | Address → Country | `{{DLV - country}}` |
-| Address → Street | (leave empty unless Section 5 added) |
-| Address → City | `{{DLV - city}}` if Section 5 done, else leave empty |
-| Address → Region | `{{DLV - state}}` if Section 5 done, else leave empty |
 
 Save the User-Provided Data variable. Save the Lead tag.
 
@@ -187,67 +192,23 @@ If match rate stays <40% after 2 weeks: the data quality is degraded. Check:
 
 ---
 
-## 5. Optional: add city / state to dataLayer (code change)
+## 5. Service and timeline reporting fields
 
-If section 4 passes and you want to push match rate from ~70% to ~80%+, add city and state fields. This is a code change on `feat/ads-tracking-instrumentation`.
+`service` and `timeline` are now pushed into dataLayer on `form_submit`. Do not map
+them into the User-Provided Data variable. Instead, add them as GA4 custom event
+parameters and, if useful, Google Ads custom variables or offline lead columns.
 
-### 5.1 Code diff
+Recommended GA4 event parameter mapping on the `form_submit` or
+`lead_confirmed` GA4 event tag:
 
-```diff
-// src/hooks/useLeadSubmit.js
-   const firstName = formData.get('firstName') || rawName.split(' ')[0] || '';
-   const lastName =
-     formData.get('lastName') || rawName.split(' ').slice(1).join(' ') || '';
-   const zip = formData.get('zip') || '';
-+  const city = formData.get('city') || '';
-+  const state = formData.get('state') || '';
+| Event parameter | Value |
+|---|---|
+| `lead_service` | `{{DLV - service}}` |
+| `lead_timeline` | `{{DLV - timeline}}` |
+| `form_type` | `{{DLV - form_type}}` if already created |
 
-   const result = await sendContactEmail(formData);
-
-   if (result?.success) {
-     if (!hasTracked.current) {
-       hasTracked.current = true;
-       trackFormSubmit({
-         email, phone, firstName, lastName, zip,
-+        city, state,
-         formType, clickIds, eventId,
-       });
-     }
-```
-
-```diff
-// src/lib/tracking.js
- export function trackFormSubmit({
-   email, phone, firstName, lastName, zip,
-+  city, state,
-   formType = 'quote', clickIds = {}, eventId,
- } = {}) {
-   if (typeof window === 'undefined') return;
-   push({
-     event: 'form_submit',
-     // ...
-     zip: zip || null,
-+    city: city || null,
-+    state: state || null,
-     country: 'US',
-```
-
-### 5.2 GTM follow-up
-
-After deploying the code change:
-1. Add `DLV - city` and `DLV - state` variables in GTM (section 2 above)
-2. Open the User-Provided Data variable from section 3
-3. Map Address → City and Address → Region
-4. Save, Preview, verify hashes again per section 4
-5. Publish
-
-### 5.3 Skip condition
-
-Skip section 5 entirely if:
-- Your match rate is already >70% with just zip
-- ContactHome's homepage form doesn't have city/state inputs (it only has name/email/phone/service/timeline/message — adding fields would change form UX)
-
-Both forms today: ContactForm has city/state inputs; ContactHome does not. If you only do section 5 for ContactForm, ContactHome leads will have null city/state — that's fine; Google handles partial user_data.
+Both forms today: ContactForm has street/city/state inputs; ContactHome does not.
+Partial user data is expected and acceptable.
 
 ---
 

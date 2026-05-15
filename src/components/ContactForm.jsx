@@ -99,6 +99,21 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                     <option value="Just Exploring">Just Exploring</option>
                   </select>
                 </div>
+                <div className={styles.inputGroup}>
+                  <label htmlFor="service">Service <span className={styles.req}>*</span></label>
+                  <select id="service" name="service" required defaultValue="" className={styles.selectInput}>
+                    <option value="" disabled>Select Service</option>
+                    <option value="New Decks">New Decks</option>
+                    <option value="Deck Replacement">Deck Replacement</option>
+                    <option value="Composite Decks">Composite Decks</option>
+                    <option value="Deck Resurfacing">Deck Resurfacing</option>
+                    <option value="Screened Porches">Screened Porches</option>
+                    <option value="Pergolas">Pergolas</option>
+                    <option value="Patios">Patios</option>
+                    <option value="Fencing">Fencing</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
               </div>
               <div className={styles.row}>
                 <div className={styles.inputGroup}>

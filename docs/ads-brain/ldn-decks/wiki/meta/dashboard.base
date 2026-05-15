@@ -1,0 +1,80 @@
+filters:
+  and:
+    - file.path.startsWith("wiki/")
+    - file.ext == "md"
+    - file.name != "_index"
+formulas:
+  age_days: '(now() - file.mtime) / (1000 * 60 * 60 * 24)'
+  is_stale: 'age_days > 30'
+properties:
+  file.name:
+    displayName: Note
+  type:
+    displayName: Type
+  status:
+    displayName: Status
+  platform:
+    displayName: Platform
+  updated:
+    displayName: Updated
+  sources:
+    displayName: Sources
+  formula.age_days:
+    displayName: Age (days)
+  formula.is_stale:
+    displayName: Stale
+views:
+  - type: table
+    name: All Wiki Notes
+    order:
+      - file.name
+      - type
+      - status
+      - platform
+      - updated
+      - formula.age_days
+    sort:
+      - property: updated
+        direction: DESC
+  - type: table
+    name: Action Queue
+    filters:
+      and:
+        - type == "decision-log"
+    order:
+      - file.name
+      - status
+      - updated
+      - sources
+  - type: table
+    name: Sources
+    filters:
+      and:
+        - type == "source"
+    order:
+      - file.name
+      - status
+      - updated
+      - sources
+  - type: table
+    name: Stale Notes
+    filters:
+      and:
+        - formula.is_stale == true
+    order:
+      - file.name
+      - type
+      - updated
+      - formula.age_days
+    sort:
+      - property: formula.age_days
+        direction: DESC
+  - type: cards
+    name: Draft Deliverables
+    filters:
+      and:
+        - type == "deliverable"
+        - status == "draft"
+    order:
+      - file.name
+      - updated

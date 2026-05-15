@@ -28,9 +28,12 @@ export function trackFormSubmit({
   phone,
   firstName,
   lastName,
+  address,
   zip,
   city,
   state,
+  service,
+  timeline,
   formType = 'quote',
   clickIds = {},
   eventId,
@@ -44,10 +47,13 @@ export function trackFormSubmit({
     phone: phone || null,
     first_name: firstName || null,
     last_name: lastName || null,
+    street: address || null,
     zip: zip || null,
     city: city || null,
     state: state || null,
     country: 'US',
+    service: service || null,
+    timeline: timeline || null,
     gclid: clickIds.gclid || null,
     gbraid: clickIds.gbraid || null,
     wbraid: clickIds.wbraid || null,
@@ -113,4 +119,3 @@ export function trackLeadConfirmed({ eventId } = {}) {
     page: window.location.pathname,
   });
 }
-

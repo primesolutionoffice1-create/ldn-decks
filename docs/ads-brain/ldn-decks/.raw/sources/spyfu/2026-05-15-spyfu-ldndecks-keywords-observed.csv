@@ -1,0 +1,24 @@
+keyword,volume,cpc_broad,monthly_cost_broad,observed_status,operator_note
+deck builders near me,39100,,,added,Core high-intent local deck builder term
+deck repair near me,14200,,,not_added,Repair intent should stay separate from premium build/replacement campaigns
+deck contractors near me,11600,,,not_added,Core high-intent local contractor term
+deck builder near me,10200,,,added,Core high-intent local deck builder term
+decks,7700,1.02,303,not_added,Generic; use cautiously or as research only
+patio contractors near me,7100,,,not_added,Adjacent service; do not mix into deck campaigns without service fit
+deck builder,5600,3.35,5312,added,Core term but broader than near-me variants
+deck installation near me,5300,,,added,Core installation intent
+screened in porch,5200,1.71,9387,not_added,Adjacent porch intent; separate landing page/ad group only if offered
+construction company,4300,2.47,26780,not_added,Too broad for current premium deck launch
+hardscaping near me,4000,6.90,387,not_added,Adjacent/non-core; likely negative unless hardscaping is an active offer
+fence company,3800,,,not_added,Non-core; negative candidate
+deck companies near me,3600,,,added,Core high-intent local deck company term
+pergola builders near me,3100,,,not_added,Adjacent service; separate only if capacity and LP exist
+deck construction near me,3100,,,added,Core construction intent
+patio design,2800,1.90,3295,not_added,Adjacent/non-core
+patios,2300,0.64,387,not_added,Adjacent/non-core
+deck company near me,2200,,,not_added,Core candidate; add after exact/phrase review
+deck contractor near me,2200,,,added,Core contractor intent
+deck repair,1700,3.19,10309,not_added,Repair intent must stay separate or negative in high-ticket build campaigns
+composite deck builders near me,1300,,,added,High-fit composite intent
+deck replacement near me,1300,,,added,High-fit replacement intent
+custom deck builders near me,1300,,,added,High-fit premium/custom intent

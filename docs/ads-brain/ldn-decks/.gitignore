@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+.raw/sources/exports/
+.raw/sources/dataforseo/
+.raw/sources/gsc/
+.raw/.scaffold-state.json
+.raw/.spend-ledger.json
+.env
+.env.*
+*.pdf
+*.html

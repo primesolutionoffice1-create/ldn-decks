@@ -2,6 +2,7 @@
 
 **Branch:** `feat/ads-tracking-instrumentation`
 **Phase:** 1 — code complete; GTM/Ads UI configuration ready to execute
+**Last code verification:** 2026-05-15
 **Scope:** the single document that determines whether the attribution layer is production-ready for Smart Bidding decisions.
 
 This document has two halves:
@@ -20,7 +21,7 @@ These conditions are guaranteed by code on `feat/ads-tracking-instrumentation` a
 
 | Check | Status | Evidence |
 |---|---|---|
-| `npm run build` exits 0 | ✅ PASS | 235 static pages generated, no errors related to Phase 1 files |
+| `npm run build` exits 0 | ✅ PASS | 246 static pages generated on 2026-05-15, no errors related to tracking files |
 | No new TypeScript / type errors introduced | ✅ PASS | Project is JS, build catches schema issues |
 | Bundle size impact reasonable | ✅ PASS | CallLink + useLeadSubmit + debug-helper add <2KB gzipped |
 | No new third-party dependencies | ✅ PASS | All changes use existing Next.js + React APIs |
@@ -75,9 +76,9 @@ Verified manually during `npm run build`. Every page that contained a `tel:+1571
 
 | Check | Status |
 |---|---|
-| ContactForm fields, validation, submit button unchanged | ✅ PASS |
+| ContactForm fields, validation, submit button stable | ✅ PASS — service selector added for lead quality |
 | ContactHome fields, validation, submit button unchanged | ✅ PASS |
-| Phone CTA visual styling unchanged across 53 swept files | ✅ PASS (CallLink forwards className/style identically) |
+| Phone CTA visual styling unchanged across swept files | ✅ PASS (CallLink forwards className/style identically; no raw JSX tel anchors remain) |
 | /thank-you page UX unchanged | ✅ PASS |
 | Mobile layout unchanged (StickyMobileCTA still works) | ✅ PASS (verified in build output) |
 
@@ -123,8 +124,8 @@ A5 Form UX:                        ✅ PASS — zero regression
 A6 Rollback path:                  ✅ PASS — verified
 
 Code Layer status:                 READY for GTM / Ads UI configuration
-Date verified:                     2026-05-12
-Signed:                            (Claude Opus 4.7 — code-layer agent)
+Date verified:                     2026-05-15
+Signed:                            (Codex — code-layer agent)
 ```
 
 ---
@@ -181,7 +182,8 @@ B3.4 No-plaintext verification (Network tab inspection):    PASS / FAIL
      fn/ln hashed:                                          PASS / FAIL
      pc hashed:                                             PASS / FAIL
 B3.5 Google Ads Diagnostics shows EC Active, match >50%:    PASS / FAIL / PENDING (24-48h)
-B3.6 Optional city/state code+GTM (Section 5):              DONE / SKIPPED
+B3.6 Street/city/state code fields available in dataLayer: DONE
+B3.7 Service/timeline lead-quality params mapped in GA4:    PASS / FAIL / SKIPPED
 
 B3 overall:                                                 PASS / FAIL
 ```

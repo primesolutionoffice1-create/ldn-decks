@@ -43,16 +43,15 @@ Deferred (GTM/Ads UI — operator):
 | 5 | ⏸ | GA4 SPA page_view trigger (History Change) |
 | 6 | ⏸ | Enhanced Conversions hashing toggle in Lead tag (dataLayer fields ready) |
 | 7 | ⏸ | Demote `phone_click` from primary Google Ads conversion goal |
-| 9 | Pending | Service selector on ContactForm (UX change — defer to user) |
+| 9 | ✅ Done | Service selector on ContactForm |
+| 15 | ✅ Done | ContactHome single-name field normalized to firstName/lastName before Meta CAPI |
 
-**Build status:** ✅ `npm run build` exits clean. 236 static pages generated.
+**Build status:** ✅ `npm run build` exits clean. 246 static pages generated as of 2026-05-15.
 **Lint status:** ⚠️ Pre-existing ESLint v9 config gap — unrelated.
 
-Excluded from #2 (CallLink sweep) due to unrelated uncommitted SEO edits at the time:
-- `src/app/deck-builder-fairfax-va/page.js`
-- `src/app/trex-vs-timbertech-vs-azek/page.js`
-
-These 2 of 55 files retain raw `<a href="tel:...">`. Re-sweep when SEO branch merges (or as a separate small follow-up).
+Follow-up verification on 2026-05-15 found no remaining JSX raw
+`<a href="tel:...">` links outside the `CallLink` component comment. The two
+previously excluded files now use `CallLink`.
 
 ---
 

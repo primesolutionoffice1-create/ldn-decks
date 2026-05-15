@@ -54,6 +54,7 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
     const firstName = formData.get('firstName') || rawName.split(' ')[0] || '';
     const lastName =
       formData.get('lastName') || rawName.split(' ').slice(1).join(' ') || '';
+    const address = formData.get('address') || '';
     const zip = formData.get('zip') || '';
     // city + state lift Enhanced Conversions match rate from ~70% to
     // ~80%+. Both fields exist on ContactForm; ContactHome doesn't
@@ -61,6 +62,14 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
     // fine, Google Ads accepts partial user_data.
     const city = formData.get('city') || '';
     const state = formData.get('state') || '';
+    const service = formData.get('service') || '';
+    const timeline = formData.get('timeline') || '';
+
+    // ContactHome collects a single `name` field. Normalize it into
+    // firstName/lastName before the server action so Meta CAPI gets the
+    // same match-quality fields as GTM Enhanced Conversions.
+    if (firstName && !formData.get('firstName')) formData.append('firstName', firstName);
+    if (lastName && !formData.get('lastName')) formData.append('lastName', lastName);
 
     const result = await sendContactEmail(formData);
 
@@ -82,9 +91,12 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
           phone,
           firstName,
           lastName,
+          address,
           zip,
           city,
           state,
+          service,
+          timeline,
           formType,
           clickIds,
           eventId,

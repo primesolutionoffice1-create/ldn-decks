@@ -1,0 +1,210 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "text": "# Ads Brain Onboarding\n\n**LDN Decks**\n\nWalk left-to-right. The top lane is evidence, the middle lane is synthesis, and the bottom lane is approval/reporting.",
+      "x": -760,
+      "y": -420,
+      "width": 560,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "zone-evidence",
+      "type": "group",
+      "label": "Evidence",
+      "x": -800,
+      "y": -170,
+      "width": 1720,
+      "height": 260,
+      "color": "4"
+    },
+    {
+      "id": "zone-synthesis",
+      "type": "group",
+      "label": "Synthesis",
+      "x": -800,
+      "y": 140,
+      "width": 1720,
+      "height": 260,
+      "color": "3"
+    },
+    {
+      "id": "zone-action",
+      "type": "group",
+      "label": "Approval and Reporting",
+      "x": -800,
+      "y": 450,
+      "width": 1720,
+      "height": 260,
+      "color": "2"
+    },
+    {
+      "id": "hot",
+      "type": "file",
+      "file": "wiki/hot.md",
+      "x": -760,
+      "y": -110,
+      "width": 300,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "day0",
+      "type": "file",
+      "file": "wiki/flows/Day 0 Tracking and Privacy Gate.md",
+      "x": -400,
+      "y": -110,
+      "width": 300,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "import",
+      "type": "file",
+      "file": "wiki/flows/Campaign Export Import Workflow.md",
+      "x": -40,
+      "y": -110,
+      "width": 300,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "research",
+      "type": "file",
+      "file": "wiki/sources/Ads Brain 2026 Production Research Brief.md",
+      "x": 320,
+      "y": -110,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "context",
+      "type": "file",
+      "file": "wiki/flows/Market Context Enrichment Workflow.md",
+      "x": 680,
+      "y": -110,
+      "width": 300,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "health",
+      "type": "file",
+      "file": "wiki/deliverables/Ads Health Scorecard.md",
+      "x": -760,
+      "y": 200,
+      "width": 300,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "tracking-risk",
+      "type": "file",
+      "file": "wiki/deliverables/Tracking and Attribution Risk Register.md",
+      "x": -400,
+      "y": 200,
+      "width": 300,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "waste",
+      "type": "file",
+      "file": "wiki/deliverables/Wasted Spend Ledger.md",
+      "x": -40,
+      "y": 200,
+      "width": 300,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "creative",
+      "type": "file",
+      "file": "wiki/deliverables/Creative Fatigue Board.md",
+      "x": 320,
+      "y": 200,
+      "width": 300,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "budget",
+      "type": "file",
+      "file": "wiki/deliverables/Budget Pacing Memo.md",
+      "x": 680,
+      "y": 200,
+      "width": 300,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "approval",
+      "type": "file",
+      "file": "wiki/decisions/Approval Queue.md",
+      "x": -760,
+      "y": 510,
+      "width": 300,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "roadmap",
+      "type": "file",
+      "file": "wiki/deliverables/30-Day Paid Media Test Roadmap.md",
+      "x": -400,
+      "y": 510,
+      "width": 300,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "report",
+      "type": "file",
+      "file": "wiki/reports/Weekly Client Report.md",
+      "x": -40,
+      "y": 510,
+      "width": 300,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "dashboard",
+      "type": "file",
+      "file": "wiki/meta/dashboard.md",
+      "x": 320,
+      "y": 510,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "visual",
+      "type": "file",
+      "file": "_attachments/ads-brain-operating-map.svg",
+      "x": 680,
+      "y": 510,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "hot", "fromSide": "right", "toNode": "day0", "toSide": "left" },
+    { "id": "e2", "fromNode": "day0", "fromSide": "right", "toNode": "import", "toSide": "left" },
+    { "id": "e3", "fromNode": "import", "fromSide": "right", "toNode": "research", "toSide": "left" },
+    { "id": "e4", "fromNode": "research", "fromSide": "right", "toNode": "context", "toSide": "left" },
+    { "id": "e5", "fromNode": "day0", "fromSide": "bottom", "toNode": "tracking-risk", "toSide": "top" },
+    { "id": "e6", "fromNode": "import", "fromSide": "bottom", "toNode": "health", "toSide": "top" },
+    { "id": "e7", "fromNode": "health", "fromSide": "right", "toNode": "tracking-risk", "toSide": "left" },
+    { "id": "e8", "fromNode": "tracking-risk", "fromSide": "right", "toNode": "waste", "toSide": "left" },
+    { "id": "e9", "fromNode": "waste", "fromSide": "right", "toNode": "creative", "toSide": "left" },
+    { "id": "e10", "fromNode": "creative", "fromSide": "right", "toNode": "budget", "toSide": "left" },
+    { "id": "e11", "fromNode": "tracking-risk", "fromSide": "bottom", "toNode": "approval", "toSide": "top" },
+    { "id": "e12", "fromNode": "approval", "fromSide": "right", "toNode": "roadmap", "toSide": "left" },
+    { "id": "e13", "fromNode": "roadmap", "fromSide": "right", "toNode": "report", "toSide": "left" },
+    { "id": "e14", "fromNode": "report", "fromSide": "right", "toNode": "dashboard", "toSide": "left" }
+  ]
+}
