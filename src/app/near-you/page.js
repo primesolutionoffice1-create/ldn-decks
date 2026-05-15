@@ -13,8 +13,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/near-you',
-  title: 'Deck Builder Near You | Northern Virginia',
-  description: 'Find a professional deck builder near you in Loudoun, Fairfax, and Prince William counties. Quality decks, patios, and outdoor living spaces.',
+  title: 'Deck Builder Near Me | Loudoun, Fairfax & Prince William',
+  description: 'Find a 5-star deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, and Prince William with custom decks, patios, and porches.',
 });
 
 const chooseItems = [

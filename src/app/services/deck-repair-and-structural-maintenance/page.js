@@ -14,8 +14,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/services/deck-repair-and-structural-maintenance',
-  title: 'Deck Repair & Structural Maintenance NoVA | Fix Rotted Posts',
-  description: 'Specialized deck repair in Northern Virginia. We fix rotted structural posts, sinking decks, and railing issues to pass county inspections. 5.0★ Google Rated.',
+  title: 'Deck Repair Near Me Northern VA | Structural Deck Contractor',
+  description: 'Need deck repair near you in Northern Virginia? We fix rotted posts, sinking decks, railings, ledgers, and failed inspections. 5.0 Google rated.',
   image: '/images/img04.jpeg',
 });
 

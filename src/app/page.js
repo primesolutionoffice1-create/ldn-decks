@@ -30,8 +30,8 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   path: "/",
-  title: 'Custom Deck Builders Northern Virginia | Loudoun Decks',
-  description: 'Top-rated custom deck builders serving Northern Virginia. Trex Platinum Partners specializing in composite decks, screened porches, and deck replacements. Get a free quote!',
+  title: 'Deck Builder Near Me Northern VA | Loudoun Decks',
+  description: 'Looking for a deck contractor near you in Northern Virginia? Trex Platinum Partner for custom composite decks, screened porches, and deck replacements. Free quote.',
 });
 
 // Homepage-specific WebPage schema — tells Google this is the main landing page.
