@@ -1,7 +1,7 @@
 ---
 type: meta
 title: "Overview"
-updated: 2026-05-11
+updated: 2026-05-15
 tags:
   - meta
   - overview
@@ -33,3 +33,11 @@ This vault is a persistent, compounding wiki maintained by Claude via the [claud
 5. Run `lint the wiki` periodically to flag orphans, dead links, and stale claims
 
 See [[getting-started]] for the first-run walkthrough.
+
+## Active Domain
+
+The first active domain is [[LDN Decks Operating Brain]], migrated from the old `Ldndecks AI Brain` vault. It covers LDN Decks / Loudoun Decks SEO, Google Ads, local SEO, AI search visibility, service pages, content production, and conversion systems.
+
+Current migration status:
+- Priority 1 dashboard sources imported.
+- Next import stage: Priority 2 strategic hubs from `17-Master-Hubs`.

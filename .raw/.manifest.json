@@ -1,0 +1,74 @@
+{
+  "sources": {
+    ".raw/old-obsidian-vault/00-Dashboard/COMMAND-CENTER.md": {
+      "hash": "3a77e8037730cc67d60264b751c913a3",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Command Center.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/Content-Coverage-Map.md": {
+      "hash": "e37e95d558923d35f4b38f5180df742e",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Content Coverage Map.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/Readiness-Audit-2026-05-14.md": {
+      "hash": "947a01d88e0803d5b4ba25cdfd90a4ed",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Readiness Audit 2026-05-14.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/START-HERE.md": {
+      "hash": "ce132a7b81f4f7e07ffa9795d790da6d",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Start Here.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/Vault-Standards.md": {
+      "hash": "f8fe329731db7f789c6f0712853e7e5d",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Vault Standards.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    }
+  }
+}

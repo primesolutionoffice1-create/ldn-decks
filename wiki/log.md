@@ -17,6 +17,16 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ---
 
+## 2026-05-15 ingest | LDN Decks Dashboard Sources
+
+- Source: `.raw/old-obsidian-vault/00-Dashboard/`
+- Summaries: [[LDN Decks Start Here]], [[LDN Decks Command Center]], [[LDN Decks Vault Standards]], [[LDN Decks Content Coverage Map]], [[LDN Decks Readiness Audit 2026-05-14]]
+- Pages created: five source summaries
+- Pages updated: [[LDN Decks Operating Brain]], [[index]], [[sources/_index]], [[hot]], [[log]]
+- Key insight: The old LDN Decks vault is structurally ready to migrate and should be operated through weekly command-center priorities, hub-linked notes, and source-backed publishing review.
+
+---
+
 ## 2026-05-15 — LDN Decks AI Brain import started
 
 Scanned `/Users/ldndecks/Documents/Obsidian Vault/Ldndecks AI Brain`, found 283 markdown notes, created [[LDN Decks AI Brain Import Plan]], and started [[LDN Decks Operating Brain]] as the migration domain.
