@@ -7,7 +7,8 @@
           "build": "next build --webpack",
           "start": "next start",
           "lint": "eslint",
-          "ads:generate-imports": "node scripts/generate-google-ads-imports.mjs"
+          "ads:generate-imports": "node scripts/generate-google-ads-imports.mjs",
+          "ads:validate-imports": "node scripts/validate-google-ads-imports.mjs"
     },
     "dependencies": {
           "@vercel/analytics": "^1.6.1",

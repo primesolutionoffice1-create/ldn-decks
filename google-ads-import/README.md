@@ -41,6 +41,40 @@ Google Ads Editor imports structure well, but these settings should be confirmed
 - Repair/refinishing/restoration negatives are attached at the Composite and Replacement campaign level.
 - Repair, patio, porch, fence, hardscaping, and broad construction negatives are attached at the Deck Builders campaign level. Keep those services in separate campaigns if they are tested.
 
+## Budget Modes
+
+The import pack is built as a complete paused structure. Do not enable every campaign by accident.
+
+### $150/day protected launch
+
+Use this if the spend cap is still $150/day:
+
+- `SRCH | Composite | 3 Counties | Calls` - $80/day.
+- `SRCH | Replacement + Resurfacing | 3 Counties | Calls` - $45/day.
+- `SRCH | Branded | 3 Counties | Calls` - $15/day.
+- `RMKT | PMax | Visitors 30/60/90d | Calls` - $10/day only if audience size and conversion diagnostics are clean.
+- Keep `SRCH | Deck Builders | 3 Counties | Calls` paused, or run it only by moving budget from Composite/Replacement.
+
+### $205/day expansion mode
+
+Use this only when the owner explicitly approves the higher cap:
+
+- `SRCH | Composite | 3 Counties | Calls` - $90/day.
+- `SRCH | Deck Builders | 3 Counties | Calls` - $45/day.
+- `SRCH | Replacement + Resurfacing | 3 Counties | Calls` - $45/day.
+- `SRCH | Branded | 3 Counties | Calls` - $15/day.
+- `RMKT | PMax | Visitors 30/60/90d | Calls` - $10/day.
+
+### $150/day with Deck Builders test
+
+Use this if Deck Builders must launch without increasing spend:
+
+- `SRCH | Composite | 3 Counties | Calls` - $70/day.
+- `SRCH | Deck Builders | 3 Counties | Calls` - $35/day.
+- `SRCH | Replacement + Resurfacing | 3 Counties | Calls` - $35/day.
+- `SRCH | Branded | 3 Counties | Calls` - $10/day.
+- Keep `RMKT | PMax | Visitors 30/60/90d | Calls` paused until remarketing audience size and diagnostics are strong enough.
+
 ## Files
 
 - `01-campaigns.csv` - 4 Search campaigns + 1 PMax remarketing campaign.
@@ -54,3 +88,13 @@ Google Ads Editor imports structure well, but these settings should be confirmed
 - `09-call-asset.csv` - phone asset setup values.
 - `10-location-targets.csv` - 3-county presence targeting.
 - `11-campaign-negative-keywords.csv` - campaign-level repair/refinishing and adjacent-intent negatives for high-ticket Search.
+
+## Validation
+
+Run this before importing into Google Ads Editor:
+
+```bash
+npm run ads:validate-imports
+```
+
+The validator fails if campaigns are not paused, if Broad match slips into the keyword file, if cross-campaign keyword duplication appears, if required negatives are missing, if location targeting is not Presence, or if PMax Final URL expansion is not Off.
