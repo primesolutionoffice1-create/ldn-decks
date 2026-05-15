@@ -2,6 +2,7 @@ import { buildMetadata } from '@/lib/seo';
 import { ORG_ID, BUSINESS } from '@/lib/business';
 import RelatedGuides from '@/components/RelatedGuides';
 import ContactHome from '@/components/ContactHome';
+import JsonLd from '@/components/JsonLd';
 
 export const metadata = buildMetadata({
   path: '/deck-cost-calculator',
@@ -25,19 +26,6 @@ const webApplicationSchema = {
   description: 'Interactive calculator that estimates deck construction cost in Northern Virginia by material (pressure-treated wood, cedar, Trex Enhance, Trex Transcend, TimberTech AZEK), size, and optional add-ons (stairs, railings, lighting, pergola, screened porch).',
 };
 
-const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'How to estimate your deck cost in Northern Virginia',
-  description: 'Use the interactive calculator to estimate the cost of a new deck in Northern Virginia in three steps.',
-  totalTime: 'PT2M',
-  step: [
-    { '@type': 'HowToStep', position: 1, name: 'Enter deck size', text: 'Adjust the square footage to match your planned deck. Most NoVA decks fall between 200 and 600 sqft.' },
-    { '@type': 'HowToStep', position: 2, name: 'Pick a material', text: 'Select pressure-treated wood, cedar, Trex Enhance, Trex Transcend, or TimberTech AZEK. Cost per sqft and lifespan update automatically.' },
-    { '@type': 'HowToStep', position: 3, name: 'Add features', text: 'Toggle add-ons (stairs, composite or cable railings, built-in lighting, pergola, screened porch conversion) to refine the estimate. The total reflects the 25–35% Northern Virginia premium over state averages.' },
-  ],
-};
-
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -53,9 +41,8 @@ const faqSchema = {
 export default function Layout({ children }) {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <JsonLd data={webApplicationSchema} />
+      <JsonLd data={faqSchema} />
       {children}
       <RelatedGuides currentPath="/deck-cost-calculator" />
       <ContactHome />
