@@ -36,6 +36,11 @@ sources:
 
 Negative keyword candidates are not approved changes. Review intent and match type.
 
+Manual last-30-days search-term review after conversion cleanup produced a
+separate implementation note at
+`docs/ads-tracking/SEARCH-TERMS-NEGATIVE-KEYWORD-QUEUE.md`. That note is a
+first-pass waste review, not an account mutation log.
+
 SpyFu keyword intelligence and the updated import pack add campaign-level
 separation rules even before a real search-term export is available. These are
 already reflected in `11-campaign-negative-keywords.csv` for the deck-builder
@@ -43,7 +48,18 @@ campaign, but still require operator review before live import.
 
 | Platform | Term | Campaign | Cost | Clicks | Source |
 | --- | --- | --- | --- | --- | --- |
-| None detected |  |  |  |  |  |
+| Google Ads | [contractors in my area] | Account/campaign negative list candidate | $63.46 | 8 | `docs/ads-tracking/SEARCH-TERMS-NEGATIVE-KEYWORD-QUEUE.md` |
+| Google Ads | [restoration contractors near me] | Account/campaign negative list candidate | $54.04 | 7 | `docs/ads-tracking/SEARCH-TERMS-NEGATIVE-KEYWORD-QUEUE.md` |
+| Google Ads | [core outdoor living] | Optional competitor/conquesting decision | $66.41 | 3 | `docs/ads-tracking/SEARCH-TERMS-NEGATIVE-KEYWORD-QUEUE.md` |
+
+## Hold / Do Not Block Yet
+
+Do not add broad negatives for `contractors`, `contractor`, `near me`,
+`deck contractors`, `restoration`, or `home improvement`. The first pass also
+keeps/holds `deck repair near me`, `deck repair sterling va`, `fairfax deck
+builders`, `deck contractors near me`, `loudoun deck and fence`, and `prince
+william home improvement reviews` until real post-cleanup lead quality is
+available.
 
 ## SpyFu Intent Triage
 
@@ -70,3 +86,4 @@ campaign, but still require operator review before live import.
 - 2026-05-15 - Regenerated from 22 source summaries.
 - 2026-05-15 - Regenerated from 11 source summaries.
 - 2026-05-15 - Added SpyFu intent triage for repair, patio, porch, fence, hardscaping, and broad construction terms.
+- 2026-05-15 - Added manual last-30-days search-term queue with exact-match recommendations and broad-negative guardrails.

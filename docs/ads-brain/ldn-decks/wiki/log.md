@@ -8,6 +8,8 @@ updated: "2026-05-15"
 
 # Log
 
+- 2026-05-15 - Hardened SEO schema and entity citations: removed deprecated HowTo, centralized JSON-LD emitters, aligned Yelp/BBB/BuildZoom/Loudoun Chamber/MapQuest references, validated schema, built successfully, pushed to `main`, and submitted IndexNow for 181 URLs.
+- 2026-05-15 - Added first-pass Google Ads search-term hygiene queue with two high-confidence exact negatives and hold guidance for core deck intent pending real post-cleanup lead data.
 - 2026-05-15 - Synthesized Ads Brain deliverables with health score 57.
 - 2026-05-15 - Imported Google Ads export 11-campaign-negative-keywords.csv with 55 rows.
 - 2026-05-15 - Imported Google Ads export 10-location-targets.csv with 15 rows.
