@@ -49,7 +49,8 @@ Tracking/privacy readiness is not automatically proven by platform exports.
 - GTM Version 25 is live in container `GTM-N87MG6QS` per `FINAL-ATTRIBUTION-SIGNOFF.md`.
 - Preview validation showed GA4 `generate_lead`, Google Ads Form Lead, and Google Ads User Provided Data firing once on `lead_confirmed`.
 - Google Ads Form Lead transaction ID maps to `{{DLV - event_id}}`.
-- Remaining risk: production real-lead validation, Enhanced Conversions diagnostics, and conversion-action settings review.
+- Google Ads conversion-goal cleanup is logged in `GOOGLE-ADS-CONVERSION-CLEANUP-LOG.md`: `Submit lead form` is account-default across 10/10 campaigns, `Phone call lead` remains account-default across 9/10, and `Leads from messages` was removed from account-default optimization. No budgets, bidding, keywords, ads, or campaign budgets were changed.
+- Remaining risk: production real-lead validation and Enhanced Conversions diagnostics after Google Ads processing.
 
 ## Tracking Trust by Platform
 

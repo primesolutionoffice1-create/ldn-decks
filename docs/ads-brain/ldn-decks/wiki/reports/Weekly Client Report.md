@@ -55,6 +55,12 @@ GTM Version 25 is live per the local final sign-off: Google Ads Form Lead, GA4
 Preview, with `event_id` used as the Google Ads transaction ID. The remaining
 blocker is real production validation, not code wiring.
 
+Google Ads conversion goals were cleaned up after GTM publish: `Submit lead
+form` is now account-default across 10/10 campaigns, `Phone call lead` remains
+account-default across 9/10, and `Leads from messages` was removed from the
+account-default optimization path. No budgets, bidding strategies, keywords,
+ads, or campaign budgets were changed in that pass.
+
 ![[tracking-trust-by-platform.svg]]
 
 | Platform | Tracking Trust | Status | Blocking Checks | Warnings | Checks |

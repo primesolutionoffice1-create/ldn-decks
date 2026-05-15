@@ -59,6 +59,13 @@ Mode timing. Code-side fixes are now in place and `npm run build` passed on
 `generate_lead`, and Google Ads User Provided Data once in Preview, with
 `Transaction ID = {{DLV - event_id}}`.
 
+`GOOGLE-ADS-CONVERSION-CLEANUP-LOG.md` records account-level conversion-goal
+cleanup on 2026-05-15. `Submit lead form` is account-default on 10/10
+campaigns, `Phone call lead` remains account-default on 9/10, and `Leads from
+messages` is no longer an account-default optimization goal. No budgets,
+bidding strategies, keywords, ads, or campaign budgets were changed in that
+pass.
+
 The remaining blocker is production evidence: 5-10 real leads, Google Ads
 Enhanced Conversions diagnostics after the 24-48h processing window, and
 conversion-action review. Until that evidence is signed off, SpyFu and keyword
