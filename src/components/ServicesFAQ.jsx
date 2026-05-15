@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useId, useEffect, useMemo } from 'react';
+import JsonLd from './JsonLd';
 import styles from './ServicesFAQ.module.css';
 
 // -----------------------------------------------------------------------------
@@ -48,16 +49,6 @@ function sanitizeAnswerText(input) {
     .replace(/&#x([0-9a-fA-F]+);/g, (_, code) => String.fromCharCode(parseInt(code, 16)))
     .replace(/\s+/g, ' ')
     .trim();
-}
-
-// -----------------------------------------------------------------------------
-// safeJsonLdString — JSON.stringify does not escape "</script>", which would
-// prematurely close the script tag when injected via dangerouslySetInnerHTML.
-// Escaping every "<" to its Unicode form is harmless inside JSON and prevents
-// the parser from tripping on closing tags inside any text field.
-// -----------------------------------------------------------------------------
-function safeJsonLdString(obj) {
-  return JSON.stringify(obj).replace(/</g, '\\u003c');
 }
 
 // -----------------------------------------------------------------------------
@@ -164,14 +155,7 @@ export default function ServicesFAQ({
 
   return (
     <section className={styles.faqSection}>
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          // safeJsonLdString escapes "<" so any answer containing "</script>"
-          // cannot break out of the JSON-LD block.
-          dangerouslySetInnerHTML={{ __html: safeJsonLdString(faqSchema) }}
-        />
-      )}
+      {faqSchema && <JsonLd data={faqSchema} />}
       <div className={styles.container}>
         <h2 className={styles.title}>{title}</h2>
         <div className={styles.accordionContainer}>

@@ -1,4 +1,5 @@
 import React from 'react';
+import JsonLd from './JsonLd';
 
 /**
  * ServiceSchema — Adds Service structured data to service pages.
@@ -34,8 +35,5 @@ export default function ServiceSchema({ name, description, price, areaServed }) 
     } : {}),
   };
 
-  return React.createElement('script', {
-    type: 'application/ld+json',
-    dangerouslySetInnerHTML: { __html: JSON.stringify(schema) },
-  });
+  return <JsonLd data={schema} />;
 }

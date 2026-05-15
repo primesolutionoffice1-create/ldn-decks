@@ -1,4 +1,5 @@
 import React from 'react';
+import JsonLd from './JsonLd';
 
 /**
  * ArticleSchema — Structured data for informational/guide pages.
@@ -82,8 +83,5 @@ export default function ArticleSchema({
     inLanguage: 'en-US',
   };
 
-  return React.createElement('script', {
-    type: 'application/ld+json',
-    dangerouslySetInnerHTML: { __html: JSON.stringify(schema) },
-  });
+  return <JsonLd data={schema} />;
 }
