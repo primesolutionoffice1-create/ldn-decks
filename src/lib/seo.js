@@ -64,6 +64,7 @@ export function buildMetadata({
         robots: {
                 index: !finalNoIndex,
                 follow: true,
+                'max-image-preview': 'large',
         },
         openGraph: {
             url,

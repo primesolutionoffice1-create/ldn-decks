@@ -8,8 +8,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-permit-fairfax-county-virginia',
-  title: 'Fairfax County Deck Permit Guide 2026 | Cost & Timeline',
-  description: 'Decks over 200 sqft or 18" above grade need a permit in Fairfax County. Step-by-step process, costs ($150–$500), timeline & inspections. We handle everything.',
+  title: 'Fairfax County Deck Permits Made Easy | Loudoun Decks',
+  description: 'Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish.',
 });
 
 const faqSchema = {

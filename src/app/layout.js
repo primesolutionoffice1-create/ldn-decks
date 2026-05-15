@@ -21,14 +21,12 @@ export const metadata = {
     template: '%s',  // pages set their own complete title
   },
   description: 'Trex Pro & TimberTech certified deck builders serving Loudoun, Fairfax & Prince William VA. Custom decks, screened porches & pergolas. Free quote in 24h.',
-  alternates: { canonical: SITE_URL },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     siteName: 'Loudoun Decks',
     images: ['/home-page-ldn.webp'],
   },
-  robots: { index: true, follow: true, 'max-image-preview': 'large' },
 };
 // Icons are now auto-detected from app/icon.png (32px) and app/apple-icon.png (180px)
 // — Next.js metadata file convention. The previous WebP favicon broke on Safari < 17

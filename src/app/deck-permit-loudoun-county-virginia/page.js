@@ -11,8 +11,8 @@ import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/deck-permit-loudoun-county-virginia',
-  title: 'Loudoun County Deck Permit Guide 2026 | Code, LandMARC & Costs',
-  description: 'Complete guide to Loudoun County deck permits in 2026. What size deck needs a permit? How deep are footings? 2x8 vs 2x10 joists and LandMARC steps explained.',
+  title: 'Loudoun County Deck Permit Guide (2026) | Loudoun Decks',
+  description: 'Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Fast-track your deck build with our guaranteed permit process.',
   image: '/images/blog-permit-guide.png',
 });
 

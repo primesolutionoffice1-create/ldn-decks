@@ -16,8 +16,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-reston-va',
-  title: 'Deck Builder in Reston VA | Trex Platinum Pro | Loudoun Decks',
-  description: 'Custom composite decks, screened porches & pergolas in Reston, VA. Trex Platinum Partner & TimberTech Certified. Free 24h estimate — call (571) 655-7207.',
+  title: 'Expert Deck Builders in Reston VA | Custom Trex Decks',
+  description: "Reston's trusted deck contractors. Transform your Reston backyard with a luxury Trex composite deck, screened porch, or patio. View our local project gallery!",
   image: '/images/img36.jpeg',
 });
 

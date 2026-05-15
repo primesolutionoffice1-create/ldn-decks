@@ -20,6 +20,7 @@ const nextConfig = {
         destination: 'https://ldndecks.com/:path*',
         statusCode: 301,
       },
+      { source: '/home-2', destination: '/', permanent: true },
 
                      // Core Pages
       { source: '/tag/trex-decking', destination: '/trex-decks', permanent: true },

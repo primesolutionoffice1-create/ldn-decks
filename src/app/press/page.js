@@ -120,14 +120,13 @@ export default function PressPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Expert Topics Available for Comment</h2>
           <p style={{ marginBottom: '1rem', color: '#555' }}>Our team is available for expert commentary on:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem', lineHeight: 1.8 }}>
-            <li>Deck building costs and trends in Northern Virginia</li>
-            <li>Composite decking materials (Trex, TimberTech, AZEK) comparisons</li>
-            <li>HOA deck regulations and approval processes in NoVA</li>
-            <li>Building permit requirements in Loudoun, Fairfax, and Prince William counties</li>
-            <li>Impact of tariffs on deck material pricing</li>
-            <li>Deck ROI and impact on home resale value</li>
-            <li>Sustainable/eco-friendly decking options</li>
-            <li>Seasonal deck maintenance for Virginia climate</li>
+            <li><strong>Deck building costs and trends:</strong> <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>See our 2026 cost report</Link></li>
+            <li><strong>Composite decking materials:</strong> <Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)' }}>Trex vs TimberTech vs AZEK comparisons</Link></li>
+            <li><strong>HOA deck regulations:</strong> <Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)' }}>Approval processes in NoVA</Link></li>
+            <li><strong>Building permits:</strong> <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)' }}>Fairfax County</Link> and <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)' }}>Loudoun County</Link></li>
+            <li><strong>Material tariffs:</strong> <Link href="/how-tariffs-affect-deck-prices-2026" style={{ color: 'var(--color-primary)' }}>Impact of tariffs on deck pricing</Link></li>
+            <li><strong>Deck ROI:</strong> <Link href="/does-a-deck-add-value-to-your-home" style={{ color: 'var(--color-primary)' }}>Impact on home resale value</Link></li>
+            <li><strong>Maintenance:</strong> <Link href="/deck-maintenance-checklist-virginia" style={{ color: 'var(--color-primary)' }}>Seasonal deck maintenance for Virginia climate</Link></li>
           </ul>
         </div>
       </article>

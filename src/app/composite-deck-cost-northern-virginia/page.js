@@ -13,8 +13,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/composite-deck-cost-northern-virginia',
-  title: 'Composite Deck Cost Northern Virginia 2026 | Trex & TimberTech Pricing',
-  description: 'Composite deck cost in Northern Virginia (2026): $30–$95 per sqft installed. Trex deck cost, TimberTech deck cost, 20x20 through 25x20 build totals, real Fairfax + Loudoun pricing. Free calculator + estimate.',
+  title: 'How Much Does a Composite Deck Cost in Northern Virginia?',
+  description: 'Get the real 2026 pricing data for custom composite decks in Northern Virginia. Compare costs for Trex, TimberTech, sizing, and premium add-ons.',
   image: '/showcase/img09.jpeg',
 });
 

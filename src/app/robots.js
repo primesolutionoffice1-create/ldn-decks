@@ -37,6 +37,7 @@ export default function robots() {
     'CCBot',
     'Applebot-Extended',
     'cohere-ai',
+    'OAI-SearchBot',
   ];
 
   return {
