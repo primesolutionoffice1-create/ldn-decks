@@ -173,7 +173,7 @@ export default function PorchesPage() {
         description="Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our porches are built to weather the elements gracefully."
         items={inclusions}
       />
-      <ServicesFAQ withSchema={false} title="Porch Construction & Design FAQs" faqs={porchFAQs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/porches" withSchema={false} title="Porch Construction & Design FAQs" faqs={porchFAQs} />
       <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
           <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>Official Resources & Safety Standards</h3>

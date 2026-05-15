@@ -10,6 +10,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import CallLink from '@/components/CallLink';
 
@@ -114,6 +115,11 @@ const expansionSections = [
 export default function DeckRepairLoudounCountyPage() {
   return (
     <main>
+      <ServiceSchema
+        name="Deck Repair & Structural Restoration in Loudoun County, VA"
+        description="Expert deck repair across Loudoun County — rot and ledger board repair, joist and beam replacement, railing and stair safety upgrades, and full resurfacing. Free on-site inspections, permitted structural work."
+        areaServed={[{ '@type': 'AdministrativeArea', name: 'Loudoun County, VA' }]}
+      />
       <ServicesHeader
         subtext="Loudoun County's 5-Star Rated Repair Team"
         title="Deck Repair Loudoun County"

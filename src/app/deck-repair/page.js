@@ -167,7 +167,7 @@ export default function DeckRepairPage() {
 
       <SimpleCTA title="Deck Needs Repair? We Can Help." buttonText="Get Free Inspection" link="/contact" />
 
-      <ServicesFAQ
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/deck-repair"
         title="Deck Repair & Maintenance FAQs"
         faqs={repairFAQs}
       />

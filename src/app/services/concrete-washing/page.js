@@ -67,7 +67,7 @@ export default function ConcreteWashingPage() {
         items={inclusions}
       />
 
-      <ServicesFAQ
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/concrete-washing"
         title="Concrete Washing FAQs"
         faqs={[
           { q: "Can you remove oil stains from my driveway?", a: "We have specialized treatments for oil and grease that significantly reduce their appearance, though total removal depends on how long the stain has been set." },

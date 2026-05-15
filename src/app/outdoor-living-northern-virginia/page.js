@@ -176,7 +176,7 @@ export default function OutdoorLivingNorthernVirginiaPage() {
         items={inclusions}
       />
 
-      <ServicesFAQ title="Outdoor Living FAQs" faqs={faqs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/outdoor-living-northern-virginia" title="Outdoor Living FAQs" faqs={faqs} />
       <ServiceAreasGrid />
       <ServicesCallToAction />
       <RelatedGuides currentPath="/outdoor-living-northern-virginia" />

@@ -67,7 +67,7 @@ export default function FenceCleaningPage() {
         items={inclusions}
       />
 
-      <ServicesFAQ
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/fence-cleaning"
         title="Fence Cleaning FAQs"
         faqs={[
           { q: "Will cleaning make my grey fence look like new wood again?", a: "Yes! For natural wood fences, our process removes the dead outer fibers (the grey layer) to expose the fresh, original color of the wood." },

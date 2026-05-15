@@ -131,7 +131,7 @@ export default function FairfaxCountyPage() {
 </div>
   </div>
   </section>
-      <ServicesFAQ title="Frequently Asked Questions About Decks in Fairfax County" faqs={faqs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/near-you/fairfax-county" title="Frequently Asked Questions About Decks in Fairfax County" faqs={faqs} />
         <RatingBadge />
       <RelatedGuides currentPath="/near-you/fairfax-county" />
       <ContactHome />

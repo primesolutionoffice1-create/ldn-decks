@@ -164,7 +164,7 @@ export default function TrexRailingsPage() {
       />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/trex-railings" />
-      <ServicesFAQ title="Trex Railings FAQs" faqs={faqs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/trex-railings" title="Trex Railings FAQs" faqs={faqs} />
       <SimpleCTA title="Upgrade Your Deck Railings" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>

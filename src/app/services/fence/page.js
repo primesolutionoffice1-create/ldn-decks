@@ -168,7 +168,7 @@ export default function FencePage() {
         items={inclusions}
       />
 
-      <ServicesFAQ withSchema={false}
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/fence" withSchema={false}
         title="Fence Installation & Design FAQs"
         faqs={fenceFAQs}
       />

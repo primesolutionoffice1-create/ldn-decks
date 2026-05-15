@@ -57,7 +57,7 @@ export default function ServicesPage() {
          </div>
        </section>
 
-       <ServicesFAQ />
+       <ServicesFAQ canonicalUrl="https://ldndecks.com/services" />
        <ServicesFooterInfo />
        <RelatedGuides currentPath="/services" />
        <ServicesCallToAction />

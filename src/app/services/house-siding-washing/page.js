@@ -67,7 +67,7 @@ export default function HouseSidingWashingPage() {
         items={inclusions}
       />
 
-      <ServicesFAQ
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/house-siding-washing"
         title="Siding Washing FAQs"
         faqs={[
           { q: "Is pressure washing safe for my siding?", a: "We use soft-washing or controlled pressure methods specifically designed to clean siding without forcing water behind the panels or causing cracks." },

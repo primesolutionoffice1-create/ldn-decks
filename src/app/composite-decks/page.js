@@ -169,7 +169,7 @@ export default function CompositeDecksPage() {
 
       <ProcessSteps />
 
-      <ServicesFAQ 
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/composite-decks"
         title="Composite Decking & Material FAQs"
         faqs={compositeFAQs}
       />

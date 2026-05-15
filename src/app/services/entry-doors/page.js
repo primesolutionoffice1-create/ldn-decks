@@ -170,7 +170,7 @@ export default function EntryDoorsPage() {
         items={inclusions}
       />
 
-      <ServicesFAQ withSchema={false}
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/entry-doors" withSchema={false}
         title="Entry Door FAQs"
         faqs={faqs}
       />

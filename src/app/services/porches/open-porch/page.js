@@ -142,7 +142,7 @@ export default function OpenPorchPage() {
         description="Our end-to-end open porch builds are fully managed from engineering to final inspection."
         items={inclusions}
       />
-      <ServicesFAQ withSchema={false} title="Open Porch FAQs" faqs={faqs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/porches/open-porch" withSchema={false} title="Open Porch FAQs" faqs={faqs} />
 
       {/* Navigation to porch types */}
       <section style={{ padding: '40px 20px', background: '#f9f9f9', borderTop: '1px solid #eee' }}>

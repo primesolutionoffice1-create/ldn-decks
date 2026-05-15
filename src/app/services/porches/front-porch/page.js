@@ -142,7 +142,7 @@ export default function FrontPorchPage() {
         description="End-to-end construction management from design to certificate of occupancy."
         items={inclusions}
       />
-      <ServicesFAQ withSchema={false} title="Front Porch FAQs" faqs={faqs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/porches/front-porch" withSchema={false} title="Front Porch FAQs" faqs={faqs} />
 
       {/* Navigation to porch types */}
       <section style={{ padding: '40px 20px', background: '#f9f9f9', borderTop: '1px solid #eee' }}>

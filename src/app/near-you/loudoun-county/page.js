@@ -158,7 +158,7 @@ export default function LoudounCountyPage() {
           </div>
         </div>
       </section>
-      <ServicesFAQ title="Frequently Asked Questions About Decks in Loudoun County" faqs={faqs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/near-you/loudoun-county" title="Frequently Asked Questions About Decks in Loudoun County" faqs={faqs} />
       <RatingBadge />
       <RelatedGuides currentPath="/near-you/loudoun-county" />
       <ContactHome />

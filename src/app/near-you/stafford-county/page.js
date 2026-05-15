@@ -68,7 +68,7 @@ export default function StaffordCountyPage() {
         </div>
       </article>
 
-      <ServicesFAQ title="Deck Building in Stafford County — FAQ" faqs={faqs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/near-you/stafford-county" title="Deck Building in Stafford County — FAQ" faqs={faqs} />
       <RelatedGuides currentPath="/near-you/stafford-county" />
       <ContactHome />
     </main>

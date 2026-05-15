@@ -197,7 +197,7 @@ export default function TimberTechDecksPage() {
 
       <ProcessSteps />
 
-      <ServicesFAQ
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/timbertech-decks"
         title="TimberTech, AZEK & Composite Deck FAQs"
         faqs={timberTechFAQs}
       />

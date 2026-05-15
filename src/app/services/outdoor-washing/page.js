@@ -99,7 +99,7 @@ export default function OutdoorWashingPage() {
         ]}
       />
 
-      <ServicesFAQ
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/outdoor-washing"
         title="Power Washing FAQs"
         faqs={washingFAQs}
       />

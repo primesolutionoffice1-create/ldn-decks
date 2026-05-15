@@ -202,7 +202,7 @@ export default function GazeboPergolaPage() {
         items={inclusions}
       />
 
-      <ServicesFAQ withSchema={false}
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/gazebo-pergola" withSchema={false}
         title="Gazebos and Pergolas FAQs"
         faqs={faqs}
       />

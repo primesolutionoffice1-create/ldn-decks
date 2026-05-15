@@ -178,7 +178,7 @@ export default function DeckWashingPage() {
         items={inclusions}
       />
 
-      <ServicesFAQ withSchema={false}
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/deck-washing" withSchema={false}
         title="Deck Washing FAQs"
         faqs={deckWashingFAQs}
       />

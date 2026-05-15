@@ -161,7 +161,7 @@ export default function UnderDeckPatiosPage() {
       />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/under-deck-patios" />
-      <ServicesFAQ title="Under Deck Patio FAQs" faqs={faqs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/under-deck-patios" title="Under Deck Patio FAQs" faqs={faqs} />
       <SimpleCTA title="Create Your Under-Deck Living Space" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>

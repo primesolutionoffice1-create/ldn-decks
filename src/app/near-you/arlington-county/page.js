@@ -69,7 +69,7 @@ export default function ArlingtonCountyPage() {
         </div>
       </article>
 
-      <ServicesFAQ title="Deck Building in Arlington County — FAQ" faqs={faqs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/near-you/arlington-county" title="Deck Building in Arlington County — FAQ" faqs={faqs} />
       <RelatedGuides currentPath="/near-you/arlington-county" />
       <ContactHome />
     </main>

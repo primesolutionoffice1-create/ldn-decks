@@ -128,7 +128,7 @@ export default function PrinceWilliamCountyPage() {
           </div>
         </div>
       </section>
-      <ServicesFAQ title="Frequently Asked Questions About Decks in Prince William County" faqs={faqs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/near-you/prince-william-county" title="Frequently Asked Questions About Decks in Prince William County" faqs={faqs} />
       <RatingBadge />
       <RelatedGuides currentPath="/near-you/prince-william-county" />
       <ContactHome />

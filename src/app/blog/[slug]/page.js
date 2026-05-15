@@ -7,7 +7,7 @@ import { buildMetadata } from '@/lib/seo';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesHome from '@/components/ServicesHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import CallLink, { BUSINESS_PHONE_DISPLAY } from '@/components/CallLink';
+import CallLink from '@/components/CallLink';
 import styles from './BlogContent.module.css';
 
 // Pre-render all blog posts at build time for proper indexing
@@ -84,17 +84,22 @@ export default async function SingleBlogPage({ params }) {
     const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": `https://ldndecks.com/blog/${post.slug}#article`,
+    "isPartOf": { "@id": "https://ldndecks.com/#website" },
     "headline": post.title,
     "image": [`https://ldndecks.com${post.image}`],
     "datePublished": clampedDate.toISOString(),
     "dateModified": clampedDate.toISOString(),
     "author": [{
-      "@type": "Organization",
+      "@type": post.author && post.author.toLowerCase().includes('team') ? "Organization" : "Person",
       "name": post.author,
-      "url": "https://ldndecks.com"
+      "url": post.author && post.author.toLowerCase().includes('team')
+        ? "https://ldndecks.com"
+        : "https://ldndecks.com/team"
     }],
     "publisher": {
       "@type": "Organization",
+      "@id": "https://ldndecks.com/#organization",
       "name": "Loudoun Decks",
       "url": "https://ldndecks.com",
       "logo": {

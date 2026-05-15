@@ -149,7 +149,7 @@ export default function WindowsPage() {
 
       <ProcessSteps />
 
-      <ServicesFAQ 
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/windows"
         title="Window Installation & Technology FAQs"
         faqs={windowFAQs}
       />
@@ -162,4 +162,3 @@ export default function WindowsPage() {
     </main>
   );
 }
-

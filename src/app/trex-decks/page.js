@@ -158,7 +158,7 @@ export default function TrexDecksPage() {
 
       <ProcessSteps />
 
-      <ServicesFAQ
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/trex-decks"
         title="Trex Decking & Warranty FAQs"
         faqs={trexFAQs}
       />

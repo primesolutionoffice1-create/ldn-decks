@@ -45,6 +45,43 @@ export const BUSINESS = {
     'https://www.google.com/maps/place/Loudoun+Decks/',
     'https://www.houzz.com/pro/ldndecks',
     'https://www.yelp.com/biz/loudoun-decks-centreville',
+    'https://www.tiktok.com/@loudoun.decks',
+    'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241',
+  ],
+  // Professional credentials surfaced site-wide on the site — mirrored into
+  // schema as hasCredential for E-E-A-T / entity-trust signals.
+  credentials: [
+    {
+      name: 'TrexPro Platinum Installer',
+      category: 'certification',
+      recognizedBy: 'Trex Company, Inc.',
+    },
+    {
+      name: 'Class A Contractor License',
+      category: 'license',
+      recognizedBy: 'Virginia Department of Professional and Occupational Regulation',
+    },
+    {
+      name: 'TimberTech Certified Installer',
+      category: 'certification',
+      recognizedBy: 'AZEK Building Products',
+    },
+    {
+      name: 'NADRA Builder/Contractor/Remodeler Membership',
+      category: 'membership',
+      recognizedBy: 'North American Deck and Railing Association',
+    },
+  ],
+  memberships: [
+    {
+      name: 'North American Deck and Railing Association',
+      alternateName: 'NADRA',
+      url: 'https://www.nadra.org/',
+      memberType: 'Deck Builder/Contractor/Remodeler Primary Member',
+      memberSince: '2026-04-29',
+      expires: '2027-04-29',
+      directoryUrl: 'https://www.nadra.org/membership/directory/builders',
+    },
   ],
 };
 
@@ -92,5 +129,21 @@ export function buildOrganizationSchema() {
     aggregateRating: { '@type': 'AggregateRating', ...BUSINESS.aggregateRating },
     areaServed: BUSINESS.areaServed.map(name => ({ '@type': 'AdministrativeArea', name })),
     sameAs: BUSINESS.sameAs,
+    hasCredential: BUSINESS.credentials.map(c => ({
+      '@type': 'EducationalOccupationalCredential',
+      name: c.name,
+      credentialCategory: c.category,
+      recognizedBy: { '@type': 'Organization', name: c.recognizedBy },
+    })),
+    memberOf: BUSINESS.memberships.map(m => ({
+      '@type': 'Organization',
+      name: m.name,
+      alternateName: m.alternateName,
+      url: m.url,
+      member: {
+        '@type': 'GeneralContractor',
+        '@id': ORG_ID,
+      },
+    })),
   };
 }

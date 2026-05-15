@@ -107,7 +107,7 @@ export default function DeckMaintenancePage() {
       <Testimonials />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/deck-maintenance" />
-      <ServicesFAQ title="Deck Maintenance FAQs" faqs={faqs} />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/deck-maintenance" title="Deck Maintenance FAQs" faqs={faqs} />
       <SimpleCTA title="Book Your Deck Maintenance" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />
     </main>

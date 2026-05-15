@@ -173,7 +173,7 @@ export default function ViennaDeckBuilderPage() {
         items={inclusions}
       />
       <ProcessSteps />
-      <ServicesFAQ
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/deck-builder-vienna-va"
         title="Deck Builder Vienna VA - FAQs"
         faqs={viennaFAQs}
       />

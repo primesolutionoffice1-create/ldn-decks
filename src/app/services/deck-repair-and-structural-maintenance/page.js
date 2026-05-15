@@ -120,7 +120,7 @@ export default function DeckRepairPage() {
 
       <ProcessSteps />
 
-      <ServicesFAQ 
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/deck-repair-and-structural-maintenance"
         title="Deck Repair & Safety FAQs"
         faqs={repairFAQs}
       />
