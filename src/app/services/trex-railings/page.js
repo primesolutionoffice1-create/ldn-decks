@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import SimpleCTA from '@/components/SimpleCTA';
+import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 import NamedAuthor from '@/components/NamedAuthor';
@@ -117,7 +118,7 @@ const faqs = [
 export default function TrexRailingsPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <JsonLd data={serviceSchema} />
       <ServicesHeader
         subtext="Deck Railing Upgrade Loudoun VA"
         title="Trex Railings with Cocktail Top - Style Meets Function"

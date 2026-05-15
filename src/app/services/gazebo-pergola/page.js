@@ -10,6 +10,7 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import JsonLd from '@/components/JsonLd';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -127,14 +128,8 @@ const inclusions = [
 export default function GazeboPergolaPage() {
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
-      />
+      <JsonLd data={faqSchemaData} />
+      <JsonLd data={serviceSchemaData} />
 
       <ServicesHeader
         subtext="Gazebos & Pergolas Loudoun VA"

@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
+import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 import NamedAuthor from '@/components/NamedAuthor';
@@ -112,7 +113,7 @@ const faqs = [
 export default function FirePitsPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <JsonLd data={serviceSchema} />
       <ServicesHeader
         subtext="Custom Fire Pit Loudoun VA"
         title="Custom Fire Pits Built for Comfort, Style & Year-Round Enjoyment"

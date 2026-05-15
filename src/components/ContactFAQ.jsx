@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import JsonLd from './JsonLd';
 import styles from './ContactFAQ.module.css';
 
 const faqData = [
@@ -40,12 +41,7 @@ export default function ContactFAQ({ withSchema = true }) {
 
   return (
     <section className={styles.faqSection}>
-      {withSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
+      {withSchema && <JsonLd data={faqSchema} />}
       <div className={styles.container}>
          <h2 className={styles.title}>Contact &amp; Consultation FAQs</h2>
          <div className={styles.accordionContainer}>

@@ -4,6 +4,7 @@ import ContactHome from '@/components/ContactHome';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/social',
@@ -15,29 +16,15 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://ldndecks.com/#organization",
-  "name": "LDN Decks",
-  "url": "https://ldndecks.com",
-  "telephone": "+15716557207",
+  "name": BUSINESS.alternateName,
+  "alternateName": BUSINESS.name,
+  "url": BUSINESS.url,
+  "telephone": BUSINESS.telephone,
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "13704 Winding Oak Cir",
-    "addressLocality": "Centreville",
-    "addressRegion": "VA",
-    "postalCode": "20121",
-    "addressCountry": "US"
+    ...BUSINESS.address
   },
-  "sameAs": [
-    "https://x.com/ldndecks",
-    "https://www.instagram.com/loudoundecks/",
-    "https://www.facebook.com/profile.php?id=61573750423712",
-    "https://www.houzz.com/pro/ldndecks",
-    "https://www.yelp.com/biz/ldn-decks-manassas",
-    "https://www.google.com/maps/place/Loudoun+Decks/",
-    "https://www.bbb.org/us/va/manassas/profile/deck-builder/ldn-decks",
-    "https://www.angi.com/companylist/us/va/manassas/ldn-decks",
-    "https://nextdoor.com/pages/ldn-decks-manassas-va/",
-    "https://www.trex.com/find-a-builder/"
-  ]
+  "sameAs": BUSINESS.sameAs,
 };
 
 const socialProfiles = [
@@ -83,35 +70,43 @@ const socialProfiles = [
   },
   {
     name: 'Yelp',
-    handle: 'LDN Decks',
-    url: 'https://www.yelp.com/biz/ldn-decks-manassas',
+    handle: 'Loudoun Decks',
+    url: 'https://www.yelp.com/biz/loudoun-decks-centreville',
     desc: 'Customer reviews, photos, and business information.',
     color: '#D32323',
     icon: 'Y',
   },
   {
-    name: 'Nextdoor',
-    handle: 'LDN Decks',
-    url: 'https://nextdoor.com/pages/ldn-decks-manassas-va/',
-    desc: 'Neighborhood recommendations and local community engagement.',
-    color: '#8ED500',
-    icon: 'ND',
-  },
-  {
-    name: 'Angi',
-    handle: 'LDN Decks',
-    url: 'https://www.angi.com/companylist/us/va/manassas/ldn-decks',
-    desc: 'Verified reviews, credentials, and project portfolio on Angi (Angie\'s List).',
-    color: '#FF6153',
-    icon: 'A',
-  },
-  {
     name: 'BBB',
-    handle: 'LDN Decks',
-    url: 'https://www.bbb.org/us/va/manassas/profile/deck-builder/ldn-decks',
+    handle: 'Loudoun Decks',
+    url: 'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241',
     desc: 'Better Business Bureau accreditation and complaint history.',
     color: '#005DAA',
     icon: 'BBB',
+  },
+  {
+    name: 'BuildZoom',
+    handle: 'Loudoun Decks',
+    url: 'https://www.buildzoom.com/contractor/loudoun-decks',
+    desc: 'Contractor profile with license and project credibility signals.',
+    color: '#364fc7',
+    icon: 'BZ',
+  },
+  {
+    name: 'Loudoun Chamber',
+    handle: 'Loudoun Decks',
+    url: 'https://business.loudounchamber.org/list/member/loudoun-deck-30047.htm',
+    desc: 'Local business directory profile and Northern Virginia chamber citation.',
+    color: '#0f766e',
+    icon: 'LC',
+  },
+  {
+    name: 'MapQuest',
+    handle: 'Loudoun Decks',
+    url: 'https://www.mapquest.com/us/virginia/loudoun-decks-532352487',
+    desc: 'Map listing that reinforces address, service area, and local entity data.',
+    color: '#6d28d9',
+    icon: 'MQ',
   },
 ];
 
@@ -183,7 +178,7 @@ export default function SocialPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Your feedback helps other Northern Virginia homeowners find a trusted deck builder. If you&apos;ve worked with us, we&apos;d appreciate a quick review on any of these platforms:</p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
             <a href="https://www.google.com/maps/place/Loudoun+Decks/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Review on Google</a>
-            <a href="https://www.yelp.com/biz/ldn-decks-manassas" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#D32323', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Review on Yelp</a>
+            <a href="https://www.yelp.com/biz/loudoun-decks-centreville" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#D32323', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Review on Yelp</a>
             <a href="https://www.houzz.com/pro/ldndecks" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#4DBC15', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Review on Houzz</a>
           </div>
 

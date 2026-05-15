@@ -35,7 +35,6 @@ export default function PressPage() {
                   ['Industry', 'Custom Deck Building & Outdoor Living Construction'],
                   ['Service Area', 'Loudoun, Fairfax, Prince William, Arlington & Stafford Counties, Virginia'],
                   ['Headquarters', '13704 Winding Oak Cir, Centreville, VA 20121'],
-                  ['Second Office', '8735 Quarry Rd., Unit 102, Manassas, VA 20110'],
                   ['Phone', '(571) 655-7207'],
                   ['Email', 'office@ldndecks.com'],
                   ['Website', 'ldndecks.com'],
@@ -98,6 +97,9 @@ export default function PressPage() {
             <li><a href="https://www.google.com/maps/place/Loudoun+Decks/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Google Business Profile</a></li>
             <li><a href="https://www.yelp.com/biz/loudoun-decks-centreville" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Yelp</a></li>
             <li><a href="https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Better Business Bureau</a></li>
+            <li><a href="https://www.buildzoom.com/contractor/loudoun-decks" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>BuildZoom</a></li>
+            <li><a href="https://business.loudounchamber.org/list/member/loudoun-deck-30047.htm" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Loudoun Chamber of Commerce</a></li>
+            <li><a href="https://www.mapquest.com/us/virginia/loudoun-decks-532352487" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>MapQuest</a></li>
             <li><a href="https://www.facebook.com/profile.php?id=61573750423712" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Facebook</a></li>
             <li><a href="https://www.instagram.com/loudoundecks/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Instagram</a></li>
             <li><a href="https://www.tiktok.com/@loudoun.decks" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>TikTok</a></li>

@@ -9,6 +9,7 @@ import ServiceProcessHorizontal from '@/components/ServiceProcessHorizontal';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
+import JsonLd from '@/components/JsonLd';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -132,14 +133,8 @@ const serviceSchemaData = {
 export default function DeckWashingPage() {
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
-      />
+      <JsonLd data={faqSchemaData} />
+      <JsonLd data={serviceSchemaData} />
 
       <ServicesHeader
         subtext="Maintenance & Restoration"

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import JsonLd from './JsonLd';
 import styles from './TeamGrid.module.css';
 
 const teamMembers = [
@@ -106,10 +107,7 @@ export default function TeamGrid() {
 
   return (
     <section className={styles.teamSection}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
+      <JsonLd data={personSchema} />
       <div className={styles.container}>
         <div className={styles.grid}>
           {teamMembers.map((member, idx) => (

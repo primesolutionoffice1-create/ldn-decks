@@ -8,6 +8,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
+import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 import NamedAuthor from '@/components/NamedAuthor';
@@ -72,7 +73,7 @@ const whyLdnDecks = [
 export default function TrexCalmShellPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <JsonLd data={serviceSchema} />
       <ServicesHeader
         subtext="Deck Resurfacing"
         title="Upgrade Your Deck with Trex Calm Shell Resurfacing"

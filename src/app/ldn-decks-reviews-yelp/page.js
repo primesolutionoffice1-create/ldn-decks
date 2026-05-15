@@ -123,7 +123,7 @@ export default function YelpReviewsPage() {
               { platform: 'Google', rating: '5.0', count: '41+ reviews', url: 'https://www.google.com/maps/place/Loudoun+Decks/' },
               { platform: 'Yelp', rating: '5.0', count: 'Verified', url: 'https://www.yelp.com/biz/loudoun-decks-centreville' },
               { platform: 'Houzz', rating: '5.0', count: 'Best of Houzz', url: 'https://www.houzz.com/pro/ldndecks' },
-              { platform: 'BBB', rating: 'A+', count: 'Accredited', url: 'https://www.bbb.org/us/va/manassas/profile/deck-builder/ldn-decks' },
+              { platform: 'BBB', rating: 'A+', count: 'Accredited', url: 'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241' },
             ].map((p) => (
               <a key={p.platform} href={p.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block', background: '#f9f9f9', borderRadius: 10, padding: '1.25rem', textAlign: 'center', textDecoration: 'none', color: 'inherit', border: '1px solid #e5e5e5' }}>
                 <p style={{ fontSize: '0.8rem', color: '#999', marginBottom: '0.25rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{p.platform}</p>

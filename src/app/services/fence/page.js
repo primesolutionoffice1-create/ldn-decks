@@ -9,6 +9,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
+import JsonLd from '@/components/JsonLd';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -124,7 +125,7 @@ export default function FencePage() {
   return (
     <main>
       <ServiceSchema name="Fence Installation" description="Custom fencing in Northern Virginia. Privacy, composite, vinyl, wood, and aluminum options." price="6000" />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fenceFaqSchema) }} />
+      <JsonLd data={fenceFaqSchema} />
       <ServicesHeader
         subtext="5-Star Google Rated Installation"
         title="Custom Fence Design & Installation"
@@ -181,4 +182,3 @@ export default function FencePage() {
     </main>
   );
 }
-

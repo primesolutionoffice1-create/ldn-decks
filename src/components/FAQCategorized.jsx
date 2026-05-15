@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import JsonLd from './JsonLd';
 import styles from './FAQCategorized.module.css';
 
 const faqData = [
@@ -128,12 +129,7 @@ export default function FAQCategorized({ withSchema = true }) {
 
   return (
     <section className={styles.faqSection}>
-      {withSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
+      {withSchema && <JsonLd data={faqSchema} />}
       <div className={styles.container}>
         {faqData.map((cat, catIdx) => (
           <div key={catIdx} className={styles.categoryRow}>

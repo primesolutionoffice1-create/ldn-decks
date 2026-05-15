@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 import NamedAuthor from '@/components/NamedAuthor';
@@ -113,7 +114,7 @@ const faqs = [
 export default function UnderDeckPatiosPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <JsonLd data={serviceSchema} />
       <ServicesHeader
         subtext="Under Deck Patio Loudoun VA"
         title="Turn the Space Under Your Deck Into a Beautiful, Dry Patio"

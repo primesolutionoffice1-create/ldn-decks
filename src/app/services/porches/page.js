@@ -10,6 +10,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
+import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 import NamedAuthor from '@/components/NamedAuthor';
@@ -96,7 +97,7 @@ export default function PorchesPage() {
   return (
     <main>
       <ServiceSchema name="Porch Construction" description="Custom front porches, screened porches, and open porches in Northern Virginia. Design and build." price="25000" />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(porchFaqSchema) }} />
+      <JsonLd data={porchFaqSchema} />
       <ServicesHeader
         subtext="5-Star Google Rated Builder"
         title="Custom Porch Design & Construction"

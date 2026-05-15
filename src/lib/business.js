@@ -47,6 +47,9 @@ export const BUSINESS = {
     'https://www.yelp.com/biz/loudoun-decks-centreville',
     'https://www.tiktok.com/@loudoun.decks',
     'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241',
+    'https://www.buildzoom.com/contractor/loudoun-decks',
+    'https://business.loudounchamber.org/list/member/loudoun-deck-30047.htm',
+    'https://www.mapquest.com/us/virginia/loudoun-decks-532352487',
   ],
   // Professional credentials surfaced site-wide on the site — mirrored into
   // schema as hasCredential for E-E-A-T / entity-trust signals.

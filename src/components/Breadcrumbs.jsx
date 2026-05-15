@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Breadcrumbs.module.css';
 import { labelFor } from '@/lib/breadcrumbLabels';
+import JsonLd from './JsonLd';
 
 export default function Breadcrumbs() {
   const pathname = usePathname();
@@ -41,10 +42,7 @@ export default function Breadcrumbs() {
 
   return (
     <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={jsonLd} />
       <div className={styles.container}>
         <div className={styles.item}>
           <Link href="/" className={styles.link}>Home</Link>
@@ -63,4 +61,3 @@ export default function Breadcrumbs() {
     </nav>
   );
 }
-
