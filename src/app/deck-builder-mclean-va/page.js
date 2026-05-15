@@ -172,7 +172,7 @@ export default function McLeanDeckBuilderPage() {
         items={inclusions}
       />
       <ProcessSteps />
-      <ServicesFAQ canonicalUrl="https://ldndecks.com/deck-builder-mclean-va"
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/deck-builder-mclean-va" withSchema={false}
         title="Deck Builder McLean VA - FAQs"
         faqs={mcleanFAQs}
       />
