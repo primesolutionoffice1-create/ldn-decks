@@ -180,7 +180,6 @@ export default async function sitemap() {
                 { path: "/about/certifications-and-licenses",           priority: 0.80, lastMod: TIER1, freq: "monthly" },
                 { path: "/areas-we-serve",                              priority: 0.85, lastMod: TIER1, freq: "monthly" },
                 { path: "/reviews",                                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
-                { path: "/ldn-decks-reviews-yelp",                      priority: 0.75, lastMod: TIER1, freq: "monthly" },
 
                 // Geo landing pages (standalone — premium markets)
                 { path: "/deck-builder-great-falls-va",                 priority: 0.92, lastMod: TIER1, freq: "weekly" },

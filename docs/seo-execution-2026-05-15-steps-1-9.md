@@ -99,7 +99,7 @@ Priority GSC manual URL inspection queue:
 - `/get-estimate`
 - `/press`
 - `/social`
-- `/ldn-decks-reviews-yelp`
+- `/reviews`
 
 ## 6. Authority pages
 
@@ -108,7 +108,8 @@ Status: In progress
 Completed:
 - `/press` exists and now includes verified authority profiles.
 - `/social` exists and now uses corrected citation URLs.
-- `/ldn-decks-reviews-yelp` exists and is now included in sitemap.
+- `/reviews` is the canonical review page.
+- `/ldn-decks-reviews-yelp` redirects permanently to `/reviews`, so it must not be submitted in the sitemap.
 
 Next pages/content upgrades:
 - Add deeper project proof to Herndon, Reston, Ashburn, Leesburg, McLean, Vienna pages.

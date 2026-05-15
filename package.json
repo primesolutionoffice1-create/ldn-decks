@@ -9,7 +9,8 @@
           "lint": "eslint",
           "ads:generate-imports": "node scripts/generate-google-ads-imports.mjs",
           "ads:validate-imports": "node scripts/validate-google-ads-imports.mjs",
-          "seo:validate-schema": "node scripts/validate-seo-schema.mjs"
+          "seo:validate-schema": "node scripts/validate-seo-schema.mjs",
+          "seo:daily-check": "node scripts/seo-daily-check.mjs"
     },
     "dependencies": {
           "@vercel/analytics": "^1.6.1",
