@@ -21,7 +21,7 @@ export const metadata = {
     template: '%s',  // pages set their own complete title
   },
   description: 'Trex Pro & TimberTech certified deck builders serving Loudoun, Fairfax & Prince William VA. Custom decks, screened porches & pergolas. Free quote in 24h.',
-  alternates: { canonical: '/' },
+  alternates: { canonical: SITE_URL },
   openGraph: {
     type: 'website',
     locale: 'en_US',
