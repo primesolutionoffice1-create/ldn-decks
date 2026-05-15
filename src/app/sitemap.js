@@ -224,6 +224,11 @@ export default async function sitemap() {
                 { path: "/deck-builder-stafford-va",                    priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/pressure-washing-deck-northern-virginia",     priority: 0.80, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-bristow-va",                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/northern-virginia-deck-cost-report-2026",     priority: 0.95, lastMod: TIER1, freq: "weekly" },
+                { path: "/outdoor-living-northern-virginia",            priority: 0.95, lastMod: TIER1, freq: "weekly" },
+                { path: "/trex-performance-products",                   priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/ldn-decks-reviews-yelp",                      priority: 0.80, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-design-ideas-northern-virginia-2026",    priority: 0.90, lastMod: TIER1, freq: "weekly" },
 
                 // Missing service page
                 { path: "/services/deck-stair-lighting",               priority: 0.75, lastMod: TIER3, freq: "monthly" },

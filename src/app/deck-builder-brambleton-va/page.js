@@ -86,7 +86,7 @@ export default function BrambletonDeckBuilderPage() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
             {[
               ['/deck-builder-ashburn-va', 'Ashburn'],
-              ['/near-you/loudoun-county/south-riding', 'South Riding'],
+              ['/deck-builder-south-riding-va', 'South Riding'],
               ['/near-you/loudoun-county/stone-ridge', 'Stone Ridge'],
               ['/deck-builder-chantilly-va', 'Chantilly'],
               ['/deck-builder-centreville-va', 'Centreville'],

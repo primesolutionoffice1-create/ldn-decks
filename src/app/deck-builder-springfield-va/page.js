@@ -89,7 +89,7 @@ export default function SpringfieldDeckBuilderPage() {
               ['/deck-builder-fairfax-va', 'Fairfax'],
               ['/deck-builder-alexandria-va', 'Alexandria'],
               ['/near-you/fairfax-county/annandale', 'Annandale'],
-              ['/near-you/fairfax-county/lorton', 'Lorton'],
+              ['/deck-builder-lorton-va', 'Lorton'],
               ['/deck-builder-centreville-va', 'Centreville'],
             ].map(([href, text]) => (
               <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>

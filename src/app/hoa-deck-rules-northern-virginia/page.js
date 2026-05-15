@@ -124,7 +124,7 @@ export default function HOADeckRulesPage() {
             {[
               ['/deck-permit-loudoun-county-virginia', 'Deck Permit Guide: Loudoun County'],
               ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
-              ['/near-you/loudoun-county/ashburn', 'Deck Builder in Ashburn, VA'],
+              ['/deck-builder-ashburn-va', 'Deck Builder in Ashburn, VA'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>

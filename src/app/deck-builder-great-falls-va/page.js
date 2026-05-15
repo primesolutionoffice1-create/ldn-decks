@@ -107,11 +107,11 @@ export default function GreatFallsDeckBuilderPage() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
             {[
               ['/deck-builder-mclean-va', 'McLean'],
-              ['/near-you/fairfax-county/vienna', 'Vienna'],
-              ['/near-you/fairfax-county/oakton', 'Oakton'],
-              ['/near-you/fairfax-county/reston', 'Reston'],
-              ['/near-you/fairfax-county/herndon', 'Herndon'],
-              ['/near-you/fairfax-county/falls-church', 'Falls Church'],
+              ['/deck-builder-vienna-va', 'Vienna'],
+              ['/deck-builder-oakton-va', 'Oakton'],
+              ['/deck-builder-reston-va', 'Reston'],
+              ['/deck-builder-herndon-va', 'Herndon'],
+              ['/deck-builder-falls-church-va', 'Falls Church'],
             ].map(([href, text]) => (
               <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
             ))}

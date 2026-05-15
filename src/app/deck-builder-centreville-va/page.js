@@ -113,13 +113,13 @@ export default function CentrevilleDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Also Serving Nearby</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
             {[
-              ['/near-you/fairfax-county/chantilly', 'Chantilly'],
-              ['/near-you/fairfax-county/fairfax', 'Fairfax'],
+              ['/deck-builder-chantilly-va', 'Chantilly'],
+              ['/deck-builder-fairfax-va', 'Fairfax'],
               ['/deck-builder-vienna-va', 'Vienna'],
-              ['/near-you/fairfax-county/oakton', 'Oakton'],
-              ['/near-you/prince-william-county/manassas', 'Manassas'],
-              ['/near-you/prince-william-county/gainesville', 'Gainesville'],
-              ['/near-you/loudoun-county/south-riding', 'South Riding'],
+              ['/deck-builder-oakton-va', 'Oakton'],
+              ['/deck-builder-manassas-va', 'Manassas'],
+              ['/deck-builder-gainesville-va', 'Gainesville'],
+              ['/deck-builder-south-riding-va', 'South Riding'],
             ].map(([href, text]) => (
               <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
             ))}

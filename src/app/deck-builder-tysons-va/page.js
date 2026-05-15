@@ -83,7 +83,7 @@ export default function TysonsDeckBuilderPage() {
               ['/deck-builder-falls-church-va', 'Falls Church'],
               ['/deck-builder-fairfax-va', 'Fairfax'],
               ['/deck-builder-oakton-va', 'Oakton'],
-              ['/near-you/fairfax-county/reston', 'Reston'],
+              ['/deck-builder-reston-va', 'Reston'],
             ].map(([href, text]) => (
               <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
             ))}

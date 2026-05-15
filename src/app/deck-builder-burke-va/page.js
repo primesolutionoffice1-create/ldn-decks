@@ -85,11 +85,11 @@ export default function BurkeDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Also Serving</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
             {[
-              ['/near-you/fairfax-county/springfield', 'Springfield'],
+              ['/deck-builder-springfield-va', 'Springfield'],
               ['/deck-builder-fairfax-va', 'Fairfax'],
               ['/near-you/fairfax-county/annandale', 'Annandale'],
               ['/deck-builder-centreville-va', 'Centreville'],
-              ['/near-you/fairfax-county/lorton', 'Lorton'],
+              ['/deck-builder-lorton-va', 'Lorton'],
               ['/deck-builder-alexandria-va', 'Alexandria'],
             ].map(([href, text]) => (
               <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>

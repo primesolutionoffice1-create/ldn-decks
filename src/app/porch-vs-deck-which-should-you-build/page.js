@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/porch-vs-deck-which-should-you-build',
-  title: 'Porch vs Deck: Which Should You Build? (2026 Cost & ROI Guide)',
+  title: 'Porch vs Deck: Which Should You Build? (2026 ROI Guide)',
   description: 'Porch vs deck compared cost, ROI, usable months, maintenance. Screened porches: $25k-$70k, 9-10 months use. Open decks: $15k-$45k, 5-6 months. We build both.',
 });
 

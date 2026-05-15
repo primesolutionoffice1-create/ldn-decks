@@ -11,7 +11,7 @@ import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/how-much-does-a-deck-cost-northern-virginia',
-  title: '2026 Deck Cost in Northern Virginia | See Real Project Prices',
+  title: '2026 Deck Cost NoVA | See Real Project Prices & Tables',
   description: 'Composite deck costs $30-$75/sqft installed in Northern Virginia. See real project price tables and get a free itemized quote today!',
   image: '/images/img10.jpeg',
 });

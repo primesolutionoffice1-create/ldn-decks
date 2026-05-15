@@ -86,7 +86,7 @@ export default function HaymarketDeckBuilderPage() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
             {[
               ['/deck-builder-gainesville-va', 'Gainesville'],
-              ['/near-you/prince-william-county/bristow', 'Bristow'],
+              ['/deck-builder-bristow-va', 'Bristow'],
               ['/deck-builder-manassas-va', 'Manassas'],
               ['/near-you/prince-william-county/nokesville', 'Nokesville'],
               ['/deck-builder-centreville-va', 'Centreville'],

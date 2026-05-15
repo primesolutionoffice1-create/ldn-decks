@@ -6,7 +6,7 @@ import styles from './TrexPerformance.module.css';
 export async function generateMetadata() {
   return buildMetadata({
     path: '/trex-performance-products',
-    title: 'Trex Performance-Engineered™ Outdoor Living Products | Loudoun Decks',
+    title: 'Trex Performance Outdoor Living Products | Loudoun Decks',
     description: 'Explore the full range of Trex performance-engineered outdoor living products. From high-durability composite decking to elegant railing systems, discover the Trex difference with Loudoun Decks.',
   });
 }

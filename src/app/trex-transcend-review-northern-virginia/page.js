@@ -10,7 +10,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/trex-transcend-review-northern-virginia',
-  title: 'Trex Transcend Review 2026 | Is It Worth It for Virginia Homes?',
+  title: 'Trex Transcend Review 2026 | Is It Worth It for NoVA Homes?',
   description: 'Honest Trex Transcend review from a Platinum Partner installer. 500+ installs in Northern Virginia durability, fade, heat, cost vs Lineage and TimberTech.',
   image: '/images/img36.jpeg',
 });
