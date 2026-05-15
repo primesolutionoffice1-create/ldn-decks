@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '100px 20px', lineHeight: '1.6', color: '#333' }}>
       <h1>Privacy Policy</h1>
-      <p>Last Updated: April 2026</p>
+      <p>Last Updated: May 2026</p>
       
       <section style={{ marginTop: '40px' }}>
         <h2>1. Information We Collect</h2>
@@ -40,7 +40,8 @@ export default function PrivacyPolicy() {
           Some of advertisers on our site may use cookies and web beacons. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access, we hyperlinked to their Privacy Policies below:
         </p>
         <ul>
-          <li>Google: <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads</a></li>
+          <li>Google: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/ads</a></li>
+          <li>Pinterest: <a href="https://policy.pinterest.com/en/privacy-policy" target="_blank" rel="noopener noreferrer">https://policy.pinterest.com/en/privacy-policy</a></li>
         </ul>
       </section>
 

@@ -7,8 +7,8 @@ type: "ad-group"
 status: "imported"
 platform: "google"
 sources:
-  - "[[Google Ads Export 2026-05-15 - Google Ads Editor import- 08-pmax-remarketing-assets]]"
-  - ".raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets.csv"
+  - "[[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]]"
+  - ".raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets-2.csv"
 relationships:
   - "[[Google Ads]]"
 ---
@@ -17,7 +17,7 @@ relationships:
 
 ## Compiled Truth
 
-`Visitors | Deck Estimate | Calls` is a ad group / ad set / asset group detected from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 08-pmax-remarketing-assets]].
+`Visitors | Deck Estimate | Calls` is a ad group / ad set / asset group detected from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 
 ## Related
 
@@ -33,7 +33,7 @@ relationships:
 | Rows | 1 |
 | Campaign | RMKT \| PMax \| Visitors 30/60/90d \| Calls |
 | Detected Source Field | Asset group |
-| Raw Source | .raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets.csv |
+| Raw Source | .raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets-2.csv |
 
 ## Latest Metrics
 
@@ -44,4 +44,5 @@ relationships:
 ---
 
 ## Timeline
+- 2026-05-15 - Updated ad group / ad set / asset group from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 - 2026-05-15 - Updated ad group / ad set / asset group from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 08-pmax-remarketing-assets]].

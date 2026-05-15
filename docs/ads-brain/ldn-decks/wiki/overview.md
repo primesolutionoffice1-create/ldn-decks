@@ -18,7 +18,7 @@ local-service campaigns.
 - Status: Synthesis complete. Ads Health Score 57 (D).
 - Owner: LDN Decks
 - Site: https://www.ldndecks.com
-- Platform exports imported: 11
+- Platform exports imported: 22
 - Report notes present: 2
 
 ## Safety Posture

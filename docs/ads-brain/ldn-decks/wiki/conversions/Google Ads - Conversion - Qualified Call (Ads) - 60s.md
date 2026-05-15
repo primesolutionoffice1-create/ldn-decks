@@ -7,8 +7,8 @@ type: "conversion"
 status: "imported"
 platform: "google"
 sources:
-  - "[[Google Ads Export 2026-05-15 - Google Ads Editor import- 09-call-asset]]"
-  - ".raw/sources/exports/google/2026-05-15-09-call-asset.csv"
+  - "[[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]]"
+  - ".raw/sources/exports/google/2026-05-15-09-call-asset-2.csv"
 relationships:
   - "[[Google Ads]]"
 ---
@@ -17,7 +17,7 @@ relationships:
 
 ## Compiled Truth
 
-`Qualified Call (Ads) - 60s` is a conversion detected from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 09-call-asset]].
+`Qualified Call (Ads) - 60s` is a conversion detected from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 
 ## Related
 
@@ -30,18 +30,19 @@ relationships:
 | Field | Value |
 | --- | --- |
 | Platform | Google Ads |
-| Rows | 4 |
+| Rows | 5 |
 | Campaign | SRCH \| Composite \| 3 Counties \| Calls |
 | Detected Source Field | Conversion action |
-| Raw Source | .raw/sources/exports/google/2026-05-15-09-call-asset.csv |
+| Raw Source | .raw/sources/exports/google/2026-05-15-09-call-asset-2.csv |
 
 ## Latest Metrics
 
 | Metric | Value |
 | --- | --- |
-| Rows | 4 |
+| Rows | 5 |
 
 ---
 
 ## Timeline
+- 2026-05-15 - Updated conversion from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 - 2026-05-15 - Updated conversion from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 09-call-asset]].

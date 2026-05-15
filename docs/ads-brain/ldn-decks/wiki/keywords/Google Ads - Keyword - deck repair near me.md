@@ -7,8 +7,8 @@ type: "keyword"
 status: "imported"
 platform: "google"
 sources:
-  - "[[Google Ads Export 2026-05-15 - Google Ads Editor import- 11-campaign-negative-keywords]]"
-  - ".raw/sources/exports/google/2026-05-15-11-campaign-negative-keywords.csv"
+  - "[[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]]"
+  - ".raw/sources/exports/google/2026-05-15-11-campaign-negative-keywords-2.csv"
 relationships:
   - "[[Google Ads]]"
 ---
@@ -17,7 +17,7 @@ relationships:
 
 ## Compiled Truth
 
-`deck repair near me` is a keyword detected from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 11-campaign-negative-keywords]].
+`deck repair near me` is a keyword detected from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 
 ## Related
 
@@ -30,18 +30,19 @@ relationships:
 | Field | Value |
 | --- | --- |
 | Platform | Google Ads |
-| Rows | 2 |
+| Rows | 3 |
 | Campaign | SRCH \| Composite \| 3 Counties \| Calls |
 | Detected Source Field | Keyword |
-| Raw Source | .raw/sources/exports/google/2026-05-15-11-campaign-negative-keywords.csv |
+| Raw Source | .raw/sources/exports/google/2026-05-15-11-campaign-negative-keywords-2.csv |
 
 ## Latest Metrics
 
 | Metric | Value |
 | --- | --- |
-| Rows | 2 |
+| Rows | 3 |
 
 ---
 
 ## Timeline
+- 2026-05-15 - Updated keyword from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 - 2026-05-15 - Updated keyword from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 11-campaign-negative-keywords]].

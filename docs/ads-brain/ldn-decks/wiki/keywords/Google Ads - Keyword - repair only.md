@@ -7,8 +7,8 @@ type: "keyword"
 status: "imported"
 platform: "google"
 sources:
-  - "[[Google Ads Export 2026-05-15 - Google Ads Editor import- 05-shared-negative-keywords]]"
-  - ".raw/sources/exports/google/2026-05-15-05-shared-negative-keywords.csv"
+  - "[[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]]"
+  - ".raw/sources/exports/google/2026-05-15-05-shared-negative-keywords-2.csv"
 relationships:
   - "[[Google Ads]]"
 ---
@@ -17,7 +17,7 @@ relationships:
 
 ## Compiled Truth
 
-`repair only` is a keyword detected from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 05-shared-negative-keywords]].
+`repair only` is a keyword detected from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 
 ## Related
 
@@ -33,7 +33,7 @@ relationships:
 | Rows | 1 |
 | Campaign | TBD |
 | Detected Source Field | Keyword |
-| Raw Source | .raw/sources/exports/google/2026-05-15-05-shared-negative-keywords.csv |
+| Raw Source | .raw/sources/exports/google/2026-05-15-05-shared-negative-keywords-2.csv |
 
 ## Latest Metrics
 
@@ -44,4 +44,5 @@ relationships:
 ---
 
 ## Timeline
+- 2026-05-15 - Updated keyword from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 - 2026-05-15 - Updated keyword from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 05-shared-negative-keywords]].

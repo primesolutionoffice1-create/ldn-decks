@@ -23,6 +23,8 @@ Ad group, ad set, and asset-group notes that connect campaigns to ads, audiences
 - [[Google Ads - Ad Group - Ad Set - Asset Group - Brand Phrase]]
 - [[Google Ads - Ad Group - Ad Set - Asset Group - Composite Deck Builder]]
 - [[Google Ads - Ad Group - Ad Set - Asset Group - Composite Deck Cost]]
+- [[Google Ads - Ad Group - Ad Set - Asset Group - Deck Builders Near Me]]
+- [[Google Ads - Ad Group - Ad Set - Asset Group - Deck Contractors Near Me]]
 - [[Google Ads - Ad Group - Ad Set - Asset Group - Deck Replacement]]
 - [[Google Ads - Ad Group - Ad Set - Asset Group - Deck Resurfacing]]
 - [[Google Ads - Ad Group - Ad Set - Asset Group - Replace Wood With Composite]]

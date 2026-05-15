@@ -35,6 +35,7 @@ Immutable-source guide notes, source manifests, and research references.
 - [[Google Ads Export 2026-05-15 - Google Ads Editor import- 09-call-asset]]
 - [[Google Ads Export 2026-05-15 - Google Ads Editor import- 10-location-targets]]
 - [[Google Ads Export 2026-05-15 - Google Ads Editor import- 11-campaign-negative-keywords]]
+- [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]]
 - [[Market Context 2026-05-15]]
 - [[SpyFu PPC Keyword Intelligence 2026-05-15]]
 

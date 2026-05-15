@@ -7,8 +7,8 @@ type: "campaign"
 status: "active"
 platform: "google"
 sources:
-  - "[[Google Ads Export 2026-05-15 - Google Ads Editor import- 10-location-targets]]"
-  - ".raw/sources/exports/google/2026-05-15-10-location-targets.csv"
+  - "[[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]]"
+  - ".raw/sources/exports/google/2026-05-15-10-location-targets-2.csv"
 relationships:
   - "[[Google Ads]]"
 ---
@@ -17,7 +17,7 @@ relationships:
 
 ## Compiled Truth
 
-`RMKT | PMax | Visitors 30/60/90d | Calls` is a [[Google Ads]] campaign represented in [[Google Ads Export 2026-05-15 - Google Ads Editor import- 10-location-targets]].
+`RMKT | PMax | Visitors 30/60/90d | Calls` is a [[Google Ads]] campaign represented in [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 
 ## Related
 
@@ -47,6 +47,10 @@ Tracking or conversion quality must be reviewed before optimization.
 ---
 
 ## Timeline
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-10-location-targets-2.csv`.
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-09-call-asset-2.csv`.
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets-2.csv`.
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-01-campaigns-2.csv`.
 - 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 10-location-targets]] sourced at `.raw/sources/exports/google/2026-05-15-10-location-targets.csv`.
 - 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 09-call-asset]] sourced at `.raw/sources/exports/google/2026-05-15-09-call-asset.csv`.
 - 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 08-pmax-remarketing-assets]] sourced at `.raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets.csv`.

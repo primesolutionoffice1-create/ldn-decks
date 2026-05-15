@@ -7,8 +7,8 @@ type: "campaign"
 status: "active"
 platform: "google"
 sources:
-  - "[[Google Ads Export 2026-05-15 - Google Ads Editor import- 10-location-targets]]"
-  - ".raw/sources/exports/google/2026-05-15-10-location-targets.csv"
+  - "[[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]]"
+  - ".raw/sources/exports/google/2026-05-15-10-location-targets-2.csv"
 relationships:
   - "[[Google Ads]]"
 ---
@@ -17,7 +17,7 @@ relationships:
 
 ## Compiled Truth
 
-`SRCH | Branded | 3 Counties | Calls` is a [[Google Ads]] campaign represented in [[Google Ads Export 2026-05-15 - Google Ads Editor import- 10-location-targets]].
+`SRCH | Branded | 3 Counties | Calls` is a [[Google Ads]] campaign represented in [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 
 ## Related
 
@@ -47,6 +47,14 @@ Tracking or conversion quality must be reviewed before optimization.
 ---
 
 ## Timeline
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-10-location-targets-2.csv`.
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-09-call-asset-2.csv`.
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-07-callouts-2.csv`.
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-06-sitelinks-2.csv`.
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-04-responsive-search-ads-2.csv`.
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-03-keywords-2.csv`.
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-02-ad-groups-2.csv`.
+- 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]] sourced at `.raw/sources/exports/google/2026-05-15-01-campaigns-2.csv`.
 - 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 10-location-targets]] sourced at `.raw/sources/exports/google/2026-05-15-10-location-targets.csv`.
 - 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 09-call-asset]] sourced at `.raw/sources/exports/google/2026-05-15-09-call-asset.csv`.
 - 2026-05-15 - Updated from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 07-callouts]] sourced at `.raw/sources/exports/google/2026-05-15-07-callouts.csv`.

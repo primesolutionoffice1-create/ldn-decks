@@ -7,8 +7,8 @@ type: "landing-page"
 status: "imported"
 platform: "google"
 sources:
-  - "[[Google Ads Export 2026-05-15 - Google Ads Editor import- 08-pmax-remarketing-assets]]"
-  - ".raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets.csv"
+  - "[[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]]"
+  - ".raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets-2.csv"
 relationships:
   - "[[Google Ads]]"
 ---
@@ -17,7 +17,7 @@ relationships:
 
 ## Compiled Truth
 
-`https://www.ldndecks.com/composite-decks/; https://www.ldndecks.com/services/deck-replacement/; https://www.ldndecks.com/deck-resurfacing-vs-replacement/; https://www.ldndecks.com/` is a landing page detected from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 08-pmax-remarketing-assets]].
+`https://www.ldndecks.com/composite-decks/; https://www.ldndecks.com/services/deck-replacement/; https://www.ldndecks.com/deck-resurfacing-vs-replacement/; https://www.ldndecks.com/` is a landing page detected from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 
 ## Related
 
@@ -33,7 +33,7 @@ relationships:
 | Rows | 1 |
 | Campaign | RMKT \| PMax \| Visitors 30/60/90d \| Calls |
 | Detected Source Field | Final URL |
-| Raw Source | .raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets.csv |
+| Raw Source | .raw/sources/exports/google/2026-05-15-08-pmax-remarketing-assets-2.csv |
 
 ## Latest Metrics
 
@@ -44,4 +44,5 @@ relationships:
 ---
 
 ## Timeline
+- 2026-05-15 - Updated landing page from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 - 2026-05-15 - Updated landing page from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 08-pmax-remarketing-assets]].

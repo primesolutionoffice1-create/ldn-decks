@@ -22,6 +22,16 @@ export default function TrustSection() {
                 height={65}
               />
             </a>
+            <a
+              href="https://www.nadra.org/membership/directory/builders"
+              target="_blank"
+              rel="noopener"
+              className={styles.nadraCard}
+            >
+              <span className={styles.nadraKicker}>NADRA Member</span>
+              <span className={styles.nadraTitle}>Deck Builder / Contractor / Remodeler</span>
+              <span className={styles.nadraMeta}>Member since 2026</span>
+            </a>
           </div>
           
           <div className={styles.trexBlock}>

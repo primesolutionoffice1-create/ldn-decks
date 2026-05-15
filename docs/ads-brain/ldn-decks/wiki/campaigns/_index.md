@@ -23,6 +23,7 @@ Campaign notes compiled from imported evidence and append-only timelines.
 - [[Google Ads - RMKT - PMax - Visitors 30-60-90d - Calls]]
 - [[Google Ads - SRCH - Branded - 3 Counties - Calls]]
 - [[Google Ads - SRCH - Composite - 3 Counties - Calls]]
+- [[Google Ads - SRCH - Deck Builders - 3 Counties - Calls]]
 - [[Google Ads - SRCH - Replacement + Resurfacing - 3 Counties - Calls]]
 
 ## Maintenance

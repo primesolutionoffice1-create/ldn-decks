@@ -7,21 +7,21 @@ type: "platform"
 platform: "google"
 status: "imported"
 sources:
-  - "[[Google Ads Export 2026-05-15 - Google Ads Editor import- 11-campaign-negative-keywords]]"
-  - ".raw/sources/exports/google/2026-05-15-11-campaign-negative-keywords.csv"
+  - "[[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]]"
+  - ".raw/sources/exports/google/2026-05-15-11-campaign-negative-keywords-2.csv"
 ---
 
 # Google Ads
 
 ## Compiled Truth
 
-Google Ads has a latest imported source: [[Google Ads Export 2026-05-15 - Google Ads Editor import- 11-campaign-negative-keywords]].
+Google Ads has a latest imported source: [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 
 ## Latest Totals
 
 | Metric | Value |
 | --- | --- |
-| Rows | 33 |
+| Rows | 55 |
 | Cost | 0.0 |
 | Impressions | 0.0 |
 | Clicks | 0.0 |
@@ -48,6 +48,17 @@ optimization actions.
 ---
 
 ## Timeline
+- 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
+- 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
+- 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
+- 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
+- 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
+- 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
+- 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
+- 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
+- 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
+- 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
+- 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 - 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 11-campaign-negative-keywords]].
 - 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 10-location-targets]].
 - 2026-05-15 - Updated platform note from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 09-call-asset]].

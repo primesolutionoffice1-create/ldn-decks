@@ -7,8 +7,8 @@ type: "keyword"
 status: "imported"
 platform: "google"
 sources:
-  - "[[Google Ads Export 2026-05-15 - Google Ads Editor import- 03-keywords]]"
-  - ".raw/sources/exports/google/2026-05-15-03-keywords.csv"
+  - "[[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]]"
+  - ".raw/sources/exports/google/2026-05-15-03-keywords-2.csv"
 relationships:
   - "[[Google Ads]]"
 ---
@@ -17,7 +17,7 @@ relationships:
 
 ## Compiled Truth
 
-`azek deck builder near me` is a keyword detected from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 03-keywords]].
+`azek deck builder near me` is a keyword detected from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 
 ## Related
 
@@ -33,7 +33,7 @@ relationships:
 | Rows | 1 |
 | Campaign | SRCH \| Composite \| 3 Counties \| Calls |
 | Detected Source Field | Keyword |
-| Raw Source | .raw/sources/exports/google/2026-05-15-03-keywords.csv |
+| Raw Source | .raw/sources/exports/google/2026-05-15-03-keywords-2.csv |
 
 ## Latest Metrics
 
@@ -44,4 +44,5 @@ relationships:
 ---
 
 ## Timeline
+- 2026-05-15 - Updated keyword from [[Google Ads Export 2026-05-15 - Google Ads import pack 2026-05-15 SpyFu deck builders expansion]].
 - 2026-05-15 - Updated keyword from [[Google Ads Export 2026-05-15 - Google Ads Editor import- 03-keywords]].
