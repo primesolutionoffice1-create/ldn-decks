@@ -12,6 +12,16 @@ function push(event) {
   window.dataLayer.push(event);
 }
 
+function trackPinterestLead({ eventId } = {}) {
+  if (typeof window === 'undefined' || typeof window.pintrk !== 'function') {
+    return;
+  }
+
+  window.pintrk('track', 'lead', {
+    event_id: eventId || undefined,
+  });
+}
+
 /**
  * Track quote form submission
  * Fires: GA4 generate_lead + Google Ads Form Lead + Enhanced Conversions.
@@ -118,4 +128,5 @@ export function trackLeadConfirmed({ eventId } = {}) {
     event_id: eventId || null,
     page: window.location.pathname,
   });
+  trackPinterestLead({ eventId });
 }

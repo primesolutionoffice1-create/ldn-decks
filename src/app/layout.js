@@ -51,6 +51,8 @@ export const viewport = {
 import { ContactProvider } from "@/context/ContactContext";
 import LayoutContent from "./LayoutContent";
 
+const PINTEREST_TAG_ID = "2612622395697";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={outfit.variable}>
@@ -61,7 +63,10 @@ export default function RootLayout({ children }) {
             preload on the homepage. */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
+        <link rel="dns-prefetch" href="https://s.pinimg.com" />
+        <link rel="dns-prefetch" href="https://ct.pinterest.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://s.pinimg.com" crossOrigin="anonymous" />
         
         {/* AI content discovery — llms.txt standard */}
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms.txt" title="LLM content index" />
@@ -99,6 +104,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-N87MG6QS');`,
           }}
         />
+
+        {/* Pinterest Tag — base page tracking for organic + paid Pinterest
+            attribution. Lead conversions fire from trackLeadConfirmed() only
+            after the contact request succeeds. */}
+        <Script
+          id="pinterest-tag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(e){if(!window.pintrk){window.pintrk=function(){window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var n=window.pintrk;n.queue=[],n.version="3.0";var t=document.createElement("script");t.async=!0;t.src=e;var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");pintrk("load","${PINTEREST_TAG_ID}");pintrk("page");`,
+          }}
+        />
         
         {/* Ahrefs Analytics */}
         <Script
@@ -117,6 +133,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
             title="Google Tag Manager Noscript"
+          />
+        </noscript>
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            alt=""
+            src={`https://ct.pinterest.com/v3/?event=init&tid=${PINTEREST_TAG_ID}&noscript=1`}
           />
         </noscript>
         <ContactProvider>
