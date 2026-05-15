@@ -1,7 +1,7 @@
 ---
 type: meta
 title: "Wiki Index"
-updated: 2026-05-11
+updated: 2026-05-15
 tags:
   - meta
   - index
@@ -15,7 +15,7 @@ related:
 
 # Wiki Index
 
-Last updated: 2026-05-11 | Total pages: 0 | Sources ingested: 0
+Last updated: 2026-05-15 | Total pages: 1 | Sources ingested: 0
 
 Navigation: [[overview]] | [[log]] | [[hot]] | [[getting-started]]
 
@@ -35,7 +35,7 @@ _None yet. See [[sources/_index]]._
 
 ## Questions
 
-_None yet._
+- [[Obsidian Setup Test]] — Confirms `ldn-decks-wiki` opens in Obsidian with trusted plugins enabled and Codex write access.
 
 ## Comparisons
 
