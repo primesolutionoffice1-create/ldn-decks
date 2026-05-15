@@ -17,6 +17,12 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ---
 
+## 2026-05-15 — LDN Decks AI Brain import started
+
+Scanned `/Users/ldndecks/Documents/Obsidian Vault/Ldndecks AI Brain`, found 283 markdown notes, created [[LDN Decks AI Brain Import Plan]], and started [[LDN Decks Operating Brain]] as the migration domain.
+
+---
+
 ## 2026-05-15 — Obsidian vault verified
 
 Opened `ldn-decks-wiki` in Obsidian, accepted the trust prompt, confirmed Restricted Mode is off, and created [[Obsidian Setup Test]] to verify Codex write access.

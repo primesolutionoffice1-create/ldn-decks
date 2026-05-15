@@ -18,18 +18,21 @@ Navigation: [[index]] | [[log]] | [[overview]]
 
 ## Last Updated
 
-2026-05-15: Obsidian setup verified for `ldn-decks-wiki`. The vault was opened in Obsidian, the trust prompt was accepted, and Restricted Mode is off.
+2026-05-15: Started the old-vault migration from `/Users/ldndecks/Documents/Obsidian Vault/Ldndecks AI Brain` into `ldn-decks-wiki`.
 
 ## Key Recent Facts
 
 - Active Claude wiki vault: `/Users/ldndecks/Obsidian/ldn-decks-wiki`
-- Test note created: [[Obsidian Setup Test]]
-- Sources ingested: none yet.
+- GitHub backup is active at `primesolutionoffice1-create/ldn-decks-wiki`.
+- Old LDN Decks AI Brain inventory found 283 markdown notes.
+- Created [[LDN Decks AI Brain Import Plan]] and [[LDN Decks Operating Brain]].
 
 ## Open Threads
 
-- Next step: decide whether to keep Git local-only or add a remote backup target.
+- Next step: import priority 1 dashboard files from the old vault.
 
 ## Recent Pages
 
 - [[Obsidian Setup Test]]
+- [[LDN Decks AI Brain Import Plan]]
+- [[LDN Decks Operating Brain]]

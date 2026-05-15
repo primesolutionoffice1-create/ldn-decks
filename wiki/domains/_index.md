@@ -1,7 +1,7 @@
 ---
 type: meta
 title: "Domains Index"
-updated: 2026-05-11
+updated: 2026-05-15
 tags:
   - meta
   - index
@@ -14,4 +14,4 @@ related:
 
 Top-level topic areas. A domain groups related concepts, entities, and sources under one umbrella.
 
-_None yet. Domains usually emerge after a few sources have been ingested._
+- [[LDN Decks Operating Brain]] — Operating knowledge for LDN Decks SEO, Google Ads, local SEO, content, services, conversion systems, and AI search visibility.
