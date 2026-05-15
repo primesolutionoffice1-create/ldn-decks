@@ -45,6 +45,7 @@ const EXCLUDE_PATHS = [
   '/deck-builder-in-fairfax-county',
   '/deck-builder-in-prince-william-county',
   // Phase 1 Cleanup Exclusions
+  '/near-you',
   '/llms.txt',
   '/llms-full.txt',
   '/showcase/rooftop-deck-washington-dc',
@@ -83,15 +84,13 @@ export default async function sitemap() {
                 // Tier 2 - Core service pages
                 { path: "/composite-decks",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
                 { path: "/trex-decks",                   priority: 0.90, lastMod: TIER2, freq: "weekly" },
-                { path: "/timbertech-decks",             priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/wood-decks",                   priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 // /deck-replacement removed — redirects to /services/deck-replacement (already in sitemap below)
                 { path: "/deck-remodeling",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
                 { path: "/deck-repair",                  priority: 0.90, lastMod: TIER2, freq: "weekly" },
                 { path: "/services",                     priority: 0.90, lastMod: TIER2, freq: "weekly" },
                 { path: "/services/new-decks",           priority: 0.85, lastMod: TIER2, freq: "weekly" },
-                { path: "/services/deck-resurfacing",    priority: 0.90, lastMod: TIER2, freq: "weekly" },
-                { path: "/services/deck-replacement",    priority: 0.90, lastMod: TIER2, freq: "weekly" },
+                { path: "/services/deck-resurfacing",    priority: 0.85, lastMod: TIER2, freq: "weekly" },
                 { path: "/services/deck-repair-and-structural-maintenance", priority: 0.90, lastMod: TIER2, freq: "weekly" },
                 { path: "/services/porches",             priority: 0.90, lastMod: TIER2, freq: "weekly" },
                 { path: "/services/porches/front-porch", priority: 0.80, lastMod: TIER2, freq: "monthly" },
@@ -112,6 +111,7 @@ export default async function sitemap() {
                 { path: "/services/fence",               priority: 0.85, lastMod: TIER3, freq: "monthly" },
                 { path: "/services/fence-cleaning",      priority: 0.70, lastMod: TIER3, freq: "monthly" },
                 { path: "/services/deck-washing",        priority: 0.75, lastMod: TIER3, freq: "monthly" },
+                { path: "/services/deck-replacement",    priority: 0.85, lastMod: TIER3, freq: "monthly" },
                 { path: "/services/concrete-washing",    priority: 0.70, lastMod: TIER3, freq: "monthly" },
                 { path: "/services/outdoor-washing",     priority: 0.70, lastMod: TIER3, freq: "monthly" },
                 { path: "/services/house-siding-washing", priority: 0.65, lastMod: TIER3, freq: "monthly" },
@@ -148,7 +148,6 @@ export default async function sitemap() {
                 { path: "/deck-permit-fairfax-county-virginia",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-mclean-va",                     priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-kitchen-builder-northern-virginia",   priority: 0.85, lastMod: TIER1, freq: "weekly" },
-                { path: "/outdoor-living-northern-virginia",             priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-staining-northern-virginia",            priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-financing-northern-virginia",           priority: 0.80, lastMod: TIER1, freq: "weekly" },
 
@@ -285,11 +284,6 @@ export default async function sitemap() {
         const allPages = [...staticPages, ...cityPaths, ...blogPaths, ...showcasePaths]
                 .filter(p => !isExcluded(p.path));
 
-        // Google has officially ignored <priority> and <changefreq> since at least
-        // 2017. Emitting them just bloats the sitemap and offers no SEO benefit.
-        // The `priority` and `freq` fields above remain in the page-config tables
-        // as human-readable tier labels — they're not serialized here. Only
-        // `lastModified` (which Google does still use) ships in the output.
         return allPages.map(({ path, lastMod, videos }) => ({
                 url: `${baseUrl}${path}`,
                 lastModified: lastMod,
