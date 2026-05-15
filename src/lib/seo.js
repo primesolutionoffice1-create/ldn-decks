@@ -1,5 +1,19 @@
 export const SITE_URL = "https://ldndecks.com";
 
+function trimToSeoLimit(value, limit) {
+    if (typeof value !== "string" || value.length <= limit) {
+        return value;
+    }
+
+    const trimmed = value.slice(0, limit + 1);
+    const lastSpace = trimmed.lastIndexOf(" ");
+    const cleanCut = lastSpace > Math.floor(limit * 0.75)
+        ? trimmed.slice(0, lastSpace)
+        : trimmed.slice(0, limit);
+
+    return cleanCut.replace(/[|,;:\-\s]+$/g, "").trim();
+}
+
 /**
  * Build consistent metadata for Next.js App Router.
  *
@@ -28,19 +42,21 @@ export function buildMetadata({
     }
 
     const url = `${SITE_URL}${path}`;
+    const seoTitle = trimToSeoLimit(title, 60);
+    const seoDescription = trimToSeoLimit(description, 155);
 
     // Build the OG image object — only declare width/height when explicitly verified.
     // Declaring 1200x630 for an image that isn't actually 1200x630 misleads scrapers
     // and can cause card rejection or distorted previews.
-    const ogImage = { url: image, alt: title };
+    const ogImage = { url: image, alt: seoTitle };
     if (imageWidth && imageHeight) {
         ogImage.width = imageWidth;
         ogImage.height = imageHeight;
     }
 
     return {
-        title,
-        description,
+        title: seoTitle,
+        description: seoDescription,
         metadataBase: new URL(SITE_URL),
         alternates: {
                 canonical: url,
@@ -51,8 +67,8 @@ export function buildMetadata({
         },
         openGraph: {
             url,
-            title,
-            description,
+            title: seoTitle,
+            description: seoDescription,
             siteName: "Loudoun Decks",
             locale: "en_US",
             type: "website",
@@ -60,8 +76,8 @@ export function buildMetadata({
         },
         twitter: {
             card: "summary_large_image",
-            title,
-            description,
+            title: seoTitle,
+            description: seoDescription,
             images: [image],
         },
     };
