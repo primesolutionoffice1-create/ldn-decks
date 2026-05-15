@@ -13,13 +13,26 @@ function push(event) {
 }
 
 function trackPinterestLead({ eventId } = {}) {
-  if (typeof window === 'undefined' || typeof window.pintrk !== 'function') {
+  if (typeof window === 'undefined') {
     return;
   }
 
-  window.pintrk('track', 'lead', {
-    event_id: eventId || undefined,
-  });
+  const payload = { event_id: eventId || undefined };
+  let attempts = 0;
+
+  function sendWhenReady() {
+    if (typeof window.pintrk === 'function') {
+      window.pintrk('track', 'lead', payload);
+      return;
+    }
+
+    attempts += 1;
+    if (attempts < 10) {
+      window.setTimeout(sendWhenReady, 500);
+    }
+  }
+
+  sendWhenReady();
 }
 
 /**
