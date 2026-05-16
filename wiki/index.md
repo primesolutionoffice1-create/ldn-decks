@@ -15,7 +15,7 @@ related:
 
 # Wiki Index
 
-Last updated: 2026-05-15 | Total pages: 27 | Sources ingested: 17
+Last updated: 2026-05-16 | Total pages: 35 | Sources ingested: 24
 
 Navigation: [[overview]] | [[log]] | [[hot]] | [[getting-started]]
 
@@ -52,6 +52,13 @@ _None yet. See [[entities/_index]]._
 - [[LDN Decks Northern Virginia Cities]] — City and county coverage control index.
 - [[LDN Decks Composite Decks]] — Composite decking service-control page.
 - [[LDN Decks Deck Repair]] — Repair, safety, resurfacing, replacement, and local repair service-control page.
+- [[LDN Decks Conversion System Index]] — Conversion routing index.
+- [[LDN Decks Lead Generation System]] — Lead sources, high-converting topics, and conversion reinforcement.
+- [[LDN Decks Google Ads Lead Flow]] — Paid traffic to landing page and estimate funnel path.
+- [[LDN Decks SEO to Conversion Architecture]] — SEO entry, mid-funnel, and conversion page architecture.
+- [[LDN Decks Phone Call Conversion Strategy]] — Phone-call trust, qualification, and estimate-booking strategy.
+- [[LDN Decks Estimate Conversion System]] — Estimate-request conversion signals and CTAs.
+- [[LDN Decks Deck Estimate Funnel]] — Research-to-consultation funnel.
 
 ## Questions
 
@@ -67,6 +74,7 @@ _None yet. See [[entities/_index]]._
 - [[local-seo-tracker|Local SEO Tracker]] — Priority markets, county anchors, and readiness checks.
 - [[ai-visibility-tracker|AI Visibility Tracker]] — AI search goals, content needs, and next imports.
 - [[lint-report-2026-05-15|Lint Report 2026-05-15]] — Current wiki health check.
+- [[lint-report-2026-05-16|Lint Report 2026-05-16]] — Current wiki health check after Priority 4 import.
 
 ## Comparisons
 

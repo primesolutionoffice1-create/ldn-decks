@@ -34,7 +34,7 @@ related:
 
 ## Next Imports
 
-- Revenue and conversion systems.
+- Revenue and conversion systems imported in Priority 4.
 - Semantic keyword vault.
 - AI search optimization notes.
 - Internal-linking checklist.

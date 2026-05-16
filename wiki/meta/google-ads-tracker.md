@@ -41,7 +41,7 @@ related:
 
 ## Next Imports
 
-- Google Ads lead flow.
+- [[LDN Decks Google Ads Lead Flow]]
 - PMAX notes.
-- Estimate conversion system.
-- Phone-call conversion strategy.
+- [[LDN Decks Estimate Conversion System]]
+- [[LDN Decks Phone Call Conversion Strategy]]

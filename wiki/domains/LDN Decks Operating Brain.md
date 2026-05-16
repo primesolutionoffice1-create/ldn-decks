@@ -59,6 +59,16 @@ Initial import priority is documented in [[ldndecks-ai-brain-import-plan-2026-05
 - [[LDN Decks Composite Decks]] anchors composite decking service strategy.
 - [[LDN Decks Deck Repair]] anchors repair, safety, resurfacing, replacement, and local repair strategy.
 
+## Imported Revenue And Conversion Systems
+
+- [[LDN Decks Conversion System Index]] anchors the conversion section.
+- [[LDN Decks Lead Generation System]] connects SEO, Maps, Ads, buyer intent, and local authority to consultations.
+- [[LDN Decks Google Ads Lead Flow]] connects paid traffic to landing pages, trust assets, and estimate funnels.
+- [[LDN Decks SEO to Conversion Architecture]] ties SEO entry pages to mid-funnel and conversion pages.
+- [[LDN Decks Phone Call Conversion Strategy]] defines call qualification, trust reinforcement, and estimate-booking goals.
+- [[LDN Decks Estimate Conversion System]] defines conversion signals and CTAs for estimate requests.
+- [[LDN Decks Deck Estimate Funnel]] maps research and inspiration into project consultations.
+
 ## Operating Focus
 
 Build ldndecks.com into the leading Northern Virginia deck builder authority across:
@@ -72,4 +82,4 @@ Build ldndecks.com into the leading Northern Virginia deck builder authority acr
 
 The old vault is structurally clean enough to migrate: its readiness audit reports 283 markdown files, 0 orphans, 0 dead-end notes, 0 missing wikilinks, 0 duplicate filenames, and 0 missing frontmatter after cleanup. Remaining risk is content quality: developing briefs need source-backed review before any external publishing.
 
-Priority 3 imported the first core business pages for SEO, ads, content, local SEO, composite decks, and deck repair. The next migration wave should import revenue and conversion systems, then scaled content clusters.
+Priority 4 imported the first revenue and conversion systems. The next migration wave should import scaled content clusters: location intent, service entities, outdoor living, FAQ clusters, semantic keywords, and AI search optimization.

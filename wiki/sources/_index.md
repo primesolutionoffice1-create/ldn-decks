@@ -39,3 +39,13 @@ Articles, papers, transcripts, videos, conversations — the raw material the wi
 - [[LDN Decks Northern Virginia Cities]] — City and county coverage control index.
 - [[LDN Decks Composite Decks]] — Composite decking service-control page.
 - [[LDN Decks Deck Repair]] — Repair, safety, resurfacing, replacement, and local repair service-control page.
+
+## Old Obsidian Vault: Revenue And Conversion Systems
+
+- [[LDN Decks Conversion System Index]] — Conversion routing index.
+- [[LDN Decks Lead Generation System]] — Lead sources, high-converting topics, and conversion reinforcement.
+- [[LDN Decks Google Ads Lead Flow]] — Paid traffic to landing page and estimate funnel path.
+- [[LDN Decks SEO to Conversion Architecture]] — SEO entry, mid-funnel, and conversion page architecture.
+- [[LDN Decks Phone Call Conversion Strategy]] — Phone-call trust, qualification, and estimate-booking strategy.
+- [[LDN Decks Estimate Conversion System]] — Estimate-request conversion signals and CTAs.
+- [[LDN Decks Deck Estimate Funnel]] — Research-to-consultation funnel.

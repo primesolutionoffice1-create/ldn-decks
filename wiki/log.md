@@ -17,6 +17,16 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ---
 
+## 2026-05-16 ingest | LDN Decks Revenue And Conversion Systems
+
+- Source: `.raw/old-obsidian-vault/13-Conversions/`, `.raw/old-obsidian-vault/25-Revenue-Systems/`
+- Summaries: [[LDN Decks Conversion System Index]], [[LDN Decks Lead Generation System]], [[LDN Decks Google Ads Lead Flow]], [[LDN Decks SEO to Conversion Architecture]], [[LDN Decks Phone Call Conversion Strategy]], [[LDN Decks Estimate Conversion System]], [[LDN Decks Deck Estimate Funnel]]
+- Pages created: seven source summaries and [[lint-report-2026-05-16|Lint Report 2026-05-16]]
+- Pages updated: [[LDN Decks Operating Brain]], [[index]], [[sources/_index]], [[overview]], [[hot]], [[log]]
+- Key insight: The wiki now connects SEO, Maps, Google Ads, trust assets, phone calls, and estimate funnels into one lead-generation architecture.
+
+---
+
 ## 2026-05-15 maintenance | Core Wiki Workboards And Lint
 
 - Created: [[dashboard|Dashboard]], [[seo-command-center|SEO Command Center]], [[google-ads-tracker|Google Ads Tracker]], [[content-calendar|Content Calendar]], [[local-seo-tracker|Local SEO Tracker]], [[ai-visibility-tracker|AI Visibility Tracker]], [[lint-report-2026-05-15|Lint Report 2026-05-15]]
