@@ -10,6 +10,7 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import ServiceSchema from '@/components/ServiceSchema';
 
 import { buildMetadata } from '@/lib/seo';
 
@@ -80,30 +81,6 @@ const faqs = [
   }
 ];
 
-const faqSchemaData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.a
-    }
-  }))
-};
-
-const serviceSchemaData = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Custom Gazebos and Pergolas",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "State", "name": "Virginia" }
-  ],
-  "description": "Custom design and build services for luxury pergolas, gazebos, and outdoor shade structures in Northern Virginia."
-};
-
 const inclusions = [
   {
     title: "Architectural Design Phase",
@@ -126,13 +103,10 @@ const inclusions = [
 export default function GazeboPergolaPage() {
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchemaData) }}
+      <ServiceSchema
+        name="Custom Gazebo and Pergola Builder"
+        description="Custom design and build services for luxury pergolas, gazebos, and outdoor shade structures in Northern Virginia."
+        price="12000"
       />
 
       <ServicesHeader

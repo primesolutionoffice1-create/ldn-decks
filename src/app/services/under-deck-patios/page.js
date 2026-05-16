@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -17,19 +18,6 @@ export const metadata = buildMetadata({
   title: "Under Deck Patio Systems Loudoun VA | Waterproofing & Ceilings",
   description: "Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio."
 });
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Under Deck Patio System Installation",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-  ],
-  "description": "Custom under deck patio waterproofing and ceiling systems in Northern Virginia. Drainage systems, aluminum ceiling panels, recessed lighting, and electrical integration."
-};
 
 const expansionSections = [
   {
@@ -112,7 +100,11 @@ const faqs = [
 export default function UnderDeckPatiosPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <ServiceSchema
+        name="Under Deck Patio System Installation"
+        description="Custom under deck patio waterproofing and ceiling systems in Northern Virginia. Drainage systems, aluminum ceiling panels, recessed lighting, and electrical integration."
+        price="4500"
+      />
       <ServicesHeader
         subtext="Under Deck Patio Loudoun VA"
         title="Turn the Space Under Your Deck Into a Beautiful, Dry Patio"
