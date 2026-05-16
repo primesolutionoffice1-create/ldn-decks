@@ -65,18 +65,18 @@ export default function FairfaxPermitPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>More than 18 inches above grade at any point</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Within a setback zone or easement</li>
           </ul>
-          <p style={S.p}><strong>Exception:</strong> Ground-level, freestanding decks under 18 inches with no attached railings may be exempt. However, we recommend confirming with the county before building.</p>
+          <p style={S.p}><strong>Exception:</strong> Ground-level, freestanding decks under 18 inches with no attached railings may be exempt. However, we recommend confirming with the county before building. For the statewide threshold logic, see our guide to <Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck permit requirements</Link>.</p>
 
           <h2 style={S.h2}>Fairfax County Permit Process (Step by Step)</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Prepare plans and documents:</strong> Site plan showing deck footprint, property lines, and setbacks. Structural drawings with footing sizes, beam spans, joist spacing. Material specifications. For decks meeting the Fairfax County Typical Deck Detail, simplified plans are accepted.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Zoning review:</strong> Fairfax County reviews your deck&apos;s position relative to setback lines, lot coverage limits, and any applicable proffers or easements. This is the step that catches most homeowners off guard setbacks in Fairfax are often 25–35 feet from the rear property line.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Building plan review:</strong> A structural reviewer checks your plans for code compliance footing depth (below 30&quot; frost line), beam sizing, ledger connection, railing height (36&quot; minimum, 42&quot; if over 30&quot; above grade), and stair specifications.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Building plan review:</strong> A structural reviewer checks your plans for code compliance footing depth (below 30&quot; frost line), beam sizing, ledger connection, railing height (36&quot; minimum, 42&quot; if over 30&quot; above grade), and stair specifications. We also explain the foundation side in our guide to <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth in Virginia</Link>.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Permit issuance:</strong> Once approved, the permit is issued and must be posted visibly at the job site during construction.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Three inspections during construction:</strong>
               <ul style={{ paddingLeft: '1.25rem', marginTop: '0.5rem' }}>
                 <li>Footing inspection holes dug, before concrete is poured</li>
-                <li>Framing inspection joists, beams, ledger, hardware installed, before decking goes on</li>
+                <li>Framing inspection joists, beams, ledger, hardware installed, before decking goes on. If you are comparing framing options, read <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>.</li>
                 <li>Final inspection complete structure including railings, stairs, and fasteners</li>
               </ul>
             </li>
@@ -101,6 +101,7 @@ export default function FairfaxPermitPage() {
           <p style={S.p}>We review all of these before submitting. Our permit approval rate in Fairfax County is 100% because we check compliance first.</p>
 
           <h2 style={S.h2}>What Happens If You Build Without a Permit?</h2>
+          <p style={S.p}>We cover the full risk profile in <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>what happens if you build a deck without a permit in Virginia</Link>, but the practical issues usually show up as enforcement, insurance, and resale problems.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Stop-work order if discovered during construction</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Fines from Fairfax County code enforcement</li>

@@ -50,14 +50,14 @@ export default function PWCountyPermitPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>More than 30 inches above grade at any point</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Within setback zones or easements</li>
           </ul>
-          <p style={S.p}><strong>Exception:</strong> Freestanding, ground-level decks under 200 sqft and under 30 inches may be exempt. We confirm with the county before building.</p>
+          <p style={S.p}><strong>Exception:</strong> Freestanding, ground-level decks under 200 sqft and under 30 inches may be exempt. We confirm with the county before building. For a broader Virginia overview, read our <Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>statewide deck permit guide</Link>.</p>
 
           <h2 style={S.h2}>Permit Process (Step by Step)</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Prepare plans:</strong> Site plan showing property lines, setbacks, and deck footprint. Structural drawings with footing sizes, beam/joist specs, ledger details. Material specifications.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Submit to PW County Development Services:</strong> Online or in-person submission. Include all required documents.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Zoning review:</strong> County checks setback compliance, lot coverage limits, and easement conflicts. PW County is generally faster than Fairfax for this step.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Building review:</strong> Structural review ensures code compliance footing depth (below frost line), beam sizing, ledger connection, railing height.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Building review:</strong> Structural review ensures code compliance footing depth (below frost line), beam sizing, ledger connection, railing height. See our deeper guides on <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck footing depth</Link> and <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Permit issuance:</strong> Once approved, permit must be posted at the job site.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Three inspections:</strong> Footing (before concrete), Framing (before decking), Final (complete structure).</li>
           </ol>
@@ -95,7 +95,7 @@ export default function PWCountyPermitPage() {
           <p style={S.p}>Not sure which covers your property? Tell us your address we determine the correct jurisdiction and handle permitting accordingly.</p>
 
           <h2 style={S.h2}>We Handle Everything</h2>
-          <p style={S.p}>Permits are part of our standard scope no extra charge. We prepare plans, submit applications, track review timelines, schedule all inspections, and resolve any reviewer comments. You don&apos;t deal with the county at all.</p>
+          <p style={S.p}>Permits are part of our standard scope no extra charge. We prepare plans, submit applications, track review timelines, schedule all inspections, and resolve any reviewer comments. You don&apos;t deal with the county at all. If a deck was already built without approval, start with our guide to <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>unpermitted decks in Virginia</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[

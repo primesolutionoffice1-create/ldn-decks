@@ -48,7 +48,7 @@ const expansionSections = [
 
 const designProcess = [
   { title: "Step 1: Consultation", desc: "Free, no-obligation consultation at your home." },
-  { title: "Step 2: Planning", desc: "Custom layout design and concept planning." },
+  { title: "Step 2: Planning", desc: "Custom layout design and concept planning, including square layout, structural spans, and permit requirements." },
   { title: "Step 3: Selection", desc: "Guided material, color, and feature selection." },
   { title: "Step 4: Estimate", desc: "Transparent, detailed estimate and project timeline." },
   { title: "Step 5: Construction", desc: "Professional construction by our experienced crew." },
@@ -120,6 +120,17 @@ export default function NewDecksPage() {
         image2="/showcase/img09.jpeg"
       />
       <ServiceContentExpansion sections={expansionSections} />
+      <section style={{ padding: '20px 20px 40px', maxWidth: '900px', margin: '0 auto', lineHeight: 1.7 }}>
+        <h2 style={{ fontSize: '30px', marginBottom: '16px', fontWeight: 800 }}>Built Correctly Below the Surface</h2>
+        <p style={{ fontSize: '17px', color: '#555', marginBottom: 0 }}>
+          The best-looking deck still depends on layout, footings, and framing. We square every frame before it is fastened,
+          size joists to the span and decking material, and handle county permit approvals before construction begins.
+          Read more about the <Link href="/blog/3-4-5-rule-decking" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>3-4-5 rule for square deck framing</Link>,
+          {' '}<Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia footing depth</Link>,
+          {' '}<Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck joist sizing</Link>, and
+          {' '}<Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck permit requirements</Link>.
+        </p>
+      </section>
       <ServiceInclusions
         title="Our Design Process"
         description="How We Bring Your Vision to Life. A step-by-step roadmap to building your perfect deck."

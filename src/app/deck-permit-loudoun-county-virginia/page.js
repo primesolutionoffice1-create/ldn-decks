@@ -79,7 +79,7 @@ export default function LoudounPermitPage() {
 
           {/* ===== SECTION 1: Exemptions ===== */}
           <h2 style={S.h2}>What size deck can you build without a permit in Virginia?</h2>
-          <p style={S.p}>In Virginia, you can build a deck without a permit <strong>only</strong> if it is less than 200 square feet, not more than 30 inches above grade, freestanding, and does not serve a required exit door. This Virginia building permit requirements exemption applies strictly to small detached platforms. Failing to secure necessary permits for larger attached structures triggers massive liabilities.</p>
+          <p style={S.p}>In Virginia, you can build a deck without a permit <strong>only</strong> if it is less than 200 square feet, not more than 30 inches above grade, freestanding, and does not serve a required exit door. This Virginia building permit requirements exemption applies strictly to small detached platforms. Failing to secure necessary permits for larger attached structures triggers massive liabilities. For the full homeowner version, read <Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>do I need a building permit for a deck in Virginia?</Link></p>
 
           <div style={S.callout}>
             <p style={{ margin: 0, fontWeight: 600 }}>Important Note:</p>
@@ -87,7 +87,7 @@ export default function LoudounPermitPage() {
           </div>
 
           <ul style={S.list}>
-            <li style={S.listItem}>Insurance providers frequently deny injury or structural claims on unpermitted decks.</li>
+            <li style={S.listItem}>Insurance providers frequently deny injury or structural claims on unpermitted decks; our guide to <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>building a deck without a permit</Link> explains the resale and enforcement risks.</li>
             <li style={S.listItem}>Unpermitted additions severely complicate home sales and often require demolition before closing.</li>
             <li style={S.listItem}>Code enforcement officers issue costly stop-work orders and significant daily fines.</li>
           </ul>
@@ -119,7 +119,7 @@ export default function LoudounPermitPage() {
 
           {/* ===== SECTION 3: Footings ===== */}
           <h2 style={S.h2}>How deep do deck footings need to be in Virginia?</h2>
-          <p style={S.p}>Deck footings in Virginia must be a minimum of <strong>24 inches deep</strong> to reach below the frost line and prevent seasonal shifting. This standard ensures that frost heave cannot lift or destabilize the structural support columns. To meet VRC 2021 standards, hole diameter increases based on the load and soil bearing capacity.</p>
+          <p style={S.p}>Deck footings in Virginia must be a minimum of <strong>24 inches deep</strong> to reach below the frost line and prevent seasonal shifting. This standard ensures that frost heave cannot lift or destabilize the structural support columns. To meet VRC 2021 standards, hole diameter increases based on the load and soil bearing capacity. We cover the inspection failures and heavy-load exceptions in our guide to <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>how deep deck footings need to be in Virginia</Link>.</p>
 
           <div style={{ overflowX: 'auto', marginBottom: '3rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -156,7 +156,7 @@ export default function LoudounPermitPage() {
 
           {/* ===== SECTION 4: Joist Spans ===== */}
           <h2 style={S.h2}>Do I need 2x8 or 2x10 joists for my deck?</h2>
-          <p style={S.p}>The choice between 2x8 and 2x10 joists depends on your clear span; 2x8s typically support spans up to 10 feet, while 2x10s safely cover 12 to 14 feet. We specify premium framing for heavy composite decking like Trex and TimberTech, which often require <strong>12-inch on-center spacing</strong> rather than the standard 16-inch spacing to prevent structural deflection.</p>
+          <p style={S.p}>The choice between 2x8 and 2x10 joists depends on your clear span; 2x8s typically support spans up to 10 feet, while 2x10s safely cover 12 to 14 feet. We specify premium framing for heavy composite decking like Trex and TimberTech, which often require <strong>12-inch on-center spacing</strong> rather than the standard 16-inch spacing to prevent structural deflection. For a plain-English span breakdown, see <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>.</p>
 
           <div style={{ overflowX: 'auto', marginBottom: '3rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
