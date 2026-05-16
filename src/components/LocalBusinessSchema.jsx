@@ -12,7 +12,7 @@ export default function LocalBusinessSchema({ city, description, url }) {
     "logo": "https://ldndecks.com/ldndecks-logo.webp",
     "image": "https://ldndecks.com/images/img64.jpeg",
     "description": description || `Top-rated custom deck builder in ${city}, Northern Virginia. Trex Platinum Partner and TimberTech Certified Installer.`,
-    "telephone": "+1-571-655-7207",
+    "telephone": "+15716557207",
     "email": "office@ldndecks.com",
     "priceRange": "$$$",
     "address": {
