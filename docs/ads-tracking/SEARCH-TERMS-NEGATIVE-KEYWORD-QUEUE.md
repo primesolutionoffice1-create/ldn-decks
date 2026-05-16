@@ -30,6 +30,18 @@ Held back:
 - Search Console still shows a mobile LCP issue: 33 affected URLs, two groups at 2.7s LCP, last updated 2026-05-13.
 - Search Console Page indexing still shows 9 `Not found (404)` URLs and old submitted sitemap URLs returning `Couldn't fetch`.
 
+## 2026-05-16 Active-Campaign Search-Term Pass
+
+Reviewed enabled campaigns only in Google Ads for 2026-04-15 to 2026-05-14.
+
+| Campaign | Visible active terms | Spend | Action |
+|---|---|---:|---|
+| `SRCH \| Composite \| 3 Counties \| Calls` | `trex decking`, `composite deck`, `timbertech decking`, cost/replacement variants, one material-spec query | $8.24 | No new negative. Intent is mostly relevant and too low-volume. |
+| `SRCH \| Replacement + Resurfacing \| 3 Counties \| Calls` | `deck builders near me`, `deck resurfacing`, `deck wood replacement`, resurfacing/remodeling/cost variants, two competitor-review queries with no clicks | $53.75 | No new negative. Keep watching `deckman dc reviews` and `veterans decks reviews`; no spend yet. |
+| `SRCH \| Branded \| 3 Counties \| Calls` | No significant search-term volume available | $31.89 campaign spend shown elsewhere | No action. |
+
+Guardrail remains unchanged: exact negatives only after clear waste. Do not block `near me`, `deck builders`, `deck contractors`, `repair`, or `resurfacing` broadly.
+
 ## Current Guardrail
 
 Do not add broad negatives unless the term is unambiguously bad. Use exact or phrase match first so we do not block high-intent searches like `deck contractors near me`.

@@ -15,8 +15,8 @@ const servicesData = [
   },
   {
     id: 2,
-    title: 'Deck Resurfacing & Repair',
-    description: 'Save 40% on costs with our expert deck resurfacing and repair. We refresh your existing frame with modern composite boards and railings.',
+    title: 'Deck Resurfacing',
+    description: 'Premium wood-to-composite resurfacing for structurally sound frames. Full surface conversions start from $15k with boards, railings, fascia, and safety review.',
     image: '/showcase/img04.jpg',
     link: '/services/deck-resurfacing'
   },

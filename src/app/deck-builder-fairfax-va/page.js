@@ -55,7 +55,7 @@ const fairfaxFaqSchema = {
 
 const fairfaxServices = [
   { title: 'New Composite Decks', range: 'From $25k', link: '/services/new-decks' },
-  { title: 'Deck Resurfacing', range: 'From $14k', link: '/services/deck-resurfacing' },
+  { title: 'Deck Resurfacing', range: 'From $15k', link: '/services/deck-resurfacing' },
   { title: 'Screened Porches', range: 'From $28k', link: '/services/porches' },
   { title: 'Pergolas & Gazebos', range: 'From $10k', link: '/services/gazebo-pergola' },
   { title: 'Paver Patios', range: 'From $10k', link: '/services/patios' },

@@ -64,7 +64,7 @@ export default function SterlingDeckBuilderPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               { title: 'Composite Decks', range: '$20k–$50k', link: '/services/new-decks' },
-              { title: 'Deck Resurfacing', range: '$10k–$25k', link: '/services/deck-resurfacing' },
+              { title: 'Deck Resurfacing', range: '$15k–$30k+', link: '/services/deck-resurfacing' },
               { title: 'Screened Porches', range: '$22k–$55k', link: '/services/porches' },
               { title: 'Pergolas', range: '$8k–$25k', link: '/services/gazebo-pergola' },
               { title: 'Fencing', range: '$4k–$12k', link: '/services/fence' },

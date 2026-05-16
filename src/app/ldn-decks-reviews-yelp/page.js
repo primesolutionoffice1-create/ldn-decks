@@ -180,7 +180,7 @@ export default function YelpReviewsPage() {
               { title: 'Trex Decks', price: 'From $22K', href: '/trex-decks' },
               { title: 'Deck Replacement', price: 'From $18K', href: '/services/deck-replacement' },
               { title: 'Screened Porches', price: 'From $25K', href: '/services/porches/screened-porch' },
-              { title: 'Deck Resurfacing', price: 'From $12K', href: '/services/deck-resurfacing' },
+              { title: 'Deck Resurfacing', price: 'From $15K', href: '/services/deck-resurfacing' },
               { title: 'Pergolas & Gazebos', price: 'From $8K', href: '/services/gazebo-pergola' },
             ].map(s => (
               <Link key={s.href} href={s.href} style={{ display: 'block', background: '#fff', borderRadius: 8, padding: '1.25rem', textDecoration: 'none', color: 'inherit', border: '1px solid #e5e5e5' }}>

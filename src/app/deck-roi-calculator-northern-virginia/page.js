@@ -135,7 +135,7 @@ export default function DeckROICalculatorPage() {
                   ['Screened Porch', '$40,000–$80,000', '60–75%', '$24,000–$60,000', 'Year-round use'],
                   ['Outdoor Kitchen + Deck', '$50,000–$90,000', '55–70%', '$27,500–$63,000', 'Entertainers'],
                   ['Deck + Patio Combo', '$30,000–$50,000', '65–75%', '$19,500–$37,500', 'Balanced approach'],
-                  ['Deck Resurfacing', '$12,000–$20,000', '75–85%', '$9,000–$17,000', 'Highest ROI %'],
+                  ['Deck Resurfacing', '$15,000–$30,000+', '75–85%', '$11,250–$25,500+', 'Highest ROI %'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => (

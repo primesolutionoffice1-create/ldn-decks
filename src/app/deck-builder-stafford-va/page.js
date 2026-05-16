@@ -63,7 +63,7 @@ export default function StaffordDeckBuilderPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               { title: 'Composite Decks', range: '$15k–$40k', link: '/services/new-decks' },
-              { title: 'Deck Resurfacing', range: '$8k–$20k', link: '/services/deck-resurfacing' },
+              { title: 'Deck Resurfacing', range: '$15k–$30k+', link: '/services/deck-resurfacing' },
               { title: 'Screened Porches', range: '$18k–$45k', link: '/services/porches' },
               { title: 'Pergolas', range: '$7k–$20k', link: '/services/gazebo-pergola' },
               { title: 'Patios', range: '$6k–$16k', link: '/services/patios' },

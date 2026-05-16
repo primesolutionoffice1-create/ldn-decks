@@ -63,7 +63,7 @@ export default function ArlingtonDeckBuilderPage() {
             {[
               { title: 'Composite Decks', range: '$25k–$65k', link: '/services/new-decks' },
               { title: 'Screened Porches', range: '$30k–$65k', link: '/services/porches' },
-              { title: 'Deck Resurfacing', range: '$12k–$30k', link: '/services/deck-resurfacing' },
+              { title: 'Deck Resurfacing', range: '$15k–$30k+', link: '/services/deck-resurfacing' },
               { title: 'Pergolas', range: '$10k–$28k', link: '/services/gazebo-pergola' },
               { title: 'Patios', range: '$8k–$22k', link: '/services/patios' },
               { title: 'Fencing', range: '$5k–$14k', link: '/services/fence' },

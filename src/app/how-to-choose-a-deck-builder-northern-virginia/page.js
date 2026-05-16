@@ -145,7 +145,7 @@ export default function ChooseDeckBuilderPage() {
         </div>
       </article>
 
-      <SimpleCTA title="We'll Answer All 10 Questions on the Phone" buttonText="Call (571) 655-7207" link="/contact" />
+      <SimpleCTA title="We'll Answer All 10 Questions on the Phone" buttonText="Call (571) 655-7207" link="phone" />
       <ContactHome />
     </>
   );

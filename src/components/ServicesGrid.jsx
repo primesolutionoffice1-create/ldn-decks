@@ -14,7 +14,7 @@ const servicesContent = [
   {
     id: 2,
     title: 'Deck Resurfacing',
-    desc: 'Save on the cost of a full build with our expert deck resurfacing. We replace old boards with premium Trex or wood while ensuring your underlying structure is safe and stable.',
+    desc: 'Premium wood-to-composite resurfacing for structurally sound frames. We replace old boards with Trex or TimberTech, review the structure, and keep repair-only work separate.',
     image: '/images/img25.jpeg',
     link: '/services/deck-resurfacing'
   },

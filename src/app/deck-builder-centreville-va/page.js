@@ -70,7 +70,7 @@ export default function CentrevilleDeckBuilderPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               { title: 'Custom Composite Decks', range: '$20k–$55k', link: '/services/new-decks' },
-              { title: 'Deck Resurfacing', range: '$12k–$30k', link: '/services/deck-resurfacing' },
+              { title: 'Deck Resurfacing', range: '$15k–$30k+', link: '/services/deck-resurfacing' },
               { title: 'Screened Porches', range: '$25k–$65k', link: '/services/porches' },
               { title: 'Pergolas & Gazebos', range: '$10k–$30k', link: '/services/gazebo-pergola' },
               { title: 'Outdoor Kitchens', range: '$15k–$80k', link: '/outdoor-kitchen-builder-northern-virginia' },

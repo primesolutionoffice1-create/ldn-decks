@@ -54,7 +54,7 @@ const manassasFaqSchema = {
 
 const manassasServices = [
   { title: 'New Composite Decks', range: 'From $18k', link: '/services/new-decks' },
-  { title: 'Deck Resurfacing', range: 'From $10k', link: '/services/deck-resurfacing' },
+  { title: 'Deck Resurfacing', range: 'From $15k', link: '/services/deck-resurfacing' },
   { title: 'Screened Porches', range: 'From $22k', link: '/services/porches' },
   { title: 'Pergolas & Gazebos', range: 'From $8k', link: '/services/gazebo-pergola' },
   { title: 'Paver Patios', range: 'From $8k', link: '/services/patios' },
