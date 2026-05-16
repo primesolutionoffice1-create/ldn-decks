@@ -36,6 +36,14 @@ Current non-indexed breakdown:
 
 ## Fixes applied from this snapshot
 
+2026-05-16 canonical/sitemap pass:
+- Live sitemap audit checked 183 URLs for HTTP status, redirect headers, canonical tags, and noindex signals.
+- Found 1 canonical mismatch in the submitted sitemap:
+  - `https://ldndecks.com/deck-design-ideas-northern-virginia-2026`
+  - canonical: `https://ldndecks.com/deck-design-ideas-2026`
+- Removed the canonicalized URL from the main sitemap and moved its image-sitemap entry to the canonical `/deck-design-ideas-2026` URL.
+- Reason: submitted sitemap URLs should be canonical, indexable `200` URLs only. Keeping canonicalized duplicates in sitemap can feed the `Duplicate, Google chose different canonical than user` bucket.
+
 2026-05-16 LCP pass:
 - Reduced critical-path competition for the two Search Console mobile LCP groups:
   - Homepage keeps only the actual hero image as an image preload.

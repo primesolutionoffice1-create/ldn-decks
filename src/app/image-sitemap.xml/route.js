@@ -39,7 +39,7 @@ export async function GET() {
     { page: '/trex-vs-timbertech-vs-azek', image: '/home-page-ldn.webp', title: 'Trex vs TimberTech vs AZEK Comparison' },
     { page: '/trex-transcend-review-northern-virginia', image: '/images/img36.jpeg', title: 'Trex Transcend Review Honest Assessment After 500+ Installs' },
     { page: '/composite-deck-vs-wood-deck-virginia', image: '/images/img16.jpeg', title: 'Composite Deck vs Wood Deck Virginia Comparison' },
-    { page: '/deck-design-ideas-northern-virginia-2026', image: '/images/img36.jpeg', title: 'Deck Design Ideas 2026 Northern Virginia' },
+    { page: '/deck-design-ideas-2026', image: '/images/img36.jpeg', title: 'Deck Design Ideas 2026 Northern Virginia' },
     { page: '/screened-porch-cost-northern-virginia', image: '/images/img23.jpeg', title: 'Screened Porch Cost Northern Virginia' },
     { page: '/northern-virginia-deck-building-guide', image: '/home-page-ldn.webp', title: 'Complete Deck Building Guide Northern Virginia' },
     { page: '/before-and-after', image: '/images/img04.jpeg', title: 'Before and After Deck Transformations Northern Virginia' },
