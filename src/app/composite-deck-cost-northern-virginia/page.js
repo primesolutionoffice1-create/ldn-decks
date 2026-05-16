@@ -232,6 +232,9 @@ export default function CompositeDeckCostPage() {
               src="/showcase/img09.jpeg"
               alt="Custom Trex Transcend composite deck installed in Northern Virginia — Loudoun Decks 2026 project"
               fill
+              priority
+              fetchPriority="high"
+              quality={72}
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 960px) 100vw, 960px"
             />
