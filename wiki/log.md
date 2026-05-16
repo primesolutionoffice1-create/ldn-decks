@@ -17,6 +17,13 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ---
 
+## 2026-05-16 ingest | LDN Decks Scaled Content Final Pass
+
+- Source: priority scaled folders from `.raw/old-obsidian-vault/16-Location-Intent-Clusters/`, `.raw/old-obsidian-vault/09-Service-Entities/`, `.raw/old-obsidian-vault/10-Outdoor-Living/`, `.raw/old-obsidian-vault/13-FAQ-Clusters/`, `.raw/old-obsidian-vault/23-Semantic-Keyword-Vault/`, and `.raw/old-obsidian-vault/24-AI-Search-Optimization/`
+- Pages created: 69 source summaries
+- Pages updated: [[LDN Decks Operating Brain]], [[index]], [[sources/_index]], [[overview]], [[hot]], [[log]]
+- Key insight: The migration plan's scaled content clusters are now imported and routed into the operating wiki.
+
 ## 2026-05-16 ingest | LDN Decks Location Intent Batch 1
 
 - Source: `.raw/old-obsidian-vault/16-Location-Intent-Clusters/`

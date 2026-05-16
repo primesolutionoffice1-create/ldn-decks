@@ -77,6 +77,16 @@ Initial import priority is documented in [[ldndecks-ai-brain-import-plan-2026-05
 - [[LDN Decks Composite Decks in Ashburn]] expands Loudoun/Ashburn premium composite and covered outdoor living coverage.
 - [[LDN Decks Composite Decks in Bristow]] and [[LDN Decks Composite Decks in Gainesville]] expand Prince William composite and outdoor living coverage.
 
+## Imported Scaled Content Clusters Final Pass
+
+Completed the remaining priority scaled-content imports across:
+- Location intent: remaining local composite, repair, luxury, Trex, and covered-deck pages.
+- Service entities: installation, repair, replacement, resurfacing, railings, framing, wood, and composite comparison pages.
+- Outdoor living: covered decks, lighting, privacy, stairs, hot tubs, kitchens, seating, pergolas, pools, porches, and under-deck drainage.
+- FAQ clusters: composite, cost, permit, repair, safety, Trex, and TimberTech questions.
+- Semantic keywords: buyer intent, local SEO, Google Ads, visual, luxury, repair, and AI search phrases.
+- AI search optimization: citation strategy, entity reinforcement, answer engines, ChatGPT retrieval, Google AI Overview, Perplexity, and semantic content architecture.
+
 ## Operating Focus
 
 Build ldndecks.com into the leading Northern Virginia deck builder authority across:
@@ -90,4 +100,4 @@ Build ldndecks.com into the leading Northern Virginia deck builder authority acr
 
 The old vault is structurally clean enough to migrate: its readiness audit reports 283 markdown files, 0 orphans, 0 dead-end notes, 0 missing wikilinks, 0 duplicate filenames, and 0 missing frontmatter after cleanup. Remaining risk is content quality: developing briefs need source-backed review before any external publishing.
 
-Priority 5 has started with the first 10 location-intent notes. Continue with the remaining 16 notes in `16-Location-Intent-Clusters`, then service entities.
+Priority 5 scaled content clusters are now fully imported for the folders named in the import plan. Remaining old-vault material outside the priority plan can be handled as archival or on-demand import.
