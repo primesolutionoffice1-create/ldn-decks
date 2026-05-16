@@ -45,3 +45,7 @@ Current migration status:
 - Priority 4 revenue and conversion systems imported.
 - Priority 5 scaled content clusters imported for the migration plan.
 - Next import stage: optional archival import of non-priority folders or live operational use.
+
+## Visual Maps
+
+- [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]] — visual control map for the operating brain, dashboard, workstreams, archive, and Week 1 execution.

@@ -342,6 +342,8 @@ _None yet. See [[entities/_index]]._
 - [[lint-report-2026-05-16|Lint Report 2026-05-16]] — Current wiki health check after Priority 4 import.
 - [[migration-completion-report-2026-05-16|Migration Completion Report 2026-05-16]] — Final priority migration status and remaining optional work.
 - [[operational-launch-plan-2026-05-16|Operational Launch Plan 2026-05-16]] — First operational plan after complete old-vault archive import.
+- [[vault-status-system-2026-05-16|Vault Status System 2026-05-16]] — Status meanings and Dataview checks.
+- [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]] — Visual map for dashboard, workstreams, archive, and Week 1 execution.
 
 ## Comparisons
 

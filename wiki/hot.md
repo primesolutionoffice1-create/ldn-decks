@@ -39,10 +39,11 @@ Navigation: [[index]] | [[log]] | [[overview]]
 
 - Complete archive import added every remaining old-vault markdown note as raw copy plus source summary.
 - Operational launch plan now defines the first 5 workstreams and Week 1 actions.
+- Visual polish added: [[dashboard|Dashboard]] is now a command dashboard, [[vault-status-system-2026-05-16|Vault Status System 2026-05-16]] defines working statuses, and [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]] provides a visual canvas.
 
 ## Open Threads
 
-- Next step: validate top money pages, choose 3 local pages, review Google Ads waste, and prepare first execution report.
+- Next step: open [[dashboard|Dashboard]] or [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]], then validate top money pages, choose 3 local pages, review Google Ads waste, and prepare first execution report.
 
 ## Recent Pages
 
@@ -92,3 +93,5 @@ Navigation: [[index]] | [[log]] | [[overview]]
 - [[LDN Decks Composite Decks in Fairfax]]
 - [[LDN Decks Composite Decks in Gainesville]]
 - [[operational-launch-plan-2026-05-16|Operational Launch Plan 2026-05-16]]
+- [[vault-status-system-2026-05-16|Vault Status System 2026-05-16]]
+- [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]]

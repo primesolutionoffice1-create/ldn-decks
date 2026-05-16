@@ -17,6 +17,14 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ---
 
+## 2026-05-16 design | Dashboard And Operating Map
+
+- Created: [[vault-status-system-2026-05-16|Vault Status System 2026-05-16]], [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]]
+- Updated: [[dashboard|Dashboard]], [[overview]], [[hot]], [[index]], [[log]]
+- Key insight: The vault now has a clearer first screen, a visual operating map, and explicit status language for active work versus archived memory.
+
+---
+
 ## 2026-05-16 operations | LDN Decks Operational Launch
 
 - Created: [[operational-launch-plan-2026-05-16|Operational Launch Plan 2026-05-16]]
