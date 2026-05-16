@@ -16,7 +16,7 @@ related:
 
 ## Summary
 
-- Pages scanned: 43
+- Pages scanned: 54
 - Issues found: 0
 - Auto-fixed: 0
 - Needs review: 0
@@ -39,7 +39,7 @@ related:
 
 ## Stale Claims
 
-- None flagged during this pass. Revenue and conversion strategy notes still need current performance data before campaign execution.
+- None flagged during this pass. Revenue, conversion, and location-intent strategy notes still need current performance and SERP validation before campaign execution or publishing.
 
 ## Cross-Reference Gaps
 

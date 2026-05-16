@@ -43,4 +43,5 @@ Current migration status:
 - Priority 2 strategic hubs imported.
 - Priority 3 core business pages imported.
 - Priority 4 revenue and conversion systems imported.
-- Next import stage: scaled content clusters.
+- Priority 5 scaled content clusters started with the first 10 location-intent notes.
+- Next import stage: remaining location-intent notes, then service entities.

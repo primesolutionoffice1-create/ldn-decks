@@ -17,6 +17,16 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ---
 
+## 2026-05-16 ingest | LDN Decks Location Intent Batch 1
+
+- Source: `.raw/old-obsidian-vault/16-Location-Intent-Clusters/`
+- Summaries: [[LDN Decks Best Composite Decking in Fairfax]], [[LDN Decks Cable Railings in Arlington]], [[LDN Decks Composite Decks in Alexandria]], [[LDN Decks Composite Decks in Arlington]], [[LDN Decks Composite Decks in Ashburn]], [[LDN Decks Composite Decks in Bristow]], [[LDN Decks Composite Decks in Burke Centre]], [[LDN Decks Composite Decks in Burke]], [[LDN Decks Composite Decks in Fairfax]], [[LDN Decks Composite Decks in Gainesville]]
+- Pages created: ten source summaries
+- Pages updated: [[LDN Decks Operating Brain]], [[index]], [[sources/_index]], [[overview]], [[hot]], [[log]]
+- Key insight: The first location-intent batch expands composite and cable railing coverage across Fairfax County, Arlington, Alexandria, Ashburn, Bristow, and Gainesville.
+
+---
+
 ## 2026-05-16 ingest | LDN Decks Revenue And Conversion Systems
 
 - Source: `.raw/old-obsidian-vault/13-Conversions/`, `.raw/old-obsidian-vault/25-Revenue-Systems/`

@@ -69,6 +69,14 @@ Initial import priority is documented in [[ldndecks-ai-brain-import-plan-2026-05
 - [[LDN Decks Estimate Conversion System]] defines conversion signals and CTAs for estimate requests.
 - [[LDN Decks Deck Estimate Funnel]] maps research and inspiration into project consultations.
 
+## Imported Location Intent Batch 1
+
+- [[LDN Decks Best Composite Decking in Fairfax]], [[LDN Decks Composite Decks in Fairfax]], [[LDN Decks Composite Decks in Burke]], and [[LDN Decks Composite Decks in Burke Centre]] expand Fairfax County composite-decking coverage.
+- [[LDN Decks Cable Railings in Arlington]] and [[LDN Decks Composite Decks in Arlington]] expand Arlington modern deck and cable railing coverage.
+- [[LDN Decks Composite Decks in Alexandria]] expands Alexandria composite replacement and resurfacing coverage.
+- [[LDN Decks Composite Decks in Ashburn]] expands Loudoun/Ashburn premium composite and covered outdoor living coverage.
+- [[LDN Decks Composite Decks in Bristow]] and [[LDN Decks Composite Decks in Gainesville]] expand Prince William composite and outdoor living coverage.
+
 ## Operating Focus
 
 Build ldndecks.com into the leading Northern Virginia deck builder authority across:
@@ -82,4 +90,4 @@ Build ldndecks.com into the leading Northern Virginia deck builder authority acr
 
 The old vault is structurally clean enough to migrate: its readiness audit reports 283 markdown files, 0 orphans, 0 dead-end notes, 0 missing wikilinks, 0 duplicate filenames, and 0 missing frontmatter after cleanup. Remaining risk is content quality: developing briefs need source-backed review before any external publishing.
 
-Priority 4 imported the first revenue and conversion systems. The next migration wave should import scaled content clusters: location intent, service entities, outdoor living, FAQ clusters, semantic keywords, and AI search optimization.
+Priority 5 has started with the first 10 location-intent notes. Continue with the remaining 16 notes in `16-Location-Intent-Clusters`, then service entities.
