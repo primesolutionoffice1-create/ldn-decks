@@ -1,5 +1,6 @@
 import { getAllCityPaths, canonicalCities } from '@/data/cityData';
 import { blogPosts } from '@/lib/blogData';
+import { educationArticles } from '@/lib/educationData';
 import { showcaseProjects } from '@/lib/showcaseData';
 import { SITE_URL } from '@/lib/seo';
 
@@ -127,6 +128,7 @@ export default async function sitemap() {
                 { path: "/showcase",                     priority: 0.75, lastMod: TIER3, freq: "monthly" },
                 { path: "/houzz-deck-projects",          priority: 0.75, lastMod: TIER3, freq: "monthly" },
                 { path: "/blog",                         priority: 0.70, lastMod: TIER3, freq: "weekly" },
+                { path: "/education",                    priority: 0.75, lastMod: TIER3, freq: "weekly" },
                 { path: "/contact",                      priority: 0.70, lastMod: TIER3, freq: "monthly" },
                 { path: "/bbb-accredited-deck-builder-virginia", priority: 0.85, lastMod: TIER1, freq: "monthly" },
                 { path: "/deck-financing",               priority: 0.85, lastMod: TIER1, freq: "monthly" },
@@ -279,6 +281,23 @@ export default async function sitemap() {
                 };
         });
 
+        // Education articles — dynamically generated from educationData
+        const educationPaths = educationArticles
+                .filter(post => {
+                        const postDate = new Date(post.date);
+                        return postDate <= today;
+                })
+                .map(post => {
+                const parsed = new Date(post.date);
+                const lastMod = isNaN(parsed.getTime()) ? TIER3 : parsed.toISOString().split('T')[0];
+                return {
+                        path: `/education/${post.slug}`,
+                        priority: 0.70,
+                        lastMod,
+                        freq: "monthly",
+                };
+        });
+
         // Showcase projects — dynamically generated from showcaseData
         const showcasePaths = showcaseProjects.map(project => ({
                 path: `/showcase/${project.slug}`,
@@ -287,7 +306,7 @@ export default async function sitemap() {
                 freq: "monthly",
         }));
 
-        const allPages = [...staticPages, ...cityPaths, ...blogPaths, ...showcasePaths]
+        const allPages = [...staticPages, ...cityPaths, ...blogPaths, ...educationPaths, ...showcasePaths]
                 .filter(p => !isExcluded(p.path));
 
         return allPages.map(({ path, lastMod, videos }) => ({

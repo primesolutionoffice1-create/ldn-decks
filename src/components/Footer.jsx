@@ -97,6 +97,7 @@ export default function Footer() {
               <li><Link href="/deck-cost-calculator">Cost Calculator</Link></li>
               <li><Link href="/reviews">Reviews</Link></li>
               <li><Link href="/blog">Blog &amp; Tips</Link></li>
+              <li><Link href="/education">Education Center</Link></li>
               <li><Link href="/areas-we-serve">Areas We Serve</Link></li>
               <li><Link href="/bbb-accredited-deck-builder-virginia">BBB Accredited</Link></li>
               <li><Link href="/sitemap.xml">Sitemap</Link></li>

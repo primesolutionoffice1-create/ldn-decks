@@ -163,7 +163,7 @@ export default function Header() {
             </div>
             <div className={styles.topBarRight}>
               <Link href="/team">Our Team</Link>
-              <Link href="/blog">Education</Link>
+              <Link href="/education">Education</Link>
               <Link href="/faqs">FAQs</Link>
             </div>
           </div>
@@ -185,6 +185,7 @@ export default function Header() {
                     <Link href="/about/process">Our Process</Link>
                     <Link href="/about/warranty">2-Year Warranty</Link>
                     <Link href="/faqs">FAQ</Link>
+                    <Link href="/blog">Blog & News</Link>
                   </div>
                 </div>
 
@@ -274,7 +275,7 @@ export default function Header() {
                 </div>
 
                 <div className={styles.navItem}>
-                  <Link href="/blog" className={isActive("/blog")}>Education</Link>
+                  <Link href="/education" className={isActive("/education")}>Education</Link>
                 </div>
               </nav>
 
@@ -337,6 +338,7 @@ export default function Header() {
                   <Link href="/about/process" onClick={() => setIsMobileOpen(false)}>Our Process</Link>
                   <Link href="/about/warranty" onClick={() => setIsMobileOpen(false)}>2-Year Warranty</Link>
                   <Link href="/faqs" onClick={() => setIsMobileOpen(false)}>FAQ</Link>
+                  <Link href="/blog" onClick={() => setIsMobileOpen(false)}>Blog & News</Link>
                 </div>
               </div>
             </div>
@@ -482,8 +484,8 @@ export default function Header() {
           </div>
 
           <div className={styles.mobileNavItem}>
-            <div className={`${styles.mobileNavLink} ${isActive('/blog')}`}>
-              <Link href="/blog" onClick={() => setIsMobileOpen(false)}>Education</Link>
+            <div className={`${styles.mobileNavLink} ${isActive('/education')}`}>
+              <Link href="/education" onClick={() => setIsMobileOpen(false)}>Education</Link>
             </div>
           </div>
 
