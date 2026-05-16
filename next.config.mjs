@@ -35,6 +35,7 @@ const nextConfig = {
       { source: '/composite-deck-builder-loudoun-2', destination: '/deck-builders-loudoun', permanent: true },
       { source: '/contact-us', destination: '/contact', permanent: true },
       { source: '/best-composite-decking-virginia-trex-timbertech-fiberon', destination: '/trex-vs-timbertech-vs-azek', permanent: true },
+      { source: '/timbertech-azek-decking', destination: '/timbertech-decks', permanent: true },
       // BEAST plan Cluster H: legacy /blog/ URL competing with apex owner at #4
       // Explicit 301 (matches canonical-signal convention used for www→apex above)
       { source: '/blog/trex-vs-timbertech-vs-azek', destination: '/trex-vs-timbertech-vs-azek', statusCode: 301 },
