@@ -69,7 +69,9 @@ export default function DeckInspectionPage() {
           often rust or pull away from the home&apos;s primary structure. In fact, ledger board failure is the leading
           cause of catastrophic deck collapses nationwide. Outdated building codes from 15 or 20 years ago lacked the
           heavy-duty flashing, tension ties, and lateral load requirements required by modern standards, leaving older
-          decks inherently vulnerable to water intrusion and dangerously pulling away from the house.
+          decks inherently vulnerable to water intrusion and dangerously pulling away from the house. If you want the
+          structural background before booking, start with our guides to <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth in Virginia</Link>
+          {' '}and <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>.
         </p>
         <p style={{ fontSize: '18px', marginBottom: '20px' }}>
           Moisture is the natural enemy of any traditional wooden deck. Over time, protective sealants strip away,
@@ -85,7 +87,8 @@ export default function DeckInspectionPage() {
           raise your property value, and eliminate maintenance chores; it guarantees the fundamental safety of your
           family, friends, and guests. If your deck spans over 10 to 15 years old, begins to feel even slightly spongy
           underfoot, visibly sways when you walk, or exhibits extensive surface splintering and warping, it is definitely
-          time for a professional change. Let our experts assess your structure with a comprehensive $350 inspection to
+          time for a professional change. If the structure was built without approvals, review <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>what happens with an unpermitted deck in Virginia</Link>
+          {' '}before repairs begin. Let our experts assess your structure with a comprehensive $350 inspection to
           keep your outdoor living space safe, secure, and beautiful for years to come.
         </p>
         <section style={{ marginTop: '40px', padding: '30px', backgroundColor: '#f9f9f9', borderRadius: '12px', textAlign: 'center' }}>

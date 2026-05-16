@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -153,6 +154,16 @@ export default function DeckResurfacingPage() {
         image2="/showcase/img05.jpeg"
       />
       <ServiceContentExpansion sections={expansionSections} />
+      <section style={{ padding: '20px 20px 40px', maxWidth: '900px', margin: '0 auto', lineHeight: 1.7 }}>
+        <h2 style={{ fontSize: '30px', marginBottom: '16px', fontWeight: 800 }}>Before We Resurface, We Verify the Frame</h2>
+        <p style={{ fontSize: '17px', color: '#555', marginBottom: 0 }}>
+          A resurfacing project only makes sense when the posts, beams, joists, ledger, and footings are still sound.
+          We check whether the footing depth is adequate for Northern Virginia freeze-thaw conditions, whether the joist sizing fits the span,
+          and whether the repair scope triggers a permit. Helpful background: <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth in Virginia</Link>,
+          {' '}<Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 joists</Link>, and
+          {' '}<Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck permit requirements</Link>.
+        </p>
+      </section>
       <ServiceInclusions
         title="Our Engineered Resurfacing Process"
         description="A rigorous, multi-step process ensuring total structural integrity before a single new board is fastened."
