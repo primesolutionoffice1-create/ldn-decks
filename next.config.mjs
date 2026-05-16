@@ -223,10 +223,6 @@ const nextConfig = {
       { source: '/near-you/arlington-county/arlington', destination: '/deck-builder-arlington-va', permanent: true },
       { source: '/near-you/stafford-county/stafford', destination: '/deck-builder-stafford-va', permanent: true },
 
-      // Bare county URLs returning 404 (Bing flagged) → redirect to existing city landing pages
-      { source: '/near-you/arlington-county', destination: '/deck-builder-arlington-va', permanent: true },
-      { source: '/near-you/stafford-county', destination: '/deck-builder-stafford-va', permanent: true },
-
       // Old /top-decks-build-near-you/deck-builder-in-{city} — ALL cities
       // Loudoun County cities
       { source: '/top-decks-build-near-you/deck-builder-in-ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
