@@ -40,4 +40,5 @@ The first active domain is [[LDN Decks Operating Brain]], migrated from the old 
 
 Current migration status:
 - Priority 1 dashboard sources imported.
-- Next import stage: Priority 2 strategic hubs from `17-Master-Hubs`.
+- Priority 2 strategic hubs imported.
+- Next import stage: core notes referenced by the strategic hubs, starting with local/regional authority or revenue/ads.

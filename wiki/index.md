@@ -15,7 +15,7 @@ related:
 
 # Wiki Index
 
-Last updated: 2026-05-15 | Total pages: 8 | Sources ingested: 5
+Last updated: 2026-05-15 | Total pages: 13 | Sources ingested: 10
 
 Navigation: [[overview]] | [[log]] | [[hot]] | [[getting-started]]
 
@@ -40,6 +40,11 @@ _None yet. See [[entities/_index]]._
 - [[LDN Decks Vault Standards]] — Note quality, naming, hub linkage, canvas, and review rules.
 - [[LDN Decks Content Coverage Map]] — Strong coverage, thin areas, and cleanup status.
 - [[LDN Decks Readiness Audit 2026-05-14]] — Structural readiness audit of the old vault.
+- [[LDN Decks Northern Virginia Decking Hub]] — Regional authority and location-intent hub.
+- [[LDN Decks Local SEO Dominance Hub]] — Service-area, citation, review, and geo-tagging hub.
+- [[LDN Decks Revenue and Google Ads Hub]] — Ads, PMAX, lead-flow, funnel, and lead-generation hub.
+- [[LDN Decks AI Overview Visibility Hub]] — AI answer visibility, citation, retrieval, and entity-search hub.
+- [[LDN Decks Trust and Buyer Confidence Hub]] — E-E-A-T, proof, buyer education, and premium trust hub.
 
 ## Questions
 

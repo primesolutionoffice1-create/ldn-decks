@@ -17,6 +17,16 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ---
 
+## 2026-05-15 ingest | LDN Decks Strategic Hubs
+
+- Source: `.raw/old-obsidian-vault/17-Master-Hubs/`
+- Summaries: [[LDN Decks Northern Virginia Decking Hub]], [[LDN Decks Local SEO Dominance Hub]], [[LDN Decks Revenue and Google Ads Hub]], [[LDN Decks AI Overview Visibility Hub]], [[LDN Decks Trust and Buyer Confidence Hub]]
+- Pages created: five source summaries
+- Pages updated: [[LDN Decks Operating Brain]], [[index]], [[sources/_index]], [[hot]], [[log]]
+- Key insight: The next migration wave should import the core notes referenced by these hubs, because they define the operating architecture for location authority, local SEO, ads/revenue, AI search visibility, and trust.
+
+---
+
 ## 2026-05-15 ingest | LDN Decks Dashboard Sources
 
 - Source: `.raw/old-obsidian-vault/00-Dashboard/`

@@ -18,7 +18,7 @@ Navigation: [[index]] | [[log]] | [[overview]]
 
 ## Last Updated
 
-2026-05-15: Imported Priority 1 dashboard sources from `/Users/ldndecks/Documents/Obsidian Vault/Ldndecks AI Brain/00-Dashboard` into `ldn-decks-wiki`.
+2026-05-15: Imported Priority 2 strategic hubs from `/Users/ldndecks/Documents/Obsidian Vault/Ldndecks AI Brain/17-Master-Hubs` into `ldn-decks-wiki`.
 
 ## Key Recent Facts
 
@@ -27,10 +27,11 @@ Navigation: [[index]] | [[log]] | [[overview]]
 - Old LDN Decks AI Brain inventory found 283 markdown notes.
 - Created source summaries for [[LDN Decks Start Here]], [[LDN Decks Command Center]], [[LDN Decks Vault Standards]], [[LDN Decks Content Coverage Map]], and [[LDN Decks Readiness Audit 2026-05-14]].
 - [[LDN Decks Operating Brain]] is now current and anchored by imported dashboard sources.
+- Added strategic hub summaries: [[LDN Decks Northern Virginia Decking Hub]], [[LDN Decks Local SEO Dominance Hub]], [[LDN Decks Revenue and Google Ads Hub]], [[LDN Decks AI Overview Visibility Hub]], and [[LDN Decks Trust and Buyer Confidence Hub]].
 
 ## Open Threads
 
-- Next step: import Priority 2 strategic hubs from `17-Master-Hubs`.
+- Next step: import the core notes referenced by the strategic hubs, starting with local/regional authority or revenue/ads.
 
 ## Recent Pages
 
@@ -42,3 +43,8 @@ Navigation: [[index]] | [[log]] | [[overview]]
 - [[LDN Decks Vault Standards]]
 - [[LDN Decks Content Coverage Map]]
 - [[LDN Decks Readiness Audit 2026-05-14]]
+- [[LDN Decks Northern Virginia Decking Hub]]
+- [[LDN Decks Local SEO Dominance Hub]]
+- [[LDN Decks Revenue and Google Ads Hub]]
+- [[LDN Decks AI Overview Visibility Hub]]
+- [[LDN Decks Trust and Buyer Confidence Hub]]

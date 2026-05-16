@@ -69,6 +69,76 @@
         "wiki/log.md",
         "wiki/hot.md"
       ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/AI-Overview-Visibility-Hub.md": {
+      "hash": "03267b3798c8513d1f131b77b5cc9c50",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks AI Overview Visibility Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Local-SEO-Dominance-Hub.md": {
+      "hash": "4767f27d38800af043a108ceb7bb3894",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Local SEO Dominance Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Northern-Virginia-Decking-Hub.md": {
+      "hash": "39c9af394e403f8a59279d2f7db3fa24",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Northern Virginia Decking Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Revenue-and-Google-Ads-Hub.md": {
+      "hash": "d4c9e2fc27691607c311ee9f309efc2a",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Revenue and Google Ads Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Trust-and-Buyer-Confidence-Hub.md": {
+      "hash": "96db8040813d5401536382de3a9dc98f",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Trust and Buyer Confidence Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
     }
   }
 }
