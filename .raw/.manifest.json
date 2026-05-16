@@ -139,6 +139,104 @@
         "wiki/log.md",
         "wiki/hot.md"
       ]
+    },
+    ".raw/old-obsidian-vault/01-SEO/SEO-MASTER.md": {
+      "hash": "4553a47e152b920c7468da07116e5164",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks SEO Master.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/01-SEO/SEO-ROADMAP.md": {
+      "hash": "a8f37f5af05b914d624516c9fd6b65e5",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks SEO Roadmap.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/02-Google-Ads/ADS-AUDIT.md": {
+      "hash": "d2f3bc8317e4d1721840a1e61b7496a9",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Google Ads Audit.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/CONTENT-HUB.md": {
+      "hash": "8f47152c4b4fe7b81f4bf645c765b972",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Content Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/04-Local-SEO/NOVA-CITIES.md": {
+      "hash": "5af81114f0e241cd5cd9e0f2d09278fb",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Northern Virginia Cities.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/05-Services/COMPOSITE-DECKS.md": {
+      "hash": "1e68d46b3847d7c56333d353b4215d87",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Composite Decks.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/05-Services/DECK-REPAIR.md": {
+      "hash": "e095e784ce366078fe8618c9717831dd",
+      "ingested_at": "2026-05-15",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Repair.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
     }
   }
 }

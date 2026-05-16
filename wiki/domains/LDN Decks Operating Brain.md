@@ -11,7 +11,7 @@ tags:
   - google-ads
   - local-seo
 related:
-  - "[[LDN Decks AI Brain Import Plan]]"
+  - "[[ldndecks-ai-brain-import-plan-2026-05-15|LDN Decks AI Brain Import Plan]]"
   - "[[index]]"
 ---
 
@@ -31,7 +31,7 @@ Source vault:
 
 `/Users/ldndecks/Documents/Obsidian Vault/Ldndecks AI Brain`
 
-Initial import priority is documented in [[LDN Decks AI Brain Import Plan]].
+Initial import priority is documented in [[ldndecks-ai-brain-import-plan-2026-05-15|LDN Decks AI Brain Import Plan]].
 
 ## Imported Dashboard Sources
 
@@ -49,6 +49,16 @@ Initial import priority is documented in [[LDN Decks AI Brain Import Plan]].
 - [[LDN Decks AI Overview Visibility Hub]] anchors AI answer visibility, citation, retrieval, and entity-search work.
 - [[LDN Decks Trust and Buyer Confidence Hub]] anchors E-E-A-T, proof, buyer education, and premium trust work.
 
+## Imported Core Business Pages
+
+- [[LDN Decks SEO Master]] anchors SEO systems, content clusters, and strategic goals.
+- [[LDN Decks SEO Roadmap]] identifies priority pages, priority topics, schema, trust signals, and internal-linking work.
+- [[LDN Decks Google Ads Audit]] captures paid-search waste, PMAX cannibalization, brand overlap, and landing-page gaps.
+- [[LDN Decks Content Hub]] maps comparison, cost, repair, local SEO, and authority content.
+- [[LDN Decks Northern Virginia Cities]] controls county, city, GBP, citation, proof, and internal-linking coverage.
+- [[LDN Decks Composite Decks]] anchors composite decking service strategy.
+- [[LDN Decks Deck Repair]] anchors repair, safety, resurfacing, replacement, and local repair strategy.
+
 ## Operating Focus
 
 Build ldndecks.com into the leading Northern Virginia deck builder authority across:
@@ -62,4 +72,4 @@ Build ldndecks.com into the leading Northern Virginia deck builder authority acr
 
 The old vault is structurally clean enough to migrate: its readiness audit reports 283 markdown files, 0 orphans, 0 dead-end notes, 0 missing wikilinks, 0 duplicate filenames, and 0 missing frontmatter after cleanup. Remaining risk is content quality: developing briefs need source-backed review before any external publishing.
 
-Priority 2 imported the first strategic hubs from `17-Master-Hubs`. These hubs should drive the next migration wave: import the underlying core notes they reference, not the entire old vault blindly.
+Priority 3 imported the first core business pages for SEO, ads, content, local SEO, composite decks, and deck repair. The next migration wave should import revenue and conversion systems, then scaled content clusters.

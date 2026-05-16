@@ -29,3 +29,13 @@ Articles, papers, transcripts, videos, conversations — the raw material the wi
 - [[LDN Decks Revenue and Google Ads Hub]] — Ads, PMAX, lead-flow, funnel, and lead-generation hub.
 - [[LDN Decks AI Overview Visibility Hub]] — AI answer visibility, citation, retrieval, and entity-search hub.
 - [[LDN Decks Trust and Buyer Confidence Hub]] — E-E-A-T, proof, buyer education, and premium trust hub.
+
+## Old Obsidian Vault: Core Business Pages
+
+- [[LDN Decks SEO Master]] — Top-level SEO system and routing page.
+- [[LDN Decks SEO Roadmap]] — Priority pages, topics, schema, linking, and AI Overview content.
+- [[LDN Decks Google Ads Audit]] — PMAX, brand overlap, QS, landing-page relevance, and wasted-spend findings.
+- [[LDN Decks Content Hub]] — Comparison, cost, repair, local SEO, and authority content map.
+- [[LDN Decks Northern Virginia Cities]] — City and county coverage control index.
+- [[LDN Decks Composite Decks]] — Composite decking service-control page.
+- [[LDN Decks Deck Repair]] — Repair, safety, resurfacing, replacement, and local repair service-control page.

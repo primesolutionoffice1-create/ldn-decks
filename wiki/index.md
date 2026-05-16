@@ -15,7 +15,7 @@ related:
 
 # Wiki Index
 
-Last updated: 2026-05-15 | Total pages: 13 | Sources ingested: 10
+Last updated: 2026-05-15 | Total pages: 27 | Sources ingested: 17
 
 Navigation: [[overview]] | [[log]] | [[hot]] | [[getting-started]]
 
@@ -45,14 +45,28 @@ _None yet. See [[entities/_index]]._
 - [[LDN Decks Revenue and Google Ads Hub]] — Ads, PMAX, lead-flow, funnel, and lead-generation hub.
 - [[LDN Decks AI Overview Visibility Hub]] — AI answer visibility, citation, retrieval, and entity-search hub.
 - [[LDN Decks Trust and Buyer Confidence Hub]] — E-E-A-T, proof, buyer education, and premium trust hub.
+- [[LDN Decks SEO Master]] — Top-level SEO system and routing page.
+- [[LDN Decks SEO Roadmap]] — Priority pages, topics, schema, linking, and AI Overview content.
+- [[LDN Decks Google Ads Audit]] — PMAX, brand overlap, QS, landing-page relevance, and wasted-spend findings.
+- [[LDN Decks Content Hub]] — Comparison, cost, repair, local SEO, and authority content map.
+- [[LDN Decks Northern Virginia Cities]] — City and county coverage control index.
+- [[LDN Decks Composite Decks]] — Composite decking service-control page.
+- [[LDN Decks Deck Repair]] — Repair, safety, resurfacing, replacement, and local repair service-control page.
 
 ## Questions
 
-- [[Obsidian Setup Test]] — Confirms `ldn-decks-wiki` opens in Obsidian with trusted plugins enabled and Codex write access.
+- [[obsidian-setup-test-2026-05-15|Obsidian Setup Test]] — Confirms `ldn-decks-wiki` opens in Obsidian with trusted plugins enabled and Codex write access.
 
 ## Meta
 
-- [[LDN Decks AI Brain Import Plan]] — Five-step migration plan from the old Obsidian vault into the Claude wiki.
+- [[ldndecks-ai-brain-import-plan-2026-05-15|LDN Decks AI Brain Import Plan]] — Five-step migration plan from the old Obsidian vault into the Claude wiki.
+- [[dashboard|Dashboard]] — Dataview dashboard and current work links.
+- [[seo-command-center|SEO Command Center]] — Active SEO priorities, sources, and import queue.
+- [[google-ads-tracker|Google Ads Tracker]] — Paid-search findings, action queue, and data needs.
+- [[content-calendar|Content Calendar]] — Priority topics, content lanes, and publishing checks.
+- [[local-seo-tracker|Local SEO Tracker]] — Priority markets, county anchors, and readiness checks.
+- [[ai-visibility-tracker|AI Visibility Tracker]] — AI search goals, content needs, and next imports.
+- [[lint-report-2026-05-15|Lint Report 2026-05-15]] — Current wiki health check.
 
 ## Comparisons
 

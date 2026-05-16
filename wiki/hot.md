@@ -18,7 +18,7 @@ Navigation: [[index]] | [[log]] | [[overview]]
 
 ## Last Updated
 
-2026-05-15: Imported Priority 2 strategic hubs from `/Users/ldndecks/Documents/Obsidian Vault/Ldndecks AI Brain/17-Master-Hubs` into `ldn-decks-wiki`.
+2026-05-15: Imported Priority 3 core business pages from SEO, Google Ads, Content, Local SEO, and Services folders into `ldn-decks-wiki`.
 
 ## Key Recent Facts
 
@@ -28,15 +28,18 @@ Navigation: [[index]] | [[log]] | [[overview]]
 - Created source summaries for [[LDN Decks Start Here]], [[LDN Decks Command Center]], [[LDN Decks Vault Standards]], [[LDN Decks Content Coverage Map]], and [[LDN Decks Readiness Audit 2026-05-14]].
 - [[LDN Decks Operating Brain]] is now current and anchored by imported dashboard sources.
 - Added strategic hub summaries: [[LDN Decks Northern Virginia Decking Hub]], [[LDN Decks Local SEO Dominance Hub]], [[LDN Decks Revenue and Google Ads Hub]], [[LDN Decks AI Overview Visibility Hub]], and [[LDN Decks Trust and Buyer Confidence Hub]].
+- Added core business summaries: [[LDN Decks SEO Master]], [[LDN Decks SEO Roadmap]], [[LDN Decks Google Ads Audit]], [[LDN Decks Content Hub]], [[LDN Decks Northern Virginia Cities]], [[LDN Decks Composite Decks]], and [[LDN Decks Deck Repair]].
+- Created working pages: [[seo-command-center|SEO Command Center]], [[google-ads-tracker|Google Ads Tracker]], [[content-calendar|Content Calendar]], [[local-seo-tracker|Local SEO Tracker]], and [[ai-visibility-tracker|AI Visibility Tracker]].
+- Latest lint pass: [[lint-report-2026-05-15|Lint Report 2026-05-15]] found 0 dead links, 0 orphan pages, and 0 frontmatter gaps.
 
 ## Open Threads
 
-- Next step: import the core notes referenced by the strategic hubs, starting with local/regional authority or revenue/ads.
+- Next step: import revenue and conversion systems, starting with lead generation, Google Ads lead flow, SEO-to-conversion architecture, and phone-call conversion.
 
 ## Recent Pages
 
-- [[Obsidian Setup Test]]
-- [[LDN Decks AI Brain Import Plan]]
+- [[obsidian-setup-test-2026-05-15|Obsidian Setup Test]]
+- [[ldndecks-ai-brain-import-plan-2026-05-15|LDN Decks AI Brain Import Plan]]
 - [[LDN Decks Operating Brain]]
 - [[LDN Decks Start Here]]
 - [[LDN Decks Command Center]]
@@ -48,3 +51,17 @@ Navigation: [[index]] | [[log]] | [[overview]]
 - [[LDN Decks Revenue and Google Ads Hub]]
 - [[LDN Decks AI Overview Visibility Hub]]
 - [[LDN Decks Trust and Buyer Confidence Hub]]
+- [[LDN Decks SEO Master]]
+- [[LDN Decks SEO Roadmap]]
+- [[LDN Decks Google Ads Audit]]
+- [[LDN Decks Content Hub]]
+- [[LDN Decks Northern Virginia Cities]]
+- [[LDN Decks Composite Decks]]
+- [[LDN Decks Deck Repair]]
+- [[dashboard|Dashboard]]
+- [[seo-command-center|SEO Command Center]]
+- [[google-ads-tracker|Google Ads Tracker]]
+- [[content-calendar|Content Calendar]]
+- [[local-seo-tracker|Local SEO Tracker]]
+- [[ai-visibility-tracker|AI Visibility Tracker]]
+- [[lint-report-2026-05-15|Lint Report 2026-05-15]]
