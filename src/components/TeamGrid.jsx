@@ -97,7 +97,7 @@ export default function TeamGrid() {
       { "@type": "AdministrativeArea", "name": "Stafford County, VA" }
     ],
     "sameAs": [
-      "https://www.houzz.com/pro/ldndecks"
+      "https://www.houzz.com/pro/webuser-782541997/loudoun-decks"
       // TODO: add when Daniel confirms verified URLs:
       //   "https://www.linkedin.com/in/<nick-handle>",
       //   "https://www.bbb.org/us/va/<region>/profile/<...>",

@@ -63,7 +63,7 @@ const socialProfiles = [
   {
     name: 'Houzz',
     handle: 'LDN Decks',
-    url: 'https://www.houzz.com/pro/ldndecks',
+    url: 'https://www.houzz.com/pro/webuser-782541997/loudoun-decks',
     desc: 'Full project portfolio, ideabooks, and professional profile with client reviews.',
     color: '#4DBC15',
     icon: 'Hz',
@@ -179,7 +179,7 @@ export default function SocialPage() {
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
             <a href="https://www.google.com/maps/place/Loudoun+Decks/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Review on Google</a>
             <a href="https://www.yelp.com/biz/loudoun-decks-centreville" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#D32323', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Review on Yelp</a>
-            <a href="https://www.houzz.com/pro/ldndecks" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#4DBC15', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Review on Houzz</a>
+            <a href="https://www.houzz.com/pro/webuser-782541997/loudoun-decks" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#4DBC15', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Review on Houzz</a>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>More About LDN Decks</h2>
