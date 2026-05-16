@@ -3,7 +3,7 @@ brain_schema: "ads-brain.v1"
 created: "2026-05-15"
 type: "overview"
 title: "Overview"
-updated: "2026-05-15"
+updated: "2026-05-16"
 ---
 
 # Overview
@@ -15,7 +15,7 @@ local-service campaigns.
 
 ## Current Status
 
-- Status: Synthesis complete. Ads Health Score 57 (D).
+- Status: Synthesis complete. Ads Health Score 57 (D). Import guardrails are now enforced for call phone, call schedule, high-ticket repair separation, and landing-page final URL alignment.
 - Owner: LDN Decks
 - Site: https://www.ldndecks.com
 - Platform exports imported: 22

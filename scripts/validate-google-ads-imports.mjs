@@ -59,11 +59,50 @@ const requiredDeckBuilderNegatives = [
   'general contractor',
 ];
 
+const requiredRepairSeparationNegatives = [
+  'repair',
+  'deck repair',
+  'deck repair near me',
+  'deck repair company',
+  'deck repair contractor',
+  'deck refinishing',
+  'deck restoration',
+  'deck staining',
+  'deck sealing',
+  'deck painting',
+  'power washing',
+  'pressure washing',
+  'board repair',
+  'railing repair',
+  'stair repair',
+];
+
+const repairSeparatedCampaigns = [
+  'SRCH | Composite | 3 Counties | Calls',
+  'SRCH | Replacement + Resurfacing | 3 Counties | Calls',
+];
+
 const requiredLocations = [
   'Loudoun County, Virginia, United States',
   'Fairfax County, Virginia, United States',
   'Prince William County, Virginia, United States',
 ];
+
+const requiredCallPhone = '+15716557207';
+const requiredCallSchedule = 'Mon-Fri 08:00-18:00';
+const expectedAdGroupFinalUrls = new Map([
+  ['SRCH | Composite | 3 Counties | Calls||Trex', 'https://www.ldndecks.com/composite-decks/'],
+  ['SRCH | Composite | 3 Counties | Calls||TimberTech/AZEK', 'https://www.ldndecks.com/timbertech-decks/'],
+  ['SRCH | Composite | 3 Counties | Calls||Composite Deck Builder', 'https://www.ldndecks.com/composite-decks/'],
+  ['SRCH | Composite | 3 Counties | Calls||Composite Deck Cost', 'https://www.ldndecks.com/composite-deck-cost-northern-virginia/'],
+  ['SRCH | Deck Builders | 3 Counties | Calls||Deck Builders Near Me', 'https://www.ldndecks.com/deck-builders-loudoun/'],
+  ['SRCH | Deck Builders | 3 Counties | Calls||Deck Contractors Near Me', 'https://www.ldndecks.com/deck-builders-loudoun/'],
+  ['SRCH | Replacement + Resurfacing | 3 Counties | Calls||Deck Replacement', 'https://www.ldndecks.com/services/deck-replacement/'],
+  ['SRCH | Replacement + Resurfacing | 3 Counties | Calls||Deck Resurfacing', 'https://www.ldndecks.com/services/deck-resurfacing/'],
+  ['SRCH | Replacement + Resurfacing | 3 Counties | Calls||Replace Wood With Composite', 'https://www.ldndecks.com/services/deck-replacement/'],
+  ['SRCH | Branded | 3 Counties | Calls||Brand Exact', 'https://www.ldndecks.com/contact/'],
+  ['SRCH | Branded | 3 Counties | Calls||Brand Phrase', 'https://www.ldndecks.com/contact/'],
+]);
 
 function parseCsv(text) {
   const rows = [];
@@ -245,6 +284,49 @@ for (const negative of requiredDeckBuilderNegatives) {
   }
 }
 
+for (const campaignName of repairSeparatedCampaigns) {
+  const negativeSet = new Set(
+    campaignNegatives
+      .filter(row => row.Campaign === campaignName)
+      .map(row => normalize(row.Keyword)),
+  );
+
+  for (const negative of requiredRepairSeparationNegatives) {
+    if (!negativeSet.has(negative)) {
+      fail(`Missing repair-separation negative for ${campaignName}: ${negative}`);
+    }
+  }
+}
+
+const repairKeywordLeaks = keywords.filter(row => (
+  repairSeparatedCampaigns.includes(row.Campaign)
+  && /\brepair\b/i.test(row.Keyword)
+));
+if (repairKeywordLeaks.length) {
+  fail(`Repair keyword leaked into high-ticket Search: ${repairKeywordLeaks.map(row => `${row.Campaign} / ${row['Ad group']} / ${row.Keyword}`).join(', ')}`);
+}
+
+for (const [key, expectedUrl] of expectedAdGroupFinalUrls) {
+  const [campaignName, adGroupName] = key.split('||');
+  const keywordUrls = new Set(
+    keywords
+      .filter(row => row.Campaign === campaignName && row['Ad group'] === adGroupName)
+      .map(row => row['Final URL']),
+  );
+  const adUrls = new Set(
+    ads
+      .filter(row => row.Campaign === campaignName && row['Ad group'] === adGroupName)
+      .map(row => row['Final URL']),
+  );
+
+  if (!keywordUrls.has(expectedUrl) || keywordUrls.size !== 1) {
+    fail(`${campaignName} / ${adGroupName} keyword Final URL mismatch: expected ${expectedUrl}, found ${[...keywordUrls].join(', ')}`);
+  }
+  if (!adUrls.has(expectedUrl) || adUrls.size !== 1) {
+    fail(`${campaignName} / ${adGroupName} RSA Final URL mismatch: expected ${expectedUrl}, found ${[...adUrls].join(', ')}`);
+  }
+}
+
 for (const campaign of campaigns) {
   const campaignLocations = locations.filter(row => row.Campaign === campaign.Campaign);
   for (const location of requiredLocations) {
@@ -257,6 +339,16 @@ for (const campaign of campaigns) {
 const badCallAssets = callAssets.filter(row => row['Conversion action'] !== 'Qualified Call (Ads) - 60s');
 if (badCallAssets.length) {
   fail(`Call assets must optimize to Qualified Call (Ads) - 60s: ${badCallAssets.map(row => row.Campaign).join(', ')}`);
+}
+
+const badCallPhoneAssets = callAssets.filter(row => row['Phone number'] !== requiredCallPhone);
+if (badCallPhoneAssets.length) {
+  fail(`Call assets must use ${requiredCallPhone}: ${badCallPhoneAssets.map(row => `${row.Campaign} (${row['Phone number']})`).join(', ')}`);
+}
+
+const badCallSchedules = callAssets.filter(row => row.Schedule !== requiredCallSchedule);
+if (badCallSchedules.length) {
+  fail(`Call assets must use schedule ${requiredCallSchedule}: ${badCallSchedules.map(row => `${row.Campaign} (${row.Schedule})`).join(', ')}`);
 }
 
 const pmaxExpansionProblems = pmaxAssets.filter(row => row['Final URL expansion'] !== 'Off');
