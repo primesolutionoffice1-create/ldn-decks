@@ -31,6 +31,7 @@ const campaigns = [
       },
       {
         name: 'TimberTech/AZEK',
+        finalUrl: 'https://www.ldndecks.com/timbertech-decks/',
         keywords: [
           '"timbertech deck builder"', '"timbertech deck contractor"', '"azek deck builder"', '"azek deck contractor"',
           '"timbertech deck installer"', '"azek deck installer"', '"timbertech deck builder near me"', '"azek deck builder near me"',
@@ -68,6 +69,7 @@ const campaigns = [
       },
       {
         name: 'Composite Deck Cost',
+        finalUrl: 'https://www.ldndecks.com/composite-deck-cost-northern-virginia/',
         keywords: [
           '"composite deck cost"', '"composite deck cost near me"', '"cost to build composite deck"', '"composite deck price"',
           '"trex deck cost"', '"timbertech deck cost"', '"azek deck cost"', '"composite deck cost loudoun county"',
@@ -164,6 +166,7 @@ const campaigns = [
       },
       {
         name: 'Deck Resurfacing',
+        finalUrl: 'https://www.ldndecks.com/services/deck-resurfacing/',
         keywords: [
           '"deck resurfacing"', '"deck resurfacing contractor"', '"deck resurfacing near me"', '"resurface deck with composite"',
           '"deck resurfacing company"', '"composite deck resurfacing"', '"deck board replacement composite"',
@@ -320,7 +323,7 @@ const pmax = {
   campaign: 'RMKT | PMax | Visitors 30/60/90d | Calls',
   budget: 10,
   assetGroup: 'Visitors | Deck Estimate | Calls',
-  finalUrls: ['https://www.ldndecks.com/composite-decks/', 'https://www.ldndecks.com/services/deck-replacement/', 'https://www.ldndecks.com/deck-resurfacing-vs-replacement/', 'https://www.ldndecks.com/before-and-after/', 'https://www.ldndecks.com/contact/'],
+  finalUrls: ['https://www.ldndecks.com/composite-decks/', 'https://www.ldndecks.com/services/deck-replacement/', 'https://www.ldndecks.com/services/deck-resurfacing/', 'https://www.ldndecks.com/deck-resurfacing-vs-replacement/', 'https://www.ldndecks.com/before-and-after/', 'https://www.ldndecks.com/contact/'],
   headlines: ['Ready To Build Your Deck?', 'Call LDN Decks Today', 'Composite Deck Experts', 'Replace Your Old Deck', 'Projects From $15k+', 'Permits & HOA Handled', 'Free Deck Estimate', '5.0 Rated Deck Builder', 'Trex & TimberTech Pros', 'Northern VA Deck Builder'],
   longHeadlines: ['Ready to replace your old deck with a premium composite outdoor space?', 'Call LDN Decks for composite deck builds, replacement, and resurfacing.', 'Serving Loudoun, Fairfax, and Prince William County homeowners.', 'Get a realistic deck estimate with permits and HOA details handled.'],
   descriptions: ['Still planning your deck? Call LDN Decks for a free estimate and clear next steps.', 'Composite, replacement, and resurfacing projects from $15k+ in Northern Virginia.', 'We handle design, permits, HOA coordination, materials, and installation.', 'Talk to a local 5.0 rated deck contractor today.'],
@@ -369,12 +372,12 @@ writeCsv('02-ad-groups.csv', [
 
 writeCsv('03-keywords.csv', [
   ['Campaign', 'Ad group', 'Keyword', 'Match type', 'Final URL', 'Status'],
-  ...campaigns.flatMap(c => c.adGroups.flatMap(ag => ag.keywords.map(k => [c.name, ag.name, cleanKeyword(k), matchType(k), c.finalUrl, 'Paused']))),
+  ...campaigns.flatMap(c => c.adGroups.flatMap(ag => ag.keywords.map(k => [c.name, ag.name, cleanKeyword(k), matchType(k), ag.finalUrl || c.finalUrl, 'Paused']))),
 ]);
 
 writeCsv('04-responsive-search-ads.csv', [
   ['Campaign', 'Ad group', 'Final URL', ...Array.from({ length: 15 }, (_, i) => `Headline ${i + 1}`), ...Array.from({ length: 4 }, (_, i) => `Description ${i + 1}`), 'Status'],
-  ...campaigns.flatMap(c => c.adGroups.flatMap(ag => ag.rsas.map(rsa => [c.name, ag.name, c.finalUrl, ...Array.from({ length: 15 }, (_, i) => rsa.headlines[i] || ''), ...Array.from({ length: 4 }, (_, i) => rsa.descriptions[i] || ''), 'Paused']))),
+  ...campaigns.flatMap(c => c.adGroups.flatMap(ag => ag.rsas.map(rsa => [c.name, ag.name, ag.finalUrl || c.finalUrl, ...Array.from({ length: 15 }, (_, i) => rsa.headlines[i] || ''), ...Array.from({ length: 4 }, (_, i) => rsa.descriptions[i] || ''), 'Paused']))),
 ]);
 
 writeCsv('05-shared-negative-keywords.csv', [
