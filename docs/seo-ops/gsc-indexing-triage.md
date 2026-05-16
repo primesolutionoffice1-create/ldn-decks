@@ -4,12 +4,45 @@ Status: Active
 Owner: SEO operator
 Cadence: Daily until the 173 non-indexed pages are classified, then weekly
 
+## Current GSC snapshot
+
+Observed in Google Search Console on 2026-05-15.
+GSC report last update: 2026-05-10.
+
+| Status | Count |
+|---|---:|
+| Indexed | 239 |
+| Not indexed | 300 |
+| Not indexed reasons | 7 |
+
+Current non-indexed breakdown:
+
+| Priority | Reason | Source | Validation | Pages | Treatment |
+|---:|---|---|---|---:|---|
+| 1 | Not found (404) | Website | Failed | 9 | Fix or redirect first |
+| 2 | Page with redirect | Website | Not Started | 106 | Keep out of sitemap; validate intentional redirects |
+| 3 | Excluded by `noindex` tag | Website | Not Started | 10 | Confirm intentional noindex only |
+| 4 | Crawled - currently not indexed | Google systems | Not Started | 55 | Improve content/internal links or consolidate |
+| 5 | Duplicate, Google chose different canonical than user | Google systems | Not Started | 13 | Fix canonical conflict or consolidate |
+| 6 | Alternate page with proper canonical tag | Website | Not Started | 1 | Usually OK if canonical is correct |
+| 7 | Discovered - currently not indexed | Google systems | Passed | 106 | Add internal links/content priority; request indexing only for strong URLs |
+
 ## What is already clean
 
 - `https://ldndecks.com/sitemap.xml` is successful.
 - `https://ldndecks.com/news-sitemap.xml` is successful.
 - `https://ldndecks.com/image-sitemap.xml` is successful.
 - IndexNow accepted 180 submitted URLs on 2026-05-15.
+
+## Fixes applied from this snapshot
+
+2026-05-15:
+- Added 301 redirects from legacy sitemap URLs to the canonical `/sitemap.xml`:
+  - `/page-sitemap.xml`
+  - `/post-sitemap.xml`
+  - `/sitemap_index.xml`
+  - `/sitemap-index.xml`
+- Reason: Google Search Console still polls old sitemap submissions, and the first three returned 404 before this fix.
 
 ## Do first in GSC
 

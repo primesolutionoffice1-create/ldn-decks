@@ -22,6 +22,14 @@ const nextConfig = {
       },
       { source: '/home-2', destination: '/', permanent: true },
 
+      // Legacy XML sitemaps that Google Search Console still polls.
+      // Keep these as 301s instead of 404s so historical submissions consolidate
+      // into the current canonical sitemap.
+      { source: '/page-sitemap.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/post-sitemap.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/sitemap_index.xml', destination: '/sitemap.xml', permanent: true },
+      { source: '/sitemap-index.xml', destination: '/sitemap.xml', permanent: true },
+
                      // Core Pages
       { source: '/tag/trex-decking', destination: '/trex-decks', permanent: true },
       { source: '/tag/loudoun-county', destination: '/near-you/loudoun-county', permanent: true },
