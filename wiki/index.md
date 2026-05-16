@@ -341,6 +341,7 @@ _None yet. See [[entities/_index]]._
 - [[lint-report-2026-05-15|Lint Report 2026-05-15]] — Current wiki health check.
 - [[lint-report-2026-05-16|Lint Report 2026-05-16]] — Current wiki health check after Priority 4 import.
 - [[migration-completion-report-2026-05-16|Migration Completion Report 2026-05-16]] — Final priority migration status and remaining optional work.
+- [[operational-launch-plan-2026-05-16|Operational Launch Plan 2026-05-16]] — First operational plan after complete old-vault archive import.
 
 ## Comparisons
 

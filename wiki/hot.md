@@ -18,7 +18,7 @@ Navigation: [[index]] | [[log]] | [[overview]]
 
 ## Last Updated
 
-2026-05-16: Completed full archive import of the old LDN Decks AI Brain into `ldn-decks-wiki`.
+2026-05-16: Created [[operational-launch-plan-2026-05-16|Operational Launch Plan 2026-05-16]] so the completed wiki is ready for active SEO, content, local SEO, ads, AI visibility, and conversion work.
 
 ## Key Recent Facts
 
@@ -38,10 +38,11 @@ Navigation: [[index]] | [[log]] | [[overview]]
 - Final priority migration status is recorded in [[migration-completion-report-2026-05-16|Migration Completion Report 2026-05-16]].
 
 - Complete archive import added every remaining old-vault markdown note as raw copy plus source summary.
+- Operational launch plan now defines the first 5 workstreams and Week 1 actions.
 
 ## Open Threads
 
-- Next step: use the completed wiki operationally; no old-vault markdown remains outside the archive.
+- Next step: validate top money pages, choose 3 local pages, review Google Ads waste, and prepare first execution report.
 
 ## Recent Pages
 
@@ -90,3 +91,4 @@ Navigation: [[index]] | [[log]] | [[overview]]
 - [[LDN Decks Composite Decks in Burke]]
 - [[LDN Decks Composite Decks in Fairfax]]
 - [[LDN Decks Composite Decks in Gainesville]]
+- [[operational-launch-plan-2026-05-16|Operational Launch Plan 2026-05-16]]

@@ -17,6 +17,14 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ---
 
+## 2026-05-16 operations | LDN Decks Operational Launch
+
+- Created: [[operational-launch-plan-2026-05-16|Operational Launch Plan 2026-05-16]]
+- Pages updated: [[dashboard]], [[hot]], [[index]], [[log]]
+- Key insight: Migration is complete; the wiki now has a first-use operating plan with SEO, content, local SEO, Google Ads, AI visibility, and conversion workstreams.
+
+---
+
 ## 2026-05-16 ingest | LDN Decks Complete Archive Import
 
 - Source: all remaining old-vault markdown notes not previously imported

@@ -28,6 +28,7 @@ LIST FROM "wiki" WHERE status = "seed" SORT updated ASC
 
 ## Current LDN Decks Work
 
+- [[operational-launch-plan-2026-05-16|Operational Launch Plan 2026-05-16]]
 - [[seo-command-center|SEO Command Center]]
 - [[google-ads-tracker|Google Ads Tracker]]
 - [[content-calendar|Content Calendar]]
