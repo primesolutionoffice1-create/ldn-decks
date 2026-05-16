@@ -101,6 +101,7 @@ export const SEGMENT_LABELS = {
   'deck-repair': 'Deck Repair',
   'deck-remodeling': 'Deck Remodeling',
   'deck-repair-loudoun-county': 'Deck Repair in Loudoun County',
+  'deck-builder-northern-virginia': 'Deck Builder in Northern Virginia',
   'composite-decks': 'Composite Decks',
   'trex-decks': 'Trex Decks',
   'timbertech-decks': 'TimberTech Decks',

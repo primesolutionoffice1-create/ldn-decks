@@ -4,6 +4,11 @@ import styles from './HomeQuickLinks.module.css';
 
 const links = [
   {
+    href: '/deck-builder-northern-virginia',
+    title: 'Deck Builder Northern Virginia',
+    desc: 'Custom decks, permits and HOA-ready planning across NoVA.',
+  },
+  {
     href: '/composite-decks',
     title: 'Composite Deck Builder',
     desc: 'Trex, TimberTech and AZEK decks for NoVA homes.',

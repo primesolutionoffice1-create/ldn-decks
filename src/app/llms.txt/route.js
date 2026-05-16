@@ -45,6 +45,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - Northern Virginia pricing runs 25–35% above state average
 
 ## Key Pages
+- [Deck Builder Northern Virginia](https://ldndecks.com/deck-builder-northern-virginia): Primary service hub for custom deck construction, permits, HOA support and local service areas
 - [Deck Cost Guide](https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia): Detailed 2026 pricing with material comparisons
 - [Composite Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): Brand-by-brand composite pricing (Trex, TimberTech, AZEK, Fiberon)
 - [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator): Interactive calculator with instant estimates

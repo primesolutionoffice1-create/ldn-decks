@@ -75,6 +75,7 @@ export default async function sitemap() {
                     }
                   ]
                 },
+                { path: "/deck-builder-northern-virginia", priority: 0.98, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builders-loudoun",        priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-ashburn-va",      priority: 0.92, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-leesburg-va",     priority: 0.92, lastMod: TIER1, freq: "weekly" },

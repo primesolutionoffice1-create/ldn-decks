@@ -10,6 +10,7 @@ import Link from 'next/link';
  */
 
 const CORNERSTONE_GUIDES = [
+  { path: '/deck-builder-northern-virginia', title: 'Deck Builder in Northern Virginia', desc: 'Custom decks, permits, HOA support and local service areas.' },
   { path: '/northern-virginia-deck-building-guide', title: 'Complete Deck Building Guide for NoVA', desc: 'Everything in one place costs, materials, permits, HOA, timeline.' },
   { path: '/how-much-does-a-deck-cost-northern-virginia', title: 'Deck Cost in Northern Virginia (2026)', desc: 'Material pricing, real project costs, and what drives the price.' },
   { path: '/deck-cost-calculator', title: 'Free Deck Cost Calculator', desc: 'Get an instant estimate by material, size, and add-ons.' },
