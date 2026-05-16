@@ -17,6 +17,15 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ---
 
+## 2026-05-16 execution | Deck Builder Northern Virginia
+
+- Created: [[deck-builder-northern-virginia-execution-report-2026-05-16|Deck Builder Northern Virginia Execution Report 2026-05-16]]
+- Site change: added and pushed `/deck-builder-northern-virginia` in commit `01813ba`.
+- Pages updated: [[seo-command-center]], [[hot]], [[log]]
+- Key insight: The first priority SEO money page moved from wiki recommendation to live site implementation with metadata, Service schema, sitemap inclusion, llms.txt inclusion, and internal links.
+
+---
+
 ## 2026-05-16 design | Dashboard And Operating Map
 
 - Created: [[vault-status-system-2026-05-16|Vault Status System 2026-05-16]], [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]]

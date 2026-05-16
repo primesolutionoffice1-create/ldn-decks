@@ -2,7 +2,7 @@
 type: meta
 title: "SEO Command Center"
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-16
 tags:
   - meta
   - ldndecks
@@ -26,7 +26,7 @@ related:
 
 ## Priority Work
 
-- Build or improve Deck Builder Northern Virginia.
+- DONE 2026-05-16: Build Deck Builder Northern Virginia. See [[deck-builder-northern-virginia-execution-report-2026-05-16|execution report]].
 - Build Trex Deck Builder and Composite Deck Installation pages.
 - Strengthen Deck Repair and Deck Resurfacing pages.
 - Add FAQ schema and Service schema to priority service pages.
