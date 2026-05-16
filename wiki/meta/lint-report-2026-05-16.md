@@ -16,7 +16,7 @@ related:
 
 ## Summary
 
-- Pages scanned: 124
+- Pages scanned: 304
 - Issues found: 0
 - Auto-fixed: 0
 - Needs review: 0

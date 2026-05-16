@@ -1451,6 +1451,2526 @@
         "wiki/log.md",
         "wiki/hot.md"
       ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/Editorial-Backlog-2026-05-14.md": {
+      "hash": "3a92bfd2e9d0769990723daff7f0b463",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Editorial Backlog 2026-05-14.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/Graph-Color-Legend.md": {
+      "hash": "d3c75fc629920bfa2bda516adc0badcb",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Graph Color Legend.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/Orphan-Cleanup-Index.md": {
+      "hash": "233f2292baae088fd5538b743f8d08e3",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Orphan Cleanup Index.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Link-Stubs/02-Google-Ads.md": {
+      "hash": "dce547b53d45961c25f82eab27576373",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks 02 Google Ads.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Link-Stubs/03-Content.md": {
+      "hash": "c2dd3826bd8d7b462913b2bbceb4a4bd",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks 03 Content.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Link-Stubs/04-Local-SEO.md": {
+      "hash": "bb09d9545df36cab4cf9e2f947cb040f",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks 04 Local SEO.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Link-Stubs/05-Trust-Authority.md": {
+      "hash": "f273eb2e15ad57e7812856da42ebe264",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks 05 Trust Authority.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Link-Stubs/06-Cities.md": {
+      "hash": "54519f217ece7f0e6a997fa33cd5d523",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks 06 Cities.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Link-Stubs/06-Competitors.md": {
+      "hash": "6aeb7ecbcc8c8423f134413f7d13a4c4",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks 06 Competitors.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Link-Stubs/20-Case-Studies.md": {
+      "hash": "e38552768cfe952ec1d7acb353d3a4d3",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks 20 Case Studies.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Needs-Review/Root-Artifacts/2026-04-24.md": {
+      "hash": "f376e7fd1bed53a69379e784120ae943",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks 2026 04 24.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Needs-Review/Root-Artifacts/2026-05-12.md": {
+      "hash": "424c4d94993fea458b19de6ae2cdcddd",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks 2026 05 12.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Needs-Review/Root-Artifacts/AI-OVERVIEW-STRATEGY-root.md": {
+      "hash": "9e5589d6cced43a8c03852290dfda533",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks AI Overview Strategy Root Artifact.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Needs-Review/Root-Artifacts/Excel 2026-04-24 19.23.38.sheet.md": {
+      "hash": "5f4c2722cf3dd9faffe4e23e504de5c4",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Excel 2026 04 24 19.23.38.sheet.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Needs-Review/Root-Artifacts/Root-Trex-vs-TimberTech.md": {
+      "hash": "39cb64bb64b91af0ec54305334b3b289",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Root Trex Vs TimberTech.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Needs-Review/Root-Artifacts/Welcome.md": {
+      "hash": "34922cbcaeff83f061a1555bbe2afe75",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Welcome.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Needs-Review/Root-Artifacts/terminal.md": {
+      "hash": "8dd82d55a638bc0356594013d5bc1a70",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Terminal.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Needs-Review/SEO-Placeholders/SEO-Placeholder-Needs-Review.md": {
+      "hash": "c6f987a6e722ec6a8a63bae84dfda940",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks SEO Placeholder Needs Review.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Needs-Review/Untitled-Artifacts/Root-Untitled-1.md": {
+      "hash": "7a2f76097495907e1e128ecd0ac53cea",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Root Untitled 1.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Needs-Review/Untitled-Artifacts/Root-Untitled-2.md": {
+      "hash": "cc17cadc675b9498578fd817e20f4b68",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Root Untitled 2.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/00-Dashboard/_Needs-Review/Untitled-Artifacts/Root-Untitled.md": {
+      "hash": "a6e98de149ea02a2d6e700845ad972cb",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Root Untitled.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/01-SEO/KEYWORDS.md": {
+      "hash": "f0e2245ea0e92f0623d8d8ffccbcb847",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Keyword System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/01-SEO/SEO-AI-Overview-Strategy.md": {
+      "hash": "0d6a02e85dd6177f16a7091d9e19b88a",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks AI OVERVIEW STRATEGY.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/01-SEO/SEO-Placeholder-Needs-Review-2.md": {
+      "hash": "5707981f3c672d599b9dd91f8839fd29",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Untitled 1.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/CONTENT-PLAN.md": {
+      "hash": "eea024077442d9661c1d3c7e7f2b53f4",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Content Plan.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Comparison-Pages/Composite-vs-Wood-Decking.md": {
+      "hash": "3f95e84afbd9f11e375e0a4808df5848",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Composite vs Wood Decking.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Comparison-Pages/PVC-vs-Composite-Decking.md": {
+      "hash": "dbe019ae9f9023fde8c436b75e43ff37",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks PVC vs Composite Decking.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Comparison-Pages/PVC-vs-Composite-Decks.md": {
+      "hash": "0feb93b08624459f1dfe2c5482a50b11",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks PVC vs Composite Decks.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Comparison-Pages/Patio-vs-Deck-Comparison-Page.md": {
+      "hash": "8aac7963e41291a6f5d3fb832363990f",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Patio Vs Deck.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Comparison-Pages/Post-Wrapping-Pros-and-Cons.md": {
+      "hash": "141529b2f5ed8211f489b9c2b64fe038",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Post Wrapping Pros And Cons.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Comparison-Pages/Trex-vs-Fiberon.md": {
+      "hash": "65d507de652bca18e29381f227526ccc",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Trex vs Fiberon.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Comparison-Pages/Trex-vs-TimberTech.md": {
+      "hash": "8a2b80c8ca6d8a3f6a89e8ea46e47d9b",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Trex Vs TimberTech.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Comparison-Pages/Trex-vs-Wood-Decking.md": {
+      "hash": "8d82c51611d2f25458e7ca50bb60cea6",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Trex vs Wood Decking.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Local-Pages/Deck-Builder-Alexandria-VA.md": {
+      "hash": "b1e8b481cefcc8cb6bb933508cfe0dc5",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Builder Alexandria VA.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Local-Pages/Deck-Builder-Arlington-VA.md": {
+      "hash": "f26e7a4db68f7d904b3454472e469e06",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Builder Arlington VA.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Local-Pages/Deck-Builder-Ashburn-VA.md": {
+      "hash": "197fda25b8f297dc5748cd629f185a28",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Builder Ashburn VA.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Local-Pages/Deck-Builder-Fairfax-VA.md": {
+      "hash": "cf05dbbc43806818d615d1e8a242231f",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Builder Fairfax VA.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Local-Pages/Deck-Builder-Leesburg-VA.md": {
+      "hash": "c6e57e33ac2db650c84311566c622080",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Builder Leesburg VA.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Local-Pages/Deck-Builder-Loudoun-VA.md": {
+      "hash": "87204d1bf4a963e6e659258c3e4e2c33",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Builder Loudoun VA.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Local-Pages/Deck-Builder-McLean-VA.md": {
+      "hash": "e1f11e65fdd7f8800d2af210508faf71",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Builder McLean VA.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Local-Pages/Deck-Builder-Prince-William-VA.md": {
+      "hash": "4a204c3d56aa82ce156bb601a111aeb3",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Builder Prince William VA.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Local-Pages/Deck-Builder-Sterling-VA.md": {
+      "hash": "392a9221f860065e5b321121e3377621",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Builder Sterling VA.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Money-Pages/Deck-Builder-Northern-Virginia.md": {
+      "hash": "91886606553319d4b67dedfe4b545073",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Builder Northern Virginia.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Money-Pages/Deck-Materials-Money-Page.md": {
+      "hash": "07b52823488e6bc2a9eade388ace26d0",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Materials.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Money-Pages/Deck-Repair-Hub.md": {
+      "hash": "a9a67d601ff715e314a52539fbd37514",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Repair Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Money-Pages/Deck-cost-Northern-Virginia.md": {
+      "hash": "597d226ffae1d90d489e8e9eb96d485d",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Cost Northern Virginia.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/03-Content/Money-Pages/Virginia-Deck-Code-Guide.md": {
+      "hash": "70e4abb97c757e41df1faccdffe238d6",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Virginia Deck Code Guide.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/04-Schema/Schema-Implementation-Hub.md": {
+      "hash": "6f8db4c910e64bc65184544bb137cf1f",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Schema Implementation Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/04-Schema/Schema-Markup.md": {
+      "hash": "8d688a626a9cb61932dc7ca83a81b4e2",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Schema Markup.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/05-Trust-Authority/Trust-Authority-Index.md": {
+      "hash": "b15026cc11a79e76fdaf6d4cf4d72e06",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Trust Authority Index.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/06-Cities/Alexandria-Deck-Permits.md": {
+      "hash": "0336e1e387af1de2dddcbbdfc477ac2e",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Alexandria Deck Permits.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/06-Cities/Arlington-Deck-Permits.md": {
+      "hash": "960434955832189b735e7adc58834261",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Arlington Deck Permits.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/06-Cities/Deck-Permit-Fairfax-County.md": {
+      "hash": "1ee3891fc534d124bdc775d22ec030a0",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Permit Fairfax County.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/06-Cities/Deck-Permit-Loudoun-County.md": {
+      "hash": "d3a79161d44ac002f31420e0a1dfff98",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Permit Loudoun County.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/06-Cities/Fairfax-Deck-Permits.md": {
+      "hash": "a78a873e6280631473614aa32dd27178",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Fairfax Deck Permits.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/06-Cities/Loudoun-Deck-Permits.md": {
+      "hash": "47e0b64dc7d3beb8bad14ca6441017df",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Loudoun Deck Permits.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/06-Cities/Prince-William-Deck-Permits.md": {
+      "hash": "656df165dcacaaed7236d9d56d7f8cb8",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Prince William Deck Permits.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/06-Competitors/Competitor-Intelligence-Hub.md": {
+      "hash": "ed8cf6f2c8bccb1b6cd3081e6b7f28c6",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Competitor Intelligence Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/Composite-Decking-Guide.md": {
+      "hash": "d34ccccd8b633c00095b8b783d80edd9",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Composite Decking Guide.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/Deck-Footings-Virginia.md": {
+      "hash": "b464117d5d23b0d32ee7703d32f4d4bf",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Footings Virginia.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/Deck-Materials-Authority-Guide.md": {
+      "hash": "b30b235cb97748213adca67e1825d119",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Materials Authority Guide.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/Deck-Materials.md": {
+      "hash": "486f55eeeb864d53c61a0641acfa6c73",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Materials 2.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/Deck-Permits-Virginia.md": {
+      "hash": "0fa0520ed15f083395abf93a3f3b6c54",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Permits Virginia.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/Fairfax-County-Deck-Authority.md": {
+      "hash": "00bc37311f371be2f0d60b1ad9c93a44",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Fairfax County Deck Authority.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/HOA-Deck-Rules.md": {
+      "hash": "5aa71f5ed0a3286ca3214678086db122",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks HOA Deck Rules.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/Loudoun-County-Deck-Authority.md": {
+      "hash": "f6ff1f28489185932c3e2d8b00f215c1",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Loudoun County Deck Authority.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/Materials.md": {
+      "hash": "3fbe51f99b1ac489af4bebb6dd52ce5f",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Materials.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/Prince-William-County-Deck-Authority.md": {
+      "hash": "a6d19fde24bc1f905a91ded60a5ab7f1",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Prince William County Deck Authority.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/TimberTech-Guide.md": {
+      "hash": "8e0a2d5279eba22ce39a424948b87221",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks TimberTech Guide.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Authority/Trex-Decking-Guide.md": {
+      "hash": "a6c0f0022bc6560e0d86f799aa925da9",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Trex Decking Guide.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/07-Prompts/Prompt-Operations-Index.md": {
+      "hash": "6c5f9455288a951a3a9f979ea392c0e4",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Prompt Operations Index.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/08-Competitors/Competitor-Tracking-Index.md": {
+      "hash": "a77e4d848c6c4ea276b94b958e72adb8",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Competitor Tracking Index.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/08-Tasks/Task-Operations-Index.md": {
+      "hash": "7b7e3819325f45bab126975d1826e8cc",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Task Operations Index.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/09-Evidence/Evidence-Library-Index.md": {
+      "hash": "b8abb76d792126b0da4971486bfb13f8",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Evidence Library Index.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/09-Projects/Project-Library-Index.md": {
+      "hash": "16888106a70e6db6854f35f33b72bbc4",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Project Library Index.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/10-Reports/Reports-Index.md": {
+      "hash": "5729c4e44f7b5cf9847aab0e136b4578",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Reports Index.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/10-Schemas/Schema-Assets-Index.md": {
+      "hash": "fac56532d41d47f948de8656777843e5",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Schema Assets Index.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/11-AI-Overviews/AI-Overview-Hub-Strategy.md": {
+      "hash": "ff652e4ba34cc97ea53fecb0570792c0",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks AI Overview Hub Strategy.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/11-Buyer-Intent/Best-Composite-Decking-for-Hot-Weather.md": {
+      "hash": "b6aba4aa159d1cf5e6042b98c44afd5e",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Best Composite Decking For Hot Weather.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/11-Buyer-Intent/Best-Decking-for-Northern-Virginia.md": {
+      "hash": "e518676132027c7aef89957cf06a542f",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Best Decking For Northern Virginia.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/11-Buyer-Intent/How-Long-Do-Composite-Decks-Last.md": {
+      "hash": "118afe4118b4f41ab7a8d0f718ff6950",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks How Long Do Composite Decks Last.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/11-Buyer-Intent/Is-Composite-Decking-Worth-It.md": {
+      "hash": "d468296399910a4d91a3e0e2b109a320",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Is Composite Decking Worth It.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/11-Buyer-Intent/Most-Common-Deck-Building-Mistakes.md": {
+      "hash": "e56d8c9a6ce4fdcc5f35368e76d39ae0",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Most Common Deck Building Mistakes.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/12-Internal-Linking/Internal-Linking-Index.md": {
+      "hash": "bafe5a6d1147c4a7c487c8beca46cae5",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Internal Linking Index.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/12-Trusted-Signals/Best-Deck-Builder-in-Northern-Virginia.md": {
+      "hash": "ceae94c979e50b64b22b409a438f573d",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Best Deck Builder In Northern Virginia.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/12-Trusted-Signals/Composite-Decking-Reviews.md": {
+      "hash": "c6f73c018b3e9d50274bd39e5d8329e2",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Composite Decking Reviews.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/12-Trusted-Signals/Deck-Contractor-Red-Flags.md": {
+      "hash": "413a7b81ed4e2bf3e9e2909537565259",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Contractor Red Flags.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/12-Trusted-Signals/Questions-to-Ask-a-Deck-Builder.md": {
+      "hash": "a0955ce9cc2bc971daf4330a7ca0443e",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Questions To Ask A Deck Builder.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/12-Trusted-Signals/TimberTech-Reviews.md": {
+      "hash": "4d0ea7473efbd81f399f22faa9ef8383",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks TimberTech Reviews.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/12-Trusted-Signals/Trex-Reviews.md": {
+      "hash": "27b4e38abeea4e3366d2aed969c1275b",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Trex Reviews.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/14-PMAX/PMAX-DEC4.md": {
+      "hash": "cb7c2324e0d7a557a727ae94f6cdec00",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks PMAX DEC4.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/14-Problem-Clusters/Deck-Board-Rot.md": {
+      "hash": "c6f5ccf290a19e972485592b0257f8fc",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Board Rot.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/14-Problem-Clusters/Deck-Railing-Movement.md": {
+      "hash": "fa3e0ef3a6350f62e6bbf4d4e976e7e6",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Railing Movement.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/14-Problem-Clusters/Deck-Water-Damage.md": {
+      "hash": "c7ea16c81b2c9cebe70bb97575328f97",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Water Damage.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/14-Problem-Clusters/Hot-Composite-Decking.md": {
+      "hash": "6bdb1d0a45614d1ff1e5e54c7cfbf543",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Hot Composite Decking.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/14-Problem-Clusters/Ledger-Board-Failure.md": {
+      "hash": "ddcb843897f3da03a79272f487815480",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Ledger Board Failure.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/14-Problem-Clusters/Why-Is-My-Deck-Shaking.md": {
+      "hash": "32033d05d2fbca1599bdaca86be771a6",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Why Is My Deck Shaking.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/15-Research/Design-Ideas/Black-Railings-with-Composite-Decking.md": {
+      "hash": "152ff31181222aff88a97a6c40123aad",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Black Railings With Composite Decking.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/15-Research/Design-Ideas/Deck-Before-and-After-Ideas.md": {
+      "hash": "da4403f52e26342f96eba5ee9507981a",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Before And After Ideas.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/15-Research/Design-Ideas/Deck-Color-Combinations.md": {
+      "hash": "cd3b9624dfac3e9f9d4a622ffcb87bf6",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Color Combinations.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/15-Research/Design-Ideas/Luxury-Deck-Designs.md": {
+      "hash": "239b8950893d74166d96255596392aa4",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Luxury Deck Designs.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/15-Research/Design-Ideas/Modern-Deck-Design-Ideas.md": {
+      "hash": "8bd36862abac5ad8b129248914438ab1",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Modern Deck Design Ideas.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/15-Research/Design-Ideas/Multi-Level-Deck-Ideas.md": {
+      "hash": "27d6e0f1b09c286ed54f2d226ad1d053",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Multi Level Deck Ideas.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/15-Research/Design-Ideas/Small-Backyard-Deck-Ideas.md": {
+      "hash": "663f03d0904293bcc40ef39db3fae395",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Small Backyard Deck Ideas.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Composite-Decking-Hub.md": {
+      "hash": "2830a37c67ef3003a992fd774b3bcdb1",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Composite Decking Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Content-Production-and-Internal-Linking-Hub.md": {
+      "hash": "15f0830db0224a48badbd0a76eb7c158",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Content Production And Internal Linking Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Conversion-Intent-Hub.md": {
+      "hash": "34f20a039e090e76a86565f565bacba8",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Conversion Intent Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Deck-Repair-Hub-Master.md": {
+      "hash": "3e8cd1ec3226481588b3d0c6ee3c134b",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Repair Hub Master.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Design-and-Inspiration-Hub.md": {
+      "hash": "8ad0310dd6d350cc06c381b2db8868aa",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Design and Inspiration Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/E-E-A-T-and-Authority-Hub.md": {
+      "hash": "a43ef8191f81263dc61b0077b3e58d4b",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks E-E-A-T and Authority Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Luxury-Decks-Hub.md": {
+      "hash": "796e88af20bc6fa5399e5e8d80dd768f",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Luxury Decks Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Materials-and-Brands-Hub.md": {
+      "hash": "f1e79e2dd1d36e7510da6f1a352d35a3",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Materials and Brands Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Northern-Virginia-Location-Hub.md": {
+      "hash": "9a38063c9079d28abcc6c4aa35491a6f",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Northern Virginia Location Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Outdoor-Living-Hub.md": {
+      "hash": "11c9b5f8b05b4ebe9977c0e306b532cd",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Outdoor Living Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Permit-and-Code-Hub.md": {
+      "hash": "0ae72dc22630def3bb349a67111cea30",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Permit and Code Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/17-Master-Hubs/Repair-and-Safety-Authority-Hub.md": {
+      "hash": "82b6bf838ac9eab900c75c2e4afe132b",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Repair And Safety Authority Hub.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/18-Entity-Relationships/Buyer-Intent-Entity-Map.md": {
+      "hash": "1f68cea4a9c1a81e67b505d41960d51a",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Buyer Intent Entity Map.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/18-Entity-Relationships/Composite-Decking-Entity-Map.md": {
+      "hash": "731de4e478e8d54d89d697d85e75942c",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Composite Decking Entity Map.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/18-Entity-Relationships/Deck-Repair-Entity-Map.md": {
+      "hash": "c88c6ec68a8ca5dc64b03136cd46cf85",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Repair Entity Map.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/18-Entity-Relationships/Local-SEO-Entity-Map.md": {
+      "hash": "5de7db45a6f06aa6fb4ffea553953a42",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Local SEO Entity Map.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/18-Entity-Relationships/Luxury-Outdoor-Living-Entity-Map.md": {
+      "hash": "6aef00f8924c2f4fcf0241aaae171d18",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Luxury Outdoor Living Entity Map.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/18-Entity-Relationships/Northern-Virginia-Decking-Entity-Map.md": {
+      "hash": "de4a497ca8751f1756002fcc6a859990",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Northern Virginia Decking Entity Map.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/19-Visual-Authority/Before-and-After-Projects.md": {
+      "hash": "e9b1a065469809f03ac6b7173ceb0798",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Before And After Projects.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/19-Visual-Authority/Cable-Railing-Gallery.md": {
+      "hash": "dc72524fd7e9d6c5eae68e48cc87ddc0",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Cable Railing Gallery.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/19-Visual-Authority/Composite-Deck-Color-Gallery.md": {
+      "hash": "9113f1a3b6629d9795ee1b7512163f15",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Composite Deck Color Gallery.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/19-Visual-Authority/Covered-Deck-Gallery.md": {
+      "hash": "30efe597613ba48decbb2190cc389f38",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Covered Deck Gallery.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/19-Visual-Authority/Deck-Before-and-After-Transformations.md": {
+      "hash": "61e652db3bd05d791a1f2828509b5087",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Before And After Transformations.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/19-Visual-Authority/Deck-Lighting-Gallery.md": {
+      "hash": "30b67837d73071c9889e5b38234ebeb1",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Lighting Gallery.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/19-Visual-Authority/Deck-Project-Gallery-System.md": {
+      "hash": "eff1c9837bbf73410461983e86eb4074",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Project Gallery System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/19-Visual-Authority/Luxury-Outdoor-Living-Gallery.md": {
+      "hash": "4f58a162ec6dbd2e19b69f237f3a6c92",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Luxury Outdoor Living Gallery.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/19-Visual-Authority/Modern-Deck-Design-Gallery.md": {
+      "hash": "6316d7d4d6966906c8711874c45f656e",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Modern Deck Design Gallery.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/19-Visual-Authority/Outdoor-Kitchen-Gallery.md": {
+      "hash": "ac0c2bfe66f7bb607468a1fe65a8f490",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Outdoor Kitchen Gallery.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/19-Visual-Authority/Trex-Project-Gallery.md": {
+      "hash": "b201513a4838bccd73d40d223d42bccc",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Trex Project Gallery.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/20-Case-Studies/Deck-Repair-Project-in-Reston.md": {
+      "hash": "33b51ddeef2fcbac4b3a432b08231cea",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Repair Project In Reston.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/20-Case-Studies/Luxury-Covered-Deck-in-McLean.md": {
+      "hash": "4983d9245707974f5ee6907815ad2738",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Luxury Covered Deck In McLean.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/20-Case-Studies/Modern-Deck-Transformation-in-Arlington.md": {
+      "hash": "7f1bc26d0fee2c518e8146aa2f74642f",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Modern Deck Transformation In Arlington.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/20-Case-Studies/TimberTech-Deck-in-Great-Falls.md": {
+      "hash": "7487365a2d532dd2d85aa3e2010115b6",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks TimberTech Deck In Great Falls.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/20-Case-Studies/Trex-Deck-Replacement-in-Ashburn.md": {
+      "hash": "2c942ab15ccda449a71f592c2d1c1401",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Trex Deck Replacement In Ashburn.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/21-Google-Business-Profile/Deck-Project-Geo-Tagging.md": {
+      "hash": "624de9efb84f834690f533a4c53e95fd",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Project Geo Tagging.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/21-Google-Business-Profile/GBP-Photo-Strategy.md": {
+      "hash": "dded912f5bd76aead16db0e359de0467",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks GBP Photo Strategy.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/21-Google-Business-Profile/Google-Review-Entity-System.md": {
+      "hash": "2c0ce3c02d15d502214328e16b9428d4",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Google Review Entity System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/21-Google-Business-Profile/Local-Citation-Strategy.md": {
+      "hash": "6f9c899cdbdc7aca567d04dbfd3d9237",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Local Citation Strategy.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/21-Google-Business-Profile/Service-Area-Optimization.md": {
+      "hash": "c8cf77a54ed02c819532ac7e4acbb13c",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Service Area Optimization.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/22-Content-Expansion-Engine/Content-Expansion-Engine.md": {
+      "hash": "f406ec9e3192166b0b40cdc479064df1",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Content Expansion Engine.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/22-Content-Expansion-Engine/Future-AI-Search-Topics.md": {
+      "hash": "1f1ed4bfac2959fb85802f3bd0707e24",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Future AI Search Topics.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/22-Content-Expansion-Engine/Future-Comparison-Ideas.md": {
+      "hash": "a3b6c6a54696169f2bc4fbcbfd0c93d3",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Future Comparison Ideas.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/22-Content-Expansion-Engine/Future-FAQ-Ideas.md": {
+      "hash": "fbd476e7124b1a8010dfc935531086c9",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Future FAQ Ideas.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/22-Content-Expansion-Engine/Future-Google-Ads-Landing-Pages.md": {
+      "hash": "b6f07fc6751c996ada56cf739da42d30",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Future Google Ads Landing Pages.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/22-Content-Expansion-Engine/Future-Location-Ideas.md": {
+      "hash": "62f257b4266adc4408ecf5f8c4d76c7e",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Future Location Ideas.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/22-Content-Expansion-Engine/Future-Luxury-Topics.md": {
+      "hash": "4d8ca21a36157e3942e3047619203867",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Future Luxury Topics.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/22-Content-Expansion-Engine/Future-Repair-Topics.md": {
+      "hash": "ae51254952ec315e703dbdd1c861e335",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Future Repair Topics.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/22-Content-Expansion-Engine/Future-Visual-Content-Ideas.md": {
+      "hash": "90f62278914af6848fee3ec17f911a28",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Future Visual Content Ideas.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/25-Revenue-Systems/High-Ticket-Service-Strategy.md": {
+      "hash": "23c390d32f4814142d5bbc6b8d5ade65",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks High Ticket Service Strategy.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/25-Revenue-Systems/Luxury-Lead-Qualification.md": {
+      "hash": "b3f63d2f01c7e96af42d321d016538bd",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Luxury Lead Qualification.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/26-Operational-Authority-System/Client-Communication-System.md": {
+      "hash": "561b52c25332de574e7b35074d2604de",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Client Communication System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/26-Operational-Authority-System/Deck-Inspection-Process.md": {
+      "hash": "974c973408a2a3c3c4ef585af968eb82",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Deck Inspection Process.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/26-Operational-Authority-System/Luxury-Project-Planning.md": {
+      "hash": "58f9052813f98edb8e9d48cfd630b631",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Luxury Project Planning.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/26-Operational-Authority-System/Material-Selection-Framework.md": {
+      "hash": "4329cc3e73b6e7a903cb5fef95caa0d2",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Material Selection Framework.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/26-Operational-Authority-System/Permit-Workflow-System.md": {
+      "hash": "e4dd30a126ca7c6ff7a4427dda66d17e",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Permit Workflow System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/26-Operational-Authority-System/Photo-Documentation-System.md": {
+      "hash": "1b533d1e13254b9e49df330647842b78",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Photo Documentation System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/26-Operational-Authority-System/Project-Workflow-System.md": {
+      "hash": "71c501b8396014cad2a9840b8fbd8252",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Project Workflow System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/26-Operational-Authority-System/Review-Request-Workflow.md": {
+      "hash": "56c1fabf389ba4746ff15a353a2f6e20",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Review Request Workflow.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/27-Brand-Dominance-System/Brand-Trust-System.md": {
+      "hash": "50539438ff0a770557ad2e5b96a1bdd2",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Brand Trust System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/27-Brand-Dominance-System/Competitive-Differentiation-System.md": {
+      "hash": "dd2cd8a8d6ae97642c2fca90a499b742",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Competitive Differentiation System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/27-Brand-Dominance-System/Composite-Decking-Leadership.md": {
+      "hash": "679be6a465b45d17342d6b57e2465d49",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Composite Decking Leadership.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/27-Brand-Dominance-System/Local-Market-Dominance.md": {
+      "hash": "32a3a69696719eff061a5a733a4872b8",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Local Market Dominance.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/27-Brand-Dominance-System/Luxury-Outdoor-Living-Brand.md": {
+      "hash": "dfceb2162b2da0ce79c7f4efec2b9294",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Luxury Outdoor Living Brand.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/27-Brand-Dominance-System/Northern-Virginia-Decking-Authority.md": {
+      "hash": "49fbc43fb88cab009ec0b308c20fff65",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Northern Virginia Decking Authority.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/27-Brand-Dominance-System/Premium-Brand-Positioning.md": {
+      "hash": "45947fa3810dc448a9217f2f9567e99d",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Premium Brand Positioning.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/27-Brand-Dominance-System/Regional-Authority-Strategy.md": {
+      "hash": "e3234028db9f4cdd913bfe4324530cbb",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Regional Authority Strategy.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/28-Content-Extension-System/AI-Optimized-Content-Checklist.md": {
+      "hash": "0bc1771874abcf54f81fabbf6ee4ecce",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks AI Optimized Content Checklist.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/28-Content-Extension-System/Case-Study-Publishing-System.md": {
+      "hash": "4d591c51495ef38a121d239c8356a0a9",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Case Study Publishing System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/28-Content-Extension-System/Daily-Content-Workflow.md": {
+      "hash": "0f7a9acbe480560a4a5f06c40346d2d8",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Daily Content Workflow.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/28-Content-Extension-System/Gallery-Update-System.md": {
+      "hash": "84db2b47ead701ac59882dd8b5c7edbc",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Gallery Update System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/28-Content-Extension-System/Internal-Linking-Checklist.md": {
+      "hash": "9fff530d2fffef721febce20ca827705",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Internal Linking Checklist.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/28-Content-Extension-System/Local-Page-Expansion-System.md": {
+      "hash": "ea868822570b38fe0a078b241affb9d4",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Local Page Expansion System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/28-Content-Extension-System/New-Page-Launch-System.md": {
+      "hash": "f0befb5d7c176caaaa31cb400996667f",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks New Page Launch System.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/28-Content-Extension-System/Topical-Authority-Growth-Plan.md": {
+      "hash": "9e40d9e9722cf2a81801d2d9a1ec8418",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks Topical Authority Growth Plan.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/29-Analysis-and-Performance-System/SEO-Performance-Tracking.md": {
+      "hash": "03e1b3137b7d4e9c13e73f635ce61f89",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks SEO Performance Tracking.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
+    },
+    ".raw/old-obsidian-vault/99-Prompts/MASTER-PROMPT.md": {
+      "hash": "742b81d007a8e520857d1443ed2d9253",
+      "ingested_at": "2026-05-16",
+      "pages_created": [
+        "wiki/sources/LDN Decks MASTER PROMPT.md"
+      ],
+      "pages_updated": [
+        "wiki/domains/LDN Decks Operating Brain.md",
+        "wiki/index.md",
+        "wiki/sources/_index.md",
+        "wiki/log.md",
+        "wiki/hot.md"
+      ]
     }
   }
 }

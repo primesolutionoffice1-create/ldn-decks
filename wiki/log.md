@@ -17,6 +17,13 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ---
 
+## 2026-05-16 ingest | LDN Decks Complete Archive Import
+
+- Source: all remaining old-vault markdown notes not previously imported
+- Pages created: 180 archived source summaries
+- Pages updated: [[LDN Decks Operating Brain]], [[index]], [[sources/_index]], [[hot]], [[log]]
+- Key insight: The new vault now contains raw copies and source summaries for every markdown note from the old LDN Decks AI Brain inventory.
+
 ## 2026-05-16 ingest | LDN Decks Scaled Content Final Pass
 
 - Source: priority scaled folders from `.raw/old-obsidian-vault/16-Location-Intent-Clusters/`, `.raw/old-obsidian-vault/09-Service-Entities/`, `.raw/old-obsidian-vault/10-Outdoor-Living/`, `.raw/old-obsidian-vault/13-FAQ-Clusters/`, `.raw/old-obsidian-vault/23-Semantic-Keyword-Vault/`, and `.raw/old-obsidian-vault/24-AI-Search-Optimization/`

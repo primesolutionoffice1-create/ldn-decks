@@ -18,7 +18,7 @@ Navigation: [[index]] | [[log]] | [[overview]]
 
 ## Last Updated
 
-2026-05-16: Imported the remaining Priority 5 scaled content clusters into `ldn-decks-wiki`.
+2026-05-16: Completed full archive import of the old LDN Decks AI Brain into `ldn-decks-wiki`.
 
 ## Key Recent Facts
 
@@ -30,16 +30,18 @@ Navigation: [[index]] | [[log]] | [[overview]]
 - Added strategic hub summaries: [[LDN Decks Northern Virginia Decking Hub]], [[LDN Decks Local SEO Dominance Hub]], [[LDN Decks Revenue and Google Ads Hub]], [[LDN Decks AI Overview Visibility Hub]], and [[LDN Decks Trust and Buyer Confidence Hub]].
 - Added core business summaries: [[LDN Decks SEO Master]], [[LDN Decks SEO Roadmap]], [[LDN Decks Google Ads Audit]], [[LDN Decks Content Hub]], [[LDN Decks Northern Virginia Cities]], [[LDN Decks Composite Decks]], and [[LDN Decks Deck Repair]].
 - Created working pages: [[seo-command-center|SEO Command Center]], [[google-ads-tracker|Google Ads Tracker]], [[content-calendar|Content Calendar]], [[local-seo-tracker|Local SEO Tracker]], and [[ai-visibility-tracker|AI Visibility Tracker]].
-- Latest lint pass: [[lint-report-2026-05-16|Lint Report 2026-05-16]] scanned 124 wiki files and found 0 dead links, 0 orphan pages, and 0 frontmatter gaps.
+- Latest lint pass: [[lint-report-2026-05-16|Lint Report 2026-05-16]] scanned 304 wiki files and found 0 dead links, 0 orphan pages, and 0 frontmatter gaps.
 - Added revenue and conversion summaries: [[LDN Decks Conversion System Index]], [[LDN Decks Lead Generation System]], [[LDN Decks Google Ads Lead Flow]], [[LDN Decks SEO to Conversion Architecture]], [[LDN Decks Phone Call Conversion Strategy]], [[LDN Decks Estimate Conversion System]], and [[LDN Decks Deck Estimate Funnel]].
 - Added location-intent batch 1 summaries for Fairfax, Arlington, Alexandria, Ashburn, Bristow, Burke, Burke Centre, and Gainesville composite/cable railing topics.
 
 - Completed priority scaled content imports across location intent, service entities, outdoor living, FAQ clusters, semantic keyword vault, and AI search optimization.
 - Final priority migration status is recorded in [[migration-completion-report-2026-05-16|Migration Completion Report 2026-05-16]].
 
+- Complete archive import added every remaining old-vault markdown note as raw copy plus source summary.
+
 ## Open Threads
 
-- Next step: use the completed wiki operationally; optional archival import can cover old-vault folders outside the priority migration plan.
+- Next step: use the completed wiki operationally; no old-vault markdown remains outside the archive.
 
 ## Recent Pages
 

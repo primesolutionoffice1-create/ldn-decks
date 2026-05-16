@@ -87,6 +87,10 @@ Completed the remaining priority scaled-content imports across:
 - Semantic keywords: buyer intent, local SEO, Google Ads, visual, luxury, repair, and AI search phrases.
 - AI search optimization: citation strategy, entity reinforcement, answer engines, ChatGPT retrieval, Google AI Overview, Perplexity, and semantic content architecture.
 
+## Complete Archive Import
+
+Archived the remaining 180 old-vault notes that were outside the priority migration plan. The new vault now contains raw copies and source summaries for every markdown note found in `/Users/ldndecks/Documents/Obsidian Vault/Ldndecks AI Brain`. Archived pages are reference material until validated.
+
 ## Operating Focus
 
 Build ldndecks.com into the leading Northern Virginia deck builder authority across:

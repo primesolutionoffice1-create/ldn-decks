@@ -33,11 +33,11 @@ The LDN Decks priority migration is complete for the planned folders:
 
 ## Current Wiki State
 
-- Wiki markdown files scanned: 124
+- Wiki markdown files scanned: 304
 - Dead wikilinks: 0
 - Orphan pages: 0
 - Frontmatter gaps: 0
-- Sources ingested: 103
+- Sources ingested: 283
 
 ## Operating Pages
 
@@ -51,6 +51,6 @@ The LDN Decks priority migration is complete for the planned folders:
 
 ## Remaining Optional Work
 
-The old vault contains additional non-priority folders outside the import plan. Treat those as archival or on-demand imports, not blockers for operational use.
+No old-vault markdown remains outside the archive import. Future work is operational validation, not migration.
 
 Before publishing external content, validate strategy notes against current website state, Google Search Console, Google Ads, SERPs, and actual project proof.
