@@ -25,6 +25,13 @@ const expectedCitationSignals = [
   'mapquest.com/us/virginia/loudoun-decks-532352487',
 ];
 
+const legacySitemapPaths = [
+  '/page-sitemap.xml',
+  '/post-sitemap.xml',
+  '/sitemap_index.xml',
+  '/sitemap-index.xml',
+];
+
 async function getText(url) {
   const response = await fetch(url, {
     headers: {
@@ -34,6 +41,22 @@ async function getText(url) {
 
   const text = await response.text();
   return { url, status: response.status, ok: response.ok, text };
+}
+
+async function getHead(url) {
+  const response = await fetch(url, {
+    method: 'HEAD',
+    redirect: 'manual',
+    headers: {
+      'user-agent': 'LDNDecksSEOCheck/1.0 (+https://ldndecks.com)',
+    },
+  });
+
+  return {
+    url,
+    status: response.status,
+    location: response.headers.get('location'),
+  };
 }
 
 function extractCanonical(html) {
@@ -71,6 +94,14 @@ try {
   const robots = await getText(`${ORIGIN}/robots.txt`);
   if (!summarizeCheck('robots.txt is reachable', robots.ok, `${robots.status}`)) failures.push('robots status');
   if (!summarizeCheck('robots allows main site crawl', !/disallow:\s*\/\s*$/im.test(robots.text))) failures.push('robots disallow');
+
+  for (const path of legacySitemapPaths) {
+    const legacy = await getHead(`${ORIGIN}${path}`);
+    const legacyOk = legacy.status >= 300 && legacy.status < 400 && legacy.location?.endsWith('/sitemap.xml');
+    if (!summarizeCheck(`legacy sitemap ${path} redirects`, legacyOk, `${legacy.status} ${legacy.location || ''}`.trim())) {
+      failures.push(`${path} legacy sitemap redirect`);
+    }
+  }
 
   for (const path of priorityPaths) {
     const page = await getText(`${ORIGIN}${path === '/' ? '' : path}`);
