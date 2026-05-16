@@ -9,6 +9,7 @@ Run:
 
 ```bash
 npm run seo:daily-check
+npm run seo:link-audit
 ```
 
 If it fails, fix in this order:
@@ -19,6 +20,7 @@ If it fails, fix in this order:
 4. Canonical mismatch.
 5. Citation signals disappear from `/social`.
 6. IndexNow fails.
+7. Internal link audit finds a 4xx URL.
 
 ## Weekly SEO review
 

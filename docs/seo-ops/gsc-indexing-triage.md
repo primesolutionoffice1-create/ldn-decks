@@ -43,6 +43,8 @@ Current non-indexed breakdown:
   - `/sitemap_index.xml`
   - `/sitemap-index.xml`
 - Reason: Google Search Console still polls old sitemap submissions, and the first three returned 404 before this fix.
+- Verified the live sitemap after deploy: 183 URLs, 0 non-200 sitemap URLs.
+- Ran internal link crawl from live sitemap pages: 447 internal links checked, 0 real internal 404 links found.
 
 ## Do first in GSC
 

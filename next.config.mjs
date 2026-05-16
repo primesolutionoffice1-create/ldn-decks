@@ -277,7 +277,7 @@ const nextConfig = {
       // Arlington County cities
       { source: '/top-decks-build-near-you/deck-builder-in-arlington', destination: '/deck-builder-arlington-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-rosslyn', destination: '/near-you/arlington-county/rosslyn', permanent: true },
-  // Old Showcase Redirects    { source: '/top-decks-build-near-you/deck-builder-in-ballston', destination: '/near-you/arlington-county/ballston', permanent: true },
+      { source: '/top-decks-build-near-you/deck-builder-in-ballston', destination: '/near-you/arlington-county/ballston', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-clarendon', destination: '/near-you/arlington-county/clarendon', permanent: true },
 
       // Stafford County cities
