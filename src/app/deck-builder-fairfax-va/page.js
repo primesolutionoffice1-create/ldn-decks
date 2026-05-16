@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -75,6 +76,7 @@ export default function FairfaxDeckBuilderPage() {
   return (
     <main>
       <JsonLd data={fairfaxFaqSchema} />
+      <LocalBusinessSchema city="Fairfax" url="https://ldndecks.com/deck-builder-fairfax-va" />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -104,7 +106,6 @@ export default function FairfaxDeckBuilderPage() {
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"
-              priority
             />
           </div>
 

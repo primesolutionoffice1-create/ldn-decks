@@ -7,6 +7,7 @@ import CallLink from '@/components/CallLink';
 
 export default function ContactForm({ hideInfoCol = false, noPadding = false }) {
   const [status, setStatus] = useState(null);
+  const [submittedAt] = useState(() => Date.now());
   const { closeContact } = useContact();
   const submit = useLeadSubmit({ formType: 'quote' });
 
@@ -64,6 +65,7 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                 aria-hidden="true"
                 style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
               />
+              <input type="hidden" name="submittedAt" value={submittedAt} />
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
                   <label htmlFor="firstName">First Name <span className={styles.req}>*</span></label>

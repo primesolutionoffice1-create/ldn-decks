@@ -63,6 +63,7 @@ export default function CompositeVsWoodPage() {
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"
+              quality={70}
               priority
             />
           </div>

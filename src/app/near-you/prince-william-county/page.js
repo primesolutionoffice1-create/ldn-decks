@@ -6,6 +6,8 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 
@@ -48,6 +50,12 @@ const faqs = [
 export default function PrinceWilliamCountyPage() {
   return (
     <main>
+      <LocalBusinessSchema
+        city="Prince William County"
+        areaType="AdministrativeArea"
+        description="LDN Decks builds custom decks, porches, patios, pergolas, and outdoor living spaces throughout Prince William County, VA."
+        url="https://ldndecks.com/near-you/prince-william-county"
+      />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Prince William County, VA"
@@ -130,6 +138,11 @@ export default function PrinceWilliamCountyPage() {
       </section>
       <ServicesFAQ canonicalUrl="https://ldndecks.com/near-you/prince-william-county" title="Frequently Asked Questions About Decks in Prince William County" faqs={faqs} />
       <RatingBadge />
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="Manassas" state="VA" height="360px" />
+        </div>
+      </section>
       <RelatedGuides currentPath="/near-you/prince-william-county" />
       <ContactHome />
     </main>

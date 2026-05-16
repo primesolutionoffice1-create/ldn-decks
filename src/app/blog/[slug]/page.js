@@ -164,7 +164,7 @@ export default async function SingleBlogPage({ params }) {
        {/* Hero Image Block */}
        <div className={styles.heroSection}>
           <div className={styles.imgWrapper}>
-             <Image src={post.image} alt={post.title} fill className={styles.heroImg} priority sizes="100vw" />
+             <Image src={post.image} alt={post.title} fill className={styles.heroImg} priority quality={70} sizes="100vw" />
              <div className={styles.imgOverlay}>
                 <div className={styles.containerLarge}>
                   <Link href="/blog" className={styles.backLink}>&larr; Back to News</Link>

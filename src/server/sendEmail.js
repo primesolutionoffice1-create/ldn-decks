@@ -14,7 +14,12 @@ export async function sendContactEmail(formData) {
     // /thank-you, but Smart Bidding sees zero bot-driven conversions in
     // the offline-import pipeline because no gclid/event_id record exists
     // in the inbox / CRM).
-    if (formData.get('company_website')) {
+    const submittedAt = Number(formData.get('submittedAt') || 0);
+    if (
+      formData.get('company_website') ||
+      formData.get('companyWebsite') ||
+      (submittedAt && Date.now() - submittedAt < 2500)
+    ) {
       console.log('[sendContactEmail] honeypot triggered, silently dropping submission');
       // Return success-shaped response with `skipped` flag so the client
       // hook doesn't fire trackFormSubmit and doesn't navigate to /thank-you

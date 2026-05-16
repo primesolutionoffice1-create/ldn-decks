@@ -12,6 +12,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -106,6 +107,7 @@ const expansionSections = [
 export default function DeckBuilderChantillyPage() {
   return (
     <main>
+      <LocalBusinessSchema city="Chantilly" url="https://ldndecks.com/deck-builder-chantilly-va" />
       <ServicesHeader
         subtext="Chantilly, VA's Trusted Deck Company"
         title="Custom Deck Builder in Chantilly, VA"
@@ -134,7 +136,6 @@ export default function DeckBuilderChantillyPage() {
             fill
             style={{ objectFit: 'cover' }}
             sizes="(max-width: 900px) 100vw, 900px"
-            priority
           />
         </div>
         <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Trex Deck Builder Chantilly</h2>

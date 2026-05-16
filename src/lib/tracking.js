@@ -62,9 +62,20 @@ export function trackFormSubmit({
   eventId,
 } = {}) {
   if (typeof window === 'undefined') return;
+  const leadEventId = eventId || `lead_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
+  push({
+    event: 'generate_lead',
+    form_type: formType,
+    lead_source: 'website_contact_form',
+    event_id: leadEventId,
+    email: email || null,
+    phone: phone || null,
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+  });
   push({
     event: 'form_submit',
-    event_id: eventId || null,
+    event_id: leadEventId,
     form_type: formType,
     email: email || null,
     phone: phone || null,

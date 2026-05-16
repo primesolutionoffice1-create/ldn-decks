@@ -12,6 +12,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -114,6 +115,7 @@ export default function McLeanDeckBuilderPage() {
   return (
     <main>
       <JsonLd data={mcleanFaqSchema} />
+      <LocalBusinessSchema city="McLean" url="https://ldndecks.com/deck-builder-mclean-va" />
       <ServicesHeader
         subtext="McLean, VA's Choice for Luxury Decks"
         title="Custom Deck Builder in McLean, VA"

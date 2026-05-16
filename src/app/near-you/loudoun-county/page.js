@@ -6,6 +6,8 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 
@@ -49,6 +51,12 @@ const faqs = [
 export default function LoudounCountyPage() {
   return (
     <main>
+      <LocalBusinessSchema
+        city="Loudoun County"
+        areaType="AdministrativeArea"
+        description="LDN Decks builds custom decks, porches, patios, pergolas, and outdoor living spaces throughout Loudoun County, VA."
+        url="https://ldndecks.com/near-you/loudoun-county"
+      />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Loudoun County, VA"
@@ -160,6 +168,11 @@ export default function LoudounCountyPage() {
       </section>
       <ServicesFAQ canonicalUrl="https://ldndecks.com/near-you/loudoun-county" title="Frequently Asked Questions About Decks in Loudoun County" faqs={faqs} />
       <RatingBadge />
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="Leesburg" state="VA" height="360px" />
+        </div>
+      </section>
       <RelatedGuides currentPath="/near-you/loudoun-county" />
       <ContactHome />
     </main>

@@ -38,7 +38,7 @@ export default function HouzzProjectsPage() {
       {/* Hero Section */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '7rem 0 6rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 0 }}>
-          <Image src="/images/img27.jpeg" alt="Loudoun Decks Custom Project" fill priority sizes="100vw" style={{ objectFit: 'cover', opacity: 0.18 }} />
+          <Image src="/images/img27.jpeg" alt="Loudoun Decks Custom Project" fill priority quality={70} sizes="100vw" style={{ objectFit: 'cover', opacity: 0.18 }} />
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.5))' }}></div>
         </div>
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import JsonLd from './JsonLd';
 
-export default function LocalBusinessSchema({ city, description, url }) {
+export default function LocalBusinessSchema({ city, description, url, areaType = 'City' }) {
+  const areaName = city.includes(',') ? city : `${city}, VA`;
   const schema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -39,7 +40,7 @@ export default function LocalBusinessSchema({ city, description, url }) {
       "bestRating": "5"
     },
     "areaServed": [
-      { "@type": "City", "name": `${city}, VA` }
+      { "@type": areaType, "name": areaName }
     ],
     "sameAs": [
       "https://x.com/ldndecks",

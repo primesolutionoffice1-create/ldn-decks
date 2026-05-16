@@ -36,6 +36,7 @@ export default function WoodDecksPage() {
           alt="Custom stained wood deck with modern pergola in Northern Virginia backyard"
           fill
           priority
+              quality={70}
           sizes="100vw"
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />

@@ -6,6 +6,8 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 
@@ -50,6 +52,12 @@ const faqs = [
 export default function FairfaxCountyPage() {
     return (
           <main>
+            <LocalBusinessSchema
+          city="Fairfax County"
+          areaType="AdministrativeArea"
+          description="LDN Decks builds custom decks, screened porches, patios, and outdoor living spaces throughout Fairfax County, VA."
+          url="https://ldndecks.com/near-you/fairfax-county"
+        />
             <ServicesHeader
           subtext="Serving Northern Virginia"
           title="Deck Builder in Fairfax County, VA"
@@ -133,6 +141,11 @@ export default function FairfaxCountyPage() {
   </section>
       <ServicesFAQ canonicalUrl="https://ldndecks.com/near-you/fairfax-county" title="Frequently Asked Questions About Decks in Fairfax County" faqs={faqs} />
         <RatingBadge />
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="Fairfax" state="VA" height="360px" />
+        </div>
+      </section>
       <RelatedGuides currentPath="/near-you/fairfax-county" />
       <ContactHome />
   </main>

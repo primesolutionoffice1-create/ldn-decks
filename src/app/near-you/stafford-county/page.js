@@ -4,6 +4,8 @@ import ServiceMain from '@/components/ServiceMain';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -37,6 +39,12 @@ const faqs = [
 export default function StaffordCountyPage() {
   return (
     <main>
+      <LocalBusinessSchema
+        city="Stafford County"
+        areaType="AdministrativeArea"
+        description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Stafford County, VA."
+        url="https://ldndecks.com/near-you/stafford-county"
+      />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Stafford County, VA"
@@ -69,6 +77,11 @@ export default function StaffordCountyPage() {
       </article>
 
       <ServicesFAQ canonicalUrl="https://ldndecks.com/near-you/stafford-county" title="Deck Building in Stafford County — FAQ" faqs={faqs} />
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="Stafford" state="VA" height="360px" />
+        </div>
+      </section>
       <RelatedGuides currentPath="/near-you/stafford-county" />
       <ContactHome />
     </main>

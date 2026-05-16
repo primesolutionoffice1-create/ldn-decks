@@ -13,6 +13,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -115,6 +116,7 @@ export default function ViennaDeckBuilderPage() {
   return (
     <main>
       <JsonLd data={viennaFaqSchema} />
+      <LocalBusinessSchema city="Vienna" url="https://ldndecks.com/deck-builder-vienna-va" />
       <ServicesHeader
         subtext="Vienna, VA's #1 Rated Builder"
         title="Custom Deck Builder in Vienna, VA"

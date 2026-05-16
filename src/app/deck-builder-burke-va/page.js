@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -27,6 +28,7 @@ export default function BurkeDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <LocalBusinessSchema city="Burke" url="https://ldndecks.com/deck-builder-burke-va" />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Burke, VA</h1>
@@ -47,7 +49,6 @@ export default function BurkeDeckBuilderPage() {
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"
-              priority
             />
           </div>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Burke Timeless Wood and Modern Composite</h2>
