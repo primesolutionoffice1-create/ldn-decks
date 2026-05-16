@@ -36,6 +36,27 @@ Current non-indexed breakdown:
 
 ## Fixes applied from this snapshot
 
+2026-05-16:
+- Re-verified legacy sitemap URLs live:
+  - `/page-sitemap.xml` -> `/sitemap.xml`
+  - `/post-sitemap.xml` -> `/sitemap.xml`
+  - `/sitemap_index.xml` -> `/sitemap.xml`
+  - `/sitemap-index.xml` -> `/sitemap.xml`
+- Confirmed several Search Console 404 rows are stale because the live site now redirects them:
+  - `/best-composite-decking-virginia-trex-timbertech-fiberon` -> `/trex-vs-timbertech-vs-azek`
+  - `/choosing-right-deck-material-wood-vs-composite` -> `/composite-deck-vs-wood-deck-virginia`
+  - `/top-decks-build-near-you/deck-builder-in-aldie` -> `/near-you/loudoun-county/aldie`
+  - `/top-decks-build-near-you/deck-builder-in-annandale` -> `/near-you/fairfax-county/annandale`
+- Removed the homepage redirect for `/home-2`; legacy/junk URLs now return `410 Gone` with `X-Robots-Tag: noindex` where appropriate:
+  - `/home-2`
+  - `/drafts`
+  - `/marker-listing`
+  - `/comments/feed`
+  - `/wp-login.php`
+  - `/elementskit-content/*`
+  - `/wp-content/plugins/*`
+- Reason: these URLs have no clean modern equivalent and should be removed from the index instead of consolidating junk signals into the homepage.
+
 2026-05-15:
 - Added 301 redirects from legacy sitemap URLs to the canonical `/sitemap.xml`:
   - `/page-sitemap.xml`

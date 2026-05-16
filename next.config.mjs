@@ -20,8 +20,6 @@ const nextConfig = {
         destination: 'https://ldndecks.com/:path*',
         statusCode: 301,
       },
-      { source: '/home-2', destination: '/', permanent: true },
-
       // Legacy XML sitemaps that Google Search Console still polls.
       // Keep these as 301s instead of 404s so historical submissions consolidate
       // into the current canonical sitemap.
