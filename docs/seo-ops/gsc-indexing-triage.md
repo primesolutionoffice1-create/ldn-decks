@@ -36,6 +36,16 @@ Current non-indexed breakdown:
 
 ## Fixes applied from this snapshot
 
+2026-05-16 LCP pass:
+- Reduced critical-path competition for the two Search Console mobile LCP groups:
+  - Homepage keeps only the actual hero image as an image preload.
+  - `/composite-deck-cost-northern-virginia` no longer preloads the below-the-fold `/showcase/img09.jpeg` image.
+  - Header logo no longer uses `next/image` priority on every route; it remains eager but with low fetch priority.
+  - Pinterest base tag moved from `afterInteractive` to `lazyOnload` so it does not compete with first-render mobile LCP. Lead tracking remains tied to the post-submit lead confirmation flow.
+- Local production HTML verification:
+  - `/` image preloads: `/home-page-ldn.webp` only.
+  - `/composite-deck-cost-northern-virginia` image preloads: none.
+
 2026-05-16:
 - Re-verified legacy sitemap URLs live:
   - `/page-sitemap.xml` -> `/sitemap.xml`

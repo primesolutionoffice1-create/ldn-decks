@@ -234,7 +234,6 @@ export default function CompositeDeckCostPage() {
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 960px) 100vw, 960px"
-              priority
             />
           </div>
         </div>
