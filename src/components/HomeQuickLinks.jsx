@@ -1,6 +1,6 @@
-"use client";
 import React from 'react';
 import Link from 'next/link';
+import styles from './HomeQuickLinks.module.css';
 
 const links = [
   {
@@ -36,12 +36,57 @@ const links = [
   {
     href: '/screened-porch-builder-northern-virginia',
     title: 'Screened Porch Builder',
-    desc: 'Targeted page for screened porch builder searches.',
+    desc: 'Cost, timeline and design guidance for porch projects.',
+  },
+  {
+    href: '/deck-builder-ashburn-va',
+    title: 'Deck Builder in Ashburn',
+    desc: 'Composite deck replacements and HOA-ready plans in Ashburn.',
+  },
+  {
+    href: '/deck-builder-leesburg-va',
+    title: 'Deck Builder in Leesburg',
+    desc: 'Decks, porches and outdoor living projects in Leesburg.',
+  },
+  {
+    href: '/deck-builder-herndon-va',
+    title: 'Deck Builder in Herndon',
+    desc: 'Replacement decks and composite upgrades near Herndon.',
+  },
+  {
+    href: '/deck-builder-reston-va',
+    title: 'Deck Builder in Reston',
+    desc: 'Low-maintenance decks for Reston homes and townhomes.',
+  },
+  {
+    href: '/deck-builder-mclean-va',
+    title: 'Deck Builder in McLean',
+    desc: 'Premium composite decks for high-end McLean properties.',
+  },
+  {
+    href: '/deck-builder-vienna-va',
+    title: 'Deck Builder in Vienna',
+    desc: 'Town of Vienna deck planning, permits and construction.',
+  },
+  {
+    href: '/deck-repair-loudoun-county',
+    title: 'Deck Repair in Loudoun',
+    desc: 'Structural repair, resurfacing and safety inspections.',
   },
   {
     href: '/team',
     title: 'Meet Our Team',
     desc: '10+ years of deck building expertise in NoVA.',
+  },
+  {
+    href: '/press',
+    title: 'Press & Company News',
+    desc: 'Company updates, citations and local authority signals.',
+  },
+  {
+    href: '/social',
+    title: 'Social Proof & Profiles',
+    desc: 'Verified profiles, reviews and third-party trust links.',
   },
   {
     href: '/deck-cost-calculator',
@@ -60,66 +105,23 @@ export default function HomeQuickLinks() {
         <p style={{ textAlign: 'center', color: '#666', marginBottom: '2.5rem', fontSize: '1rem' }}>
           Everything you need to plan your deck project in Northern Virginia
         </p>
-        <div className="quick-links-grid">
+        <div className={styles.grid}>
           {links.map(({ href, title, desc }) => (
             <Link
               key={href}
               href={href}
-              className="quick-link-card"
+              className={styles.card}
             >
-              <h3 className="quick-link-title">
+              <h3 className={styles.title}>
                 {title}
               </h3>
-              <p className="quick-link-desc">
+              <p className={styles.desc}>
                 {desc}
               </p>
             </Link>
           ))}
         </div>
       </div>
-      <style jsx>{`
-        .quick-links-grid {
-          display: grid;
-          grid-template-columns: repeat(1, 1fr);
-          gap: 1.25rem;
-        }
-        @media (min-width: 768px) {
-          .quick-links-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-        @media (min-width: 1024px) {
-          .quick-links-grid {
-            grid-template-columns: repeat(3, 1fr);
-          }
-        }
-        .quick-link-card {
-          display: block;
-          background: #fff;
-          border-radius: 10px;
-          padding: 1.5rem;
-          text-decoration: none;
-          color: inherit;
-          border: 1px solid #e5e5e5;
-          transition: border-color 0.2s, box-shadow 0.2s;
-        }
-        .quick-link-card:hover {
-          border-color: var(--color-primary);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        .quick-link-title {
-          font-size: 1.05rem;
-          font-weight: 600;
-          margin-bottom: 0.4rem;
-          color: var(--color-dark);
-        }
-        .quick-link-desc {
-          font-size: 0.85rem;
-          color: #666;
-          line-height: 1.5;
-          margin: 0;
-        }
-      `}</style>
     </section>
   );
 }

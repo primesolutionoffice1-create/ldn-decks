@@ -36,6 +36,21 @@ Current non-indexed breakdown:
 
 ## Fixes applied from this snapshot
 
+2026-05-16 internal-link pass:
+- Strengthened homepage crawl paths to priority URLs from the manual inspection queue:
+  - `/deck-builder-ashburn-va`
+  - `/deck-builder-leesburg-va`
+  - `/deck-builder-herndon-va`
+  - `/deck-builder-reston-va`
+  - `/deck-builder-mclean-va`
+  - `/deck-builder-vienna-va`
+  - `/deck-repair-loudoun-county`
+  - `/press`
+  - `/social`
+  - `/reviews`
+- Converted `HomeQuickLinks` from a client component with `styled-jsx` to a server-rendered component with a CSS module. The links now render as crawlable homepage anchors without adding client-side JavaScript for that section.
+- Local production HTML verification confirmed all priority links appear as `href` anchors on `/`.
+
 2026-05-16 canonical/sitemap pass:
 - Live sitemap audit checked 183 URLs for HTTP status, redirect headers, canonical tags, and noindex signals.
 - Found 1 canonical mismatch in the submitted sitemap:
