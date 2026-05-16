@@ -55,6 +55,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Services](https://ldndecks.com/services): All services offered
 - [Areas We Serve](https://ldndecks.com/areas-we-serve): Full service area map
 - [Reviews](https://ldndecks.com/reviews): Customer testimonials
+- [Referral Partners](https://ldndecks.com/referral-partners): Referral information for Realtors, inspectors, designers, BNI members, and local home-service partners
 - [FAQs](https://ldndecks.com/faqs): Frequently asked questions
 - [Showcase](https://ldndecks.com/showcase): Project gallery
 - [Before & After](https://ldndecks.com/before-and-after): Real deck transformations with costs, materials, and timelines
