@@ -4,6 +4,32 @@
 **Source:** Google Ads Search Terms, last 30 days: 2026-04-15 to 2026-05-14
 **Scope:** first-pass waste review after conversion cleanup. No budget or bidding changes.
 
+## 2026-05-16 Live Verification / Implementation
+
+Applied/verified exact-match negatives only. No broad negatives, budget changes, bidding changes, ad edits, or campaign restructures were made.
+
+| Negative keyword | Campaign | Level | Match type | Status |
+|---|---|---|---|---|
+| `[contractors in my area]` | `SRCH \| Composite \| 3 Counties \| Calls` | Campaign | Exact | Already present |
+| `[restoration contractors near me]` | `SRCH \| Composite \| 3 Counties \| Calls` | Campaign | Exact | Added |
+| `[contractors in my area]` | `SRCH \| Replacement + Resurfacing \| 3 Counties \| Calls` | Campaign | Exact | Already present |
+| `[restoration contractors near me]` | `SRCH \| Replacement + Resurfacing \| 3 Counties \| Calls` | Campaign | Exact | Added |
+
+Held back:
+
+- `[core outdoor living]` was not added because it is a competitor/brand term and may be intentionally useful for conquesting.
+- No negative was added to branded, PMax, Demand Gen, or paused legacy campaigns during this pass.
+
+## 2026-05-16 Control Checks
+
+- Active budget remains $150/day across three enabled Search campaigns: Composite $90/day, Replacement + Resurfacing $45/day, Branded $15/day.
+- Legacy PMax, Demand Gen, and repair campaigns observed paused; no active repair budget is mixed into replacement.
+- GTM Preview validated the live form path to `/thank-you`; `GA4 Event - generate_lead`, `Google Ads - Form Lead Conversion`, and `Google Ads - User Provided Data - Form Lead` fired once.
+- Header phone click fired `phone_click`, `Phone clicks - GA4`, and `Google Ads - Call Lead Conversion`; the native phone prompt was cancelled and no real call was placed.
+- Live QA passed for `/composite-decks`, `/services/deck-replacement`, `/services/deck-resurfacing`, `/deck-builders-loudoun`, `/get-estimate`, and `/thank-you`.
+- Search Console still shows a mobile LCP issue: 33 affected URLs, two groups at 2.7s LCP, last updated 2026-05-13.
+- Search Console Page indexing still shows 9 `Not found (404)` URLs and old submitted sitemap URLs returning `Couldn't fetch`.
+
 ## Current Guardrail
 
 Do not add broad negatives unless the term is unambiguously bad. Use exact or phrase match first so we do not block high-intent searches like `deck contractors near me`.
@@ -41,12 +67,7 @@ These terms look imperfect, but should not be blocked without more data because 
 
 ## Next Implementation Step
 
-Add the following exact negatives to the appropriate campaign/account-level negative list after confirming whether competitor conquesting is desired:
-
-```text
-[contractors in my area]
-[restoration contractors near me]
-```
+Completed for the active Composite and Replacement + Resurfacing Search campaigns. The next search-term pass should use enabled campaigns only and should wait for real post-cleanup lead data before expanding negatives.
 
 Optional, only if competitor conquesting is not desired:
 

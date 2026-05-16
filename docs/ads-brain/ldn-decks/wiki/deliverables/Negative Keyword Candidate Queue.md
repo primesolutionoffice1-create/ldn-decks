@@ -2,7 +2,7 @@
 brain_schema: "ads-brain.v1"
 title: "Negative Keyword Candidate Queue"
 created: "2026-05-15"
-updated: "2026-05-15"
+updated: "2026-05-16"
 type: "deliverable"
 status: "draft"
 sources:
@@ -48,8 +48,8 @@ campaign, but still require operator review before live import.
 
 | Platform | Term | Campaign | Cost | Clicks | Source |
 | --- | --- | --- | --- | --- | --- |
-| Google Ads | [contractors in my area] | Account/campaign negative list candidate | $63.46 | 8 | `docs/ads-tracking/SEARCH-TERMS-NEGATIVE-KEYWORD-QUEUE.md` |
-| Google Ads | [restoration contractors near me] | Account/campaign negative list candidate | $54.04 | 7 | `docs/ads-tracking/SEARCH-TERMS-NEGATIVE-KEYWORD-QUEUE.md` |
+| Google Ads | [contractors in my area] | Verified exact campaign negative in active Composite and Replacement + Resurfacing campaigns | $63.46 | 8 | `docs/ads-tracking/SEARCH-TERMS-NEGATIVE-KEYWORD-QUEUE.md` |
+| Google Ads | [restoration contractors near me] | Added as exact campaign negative in active Composite and Replacement + Resurfacing campaigns | $54.04 | 7 | `docs/ads-tracking/SEARCH-TERMS-NEGATIVE-KEYWORD-QUEUE.md` |
 | Google Ads | [core outdoor living] | Optional competitor/conquesting decision | $66.41 | 3 | `docs/ads-tracking/SEARCH-TERMS-NEGATIVE-KEYWORD-QUEUE.md` |
 
 ## Hold / Do Not Block Yet
@@ -83,6 +83,7 @@ available.
 ---
 
 ## Timeline
+- 2026-05-16 - Live account pass verified `[contractors in my area]` already present and added `[restoration contractors near me]` as exact campaign-level negatives in active Composite and Replacement + Resurfacing Search campaigns. Branded, paused PMax, Demand Gen, and paused legacy campaigns were not changed.
 - 2026-05-15 - Regenerated from 22 source summaries.
 - 2026-05-15 - Regenerated from 11 source summaries.
 - 2026-05-15 - Added SpyFu intent triage for repair, patio, porch, fence, hardscaping, and broad construction terms.

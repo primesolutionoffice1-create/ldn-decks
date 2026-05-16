@@ -3,11 +3,12 @@ brain_schema: ads-brain.v1
 created: "2026-05-15"
 type: log
 title: "Log"
-updated: "2026-05-15"
+updated: "2026-05-16"
 ---
 
 # Log
 
+- 2026-05-16 - Completed live 1-5 QA sprint: implemented/verified high-confidence exact negatives in active Composite and Replacement + Resurfacing campaigns; validated GTM Preview phone and form conversion firing; confirmed active Google Ads spend at $150/day across three Search campaigns; verified priority Ads landing pages, robots, and sitemap; recorded remaining Search Console issues for old failed sitemap submissions, 9 404 records, and mobile LCP groups at 2.7s.
 - 2026-05-15 - Hardened SEO schema and entity citations: removed deprecated HowTo, centralized JSON-LD emitters, aligned Yelp/BBB/BuildZoom/Loudoun Chamber/MapQuest references, validated schema, built successfully, pushed to `main`, and submitted IndexNow for 181 URLs.
 - 2026-05-15 - Added first-pass Google Ads search-term hygiene queue with two high-confidence exact negatives and hold guidance for core deck intent pending real post-cleanup lead data.
 - 2026-05-15 - Synthesized Ads Brain deliverables with health score 57.
