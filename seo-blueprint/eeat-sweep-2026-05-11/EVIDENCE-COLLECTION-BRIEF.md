@@ -27,7 +27,9 @@ Do these in order. Each step gates the next.
 
 **What you supply:** 9 original Loudoun Decks project photos. No stock. No AI-generated. No screenshots from other contractors' sites. If you have a photo with PII (homeowner name on a permit, license plate, house number), redact before sending.
 
-**The 9 photos needed**, mapped 1:1 to placeholders on the page:
+**The 9 photos needed**, mapped 1:1 to placeholders on the page. Fill the tracking sheet at:
+
+> `seo-blueprint/eeat-sweep-2026-05-11/PHOTO-INGESTION-MANIFEST.csv`
 
 | Slot | Photo type | Where it goes on the page |
 |---|---|---|
@@ -98,6 +100,10 @@ If you cannot supply 6 projects with verified detail, supply 3 or 4. The page wi
 
 **What you supply:** Exact wording of your repair workmanship warranty. I need:
 
+Use the tracking sheet at:
+
+> `seo-blueprint/eeat-sweep-2026-05-11/WARRANTY-COST-VERIFICATION-TEMPLATE.csv`
+
 - Workmanship duration (e.g. "5 years on structural workmanship")
 - Scope — what's included, what's excluded
 - Whether structural repair and labor have different terms
@@ -112,6 +118,10 @@ If you cannot supply 6 projects with verified detail, supply 3 or 4. The page wi
 ### Step 4 — Verified Cost Ranges
 
 **What you supply:** Real cost ranges for 4 repair scopes currently marked `[VERIFY FINAL COST RANGE BEFORE PUBLISHING]`:
+
+Use the same verification sheet:
+
+> `seo-blueprint/eeat-sweep-2026-05-11/WARRANTY-COST-VERIFICATION-TEMPLATE.csv`
 
 | Scope | What I need |
 |---|---|
@@ -133,6 +143,8 @@ If none of those exist for a scope, the cost stays as a placeholder — the page
 ### Step 5 — Final QA Pass
 
 **Tooling:** [scripts/qa-gate.sh](./scripts/qa-gate.sh) — run from repo root.
+
+If the script says the `/services/deck-repair` source file is missing, you are on the wrong branch. Switch to `feat/deck-repair-hub-finalization` after preserving any unrelated local work.
 
 The QA gate script checks:
 

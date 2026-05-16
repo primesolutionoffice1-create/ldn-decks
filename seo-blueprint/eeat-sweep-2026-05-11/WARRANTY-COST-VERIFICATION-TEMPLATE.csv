@@ -1,0 +1,10 @@
+type,item,verified_value,scope_limitations,source_of_truth,source_date,owner_verified,public_ready,notes
+warranty,Repair workmanship duration,,,,,no,no,Use exact contract/policy wording only
+warranty,Structural repair workmanship scope,,,,,no,no,Clarify labor vs structural scope if different
+warranty,Composite resurfacing workmanship scope,,,,,no,no,Separate contractor workmanship from manufacturer stain/fade warranty
+warranty,Exclusions / void conditions,,,,,no,no,Example: homeowner modifications, drainage changes, improper cleaning — only if actually in policy
+warranty,Transferability on home sale,,,,,no,no,Leave blank if not stated in contract/policy
+cost,Joist sistering per joist,,,,,no,no,Use actual estimate/invoice/calculator source only
+cost,Ledger re-flashing and re-bolt,,,,,no,no,Clarify whether siding removal/reinstall is included
+cost,Post replacement per post,,,,,no,no,Separate non-conforming footing rebuild if applicable
+cost,Emergency stabilization / safety shoring,,,,,no,no,Clarify per-visit vs flat fee vs scope-dependent

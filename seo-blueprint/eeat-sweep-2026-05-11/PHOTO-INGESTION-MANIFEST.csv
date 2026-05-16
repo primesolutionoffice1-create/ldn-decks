@@ -1,0 +1,12 @@
+slot,required,photo_type,recommended_filename,final_public_path,city_neighborhood,month_year,project_slot,privacy_review_required,pii_redacted,homeowner_consent,editor_status,notes
+hero_before,yes,Hero before photo,repair-01-hero-before.jpg,/showcase/repair-01-hero-before.jpg,,,,yes,,,needed,Representative deck repair before photo only; no stock or AI images
+hero_after,yes,Hero after photo,repair-01-hero-after.jpg,/showcase/repair-01-hero-after.jpg,,,,yes,,,needed,Representative deck repair after photo from same project as hero_before
+ledger_failure,yes,Ledger board failure,repair-02-ledger-failure.jpg,/showcase/repair-02-ledger-failure.jpg,,,,yes,,,needed,Show water intrusion, flashing gap, rim rot, or attachment issue
+post_rot,yes,Post rot at grade,repair-03-post-rot.jpg,/showcase/repair-03-post-rot.jpg,,,,yes,,,needed,Show rot at post base or post/footing condition
+stair_rebuild_before,yes,Stair rebuild before,repair-04-stair-rebuild-before.jpg,/showcase/repair-04-stair-rebuild-before.jpg,,,,yes,,,needed,Unsafe stair, stringer, tread, landing, or railing condition before work
+stair_rebuild_after,yes,Stair rebuild after,repair-04-stair-rebuild-after.jpg,/showcase/repair-04-stair-rebuild-after.jpg,,,,yes,,,needed,Completed stair repair/rebuild from same project as stair_rebuild_before
+railing_repair,yes,Railing repair/code upgrade,repair-05-railing-repair.jpg,/showcase/repair-05-railing-repair.jpg,,,,yes,,,needed,Show completed guardrail/handrail condition; avoid house numbers
+resurface_before,yes,Composite resurfacing before,repair-06-resurface-before.jpg,/showcase/repair-06-resurface-before.jpg,,,,yes,,,needed,Old wood deck or worn surface before resurfacing
+resurface_after,yes,Composite resurfacing after,repair-07-resurface-after.jpg,/showcase/repair-07-resurface-after.jpg,,,,yes,,,needed,Completed composite surface from same project as resurface_before
+joist_sistering,yes,Joist sistering/framing repair,repair-08-joist-sistering.jpg,/showcase/repair-08-joist-sistering.jpg,,,,yes,,,needed,Show framing repair detail clearly enough to support the page claim
+permit_redacted,optional,Permit/inspection screenshot,repair-09-permit-redacted.jpg,/showcase/repair-09-permit-redacted.jpg,,,,yes,,,optional,Only use if private info is removed; optional proof asset
