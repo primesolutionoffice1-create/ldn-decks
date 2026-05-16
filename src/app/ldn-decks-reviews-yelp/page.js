@@ -30,7 +30,7 @@ const reviewSchema = {
   "sameAs": [
     "https://www.yelp.com/biz/loudoun-decks-centreville",
     "https://www.google.com/maps/place/Loudoun+Decks/",
-    "https://www.houzz.com/pro/ldndecks"
+    "https://www.houzz.com/pro/webuser-782541997/loudoun-decks"
   ]
 };
 
@@ -122,8 +122,8 @@ export default function YelpReviewsPage() {
             {[
               { platform: 'Google', rating: '5.0', count: '41+ reviews', url: 'https://www.google.com/maps/place/Loudoun+Decks/' },
               { platform: 'Yelp', rating: '5.0', count: 'Verified', url: 'https://www.yelp.com/biz/loudoun-decks-centreville' },
-              { platform: 'Houzz', rating: '5.0', count: 'Best of Houzz', url: 'https://www.houzz.com/pro/ldndecks' },
-              { platform: 'BBB', rating: 'A+', count: 'Accredited', url: 'https://www.bbb.org/us/va/manassas/profile/deck-builder/ldn-decks' },
+              { platform: 'Houzz', rating: '5.0', count: 'Best of Houzz', url: 'https://www.houzz.com/pro/webuser-782541997/loudoun-decks' },
+              { platform: 'BBB', rating: 'A+', count: 'Accredited', url: 'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241' },
             ].map((p) => (
               <a key={p.platform} href={p.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block', background: '#f9f9f9', borderRadius: 10, padding: '1.25rem', textAlign: 'center', textDecoration: 'none', color: 'inherit', border: '1px solid #e5e5e5' }}>
                 <p style={{ fontSize: '0.8rem', color: '#999', marginBottom: '0.25rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{p.platform}</p>
@@ -156,7 +156,7 @@ export default function YelpReviewsPage() {
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="https://www.google.com/maps/place/Loudoun+Decks/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#4285F4', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>Review on Google</a>
               <a href="https://www.yelp.com/biz/loudoun-decks-centreville" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#D32323', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>Review on Yelp</a>
-              <a href="https://www.houzz.com/pro/ldndecks" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#4DBC15', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>Review on Houzz</a>
+              <a href="https://www.houzz.com/pro/webuser-782541997/loudoun-decks" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#4DBC15', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>Review on Houzz</a>
             </div>
           </div>
 

@@ -43,7 +43,7 @@ export const BUSINESS = {
     'https://www.instagram.com/loudoundecks/',
     'https://www.facebook.com/profile.php?id=61573750423712',
     'https://www.google.com/maps/place/Loudoun+Decks/',
-    'https://www.houzz.com/pro/ldndecks',
+    'https://www.houzz.com/pro/webuser-782541997/loudoun-decks',
     'https://www.yelp.com/biz/loudoun-decks-centreville',
   ],
 };
