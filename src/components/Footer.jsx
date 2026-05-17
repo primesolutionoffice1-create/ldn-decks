@@ -112,6 +112,7 @@ export default function Footer() {
               <li><Link href="/northern-virginia-deck-building-guide">Deck Building Guide</Link></li>
               <li><Link href="/how-much-does-a-deck-cost-northern-virginia">Deck Cost Guide</Link></li>
               <li><Link href="/composite-deck-cost-northern-virginia">Composite Deck Cost</Link></li>
+              <li><Link href="/composite-deck-builder-loudoun">Composite Decks Loudoun</Link></li>
               <li><Link href="/screened-porch-cost-northern-virginia">Screened Porch Cost</Link></li>
               <li><Link href="/trex-vs-timbertech-vs-azek">Trex vs TimberTech vs AZEK</Link></li>
               <li><Link href="/timbertech-decks">TimberTech Decks</Link></li>

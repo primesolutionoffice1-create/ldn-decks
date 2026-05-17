@@ -86,6 +86,7 @@ export default async function sitemap() {
 
                 // Tier 2 - Core service pages
                 { path: "/composite-decks",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
+                { path: "/composite-deck-builder-loudoun", priority: 0.92, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-decks",                   priority: 0.90, lastMod: TIER2, freq: "weekly" },
                 { path: "/wood-decks",                   priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 // /deck-replacement removed — redirects to /services/deck-replacement (already in sitemap below)
