@@ -5,9 +5,9 @@ import CalculatorCTA from "@/components/CalculatorCTA";
 import Introduction from "@/components/Introduction";
 import MaterialPartners from "@/components/MaterialPartners";
 import NamedAuthor from "@/components/NamedAuthor";
+import DeferredPromoModal from "@/components/DeferredPromoModal";
 
 // Dynamic imports for below-the-fold components
-const PromoModal = dynamic(() => import("@/components/PromoModal"));
 const HowItWorks = dynamic(() => import("@/components/HowItWorks"));
 const HandCraftedDecks = dynamic(() => import("@/components/HandCraftedDecks"));
 const ServicesHome = dynamic(() => import("@/components/ServicesHome"));
@@ -107,7 +107,7 @@ export default function Home() {
           <main className={styles.main}>
       <JsonLd data={homepageSchema} />
             <Hero />
-            <PromoModal />
+            <DeferredPromoModal />
             <TrustSection />
             <Features />
             <CalculatorCTA />

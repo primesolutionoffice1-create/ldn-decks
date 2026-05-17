@@ -1,10 +1,17 @@
 "use client";
 import React, { useState } from 'react';
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ContactForm from "@/components/ContactForm";
 import styles from "./Header.module.css";
+
+const ContactForm = dynamic(() => import("@/components/ContactForm"), {
+  ssr: false,
+  loading: () => (
+    <div style={{ padding: '1.5rem', color: '#555' }}>Loading estimate form...</div>
+  ),
+});
 
 const EnvelopeIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -525,7 +532,7 @@ export default function Header() {
           </button>
         </div>
         <div className={styles.contactDrawerContent}>
-          <ContactForm hideInfoCol={true} noPadding={true} />
+          {isContactOpen ? <ContactForm hideInfoCol={true} noPadding={true} /> : null}
         </div>
       </div>
     </div>
