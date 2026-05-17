@@ -81,9 +81,9 @@ export default function ContactHome() {
                   Server-side check in sendEmail.js silently accepts then drops. */}
               <input
                 type="text"
-                name="company_website"
+                name="ldn_extra_field"
                 tabIndex={-1}
-                autoComplete="off"
+                autoComplete="new-password"
                 aria-hidden="true"
                 style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
               />
