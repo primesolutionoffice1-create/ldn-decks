@@ -103,6 +103,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/northern-virginia-deck-building-guide">Deck Building Guide</Link></li>
               <li><Link href="/how-much-does-a-deck-cost-northern-virginia">Deck Cost Guide</Link></li>
+              <li><Link href="/composite-deck-builder-loudoun">Composite Decks Loudoun</Link></li>
               <li><Link href="/trex-vs-timbertech-vs-azek">Trex vs TimberTech vs AZEK</Link></li>
               <li><Link href="/timbertech-decks">TimberTech Decks</Link></li>
               <li><Link href="/composite-deck-vs-wood-deck-virginia">Composite vs Wood</Link></li>
