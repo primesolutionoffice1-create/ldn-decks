@@ -81,6 +81,7 @@ export function trackFormSubmit({
   timeline,
   formType = 'quote',
   clickIds = {},
+  utmParams = {},
   eventId,
 } = {}) {
   if (typeof window === 'undefined') return;
@@ -115,6 +116,11 @@ export function trackFormSubmit({
     wbraid: clickIds.wbraid || null,
     fbclid: clickIds.fbclid || null,
     msclkid: clickIds.msclkid || null,
+    utm_source: utmParams.utm_source || null,
+    utm_medium: utmParams.utm_medium || null,
+    utm_campaign: utmParams.utm_campaign || null,
+    utm_content: utmParams.utm_content || null,
+    utm_term: utmParams.utm_term || null,
     page: window.location.pathname,
   });
 }

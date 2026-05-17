@@ -55,6 +55,11 @@ export async function sendContactEmail(formData) {
     const wbraid = formData.get('wbraid');
     const fbclid = formData.get('fbclid');
     const msclkid = formData.get('msclkid');
+    const utmSource = formData.get('utm_source');
+    const utmMedium = formData.get('utm_medium');
+    const utmCampaign = formData.get('utm_campaign');
+    const utmContent = formData.get('utm_content');
+    const utmTerm = formData.get('utm_term');
 
     let fullAddress = '';
     if (address || city || state || zip) {
@@ -69,6 +74,11 @@ export async function sendContactEmail(formData) {
       wbraid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>wbraid:</strong> ${wbraid}</p>`,
       fbclid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>fbclid:</strong> ${fbclid}</p>`,
       msclkid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>msclkid:</strong> ${msclkid}</p>`,
+      utmSource && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_source:</strong> ${utmSource}</p>`,
+      utmMedium && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_medium:</strong> ${utmMedium}</p>`,
+      utmCampaign && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_campaign:</strong> ${utmCampaign}</p>`,
+      utmContent && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_content:</strong> ${utmContent}</p>`,
+      utmTerm && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_term:</strong> ${utmTerm}</p>`,
     ].filter(Boolean).join('');
     const attributionBlock = clickIdRows
       ? `<hr style="border:none;border-top:1px solid #ddd;margin:16px 0"/><p style="color:#666;font-size:11px;margin:0 0 4px"><strong>Attribution (paid ad click)</strong></p>${clickIdRows}`

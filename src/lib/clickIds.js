@@ -4,6 +4,7 @@
 // SSR-safe: returns nulls when document is unavailable.
 
 export const CLICK_ID_KEYS = ['gclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid'];
+export const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
 
 function readCookie(name) {
   if (typeof document === 'undefined') return null;
@@ -13,6 +14,13 @@ function readCookie(name) {
 
 export function getClickIds() {
   return CLICK_ID_KEYS.reduce((acc, key) => {
+    acc[key] = readCookie(key);
+    return acc;
+  }, {});
+}
+
+export function getUtmParams() {
+  return UTM_KEYS.reduce((acc, key) => {
     acc[key] = readCookie(key);
     return acc;
   }, {});

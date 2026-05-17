@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
         {/* Ad click ID capture — runs before GTM so click IDs are available
             for Enhanced Conversions and offline-conversion gclid imports. */}
         <Script id="click-id-capture" strategy="beforeInteractive">
-          {`(function(){try{var u=new URL(window.location.href);var ids=['gclid','gbraid','wbraid','fbclid','msclkid'];var ttl=60*60*24*90;ids.forEach(function(k){var v=u.searchParams.get(k);if(v){document.cookie=k+'='+encodeURIComponent(v)+'; max-age='+ttl+'; path=/; SameSite=Lax';}});}catch(e){}})();`}
+          {`(function(){try{var u=new URL(window.location.href);var keys=['gclid','gbraid','wbraid','fbclid','msclkid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];var ttl=60*60*24*90;keys.forEach(function(k){var v=u.searchParams.get(k);if(v){document.cookie=k+'='+encodeURIComponent(v)+'; max-age='+ttl+'; path=/; SameSite=Lax';}});}catch(e){}})();`}
         </Script>
 
         {/* Consent Mode defaults — MUST run before the GTM container script

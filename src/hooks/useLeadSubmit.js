@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { sendContactEmail } from '@/server/sendEmail';
 import { trackFormSubmit } from '@/lib/tracking';
-import { getClickIds, getFbp, CLICK_ID_KEYS } from '@/lib/clickIds';
+import { getClickIds, getFbp, getUtmParams, CLICK_ID_KEYS, UTM_KEYS } from '@/lib/clickIds';
 
 // Shared submission pipeline for every lead form on the site.
 // Owns: click-ID forwarding to server, event_id generation, dedup guard,
@@ -22,6 +22,11 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
     const clickIds = getClickIds();
     CLICK_ID_KEYS.forEach((k) => {
       if (clickIds[k]) formData.append(k, clickIds[k]);
+    });
+
+    const utmParams = getUtmParams();
+    UTM_KEYS.forEach((k) => {
+      if (utmParams[k]) formData.append(k, utmParams[k]);
     });
 
     // Meta _fbp browser ID — only present after a Meta Pixel has set it
@@ -99,6 +104,7 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
           timeline,
           formType,
           clickIds,
+          utmParams,
           eventId,
         });
       }
