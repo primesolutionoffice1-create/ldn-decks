@@ -25,6 +25,8 @@ The `Fix all errors` / `Fix my listings now` path was checked after the scan. It
 | GoLocal247 | `PRIME SOLUTIONS`, `42785 GENERATION DR`, using Loudoun Decks phone | Claim/suppress/update old record to canonical Loudoun Decks NAP. |
 | AroundMe | `PRIME SOLUTIONS`, Ashburn-style record | Claim/suppress/update old record to canonical Loudoun Decks NAP. |
 | Brownbook | Loudoun Decks with blank/wrong address | Add canonical address, website, category, and description. |
+| Growcycle | Public profile/result shows `ldndecks.com` but old `42785 Generation Dr, Ashburn, VA 20147` | Claim/update or suppress old Ashburn NAP; keep only canonical Centreville address. |
+| Nextdoor | Public result shows name variant `loudoun decks buildin` and older Gmail-style contact | Claim/update page name, website, phone, and canonical email if account access is available. |
 
 ## Priority 2 Cleanup
 

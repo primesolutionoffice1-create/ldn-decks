@@ -47,8 +47,9 @@ export const BUSINESS = {
     'https://www.yelp.com/biz/loudoun-decks-centreville',
     'https://www.tiktok.com/@loudoun.decks',
     'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241',
+    'https://www.trustpilot.com/review/ldndecks.com',
     'https://www.buildzoom.com/contractor/loudoun-decks',
-    'https://business.loudounchamber.org/list/member/loudoun-deck-30047.htm',
+    'https://business.loudounchamber.org/list/member/loudoun-decks-30047',
     'https://www.mapquest.com/us/virginia/loudoun-decks-532352487',
   ],
   // Professional credentials surfaced site-wide on the site — mirrored into
