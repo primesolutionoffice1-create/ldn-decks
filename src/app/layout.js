@@ -52,6 +52,7 @@ import { ContactProvider } from "@/context/ContactContext";
 import LayoutContent from "./LayoutContent";
 
 const PINTEREST_TAG_ID = "2612622395697";
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || process.env.META_PIXEL_ID || "695923313293515";
 
 export default function RootLayout({ children }) {
   return (
@@ -66,6 +67,8 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://s.pinimg.com" />
         <link rel="dns-prefetch" href="https://ct.pinterest.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://www.facebook.com" />
         
         {/* AI content discovery — llms.txt standard */}
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms.txt" title="LLM content index" />
@@ -104,6 +107,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
 
+        {/* Meta Pixel — direct fallback because Events Manager showed the
+            `leads` dataset had never received events. Lead conversions are
+            fired from trackLeadConfirmed() with event_id for browser/CAPI
+            deduplication. */}
+        <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${META_PIXEL_ID}');fbq('track','PageView');`,
+          }}
+        />
+
         {/* Pinterest Tag — base page tracking for organic + paid Pinterest
             attribution. Lead conversions fire from trackLeadConfirmed() only
             after the contact request succeeds. Lazy loading keeps this
@@ -133,6 +148,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
             title="Google Tag Manager Noscript"
+          />
+        </noscript>
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            alt=""
+            src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
           />
         </noscript>
         <noscript>
