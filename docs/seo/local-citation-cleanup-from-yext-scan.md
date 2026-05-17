@@ -16,7 +16,7 @@ The `Fix all errors` / `Fix my listings now` path was checked after the scan. It
 | Platform | Scan finding | Action |
 | --- | --- | --- |
 | MapQuest | Missing listing / not found | Claim/create listing with canonical NAP, category, website, photos, and description. |
-| Bing | Missing listing / not found | Create or claim Bing Places listing with canonical NAP and website. |
+| Bing | Yext reported missing, but Bing Places dashboard shows listing published and synced with Google | No create needed. Keep synced with Google; `office@ldndecks.com` was added on 2026-05-16. |
 | Facebook | Name variant `LOUDOUN DECKS BUILDER`, odd suite formatting, wrong/incomplete phone | Update page name, address, phone, website, and category. |
 | MerchantCircle | `PRIME SOLUTIONS`, `42785 GENERATION DR`, using Loudoun Decks phone | Claim/suppress/update old record to canonical Loudoun Decks NAP. |
 | EZlocal | `PRIME SOLUTIONS`, `42785 GENERATION DR`, using Loudoun Decks phone | Claim/suppress/update old record to canonical Loudoun Decks NAP. |
@@ -30,6 +30,7 @@ The `Fix all errors` / `Fix my listings now` path was checked after the scan. It
 
 | Platform | Scan finding | Action |
 | --- | --- | --- |
+| BuildZoom | Public page exists but still shows `Unable To Verify` / `No active license on file`; public HTML did not expose website during last fetch | Admin profile was updated on 2026-05-16 with website, Facebook, Yelp, description/photos, and deck-focused services. Next step is BuildZoom license verification through Contractor Relations/support, then re-fetch public page. |
 | ShowMeLocal | `LDNDECKS`, correct Centreville NAP | Standardize business name to Loudoun Decks and verify website. |
 | Where To? | `LOUDOUN DECKS BUILDER`, correct Centreville NAP | Standardize business name to Loudoun Decks and verify website. |
 | Cylex | `LOUDOUN DECKS BUILDER`, correct Centreville NAP | Standardize business name to Loudoun Decks and verify website. |
