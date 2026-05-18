@@ -57,58 +57,63 @@ export default async function sitemap() {
   const baseUrl = SITE_URL;
 
   // Filter helper
-  const isExcluded = (path) => EXCLUDE_PATHS.some(ex => path.startsWith(ex));
+  const isExcluded = (path) => EXCLUDE_PATHS.some(ex => {
+    if (ex === '/near-you') {
+      return path === '/near-you';
+    }
+    return path.startsWith(ex);
+  });
 
-        const staticPages = [
-                // Tier 1 - Homepage & top commercial pages
-                { 
-                  path: "", 
-                  priority: 1.00, 
-                  lastMod: TIER1, 
-                  freq: "daily",
-                  videos: [
-                    {
-                      thumbnail_loc: `${baseUrl}/og-default.webp`,
-                      title: 'Craftsmanship in Motion | Loudoun Decks',
-                      description: 'See how Loudoun Decks transforms Northern Virginia backyards into luxury outdoor living spaces with custom Trex decks and screened porches.',
-                      content_loc: `${baseUrl}/introvideo.mp4`,
-                      publication_date: '2026-04-23T08:00:00.000Z',
-                    }
-                  ]
-                },
-                { path: "/deck-builder-northern-virginia", priority: 0.98, lastMod: TIER1, freq: "weekly" },
-                { path: "/deck-builders-loudoun",        priority: 0.95, lastMod: TIER1, freq: "weekly" },
-                { path: "/deck-builder-ashburn-va",      priority: 0.92, lastMod: TIER1, freq: "weekly" },
-                { path: "/deck-builder-leesburg-va",     priority: 0.92, lastMod: TIER1, freq: "weekly" },
-                { path: "/deck-builder-reston-va",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
-                // REMOVED: non-canonical (canonical is /deck-design-ideas-2026)
-                { path: "/deck-repair-loudoun-county",             priority: 0.92, lastMod: TIER1, freq: "weekly" },
+	const staticPages = [
+		// Tier 1 - Homepage & top commercial pages
+		{ 
+		  path: "", 
+		  priority: 1.00, 
+		  lastMod: TIER1, 
+		  freq: "daily",
+		  videos: [
+			{
+			  thumbnail_loc: `${baseUrl}/og-default.webp`,
+			  title: 'Craftsmanship in Motion | Loudoun Decks',
+			  description: 'See how Loudoun Decks transforms Northern Virginia backyards into luxury outdoor living spaces with custom Trex decks and screened porches.',
+			  content_loc: `${baseUrl}/introvideo.mp4`,
+			  publication_date: '2026-04-23T08:00:00.000Z',
+			}
+		  ]
+		},
+		{ path: "/deck-builder-northern-virginia", priority: 0.98, lastMod: TIER1, freq: "weekly" },
+		{ path: "/deck-builders-loudoun",        priority: 0.95, lastMod: TIER1, freq: "weekly" },
+		{ path: "/deck-builder-ashburn-va",      priority: 0.92, lastMod: TIER1, freq: "weekly" },
+		{ path: "/deck-builder-leesburg-va",     priority: 0.92, lastMod: TIER1, freq: "weekly" },
+		{ path: "/deck-builder-reston-va",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
+		// REMOVED: non-canonical (canonical is /deck-design-ideas-2026)
+		{ path: "/deck-repair-loudoun-county",             priority: 0.92, lastMod: TIER1, freq: "weekly" },
 
-                // Tier 2 - Core service pages
-                { path: "/composite-decks",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
-                { path: "/composite-deck-builder-loudoun", priority: 0.92, lastMod: TIER1, freq: "weekly" },
-                { path: "/trex-decks",                   priority: 0.90, lastMod: TIER2, freq: "weekly" },
-                { path: "/wood-decks",                   priority: 0.90, lastMod: TIER1, freq: "weekly" },
-                // /deck-replacement removed — redirects to /services/deck-replacement (already in sitemap below)
-                { path: "/deck-remodeling",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
-                { path: "/deck-repair",                  priority: 0.90, lastMod: TIER2, freq: "weekly" },
-                { path: "/services",                     priority: 0.90, lastMod: TIER2, freq: "weekly" },
-                { path: "/services/new-decks",           priority: 0.85, lastMod: TIER2, freq: "weekly" },
-                { path: "/services/deck-resurfacing",    priority: 0.85, lastMod: TIER2, freq: "weekly" },
-                { path: "/services/deck-repair-and-structural-maintenance", priority: 0.90, lastMod: TIER2, freq: "weekly" },
-                { path: "/services/porches",             priority: 0.90, lastMod: TIER2, freq: "weekly" },
-                { path: "/services/porches/front-porch", priority: 0.80, lastMod: TIER2, freq: "monthly" },
-                { path: "/services/porches/open-porch",  priority: 0.80, lastMod: TIER2, freq: "monthly" },
-                { path: "/services/porches/screened-porch", priority: 0.85, lastMod: TIER2, freq: "monthly" },
-                { path: "/services/gazebo-pergola",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
-                { path: "/services/deck-maintenance",    priority: 0.80, lastMod: TIER2, freq: "monthly" },
-                { path: "/services/deck-inspection",     priority: 0.80, lastMod: TIER2, freq: "monthly" },
-                { path: "/near-you",                     priority: 0.85, lastMod: TIER2, freq: "weekly" },
-                { path: "/near-you/loudoun-county",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
-                { path: "/near-you/fairfax-county",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
-                { path: "/near-you/prince-william-county", priority: 0.85, lastMod: TIER2, freq: "weekly" },
-                // REMOVED: 308-redirects to /deck-builder-arlington-va
-                // REMOVED: 308-redirects to /deck-builder-stafford-va
+		// Tier 2 - Core service pages
+		{ path: "/composite-decks",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
+		{ path: "/composite-deck-builder-loudoun", priority: 0.92, lastMod: TIER1, freq: "weekly" },
+		{ path: "/trex-decks",                   priority: 0.90, lastMod: TIER2, freq: "weekly" },
+		{ path: "/wood-decks",                   priority: 0.90, lastMod: TIER1, freq: "weekly" },
+		// /deck-replacement removed — redirects to /services/deck-replacement (already in sitemap below)
+		{ path: "/deck-remodeling",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
+		{ path: "/deck-repair",                  priority: 0.90, lastMod: TIER2, freq: "weekly" },
+		{ path: "/services",                     priority: 0.90, lastMod: TIER2, freq: "weekly" },
+		{ path: "/services/new-decks",           priority: 0.85, lastMod: TIER2, freq: "weekly" },
+		{ path: "/services/deck-resurfacing",    priority: 0.85, lastMod: TIER2, freq: "weekly" },
+		{ path: "/services/deck-repair-and-structural-maintenance", priority: 0.90, lastMod: TIER2, freq: "weekly" },
+		{ path: "/services/porches",             priority: 0.90, lastMod: TIER2, freq: "weekly" },
+		{ path: "/services/porches/front-porch", priority: 0.80, lastMod: TIER2, freq: "monthly" },
+		{ path: "/services/porches/open-porch",  priority: 0.80, lastMod: TIER2, freq: "monthly" },
+		{ path: "/services/porches/screened-porch", priority: 0.85, lastMod: TIER2, freq: "monthly" },
+		{ path: "/services/gazebo-pergola",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
+		{ path: "/services/deck-maintenance",    priority: 0.80, lastMod: TIER2, freq: "monthly" },
+		{ path: "/services/deck-inspection",     priority: 0.80, lastMod: TIER2, freq: "monthly" },
+		{ path: "/near-you",                     priority: 0.85, lastMod: TIER2, freq: "weekly" },
+		{ path: "/near-you/loudoun-county",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
+		{ path: "/near-you/fairfax-county",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
+		{ path: "/near-you/prince-william-county", priority: 0.85, lastMod: TIER2, freq: "weekly" },
+		{ path: "/near-you/arlington-county",    priority: 0.85, lastMod: TIER2, freq: "weekly" },
+		{ path: "/near-you/stafford-county",     priority: 0.85, lastMod: TIER2, freq: "weekly" },
 
                 // Tier 3 - Secondary & support pages
                 { path: "/services/patios",              priority: 0.85, lastMod: TIER3, freq: "monthly" },

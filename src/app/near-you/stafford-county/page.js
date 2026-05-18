@@ -1,39 +1,49 @@
 import React from 'react';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
+import ServiceVisual from '@/components/ServiceVisual';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import RatingBadge from '@/components/RatingBadge';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
+
+const LocationIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
+    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" />
+  </svg>
+);
 
 export const metadata = buildMetadata({
   path: "/near-you/stafford-county",
-  title: "Deck Builder in Stafford County VA | LDN Decks",
-  description: "Custom deck builder serving Stafford County, VA. Composite decks, screened porches, pergolas & patios. Licensed, insured & 5-star rated. Free estimate.",
+  title: "5-Star Deck Builder Stafford County VA | Free Quote in 24h",
+  description: "Top-rated deck and outdoor living contractor in Stafford County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Stafford, Aquia Harbour, Falmouth, and Garrisonville.",
 });
 
-const cities = [
+const staffordCities = [
   "Stafford, VA", "Aquia Harbour, VA", "Falmouth, VA",
-  "Garrisonville, VA", "Brooke, VA", "Widewater, VA"
+  "Garrisonville, VA", "Brooke, VA", "Widewater, VA", "Embrey Mill, VA"
 ];
 
 const services = [
-  "Custom composite deck design and construction",
+  "Custom deck design and construction",
   "Deck resurfacing and upgrades",
-  "Screened porches and open porches",
+  "Deck and outdoor washing (decks, siding, concrete, fences)",
+  "Patios and hardscapes",
+  "Porches and entry areas",
   "Pergolas and gazebos",
-  "Patio installation (pavers, flagstone, stamped concrete)",
-  "Fence installation and cleaning",
-  "Deck and outdoor pressure washing"
+  "Fences and related outdoor structures"
 ];
 
 const faqs = [
-  { q: "Do you build decks in Stafford County?", a: "Yes. LDN Decks serves all of Stafford County including Stafford, Aquia Harbour, Falmouth, Garrisonville, and surrounding communities." },
-  { q: "Does Stafford County require a deck permit?", a: "Yes. Most decks attached to a home require a building permit. Stafford has one of the fastest permit turnaround times in our service area — typically 2-3 weeks. We handle all permits." },
-  { q: "How much does a deck cost in Stafford County?", a: "Stafford County deck prices are generally 10-15% lower than Loudoun and Fairfax due to lower labor rates. A typical 300 sqft composite deck runs $15,000-$28,000." },
-  { q: "Do you work with Stafford HOAs?", a: "Yes. We prepare all architectural review submissions and design within your community's requirements." },
+  { q: "Do you build decks in Stafford County?", a: "Yes. LDN Decks serves all of Stafford County including Stafford, Aquia Harbour, Falmouth, Garrisonville, Brooke, Widewater, Embrey Mill, and surrounding neighborhoods." },
+  { q: "Does Stafford County require a deck permit?", a: "Yes. Most decks attached to a home or over 30 inches above grade require a building permit. Stafford County's Department of Development Services has one of the fastest review times in our service area, typically 2 weeks. We handle all permits." },
+  { q: "How much does a deck cost in Stafford County?", a: "Stafford County deck prices are generally 10-15% lower than Fairfax and Loudoun counties due to lower local labor and operational costs. A typical 300 sqft composite deck runs $14,000-$26,000 depending on materials." },
+  { q: "Do you work with Stafford HOAs?", a: "Yes. We prepare all architectural review board submission materials and design to your community's guidelines." },
+  { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within 2-3 weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
 ];
 
 export default function StaffordCountyPage() {
@@ -48,10 +58,10 @@ export default function StaffordCountyPage() {
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Stafford County, VA"
-        description="LDN Decks is a trusted deck and outdoor living contractor serving homeowners throughout Stafford County. Custom decks, porches, patios, and outdoor living spaces."
+        description="Loudoun Decks is a trusted local deck and outdoor living contractor serving homeowners throughout Stafford County. We design and build custom decks, patios, porches, and outdoor spaces."
       />
       <ServiceMain
-        subtitle="Local Expertise"
+        subtitle="Expert Craftsmanship"
         title="Custom Outdoor Living for Stafford Homeowners"
         description="Stafford County's growing communities and larger lot sizes offer incredible opportunities for custom outdoor living. From multi-level decks to screened porches, we build it all."
         listTitle="Services We Provide in Stafford:"
@@ -59,24 +69,75 @@ export default function StaffordCountyPage() {
         image1="/images/img11.jpeg"
         image2="/images/img34.jpeg"
       />
+      <section className={styles.permitSection}>
+        <div className={styles.container}>
+          <div className={styles.permitContent}>
+            <div className={styles.permitText}>
+              <h2>Permits & Local Requirements in Stafford County</h2>
+              <p>
+                Many deck and outdoor construction projects in Stafford County require permits and must follow local building codes and inspection rules. Loudoun Decks helps simplify this process by coordinating directly with the county.
+              </p>
+              <ul className={styles.permitList}>
+                <li>Reviewing your project requirements</li>
+                <li>Preparing basic plans for permitting</li>
+                <li>Coordinating with the county for necessary approvals</li>
+                <li>Building according to local standards and guidelines</li>
+              </ul>
+              <p className={styles.permitFooter}>
+                This means you don&apos;t have to worry about paperwork or code compliance - we include this as part of a smooth, start-to-finish experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <ServiceVisual image="/images/img31.jpeg" />
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Communities We Serve in Stafford</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {cities.map(city => (
-              <span key={city} style={{ display: 'inline-block', padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem' }}>{city}</span>
-            ))}
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Stafford County Homeowners Trust LDN Decks</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford County is one of the fastest-growing counties in Virginia, offering larger lot sizes and highly active communities. Homeowners here invest seriously in expanding their usable square footage with high-performance outdoor features. Whether you live in a newly built colonial in Embrey Mill or a beautiful waterfront estate in Aquia Harbour, a custom-crafted deck or patio adds exceptional luxury and value to your home.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks is a trusted outdoor design-build contractor. As a certified **Trex Platinum Partner** and **TimberTech Certified Installer**, we provide Stafford families with top-tier composite decking systems that deliver the timeless beauty of real wood without the high maintenance. Our projects are built to endure Virginia's humid summers and frosty winters, backed by comprehensive warranties.</p>
+
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Stafford County Building Permits & Codes</h3>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford County requires structural building permits for all decks attached to a dwelling and all freestanding decks over 30 inches above the surrounding ground. Building permit plans are reviewed by the **Stafford County Department of Development Services**. Stafford boasts one of the fastest permitting timelines in Northern Virginia, with processing times averaging just **10 to 15 business days (2 weeks)**.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford's spacious yards generally offer fewer setback and lot coverage constraints compared to Fairfax or Arlington. This allows for grander, multi-zone outdoor entertainment spaces — including expansive custom decks, outdoor kitchens, and hardscape fire pits. We manage the entire permit cycle, including zoning layouts, plan submission, and inspector walkthroughs for structural footings, framing, and final approval.</p>
+
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Stafford County (2026)</h3>
+          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+              <thead><tr style={{ background: '#f5f5f5' }}><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project Type</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Estimated Cost Range</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Average Timeline</th></tr></thead>
+              <tbody>
+                {[['300 sqft Composite Deck', '$14,000 – $26,000', '1-2 weeks'], ['500 sqft Multi-Level Deck', '$26,000 – $46,000', '2-4 weeks'], ['Screened Porch (250 sqft)', '$28,000 – $52,000', '3-5 weeks'], ['Deck Replacement (wood to composite)', '$15,000 – $30,000', '1-2 weeks'], ['Paver Patio (300 sqft)', '$9,000 – $22,000', '1-2 weeks']].map((r, i) => (
+                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>{r.map((c, j) => <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{c}</td>)}</tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Building in Stafford County</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford County is one of the fastest-growing counties in Virginia, with new construction communities expanding rapidly along the I-95 corridor. Many of these homes feature walkout basements and sloped lots that are ideal for elevated and multi-level deck designs.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The Stafford County building permit process is the most straightforward in our service area, with typical review times of just 2–3 weeks. We handle all documentation, submission, and inspection coordination as part of your project.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Stafford&apos;s larger lot sizes and fewer HOA restrictions (compared to Loudoun and Fairfax) give homeowners more design freedom. We take full advantage of this to build larger, more creative outdoor living spaces — including deck and patio combinations, freestanding pergolas, and outdoor kitchens.</p>
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects by Stafford Neighborhood</h3>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>**Embrey Mill & Augustine:** Large-scale family composite decks with integrated LED lighting, wide steps to the yard, and lower-level paver patios. Capped composite materials are highly popular here to create low-maintenance backyards for active, growing families.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>**Aquia Harbour:** Beautiful elevated wood and composite decks designed to take full advantage of sloped lots and woodsy or waterfront views. We integrate stainless steel cable rail systems to ensure unobstructed scenery.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>**Falmouth & Garrisonville:** Full deck replacements on older properties, converting worn-out timber decks to modern composite, alongside custom screened porches that offer cool shade and complete insect protection in the humid summer months.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>**Brooke & Widewater:** Expansive freestanding timber and composite decks paired with custom pergolas or gazebos to create remote backyard retreats on larger acreage lots.</p>
         </div>
       </article>
 
-      <ServicesFAQ canonicalUrl="https://ldndecks.com/near-you/stafford-county" title="Deck Building in Stafford County — FAQ" faqs={faqs} />
+      <section className={styles.citiesSection}>
+        <div className={styles.container}>
+          <h2 className={styles.citiesTitle}>Top Areas We Serve in Stafford County</h2>
+          <div className={styles.citiesGrid}>
+            {staffordCities.map((city, idx) => (
+              <div key={idx} className={styles.cityItem}>
+                <LocationIcon />
+                <span>{city}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/near-you/stafford-county" title="Frequently Asked Questions About Decks in Stafford County" faqs={faqs} />
+      <RatingBadge />
       <section style={{ padding: '2rem 1.5rem' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <GoogleMapEmbed city="Stafford" state="VA" height="360px" />

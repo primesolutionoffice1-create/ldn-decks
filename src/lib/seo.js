@@ -37,7 +37,17 @@ export function buildMetadata({
 }) {
     // Phase 1 cleanup: noindex redundant /near-you/* paths and broken showcase
     let finalNoIndex = noIndex;
-    if (path.startsWith('/near-you/') || path === '/showcase/rooftop-deck-washington-dc') {
+    const indexableCounties = [
+        "/near-you/loudoun-county",
+        "/near-you/fairfax-county",
+        "/near-you/prince-william-county",
+        "/near-you/arlington-county",
+        "/near-you/stafford-county",
+    ];
+    const isIndexableCounty = indexableCounties.includes(path);
+    if (path.startsWith('/near-you/') && !isIndexableCounty) {
+        finalNoIndex = true;
+    } else if (path === '/showcase/rooftop-deck-washington-dc') {
         finalNoIndex = true;
     }
 
