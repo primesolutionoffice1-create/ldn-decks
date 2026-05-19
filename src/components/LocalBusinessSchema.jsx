@@ -48,7 +48,10 @@ export default function LocalBusinessSchema({ city, description, url, areaType =
       "https://www.facebook.com/profile.php?id=61573750423712",
       "https://www.google.com/maps/place/Loudoun+Decks/",
       "https://www.houzz.com/pro/webuser-782541997/loudoun-decks",
-      "https://www.yelp.com/biz/loudoun-decks-centreville"
+      "https://www.yelp.com/biz/loudoun-decks-centreville",
+      "https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241",
+      "https://www.trustpilot.com/review/ldndecks.com",
+      "https://business.loudounchamber.org/list/member/loudoun-decks-30047"
     ]
   };
 
