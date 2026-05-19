@@ -22,6 +22,7 @@ export default function LayoutContent({ children }) {
   
   // Define paths that should not have header/footer
   const isStandalonePage = pathname === "/thank-you";
+  const hasPageSpecificMobileCTA = pathname === "/composite-deck-builder-loudoun";
 
   if (isStandalonePage) {
     return (
@@ -41,7 +42,7 @@ export default function LayoutContent({ children }) {
       <Footer />
       <ScrollToTop />
       <FloatingCallButton />
-      <StickyMobileCTA />
+      {!hasPageSpecificMobileCTA && <StickyMobileCTA />}
     </>
   );
 }

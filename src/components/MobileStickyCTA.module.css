@@ -1,0 +1,76 @@
+.wrapper {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: block;
+    padding: 9px 12px calc(9px + env(safe-area-inset-bottom));
+    background: rgba(18, 15, 12, 0.97);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 -14px 38px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(10px);
+  }
+
+  .microcopy {
+    margin: 0 0 7px;
+    color: #f4ede7;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1.08fr;
+    gap: 10px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .callButton,
+  .estimateButton {
+    min-height: 48px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .callButton {
+    color: #17130f;
+    background: #fffaf6;
+    border: 1px solid rgba(255, 250, 246, 0.76);
+  }
+
+  .estimateButton {
+    color: #fff;
+    background: var(--color-primary, #d14817);
+    border: 1px solid var(--color-primary, #d14817);
+  }
+
+  .callButton:focus-visible,
+  .estimateButton:focus-visible {
+    outline: 3px solid #f3b391;
+    outline-offset: 2px;
+  }
+
+  .callButton:active,
+  .estimateButton:active {
+    transform: translateY(1px);
+  }
+}

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import JsonLd from '@/components/JsonLd';
 import ContactHome from '@/components/ContactHome';
+import MobileStickyCTA from '@/components/MobileStickyCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 
@@ -431,6 +432,7 @@ export default function CompositeDeckBuilderLoudounPage() {
 
       <RelatedGuides currentPath="/composite-deck-builder-loudoun" />
       <ContactHome />
+      <MobileStickyCTA microcopy="Trex + TimberTech decks | Loudoun permits handled" />
     </main>
   );
 }
