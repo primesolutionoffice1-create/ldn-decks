@@ -25,6 +25,7 @@ const nextConfig = {
       { source: '/deck-resurfacing-vs-replacement-northern-virginia', destination: '/deck-resurfacing-vs-replacement', permanent: true },
       { source: '/terms-and-conditions', destination: '/privacy-policy', permanent: true },
       { source: '/choosing-right-deck-material-wood-vs-composite', destination: '/composite-deck-vs-wood-deck-virginia', permanent: true },
+      { source: '/choosing-right-deck-material-wood-vs-composite/', destination: '/composite-deck-vs-wood-deck-virginia', permanent: true },
       
       // Batch 2 - Legacy & WordPress Remnants
 
@@ -52,10 +53,8 @@ const nextConfig = {
 
       { source: '/tag/deck-companies', destination: '/near-you', permanent: true },
       { source: '/deck-builder-in-loudoun-county/landing', destination: '/near-you/loudoun-county', permanent: true },
-      { source: '/top-decks-build-near-you/deck-builder-in-dale-city', destination: '/near-you/prince-william-county/dale-city', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-stafford-county', destination: '/deck-builder-stafford-va', permanent: true },
       { source: '/tag/deck-installers', destination: '/near-you', permanent: true },
-      { source: '/top-decks-build-near-you/deck-builder-in-bristow', destination: '/deck-builder-bristow-va', permanent: true },
       { source: '/deck-resurfacing', destination: '/services/deck-resurfacing', permanent: true },
 
       { source: '/new-decks-installation', destination: '/services/new-decks', permanent: true },
@@ -80,11 +79,9 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-mount-vernon', destination: '/near-you/fairfax-county/mount-vernon', permanent: true },
 
       { source: '/top-decks-build-near-you/deck-builder-in-hillsboro', destination: '/near-you/loudoun-county/hillsboro', permanent: true },
-      { source: '/top-decks-build-near-you/deck-builder-in-occoquan', destination: '/near-you/prince-william-county/occoquan', permanent: true },
       { source: '/deck-projects-showcase/new-custom-wood-fence-ashburn', destination: '/services/fence', permanent: true },
 
       // Batch 5 - /feed/ cleanup and specific tags
-      { source: '/top-decks-build-near-you/deck-builder-in-ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
       { source: '/tag/deck-in-fairfax/feed', destination: '/near-you/fairfax-county', permanent: true },
 
       { source: '/tag/vienna', destination: '/deck-builder-vienna-va', permanent: true },
@@ -116,7 +113,6 @@ const nextConfig = {
       { source: '/services/outdoor-power-washing/:path*', destination: '/services/outdoor-washing', permanent: true },
       { source: '/services/gazebos-and-pergolas', destination: '/services/gazebo-pergola', permanent: true },
       { source: '/services/fences', destination: '/services/fence', permanent: true },
-      { source: '/deck-replacement', destination: '/services/deck-replacement', permanent: true },
       { source: '/fence-builder-northern-virginia', destination: '/services/fence', permanent: true },
       { source: '/fire-pit-builder-northern-virginia', destination: '/services/fire-pits', permanent: true },
       { source: '/pergola-builder-northern-virginia', destination: '/services/gazebo-pergola', permanent: true },
@@ -213,6 +209,7 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-sterling', destination: '/deck-builder-sterling-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-sterling-va', destination: '/deck-builder-sterling-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-aldie', destination: '/near-you/loudoun-county/aldie', permanent: true },
+      { source: '/top-decks-build-near-you/deck-builder-in-aldie/', destination: '/near-you/loudoun-county/aldie', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-middleburg', destination: '/near-you/loudoun-county/middleburg', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-purcellville', destination: '/deck-builder-purcellville-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-round-hill', destination: '/near-you/loudoun-county/round-hill', permanent: true },
@@ -240,6 +237,7 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-lorton', destination: '/deck-builder-lorton-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-tysons', destination: '/deck-builder-tysons-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-annandale', destination: '/near-you/fairfax-county/annandale', permanent: true },
+      { source: '/top-decks-build-near-you/deck-builder-in-annandale/', destination: '/near-you/fairfax-county/annandale', permanent: true },
 
       // Prince William County cities
       { source: '/top-decks-build-near-you/deck-builder-in-manassas', destination: '/deck-builder-manassas-va', permanent: true },
@@ -255,7 +253,7 @@ const nextConfig = {
       // Arlington County cities
       { source: '/top-decks-build-near-you/deck-builder-in-arlington', destination: '/deck-builder-arlington-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-rosslyn', destination: '/near-you/arlington-county/rosslyn', permanent: true },
-  // Old Showcase Redirects    { source: '/top-decks-build-near-you/deck-builder-in-ballston', destination: '/near-you/arlington-county/ballston', permanent: true },
+      { source: '/top-decks-build-near-you/deck-builder-in-ballston', destination: '/near-you/arlington-county/ballston', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-clarendon', destination: '/near-you/arlington-county/clarendon', permanent: true },
 
       // Stafford County cities
@@ -276,17 +274,9 @@ const nextConfig = {
       { source: '/decks-build-near-you/:path*', destination: '/near-you', permanent: true },
 
       // Old Showcase Redirects
-      { source: '/deck-projects-showcase/deck-builder-ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
+      { source: '/deck-projects-showcase/locationn-new-page-sample/', destination: '/showcase', permanent: true },
       { source: '/deck-projects-showcase', destination: '/showcase', permanent: true },
       { source: '/deck-projects-showcase/:path*', destination: '/showcase', permanent: true },
-
-      // Major City Page Consolidation (Redirect dynamic to static SEO-optimized)
-      { source: '/near-you/loudoun-county/ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
-      { source: '/near-you/loudoun-county/leesburg', destination: '/deck-builder-leesburg-va', permanent: true },
-      { source: '/near-you/fairfax-county/vienna', destination: '/deck-builder-vienna-va', permanent: true },
-      { source: '/near-you/fairfax-county/mclean', destination: '/deck-builder-mclean-va', permanent: true },
-      { source: '/near-you/prince-william-county/woodbridge', destination: '/deck-builder-woodbridge-va', permanent: true },
-      { source: '/near-you/fairfax-county/chantilly', destination: '/deck-builder-chantilly-va', permanent: true },
 
       // Legacy WordPress image redirects (broken 404s from old WP upload paths)
       { source: '/wp-content/uploads/2024/09/ldndecks-logo-new-e1731874431860.webp', destination: '/ldndecks-logo.webp', permanent: true },

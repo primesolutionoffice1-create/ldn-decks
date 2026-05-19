@@ -7,6 +7,8 @@
           "build": "next build --webpack",
           "start": "next start",
           "lint": "eslint",
+          "seo:link-audit": "node scripts/seo-link-audit.mjs",
+          "seo:daily-check": "node scripts/seo-daily-check.mjs",
           "ads:generate-imports": "node scripts/generate-google-ads-imports.mjs"
     },
     "dependencies": {
