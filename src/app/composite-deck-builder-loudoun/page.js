@@ -34,6 +34,49 @@ const communities = [
   ['Chantilly', '/deck-builder-chantilly-va'],
 ];
 
+const trustBadges = [
+  'Trex Platinum Partner',
+  'TimberTech/AZEK Installer',
+  '41 Google Reviews',
+  'BBB A+ Rated',
+  '5-Year Workmanship Warranty',
+  'Licensed Virginia Contractor',
+];
+
+const reviewSnippets = [
+  {
+    quote: 'Nick and his team built us a 500 sqft Trex Transcend deck in Ashburn, from permit to final walkthrough in under 3 weeks. Honest pricing, zero surprises, and they left the yard cleaner than they found it.',
+    name: 'James R.',
+    location: 'Ashburn, VA',
+  },
+  {
+    quote: "They handled the HOA submission and Loudoun County permit themselves, I didn't lift a finger on the paperwork. Deck was done in 10 days.",
+    name: 'David K.',
+    location: 'South Riding, VA',
+  },
+];
+
+const projectExamples = [
+  {
+    location: 'Ashburn / Brambleton',
+    image: '/images/img10.jpeg',
+    alt: 'Trex composite deck built by Loudoun Decks in Ashburn VA',
+    text: 'Typical project: 400-600 sq ft Trex Transcend deck with picture-frame borders, privacy screening, and HOA-ready material selections.',
+  },
+  {
+    location: 'Leesburg / Lansdowne',
+    image: '/images/img17.jpeg',
+    alt: 'TimberTech deck replacement in Leesburg VA with new railings',
+    text: 'Typical project: elevated TimberTech deck replacement with new railings, stairs, code-compliant framing, and permit support.',
+  },
+  {
+    location: 'South Riding / Stone Ridge',
+    image: '/images/img21.jpeg',
+    alt: 'Composite deck with stairs and lighting in South Riding VA',
+    text: 'Typical project: composite deck rebuild with upgraded stair lighting, low-maintenance fascia, and family-friendly railing design.',
+  },
+];
+
 const faqItems = [
   {
     q: 'How much does a composite deck cost in Loudoun County?',
@@ -58,6 +101,14 @@ const faqItems = [
   {
     q: 'How long does a composite deck build take in Loudoun County?',
     a: 'After permit and HOA approvals are complete, many composite deck builds take about 1 to 3 weeks of active construction. Larger decks, second-story decks, screened porch combinations, lighting, and custom railing packages can take longer.',
+  },
+  {
+    q: 'Do you build composite decks in Brambleton, Broadlands, and One Loudoun?',
+    a: 'Yes. We serve HOA communities across Loudoun County, including Brambleton, Broadlands, One Loudoun, Ashburn Farm, Lansdowne, South Riding, and Stone Ridge. We help homeowners match material selections, railing styles, colors, and project documentation to community review requirements.',
+  },
+  {
+    q: 'Is composite decking better than wood for Loudoun County homes?',
+    a: 'For most homeowners who want a long-term outdoor living space, yes. Composite costs more upfront, but it avoids annual staining, sanding, splintering, and many moisture-related repair issues common with wood decks in Northern Virginia.',
   },
 ];
 
@@ -84,38 +135,24 @@ const schema = [
   },
   {
     '@context': 'https://schema.org',
-    '@type': 'HomeAndConstructionBusiness',
-    '@id': 'https://ldndecks.com/#organization',
-    name: 'Loudoun Decks',
-    alternateName: 'LDN Decks',
-    url: 'https://ldndecks.com',
-    telephone: '+1-571-655-7207',
-    image: 'https://ldndecks.com/ldndecks-logo.webp',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '13704 Winding Oak Cir',
-      addressLocality: 'Centreville',
-      addressRegion: 'VA',
-      postalCode: '20121',
-      addressCountry: 'US',
-    },
-    areaServed: [
-      { '@type': 'AdministrativeArea', name: 'Loudoun County, VA' },
-      { '@type': 'City', name: 'Ashburn, VA' },
-      { '@type': 'City', name: 'Leesburg, VA' },
-      { '@type': 'City', name: 'Sterling, VA' },
-      { '@type': 'City', name: 'Brambleton, VA' },
-      { '@type': 'City', name: 'South Riding, VA' },
-    ],
-  },
-  {
-    '@context': 'https://schema.org',
     '@type': 'Service',
     '@id': `${pageUrl}#service`,
     name: 'Composite Deck Building in Loudoun County, VA',
     serviceType: 'Composite deck construction, deck replacement, and outdoor living construction',
     provider: { '@id': 'https://ldndecks.com/#organization' },
     areaServed: { '@type': 'AdministrativeArea', name: 'Loudoun County, VA' },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Composite Deck and Outdoor Living Services in Loudoun County',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Composite Deck Construction' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Trex Deck Installation' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'TimberTech Deck Installation' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Deck Replacement' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Deck Railings and Stairs' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Screened Porch and Pergola Tie-Ins' } },
+      ],
+    },
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'USD',
@@ -163,16 +200,45 @@ export default function CompositeDeckBuilderLoudounPage() {
               Composite Deck Builder in Loudoun County, VA
             </h1>
             <p style={{ ...S.p, color: '#f4ede7', fontSize: 20 }}>
-              Premium Trex and TimberTech deck design, replacement, and construction for Loudoun homeowners who want a clean, durable outdoor space without the yearly sanding, staining, and repair cycle of wood.
+              Design and build a low-maintenance Trex or TimberTech deck in Loudoun County with a local team that handles design, permits, HOA details, materials, framing, railings, stairs, and final walkthrough.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, margin: '30px 0 14px' }}>
-              <Link href="/get-estimate" style={S.button}>Schedule Free Consultation</Link>
+              <Link href="/get-estimate" style={S.button}>Schedule My Free Composite Deck Consultation</Link>
               <a href="tel:+15716557207" style={{ ...S.outlineButton, color: '#fff', borderColor: 'rgba(255,255,255,.55)' }}>Call (571) 655-7207</a>
             </div>
-            <p style={{ color: '#cdbfb5', fontSize: 14, margin: 0 }}>Best fit for full deck builds, replacements, and premium outdoor living projects from $15,000+.</p>
+            <p style={{ color: '#cdbfb5', fontSize: 14, margin: 0 }}>For full deck builds, replacements, and premium outdoor living projects starting at $15,000+.</p>
           </div>
           <div style={{ position: 'relative', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', boxShadow: '0 30px 70px rgba(0,0,0,.35)' }}>
             <Image src="/images/img10.jpeg" alt="Composite deck project by Loudoun Decks in Northern Virginia" fill priority sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: '#fff', borderBottom: '1px solid #eadfd5' }}>
+        <div style={{ ...S.container, padding: '18px 20px', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 10 }}>
+          {trustBadges.map((badge) => (
+            <span key={badge} style={{ border: '1px solid #e5d8cf', borderRadius: 999, padding: '8px 13px', color: '#2d2620', fontSize: 14, fontWeight: 800, background: '#fffaf6' }}>
+              {badge}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <section style={{ ...S.section, background: '#f7f4ef' }}>
+        <div style={S.container}>
+          <p style={S.eyebrow}>Homeowner proof</p>
+          <h2 style={S.h2}>Trusted by Loudoun homeowners for permits, HOA details, and clean composite deck builds</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 18, marginTop: 28 }}>
+            {reviewSnippets.map((review) => (
+              <figure key={review.name} style={{ ...S.card, margin: 0 }}>
+                <blockquote style={{ ...S.p, fontSize: 17, margin: '0 0 18px', color: '#2f2923' }}>&ldquo;{review.quote}&rdquo;</blockquote>
+                <figcaption style={{ color: '#6a5b50', fontWeight: 800 }}>{review.name} — {review.location}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 24 }}>
+            <Link href="/reviews" style={S.button}>Read All 41 Google Reviews</Link>
+            <Link href="/before-and-after" style={S.outlineButton}>See Before &amp; After Projects</Link>
           </div>
         </div>
       </section>
@@ -190,6 +256,9 @@ export default function CompositeDeckBuilderLoudounPage() {
             </p>
             <p style={S.p}>
               We are not the cheapest option, and we do not try to be. We are the right fit when you want a finished deck that looks intentional, passes inspections, respects HOA requirements, and still feels solid years after the final walkthrough.
+            </p>
+            <p style={S.p}>
+              If you are still comparing materials, start with our <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 800 }}>composite deck cost guide</Link>, then review the <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 800 }}>Loudoun County deck permit guide</Link> and our <Link href="/loudoun-county-hoa-deck-rules" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 800 }}>Loudoun HOA deck rules guide</Link>.
             </p>
           </div>
           <aside style={{ ...S.card, alignSelf: 'start' }}>
@@ -220,6 +289,29 @@ export default function CompositeDeckBuilderLoudounPage() {
       </section>
 
       <section style={{ ...S.section, background: '#fff' }}>
+        <div style={S.container}>
+          <p style={S.eyebrow}>Project examples</p>
+          <h2 style={S.h2}>Recent composite deck project types across Loudoun County</h2>
+          <p style={S.p}>
+            Every property has a different layout, HOA process, and budget. These are the types of composite deck projects Loudoun homeowners ask us to plan most often.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: 20, marginTop: 30 }}>
+            {projectExamples.map((project) => (
+              <article key={project.location} style={{ ...S.card, padding: 0, overflow: 'hidden' }}>
+                <div style={{ position: 'relative', aspectRatio: '4 / 3' }}>
+                  <Image src={project.image} alt={project.alt} fill sizes="(max-width: 900px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+                </div>
+                <div style={{ padding: 24 }}>
+                  <h3 style={{ margin: '0 0 10px', fontSize: 23 }}>{project.location}</h3>
+                  <p style={{ ...S.p, fontSize: 16, margin: 0 }}>{project.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ ...S.section, background: '#fff' }}>
         <div style={{ ...S.container, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))', gap: 42, alignItems: 'center' }}>
           <div style={{ position: 'relative', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden' }}>
             <Image src="/images/img21.jpeg" alt="Loudoun County composite deck with stairs and railings" fill sizes="(max-width: 900px) 100vw, 48vw" style={{ objectFit: 'cover' }} />
@@ -236,6 +328,7 @@ export default function CompositeDeckBuilderLoudounPage() {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 24 }}>
               <Link href="/trex-decks" style={S.outlineButton}>Compare Trex Decks</Link>
               <Link href="/timbertech-decks" style={S.outlineButton}>Explore TimberTech</Link>
+              <Link href="/deck-resurfacing-vs-replacement" style={S.outlineButton}>Resurface or Replace?</Link>
             </div>
           </div>
         </div>
@@ -247,8 +340,8 @@ export default function CompositeDeckBuilderLoudounPage() {
           <h2 style={{ ...S.h2, color: '#fff' }}>Permits and HOA details handled before construction gets messy</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 20, marginTop: 28 }}>
             {[
-              ['Loudoun County permits', 'We prepare the project around structural requirements, footing depth, railing rules, stair geometry, and inspection expectations.'],
-              ['HOA submissions', 'We help homeowners organize material colors, drawings, scope descriptions, and design details for community review.'],
+              ['Loudoun County permits', 'We prepare the project around structural requirements, footing depth, railing rules, stair geometry, inspection expectations, and the documentation needed for the county review process.'],
+              ['HOA submissions', 'We help homeowners organize material colors, drawings, scope descriptions, and design details for communities like Brambleton, Broadlands, Ashburn Farm, One Loudoun, Lansdowne, South Riding, and Stone Ridge.'],
               ['Replacement decisions', 'If your existing frame is not safe for resurfacing, we explain why and price the rebuild honestly before work starts.'],
             ].map(([title, text]) => (
               <div key={title} style={{ ...S.card, background: '#1f1a15', borderColor: 'rgba(255,255,255,.12)' }}>
@@ -330,8 +423,8 @@ export default function CompositeDeckBuilderLoudounPage() {
             Tell us what you want to build, where you live, and whether you are replacing an existing deck. We will help you understand the right material path, realistic budget, and next steps.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 12, marginTop: 28 }}>
-            <Link href="/get-estimate" style={S.button}>Request Free Estimate</Link>
-            <a href="tel:+15716557207" style={{ ...S.outlineButton, color: '#fff', borderColor: 'rgba(255,255,255,.55)' }}>Call Now</a>
+            <Link href="/get-estimate" style={S.button}>Schedule My Free Composite Deck Consultation</Link>
+            <a href="tel:+15716557207" style={{ ...S.outlineButton, color: '#fff', borderColor: 'rgba(255,255,255,.55)' }}>Call (571) 655-7207</a>
           </div>
         </div>
       </section>
