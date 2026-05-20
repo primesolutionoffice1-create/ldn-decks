@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" role="img" aria-labelledby="title desc">
+<title id="title">The 3 Phases of Local SEO</title>
+<desc id="desc">Concentric flow showing Property → GBP → Backlinks, with LLM SEO cutting across all three.</desc>
+<defs>
+  <style>
+    .h1 { font: 700 32px Inter, Arial, sans-serif; fill: #172033; }
+    .h2 { font: 700 18px Inter, Arial, sans-serif; fill: #ffffff; }
+    .lbl { font: 500 13px Inter, Arial, sans-serif; fill: #334155; }
+    .mono { font: 700 12px 'JetBrains Mono', monospace; fill: #ffffff; letter-spacing: 1px; }
+    .arrow { stroke: #64748b; stroke-width: 3; fill: none; }
+    .cross { font: 700 13px 'JetBrains Mono', monospace; fill: #ffffff; letter-spacing: 0.5px; }
+  </style>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+  </marker>
+</defs>
+
+<rect width="980" height="540" fill="#fafaf7"/>
+
+<text x="40" y="50" class="h1">The 3 Phases of Local SEO</text>
+<text x="40" y="78" class="lbl">Run them in order. Each compounds on the last. LLM SEO cuts across all three.</text>
+
+<!-- Phase 1: Property -->
+<g transform="translate(80, 130)">
+  <rect x="0" y="0" width="240" height="320" rx="14" fill="#2f7f87" opacity="0.92"/>
+  <rect x="0" y="0" width="240" height="44" rx="14" fill="#206068"/>
+  <text x="20" y="29" class="mono">PHASE 1 — PROPERTY</text>
+  <text x="20" y="80" class="h2">Your website</text>
+  <text x="20" y="120" class="lbl" fill="#e8f4f6">Without a solid property,</text>
+  <text x="20" y="138" class="lbl" fill="#e8f4f6">nothing else compounds.</text>
+
+  <text x="20" y="180" class="lbl" fill="#ffffff">▸ Topical &amp; geographic relevance</text>
+  <text x="20" y="202" class="lbl" fill="#ffffff">▸ The Core 30 page set</text>
+  <text x="20" y="224" class="lbl" fill="#ffffff">▸ Technical + CTR audits</text>
+  <text x="20" y="246" class="lbl" fill="#ffffff">▸ E-E-A-T (author bios, photos)</text>
+  <text x="20" y="268" class="lbl" fill="#ffffff">▸ Schema markup (industry subtype)</text>
+  <text x="20" y="296" class="mono">14 audit playbooks · 10 content playbooks</text>
+</g>
+
+<!-- Phase 2: GBP -->
+<g transform="translate(370, 130)">
+  <rect x="0" y="0" width="240" height="320" rx="14" fill="#c85f4d" opacity="0.92"/>
+  <rect x="0" y="0" width="240" height="44" rx="14" fill="#9c4538"/>
+  <text x="20" y="29" class="mono">PHASE 2 — GBP</text>
+  <text x="20" y="80" class="h2">Map Pack profile</text>
+  <text x="20" y="120" class="lbl" fill="#fdebe7">60–70% of local clicks live</text>
+  <text x="20" y="138" class="lbl" fill="#fdebe7">in the Map Pack.</text>
+
+  <text x="20" y="180" class="lbl" fill="#ffffff">▸ Verification (sometimes video in 2026)</text>
+  <text x="20" y="202" class="lbl" fill="#ffffff">▸ Categories (~80% of relevance)</text>
+  <text x="20" y="224" class="lbl" fill="#ffffff">▸ Description, services, photos</text>
+  <text x="20" y="246" class="lbl" fill="#ffffff">▸ Posts 2×/week (2026 minimum)</text>
+  <text x="20" y="268" class="lbl" fill="#ffffff">▸ Reviews fed to Ask Maps</text>
+  <text x="20" y="296" class="mono">11 GBP playbooks</text>
+</g>
+
+<!-- Phase 3: Backlinks -->
+<g transform="translate(660, 130)">
+  <rect x="0" y="0" width="240" height="320" rx="14" fill="#f0b33d" opacity="0.95"/>
+  <rect x="0" y="0" width="240" height="44" rx="14" fill="#c08828"/>
+  <text x="20" y="29" class="mono">PHASE 3 — BACKLINKS</text>
+  <text x="20" y="80" class="h2">Trust signals</text>
+  <text x="20" y="120" class="lbl" fill="#fef5e1">Run after Property + GBP</text>
+  <text x="20" y="138" class="lbl" fill="#fef5e1">are clean.</text>
+
+  <text x="20" y="180" class="lbl" fill="#172033">▸ Local citations (NAP consistency)</text>
+  <text x="20" y="202" class="lbl" fill="#172033">▸ Competitor backlink gap</text>
+  <text x="20" y="224" class="lbl" fill="#172033">▸ Anchor diversity</text>
+  <text x="20" y="246" class="lbl" fill="#172033">▸ Local sponsorships / chamber</text>
+  <text x="20" y="268" class="lbl" fill="#172033">▸ Reddit citations (LLM signal)</text>
+  <text x="20" y="296" class="mono">6 backlink playbooks</text>
+</g>
+
+<!-- Cross-cutting: LLM SEO -->
+<g transform="translate(80, 470)">
+  <rect x="0" y="0" width="820" height="50" rx="10" fill="#7c4ddb" opacity="0.92"/>
+  <text x="20" y="32" class="cross">CROSS-CUTTING — LLM SEO</text>
+  <text x="280" y="32" class="lbl" fill="#f4eefb">Schema · author bios · Reddit citations · AI Overview optimization · structured FAQ + HowTo</text>
+</g>
+
+<!-- Arrows between phases -->
+<path d="M 320 290 L 370 290" class="arrow" marker-end="url(#arr)"/>
+<path d="M 610 290 L 660 290" class="arrow" marker-end="url(#arr)"/>
+</svg>
