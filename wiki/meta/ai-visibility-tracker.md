@@ -2,11 +2,13 @@
 type: meta
 title: "AI Visibility Tracker"
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-17
 tags:
   - meta
   - ldndecks
   - ai-search
+  - wiki/tracker
+  - channel/ai-search
 status: current
 related:
   - "[[LDN Decks AI Overview Visibility Hub]]"
@@ -37,6 +39,11 @@ related:
 - Location-specific proof.
 - Source-backed technical claims.
 - FAQ and schema support.
+
+## Active Execution Notes
+
+- [[covered-deck-authority-brief-2026-05-17|Covered Deck Authority Brief 2026-05-17]] is the current best missing answer-engine commercial asset.
+- [[local-entity-and-index-cleanup-pack-2026-05-17|Local Entity And Index Cleanup Pack 2026-05-17]] supports AI retrieval by reducing host, URL, and citation ambiguity.
 
 ## Next Imports
 

@@ -10,6 +10,9 @@ tags:
   - seo
   - google-ads
   - local-seo
+  - wiki/domain
+  - graph/hub
+  - business/operating-brain
 related:
   - "[[ldndecks-ai-brain-import-plan-2026-05-15|LDN Decks AI Brain Import Plan]]"
   - "[[index]]"

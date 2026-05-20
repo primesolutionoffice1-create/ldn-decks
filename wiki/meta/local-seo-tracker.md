@@ -2,11 +2,13 @@
 type: meta
 title: "Local SEO Tracker"
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-17
 tags:
   - meta
   - ldndecks
   - local-seo
+  - wiki/tracker
+  - channel/local-seo
 status: current
 related:
   - "[[LDN Decks Northern Virginia Cities]]"
@@ -47,6 +49,11 @@ related:
 - Google Business Profile or service-area signal supports the city.
 - Case study or gallery proof is linked.
 - Internal links connect city, county, service, and authority pages.
+
+## Active Execution Notes
+
+- Review [[local-entity-and-index-cleanup-pack-2026-05-17|Local Entity And Index Cleanup Pack 2026-05-17]] before any new citation or location-page expansion work.
+- Use [[covered-deck-authority-brief-2026-05-17|Covered Deck Authority Brief 2026-05-17]] as the next high-ticket local content gap, especially for McLean, Ashburn, Reston, Arlington, and Fairfax.
 
 ## Next Imports
 

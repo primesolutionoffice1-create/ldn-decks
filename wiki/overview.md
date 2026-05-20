@@ -5,6 +5,8 @@ updated: 2026-05-15
 tags:
   - meta
   - overview
+  - wiki/core
+  - graph/overview
 status: seed
 related:
   - "[[index]]"
@@ -44,8 +46,8 @@ Current migration status:
 - Priority 3 core business pages imported.
 - Priority 4 revenue and conversion systems imported.
 - Priority 5 scaled content clusters imported for the migration plan.
-- Next import stage: optional archival import of non-priority folders or live operational use.
+- Current operating stage: live operational use with approval-gated execution packs for CEO reporting, Google Ads waste containment, local/entity cleanup, and the covered-deck content gap.
 
 ## Visual Maps
 
-- [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]] — visual control map for the operating brain, dashboard, workstreams, archive, and Week 1 execution.
+- [[canvases/ldn-decks-operating-map.canvas|LDN Decks Operating Map]] — visual control map for the operating brain, dashboard, workstreams, archive, and Week 1 execution.

@@ -2,11 +2,13 @@
 type: meta
 title: "Content Calendar"
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-17
 tags:
   - meta
   - ldndecks
   - content
+  - wiki/tracker
+  - channel/content
 status: current
 related:
   - "[[LDN Decks Content Hub]]"
@@ -17,6 +19,7 @@ related:
 
 ## Priority Topics
 
+- Covered Deck Builder Northern Virginia launch review.
 - Loudoun deck permit guide.
 - Virginia deck code guide.
 - Deck footings Virginia.
@@ -39,3 +42,7 @@ related:
 - FAQ schema opportunities.
 - Trust signals and project proof.
 - Conversion path to estimate request or phone call.
+
+## Active Execution Notes
+
+- Use [[covered-deck-launch-readiness-2026-05-17|Covered Deck Launch Readiness 2026-05-17]] before drafting a brand-new covered-deck page.

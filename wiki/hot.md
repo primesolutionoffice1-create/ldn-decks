@@ -1,10 +1,12 @@
 ---
 type: meta
 title: "Hot Cache"
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - meta
   - hot-cache
+  - wiki/core
+  - graph/context
 status: seed
 related:
   - "[[index]]"
@@ -17,6 +19,10 @@ related:
 Navigation: [[index]] | [[log]] | [[overview]]
 
 ## Last Updated
+
+2026-05-18: Built [[ceo-growth-dashboard-2026-05-18|CEO Growth Dashboard 2026-05-18]] after re-parsing the `2026-05-16` Google Ads search-terms export and re-checking public search; closest dollars are still approval-gated Ads waste containment plus host/entity cleanup because live search still shows mixed host exposure, `open-porch` ownership, indexed off-focus pages, and Centreville/Manassas entity drift.
+
+2026-05-17: Built [[ceo-growth-dashboard-2026-05-17|CEO Growth Dashboard 2026-05-17]], [[local-entity-and-index-cleanup-pack-2026-05-17|Local Entity And Index Cleanup Pack 2026-05-17]], [[covered-deck-authority-brief-2026-05-17|Covered Deck Authority Brief 2026-05-17]], and [[covered-deck-launch-readiness-2026-05-17|Covered Deck Launch Readiness 2026-05-17]]; prepared approval-gated Google Ads cleanup in Ads Brain via [[Google Ads Waste Containment Pack 2026-05-17]] and [[Google Ads Phase 1 Negative Keyword Draft 2026-05-17]].
 
 2026-05-16: Created and pushed `/deck-builder-northern-virginia`; see [[deck-builder-northern-virginia-execution-report-2026-05-16|Deck Builder Northern Virginia Execution Report 2026-05-16]].
 
@@ -39,12 +45,18 @@ Navigation: [[index]] | [[log]] | [[overview]]
 
 - Complete archive import added every remaining old-vault markdown note as raw copy plus source summary.
 - Operational launch plan now defines the first 5 workstreams and Week 1 actions.
-- Visual polish added: [[dashboard|Dashboard]] is now a command dashboard, [[vault-status-system-2026-05-16|Vault Status System 2026-05-16]] defines working statuses, and [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]] provides a visual canvas.
+- Visual polish added: [[dashboard|Dashboard]] is now a command dashboard, [[vault-status-system-2026-05-16|Vault Status System 2026-05-16]] defines working statuses, and [[canvases/ldn-decks-operating-map.canvas|LDN Decks Operating Map]] provides a visual canvas.
 - First SEO execution completed: `/deck-builder-northern-virginia` now exists as a dedicated money page and was pushed in site commit `01813ba`.
+- New execution packs are live in the wiki: daily dashboard, local/entity cleanup pack, covered-deck authority brief, and covered-deck launch-readiness note. Ads-side approval-gated cleanup now lives in Ads Brain.
+- Repo review corrected the covered-deck assumption: the covered-deck page already exists locally in the site repo, but it is not yet live in production.
 
 ## Open Threads
 
-- Next step: verify live deployment of `/deck-builder-northern-virginia`, then choose the next SEO execution target: Trex Deck Builder / Composite Deck Installation, Deck Repair, or Deck Resurfacing.
+- Review and approve [[Google Ads Waste Containment Pack 2026-05-17]] before any new scaling or broad-match expansion.
+- Close the GTM / Google Ads tracking gate before trusting imported conversion quality for scaling or pruning.
+- Review [[local-entity-and-index-cleanup-pack-2026-05-17|Local Entity And Index Cleanup Pack 2026-05-17]] before new citation, redirect, or host-normalization work.
+- Verify live deployment/propagation of covered-deck and off-focus-page cleanup; public search still surfaces `open-porch`, `windows`, `entry-doors`, and `outdoor-power-washing`.
+- Align public entity state to one host and one business address before more local expansion or AI-visibility pushes.
 
 ## Recent Pages
 
@@ -95,5 +107,9 @@ Navigation: [[index]] | [[log]] | [[overview]]
 - [[LDN Decks Composite Decks in Gainesville]]
 - [[operational-launch-plan-2026-05-16|Operational Launch Plan 2026-05-16]]
 - [[vault-status-system-2026-05-16|Vault Status System 2026-05-16]]
-- [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]]
+- [[canvases/ldn-decks-operating-map.canvas|LDN Decks Operating Map]]
 - [[deck-builder-northern-virginia-execution-report-2026-05-16|Deck Builder Northern Virginia Execution Report 2026-05-16]]
+- [[ceo-growth-dashboard-2026-05-18|CEO Growth Dashboard 2026-05-18]]
+- [[ceo-growth-dashboard-2026-05-17|CEO Growth Dashboard 2026-05-17]]
+- [[local-entity-and-index-cleanup-pack-2026-05-17|Local Entity And Index Cleanup Pack 2026-05-17]]
+- [[covered-deck-authority-brief-2026-05-17|Covered Deck Authority Brief 2026-05-17]]

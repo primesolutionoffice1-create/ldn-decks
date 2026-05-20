@@ -1,10 +1,12 @@
 ---
 type: meta
 title: "Session Log"
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - meta
   - log
+  - wiki/core
+  - graph/history
 status: seed
 related:
   - "[[index]]"
@@ -17,6 +19,27 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ---
 
+## 2026-05-18 intelligence | CEO Dashboard Refresh
+
+- Created: [[ceo-growth-dashboard-2026-05-18|CEO Growth Dashboard 2026-05-18]]
+- Updated: [[hot]], [[index]], [[log]]
+- Re-validated: the `2026-05-16` Google Ads search-terms baseline, public search state on `2026-05-18`, and current local execution packs.
+- Key insight: the closest dollars are still approval-gated Ads waste containment plus production host/entity cleanup, because live public search still shows mixed host exposure, `open-porch` ownership, off-focus service pages indexed, and Centreville/Manassas entity drift.
+
+## 2026-05-17 execution | Growth Intelligence Operating Packs
+
+- Created: [[ceo-growth-dashboard-2026-05-17|CEO Growth Dashboard 2026-05-17]], [[local-entity-and-index-cleanup-pack-2026-05-17|Local Entity And Index Cleanup Pack 2026-05-17]], [[covered-deck-authority-brief-2026-05-17|Covered Deck Authority Brief 2026-05-17]]
+- Updated: [[hot]], [[index]], [[overview]], [[seo-command-center]], [[google-ads-tracker]], [[local-seo-tracker]], [[ai-visibility-tracker]]
+- Cross-vault note created: [[Google Ads Waste Containment Pack 2026-05-17]] in Ads Brain
+- Key insight: the operating wiki now has an actionable daily dashboard, a non-live local/entity cleanup pack, a covered-deck commercial brief, and an approval-gated Ads cleanup note tied to the imported 2026-05-16 PPC evidence.
+
+## 2026-05-17 execution | Covered Deck Repo Reality Check
+
+- Created: [[covered-deck-launch-readiness-2026-05-17|Covered Deck Launch Readiness 2026-05-17]]
+- Updated: [[covered-deck-authority-brief-2026-05-17|Covered Deck Authority Brief 2026-05-17]], [[content-calendar]], [[seo-command-center]], [[ceo-growth-dashboard-2026-05-17|CEO Growth Dashboard 2026-05-17]], [[hot]], [[index]]
+- Cross-vault note created: [[Google Ads Phase 1 Negative Keyword Draft 2026-05-17]] in Ads Brain
+- Key insight: the covered-deck page is already built locally in the repo and wired into sitemap/header/indexing helpers, but it is not live in production yet. The next move is launch readiness, not ideation.
+
 ## 2026-05-16 execution | Deck Builder Northern Virginia
 
 - Created: [[deck-builder-northern-virginia-execution-report-2026-05-16|Deck Builder Northern Virginia Execution Report 2026-05-16]]
@@ -28,7 +51,7 @@ Reverse-chronological list of sources ingested and notable session outcomes. New
 
 ## 2026-05-16 design | Dashboard And Operating Map
 
-- Created: [[vault-status-system-2026-05-16|Vault Status System 2026-05-16]], [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]]
+- Created: [[vault-status-system-2026-05-16|Vault Status System 2026-05-16]], [[canvases/ldn-decks-operating-map.canvas|LDN Decks Operating Map]]
 - Updated: [[dashboard|Dashboard]], [[overview]], [[hot]], [[index]], [[log]]
 - Key insight: The vault now has a clearer first screen, a visual operating map, and explicit status language for active work versus archived memory.
 

@@ -26,7 +26,7 @@ related:
 |---|---|
 | Operating plan | [[operational-launch-plan-2026-05-16|Operational Launch Plan]] |
 | Status system | [[vault-status-system-2026-05-16|Vault Status System]] |
-| Visual map | [[ldn-decks-operating-map.canvas|Operating Map Canvas]] |
+| Visual map | [[canvases/ldn-decks-operating-map.canvas|Operating Map Canvas]] |
 | Main brain | [[LDN Decks Operating Brain]] |
 | Latest migration report | [[migration-completion-report-2026-05-16|Migration Completion Report]] |
 

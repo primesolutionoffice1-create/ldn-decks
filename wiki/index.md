@@ -1,10 +1,12 @@
 ---
 type: meta
 title: "Wiki Index"
-updated: 2026-05-15
+updated: 2026-05-18
 tags:
   - meta
   - index
+  - wiki/core
+  - graph/hub
 status: seed
 related:
   - "[[overview]]"
@@ -15,7 +17,7 @@ related:
 
 # Wiki Index
 
-Last updated: 2026-05-16 | Total pages: 304 | Sources ingested: 283
+Last updated: 2026-05-18 | Daily dashboard refreshed with live SERP evidence, Ads export re-parse, and entity-cleanup blockers.
 
 Navigation: [[overview]] | [[log]] | [[hot]] | [[getting-started]]
 
@@ -28,6 +30,13 @@ _None yet. See [[concepts/_index]]._
 ## Domains
 
 - [[LDN Decks Operating Brain]] — Migration domain for the old LDN Decks AI Brain vault.
+
+## Active Operating Notes
+
+- [[ceo-growth-dashboard-2026-05-18|CEO Growth Dashboard 2026-05-18]] — Current closest-dollars dashboard and action queue.
+- [[local-entity-and-index-cleanup-pack-2026-05-17|Local Entity And Index Cleanup Pack 2026-05-17]] — Approval-gated local/entity/index cleanup plan.
+- [[covered-deck-authority-brief-2026-05-17|Covered Deck Authority Brief 2026-05-17]] — Draft brief for the next missing high-ticket commercial page.
+- [[covered-deck-launch-readiness-2026-05-17|Covered Deck Launch Readiness 2026-05-17]] — Repo-vs-live launch check for the existing local covered-deck route.
 
 ## Entities
 
@@ -343,7 +352,7 @@ _None yet. See [[entities/_index]]._
 - [[migration-completion-report-2026-05-16|Migration Completion Report 2026-05-16]] — Final priority migration status and remaining optional work.
 - [[operational-launch-plan-2026-05-16|Operational Launch Plan 2026-05-16]] — First operational plan after complete old-vault archive import.
 - [[vault-status-system-2026-05-16|Vault Status System 2026-05-16]] — Status meanings and Dataview checks.
-- [[ldn-decks-operating-map.canvas|LDN Decks Operating Map]] — Visual map for dashboard, workstreams, archive, and Week 1 execution.
+- [[canvases/ldn-decks-operating-map.canvas|LDN Decks Operating Map]] — Visual map for dashboard, workstreams, archive, and Week 1 execution.
 
 ## Comparisons
 
