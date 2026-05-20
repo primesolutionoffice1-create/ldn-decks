@@ -1,0 +1,1364 @@
+{
+  "row_count": 39,
+  "columns": [
+    "Ad group status",
+    "Ad group",
+    "Campaign",
+    "Currency code",
+    "Target CPA",
+    "Status",
+    "Status reasons",
+    "Ad group type",
+    "Currency code",
+    "Avg. CPM",
+    "Impr.",
+    "Interactions",
+    "Interaction rate",
+    "Avg. cost",
+    "Cost",
+    "Brand Inclusions",
+    "Locations of interest",
+    "Conv. (Platform Comparable)",
+    "Cost / Conv. (Platform Comparable)",
+    "Conv. value / Cost (Platform Comparable)",
+    "Clicks",
+    "Conv. rate",
+    "Conversions",
+    "Avg. CPC",
+    "Cost / conv."
+  ],
+  "detected_columns": {
+    "campaign": "Campaign",
+    "ad_group": "Ad group",
+    "ad": "Ad group status",
+    "search_term": null,
+    "cost": "Cost",
+    "impressions": "Impr.",
+    "clicks": "Clicks",
+    "conversions": "Conversions",
+    "revenue": "Conv. value / Cost (Platform Comparable)",
+    "frequency": null
+  },
+  "totals": {
+    "cost": 5575.36,
+    "impressions": 31865.0,
+    "clicks": 760.0,
+    "conversions": 47.0,
+    "revenue": 0.0,
+    "ctr": 2.39,
+    "cpa": 118.62,
+    "roas": 0.0
+  },
+  "campaigns": [
+    {
+      "rows": 6,
+      "cost": 1359.81,
+      "impressions": 2045.0,
+      "clicks": 148.0,
+      "conversions": 17.0,
+      "revenue": 0.0,
+      "ctr": 7.24,
+      "cpa": 79.99,
+      "roas": 0.0,
+      "name": "Deck Repair - Loudoun County"
+    },
+    {
+      "rows": 5,
+      "cost": 464.33,
+      "impressions": 1681.0,
+      "clicks": 56.0,
+      "conversions": 5.0,
+      "revenue": 0.0,
+      "ctr": 3.33,
+      "cpa": 92.87,
+      "roas": 0.0,
+      "name": "Fairfax-Search-Search - Deck Leads - VA - May 2025"
+    },
+    {
+      "rows": 1,
+      "cost": 60.26,
+      "impressions": 20089.0,
+      "clicks": 158.0,
+      "conversions": 0.0,
+      "revenue": 0.0,
+      "ctr": 0.79,
+      "cpa": 0.0,
+      "roas": 0.0,
+      "name": "Loudoun Decks - Lead Gen - Demand Gen 2026"
+    },
+    {
+      "rows": 1,
+      "cost": 2568.43,
+      "impressions": 5405.0,
+      "clicks": 299.0,
+      "conversions": 20.0,
+      "revenue": 0.0,
+      "ctr": 5.53,
+      "cpa": 128.42,
+      "roas": 0.0,
+      "name": "Premium Composite Decks"
+    },
+    {
+      "rows": 2,
+      "cost": 55.15,
+      "impressions": 8.0,
+      "clicks": 5.0,
+      "conversions": 0.0,
+      "revenue": 0.0,
+      "ctr": 62.5,
+      "cpa": 0.0,
+      "roas": 0.0,
+      "name": "SRCH | Branded | 3 Counties | Calls"
+    },
+    {
+      "rows": 4,
+      "cost": 105.15,
+      "impressions": 251.0,
+      "clicks": 15.0,
+      "conversions": 1.0,
+      "revenue": 0.0,
+      "ctr": 5.98,
+      "cpa": 105.15,
+      "roas": 0.0,
+      "name": "SRCH | Composite | 3 Counties | Calls"
+    },
+    {
+      "rows": 3,
+      "cost": 104.85,
+      "impressions": 54.0,
+      "clicks": 4.0,
+      "conversions": 0.0,
+      "revenue": 0.0,
+      "ctr": 7.41,
+      "cpa": 0.0,
+      "roas": 0.0,
+      "name": "SRCH | Replacement + Resurfacing | 3 Counties | Calls"
+    },
+    {
+      "rows": 17,
+      "cost": 857.38,
+      "impressions": 2332.0,
+      "clicks": 75.0,
+      "conversions": 4.0,
+      "revenue": 0.0,
+      "ctr": 3.22,
+      "cpa": 214.35,
+      "roas": 0.0,
+      "name": "loudoun decks"
+    }
+  ],
+  "negative_candidates": [],
+  "creative_candidates": [
+    {
+      "name": "Enabled",
+      "rows": 39
+    }
+  ],
+  "platform": "google",
+  "platform_name": "Google Ads",
+  "source_file": ".raw/sources/exports/google/2026-05-16-ad-group-report.csv",
+  "source_hash": "19399cd6c7c12e4d5c7abc0fb27dfb7c097af986c975897ad4ae605c181a6e29",
+  "imported_at": "2026-05-16T15:01:50+00:00",
+  "source_label": "ad-group-report 2026-05-16 Google Ads UI export",
+  "platform_profile": {
+    "schema_version": "ads-brain.platform-profile.v1",
+    "platform": "google",
+    "export_type": "performance_export",
+    "canonical_columns": {
+      "account": null,
+      "campaign": "Campaign",
+      "campaign_id": null,
+      "campaign_type": null,
+      "campaign_status": "Status",
+      "budget": null,
+      "bid_strategy": null,
+      "ad_group": "Ad group",
+      "ad_group_id": null,
+      "ad": null,
+      "ad_id": null,
+      "keyword": null,
+      "match_type": null,
+      "search_term": null,
+      "landing_page": null,
+      "conversion_action": null,
+      "attribution_window": null,
+      "api_version": null,
+      "api_version_sunset": null,
+      "tracking_status": null,
+      "consent_mode": null,
+      "enhanced_conversions": null,
+      "offline_import": null,
+      "capi_status": null,
+      "events_api_status": null,
+      "dedup_status": null,
+      "event_id_coverage": null,
+      "event_match_quality": null,
+      "pixel_status": null,
+      "match_keys": null,
+      "insight_tag_status": null,
+      "li_fat_id_status": null,
+      "crm_sync_status": null,
+      "qualified_leads": null,
+      "lead_form": null,
+      "uet_status": null,
+      "google_import_status": null,
+      "adservices_status": null,
+      "adattributionkit_status": null,
+      "aak_config_status": null,
+      "custom_product_page": null,
+      "search_match": null,
+      "asset_group": null,
+      "asset_strength": null,
+      "asset_ratio": null,
+      "ai_max_status": null,
+      "final_url_expansion": null,
+      "safe_zone_status": null,
+      "sound_on": null,
+      "spark_ad": null,
+      "smart_plus": null,
+      "learning_phase": null,
+      "frequency": null,
+      "audience": null,
+      "view_rate": null,
+      "video_views": null,
+      "completion_rate": null,
+      "view_through_conversions": null,
+      "attribution_setting": null,
+      "modeled_conversion_share": null,
+      "conversion_volume_30d": null,
+      "offline_upload_age_days": null,
+      "policy_status": null,
+      "pipeline_value": null,
+      "cost": "Cost",
+      "impressions": "Impr.",
+      "clicks": "Clicks",
+      "conversions": "Conversions",
+      "revenue": "Conv. value / Cost (Platform Comparable)"
+    },
+    "entities": {
+      "ad-groups": [
+        {
+          "name": "Deck Replacement",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 2,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 142.89,
+            "impressions": 217.0,
+            "clicks": 12.0
+          }
+        },
+        {
+          "name": "Ad group 1",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Premium Composite Decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 2568.43,
+            "impressions": 5405.0,
+            "clicks": 299.0,
+            "conversions": 20.0
+          }
+        },
+        {
+          "name": "Brand Exact",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "SRCH | Branded | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 55.15,
+            "impressions": 8.0,
+            "clicks": 5.0
+          }
+        },
+        {
+          "name": "Brand Phrase",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "SRCH | Branded | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {}
+        },
+        {
+          "name": "Composite - Trex Repair",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 24.22,
+            "impressions": 197.0,
+            "clicks": 7.0
+          }
+        },
+        {
+          "name": "Composite Deck Builder",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 21.0
+          }
+        },
+        {
+          "name": "Composite Deck Cost",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 65.1,
+            "impressions": 201.0,
+            "clicks": 12.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Composite Decking",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 27.74,
+            "impressions": 131.0,
+            "clicks": 2.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Composite Decks",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 12.0
+          }
+        },
+        {
+          "name": "Deck + Patio / Outdoor Living",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 130.06,
+            "impressions": 766.0,
+            "clicks": 22.0,
+            "conversions": 2.0
+          }
+        },
+        {
+          "name": "Deck Builder - Aldie",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 48.8,
+            "impressions": 124.0,
+            "clicks": 6.0
+          }
+        },
+        {
+          "name": "Deck Builder - Arcola",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 43.0
+          }
+        },
+        {
+          "name": "Deck Builder - Ashburn",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 6.0
+          }
+        },
+        {
+          "name": "Deck Builder - Brambleton",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 245.76,
+            "impressions": 901.0,
+            "clicks": 28.0
+          }
+        },
+        {
+          "name": "Deck Builder - Broadlands",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 66.09,
+            "impressions": 86.0,
+            "clicks": 4.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Hamilton",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 27.24,
+            "impressions": 125.0,
+            "clicks": 3.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Lansdowne",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 7.22,
+            "impressions": 31.0,
+            "clicks": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Leesburg",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 62.56,
+            "impressions": 131.0,
+            "clicks": 3.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Lovettsville",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 15.22,
+            "impressions": 58.0,
+            "clicks": 2.0
+          }
+        },
+        {
+          "name": "Deck Builder - Middleburg",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 61.36,
+            "impressions": 239.0,
+            "clicks": 5.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Potomac Falls",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 17.98,
+            "impressions": 46.0,
+            "clicks": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Purcellville",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 9.44,
+            "impressions": 23.0,
+            "clicks": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Round Hill",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 40.76,
+            "impressions": 88.0,
+            "clicks": 3.0
+          }
+        },
+        {
+          "name": "Deck Builder - South Riding",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 38.54,
+            "impressions": 219.0,
+            "clicks": 7.0
+          }
+        },
+        {
+          "name": "Deck Builder - Sterling",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 36.79,
+            "impressions": 26.0,
+            "clicks": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Stone Ridge",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 35.03,
+            "impressions": 24.0,
+            "clicks": 3.0
+          }
+        },
+        {
+          "name": "Deck Builders Near Me",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 289.67,
+            "impressions": 654.0,
+            "clicks": 29.0,
+            "conversions": 2.0
+          }
+        },
+        {
+          "name": "Deck Contractors Northern VA",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 49.39,
+            "impressions": 22.0,
+            "clicks": 3.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Renovation",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 104.85,
+            "impressions": 195.0,
+            "clicks": 10.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Repair & Refinishing",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 16.86,
+            "impressions": 118.0,
+            "clicks": 3.0
+          }
+        },
+        {
+          "name": "Deck Repair - Loudoun County",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 1076.21,
+            "impressions": 1321.0,
+            "clicks": 112.0,
+            "conversions": 14.0
+          }
+        },
+        {
+          "name": "Deck Restoration - Refinishing",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 56.84,
+            "impressions": 133.0,
+            "clicks": 7.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Resurfacing",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 10.26,
+            "impressions": 13.0,
+            "clicks": 1.0
+          }
+        },
+        {
+          "name": "Loudoun County - Deck Builder - Lead Gen",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Loudoun Decks - Lead Gen - Demand Gen 2026",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 60.26,
+            "impressions": 20089.0,
+            "clicks": 158.0
+          }
+        },
+        {
+          "name": "Loudoun Decks",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 144.59,
+            "impressions": 162.0,
+            "clicks": 7.0
+          }
+        },
+        {
+          "name": "Replace Wood With Composite",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 1.0
+          }
+        },
+        {
+          "name": "TimberTech/AZEK",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 1.0
+          }
+        },
+        {
+          "name": "Trex",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 40.05,
+            "impressions": 28.0,
+            "clicks": 3.0
+          }
+        }
+      ]
+    },
+    "checks": [
+      {
+        "id": "G-TRK1",
+        "platform": "google",
+        "category": "tracking",
+        "severity": "critical",
+        "status": "warning",
+        "description": "Conversion action evidence present for Google Ads.",
+        "evidence": "column: missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-CM2",
+        "platform": "google",
+        "category": "tracking",
+        "severity": "critical",
+        "status": "warning",
+        "description": "Consent Mode v2 status documented when relevant.",
+        "evidence": "column missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-EC1",
+        "platform": "google",
+        "category": "tracking",
+        "severity": "critical",
+        "status": "warning",
+        "description": "Enhanced conversions/offline conversion quality documented.",
+        "evidence": "column missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-PMAX1",
+        "platform": "google",
+        "category": "pmax",
+        "severity": "high",
+        "status": "pass",
+        "description": "PMax rows include asset group and asset strength evidence.",
+        "evidence": "PMax rows: 0; asset group: missing; asset strength: missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-ST1",
+        "platform": "google",
+        "category": "search-term-hygiene",
+        "severity": "high",
+        "status": "warning",
+        "description": "Search term export evidence available for waste review.",
+        "evidence": "column: missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-AIMAX1",
+        "platform": "google",
+        "category": "api-version",
+        "severity": "medium",
+        "status": "warning",
+        "description": "AI Max status should be documented for Search/DSA/ACA/broad-match risk.",
+        "evidence": "column: missing",
+        "source": "imported export"
+      }
+    ],
+    "signals": {
+      "has_search_terms": false,
+      "has_tracking_diagnostics": false,
+      "has_crm_quality": false,
+      "creative_count": 0,
+      "keyword_count": 0,
+      "landing_page_count": 0,
+      "active_learning_count": 0,
+      "policy_issue_count": 0,
+      "platform": "google"
+    }
+  },
+  "adapter_checks": [
+    {
+      "id": "G-TRK1",
+      "platform": "google",
+      "category": "tracking",
+      "severity": "critical",
+      "status": "warning",
+      "description": "Conversion action evidence present for Google Ads.",
+      "evidence": "column: missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-CM2",
+      "platform": "google",
+      "category": "tracking",
+      "severity": "critical",
+      "status": "warning",
+      "description": "Consent Mode v2 status documented when relevant.",
+      "evidence": "column missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-EC1",
+      "platform": "google",
+      "category": "tracking",
+      "severity": "critical",
+      "status": "warning",
+      "description": "Enhanced conversions/offline conversion quality documented.",
+      "evidence": "column missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-PMAX1",
+      "platform": "google",
+      "category": "pmax",
+      "severity": "high",
+      "status": "pass",
+      "description": "PMax rows include asset group and asset strength evidence.",
+      "evidence": "PMax rows: 0; asset group: missing; asset strength: missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-ST1",
+      "platform": "google",
+      "category": "search-term-hygiene",
+      "severity": "high",
+      "status": "warning",
+      "description": "Search term export evidence available for waste review.",
+      "evidence": "column: missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-AIMAX1",
+      "platform": "google",
+      "category": "api-version",
+      "severity": "medium",
+      "status": "warning",
+      "description": "AI Max status should be documented for Search/DSA/ACA/broad-match risk.",
+      "evidence": "column: missing",
+      "source": "imported export"
+    }
+  ],
+  "entities": {
+    "ad-groups": [
+      {
+        "name": "Deck Replacement",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 2,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 142.89,
+          "impressions": 217.0,
+          "clicks": 12.0
+        }
+      },
+      {
+        "name": "Ad group 1",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Premium Composite Decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 2568.43,
+          "impressions": 5405.0,
+          "clicks": 299.0,
+          "conversions": 20.0
+        }
+      },
+      {
+        "name": "Brand Exact",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "SRCH | Branded | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 55.15,
+          "impressions": 8.0,
+          "clicks": 5.0
+        }
+      },
+      {
+        "name": "Brand Phrase",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "SRCH | Branded | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {}
+      },
+      {
+        "name": "Composite - Trex Repair",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 24.22,
+          "impressions": 197.0,
+          "clicks": 7.0
+        }
+      },
+      {
+        "name": "Composite Deck Builder",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 21.0
+        }
+      },
+      {
+        "name": "Composite Deck Cost",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 65.1,
+          "impressions": 201.0,
+          "clicks": 12.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Composite Decking",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 27.74,
+          "impressions": 131.0,
+          "clicks": 2.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Composite Decks",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 12.0
+        }
+      },
+      {
+        "name": "Deck + Patio / Outdoor Living",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 130.06,
+          "impressions": 766.0,
+          "clicks": 22.0,
+          "conversions": 2.0
+        }
+      },
+      {
+        "name": "Deck Builder - Aldie",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 48.8,
+          "impressions": 124.0,
+          "clicks": 6.0
+        }
+      },
+      {
+        "name": "Deck Builder - Arcola",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 43.0
+        }
+      },
+      {
+        "name": "Deck Builder - Ashburn",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 6.0
+        }
+      },
+      {
+        "name": "Deck Builder - Brambleton",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 245.76,
+          "impressions": 901.0,
+          "clicks": 28.0
+        }
+      },
+      {
+        "name": "Deck Builder - Broadlands",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 66.09,
+          "impressions": 86.0,
+          "clicks": 4.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Hamilton",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 27.24,
+          "impressions": 125.0,
+          "clicks": 3.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Lansdowne",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 7.22,
+          "impressions": 31.0,
+          "clicks": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Leesburg",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 62.56,
+          "impressions": 131.0,
+          "clicks": 3.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Lovettsville",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 15.22,
+          "impressions": 58.0,
+          "clicks": 2.0
+        }
+      },
+      {
+        "name": "Deck Builder - Middleburg",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 61.36,
+          "impressions": 239.0,
+          "clicks": 5.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Potomac Falls",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 17.98,
+          "impressions": 46.0,
+          "clicks": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Purcellville",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 9.44,
+          "impressions": 23.0,
+          "clicks": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Round Hill",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 40.76,
+          "impressions": 88.0,
+          "clicks": 3.0
+        }
+      },
+      {
+        "name": "Deck Builder - South Riding",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 38.54,
+          "impressions": 219.0,
+          "clicks": 7.0
+        }
+      },
+      {
+        "name": "Deck Builder - Sterling",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 36.79,
+          "impressions": 26.0,
+          "clicks": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Stone Ridge",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 35.03,
+          "impressions": 24.0,
+          "clicks": 3.0
+        }
+      },
+      {
+        "name": "Deck Builders Near Me",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 289.67,
+          "impressions": 654.0,
+          "clicks": 29.0,
+          "conversions": 2.0
+        }
+      },
+      {
+        "name": "Deck Contractors Northern VA",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 49.39,
+          "impressions": 22.0,
+          "clicks": 3.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Renovation",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 104.85,
+          "impressions": 195.0,
+          "clicks": 10.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Repair & Refinishing",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 16.86,
+          "impressions": 118.0,
+          "clicks": 3.0
+        }
+      },
+      {
+        "name": "Deck Repair - Loudoun County",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 1076.21,
+          "impressions": 1321.0,
+          "clicks": 112.0,
+          "conversions": 14.0
+        }
+      },
+      {
+        "name": "Deck Restoration - Refinishing",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 56.84,
+          "impressions": 133.0,
+          "clicks": 7.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Resurfacing",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 10.26,
+          "impressions": 13.0,
+          "clicks": 1.0
+        }
+      },
+      {
+        "name": "Loudoun County - Deck Builder - Lead Gen",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Loudoun Decks - Lead Gen - Demand Gen 2026",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 60.26,
+          "impressions": 20089.0,
+          "clicks": 158.0
+        }
+      },
+      {
+        "name": "Loudoun Decks",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 144.59,
+          "impressions": 162.0,
+          "clicks": 7.0
+        }
+      },
+      {
+        "name": "Replace Wood With Composite",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 1.0
+        }
+      },
+      {
+        "name": "TimberTech/AZEK",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 1.0
+        }
+      },
+      {
+        "name": "Trex",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 40.05,
+          "impressions": 28.0,
+          "clicks": 3.0
+        }
+      }
+    ]
+  }
+}
