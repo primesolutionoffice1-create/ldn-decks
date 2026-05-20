@@ -9,7 +9,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
@@ -59,7 +58,6 @@ export default function PrinceWilliamCountyPage() {
         description="LDN Decks builds custom decks, porches, patios, pergolas, and outdoor living spaces throughout Prince William County, VA."
         url="https://ldndecks.com/near-you/prince-william-county"
       />
-      <Breadcrumbs />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Prince William County, VA"

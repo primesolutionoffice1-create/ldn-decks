@@ -9,7 +9,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
@@ -59,7 +58,6 @@ export default function ArlingtonCountyPage() {
         description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Arlington County, VA."
         url="https://ldndecks.com/near-you/arlington-county"
       />
-      <Breadcrumbs />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Arlington County, VA"

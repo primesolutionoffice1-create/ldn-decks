@@ -8,7 +8,6 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import Image from 'next/image';
 import Link from 'next/link';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './NearYouPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 
@@ -36,7 +35,6 @@ const chooseItems = [
 export default function NearYouPage() {
   return (
     <main>
-      <Breadcrumbs />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder Near You"

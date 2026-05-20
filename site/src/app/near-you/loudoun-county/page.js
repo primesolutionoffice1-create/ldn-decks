@@ -9,7 +9,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
@@ -60,7 +59,6 @@ export default function LoudounCountyPage() {
         description="LDN Decks builds custom decks, porches, patios, pergolas, and outdoor living spaces throughout Loudoun County, VA."
         url="https://ldndecks.com/near-you/loudoun-county"
       />
-      <Breadcrumbs />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Loudoun County, VA"
