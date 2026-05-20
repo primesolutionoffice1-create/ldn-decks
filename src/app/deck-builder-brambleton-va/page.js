@@ -52,7 +52,7 @@ export default function BrambletonDeckBuilderPage() {
             />
           </div>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Brambleton Time to Upgrade Your Builder Deck</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Brambleton is one of Loudoun County&apos;s largest and most active communities, and many original homes (built 2007-2015) now have builder-grade pressure-treated decks that are showing their age graying, splintering, and requiring annual staining. We specialize in transforming these into modern, maintenance-free composite decks.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Brambleton is one of Loudoun County&apos;s largest master-planned communities &mdash; anchored by Brambleton Town Center, the Brambleton Library and Hal &amp; Berni Hanson Regional Park &mdash; and many original homes (built 2007-2015) now have builder-grade pressure-treated decks that are showing their age: graying, splintering, and requiring annual staining. We specialize in transforming these into modern, maintenance-free composite decks designed for Brambleton&apos;s typically narrow, deep lots, where a stepped multi-level layout often delivers more usable space than a single wide platform.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Builder-grade upgrade experts:</strong> 80% of our Brambleton projects involve replacing or resurfacing original PT wood decks</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Brambleton HOA relationships:</strong> We know the ARC requirements, preferred materials, and submission process</li>
