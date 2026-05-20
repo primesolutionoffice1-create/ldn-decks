@@ -2,7 +2,7 @@
 type: "hot"
 title: "Hot"
 created: "2026-05-19"
-updated: "2026-05-19"
+updated: "2026-05-20"
 ---
 
 # Hot
@@ -12,11 +12,9 @@ updated: "2026-05-19"
 Local SEO Brain is installed for **LDN Decks**. Seeded knowledge base is
 loaded: 59 chapter notes, 37 AI prompts, 26 reference images.
 
-LDN-specific source material has been added under
-`.raw/clients/ldn-decks/`:
-
-- `local-seo-knowledge-base-source-2026-05-19.txt`
-- `ldn-local-seo-applied-playbook-2026-05-19.md`
+A full site SEO audit ran 2026-05-20 — see [[site-seo-audit-2026-05-20]],
+[[Health Scorecard]] (75/100), and [[Action Roadmap]]. 26 findings; 5 shipped
+same-day (commit `ea5a0a9`, awaiting Vercel unblock).
 
 This brain is advisory only. It can create drafts, audits, reports,
 checklists, and implementation plans. Live-impact changes need explicit
@@ -24,25 +22,27 @@ approval.
 
 ## Next Action
 
-1. Read [[Start Here]] and [[LDN Decks]].
-2. Use [[LDN Local SEO Knowledge Base Source 2026-05-19]] and
-   [[LDN Local SEO Applied Playbook 2026-05-19]] as source anchors.
-3. Compare current LDN priorities against [[the-core-30-content-strategy|The
-   Core 30 Content Strategy]], [[gbp-optimization|GBP Optimization]], and
-   [[backlinking-local-citations|Backlinking Local Citations]].
-4. Produce the next local SEO action roadmap in `wiki/reports/` with LDN
-   priority scores and approval gates.
+1. Batch 2 — schema + reviews remediation (H2, H3, C2, M2–M4). C2 is blocked
+   on the owner's real GBP rating + review count.
+2. Phase 3 — keyword research from `brains/marketing/keywords-2026-05-11.csv`
+   (3,891 rows) + Ahrefs/GSC, filed to `wiki/keywords/`.
+3. Phase 4 — de-risk the city-page fleet from doorway treatment (H5).
+4. Owner action: unblock Vercel deploys so shipped fixes go live.
 
 ## Blockers
 
+- Vercel deploys are blocked at the account level — shipped fixes will not go
+  live until the owner unblocks them.
+- C2 review-data fix is blocked on the owner's real GBP rating + review count.
 - No fresh GBP export, citation export, review export, or geo-grid scan has
   been added to this vault yet.
-- No live changes are approved from this vault by default.
-- Canonical NAP should be verified before citation or GBP recommendations are
-  moved into an approval queue.
+- Canonical NAP confirmed 2026-05-20: 13704 Winding Oak Cir, Centreville, VA.
 
 ## Recent Changes
 
+- 2026-05-20 - Full site SEO audit filed: [[site-seo-audit-2026-05-20]],
+  [[Health Scorecard]], [[Action Roadmap]].
+- 2026-05-20 - Batch 1 + C1 fixes shipped to the site repo (commit `ea5a0a9`).
 - 2026-05-19 - Local SEO Brain package installed into the LDN brain stack.
 - 2026-05-19 - LDN knowledge-base source and applied playbook copied into
   `.raw/clients/ldn-decks/`.
@@ -50,6 +50,7 @@ approval.
 
 ## Active Threads
 
+- [[site-seo-audit-2026-05-20]] - active audit; see [[Action Roadmap]].
 - [[LDN Local SEO Applied Playbook 2026-05-19]] - current LDN local SEO
   playbook.
 - [[Property Audit Workflow]] - safe site audit and implementation planning.
