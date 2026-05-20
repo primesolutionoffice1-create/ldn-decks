@@ -69,16 +69,11 @@ const homepageSchema = {
     "https://ldndecks.com/deck-cost-calculator",
     "https://ldndecks.com/contact"
   ],
+  // Homepage main entity is the canonical organization, referenced by @id only.
+  // knowsAbout / hasOfferCatalog merge onto #organization without redefining
+  // its @type, name, address, or areaServed (those come from business.js).
   "mainEntity": {
-    "@type": "LocalBusiness",
     "@id": "https://ldndecks.com/#organization",
-    "name": "Loudoun Decks",
-    "areaServed": [
-      { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-      { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-      { "@type": "AdministrativeArea", "name": "Prince William County, VA" },
-      { "@type": "Place", "name": "Northern Virginia" }
-    ],
     "knowsAbout": [
       "deck contractor Northern Virginia",
       "composite deck builder",

@@ -33,7 +33,7 @@ const webPageSchema = {
   "description": "Loudoun Decks is a BBB Accredited A+ rated deck builder serving Northern Virginia.",
   "url": "https://ldndecks.com/bbb-accredited-deck-builder-virginia",
   "isPartOf": { "@type": "WebSite", "@id": "https://ldndecks.com/#website" },
-  "about": { "@type": "LocalBusiness", "@id": "https://ldndecks.com/#organization" }
+  "about": { "@id": "https://ldndecks.com/#organization" }
 };
 
 const faqs = [

@@ -97,9 +97,7 @@ const serviceSchemaData = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Custom Entry Door Installation",
-  "provider": {
-    "@type": "LocalBusiness", "@id": "https://ldndecks.com/#organization", "name": "Loudoun Decks", "url": "https://ldndecks.com", "telephone": "+15716557207", "address": { "@type": "PostalAddress", "streetAddress": "13704 Winding Oak Cir", "addressLocality": "Centreville", "addressRegion": "VA", "postalCode": "20121", "addressCountry": "US" }
-  },
+  "provider": { "@id": "https://ldndecks.com/#organization" },
   "areaServed": [
     { "@type": "State", "name": "Virginia" }
   ],

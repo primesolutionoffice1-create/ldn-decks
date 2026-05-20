@@ -12,11 +12,11 @@ export const metadata = buildMetadata({
   description: 'Read what Northern Virginia homeowners say about Loudoun Decks. 5.0★ on Google with 41+ reviews. Real feedback from Ashburn, Leesburg, McLean, Vienna & more.',
 });
 
+// Attaches the review list to the single canonical org (@id #organization)
+// without redefining the business entity (no @type / name re-declaration).
 const reviewSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
   "@id": "https://ldndecks.com/#organization",
-  "name": "Loudoun Decks",
   "review": [
     { "@type": "Review", "author": { "@type": "Person", "name": "Sarah J." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Loudoun Decks built our 400 sqft Trex deck in Ashburn. From design to final walkthrough, everything was professional and on schedule. The crew was respectful, clean, and skilled. Our deck looks amazing and we use it every evening now.", "datePublished": "2026-03-15" },
     { "@type": "Review", "author": { "@type": "Person", "name": "Michael T." }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "Best contractor experience we've had in 15 years of homeownership. Nick and his team replaced our old wood deck with Trex Transcend in Leesburg. Handled the HOA submission, pulled all permits, and finished a day early. Highly recommend.", "datePublished": "2026-02-28" },

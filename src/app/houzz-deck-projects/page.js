@@ -18,7 +18,7 @@ const pageSchema = {
   "@type": "WebPage",
   "name": "Loudoun Decks Houzz Projects",
   "description": "Showcase of Loudoun Decks outdoor living projects on Houzz.",
-  "about": { "@type": "LocalBusiness", "@id": "https://ldndecks.com/#organization" }
+  "about": { "@id": "https://ldndecks.com/#organization" }
 };
 
 const S = {

@@ -155,6 +155,7 @@ const productSchema = {
     ratingValue: "5.0",
     reviewCount: "41",
     bestRating: "5",
+    worstRating: "1",
   },
 };
 

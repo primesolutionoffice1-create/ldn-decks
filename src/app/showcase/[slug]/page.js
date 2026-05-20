@@ -40,33 +40,18 @@ export default async function ProjectPage({ params }) {
   const city = project.location.split(',')[0];
   const date = project.location.split(',')[1]?.trim();
 
+  // Project page schema describes the completed work as a Service example and
+  // references the single canonical org (@id #organization) via `provider`.
+  // It must not redefine #organization (doing so minted a per-project address).
   const projectSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://ldndecks.com/#organization",
-    "name": "Loudoun Decks",
+    "@type": "Service",
+    "serviceType": "Deck building",
+    "name": project.title,
+    "description": `${project.title} project completed in ${city}, VA. Professional deck and fence construction by Loudoun Decks.`,
     "image": project.image,
-    "description": `${project.title} project completed in ${city}. Professional deck and fence construction by Loudoun Decks.`,
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": city,
-      "addressRegion": "VA",
-      "addressCountry": "US"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Deck & Fence Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": project.title,
-            "description": `Custom ${project.title.toLowerCase()} installation in ${city}, VA.`
-          }
-        }
-      ]
-    }
+    "provider": { "@id": "https://ldndecks.com/#organization" },
+    "areaServed": { "@type": "Place", "name": `${city}, VA` }
   };
 
   return (

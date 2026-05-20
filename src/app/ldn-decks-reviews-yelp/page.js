@@ -12,27 +12,9 @@ export const metadata = buildMetadata({
   description: 'Read real Yelp reviews for LDN Decks. Trusted deck builder in Northern Virginia — custom decks, Trex, and composite outdoor living projects. 5.0 rated.',
 });
 
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://ldndecks.com/#organization",
-  "name": "LDN Decks",
-  "url": "https://ldndecks.com",
-  "telephone": "+15716557207",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "13704 Winding Oak Cir",
-    "addressLocality": "Centreville",
-    "addressRegion": "VA",
-    "postalCode": "20121",
-    "addressCountry": "US"
-  },
-  "sameAs": [
-    "https://www.yelp.com/biz/loudoun-decks-centreville",
-    "https://www.google.com/maps/place/Loudoun+Decks/",
-    "https://www.houzz.com/pro/webuser-782541997/loudoun-decks"
-  ]
-};
+// reviewSchema is built from the yelpReviews array below — it attaches the
+// review list to the single canonical org (@id #organization) without
+// redefining the business entity.
 
 const S = {
   h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' },
@@ -84,6 +66,17 @@ const yelpReviews = [
     text: 'Our 15-year-old wood deck was falling apart. LDN Decks inspected the frame, said it was still solid, and resurfaced with Trex Enhance. Saved us thousands compared to a full rebuild. No staining ever again \u2014 that alone was worth it.',
   },
 ];
+
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@id": "https://ldndecks.com/#organization",
+  "review": yelpReviews.map((r) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: r.name },
+    reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5", worstRating: "1" },
+    reviewBody: r.text,
+  })),
+};
 
 export default function YelpReviewsPage() {
   return (
