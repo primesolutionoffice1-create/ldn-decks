@@ -1,0 +1,3044 @@
+{
+  "row_count": 642,
+  "columns": [
+    "Keyword status",
+    "Keyword",
+    "Match type",
+    "Campaign",
+    "Ad group",
+    "Status",
+    "Status reasons",
+    "Final URL",
+    "Impr.",
+    "Interactions",
+    "Interaction rate",
+    "Currency code",
+    "Avg. cost",
+    "Cost",
+    "Quality Score",
+    "Exp. CTR",
+    "Landing page exp.",
+    "Ad relevance",
+    "Clicks",
+    "Conv. rate",
+    "Conversions",
+    "Avg. CPC",
+    "Cost / conv."
+  ],
+  "detected_columns": {
+    "campaign": "Campaign",
+    "ad_group": "Ad group",
+    "ad": "Ad group",
+    "search_term": null,
+    "cost": "Cost",
+    "impressions": "Impr.",
+    "clicks": "Clicks",
+    "conversions": "Conversions",
+    "revenue": null,
+    "frequency": null
+  },
+  "totals": {
+    "cost": 34117.17,
+    "impressions": 344863.0,
+    "clicks": 5252.0,
+    "conversions": 285.0,
+    "revenue": 0.0,
+    "ctr": 1.52,
+    "cpa": 119.71,
+    "roas": 0.0
+  },
+  "campaigns": [
+    {
+      "rows": 1,
+      "cost": 4441.92,
+      "impressions": 8514.0,
+      "clicks": 473.0,
+      "conversions": 38.0,
+      "revenue": 0.0,
+      "ctr": 5.56,
+      "cpa": 116.89,
+      "roas": 0.0,
+      "name": "--"
+    },
+    {
+      "rows": 94,
+      "cost": 969.16,
+      "impressions": 1189.0,
+      "clicks": 99.0,
+      "conversions": 12.0,
+      "revenue": 0.0,
+      "ctr": 8.33,
+      "cpa": 80.76,
+      "roas": 0.0,
+      "name": "Deck Repair - Loudoun County"
+    },
+    {
+      "rows": 75,
+      "cost": 333.35,
+      "impressions": 1046.0,
+      "clicks": 40.0,
+      "conversions": 4.0,
+      "revenue": 0.0,
+      "ctr": 3.82,
+      "cpa": 83.34,
+      "roas": 0.0,
+      "name": "Fairfax-Search-Search - Deck Leads - VA - May 2025"
+    },
+    {
+      "rows": 5,
+      "cost": 2303.87,
+      "impressions": 4064.0,
+      "clicks": 253.0,
+      "conversions": 18.0,
+      "revenue": 0.0,
+      "ctr": 6.23,
+      "cpa": 127.99,
+      "roas": 0.0,
+      "name": "Premium Composite Decks"
+    },
+    {
+      "rows": 13,
+      "cost": 55.15,
+      "impressions": 8.0,
+      "clicks": 5.0,
+      "conversions": 0.0,
+      "revenue": 0.0,
+      "ctr": 62.5,
+      "cpa": 0.0,
+      "roas": 0.0,
+      "name": "SRCH | Branded | 3 Counties | Calls"
+    },
+    {
+      "rows": 50,
+      "cost": 105.15,
+      "impressions": 251.0,
+      "clicks": 15.0,
+      "conversions": 1.0,
+      "revenue": 0.0,
+      "ctr": 5.98,
+      "cpa": 105.15,
+      "roas": 0.0,
+      "name": "SRCH | Composite | 3 Counties | Calls"
+    },
+    {
+      "rows": 42,
+      "cost": 104.85,
+      "impressions": 54.0,
+      "clicks": 4.0,
+      "conversions": 0.0,
+      "revenue": 0.0,
+      "ctr": 7.41,
+      "cpa": 0.0,
+      "roas": 0.0,
+      "name": "SRCH | Replacement + Resurfacing | 3 Counties | Calls"
+    },
+    {
+      "rows": 10,
+      "cost": 25233.33,
+      "impressions": 327835.0,
+      "clicks": 4306.0,
+      "conversions": 209.0,
+      "revenue": 0.0,
+      "ctr": 1.31,
+      "cpa": 120.73,
+      "roas": 0.0,
+      "name": "Unlabeled Campaign"
+    },
+    {
+      "rows": 352,
+      "cost": 570.39,
+      "impressions": 1902.0,
+      "clicks": 57.0,
+      "conversions": 3.0,
+      "revenue": 0.0,
+      "ctr": 3.0,
+      "cpa": 190.13,
+      "roas": 0.0,
+      "name": "loudoun decks"
+    }
+  ],
+  "negative_candidates": [],
+  "creative_candidates": [
+    {
+      "name": "Deck Repair - Loudoun County",
+      "rows": 54
+    },
+    {
+      "name": "Loudoun Decks",
+      "rows": 45
+    },
+    {
+      "name": "Deck Builders Near Me",
+      "rows": 44
+    },
+    {
+      "name": "Deck Replacement",
+      "rows": 31
+    },
+    {
+      "name": "Deck Builder - Brambleton",
+      "rows": 24
+    },
+    {
+      "name": "Composite Decking",
+      "rows": 22
+    },
+    {
+      "name": "Deck Builder - Potomac Falls",
+      "rows": 22
+    },
+    {
+      "name": "Deck Builder - Stone Ridge",
+      "rows": 21
+    },
+    {
+      "name": "Deck Builder - Arcola",
+      "rows": 20
+    },
+    {
+      "name": "Deck Builder - Broadlands",
+      "rows": 20
+    },
+    {
+      "name": "Deck Builder - South Riding",
+      "rows": 20
+    },
+    {
+      "name": "Deck Builder - Aldie",
+      "rows": 19
+    },
+    {
+      "name": "Deck Builder - Lansdowne",
+      "rows": 19
+    },
+    {
+      "name": "Deck Builder - Leesburg",
+      "rows": 19
+    },
+    {
+      "name": "Deck Builder - Lovettsville",
+      "rows": 19
+    },
+    {
+      "name": "Deck Builder - Middleburg",
+      "rows": 19
+    },
+    {
+      "name": "Deck Builder - Hamilton",
+      "rows": 18
+    },
+    {
+      "name": "Deck Builder - Round Hill",
+      "rows": 18
+    },
+    {
+      "name": "Deck Builder - Purcellville",
+      "rows": 17
+    },
+    {
+      "name": "Deck Builder - Ashburn",
+      "rows": 16
+    },
+    {
+      "name": "Deck Builder - Sterling",
+      "rows": 16
+    },
+    {
+      "name": "Composite Deck Cost",
+      "rows": 14
+    },
+    {
+      "name": "Deck Resurfacing",
+      "rows": 14
+    },
+    {
+      "name": "Composite Deck Builder",
+      "rows": 13
+    },
+    {
+      "name": "Replace Wood With Composite",
+      "rows": 13
+    }
+  ],
+  "platform": "google",
+  "platform_name": "Google Ads",
+  "source_file": ".raw/sources/exports/google/2026-05-16-search-keyword-report.csv",
+  "source_hash": "5406966362c185c340722a04db6539788a08c5887a7fd7d22f5978cfd457c6b0",
+  "imported_at": "2026-05-16T15:01:50+00:00",
+  "source_label": "search-keyword-report 2026-05-16 Google Ads UI export",
+  "platform_profile": {
+    "schema_version": "ads-brain.platform-profile.v1",
+    "platform": "google",
+    "export_type": "performance_export",
+    "canonical_columns": {
+      "account": null,
+      "campaign": "Campaign",
+      "campaign_id": null,
+      "campaign_type": null,
+      "campaign_status": "Status",
+      "budget": null,
+      "bid_strategy": null,
+      "ad_group": "Ad group",
+      "ad_group_id": null,
+      "ad": null,
+      "ad_id": null,
+      "keyword": "Keyword",
+      "match_type": "Match type",
+      "search_term": null,
+      "landing_page": "Final URL",
+      "conversion_action": null,
+      "attribution_window": null,
+      "api_version": null,
+      "api_version_sunset": null,
+      "tracking_status": null,
+      "consent_mode": null,
+      "enhanced_conversions": null,
+      "offline_import": null,
+      "capi_status": null,
+      "events_api_status": null,
+      "dedup_status": null,
+      "event_id_coverage": null,
+      "event_match_quality": null,
+      "pixel_status": null,
+      "match_keys": null,
+      "insight_tag_status": null,
+      "li_fat_id_status": null,
+      "crm_sync_status": null,
+      "qualified_leads": null,
+      "lead_form": null,
+      "uet_status": null,
+      "google_import_status": null,
+      "adservices_status": null,
+      "adattributionkit_status": null,
+      "aak_config_status": null,
+      "custom_product_page": null,
+      "search_match": null,
+      "asset_group": null,
+      "asset_strength": null,
+      "asset_ratio": null,
+      "ai_max_status": null,
+      "final_url_expansion": null,
+      "safe_zone_status": null,
+      "sound_on": null,
+      "spark_ad": null,
+      "smart_plus": null,
+      "learning_phase": null,
+      "frequency": null,
+      "audience": null,
+      "view_rate": null,
+      "video_views": null,
+      "completion_rate": null,
+      "view_through_conversions": null,
+      "attribution_setting": null,
+      "modeled_conversion_share": null,
+      "conversion_volume_30d": null,
+      "offline_upload_age_days": null,
+      "policy_status": null,
+      "pipeline_value": null,
+      "cost": "Cost",
+      "impressions": "Impr.",
+      "clicks": "Clicks",
+      "conversions": "Conversions",
+      "revenue": null
+    },
+    "entities": {
+      "ad-groups": [
+        {
+          "name": "Deck Repair - Loudoun County",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 54,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 825.13,
+            "impressions": 845.0,
+            "clicks": 79.0,
+            "conversions": 11.0
+          }
+        },
+        {
+          "name": "Loudoun Decks",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 45,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 21.16,
+            "impressions": 93.0,
+            "clicks": 2.0
+          }
+        },
+        {
+          "name": "Deck Builders Near Me",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 44,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 228.92,
+            "impressions": 455.0,
+            "clicks": 22.0,
+            "conversions": 2.0
+          }
+        },
+        {
+          "name": "Deck Replacement",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 31,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 131.23,
+            "impressions": 129.0,
+            "clicks": 10.0
+          }
+        },
+        {
+          "name": "Deck Builder - Brambleton",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 24,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 229.52,
+            "impressions": 865.0,
+            "clicks": 25.0
+          }
+        },
+        {
+          "name": "Composite Decking",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 22,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 29.0
+          }
+        },
+        {
+          "name": "Deck Builder - Potomac Falls",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 22,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 17.98,
+            "impressions": 39.0,
+            "clicks": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Stone Ridge",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 21,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 15.51,
+            "impressions": 16.0,
+            "clicks": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Arcola",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 20,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 10.0
+          }
+        },
+        {
+          "name": "Deck Builder - Broadlands",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 20,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 27.77,
+            "impressions": 39.0,
+            "clicks": 2.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - South Riding",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 20,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 38.54,
+            "impressions": 204.0,
+            "clicks": 7.0
+          }
+        },
+        {
+          "name": "Deck Builder - Aldie",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 19,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 48.8,
+            "impressions": 93.0,
+            "clicks": 6.0
+          }
+        },
+        {
+          "name": "Deck Builder - Lansdowne",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 19,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 14.0
+          }
+        },
+        {
+          "name": "Deck Builder - Leesburg",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 19,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 62.56,
+            "impressions": 113.0,
+            "clicks": 3.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Lovettsville",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 19,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 15.22,
+            "impressions": 17.0,
+            "clicks": 2.0
+          }
+        },
+        {
+          "name": "Deck Builder - Middleburg",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 19,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 30.41,
+            "impressions": 220.0,
+            "clicks": 3.0
+          }
+        },
+        {
+          "name": "Deck Builder - Hamilton",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 18,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 27.24,
+            "impressions": 114.0,
+            "clicks": 3.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Round Hill",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 18,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 35.68,
+            "impressions": 56.0,
+            "clicks": 2.0
+          }
+        },
+        {
+          "name": "Deck Builder - Purcellville",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 17,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 6.0
+          }
+        },
+        {
+          "name": "Deck Builder - Ashburn",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 16,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 1.0
+          }
+        },
+        {
+          "name": "Deck Builder - Sterling",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 16,
+          "campaign": "loudoun decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 2.0
+          }
+        },
+        {
+          "name": "Composite Deck Cost",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 14,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 65.1,
+            "impressions": 201.0,
+            "clicks": 12.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Resurfacing",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 14,
+          "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 10.26,
+            "impressions": 13.0,
+            "clicks": 1.0
+          }
+        },
+        {
+          "name": "Composite Deck Builder",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 13,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 21.0
+          }
+        },
+        {
+          "name": "Replace Wood With Composite",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 13,
+          "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 1.0
+          }
+        },
+        {
+          "name": "TimberTech/AZEK",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 12,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 1.0
+          }
+        },
+        {
+          "name": "Trex",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 11,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 40.05,
+            "impressions": 28.0,
+            "clicks": 3.0
+          }
+        },
+        {
+          "name": "Brand Phrase",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 8,
+          "campaign": "SRCH | Branded | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {}
+        },
+        {
+          "name": "Composite - Trex Repair",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 8,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 17.35,
+            "impressions": 108.0,
+            "clicks": 5.0
+          }
+        },
+        {
+          "name": "Deck Renovation",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 8,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 90.04,
+            "impressions": 144.0,
+            "clicks": 8.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "Deck Restoration - Refinishing",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 8,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Ad group",
+          "metrics": {
+            "impressions": 3.0
+          }
+        },
+        {
+          "name": "Deck + Patio / Outdoor Living",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 6,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 104.43,
+            "impressions": 562.0,
+            "clicks": 18.0,
+            "conversions": 2.0
+          }
+        },
+        {
+          "name": "Ad group 1",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 5,
+          "campaign": "Premium Composite Decks",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 2303.87,
+            "impressions": 4064.0,
+            "clicks": 253.0,
+            "conversions": 18.0
+          }
+        },
+        {
+          "name": "Brand Exact",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 5,
+          "campaign": "SRCH | Branded | 3 Counties | Calls",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 55.15,
+            "impressions": 8.0,
+            "clicks": 5.0
+          }
+        },
+        {
+          "name": "Composite Decks",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Ad group",
+          "metrics": {}
+        },
+        {
+          "name": "--",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "--",
+          "source_field": "Ad group",
+          "metrics": {
+            "cost": 4441.92,
+            "impressions": 8514.0,
+            "clicks": 473.0,
+            "conversions": 38.0
+          }
+        },
+        {
+          "name": "Deck Repair & Refinishing",
+          "folder": "ad-groups",
+          "type_label": "Ad Group / Ad Set / Asset Group",
+          "row_count": 1,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Ad group",
+          "metrics": {}
+        }
+      ],
+      "keywords": [
+        {
+          "name": "[deck builder near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 9,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 86.34,
+            "impressions": 309.0,
+            "clicks": 9.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "[deck builders near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 7,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 194.43,
+            "impressions": 692.0,
+            "clicks": 18.0,
+            "conversions": 2.0
+          }
+        },
+        {
+          "name": "[deck refinishing near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 4,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 96.72,
+            "impressions": 40.0,
+            "clicks": 6.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "[deck replacement contractor]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 3,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 1406.05,
+            "impressions": 2572.0,
+            "clicks": 132.0,
+            "conversions": 10.0
+          }
+        },
+        {
+          "name": "[deck replacement near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 3,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "[trex deck contractor]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 3,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 40.05,
+            "impressions": 6.0,
+            "clicks": 3.0
+          }
+        },
+        {
+          "name": "\"composite deck builder near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 2.0
+          }
+        },
+        {
+          "name": "\"deck builder near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 3.0
+          }
+        },
+        {
+          "name": "\"deck replacement near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 20.13,
+            "impressions": 17.0,
+            "clicks": 3.0
+          }
+        },
+        {
+          "name": "\"deck resurfacing near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 2.0
+          }
+        },
+        {
+          "name": "\"trex deck builder loudoun county\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"trex deck builder near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "[best deck builders near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 2.0
+          }
+        },
+        {
+          "name": "[composite deck builder]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "[composite deck contractor]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 196.59,
+            "impressions": 321.0,
+            "clicks": 25.0,
+            "conversions": 3.0
+          }
+        },
+        {
+          "name": "[composite deck repair near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "[custom deck builder near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 651.27,
+            "impressions": 1061.0,
+            "clicks": 88.0,
+            "conversions": 5.0
+          }
+        },
+        {
+          "name": "[deck and patio contractors near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 15.75,
+            "impressions": 73.0,
+            "clicks": 6.0
+          }
+        },
+        {
+          "name": "[deck and porch builders near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "[deck repair loudoun county]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 46.5,
+            "impressions": 42.0,
+            "clicks": 4.0
+          }
+        },
+        {
+          "name": "[deck repair near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 120.92,
+            "impressions": 91.0,
+            "clicks": 9.0
+          }
+        },
+        {
+          "name": "[deck restoration company]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "[deck restoration near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 2.0
+          }
+        },
+        {
+          "name": "[deck resurfacing companies]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "[deck resurfacing contractor]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "[deck resurfacing near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 2.0
+          }
+        },
+        {
+          "name": "[deck resurfacing]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 10.26,
+            "impressions": 10.0,
+            "clicks": 1.0
+          }
+        },
+        {
+          "name": "[deck wood replacement]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 21.0
+          }
+        },
+        {
+          "name": "[decks and patios]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 29.48,
+            "impressions": 326.0,
+            "clicks": 6.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "[full deck replacement]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "[timbertech deck builder]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 6.0
+          }
+        },
+        {
+          "name": "[trex deck builder near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 3.0
+          }
+        },
+        {
+          "name": "[trex deck installer]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 49.96,
+            "impressions": 109.0,
+            "clicks": 8.0
+          }
+        },
+        {
+          "name": "[wood deck replacement near me]",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 2,
+          "campaign": "Deck Repair - Loudoun County",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"azek deck builder near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"azek deck builder\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"azek deck contractor\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"azek deck cost\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"azek deck installer\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 1.0
+          }
+        },
+        {
+          "name": "\"best deck builders near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 2.0
+          }
+        },
+        {
+          "name": "\"build a new deck near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck aldie\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck arcola\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck ashburn\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck brambleton\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck broadlands\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck builder fairfax county\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck builder loudoun county\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck builder prince william county\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck builder\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 7.0
+          }
+        },
+        {
+          "name": "\"composite deck contractor near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck contractor\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 2.0
+          }
+        },
+        {
+          "name": "\"composite deck cost fairfax county\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck cost loudoun county\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck cost near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 1.0
+          }
+        },
+        {
+          "name": "\"composite deck cost\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 13.0
+          }
+        },
+        {
+          "name": "\"composite deck hamilton va\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck installation fairfax\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck installation near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck installer\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {
+            "impressions": 9.0
+          }
+        },
+        {
+          "name": "\"composite deck lansdowne\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck leesburg\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck lovettsville\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck middleburg\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck potomac falls\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck price\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {
+            "cost": 62.81,
+            "impressions": 153.0,
+            "clicks": 11.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "\"composite deck purcellville\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck resurfacing\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck round hill\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck south riding\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck sterling\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite deck stone ridge\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite decking contractor near me\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"composite decking contractor\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        },
+        {
+          "name": "\"convert wood deck to composite\"",
+          "folder": "keywords",
+          "type_label": "Keyword",
+          "row_count": 1,
+          "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+          "source_field": "Keyword",
+          "metrics": {}
+        }
+      ],
+      "landing-pages": [
+        {
+          "name": "https://www.ldndecks.com/composite-decks/",
+          "folder": "landing-pages",
+          "type_label": "Landing Page",
+          "row_count": 50,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Final URL",
+          "metrics": {
+            "cost": 105.15,
+            "impressions": 251.0,
+            "clicks": 15.0,
+            "conversions": 1.0
+          }
+        },
+        {
+          "name": "https://www.ldndecks.com/services/deck-replacement/",
+          "folder": "landing-pages",
+          "type_label": "Landing Page",
+          "row_count": 42,
+          "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+          "source_field": "Final URL",
+          "metrics": {
+            "cost": 104.85,
+            "impressions": 54.0,
+            "clicks": 4.0
+          }
+        },
+        {
+          "name": "https://www.ldndecks.com/contact/",
+          "folder": "landing-pages",
+          "type_label": "Landing Page",
+          "row_count": 13,
+          "campaign": "SRCH | Branded | 3 Counties | Calls",
+          "source_field": "Final URL",
+          "metrics": {
+            "cost": 55.15,
+            "impressions": 8.0,
+            "clicks": 5.0
+          }
+        }
+      ]
+    },
+    "checks": [
+      {
+        "id": "G-TRK1",
+        "platform": "google",
+        "category": "tracking",
+        "severity": "critical",
+        "status": "warning",
+        "description": "Conversion action evidence present for Google Ads.",
+        "evidence": "column: missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-CM2",
+        "platform": "google",
+        "category": "tracking",
+        "severity": "critical",
+        "status": "warning",
+        "description": "Consent Mode v2 status documented when relevant.",
+        "evidence": "column missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-EC1",
+        "platform": "google",
+        "category": "tracking",
+        "severity": "critical",
+        "status": "warning",
+        "description": "Enhanced conversions/offline conversion quality documented.",
+        "evidence": "column missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-PMAX1",
+        "platform": "google",
+        "category": "pmax",
+        "severity": "high",
+        "status": "pass",
+        "description": "PMax rows include asset group and asset strength evidence.",
+        "evidence": "PMax rows: 0; asset group: missing; asset strength: missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-ST1",
+        "platform": "google",
+        "category": "search-term-hygiene",
+        "severity": "high",
+        "status": "warning",
+        "description": "Search term export evidence available for waste review.",
+        "evidence": "column: missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-AIMAX1",
+        "platform": "google",
+        "category": "api-version",
+        "severity": "medium",
+        "status": "warning",
+        "description": "AI Max status should be documented for Search/DSA/ACA/broad-match risk.",
+        "evidence": "column: missing",
+        "source": "imported export"
+      }
+    ],
+    "signals": {
+      "has_search_terms": false,
+      "has_tracking_diagnostics": false,
+      "has_crm_quality": false,
+      "creative_count": 0,
+      "keyword_count": 580,
+      "landing_page_count": 3,
+      "active_learning_count": 0,
+      "policy_issue_count": 0,
+      "platform": "google"
+    }
+  },
+  "adapter_checks": [
+    {
+      "id": "G-TRK1",
+      "platform": "google",
+      "category": "tracking",
+      "severity": "critical",
+      "status": "warning",
+      "description": "Conversion action evidence present for Google Ads.",
+      "evidence": "column: missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-CM2",
+      "platform": "google",
+      "category": "tracking",
+      "severity": "critical",
+      "status": "warning",
+      "description": "Consent Mode v2 status documented when relevant.",
+      "evidence": "column missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-EC1",
+      "platform": "google",
+      "category": "tracking",
+      "severity": "critical",
+      "status": "warning",
+      "description": "Enhanced conversions/offline conversion quality documented.",
+      "evidence": "column missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-PMAX1",
+      "platform": "google",
+      "category": "pmax",
+      "severity": "high",
+      "status": "pass",
+      "description": "PMax rows include asset group and asset strength evidence.",
+      "evidence": "PMax rows: 0; asset group: missing; asset strength: missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-ST1",
+      "platform": "google",
+      "category": "search-term-hygiene",
+      "severity": "high",
+      "status": "warning",
+      "description": "Search term export evidence available for waste review.",
+      "evidence": "column: missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-AIMAX1",
+      "platform": "google",
+      "category": "api-version",
+      "severity": "medium",
+      "status": "warning",
+      "description": "AI Max status should be documented for Search/DSA/ACA/broad-match risk.",
+      "evidence": "column: missing",
+      "source": "imported export"
+    }
+  ],
+  "entities": {
+    "ad-groups": [
+      {
+        "name": "Deck Repair - Loudoun County",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 54,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 825.13,
+          "impressions": 845.0,
+          "clicks": 79.0,
+          "conversions": 11.0
+        }
+      },
+      {
+        "name": "Loudoun Decks",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 45,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 21.16,
+          "impressions": 93.0,
+          "clicks": 2.0
+        }
+      },
+      {
+        "name": "Deck Builders Near Me",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 44,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 228.92,
+          "impressions": 455.0,
+          "clicks": 22.0,
+          "conversions": 2.0
+        }
+      },
+      {
+        "name": "Deck Replacement",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 31,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 131.23,
+          "impressions": 129.0,
+          "clicks": 10.0
+        }
+      },
+      {
+        "name": "Deck Builder - Brambleton",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 24,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 229.52,
+          "impressions": 865.0,
+          "clicks": 25.0
+        }
+      },
+      {
+        "name": "Composite Decking",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 22,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 29.0
+        }
+      },
+      {
+        "name": "Deck Builder - Potomac Falls",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 22,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 17.98,
+          "impressions": 39.0,
+          "clicks": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Stone Ridge",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 21,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 15.51,
+          "impressions": 16.0,
+          "clicks": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Arcola",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 20,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 10.0
+        }
+      },
+      {
+        "name": "Deck Builder - Broadlands",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 20,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 27.77,
+          "impressions": 39.0,
+          "clicks": 2.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - South Riding",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 20,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 38.54,
+          "impressions": 204.0,
+          "clicks": 7.0
+        }
+      },
+      {
+        "name": "Deck Builder - Aldie",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 19,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 48.8,
+          "impressions": 93.0,
+          "clicks": 6.0
+        }
+      },
+      {
+        "name": "Deck Builder - Lansdowne",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 19,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 14.0
+        }
+      },
+      {
+        "name": "Deck Builder - Leesburg",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 19,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 62.56,
+          "impressions": 113.0,
+          "clicks": 3.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Lovettsville",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 19,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 15.22,
+          "impressions": 17.0,
+          "clicks": 2.0
+        }
+      },
+      {
+        "name": "Deck Builder - Middleburg",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 19,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 30.41,
+          "impressions": 220.0,
+          "clicks": 3.0
+        }
+      },
+      {
+        "name": "Deck Builder - Hamilton",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 18,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 27.24,
+          "impressions": 114.0,
+          "clicks": 3.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Round Hill",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 18,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 35.68,
+          "impressions": 56.0,
+          "clicks": 2.0
+        }
+      },
+      {
+        "name": "Deck Builder - Purcellville",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 17,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 6.0
+        }
+      },
+      {
+        "name": "Deck Builder - Ashburn",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 16,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 1.0
+        }
+      },
+      {
+        "name": "Deck Builder - Sterling",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 16,
+        "campaign": "loudoun decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 2.0
+        }
+      },
+      {
+        "name": "Composite Deck Cost",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 14,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 65.1,
+          "impressions": 201.0,
+          "clicks": 12.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Resurfacing",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 14,
+        "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 10.26,
+          "impressions": 13.0,
+          "clicks": 1.0
+        }
+      },
+      {
+        "name": "Composite Deck Builder",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 13,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 21.0
+        }
+      },
+      {
+        "name": "Replace Wood With Composite",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 13,
+        "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 1.0
+        }
+      },
+      {
+        "name": "TimberTech/AZEK",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 12,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 1.0
+        }
+      },
+      {
+        "name": "Trex",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 11,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 40.05,
+          "impressions": 28.0,
+          "clicks": 3.0
+        }
+      },
+      {
+        "name": "Brand Phrase",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 8,
+        "campaign": "SRCH | Branded | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {}
+      },
+      {
+        "name": "Composite - Trex Repair",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 8,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 17.35,
+          "impressions": 108.0,
+          "clicks": 5.0
+        }
+      },
+      {
+        "name": "Deck Renovation",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 8,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 90.04,
+          "impressions": 144.0,
+          "clicks": 8.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "Deck Restoration - Refinishing",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 8,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Ad group",
+        "metrics": {
+          "impressions": 3.0
+        }
+      },
+      {
+        "name": "Deck + Patio / Outdoor Living",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 6,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 104.43,
+          "impressions": 562.0,
+          "clicks": 18.0,
+          "conversions": 2.0
+        }
+      },
+      {
+        "name": "Ad group 1",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 5,
+        "campaign": "Premium Composite Decks",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 2303.87,
+          "impressions": 4064.0,
+          "clicks": 253.0,
+          "conversions": 18.0
+        }
+      },
+      {
+        "name": "Brand Exact",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 5,
+        "campaign": "SRCH | Branded | 3 Counties | Calls",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 55.15,
+          "impressions": 8.0,
+          "clicks": 5.0
+        }
+      },
+      {
+        "name": "Composite Decks",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Ad group",
+        "metrics": {}
+      },
+      {
+        "name": "--",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "--",
+        "source_field": "Ad group",
+        "metrics": {
+          "cost": 4441.92,
+          "impressions": 8514.0,
+          "clicks": 473.0,
+          "conversions": 38.0
+        }
+      },
+      {
+        "name": "Deck Repair & Refinishing",
+        "folder": "ad-groups",
+        "type_label": "Ad Group / Ad Set / Asset Group",
+        "row_count": 1,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Ad group",
+        "metrics": {}
+      }
+    ],
+    "keywords": [
+      {
+        "name": "[deck builder near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 9,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 86.34,
+          "impressions": 309.0,
+          "clicks": 9.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "[deck builders near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 7,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 194.43,
+          "impressions": 692.0,
+          "clicks": 18.0,
+          "conversions": 2.0
+        }
+      },
+      {
+        "name": "[deck refinishing near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 4,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 96.72,
+          "impressions": 40.0,
+          "clicks": 6.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "[deck replacement contractor]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 3,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 1406.05,
+          "impressions": 2572.0,
+          "clicks": 132.0,
+          "conversions": 10.0
+        }
+      },
+      {
+        "name": "[deck replacement near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 3,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "[trex deck contractor]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 3,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 40.05,
+          "impressions": 6.0,
+          "clicks": 3.0
+        }
+      },
+      {
+        "name": "\"composite deck builder near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 2.0
+        }
+      },
+      {
+        "name": "\"deck builder near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 3.0
+        }
+      },
+      {
+        "name": "\"deck replacement near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 20.13,
+          "impressions": 17.0,
+          "clicks": 3.0
+        }
+      },
+      {
+        "name": "\"deck resurfacing near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 2.0
+        }
+      },
+      {
+        "name": "\"trex deck builder loudoun county\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"trex deck builder near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "[best deck builders near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 2.0
+        }
+      },
+      {
+        "name": "[composite deck builder]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "[composite deck contractor]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 196.59,
+          "impressions": 321.0,
+          "clicks": 25.0,
+          "conversions": 3.0
+        }
+      },
+      {
+        "name": "[composite deck repair near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "[custom deck builder near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 651.27,
+          "impressions": 1061.0,
+          "clicks": 88.0,
+          "conversions": 5.0
+        }
+      },
+      {
+        "name": "[deck and patio contractors near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 15.75,
+          "impressions": 73.0,
+          "clicks": 6.0
+        }
+      },
+      {
+        "name": "[deck and porch builders near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "[deck repair loudoun county]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 46.5,
+          "impressions": 42.0,
+          "clicks": 4.0
+        }
+      },
+      {
+        "name": "[deck repair near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 120.92,
+          "impressions": 91.0,
+          "clicks": 9.0
+        }
+      },
+      {
+        "name": "[deck restoration company]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "[deck restoration near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 2.0
+        }
+      },
+      {
+        "name": "[deck resurfacing companies]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "[deck resurfacing contractor]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "[deck resurfacing near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 2.0
+        }
+      },
+      {
+        "name": "[deck resurfacing]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 10.26,
+          "impressions": 10.0,
+          "clicks": 1.0
+        }
+      },
+      {
+        "name": "[deck wood replacement]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 21.0
+        }
+      },
+      {
+        "name": "[decks and patios]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 29.48,
+          "impressions": 326.0,
+          "clicks": 6.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "[full deck replacement]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "[timbertech deck builder]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 6.0
+        }
+      },
+      {
+        "name": "[trex deck builder near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 3.0
+        }
+      },
+      {
+        "name": "[trex deck installer]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 49.96,
+          "impressions": 109.0,
+          "clicks": 8.0
+        }
+      },
+      {
+        "name": "[wood deck replacement near me]",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 2,
+        "campaign": "Deck Repair - Loudoun County",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"azek deck builder near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"azek deck builder\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"azek deck contractor\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"azek deck cost\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"azek deck installer\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 1.0
+        }
+      },
+      {
+        "name": "\"best deck builders near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 2.0
+        }
+      },
+      {
+        "name": "\"build a new deck near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck aldie\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck arcola\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck ashburn\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck brambleton\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck broadlands\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck builder fairfax county\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck builder loudoun county\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck builder prince william county\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck builder\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 7.0
+        }
+      },
+      {
+        "name": "\"composite deck contractor near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck contractor\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 2.0
+        }
+      },
+      {
+        "name": "\"composite deck cost fairfax county\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck cost loudoun county\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck cost near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 1.0
+        }
+      },
+      {
+        "name": "\"composite deck cost\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 13.0
+        }
+      },
+      {
+        "name": "\"composite deck hamilton va\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck installation fairfax\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck installation near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck installer\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {
+          "impressions": 9.0
+        }
+      },
+      {
+        "name": "\"composite deck lansdowne\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck leesburg\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck lovettsville\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck middleburg\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck potomac falls\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck price\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {
+          "cost": 62.81,
+          "impressions": 153.0,
+          "clicks": 11.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "\"composite deck purcellville\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck resurfacing\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck round hill\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck south riding\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck sterling\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite deck stone ridge\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite decking contractor near me\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "Fairfax-Search-Search - Deck Leads - VA - May 2025",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"composite decking contractor\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      },
+      {
+        "name": "\"convert wood deck to composite\"",
+        "folder": "keywords",
+        "type_label": "Keyword",
+        "row_count": 1,
+        "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+        "source_field": "Keyword",
+        "metrics": {}
+      }
+    ],
+    "landing-pages": [
+      {
+        "name": "https://www.ldndecks.com/composite-decks/",
+        "folder": "landing-pages",
+        "type_label": "Landing Page",
+        "row_count": 50,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Final URL",
+        "metrics": {
+          "cost": 105.15,
+          "impressions": 251.0,
+          "clicks": 15.0,
+          "conversions": 1.0
+        }
+      },
+      {
+        "name": "https://www.ldndecks.com/services/deck-replacement/",
+        "folder": "landing-pages",
+        "type_label": "Landing Page",
+        "row_count": 42,
+        "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+        "source_field": "Final URL",
+        "metrics": {
+          "cost": 104.85,
+          "impressions": 54.0,
+          "clicks": 4.0
+        }
+      },
+      {
+        "name": "https://www.ldndecks.com/contact/",
+        "folder": "landing-pages",
+        "type_label": "Landing Page",
+        "row_count": 13,
+        "campaign": "SRCH | Branded | 3 Counties | Calls",
+        "source_field": "Final URL",
+        "metrics": {
+          "cost": 55.15,
+          "impressions": 8.0,
+          "clicks": 5.0
+        }
+      }
+    ]
+  }
+}

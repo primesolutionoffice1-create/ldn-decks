@@ -1,0 +1,4 @@
+Command: curl -I https://www.ldndecks.com/?gclid=CURLTEST123
+Date: 2026-05-16
+Result: HTTP/2 308 redirects to location: https://ldndecks.com/?gclid=CURLTEST123
+Evidence meaning: www to root-domain redirect preserves gclid query parameter.
