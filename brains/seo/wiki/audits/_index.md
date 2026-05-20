@@ -2,7 +2,7 @@
 type: "index"
 title: "Audits Hub"
 created: "2026-05-19"
-updated: "2026-05-19"
+updated: "2026-05-20"
 ---
 
 # Audits Hub
@@ -15,6 +15,7 @@ updated: "2026-05-19"
 
 ## Notes
 
+- [[site-seo-audit-2026-05-20]] — full site SEO audit, 75/100 (2026-05-20)
 - [[content-audit-homepage]]
 - [[content-audit-overview]]
 - [[content-audit-supporting-pages]]
