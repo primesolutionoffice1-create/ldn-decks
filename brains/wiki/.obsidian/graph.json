@@ -1,0 +1,93 @@
+{
+  "collapse-filter": false,
+  "search": "path:wiki/",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:wiki/meta OR path:wiki/index.md OR path:wiki/hot.md OR path:wiki/log.md OR path:wiki/overview.md OR path:wiki/getting-started.md",
+      "color": {
+        "a": 1,
+        "rgb": 5676246
+      }
+    },
+    {
+      "query": "path:wiki/domains OR tag:#operating-brain OR tag:#business/operating-brain",
+      "color": {
+        "a": 1,
+        "rgb": 5227007
+      }
+    },
+    {
+      "query": "tag:#local-seo OR tag:#location-intent OR tag:#channel/local-seo",
+      "color": {
+        "a": 1,
+        "rgb": 6986069
+      }
+    },
+    {
+      "query": "tag:#content OR tag:#publishing OR tag:#faq OR tag:#comparison-pages OR tag:#channel/content",
+      "color": {
+        "a": 1,
+        "rgb": 14474410
+      }
+    },
+    {
+      "query": "tag:#ai-search OR tag:#geo OR tag:#channel/ai-search",
+      "color": {
+        "a": 1,
+        "rgb": 12945088
+      }
+    },
+    {
+      "query": "tag:#google-ads OR tag:#revenue OR tag:#channel/google-ads",
+      "color": {
+        "a": 1,
+        "rgb": 13537656
+      }
+    },
+    {
+      "query": "tag:#services OR tag:#outdoor-living",
+      "color": {
+        "a": 1,
+        "rgb": 11914920
+      }
+    },
+    {
+      "query": "tag:#authority OR tag:#trust OR tag:#eeat",
+      "color": {
+        "a": 1,
+        "rgb": 10280190
+      }
+    },
+    {
+      "query": "tag:#operations OR tag:#dashboard OR tag:#wiki/dashboard OR tag:#graph/hub",
+      "color": {
+        "a": 1,
+        "rgb": 13412096
+      }
+    },
+    {
+      "query": "tag:#needs-review",
+      "color": {
+        "a": 1,
+        "rgb": 13724009
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": -0.3,
+  "nodeSizeMultiplier": 1.2,
+  "lineSizeMultiplier": 0.9,
+  "collapse-forces": false,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 11,
+  "linkStrength": 1,
+  "linkDistance": 210,
+  "scale": 0.1774005452539315,
+  "close": true
+}
