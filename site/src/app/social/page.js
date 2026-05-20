@@ -2,9 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ContactHome from '@/components/ContactHome';
 import SimpleCTA from '@/components/SimpleCTA';
-import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
-import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/social',
@@ -12,21 +10,8 @@ export const metadata = buildMetadata({
   description: 'Follow LDN Decks on X, Instagram, Facebook, Houzz, Yelp & more. See our latest deck projects, tips, and reviews across Northern Virginia.',
 });
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://ldndecks.com/#organization",
-  "name": BUSINESS.alternateName,
-  "alternateName": BUSINESS.name,
-  "url": BUSINESS.url,
-  "telephone": BUSINESS.telephone,
-  "address": {
-    "@type": "PostalAddress",
-    ...BUSINESS.address
-  },
-  "sameAs": BUSINESS.sameAs,
-};
-
+// No page-level org JSON-LD here: the canonical #organization entity (with
+// sameAs / NAP) is emitted once globally by StructuredData in the root layout.
 const socialProfiles = [
   {
     name: 'X (Twitter)',
@@ -113,8 +98,6 @@ const socialProfiles = [
 export default function SocialPage() {
   return (
     <main>
-      <JsonLd data={organizationSchema} />
-
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Follow LDN Decks</h1>

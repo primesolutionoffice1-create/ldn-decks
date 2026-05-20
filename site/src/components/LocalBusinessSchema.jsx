@@ -1,58 +1,25 @@
 import React from 'react';
 import JsonLd from './JsonLd';
+import { ORG_ID } from '@/lib/business';
 
+// City / county page schema.
+// Emits a Service node that REFERENCES the single canonical organization
+// (@id #organization, defined once globally in StructuredData) via `provider`.
+// It must NOT redefine the business: minting a per-city business node
+// fragments review and entity-trust signals into duplicate entities.
 export default function LocalBusinessSchema({ city, description, url, areaType = 'City' }) {
   const areaName = city.includes(',') ? city : `${city}, VA`;
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "@id": `https://ldndecks.com/#organization-${city.toLowerCase().replace(/\s+/g, '-')}`,
-    "name": "Loudoun Decks",
-    "alternateName": "LDN Decks",
-    "url": url || "https://ldndecks.com",
-    "logo": "https://ldndecks.com/ldndecks-logo.webp",
-    "image": "https://ldndecks.com/images/img64.jpeg",
-    "description": description || `Top-rated custom deck builder in ${city}, Northern Virginia. Trex Platinum Partner and TimberTech Certified Installer.`,
-    "telephone": "+15716557207",
-    "email": "office@ldndecks.com",
-    "priceRange": "$$-$$$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "13704 Winding Oak Cir",
-      "addressLocality": "Centreville",
-      "addressRegion": "VA",
-      "postalCode": "20121",
-      "addressCountry": "US"
-    },
-    "geo": { 
-      "@type": "GeoCoordinates", 
-      "latitude": 38.8404, 
-      "longitude": -77.4289 
-    },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "19:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "17:00" }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "41",
-      "bestRating": "5"
-    },
-    "areaServed": [
-      { "@type": areaType, "name": areaName }
-    ],
-    "sameAs": [
-      "https://x.com/ldndecks",
-      "https://www.instagram.com/loudoundecks/",
-      "https://www.facebook.com/profile.php?id=61573750423712",
-      "https://www.google.com/maps/place/Loudoun+Decks/",
-      "https://www.houzz.com/pro/webuser-782541997/loudoun-decks",
-      "https://www.yelp.com/biz/loudoun-decks-centreville",
-      "https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241",
-      "https://www.trustpilot.com/review/ldndecks.com",
-      "https://business.loudounchamber.org/list/member/loudoun-decks-30047"
-    ]
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Deck building',
+    name: `Deck Builder in ${city}`,
+    description:
+      description ||
+      `Top-rated custom deck builder serving ${city}, Northern Virginia. Trex Platinum Partner and TimberTech Certified Installer.`,
+    provider: { '@id': ORG_ID },
+    areaServed: { '@type': areaType, name: areaName },
+    ...(url ? { url } : {}),
   };
 
   return <JsonLd data={schema} />;

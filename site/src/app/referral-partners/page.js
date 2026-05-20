@@ -46,7 +46,7 @@ const pageSchema = {
   description: 'Referral partner page for professionals who want to introduce homeowners to LDN Decks for deck, porch, patio, and outdoor living projects.',
   url: 'https://ldndecks.com/referral-partners',
   isPartOf: { '@type': 'WebSite', '@id': 'https://ldndecks.com/#website' },
-  about: { '@type': 'LocalBusiness', '@id': 'https://ldndecks.com/#organization' },
+  about: { '@id': 'https://ldndecks.com/#organization' },
 };
 
 const faqSchema = {
