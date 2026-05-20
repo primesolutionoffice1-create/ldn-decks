@@ -30,7 +30,7 @@ const links = [
   },
   {
     href: '/reviews',
-    title: '41+ Five-Star Reviews',
+    title: '49+ Five-Star Reviews',
     desc: 'Read what Northern Virginia homeowners say about us.',
   },
   {

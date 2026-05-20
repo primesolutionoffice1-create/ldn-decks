@@ -23,7 +23,7 @@ export default function RatingBadge() {
     >
       <span style={{ color: '#f59e0b', fontSize: '1rem' }}>★★★★★</span>
       <span style={{ fontWeight: 600 }}>5.0</span>
-      <span style={{ color: '#888' }}>from 41+ Google reviews</span>
+      <span style={{ color: '#888' }}>from 49+ Google reviews</span>
     </div>
   );
 }

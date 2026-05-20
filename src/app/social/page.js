@@ -41,7 +41,7 @@ const socialProfiles = [
     name: 'Google Business',
     handle: 'Loudoun Decks',
     url: 'https://www.google.com/maps/place/Loudoun+Decks/',
-    desc: '41+ five-star reviews. See our location, hours, photos, and leave a review.',
+    desc: '49+ five-star reviews. See our location, hours, photos, and leave a review.',
     color: '#4285F4',
     icon: 'G',
   },
@@ -169,7 +169,7 @@ export default function SocialPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/before-and-after', 'Before & After Deck Transformations'],
-              ['/reviews', 'Read Our 41+ Google Reviews'],
+              ['/reviews', 'Read Our 49+ Google Reviews'],
               ['/team', 'Meet Our Team'],
               ['/about/certifications-and-licenses', 'Certifications & Licenses'],
               ['/showcase', 'Full Project Gallery'],

@@ -153,7 +153,7 @@ const productSchema = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5.0",
-    reviewCount: "41",
+    reviewCount: "49",
     bestRating: "5",
     worstRating: "1",
   },

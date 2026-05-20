@@ -82,7 +82,7 @@ export default function Testimonials() {
 
         <div className={styles.reviewsCta}>
           <Link href="/reviews" className={styles.reviewsButton}>
-            Read All 41 Google Reviews &rarr;
+            Read All 49 Google Reviews &rarr;
           </Link>
           <a
             href="https://www.google.com/maps/place/Loudoun+Decks/"

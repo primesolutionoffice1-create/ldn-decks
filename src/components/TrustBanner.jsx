@@ -16,7 +16,7 @@ export default function TrustBanner() {
         <div className={styles.icon} aria-hidden="true">⭐</div>
         <div className={styles.text}>
           <strong>5.0 Google Rating</strong>
-          <span>41+ Five-Star Reviews</span>
+          <span>49+ Five-Star Reviews</span>
         </div>
       </div>
       <div className={styles.divider}></div>

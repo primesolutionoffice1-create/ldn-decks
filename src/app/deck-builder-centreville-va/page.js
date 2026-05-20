@@ -14,7 +14,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/deck-builder-centreville-va',
   title: 'Deck Builder in Centreville, VA | Trex | Loudoun Decks',
-  description: 'Loudoun Decks is headquartered in Centreville, VA. 5.0★ Google (41+ reviews). Custom Trex & composite decks, porches, patios. Visit our showroom. (571) 655-7207.',
+  description: 'Loudoun Decks is headquartered in Centreville, VA. 5.0★ Google (49+ reviews). Custom Trex & composite decks, porches, patios. Visit our showroom. (571) 655-7207.',
 });
 
 const faqSchema = {
@@ -48,7 +48,7 @@ export default function CentrevilleDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Visit Our Showroom</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · 41 reviews · 13704 Winding Oak Cir, Centreville, VA 20121</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · 49 reviews · 13704 Winding Oak Cir, Centreville, VA 20121</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>

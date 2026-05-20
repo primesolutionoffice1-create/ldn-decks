@@ -26,7 +26,7 @@ export default function Hero() {
         </div>
         <div className={styles.trustBadge}>
           <span className={styles.stars}>★★★★★</span>
-          <span className={styles.ratingText}>5.0 Google Rating | 41 Reviews</span>
+          <span className={styles.ratingText}>5.0 Google Rating | 49 Reviews</span>
         </div>
         <h1 className={styles.title}>
           Custom Deck Builder &amp; Contractor Serving Northern Virginia

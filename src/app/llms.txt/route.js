@@ -11,7 +11,7 @@ export async function GET() {
 - **Location**: Northern Virginia (two offices: Centreville, VA & Manassas, VA)
 - **Phone**: (571) 655-7207
 - **Website**: https://ldndecks.com
-- **Rating**: 5.0/5 stars from 41+ Google reviews
+- **Rating**: 5.0/5 stars from 49+ Google reviews
 - **Certifications**: Trex Platinum Partner, TimberTech Certified Installer
 
 ## Services
