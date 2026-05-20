@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/reviews',
-  title: 'Loudoun Decks Reviews | 5.0★ Google Rating | 41+ Reviews',
+  title: 'Loudoun Decks Reviews | 5.0 Google Rating | 41+ Reviews',
   description: 'Read what Northern Virginia homeowners say about Loudoun Decks. 5.0★ on Google with 41+ reviews. Real feedback from Ashburn, Leesburg, McLean, Vienna & more.',
 });
 

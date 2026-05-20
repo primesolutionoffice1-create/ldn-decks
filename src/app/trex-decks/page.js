@@ -14,7 +14,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/trex-decks',
-  title: 'Trex Platinum Deck Builder NoVA | 5.0★ Rated Contractor',
+  title: 'Trex Platinum Deck Builder NoVA | 5-Star Rated Contractor',
   description: 'Looking for a Trex Platinum Partner in Northern Virginia? Loudoun Decks specializes in premium Trex Transcend & Lineage installations. Free 24h estimates!',
   image: '/images/img01.jpeg',
 });
