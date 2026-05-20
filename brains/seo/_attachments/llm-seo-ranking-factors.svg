@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 540" role="img" aria-labelledby="title desc">
+<title id="title">LLM SEO Ranking Factors (2026)</title>
+<desc id="desc">Stacked priority of what makes content cited by ChatGPT, Claude, Gemini, and Google AI Overviews.</desc>
+<defs>
+  <style>
+    .h1 { font: 700 28px Inter, Arial, sans-serif; fill: #172033; }
+    .h2 { font: 700 16px Inter, Arial, sans-serif; fill: #ffffff; }
+    .lbl { font: 500 13px Inter, Arial, sans-serif; fill: #ffffff; }
+    .lbl-dark { font: 500 13px Inter, Arial, sans-serif; fill: #172033; }
+    .num { font: 700 22px 'JetBrains Mono', monospace; fill: #ffffff; }
+    .pct { font: 700 24px Inter, Arial, sans-serif; fill: #ffffff; }
+    .src { font: 500 11px Inter, Arial, sans-serif; fill: #64748b; }
+  </style>
+</defs>
+
+<rect width="1040" height="540" fill="#fafaf7"/>
+<text x="40" y="48" class="h1">LLM SEO Ranking Factors</text>
+<text x="40" y="74" class="lbl-dark">What drives citations in ChatGPT, Claude, Gemini, and Google AI Overviews (2026).</text>
+
+<!-- Bar 1: Citation in trusted sources -->
+<g transform="translate(40, 100)">
+  <rect x="0" y="0" width="900" height="56" rx="8" fill="#7c4ddb"/>
+  <text x="16" y="20" class="num">1</text>
+  <text x="60" y="22" class="h2">Citation density in trusted sources (Reddit, Wikipedia, news)</text>
+  <text x="60" y="44" class="lbl">Reddit alone = 40% of all LLM citations · brand-name mentions matter more than backlinks</text>
+  <text x="830" y="36" class="pct">~30%</text>
+</g>
+
+<!-- Bar 2: Structured data -->
+<g transform="translate(40, 168)">
+  <rect x="0" y="0" width="780" height="56" rx="8" fill="#2f7f87"/>
+  <text x="16" y="20" class="num">2</text>
+  <text x="60" y="22" class="h2">Structured data (industry-specific schema)</text>
+  <text x="60" y="44" class="lbl">Plumber, Restaurant, Attorney subtypes · Person schema for authors · FAQPage feeds AI Overviews</text>
+  <text x="710" y="36" class="pct">~20%</text>
+</g>
+
+<!-- Bar 3: Topical authority -->
+<g transform="translate(40, 236)">
+  <rect x="0" y="0" width="660" height="56" rx="8" fill="#c85f4d"/>
+  <text x="16" y="20" class="num">3</text>
+  <text x="60" y="22" class="h2">Topical authority (full coverage of a subject)</text>
+  <text x="60" y="44" class="lbl">Core 30 page set · in-depth + connected content · author byline expertise signal</text>
+  <text x="590" y="36" class="pct">~18%</text>
+</g>
+
+<!-- Bar 4: Site-level E-E-A-T -->
+<g transform="translate(40, 304)">
+  <rect x="0" y="0" width="540" height="56" rx="8" fill="#f0b33d"/>
+  <text x="16" y="20" class="num" fill="#172033">4</text>
+  <text x="60" y="22" class="h2" fill="#172033">Site-level E-E-A-T signals</text>
+  <text x="60" y="44" class="lbl-dark">Author bios with credentials · Original photos · Real testimonials · About Us depth</text>
+  <text x="470" y="36" class="pct" fill="#172033">~15%</text>
+</g>
+
+<!-- Bar 5: Answer-first formatting -->
+<g transform="translate(40, 372)">
+  <rect x="0" y="0" width="420" height="56" rx="8" fill="#586f92"/>
+  <text x="16" y="20" class="num">5</text>
+  <text x="60" y="22" class="h2">Answer-first formatting (TL;DR + structure)</text>
+  <text x="60" y="44" class="lbl">Short paragraphs · headings as questions · bullet lists for scannable facts</text>
+  <text x="350" y="36" class="pct">~10%</text>
+</g>
+
+<!-- Bar 6: Real-time freshness -->
+<g transform="translate(40, 440)">
+  <rect x="0" y="0" width="320" height="56" rx="8" fill="#10b981"/>
+  <text x="16" y="20" class="num">6</text>
+  <text x="60" y="22" class="h2">Freshness (last-updated dates)</text>
+  <text x="60" y="44" class="lbl">Visible "Updated YYYY-MM-DD" · dateModified schema · recent activity</text>
+  <text x="250" y="36" class="pct">~7%</text>
+</g>
+
+<text x="40" y="528" class="src">Indicative ranking — exact weights vary by LLM. Sources cited in [[2026-ai-overviews-state]], [[2026-reddit-llm-citation-engine]], [[2026-schema-modernization]].</text>
+</svg>

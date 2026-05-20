@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 580" role="img" aria-labelledby="title desc">
+<title id="title">The Core 30 Content Map</title>
+<desc id="desc">30 essential pages a local business site needs, grouped by purpose.</desc>
+<defs>
+  <style>
+    .h1 { font: 700 28px Inter, Arial, sans-serif; fill: #172033; }
+    .h2 { font: 700 14px Inter, Arial, sans-serif; fill: #ffffff; }
+    .h3 { font: 700 13px 'JetBrains Mono', monospace; fill: #172033; letter-spacing: 0.4px; }
+    .lbl { font: 500 12px Inter, Arial, sans-serif; fill: #334155; }
+    .count { font: 700 22px Inter, Arial, sans-serif; fill: #ffffff; }
+  </style>
+</defs>
+
+<rect width="1040" height="580" fill="#fafaf7"/>
+
+<text x="40" y="50" class="h1">The Core 30 Content Map</text>
+<text x="40" y="78" class="lbl">30 pages every local business website should have to establish topical authority.</text>
+
+<!-- Trust / About cluster -->
+<g transform="translate(40, 110)">
+  <rect x="0" y="0" width="240" height="200" rx="10" fill="#2f7f87"/>
+  <text x="14" y="28" class="h2">TRUST PAGES</text>
+  <text x="14" y="56" class="count">6</text>
+  <text x="14" y="80" class="lbl" fill="#e8f4f6">▸ Homepage</text>
+  <text x="14" y="100" class="lbl" fill="#e8f4f6">▸ About Us (E-E-A-T anchor)</text>
+  <text x="14" y="120" class="lbl" fill="#e8f4f6">▸ Team / Staff bios</text>
+  <text x="14" y="140" class="lbl" fill="#e8f4f6">▸ Testimonials / Reviews page</text>
+  <text x="14" y="160" class="lbl" fill="#e8f4f6">▸ Case studies / Portfolio</text>
+  <text x="14" y="180" class="lbl" fill="#e8f4f6">▸ Contact</text>
+</g>
+
+<!-- Service cluster -->
+<g transform="translate(300, 110)">
+  <rect x="0" y="0" width="240" height="200" rx="10" fill="#c85f4d"/>
+  <text x="14" y="28" class="h2">PRIMARY SERVICES</text>
+  <text x="14" y="56" class="count">8</text>
+  <text x="14" y="80" class="lbl" fill="#fdebe7">▸ Main service hub</text>
+  <text x="14" y="100" class="lbl" fill="#fdebe7">▸ Service 1 — detailed page</text>
+  <text x="14" y="120" class="lbl" fill="#fdebe7">▸ Service 2 — detailed page</text>
+  <text x="14" y="140" class="lbl" fill="#fdebe7">▸ Service 3 — detailed page</text>
+  <text x="14" y="160" class="lbl" fill="#fdebe7">▸ Service 4 — detailed page</text>
+  <text x="14" y="180" class="lbl" fill="#fdebe7">▸ Emergency / 24-hour service</text>
+</g>
+
+<!-- Geo cluster -->
+<g transform="translate(560, 110)">
+  <rect x="0" y="0" width="240" height="200" rx="10" fill="#f0b33d"/>
+  <text x="14" y="28" class="h2" fill="#172033">GEOGRAPHIC PAGES</text>
+  <text x="14" y="56" class="count" fill="#172033">8</text>
+  <text x="14" y="80" class="lbl" fill="#172033">▸ Primary city page</text>
+  <text x="14" y="100" class="lbl" fill="#172033">▸ Suburb 1 service area</text>
+  <text x="14" y="120" class="lbl" fill="#172033">▸ Suburb 2 service area</text>
+  <text x="14" y="140" class="lbl" fill="#172033">▸ Neighborhood breakdowns</text>
+  <text x="14" y="160" class="lbl" fill="#172033">▸ Local landmarks / climate context</text>
+  <text x="14" y="180" class="lbl" fill="#172033">▸ Service area map</text>
+</g>
+
+<!-- Authority cluster -->
+<g transform="translate(820, 110)">
+  <rect x="0" y="0" width="200" height="200" rx="10" fill="#7c4ddb"/>
+  <text x="14" y="28" class="h2">AUTHORITY</text>
+  <text x="14" y="56" class="count">5</text>
+  <text x="14" y="80" class="lbl" fill="#f4eefb">▸ FAQ (with FAQSchema)</text>
+  <text x="14" y="100" class="lbl" fill="#f4eefb">▸ Resources / Guides</text>
+  <text x="14" y="120" class="lbl" fill="#f4eefb">▸ Blog hub</text>
+  <text x="14" y="140" class="lbl" fill="#f4eefb">▸ Press / In the news</text>
+  <text x="14" y="160" class="lbl" fill="#f4eefb">▸ Awards / Certifications</text>
+</g>
+
+<!-- Conversion cluster (smaller, bottom row) -->
+<g transform="translate(40, 340)">
+  <rect x="0" y="0" width="500" height="120" rx="10" fill="#586f92"/>
+  <text x="14" y="28" class="h2">CONVERSION / OPERATIONAL</text>
+  <text x="14" y="56" class="count">3</text>
+  <text x="14" y="84" class="lbl" fill="#e2eaf5">▸ Pricing / Estimate page</text>
+  <text x="14" y="104" class="lbl" fill="#e2eaf5">▸ Booking / scheduling</text>
+  <text x="180" y="104" class="lbl" fill="#e2eaf5">▸ Privacy / Terms / Sitemap (utility)</text>
+</g>
+
+<!-- Total + math -->
+<g transform="translate(560, 340)">
+  <rect x="0" y="0" width="460" height="120" rx="10" fill="#172033"/>
+  <text x="14" y="34" class="h2">DO THE MATH</text>
+  <text x="14" y="62" class="lbl" fill="#e2e8f0">6 trust + 8 services + 8 geo + 5 authority + 3 ops = </text>
+  <text x="380" y="62" class="h2" fill="#f0b33d">30 pages</text>
+  <text x="14" y="86" class="lbl" fill="#e2e8f0">Every page has a named author (2026 E-E-A-T requirement).</text>
+  <text x="14" y="104" class="lbl" fill="#e2e8f0">Every service + geo page gets industry-specific schema markup.</text>
+</g>
+
+<!-- Footer note -->
+<text x="40" y="500" class="h3">Strategy in [[the-core-30-content-strategy]]. Production playbooks in wiki/content/.</text>
+<text x="40" y="522" class="lbl">Stop adding random pages. Build the Core 30 first.</text>
+<text x="40" y="544" class="lbl">Then expand by topical/geographic clusters (see Content Planning chapters).</text>
+</svg>
