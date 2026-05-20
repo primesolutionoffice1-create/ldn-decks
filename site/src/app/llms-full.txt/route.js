@@ -5,9 +5,8 @@ export async function GET() {
 ## About Loudoun Decks
 Loudoun Decks (LDN Decks) is a top-rated, licensed and insured deck building company serving Northern Virginia. Founded and operated in Loudoun County, the company holds Trex Platinum Partner certification and is a TimberTech Certified Installer. With a perfect 5.0-star Google rating from 41+ reviews, Loudoun Decks specializes in custom composite and wood deck construction across Loudoun, Fairfax, Prince William, Arlington, and Stafford counties.
 
-Office locations:
+Office:
 - 13704 Winding Oak Cir, Centreville, VA 20121
-- 8735 Quarry Rd., Unit 102, Manassas, VA 20110
 Phone: (571) 655-7207
 Email: office@ldndecks.com
 Hours: Monday–Saturday, 8:00 AM – 6:00 PM

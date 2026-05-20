@@ -59,7 +59,7 @@ export default function robots() {
         disallow: TRACKING_DISALLOWS,
       })),
     ],
-    sitemap: [`${SITE_URL}/sitemap.xml`, `${SITE_URL}/news-sitemap.xml`, `${SITE_URL}/image-sitemap.xml`],
+    sitemap: [`${SITE_URL}/sitemap.xml`, `${SITE_URL}/image-sitemap.xml`],
     host: SITE_URL,
   }
 }

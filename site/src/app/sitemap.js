@@ -1,4 +1,3 @@
-import { getAllCityPaths, canonicalCities } from '@/data/cityData';
 import { blogPosts } from '@/lib/blogData';
 import { educationArticles } from '@/lib/educationData';
 import { showcaseProjects } from '@/lib/showcaseData';
@@ -188,6 +187,7 @@ export default async function sitemap() {
 
                 // Authority & E-E-A-T pages
                 { path: "/about/certifications-and-licenses",           priority: 0.80, lastMod: TIER1, freq: "monthly" },
+                { path: "/about/warranty",                              priority: 0.75, lastMod: TIER2, freq: "monthly" },
                 { path: "/areas-we-serve",                              priority: 0.85, lastMod: TIER1, freq: "monthly" },
                 { path: "/reviews",                                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
@@ -238,6 +238,7 @@ export default async function sitemap() {
                 { path: "/northern-virginia-deck-cost-report-2026",     priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-living-northern-virginia",            priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-performance-products",                   priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/timbertech-decks",                            priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 // REMOVED: canonicalized to /deck-design-ideas-2026
 
                 // Missing service page
@@ -260,14 +261,9 @@ export default async function sitemap() {
                 { path: "/terms-of-service",             priority: 0.30, lastMod: TIER4, freq: "yearly" },
         ];
 
-        const cityPaths = getAllCityPaths()
-                .filter(path => !canonicalCities.has(path.city))
-                .map(path => ({
-                        path: `/near-you/${path.county}/${path.city}`,
-                        priority: 0.80,
-                        lastMod: TIER2,
-                        freq: "monthly",
-                }));
+        // /near-you/{county}/{city} pages are intentionally noindex (see buildMetadata
+        // in lib/seo.js) — kept out of the sitemap so we never submit noindexed URLs.
+        // The 5 indexable /near-you/{county} hubs remain in staticPages above.
 
         // Blog posts — dynamically generated from blogData with real publish dates
         const today = new Date();
@@ -313,7 +309,7 @@ export default async function sitemap() {
                 freq: "monthly",
         }));
 
-        const allPages = [...staticPages, ...cityPaths, ...blogPaths, ...educationPaths, ...showcasePaths]
+        const allPages = [...staticPages, ...blogPaths, ...educationPaths, ...showcasePaths]
                 .filter(p => !isExcluded(p.path));
 
         return allPages.map(({ path, lastMod, videos }) => ({
