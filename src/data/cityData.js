@@ -76,3 +76,20 @@ export function getCanonicalCityUrl(countySlug, city) {
   }
   return `/near-you/${countySlug}/${citySlug}`;
 }
+
+// Returns an internal URL for a city ONLY if a real page exists for it,
+// otherwise null. Canonical cities resolve to their standalone
+// /deck-builder-{city}-va page; other cities present in cityData resolve to
+// their /near-you/{county}/{city} page. Names like "Ashburn, VA" are accepted.
+// Use this for county-page city lists so they never link to a 404.
+export function getCityLink(countySlug, cityName) {
+  const citySlug = slugify(String(cityName).replace(/,?\s*VA\s*$/i, ''));
+  if (canonicalCities.has(citySlug)) {
+    return `/deck-builder-${citySlug}-va`;
+  }
+  const county = counties[countySlug];
+  if (county && county.cities.some((c) => slugify(c) === citySlug)) {
+    return `/near-you/${countySlug}/${citySlug}`;
+  }
+  return null;
+}

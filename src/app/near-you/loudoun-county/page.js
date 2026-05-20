@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceVisual from '@/components/ServiceVisual';
@@ -8,6 +9,8 @@ import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 
@@ -19,7 +22,7 @@ const LocationIcon = () => (
 
 export const metadata = buildMetadata({
   path: "/near-you/loudoun-county",
-  title: "5-Star Deck Builder Loudoun County VA | Get a Free Quote in 24h",
+  title: "5-Star Deck Builder Loudoun County VA | Free 24h Quote",
   description: "Trusted deck contractor in Loudoun County. ★ 5.0 Google Rated. We handle all HOA permits & county codes. Get your free itemized estimate in 24 hours!",
 });
 
@@ -42,9 +45,9 @@ const services = [
 
 const faqs = [
   { q: "Do you work throughout all of Loudoun County?", a: "Yes. We serve homeowners across Loudoun County, including Ashburn, Leesburg, Sterling, Aldie, Middleburg, Round Hill, Purcellville, Lovettsville, Hamilton, Waterford, Brambleton, South Riding, Stone Ridge, Broadlands and nearby communities." },
-  { q: "How much does a new deck typically cost in Loudoun County?", a: "Deck pricing depends on size, materials, design details, and site conditions. After a free on-site visit, we provide a clear written estimate so you know exactly what to expect." },
-  { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget." },
-  { q: "Do you handle permits for deck projects?", a: "Yes. For projects that require permits in Loudoun County, we help prepare the necessary information and coordinate with the county as part of the project." },
+  { q: "How much does a new deck typically cost in Loudoun County?", a: "In Loudoun County, a 300 sq ft composite deck typically runs $15,000–$30,000 and a 500 sq ft multi-level deck $30,000–$50,000. Loudoun pricing runs about 25–35% above the Virginia average due to higher labor rates and HOA requirements. After a free on-site visit, we provide a clear written estimate so you know exactly what to expect." },
+  { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget. Composite replacement is our most requested service in Ashburn, Brambleton, and Broadlands as original wood decks reach the end of their life." },
+  { q: "Do you handle permits for deck projects?", a: "Yes. Any deck attached to a home or more than 30 inches above grade requires a Loudoun County building permit, with review typically taking 10–15 business days and three inspections — footings, framing, and final. We prepare the structural drawings and coordinate the entire permit process at no extra charge." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within a few weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
 ];
 
@@ -57,6 +60,7 @@ export default function LoudounCountyPage() {
         description="LDN Decks builds custom decks, porches, patios, pergolas, and outdoor living spaces throughout Loudoun County, VA."
         url="https://ldndecks.com/near-you/loudoun-county"
       />
+      <Breadcrumbs />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Loudoun County, VA"
@@ -89,6 +93,10 @@ export default function LoudounCountyPage() {
               <p className={styles.permitFooter}>
                 This means you don&apos;t have to worry about paperwork or code compliance we include this as part of a smooth, start-to-finish experience.
               </p>
+              <p>
+                For a full breakdown of fees, timelines, and inspections, see our{' '}
+                <Link href="/deck-permit-loudoun-county-virginia">Loudoun County deck permit guide</Link>.
+              </p>
             </div>
           </div>
         </div>
@@ -101,7 +109,7 @@ export default function LoudounCountyPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Loudoun County Homeowners Choose LDN Decks</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Loudoun County is one of the wealthiest and fastest-growing counties in the United States, with median home values exceeding $700,000. Homeowners here demand premium outdoor living spaces that match the quality of their homes — and they expect contractors who understand the unique requirements of building in Loudoun.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks is based in the heart of Northern Virginia and has completed <strong>200+ custom deck projects</strong> across Loudoun County communities including Ashburn, Leesburg, Sterling, Brambleton, Broadlands, South Riding, Stone Ridge, Purcellville, and Aldie. We are a <strong>Trex Platinum Partner</strong> (highest certification tier) and <strong>TimberTech Certified Installer</strong>, meaning we install the best composite decking materials available with manufacturer-backed warranties up to 50 years.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks is based in the heart of Northern Virginia and has completed <strong>200+ custom deck projects</strong> across Loudoun County communities including Ashburn, Leesburg, Sterling, Brambleton, Broadlands, South Riding, Stone Ridge, Purcellville, and Aldie. We are a <strong>Trex Platinum Partner</strong> (highest certification tier) and <strong>TimberTech Certified Installer</strong>, meaning we install the best <Link href="/composite-decks">composite decking</Link> materials available with manufacturer-backed warranties up to 50 years.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Navigating Loudoun County HOA Requirements</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Over 80% of Loudoun County homes are in HOA-governed communities. Architectural Review Board (ARB) approval is required before any exterior modification — including decks, porches, patios, fences, and pergolas. Each community has different material restrictions, color requirements, setback rules, and height limits.</p>
@@ -142,7 +150,7 @@ export default function LoudounCountyPage() {
           </div>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects in Loudoun County</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Ashburn & Brambleton:</strong> Multi-level composite Trex and TimberTech decks with integrated screened porches. Homes in Brambleton, Broadlands, and Ashburn Village are reaching the age where original pressure-treated wood decks need replacement — composite upgrades are the most requested service.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Ashburn & Brambleton:</strong> Multi-level composite Trex and TimberTech decks with integrated <Link href="/screened-porch-builder-northern-virginia">screened porches</Link>. Homes in Brambleton, Broadlands, and Ashburn Village are reaching the age where original pressure-treated wood decks need replacement — <Link href="/composite-deck-builder-loudoun">composite deck upgrades</Link> are the most requested service.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Leesburg:</strong> Front porch additions on historic in-town homes, screened porch construction on newer colonials, and estate-lot outdoor living packages combining deck + patio + fire feature.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Sterling & Cascades:</strong> Deck resurfacing for aging subdivisions, ground-level patios with pavers, and privacy fence installations to complement deck projects.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Purcellville & Western Loudoun:</strong> Large custom decks on estate properties with scenic views, pergola installations, and outdoor kitchen builds that take advantage of the rural landscape.</p>
@@ -157,12 +165,20 @@ export default function LoudounCountyPage() {
         <div className={styles.container}>
           <h2 className={styles.citiesTitle}>Top Areas We Serve in Loudoun County</h2>
           <div className={styles.citiesGrid}>
-            {loudounCities.map((city, idx) => (
-              <div key={idx} className={styles.cityItem}>
-                <LocationIcon />
-                <span>{city}</span>
-              </div>
-            ))}
+            {loudounCities.map((city, idx) => {
+              const href = getCityLink('loudoun-county', city);
+              return href ? (
+                <Link key={idx} href={href} className={styles.cityItem} style={{ color: '#333', textDecoration: 'none' }}>
+                  <LocationIcon />
+                  <span>{city}</span>
+                </Link>
+              ) : (
+                <div key={idx} className={styles.cityItem}>
+                  <LocationIcon />
+                  <span>{city}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

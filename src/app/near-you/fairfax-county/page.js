@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceVisual from '@/components/ServiceVisual';
@@ -8,6 +9,8 @@ import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 
@@ -19,7 +22,7 @@ const LocationIcon = () => (
 
 export const metadata = buildMetadata({
     path: "/near-you/fairfax-county",
-    title: "5-Star Deck Builder Fairfax County VA | Get a Free Quote in 24h",
+    title: "5-Star Deck Builder Fairfax County VA | Free 24h Quote",
     description: "Top-rated deck and outdoor living contractor in Fairfax County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Reston, Vienna, Mclean, and Alexandria.",
 });
 
@@ -43,9 +46,9 @@ const services = [
 
 const faqs = [
   { q: "Do you work throughout all of Fairfax County?", a: "Yes. We serve homeowners across Fairfax County, including Alexandria, Fairfax, Vienna, Reston, Herndon, Mclean, Falls Church, Annandale, Burke, Springfield, Chantilly, Centreville, Oakton, Great Falls, Lorton, Tysons, West Springfield and nearby communities." },
-  { q: "How much does a new deck typically cost in Fairfax County?", a: "Deck pricing depends on size, materials, design details, and site conditions. After a free on-site visit, we provide a clear written estimate so you know exactly what to expect." },
-  { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget." },
-  { q: "Do you handle permits for deck projects?", a: "Yes. For projects that require permits in Fairfax County, we help prepare the necessary information and coordinate with the county as part of the project." },
+  { q: "How much does a new deck typically cost in Fairfax County?", a: "In Fairfax County, a 300 sq ft composite deck typically runs $16,000–$32,000 and a 500 sq ft multi-level deck $32,000–$55,000. Final pricing depends on materials, design details, and site conditions. After a free on-site visit, we provide a clear written estimate so you know exactly what to expect." },
+  { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget. Deck replacements are especially common on the 1980s–1990s colonials throughout Vienna, Oakton, and Burke." },
+  { q: "Do you handle permits for deck projects?", a: "Yes. Fairfax County requires a permit for all attached decks and any deck over 200 square feet, submitted through the FIDO online system. Review typically takes 3–6 weeks plus footing, framing, and final inspections. We prepare the structural drawings and handle the entire FIDO submission and inspector coordination." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within a few weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
   ];
 
@@ -58,6 +61,7 @@ export default function FairfaxCountyPage() {
           description="LDN Decks builds custom decks, screened porches, patios, and outdoor living spaces throughout Fairfax County, VA."
           url="https://ldndecks.com/near-you/fairfax-county"
         />
+            <Breadcrumbs />
             <ServicesHeader
           subtext="Serving Northern Virginia"
           title="Deck Builder in Fairfax County, VA"
@@ -89,6 +93,10 @@ export default function FairfaxCountyPage() {
                 <p className={styles.permitFooter}>
                 This means you don&apos;t have to worry about paperwork or code compliance - we include this as part of a smooth, start-to-finish experience.
             </p>
+                <p>
+                For full details on FIDO submissions, fees, and inspection timelines, see our{' '}
+                <Link href="/deck-permit-fairfax-county-virginia">Fairfax County deck permit guide</Link>.
+            </p>
             </div>
             </div>
             </div>
@@ -118,8 +126,8 @@ export default function FairfaxCountyPage() {
           </div>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects by Fairfax Neighborhood</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>McLean & Great Falls:</strong> Premium AZEK and Trex Transcend decks on estate properties, outdoor kitchens, multi-zone entertainment areas combining deck + screened porch + patio. These high-value homes demand exceptional quality and design.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Vienna & Oakton:</strong> Deck replacements on 1980s-1990s colonials, screened porch additions, and pergola installations. Many homes here have original wood decks that are now 25-30 years old — prime candidates for composite upgrades.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>McLean & Great Falls:</strong> Premium AZEK and Trex Transcend decks on estate properties, <Link href="/outdoor-kitchen-builder-northern-virginia">outdoor kitchens</Link>, multi-zone entertainment areas combining deck + screened porch + patio. These high-value homes demand exceptional quality and design.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Vienna & Oakton:</strong> <Link href="/services/deck-replacement">Deck replacements</Link> on 1980s-1990s colonials, <Link href="/screened-porch-builder-northern-virginia">screened porch additions</Link>, and pergola installations. Many homes here have original wood decks that are now 25-30 years old — prime candidates for composite upgrades.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Reston & Herndon:</strong> Reston Association-approved composite builds, townhome deck/patio combos, and elevated deck designs for wooded lots with grade changes. We have extensive experience with Reston&apos;s architectural review requirements.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Burke, Springfield & Lorton:</strong> Family-oriented deck builds with integrated lighting, stair systems, and multi-level designs for sloped lots. Budget-friendly Trex Enhance projects are popular here at $30-$50/sqft.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Centreville & Chantilly:</strong> Full deck replacements, composite resurfacing, and fence packages. HOA communities like Virginia Run and Sully Station have specific requirements we know well.</p>
@@ -130,12 +138,20 @@ export default function FairfaxCountyPage() {
         <div className={styles.container}>
           <h2 className={styles.citiesTitle}>Top Areas We Serve in Fairfax County</h2>
             <div className={styles.citiesGrid}>
-          {fairfaxCities.map((city, idx) => (
-                          <div key={idx} className={styles.cityItem}>
-                            <LocationIcon />
-                            <span>{city}</span>
-            </div>
-                                         ))}
+          {fairfaxCities.map((city, idx) => {
+            const href = getCityLink('fairfax-county', city);
+            return href ? (
+              <Link key={idx} href={href} className={styles.cityItem} style={{ color: '#333', textDecoration: 'none' }}>
+                <LocationIcon />
+                <span>{city}</span>
+              </Link>
+            ) : (
+              <div key={idx} className={styles.cityItem}>
+                <LocationIcon />
+                <span>{city}</span>
+              </div>
+            );
+          })}
 </div>
   </div>
   </section>

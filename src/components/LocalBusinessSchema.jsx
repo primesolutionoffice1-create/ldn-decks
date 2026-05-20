@@ -15,7 +15,7 @@ export default function LocalBusinessSchema({ city, description, url, areaType =
     "description": description || `Top-rated custom deck builder in ${city}, Northern Virginia. Trex Platinum Partner and TimberTech Certified Installer.`,
     "telephone": "+15716557207",
     "email": "office@ldndecks.com",
-    "priceRange": "$$$",
+    "priceRange": "$$-$$$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "13704 Winding Oak Cir",

@@ -8,13 +8,14 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import Image from 'next/image';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './NearYouPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/near-you',
-  title: 'Deck Builder Near Me | Loudoun, Fairfax & Prince William',
-  description: 'Find a 5-star deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, and Prince William with custom decks, patios, and porches.',
+  title: 'Deck Builder Near Me | Northern Virginia (5 Counties)',
+  description: 'Find a 5-star deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, Prince William, Arlington & Stafford counties — custom decks, patios & porches.',
 });
 
 const chooseItems = [
@@ -35,10 +36,11 @@ const chooseItems = [
 export default function NearYouPage() {
   return (
     <main>
-      <ServicesHeader 
+      <Breadcrumbs />
+      <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder Near You"
-        description="Looking for a Professional Deck Builder Near You in Northern Virginia? Loudoun Decks is a trusted local company serving homeowners across Loudoun, Fairfax, and Prince William counties."
+        description="Looking for a Professional Deck Builder Near You in Northern Virginia? Loudoun Decks is a trusted local company serving homeowners across Loudoun, Fairfax, Prince William, Arlington, and Stafford counties."
       />
 
       <section className={styles.introSection}>
@@ -72,7 +74,7 @@ export default function NearYouPage() {
           <div className={styles.countiesContent}>
             <h2 className={styles.sectionTitle}>Counties We Serve</h2>
             <p className={styles.sectionDesc}>
-              We proudly work throughout Northern Virginia, including Loudoun County, Fairfax County, and Prince William County. 
+              We proudly work throughout Northern Virginia, including Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County.
               If you live within these counties, our team can assist with deck builds, resurfacing, patios, pergolas, porches, and outdoor renovations.
             </p>
           </div>

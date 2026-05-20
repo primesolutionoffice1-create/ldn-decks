@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceVisual from '@/components/ServiceVisual';
@@ -8,6 +9,8 @@ import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 
@@ -55,6 +58,7 @@ export default function StaffordCountyPage() {
         description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Stafford County, VA."
         url="https://ldndecks.com/near-you/stafford-county"
       />
+      <Breadcrumbs />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Stafford County, VA"
@@ -86,6 +90,11 @@ export default function StaffordCountyPage() {
               <p className={styles.permitFooter}>
                 This means you don&apos;t have to worry about paperwork or code compliance - we include this as part of a smooth, start-to-finish experience.
               </p>
+              <p>
+                New to the process? Our{' '}
+                <Link href="/northern-virginia-deck-building-guide">Northern Virginia deck building guide</Link>{' '}
+                walks through permits, HOA approval, and timelines step by step.
+              </p>
             </div>
           </div>
         </div>
@@ -96,10 +105,10 @@ export default function StaffordCountyPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Stafford County Homeowners Trust LDN Decks</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford County is one of the fastest-growing counties in Virginia, offering larger lot sizes and highly active communities. Homeowners here invest seriously in expanding their usable square footage with high-performance outdoor features. Whether you live in a newly built colonial in Embrey Mill or a beautiful waterfront estate in Aquia Harbour, a custom-crafted deck or patio adds exceptional luxury and value to your home.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks is a trusted outdoor design-build contractor. As a certified **Trex Platinum Partner** and **TimberTech Certified Installer**, we provide Stafford families with top-tier composite decking systems that deliver the timeless beauty of real wood without the high maintenance. Our projects are built to endure Virginia's humid summers and frosty winters, backed by comprehensive warranties.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks is a trusted outdoor design-build contractor. As a certified <strong>Trex Platinum Partner</strong> and <strong>TimberTech Certified Installer</strong>, we provide Stafford families with top-tier <Link href="/composite-decks">composite decking</Link> systems that deliver the timeless beauty of real wood without the high maintenance. Our projects are built to endure Virginia's humid summers and frosty winters, backed by comprehensive warranties.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Stafford County Building Permits & Codes</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford County requires structural building permits for all decks attached to a dwelling and all freestanding decks over 30 inches above the surrounding ground. Building permit plans are reviewed by the **Stafford County Department of Development Services**. Stafford boasts one of the fastest permitting timelines in Northern Virginia, with processing times averaging just **10 to 15 business days (2 weeks)**.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford County requires structural building permits for all decks attached to a dwelling and all freestanding decks over 30 inches above the surrounding ground. Building permit plans are reviewed by the <strong>Stafford County Department of Development Services</strong>. Stafford boasts one of the fastest permitting timelines in Northern Virginia, with processing times averaging just <strong>10 to 15 business days (2 weeks)</strong>.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford's spacious yards generally offer fewer setback and lot coverage constraints compared to Fairfax or Arlington. This allows for grander, multi-zone outdoor entertainment spaces — including expansive custom decks, outdoor kitchens, and hardscape fire pits. We manage the entire permit cycle, including zoning layouts, plan submission, and inspector walkthroughs for structural footings, framing, and final approval.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Stafford County (2026)</h3>
@@ -115,10 +124,10 @@ export default function StaffordCountyPage() {
           </div>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects by Stafford Neighborhood</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>**Embrey Mill & Augustine:** Large-scale family composite decks with integrated LED lighting, wide steps to the yard, and lower-level paver patios. Capped composite materials are highly popular here to create low-maintenance backyards for active, growing families.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>**Aquia Harbour:** Beautiful elevated wood and composite decks designed to take full advantage of sloped lots and woodsy or waterfront views. We integrate stainless steel cable rail systems to ensure unobstructed scenery.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>**Falmouth & Garrisonville:** Full deck replacements on older properties, converting worn-out timber decks to modern composite, alongside custom screened porches that offer cool shade and complete insect protection in the humid summer months.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>**Brooke & Widewater:** Expansive freestanding timber and composite decks paired with custom pergolas or gazebos to create remote backyard retreats on larger acreage lots.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Embrey Mill & Augustine:</strong> Large-scale family composite decks with integrated LED lighting, wide steps to the yard, and lower-level <Link href="/services/patios">paver patios</Link>. Capped composite materials are highly popular here to create low-maintenance backyards for active, growing families.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Aquia Harbour:</strong> Beautiful elevated wood and composite decks designed to take full advantage of sloped lots and woodsy or waterfront views. We integrate stainless steel cable rail systems to ensure unobstructed scenery.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Falmouth & Garrisonville:</strong> Full <Link href="/services/deck-replacement">deck replacements</Link> on older properties, converting worn-out timber decks to modern composite, alongside custom <Link href="/screened-porch-builder-northern-virginia">screened porches</Link> that offer cool shade and complete insect protection in the humid summer months.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Brooke & Widewater:</strong> Expansive freestanding timber and composite decks paired with custom <Link href="/services/gazebo-pergola">pergolas or gazebos</Link> to create remote backyard retreats on larger acreage lots.</p>
         </div>
       </article>
 
@@ -126,12 +135,20 @@ export default function StaffordCountyPage() {
         <div className={styles.container}>
           <h2 className={styles.citiesTitle}>Top Areas We Serve in Stafford County</h2>
           <div className={styles.citiesGrid}>
-            {staffordCities.map((city, idx) => (
-              <div key={idx} className={styles.cityItem}>
-                <LocationIcon />
-                <span>{city}</span>
-              </div>
-            ))}
+            {staffordCities.map((city, idx) => {
+              const href = getCityLink('stafford-county', city);
+              return href ? (
+                <Link key={idx} href={href} className={styles.cityItem} style={{ color: '#333', textDecoration: 'none' }}>
+                  <LocationIcon />
+                  <span>{city}</span>
+                </Link>
+              ) : (
+                <div key={idx} className={styles.cityItem}>
+                  <LocationIcon />
+                  <span>{city}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
