@@ -37,8 +37,8 @@ export default function ReviewsPage() {
               <p style={{ color: '#aaa', fontSize: '0.9rem' }}>Verified Reviews</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--color-primary)' }}>100%</p>
-              <p style={{ color: '#aaa', fontSize: '0.9rem' }}>5-Star Ratings</p>
+              <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--color-primary)' }}>NoVA</p>
+              <p style={{ color: '#aaa', fontSize: '0.9rem' }}>Local Homeowners</p>
             </div>
           </div>
         </div>
