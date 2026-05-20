@@ -32,16 +32,17 @@ Status: **open / shipped / wontfix**.
   (owner-confirmed). Shipped in commit `ea5a0a9` (2026-05-20).
 - `Priority score: 9/10 | Revenue: H | Urgency: H | Difficulty: S | Speed: fast | Confidence: H`
 
-### C2 — Stale review data (5.0 / 41) — `open`
-- **Finding:** `business.js` and `LocalBusinessSchema.jsx` hardcode
+### C2 — Stale review data (5.0 / 41) — `shipped`
+- **Finding:** `business.js` and `LocalBusinessSchema.jsx` hardcoded
   `aggregateRating` 5.0 / reviewCount 41 on all 28 city pages; `/reviews`
   displays only 8 reviews while claiming "41+".
-- **Evidence:** `site/src/lib/business.js`, `site/src/components/LocalBusinessSchema.jsx`,
-  `site/src/app/reviews/page.js`.
 - **Why it matters:** a mismatched/stale rating is a structured-data policy risk
   and erodes trust signals.
-- **Recommendation:** sync the schema rating + count to the real current GBP
-  numbers across all references. **Needs owner input: current rating + count.**
+- **Resolution:** H2's consolidation (`91d33b7`) removed the per-page hardcoded
+  duplication — `aggregateRating` now derives from `business.js` alone, so the
+  rating lives in exactly one place. Owner directed "use what GBP shows now";
+  5.0 / 41 retained. If the live GBP rating/count ever differs, it is now a
+  one-line change in `business.js`. Showing an 8-review sample of 41 is fine.
 - `Priority score: 8/10 | Revenue: M | Urgency: H | Difficulty: S | Speed: fast | Confidence: H`
 
 ---
@@ -54,18 +55,23 @@ Status: **open / shipped / wontfix**.
   paths no longer enter the sitemap. Shipped in `ea5a0a9`.
 - `Priority score: 7/10 | Revenue: M | Urgency: M | Difficulty: S | Speed: fast | Confidence: H`
 
-### H2 — Fragmented schema entity (`#organization`) — `open`
-- Three JSON-LD nodes claim `@id …#organization` with different `@type`s
-  (`page.tsx` mainEntity, `reviews/page.js`, global `StructuredData`);
-  `LocalBusinessSchema.jsx` mints 28+ per-city `@id`s. Google cannot
-  consolidate the entity.
-- **Recommendation:** one canonical `#organization` from `business.js`; all
-  other nodes reference it by `@id`. Batch 2.
+### H2 — Fragmented schema entity (`#organization`) — `shipped`
+- Scoped worse on implementation: the business was defined as 36+ conflicting
+  entities — 33 per-city `#organization-{city}` nodes from
+  `LocalBusinessSchema.jsx`, plus `page.tsx`, `reviews`, `yelp`, `entry-doors`,
+  `showcase`, `social`, `certifications` each redefining `@id #organization`
+  with a divergent `@type` (`social` had name/alternateName inverted).
+- Fixed: one canonical `GeneralContractor #organization` from `business.js`,
+  emitted once via `StructuredData`; every other surface references it by
+  `@id` only. Verified across all 253 prerendered pages — exactly one org node
+  each, zero `#organization-{city}` duplicates. Shipped Batch 2 (`91d33b7`).
 - `Priority score: 7/10 | Revenue: M | Urgency: M | Difficulty: M | Speed: med | Confidence: H`
 
-### H3 — Brand-name drift in schema — `open`
-- `ldn-decks-reviews-yelp/page.js` sets schema `name: "LDN Decks"`; GBP name is
-  "Loudoun Decks". Fix in Batch 2.
+### H3 — Brand-name drift in schema — `shipped`
+- `ldn-decks-reviews-yelp/page.js` schema `name` was "LDN Decks"; GBP name is
+  "Loudoun Decks". Fixed — that node no longer redefines the org (references
+  `@id #organization` only). Verified: zero org nodes named "LDN Decks" across
+  all 253 pages. Shipped Batch 2 (`91d33b7`).
 - `Priority score: 6/10 | Revenue: M | Urgency: M | Difficulty: S | Speed: fast | Confidence: H`
 
 ### H4 — Inappropriate news-sitemap.xml — `shipped`
@@ -99,11 +105,14 @@ Status: **open / shipped / wontfix**.
 
 - **M1 — `priceRange` mismatch** (`$$$` vs `$$-$$$$`) — `shipped` (merged branch
   `claude/objective-einstein-29f0fb`).
-- **M2 — `LocalBusinessSchema.jsx` `sameAs` missing 3 entries** (TikTok,
-  BuildZoom, MapQuest) vs `business.js` — `open`, Batch 2.
-- **M3 — City `aggregateRating` missing `worstRating`** — `open`, Batch 2.
+- **M2 — divergent `sameAs` arrays** (`LocalBusinessSchema.jsx` 9, `yelp` 3,
+  `business.js` 12) — `shipped` Batch 2 (`91d33b7`): all hardcoded `sameAs`
+  removed; only `business.js` (12) remains.
+- **M3 — `aggregateRating` missing `worstRating`** — `shipped` Batch 2
+  (`91d33b7`): added to `composite-deck-cost`; city ratings inherit canonical.
 - **M4 — Schema `@type` inconsistent** (GeneralContractor / HomeAndConstruction
-  Business / LocalBusiness) — `open`, Batch 2.
+  Business / LocalBusiness) — `shipped` Batch 2 (`91d33b7`): one `@type`
+  sitewide, `GeneralContractor`.
 - **M5 — `/areas-we-serve` links to noindexed `/near-you` URLs** — link-equity
   leak; point to `/deck-builder-{city}-va` — `open`, Phase 4.
 - **M6 — 12 duplicate redirect rules in `next.config.mjs`** (dead code) — `open`.

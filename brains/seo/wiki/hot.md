@@ -13,8 +13,9 @@ Local SEO Brain is installed for **LDN Decks**. Seeded knowledge base is
 loaded: 59 chapter notes, 37 AI prompts, 26 reference images.
 
 A full site SEO audit ran 2026-05-20 — see [[site-seo-audit-2026-05-20]],
-[[Health Scorecard]] (75/100), and [[Action Roadmap]]. 26 findings; 5 shipped
-same-day (commit `ea5a0a9`, awaiting Vercel unblock).
+[[Health Scorecard]] (75/100), and [[Action Roadmap]]. 26 findings; 11 shipped
+to the repo across Batches 1–2 (`ea5a0a9`, `91d33b7`) — all awaiting a Vercel
+pipeline fix to go live.
 
 This brain is advisory only. It can create drafts, audits, reports,
 checklists, and implementation plans. Live-impact changes need explicit
@@ -22,24 +23,29 @@ approval.
 
 ## Next Action
 
-1. Batch 2 — schema + reviews remediation (H2, H3, C2, M2–M4). C2 is blocked
-   on the owner's real GBP rating + review count.
-2. Phase 3 — keyword research from `brains/marketing/keywords-2026-05-11.csv`
+1. Phase 3 — keyword research from `brains/marketing/keywords-2026-05-11.csv`
    (3,891 rows) + Ahrefs/GSC, filed to `wiki/keywords/`.
-3. Phase 4 — de-risk the city-page fleet from doorway treatment (H5).
-4. Owner action: unblock Vercel deploys so shipped fixes go live.
+2. Phase 4 — de-risk the city-page fleet from doorway treatment (H5).
+3. Owner action: repair the Vercel pipeline so shipped fixes go live (Blockers).
 
 ## Blockers
 
-- Vercel deploys are blocked at the account level — shipped fixes will not go
-  live until the owner unblocks them.
-- C2 review-data fix is blocked on the owner's real GBP rating + review count.
+- Vercel deploy pipeline is broken. The GitHub repo `primesolutionoffice1-
+  create/ldn-decks` builds clean on Vercel (project `ldn-decks-oxf5` —
+  "Build Completed", 265 pages, 0 errors) but every deployment then ERRORs at
+  the platform finalization step; that project is `live: false` with no custom
+  domain. `ldndecks.com` is served by a different project. Shipped fixes
+  (`ea5a0a9`, `91d33b7`) cannot go live until the owner repairs this in the
+  Vercel dashboard. Owner-side — the agent cannot fix it.
 - No fresh GBP export, citation export, review export, or geo-grid scan has
   been added to this vault yet.
 - Canonical NAP confirmed 2026-05-20: 13704 Winding Oak Cir, Centreville, VA.
 
 ## Recent Changes
 
+- 2026-05-20 - Batch 2 shipped (`91d33b7`): JSON-LD consolidated to one
+  canonical `#organization` entity (H2, H3, C2, M2, M3, M4); independently
+  QA-verified across all 253 prerendered pages.
 - 2026-05-20 - Full site SEO audit filed: [[site-seo-audit-2026-05-20]],
   [[Health Scorecard]], [[Action Roadmap]].
 - 2026-05-20 - Batch 1 + C1 fixes shipped to the site repo (commit `ea5a0a9`).

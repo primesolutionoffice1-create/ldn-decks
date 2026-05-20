@@ -17,3 +17,9 @@ Related: [[Hot]] | [[Index]] | [[Dashboard]]
   [[site-seo-audit-source-2026-05-20]], findings [[site-seo-audit-2026-05-20]]
   (75/100, 26 findings). Updated [[Health Scorecard]] and [[Action Roadmap]].
 - 2026-05-20 - Batch 1 + C1 SEO fixes shipped to the site repo (commit `ea5a0a9`).
+- 2026-05-20 - Batch 2 shipped (`91d33b7`): JSON-LD consolidated to one
+  canonical `#organization` entity (H2, H3, C2, M2, M3, M4). Orchestrated —
+  investigator agent, implementation, independent QA agent (caught 2 missed
+  conflicts), re-verified. All 253 prerendered pages carry exactly one org
+  node. GitHub push OK; Vercel deploy on `ldn-decks-oxf5` built clean but
+  ERRORed at the platform finalization step (owner-side infra issue).
