@@ -32,7 +32,7 @@ The `Fix all errors` / `Fix my listings now` path was checked after the scan. It
 
 | Platform | Scan finding | Action |
 | --- | --- | --- |
-| BuildZoom | Public page exists but still shows `Unable To Verify` / `No active license on file`; public HTML did not expose website during last fetch | Admin profile was updated on 2026-05-16 with website, Facebook, Yelp, description/photos, and deck-focused services. Next step is BuildZoom license verification through Contractor Relations/support, then re-fetch public page. |
+| BuildZoom | Public page exists and now shows Centreville NAP, but still shows `Unable To Verify` / `No active license on file` / `Inactive` for license `2705191673` | Escalate license verification with BBB proof. BBB shows license `2705191673` issued by DPOR-VA with expiration `2027-02-28`. |
 | ShowMeLocal | `LDNDECKS`, correct Centreville NAP | Standardize business name to Loudoun Decks and verify website. |
 | Where To? | `LOUDOUN DECKS BUILDER`, correct Centreville NAP | Standardize business name to Loudoun Decks and verify website. |
 | Cylex | `LOUDOUN DECKS BUILDER`, correct Centreville NAP | Standardize business name to Loudoun Decks and verify website. |

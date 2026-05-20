@@ -1,6 +1,6 @@
 # Backlink Outreach Templates
 
-Date: 2026-05-16
+Date: 2026-05-20
 Site: https://ldndecks.com
 
 Use these for manual outreach. Keep the ask specific: a real profile link or a resource link to the most relevant page.
@@ -85,15 +85,21 @@ Thank you,
 
 ## BuildZoom Profile Update
 
-Subject: Loudoun Decks BuildZoom profile update
+Subject: Loudoun Decks license verification correction
 
 Hi BuildZoom Support,
 
-I am reaching out to claim or update the BuildZoom contractor profile for Loudoun Decks:
+I am reaching out about the BuildZoom contractor profile for Loudoun Decks:
 
 https://www.buildzoom.com/contractor/loudoun-decks
 
-Please update/add the following public business details:
+The public profile now shows the correct Centreville address, but it still displays "No active license on file" / "Unable To Verify" / "Inactive" for license `2705191673`.
+
+Please re-check the license status and update the public profile. BBB currently lists this same license number for Loudoun Decks, issued by DPOR-VA, with expiration `2027-02-28`:
+
+https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241
+
+Canonical public business details:
 
 - Business name: Loudoun Decks
 - Website: https://ldndecks.com/
@@ -102,9 +108,59 @@ Please update/add the following public business details:
 - Category/services: Deck builder, composite decks, Trex decks, TimberTech/AZEK decks, deck resurfacing, screened porches, railings, patios, pergolas, outdoor living
 - Service area: Northern Virginia, including Loudoun, Fairfax, Prince William, Arlington, Stafford, and nearby areas
 
-We can provide project photos, license details, and business verification if needed.
+We can provide DPOR screenshots, insurance, project photos, and business verification if needed.
 
-The public profile currently appears to show "No active license on file" / "Unable To Verify." Please let us know what license or verification documents are needed to correct that status.
+Thank you,
+[Name]
+
+## Growcycle NAP Correction
+
+Subject: Loudoun Decks profile address correction
+
+Hi Growcycle Support,
+
+Please update the public profile for Loudoun Decks:
+
+https://growcycle.com/services/pro/loudoun-decks
+
+The profile correctly lists our website and license number, but the address is outdated.
+
+Please replace:
+
+42785 Generation Dr, Ashburn, VA 20147
+
+With the canonical public NAP:
+
+- Business name: Loudoun Decks
+- Website: https://ldndecks.com/
+- Phone: 571-655-7207
+- Address: 13704 Winding Oak Cir, Centreville, VA 20121
+- License: 2705191673
+- Category: Deck Builder / Contractor / Outdoor Living
+
+Please also remove or suppress duplicate Ashburn/Prime Solutions records if they conflict with this business profile.
+
+Thank you,
+[Name]
+
+## Nextdoor Profile Cleanup
+
+Subject: Loudoun Decks page name/contact correction
+
+Hi Nextdoor Support,
+
+Please help correct the public page for Loudoun Decks:
+
+https://nextdoor.com/pages/loudoun-decks-buildin-centreville-va/
+
+The page appears to use a truncated/incorrect business name and older contact details. Please update it to:
+
+- Business name: Loudoun Decks
+- Website: https://ldndecks.com/
+- Phone: 571-655-7207
+- Email: office@ldndecks.com
+- Address: 13704 Winding Oak Cir, Centreville, VA 20121
+- Category: Deck Builder / Contractor / Outdoor Living
 
 Thank you,
 [Name]
