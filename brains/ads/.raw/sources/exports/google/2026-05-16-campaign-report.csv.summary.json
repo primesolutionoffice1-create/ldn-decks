@@ -1,0 +1,574 @@
+{
+  "row_count": 11,
+  "columns": [
+    "Campaign status",
+    "Campaign",
+    "Budget",
+    "Budget name",
+    "Budget type",
+    "Currency code",
+    "Status",
+    "Status reasons",
+    "Optimization score",
+    "Campaign type",
+    "Impr.",
+    "Interactions",
+    "Interaction rate",
+    "Avg. cost",
+    "Cost",
+    "Clicks",
+    "CTR",
+    "Avg. CPC",
+    "Conversions",
+    "Cost / conv.",
+    "Conv. rate",
+    "Bid strategy type"
+  ],
+  "detected_columns": {
+    "campaign": "Campaign",
+    "ad_group": null,
+    "ad": null,
+    "search_term": null,
+    "cost": "Cost",
+    "impressions": "Impr.",
+    "clicks": "Clicks",
+    "conversions": "Conversions",
+    "revenue": null,
+    "frequency": null
+  },
+  "totals": {
+    "cost": 7506.87,
+    "impressions": 144697.0,
+    "clicks": 1448.0,
+    "conversions": 60.0,
+    "revenue": 0.0,
+    "ctr": 1.0,
+    "cpa": 125.11,
+    "roas": 0.0
+  },
+  "campaigns": [
+    {
+      "rows": 1,
+      "cost": 82.25,
+      "impressions": 6657.0,
+      "clicks": 81.0,
+      "conversions": 0.0,
+      "revenue": 0.0,
+      "ctr": 1.22,
+      "cpa": 0.0,
+      "roas": 0.0,
+      "name": "Centreville Deck Builder"
+    },
+    {
+      "rows": 1,
+      "cost": 1359.79,
+      "impressions": 2045.0,
+      "clicks": 148.0,
+      "conversions": 17.0,
+      "revenue": 0.0,
+      "ctr": 7.24,
+      "cpa": 79.99,
+      "roas": 0.0,
+      "name": "Deck Repair - Loudoun County"
+    },
+    {
+      "rows": 1,
+      "cost": 464.33,
+      "impressions": 1681.0,
+      "clicks": 56.0,
+      "conversions": 5.0,
+      "revenue": 0.0,
+      "ctr": 3.33,
+      "cpa": 92.87,
+      "roas": 0.0,
+      "name": "Fairfax-Search-Search - Deck Leads - VA - May 2025"
+    },
+    {
+      "rows": 1,
+      "cost": 60.26,
+      "impressions": 20089.0,
+      "clicks": 158.0,
+      "conversions": 0.0,
+      "revenue": 0.0,
+      "ctr": 0.79,
+      "cpa": 0.0,
+      "roas": 0.0,
+      "name": "Loudoun Decks - Lead Gen - Demand Gen 2026"
+    },
+    {
+      "rows": 1,
+      "cost": 1132.22,
+      "impressions": 23029.0,
+      "clicks": 465.0,
+      "conversions": 9.0,
+      "revenue": 0.0,
+      "ctr": 2.02,
+      "cpa": 125.8,
+      "roas": 0.0,
+      "name": "PMAX cu remarketing"
+    },
+    {
+      "rows": 1,
+      "cost": 717.05,
+      "impressions": 83146.0,
+      "clicks": 142.0,
+      "conversions": 4.0,
+      "revenue": 0.0,
+      "ctr": 0.17,
+      "cpa": 179.26,
+      "roas": 0.0,
+      "name": "Pmax - Dec4"
+    },
+    {
+      "rows": 1,
+      "cost": 2568.43,
+      "impressions": 5405.0,
+      "clicks": 299.0,
+      "conversions": 20.0,
+      "revenue": 0.0,
+      "ctr": 5.53,
+      "cpa": 128.42,
+      "roas": 0.0,
+      "name": "Premium Composite Decks"
+    },
+    {
+      "rows": 1,
+      "cost": 55.15,
+      "impressions": 8.0,
+      "clicks": 5.0,
+      "conversions": 0.0,
+      "revenue": 0.0,
+      "ctr": 62.5,
+      "cpa": 0.0,
+      "roas": 0.0,
+      "name": "SRCH | Branded | 3 Counties | Calls"
+    },
+    {
+      "rows": 1,
+      "cost": 105.15,
+      "impressions": 251.0,
+      "clicks": 15.0,
+      "conversions": 1.0,
+      "revenue": 0.0,
+      "ctr": 5.98,
+      "cpa": 105.15,
+      "roas": 0.0,
+      "name": "SRCH | Composite | 3 Counties | Calls"
+    },
+    {
+      "rows": 1,
+      "cost": 104.85,
+      "impressions": 54.0,
+      "clicks": 4.0,
+      "conversions": 0.0,
+      "revenue": 0.0,
+      "ctr": 7.41,
+      "cpa": 0.0,
+      "roas": 0.0,
+      "name": "SRCH | Replacement + Resurfacing | 3 Counties | Calls"
+    },
+    {
+      "rows": 1,
+      "cost": 857.39,
+      "impressions": 2332.0,
+      "clicks": 75.0,
+      "conversions": 4.0,
+      "revenue": 0.0,
+      "ctr": 3.22,
+      "cpa": 214.35,
+      "roas": 0.0,
+      "name": "loudoun decks"
+    }
+  ],
+  "negative_candidates": [],
+  "creative_candidates": [],
+  "platform": "google",
+  "platform_name": "Google Ads",
+  "source_file": ".raw/sources/exports/google/2026-05-16-campaign-report.csv",
+  "source_hash": "71ef8d493460f1c5c166368d6a7413294ee5dffae9d2c0fc4abedbcd7712586e",
+  "imported_at": "2026-05-16T15:01:50+00:00",
+  "source_label": "campaign-report 2026-05-16 Google Ads UI export",
+  "platform_profile": {
+    "schema_version": "ads-brain.platform-profile.v1",
+    "platform": "google",
+    "export_type": "performance_export",
+    "canonical_columns": {
+      "account": null,
+      "campaign": "Campaign",
+      "campaign_id": null,
+      "campaign_type": "Campaign type",
+      "campaign_status": "Campaign status",
+      "budget": "Budget",
+      "bid_strategy": "Bid strategy type",
+      "ad_group": null,
+      "ad_group_id": null,
+      "ad": null,
+      "ad_id": null,
+      "keyword": null,
+      "match_type": null,
+      "search_term": null,
+      "landing_page": null,
+      "conversion_action": null,
+      "attribution_window": null,
+      "api_version": null,
+      "api_version_sunset": null,
+      "tracking_status": null,
+      "consent_mode": null,
+      "enhanced_conversions": null,
+      "offline_import": null,
+      "capi_status": null,
+      "events_api_status": null,
+      "dedup_status": null,
+      "event_id_coverage": null,
+      "event_match_quality": null,
+      "pixel_status": null,
+      "match_keys": null,
+      "insight_tag_status": null,
+      "li_fat_id_status": null,
+      "crm_sync_status": null,
+      "qualified_leads": null,
+      "lead_form": null,
+      "uet_status": null,
+      "google_import_status": null,
+      "adservices_status": null,
+      "adattributionkit_status": null,
+      "aak_config_status": null,
+      "custom_product_page": null,
+      "search_match": null,
+      "asset_group": null,
+      "asset_strength": null,
+      "asset_ratio": null,
+      "ai_max_status": null,
+      "final_url_expansion": null,
+      "safe_zone_status": null,
+      "sound_on": null,
+      "spark_ad": null,
+      "smart_plus": null,
+      "learning_phase": null,
+      "frequency": null,
+      "audience": null,
+      "view_rate": null,
+      "video_views": null,
+      "completion_rate": null,
+      "view_through_conversions": null,
+      "attribution_setting": null,
+      "modeled_conversion_share": null,
+      "conversion_volume_30d": null,
+      "offline_upload_age_days": null,
+      "policy_status": null,
+      "pipeline_value": null,
+      "cost": "Cost",
+      "impressions": "Impr.",
+      "clicks": "Clicks",
+      "conversions": "Conversions",
+      "revenue": null
+    },
+    "entities": {
+      "budget-pacing": [
+        {
+          "name": "1.00",
+          "folder": "budget-pacing",
+          "type_label": "Budget Signal",
+          "row_count": 6,
+          "campaign": "Loudoun Decks - Lead Gen - Demand Gen 2026",
+          "source_field": "Budget",
+          "metrics": {
+            "cost": 5252.11,
+            "impressions": 119023.0,
+            "clicks": 884.0,
+            "conversions": 46.0
+          }
+        },
+        {
+          "name": "15.00",
+          "folder": "budget-pacing",
+          "type_label": "Budget Signal",
+          "row_count": 1,
+          "campaign": "SRCH | Branded | 3 Counties | Calls",
+          "source_field": "Budget",
+          "metrics": {
+            "cost": 55.15,
+            "impressions": 8.0,
+            "clicks": 5.0
+          }
+        },
+        {
+          "name": "33.00",
+          "folder": "budget-pacing",
+          "type_label": "Budget Signal",
+          "row_count": 1,
+          "campaign": "loudoun decks",
+          "source_field": "Budget",
+          "metrics": {
+            "cost": 857.39,
+            "impressions": 2332.0,
+            "clicks": 75.0,
+            "conversions": 4.0
+          }
+        },
+        {
+          "name": "45.00",
+          "folder": "budget-pacing",
+          "type_label": "Budget Signal",
+          "row_count": 1,
+          "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+          "source_field": "Budget",
+          "metrics": {
+            "cost": 104.85,
+            "impressions": 54.0,
+            "clicks": 4.0
+          }
+        },
+        {
+          "name": "60.00",
+          "folder": "budget-pacing",
+          "type_label": "Budget Signal",
+          "row_count": 1,
+          "campaign": "PMAX cu remarketing",
+          "source_field": "Budget",
+          "metrics": {
+            "cost": 1132.22,
+            "impressions": 23029.0,
+            "clicks": 465.0,
+            "conversions": 9.0
+          }
+        },
+        {
+          "name": "90.00",
+          "folder": "budget-pacing",
+          "type_label": "Budget Signal",
+          "row_count": 1,
+          "campaign": "SRCH | Composite | 3 Counties | Calls",
+          "source_field": "Budget",
+          "metrics": {
+            "cost": 105.15,
+            "impressions": 251.0,
+            "clicks": 15.0,
+            "conversions": 1.0
+          }
+        }
+      ]
+    },
+    "checks": [
+      {
+        "id": "G-TRK1",
+        "platform": "google",
+        "category": "tracking",
+        "severity": "critical",
+        "status": "warning",
+        "description": "Conversion action evidence present for Google Ads.",
+        "evidence": "column: missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-CM2",
+        "platform": "google",
+        "category": "tracking",
+        "severity": "critical",
+        "status": "warning",
+        "description": "Consent Mode v2 status documented when relevant.",
+        "evidence": "column missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-EC1",
+        "platform": "google",
+        "category": "tracking",
+        "severity": "critical",
+        "status": "warning",
+        "description": "Enhanced conversions/offline conversion quality documented.",
+        "evidence": "column missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-PMAX1",
+        "platform": "google",
+        "category": "pmax",
+        "severity": "high",
+        "status": "warning",
+        "description": "PMax rows include asset group and asset strength evidence.",
+        "evidence": "PMax rows: 2; asset group: missing; asset strength: missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-ST1",
+        "platform": "google",
+        "category": "search-term-hygiene",
+        "severity": "high",
+        "status": "warning",
+        "description": "Search term export evidence available for waste review.",
+        "evidence": "column: missing",
+        "source": "imported export"
+      },
+      {
+        "id": "G-AIMAX1",
+        "platform": "google",
+        "category": "api-version",
+        "severity": "medium",
+        "status": "warning",
+        "description": "AI Max status should be documented for Search/DSA/ACA/broad-match risk.",
+        "evidence": "column: missing",
+        "source": "imported export"
+      }
+    ],
+    "signals": {
+      "has_search_terms": false,
+      "has_tracking_diagnostics": false,
+      "has_crm_quality": false,
+      "creative_count": 0,
+      "keyword_count": 0,
+      "landing_page_count": 0,
+      "active_learning_count": 0,
+      "policy_issue_count": 0,
+      "platform": "google"
+    }
+  },
+  "adapter_checks": [
+    {
+      "id": "G-TRK1",
+      "platform": "google",
+      "category": "tracking",
+      "severity": "critical",
+      "status": "warning",
+      "description": "Conversion action evidence present for Google Ads.",
+      "evidence": "column: missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-CM2",
+      "platform": "google",
+      "category": "tracking",
+      "severity": "critical",
+      "status": "warning",
+      "description": "Consent Mode v2 status documented when relevant.",
+      "evidence": "column missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-EC1",
+      "platform": "google",
+      "category": "tracking",
+      "severity": "critical",
+      "status": "warning",
+      "description": "Enhanced conversions/offline conversion quality documented.",
+      "evidence": "column missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-PMAX1",
+      "platform": "google",
+      "category": "pmax",
+      "severity": "high",
+      "status": "warning",
+      "description": "PMax rows include asset group and asset strength evidence.",
+      "evidence": "PMax rows: 2; asset group: missing; asset strength: missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-ST1",
+      "platform": "google",
+      "category": "search-term-hygiene",
+      "severity": "high",
+      "status": "warning",
+      "description": "Search term export evidence available for waste review.",
+      "evidence": "column: missing",
+      "source": "imported export"
+    },
+    {
+      "id": "G-AIMAX1",
+      "platform": "google",
+      "category": "api-version",
+      "severity": "medium",
+      "status": "warning",
+      "description": "AI Max status should be documented for Search/DSA/ACA/broad-match risk.",
+      "evidence": "column: missing",
+      "source": "imported export"
+    }
+  ],
+  "entities": {
+    "budget-pacing": [
+      {
+        "name": "1.00",
+        "folder": "budget-pacing",
+        "type_label": "Budget Signal",
+        "row_count": 6,
+        "campaign": "Loudoun Decks - Lead Gen - Demand Gen 2026",
+        "source_field": "Budget",
+        "metrics": {
+          "cost": 5252.11,
+          "impressions": 119023.0,
+          "clicks": 884.0,
+          "conversions": 46.0
+        }
+      },
+      {
+        "name": "15.00",
+        "folder": "budget-pacing",
+        "type_label": "Budget Signal",
+        "row_count": 1,
+        "campaign": "SRCH | Branded | 3 Counties | Calls",
+        "source_field": "Budget",
+        "metrics": {
+          "cost": 55.15,
+          "impressions": 8.0,
+          "clicks": 5.0
+        }
+      },
+      {
+        "name": "33.00",
+        "folder": "budget-pacing",
+        "type_label": "Budget Signal",
+        "row_count": 1,
+        "campaign": "loudoun decks",
+        "source_field": "Budget",
+        "metrics": {
+          "cost": 857.39,
+          "impressions": 2332.0,
+          "clicks": 75.0,
+          "conversions": 4.0
+        }
+      },
+      {
+        "name": "45.00",
+        "folder": "budget-pacing",
+        "type_label": "Budget Signal",
+        "row_count": 1,
+        "campaign": "SRCH | Replacement + Resurfacing | 3 Counties | Calls",
+        "source_field": "Budget",
+        "metrics": {
+          "cost": 104.85,
+          "impressions": 54.0,
+          "clicks": 4.0
+        }
+      },
+      {
+        "name": "60.00",
+        "folder": "budget-pacing",
+        "type_label": "Budget Signal",
+        "row_count": 1,
+        "campaign": "PMAX cu remarketing",
+        "source_field": "Budget",
+        "metrics": {
+          "cost": 1132.22,
+          "impressions": 23029.0,
+          "clicks": 465.0,
+          "conversions": 9.0
+        }
+      },
+      {
+        "name": "90.00",
+        "folder": "budget-pacing",
+        "type_label": "Budget Signal",
+        "row_count": 1,
+        "campaign": "SRCH | Composite | 3 Counties | Calls",
+        "source_field": "Budget",
+        "metrics": {
+          "cost": 105.15,
+          "impressions": 251.0,
+          "clicks": 15.0,
+          "conversions": 1.0
+        }
+      }
+    ]
+  }
+}
