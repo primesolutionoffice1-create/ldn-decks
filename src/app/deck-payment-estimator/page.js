@@ -6,6 +6,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import EnhancifyWidget from '@/components/EnhancifyWidget';
 import FinancingCalculator from '@/components/FinancingCalculator';
+import EstimatorTrackedLink from '@/components/EstimatorTrackedLink';
 import { buildMetadata } from '@/lib/seo';
 import CallLink from '@/components/CallLink';
 
@@ -19,24 +20,36 @@ export const metadata = buildMetadata({
 // distinct from the financing-policy FAQs on /deck-financing.
 const faqs = [
   {
-    q: "How is the monthly payment calculated?",
-    a: "The estimator uses the standard amortized-loan formula. It takes your project amount, divides the APR into a monthly rate, and spreads the balance evenly across every month of the term so each payment is identical. Early payments are mostly interest; later payments are mostly principal — but the monthly amount stays flat.",
+    q: "How much does deck financing usually cost per month?",
+    a: "Monthly deck payments depend on the project amount, APR, and repayment term. A smaller resurfacing project will model very differently from a full composite deck replacement with stairs, railings, lighting, and permits. Use the estimator to test a realistic project amount, then confirm the final number with a written Loudoun Decks estimate and a soft-pull lender pre-qualification.",
   },
   {
-    q: "What APR should I use in the estimator?",
-    a: "If you do not yet have a loan offer, 8–10% is a reasonable middle-of-the-road APR to model for a home-improvement loan in 2026. Strong-credit borrowers often see less, and promotional 0% APR terms exist for shorter payoff windows. Slide the APR field to see best-case and worst-case payments — your real rate comes from a soft-pull pre-qualification.",
+    q: "Can I use this tool for composite deck cost planning?",
+    a: "Yes. The estimator is built for larger deck projects, including composite deck replacement, Trex, TimberTech, AZEK/PVC, covered decks, and outdoor living upgrades. Start with a cost range from the deck cost calculator or your written estimate, then use this page to understand the monthly payment side of the decision.",
   },
   {
-    q: "Why does a longer term lower my monthly payment but cost more overall?",
-    a: "A longer term spreads the same balance across more payments, so each month is smaller — but interest accrues for more years, so the total interest is higher. The estimator shows both numbers (monthly payment and total interest) so you can weigh a comfortable monthly against the lifetime cost.",
+    q: "Will checking financing approval affect my credit score?",
+    a: "The estimator itself does not check credit. When you move from this model to a financing application, pre-qualification is typically a soft credit pull, which lets you review available offers without affecting your credit score. A hard inquiry may happen only if you choose to move forward with a specific lender offer.",
   },
   {
-    q: "Is this estimate a loan offer or a quote?",
-    a: "No. The estimator is an illustration only. Your actual APR, term and monthly payment are set by the lender based on your creditworthiness, and your project amount is set by our written, itemized estimate. Use this tool to get in the right ballpark before you talk to anyone.",
+    q: "Is Trex more expensive than wood over the long term?",
+    a: "Trex and other composite products usually cost more upfront than pressure-treated wood, but they avoid repeated staining, sealing, sanding, and early board replacement. For homeowners planning to stay in the home, the long-term cost comparison often favors composite once maintenance and usable life are included.",
   },
   {
-    q: "How do I turn this estimate into a real number?",
-    a: "Two steps. First, get an accurate project amount — book a free on-site consultation and we provide a written estimate. Second, run a 60-second soft-pull pre-qualification through Enhancify to see your real rate and term. Neither step affects your credit score, and neither commits you to anything.",
+    q: "Should permit and HOA costs be included in the project amount?",
+    a: "Yes. The project amount should model the whole job, not just deck boards. For Northern Virginia homeowners, that can include framing, railings, stairs, lighting, demolition, permits, HOA documentation, drawings, and cleanup. A complete written estimate is the best number to enter into the calculator.",
+  },
+  {
+    q: "How long does a financed deck project take?",
+    a: "Financing decisions can be quick, but the full project timeline depends on design, product selection, permits, HOA review, material availability, and construction complexity. Many homeowners use this estimator early so they can make budget decisions before final drawings and permit work begin.",
+  },
+  {
+    q: "Does a deck improve home value in Northern Virginia?",
+    a: "A well-built deck can improve resale appeal, usable outdoor living space, and buyer confidence, especially in higher-value Northern Virginia homes. The return depends on material quality, design fit, permit compliance, maintenance needs, and how well the deck connects to the home and yard.",
+  },
+  {
+    q: "What should I do after using the estimator?",
+    a: "Save the monthly payment range that feels comfortable, then request a free on-site estimate. Loudoun Decks can confirm the actual project scope, separate must-do structural work from optional upgrades, and give you a written number to compare against financing offers.",
   },
 ];
 
@@ -81,6 +94,13 @@ const inputs = [
   },
 ];
 
+const trustSignals = [
+  '5.0 Google rating with 49+ reviews',
+  'A+ BBB Accredited Business',
+  'Written, itemized estimates',
+  'Soft-pull financing path available',
+];
+
 export default function DeckPaymentEstimatorPage() {
   return (
     <>
@@ -98,17 +118,40 @@ export default function DeckPaymentEstimatorPage() {
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.12rem', lineHeight: 1.6, marginBottom: 0, maxWidth: 680 }}>
             See the monthly payment on a custom deck in seconds. Move the three sliders &mdash; project amount, APR and term &mdash; and the estimator does the amortization math for you.
           </p>
+          <div style={{ display: 'flex', gap: '0.85rem', flexWrap: 'wrap', marginTop: '1.75rem' }}>
+            <EstimatorTrackedLink
+              href="#payment-estimator"
+              ctaLocation="hero_jump_to_estimator"
+              style={{ display: 'inline-block', background: 'var(--color-primary)', color: 'var(--white)', padding: '0.95rem 1.5rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none' }}
+            >
+              Estimate My Monthly Payment
+            </EstimatorTrackedLink>
+            <EstimatorTrackedLink
+              href="/contact"
+              ctaLocation="hero_free_estimate"
+              style={{ display: 'inline-block', background: 'transparent', color: 'var(--white)', padding: '0.95rem 1.5rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.25)' }}
+            >
+              Get a Written Estimate
+            </EstimatorTrackedLink>
+          </div>
         </div>
       </section>
 
       {/* ============ THE CALCULATOR (reason the page exists) ============ */}
-      <section style={{ background: '#fafafa', padding: '3rem 0' }}>
+      <section id="payment-estimator" style={{ background: '#fafafa', padding: '3rem 0', scrollMarginTop: '6rem' }}>
         <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ background: '#fff', borderRadius: 14, padding: '2.5rem 2rem', border: '1px solid #e5e5e5', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
             <FinancingCalculator />
             <p style={{ fontSize: '0.78rem', color: '#999', textAlign: 'center', marginTop: '1.25rem', marginBottom: 0, fontStyle: 'italic' }}>
               For illustration only. Actual rate, term and monthly payment are determined by your lender based on creditworthiness.
             </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.75rem', marginTop: '1.5rem' }}>
+              {trustSignals.map((signal) => (
+                <div key={signal} style={{ background: '#fafafa', border: '1px solid #eee', borderRadius: 8, padding: '0.8rem', textAlign: 'center', fontSize: '0.86rem', color: '#444', fontWeight: 600 }}>
+                  {signal}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -162,6 +205,22 @@ export default function DeckPaymentEstimatorPage() {
             Illustrative only at a sample 8.99% APR. The longer term lowers the monthly payment but raises total interest. Your real rate and term come from a soft-pull pre-qualification.
           </p>
 
+          <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 14, padding: '1.5rem', margin: '2rem 0 0' }}>
+            <h2 style={{ fontSize: '1.35rem', margin: '0 0 0.65rem', fontWeight: 800 }}>
+              Use the Payment Number as a Planning Filter
+            </h2>
+            <p style={{ ...S.p, marginBottom: '1rem', color: '#555' }}>
+              A monthly payment model helps you compare project size, material level, and timeline before you overbuild or under-spec the deck. After the estimator gives you a comfortable range, the next step is a written project estimate that accounts for framing condition, permits, stairs, railings, and site access.
+            </p>
+            <EstimatorTrackedLink
+              href="/contact"
+              ctaLocation="planning_filter_written_estimate"
+              style={{ color: 'var(--color-primary)', fontWeight: 700 }}
+            >
+              Request the written estimate to confirm the real project amount
+            </EstimatorTrackedLink>
+          </div>
+
           {/* ============ FROM ESTIMATE TO REAL RATE ============ */}
           <div style={{ background: 'var(--color-dark)', borderRadius: 14, padding: '2.75rem 2rem', textAlign: 'center', margin: '3rem 0' }}>
             <p style={{ color: 'var(--color-primary)', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
@@ -200,7 +259,7 @@ export default function DeckPaymentEstimatorPage() {
           </div>
 
           {/* ============ FAQ ============ */}
-          <h2 style={S.h2}>How the Estimator Works — FAQ</h2>
+          <h2 style={S.h2}>Deck Payment, Cost, and Financing FAQ</h2>
           {faqs.map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 10, padding: '1.25rem', marginBottom: '0.75rem', background: '#fff' }}>
               <summary style={{ fontWeight: 700, cursor: 'pointer', fontSize: '1rem' }}>{faq.q}</summary>
@@ -217,9 +276,9 @@ export default function DeckPaymentEstimatorPage() {
               Book a free on-site consultation. We measure, design and hand you a written, itemized estimate &mdash; the accurate number to drop into this calculator.
             </p>
             <div style={{ display: 'flex', gap: '0.85rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/contact" style={{ display: 'inline-block', background: 'var(--color-primary)', color: 'var(--white)', padding: '1rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.02rem' }}>
+              <EstimatorTrackedLink href="/contact" ctaLocation="final_free_estimate" style={{ display: 'inline-block', background: 'var(--color-primary)', color: 'var(--white)', padding: '1rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.02rem' }}>
                 Get My Free Estimate
-              </Link>
+              </EstimatorTrackedLink>
               <CallLink style={{ display: 'inline-block', background: 'transparent', color: 'var(--color-dark)', padding: '1rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.02rem', border: '2px solid #ddd' }}>
                 Call (571) 655-7207
               </CallLink>

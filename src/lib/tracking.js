@@ -12,6 +12,52 @@ function push(event) {
   window.dataLayer.push(event);
 }
 
+function hasSessionEventFired(key) {
+  if (typeof window === 'undefined' || !key) return false;
+  try {
+    if (!window.sessionStorage) return false;
+    if (window.sessionStorage.getItem(key)) return true;
+    window.sessionStorage.setItem(key, '1');
+    return false;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Track deck payment estimator interactions.
+ * These events are GA4/GTM friendly and intentionally stay separate from
+ * lead-conversion events. They describe calculator engagement only.
+ */
+export function trackEstimatorEvent(eventName, {
+  amount,
+  apr,
+  years,
+  monthlyPayment,
+  totalInterest,
+  ctaLocation,
+  optionType,
+  dedupeKey,
+} = {}) {
+  if (typeof window === 'undefined' || !eventName) return;
+  const eventKey = dedupeKey ? `estimator_${eventName}_${dedupeKey}` : null;
+  if (hasSessionEventFired(eventKey)) return;
+
+  push({
+    event: eventName,
+    tool_name: 'deck_payment_estimator',
+    project_amount: typeof amount === 'number' ? amount : null,
+    estimated_apr: typeof apr === 'number' ? apr : null,
+    loan_term_years: typeof years === 'number' ? years : null,
+    estimated_monthly_payment: typeof monthlyPayment === 'number' ? Math.round(monthlyPayment) : null,
+    estimated_total_interest: typeof totalInterest === 'number' ? Math.round(totalInterest) : null,
+    cta_location: ctaLocation || null,
+    financing_option: optionType || null,
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+  });
+}
+
 function trackPinterestLead({ eventId } = {}) {
   if (typeof window === 'undefined') {
     return;

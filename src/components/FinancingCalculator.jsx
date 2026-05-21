@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
+import { trackEstimatorEvent } from '@/lib/tracking';
 
 function calculateMonthlyPayment(principal, apr, years) {
   const monthlyRate = apr / 100 / 12;
@@ -14,6 +15,9 @@ export default function FinancingCalculator() {
   const [amount, setAmount] = useState(35000);
   const [apr, setApr] = useState(8.99);
   const [years, setYears] = useState(15);
+  const startedRef = useRef(false);
+  const completedRef = useRef(false);
+  const touchedInputsRef = useRef(new Set());
 
   const monthly = useMemo(() => calculateMonthlyPayment(amount, apr, years), [amount, apr, years]);
   const totalPaid = monthly * years * 12;
@@ -21,6 +25,50 @@ export default function FinancingCalculator() {
 
   const formatMoney = (n) =>
     new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(n);
+
+  const trackInputChange = ({ inputName, nextAmount = amount, nextApr = apr, nextYears = years }) => {
+    if (!startedRef.current) {
+      startedRef.current = true;
+      trackEstimatorEvent('estimator_started', {
+        amount: nextAmount,
+        apr: nextApr,
+        years: nextYears,
+        monthlyPayment: calculateMonthlyPayment(nextAmount, nextApr, nextYears),
+        dedupeKey: 'first_interaction',
+      });
+    }
+
+    if (inputName) {
+      touchedInputsRef.current.add(inputName);
+    }
+
+    const nextMonthly = calculateMonthlyPayment(nextAmount, nextApr, nextYears);
+    const nextTotalInterest = nextMonthly * nextYears * 12 - nextAmount;
+
+    if (inputName === 'term') {
+      trackEstimatorEvent('financing_option_selected', {
+        amount: nextAmount,
+        apr: nextApr,
+        years: nextYears,
+        monthlyPayment: nextMonthly,
+        totalInterest: nextTotalInterest,
+        optionType: `${nextYears}_year_term`,
+        dedupeKey: `term_${nextYears}`,
+      });
+    }
+
+    if (!completedRef.current && touchedInputsRef.current.size >= 3) {
+      completedRef.current = true;
+      trackEstimatorEvent('estimator_completed', {
+        amount: nextAmount,
+        apr: nextApr,
+        years: nextYears,
+        monthlyPayment: nextMonthly,
+        totalInterest: nextTotalInterest,
+        dedupeKey: 'all_inputs_adjusted',
+      });
+    }
+  };
 
   return (
     <div style={{ maxWidth: 720, margin: '0 auto' }}>
@@ -38,7 +86,11 @@ export default function FinancingCalculator() {
               max={100000}
               step={1000}
               value={amount}
-              onChange={(e) => setAmount(Number(e.target.value))}
+              onChange={(e) => {
+                const nextAmount = Number(e.target.value);
+                setAmount(nextAmount);
+                trackInputChange({ inputName: 'amount', nextAmount });
+              }}
               style={{ width: '100%', accentColor: 'var(--color-primary, #d14817)', cursor: 'pointer' }}
               aria-label="Project amount"
             />
@@ -60,7 +112,11 @@ export default function FinancingCalculator() {
               max={18}
               step={0.25}
               value={apr}
-              onChange={(e) => setApr(Number(e.target.value))}
+              onChange={(e) => {
+                const nextApr = Number(e.target.value);
+                setApr(nextApr);
+                trackInputChange({ inputName: 'apr', nextApr });
+              }}
               style={{ width: '100%', accentColor: 'var(--color-primary, #d14817)', cursor: 'pointer' }}
               aria-label="Annual percentage rate"
             />
@@ -82,7 +138,11 @@ export default function FinancingCalculator() {
               max={20}
               step={1}
               value={years}
-              onChange={(e) => setYears(Number(e.target.value))}
+              onChange={(e) => {
+                const nextYears = Number(e.target.value);
+                setYears(nextYears);
+                trackInputChange({ inputName: 'term', nextYears });
+              }}
               style={{ width: '100%', accentColor: 'var(--color-primary, #d14817)', cursor: 'pointer' }}
               aria-label="Loan term in years"
             />

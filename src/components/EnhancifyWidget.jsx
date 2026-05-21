@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import { trackEstimatorEvent } from '@/lib/tracking';
 
 const WIDGET_SRC = 'https://www.enhancify.com/realwidget/?page=9930216&color1=%23d14817&color2=%23000000&color3=%23FFFFFF';
 const FALLBACK_APPLY_URL = 'https://www.enhancify.com/apply/?page=9930216';
@@ -72,6 +73,9 @@ export default function EnhancifyWidget() {
             href={FALLBACK_APPLY_URL}
             target="_blank"
             rel="nofollow noopener noreferrer"
+            onClick={() => trackEstimatorEvent('estimator_cta_clicked', {
+              ctaLocation: 'enhancify_fallback_apply',
+            })}
             style={{
               display: 'inline-block',
               background: 'var(--color-primary)',
