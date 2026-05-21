@@ -53,6 +53,11 @@ import LayoutContent from "./LayoutContent";
 
 const PINTEREST_TAG_ID = "2612622395697";
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || process.env.META_PIXEL_ID || "695923313293515";
+// Microsoft Clarity — heatmaps + session recordings (CRO playbook §Heatmap).
+// No fallback ID on purpose: the tag is a no-op until NEXT_PUBLIC_CLARITY_PROJECT_ID
+// is set in the Vercel environment. Create the project at https://clarity.microsoft.com,
+// copy its 10-character project ID, and add it as that env var.
+const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "";
 
 export default function RootLayout({ children }) {
   return (
@@ -69,6 +74,7 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://ct.pinterest.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <link rel="dns-prefetch" href="https://www.facebook.com" />
+        {CLARITY_PROJECT_ID && <link rel="dns-prefetch" href="https://www.clarity.ms" />}
         
         {/* AI content discovery — llms.txt standard */}
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms.txt" title="LLM content index" />
@@ -138,6 +144,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           data-key="3i7ZUj2Ik0UT5pH1a3mooQ"
           strategy="lazyOnload"
         />
+
+        {/* Microsoft Clarity — heatmaps & session recordings (CRO playbook
+            §Heatmap). afterInteractive captures the session early without
+            competing with mobile LCP. Renders only when the project ID env
+            var is set, so preview/unconfigured environments stay clean. */}
+        {CLARITY_PROJECT_ID && (
+          <Script
+            id="ms-clarity"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","${CLARITY_PROJECT_ID}");`,
+            }}
+          />
+        )}
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}

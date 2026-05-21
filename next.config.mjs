@@ -329,11 +329,11 @@ const nextConfig = {
     // sources used by next/image including the BBB seal (self-hosted).
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googletagservices.com https://analytics.ahrefs.com https://*.vercel-scripts.com https://va.vercel-scripts.com https://www.google.com https://www.gstatic.com https://s.pinimg.com https://connect.facebook.net",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googletagservices.com https://analytics.ahrefs.com https://*.vercel-scripts.com https://va.vercel-scripts.com https://www.google.com https://www.gstatic.com https://s.pinimg.com https://connect.facebook.net https://www.clarity.ms https://*.clarity.ms",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com data:",
       "img-src 'self' data: blob: https://*.googleusercontent.com https://www.google-analytics.com https://*.google.com https://*.googletagmanager.com https://maps.gstatic.com https://maps.googleapis.com https://ct.pinterest.com https://*.pinimg.com https://www.facebook.com https://*.facebook.com",
-      "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.ahrefs.com https://*.vercel-insights.com https://vitals.vercel-insights.com https://www.googletagmanager.com https://ct.pinterest.com https://*.pinterest.com https://www.facebook.com https://*.facebook.com",
+      "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.ahrefs.com https://*.vercel-insights.com https://vitals.vercel-insights.com https://www.googletagmanager.com https://ct.pinterest.com https://*.pinterest.com https://www.facebook.com https://*.facebook.com https://*.clarity.ms https://c.bing.com",
       "frame-src 'self' https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com",
       "object-src 'none'",
       "base-uri 'self'",
