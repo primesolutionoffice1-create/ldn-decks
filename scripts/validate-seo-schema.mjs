@@ -1,20 +1,36 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { execFileSync } from 'node:child_process';
 
 const appDir = path.resolve('src/app');
 const componentDir = path.resolve('src/components');
 
-function rgFiles(pattern, dir) {
-  try {
-    return execFileSync('rg', ['-l', pattern, dir], { encoding: 'utf8' })
-      .trim()
-      .split('\n')
-      .filter(Boolean);
-  } catch (error) {
-    if (error.status === 1) return [];
-    throw error;
+// Recursively lists source files under `dir`, skipping build/dep folders.
+function walkSourceFiles(dir) {
+  const out = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.name === 'node_modules' || entry.name === '.next') continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      out.push(...walkSourceFiles(full));
+    } else if (entry.isFile() && /\.(js|jsx|ts|tsx|mjs)$/.test(entry.name)) {
+      out.push(full);
+    }
   }
+  return out;
+}
+
+// Returns source files under `dir` whose contents match `pattern` (a regex
+// string). Native replacement for the previous `rg -l` shell-out so the
+// validator runs on any machine without ripgrep installed.
+function rgFiles(pattern, dir) {
+  const re = new RegExp(pattern);
+  return walkSourceFiles(dir).filter(file => {
+    try {
+      return re.test(fs.readFileSync(file, 'utf8'));
+    } catch {
+      return false;
+    }
+  });
 }
 
 function fail(message) {

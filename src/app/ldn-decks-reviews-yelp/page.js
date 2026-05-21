@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -11,10 +10,6 @@ export const metadata = buildMetadata({
   title: 'Loudoun Decks Reviews | Yelp Deck Builder Northern Virginia',
   description: 'Read real Yelp reviews for LDN Decks. Trusted deck builder in Northern Virginia — custom decks, Trex, and composite outdoor living projects. 5.0 rated.',
 });
-
-// reviewSchema is built from the yelpReviews array below — it attaches the
-// review list to the single canonical org (@id #organization) without
-// redefining the business entity.
 
 const S = {
   h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' },
@@ -67,22 +62,14 @@ const yelpReviews = [
   },
 ];
 
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@id": "https://ldndecks.com/#organization",
-  "review": yelpReviews.map((r) => ({
-    "@type": "Review",
-    author: { "@type": "Person", name: r.name },
-    reviewRating: { "@type": "Rating", ratingValue: String(r.rating), bestRating: "5", worstRating: "1" },
-    reviewBody: r.text,
-  })),
-};
+// No org-level `review` JSON-LD is emitted here. Self-serving Review markup
+// about Loudoun Decks is disallowed by Google's review-snippet policy and
+// risks a structured-data manual action. The customer reviews below remain
+// fully visible on-page as real homeowner proof.
 
 export default function YelpReviewsPage() {
   return (
     <>
-      <JsonLd data={reviewSchema} />
-
       {/* Hero */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

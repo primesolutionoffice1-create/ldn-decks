@@ -217,14 +217,13 @@ export function buildOrganizationSchema() {
       closes: h.closes,
     })),
     aggregateRating: { '@type': 'AggregateRating', ...BUSINESS.aggregateRating },
-    review: BUSINESS.reviews.map(r => ({
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: String(r.rating), bestRating: '5', worstRating: '1' },
-      author: { '@type': 'Person', name: r.author },
-      datePublished: r.datePublished,
-      reviewBody: r.body,
-      publisher: { '@type': 'Organization', name: r.platform },
-    })),
+    // Self-hosted `review` markup is intentionally NOT emitted on the
+    // organization entity. Google's review-snippet policy disallows
+    // self-serving Review structured data (a business marking up reviews
+    // about itself) and it risks a "Spam: structured data" manual action.
+    // Visible reviews still render from BUSINESS.reviews on /reviews and
+    // related pages. aggregateRating is retained — keep reviewCount in
+    // sync with the live Google Business Profile total.
     areaServed: BUSINESS.areaServed.map(name => ({ '@type': 'AdministrativeArea', name })),
     sameAs: BUSINESS.sameAs,
     hasCredential: BUSINESS.credentials.map(c => ({
@@ -238,10 +237,9 @@ export function buildOrganizationSchema() {
       name: m.name,
       alternateName: m.alternateName,
       url: m.url,
-      member: {
-        '@type': 'GeneralContractor',
-        '@id': ORG_ID,
-      },
+      // Reference the single canonical org by @id only — re-declaring
+      // '@type': 'GeneralContractor' here minted a second contractor node.
+      member: { '@id': ORG_ID },
     })),
   };
 }
