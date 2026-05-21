@@ -51,7 +51,6 @@ export default function robots() {
         userAgent: 'Bingbot',
         allow: '/',
         disallow: TRACKING_DISALLOWS,
-        crawlDelay: 1,
       },
       ...AI_BOTS.map(userAgent => ({
         userAgent,

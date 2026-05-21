@@ -7,7 +7,7 @@ import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/about/certifications-and-licenses',
-  title: 'Certifications & Licenses | Loudoun Decks — Verified Contractor',
+  title: 'Certifications & Licenses | Loudoun Decks | Verified Contractor',
   description: 'Loudoun Decks: Virginia Class A Licensed, fully insured, Trex Pro certified, BBB accredited. Verify our credentials. Serving Loudoun, Fairfax & Prince William.',
 });
 

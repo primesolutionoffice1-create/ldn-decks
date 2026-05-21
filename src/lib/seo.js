@@ -67,7 +67,8 @@ export function buildMetadata({
     return {
         title: seoTitle,
         description: seoDescription,
-        metadataBase: new URL(SITE_URL),
+        // metadataBase is declared once in the root layout (app/layout.js)
+        // and inherited by every route — no need to repeat it per page.
         alternates: {
                 canonical: url,
         },
