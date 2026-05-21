@@ -109,7 +109,7 @@ export default function HouzzProjectsPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
             <div style={S.card}>
               <div style={{ height: 200, position: 'relative', margin: '-2rem -2rem 1.5rem', borderRadius: '16px 16px 0 0', overflow: 'hidden' }}>
-                <Image src="/images/img13.jpeg" alt="Custom Deck Construction" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+                <Image src="/images/img13.jpeg" alt="Composite deck project with finished railing and stairs" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
               </div>
               <h3 style={S.h3}>Trex Certified Deck Builders</h3>
               <p style={S.p}>
@@ -119,7 +119,7 @@ export default function HouzzProjectsPage() {
             </div>
             <div style={S.card}>
               <div style={{ height: 200, position: 'relative', margin: '-2rem -2rem 1.5rem', borderRadius: '16px 16px 0 0', overflow: 'hidden' }}>
-                <Image src="/images/img14.jpeg" alt="Screened Porch Projects" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+                <Image src="/images/img14.jpeg" alt="Screened porch project designed for outdoor living" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
               </div>
               <h3 style={S.h3}>Custom Screened Porches</h3>
               <p style={S.p}>
@@ -129,7 +129,7 @@ export default function HouzzProjectsPage() {
             </div>
             <div style={S.card}>
               <div style={{ height: 200, position: 'relative', margin: '-2rem -2rem 1.5rem', borderRadius: '16px 16px 0 0', overflow: 'hidden' }}>
-                <Image src="/images/img11.jpeg" alt="Patio and Hardscape Design" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+                <Image src="/images/img11.jpeg" alt="Patio and hardscape project connected to a backyard living space" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
               </div>
               <h3 style={S.h3}>Luxury Patios & Hardscapes</h3>
               <p style={S.p}>

@@ -8,7 +8,15 @@ const CheckIcon = () => (
   </svg>
 );
 
-export default function ServiceMain({ title, subtitle, description, listTitle, listItems, image1, image2 }) {
+function buildImageAlt(title, fallback, descriptor) {
+  if (!title) return fallback;
+  return `${title.replace(/\s+/g, ' ').trim()} ${descriptor}`;
+}
+
+export default function ServiceMain({ title, subtitle, description, listTitle, listItems, image1, image2, image1Alt, image2Alt }) {
+  const mainImageAlt = image1Alt || buildImageAlt(title, 'Completed outdoor living project by Loudoun Decks', 'project by Loudoun Decks');
+  const detailImageAlt = image2Alt || buildImageAlt(title, 'Deck construction detail by Loudoun Decks', 'detail for a Loudoun Decks project');
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -16,10 +24,10 @@ export default function ServiceMain({ title, subtitle, description, listTitle, l
         <div className={styles.imagesCol}>
           <div className={styles.frameOutline}></div>
           <div className={styles.subImgWrapper}>
-            <Image src={image2 || "/intro_sub.png"} alt="Service Detail" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 400px" />
+            <Image src={image2 || "/intro_sub.png"} alt={detailImageAlt} fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 400px" />
           </div>
           <div className={styles.mainImgWrapper}>
-            <Image src={image1 || "/intro_main.png"} alt="Service Build" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 600px" />
+            <Image src={image1 || "/intro_main.png"} alt={mainImageAlt} fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 600px" />
           </div>
         </div>
 

@@ -14,6 +14,23 @@ function trimToSeoLimit(value, limit) {
     return cleanCut.replace(/[|,;:\-\s]+$/g, "").trim();
 }
 
+function removeDuplicateBrandSuffix(value) {
+    if (typeof value !== "string") {
+        return value;
+    }
+
+    let cleanTitle = value.trim().replace(/\s+/g, " ");
+    const brandSuffixes = ["Loudoun Decks", "LDN Decks"];
+
+    for (const brand of brandSuffixes) {
+        const escapedBrand = brand.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const duplicateSuffix = new RegExp(`(\\s*\\|\\s*${escapedBrand}){2,}$`, "i");
+        cleanTitle = cleanTitle.replace(duplicateSuffix, ` | ${brand}`);
+    }
+
+    return cleanTitle;
+}
+
 /**
  * Build consistent metadata for Next.js App Router.
  *
@@ -52,7 +69,7 @@ export function buildMetadata({
     }
 
     const url = `${SITE_URL}${path}`;
-    const seoTitle = trimToSeoLimit(title, 60);
+    const seoTitle = trimToSeoLimit(removeDuplicateBrandSuffix(title), 60);
     const seoDescription = trimToSeoLimit(description, 155);
 
     // Build the OG image object — only declare width/height when explicitly verified.
