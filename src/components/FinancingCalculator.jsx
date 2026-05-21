@@ -70,9 +70,14 @@ export default function FinancingCalculator() {
     }
   };
 
+  const selectTermPreset = ({ years: presetYears }) => {
+    setYears(presetYears);
+    trackInputChange({ inputName: 'term', nextYears: presetYears });
+  };
+
   return (
     <div style={{ maxWidth: 720, margin: '0 auto' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'center' }}>
+      <div className="financing-calculator-grid">
         <div>
           {/* Amount slider */}
           <div style={{ marginBottom: '1.5rem' }}>
@@ -151,6 +156,33 @@ export default function FinancingCalculator() {
               <span>20 yr</span>
             </div>
           </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.55rem', marginTop: '1rem' }}>
+            {[
+              { label: 'Pay faster', years: 7 },
+              { label: 'Balanced', years: 12 },
+              { label: 'Lower monthly', years: 15 },
+            ].map((option) => (
+              <button
+                key={option.label}
+                type="button"
+                onClick={() => selectTermPreset(option)}
+                aria-pressed={years === option.years}
+                style={{
+                  border: years === option.years ? '2px solid var(--color-primary, #d14817)' : '1px solid #ddd',
+                  background: years === option.years ? '#fff5f2' : '#fff',
+                  color: '#222',
+                  borderRadius: 8,
+                  padding: '0.65rem 0.45rem',
+                  fontSize: '0.78rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                }}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div style={{ background: 'var(--color-dark)', color: 'var(--white)', borderRadius: 12, padding: '2rem 1.75rem', textAlign: 'center' }}>
@@ -173,6 +205,21 @@ export default function FinancingCalculator() {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .financing-calculator-grid {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(260px, 1fr);
+          gap: 2rem;
+          align-items: center;
+        }
+
+        @media (max-width: 720px) {
+          .financing-calculator-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+          }
+        }
+      `}</style>
     </div>
   );
 }

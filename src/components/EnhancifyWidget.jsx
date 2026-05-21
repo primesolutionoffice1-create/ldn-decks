@@ -9,6 +9,19 @@ const FALLBACK_APPLY_URL = 'https://www.enhancify.com/apply/?page=9930216';
 export default function EnhancifyWidget() {
   const containerRef = useRef(null);
   const [status, setStatus] = useState('loading');
+  const trackedClickRef = useRef(false);
+
+  const handleWidgetClick = (ctaLocation = 'enhancify_apply') => {
+    if (trackedClickRef.current) return;
+    trackedClickRef.current = true;
+    trackEstimatorEvent('estimator_cta_clicked', {
+      ctaLocation,
+    });
+    trackEstimatorEvent('financing_option_selected', {
+      optionType: 'enhancify_prequalification',
+      dedupeKey: 'enhancify_prequalification',
+    });
+  };
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -57,6 +70,7 @@ export default function EnhancifyWidget() {
         className="realwidget"
         data-textbutton="Apply now"
         data-widthbtn="400"
+        onClickCapture={handleWidgetClick}
         style={{ display: 'flex', justifyContent: 'center' }}
       />
       {status === 'loading' && (
@@ -73,9 +87,7 @@ export default function EnhancifyWidget() {
             href={FALLBACK_APPLY_URL}
             target="_blank"
             rel="nofollow noopener noreferrer"
-            onClick={() => trackEstimatorEvent('estimator_cta_clicked', {
-              ctaLocation: 'enhancify_fallback_apply',
-            })}
+            onClick={() => handleWidgetClick('enhancify_fallback_apply')}
             style={{
               display: 'inline-block',
               background: 'var(--color-primary)',

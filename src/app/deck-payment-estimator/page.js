@@ -9,12 +9,15 @@ import FinancingCalculator from '@/components/FinancingCalculator';
 import EstimatorTrackedLink from '@/components/EstimatorTrackedLink';
 import { buildMetadata } from '@/lib/seo';
 import CallLink from '@/components/CallLink';
+import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/deck-payment-estimator',
   title: 'Deck Payment Estimator | Monthly Cost Calculator | Loudoun Decks',
   description: 'Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia.',
 });
+
+const pageUrl = 'https://ldndecks.com/deck-payment-estimator';
 
 // Tool-focused FAQs — about how the estimator works (the math), deliberately
 // distinct from the financing-policy FAQs on /deck-financing.
@@ -56,6 +59,8 @@ const faqs = [
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "@id": `${pageUrl}#faq`,
+  "url": pageUrl,
   "mainEntity": faqs.map(({ q, a }) => ({
     "@type": "Question",
     "name": q,
@@ -95,8 +100,9 @@ const inputs = [
 ];
 
 const trustSignals = [
-  '5.0 Google rating with 49+ reviews',
+  `${BUSINESS.aggregateRating.ratingValue} Google rating with ${BUSINESS.aggregateRating.reviewCount} reviews`,
   'A+ BBB Accredited Business',
+  'Virginia DPOR licensed contractor',
   'Written, itemized estimates',
   'Soft-pull financing path available',
 ];

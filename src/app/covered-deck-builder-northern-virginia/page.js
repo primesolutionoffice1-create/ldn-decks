@@ -137,7 +137,7 @@ export default function CoveredDeckPage() {
         description="Our end-to-end covered-deck projects are managed from engineering through final inspection."
         items={inclusions}
       />
-      <ServicesFAQ title="Covered Deck FAQs" faqs={faqs} />
+      <ServicesFAQ title="Covered Deck FAQs" faqs={faqs} withSchema={false} />
 
       <section style={{ padding: '40px 20px', background: '#f9f9f9', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
