@@ -189,6 +189,9 @@ export default function DeckFinancingPage() {
             <p style={{ fontSize: '0.78rem', color: '#999', textAlign: 'center', marginTop: '1rem', marginBottom: 0, fontStyle: 'italic' }}>
               For illustration only. Actual rate, term, and monthly payment determined by your lender based on creditworthiness.
             </p>
+            <p style={{ fontSize: '0.92rem', color: '#555', textAlign: 'center', marginTop: '1rem', marginBottom: 0 }}>
+              Need the focused version? Open the <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck payment calculator</Link> and model monthly payments from your written project amount.
+            </p>
           </div>
 
           {/* ============ FINANCING OPTIONS ============ */}

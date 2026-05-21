@@ -160,6 +160,7 @@ export default function DeckBuilderAshburnPage() {
             ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
             ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
             ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/deck-payment-estimator', 'Estimate Deck Costs by Monthly Payment'],
             ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
           ].map(([href, text]) => (
             <li key={href} style={{ marginBottom: '0.5rem' }}>

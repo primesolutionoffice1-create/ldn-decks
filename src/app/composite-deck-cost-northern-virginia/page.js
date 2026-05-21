@@ -468,7 +468,7 @@ export default function CompositeDeckCostPage() {
             Loudoun Decks offers project financing through Hearth and Synchrony, with terms ranging from 12–84 months. Most $25,000–$45,000 composite deck builds run $300–$650 per month at typical 2026 rates. We can pre-qualify you in under two minutes without a hard credit pull.
           </p>
           <p style={S.pMuted}>
-            For full financing details, rate ranges, and the calculator: <Link href="/deck-financing-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing in Northern Virginia</Link>.
+            For full financing details, rate ranges, and lender context: <Link href="/deck-financing-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing in Northern Virginia</Link>. If you already have a project range in mind, use the <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck payment estimator</Link> to compare monthly payment scenarios before requesting a written estimate.
           </p>
         </div>
       </section>
@@ -514,6 +514,7 @@ export default function CompositeDeckCostPage() {
               ['/services/deck-replacement', 'Deck Replacement Services', 'Full rebuild scope and pricing'],
               ['/services/deck-resurfacing', 'Deck Resurfacing', 'When resurface is the right call'],
               ['/deck-financing-northern-virginia', 'Deck Financing in NoVA', 'Monthly payment math + lenders'],
+              ['/deck-payment-estimator', 'Deck Payment Estimator', 'Estimate monthly payments by project amount'],
               ['/deck-maintenance-checklist-virginia', 'Maintenance Checklist', 'Annual care for composite decks'],
               ['/deck-permit-fairfax-county-virginia', 'Fairfax County Permits', '3–5 week review, $600–$1,300'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Permits', 'LOLA portal, 2–4 weeks, $400–$900'],

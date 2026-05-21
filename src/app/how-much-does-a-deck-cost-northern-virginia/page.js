@@ -132,6 +132,7 @@ export default function DeckCostPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>How to Get an Accurate Quote</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Why online calculators miss 30–40%:</strong> They don&apos;t account for lot conditions, local permits, HOA requirements, or structural attachment work.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Once you have a realistic project range, use the <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck payment estimator</Link> to translate that number into a monthly planning range before you compare financing options.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>What a good estimate includes:</strong> Itemized materials list, labor breakdown, permits, dumpster, cleanup, timeline with milestones, and warranty terms in writing.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Red flags:</strong> No permit costs listed, &ldquo;materials TBD,&rdquo; no written warranty, cash-only payment, no VA contractor license number.</p>
 
@@ -157,6 +158,7 @@ export default function DeckCostPage() {
               ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck Complete Comparison'],
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost in Northern Virginia'],
               ['/deck-cost-calculator', 'Northern Virginia Deck Cost Calculator'],
+              ['/deck-payment-estimator', 'Deck Payment Estimator'],
               ['/deck-financing-northern-virginia', 'Deck Financing in Northern Virginia'],
               ['/how-tariffs-affect-deck-prices-2026', 'How 2026 Tariffs Affect Deck Prices'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value to Your Home?'],
