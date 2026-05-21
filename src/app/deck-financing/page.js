@@ -395,6 +395,7 @@ export default function DeckFinancingPage() {
           <h2 style={S.h2}>Related Resources</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
+              ['/deck-payment-estimator', 'Deck Payment Estimator — Estimate Your Monthly Payment'],
               ['/deck-cost-calculator', 'Free Deck Cost Calculator — Estimate Your Project'],
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia (2026)'],
               ['/deck-roi-calculator-northern-virginia', 'Deck ROI Calculator — Resale Value Data'],

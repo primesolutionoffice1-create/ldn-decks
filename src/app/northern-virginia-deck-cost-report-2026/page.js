@@ -105,6 +105,9 @@ export default function CostReportPage() {
             <Link href="/deck-cost-calculator" style={{ background: '#d14817', color: '#fff', padding: '15px 40px', borderRadius: '8px', textDecoration: 'none', fontWeight: 700, fontSize: '1.1rem' }}>
               Launch Instant Price Calculator
             </Link>
+            <p style={{ marginTop: '1.25rem', marginBottom: 0 }}>
+              <Link href="/deck-payment-estimator" style={{ color: '#fff', fontWeight: 600, textDecoration: 'underline' }}>See estimated monthly payments for your project &rarr;</Link>
+            </p>
           </div>
 
         </div>
