@@ -396,7 +396,7 @@ export default function CompositeDeckBuilderLoudounPage() {
             </table>
           </div>
           <p style={{ ...S.p, marginTop: 22 }}>
-            For detailed pricing, compare this page with our <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 800 }}>Northern Virginia composite deck cost guide</Link>.
+            For detailed pricing, compare this page with our <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 800 }}>Northern Virginia composite deck cost guide</Link>. To estimate your monthly deck payment on a build like this, use our <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 800 }}>deck payment estimator</Link>.
           </p>
         </div>
       </section>

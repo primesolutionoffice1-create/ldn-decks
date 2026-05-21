@@ -139,6 +139,9 @@ export default function CompositeDecksPage() {
             <br />
             On this page we focus on <strong style={{ color: '#111' }}>full custom composite builds</strong>. In Loudoun County? See our <a href="/composite-deck-builder-loudoun" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Loudoun composite deck builder page</a>. Comparing brands? See our <a href="/trex-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Trex deck page</a> or <a href="/timbertech-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>TimberTech/AZEK deck page</a>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
+          <p style={{ fontSize: '15px', color: '#555', margin: '12px 0 0' }}>
+            Want to see estimated monthly payments for Trex and TimberTech projects? Use our <a href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck payment estimator</a>.
+          </p>
         </div>
       </section>
 

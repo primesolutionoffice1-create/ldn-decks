@@ -118,6 +118,10 @@ export default function DeckCostCalculator() {
                 <p style={{ fontWeight: 600, color: '#d14817' }}>Deck ROI &amp; Home Value</p>
                 <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>How much value does a deck add?</p>
               </Link>
+              <Link href="/deck-payment-estimator" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: '#d14817' }}>Deck Payment Estimator</p>
+                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Compare project cost with monthly payment options</p>
+              </Link>
             </div>
           </div>
         </div>
