@@ -11,6 +11,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 import NamedAuthor from '@/components/NamedAuthor';
+import ServiceSchema from '@/components/ServiceSchema';
 export const metadata = buildMetadata({
   path: "/services/house-siding-washing",
   title: "Professional House Siding Washing NoVA | Safe Exterior Cleaning",
@@ -35,6 +36,10 @@ const inclusions = [
 export default function HouseSidingWashingPage() {
   return (
     <main>
+      <ServiceSchema
+        name="House Siding Washing"
+        description="Professional house siding washing in Northern Virginia — safely removing dirt, mold, and algae from vinyl and fiber cement siding."
+      />
       <ServicesHeader
         subtext="Our Services"
         title="House Siding Washing"

@@ -12,6 +12,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 import NamedAuthor from '@/components/NamedAuthor';
+import ServiceSchema from '@/components/ServiceSchema';
 export const metadata = buildMetadata({
   path: "/services/outdoor-washing",
   title: "Professional Outdoor Power Washing NoVA | Deck & Patio Cleaning",
@@ -55,6 +56,10 @@ const washingFAQs = [
 export default function OutdoorWashingPage() {
   return (
     <main>
+      <ServiceSchema
+        name="Outdoor Power Washing"
+        description="Professional outdoor power washing in Northern Virginia — safe, effective cleaning for decks, patios, fences, and exterior surfaces."
+      />
       <ServicesHeader
         subtext="Our Services"
         title="Outdoor Power Washing Services"
