@@ -334,7 +334,7 @@ const nextConfig = {
       "font-src 'self' https://fonts.gstatic.com data:",
       "img-src 'self' data: blob: https://*.googleusercontent.com https://www.google-analytics.com https://*.google.com https://*.googletagmanager.com https://maps.gstatic.com https://maps.googleapis.com https://ct.pinterest.com https://*.pinimg.com https://www.facebook.com https://*.facebook.com",
       "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.ahrefs.com https://*.vercel-insights.com https://vitals.vercel-insights.com https://www.googletagmanager.com https://ct.pinterest.com https://*.pinterest.com https://www.facebook.com https://*.facebook.com https://*.clarity.ms https://c.bing.com",
-      "frame-src 'self' https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com",
+      "frame-src 'self' https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com https://ct.pinterest.com",
       "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",
