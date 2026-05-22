@@ -27,6 +27,8 @@ const CORNERSTONE_GUIDES = [
   { path: '/deck-railing-options-northern-virginia', title: 'Deck Railing Options & Costs', desc: 'Composite, aluminum, cable, glass compared.' },
   { path: '/services/fire-pits', title: 'Fire Pit Design & Costs', desc: 'Gas vs wood-burning integration tips.' },
   { path: '/services/gazebo-pergola', title: 'Pergola & Shade Guide', desc: 'Attached vs freestanding costs and permits.' },
+  { path: '/louvered-pergola-northern-virginia', title: 'Louvered Pergola Builder', desc: 'Motorized adjustable-roof pergolas over decks and patios.' },
+  { path: '/three-season-room-northern-virginia', title: 'Three-Season Room Builder', desc: 'Sliding-window outdoor rooms usable 9-10 months a year.' },
   { path: '/outdoor-living-northern-virginia', title: 'Outdoor Living Contractor', desc: 'Decks, patios, porches and backyard systems planned together.' },
   { path: '/paver-vs-flagstone-patio-northern-virginia', title: 'Paver vs Flagstone', desc: 'Cost and durability comparison for Virginia patios.' },
   { path: '/eco-friendly-composite-decking', title: 'Eco-Friendly Decking Guide', desc: 'Recycled materials and sustainability facts.' },
