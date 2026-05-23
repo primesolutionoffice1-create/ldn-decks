@@ -30,6 +30,8 @@ export default function ContactHome() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    e.stopPropagation();
+    e.nativeEvent?.stopImmediatePropagation?.();
     setStatus("submitting");
     const result = await submit(e.target);
     if (!result.success) setStatus("error");
