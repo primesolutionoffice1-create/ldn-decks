@@ -145,6 +145,9 @@ export default async function sitemap() {
                 // Tier 1.5 - High-intent keyword/content pages (new)
                 { path: "/screened-porch-builder-northern-virginia",   priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/how-much-does-a-deck-cost-northern-virginia", priority: 0.95, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-cost-12x20-northern-virginia",          priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-cost-16x20-northern-virginia",          priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-cost-20x20-northern-virginia",          priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-vs-timbertech-vs-azek",                 priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/screened-porch-cost-northern-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/composite-deck-vs-wood-deck-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
