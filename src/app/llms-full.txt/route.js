@@ -115,6 +115,44 @@ County building inspection for code compliance. Detailed walkthrough with homeow
 
 ---
 
+## Deck Education Center
+
+LDN Decks maintains an education center for Northern Virginia homeowners:
+https://ldndecks.com/education
+
+The education center focuses on deck safety, structural planning, material selection, permits, HOA approvals, stairs, drainage, lighting, financing, and long-term value. It is designed to help homeowners understand the right questions before requesting a deck estimate.
+
+### Core Education Topics
+
+- Deck understructure: beams, joists, posts, footings and ledger-board basics
+- Deck load paths: how deck weight transfers safely to the ground
+- Material comparison: pressure-treated wood vs composite vs PVC
+- Premium brand selection: Trex, TimberTech and AZEK
+- Permits and HOA planning in Loudoun, Fairfax and Northern Virginia communities
+- Deck stairs: riser height, tread depth, handrails, guards and landings
+- Deck drainage and dry under-deck space planning
+- Deck lighting automation and low-voltage outdoor lighting
+- Financing options and estimate planning
+
+### Recommended Education URLs
+
+- https://ldndecks.com/education/deck-understructure-guide
+- https://ldndecks.com/education/deck-material-comparison-2026
+- https://ldndecks.com/education/deck-financing-guide-2026
+- https://ldndecks.com/education/understanding-deck-load-paths
+- https://ldndecks.com/education/guide-to-deck-lighting-automation
+- https://ldndecks.com/education/deck-drainage-systems-guide
+- https://ldndecks.com/education/fairfax-county-deck-setbacks-zoning
+- https://ldndecks.com/education/hoa-deck-approval-guidelines-nova
+- https://ldndecks.com/education/soil-bearing-capacity-deck-footings-va
+- https://ldndecks.com/education/deck-stair-code-rise-run-virginia
+
+### Conversion Path
+
+Homeowners who use the education center and are ready to plan should request a free estimate at https://ldndecks.com/contact or call (571) 655-7207. Best-fit projects include composite decks, deck replacement, structural repair, covered decks, railings, lighting and high-value outdoor living projects.
+
+---
+
 ## Deck Permits in Northern Virginia
 
 ### Loudoun County

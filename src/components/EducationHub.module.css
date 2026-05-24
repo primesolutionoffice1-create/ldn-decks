@@ -1,0 +1,382 @@
+.educationPage {
+  max-width: 100vw;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.educationTitle {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+  text-wrap: balance;
+}
+
+.educationDescription {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 780px;
+  text-wrap: balance;
+}
+
+.headerActions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.headerPrimaryBtn,
+.headerSecondaryBtn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 0 18px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.headerPrimaryBtn {
+  background: var(--site-color);
+  color: #fff;
+}
+
+.headerSecondaryBtn {
+  border: 2px solid #222;
+  color: #222;
+}
+
+.headerProofLine {
+  color: #6a625b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 18px auto 0;
+  max-width: 760px;
+}
+
+.trustBar {
+  background: #fcfbf9;
+  border-bottom: 1px solid #e8e4dc;
+  border-top: 1px solid #e8e4dc;
+  color: #222;
+  padding: 20px 0;
+  overflow-x: hidden;
+}
+
+.trustInner {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.trustItem {
+  border-left: 3px solid var(--site-color);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 700;
+  padding-left: 12px;
+}
+
+.clusterSection {
+  background: #fff;
+  padding: 52px 0 34px;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.sectionHeader {
+  max-width: 760px;
+  margin-bottom: 26px;
+}
+
+.sectionEyebrow {
+  color: var(--site-color);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.sectionTitle {
+  color: #111;
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.sectionCopy {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.clusterGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.clusterCard {
+  border: 1px solid #e8e4dc;
+  border-radius: 8px;
+  padding: 22px;
+  text-decoration: none;
+  color: inherit;
+  background: #fcfbf9;
+  min-height: 168px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.clusterCard:hover {
+  border-color: var(--site-color);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.clusterTitle {
+  color: #111;
+  font-size: 17px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.clusterDesc {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 18px;
+  flex: 1;
+}
+
+.clusterLink {
+  color: var(--site-color);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.leadCta {
+  background: #222;
+  color: #fff;
+  padding: 44px 0;
+  overflow-x: hidden;
+}
+
+.leadCtaInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: center;
+}
+
+.leadCtaTitle {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+.leadCtaCopy {
+  color: #e7e0d6;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+
+.leadQualifier {
+  color: #cfc6bb;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.leadButtons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 0 18px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.primaryBtn {
+  background: var(--site-color);
+  color: #fff;
+}
+
+.secondaryBtn {
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+
+.sourceNote {
+  background: #fcfbf9;
+  padding: 30px 0 8px;
+  overflow-x: hidden;
+}
+
+.sourceNoteInner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.sourceNoteText {
+  border-top: 1px solid #e8e4dc;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+  padding-top: 18px;
+}
+
+.sourceLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 0;
+}
+
+.sourceLinks a {
+  border: 1px solid #e8e4dc;
+  border-radius: 999px;
+  color: #332f2b;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+.sourceLinks a:hover {
+  border-color: var(--site-color);
+  color: var(--site-color);
+}
+
+@media screen and (max-width: 1050px) {
+  .trustInner,
+  .clusterGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leadCtaInner {
+    grid-template-columns: 1fr;
+  }
+
+  .leadButtons {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .educationPage * {
+    box-sizing: border-box;
+  }
+
+  .educationTitle {
+    font-size: 24px;
+    line-height: 1.14;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 270px;
+  }
+
+  .educationDescription,
+  .headerProofLine {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 240px;
+  }
+
+  .headerActions {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 280px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .trustInner,
+  .clusterGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .trustInner,
+  .container,
+  .leadCtaInner,
+  .sourceNoteInner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container,
+  .leadCtaInner,
+  .sourceNoteInner {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 320px;
+  }
+
+  .trustInner {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 340px;
+  }
+
+  .sectionTitle,
+  .leadCtaTitle {
+    font-size: 23px;
+    line-height: 1.18;
+  }
+
+  .clusterCard {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .sectionCopy,
+  .clusterDesc,
+  .leadCtaCopy,
+  .leadQualifier,
+  .sourceNoteText {
+    font-size: 14px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn,
+  .headerPrimaryBtn,
+  .headerSecondaryBtn {
+    max-width: 100%;
+    width: 100%;
+  }
+}

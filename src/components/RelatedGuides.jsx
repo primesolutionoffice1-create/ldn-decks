@@ -40,9 +40,66 @@ const CORNERSTONE_GUIDES = [
   { path: '/blog/loudoun-county-deck-permit-guide-2026', title: '2026 Loudoun Deck Permit Blueprint', desc: 'Everything you need to know for LandMARC approval.' },
 ];
 
-export default function RelatedGuides({ currentPath }) {
+const DECK_CORE_PRIORITY = [
+  '/deck-builder-northern-virginia',
+  '/services/new-decks',
+  '/services/deck-replacement',
+  '/services/deck-inspection',
+  '/services/deck-repair-and-structural-maintenance',
+  '/how-much-does-a-deck-cost-northern-virginia',
+  '/deck-cost-calculator',
+  '/trex-vs-timbertech-vs-azek',
+  '/composite-deck-vs-wood-deck-virginia',
+  '/deck-permit-loudoun-county-virginia',
+  '/deck-permit-fairfax-county-virginia',
+  '/hoa-deck-rules-northern-virginia',
+];
+
+export default function RelatedGuides({ currentPath, category = null }) {
   // Filter out current page
   const available = CORNERSTONE_GUIDES.filter(g => g.path !== currentPath);
+
+  if (category === 'deck-core') {
+    const selected = DECK_CORE_PRIORITY
+      .map(path => available.find(g => g.path === path))
+      .filter(Boolean)
+      .slice(0, 5);
+
+    return (
+      <section style={{ background: '#f8f9fa', padding: '3rem 0', borderTop: '1px solid #e5e5e5' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1.5rem', color: '#111' }}>
+            Guides Northern Virginia Homeowners Are Reading
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+            {selected.map((guide) => (
+              <Link
+                key={guide.path}
+                href={guide.path}
+                style={{
+                  display: 'block',
+                  padding: '1.25rem',
+                  background: '#fff',
+                  borderRadius: 8,
+                  border: '1px solid #e5e5e5',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  transition: 'border-color 0.2s',
+                }}
+              >
+                <p style={{ fontWeight: 600, fontSize: '0.95rem', marginBottom: '0.35rem', color: 'var(--color-primary, #d14817)' }}>
+                  {guide.title}
+                </p>
+                <p style={{ fontSize: '0.85rem', color: '#666', lineHeight: 1.5, margin: 0 }}>
+                  {guide.desc}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   // Smart rotation: use a hash of currentPath to deterministically select
   // different guides for different pages — so ALL 13 cornerstone pages get exposure

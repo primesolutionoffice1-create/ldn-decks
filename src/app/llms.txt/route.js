@@ -22,10 +22,9 @@ export async function GET() {
 - Screened porch construction
 - Pergola and gazebo building
 - Outdoor kitchens
-- Patio installation (pavers, stamped concrete, flagstone)
 - Deck lighting and railings (cable, composite, aluminum)
-- Fence building and cleaning
-- Pressure washing (decks, siding, concrete)
+- Patio and hardscape coordination when part of a larger outdoor living plan
+- Deck cleaning/maintenance guidance for existing deck owners
 - Fire pit construction
 
 ## Service Areas
@@ -46,6 +45,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 
 ## Key Pages
 - [Deck Builder Northern Virginia](https://ldndecks.com/deck-builder-northern-virginia): Primary service hub for custom deck construction, permits, HOA support and local service areas
+- [Education Center](https://ldndecks.com/education): Expert homeowner guides for deck safety, structure, permits, HOA approvals, materials, costs, lighting, drainage and outdoor living decisions
 - [Deck Cost Guide](https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia): Detailed 2026 pricing with material comparisons
 - [Composite Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): Brand-by-brand composite pricing (Trex, TimberTech, AZEK, Fiberon)
 - [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator): Interactive calculator with instant estimates
@@ -71,6 +71,15 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Blog](https://ldndecks.com/blog): Expert articles on deck building
 - [Certifications & Licenses](https://ldndecks.com/about/certifications-and-licenses): Credentials and verification
 - [Our Team](https://ldndecks.com/team): Meet the team behind Loudoun Decks
+
+## Education Guides
+- [Deck Understructure Guide](https://ldndecks.com/education/deck-understructure-guide): Beams, joists, posts, ledger boards and deck support basics
+- [Deck Material Comparison](https://ldndecks.com/education/deck-material-comparison-2026): Wood vs composite vs PVC for Northern Virginia homes
+- [Deck Load Paths](https://ldndecks.com/education/understanding-deck-load-paths): How deck weight transfers through boards, joists, beams, posts and footings
+- [Deck Drainage Systems](https://ldndecks.com/education/deck-drainage-systems-guide): Dry under-deck space and drainage planning
+- [Fairfax Deck Setbacks](https://ldndecks.com/education/fairfax-county-deck-setbacks-zoning): Fairfax County deck setback and zoning education
+- [HOA Deck Approval](https://ldndecks.com/education/hoa-deck-approval-guidelines-nova): HOA/ARC deck approval planning in Northern Virginia
+- [Deck Stair Code](https://ldndecks.com/education/deck-stair-code-rise-run-virginia): Stair rise, run, handrail, guard and landing education
 
 ## Detailed Content
 For full extractable content, see: https://ldndecks.com/llms-full.txt
