@@ -28,7 +28,7 @@ export default function StickyMobileCTA() {
       </CallLink>
       <button onClick={openContact} className={styles.estimateBtn}>
         <EstimateIcon />
-        <span>Free Estimate</span>
+        <span>Quote</span>
       </button>
     </div>
   );
