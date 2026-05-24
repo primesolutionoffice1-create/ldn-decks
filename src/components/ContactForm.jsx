@@ -13,6 +13,8 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    e.stopPropagation();
+    e.nativeEvent?.stopImmediatePropagation?.();
     setStatus("submitting");
     const result = await submit(e.target);
     if (result.success) {

@@ -11,6 +11,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 import NamedAuthor from '@/components/NamedAuthor';
+import ServiceSchema from '@/components/ServiceSchema';
 export const metadata = buildMetadata({
   path: "/services/concrete-washing",
   title: "Professional Concrete Washing NoVA | Driveway & Walkway Cleaning",
@@ -35,6 +36,10 @@ const inclusions = [
 export default function ConcreteWashingPage() {
   return (
     <main>
+      <ServiceSchema
+        name="Concrete Washing"
+        description="Professional concrete and masonry washing in Northern Virginia — removing oil stains, algae, and ground-in dirt from driveways, patios, and walkways."
+      />
       <ServicesHeader
         subtext="Our Services"
         title="Concrete Washing Services"

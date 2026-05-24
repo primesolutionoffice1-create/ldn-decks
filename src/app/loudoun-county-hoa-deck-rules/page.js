@@ -274,6 +274,9 @@ export default function LoudounCountyHOADeckRulesPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules Across Northern Virginia'],
+              ['/brambleton-hoa-deck-rules', 'Brambleton HOA Deck Rules'],
+              ['/ashburn-village-hoa-deck-rules', 'Ashburn Village HOA Deck Rules'],
+              ['/broadlands-hoa-deck-rules', 'Broadlands HOA Deck Rules'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
               ['/deck-builder-ashburn-va', 'Deck Builder in Ashburn, VA'],
               ['/deck-builder-brambleton-va', 'Deck Builder in Brambleton, VA'],

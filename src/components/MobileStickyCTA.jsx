@@ -1,10 +1,10 @@
 "use client";
 
 import Link from 'next/link';
+import CallLink from './CallLink';
 import styles from './MobileStickyCTA.module.css';
 
 export default function MobileStickyCTA({
-  phoneHref = 'tel:5716557207',
   estimateHref = '/get-estimate',
   microcopy = 'Premium composite decks from $15k+',
 }) {
@@ -12,9 +12,9 @@ export default function MobileStickyCTA({
     <aside className={styles.wrapper} aria-label="Mobile contact options">
       <p className={styles.microcopy}>{microcopy}</p>
       <div className={styles.actions}>
-        <a className={styles.callButton} href={phoneHref} aria-label="Call Loudoun Decks now">
+        <CallLink className={styles.callButton} ariaLabel="Call Loudoun Decks now">
           Call Now
-        </a>
+        </CallLink>
         <Link className={styles.estimateButton} href={estimateHref} aria-label="Request a free deck estimate">
           Free Estimate
         </Link>

@@ -4,6 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import ContactHome from '@/components/ContactHome';
 import MobileStickyCTA from '@/components/MobileStickyCTA';
 import RelatedGuides from '@/components/RelatedGuides';
+import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
 
 const pageUrl = 'https://ldndecks.com/composite-deck-builder-loudoun';
@@ -205,7 +206,7 @@ export default function CompositeDeckBuilderLoudounPage() {
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, margin: '30px 0 14px' }}>
               <Link href="/get-estimate" style={S.button}>Schedule My Free Composite Deck Consultation</Link>
-              <a href="tel:+15716557207" style={{ ...S.outlineButton, color: '#fff', borderColor: 'rgba(255,255,255,.55)' }}>Call (571) 655-7207</a>
+              <CallLink style={{ ...S.outlineButton, color: '#fff', borderColor: 'rgba(255,255,255,.55)' }}>Call (571) 655-7207</CallLink>
             </div>
             <p style={{ color: '#cdbfb5', fontSize: 14, margin: 0 }}>For full deck builds, replacements, and premium outdoor living projects starting at $15,000+.</p>
           </div>
@@ -425,7 +426,7 @@ export default function CompositeDeckBuilderLoudounPage() {
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 12, marginTop: 28 }}>
             <Link href="/get-estimate" style={S.button}>Schedule My Free Composite Deck Consultation</Link>
-            <a href="tel:+15716557207" style={{ ...S.outlineButton, color: '#fff', borderColor: 'rgba(255,255,255,.55)' }}>Call (571) 655-7207</a>
+            <CallLink style={{ ...S.outlineButton, color: '#fff', borderColor: 'rgba(255,255,255,.55)' }}>Call (571) 655-7207</CallLink>
           </div>
         </div>
       </section>

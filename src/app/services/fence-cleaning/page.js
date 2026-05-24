@@ -11,6 +11,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 import NamedAuthor from '@/components/NamedAuthor';
+import ServiceSchema from '@/components/ServiceSchema';
 export const metadata = buildMetadata({
   path: "/services/fence-cleaning",
   title: "Professional Fence Cleaning NoVA | Wood & Composite Restoration",
@@ -35,6 +36,10 @@ const inclusions = [
 export default function FenceCleaningPage() {
   return (
     <main>
+      <ServiceSchema
+        name="Fence Cleaning"
+        description="Professional wood and composite fence cleaning in Northern Virginia — removing gray weathering, mold, and algae to restore your fencing."
+      />
       <ServicesHeader
         subtext="Our Services"
         title="Fence Cleaning Services"

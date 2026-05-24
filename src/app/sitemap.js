@@ -172,6 +172,9 @@ export default async function sitemap() {
                 { path: "/deck-roi-calculator-northern-virginia",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-materials-comparison-virginia",         priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/loudoun-county-hoa-deck-rules",              priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/brambleton-hoa-deck-rules",                  priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/ashburn-village-hoa-deck-rules",             priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/broadlands-hoa-deck-rules",                  priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/second-story-deck-builder-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/what-size-deck-should-i-build",              priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
@@ -199,6 +202,8 @@ export default async function sitemap() {
                 { path: "/cable-railing-for-decks-northern-virginia",   priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/paver-vs-flagstone-patio-northern-virginia",  priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/multi-level-deck-builder-northern-virginia",  priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/louvered-pergola-northern-virginia",          priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/three-season-room-northern-virginia",         priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/how-tariffs-affect-deck-prices-2026",         priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/northern-virginia-deck-building-guide",       priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/eco-friendly-composite-decking",              priority: 0.80, lastMod: TIER1, freq: "monthly" },
