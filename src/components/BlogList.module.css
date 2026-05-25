@@ -3,10 +3,42 @@
   padding: 40px 0 80px 0;
 }
 
+.educationSection {
+  padding-top: 56px;
+}
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 40px;
+}
+
+.educationListHeader {
+  max-width: 780px;
+  margin: 0 0 34px;
+}
+
+.educationEyebrow {
+  color: var(--site-color);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.educationHeading {
+  color: #111;
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.educationIntro {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
 }
 
 .grid {
@@ -59,6 +91,7 @@
 .meta {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   font-size: 13px;
   color: #888;
@@ -66,6 +99,17 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.categoryBadge {
+  background: #fff4ee;
+  border: 1px solid #f3d0bf;
+  border-radius: 999px;
+  color: var(--site-color);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 6px 9px;
 }
 
 .metaDivider {
@@ -158,8 +202,36 @@
 }
 
 @media screen and (max-width: 768px) {
+  .blogSection {
+    padding-bottom: 120px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .educationListHeader {
+    margin-bottom: 26px;
+  }
+
+  .educationHeading {
+    font-size: 24px;
+  }
+
+  .educationIntro {
+    font-size: 14px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .cardContent {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 21px;
   }
 }

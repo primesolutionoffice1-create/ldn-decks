@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
+import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -100,8 +101,8 @@ const faqSchema = {
 export default function CoveredDeckPage() {
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       <ServicesHeader
         subtext="Covered Deck Builder Northern Virginia"
         title="Custom Covered Deck Design & Construction"
