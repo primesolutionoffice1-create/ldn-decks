@@ -171,6 +171,7 @@ export default async function sitemap() {
                 { path: "/deck-warranty-guide-northern-virginia",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-roi-calculator-northern-virginia",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-materials-comparison-virginia",         priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-footing-code-northern-virginia",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/loudoun-county-hoa-deck-rules",              priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/brambleton-hoa-deck-rules",                  priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/ashburn-village-hoa-deck-rules",             priority: 0.85, lastMod: TIER1, freq: "weekly" },
