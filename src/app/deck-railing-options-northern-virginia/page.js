@@ -93,10 +93,11 @@ export default function DeckRailingPage() {
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Minimum height:</strong> 36 inches (some Fairfax County areas require 42 inches for decks over 30&quot; above grade)</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Baluster spacing:</strong> Maximum 4 inches apart (the &quot;4-inch sphere rule&quot; no child&apos;s head can pass through)</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Load rating:</strong> Must withstand 200 lbs of concentrated force at the top rail</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Graspable handrail:</strong> Required on all stairs 1.25&quot; to 2&quot; diameter, continuous</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Graspable handrail:</strong> Required on all stairs 1.25&quot; to 2&quot; diameter, continuous. For tread, riser, stringer, and landing planning, see our <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Cable rail:</strong> Maximum 3&quot; spacing between cables, must pass 200-lb load test</li>
           </ul>
           <p style={S.p}><strong>HOA note:</strong> Many Northern Virginia HOAs have additional restrictions beyond building code specific railing profiles, colors, or style requirements. We check your HOA guidelines before recommending a railing system. <Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read our HOA guide</Link>.</p>
+          <p style={S.p}>On attached decks, railing and stair safety also depends on the structural connection at the house. Homeowners comparing repair or rebuild options should understand <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing and deck attachment</Link> before approving a scope.</p>
 
           <h2 style={S.h2}>Choosing the Right Railing for Your Deck</h2>
           <h3 style={S.h3}>For a view deck (elevated, scenic lot)</h3>
@@ -125,6 +126,8 @@ export default function DeckRailingPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/services/trex-railings', 'Trex Railing Installation'],
+              ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing and Deck Attachment'],
               ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
               ['/deck-lighting-ideas-northern-virginia', 'Deck Lighting Ideas'],

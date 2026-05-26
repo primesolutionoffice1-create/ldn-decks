@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -96,6 +97,12 @@ export default function DeckStairLightingPage() {
             <Image src="/showcase/img01.jpg" alt="After stair lighting" fill style={{ objectFit: 'cover' }} />
           </div>
         </div>
+      </section>
+
+      <section style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem 3rem' }}>
+        <p style={{ fontSize: '1.05rem', lineHeight: 1.75, color: '#444' }}>
+          Stair lighting works best when it is planned with the stair structure, not added as an afterthought. Homeowners can review our <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link> to understand tread depth, riser height, stringers, and landing details before choosing lighting locations.
+        </p>
       </section>
 
       <ServiceInclusions
