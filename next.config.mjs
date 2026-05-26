@@ -28,6 +28,13 @@ const nextConfig = {
       { source: '/sitemap_index.xml', destination: '/sitemap.xml', permanent: true },
       { source: '/sitemap-index.xml', destination: '/sitemap.xml', permanent: true },
 
+      // Legacy web app manifest paths. Next.js outputs the manifest at
+      // /manifest.webmanifest via src/app/manifest.js, but some browsers,
+      // PWA installers and SEO crawlers still probe /manifest.json and
+      // /site.webmanifest. Redirect so they hit the live file instead of 404.
+      { source: '/manifest.json', destination: '/manifest.webmanifest', permanent: true },
+      { source: '/site.webmanifest', destination: '/manifest.webmanifest', permanent: true },
+
                      // Core Pages
       { source: '/tag/trex-decking', destination: '/trex-decks', permanent: true },
       { source: '/tag/loudoun-county', destination: '/near-you/loudoun-county', permanent: true },
