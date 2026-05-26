@@ -3,38 +3,81 @@ import CallLink from '@/components/CallLink';
 import styles from './EducationHub.module.css';
 
 const TRUST_ITEMS = [
-  'Structural planning for safer decks',
-  'Trex, TimberTech and AZEK guidance',
-  'Loudoun and Fairfax permit context',
-  'HOA and ARC approval planning',
+  'Permit and HOA planning for Northern Virginia',
+  'Composite, Trex and TimberTech comparisons',
+  'Deck safety, stairs and structural guidance',
+  'Covered deck and outdoor living decisions',
   'Estimate-ready project decisions',
 ];
 
 const CLUSTERS = [
   {
-    title: 'Safety & Structural Integrity',
-    desc: 'Understand load paths, posts, beams, joists, footings, stairs and warning signs before investing in repairs or replacement.',
-    href: '/education/understanding-deck-load-paths',
+    title: 'Deck Costs & Financing',
+    desc: 'Plan realistic budgets, payment options, scope tradeoffs and the cost questions to answer before requesting an estimate.',
+    href: '/deck-payment-estimator',
   },
   {
-    title: 'Costs, Financing & ROI',
-    desc: 'Compare budget ranges, financing options and long-term value before choosing the size, material and scope.',
-    href: '/how-much-does-a-deck-cost-northern-virginia',
+    title: 'HOA & Permit Guides',
+    desc: 'Prepare for county permits, HOA or ARC review, setbacks, drawings, timelines and approval-sensitive deck details.',
+    href: '/hoa-deck-rules-northern-virginia',
   },
   {
-    title: 'Materials',
-    desc: 'Compare wood, composite, PVC, Trex, TimberTech and AZEK for Northern Virginia weather, maintenance and resale expectations.',
+    title: 'Composite Decking Guides',
+    desc: 'Compare wood, composite and PVC decking for maintenance, resale value, weather exposure and long-term performance.',
     href: '/education/deck-material-comparison-2026',
   },
   {
-    title: 'Permits, HOA & Code',
-    desc: 'Prepare for county permit review, HOA/ARC approval, setbacks, stair requirements and inspection-sensitive details.',
-    href: '/deck-permit-loudoun-county-virginia',
+    title: 'Covered Decks & Outdoor Living',
+    desc: 'Explore covered decks, screened porches, under-deck drainage, lighting and comfort upgrades as one complete outdoor plan.',
+    href: '/covered-deck-builder-northern-virginia',
   },
   {
-    title: 'Outdoor Living',
-    desc: 'Plan lighting, drainage, dry under-deck space, railings and comfort upgrades as part of the full deck system.',
-    href: '/education/deck-drainage-systems-guide',
+    title: 'Deck Repairs & Resurfacing',
+    desc: 'Decide when resurfacing, structural repair or full replacement is the better path for an aging Northern Virginia deck.',
+    href: '/deck-resurfacing-vs-replacement',
+  },
+  {
+    title: 'Trex vs TimberTech vs AZEK',
+    desc: 'Review premium decking brands by look, maintenance, heat, durability, warranty expectations and project fit.',
+    href: '/trex-vs-timbertech-vs-azek',
+  },
+  {
+    title: 'Deck Stair Construction & Code',
+    desc: 'Understand stringers, treads, risers, footings, railings and inspection details that affect stair safety.',
+    href: '/education/deck-stair-construction-diagram',
+  },
+  {
+    title: 'Design Inspiration & Planning',
+    desc: 'Browse layout ideas, design priorities and planning choices before moving into pricing, permits and consultation.',
+    href: '/deck-design-ideas-northern-virginia-2026',
+  },
+];
+
+const LOCAL_GUIDES = [
+  { label: 'Ashburn', href: '/deck-builder-ashburn-va' },
+  { label: 'Leesburg', href: '/deck-builder-leesburg-va' },
+  { label: 'Sterling', href: '/deck-builder-sterling-va' },
+  { label: 'Fairfax', href: '/deck-builder-fairfax-va' },
+  { label: 'McLean', href: '/deck-builder-mclean-va' },
+  { label: 'Reston', href: '/deck-builder-reston-va' },
+  { label: 'All service areas', href: '/areas-we-serve' },
+];
+
+const TRUST_ROUTES = [
+  {
+    title: 'Before & After Projects',
+    desc: 'Review real deck replacements, composite upgrades and outdoor living work before choosing a path.',
+    href: '/before-and-after',
+  },
+  {
+    title: 'Homeowner Reviews',
+    desc: 'Read trust signals from Northern Virginia homeowners who hired LDN Decks for deck and outdoor projects.',
+    href: '/reviews',
+  },
+  {
+    title: 'How to Choose a Deck Builder',
+    desc: 'Use a practical contractor checklist before comparing estimates, permits, timelines and warranties.',
+    href: '/how-to-choose-a-deck-builder-northern-virginia',
   },
 ];
 
@@ -55,10 +98,12 @@ export function EducationClusterNav() {
     <section className={styles.clusterSection} aria-labelledby="education-clusters">
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
-          <p className={styles.sectionEyebrow}>Choose your guide path</p>
-          <h2 id="education-clusters" className={styles.sectionTitle}>Start with the decision you need to make next</h2>
+          <p className={styles.sectionEyebrow}>Northern Virginia deck planning paths</p>
+          <h2 id="education-clusters" className={styles.sectionTitle}>Find the guide that matches your next deck decision</h2>
           <p className={styles.sectionCopy}>
-            If you are replacing an older deck, start with safety and structure. If you are planning a new premium outdoor space, start with materials, costs and permits.
+            Start with the question in front of you: cost, permits, HOA approval, material selection,
+            repairs, covered outdoor living or design planning. Each path routes homeowners toward
+            clearer research, stronger project decisions and the right estimate step.
           </p>
         </div>
         <div className={styles.clusterGrid}>
@@ -69,6 +114,46 @@ export function EducationClusterNav() {
               <span className={styles.clusterLink}>View guides</span>
             </Link>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function EducationLocalTrustRoutes() {
+  return (
+    <section className={styles.routeSection} aria-labelledby="education-local-trust">
+      <div className={styles.container}>
+        <div className={styles.routeGrid}>
+          <div className={styles.routePanel}>
+            <p className={styles.sectionEyebrow}>Local planning context</p>
+            <h2 id="education-local-trust" className={styles.routeTitle}>Use the right local deck guide</h2>
+            <p className={styles.routeCopy}>
+              Permits, HOA review and project expectations can vary by county, town and neighborhood.
+              Start with the local context closest to your home, then use the education guides to prepare
+              better questions for consultation.
+            </p>
+            <div className={styles.localLinkGrid} aria-label="Local deck builder guides">
+              {LOCAL_GUIDES.map((guide) => (
+                <Link href={guide.href} className={styles.localLink} key={guide.href}>
+                  {guide.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.routePanel}>
+            <p className={styles.sectionEyebrow}>Proof before consultation</p>
+            <h2 className={styles.routeTitle}>Move from research to confidence</h2>
+            <div className={styles.proofRouteList}>
+              {TRUST_ROUTES.map((route) => (
+                <Link href={route.href} className={styles.proofRoute} key={route.href}>
+                  <span className={styles.proofRouteTitle}>{route.title}</span>
+                  <span className={styles.proofRouteDesc}>{route.desc}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -89,7 +174,8 @@ export function EducationLeadCTA() {
           </p>
         </div>
         <div className={styles.leadButtons}>
-          <Link className={styles.primaryBtn} href="/contact">Request a Free Estimate</Link>
+          <Link className={styles.primaryBtn} href="/deck-payment-estimator">Use the Deck Payment Estimator</Link>
+          <Link className={styles.secondaryBtn} href="/contact">Request a Free Estimate</Link>
           <CallLink className={styles.secondaryBtn}>Call (571) 655-7207</CallLink>
         </div>
       </div>

@@ -2,7 +2,13 @@ import React from 'react';
 import EducationHeader from '@/components/EducationHeader';
 import EducationList from '@/components/EducationList';
 import RelatedGuides from '@/components/RelatedGuides';
-import { EducationClusterNav, EducationLeadCTA, EducationSourceNote, EducationTrustBar } from '@/components/EducationHubComponents';
+import {
+  EducationClusterNav,
+  EducationLeadCTA,
+  EducationLocalTrustRoutes,
+  EducationSourceNote,
+  EducationTrustBar,
+} from '@/components/EducationHubComponents';
 import { educationArticles } from '@/lib/educationData';
 import { buildMetadata } from '@/lib/seo';
 import hubStyles from '@/components/EducationHub.module.css';
@@ -108,6 +114,7 @@ export default function EducationPage() {
       <EducationHeader />
       <EducationTrustBar />
       <EducationClusterNav />
+      <EducationLocalTrustRoutes />
       <EducationLeadCTA />
       <EducationList />
       <EducationSourceNote />
