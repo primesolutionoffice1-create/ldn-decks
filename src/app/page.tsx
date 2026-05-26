@@ -97,10 +97,23 @@ const homepageSchema = {
   }
 };
 
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Loudoun Decks — Custom Deck Building in Northern Virginia",
+  "description": "See how Loudoun Decks transforms Northern Virginia backyards into luxury outdoor living spaces. Custom composite decks, screened porches, and outdoor kitchens by a Trex Platinum Partner.",
+  "thumbnailUrl": "https://ldndecks.com/home-page-ldn.webp",
+  "uploadDate": "2025-01-15",
+  "contentUrl": "https://ldndecks.com/introvideo.mp4",
+  "embedUrl": "https://ldndecks.com/introvideo.mp4",
+  "publisher": { "@id": "https://ldndecks.com/#organization" }
+};
+
 export default function Home() {
     return (
           <main className={styles.main}>
       <JsonLd data={homepageSchema} />
+      <JsonLd data={videoSchema} />
             <Hero />
             <DeferredPromoModal />
             <TrustSection />
