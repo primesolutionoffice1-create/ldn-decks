@@ -96,7 +96,9 @@ export default function ResurfacingVsReplacementPage() {
           <h2 style={S.h2}>How We Determine: Resurface or Replace?</h2>
           <p style={S.p}>We offer <strong>free deck inspections</strong>. During the inspection, we check every structural component:</p>
           <p style={S.p}>
-            Stairs and ledgers often decide whether a deck is a safe resurfacing candidate. Before reusing an existing frame, we check the stair load path described in our{' '}
+            Stairs and ledgers often decide whether a deck is a safe resurfacing candidate. Before reusing an existing frame, we model stair layout with the{' '}
+            <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link>
+            {', then check the stair load path described in our '}
             <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>
             {', the pass/fail warning signs in our '}
             <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checklist</Link>

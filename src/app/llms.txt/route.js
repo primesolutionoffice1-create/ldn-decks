@@ -51,6 +51,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Deck Cost Guide](https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia): Detailed 2026 pricing with material comparisons
 - [Composite Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): Brand-by-brand composite pricing (Trex, TimberTech, AZEK, Fiberon)
 - [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator): Interactive calculator with instant estimates
+- [Virginia Deck Stair Calculator](https://ldndecks.com/tools/deck-stair-calculator): Interactive rise-run planner for step count, exact riser height, total run, stair angle and safety warnings
 - [Trex vs TimberTech vs AZEK](https://ldndecks.com/trex-vs-timbertech-vs-azek): Brand comparison guide
 - [Composite vs Wood](https://ldndecks.com/composite-deck-vs-wood-deck-virginia): Material decision guide
 - [Northern Virginia Deck Building Guide](https://ldndecks.com/northern-virginia-deck-building-guide): Complete building guide
@@ -82,6 +83,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Fairfax Deck Setbacks](https://ldndecks.com/education/fairfax-county-deck-setbacks-zoning): Fairfax County deck setback and zoning education
 - [HOA Deck Approval](https://ldndecks.com/education/hoa-deck-approval-guidelines-nova): HOA/ARC deck approval planning in Northern Virginia
 - [Deck Stair Code](https://ldndecks.com/education/deck-stair-code-rise-run-virginia): Stair rise, run, handrail, guard and landing education
+- [Virginia Deck Stair Calculator](https://ldndecks.com/tools/deck-stair-calculator): Planning tool for deck stair rise, run, step count, tread depth, stair angle and professional-review warnings
 - [Deck Stair Safety Checklist](https://ldndecks.com/education/deck-stair-safety-inspection-checklist): Printable homeowner PDF checklist for unsafe stair warning signs, pass/fail checks and repair-vs-rebuild context
 - [Common Deck Stair Inspection Failures](https://ldndecks.com/education/common-deck-stair-inspection-failures-virginia): Uneven risers, weak handrails, guard movement, rotten stringers, poor landings, lighting and connection failures
 - [Deck Stair Construction Diagram](https://ldndecks.com/education/deck-stair-construction-diagram): Stringers, treads, risers, joist hangers, landing pads, blocking and exterior stair hardware explained

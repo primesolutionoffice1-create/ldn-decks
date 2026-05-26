@@ -253,6 +253,8 @@ export default async function sitemap() {
                 // Linkable assets & authority pages
                 { path: "/deck-cost-calculator",                       priority: 0.90, lastMod: TIER1, freq: "monthly" },
                 { path: "/deck-payment-estimator",                     priority: 0.85, lastMod: TIER1, freq: "monthly" },
+                { path: "/tools",                                      priority: 0.70, lastMod: TIER1, freq: "monthly" },
+                { path: "/tools/deck-stair-calculator",                priority: 0.88, lastMod: TIER1, freq: "monthly" },
                 { path: "/press",                                      priority: 0.80, lastMod: TIER1, freq: "monthly" },
 
                 // AI discovery files

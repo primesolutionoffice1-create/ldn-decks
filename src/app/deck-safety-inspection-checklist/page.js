@@ -142,7 +142,9 @@ export default function DeckInspectionPage() {
             {' '}before deciding whether the deck needs repair, resurfacing or replacement.
             For stairs specifically, use the printable{' '}
             <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checklist</Link>
-            {' '}and review the{' '}
+            {', model the layout with the '}
+            <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link>
+            {', and review the '}
             <Link href="/education/common-deck-stair-inspection-failures-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>common deck stair inspection failures</Link>
             {' '}that often show up during county inspections or home-sale reviews.
           </p>
@@ -163,6 +165,7 @@ export default function DeckInspectionPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/services/deck-inspection', 'Professional Deck Inspection Service'],
+              ['/tools/deck-stair-calculator', 'Virginia Deck Stair Calculator'],
               ['/education/deck-stair-safety-inspection-checklist', 'Deck Stair Safety Checklist PDF'],
               ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],
               ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
