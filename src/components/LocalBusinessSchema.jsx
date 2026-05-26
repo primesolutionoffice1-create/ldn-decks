@@ -12,6 +12,7 @@ export default function LocalBusinessSchema({ city, description, url, areaType =
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    ...(url ? { '@id': `${url}#service` } : {}),
     serviceType: 'Deck building',
     name: `Deck Builder in ${city}`,
     description:

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import WebPageSchema from '@/components/WebPageSchema';
 import { buildMetadata } from '@/lib/seo';
 import { BUSINESS } from '@/lib/business';
 
@@ -22,6 +23,7 @@ const reviews = BUSINESS.reviews;
 export default function ReviewsPage() {
   return (
     <>
+      <WebPageSchema url="https://ldndecks.com/reviews" name={`Loudoun Decks Reviews | ${BUSINESS.aggregateRating.reviewCount}+ Google Reviews`} description="Read verified reviews from Northern Virginia homeowners about Loudoun Decks. 5.0 star Google rating." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>What Our Clients Say</h1>

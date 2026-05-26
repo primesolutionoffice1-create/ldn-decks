@@ -12,6 +12,8 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import NamedAuthor from '@/components/NamedAuthor';
+import WebPageSchema from '@/components/WebPageSchema';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -123,10 +125,12 @@ const expansionSections = [
 export default function TimberTechDecksPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/timbertech-decks" name="TimberTech AZEK Deck Builder Northern Virginia" description="TimberTech and AZEK deck builder in Northern Virginia. Premium PVC and composite decks for Loudoun, Fairfax and Prince William County." speakable />
       <ServiceSchema
         name="TimberTech AZEK Deck Installation"
         description="TimberTech and AZEK deck installation in Northern Virginia. Premium composite and PVC decking for Loudoun, Fairfax, and Prince William County homes."
         price="22000"
+        url="https://ldndecks.com/timbertech-decks"
       />
       <ServicesHeader
         subtext="TimberTech & AZEK Deck Specialist"
@@ -163,6 +167,9 @@ export default function TimberTechDecksPage() {
         image2="/images/img13.jpeg"
       />
 
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-05-26" />
+      </div>
       <ServiceContentExpansion sections={expansionSections} />
 
       <section style={{ background: '#f7f4ed', padding: '64px 20px' }}>
