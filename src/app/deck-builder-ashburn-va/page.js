@@ -13,6 +13,8 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -107,6 +109,7 @@ const expansionSections = [
 export default function DeckBuilderAshburnPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/deck-builder-ashburn-va" name="Deck Builder in Ashburn, VA | Loudoun Decks" description="Custom composite deck builder in Ashburn serving Brambleton, Broadlands, Ashburn Village and One Loudoun. TrexPro Platinum installer." speakable />
       <LocalBusinessSchema city="Ashburn" url="https://ldndecks.com/deck-builder-ashburn-va" />
       <ServicesHeader
         subtext="Ashburn, VA's #1 Rated Builder"
@@ -127,6 +130,9 @@ export default function DeckBuilderAshburnPage() {
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
       />
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+        <NamedAuthor context="Ashburn and Loudoun County" lastUpdated="2026-05-26" />
+      </div>
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
         <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -138,9 +144,43 @@ export default function DeckBuilderAshburnPage() {
             sizes="(max-width: 900px) 100vw, 900px"
           />
         </div>
-        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Trex Deck Builder Ashburn</h2>
-        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1.5rem' }}>From Brambleton to One Loudoun  -  Outdoor Living Done to the Corridor's Standard</h3>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1rem', color: 'var(--color-primary)' }}>Deck Cost in Ashburn, VA (2026 Pricing)</h2>
+        <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+          Ashburn deck pricing reflects the community standards in Brambleton, Broadlands and One Loudoun — most homeowners choose mid-to-premium composite materials. Here is how recent Ashburn projects have landed:
+        </p>
+        <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
+            <thead>
+              <tr style={{ background: '#f7f7f5', borderBottom: '2px solid #ddd' }}>
+                <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontWeight: 700 }}>Project Type</th>
+                <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontWeight: 700 }}>Typical Range</th>
+                <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontWeight: 700 }}>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style={{ borderBottom: '1px solid #eee' }}>
+                <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Trex Enhance Deck (300–400 sq ft)</td>
+                <td style={{ padding: '0.75rem 1rem' }}>$22,000–$32,000</td>
+                <td style={{ padding: '0.75rem 1rem', color: '#555' }}>Standard single-level, aluminum railing, basic lighting</td>
+              </tr>
+              <tr style={{ borderBottom: '1px solid #eee' }}>
+                <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Trex Transcend Deck (400–600 sq ft)</td>
+                <td style={{ padding: '0.75rem 1rem' }}>$32,000–$48,000</td>
+                <td style={{ padding: '0.75rem 1rem', color: '#555' }}>Multi-level option, picture-frame border, full lighting</td>
+              </tr>
+              <tr style={{ borderBottom: '1px solid #eee' }}>
+                <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Outdoor Living Package</td>
+                <td style={{ padding: '0.75rem 1rem' }}>$48,000–$90,000+</td>
+                <td style={{ padding: '0.75rem 1rem', color: '#555' }}>Deck + screened porch, pergola, outdoor kitchen, full electrical</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
+          For detailed cost modeling, use our <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>monthly payment estimator</Link> or read the full <Link href="/how-much-does-a-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia deck cost guide</Link>.
+        </p>
       </div>
+      <SimpleCTA title="Get Your Free Ashburn Deck Estimate" buttonText="Request Estimate" link="/contact" />
       <ServiceInclusions
         title="Why Ashburn Chooses Loudoun Decks"
         description="We are not a franchise. We are a local Loudoun County team with deep roots in Ashburn and the credentials to back every build."
@@ -157,6 +197,8 @@ export default function DeckBuilderAshburnPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {[
+            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
+            ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
             ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
             ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
             ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],

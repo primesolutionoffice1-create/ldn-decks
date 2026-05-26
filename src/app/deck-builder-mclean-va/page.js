@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -179,6 +180,22 @@ export default function McLeanDeckBuilderPage() {
         faqs={mcleanFAQs}
       />
       <ServiceAreasGrid />
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          {[
+            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
+            ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
+            ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
+            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Comparison'],
+          ].map(([href, text]) => (
+            <li key={href} style={{ marginBottom: '0.5rem' }}>
+              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
+            </li>
+          ))}
+        </ul>
+      </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="McLean" /></div></section>
       <SimpleCTA title="Build Your Luxury Deck in McLean" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-mclean-va" />

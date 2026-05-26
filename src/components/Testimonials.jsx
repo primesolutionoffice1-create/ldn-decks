@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Testimonials.module.css';
+import { BUSINESS } from '@/lib/business';
 
 const StarIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFC107" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +83,7 @@ export default function Testimonials() {
 
         <div className={styles.reviewsCta}>
           <Link href="/reviews" className={styles.reviewsButton}>
-            Read All 49 Google Reviews &rarr;
+            Read All {BUSINESS.aggregateRating.reviewCount} Google Reviews &rarr;
           </Link>
           <a
             href="https://www.google.com/maps/place/Loudoun+Decks/"

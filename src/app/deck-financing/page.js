@@ -7,6 +7,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import EnhancifyWidget from '@/components/EnhancifyWidget';
 import FinancingCalculator from '@/components/FinancingCalculator';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -95,7 +96,7 @@ const projectExamples = [
 
 const trustStats = [
   { stat: '24+', label: 'Years building decks' },
-  { stat: '5.0★', label: 'Google rating · 49+ reviews' },
+  { stat: '5.0★', label: `Google rating · ${BUSINESS.aggregateRating.reviewCount}+ reviews` },
   { stat: 'A+', label: 'BBB Accredited Business' },
   { stat: 'Top 1%', label: 'Trex Platinum Partner' },
 ];

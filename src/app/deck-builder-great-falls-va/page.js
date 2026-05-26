@@ -8,6 +8,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -49,7 +50,7 @@ export default function GreatFallsDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · 49 reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -119,6 +120,22 @@ export default function GreatFallsDeckBuilderPage() {
           </div>
         </div>
       </article>
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          {[
+            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
+            ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
+            ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
+            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Comparison'],
+          ].map(([href, text]) => (
+            <li key={href} style={{ marginBottom: '0.5rem' }}>
+              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
+            </li>
+          ))}
+        </ul>
+      </section>
       <SimpleCTA title="Get Your Great Falls Deck Quote" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-great-falls-va" />
       <ContactHome />

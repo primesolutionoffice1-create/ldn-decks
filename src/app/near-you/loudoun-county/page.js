@@ -9,6 +9,8 @@ import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
@@ -53,6 +55,7 @@ const faqs = [
 export default function LoudounCountyPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/near-you/loudoun-county" name="Deck Builder in Loudoun County, VA" description="Trusted deck contractor in Loudoun County. 5.0 Google Rated. We handle all HOA permits and county codes." speakable />
       <LocalBusinessSchema
         city="Loudoun County"
         areaType="AdministrativeArea"
@@ -73,6 +76,9 @@ export default function LoudounCountyPage() {
         image1="/images/img03.jpeg"
         image2="/images/img32.jpeg"
       />
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+        <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+      </div>
       <section className={styles.permitSection}>
         <div className={styles.container}>
           <div className={styles.permitContent}>

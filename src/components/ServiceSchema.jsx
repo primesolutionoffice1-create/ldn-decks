@@ -6,12 +6,14 @@ import JsonLd from './JsonLd';
  * Helps Google show rich results for service searches and enables AI systems
  * to understand what specific services you offer with pricing.
  */
-export default function ServiceSchema({ name, description, price, areaServed }) {
+export default function ServiceSchema({ name, description, price, areaServed, url }) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    ...(url ? { '@id': `${url}#service` } : {}),
     name,
     description,
+    ...(url ? { url } : {}),
     provider: {
       '@id': 'https://ldndecks.com/#organization',
     },

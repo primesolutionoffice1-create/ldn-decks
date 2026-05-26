@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -31,7 +32,7 @@ export default function CertificationsPage() {
               { title: 'Virginia Contractor License', detail: 'Class A Licensed Contractor — Virginia Department of Professional and Occupational Regulation (DPOR). Authorized for residential and commercial projects of any value in Virginia.', verify: 'Verify at dpor.virginia.gov → License Lookup', badge: 'DPOR Licensed' },
               { title: 'Fully Insured', detail: 'Comprehensive general liability insurance and workers\' compensation coverage. Certificate of insurance available on request for any project.', verify: 'Request certificate: office@ldndecks.com', badge: 'Insured' },
               { title: 'Trex Pro Installer', detail: 'Certified Trex Pro installer with direct access to the full Trex product line. Trex Pro certification requires demonstrated installation expertise and ongoing training.', verify: 'Verify at trex.com/find-a-builder', badge: 'Trex Pro' },
-              { title: '5.0★ Google Rating', detail: '49+ Google reviews from Northern Virginia homeowners across Loudoun, Fairfax, and Prince William counties.', verify: 'Search "Loudoun Decks" on Google Maps', badge: '5.0 ★★★★★' },
+              { title: '5.0★ Google Rating', detail: `${BUSINESS.aggregateRating.reviewCount}+ Google reviews from Northern Virginia homeowners across Loudoun, Fairfax, and Prince William counties.`, verify: 'Search "Loudoun Decks" on Google Maps', badge: '5.0 ★★★★★' },
               { title: '2-Year Workmanship Warranty', detail: 'Every project backed by our written 2-year workmanship warranty, covering all labor and installation. This is on top of manufacturer material warranties (Trex: 25 years, TimberTech AZEK: 50 years).', verify: 'Warranty terms provided in writing with every contract', badge: '2-Year Warranty' },
               { title: '100% Permit Approval Rate', detail: 'Perfect permit approval record across Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County. We handle all permit submissions and inspections.', verify: 'Contact your county building department to verify', badge: '100% Approved' },
             ].map((item) => (

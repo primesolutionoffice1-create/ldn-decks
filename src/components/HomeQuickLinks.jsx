@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './HomeQuickLinks.module.css';
+import { BUSINESS } from '@/lib/business';
 
 const links = [
   {
@@ -30,7 +31,7 @@ const links = [
   },
   {
     href: '/reviews',
-    title: '49+ Five-Star Reviews',
+    title: `${BUSINESS.aggregateRating.reviewCount}+ Five-Star Reviews`,
     desc: 'Read what Northern Virginia homeowners say about us.',
   },
   {

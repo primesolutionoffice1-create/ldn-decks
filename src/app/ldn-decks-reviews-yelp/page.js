@@ -4,6 +4,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/ldn-decks-reviews-yelp',
@@ -77,7 +78,7 @@ export default function YelpReviewsPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Real customer reviews from Northern Virginia homeowners &mdash; verified on Yelp, Google &amp; Houzz</p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1rem' }}>
             <span style={{ color: '#fbbf24', fontSize: '1.3rem' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span style={{ color: '#aaa' }}>5.0 rating &middot; 49+ verified reviews</span>
+            <span style={{ color: '#aaa' }}>5.0 rating &middot; {BUSINESS.aggregateRating.reviewCount}+ verified reviews</span>
           </div>
         </div>
       </section>
@@ -100,7 +101,7 @@ export default function YelpReviewsPage() {
           {/* Ratings Summary */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem', marginBottom: '3rem' }}>
             {[
-              { platform: 'Google', rating: '5.0', count: '49+ reviews', url: 'https://www.google.com/maps/place/Loudoun+Decks/' },
+              { platform: 'Google', rating: '5.0', count: `${BUSINESS.aggregateRating.reviewCount}+ reviews`, url: 'https://www.google.com/maps/place/Loudoun+Decks/' },
               { platform: 'Yelp', rating: '5.0', count: 'Verified', url: 'https://www.yelp.com/biz/loudoun-decks-centreville' },
               { platform: 'Houzz', rating: '5.0', count: 'Best of Houzz', url: 'https://www.houzz.com/pro/webuser-782541997/loudoun-decks' },
               { platform: 'BBB', rating: 'A+', count: 'Accredited', url: 'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241' },

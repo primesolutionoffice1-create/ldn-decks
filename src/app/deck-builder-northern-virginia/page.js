@@ -8,7 +8,9 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ServiceSchema from '@/components/ServiceSchema';
+import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -85,10 +87,17 @@ const expansionSections = [
     ],
   },
   {
-    title: 'Built for commercial intent, not just search traffic',
+    title: 'What a Northern Virginia deck project costs',
     paragraphs: [
-      'This page is the primary service hub for homeowners searching for a deck builder in Northern Virginia. From here, visitors can move to city pages, cost guides, permit pages, material comparisons, reviews and estimate requests without losing the thread.',
-      'That structure also helps search engines and AI answer systems understand Loudoun Decks as a local specialist: who we serve, what we build, where we build it, what approvals matter and which related pages support the claim.',
+      'Deck pricing in Northern Virginia varies by size, materials, elevation and site conditions. Most homeowners invest between $18,000 and $65,000 for a professionally built composite deck. A straightforward 300 sq ft Trex Enhance deck starts around $18,000–$24,000, a mid-range 400–500 sq ft Trex Transcend build lands in the $28,000–$45,000 range, and larger multi-level projects or outdoor living packages with screened porches, pergolas and lighting can reach $55,000–$90,000+.',
+      'We publish transparent [cost data for Northern Virginia decks](/how-much-does-a-deck-cost-northern-virginia), a [composite deck cost breakdown](/composite-deck-cost-northern-virginia) and a [monthly payment estimator](/deck-payment-estimator) so you can plan before the first conversation. Every written estimate from Loudoun Decks includes materials, labor, permits, inspections and cleanup — no surprise line items.',
+    ],
+  },
+  {
+    title: 'Screened porches, outdoor kitchens and full outdoor living',
+    paragraphs: [
+      'Many Northern Virginia homeowners start with a deck and expand into a connected outdoor living space. A [screened porch](/screened-porch-builder-northern-virginia) turns a three-season deck into a year-round room, free from Loudoun and Fairfax County insects and pollen. [Covered decks](/covered-deck-builder-northern-virginia), [louvered pergolas](/louvered-pergola-northern-virginia) and [outdoor kitchens](/outdoor-kitchen-builder-northern-virginia) are the most common additions we design alongside new deck builds.',
+      'For homeowners focused on composite materials specifically, our [composite deck builder in Loudoun County](/composite-deck-builder-loudoun) page covers material selection, HOA handling and real project pricing in the communities where we build most often.',
     ],
   },
 ];
@@ -103,6 +112,10 @@ function ServiceLinkGrid() {
     ['/deck-builder-fairfax-va', 'Fairfax'],
     ['/deck-builder-centreville-va', 'Centreville'],
     ['/deck-builder-manassas-va', 'Manassas'],
+    ['/deck-builder-great-falls-va', 'Great Falls'],
+    ['/deck-builder-herndon-va', 'Herndon'],
+    ['/deck-builder-sterling-va', 'Sterling'],
+    ['/deck-builder-chantilly-va', 'Chantilly'],
   ];
 
   return (
@@ -192,7 +205,9 @@ function FaqSection() {
 export default function DeckBuilderNorthernVirginiaPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/deck-builder-northern-virginia" name="Custom Deck Builder in Northern Virginia" description="Custom deck builder in Northern Virginia for composite, PVC, wood, replacement, permits and HOA approvals. Serving Loudoun, Fairfax and Prince William." speakable />
       <ServiceSchema
+        url="https://ldndecks.com/deck-builder-northern-virginia"
         name="Custom Deck Builder in Northern Virginia"
         description="Custom composite, PVC and wood deck construction, deck replacement, permits, HOA support and outdoor living design across Northern Virginia."
         areaServed={[
@@ -237,6 +252,7 @@ export default function DeckBuilderNorthernVirginiaPage() {
       <ProjectProcessSection />
       <FaqSection />
       <ServiceAreasGrid />
+      <SimpleCTA title="Ready to Build Your Northern Virginia Deck?" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-northern-virginia" />
       <ContactHome />
     </main>

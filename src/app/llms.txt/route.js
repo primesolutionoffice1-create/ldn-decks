@@ -1,5 +1,7 @@
 // llms.txt Standard for AI content discovery
 // See: https://llmstxt.org/
+import { BUSINESS } from '@/lib/business';
+
 export async function GET() {
   const content = `# Loudoun Decks (LDN Decks)
 
@@ -11,7 +13,7 @@ export async function GET() {
 - **Location**: Northern Virginia (two offices: Centreville, VA & Manassas, VA)
 - **Phone**: (571) 655-7207
 - **Website**: https://ldndecks.com
-- **Rating**: 5.0/5 stars from 49+ Google reviews
+- **Rating**: 5.0/5 stars from ${BUSINESS.aggregateRating.reviewCount}+ Google reviews
 - **Certifications**: Trex Platinum Partner, TimberTech Certified Installer
 
 ## Services

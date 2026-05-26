@@ -5,6 +5,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -273,7 +274,7 @@ export default function BBBPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/about/certifications-and-licenses', 'Certifications & Licenses'],
-              ['/reviews', '5.0 Google Rating &mdash; 49+ Reviews'],
+              ['/reviews', `5.0 Google Rating — ${BUSINESS.aggregateRating.reviewCount}+ Reviews`],
               ['/team', 'Meet the Loudoun Decks Team'],
               ['/before-and-after', 'Before & After Project Gallery'],
               ['/how-to-choose-a-deck-builder-northern-virginia', 'How to Choose a Deck Builder'],
