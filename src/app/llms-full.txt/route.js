@@ -48,7 +48,7 @@ Yes. A composite deck recoups 60–80% of its cost at resale in Northern Virgini
 - Largest composite decking manufacturer in the US
 - Product lines: Enhance (budget), Select (mid), Transcend (premium)
 - Material: 95% recycled wood and plastic
-- Warranty: 25-year limited (50-year on Transcend LineageE)
+- Warranty: 25-year limited (50-year on Transcend Lineage)
 - Price range: $30–$65/sqft installed in Northern Virginia
 - Loudoun Decks is a Trex Platinum Partner (highest dealer tier)
 
