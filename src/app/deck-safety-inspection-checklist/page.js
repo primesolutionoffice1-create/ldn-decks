@@ -140,6 +140,11 @@ export default function DeckInspectionPage() {
             {' '}and{' '}
             <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing</Link>
             {' '}before deciding whether the deck needs repair, resurfacing or replacement.
+            For stairs specifically, use the printable{' '}
+            <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checklist</Link>
+            {' '}and review the{' '}
+            <Link href="/education/common-deck-stair-inspection-failures-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>common deck stair inspection failures</Link>
+            {' '}that often show up during county inspections or home-sale reviews.
           </p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
@@ -158,6 +163,8 @@ export default function DeckInspectionPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/services/deck-inspection', 'Professional Deck Inspection Service'],
+              ['/education/deck-stair-safety-inspection-checklist', 'Deck Stair Safety Checklist PDF'],
+              ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],
               ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
               ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing Guide'],
               ['/deck-maintenance-checklist-virginia', 'Deck Maintenance Checklist'],

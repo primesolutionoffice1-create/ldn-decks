@@ -121,7 +121,11 @@ export default function DeckRepairPage() {
         <p style={{ fontSize: '18px', color: '#444', marginBottom: '14px' }}>
           The fastest way to separate a small repair from a true structural risk is to inspect the stair system and the deck-to-house connection. Review our{' '}
           <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck stair construction diagram</Link>
-          {' '}for stringers, treads, risers and landing support, then compare the house attachment against our{' '}
+          {' '}for stringers, treads, risers and landing support, use the{' '}
+          <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck stair safety checklist</Link>
+          {' '}to spot red flags, review{' '}
+          <Link href="/education/common-deck-stair-inspection-failures-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>common stair inspection failures</Link>
+          {', then compare the house attachment against our '}
           <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>ledger board flashing guide</Link>.
         </p>
         <p style={{ fontSize: '18px', color: '#444' }}>

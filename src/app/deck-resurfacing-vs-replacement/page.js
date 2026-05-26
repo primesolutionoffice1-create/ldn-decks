@@ -98,7 +98,11 @@ export default function ResurfacingVsReplacementPage() {
           <p style={S.p}>
             Stairs and ledgers often decide whether a deck is a safe resurfacing candidate. Before reusing an existing frame, we check the stair load path described in our{' '}
             <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>
-            {' '}and the house connection explained in our{' '}
+            {', the pass/fail warning signs in our '}
+            <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checklist</Link>
+            {', and the inspection patterns in our '}
+            <Link href="/education/common-deck-stair-inspection-failures-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>common deck stair inspection failures guide</Link>
+            {'. We also check the house connection explained in our '}
             <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
@@ -160,6 +164,8 @@ export default function ResurfacingVsReplacementPage() {
             {[
               ['/before-and-after', 'Before & After Deck Transformations'],
               ['/services/deck-resurfacing', 'Deck Resurfacing Services'],
+              ['/education/deck-stair-safety-inspection-checklist', 'Deck Stair Safety Checklist PDF'],
+              ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],
               ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
               ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing Guide'],
               ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
