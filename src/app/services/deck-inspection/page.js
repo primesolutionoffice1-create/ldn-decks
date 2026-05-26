@@ -75,6 +75,10 @@ export default function DeckInspectionPage() {
           structural background before booking, start with our guides to <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth in Virginia</Link>,{' '}
           <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>,{' '}
           <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair stringers and treads</Link>
+          {', '}
+          <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checks</Link>
+          {', '}
+          <Link href="/education/common-deck-stair-inspection-failures-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>common stair inspection failures</Link>
           {' '}and <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing</Link>.
         </p>
         <p style={{ fontSize: '18px', marginBottom: '20px' }}>

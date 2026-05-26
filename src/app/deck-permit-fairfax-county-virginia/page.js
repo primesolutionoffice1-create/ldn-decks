@@ -81,7 +81,7 @@ export default function FairfaxPermitPage() {
               <ul style={{ paddingLeft: '1.25rem', marginTop: '0.5rem' }}>
                 <li>Footing inspection holes dug, before concrete is poured</li>
                 <li>Framing inspection joists, beams, ledger, hardware installed, before decking goes on. If you are comparing framing options, read <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>.</li>
-                <li>Final inspection complete structure including railings, stairs, and fasteners. For stair terminology and layout, see our <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>; for inspection dimensions, see the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>stair code guide</Link>.</li>
+                <li>Final inspection complete structure including railings, stairs, and fasteners. For stair terminology and layout, see our <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>; for inspection dimensions, see the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>stair code guide</Link>; and for homeowner red flags before final review, use the <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checklist</Link>.</li>
               </ul>
             </li>
           </ol>
@@ -134,6 +134,8 @@ export default function FairfaxPermitPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/deck-permit-loudoun-county-virginia', 'Deck Permit Guide: Loudoun County'],
+              ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],
+              ['/education/deck-stair-safety-inspection-checklist', 'Deck Stair Safety Checklist PDF'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in NoVA'],
               ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/near-you/fairfax-county', 'Deck Builder in Fairfax County'],

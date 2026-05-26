@@ -187,6 +187,12 @@ export const educationArticles = [
       { q: 'What is the maximum riser height for deck stairs in Virginia?', a: 'The maximum riser height is 7¾ inches, measured vertically from one tread surface to the next. Lower risers are allowed and often feel more comfortable, but the height cannot exceed the maximum, and every riser in the flight must be within 3/8 inch of the others.' },
       { q: 'Do deck stairs need a handrail?', a: 'Yes. Any stair flight with four or more risers requires a graspable handrail on at least one side, mounted 34 to 38 inches above the tread nosings and running continuously the full length of the flight.' },
       { q: 'Why do all the steps on a deck staircase need to be the same height?', a: 'Your body memorizes the rhythm of a staircase within a step or two. A single riser even half an inch off interrupts that rhythm and causes stumbles, so the code limits the variation between the tallest and shortest riser to 3/8 inch.' }
+    ],
+    relatedLinks: [
+      { href: '/education/deck-stair-safety-inspection-checklist', label: 'Deck Stair Safety Inspection Checklist', description: 'Printable pass/fail checklist for treads, risers, rails, stringers, landings and warning signs.' },
+      { href: '/education/common-deck-stair-inspection-failures-virginia', label: 'Common Deck Stair Inspection Failures', description: 'The stair problems that most often trigger inspection, repair or rebuild conversations.' },
+      { href: '/education/deck-stair-construction-diagram', label: 'Deck Stair Construction Diagram', description: 'A parts-level guide to stringers, treads, risers, landings, blocking and stair hardware.' },
+      { href: '/services/deck-repair-and-structural-maintenance', label: 'Deck Repair and Structural Maintenance', description: 'Repair help for unsafe stairs, failed inspections, rot, railings and deck framing issues.' },
     ]
   },
   {
@@ -274,10 +280,260 @@ To plan a safe, comfortable stair system for your Northern Virginia deck, use th
       { q: 'What are the main parts of deck stairs?', a: 'The main parts are the stringers, treads, risers, top connection, landing, blocking, handrails, guards and exterior-rated hardware. Each part helps transfer weight safely from the stair to the deck frame and the ground.' },
       { q: 'What size lumber is commonly used for deck stair stringers?', a: 'Most exterior deck stairs use 2x12 pressure-treated lumber for cut stringers because the board needs enough depth after the stair pattern is cut into it. Final sizing depends on the stair span, layout and code requirements.' },
       { q: 'Should deck stair stringers sit directly on soil?', a: 'No. The bottom of deck stairs should land on a stable concrete pad, landing or approved footing. Soil can settle or erode, which changes the stair height and creates a trip hazard.' }
+    ],
+    relatedLinks: [
+      { href: '/education/deck-stair-code-rise-run-virginia', label: 'Virginia Deck Stair Code Guide', description: 'Rise, run, handrail, guard, landing and lighting requirements explained for homeowners.' },
+      { href: '/education/deck-stair-safety-inspection-checklist', label: 'Deck Stair Safety Inspection Checklist', description: 'Printable homeowner checklist for spotting movement, rot, loose rails and unsafe landings.' },
+      { href: '/education/common-deck-stair-inspection-failures-virginia', label: 'Common Deck Stair Inspection Failures', description: 'Inspection issues tied to uneven risers, weak handrails, rotten stringers and poor connections.' },
+      { href: '/education/ledger-board-flashing-deck-attachment-virginia', label: 'Ledger Board Flashing and Deck Attachment', description: 'How the house connection affects overall deck and stair safety.' },
     ]
   },
   {
     id: 12,
+    title: 'Deck Stair Safety Inspection Checklist for Northern Virginia Homeowners',
+    slug: 'deck-stair-safety-inspection-checklist',
+    image: '/images/img58.jpeg',
+    date: 'May 26, 2026',
+    author: 'Loudoun Decks Team',
+    metaTitle: 'Deck Stair Safety Inspection Checklist PDF | Loudoun Decks',
+    metaDescription: 'Download a printable deck stair safety inspection checklist for Northern Virginia homeowners. Check stair treads, risers, handrails, guards, stringers, landings, lighting and warning signs.',
+    category: 'Deck Safety',
+    tags: ['deck stair safety checklist', 'deck stair inspection checklist', 'unsafe deck stairs', 'deck stairs northern virginia', 'deck inspection'],
+    excerpt: 'Download a printable deck stair safety checklist for Northern Virginia homeowners. Use it to spot loose treads, uneven risers, weak handrails, rotten stringers, unsafe landings and other warning signs before repair or replacement.',
+    download: {
+      title: 'Free Printable Deck Stair Safety Checklist',
+      description: 'Professional PDF checklist with emergency red flags, pass/fail inspection items, common failure points, repair-vs-rebuild guidance and a calm homeowner safety disclaimer.',
+      href: '/downloads/deck-stair-safety-inspection-checklist-northern-virginia.pdf',
+    },
+    checklistName: 'Deck Stair Safety Inspection Checklist',
+    checklistItems: [
+      'Tread stability',
+      'Riser consistency',
+      'Handrail graspability',
+      'Guardrail stability',
+      'Post attachment',
+      'Stringer condition',
+      'Footing and landing condition',
+      'Rot or moisture damage',
+      'Fastener corrosion',
+      'Lighting visibility',
+      'Slip resistance',
+      'Stair width',
+      'Open riser safety',
+      'Stair-to-deck connection',
+      'Bottom landing safety',
+    ],
+    content: `Deck stairs are one of the first places an aging deck starts to feel unsafe. A board can loosen, a riser can shift, a handrail can move, or the bottom landing can sink just enough to make the first step feel wrong. In Northern Virginia, moisture, humidity, clay soil movement and winter freeze-thaw cycles all put extra stress on exterior stair systems.
+
+This page gives homeowners a practical, printable inspection checklist for deck stairs. It is designed for quick homeowner education, not as a substitute for a professional inspection or local code decision. If your stairs move, feel loose, show rot, or make you unsure, stop using them until a qualified deck professional can inspect the structure.
+
+## Who This Checklist Is For
+
+Use the checklist if you own an older deck, are planning a deck repair, are comparing resurfacing vs replacement, are preparing for a home inspection, or simply want to understand whether your stairs look and feel safe.
+
+It is especially useful for homeowners in Ashburn, Leesburg, Sterling, Fairfax, Reston, Herndon, McLean, Arlington, Alexandria, Falls Church and nearby Northern Virginia communities where many decks are exposed to wet shade, heavy pollen, clay soil movement and repeated freeze-thaw cycles.
+
+## What Is Included
+
+- Emergency stair safety red flags
+- A printable pass/fail checklist for stair treads, risers, stringers, handrails, guards, landings, fasteners and lighting
+- A list of stair issues that commonly fail inspection
+- Repair-vs-rebuild guidance for common stair problems
+- Guidance on when to call a professional deck inspector or builder
+- A homeowner-friendly disclaimer about code and jurisdiction differences
+
+## Emergency Warning Signs
+
+Do not wait if your stairs feel loose or bouncy, the railing moves when pushed, the stair-to-deck connection is separating, stringers show rot, the landing is cracked or sinking, a handrail is missing, the riser heights feel uneven, or the stairs appear to be pulling away from the deck.
+
+Those are not cosmetic details. They can indicate a broken load path, poor fasteners, water damage, unstable footing support or a stair layout that should be reviewed before the stairs are used heavily.
+
+## How This Fits the Stair Safety Cluster
+
+Start with the PDF checklist on this page. Then use our [deck stair construction diagram](/education/deck-stair-construction-diagram) to understand the parts of the stair system, our [Virginia deck stair code guide](/education/deck-stair-code-rise-run-virginia) to understand rise, run, handrail and landing requirements, and our guide to [common deck stair inspection failures](/education/common-deck-stair-inspection-failures-virginia) to understand what inspectors and home buyers often flag.
+
+For attached decks, stair safety also depends on the wider deck structure. Review [ledger board flashing and deck attachment](/education/ledger-board-flashing-deck-attachment-virginia), our [deck safety inspection checklist](/deck-safety-inspection-checklist), and our [deck repair and structural maintenance service](/services/deck-repair-and-structural-maintenance) if you see movement, rot, corrosion or failed connections.
+
+## When to Call Loudoun Decks
+
+Call a professional if the stairs move, bounce, pull away, show rot, have a failed inspection issue, have major riser inconsistency, or connect to an older deck with multiple safety concerns. Loudoun Decks can inspect, repair or rebuild deck stairs in Northern Virginia with safety, permitting and long-term durability in mind.
+
+Need help checking or rebuilding deck stairs in Northern Virginia? Call 571-655-7207, email office@ldndecks.com, or request a consultation through [LDN Decks](/contact).`,
+    faq: [
+      { q: 'Is the deck stair safety checklist free?', a: 'Yes. The PDF checklist is free to download and can be printed for homeowner use before a repair, inspection, resurfacing project or stair rebuild conversation.' },
+      { q: 'Can this checklist replace a professional deck inspection?', a: 'No. It is for general homeowner education only. It is not a substitute for a professional inspection, engineering review or local code authority decision.' },
+      { q: 'What is the biggest stair safety red flag?', a: 'Movement is the biggest warning sign. If the stairs, handrail, guardrail, stringers or stair-to-deck connection move under normal use, stop using the stairs until they are inspected.' },
+    ],
+    disclaimer: 'This checklist is for general homeowner education only and is not a substitute for a professional inspection, engineering review, or local code authority decision. Requirements may vary by jurisdiction.',
+    relatedLinks: [
+      { href: '/education/common-deck-stair-inspection-failures-virginia', label: 'Common Deck Stair Inspection Failures', description: 'Learn what usually causes stairs to fail inspections or home-sale safety reviews.' },
+      { href: '/education/deck-stair-construction-diagram', label: 'Deck Stair Construction Diagram', description: 'Understand the stair parts before checking treads, risers, stringers and landings.' },
+      { href: '/education/deck-stair-code-rise-run-virginia', label: 'Virginia Deck Stair Code Guide', description: 'Review rise, run, handrail, guard and landing rules that shape inspection outcomes.' },
+      { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Get a professional structural review when stairs move, bounce, rot or fail inspection.' },
+    ]
+  },
+  {
+    id: 13,
+    title: 'Common Deck Stair Inspection Failures in Virginia',
+    slug: 'common-deck-stair-inspection-failures-virginia',
+    image: '/images/img58.jpeg',
+    date: 'May 26, 2026',
+    author: 'Loudoun Decks Team',
+    metaTitle: 'Common Deck Stair Inspection Failures in Virginia',
+    metaDescription: 'Learn the most common deck stair inspection failures in Virginia: uneven risers, tread depth, loose handrails, weak guards, rotten stringers, poor landings, lighting and unsafe connections.',
+    category: 'Deck Safety',
+    tags: ['deck stair inspection failures', 'deck stairs fail inspection', 'virginia deck stair code', 'unsafe deck stairs', 'deck stair repair'],
+    excerpt: 'Deck stairs fail inspections for predictable reasons: uneven risers, shallow treads, loose handrails, weak guards, rotten stringers, poor landings, missing lighting and unsafe stair-to-deck connections.',
+    content: `Deck stairs often fail inspection because small measurement and connection problems create real safety risk. A deck surface may look fine, but the stairs concentrate movement, moisture, foot traffic, handrail loads and landing settlement into one compact system.
+
+In Virginia and Northern Virginia, inspectors commonly look at stair geometry, handrails, guards, stringer support, bottom landings, lighting and how securely the stair connects back to the deck framing. The exact interpretation can vary by jurisdiction, but the failure patterns are remarkably consistent.
+
+This guide explains the most common deck stair inspection failures we see around Loudoun County, Fairfax County, Prince William County, Arlington, Alexandria, Falls Church, Leesburg, Ashburn, Sterling, Herndon, Reston and McLean. For homeowner self-checking, download the [deck stair safety inspection checklist](/education/deck-stair-safety-inspection-checklist).
+
+## 1. Uneven Riser Heights
+
+Uneven risers are one of the most common stair inspection failures. The riser is the vertical height from one tread to the next. If one step is noticeably taller or shorter than the others, people lose the rhythm of the staircase and trip.
+
+This often happens when the bottom landing settles, a stair was laid out before the finished landing height was known, or a builder tried to make the math work by hiding the difference in the first or last step. Our [deck stair code guide](/education/deck-stair-code-rise-run-virginia) explains the rise/run principles in more detail.
+
+## 2. Improper Tread Depth
+
+The tread is the horizontal surface your foot lands on. Treads that are too shallow make stairs feel steep and insecure. Tread issues also happen when boards cup, split, loosen, or are installed without enough support underneath.
+
+Composite stair treads deserve special attention because they may require tighter stringer spacing than wood. If the tread flexes underfoot, the issue may be support spacing, fasteners, board condition or all three.
+
+## 3. Loose or Non-Graspable Handrails
+
+A handrail has to do more than look finished. It needs to be continuous, secure and graspable. A wide flat cap board may look like a rail, but it usually does not function like a handrail during a fall.
+
+Loose handrails fail because they cannot reliably stop someone who slips. Non-graspable rails fail because a hand cannot wrap around them. Older deck stairs often have this problem after years of patch repairs.
+
+## 4. Weak Guardrails and Poor Post Attachment
+
+Guards protect open sides of stairs and elevated deck areas. A guard that moves when pushed is a serious warning sign. The problem may be weak post attachment, rotted framing, poor blocking, missing structural hardware or fasteners that have corroded over time.
+
+Posts attached only through surface decking are especially concerning. Stair guards and deck guards need real structural resistance, not just trim-level attachment.
+
+## 5. Rotten or Cracked Stair Stringers
+
+Stringers carry the treads and transfer stair loads to the deck framing and landing. They are often close to the ground, exposed to splashback, and vulnerable at the bottom where water sits.
+
+Rotten stringers can be hidden from above. Look from the side and underneath. If a screwdriver sinks easily into the wood, if the stringer is split near the notches, or if the bottom end is soft, the stair may need more than surface repair. The parts are explained in our [deck stair construction diagram](/education/deck-stair-construction-diagram).
+
+## 6. Improper Stringer Spacing
+
+Stringers spaced too far apart can make stair treads flex. This is common when older wood stair framing is reused under new composite boards without checking the manufacturer installation requirements.
+
+If the stair feels bouncy but the treads are not visibly broken, stringer spacing may be the cause. A resurfacing project should always evaluate stairs before new boards are installed.
+
+## 7. Missing or Inadequate Landings
+
+The bottom of the stairs needs a firm, stable, level landing. A stair set sitting on bare soil, pavers that have settled, or a cracked concrete pad can shift the entire stair geometry.
+
+When the landing sinks, the bottom riser becomes taller than the others. That creates a trip hazard and can twist the stringers. Northern Virginia clay soil and freeze-thaw cycles make landing stability especially important.
+
+## 8. Unsafe Open Risers
+
+Open risers can be acceptable in many deck stair designs, but openings still need to feel safe and meet applicable rules. Large gaps can be a concern for small children, pets and final inspection.
+
+Open riser issues are often paired with inconsistent stair geometry, missing blocking or older rail/guard layouts that no longer match modern expectations.
+
+## 9. Poor Stair Lighting
+
+Stairs that disappear after dark are a safety problem. Lighting may be required or expected depending on the project and inspection context, and it is always smart for homeowner safety.
+
+Low-voltage riser lights, post lights and carefully placed deck lighting reduce fall risk after sunset. Our [deck stair lighting service](/services/deck-stair-lighting) explains how lighting can be planned with stair framing instead of added later as an afterthought.
+
+## 10. Slippery Treads
+
+Algae, mildew, worn wood grain, pollen film, poor drainage and shaded locations can all make stair treads slick. Slippery stairs may not be a framing failure, but they can still create real injury risk.
+
+This is more common on older wood decks, shaded backyard stairs and stairs near landscaping that traps moisture. Maintenance helps, but severely worn or damaged treads may need replacement.
+
+## 11. Corroded Fasteners and Hardware
+
+Exterior stair hardware lives in a harsh environment. Rain, humidity, pressure-treated lumber chemicals and winter conditions can corrode weak fasteners.
+
+Interior screws, drywall screws, light-duty brackets and mismatched connectors do not belong in structural stair assemblies. Corroded hardware is especially concerning at stringer hangers, guard posts, handrail supports and the stair-to-deck connection.
+
+## 12. Stairs Pulling Away From the Deck Framing
+
+The top stair connection is one of the most important parts of the system. If the stairs are pulling away, dropping, opening a gap, or moving separately from the deck, stop using them until they are inspected.
+
+This can indicate failed blocking, poor connectors, rotten framing, weak fasteners or broader movement in the deck structure.
+
+## 13. Poor Footing Support
+
+Stairs need a reliable load path to the ground. A stair landing that sits on unstable soil, undersized support or a moving slab can undermine the entire run.
+
+The same structural logic that applies to the main deck applies to the stairs. Our guide to [deck load paths](/education/understanding-deck-load-paths) explains how weight should travel through the structure.
+
+## 14. Ledger or Stair Connection Issues
+
+On attached decks, stair safety can be affected by the deck-to-house connection. If the ledger is moving, rotted, unflashed or poorly attached, the stair system may only be one symptom of a larger structural problem.
+
+Review our [ledger board flashing guide](/education/ledger-board-flashing-deck-attachment-virginia) if you see water stains, missing metal flashing, soft wood at the house connection or movement where the deck meets the home.
+
+## 15. Unpermitted or Older Stair Modifications
+
+Deck stairs are often modified after the original build: a landing gets moved, a stair run is shortened, a patio is added, or railings are replaced. If those changes were not permitted or inspected, the stair may not match the original approved structure.
+
+This can create problems during county inspection, real estate transactions, insurance questions and buyer home inspections. For permit context, see our [Loudoun County deck permit guide](/deck-permit-loudoun-county-virginia) and [Fairfax County deck permit guide](/deck-permit-fairfax-county-virginia).
+
+## Why These Issues Matter
+
+Deck stair failures matter because they increase fall risk, can fail county or home inspections, can make repairs more expensive when ignored, and can create permit, resale and liability concerns.
+
+A loose handrail today may become a failed guard post later. A small landing settlement today may create a major riser inconsistency next season. A rotten stringer end may be the visible sign of wider moisture damage.
+
+## Repair vs Rebuild
+
+Some stair problems are repairable. A single loose tread, a missing light, or a small handrail hardware issue may be corrected without rebuilding the entire stair run.
+
+Rebuild becomes more likely when the stringers are cracked or rotted, multiple risers are inconsistent, the landing has moved, the stairs are pulling away from the deck, guard posts are structurally weak, or several issues appear together. Stairs are not the place to hide structural problems under new boards.
+
+If the deck is already being evaluated for repair, resurfacing or replacement, include the stairs in that decision. Our [deck resurfacing vs replacement guide](/deck-resurfacing-vs-replacement) explains how to decide when the underlying frame is still worth saving.
+
+## Homeowner Checklist Summary
+
+Before using older deck stairs heavily, check these items:
+
+- Do the stairs move, bounce, twist or pull away?
+- Are all treads secure and slip-resistant?
+- Do all risers feel consistent?
+- Is the handrail graspable, continuous and firm?
+- Do guards and posts resist movement?
+- Are stringers free from rot, splitting and soil contact?
+- Is the bottom landing stable, level and properly supported?
+- Are fasteners and connectors exterior-rated and not badly rusted?
+- Are the stairs visible at night?
+
+Download the full printable [Deck Stair Safety Inspection Checklist PDF](/education/deck-stair-safety-inspection-checklist) for a pass/fail version you can use at home.
+
+## When to Request a Professional Evaluation
+
+If your deck stairs feel unsafe, failed inspection, are pulling away, have visible rot, have major riser inconsistency, or need repair/rebuild in Northern Virginia, request a professional evaluation from Loudoun Decks.
+
+We inspect, repair and rebuild deck stairs with safety, permitting and long-term durability in mind. Call 571-655-7207 or request help through [LDN Decks](/contact).`,
+    faq: [
+      { q: 'Why do deck stairs fail inspection?', a: 'Deck stairs usually fail inspection because of uneven riser heights, improper tread depth, loose or non-graspable handrails, weak guards, poor stringer support, missing landings, missing lighting, corrosion or unsafe stair-to-deck connections.' },
+      { q: 'Can deck stairs be repaired instead of rebuilt?', a: 'Sometimes. A loose tread, missing light or minor handrail hardware issue may be repairable. Rebuild is more likely when stringers are rotten, risers are inconsistent, the landing has moved, or the stairs are pulling away from the deck.' },
+      { q: 'Are uneven stair risers dangerous?', a: 'Yes. Your body expects each step in a stair flight to repeat the same rhythm. A riser that is noticeably taller or shorter than the others creates a trip hazard and is a common inspection issue.' },
+      { q: 'Do deck stairs need a handrail in Virginia?', a: 'Many deck stair flights require a graspable handrail, especially when there are four or more risers. Requirements can vary by exact stair layout and jurisdiction, so confirm with the local code authority or a qualified deck professional.' },
+      { q: 'What are signs my deck stairs are unsafe?', a: 'Warning signs include movement, bounce, loose treads, uneven risers, a handrail that moves, weak guards, rot around stringers, cracked or sunken landings, corroded hardware, missing lighting and stairs pulling away from deck framing.' },
+      { q: 'Should I repair or replace old deck stairs?', a: 'Repair may be enough for isolated, non-structural issues. Replacement is safer when the stringers, landing, top connection, guards or multiple stair dimensions are compromised.' },
+      { q: 'Can Loudoun Decks help with failed deck stair inspections?', a: 'Yes. Loudoun Decks can evaluate failed stair inspection issues, document the likely cause, and recommend repair or rebuild options for Northern Virginia homeowners.' },
+    ],
+    disclaimer: 'This article is for general homeowner education only and is not a substitute for a professional inspection, engineering review, or local code authority decision. Requirements may vary by jurisdiction.',
+    relatedLinks: [
+      { href: '/education/deck-stair-safety-inspection-checklist', label: 'Deck Stair Safety Inspection Checklist', description: 'Download the printable pass/fail PDF for homeowner stair safety checks.' },
+      { href: '/education/deck-stair-code-rise-run-virginia', label: 'Virginia Deck Stair Code Guide', description: 'Understand the rise, run, handrail, guard and landing basics behind stair inspections.' },
+      { href: '/services/deck-repair-and-structural-maintenance', label: 'Deck Repair and Structural Maintenance', description: 'Repair or rebuild support for failed inspections, rot, railings and unsafe stairs.' },
+      { href: '/deck-resurfacing-vs-replacement', label: 'Deck Resurfacing vs Replacement', description: 'Decide whether an older deck frame and stair system are worth saving.' },
+    ]
+  },
+  {
+    id: 14,
     title: 'Ledger Board Flashing: The Single Most Critical Deck Connection',
     slug: 'ledger-board-flashing-deck-attachment-virginia',
     image: '/images/img18.jpeg',
@@ -296,6 +552,12 @@ To plan a safe, comfortable stair system for your Northern Virginia deck, use th
       { q: 'What is the difference between metal Z-flashing and self-adhered membrane?', a: 'Metal Z-flashing is a rigid strip that physically diverts water away from the top of the ledger and is installed over the top edge tucked behind the siding. Self-adhered membrane is a peel-and-stick waterproof barrier installed behind the ledger that self-seals around the fasteners. Both are required — neither one substitutes for the other.' },
       { q: 'Does Virginia code require ledger flashing?', a: 'Yes. The Virginia Residential Code requires that deck ledgers be flashed to prevent water from entering the wall cavity. Inspectors check the ledger attachment and flashing at the framing stage of a permitted deck before any decking boards can be installed.' },
       { q: 'Is caulk acceptable as ledger flashing?', a: 'No. A bead of caulk along the top edge of the ledger is not flashing. Caulk dries out and cracks within a few years in Virginia’s freeze-thaw climate, and as soon as it cracks, water enters the joint. A ledger flashed only with caulk is the most common pattern of failure we see during deck inspections.' }
+    ],
+    relatedLinks: [
+      { href: '/education/deck-stair-safety-inspection-checklist', label: 'Deck Stair Safety Inspection Checklist', description: 'A printable homeowner checklist for unsafe stairs, rails, landings and stair connections.' },
+      { href: '/education/common-deck-stair-inspection-failures-virginia', label: 'Common Deck Stair Inspection Failures', description: 'Related inspection failures involving stair-to-deck connections, fasteners and movement.' },
+      { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Inspect ledger flashing, stair connections, rot, hardware and structural movement.' },
+      { href: '/deck-resurfacing-vs-replacement', label: 'Deck Resurfacing vs Replacement', description: 'Decide whether hidden ledger or stair damage makes repair, resurfacing or rebuild safer.' },
     ]
   }
 ];

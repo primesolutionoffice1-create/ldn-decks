@@ -63,6 +63,30 @@ function renderInline(text, keyPrefix = 'i') {
   return nodes;
 }
 
+function renderContentBlock(para, idx) {
+  if (para.startsWith('## ')) {
+    return <h2 key={idx} style={{ marginTop: '40px', marginBottom: '20px', color: '#111' }}>{para.replace('## ', '')}</h2>;
+  }
+  if (para.startsWith('### ')) {
+    return <h3 key={idx} style={{ marginTop: '30px', marginBottom: '15px', color: '#222' }}>{para.replace('### ', '')}</h3>;
+  }
+
+  const lines = para.split('\n').filter(Boolean);
+  if (lines.length > 1 && lines.every(line => line.startsWith('- '))) {
+    return (
+      <ul key={idx} style={{ paddingLeft: '1.35rem', margin: '0 0 24px' }}>
+        {lines.map((line, lineIndex) => (
+          <li key={lineIndex} style={{ marginBottom: '0.55rem' }}>
+            {renderInline(line.replace(/^- /, ''), `li${idx}-${lineIndex}`)}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  return <p key={idx}>{renderInline(para, `p${idx}`)}</p>;
+}
+
 export default async function SingleEducationPage({ params }) {
   const resolvedParams = await params;
   const article = educationArticles.find(p => p.slug === resolvedParams.slug);
@@ -139,6 +163,32 @@ export default async function SingleEducationPage({ params }) {
     })),
   } : null;
 
+  const downloadableResourceSchema = article.download ? {
+    "@context": "https://schema.org",
+    "@type": "DigitalDocument",
+    "@id": `https://ldndecks.com${article.download.href}#document`,
+    "name": article.download.title,
+    "description": article.download.description,
+    "encodingFormat": "application/pdf",
+    "contentUrl": `https://ldndecks.com${article.download.href}`,
+    "url": `https://ldndecks.com${article.download.href}`,
+    "isAccessibleForFree": true,
+    "publisher": { "@id": "https://ldndecks.com/#organization" },
+    "about": article.tags || [],
+  } : null;
+
+  const checklistSchema = article.checklistItems ? {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `https://ldndecks.com/education/${article.slug}#checklist`,
+    "name": article.checklistName || article.title,
+    "itemListElement": article.checklistItems.map((name, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": name,
+    })),
+  } : null;
+
   return (
     <article className={styles.articlePage}>
        <script
@@ -153,6 +203,18 @@ export default async function SingleEducationPage({ params }) {
          <script
            type="application/ld+json"
            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+         />
+       )}
+       {downloadableResourceSchema && (
+         <script
+           type="application/ld+json"
+           dangerouslySetInnerHTML={{ __html: JSON.stringify(downloadableResourceSchema) }}
+         />
+       )}
+       {checklistSchema && (
+         <script
+           type="application/ld+json"
+           dangerouslySetInnerHTML={{ __html: JSON.stringify(checklistSchema) }}
          />
        )}
 
@@ -177,15 +239,63 @@ export default async function SingleEducationPage({ params }) {
           <div className={styles.containerNarrow}>
              <div className={styles.contentBody}>
                <p className={styles.leadParagraph}>{renderInline(article.excerpt, 'lead')}</p>
-               {paragraphs.map((para, idx) => {
-                 if (para.startsWith('## ')) {
-                   return <h2 key={idx} style={{ marginTop: '40px', marginBottom: '20px', color: '#111' }}>{para.replace('## ', '')}</h2>;
-                 }
-                 if (para.startsWith('### ')) {
-                   return <h3 key={idx} style={{ marginTop: '30px', marginBottom: '15px', color: '#222' }}>{para.replace('### ', '')}</h3>;
-                 }
-                 return <p key={idx}>{renderInline(para, `p${idx}`)}</p>;
-               })}
+               {article.download && (
+                 <section
+                   style={{
+                     margin: '32px 0',
+                     padding: '1.5rem',
+                     border: '1px solid #f0c9b8',
+                     borderRadius: 8,
+                     background: '#fff7f3',
+                   }}
+                 >
+                   <h2 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#111' }}>{article.download.title}</h2>
+                   <p style={{ marginBottom: '1rem' }}>{article.download.description}</p>
+                   <a
+                     href={article.download.href}
+                     download
+                     style={{
+                       display: 'inline-block',
+                       padding: '0.85rem 1.1rem',
+                       borderRadius: 6,
+                       background: 'var(--button-color, #d14817)',
+                       color: '#fff',
+                       fontWeight: 700,
+                       textDecoration: 'none',
+                     }}
+                   >
+                     Download PDF Checklist
+                   </a>
+                 </section>
+               )}
+
+               {paragraphs.map(renderContentBlock)}
+
+               {article.relatedLinks && article.relatedLinks.length > 0 && (
+                 <section style={{ marginTop: '44px' }}>
+                   <h2 style={{ marginBottom: '20px', color: '#111' }}>Related Stair Safety Resources</h2>
+                   <div style={{ display: 'grid', gap: '0.85rem' }}>
+                     {article.relatedLinks.map((item) => (
+                       <Link
+                         key={item.href}
+                         href={item.href}
+                         style={{
+                           display: 'block',
+                           padding: '1rem',
+                           border: '1px solid #e5e5e5',
+                           borderRadius: 8,
+                           textDecoration: 'none',
+                           color: 'inherit',
+                           background: '#fff',
+                         }}
+                       >
+                         <strong style={{ color: 'var(--button-color, #d14817)' }}>{item.label}</strong>
+                         {item.description && <span style={{ display: 'block', marginTop: '0.35rem', color: '#555' }}>{item.description}</span>}
+                       </Link>
+                     ))}
+                   </div>
+                 </section>
+               )}
 
                {article.faq && article.faq.length > 0 && (
                  <section style={{ marginTop: '60px' }}>
