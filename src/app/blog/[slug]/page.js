@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
   if (!post) return { title: 'Post Not Found', robots: { index: false, follow: false } };
   const base = buildMetadata({
     path: `/blog/${post.slug}`,
-    title: post.metaTitle || `${post.title} | Loudoun Decks Expert Insights`,
+    title: post.metaTitle || `${post.title} | Loudoun Decks`,
     description: post.metaDescription || post.excerpt,
     image: post.image,
   });

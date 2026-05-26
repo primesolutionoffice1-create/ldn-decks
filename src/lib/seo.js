@@ -1,8 +1,38 @@
 export const SITE_URL = "https://ldndecks.com";
 
+// Brand suffixes that must survive truncation intact. A title that gets cut
+// mid-brand ("| Loudoun" instead of "| Loudoun Decks") loses recall in SERPs.
+// Listed longest-first so longer matches win.
+const BRAND_SUFFIXES = [
+    " | Loudoun Decks Expert Insights",
+    " | Loudoun Decks",
+    " | LDN Decks",
+];
+
 function trimToSeoLimit(value, limit) {
     if (typeof value !== "string" || value.length <= limit) {
         return value;
+    }
+
+    // Brand-aware: if the value ends with a known brand suffix, truncate the
+    // prefix portion and append the suffix intact rather than slicing through it.
+    for (const suffix of BRAND_SUFFIXES) {
+        if (value.endsWith(suffix)) {
+            const prefixLimit = limit - suffix.length;
+            // Suffix alone consumes too much of the limit — fall through to
+            // the generic cut.
+            if (prefixLimit < 20) break;
+            const prefix = value.slice(0, value.length - suffix.length);
+            if (prefix.length <= prefixLimit) {
+                return value;
+            }
+            const window = prefix.slice(0, prefixLimit + 1);
+            const lastSpace = window.lastIndexOf(" ");
+            const cleanPrefix = lastSpace > Math.floor(prefixLimit * 0.5)
+                ? window.slice(0, lastSpace)
+                : window.slice(0, prefixLimit);
+            return `${cleanPrefix.replace(/[|,;:\-\s&]+$/g, "").trim()}${suffix}`;
+        }
     }
 
     const trimmed = value.slice(0, limit + 1);
@@ -11,7 +41,7 @@ function trimToSeoLimit(value, limit) {
         ? trimmed.slice(0, lastSpace)
         : trimmed.slice(0, limit);
 
-    return cleanCut.replace(/[|,;:\-\s]+$/g, "").trim();
+    return cleanCut.replace(/[|,;:\-\s&]+$/g, "").trim();
 }
 
 /**
