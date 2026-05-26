@@ -14,6 +14,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-leesburg-va',
@@ -108,6 +110,7 @@ export default function DeckBuilderLeesburgPage() {
   return (
     <main>
       <LocalBusinessSchema city="Leesburg" url="https://ldndecks.com/deck-builder-leesburg-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-leesburg-va" name="Deck Builder in Leesburg, VA | Trex Certified | Loudoun Decks" description="Deck builder in Leesburg, VA. Custom Trex &amp; cedar decks for River Creek, Lansdowne, Tavistock Farms &amp; the historic district. Town of Leesburg + Loudoun County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Leesburg, VA's Trusted Deck Company"
         title="Custom Deck Builder in Leesburg, VA"
@@ -173,6 +176,7 @@ export default function DeckBuilderLeesburgPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Leesburg" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Leesburg" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-leesburg-va" />
+      <NamedAuthor context="Leesburg and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </main>
   );

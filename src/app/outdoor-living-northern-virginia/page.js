@@ -12,6 +12,8 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/outdoor-living-northern-virginia',
@@ -102,6 +104,7 @@ const faqs = [
 export default function OutdoorLivingNorthernVirginiaPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/outdoor-living-northern-virginia" name="Outdoor Living Contractor Northern Virginia | Decks, Patios, Porches" description="Outdoor living design and build in Northern Virginia. Custom decks, screened porches, patios, pergolas, outdoor kitchens and under-deck spaces." speakable />
       <ServiceSchema
         name="Outdoor Living Design and Build"
         description="Outdoor living contractor in Northern Virginia for decks, porches, patios, pergolas, outdoor kitchens, under-deck spaces, permits, and HOA-ready backyard planning."
@@ -180,6 +183,8 @@ export default function OutdoorLivingNorthernVirginiaPage() {
       <ServiceAreasGrid />
       <ServicesCallToAction />
       <RelatedGuides currentPath="/outdoor-living-northern-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </main>
   );

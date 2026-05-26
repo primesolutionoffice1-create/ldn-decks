@@ -5,6 +5,7 @@ import StatsRow from '@/components/StatsRow';
 import AboutDetails from '@/components/AboutDetails';
 import TeamGrid from '@/components/TeamGrid';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = buildMetadata({
   path: '/about',
@@ -15,6 +16,7 @@ export const metadata = buildMetadata({
 export default function AboutPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/about" name="About Loudoun Decks | 5-Star Deck Builder &amp; Contractor Northern VA" description="Learn why LDN Decks is Northern Virginia's most trusted deck builder and patio contractor. Trex Platinum Partner serving Loudoun, Fairfax, and Prince William County." speakable />
       <AboutHeader />
       <QualityLeader />
       <StatsRow />

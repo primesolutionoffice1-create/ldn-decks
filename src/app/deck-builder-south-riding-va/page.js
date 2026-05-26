@@ -8,6 +8,8 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -30,6 +32,7 @@ export default function SouthRidingDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="South Riding" url="https://ldndecks.com/deck-builder-south-riding-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-south-riding-va" name="Deck Builder in South Riding, VA | Custom Composite Decks | LDN Decks" description="Top-rated deck builder in South Riding, VA. 5.0★ Google. Builder-grade deck upgrades, screened porches. South Riding HOA handled. Free estimate. (571) 655-7207." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in South Riding, VA</h1>
@@ -94,6 +97,7 @@ export default function SouthRidingDeckBuilderPage() {
       </article>
       <SimpleCTA title="Upgrade Your South Riding Deck" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-south-riding-va" />
+      <NamedAuthor context="South Riding and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </>
   );

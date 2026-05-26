@@ -11,6 +11,7 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -119,6 +120,7 @@ export default function TrexRailingsPage() {
   return (
     <main>
       <JsonLd data={serviceSchema} />
+      <WebPageSchema url="https://ldndecks.com/services/trex-railings" name="Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades" description="Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish." speakable />
       <ServicesHeader
         subtext="Deck Railing Upgrade Loudoun VA"
         title="Trex Railings with Cocktail Top - Style Meets Function"

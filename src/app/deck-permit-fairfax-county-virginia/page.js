@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-permit-fairfax-county-virginia',
@@ -28,6 +30,7 @@ export default function FairfaxPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-permit-fairfax-county-virginia" name="Fairfax County Deck Permits Made Easy | Loudoun Decks" description="Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -142,6 +145,8 @@ export default function FairfaxPermitPage() {
       </article>
 
       <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Fairfax County" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/stamped-concrete-patio-northern-virginia',
@@ -27,6 +29,7 @@ export default function StampedConcretePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/stamped-concrete-patio-northern-virginia" name="Stamped Concrete Patio Contractor Northern Virginia | 2026" description="Stamped concrete patio contractor in Northern Virginia. 2026 cost: $40-$70/sqft installed across Loudoun, Fairfax &amp; Prince William. Slate, flagstone, brick, wood plank patterns. Freeze-thaw realities explained." speakable />
       {/* Full-width Hero Image Section */}
       <section style={{ position: 'relative', width: '100%', height: '70vh', minHeight: '500px', overflow: 'hidden' }}>
         <Image
@@ -149,6 +152,8 @@ export default function StampedConcretePage() {
         </div>
       </article>
       <SimpleCTA title="Design Your Patio" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

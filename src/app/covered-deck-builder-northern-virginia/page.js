@@ -11,6 +11,8 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: "/covered-deck-builder-northern-virginia",
@@ -102,6 +104,7 @@ export default function CoveredDeckPage() {
   return (
     <main>
       <JsonLd data={serviceSchema} />
+      <WebPageSchema url="https://ldndecks.com/covered-deck-builder-northern-virginia" name="Covered Deck Builder Northern Virginia | Open-Air Outdoor Living" description="Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living." speakable />
       <JsonLd data={faqSchema} />
       <ServicesHeader
         subtext="Covered Deck Builder Northern Virginia"
@@ -156,6 +159,8 @@ export default function CoveredDeckPage() {
       <ServiceAreasGrid />
       <SimpleCTA title="Build Your Covered Deck" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/covered-deck-builder-northern-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </main>
   );

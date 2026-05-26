@@ -12,6 +12,8 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -115,6 +117,7 @@ const expansionSections = [
 export default function DeckRepairPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/deck-repair" name="Deck Repair | Loudoun County &amp; Fairfax VA | LDN Decks" description="Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection call (571) 655-7207." speakable />
       <ServiceSchema name="Deck Repair" description="Deck repair services for Northern Virginia. Board replacement, railing repair, structural fixes." price="3000" />
       <ServicesHeader
         subtext="5-Star Google Rated Restoration"
@@ -185,6 +188,8 @@ export default function DeckRepairPage() {
       <ServiceAreasGrid />
 
       <RelatedGuides currentPath="/deck-repair" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </main>
   );

@@ -14,6 +14,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-chantilly-va',
@@ -108,6 +110,7 @@ export default function DeckBuilderChantillyPage() {
   return (
     <main>
       <LocalBusinessSchema city="Chantilly" url="https://ldndecks.com/deck-builder-chantilly-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-chantilly-va" name="Deck Builder in Chantilly, VA | Trex Certified | Loudoun Decks" description="Top-rated deck builder in Chantilly, VA. Trex Platinum Partner &amp; TimberTech Certified. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Chantilly, VA's Trusted Deck Company"
         title="Custom Deck Builder in Chantilly, VA"
@@ -171,6 +174,7 @@ export default function DeckBuilderChantillyPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Chantilly" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Chantilly" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-chantilly-va" />
+      <NamedAuthor context="Chantilly and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </main>
   );

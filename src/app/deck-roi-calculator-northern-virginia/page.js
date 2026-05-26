@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -41,6 +43,7 @@ export default function DeckROICalculatorPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-roi-calculator-northern-virginia" name="Deck ROI in Northern Virginia (2026)" description="How much value does a deck add in Northern Virginia? Composite recoups 65-80% at resale. Real ROI data by material, size, and county." speakable />
       <ArticleSchema
         title="Deck ROI in Northern Virginia: 2026 Home Value Data"
         description="How much value does a deck add in Northern Virginia? Real ROI data by material, project type, and county — plus the investment sweet spot."
@@ -315,6 +318,8 @@ export default function DeckROICalculatorPage() {
 
       <SimpleCTA title="Build a Deck That Adds Real Value" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-roi-calculator-northern-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

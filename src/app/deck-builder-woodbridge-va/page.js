@@ -14,6 +14,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-woodbridge-va',
@@ -108,6 +110,7 @@ export default function DeckBuilderWoodbridgePage() {
   return (
     <main>
       <LocalBusinessSchema city="Woodbridge" url="https://ldndecks.com/deck-builder-woodbridge-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-woodbridge-va" name="Deck Builder in Woodbridge, VA | Trex Certified | Loudoun Decks" description="Top-rated deck builder in Woodbridge, VA. Trex Platinum Partner &amp; TimberTech Certified. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Woodbridge, VA's Trusted Deck Company"
         title="Custom Deck Builder in Woodbridge, VA"
@@ -170,6 +173,7 @@ export default function DeckBuilderWoodbridgePage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Woodbridge" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Woodbridge" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-woodbridge-va" />
+      <NamedAuthor context="Woodbridge and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </main>
   );

@@ -11,6 +11,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -118,6 +119,7 @@ export default function DeckResurfacingPage() {
     <main>
       {/* Dynamic SEO Schemas */}
       <JsonLd data={faqSchemaData} />
+      <WebPageSchema url="https://ldndecks.com/services/deck-resurfacing" name="5-Star Deck Resurfacing NoVA | TimberTech Vintage Experts" description="Premium deck resurfacing in Northern Virginia from $15k+. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options." speakable />
       <JsonLd data={serviceSchemaData} />
 
       <ServicesHeader

@@ -12,6 +12,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -126,6 +127,7 @@ export default function FencePage() {
     <main>
       <ServiceSchema name="Fence Installation" description="Custom fencing in Northern Virginia. Privacy, composite, vinyl, wood, and aluminum options." price="6000" />
       <JsonLd data={fenceFaqSchema} />
+      <WebPageSchema url="https://ldndecks.com/services/fence" name="Fence Installation Loudoun County | LDN Decks" description="Loudoun Decks provides expert fence installation for homeowners in Loudoun County, Fairfax, and Prince William. Custom wood, vinyl, and aluminum fencing." speakable />
       <ServicesHeader
         subtext="5-Star Google Rated Installation"
         title="Custom Fence Design & Installation"

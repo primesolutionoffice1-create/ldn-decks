@@ -9,6 +9,7 @@ import ServiceVisual from '@/components/ServiceVisual';
 import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 import ServiceSchema from '@/components/ServiceSchema';
@@ -36,6 +37,7 @@ const inclusions = [
 export default function FenceCleaningPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/services/fence-cleaning" name="Professional Fence Cleaning NoVA | Wood &amp; Composite Restoration" description="Restore your fence with professional cleaning services in Northern Virginia. We safely remove gray weathering, mold, and algae from wood and composite fencing." speakable />
       <ServiceSchema
         name="Fence Cleaning"
         description="Professional wood and composite fence cleaning in Northern Virginia — removing gray weathering, mold, and algae to restore your fencing."

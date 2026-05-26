@@ -5,6 +5,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -122,6 +124,7 @@ export default function BBBPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      <WebPageSchema url="https://ldndecks.com/bbb-accredited-deck-builder-virginia" name="BBB Accredited Deck Builder in Northern Virginia | Loudoun Decks" description="Loudoun Decks is a BBB Accredited A+ rated deck builder serving Northern Virginia. Trex, TimberTech, composite decks, porches, pergolas &amp; outdoor living projects." speakable />
       <JsonLd data={webPageSchema} />
       <JsonLd data={faqSchema} />
 
@@ -294,6 +297,8 @@ export default function BBBPage() {
 
       <SimpleCTA title="Ready to Build with a Trusted Deck Contractor?" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/bbb-accredited-deck-builder-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

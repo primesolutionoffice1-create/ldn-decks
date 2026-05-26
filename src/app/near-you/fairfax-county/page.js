@@ -12,6 +12,8 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 const LocationIcon = () => (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -60,6 +62,7 @@ export default function FairfaxCountyPage() {
           description="LDN Decks builds custom decks, screened porches, patios, and outdoor living spaces throughout Fairfax County, VA."
           url="https://ldndecks.com/near-you/fairfax-county"
         />
+      <WebPageSchema url="https://ldndecks.com/near-you/fairfax-county" name="5-Star Deck Builder Fairfax County VA | Free 24h Quote" description="Top-rated deck and outdoor living contractor in Fairfax County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Reston, Vienna, Mclean, and Alexandria." speakable />
             <ServicesHeader
           subtext="Serving Northern Virginia"
           title="Deck Builder in Fairfax County, VA"
@@ -161,6 +164,8 @@ export default function FairfaxCountyPage() {
         </div>
       </section>
       <RelatedGuides currentPath="/near-you/fairfax-county" />
+      <NamedAuthor context="Fairfax County" lastUpdated="2026-05-26" />
+
       <ContactHome />
   </main>
   );

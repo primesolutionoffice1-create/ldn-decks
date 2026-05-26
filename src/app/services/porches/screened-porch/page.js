@@ -14,6 +14,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = buildMetadata({
     path: "/services/porches/screened-porch",
@@ -77,6 +78,7 @@ const screenedPorchCostRows = [
 export default function ScreenedPorchPage() {
     return (
       <main>
+      <WebPageSchema url="https://ldndecks.com/services/porches/screened-porch" name="Screened Porch Builder &amp; Contractor | Northern Virginia" description="Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k. Trex Platinum installer." speakable />
         <ServiceSchema name="Screened Porch Construction" description="Custom screened porches in Northern Virginia. Loudoun, Fairfax, Prince William. EZE-Breeze and four-season options. Trex Platinum and TimberTech certified installer." price="35000" />
         <ServicesHeader
           subtext="Porch Services"

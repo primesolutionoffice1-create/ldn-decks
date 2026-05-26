@@ -15,6 +15,8 @@ import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-mclean-va',
@@ -117,6 +119,7 @@ export default function McLeanDeckBuilderPage() {
     <main>
       <JsonLd data={mcleanFaqSchema} />
       <LocalBusinessSchema city="McLean" url="https://ldndecks.com/deck-builder-mclean-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-mclean-va" name="Deck Builder in McLean, VA | Trex Certified | Loudoun Decks" description="Top-rated deck builder in McLean, VA. 5.0★ Google. Specializing in luxury Trex &amp; TimberTech decks, multi-level designs, and screened porches for McLean estates. Free estimate." speakable />
       <ServicesHeader
         subtext="McLean, VA's Choice for Luxury Decks"
         title="Custom Deck Builder in McLean, VA"
@@ -199,6 +202,7 @@ export default function McLeanDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="McLean" /></div></section>
       <SimpleCTA title="Build Your Luxury Deck in McLean" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-mclean-va" />
+      <NamedAuthor context="Mclean and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </main>
   );

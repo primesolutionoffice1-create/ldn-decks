@@ -6,6 +6,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -65,6 +67,7 @@ export default function DeckFootingCodePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-footing-code-northern-virginia" name="Deck Footing &amp; Code Guide for Northern Virginia | LDN Decks" description="How deck footings and the Virginia Residential Code work in Northern Virginia — frost-depth footings, ledger attachment, joist spans, guardrails, and the inspections your deck must pass." speakable />
       <ArticleSchema
         title="Deck Footing & Code Guide for Northern Virginia"
         description="How deck footings and the Virginia Residential Code work in Northern Virginia — frost-depth footings, ledger attachment, joist and beam spans, lateral-load connections, guardrails, stairs, and required inspections."
@@ -218,6 +221,8 @@ export default function DeckFootingCodePage() {
 
       <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-footing-code-northern-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

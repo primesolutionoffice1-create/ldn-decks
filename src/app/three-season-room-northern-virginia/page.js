@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -28,6 +30,7 @@ export default function ThreeSeasonRoomPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/three-season-room-northern-virginia" name="Three-Season Room Builder in Northern Virginia" description="Custom three-season rooms in Northern Virginia with Eze-Breeze windows — usable 9-10 months a year. $33,000-$60,000+. Free design consultation." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -142,6 +145,8 @@ export default function ThreeSeasonRoomPage() {
         </div>
       </article>
       <SimpleCTA title="Design Your Three-Season Room" buttonText="Get Free Design Consultation" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

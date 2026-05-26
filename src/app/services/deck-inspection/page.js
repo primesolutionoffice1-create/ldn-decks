@@ -9,6 +9,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -20,6 +21,7 @@ export const metadata = buildMetadata({
 export default function DeckInspectionPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/services/deck-inspection" name="Deck Inspection Loudoun VA | $350 Safety Audit | LDN Decks" description="Ensure your outdoor space is safe with a professional $350 deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards." speakable />
       <ServiceSchema name="Deck Safety Inspection" description="Professional structural deck inspection in Northern Virginia. Ledger board, posts, joists, railings checked." price="150" />
       <ServicesHeader
         subtext="Deck Inspection Services"

@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -41,6 +43,7 @@ export default function LoudounCountyHOADeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/loudoun-county-hoa-deck-rules" name="Loudoun County HOA Deck Rules | Community Guide" description="HOA deck rules for Brambleton, Broadlands, One Loudoun, Ashburn Farm, Lansdowne &amp; more. Color restrictions, material requirements, approval process." speakable />
       <ArticleSchema
         title="Loudoun County HOA Deck Rules: Community-by-Community Guide"
         description="HOA deck rules for every major Loudoun County community. Color restrictions, material requirements, approval timelines, and how we handle submissions."
@@ -294,6 +297,8 @@ export default function LoudounCountyHOADeckRulesPage() {
 
       <SimpleCTA title="Build an HOA-Approved Deck" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/loudoun-county-hoa-deck-rules" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

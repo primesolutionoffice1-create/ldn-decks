@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -32,6 +34,7 @@ export default function DeckCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia" name="2026 Deck Cost NoVA | See Real Project Prices &amp; Tables" description="Composite deck costs $30-$75/sqft installed in Northern Virginia. See real project price tables and get a free itemized quote today!" speakable />
       <ArticleSchema
         title="How Much Does a Deck Cost in Northern Virginia?"
         description="Composite deck costs $30-$75/sqft installed in Northern Virginia. Pressure-treated wood $18-$35/sqft. Real project costs, price tables & free estimate."
@@ -175,6 +178,8 @@ export default function DeckCostPage() {
 
       <SimpleCTA title="Ready to Get Your Deck Priced?" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/how-much-does-a-deck-cost-northern-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -30,6 +32,7 @@ export default function OutdoorKitchenPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/outdoor-kitchen-builder-northern-virginia" name="Outdoor Kitchen Builder in Northern Virginia | Design &amp; Build" description="Custom outdoor kitchens in Northern Virginia from $15,000-$80,000+. Grill islands, pizza ovens, bars, full kitchens. Permits handled. Free estimate." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -150,6 +153,8 @@ export default function OutdoorKitchenPage() {
       </article>
 
       <SimpleCTA title="Design Your Outdoor Kitchen" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -28,6 +30,7 @@ export default function AshburnVillageHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/ashburn-village-hoa-deck-rules" name="Ashburn Village HOA Deck Rules &amp; Approval Guide" description="Replacing or building a deck in Ashburn Village? Learn how the Ashburn Village HOA review works, how it pairs with the Loudoun County permit, and how to get approved." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -91,6 +94,8 @@ export default function AshburnVillageHoaDeckRulesPage() {
         </div>
       </article>
       <SimpleCTA title="Planning a Deck in Ashburn Village?" buttonText="Get Free Design Consultation" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

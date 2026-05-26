@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
@@ -164,6 +165,7 @@ export default function CompositeDeckCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/composite-deck-cost-northern-virginia" name="How Much Does a Composite Deck Cost in Northern Virginia?" description="Get the real 2026 pricing data for custom composite decks in Northern Virginia. Compare costs for Trex, TimberTech, sizing, and premium add-ons." speakable />
       <JsonLd data={productSchema} />
       <ArticleSchema
         title="Composite Deck Cost in Northern Virginia 2026: Complete Price Guide"

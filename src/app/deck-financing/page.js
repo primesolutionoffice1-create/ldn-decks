@@ -7,6 +7,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import EnhancifyWidget from '@/components/EnhancifyWidget';
 import FinancingCalculator from '@/components/FinancingCalculator';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -114,6 +115,7 @@ export default function DeckFinancingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-financing" name="Premium Deck Financing in Northern Virginia | Loudoun Decks" description="Finance your custom deck. Monthly options for $15K-$50K+ composite decks. Soft credit pre-qualification — no impact on credit score." speakable />
 
       {/* ============ HERO ============ */}
       <section style={{ background: 'var(--color-dark)', color: 'var(--white)', padding: '5rem 0 4rem' }}>

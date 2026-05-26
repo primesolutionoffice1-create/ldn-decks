@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -42,6 +44,7 @@ export default function LoudounPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-permit-loudoun-county-virginia" name="Loudoun County Deck Permit Guide (2026) | Loudoun Decks" description="Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Fast-track your deck build with our guaranteed permit process." speakable />
       <ArticleSchema
         title="Virginia Deck Building Code: 2026 Loudoun Permit Guide"
         description="Granular technical guide for 2026 Loudoun County deck permits. Footing depths, joist spans, ledger flashing, and LandMARC portal walkthrough."
@@ -228,6 +231,8 @@ export default function LoudounPermitPage() {
 
       <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-permit-loudoun-county-virginia" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

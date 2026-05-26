@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -41,6 +43,7 @@ export default function DeckMaterialsComparisonPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-materials-comparison-virginia" name="Deck Materials Compared | 2026 Virginia Buyer\" description="Compare every deck material: pressure-treated, cedar, Trex, TimberTech, AZEK, IPE, aluminum. Cost, lifespan, maintenance, and best use for Virginia." speakable />
       <ArticleSchema
         title="Deck Materials Compared: 2026 Virginia Buyer's Guide"
         description="Every deck material compared side-by-side: cost, lifespan, maintenance, heat retention, warranty, and best use case for Virginia homeowners."
@@ -295,6 +298,8 @@ export default function DeckMaterialsComparisonPage() {
 
       <SimpleCTA title="Get Material Recommendations for Your Project" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-materials-comparison-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

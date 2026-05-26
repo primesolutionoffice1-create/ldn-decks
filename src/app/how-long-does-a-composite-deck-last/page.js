@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/how-long-does-a-composite-deck-last',
@@ -27,6 +29,7 @@ export default function DeckLifespanPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/how-long-does-a-composite-deck-last" name="How Long Does a Composite Deck Last? | Virginia Lifespan Guide" description="Composite decks last 25-50 years in Virginia. Trex: 25+ yrs, TimberTech AZEK: 50 yrs. See brand lifespans &amp; signs your deck needs replacement. Free inspection!" speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -150,6 +153,8 @@ export default function DeckLifespanPage() {
       </article>
 
       <SimpleCTA title="Deck Past Its Prime? Free Inspection" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

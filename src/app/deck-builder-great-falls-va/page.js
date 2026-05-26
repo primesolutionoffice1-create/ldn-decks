@@ -8,6 +8,8 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -33,6 +35,7 @@ export default function GreatFallsDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Great Falls" url="https://ldndecks.com/deck-builder-great-falls-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-great-falls-va" name="Best Deck Builder in Great Falls, VA | Premium Composite Decks" description="Top-rated deck builder for Great Falls, VA. Premium Trex &amp; AZEK decks for $1M+ homes. 5.0★ Google. RPA-zone expertise. Free estimate. Call (571) 655-7207." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -138,6 +141,7 @@ export default function GreatFallsDeckBuilderPage() {
       </section>
       <SimpleCTA title="Get Your Great Falls Deck Quote" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-great-falls-va" />
+      <NamedAuthor context="Great Falls and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </>
   );

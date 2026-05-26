@@ -11,6 +11,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -114,6 +115,7 @@ export default function FirePitsPage() {
   return (
     <main>
       <JsonLd data={serviceSchema} />
+      <WebPageSchema url="https://ldndecks.com/services/fire-pits" name="Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment" description="Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment." speakable />
       <ServicesHeader
         subtext="Custom Fire Pit Loudoun VA"
         title="Custom Fire Pits Built for Comfort, Style & Year-Round Enjoyment"

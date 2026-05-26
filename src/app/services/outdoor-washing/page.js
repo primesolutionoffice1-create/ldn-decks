@@ -10,6 +10,7 @@ import ProcessSteps from '@/components/ProcessSteps';
 import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 import ServiceSchema from '@/components/ServiceSchema';
@@ -56,6 +57,7 @@ const washingFAQs = [
 export default function OutdoorWashingPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/services/outdoor-washing" name="Professional Outdoor Power Washing NoVA | Deck &amp; Patio Cleaning" description="Restore your outdoor oasis with professional power washing services in Northern Virginia. We specialize in safe, effective cleaning for decks, patios, and fences." speakable />
       <ServiceSchema
         name="Outdoor Power Washing"
         description="Professional outdoor power washing in Northern Virginia — safe, effective cleaning for decks, patios, fences, and exterior surfaces."

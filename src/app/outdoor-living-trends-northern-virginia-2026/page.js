@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -41,6 +43,7 @@ export default function OutdoorLivingTrendsPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/outdoor-living-trends-northern-virginia-2026" name="Outdoor Living Trends in Northern Virginia (2026)" description="Top outdoor living trends for NoVA homeowners in 2026. Multi-level decks, outdoor kitchens, cable railings, mixed materials &amp; more." speakable />
       <ArticleSchema
         title="Outdoor Living Trends in Northern Virginia (2026)"
         description="Top outdoor living trends for NoVA homeowners in 2026. Multi-level decks, outdoor kitchens, cable railings, mixed materials & more."
@@ -250,6 +253,8 @@ export default function OutdoorLivingTrendsPage() {
 
       <SimpleCTA title="Ready to Build Your Dream Outdoor Space?" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/outdoor-living-trends-northern-virginia-2026" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

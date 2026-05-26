@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -117,6 +118,7 @@ export default function BeforeAndAfterPage() {
   return (
     <>
       <JsonLd data={imageGallerySchema} />
+      <WebPageSchema url="https://ldndecks.com/before-and-after" name="Before &amp; After Deck Projects | Northern Virginia | LDN Decks" description="See real before and after deck transformations across Loudoun, Fairfax &amp; Prince William counties. Composite decks, resurfacing, screened porches &amp; more by LDN Decks." speakable />
       <ArticleSchema
         title="Before & After Deck Projects Northern Virginia"
         description="Real before and after deck transformation photos from LDN Decks projects across Loudoun, Fairfax & Prince William counties."

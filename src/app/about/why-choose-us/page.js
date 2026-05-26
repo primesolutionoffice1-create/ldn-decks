@@ -7,6 +7,8 @@ import ProjectProcess from '@/components/ProjectProcess';
 import WhyChooseDetails from '@/components/WhyChooseDetails';
 import WhyChooseFAQ from '@/components/WhyChooseFAQ';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: "/about/why-choose-us",
@@ -17,6 +19,7 @@ export const metadata = buildMetadata({
 export default function WhyChooseUsPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/about/why-choose-us" name="Why Choose LDN Decks | Northern Virginia" description="Why Northern Virginia homeowners choose LDN Decks: Trex Platinum Partner, 10+ years experience, 5-star Google rating, 2-year warranty, and in-house crews." speakable />
       <WhyChooseHeader />
       <ServicesCallToAction />
       <ServicesFooterInfo />

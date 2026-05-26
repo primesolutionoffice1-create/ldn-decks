@@ -1,5 +1,6 @@
 import React from 'react';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 import styles from './Scholarship.module.css';
 
 export const metadata = buildMetadata({
@@ -11,6 +12,7 @@ export const metadata = buildMetadata({
 export default function ScholarshipPage() {
   return (
     <main className={styles.main}>
+      <WebPageSchema url="https://ldndecks.com/scholarship" name="$500 Trades Scholarship | LDN Decks Northern Virginia" description="LDN Decks is proud to offer a $500 scholarship to students pursuing a career in the skilled trades. Learn more about eligibility and how to apply." speakable />
       <header className={styles.hero}>
         <div className={styles.container}>
           <h1>LDN Decks Trades Scholarship</h1>

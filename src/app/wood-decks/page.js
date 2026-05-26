@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -30,6 +32,7 @@ export default function WoodDecksPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/wood-decks" name="Expert Wood Deck Builder NoVA | Cedar &amp; Hardwood Decks" description="The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax &amp; Prince William counties." speakable />
       {/* Hero with full-width background image */}
       <section style={{ position: 'relative', minHeight: 520, overflow: 'hidden' }}>
         <Image
@@ -226,6 +229,8 @@ export default function WoodDecksPage() {
         </div>
       </article>
       <SimpleCTA title="Build Your Custom Wood Deck" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

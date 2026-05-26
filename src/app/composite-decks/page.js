@@ -12,6 +12,8 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/composite-decks',
@@ -122,6 +124,7 @@ const expansionSections = [
 export default function CompositeDecksPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | 5-Star Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex Platinum Partner &amp; TimberTech Certified. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax &amp; Leesburg." speakable />
       <ServiceSchema name="Composite Deck Installation" description="Expert composite deck installation in Northern Virginia. Trex Platinum Partner and TimberTech Certified. 25-50 year warranties." price="20000" />
       <ServicesHeader 
         subtext="5-Star Google Rated Specialist"
@@ -182,6 +185,8 @@ export default function CompositeDecksPage() {
       <ServicesCallToAction />
 
       <RelatedGuides currentPath="/composite-decks" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </main>
   );

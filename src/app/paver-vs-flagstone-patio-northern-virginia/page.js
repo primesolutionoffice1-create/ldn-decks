@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/paver-vs-flagstone-patio-northern-virginia',
@@ -27,6 +29,7 @@ export default function PaverVsFlagstonePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/paver-vs-flagstone-patio-northern-virginia" name="Paver Patio vs Flagstone Patio Northern Virginia | 2026" description="Paver patio contractor vs flagstone — cost, durability, maintenance, freeze-thaw performance in NoVA. 2026 installed pricing for Loudoun, Fairfax, Prince William. We build both." speakable />
       {/* Full-width Hero Image Section */}
       <section style={{ position: 'relative', width: '100%', height: '70vh', minHeight: '500px', overflow: 'hidden' }}>
         <Image
@@ -150,6 +153,8 @@ export default function PaverVsFlagstonePage() {
         </div>
       </article>
       <SimpleCTA title="Design Your Dream Patio" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

@@ -6,6 +6,8 @@ import MobileStickyCTA from '@/components/MobileStickyCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 
 const pageUrl = 'https://ldndecks.com/composite-deck-builder-loudoun';
@@ -194,6 +196,7 @@ export default function CompositeDeckBuilderLoudounPage() {
   return (
     <main>
       {schema.map((item, index) => <JsonLd key={index} data={item} />)}
+      <WebPageSchema url="https://ldndecks.com/composite-deck-builder-loudoun" name="Composite Deck Builder Loudoun County, VA | Loudoun Decks" description="Premium composite deck builder in Loudoun County, VA. Trex and TimberTech decks, HOA support, permits, replacements, railings, stairs, and free estimates." speakable />
 
       <section style={{ padding: '96px 20px 72px', background: '#17130f', color: '#fff' }}>
         <div style={{ ...S.container, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))', gap: 42, alignItems: 'center' }}>
@@ -433,6 +436,8 @@ export default function CompositeDeckBuilderLoudounPage() {
       </section>
 
       <RelatedGuides currentPath="/composite-deck-builder-loudoun" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+
       <ContactHome />
       <MobileStickyCTA microcopy="Trex + TimberTech decks | Loudoun permits handled" />
     </main>

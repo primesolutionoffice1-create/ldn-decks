@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/under-deck-ceiling-ideas',
@@ -27,6 +29,7 @@ export default function UnderDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/under-deck-ceiling-ideas" name="Under-Deck Ceiling Ideas (5 Options)" description="Turn the space under your elevated deck into usable living area. Under-deck drainage systems, ceiling panels, lighting. $3,000-$15,000 in Northern Virginia." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Under-Deck Ceiling Ideas</h1>
@@ -110,6 +113,8 @@ export default function UnderDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Double Your Outdoor Space" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

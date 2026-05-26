@@ -2,6 +2,8 @@ import React from 'react';
 import ServicesHeader from '@/components/ServicesHeader';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: "/about/warranty",
@@ -12,6 +14,7 @@ export const metadata = buildMetadata({
 export default function WarrantyPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/about/warranty" name="2-Year Extended Labor Warranty | LDN Decks" description="Learn about our industry-leading 2-year extended labor warranty on all deck and screened porch projects in Northern Virginia." speakable />
        <ServicesHeader 
          subtext="OUR PROMISE"
          title="LDN DECKS EXTENDED 2 YEAR WARRANTY"
@@ -103,6 +106,9 @@ export default function WarrantyPage() {
             </div>
          </div>
        </section>
+
+       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
 
        <ContactHome />
     </main>

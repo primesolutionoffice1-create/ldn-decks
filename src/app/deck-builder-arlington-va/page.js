@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -29,6 +31,7 @@ export default function ArlingtonDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Arlington" url="https://ldndecks.com/deck-builder-arlington-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-arlington-va" name="5-Star Deck Builder Arlington VA | Get a Free Quote in 24h" description="Top-rated deck builder in Arlington, VA. ★ 5.0 Google Rated. Custom composite decks &amp; screened porches in Ballston, Clarendon &amp; Rosslyn. Free 24h estimate." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Arlington, VA</h1>
@@ -116,6 +119,7 @@ export default function ArlingtonDeckBuilderPage() {
       </article>
       <SimpleCTA title="Premium Outdoor Living for Arlington" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-arlington-va" />
+      <NamedAuthor context="Arlington and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </>
   );

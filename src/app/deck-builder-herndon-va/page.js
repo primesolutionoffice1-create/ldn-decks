@@ -14,6 +14,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-herndon-va',
@@ -108,6 +110,7 @@ export default function DeckBuilderHerndonPage() {
   return (
     <main>
       <LocalBusinessSchema city="Herndon" url="https://ldndecks.com/deck-builder-herndon-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-herndon-va" name="Deck Builder in Herndon, VA | Trex Certified | Loudoun Decks" description="Top-rated deck builder in Herndon, VA. Trex Platinum Partner &amp; TimberTech Certified. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Herndon, VA's Trusted Deck Company"
         title="Custom Deck Builder in Herndon, VA"
@@ -171,6 +174,7 @@ export default function DeckBuilderHerndonPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Herndon" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Herndon" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-herndon-va" />
+      <NamedAuthor context="Herndon and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </main>
   );

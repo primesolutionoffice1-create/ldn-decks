@@ -12,6 +12,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -127,6 +128,7 @@ export default function EntryDoorsPage() {
   return (
     <main>
       <JsonLd data={faqSchemaData} />
+      <WebPageSchema url="https://ldndecks.com/services/entry-doors" name="Entry Door Installation Loudoun VA | LDN Decks" description="Improve curb appeal, security, and energy efficiency with professional entry door installation in Northern Virginia. Custom fiberglass and wood door solutions." speakable />
       <JsonLd data={serviceSchemaData} />
 
       <ServicesHeader

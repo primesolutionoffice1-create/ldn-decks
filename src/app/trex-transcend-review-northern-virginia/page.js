@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/trex-transcend-review-northern-virginia',
@@ -67,6 +69,7 @@ export default function TrexTranscendReviewPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/trex-transcend-review-northern-virginia" name="Trex Transcend Review 2026 | Is It Worth It for NoVA Homes?" description="Honest Trex Transcend review from a Platinum Partner installer. 500+ installs in Northern Virginia durability, fade, heat, cost vs Lineage and TimberTech." speakable />
       <JsonLd data={reviewSchema} />
       <ArticleSchema
         title="Trex Transcend Review 2026: Is It Worth the Investment for Virginia Homes?"
@@ -328,6 +331,8 @@ export default function TrexTranscendReviewPage() {
 
       <SimpleCTA title="Build Your Trex Transcend Deck" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/trex-transcend-review-northern-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

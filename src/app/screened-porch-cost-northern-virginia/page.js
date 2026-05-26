@@ -7,6 +7,7 @@ import ContactHome from '@/components/ContactHome';
 import TrustBanner from '@/components/TrustBanner';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = buildMetadata({
   path: '/screened-porch-cost-northern-virginia',
@@ -29,6 +30,7 @@ export default function ScreenedPorchCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/screened-porch-cost-northern-virginia" name="2026 Screened Porch Cost NoVA | See Real Project Prices" description="Screened porches in Northern Virginia cost $25,000-$70,000+. See 2026 price tables, EZE-Breeze costs &amp; project examples. Get a free itemized quote today!" speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

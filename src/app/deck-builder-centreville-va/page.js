@@ -9,6 +9,8 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -32,6 +34,7 @@ export default function CentrevilleDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Centreville" url="https://ldndecks.com/deck-builder-centreville-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-centreville-va" name="Deck Builder in Centreville, VA | Trex | Loudoun Decks" description="" speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -131,6 +134,7 @@ export default function CentrevilleDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Centreville" /></div></section>
       <SimpleCTA title="Visit Our Centreville Showroom" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-centreville-va" />
+      <NamedAuthor context="Centreville and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </>
   );
