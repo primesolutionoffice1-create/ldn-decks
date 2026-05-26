@@ -101,7 +101,7 @@ export default function DeckStairLightingPage() {
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem 3rem' }}>
         <p style={{ fontSize: '1.05rem', lineHeight: 1.75, color: '#444' }}>
-          Stair lighting works best when it is planned with the stair structure, not added as an afterthought. Homeowners can review our <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link> to understand tread depth, riser height, stringers, and landing details before choosing lighting locations.
+          Stair lighting works best when it is planned with the stair structure, not added as an afterthought. Homeowners can review our <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link> to understand tread depth, riser height, stringers, and landing details before choosing lighting locations. For inspection details, the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link> explains rise, run, handrails, guards, and landing requirements.
         </p>
       </section>
 
