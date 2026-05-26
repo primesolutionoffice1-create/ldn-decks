@@ -7,6 +7,7 @@ import ContactHome from '@/components/ContactHome';
 import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = buildMetadata({
   path: '/trex-vs-timbertech-vs-azek',
@@ -32,6 +33,7 @@ export default function TrexVsTimberTechPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/trex-vs-timbertech-vs-azek" name="2026 Trex vs TimberTech vs AZEK vs Fiberon | NoVA Guide" description="Which composite decking is best for Virginia? Side-by-side comparison of Trex, TimberTech AZEK, and Fiberon with 2026 pricing, heat, warranty and NoVA installer notes." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

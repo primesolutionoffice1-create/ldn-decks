@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-lighting-ideas-northern-virginia',
@@ -27,6 +29,7 @@ export default function DeckLightingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-lighting-ideas-northern-virginia" name="Deck Lighting Ideas (Northern VA)" description="8 deck lighting options: post caps, stair risers, under-rail, string lights, recessed, landscape. Costs from $500-$5,000. Transform your deck for evening use." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -122,6 +125,8 @@ export default function DeckLightingPage() {
         </div>
       </article>
       <SimpleCTA title="Include Lighting in Your Deck Design" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

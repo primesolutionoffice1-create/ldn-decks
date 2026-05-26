@@ -14,6 +14,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-gainesville-va',
@@ -108,6 +110,7 @@ export default function DeckBuilderGainesvillePage() {
   return (
     <main>
       <LocalBusinessSchema city="Gainesville" url="https://ldndecks.com/deck-builder-gainesville-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-gainesville-va" name="Deck Builder in Gainesville, VA | Trex Certified | Loudoun Decks" description="Top-rated deck builder in Gainesville, VA. Trex Platinum Partner &amp; TimberTech Certified. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Gainesville, VA's Trusted Deck Company"
         title="Custom Deck Builder in Gainesville, VA"
@@ -170,6 +173,7 @@ export default function DeckBuilderGainesvillePage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Gainesville" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Gainesville" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-gainesville-va" />
+      <NamedAuthor context="Gainesville and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </main>
   );

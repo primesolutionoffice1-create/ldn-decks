@@ -12,6 +12,8 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -57,6 +59,7 @@ export default function StaffordCountyPage() {
         description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Stafford County, VA."
         url="https://ldndecks.com/near-you/stafford-county"
       />
+      <WebPageSchema url="https://ldndecks.com/near-you/stafford-county" name="5-Star Deck Builder Stafford County VA | Free Quote in 24h" description="Top-rated deck and outdoor living contractor in Stafford County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Stafford, Aquia Harbour, Falmouth, and Garrisonville." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Stafford County, VA"
@@ -159,6 +162,8 @@ export default function StaffordCountyPage() {
         </div>
       </section>
       <RelatedGuides currentPath="/near-you/stafford-county" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </main>
   );

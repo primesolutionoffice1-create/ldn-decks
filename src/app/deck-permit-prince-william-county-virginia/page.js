@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-permit-prince-william-county-virginia',
@@ -28,6 +30,7 @@ export default function PWCountyPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Permit Guide: Prince William County, VA</h1>
@@ -124,6 +127,8 @@ export default function PWCountyPermitPage() {
         </div>
       </article>
       <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Prince William County" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

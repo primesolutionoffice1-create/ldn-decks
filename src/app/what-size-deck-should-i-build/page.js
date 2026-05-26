@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/what-size-deck-should-i-build',
@@ -27,6 +29,7 @@ export default function DeckSizePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/what-size-deck-should-i-build" name="What Size Deck Should I Build? (Guide by Use + Budget)" description="Deck size guide: 150-200 sqft for couples, 300-400 for families, 500+ for entertaining. Recommendations by use and Northern Virginia lot sizes." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>What Size Deck Should I Build?</h1>
@@ -149,6 +152,8 @@ export default function DeckSizePage() {
         </div>
       </article>
       <SimpleCTA title="Let's Design Your Perfect Size Deck" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

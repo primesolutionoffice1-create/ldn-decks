@@ -6,6 +6,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = buildMetadata({
   path: '/houzz-deck-projects',
@@ -34,6 +35,7 @@ export default function HouzzProjectsPage() {
   return (
     <>
       <JsonLd data={pageSchema} />
+      <WebPageSchema url="https://ldndecks.com/houzz-deck-projects" name="Loudoun Decks on Houzz | Deck Projects in Northern Virginia" description="View Loudoun Decks projects on Houzz, including custom decks, screened porches, patios, and outdoor living spaces across Northern Virginia." speakable />
 
       {/* Hero Section */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '7rem 0 6rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>

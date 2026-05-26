@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -41,6 +43,7 @@ export default function SecondStoryDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/second-story-deck-builder-northern-virginia" name="Second Story Deck Builder | Elevated Decks in NoVA" description="Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs ($35K-$75K+), and safety requirements explained." speakable />
       <ArticleSchema
         title="Second Story Deck Builder in Northern Virginia: Elevated Decks Explained"
         description="Everything you need to know about building a second-story or elevated deck in Northern Virginia. Engineering, permits, costs, safety, and under-deck living."
@@ -338,6 +341,8 @@ export default function SecondStoryDeckBuilderPage() {
 
       <SimpleCTA title="Plan Your Elevated Deck Project" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/second-story-deck-builder-northern-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

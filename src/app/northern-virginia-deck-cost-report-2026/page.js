@@ -1,5 +1,7 @@
 import React from 'react';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import Link from 'next/link';
 
 export const metadata = buildMetadata({
@@ -11,6 +13,7 @@ export const metadata = buildMetadata({
 export default function CostReportPage() {
   return (
     <main style={{ background: '#fff', color: '#1a202c' }}>
+      <WebPageSchema url="https://ldndecks.com/northern-virginia-deck-cost-report-2026" name="Northern Virginia Deck Cost Report 2026 | LDN Decks" description="Annual data report on deck building costs in Loudoun, Fairfax, and Prince William counties. Real pricing data, material trends, and ROI analysis for 2026." speakable />
       <section style={{ background: '#1a1a2e', color: '#fff', padding: '5rem 0' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 1.5rem' }}>
           <span style={{ background: '#d14817', padding: '4px 12px', borderRadius: '4px', fontSize: '0.9rem', fontWeight: 700 }}>2026 ANNUAL DATA</span>

@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -74,6 +75,7 @@ export default function TrexCalmShellPage() {
   return (
     <main>
       <JsonLd data={serviceSchema} />
+      <WebPageSchema url="https://ldndecks.com/services/trex-calm-shell" name="Trex Clam Shell Deck Resurfacing Loudoun VA | Clean Modern Looks" description="Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing &amp; installation." speakable />
       <ServicesHeader
         subtext="Deck Resurfacing"
         title="Upgrade Your Deck with Trex Calm Shell Resurfacing"

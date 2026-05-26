@@ -12,6 +12,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -98,6 +99,7 @@ export default function PorchesPage() {
     <main>
       <ServiceSchema name="Porch Construction" description="Custom front porches, screened porches, and open porches in Northern Virginia. Design and build." price="25000" />
       <JsonLd data={porchFaqSchema} />
+      <WebPageSchema url="https://ldndecks.com/services/porches" name="5-Star Porch Builder NoVA | Screened &amp; Open Porch Design" description="Top-rated porch contractor in Northern Virginia. Custom screened porches, open-air pavilions &amp; front porches. ★ 5.0 Google Rated. Free estimates in 24h." speakable />
       <ServicesHeader
         subtext="5-Star Google Rated Builder"
         title="Custom Porch Design & Construction"

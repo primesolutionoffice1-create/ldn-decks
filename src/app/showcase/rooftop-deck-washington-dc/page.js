@@ -4,6 +4,8 @@ import Link from 'next/link';
 import ContactHome from '@/components/ContactHome';
 import styles from '../[slug]/ProjectPage.module.css';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export async function generateMetadata() {
   return buildMetadata({
@@ -17,6 +19,7 @@ export async function generateMetadata() {
 export default function RooftopDCPage() {
   return (
     <main className={styles.projectMain}>
+      <WebPageSchema url="https://ldndecks.com/showcase/rooftop-deck-washington-dc" name="Rooftop Deck Construction Washington DC | Custom Outdoor Living" description="Premier rooftop deck builder in Washington DC. See our latest custom rooftop construction featuring premium materials, structural engineering, and stunning city views." speakable />
       <section className={styles.hero}>
         <div className={styles.container}>
           <Link href="/showcase" className={styles.backLink}>← Back to Showcase</Link>
@@ -71,6 +74,9 @@ export default function RooftopDCPage() {
           </div>
         </div>
       </section>
+
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
 
       <ContactHome />
     </main>

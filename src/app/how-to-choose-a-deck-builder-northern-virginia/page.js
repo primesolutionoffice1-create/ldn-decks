@@ -6,6 +6,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import TrustBanner from '@/components/TrustBanner';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
@@ -30,6 +32,7 @@ export default function ChooseDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia" name="How to Choose a Deck Builder in Northern Virginia (10 Questions + Red Flags)" description="10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license. From a 5-star rated NoVA deck builder." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -148,6 +151,8 @@ export default function ChooseDeckBuilderPage() {
       </article>
 
       <SimpleCTA title="We'll Answer All 10 Questions on the Phone" buttonText="Call (571) 655-7207" link="phone" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

@@ -7,6 +7,7 @@ import ServicesCallToAction from '@/components/ServicesCallToAction';
 import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = buildMetadata({
   path: '/services',
@@ -17,6 +18,7 @@ export const metadata = buildMetadata({
 export default function ServicesPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/services" name="Deck Building &amp; Outdoor Living Services | Loudoun Decks" description="Custom decks, screened porches, pergolas, patios, fencing &amp; more in Northern Virginia. Trex Platinum Partner. 5-star rated. Free estimates: (571) 655-7207." speakable />
        <ServicesHeader />
 
        <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>

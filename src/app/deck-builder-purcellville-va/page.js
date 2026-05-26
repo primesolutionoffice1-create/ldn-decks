@@ -8,6 +8,8 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -30,6 +32,7 @@ export default function PurcellvilleDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Purcellville" url="https://ldndecks.com/deck-builder-purcellville-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-purcellville-va" name="Deck Builder in Purcellville, VA | Custom Composite Decks | LDN Decks" description="Custom deck builder serving Purcellville &amp; western Loudoun. 5.0★ Google. Trex decks, screened porches for farmettes &amp; estate homes. Free estimate." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Purcellville, VA</h1>
@@ -102,6 +105,7 @@ export default function PurcellvilleDeckBuilderPage() {
       </article>
       <SimpleCTA title="Big Property? Big Deck Dreams. Free Estimate." buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-purcellville-va" />
+      <NamedAuthor context="Purcellville and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </>
   );

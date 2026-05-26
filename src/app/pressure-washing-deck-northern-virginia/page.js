@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/pressure-washing-deck-northern-virginia',
@@ -27,6 +29,7 @@ export default function PressureWashingDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/pressure-washing-deck-northern-virginia" name="Deck Pressure Washing in Northern Virginia | $150-$500 | LDN Decks" description="Pro deck pressure washing in Northern Virginia. $150-$500 for most decks. Removes mold, mildew, oxidation. Safe PSI for wood &amp; composite." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Pressure Washing in Northern Virginia</h1>
@@ -141,6 +144,8 @@ export default function PressureWashingDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Book Your Deck Washing" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

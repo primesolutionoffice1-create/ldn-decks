@@ -13,6 +13,7 @@ import AboveFoldCTA from '@/components/AboveFoldCTA';
 import JsonLd from '@/components/JsonLd';
 
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -129,6 +130,7 @@ export default function GazeboPergolaPage() {
   return (
     <main>
       <JsonLd data={faqSchemaData} />
+      <WebPageSchema url="https://ldndecks.com/services/gazebo-pergola" name="Gazebo &amp; Pergola Builder | Loudoun VA | LDN Decks" description="Add shade and stunning architectural character to your backyard with custom gazebos and pergolas in Northern Virginia. Expert design and build services." speakable />
       <JsonLd data={serviceSchemaData} />
 
       <ServicesHeader

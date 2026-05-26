@@ -4,6 +4,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
@@ -71,6 +72,7 @@ const yelpReviews = [
 export default function YelpReviewsPage() {
   return (
     <>
+      <WebPageSchema url="https://ldndecks.com/ldn-decks-reviews-yelp" name="Loudoun Decks Reviews | Yelp Deck Builder Northern Virginia" description="Read real Yelp reviews for LDN Decks. Trusted deck builder in Northern Virginia — custom decks, Trex, and composite outdoor living projects. 5.0 rated." speakable />
       {/* Hero */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

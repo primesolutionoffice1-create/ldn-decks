@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/best-time-to-build-a-deck-northern-virginia',
@@ -69,6 +71,7 @@ export default function BestTimeToBuildPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/best-time-to-build-a-deck-northern-virginia" name="Best Time to Build a Deck in Northern Virginia (2026)" description="Late winter/early spring gets the best pricing and fastest scheduling. Summer is peak season with 4-6 week waits. Month-by-month guide, hidden HOA + permit timeline, and how to time financing." speakable />
       <ArticleSchema
         title="Best Time to Build a Deck in Northern Virginia (2026)"
         description="Month-by-month guide to deck timing in Northern Virginia — pricing, wait times, weather, the hidden HOA + permit timeline before construction, and how to time financing."
@@ -231,6 +234,8 @@ export default function BestTimeToBuildPage() {
 
       <SimpleCTA title="Book Now for Spring/Summer Slots Filling Fast" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/best-time-to-build-a-deck-northern-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

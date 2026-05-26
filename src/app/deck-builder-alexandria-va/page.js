@@ -14,6 +14,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-alexandria-va',
@@ -108,6 +110,7 @@ export default function DeckBuilderAlexandriaPage() {
   return (
     <main>
       <LocalBusinessSchema city="Alexandria" url="https://ldndecks.com/deck-builder-alexandria-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-alexandria-va" name="Deck Builder in Alexandria VA | Trex Certified | Loudoun Decks" description="Top-rated Alexandria, VA deck builder. Trex Platinum Partner. Custom composite decks, porches &amp; pergolas. Licensed &amp; insured. Free estimate in 24h — (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Alexandria, VA's Trusted Deck Company"
         title="Custom Deck Builder in Alexandria, VA"
@@ -171,6 +174,7 @@ export default function DeckBuilderAlexandriaPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Alexandria" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Alexandria" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-alexandria-va" />
+      <NamedAuthor context="Alexandria and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </main>
   );

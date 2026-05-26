@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/how-tariffs-affect-deck-prices-2026',
@@ -27,6 +29,7 @@ export default function TariffsDeckPricesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/how-tariffs-affect-deck-prices-2026" name="How Tariffs Affect Deck Prices in 2026 | What Homeowners Should Know" description="Tariffs have increased composite decking costs 8-15% in 2026. How this affects your project, which materials are impacted, and how to save. Expert analysis." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How Tariffs Affect Deck Prices in 2026</h1>
@@ -128,6 +131,8 @@ export default function TariffsDeckPricesPage() {
         </div>
       </article>
       <SimpleCTA title="Lock In Today's Prices Get Your Free Estimate" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

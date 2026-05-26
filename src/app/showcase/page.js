@@ -6,6 +6,7 @@ import Testimonials from '@/components/Testimonials';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = buildMetadata({
   path: '/showcase',
@@ -16,6 +17,7 @@ export const metadata = buildMetadata({
 export default function ShowcasePage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/showcase" name="Custom Deck Project Gallery | Trex Deck Designer &amp; Showcase" description="Explore our portfolio of custom deck, porch, and patio projects across Northern Virginia. See why we are the leading Trex deck designer in the region." speakable />
       <ShowcaseHeader />
       <ShowcaseGrid />
       <ShowcaseStats />

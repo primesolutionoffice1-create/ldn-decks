@@ -11,6 +11,8 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import JsonLd from '@/components/JsonLd';
 import ArticleSchema from '@/components/ArticleSchema';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = {
   ...buildMetadata({
@@ -116,6 +118,7 @@ export const metadata = {
                                                                                                                                                                                                                                                                                                 return (
                                                                                                                                                                                                                                                                                                     <main>
                                                                                                                                                                                                                                                                                                           <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-design-ideas-northern-virginia-2026" name="Deck Design Ideas Northern Virginia 2026" description="Top deck design ideas for Northern Virginia homeowners in 2026. Composite decks, multi-level builds, screened porches &amp; pergolas. Free estimate." speakable />
           <ArticleSchema
             title="Deck Design Ideas Northern Virginia 2026"
             description="Top deck design trends for 2026 in Northern Virginia. Multi-level composites, outdoor kitchens, screened porches, and pergolas."
@@ -156,6 +159,8 @@ export const metadata = {
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 />
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <ServiceAreasGrid />
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             <RelatedGuides currentPath="/deck-design-ideas-northern-virginia-2026" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </main>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   );

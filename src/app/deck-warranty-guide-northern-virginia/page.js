@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -41,6 +43,7 @@ export default function DeckWarrantyGuidePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-warranty-guide-northern-virginia" name="Deck Warranty Guide | What\" description="Understand deck warranties: Trex 25-year, TimberTech 30-50 year, workmanship coverage. What\'s covered, what voids it, and how to file a claim." speakable />
       <ArticleSchema
         title="Deck Warranty Guide: What's Covered in Northern Virginia"
         description="Understand deck warranties from Trex, TimberTech, AZEK, and Fiberon. What's covered, what voids your warranty, and how our workmanship guarantee protects you."
@@ -340,6 +343,8 @@ export default function DeckWarrantyGuidePage() {
 
       <SimpleCTA title="Get Warranty-Backed Deck Installation" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-warranty-guide-northern-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

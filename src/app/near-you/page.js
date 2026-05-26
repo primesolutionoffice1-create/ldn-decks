@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './NearYouPage.module.css';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = buildMetadata({
   path: '/near-you',
@@ -35,6 +36,7 @@ const chooseItems = [
 export default function NearYouPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/near-you" name="Deck Builder Near Me | Northern Virginia (5 Counties)" description="Find a 5-star deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties — custom decks, patios &amp; porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder Near You"

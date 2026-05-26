@@ -15,6 +15,8 @@ import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-vienna-va',
@@ -117,6 +119,7 @@ export default function ViennaDeckBuilderPage() {
     <main>
       <JsonLd data={viennaFaqSchema} />
       <LocalBusinessSchema city="Vienna" url="https://ldndecks.com/deck-builder-vienna-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-vienna-va" name="Deck Builder in Vienna, VA | Trex Certified | Loudoun Decks" description="Top-rated deck builder in Vienna, VA. 5.0★ Google. Custom Trex &amp; TimberTech decks, screened porches &amp; pergolas. Town of Vienna permit experts. Free estimate." speakable />
       <ServicesHeader
         subtext="Vienna, VA's #1 Rated Builder"
         title="Custom Deck Builder in Vienna, VA"
@@ -183,6 +186,7 @@ export default function ViennaDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Vienna" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Vienna" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-vienna-va" />
+      <NamedAuthor context="Vienna and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </main>
   );

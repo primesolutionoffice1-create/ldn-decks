@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 import { BUSINESS } from '@/lib/business';
 import { getAllCityPaths } from '@/data/cityData';
 import CallLink from '@/components/CallLink';
@@ -32,6 +33,7 @@ export default function AreasWeServePage() {
 
   return (
     <>
+      <WebPageSchema url="https://ldndecks.com/areas-we-serve" name="Areas We Serve | Deck Builder Across Northern Virginia" description="Loudoun Decks serves 70+ cities across Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties. Find your city and get a free deck estimate." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Areas We Serve</h1>

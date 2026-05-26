@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -42,6 +44,7 @@ export default function LoudounPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-permit-loudoun-county-virginia" name="Loudoun County Deck Permit Guide (2026) | Loudoun Decks" description="Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Fast-track your deck build with our guaranteed permit process." speakable />
       <ArticleSchema
         title="Virginia Deck Building Code: 2026 Loudoun Permit Guide"
         description="Granular technical guide for 2026 Loudoun County deck permits. Footing depths, joist spans, ledger flashing, and LandMARC portal walkthrough."
@@ -110,11 +113,11 @@ export default function LoudounPermitPage() {
 
           <h3 style={S.h3}>The 5-Step Approval Process:</h3>
           <ol style={S.list}>
-            <li style={S.listItem}><strong>Obtain zoning clearance:</strong> Mark exact setbacks on your certified property plat.</li>
-            <li style={S.listItem}><strong>Secure written HOA approval:</strong> Use material samples and preliminary renderings.</li>
-            <li style={S.listItem}><strong>Upload engineered drawings:</strong> Include load paths, stair geometry, ledger attachment, flashing, and other structural details. If you want to understand the house connection before permit review, read our <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>; for stair dimensions, use the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link>.</li>
-            <li style={S.listItem}><strong>Pay county review fees:</strong> Calculated based on construction valuation.</li>
-            <li style={S.listItem}><strong>Monitor dashboard:</strong> Address reviewer comments or required corrections immediately.</li>
+            <li id="how-to-step-1" style={S.listItem}><strong>Obtain zoning clearance:</strong> Mark exact setbacks on your certified property plat.</li>
+            <li id="how-to-step-2" style={S.listItem}><strong>Secure written HOA approval:</strong> Use material samples and preliminary renderings.</li>
+            <li id="how-to-step-3" style={S.listItem}><strong>Upload engineered drawings:</strong> Include load paths, stair geometry, ledger attachment, flashing, and other structural details. If you want to understand the house connection before permit review, read our <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>; for stair dimensions, use the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link>.</li>
+            <li id="how-to-step-4" style={S.listItem}><strong>Pay county review fees:</strong> Calculated based on construction valuation.</li>
+            <li id="how-to-step-5" style={S.listItem}><strong>Monitor dashboard:</strong> Address reviewer comments or required corrections immediately.</li>
           </ol>
 
           {/* ===== SECTION 3: Footings ===== */}
@@ -228,6 +231,8 @@ export default function LoudounPermitPage() {
 
       <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-permit-loudoun-county-virginia" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

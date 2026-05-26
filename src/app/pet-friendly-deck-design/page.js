@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/pet-friendly-deck-design',
@@ -27,6 +29,7 @@ export default function PetFriendlyDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/pet-friendly-deck-design" name="Pet-Friendly Deck Design: Build a Deck Your Dog Will Love (2026)" description="Design a pet-friendly deck: scratch-resistant composite, safe railings, shade zones, pet gates, easy-clean surfaces. Tips from Northern Virginia deck builders." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Pet-Friendly Deck Design</h1>
@@ -118,6 +121,8 @@ export default function PetFriendlyDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Design a Deck Your Whole Family Loves" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

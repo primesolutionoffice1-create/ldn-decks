@@ -11,6 +11,7 @@ import {
 } from '@/components/EducationHubComponents';
 import { educationArticles } from '@/lib/educationData';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 import hubStyles from '@/components/EducationHub.module.css';
 
 export const metadata = buildMetadata({
@@ -104,6 +105,7 @@ export default function EducationPage() {
 
   return (
     <main className={hubStyles.educationPage}>
+      <WebPageSchema url="https://ldndecks.com/education" name="Northern Virginia Deck Education Center | Loudoun Decks" description="Expert guides for deck safety, permits, materials, costs, HOA approvals and outdoor living decisions in Northern Virginia." speakable />
       {educationHubSchema.map((schema, index) => (
         <script
           key={index}

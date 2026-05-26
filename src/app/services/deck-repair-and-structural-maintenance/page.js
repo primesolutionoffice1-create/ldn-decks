@@ -12,6 +12,8 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/services/deck-repair-and-structural-maintenance',
@@ -83,6 +85,7 @@ const expansionSections = [
 export default function DeckRepairPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/services/deck-repair-and-structural-maintenance" name="Deck Repair Near Me Northern VA | Structural Deck Contractor" description="Need deck repair near you in Northern Virginia? We fix rotted posts, sinking decks, railings, ledgers, and failed inspections. 5.0 Google rated." speakable />
       <ServiceSchema 
         name="Deck Repair & Structural Maintenance" 
         description="Specialized structural deck repair in Northern Virginia. Fix rotted posts, sinking decks, and code violations. Expert remediation for failed inspections." 
@@ -144,6 +147,8 @@ export default function DeckRepairPage() {
       <ServicesCallToAction />
 
       <RelatedGuides currentPath="/services/deck-repair-and-structural-maintenance" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </main>
   );

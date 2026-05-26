@@ -11,6 +11,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -103,6 +104,7 @@ export default function OpenPorchPage() {
   return (
     <main>
       <JsonLd data={serviceSchema} />
+      <WebPageSchema url="https://ldndecks.com/services/porches/open-porch" name="Open Porch Builder &amp; Design | Northern Virginia" description="Custom open porch design and construction in Northern Virginia. We build covered open-air porches, pavilions, and outdoor living rooms. Free estimates." speakable />
       <JsonLd data={faqSchema} />
       <ServicesHeader
         subtext="Open Porch Builder Northern Virginia"

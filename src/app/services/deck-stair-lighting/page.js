@@ -12,6 +12,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -59,6 +60,7 @@ const expansionSections = [
 export default function DeckStairLightingPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/services/deck-stair-lighting" name="Deck Stair Lighting Loudoun VA | LDN Decks" description="Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last in Loudoun, Fairfax &amp; Prince William County." speakable />
       <ServiceSchema name="Deck & Stair Lighting" description="Integrated LED deck lighting, stair riser lights, post cap lights, and under-rail strips." price="2000" />
       <ServicesHeader
         subtext="Deck Stair Lighting Loudoun VA"

@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -76,6 +78,7 @@ export default function ManassasDeckBuilderPage() {
     <main>
       <JsonLd data={manassasFaqSchema} />
       <LocalBusinessSchema city="Manassas" url="https://ldndecks.com/deck-builder-manassas-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-manassas-va" name="Deck Builder in Manassas, VA | Trex Certified | Loudoun Decks" description="Manassas deck builder serving Old Town, Wellington, Bull Run and Sudley Springs. Trex Certified composite decks, screened porches and historic-district builds." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -167,6 +170,7 @@ export default function ManassasDeckBuilderPage() {
 
       <SimpleCTA title="Build Your Manassas Deck With a Trex Certified Team" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-manassas-va" />
+      <NamedAuthor context="Manassas and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </main>
   );

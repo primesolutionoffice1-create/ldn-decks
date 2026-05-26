@@ -12,6 +12,8 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -58,6 +60,7 @@ export default function ArlingtonCountyPage() {
         description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Arlington County, VA."
         url="https://ldndecks.com/near-you/arlington-county"
       />
+      <WebPageSchema url="https://ldndecks.com/near-you/arlington-county" name="5-Star Deck Builder Arlington County VA | Free Quote in 24h" description="Top-rated deck and outdoor living contractor in Arlington County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Rosslyn, Ballston, Clarendon, and Crystal City." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Arlington County, VA"
@@ -160,6 +163,8 @@ export default function ArlingtonCountyPage() {
         </div>
       </section>
       <RelatedGuides currentPath="/near-you/arlington-county" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </main>
   );

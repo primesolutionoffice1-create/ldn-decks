@@ -12,6 +12,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -134,6 +135,7 @@ export default function DeckWashingPage() {
   return (
     <main>
       <JsonLd data={faqSchemaData} />
+      <WebPageSchema url="https://ldndecks.com/services/deck-washing" name="Professional Deck Washing Loudoun VA | Safe Soft-Wash Restoration" description="Restore your outdoor wood or composite deck with professional low-pressure soft-washing in Northern Virginia. We safely remove algae, mold, and grime." speakable />
       <JsonLd data={serviceSchemaData} />
 
       <ServicesHeader

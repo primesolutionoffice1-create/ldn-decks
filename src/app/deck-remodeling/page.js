@@ -9,6 +9,8 @@ import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceVisual from '@/components/ServiceVisual';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-remodeling',
@@ -19,6 +21,7 @@ export const metadata = buildMetadata({
 export default function DeckRemodelingPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/deck-remodeling" name="Custom Deck Remodeling &amp; Upgrades | Transform Your Space" description="Upgrade your existing deck with modern features. From new railings to built-in lighting, we remodel decks to fit your modern lifestyle." speakable />
       <ServiceSchema name="Deck Remodeling" description="Transform your existing deck with new features, materials, and design upgrades." price="15000" />
       <ServicesHeader 
         subtext="Deck Restoration"
@@ -56,6 +59,8 @@ export default function DeckRemodelingPage() {
       <ProcessSteps />
 
       <RelatedGuides currentPath="/deck-remodeling" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </main>
   );

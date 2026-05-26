@@ -7,6 +7,8 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -41,6 +43,7 @@ export default function BestDeckStainSealerPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/best-deck-stain-sealer-virginia" name="Best Deck Stain &amp; Sealer for Virginia Weather (2026)" description="Top deck stains and sealers tested in Virginia\'s climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks." speakable />
       <ArticleSchema
         title="Best Deck Stain & Sealer for Virginia Weather (2026)"
         description="Top deck stains and sealers tested in Virginia's climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks."
@@ -359,6 +362,8 @@ export default function BestDeckStainSealerPage() {
 
       <SimpleCTA title="Need Your Deck Stained or Sealed?" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/best-deck-stain-sealer-virginia" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

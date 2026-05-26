@@ -13,6 +13,8 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -116,6 +118,7 @@ const expansionSections = [
 export default function DeckRepairLoudounCountyPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/deck-repair-loudoun-county" name="Deck Repair Loudoun County | Fix Rot, Railings &amp; Ledger Boards" description="Expert deck repair in Loudoun County, VA. We fix rot, unstable railings, ledger board failures &amp; structural damage. Ashburn, Leesburg, Sterling." speakable />
       <ServiceSchema
         name="Deck Repair & Structural Restoration in Loudoun County, VA"
         description="Expert deck repair across Loudoun County — rot and ledger board repair, joist and beam replacement, railing and stair safety upgrades, and full resurfacing. Free on-site inspections, permitted structural work."
@@ -196,6 +199,8 @@ export default function DeckRepairLoudounCountyPage() {
 
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/deck-repair-loudoun-county" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </main>
   );

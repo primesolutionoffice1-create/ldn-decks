@@ -11,6 +11,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -103,6 +104,7 @@ export default function FrontPorchPage() {
   return (
     <main>
       <JsonLd data={serviceSchema} />
+      <WebPageSchema url="https://ldndecks.com/services/porches/front-porch" name="Front Porch Builder Northern Virginia | Custom Curb Appeal Upgrades" description="Custom front porches in Northern Virginia. Premium porticos, wraparound entries &amp; curb appeal upgrades in Loudoun &amp; Fairfax County. Free estimate." speakable />
       <JsonLd data={faqSchema} />
       <ServicesHeader
         subtext="Front Porch Builder Northern Virginia"

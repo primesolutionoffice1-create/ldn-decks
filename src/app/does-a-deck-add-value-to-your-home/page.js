@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/does-a-deck-add-value-to-your-home',
@@ -27,6 +29,7 @@ export default function DeckValuePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/does-a-deck-add-value-to-your-home" name="Does a Deck Add Value to Your Home? (2026 ROI Data)" description="A composite deck recoups 60-80% at resale in Northern Virginia. 2026 ROI data, what buyers look for, and when a deck hurts resale value." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -128,6 +131,8 @@ export default function DeckValuePage() {
       </article>
 
       <SimpleCTA title="Planning to Sell? Build Something Buyers Pay For." buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

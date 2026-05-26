@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -28,6 +30,7 @@ export default function MultiLevelDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/multi-level-deck-builder-northern-virginia" name="Multi-Level Deck Builder NoVA" description="Custom multi-level decks in Northern Virginia from $35,000-$80,000+. Perfect for sloped lots and walkout basements. Trex &amp; TimberTech. Free design consultation." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -140,6 +143,8 @@ export default function MultiLevelDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Design Your Multi-Level Deck" buttonText="Get Free Design Consultation" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

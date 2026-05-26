@@ -10,6 +10,8 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata, SITE_URL } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
 	path: '/deck-builders-loudoun',
@@ -112,6 +114,7 @@ const expansionSections = [
 export default function DeckBuildersLoudounPage() {
         return (
                 <main>
+      <WebPageSchema url="https://ldndecks.com/deck-builders-loudoun" name="Custom Deck Builder in Loudoun County, VA | Loudoun Decks" description="Local deck builder in Loudoun County, VA. Trex Platinum Pro. Composite decks, screened porches, pergolas. 5-star rated. Free quote within 24 hours." speakable />
                         <ServiceSchema
                                 name="Custom Deck Building in Loudoun County, VA"
                                 description="Custom composite and wood deck construction across Loudoun County — Ashburn, Leesburg, Sterling, Brambleton and beyond. TrexPro Platinum installer, HOA and permit handling, 5-star rated."
@@ -150,6 +153,8 @@ export default function DeckBuildersLoudounPage() {
                         />
                         <ServiceAreasGrid />
                         <RelatedGuides currentPath="/deck-builders-loudoun" />
+                        <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+
                         <ContactHome />
                 </main>
         );

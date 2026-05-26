@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -16,6 +17,7 @@ export const metadata = buildMetadata({
 export default function PressPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/press" name="Press &amp; Media Kit | Loudoun Decks" description="Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s top-rated deck builder." speakable />
       <section style={{ background: 'var(--color-dark, #1a1a2e)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Press & Media Kit</h1>

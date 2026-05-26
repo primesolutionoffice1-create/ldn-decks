@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -28,6 +30,7 @@ export default function LouveredPergolaPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/louvered-pergola-northern-virginia" name="Louvered Pergola Builder in Northern Virginia" description="Motorized and manual louvered pergolas in Northern Virginia — adjustable-roof shade structures over decks and patios. $12,000-$35,000+. Free design consultation." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -142,6 +145,8 @@ export default function LouveredPergolaPage() {
         </div>
       </article>
       <SimpleCTA title="Design Your Louvered Pergola" buttonText="Get Free Design Consultation" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

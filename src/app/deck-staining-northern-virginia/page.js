@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-staining-northern-virginia',
@@ -28,6 +30,7 @@ export default function DeckStainingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-staining-northern-virginia" name="Deck Staining in Northern Virginia" description="Professional deck staining in Northern Virginia. $3-$7/sqft. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -161,6 +164,8 @@ export default function DeckStainingPage() {
       </article>
 
       <SimpleCTA title="Protect Your Deck Before Winter" buttonText="Get Free Estimate" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

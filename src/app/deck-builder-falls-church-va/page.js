@@ -8,6 +8,8 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -30,6 +32,7 @@ export default function FallsChurchDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Falls Church" url="https://ldndecks.com/deck-builder-falls-church-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-falls-church-va" name="Deck Builder in Falls Church, VA | Custom Composite Decks | LDN Decks" description="Top-rated deck builder in Falls Church, VA. 5.0★ Google. Custom Trex decks, screened porches. City of Falls Church + Fairfax County permits. Free estimate." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Falls Church, VA</h1>
@@ -94,6 +97,7 @@ export default function FallsChurchDeckBuilderPage() {
       </article>
       <SimpleCTA title="Maximize Your Falls Church Outdoor Space" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-falls-church-va" />
+      <NamedAuthor context="Falls Church and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
     </>
   );

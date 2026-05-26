@@ -9,6 +9,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-fairfax-va',
@@ -77,6 +78,7 @@ export default function FairfaxDeckBuilderPage() {
     <main>
       <JsonLd data={fairfaxFaqSchema} />
       <LocalBusinessSchema city="Fairfax" url="https://ldndecks.com/deck-builder-fairfax-va" />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-fairfax-va" name="Deck Contractor Fairfax VA | Class A Licensed | Loudoun Decks" description="Licensed Virginia Class A deck contractor in Fairfax, VA. Trex Platinum Partner serving Mosby Woods, Country Club Hills, Fair Lakes, Mantua, Fairfax Station. City of Fairfax + County permits handled." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

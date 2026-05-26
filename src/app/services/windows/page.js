@@ -12,6 +12,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
@@ -114,6 +115,7 @@ const expansionSections = [
 export default function WindowsPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/services/windows" name="Window Replacement Loudoun County | LDN Decks" description="Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal." speakable />
       <ServiceSchema name="Window Installation" description="Residential window replacement and installation in Northern Virginia." price="5000" />
       <ServicesHeader 
         subtext="5-Star Google Rated Experts"

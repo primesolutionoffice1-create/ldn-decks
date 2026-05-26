@@ -11,6 +11,7 @@ import AboveFoldCTA from '@/components/AboveFoldCTA';
 import NamedAuthor from '@/components/NamedAuthor';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = buildMetadata({
   path: "/services/patios",
@@ -166,6 +167,7 @@ export default function PatiosPage() {
   return (
     <main>
       <JsonLd data={faqSchemaData} />
+      <WebPageSchema url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone &amp; natural stone. Loudoun, Fairfax, Prince William, Arlington. Free 24h estimate." speakable />
       <JsonLd data={serviceSchemaData} />
 
       <ServicesHeader

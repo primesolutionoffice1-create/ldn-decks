@@ -5,6 +5,8 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -29,6 +31,7 @@ export default function DeckFinancingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-financing-northern-virginia" name="Deck Financing Options in Northern Virginia | Build Now, Pay Over Time" description="Finance your deck project with affordable monthly payments. $0 down options, 12-60 month terms, quick approval. Build your dream deck now pay over time." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -157,6 +160,8 @@ export default function DeckFinancingPage() {
       </article>
 
       <SimpleCTA title="Build Now, Pay Over Time" buttonText="Get Free Estimate + Financing Options" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </>
   );

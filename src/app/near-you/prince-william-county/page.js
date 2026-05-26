@@ -12,6 +12,8 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -58,6 +60,7 @@ export default function PrinceWilliamCountyPage() {
         description="LDN Decks builds custom decks, porches, patios, pergolas, and outdoor living spaces throughout Prince William County, VA."
         url="https://ldndecks.com/near-you/prince-william-county"
       />
+      <WebPageSchema url="https://ldndecks.com/near-you/prince-william-county" name="5-Star Deck Builder Prince William County VA | Free Quote" description="Professional deck contractor in Prince William County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Manassas, Woodbridge, and Haymarket. Free estimates." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Prince William County, VA"
@@ -158,6 +161,8 @@ export default function PrinceWilliamCountyPage() {
         </div>
       </section>
       <RelatedGuides currentPath="/near-you/prince-william-county" />
+      <NamedAuthor context="Prince William County" lastUpdated="2026-05-26" />
+
       <ContactHome />
     </main>
   );

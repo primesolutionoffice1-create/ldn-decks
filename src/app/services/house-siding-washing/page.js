@@ -9,6 +9,7 @@ import ServiceVisual from '@/components/ServiceVisual';
 import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 import ServiceSchema from '@/components/ServiceSchema';
@@ -36,6 +37,7 @@ const inclusions = [
 export default function HouseSidingWashingPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/services/house-siding-washing" name="Professional House Siding Washing NoVA | Safe Exterior Cleaning" description="Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement." speakable />
       <ServiceSchema
         name="House Siding Washing"
         description="Professional house siding washing in Northern Virginia — safely removing dirt, mold, and algae from vinyl and fiber cement siding."

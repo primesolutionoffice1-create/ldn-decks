@@ -9,6 +9,7 @@ import ServiceVisual from '@/components/ServiceVisual';
 import SimpleCTA from '@/components/SimpleCTA';
 
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 import ServiceSchema from '@/components/ServiceSchema';
@@ -36,6 +37,7 @@ const inclusions = [
 export default function ConcreteWashingPage() {
   return (
     <main>
+      <WebPageSchema url="https://ldndecks.com/services/concrete-washing" name="Professional Concrete Washing NoVA | Driveway &amp; Walkway Cleaning" description="Restore your driveways, patios, and walkways with expert concrete washing in Northern Virginia. We remove deep-set stains, oil, and algae." speakable />
       <ServiceSchema
         name="Concrete Washing"
         description="Professional concrete and masonry washing in Northern Virginia — removing oil stains, algae, and ground-in dirt from driveways, patios, and walkways."
