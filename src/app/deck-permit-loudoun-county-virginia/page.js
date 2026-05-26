@@ -113,11 +113,11 @@ export default function LoudounPermitPage() {
 
           <h3 style={S.h3}>The 5-Step Approval Process:</h3>
           <ol style={S.list}>
-            <li style={S.listItem}><strong>Obtain zoning clearance:</strong> Mark exact setbacks on your certified property plat.</li>
-            <li style={S.listItem}><strong>Secure written HOA approval:</strong> Use material samples and preliminary renderings.</li>
-            <li style={S.listItem}><strong>Upload engineered drawings:</strong> Include load paths, stair geometry, ledger attachment, flashing, and other structural details. If you want to understand the house connection before permit review, read our <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>.</li>
-            <li style={S.listItem}><strong>Pay county review fees:</strong> Calculated based on construction valuation.</li>
-            <li style={S.listItem}><strong>Monitor dashboard:</strong> Address reviewer comments or required corrections immediately.</li>
+            <li id="how-to-step-1" style={S.listItem}><strong>Obtain zoning clearance:</strong> Mark exact setbacks on your certified property plat.</li>
+            <li id="how-to-step-2" style={S.listItem}><strong>Secure written HOA approval:</strong> Use material samples and preliminary renderings.</li>
+            <li id="how-to-step-3" style={S.listItem}><strong>Upload engineered drawings:</strong> Include load paths, stair geometry, ledger attachment, flashing, and other structural details. If you want to understand the house connection before permit review, read our <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>.</li>
+            <li id="how-to-step-4" style={S.listItem}><strong>Pay county review fees:</strong> Calculated based on construction valuation.</li>
+            <li id="how-to-step-5" style={S.listItem}><strong>Monitor dashboard:</strong> Address reviewer comments or required corrections immediately.</li>
           </ol>
 
           {/* ===== SECTION 3: Footings ===== */}
