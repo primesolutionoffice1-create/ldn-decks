@@ -112,7 +112,7 @@ export default function LoudounPermitPage() {
           <ol style={S.list}>
             <li style={S.listItem}><strong>Obtain zoning clearance:</strong> Mark exact setbacks on your certified property plat.</li>
             <li style={S.listItem}><strong>Secure written HOA approval:</strong> Use material samples and preliminary renderings.</li>
-            <li style={S.listItem}><strong>Upload engineered drawings:</strong> Include load paths and structural details.</li>
+            <li style={S.listItem}><strong>Upload engineered drawings:</strong> Include load paths, stair geometry, ledger attachment, flashing, and other structural details. If you want to understand the house connection before permit review, read our <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>.</li>
             <li style={S.listItem}><strong>Pay county review fees:</strong> Calculated based on construction valuation.</li>
             <li style={S.listItem}><strong>Monitor dashboard:</strong> Address reviewer comments or required corrections immediately.</li>
           </ol>
@@ -157,6 +157,7 @@ export default function LoudounPermitPage() {
           {/* ===== SECTION 4: Joist Spans ===== */}
           <h2 style={S.h2}>Do I need 2x8 or 2x10 joists for my deck?</h2>
           <p style={S.p}>The choice between 2x8 and 2x10 joists depends on your clear span; 2x8s typically support spans up to 10 feet, while 2x10s safely cover 12 to 14 feet. We specify premium framing for heavy composite decking like Trex and TimberTech, which often require <strong>12-inch on-center spacing</strong> rather than the standard 16-inch spacing to prevent structural deflection. For a plain-English span breakdown, see <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>.</p>
+          <p style={S.p}>Stairs are reviewed as part of the full structural system, especially on elevated decks. Our <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link> shows how treads, risers, stringers, hangers, and landings fit together before the framing inspection.</p>
 
           <div style={{ overflowX: 'auto', marginBottom: '3rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
