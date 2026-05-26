@@ -1,0 +1,573 @@
+.page {
+  background: #ffffff;
+  color: #1f2933;
+}
+
+.hero {
+  background: #17202a;
+  color: #ffffff;
+  padding: 4rem 0 3rem;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.eyebrow,
+.kicker {
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+
+.hero h1 {
+  font-size: 2.7rem;
+  line-height: 1.1;
+  font-weight: 800;
+  max-width: 740px;
+  margin: 0 0 1rem;
+}
+
+.hero p {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.heroActions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+}
+
+.primaryButton,
+.secondaryButton,
+.actions button {
+  min-height: 44px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: 0.9rem 1.25rem;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.28);
+  padding: 0.9rem 1.25rem;
+}
+
+.quickAnswer {
+  background: #fff7ed;
+  border-bottom: 1px solid #fed7aa;
+  padding: 1.25rem 0;
+}
+
+.quickAnswer p {
+  max-width: 900px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.calculatorSection {
+  background: #f8fafc;
+  padding: 3rem 0;
+}
+
+.calculatorShell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.inputPanel,
+.resultsPanel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+}
+
+.inputPanel h2,
+.resultsPanel h2,
+.content h2,
+.related h2,
+.faq h2 {
+  font-size: 1.65rem;
+  line-height: 1.2;
+  font-weight: 800;
+  margin: 0 0 0.9rem;
+  color: #111827;
+}
+
+.inputPanel p,
+.content p,
+.related p,
+.faq p {
+  line-height: 1.7;
+  color: #475569;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.formGrid label,
+.formGrid fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.formGrid label span,
+.formGrid legend {
+  color: #1f2937;
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.formGrid small {
+  min-height: 2.5rem;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+.formGrid input {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.75rem 0.8rem;
+  color: #111827;
+  font: inherit;
+  background: #ffffff;
+}
+
+.formGrid input:focus,
+.actions button:focus,
+.segmented button:focus {
+  outline: 3px solid rgba(209, 72, 23, 0.22);
+  outline-offset: 2px;
+  border-color: var(--color-primary);
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem;
+  margin-top: auto;
+  min-height: 46px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.25rem;
+  background: #f8fafc;
+}
+
+.segmented button {
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #334155;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.segmented .activeSegment {
+  background: #17202a;
+  color: #ffffff;
+}
+
+.resultGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.resultGrid div {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.resultGrid span {
+  display: block;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.resultGrid strong {
+  display: block;
+  color: #111827;
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+
+.noteBox,
+.warningBox,
+.goodBox,
+.ctaBand {
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.noteBox {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.warningBox {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+
+.goodBox {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.warningBox h3,
+.goodBox h3 {
+  font-size: 1rem;
+  margin: 0 0 0.55rem;
+}
+
+.warningBox ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.warningBox li {
+  color: #7c2d12;
+  line-height: 1.55;
+  margin-bottom: 0.4rem;
+}
+
+.noteBox p,
+.goodBox p {
+  margin: 0;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.summary {
+  width: 100%;
+  min-height: 170px;
+  margin-top: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.9rem;
+  color: #1f2937;
+  background: #f8fafc;
+  resize: vertical;
+  font: 0.9rem/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.85rem;
+}
+
+.actions button {
+  background: #17202a;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+}
+
+.actions button + button {
+  background: #ffffff;
+  color: #17202a;
+  border-color: #cbd5e1;
+}
+
+.content {
+  padding: 3.5rem 0;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contentGrid > * {
+  min-width: 0;
+}
+
+.content h2 {
+  margin-top: 2.5rem;
+}
+
+.content h2:first-child {
+  margin-top: 0;
+}
+
+.content h3 {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 1.4rem 0 0.45rem;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.25rem;
+  color: #475569;
+  line-height: 1.75;
+}
+
+.content li {
+  margin-bottom: 0.45rem;
+}
+
+.content a,
+.faq a,
+.related a {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.sidePanel {
+  position: sticky;
+  top: 6rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.15rem;
+  background: #f8fafc;
+}
+
+.sidePanel h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+.sidePanel a {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+}
+
+.tableWrap table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.tableWrap th {
+  background: #f1f5f9;
+  color: #111827;
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.tableWrap td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.related {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 3rem 0;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.relatedGrid a {
+  display: block;
+  min-height: 130px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #ffffff;
+  text-decoration: none;
+  color: inherit;
+}
+
+.relatedGrid strong {
+  display: block;
+  color: var(--color-primary);
+  margin-bottom: 0.45rem;
+}
+
+.relatedGrid span {
+  color: #64748b;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.faq {
+  padding: 3rem 0;
+}
+
+.faq details {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 800;
+  color: #111827;
+}
+
+.ctaBand {
+  background: #17202a;
+  color: #ffffff;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  margin: 0;
+  border-radius: 0;
+}
+
+.ctaBand h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin: 0 0 0.75rem;
+}
+
+.ctaBand p {
+  max-width: 680px;
+  margin: 0 auto 1.25rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.65;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+  .hero h1 {
+    font-size: 2.15rem;
+  }
+
+  .calculatorShell,
+  .contentGrid,
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidePanel {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero,
+  .calculatorSection,
+  .content,
+  .related,
+  .faq {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .inputPanel,
+  .resultsPanel {
+    padding: 1rem;
+  }
+
+  .formGrid,
+  .resultGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formGrid small {
+    min-height: auto;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}
+
+@media print {
+  .hero,
+  .quickAnswer,
+  .content,
+  .related,
+  .faq,
+  .ctaBand {
+    display: none;
+  }
+
+  .calculatorSection {
+    background: #ffffff;
+    padding: 0;
+  }
+
+  .calculatorShell {
+    grid-template-columns: 1fr;
+  }
+
+  .inputPanel {
+    display: none;
+  }
+
+  .resultsPanel {
+    box-shadow: none;
+    border: 0;
+  }
+
+  .actions {
+    display: none;
+  }
+}

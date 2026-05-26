@@ -120,6 +120,8 @@ export default function DeckRepairPage() {
         <h2 style={{ fontSize: '30px', fontWeight: 700, marginBottom: '16px', color: '#222' }}>Structural Guides Before You Repair</h2>
         <p style={{ fontSize: '18px', color: '#444', marginBottom: '14px' }}>
           The fastest way to separate a small repair from a true structural risk is to inspect the stair system and the deck-to-house connection. Review our{' '}
+          <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Virginia deck stair calculator</Link>
+          {' '}to model rise, run and step count, compare it with the{' '}
           <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck stair construction diagram</Link>
           {' '}for stringers, treads, risers and landing support, use the{' '}
           <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck stair safety checklist</Link>

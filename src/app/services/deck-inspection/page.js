@@ -74,6 +74,8 @@ export default function DeckInspectionPage() {
           decks inherently vulnerable to water intrusion and dangerously pulling away from the house. If you want the
           structural background before booking, start with our guides to <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth in Virginia</Link>,{' '}
           <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>,{' '}
+          <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair rise and run calculator</Link>
+          {', '}
           <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair stringers and treads</Link>
           {', '}
           <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checks</Link>
