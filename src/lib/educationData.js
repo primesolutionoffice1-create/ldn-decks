@@ -231,7 +231,7 @@ The most important rule is consistency. The height from one tread to the next sh
 
 ## The Top Connection: Joist Hangers, Ledger Area and Blocking
 
-The top of the stair has to connect securely to the deck frame. In a good stair system, the upper stringers are supported by solid framing, proper blocking and approved metal connectors. Joist hangers, stair stringer connectors and structural screws all have specific jobs.
+The top of the stair has to connect securely to the deck frame. In a good stair system, the upper stringers are supported by solid framing, proper blocking and approved metal connectors. Joist hangers, stair stringer connectors and structural screws all have specific jobs. If the stair connects near an attached deck ledger, the stair load also depends on the deck-to-house connection described in our [ledger board flashing guide](/education/ledger-board-flashing-deck-attachment-virginia).
 
 A weak top connection is one of the biggest stair problems on older decks. The stair may be attached with nails, undersized screws or improvised blocking that was never designed to carry repeated foot traffic. Over time, that connection can loosen, especially as wood shrinks, swells and moves through Northern Virginia humidity cycles.
 
