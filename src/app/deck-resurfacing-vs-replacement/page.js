@@ -92,6 +92,12 @@ export default function ResurfacingVsReplacementPage() {
 
           <h2 style={S.h2}>How We Determine: Resurface or Replace?</h2>
           <p style={S.p}>We offer <strong>free deck inspections</strong>. During the inspection, we check every structural component:</p>
+          <p style={S.p}>
+            Stairs and ledgers often decide whether a deck is a safe resurfacing candidate. Before reusing an existing frame, we check the stair load path described in our{' '}
+            <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>
+            {' '}and the house connection explained in our{' '}
+            <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>.
+          </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             <div style={{ background: '#e8f5e9', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, color: '#2e7d32', marginBottom: '0.75rem' }}>RESURFACE ✓ (frame passes)</h3>
@@ -151,6 +157,8 @@ export default function ResurfacingVsReplacementPage() {
             {[
               ['/before-and-after', 'Before & After Deck Transformations'],
               ['/services/deck-resurfacing', 'Deck Resurfacing Services'],
+              ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing Guide'],
               ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/how-long-does-a-composite-deck-last', 'How Long Does a Deck Last?'],
               ['/deck-safety-inspection-checklist', 'Deck Safety Inspection Checklist'],

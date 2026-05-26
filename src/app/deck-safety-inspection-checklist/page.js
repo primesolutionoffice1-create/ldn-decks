@@ -131,6 +131,13 @@ export default function DeckInspectionPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Deck was built without permits (unknown construction quality)</li>
           </ul>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>We offer <strong>free deck inspections</strong>. We check every structural element and give you an honest assessment with photos repair, resurface, or replace. No obligation. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink>.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            For the two failure points homeowners ask about most, review our guides to{' '}
+            <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair stringers, treads and risers</Link>
+            {' '}and{' '}
+            <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing</Link>
+            {' '}before deciding whether the deck needs repair, resurfacing or replacement.
+          </p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
@@ -148,6 +155,8 @@ export default function DeckInspectionPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/services/deck-inspection', 'Professional Deck Inspection Service'],
+              ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing Guide'],
               ['/deck-maintenance-checklist-virginia', 'Deck Maintenance Checklist'],
               ['/how-long-does-a-composite-deck-last', 'How Long Does a Deck Last?'],
               ['/porch-repair-vs-replacement-northern-virginia', 'Repair vs Replacement'],

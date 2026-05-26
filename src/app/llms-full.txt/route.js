@@ -132,6 +132,8 @@ The education center focuses on deck safety, structural planning, material selec
 - Premium brand selection: Trex, TimberTech and AZEK
 - Permits and HOA planning in Loudoun, Fairfax and Northern Virginia communities
 - Deck stairs: riser height, tread depth, handrails, guards and landings
+- Deck stair construction: stringers, treads, risers, joist hangers, landing pads, blocking and exterior-rated stair hardware
+- Ledger board flashing: deck-to-house attachment, self-adhered membrane, Z-flashing and moisture protection
 - Deck drainage and dry under-deck space planning
 - Deck lighting automation and low-voltage outdoor lighting
 - Financing options and estimate planning
@@ -148,6 +150,8 @@ The education center focuses on deck safety, structural planning, material selec
 - https://ldndecks.com/education/hoa-deck-approval-guidelines-nova
 - https://ldndecks.com/education/soil-bearing-capacity-deck-footings-va
 - https://ldndecks.com/education/deck-stair-code-rise-run-virginia
+- https://ldndecks.com/education/deck-stair-construction-diagram
+- https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia
 
 ### Conversion Path
 

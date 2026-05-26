@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -111,6 +112,19 @@ export default function DeckRepairPage() {
       />
 
       <ServiceContentExpansion sections={expansionSections} />
+
+      <section style={{ maxWidth: 980, margin: '0 auto', padding: '20px 20px 60px', lineHeight: 1.75 }}>
+        <h2 style={{ fontSize: '30px', fontWeight: 700, marginBottom: '16px', color: '#222' }}>Structural Guides Before You Repair</h2>
+        <p style={{ fontSize: '18px', color: '#444', marginBottom: '14px' }}>
+          The fastest way to separate a small repair from a true structural risk is to inspect the stair system and the deck-to-house connection. Review our{' '}
+          <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck stair construction diagram</Link>
+          {' '}for stringers, treads, risers and landing support, then compare the house attachment against our{' '}
+          <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>ledger board flashing guide</Link>.
+        </p>
+        <p style={{ fontSize: '18px', color: '#444' }}>
+          If either area is loose, rotted, over-notched, under-supported or missing proper exterior hardware, the safer path may be structural repair or replacement instead of surface-only work.
+        </p>
+      </section>
 
       <ServiceInclusions 
         title="Our Structural Repair Capabilities"
