@@ -70,8 +70,10 @@ export default function DeckInspectionPage() {
           cause of catastrophic deck collapses nationwide. Outdated building codes from 15 or 20 years ago lacked the
           heavy-duty flashing, tension ties, and lateral load requirements required by modern standards, leaving older
           decks inherently vulnerable to water intrusion and dangerously pulling away from the house. If you want the
-          structural background before booking, start with our guides to <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth in Virginia</Link>
-          {' '}and <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>.
+          structural background before booking, start with our guides to <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth in Virginia</Link>,{' '}
+          <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>,{' '}
+          <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair stringers and treads</Link>
+          {' '}and <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing</Link>.
         </p>
         <p style={{ fontSize: '18px', marginBottom: '20px' }}>
           Moisture is the natural enemy of any traditional wooden deck. Over time, protective sealants strip away,

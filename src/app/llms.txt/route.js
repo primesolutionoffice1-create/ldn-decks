@@ -82,6 +82,8 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Fairfax Deck Setbacks](https://ldndecks.com/education/fairfax-county-deck-setbacks-zoning): Fairfax County deck setback and zoning education
 - [HOA Deck Approval](https://ldndecks.com/education/hoa-deck-approval-guidelines-nova): HOA/ARC deck approval planning in Northern Virginia
 - [Deck Stair Code](https://ldndecks.com/education/deck-stair-code-rise-run-virginia): Stair rise, run, handrail, guard and landing education
+- [Deck Stair Construction Diagram](https://ldndecks.com/education/deck-stair-construction-diagram): Stringers, treads, risers, joist hangers, landing pads, blocking and exterior stair hardware explained
+- [Ledger Board Flashing](https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia): Deck-to-house ledger attachment, flashing layers, moisture protection and collapse-prevention guidance
 
 ## Detailed Content
 For full extractable content, see: https://ldndecks.com/llms-full.txt
