@@ -161,7 +161,7 @@ export default function DeckResurfacingPage() {
         <p style={{ fontSize: '17px', color: '#555', marginBottom: 0 }}>
           A resurfacing project only makes sense when the posts, beams, joists, ledger, and footings are still sound.
           We check whether the footing depth is adequate for Northern Virginia freeze-thaw conditions, whether the joist sizing fits the span,
-          and whether the repair scope triggers a permit. Helpful background: <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth in Virginia</Link>,
+          and whether the repair scope triggers a permit. Helpful background: <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth in Virginia</Link>,
           {' '}<Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 joists</Link>, and
           {' '}<Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck permit requirements</Link>.
         </p>

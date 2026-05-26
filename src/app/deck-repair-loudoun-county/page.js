@@ -169,7 +169,7 @@ export default function DeckRepairLoudounCountyPage() {
         <p style={{ fontSize: '17px', color: '#555', marginBottom: 0 }}>
           For Loudoun County repairs, we check whether existing footings have shifted, whether joists are correctly sized for the span,
           and whether prior work was permitted. If the repair affects structural framing, railings, stairs, or load paths, a permit may be required.
-          Useful primers: <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth</Link>,
+          Useful primers: <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth</Link>,
           {' '}<Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck joist sizing</Link>,
           {' '}<Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>unpermitted decks in Virginia</Link>, and
           {' '}<Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck permit requirements</Link>.

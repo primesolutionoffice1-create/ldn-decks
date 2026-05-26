@@ -113,7 +113,7 @@ export default function DeckFootingCodePage() {
             A footing carries the deck&apos;s weight into the ground. It has to do two things: bear on firm, undisturbed soil, and sit <strong>below the frost line</strong> so seasonal freeze-and-thaw can&apos;t lift it. When a footing is too shallow, frost heave pushes one post up over the winter and the deck racks, the boards gap, and the ledger strains.
           </p>
           <p style={S.p}>
-            Northern Virginia&apos;s frost depth is modest compared with the upper Midwest, but it is real. In practice, deck footings here are commonly dug in the range of <strong>24 to 36 inches deep</strong>. The exact depth and diameter for your soil are confirmed by the county inspector at the footing inspection — which is exactly why that inspection happens before any concrete is poured.
+            Northern Virginia&apos;s frost depth is modest compared with the upper Midwest, but it is real. In practice, deck footings here are commonly dug in the range of <strong>24 to 36 inches deep</strong>. Use the <Link href="/tools/deck-footing-depth-calculator-virginia" style={S.link}>Deck Footing Depth Calculator Virginia</Link> for early planning, then confirm the exact depth and diameter with the county inspector at the footing inspection before any concrete is poured.
           </p>
 
           <h2 style={S.h2}>Footing types: piers, form tubes, and helical piles</h2>

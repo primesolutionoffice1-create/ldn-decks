@@ -136,6 +136,8 @@ export default function DeckInspectionPage() {
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>We offer <strong>free deck inspections</strong>. We check every structural element and give you an honest assessment with photos repair, resurface, or replace. No obligation. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink>.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
             For the two failure points homeowners ask about most, review our guides to{' '}
+            <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth planning</Link>
+            {', '}
             <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair stringers, treads and risers</Link>
             {' '}and{' '}
             <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing</Link>
@@ -165,6 +167,7 @@ export default function DeckInspectionPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/services/deck-inspection', 'Professional Deck Inspection Service'],
+              ['/tools/deck-footing-depth-calculator-virginia', 'Deck Footing Depth Calculator Virginia'],
               ['/tools/deck-stair-calculator', 'Virginia Deck Stair Calculator'],
               ['/education/deck-stair-safety-inspection-checklist', 'Deck Stair Safety Checklist PDF'],
               ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],
