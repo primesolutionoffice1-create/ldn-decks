@@ -1,4 +1,6 @@
 const ORIGIN = 'https://ldndecks.com';
+const FETCH_ORIGIN = process.env.SEO_AUDIT_ORIGIN || ORIGIN;
+const FETCH_TIMEOUT_MS = 8000;
 
 function normalizeInternalUrl(value) {
   try {
@@ -14,24 +16,27 @@ function normalizeInternalUrl(value) {
 }
 
 async function fetchText(url) {
-  const response = await fetch(url, {
+  const response = await fetch(url.replace(ORIGIN, FETCH_ORIGIN), {
     headers: { 'user-agent': 'LDNDecksLinkAudit/1.0 (+https://ldndecks.com)' },
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
   });
   return response.text();
 }
 
 async function fetchStatus(url) {
-  let response = await fetch(url, {
+  let response = await fetch(url.replace(ORIGIN, FETCH_ORIGIN), {
     method: 'HEAD',
     redirect: 'manual',
     headers: { 'user-agent': 'LDNDecksLinkAudit/1.0 (+https://ldndecks.com)' },
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
   });
 
   if (response.status === 405) {
-    response = await fetch(url, {
+    response = await fetch(url.replace(ORIGIN, FETCH_ORIGIN), {
       method: 'GET',
       redirect: 'manual',
       headers: { 'user-agent': 'LDNDecksLinkAudit/1.0 (+https://ldndecks.com)' },
+      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
     });
   }
 

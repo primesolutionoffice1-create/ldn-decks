@@ -12,6 +12,7 @@ import Link from 'next/link';
 const CORNERSTONE_GUIDES = [
   { path: '/deck-builder-northern-virginia', title: 'Deck Builder in Northern Virginia', desc: 'Custom decks, permits, HOA support and local service areas.' },
   { path: '/northern-virginia-deck-building-guide', title: 'Complete Deck Building Guide for NoVA', desc: 'Everything in one place costs, materials, permits, HOA, timeline.' },
+  { path: '/deck-payment-estimator', title: 'Deck Payment Estimator', desc: 'Plan payment ranges and project scope before requesting a consultation.' },
   { path: '/how-much-does-a-deck-cost-northern-virginia', title: 'Deck Cost in Northern Virginia (2026)', desc: 'Material pricing, real project costs, and what drives the price.' },
   { path: '/deck-cost-calculator', title: 'Free Deck Cost Calculator', desc: 'Get an instant estimate by material, size, and add-ons.' },
   { path: '/trex-vs-timbertech-vs-azek', title: 'Trex vs TimberTech vs AZEK', desc: 'Side-by-side brand comparison for Virginia climate.' },
@@ -20,8 +21,14 @@ const CORNERSTONE_GUIDES = [
   { path: '/does-a-deck-add-value-to-your-home', title: 'Does a Deck Add Home Value?', desc: 'ROI data 60-80% recoup at resale in Northern Virginia.' },
   { path: '/how-to-choose-a-deck-builder-northern-virginia', title: 'How to Choose a Deck Builder', desc: '10 questions to ask + 5 red flags to avoid.' },
   { path: '/screened-porch-cost-northern-virginia', title: 'Screened Porch Cost Guide', desc: '$25k-$70k+ with real project examples.' },
+  { path: '/deck-permit-loudoun-county-virginia', title: 'Deck Permits in Loudoun County', desc: 'Permit requirements, review steps and inspection context for Loudoun homeowners.' },
   { path: '/deck-permit-fairfax-county-virginia', title: 'Deck Permits in Fairfax County', desc: 'Requirements, timeline, fees, and inspection process.' },
   { path: '/hoa-deck-rules-northern-virginia', title: 'HOA Deck Rules in NoVA', desc: 'Approval process, common restrictions, and tips.' },
+  { path: '/covered-deck-builder-northern-virginia', title: 'Covered Deck Builder', desc: 'Covered deck planning, outdoor living upgrades and shade structure decisions.' },
+  { path: '/deck-resurfacing-vs-replacement', title: 'Deck Resurfacing vs Replacement', desc: 'How to decide between resurfacing, structural repair and full replacement.' },
+  { path: '/education/deck-stair-construction-diagram', title: 'Deck Stair Construction Diagram', desc: 'Stringers, treads, risers, landing pads and hardware explained.' },
+  { path: '/before-and-after', title: 'Before & After Deck Projects', desc: 'Project proof for deck replacements, composite upgrades and outdoor living work.' },
+  { path: '/reviews', title: 'LDN Decks Reviews', desc: 'Homeowner feedback and trust signals for Northern Virginia deck projects.' },
   { path: '/best-time-to-build-a-deck-northern-virginia', title: 'Best Time to Build a Deck', desc: 'Month-by-month calendar winter gets 10-15% better pricing.' },
   { path: '/deck-maintenance-checklist-virginia', title: 'Deck Maintenance Checklist', desc: 'Seasonal care guide for Virginia climate.' },
   { path: '/deck-railing-options-northern-virginia', title: 'Deck Railing Options & Costs', desc: 'Composite, aluminum, cable, glass compared.' },
@@ -41,18 +48,17 @@ const CORNERSTONE_GUIDES = [
 ];
 
 const DECK_CORE_PRIORITY = [
+  '/deck-payment-estimator',
   '/deck-builder-northern-virginia',
-  '/services/new-decks',
-  '/services/deck-replacement',
-  '/services/deck-inspection',
-  '/services/deck-repair-and-structural-maintenance',
-  '/how-much-does-a-deck-cost-northern-virginia',
-  '/deck-cost-calculator',
-  '/trex-vs-timbertech-vs-azek',
-  '/composite-deck-vs-wood-deck-virginia',
   '/deck-permit-loudoun-county-virginia',
   '/deck-permit-fairfax-county-virginia',
   '/hoa-deck-rules-northern-virginia',
+  '/trex-vs-timbertech-vs-azek',
+  '/covered-deck-builder-northern-virginia',
+  '/deck-resurfacing-vs-replacement',
+  '/education/deck-stair-construction-diagram',
+  '/before-and-after',
+  '/reviews',
 ];
 
 export default function RelatedGuides({ currentPath, category = null }) {
@@ -63,7 +69,7 @@ export default function RelatedGuides({ currentPath, category = null }) {
     const selected = DECK_CORE_PRIORITY
       .map(path => available.find(g => g.path === path))
       .filter(Boolean)
-      .slice(0, 5);
+      .slice(0, 6);
 
     return (
       <section style={{ background: '#f8f9fa', padding: '3rem 0', borderTop: '1px solid #e5e5e5' }}>

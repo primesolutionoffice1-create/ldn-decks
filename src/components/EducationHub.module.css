@@ -14,7 +14,7 @@
 .educationDescription {
   margin-left: auto;
   margin-right: auto;
-  max-width: 780px;
+  max-width: 860px;
   text-wrap: balance;
 }
 
@@ -170,6 +170,96 @@
   letter-spacing: 0.06em;
 }
 
+.routeSection {
+  background: #fcfbf9;
+  border-top: 1px solid #e8e4dc;
+  padding: 42px 0 46px;
+  overflow-x: hidden;
+}
+
+.routeGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px;
+}
+
+.routePanel {
+  background: #fff;
+  border: 1px solid #e8e4dc;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.routeTitle {
+  color: #111;
+  font-size: 24px;
+  line-height: 1.22;
+  margin: 0 0 12px;
+}
+
+.routeCopy {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 18px;
+}
+
+.localLinkGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.localLink {
+  border: 1px solid #e8e4dc;
+  border-radius: 999px;
+  color: #332f2b;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+.localLink:hover {
+  border-color: var(--site-color);
+  color: var(--site-color);
+}
+
+.proofRouteList {
+  display: grid;
+  gap: 12px;
+}
+
+.proofRoute {
+  border: 1px solid #e8e4dc;
+  border-radius: 8px;
+  color: inherit;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.proofRoute:hover {
+  border-color: var(--site-color);
+}
+
+.proofRouteTitle {
+  color: #111;
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.proofRouteDesc {
+  color: #666;
+  display: block;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 .leadCta {
   background: #222;
   color: #fff;
@@ -291,6 +381,10 @@
     grid-template-columns: 1fr;
   }
 
+  .routeGrid {
+    grid-template-columns: 1fr;
+  }
+
   .leadButtons {
     justify-content: flex-start;
   }
@@ -306,7 +400,7 @@
     line-height: 1.14;
     margin-left: 20px;
     margin-right: 20px;
-    max-width: 270px;
+    max-width: 320px;
   }
 
   .educationDescription,
@@ -315,7 +409,7 @@
     line-height: 1.55;
     margin-left: 20px;
     margin-right: 20px;
-    max-width: 240px;
+    max-width: 320px;
   }
 
   .headerActions {
@@ -364,8 +458,17 @@
     padding: 20px;
   }
 
+  .routePanel {
+    padding: 20px;
+  }
+
+  .routeTitle {
+    font-size: 21px;
+  }
+
   .sectionCopy,
   .clusterDesc,
+  .routeCopy,
   .leadCtaCopy,
   .leadQualifier,
   .sourceNoteText {

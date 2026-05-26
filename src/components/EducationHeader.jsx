@@ -12,10 +12,16 @@ export default function EducationHeader() {
         </div>
         <h1 className={`${styles.title} ${hubStyles.educationTitle}`}>Northern Virginia Deck Education Center</h1>
         <p className={`${styles.description} ${hubStyles.educationDescription}`}>
-          Expert guides for deck safety, permits, materials, costs, HOA approvals and outdoor living decisions in Loudoun, Fairfax, Prince William, Arlington and Stafford.
+          Practical deck planning guides for Northern Virginia homeowners who want to understand deck permits,
+          HOA approvals, composite vs wood options, Trex and TimberTech materials, deck costs, deck safety
+          and covered deck decisions before requesting an estimate. Use this education center to compare
+          project paths, prepare better questions and move from research to a clearer consultation with LDN Decks.
         </p>
         <div className={hubStyles.headerActions}>
-          <Link href="/contact" className={hubStyles.headerPrimaryBtn}>
+          <Link href="/deck-payment-estimator" className={hubStyles.headerPrimaryBtn}>
+            Use the Deck Payment Estimator
+          </Link>
+          <Link href="/contact" className={hubStyles.headerSecondaryBtn}>
             Get a Permit-Ready Estimate
           </Link>
           <Link href="/education/deck-material-comparison-2026" className={hubStyles.headerSecondaryBtn}>
