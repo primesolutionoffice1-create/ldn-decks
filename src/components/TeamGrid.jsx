@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import JsonLd from './JsonLd';
 import styles from './TeamGrid.module.css';
+import { BUSINESS } from '@/lib/business';
 
 const teamMembers = [
   {
@@ -87,7 +88,7 @@ export default function TeamGrid() {
     "award": [
       "Trex Platinum Partner — highest installer tier",
       "TimberTech Certified Installer",
-      "5.0★ Google Business Profile rating (49+ reviews)"
+      `5.0★ Google Business Profile rating (${BUSINESS.aggregateRating.reviewCount}+ reviews)`
     ],
     "areaServed": [
       { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },

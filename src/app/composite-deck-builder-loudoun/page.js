@@ -6,6 +6,7 @@ import MobileStickyCTA from '@/components/MobileStickyCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 
 const pageUrl = 'https://ldndecks.com/composite-deck-builder-loudoun';
 
@@ -39,7 +40,7 @@ const communities = [
 const trustBadges = [
   'Trex Platinum Partner',
   'TimberTech/AZEK Installer',
-  '49 Google Reviews',
+  `${BUSINESS.aggregateRating.reviewCount} Google Reviews`,
   'BBB A+ Rated',
   '5-Year Workmanship Warranty',
   'Licensed Virginia Contractor',
@@ -239,7 +240,7 @@ export default function CompositeDeckBuilderLoudounPage() {
             ))}
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 24 }}>
-            <Link href="/reviews" style={S.button}>Read All 49 Google Reviews</Link>
+            <Link href="/reviews" style={S.button}>Read All {BUSINESS.aggregateRating.reviewCount} Google Reviews</Link>
             <Link href="/before-and-after" style={S.outlineButton}>See Before &amp; After Projects</Link>
           </div>
         </div>

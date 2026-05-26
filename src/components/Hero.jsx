@@ -1,6 +1,7 @@
 import styles from './Hero.module.css';
 import Image from 'next/image';
 import HeroCTA from './HeroCTA';
+import { BUSINESS } from '@/lib/business';
 
 // Server component. The image, headline, and trust badge render at build time.
 // The two CTAs are isolated in HeroButtons (client) so only that subtree hydrates.
@@ -26,7 +27,7 @@ export default function Hero() {
         </div>
         <div className={styles.trustBadge}>
           <span className={styles.stars}>★★★★★</span>
-          <span className={styles.ratingText}>5.0 Google Rating | 49 Reviews</span>
+          <span className={styles.ratingText}>5.0 Google Rating | {BUSINESS.aggregateRating.reviewCount} Reviews</span>
         </div>
         <h1 className={styles.title}>
           Custom Deck Builder &amp; Contractor Serving Northern Virginia

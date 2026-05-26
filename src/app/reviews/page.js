@@ -8,8 +8,8 @@ import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/reviews',
-  title: 'Loudoun Decks Reviews | 5.0 Google Rating | 49+ Reviews',
-  description: 'Read what Northern Virginia homeowners say about Loudoun Decks. 5.0★ on Google with 49+ reviews. Real feedback from Ashburn, Leesburg, McLean, Vienna & more.',
+  title: `Loudoun Decks Reviews | 5.0 Google Rating | ${BUSINESS.aggregateRating.reviewCount}+ Reviews`,
+  description: `Read what Northern Virginia homeowners say about Loudoun Decks. 5.0★ on Google with ${BUSINESS.aggregateRating.reviewCount}+ reviews. Real feedback from Ashburn, Leesburg, McLean, Vienna & more.`,
 });
 
 // Review cards render from the single source of truth in lib/business.js.
@@ -25,7 +25,7 @@ export default function ReviewsPage() {
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>What Our Clients Say</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>5.0★ on Google with 49+ reviews from Northern Virginia homeowners</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>5.0★ on Google with {BUSINESS.aggregateRating.reviewCount}+ reviews from Northern Virginia homeowners</p>
           <div style={{ display: 'flex', gap: '2rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
             <div style={{ textAlign: 'center' }}>
               <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--color-primary)' }}>5.0</p>
@@ -33,7 +33,7 @@ export default function ReviewsPage() {
               <p style={{ color: '#aaa', fontSize: '0.9rem' }}>Google Rating</p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--color-primary)' }}>49+</p>
+              <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--color-primary)' }}>{BUSINESS.aggregateRating.reviewCount}+</p>
               <p style={{ color: '#aaa', fontSize: '0.9rem' }}>Verified Reviews</p>
             </div>
             <div style={{ textAlign: 'center' }}>
@@ -97,7 +97,7 @@ export default function ReviewsPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Join 49+ Happy Homeowners" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title={`Join ${BUSINESS.aggregateRating.reviewCount}+ Happy Homeowners`} buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/reviews" />
       <ContactHome />
     </>

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -38,7 +39,7 @@ export default function PressPage() {
                   ['Phone', '(571) 655-7207'],
                   ['Email', 'office@ldndecks.com'],
                   ['Website', 'ldndecks.com'],
-                  ['Google Rating', '5.0 stars (49+ verified reviews)'],
+                  ['Google Rating', `5.0 stars (${BUSINESS.aggregateRating.reviewCount}+ verified reviews)`],
                   ['Certifications', 'Trex Platinum Partner, TimberTech Certified Installer'],
                   ['License', 'Virginia Class A Contractor (DPOR Licensed)'],
                   ['Insurance', 'Fully insured general liability & workers\' comp'],
@@ -56,7 +57,7 @@ export default function PressPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Key Facts & Statistics</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem', lineHeight: 1.8 }}>
             <li><strong>200+ custom deck projects</strong> completed across Northern Virginia</li>
-            <li><strong>5.0-star Google rating</strong> with 49+ verified reviews</li>
+            <li><strong>5.0-star Google rating</strong> with {BUSINESS.aggregateRating.reviewCount}+ verified reviews</li>
             <li><strong>70+ cities served</strong> across 5 Northern Virginia counties</li>
             <li><strong>Trex Platinum Partner</strong> highest tier of Trex certification</li>
             <li><strong>TimberTech Certified Installer</strong> qualified for all product lines</li>

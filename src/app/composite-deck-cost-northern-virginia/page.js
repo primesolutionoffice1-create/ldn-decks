@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/composite-deck-cost-northern-virginia',
@@ -152,10 +153,10 @@ const productSchema = {
   },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "49",
-    bestRating: "5",
-    worstRating: "1",
+    ratingValue: BUSINESS.aggregateRating.ratingValue,
+    reviewCount: BUSINESS.aggregateRating.reviewCount,
+    bestRating: BUSINESS.aggregateRating.bestRating,
+    worstRating: BUSINESS.aggregateRating.worstRating,
   },
 };
 

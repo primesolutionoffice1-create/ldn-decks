@@ -6,6 +6,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import TrustBanner from '@/components/TrustBanner';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/how-to-choose-a-deck-builder-northern-virginia',
@@ -109,7 +110,7 @@ export default function ChooseDeckBuilderPage() {
                 ['HOA', 'We prepare and submit ARC packages 100% approval rate across 50+ communities'],
                 ['Materials', 'Trex Pro certified installer + TimberTech + AZEK'],
                 ['Warranty', '2-year workmanship warranty in writing, on top of manufacturer warranties'],
-                ['Reviews', '5.0★ on Google with 49 reviews'],
+                ['Reviews', `5.0★ on Google with ${BUSINESS.aggregateRating.reviewCount} reviews`],
                 ['References', 'Happy to share recent project contacts in your neighborhood'],
               ].map(([label, detail]) => (
                 <li key={label} style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}>

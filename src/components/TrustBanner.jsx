@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './TrustBanner.module.css';
+import { BUSINESS } from '@/lib/business';
 
 export default function TrustBanner() {
   return (
@@ -16,7 +17,7 @@ export default function TrustBanner() {
         <div className={styles.icon} aria-hidden="true">⭐</div>
         <div className={styles.text}>
           <strong>5.0 Google Rating</strong>
-          <span>49+ Five-Star Reviews</span>
+          <span>{BUSINESS.aggregateRating.reviewCount}+ Five-Star Reviews</span>
         </div>
       </div>
       <div className={styles.divider}></div>

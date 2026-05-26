@@ -7,6 +7,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -36,7 +37,7 @@ export default function ArlingtonDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · 49 reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>

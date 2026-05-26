@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ContactHome from '@/components/ContactHome';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/social',
@@ -41,7 +42,7 @@ const socialProfiles = [
     name: 'Google Business',
     handle: 'Loudoun Decks',
     url: 'https://www.google.com/maps/place/Loudoun+Decks/',
-    desc: '49+ five-star reviews. See our location, hours, photos, and leave a review.',
+    desc: `${BUSINESS.aggregateRating.reviewCount}+ five-star reviews. See our location, hours, photos, and leave a review.`,
     color: '#4285F4',
     icon: 'G',
   },
@@ -169,7 +170,7 @@ export default function SocialPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/before-and-after', 'Before & After Deck Transformations'],
-              ['/reviews', 'Read Our 49+ Google Reviews'],
+              ['/reviews', `Read Our ${BUSINESS.aggregateRating.reviewCount}+ Google Reviews`],
               ['/team', 'Meet Our Team'],
               ['/about/certifications-and-licenses', 'Certifications & Licenses'],
               ['/showcase', 'Full Project Gallery'],
