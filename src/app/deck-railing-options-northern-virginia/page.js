@@ -96,7 +96,7 @@ export default function DeckRailingPage() {
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Minimum height:</strong> 36 inches (some Fairfax County areas require 42 inches for decks over 30&quot; above grade)</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Baluster spacing:</strong> Maximum 4 inches apart (the &quot;4-inch sphere rule&quot; no child&apos;s head can pass through)</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Load rating:</strong> Must withstand 200 lbs of concentrated force at the top rail</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Graspable handrail:</strong> Required on all stairs 1.25&quot; to 2&quot; diameter, continuous. For tread, riser, stringer, and landing planning, see our <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Graspable handrail:</strong> Required on all stairs 1.25&quot; to 2&quot; diameter, continuous. For tread, riser, stringer, and landing planning, see our <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>; for rise, run, handrail height, and guard requirements, see the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link>.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Cable rail:</strong> Maximum 3&quot; spacing between cables, must pass 200-lb load test</li>
           </ul>
           <p style={S.p}><strong>HOA note:</strong> Many Northern Virginia HOAs have additional restrictions beyond building code specific railing profiles, colors, or style requirements. We check your HOA guidelines before recommending a railing system. <Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read our HOA guide</Link>.</p>
@@ -130,6 +130,7 @@ export default function DeckRailingPage() {
             {[
               ['/services/trex-railings', 'Trex Railing Installation'],
               ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
+              ['/education/deck-stair-code-rise-run-virginia', 'Virginia Deck Stair Code Guide'],
               ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing and Deck Attachment'],
               ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
