@@ -16,6 +16,7 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-woodbridge-va',
@@ -156,6 +157,7 @@ export default function DeckBuilderWoodbridgePage() {
         canonicalUrl="https://ldndecks.com/deck-builder-woodbridge-va"
       />
       <ServiceAreasGrid />
+      <CityAuthorityExpansion cityKey="woodbridge" />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
