@@ -34,18 +34,24 @@ const itemListSchema = {
     {
       '@type': 'ListItem',
       position: 3,
+      name: 'Deck Joist Span Calculator Virginia',
+      url: `${BUSINESS.url}/tools/deck-joist-span-calculator-virginia`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
       name: 'Virginia Deck Stair Calculator',
       url: `${BUSINESS.url}/tools/deck-stair-calculator`,
     },
     {
       '@type': 'ListItem',
-      position: 4,
+      position: 5,
       name: 'Deck Cost Calculator',
       url: `${BUSINESS.url}/deck-cost-calculator`,
     },
     {
       '@type': 'ListItem',
-      position: 5,
+      position: 6,
       name: 'Deck Payment Estimator',
       url: `${BUSINESS.url}/deck-payment-estimator`,
     },
@@ -62,6 +68,11 @@ const tools = [
     href: '/tools/deck-beam-span-calculator-virginia',
     title: 'Deck Beam Span Calculator Virginia',
     desc: 'Estimate beam span, post spacing, tributary width, cantilever checks and framing review warnings.',
+  },
+  {
+    href: '/tools/deck-joist-span-calculator-virginia',
+    title: 'Deck Joist Span Calculator Virginia',
+    desc: 'Estimate joist span, spacing, cantilever limits and composite decking support warnings.',
   },
   {
     href: '/tools/deck-stair-calculator',
