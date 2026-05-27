@@ -258,6 +258,16 @@ export default function CoveredDeckCostPage() {
                 Composite Deck Cost in Northern Virginia →
               </Link>
             </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/louvered-pergola-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Louvered Pergola in Northern Virginia →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/three-season-room-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Three-Season Room Builder →
+              </Link>
+            </li>
           </ul>
 
           <h2 style={S.h2}>FAQ</h2>

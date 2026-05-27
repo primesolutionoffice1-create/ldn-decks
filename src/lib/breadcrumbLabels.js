@@ -195,6 +195,14 @@ export const SEGMENT_LABELS = {
   'deck-joist-span-calculator-virginia': 'Deck Joist Span Calculator',
   'deck-load-calculator-virginia': 'Deck Load Calculator',
   'deck-stair-calculator': 'Deck Stair Calculator',
+
+  // New cost/financing comparison pages
+  'ashburn-composite-deck-cost-financing': 'Ashburn Composite Deck Cost & Financing',
+  'composite-deck-cost-by-size': 'Composite Deck Cost by Size',
+  'covered-deck-cost-northern-virginia': 'Covered Deck Cost in Northern Virginia',
+  'deck-permit-hoa-cost-loudoun-county': 'Deck Permit & HOA Cost — Loudoun County',
+  'resurface-or-replace-deck-financing': 'Resurface or Replace — Financing Guide',
+  'wood-vs-composite-deck-long-term-cost': 'Wood vs Composite Deck Long-Term Cost',
 };
 
 const humanize = (slug) =>

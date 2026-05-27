@@ -311,6 +311,42 @@ Entity ID: https://ldndecks.com/#organization
 - Type: Tool/calculator
 - Updated: 2026-05-25
 
+### Composite Deck Cost by Size
+- URL: https://ldndecks.com/composite-deck-cost-by-size
+- Content: Real 2026 pricing for 300, 400, 500, and 600 sqft composite decks in Northern Virginia. Three-tier pricing (budget, mid, premium) per size, monthly payment estimates, and FAQ.
+- Intent: Informational/commercial — size-specific cost research
+- Updated: 2026-05-27
+
+### Covered Deck Cost Northern Virginia
+- URL: https://ldndecks.com/covered-deck-cost-northern-virginia
+- Content: Covered deck cost guide — $35k–$85k+. Roof type comparison (pergola, solid pergola, hip/gable roof, screened porch conversion). Total project pricing with monthly payment examples.
+- Intent: Informational/commercial — covered deck budget planning
+- Updated: 2026-05-27
+
+### Ashburn Composite Deck Cost & Financing
+- URL: https://ldndecks.com/ashburn-composite-deck-cost-financing
+- Content: Neighborhood-level deck pricing for Ashburn VA — Ashburn Village, Brambleton, Broadlands, Belmont Country Club, One Loudoun, Stone Ridge. HOA-aware planning, monthly payment math.
+- Intent: Local commercial — Ashburn homeowners researching deck cost
+- Updated: 2026-05-27
+
+### Wood vs Composite Deck Long-Term Cost
+- URL: https://ldndecks.com/wood-vs-composite-deck-long-term-cost
+- Content: 15-year total cost comparison — wood vs composite including annual maintenance, stain/seal, board replacement, sanding. Shows composite often equal or cheaper over 15 years.
+- Intent: Informational — material decision research
+- Updated: 2026-05-27
+
+### Resurface or Replace — Financing Decision Guide
+- URL: https://ldndecks.com/resurface-or-replace-deck-financing
+- Content: Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, monthly payment math. Resurfacing saves $7k–$16k per project.
+- Intent: Informational/commercial — pre-financing decision
+- Updated: 2026-05-27
+
+### Deck Permit & HOA Cost in Loudoun County
+- URL: https://ldndecks.com/deck-permit-hoa-cost-loudoun-county
+- Content: Loudoun County deck permit fees ($200–$1,200), HOA approval cost ($0–$500), timeline, engineering drawing requirements, inspection schedule. Total permit+HOA budget: $500–$2,500.
+- Intent: Informational — permit and HOA budget planning
+- Updated: 2026-05-27
+
 ---
 
 ## MATERIAL COMPARISON CONTENT

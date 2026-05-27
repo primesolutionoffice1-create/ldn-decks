@@ -262,6 +262,35 @@ export default function CompositeDeckCostBySizePage() {
             first to refine the project amount itself.
           </p>
 
+          <h2 style={S.h2}>Related Cost & Material Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0, marginBottom: '1.5rem' }}>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Composite Deck Cost in Northern Virginia →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/wood-vs-composite-deck-long-term-cost" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Wood vs Composite: 15-Year Cost Analysis →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Trex Decks — Platinum Partner →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/timbertech-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                TimberTech & AZEK Decks →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Deck Financing Options →
+              </Link>
+            </li>
+          </ul>
+
           <h2 style={S.h2}>FAQ</h2>
           {faqs.map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 10, padding: '1.25rem', marginBottom: '0.75rem', background: '#fff' }}>

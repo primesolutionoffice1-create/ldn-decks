@@ -223,6 +223,26 @@ export default function WoodVsCompositeLongTermPage() {
                 Best Deck Stain & Sealer for Virginia →
               </Link>
             </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Trex vs TimberTech vs AZEK Comparison →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Deck Cost Calculator →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Monthly Payment Estimator →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Deck Financing Options →
+              </Link>
+            </li>
           </ul>
 
           <h2 style={S.h2}>FAQ</h2>
