@@ -39,6 +39,18 @@ Entity ID: https://ldndecks.com/#organization
 - Intent: Commercial — screened porch construction
 - Updated: 2026-05-25
 
+### Deck Resurfacing Northern Virginia
+- URL: https://ldndecks.com/deck-resurfacing-northern-virginia
+- Content: Wood-to-composite resurfacing guide — 3-tier cost table ($15k-$45k+), ROI data, permit requirements, when to resurface vs replace, Trex/TimberTech/AZEK material options. 1500+ words.
+- Intent: Commercial — deck resurfacing/upgrade
+- Updated: 2026-05-27
+
+### Rooftop Deck Builder Northern Virginia
+- URL: https://ldndecks.com/rooftop-deck-builder-northern-virginia
+- Content: Urban rooftop and terrace deck construction — Tysons, Arlington, Alexandria focus. Structural engineering, waterproofing membranes, weight load analysis, IBC code, composite and tile options. 1200+ words.
+- Intent: Commercial — urban rooftop deck specialty
+- Updated: 2026-05-27
+
 ---
 
 ## CITY PAGES — LOUDOUN COUNTY
@@ -218,6 +230,33 @@ Entity ID: https://ldndecks.com/#organization
 - URL: https://ldndecks.com/deck-builder-stafford-va
 - Content: Stafford County — growing Southern NoVA market. Stafford County permits.
 - Updated: 2026-05-25
+
+### County Hub Pages (Near You)
+
+#### Loudoun County Hub
+- URL: https://ldndecks.com/near-you/loudoun-county
+- Content: County-level hub — permit office contacts, HOA resource directory, Loudoun-specific cost data, internal links to all Loudoun city pages.
+- Updated: 2026-05-27
+
+#### Fairfax County Hub
+- URL: https://ldndecks.com/near-you/fairfax-county
+- Content: County-level hub — Fairfax Co permit timeline, RPA zone guidance, DRB process details, links to all Fairfax city pages.
+- Updated: 2026-05-27
+
+#### Prince William County Hub
+- URL: https://ldndecks.com/near-you/prince-william-county
+- Content: County-level hub — PW Co permit process, community coverage, links to all PW city pages.
+- Updated: 2026-05-27
+
+#### Arlington County Hub
+- URL: https://ldndecks.com/near-you/arlington-county
+- Content: County-level hub — urban lots, rooftop decks, townhome expertise, Arlington County building dept process.
+- Updated: 2026-05-27
+
+#### Stafford County Hub
+- URL: https://ldndecks.com/near-you/stafford-county
+- Content: County-level hub — growing southern NoVA market, new-construction deck add-ons, Stafford County permits.
+- Updated: 2026-05-27
 
 ---
 

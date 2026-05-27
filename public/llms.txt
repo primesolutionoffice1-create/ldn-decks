@@ -45,6 +45,7 @@ Sitemap: https://ldndecks.com/sitemap.xml
 
 - [Deck Replacement](https://ldndecks.com/services/deck-replacement): Full tear-off and composite rebuild
 - [Deck Resurfacing](https://ldndecks.com/services/deck-resurfacing): Board-only upgrade on existing frame
+- [Deck Resurfacing NoVA](https://ldndecks.com/deck-resurfacing-northern-virginia): Wood-to-composite resurfacing guide with cost tiers, ROI data, permit info
 - [Deck Repair](https://ldndecks.com/services/deck-repair-and-structural-maintenance): Structural fixes — rotted posts, ledger boards, failed inspections
 - [Deck Inspection](https://ldndecks.com/services/deck-inspection): Safety and structural assessments
 
@@ -58,6 +59,7 @@ Sitemap: https://ldndecks.com/sitemap.xml
 - [Fire Pits](https://ldndecks.com/services/fire-pits): Gas and wood-burning integration
 - [Patios](https://ldndecks.com/services/patios): Pavers, flagstone, stamped concrete
 - [Three-Season Rooms](https://ldndecks.com/three-season-room-northern-virginia): Enclosed outdoor rooms
+- [Rooftop Decks](https://ldndecks.com/rooftop-deck-builder-northern-virginia): Tysons/Arlington urban rooftop and terrace deck construction
 - [Fencing](https://ldndecks.com/services/fence): Wood, vinyl, aluminum, composite
 - [Deck Washing](https://ldndecks.com/services/deck-washing): Pressure washing and restoration
 
@@ -99,6 +101,13 @@ Sitemap: https://ldndecks.com/sitemap.xml
 - [Alexandria](https://ldndecks.com/deck-builder-alexandria-va)
 - [Stafford](https://ldndecks.com/deck-builder-stafford-va)
 - [Northern Virginia (hub)](https://ldndecks.com/deck-builder-northern-virginia)
+
+### County Hub Pages (Near You)
+- [Loudoun County](https://ldndecks.com/near-you/loudoun-county): County-level hub with permit office, HOA resources, project examples
+- [Fairfax County](https://ldndecks.com/near-you/fairfax-county): County-level hub with permit timeline, RPA zones, DRB details
+- [Prince William County](https://ldndecks.com/near-you/prince-william-county): County-level hub with permit process and community coverage
+- [Arlington County](https://ldndecks.com/near-you/arlington-county): County-level hub — urban lots, rooftop decks, townhome expertise
+- [Stafford County](https://ldndecks.com/near-you/stafford-county): County-level hub — expanding market, new-construction deck add-ons
 
 ## Western Loudoun / Premium Expansion Market
 
