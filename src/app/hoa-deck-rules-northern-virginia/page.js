@@ -95,18 +95,37 @@ export default function HOADeckRulesPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Communities We&apos;ve Built In</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
-            {[
-              { county: 'Loudoun County', communities: ['Broadlands', 'Ashburn Farm', 'Belmont Country Club', 'Brambleton', 'Stone Ridge', 'One Loudoun', 'Loudoun Valley Estates', 'South Riding', 'Lansdowne', 'Potomac Falls'] },
-              { county: 'Fairfax County', communities: ['Reston', 'Burke Centre', 'West Springfield', 'Fair Oaks', 'Centreville Farms', 'Sully Station', 'Virginia Run', 'Oak Hill', 'Franklin Farm', 'Chantilly Highlands'] },
-              { county: 'Prince William County', communities: ['Dominion Valley', 'Piedmont', 'Bristow Manor', 'Lake Ridge', 'Dale City', 'Montclair', 'Gainesville', 'Haymarket', 'Kingstowne', 'Occoquan'] },
-            ].map(({ county, communities }) => (
-              <div key={county}>
-                <h3 style={{ fontWeight: 600, marginBottom: '0.5rem' }}>{county}</h3>
-                <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
-                  {communities.map(c => <li key={c} style={{ marginBottom: '0.25rem', color: '#555' }}>{c}</li>)}
-                </ul>
-              </div>
-            ))}
+            {(() => {
+              // Communities with dedicated HOA-rules pages get linked; the rest render as plain text.
+              const HOA_PAGE = {
+                'Broadlands': '/broadlands-hoa-deck-rules',
+                'Brambleton': '/brambleton-hoa-deck-rules',
+                'Belmont Country Club': '/belmont-country-club-hoa-deck-rules',
+                'Stone Ridge': '/stone-ridge-hoa-deck-rules',
+                'One Loudoun': '/one-loudoun-hoa-deck-rules',
+                'Lansdowne': '/lansdowne-hoa-deck-rules',
+                'Ashburn Village': '/ashburn-village-hoa-deck-rules',
+              };
+              const groups = [
+                { county: 'Loudoun County', communities: ['Broadlands', 'Ashburn Farm', 'Ashburn Village', 'Belmont Country Club', 'Brambleton', 'Stone Ridge', 'One Loudoun', 'Loudoun Valley Estates', 'South Riding', 'Lansdowne', 'Potomac Falls'] },
+                { county: 'Fairfax County', communities: ['Reston', 'Burke Centre', 'West Springfield', 'Fair Oaks', 'Centreville Farms', 'Sully Station', 'Virginia Run', 'Oak Hill', 'Franklin Farm', 'Chantilly Highlands'] },
+                { county: 'Prince William County', communities: ['Dominion Valley', 'Piedmont', 'Bristow Manor', 'Lake Ridge', 'Dale City', 'Montclair', 'Gainesville', 'Haymarket', 'Kingstowne', 'Occoquan'] },
+              ];
+              return groups.map(({ county, communities }) => (
+                <div key={county}>
+                  <h3 style={{ fontWeight: 600, marginBottom: '0.5rem' }}>{county}</h3>
+                  <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
+                    {communities.map(c => (
+                      <li key={c} style={{ marginBottom: '0.25rem', color: '#555' }}>
+                        {HOA_PAGE[c]
+                          ? <Link href={HOA_PAGE[c]} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{c}</Link>
+                          : c}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ));
+            })()}
           </div>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>

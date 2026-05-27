@@ -52,6 +52,15 @@ const CORNERSTONE_GUIDES = [
   { path: '/services/deck-repair-and-structural-maintenance', title: 'Deck Repair & Structural Maintenance', desc: 'Fixing rotted posts and failed inspections in Loudoun & Fairfax.' },
   { path: '/blog/deck-structural-repair-rot-prevention', title: 'Deck Repair & Rot Prevention Guide', desc: 'Surgical structural fixes for Northern Virginia homes.' },
   { path: '/blog/loudoun-county-deck-permit-guide-2026', title: '2026 Loudoun Deck Permit Blueprint', desc: 'Everything you need to know for LandMARC approval.' },
+  // Orphan-recovery additions (audited 2026-05-27): each previously had 0 inbound
+  // links from other site pages. Adding them here distributes PageRank and lets
+  // crawlers discover them without relying on sitemap alone.
+  { path: '/deck-design-ideas-2026', title: 'Deck Design Ideas 2026', desc: 'Current design trends, color combos and layout ideas for Northern Virginia homes.' },
+  { path: '/deck-materials-comparison-virginia', title: 'Deck Materials Comparison', desc: 'Side-by-side wood, composite, PVC and aluminum decking for Virginia climate.' },
+  { path: '/deck-remodeling', title: 'Deck Remodeling Services', desc: 'Update, expand or reconfigure an existing deck without a full tear-down.' },
+  { path: '/deck-repair', title: 'Deck Repair Services', desc: 'Targeted structural and surface repairs for older Northern Virginia decks.' },
+  { path: '/questions-to-ask-before-building-a-deck', title: '20 Questions Before Building a Deck', desc: 'Budget, materials, permits, HOA and timeline questions every homeowner should answer.' },
+  { path: '/winterize-your-deck-northern-virginia', title: 'Winterize Your Deck', desc: 'Northern Virginia winter prep checklist to prevent freeze-thaw damage.' },
 ];
 
 const DECK_CORE_PRIORITY = [
