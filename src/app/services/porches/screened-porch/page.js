@@ -16,12 +16,16 @@ import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
-export const metadata = buildMetadata({
+const _meta = buildMetadata({
     path: "/services/porches/screened-porch",
     title: "Screened Porch Builder & Contractor | Northern Virginia",
     description: "Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k. Trex Platinum installer.",
   image: "/images/img01.jpeg",
 });
+export const metadata = {
+  ..._meta,
+  alternates: { canonical: 'https://ldndecks.com/screened-porch-builder-northern-virginia' },
+};
 
 const inclusions = [
   {
