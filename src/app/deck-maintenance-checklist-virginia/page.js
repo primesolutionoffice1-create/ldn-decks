@@ -23,6 +23,16 @@ const faqSchema = {
   ],
 };
 
+<<<<<<< Updated upstream
+=======
+// HowTo JSON-LD was removed 2026-05-27: Google deprecated HowTo rich
+// results in August 2023 for general web pages. The visible seasonal
+// checklist below remains; AI deep-linking is enabled via #step-N
+// anchor IDs on each season's <h2>. See vault/.../schema/Schema
+// Implementation Plan.md#deprecated--disallowed-types-do-not-emit
+// and the NAP-drift sentinel in scripts/validate-seo-schema.mjs.
+
+>>>>>>> Stashed changes
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, h3: { fontSize: '1.2rem', fontWeight: 600, margin: '1.5rem 0 0.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 } };
 
 export default function DeckMaintenancePage() {
