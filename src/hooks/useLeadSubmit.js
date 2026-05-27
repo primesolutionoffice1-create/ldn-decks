@@ -2,7 +2,7 @@
 import { useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { sendContactEmail } from '@/server/sendEmail';
-import { trackFormSubmit } from '@/lib/tracking';
+import { markLeadConfirmationPending, trackFormSubmit } from '@/lib/tracking';
 import { getClickIds, getFbp, getUtmParams, CLICK_ID_KEYS, UTM_KEYS } from '@/lib/clickIds';
 
 // Shared submission pipeline for every lead form on the site.
@@ -108,6 +108,7 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
           eventId,
         });
       }
+      markLeadConfirmationPending(eventId);
       router.push(`/thank-you?eid=${encodeURIComponent(eventId)}`);
       return { success: true, eventId };
     }

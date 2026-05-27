@@ -14,7 +14,7 @@ import { trackLeadConfirmed } from '@/lib/tracking';
 export default function ThankYouTracking() {
   const searchParams = useSearchParams();
   useEffect(() => {
-    const eventId = searchParams.get('eid') || null;
+    const eventId = searchParams.get('eid');
     trackLeadConfirmed({ eventId });
   }, [searchParams]);
   return null;
