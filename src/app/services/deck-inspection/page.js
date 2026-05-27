@@ -74,6 +74,7 @@ export default function DeckInspectionPage() {
           decks inherently vulnerable to water intrusion and dangerously pulling away from the house. If you want the
           structural background before booking, start with the <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia</Link>,{' '}
           <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Beam Span Calculator Virginia</Link>,{' '}
+          <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Joist Span Calculator Virginia</Link>,{' '}
           <Link href="/deck-footing-code-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing code guide</Link>,{' '}
           <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>,{' '}
           <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair rise and run calculator</Link>
