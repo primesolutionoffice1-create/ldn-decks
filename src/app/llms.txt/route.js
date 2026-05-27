@@ -52,6 +52,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Composite Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): Brand-by-brand composite pricing (Trex, TimberTech, AZEK, Fiberon)
 - [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator): Interactive calculator with instant estimates
 - [Deck Footing Depth Calculator Virginia](https://ldndecks.com/tools/deck-footing-depth-calculator-virginia): Interactive footing depth, diameter, frost-depth and inspection planning tool for Northern Virginia decks
+- [Deck Beam Span Calculator Virginia](https://ldndecks.com/tools/deck-beam-span-calculator-virginia): Interactive beam span, post spacing, tributary width and framing warning tool for Northern Virginia deck planning
 - [Virginia Deck Stair Calculator](https://ldndecks.com/tools/deck-stair-calculator): Interactive rise-run planner for step count, exact riser height, total run, stair angle and safety warnings
 - [Trex vs TimberTech vs AZEK](https://ldndecks.com/trex-vs-timbertech-vs-azek): Brand comparison guide
 - [Composite vs Wood](https://ldndecks.com/composite-deck-vs-wood-deck-virginia): Material decision guide
@@ -81,6 +82,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Deck Material Comparison](https://ldndecks.com/education/deck-material-comparison-2026): Wood vs composite vs PVC for Northern Virginia homes
 - [Deck Load Paths](https://ldndecks.com/education/understanding-deck-load-paths): How deck weight transfers through boards, joists, beams, posts and footings
 - [Deck Footing Depth Calculator Virginia](https://ldndecks.com/tools/deck-footing-depth-calculator-virginia): Planning tool for footing depth, diameter, frost-depth guidance, warning conditions and inspection notes
+- [Deck Beam Span Calculator Virginia](https://ldndecks.com/tools/deck-beam-span-calculator-virginia): Planning tool for beam span, post spacing, tributary width, cantilever checks and framing review warnings
 - [Deck Drainage Systems](https://ldndecks.com/education/deck-drainage-systems-guide): Dry under-deck space and drainage planning
 - [Fairfax Deck Setbacks](https://ldndecks.com/education/fairfax-county-deck-setbacks-zoning): Fairfax County deck setback and zoning education
 - [HOA Deck Approval](https://ldndecks.com/education/hoa-deck-approval-guidelines-nova): HOA/ARC deck approval planning in Northern Virginia
