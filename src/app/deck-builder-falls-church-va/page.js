@@ -189,7 +189,7 @@ export default function FallsChurchDeckBuilderPage() {
             ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
             ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
             ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
-            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
             ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Comparison'],
           ].map(([href, text]) => (
             <li key={href} style={{ marginBottom: '0.5rem' }}>

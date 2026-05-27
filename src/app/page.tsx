@@ -19,6 +19,7 @@ const ContactHome = dynamic(() => import("@/components/ContactHome"));
 const RelatedGuides = dynamic(() => import("@/components/RelatedGuides"));
 const HomeQuickLinks = dynamic(() => import("@/components/HomeQuickLinks"));
 const HomeSEOContent = dynamic(() => import("@/components/HomeSEOContent"));
+const HomeAuthorityBridge = dynamic(() => import("@/components/HomeAuthorityBridge"));
 const NoVAPermitTimeline = dynamic(() => import("@/components/NoVAPermitTimeline"));
 const BlogFeed = dynamic(() => import("@/components/BlogFeed"));
 const JsonLd = dynamic(() => import("@/components/JsonLd"), { ssr: true });
@@ -55,18 +56,27 @@ const homepageSchema = {
     "cssSelector": ["h1", "[data-speakable]"]
   },
   "significantLink": [
+    "https://ldndecks.com/services/new-decks",
     "https://ldndecks.com/composite-decks",
+    "https://ldndecks.com/trex-decks",
+    "https://ldndecks.com/timbertech-decks",
     "https://ldndecks.com/services/deck-replacement",
+    "https://ldndecks.com/services/deck-repair-and-structural-maintenance",
+    "https://ldndecks.com/services/deck-inspection",
     "https://ldndecks.com/deck-resurfacing-vs-replacement",
     "https://ldndecks.com/screened-porch-builder-northern-virginia",
+    "https://ldndecks.com/covered-deck-builder-northern-virginia",
     "https://ldndecks.com/services",
     "https://ldndecks.com/northern-virginia-deck-building-guide",
     "https://ldndecks.com/composite-deck-cost-northern-virginia",
-    "https://ldndecks.com/composite-deck-cost-northern-virginia",
+    "https://ldndecks.com/tools",
+    "https://ldndecks.com/tools/deck-load-calculator-virginia",
     "https://ldndecks.com/before-and-after",
     "https://ldndecks.com/areas-we-serve",
+    "https://ldndecks.com/deck-builder-purcellville-va",
     "https://ldndecks.com/reviews",
     "https://ldndecks.com/deck-cost-calculator",
+    "https://ldndecks.com/about",
     "https://ldndecks.com/contact"
   ],
   // Homepage main entity is the canonical organization, referenced by @id only.
@@ -86,6 +96,15 @@ const homepageSchema = {
       "outdoor kitchen builder",
       "pergola and gazebo builder",
       "deck repair and structural maintenance",
+      "deck inspection",
+      "deck stair construction",
+      "deck lighting",
+      "deck load planning",
+      "beam span planning",
+      "joist span planning",
+      "AZEK PVC decking",
+      "Purcellville outdoor living",
+      "Western Loudoun deck builder",
       "deck permits Northern Virginia",
       "HOA deck approval",
       "patio construction",
@@ -106,7 +125,9 @@ const homepageSchema = {
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/outdoor-kitchen-builder-northern-virginia#service", "name": "Outdoor Kitchen Construction", "url": "https://ldndecks.com/outdoor-kitchen-builder-northern-virginia" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/gazebo-pergola#service", "name": "Pergola and Gazebo Construction", "url": "https://ldndecks.com/services/gazebo-pergola" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/deck-repair-and-structural-maintenance#service", "name": "Deck Repair & Structural Maintenance", "url": "https://ldndecks.com/services/deck-repair-and-structural-maintenance" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/patios#service", "name": "Patio Construction", "url": "https://ldndecks.com/services/patios" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/patios#service", "name": "Patio Construction", "url": "https://ldndecks.com/services/patios" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/deck-inspection#service", "name": "Deck Inspection", "url": "https://ldndecks.com/services/deck-inspection" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/deck-stair-lighting#service", "name": "Deck Stair Lighting", "url": "https://ldndecks.com/services/deck-stair-lighting" } }
       ]
     }
   }
@@ -142,6 +163,7 @@ export default function Home() {
             <Testimonials />
             <BlogFeed />
             <HomeSEOContent />
+            <HomeAuthorityBridge />
             <div style={{ maxWidth: 900, margin: '2rem auto 0', padding: '0 1.5rem' }}>
               <NamedAuthor context="Loudoun, Fairfax and Prince William counties" />
             </div>

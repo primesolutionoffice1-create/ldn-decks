@@ -14,7 +14,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
-import CallLink from '@/components/CallLink';
+import AboutTrustExpansion from '@/components/AboutTrustExpansion';
 
 export const metadata = buildMetadata({
   path: '/about',
@@ -36,11 +36,55 @@ const aboutFaqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://ldndecks.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'About Loudoun Decks',
+      item: 'https://ldndecks.com/about',
+    },
+  ],
+};
+
+const aboutPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': 'https://ldndecks.com/about#aboutpage',
+  url: 'https://ldndecks.com/about',
+  name: 'About Loudoun Decks',
+  description: "Company trust, process, local expertise, planning standards and homeowner resources for Loudoun Decks in Northern Virginia.",
+  isPartOf: { '@id': 'https://ldndecks.com/#website' },
+  about: { '@id': 'https://ldndecks.com/#organization' },
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: 'https://ldndecks.com/home-page-ldn.webp',
+  },
+  significantLink: [
+    'https://ldndecks.com/reviews',
+    'https://ldndecks.com/before-and-after',
+    'https://ldndecks.com/about/certifications-and-licenses',
+    'https://ldndecks.com/tools',
+    'https://ldndecks.com/composite-deck-cost-northern-virginia',
+    'https://ldndecks.com/contact',
+  ],
+};
+
 export default function AboutPage() {
   return (
     <main>
       <WebPageSchema url="https://ldndecks.com/about" name="About Loudoun Decks | Top-Rated Deck Builder Northern Virginia" description="Meet the team behind Northern Virginia's top-rated deck builder. VA Class A Licensed, Trex Platinum Partner, 5.0★ Google. Founded by Nicolae Zugrav." speakable />
       <JsonLd data={aboutFaqSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={aboutPageSchema} />
       <AboutHeader />
       <QualityLeader />
       <StatsRow />
@@ -176,6 +220,7 @@ export default function AboutPage() {
       </section>
 
       <AboutDetails />
+      <AboutTrustExpansion />
       <TeamGrid />
       <SimpleCTA title="Ready to Transform Your Outdoor Space?" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/about" />

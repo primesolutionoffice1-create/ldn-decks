@@ -224,7 +224,7 @@ Entity ID: https://ldndecks.com/#organization
 ## PRICING & COST CONTENT
 
 ### How Much Does a Deck Cost in Northern Virginia?
-- URL: https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia
+- URL: https://ldndecks.com/composite-deck-cost-northern-virginia
 - Content: Definitive cost guide — $30-$75/sqft installed. Real project price tables by material tier. Labor breakdown. What drives the price up or down.
 - Intent: Informational/commercial — cost research phase
 - Updated: 2026-05-25
@@ -240,7 +240,7 @@ Entity ID: https://ldndecks.com/#organization
 - Updated: 2026-05-25
 
 ### 2026 Deck Cost Report
-- URL: https://ldndecks.com/northern-virginia-deck-cost-report-2026
+- URL: https://ldndecks.com/composite-deck-cost-northern-virginia
 - Content: Annual market pricing report with tariff impact analysis, material inflation tracking.
 - Updated: 2026-05-25
 
