@@ -10,7 +10,7 @@ const pageUrl = `${BUSINESS.url}${path}`;
 export const metadata = buildMetadata({
   path,
   title: 'Deck Planning Tools | Loudoun Decks',
-  description: 'Free deck planning tools from Loudoun Decks for Northern Virginia homeowners, including stair rise-run planning and project calculators.',
+  description: 'Free deck planning tools from Loudoun Decks for Northern Virginia homeowners, including footing depth, stair rise-run and project calculators.',
 });
 
 const itemListSchema = {
@@ -22,18 +22,24 @@ const itemListSchema = {
     {
       '@type': 'ListItem',
       position: 1,
+      name: 'Deck Footing Depth Calculator Virginia',
+      url: `${BUSINESS.url}/tools/deck-footing-depth-calculator-virginia`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
       name: 'Virginia Deck Stair Calculator',
       url: `${BUSINESS.url}/tools/deck-stair-calculator`,
     },
     {
       '@type': 'ListItem',
-      position: 2,
+      position: 3,
       name: 'Deck Cost Calculator',
       url: `${BUSINESS.url}/deck-cost-calculator`,
     },
     {
       '@type': 'ListItem',
-      position: 3,
+      position: 4,
       name: 'Deck Payment Estimator',
       url: `${BUSINESS.url}/deck-payment-estimator`,
     },
@@ -41,6 +47,11 @@ const itemListSchema = {
 };
 
 const tools = [
+  {
+    href: '/tools/deck-footing-depth-calculator-virginia',
+    title: 'Deck Footing Depth Calculator Virginia',
+    desc: 'Estimate footing depth, footing diameter, frost-depth guidance and inspection notes for deck planning.',
+  },
   {
     href: '/tools/deck-stair-calculator',
     title: 'Virginia Deck Stair Calculator',
@@ -78,7 +89,7 @@ export default function DeckToolsPage() {
             Deck Planning Tools
           </h1>
           <p style={{ maxWidth: 700, color: 'rgba(255,255,255,0.82)', fontSize: '1.08rem', lineHeight: 1.65, margin: 0 }}>
-            Practical calculators and planning tools for Northern Virginia homeowners comparing deck stairs, costs, financing, inspections and rebuild decisions.
+            Practical calculators and planning tools for Northern Virginia homeowners comparing footings, deck stairs, costs, financing, inspections and rebuild decisions.
           </p>
         </div>
       </section>

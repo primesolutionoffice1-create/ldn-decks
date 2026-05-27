@@ -132,7 +132,7 @@ export default function DeckReplacementPage() {
         <p style={{ fontSize: '17px', color: '#555', marginBottom: 0 }}>
           A full replacement lets us correct the problems that make older decks fail: shallow footings, undersized joists,
           racked framing, weak ledger connections, and unpermitted work that creates resale issues. Before construction, we confirm
-          <Link href="/blog/deck-footing-depth-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}> footing depth</Link>,
+          <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}> footing depth</Link>,
           {' '}<Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>joist sizing</Link>,
           {' '}<Link href="/blog/3-4-5-rule-decking" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>square layout</Link>, and
           {' '}<Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>permit history</Link> so the rebuild is clean from day one.
