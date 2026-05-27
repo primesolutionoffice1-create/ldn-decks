@@ -260,10 +260,18 @@ export default async function sitemap() {
                 // 301 → /composite-deck-cost-northern-virginia (cannibalization fix).
                 { path: "/covered-deck-builder-northern-virginia",      priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-resurfacing-northern-virginia",         priority: 0.90, lastMod: TIER1, freq: "weekly" },
-                { path: "/ldn-decks-reviews-yelp",                     priority: 0.65, lastMod: TIER2, freq: "monthly" },
+                // /ldn-decks-reviews-yelp removed 2026-05-27: returns HTTP 308
+                // redirect — Bing rejects redirecting URLs in sitemap. Was
+                // re-added inadvertently; original Bing-SEO fix removed it.
                 { path: "/monthly-payment-composite-deck-northern-virginia", priority: 0.80, lastMod: TIER1, freq: "weekly" },
                 { path: "/timbertech-azek-deck-cost-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-deck-cost-monthly-payment",             priority: 0.80, lastMod: TIER1, freq: "weekly" },
+                { path: "/ashburn-composite-deck-cost-financing",      priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/composite-deck-cost-by-size",                priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/covered-deck-cost-northern-virginia",        priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-permit-hoa-cost-loudoun-county",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/resurface-or-replace-deck-financing",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/wood-vs-composite-deck-long-term-cost",      priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-living-northern-virginia",            priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-performance-products",                   priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/timbertech-decks",                            priority: 0.90, lastMod: TIER1, freq: "weekly" },
