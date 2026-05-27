@@ -114,6 +114,11 @@ const webApplicationSchema = {
 
 const relatedResources = [
   {
+    href: '/tools/deck-load-calculator-virginia',
+    title: 'Deck Load Calculator',
+    desc: 'Estimate distributed deck load, beam line load and post load before beam span planning.',
+  },
+  {
     href: '/tools/deck-joist-span-calculator-virginia',
     title: 'Deck Joist Span Calculator',
     desc: 'Estimate joist span, spacing, cantilever and composite decking support before beam sizing.',
@@ -292,6 +297,7 @@ export default function DeckBeamSpanCalculatorPage() {
             <p>
               A stronger beam does not fix weak footings, poor post bases, a failing ledger or
               undersized joists. For early planning, use this calculator with the{' '}
+              <Link href="/tools/deck-load-calculator-virginia">deck load calculator</Link>,{' '}
               <Link href="/tools/deck-joist-span-calculator-virginia">deck joist span calculator</Link>,{' '}
               <Link href="/tools/deck-footing-depth-calculator-virginia">deck footing depth calculator</Link>,{' '}
               <Link href="/education/understanding-deck-load-paths">deck load path guide</Link>,{' '}

@@ -259,6 +259,7 @@ export default async function sitemap() {
                 { path: "/tools/deck-footing-depth-calculator-virginia", priority: 0.88, lastMod: TIER1, freq: "monthly" },
                 { path: "/tools/deck-beam-span-calculator-virginia",   priority: 0.88, lastMod: TIER1, freq: "monthly" },
                 { path: "/tools/deck-joist-span-calculator-virginia",  priority: 0.88, lastMod: TIER1, freq: "monthly" },
+                { path: "/tools/deck-load-calculator-virginia",        priority: 0.88, lastMod: TIER1, freq: "monthly" },
                 { path: "/tools/deck-stair-calculator",                priority: 0.88, lastMod: TIER1, freq: "monthly" },
                 { path: "/press",                                      priority: 0.80, lastMod: TIER1, freq: "monthly" },
 

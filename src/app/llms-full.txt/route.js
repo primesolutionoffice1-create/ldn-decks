@@ -130,6 +130,7 @@ The education center focuses on deck safety, structural planning, material selec
 - Deck load paths: how deck weight transfers safely to the ground
 - Virginia deck footing depth calculator: footing depth, diameter, frost-depth guidance, warning conditions and inspection planning
 - Virginia deck beam span calculator: beam span, post spacing, tributary width, cantilever checks and framing review warnings
+- Virginia deck load calculator: distributed deck load, beam line load, post load, tributary width and heavy-upgrade warnings
 - Material comparison: pressure-treated wood vs composite vs PVC
 - Premium brand selection: Trex, TimberTech and AZEK
 - Permits and HOA planning in Loudoun, Fairfax and Northern Virginia communities
@@ -157,6 +158,7 @@ The education center focuses on deck safety, structural planning, material selec
 - https://ldndecks.com/tools/deck-footing-depth-calculator-virginia
 - https://ldndecks.com/tools/deck-beam-span-calculator-virginia
 - https://ldndecks.com/tools/deck-joist-span-calculator-virginia
+- https://ldndecks.com/tools/deck-load-calculator-virginia
 - https://ldndecks.com/education/deck-stair-code-rise-run-virginia
 - https://ldndecks.com/tools/deck-stair-calculator
 - https://ldndecks.com/education/deck-stair-safety-inspection-checklist
