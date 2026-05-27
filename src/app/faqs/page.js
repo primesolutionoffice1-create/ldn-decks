@@ -18,6 +18,12 @@ export default function FAQPage() {
     <main>
       <WebPageSchema url="https://ldndecks.com/faqs" name="Deck Building FAQs | Northern Virginia | Loudoun Decks" description="Answers to common questions about deck building, materials, costs, timelines, permits, and HOA in Northern Virginia. Expert answers from Loudoun Decks." speakable />
       <FAQHeader />
+      <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <p style={{ fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</p>
+          <p data-speakable style={{ margin: 0, lineHeight: 1.65 }}>Loudoun Decks is a 5.0&#9733; Google-rated, Virginia Class A licensed deck contractor serving Loudoun, Fairfax, Prince William, Arlington and Stafford counties. We are a Trex Platinum Partner and TimberTech Certified Installer building custom composite decks, screened porches, pergolas and outdoor living spaces. Projects typically range from $15,000 for resurfacing to $80,000+ for multi-level custom builds with outdoor kitchens. Permits and HOA submissions are handled in-house; most builds complete in 1&ndash;4 weeks once approvals clear.</p>
+        </div>
+      </section>
       <FAQCategorized />
       <RelatedGuides currentPath="/faqs" />
       <SimpleCTA

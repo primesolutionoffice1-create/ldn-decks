@@ -38,10 +38,10 @@ export default function DeckLifespanPage() {
         </div>
       </section>
 
-      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
+      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} data-speakable="true">
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Composite decks last <strong>25–50 years</strong> depending on brand. Trex: 25+ years. TimberTech AZEK: 50 years. Pressure-treated wood: 10–15 years with annual maintenance. The difference in Virginia&apos;s climate is even more dramatic due to freeze-thaw and humidity.</p>
+          <p data-speakable>Composite decks last <strong>25–50 years</strong> depending on brand. Trex: 25+ years. TimberTech AZEK: 50 years. Pressure-treated wood: 10–15 years with annual maintenance. The difference in Virginia&apos;s climate is even more dramatic due to freeze-thaw and humidity.</p>
         </div>
       </section>
 
