@@ -74,8 +74,10 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 - [How Long Does a Composite Deck Last](https://ldndecks.com/how-long-does-a-composite-deck-last): Lifespan by brand
 - [Deck ROI & Home Value](https://ldndecks.com/does-a-deck-add-value-to-your-home): Resale value data
 - [HOA Deck Rules](https://ldndecks.com/hoa-deck-rules-northern-virginia): HOA approval guide
-- [Deck Permits Loudoun County](https://ldndecks.com/deck-permit-loudoun-county-virginia): Loudoun County permit guide with LOLA portal, costs, setbacks
+- [Deck Permits Loudoun County](https://ldndecks.com/deck-permit-loudoun-county-virginia): Loudoun County permit guide with LandMARC portal, costs, setbacks
 - [Deck Permits Fairfax County](https://ldndecks.com/deck-permit-fairfax-county-virginia): Fairfax County permit requirements
+- [Deck Permits Arlington County](https://ldndecks.com/deck-permit-arlington-county-virginia): Arlington CPHD + Permit Arlington portal, setbacks, historic-district review (Lyon Park, Maywood, Westover), Inspection Services 703-228-3800
+- [Deck Permits Prince William County](https://ldndecks.com/deck-permit-prince-william-county-virginia): Prince William County permit requirements
 - [How to Choose a Deck Builder](https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia): 10 questions + red flags
 - [Deck Maintenance Checklist](https://ldndecks.com/deck-maintenance-checklist-virginia): Seasonal maintenance guide
 - [Blog](https://ldndecks.com/blog): Expert articles on deck building

@@ -157,6 +157,7 @@ export default async function sitemap() {
                 { path: "/how-long-does-a-composite-deck-last",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-permit-loudoun-county-virginia",        priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-permit-fairfax-county-virginia",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-permit-arlington-county-virginia",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-mclean-va",                     priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-kitchen-builder-northern-virginia",   priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-staining-northern-virginia",            priority: 0.85, lastMod: TIER1, freq: "weekly" },

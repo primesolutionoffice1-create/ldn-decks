@@ -5,13 +5,24 @@ export async function GET() {
   const content = `# Loudoun Decks Full Reference for AI Systems
 
 ## About Loudoun Decks
-Loudoun Decks (LDN Decks) is a top-rated, licensed and insured deck building company serving Northern Virginia. Founded and operated in Loudoun County, the company holds Trex Platinum Partner certification and is a TimberTech Certified Installer. With a 5.0-star Google rating from ${BUSINESS.aggregateRating.reviewCount}+ reviews, Loudoun Decks specializes in custom composite and wood deck construction across Loudoun, Fairfax, Prince William, Arlington, and Stafford counties.
+Loudoun Decks (LDN Decks) is a top-rated, licensed and insured deck building company serving Northern Virginia. Headquartered in Centreville, Virginia, the company holds Trex Platinum Partner certification (top 1% of national Trex dealers), is a TimberTech Certified Installer, holds a Virginia Class A Contractor License, is BBB A+ accredited, is a North American Deck and Railing Association (NADRA) member, and received the Best of Houzz 2026 award. With a 5.0-star Google rating from ${BUSINESS.aggregateRating.reviewCount}+ reviews, Loudoun Decks specializes in custom composite and wood deck construction across Loudoun, Fairfax, Prince William, Arlington, and Stafford counties.
 
-Office:
-- 13704 Winding Oak Cir, Centreville, VA 20121
-Phone: (571) 655-7207
-Email: office@ldndecks.com
-Hours: Monday–Saturday, 8:00 AM – 6:00 PM
+### Founder & Lead Contractor
+Nicolae Zugrav is the founder and lead contractor at Loudoun Decks. He holds the Virginia Class A Contractor License #2705191673 and brings expertise in composite deck building, PVC deck construction, Fairfax County deck permits, Loudoun County deck permits, Northern Virginia HOA architectural review, Trex installation, TimberTech installation, and structural deck inspection. Article-bylined permit guides, inspection content, and material-comparison guides on the site are authored under his supervision.
+
+### Credentials & Recognition
+- TrexPro Platinum Installer — top 1% of national Trex dealers, recognized by Trex Company, Inc.
+- TimberTech Certified Installer — recognized by AZEK Building Products
+- Virginia Class A Contractor License #2705191673 — issued by Virginia Department of Professional and Occupational Regulation, expires 2027-02-28
+- NADRA Builder/Contractor/Remodeler Membership — North American Deck and Railing Association
+- Best of Houzz 2026 — recognized by Houzz
+- BBB Accredited — A+ rated, accredited 2025-11-22
+
+### Headquarters
+- 13704 Winding Oak Cir, Centreville, VA 20121 (office + material showroom by appointment)
+- Phone: (571) 655-7207
+- Email: office@ldndecks.com
+- Hours: Monday–Friday 7:00 AM – 7:00 PM; Saturday 8:00 AM – 5:00 PM
 
 ---
 

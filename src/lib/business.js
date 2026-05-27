@@ -207,6 +207,7 @@ export const BUSINESS = {
 
 export const ORG_ID = `${BUSINESS.url}/#organization`;
 export const WEBSITE_ID = `${BUSINESS.url}/#website`;
+export const FOUNDER_ID = `${BUSINESS.url}/#founder`;
 
 // Builds the WebSite JSON-LD object.
 // Use this once in the root layout alongside buildOrganizationSchema.
@@ -301,5 +302,50 @@ export function buildOrganizationSchema() {
       // '@type': 'GeneralContractor' here minted a second contractor node.
       member: { '@id': ORG_ID },
     })),
+    // Founder Person entity — strengthens E-E-A-T by giving Google + AI
+    // engines a named, verifiable expert to attribute the organization's
+    // expertise to. Surfaces as `founder` on the org and as a reusable
+    // Person @id that ArticleSchema / NamedAuthor components can reference.
+    founder: {
+      '@type': 'Person',
+      '@id': FOUNDER_ID,
+      name: BUSINESS.founder.name,
+      jobTitle: BUSINESS.founder.jobTitle,
+      worksFor: { '@id': ORG_ID },
+      knowsAbout: BUSINESS.founder.knowsAbout,
+      hasCredential: {
+        '@type': 'EducationalOccupationalCredential',
+        name: BUSINESS.founder.hasCredential,
+        credentialCategory: 'license',
+        recognizedBy: { '@type': 'Organization', name: 'Virginia Department of Professional and Occupational Regulation' },
+      },
+      // Spread only if non-empty — empty `sameAs: []` is valid but adds noise.
+      ...(BUSINESS.founder.sameAs && BUSINESS.founder.sameAs.length
+        ? { sameAs: BUSINESS.founder.sameAs }
+        : {}),
+    },
+  };
+}
+
+// Standalone helper for Article / NamedAuthor components — emit only the
+// Person entity (not the full Organization graph) when an article needs to
+// reference the founder as Author.
+export function buildFounderSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': FOUNDER_ID,
+    name: BUSINESS.founder.name,
+    jobTitle: BUSINESS.founder.jobTitle,
+    worksFor: { '@id': ORG_ID, '@type': 'GeneralContractor', name: BUSINESS.name },
+    knowsAbout: BUSINESS.founder.knowsAbout,
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      name: BUSINESS.founder.hasCredential,
+      credentialCategory: 'license',
+    },
+    ...(BUSINESS.founder.sameAs && BUSINESS.founder.sameAs.length
+      ? { sameAs: BUSINESS.founder.sameAs }
+      : {}),
   };
 }

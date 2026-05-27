@@ -54,7 +54,7 @@ const ashburnFAQs = [
   },
   {
     q: "How long does an Ashburn deck take start to finish?",
-    a: "Loudoun County permits run 2-4 weeks through the LOLA portal; the Brambleton and Broadlands ARCs typically return in 1-2 weeks. A standard 400-600 sq ft build then takes 1-2 weeks on site  -  multi-level or screened-porch projects, 3-4 weeks."
+    a: "Loudoun County permits run 2-4 weeks through the LandMARC portal; the Brambleton and Broadlands ARCs typically return in 1-2 weeks. A standard 400-600 sq ft build then takes 1-2 weeks on site  -  multi-level or screened-porch projects, 3-4 weeks."
   },
   {
     q: "Are there design considerations specific to Ashburn homes?",
@@ -63,6 +63,22 @@ const ashburnFAQs = [
   {
     q: "Can you upgrade a builder-grade Ashburn deck instead of rebuilding?",
     a: "Often, yes. A large share of Ashburn homes still have their original pressure-treated builder deck. If the framing inspects sound, resurfacing the surface boards and railings with composite saves 40-60% versus a full tear-down rebuild."
+  },
+  {
+    q: "Do you build in Brambleton specifically?",
+    a: "Yes — Brambleton is one of our highest-volume Ashburn communities. The Brambleton Community Association ARC reviews material samples and renderings; approval typically clears in 1-2 weeks when the package is complete. Common Brambleton builds: 400-500 sqft Trex Transcend rear decks with composite balustrade railings, screened porches added to Carriage and Estate homes, and multi-level designs on lots backing to common-area wooded buffers."
+  },
+  {
+    q: "What about Loudoun Valley Estates, Belmont Country Club, and One Loudoun?",
+    a: "Loudoun Valley Estates supports our most ambitious Ashburn builds — 600-900 sqft multi-level decks with outdoor kitchens, $55-95k range. Belmont Country Club is premium estate territory ($75-150k projects with detailed ARC review). One Loudoun is mixed-use Metro-corridor housing (townhomes + estates); compact rear decks 200-300 sqft are common in the townhome blocks, full builds 400-600 sqft on the detached estates. We carry current submission templates for all three HOAs."
+  },
+  {
+    q: "Why is Ashburn the deck-build epicenter of Loudoun County?",
+    a: "Three reasons. First: the housing stock is mostly 2000s-2010s builder construction with the original pressure-treated deck now at the end of its 15-year design life — re-deck and resurface demand is concentrated here. Second: Ashburn's median household income and home values support premium materials (Trex Transcend, TimberTech AZEK) and full outdoor-living packages. Third: HOA architectural standards are strong but predictable — once we have the ARC packet template for each community, projects clear faster than most NoVA areas."
+  },
+  {
+    q: "What's the typical Ashburn deck project timeline once we sign?",
+    a: "From signed contract: 8-12 weeks total. Loudoun County permit through the LandMARC portal: 2-4 weeks. HOA architectural review (Brambleton, Broadlands, Ashburn Village, etc.): 1-2 weeks in parallel with the permit, not after. Material delivery: 1-3 weeks. Construction: 1-3 weeks for a standard 400-500 sqft deck; 3-4 weeks for multi-level or screened-porch combinations. Most Ashburn projects break ground 4-5 weeks after contract."
   }
 ];
 
@@ -102,6 +118,35 @@ const expansionSections = [
       "For many Ashburn homeowners the deck is the anchor of a larger outdoor build. A screened porch turns a Loudoun County backyard into three-season living space, free of the insects and pollen; we frame screen rooms that integrate structurally with a new or existing deck rather than bolting on as an afterthought.",
       "Pergolas do double duty in Ashburn  -  architectural definition plus genuine sun control for those west-facing yards. We build traditional open-rafter cedar pergolas and motorized louvered systems that adjust shade on demand.",
       "Full outdoor-living packages  -  deck, screened porch, pergola and outdoor kitchen  -  are among our most-requested Ashburn and Brambleton projects, typically landing between $45,000 and $90,000+ for a complete backyard transformation."
+    ]
+  },
+  {
+    title: "Brambleton, Broadlands, Belmont, One Loudoun  -  the Communities We Know by Name",
+    paragraphs: [
+      "Ashburn isn't one market — it's a network of master-planned communities with distinct character, distinct ARC processes, and distinct price points. Knowing which Ashburn you live in is the first step to estimating honestly.",
+      "Brambleton is the Carriage / Estate / Townhome blend on the western edge of Ashburn. The community association ARC reviews material samples plus rendering — typical approval in 14 days when our packet is complete. Common Brambleton builds: 400–550 sqft Trex Transcend rear decks with composite balustrade railings, screened porches added to Carriage homes, multi-level designs on the larger Estate lots that back to common-area wooded buffers. Brambleton clients often pair the deck with a paver patio extension or a low-voltage lighting design.",
+      "Broadlands is the established Ashburn community with a strong ARC presence. Architectural standards favor warm-tone composites (Trex Transcend Spiced Rum, Havana Gold; Vintage Lantern). Multi-level builds are popular on the lots backing to Hidden Lane and the western edges where the topography supports stepped designs.",
+      "Belmont Country Club is the premier estate-tier neighborhood — homes in the $1.5-3M+ range, larger lots, the most detailed ARC review in Ashburn (material samples, color specs, structural drawings, in-person committee review). Belmont projects routinely run $75,000-$150,000 for full outdoor-living packages with built-in outdoor kitchens, fire features, and multi-level designs that match the home's architecture.",
+      "One Loudoun is mixed-use Metro-corridor development. Townhome rear decks here are compact (200-280 sqft, $22-35k); detached homes support full 400-600 sqft builds. The community emphasizes modern design vocabulary — cable or aluminum railings, dark composite tones, integrated lighting.",
+      "Beyond these four anchor communities we also build regularly in Ashburn Village, Ashburn Farm, Moorefield Station, Loudoun Valley Estates, Goose Creek Village, and the smaller pocket neighborhoods. Each ARC has its own quirks; we keep current submission templates for every one."
+    ]
+  },
+  {
+    title: "Re-Deck or Resurface? The Builder-Grade Decision Tree for Ashburn Homes",
+    paragraphs: [
+      "Roughly 60% of Ashburn deck calls today are NOT new builds — they're replacement, resurface, or full structural rebuild of the original 2000s-era builder pressure-treated deck. Knowing which path is right saves homeowners $10-25k.",
+      "If your framing (joists, beams, ledger, posts) is structurally sound on inspection, resurfacing is the right call: tear off the surface boards and railings, replace with composite (Trex Transcend or TimberTech AZEK), upgrade the railings to cable or aluminum, optionally add lighting. Typical Ashburn resurface: $18-32k for 300-500 sqft, completed in 1-2 weeks. The original framing keeps the structural depreciation curve you've already paid for.",
+      "If framing shows rot at the ledger (the most common 15-year failure point on Ashburn builder decks), or if posts are settling, or if joists show structural sag, the right path is full replacement: tear-down, new footings, new framing, new surface, new railings. Typical Ashburn full replacement: $32-55k for 400-600 sqft.",
+      "The diagnostic visit is free. We climb under the deck, inspect the ledger flashing, probe the joist ends, check post bases, and give you the honest call. Our resurface-vs-replace breakdown for Ashburn: roughly 40% resurface, 60% full replacement on builder decks 15+ years old."
+    ]
+  },
+  {
+    title: "Loudoun County Permit + Inspection — What We File on Every Ashburn Build",
+    paragraphs: [
+      "Every Ashburn deck needs a Loudoun County building permit filed through the LandMARC portal, plus (in almost every case) an HOA architectural review approval. We file both in parallel from the day you sign — not serially — which saves 4-6 weeks compared to builders who wait for one approval before submitting the other.",
+      "The Loudoun County package: site plan with setbacks marked against your certified plat, structural drawings with ledger detail and footing schedule, deck details, and homeowner authorization. Plan review takes 2-4 weeks. Permit fees $150-500 depending on construction valuation. See the full county-side process in our Loudoun County deck permit guide.",
+      "The HOA package: material samples, color specs, deck renderings, structural drawings, and the community-specific application form. Each Ashburn ARC has its own submission packet — Brambleton requires the Brambleton ARC form, Broadlands its own, Ashburn Village its own. We carry current templates for every Ashburn HOA and our packets clear first-round review.",
+      "After approval, three required inspections: footing (before concrete), framing (before decking installs), final (when structure complete with railings + stairs). All coordinated through Loudoun County Building & Development. The homeowner never has to be on site for inspections — we meet the inspector and handle the walkthrough."
     ]
   }
 ];
