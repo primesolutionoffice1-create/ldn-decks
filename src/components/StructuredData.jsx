@@ -1,5 +1,9 @@
 import React from 'react';
-import { buildOrganizationSchema, buildWebSiteSchema } from '@/lib/business';
+import {
+  buildOrganizationSchema,
+  buildWebSiteSchema,
+  buildVideoObjectSchema,
+} from '@/lib/business';
 import JsonLd from './JsonLd';
 
 export default function StructuredData() {
@@ -8,6 +12,7 @@ export default function StructuredData() {
     '@graph': [
       buildOrganizationSchema(),
       buildWebSiteSchema(),
+      buildVideoObjectSchema(),
     ],
   };
 

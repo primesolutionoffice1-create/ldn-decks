@@ -193,6 +193,36 @@ export function buildWebSiteSchema() {
   };
 }
 
+// Hero intro video shown on the homepage (also referenced in sitemap.xml).
+// Duration measured from the actual MP4 (mvhd atom): 12.12s → ISO 8601 PT12S.
+export const INTRO_VIDEO = {
+  contentUrl: `${BUSINESS.url}/introvideo.mp4`,
+  thumbnailUrl: `${BUSINESS.url}/og-default.webp`,
+  name: 'Craftsmanship in Motion | Loudoun Decks',
+  description:
+    'See how Loudoun Decks transforms Northern Virginia backyards into luxury outdoor living spaces with custom Trex decks and screened porches.',
+  uploadDate: '2026-04-23T08:00:00.000Z',
+  durationISO: 'PT12S',
+};
+
+// Builds the VideoObject JSON-LD for the homepage hero video.
+// Emit once globally next to the Organization/WebSite nodes.
+export function buildVideoObjectSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    '@id': `${BUSINESS.url}/#intro-video`,
+    name: INTRO_VIDEO.name,
+    description: INTRO_VIDEO.description,
+    thumbnailUrl: INTRO_VIDEO.thumbnailUrl,
+    contentUrl: INTRO_VIDEO.contentUrl,
+    uploadDate: INTRO_VIDEO.uploadDate,
+    duration: INTRO_VIDEO.durationISO,
+    publisher: { '@id': ORG_ID },
+    isFamilyFriendly: true,
+  };
+}
+
 // Builds the full GeneralContractor JSON-LD object.
 // Use this once in the root layout. All other surfaces should reference {"@id": ORG_ID} only.
 export function buildOrganizationSchema() {
