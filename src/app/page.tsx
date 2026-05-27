@@ -78,20 +78,35 @@ const homepageSchema = {
       "deck contractor Northern Virginia",
       "composite deck builder",
       "Trex deck builder",
+      "TimberTech deck installer",
       "deck replacement",
       "deck resurfacing",
       "screened porch builder",
-      "deck permits",
-      "HOA deck approval"
+      "covered deck construction",
+      "outdoor kitchen builder",
+      "pergola and gazebo builder",
+      "deck repair and structural maintenance",
+      "deck permits Northern Virginia",
+      "HOA deck approval",
+      "patio construction",
+      "deck railing systems"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Northern Virginia deck services",
+      "name": "Northern Virginia deck and outdoor living services",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Composite deck building", "url": "https://ldndecks.com/composite-decks" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck replacement", "url": "https://ldndecks.com/services/deck-replacement" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deck resurfacing", "url": "https://ldndecks.com/services/deck-resurfacing" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Screened porch building", "url": "https://ldndecks.com/screened-porch-builder-northern-virginia" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/new-decks#service", "name": "Custom Deck Construction", "url": "https://ldndecks.com/services/new-decks" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/composite-decks#service", "name": "Composite Deck Installation", "url": "https://ldndecks.com/composite-decks" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/trex-decks#service", "name": "Trex Deck Installation", "url": "https://ldndecks.com/trex-decks" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/timbertech-decks#service", "name": "TimberTech AZEK Deck Installation", "url": "https://ldndecks.com/timbertech-decks" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/deck-replacement#service", "name": "Deck Replacement and Rebuilding", "url": "https://ldndecks.com/services/deck-replacement" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/deck-resurfacing#service", "name": "Deck Resurfacing", "url": "https://ldndecks.com/services/deck-resurfacing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/screened-porch-builder-northern-virginia#service", "name": "Screened Porch Construction", "url": "https://ldndecks.com/screened-porch-builder-northern-virginia" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/covered-deck-builder-northern-virginia#service", "name": "Covered Deck Construction", "url": "https://ldndecks.com/covered-deck-builder-northern-virginia" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/outdoor-kitchen-builder-northern-virginia#service", "name": "Outdoor Kitchen Construction", "url": "https://ldndecks.com/outdoor-kitchen-builder-northern-virginia" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/gazebo-pergola#service", "name": "Pergola and Gazebo Construction", "url": "https://ldndecks.com/services/gazebo-pergola" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/deck-repair-and-structural-maintenance#service", "name": "Deck Repair & Structural Maintenance", "url": "https://ldndecks.com/services/deck-repair-and-structural-maintenance" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/patios#service", "name": "Patio Construction", "url": "https://ldndecks.com/services/patios" } }
       ]
     }
   }
