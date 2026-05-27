@@ -156,6 +156,7 @@ The education center focuses on deck safety, structural planning, material selec
 - https://ldndecks.com/education/soil-bearing-capacity-deck-footings-va
 - https://ldndecks.com/tools/deck-footing-depth-calculator-virginia
 - https://ldndecks.com/tools/deck-beam-span-calculator-virginia
+- https://ldndecks.com/tools/deck-joist-span-calculator-virginia
 - https://ldndecks.com/education/deck-stair-code-rise-run-virginia
 - https://ldndecks.com/tools/deck-stair-calculator
 - https://ldndecks.com/education/deck-stair-safety-inspection-checklist
