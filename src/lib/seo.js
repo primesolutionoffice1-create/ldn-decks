@@ -102,6 +102,17 @@ function defaultOgImageForPath(path) {
     return "/og-default.webp";
 }
 
+// Images whose actual dimensions have been measured. Used to set width/height
+// metadata on og:image so Facebook/LinkedIn scrapers don't have to fetch the
+// image to size it, and to keep them from rejecting/distorting wrong-ratio
+// previews. Keep this map in sync with public/* when assets change.
+const OG_IMAGE_DIMENSIONS = {
+    "/og-default.webp": { width: 1200, height: 630 },     // verified 1.91:1 OG aspect
+    "/images/img36.jpeg": { width: 1600, height: 900 },   // 16:9 — acceptable for OG
+    "/showcase/img08.jpeg": { width: 960, height: 720 },  // 4:3
+    "/showcase/img05.jpeg": { width: 1024, height: 768 }, // 4:3
+};
+
 export function buildMetadata({
     path,
     title,
@@ -135,11 +146,16 @@ export function buildMetadata({
 
     // Build the OG image object — only declare width/height when explicitly verified.
     // Declaring 1200x630 for an image that isn't actually 1200x630 misleads scrapers
-    // and can cause card rejection or distorted previews.
+    // and can cause card rejection or distorted previews. Caller can pass
+    // imageWidth/imageHeight to override; otherwise fall back to the measured
+    // dimensions in OG_IMAGE_DIMENSIONS (kept in sync with public/*).
     const ogImage = { url: resolvedImage, alt: seoTitle };
-    if (imageWidth && imageHeight) {
-        ogImage.width = imageWidth;
-        ogImage.height = imageHeight;
+    const measuredDims = OG_IMAGE_DIMENSIONS[resolvedImage];
+    const finalWidth = imageWidth || (measuredDims && measuredDims.width);
+    const finalHeight = imageHeight || (measuredDims && measuredDims.height);
+    if (finalWidth && finalHeight) {
+        ogImage.width = finalWidth;
+        ogImage.height = finalHeight;
     }
 
     return {
