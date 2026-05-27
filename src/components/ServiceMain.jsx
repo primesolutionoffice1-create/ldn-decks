@@ -8,7 +8,12 @@ const CheckIcon = () => (
   </svg>
 );
 
-export default function ServiceMain({ title, subtitle, description, listTitle, listItems, image1, image2 }) {
+export default function ServiceMain({ title, subtitle, description, listTitle, listItems, image1, image2, image1Alt, image2Alt }) {
+  // Build a contextual fallback alt from the title rather than a generic
+  // "Service Build" — Google penalizes templated alt text on image-heavy pages.
+  const fallbackBase = title ? `${title} — Loudoun Decks project in Northern Virginia` : 'Custom deck build by Loudoun Decks in Northern Virginia';
+  const subAlt = image2Alt || (title ? `${title} detail photo by Loudoun Decks` : 'Deck construction detail by Loudoun Decks');
+  const mainAlt = image1Alt || fallbackBase;
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -16,10 +21,10 @@ export default function ServiceMain({ title, subtitle, description, listTitle, l
         <div className={styles.imagesCol}>
           <div className={styles.frameOutline}></div>
           <div className={styles.subImgWrapper}>
-            <Image src={image2 || "/intro_sub.png"} alt="Service Detail" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 400px" />
+            <Image src={image2 || "/intro_sub.png"} alt={subAlt} fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 400px" />
           </div>
           <div className={styles.mainImgWrapper}>
-            <Image src={image1 || "/intro_main.png"} alt="Service Build" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 600px" />
+            <Image src={image1 || "/intro_main.png"} alt={mainAlt} fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 600px" />
           </div>
         </div>
 

@@ -19,15 +19,15 @@ export default function QualityLeader() {
         <div className={styles.mosaicGrid}>
           <div className={styles.leftStack}>
             <div className={styles.imgWrapSmallTop}>
-               <Image src="/images/img32.jpeg" alt="Top deck view" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 300px" />
+               <Image src="/images/img32.jpeg" alt="Aerial view of a custom Trex composite deck built by Loudoun Decks in Northern Virginia" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 300px" />
             </div>
             <div className={styles.imgWrapSmallBottom}>
-               <Image src="/images/img33.jpeg" alt="Wide angle deck" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 300px" />
+               <Image src="/images/img33.jpeg" alt="Wide-angle backyard composite deck with custom railing in Loudoun County" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 300px" />
             </div>
           </div>
           <div className={styles.rightTall}>
              <div className={styles.imgWrapTall}>
-               <Image src="/images/img34.jpeg" alt="Twilight deck vertical" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 400px" />
+               <Image src="/images/img34.jpeg" alt="Trex composite deck with integrated lighting at twilight, Northern Virginia" fill className={styles.imgProps} sizes="(max-width: 768px) 100vw, 400px" />
              </div>
           </div>
         </div>
