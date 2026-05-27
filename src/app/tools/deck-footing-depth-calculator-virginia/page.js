@@ -128,9 +128,9 @@ const relatedResources = [
     desc: 'Why clay, fill, drainage and bearing soil affect footing size and inspection outcomes.',
   },
   {
-    href: '/education/understanding-deck-load-paths',
-    title: 'Deck Load Path Guide',
-    desc: 'How weight moves from boards to joists, beams, posts, footings and soil.',
+    href: '/tools/deck-beam-span-calculator-virginia',
+    title: 'Deck Beam Span Calculator',
+    desc: 'Estimate beam span, post spacing, tributary width and framing review warnings.',
   },
   {
     href: '/tools/deck-stair-calculator',
@@ -294,6 +294,9 @@ export default function DeckFootingDepthCalculatorPage() {
               and <Link href="/deck-permit-prince-william-county-virginia">Prince William County deck permit guide</Link>.
               For the house-attachment side of the structure, see the{' '}
               <Link href="/education/ledger-board-flashing-deck-attachment-virginia">ledger board flashing guide</Link>.
+              Once footing locations are roughly understood, use the{' '}
+              <Link href="/tools/deck-beam-span-calculator-virginia">deck beam span calculator</Link>{' '}
+              to review beam and post spacing assumptions.
             </p>
 
             <h2>Sources and Local Code Notes</h2>

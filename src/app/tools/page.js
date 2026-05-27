@@ -28,18 +28,24 @@ const itemListSchema = {
     {
       '@type': 'ListItem',
       position: 2,
+      name: 'Deck Beam Span Calculator Virginia',
+      url: `${BUSINESS.url}/tools/deck-beam-span-calculator-virginia`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
       name: 'Virginia Deck Stair Calculator',
       url: `${BUSINESS.url}/tools/deck-stair-calculator`,
     },
     {
       '@type': 'ListItem',
-      position: 3,
+      position: 4,
       name: 'Deck Cost Calculator',
       url: `${BUSINESS.url}/deck-cost-calculator`,
     },
     {
       '@type': 'ListItem',
-      position: 4,
+      position: 5,
       name: 'Deck Payment Estimator',
       url: `${BUSINESS.url}/deck-payment-estimator`,
     },
@@ -51,6 +57,11 @@ const tools = [
     href: '/tools/deck-footing-depth-calculator-virginia',
     title: 'Deck Footing Depth Calculator Virginia',
     desc: 'Estimate footing depth, footing diameter, frost-depth guidance and inspection notes for deck planning.',
+  },
+  {
+    href: '/tools/deck-beam-span-calculator-virginia',
+    title: 'Deck Beam Span Calculator Virginia',
+    desc: 'Estimate beam span, post spacing, tributary width, cantilever checks and framing review warnings.',
   },
   {
     href: '/tools/deck-stair-calculator',
