@@ -7,6 +7,7 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
+import CountyRecentProjects from '@/components/CountyRecentProjects';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import WebPageSchema from '@/components/WebPageSchema';
@@ -193,6 +194,7 @@ export default function LoudounCountyPage() {
           <GoogleMapEmbed city="Leesburg" state="VA" height="360px" />
         </div>
       </section>
+      <CountyRecentProjects countySlug="loudoun-county" limit={6} />
       <RelatedGuides currentPath="/near-you/loudoun-county" />
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

@@ -7,6 +7,7 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import RatingBadge from '@/components/RatingBadge';
+import CountyRecentProjects from '@/components/CountyRecentProjects';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { getCityLink } from '@/data/cityData';
@@ -162,6 +163,7 @@ export default function ArlingtonCountyPage() {
           <GoogleMapEmbed city="Arlington" state="VA" height="360px" />
         </div>
       </section>
+      <CountyRecentProjects countySlug="arlington-county" limit={6} />
       <RelatedGuides currentPath="/near-you/arlington-county" />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Builders by City</h2>
