@@ -96,6 +96,73 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Deck Stair Construction Diagram](https://ldndecks.com/education/deck-stair-construction-diagram): Stringers, treads, risers, joist hangers, landing pads, blocking and exterior stair hardware explained
 - [Ledger Board Flashing](https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia): Deck-to-house ledger attachment, flashing layers, moisture protection and collapse-prevention guidance
 
+## City Deck Builder Pages (deep, neighborhood-level content)
+- [Ashburn](https://ldndecks.com/deck-builder-ashburn-va): Brambleton, One Loudoun, Belmont Country Club, Loudoun Valley Estates
+- [Leesburg](https://ldndecks.com/deck-builder-leesburg-va): Lansdowne, Beacon Hill, Red Cedar, Brandon Park, Old Town historic district
+- [McLean](https://ldndecks.com/deck-builder-mclean-va): McLean Hamlet, Langley Forest, Salona Village
+- [Centreville](https://ldndecks.com/deck-builder-centreville-va) (HQ, 13704 Winding Oak Cir): Sully Station, Centre Ridge, Country Club Manor, Newgate, Virginia Run, Compton Village
+- [Tysons](https://ldndecks.com/deck-builder-tysons-va): Two-market — PTC urban core (The Boro, One Park Crest, Ovation) + single-family (Pimmit Hills no-HOA, Old Courthouse, Westgate)
+- [Arlington](https://ldndecks.com/deck-builder-arlington-va): Two-market — North (Lyon Park National Historic District, Lyon Village, Cherrydale, Donaldson Run, Williamsburg) + South (Aurora Hills, Forest Hills, Boulevard Manor, Fairlington)
+- [Purcellville](https://ldndecks.com/deck-builder-purcellville-va): Western Loudoun expansion market
+- [Manassas](https://ldndecks.com/deck-builder-manassas-va) · [Haymarket](https://ldndecks.com/deck-builder-haymarket-va) · [Gainesville](https://ldndecks.com/deck-builder-gainesville-va) · [Bristow](https://ldndecks.com/deck-builder-bristow-va): Prince William County
+- [Fairfax](https://ldndecks.com/deck-builder-fairfax-va) · [Vienna](https://ldndecks.com/deck-builder-vienna-va) · [Chantilly](https://ldndecks.com/deck-builder-chantilly-va) · [Reston](https://ldndecks.com/deck-builder-reston-va) · [Herndon](https://ldndecks.com/deck-builder-herndon-va) · [Sterling](https://ldndecks.com/deck-builder-sterling-va): Greater Fairfax / Loudoun
+- [Stafford](https://ldndecks.com/deck-builder-stafford-va): Southern service area boundary
+- [South Riding](https://ldndecks.com/deck-builder-south-riding-va) · [Brambleton](https://ldndecks.com/deck-builder-brambleton-va) · [Oakton](https://ldndecks.com/deck-builder-oakton-va) · [Great Falls](https://ldndecks.com/deck-builder-great-falls-va) · [Burke](https://ldndecks.com/deck-builder-burke-va) · [Lorton](https://ldndecks.com/deck-builder-lorton-va) · [Springfield](https://ldndecks.com/deck-builder-springfield-va): Greater NoVA
+
+## County Hubs
+- [Loudoun County](https://ldndecks.com/near-you/loudoun-county): Permit + HOA process, 15+ towns served
+- [Fairfax County](https://ldndecks.com/near-you/fairfax-county): Permit + HOA process, 16+ cities served
+- [Prince William County](https://ldndecks.com/near-you/prince-william-county): 10+ cities served
+- [Arlington County](https://ldndecks.com/near-you/arlington-county): Urban + suburban Arlington
+- [Stafford County](https://ldndecks.com/near-you/stafford-county): Southern boundary
+
+## Topical Content Clusters
+
+### Permits & Code (county-level + topic-level)
+- [Loudoun County Deck Permit Guide](https://ldndecks.com/deck-permit-loudoun-county-virginia) — LandMARC portal, 5-step approval, footing tables, joist spans
+- [Fairfax County Deck Permit Guide](https://ldndecks.com/deck-permit-fairfax-county-virginia) — Land Development Services portal, PTC overlay for Tysons
+- [Prince William County Deck Permit Guide](https://ldndecks.com/deck-permit-prince-william-county-virginia)
+- [HOA Deck Rules Northern Virginia](https://ldndecks.com/hoa-deck-rules-northern-virginia)
+- [Loudoun County HOA Deck Rules](https://ldndecks.com/loudoun-county-hoa-deck-rules)
+
+### HOA-specific deck guides
+- [Brambleton HOA](https://ldndecks.com/brambleton-hoa-deck-rules) · [Broadlands HOA](https://ldndecks.com/broadlands-hoa-deck-rules) · [Ashburn Village HOA](https://ldndecks.com/ashburn-village-hoa-deck-rules)
+
+### Materials & Brand Comparisons
+- [Trex Decks](https://ldndecks.com/trex-decks) · [TimberTech Decks](https://ldndecks.com/timbertech-decks) · [Wood Decks](https://ldndecks.com/wood-decks) · [Composite Decks](https://ldndecks.com/composite-decks)
+- [Trex Performance Products](https://ldndecks.com/trex-performance-products) — premium Trex line detail
+- [Trex Transcend Review](https://ldndecks.com/trex-transcend-review-northern-virginia) — flagship Trex tier
+- [Trex vs TimberTech vs AZEK](https://ldndecks.com/trex-vs-timbertech-vs-azek) — brand comparison
+- [Composite vs Wood](https://ldndecks.com/composite-deck-vs-wood-deck-virginia) — material decision
+
+### Specialty Deck Types
+- [Multi-Level Deck Builder](https://ldndecks.com/multi-level-deck-builder-northern-virginia) · [Second-Story Deck](https://ldndecks.com/second-story-deck-builder-northern-virginia) · [Pool Deck](https://ldndecks.com/pool-deck-builder-northern-virginia) · [Covered Deck](https://ldndecks.com/covered-deck-builder-northern-virginia) · [Screened Porch](https://ldndecks.com/screened-porch-builder-northern-virginia)
+- [Outdoor Kitchen Builder](https://ldndecks.com/outdoor-kitchen-builder-northern-virginia) · [Louvered Pergola](https://ldndecks.com/louvered-pergola-northern-virginia) · [Three-Season Room](https://ldndecks.com/three-season-room-northern-virginia)
+
+### Cost & Planning Tools
+- [Composite Deck Cost Northern Virginia](https://ldndecks.com/composite-deck-cost-northern-virginia): Canonical 2026 pricing (brand-by-brand composite, total project budgets)
+- [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator) · [Deck ROI Calculator](https://ldndecks.com/deck-roi-calculator-northern-virginia) · [Deck Payment Estimator](https://ldndecks.com/deck-payment-estimator)
+- [Screened Porch Cost](https://ldndecks.com/screened-porch-cost-northern-virginia)
+- [How Long Does a Composite Deck Last](https://ldndecks.com/how-long-does-a-composite-deck-last) · [How Long to Build a Deck](https://ldndecks.com/how-long-to-build-a-deck-northern-virginia)
+- [Best Time to Build a Deck NoVA](https://ldndecks.com/best-time-to-build-a-deck-northern-virginia)
+
+### Maintenance, Safety & Inspection
+- [Deck Safety Inspection Checklist](https://ldndecks.com/deck-safety-inspection-checklist) · [Deck Maintenance Checklist Virginia](https://ldndecks.com/deck-maintenance-checklist-virginia) · [Best Deck Stain/Sealer Virginia](https://ldndecks.com/best-deck-stain-sealer-virginia) · [Pressure Washing Deck](https://ldndecks.com/pressure-washing-deck-northern-virginia) · [Winterize Deck](https://ldndecks.com/winterize-your-deck-northern-virginia) · [Deck Staining](https://ldndecks.com/deck-staining-northern-virginia)
+- [Deck Repair Loudoun County](https://ldndecks.com/deck-repair-loudoun-county) · [Deck Repair](https://ldndecks.com/deck-repair) · [Deck Resurfacing vs Replacement](https://ldndecks.com/deck-resurfacing-vs-replacement)
+
+### Design & Inspiration
+- [Deck Design Ideas 2026](https://ldndecks.com/deck-design-ideas-2026) · [NoVA Design Ideas 2026](https://ldndecks.com/deck-design-ideas-northern-virginia-2026) · [Cable Railing](https://ldndecks.com/cable-railing-for-decks-northern-virginia) · [Deck Railing Options](https://ldndecks.com/deck-railing-options-northern-virginia) · [Deck Lighting Ideas](https://ldndecks.com/deck-lighting-ideas-northern-virginia) · [Under-Deck Ceiling Ideas](https://ldndecks.com/under-deck-ceiling-ideas) · [Deck Enclosure Ideas](https://ldndecks.com/deck-enclosure-ideas-northern-virginia) · [Pet-Friendly Deck Design](https://ldndecks.com/pet-friendly-deck-design) · [What Size Deck Should I Build](https://ldndecks.com/what-size-deck-should-i-build)
+- [Outdoor Living Trends NoVA 2026](https://ldndecks.com/outdoor-living-trends-northern-virginia-2026)
+
+### Authority & Trust
+- [BBB Accredited Deck Builder Virginia](https://ldndecks.com/bbb-accredited-deck-builder-virginia)
+- [Certifications & Licenses](https://ldndecks.com/about/certifications-and-licenses): TrexPro Platinum, VA Class A, TimberTech Certified, NADRA
+- [How to Choose a Deck Builder](https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia)
+- [Questions to Ask Before Building a Deck](https://ldndecks.com/questions-to-ask-before-building-a-deck)
+- [Deck Warranty Guide NoVA](https://ldndecks.com/deck-warranty-guide-northern-virginia)
+- [Press](https://ldndecks.com/press): Brand recognition + publications
+- [Scholarship](https://ldndecks.com/scholarship): Annual outdoor-living scholarship for Loudoun-area students
+
 ## Detailed Content
 For full extractable content, see: https://ldndecks.com/llms-full.txt
 `;
