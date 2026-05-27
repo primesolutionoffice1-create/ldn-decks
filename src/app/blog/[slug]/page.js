@@ -8,6 +8,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServicesHome from '@/components/ServicesHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import CallLink from '@/components/CallLink';
+import NamedAuthor from '@/components/NamedAuthor';
 import styles from './BlogContent.module.css';
 
 // Pre-render all blog posts at build time for proper indexing
@@ -249,6 +250,10 @@ export default async function SingleBlogPage({ params }) {
                    {post.disclaimer}
                  </p>
                )}
+
+               <div style={{ marginTop: '40px' }}>
+                 <NamedAuthor context="Northern Virginia" lastUpdated={post.date} />
+               </div>
 
                <div className={styles.conclusionBox}>
                  <h3>Plan Your Northern Virginia Deck Project With Loudoun Decks</h3>
