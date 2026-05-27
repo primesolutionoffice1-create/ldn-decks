@@ -37,10 +37,10 @@ export default function PWCountyPermitPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>2026 requirements, step-by-step process, costs, and timeline</p>
         </div>
       </section>
-      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
+      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} data-speakable="true">
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Yes permits are required.</strong> Plan review takes <strong>2–4 weeks</strong> (faster than Fairfax). Cost: <strong>$150–$500</strong>. Three inspections: footings, framing, final. <strong>We handle everything.</strong></p>
+          <p data-speakable><strong>Yes permits are required.</strong> Plan review takes <strong>2–4 weeks</strong> (faster than Fairfax). Cost: <strong>$150–$500</strong>. Three inspections: footings, framing, final. <strong>We handle everything.</strong></p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>

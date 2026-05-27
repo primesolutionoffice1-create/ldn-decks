@@ -40,10 +40,10 @@ export default function ScreenedPorchCostPage() {
       </section>
       <TrustBanner />
 
-      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
+      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} data-speakable="true">
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>A screened porch in Northern Virginia costs <strong>$25,000–$70,000+</strong>. Basic 150 sqft: $25k. Mid-range 250 sqft with EZE-Breeze: $40k–$55k. Premium 300+ sqft with fireplace: $60k–$80k+.</p>
+          <p data-speakable>A screened porch in Northern Virginia costs <strong>$25,000–$70,000+</strong>. Basic 150 sqft: $25k. Mid-range 250 sqft with EZE-Breeze: $40k–$55k. Premium 300+ sqft with fireplace: $60k–$80k+.</p>
         </div>
       </section>
 

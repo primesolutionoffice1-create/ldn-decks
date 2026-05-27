@@ -39,10 +39,10 @@ export default function FairfaxPermitPage() {
         </div>
       </section>
 
-      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
+      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} data-speakable="true">
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Yes</strong> any deck attached to a house, over 200 sqft, or more than 18&quot; above grade needs a Fairfax County building permit. Plan review takes 3–6 weeks. Permit costs $150–$600. <strong>We handle everything.</strong></p>
+          <p data-speakable><strong>Yes</strong> any deck attached to a house, over 200 sqft, or more than 18&quot; above grade needs a Fairfax County building permit. Plan review takes 3–6 weeks. Permit costs $150–$600. <strong>We handle everything.</strong></p>
         </div>
       </section>
 
