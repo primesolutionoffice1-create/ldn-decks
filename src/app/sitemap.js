@@ -146,6 +146,10 @@ export default async function sitemap() {
                 { path: "/screened-porch-builder-northern-virginia",   priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 // /how-much-does-a-deck-cost-northern-virginia removed 2026-05-26:
                 // 301 → /composite-deck-cost-northern-virginia (cannibalization fix).
+                // Size-specific cost pages (size-keyword capture, complementary to canonical)
+                { path: "/400-square-foot-deck-cost-northern-virginia", priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/600-square-foot-deck-cost-northern-virginia", priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/800-square-foot-deck-cost-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-vs-timbertech-vs-azek",                 priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/screened-porch-cost-northern-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/composite-deck-vs-wood-deck-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },

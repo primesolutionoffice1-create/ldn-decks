@@ -147,6 +147,9 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 
 ### Cost & Planning Tools
 - [Composite Deck Cost Northern Virginia](https://ldndecks.com/composite-deck-cost-northern-virginia): Canonical 2026 pricing (brand-by-brand composite, total project budgets)
+- [400 Square Foot Deck Cost](https://ldndecks.com/400-square-foot-deck-cost-northern-virginia): 2026 pricing for the most-common single-purpose deck size in NoVA — $14k–$34k brand range
+- [600 Square Foot Deck Cost](https://ldndecks.com/600-square-foot-deck-cost-northern-virginia): 2026 pricing for the multi-level + outdoor-kitchen sweet spot — $22k–$58k brand range
+- [800 Square Foot Deck Cost](https://ldndecks.com/800-square-foot-deck-cost-northern-virginia): 2026 pricing for estate-tier four-zone outdoor-living anchors — $30k–$80k+ brand range with full integrations
 - [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator) · [Deck ROI Calculator](https://ldndecks.com/deck-roi-calculator-northern-virginia) · [Deck Payment Estimator](https://ldndecks.com/deck-payment-estimator)
 - [Screened Porch Cost](https://ldndecks.com/screened-porch-cost-northern-virginia)
 - [How Long Does a Composite Deck Last](https://ldndecks.com/how-long-does-a-composite-deck-last) · [How Long to Build a Deck](https://ldndecks.com/how-long-to-build-a-deck-northern-virginia)
