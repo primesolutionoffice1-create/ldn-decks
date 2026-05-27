@@ -152,6 +152,11 @@ export default async function sitemap() {
                 { path: "/800-square-foot-deck-cost-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 // Specialty deck types — rooftop is the Tysons/Arlington urban-core specialty
                 { path: "/rooftop-deck-builder-northern-virginia",     priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                // Premium HOA hub pages (Loudoun-area communities)
+                { path: "/lansdowne-hoa-deck-rules",                   priority: 0.80, lastMod: TIER1, freq: "weekly" },
+                { path: "/one-loudoun-hoa-deck-rules",                 priority: 0.80, lastMod: TIER1, freq: "weekly" },
+                { path: "/stone-ridge-hoa-deck-rules",                 priority: 0.80, lastMod: TIER1, freq: "weekly" },
+                { path: "/belmont-country-club-hoa-deck-rules",        priority: 0.80, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-vs-timbertech-vs-azek",                 priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/screened-porch-cost-northern-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/composite-deck-vs-wood-deck-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },

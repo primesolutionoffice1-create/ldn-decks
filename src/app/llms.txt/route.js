@@ -133,6 +133,10 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 
 ### HOA-specific deck guides
 - [Brambleton HOA](https://ldndecks.com/brambleton-hoa-deck-rules) · [Broadlands HOA](https://ldndecks.com/broadlands-hoa-deck-rules) · [Ashburn Village HOA](https://ldndecks.com/ashburn-village-hoa-deck-rules)
+- [Lansdowne HOA](https://ldndecks.com/lansdowne-hoa-deck-rules): Conservancy + Lansdowne Woods, 18-25 day ARC, Leesburg golf community
+- [One Loudoun HOA](https://ldndecks.com/one-loudoun-hoa-deck-rules): FirstService Residential managed, mixed-use Metro-corridor, modern aesthetic, townhomes + estates
+- [Stone Ridge HOA](https://ldndecks.com/stone-ridge-hoa-deck-rules): Southern Loudoun master-planned (5,800 homes), traditional design standards, 18-25 day ARC
+- [Belmont Country Club HOA](https://ldndecks.com/belmont-country-club-hoa-deck-rules): Premier estate-tier Ashburn, most detailed ARC in the area, 21-35 day in-person committee review, engineered drawings required
 
 ### Materials & Brand Comparisons
 - [Trex Decks](https://ldndecks.com/trex-decks) · [TimberTech Decks](https://ldndecks.com/timbertech-decks) · [Wood Decks](https://ldndecks.com/wood-decks) · [Composite Decks](https://ldndecks.com/composite-decks)
