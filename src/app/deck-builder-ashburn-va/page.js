@@ -177,7 +177,7 @@ export default function DeckBuilderAshburnPage() {
           </table>
         </div>
         <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
-          For detailed cost modeling, use our <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>monthly payment estimator</Link> or read the full <Link href="/how-much-does-a-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia deck cost guide</Link>.
+          For detailed cost modeling, use our <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>monthly payment estimator</Link> or read the full <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia deck cost guide</Link>.
         </p>
       </div>
       <SimpleCTA title="Get Your Free Ashburn Deck Estimate" buttonText="Request Estimate" link="/contact" />
@@ -201,7 +201,7 @@ export default function DeckBuilderAshburnPage() {
             ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
             ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
             ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
-            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
             ['/deck-payment-estimator', 'Estimate Deck Costs by Monthly Payment'],
             ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
           ].map(([href, text]) => (

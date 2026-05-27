@@ -139,7 +139,7 @@ export default function ChooseDeckBuilderPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in NoVA'],
               ['/best-time-to-build-a-deck-northern-virginia', 'Best Time to Build a Deck'],
               ['/about', 'About Loudoun Decks'],

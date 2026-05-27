@@ -240,7 +240,7 @@ export default function OutdoorLivingTrendsPage() {
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost in Northern Virginia'],
               ['/outdoor-kitchen-builder-northern-virginia', 'Outdoor Kitchen Builder in Northern Virginia'],
               ['/cable-railing-for-decks-northern-virginia', 'Cable Railing for Decks in Northern Virginia'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}>
                 <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} &rarr;</Link>

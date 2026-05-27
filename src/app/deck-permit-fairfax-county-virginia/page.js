@@ -137,7 +137,7 @@ export default function FairfaxPermitPage() {
               ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],
               ['/education/deck-stair-safety-inspection-checklist', 'Deck Stair Safety Checklist PDF'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in NoVA'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/near-you/fairfax-county', 'Deck Builder in Fairfax County'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>

@@ -61,7 +61,7 @@ const homepageSchema = {
     "https://ldndecks.com/screened-porch-builder-northern-virginia",
     "https://ldndecks.com/services",
     "https://ldndecks.com/northern-virginia-deck-building-guide",
-    "https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia",
+    "https://ldndecks.com/composite-deck-cost-northern-virginia",
     "https://ldndecks.com/composite-deck-cost-northern-virginia",
     "https://ldndecks.com/before-and-after",
     "https://ldndecks.com/areas-we-serve",

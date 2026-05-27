@@ -256,7 +256,7 @@ export default function BeforeAndAfterPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia (2026)'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/deck-resurfacing-vs-replacement', 'Resurfacing vs Full Replacement'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood 15-Year Cost Analysis'],
               ['/showcase', 'Full Project Gallery'],

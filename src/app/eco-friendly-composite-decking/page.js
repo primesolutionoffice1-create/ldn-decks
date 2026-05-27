@@ -143,7 +143,7 @@ export default function EcoFriendlyDeckingPage() {
             {[
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/trex-decks', 'Our Trex Decking Services'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>

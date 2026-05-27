@@ -34,7 +34,7 @@ export async function GET() {
 
   // Key content page images
   const contentImages = [
-    { page: '/how-much-does-a-deck-cost-northern-virginia', image: '/images/img10.jpeg', title: 'Deck Cost Guide Northern Virginia 2026' },
+    { page: '/composite-deck-cost-northern-virginia', image: '/images/img10.jpeg', title: 'Deck Cost Guide Northern Virginia 2026' },
     { page: '/composite-deck-cost-northern-virginia', image: '/images/img11.jpeg', title: 'Composite Deck Cost Northern Virginia Brand-by-Brand Pricing' },
     { page: '/composite-deck-builder-loudoun', image: '/images/img10.jpeg', title: 'Composite Deck Builder Loudoun County VA' },
     { page: '/trex-vs-timbertech-vs-azek', image: '/home-page-ldn.webp', title: 'Trex vs TimberTech vs AZEK Comparison' },

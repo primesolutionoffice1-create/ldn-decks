@@ -170,7 +170,7 @@ export default function ResurfacingVsReplacementPage() {
               ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],
               ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
               ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing Guide'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/how-long-does-a-composite-deck-last', 'How Long Does a Deck Last?'],
               ['/deck-safety-inspection-checklist', 'Deck Safety Inspection Checklist'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood'],

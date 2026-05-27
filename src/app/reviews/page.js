@@ -229,7 +229,7 @@ export default function ReviewsPage() {
               ['/how-to-choose-a-deck-builder-northern-virginia', 'How to Choose a Deck Builder'],
               ['/services/new-decks', 'Custom Deck Building Services'],
               ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>
             ))}

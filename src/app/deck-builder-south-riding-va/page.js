@@ -12,6 +12,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
+import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-south-riding-va',
@@ -69,6 +70,7 @@ export default function SouthRidingDeckBuilderPage() {
             <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$19,500 280 sqft Deck Resurfacing, South Riding</h3>
             <p style={{ lineHeight: 1.7 }}>Resurfaced a 12-year-old builder-grade PT deck with Trex Enhance (Saddle). Frame inspected and solid removed old boards, installed Trex with hidden fasteners, new aluminum railings, 4 stair lights. Total transformation for under $20k. South Riding HOA approved in 12 days. Loudoun County permit. 1-week build.</p>
           </div>
+          <CityAuthorityExpansion cityKey="southRiding" />
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
@@ -100,7 +102,7 @@ export default function SouthRidingDeckBuilderPage() {
         <ul style={{ listStyle: 'none', padding: 0 }}>
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/how-much-does-a-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/how-much-does-a-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
+            <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
         </ul>
       </section>

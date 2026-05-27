@@ -147,7 +147,7 @@ export default function DeckVsPatioPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/services/patios', 'Our Patio Building Services'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value?'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],

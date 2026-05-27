@@ -163,7 +163,7 @@ export default function CableRailingPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/deck-railing-options-northern-virginia', 'All Railing Options Compared'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules'],
               ['/services/trex-railings', 'Trex Railing Services'],
             ].map(([href, text]) => (

@@ -278,7 +278,7 @@ export default function DeckROICalculatorPage() {
             <li><strong>Year 15:</strong> Composite deck still performing. Wood deck would need replacement ($10,000+). Composite has saved you money overall.</li>
             <li><strong>Year 25:</strong> Warranty still active. The deck has delivered 25 years of use for a net cost that&apos;s actually less than what you would have spent maintaining wood.</li>
           </ul>
-          <p style={S.p}>For a detailed cost comparison over time, see our <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>composite deck cost guide</Link> and <Link href="/how-much-does-a-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>full deck pricing guide</Link>.</p>
+          <p style={S.p}>For a detailed cost comparison over time, see our <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>composite deck cost guide</Link> and <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>full deck pricing guide</Link>.</p>
 
           {/* ===== SECTION 11: FAQs ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
@@ -300,7 +300,7 @@ export default function DeckROICalculatorPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value to Your Home?'],
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia (2026)'],
               ['/deck-resurfacing-vs-replacement', 'Deck Resurfacing vs Full Replacement'],
