@@ -48,8 +48,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 ## Key Pages
 - [Deck Builder Northern Virginia](https://ldndecks.com/deck-builder-northern-virginia): Primary service hub for custom deck construction, permits, HOA support and local service areas
 - [Education Center](https://ldndecks.com/education): Expert homeowner guides for deck safety, structure, permits, HOA approvals, materials, costs, lighting, drainage and outdoor living decisions
-- [Deck Cost Guide](https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia): Detailed 2026 pricing with material comparisons
-- [Composite Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): Brand-by-brand composite pricing (Trex, TimberTech, AZEK, Fiberon)
+- [Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): Definitive 2026 pricing — brand-by-brand composite (Trex, TimberTech, AZEK, Fiberon), sizing tables, and total project budgets for Northern Virginia
 - [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator): Interactive calculator with instant estimates
 - [Deck Footing Depth Calculator Virginia](https://ldndecks.com/tools/deck-footing-depth-calculator-virginia): Interactive footing depth, diameter, frost-depth and inspection planning tool for Northern Virginia decks
 - [Virginia Deck Stair Calculator](https://ldndecks.com/tools/deck-stair-calculator): Interactive rise-run planner for step count, exact riser height, total run, stair angle and safety warnings

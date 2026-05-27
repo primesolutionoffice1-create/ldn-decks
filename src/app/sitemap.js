@@ -144,7 +144,8 @@ export default async function sitemap() {
 
                 // Tier 1.5 - High-intent keyword/content pages (new)
                 { path: "/screened-porch-builder-northern-virginia",   priority: 0.95, lastMod: TIER1, freq: "weekly" },
-                { path: "/how-much-does-a-deck-cost-northern-virginia", priority: 0.95, lastMod: TIER1, freq: "weekly" },
+                // /how-much-does-a-deck-cost-northern-virginia removed 2026-05-26:
+                // 301 → /composite-deck-cost-northern-virginia (cannibalization fix).
                 { path: "/trex-vs-timbertech-vs-azek",                 priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/screened-porch-cost-northern-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/composite-deck-vs-wood-deck-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
@@ -241,7 +242,8 @@ export default async function sitemap() {
                 { path: "/deck-builder-stafford-va",                    priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/pressure-washing-deck-northern-virginia",     priority: 0.80, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-bristow-va",                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
-                { path: "/northern-virginia-deck-cost-report-2026",     priority: 0.95, lastMod: TIER1, freq: "weekly" },
+                // /northern-virginia-deck-cost-report-2026 removed 2026-05-26:
+                // 301 → /composite-deck-cost-northern-virginia (cannibalization fix).
                 { path: "/outdoor-living-northern-virginia",            priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-performance-products",                   priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/timbertech-decks",                            priority: 0.90, lastMod: TIER1, freq: "weekly" },
