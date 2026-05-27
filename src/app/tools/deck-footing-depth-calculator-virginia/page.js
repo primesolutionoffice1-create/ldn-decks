@@ -133,6 +133,11 @@ const relatedResources = [
     desc: 'Estimate beam span, post spacing, tributary width and framing review warnings.',
   },
   {
+    href: '/tools/deck-joist-span-calculator-virginia',
+    title: 'Deck Joist Span Calculator',
+    desc: 'Estimate joist span, spacing, cantilever and composite decking support warnings.',
+  },
+  {
     href: '/tools/deck-stair-calculator',
     title: 'Virginia Deck Stair Calculator',
     desc: 'Estimate rise, run, step count and stair angle after footing and landing planning.',
@@ -296,7 +301,8 @@ export default function DeckFootingDepthCalculatorPage() {
               <Link href="/education/ledger-board-flashing-deck-attachment-virginia">ledger board flashing guide</Link>.
               Once footing locations are roughly understood, use the{' '}
               <Link href="/tools/deck-beam-span-calculator-virginia">deck beam span calculator</Link>{' '}
-              to review beam and post spacing assumptions.
+              and <Link href="/tools/deck-joist-span-calculator-virginia">deck joist span calculator</Link>{' '}
+              to review framing span, spacing and load assumptions.
             </p>
 
             <h2>Sources and Local Code Notes</h2>
