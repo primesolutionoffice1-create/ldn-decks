@@ -24,12 +24,15 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a deck cost in Sterling, VA?", acceptedAnswer: { "@type": "Answer", text: "Sterling deck projects range from $20,000-$50,000. Composite decks average $35-$60/sqft installed. Sterling has a mix of established neighborhoods (Sugarland Run, Countryside) and newer communities, with projects from 200 sqft townhome decks to 500+ sqft single-family builds." } },
+    { "@type": "Question", name: "How much does a deck cost in Sterling, VA?", acceptedAnswer: { "@type": "Answer", text: "Sterling deck projects range from $22,000-$140,000+. Townhome rear decks (Sterling Park, Algonkian, parts of Cascades): $22k-$36k. Single-family rebuilds on existing framing (Sugarland Run, Countryside): $28k-$52k. Multi-level decks (Lowes Island, Potomac Falls, Countryside Estates): $48k-$85k. Full outdoor-living packages with screened porch + outdoor kitchen: $65k-$140k+. Composite at $35-$60/sqft installed." } },
     { "@type": "Question", name: "Do I need a permit for a deck in Sterling?", acceptedAnswer: { "@type": "Answer", text: "Yes Sterling is in Loudoun County. Building permits required with plan review typically 10-15 business days the fastest in Northern Virginia. We handle all submissions." } },
     { "@type": "Question", name: "Can you build decks on Sterling townhomes?", acceptedAnswer: { "@type": "Answer", text: "Yes we regularly build and replace decks on Sterling townhomes in Sugarland Run, Cascades and Sterling Park. Townhome projects require HOA architectural review and often have specific material and color requirements. We handle HOA submissions as part of our process." } },
     { "@type": "Question", name: "How long does a deck project take in Sterling?", acceptedAnswer: { "@type": "Answer", text: "Most Sterling deck projects take 2-3 weeks from permit approval to completion. Loudoun County issues permits in 10-15 business days, the fastest turnaround in Northern Virginia. Total timeline from signed contract to finished deck is typically 5-7 weeks." } },
     { "@type": "Question", name: "What warranty do you provide on Sterling deck builds?", acceptedAnswer: { "@type": "Answer", text: "We include a 2-year craftsmanship warranty on all Sterling projects. Trex and TimberTech composite materials carry separate manufacturer warranties of 25-50 years covering fade, stain and structural integrity." } },
     { "@type": "Question", name: "Can you build decks in Sterling during winter?", acceptedAnswer: { "@type": "Answer", text: "Yes we build year-round in Sterling. Composite materials install in any temperature, and Loudoun County processes permits through the winter. Off-season builds often mean shorter scheduling queues and faster project starts." } },
+    { "@type": "Question", name: "Why is Sterling such a high-volume deck market?", acceptedAnswer: { "@type": "Answer", text: "Three reasons. (1) Housing stock: most Sterling homes were built between the late 1980s and mid-2010s, so the original builder pressure-treated decks are at 15-25 years and end of life — replacement demand is concentrated here. (2) Loudoun County's 10-15 business-day permit is the fastest in NoVA, so projects ship faster. (3) Sterling is 10 minutes from our Centreville HQ — fastest response times in our service area." } },
+    { "@type": "Question", name: "Can we resurface an existing Sterling deck instead of rebuilding?", acceptedAnswer: { "@type": "Answer", text: "Often yes. If the original framing (joists, beams, ledger, posts) inspects sound — typically about 40% of 15-year-old Sterling builder decks — we resurface: tear off surface boards and railings, replace with composite, upgrade railings. Saves 40-60% versus full tear-down. Typical Sterling resurface: $18,000-$30,000 for 300-500 sqft. The diagnostic visit is free." } },
+    { "@type": "Question", name: "Which Sterling sub-markets do you serve most often?", acceptedAnswer: { "@type": "Answer", text: "Highest volume: Sugarland Run, Countryside + Countryside Estates, Cascades, Lowes Island, Potomac Falls. Also: Sterling Park, Algonkian, Great Falls Chase, Rivermere. Each has its own HOA process and material preferences — we carry current submission templates for every major Sterling community." } },
   ],
 };
 
@@ -93,21 +96,56 @@ export default function SterlingDeckBuilderPage() {
             <p style={{ lineHeight: 1.7 }}>Converted an existing open wood deck into a screened porch with EZE-Breeze windows, composite floor overlay (Trex Transcend), beadboard ceiling, 2 ceiling fans, and recessed lighting. The existing frame was in good condition saved $12k vs full rebuild. Loudoun County permit. Sugarland Run HOA approved. 3-week build.</p>
           </div>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Sterling Neighborhoods</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {['Sugarland Run', 'Countryside', 'Cascades', 'Lowes Island', 'Potomac Falls', 'Great Falls Chase', 'Sterling Park', 'Algonkian', 'Countryside Estates', 'Rivermere'].map((n) => (
-              <span key={n} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.85rem', color: '#555' }}>{n}</span>
-            ))}
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Sterling Neighborhoods We Build In</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Sterling is one of Loudoun County&apos;s most mature residential markets — most homes were built between the late 1980s and mid-2010s, which means the original builder-grade pressure-treated decks installed at the time are now 15-25 years old and at end of design life. Sterling is our highest-volume deck replacement and resurface market in Loudoun County.</p>
+
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '1.25rem', marginBottom: '0.5rem' }}>Sugarland Run</h3>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Sugarland Run is one of Sterling&apos;s largest established communities — single-family homes and townhomes on tree-lined streets in the eastern Sterling area. The Sugarland Run HOA architectural review averages 14-21 days. Common Sugarland Run builds: 350-500 sqft Trex Transcend rear decks, screened porch conversions on top of existing decks (the $34k Sugarland Run featured project above), and full builder-deck rebuilds. Pricing tier: $26k-$48k for standard composite, $32k-$58k for screened porch conversions.</p>
+
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '1.25rem', marginBottom: '0.5rem' }}>Countryside &amp; Countryside Estates</h3>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Countryside is the Cascades-adjacent established community with strong ARC presence. Architectural review averages 14-21 days. Trex Transcend in Spiced Rum and Havana Gold are popular here; composite balustrade railings preferred over cable. Countryside Estates (the sub-community of larger detached homes) supports multi-level builds and outdoor kitchens on lots backing to common-area buffers. Pricing: $32k-$58k standard, $48k-$85k for multi-level with outdoor kitchen.</p>
+
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '1.25rem', marginBottom: '0.5rem' }}>Cascades &amp; Lowes Island</h3>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Cascades is the larger master-planned community covering much of Sterling&apos;s western section, with Lowes Island as the higher-end sub-community. Cascades ARC review averages 14-21 days and is one of the more flexible in Sterling on cable rail and modern railings when the lot context supports it. Lowes Island lots are larger and command premium materials — TimberTech AZEK Vintage Mahogany is common here. Pricing tier: $35k-$65k Cascades standard, $48k-$95k Lowes Island multi-level.</p>
+
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '1.25rem', marginBottom: '0.5rem' }}>Potomac Falls</h3>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Potomac Falls is the higher-end community near the Potomac River with larger lots, mature trees, and a more established design vocabulary. ARC review averages 18-25 days. Multi-level decks following the slope toward the river are common, often with cable railings to preserve views. Pricing: $48k-$85k standard, $75k-$140k for full outdoor-living packages.</p>
+
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '1.25rem', marginBottom: '0.5rem' }}>Sterling Park, Algonkian, Great Falls Chase &amp; Rivermere</h3>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>These mid-tier Sterling communities cover the broader residential mix — established 1980s-1990s single-family homes and townhomes, generally with predictable HOA processes (14-18 day review averages). Common builds here are composite rebuilds of original wood decks, screened porch additions, and the occasional outdoor kitchen integration. Pricing tier: $22k-$42k for standard composite builds.</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Materials &amp; Pricing Tiers for Sterling</h2>
+          <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
+              <thead>
+                <tr style={{ background: '#f5f5f5' }}>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #e5e5e5' }}>Project type</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #e5e5e5' }}>Typical size</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #e5e5e5' }}>Common neighborhoods</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #e5e5e5' }}>Price range</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>Townhome rear deck</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>200-300 sqft</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>Sterling Park, Algonkian, parts of Cascades</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>$22,000-$36,000</td></tr>
+                <tr><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>Single-family rebuild (replace builder deck)</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>350-500 sqft</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>Sugarland Run, Countryside, Cascades</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>$28,000-$52,000</td></tr>
+                <tr><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>Screened porch conversion (existing frame)</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>300-400 sqft</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>All Sterling sub-markets</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>$32,000-$58,000</td></tr>
+                <tr><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>Multi-level deck (Lowes Island / Potomac Falls)</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>500-700 sqft</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>Lowes Island, Potomac Falls, Countryside Estates</td><td style={{ padding: '0.75rem', borderBottom: '1px solid #eee' }}>$48,000-$85,000</td></tr>
+                <tr><td style={{ padding: '0.75rem' }}>Outdoor-living package (deck + screened porch + outdoor kitchen)</td><td style={{ padding: '0.75rem' }}>500-800 sqft</td><td style={{ padding: '0.75rem' }}>Potomac Falls, Lowes Island, Countryside Estates</td><td style={{ padding: '0.75rem' }}>$65,000-$140,000+</td></tr>
+              </tbody>
+            </table>
           </div>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Sterling&apos;s 10-15 business-day Loudoun County permit — the fastest in Northern Virginia — gives Sterling projects a 3-week head start vs Fairfax County builds. Use our <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck cost calculator</Link> to model your specific Sterling build, or see our <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>full Northern Virginia composite deck cost guide</Link>.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
-            { q: "Deck cost in Sterling?", a: "$20,000-$50,000. Composite: $35-$60/sqft installed. Projects range from 200 sqft townhome decks to 500+ sqft single-family builds." },
+            { q: "Deck cost in Sterling?", a: "$22,000-$140,000+. Townhome rear decks: $22-36k. Single-family rebuild on existing framing: $28-52k. Multi-level Lowes Island / Potomac Falls: $48-85k. Outdoor-living packages with kitchen + screened porch: $65-140k+. Composite at $35-$60/sqft installed." },
             { q: "Permit timeline?", a: "Loudoun County: 10-15 business days, fastest in NoVA. We handle everything including HOA submissions for Sugarland Run, Countryside and Cascades." },
             { q: "Can you build on townhomes?", a: "Yes, we regularly build and replace decks on Sterling townhomes. HOA architectural review is required and we handle the full submission process including material and color approvals." },
-            { q: "How long does a Sterling deck build take?", a: "2-3 weeks from permit approval to completion. Total timeline from signed contract to finished deck is typically 5-7 weeks including Loudoun County permitting." },
+            { q: "How long does a Sterling deck build take?", a: "2-3 weeks from permit approval to completion. Total timeline from signed contract to finished deck is typically 5-7 weeks including Loudoun County permitting — among the fastest in NoVA thanks to Loudoun County's 10-15 business-day permit turnaround." },
             { q: "What warranty do you offer?", a: "2-year craftsmanship warranty on all builds. Trex and TimberTech materials carry 25-50 year manufacturer warranties for fade, stain and structural performance." },
             { q: "Can you build in winter?", a: "Yes, we build year-round in Sterling. Composite materials install in any temperature, and Loudoun County processes permits through winter. Off-season builds often mean shorter scheduling queues." },
+            { q: "Why is Sterling such a high-volume deck market?", a: "Three reasons. (1) Housing stock: most Sterling homes were built between the late 1980s and mid-2010s, so the original builder pressure-treated decks are at 15-25 years and end of life — replacement demand is concentrated here. (2) Loudoun County's 10-15 business-day permit is the fastest in NoVA, so projects ship faster. (3) Sterling is 10 minutes from our Centreville HQ — fastest response times in our service area." },
+            { q: "Can we resurface our existing deck instead of rebuilding?", a: "Often yes. If the original framing (joists, beams, ledger, posts) inspects sound — typically about 40% of 15-year-old Sterling builder decks — we resurface: tear off surface boards + railings, replace with composite, upgrade railings. Saves 40-60% vs full tear-down. Typical Sterling resurface: $18-30k. We do the diagnostic visit free." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
