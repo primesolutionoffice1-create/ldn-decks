@@ -1,6 +1,8 @@
 # Loudoun Decks / LDN Decks
 # Premium deck builder serving Northern Virginia.
+# Last updated: 2026-05-27
 
+# Default: allow all crawlers full access
 User-agent: *
 Allow: /
 Disallow: /api/
@@ -11,19 +13,28 @@ Disallow: /*?*gclid=
 Disallow: /*?*fbclid=
 Disallow: /*?*msclkid=
 
+# Google
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Google-Extended
+Allow: /
+
+# Bing
 User-agent: Bingbot
 Allow: /
 
+# AI Search Crawlers — explicitly welcomed
 User-agent: GPTBot
 Allow: /
 
-User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -49,6 +60,18 @@ Allow: /
 
 User-agent: cohere-ai
 Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Static assets — always accessible
+Allow: /images/
+Allow: /downloads/
+Allow: /introvideo.mp4
+
+# AI content discovery
+# llms.txt: https://ldndecks.com/llms.txt
+# llms-full.txt: https://ldndecks.com/llms-full.txt
 
 Sitemap: https://ldndecks.com/sitemap.xml
 Sitemap: https://ldndecks.com/image-sitemap.xml

@@ -1,0 +1,417 @@
+# Loudoun Decks — Complete Page Index for AI Systems
+
+> This is the extended content index for Loudoun Decks (ldndecks.com). It provides page-level detail for AI retrieval systems, citation engines, and semantic indexing. For the summary version, see: https://ldndecks.com/llms.txt
+
+Last updated: 2026-05-27
+Sitemap: https://ldndecks.com/sitemap.xml
+Entity: Loudoun Decks LLC (dba "Loudoun Decks" / "LDN Decks")
+Location: Centreville, VA
+Service area: Northern Virginia (Loudoun, Fairfax, Prince William, Arlington, Stafford counties)
+Industry: Residential deck construction, outdoor living, exterior renovation
+Schema type: GeneralContractor
+Entity ID: https://ldndecks.com/#organization
+
+---
+
+## PRIMARY MONEY PAGES
+
+### Custom Deck Building (Primary Service)
+- URL: https://ldndecks.com/services/new-decks
+- Content: Complete guide to new deck construction — build process, footings, framing, materials (Trex, TimberTech, AZEK, wood), permits across 3 counties, 3-tier cost breakdown ($22k-$90k+), drainage, upgrades, timeline, warranty. 2000+ words.
+- Intent: Commercial — homeowner ready to build a new deck
+- Updated: 2026-05-26
+
+### Deck Builder Northern Virginia (Geo Hub)
+- URL: https://ldndecks.com/deck-builder-northern-virginia
+- Content: Primary geographic landing page covering all of NoVA. Cost data, service types, area coverage, internal links to all city and service pages.
+- Intent: Commercial — "deck builder near me" / "deck builder northern virginia"
+- Updated: 2026-05-25
+
+### Composite Deck Builder Loudoun County
+- URL: https://ldndecks.com/composite-deck-builder-loudoun
+- Content: Detailed page on composite deck construction in Loudoun County. Trex and TimberTech focus, HOA support, permits, project examples.
+- Intent: Commercial — composite deck + Loudoun County
+- Updated: 2026-05-25
+
+### Screened Porch Builder Northern Virginia
+- URL: https://ldndecks.com/screened-porch-builder-northern-virginia
+- Content: 1800+ words — screened porch vs three-season room vs sunroom comparison, cost breakdown (3 tiers: $25k-$70k+), permits, materials, features, 8 FAQs.
+- Intent: Commercial — screened porch construction
+- Updated: 2026-05-25
+
+---
+
+## CITY PAGES — LOUDOUN COUNTY
+
+### Ashburn
+- URL: https://ldndecks.com/deck-builder-ashburn-va
+- Content: Ashburn deck building — Broadlands, Brambleton, Ashburn Village, One Loudoun HOA expertise. 3-tier cost table. Loudoun County permits.
+- Neighborhoods: Broadlands, Ashburn Village, One Loudoun, Belmont Country Club, Moorefield Station
+- Updated: 2026-05-25
+
+### Leesburg
+- URL: https://ldndecks.com/deck-builder-leesburg-va
+- Content: Historic district to River Creek. Dual-jurisdiction permits (Town of Leesburg vs Loudoun County). Cedar, IPE, and composite. Potomac-facing view lots. 1500+ words.
+- Neighborhoods: River Creek, Lansdowne, Tavistock Farms, Potomac Station, Exeter, Historic District
+- Updated: 2026-05-25
+
+### Sterling
+- URL: https://ldndecks.com/deck-builder-sterling-va
+- Content: Sterling deck builder — Cascades, Countryside, Sugarland Run HOAs. Builder-grade upgrade focus. Loudoun County permits.
+- Neighborhoods: Cascades, Countryside, Sugarland Run, Potomac Falls
+- Updated: 2026-05-25
+
+### Brambleton
+- URL: https://ldndecks.com/deck-builder-brambleton-va
+- Content: Single-community focus — Brambleton Community Association DRB process. Builder-grade PT upgrade cycle. Loudoun County permits.
+- Neighborhoods: Brambleton (single master-planned community, ~6,500 homes)
+- Updated: 2026-05-27
+
+### South Riding
+- URL: https://ldndecks.com/deck-builder-south-riding-va
+- Content: South Riding Proprietary (SRP) Design Review Committee navigation. Builder-grade upgrade cycle (homes 1998-2015). Loudoun County permits.
+- Neighborhoods: South Riding (single master-planned community, ~7,000 homes)
+- Updated: 2026-05-27
+
+### Purcellville
+- URL: https://ldndecks.com/deck-builder-purcellville-va
+- Content: Western Loudoun — rural character, larger lots, mountain views. Cedar and IPE popular alongside composite. Loudoun County permits.
+- Neighborhoods: Purcellville proper, Franklin Park, Meadowbrook Farm
+- Updated: 2026-05-27
+
+---
+
+## CITY PAGES — FAIRFAX COUNTY
+
+### Reston
+- URL: https://ldndecks.com/deck-builder-reston-va
+- Content: 1500+ words — Reston Association Design Review Board (DRB) expertise. Tree-canopy building, wooded lots, elevated decks. Lake Anne, Lake Audubon, South Lakes. Fairfax County permits.
+- Neighborhoods: Lake Anne, Lake Audubon, Lake Newport, South Lakes, North Point
+- Updated: 2026-05-25
+
+### McLean
+- URL: https://ldndecks.com/deck-builder-mclean-va
+- Content: 1500+ words — luxury estate decks. RPA zone expertise for Potomac-adjacent properties. Langley Forest, Chesterbrook. Multi-level designs, outdoor kitchens. Fairfax County permits.
+- Neighborhoods: Langley Forest, Chesterbrook, Farms of McLean
+- Updated: 2026-05-25
+
+### Vienna
+- URL: https://ldndecks.com/deck-builder-vienna-va
+- Content: Town of Vienna permits vs Fairfax County split jurisdiction. Historic Windover Heights, newer Tysons-adjacent developments. Fairfax County permits.
+- Neighborhoods: Windover Heights, Vienna Woods, Wolf Trap area
+- Updated: 2026-05-25
+
+### Great Falls
+- URL: https://ldndecks.com/deck-builder-great-falls-va
+- Content: Luxury estate properties ($1.5M+ average). RPA zone expertise for Potomac River properties. AZEK and Trex Transcend. $40k-$100k+ projects. Fairfax County permits.
+- Neighborhoods: Estate lots (1-5+ acres), River communities
+- Updated: 2026-05-25
+
+### Fairfax
+- URL: https://ldndecks.com/deck-builder-fairfax-va
+- Content: City of Fairfax and Fairfax County distinction. Established neighborhoods, university area. Fairfax County permits.
+- Neighborhoods: Fairfax City, Fairfax Station, University area
+- Updated: 2026-05-25
+
+### Oakton
+- URL: https://ldndecks.com/deck-builder-oakton-va
+- Content: Affluent wooded lots (0.5-2+ acres). Premium materials (AZEK, Trex Transcend). Difficult Run RPA considerations. Fairfax County permits.
+- Neighborhoods: Fox Mill Estates, Vale area, Waples Mill
+- Updated: 2026-05-27
+
+### Herndon
+- URL: https://ldndecks.com/deck-builder-herndon-va
+- Content: Town of Herndon permits vs Fairfax County. Mix of established and newer homes. Fairfax County permits.
+- Neighborhoods: Herndon proper, Fox Mill, McNair Farms
+- Updated: 2026-05-25
+
+### Chantilly
+- URL: https://ldndecks.com/deck-builder-chantilly-va
+- Content: Suburban Fairfax County — Westfields, Poplar Tree Estates. Mid-range to premium market. Fairfax County permits.
+- Neighborhoods: Westfields, Poplar Tree Estates, Franklin Farm
+- Updated: 2026-05-25
+
+### Centreville
+- URL: https://ldndecks.com/deck-builder-centreville-va
+- Content: Virginia Run, Centre Ridge, Sully Station communities. Fairfax County permits.
+- Neighborhoods: Virginia Run, Centre Ridge, Sully Station, Bull Run
+- Updated: 2026-05-25
+
+### Burke
+- URL: https://ldndecks.com/deck-builder-burke-va
+- Content: Mature neighborhoods (1970s-1990s). Full deck replacement cycle. Burke Centre Conservancy HOA. Burke Lake area outdoor lifestyle. Fairfax County permits.
+- Neighborhoods: Burke Centre, Lakewood Hills, Cherry Run, Rolling Valley
+- Updated: 2026-05-27
+
+### Springfield
+- URL: https://ldndecks.com/deck-builder-springfield-va
+- Content: Mix of mid-century and newer construction. Kingstowne HOA. Fort Belvoir commuter market. Fairfax County permits.
+- Neighborhoods: Kingstowne, Springfield Estates, Franconia, Saratoga, Daventry
+- Updated: 2026-05-27
+
+### Falls Church
+- URL: https://ldndecks.com/deck-builder-falls-church-va
+- Content: Independent city with own building department vs Fairfax County split. Small lots, high property values. 1940s-1960s homes. Fairfax County permits for surrounding area.
+- Neighborhoods: City of Falls Church, Pimmit Hills, Lake Barcroft, Seven Corners
+- Updated: 2026-05-27
+
+### Tysons
+- URL: https://ldndecks.com/deck-builder-tysons-va
+- Content: Urban-suburban transition. High-rise condos to single-family. Fairfax County permits.
+- Neighborhoods: Tysons Corner, McLean area overlap
+- Updated: 2026-05-25
+
+### Lorton
+- URL: https://ldndecks.com/deck-builder-lorton-va
+- Content: Laurel Hill community (former Lorton Prison redevelopment). Newer homes entering builder-grade upgrade cycle. Wooded conservation lots. Fairfax County permits.
+- Neighborhoods: Laurel Hill, Crosspointe, Gunston, Newington
+- Updated: 2026-05-27
+
+---
+
+## CITY PAGES — PRINCE WILLIAM COUNTY
+
+### Manassas
+- URL: https://ldndecks.com/deck-builder-manassas-va
+- Content: City of Manassas and Manassas Park. Mix of historic and newer developments. Prince William County permits.
+- Updated: 2026-05-25
+
+### Woodbridge
+- URL: https://ldndecks.com/deck-builder-woodbridge-va
+- Content: Largest PW County community. Lake Ridge, Dale City. Builder-grade upgrade market. Prince William County permits.
+- Neighborhoods: Lake Ridge, Dale City, Montclair, Occoquan
+- Updated: 2026-05-25
+
+### Haymarket
+- URL: https://ldndecks.com/deck-builder-haymarket-va
+- Content: Rural-suburban transition. Dominion Valley, Piedmont estates. Larger lots, elevation changes, mountain views. Multi-level deck designs. Prince William County permits.
+- Neighborhoods: Dominion Valley, Piedmont, Heathcote, Madison Crescent
+- Updated: 2026-05-27
+
+### Gainesville
+- URL: https://ldndecks.com/deck-builder-gainesville-va
+- Content: Heritage Hunt, Virginia Oaks communities. Growing suburb. Prince William County permits.
+- Neighborhoods: Heritage Hunt, Virginia Oaks, University area
+- Updated: 2026-05-25
+
+### Bristow
+- URL: https://ldndecks.com/deck-builder-bristow-va
+- Content: Builder-grade PT upgrade cycle (homes 2005-2018). Resurfacing specialists. Bristow Manor, Braemar, Linton Hall HOAs. Prince William County permits.
+- Neighborhoods: Bristow Manor, Braemar, Linton Hall, Victory Lakes, Kingsbrooke
+- Updated: 2026-05-27
+
+---
+
+## CITY PAGES — OTHER AREAS
+
+### Arlington
+- URL: https://ldndecks.com/deck-builder-arlington-va
+- Content: Arlington County — urban lots, rooftop decks, small-space design. Arlington County permits (own building department).
+- Updated: 2026-05-25
+
+### Alexandria
+- URL: https://ldndecks.com/deck-builder-alexandria-va
+- Content: Old Town historic district, Del Ray, West End. City of Alexandria and Fairfax County split.
+- Updated: 2026-05-25
+
+### Stafford
+- URL: https://ldndecks.com/deck-builder-stafford-va
+- Content: Stafford County — growing Southern NoVA market. Stafford County permits.
+- Updated: 2026-05-25
+
+---
+
+## PRICING & COST CONTENT
+
+### How Much Does a Deck Cost in Northern Virginia?
+- URL: https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia
+- Content: Definitive cost guide — $30-$75/sqft installed. Real project price tables by material tier. Labor breakdown. What drives the price up or down.
+- Intent: Informational/commercial — cost research phase
+- Updated: 2026-05-25
+
+### Composite Deck Cost Northern Virginia
+- URL: https://ldndecks.com/composite-deck-cost-northern-virginia
+- Content: Composite-specific cost breakdown. Trex vs TimberTech vs AZEK pricing. Material + labor + permit costs.
+- Updated: 2026-05-25
+
+### Screened Porch Cost
+- URL: https://ldndecks.com/screened-porch-cost-northern-virginia
+- Content: $25k-$70k+ with real project examples. EZE-Breeze, retractable, traditional options priced.
+- Updated: 2026-05-25
+
+### 2026 Deck Cost Report
+- URL: https://ldndecks.com/northern-virginia-deck-cost-report-2026
+- Content: Annual market pricing report with tariff impact analysis, material inflation tracking.
+- Updated: 2026-05-25
+
+### Deck Cost Calculator
+- URL: https://ldndecks.com/deck-cost-calculator
+- Content: Interactive calculator — estimate by material type, deck size, and add-ons.
+- Type: Tool/calculator
+- Updated: 2026-05-25
+
+### Payment Estimator
+- URL: https://ldndecks.com/deck-payment-estimator
+- Content: Monthly payment range calculator for deck projects.
+- Type: Tool/calculator
+- Updated: 2026-05-25
+
+### Deck Financing
+- URL: https://ldndecks.com/deck-financing-northern-virginia
+- Content: Financing options, payment plans, lending partner information.
+- Updated: 2026-05-25
+
+### Tariff Impact on Prices
+- URL: https://ldndecks.com/how-tariffs-affect-deck-prices-2026
+- Content: Analysis of 2026 tariff effects on composite decking materials and project costs.
+- Updated: 2026-05-25
+
+### Deck ROI Calculator
+- URL: https://ldndecks.com/deck-roi-calculator-northern-virginia
+- Content: Home value impact estimator for deck additions.
+- Type: Tool/calculator
+- Updated: 2026-05-25
+
+---
+
+## MATERIAL COMPARISON CONTENT
+
+### Trex vs TimberTech vs AZEK
+- URL: https://ldndecks.com/trex-vs-timbertech-vs-azek
+- Content: Head-to-head comparison of the three major composite brands. Pricing, durability, warranty, aesthetics, Virginia climate suitability.
+- Intent: Research/comparison shopping
+- Updated: 2026-05-25
+
+### Composite vs Wood
+- URL: https://ldndecks.com/composite-deck-vs-wood-deck-virginia
+- Content: 15-year total cost of ownership comparison. Maintenance, lifespan, aesthetics, environmental impact.
+- Updated: 2026-05-25
+
+### Deck Materials Comparison
+- URL: https://ldndecks.com/deck-materials-comparison-virginia
+- Content: All decking materials ranked — composite, PVC, cedar, IPE, pressure-treated, aluminum.
+- Updated: 2026-05-25
+
+### Trex Transcend Review
+- URL: https://ldndecks.com/trex-transcend-review-northern-virginia
+- Content: In-depth review of Trex Transcend premium line. Colors, performance, warranty, installed cost.
+- Updated: 2026-05-25
+
+### Eco-Friendly Decking
+- URL: https://ldndecks.com/eco-friendly-composite-decking
+- Content: Recycled content percentages, sustainability certifications, environmental comparison.
+- Updated: 2026-05-25
+
+---
+
+## PERMITS & REGULATIONS CONTENT
+
+### Loudoun County Permits
+- URL: https://ldndecks.com/deck-permit-loudoun-county-virginia
+- Content: Complete Loudoun County deck permit process — LandMARC submission, plan review timeline, inspection sequence, setbacks, fees.
+- Updated: 2026-05-25
+
+### Fairfax County Permits
+- URL: https://ldndecks.com/deck-permit-fairfax-county-virginia
+- Content: Fairfax County permit process — LDS office, plan review 3-6 weeks, RPA considerations, inspection requirements.
+- Updated: 2026-05-25
+
+### Prince William County Permits
+- URL: https://ldndecks.com/deck-permit-prince-william-county-virginia
+- Content: PW County permit process — 2-4 week review, fees, inspections.
+- Updated: 2026-05-25
+
+### HOA Deck Rules
+- URL: https://ldndecks.com/hoa-deck-rules-northern-virginia
+- Content: How HOA architectural review works in NoVA. Common restrictions, approval tips, timeline.
+- Updated: 2026-05-25
+
+### Deck Footing Code
+- URL: https://ldndecks.com/deck-footing-code-northern-virginia
+- Content: Virginia frost depth requirements, footing diameter, structural code, inspection.
+- Updated: 2026-05-25
+
+### Community-Specific HOA Guides
+- Loudoun County: https://ldndecks.com/loudoun-county-hoa-deck-rules
+- Ashburn Village: https://ldndecks.com/ashburn-village-hoa-deck-rules
+- Brambleton: https://ldndecks.com/brambleton-hoa-deck-rules
+- Broadlands: https://ldndecks.com/broadlands-hoa-deck-rules
+
+---
+
+## DESIGN & PLANNING CONTENT
+
+- [Complete Deck Building Guide](https://ldndecks.com/northern-virginia-deck-building-guide): Everything in one place — costs, materials, permits, HOA, timeline
+- [How to Choose a Deck Builder](https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia): 10 questions to ask, 5 red flags
+- [Best Time to Build](https://ldndecks.com/best-time-to-build-a-deck-northern-virginia): Month-by-month calendar, winter = 10-15% savings
+- [Does a Deck Add Value?](https://ldndecks.com/does-a-deck-add-value-to-your-home): ROI data — 60-80% recoup at resale in NoVA
+- [What Size Deck?](https://ldndecks.com/what-size-deck-should-i-build): Room-by-room sizing guide
+- [Deck vs Patio](https://ldndecks.com/deck-vs-patio-which-is-right): Decision framework by lot type and budget
+- [Porch vs Deck](https://ldndecks.com/porch-vs-deck-which-should-you-build): Feature and cost comparison
+- [Deck Design Ideas 2026](https://ldndecks.com/deck-design-ideas-northern-virginia-2026): Current design trends
+- [Deck Railing Options](https://ldndecks.com/deck-railing-options-northern-virginia): Cable, glass, aluminum, composite — costs and codes
+- [Deck Lighting Ideas](https://ldndecks.com/deck-lighting-ideas-northern-virginia): Low-voltage LED systems and placement
+- [Cable Railing Guide](https://ldndecks.com/cable-railing-for-decks-northern-virginia): Detailed cable railing information
+- [Under-Deck Ceiling Ideas](https://ldndecks.com/under-deck-ceiling-ideas): Dry-space systems for multi-level decks
+- [Deck Enclosure Ideas](https://ldndecks.com/deck-enclosure-ideas-northern-virginia): Screen, glass, and panel options
+- [Multi-Level Deck Builder](https://ldndecks.com/multi-level-deck-builder-northern-virginia): Stepped and tiered designs
+- [Second-Story Deck Builder](https://ldndecks.com/second-story-deck-builder-northern-virginia): Elevated deck engineering
+- [Pool Deck Builder](https://ldndecks.com/pool-deck-builder-northern-virginia): Slip-resistant, heat-resistant options
+- [Outdoor Living Trends 2026](https://ldndecks.com/outdoor-living-trends-northern-virginia-2026): Market trend analysis
+
+---
+
+## SAFETY & MAINTENANCE CONTENT
+
+- [Deck Safety Inspection Checklist](https://ldndecks.com/deck-safety-inspection-checklist): What to check and when
+- [Deck Maintenance Checklist](https://ldndecks.com/deck-maintenance-checklist-virginia): Seasonal care for Virginia climate
+- [Deck Warranty Guide](https://ldndecks.com/deck-warranty-guide-northern-virginia): Manufacturer vs contractor warranties explained
+- [Deck Resurfacing vs Replacement](https://ldndecks.com/deck-resurfacing-vs-replacement): Decision framework
+- [How Long Does Composite Last?](https://ldndecks.com/how-long-does-a-composite-deck-last): 25-50 year lifespan data
+- [Winterize Your Deck](https://ldndecks.com/winterize-your-deck-northern-virginia): Cold-weather prep guide
+- [Pressure Washing Guide](https://ldndecks.com/pressure-washing-deck-northern-virginia): PSI settings, technique, when to call a pro
+- [Porch Repair vs Replacement](https://ldndecks.com/porch-repair-vs-replacement-northern-virginia): Assessment guide
+
+---
+
+## TRUST & SOCIAL PROOF
+
+- [Customer Reviews Hub](https://ldndecks.com/reviews): Segmented by service type and city. 5.0★ Google, verified. Mid-page CTA, FAQ.
+- [Before & After Gallery](https://ldndecks.com/before-and-after): Visual project transformations
+- [Project Showcase](https://ldndecks.com/showcase): Detailed case studies with specs
+- [Certifications](https://ldndecks.com/about/certifications-and-licenses): Trex Platinum, TimberTech, BBB, VA license
+- [BBB Profile](https://ldndecks.com/bbb-accredited-deck-builder-virginia): A+ rating verification
+- [Yelp Reviews](https://ldndecks.com/ldn-decks-reviews-yelp): Yelp presence
+- [About](https://ldndecks.com/about): Company overview
+- [Our Process](https://ldndecks.com/about/process): Step-by-step build process
+- [Why Choose Us](https://ldndecks.com/about/why-choose-us): Differentiators
+- [Warranty](https://ldndecks.com/about/warranty): Warranty details
+- [Team](https://ldndecks.com/team): Team page
+
+---
+
+## BLOG (40+ Articles)
+
+Blog hub: https://ldndecks.com/blog
+Education hub: https://ldndecks.com/education
+
+Selected high-value articles:
+- [Complete Custom Deck Building Journey](https://ldndecks.com/blog/custom-deck-building-journey-northern-virginia)
+- [Deck Structural Repair & Rot Prevention](https://ldndecks.com/blog/deck-structural-repair-rot-prevention)
+- [2026 Loudoun County Permit Guide](https://ldndecks.com/blog/loudoun-county-deck-permit-guide-2026)
+- [Trex vs Wood Decking Cost Comparison](https://ldndecks.com/blog/trex-vs-wood-decking)
+- [How Long to Build a Deck](https://ldndecks.com/blog/how-long-does-it-take-to-build-a-deck-northern-virginia)
+- [Deck Footing Depth Virginia](https://ldndecks.com/blog/deck-footing-depth-virginia)
+- [Building Without a Permit — Consequences](https://ldndecks.com/blog/deck-without-permit-virginia)
+- [Screened Porch vs Three-Season Room](https://ldndecks.com/blog/screened-porch-vs-three-season-room-virginia)
+- [Outdoor Living Design Trends 2026](https://ldndecks.com/blog/outdoor-living-design-trends-2026)
+- [Trex Deck Color Combinations 2026](https://ldndecks.com/blog/trex-deck-color-combinations-2026)
+
+---
+
+## CONTACT & CONVERSION
+
+- [Get a Free Estimate](https://ldndecks.com/contact): Primary conversion page
+- [Phone](tel:+15716557207): (571) 655-7207
+- [Email](mailto:loudoundecks@gmail.com): loudoundecks@gmail.com
+- Google Business Profile: Search "Loudoun Decks Centreville VA"
