@@ -13,6 +13,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 import ServiceSchema from '@/components/ServiceSchema';
+import ExteriorCleaningAuthority from '@/components/ExteriorCleaningAuthority';
 export const metadata = buildMetadata({
   path: "/services/fence-cleaning",
   title: "Professional Fence Cleaning NoVA | Wood & Composite Restoration",
@@ -74,11 +75,15 @@ export default function FenceCleaningPage() {
         items={inclusions}
       />
 
+      <ExteriorCleaningAuthority type="fence" />
+
       <ServicesFAQ canonicalUrl="https://ldndecks.com/services/fence-cleaning"
         title="Fence Cleaning FAQs"
         faqs={[
-          { q: "Will cleaning make my grey fence look like new wood again?", a: "Yes! For natural wood fences, our process removes the dead outer fibers (the grey layer) to expose the fresh, original color of the wood." },
-          { q: "Is it safe for my plants along the fence line?", a: "We take great care to pre-soak and protect your landscaping, using cleaning solutions that are safe for your greenery." }
+          { q: "Will cleaning make my gray fence look like new wood again?", a: "For natural wood fences, cleaning can remove much of the gray weathered surface layer and reveal warmer wood color underneath. The final result depends on age, sun exposure, previous stain, rot and how deeply weathering has penetrated." },
+          { q: "Is fence cleaning safe for plants along the fence line?", a: "We pre-rinse and protect landscaping where needed, then control the cleaning and rinse process around planting beds. Dense vines, delicate shrubs and neighbor-side plantings are reviewed before the work begins." },
+          { q: "Can you clean composite or vinyl fencing?", a: "Yes. Composite and vinyl fencing need a different approach than wood. We focus on removing algae, dirt film, sprinkler mineral marks and surface staining without abrasive scrubbing that could dull the finish." },
+          { q: "When should a fence be cleaned before a deck or patio project?", a: "Fence cleaning is useful before deck resurfacing, patio installation, lighting upgrades or backyard photography because a dirty boundary can make a newly improved outdoor living area look unfinished." }
         ]}
       />
 

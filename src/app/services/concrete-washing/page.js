@@ -13,6 +13,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 import ServiceSchema from '@/components/ServiceSchema';
+import ExteriorCleaningAuthority from '@/components/ExteriorCleaningAuthority';
 export const metadata = buildMetadata({
   path: "/services/concrete-washing",
   title: "Professional Concrete Washing NoVA | Driveway & Walkway Cleaning",
@@ -74,11 +75,15 @@ export default function ConcreteWashingPage() {
         items={inclusions}
       />
 
+      <ExteriorCleaningAuthority type="concrete" />
+
       <ServicesFAQ canonicalUrl="https://ldndecks.com/services/concrete-washing"
         title="Concrete Washing FAQs"
         faqs={[
-          { q: "Can you remove oil stains from my driveway?", a: "We have specialized treatments for oil and grease that significantly reduce their appearance, though total removal depends on how long the stain has been set." },
-          { q: "Will the pressure damage my concrete?", a: "We adjust our pressure for the age and condition of your concrete to ensure a deep clean without any etching or surface damage." }
+          { q: "Can you remove oil stains from my driveway?", a: "We use pre-treatment and controlled surface cleaning to significantly reduce oil and grease staining. Complete removal depends on how long the stain has been in the concrete, whether it has penetrated the pores, and whether a previous sealer trapped the discoloration." },
+          { q: "Will pressure washing damage my concrete?", a: "We adjust pressure, nozzle distance and cleaning method based on the age and condition of the slab. Newer or softer concrete, spalled areas and decorative surfaces require more care than ordinary broom-finished driveway concrete." },
+          { q: "Is concrete washing useful before patio or deck work?", a: "Yes. Cleaning the surrounding hardscape helps expose drainage problems, cracks, settled areas, algae growth and stains before a deck, patio, under-deck or outdoor living project is planned around it." },
+          { q: "Which Northern Virginia surfaces do you clean?", a: "We clean driveways, walkways, patios, pool surrounds, under-deck patio areas and concrete aprons across Loudoun, Fairfax and Prince William County when the work fits an outdoor living or exterior refresh project." }
         ]}
       />
 

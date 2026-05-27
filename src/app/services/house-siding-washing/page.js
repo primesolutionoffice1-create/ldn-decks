@@ -13,6 +13,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 import ServiceSchema from '@/components/ServiceSchema';
+import ExteriorCleaningAuthority from '@/components/ExteriorCleaningAuthority';
 export const metadata = buildMetadata({
   path: "/services/house-siding-washing",
   title: "Professional House Siding Washing NoVA | Safe Exterior Cleaning",
@@ -74,11 +75,15 @@ export default function HouseSidingWashingPage() {
         items={inclusions}
       />
 
+      <ExteriorCleaningAuthority type="siding" />
+
       <ServicesFAQ canonicalUrl="https://ldndecks.com/services/house-siding-washing"
         title="Siding Washing FAQs"
         faqs={[
-          { q: "Is pressure washing safe for my siding?", a: "We use soft-washing or controlled pressure methods specifically designed to clean siding without forcing water behind the panels or causing cracks." },
-          { q: "How often should I wash my siding?", a: "Typically, every 1-2 years is recommended in Northern Virginia due to the humidity and seasonal pollen levels." }
+          { q: "Is pressure washing safe for my siding?", a: "Siding should not be blasted with high pressure. We use soft-washing or controlled pressure methods designed to remove buildup without forcing water behind panels, damaging trim, or creating leaks around windows and exterior outlets." },
+          { q: "How often should I wash my siding in Northern Virginia?", a: "Most homes benefit from washing every 1 to 2 years because of humidity, pollen and shaded elevations. North-facing walls, wooded lots and siding near decks or porches often need attention sooner." },
+          { q: "Can siding washing be done with deck or patio cleaning?", a: "Yes. Coordinating siding, deck, patio and railing cleaning usually creates a better finished look because the whole outdoor living area is refreshed at once instead of leaving one surface visibly older than the others." },
+          { q: "Do you protect landscaping and deck boards during siding washing?", a: "Yes. We pre-rinse and protect nearby plants, deck boards, railings, furniture and exterior details where needed, then control the rinse path so cleaning solution and debris do not collect around sensitive areas." }
         ]}
       />
 
