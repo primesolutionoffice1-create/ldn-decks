@@ -136,6 +136,45 @@ const faqSchemaData = {
   }))
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ldndecks.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://ldndecks.com/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Patio Contractor Northern Virginia",
+      "item": "https://ldndecks.com/services/patios"
+    }
+  ]
+};
+
+const materialItemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://ldndecks.com/services/patios#patio-materials",
+  "name": "Northern Virginia patio material comparison",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "itemListElement": materialComparison.map((material, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": material.name,
+    "description": `${material.cost}; ${material.durability}; ${material.freezeThaw}; best for ${material.bestFor}.`
+  }))
+};
+
 const neighborhoods = [
   { county: 'Loudoun County', cities: 'Ashburn, Leesburg, Sterling, Brambleton, South Riding, Purcellville, Lansdowne, Aldie, Middleburg' },
   { county: 'Fairfax County', cities: 'Vienna, McLean, Reston, Herndon, Fairfax, Great Falls, Oakton, Burke, Centreville, Chantilly, Tysons, Falls Church' },
@@ -147,14 +186,16 @@ export default function PatiosPage() {
   return (
     <main>
       <JsonLd data={faqSchemaData} />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={materialItemListSchema} />
       <WebPageSchema url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone &amp; natural stone. Loudoun, Fairfax, Prince William, Arlington. Free 24h estimate." speakable />
       <ServiceSchema
         name="Custom Patio Construction"
         description="Professional patio design and installation in Northern Virginia. Pavers, flagstone, stamped concrete, and natural stone patios."
         url="https://ldndecks.com/services/patios"
         category="Outdoor Living"
-        lowPrice="5000"
-        highPrice="35000"
+        lowPrice="14000"
+        highPrice="160000"
         relatedServices={['https://ldndecks.com/services/fire-pits', 'https://ldndecks.com/services/under-deck-patios', 'https://ldndecks.com/outdoor-living-northern-virginia']}
       />
 
