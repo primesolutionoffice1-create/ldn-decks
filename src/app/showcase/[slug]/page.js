@@ -3,9 +3,42 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { showcaseProjects } from '@/lib/showcaseData';
+import { canonicalCities, slugify } from '@/data/cityData';
 import ContactHome from '@/components/ContactHome';
 import JsonLd from '@/components/JsonLd';
 import styles from './ProjectPage.module.css';
+
+// Quick win #5 (2026-05-26 audit): every /showcase/* page now body-links to
+// (a) its city deck-builder page when one exists and (b) the closest matching
+// service page. Pushes equity from project galleries into commercial hubs and
+// improves internal-link distribution.
+function getRelatedLinks(project) {
+  const cityName = project.location.split(',')[0].trim();
+  const citySlug = slugify(cityName);
+  const cityHref = canonicalCities.has(citySlug) ? `/deck-builder-${citySlug}-va` : null;
+
+  const t = project.title.toLowerCase();
+  let serviceHref = '/services/new-decks';
+  let serviceLabel = 'New deck installation';
+  if (t.includes('fence')) {
+    serviceHref = '/services/fence';
+    serviceLabel = 'Custom fence installation';
+  } else if (t.includes('resurfacing')) {
+    serviceHref = '/services/deck-resurfacing';
+    serviceLabel = 'Deck resurfacing';
+  } else if (t.includes('multi') || t.includes('multi-level') || t.includes('balcony')) {
+    serviceHref = '/multi-level-deck-builder-northern-virginia';
+    serviceLabel = 'Multi-level deck construction';
+  } else if (t.includes('composite')) {
+    serviceHref = '/composite-decks';
+    serviceLabel = 'Composite deck building';
+  } else if (t.includes('rooftop')) {
+    serviceHref = '/services/new-decks';
+    serviceLabel = 'Rooftop deck construction';
+  }
+
+  return { cityName, cityHref, serviceHref, serviceLabel };
+}
 
 export async function generateStaticParams() {
   return showcaseProjects.map((project) => ({
@@ -39,6 +72,7 @@ export default async function ProjectPage({ params }) {
 
   const city = project.location.split(',')[0];
   const date = project.location.split(',')[1]?.trim();
+  const related = getRelatedLinks(project);
 
   // Project page schema describes the completed work as a Service example and
   // references the single canonical org (@id #organization) via `provider`.
@@ -95,12 +129,27 @@ export default async function ProjectPage({ params }) {
           <div className={styles.description}>
             <h2>About this Project</h2>
             <p>
-              This {project.title.toLowerCase()} project in {project.location.split(',')[0]} showcases our commitment to quality and attention to detail. 
+              This {project.title.toLowerCase()} project in {project.location.split(',')[0]} showcases our commitment to quality and attention to detail.
               Loudoun Decks worked closely with the homeowner to design and build a space that perfectly fits their vision and property.
             </p>
             <p>
               We used premium materials to ensure durability and style, resulting in a beautiful outdoor extension of the home that will last for years to come.
             </p>
+
+            <h3 style={{ marginTop: '2rem', marginBottom: '0.75rem' }}>Related on Loudoun Decks</h3>
+            <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
+              {related.cityHref ? (
+                <li>
+                  → Browse our <Link href={related.cityHref} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck builder services in {related.cityName}, VA</Link>
+                </li>
+              ) : null}
+              <li>
+                → Learn more about our <Link href={related.serviceHref} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{related.serviceLabel}</Link> service
+              </li>
+              <li>
+                → See more completed projects in our <Link href="/showcase" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>full showcase gallery</Link>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
