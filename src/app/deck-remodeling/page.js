@@ -12,11 +12,15 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 
-export const metadata = buildMetadata({
+const _meta = buildMetadata({
   path: '/deck-remodeling',
   title: 'Custom Deck Remodeling & Upgrades | Transform Your Space',
   description: 'Upgrade your existing deck with modern features. From new railings to built-in lighting, we remodel decks to fit your modern lifestyle.',
 });
+export const metadata = {
+  ..._meta,
+  alternates: { canonical: 'https://ldndecks.com/services/deck-resurfacing' },
+};
 
 export default function DeckRemodelingPage() {
   return (

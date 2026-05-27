@@ -333,6 +333,17 @@ export default function DeckLoadCalculatorPage() {
       </section>
 
       <NamedAuthor context="Northern Virginia deck load and structural planning" lastUpdated="2026-05-27" />
+      
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Next Steps</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (5.0★ Google) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+        </ul>
+      </section>
       <RelatedGuides currentPath={path} category="deck-core" />
     </main>
   );

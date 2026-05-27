@@ -16,12 +16,16 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
-export const metadata = buildMetadata({
+const _meta = buildMetadata({
   path: '/deck-repair',
   title: 'Deck Repair | Loudoun County & Fairfax VA | LDN Decks',
   description: 'Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection call (571) 655-7207.',
   image: '/images/img05.jpeg',
 });
+export const metadata = {
+  ..._meta,
+  alternates: { canonical: 'https://ldndecks.com/services/deck-repair-and-structural-maintenance' },
+};
 
 const inclusions = [
   {

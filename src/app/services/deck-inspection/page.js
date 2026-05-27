@@ -7,11 +7,88 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
 import RelatedGuides from '@/components/RelatedGuides';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ServicesFAQ from '@/components/ServicesFAQ';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
+
+const expansionSections = [
+  {
+    title: "What a deck safety inspection covers",
+    paragraphs: [
+      "A professional deck inspection is a systematic, top-to-bottom evaluation of every structural and safety component. Our inspectors follow a detailed checklist that meets and exceeds Virginia Residential Code requirements, so nothing is overlooked.",
+    ],
+    listItems: [
+      { label: "Ledger board attachment", text: "We check the connection between the deck and your home's rim joist for proper lag bolts, flashing, and signs of water intrusion or rot behind the ledger." },
+      { label: "Posts and footings", text: "Each post is evaluated for plumb, bearing capacity, and base rot. Footings are checked for frost-depth compliance and settling." },
+      { label: "Joists and beams", text: "We probe joists for hidden rot, verify joist hanger integrity, and confirm beam spans meet current load tables." },
+      { label: "Flashing and waterproofing", text: "Missing or failed flashing at the ledger, rim joist, and post bases is one of the top causes of premature deck failure. We document every gap." },
+      { label: "Railings and guards", text: "Guard height, baluster spacing, post attachment, and top-rail rigidity are all measured against the 36-inch residential minimum and 4-inch sphere test." },
+      { label: "Stairs and landings", text: "Rise and run consistency, stringer condition, handrail graspability, and landing dimensions are confirmed against [Virginia stair code requirements](/education/deck-stair-code-rise-run-virginia)." },
+      { label: "Fasteners and hardware", text: "Nails, screws, joist hangers, tension ties, and through-bolts are inspected for corrosion, withdrawal, and code compliance." },
+      { label: "Rot and insect damage", text: "We probe decking, framing, and ground-contact wood for soft spots that indicate fungal decay or termite and carpenter ant activity." },
+    ]
+  },
+  {
+    title: "When to get a deck inspected",
+    paragraphs: [
+      "Not every deck shows visible warning signs before a serious problem develops. Scheduling a proactive inspection at the right time can prevent costly surprises and keep your family safe.",
+    ],
+    listItems: [
+      { label: "Deck is 10 or more years old", text: "Sealants, fasteners, and wood fibers degrade steadily in Northern Virginia's freeze-thaw climate. A decade of exposure warrants a professional look." },
+      { label: "Before buying or selling a home", text: "A pre-sale inspection report gives buyers confidence and protects sellers from post-closing liability. Many Loudoun County real-estate agents now recommend one." },
+      { label: "After major storm damage", text: "High winds, falling limbs, and heavy snow loads can shift footings, crack joists, or loosen ledger connections that look fine from above." },
+      { label: "Visible warning signs appear", text: "Soft or spongy boards, wobbly railings, popped nails, surface mold, and leaning posts all justify an immediate evaluation." },
+      { label: "Before resurfacing or renovation", text: "Putting new boards on a failing frame wastes money. An inspection confirms whether the substructure can support a [deck resurfacing](/services/deck-resurfacing) project." },
+    ]
+  },
+  {
+    title: "Inspection findings and next steps",
+    paragraphs: [
+      "After the on-site evaluation, you receive a written inspection report with color-coded photos documenting every finding. Each issue is categorized as critical, moderate, or cosmetic so you can prioritize repairs effectively.",
+      "The report also includes a professional recommendation for the most cost-effective path forward — whether that is targeted structural repair, a full resurfacing, or a complete replacement. If your deck was built without a permit, the report outlines what [permit implications for unpermitted decks in Virginia](/blog/deck-without-permit-virginia) you should be aware of before any work begins.",
+    ]
+  },
+  {
+    title: "Inspection vs repair — what comes next",
+    paragraphs: [
+      "An inspection is a diagnostic step, not a repair service. Once you understand the condition of your deck, you can make an informed decision about the right scope of work.",
+      "If the framing is sound but boards are worn, [deck resurfacing](/services/deck-resurfacing) replaces the surface while preserving the structure. If specific components have failed, [deck repair and structural maintenance](/services/deck-repair-and-structural-maintenance) targets only what is damaged. And if the frame, footings, and ledger are beyond saving, a full [deck replacement](/services/deck-replacement) is the safest and most economical long-term choice.",
+      "We are happy to walk you through the report findings and help you choose the option that fits your budget and timeline.",
+    ]
+  },
+];
+
+const faqs = [
+  {
+    q: "How much does a deck inspection cost in Northern Virginia?",
+    a: "Our comprehensive deck inspection is a flat $350 for most residential decks in Loudoun, Fairfax, and Prince William counties. The fee covers a full structural evaluation, written report with photos, and a professional recommendation for next steps."
+  },
+  {
+    q: "How long does a deck inspection take?",
+    a: "A typical inspection takes 60 to 90 minutes on site, depending on the size and complexity of the deck. You receive the written report within two business days."
+  },
+  {
+    q: "Do I need a deck inspection before resurfacing?",
+    a: "Yes. Resurfacing installs new boards on the existing frame, so the substructure must be structurally sound. An inspection confirms whether your joists, beams, and ledger can support a resurfacing project or whether repairs are needed first."
+  },
+  {
+    q: "What happens if the inspector finds structural problems?",
+    a: "You receive a prioritized list of issues with repair recommendations. We can provide a follow-up estimate for structural repairs, resurfacing, or full replacement depending on the severity."
+  },
+  {
+    q: "Can a deck inspection help with a home sale in Northern Virginia?",
+    a: "Absolutely. A professional inspection report reassures buyers and can prevent last-minute renegotiations. Many Loudoun County and Fairfax County real-estate agents recommend a deck inspection as part of pre-listing preparation."
+  },
+  {
+    q: "Is your deck inspection covered if I hire you for repairs?",
+    a: "Yes. If you move forward with a repair, resurfacing, or replacement project with LDN Decks, we credit the $350 inspection fee toward the project cost."
+  },
+];
+
 export const metadata = buildMetadata({
   path: "/services/deck-inspection",
       title: "Deck Inspection Loudoun VA | $350 Safety Audit | LDN Decks",
@@ -119,6 +196,10 @@ export default function DeckInspectionPage() {
           </div>
         </section>
       </section>
+      <ServiceContentExpansion sections={expansionSections} />
+
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/services/deck-inspection" title="Deck Inspection FAQs" faqs={faqs} />
+
       <Testimonials />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/deck-inspection" />

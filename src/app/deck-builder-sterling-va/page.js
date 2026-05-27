@@ -13,6 +13,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
+import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-sterling-va',
@@ -25,6 +26,10 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "How much does a deck cost in Sterling, VA?", acceptedAnswer: { "@type": "Answer", text: "Sterling deck projects range from $20,000-$50,000. Composite decks average $35-$60/sqft installed. Sterling has a mix of established neighborhoods (Sugarland Run, Countryside) and newer communities, with projects from 200 sqft townhome decks to 500+ sqft single-family builds." } },
     { "@type": "Question", name: "Do I need a permit for a deck in Sterling?", acceptedAnswer: { "@type": "Answer", text: "Yes Sterling is in Loudoun County. Building permits required with plan review typically 10-15 business days the fastest in Northern Virginia. We handle all submissions." } },
+    { "@type": "Question", name: "Can you build decks on Sterling townhomes?", acceptedAnswer: { "@type": "Answer", text: "Yes we regularly build and replace decks on Sterling townhomes in Sugarland Run, Cascades and Sterling Park. Townhome projects require HOA architectural review and often have specific material and color requirements. We handle HOA submissions as part of our process." } },
+    { "@type": "Question", name: "How long does a deck project take in Sterling?", acceptedAnswer: { "@type": "Answer", text: "Most Sterling deck projects take 2-3 weeks from permit approval to completion. Loudoun County issues permits in 10-15 business days, the fastest turnaround in Northern Virginia. Total timeline from signed contract to finished deck is typically 5-7 weeks." } },
+    { "@type": "Question", name: "What warranty do you provide on Sterling deck builds?", acceptedAnswer: { "@type": "Answer", text: "We include a 2-year craftsmanship warranty on all Sterling projects. Trex and TimberTech composite materials carry separate manufacturer warranties of 25-50 years covering fade, stain and structural integrity." } },
+    { "@type": "Question", name: "Can you build decks in Sterling during winter?", acceptedAnswer: { "@type": "Answer", text: "Yes we build year-round in Sterling. Composite materials install in any temperature, and Loudoun County processes permits through the winter. Off-season builds often mean shorter scheduling queues and faster project starts." } },
   ],
 };
 
@@ -97,8 +102,12 @@ export default function SterlingDeckBuilderPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
-            { q: "Deck cost in Sterling?", a: "$20,000-$50,000. Composite: $35-$60/sqft installed." },
-            { q: "Permit timeline?", a: "Loudoun County: 10-15 business days fastest in NoVA. We handle everything." },
+            { q: "Deck cost in Sterling?", a: "$20,000-$50,000. Composite: $35-$60/sqft installed. Projects range from 200 sqft townhome decks to 500+ sqft single-family builds." },
+            { q: "Permit timeline?", a: "Loudoun County: 10-15 business days, fastest in NoVA. We handle everything including HOA submissions for Sugarland Run, Countryside and Cascades." },
+            { q: "Can you build on townhomes?", a: "Yes, we regularly build and replace decks on Sterling townhomes. HOA architectural review is required and we handle the full submission process including material and color approvals." },
+            { q: "How long does a Sterling deck build take?", a: "2-3 weeks from permit approval to completion. Total timeline from signed contract to finished deck is typically 5-7 weeks including Loudoun County permitting." },
+            { q: "What warranty do you offer?", a: "2-year craftsmanship warranty on all builds. Trex and TimberTech materials carry 25-50 year manufacturer warranties for fade, stain and structural performance." },
+            { q: "Can you build in winter?", a: "Yes, we build year-round in Sterling. Composite materials install in any temperature, and Loudoun County processes permits through winter. Off-season builds often mean shorter scheduling queues." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
@@ -120,12 +129,14 @@ export default function SterlingDeckBuilderPage() {
           </div>
         </div>
       </article>
+      <CityAuthorityExpansion cityKey="sterling" />
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Sterling" /></div></section>
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
+            <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
         </ul>
       </section>

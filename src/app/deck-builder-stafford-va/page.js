@@ -12,6 +12,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
+import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-stafford-va',
@@ -24,6 +25,10 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "How much does a deck cost in Stafford, VA?", acceptedAnswer: { "@type": "Answer", text: "Stafford deck projects range from $15,000-$40,000. Composite decks: $28-$50/sqft installed. Stafford offers the best value in the Northern Virginia region same quality materials at 15-25% less than Fairfax or Loudoun due to lower labor and permit costs." } },
     { "@type": "Question", name: "Do I need a permit in Stafford County?", acceptedAnswer: { "@type": "Answer", text: "Yes Stafford County requires building permits for decks attached to the house or over 30 inches above grade. Plan review is typically 2-3 weeks faster than most NoVA counties. We handle all permitting." } },
+    { "@type": "Question", name: "How long does a deck build take in Stafford?", acceptedAnswer: { "@type": "Answer", text: "Most Stafford composite deck projects take 2-4 weeks from permit approval to completion. Stafford County plan review is typically 2-3 weeks, which is faster than Fairfax or Loudoun counties." } },
+    { "@type": "Question", name: "What warranty do you offer on Stafford deck projects?", acceptedAnswer: { "@type": "Answer", text: "We provide a 2-year craftsmanship warranty on all Stafford builds. Trex and TimberTech composite materials carry separate manufacturer warranties of 25-50 years covering fade, stain and structural performance." } },
+    { "@type": "Question", name: "Which materials work best for Stafford's climate?", acceptedAnswer: { "@type": "Answer", text: "Stafford gets more sustained summer heat than northern Loudoun or Fairfax. Trex Transcend and TimberTech composite boards handle UV exposure and humidity well without warping, and lighter color options reduce heat absorption on south-facing decks." } },
+    { "@type": "Question", name: "When is the best season to build a deck in Stafford?", acceptedAnswer: { "@type": "Answer", text: "We build year-round in Stafford County. Spring and fall are the most popular seasons. Winter builds are viable since Stafford sees less freeze disruption than areas farther north, and booking in the off-season often means shorter wait times." } },
   ],
 };
 
@@ -97,7 +102,11 @@ export default function StaffordDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
             { q: "Deck cost in Stafford?", a: "$15,000-$40,000. Composite: $28-$50/sqft. 15-25% less than Fairfax/Loudoun for same materials." },
-            { q: "Permit timeline?", a: "Stafford County: 2-3 weeks faster than most NoVA counties. We handle everything." },
+            { q: "Permit timeline?", a: "Stafford County: 2-3 weeks plan review, faster than most NoVA counties. We handle everything." },
+            { q: "How long does a deck build take?", a: "Most Stafford projects take 2-4 weeks from permit approval to completion. Faster county review means you're enjoying your deck sooner." },
+            { q: "What warranty do you offer?", a: "2-year craftsmanship warranty on all builds. Trex and TimberTech materials carry 25-50 year manufacturer warranties for fade, stain and structural performance." },
+            { q: "Best materials for Stafford's climate?", a: "Stafford gets more sustained summer heat than northern NoVA. Trex Transcend and TimberTech composites handle UV and humidity without warping. Lighter colors reduce heat on south-facing decks." },
+            { q: "Best season to build?", a: "We build year-round in Stafford. Spring and fall are most popular. Winter builds are viable here since Stafford sees less freeze disruption, and off-season booking often means shorter wait times." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
@@ -118,11 +127,13 @@ export default function StaffordDeckBuilderPage() {
           </div>
         </div>
       </article>
+      <CityAuthorityExpansion cityKey="stafford" />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
+            <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
         </ul>
       </section>

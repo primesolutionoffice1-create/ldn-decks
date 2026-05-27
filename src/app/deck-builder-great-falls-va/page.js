@@ -12,6 +12,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
+import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-great-falls-va',
@@ -25,6 +26,9 @@ const faqSchema = {
     { "@type": "Question", name: "How much does a deck cost in Great Falls, VA?", acceptedAnswer: { "@type": "Answer", text: "Deck projects in Great Falls typically range from $40,000-$100,000+ due to larger lots, premium material preferences (AZEK, Trex Transcend), and complex designs. Great Falls homeowners often add screened porches, outdoor kitchens, and multi-level designs." } },
     { "@type": "Question", name: "Do I need special permits for a deck in Great Falls?", acceptedAnswer: { "@type": "Answer", text: "Great Falls is in Fairfax County standard building permits required. Many Great Falls lots are in RPA (Resource Protection Area) zones near the Potomac River, requiring additional environmental review. We handle all permitting including RPA submissions." } },
     { "@type": "Question", name: "Do Great Falls homes have HOA restrictions on decks?", acceptedAnswer: { "@type": "Answer", text: "Some Great Falls neighborhoods have deed covenants or HOA architectural review. Many estate-lot homes have no HOA. We research your specific property's restrictions before design begins." } },
+    { "@type": "Question", name: "How long does a premium deck project take in Great Falls?", acceptedAnswer: { "@type": "Answer", text: "Great Falls estate-scale projects typically take 5-8 weeks from permit approval to completion. Fairfax County plan review runs 3-6 weeks. Projects requiring RPA environmental review may add 2-4 weeks to the permitting phase. Total timeline from contract to completion is usually 10-14 weeks." } },
+    { "@type": "Question", name: "Can you build decks in Great Falls during winter?", acceptedAnswer: { "@type": "Answer", text: "Yes we build year-round in Great Falls. Composite and PVC materials install in any temperature. Winter builds can actually benefit Great Falls homeowners by avoiding the peak spring-summer scheduling queue, and Fairfax County processes permits through the winter months." } },
+    { "@type": "Question", name: "How long do premium composite materials last in Great Falls?", acceptedAnswer: { "@type": "Answer", text: "TimberTech AZEK and Trex Transcend carry manufacturer warranties of 25-50 years covering fade, stain and structural performance. With proper installation on Great Falls estate lots, these materials routinely last 30+ years with minimal maintenance even in shaded, tree-heavy environments." } },
   ],
 };
 
@@ -98,9 +102,12 @@ export default function GreatFallsDeckBuilderPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "How much does a deck cost in Great Falls?", a: "$40,000-$100,000+ for most projects. Great Falls homeowners typically choose AZEK or Trex Transcend with premium features." },
-            { q: "Do I need special permits?", a: "Standard Fairfax County permits plus potential RPA review for lots near the Potomac. We handle everything." },
-            { q: "HOA restrictions?", a: "Varies some neighborhoods have covenants, many estate lots have no HOA. We research your property before design." },
+            { q: "How much does a deck cost in Great Falls?", a: "$40,000-$100,000+ for most projects. Great Falls homeowners typically choose AZEK or Trex Transcend with premium features like screened porches, outdoor kitchens and multi-level designs." },
+            { q: "Do I need special permits?", a: "Standard Fairfax County permits plus potential RPA review for lots near the Potomac. We handle everything including environmental submissions." },
+            { q: "HOA restrictions?", a: "Varies — some neighborhoods have covenants, many estate lots have no HOA. We research your property before design." },
+            { q: "How long does a premium project take?", a: "Estate-scale projects take 5-8 weeks from permit approval. Fairfax County review is 3-6 weeks, and RPA lots may add 2-4 weeks. Total timeline is typically 10-14 weeks from contract to completion." },
+            { q: "Can you build in winter?", a: "Yes, we build year-round. Composite and PVC materials install in any temperature. Winter builds avoid peak scheduling queues and Fairfax County processes permits through winter." },
+            { q: "How long do premium materials last?", a: "TimberTech AZEK and Trex Transcend carry 25-50 year manufacturer warranties. With proper installation, these materials routinely last 30+ years with minimal maintenance even in shaded Great Falls environments." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
@@ -123,6 +130,7 @@ export default function GreatFallsDeckBuilderPage() {
           </div>
         </div>
       </article>
+      <CityAuthorityExpansion cityKey="greatFalls" />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>

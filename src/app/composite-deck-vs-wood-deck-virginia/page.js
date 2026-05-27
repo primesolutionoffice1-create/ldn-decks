@@ -175,6 +175,17 @@ export default function CompositeVsWoodPage() {
       <RelatedGuides currentPath="/composite-deck-vs-wood-deck-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
+      
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Brand Pages &amp; Services</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Decks — Platinum Partner →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/timbertech-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>TimberTech AZEK Decks →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Installation →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
+        </ul>
+      </section>
       <ContactHome />
     </>
   );
