@@ -11,7 +11,8 @@
         "ads:validate-imports": "node scripts/validate-google-ads-imports.mjs",
         "seo:validate-schema": "node scripts/validate-seo-schema.mjs",
         "seo:daily-check": "node scripts/seo-daily-check.mjs",
-        "seo:link-audit": "node scripts/seo-link-audit.mjs"
+        "seo:link-audit": "node scripts/seo-link-audit.mjs",
+        "automation:verify": "node scripts/automation-stack-verify.mjs"
     },
     "dependencies": {
         "@vercel/analytics": "^1.6.1",
