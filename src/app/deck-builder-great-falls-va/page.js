@@ -51,8 +51,8 @@ export default function GreatFallsDeckBuilderPage() {
               sizes="(max-width: 900px) 100vw, 900px"
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Great Falls Architectural Custom Decks for Luxury Properties</h2>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom composite decks, screened porches &amp; outdoor living for Great Falls estate homes</p>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem', letterSpacing: '-0.01em' }}>Custom Deck Builder in Great Falls, VA</h1>
+          <p style={{ color: '#ccc', fontSize: '1.15rem' }}>Architectural custom decks for Great Falls luxury properties — composite, screened porches, outdoor living for estate homes.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>

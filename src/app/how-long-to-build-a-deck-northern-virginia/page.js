@@ -34,7 +34,7 @@ export default function HowLongToBuildPage() {
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How Long Does It Take to Build a Deck in Northern Virginia?</h1>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Build Timeline in Northern Virginia: From Contract to Completion</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Complete timeline from first call to completion permits, construction, and what causes delays</p>
         </div>
       </section>

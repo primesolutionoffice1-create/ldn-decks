@@ -53,8 +53,8 @@ export default function CentrevilleDeckBuilderPage() {
               sizes="(max-width: 900px) 100vw, 900px"
             />
           </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Centreville Expanding Your Outdoor Potential</h2>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Loudoun Decks is headquartered right here in Centreville. Visit our showroom for material samples.</p>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem', letterSpacing: '-0.01em' }}>Custom Deck Builder in Centreville, VA</h1>
+          <p style={{ color: '#ccc', fontSize: '1.15rem' }}>Centreville expanding your outdoor potential — Loudoun Decks is headquartered right here. Visit our showroom for material samples.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Visit Our Showroom</Link>
