@@ -142,7 +142,7 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 - [Composite vs Wood](https://ldndecks.com/composite-deck-vs-wood-deck-virginia) — material decision
 
 ### Specialty Deck Types
-- [Multi-Level Deck Builder](https://ldndecks.com/multi-level-deck-builder-northern-virginia) · [Second-Story Deck](https://ldndecks.com/second-story-deck-builder-northern-virginia) · [Pool Deck](https://ldndecks.com/pool-deck-builder-northern-virginia) · [Covered Deck](https://ldndecks.com/covered-deck-builder-northern-virginia) · [Screened Porch](https://ldndecks.com/screened-porch-builder-northern-virginia)
+- [Multi-Level Deck Builder](https://ldndecks.com/multi-level-deck-builder-northern-virginia) · [Second-Story Deck](https://ldndecks.com/second-story-deck-builder-northern-virginia) · [Rooftop Deck Builder](https://ldndecks.com/rooftop-deck-builder-northern-virginia) · [Pool Deck](https://ldndecks.com/pool-deck-builder-northern-virginia) · [Covered Deck](https://ldndecks.com/covered-deck-builder-northern-virginia) · [Screened Porch](https://ldndecks.com/screened-porch-builder-northern-virginia)
 - [Outdoor Kitchen Builder](https://ldndecks.com/outdoor-kitchen-builder-northern-virginia) · [Louvered Pergola](https://ldndecks.com/louvered-pergola-northern-virginia) · [Three-Season Room](https://ldndecks.com/three-season-room-northern-virginia)
 
 ### Cost & Planning Tools
