@@ -23,28 +23,12 @@ const faqSchema = {
   ],
 };
 
-const howToSchema = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "@id": "https://ldndecks.com/deck-maintenance-checklist-virginia#howto",
-  "name": "How to Maintain Your Deck in Virginia (Seasonal Checklist)",
-  "description": "Four-season deck maintenance checklist for Virginia's freeze-thaw climate. Spring cleaning, summer care, fall prep, and winter protection steps.",
-  "totalTime": "PT4H",
-  "step": [
-    { "@type": "HowToStep", "position": 1, "name": "Spring Cleaning (March–April)", "text": "Remove winter debris, inspect for cracks and rot, check ledger board and railings, clean with deck wash, power wash wood decks at 1200-1500 PSI, and apply stain/sealant to wood if water no longer beads." },
-    { "@type": "HowToStep", "position": 2, "name": "Summer Care (May–August)", "text": "Move planters to prevent mold, clean grill drippings immediately, sweep weekly under overhanging trees, check for ant trails and wasp nests, and tighten loose screws loosened by heat expansion." },
-    { "@type": "HowToStep", "position": 3, "name": "Fall Prep (September–November)", "text": "Clear leaves to prevent moisture trapping, inspect for damage before winter, re-stain wood decks if needed, check drainage paths, and trim branches that overhang the deck surface." },
-    { "@type": "HowToStep", "position": 4, "name": "Winter Protection (December–February)", "text": "Remove snow with a plastic shovel (never metal), avoid ice-melt salts on wood or composite, check for ice dam formation at the ledger, and verify post bases aren't heaving from frost." },
-  ],
-};
-
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, h3: { fontSize: '1.2rem', fontWeight: 600, margin: '1.5rem 0 0.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 } };
 
 export default function DeckMaintenancePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <JsonLd data={howToSchema} />
       <WebPageSchema url="https://ldndecks.com/deck-maintenance-checklist-virginia" name="Deck Maintenance Checklist for Virginia" description="Seasonal deck maintenance checklist for Virginia climate. Spring cleaning, summer care, fall prep, winter protection. Composite vs wood maintenance compared." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

@@ -74,25 +74,9 @@ export default function DeckInspectionPage() {
     },
   ];
 
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "@id": "https://ldndecks.com/deck-safety-inspection-checklist#howto",
-    "name": "How to Inspect Your Deck for Safety (5-Area Checklist)",
-    "description": "Systematic 5-area deck safety inspection covering ledger board, support posts, beams and joists, railings and stairs, and deck surface.",
-    "totalTime": "PT1H",
-    "step": checks.map((c, i) => ({
-      "@type": "HowToStep",
-      "position": i + 1,
-      "name": `Inspect ${c.area}`,
-      "text": c.items.join('. ') + '.',
-    })),
-  };
-
   return (
     <>
       <JsonLd data={faqSchema} />
-      <JsonLd data={howToSchema} />
       <WebPageSchema url="https://ldndecks.com/deck-safety-inspection-checklist" name="Deck Safety Inspection Checklist | Is Your Deck Safe? (2026)" description="15-point deck safety inspection checklist. Check for rot, structural issues, railing stability, and code compliance. Free professional inspection available." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
