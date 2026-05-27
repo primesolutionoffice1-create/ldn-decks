@@ -155,7 +155,11 @@ export default async function SingleBlogPage({ params }) {
     "inLanguage": "en-US",
     "speakable": {
       "@type": "SpeakableSpecification",
-      "cssSelector": [".leadParagraph", "h1", "h2"]
+      // CSS modules hash class names in production (e.g. .leadParagraph →
+      // .BlogContent_leadParagraph__abc123), so we cannot reference the
+      // module class directly. Use unhashed data-speakable attributes plus
+      // the always-stable h1/h2 element selectors.
+      "cssSelector": ["[data-speakable]", "h1", "h2"]
     }
   };
 
@@ -222,7 +226,7 @@ export default async function SingleBlogPage({ params }) {
        <div className={styles.contentSection}>
           <div className={styles.containerNarrow}>
              <div className={styles.contentBody}>
-               <p className={styles.leadParagraph}>{renderInline(post.excerpt, 'lead')}</p>
+               <p className={styles.leadParagraph} data-speakable>{renderInline(post.excerpt, 'lead')}</p>
                {paragraphs.map((para, idx) => {
                  if (para.startsWith('## ')) {
                    return <h2 key={idx} style={{ marginTop: '40px', marginBottom: '20px', color: '#111' }}>{para.replace('## ', '')}</h2>;
