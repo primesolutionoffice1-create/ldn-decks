@@ -124,7 +124,7 @@ export default function PorchVsDeckPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost Guide'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/deck-vs-patio-which-is-right', 'Deck vs Patio'],
               ['/services/porches', 'Our Porch Building Services'],
             ].map(([href, text]) => (

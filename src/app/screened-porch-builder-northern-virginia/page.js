@@ -117,7 +117,7 @@ const expansionSections = [
     paragraphs: [
       "Our most-requested project type in Loudoun and Fairfax counties is the [composite deck](/composite-deck-builder-loudoun) with an attached screened porch. This design gives homeowners both a covered, insect-free dining area and an open sun deck for grilling and lounging. If the home has a walkout basement, we build the screened porch on the upper level and install a dry-space ceiling system underneath, creating a shaded patio on the lower level at no additional square-footage cost.",
       "Multi-level deck-and-porch combinations require careful structural planning because the roof posts must carry down through the deck frame to independent footings — they cannot transfer roof load through the deck joists. We engineer these connections from the start so the structure meets Virginia's IRC residential code requirements and passes the framing and final inspections without revision.",
-      "Typical deck-plus-screened-porch packages in Northern Virginia land between $45,000 and $90,000 depending on total square footage, materials, roof complexity and feature level. We publish a [full cost guide for Northern Virginia decks](/how-much-does-a-deck-cost-northern-virginia) and a [monthly payment estimator](/deck-payment-estimator) for budgeting."
+      "Typical deck-plus-screened-porch packages in Northern Virginia land between $45,000 and $90,000 depending on total square footage, materials, roof complexity and feature level. We publish a [full cost guide for Northern Virginia decks](/composite-deck-cost-northern-virginia) and a [monthly payment estimator](/deck-payment-estimator) for budgeting."
     ]
   },
   {
@@ -176,7 +176,7 @@ export default function ScreenedPorchBuilderNovaPage() {
             ['/covered-deck-builder-northern-virginia', 'Covered Deck Builder in Northern Virginia'],
             ['/deck-enclosure-ideas-northern-virginia', 'Deck Enclosure Ideas for Northern Virginia Homes'],
             ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
-            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
           ].map(([href, text]) => (
             <li key={href} style={{ marginBottom: '0.5rem' }}>
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>

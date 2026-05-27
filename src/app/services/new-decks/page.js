@@ -176,7 +176,7 @@ export default function NewDecksPage() {
             <br />
             Materials, size, elevation and design complexity affect pricing.{' '}
             <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Estimate monthly payments</Link>{' · '}
-            <Link href="/how-much-does-a-deck-cost-northern-virginia" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Full cost guide</Link>{' · '}
+            <Link href="/composite-deck-cost-northern-virginia" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Full cost guide</Link>{' · '}
             <strong style={{ color: '#111' }}>Free in-home estimate included.</strong>
           </p>
         </div>
@@ -247,7 +247,7 @@ export default function NewDecksPage() {
             ['/timbertech-decks', 'TimberTech & AZEK Deck Builder'],
             ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
             ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
-            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
             ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost Breakdown'],
             ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
             ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Comparison'],

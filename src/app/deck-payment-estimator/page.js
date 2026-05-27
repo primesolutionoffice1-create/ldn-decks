@@ -297,7 +297,7 @@ export default function DeckPaymentEstimatorPage() {
             {[
               ['/deck-financing', 'Deck Financing in Northern Virginia — Options & Pre-Qualification'],
               ['/deck-cost-calculator', 'Free Deck Cost Calculator — Estimate Your Project'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia (2026)'],
               ['/get-estimate', 'Request Your Free Deck Estimate'],
             ].map(([href, text]) => (

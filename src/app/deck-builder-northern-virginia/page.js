@@ -90,7 +90,7 @@ const expansionSections = [
     title: 'What a Northern Virginia deck project costs',
     paragraphs: [
       'Deck pricing in Northern Virginia varies by size, materials, elevation and site conditions. Most homeowners invest between $18,000 and $65,000 for a professionally built composite deck. A straightforward 300 sq ft Trex Enhance deck starts around $18,000–$24,000, a mid-range 400–500 sq ft Trex Transcend build lands in the $28,000–$45,000 range, and larger multi-level projects or outdoor living packages with screened porches, pergolas and lighting can reach $55,000–$90,000+.',
-      'We publish transparent [cost data for Northern Virginia decks](/how-much-does-a-deck-cost-northern-virginia), a [composite deck cost breakdown](/composite-deck-cost-northern-virginia) and a [monthly payment estimator](/deck-payment-estimator) so you can plan before the first conversation. Every written estimate from Loudoun Decks includes materials, labor, permits, inspections and cleanup — no surprise line items.',
+      'We publish transparent [cost data for Northern Virginia decks](/composite-deck-cost-northern-virginia), a [composite deck cost breakdown](/composite-deck-cost-northern-virginia) and a [monthly payment estimator](/deck-payment-estimator) so you can plan before the first conversation. Every written estimate from Loudoun Decks includes materials, labor, permits, inspections and cleanup — no surprise line items.',
     ],
   },
   {

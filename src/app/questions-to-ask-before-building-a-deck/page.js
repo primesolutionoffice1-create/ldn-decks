@@ -26,7 +26,7 @@ const faqSchema = {
 const questions = [
   {
     category: 'Budget & Planning', items: [
-      { q: 'What is my realistic budget?', a: 'Composite decks in NoVA: $15k-$45k for 300-500 sqft. Include railings, stairs, lighting, permits in your number not just the deck surface.', link: '/how-much-does-a-deck-cost-northern-virginia' },
+      { q: 'What is my realistic budget?', a: 'Composite decks in NoVA: $15k-$45k for 300-500 sqft. Include railings, stairs, lighting, permits in your number not just the deck surface.', link: '/composite-deck-cost-northern-virginia' },
       { q: 'Should I finance or pay cash?', a: 'Financing at $0 down with 12-60 month terms lets you build now and enjoy immediately while paying over time. Material costs rise 5-8% annually waiting rarely saves money.', link: '/deck-financing-northern-virginia' },
       { q: 'What size deck do I need?', a: 'Couples: 150-200 sqft. Families: 300-400 sqft. Entertainers: 500+. Don\'t exceed 20-25% of your backyard.', link: '/what-size-deck-should-i-build' },
       { q: 'When is the best time to build?', a: 'Feb-Apr for best pricing. May-Aug is peak with 4-6 week waits. Start 2-3 months before desired completion.', link: '/best-time-to-build-a-deck-northern-virginia' },
@@ -107,7 +107,7 @@ export default function QuestionsPage() {
             {[
               ['/northern-virginia-deck-building-guide', 'The Complete Deck Building Guide'],
               ['/how-to-choose-a-deck-builder-northern-virginia', 'How to Choose a Deck Builder'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/about/certifications-and-licenses', 'Our Credentials'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>

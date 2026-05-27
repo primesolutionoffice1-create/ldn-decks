@@ -185,7 +185,7 @@ export default function DeckDesignIdeasPage() {
             {[
               ['/deck-design-ideas-northern-virginia-2026', 'Deck Design Ideas for Northern Virginia 2026'],
               ['/northern-virginia-deck-building-guide', 'Complete Deck Building Guide'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
               ['/showcase', 'Our Project Gallery'],
               ['/what-size-deck-should-i-build', 'Deck Size Guide'],

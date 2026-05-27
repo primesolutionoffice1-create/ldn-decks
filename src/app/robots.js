@@ -27,17 +27,22 @@ export default function robots() {
 
   // AI crawlers explicitly allowed for citation visibility.
   const AI_BOTS = [
+    'Googlebot',
+    'Bingbot',
     'GPTBot',
     'ChatGPT-User',
-    'Google-Extended',
-    'PerplexityBot',
-    'Amazonbot',
-    'ClaudeBot',
-    'Bytespider',
-    'CCBot',
-    'Applebot-Extended',
-    'cohere-ai',
     'OAI-SearchBot',
+    'ClaudeBot',
+    'Claude-Web',
+    'anthropic-ai',
+    'PerplexityBot',
+    'CCBot',
+    'Applebot',
+    'Applebot-Extended',
+    'Google-Extended',
+    'Amazonbot',
+    'Bytespider',
+    'cohere-ai',
   ];
 
   return {

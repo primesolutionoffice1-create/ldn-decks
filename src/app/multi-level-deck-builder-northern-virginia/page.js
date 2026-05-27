@@ -93,7 +93,7 @@ export default function MultiLevelDeckPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ fontSize: '0.85rem', color: '#888', fontStyle: 'italic' }}>Multi-level decks cost 20–40% more than single-level due to additional stairs, framing transitions, and support structure. <Link href="/how-much-does-a-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>Full pricing guide →</Link></p>
+          <p style={{ fontSize: '0.85rem', color: '#888', fontStyle: 'italic' }}>Multi-level decks cost 20–40% more than single-level due to additional stairs, framing transitions, and support structure. <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>Full pricing guide →</Link></p>
 
           <h2 style={S.h2}>Design Considerations for Multi-Level Decks</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
@@ -131,7 +131,7 @@ export default function MultiLevelDeckPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/what-size-deck-should-i-build', 'Deck Size Guide'],
               ['/under-deck-ceiling-ideas', 'Under-Deck Ceiling Ideas'],
               ['/deck-lighting-ideas-northern-virginia', 'Deck Lighting Ideas'],

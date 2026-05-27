@@ -120,7 +120,7 @@ export default function TariffsDeckPricesPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide (2026 Prices)'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide (2026 Prices)'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
               ['/deck-financing-northern-virginia', 'Deck Financing Options'],
               ['/best-time-to-build-a-deck-northern-virginia', 'Best Time to Build'],

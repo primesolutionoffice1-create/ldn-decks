@@ -36,6 +36,9 @@ Prince William County: Manassas, Woodbridge, Haymarket, Gainesville, Bristow, Da
 Arlington County: Arlington, Crystal City, Ballston, Clarendon, Rosslyn, Pentagon City, Shirlington
 Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 
+## Western Loudoun Premium Expansion
+Purcellville and western Loudoun are priority premium markets for estate-style outdoor living, countryside decks, scenic railings, covered decks, screened porches, outdoor kitchens, large backyard projects and hillside/elevated deck planning. Relevant communities include Round Hill, Hamilton, Hillsboro, Bluemont, Lovettsville, Waterford and rural Loudoun properties near winery and countryside lifestyle corridors.
+
 ## Pricing (2026, Northern Virginia)
 - Pressure-treated wood deck: $18–$35 per sqft installed
 - Cedar deck: $25–$45 per sqft installed

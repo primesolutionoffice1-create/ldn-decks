@@ -119,7 +119,7 @@ export default function DeckValuePage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules'],

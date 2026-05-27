@@ -104,7 +104,7 @@ export default function UnderDeckPage() {
             {[
               ['/services/under-deck-patios', 'Under-Deck Patio Services'],
               ['/deck-lighting-ideas-northern-virginia', 'Deck Lighting Ideas'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/outdoor-kitchen-builder-northern-virginia', 'Outdoor Kitchen Builder'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>

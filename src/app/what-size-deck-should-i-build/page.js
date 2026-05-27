@@ -125,7 +125,7 @@ export default function DeckSizePage() {
               </tbody>
             </table>
           </div>
-          <p style={{ fontSize: '0.85rem', color: '#888', fontStyle: 'italic' }}>Includes materials, labor, standard railings, basic stairs. <Link href="/how-much-does-a-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>Full pricing guide →</Link></p>
+          <p style={{ fontSize: '0.85rem', color: '#888', fontStyle: 'italic' }}>Includes materials, labor, standard railings, basic stairs. <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>Full pricing guide →</Link></p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
@@ -141,7 +141,7 @@ export default function DeckSizePage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/deck-vs-patio-which-is-right', 'Deck vs Patio'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Rules'],
               ['/how-long-to-build-a-deck-northern-virginia', 'Build Timeline'],

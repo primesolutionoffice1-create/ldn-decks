@@ -134,7 +134,7 @@ export default function DeckRailingPage() {
               ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
               ['/education/deck-stair-code-rise-run-virginia', 'Virginia Deck Stair Code Guide'],
               ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing and Deck Attachment'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
               ['/deck-lighting-ideas-northern-virginia', 'Deck Lighting Ideas'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules'],

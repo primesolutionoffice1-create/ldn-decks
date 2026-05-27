@@ -93,7 +93,7 @@ export default function LouveredPergolaPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ fontSize: '0.85rem', color: '#888', fontStyle: 'italic' }}>Ranges include the dedicated footings and structural reinforcement the pergola requires. Integrated LED lighting, retractable side screens, and heaters add cost &mdash; but each is far cheaper installed during the original build. <Link href="/how-much-does-a-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>Full deck pricing guide &rarr;</Link></p>
+          <p style={{ fontSize: '0.85rem', color: '#888', fontStyle: 'italic' }}>Ranges include the dedicated footings and structural reinforcement the pergola requires. Integrated LED lighting, retractable side screens, and heaters add cost &mdash; but each is far cheaper installed during the original build. <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>Full deck pricing guide &rarr;</Link></p>
 
           <h2 style={S.h2}>Design &amp; Structural Considerations</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>

@@ -1,25 +1,47 @@
-# Loudoun Decks — ldndecks.com
-# Deck builder serving Northern Virginia
+# Loudoun Decks / LDN Decks
+# Premium deck builder serving Northern Virginia.
 
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
-Disallow: /thank-you
-Disallow: /review
+Disallow: /*?*utm_
+Disallow: /*?*gclid=
+Disallow: /*?*fbclid=
+Disallow: /*?*msclkid=
 
-# AI crawlers — welcome
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
 User-agent: Claude-Web
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
@@ -29,3 +51,4 @@ User-agent: cohere-ai
 Allow: /
 
 Sitemap: https://ldndecks.com/sitemap.xml
+Sitemap: https://ldndecks.com/image-sitemap.xml

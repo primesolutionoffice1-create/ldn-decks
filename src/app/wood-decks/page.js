@@ -217,7 +217,7 @@ export default function WoodDecksPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck — Full Comparison'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost Guide'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/deck-staining-northern-virginia', 'Deck Staining Services'],
               ['/composite-decks', 'Composite Decks'],
               ['/trex-decks', 'Trex Decks'],

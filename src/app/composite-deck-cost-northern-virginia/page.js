@@ -511,7 +511,7 @@ export default function CompositeDeckCostPage() {
               ['/deck-cost-calculator', 'NoVA Deck Cost Calculator', 'Interactive estimate by size, material, add-ons'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK vs Fiberon', 'Full 4-way comparison'],
               ['/how-tariffs-affect-deck-prices-2026', '2026 Deck Tariff Impact', 'How import duties moved the market'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Deck Cost (All Materials)', 'Composite, wood, and cedar pricing side by side'],
+              ['/composite-deck-cost-northern-virginia', 'Deck Cost (All Materials)', 'Composite, wood, and cedar pricing side by side'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Decision', 'Total-cost-of-ownership math'],
               ['/does-a-deck-add-value-to-your-home', 'Deck ROI &amp; Home Value', 'What composite recoups at resale'],
               ['/services/deck-replacement', 'Deck Replacement Services', 'Full rebuild scope and pricing'],

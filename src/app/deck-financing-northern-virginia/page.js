@@ -148,7 +148,7 @@ export default function DeckFinancingPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value?'],
               ['/how-to-choose-a-deck-builder-northern-virginia', 'How to Choose a Deck Builder'],
               ['/best-time-to-build-a-deck-northern-virginia', 'Best Time to Build'],

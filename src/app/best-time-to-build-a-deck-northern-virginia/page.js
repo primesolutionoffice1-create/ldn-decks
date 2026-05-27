@@ -190,7 +190,7 @@ export default function BestTimeToBuildPage() {
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}>Model a payment yourself with the <Link href="/deck-payment-estimator" style={S.link}>deck payment estimator</Link> — three sliders, a monthly figure in seconds.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}>Review options on the <Link href="/deck-financing" style={S.link}>deck financing page</Link>; pre-qualify with a soft-credit check that does not affect your score.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}>Anchor the budget with realistic numbers from the <Link href="/how-much-does-a-deck-cost-northern-virginia" style={S.link}>Northern Virginia deck cost guide</Link>.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}>Anchor the budget with realistic numbers from the <Link href="/composite-deck-cost-northern-virginia" style={S.link}>Northern Virginia deck cost guide</Link>.</li>
           </ul>
 
           <h2 style={S.h2}>Year-Round Building: Can You Really Build in Winter?</h2>
@@ -218,7 +218,7 @@ export default function BestTimeToBuildPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/deck-payment-estimator', 'Deck Payment Estimator — see your monthly payment'],
               ['/deck-financing', 'Deck Financing in Northern Virginia'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],

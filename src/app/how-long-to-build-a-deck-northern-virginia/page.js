@@ -156,7 +156,7 @@ export default function HowLongToBuildPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/best-time-to-build-a-deck-northern-virginia', 'Best Time to Build a Deck'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
+              ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules'],
               ['/deck-permit-fairfax-county-virginia', 'Fairfax County Permit Guide'],
               ['/about/process', 'Our Build Process'],
