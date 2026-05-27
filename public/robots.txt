@@ -1,0 +1,31 @@
+# Loudoun Decks — ldndecks.com
+# Deck builder serving Northern Virginia
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
+Disallow: /thank-you
+Disallow: /review
+
+# AI crawlers — welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://ldndecks.com/sitemap.xml
