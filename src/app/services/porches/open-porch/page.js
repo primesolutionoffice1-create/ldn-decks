@@ -19,6 +19,7 @@ export const metadata = buildMetadata({
   path: "/services/porches/open-porch",
   title: "Open Porch Builder & Design | Northern Virginia",
   description: "Custom open porch design and construction in Northern Virginia. We build covered open-air porches, pavilions, and outdoor living rooms. Free estimates.",
+  image: "/images/img17.jpeg",
 });
 
 const inclusions = [

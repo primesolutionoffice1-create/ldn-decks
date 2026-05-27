@@ -19,6 +19,7 @@ export const metadata = buildMetadata({
   path: "/services/deck-resurfacing",
   title: '5-Star Deck Resurfacing NoVA | TimberTech Vintage Experts',
   description: 'Premium deck resurfacing in Northern Virginia from $15k+. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options.',
+  image: "/showcase/img05.jpeg",
 });
 
 const expansionSections = [

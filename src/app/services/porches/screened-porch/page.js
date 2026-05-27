@@ -20,6 +20,7 @@ export const metadata = buildMetadata({
     path: "/services/porches/screened-porch",
     title: "Screened Porch Builder & Contractor | Northern Virginia",
     description: "Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k. Trex Platinum installer.",
+  image: "/images/img01.jpeg",
 });
 
 const inclusions = [

@@ -17,7 +17,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/deck-maintenance",
   title: "Professional Deck Maintenance NoVA | Staining & Sealing Services",
-  description: "Protect your outdoor investment with expert deck maintenance in Northern Virginia. We specialize in wood staining, sealing, and structural care."
+  description: "Protect your outdoor investment with expert deck maintenance in Northern Virginia. We specialize in wood staining, sealing, and structural care.",
+  image: "/images/img14.jpeg",
 });
 
 const maintenanceProcess = [

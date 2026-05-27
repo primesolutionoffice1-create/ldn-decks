@@ -19,6 +19,7 @@ export const metadata = buildMetadata({
   path: "/services/new-decks",
   title: "Custom Deck Builder Northern Virginia | Design & Build | Loudoun Decks",
   description: "Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood. Permits, HOA, footings, framing — full-service builds from $15,000+. Free estimate.",
+  image: "/showcase/img08.jpeg",
 });
 
 const expansionSections = [

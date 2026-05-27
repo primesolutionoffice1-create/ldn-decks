@@ -10,6 +10,7 @@ export const metadata = buildMetadata({
   path: '/faqs',
   title: 'Deck Building FAQs | Northern Virginia | Loudoun Decks',
   description: 'Answers to common questions about deck building, materials, costs, timelines, permits, and HOA in Northern Virginia. Expert answers from Loudoun Decks.',
+  image: "/images/deck-inspection.png",
 });
 
 export default function FAQPage() {

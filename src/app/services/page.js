@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/services',
   title: 'Deck Building & Outdoor Living Services | Loudoun Decks',
   description: 'Custom decks, screened porches, pergolas, patios, fencing & more in Northern Virginia. Trex Platinum Partner. 5-star rated. Free estimates: (571) 655-7207.',
+  image: "/showcase/img08.jpeg",
 });
 
 export default function ServicesPage() {

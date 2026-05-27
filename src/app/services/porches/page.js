@@ -19,6 +19,7 @@ export const metadata = buildMetadata({
   path: "/services/porches",
   title: '5-Star Porch Builder NoVA | Screened & Open Porch Design',
   description: 'Top-rated porch contractor in Northern Virginia. Custom screened porches, open-air pavilions & front porches. ★ 5.0 Google Rated. Free estimates in 24h.',
+  image: "/images/img16.jpeg",
 });
 
 const inclusions = [
