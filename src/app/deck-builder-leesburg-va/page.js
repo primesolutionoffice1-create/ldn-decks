@@ -50,19 +50,35 @@ const leesburgFAQs = [
   },
   {
     q: "What does a deck cost in Leesburg?",
-    a: "Leesburg composite decks generally run $20,000 to $50,000+. Sloped, Potomac-facing lots in River Creek and Lansdowne often call for multi-level designs and added engineering, which sits toward the higher end of that range."
+    a: "Leesburg composite decks generally run $20,000 to $85,000+. Tavistock Farms / Potomac Station mid-tier: $28k-$48k. River Creek and Lansdowne sloped Potomac-facing lots with multi-level designs: $42k-$85k. Estate-tier builds in Lansdowne Conservancy or Beacon Hill with outdoor kitchens: $75k-$150k+."
   },
   {
     q: "Which Leesburg HOAs have you worked with?",
-    a: "River Creek, Lansdowne on the Potomac, Tavistock Farms, Potomac Station and Exeter. River Creek's architectural review can take 3-4 weeks in peak season, so we prepare and submit that package early."
+    a: "Lansdowne Conservancy + Lansdowne Woods (most detailed ARC, see our dedicated Lansdowne HOA guide), River Creek, Tavistock Farms, Potomac Station, Exeter, Beacon Hill, Red Cedar, and Brandon Park. Each ARC operates on its own timeline and material standards; we maintain current submission templates for every major Leesburg HOA."
   },
   {
     q: "What deck materials are popular in Leesburg?",
-    a: "Composite (Trex and TimberTech AZEK) leads, but cedar and IPE remain popular in River Creek for the natural-wood aesthetic, and AZEK's premium lines suit the historic district where a refined, traditional finish matters."
+    a: "Composite (Trex Transcend and TimberTech AZEK) leads, but cedar and IPE remain popular in River Creek for the natural-wood aesthetic, and AZEK's premium lines suit the historic district where a refined, traditional finish matters. Warm-tone palettes (Spiced Rum, Havana Gold, Vintage Mahogany) dominate; cool tones are less common in Leesburg's traditional architectural context."
   },
   {
     q: "Can you design a Leesburg deck around a Potomac or golf-course view?",
-    a: "Yes. On Leesburg's view lots we favor cable and glass railing to keep sight lines open, and we set deck height and stair runs to frame the river or fairway rather than block it."
+    a: "Yes. On Leesburg's view lots we favor cable and glass railing to keep sight lines open, and we set deck height and stair runs to frame the river or fairway rather than block it. River Creek and Lansdowne both support cable rail submissions when the lot context is documented (woods-backing or river-view)."
+  },
+  {
+    q: "What's special about Lansdowne deck projects?",
+    a: "Lansdowne is Loudoun's premier golf-community estate area, split into the Conservancy (the original estate tier, most detailed ARC) and Lansdowne Woods (55+ active-adult community with slightly streamlined review). Conservancy projects average $55k-$95k with detailed material samples and elevation drawings required. See our dedicated Lansdowne HOA deck rules guide for the full submission process."
+  },
+  {
+    q: "What's special about historic district deck projects?",
+    a: "Leesburg's historic district near King Street is governed by the Town of Leesburg's Architectural Review Board (ARB), which adds 4-6 weeks to the typical permit timeline. The ARB reviews material, scale, color, and how the deck reads from the public right-of-way. We file the ARB submission in parallel with the Town building permit, designed specifically to clear historic review on first round."
+  },
+  {
+    q: "How long does a Leesburg deck project take from contract?",
+    a: "8-14 weeks total depending on jurisdiction and HOA complexity. Town of Leesburg permit: 2-4 weeks. Loudoun County permit: 2-4 weeks. ARB review (historic district): adds 4-6 weeks. HOA review (Lansdowne, River Creek, etc.): 14-35 days in parallel. Material delivery: 1-3 weeks. Construction on-site: 1-4 weeks depending on size and complexity."
+  },
+  {
+    q: "What's the difference between River Creek and Lansdowne projects?",
+    a: "Both are premier Loudoun communities, but with different character. River Creek favors a more naturalist aesthetic (cedar, IPE, cable rail to preserve Potomac and woods views) — projects average $48k-$85k. Lansdowne favors a traditional aesthetic (warm-tone composites, balustrade or aluminum-traditional railings) — projects average $55k-$95k in the Conservancy. Both require 21-30 day ARC review on average."
   }
 ];
 
@@ -102,6 +118,44 @@ const expansionSections = [
       "A screened porch is the natural second phase for a Leesburg deck. Tied into the structure at the framing stage rather than bolted on afterward, it stretches the usable season well past the first cool Potomac-side evening.",
       "Where the grade falls away  -  which is most of River Creek and Lansdowne  -  a stepped layout earns its keep: a cooking-and-dining level off the kitchen, a lounge level nearer the yard, and a dry-joist ceiling that claims the shaded zone underneath as covered patio.",
       "Combined builds  -  deck, screened porch and a covered lower patio  -  suit the larger lots in Leesburg's river communities, and outdoor square footage remains one of the clearer resale levers in that market."
+    ]
+  },
+  {
+    title: "Leesburg Neighborhoods We Build In",
+    paragraphs: [
+      "Lansdowne (Conservancy and Lansdowne Woods) is our highest-volume Leesburg sub-market — the master-planned golf community split between the original Conservancy estate section and the 55+ Lansdowne Woods sub-community. Conservancy projects average 21-day ARC review and our portfolio there exceeds 14 completed projects. Common build: 500-700 sqft multi-level composite deck, $55k-$95k. See our dedicated Lansdowne HOA deck rules guide for the full submission process.",
+      "River Creek is the Potomac-side gated community where naturalist aesthetics dominate. Cedar and IPE remain popular here despite the higher maintenance, and cable rail submissions are routinely approved given the lot-context rationale (Potomac views, mature woods). Architectural review averages 21-28 days; our packets clear first-round when the lot-context documentation is included.",
+      "Beacon Hill is South Leesburg estate territory with HOA review averaging 14 days. Beacon Hill homes typically have larger lots and accommodate multi-level deck designs. We've completed 6+ projects here.",
+      "Red Cedar is newer (2010+) development north of downtown with HOA review averaging 18 days. Common Red Cedar build: 400-500 sqft composite deck with aluminum railing, $35k-$52k.",
+      "Brandon Park and Bellewood are mid-tier HOAs with 14-21 day review windows and flexible material approval policies — well-suited to the more value-conscious Leesburg deck budgets.",
+      "Greenway Farm sits in Loudoun County's higher-end estate area with mixed HOA / no-HOA properties. Larger lot sizes (3-10 acres) typical; projects scale to $60k-$200k.",
+      "The Downtown Historic District near King Street operates under the Town of Leesburg's Architectural Review Board (ARB) — an additional review layer beyond the standard Town building permit. ARB review adds 30-45 days; we coordinate the submission as part of every historic-district project.",
+      "We also build regularly in Battlefield, Edwards Ferry, Stratford, Tavistock Farms, Tuscarora, Country Walk, Ashby Ponds, and Riverside. If your Leesburg HOA isn't listed here, contact us — we have submission templates for every major Loudoun HOA."
+    ]
+  },
+  {
+    title: "Materials and Pricing Tiers by Leesburg Sub-Market",
+    paragraphs: [
+      "Leesburg pricing reflects the sub-market more than the materials. The same Trex Transcend deck lands at very different totals depending on lot complexity, HOA review intensity, and the design vocabulary the community expects."
+    ],
+    listItems: [
+      { label: "Single-level composite deck (300-400 sqft, Tavistock / Potomac Station / Red Cedar)", text: "$28,000-$42,000 — Trex Transcend or TimberTech PRO" },
+      { label: "Multi-level composite deck (500-700 sqft, River Creek / Lansdowne)", text: "$52,000-$85,000 — Transcend, AZEK, or TimberTech PRO Legacy" },
+      { label: "PVC deck (350-500 sqft, premium tier)", text: "$36,000-$72,000 — AZEK Vintage Mahogany, Coastline, or Brownstone" },
+      { label: "Screened porch (250-350 sqft)", text: "$48,000-$78,000 — composite + EZE-Breeze + roof + electric" },
+      { label: "Deck replacement (400 sqft, framing salvaged)", text: "$22,000-$42,000 — resurface vs full rebuild flow" },
+      { label: "Patio + deck combo (Lansdowne / Beacon Hill estates)", text: "$58,000-$120,000+ — composite deck + paver patio + outdoor kitchen" },
+      { label: "Estate-tier outdoor living (Lansdowne Conservancy, Beacon Hill, Greenway Farm)", text: "$95,000-$180,000+ — multi-level deck + screened porch + outdoor kitchen + fire feature" }
+    ]
+  },
+  {
+    title: "Town of Leesburg vs Loudoun County — the Permit Reality",
+    paragraphs: [
+      "Leesburg is unique among Loudoun towns: properties inside the Town of Leesburg corporate limits permit through the Town's building department; properties just outside the line permit through Loudoun County. The two operate independently with different timelines, fee structures, and submission portals.",
+      "Town of Leesburg permits average 2-4 weeks plan review through the Town building department. Town fees are flat-tier based on construction valuation (typically $150-$500 for residential deck work). The Town's reviewer staff is smaller than the County's but typically faster on revision cycles.",
+      "Loudoun County permits average 2-4 weeks through the LandMARC portal. County fees are valuation-scaled (typically $150-$700). The LandMARC system requires specific PDF plan formats; we prepare every submission to that standard so first-round approval is the norm.",
+      "Historic district properties downtown add a third layer: the Town's Architectural Review Board (ARB) reviews exterior changes. ARB review adds 30-45 days. The ARB submission requires elevation drawings, material samples, color specifications, and (often) a public hearing for visible exterior modifications.",
+      "Our standard Leesburg estimate identifies which jurisdiction applies on the very first call and what (if any) ARB review will be required. The wrong filing path is the most common source of a delayed Leesburg deck. See our full Loudoun County deck permit guide for the county-side walkthrough."
     ]
   }
 ];
