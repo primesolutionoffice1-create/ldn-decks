@@ -1,116 +1,218 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import JsonLd from '@/components/JsonLd';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
-import SimpleCTA from '@/components/SimpleCTA';
+import ServicesHeader from '@/components/ServicesHeader';
+import ServiceMain from '@/components/ServiceMain';
+import ServiceInclusions from '@/components/ServiceInclusions';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ProcessSteps from '@/components/ProcessSteps';
+import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import RatingBadge from '@/components/RatingBadge';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import JsonLd from '@/components/JsonLd';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import { BUSINESS } from '@/lib/business';
-import CallLink from '@/components/CallLink';
-import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-oakton-va',
-  title: 'Deck Builder in Oakton, VA | Premium Composite Decks | LDN Decks',
-  description: 'Custom deck builder in Oakton, VA. 5.0★ Google. Trex Transcend & AZEK decks for Oakton estate homes. Screened porches, outdoor kitchens. Free estimate.',
+  title: 'Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks',
+  description: 'Custom deck builder in Oakton, VA. 5.0★ Google. Trex Transcend & TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate.',
+  image: '/images/img64.jpeg',
 });
 
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much does a deck cost in Oakton, VA?", acceptedAnswer: { "@type": "Answer", text: "Oakton deck projects range from $30,000-$70,000+. Oakton homes tend toward premium builds with Trex Transcend or TimberTech AZEK, multi-level designs, and integrated features. Composite decks: $40-$65/sqft installed." } },
-    { "@type": "Question", name: "Do I need a permit in Oakton?", acceptedAnswer: { "@type": "Answer", text: "Yes Oakton is in Fairfax County. Building permits required, 3-6 weeks for plan review. Many Oakton lots have unique setback or tree-save requirements. We handle all permitting." } },
-  ],
+const inclusions = [
+  {
+    title: "Wooded Lot Specialists",
+    desc: "Oakton's mature tree canopy requires careful construction planning. We design around root systems and canopy lines to preserve your landscape while building a structurally sound deck."
+  },
+  {
+    title: "Fairfax County RPA Knowledge",
+    desc: "Properties near Difficult Run and other waterways may require Resource Protection Area review. We manage environmental assessments and mitigation plans as part of every applicable project."
+  },
+  {
+    title: "Premium Material Standards",
+    desc: "Oakton homeowners expect the best. We build exclusively with Trex Transcend, TimberTech AZEK, and comparable top-tier composites paired with cable, glass, or custom metal railings."
+  }
+];
+
+const oaktonFAQs = [
+  {
+    q: "How much does a custom deck cost in Oakton, VA?",
+    a: "Oakton deck projects typically range from $30,000 to $75,000+. This reflects the larger lot sizes, premium material expectations (Trex Transcend, TimberTech AZEK), and the multi-level designs common on Oakton's sloped, wooded properties. Composite decks run $40-$65 per square foot installed depending on material and complexity."
+  },
+  {
+    q: "What permits does Oakton require for a deck?",
+    a: "Oakton falls under Fairfax County jurisdiction. All decks require building and zoning permits, with plan review typically taking 3-6 weeks. Properties near Difficult Run or other waterways may require additional Resource Protection Area (RPA) review. We handle all permit submissions and inspections."
+  },
+  {
+    q: "Can you build around mature trees on my Oakton property?",
+    a: "Yes — tree preservation is a core part of our Oakton work. Many properties here have mature oaks, hickories, and tulip poplars near the build zone. We design footing layouts that avoid critical root zones, use cantilevered framing where needed, and coordinate with Fairfax County's tree-save requirements to protect your landscape."
+  },
+  {
+    q: "Do Oakton neighborhoods have HOA or architectural review?",
+    a: "Fewer Oakton neighborhoods have formal HOAs compared to newer subdivisions, but many have deed restrictions or architectural review committees that govern exterior modifications. Fox Mill Estates, Vale area communities, and several others have specific guidelines. We research your property's restrictions before finalizing designs."
+  },
+  {
+    q: "What deck materials do you recommend for Oakton homes?",
+    a: "For Oakton's premium market, we primarily recommend Trex Transcend and TimberTech AZEK. Both offer realistic wood-grain textures, exceptional fade resistance, and 25-50 year warranties. We pair these with Trex Signature cable railings or glass panel systems. AZEK's PVC construction is especially well-suited for Oakton's shaded, wooded lots where moisture retention can be a concern."
+  },
+  {
+    q: "Can you build multi-level decks on sloped Oakton lots?",
+    a: "Multi-level design is one of our specialties, and Oakton's terrain makes it a frequent requirement. We engineer cascading deck structures that follow natural grade changes, creating distinct outdoor zones — dining, lounging, grilling — connected by code-compliant stairways. This approach turns a sloped backyard from a limitation into a design feature."
+  }
+];
+
+const oaktonFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": oaktonFAQs.map(({ q, a }) => ({
+    "@type": "Question",
+    "name": q,
+    "acceptedAnswer": { "@type": "Answer", "text": a }
+  }))
 };
+
+const expansionSections = [
+  {
+    title: "Oakton's Wooded Estate Lots",
+    paragraphs: [
+      "Oakton occupies a quiet, affluent corridor between Vienna and Fairfax, defined by its large wooded lots, established homes, and a character that feels distinctly different from the denser suburbs closer to DC. Properties in Oakton proper, Blake Lane, Waples Mill, Vale, Fox Mill Estates, and the Oak Marr area typically sit on half-acre to two-plus-acre lots shaded by mature hardwood canopy. This setting is exactly what draws homeowners to Oakton — and it shapes every deck project we build here.",
+      "Building on a wooded Oakton lot requires a deck builder who understands arboriculture as much as construction. Mature oaks, hickories, and tulip poplars often have root systems that extend 30 feet or more from the trunk. Standard footing placement can damage these root zones, leading to tree decline or loss — an outcome no Oakton homeowner wants. We survey the build area with tree protection in mind, positioning footings to avoid critical roots and using cantilevered framing to bridge sensitive zones.",
+      "The wooded setting also influences material selection. Shaded lots retain moisture longer than sun-exposed properties, which accelerates the deterioration of wood decking and makes mold growth a persistent maintenance issue. This is one reason we strongly recommend PVC-based products like TimberTech AZEK for Oakton builds — they are impervious to moisture absorption and resist mold without chemical treatments."
+    ]
+  },
+  {
+    title: "Premium Materials for Oakton Properties",
+    paragraphs: [
+      "Oakton's real estate market sets clear expectations for quality. Homes here range from $800,000 to well over $2 million, and homeowners invest accordingly in their outdoor spaces. We build exclusively with Trex Transcend, TimberTech AZEK, and comparable premium composites because these are the materials that match the caliber of Oakton properties. Standard-grade composite or pressure-treated lumber simply does not belong on homes in this market.",
+      "For Oakton projects, Trex Signature cable railings and glass panel systems are the most popular choices. Cable railings complement the wooded setting by preserving views of the tree canopy and natural landscape. Hidden fastener systems create a screw-free deck surface that feels like finished furniture. Integrated LED lighting — both in-deck and under-rail — extends the usable hours of your outdoor space through Virginia's long summer evenings and into the fall entertaining season.",
+      "The investment in premium materials pays for itself in two ways. First, you eliminate the ongoing maintenance costs that plague wood decks in Virginia's humid climate — no annual staining, no sanding, no board replacement. Second, in Oakton's competitive real estate market, a professionally built composite deck with modern railings and lighting is a genuine asset that buyers prioritize. Our Trex and TimberTech projects are designed to stay beautiful for 25 to 50 years with nothing more than occasional cleaning."
+    ]
+  },
+  {
+    title: "Environmental Considerations — Tree Protection and RPA",
+    paragraphs: [
+      "Several areas of Oakton are adjacent to Difficult Run, one of Fairfax County's significant stream corridors, and other tributaries that feed into the Potomac watershed. Properties near these waterways may fall within a Resource Protection Area (RPA) — an environmental overlay zone that restricts construction activity within 100 feet of the stream buffer. If your Oakton lot has an RPA designation, your deck project will require additional environmental review and potentially a water quality impact assessment.",
+      "We have extensive experience with Fairfax County's RPA process. We identify RPA boundaries early in the design phase, work with environmental consultants when required, and design deck footprints that minimize disturbance to the buffer zone. In some cases, we can design a deck that avoids the RPA entirely through strategic placement. In others, we prepare the mitigation plans that Fairfax County requires for approval. Either way, our familiarity with the process prevents the costly delays that catch less experienced builders off guard.",
+      "Beyond RPA, Fairfax County's tree-save ordinance applies to many Oakton lots. Mature trees above a certain caliper cannot be removed without replacement or mitigation. We coordinate with the county's tree-save requirements as part of every applicable Oakton project, ensuring that your deck is built in full compliance while preserving the wooded character that makes your property valuable."
+    ],
+    listItems: [
+      { label: "RPA Assessment", text: "Early identification of Resource Protection Area boundaries and environmental review requirements." },
+      { label: "Root-Zone Protection", text: "Footing layouts designed to avoid critical root systems of mature Oakton trees." },
+      { label: "Tree-Save Compliance", text: "Full coordination with Fairfax County's tree-save ordinance for protected specimens." },
+      { label: "Erosion Control", text: "Proper sediment and erosion measures during construction on sloped, wooded lots." }
+    ]
+  },
+  {
+    title: "Multi-Level Designs for Oakton's Terrain",
+    paragraphs: [
+      "Oakton's natural topography is one of its defining features — rolling terrain, gentle slopes, and grade changes that give properties character but also present construction challenges. A flat, single-level deck on a sloped Oakton lot wastes the site's potential and often looks out of place. Multi-level design is the solution, and it is one of our specialties.",
+      "We engineer cascading deck structures that follow the natural grade of your property, creating distinct outdoor zones at different elevations. A typical multi-level Oakton project might include an upper dining level adjacent to the home's kitchen, a mid-level lounging area with built-in seating, and a lower grilling station near grade level. Code-compliant stairways connect the levels, and integrated lighting ensures safe navigation after dark. The result transforms a sloped backyard from a limitation into the most compelling feature of your outdoor space.",
+      "Structural engineering is critical for multi-level builds. Each level requires its own footing and beam system, and the connections between levels must handle lateral loads as well as vertical. We work with licensed structural engineers on complex Oakton projects to ensure every element meets or exceeds Virginia building code. Our projects are designed to last decades, not just pass inspection."
+    ]
+  }
+];
 
 export default function OaktonDeckBuilderPage() {
   return (
-    <>
-      <JsonLd data={faqSchema} />
+    <main>
+      <JsonLd data={oaktonFaqSchema} />
       <LocalBusinessSchema city="Oakton" url="https://ldndecks.com/deck-builder-oakton-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-oakton-va" name="Deck Builder in Oakton, VA | Premium Composite Decks | LDN Decks" description="Custom deck builder in Oakton, VA. 5.0★ Google. Trex Transcend &amp; AZEK decks for Oakton estate homes. Screened porches, outdoor kitchens. Free estimate." speakable />
-      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Premium Deck Builder in Oakton, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom composite decks, screened porches &amp; outdoor kitchens for Oakton homes</p>
-          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
-          </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+      <WebPageSchema url="https://ldndecks.com/deck-builder-oakton-va" name="Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks" description="Custom deck builder in Oakton, VA. 5.0★ Google. Trex Transcend &amp; TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate." speakable />
+      <ServicesHeader
+        subtext="Oakton, VA's Premium Deck Builder"
+        title="Custom Deck Builder in Oakton, VA"
+        description="Loudoun Decks builds premium composite decks, multi-level structures, and screened porches for Oakton's wooded estate properties. Trex Platinum Partner. 5-Star Google Rated."
+      />
+
+      {/* Pricing Anchor - Conversion Filtering */}
+      <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
+            <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: $5,000+</strong>
+            <br />
+            We focus on <strong style={{ color: '#111' }}>full custom Oakton builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
+          </p>
         </div>
       </section>
-      <article style={{ padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-            <Image
-              src="/images/img37.jpeg"
-              alt="Premium custom deck built by LDN Decks in Oakton, Virginia"
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes="(max-width: 900px) 100vw, 900px"
-            />
-          </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Oakton Luxury Outdoor Living in the Heart of Fairfax</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Oakton is known for its wooded lots, established homes, and premium property values. Deck projects here tend toward larger, more architecturally significant designs multi-level builds that work with the natural terrain, screened porches nestled among mature trees, and outdoor kitchens designed for Oakton-style entertaining.</p>
-          <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Tree-preservation expertise:</strong> Oakton lots often have mature trees near the build zone. We design around root systems and canopy to preserve your landscape.</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Sloped lot specialists:</strong> Many Oakton properties have grade changes that call for multi-level or cascading deck designs</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Premium materials only:</strong> Trex Transcend, TimberTech AZEK, cable railings materials that match Oakton&apos;s upscale aesthetic</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Fairfax County permitting:</strong> We handle all setback, tree-save, and RPA considerations for Oakton lots</li>
-          </ul>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Oakton Project</h2>
-          <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$56,000 500 sqft Deck + Screened Porch, Fox Den Estates</h3>
-            <p style={{ lineHeight: 1.7 }}>Open Trex Transcend deck (300 sqft) in Tiki Torch connected to a screened porch (200 sqft) with retractable EZE-Breeze panels, tongue-and-groove pine ceiling, 3 ceiling fans, and recessed lighting. Cable railings on the open section for views through the mature tree canopy. Fairfax County permit with tree-save waiver. 4.5-week build.</p>
-          </div>
-          <CityAuthorityExpansion cityKey="oakton" />
+      <ServiceMain
+        subtitle="Oakton's Trusted Choice"
+        title="Deck Builder Oakton VA - Premium Builds for Wooded Estate Lots"
+        description="We design and build the luxury outdoor environments Oakton homeowners expect. Multi-level builds, premium composite, tree protection, and full Fairfax County permit management from $30k+."
+        listItems={[
+          "Trex Platinum & TimberTech AZEK Certified",
+          "Specialists in wooded lot construction and tree preservation",
+          "Custom multi-level designs for Oakton's sloped terrain",
+          "Fairfax County permits including RPA environmental review",
+          "5-Star Google Rated - call (571) 655-7207"
+        ]}
+        image1="/images/img64.jpeg"
+        image2="/images/img21.jpeg"
+      />
+      <ServiceContentExpansion sections={expansionSections} />
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
-          {[
-            { q: "Deck cost in Oakton?", a: "$30,000-$70,000+. Premium builds with Trex Transcend or AZEK. $40-$65/sqft installed." },
-            { q: "Permit needed?", a: "Yes Fairfax County. 3-6 weeks. Tree-save and setback considerations common on Oakton lots. We handle everything." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
-            </details>
-          ))}
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Also Serving</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {[
-              ['/deck-builder-vienna-va', 'Vienna'],
-              ['/deck-builder-mclean-va', 'McLean'],
-              ['/deck-builder-great-falls-va', 'Great Falls'],
-              ['/deck-builder-fairfax-va', 'Fairfax'],
-              ['/deck-builder-centreville-va', 'Centreville'],
-              ['/deck-builder-chantilly-va', 'Chantilly'],
-            ].map(([href, text]) => (
-              <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
-            ))}
-          </div>
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+          <Image
+            src="/images/img17.jpeg"
+            alt="Premium custom deck built by LDN Decks in Oakton, Virginia"
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 900px) 100vw, 900px"
+          />
         </div>
-      </article>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Oakton Project: Fox Mill Estates Multi-Level Deck</h2>
+        <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+          Our featured Oakton project includes a <strong>$52,000 500 sqft TimberTech AZEK multi-level deck</strong> in Fox Mill Estates.
+          Built in Dark Hickory with Trex Signature cable railing and integrated LED lighting throughout. This wooded lot required
+          careful root-zone protection for several mature oaks, with footings positioned to avoid critical root systems. The
+          multi-level design follows the natural grade change, creating an upper dining area connected to a lower lounging
+          level. Fairfax County permit with tree-save compliance. 4-week build.
+        </p>
+      </div>
+
+      <ServiceInclusions
+        title="Why Oakton Chooses Loudoun Decks"
+        description="Wooded lot expertise, premium materials, and a process built for Oakton's estate properties."
+        items={inclusions}
+      />
+      <ProcessSteps />
+      <ServicesFAQ canonicalUrl="https://ldndecks.com/deck-builder-oakton-va" withSchema={false}
+        title="Deck Builder Oakton VA - FAQs"
+        faqs={oaktonFAQs}
+      />
+      <ServiceAreasGrid />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
+          {[
+            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
+            ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
+            ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
+            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Comparison'],
+          ].map(([href, text]) => (
+            <li key={href} style={{ marginBottom: '0.5rem' }}>
+              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
+            </li>
+          ))}
+
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
-        </ul>
+          </ul>
       </section>
-
-      <SimpleCTA title="Get Your Oakton Deck Quote" buttonText="Get Free Estimate" link="/contact" />
+      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Oakton" /></div></section>
+      <SimpleCTA title="Build Your Premium Oakton Deck" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-oakton-va" />
       <NamedAuthor context="Oakton and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
-    </>
+    </main>
   );
 }

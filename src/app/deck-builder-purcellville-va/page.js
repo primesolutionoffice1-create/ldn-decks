@@ -1,124 +1,178 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import JsonLd from '@/components/JsonLd';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
-import SimpleCTA from '@/components/SimpleCTA';
+import ServicesHeader from '@/components/ServicesHeader';
+import ServiceMain from '@/components/ServiceMain';
+import ServiceInclusions from '@/components/ServiceInclusions';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ProcessSteps from '@/components/ProcessSteps';
+import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import RatingBadge from '@/components/RatingBadge';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import { BUSINESS } from '@/lib/business';
-import CallLink from '@/components/CallLink';
-import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-purcellville-va',
-  title: 'Deck Builder in Purcellville, VA | Custom Composite Decks | LDN Decks',
-  description: 'Custom deck builder serving Purcellville & western Loudoun. 5.0★ Google. Trex decks, screened porches for farmettes & estate homes. Free estimate.',
+  title: 'Deck Builder in Purcellville, VA | Custom Trex & Cedar Decks',
+  description: "Deck builder in Purcellville, VA. Composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. Free estimate.",
+  image: '/images/img36.jpeg',
 });
 
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much does a deck cost in Purcellville?", acceptedAnswer: { "@type": "Answer", text: "Purcellville deck projects range from $20,000-$55,000. Composite decks: $32-$58/sqft installed. Western Loudoun lots tend to be larger, allowing for expansive multi-level builds, wrap-around decks, and outdoor kitchens not possible on suburban lots." } },
-    { "@type": "Question", name: "Do western Loudoun properties need permits?", acceptedAnswer: { "@type": "Answer", text: "Yes all Loudoun County permitting rules apply. The Town of Purcellville also has its own building department for properties within town limits. We determine jurisdiction and handle everything. Loudoun permits: 10-15 business days." } },
-  ],
-};
+const inclusions = [
+  {
+    title: "Western Loudoun Specialists",
+    desc: "We build on the larger lots and varied terrain that define Purcellville and western Loudoun  -  half-acre to multi-acre properties where deck design has room to expand and where access, grading and soil conditions require on-site problem solving."
+  },
+  {
+    title: "Mountain-View Railing Design",
+    desc: "Cable and glass railing systems keep Blue Ridge views open from elevated decks. We match railing style to the view and the home's architecture  -  cable for farmhouse and contemporary, glass for unobstructed panoramic sightlines."
+  },
+  {
+    title: "Loudoun County Permits",
+    desc: "Purcellville building permits go through Loudoun County. We file and manage the 2-4 week plan review, including engineering for elevated decks on sloped or graded lots common in western Loudoun."
+  }
+];
+
+const purcellvilleFAQs = [
+  {
+    q: "Do you build custom decks in Purcellville, VA?",
+    a: "Yes  -  throughout Purcellville, Hillsboro, Between the Hills, Locust Grove, Meadowbrook Farm, Franklin Park and surrounding western Loudoun. We handle Loudoun County permits and build on lots from a quarter acre to multi-acre properties."
+  },
+  {
+    q: "What does a deck cost in Purcellville?",
+    a: "Purcellville deck projects generally run $20,000 to $55,000+. Western Loudoun's larger lots allow for bigger decks (400-800+ sqft), multi-level designs, pergolas and outdoor kitchens that push costs toward the higher end. Cedar and IPE builds also run higher than standard composite."
+  },
+  {
+    q: "Do I need a permit for a deck in Purcellville?",
+    a: "Yes. Building permits for Purcellville go through Loudoun County, with a 2-4 week plan review. The Town of Purcellville has its own government but deck permits are a county function. We determine jurisdiction and handle the entire filing."
+  },
+  {
+    q: "Are there HOA restrictions in Purcellville?",
+    a: "It depends on the neighborhood. Franklin Park has an HOA with architectural review. Many western Loudoun properties  -  especially older homes in town and rural lots outside developments  -  have no HOA, giving homeowners more design freedom on materials, colors and layout."
+  },
+  {
+    q: "Can you build with cedar or IPE in Purcellville?",
+    a: "Yes. Natural wood  -  western red cedar and IPE  -  is more popular in western Loudoun than in the suburban communities east of Leesburg. We build in cedar, IPE and composite, and we also do hybrid designs that pair a composite deck surface with a cedar pergola or accent structure."
+  },
+  {
+    q: "How do you design decks for mountain views?",
+    a: "We orient the deck to maximize the Blue Ridge sightline, use cable or glass railing to keep the view unobstructed, and design elevation changes (multi-level platforms, raised seating areas) that lift the vantage point above fences and landscaping. The view is the design driver  -  everything else works around it."
+  }
+];
+
+const expansionSections = [
+  {
+    title: "Western Loudoun's Unique Character",
+    paragraphs: [
+      "Purcellville sits on the western edge of Loudoun County where the suburban density of Ashburn and South Riding gives way to rolling farmland, vineyards, and views of the Blue Ridge Mountains. Lots here run from half an acre inside the newer developments to 5, 10, even 50+ acres on the rural parcels that surround the town. That space changes what a deck can be.",
+      "In eastern Loudoun a deck is typically 300-400 sqft on a standard suburban lot. In Purcellville and western Loudoun, homeowners have the room and the views for 500-800+ sqft multi-level platforms, wrap-around designs, attached pergolas and outdoor kitchens. The design vocabulary expands because the property allows it, and the views demand it.",
+      "The contractor market is thinner out here too. Many deck builders are clustered around Ashburn and the Route 7 corridor, and western Loudoun often falls at the edge of their service area. We build actively in Purcellville, Hillsboro, Hamilton and the surrounding communities, which means shorter response times and familiarity with the terrain, soil conditions and permitting nuances specific to this part of the county."
+    ]
+  },
+  {
+    title: "Cedar, IPE and Composite for Rural Lots",
+    paragraphs: [
+      "Western Loudoun is one of the few areas in Northern Virginia where natural wood decking  -  western red cedar and IPE (Brazilian hardwood)  -  is still a common choice alongside composite. The rural character of the area suits natural materials: a cedar deck with a natural oil finish complements a stone farmhouse or a timber-frame home in a way that composite sometimes does not.",
+      "Cedar delivers a warm, natural appearance at a lower cost than IPE, but it requires periodic re-oiling or staining (every 2-3 years) to maintain its color and resist the weathering that Northern Virginia's humidity accelerates. IPE is dramatically harder and more durable  -  it can last 40+ years with minimal maintenance  -  but material costs run 2-3x higher than cedar and the wood is dense enough to require carbide-tipped tooling and pre-drilling for every fastener.",
+      "Composite remains the most popular choice overall, even in western Loudoun, because it eliminates the maintenance cycle entirely. The hybrid approach  -  a Trex Transcend or TimberTech deck surface paired with a cedar pergola or railing accent  -  gives homeowners the natural wood aesthetic where they want it and the zero-maintenance composite surface where it matters most."
+    ]
+  },
+  {
+    title: "Mountain-View Deck Design",
+    paragraphs: [
+      "A Blue Ridge view is the single most valuable feature a Purcellville property can offer, and the deck design should be built around it. Orientation comes first: we position the primary deck area to face the mountain view, which in Purcellville typically means a west or northwest exposure. Railing is next  -  cable railing or glass panels keep the sightline unobstructed from a seated position, which is where people actually spend time.",
+      "Elevation matters. On sloped lots  -  common throughout western Loudoun  -  an elevated or multi-level deck lifts the viewing platform above fences, landscaping and outbuildings that would otherwise block the panorama. A stepped design with an upper viewing platform and a lower grilling or dining level creates distinct zones without splitting the view.",
+      "Shade structures need careful placement on a view deck. A pergola that provides afternoon shade (critical on a west-facing exposure) should frame the view rather than block it. Open-rafter designs and retractable shade options let homeowners control sun exposure without sacrificing the sightline that justified the deck's position in the first place."
+    ]
+  },
+  {
+    title: "Permits and Property Considerations for Larger Lots",
+    paragraphs: [
+      "All deck construction in the Purcellville area requires a Loudoun County building permit, regardless of lot size or whether the property has an HOA. The permit process involves a 2-4 week plan review covering structural engineering, setback compliance and zoning requirements. On larger rural lots, setback lines are generally more generous, but we confirm the specifics with the county before finalizing the design.",
+      "Properties within the Town of Purcellville limits have their own zoning overlays. While building permits are a county function, the town's zoning regulations may affect setbacks, lot coverage and height limits. We determine which jurisdiction applies during the initial site visit and factor any town-specific requirements into the design.",
+      "Soil conditions on western Loudoun lots vary more than in the compacted-fill suburban developments to the east. Rocky soil, clay and variable grade can affect footing depth and type. We assess these conditions during the site visit and spec footings accordingly  -  helical piles for rocky ground, deeper poured footings for steep slopes, and standard Bigfoot footings where soil conditions allow."
+    ]
+  }
+];
 
 export default function PurcellvilleDeckBuilderPage() {
   return (
-    <>
-      <JsonLd data={faqSchema} />
+    <main>
       <LocalBusinessSchema city="Purcellville" url="https://ldndecks.com/deck-builder-purcellville-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-purcellville-va" name="Deck Builder in Purcellville, VA | Custom Composite Decks | LDN Decks" description="Custom deck builder serving Purcellville &amp; western Loudoun. 5.0★ Google. Trex decks, screened porches for farmettes &amp; estate homes. Free estimate." speakable />
-      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Purcellville, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Decks &amp; outdoor living for western Loudoun farmettes, estates &amp; mountain views</p>
-          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
-          </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+      <WebPageSchema url="https://ldndecks.com/deck-builder-purcellville-va" name="Deck Builder in Purcellville, VA | Custom Trex & Cedar Decks" description="Deck builder in Purcellville, VA. Composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. Free estimate." speakable />
+      <ServicesHeader
+        subtext="Purcellville, VA's Trusted Deck Company"
+        title="Custom Deck Builder in Purcellville, VA"
+        description="Loudoun Decks builds composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. 5-Star Google Rated."
+      />
+      <ServiceMain
+        subtitle="Built for Western Loudoun's Larger Lots"
+        title="Deck Builder Purcellville VA  -  Premium Craftsmanship"
+        description="We design decks that match western Loudoun's rural character and mountain views. Composite, cedar and IPE on lots from half an acre to multi-acre properties. From $20k+."
+        listItems={[
+          "TrexPro & TimberTech Certified  -  plus cedar and IPE builds",
+          "Cable & glass railing for Blue Ridge mountain views",
+          "Multi-level designs, pergolas, outdoor kitchens",
+          "Fewer HOA restrictions  -  more design freedom",
+          "5-Star Google Rated  -  call (571) 655-7207"
+        ]}
+        image1="/images/img36.jpeg"
+        image2="/images/img37.jpeg"
+      />
+      <ServiceContentExpansion sections={expansionSections} />
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+          <Image
+            src="/images/img17.jpeg"
+            alt="Custom deck built by LDN Decks in Purcellville, Virginia with mountain views and cable railing"
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 900px) 100vw, 900px"
+          />
         </div>
-      </section>
-      <article style={{ padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-            <Image
-              src="/images/img13.jpeg"
-              alt="Premium custom deck built by LDN Decks in Purcellville, Virginia"
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes="(max-width: 900px) 100vw, 900px"
-            />
-          </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Purcellville Country Living, Premium Decking</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Purcellville and western Loudoun County offer something rare in Northern Virginia: space. Multi-acre farmettes, estate properties, and mountain-view lots give homeowners the room to build truly impressive outdoor living spaces wrap-around decks, expansive screened porches, outdoor kitchens, and multi-level designs that suburban lots can&apos;t accommodate.</p>
-          <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Estate-scale builds:</strong> 1-10+ acre lots allow 600-1,200+ sqft outdoor living projects</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Mountain views:</strong> Cable railings and elevated designs to maximize Blue Ridge views</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Rural character:</strong> Natural wood tones (Trex Havana Gold, Spiced Rum) complement western Loudoun&apos;s rustic aesthetic</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Often no HOA:</strong> Many western Loudoun properties have no HOA more design freedom</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Loudoun County permits:</strong> Fastest in NoVA 10-15 business days. We handle everything.</li>
-          </ul>
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Purcellville Project</h2>
-          <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$52,000 650 sqft Wrap-Around Deck, Short Hill Mountain</h3>
-            <p style={{ lineHeight: 1.7 }}>Expansive wrap-around deck on a 5-acre property with Blue Ridge mountain views. Three-sided design wrapping the farmhouse, Trex Transcend in Havana Gold, cable railings on the view side (west-facing), standard composite railings on approach sides. 4 separate access points from house. No HOA. Loudoun County permit. 4.5-week build.</p>
-          </div>
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Western Loudoun Areas We Serve</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {['Purcellville', 'Round Hill', 'Hamilton', 'Lovettsville', 'Hillsboro', 'Waterford', 'Between the Hills', 'Lincoln', 'Lucketts', 'Bluemont'].map((n) => (
-              <span key={n} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.85rem', color: '#555' }}>{n}</span>
-            ))}
-          </div>
-          <CityAuthorityExpansion cityKey="purcellville" />
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
-          {[
-            { q: "Cost in Purcellville?", a: "$20,000-$55,000+. Large lots enable bigger builds at $32-$58/sqft." },
-            { q: "Permits in western Loudoun?", a: "Yes Loudoun County (10-15 business days). Town of Purcellville has own department for in-town properties. We handle both." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
-            </details>
-          ))}
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Also Serving</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {[
-              ['/deck-builder-leesburg-va', 'Leesburg'],
-              ['/near-you/loudoun-county/round-hill', 'Round Hill'],
-              ['/near-you/loudoun-county/hamilton', 'Hamilton'],
-              ['/near-you/loudoun-county/lovettsville', 'Lovettsville'],
-              ['/near-you/loudoun-county/waterford', 'Waterford'],
-              ['/near-you/loudoun-county/middleburg', 'Middleburg'],
-            ].map(([href, text]) => (
-              <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
-            ))}
-          </div>
-        </div>
-      </article>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Trex Deck Builder Purcellville</h2>
+        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1.5rem' }}>Decks Designed for Western Loudoun's Views, Lots and Rural Character</h3>
+      </div>
+      <ServiceInclusions
+        title="Why Purcellville Chooses Loudoun Decks"
+        description="We are a Northern Virginia team that builds actively in western Loudoun  -  familiar with the terrain, the permit process and the design possibilities that larger lots and mountain views create."
+        items={inclusions}
+      />
+      <ProcessSteps />
+      <ServicesFAQ
+        title="Deck Builder Purcellville VA  -  FAQs"
+        faqs={purcellvilleFAQs}
+        canonicalUrl="https://ldndecks.com/deck-builder-purcellville-va"
+      />
+      <ServiceAreasGrid />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
+          {[
+            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
+            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
+          ].map(([href, text]) => (
+            <li key={href} style={{ marginBottom: '0.5rem' }}>
+              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
+            </li>
+          ))}
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
-        </ul>
+          </ul>
       </section>
-
-      <SimpleCTA title="Big Property? Big Deck Dreams. Free Estimate." buttonText="Get Free Estimate" link="/contact" />
+      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Purcellville" /></div></section>
+      <SimpleCTA title="Build Your Dream Deck in Purcellville" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-purcellville-va" />
       <NamedAuthor context="Purcellville and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
-    </>
+    </main>
   );
 }

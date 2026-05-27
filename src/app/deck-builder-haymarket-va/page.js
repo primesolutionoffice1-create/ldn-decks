@@ -1,122 +1,186 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import JsonLd from '@/components/JsonLd';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
-import SimpleCTA from '@/components/SimpleCTA';
+import ServicesHeader from '@/components/ServicesHeader';
+import ServiceMain from '@/components/ServiceMain';
+import ServiceInclusions from '@/components/ServiceInclusions';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ProcessSteps from '@/components/ProcessSteps';
+import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import RatingBadge from '@/components/RatingBadge';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import { BUSINESS } from '@/lib/business';
-import CallLink from '@/components/CallLink';
-import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-haymarket-va',
-  title: 'Deck Builder in Haymarket, VA | Custom Composite Decks | LDN Decks',
-  description: 'Top-rated deck builder in Haymarket, VA. 5.0★ Google. Trex decks, screened porches. Serving Dominion Valley, Piedmont, Villages of Piedmont. Free estimate.',
+  title: 'Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots',
+  description: "Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. Free estimate.",
+  image: '/images/img36.jpeg',
 });
 
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much does a deck cost in Haymarket?", acceptedAnswer: { "@type": "Answer", text: "Haymarket deck projects range from $20,000-$55,000. Composite decks: $32-$58/sqft installed. Haymarket's larger lots (especially in Dominion Valley) allow for expansive outdoor living multi-level decks, outdoor kitchens, and screened porches." } },
-    { "@type": "Question", name: "Do Haymarket HOAs allow deck changes?", acceptedAnswer: { "@type": "Answer", text: "Yes, but approval is required. Dominion Valley, Piedmont, and Villages of Piedmont all have active architectural review committees. We prepare and submit all HOA packages with a 100% approval rate." } },
-  ],
-};
+const inclusions = [
+  {
+    title: "Multi-Level Designs for Sloped Lots",
+    desc: "Haymarket's terrain drops and rises across most of its communities. We engineer elevated and multi-level decks that turn grade changes into distinct outdoor rooms  -  upper dining, mid-level lounge, ground-level patio  -  rather than fighting the slope with retaining walls."
+  },
+  {
+    title: "Dominion Valley & Piedmont HOA Navigation",
+    desc: "Dominion Valley and Piedmont run strict architectural review boards with detailed material and color requirements. We prepare the full submission package  -  drawings, material samples, color specs  -  and time it to the review calendar so your project stays on schedule."
+  },
+  {
+    title: "Prince William County Permits",
+    desc: "We file all permits through Prince William County  -  plan review runs 2-4 weeks. Elevated and multi-level decks require engineered drawings, and we handle the structural engineering, application, inspections and final sign-off."
+  }
+];
 
-export default function HaymarketDeckBuilderPage() {
+const haymarketFAQs = [
+  {
+    q: "How much does a deck cost in Haymarket, VA?",
+    a: "Haymarket composite decks typically run $22,000 to $55,000+. Larger lots in Dominion Valley and Piedmont support bigger builds, and multi-level designs on sloped lots add engineering and framing cost. Composite boards install at roughly $32-$58 per square foot depending on the product line. Cable and glass railing systems  -  common on view lots  -  add $150-$250 per linear foot over standard aluminum."
+  },
+  {
+    q: "Can you build a multi-level deck on a sloped Haymarket lot?",
+    a: "Yes  -  multi-level decks are one of our core specialties and a natural fit for Haymarket's terrain. We design 2-3 level cascading decks that follow the grade, with each level serving a distinct function. Elevated sections require engineered drawings for Prince William County permit review, and we handle that engineering in-house."
+  },
+  {
+    q: "How does the Dominion Valley HOA process work for decks?",
+    a: "Dominion Valley's architectural review board requires a full submission including site plan, material specifications, color samples and elevation drawings. The board reviews on a set meeting schedule  -  typically monthly. We prepare the complete package and submit it early enough to land on the next agenda. Review usually takes 2-4 weeks. We run the HOA and county permit submissions in parallel so neither holds up the other."
+  },
+  {
+    q: "Do I need a permit for a deck in Haymarket?",
+    a: "Yes. Haymarket falls under Prince William County jurisdiction. A building permit is required for new decks and structural modifications. Plan review runs 2-4 weeks. Multi-level and elevated decks require engineered structural drawings. We prepare and submit the full application, schedule all inspections and handle final sign-off."
+  },
+  {
+    q: "What railing works best for Haymarket's mountain and golf course views?",
+    a: "Cable railing and glass panel railing both maximize views from elevated Haymarket decks. Cable railing uses horizontal stainless steel cables between posts  -  the cables are nearly invisible from 10 feet away. Glass panel railing eliminates all vertical and horizontal lines for a completely open sightline. Both options meet code for residential decks and work well on multi-level designs where the upper deck is the primary viewing platform."
+  },
+  {
+    q: "How long does a Haymarket deck project take?",
+    a: "A standard single-level deck takes 2-3 weeks on site. Multi-level builds with cable or glass railing run 3-4 weeks. Add 2-4 weeks for Prince William County permit review and 2-4 weeks for HOA approval in communities like Dominion Valley and Piedmont. We submit permits and HOA packages in parallel and schedule material delivery so construction starts the week permits clear."
+  }
+];
+
+const expansionSections = [
+  {
+    title: "Haymarket's Unique Landscape  -  Slopes and Views",
+    paragraphs: [
+      "Haymarket sits at the rural-suburban transition in Prince William County, where the flat Piedmont plain begins to rise toward the Bull Run Mountains. Lot sizes range from a quarter acre in newer developments to 2+ acres in the surrounding countryside. Elevation changes are the norm, not the exception  -  and that terrain shapes every deck we design here.",
+      "A sloped lot is not a limitation; it is an opportunity. Where a flat lot gives you one deck level, a Haymarket slope gives you two or three  -  an upper dining platform at door height, a mid-level lounge stepped down 3-4 feet, and a ground-level patio or fire pit area at grade. Each level becomes its own outdoor room with its own character, and the transitions between levels create visual interest that a single flat platform cannot match.",
+      "The mountain and golf course views available in communities like Dominion Valley and Piedmont add another design dimension. An elevated deck oriented toward the Bull Run ridgeline or a Dominion Valley fairway demands railing that stays out of the way. Cable railing and glass panels cost more than standard aluminum balusters, but on a view lot they are the difference between a deck that frames the landscape and one that blocks it."
+    ]
+  },
+  {
+    title: "Premium Materials for Haymarket Estates",
+    paragraphs: [
+      "Haymarket's larger homes and lots call for materials that match the scale. Trex Transcend and TimberTech AZEK  -  the premium composite and PVC lines  -  are the most common choices in Dominion Valley and Piedmont, where homeowners expect a finished product consistent with $600,000-$1M+ homes. These lines offer deeper wood-grain textures, richer color palettes and the strongest fade-and-stain warranties in the industry.",
+      "Material selection also has to account for Haymarket's exposure. Elevated decks on open lots catch full sun and wind in ways that a sheltered suburban backyard does not. Premium composite lines are engineered with UV-resistant caps that hold color under direct Southern exposure  -  important on a west-facing Haymarket deck that takes afternoon sun from April through October. The 25-year fade-and-stain warranties on Trex Transcend and TimberTech AZEK are backed by the manufacturer, and certified installation keeps them enforceable.",
+      "For the largest builds  -  450+ square feet, multi-level, with cable railing and integrated lighting  -  we use 2x8 or 2x10 joists at 12-inch centers rather than the minimum 16-inch spacing. The tighter joist spacing eliminates any flex or bounce underfoot, which matters on an elevated platform where occupants are acutely aware of deck movement. It adds material cost but changes the feel of the finished deck entirely."
+    ],
+    listItems: [
+      { label: "TrexPro Platinum", text: "Full Transcend, Enhance and Select catalog  -  installed to manufacturer spec for warranty compliance." },
+      { label: "TimberTech Certified", text: "Complete TimberTech Pro and AZEK product lines for Haymarket's premium builds." },
+      { label: "Cable & Glass Railing", text: "View-preserving railing systems engineered for elevated, multi-level Haymarket decks." },
+      { label: "Structural Engineering", text: "In-house engineered drawings for elevated and multi-level decks  -  required for Prince William County permits." }
+    ]
+  },
+  {
+    title: "HOA Navigation for Dominion Valley and Piedmont",
+    paragraphs: [
+      "Dominion Valley and Piedmont are the two largest and most active HOA communities in Haymarket, and both run strict architectural review boards. The boards care about material type, color selection, railing style and how the deck relates to the home's existing architecture. Submitting a vague or incomplete package results in delays and revision requests.",
+      "We prepare Dominion Valley and Piedmont submissions with the same level of detail we would put in a county permit application: a scaled site plan showing the deck footprint relative to property lines and setbacks, elevation drawings showing height and railing, material specification sheets with manufacturer color samples, and a written scope of work. This level of preparation moves the application through review on the first pass rather than bouncing back for clarification.",
+      "Smaller Haymarket communities  -  Heathcote, Winterwood, Madison Crescent, Villages of Piedmont  -  have their own covenants and review processes, though they tend to be less formal than Dominion Valley or Piedmont. We check each community's requirements at the estimate stage so the homeowner knows exactly what approvals are needed before we start."
+    ]
+  },
+  {
+    title: "Multi-Level Decks and Outdoor Living",
+    paragraphs: [
+      "A multi-level deck on a Haymarket lot is not just a design choice  -  it is often the most practical way to build. When the grade drops 4-8 feet from the back door to the yard line, a single-level elevated deck leaves unusable dead space underneath and requires long stair runs to reach the ground. Stepping the deck down in 2-3 levels follows the terrain naturally, reduces the height of any single elevation, and turns the entire slope into usable space.",
+      "Below the upper level, a dry-joist drainage system captures water and channels it away, creating a covered patio underneath the deck. That covered area becomes a rain-protected outdoor room  -  useful for storage, a shaded seating area, or a hot tub pad that stays dry year-round. On a sloped Haymarket lot, a dry-joist system effectively doubles the usable outdoor space from a single structure.",
+      "Screened porches, built-in grilling stations, and fire pit pads at the lowest level round out the outdoor living package. Haymarket's lot sizes support these additions without crowding, and the community's semi-rural character means neighbors are farther away  -  so an outdoor kitchen or fire pit gets used more often than it would on a tight suburban lot."
+    ]
+  }
+];
+
+export default function DeckBuilderHaymarketPage() {
   return (
-    <>
-      <JsonLd data={faqSchema} />
+    <main>
       <LocalBusinessSchema city="Haymarket" url="https://ldndecks.com/deck-builder-haymarket-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-haymarket-va" name="Deck Builder in Haymarket, VA | Custom Composite Decks | LDN Decks" description="Top-rated deck builder in Haymarket, VA. 5.0★ Google. Trex decks, screened porches. Serving Dominion Valley, Piedmont, Villages of Piedmont. Free estimate." speakable />
-      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Haymarket, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Composite decks &amp; outdoor living for Haymarket Dominion Valley, Piedmont &amp; surrounding communities</p>
-          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
-          </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+      <WebPageSchema url="https://ldndecks.com/deck-builder-haymarket-va" name="Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots" description="Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. Free estimate." speakable />
+      <ServicesHeader
+        subtext="Haymarket, VA's Trusted Deck Company"
+        title="Custom Deck Builder in Haymarket, VA"
+        description="Loudoun Decks builds multi-level composite decks designed for Haymarket's sloped lots and mountain views. Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. 5-Star Google Rated."
+      />
+      <ServiceMain
+        subtitle="Multi-Level Designs for Haymarket's Terrain"
+        title="Deck Builder Haymarket VA  -  Premium Craftsmanship"
+        description="Haymarket's larger lots and elevation changes call for decks engineered to the site. Multi-level builds, cable railing for mountain and golf course views, and premium composite from $22k+."
+        listItems={[
+          "TrexPro & TimberTech Certified",
+          "Multi-level designs for sloped lots  -  2-3 level cascading decks",
+          "Cable & glass railing for Bull Run Mountain and golf course views",
+          "Dominion Valley & Piedmont HOA packages prepared",
+          "5-Star Google Rated  -  call (571) 655-7207"
+        ]}
+        image1="/images/img36.jpeg"
+        image2="/images/img37.jpeg"
+      />
+      <ServiceContentExpansion sections={expansionSections} />
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+          <Image
+            src="/images/img26.jpeg"
+            alt="Multi-level composite deck built by LDN Decks on a sloped lot in Haymarket, Virginia"
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 900px) 100vw, 900px"
+          />
         </div>
-      </section>
-      <article style={{ padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-            <Image
-              src="/images/img22.jpeg"
-              alt="Premium custom deck built by LDN Decks in Haymarket, Virginia"
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes="(max-width: 900px) 100vw, 900px"
-            />
-          </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Haymarket Large Lots, Large Decks</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Haymarket&apos;s generous lot sizes especially in Dominion Valley and the Piedmont communities give homeowners the space for truly impressive outdoor living projects. Multi-level decks, wrap-around designs, screened porches with fireplaces, and full outdoor kitchens are all possible on Haymarket properties.</p>
-          <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Large lot designs:</strong> 500-1,000+ sqft builds with multi-level designs and multiple outdoor zones</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Golf course views:</strong> Dominion Valley properties with course views benefit from cable railings and view-maximizing designs</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>PW County permits:</strong> Fast 2-4 week processing. We handle everything.</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>HOA expertise:</strong> Dominion Valley, Piedmont, Villages of Piedmont we know every community&apos;s requirements</li>
-          </ul>
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Haymarket Project</h2>
-          <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$48,000 550 sqft Multi-Level Deck, Dominion Valley</h3>
-            <p style={{ lineHeight: 1.7 }}>Three-level cascading deck on a golf-course-backing lot. Upper dining (250 sqft), mid lounge (200 sqft), ground-level fire pit pad (100 sqft). Trex Transcend in Havana Gold, cable railings on upper levels for unobstructed course views, 14 LED lights. PW County permit. Dominion Valley HOA approved. 4-week build.</p>
-          </div>
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Haymarket Communities</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {['Dominion Valley', 'Piedmont', 'Villages of Piedmont', 'Regency at Dominion Valley', 'Marketplace', 'Madison Crescent', 'Catharpin', 'Heathcote'].map((n) => (
-              <span key={n} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.85rem', color: '#555' }}>{n}</span>
-            ))}
-          </div>
-          <CityAuthorityExpansion cityKey="haymarket" />
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
-          {[
-            { q: "Deck cost in Haymarket?", a: "$20,000-$55,000. Large lot designs possible at $32-$58/sqft." },
-            { q: "HOA approval needed?", a: "Yes for Dominion Valley, Piedmont, etc. We handle all submissions 100% approval rate." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
-            </details>
-          ))}
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Also Serving</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {[
-              ['/deck-builder-gainesville-va', 'Gainesville'],
-              ['/deck-builder-bristow-va', 'Bristow'],
-              ['/deck-builder-manassas-va', 'Manassas'],
-              ['/near-you/prince-william-county/nokesville', 'Nokesville'],
-              ['/deck-builder-centreville-va', 'Centreville'],
-            ].map(([href, text]) => (
-              <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
-            ))}
-          </div>
-        </div>
-      </article>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Featured Haymarket Project</h2>
+        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>$38,000  -  450 sqft Multi-Level Deck in Dominion Valley</h3>
+        <p style={{ lineHeight: 1.7, marginBottom: '1.5rem' }}>Three-level cascading deck on a sloped lot backing to mountain views. Upper dining level (220 sqft) at door height, mid-level lounge (150 sqft) stepped down 3.5 feet, ground-level fire pit pad (80 sqft) at grade. Trex Transcend in Spiced Rum with cable railing on upper levels for unobstructed sightlines. Integrated LED stair and post lighting throughout. Dominion Valley HOA approved on first submission. Prince William County permit. 3-week build.</p>
+      </div>
+      <ServiceInclusions
+        title="Why Haymarket Homeowners Choose Loudoun Decks"
+        description="A Northern Virginia team that knows Haymarket's terrain, its HOA review boards and how to engineer elevated, multi-level decks for sloped lots."
+        items={inclusions}
+      />
+      <ProcessSteps />
+      <ServicesFAQ
+        title="Deck Builder Haymarket VA  -  FAQs"
+        faqs={haymarketFAQs}
+        canonicalUrl="https://ldndecks.com/deck-builder-haymarket-va"
+      />
+      <ServiceAreasGrid />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
+          {[
+            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
+            ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
+            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
+          ].map(([href, text]) => (
+            <li key={href} style={{ marginBottom: '0.5rem' }}>
+              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
+            </li>
+          ))}
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
         </ul>
       </section>
-
-      <SimpleCTA title="Big Lot? Big Deck Dreams. Free Estimate." buttonText="Get Free Estimate" link="/contact" />
+      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Haymarket" /></div></section>
+      <SimpleCTA title="Build Your Dream Deck in Haymarket" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-haymarket-va" />
       <NamedAuthor context="Haymarket and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
-    </>
+    </main>
   );
 }

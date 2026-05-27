@@ -1,123 +1,180 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import JsonLd from '@/components/JsonLd';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
-import SimpleCTA from '@/components/SimpleCTA';
+import ServicesHeader from '@/components/ServicesHeader';
+import ServiceMain from '@/components/ServiceMain';
+import ServiceInclusions from '@/components/ServiceInclusions';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ProcessSteps from '@/components/ProcessSteps';
+import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import RatingBadge from '@/components/RatingBadge';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import { BUSINESS } from '@/lib/business';
-import CallLink from '@/components/CallLink';
-import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-springfield-va',
-  title: 'Deck Builder in Springfield, VA | Custom Composite Decks | LDN Decks',
-  description: 'Top-rated deck builder in Springfield, VA. 5.0★ Google. Trex & composite decks, screened porches. West Springfield, Kingstowne, Franconia. Free estimate.',
+  title: 'Deck Builder in Springfield, VA | Trex Certified | Loudoun Decks',
+  description: 'Deck builder in Springfield, VA. Custom Trex & composite decks for Kingstowne, West Springfield, Franconia & Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207.',
+  image: '/images/img36.jpeg',
 });
 
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much does a deck cost in Springfield, VA?", acceptedAnswer: { "@type": "Answer", text: "Springfield deck projects range from $20,000-$50,000. Composite decks: $35-$58/sqft installed. Springfield's established homes (West Springfield, Kings Park, Kingstowne) often need 20-30 year old decks replaced." } },
-    { "@type": "Question", name: "Do I need a permit in Springfield?", acceptedAnswer: { "@type": "Answer", text: "Yes Springfield is in Fairfax County. Standard building permits required, 3-6 weeks for plan review. We handle all submissions and inspections." } },
-  ],
-};
+const inclusions = [
+  {
+    title: "Springfield's Diverse Housing Stock",
+    desc: "Springfield ranges from 1960s ranches in North Springfield to 2000s townhomes in Kingstowne. We design for both  -  compact, efficient layouts for townhome rear decks and larger multi-level builds for single-family lots in West Springfield and Saratoga."
+  },
+  {
+    title: "Kingstowne HOA Navigation",
+    desc: "Kingstowne is one of Fairfax County's largest planned communities with an active architectural review process. We prepare submissions that meet their standards for materials, colors and railing styles  -  and handle the back-and-forth so approvals move on schedule."
+  },
+  {
+    title: "Strong Deck ROI in Springfield's Market",
+    desc: "Springfield offers solid home values with room for improvement. A composite deck addition typically returns 65-75% of its cost at resale in this market, and it converts underused backyard space into functional outdoor living  -  a feature buyers in this price range actively seek."
+  }
+];
 
-export default function SpringfieldDeckBuilderPage() {
+const springfieldFAQs = [
+  {
+    q: "How much does a new deck cost in Springfield, VA?",
+    a: "Springfield composite deck projects typically range from $22,000 to $50,000. A standard 300-350 sqft Trex Enhance or Transcend deck with aluminum railings runs $28,000-$38,000 installed. Townhome decks in Kingstowne tend toward the lower end of that range due to smaller footprints, while single-family homes in West Springfield and Saratoga with larger lots and multi-level designs reach higher."
+  },
+  {
+    q: "Does Kingstowne HOA allow composite decking?",
+    a: "Yes. Kingstowne's architectural review committee permits composite decking and has guidelines covering board color, railing material and overall design. We prepare the full submission package  -  drawings, material specifications and color samples  -  and file it on your behalf. Review typically takes 2-4 weeks."
+  },
+  {
+    q: "Do I need a permit for a deck in Springfield?",
+    a: "Yes. Springfield is in Fairfax County, and any new deck or structural replacement requires a building permit. The county's plan review currently runs 3-6 weeks. We prepare the structural drawings, file the application electronically and schedule all three inspections  -  footing, framing and final  -  so the process stays on track."
+  },
+  {
+    q: "How long does a Springfield deck project take?",
+    a: "Construction typically takes 2 to 3 weeks once materials arrive and the permit is in hand. The Fairfax County permit adds 3-6 weeks of plan review before that. If your property is in Kingstowne or another HOA community, we submit the architectural review application in parallel with the permit so they do not stack up sequentially."
+  },
+  {
+    q: "Can you build a deck and patio combination in Springfield?",
+    a: "Yes. Deck-and-patio combinations are one of our most requested builds in Springfield, especially on lots where the grade drops away from the house. The deck extends from the main level, and a paver or stamped-concrete patio sits below at grade. Under-deck drainage systems keep the patio dry. This approach effectively doubles usable outdoor space."
+  },
+  {
+    q: "What materials work best for Springfield decks?",
+    a: "Composite decking  -  specifically Trex and TimberTech  -  leads in Springfield for its low maintenance and long warranty. Trex Enhance is the most popular line here, offering a good balance of appearance and value. For homeowners wanting a premium finish, Trex Transcend and TimberTech AZEK provide richer color depth and superior scratch resistance."
+  }
+];
+
+const expansionSections = [
+  {
+    title: "Springfield's Diverse Housing Stock and What It Means for Decks",
+    paragraphs: [
+      "Springfield's neighborhoods span four decades of building  -  from the mid-century ranches of North Springfield and Kings Park built in the 1960s to the townhomes and single-family homes of Kingstowne completed in the early 2000s. That range creates very different deck projects depending on which part of Springfield you live in.",
+      "Older single-family homes in West Springfield, Saratoga and Franconia typically have larger lots with room for 400+ sqft multi-level decks, screened porches and stair runs to the yard. Many still have original wood decks from the 1980s or 1990s that need full replacement. Kingstowne and Daventry townhomes, on the other hand, call for compact, efficient designs  -  typically 200-300 sqft rear decks maximized with built-in benches, planter boxes and space-saving railing choices.",
+      "We design for both ends of that spectrum. The engineering is different, the permit drawings are different and the material selections often differ, but the build quality is the same."
+    ]
+  },
+  {
+    title: "Deck Value in Springfield's Real Estate Market",
+    paragraphs: [
+      "Springfield sits in a value-conscious segment of the Northern Virginia market. Home prices are strong but below the peaks seen in western Loudoun or McLean, which means buyers here pay close attention to outdoor living space as a differentiator. A well-built composite deck is one of the most visible upgrades a Springfield home can carry, and it directly expands usable square footage.",
+      "National remodeling data puts composite deck ROI at 65-75% of project cost at resale, and in Springfield's competitive market  -  where families commuting to Fort Belvoir, the Pentagon and the Springfield Metro are comparing similar homes  -  a finished deck can be the factor that moves a listing. The practical return goes beyond resale: a family that uses their deck three seasons a year gets years of daily value from the investment.",
+      "We size and specify Springfield decks with both the homeowner's use and the home's market position in mind. Overbuilding a $60,000 deck on a $550,000 Springfield home makes less sense than a well-designed $30,000 deck that hits the right balance."
+    ]
+  },
+  {
+    title: "Navigating Kingstowne's Architectural Review",
+    paragraphs: [
+      "Kingstowne is one of Fairfax County's largest planned communities, and its homeowner association maintains an active architectural review committee. Any exterior modification  -  including a new deck or deck replacement  -  requires an application with drawings, material specifications, color selections and sometimes a neighbor notification.",
+      "We handle the full Kingstowne ARC process. The submission includes dimensioned drawings showing the deck footprint relative to property lines and setbacks, the specific composite board and railing products with manufacturer color chips, and a description of the build timeline. Our packages are designed to answer the committee's questions upfront, which reduces the back-and-forth that delays approvals.",
+      "Turnaround varies by season  -  spring submissions take longer because more homeowners are applying  -  but 2-4 weeks is typical. We submit the ARC application at the same time we file the Fairfax County permit so the two review periods overlap rather than run in series."
+    ]
+  },
+  {
+    title: "Deck and Patio Combinations for Springfield Homes",
+    paragraphs: [
+      "Many Springfield lots have a gentle grade change from the back door to the yard  -  enough to make a raised deck practical and a patio below it useful. A deck-and-patio combination takes advantage of that grade: the composite deck extends from the main floor for dining and seating, while a paver or concrete patio at ground level serves as a second outdoor room.",
+      "The key to making this work is under-deck drainage. A dry-joist system installed beneath the deck boards channels water to a gutter at the edge, keeping the patio below completely dry during rain. Without drainage, the lower patio gets wet every time it rains and accumulates debris  -  defeating the purpose of the covered space.",
+      "Combined deck-and-patio builds in Springfield typically run $35,000-$55,000 depending on total square footage, material tier and whether the patio is pavers or stamped concrete. It is a more involved project than a deck alone, but it effectively creates two distinct outdoor living zones from a single build."
+    ]
+  }
+];
+
+export default function DeckBuilderSpringfieldPage() {
   return (
-    <>
-      <JsonLd data={faqSchema} />
+    <main>
       <LocalBusinessSchema city="Springfield" url="https://ldndecks.com/deck-builder-springfield-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-springfield-va" name="Deck Builder in Springfield, VA | Custom Composite Decks | LDN Decks" description="Top-rated deck builder in Springfield, VA. 5.0★ Google. Trex &amp; composite decks, screened porches. West Springfield, Kingstowne, Franconia. Free estimate." speakable />
-      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Springfield, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Composite decks &amp; screened porches for Springfield, West Springfield &amp; Kingstowne</p>
-          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
-          </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+      <WebPageSchema url="https://ldndecks.com/deck-builder-springfield-va" name="Deck Builder in Springfield, VA | Trex Certified | Loudoun Decks" description="Deck builder in Springfield, VA. Custom Trex &amp; composite decks for Kingstowne, West Springfield, Franconia &amp; Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <ServicesHeader
+        subtext="Springfield, VA's Trusted Deck Company"
+        title="Custom Deck Builder in Springfield, VA"
+        description="Loudoun Decks builds composite decks and screened porches across Kingstowne, West Springfield, Franconia and Saratoga. Fairfax County permits handled. 5-Star Google Rated."
+      />
+      <ServiceMain
+        subtitle="Smart Outdoor Living for Springfield Families"
+        title="Deck Builder Springfield VA  -  Premium Quality"
+        description="Springfield's mix of ranches, colonials and townhomes calls for decks designed to fit  -  not a template. Composite builds from Trex and TimberTech, Kingstowne HOA handled, projects from $22k+."
+        listItems={[
+          "TrexPro & TimberTech Certified installer",
+          "Kingstowne & Springfield HOA submissions handled",
+          "Deck + patio combinations with under-deck drainage",
+          "Fairfax County permits filed and inspected",
+          "5-Star Google Rated  -  call (571) 655-7207"
+        ]}
+        image1="/images/img36.jpeg"
+        image2="/images/img37.jpeg"
+      />
+      <ServiceContentExpansion sections={expansionSections} />
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+          <Image
+            src="/images/img17.jpeg"
+            alt="Composite deck built by LDN Decks in Springfield, Virginia"
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 900px) 100vw, 900px"
+          />
         </div>
-      </section>
-      <article style={{ padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-            <Image
-              src="/images/img26.jpeg"
-              alt="Premium custom deck built by LDN Decks in Springfield, Virginia"
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes="(max-width: 900px) 100vw, 900px"
-            />
-          </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Springfield Established Comfort, Modern Upgrades</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Springfield and West Springfield neighborhoods have some of Fairfax County&apos;s most established homes many with original decks from the 1980s and 1990s that are well overdue for replacement. From the townhomes of Kingstowne to the single-family homes of West Springfield, we deliver modern outdoor living upgrades.</p>
-          <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck replacement specialists:</strong> Springfield&apos;s 30-40 year old neighborhoods have massive replacement demand</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Kingstowne expertise:</strong> Townhome decks, compact designs, HOA-managed communities</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>West Springfield:</strong> Larger single-family lots with room for multi-level designs and screened porches</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Good value positioning:</strong> Springfield offers solid property values with excellent deck ROI</li>
-          </ul>
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Springfield Project</h2>
-          <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$32,000 350 sqft Deck + Pergola, West Springfield</h3>
-            <p style={{ lineHeight: 1.7 }}>Replaced a 28-year-old failing PT wood deck with Trex Transcend (Spiced Rum). Added a 10x10 attached pergola for partial shade over the dining area. Aluminum railings, 8 stair lights. Fairfax County permit. West Springfield Civic Association notified. 3-week build.</p>
-          </div>
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Springfield Neighborhoods</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {['West Springfield', 'Kingstowne', 'Kings Park', 'Franconia', 'Saratoga', 'Newington', 'North Springfield', 'Backlick', 'Orange Hunt', 'Huntsman', 'Rolling Forest', 'Fairfax Station'].map((n) => (
-              <span key={n} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.85rem', color: '#555' }}>{n}</span>
-            ))}
-          </div>
-          <CityAuthorityExpansion cityKey="springfield" />
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
-          {[
-            { q: "Cost in Springfield?", a: "$20,000-$50,000. Composite: $35-$58/sqft. Deck replacement is our #1 service here." },
-            { q: "Permit needed?", a: "Yes Fairfax County. 3-6 weeks plan review. We handle everything." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
-            </details>
-          ))}
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Also Serving</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {[
-              ['/deck-builder-burke-va', 'Burke'],
-              ['/deck-builder-fairfax-va', 'Fairfax'],
-              ['/deck-builder-alexandria-va', 'Alexandria'],
-              ['/near-you/fairfax-county/annandale', 'Annandale'],
-              ['/deck-builder-lorton-va', 'Lorton'],
-              ['/deck-builder-centreville-va', 'Centreville'],
-            ].map(([href, text]) => (
-              <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
-            ))}
-          </div>
-        </div>
-      </article>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Trex Deck Builder Springfield</h2>
+        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1.5rem' }}>Composite Decks for Kingstowne, West Springfield, Franconia and Beyond</h3>
+      </div>
+      <ServiceInclusions
+        title="Why Springfield Chooses Loudoun Decks"
+        description="We are a local Northern Virginia team that builds across Springfield's diverse neighborhoods  -  from Kingstowne townhomes to West Springfield single-family homes."
+        items={inclusions}
+      />
+      <ProcessSteps />
+      <ServicesFAQ
+        title="Deck Builder Springfield VA  -  FAQs"
+        faqs={springfieldFAQs}
+        canonicalUrl="https://ldndecks.com/deck-builder-springfield-va"
+      />
+      <ServiceAreasGrid />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
+          {[
+            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
+            ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
+            ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
+            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
+          ].map(([href, text]) => (
+            <li key={href} style={{ marginBottom: '0.5rem' }}>
+              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
+            </li>
+          ))}
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
-        </ul>
+          </ul>
       </section>
-
+      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Springfield" /></div></section>
       <SimpleCTA title="Upgrade Your Springfield Deck" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-springfield-va" />
       <NamedAuthor context="Springfield and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
-    </>
+    </main>
   );
 }

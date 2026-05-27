@@ -1,123 +1,184 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import JsonLd from '@/components/JsonLd';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
-import SimpleCTA from '@/components/SimpleCTA';
+import ServicesHeader from '@/components/ServicesHeader';
+import ServiceMain from '@/components/ServiceMain';
+import ServiceInclusions from '@/components/ServiceInclusions';
+import ServiceContentExpansion from '@/components/ServiceContentExpansion';
+import ProcessSteps from '@/components/ProcessSteps';
+import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import RatingBadge from '@/components/RatingBadge';
+import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import { BUSINESS } from '@/lib/business';
-import CallLink from '@/components/CallLink';
-import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-brambleton-va',
-  title: 'Deck Builder in Brambleton, VA | Custom Composite Decks | LDN Decks',
-  description: 'Top-rated deck builder serving Brambleton, VA. 5.0★ Google. Trex decks replacing builder-grade PT wood. HOA handled. Loudoun County permits. Free estimate.',
+  title: 'Deck Builder in Brambleton, VA | Custom Trex Decks',
+  description: "Deck builder in Brambleton, VA. Composite decks built for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. Free estimate.",
+  image: '/images/img36.jpeg',
 });
 
-const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much does a deck cost in Brambleton?", acceptedAnswer: { "@type": "Answer", text: "Brambleton deck projects range from $20,000-$48,000. Composite decks: $35-$58/sqft installed. Most Brambleton projects involve upgrading builder-grade PT wood decks to composite resurfacing can save 40-60% vs full rebuild if the frame is solid." } },
-    { "@type": "Question", name: "Does the Brambleton HOA allow composite decks?", acceptedAnswer: { "@type": "Answer", text: "Yes. Brambleton HOA allows composite decking and actually prefers it over wood for consistent community appearance. Architectural review required we prepare and submit the full package. Typical approval: 2-3 weeks." } },
-  ],
-};
+const inclusions = [
+  {
+    title: "Brambleton DRB, Handled",
+    desc: "Brambleton Community Association's Design Review Board reviews all exterior modifications. We prepare drawings, material samples and color specifications to match DRB expectations and submit on the board's review schedule so your project moves without delays."
+  },
+  {
+    title: "Builder-Grade Upgrade Experts",
+    desc: "Brambleton homes built between 2004 and 2020 came with basic PT decks now entering their first upgrade cycle. We replace aging wood with Trex or TimberTech composite, swap out builder railings for composite or aluminum, and add lighting and hidden fasteners."
+  },
+  {
+    title: "Loudoun County Permits",
+    desc: "We file Brambleton permits through Loudoun County and manage the 2-4 week plan review. Permit and DRB submissions run in parallel so neither holds up the other."
+  }
+];
+
+const brambletonFAQs = [
+  {
+    q: "Do you build custom decks in Brambleton, VA?",
+    a: "Yes  -  across all of Brambleton, the entire master-planned community governed by the Brambleton Community Association (BCA). We handle DRB submissions, Loudoun County permits and every phase of construction."
+  },
+  {
+    q: "How does the Brambleton Community Association Design Review Board affect my deck?",
+    a: "The BCA's Design Review Board (DRB) reviews all exterior changes, decks included. The DRB requires specific material and color approvals before construction begins. We prepare the full submission  -  drawings, material samples, color specs  -  and time it to the board's review cycle so the approval does not stall the build."
+  },
+  {
+    q: "What does a composite deck cost in Brambleton?",
+    a: "Brambleton composite decks generally run $20,000 to $45,000. Most projects involve replacing builder-grade PT wood with Trex or TimberTech composite on 300-500 sqft suburban lots. Costs depend on size, material tier, railing choice and whether the existing frame can be reused."
+  },
+  {
+    q: "How long does a Brambleton deck project take?",
+    a: "Loudoun County permits run 2-4 weeks. The BCA Design Review Board typically processes applications within 2-3 weeks. A standard 300-500 sqft build takes 1-2 weeks on site once permits and DRB approval are in hand."
+  },
+  {
+    q: "Can I resurface my Brambleton deck instead of replacing it entirely?",
+    a: "If the existing frame is structurally sound  -  which we inspect for free  -  resurfacing replaces only the deck boards and railings. This saves 40-60% compared to a full tear-down and rebuild and is a common choice for Brambleton homes where the original frame is under 15 years old."
+  },
+  {
+    q: "Does Brambleton allow composite decking materials?",
+    a: "Yes. The BCA allows and generally prefers composite over wood for consistent community appearance and lower maintenance. Trex and TimberTech earth tones have a strong approval track record with the DRB."
+  }
+];
+
+const expansionSections = [
+  {
+    title: "Brambleton's Design Review Board",
+    paragraphs: [
+      "Brambleton is a single master-planned community of roughly 6,500 homes, all governed by the Brambleton Community Association (BCA). Every exterior modification  -  decks, screened porches, pergolas, fences  -  goes through the BCA's Design Review Board (DRB) before construction begins. The DRB reviews material choices, colors and how the project fits Brambleton's architectural guidelines.",
+      "The DRB operates on a regular review cycle, and a complete submission package is the difference between approval in one round and a request for revisions that pushes the project to the next meeting. We prepare the full package  -  site plan, elevation drawings, material samples and color specifications  -  to match what the board requires. A recent Brambleton project, a 300 sqft Trex Enhance deck with composite railings and post cap lights, cleared the DRB in two weeks because the submission was complete on the first pass.",
+      "Because we build consistently in Brambleton, we know which composite colors and railing styles have the smoothest approval path. We steer material selection toward those proven options from the first design meeting, which saves time and avoids revision cycles."
+    ]
+  },
+  {
+    title: "Builder-Grade to Premium  -  the Brambleton Upgrade Path",
+    paragraphs: [
+      "Brambleton was built in phases from 2004 through 2020. The earlier homes  -  now 10 to 20 years old  -  came with basic pressure-treated wood decks that are graying, splintering and past the point where annual staining makes financial sense. Even the newer phases (2015-2020) used builder-grade PT that ages quickly in Northern Virginia's humid climate.",
+      "The standard Brambleton upgrade replaces old PT boards with Trex Enhance or Transcend composite, swaps builder-grade wood railings for composite or aluminum railings, and adds hidden fasteners for a screw-free surface. Post cap lights on the railing are a frequent addition  -  they improve evening usability and add curb appeal, which matters in a community where homes are visible to neighbors on all sides.",
+      "On Brambleton homes where the original deck frame is structurally sound  -  typically homes built after 2010  -  resurfacing delivers the full visual transformation at 40-60% less than a complete rebuild. We inspect the frame before recommending the approach, and the inspection is part of every free estimate."
+    ]
+  },
+  {
+    title: "Material Choices for Brambleton Homes",
+    paragraphs: [
+      "Northern Virginia's climate  -  hot, humid summers and freeze-thaw winters  -  is hard on wood decks. Brambleton's PT originals show it clearly: cupping boards, surface cracking, mildew growth and the gray patina that comes from years of UV and moisture exposure. Composite boards are engineered to resist all of it. The manufacturer warranties (25-year limited on Trex Enhance, lifetime limited on Transcend) stay enforceable when a certified installer handles the build.",
+      "Color choice in Brambleton balances aesthetics with DRB approval. Earth tones  -  Toasted Sand, Saddle, Foggy Wharf  -  blend with the community's neutral siding palettes and have the strongest approval records. We present DRB-friendly options at the design meeting, walk through the heat, maintenance and visual tradeoffs of each, and let homeowners choose with confidence that approval will follow."
+    ],
+    listItems: [
+      { label: "TrexPro Installer", text: "TrexPro Platinum tier  -  full Transcend, Enhance and Select catalog for Brambleton builds." },
+      { label: "TimberTech Certified", text: "Certified installer for the complete TimberTech Pro and AZEK product lines." },
+      { label: "DRB-Ready Submissions", text: "Material samples, color specs and drawings prepared for BCA Design Review Board." },
+      { label: "Loudoun County Permits", text: "Full permit filing and 2-4 week plan review managed on your behalf." }
+    ]
+  },
+  {
+    title: "Outdoor Living Beyond the Deck",
+    paragraphs: [
+      "Brambleton is full of young families, and the deck is often just the starting point for a backyard that works harder. Screened porches shut out mosquitoes and pollen while keeping the outdoor feel  -  particularly valuable in a community where the town center and parks create a walkable, outdoor-oriented lifestyle. The screened porch is framed into the deck structure from the start so it reads as one cohesive build.",
+      "On Brambleton lots with walkout basements or grade changes, an under-deck drainage system converts the area below the deck into a dry, covered patio. The upper deck handles grilling and dining; the lower patio becomes a shaded second room. This combination effectively doubles the usable outdoor space on a suburban lot without expanding the footprint.",
+      "Pergolas are another common addition in Brambleton, providing partial shade and a defined ceiling over a section of the deck. A pergola paired with a composite deck and post cap lights creates a finished outdoor room that looks intentional rather than assembled  -  which is exactly the kind of cohesive design the BCA's DRB is looking for."
+    ]
+  }
+];
 
 export default function BrambletonDeckBuilderPage() {
   return (
-    <>
-      <JsonLd data={faqSchema} />
+    <main>
       <LocalBusinessSchema city="Brambleton" url="https://ldndecks.com/deck-builder-brambleton-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-brambleton-va" name="Deck Builder in Brambleton, VA | Custom Composite Decks | LDN Decks" description="Top-rated deck builder serving Brambleton, VA. 5.0★ Google. Trex decks replacing builder-grade PT wood. HOA handled. Loudoun County permits. Free estimate." speakable />
-      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Brambleton, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Upgrade your builder-grade deck to premium composite Brambleton&apos;s go-to deck builder</p>
-          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
-          </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+      <WebPageSchema url="https://ldndecks.com/deck-builder-brambleton-va" name="Deck Builder in Brambleton, VA | Custom Trex Decks" description="Deck builder in Brambleton, VA. Composite decks built for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. Free estimate." speakable />
+      <ServicesHeader
+        subtext="Brambleton, VA's Trusted Deck Company"
+        title="Custom Deck Builder in Brambleton, VA"
+        description="Loudoun Decks builds composite decks designed for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. 5-Star Google Rated."
+      />
+      <ServiceMain
+        subtitle="Built for Brambleton's DRB Standards"
+        title="Deck Builder Brambleton VA  -  Premium Craftsmanship"
+        description="We replace aging builder-grade PT decks with composite and handle the BCA Design Review Board process from drawings to approval. Most projects $20k-$45k."
+        listItems={[
+          "TrexPro & TimberTech Certified",
+          "BCA Design Review Board submissions prepared and timed",
+          "Builder-grade PT replacement  -  homes built 2004-2020",
+          "Post cap lights, composite railings, hidden fasteners",
+          "5-Star Google Rated  -  call (571) 655-7207"
+        ]}
+        image1="/images/img36.jpeg"
+        image2="/images/img37.jpeg"
+      />
+      <ServiceContentExpansion sections={expansionSections} />
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+          <Image
+            src="/images/img17.jpeg"
+            alt="Composite deck built by LDN Decks in Brambleton, Virginia replacing builder-grade pressure-treated wood"
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 900px) 100vw, 900px"
+          />
         </div>
-      </section>
-      <article style={{ padding: '4rem 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-            <Image
-              src="/images/img22.jpeg"
-              alt="Premium custom deck built by LDN Decks in Brambleton, Virginia"
-              fill
-              style={{ objectFit: 'cover' }}
-              sizes="(max-width: 900px) 100vw, 900px"
-            />
-          </div>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Brambleton Time to Upgrade Your Builder Deck</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Brambleton is one of Loudoun County&apos;s largest master-planned communities &mdash; anchored by Brambleton Town Center, the Brambleton Library and Hal &amp; Berni Hanson Regional Park &mdash; and many original homes (built 2007-2015) now have builder-grade pressure-treated decks that are showing their age: graying, splintering, and requiring annual staining. We specialize in transforming these into modern, maintenance-free composite decks designed for Brambleton&apos;s typically narrow, deep lots, where a stepped multi-level layout often delivers more usable space than a single wide platform.</p>
-          <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Builder-grade upgrade experts:</strong> 80% of our Brambleton projects involve replacing or resurfacing original PT wood decks</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Brambleton HOA relationships:</strong> We know the ARC requirements, preferred materials, and submission process</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Resurfacing option:</strong> If your frame is solid (we inspect), resurfacing saves 40-60% vs full rebuild</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Loudoun County permits:</strong> Fastest in NoVA (10-15 business days). We handle everything.</li>
-          </ul>
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Brambleton Project</h2>
-          <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$22,000 300 sqft Deck Resurfacing, Brambleton Town Center</h3>
-            <p style={{ lineHeight: 1.7 }}>Resurfaced a 10-year-old builder-grade PT deck with Trex Transcend (Island Mist). Frame inspected and confirmed solid saved $14k vs full rebuild. New Trex Select railings in white, 6 stair lights. Brambleton HOA approved in 2 weeks. Loudoun County permit. 1.5-week build. Zero maintenance going forward.</p>
-          </div>
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Brambleton Sections We Serve</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {['Brambleton Town Center', 'North Brambleton', 'The Promenade', 'The Villages', 'Birchwood', 'Summerfield', 'Ryan Park', 'Wintergreen', 'Reed\'s Landing', 'Claiborne Parkway'].map((n) => (
-              <span key={n} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.85rem', color: '#555' }}>{n}</span>
-            ))}
-          </div>
-          <CityAuthorityExpansion cityKey="brambleton" />
-
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
-          {[
-            { q: "Deck cost in Brambleton?", a: "New build: $20k-$48k. Resurfacing: $10k-$22k (saves 40-60% if frame is solid). Composite: $35-$58/sqft." },
-            { q: "Brambleton HOA allow composite?", a: "Yes they prefer it. We know the ARC process and handle submissions. Typical approval: 2-3 weeks." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
-            </details>
-          ))}
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Also Serving</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-            {[
-              ['/deck-builder-ashburn-va', 'Ashburn'],
-              ['/deck-builder-south-riding-va', 'South Riding'],
-              ['/near-you/loudoun-county/stone-ridge', 'Stone Ridge'],
-              ['/deck-builder-chantilly-va', 'Chantilly'],
-              ['/deck-builder-centreville-va', 'Centreville'],
-              ['/deck-builder-sterling-va', 'Sterling'],
-            ].map(([href, text]) => (
-              <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
-            ))}
-          </div>
-        </div>
-      </article>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Trex Deck Builder Brambleton</h2>
+        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1.5rem' }}>Builder-Grade Upgrades That Clear the BCA Design Review Board</h3>
+      </div>
+      <ServiceInclusions
+        title="Why Brambleton Chooses Loudoun Decks"
+        description="We are a Northern Virginia team that knows the BCA Design Review Board, Loudoun County permitting and how to upgrade builder-grade decks efficiently."
+        items={inclusions}
+      />
+      <ProcessSteps />
+      <ServicesFAQ
+        title="Deck Builder Brambleton VA  -  FAQs"
+        faqs={brambletonFAQs}
+        canonicalUrl="https://ldndecks.com/deck-builder-brambleton-va"
+      />
+      <ServiceAreasGrid />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
+          {[
+            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
+            ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
+            ['/how-much-does-a-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
+          ].map(([href, text]) => (
+            <li key={href} style={{ marginBottom: '0.5rem' }}>
+              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
+            </li>
+          ))}
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
-        </ul>
+          </ul>
       </section>
-
+      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Brambleton" /></div></section>
       <SimpleCTA title="Upgrade Your Brambleton Deck" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-builder-brambleton-va" />
       <NamedAuthor context="Brambleton and Northern Virginia" lastUpdated="2026-05-26" />
       <ContactHome />
-    </>
+    </main>
   );
 }
