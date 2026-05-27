@@ -10,6 +10,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
@@ -87,19 +88,6 @@ const faqSchemaData = {
   }))
 };
 
-const serviceSchemaData = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Custom Deck Resurfacing",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-  ],
-  "description": "Professional deck resurfacing services utilizing TimberTech Vintage Collection composite boards, structural reinforcement, and aluminum railings in Northern Virginia."
-};
-
 const whyLdnDecks = [
   { title: "TimberTech Specialists", desc: "We have extensive, specialized experience handling and installing Advanced PVC composite materials with hidden fastening systems." },
   { title: "Structural Rigor", desc: "We never 'slap lipstick on a pig'. If your frame is unsafe, we will not resurface it. We prioritize the long-term safety of your family." },
@@ -120,7 +108,15 @@ export default function DeckResurfacingPage() {
       {/* Dynamic SEO Schemas */}
       <JsonLd data={faqSchemaData} />
       <WebPageSchema url="https://ldndecks.com/services/deck-resurfacing" name="5-Star Deck Resurfacing NoVA | TimberTech Vintage Experts" description="Premium deck resurfacing in Northern Virginia from $15k+. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options." speakable />
-      <JsonLd data={serviceSchemaData} />
+      <ServiceSchema
+        name="Custom Deck Resurfacing"
+        description="Professional deck resurfacing services utilizing TimberTech Vintage Collection composite boards, structural reinforcement, and aluminum railings in Northern Virginia."
+        url="https://ldndecks.com/services/deck-resurfacing"
+        category="Deck Construction"
+        lowPrice="10000"
+        highPrice="35000"
+        relatedServices={['https://ldndecks.com/services/deck-replacement', 'https://ldndecks.com/services/deck-repair-and-structural-maintenance', 'https://ldndecks.com/services/new-decks']}
+      />
 
       <ServicesHeader
         subtext="Deck Resurfacing Loudoun VA"

@@ -61,6 +61,11 @@ export default function OutdoorWashingPage() {
       <ServiceSchema
         name="Outdoor Power Washing"
         description="Professional outdoor power washing in Northern Virginia — safe, effective cleaning for decks, patios, fences, and exterior surfaces."
+        url="https://ldndecks.com/services/outdoor-washing"
+        category="Exterior Cleaning"
+        lowPrice="200"
+        highPrice="1500"
+        relatedServices={['https://ldndecks.com/services/deck-washing', 'https://ldndecks.com/services/concrete-washing', 'https://ldndecks.com/services/house-siding-washing']}
       />
       <ServicesHeader
         subtext="Our Services"

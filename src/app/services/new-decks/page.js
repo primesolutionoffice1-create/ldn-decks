@@ -156,8 +156,10 @@ export default function NewDecksPage() {
       <ServiceSchema
         name="Custom Deck Construction"
         description="Custom residential deck design and construction in Northern Virginia. Composite, PVC and wood decks with permits, HOA approvals, structural engineering and manufacturer warranty."
-        price="15000"
         url="https://ldndecks.com/services/new-decks"
+        category="Deck Construction"
+        price="15000"
+        relatedServices={['https://ldndecks.com/services/deck-replacement', 'https://ldndecks.com/services/deck-resurfacing', 'https://ldndecks.com/composite-decks', 'https://ldndecks.com/trex-decks']}
       />
       <ServicesHeader
         subtext="Northern Virginia's Full-Service Deck Builder"

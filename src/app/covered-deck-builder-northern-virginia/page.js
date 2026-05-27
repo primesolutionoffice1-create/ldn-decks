@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -19,19 +20,6 @@ export const metadata = buildMetadata({
   title: "Covered Deck Builder Northern Virginia | Open-Air Outdoor Living",
   description: "Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living.",
 });
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Covered Deck and Open-Air Porch Construction",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-  ],
-  "description": "Custom covered deck design and construction in Northern Virginia. Roofed open-air decks, covered porches, pavilions, and outdoor living rooms with integrated rooflines and electrical."
-};
 
 const inclusions = [
   { title: "Structural Roofline Integration", desc: "We engineer covered-deck rooflines to tie directly into your home's existing structure, creating a seamless architectural extension instead of an afterthought addition." },
@@ -103,8 +91,16 @@ const faqSchema = {
 export default function CoveredDeckPage() {
   return (
     <main>
-      <JsonLd data={serviceSchema} />
       <WebPageSchema url="https://ldndecks.com/covered-deck-builder-northern-virginia" name="Covered Deck Builder Northern Virginia | Open-Air Outdoor Living" description="Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living." speakable />
+      <ServiceSchema
+        name="Covered Deck Construction"
+        description="Custom covered deck and roof-covered outdoor structures in Northern Virginia. Engineered for weather protection with premium materials."
+        url="https://ldndecks.com/covered-deck-builder-northern-virginia"
+        category="Outdoor Living"
+        lowPrice="20000"
+        highPrice="60000"
+        relatedServices={['https://ldndecks.com/screened-porch-builder-northern-virginia', 'https://ldndecks.com/services/new-decks', 'https://ldndecks.com/outdoor-living-northern-virginia']}
+      />
       <JsonLd data={faqSchema} />
       <ServicesHeader
         subtext="Covered Deck Builder Northern Virginia"

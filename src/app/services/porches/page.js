@@ -97,7 +97,14 @@ const porchFaqSchema = {
 export default function PorchesPage() {
   return (
     <main>
-      <ServiceSchema name="Porch Construction" description="Custom front porches, screened porches, and open porches in Northern Virginia. Design and build." price="25000" />
+      <ServiceSchema
+        name="Porch Construction"
+        description="Custom front porches, screened porches, and open porches in Northern Virginia. Full design and build service."
+        url="https://ldndecks.com/services/porches"
+        category="Porch Construction"
+        price="25000"
+        relatedServices={['https://ldndecks.com/screened-porch-builder-northern-virginia', 'https://ldndecks.com/services/porches/screened-porch', 'https://ldndecks.com/services/porches/front-porch']}
+      />
       <JsonLd data={porchFaqSchema} />
       <WebPageSchema url="https://ldndecks.com/services/porches" name="5-Star Porch Builder NoVA | Screened &amp; Open Porch Design" description="Top-rated porch contractor in Northern Virginia. Custom screened porches, open-air pavilions &amp; front porches. ★ 5.0 Google Rated. Free estimates in 24h." speakable />
       <ServicesHeader

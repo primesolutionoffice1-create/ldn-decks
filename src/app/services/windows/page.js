@@ -116,7 +116,14 @@ export default function WindowsPage() {
   return (
     <main>
       <WebPageSchema url="https://ldndecks.com/services/windows" name="Window Replacement Loudoun County | LDN Decks" description="Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal." speakable />
-      <ServiceSchema name="Window Installation" description="Residential window replacement and installation in Northern Virginia." price="5000" />
+      <ServiceSchema
+        name="Window Installation"
+        description="Residential window replacement and installation in Northern Virginia. Energy-efficient vinyl, wood, and fiberglass windows."
+        url="https://ldndecks.com/services/windows"
+        category="Exterior Renovation"
+        price="5000"
+        relatedServices={['https://ldndecks.com/services/entry-doors']}
+      />
       <ServicesHeader 
         subtext="5-Star Google Rated Experts"
         title="Window Replacement & Installation"

@@ -10,6 +10,7 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
@@ -120,23 +121,20 @@ const faqSchemaData = {
   }))
 };
 
-const serviceSchemaData = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Professional Deck Washing",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "State", "name": "Virginia" }
-  ],
-  "description": "Professional exterior residential deck cleaning, soft washing, and wood brightening services in Northern Virginia."
-};
-
 export default function DeckWashingPage() {
   return (
     <main>
       <JsonLd data={faqSchemaData} />
       <WebPageSchema url="https://ldndecks.com/services/deck-washing" name="Professional Deck Washing Loudoun VA | Safe Soft-Wash Restoration" description="Restore your outdoor wood or composite deck with professional low-pressure soft-washing in Northern Virginia. We safely remove algae, mold, and grime." speakable />
-      <JsonLd data={serviceSchemaData} />
+      <ServiceSchema
+        name="Professional Deck Washing"
+        description="Professional exterior residential deck cleaning, soft washing, and wood brightening services in Northern Virginia."
+        url="https://ldndecks.com/services/deck-washing"
+        category="Exterior Cleaning"
+        lowPrice="300"
+        highPrice="1200"
+        relatedServices={['https://ldndecks.com/services/outdoor-washing', 'https://ldndecks.com/services/deck-maintenance', 'https://ldndecks.com/services/concrete-washing']}
+      />
 
       <ServicesHeader
         subtext="Maintenance & Restoration"

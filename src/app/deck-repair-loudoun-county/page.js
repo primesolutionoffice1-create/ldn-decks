@@ -120,9 +120,14 @@ export default function DeckRepairLoudounCountyPage() {
     <main>
       <WebPageSchema url="https://ldndecks.com/deck-repair-loudoun-county" name="Deck Repair Loudoun County | Fix Rot, Railings &amp; Ledger Boards" description="Expert deck repair in Loudoun County, VA. We fix rot, unstable railings, ledger board failures &amp; structural damage. Ashburn, Leesburg, Sterling." speakable />
       <ServiceSchema
-        name="Deck Repair & Structural Restoration in Loudoun County, VA"
-        description="Expert deck repair across Loudoun County — rot and ledger board repair, joist and beam replacement, railing and stair safety upgrades, and full resurfacing. Free on-site inspections, permitted structural work."
-        areaServed={[{ '@type': 'AdministrativeArea', name: 'Loudoun County, VA' }]}
+        name="Deck Repair in Loudoun County"
+        description="Expert deck repair across Loudoun County — rot and ledger board repair, joist and beam replacement, railing and stair safety upgrades."
+        url="https://ldndecks.com/deck-repair-loudoun-county"
+        category="Deck Repair"
+        lowPrice="1500"
+        highPrice="15000"
+        areaServed={[{"@type":"AdministrativeArea","name":"Loudoun County, VA"}]}
+        relatedServices={['https://ldndecks.com/deck-repair', 'https://ldndecks.com/services/deck-repair-and-structural-maintenance', 'https://ldndecks.com/services/deck-inspection']}
       />
       <ServicesHeader
         subtext="Loudoun County's 5-Star Rated Repair Team"

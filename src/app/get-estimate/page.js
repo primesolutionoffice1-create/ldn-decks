@@ -14,28 +14,9 @@ export const metadata = buildMetadata({
   image: '/images/img36.jpeg',
 });
 
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Custom Deck Construction",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-  ],
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "USD",
-    "lowPrice": "15000",
-    "highPrice": "75000"
-  }
-};
-
 export default function GetEstimatePage() {
   return (
     <>
-      <JsonLd data={serviceSchema} />
 
       {/* Hero Above the Fold: Trust + CTA */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '3rem 0 2rem' }}>

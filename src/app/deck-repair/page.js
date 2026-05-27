@@ -118,7 +118,14 @@ export default function DeckRepairPage() {
   return (
     <main>
       <WebPageSchema url="https://ldndecks.com/deck-repair" name="Deck Repair | Loudoun County &amp; Fairfax VA | LDN Decks" description="Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection call (571) 655-7207." speakable />
-      <ServiceSchema name="Deck Repair" description="Deck repair services for Northern Virginia. Board replacement, railing repair, structural fixes." price="3000" />
+      <ServiceSchema
+        name="Deck Repair"
+        description="Deck repair services for Northern Virginia. Board replacement, railing repair, structural fixes, and code compliance remediation."
+        url="https://ldndecks.com/deck-repair"
+        category="Deck Repair"
+        price="3000"
+        relatedServices={['https://ldndecks.com/services/deck-repair-and-structural-maintenance', 'https://ldndecks.com/services/deck-inspection', 'https://ldndecks.com/deck-repair-loudoun-county']}
+      />
       <ServicesHeader
         subtext="5-Star Google Rated Restoration"
         title="Professional Deck Repair & Structural Restoration"

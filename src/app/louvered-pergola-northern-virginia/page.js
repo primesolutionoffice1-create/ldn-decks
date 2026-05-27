@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -31,6 +32,15 @@ export default function LouveredPergolaPage() {
     <>
       <JsonLd data={faqSchema} />
       <WebPageSchema url="https://ldndecks.com/louvered-pergola-northern-virginia" name="Louvered Pergola Builder in Northern Virginia" description="Motorized and manual louvered pergolas in Northern Virginia — adjustable-roof shade structures over decks and patios. $12,000-$35,000+. Free design consultation." speakable />
+      <ServiceSchema
+        name="Louvered Pergola Installation"
+        description="Motorized louvered pergola systems in Northern Virginia. Adjustable aluminum roof structures for year-round outdoor living."
+        url="https://ldndecks.com/louvered-pergola-northern-virginia"
+        category="Outdoor Living"
+        lowPrice="15000"
+        highPrice="50000"
+        relatedServices={['https://ldndecks.com/services/gazebo-pergola', 'https://ldndecks.com/outdoor-living-northern-virginia', 'https://ldndecks.com/covered-deck-builder-northern-virginia']}
+      />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>

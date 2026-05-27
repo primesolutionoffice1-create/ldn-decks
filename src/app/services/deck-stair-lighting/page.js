@@ -61,7 +61,14 @@ export default function DeckStairLightingPage() {
   return (
     <main>
       <WebPageSchema url="https://ldndecks.com/services/deck-stair-lighting" name="Deck Stair Lighting Loudoun VA | LDN Decks" description="Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last in Loudoun, Fairfax &amp; Prince William County." speakable />
-      <ServiceSchema name="Deck & Stair Lighting" description="Integrated LED deck lighting, stair riser lights, post cap lights, and under-rail strips." price="2000" />
+      <ServiceSchema
+        name="Deck & Stair Lighting"
+        description="Integrated LED deck lighting, stair riser lights, post cap lights, and under-rail strips for Northern Virginia decks."
+        url="https://ldndecks.com/services/deck-stair-lighting"
+        category="Deck Accessories"
+        price="2000"
+        relatedServices={['https://ldndecks.com/services/new-decks', 'https://ldndecks.com/services/trex-railings']}
+      />
       <ServicesHeader
         subtext="Deck Stair Lighting Loudoun VA"
         title="Deck Stair Lighting That Looks Amazing & Keeps Your Family Safe"

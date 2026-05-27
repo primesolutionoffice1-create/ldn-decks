@@ -116,10 +116,15 @@ export default function DeckBuildersLoudounPage() {
                 <main>
       <WebPageSchema url="https://ldndecks.com/deck-builders-loudoun" name="Custom Deck Builder in Loudoun County, VA | Loudoun Decks" description="Local deck builder in Loudoun County, VA. Trex Platinum Pro. Composite decks, screened porches, pergolas. 5-star rated. Free quote within 24 hours." speakable />
                         <ServiceSchema
-                                name="Custom Deck Building in Loudoun County, VA"
-                                description="Custom composite and wood deck construction across Loudoun County — Ashburn, Leesburg, Sterling, Brambleton and beyond. TrexPro Platinum installer, HOA and permit handling, 5-star rated."
-                                areaServed={[{ '@type': 'AdministrativeArea', name: 'Loudoun County, VA' }]}
-                        />
+        name="Custom Deck Building in Loudoun County"
+        description="Custom composite and wood deck construction across Loudoun County — Ashburn, Leesburg, Sterling, Brambleton. TrexPro Platinum installer, HOA and permit handling."
+        url="https://ldndecks.com/deck-builders-loudoun"
+        category="Deck Construction"
+        lowPrice="15000"
+        highPrice="80000"
+        areaServed={[{"@type":"AdministrativeArea","name":"Loudoun County, VA"}]}
+        relatedServices={['https://ldndecks.com/composite-deck-builder-loudoun', 'https://ldndecks.com/services/new-decks']}
+      />
                         <ServicesHeader
                                 subtext="Loudoun's Premier Choice"
                                 title="Custom Deck Builders Serving Loudoun County"

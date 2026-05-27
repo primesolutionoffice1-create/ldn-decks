@@ -138,7 +138,15 @@ export default function ScreenedPorchBuilderNovaPage() {
   return (
     <main>
       <WebPageSchema url="https://ldndecks.com/screened-porch-builder-northern-virginia" name="Screened Porch Builder Northern Virginia" description="Custom screened porches and 3-season rooms in Northern Virginia. EZE-Breeze, deck combos, permits handled. From $25,000." speakable />
-      <ServiceSchema name="Screened Porch Construction" description="Custom screened porches and 3-season rooms in Northern Virginia. EZE-Breeze windows, structural engineering, permits and HOA approvals included." price="25000" url="https://ldndecks.com/screened-porch-builder-northern-virginia" />
+      <ServiceSchema
+        name="Screened Porch Construction"
+        description="Custom screened porches and 3-season rooms in Northern Virginia. EZE-Breeze windows, structural engineering, permits and HOA approvals included."
+        url="https://ldndecks.com/screened-porch-builder-northern-virginia"
+        category="Porch Construction"
+        lowPrice="25000"
+        highPrice="70000"
+        relatedServices={['https://ldndecks.com/three-season-room-northern-virginia', 'https://ldndecks.com/covered-deck-builder-northern-virginia', 'https://ldndecks.com/services/porches']}
+      />
 
       <ServicesHeader
         subtext="Northern Virginia's Premier Porch Builder"

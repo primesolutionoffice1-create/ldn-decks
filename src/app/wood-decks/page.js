@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -33,6 +34,15 @@ export default function WoodDecksPage() {
     <>
       <JsonLd data={faqSchema} />
       <WebPageSchema url="https://ldndecks.com/wood-decks" name="Expert Wood Deck Builder NoVA | Cedar &amp; Hardwood Decks" description="The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax &amp; Prince William counties." speakable />
+      <ServiceSchema
+        name="Wood Deck Construction"
+        description="Custom wood deck building in Northern Virginia. Cedar, IPE, and pressure-treated lumber options with expert craftsmanship."
+        url="https://ldndecks.com/wood-decks"
+        category="Deck Construction"
+        lowPrice="12000"
+        highPrice="50000"
+        relatedServices={['https://ldndecks.com/composite-decks', 'https://ldndecks.com/services/new-decks']}
+      />
       {/* Hero with full-width background image */}
       <section style={{ position: 'relative', minHeight: 520, overflow: 'hidden' }}>
         <Image

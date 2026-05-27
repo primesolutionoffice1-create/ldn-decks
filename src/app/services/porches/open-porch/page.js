@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
@@ -19,19 +20,6 @@ export const metadata = buildMetadata({
   title: "Open Porch Builder & Design | Northern Virginia",
   description: "Custom open porch design and construction in Northern Virginia. We build covered open-air porches, pavilions, and outdoor living rooms. Free estimates.",
 });
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Open Porch Construction",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-  ],
-  "description": "Custom open porch design and construction in Northern Virginia. Covered open-air porches, pavilions, and outdoor living rooms with integrated rooflines and electrical."
-};
 
 const inclusions = [
   { title: "Structural Roofline Integration", desc: "We engineer open porch rooflines to tie directly into your home's existing structure, creating a seamless architectural extension rather than an afterthought addition." },
@@ -103,8 +91,16 @@ const faqSchema = {
 export default function OpenPorchPage() {
   return (
     <main>
-      <JsonLd data={serviceSchema} />
       <WebPageSchema url="https://ldndecks.com/services/porches/open-porch" name="Open Porch Builder &amp; Design | Northern Virginia" description="Custom open porch design and construction in Northern Virginia. We build covered open-air porches, pavilions, and outdoor living rooms. Free estimates." speakable />
+      <ServiceSchema
+        name="Open Porch Construction"
+        description="Open-air porch design and build in Northern Virginia. Covered or uncovered with composite or wood decking."
+        url="https://ldndecks.com/services/porches/open-porch"
+        category="Porch Construction"
+        lowPrice="12000"
+        highPrice="40000"
+        relatedServices={['https://ldndecks.com/services/porches', 'https://ldndecks.com/services/porches/front-porch']}
+      />
       <JsonLd data={faqSchema} />
       <ServicesHeader
         subtext="Open Porch Builder Northern Virginia"

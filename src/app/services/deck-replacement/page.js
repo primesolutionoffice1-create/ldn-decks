@@ -9,6 +9,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
@@ -21,19 +22,6 @@ export const metadata = buildMetadata({
   title: "Professional Deck Replacement Northern Virginia | Rebuild & Remodel",
   description: "Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds."
 });
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Deck Replacement and Rebuilding",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-  ],
-  "description": "Professional deck replacement services including structural assessment, old deck removal, and premium composite rebuilds using Trex and TimberTech."
-};
 
 const replacementSections = [
   {
@@ -75,8 +63,16 @@ const replacementBenefits = [
 export default function DeckReplacementPage() {
   return (
     <main>
-      <JsonLd data={serviceSchema} />
       <WebPageSchema url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description="Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds." speakable />
+      <ServiceSchema
+        name="Deck Replacement and Rebuilding"
+        description="Professional deck replacement services including structural assessment, old deck removal, and premium composite rebuilds using Trex and TimberTech."
+        url="https://ldndecks.com/services/deck-replacement"
+        category="Deck Construction"
+        lowPrice="15000"
+        highPrice="65000"
+        relatedServices={['https://ldndecks.com/services/new-decks', 'https://ldndecks.com/services/deck-resurfacing', 'https://ldndecks.com/services/deck-repair-and-structural-maintenance']}
+      />
       <ServicesHeader
         subtext="Projects from $15,000+"
         title="Professional Deck Replacement in Northern Virginia"

@@ -11,6 +11,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
@@ -96,17 +97,6 @@ const faqSchemaData = {
   }))
 };
 
-const serviceSchemaData = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Custom Gazebos and Pergolas",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "State", "name": "Virginia" }
-  ],
-  "description": "Custom design and build services for luxury pergolas, gazebos, and outdoor shade structures in Northern Virginia."
-};
-
 const inclusions = [
   {
     title: "Architectural Design Phase",
@@ -131,7 +121,15 @@ export default function GazeboPergolaPage() {
     <main>
       <JsonLd data={faqSchemaData} />
       <WebPageSchema url="https://ldndecks.com/services/gazebo-pergola" name="Gazebo &amp; Pergola Builder | Loudoun VA | LDN Decks" description="Add shade and stunning architectural character to your backyard with custom gazebos and pergolas in Northern Virginia. Expert design and build services." speakable />
-      <JsonLd data={serviceSchemaData} />
+      <ServiceSchema
+        name="Custom Gazebos and Pergolas"
+        description="Custom design and build services for luxury pergolas, gazebos, and outdoor shade structures in Northern Virginia."
+        url="https://ldndecks.com/services/gazebo-pergola"
+        category="Outdoor Living"
+        lowPrice="8000"
+        highPrice="45000"
+        relatedServices={['https://ldndecks.com/louvered-pergola-northern-virginia', 'https://ldndecks.com/services/fire-pits', 'https://ldndecks.com/outdoor-living-northern-virginia']}
+      />
 
       <ServicesHeader
         subtext="Gazebos & Pergolas Loudoun VA"

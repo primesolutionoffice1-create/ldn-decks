@@ -125,7 +125,14 @@ const fenceFaqSchema = {
 export default function FencePage() {
   return (
     <main>
-      <ServiceSchema name="Fence Installation" description="Custom fencing in Northern Virginia. Privacy, composite, vinyl, wood, and aluminum options." price="6000" />
+      <ServiceSchema
+        name="Fence Installation"
+        description="Custom fencing in Northern Virginia. Privacy, composite, vinyl, wood, and aluminum options for Loudoun, Fairfax, and Prince William County homes."
+        url="https://ldndecks.com/services/fence"
+        category="Fencing"
+        price="6000"
+        relatedServices={['https://ldndecks.com/services/fence-cleaning', 'https://ldndecks.com/services/new-decks']}
+      />
       <JsonLd data={fenceFaqSchema} />
       <WebPageSchema url="https://ldndecks.com/services/fence" name="Fence Installation Loudoun County | LDN Decks" description="Loudoun Decks provides expert fence installation for homeowners in Loudoun County, Fairfax, and Prince William. Custom wood, vinyl, and aluminum fencing." speakable />
       <ServicesHeader

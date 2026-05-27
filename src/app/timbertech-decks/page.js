@@ -129,8 +129,11 @@ export default function TimberTechDecksPage() {
       <ServiceSchema
         name="TimberTech AZEK Deck Installation"
         description="TimberTech and AZEK deck installation in Northern Virginia. Premium composite and PVC decking for Loudoun, Fairfax, and Prince William County homes."
-        price="22000"
         url="https://ldndecks.com/timbertech-decks"
+        category="Deck Construction"
+        lowPrice="22000"
+        highPrice="85000"
+        relatedServices={['https://ldndecks.com/composite-decks', 'https://ldndecks.com/trex-decks', 'https://ldndecks.com/services/new-decks']}
       />
       <ServicesHeader
         subtext="TimberTech & AZEK Deck Specialist"

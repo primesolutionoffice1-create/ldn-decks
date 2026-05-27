@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -31,6 +32,15 @@ export default function ThreeSeasonRoomPage() {
     <>
       <JsonLd data={faqSchema} />
       <WebPageSchema url="https://ldndecks.com/three-season-room-northern-virginia" name="Three-Season Room Builder in Northern Virginia" description="Custom three-season rooms in Northern Virginia with Eze-Breeze windows — usable 9-10 months a year. $33,000-$60,000+. Free design consultation." speakable />
+      <ServiceSchema
+        name="Three-Season Room Construction"
+        description="Custom three-season room design and build in Northern Virginia. Enclosed outdoor rooms with EZE-Breeze windows for spring-to-fall enjoyment."
+        url="https://ldndecks.com/three-season-room-northern-virginia"
+        category="Porch Construction"
+        lowPrice="30000"
+        highPrice="80000"
+        relatedServices={['https://ldndecks.com/screened-porch-builder-northern-virginia', 'https://ldndecks.com/services/porches', 'https://ldndecks.com/covered-deck-builder-northern-virginia']}
+      />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>

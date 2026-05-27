@@ -107,8 +107,12 @@ export default function OutdoorLivingNorthernVirginiaPage() {
       <WebPageSchema url="https://ldndecks.com/outdoor-living-northern-virginia" name="Outdoor Living Contractor Northern Virginia | Decks, Patios, Porches" description="Outdoor living design and build in Northern Virginia. Custom decks, screened porches, patios, pergolas, outdoor kitchens and under-deck spaces." speakable />
       <ServiceSchema
         name="Outdoor Living Design and Build"
-        description="Outdoor living contractor in Northern Virginia for decks, porches, patios, pergolas, outdoor kitchens, under-deck spaces, permits, and HOA-ready backyard planning."
-        price="25000"
+        description="Full-service outdoor living contractor in Northern Virginia. Decks, porches, patios, pergolas, outdoor kitchens, and backyard transformations."
+        url="https://ldndecks.com/outdoor-living-northern-virginia"
+        category="Outdoor Living"
+        lowPrice="15000"
+        highPrice="100000"
+        relatedServices={['https://ldndecks.com/services/new-decks', 'https://ldndecks.com/screened-porch-builder-northern-virginia', 'https://ldndecks.com/outdoor-kitchen-builder-northern-virginia']}
       />
       <ServicesHeader
         subtext="Outdoor Living Contractor NoVA"

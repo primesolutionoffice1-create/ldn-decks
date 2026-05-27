@@ -11,6 +11,7 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
@@ -20,19 +21,6 @@ export const metadata = buildMetadata({
   title: "Under Deck Patio Systems Loudoun VA | Waterproofing & Ceilings",
   description: "Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio."
 });
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Under Deck Patio System Installation",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-  ],
-  "description": "Custom under deck patio waterproofing and ceiling systems in Northern Virginia. Drainage systems, aluminum ceiling panels, recessed lighting, and electrical integration."
-};
 
 const expansionSections = [
   {
@@ -115,8 +103,16 @@ const faqs = [
 export default function UnderDeckPatiosPage() {
   return (
     <main>
-      <JsonLd data={serviceSchema} />
       <WebPageSchema url="https://ldndecks.com/services/under-deck-patios" name="Under Deck Patio Systems Loudoun VA | Waterproofing &amp; Ceilings" description="Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio." speakable />
+      <ServiceSchema
+        name="Under-Deck Patio Systems"
+        description="Dry under-deck patio construction in Northern Virginia. Ceiling drainage systems that create usable space beneath elevated decks."
+        url="https://ldndecks.com/services/under-deck-patios"
+        category="Outdoor Living"
+        lowPrice="5000"
+        highPrice="20000"
+        relatedServices={['https://ldndecks.com/services/patios', 'https://ldndecks.com/services/new-decks']}
+      />
       <ServicesHeader
         subtext="Under Deck Patio Loudoun VA"
         title="Turn the Space Under Your Deck Into a Beautiful, Dry Patio"

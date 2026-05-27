@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
@@ -19,19 +20,6 @@ export const metadata = buildMetadata({
   title: "Front Porch Builder Northern Virginia | Custom Curb Appeal Upgrades",
   description: "Custom front porches in Northern Virginia. Premium porticos, wraparound entries & curb appeal upgrades in Loudoun & Fairfax County. Free estimate.",
 });
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Front Porch Construction",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-  ],
-  "description": "Custom front porch design and construction in Northern Virginia. Full front porches, porticos, and wraparound entries with architectural columns, railings, and structural roofline integration."
-};
 
 const inclusions = [
   { title: "Architectural Roofline Design", desc: "We design front porch rooflines that seamlessly integrate with your home's existing roofline, fascia, and soffit — creating a cohesive architectural statement rather than a bolt-on addition." },
@@ -103,8 +91,16 @@ const faqSchema = {
 export default function FrontPorchPage() {
   return (
     <main>
-      <JsonLd data={serviceSchema} />
       <WebPageSchema url="https://ldndecks.com/services/porches/front-porch" name="Front Porch Builder Northern Virginia | Custom Curb Appeal Upgrades" description="Custom front porches in Northern Virginia. Premium porticos, wraparound entries &amp; curb appeal upgrades in Loudoun &amp; Fairfax County. Free estimate." speakable />
+      <ServiceSchema
+        name="Front Porch Construction"
+        description="Custom front porch design and construction in Northern Virginia. Enhance curb appeal with covered or open porches."
+        url="https://ldndecks.com/services/porches/front-porch"
+        category="Porch Construction"
+        lowPrice="15000"
+        highPrice="50000"
+        relatedServices={['https://ldndecks.com/services/porches', 'https://ldndecks.com/services/porches/open-porch', 'https://ldndecks.com/covered-deck-builder-northern-virginia']}
+      />
       <JsonLd data={faqSchema} />
       <ServicesHeader
         subtext="Front Porch Builder Northern Virginia"

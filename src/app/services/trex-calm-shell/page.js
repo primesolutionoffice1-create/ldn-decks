@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
@@ -18,19 +19,6 @@ export const metadata = buildMetadata({
   title: "Trex Clam Shell Deck Resurfacing Loudoun VA | Clean Modern Looks",
   description: "Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing & installation."
 });
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Trex Clam Shell Deck Resurfacing",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-  ],
-  "description": "Professional Trex Clam Shell composite deck resurfacing in Northern Virginia. Premium surface upgrade with hidden fasteners and structural evaluation included."
-};
 
 const expansionSections = [
   {
@@ -74,8 +62,15 @@ const whyLdnDecks = [
 export default function TrexCalmShellPage() {
   return (
     <main>
-      <JsonLd data={serviceSchema} />
       <WebPageSchema url="https://ldndecks.com/services/trex-calm-shell" name="Trex Clam Shell Deck Resurfacing Loudoun VA | Clean Modern Looks" description="Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing &amp; installation." speakable />
+      <ServiceSchema
+        name="Trex Calm Shell Decking"
+        description="Trex Calm Shell color installation and showcase for Northern Virginia decks. Premium composite decking in a warm beige tone."
+        url="https://ldndecks.com/services/trex-calm-shell"
+        category="Deck Construction"
+        price="20000"
+        relatedServices={['https://ldndecks.com/trex-decks', 'https://ldndecks.com/services/new-decks', 'https://ldndecks.com/composite-decks']}
+      />
       <ServicesHeader
         subtext="Deck Resurfacing"
         title="Upgrade Your Deck with Trex Calm Shell Resurfacing"

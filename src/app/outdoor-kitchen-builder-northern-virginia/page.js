@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
@@ -33,6 +34,15 @@ export default function OutdoorKitchenPage() {
     <>
       <JsonLd data={faqSchema} />
       <WebPageSchema url="https://ldndecks.com/outdoor-kitchen-builder-northern-virginia" name="Outdoor Kitchen Builder in Northern Virginia | Design &amp; Build" description="Custom outdoor kitchens in Northern Virginia from $15,000-$80,000+. Grill islands, pizza ovens, bars, full kitchens. Permits handled. Free estimate." speakable />
+      <ServiceSchema
+        name="Outdoor Kitchen Construction"
+        description="Custom outdoor kitchen design and build in Northern Virginia. Built-in grills, bars, pizza ovens, countertops, and island configurations."
+        url="https://ldndecks.com/outdoor-kitchen-builder-northern-virginia"
+        category="Outdoor Living"
+        lowPrice="15000"
+        highPrice="75000"
+        relatedServices={['https://ldndecks.com/outdoor-living-northern-virginia', 'https://ldndecks.com/services/fire-pits', 'https://ldndecks.com/services/patios']}
+      />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

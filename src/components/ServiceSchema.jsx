@@ -1,41 +1,70 @@
 import React from 'react';
 import JsonLd from './JsonLd';
+import { BUSINESS, ORG_ID } from '@/lib/business';
 
-/**
- * ServiceSchema — Adds Service structured data to service pages.
- * Helps Google show rich results for service searches and enables AI systems
- * to understand what specific services you offer with pricing.
- */
-export default function ServiceSchema({ name, description, price, areaServed, url }) {
+const DEFAULT_AREA_SERVED = BUSINESS.areaServed.map(name => ({
+  '@type': 'AdministrativeArea',
+  name,
+}));
+
+export default function ServiceSchema({
+  name,
+  description,
+  url,
+  serviceType,
+  category,
+  price,
+  lowPrice,
+  highPrice,
+  areaServed,
+  relatedServices,
+}) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    ...(url ? { '@id': `${url}#service` } : {}),
+    '@id': url ? `${url}#service` : undefined,
     name,
+    serviceType: serviceType || name,
     description,
-    ...(url ? { url } : {}),
-    provider: {
-      '@id': 'https://ldndecks.com/#organization',
+    url: url || undefined,
+    category: category || undefined,
+    provider: { '@id': ORG_ID },
+    areaServed: areaServed || DEFAULT_AREA_SERVED,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: BUSINESS.aggregateRating.ratingValue,
+      reviewCount: BUSINESS.aggregateRating.reviewCount,
+      bestRating: BUSINESS.aggregateRating.bestRating,
     },
-    areaServed: areaServed || [
-      { '@type': 'AdministrativeArea', name: 'Loudoun County, VA' },
-      { '@type': 'AdministrativeArea', name: 'Fairfax County, VA' },
-      { '@type': 'AdministrativeArea', name: 'Prince William County, VA' },
-      { '@type': 'AdministrativeArea', name: 'Arlington County, VA' },
-      { '@type': 'AdministrativeArea', name: 'Stafford County, VA' },
-    ],
-    ...(price ? {
-      offers: {
-        '@type': 'Offer',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          priceCurrency: 'USD',
-          price,
-          unitText: 'per project',
-        },
-      },
-    } : {}),
   };
+
+  if (lowPrice && highPrice) {
+    schema.offers = {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'USD',
+      lowPrice,
+      highPrice,
+    };
+  } else if (price) {
+    schema.offers = {
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      price,
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        priceCurrency: 'USD',
+        price,
+        unitText: 'per project',
+      },
+    };
+  }
+
+  if (relatedServices?.length) {
+    schema.isRelatedTo = relatedServices.map(svcUrl => ({
+      '@type': 'Service',
+      '@id': `${svcUrl}#service`,
+    }));
+  }
 
   return <JsonLd data={schema} />;
 }

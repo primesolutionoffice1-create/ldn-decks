@@ -10,6 +10,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
@@ -19,19 +20,6 @@ export const metadata = buildMetadata({
   title: "Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment",
   description: "Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment."
 });
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Custom Fire Pit Installation",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-  ],
-  "description": "Professional custom fire pit design and installation in Northern Virginia. Wood-burning, gas, and built-in stone fire pits with integrated seating areas."
-};
 
 const expansionSections = [
   {
@@ -114,8 +102,16 @@ const faqs = [
 export default function FirePitsPage() {
   return (
     <main>
-      <JsonLd data={serviceSchema} />
       <WebPageSchema url="https://ldndecks.com/services/fire-pits" name="Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment" description="Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment." speakable />
+      <ServiceSchema
+        name="Custom Fire Pit Installation"
+        description="Professional custom fire pit design and installation in Northern Virginia. Wood-burning, gas, and built-in stone fire pits with integrated seating areas."
+        url="https://ldndecks.com/services/fire-pits"
+        category="Outdoor Living"
+        lowPrice="3000"
+        highPrice="25000"
+        relatedServices={['https://ldndecks.com/services/patios', 'https://ldndecks.com/services/gazebo-pergola', 'https://ldndecks.com/outdoor-living-northern-virginia']}
+      />
       <ServicesHeader
         subtext="Custom Fire Pit Loudoun VA"
         title="Custom Fire Pits Built for Comfort, Style & Year-Round Enjoyment"

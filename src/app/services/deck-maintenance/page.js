@@ -74,7 +74,14 @@ export default function DeckMaintenancePage() {
   return (
     <main>
       <WebPageSchema url="https://ldndecks.com/services/deck-maintenance" name="Professional Deck Maintenance NoVA | Staining &amp; Sealing Services" description="Protect your outdoor investment with expert deck maintenance in Northern Virginia. We specialize in wood staining, sealing, and structural care." speakable />
-      <ServiceSchema name="Deck Maintenance" description="Annual deck cleaning, inspection, and maintenance for Northern Virginia homeowners. Wood and composite." price="300" />
+      <ServiceSchema
+        name="Deck Maintenance"
+        description="Annual deck cleaning, inspection, and maintenance for Northern Virginia homeowners. Wood and composite."
+        url="https://ldndecks.com/services/deck-maintenance"
+        category="Deck Maintenance"
+        price="300"
+        relatedServices={['https://ldndecks.com/services/deck-washing', 'https://ldndecks.com/services/deck-inspection']}
+      />
       <ServicesHeader
         subtext="Deck Maintenance Services"
         title="Professional Deck Maintenance & Care"

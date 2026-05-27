@@ -10,6 +10,7 @@ import ServiceContentExpansion from '@/components/ServiceContentExpansion';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
@@ -94,17 +95,6 @@ const faqSchemaData = {
   }))
 };
 
-const serviceSchemaData = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Custom Entry Door Installation",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "State", "name": "Virginia" }
-  ],
-  "description": "Professional exterior entry door replacement and full-frame installation services in Northern Virginia."
-};
-
 const inclusions = [
   {
     title: "Full-Frame Tear Out",
@@ -129,7 +119,15 @@ export default function EntryDoorsPage() {
     <main>
       <JsonLd data={faqSchemaData} />
       <WebPageSchema url="https://ldndecks.com/services/entry-doors" name="Entry Door Installation Loudoun VA | LDN Decks" description="Improve curb appeal, security, and energy efficiency with professional entry door installation in Northern Virginia. Custom fiberglass and wood door solutions." speakable />
-      <JsonLd data={serviceSchemaData} />
+      <ServiceSchema
+        name="Entry Door Installation"
+        description="Residential entry door replacement and installation in Northern Virginia. Fiberglass, steel, and wood door options."
+        url="https://ldndecks.com/services/entry-doors"
+        category="Exterior Renovation"
+        lowPrice="3000"
+        highPrice="12000"
+        relatedServices={['https://ldndecks.com/services/windows']}
+      />
 
       <ServicesHeader
         subtext="Entry & Exterior Doors"

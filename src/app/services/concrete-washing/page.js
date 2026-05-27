@@ -42,6 +42,11 @@ export default function ConcreteWashingPage() {
       <ServiceSchema
         name="Concrete Washing"
         description="Professional concrete and masonry washing in Northern Virginia — removing oil stains, algae, and ground-in dirt from driveways, patios, and walkways."
+        url="https://ldndecks.com/services/concrete-washing"
+        category="Exterior Cleaning"
+        lowPrice="200"
+        highPrice="1000"
+        relatedServices={['https://ldndecks.com/services/outdoor-washing', 'https://ldndecks.com/services/deck-washing', 'https://ldndecks.com/services/house-siding-washing']}
       />
       <ServicesHeader
         subtext="Our Services"

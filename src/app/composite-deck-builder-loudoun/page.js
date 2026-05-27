@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import ContactHome from '@/components/ContactHome';
 import MobileStickyCTA from '@/components/MobileStickyCTA';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -197,6 +198,16 @@ export default function CompositeDeckBuilderLoudounPage() {
     <main>
       {schema.map((item, index) => <JsonLd key={index} data={item} />)}
       <WebPageSchema url="https://ldndecks.com/composite-deck-builder-loudoun" name="Composite Deck Builder Loudoun County, VA | Loudoun Decks" description="Premium composite deck builder in Loudoun County, VA. Trex and TimberTech decks, HOA support, permits, replacements, railings, stairs, and free estimates." speakable />
+      <ServiceSchema
+        name="Composite Deck Building in Loudoun County"
+        description="Custom composite and wood deck construction across Loudoun County — Ashburn, Leesburg, Sterling, Brambleton and beyond. TrexPro Platinum installer."
+        url="https://ldndecks.com/composite-deck-builder-loudoun"
+        category="Deck Construction"
+        lowPrice="18000"
+        highPrice="75000"
+        areaServed={[{"@type":"AdministrativeArea","name":"Loudoun County, VA"}]}
+        relatedServices={['https://ldndecks.com/composite-decks', 'https://ldndecks.com/trex-decks', 'https://ldndecks.com/deck-builders-loudoun']}
+      />
 
       <section style={{ padding: '96px 20px 72px', background: '#17130f', color: '#fff' }}>
         <div style={{ ...S.container, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))', gap: 42, alignItems: 'center' }}>

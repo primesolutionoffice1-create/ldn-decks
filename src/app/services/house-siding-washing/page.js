@@ -42,6 +42,11 @@ export default function HouseSidingWashingPage() {
       <ServiceSchema
         name="House Siding Washing"
         description="Professional house siding washing in Northern Virginia — safely removing dirt, mold, and algae from vinyl and fiber cement siding."
+        url="https://ldndecks.com/services/house-siding-washing"
+        category="Exterior Cleaning"
+        lowPrice="300"
+        highPrice="1200"
+        relatedServices={['https://ldndecks.com/services/outdoor-washing', 'https://ldndecks.com/services/concrete-washing']}
       />
       <ServicesHeader
         subtext="Our Services"

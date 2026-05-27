@@ -79,7 +79,14 @@ export default function ScreenedPorchPage() {
     return (
       <main>
       <WebPageSchema url="https://ldndecks.com/services/porches/screened-porch" name="Screened Porch Builder &amp; Contractor | Northern Virginia" description="Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k. Trex Platinum installer." speakable />
-        <ServiceSchema name="Screened Porch Construction" description="Custom screened porches in Northern Virginia. Loudoun, Fairfax, Prince William. EZE-Breeze and four-season options. Trex Platinum and TimberTech certified installer." price="35000" />
+        <ServiceSchema
+        name="Screened Porch Construction"
+        description="Custom screened porches in Northern Virginia. EZE-Breeze and four-season options. Trex Platinum and TimberTech certified installer."
+        url="https://ldndecks.com/services/porches/screened-porch"
+        category="Porch Construction"
+        price="35000"
+        relatedServices={['https://ldndecks.com/screened-porch-builder-northern-virginia', 'https://ldndecks.com/services/porches', 'https://ldndecks.com/three-season-room-northern-virginia']}
+      />
         <ServicesHeader
           subtext="Porch Services"
           title="Screened Porch Builder & Contractor in Northern Virginia"

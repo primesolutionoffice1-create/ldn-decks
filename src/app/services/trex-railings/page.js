@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
+import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
@@ -19,19 +20,6 @@ export const metadata = buildMetadata({
   title: "Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades",
   description: "Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish."
 });
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Trex Railing Installation",
-  "provider": { "@id": "https://ldndecks.com/#organization" },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
-    { "@type": "AdministrativeArea", "name": "Fairfax County, VA" },
-    { "@type": "AdministrativeArea", "name": "Prince William County, VA" }
-  ],
-  "description": "Professional Trex railing and cocktail top installation in Northern Virginia. Trex Transcend and Select systems with custom wood or composite cocktail tops."
-};
 
 const expansionSections = [
   {
@@ -119,8 +107,16 @@ const faqs = [
 export default function TrexRailingsPage() {
   return (
     <main>
-      <JsonLd data={serviceSchema} />
       <WebPageSchema url="https://ldndecks.com/services/trex-railings" name="Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades" description="Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish." speakable />
+      <ServiceSchema
+        name="Trex Railing Installation"
+        description="Trex composite and aluminum railing systems for Northern Virginia decks. Signature, Select, and Transcend rail lines."
+        url="https://ldndecks.com/services/trex-railings"
+        category="Deck Accessories"
+        lowPrice="1500"
+        highPrice="8000"
+        relatedServices={['https://ldndecks.com/trex-decks', 'https://ldndecks.com/services/new-decks', 'https://ldndecks.com/services/deck-stair-lighting']}
+      />
       <ServicesHeader
         subtext="Deck Railing Upgrade Loudoun VA"
         title="Trex Railings with Cocktail Top - Style Meets Function"

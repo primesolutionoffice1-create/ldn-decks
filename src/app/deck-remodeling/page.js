@@ -22,7 +22,15 @@ export default function DeckRemodelingPage() {
   return (
     <main>
       <WebPageSchema url="https://ldndecks.com/deck-remodeling" name="Custom Deck Remodeling &amp; Upgrades | Transform Your Space" description="Upgrade your existing deck with modern features. From new railings to built-in lighting, we remodel decks to fit your modern lifestyle." speakable />
-      <ServiceSchema name="Deck Remodeling" description="Transform your existing deck with new features, materials, and design upgrades." price="15000" />
+      <ServiceSchema
+        name="Deck Remodeling"
+        description="Transform your existing deck with new features, materials, and design upgrades in Northern Virginia."
+        url="https://ldndecks.com/deck-remodeling"
+        category="Deck Construction"
+        lowPrice="10000"
+        highPrice="60000"
+        relatedServices={['https://ldndecks.com/services/deck-resurfacing', 'https://ldndecks.com/services/deck-replacement', 'https://ldndecks.com/services/new-decks']}
+      />
       <ServicesHeader 
         subtext="Deck Restoration"
         title="Custom Deck Remodeling & Upgrades"

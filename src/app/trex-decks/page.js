@@ -117,7 +117,15 @@ export default function TrexDecksPage() {
   return (
     <main>
       <WebPageSchema url="https://ldndecks.com/trex-decks" name="Trex Platinum Deck Builder Northern Virginia" description="Certified Trex Platinum Partner in Northern Virginia. Trex Transcend, Select and Enhance installations with 25-year warranty." speakable />
-      <ServiceSchema name="Trex Deck Installation" description="Certified Trex Platinum Partner installer in Northern Virginia. Trex Enhance, Select, and Transcend product lines. 25-year warranty." price="18000" url="https://ldndecks.com/trex-decks" />
+      <ServiceSchema
+        name="Trex Deck Installation"
+        description="Certified Trex Platinum Partner installer in Northern Virginia. Trex Enhance, Select, and Transcend product lines. 25-year warranty."
+        url="https://ldndecks.com/trex-decks"
+        category="Deck Construction"
+        lowPrice="18000"
+        highPrice="75000"
+        relatedServices={['https://ldndecks.com/composite-decks', 'https://ldndecks.com/timbertech-decks', 'https://ldndecks.com/services/new-decks']}
+      />
       <ServicesHeader
         subtext="Certified Trex Pro Builder"
         title="Custom Trex Deck Building & Installation"

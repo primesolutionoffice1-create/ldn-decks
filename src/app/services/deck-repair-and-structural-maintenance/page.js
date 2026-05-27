@@ -86,10 +86,13 @@ export default function DeckRepairPage() {
   return (
     <main>
       <WebPageSchema url="https://ldndecks.com/services/deck-repair-and-structural-maintenance" name="Deck Repair Near Me Northern VA | Structural Deck Contractor" description="Need deck repair near you in Northern Virginia? We fix rotted posts, sinking decks, railings, ledgers, and failed inspections. 5.0 Google rated." speakable />
-      <ServiceSchema 
-        name="Deck Repair & Structural Maintenance" 
-        description="Specialized structural deck repair in Northern Virginia. Fix rotted posts, sinking decks, and code violations. Expert remediation for failed inspections." 
-        price="2500" 
+      <ServiceSchema
+        name="Deck Repair & Structural Maintenance"
+        description="Specialized structural deck repair in Northern Virginia. Fix rotted posts, sinking decks, and code violations. Expert remediation for failed inspections."
+        url="https://ldndecks.com/services/deck-repair-and-structural-maintenance"
+        category="Deck Repair"
+        price="2500"
+        relatedServices={['https://ldndecks.com/services/deck-inspection', 'https://ldndecks.com/services/deck-replacement', 'https://ldndecks.com/services/deck-resurfacing']}
       />
       <ServicesHeader 
         subtext="Structural Integrity Specialist"

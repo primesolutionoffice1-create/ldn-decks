@@ -22,7 +22,14 @@ export default function DeckInspectionPage() {
   return (
     <main>
       <WebPageSchema url="https://ldndecks.com/services/deck-inspection" name="Deck Inspection Loudoun VA | $350 Safety Audit | LDN Decks" description="Ensure your outdoor space is safe with a professional $350 deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards." speakable />
-      <ServiceSchema name="Deck Safety Inspection" description="Professional structural deck inspection in Northern Virginia. Ledger board, posts, joists, railings checked." price="150" />
+      <ServiceSchema
+        name="Deck Safety Inspection"
+        description="Professional structural deck inspection in Northern Virginia. Ledger board, posts, joists, railings checked."
+        url="https://ldndecks.com/services/deck-inspection"
+        category="Deck Inspection"
+        price="150"
+        relatedServices={['https://ldndecks.com/services/deck-repair-and-structural-maintenance', 'https://ldndecks.com/services/deck-replacement']}
+      />
       <ServicesHeader
         subtext="Deck Inspection Services"
         title="Comprehensive Deck Inspection for $350"

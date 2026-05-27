@@ -42,6 +42,11 @@ export default function FenceCleaningPage() {
       <ServiceSchema
         name="Fence Cleaning"
         description="Professional wood and composite fence cleaning in Northern Virginia — removing gray weathering, mold, and algae to restore your fencing."
+        url="https://ldndecks.com/services/fence-cleaning"
+        category="Exterior Cleaning"
+        lowPrice="200"
+        highPrice="800"
+        relatedServices={['https://ldndecks.com/services/fence', 'https://ldndecks.com/services/outdoor-washing', 'https://ldndecks.com/services/deck-washing']}
       />
       <ServicesHeader
         subtext="Our Services"
