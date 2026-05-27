@@ -90,13 +90,51 @@ export default async function SingleBlogPage({ params }) {
     "image": [`https://ldndecks.com${post.image}`],
     "datePublished": clampedDate.toISOString(),
     "dateModified": clampedDate.toISOString(),
-    "author": [{
-      "@type": post.author && post.author.toLowerCase().includes('team') ? "Organization" : "Person",
-      "name": post.author,
-      "url": post.author && post.author.toLowerCase().includes('team')
-        ? "https://ldndecks.com"
-        : "https://ldndecks.com/team"
-    }],
+    "author": [
+      post.author && post.author.toLowerCase().includes('team')
+        ? {
+            "@type": "Organization",
+            "@id": "https://ldndecks.com/#organization",
+            "name": post.author,
+            "url": "https://ldndecks.com",
+          }
+        : {
+            "@type": "Person",
+            "@id": "https://ldndecks.com/#nick",
+            "name": post.author,
+            "url": "https://ldndecks.com/team",
+            "jobTitle": "Owner & Lead Designer, Loudoun Decks",
+            "worksFor": { "@id": "https://ldndecks.com/#organization" },
+            "hasCredential": [
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Virginia Class A Contractor License",
+                "credentialCategory": "license",
+                "recognizedBy": { "@type": "Organization", "name": "Virginia Department of Professional and Occupational Regulation" },
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "TrexPro Platinum Installer",
+                "credentialCategory": "certification",
+                "recognizedBy": { "@type": "Organization", "name": "Trex Company, Inc." },
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "TimberTech Certified Installer",
+                "credentialCategory": "certification",
+                "recognizedBy": { "@type": "Organization", "name": "AZEK / TimberTech" },
+              },
+            ],
+            "knowsAbout": [
+              "Composite deck construction",
+              "Trex Transcend and Enhance installation",
+              "TimberTech AZEK installation",
+              "Deck structural design and code compliance",
+              "Virginia residential building code USBC",
+              "Northern Virginia HOA architectural review",
+            ],
+          },
+    ],
     "publisher": {
       "@type": "Organization",
       "@id": "https://ldndecks.com/#organization",
