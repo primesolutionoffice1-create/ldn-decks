@@ -136,6 +136,8 @@ export default function BestTimeToBuildPage() {
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Potential pricing advantage.</strong> Some builders (including us) offer 10–15% off labor during slow months to keep crews working year-round.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Permits process during the wait.</strong> Start your consultation in January, submit permits in February, and break ground in March when weather cooperates. By May your deck is done while your neighbors are just starting their search.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Material availability.</strong> Popular Trex colors and TimberTech lines can sell out in peak season. Off-peak means full selection.</li>
+          
+            <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           </ul>
 
           <h2 style={S.h2}>The Hidden Timeline: HOA + Permits Before the Build</h2>

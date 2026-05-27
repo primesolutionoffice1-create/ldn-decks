@@ -161,6 +161,17 @@ export default function PrinceWilliamCountyPage() {
         </div>
       </section>
       <RelatedGuides currentPath="/near-you/prince-william-county" />
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Builders by City</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+              <Link key="/deck-builder-manassas-va" href="/deck-builder-manassas-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Manassas</Link>
+              <Link key="/deck-builder-woodbridge-va" href="/deck-builder-woodbridge-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Woodbridge</Link>
+              <Link key="/deck-builder-haymarket-va" href="/deck-builder-haymarket-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Haymarket</Link>
+              <Link key="/deck-builder-bristow-va" href="/deck-builder-bristow-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Bristow</Link>
+              <Link key="/deck-builder-gainesville-va" href="/deck-builder-gainesville-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Gainesville</Link>
+        </div>
+      </section>
+
       <NamedAuthor context="Prince William County" lastUpdated="2026-05-26" />
 
       <ContactHome />

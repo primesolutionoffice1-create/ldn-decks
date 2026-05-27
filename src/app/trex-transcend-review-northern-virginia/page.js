@@ -239,7 +239,10 @@ export default function TrexTranscendReviewPage() {
                 <li>You plan to stay in your home 10–25 years</li>
                 <li>You want a proven product with 5+ years of Virginia climate data</li>
                 <li>Zero-maintenance is a priority</li>
-              </ul>
+              
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
+          </ul>
             </div>
             <div style={{ background: '#fff7ed', border: '1px solid #fed7aa', borderRadius: 8, padding: '1.25rem' }}>
               <h3 style={{ fontWeight: 600, marginBottom: '0.75rem', color: '#9a3412' }}>Consider Alternatives If:</h3>

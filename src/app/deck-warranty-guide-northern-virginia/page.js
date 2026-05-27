@@ -208,7 +208,10 @@ export default function DeckWarrantyGuidePage() {
                 <li>Stair stringer separation</li>
                 <li>Fastener pop-out or failure</li>
                 <li>Drainage or grading issues we created</li>
-              </ul>
+              
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
+          </ul>
             </div>
             <div style={{ background: '#fff7ed', border: '1px solid #fed7aa', borderRadius: 8, padding: '1.25rem' }}>
               <h3 style={{ fontWeight: 600, marginBottom: '0.75rem', color: '#9a3412' }}>Not Covered</h3>
