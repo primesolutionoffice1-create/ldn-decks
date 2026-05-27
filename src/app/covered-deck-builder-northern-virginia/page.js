@@ -81,6 +81,7 @@ const faqs = [
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "@id": "https://ldndecks.com/covered-deck-builder-northern-virginia#faq",
   "mainEntity": faqs.map(({ q, a }) => ({
     "@type": "Question",
     "name": q,

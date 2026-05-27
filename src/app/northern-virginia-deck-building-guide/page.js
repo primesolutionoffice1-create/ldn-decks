@@ -35,9 +35,27 @@ export default function MegaGuidePage() {
     { id: 'financing', title: '15. Financing Options', content: 'Finance your deck with $0 down and 12–60 month terms. Typical payments for a $30,000 deck: ~$525/month over 60 months. Building now locks in today\'s prices material costs rise 5–8% annually. Your deck adds home equity from day one.', link: '/deck-financing-northern-virginia', linkText: 'Financing options and payments →' },
   ];
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": "https://ldndecks.com/northern-virginia-deck-building-guide#howto",
+    "name": "How to Build a Deck in Northern Virginia",
+    "description": "Complete 15-step guide to planning, permitting, and building a deck in Northern Virginia — from cost estimation through maintenance.",
+    "totalTime": "PT12W",
+    "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "15000-45000" },
+    "step": sections.map((s, i) => ({
+      "@type": "HowToStep",
+      "position": i + 1,
+      "name": s.title.replace(/^\d+\.\s*/, ''),
+      "text": s.content,
+      "url": `https://ldndecks.com/northern-virginia-deck-building-guide#${s.id}`,
+    })),
+  };
+
   return (
     <>
       <WebPageSchema url="https://ldndecks.com/northern-virginia-deck-building-guide" name="The Complete Guide to Building a Deck in Northern Virginia (2026)" description="Everything you need to know about building a deck in Northern Virginia: costs, materials, permits, HOA, timeline, contractors, maintenance. The definitive 2026 guide." speakable />
+      <JsonLd data={howToSchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>

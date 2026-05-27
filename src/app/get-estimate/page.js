@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import JsonLd from '@/components/JsonLd';
+import WebPageSchema from '@/components/WebPageSchema';
 import { buildMetadata } from '@/lib/seo';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
@@ -17,6 +18,7 @@ export const metadata = buildMetadata({
 export default function GetEstimatePage() {
   return (
     <>
+      <WebPageSchema url="https://ldndecks.com/get-estimate" name="Free Deck Estimate | Trex Platinum Partner | LDN Decks" description="Get a free deck estimate from Northern Virginia's top-rated Trex Platinum Partner. 5.0 Google rating, 2-year warranty. Call (571) 655-7207." speakable />
 
       {/* Hero Above the Fold: Trust + CTA */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '3rem 0 2rem' }}>

@@ -8,6 +8,7 @@ import EnhancifyWidget from '@/components/EnhancifyWidget';
 import FinancingCalculator from '@/components/FinancingCalculator';
 import EstimatorTrackedLink from '@/components/EstimatorTrackedLink';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 import CallLink from '@/components/CallLink';
 import { BUSINESS } from '@/lib/business';
 
@@ -110,6 +111,7 @@ const trustSignals = [
 export default function DeckPaymentEstimatorPage() {
   return (
     <>
+      <WebPageSchema url="https://ldndecks.com/deck-payment-estimator" name="Deck Payment Estimator | Monthly Cost Calculator" description="Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia." speakable />
       <JsonLd data={faqSchema} />
 
       {/* ============ HERO ============ */}
