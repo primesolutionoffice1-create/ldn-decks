@@ -24,6 +24,53 @@ function hasSessionEventFired(key) {
   }
 }
 
+function leadPendingKey(eventId) {
+  return eventId ? `lead_pending_${eventId}` : null;
+}
+
+function leadFiredKey(eventId) {
+  return eventId ? `lead_fired_${eventId}` : null;
+}
+
+function getPendingLeadSet() {
+  if (typeof window === 'undefined') return null;
+  window.__ldnPendingLeadIds = window.__ldnPendingLeadIds || new Set();
+  return window.__ldnPendingLeadIds;
+}
+
+export function markLeadConfirmationPending(eventId) {
+  if (typeof window === 'undefined' || !eventId) return;
+  const pendingSet = getPendingLeadSet();
+  if (pendingSet) pendingSet.add(eventId);
+  try {
+    if (window.sessionStorage) {
+      window.sessionStorage.setItem(leadPendingKey(eventId), '1');
+    }
+  } catch {
+    // Browser storage can fail in private/embedded contexts; the in-memory
+    // pending set still protects the same SPA submission flow.
+  }
+}
+
+function consumeLeadConfirmationPending(eventId) {
+  if (typeof window === 'undefined' || !eventId) return false;
+  const pendingSet = getPendingLeadSet();
+  if (pendingSet?.has(eventId)) {
+    pendingSet.delete(eventId);
+    try {
+      if (window.sessionStorage) window.sessionStorage.removeItem(leadPendingKey(eventId));
+    } catch {}
+    return true;
+  }
+  try {
+    if (window.sessionStorage?.getItem(leadPendingKey(eventId))) {
+      window.sessionStorage.removeItem(leadPendingKey(eventId));
+      return true;
+    }
+  } catch {}
+  return false;
+}
+
 /**
  * Track deck payment estimator interactions.
  * These events are GA4/GTM friendly and intentionally stay separate from
@@ -208,22 +255,32 @@ export function trackPhoneClick() {
  */
 export function trackLeadConfirmed({ eventId } = {}) {
   if (typeof window === 'undefined') return;
-  if (eventId) {
-    const key = `lead_fired_${eventId}`;
-    try {
-      if (window.sessionStorage && window.sessionStorage.getItem(key)) {
-        recordDedupHit();
-        return;
-      }
-      if (window.sessionStorage) window.sessionStorage.setItem(key, '1');
-    } catch (e) {
-      // sessionStorage unavailable (Safari private mode, embedded
-      // contexts) — fall through and let GTM transaction_id handle dedup.
+  if (!eventId) return;
+
+  const firedKey = leadFiredKey(eventId);
+  try {
+    if (window.sessionStorage && window.sessionStorage.getItem(firedKey)) {
+      recordDedupHit();
+      return;
     }
+  } catch {
+    // sessionStorage unavailable; continue with the pending-lead guard below.
   }
+
+  if (!consumeLeadConfirmationPending(eventId)) {
+    return;
+  }
+
+  try {
+    if (window.sessionStorage) window.sessionStorage.setItem(firedKey, '1');
+  } catch (e) {
+    // sessionStorage unavailable (Safari private mode, embedded contexts).
+    // The pending-lead guard already confirmed this came from this SPA flow.
+  }
+
   push({
     event: 'lead_confirmed',
-    event_id: eventId || null,
+    event_id: eventId,
     page: window.location.pathname,
   });
   trackMetaLead({ eventId });
