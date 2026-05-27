@@ -40,18 +40,24 @@ const itemListSchema = {
     {
       '@type': 'ListItem',
       position: 4,
+      name: 'Deck Load Calculator Virginia',
+      url: `${BUSINESS.url}/tools/deck-load-calculator-virginia`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 5,
       name: 'Virginia Deck Stair Calculator',
       url: `${BUSINESS.url}/tools/deck-stair-calculator`,
     },
     {
       '@type': 'ListItem',
-      position: 5,
+      position: 6,
       name: 'Deck Cost Calculator',
       url: `${BUSINESS.url}/deck-cost-calculator`,
     },
     {
       '@type': 'ListItem',
-      position: 6,
+      position: 7,
       name: 'Deck Payment Estimator',
       url: `${BUSINESS.url}/deck-payment-estimator`,
     },
@@ -73,6 +79,11 @@ const tools = [
     href: '/tools/deck-joist-span-calculator-virginia',
     title: 'Deck Joist Span Calculator Virginia',
     desc: 'Estimate joist span, spacing, cantilever limits and composite decking support warnings.',
+  },
+  {
+    href: '/tools/deck-load-calculator-virginia',
+    title: 'Deck Load Calculator Virginia',
+    desc: 'Estimate distributed deck load, beam line load, post load and heavy-upgrade warnings.',
   },
   {
     href: '/tools/deck-stair-calculator',

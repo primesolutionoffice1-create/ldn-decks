@@ -53,6 +53,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Deck Footing Depth Calculator Virginia](https://ldndecks.com/tools/deck-footing-depth-calculator-virginia): Interactive footing depth, diameter, frost-depth and inspection planning tool for Northern Virginia decks
 - [Deck Beam Span Calculator Virginia](https://ldndecks.com/tools/deck-beam-span-calculator-virginia): Interactive beam span, post spacing, tributary width and framing warning tool for Northern Virginia deck planning
 - [Deck Joist Span Calculator Virginia](https://ldndecks.com/tools/deck-joist-span-calculator-virginia): Interactive joist span, spacing, cantilever and composite decking support planning tool for Northern Virginia decks
+- [Deck Load Calculator Virginia](https://ldndecks.com/tools/deck-load-calculator-virginia): Interactive deck load, beam line load, post load and heavy-upgrade warning tool for Northern Virginia deck planning
 - [Virginia Deck Stair Calculator](https://ldndecks.com/tools/deck-stair-calculator): Interactive rise-run planner for step count, exact riser height, total run, stair angle and safety warnings
 - [Trex vs TimberTech vs AZEK](https://ldndecks.com/trex-vs-timbertech-vs-azek): Brand comparison guide
 - [Composite vs Wood](https://ldndecks.com/composite-deck-vs-wood-deck-virginia): Material decision guide
@@ -84,6 +85,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Deck Footing Depth Calculator Virginia](https://ldndecks.com/tools/deck-footing-depth-calculator-virginia): Planning tool for footing depth, diameter, frost-depth guidance, warning conditions and inspection notes
 - [Deck Beam Span Calculator Virginia](https://ldndecks.com/tools/deck-beam-span-calculator-virginia): Planning tool for beam span, post spacing, tributary width, cantilever checks and framing review warnings
 - [Deck Joist Span Calculator Virginia](https://ldndecks.com/tools/deck-joist-span-calculator-virginia): Planning tool for joist span, on-center spacing, cantilever checks and composite decking support warnings
+- [Deck Load Calculator Virginia](https://ldndecks.com/tools/deck-load-calculator-virginia): Planning tool for distributed deck load, beam line load, post load, tributary width and heavy-upgrade warnings
 - [Deck Drainage Systems](https://ldndecks.com/education/deck-drainage-systems-guide): Dry under-deck space and drainage planning
 - [Fairfax Deck Setbacks](https://ldndecks.com/education/fairfax-county-deck-setbacks-zoning): Fairfax County deck setback and zoning education
 - [HOA Deck Approval](https://ldndecks.com/education/hoa-deck-approval-guidelines-nova): HOA/ARC deck approval planning in Northern Virginia

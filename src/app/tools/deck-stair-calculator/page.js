@@ -111,6 +111,11 @@ const webApplicationSchema = {
 
 const relatedResources = [
   {
+    href: '/tools/deck-load-calculator-virginia',
+    title: 'Deck Load Calculator',
+    desc: 'Estimate deck load and post load before planning stair landings or heavy deck upgrades.',
+  },
+  {
     href: '/tools/deck-joist-span-calculator-virginia',
     title: 'Deck Joist Span Calculator',
     desc: 'Estimate joist span, spacing and cantilever assumptions before stair openings or landing framing.',
@@ -307,7 +312,8 @@ export default function DeckStairCalculatorPage() {
             Use the calculator with the rest of the stair safety cluster before deciding whether to
             repair, rebuild or request a permit-ready stair plan. For the framing around stair
             openings and landings, also check the{' '}
-            <Link href="/tools/deck-joist-span-calculator-virginia">deck joist span calculator</Link>.
+            <Link href="/tools/deck-load-calculator-virginia">deck load calculator</Link>{' '}
+            and <Link href="/tools/deck-joist-span-calculator-virginia">deck joist span calculator</Link>.
           </p>
           <div className={styles.relatedGrid}>
             {relatedResources.map((item) => (

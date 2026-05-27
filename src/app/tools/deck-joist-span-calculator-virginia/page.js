@@ -95,6 +95,11 @@ const webApplicationSchema = {
 
 const relatedResources = [
   {
+    href: '/tools/deck-load-calculator-virginia',
+    title: 'Deck Load Calculator',
+    desc: 'Estimate distributed deck load, beam line load and post load before final joist planning.',
+  },
+  {
     href: '/tools/deck-beam-span-calculator-virginia',
     title: 'Deck Beam Span Calculator',
     desc: 'Estimate beam span, post spacing, tributary width and cantilever warnings after joist layout is known.',
@@ -255,6 +260,7 @@ export default function DeckJoistSpanCalculatorPage() {
             <h2>Use Joist Span With the Full Framing Cluster</h2>
             <p>
               Start with joist spacing, then confirm the supporting structure with the{' '}
+              <Link href="/tools/deck-load-calculator-virginia">deck load calculator</Link>,{' '}
               <Link href="/tools/deck-beam-span-calculator-virginia">deck beam span calculator</Link>,{' '}
               <Link href="/tools/deck-footing-depth-calculator-virginia">deck footing calculator</Link>,{' '}
               and <Link href="/education/understanding-deck-load-paths">deck load path guide</Link>.
