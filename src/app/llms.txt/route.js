@@ -10,7 +10,8 @@ export async function GET() {
 ## Company Overview
 - **Business**: Loudoun Decks (LDN Decks)
 - **Type**: Licensed & insured deck building contractor
-- **Location**: Northern Virginia (two offices: Centreville, VA & Manassas, VA)
+- **Headquarters**: 13704 Winding Oak Cir, Centreville, VA 20121 (office + material showroom by appointment)
+- **Service area**: Loudoun, Fairfax, Prince William, Arlington & Stafford counties (Northern Virginia)
 - **Phone**: (571) 655-7207
 - **Website**: https://ldndecks.com
 - **Rating**: 5.0/5 stars from ${BUSINESS.aggregateRating.reviewCount}+ Google reviews

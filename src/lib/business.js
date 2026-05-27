@@ -75,6 +75,11 @@ export const BUSINESS = {
       category: 'membership',
       recognizedBy: 'North American Deck and Railing Association',
     },
+    {
+      name: 'Best of Houzz 2026',
+      category: 'award',
+      recognizedBy: 'Houzz',
+    },
   ],
   memberships: [
     {
@@ -87,6 +92,31 @@ export const BUSINESS = {
       directoryUrl: 'https://www.nadra.org/membership/directory/builders',
     },
   ],
+  // Founder / Owner Person entity. Used as Author for ArticleSchema across
+  // permit/inspection/material-comparison content + as employee/founder of
+  // the Organization. Strengthens E-E-A-T and entity-trust signals by giving
+  // Google + AI engines a named, verifiable expert to attribute content to,
+  // rather than an anonymous corporate site.
+  founder: {
+    name: 'Nicolae Zugrav',
+    jobTitle: 'Founder & Lead Contractor',
+    worksFor: 'Loudoun Decks',
+    knowsAbout: [
+      'composite deck building',
+      'PVC deck construction',
+      'Fairfax County deck permits',
+      'Loudoun County deck permits',
+      'Northern Virginia HOA architectural review',
+      'Trex installation',
+      'TimberTech installation',
+      'structural deck inspection',
+    ],
+    hasCredential: 'VA Class A Contractor License #2705191673',
+    // sameAs URLs added as the founder's professional profiles come online.
+    // Keep this list in sync with BUSINESS.sameAs where the founder is
+    // explicitly represented vs the organization.
+    sameAs: [],
+  },
   // Verified client reviews — single source of truth for both the org-level
   // `review` JSON-LD (emitted site-wide via buildOrganizationSchema) and the
   // /reviews page cards. First name + last initial only, never full last names.
