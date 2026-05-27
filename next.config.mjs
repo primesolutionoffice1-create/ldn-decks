@@ -324,6 +324,20 @@ const nextConfig = {
       { source: '/wp-content/uploads/2024/09/ldndecks-logo-new-e1731874431860.webp', destination: '/ldndecks-logo.webp', permanent: true },
       { source: '/wp-content/uploads/2024/09/ldndecks-logo-new.png', destination: '/ldndecks-logo.webp', permanent: true },
 
+      // Organic 404 patterns observed in Vercel runtime logs (2026-05-27).
+      // External sites and crawlers probe common URL conventions that don't
+      // match our actual slugs — give them 301s instead of 404s.
+      { source: '/about-us', destination: '/about', permanent: true },
+      { source: '/our-team', destination: '/team', permanent: true },
+      { source: '/staff', destination: '/team', permanent: true },
+      { source: '/leadership', destination: '/team', permanent: true },
+      { source: '/locations', destination: '/near-you', permanent: true },
+      { source: '/location', destination: '/near-you', permanent: true },
+      { source: '/service-area', destination: '/near-you', permanent: true },
+      { source: '/deck-repair-loudoun', destination: '/deck-repair-loudoun-county', permanent: true },
+      { source: '/feed', destination: '/blog', permanent: true },
+      { source: '/sitemaps/sitemap.xml', destination: '/sitemap.xml', permanent: true },
+
 
       // Single-hop www → non-www canonical redirect
       // Eliminates 2-hop chain: http://www → https://www → https://non-www
@@ -406,6 +420,15 @@ const nextConfig = {
       source: '/:path*.webp',
       headers: [
         { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+      ],
+    });
+
+    // Chrome Privacy Sandbox traffic-advice. Spec requires
+    // Content-Type: application/trafficadvice+json (not application/json).
+    headers.push({
+      source: '/.well-known/traffic-advice',
+      headers: [
+        { key: 'Content-Type', value: 'application/trafficadvice+json' },
       ],
     });
 
