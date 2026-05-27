@@ -256,6 +256,12 @@ export default async function sitemap() {
                 { path: "/deck-builder-bristow-va",                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 // /northern-virginia-deck-cost-report-2026 removed 2026-05-26:
                 // 301 → /composite-deck-cost-northern-virginia (cannibalization fix).
+                { path: "/covered-deck-builder-northern-virginia",      priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-resurfacing-northern-virginia",         priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/ldn-decks-reviews-yelp",                     priority: 0.65, lastMod: TIER2, freq: "monthly" },
+                { path: "/monthly-payment-composite-deck-northern-virginia", priority: 0.80, lastMod: TIER1, freq: "weekly" },
+                { path: "/timbertech-azek-deck-cost-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/trex-deck-cost-monthly-payment",             priority: 0.80, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-living-northern-virginia",            priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-performance-products",                   priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/timbertech-decks",                            priority: 0.90, lastMod: TIER1, freq: "weekly" },

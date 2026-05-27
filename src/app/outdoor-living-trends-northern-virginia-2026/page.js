@@ -145,7 +145,7 @@ export default function OutdoorLivingTrendsPage() {
 
           {/* ===== Trend 10 ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>10. Fire Features: Fire Pits &amp; Fireplaces</h2>
-          <p style={S.p}>Built-in <Link href="/fire-pit-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>fire features</Link> extend deck season from 6 months to 9&ndash;10 months in Virginia. We&apos;re building two types: gas fire pits integrated into patio-level gathering areas, and full outdoor fireplaces anchoring covered porch spaces.</p>
+          <p style={S.p}>Built-in <Link href="/services/fire-pits" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>fire features</Link> extend deck season from 6 months to 9&ndash;10 months in Virginia. We&apos;re building two types: gas fire pits integrated into patio-level gathering areas, and full outdoor fireplaces anchoring covered porch spaces.</p>
           <p style={S.p}>Gas fire pits (natural gas or propane) are preferred over wood-burning in Northern Virginia HOA communities no smoke complaints, no ash cleanup, and instant on/off control. Fire tables with rectangular burner trays are the most requested style in 2026.</p>
           <p style={S.p}><strong>Cost:</strong> $3,000&ndash;$8,000 (fire pit) or $10,000&ndash;$25,000 (fireplace) | <strong>ROI:</strong> 60&ndash;75% | <strong>Build time:</strong> 3&ndash;7 days</p>
 
