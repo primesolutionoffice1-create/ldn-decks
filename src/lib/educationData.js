@@ -547,7 +547,7 @@ We inspect, repair and rebuild deck stairs with safety, permitting and long-term
     id: 14,
     title: 'Ledger Board Flashing: The Single Most Critical Deck Connection',
     slug: 'ledger-board-flashing-deck-attachment-virginia',
-    image: '/images/img18.jpeg',
+    image: '/images/img19.jpeg',
     date: 'May 26, 2026',
     author: 'Nick - Loudoun Decks',
     metaTitle: 'Ledger Board Flashing Guide: Deck-to-House Connection | Loudoun Decks',

@@ -528,7 +528,7 @@ export const blogPosts = [
     id: 40,
     title: 'How Long Does It Take to Build a Deck in Northern Virginia?',
     slug: 'how-long-does-it-take-to-build-a-deck-northern-virginia',
-    image: '/images/img17.jpeg',
+    image: '/images/img52.jpeg',
     date: 'May 26, 2026',
     author: 'Nick - Loudoun Decks',
     metaTitle: 'How Long Does It Take to Build a Deck in NoVA? (2026 Timeline)',
