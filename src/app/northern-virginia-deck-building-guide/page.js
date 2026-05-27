@@ -34,17 +34,12 @@ export default function MegaGuidePage() {
     { id: 'financing', title: '15. Financing Options', content: 'Finance your deck with $0 down and 12–60 month terms. Typical payments for a $30,000 deck: ~$525/month over 60 months. Building now locks in today\'s prices material costs rise 5–8% annually. Your deck adds home equity from day one.', link: '/deck-financing-northern-virginia', linkText: 'Financing options and payments →' },
   ];
 
-<<<<<<< Updated upstream
-=======
   // HowTo JSON-LD was removed 2026-05-27: Google deprecated HowTo rich
-  // results in August 2023 for general web pages (now reserved for
-  // technical developer documentation only). The visible 15-section
-  // guide below remains; each section has an `id` anchor (from
-  // `sections[].id`) enabling AI deep-linking and direct user
-  // navigation. See vault/.../schema/Schema Implementation Plan.md
-  // and the HowTo sentinel in scripts/validate-seo-schema.mjs.
-
->>>>>>> Stashed changes
+  // results in August 2023. The visible 15-section guide below remains;
+  // each section has an `id` anchor (from `sections[].id`) enabling
+  // AI deep-linking and direct user navigation. See vault Schema
+  // Implementation Plan and the HowTo sentinel in
+  // scripts/validate-seo-schema.mjs.
   return (
     <>
       <WebPageSchema url="https://ldndecks.com/northern-virginia-deck-building-guide" name="The Complete Guide to Building a Deck in Northern Virginia (2026)" description="Everything you need to know about building a deck in Northern Virginia: costs, materials, permits, HOA, timeline, contractors, maintenance. The definitive 2026 guide." speakable />

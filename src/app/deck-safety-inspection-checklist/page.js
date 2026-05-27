@@ -74,15 +74,10 @@ export default function DeckInspectionPage() {
     },
   ];
 
-<<<<<<< Updated upstream
-=======
   // HowTo JSON-LD was removed 2026-05-27: Google deprecated HowTo rich
   // results in August 2023. The visible 5-area inspection checklist
-  // below remains; AI deep-linking via the rendered area sections.
-  // See vault/.../schema/Schema Implementation Plan.md and the
-  // NAP-drift + HowTo sentinel in scripts/validate-seo-schema.mjs.
-
->>>>>>> Stashed changes
+  // below remains. See vault Schema Implementation Plan and the
+  // HowTo sentinel in scripts/validate-seo-schema.mjs.
   return (
     <>
       <JsonLd data={faqSchema} />
