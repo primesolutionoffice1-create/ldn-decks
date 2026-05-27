@@ -118,6 +118,9 @@ for (const file of appFiles.concat(rgFiles('.', componentDir).filter(f => /\.(js
   // Skip vault, audits, and the canonical record itself
   if (file.includes('lib/business.js')) continue;
   if (file.includes('NAP Source of Truth')) continue;
+  // Skip internal-only admin paths — never indexed, never crawled, safe to
+  // reference Multi-office blueprint / "second office" hypothetical there.
+  if (file.includes('/app/admin/')) continue;
   const source = fs.readFileSync(file, 'utf8');
   for (const pattern of NAP_DRIFT_PATTERNS) {
     if (pattern.test(source)) {
