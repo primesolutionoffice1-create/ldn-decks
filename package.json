@@ -20,6 +20,7 @@
         "seo:audit-og": "node scripts/audit-og-images.mjs",
         "seo:audit-breadcrumbs": "node scripts/audit-breadcrumbs.mjs",
         "seo:verify-robots": "node scripts/verify-robots-indexnow.mjs",
+        "seo:rank-track": "node scripts/rank-tracker-report.mjs",
         "automation:verify": "node scripts/automation-stack-verify.mjs"
     },
     "dependencies": {

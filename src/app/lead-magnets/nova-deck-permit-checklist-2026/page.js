@@ -30,6 +30,11 @@ export default function NovaPermitChecklist2026() {
         <p style={{ margin: 0, color: '#444' }}>Loudoun · Fairfax · Prince William · Arlington counties</p>
       </header>
 
+      <section style={{ marginBottom: 16, padding: '12px 16px', background: '#fff7f1', border: '1px solid #f3d3bd', borderRadius: 8, display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center', justifyContent: 'space-between' }}>
+        <p style={{ margin: 0, fontSize: 13, color: '#7a3210' }}><strong>Want to keep this offline?</strong> Download the printable PDF version.</p>
+        <a href="/downloads/nova-deck-permit-checklist-2026.pdf" download style={{ background: '#d14817', color: '#fff', padding: '8px 14px', borderRadius: 6, textDecoration: 'none', fontWeight: 600, fontSize: 13 }}>↓ Download PDF</a>
+      </section>
+
       <section>
         <p>This checklist walks you through every step required to legally build a deck in Northern Virginia in 2026 — from HOA architectural review through the final county inspection. Every box you can&apos;t check is a potential delay. Bring this with you to your design consultation and we&apos;ll help you close the gaps before contract.</p>
       </section>
