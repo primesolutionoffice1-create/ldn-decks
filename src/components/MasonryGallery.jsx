@@ -13,7 +13,7 @@ export default function MasonryGallery({ images, title = "Showcase of our work" 
               <div className={styles.imageWrapper}>
                 <Image 
                   src={img} 
-                  alt={`Project ${idx + 1}`} 
+                  alt={`Loudoun Decks custom deck project ${idx + 1} in Northern Virginia`}
                   width={600} 
                   height={800} 
                   className={styles.galleryImg} 

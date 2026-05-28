@@ -70,7 +70,7 @@ export default function Testimonials() {
               
               <div className={styles.clientProfile}>
                 <div className={styles.avatarWrapper}>
-                  <Image src={t.image} alt={`${t.project} — ${t.location}`} fill className={styles.avatar} sizes="65px" />
+                  <Image src={t.image} alt={`Loudoun Decks ${t.project} customer in ${t.location}, Northern Virginia`} fill className={styles.avatar} sizes="65px" />
                 </div>
                 <div className={styles.clientInfo}>
                   <h4>{t.name}</h4>

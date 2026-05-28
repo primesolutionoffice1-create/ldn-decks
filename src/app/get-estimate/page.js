@@ -117,7 +117,7 @@ export default function GetEstimatePage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
               {['/images/img01.jpeg', '/images/img10.jpeg', '/images/img03.jpeg', '/images/img07.jpeg'].map((src, i) => (
                 <div key={i} style={{ position: 'relative', height: '140px', borderRadius: '8px', overflow: 'hidden' }}>
-                  <Image src={src} alt={`Recent deck project ${i + 1}`} fill style={{ objectFit: 'cover' }} sizes="250px" />
+                  <Image src={src} alt={`Recent custom deck project ${i + 1} by Loudoun Decks in Northern Virginia`} fill style={{ objectFit: 'cover' }} sizes="250px" />
                 </div>
               ))}
             </div>
