@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
 
 // Curated list of high-value routes the 404 suggestion engine can route to.
@@ -93,12 +93,13 @@ function fmtPath(p) {
 }
 
 export default function NotFoundSuggestions() {
-  const [requested, setRequested] = useState(null);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    setRequested(window.location.pathname || null);
-  }, []);
+  // Use lazy initializer to read window.location during initial state setup
+  // rather than calling setState inside useEffect. Safe because this is a
+  // 'use client' component; window is available on first client render and
+  // SSR returns null which avoids hydration mismatch on the suggestion list.
+  const [requested] = useState(() =>
+    typeof window !== 'undefined' ? (window.location.pathname || null) : null
+  );
 
   const suggestions = useMemo(() => {
     if (!requested || requested === '/') return [];

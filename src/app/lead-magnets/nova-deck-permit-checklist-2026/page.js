@@ -13,14 +13,15 @@ export const metadata = buildMetadata({
 // reference. A pre-rendered PDF copy lives at
 // /downloads/nova-deck-permit-checklist-2026.pdf for one-click download.
 
-export default function NovaPermitChecklist2026() {
-  const Item = ({ children }) => (
-    <li style={{ marginBottom: 8 }}><label style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}><input type="checkbox" style={{ marginTop: 4 }} aria-label="checklist item" /><span>{children}</span></label></li>
-  );
-  const H2 = ({ children }) => (
-    <h2 style={{ borderBottom: '2px solid #d14817', paddingBottom: 4, marginTop: 28, marginBottom: 12, fontSize: 18, color: '#222' }}>{children}</h2>
-  );
+const Item = ({ children }) => (
+  <li style={{ marginBottom: 8 }}><label style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}><input type="checkbox" style={{ marginTop: 4 }} aria-label="checklist item" /><span>{children}</span></label></li>
+);
 
+const H2 = ({ children }) => (
+  <h2 style={{ borderBottom: '2px solid #d14817', paddingBottom: 4, marginTop: 28, marginBottom: 12, fontSize: 18, color: '#222' }}>{children}</h2>
+);
+
+export default function NovaPermitChecklist2026() {
   return (
     <main style={{ maxWidth: 760, margin: '0 auto', padding: '40px 24px', color: '#222', fontSize: 14, lineHeight: 1.5 }}>
       <header style={{ borderBottom: '3px solid #d14817', paddingBottom: 16, marginBottom: 16 }}>

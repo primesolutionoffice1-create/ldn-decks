@@ -45,15 +45,13 @@ export default function robots() {
     'cohere-ai',
   ];
 
+  // Bingbot is included in AI_BOTS (line 31), so the explicit Bingbot block
+  // here was creating a duplicate stanza in the rendered robots.txt. Removed
+  // 2026-05-28 to dedupe.
   return {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
-        disallow: TRACKING_DISALLOWS,
-      },
-      {
-        userAgent: 'Bingbot',
         allow: '/',
         disallow: TRACKING_DISALLOWS,
       },
