@@ -64,7 +64,7 @@ export default function Footer() {
             <div className={styles.logoCont}>
               <Image
                 src="/ldndecks-logo.webp"
-                alt="ldndecks logo"
+                alt="Loudoun Decks — Northern Virginia deck builder, Trex Platinum Partner and TimberTech Certified Installer"
                 width={100}
                 height={80}
                 style={{ objectFit: 'contain', background: '#e4dac9', padding: '10px', borderRadius: '4px' }}

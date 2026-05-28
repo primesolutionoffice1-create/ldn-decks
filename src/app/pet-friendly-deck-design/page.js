@@ -41,7 +41,7 @@ export default function PetFriendlyDeckPage() {
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
               src="/images/img37.jpeg"
-              alt="Designing a pet-friendly deck with built-in safety features"
+              alt="Designing a pet-friendly composite deck with built-in safety features for Northern Virginia homes"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"

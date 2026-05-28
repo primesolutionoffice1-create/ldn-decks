@@ -134,7 +134,7 @@ export default function Header() {
           <Link href="/">
             <Image
               src="/ldndecks-logo.webp"
-              alt="ldndecks logo"
+              alt="Loudoun Decks — Northern Virginia deck builder, Trex Platinum Partner and TimberTech Certified Installer"
               width={200}
               height={100}
               style={{ objectFit: "contain" }}
@@ -309,7 +309,7 @@ export default function Header() {
         <div className={styles.mobileMenuHeader}>
           <Image
             src="/ldndecks-logo.webp"
-            alt="ldndecks logo"
+            alt="Loudoun Decks — Northern Virginia deck builder, Trex Platinum Partner and TimberTech Certified Installer"
             width={120}
             height={60}
             style={{ objectFit: "contain" }}

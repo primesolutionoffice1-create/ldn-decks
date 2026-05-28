@@ -174,7 +174,7 @@ export default function DeckResurfacingPage() {
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>Same base structure. Completely transformed aesthetic.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-            <Image src="/showcase/img03.jpg" alt="Before deck resurfacing - old wood" fill style={{ objectFit: 'cover' }} />
+            <Image src="/showcase/img03.jpg" alt="Before deck resurfacing — old pressure-treated wood deck in Northern Virginia" fill style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
             <Image src="/showcase/img05.jpeg" alt="After TimberTech Vintage resurfacing" fill style={{ objectFit: 'cover' }} />

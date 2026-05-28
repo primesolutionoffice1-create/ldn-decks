@@ -141,16 +141,16 @@ export default function DeckReplacementPage() {
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', alignItems: 'stretch' }}>
           <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-            <Image src="/torndeck.webp" alt="Severe board rot and splintering" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
+            <Image src="/torndeck.webp" alt="Severe board rot and splintering on an aged Northern Virginia wood deck — full replacement needed" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-            <Image src="/torndeck1.webp" alt="Weathered and graying structural wood" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
+            <Image src="/torndeck1.webp" alt="Weathered and graying structural wood on a 20-year Loudoun County deck — replacement candidate" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-            <Image src="/torndeck2.webp" alt="Failing deck fasteners and hardware" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
+            <Image src="/torndeck2.webp" alt="Failing fasteners and corroded hardware on a Northern Virginia deck — replacement triggered" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-            <Image src="/torndeck3.jpg" alt="Unsafe railing and structural decay" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
+            <Image src="/torndeck3.jpg" alt="Unsafe railing and structural decay on an aging Northern Virginia deck — Loudoun Decks replacement" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>
@@ -158,7 +158,7 @@ export default function DeckReplacementPage() {
         <h2 style={{ fontSize: '32px', marginBottom: '15px', fontWeight: 800 }}>Seamless Transitions</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>We handle everything from the first drill to the final cleanup.</p>
         <div style={{ position: 'relative', height: '500px', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
-          <Image src="/images/img97.jpeg" alt="Deck replacement transformation" fill sizes="100vw" style={{ objectFit: 'cover' }} />
+          <Image src="/images/img97.jpeg" alt="Composite Trex deck replacement transformation in Northern Virginia by Loudoun Decks" fill sizes="100vw" style={{ objectFit: 'cover' }} />
         </div>
       </section>
       <ServiceInclusions

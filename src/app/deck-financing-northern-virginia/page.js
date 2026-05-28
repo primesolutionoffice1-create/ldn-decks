@@ -50,7 +50,7 @@ export default function DeckFinancingPage() {
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
               src="/images/img01.jpeg"
-              alt="Modern outdoor deck build made affordable with financing options"
+              alt="Modern outdoor Trex deck build made affordable with Loudoun Decks Northern Virginia financing options"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"

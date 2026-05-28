@@ -22,7 +22,7 @@ export default function WhyChooseServices() {
              
              <div className={styles.imageContent}>
                 <div className={styles.imageWrapper}>
-                   <Image src="/images/img31.jpeg" alt="Outdoor Living Services" fill className={styles.img} sizes="(max-width: 768px) 100vw, 50vw" />
+                   <Image src="/images/img31.jpeg" alt="Outdoor living services in Northern Virginia — decks, screened porches, outdoor kitchens by Loudoun Decks" fill className={styles.img} sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
              </div>
           </div>

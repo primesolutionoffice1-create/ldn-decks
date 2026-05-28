@@ -24,7 +24,7 @@ export default function ThankYouPage() {
         <div className={styles.imageCol}>
           <Image
             src="/thank-you-deck.png"
-            alt="Beautiful custom deck celebration"
+            alt="Beautiful custom Trex composite deck completed by Loudoun Decks in Northern Virginia"
             fill
             priority
             style={{ objectFit: 'cover' }}

@@ -203,10 +203,10 @@ export default function FirePitsPage() {
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From empty backyard to a warm, inviting gathering space.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img17.jpeg" alt="Before fire pit installation" fill style={{ objectFit: 'cover' }} />
+            <Image src="/showcase/img17.jpeg" alt="Before fire pit installation — Northern Virginia deck patio space" fill style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img18.jpeg" alt="After custom fire pit" fill style={{ objectFit: 'cover' }} />
+            <Image src="/showcase/img18.jpeg" alt="After custom fire pit installation by Loudoun Decks on a Northern Virginia composite deck" fill style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>

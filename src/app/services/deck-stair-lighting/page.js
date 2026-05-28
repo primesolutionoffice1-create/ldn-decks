@@ -172,10 +172,10 @@ export default function DeckStairLightingPage() {
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>Same deck. Completely different experience.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/light-img.jpeg" alt="Before stair lighting" fill style={{ objectFit: 'cover' }} />
+            <Image src="/showcase/light-img.jpeg" alt="Before deck stair lighting — unlit Northern Virginia composite deck stairs" fill style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img01.jpg" alt="After stair lighting" fill style={{ objectFit: 'cover' }} />
+            <Image src="/showcase/img01.jpg" alt="After integrated LED stair lighting installation on a Loudoun Decks Northern Virginia deck" fill style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>

@@ -146,10 +146,10 @@ export default function UnderDeckPatiosPage() {
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From unused space to a fully functional outdoor area.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img19.jpg" alt="Before under deck upgrade" fill style={{ objectFit: 'cover' }} />
+            <Image src="/showcase/img19.jpg" alt="Before under-deck patio upgrade — exposed framing on a Loudoun County multi-level deck" fill style={{ objectFit: 'cover' }} />
           </div>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/showcase/img20.jpg" alt="After waterproof patio system" fill style={{ objectFit: 'cover' }} />
+            <Image src="/showcase/img20.jpg" alt="After waterproof under-deck patio system installation by Loudoun Decks in Northern Virginia" fill style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>

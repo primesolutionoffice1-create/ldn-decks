@@ -48,7 +48,7 @@ export default function ChooseDeckBuilderPage() {
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
               src="/images/img25.jpeg"
-              alt="Professional deck construction detail showing quality craftsmanship"
+              alt="Professional deck construction detail showing Trex Platinum-tier craftsmanship by a Northern Virginia deck builder"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"

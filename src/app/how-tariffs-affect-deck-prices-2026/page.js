@@ -47,7 +47,7 @@ export default function TariffsDeckPricesPage() {
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
               src="/images/img11.jpeg"
-              alt="Deck construction materials impacted by tariffs in 2026"
+              alt="Composite and lumber deck construction materials affected by 2026 tariff changes — Northern Virginia pricing"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"

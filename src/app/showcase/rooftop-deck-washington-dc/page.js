@@ -34,7 +34,7 @@ export default function RooftopDCPage() {
             <div className={styles.mainImage}>
               <Image 
                 src="/showcase/img07.jpeg" 
-                alt="Rooftop Deck Washington DC" 
+                alt="Custom rooftop deck construction in Washington DC by Loudoun Decks — pedestal system with cable railings" 
                 width={1200} 
                 height={800} 
                 className={styles.img}

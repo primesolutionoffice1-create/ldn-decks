@@ -41,7 +41,7 @@ export default function UnderDeckPage() {
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
               src="/images/img33.jpeg"
-              alt="Premium under-deck ceiling installation by LDN Decks"
+              alt="Premium under-deck ceiling installation by Loudoun Decks on a multi-level Northern Virginia deck"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"

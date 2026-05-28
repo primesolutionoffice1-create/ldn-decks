@@ -9,7 +9,7 @@ export default function ServiceVisual({ image }) {
         <div className={styles.imageWrapper}>
           <Image 
             src={image} 
-            alt="New Deck Design" 
+            alt="New custom composite deck design by Loudoun Decks in Northern Virginia" 
             fill 
             className={styles.img}
             sizes="100vw"
