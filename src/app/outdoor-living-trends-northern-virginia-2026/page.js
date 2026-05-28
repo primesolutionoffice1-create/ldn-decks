@@ -23,7 +23,7 @@ const faqSchema = {
   "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "What are the top outdoor living trends in Northern Virginia for 2026?", acceptedAnswer: { "@type": "Answer", text: "The top trends for 2026 are multi-level step-down decks, deck-plus-screened-porch combinations, and integrated outdoor kitchens. Cable railing systems, mixed materials (composite deck with stone patio), and hidden LED lighting are also surging in popularity across Loudoun, Fairfax, and Prince William counties." } },
-    { "@type": "Question", name: "How much does a multi-level deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A multi-level deck in Northern Virginia costs $35,000-$75,000+ depending on size, materials, and complexity. A typical two-level Trex Transcend deck (450-600 sqft total) with stairs and railing runs $42,000-$58,000. Multi-level designs add 20-35% over a single-level deck of the same total square footage." } },
+    { "@type": "Question", name: "How much does a multi-level deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A multi-level deck in Northern Virginia costs $32,000-$85,000+ in 2026 depending on size, materials, and complexity. A two-level Trex Transcend deck (450-600 sqft total) runs $42,000-$62,000. An estate-tier 800 sqft multi-level build with outdoor kitchen and pergola reaches $80k-$130k+. Multi-level designs typically add 20-35% over a single-level deck of the same total square footage. See size-specific cost pages on ldndecks.com for brand-by-brand totals." } },
     { "@type": "Question", name: "What outdoor living features have the best ROI in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Composite decks return 65-80% at resale. Screened porches return 70-85% in the NoVA market among the highest in the country. Cable railings, LED lighting, and under-deck drainage systems also add disproportionate perceived value relative to their cost." } },
     { "@type": "Question", name: "Are outdoor kitchens worth it in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes, especially in Northern Virginia's affluent markets. Outdoor kitchens cost $15,000-$50,000+ and return 55-75% at resale. They also extend your outdoor entertaining season from April through November. The key is proper gas line routing, ventilation, and weatherproof cabinetry rated for Virginia's freeze-thaw cycles." } },
     { "@type": "Question", name: "What is under-deck drainage and is it worth the cost?", acceptedAnswer: { "@type": "Answer", text: "Under-deck drainage (like Trex RainEscape) captures water from the upper deck and channels it into a gutter system, creating a dry patio space underneath. It costs $3,000-$6,000 to install and effectively doubles your usable outdoor area. For elevated decks with walkout basements, this is one of the highest-value upgrades available." } },
@@ -50,7 +50,7 @@ export default function OutdoorLivingTrendsPage() {
         path="/outdoor-living-trends-northern-virginia-2026"
         image="/images/img36.jpeg"
         datePublished="2026-04-23"
-        dateModified="2026-04-23"
+        dateModified="2026-05-27"
       />
 
       {/* Hero */}

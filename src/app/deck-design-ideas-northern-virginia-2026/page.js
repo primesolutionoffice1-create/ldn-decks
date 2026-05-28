@@ -49,7 +49,7 @@ export const metadata = {
                                                         },
                                                           {
                                                               q: "How much does a custom deck cost in Northern Virginia in 2026?",
-                                                                  a: "A custom composite deck in Northern Virginia typically ranges from $22,000 to $65,000+, depending on size, material selection, design complexity, and add-ons such as pergolas, screened porches, or outdoor kitchens."
+                                                                  a: "A custom composite deck in Northern Virginia ranges from $14,000 to $80,000+ in 2026 depending on size and configuration. 400 sqft single-level: $14k-$34k. 600 sqft multi-level (the most common configuration): $22k-$58k. 800 sqft estate-tier with outdoor kitchen: $30k-$130k+. See our size-specific cost pages for brand-by-brand totals (Trex Enhance through TimberTech AZEK Vintage Mahogany)."
                                                                     },
                                                                       {
                                                                           q: "What deck materials are most popular in Northern Virginia?",
@@ -126,7 +126,7 @@ export const metadata = {
             path="/deck-design-ideas-northern-virginia-2026"
             image="/images/img36.jpeg"
             datePublished="2025-09-01"
-            dateModified="2026-04-23"
+            dateModified="2026-05-27"
           />
                                                                                                                                                                                                                                                                                                                 <ServicesHeader
                                                                                                                                                                                                                                                                                                                         subtext="Northern Virginia's #1 Rated Deck Builder"
