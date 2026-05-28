@@ -26,6 +26,11 @@ const expectedCitationSignals = [
 ];
 
 const legacySitemapPaths = [
+  '/sitemap',
+  '/site-map',
+  '/sitemaps',
+  '/sitemap.html',
+  '/xml-sitemap',
   '/page-sitemap.xml',
   '/post-sitemap.xml',
   '/sitemap_index.xml',
