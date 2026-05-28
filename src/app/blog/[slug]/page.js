@@ -234,6 +234,30 @@ export default async function SingleBlogPage({ params }) {
                  if (para.startsWith('### ')) {
                    return <h3 key={idx} style={{ marginTop: '30px', marginBottom: '15px', color: '#222' }}>{para.replace('### ', '')}</h3>;
                  }
+                 // Inline image block: a paragraph that is just ![alt](src) renders as an
+                 // illustration (diagram / infographic). Square dims because the current
+                 // diagram set is 1024x1024; auto height keeps non-square images fluid.
+                 const imageOnly = para.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+                 if (imageOnly) {
+                   const [, alt, src] = imageOnly;
+                   return (
+                     <figure key={idx} style={{ margin: '40px auto', maxWidth: '720px' }}>
+                       <Image
+                         src={src}
+                         alt={alt}
+                         width={1024}
+                         height={1024}
+                         style={{ width: '100%', height: 'auto', borderRadius: '8px', display: 'block' }}
+                         sizes="(max-width: 768px) 100vw, 720px"
+                       />
+                       {alt && (
+                         <figcaption style={{ marginTop: '12px', fontSize: '0.9rem', color: '#666', textAlign: 'center', fontStyle: 'italic' }}>
+                           {alt}
+                         </figcaption>
+                       )}
+                     </figure>
+                   );
+                 }
                  return <p key={idx}>{renderInline(para, `p${idx}`)}</p>;
                })}
 
