@@ -5,6 +5,7 @@ import JsonLd from '@/components/JsonLd';
 import ServiceSchema from '@/components/ServiceSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -158,6 +159,8 @@ export default function LouveredPergolaPage() {
       </article>
       <SimpleCTA title="Design Your Louvered Pergola" buttonText="Get Free Design Consultation" link="/contact" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
+      <RelatedGuides currentPath="/louvered-pergola-northern-virginia" />
 
       <ContactHome />
     </>

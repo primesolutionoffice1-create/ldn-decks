@@ -23,7 +23,7 @@ export default function NamedAuthor({ context = 'Northern Virginia', lastUpdated
       }}
       itemScope
       itemType="https://schema.org/Person"
-      itemID="https://ldndecks.com/#nick"
+      itemID="https://ldndecks.com/#founder"
     >
       <div style={{ position: 'relative', width: 64, height: 64, borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
         <Image

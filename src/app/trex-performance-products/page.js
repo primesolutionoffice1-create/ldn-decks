@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -49,6 +50,9 @@ export default function TrexPerformancePage() {
       </div>
 
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
+
+      <RelatedGuides currentPath="/trex-performance-products" />
 
 
       <ContactHome />

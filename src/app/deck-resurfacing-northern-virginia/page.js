@@ -6,6 +6,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import TrustBanner from '@/components/TrustBanner';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -302,6 +303,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
         link="/contact"
       />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <RelatedGuides currentPath="/deck-resurfacing-northern-virginia" />
       <ContactHome />
     </>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import styles from '../[slug]/ProjectPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
@@ -76,6 +77,9 @@ export default function RooftopDCPage() {
       </section>
 
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
+
+      <RelatedGuides currentPath="/showcase/rooftop-deck-washington-dc" />
 
 
       <ContactHome />

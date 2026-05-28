@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -114,6 +115,8 @@ export default function MegaGuidePage() {
 
       <SimpleCTA title="Build Your Dream Deck" buttonText="Get Free Estimate" link="/contact" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
+      <RelatedGuides currentPath="/northern-virginia-deck-building-guide" />
 
       <ContactHome />
     </>

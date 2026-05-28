@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -113,6 +114,7 @@ export default function SullyStationHoaDeckRulesPage() {
       </article>
       <SimpleCTA title="Sully Station deck project? Our HQ is 15 minutes away." buttonText="Get Free Estimate" link="/contact" />
       <NamedAuthor context="Sully Station (Centreville) and Fairfax County" lastUpdated="2026-05-27" />
+      <RelatedGuides currentPath="/sully-station-hoa-deck-rules" />
       <ContactHome />
     </>
   );

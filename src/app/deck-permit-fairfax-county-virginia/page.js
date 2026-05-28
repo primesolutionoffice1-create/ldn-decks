@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -155,6 +156,8 @@ export default function FairfaxPermitPage() {
 
       <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/contact" />
       <NamedAuthor context="Fairfax County" lastUpdated="2026-05-26" />
+
+      <RelatedGuides currentPath="/deck-permit-fairfax-county-virginia" />
 
       <ContactHome />
     </>

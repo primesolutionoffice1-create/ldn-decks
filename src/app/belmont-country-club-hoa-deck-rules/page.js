@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -121,6 +122,7 @@ export default function BelmontCountryClubHoaDeckRulesPage() {
       </article>
       <SimpleCTA title="Belmont Country Club deck project? We file every premier approval." buttonText="Get Free Estimate" link="/contact" />
       <NamedAuthor context="Belmont Country Club (Ashburn) — premier estate-tier deck construction" lastUpdated="2026-05-27" />
+      <RelatedGuides currentPath="/belmont-country-club-hoa-deck-rules" />
       <ContactHome />
     </>
   );
