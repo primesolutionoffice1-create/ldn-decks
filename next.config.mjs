@@ -338,6 +338,11 @@ const nextConfig = {
       { source: '/feed', destination: '/blog', permanent: true },
       { source: '/sitemaps/sitemap.xml', destination: '/sitemap.xml', permanent: true },
 
+      // Second-pass 404s observed after the first wave shipped.
+      { source: '/northern-virginia-deck-building', destination: '/northern-virginia-deck-building-guide', permanent: true },
+      { source: '/page/:n*', destination: '/blog', permanent: true },
+      { source: '/blog/page/:n*', destination: '/blog', permanent: true },
+
 
       // Single-hop www → non-www canonical redirect
       // Eliminates 2-hop chain: http://www → https://www → https://non-www
