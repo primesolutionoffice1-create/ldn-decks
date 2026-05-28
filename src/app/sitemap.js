@@ -272,6 +272,7 @@ export default async function sitemap() {
                 { path: "/deck-permit-hoa-cost-loudoun-county",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/resurface-or-replace-deck-financing",        priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/credit-score-deck-financing",                priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-lighting-railings-stairs-addon-cost",   priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/best-time-to-finance-build-deck-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/mclean-great-falls-premium-deck-budget",      priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/wood-vs-composite-deck-long-term-cost",      priority: 0.90, lastMod: TIER1, freq: "weekly" },
