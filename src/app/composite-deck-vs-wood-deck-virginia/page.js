@@ -165,6 +165,8 @@ export default function CompositeVsWoodPage() {
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value to Your Home?'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
+              ['/wood-decks', 'Wood Deck Options — Cedar, IPE & Pressure-Treated'],
+              ['/deck-builder-northern-virginia', 'Deck Builder in Northern Virginia'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>
             ))}

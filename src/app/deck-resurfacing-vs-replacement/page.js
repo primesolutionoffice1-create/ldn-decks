@@ -165,6 +165,8 @@ export default function ResurfacingVsReplacementPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/before-and-after', 'Before & After Deck Transformations'],
+              ['/resurface-or-replace-deck-financing', 'Resurface or Replace Before Financing? (decision math)'],
+              ['/deck-resurfacing-northern-virginia', 'Deck Resurfacing in Northern Virginia (service area)'],
               ['/services/deck-resurfacing', 'Deck Resurfacing Services'],
               ['/education/deck-stair-safety-inspection-checklist', 'Deck Stair Safety Checklist PDF'],
               ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],

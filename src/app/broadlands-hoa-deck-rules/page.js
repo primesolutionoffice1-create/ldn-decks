@@ -84,8 +84,10 @@ export default function BroadlandsHoaDeckRulesPage() {
             {[
               ['/loudoun-county-hoa-deck-rules', 'Loudoun County HOA Deck Rules'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
+              ['/deck-permit-hoa-cost-loudoun-county', 'Loudoun Permit + HOA Cost Breakdown'],
               ['/multi-level-deck-builder-northern-virginia', 'Multi-Level Deck Builder'],
               ['/deck-builder-ashburn-va', 'Deck Builder in Ashburn'],
+              ['/ashburn-composite-deck-cost-financing', 'Ashburn Composite Deck Cost &amp; Financing'],
               ['/cable-railing-for-decks-northern-virginia', 'Cable Railing for Decks'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} &rarr;</Link></li>

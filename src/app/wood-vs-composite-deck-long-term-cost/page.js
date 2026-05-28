@@ -204,6 +204,11 @@ export default function WoodVsCompositeLongTermPage() {
           <h2 style={S.h2}>Material-Specific Cost Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0, marginBottom: '1.5rem' }}>
             <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/wood-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Wood Decks — Cedar, IPE & Pressure-Treated →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
               <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
                 Composite vs Wood Deck Comparison (full guide) →
               </Link>

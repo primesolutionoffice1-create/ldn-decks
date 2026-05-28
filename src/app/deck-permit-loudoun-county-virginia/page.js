@@ -229,6 +229,16 @@ export default function LoudounPermitPage() {
         </div>
       </article>
 
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Loudoun &amp; Permit Cost Guides</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-hoa-cost-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Permit + HOA Cost Breakdown ($200–$2,500 total) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia HOA Deck Rules →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/ashburn-composite-deck-cost-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Ashburn Composite Deck Cost &amp; Financing →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
+        </ul>
+      </section>
+
       <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/deck-permit-loudoun-county-virginia" />
       <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />

@@ -123,6 +123,8 @@ export default function DeckValuePage() {
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules'],
+              ['/deck-builder-northern-virginia', 'Deck Builder in Northern Virginia'],
+              ['/outdoor-living-northern-virginia', 'Outdoor Living in Northern Virginia'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>
             ))}

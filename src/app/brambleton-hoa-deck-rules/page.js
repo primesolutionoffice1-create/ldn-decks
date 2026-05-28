@@ -85,8 +85,10 @@ export default function BrambletonHoaDeckRulesPage() {
             {[
               ['/loudoun-county-hoa-deck-rules', 'Loudoun County HOA Deck Rules'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
+              ['/deck-permit-hoa-cost-loudoun-county', 'Loudoun Permit + HOA Cost Breakdown'],
               ['/education/hoa-deck-approval-guidelines-nova', 'HOA Approval Walkthrough'],
               ['/deck-builder-brambleton-va', 'Deck Builder in Brambleton'],
+              ['/ashburn-composite-deck-cost-financing', 'Ashburn / Brambleton Deck Cost &amp; Financing'],
               ['/composite-decks', 'Composite Decking Options'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} &rarr;</Link></li>

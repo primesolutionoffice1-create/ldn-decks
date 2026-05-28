@@ -84,6 +84,8 @@ export default function AshburnVillageHoaDeckRulesPage() {
             {[
               ['/loudoun-county-hoa-deck-rules', 'Loudoun County HOA Deck Rules'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
+              ['/deck-permit-hoa-cost-loudoun-county', 'Loudoun Permit + HOA Cost Breakdown'],
+              ['/ashburn-composite-deck-cost-financing', 'Ashburn Composite Deck Cost &amp; Financing'],
               ['/deck-resurfacing-vs-replacement', 'Deck Resurfacing vs Replacement'],
               ['/deck-builder-ashburn-va', 'Deck Builder in Ashburn'],
               ['/services/deck-replacement', 'Deck Replacement Service'],

@@ -148,6 +148,8 @@ export default function ThreeSeasonRoomPage() {
               ['/blog/screened-porch-vs-three-season-room-virginia', 'Screened Porch vs. Three-Season Room'],
               ['/services/porches', 'Porch Services'],
               ['/outdoor-living-northern-virginia', 'Outdoor Living Contractor'],
+              ['/louvered-pergola-northern-virginia', 'Louvered Pergola in Northern Virginia'],
+              ['/covered-deck-builder-northern-virginia', 'Covered Deck Builder Northern Virginia'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} &rarr;</Link></li>
             ))}

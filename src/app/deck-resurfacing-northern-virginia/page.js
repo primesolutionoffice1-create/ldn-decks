@@ -277,6 +277,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
             {[
               ['/services/deck-resurfacing', 'Deck Resurfacing Service Details'],
               ['/deck-resurfacing-vs-replacement', 'Resurfacing vs Full Replacement'],
+              ['/resurface-or-replace-deck-financing', 'Resurface or Replace Before Financing? (cost math)'],
               ['/services/deck-replacement', 'Full Deck Replacement'],
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Decking'],

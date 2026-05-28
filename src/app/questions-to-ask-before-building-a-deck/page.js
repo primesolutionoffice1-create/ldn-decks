@@ -109,6 +109,7 @@ export default function QuestionsPage() {
               ['/how-to-choose-a-deck-builder-northern-virginia', 'How to Choose a Deck Builder'],
               ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/about/certifications-and-licenses', 'Our Credentials'],
+              ['/deck-builder-northern-virginia', 'Deck Builder in Northern Virginia'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>
             ))}

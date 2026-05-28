@@ -546,6 +546,9 @@ export default function CompositeDeckCostPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (5.0★ Google) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Builder in Northern Virginia →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/outdoor-living-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Outdoor Living in Northern Virginia →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/wood-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Wood Decks — Cedar, IPE & Pressure-Treated →</Link></li>
         </ul>
       </section>
       <ContactHome />

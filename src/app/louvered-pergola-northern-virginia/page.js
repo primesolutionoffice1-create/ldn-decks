@@ -148,6 +148,8 @@ export default function LouveredPergolaPage() {
               ['/blog/smart-deck-technology-trends-2026', 'Smart Deck Technology Trends'],
               ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder'],
               ['/outdoor-living-northern-virginia', 'Outdoor Living Contractor'],
+              ['/three-season-room-northern-virginia', 'Three-Season Room Builder'],
+              ['/covered-deck-builder-northern-virginia', 'Covered Deck Builder Northern Virginia'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} &rarr;</Link></li>
             ))}

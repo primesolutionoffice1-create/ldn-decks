@@ -143,6 +143,8 @@ export default function ChooseDeckBuilderPage() {
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in NoVA'],
               ['/best-time-to-build-a-deck-northern-virginia', 'Best Time to Build a Deck'],
               ['/about', 'About Loudoun Decks'],
+              ['/deck-builder-northern-virginia', 'Deck Builder in Northern Virginia'],
+              ['/northern-virginia-deck-building-guide', 'Complete Northern Virginia Deck Building Guide'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>
             ))}

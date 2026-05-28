@@ -257,6 +257,9 @@ export default function NewDecksPage() {
             ['/deck-footing-code-northern-virginia', 'Virginia Deck Footing Code Guide'],
             ['/tools/deck-footing-depth-calculator-virginia', 'Deck Footing Depth Calculator Virginia'],
             ['/deck-warranty-guide-northern-virginia', 'Deck Warranty Guide'],
+            ['/wood-decks', 'Wood Decks — Cedar, IPE & Pressure-Treated'],
+            ['/deck-builder-northern-virginia', 'Deck Builder in Northern Virginia'],
+            ['/outdoor-living-northern-virginia', 'Outdoor Living in Northern Virginia'],
           ].map(([href, text]) => (
             <li key={href} style={{ marginBottom: '0.5rem' }}>
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>

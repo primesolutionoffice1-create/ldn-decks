@@ -147,6 +147,7 @@ export default function ScreenedPorchCostPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/services/porches/screened-porch', 'Screened Porch Builder Services'],
+              ['/covered-deck-cost-northern-virginia', 'Covered Deck Cost &amp; Payment Planning Guide'],
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost Brand-by-Brand'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],

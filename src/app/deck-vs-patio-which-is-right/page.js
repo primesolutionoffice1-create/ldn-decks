@@ -151,6 +151,8 @@ export default function DeckVsPatioPage() {
               ['/services/patios', 'Our Patio Building Services'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value?'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],
+              ['/outdoor-living-northern-virginia', 'Outdoor Living in Northern Virginia'],
+              ['/deck-builder-northern-virginia', 'Deck Builder in Northern Virginia'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>
             ))}

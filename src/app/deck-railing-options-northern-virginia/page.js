@@ -129,6 +129,7 @@ export default function DeckRailingPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/services/trex-railings', 'Trex Railing Installation'],
+              ['/deck-lighting-railings-stairs-addon-cost', 'Railings + Stairs + Lighting Add-On Cost Guide'],
               ['/education/deck-stair-safety-inspection-checklist', 'Deck Stair Safety Checklist PDF'],
               ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],
               ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],

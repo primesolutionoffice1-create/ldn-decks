@@ -197,6 +197,15 @@ export default function ScreenedPorchPage() {
           faqs={faqs}
           canonicalUrl="https://ldndecks.com/services/porches/screened-porch"
         />
+        <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Screened Porch Guides</h2>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porch-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Builder Northern Virginia →</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porch-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Cost Guide →</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/three-season-room-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Three-Season Room Builder →</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/covered-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Covered Deck Builder Northern Virginia →</Link></li>
+          </ul>
+        </section>
         <SimpleCTA title="Build Your Screened Porch" buttonText="Get Free Estimate" link="/contact" />
         <RelatedGuides currentPath="/services/porches/screened-porch" />
         <ContactHome />

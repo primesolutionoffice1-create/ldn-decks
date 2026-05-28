@@ -220,6 +220,7 @@ export default function BestTimeToBuildPage() {
             {[
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/deck-payment-estimator', 'Deck Payment Estimator — see your monthly payment'],
+              ['/best-time-to-finance-build-deck-northern-virginia', 'Best Time to Finance &amp; Build (lender + permit + builder timing)'],
               ['/deck-financing', 'Deck Financing in Northern Virginia'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
@@ -227,6 +228,8 @@ export default function BestTimeToBuildPage() {
               ['/before-and-after', 'Before & After Project Gallery'],
               ['/reviews', 'Homeowner Reviews'],
               ['/about/process', 'Our Build Process'],
+              ['/deck-builder-northern-virginia', 'Deck Builder in Northern Virginia'],
+              ['/northern-virginia-deck-building-guide', 'Northern Virginia Deck Building Guide'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={S.link}>{text} →</Link></li>
             ))}

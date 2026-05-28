@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -204,6 +205,16 @@ export default function GazeboPergolaPage() {
       />
 
       <ServiceAreasGrid />
+
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Pergola & Outdoor Living Guides</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/louvered-pergola-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Louvered Pergola in Northern Virginia →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/outdoor-living-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Outdoor Living in Northern Virginia →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/three-season-room-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Three-Season Room Builder →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/covered-deck-builder-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Covered Deck Builder Northern Virginia →</Link></li>
+        </ul>
+      </section>
 
       <RelatedGuides currentPath="/services/gazebo-pergola" />
       <SimpleCTA title="Design Your Pergola or Gazebo" buttonText="Get Free Estimate" link="/contact" />

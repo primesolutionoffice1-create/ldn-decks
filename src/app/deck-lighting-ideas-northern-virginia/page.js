@@ -115,6 +115,7 @@ export default function DeckLightingPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/services/deck-stair-lighting', 'Deck Stair Lighting Services'],
+              ['/deck-lighting-railings-stairs-addon-cost', 'Lighting + Railings + Stairs Add-On Cost Guide'],
               ['/deck-railing-options-northern-virginia', 'Deck Railing Options'],
               ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],

@@ -212,6 +212,17 @@ export default function DeckResurfacingPage() {
         </div>
       </section>
       <ServiceAreasGrid />
+
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Resurfacing Cost &amp; Decision Guides</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Deck Resurfacing in Northern Virginia (counties &amp; cities) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Resurfacing vs Full Replacement →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/resurface-or-replace-deck-financing" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Resurface or Replace Before Financing? (cost math) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
+        </ul>
+      </section>
+
       <RelatedGuides currentPath="/services/deck-resurfacing" />
       <SimpleCTA title="Resurface Your Deck Today" buttonText="Get Free Estimate" link="/contact" />
       <ContactHome />

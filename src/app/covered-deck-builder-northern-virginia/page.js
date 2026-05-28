@@ -154,6 +154,17 @@ export default function CoveredDeckPage() {
       </section>
 
       <ServiceAreasGrid />
+
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Covered Deck Pricing &amp; Planning</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/covered-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Covered Deck Cost &amp; Payment Planning (pergola / hip / gable / screened) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porch-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Cost Guide →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/mclean-great-falls-premium-deck-budget" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>McLean &amp; Great Falls Premium Deck Budget →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
+        </ul>
+      </section>
+
       <SimpleCTA title="Build Your Covered Deck" buttonText="Get Free Estimate" link="/contact" />
       <RelatedGuides currentPath="/covered-deck-builder-northern-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />

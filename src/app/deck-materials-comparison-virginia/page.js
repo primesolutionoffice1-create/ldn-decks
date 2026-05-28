@@ -289,6 +289,8 @@ export default function DeckMaterialsComparisonPage() {
               ['/best-deck-stain-sealer-virginia', 'Best Deck Stain & Sealer for Virginia'],
               ['/deck-maintenance-checklist-virginia', 'Deck Maintenance Checklist'],
               ['/how-long-does-a-composite-deck-last', 'How Long Does a Composite Deck Last?'],
+              ['/wood-decks', 'Wood Decks — Cedar, IPE & Pressure-Treated'],
+              ['/wood-vs-composite-deck-long-term-cost', 'Wood vs Composite: 15-Year Cost Analysis'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}>
                 <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} &rarr;</Link>
