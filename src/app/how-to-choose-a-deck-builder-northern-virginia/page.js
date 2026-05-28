@@ -13,7 +13,7 @@ import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/how-to-choose-a-deck-builder-northern-virginia',
-  title: 'How to Choose a Deck Builder in Northern Virginia (10 Questions + Red Flags)',
+  title: 'How to Choose a Deck Builder in Northern Virginia (2026)',
   description: '10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license. From a 5-star rated NoVA deck builder.',
 });
 
