@@ -188,9 +188,11 @@ export default function McLeanDeckBuilderPage() {
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {[
             ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
+            ['/mclean-great-falls-premium-deck-budget', 'McLean &amp; Great Falls Premium Deck Budget Guide'],
             ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
             ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
             ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+            ['/timbertech-azek-deck-cost-northern-virginia', 'TimberTech &amp; AZEK Premium Deck Cost'],
             ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Comparison'],
           ].map(([href, text]) => (
             <li key={href} style={{ marginBottom: '0.5rem' }}>

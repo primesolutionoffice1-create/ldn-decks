@@ -159,6 +159,8 @@ export default function FourHundredSqftDeckCostPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '3rem 0 1rem' }}>Related guides</h2>
           <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
             <li>→ <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full Northern Virginia composite deck cost guide</Link></li>
+            <li>→ <Link href="/composite-deck-cost-by-size" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite cost by size (300/400/500/600 sqft)</Link></li>
+            <li>→ <Link href="/monthly-payment-composite-deck-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Monthly payment on a composite deck</Link></li>
             <li>→ <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Interactive deck cost calculator</Link></li>
             <li>→ <Link href="/600-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>600 sqft deck cost</Link></li>
             <li>→ <Link href="/800-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>800 sqft deck cost</Link></li>

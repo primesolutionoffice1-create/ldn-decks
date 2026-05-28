@@ -163,7 +163,10 @@ export default function TrexVsTimberTechPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
+              ['/trex-deck-cost-monthly-payment', 'Trex Deck Cost vs Monthly Payment (by tier)'],
+              ['/timbertech-azek-deck-cost-northern-virginia', 'TimberTech & AZEK Deck Cost (EDGE / PRO / Vintage)'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck Complete Comparison'],
+              ['/wood-vs-composite-deck-long-term-cost', 'Wood vs Composite — 15-Year Long-Term Cost'],
               ['/trex-decks', 'Our Trex Decking Services'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value to Your Home?'],
             ].map(([href, text]) => (

@@ -402,10 +402,14 @@ export default function DeckFinancingPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/deck-payment-estimator', 'Deck Payment Estimator — Estimate Your Monthly Payment'],
+              ['/monthly-payment-composite-deck-northern-virginia', 'Monthly Payment on a Composite Deck — Project Examples'],
+              ['/credit-score-deck-financing', 'What Credit Score Do You Need for Deck Financing?'],
+              ['/best-time-to-finance-build-deck-northern-virginia', 'Best Time of Year to Finance &amp; Build a Deck'],
               ['/deck-cost-calculator', 'Free Deck Cost Calculator — Estimate Your Project'],
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia (2026)'],
               ['/deck-roi-calculator-northern-virginia', 'Deck ROI Calculator — Resale Value Data'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck — Long-Term Cost Comparison'],
+              ['/wood-vs-composite-deck-long-term-cost', 'Wood vs Composite — 15-Year Cost Analysis'],
               ['/before-and-after', 'Before & After Project Gallery'],
               ['/get-estimate', 'Request Your Free Deck Estimate'],
             ].map(([href, text]) => (

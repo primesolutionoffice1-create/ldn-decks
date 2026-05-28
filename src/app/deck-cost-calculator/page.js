@@ -122,6 +122,14 @@ export default function DeckCostCalculator() {
                 <p style={{ fontWeight: 600, color: '#d14817' }}>Deck Payment Estimator</p>
                 <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Compare project cost with monthly payment options</p>
               </Link>
+              <Link href="/composite-deck-cost-by-size" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: '#d14817' }}>Composite Cost by Size</p>
+                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>300 / 400 / 500 / 600 sqft pricing breakdown</p>
+              </Link>
+              <Link href="/monthly-payment-composite-deck-northern-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: '#d14817' }}>Monthly Payment on a Composite Deck</p>
+                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>$15k–$70k project payment examples</p>
+              </Link>
             </div>
           </div>
         </div>

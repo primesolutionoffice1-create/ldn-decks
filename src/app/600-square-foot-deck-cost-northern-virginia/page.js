@@ -141,6 +141,8 @@ export default function SixHundredSqftDeckCostPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '3rem 0 1rem' }}>Related guides</h2>
           <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
             <li>→ <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full Northern Virginia composite deck cost guide</Link></li>
+            <li>→ <Link href="/composite-deck-cost-by-size" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite cost by size (300/400/500/600 sqft)</Link></li>
+            <li>→ <Link href="/monthly-payment-composite-deck-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Monthly payment on a composite deck</Link></li>
             <li>→ <Link href="/multi-level-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Multi-level deck builder Northern Virginia</Link></li>
             <li>→ <Link href="/outdoor-kitchen-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Outdoor kitchen builder Northern Virginia</Link></li>
             <li>→ <Link href="/400-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>400 sqft deck cost</Link></li>

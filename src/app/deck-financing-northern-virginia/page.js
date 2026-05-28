@@ -149,9 +149,12 @@ export default function DeckFinancingPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
+              ['/monthly-payment-composite-deck-northern-virginia', 'Monthly Payment on a Composite Deck'],
+              ['/credit-score-deck-financing', 'Credit Score Required for Deck Financing'],
+              ['/best-time-to-finance-build-deck-northern-virginia', 'Best Time to Finance &amp; Build a Deck'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value?'],
               ['/how-to-choose-a-deck-builder-northern-virginia', 'How to Choose a Deck Builder'],
-              ['/best-time-to-build-a-deck-northern-virginia', 'Best Time to Build'],
+              ['/best-time-to-build-a-deck-northern-virginia', 'Best Time to Build (seasonal calendar)'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>
             ))}

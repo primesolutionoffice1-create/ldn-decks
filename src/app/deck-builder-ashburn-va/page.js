@@ -243,8 +243,10 @@ export default function DeckBuilderAshburnPage() {
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {[
             ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
+            ['/ashburn-composite-deck-cost-financing', 'Ashburn Composite Deck Cost &amp; Financing Guide'],
             ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
             ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
+            ['/deck-permit-hoa-cost-loudoun-county', 'Loudoun Permit + HOA Cost Breakdown'],
             ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
             ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
             ['/deck-payment-estimator', 'Estimate Deck Costs by Monthly Payment'],
