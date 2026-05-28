@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
@@ -190,6 +191,7 @@ export default function TrexVsTimberTechPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
         </ul>
       </section>
+      <RelatedGuides currentPath="/trex-vs-timbertech-vs-azek" />
       <ContactHome />
     </>
   );

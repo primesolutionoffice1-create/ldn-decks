@@ -135,7 +135,7 @@ export default function GazeboPergolaPage() {
 
       <ServicesHeader
         subtext="Gazebos & Pergolas Loudoun VA"
-        title="Custom Built Shade & Structure"
+        title="Custom Gazebo & Pergola Builder in Northern Virginia"
         description="Add lasting value, incredible shade, and stunning architectural character to your outdoor space with a custom gazebo or pergola engineered by Loudoun Decks."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>

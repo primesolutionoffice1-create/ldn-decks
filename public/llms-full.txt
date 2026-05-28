@@ -2,7 +2,7 @@
 
 > This is the extended content index for Loudoun Decks (ldndecks.com). It provides page-level detail for AI retrieval systems, citation engines, and semantic indexing. For the summary version, see: https://ldndecks.com/llms.txt
 
-Last updated: 2026-05-27
+Last updated: 2026-05-28
 Sitemap: https://ldndecks.com/sitemap.xml
 Entity: Loudoun Decks LLC (dba "Loudoun Decks" / "LDN Decks")
 Location: Centreville, VA
@@ -345,6 +345,48 @@ Entity ID: https://ldndecks.com/#organization
 - URL: https://ldndecks.com/deck-permit-hoa-cost-loudoun-county
 - Content: Loudoun County deck permit fees ($200–$1,200), HOA approval cost ($0–$500), timeline, engineering drawing requirements, inspection schedule. Total permit+HOA budget: $500–$2,500.
 - Intent: Informational — permit and HOA budget planning
+- Updated: 2026-05-27
+
+### Monthly Payment on a Composite Deck in Northern Virginia
+- URL: https://ldndecks.com/monthly-payment-composite-deck-northern-virginia
+- Content: Real monthly payment examples for $15k–$70k composite decks. Six-row scenario table at 8.99% APR over 10 and 15 years ($190–$886 /mo range). Lender pre-qualification process, what the project amount should include, financing math vs cash.
+- Intent: Financing planning — monthly payment research before contractor outreach
+- Updated: 2026-05-27
+
+### Trex Deck Cost vs Monthly Payment
+- URL: https://ldndecks.com/trex-deck-cost-monthly-payment
+- Content: Trex tier breakdown (Enhance $35–$45/sqft, Transcend $45–$60/sqft, Signature $60–$80/sqft installed) with per-tier 350/500 sqft project totals and matching monthly payments at 8.99% APR. Warranty comparison and add-on cost guidance.
+- Intent: Commercial cost research — Trex-specific budget planning
+- Updated: 2026-05-27
+
+### TimberTech & AZEK Deck Cost
+- URL: https://ldndecks.com/timbertech-azek-deck-cost-northern-virginia
+- Content: Three-tier TimberTech breakdown — EDGE ($35–$45/sqft), PRO ($45–$60/sqft), AZEK Vintage full PVC ($60–$85/sqft). 50-year residential warranty detail, colorway gallery (English Walnut, Coastline, Mahogany, Dark Hickory, Weathered Teak). Monthly payment matrix.
+- Intent: Commercial cost research — TimberTech/AZEK premium budget planning
+- Updated: 2026-05-27
+
+### Credit Score for Deck Financing
+- URL: https://ldndecks.com/credit-score-deck-financing
+- Content: APR ranges by FICO credit score band (760+: 6.99–8.99% APR; 700–759: 8.99–11.99%; 660–699: 11.99–15.99%). Soft-pull pre-qualification process, alternative paths for sub-620 credit, debt-to-income considerations, lender comparison via Enhancify aggregator.
+- Intent: Financing planning — credit-conscious homeowners assessing approval odds
+- Updated: 2026-05-27
+
+### Best Time to Finance and Build a Deck
+- URL: https://ldndecks.com/best-time-to-finance-build-deck-northern-virginia
+- Content: Season-by-season breakdown of builder pricing (late Feb–Mar: 10–15% off peak), permit queue length, HOA committee availability, and lender promotional rate calendar. Step-by-step timeline from financing decision to finished deck (4–8 weeks).
+- Intent: Informational planning — when to start the financing + build process
+- Updated: 2026-05-27
+
+### Deck Lighting, Railings & Stairs Add-On Cost
+- URL: https://ldndecks.com/deck-lighting-railings-stairs-addon-cost
+- Content: Per-linear-foot pricing for railings (composite $40–$70/ft, aluminum $50–$90/ft, cable $60–$110/ft, glass $90–$160/ft). Stair configurations ($1,500–$15,000+). Lighting packages ($200–$5,000+). Build-time vs retrofit cost delta (30–50% premium for retrofit).
+- Intent: Commercial cost research — add-on budgeting
+- Updated: 2026-05-27
+
+### McLean & Great Falls Premium Deck Budget
+- URL: https://ldndecks.com/mclean-great-falls-premium-deck-budget
+- Content: Premium-tier deck pricing for McLean and Great Falls — premium open deck $40k–$70k, with pergola $55k–$90k, covered deck $75k–$120k+. AZEK Vintage and Trex Signature emphasis, cable railings, integrated lighting, covered structures. Fairfax County permit + engineering coordination notes.
+- Intent: Local premium commercial — McLean/Great Falls high-value buyers
 - Updated: 2026-05-27
 
 ---

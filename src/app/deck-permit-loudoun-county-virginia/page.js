@@ -229,6 +229,13 @@ export default function LoudounPermitPage() {
         </div>
       </article>
 
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '2rem auto 0', background: '#fff7f1', border: '1px solid #f3d3bd', borderRadius: 12 }}>
+        <p style={{ margin: 0, color: '#7a3210', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, fontSize: 12 }}>Free download</p>
+        <h2 style={{ margin: '6px 0 6px', fontSize: '1.4rem' }}>2026 NoVA Deck Permit Checklist</h2>
+        <p style={{ margin: '0 0 12px', color: '#333' }}>The full 6-stage printable checklist that walks you through pre-design, contractor verification, site plan, HOA review, inspections, and final closeout across Loudoun, Fairfax, PWC, and Arlington.</p>
+        <Link href="/lead-magnets/nova-deck-permit-checklist-2026" style={{ color: '#d14817', fontWeight: 700, textDecoration: 'underline' }}>Open the printable checklist →</Link>
+      </section>
+
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Loudoun &amp; Permit Cost Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>

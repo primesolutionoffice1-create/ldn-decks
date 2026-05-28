@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -128,6 +129,8 @@ export default function PWCountyPermitPage() {
       </article>
       <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/contact" />
       <NamedAuthor context="Prince William County" lastUpdated="2026-05-26" />
+
+      <RelatedGuides currentPath="/deck-permit-prince-william-county-virginia" />
 
       <ContactHome />
     </>

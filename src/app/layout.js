@@ -5,6 +5,7 @@ import "./variables.css";
 import "./globals.css";
 import Script from "next/script";
 import StructuredData from "../components/StructuredData";
+import WebVitalsReporter from "../components/WebVitalsReporter";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -198,6 +199,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </LayoutContent>
                     <SpeedInsights />
                     <Analytics />
+                    <WebVitalsReporter />
         </ContactProvider>
       </body>
     </html>

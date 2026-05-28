@@ -203,6 +203,19 @@ export const SEGMENT_LABELS = {
   'deck-permit-hoa-cost-loudoun-county': 'Deck Permit & HOA Cost — Loudoun County',
   'resurface-or-replace-deck-financing': 'Resurface or Replace — Financing Guide',
   'wood-vs-composite-deck-long-term-cost': 'Wood vs Composite Deck Long-Term Cost',
+
+  // Filled from scripts/audit-breadcrumbs.mjs 2026-05-28
+  'best-time-to-finance-build-deck-northern-virginia': 'Best Time to Finance & Build a Deck in NoVA',
+  'credit-score-deck-financing': 'Credit Score & Deck Financing',
+  'deck-lighting-railings-stairs-addon-cost': 'Deck Lighting, Railings & Stairs Add-on Cost',
+  'mclean-great-falls-premium-deck-budget': 'McLean & Great Falls Premium Deck Budget',
+  'rooftop-deck-washington-dc': 'Rooftop Deck — Washington DC',
+  'sully-station-hoa-deck-rules': 'Sully Station HOA Deck Rules',
+  'virginia-run-hoa-deck-rules': 'Virginia Run HOA Deck Rules',
+
+  // Lead-magnet pages
+  'lead-magnets': 'Lead Magnets',
+  'nova-deck-permit-checklist-2026': 'NoVA Deck Permit Checklist 2026',
 };
 
 const humanize = (slug) =>

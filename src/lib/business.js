@@ -27,7 +27,7 @@ export const BUSINESS = {
   ],
   aggregateRating: {
     ratingValue: '5.0',
-    reviewCount: '49',
+    reviewCount: 49,
     bestRating: '5',
     worstRating: '1',
   },

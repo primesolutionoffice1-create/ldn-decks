@@ -15,6 +15,11 @@
         "seo:audit-images": "node scripts/audit-image-alt.mjs --verbose",
         "seo:audit-freshness": "node scripts/audit-content-freshness.mjs --verbose",
         "seo:weekly": "node scripts/seo-weekly-report.mjs",
+        "gbp:this-week": "node scripts/gbp-this-week.mjs",
+        "blog:new": "node scripts/new-blog-post.mjs",
+        "seo:audit-og": "node scripts/audit-og-images.mjs",
+        "seo:audit-breadcrumbs": "node scripts/audit-breadcrumbs.mjs",
+        "seo:verify-robots": "node scripts/verify-robots-indexnow.mjs",
         "automation:verify": "node scripts/automation-stack-verify.mjs"
     },
     "dependencies": {

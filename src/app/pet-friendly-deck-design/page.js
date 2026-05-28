@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -122,6 +123,8 @@ export default function PetFriendlyDeckPage() {
       </article>
       <SimpleCTA title="Design a Deck Your Whole Family Loves" buttonText="Get Free Estimate" link="/contact" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
+      <RelatedGuides currentPath="/pet-friendly-deck-design" />
 
       <ContactHome />
     </>

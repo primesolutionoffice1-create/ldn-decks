@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -175,6 +176,7 @@ export default function DeckFinancingPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>
       </section>
+      <RelatedGuides currentPath="/deck-financing-northern-virginia" />
       <ContactHome />
     </>
   );

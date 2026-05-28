@@ -128,6 +128,37 @@ const OG_IMAGE_DIMENSIONS = {
     "/images/img36.jpeg": { width: 1600, height: 900 },   // 16:9 — acceptable for OG
     "/showcase/img08.jpeg": { width: 960, height: 720 },  // 4:3
     "/showcase/img05.jpeg": { width: 1024, height: 768 }, // 4:3
+    // Bulk-populated 2026-05-28 from scripts/audit-og-images.mjs. Most photos
+    // are 4:3 landscape or 3:4 portrait — not the 1.91:1 OG ideal. Listing
+    // them here at least lets scrapers size them without fetching; replacing
+    // them with proper 1200x630 OG cards remains a separate task.
+    "/showcase/img09.jpeg": { width: 960, height: 720 },
+    "/images/img01.jpeg": { width: 1200, height: 1600 },
+    "/images/img10.jpeg": { width: 1600, height: 1200 },
+    "/images/img16.jpeg": { width: 1200, height: 1600 },
+    "/images/img64.jpeg": { width: 1600, height: 1200 },
+    "/images/img04.jpeg": { width: 1200, height: 1600 },
+    "/images/img26.jpeg": { width: 1600, height: 1200 },
+    "/images/img37.jpeg": { width: 1200, height: 1600 },
+    "/images/img05.jpeg": { width: 1200, height: 1600 },
+    "/images/deck-inspection.png": { width: 1024, height: 1024 },
+    "/images/img29.jpeg": { width: 1200, height: 1600 },
+    "/images/img35.jpeg": { width: 1200, height: 1600 },
+    "/images/img11.jpeg": { width: 1600, height: 1200 },
+    "/images/blog-permit-guide.png": { width: 1024, height: 1024 },
+    "/images/img08.jpeg": { width: 1600, height: 1200 },
+    "/home-page-ldn.webp": { width: 1536, height: 1024 },
+    "/images/img09.jpeg": { width: 1200, height: 1600 },
+    "/images/img14.jpeg": { width: 1125, height: 1364 },
+    "/images/img67.webp": { width: 1536, height: 1017 },
+    "/showcase/img12.jpeg": { width: 1600, height: 1200 },
+    "/images/img22.jpeg": { width: 1600, height: 1200 },
+    "/images/img17.jpeg": { width: 1200, height: 1600 },
+    "/showcase/img07.jpeg": { width: 768, height: 1024 },
+    "/images/img12.jpeg": { width: 1200, height: 1600 },
+    "/social/deck-beam-span-calculator-virginia-social.png": { width: 1200, height: 630 },
+    "/social/deck-footing-depth-calculator-virginia-social.png": { width: 1200, height: 630 },
+    "/social/deck-joist-span-calculator-virginia-social.png": { width: 1200, height: 630 },
 };
 
 export function buildMetadata({

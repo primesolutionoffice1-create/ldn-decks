@@ -6,6 +6,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import TrustBanner from '@/components/TrustBanner';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
@@ -185,6 +186,8 @@ export default function ResurfacingVsReplacementPage() {
       <ServicesCallToAction />
       <SimpleCTA title="Free Deck Inspection Resurface or Replace?" buttonText="Schedule Free Inspection" link="/contact" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
+      <RelatedGuides currentPath="/deck-resurfacing-vs-replacement" />
 
       <ContactHome />
     </>

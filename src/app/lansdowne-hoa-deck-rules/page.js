@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
@@ -111,6 +112,7 @@ export default function LansdowneHoaDeckRulesPage() {
       </article>
       <SimpleCTA title="Lansdowne deck project? We handle every approval." buttonText="Get Free Estimate" link="/contact" />
       <NamedAuthor context="Lansdowne (Leesburg) and Loudoun County" lastUpdated="2026-05-27" />
+      <RelatedGuides currentPath="/lansdowne-hoa-deck-rules" />
       <ContactHome />
     </>
   );

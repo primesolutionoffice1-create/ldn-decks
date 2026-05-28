@@ -11,6 +11,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import SimpleCTA from '@/components/SimpleCTA';
+import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -57,6 +58,17 @@ const serviceFAQs = [
     a: 'Decks are structural exterior systems. A local deck specialist knows the county permit process, frost-depth footing expectations, ledger attachment details, HOA rules, composite manufacturer requirements and the design patterns that work in Northern Virginia yards.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': 'https://ldndecks.com/deck-builder-northern-virginia#faq',
+  mainEntity: serviceFAQs.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+};
 
 const expansionSections = [
   {
@@ -205,6 +217,7 @@ function FaqSection() {
 export default function DeckBuilderNorthernVirginiaPage() {
   return (
     <main>
+      <JsonLd data={faqSchema} />
       <WebPageSchema url="https://ldndecks.com/deck-builder-northern-virginia" name="Custom Deck Builder in Northern Virginia" description="Custom deck builder in Northern Virginia for composite, PVC, wood, replacement, permits and HOA approvals. Serving Loudoun, Fairfax and Prince William." speakable />
       <ServiceSchema
         url="https://ldndecks.com/deck-builder-northern-virginia"

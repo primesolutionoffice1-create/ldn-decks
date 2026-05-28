@@ -4,6 +4,7 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import TrustBanner from '@/components/TrustBanner';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
@@ -12,7 +13,7 @@ import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/how-to-choose-a-deck-builder-northern-virginia',
-  title: 'How to Choose a Deck Builder in Northern Virginia (10 Questions + Red Flags)',
+  title: 'How to Choose a Deck Builder in Northern Virginia (2026)',
   description: '10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license. From a 5-star rated NoVA deck builder.',
 });
 
@@ -158,6 +159,8 @@ export default function ChooseDeckBuilderPage() {
 
       <SimpleCTA title="We'll Answer All 10 Questions on the Phone" buttonText="Call (571) 655-7207" link="phone" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
+      <RelatedGuides currentPath="/how-to-choose-a-deck-builder-northern-virginia" />
 
       <ContactHome />
     </>

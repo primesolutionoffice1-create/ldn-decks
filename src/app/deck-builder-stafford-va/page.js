@@ -118,9 +118,9 @@ export default function StaffordDeckBuilderPage() {
             {[
               ['/deck-builder-woodbridge-va', 'Woodbridge'],
               ['/deck-builder-manassas-va', 'Manassas'],
-              ['/near-you/prince-william-county/dumfries', 'Dumfries'],
-              ['/near-you/prince-william-county/quantico', 'Quantico'],
-              ['/near-you/prince-william-county/triangle', 'Triangle'],
+              ['/near-you/prince-william-county', 'Dumfries'],
+              ['/near-you/stafford-county', 'Quantico'],
+              ['/near-you/stafford-county', 'Triangle'],
             ].map(([href, text]) => (
               <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
             ))}

@@ -4,13 +4,14 @@ import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
+import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/how-long-to-build-a-deck-northern-virginia',
-  title: 'How Long to Build a Deck in Virginia',
+  title: 'Deck Build Timeline in Northern Virginia | LDN Decks',
   description: 'Most decks take 2-4 weeks to build after permits. Full timeline: consultation (1 week), permits (2-6 weeks), construction (2-4 weeks). Total: 6-12 weeks.',
 });
 
@@ -169,6 +170,8 @@ export default function HowLongToBuildPage() {
 
       <SimpleCTA title="Ready to Start? Book Your Free Consultation" buttonText="Get Free Estimate" link="/contact" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+
+      <RelatedGuides currentPath="/how-long-to-build-a-deck-northern-virginia" />
 
       <ContactHome />
     </>

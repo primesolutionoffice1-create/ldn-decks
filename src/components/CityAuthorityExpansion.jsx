@@ -30,6 +30,12 @@ const CITY_DATA = {
     projectTypes: ['builder deck resurfacing', 'new composite decks', 'safe stair rebuilds', 'covered grill zones', 'railing replacement'],
     localNotes: ['Braemar and Linton Hall HOA review', 'Prince William County permit timing', 'older builder-grade frames entering replacement age'],
     premium: 'The best Bristow projects balance budget and durability: preserve sound framing when possible, upgrade surfaces and rails, and solve the stair or landing problems that make an older deck feel tired.',
+    cityFaqs: [
+      { q: 'What does a deck cost in Bristow, VA?', a: 'Bristow deck projects typically run $20,000 to $42,000. Composite resurfacing on a sound builder frame: $14,000 to $20,000. Full Trex Enhance or Transcend replacement on 350-500 sqft: $26,000 to $38,000. Screened porches and multi-level designs run higher. Most Bristow homes are 2003-2015 builds with original PT decks now at end of life.' },
+      { q: 'Which Bristow HOAs do you submit to?', a: 'We regularly submit to Braemar Homeowners Association, Linton Hall area HOAs, Sheffield Manor, Victory Lakes, and the smaller townhome associations. Each runs its own architectural review with specific color and railing requirements — we map current guidelines before design starts.' },
+      { q: 'What deck features do Bristow families request most?', a: 'Bristow is a family-heavy market, so we see strong demand for safe stair geometry (lower-rise, deeper-tread), wider landings, picture-frame board patterns, integrated stair lighting, and covered grill zones for year-round outdoor cooking. Privacy-friendly railing systems (composite balustrade or matte-black aluminum) are also common.' },
+      { q: 'How long is a Bristow project from contract to completion?', a: '8-12 weeks total: Prince William County permit runs 2-4 weeks through the ePortal; HOA approval (parallel with permit) 2-3 weeks; material delivery 1-2 weeks; on-site construction 1-2 weeks. Multi-level or screened-porch additions add 1-2 weeks to construction.' },
+    ],
   },
   burke: {
     name: 'Burke',
@@ -42,6 +48,12 @@ const CITY_DATA = {
     projectTypes: ['deck replacement', 'structural repair', 'composite resurfacing', 'under-deck drainage', 'screened porch transitions'],
     localNotes: ['Fairfax County plan review', 'tree coverage and moisture exposure', 'older deck ledgers and footings that need inspection'],
     premium: 'A Burke deck often needs structural thinking first: ledger condition, post bases, stair movement and drainage around mature landscaping before the finish boards are selected.',
+    cityFaqs: [
+      { q: 'Why do Burke decks need structural inspection before resurfacing?', a: 'Most Burke neighborhoods were built 1970s-1990s, so existing decks are 25-50 years old. Posts, footings, ledger boards, and joist hangers regularly show rot, corrosion, or undersized framing under code. We always inspect structure first — a beautiful composite surface over a failing frame is a code failure waiting to happen. The structural pass also determines whether resurfacing or full replacement is the right scope.' },
+      { q: 'What does a Burke deck replacement cost?', a: 'Burke deck replacements typically run $24,000 to $55,000 depending on size, slope, and structural complexity. Walk-out basement decks with elevated framing: $32,000 to $48,000. Multi-level builds on sloped Burke Centre lots: $40,000 to $60,000. Composite resurfacing (when frame passes inspection): $14,000 to $22,000.' },
+      { q: 'Which Burke neighborhoods do you build in?', a: 'We build regularly in Burke Centre, Burke Cove, Lake Braddock, Burke Lake Park area, Cherry Run, Cardinal Park, Fairfax Station-adjacent, and the older single-family communities along Burke Lake Road. Each has its own HOA or civic association — most require ARC approval for visible exterior changes.' },
+      { q: 'Do you handle under-deck drainage in Burke?', a: 'Yes — Burke\'s mature tree canopy, sloped lots, and walk-out basements make under-deck dry systems (Trex RainEscape, Timbertech Dry Joist EZ) a common request. We install these as part of original construction or as add-ons to existing decks. They turn the lower-level patio into usable rainproof space year-round.' },
+    ],
   },
   fallsChurch: {
     name: 'Falls Church',
@@ -54,6 +66,12 @@ const CITY_DATA = {
     projectTypes: ['compact composite decks', 'privacy screens', 'screened porches', 'stair and landing rebuilds', 'deck lighting'],
     localNotes: ['Fairfax County or City of Falls Church jurisdiction checks', 'older home attachment details', 'neighbor visibility and setback planning'],
     premium: 'Falls Church projects win by using space precisely: cleaner circulation, privacy where it matters and materials that make a smaller deck feel intentional rather than squeezed in.',
+    cityFaqs: [
+      { q: 'City of Falls Church or Fairfax County — which permit do I need?', a: 'Depends on the parcel. The City of Falls Church is an independent jurisdiction (separate from Fairfax County) with its own Department of Development Services. Properties inside city limits permit through the city; properties just outside permit through Fairfax County LDS. We verify parcel jurisdiction with the GIS before scoping the permit.' },
+      { q: 'What does a compact Falls Church deck cost?', a: 'Falls Church infill lots typically support 180-350 sqft decks ranging from $18,000 to $42,000. Premium composite or PVC with aluminum railings runs $45-70/sqft installed. Privacy screening, integrated planters, low-voltage lighting, and screen room conversions are common add-ons that push toward the upper range.' },
+      { q: 'Which Falls Church neighborhoods do you build in?', a: 'We build across Falls Church proper plus East Falls Church, Falls Hill, Pimmit Hills, Broyhill Park, Sleepy Hollow, and Westmoreland. Smaller lots often require careful setback work and neighbor sightline planning — we handle this in the design phase.' },
+      { q: 'How do you handle small-lot privacy in Falls Church?', a: 'Privacy is the design challenge in Falls Church. We use slatted composite or stained-cedar privacy screens, planter walls, partial pergola roofs to define edges without blocking sky, and strategic landscape coordination. A well-designed compact Falls Church deck reads intentional rather than squeezed in.' },
+    ],
   },
   haymarket: {
     name: 'Haymarket',
@@ -66,6 +84,12 @@ const CITY_DATA = {
     projectTypes: ['large composite decks', 'covered decks', 'outdoor kitchens', 'cable railings', 'multi-level layouts'],
     localNotes: ['Prince William County inspections', 'HOA review in planned communities', 'wind and sun exposure on open lots'],
     premium: 'Haymarket homeowners often have room to build the full outdoor system: deck, shade, stairs, lighting and grill space planned together rather than as disconnected add-ons.',
+    cityFaqs: [
+      { q: 'What does a Haymarket deck typically cost?', a: 'Haymarket deck projects typically run $28,000 to $75,000. Premium composite on 400-600 sqft: $32,000 to $58,000. Large multi-level builds with covered roof sections: $55,000 to $85,000. Outdoor kitchen integrations push toward the upper end. Haymarket\'s larger western Prince William lots support bigger outdoor systems than inner-NoVA markets.' },
+      { q: 'Which Haymarket communities have HOA review?', a: 'Heritage Hunt (55+), Piedmont, Dominion Valley Country Club, Greenhill Crossing, and Stonewall Heights all have architectural review committees. Each has specific railing-height, color, and material guidelines — we carry current approved-finish lists for all major Haymarket HOAs.' },
+      { q: 'Do you build outdoor kitchens in Haymarket?', a: 'Yes — Haymarket\'s larger lots and entertaining-focused backyards make outdoor kitchens a frequent request. Typical Haymarket outdoor kitchen: $18,000 to $75,000 depending on built-in grill brand, counter material, electrical/gas/water infrastructure, and storage cabinetry. We coordinate with electricians, plumbers, and gas fitters as part of the project.' },
+      { q: 'What materials work best for sun-exposed Haymarket lots?', a: 'Open western Prince William lots get heavy summer sun, so heat retention matters. We recommend TimberTech AZEK Vintage Coastline or Mahogany (lighter colors retain less heat), Trex Transcend in Vintage Lantern (cooler temperature reading), and cable railings to preserve mountain views. Avoid dark composite surfaces on full-sun decks — they read 30-50°F hotter than lighter shades.' },
+    ],
   },
   lorton: {
     name: 'Lorton',
@@ -78,6 +102,12 @@ const CITY_DATA = {
     projectTypes: ['elevated decks', 'deck replacement', 'structural inspection', 'under-deck patios', 'stair rebuilds'],
     localNotes: ['Fairfax County permit review', 'grade changes and stair landings', 'drainage around lower-level patios'],
     premium: 'A strong Lorton deck should make the slope work for the homeowner, turning elevation into usable upper-deck and lower-patio space without ignoring footings, posts and water movement.',
+    cityFaqs: [
+      { q: 'What does a Lorton elevated deck cost?', a: 'Lorton elevated decks typically run $26,000 to $55,000. Walk-out basement designs (deck above, patio below): $32,000 to $58,000. Multi-level builds with intermediate landings: $38,000 to $68,000. Hillside Lorton lots often need engineered footings and stronger framing, which adds 10-15% to base cost.' },
+      { q: 'How do you handle sloped backyard structure in Lorton?', a: 'Sloped Lorton lots need elevated framing on deeper footings (often 36-48 inches versus the 24-inch frost-depth code minimum) plus stronger post bases and lateral bracing. We engineer each footing layout to match the soil conditions and grade. The structural work matters more than the surface — a beautiful composite over a poorly engineered frame won\'t pass inspection.' },
+      { q: 'Which Lorton communities do you build in?', a: 'We build across Lorton\'s diverse neighborhoods: Laurel Hill, Mason Neck, Pohick, Newington Forest, Crosspointe, Springbrook Estates, and Workhouse-area communities. Each has different lot sizes, slope conditions, and HOA processes — we research before quoting.' },
+      { q: 'Do you build under-deck patios in Lorton?', a: 'Yes — Lorton\'s sloped, walk-out basement homes are ideal for under-deck dry systems creating usable lower-level patio space. We install Trex RainEscape, TimberTech Dry Joist EZ, or Zip-UP under-deck ceilings during construction. Lower patio becomes a covered outdoor room with deck above used for sun and grilling.' },
+    ],
   },
   oakton: {
     name: 'Oakton',
@@ -90,6 +120,12 @@ const CITY_DATA = {
     projectTypes: ['premium composite decks', 'covered decks', 'screened porches', 'multi-level decks', 'deck inspections'],
     localNotes: ['Fairfax County inspection expectations', 'tree shade and leaf-load maintenance', 'custom-home material matching'],
     premium: 'Oakton projects should feel tailored: tighter detailing, better transitions from interior rooms, upgraded railing choices and structure that supports a long-term outdoor living plan.',
+    cityFaqs: [
+      { q: 'What does a premium Oakton deck cost?', a: 'Oakton deck projects typically run $35,000 to $85,000. Premium TimberTech AZEK or Trex Transcend on 400-600 sqft: $40,000 to $65,000. Multi-level builds with cable railings, integrated lighting, and screened porch components: $60,000 to $95,000. Oakton homeowners typically choose the premium tier of composite — we rarely install entry-grade boards here.' },
+      { q: 'Which Oakton neighborhoods do you build in most?', a: 'We build regularly in Hunter Mill, Vale Estates, Oak Marr, Crowell Farm, Oak Hill Estates, Greenwood Manor, and the rural-edge Oakton communities. Most lots are 1+ acre with mature tree canopy and custom home elevations that demand careful material matching.' },
+      { q: 'What composite materials do Oakton homeowners choose?', a: 'Oakton\'s custom-home market favors TimberTech AZEK Vintage Mahogany, Coastline, or Weathered Teak for premium projects; Trex Transcend Tiki Torch, Vintage Lantern, or Spiced Rum for traditional colonials; and cable or glass railings to preserve the wooded views typical of Oakton properties. Picture-frame board patterns and hidden fasteners are standard, not upgrades.' },
+      { q: 'Do you build screened porches in Oakton?', a: 'Yes — Oakton\'s mature tree canopy and bug season make screened porches especially valuable. Typical Oakton screened porch: $55,000 to $95,000 with full structural roof, EZE-Breeze or Phantom Screen systems, ceiling fans, electric, and integrated lighting. Connected to a new or existing deck for the full indoor-outdoor flow.' },
+    ],
   },
   purcellville: {
     name: 'Purcellville',
@@ -115,6 +151,12 @@ const CITY_DATA = {
     projectTypes: ['HOA-ready composite decks', 'resurfacing', 'privacy screening', 'stair lighting', 'deck replacement'],
     localNotes: ['South Riding Proprietary review', 'Loudoun County permits', 'neighbor sightlines and compact lot planning'],
     premium: 'South Riding decks perform best when they solve practical problems: reduce maintenance, improve privacy, make stairs safer and turn a builder patio door into an outdoor room families use daily.',
+    cityFaqs: [
+      { q: 'What does an estate-scale Purcellville deck cost?', a: 'Purcellville estate decks typically run $45,000 to $120,000. Large covered decks with outdoor kitchens: $65,000 to $95,000. Multi-level builds with mountain-view cable railings and integrated lighting: $75,000 to $110,000. Western Loudoun\'s larger lots support bigger outdoor systems than inner-NoVA markets.' },
+      { q: 'Town of Purcellville or Loudoun County — which permit?', a: 'Properties inside Purcellville town limits permit through the Town of Purcellville; properties just outside permit through Loudoun County LandMARC. The boundary matters: Town of Purcellville and Loudoun County have different submission processes, fee structures, and inspection cadences. We verify jurisdiction with the GIS before scoping.' },
+      { q: 'Do you build covered decks in Purcellville?', a: 'Yes — Purcellville\'s rural lots, sun exposure, and entertaining culture make covered decks a frequent request. Typical Purcellville covered deck: $48,000 to $85,000 with structural roof, integrated ceiling fans, electric, and tongue-and-groove ceiling. Designed to extend usable outdoor time into Virginia\'s hot summer afternoons and rainy spring evenings.' },
+      { q: 'How do you handle Blue Ridge view preservation?', a: 'Western Loudoun homes often have direct Blue Ridge views worth preserving. We use cable railings (4mm stainless steel) or glass-panel systems instead of opaque balustrades — both pass code at full railing height while maintaining sight lines. Strategic post placement, lower-profile post caps, and cap lighting that doesn\'t reflect into the view round out the approach.' },
+    ],
   },
   springfield: {
     name: 'Springfield',
@@ -127,6 +169,12 @@ const CITY_DATA = {
     projectTypes: ['deck replacement', 'structural repair', 'composite resurfacing', 'stair rebuilds', 'inspection-driven upgrades'],
     localNotes: ['Fairfax County permits', 'older ledgers and posts', 'tree shade, moisture and stair safety concerns'],
     premium: 'In Springfield, the highest-value work is often not the biggest deck; it is the safest, cleanest replacement that fixes structure, improves stairs and gives the home a low-maintenance outdoor space.',
+    cityFaqs: [
+      { q: 'Do you handle South Riding Proprietary submissions?', a: 'Yes. We prepare the full South Riding Proprietary architectural submission — site plan, materials list with brand and color, railing details, and any required rendering — and submit it on your behalf. Our 100% South Riding approval rate reflects how carefully we map each design to the community guidelines before submitting.' },
+      { q: 'What does a South Riding deck typically cost?', a: 'South Riding deck projects typically run $20,000 to $42,000. Composite resurfacing on builder frame: $14,000 to $20,000. Full PT-to-composite replacement: $24,000 to $36,000. Screened porch additions push toward the upper end. South Riding\'s planned-community lots favor compact, well-designed decks over oversized layouts.' },
+      { q: 'Which railings and colors are approved in South Riding?', a: 'South Riding\'s architectural standards favor white composite balustrade, black aluminum, or bronze cable systems. Trex Transcend in Spiced Rum, Tiki Torch, or Havana Gold; TimberTech in similar earth tones. We carry current South Riding-approved finish lists, so material selection happens before submission.' },
+      { q: 'How long does South Riding ARC review take?', a: 'South Riding architectural review averages 14 to 21 days from a complete submission. Incomplete packages return for revision, adding 1 to 2 weeks. We never submit until samples, drawings, and the project narrative are aligned to current guidelines — first-round approval matters because re-submission can push project start by a month.' },
+    ],
   },
   alexandria: {
     name: 'Alexandria',
@@ -139,6 +187,12 @@ const CITY_DATA = {
     projectTypes: ['composite resurfacing of rear townhouse decks', 'screened porch additions', 'Old Town ARB-compliant rebuilds', 'second-story stair rebuilds', 'historic-district railing replacements'],
     localNotes: ['City of Alexandria is an independent city — permits run through City of Alexandria DPI, not Fairfax County', 'Old Town and Parker-Gray Historic Districts require Architectural Review Board (ARB) approval before any rear-deck change visible from the public right-of-way', 'City tree-protection ordinance limits trenching near mature trees during footing installation'],
     premium: 'Alexandria projects win on detailing rather than scale. The deck has to fit the home: an Old Town federal needs hand-rail proportions that match the front of the house; a Del Ray bungalow wants a screened porch that reads like an original sleeping porch; a North Ridge colonial needs a deck-and-stair sequence that respects the formal yard.',
+    cityFaqs: [
+      { q: 'What does a Springfield deck replacement cost?', a: 'Springfield deck replacements typically run $24,000 to $52,000. Composite over passing structure (resurfacing): $14,000 to $22,000. Full PT-to-composite rebuild including frame: $30,000 to $48,000. Multi-level walk-out basement designs: $36,000 to $60,000. Most Springfield decks needing replacement were built 1985-2000 with undersized framing by today\'s code.' },
+      { q: 'Why do Springfield decks need structural review?', a: 'Springfield\'s housing stock is mostly 1960s-1990s. Wood decks from that era have aged 25-40 years — ledger boards rot, joist hangers corrode, posts settle, and many were built before current code (2x10 joists at 16-inch spacing, properly flashed ledger, code-current stair geometry). We inspect every Springfield deck before quoting resurfacing — a beautiful composite surface over failing structure isn\'t a deal, it\'s a future code failure.' },
+      { q: 'Which Springfield neighborhoods do you build in?', a: 'We build regularly in West Springfield, Springfield proper, Lake Braddock, Saratoga, Newington Forest, Cardinal Forest, Pohick, and Rolling Forest. Each has different lot sizes, slope conditions, mature-tree challenges, and HOA processes — we factor these into design before quoting.' },
+      { q: 'How long is a Springfield project from contract to completion?', a: '10-14 weeks total for replacements: structural inspection 1 week; Fairfax County plan review 3-6 weeks; HOA approval (parallel) 2-3 weeks; material delivery 2 weeks; demolition and rebuild 2-3 weeks. Resurfacing-only projects (when structure passes) cut this to 6-8 weeks total.' },
+    ],
   },
   chantilly: {
     name: 'Chantilly',
