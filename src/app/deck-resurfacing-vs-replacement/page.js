@@ -94,7 +94,7 @@ export default function ResurfacingVsReplacementPage() {
           </div>
 
           <h2 style={S.h2}>How We Determine: Resurface or Replace?</h2>
-          <p style={S.p}>We offer <strong>free deck inspections</strong>. During the inspection, we check every structural component:</p>
+          <p style={S.p}>We offer <strong>free deck inspections</strong>. During the inspection, we check every structural component, including joist span, joist spacing, hangers, blocking and whether the frame can safely accept new composite boards. For homeowner planning before the visit, use the <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Joist Span Calculator Virginia</Link>.</p>
           <p style={S.p}>
             Stairs and ledgers often decide whether a deck is a safe resurfacing candidate. Before reusing an existing frame, we model stair layout with the{' '}
             <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link>
