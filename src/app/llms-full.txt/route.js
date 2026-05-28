@@ -232,6 +232,64 @@ In Northern Virginia, a composite deck recoups 60–80% of its cost at resale. T
 
 ### How much does a screened porch cost in Northern Virginia?
 A screened porch in Northern Virginia costs $25,000–$70,000+ depending on size, materials, and features. A basic 150 sqft screened porch starts around $25,000. Premium screened porches with ceiling fans, lighting, and custom screens range from $60,000–$80,000+.
+
+## Financing & Payment Estimator Pages (2026)
+
+### Monthly Payment on a Composite Deck in Northern Virginia
+URL: https://ldndecks.com/monthly-payment-composite-deck-northern-virginia
+Real monthly payment examples for $15,000–$70,000 composite decks at a sample 8.99% APR over 10 and 15 years. Six-row scenario table covers resurfacing ($15k → $190/mo over 10y) through covered premium deck ($70k → $886/mo over 10y). Includes APR band guidance (8–11% for 680–740 credit), home equity vs unsecured trade-off, and 7-step financing-to-finished-deck timeline.
+
+### Trex Deck Cost vs Monthly Payment
+URL: https://ldndecks.com/trex-deck-cost-monthly-payment
+Trex tier breakdown — Enhance $35–$45/sqft installed, Transcend $45–$60/sqft, Signature $60–$80/sqft. Per-tier 350 sqft project total ($18k Enhance → $28k+ Signature) with matching 10y monthly payment at 8.99% APR. 25/50-year warranty comparison and what drives the Trex project amount up or down.
+
+### TimberTech & AZEK Deck Cost
+URL: https://ldndecks.com/timbertech-azek-deck-cost-northern-virginia
+Three-tier TimberTech breakdown — EDGE Prime+ $35–$45/sqft, PRO Reserve $45–$60/sqft, AZEK Vintage full PVC $60–$85/sqft. 50-year residential warranty on AZEK Vintage. Colorway gallery (English Walnut, Coastline, Mahogany, Dark Hickory, Weathered Teak). Construction detail (capped composite vs full PVC), monthly payment matrix.
+
+### Composite Deck Cost by Size
+URL: https://ldndecks.com/composite-deck-cost-by-size
+Per-size cost matrix for 300, 400, 500, and 600 sqft composite decks in Northern Virginia. Each size shows budget tier (Trex Enhance/Fiberon Good Life), mid tier (Trex Transcend/TimberTech PRO), and premium (Trex Signature/AZEK Vintage). Explains why cost doesn't scale linearly with size — railings, stairs, lighting, footings scale differently.
+
+### Covered Deck Cost in Northern Virginia
+URL: https://ldndecks.com/covered-deck-cost-northern-virginia
+Cover type cost breakdown: open pergola ($8k–$18k add-on), solid pergola louvered/shingle ($15k–$35k), full hip/gable roof ($25k–$55k), screened porch conversion ($15k–$45k above the cover). Total project examples by size + monthly payment at 8.99% APR. Permit detail for covered structures (different load calculations, engineering drawings).
+
+### Wood vs Composite Deck Long-Term Cost
+URL: https://ldndecks.com/wood-vs-composite-deck-long-term-cost
+15-year total cost comparison for a 350 sqft deck in Northern Virginia. Upfront wood $10.5k–$16k vs composite $22k–$32k. But wood adds $7k–$15k+ in cumulative stain/seal ($360–$700/yr), sanding every 5 years, and board replacement years 8–15. Total 15-year cost often favors composite. Financing math: same APR, different principal.
+
+### Resurface or Replace Before Financing? Decision Guide
+URL: https://ldndecks.com/resurface-or-replace-deck-financing
+Should you resurface or replace your deck before financing? Cost comparison table (350 sqft project: $18k–$28k resurface vs $25k–$38k replace = $7k–$10k saved). Binary structural inspection decision tree (joists/posts/footings/ledger). Financing math at 8.99% APR: $278/mo resurface vs $405/mo replace on the same loan terms.
+
+### Deck Resurfacing in Northern Virginia
+URL: https://ldndecks.com/deck-resurfacing-northern-virginia
+County-by-county composite deck resurfacing service in Loudoun, Fairfax, Prince William, Arlington, and Alexandria. Typical $15k–$30k+ for a 300–400 sqft deck. Inspection process before resurfacing (joists, posts, footings, ledger, flashing). What's included in the resurfacing service. Recent project examples in Ashburn, South Riding, Brambleton.
+
+### Credit Score for Deck Financing
+URL: https://ldndecks.com/credit-score-deck-financing
+APR ranges by FICO credit score band. 760+ qualifies for 6.99–8.99% APR (excellent tier, promotional 0% offers, longer terms). 700–759 typically gets 8.99–11.99%. 660–699 sees 11.99–15.99%. Below 620 requires HELOC, co-signer, or wait-and-improve. Soft-pull pre-qualification process via Enhancify returns multi-lender offers in ~60 seconds with no credit score impact.
+
+### Best Time to Finance and Build a Deck in Northern Virginia
+URL: https://ldndecks.com/best-time-to-finance-build-deck-northern-virginia
+Season-by-season analysis. Late winter (Feb–Mar) is the best overall window: 10–15% better builder pricing, shortest county and HOA queues. Early fall (Sept–Oct) is second-best with strongest lender promotional rates. Avoid June–August (peak demand stacks builder + permit + HOA delays). Promotional rate calendar by lender season.
+
+### Deck Lighting, Railings, and Stairs Add-On Cost
+URL: https://ldndecks.com/deck-lighting-railings-stairs-addon-cost
+Per-linear-foot railing pricing: composite $40–$70/ft, aluminum $50–$90/ft, cable $60–$110/ft, glass $90–$160/ft, PT wood $30–$50/ft. Stair configurations from single 3-riser flight ($1,500) through wraparound cascading stairs ($6,000–$15,000+). Lighting packages from $200 post-cap basics through $5,000+ smart-controlled multi-zone systems. Build-time vs retrofit cost delta (30–50% premium for retrofit).
+
+### McLean & Great Falls Premium Deck Budget
+URL: https://ldndecks.com/mclean-great-falls-premium-deck-budget
+Premium-tier deck pricing for McLean and Great Falls — premium open deck $40k–$70k, with pergola $55k–$90k, covered deck $75k–$120k+. AZEK Vintage and Trex Signature emphasis, cable railings, integrated lighting, covered structures. Fairfax County permit + engineering coordination notes. Project timeline typically 8–14 weeks.
+
+### Ashburn Composite Deck Cost and Financing
+URL: https://ldndecks.com/ashburn-composite-deck-cost-financing
+Neighborhood-level deck pricing for Ashburn VA covering Ashburn Village, Brambleton, Belmont Country Club, Broadlands, One Loudoun, and Stone Ridge. HOA review timeline per community (Ashburn Village ARC: 2–4 weeks; Belmont Country Club: 4–6 weeks). Typical 300–400 sqft composite $22,000–$42,000. Recent project examples in each neighborhood.
+
+### Deck Permit and HOA Costs in Loudoun County
+URL: https://ldndecks.com/deck-permit-hoa-cost-loudoun-county
+Loudoun County deck permit fees ($200–$800 standard residential, $400–$1,200 covered deck). HOA architectural review cost ($0–$500, 2–6 weeks). Engineering drawings ($500–$1,500 when required). Permit process step-by-step. Total permit + HOA budget: $500–$2,500. Common HOA communities covered: Ashburn Village, Brambleton, Broadlands, Belmont, One Loudoun, Stone Ridge.
 `;
 
   return new Response(content, {
