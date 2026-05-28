@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/ashburn-composite-deck-cost-financing',
   title: 'Ashburn Composite Deck Cost and Financing Guide (2026)',
   description: 'Ashburn VA composite deck cost — typical project pricing for Ashburn Village, Brambleton, Belmont, and Broadlands. HOA-aware planning + monthly payment.',
-  image: '/showcase/img09.jpeg',
+  image: '/showcase/img12.jpeg',
 });
 
 const PATH = '/ashburn-composite-deck-cost-financing';
@@ -86,7 +86,7 @@ export default function AshburnCompositeDeckCostPage() {
         title="Ashburn Composite Deck Cost and Financing Guide (2026)"
         description="Ashburn VA composite deck cost — typical project pricing for Ashburn Village, Brambleton, Belmont, and Broadlands."
         path={PATH}
-        image="/showcase/img09.jpeg"
+        image="/showcase/img12.jpeg"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
@@ -131,7 +131,7 @@ export default function AshburnCompositeDeckCostPage() {
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/showcase/img09.jpeg"
+              src="/showcase/img12.jpeg"
               alt="Composite deck project in Ashburn Virginia"
               fill
               style={{ objectFit: 'cover' }}

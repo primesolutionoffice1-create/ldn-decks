@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/best-time-to-finance-build-deck-northern-virginia',
   title: 'When to Finance and Build a Deck in Northern Virginia (2026)',
   description: 'Best time of year to finance and build a deck in Northern Virginia. Pricing by season, permit timing, lender promotions, and material lead times.',
-  image: '/showcase/img09.jpeg',
+  image: '/showcase/img07.jpeg',
 });
 
 const PATH = '/best-time-to-finance-build-deck-northern-virginia';
@@ -128,7 +128,7 @@ export default function BestTimeToFinanceBuildPage() {
         title="When to Finance and Build a Deck in Northern Virginia (2026)"
         description="Best time of year to finance and build a deck in Northern Virginia. Pricing by season, permit timing, lender promotions, and material lead times."
         path={PATH}
-        image="/showcase/img09.jpeg"
+        image="/showcase/img07.jpeg"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
@@ -173,7 +173,7 @@ export default function BestTimeToFinanceBuildPage() {
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/showcase/img09.jpeg"
+              src="/showcase/img07.jpeg"
               alt="Best time of year to finance and build a deck in Northern Virginia"
               fill
               style={{ objectFit: 'cover' }}

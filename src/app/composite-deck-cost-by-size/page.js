@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/composite-deck-cost-by-size',
   title: 'Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples',
   description: 'Composite deck cost by size — real 2026 pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia. Per-tier breakdown plus monthly payment.',
-  image: '/showcase/img09.jpeg',
+  image: '/showcase/img18.jpeg',
 });
 
 const PATH = '/composite-deck-cost-by-size';
@@ -120,7 +120,7 @@ export default function CompositeDeckCostBySizePage() {
         title="Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples"
         description="Composite deck cost by size — real 2026 pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia."
         path={PATH}
-        image="/showcase/img09.jpeg"
+        image="/showcase/img18.jpeg"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
@@ -169,7 +169,7 @@ export default function CompositeDeckCostBySizePage() {
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/showcase/img09.jpeg"
+              src="/showcase/img18.jpeg"
               alt="Composite deck cost by size in Northern Virginia"
               fill
               style={{ objectFit: 'cover' }}

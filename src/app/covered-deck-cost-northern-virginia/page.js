@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/covered-deck-cost-northern-virginia',
   title: 'Covered Deck Cost in Northern Virginia: 2026 Budget Guide',
   description: 'Covered deck cost in Northern Virginia: $35,000–$85,000+ depending on roof type, size, and finishes. Per-tier pricing plus monthly payment examples.',
-  image: '/showcase/img09.jpeg',
+  image: '/showcase/img16.jpeg',
 });
 
 const PATH = '/covered-deck-cost-northern-virginia';
@@ -111,7 +111,7 @@ export default function CoveredDeckCostPage() {
         title="Covered Deck Cost in Northern Virginia: 2026 Budget Guide"
         description="Covered deck cost in Northern Virginia: $35,000–$85,000+ depending on roof type, size, and finishes."
         path={PATH}
-        image="/showcase/img09.jpeg"
+        image="/showcase/img16.jpeg"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
@@ -159,7 +159,7 @@ export default function CoveredDeckCostPage() {
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/showcase/img09.jpeg"
+              src="/showcase/img16.jpeg"
               alt="Covered deck construction in Northern Virginia"
               fill
               style={{ objectFit: 'cover' }}

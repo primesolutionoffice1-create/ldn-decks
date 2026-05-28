@@ -9,6 +9,7 @@ import FinancingCalculator from '@/components/FinancingCalculator';
 import EstimatorTrackedLink from '@/components/EstimatorTrackedLink';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
+import ArticleSchema from '@/components/ArticleSchema';
 import CallLink from '@/components/CallLink';
 import { BUSINESS } from '@/lib/business';
 
@@ -112,6 +113,14 @@ export default function DeckPaymentEstimatorPage() {
   return (
     <>
       <WebPageSchema url="https://ldndecks.com/deck-payment-estimator" name="Deck Payment Estimator | Monthly Cost Calculator" description="Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia." speakable />
+      <ArticleSchema
+        title="Deck Payment Estimator | Monthly Cost Calculator"
+        description="Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia."
+        path="/deck-payment-estimator"
+        image="/showcase/img09.jpeg"
+        datePublished="2026-04-12"
+        dateModified="2026-05-28"
+      />
       <JsonLd data={faqSchema} />
 
       {/* ============ HERO ============ */}

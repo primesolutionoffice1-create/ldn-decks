@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/trex-deck-cost-monthly-payment',
   title: 'Trex Deck Cost vs Monthly Payment: 2026 Budget Guide',
   description: 'Real Trex deck costs by tier (Enhance, Transcend, Signature) and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia.',
-  image: '/showcase/img09.jpeg',
+  image: '/showcase/img11.jpeg',
 });
 
 const PATH = '/trex-deck-cost-monthly-payment';
@@ -103,12 +103,13 @@ const tiers = [
   },
 ];
 
+// 8.99% APR amortization: total = monthly × months; interest = total − principal
 const paymentMatrix = [
-  ['$18,000', '$228', '$183'],
-  ['$25,000', '$317', '$254'],
-  ['$32,000', '$405', '$324'],
-  ['$40,000', '$506', '$406'],
-  ['$50,000', '$633', '$507'],
+  ['$18,000', '$228', '$183', '$9,360'],
+  ['$25,000', '$317', '$254', '$13,040'],
+  ['$32,000', '$405', '$324', '$16,600'],
+  ['$40,000', '$506', '$406', '$20,720'],
+  ['$50,000', '$633', '$507', '$25,960'],
 ];
 
 export default function TrexDeckCostMonthlyPaymentPage() {
@@ -119,7 +120,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
         title="Trex Deck Cost vs Monthly Payment: 2026 Budget Guide"
         description="Real Trex deck costs by tier and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia."
         path={PATH}
-        image="/showcase/img09.jpeg"
+        image="/showcase/img11.jpeg"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
@@ -167,7 +168,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/showcase/img09.jpeg"
+              src="/showcase/img11.jpeg"
               alt="Trex composite deck project in Northern Virginia"
               fill
               style={{ objectFit: 'cover' }}
@@ -212,6 +213,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
                   <th style={S.th}>Project Amount</th>
                   <th style={S.th}>10-Year /mo</th>
                   <th style={S.th}>15-Year /mo</th>
+                  <th style={S.th}>Total Interest (10y)</th>
                 </tr>
               </thead>
               <tbody>
@@ -220,10 +222,18 @@ export default function TrexDeckCostMonthlyPaymentPage() {
                     <td style={{ ...S.td, fontWeight: 700 }}>{row[0]}</td>
                     <td style={S.td}>{row[1]}</td>
                     <td style={{ ...S.td, color: 'var(--color-primary)', fontWeight: 700 }}>{row[2]}</td>
+                    <td style={{ ...S.td, color: '#555' }}>{row[3]}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+          <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 8, padding: '1rem 1.25rem', marginBottom: '1.25rem' }}>
+            <p data-speakable style={{ margin: 0, fontWeight: 600 }}>
+              A $25,000 Trex Enhance deck financed at 8.99% APR over 10 years costs approximately $38,040 total —
+              $13,040 in interest. A 15-year term lowers the monthly payment to $254 but raises total interest to
+              roughly $20,720.
+            </p>
           </div>
           <p style={{ ...S.p, fontSize: '0.85rem', color: '#777', fontStyle: 'italic' }}>
             Illustrative only at 8.99% APR. Your real APR and term come from a lender pre-qualification.

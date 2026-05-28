@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/mclean-great-falls-premium-deck-budget',
   title: 'McLean & Great Falls Premium Deck Budget Guide (2026)',
   description: 'Premium deck cost in McLean and Great Falls VA — typical $40k–$120k+ projects with AZEK Vintage, cable railings, integrated lighting, and covered structures.',
-  image: '/showcase/img09.jpeg',
+  image: '/showcase/img20.jpg',
 });
 
 const PATH = '/mclean-great-falls-premium-deck-budget';
@@ -96,7 +96,7 @@ export default function MclenGreatFallsPremiumPage() {
         title="McLean & Great Falls Premium Deck Budget Guide (2026)"
         description="Premium deck cost in McLean and Great Falls VA — typical $40k–$120k+ projects with AZEK Vintage, cable railings, integrated lighting, and covered structures."
         path={PATH}
-        image="/showcase/img09.jpeg"
+        image="/showcase/img20.jpg"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
@@ -140,7 +140,7 @@ export default function MclenGreatFallsPremiumPage() {
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/showcase/img09.jpeg"
+              src="/showcase/img20.jpg"
               alt="Premium deck project in McLean or Great Falls Virginia"
               fill
               style={{ objectFit: 'cover' }}

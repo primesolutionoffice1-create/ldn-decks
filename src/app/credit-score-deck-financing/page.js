@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/credit-score-deck-financing',
   title: 'What Credit Score Do You Need for Deck Financing? (2026)',
   description: 'Credit score requirements for deck financing in Northern Virginia. Typical APR by score band, soft-pull pre-qualification process, and approval tips.',
-  image: '/showcase/img09.jpeg',
+  image: '/images/deck_financing_contract.png',
 });
 
 const PATH = '/credit-score-deck-financing';
@@ -85,7 +85,7 @@ export default function CreditScoreDeckFinancingPage() {
         title="What Credit Score Do You Need for Deck Financing? (2026)"
         description="Credit score requirements for deck financing in Northern Virginia. Typical APR by score band, soft-pull pre-qualification process, and approval tips."
         path={PATH}
-        image="/showcase/img09.jpeg"
+        image="/images/deck_financing_contract.png"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
@@ -130,7 +130,7 @@ export default function CreditScoreDeckFinancingPage() {
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/showcase/img09.jpeg"
+              src="/images/deck_financing_contract.png"
               alt="Deck financing credit score guide for Northern Virginia"
               fill
               style={{ objectFit: 'cover' }}

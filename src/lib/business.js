@@ -18,8 +18,10 @@ export const BUSINESS = {
     addressCountry: 'US',
   },
   geo: {
-    latitude: '38.8404',
-    longitude: '-77.4289',
+    // 5-decimal precision (~1m accuracy) per Whitespark + schema.org recommendations.
+    // Verified against Google Maps pin for 13704 Winding Oak Cir, Centreville VA.
+    latitude: '38.83966',
+    longitude: '-77.43927',
   },
   openingHours: [
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:00', closes: '19:00' },
@@ -36,6 +38,8 @@ export const BUSINESS = {
     'Fairfax County, VA',
     'Prince William County, VA',
     'Arlington County, VA',
+    'Alexandria, VA',
+    'Falls Church, VA',
     'Stafford County, VA',
   ],
   sameAs: [

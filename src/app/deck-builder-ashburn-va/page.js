@@ -87,7 +87,7 @@ const expansionSections = [
     title: "Ashburn's HOA Map  -  And How We Clear It",
     paragraphs: [
       "Almost every Ashburn home sits inside an HOA, and each major community runs its own architectural review committee with distinct rules. Brambleton's committee favors composite over wood for a consistent streetscape; Broadlands and Ashburn Village publish their own approved color lists; Moorefield Station has tighter setback expectations along its garage-loaded streets. We keep current submission packages for all of them and prepare the CAD drawings and color samples each ARC asks for.",
-      "Recent Ashburn work includes a 480 sq ft Trex Transcend deck in Brambleton designed around a west-facing yard with an attached pergola for afternoon shade, a screened porch in One Loudoun, and a cable-railing deck replacement in Moorefield Station  -  each permitted through Loudoun County's LOLA portal."
+      "Recent Ashburn work includes a 480 sq ft Trex Transcend deck in Brambleton designed around a west-facing yard with an attached pergola for afternoon shade, a screened porch in One Loudoun, and a cable-railing deck replacement in Moorefield Station  -  each permitted through Loudoun County's LandMARC portal."
     ]
   },
   {
@@ -109,7 +109,7 @@ const expansionSections = [
       { label: "TrexPro installer", text: "TrexPro Platinum tier  -  full Transcend, Enhance and Select catalog for Ashburn builds." },
       { label: "TimberTech Certified", text: "Certified installer for the complete TimberTech Pro and AZEK product lines." },
       { label: "ARC-Ready Drawings", text: "Full CAD plans and color samples prepared for every Ashburn HOA submission." },
-      { label: "Loudoun County Permits", text: "We file through the LOLA portal and coordinate footing, framing and final inspections." }
+      { label: "Loudoun County Permits", text: "We file through the LandMARC portal and coordinate footing, framing and final inspections." }
     ]
   },
   {

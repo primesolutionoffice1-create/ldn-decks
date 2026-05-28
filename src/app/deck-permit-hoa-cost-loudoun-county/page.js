@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/deck-permit-hoa-cost-loudoun-county',
   title: 'Deck Permit & HOA Costs in Loudoun County: 2026 Budget Guide',
   description: 'Loudoun County deck permit cost ($200–$1,200), HOA approval cost ($0–$500), timeline, drawings required, and total project amount impact.',
-  image: '/showcase/img09.jpeg',
+  image: '/showcase/img17.jpeg',
 });
 
 const PATH = '/deck-permit-hoa-cost-loudoun-county';
@@ -87,7 +87,7 @@ export default function DeckPermitHoaCostLoudounPage() {
         title="Deck Permit & HOA Costs in Loudoun County: 2026 Budget Guide"
         description="Loudoun County deck permit cost, HOA approval cost, timeline, drawings required, and total project amount impact."
         path={PATH}
-        image="/showcase/img09.jpeg"
+        image="/showcase/img17.jpeg"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
@@ -132,7 +132,7 @@ export default function DeckPermitHoaCostLoudounPage() {
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/showcase/img09.jpeg"
+              src="/showcase/img17.jpeg"
               alt="Loudoun County deck permit application package"
               fill
               style={{ objectFit: 'cover' }}

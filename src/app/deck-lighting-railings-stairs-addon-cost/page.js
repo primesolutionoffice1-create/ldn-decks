@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/deck-lighting-railings-stairs-addon-cost',
   title: 'Deck Lighting, Railings & Stairs: Add-On Cost Guide (2026)',
   description: 'Real cost for deck lighting, railings, and stairs in Northern Virginia. Per-linear-foot pricing, full package examples, and impact on monthly payment.',
-  image: '/showcase/img09.jpeg',
+  image: '/showcase/light-img.jpeg',
 });
 
 const PATH = '/deck-lighting-railings-stairs-addon-cost';
@@ -115,7 +115,7 @@ export default function DeckAddOnCostPage() {
         title="Deck Lighting, Railings & Stairs: Add-On Cost Guide (2026)"
         description="Real cost for deck lighting, railings, and stairs in Northern Virginia. Per-linear-foot pricing and full package examples."
         path={PATH}
-        image="/showcase/img09.jpeg"
+        image="/showcase/light-img.jpeg"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
@@ -160,7 +160,7 @@ export default function DeckAddOnCostPage() {
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/showcase/img09.jpeg"
+              src="/showcase/light-img.jpeg"
               alt="Deck lighting, railings, and stairs add-on cost in Northern Virginia"
               fill
               style={{ objectFit: 'cover' }}

@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/timbertech-azek-deck-cost-northern-virginia',
   title: 'TimberTech & AZEK Deck Cost: Premium PVC Budget Guide (2026)',
   description: 'TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples.',
-  image: '/showcase/img09.jpeg',
+  image: '/showcase/img22.jpg',
 });
 
 const PATH = '/timbertech-azek-deck-cost-northern-virginia';
@@ -103,12 +103,13 @@ const tiers = [
   },
 ];
 
+// 8.99% APR amortization: total = monthly × months; interest = total − principal
 const paymentMatrix = [
-  ['$20,000', '$253', '$203'],
-  ['$28,000', '$355', '$284'],
-  ['$35,000', '$443', '$355'],
-  ['$42,000', '$532', '$426'],
-  ['$55,000', '$696', '$558'],
+  ['$20,000', '$253', '$203', '$10,360'],
+  ['$28,000', '$355', '$284', '$14,600'],
+  ['$35,000', '$443', '$355', '$18,160'],
+  ['$42,000', '$532', '$426', '$21,840'],
+  ['$55,000', '$696', '$558', '$28,520'],
 ];
 
 const colorways = [
@@ -127,7 +128,7 @@ export default function TimberTechAzekDeckCostPage() {
         title="TimberTech & AZEK Deck Cost: Premium PVC Budget Guide (2026)"
         description="TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples."
         path={PATH}
-        image="/showcase/img09.jpeg"
+        image="/showcase/img22.jpg"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
@@ -176,7 +177,7 @@ export default function TimberTechAzekDeckCostPage() {
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/showcase/img09.jpeg"
+              src="/showcase/img22.jpg"
               alt="TimberTech AZEK deck project in Northern Virginia"
               fill
               style={{ objectFit: 'cover' }}
@@ -244,6 +245,7 @@ export default function TimberTechAzekDeckCostPage() {
                   <th style={S.th}>Project Amount</th>
                   <th style={S.th}>10-Year /mo</th>
                   <th style={S.th}>15-Year /mo</th>
+                  <th style={S.th}>Total Interest (10y)</th>
                 </tr>
               </thead>
               <tbody>
@@ -252,10 +254,18 @@ export default function TimberTechAzekDeckCostPage() {
                     <td style={{ ...S.td, fontWeight: 700 }}>{row[0]}</td>
                     <td style={S.td}>{row[1]}</td>
                     <td style={{ ...S.td, color: 'var(--color-primary)', fontWeight: 700 }}>{row[2]}</td>
+                    <td style={{ ...S.td, color: '#555' }}>{row[3]}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+          <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 8, padding: '1rem 1.25rem', marginBottom: '1.25rem' }}>
+            <p data-speakable style={{ margin: 0, fontWeight: 600 }}>
+              A $35,000 TimberTech AZEK Vintage deck financed at 8.99% APR over 10 years costs approximately $53,160
+              total — $18,160 in interest. A 15-year term lowers the monthly payment to $355 but raises total interest
+              to roughly $28,900.
+            </p>
           </div>
           <p style={{ ...S.p, fontSize: '0.85rem', color: '#777', fontStyle: 'italic' }}>
             Illustrative only at 8.99% APR. Your real APR and term come from a lender pre-qualification.
