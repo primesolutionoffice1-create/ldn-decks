@@ -6,6 +6,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
+import WebPageSchema from '@/components/WebPageSchema';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -42,6 +43,7 @@ export default function DeckCost16x20Page() {
   return (
     <>
       <JsonLd data={articleSchema} />
+      <WebPageSchema url="https://ldndecks.com/deck-cost-16x20-northern-virginia" name="16x20 Deck Cost in Northern Virginia (2026)" description="How much does a 16x20 deck (320 sq ft) cost in Northern Virginia in 2026? Pressure-treated wood $9,000-$17,000, composite $20,000-$32,000, premium PVC $26,000-$" speakable />
       <JsonLd data={faqSchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

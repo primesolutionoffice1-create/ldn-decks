@@ -213,6 +213,15 @@ export function buildMetadata({
         // and inherited by every route — no need to repeat it per page.
         alternates: {
                 canonical: url,
+                // English-only single-region site. Declaring en-US AND x-default
+                // tells international Google indexes to serve this URL for any
+                // locale not explicitly mapped, instead of guessing language
+                // from origin or query parameters. Required for x-default per
+                // Google's hreflang guidelines even when only one language exists.
+                languages: {
+                        'en-US': url,
+                        'x-default': url,
+                },
         },
         robots: {
                 index: !finalNoIndex,

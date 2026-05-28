@@ -31,7 +31,7 @@ export default function CallLink({
       onClick={trackPhoneClick}
       className={className}
       style={style}
-      aria-label={ariaLabel || 'Call Loudoun Decks'}
+      aria-label={ariaLabel || `Call Loudoun Decks at ${BUSINESS_PHONE_DISPLAY}`}
       {...rest}
     >
       {children || display || BUSINESS_PHONE_DISPLAY}
