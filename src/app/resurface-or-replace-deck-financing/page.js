@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import ArticleSchema from '@/components/ArticleSchema';
+import WebPageSchema from '@/components/WebPageSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import TrustBanner from '@/components/TrustBanner';
 import ContactHome from '@/components/ContactHome';
@@ -87,6 +88,7 @@ export default function ResurfaceOrReplaceFinancingPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
+      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Resurface or Replace Before Financing? 2026 Decision Guide" description="Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, and monthly payment math for Northern Virginia." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>

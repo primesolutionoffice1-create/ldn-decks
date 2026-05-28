@@ -8,6 +8,7 @@ import EnhancifyWidget from '@/components/EnhancifyWidget';
 import FinancingCalculator from '@/components/FinancingCalculator';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
@@ -428,6 +429,7 @@ export default function DeckFinancingPage() {
       </article>
 
       <SimpleCTA title="Ready to Discuss Your Project?" buttonText="Schedule Free Consultation" link="/contact" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-28" />
       <RelatedGuides currentPath="/deck-financing" />
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

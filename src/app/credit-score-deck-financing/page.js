@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import ArticleSchema from '@/components/ArticleSchema';
+import WebPageSchema from '@/components/WebPageSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import TrustBanner from '@/components/TrustBanner';
 import ContactHome from '@/components/ContactHome';
@@ -88,6 +89,7 @@ export default function CreditScoreDeckFinancingPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
+      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="What Credit Score Do You Need for Deck Financing? (2026)" description="Credit score requirements for deck financing in Northern Virginia. Typical APR by score band, soft-pull pre-qualification process, and approval tips." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>

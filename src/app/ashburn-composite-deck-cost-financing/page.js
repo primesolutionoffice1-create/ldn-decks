@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import ArticleSchema from '@/components/ArticleSchema';
+import WebPageSchema from '@/components/WebPageSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import TrustBanner from '@/components/TrustBanner';
 import ContactHome from '@/components/ContactHome';
@@ -89,6 +90,7 @@ export default function AshburnCompositeDeckCostPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
+      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Ashburn Composite Deck Cost and Financing Guide (2026)" description="Ashburn VA composite deck cost — typical project pricing for Ashburn Village, Brambleton, Belmont, and Broadlands. HOA-aware planning + monthly payment." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>

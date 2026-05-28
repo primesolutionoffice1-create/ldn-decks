@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import ArticleSchema from '@/components/ArticleSchema';
+import WebPageSchema from '@/components/WebPageSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import TrustBanner from '@/components/TrustBanner';
 import ContactHome from '@/components/ContactHome';
@@ -122,6 +123,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
+      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Trex Deck Cost vs Monthly Payment: 2026 Budget Guide" description="Real Trex deck costs by tier (Enhance, Transcend, Signature) and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>

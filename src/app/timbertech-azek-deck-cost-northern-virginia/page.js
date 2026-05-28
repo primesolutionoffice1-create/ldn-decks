@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import ArticleSchema from '@/components/ArticleSchema';
+import WebPageSchema from '@/components/WebPageSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import TrustBanner from '@/components/TrustBanner';
 import ContactHome from '@/components/ContactHome';
@@ -130,6 +131,7 @@ export default function TimberTechAzekDeckCostPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
+      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="TimberTech &amp; AZEK Deck Cost: Premium PVC Budget Guide (2026)" description="TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
