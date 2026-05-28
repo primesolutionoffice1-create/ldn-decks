@@ -212,6 +212,10 @@ export const SEGMENT_LABELS = {
   'rooftop-deck-washington-dc': 'Rooftop Deck — Washington DC',
   'sully-station-hoa-deck-rules': 'Sully Station HOA Deck Rules',
   'virginia-run-hoa-deck-rules': 'Virginia Run HOA Deck Rules',
+
+  // Lead-magnet pages
+  'lead-magnets': 'Lead Magnets',
+  'nova-deck-permit-checklist-2026': 'NoVA Deck Permit Checklist 2026',
 };
 
 const humanize = (slug) =>
