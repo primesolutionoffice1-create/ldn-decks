@@ -29,7 +29,20 @@ import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const REPO_ROOT = path.resolve(path.dirname(__filename), '..');
-const VAULT_REPORTS = path.resolve(REPO_ROOT, '../../ldn-decks-growth-brain-vaults/ldn-decks/wiki/reports');
+
+// Resolve vault location with fallbacks so the report runs from any checkout
+// (canonical ~/ldn-decks-next, /tmp checkouts, CI, etc.). Precedence:
+//   1. LDN_VAULT_REPORTS env var (explicit override)
+//   2. ../../ldn-decks-growth-brain-vaults/... (sibling-of-parent layout)
+//   3. ~/ldn-decks-growth-brain-vaults/... (canonical user-home layout)
+const VAULT_CANDIDATES = [
+  process.env.LDN_VAULT_REPORTS,
+  path.resolve(REPO_ROOT, '../../ldn-decks-growth-brain-vaults/ldn-decks/wiki/reports'),
+  path.resolve(process.env.HOME || '', 'ldn-decks-growth-brain-vaults/ldn-decks/wiki/reports'),
+].filter(Boolean);
+const VAULT_REPORTS = VAULT_CANDIDATES.find(p => {
+  try { return fs.existsSync(path.dirname(p)); } catch { return false; }
+}) || VAULT_CANDIDATES[VAULT_CANDIDATES.length - 1];
 
 const today = new Date().toISOString().split('T')[0];
 const todayISO = new Date().toISOString();
