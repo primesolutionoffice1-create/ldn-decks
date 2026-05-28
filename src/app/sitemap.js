@@ -150,6 +150,9 @@ export default async function sitemap() {
                 { path: "/400-square-foot-deck-cost-northern-virginia", priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/600-square-foot-deck-cost-northern-virginia", priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/800-square-foot-deck-cost-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-cost-12x20-northern-virginia",          priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-cost-16x20-northern-virginia",          priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-cost-20x20-northern-virginia",          priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 // Specialty deck types — rooftop is the Tysons/Arlington urban-core specialty
                 { path: "/rooftop-deck-builder-northern-virginia",     priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 // Premium HOA hub pages (Loudoun + Centreville/Fairfax communities)
