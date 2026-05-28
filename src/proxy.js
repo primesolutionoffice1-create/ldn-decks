@@ -15,12 +15,14 @@ const gonePathPrefixes = [
 
 // Strip stray trailing punctuation that crawlers, email clients, social
 // scrapers, and chat platforms sometimes append when serializing URLs.
+// Both literal and percent-encoded forms — Next.js's nextUrl.pathname
+// keeps "invalid" path chars percent-encoded, so /foo%22 stays %22 not ".
 // Examples seen in the wild:
-//   /northern-virginia-deck-building-guide"   ← Slack/Outlook quoting
-//   /deck-builder-leesburg-va)                ← parenthetical sentences
-//   /trex-decks,                              ← prose lists
+//   /northern-virginia-deck-building-guide%22   ← Slack/Outlook (encoded ")
+//   /deck-builder-leesburg-va)                  ← parenthetical sentences
+//   /trex-decks,                                ← prose lists
 // 301 to the clean path so inbound link equity consolidates.
-const TRAILING_STRAY = /["')\];>,]+$/;
+const TRAILING_STRAY = /(?:["')\];>,]|%22|%27|%29|%5[Dd]|%3[EeBb]|%2[Cc])+$/;
 
 export function proxy(request) {
   const host = request.headers.get('host');
