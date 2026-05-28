@@ -36,25 +36,6 @@ const aboutFaqSchema = {
   ],
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://ldndecks.com',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'About Loudoun Decks',
-      item: 'https://ldndecks.com/about',
-    },
-  ],
-};
-
 const aboutPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
@@ -83,7 +64,6 @@ export default function AboutPage() {
     <main>
       <WebPageSchema url="https://ldndecks.com/about" name="About Loudoun Decks | Top-Rated Deck Builder Northern Virginia" description="Meet the team behind Northern Virginia's top-rated deck builder. VA Class A Licensed, Trex Platinum Partner, 5.0★ Google. Founded by Nicolae Zugrav." speakable />
       <JsonLd data={aboutFaqSchema} />
-      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={aboutPageSchema} />
       <AboutHeader />
       <QualityLeader />

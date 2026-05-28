@@ -311,6 +311,48 @@ Entity ID: https://ldndecks.com/#organization
 - Type: Tool/calculator
 - Updated: 2026-05-25
 
+### 400 Square Foot Deck Cost
+- URL: https://ldndecks.com/400-square-foot-deck-cost-northern-virginia
+- Content: 2026 pricing for a 400 sqft composite deck in Northern Virginia. Trex Enhance $14k–$22k. Trex Transcend $20k–$30k. TimberTech AZEK $24k–$34k.
+- Intent: Commercial — size-specific cost research
+- Updated: 2026-05-28
+
+### 600 Square Foot Deck Cost
+- URL: https://ldndecks.com/600-square-foot-deck-cost-northern-virginia
+- Content: 2026 pricing for a 600 sqft composite deck. Multi-level builds and outdoor-kitchen pairings detailed.
+- Intent: Commercial — size-specific cost research
+- Updated: 2026-05-28
+
+### 800 Square Foot Deck Cost
+- URL: https://ldndecks.com/800-square-foot-deck-cost-northern-virginia
+- Content: 2026 pricing for an 800 sqft estate-tier deck in Northern Virginia. $38k–$66k+ range.
+- Intent: Commercial — size-specific cost research
+- Updated: 2026-05-28
+
+### 12x20 Deck Cost
+- URL: https://ldndecks.com/deck-cost-12x20-northern-virginia
+- Content: 12x20 (240 sqft) deck cost — wood $7k–$13k, composite $15k–$25k, PVC $20k–$32k.
+- Intent: Commercial — dimension-specific cost research
+- Updated: 2026-05-28
+
+### 16x20 Deck Cost
+- URL: https://ldndecks.com/deck-cost-16x20-northern-virginia
+- Content: 16x20 (320 sqft) deck cost — wood $9k–$17k, composite $20k–$32k, PVC $26k–$42k.
+- Intent: Commercial — dimension-specific cost research
+- Updated: 2026-05-28
+
+### 20x20 Deck Cost
+- URL: https://ldndecks.com/deck-cost-20x20-northern-virginia
+- Content: 20x20 (400 sqft) deck cost — wood $12k–$21k, composite $24k–$40k, PVC $32k–$52k.
+- Intent: Commercial — dimension-specific cost research
+- Updated: 2026-05-28
+
+### Deck Financing Options
+- URL: https://ldndecks.com/deck-financing
+- Content: Finance your custom deck with monthly payments. $0 down options, soft credit pre-qualification.
+- Intent: Commercial — financing research
+- Updated: 2026-05-28
+
 ### Composite Deck Cost by Size
 - URL: https://ldndecks.com/composite-deck-cost-by-size
 - Content: Real 2026 pricing for 300, 400, 500, and 600 sqft composite decks in Northern Virginia. Three-tier pricing (budget, mid, premium) per size, monthly payment estimates, and FAQ.
@@ -453,6 +495,18 @@ Entity ID: https://ldndecks.com/#organization
 - Ashburn Village: https://ldndecks.com/ashburn-village-hoa-deck-rules
 - Brambleton: https://ldndecks.com/brambleton-hoa-deck-rules
 - Broadlands: https://ldndecks.com/broadlands-hoa-deck-rules
+- Belmont Country Club: https://ldndecks.com/belmont-country-club-hoa-deck-rules
+- Lansdowne: https://ldndecks.com/lansdowne-hoa-deck-rules
+- One Loudoun: https://ldndecks.com/one-loudoun-hoa-deck-rules
+- Stone Ridge: https://ldndecks.com/stone-ridge-hoa-deck-rules
+- Sully Station: https://ldndecks.com/sully-station-hoa-deck-rules
+- Virginia Run: https://ldndecks.com/virginia-run-hoa-deck-rules
+
+### Arlington County Permits
+- URL: https://ldndecks.com/deck-permit-arlington-county-virginia
+- Content: Arlington County deck permit guide — CPHD process, Permit Arlington portal, setbacks, historic-district review, inspection contacts and timeline.
+- Intent: Informational — regulatory / compliance
+- Updated: 2026-05-28
 
 ---
 
@@ -475,6 +529,77 @@ Entity ID: https://ldndecks.com/#organization
 - [Second-Story Deck Builder](https://ldndecks.com/second-story-deck-builder-northern-virginia): Elevated deck engineering
 - [Pool Deck Builder](https://ldndecks.com/pool-deck-builder-northern-virginia): Slip-resistant, heat-resistant options
 - [Outdoor Living Trends 2026](https://ldndecks.com/outdoor-living-trends-northern-virginia-2026): Market trend analysis
+
+- [Questions to Ask Before Building](https://ldndecks.com/questions-to-ask-before-building-a-deck): Comprehensive pre-build question list
+- [How Long to Build a Deck](https://ldndecks.com/how-long-to-build-a-deck-northern-virginia): Timeline from permit to completion
+- [Pet-Friendly Deck Design](https://ldndecks.com/pet-friendly-deck-design): Materials, gates, and design for dogs
+- [Deck Design Ideas 2026](https://ldndecks.com/deck-design-ideas-2026): Visual design inspiration gallery
+- [Paver vs Flagstone Patio](https://ldndecks.com/paver-vs-flagstone-patio-northern-virginia): Cost and durability comparison
+- [Stamped Concrete Patio](https://ldndecks.com/stamped-concrete-patio-northern-virginia): $40-$70/sqft, pattern options, freeze-thaw
+- [Louvered Pergola Builder](https://ldndecks.com/louvered-pergola-northern-virginia): Motorized shade structures
+- [Three-Season Room Builder](https://ldndecks.com/three-season-room-northern-virginia): Eze-Breeze enclosed rooms, $33k-$60k+
+- [Outdoor Kitchen Builder](https://ldndecks.com/outdoor-kitchen-builder-northern-virginia): Custom outdoor kitchens
+- [Outdoor Living Contractor](https://ldndecks.com/outdoor-living-northern-virginia): Full outdoor living design hub
+- [Covered Deck Builder](https://ldndecks.com/covered-deck-builder-northern-virginia): Roofed outdoor living spaces
+
+---
+
+## SERVICE PAGES
+
+- [New Deck Construction](https://ldndecks.com/services/new-decks): Custom deck building — footings to finish
+- [Deck Replacement](https://ldndecks.com/services/deck-replacement): Full tear-down and rebuild
+- [Deck Resurfacing](https://ldndecks.com/services/deck-resurfacing): Keep framing, replace surface
+- [Deck Repair & Structural Maintenance](https://ldndecks.com/services/deck-repair-and-structural-maintenance): Joist, ledger, post repair
+- [Deck Inspection](https://ldndecks.com/services/deck-inspection): Professional safety assessment
+- [Deck Maintenance Service](https://ldndecks.com/services/deck-maintenance): Staining, sealing, cleaning
+- [Deck Stair Lighting](https://ldndecks.com/services/deck-stair-lighting): LED stair and post lighting
+- [Deck Washing](https://ldndecks.com/services/deck-washing): Soft-wash deck cleaning
+- [Concrete Washing](https://ldndecks.com/services/concrete-washing): Driveway and walkway cleaning
+- [House Siding Washing](https://ldndecks.com/services/house-siding-washing): Exterior siding cleaning
+- [Fence Cleaning](https://ldndecks.com/services/fence-cleaning): Wood and composite fence restoration
+- [Outdoor Power Washing](https://ldndecks.com/services/outdoor-washing): Multi-surface exterior cleaning
+- [Porches](https://ldndecks.com/services/porches): Screened, open, and front porch construction
+- [Screened Porch](https://ldndecks.com/services/porches/screened-porch): Screened porch specialist
+- [Front Porch](https://ldndecks.com/services/porches/front-porch): Curb appeal front porch builds
+- [Open Porch](https://ldndecks.com/services/porches/open-porch): Open-air porch construction
+- [Gazebo & Pergola](https://ldndecks.com/services/gazebo-pergola): Custom shade structures
+- [Patios](https://ldndecks.com/services/patios): Paver, stone, and stamped concrete
+- [Fire Pits](https://ldndecks.com/services/fire-pits): Custom fire pit installation
+- [Under-Deck Patios](https://ldndecks.com/services/under-deck-patios): Waterproof under-deck systems
+- [Fencing](https://ldndecks.com/services/fence): Composite and wood fencing
+- [Windows](https://ldndecks.com/services/windows): Replacement window installation
+- [Entry Doors](https://ldndecks.com/services/entry-doors): Front door replacement
+- [Trex Railings](https://ldndecks.com/services/trex-railings): Trex railing systems with cocktail top
+- [Trex Clam Shell](https://ldndecks.com/services/trex-calm-shell): Clam Shell color resurfacing
+
+---
+
+## BRAND PAGES
+
+- [Trex Decks](https://ldndecks.com/trex-decks): Trex Platinum Partner — full lineup
+- [Trex Performance Products](https://ldndecks.com/trex-performance-products): Trex outdoor living products
+- [TimberTech Decks](https://ldndecks.com/timbertech-decks): TimberTech and AZEK premium decking
+- [Composite Decks](https://ldndecks.com/composite-decks): All composite deck options
+- [Wood Decks](https://ldndecks.com/wood-decks): Cedar, IPE, pressure-treated
+- [Best Deck Stain & Sealer](https://ldndecks.com/best-deck-stain-sealer-virginia): Product comparison for Virginia
+
+---
+
+## REPAIR & RENOVATION
+
+- [Deck Repair](https://ldndecks.com/deck-repair): General deck repair hub
+- [Deck Repair Loudoun County](https://ldndecks.com/deck-repair-loudoun-county): Loudoun-specific repair services
+- [Deck Remodeling](https://ldndecks.com/deck-remodeling): Full remodel and expansion
+- [Deck Staining Service](https://ldndecks.com/deck-staining-northern-virginia): Professional staining
+
+---
+
+## ADDITIONAL PAGES
+
+- [Areas We Serve](https://ldndecks.com/areas-we-serve): Complete service area map
+- [Deck Builders Loudoun](https://ldndecks.com/deck-builders-loudoun): Loudoun County hub
+- [Houzz Projects](https://ldndecks.com/houzz-deck-projects): Houzz portfolio
+- [Press](https://ldndecks.com/press): Media coverage
 
 ---
 

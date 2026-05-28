@@ -19,15 +19,6 @@ export const metadata = buildMetadata({
 const BBB_PROFILE_URL = 'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241';
 
 // Breadcrumbs and other page-specific schema below
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldndecks.com/" },
-    { "@type": "ListItem", "position": 2, "name": "About", "item": "https://ldndecks.com/about" },
-    { "@type": "ListItem", "position": 3, "name": "BBB Accredited Deck Builder", "item": "https://ldndecks.com/bbb-accredited-deck-builder-virginia" }
-  ]
-};
 
 const webPageSchema = {
   "@context": "https://schema.org",
@@ -123,7 +114,6 @@ const cities = [
 export default function BBBPage() {
   return (
     <>
-      <JsonLd data={breadcrumbSchema} />
       <WebPageSchema url="https://ldndecks.com/bbb-accredited-deck-builder-virginia" name="BBB Accredited Deck Builder in Northern Virginia | Loudoun Decks" description="Loudoun Decks is a BBB Accredited A+ rated deck builder serving Northern Virginia. Trex, TimberTech, composite decks, porches, pergolas &amp; outdoor living projects." speakable />
       <JsonLd data={webPageSchema} />
       <JsonLd data={faqSchema} />

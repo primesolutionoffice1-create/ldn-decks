@@ -60,17 +60,6 @@ const faqSchema = {
   })),
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  '@id': `${pageUrl}#breadcrumb`,
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: BUSINESS.url },
-    { '@type': 'ListItem', position: 2, name: 'Tools', item: `${BUSINESS.url}/tools` },
-    { '@type': 'ListItem', position: 3, name: pageTitle, item: pageUrl },
-  ],
-};
-
 const webApplicationSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
@@ -130,7 +119,6 @@ export default function DeckLoadCalculatorPage() {
   return (
     <main className={styles.page}>
       <JsonLd data={faqSchema} />
-      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={webApplicationSchema} />
       <WebPageSchema url={pageUrl} name={pageTitle} description={pageDescription} speakable />
 

@@ -136,31 +136,6 @@ const faqSchemaData = {
   }))
 };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://ldndecks.com"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://ldndecks.com/services"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Patio Contractor Northern Virginia",
-      "item": "https://ldndecks.com/services/patios"
-    }
-  ]
-};
-
 const materialItemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
@@ -186,7 +161,6 @@ export default function PatiosPage() {
   return (
     <main>
       <JsonLd data={faqSchemaData} />
-      <JsonLd data={breadcrumbSchema} />
       <JsonLd data={materialItemListSchema} />
       <WebPageSchema url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone &amp; natural stone. Loudoun, Fairfax, Prince William, Arlington. Free 24h estimate." speakable />
       <ServiceSchema
