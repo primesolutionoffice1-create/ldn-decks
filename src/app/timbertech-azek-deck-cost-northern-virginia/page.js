@@ -331,6 +331,9 @@ export default function TimberTechAzekDeckCostPage() {
               ['/monthly-payment-composite-deck-northern-virginia', 'Monthly Payment on a Composite Deck'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],
               ['/deck-financing', 'Deck Financing in Northern Virginia'],
+              ['/credit-score-deck-financing', 'Credit Score Required for Deck Financing'],
+              ['/best-time-to-finance-build-deck-northern-virginia', 'Best Time to Finance &amp; Build'],
+              ['/deck-lighting-railings-stairs-addon-cost', 'Add-On Cost: Lighting, Railings &amp; Stairs'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}>
                 <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>

@@ -268,6 +268,19 @@ export default function MonthlyPaymentCompositeDeckPage() {
         </div>
       </article>
 
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 960, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Financing &amp; Planning Guides</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/credit-score-deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>What Credit Score Do You Need for Deck Financing? →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/best-time-to-finance-build-deck-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Best Time of Year to Finance &amp; Build a Deck →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-deck-cost-monthly-payment" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Deck Cost vs Monthly Payment →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/timbertech-azek-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>TimberTech &amp; AZEK Deck Cost →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-by-size" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Cost by Size (300/400/500/600 sqft) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-lighting-railings-stairs-addon-cost" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Lighting, Railings &amp; Stairs Add-On Cost →</Link></li>
+        </ul>
+      </section>
+
       <SimpleCTA
         title="Plan Your Composite Deck Monthly Payment"
         buttonText="Get Free Written Estimate"

@@ -298,9 +298,13 @@ export default function DeckPaymentEstimatorPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/deck-financing', 'Deck Financing in Northern Virginia — Options & Pre-Qualification'],
+              ['/credit-score-deck-financing', 'What Credit Score Do You Need for Deck Financing?'],
+              ['/best-time-to-finance-build-deck-northern-virginia', 'Best Time of Year to Finance & Build a Deck'],
+              ['/monthly-payment-composite-deck-northern-virginia', 'Monthly Payment on a Composite Deck — Project Examples'],
+              ['/deck-lighting-railings-stairs-addon-cost', 'Lighting, Railings & Stairs Add-On Cost Impact'],
               ['/deck-cost-calculator', 'Free Deck Cost Calculator — Estimate Your Project'],
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
-              ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia (2026)'],
+              ['/composite-deck-cost-by-size', 'Composite Deck Cost by Size (300/400/500/600 sqft)'],
               ['/get-estimate', 'Request Your Free Deck Estimate'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}>

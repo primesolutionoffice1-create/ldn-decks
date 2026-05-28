@@ -296,6 +296,8 @@ export default function TrexDeckCostMonthlyPaymentPage() {
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],
               ['/deck-financing', 'Deck Financing in Northern Virginia'],
+              ['/credit-score-deck-financing', 'Credit Score Required for Deck Financing'],
+              ['/best-time-to-finance-build-deck-northern-virginia', 'Best Time to Finance &amp; Build'],
               ['/monthly-payment-composite-deck-northern-virginia', 'Monthly Payment on a Composite Deck'],
               ['/before-and-after', 'Before & After Deck Transformations'],
             ].map(([href, text]) => (

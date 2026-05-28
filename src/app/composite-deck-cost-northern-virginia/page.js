@@ -511,6 +511,8 @@ export default function CompositeDeckCostPage() {
               ['/deck-cost-calculator', 'NoVA Deck Cost Calculator', 'Interactive estimate by size, material, add-ons'],
               ['/composite-deck-cost-by-size', 'Composite Cost by Size', '300 / 400 / 500 / 600 sqft pricing breakdown'],
               ['/monthly-payment-composite-deck-northern-virginia', 'Monthly Payment on a Composite Deck', '$15k–$70k project payment ranges'],
+              ['/deck-lighting-railings-stairs-addon-cost', 'Lighting, Railings &amp; Stairs Add-On Costs', 'Per-linear-foot pricing for the biggest add-ons'],
+              ['/credit-score-deck-financing', 'Credit Score for Deck Financing', 'APR by score band, soft-pull pre-qualification'],
               ['/wood-vs-composite-deck-long-term-cost', 'Wood vs Composite — 15-Yr Cost', '15-year total including maintenance + financing'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK vs Fiberon', 'Full 4-way comparison'],
               ['/how-tariffs-affect-deck-prices-2026', '2026 Deck Tariff Impact', 'How import duties moved the market'],
