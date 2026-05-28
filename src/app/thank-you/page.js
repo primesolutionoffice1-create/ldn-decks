@@ -68,6 +68,16 @@ export default function ThankYouPage() {
               View Project Gallery
             </Link>
           </div>
+
+          <div style={{ marginTop: 28, padding: 16, borderRadius: 8, background: '#fff7f1', border: '1px solid #f3d3bd' }}>
+            <p style={{ margin: 0, fontWeight: 600, color: '#7a3210' }}>While you wait — free download:</p>
+            <p style={{ margin: '4px 0 10px', color: '#444', fontSize: 14 }}>
+              The 2026 NoVA Deck Permit Checklist — every step from HOA review to final inspection across Loudoun, Fairfax, PWC, and Arlington counties.
+            </p>
+            <Link href="/lead-magnets/nova-deck-permit-checklist-2026" style={{ color: '#d14817', fontWeight: 600, textDecoration: 'underline' }}>
+              Open the printable checklist →
+            </Link>
+          </div>
         </div>
       </div>
     </div>

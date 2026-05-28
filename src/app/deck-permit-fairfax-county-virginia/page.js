@@ -130,6 +130,13 @@ export default function FairfaxPermitPage() {
             </details>
           ))}
 
+          <div style={{ padding: '1.5rem', margin: '2rem 0', background: '#fff7f1', border: '1px solid #f3d3bd', borderRadius: 12 }}>
+            <p style={{ margin: 0, color: '#7a3210', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, fontSize: 12 }}>Free download</p>
+            <h3 style={{ margin: '6px 0 6px', fontSize: '1.25rem' }}>2026 NoVA Deck Permit Checklist</h3>
+            <p style={{ margin: '0 0 12px', color: '#333' }}>The 6-stage printable checklist for Fairfax, Loudoun, PWC, and Arlington — HOA review through final inspection.</p>
+            <Link href="/lead-magnets/nova-deck-permit-checklist-2026" style={{ color: '#d14817', fontWeight: 700, textDecoration: 'underline' }}>Open the printable checklist →</Link>
+          </div>
+
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[

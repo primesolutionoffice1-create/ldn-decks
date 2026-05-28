@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './not-found.module.css';
+import NotFoundSuggestions from '../components/NotFoundSuggestions';
 
 export default function NotFound() {
   return (
@@ -44,6 +45,8 @@ export default function NotFound() {
               <li><Link href="/contact" style={{ color: 'var(--color-primary, #d14817)', textDecoration: 'none', fontSize: '0.9rem' }}>Get a Free Estimate</Link></li>
             </ul>
           </div>
+
+          <NotFoundSuggestions />
         </div>
       </div>
     </div>
