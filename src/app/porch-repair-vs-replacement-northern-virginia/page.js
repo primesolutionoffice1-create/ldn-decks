@@ -10,7 +10,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/porch-repair-vs-replacement-northern-virginia',
-  title: 'Porch Repair vs Replacement',
+  title: 'Porch Repair vs Replacement: Costs & Inspection in NoVA',
   description: 'Repair your porch for $2,000-$8,000 or replace for $25,000-$70,000. When each makes sense, inspection checklist, and cost comparison for Northern Virginia.',
 });
 

@@ -12,6 +12,12 @@ const CITY_DATA = {
     projectTypes: ['composite resurfacing', 'deck replacement', 'stair rebuilds', 'deck lighting', 'privacy-friendly railing upgrades'],
     localNotes: ['Brambleton ARC expectations', 'Loudoun County inspections', 'older pressure-treated frames from the 2007-2015 build cycle'],
     premium: 'A smart Brambleton deck usually feels organized rather than oversized: a better stair location, cleaner railing lines, lighting at the stairs and a composite color that works with the brick or siding package.',
+    cityFaqs: [
+      { q: "Do you handle Brambleton Community Association ARC submissions?", a: "Yes. We prepare the full Brambleton ARC submission package — site plan, materials list with brand and color, railing details, and any required rendering — and submit it on your behalf. Our 100% Brambleton ARC approval rate reflects how carefully we map each design to the community guidelines before submitting." },
+      { q: "What does a Brambleton deck typically cost?", a: "Brambleton deck projects typically run $22,000 to $48,000. Composite resurfacing on a sound frame: $14,000 to $22,000. Full PT-to-composite replacement: $25,000 to $40,000. Multi-level or screened-porch additions push toward the upper end. Pricing depends on lot access, framing condition, railing system, and integrated features like lighting." },
+      { q: "Which Trex colors and railings are approved in Brambleton?", a: "Brambleton's ARC favors muted earth tones — Spiced Rum, Tiki Torch, Havana Gold for Trex Transcend; matte-black aluminum railings or composite balustrade in Bronze. Bright or high-contrast finishes typically require ARC pre-approval. We carry current Brambleton-approved sample lists, so material selection happens before submission." },
+      { q: "How long does Brambleton ARC review take?", a: "Brambleton ARC review averages 14 to 21 days from a complete submission. Incomplete packages get returned, adding 1 to 2 weeks. We never submit until samples, drawings, and the project narrative are all aligned to current guidelines — that's why our first-round approval rate is 100% in Brambleton." },
+    ],
   },
   bristow: {
     name: 'Bristow',
@@ -181,6 +187,12 @@ const CITY_DATA = {
     projectTypes: ['composite decks', 'screened porches', 'pergolas', 'deck resurfacing', 'stair rebuilds', 'fencing'],
     localNotes: ['Stafford County plan review in 2-3 weeks (faster than most NoVA counties)', 'lower labor and permit costs than Fairfax or Loudoun', 'Embrey Mill, Aquia Harbour and Garrisonville HOA review'],
     premium: 'Stafford projects deliver the best outdoor living value in Northern Virginia: the same Trex and TimberTech materials, the same expert craftsmanship, but 15-25% lower overall project cost due to more efficient permitting and competitive labor rates.',
+    cityFaqs: [
+      { q: "How much does a deck cost in Stafford, VA?", a: "Stafford deck projects typically run $18,000 to $52,000, which is roughly 15-25% less than the same scope in Fairfax or Loudoun. Composite decks: $30-50/sqft installed. Screened porches: $35,000-$60,000. Lower per-sqft cost comes from shorter permit timelines, less expensive labor, and lower material delivery costs from our staging area." },
+      { q: "How long does the Stafford County permit take?", a: "Stafford County plan review averages 2 to 3 weeks — faster than Fairfax (3-6 weeks) or Loudoun (2-4 weeks). Submissions go through the Stafford County Department of Planning & Zoning. We file everything as part of the project and track plan-review status weekly." },
+      { q: "Which Stafford communities do you build in?", a: "We build regularly in Embrey Mill, Aquia Harbour, Garrisonville, Falmouth, Stafford Lakes, Augustine North, and the rural sections of Stafford County. Each has its own HOA process when applicable — we map the submission requirements before design finalizes." },
+      { q: "Why is Stafford cheaper than Fairfax for the same deck?", a: "Three reasons: Stafford County permit fees are roughly half what Fairfax charges ($150-300 vs. $300-600); the labor market in Stafford has more competitive rates; and shorter permit timelines reduce carry costs on the project. The materials, design quality, and craftsmanship are identical — only the overhead is lower." },
+    ],
   },
   sterling: {
     name: 'Sterling',
@@ -193,6 +205,12 @@ const CITY_DATA = {
     projectTypes: ['deck replacement', 'composite resurfacing', 'screened porch conversions', 'townhome deck builds', 'HOA-compliant upgrades', 'stair rebuilds'],
     localNotes: ['Loudoun County permits in 10-15 business days (fastest in NoVA)', 'Sugarland Run, Countryside, Cascades and Potomac Falls each have their own HOA requirements', 'many Sterling decks built 2005-2010 are now entering replacement age'],
     premium: 'Sterling is one of our most active service areas, close to headquarters with the fastest response times. The best Sterling projects preserve sound framing when possible, upgrade to composite surfaces and rails, and solve the circulation and stair problems that make an older deck feel tired.',
+    cityFaqs: [
+      { q: "How quickly can you start a deck project in Sterling?", a: "Sterling is roughly 25 minutes from our Centreville HQ, so we can do same-week site visits and start most projects within 4 to 8 weeks of contract — 2-4 weeks for Loudoun County permit, 2-3 weeks for HOA approval (parallel with permit), and 1-2 weeks for material delivery. Sterling decks typically take 1-2 weeks on-site." },
+      { q: "Which Sterling HOAs do you submit to?", a: "We regularly submit to Sugarland Run Homes Association, Countryside Proprietary, Cascades Community Association, Potomac Falls HOA, Sterling Park Civic Association, and several smaller townhome associations. Each has its own architectural review board with specific railing, color, and material guidelines — we map these before design starts." },
+      { q: "What composite materials work best for established Sterling homes?", a: "For 1990s-2000s Sterling homes with brick or vinyl siding, Trex Transcend in Spiced Rum or Tiki Torch reads warm and traditional. For newer 2010+ builds with cleaner exteriors, TimberTech AZEK Vintage in Mahogany or Coastline holds up better visually. Townhomes often look best with picture-frame board patterns to add visual depth on smaller decks." },
+      { q: "Do you build townhouse decks in Sterling?", a: "Yes — Sterling has a large townhome market and we build there regularly. Typical townhome deck: 180-280 sqft, composite, with HOA-compliant aluminum or composite railings. Cost range: $18,000 to $32,000. The biggest challenges are ledger attachment on stucco or EIFS exteriors and second-story stair sequences — both we handle routinely." },
+    ],
   },
   greatFalls: {
     name: 'Great Falls',
@@ -302,6 +320,22 @@ export default function CityAuthorityExpansion({ cityKey }) {
               western Loudoun landscape without feeling suburban or generic.
             </p>
           </div>
+        )}
+
+        {city.cityFaqs && city.cityFaqs.length > 0 && (
+          <>
+            <h3 style={{ fontSize: '1.35rem', fontWeight: 800, marginBottom: '0.75rem', color: '#111827' }}>
+              {city.name}-specific deck questions
+            </h3>
+            <div style={{ marginBottom: '1.75rem' }}>
+              {city.cityFaqs.map((faq, idx) => (
+                <details key={idx} style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '1rem 1.25rem', marginBottom: '0.5rem', background: '#fff' }}>
+                  <summary style={{ fontWeight: 700, cursor: 'pointer', lineHeight: 1.4 }}>{faq.q}</summary>
+                  <p style={{ marginTop: '0.75rem', marginBottom: 0, lineHeight: 1.7, color: '#334155' }}>{faq.a}</p>
+                </details>
+              ))}
+            </div>
+          </>
         )}
 
         <h3 style={{ fontSize: '1.35rem', fontWeight: 800, marginBottom: '0.75rem', color: '#111827' }}>

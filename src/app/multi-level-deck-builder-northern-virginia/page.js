@@ -11,7 +11,7 @@ import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/multi-level-deck-builder-northern-virginia',
-  title: 'Multi-Level Deck Builder NoVA',
+  title: 'Multi-Level Deck Builder Northern Virginia | LDN Decks',
   description: 'Custom multi-level decks in Northern Virginia from $35,000-$80,000+. Perfect for sloped lots and walkout basements. Trex & TimberTech. Free design consultation.',
 });
 
