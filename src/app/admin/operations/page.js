@@ -22,10 +22,10 @@ const TIER1_ACTIONS = [
     id: 'gbp-weekly',
     title: 'GBP weekly post + 3 Q&A',
     cadence: 'Every Monday',
-    timeMinutes: 15,
+    timeMinutes: 5,
     leverage: 'Highest sustained ROI in the entire growth plan. 12-week cadence shifts GBP score 15-25%.',
-    ready: '12 posts ready in wiki/deliverables/local-seo-fixes/gbp/post-calendar-90day.md + 12 Q&A pairs in qa-seed-list.md',
-    nextStep: 'Login GBP → Posts → paste Week N post from post-calendar-90day.md',
+    ready: 'THIS WEEK packet ready: wiki/deliverables/local-seo-fixes/gbp/this-week.md (copy-paste ready, 5-min execution)',
+    nextStep: 'Open wiki/.../gbp/this-week.md → login business.google.com → paste post + 3 Q&A',
     status: 'awaiting-execution',
   },
   {
@@ -62,10 +62,10 @@ const TIER1_ACTIONS = [
     id: 'loudoun-proximity',
     title: 'Loudoun proximity decision (A/B/C/D)',
     cadence: 'One-time strategic',
-    timeMinutes: 30,
-    leverage: 'Single largest move in the entire growth plan. Option A → +60-120% Loudoun map-pack lift.',
-    ready: 'Read wiki/deliverables/local-seo-fixes/proximity/Loudoun Satellite Strategy.md + local-authority-domination-strategy.md',
-    nextStep: 'Choose A (commercial lease Ashburn/Leesburg), B (virtual office — risk), C (partner co-location), or D (stay SAB)',
+    timeMinutes: 10,
+    leverage: 'Single largest move in the entire growth plan. Option A → +60-120% Loudoun map-pack lift. 12-month revenue lift estimate: $300K-$800K.',
+    ready: '1-pager decision memo ready: wiki/.../proximity/decision-memo.md (decision tree + recommendation + cost analysis side-by-side)',
+    nextStep: 'Open wiki/.../proximity/decision-memo.md → read 10 min → write your A/B/C/D answer at bottom + commit',
     status: 'awaiting-decision',
   },
 ];
@@ -252,8 +252,10 @@ export default function OperationsDashboardPage() {
           <li><strong>link-acquisition-roadmap.md</strong> — 7-tier link plan, 30-50 durable links over 12 months</li>
           <li><strong>dominance-scorecard.md</strong> — composite score + 30-day execution chain</li>
           <li><strong>roadmap/90-Day Execution Plan.md</strong> — week-by-week task list</li>
+          <li><strong>gbp/this-week.md</strong> — THIS WEEK's GBP post + 3 Q&A, copy-paste ready (5-min execution)</li>
           <li><strong>gbp/post-calendar-90day.md</strong> — 12 GBP posts ready to publish</li>
           <li><strong>gbp/qa-seed-list.md</strong> — 12 Q&A pairs ready to seed</li>
+          <li><strong>proximity/decision-memo.md</strong> — Loudoun proximity A/B/C/D 1-pager decision memo (the highest-leverage strategic decision in the entire plan)</li>
           <li><strong>gbp/services-products.md</strong> — GBP services + products data</li>
           <li><strong>gbp/review-response-templates.md</strong> — review reply templates</li>
           <li><strong>reviews/Review Automation Spec.md</strong> — Jobber vs NiceVoice implementation</li>

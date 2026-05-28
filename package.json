@@ -13,6 +13,7 @@
         "seo:daily-check": "node scripts/seo-daily-check.mjs",
         "seo:link-audit": "node scripts/seo-link-audit.mjs",
         "seo:audit-images": "node scripts/audit-image-alt.mjs --verbose",
+        "seo:weekly": "node scripts/seo-weekly-report.mjs",
         "automation:verify": "node scripts/automation-stack-verify.mjs"
     },
     "dependencies": {
