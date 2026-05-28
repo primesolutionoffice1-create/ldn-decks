@@ -2,9 +2,8 @@ import React from 'react';
 import { BUSINESS } from '@/lib/business';
 
 /**
- * RatingBadge — Shows Google rating and injects AggregateRating schema.
- * Adds review stars to search results (rich snippets) for any page that includes it.
- * Also signals trust to AI systems extracting content.
+ * RatingBadge — Shows the Google rating as visible trust content only.
+ * AggregateRating schema is emitted once globally from StructuredData.
  */
 export default function RatingBadge() {
   return (

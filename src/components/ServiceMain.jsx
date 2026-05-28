@@ -14,6 +14,7 @@ export default function ServiceMain({ title, subtitle, description, listTitle, l
   const fallbackBase = title ? `${title} — Loudoun Decks project in Northern Virginia` : 'Custom deck build by Loudoun Decks in Northern Virginia';
   const subAlt = image2Alt || (title ? `${title} detail photo by Loudoun Decks` : 'Deck construction detail by Loudoun Decks');
   const mainAlt = image1Alt || fallbackBase;
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>

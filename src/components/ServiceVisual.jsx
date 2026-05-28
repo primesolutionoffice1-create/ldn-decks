@@ -2,14 +2,14 @@ import React from 'react';
 import styles from './ServiceVisual.module.css';
 import Image from 'next/image';
 
-export default function ServiceVisual({ image }) {
+export default function ServiceVisual({ image, alt = "Completed outdoor living project by Loudoun Decks" }) {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.imageWrapper}>
           <Image 
             src={image} 
-            alt="New custom composite deck design by Loudoun Decks in Northern Virginia" 
+            alt={alt}
             fill 
             className={styles.img}
             sizes="100vw"
