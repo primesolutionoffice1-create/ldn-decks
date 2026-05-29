@@ -8,6 +8,7 @@ import EnhancifyWidget from '@/components/EnhancifyWidget';
 import FinancingCalculator from '@/components/FinancingCalculator';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
+import ServiceSchema from '@/components/ServiceSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
@@ -117,6 +118,16 @@ export default function DeckFinancingPage() {
     <>
       <JsonLd data={faqSchema} />
       <WebPageSchema url="https://ldndecks.com/deck-financing" name="Premium Deck Financing in Northern Virginia | Loudoun Decks" description="Finance your custom deck. Monthly options for $15K-$50K+ composite decks. Soft credit pre-qualification — no impact on credit score." speakable />
+      <ServiceSchema
+        name="Deck Financing Pre-Qualification"
+        description="Soft-pull financing pre-qualification for composite deck projects in Northern Virginia. Multiple lender offers in roughly 60 seconds with no credit score impact. Loudoun Decks is not a lender; financing is provided by Enhancify, Inc. and partner lenders."
+        url="https://ldndecks.com/deck-financing"
+        serviceType="Home Improvement Financing Guidance"
+        category="Financial Services"
+        lowPrice="15000"
+        highPrice="120000"
+        relatedServices={['https://ldndecks.com/deck-payment-estimator', 'https://ldndecks.com/services/new-decks', 'https://ldndecks.com/services/deck-replacement']}
+      />
 
       {/* ============ HERO ============ */}
       <section style={{ background: 'var(--color-dark)', color: 'var(--white)', padding: '5rem 0 4rem' }}>

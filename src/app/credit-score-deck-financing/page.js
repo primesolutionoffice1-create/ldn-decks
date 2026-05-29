@@ -21,12 +21,14 @@ export const metadata = buildMetadata({
 
 const PATH = '/credit-score-deck-financing';
 
+// Total interest computed from (monthly × 120) − $30,000 principal at lowest
+// APR in each band; provides a citable cost-of-credit fact per band.
 const scoreBands = [
-  { band: '760+', tier: 'Excellent', apr: '6.99–8.99%', approval: 'Most flexible — promotional 0% offers, longer terms, higher loan amounts', monthly30k: '$348–$380 /mo (10y)' },
-  { band: '700–759', tier: 'Good', apr: '8.99–11.99%', approval: 'Strong approval odds across most lenders; mid-range APR', monthly30k: '$380–$430 /mo (10y)' },
-  { band: '660–699', tier: 'Fair', apr: '11.99–15.99%', approval: 'Approval likely but at higher APR; some lenders may cap loan size', monthly30k: '$430–$486 /mo (10y)' },
-  { band: '620–659', tier: 'Below Average', apr: '15.99–22.99%', approval: 'Limited lender options; longer terms may help monthly payment', monthly30k: '$486–$571 /mo (10y)' },
-  { band: 'Below 620', tier: 'Subprime', apr: '22.99%+', approval: 'Conventional home-improvement lenders typically decline; HELOC, co-signer, or cash plan recommended', monthly30k: '$571+ /mo (10y)' },
+  { band: '760+', tier: 'Excellent', apr: '6.99–8.99%', approval: 'Most flexible — promotional 0% offers, longer terms, higher loan amounts', monthly30k: '$348–$380 /mo (10y)', interest30k: '$11,760–$15,600' },
+  { band: '700–759', tier: 'Good', apr: '8.99–11.99%', approval: 'Strong approval odds across most lenders; mid-range APR', monthly30k: '$380–$430 /mo (10y)', interest30k: '$15,600–$21,600' },
+  { band: '660–699', tier: 'Fair', apr: '11.99–15.99%', approval: 'Approval likely but at higher APR; some lenders may cap loan size', monthly30k: '$430–$486 /mo (10y)', interest30k: '$21,600–$28,320' },
+  { band: '620–659', tier: 'Below Average', apr: '15.99–22.99%', approval: 'Limited lender options; longer terms may help monthly payment', monthly30k: '$486–$571 /mo (10y)', interest30k: '$28,320–$38,520' },
+  { band: 'Below 620', tier: 'Subprime', apr: '22.99%+', approval: 'Conventional home-improvement lenders typically decline; HELOC, co-signer, or cash plan recommended', monthly30k: '$571+ /mo (10y)', interest30k: '$38,520+' },
 ];
 
 const faqs = [
@@ -154,6 +156,7 @@ export default function CreditScoreDeckFinancingPage() {
                   <th style={S.th}>Tier</th>
                   <th style={S.th}>Typical APR</th>
                   <th style={S.th}>$30k Monthly (10y)</th>
+                  <th style={S.th}>$30k Total Interest (10y)</th>
                 </tr>
               </thead>
               <tbody>
@@ -163,10 +166,18 @@ export default function CreditScoreDeckFinancingPage() {
                     <td style={S.td}>{row.tier}</td>
                     <td style={S.td}>{row.apr}</td>
                     <td style={{ ...S.td, color: 'var(--color-primary)', fontWeight: 600 }}>{row.monthly30k}</td>
+                    <td style={{ ...S.td, color: '#555' }}>{row.interest30k}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+          <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 8, padding: '1rem 1.25rem', marginBottom: '1.25rem' }}>
+            <p data-speakable style={{ margin: 0, fontWeight: 600 }}>
+              A $30,000 deck financed at 9% APR over 10 years costs approximately $45,600 total — $15,600 in interest.
+              At 16% APR the same loan costs about $58,320 total — $28,320 in interest, a $12,720 difference over the
+              life of the loan for the same project amount.
+            </p>
           </div>
 
           <h2 style={S.h2}>What Soft-Pull Pre-Qualification Returns</h2>

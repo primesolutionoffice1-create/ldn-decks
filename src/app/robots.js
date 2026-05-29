@@ -62,6 +62,8 @@ export default function robots() {
       })),
     ],
     sitemap: [`${SITE_URL}/sitemap.xml`, `${SITE_URL}/image-sitemap.xml`],
-    host: SITE_URL,
+    // host directive removed 2026-05-29: Yandex (the only parser that reads it)
+    // wants a bare domain ('ldndecks.com'), not a URL with scheme. Google and
+    // Bing ignore it. Cleaner to omit than emit a malformed value.
   }
 }

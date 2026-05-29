@@ -216,6 +216,8 @@ export const FOUNDER_ID = `${BUSINESS.url}/#founder`;
 // Builds the WebSite JSON-LD object.
 // Use this once in the root layout alongside buildOrganizationSchema.
 // Resolves the dangling "#website" @id references some pages emit (e.g., WebPage.isPartOf).
+// potentialAction enables Google's SiteLinks Search Box rich result —
+// requires a real search endpoint at /search?q={search_term_string}.
 export function buildWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
@@ -225,6 +227,14 @@ export function buildWebSiteSchema() {
     name: BUSINESS.name,
     publisher: { '@id': ORG_ID },
     inLanguage: 'en-US',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${BUSINESS.url}/search?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   };
 }
 

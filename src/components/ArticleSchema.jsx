@@ -48,7 +48,8 @@ export default function ArticleSchema({
       {
         '@type': 'Person',
         '@id': FOUNDER_ID,
-        name: 'Nick',
+        name: 'Nicolae Zugrav',
+        alternateName: 'Nick',
         jobTitle: 'Owner & Lead Designer',
         url: 'https://ldndecks.com/team',
       },
