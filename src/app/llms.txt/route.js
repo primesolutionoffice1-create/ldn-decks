@@ -194,6 +194,64 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 
 ## Detailed Content
 For full extractable content, see: https://ldndecks.com/llms-full.txt
+
+## Bare URL Index
+
+Strict llms.txt parsers (used by OpenAI ChatGPT Browse and Perplexity)
+crawl bare URLs on their own lines. The markdown-link list above is for
+human and rich-parser consumption; this section ensures discoverability
+across every parser variant.
+
+https://ldndecks.com/
+https://ldndecks.com/deck-builder-northern-virginia
+https://ldndecks.com/services
+https://ldndecks.com/composite-deck-cost-northern-virginia
+https://ldndecks.com/composite-deck-cost-by-size
+https://ldndecks.com/400-square-foot-deck-cost-northern-virginia
+https://ldndecks.com/600-square-foot-deck-cost-northern-virginia
+https://ldndecks.com/800-square-foot-deck-cost-northern-virginia
+https://ldndecks.com/deck-payment-estimator
+https://ldndecks.com/deck-cost-calculator
+https://ldndecks.com/deck-roi-calculator-northern-virginia
+https://ldndecks.com/deck-financing
+https://ldndecks.com/deck-financing-northern-virginia
+https://ldndecks.com/monthly-payment-composite-deck-northern-virginia
+https://ldndecks.com/trex-deck-cost-monthly-payment
+https://ldndecks.com/timbertech-azek-deck-cost-northern-virginia
+https://ldndecks.com/credit-score-deck-financing
+https://ldndecks.com/best-time-to-finance-build-deck-northern-virginia
+https://ldndecks.com/deck-lighting-railings-stairs-addon-cost
+https://ldndecks.com/covered-deck-cost-northern-virginia
+https://ldndecks.com/wood-vs-composite-deck-long-term-cost
+https://ldndecks.com/resurface-or-replace-deck-financing
+https://ldndecks.com/deck-resurfacing-northern-virginia
+https://ldndecks.com/deck-permit-hoa-cost-loudoun-county
+https://ldndecks.com/ashburn-composite-deck-cost-financing
+https://ldndecks.com/mclean-great-falls-premium-deck-budget
+https://ldndecks.com/trex-decks
+https://ldndecks.com/timbertech-decks
+https://ldndecks.com/composite-decks
+https://ldndecks.com/trex-vs-timbertech-vs-azek
+https://ldndecks.com/composite-deck-vs-wood-deck-virginia
+https://ldndecks.com/deck-builder-ashburn-va
+https://ldndecks.com/deck-builder-leesburg-va
+https://ldndecks.com/deck-builder-mclean-va
+https://ldndecks.com/deck-builder-great-falls-va
+https://ldndecks.com/deck-builder-fairfax-va
+https://ldndecks.com/deck-builder-vienna-va
+https://ldndecks.com/deck-builder-reston-va
+https://ldndecks.com/deck-builder-arlington-va
+https://ldndecks.com/deck-builder-tysons-va
+https://ldndecks.com/deck-builder-centreville-va
+https://ldndecks.com/deck-permit-loudoun-county-virginia
+https://ldndecks.com/deck-permit-fairfax-county-virginia
+https://ldndecks.com/hoa-deck-rules-northern-virginia
+https://ldndecks.com/services/new-decks
+https://ldndecks.com/services/deck-resurfacing
+https://ldndecks.com/services/deck-replacement
+https://ldndecks.com/reviews
+https://ldndecks.com/about
+https://ldndecks.com/contact
 `;
 
   return new Response(content, {

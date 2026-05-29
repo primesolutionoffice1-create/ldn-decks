@@ -10,6 +10,7 @@ import EstimatorTrackedLink from '@/components/EstimatorTrackedLink';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import ArticleSchema from '@/components/ArticleSchema';
+import ServiceSchema from '@/components/ServiceSchema';
 import CallLink from '@/components/CallLink';
 import { BUSINESS } from '@/lib/business';
 
@@ -120,6 +121,16 @@ export default function DeckPaymentEstimatorPage() {
         image="/showcase/img09.jpeg"
         datePublished="2026-04-12"
         dateModified="2026-05-28"
+      />
+      <ServiceSchema
+        name="Deck Payment Estimator Tool"
+        description="Free interactive deck payment estimator for Northern Virginia homeowners. Model project amount, APR, and term to estimate monthly payment before contacting a contractor. Loudoun Decks does not extend credit; financing is offered through Enhancify, Inc. and partner lenders."
+        url="https://ldndecks.com/deck-payment-estimator"
+        serviceType="Home Improvement Payment Estimation"
+        category="Financial Services"
+        lowPrice="15000"
+        highPrice="120000"
+        relatedServices={['https://ldndecks.com/deck-financing', 'https://ldndecks.com/services/new-decks', 'https://ldndecks.com/deck-cost-calculator']}
       />
       <JsonLd data={faqSchema} />
 

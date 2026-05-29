@@ -1,14 +1,21 @@
+import { execSync } from 'node:child_process';
+import { existsSync, statSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { blogPosts } from '@/lib/blogData';
 import { educationArticles } from '@/lib/educationData';
 import { showcaseProjects } from '@/lib/showcaseData';
 import { SITE_URL } from '@/lib/seo';
 
-// Tiered lastModified dates — derived from build time so they stay fresh on every deploy.
-// Hardcoded dates went stale; Google discounts sitemaps whose lastMod doesn't move.
-// Tier 1: high-velocity commercial pages (touched every release)
-// Tier 2: city/service hubs (refreshed roughly weekly)
-// Tier 3: support pages, blog index, secondary services (~monthly)
-// Tier 4: legal, team, evergreen pages (~biannual)
+// Tier dates are fallbacks for entries whose source file we cannot resolve
+// (blog posts, education articles, showcase projects come from data files,
+// not per-route page.js files). For static routes we resolve the actual
+// last-modified date from git — Google discounts sitemaps where lastMod
+// inflates on every deploy without real content changes.
+//
+// Tier 1: high-velocity commercial pages
+// Tier 2: city/service hubs
+// Tier 3: support pages, blog index, secondary services
+// Tier 4: legal, team, evergreen
 function daysAgo(n) {
   const d = new Date();
   d.setUTCDate(d.getUTCDate() - n);
@@ -18,6 +25,54 @@ const TIER1 = daysAgo(0);
 const TIER2 = daysAgo(7);
 const TIER3 = daysAgo(30);
 const TIER4 = daysAgo(180);
+
+// Maps a URL path to the source page.js file. Returns null if no file found
+// (route comes from a dynamic data source, or path is the homepage with no
+// extra segment).
+const APP_ROOT = resolve(process.cwd(), 'src/app');
+const PAGE_EXTENSIONS = ['page.js', 'page.jsx', 'page.tsx', 'page.ts'];
+
+function pathToPageFile(urlPath) {
+  // Normalize: '' or '/' → root segment
+  const segment = urlPath === '' || urlPath === '/' ? '' : urlPath.replace(/^\//, '');
+  for (const ext of PAGE_EXTENSIONS) {
+    const f = resolve(APP_ROOT, segment, ext);
+    if (existsSync(f)) return f;
+  }
+  return null;
+}
+
+// Returns last git commit date (YYYY-MM-DD) for a file, or null if git is
+// unavailable / file has no history (e.g. shallow clones in CI).
+function gitMtime(filePath) {
+  try {
+    const out = execSync(
+      `git log -1 --format=%cI -- "${filePath}"`,
+      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], cwd: process.cwd() }
+    ).trim();
+    if (!out) return null;
+    return out.split('T')[0];
+  } catch {
+    return null;
+  }
+}
+
+// Filesystem mtime fallback when git is unavailable.
+function fsMtime(filePath) {
+  try {
+    return statSync(filePath).mtime.toISOString().split('T')[0];
+  } catch {
+    return null;
+  }
+}
+
+// Resolves the most accurate lastModified date for a route, with a tiered
+// fallback ladder: git mtime → fs mtime → caller-supplied tier date.
+function resolveLastMod(urlPath, tierFallback) {
+  const file = pathToPageFile(urlPath);
+  if (!file) return tierFallback;
+  return gitMtime(file) || fsMtime(file) || tierFallback;
+}
 
 // Paths to exclude from sitemap (Technical Package Sprint 1)
 const EXCLUDE_PATHS = [
@@ -364,7 +419,7 @@ export default async function sitemap() {
 
         return allPages.map(({ path, lastMod, videos }) => ({
                 url: `${baseUrl}${path}`,
-                lastModified: lastMod,
+                lastModified: resolveLastMod(path, lastMod),
                 ...(videos && { videos }),
         }));
 }
