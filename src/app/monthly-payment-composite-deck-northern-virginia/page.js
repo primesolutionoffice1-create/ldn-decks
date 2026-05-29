@@ -140,14 +140,15 @@ export default function MonthlyPaymentCompositeDeckPage() {
       <section style={{ background: '#f6f9fc', borderLeft: '4px solid #2b6cb0', padding: '1.5rem 0' }}>
         <div style={S.container}>
           <p style={{ fontWeight: 700, marginBottom: '0.5rem', color: '#2b6cb0', fontSize: '0.85rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-            What We&apos;ve Seen — 2025 Loudoun &amp; Fairfax Financing Data
+            What We See on Loudoun &amp; Fairfax Financing
           </p>
           <p data-speakable style={{ marginBottom: 0, lineHeight: 1.7 }}>
-            Of <strong>62 financed deck projects we built last year</strong>, the median monthly payment was{' '}
-            <strong>$418/month</strong> on a $32,400 median project amount at 9.49% APR over 10 years. The most-chosen
-            term was <strong>10 years (54% of clients)</strong> over 15 years (31%) and 5 years (15%) — homeowners prefer
-            paying down faster once they see the total-interest gap. Smallest financed project: $14,200 (a Ashburn Village
-            resurfacing). Largest: $87,500 (a Great Falls covered deck with cable railings and integrated lighting).
+            Most of our financed deck clients in Loudoun and Fairfax counties land in the{' '}
+            <strong>$25,000–$45,000 project range</strong>, with monthly payments typically{' '}
+            <strong>$315–$570 at ~9% APR over 10 years</strong>. The <strong>10-year term is the most popular choice</strong>,
+            followed by 15-year terms for homeowners prioritizing lower monthly payment and short 5-year terms for cash-
+            flow flexible buyers who want to minimize total interest. Resurfacing projects (existing-frame composite
+            upgrades) tend to start around $15,000; covered decks with premium railings and lighting can reach $80,000+.
           </p>
         </div>
       </section>

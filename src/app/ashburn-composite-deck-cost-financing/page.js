@@ -130,15 +130,15 @@ export default function AshburnCompositeDeckCostPage() {
       <section style={{ background: '#f6f9fc', borderLeft: '4px solid #2b6cb0', padding: '1.5rem 0' }}>
         <div style={S.container}>
           <p style={{ fontWeight: 700, marginBottom: '0.5rem', color: '#2b6cb0', fontSize: '0.85rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-            What We&apos;ve Seen — 2025 Ashburn HOA &amp; Project Data
+            What We See on Ashburn HOA &amp; Project Reviews
           </p>
           <p data-speakable style={{ marginBottom: 0, lineHeight: 1.7 }}>
-            We submitted <strong>14 HOA architectural review packages across Ashburn Village, Brambleton, and Belmont
-            Country Club in 2025</strong>. Median approval timeline: <strong>22 days</strong> (range 18–31). Brambleton
-            ARC averaged 21 days; Ashburn Village ARC averaged 24; Belmont CC ARC ran longest at 28–31 days because it
-            meets less frequently. Of the 14, <strong>13 approved on the first submission</strong>; one required a
-            railing color resubmission (black aluminum requested, oil-rubbed bronze approved). Median final project
-            amount in this set: $28,400.
+            Ashburn HOA architectural review timelines typically run <strong>2–4 weeks</strong> from a complete
+            submission. <strong>Ashburn Village ARC and Brambleton ARC</strong> are usually on the faster end (~2–3 weeks);
+            <strong> Belmont Country Club ARC</strong> runs longer (3–5 weeks) because the committee meets less frequently.
+            The most common resubmission triggers we see are <strong>railing color</strong> (community-approved palette is
+            stricter than expected) and <strong>setback measurements</strong>. We submit packages with material samples,
+            site plan, and elevation drawings together to minimize back-and-forth.
           </p>
         </div>
       </section>
