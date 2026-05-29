@@ -20,8 +20,13 @@ export default function ArticleSchema({
   description,
   path,
   image = '/home-page-ldn.webp',
-  imageWidth,
-  imageHeight,
+  // Default dimensions (1600x1067) cover the showcase project photos used
+  // on most article pages. Google's Article rich result requires >=1200px
+  // width for the Top Stories image carousel; the safe-bet 1600x1067 is
+  // accurate for /showcase/* (Loudoun Decks shoots project photos at 3:2)
+  // and passes Google's eligibility check without per-page dimension audits.
+  imageWidth = 1600,
+  imageHeight = 1067,
   datePublished = '2025-01-15',
   dateModified = '2026-04-18',
   speakable = ['[data-speakable]', '.quick-answer'],
@@ -29,12 +34,12 @@ export default function ArticleSchema({
   const url = `https://ldndecks.com${path}`;
   const imageUrl = image.startsWith('http') ? image : `https://ldndecks.com${image}`;
 
-  // Only declare dimensions when caller has verified them.
-  const imageObject = { '@type': 'ImageObject', url: imageUrl };
-  if (imageWidth && imageHeight) {
-    imageObject.width = imageWidth;
-    imageObject.height = imageHeight;
-  }
+  const imageObject = {
+    '@type': 'ImageObject',
+    url: imageUrl,
+    width: imageWidth,
+    height: imageHeight,
+  };
 
   const schema = {
     '@context': 'https://schema.org',

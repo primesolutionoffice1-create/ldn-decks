@@ -66,7 +66,7 @@ export default function LoudounPermitPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Yes, you need a permit.</strong> Any deck attached to your house, over 256 sqft, or more than 16.5&quot; above grade requires a Loudoun County building permit. Plan review takes <strong>2–4 weeks</strong> via the LOLA portal. Permit costs <strong>$150–$500</strong>. <strong>We handle the entire process</strong> plans, submission, and inspections. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink>.</p>
+          <p><strong>A Loudoun County residential deck permit costs $150–$500</strong> for a standard deck and $400–$1,200 for a covered deck, with plan review taking <strong>2–4 weeks</strong> through the LandMARC portal. Any deck attached to the house, over 256 sqft, or more than 16.5&quot; above grade requires a permit. <strong>We handle the entire process</strong> — plans, LandMARC submission, and three inspections. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink>.</p>
         </div>
       </section>
 

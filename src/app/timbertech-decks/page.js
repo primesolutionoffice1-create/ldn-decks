@@ -153,6 +153,61 @@ export default function TimberTechDecksPage() {
         </div>
       </section>
 
+      {/* TimberTech / AZEK Cost — answers "timbertech deck cost" SERP intent */}
+      <section style={{ padding: '3rem 1.5rem', background: '#fff' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '0.75rem', letterSpacing: '-0.01em' }}>
+            TimberTech &amp; AZEK Deck Cost in Northern Virginia (2026)
+          </h2>
+          <p data-speakable style={{ marginBottom: '1.5rem', lineHeight: 1.7, color: '#2d3748' }}>
+            TimberTech and AZEK decks in Northern Virginia run <strong>$35–$85 per square foot installed</strong>,
+            depending on tier. EDGE Prime+ runs $35–$45/sqft, PRO Reserve runs $45–$60/sqft, and the premium AZEK
+            Vintage full-PVC line runs $60–$85/sqft. A 350 sqft AZEK Vintage project typically lands
+            <strong> $28,000–$42,000+</strong> with the industry-longest 50-year residential warranty.
+          </p>
+          <div style={{ overflowX: 'auto', marginBottom: '1.25rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
+              <thead>
+                <tr style={{ background: '#f5f5f5' }}>
+                  <th style={{ padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>TimberTech Tier</th>
+                  <th style={{ padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Installed /sqft</th>
+                  <th style={{ padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>350 sqft Project</th>
+                  <th style={{ padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Warranty</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>TimberTech EDGE Prime+</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$35–$45</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$18,000–$26,000</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>25-yr residential + 25-yr fade &amp; stain</td>
+                </tr>
+                <tr style={{ background: '#fafafa' }}>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>TimberTech PRO Reserve</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$45–$60</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$22,000–$32,000</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>30-yr residential + 30-yr fade &amp; stain</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>TimberTech AZEK Vintage</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$60–$85</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$28,000–$42,000+</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>50-yr residential + 50-yr fade &amp; stain</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style={{ fontSize: '0.85rem', color: '#666', fontStyle: 'italic', marginBottom: '1rem' }}>
+            Pricing includes installation and hidden fasteners. Aluminum railings (AZEK Premier), cable railings, picture-frame border, stair flights, and lighting are priced separately.
+          </p>
+          <p style={{ marginBottom: 0 }}>
+            <Link href="/timbertech-azek-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
+              Full TimberTech &amp; AZEK cost + monthly payment breakdown →
+            </Link>
+          </p>
+        </div>
+      </section>
+
       <ServiceMain
         subtitle="Premium PVC & Composite"
         title="Certified TimberTech and AZEK Deck Contractor"
