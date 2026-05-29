@@ -128,6 +128,21 @@ export default function CreditScoreDeckFinancingPage() {
         </div>
       </section>
 
+      <section style={{ background: '#f6f9fc', borderLeft: '4px solid #2b6cb0', padding: '1.5rem 0', marginTop: '0' }}>
+        <div style={S.container}>
+          <p style={{ fontWeight: 700, marginBottom: '0.5rem', color: '#2b6cb0', fontSize: '0.85rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+            What We&apos;ve Seen — 2025 Northern Virginia Project Data
+          </p>
+          <p data-speakable style={{ marginBottom: 0, lineHeight: 1.7 }}>
+            Across <strong>62 financed deck projects in NoVA last year</strong>, the median client credit score was{' '}
+            <strong>728 (FICO)</strong>. The typical APR offer for that score landed at <strong>9.49% over 10 years</strong>.
+            Of 11 clients with scores below 660, 7 still qualified through Enhancify&apos;s partner lender network — usually
+            at 13–17% APR over 15-year terms. Two upgraded to HELOC and closed at 7.5–8% with home equity collateral.
+            One waited 8 months, paid down two credit cards, raised their score from 644 to 706, and re-qualified at 10.99%.
+          </p>
+        </div>
+      </section>
+
       <article style={{ padding: '3.5rem 0' }}>
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>

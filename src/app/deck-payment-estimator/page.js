@@ -143,8 +143,12 @@ export default function DeckPaymentEstimatorPage() {
           <h1 style={{ fontSize: '2.7rem', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.1, maxWidth: 760, letterSpacing: '-0.02em' }}>
             Deck Payment Estimator
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.12rem', lineHeight: 1.6, marginBottom: 0, maxWidth: 680 }}>
+          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.12rem', lineHeight: 1.6, marginBottom: '0.75rem', maxWidth: 680 }}>
             See the monthly payment on a custom deck in seconds. Move the three sliders &mdash; project amount, APR and term &mdash; and the estimator does the amortization math for you.
+          </p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', lineHeight: 1.5, marginBottom: 0, maxWidth: 680, display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+            <span style={{ display: 'inline-block', width: 8, height: 8, borderRadius: '50%', background: 'var(--color-primary)' }} />
+            <span><strong>Checking your rate does not affect your credit score.</strong> Pre-qualification uses a soft credit pull through Enhancify.</span>
           </p>
           <div style={{ display: 'flex', gap: '0.85rem', flexWrap: 'wrap', marginTop: '1.75rem' }}>
             <EstimatorTrackedLink
@@ -264,6 +268,27 @@ export default function DeckPaymentEstimatorPage() {
             <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)', marginTop: '1.5rem', maxWidth: 580, marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.5 }}>
               Financing provided by Enhancify, Inc. and partner lenders. Loudoun Decks is not a lender and does not earn a commission on financing. All loans subject to credit approval.
             </p>
+          </div>
+
+          {/* ============ WHAT HAPPENS NEXT ============ */}
+          <h2 style={S.h2}>What Happens After You Click &ldquo;Check My Rate&rdquo;</h2>
+          <p style={{ ...S.p, color: '#555' }}>
+            The financing-curious homeowner&apos;s most-asked question. Three steps, ~60 seconds total, no commitment:
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+            {[
+              { n: 1, title: 'Soft credit check', body: 'Enter income, address, and project amount. Enhancify runs a soft pull — your credit score is not affected. Multiple lender offers return in ~60 seconds.' },
+              { n: 2, title: 'Compare offers', body: 'Review APR, term, and monthly payment side-by-side. Pick the one that fits your budget. Still no hard inquiry, still no commitment.' },
+              { n: 3, title: 'Build starts', body: 'Once you accept an offer and sign with the lender, your funds release on a schedule that matches the build. We coordinate the timing with permit + HOA approval.' },
+            ].map(step => (
+              <div key={step.n} style={{ background: '#fff', borderRadius: 12, padding: '1.4rem', border: '1px solid #e5e5e5', borderTop: '4px solid var(--color-primary)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.6rem' }}>
+                  <span style={{ flexShrink: 0, width: 28, height: 28, borderRadius: 6, background: 'var(--color-primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.85rem', fontWeight: 800 }}>{step.n}</span>
+                  <h3 style={{ fontWeight: 700, fontSize: '1.05rem', margin: 0 }}>{step.title}</h3>
+                </div>
+                <p style={{ fontSize: '0.92rem', color: '#555', margin: 0, lineHeight: 1.6 }}>{step.body}</p>
+              </div>
+            ))}
           </div>
 
           {/* ============ TWO INPUTS YOU NEED ============ */}

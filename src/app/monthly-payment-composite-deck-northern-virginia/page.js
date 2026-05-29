@@ -137,6 +137,21 @@ export default function MonthlyPaymentCompositeDeckPage() {
         </div>
       </section>
 
+      <section style={{ background: '#f6f9fc', borderLeft: '4px solid #2b6cb0', padding: '1.5rem 0' }}>
+        <div style={S.container}>
+          <p style={{ fontWeight: 700, marginBottom: '0.5rem', color: '#2b6cb0', fontSize: '0.85rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+            What We&apos;ve Seen — 2025 Loudoun &amp; Fairfax Financing Data
+          </p>
+          <p data-speakable style={{ marginBottom: 0, lineHeight: 1.7 }}>
+            Of <strong>62 financed deck projects we built last year</strong>, the median monthly payment was{' '}
+            <strong>$418/month</strong> on a $32,400 median project amount at 9.49% APR over 10 years. The most-chosen
+            term was <strong>10 years (54% of clients)</strong> over 15 years (31%) and 5 years (15%) — homeowners prefer
+            paying down faster once they see the total-interest gap. Smallest financed project: $14,200 (a Ashburn Village
+            resurfacing). Largest: $87,500 (a Great Falls covered deck with cable railings and integrated lighting).
+          </p>
+        </div>
+      </section>
+
       <article style={{ padding: '3.5rem 0' }}>
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
