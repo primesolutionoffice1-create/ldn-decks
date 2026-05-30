@@ -10,30 +10,75 @@ import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/get-estimate',
-  title: 'Free Deck Estimate | Trex Platinum Partner | LDN Decks',
-  description: 'Get a free deck estimate from Northern Virginia\'s top-rated Trex Platinum Partner. 5.0 Google rating, 2-year warranty. Call (571) 655-7207.',
+  title: 'Request a Deck Estimate Northern Virginia | Loudoun Decks',
+  description: 'Request a deck estimate for composite decks, deck replacement, repairs, screened porches and outdoor living projects in Northern Virginia.',
   image: '/images/img36.jpeg',
 });
+
+const estimateFaq = [
+  {
+    question: 'What should I include when requesting a deck estimate?',
+    answer: 'Include your city, the type of project, approximate deck size, whether the deck is new or existing, preferred material, photos if available, and any permit, HOA, repair, stair, railing, or porch concerns.',
+  },
+  {
+    question: 'Do you provide deck repair and replacement estimates?',
+    answer: 'Yes. Loudoun Decks can estimate deck repairs, structural concerns, resurfacing, replacement, stairs, railings, and composite upgrades across Northern Virginia.',
+  },
+  {
+    question: 'How quickly will Loudoun Decks respond?',
+    answer: 'Most estimate requests receive a follow-up within the same business day or the next business day, depending on project detail and schedule volume.',
+  },
+  {
+    question: 'What areas do you serve?',
+    answer: 'Loudoun Decks serves homeowners across Northern Virginia, including Loudoun County, Fairfax County, Prince William County, Arlington, Alexandria, Ashburn, Leesburg, Sterling, Herndon, Reston, Vienna, McLean, and nearby communities.',
+  },
+];
+
+const getEstimateSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ldndecks.com' },
+      { '@type': 'ListItem', position: 2, name: 'Request a Deck Estimate', item: 'https://ldndecks.com/get-estimate' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: estimateFaq.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  },
+];
 
 export default function GetEstimatePage() {
   return (
     <>
-      <WebPageSchema url="https://ldndecks.com/get-estimate" name="Free Deck Estimate | Trex Platinum Partner | LDN Decks" description="Get a free deck estimate from Northern Virginia's top-rated Trex Platinum Partner. 5.0 Google rating, 2-year warranty. Call (571) 655-7207." speakable />
+      <WebPageSchema url="https://ldndecks.com/get-estimate" name="Request a Deck Estimate Northern Virginia | Loudoun Decks" description="Request a deck estimate for composite decks, deck replacement, repairs, screened porches and outdoor living projects in Northern Virginia." speakable />
+      {getEstimateSchema.map((schema, index) => (
+        <JsonLd key={index} data={schema} />
+      ))}
 
       {/* Hero Above the Fold: Trust + CTA */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '3rem 0 2rem' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', alignItems: 'center' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
               <span style={{ color: '#fbbf24', fontSize: '1.2rem' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
               <span style={{ color: '#ccc', fontSize: '0.9rem' }}>5.0 on Google &middot; {BUSINESS.aggregateRating.reviewCount} reviews</span>
             </div>
             <h1 style={{ fontSize: '2.2rem', fontWeight: 700, lineHeight: 1.2, marginBottom: '1rem' }}>
-              Get Your Free Deck Estimate
+              Request a Deck Estimate in Northern Virginia
             </h1>
             <p style={{ color: '#ccc', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-              Northern Virginia&apos;s only <strong style={{ color: '#fff' }}>Trex Platinum Partner</strong> (top 1% nationally).
-              Custom composite decks, screened porches &amp; outdoor living designed and built by our in-house crew.
+              Tell us about your composite deck, deck replacement, repair, screened porch, or outdoor living project.
+              Loudoun Decks helps homeowners plan the right scope, budget, permits, HOA path, and next step before construction.
             </p>
 
             {/* Trust Badges */}
@@ -51,13 +96,18 @@ export default function GetEstimatePage() {
               ))}
             </div>
 
-            <CallLink style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '1rem 2rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1.1rem' }}>
-              Call (571) 655-7207
-            </CallLink>
-            <p style={{ color: '#777', fontSize: '0.8rem', marginTop: '0.5rem' }}>Or fill out the form below we respond within 2 hours</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center' }}>
+              <CallLink style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '1rem 2rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1.05rem' }}>
+                Call (571) 655-7207
+              </CallLink>
+              <Link href="#estimate-form" style={{ display: 'inline-block', color: '#fff', padding: '0.9rem 1.25rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '0.95rem', border: '1px solid rgba(255,255,255,0.35)' }}>
+                Fill Out Estimate Form
+              </Link>
+            </div>
+            <p style={{ color: '#aaa', fontSize: '0.82rem', marginTop: '0.75rem' }}>Share photos, project goals, and location for a more accurate first response.</p>
           </div>
 
-          <div style={{ position: 'relative', height: '400px', borderRadius: '12px', overflow: 'hidden' }}>
+          <div style={{ position: 'relative', minHeight: '320px', height: 'min(400px, 70vw)', borderRadius: '12px', overflow: 'hidden' }}>
             <Image
               src="/images/img36.jpeg"
               alt="Custom Trex Transcend composite deck built by LDN Decks in Northern Virginia"
@@ -87,15 +137,42 @@ export default function GetEstimatePage() {
         </div>
       </section>
 
+      {/* Estimate Fit */}
+      <section style={{ padding: '2.5rem 0', background: '#fff' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
+            {[
+              { title: 'Best-fit projects', text: 'Composite decks, deck replacement, resurfacing, screened porches, stairs, railings, lighting, structural repair, and outdoor living upgrades.' },
+              { title: 'What helps us price faster', text: 'Photos, rough dimensions, city or county, HOA status, material preference, repair symptoms, and whether permits are already in progress.' },
+              { title: 'What happens next', text: 'We review your project, clarify scope, discuss budget range, and schedule the right next step if the project is a fit.' },
+            ].map((item) => (
+              <div key={item.title} style={{ border: '1px solid #e5e5e5', borderRadius: 10, padding: '1.25rem', background: '#fff' }}>
+                <h2 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '0.5rem' }}>{item.title}</h2>
+                <p style={{ color: '#555', lineHeight: 1.6, fontSize: '0.92rem', margin: 0 }}>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Form + Social Proof */}
-      <section style={{ padding: '3rem 0', background: '#fff' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem' }}>
+      <section id="estimate-form" style={{ padding: '3rem 0', background: '#fff' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
 
           {/* Left: Form */}
           <div>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>Request Your Free Estimate</h2>
-            <p style={{ color: '#666', marginBottom: '1.5rem', fontSize: '0.9rem' }}>Tell us about your project and we&apos;ll get back to you within 2 hours with a preliminary estimate.</p>
+            <p style={{ color: '#666', marginBottom: '1.5rem', fontSize: '0.9rem' }}>Tell us about your project, location, timeline, and concerns. More detail helps us route you toward the right estimate, repair review, or planning conversation.</p>
             <ContactForm hideInfoCol noPadding />
+            <div style={{ background: '#f8fafc', border: '1px solid #e5e7eb', borderRadius: 10, padding: '1rem', marginTop: '1rem' }}>
+              <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '0.5rem' }}>For the strongest estimate request, include:</h3>
+              <ul style={{ color: '#555', lineHeight: 1.7, fontSize: '0.88rem', margin: 0, paddingLeft: '1.1rem' }}>
+                <li>Project type: new deck, replacement, repair, resurfacing, porch, stairs, or railing.</li>
+                <li>City or county and whether HOA approval may be required.</li>
+                <li>Approximate size, height, preferred material, and timeline.</li>
+                <li>Photos of the current deck or yard if available.</li>
+              </ul>
+            </div>
           </div>
 
           {/* Right: Social Proof */}
@@ -130,7 +207,7 @@ export default function GetEstimatePage() {
       <section style={{ padding: '3rem 0', background: '#f9f9f9' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, textAlign: 'center', marginBottom: '2rem' }}>What We Build</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1.25rem' }}>
             {[
               { title: 'Custom Composite Decks', price: 'From $15K', desc: 'Trex, TimberTech & AZEK', href: '/composite-deck-cost-northern-virginia' },
               { title: 'Screened Porches', price: 'From $25K', desc: 'Bug-free 3-season rooms', href: '/screened-porch-cost-northern-virginia' },
@@ -144,6 +221,20 @@ export default function GetEstimatePage() {
                 <p style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--color-primary)', marginBottom: '0.25rem' }}>{s.price}</p>
                 <p style={{ fontSize: '0.8rem', color: '#666', margin: 0 }}>{s.desc}</p>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: '3rem 0', background: '#fff' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, textAlign: 'center', marginBottom: '1.5rem' }}>Estimate Questions Homeowners Ask</h2>
+          <div style={{ display: 'grid', gap: '1rem' }}>
+            {estimateFaq.map((faq) => (
+              <details key={faq.question} style={{ border: '1px solid #e5e5e5', borderRadius: 10, padding: '1rem', background: '#fff' }}>
+                <summary style={{ cursor: 'pointer', fontWeight: 700 }}>{faq.question}</summary>
+                <p style={{ color: '#555', lineHeight: 1.6, margin: '0.75rem 0 0' }}>{faq.answer}</p>
+              </details>
             ))}
           </div>
         </div>
