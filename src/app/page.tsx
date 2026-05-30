@@ -32,7 +32,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   path: "/",
   title: '5-Star Deck Builder Near Me Northern VA | Loudoun Decks',
-  description: '5.0-rated Northern Virginia deck contractor for custom composite decks, Trex, TimberTech, replacements and screened porches. Permits handled. Free estimate.',
+  description: '5.0-rated Northern Virginia deck contractor for composite decks, Trex, TimberTech, replacements and screened porches. Permits handled.',
 });
 
 // Homepage-specific WebPage schema — tells Google this is the main landing page.
