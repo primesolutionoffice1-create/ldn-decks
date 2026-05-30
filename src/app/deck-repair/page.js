@@ -151,6 +151,9 @@ export default function DeckRepairPage() {
         <p style={{ margin: 0, lineHeight: 1.7 }}>
           <strong>Deep dive into structural repair scope, cost ranges, permit triggers, and the repair-vs-replace decision framework:</strong>{' '}
           <a href="/services/deck-repair-and-structural-maintenance" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full Northern Virginia Structural Repair Hub →</a>
+          {' '}If posts or piers are part of the concern, use the{' '}
+          <a href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia</a>
+          {' '}to understand footing depth, diameter, frost and soil-bearing planning before repair review.
         </p>
       </section>
 
