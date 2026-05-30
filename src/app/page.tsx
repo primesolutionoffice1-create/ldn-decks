@@ -31,8 +31,8 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   path: "/",
-  title: 'Deck Builder Near Me Northern VA | Loudoun Decks',
-  description: 'Looking for a deck contractor near you in Northern Virginia? Trex Platinum Partner for custom composite decks, screened porches, and deck replacements. Free quote.',
+  title: '5-Star Deck Builder Near Me Northern VA | Loudoun Decks',
+  description: '5.0-rated Northern Virginia deck contractor for custom composite decks, Trex, TimberTech, replacements and screened porches. Permits handled. Free estimate.',
 });
 
 // Homepage-specific WebPage schema — tells Google this is the main landing page.
@@ -139,7 +139,7 @@ const videoSchema = {
   "name": "Loudoun Decks — Custom Deck Building in Northern Virginia",
   "description": "See how Loudoun Decks transforms Northern Virginia backyards into luxury outdoor living spaces. Custom composite decks, screened porches, and outdoor kitchens by a Trex Platinum Partner.",
   "thumbnailUrl": "https://ldndecks.com/home-page-ldn.webp",
-  "uploadDate": "2025-01-15",
+  "uploadDate": "2025-01-15T08:00:00-05:00",
   "contentUrl": "https://ldndecks.com/introvideo.mp4",
   "embedUrl": "https://ldndecks.com/introvideo.mp4",
   "publisher": { "@id": "https://ldndecks.com/#organization" }

@@ -11,8 +11,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-design-ideas-2026',
-  title: '2026 Deck Design Ideas | 15+ Trending Photos & Costs (NoVA)',
-  description: 'Looking for deck inspiration? See 15+ trending Northern Virginia deck designs for 2026. View photos, pricing, and expert design tips. Get inspired today!',
+  title: 'Deck Design Ideas 2026 | 15 Photos, Costs & Trends',
+  description: 'See 15 deck design ideas for 2026 with photos, price ranges, colors, and NoVA contractor tips for composite, porch, pergola, and outdoor kitchen builds.',
 });
 
 const designs = [
@@ -64,7 +64,7 @@ export default function DeckDesignIdeasPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-design-ideas-2026" name="2026 Deck Design Ideas | 15+ Trending Photos &amp; Costs (NoVA)" description="Looking for deck inspiration? See 15+ trending Northern Virginia deck designs for 2026. View photos, pricing, and expert design tips. Get inspired today!" speakable />
+      <WebPageSchema url="https://ldndecks.com/deck-design-ideas-2026" name="Deck Design Ideas 2026 | 15 Photos, Costs &amp; Trends" description="See 15 deck design ideas for 2026 with photos, price ranges, colors, and NoVA contractor tips for composite, porch, pergola, and outdoor kitchen builds." speakable />
       <JsonLd data={gallerySchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
