@@ -292,7 +292,7 @@ export function buildOrganizationSchema() {
       opens: h.opens,
       closes: h.closes,
     })),
-    aggregateRating: { '@type': 'AggregateRating', ...BUSINESS.aggregateRating },
+    // aggregateRating removed — self-serving LocalBusiness markup violates Google Review Snippet policy (Sept 2019)
     // Self-hosted `review` markup is intentionally NOT emitted on the
     // organization entity. Google's review-snippet policy disallows
     // self-serving Review structured data (a business marking up reviews
