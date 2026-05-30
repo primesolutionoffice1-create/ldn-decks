@@ -149,8 +149,12 @@ export default async function sitemap() {
 		{ path: "/trex-decks",                   priority: 0.90, lastMod: TIER2, freq: "weekly" },
 		{ path: "/wood-decks",                   priority: 0.90, lastMod: TIER1, freq: "weekly" },
 		// /deck-replacement removed — redirects to /services/deck-replacement (already in sitemap below)
-		{ path: "/deck-remodeling",              priority: 0.90, lastMod: TIER2, freq: "weekly" },
-		{ path: "/deck-repair",                  priority: 0.90, lastMod: TIER2, freq: "weekly" },
+		// /deck-remodeling removed — page canonical points to /services/deck-resurfacing
+		// (intentional consolidation). Submitting it caused "Alternate page with proper
+		// canonical tag" in GSC. The canonical target is already in the sitemap below.
+		// /deck-repair removed — page canonical points to /services/deck-repair-and-structural-maintenance
+		// (intentional consolidation). NOTE: do NOT add to EXCLUDE_PATHS — startsWith would
+		// also drop /deck-repair-loudoun-county, which is self-canonical and must stay.
 		{ path: "/services",                     priority: 0.90, lastMod: TIER2, freq: "weekly" },
 		{ path: "/services/new-decks",           priority: 0.85, lastMod: TIER2, freq: "weekly" },
 		{ path: "/services/deck-resurfacing",    priority: 0.85, lastMod: TIER2, freq: "weekly" },
@@ -158,7 +162,10 @@ export default async function sitemap() {
 		{ path: "/services/porches",             priority: 0.90, lastMod: TIER2, freq: "weekly" },
 		{ path: "/services/porches/front-porch", priority: 0.80, lastMod: TIER2, freq: "monthly" },
 		{ path: "/services/porches/open-porch",  priority: 0.80, lastMod: TIER2, freq: "monthly" },
-		{ path: "/services/porches/screened-porch", priority: 0.85, lastMod: TIER2, freq: "monthly" },
+		// /services/porches/screened-porch removed — page canonical points to
+		// /screened-porch-builder-northern-virginia (intentional consolidation; that
+		// geo page is in the sitemap below). Was triggering "Duplicate, Google chose
+		// different canonical" in GSC.
 		{ path: "/services/gazebo-pergola",      priority: 0.85, lastMod: TIER2, freq: "weekly" },
 		{ path: "/services/deck-maintenance",    priority: 0.80, lastMod: TIER2, freq: "monthly" },
 		{ path: "/services/deck-inspection",     priority: 0.80, lastMod: TIER2, freq: "monthly" },
