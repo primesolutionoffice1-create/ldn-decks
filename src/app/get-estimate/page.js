@@ -71,7 +71,7 @@ export default function GetEstimatePage() {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
               <span style={{ color: '#fbbf24', fontSize: '1.2rem' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span style={{ color: '#ccc', fontSize: '0.9rem' }}>5.0 on Google &middot; {BUSINESS.aggregateRating.reviewCount} reviews</span>
+              <span style={{ color: '#ccc', fontSize: '0.9rem' }}>5.0 on Google &middot; {BUSINESS.reviewSummary.reviewCount} reviews</span>
             </div>
             <h1 style={{ fontSize: '2.2rem', fontWeight: 700, lineHeight: 1.2, marginBottom: '1rem' }}>
               Request a Deck Estimate in Northern Virginia

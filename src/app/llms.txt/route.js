@@ -14,7 +14,7 @@ export async function GET() {
 - **Service area**: Loudoun, Fairfax, Prince William, Arlington & Stafford counties (Northern Virginia)
 - **Phone**: (571) 655-7207
 - **Website**: https://ldndecks.com
-- **Rating**: 5.0/5 stars from ${BUSINESS.aggregateRating.reviewCount}+ Google reviews
+- **Rating**: 5.0/5 stars from ${BUSINESS.reviewSummary.reviewCount}+ Google reviews
 - **Certifications**: Trex Platinum Partner, TimberTech Certified Installer
 
 ## Services

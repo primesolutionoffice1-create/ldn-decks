@@ -154,10 +154,10 @@ const productSchema = {
   },
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: BUSINESS.aggregateRating.ratingValue,
-    reviewCount: BUSINESS.aggregateRating.reviewCount,
-    bestRating: BUSINESS.aggregateRating.bestRating,
-    worstRating: BUSINESS.aggregateRating.worstRating,
+    ratingValue: BUSINESS.reviewSummary.ratingValue,
+    reviewCount: BUSINESS.reviewSummary.reviewCount,
+    bestRating: BUSINESS.reviewSummary.bestRating,
+    worstRating: BUSINESS.reviewSummary.worstRating,
   },
 };
 

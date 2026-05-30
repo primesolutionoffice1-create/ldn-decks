@@ -102,7 +102,7 @@ const WEEK3_OUTREACH = [
 ];
 
 const KPI_TARGETS = [
-  { kpi: 'Google reviews count', current: BUSINESS.aggregateRating.reviewCount, target30: '53', target90: '60+', target365: '100+' },
+  { kpi: 'Google reviews count', current: BUSINESS.reviewSummary.reviewCount, target30: '53', target90: '60+', target365: '100+' },
   { kpi: 'Composite authority score', current: '~85', target30: '87', target90: '90', target365: '93+' },
   { kpi: 'GBP weekly post cadence', current: '0', target30: '4', target90: '12', target365: '52' },
   { kpi: 'Manufacturer locator verifications', current: 'unconfirmed', target30: '3 verified', target90: '3 maintained', target365: '3 maintained' },

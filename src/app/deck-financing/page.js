@@ -99,7 +99,7 @@ const projectExamples = [
 
 const trustStats = [
   { stat: '24+', label: 'Years building decks' },
-  { stat: '5.0★', label: `Google rating · ${BUSINESS.aggregateRating.reviewCount}+ reviews` },
+  { stat: '5.0★', label: `Google rating · ${BUSINESS.reviewSummary.reviewCount}+ reviews` },
   { stat: 'A+', label: 'BBB Accredited Business' },
   { stat: 'Top 1%', label: 'Trex Platinum Partner' },
 ];

@@ -114,7 +114,7 @@ export default function ChooseDeckBuilderPage() {
                 ['HOA', 'We prepare and submit ARC packages 100% approval rate across 50+ communities'],
                 ['Materials', 'Trex Pro certified installer + TimberTech + AZEK'],
                 ['Warranty', '2-year workmanship warranty in writing, on top of manufacturer warranties'],
-                ['Reviews', `5.0★ on Google with ${BUSINESS.aggregateRating.reviewCount} reviews`],
+                ['Reviews', `5.0★ on Google with ${BUSINESS.reviewSummary.reviewCount} reviews`],
                 ['References', 'Happy to share recent project contacts in your neighborhood'],
               ].map(([label, detail]) => (
                 <li key={label} style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}>

@@ -43,7 +43,7 @@ const communities = [
 const trustBadges = [
   'Trex Platinum Partner',
   'TimberTech/AZEK Installer',
-  `${BUSINESS.aggregateRating.reviewCount} Google Reviews`,
+  `${BUSINESS.reviewSummary.reviewCount} Google Reviews`,
   'BBB A+ Rated',
   '5-Year Workmanship Warranty',
   'Licensed Virginia Contractor',
@@ -254,7 +254,7 @@ export default function CompositeDeckBuilderLoudounPage() {
             ))}
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 24 }}>
-            <Link href="/reviews" style={S.button}>Read All {BUSINESS.aggregateRating.reviewCount} Google Reviews</Link>
+            <Link href="/reviews" style={S.button}>Read All {BUSINESS.reviewSummary.reviewCount} Google Reviews</Link>
             <Link href="/before-and-after" style={S.outlineButton}>See Before &amp; After Projects</Link>
           </div>
         </div>

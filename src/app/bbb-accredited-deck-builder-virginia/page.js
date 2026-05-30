@@ -267,7 +267,7 @@ export default function BBBPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/about/certifications-and-licenses', 'Certifications & Licenses'],
-              ['/reviews', `5.0 Google Rating — ${BUSINESS.aggregateRating.reviewCount}+ Reviews`],
+              ['/reviews', `5.0 Google Rating — ${BUSINESS.reviewSummary.reviewCount}+ Reviews`],
               ['/team', 'Meet the Loudoun Decks Team'],
               ['/before-and-after', 'Before & After Project Gallery'],
               ['/how-to-choose-a-deck-builder-northern-virginia', 'How to Choose a Deck Builder'],

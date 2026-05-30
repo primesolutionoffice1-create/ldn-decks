@@ -88,7 +88,7 @@ export default function TeamGrid() {
     "award": [
       "Trex Platinum Partner — highest installer tier",
       "TimberTech Certified Installer",
-      `5.0★ Google Business Profile rating (${BUSINESS.aggregateRating.reviewCount}+ reviews)`
+      `${BUSINESS.reviewSummary.ratingValue}★ Google Business Profile rating (${BUSINESS.reviewSummary.reviewCount}+ reviews)`
     ],
     "areaServed": [
       { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },

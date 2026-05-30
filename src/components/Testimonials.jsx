@@ -83,7 +83,7 @@ export default function Testimonials() {
 
         <div className={styles.reviewsCta}>
           <Link href="/reviews" className={styles.reviewsButton}>
-            Read All {BUSINESS.aggregateRating.reviewCount} Google Reviews &rarr;
+            Read All {BUSINESS.reviewSummary.reviewCount} Google Reviews &rarr;
           </Link>
           <a
             href="https://www.google.com/maps/place/Loudoun+Decks/"

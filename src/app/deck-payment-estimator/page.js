@@ -103,7 +103,7 @@ const inputs = [
 ];
 
 const trustSignals = [
-  `${BUSINESS.aggregateRating.ratingValue} Google rating with ${BUSINESS.aggregateRating.reviewCount} reviews`,
+  `${BUSINESS.reviewSummary.ratingValue} Google rating with ${BUSINESS.reviewSummary.reviewCount} reviews`,
   'A+ BBB Accredited Business',
   'Virginia DPOR licensed contractor',
   'Written, itemized estimates',

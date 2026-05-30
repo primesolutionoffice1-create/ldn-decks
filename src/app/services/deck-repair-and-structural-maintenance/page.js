@@ -134,7 +134,9 @@ export default function DeckRepairPage() {
           <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>ledger board flashing guide</Link>.
         </p>
         <p style={{ fontSize: '18px', color: '#444' }}>
-          If either area is loose, rotted, over-notched, under-supported or missing proper exterior hardware, the safer path may be structural repair or replacement instead of surface-only work.
+          If either area is loose, rotted, over-notched, under-supported or missing proper exterior hardware, the safer path may be structural repair or replacement instead of surface-only work. When posts, piers or settlement are part of the concern, use the{' '}
+          <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Deck Footing Depth Calculator Virginia</Link>
+          {' '}to review footing depth, diameter and frost-depth planning before the repair conversation.
         </p>
       </section>
 

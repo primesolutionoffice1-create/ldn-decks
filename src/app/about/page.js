@@ -90,7 +90,7 @@ export default function AboutPage() {
               { badge: 'TimberTech', title: 'TimberTech Certified Installer', text: 'Certified by AZEK Building Products for TimberTech composite and PVC deck systems.' },
               { badge: 'BBB A+', title: 'BBB A+ Accredited', text: 'Better Business Bureau accredited with an A+ rating and zero complaints.' },
               { badge: 'NADRA', title: 'NADRA Member', text: 'North American Deck and Railing Association — Builder/Contractor/Remodeler member.' },
-              { badge: '5.0★ Google', title: `${BUSINESS.aggregateRating.reviewCount}+ Google Reviews`, text: '5.0-star rating from verified Northern Virginia homeowners. Every review is from a real project.' },
+              { badge: '5.0★ Google', title: `${BUSINESS.reviewSummary.reviewCount}+ Google Reviews`, text: '5.0-star rating from verified Northern Virginia homeowners. Every review is from a real project.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem', border: '1px solid #e5e5e5' }}>
                 <p style={{ fontSize: '0.7rem', fontWeight: 700, color: 'var(--color-primary)', marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{item.badge}</p>
@@ -149,7 +149,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          <p style={{ marginBottom: '2.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read all {BUSINESS.aggregateRating.reviewCount}+ reviews →</Link></p>
+          <p style={{ marginBottom: '2.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read all {BUSINESS.reviewSummary.reviewCount}+ reviews →</Link></p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>How We Work</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
@@ -172,7 +172,7 @@ export default function AboutPage() {
             { q: 'Who owns Loudoun Decks?', a: 'Loudoun Decks was founded and is operated by Nicolae Zugrav, a Virginia Class A Licensed contractor specializing in composite deck construction and outdoor living projects across Northern Virginia.' },
             { q: 'Is Loudoun Decks licensed and insured?', a: 'Yes. We hold a Virginia Class A Contractor License, carry comprehensive general liability insurance and workers\' compensation, and maintain Trex Pro and TimberTech certifications. Verify at dpor.virginia.gov.' },
             { q: 'What areas does Loudoun Decks serve?', a: 'We serve Loudoun, Fairfax, Prince William, Arlington, and Stafford counties in Northern Virginia — including Ashburn, Leesburg, Sterling, Reston, McLean, Vienna, Centreville, Manassas, Haymarket, and 25+ other communities.' },
-            { q: 'What is your Google rating?', a: `5.0 stars with ${BUSINESS.aggregateRating.reviewCount}+ verified reviews. Every review is from a real project.` },
+            { q: 'What is your Google rating?', a: `5.0 stars with ${BUSINESS.reviewSummary.reviewCount}+ verified reviews. Every review is from a real project.` },
             { q: 'What certifications do you hold?', a: 'Trex Pro Platinum Partner, TimberTech Certified Installer, BBB A+ Accredited, and NADRA member. Each certification requires demonstrated installation expertise and ongoing training.' },
             { q: 'Do you offer a warranty?', a: 'Every project includes a 2-year workmanship warranty covering labor and installation, plus manufacturer material warranties — Trex 25 years, TimberTech AZEK up to 50 years.' },
           ].map((faq, i) => (
@@ -186,7 +186,7 @@ export default function AboutPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/about/certifications-and-licenses', 'Certifications & Licenses — verify our credentials'],
-              ['/reviews', `Customer Reviews — ${BUSINESS.aggregateRating.reviewCount}+ verified reviews`],
+              ['/reviews', `Customer Reviews — ${BUSINESS.reviewSummary.reviewCount}+ verified reviews`],
               ['/how-to-choose-a-deck-builder-northern-virginia', 'How to Choose a Deck Builder in Northern Virginia'],
               ['/services', 'All Services'],
               ['/before-and-after', 'Before & After Gallery'],

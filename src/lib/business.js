@@ -27,6 +27,15 @@ export const BUSINESS = {
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:00', closes: '19:00' },
     { days: ['Saturday'], opens: '08:00', closes: '17:00' },
   ],
+  // Display-only review summary for UI copy. Kept separate from Schema.org
+  // aggregateRating so schema can stay conservative while the site still
+  // shows verified review-count trust signals.
+  reviewSummary: {
+    ratingValue: '5.0',
+    reviewCount: 49,
+    bestRating: '5',
+    worstRating: '1',
+  },
   areaServed: [
     'Loudoun County, VA',
     'Fairfax County, VA',
@@ -285,14 +294,13 @@ export function buildOrganizationSchema() {
       opens: h.opens,
       closes: h.closes,
     })),
-    aggregateRating: { '@type': 'AggregateRating', ...BUSINESS.aggregateRating },
     // Self-hosted `review` markup is intentionally NOT emitted on the
     // organization entity. Google's review-snippet policy disallows
     // self-serving Review structured data (a business marking up reviews
     // about itself) and it risks a "Spam: structured data" manual action.
     // Visible reviews still render from BUSINESS.reviews on /reviews and
-    // related pages. aggregateRating is retained — keep reviewCount in
-    // sync with the live Google Business Profile total.
+    // related pages. Display-only review counts live in reviewSummary;
+    // do not emit org-level AggregateRating unless policy is revalidated.
     areaServed: BUSINESS.areaServed.map(name => ({ '@type': 'AdministrativeArea', name })),
     sameAs: BUSINESS.sameAs,
     hasCredential: BUSINESS.credentials.map(c => ({
