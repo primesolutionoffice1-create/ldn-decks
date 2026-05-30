@@ -85,7 +85,7 @@ export async function sendContactEmail(formData) {
       : '';
 
     const recipient = process.env.EMAIL_TO || process.env.EMAIL_USER;
-    console.log(`Attempting to send lead email to: ${recipient}`);
+    console.log('[sendContactEmail] attempting to send lead email');
 
     const mailOptions = {
       from: `Loudoun Decks <${process.env.EMAIL_USER}>`,
@@ -142,11 +142,11 @@ export async function sendContactEmail(formData) {
       eventSourceUrl: formData.get('source_url') || 'https://ldndecks.com/contact',
       ipAddress,
       userAgent,
-    }).catch((err) => console.error('Meta CAPI fire-and-forget error:', err));
+    }).catch((err) => console.error('Meta CAPI fire-and-forget error:', err?.message || err));
 
     return { success: true };
   } catch (error) {
-    console.error('Email error:', error);
+    console.error('Email error:', error?.message || error);
     return { success: false, error: 'Failed to send email' };
   }
 }

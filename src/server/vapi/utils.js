@@ -52,9 +52,12 @@ export function parseFunctionCall(body) {
 export function verifyVapiSignature(req) {
   const expected = process.env.VAPI_WEBHOOK_SECRET;
   if (!expected) {
-    // If unset, allow requests through but log — useful for local dev.
-    // Always set this in production.
-    console.warn('[vapi] VAPI_WEBHOOK_SECRET unset — accepting without verification');
+    const isProduction = process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'production';
+    if (isProduction) {
+      console.error('[vapi] VAPI_WEBHOOK_SECRET unset in production - rejecting request');
+      return false;
+    }
+    console.warn('[vapi] VAPI_WEBHOOK_SECRET unset - accepting without verification in non-production');
     return true;
   }
   const got =
@@ -88,9 +91,13 @@ export function vapiHandler(fn) {
       if (result instanceof Response) return result;
       return Response.json({ result });
     } catch (err) {
-      console.error('[vapi handler error]', err);
+      console.error('[vapi handler error]', err?.message || err);
+      const isProduction = process.env.NODE_ENV === 'production' || process.env.VERCEL_ENV === 'production';
       return Response.json(
-        { error: 'handler_error', message: String(err?.message || err) },
+        {
+          error: 'handler_error',
+          ...(isProduction ? {} : { message: String(err?.message || err) }),
+        },
         { status: 500 },
       );
     }
@@ -118,8 +125,8 @@ export async function sendTwilioSms({ to, body }) {
     body: formBody.toString(),
   });
   if (!res.ok) {
-    const text = await res.text().catch(() => '');
-    console.error('[twilio] sms send failed', res.status, text.slice(0, 200));
+    await res.text().catch(() => '');
+    console.error('[twilio] sms send failed', res.status);
     return { ok: false, status: res.status };
   }
   return { ok: true };

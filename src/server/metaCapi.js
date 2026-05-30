@@ -123,12 +123,12 @@ export async function sendMetaLeadEvent(lead) {
     });
     const json = await res.json().catch(() => ({}));
     if (!res.ok) {
-      console.error('Meta CAPI non-2xx:', res.status, json);
-      return { success: false, error: `Meta CAPI ${res.status}: ${JSON.stringify(json).slice(0, 300)}` };
+      console.error('Meta CAPI non-2xx:', res.status);
+      return { success: false, error: `Meta CAPI ${res.status}` };
     }
     return { success: true, response: json };
   } catch (err) {
-    console.error('Meta CAPI request failed:', err);
+    console.error('Meta CAPI request failed:', err?.message || err);
     return { success: false, error: String(err && err.message ? err.message : err) };
   }
 }

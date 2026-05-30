@@ -233,8 +233,8 @@ export async function sendGhlLead(formData) {
     }).finally(() => clearTimeout(timeout));
 
     if (!res.ok) {
-      const text = await res.text().catch(() => '');
-      console.error('[ghl] webhook non-2xx', res.status, text.slice(0, 400));
+      await res.text().catch(() => '');
+      console.error('[ghl] webhook non-2xx', res.status);
       return { ok: false, status: res.status };
     }
     return { ok: true };

@@ -1,6 +1,6 @@
 # Loudoun Decks / LDN Decks
 # Premium deck builder serving Northern Virginia.
-# Last updated: 2026-05-27
+# Last updated: 2026-05-30
 
 # Default: allow all crawlers full access
 User-agent: *
@@ -16,53 +16,113 @@ Disallow: /*?*msclkid=
 # Google
 User-agent: Googlebot
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
+Disallow: /*?*utm_
+Disallow: /*?*gclid=
+Disallow: /*?*fbclid=
+Disallow: /*?*msclkid=
 
 User-agent: Googlebot-Image
 Allow: /images/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
+Disallow: /*?*utm_
+Disallow: /*?*gclid=
+Disallow: /*?*fbclid=
+Disallow: /*?*msclkid=
 
 # Bing
 User-agent: Bingbot
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
+Disallow: /*?*utm_
+Disallow: /*?*gclid=
+Disallow: /*?*fbclid=
+Disallow: /*?*msclkid=
 
 # AI Search Crawlers — explicitly welcomed
 User-agent: GPTBot
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: CCBot
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: Applebot
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: cohere-ai
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 User-agent: Bytespider
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /draft/
 
 # Static assets — always accessible
 Allow: /images/

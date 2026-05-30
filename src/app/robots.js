@@ -18,12 +18,19 @@ export default function robots() {
   // Tracking-parameter URLs should never be indexed (duplicate canonical risk).
   // Wildcard disallows are honored by Google + Bing; AI crawlers vary, so we
   // apply the same list to every UA rather than relying on a single * block.
+  const PRIVATE_DISALLOWS = [
+    '/admin/',
+    '/api/',
+    '/draft/',
+  ];
+
   const TRACKING_DISALLOWS = [
     '/*?*utm_',
     '/*?*gclid=',
     '/*?*fbclid=',
     '/*?*msclkid=',
   ];
+  const DISALLOWS = [...PRIVATE_DISALLOWS, ...TRACKING_DISALLOWS];
 
   // AI crawlers explicitly allowed for citation visibility.
   const AI_BOTS = [
@@ -53,12 +60,12 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: TRACKING_DISALLOWS,
+        disallow: DISALLOWS,
       },
       ...AI_BOTS.map(userAgent => ({
         userAgent,
         allow: '/',
-        disallow: TRACKING_DISALLOWS,
+        disallow: DISALLOWS,
       })),
     ],
     sitemap: [`${SITE_URL}/sitemap.xml`, `${SITE_URL}/image-sitemap.xml`],
