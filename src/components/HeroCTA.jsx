@@ -8,10 +8,10 @@ export default function HeroCTA() {
   return (
     <div className={styles.buttonGroup}>
       <CallLink className={styles.ctaButton}>
-        Call Now: (571) 655-7207
+        Call (571) 655-7207
       </CallLink>
       <button onClick={openContact} className={styles.ctaButtonAlt}>
-        Get Free Estimate
+        Request Free Estimate
       </button>
     </div>
   );

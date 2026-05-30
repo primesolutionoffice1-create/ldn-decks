@@ -22,7 +22,7 @@ export default function Hero() {
       <div className={styles.content}>
         <div className={styles.subtextWrapper}>
           <span className={styles.line}></span>
-          <span className={styles.subtext}>BUILDING MEMORIES TOGETHER</span>
+          <span className={styles.subtext}>LOCAL DECK BUILDER NEAR YOU</span>
           <span className={styles.line}></span>
         </div>
         <div className={styles.trustBadge}>
@@ -30,11 +30,11 @@ export default function Hero() {
           <span className={styles.ratingText}>5.0 Google Rating | {BUSINESS.aggregateRating.reviewCount} Reviews</span>
         </div>
         <h1 className={styles.title}>
-          Custom Deck Builder &amp; Contractor Serving Northern Virginia
+          5-Star Deck Builder Near You in Northern Virginia
         </h1>
         <p className={styles.heroDescription}>
-          Custom-designed composite decks, screened porches &amp; patios. 
-          Trex Platinum Partner serving Loudoun, Fairfax &amp; Prince William Counties.
+          Need a deck contractor for a new composite deck, replacement, repair, or screened porch?
+          Loudoun Decks handles design, permits, HOA details, and estimates across Loudoun, Fairfax, and Prince William.
         </p>
         <HeroCTA />
       </div>
