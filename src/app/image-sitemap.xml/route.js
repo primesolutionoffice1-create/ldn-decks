@@ -75,7 +75,7 @@ export async function GET() {
     { page: '/composite-deck-cost-northern-virginia', image: '/images/img11.jpeg', title: 'Rooftop deck construction in Washington DC' },
     { page: '/trex-decks', image: '/images/img12.jpeg', title: 'Trex composite deck project in Northern Virginia' },
     { page: '/services/new-decks', image: '/images/img13.jpeg', title: 'Custom deck design and build in Northern Virginia' },
-    { page: '/services/porches/screened-porch', image: '/images/img14.jpeg', title: 'Screened-in porch in Northern Virginia' },
+    { page: '/screened-porch-builder-northern-virginia', image: '/images/img14.jpeg', title: 'Screened-in porch in Northern Virginia' },
     { page: '/services/gazebo-pergola', image: '/images/img15.jpeg', title: 'Pergola and outdoor structure in Northern Virginia' },
     { page: '/services/deck-resurfacing', image: '/images/img16.jpeg', title: 'Deck resurfacing with composite materials' },
     { page: '/deck-builder-leesburg-va', image: '/images/img17.jpeg', title: 'Outdoor living space in Leesburg, VA' },
