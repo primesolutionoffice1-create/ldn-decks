@@ -30,12 +30,6 @@ export default function ServiceSchema({
     category: category || undefined,
     provider: { '@id': ORG_ID },
     areaServed: areaServed || DEFAULT_AREA_SERVED,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: BUSINESS.aggregateRating.ratingValue,
-      reviewCount: BUSINESS.aggregateRating.reviewCount,
-      bestRating: BUSINESS.aggregateRating.bestRating,
-    },
   };
 
   if (lowPrice && highPrice) {
