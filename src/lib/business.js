@@ -27,6 +27,13 @@ export const BUSINESS = {
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:00', closes: '19:00' },
     { days: ['Saturday'], opens: '08:00', closes: '17:00' },
   ],
+  // UI-only rating data — NOT included in JSON-LD schema (removed per Google self-serving policy)
+  aggregateRating: {
+    ratingValue: '5.0',
+    reviewCount: 49,
+    bestRating: '5',
+    worstRating: '1',
+  },
   areaServed: [
     'Loudoun County, VA',
     'Fairfax County, VA',
