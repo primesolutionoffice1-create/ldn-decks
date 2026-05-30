@@ -28,14 +28,14 @@ export default function CalculatorCTA() {
     <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.textSide}>
-          <span className={styles.badge}>Planning Tool</span>
-          <h2 className={styles.title}>What does your <br/>dream deck cost?</h2>
+          <span className={styles.badge}>Budget & Estimate Tool</span>
+          <h2 className={styles.title}>Plan your deck budget before you request an estimate</h2>
           <p className={styles.description}>
-            Use our interactive pricing tool to get an instant, personalized budget range 
-            for your project based on square footage, materials, and features.
+            Use the deck cost calculator to get a practical budget range based on square footage,
+            materials, and features before you request a professional estimate.
           </p>
           <Link href="/deck-cost-calculator" className={styles.ctaButton}>
-            Launch Full Calculator
+            Use Deck Cost Calculator
           </Link>
         </div>
         <div className={styles.visualSide}>

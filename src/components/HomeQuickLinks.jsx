@@ -5,6 +5,21 @@ import { BUSINESS } from '@/lib/business';
 
 const links = [
   {
+    href: '/get-estimate',
+    title: 'Request a Deck Estimate',
+    desc: 'Share your deck, repair, porch, or replacement project.',
+  },
+  {
+    href: '/deck-repair-loudoun-county',
+    title: 'Deck Repair Near Me',
+    desc: 'Structural repairs, unsafe stairs, resurfacing, and inspections.',
+  },
+  {
+    href: '/deck-cost-calculator',
+    title: 'Deck Cost Calculator',
+    desc: 'Estimate project size, material tier, and budget range.',
+  },
+  {
     href: '/deck-builder-northern-virginia',
     title: 'Deck Builder Northern Virginia',
     desc: 'Custom decks, permits and HOA-ready planning across NoVA.',
@@ -75,11 +90,6 @@ const links = [
     desc: 'Town of Vienna deck planning, permits and construction.',
   },
   {
-    href: '/deck-repair-loudoun-county',
-    title: 'Deck Repair in Loudoun',
-    desc: 'Structural repair, resurfacing and safety inspections.',
-  },
-  {
     href: '/team',
     title: 'Meet Our Team',
     desc: '10+ years of deck building expertise in NoVA.',
@@ -94,11 +104,6 @@ const links = [
     title: 'Social Proof & Profiles',
     desc: 'Verified profiles, reviews and third-party trust links.',
   },
-  {
-    href: '/deck-cost-calculator',
-    title: 'Instant Cost Calculator',
-    desc: 'Get a ballpark estimate in 60 seconds.',
-  },
 ];
 
 export default function HomeQuickLinks() {
@@ -106,10 +111,10 @@ export default function HomeQuickLinks() {
     <section style={{ padding: '4rem 0', background: '#f9f9f9' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
         <h2 style={{ fontSize: '1.8rem', fontWeight: 700, textAlign: 'center', marginBottom: '0.5rem' }}>
-          Explore Loudoun Decks
+          Plan Your Deck Project
         </h2>
         <p style={{ textAlign: 'center', color: '#666', marginBottom: '2.5rem', fontSize: '1rem' }}>
-          Everything you need to plan your deck project in Northern Virginia
+          Fast paths for estimates, repairs, costs, permits, reviews, and local deck builder pages.
         </p>
         <div className={styles.grid}>
           {links.map(({ href, title, desc }) => (

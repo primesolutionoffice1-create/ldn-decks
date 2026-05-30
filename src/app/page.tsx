@@ -64,6 +64,7 @@ const homepageSchema = {
     "https://ldndecks.com/services/deck-repair-and-structural-maintenance",
     "https://ldndecks.com/services/deck-inspection",
     "https://ldndecks.com/deck-resurfacing-vs-replacement",
+    "https://ldndecks.com/get-estimate",
     "https://ldndecks.com/screened-porch-builder-northern-virginia",
     "https://ldndecks.com/covered-deck-builder-northern-virginia",
     "https://ldndecks.com/services",
