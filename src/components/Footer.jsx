@@ -135,6 +135,7 @@ export default function Footer() {
               <li><Link href="/services/porches/screened-porch">Screened Porches</Link></li>
               <li><Link href="/deck-permit-loudoun-county-virginia">Loudoun Deck Permits</Link></li>
               <li><Link href="/deck-permit-fairfax-county-virginia">Fairfax Deck Permits</Link></li>
+              <li><Link href="/deck-permit-arlington-county-virginia">Arlington Deck Permits</Link></li>
               <li><Link href="/deck-permit-prince-william-county-virginia">Prince William Deck Permits</Link></li>
               <li><Link href="/areas-we-serve">Areas We Serve</Link></li>
               <li><Link href="/scholarship">Scholarship</Link></li>
