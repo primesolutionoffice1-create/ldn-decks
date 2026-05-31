@@ -16,8 +16,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-northern-virginia',
-  title: 'Deck Builder Northern Virginia | Loudoun Decks',
-  description: 'Custom deck builder in Northern Virginia for composite, PVC, wood, replacement, permits and HOA approvals. Serving Loudoun, Fairfax and Prince William.',
+  title: 'Custom Deck Builder Northern Virginia | LDN Decks',
+  description: 'Custom deck builder in Northern Virginia for composite decks, Trex, TimberTech, deck replacement, permits and HOA approvals across Loudoun and Fairfax.',
   image: '/images/img36.jpeg',
 });
 

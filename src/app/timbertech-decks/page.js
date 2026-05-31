@@ -277,6 +277,7 @@ export default function TimberTechDecksPage() {
             ['/composite-decks', 'Composite Decks'],
             ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
             ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost'],
+            ['/deck-builder-northern-virginia', 'Northern Virginia Deck Builder'],
             ['/deck-payment-estimator', 'Deck Payment Estimator'],
           ].map(([href, label]) => (
             <Link
@@ -306,6 +307,7 @@ export default function TimberTechDecksPage() {
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/timbertech-azek-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>TimberTech &amp; AZEK Deck Cost in Northern Virginia (EDGE / PRO / Vintage tiers) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full Composite Deck Cost in Northern Virginia →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
         </ul>
       </section>
