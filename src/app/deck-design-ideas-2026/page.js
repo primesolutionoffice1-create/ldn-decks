@@ -189,6 +189,8 @@ export default function DeckDesignIdeasPage() {
               ['/northern-virginia-deck-building-guide', 'Complete Deck Building Guide'],
               ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
+              ['/deck-builder-northern-virginia', 'Northern Virginia Deck Builder'],
+              ['/get-estimate', 'Get a Local Deck Estimate'],
               ['/showcase', 'Our Project Gallery'],
               ['/what-size-deck-should-i-build', 'Deck Size Guide'],
             ].map(([href, text]) => (
@@ -200,7 +202,7 @@ export default function DeckDesignIdeasPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Bring Your Design to Life" buttonText="Get Free Design Consultation" link="/get-estimate" />
+      <SimpleCTA title="Planning One of These Designs in Northern Virginia?" buttonText="Get a Local Deck Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/deck-design-ideas-2026" />

@@ -267,6 +267,13 @@ export default function CompositeDecksPage() {
 
       <ServicesCallToAction />
 
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Composite Deck Planning</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Premium composite deck builder in Northern Virginia →</Link></li>
+        </ul>
+      </section>
+
       <RelatedGuides currentPath="/composite-decks" />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Composite Material Decision Guides</h2>
