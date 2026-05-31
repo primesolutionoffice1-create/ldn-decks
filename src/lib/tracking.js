@@ -237,7 +237,8 @@ export function trackPhoneClick() {
 }
 
 /**
- * Fires the authoritative lead conversion event on /thank-you page-view.
+ * Fires the authoritative lead conversion event on /thank-you page-view
+ * after ThankYouTracking verifies the server-issued confirmation token.
  * GTM should map this event (not form_submit) to the Google Ads Lead
  * conversion action — /thank-you is only reached after sendContactEmail
  * succeeds, so this event is proof-of-conversion.

@@ -3,6 +3,7 @@
 import { headers } from 'next/headers';
 import nodemailer from 'nodemailer';
 import { sendMetaLeadEvent } from './metaCapi';
+import { createLeadConfirmationToken } from './leadConfirmationToken';
 
 export async function sendContactEmail(formData) {
   try {
@@ -144,7 +145,10 @@ export async function sendContactEmail(formData) {
       userAgent,
     }).catch((err) => console.error('Meta CAPI fire-and-forget error:', err?.message || err));
 
-    return { success: true };
+    return {
+      success: true,
+      confirmationToken: createLeadConfirmationToken(eventId),
+    };
   } catch (error) {
     console.error('Email error:', error?.message || error);
     return { success: false, error: 'Failed to send email' };
