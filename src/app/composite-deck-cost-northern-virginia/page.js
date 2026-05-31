@@ -461,10 +461,10 @@ export default function CompositeDeckCostPage() {
         <div style={S.container}>
           <h2 style={S.h2}>Financing Your Composite Deck</h2>
           <p style={S.p}>
-            Loudoun Decks offers project financing through Hearth and Synchrony, with terms ranging from 12–84 months. Most $25,000–$45,000 composite deck builds run $300–$650 per month at typical 2026 rates. We can pre-qualify you in under two minutes without a hard credit pull.
+            Financing options may be available for eligible composite deck projects, subject to approval and provider terms. Start with a clear written scope, then ask about current options for new decks, resurfacing, repairs, and composite upgrades.
           </p>
           <p style={S.pMuted}>
-            For full financing details, rate ranges, and lender context: <Link href="/deck-financing-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing in Northern Virginia</Link>. If you already have a project range in mind, use the <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck payment estimator</Link> to compare monthly payment scenarios before requesting a written estimate.
+            For compliant financing guidance: <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing in Northern Virginia</Link>. If you already have a project range in mind, use the <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck payment estimator</Link> as a planning tool before requesting a written estimate.
           </p>
         </div>
       </section>
@@ -505,7 +505,7 @@ export default function CompositeDeckCostPage() {
               ['/composite-deck-cost-by-size', 'Composite Cost by Size', '300 / 400 / 500 / 600 sqft pricing breakdown'],
               ['/monthly-payment-composite-deck-northern-virginia', 'Monthly Payment on a Composite Deck', '$15k–$70k project payment ranges'],
               ['/deck-lighting-railings-stairs-addon-cost', 'Lighting, Railings &amp; Stairs Add-On Costs', 'Per-linear-foot pricing for the biggest add-ons'],
-              ['/credit-score-deck-financing', 'Credit Score for Deck Financing', 'APR by score band, soft-pull pre-qualification'],
+              ['/credit-score-deck-financing', 'Credit Score for Deck Financing', 'Credit-readiness guidance'],
               ['/wood-vs-composite-deck-long-term-cost', 'Wood vs Composite — 15-Yr Cost', '15-year total including maintenance + financing'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK vs Fiberon', 'Full 4-way comparison'],
               ['/how-tariffs-affect-deck-prices-2026', '2026 Deck Tariff Impact', 'How import duties moved the market'],
@@ -514,7 +514,7 @@ export default function CompositeDeckCostPage() {
               ['/does-a-deck-add-value-to-your-home', 'Deck ROI &amp; Home Value', 'What composite recoups at resale'],
               ['/services/deck-replacement', 'Deck Replacement Services', 'Full rebuild scope and pricing'],
               ['/services/deck-resurfacing', 'Deck Resurfacing', 'When resurface is the right call'],
-              ['/deck-financing-northern-virginia', 'Deck Financing in NoVA', 'Monthly payment math + lenders'],
+              ['/deck-financing', 'Deck Financing in NoVA', 'Options may be available; subject to approval'],
               ['/deck-payment-estimator', 'Deck Payment Estimator', 'Estimate monthly payments by project amount'],
               ['/deck-maintenance-checklist-virginia', 'Maintenance Checklist', 'Annual care for composite decks'],
               ['/deck-permit-fairfax-county-virginia', 'Fairfax County Permits', '3–5 week review, $600–$1,300'],

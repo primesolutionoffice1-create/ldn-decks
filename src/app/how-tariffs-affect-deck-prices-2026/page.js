@@ -93,7 +93,7 @@ export default function TariffsDeckPricesPage() {
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Lock in material pricing early.</strong> We purchase materials at contract signing, not at construction start. This protects you from mid-project price increases. If materials go up between your quote and signing, we honor the quoted price.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Consider composite railings over aluminum.</strong> Trex Select or Signature composite railings avoid the aluminum tariff entirely while providing the same zero-maintenance benefit. <Link href="/deck-railing-options-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Compare railing options</Link>.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Build now, not later.</strong> Material costs have increased every year for the past decade. Waiting for tariff reductions is a gamble. Labor costs rise 3–5% annually regardless. Today&apos;s price is almost certainly lower than next year&apos;s.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Bundle projects.</strong> Deck + fence, deck + patio, or deck + porch as one project saves on mobilization, site prep, and permits vs building separately. <Link href="/deck-financing-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Financing available</Link>.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Bundle projects.</strong> Deck + fence, deck + patio, or deck + porch as one project saves on mobilization, site prep, and permits vs building separately. <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Financing options may be available</Link>, subject to approval and provider terms.</li>
           </ol>
 
           <h2 style={S.h2}>Should You Wait for Prices to Drop?</h2>
@@ -123,7 +123,7 @@ export default function TariffsDeckPricesPage() {
             {[
               ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide (2026 Prices)'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
-              ['/deck-financing-northern-virginia', 'Deck Financing Options'],
+              ['/deck-financing', 'Deck Financing Options'],
               ['/best-time-to-build-a-deck-northern-virginia', 'Best Time to Build'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>

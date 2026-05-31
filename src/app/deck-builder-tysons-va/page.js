@@ -111,7 +111,7 @@ export default function TysonsDeckBuilderPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Every Tysons estimate includes free 3D design rendering before contract — you see photorealistic views of the finished deck from multiple angles, not generic &ldquo;starting at&rdquo; pricing. Need to spread the cost? <Link href="/deck-financing-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing for Northern Virginia</Link> covers monthly-payment options through our financing partners.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Every Tysons estimate includes free 3D design rendering before contract — you see photorealistic views of the finished deck from multiple angles, not generic &ldquo;starting at&rdquo; pricing. Need to spread the cost? <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing options</Link> may be available, subject to approval and provider terms.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Permits &amp; HOA approval for Tysons</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Tysons sits within the Fairfax County <strong>Planned Tysons Corner (PTC) District</strong> — a special zoning overlay created to implement the Tysons Comprehensive Plan&apos;s vision of a walkable urban center. For most residential deck projects, the PTC overlay means coordinating the Fairfax County building permit (Section 5100 of the Zoning Ordinance covers deck setback rules and Table 5100.1 lists allowed extensions into setbacks) with any community-specific design controls.</p>

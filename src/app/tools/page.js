@@ -67,6 +67,12 @@ const itemListSchema = {
       name: 'Deck Payment Estimator',
       url: `${BUSINESS.url}/deck-payment-estimator`,
     },
+    {
+      '@type': 'ListItem',
+      position: 8,
+      name: 'Deck Financing Options',
+      url: `${BUSINESS.url}/deck-financing`,
+    },
   ],
 };
 
@@ -110,6 +116,11 @@ const tools = [
     href: '/deck-payment-estimator',
     title: 'Deck Payment Estimator',
     desc: 'Model monthly payments for a custom deck, composite upgrade or larger outdoor living project.',
+  },
+  {
+    href: '/deck-financing',
+    title: 'Deck Financing Options',
+    desc: 'Learn how eligible deck, resurfacing, repair, and composite upgrade projects may qualify for financing options.',
   },
 ];
 

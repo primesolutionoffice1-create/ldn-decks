@@ -63,6 +63,7 @@ const nextConfig = {
       { source: '/how-much-does-a-deck-cost-northern-virginia', destination: '/composite-deck-cost-northern-virginia', permanent: true },
       { source: '/northern-virginia-deck-cost-report-2026', destination: '/composite-deck-cost-northern-virginia', permanent: true },
       { source: '/deck-resurfacing-vs-replacement-northern-virginia', destination: '/deck-resurfacing-vs-replacement', permanent: true },
+      { source: '/deck-financing-northern-virginia', destination: '/deck-financing', permanent: true },
       { source: '/terms-and-conditions', destination: '/privacy-policy', permanent: true },
       { source: '/choosing-right-deck-material-wood-vs-composite', destination: '/composite-deck-vs-wood-deck-virginia', permanent: true },
       

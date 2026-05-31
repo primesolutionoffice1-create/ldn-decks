@@ -28,7 +28,7 @@ const questions = [
   {
     category: 'Budget & Planning', items: [
       { q: 'What is my realistic budget?', a: 'Composite decks in NoVA: $15k-$45k for 300-500 sqft. Include railings, stairs, lighting, permits in your number not just the deck surface.', link: '/composite-deck-cost-northern-virginia' },
-      { q: 'Should I finance or pay cash?', a: 'Financing at $0 down with 12-60 month terms lets you build now and enjoy immediately while paying over time. Material costs rise 5-8% annually waiting rarely saves money.', link: '/deck-financing-northern-virginia' },
+      { q: 'Should I finance or pay cash?', a: 'Financing options may be available for eligible deck projects, subject to approval and provider terms. Compare your project scope, cash flow, and long-term priorities before choosing.', link: '/deck-financing' },
       { q: 'What size deck do I need?', a: 'Couples: 150-200 sqft. Families: 300-400 sqft. Entertainers: 500+. Don\'t exceed 20-25% of your backyard.', link: '/what-size-deck-should-i-build' },
       { q: 'When is the best time to build?', a: 'Feb-Apr for best pricing. May-Aug is peak with 4-6 week waits. Start 2-3 months before desired completion.', link: '/best-time-to-build-a-deck-northern-virginia' },
     ]

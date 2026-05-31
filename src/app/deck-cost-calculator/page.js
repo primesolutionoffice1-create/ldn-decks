@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
+import FinancingCTA from '@/components/FinancingCTA';
 
 // This page is a LINKABLE ASSET designed to attract backlinks from
 // real estate blogs, home improvement sites, and local news.
@@ -27,6 +28,13 @@ export default function DeckCostCalculator() {
           <p style={{ marginTop: '1rem', color: '#4a5568', lineHeight: 1.7 }}>
             Want the more consultation-focused version? Use the <Link href="/tools/deck-cost-estimator-northern-virginia" style={{ color: '#d14817', fontWeight: 700 }}>Deck Cost Estimator Northern Virginia</Link> to connect your range with permits, financing and the written estimate process.
           </p>
+
+          <div style={{ margin: '2rem 0' }}>
+            <FinancingCTA
+              title="Want to compare deck financing options after estimating cost?"
+              body="Use this calculator to frame the project range, then ask us about current financing options for eligible deck builds, resurfacing, repairs, and composite upgrades. Subject to approval. Terms may vary."
+            />
+          </div>
 
           <article style={{ marginTop: '4rem', lineHeight: 1.8, color: '#2d3748' }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1.5rem', color: '#1a202c' }}>How Much Does a Deck Cost in Northern Virginia? (2026 Guide)</h2>

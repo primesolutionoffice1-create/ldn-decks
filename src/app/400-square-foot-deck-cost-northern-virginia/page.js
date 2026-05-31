@@ -165,7 +165,7 @@ export default function FourHundredSqftDeckCostPage() {
             <li>→ <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Interactive deck cost calculator</Link></li>
             <li>→ <Link href="/600-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>600 sqft deck cost</Link></li>
             <li>→ <Link href="/800-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>800 sqft deck cost</Link></li>
-            <li>→ <Link href="/deck-financing-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing for Northern Virginia</Link></li>
+            <li>→ <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing for Northern Virginia</Link></li>
             <li>→ <Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK</Link></li>
           </ul>
 

@@ -125,7 +125,7 @@ export default function ArlingtonDeckBuilderPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Every Arlington estimate includes free 3D design rendering and a full materials breakdown before contract. Financing through our partners — see <Link href="/deck-financing-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck financing options</Link>.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Every Arlington estimate includes free 3D design rendering and a full materials breakdown before contract. Financing options may be available, subject to approval and provider terms — see <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck financing options</Link>.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Services in Arlington</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>

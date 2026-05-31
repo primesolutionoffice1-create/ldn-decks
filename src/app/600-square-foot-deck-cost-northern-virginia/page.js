@@ -148,7 +148,7 @@ export default function SixHundredSqftDeckCostPage() {
             <li>→ <Link href="/outdoor-kitchen-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Outdoor kitchen builder Northern Virginia</Link></li>
             <li>→ <Link href="/400-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>400 sqft deck cost</Link></li>
             <li>→ <Link href="/800-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>800 sqft deck cost</Link></li>
-            <li>→ <Link href="/deck-financing-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing</Link></li>
+            <li>→ <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing</Link></li>
           </ul>
 
         </div>

@@ -159,7 +159,7 @@ export default function CentrevilleDeckBuilderPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Every Centreville estimate includes a free 3D design rendering at our showroom. Visit, touch the materials, see the finished deck rendered in your backyard before contract. Need monthly-payment options? See <Link href="/deck-financing-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck financing for Northern Virginia</Link>.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Every Centreville estimate includes a free 3D design rendering at our showroom. Visit, touch the materials, see the finished deck rendered in your backyard before contract. Need payment flexibility? See <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck financing options</Link>, subject to approval and provider terms.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Centreville Project</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
