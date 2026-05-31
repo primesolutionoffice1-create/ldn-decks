@@ -24,6 +24,9 @@ export default function DeckCostCalculator() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <DeckCostCalculatorWidget defaultMaterial={2} defaultSqft={350} ctaLabel="Get Your Free Detailed Quote" />
+          <p style={{ marginTop: '1rem', color: '#4a5568', lineHeight: 1.7 }}>
+            Want the more consultation-focused version? Use the <Link href="/tools/deck-cost-estimator-northern-virginia" style={{ color: '#d14817', fontWeight: 700 }}>Deck Cost Estimator Northern Virginia</Link> to connect your range with permits, financing and the written estimate process.
+          </p>
 
           <article style={{ marginTop: '4rem', lineHeight: 1.8, color: '#2d3748' }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1.5rem', color: '#1a202c' }}>How Much Does a Deck Cost in Northern Virginia? (2026 Guide)</h2>
@@ -121,6 +124,10 @@ export default function DeckCostCalculator() {
               <Link href="/deck-payment-estimator" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
                 <p style={{ fontWeight: 600, color: '#d14817' }}>Deck Payment Estimator</p>
                 <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Compare project cost with monthly payment options</p>
+              </Link>
+              <Link href="/tools/deck-cost-estimator-northern-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: '#d14817' }}>Deck Cost Estimator Northern Virginia</p>
+                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Plan a written estimate by size, materials, permits and add-ons</p>
               </Link>
               <Link href="/composite-deck-cost-by-size" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
                 <p style={{ fontWeight: 600, color: '#d14817' }}>Composite Cost by Size</p>

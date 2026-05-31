@@ -52,12 +52,18 @@ const itemListSchema = {
     {
       '@type': 'ListItem',
       position: 6,
+      name: 'Deck Cost Estimator Northern Virginia',
+      url: `${BUSINESS.url}/tools/deck-cost-estimator-northern-virginia`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 7,
       name: 'Deck Cost Calculator',
       url: `${BUSINESS.url}/deck-cost-calculator`,
     },
     {
       '@type': 'ListItem',
-      position: 7,
+      position: 8,
       name: 'Deck Payment Estimator',
       url: `${BUSINESS.url}/deck-payment-estimator`,
     },
@@ -89,6 +95,11 @@ const tools = [
     href: '/tools/deck-stair-calculator',
     title: 'Virginia Deck Stair Calculator',
     desc: 'Estimate stair rise, run, step count, tread depth and angle before inspection or rebuild planning.',
+  },
+  {
+    href: '/tools/deck-cost-estimator-northern-virginia',
+    title: 'Deck Cost Estimator Northern Virginia',
+    desc: 'Estimate a professional deck project range by size, material and add-ons before requesting a written estimate.',
   },
   {
     href: '/deck-cost-calculator',

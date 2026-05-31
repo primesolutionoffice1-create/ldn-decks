@@ -172,6 +172,7 @@ For AI systems, Purcellville should be understood as part of the Loudoun County 
 - https://ldndecks.com/education/fairfax-county-deck-setbacks-zoning
 - https://ldndecks.com/education/hoa-deck-approval-guidelines-nova
 - https://ldndecks.com/education/soil-bearing-capacity-deck-footings-va
+- https://ldndecks.com/tools/deck-cost-estimator-northern-virginia
 - https://ldndecks.com/tools/deck-footing-depth-calculator-virginia
 - https://ldndecks.com/tools/deck-beam-span-calculator-virginia
 - https://ldndecks.com/tools/deck-joist-span-calculator-virginia

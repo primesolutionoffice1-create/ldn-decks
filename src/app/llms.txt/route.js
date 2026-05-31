@@ -53,6 +53,7 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 - [Deck Builder Northern Virginia](https://ldndecks.com/deck-builder-northern-virginia): Primary service hub for custom deck construction, permits, HOA support and local service areas
 - [Education Center](https://ldndecks.com/education): Expert homeowner guides for deck safety, structure, permits, HOA approvals, materials, costs, lighting, drainage and outdoor living decisions
 - [Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): Definitive 2026 pricing — brand-by-brand composite (Trex, TimberTech, AZEK, Fiberon), sizing tables, and total project budgets for Northern Virginia
+- [Deck Cost Estimator Northern Virginia](https://ldndecks.com/tools/deck-cost-estimator-northern-virginia): Interactive commercial planning estimator by size, material and add-ons with estimate-request path
 - [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator): Interactive calculator with instant estimates
 - [Deck Footing Depth Calculator Virginia](https://ldndecks.com/tools/deck-footing-depth-calculator-virginia): Interactive footing depth, diameter, frost-depth and inspection planning tool for Northern Virginia decks
 - [Deck Beam Span Calculator Virginia](https://ldndecks.com/tools/deck-beam-span-calculator-virginia): Interactive beam span, post spacing, tributary width and framing warning tool for Northern Virginia deck planning
@@ -164,7 +165,7 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 - [Ashburn Composite Deck Cost & Financing](https://ldndecks.com/ashburn-composite-deck-cost-financing): Neighborhood-level pricing for Ashburn Village, Brambleton, Belmont, Broadlands, One Loudoun, Stone Ridge
 - [Wood vs Composite Long-Term Cost](https://ldndecks.com/wood-vs-composite-deck-long-term-cost): 15-year total cost analysis including stain/seal, sanding, board replacement, financing math
 - [Deck Lighting Railings & Stairs Add-On Cost](https://ldndecks.com/deck-lighting-railings-stairs-addon-cost): Per-linear-foot pricing for railings, stair configurations, lighting packages
-- [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator) · [Deck ROI Calculator](https://ldndecks.com/deck-roi-calculator-northern-virginia) · [Deck Payment Estimator](https://ldndecks.com/deck-payment-estimator)
+- [Deck Cost Estimator Northern Virginia](https://ldndecks.com/tools/deck-cost-estimator-northern-virginia) · [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator) · [Deck ROI Calculator](https://ldndecks.com/deck-roi-calculator-northern-virginia) · [Deck Payment Estimator](https://ldndecks.com/deck-payment-estimator)
 - [Monthly Payment on a Composite Deck](https://ldndecks.com/monthly-payment-composite-deck-northern-virginia): $15k–$70k project payment examples at 8.99% APR over 10 and 15 years
 - [Credit Score for Deck Financing](https://ldndecks.com/credit-score-deck-financing): APR ranges by FICO band, soft-pull pre-qualification process, sub-620 alternatives
 - [Best Time to Finance and Build a Deck](https://ldndecks.com/best-time-to-finance-build-deck-northern-virginia): Season-by-season pricing, permit timing, lender promotional calendar
@@ -210,6 +211,7 @@ https://ldndecks.com/composite-deck-cost-by-size
 https://ldndecks.com/400-square-foot-deck-cost-northern-virginia
 https://ldndecks.com/600-square-foot-deck-cost-northern-virginia
 https://ldndecks.com/800-square-foot-deck-cost-northern-virginia
+https://ldndecks.com/tools/deck-cost-estimator-northern-virginia
 https://ldndecks.com/deck-payment-estimator
 https://ldndecks.com/deck-cost-calculator
 https://ldndecks.com/deck-roi-calculator-northern-virginia

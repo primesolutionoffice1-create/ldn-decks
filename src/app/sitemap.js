@@ -350,6 +350,7 @@ export default async function sitemap() {
                 { path: "/services/deck-stair-lighting",               priority: 0.75, lastMod: TIER3, freq: "monthly" },
 
                 // Linkable assets & authority pages
+                { path: "/tools/deck-cost-estimator-northern-virginia", priority: 0.90, lastMod: TIER1, freq: "monthly" },
                 { path: "/deck-cost-calculator",                       priority: 0.90, lastMod: TIER1, freq: "monthly" },
                 { path: "/deck-payment-estimator",                     priority: 0.85, lastMod: TIER1, freq: "monthly" },
                 { path: "/tools",                                      priority: 0.70, lastMod: TIER1, freq: "monthly" },

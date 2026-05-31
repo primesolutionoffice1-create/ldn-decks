@@ -71,6 +71,7 @@ const homepageSchema = {
     "https://ldndecks.com/northern-virginia-deck-building-guide",
     "https://ldndecks.com/composite-deck-cost-northern-virginia",
     "https://ldndecks.com/tools",
+    "https://ldndecks.com/tools/deck-cost-estimator-northern-virginia",
     "https://ldndecks.com/tools/deck-footing-depth-calculator-virginia",
     "https://ldndecks.com/tools/deck-load-calculator-virginia",
     "https://ldndecks.com/before-and-after",
@@ -109,6 +110,7 @@ const homepageSchema = {
       "Purcellville outdoor living",
       "Western Loudoun deck builder",
       "deck permits Northern Virginia",
+      "deck cost estimator Northern Virginia",
       "HOA deck approval",
       "patio construction",
       "deck railing systems"
