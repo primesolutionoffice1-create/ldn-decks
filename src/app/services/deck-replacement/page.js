@@ -12,6 +12,7 @@ import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
+import FinancingCTA from '@/components/FinancingCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -81,6 +82,7 @@ export default function DeckReplacementPage() {
       />
 
       <AboveFoldCTA headline="Aging deck in Northern Virginia? Get a free structural evaluation and replacement estimate today." />
+      <FinancingCTA title="Need financing for your deck replacement project?" />
 
       {/* Pricing Anchor - Conversion Filtering */}
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>

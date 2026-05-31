@@ -66,7 +66,7 @@ function buildAllUrls() {
     '/deck-safety-inspection-checklist',
     '/winterize-your-deck-northern-virginia',
     '/how-long-to-build-a-deck-northern-virginia',
-    '/deck-financing-northern-virginia',
+    '/deck-financing',
     '/deck-staining-northern-virginia',
     '/porch-vs-deck-which-should-you-build',
     '/deck-lighting-ideas-northern-virginia',

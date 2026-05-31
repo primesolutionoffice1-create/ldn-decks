@@ -48,6 +48,11 @@ const links = [
     title: 'Instant Cost Calculator',
     desc: 'Get a ballpark estimate in 60 seconds.',
   },
+  {
+    href: '/deck-financing',
+    title: 'Deck Financing Options',
+    desc: 'Build now, pay over time. Subject to approval.',
+  },
 ];
 
 export default function HomeQuickLinks() {

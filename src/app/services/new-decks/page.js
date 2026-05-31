@@ -10,6 +10,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import JsonLd from '@/components/JsonLd';
 import SimpleCTA from '@/components/SimpleCTA';
+import FinancingCTA from '@/components/FinancingCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -90,6 +91,7 @@ export default function NewDecksPage() {
         title="Custom Deck Design Built Around Your Home & Lifestyle"
         description="From concept to completion, we design and build fully custom decks tailored to your space, style, and budget - no templates, no shortcuts."
       />
+      <FinancingCTA title="Need financing for your new deck project?" />
 
       {/* Pricing Anchor */}
       <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>

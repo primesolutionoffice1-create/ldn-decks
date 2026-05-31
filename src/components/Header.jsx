@@ -273,6 +273,10 @@ export default function Header() {
                 </div>
 
                 <div className={styles.navItem}>
+                  <Link href="/deck-financing" className={isActive("/deck-financing")}>Financing</Link>
+                </div>
+
+                <div className={styles.navItem}>
                   <Link href="/blog" className={isActive("/blog")}>Education</Link>
                 </div>
               </nav>
@@ -477,6 +481,12 @@ export default function Header() {
           <div className={styles.mobileNavItem}>
             <div className={`${styles.mobileNavLink} ${isActive('/deck-cost-calculator')}`}>
               <Link href="/deck-cost-calculator" onClick={() => setIsMobileOpen(false)}>Deck Price Calculator</Link>
+            </div>
+          </div>
+
+          <div className={styles.mobileNavItem}>
+            <div className={`${styles.mobileNavLink} ${isActive('/deck-financing')}`}>
+              <Link href="/deck-financing" onClick={() => setIsMobileOpen(false)}>Financing</Link>
             </div>
           </div>
 

@@ -128,7 +128,7 @@ export default async function sitemap() {
                 { path: "/blog",                         priority: 0.70, lastMod: TIER3, freq: "weekly" },
                 { path: "/contact",                      priority: 0.70, lastMod: TIER3, freq: "monthly" },
                 { path: "/bbb-accredited-deck-builder-virginia", priority: 0.85, lastMod: TIER1, freq: "monthly" },
-                { path: "/deck-financing",               priority: 0.85, lastMod: TIER1, freq: "monthly" },
+                { path: "/deck-financing",               priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/scholarship",                  priority: 0.60, lastMod: TIER1, freq: "yearly" },
                 { path: "/social",                       priority: 0.50, lastMod: TIER1, freq: "monthly" },
                 { path: "/get-estimate",                 priority: 0.85, lastMod: TIER1, freq: "weekly" },
@@ -151,7 +151,6 @@ export default async function sitemap() {
                 { path: "/outdoor-kitchen-builder-northern-virginia",   priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-living-northern-virginia",             priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-staining-northern-virginia",            priority: 0.85, lastMod: TIER1, freq: "weekly" },
-                { path: "/deck-financing-northern-virginia",           priority: 0.80, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 1.5b - Deep competitor analysis pages (batch 2)
                 { path: "/how-long-to-build-a-deck-northern-virginia",  priority: 0.90, lastMod: TIER1, freq: "weekly" },

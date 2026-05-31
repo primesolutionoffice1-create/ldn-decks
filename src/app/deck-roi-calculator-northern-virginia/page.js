@@ -300,7 +300,7 @@ export default function DeckROICalculatorPage() {
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value to Your Home?'],
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia (2026)'],
               ['/deck-resurfacing-vs-replacement', 'Deck Resurfacing vs Full Replacement'],
-              ['/deck-financing-northern-virginia', 'Deck Financing Options in Northern Virginia'],
+              ['/deck-financing', 'Deck Financing Options in Northern Virginia'],
               ['/how-to-choose-a-deck-builder-northern-virginia', 'How to Choose a Deck Builder'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}>

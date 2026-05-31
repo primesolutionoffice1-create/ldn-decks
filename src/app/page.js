@@ -4,6 +4,7 @@ import Features from "@/components/Features";
 import CalculatorCTA from "@/components/CalculatorCTA";
 import Introduction from "@/components/Introduction";
 import MaterialPartners from "@/components/MaterialPartners";
+import FinancingCTA from "@/components/FinancingCTA";
 
 // Dynamic imports for below-the-fold components
 const PromoModal = dynamic(() => import("@/components/PromoModal"));
@@ -65,6 +66,7 @@ const homepageSchema = {
     "https://ldndecks.com/areas-we-serve",
     "https://ldndecks.com/reviews",
     "https://ldndecks.com/deck-cost-calculator",
+    "https://ldndecks.com/deck-financing",
     "https://ldndecks.com/contact"
   ],
   "mainEntity": {
@@ -109,6 +111,10 @@ export default function Home() {
             <TrustSection />
             <Features />
             <CalculatorCTA />
+            <FinancingCTA
+              title="Need financing for your deck project?"
+              text="Build now and pay over time. Ask about financing options that may be available for new decks, resurfacing, repairs, and composite upgrades."
+            />
             <MaterialPartners />
             <Introduction />
             <HowItWorks />

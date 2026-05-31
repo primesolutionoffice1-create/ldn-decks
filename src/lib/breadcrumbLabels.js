@@ -97,7 +97,6 @@ export const SEGMENT_LABELS = {
   // Major content / authority pages
   'deck-cost-calculator': 'Deck Cost Calculator',
   'deck-financing': 'Deck Financing',
-  'deck-financing-northern-virginia': 'Deck Financing in Northern Virginia',
   'deck-repair': 'Deck Repair',
   'deck-remodeling': 'Deck Remodeling',
   'deck-repair-loudoun-county': 'Deck Repair in Loudoun County',

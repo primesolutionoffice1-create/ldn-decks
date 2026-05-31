@@ -11,6 +11,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import FinancingCTA from '@/components/FinancingCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -130,6 +131,7 @@ export default function CompositeDecksPage() {
       />
 
       <AboveFoldCTA headline="Planning a custom composite deck in Northern Virginia? Talk to a 5-star Trex Platinum specialist today." />
+      <FinancingCTA title="Need financing for your composite deck project?" />
 
       {/* Pricing Anchor - Conversion Filtering */}
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>

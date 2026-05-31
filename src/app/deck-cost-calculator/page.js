@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import FinancingCTA from '@/components/FinancingCTA';
 
 // This page is a LINKABLE ASSET designed to attract backlinks from
 // real estate blogs, home improvement sites, and local news.
@@ -264,7 +265,7 @@ export default function DeckCostCalculator() {
           <div style={{ marginTop: '4rem', padding: '2rem', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1rem', color: '#1a202c' }}>Share or Use This Tool</h3>
             <p style={{ color: '#4a5568', marginBottom: '1.5rem' }}>
-              Are you a real estate agent or homeowner? You can share these results or embed this calculator on your own website.
+              Are you a real estate agent or homeowner? You can share these results, embed this calculator on your own website, or review deck financing options that may be available.
             </p>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
@@ -305,10 +306,27 @@ export default function DeckCostCalculator() {
               >
                 Copy Embed Code
               </button>
+
+              <Link
+                href="/deck-financing"
+                style={{
+                  padding: '12px',
+                  background: '#d14817',
+                  color: '#fff',
+                  border: '2px solid #d14817',
+                  borderRadius: '6px',
+                  fontWeight: 600,
+                  textAlign: 'center',
+                  textDecoration: 'none'
+                }}
+              >
+                Review Financing Options
+              </Link>
             </div>
           </div>
         </div>
       </section>
+      <FinancingCTA />
     </main>
   );
 }

@@ -13,6 +13,7 @@ const CORNERSTONE_GUIDES = [
   { path: '/northern-virginia-deck-building-guide', title: 'Complete Deck Building Guide for NoVA', desc: 'Everything in one place costs, materials, permits, HOA, timeline.' },
   { path: '/how-much-does-a-deck-cost-northern-virginia', title: 'Deck Cost in Northern Virginia (2026)', desc: 'Material pricing, real project costs, and what drives the price.' },
   { path: '/deck-cost-calculator', title: 'Free Deck Cost Calculator', desc: 'Get an instant estimate by material, size, and add-ons.' },
+  { path: '/deck-financing', title: 'Deck Financing Options', desc: 'Build now and pay over time. Subject to approval; terms may vary.' },
   { path: '/trex-vs-timbertech-vs-azek', title: 'Trex vs TimberTech vs AZEK', desc: 'Side-by-side brand comparison for Virginia climate.' },
   { path: '/timbertech-decks', title: 'TimberTech & AZEK Decks', desc: 'Premium PVC and composite deck options for Northern Virginia.' },
   { path: '/composite-deck-vs-wood-deck-virginia', title: 'Composite vs Wood Deck', desc: '15-year cost comparison composite wins long-term.' },

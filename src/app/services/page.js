@@ -5,6 +5,7 @@ import ServicesFAQ from '@/components/ServicesFAQ';
 import ServicesFooterInfo from '@/components/ServicesFooterInfo';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import RelatedGuides from '@/components/RelatedGuides';
+import FinancingCTA from '@/components/FinancingCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -18,6 +19,7 @@ export default function ServicesPage() {
     <main>
        <ServicesHeader />
        <ServicesGrid />
+       <FinancingCTA />
 
        <section style={{ padding: '4rem 0', background: '#fff', borderTop: '1px solid #eee' }}>
          <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 1.5rem', lineHeight: 1.8, color: '#333' }}>

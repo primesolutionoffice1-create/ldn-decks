@@ -48,6 +48,7 @@ Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 - [Deck Cost Guide](https://ldndecks.com/how-much-does-a-deck-cost-northern-virginia): Detailed 2026 pricing with material comparisons
 - [Composite Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): Brand-by-brand composite pricing (Trex, TimberTech, AZEK, Fiberon)
 - [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator): Interactive calculator with instant estimates
+- [Deck Financing](https://ldndecks.com/deck-financing): Financing options may be available for new decks, resurfacing, repairs, and composite upgrades; subject to approval and terms may vary
 - [Trex vs TimberTech vs AZEK](https://ldndecks.com/trex-vs-timbertech-vs-azek): Brand comparison guide
 - [Composite vs Wood](https://ldndecks.com/composite-deck-vs-wood-deck-virginia): Material decision guide
 - [Northern Virginia Deck Building Guide](https://ldndecks.com/northern-virginia-deck-building-guide): Complete building guide

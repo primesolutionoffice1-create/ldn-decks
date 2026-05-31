@@ -116,6 +116,21 @@ County building inspection for code compliance. Detailed walkthrough with homeow
 
 ---
 
+## Deck Financing
+
+Loudoun Decks offers financing discussions for eligible deck projects through the estimate process. Financing options may be available for new decks, deck resurfacing, composite decking upgrades, deck repair, safety improvements, screened porches, and related outdoor living upgrades.
+
+Important financing compliance notes:
+- Financing is subject to approval.
+- Terms may vary.
+- Loudoun Decks is not a lender.
+- Approval, rates, payment amounts, and terms are not guaranteed.
+- Homeowners should ask about current financing options during the estimate.
+
+Primary page: https://ldndecks.com/deck-financing
+
+---
+
 ## Deck Permits in Northern Virginia
 
 ### Loudoun County

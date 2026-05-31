@@ -391,7 +391,7 @@ export default function CompositeDeckCostPage() {
               ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck 15-Year Cost Analysis'],
               ['/deck-resurfacing-vs-replacement', 'Deck Resurfacing vs Full Replacement'],
               ['/how-tariffs-affect-deck-prices-2026', 'How 2026 Tariffs Affect Deck Prices'],
-              ['/deck-financing-northern-virginia', 'Deck Financing Options in Northern Virginia'],
+              ['/deck-financing', 'Deck Financing Options in Northern Virginia'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}>
                 <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} &rarr;</Link>

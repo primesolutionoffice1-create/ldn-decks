@@ -6,6 +6,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import FinancingCTA from '@/components/FinancingCTA';
 import { buildMetadata } from '@/lib/seo';
 
 // ============================================================================
@@ -436,6 +437,8 @@ export default function DeckRepairHubPage() {
           </div>
         </div>
       </section>
+
+      <FinancingCTA title="Need financing for deck repair or safety improvements?" />
 
       {/* ====================== QUICK ANSWER ====================== */}
       <section data-speakable="true" style={{ padding: '2rem 1.5rem 0' }}>
@@ -1050,12 +1053,12 @@ export default function DeckRepairHubPage() {
         <div style={S.container}>
           <h2 style={S.h2}>Financing Your Deck Repair</h2>
           <p style={S.p}>
-            Structural deck repair runs $1,500–$48,000 across the scope spectrum. For mid-to-large repair jobs we offer project financing — typical $15,000–$30,000 repair scope runs $200–$500 per month at 2026 rates. Pre-qualification takes under two minutes with no hard credit pull.
+            Structural deck repair can range from smaller board and railing repairs to larger safety-driven rebuild scopes. For mid-to-large repair jobs, financing options may be available so homeowners can address safety work without delaying the project unnecessarily. Approval is not guaranteed, and terms may vary.
           </p>
           <p style={S.pMuted}>
-            <Link href="/deck-financing-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing in Northern Virginia</Link>
+            <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing options</Link>
             {' · '}
-            <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Lender details</Link>
+            <Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Request a repair estimate</Link>
           </p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Deck Repair Resources</h2>
