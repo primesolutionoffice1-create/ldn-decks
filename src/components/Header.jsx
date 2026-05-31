@@ -169,6 +169,26 @@ export default function Header() {
               </div>
             </div>
             <div className={styles.topBarRight}>
+              <Link
+                href="/deck-payment-estimator"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.35rem',
+                  background: 'var(--site-color)',
+                  color: '#fff',
+                  padding: '0.25rem 0.7rem',
+                  borderRadius: '999px',
+                  fontWeight: 700,
+                  fontSize: '0.78rem',
+                  letterSpacing: '0.02em',
+                  textDecoration: 'none',
+                  boxShadow: '0 2px 6px rgba(209,72,23,0.35)',
+                }}
+                aria-label="Deck financing available — see monthly payment options"
+              >
+                <span aria-hidden="true">💳</span> Financing Available
+              </Link>
               <Link href="/team">Our Team</Link>
               <Link href="/education">Education</Link>
               <Link href="/faqs">FAQs</Link>
@@ -487,6 +507,18 @@ export default function Header() {
           <div className={styles.mobileNavItem}>
             <div className={`${styles.mobileNavLink} ${isActive('/deck-cost-calculator')}`}>
               <Link href="/deck-cost-calculator" onClick={() => setIsMobileOpen(false)}>Deck Price Calculator</Link>
+            </div>
+          </div>
+
+          <div className={styles.mobileNavItem}>
+            <div className={`${styles.mobileNavLink} ${isActive('/deck-payment-estimator')}`}>
+              <Link
+                href="/deck-payment-estimator"
+                onClick={() => setIsMobileOpen(false)}
+                style={{ color: 'var(--site-color)', fontWeight: 700 }}
+              >
+                💳 Financing Available
+              </Link>
             </div>
           </div>
 
