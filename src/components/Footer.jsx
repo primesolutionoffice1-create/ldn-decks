@@ -169,7 +169,7 @@ export default function Footer() {
           <p>© Copyrights are Reserved by LDN Decks | <Link href="/privacy-policy">Privacy Policy</Link> | <Link href="/terms-of-service">Terms of Service</Link></p>
 
           <div className={styles.socials}>
-            <a href="https://www.facebook.com/profile.php?id=61573750423712" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Facebook"><FbIcon /></a>
+            <a href="https://www.facebook.com/profile.php?id=61574201228967" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Facebook"><FbIcon /></a>
             <a href="https://x.com/ldndecks" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Twitter"><XIcon /></a>
             <a href="https://www.instagram.com/loudoundecks/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram"><InstagramIcon /></a>
             <a href="https://www.google.com/maps/place/Loudoun+Decks/@38.8379807,-77.4214727,15z/data=!4m6!3m5!1s0x89b6450e6789e93d:0x91d60ee13bfdba09!8m2!3d38.8396576!4d-77.4392692!16s%2Fg%2F11vybttycn?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Google Maps"><GoogleIcon /></a>

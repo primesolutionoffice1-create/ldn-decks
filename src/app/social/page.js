@@ -33,7 +33,7 @@ const socialProfiles = [
   {
     name: 'Facebook',
     handle: 'LDN Decks',
-    url: 'https://www.facebook.com/profile.php?id=61573750423712',
+    url: 'https://www.facebook.com/profile.php?id=61574201228967',
     desc: 'Community updates, customer reviews, promotions, and project showcases.',
     color: '#1877F2',
     icon: 'FB',
