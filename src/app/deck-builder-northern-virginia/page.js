@@ -82,7 +82,7 @@ const expansionSections = [
     title: 'Local counties, local constraints',
     paragraphs: [
       'Northern Virginia deck projects often move through more than one approval layer. A homeowner may need county permit approval, HOA architectural approval, utility awareness, site access planning and inspection scheduling before the first board is installed. That process is different in Loudoun, Fairfax, Prince William, Arlington and Stafford.',
-      'We plan around those local constraints from the first conversation. For deeper planning, start with the [Northern Virginia deck building guide](/northern-virginia-deck-building-guide), then compare county-specific permit notes for [Loudoun County](/deck-permit-loudoun-county-virginia), [Fairfax County](/deck-permit-fairfax-county-virginia) and [Prince William County](/deck-permit-prince-william-county-virginia).',
+      'We plan around those local constraints from the first conversation. For deeper planning, start with the [Northern Virginia deck building guide](/northern-virginia-deck-building-guide), check basic footing depth assumptions with the [Deck Footing Depth Calculator Virginia](/tools/deck-footing-depth-calculator-virginia), then compare county-specific permit notes for [Loudoun County](/deck-permit-loudoun-county-virginia), [Fairfax County](/deck-permit-fairfax-county-virginia) and [Prince William County](/deck-permit-prince-william-county-virginia).',
     ],
     listItems: [
       { label: 'Loudoun County', text: 'Ashburn, Leesburg, Sterling, Brambleton, South Riding, Purcellville and nearby communities.' },
@@ -271,6 +271,7 @@ export default function DeckBuilderNorthernVirginiaPage() {
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
+            <li key="/tools/deck-footing-depth-calculator-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia →</Link></li>
         </ul>
       </section>
 
