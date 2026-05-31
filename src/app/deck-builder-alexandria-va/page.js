@@ -21,7 +21,7 @@ import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 export const metadata = buildMetadata({
   path: '/deck-builder-alexandria-va',
   title: 'Deck Builder in Alexandria VA | Trex Certified | Loudoun Decks',
-  description: 'Top-rated Alexandria, VA deck builder. Trex Platinum Partner. Custom composite decks, porches & pergolas. Licensed & insured. Free estimate in 24h — (571) 655-7207.',
+  description: 'Trusted Alexandria, VA deck builder. Trex Platinum Partner. Custom composite decks, porches & pergolas. Licensed & insured. Free estimate in 24h — (571) 655-7207.',
   image: '/images/img36.jpeg',
 });
 
@@ -80,7 +80,7 @@ const expansionSections = [
     paragraphs: [
       "Alexandria, VA offers a mix of historic charm and modern suburban convenience. As a dedicated deck builder in Alexandria, Loudoun Decks brings premium craftsmanship to every project. We are not a volume builder focused on rushing through jobs; we are a detail-oriented team that prioritizes quality and longevity.",
       "Whether you're looking to replace an old wooden deck with modern composites or build a brand-new outdoor entertainment space from scratch, our team handles the entire process. We manage the Fairfax County/City of Alexandria permits, the HOA architectural review board submissions, and the structural engineering.",
-      "If you are looking for a deck builder near you in Alexandria that delivers guaranteed quality and a stress-free experience, Loudoun Decks is your partner. Our 5-Star Google Rating reflects our commitment to our clients."
+      "If you are looking for a deck builder near you in Alexandria that delivers guaranteed quality and a stress-free experience, Loudoun Decks is your partner. Our Google review profile reflects our commitment to our clients."
     ]
   },
   {
@@ -94,7 +94,7 @@ const expansionSections = [
       { label: "Trex Platinum Partner", text: "Highest certification level for Trex installation in Alexandria and Northern Virginia." },
       { label: "TimberTech Certified", text: "Certified installer for the full TimberTech Pro and AZEK product lines." },
       { label: "Permit Ready", text: "Full handling of all Fairfax County and City of Alexandria permitting." },
-      { label: "5-Star Rated", text: "Consistently 5-Star Google Rated by homeowners across Northern Virginia." }
+      { label: "Review-Supported", text: "Consistently supported by public reviews from homeowners across Northern Virginia." }
     ]
   },
   {
@@ -111,11 +111,11 @@ export default function DeckBuilderAlexandriaPage() {
   return (
     <main>
       <LocalBusinessSchema city="Alexandria" url="https://ldndecks.com/deck-builder-alexandria-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-alexandria-va" name="Deck Builder in Alexandria VA | Trex Certified | Loudoun Decks" description="Top-rated Alexandria, VA deck builder. Trex Platinum Partner. Custom composite decks, porches &amp; pergolas. Licensed &amp; insured. Free estimate in 24h — (571) 655-7207." speakable />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-alexandria-va" name="Deck Builder in Alexandria VA | Trex Certified | Loudoun Decks" description="Trusted Alexandria, VA deck builder. Trex Platinum Partner. Custom composite decks, porches &amp; pergolas. Licensed &amp; insured. Free estimate in 24h — (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Alexandria, VA's Trusted Deck Company"
         title="Custom Deck Builder in Alexandria, VA"
-        description="Loudoun Decks builds premium composite decks and screened porches in Alexandria. Trex Platinum Partner. 5-Star Google Rated."
+        description="Loudoun Decks builds premium composite decks and screened porches in Alexandria. Trex Platinum Partner. review-supported reputation."
       />
       <ServiceMain
         subtitle="Historic & Modern Craftsmanship"
@@ -126,7 +126,7 @@ export default function DeckBuilderAlexandriaPage() {
           "Full Alexandria & Fairfax County Permit management",
           "Custom multi-level and single-level designs",
           "Screened porches, pergolas & under-deck patios",
-          "5-Star Google Rated  -  call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
@@ -172,7 +172,7 @@ export default function DeckBuilderAlexandriaPage() {
             </li>
           ))}
         
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>

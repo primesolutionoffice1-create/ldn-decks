@@ -14,8 +14,8 @@ import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-arlington-va',
-  title: '5-Star Deck Builder Arlington VA | Get a Free Quote in 24h',
-  description: 'Top-rated deck builder in Arlington, VA. ★ 5.0 Google Rated. Custom composite decks & screened porches in Ballston, Clarendon & Rosslyn. Free 24h estimate.',
+  title: 'Premium Deck Builder Arlington VA | Get a Free Quote in 24h',
+  description: 'Trusted deck builder in Arlington, VA. review-backed. Custom composite decks & screened porches in Ballston, Clarendon & Rosslyn. Free 24h estimate.',
 });
 
 const faqSchema = {
@@ -37,7 +37,7 @@ export default function ArlingtonDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Arlington" url="https://ldndecks.com/deck-builder-arlington-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-arlington-va" name="5-Star Deck Builder Arlington VA | Get a Free Quote in 24h" description="Top-rated deck builder in Arlington, VA. ★ 5.0 Google Rated. Custom composite decks &amp; screened porches in Ballston, Clarendon &amp; Rosslyn. Free 24h estimate." speakable />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-arlington-va" name="Premium Deck Builder Arlington VA | Get a Free Quote in 24h" description="Trusted deck builder in Arlington, VA. review-backed. Custom composite decks &amp; screened porches in Ballston, Clarendon &amp; Rosslyn. Free 24h estimate." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Arlington, VA</h1>
@@ -46,7 +46,7 @@ export default function ArlingtonDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -190,7 +190,7 @@ export default function ArlingtonDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
         </ul>

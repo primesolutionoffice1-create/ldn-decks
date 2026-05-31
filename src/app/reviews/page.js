@@ -11,8 +11,8 @@ import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/reviews',
-  title: `Loudoun Decks Reviews | 5.0 Google Rating | ${BUSINESS.aggregateRating.reviewCount}+ Reviews`,
-  description: `Read what Northern Virginia homeowners say about Loudoun Decks. 5.0★ on Google with ${BUSINESS.aggregateRating.reviewCount}+ reviews. Real feedback from Ashburn, Leesburg, McLean, Vienna & more.`,
+  title: `Loudoun Decks Reviews | ${BUSINESS.aggregateRating.reviewCount}+ Google Reviews`,
+  description: `Read what Northern Virginia homeowners say about Loudoun Decks. Google review feedback from Ashburn, Leesburg, McLean, Vienna, Reston and more.`,
 });
 
 const reviews = BUSINESS.reviews;
@@ -41,8 +41,8 @@ const cityPages = {
 
 const reviewFaqs = [
   {
-    q: 'Are these reviews verified?',
-    a: `Every review on this page comes from a verified Google, Yelp, or BBB profile. We never edit, filter, or cherry-pick reviews. Our ${BUSINESS.aggregateRating.reviewCount}+ reviews maintain a perfect 5.0 average because we do not cut corners on materials or communication.`,
+    q: 'Are these public customer reviews?',
+    a: `Every review on this page comes from a Google, Yelp, or BBB profile. We do not create fake reviews or incentivize homeowners for reviews. The goal is to show real project feedback about materials, communication, cleanup, timelines, and final results.`,
   },
   {
     q: 'What kinds of projects do you build?',
@@ -76,23 +76,23 @@ const S = {
 export default function ReviewsPage() {
   return (
     <>
-      <WebPageSchema url="https://ldndecks.com/reviews" name={`Loudoun Decks Reviews | ${BUSINESS.aggregateRating.reviewCount}+ Google Reviews`} description="Read verified reviews from Northern Virginia homeowners about Loudoun Decks. 5.0 star Google rating." speakable />
+      <WebPageSchema url="https://ldndecks.com/reviews" name={`Loudoun Decks Reviews | ${BUSINESS.aggregateRating.reviewCount}+ Google Reviews`} description="Read review feedback from Northern Virginia homeowners about Loudoun Decks." speakable />
       <JsonLd data={faqSchema} />
 
       {/* Hero */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }} data-speakable>What Northern Virginia Homeowners Say About Loudoun Decks</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }} data-speakable>5.0★ on Google with {BUSINESS.aggregateRating.reviewCount}+ verified reviews from homeowners across Ashburn, Leesburg, McLean, Vienna, Reston, and more</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }} data-speakable>{BUSINESS.aggregateRating.reviewCount}+ Google reviews from homeowners across Ashburn, Leesburg, McLean, Vienna, Reston, and more</p>
           <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem', flexWrap: 'wrap' }}>
             <div style={{ textAlign: 'center' }}>
-              <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--color-primary)' }}>5.0</p>
-              <p style={{ color: '#ccc', fontSize: '1.2rem' }}>★★★★★</p>
-              <p style={{ color: '#aaa', fontSize: '0.9rem' }}>Google Rating</p>
+              <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--color-primary)' }}>Google</p>
+              <p style={{ color: '#ccc', fontSize: '1.2rem' }}>Review Profile</p>
+              <p style={{ color: '#aaa', fontSize: '0.9rem' }}>View on Google Maps</p>
             </div>
             <div style={{ textAlign: 'center' }}>
               <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--color-primary)' }}>{BUSINESS.aggregateRating.reviewCount}+</p>
-              <p style={{ color: '#aaa', fontSize: '0.9rem' }}>Verified Reviews</p>
+              <p style={{ color: '#aaa', fontSize: '0.9rem' }}>Public Reviews</p>
             </div>
             <div style={{ textAlign: 'center' }}>
               <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--color-primary)' }}>A+</p>
@@ -152,7 +152,7 @@ export default function ReviewsPage() {
           </div>
 
           {/* All Reviews */}
-          <h2 style={S.h2}>All {BUSINESS.aggregateRating.reviewCount}+ Verified Reviews</h2>
+          <h2 style={S.h2}>All {BUSINESS.aggregateRating.reviewCount}+ Public Reviews</h2>
           <div style={{ display: 'grid', gap: '1.5rem', marginBottom: '3rem' }}>
             {reviews.map((review, i) => (
               <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', borderLeft: '4px solid var(--color-primary)' }}>
@@ -166,7 +166,7 @@ export default function ReviewsPage() {
                     )}
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span style={{ color: '#f59e0b' }}>★★★★★</span>
+                    <span style={{ color: '#f59e0b' }}>Google reviews</span>
                     <span style={{ fontSize: '0.8rem', color: '#888' }}>via {review.platform}</span>
                   </div>
                 </div>
@@ -187,11 +187,11 @@ export default function ReviewsPage() {
           </div>
 
           {/* Platform Links */}
-          <h2 style={S.h2}>Read All Reviews on Verified Platforms</h2>
+          <h2 style={S.h2}>Read All Reviews on Public Platforms</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
             {[
-              { name: 'Google Reviews', url: 'https://www.google.com/maps/search/Loudoun+Decks+Centreville+VA', rating: '5.0★', count: `${BUSINESS.aggregateRating.reviewCount}+ reviews` },
-              { name: 'Yelp', url: 'https://www.yelp.com/biz/loudoun-decks-centreville', rating: '5.0★', count: 'Verified' },
+              { name: 'Google Reviews', url: 'https://www.google.com/maps/search/Loudoun+Decks+Centreville+VA', rating: 'Review profile', count: `${BUSINESS.aggregateRating.reviewCount}+ reviews` },
+              { name: 'Yelp', url: 'https://www.yelp.com/biz/loudoun-decks-centreville', rating: 'Review profile', count: 'Public listing' },
               { name: 'BBB', url: 'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241', rating: 'A+', count: 'Accredited' },
             ].map(platform => (
               <a key={platform.name} href={platform.url} target="_blank" rel="noopener noreferrer" style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem', textDecoration: 'none', color: 'var(--color-dark)', textAlign: 'center', border: '1px solid #e5e5e5' }}>

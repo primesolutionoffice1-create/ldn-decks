@@ -99,7 +99,7 @@ const projectExamples = [
 
 const trustStats = [
   { stat: '24+', label: 'Years building decks' },
-  { stat: '5.0★', label: `Google rating · ${BUSINESS.aggregateRating.reviewCount}+ reviews` },
+  { stat: 'Google reviews', label: `Google reviews · ${BUSINESS.aggregateRating.reviewCount}+ reviews` },
   { stat: 'A+', label: 'BBB Accredited Business' },
   { stat: 'Top 1%', label: 'Trex Platinum Partner' },
 ];
@@ -447,7 +447,7 @@ export default function DeckFinancingPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Resources</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (5.0★ Google) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>

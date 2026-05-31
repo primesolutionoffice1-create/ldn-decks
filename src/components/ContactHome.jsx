@@ -90,7 +90,7 @@ export default function ContactHome() {
                 style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
               />
               <h3>Get Your 100% Free Design Consultation</h3>
-              <p className={styles.formSubtext}>Licensed & Insured | Trex Platinum Partner | 5.0★ Google Rated</p>
+              <p className={styles.formSubtext}>Licensed & Insured | Trex Platinum Partner | Review-Supported Team</p>
               {status === "error" && <p style={{color: 'red', fontSize: '14px', marginBottom: '10px'}}>There was an error sending your message. Please try again.</p>}
               <div className={styles.formGrid}>
                 <div className={styles.inputGroup}>

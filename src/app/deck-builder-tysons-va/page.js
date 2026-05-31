@@ -16,7 +16,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/deck-builder-tysons-va',
   title: 'Deck Builder in Tysons, VA | Modern Composite Decks | LDN Decks',
-  description: 'Custom deck builder in Tysons, VA. 5.0★ Google. Modern composite decks & rooftop terraces for Tysons townhomes and condos. Free estimate. (571) 655-7207.',
+  description: 'Custom deck builder in Tysons, VA. Google reviews. Modern composite decks & rooftop terraces for Tysons townhomes and condos. Free estimate. (571) 655-7207.',
 });
 
 const faqSchema = {
@@ -39,7 +39,7 @@ export default function TysonsDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Tysons" url="https://ldndecks.com/deck-builder-tysons-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-tysons-va" name="Deck Builder in Tysons, VA | Modern Composite Decks | LDN Decks" description="Custom deck builder in Tysons, VA. 5.0★ Google. Modern composite decks &amp; rooftop terraces for Tysons townhomes and condos. Free estimate. (571) 655-7207." speakable />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-tysons-va" name="Deck Builder in Tysons, VA | Modern Composite Decks | LDN Decks" description="Custom deck builder in Tysons, VA. Google reviews. Modern composite decks &amp; rooftop terraces for Tysons townhomes and condos. Free estimate. (571) 655-7207." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Modern Deck Builder in Tysons, VA</h1>
@@ -48,7 +48,7 @@ export default function TysonsDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -173,7 +173,7 @@ export default function TysonsDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>

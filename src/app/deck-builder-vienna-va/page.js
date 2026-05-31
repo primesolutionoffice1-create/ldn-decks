@@ -21,7 +21,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-builder-vienna-va',
   title: 'Deck Builder in Vienna, VA | Trex Certified | Loudoun Decks',
-  description: 'Top-rated deck builder in Vienna, VA. 5.0★ Google. Custom Trex & TimberTech decks, screened porches & pergolas. Town of Vienna permit experts. Free estimate.',
+  description: 'Trusted deck builder in Vienna, VA. Google reviews. Custom Trex & TimberTech decks, screened porches & pergolas. Town of Vienna permit experts. Free estimate.',
   image: '/images/img37.jpeg',
 });
 
@@ -78,7 +78,7 @@ const expansionSections = [
     title: "Vienna's Choice for Premium Outdoor Living",
     paragraphs: [
       "Vienna, VA is a community that values quality, tradition, and well-maintained properties. As a premier deck builder in Vienna, Loudoun Decks understands that a deck is more than just an add-on; it is a critical extension of your home's value and your family's lifestyle. From the historic charm of Windover Heights to the modern renovations in Tysons Woods, we build outdoor spaces that stand the test of time.",
-      "We specialize in 'Full Projects Only,' meaning we manage the design, the structural engineering, the permitting, and the final 5-Star build. Our clients in Vienna expect precision, and that is exactly what we deliver. We utilize advanced materials like Trex Transcend and TimberTech Vintage to ensure your deck remains as beautiful as the day it was finished, with no need for the sanding and staining required by traditional wood decks.",
+      "We specialize in 'Full Projects Only,' meaning we manage the design, the structural engineering, the permitting, and the final Premium build. Our clients in Vienna expect precision, and that is exactly what we deliver. We utilize advanced materials like Trex Transcend and TimberTech Vintage to ensure your deck remains as beautiful as the day it was finished, with no need for the sanding and staining required by traditional wood decks.",
       "Whether you are looking to replace a 20-year-old pressure-treated deck or you are designing a brand-new outdoor oasis from scratch, our team provides the local expertise and craftsmanship necessary to navigate Vienna's unique regulatory environment."
     ]
   },
@@ -105,9 +105,9 @@ const expansionSections = [
     ]
   },
   {
-    title: "The Financial ROI of a 5-Star Deck in Vienna",
+    title: "The Financial ROI of a Premium Deck in Vienna",
     paragraphs: [
-      "In the competitive Vienna and Tysons Corner real estate markets, curb appeal and outdoor amenities are top priorities for buyers. A professionally installed composite deck by a 5-Star rated builder is one of the highest ROI investments you can make in your home. It expands your living square footage for a fraction of the cost of an indoor addition.",
+      "In the competitive Vienna and Tysons Corner real estate markets, curb appeal and outdoor amenities are top priorities for buyers. A professionally installed composite deck by a Premium rated builder is one of the highest ROI investments you can make in your home. It expands your living square footage for a fraction of the cost of an indoor addition.",
       "Moreover, by choosing low-maintenance materials, you are saving thousands of dollars over the lifespan of the deck. Traditional wood decks in Virginia's humid climate require professional staining every 2 years—a cost that can easily exceed $8,000 over a decade. A composite deck by Loudoun Decks eliminates these costs, paying for its premium price point in just a few short years.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We are committed to building high-value, high-performance decks that enhance your lifestyle and your property value in the heart of Northern Virginia."
     ]
@@ -119,11 +119,11 @@ export default function ViennaDeckBuilderPage() {
     <main>
       <JsonLd data={viennaFaqSchema} />
       <LocalBusinessSchema city="Vienna" url="https://ldndecks.com/deck-builder-vienna-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-vienna-va" name="Deck Builder in Vienna, VA | Trex Certified | Loudoun Decks" description="Top-rated deck builder in Vienna, VA. 5.0★ Google. Custom Trex &amp; TimberTech decks, screened porches &amp; pergolas. Town of Vienna permit experts. Free estimate." speakable />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-vienna-va" name="Deck Builder in Vienna, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Vienna, VA. Google reviews. Custom Trex &amp; TimberTech decks, screened porches &amp; pergolas. Town of Vienna permit experts. Free estimate." speakable />
       <ServicesHeader
         subtext="Vienna, VA's #1 Rated Builder"
         title="Custom Deck Builder in Vienna, VA"
-        description="Loudoun Decks builds premium composite and wood decks in Vienna, Tysons, and across Fairfax County. Trex Platinum Partner. 5-Star Google Rated."
+        description="Loudoun Decks builds premium composite and wood decks in Vienna, Tysons, and across Fairfax County. Trex Platinum Partner. review-supported reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -146,7 +146,7 @@ export default function ViennaDeckBuilderPage() {
           "Town of Vienna building permit experts",
           "Custom multi-level and single-level designs",
           "Screened porches, pergolas & outdoor kitchens",
-          "5-Star Google Rated - call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img37.jpeg"
         image2="/images/img37.jpeg"
@@ -187,7 +187,7 @@ export default function ViennaDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>

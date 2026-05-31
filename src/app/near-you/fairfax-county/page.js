@@ -24,8 +24,8 @@ const LocationIcon = () => (
 
 export const metadata = buildMetadata({
     path: "/near-you/fairfax-county",
-    title: "5-Star Deck Builder Fairfax County VA | Free 24h Quote",
-    description: "Top-rated deck and outdoor living contractor in Fairfax County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Reston, Vienna, Mclean, and Alexandria.",
+    title: "Premium Deck Builder Fairfax County VA | Free 24h Quote",
+    description: "Trusted deck and outdoor living contractor in Fairfax County. review-backed. Custom decks, patios, and porches in Reston, Vienna, Mclean, and Alexandria.",
 });
 
 const fairfaxCities = [
@@ -63,7 +63,7 @@ export default function FairfaxCountyPage() {
           description="LDN Decks builds custom decks, screened porches, patios, and outdoor living spaces throughout Fairfax County, VA."
           url="https://ldndecks.com/near-you/fairfax-county"
         />
-      <WebPageSchema url="https://ldndecks.com/near-you/fairfax-county" name="5-Star Deck Builder Fairfax County VA | Free 24h Quote" description="Top-rated deck and outdoor living contractor in Fairfax County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Reston, Vienna, Mclean, and Alexandria." speakable />
+      <WebPageSchema url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Free 24h Quote" description="Trusted deck and outdoor living contractor in Fairfax County. review-backed. Custom decks, patios, and porches in Reston, Vienna, Mclean, and Alexandria." speakable />
             <ServicesHeader
           subtext="Serving Northern Virginia"
           title="Deck Builder in Fairfax County, VA"
@@ -195,7 +195,7 @@ export default function FairfaxCountyPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (5.0★ Google) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>

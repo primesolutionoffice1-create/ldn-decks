@@ -17,7 +17,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/trex-decks',
-  title: 'Trex Platinum Deck Builder NoVA | 5-Star Rated Contractor',
+  title: 'Trex Platinum Deck Builder NoVA | Review-Supported Contractor',
   description: 'Looking for a Trex Platinum Partner in Northern Virginia? Loudoun Decks specializes in premium Trex Transcend & Lineage installations. Free 24h estimates!',
   image: '/images/img01.jpeg',
 });
@@ -29,7 +29,7 @@ const inclusions = [
   },
   {
     title: "Integrated Lighting",
-    desc: "Seamless integration of Trex Reveal® and Trex Wedge® lighting systems for 5-Star nighttime aesthetics in Loudoun and Fairfax."
+    desc: "Seamless integration of Trex Reveal® and Trex Wedge® lighting systems for Premium nighttime aesthetics in Loudoun and Fairfax."
   },
   {
     title: "Pro-Solar® Post Caps",
@@ -78,7 +78,7 @@ const expansionSections = [
     paragraphs: [
       "When homeowners in Northern Virginia think of low-maintenance outdoor living, one name stands above the rest: Trex. As a certified Trex deck builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks has seen first-hand how this material has redefined the backyard experience. Our clients in Ashburn and Leesburg are increasingly opting for Trex because it provides the perfect balance of luxury aesthetics and rugged durability.",
       "We specialize in the full Trex ecosystem, from the industry-leading Transcend® decking boards to the sophisticated Trex Signature® aluminum railing systems. A Trex deck is not just a platform; it is a high-performance floor designed to handle the active lifestyles of Northern Virginia families, from summer graduation parties to quiet mornings with coffee in the crisp NoVA air.",
-      "Choosing a custom deck builder who is intimately familiar with the Trex product line is critical for a valid warranty. Trex has specific installation requirements regarding joist spacing and hidden fastener torque settings. Our team is trained to meet and exceed these standards, ensuring your 5-Star Google Rated build is as safe as it is beautiful."
+      "Choosing a custom deck builder who is intimately familiar with the Trex product line is critical for a valid warranty. Trex has specific installation requirements regarding joist spacing and hidden fastener torque settings. Our team is trained to meet and exceed these standards, ensuring your review-supported build is as safe as it is beautiful."
     ]
   },
   {

@@ -108,7 +108,7 @@ export default function DeckBuilderBurkePage() {
       <ServicesHeader
         subtext="Burke, VA's Trusted Deck Company"
         title="Custom Deck Builder in Burke, VA"
-        description="Loudoun Decks replaces aging wood decks with modern composite across Burke Centre, Lakewood Hills, Cherry Run and Rolling Valley. Fairfax County permits handled. 5-Star Google Rated."
+        description="Loudoun Decks replaces aging wood decks with modern composite across Burke Centre, Lakewood Hills, Cherry Run and Rolling Valley. Fairfax County permits handled. review-supported reputation."
       />
       <ServiceMain
         subtitle="Established Neighborhoods, Modern Decks"
@@ -119,7 +119,7 @@ export default function DeckBuilderBurkePage() {
           "Full deck replacement  -  footings to finish",
           "Burke Centre Conservancy ARC submissions handled",
           "Fairfax County permits filed and inspected",
-          "5-Star Google Rated  -  call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
@@ -164,7 +164,7 @@ export default function DeckBuilderBurkePage() {
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
             </li>
           ))}
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>

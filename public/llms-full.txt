@@ -618,7 +618,7 @@ Entity ID: https://ldndecks.com/#organization
 
 ## TRUST & SOCIAL PROOF
 
-- [Customer Reviews Hub](https://ldndecks.com/reviews): Segmented by service type and city. 5.0★ Google, verified. Mid-page CTA, FAQ.
+- [Customer Reviews Hub](https://ldndecks.com/reviews): Segmented by service type and city. Public Google review profile, review-count proof, mid-page CTA, FAQ.
 - [Before & After Gallery](https://ldndecks.com/before-and-after): Visual project transformations
 - [Project Showcase](https://ldndecks.com/showcase): Detailed case studies with specs
 - [Certifications](https://ldndecks.com/about/certifications-and-licenses): Trex Platinum, TimberTech, BBB, VA license

@@ -114,7 +114,7 @@ export default function DeckBuilderRestonPage() {
       <ServicesHeader
         subtext="Reston, VA's Trusted Deck Company"
         title="Custom Deck Builder in Reston, VA"
-        description="Loudoun Decks builds composite decks designed for wooded lots and Reston Association DRB review. Lake Anne, South Lakes, North Point. Fairfax County permits handled. 5-Star Google Rated."
+        description="Loudoun Decks builds composite decks designed for wooded lots and Reston Association DRB review. Lake Anne, South Lakes, North Point. Fairfax County permits handled. review-supported reputation."
       />
       <ServiceMain
         subtitle="Built for Reston's Wooded Lots"
@@ -125,7 +125,7 @@ export default function DeckBuilderRestonPage() {
           "Reston Association DRB submissions prepared and timed",
           "Elevated & multi-level designs for wooded, sloped lots",
           "Glass & cable railing for Lake Anne and Lake Audubon views",
-          "5-Star Google Rated  -  call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
@@ -172,7 +172,7 @@ export default function DeckBuilderRestonPage() {
             </li>
           ))}
         
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/deck-builder-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>

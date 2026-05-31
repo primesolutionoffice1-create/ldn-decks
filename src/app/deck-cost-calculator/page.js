@@ -93,7 +93,7 @@ export default function DeckCostCalculator() {
 ></iframe>
 <p style="font-size:12px;color:#888;">
   Calculator by <a href="https://ldndecks.com">Loudoun Decks</a> —
-  Northern Virginia's Top-Rated Deck Builder
+  Northern Virginia's Trusted Deck Builder
 </p>`}
             </pre>
           </div>

@@ -87,7 +87,7 @@ export async function generateMetadata({ params }) {
   return buildMetadata({
     path: `/near-you/${county}/${city}`,
     title: `Best Deck Builder in ${data.cityName} VA | Custom Decks & Patios`,
-    description: `Searching for a top-rated deck builder in ${data.cityName}, VA? Loudoun Decks offers premium custom composite decks, screened porches, and patio installations. Licensed & Insured. Get a free estimate today.`,
+    description: `Searching for a trusted deck builder in ${data.cityName}, VA? Loudoun Decks offers premium custom composite decks, screened porches, and patio installations. Licensed & Insured. Get a free estimate today.`,
     robots: { index: false, follow: true }
   });
 }
@@ -120,13 +120,13 @@ export default async function CityPage({ params }) {
     "Custom Trex and composite deck construction",
     "Expert deck design for luxury outdoor living",
     "Loudoun & Fairfax County permit coordination",
-    "Full deck installation with 5-Star craftsmanship",
+    "Full deck installation with Premium craftsmanship",
     "Pool decks, screened porches, and yard fencing"
   ];
 
   const whyChooseItems = [
     {
-      title: `5-Star Rated local service in ${cityName}`,
+      title: `Review-supported local service in ${cityName}`,
       desc: "Our team lives and breathes the Northern Virginia architectural style, ensuring your new deck adds maximum value."
     },
     {
@@ -142,9 +142,9 @@ export default async function CityPage({ params }) {
   return (
     <main>
       <ServicesHeader
-        subtext={`5-Star Google Rated Specialist in ${countyName}`}
+        subtext={`Review-Supported Specialist in ${countyName}`}
         title={`Deck Builder in ${cityName}`}
-        description={`Loudoun Decks is the premier custom deck builder in ${cityName}, VA. We help ${cityName} families create luxury outdoor living spaces with a focus on durability and 5-Star service.`}
+        description={`Loudoun Decks is the premier custom deck builder in ${cityName}, VA. We help ${cityName} families create luxury outdoor living spaces with a focus on durability and Premium service.`}
       />
       <ServiceMain
         subtitle={`Premier ${cityName} Contractor`}

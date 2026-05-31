@@ -11,13 +11,13 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/press',
   title: 'Press & Media Kit | Loudoun Decks',
-  description: 'Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s top-rated deck builder.',
+  description: 'Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s trusted deck builder.',
 });
 
 export default function PressPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/press" name="Press &amp; Media Kit | Loudoun Decks" description="Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s top-rated deck builder." speakable />
+      <WebPageSchema url="https://ldndecks.com/press" name="Press &amp; Media Kit | Loudoun Decks" description="Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s trusted deck builder." speakable />
       <section style={{ background: 'var(--color-dark, #1a1a2e)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Press & Media Kit</h1>
@@ -41,7 +41,7 @@ export default function PressPage() {
                   ['Phone', '(571) 655-7207'],
                   ['Email', 'office@ldndecks.com'],
                   ['Website', 'ldndecks.com'],
-                  ['Google Rating', `5.0 stars (${BUSINESS.aggregateRating.reviewCount}+ verified reviews)`],
+                  ['Google Reviews', `strong Google review profile (${BUSINESS.aggregateRating.reviewCount}+ public reviews)`],
                   ['Certifications', 'Trex Platinum Partner, TimberTech Certified Installer'],
                   ['License', 'Virginia Class A Contractor (DPOR Licensed)'],
                   ['Insurance', 'Fully insured general liability & workers\' comp'],
@@ -59,7 +59,7 @@ export default function PressPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Key Facts & Statistics</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem', lineHeight: 1.8 }}>
             <li><strong>200+ custom deck projects</strong> completed across Northern Virginia</li>
-            <li><strong>5.0-star Google rating</strong> with {BUSINESS.aggregateRating.reviewCount}+ verified reviews</li>
+            <li><strong>Google review profile</strong> with {BUSINESS.aggregateRating.reviewCount}+ public reviews</li>
             <li><strong>70+ cities served</strong> across 5 Northern Virginia counties</li>
             <li><strong>Trex Platinum Partner</strong> highest tier of Trex certification</li>
             <li><strong>TimberTech Certified Installer</strong> qualified for all product lines</li>

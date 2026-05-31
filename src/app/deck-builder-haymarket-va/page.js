@@ -115,7 +115,7 @@ export default function DeckBuilderHaymarketPage() {
       <ServicesHeader
         subtext="Haymarket, VA's Trusted Deck Company"
         title="Custom Deck Builder in Haymarket, VA"
-        description="Loudoun Decks builds multi-level composite decks designed for Haymarket's sloped lots and mountain views. Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. 5-Star Google Rated."
+        description="Loudoun Decks builds multi-level composite decks designed for Haymarket's sloped lots and mountain views. Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. review-supported reputation."
       />
       <ServiceMain
         subtitle="Multi-Level Designs for Haymarket's Terrain"
@@ -126,7 +126,7 @@ export default function DeckBuilderHaymarketPage() {
           "Multi-level designs for sloped lots  -  2-3 level cascading decks",
           "Cable & glass railing for Bull Run Mountain and golf course views",
           "Dominion Valley & Piedmont HOA packages prepared",
-          "5-Star Google Rated  -  call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
@@ -171,7 +171,7 @@ export default function DeckBuilderHaymarketPage() {
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
             </li>
           ))}
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
         </ul>

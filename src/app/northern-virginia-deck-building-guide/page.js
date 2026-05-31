@@ -96,7 +96,7 @@ export default function MegaGuidePage() {
 
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '2rem', marginTop: '2rem' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>About This Guide</h2>
-            <p style={{ lineHeight: 1.7, marginBottom: '1rem' }}>This guide is written and maintained by <strong>Loudoun Decks</strong>, a Virginia Class A Licensed contractor and certified Trex Pro installer based in Centreville, VA. We&apos;ve built 200+ decks across Loudoun, Fairfax, and Prince William counties with a 5.0★ Google rating ({BUSINESS.aggregateRating.reviewCount}+ reviews).</p>
+            <p style={{ lineHeight: 1.7, marginBottom: '1rem' }}>This guide is written and maintained by <strong>Loudoun Decks</strong>, a Virginia Class A Licensed contractor and certified Trex Pro installer based in Centreville, VA. We&apos;ve built 200+ decks across Loudoun, Fairfax, and Prince William counties and maintain a public Google review profile with {BUSINESS.aggregateRating.reviewCount}+ reviews.</p>
             <p style={{ lineHeight: 1.7 }}>Every data point reflects current 2026 Northern Virginia pricing, permit timelines, and market conditions. We update this guide quarterly. Questions? <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink> or <Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free consultation</Link>.</p>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function MegaGuidePage() {
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Cost in Northern Virginia →</Link></li>
             <li key="/how-to-choose-a-deck-builder-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/how-to-choose-a-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How to Choose a Deck Builder →</Link></li>
             <li key="/deck-permit-loudoun-county-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County Deck Permit Guide →</Link></li>
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
         </ul>
       </section>

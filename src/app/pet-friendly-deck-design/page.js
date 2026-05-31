@@ -56,8 +56,8 @@ export default function PetFriendlyDeckPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Material', 'Scratch Resistance', 'Splinter-Free', 'Heat', 'Easy to Clean', 'Pet Rating'].map(h => <th key={h} style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Trex Transcend', 'Excellent', 'Yes', 'Moderate', 'Yes', '★★★★★'],
-                  ['TimberTech AZEK', 'Excellent', 'Yes', 'Good (coolest)', 'Yes', '★★★★★'],
+                  ['Trex Transcend', 'Excellent', 'Yes', 'Moderate', 'Yes', 'Google reviews'],
+                  ['TimberTech AZEK', 'Excellent', 'Yes', 'Good (coolest)', 'Yes', 'Google reviews'],
                   ['Trex Enhance', 'Good', 'Yes', 'Moderate', 'Yes', '★★★★'],
                   ['Pressure-treated wood', 'Poor (shows marks)', 'No (splinters)', 'Moderate', 'Difficult', '★★'],
                   ['Cedar', 'Poor', 'Less than PT', 'Cool', 'Difficult', '★★★'],

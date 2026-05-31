@@ -42,7 +42,7 @@ const socialProfiles = [
     name: 'Google Business',
     handle: 'Loudoun Decks',
     url: 'https://www.google.com/maps/place/Loudoun+Decks/',
-    desc: `${BUSINESS.aggregateRating.reviewCount}+ five-star reviews. See our location, hours, photos, and leave a review.`,
+    desc: `${BUSINESS.aggregateRating.reviewCount}+ Google reviews. See our location, hours, photos, and leave a review.`,
     color: '#4285F4',
     icon: 'G',
   },

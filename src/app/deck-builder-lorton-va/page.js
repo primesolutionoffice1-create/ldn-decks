@@ -109,7 +109,7 @@ export default function DeckBuilderLortonPage() {
       <ServicesHeader
         subtext="Lorton, VA's Trusted Deck Company"
         title="Custom Deck Builder in Lorton, VA"
-        description="Loudoun Decks builds composite decks and outdoor living spaces across Laurel Hill, Crosspointe, Newington and the South County area. Fairfax County permits handled. 5-Star Google Rated."
+        description="Loudoun Decks builds composite decks and outdoor living spaces across Laurel Hill, Crosspointe, Newington and the South County area. Fairfax County permits handled. review-supported reputation."
       />
       <ServiceMain
         subtitle="Upgrading Lorton's Outdoor Living"
@@ -120,7 +120,7 @@ export default function DeckBuilderLortonPage() {
           "Laurel Hill & Crosspointe HOA submissions handled",
           "Cable railing for wooded and conservation lot views",
           "Fairfax County permits filed and inspected",
-          "5-Star Google Rated  -  call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
@@ -165,7 +165,7 @@ export default function DeckBuilderLortonPage() {
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
             </li>
           ))}
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>

@@ -10,7 +10,7 @@ import { BUSINESS } from '@/lib/business';
 export const metadata = buildMetadata({
   path: '/ldn-decks-reviews-yelp',
   title: 'Loudoun Decks Reviews | Yelp Deck Builder Northern Virginia',
-  description: 'Read real Yelp reviews for LDN Decks. Trusted deck builder in Northern Virginia — custom decks, Trex, and composite outdoor living projects. 5.0 rated.',
+  description: 'Read real Yelp reviews for LDN Decks. Trusted deck builder in Northern Virginia — custom decks, Trex, and composite outdoor living projects. review-backed.',
 });
 
 const S = {
@@ -72,15 +72,15 @@ const yelpReviews = [
 export default function YelpReviewsPage() {
   return (
     <>
-      <WebPageSchema url="https://ldndecks.com/ldn-decks-reviews-yelp" name="Loudoun Decks Reviews | Yelp Deck Builder Northern Virginia" description="Read real Yelp reviews for LDN Decks. Trusted deck builder in Northern Virginia — custom decks, Trex, and composite outdoor living projects. 5.0 rated." speakable />
+      <WebPageSchema url="https://ldndecks.com/ldn-decks-reviews-yelp" name="Loudoun Decks Reviews | Yelp Deck Builder Northern Virginia" description="Read real Yelp reviews for LDN Decks. Trusted deck builder in Northern Virginia — custom decks, Trex, and composite outdoor living projects. review-backed." speakable />
       {/* Hero */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Loudoun Decks Reviews</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Real customer reviews from Northern Virginia homeowners &mdash; verified on Yelp, Google &amp; Houzz</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Real customer reviews from Northern Virginia homeowners on Yelp, Google &amp; Houzz</p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1rem' }}>
-            <span style={{ color: '#fbbf24', fontSize: '1.3rem' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span style={{ color: '#aaa' }}>5.0 rating &middot; {BUSINESS.aggregateRating.reviewCount}+ verified reviews</span>
+            <span style={{ color: '#fbbf24', fontSize: '1rem', fontWeight: 700 }}>Public review profiles</span>
+            <span style={{ color: '#aaa' }}>Public review profile &middot; {BUSINESS.aggregateRating.reviewCount}+ reviews</span>
           </div>
         </div>
       </section>
@@ -103,9 +103,9 @@ export default function YelpReviewsPage() {
           {/* Ratings Summary */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem', marginBottom: '3rem' }}>
             {[
-              { platform: 'Google', rating: '5.0', count: `${BUSINESS.aggregateRating.reviewCount}+ reviews`, url: 'https://www.google.com/maps/place/Loudoun+Decks/' },
-              { platform: 'Yelp', rating: '5.0', count: 'Verified', url: 'https://www.yelp.com/biz/loudoun-decks-centreville' },
-              { platform: 'Houzz', rating: '5.0', count: 'Best of Houzz', url: 'https://www.houzz.com/pro/webuser-782541997/loudoun-decks' },
+              { platform: 'Google', rating: 'Review profile', count: `${BUSINESS.aggregateRating.reviewCount}+ reviews`, url: 'https://www.google.com/maps/place/Loudoun+Decks/' },
+              { platform: 'Yelp', rating: 'Public profile', count: 'Review listing', url: 'https://www.yelp.com/biz/loudoun-decks-centreville' },
+              { platform: 'Houzz', rating: 'Public profile', count: 'Best of Houzz', url: 'https://www.houzz.com/pro/webuser-782541997/loudoun-decks' },
               { platform: 'BBB', rating: 'A+', count: 'Accredited', url: 'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241' },
             ].map((p) => (
               <a key={p.platform} href={p.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block', background: '#f9f9f9', borderRadius: 10, padding: '1.25rem', textAlign: 'center', textDecoration: 'none', color: 'inherit', border: '1px solid #e5e5e5' }}>
@@ -126,7 +126,7 @@ export default function YelpReviewsPage() {
                   <h3 style={{ fontSize: '1.05rem', fontWeight: 600, margin: 0 }}>{review.name}</h3>
                   <p style={{ fontSize: '0.8rem', color: '#999', margin: 0 }}>{review.location} &middot; {review.project}</p>
                 </div>
-                <span style={{ color: '#fbbf24', fontSize: '1.1rem' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span style={{ color: '#fbbf24', fontSize: '1rem', fontWeight: 700 }}>Public review listing</span>
               </div>
               <p style={{ lineHeight: 1.7, margin: 0, color: '#444' }}>&ldquo;{review.text}&rdquo;</p>
             </div>

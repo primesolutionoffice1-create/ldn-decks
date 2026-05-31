@@ -114,7 +114,7 @@ export default function BrambletonDeckBuilderPage() {
       <ServicesHeader
         subtext="Brambleton, VA's Trusted Deck Company"
         title="Custom Deck Builder in Brambleton, VA"
-        description="Loudoun Decks builds composite decks designed for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. 5-Star Google Rated."
+        description="Loudoun Decks builds composite decks designed for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. review-supported reputation."
       />
       <ServiceMain
         subtitle="Built for Brambleton's DRB Standards"
@@ -125,7 +125,7 @@ export default function BrambletonDeckBuilderPage() {
           "BCA Design Review Board submissions prepared and timed",
           "Builder-grade PT replacement  -  homes built 2004-2020",
           "Post cap lights, composite railings, hidden fasteners",
-          "5-Star Google Rated  -  call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
@@ -169,7 +169,7 @@ export default function BrambletonDeckBuilderPage() {
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
             </li>
           ))}
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>

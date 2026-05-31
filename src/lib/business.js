@@ -27,12 +27,9 @@ export const BUSINESS = {
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:00', closes: '19:00' },
     { days: ['Saturday'], opens: '08:00', closes: '17:00' },
   ],
-  // UI-only rating data — NOT included in JSON-LD schema (removed per Google self-serving policy)
+  // UI-only review count — NOT included as AggregateRating JSON-LD.
   aggregateRating: {
-    ratingValue: '5.0',
     reviewCount: 49,
-    bestRating: '5',
-    worstRating: '1',
   },
   areaServed: [
     'Loudoun County, VA',
@@ -122,7 +119,7 @@ export const BUSINESS = {
     // explicitly represented vs the organization.
     sameAs: [],
   },
-  // Verified client reviews — single source of truth for both the org-level
+  // Public client review excerpts — single source of truth for both the org-level
   // `review` JSON-LD (emitted site-wide via buildOrganizationSchema) and the
   // /reviews page cards. First name + last initial only, never full last names.
   // `body` is the text shown on /reviews so on-page content matches schema.

@@ -2,8 +2,8 @@ import React from 'react';
 import { BUSINESS } from '@/lib/business';
 
 /**
- * RatingBadge — Shows the Google rating as visible trust content only.
- * AggregateRating schema is emitted once globally from StructuredData.
+ * RatingBadge — Shows public Google review count as visible trust content only.
+ * AggregateRating schema is intentionally not emitted for self-serving reviews.
  */
 export default function RatingBadge() {
   return (
@@ -21,9 +21,9 @@ export default function RatingBadge() {
         color: '#333',
       }}
     >
-      <span style={{ color: '#f59e0b', fontSize: '1rem' }}>★★★★★</span>
-      <span style={{ fontWeight: 600 }}>5.0</span>
-      <span style={{ color: '#888' }}>from {BUSINESS.aggregateRating.reviewCount}+ Google reviews</span>
+      <span style={{ color: '#f59e0b', fontSize: '1rem' }}>Google reviews</span>
+      <span style={{ fontWeight: 600 }}>{BUSINESS.aggregateRating.reviewCount}+</span>
+      <span style={{ color: '#888' }}>public reviews</span>
     </div>
   );
 }

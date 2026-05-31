@@ -56,7 +56,7 @@ const whyLdnDecks = [
   { title: "Trusted", desc: "Fully licensed and insured professionals." },
   { title: "Certified Builders", desc: "Extensive experience with Trex composite systems." },
   { title: "Craftsmanship", desc: "Clean, detail-oriented installation and high-quality finishes." },
-  { title: "Satisfaction", desc: "Driven by 5-star customer reviews and long-lasting durability." }
+  { title: "Satisfaction", desc: "Driven by public customer reviews and long-lasting durability." }
 ];
 
 export default function TrexCalmShellPage() {

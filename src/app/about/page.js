@@ -18,8 +18,8 @@ import AboutTrustExpansion from '@/components/AboutTrustExpansion';
 
 export const metadata = buildMetadata({
   path: '/about',
-  title: 'About Loudoun Decks | Top-Rated Deck Builder Northern Virginia',
-  description: "Meet the team behind Northern Virginia's top-rated deck builder. VA Class A Licensed, Trex Platinum Partner, 5.0★ Google. Founded by Nicolae Zugrav. Serving Loudoun, Fairfax & Prince William.",
+  title: 'About Loudoun Decks | Trusted Deck Builder Northern Virginia',
+  description: "Meet the team behind Northern Virginia's trusted deck builder. VA Class A Licensed, Trex Platinum Partner, Google reviews. Founded by Nicolae Zugrav. Serving Loudoun, Fairfax & Prince William.",
 });
 
 const aboutFaqSchema = {
@@ -30,7 +30,7 @@ const aboutFaqSchema = {
     { "@type": "Question", "name": "Who owns Loudoun Decks?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks was founded and is operated by Nicolae Zugrav, a Virginia Class A Licensed contractor specializing in composite deck construction and outdoor living projects across Northern Virginia." } },
     { "@type": "Question", "name": "Is Loudoun Decks licensed and insured?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Loudoun Decks holds a Virginia Class A Contractor License issued by the Department of Professional and Occupational Regulation (DPOR), carries comprehensive general liability insurance and workers' compensation coverage, and maintains Trex Pro and TimberTech certifications." } },
     { "@type": "Question", "name": "What areas does Loudoun Decks serve?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks serves Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County in Northern Virginia. We regularly work in Ashburn, Leesburg, Sterling, Reston, McLean, Vienna, Centreville, Manassas, Haymarket, and surrounding communities." } },
-    { "@type": "Question", "name": "What is Loudoun Decks' Google rating?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks has a 5.0-star Google rating with 49+ verified reviews from Northern Virginia homeowners. Every review is from a real project — we do not solicit fake reviews or incentivize ratings." } },
+    { "@type": "Question", "name": "What is Loudoun Decks' Google reviews?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks has a Google review profile with 49+ public reviews from Northern Virginia homeowners. Every review is from a real project — we do not solicit fake reviews or incentivize ratings." } },
     { "@type": "Question", "name": "What certifications does Loudoun Decks hold?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks is a Trex Pro Platinum installer, TimberTech Certified contractor, BBB A+ Accredited business, and a member of the North American Deck and Railing Association (NADRA). These certifications require demonstrated installation expertise and ongoing training." } },
     { "@type": "Question", "name": "Does Loudoun Decks offer a warranty?", "acceptedAnswer": { "@type": "Answer", "text": "Every project includes a 2-year workmanship warranty covering labor and installation. This is in addition to manufacturer material warranties — Trex provides 25-year residential warranties, TimberTech AZEK provides up to 50 years." } },
   ],
@@ -62,7 +62,7 @@ const aboutPageSchema = {
 export default function AboutPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/about" name="About Loudoun Decks | Top-Rated Deck Builder Northern Virginia" description="Meet the team behind Northern Virginia's top-rated deck builder. VA Class A Licensed, Trex Platinum Partner, 5.0★ Google. Founded by Nicolae Zugrav." speakable />
+      <WebPageSchema url="https://ldndecks.com/about" name="About Loudoun Decks | Trusted Deck Builder Northern Virginia" description="Meet the team behind Northern Virginia's trusted deck builder. VA Class A Licensed, Trex Platinum Partner, Google reviews. Founded by Nicolae Zugrav." speakable />
       <JsonLd data={aboutFaqSchema} />
       <JsonLd data={aboutPageSchema} />
       <AboutHeader />
@@ -90,7 +90,7 @@ export default function AboutPage() {
               { badge: 'TimberTech', title: 'TimberTech Certified Installer', text: 'Certified by AZEK Building Products for TimberTech composite and PVC deck systems.' },
               { badge: 'BBB A+', title: 'BBB A+ Accredited', text: 'Better Business Bureau accredited with an A+ rating and zero complaints.' },
               { badge: 'NADRA', title: 'NADRA Member', text: 'North American Deck and Railing Association — Builder/Contractor/Remodeler member.' },
-              { badge: '5.0★ Google', title: `${BUSINESS.aggregateRating.reviewCount}+ Google Reviews`, text: '5.0-star rating from verified Northern Virginia homeowners. Every review is from a real project.' },
+              { badge: 'Google reviews', title: `${BUSINESS.aggregateRating.reviewCount}+ Google Reviews`, text: 'review-backed reputation from Northern Virginia homeowners. Every review is from a real project.' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem', border: '1px solid #e5e5e5' }}>
                 <p style={{ fontSize: '0.7rem', fontWeight: 700, color: 'var(--color-primary)', marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{item.badge}</p>
@@ -142,7 +142,7 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
             {BUSINESS.reviews.slice(0, 3).map((review) => (
               <div key={review.author} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem', border: '1px solid #e5e5e5' }}>
-                <p style={{ color: '#fbbf24', marginBottom: '0.5rem' }}>★★★★★</p>
+                <p style={{ color: '#fbbf24', marginBottom: '0.5rem' }}>Google reviews</p>
                 <p style={{ fontSize: '0.9rem', lineHeight: 1.6, color: '#555', marginBottom: '0.75rem', fontStyle: 'italic' }}>&ldquo;{review.body.length > 150 ? review.body.slice(0, 150) + '...' : review.body}&rdquo;</p>
                 <p style={{ fontSize: '0.8rem', fontWeight: 600 }}>{review.author} — {review.city}, VA</p>
                 <p style={{ fontSize: '0.75rem', color: '#888' }}>{review.project} · {review.platform}</p>
@@ -172,7 +172,7 @@ export default function AboutPage() {
             { q: 'Who owns Loudoun Decks?', a: 'Loudoun Decks was founded and is operated by Nicolae Zugrav, a Virginia Class A Licensed contractor specializing in composite deck construction and outdoor living projects across Northern Virginia.' },
             { q: 'Is Loudoun Decks licensed and insured?', a: 'Yes. We hold a Virginia Class A Contractor License, carry comprehensive general liability insurance and workers\' compensation, and maintain Trex Pro and TimberTech certifications. Verify at dpor.virginia.gov.' },
             { q: 'What areas does Loudoun Decks serve?', a: 'We serve Loudoun, Fairfax, Prince William, Arlington, and Stafford counties in Northern Virginia — including Ashburn, Leesburg, Sterling, Reston, McLean, Vienna, Centreville, Manassas, Haymarket, and 25+ other communities.' },
-            { q: 'What is your Google rating?', a: `5.0 stars with ${BUSINESS.aggregateRating.reviewCount}+ verified reviews. Every review is from a real project.` },
+            { q: 'What is your Google reviews?', a: `strong Google review profile with ${BUSINESS.aggregateRating.reviewCount}+ public reviews. Every review is from a real project.` },
             { q: 'What certifications do you hold?', a: 'Trex Pro Platinum Partner, TimberTech Certified Installer, BBB A+ Accredited, and NADRA member. Each certification requires demonstrated installation expertise and ongoing training.' },
             { q: 'Do you offer a warranty?', a: 'Every project includes a 2-year workmanship warranty covering labor and installation, plus manufacturer material warranties — Trex 25 years, TimberTech AZEK up to 50 years.' },
           ].map((faq, i) => (
@@ -186,7 +186,7 @@ export default function AboutPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/about/certifications-and-licenses', 'Certifications & Licenses — verify our credentials'],
-              ['/reviews', `Customer Reviews — ${BUSINESS.aggregateRating.reviewCount}+ verified reviews`],
+              ['/reviews', `Customer Reviews — ${BUSINESS.aggregateRating.reviewCount}+ public reviews`],
               ['/how-to-choose-a-deck-builder-northern-virginia', 'How to Choose a Deck Builder in Northern Virginia'],
               ['/services', 'All Services'],
               ['/before-and-after', 'Before & After Gallery'],

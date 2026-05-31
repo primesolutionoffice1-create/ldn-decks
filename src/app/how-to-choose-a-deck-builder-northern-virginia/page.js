@@ -14,7 +14,7 @@ import { BUSINESS } from '@/lib/business';
 export const metadata = buildMetadata({
   path: '/how-to-choose-a-deck-builder-northern-virginia',
   title: 'How to Choose a Deck Builder in Northern Virginia (2026)',
-  description: '10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license. From a 5-star rated NoVA deck builder.',
+  description: '10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license. From a review-supported NoVA deck builder.',
 });
 
 const faqSchema = {
@@ -33,7 +33,7 @@ export default function ChooseDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia" name="How to Choose a Deck Builder in Northern Virginia (10 Questions + Red Flags)" description="10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license. From a 5-star rated NoVA deck builder." speakable />
+      <WebPageSchema url="https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia" name="How to Choose a Deck Builder in Northern Virginia (10 Questions + Red Flags)" description="10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license. From a review-supported NoVA deck builder." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -114,7 +114,7 @@ export default function ChooseDeckBuilderPage() {
                 ['HOA', 'We prepare and submit ARC packages 100% approval rate across 50+ communities'],
                 ['Materials', 'Trex Pro certified installer + TimberTech + AZEK'],
                 ['Warranty', '2-year workmanship warranty in writing, on top of manufacturer warranties'],
-                ['Reviews', `5.0★ on Google with ${BUSINESS.aggregateRating.reviewCount} reviews`],
+                ['Reviews', `${BUSINESS.aggregateRating.reviewCount}+ Google reviews`],
                 ['References', 'Happy to share recent project contacts in your neighborhood'],
               ].map(([label, detail]) => (
                 <li key={label} style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}>
@@ -150,7 +150,7 @@ export default function ChooseDeckBuilderPage() {
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>
             ))}
           
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
           </ul>

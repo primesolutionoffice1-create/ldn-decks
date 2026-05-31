@@ -7,7 +7,7 @@ const servicesContent = [
   {
     id: 1,
     title: 'Custom Deck Builder & Design',
-    desc: 'As the premier custom deck builder in Northern Virginia, we design and build fully tailored outdoor spaces from concept to completion. No templates, no shortcuts — just 5-Star craftsmanship.',
+    desc: 'As the premier custom deck builder in Northern Virginia, we design and build fully tailored outdoor spaces from concept to completion. No templates, no shortcuts — just Premium craftsmanship.',
     image: '/showcase/img08.jpeg',
     link: '/services/new-decks'
   },

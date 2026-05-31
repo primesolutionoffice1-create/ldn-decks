@@ -64,7 +64,7 @@ export default function WoodDecksPage() {
               <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
               <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
             </div>
-            <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#ddd' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 5-Year Warranty</p>
+            <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#ddd' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 5-Year Warranty</p>
           </div>
         </div>
       </section>

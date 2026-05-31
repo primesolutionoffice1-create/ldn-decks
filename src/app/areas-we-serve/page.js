@@ -38,7 +38,7 @@ export default function AreasWeServePage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Areas We Serve</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom deck building across 70+ cities in Northern Virginia</p>
-          <p style={{ color: '#aaa', marginTop: '1rem', fontSize: '0.9rem' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ color: '#aaa', marginTop: '1rem', fontSize: '0.9rem' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
         </div>
       </section>
 

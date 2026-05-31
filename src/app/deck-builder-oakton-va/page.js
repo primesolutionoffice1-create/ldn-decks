@@ -21,7 +21,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-builder-oakton-va',
   title: 'Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks',
-  description: 'Custom deck builder in Oakton, VA. 5.0★ Google. Trex Transcend & TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate.',
+  description: 'Custom deck builder in Oakton, VA. Google reviews. Trex Transcend & TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate.',
   image: '/images/img64.jpeg',
 });
 
@@ -123,11 +123,11 @@ export default function OaktonDeckBuilderPage() {
     <main>
       <JsonLd data={oaktonFaqSchema} />
       <LocalBusinessSchema city="Oakton" url="https://ldndecks.com/deck-builder-oakton-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-oakton-va" name="Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks" description="Custom deck builder in Oakton, VA. 5.0★ Google. Trex Transcend &amp; TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate." speakable />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-oakton-va" name="Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks" description="Custom deck builder in Oakton, VA. Google reviews. Trex Transcend &amp; TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate." speakable />
       <ServicesHeader
         subtext="Oakton, VA's Premium Deck Builder"
         title="Custom Deck Builder in Oakton, VA"
-        description="Loudoun Decks builds premium composite decks, multi-level structures, and screened porches for Oakton's wooded estate properties. Trex Platinum Partner. 5-Star Google Rated."
+        description="Loudoun Decks builds premium composite decks, multi-level structures, and screened porches for Oakton's wooded estate properties. Trex Platinum Partner. review-supported reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -150,7 +150,7 @@ export default function OaktonDeckBuilderPage() {
           "Specialists in wooded lot construction and tree preservation",
           "Custom multi-level designs for Oakton's sloped terrain",
           "Fairfax County permits including RPA environmental review",
-          "5-Star Google Rated - call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img64.jpeg"
         image2="/images/img21.jpeg"
@@ -203,7 +203,7 @@ export default function OaktonDeckBuilderPage() {
             </li>
           ))}
 
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>

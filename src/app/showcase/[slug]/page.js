@@ -58,7 +58,7 @@ export async function generateMetadata({ params }) {
   return buildMetadata({
     path: `/showcase/${project.slug}`,
     title: `${project.title} in ${project.location} | LDN Decks`,
-    description: `View our 5-star ${project.title.toLowerCase()} project in ${project.location}. Quality composite & wood construction by Loudoun Decks. Free estimates.`,
+    description: `View our ${project.title.toLowerCase()} project in ${project.location}. Quality composite & wood construction by Loudoun Decks. Free estimates.`,
     image: project.image,
     robots: isNoIndex ? { index: false, follow: true } : undefined
   });

@@ -18,7 +18,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: "/screened-porch-builder-northern-virginia",
   title: "Screened Porch Builder Northern Virginia | Custom Porches | Loudoun Decks",
-  description: "Top-rated screened porch builder in Northern Virginia. Custom screened-in porches, EZE-Breeze windows, and outdoor living spaces. Serving Loudoun, Fairfax, and Prince William Counties.",
+  description: "Trusted screened porch builder in Northern Virginia. Custom screened-in porches, EZE-Breeze windows, and outdoor living spaces. Serving Loudoun, Fairfax, and Prince William Counties.",
   image: "/images/img01.jpeg",
 });
 

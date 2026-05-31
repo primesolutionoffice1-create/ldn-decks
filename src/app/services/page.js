@@ -12,14 +12,14 @@ import WebPageSchema from '@/components/WebPageSchema';
 export const metadata = buildMetadata({
   path: '/services',
   title: 'Deck Building & Outdoor Living Services | Loudoun Decks',
-  description: 'Custom decks, screened porches, pergolas, patios, fencing & more in Northern Virginia. Trex Platinum Partner. 5-star rated. Free estimates: (571) 655-7207.',
+  description: 'Custom decks, screened porches, pergolas, patios, fencing & more in Northern Virginia. Trex Platinum Partner. review-supported. Free estimates: (571) 655-7207.',
   image: "/showcase/img08.jpeg",
 });
 
 export default function ServicesPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services" name="Deck Building &amp; Outdoor Living Services | Loudoun Decks" description="Custom decks, screened porches, pergolas, patios, fencing &amp; more in Northern Virginia. Trex Platinum Partner. 5-star rated. Free estimates: (571) 655-7207." speakable />
+      <WebPageSchema url="https://ldndecks.com/services" name="Deck Building &amp; Outdoor Living Services | Loudoun Decks" description="Custom decks, screened porches, pergolas, patios, fencing &amp; more in Northern Virginia. Trex Platinum Partner. review-supported. Free estimates: (571) 655-7207." speakable />
        <ServicesHeader />
 
        <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>

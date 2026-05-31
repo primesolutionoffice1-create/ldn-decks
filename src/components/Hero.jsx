@@ -26,11 +26,11 @@ export default function Hero() {
           <span className={styles.line}></span>
         </div>
         <div className={styles.trustBadge}>
-          <span className={styles.stars}>★★★★★</span>
-          <span className={styles.ratingText}>5.0 Google Rating | {BUSINESS.aggregateRating.reviewCount} Reviews</span>
+          <span className={styles.stars}>★</span>
+          <span className={styles.ratingText}>Google Review Profile | {BUSINESS.aggregateRating.reviewCount}+ Reviews</span>
         </div>
         <h1 className={styles.title}>
-          5-Star Deck Builder Near You in Northern Virginia
+          Custom Deck Builder Near You in Northern Virginia
         </h1>
         <p className={styles.heroDescription}>
           Need a deck contractor for a new composite deck, replacement, repair, or screened porch?
