@@ -21,7 +21,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-builder-falls-church-va',
   title: 'Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks',
-  description: 'Top-rated deck builder in Falls Church, VA. 5.0★ Google. Custom Trex & composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate.',
+  description: 'Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex & composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate.',
   image: '/images/img64.jpeg',
 });
 
@@ -117,11 +117,11 @@ export default function FallsChurchDeckBuilderPage() {
     <main>
       <JsonLd data={fallsChurchFaqSchema} />
       <LocalBusinessSchema city="Falls Church" url="https://ldndecks.com/deck-builder-falls-church-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-falls-church-va" name="Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks" description="Top-rated deck builder in Falls Church, VA. 5.0★ Google. Custom Trex &amp; composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate." speakable />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-falls-church-va" name="Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks" description="Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex &amp; composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate." speakable />
       <ServicesHeader
         subtext="Falls Church, VA's Compact Lot Deck Specialists"
         title="Custom Deck Builder in Falls Church, VA"
-        description="Loudoun Decks builds premium composite decks, screened porches, and outdoor living spaces for Falls Church homeowners. City of Falls Church + Fairfax County permits handled. 5-Star Google Rated."
+        description="Loudoun Decks builds premium composite decks, screened porches, and outdoor living spaces for Falls Church homeowners. City of Falls Church + Fairfax County permits handled. review-supported reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -144,7 +144,7 @@ export default function FallsChurchDeckBuilderPage() {
           "City of Falls Church + Fairfax County permit experts",
           "Compact lot specialists — multi-level & L-shaped designs",
           "Glass railings, privacy screens & integrated lighting",
-          "5-Star Google Rated - call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img64.jpeg"
         image2="/images/img21.jpeg"
@@ -197,7 +197,7 @@ export default function FallsChurchDeckBuilderPage() {
             </li>
           ))}
 
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>

@@ -62,8 +62,8 @@ const fenceFAQs = [
     a: "Vinyl is superior for longevity as it won't rot or warp in Virginia's humidity. However, many homeowners in Leesburg and Ashburn still prefer the natural aesthetics of Western Red Cedar."
   },
   {
-    q: "Are you a 5-Star Google Rated fence contractor?",
-    a: "Loudoun Decks is a 5-Star Google Rated team. We apply the same multi-phase craftsmanship to our fences as we do to our custom deck builds."
+    q: "Are you a Review-Supported fence contractor?",
+    a: "Loudoun Decks is a review-supported team. We apply the same multi-phase craftsmanship to our fences as we do to our custom deck builds."
   },
   {
     q: "Will a new fence increase my home's resale value?",
@@ -77,7 +77,7 @@ const expansionSections = [
     paragraphs: [
       "In the bustling residential landscapes of Northern Virginia, a professional fence is more than just a property line-it is the foundation of your family's privacy and security. As a leading outdoor living specialist in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks provides custom fencing solutions that go beyond basic 'cookie-cutter' panels. We understand that your yard is an extension of your home, and the right fence should enhance both its function and its curb appeal.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We have seen a massive surge in demand for integrated outdoor design, where the fence style perfectly matches the custom deck or porch architecture. Whether you are living in the dense suburban developments of Ashburn or the expansive properties of western Loudoun, we tailor our installation techniques to your specific soil conditions and wind-load requirements.",
-      "Choosing a fence contractor near you who handles the entire process-including utility marking and HOA coordination-is vital. Our team ensures that your fence is perfectly level, structurally stable, and built to withstand the Mid-Atlantic’s seasonal shifts. From traditional wood pickets to modern horizontal slat designs, our 5-Star Google Rated craftsmen treat every post with precision."
+      "Choosing a fence contractor near you who handles the entire process-including utility marking and HOA coordination-is vital. Our team ensures that your fence is perfectly level, structurally stable, and built to withstand the Mid-Atlantic’s seasonal shifts. From traditional wood pickets to modern horizontal slat designs, our review-supported craftsmen treat every post with precision."
     ]
   },
   {
@@ -98,7 +98,7 @@ const expansionSections = [
     title: "The NoVA HOA Challenge: Navigating Rules and Regulations",
     paragraphs: [
       "One of the biggest hurdles for homeowners in Loudoun and Fairfax is navigating the Homeowners Association (HOA) approval process. Most NoVA neighborhoods have strict rules regarding fence height, material type, and even the 'active side' (good side) placement. In towns like Reston and Herndon, failing to follow these guidelines can result in expensive fines or the requirement to remove the structure entirely. Loudoun Decks takes the guesswork out of this phase.",
-      "We provide the detailed site plans, material specifications, and architectural drawings required by most HOA boards. Our project managers are familiar with the specific quirks of major developments across Northern Virginia, ensuring that your application is approved on the first attempt. This expertise is a hallmark of a 5-Star Google Rated contractor and saves our clients weeks of bureaucratic frustration.",
+      "We provide the detailed site plans, material specifications, and architectural drawings required by most HOA boards. Our project managers are familiar with the specific quirks of major developments across Northern Virginia, ensuring that your application is approved on the first attempt. This expertise is a hallmark of a review-supported contractor and saves our clients weeks of bureaucratic frustration.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. By managing the permitting and zoning requirements for our larger service area-including Arlington and Stafford-we ensure that your fence installation is legal, insured, and compliant with all local ordinances."
     ]
   },
@@ -107,7 +107,7 @@ const expansionSections = [
     paragraphs: [
       "The best outdoor living spaces follow a cohesive design language. When we build a custom deck in Ashburn or a screened porch in Great Falls, we often design the surrounding fence to match the railing profile or the decking color. This 'total yard integration' is what sets Loudoun Decks apart as a premium custom builder. Using matching materials creates a seamless flow that makes your entire lot feel like a single, well-planned luxury retreat.",
       "For instance, we can integrate custom gates that match your deck's 'picture frame' border, or add low-voltage post lighting to your fence that syncs with your deck's Step lights. In Prince William County, we often build transition areas where the fence naturally leads into a custom patio or pergola structure. This holistic approach ensures that every dollar you invest into your property contributes to a unified, high-value result.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our 'Full projects only' philosophy means we focus on these complex, integrated builds that require professional engineering and a 5-Star eye for detail. We are the premier fence company near you for homeowners who refuse to settle for standard, uninspired property boundaries."
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our 'Full projects only' philosophy means we focus on these complex, integrated builds that require professional engineering and a Premium eye for detail. We are the premier fence company near you for homeowners who refuse to settle for standard, uninspired property boundaries."
     ]
   }
 ];
@@ -136,7 +136,7 @@ export default function FencePage() {
       <JsonLd data={fenceFaqSchema} />
       <WebPageSchema url="https://ldndecks.com/services/fence" name="Fence Installation Loudoun County | LDN Decks" description="Loudoun Decks provides expert fence installation for homeowners in Loudoun County, Fairfax, and Prince William. Custom wood, vinyl, and aluminum fencing." speakable />
       <ServicesHeader
-        subtext="5-Star Google Rated Installation"
+        subtext="Review-Supported Installation"
         title="Custom Fence Design & Installation"
         description="Loudoun Decks provides premier fence construction for homeowners in Loudoun County, Fairfax County, and Prince William County. Secure, private, and beautiful yard sanctuaries."
       />

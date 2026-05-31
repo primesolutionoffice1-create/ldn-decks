@@ -18,7 +18,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/services/deck-repair-and-structural-maintenance',
   title: 'Deck Repair Near Me Northern VA | Structural Deck Contractor',
-  description: 'Need deck repair near you in Northern Virginia? We fix rotted posts, sinking decks, railings, ledgers, and failed inspections. 5.0 Google rated.',
+  description: 'Need deck repair near you in Northern Virginia? We fix rotted posts, sinking decks, railings, ledgers, and failed inspections. review-backed.',
   image: '/images/img04.jpeg',
 });
 
@@ -77,7 +77,7 @@ const expansionSections = [
     title: "Fixing Failed Inspections in Fairfax and Loudoun Counties",
     paragraphs: [
       "One of the most stressful situations a homeowner can face is a failed county building inspection. Whether it was a DIY project or a previous contractor's negligence, a 'red tag' can stall your property sale or prevent you from using your outdoor space. County codes in Northern Virginia are some of the strictest in the country, particularly regarding railing height, stair rise/run, and ledger board attachment.",
-      "We are experts at code-compliant remediation. We work directly with the inspection reports from Fairfax, Loudoun, and Prince William counties to perform 'surgical' repairs that meet or exceed local standards. From fascia-mounted railing conversions to lateral load connector installations, we know exactly what local inspectors are looking for. Our goal is to get your project across the finish line with a 5-star final approval."
+      "We are experts at code-compliant remediation. We work directly with the inspection reports from Fairfax, Loudoun, and Prince William counties to perform 'surgical' repairs that meet or exceed local standards. From fascia-mounted railing conversions to lateral load connector installations, we know exactly what local inspectors are looking for. Our goal is to get your project across the finish line with a clean final approval."
     ]
   }
 ];
@@ -85,7 +85,7 @@ const expansionSections = [
 export default function DeckRepairPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/deck-repair-and-structural-maintenance" name="Deck Repair Near Me Northern VA | Structural Deck Contractor" description="Need deck repair near you in Northern Virginia? We fix rotted posts, sinking decks, railings, ledgers, and failed inspections. 5.0 Google rated." speakable />
+      <WebPageSchema url="https://ldndecks.com/services/deck-repair-and-structural-maintenance" name="Deck Repair Near Me Northern VA | Structural Deck Contractor" description="Need deck repair near you in Northern Virginia? We fix rotted posts, sinking decks, railings, ledgers, and failed inspections. review-backed." speakable />
       <ServiceSchema
         name="Deck Repair & Structural Maintenance"
         description="Specialized structural deck repair in Northern Virginia. Fix rotted posts, sinking decks, and code violations. Expert remediation for failed inspections."

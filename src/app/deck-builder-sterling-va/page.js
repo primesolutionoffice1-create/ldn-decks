@@ -18,7 +18,7 @@ import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 export const metadata = buildMetadata({
   path: '/deck-builder-sterling-va',
   title: 'Deck Builder in Sterling, VA | Trex | Loudoun Decks',
-  description: 'Top-rated deck builder in Sterling, VA. 5.0★ Google. Trex & TimberTech decks, screened porches. Loudoun County permits & HOA handled. Free estimate. (571) 655-7207.',
+  description: 'Trusted deck builder in Sterling, VA. Google reviews. Trex & TimberTech decks, screened porches. Loudoun County permits & HOA handled. Free estimate. (571) 655-7207.',
 });
 
 const faqSchema = {
@@ -41,7 +41,7 @@ export default function SterlingDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Sterling" url="https://ldndecks.com/deck-builder-sterling-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-sterling-va" name="Deck Builder in Sterling, VA | Trex | Loudoun Decks" description="Top-rated deck builder in Sterling, VA. 5.0★ Google. Trex &amp; TimberTech decks, screened porches. Loudoun County permits &amp; HOA handled. Free estimate. (571) 655-7207." speakable />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-sterling-va" name="Deck Builder in Sterling, VA | Trex | Loudoun Decks" description="Trusted deck builder in Sterling, VA. Google reviews. Trex &amp; TimberTech decks, screened porches. Loudoun County permits &amp; HOA handled. Free estimate. (571) 655-7207." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Sterling, VA</h1>
@@ -50,7 +50,7 @@ export default function SterlingDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -172,7 +172,7 @@ export default function SterlingDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>

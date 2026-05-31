@@ -70,7 +70,7 @@ const pageFAQs = [
   },
   {
     q: "Are you a licensed and insured deck repair contractor in Loudoun County?",
-    a: "Yes. Loudoun Decks is a fully licensed and insured contractor operating in Loudoun County, Virginia. We are a 5-Star Google Rated company with deep roots in the Loudoun community and a track record of quality repairs."
+    a: "Yes. Loudoun Decks is a fully licensed and insured contractor operating in Loudoun County, Virginia. We are a review-supported company with deep roots in the Loudoun community and a track record of quality repairs."
   }
 ];
 
@@ -80,7 +80,7 @@ const expansionSections = [
     paragraphs: [
       "Loudoun County is one of the fastest-growing and most prosperous counties in the United States - and its homeowners expect a high standard when it comes to maintaining their properties. Decks in Loudoun County face a unique combination of environmental stressors: the high humidity and intense summer heat of Northern Virginia, followed by freeze-thaw cycles that expand and contract wood and concrete year after year. Loudoun Decks has spent years repairing and restoring decks in Ashburn, Leesburg, Sterling, Brambleton, and across the county - and we understand exactly what Loudoun homes need.",
       "Many Loudoun County decks were built in the construction boom of the 2000s and early 2010s, using pressure-treated lumber and builder-grade fasteners that are now approaching the end of their effective lifespan. These decks may look fine on the surface, but hidden rot in the ledger board, subframe joists, and post bases is extremely common. Our team performs thorough substructure inspections - crawling under the deck to check every joist, beam, and connection point - before providing a repair proposal.",
-      "If you are a Loudoun County homeowner searching for a deck contractor near you who combines local expertise with the highest standards of craftsmanship, Loudoun Decks is the team to call. We are 5-Star Google Rated, fully licensed and insured, and have completed hundreds of repairs throughout the county."
+      "If you are a Loudoun County homeowner searching for a deck contractor near you who combines local expertise with the highest standards of craftsmanship, Loudoun Decks is the team to call. We are Review-Supported, fully licensed and insured, and have completed hundreds of repairs throughout the county."
     ]
   },
   {
@@ -130,7 +130,7 @@ export default function DeckRepairLoudounCountyPage() {
         relatedServices={['https://ldndecks.com/deck-repair', 'https://ldndecks.com/services/deck-repair-and-structural-maintenance', 'https://ldndecks.com/services/deck-inspection']}
       />
       <ServicesHeader
-        subtext="Loudoun County's 5-Star Rated Repair Team"
+        subtext="Loudoun County's Review-Supported Repair Team"
         title="Deck Repair Loudoun County"
         description="Loudoun Decks repairs decks throughout Ashburn, Leesburg, Sterling, Brambleton and all of Loudoun County. Rot repair, ledger board reinforcement, railing upgrades & full resurfacing. Free estimate."
       />
@@ -156,7 +156,7 @@ export default function DeckRepairLoudounCountyPage() {
       <ServiceMain
         subtitle="Loudoun County's Local Repair Experts"
         title="Professional Deck Repair & Restoration in Loudoun County, VA"
-        description="From minor board replacements to major structural restorations, Loudoun Decks provides comprehensive deck repair services across all Loudoun County communities. Honest assessments, permitted work, 5-Star results."
+        description="From minor board replacements to major structural restorations, Loudoun Decks provides comprehensive deck repair services across all Loudoun County communities. Honest assessments, permitted work, Premium results."
         listItems={[
           "Ledger board repair & proper flashing",
           "Rotting joist & rim board replacement",
@@ -182,7 +182,7 @@ export default function DeckRepairLoudounCountyPage() {
       </section>
       <ServiceInclusions
         title="Why Loudoun County Homeowners Trust Loudoun Decks for Repairs"
-        description="We are local. We are licensed. We are 5-Star Google Rated. And we treat every repair project in Loudoun County with the same care and precision as our premium new builds."
+        description="We are local. We are licensed. We are review-supported reputation. And we treat every repair project in Loudoun County with the same care and precision as our premium new builds."
         items={inclusions}
       />
       <ProcessSteps />

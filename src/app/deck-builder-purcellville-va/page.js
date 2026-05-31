@@ -109,7 +109,7 @@ export default function PurcellvilleDeckBuilderPage() {
       <ServicesHeader
         subtext="Purcellville, VA's Trusted Deck Company"
         title="Custom Deck Builder in Purcellville, VA"
-        description="Loudoun Decks builds composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. 5-Star Google Rated."
+        description="Loudoun Decks builds composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. review-supported reputation."
       />
       <ServiceMain
         subtitle="Built for Western Loudoun's Larger Lots"
@@ -120,7 +120,7 @@ export default function PurcellvilleDeckBuilderPage() {
           "Cable & glass railing for Blue Ridge mountain views",
           "Multi-level designs, pergolas, outdoor kitchens",
           "Fewer HOA restrictions  -  more design freedom",
-          "5-Star Google Rated  -  call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
@@ -163,7 +163,7 @@ export default function PurcellvilleDeckBuilderPage() {
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
             </li>
           ))}
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>

@@ -24,8 +24,8 @@ const LocationIcon = () => (
 
 export const metadata = buildMetadata({
   path: "/near-you/prince-william-county",
-  title: "5-Star Deck Builder Prince William County VA | Free Quote",
-  description: "Professional deck contractor in Prince William County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Manassas, Woodbridge, and Haymarket. Free estimates.",
+  title: "Premium Deck Builder Prince William County VA | Free Quote",
+  description: "Professional deck contractor in Prince William County. review-backed. Custom decks, patios, and porches in Manassas, Woodbridge, and Haymarket. Free estimates.",
 });
 
 const pwcCities = [
@@ -61,7 +61,7 @@ export default function PrinceWilliamCountyPage() {
         description="LDN Decks builds custom decks, porches, patios, pergolas, and outdoor living spaces throughout Prince William County, VA."
         url="https://ldndecks.com/near-you/prince-william-county"
       />
-      <WebPageSchema url="https://ldndecks.com/near-you/prince-william-county" name="5-Star Deck Builder Prince William County VA | Free Quote" description="Professional deck contractor in Prince William County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Manassas, Woodbridge, and Haymarket. Free estimates." speakable />
+      <WebPageSchema url="https://ldndecks.com/near-you/prince-william-county" name="Premium Deck Builder Prince William County VA | Free Quote" description="Professional deck contractor in Prince William County. review-backed. Custom decks, patios, and porches in Manassas, Woodbridge, and Haymarket. Free estimates." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Prince William County, VA"
@@ -182,7 +182,7 @@ export default function PrinceWilliamCountyPage() {
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (5.0★ Google) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>

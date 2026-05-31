@@ -21,7 +21,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-builder-mclean-va',
   title: 'Deck Builder in McLean, VA | Trex Certified | Loudoun Decks',
-  description: 'Top-rated deck builder in McLean, VA. 5.0★ Google. Specializing in luxury Trex & TimberTech decks, multi-level designs, and screened porches for McLean estates. Free estimate.',
+  description: 'Trusted deck builder in McLean, VA. Google reviews. Specializing in luxury Trex & TimberTech decks, multi-level designs, and screened porches for McLean estates. Free estimate.',
   image: '/images/img64.jpeg',
 });
 
@@ -87,7 +87,7 @@ const expansionSections = [
     paragraphs: [
       "Many properties in McLean feature significant elevation changes or are located in environmentally sensitive areas near the Potomac River. Building in these zones requires a deck builder with deep engineering knowledge. We specialize in multi-level deck structures that turn sloped backyards into functional, beautiful entertainment hubs.",
       "If your property falls within a Resource Protection Area (RPA), we manage the additional environmental reviews and mitigation plans required by Fairfax County. We ensure that your project is not only stunning but fully compliant with all local environmental regulations. Our experience in areas like Great Falls and McLean means we can anticipate these requirements early in the design phase, avoiding costly delays.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our reputation for structural integrity and 5-Star craftsmanship is why McLean homeowners consistently choose us for their most ambitious outdoor projects."
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our reputation for structural integrity and Premium craftsmanship is why McLean homeowners consistently choose us for their most ambitious outdoor projects."
     ],
     listItems: [
       { label: "RPA Expertise", text: "Specialized knowledge of environmental reviews for properties near the Potomac." },
@@ -109,7 +109,7 @@ const expansionSections = [
     paragraphs: [
       "In the high-value McLean real estate market, a custom-designed outdoor living space is a major asset. It increases your home's usable square footage and provides an immediate competitive advantage if you ever decide to sell. Buyers in areas like Great Falls and McLean prioritize low-maintenance, luxury outdoor features.",
       "By investing in a composite deck today, you are also eliminating the future costs of sanding and staining. A traditional wood deck in Northern Virginia requires professional maintenance every 2 years, which can cost thousands over the life of the deck. Our Trex and TimberTech projects are designed to stay beautiful for 25 to 50 years with nothing more than an occasional wash.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We are proud to be the 5-Star Choice for McLean homeowners seeking the absolute best in custom outdoor construction."
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We are proud to be the Premium Choice for McLean homeowners seeking the absolute best in custom outdoor construction."
     ]
   }
 ];
@@ -119,11 +119,11 @@ export default function McLeanDeckBuilderPage() {
     <main>
       <JsonLd data={mcleanFaqSchema} />
       <LocalBusinessSchema city="McLean" url="https://ldndecks.com/deck-builder-mclean-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-mclean-va" name="Deck Builder in McLean, VA | Trex Certified | Loudoun Decks" description="Top-rated deck builder in McLean, VA. 5.0★ Google. Specializing in luxury Trex &amp; TimberTech decks, multi-level designs, and screened porches for McLean estates. Free estimate." speakable />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-mclean-va" name="Deck Builder in McLean, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in McLean, VA. Google reviews. Specializing in luxury Trex &amp; TimberTech decks, multi-level designs, and screened porches for McLean estates. Free estimate." speakable />
       <ServicesHeader
         subtext="McLean, VA's Choice for Luxury Decks"
         title="Custom Deck Builder in McLean, VA"
-        description="Loudoun Decks builds high-end composite decks, multi-level structures, and screened porches for McLean estates. Trex Platinum Partner. 5-Star Google Rated."
+        description="Loudoun Decks builds high-end composite decks, multi-level structures, and screened porches for McLean estates. Trex Platinum Partner. review-supported reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -146,7 +146,7 @@ export default function McLeanDeckBuilderPage() {
           "Specialists in Fairfax County RPA environmental reviews",
           "Custom multi-level & luxury estate designs",
           "Screened porches, outdoor kitchens & cable railings",
-          "5-Star Google Rated - call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img64.jpeg"
         image2="/images/img21.jpeg"
@@ -168,7 +168,7 @@ export default function McLeanDeckBuilderPage() {
           Our featured McLean project includes a <strong>$68,000 550 sqft Deck + Screened Porch</strong> in Langley Forest. 
           This multi-level project utilized TimberTech AZEK in Dark Hickory with Trex Signature glass railings 
           to preserve the views of the wooded lot. We managed the complex Fairfax County RPA review and building 
-          permit process, delivering a 5-Star result in just under 6 weeks.
+          permit process, delivering a Premium result in just under 6 weeks.
         </p>
       </div>
 
@@ -200,7 +200,7 @@ export default function McLeanDeckBuilderPage() {
             </li>
           ))}
         
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/deck-builder-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>

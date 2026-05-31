@@ -24,8 +24,8 @@ const LocationIcon = () => (
 
 export const metadata = buildMetadata({
   path: "/near-you/arlington-county",
-  title: "5-Star Deck Builder Arlington County VA | Free Quote in 24h",
-  description: "Top-rated deck and outdoor living contractor in Arlington County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Rosslyn, Ballston, Clarendon, and Crystal City.",
+  title: "Premium Deck Builder Arlington County VA | Free Quote in 24h",
+  description: "Trusted deck and outdoor living contractor in Arlington County. review-backed. Custom decks, patios, and porches in Rosslyn, Ballston, Clarendon, and Crystal City.",
 });
 
 const arlingtonCities = [
@@ -61,7 +61,7 @@ export default function ArlingtonCountyPage() {
         description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Arlington County, VA."
         url="https://ldndecks.com/near-you/arlington-county"
       />
-      <WebPageSchema url="https://ldndecks.com/near-you/arlington-county" name="5-Star Deck Builder Arlington County VA | Free Quote in 24h" description="Top-rated deck and outdoor living contractor in Arlington County. ★ 5.0 Google Rated. Custom decks, patios, and porches in Rosslyn, Ballston, Clarendon, and Crystal City." speakable />
+      <WebPageSchema url="https://ldndecks.com/near-you/arlington-county" name="Premium Deck Builder Arlington County VA | Free Quote in 24h" description="Trusted deck and outdoor living contractor in Arlington County. review-backed. Custom decks, patios, and porches in Rosslyn, Ballston, Clarendon, and Crystal City." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Arlington County, VA"
@@ -182,7 +182,7 @@ export default function ArlingtonCountyPage() {
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (5.0★ Google) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>

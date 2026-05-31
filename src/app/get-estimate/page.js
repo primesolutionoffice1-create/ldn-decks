@@ -70,8 +70,8 @@ export default function GetEstimatePage() {
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', alignItems: 'center' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-              <span style={{ color: '#fbbf24', fontSize: '1.2rem' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <span style={{ color: '#ccc', fontSize: '0.9rem' }}>5.0 on Google &middot; {BUSINESS.aggregateRating.reviewCount} reviews</span>
+              <span style={{ color: '#fbbf24', fontSize: '1rem', fontWeight: 700 }}>Public reviews</span>
+              <span style={{ color: '#ccc', fontSize: '0.9rem' }}>Google reviews &middot; {BUSINESS.aggregateRating.reviewCount}+ reviews</span>
             </div>
             <h1 style={{ fontSize: '2.2rem', fontWeight: 700, lineHeight: 1.2, marginBottom: '1rem' }}>
               Request a Deck Estimate in Northern Virginia
@@ -125,7 +125,7 @@ export default function GetEstimatePage() {
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
           {[
             { num: '100+', label: 'Decks built' },
-            { num: '5.0', label: 'Google rating' },
+            { num: '49+', label: 'Google reviews' },
             { num: '2yr', label: 'Warranty' },
             { num: '$15K+', label: 'Projects from' },
           ].map(s => (
@@ -184,7 +184,7 @@ export default function GetEstimatePage() {
               { text: "They handled the HOA submission and Loudoun County permit themselves \u2014 I didn\u2019t lift a finger. Deck was done in 10 days. The Trex Calm Shell color looks incredible.", name: "David K.", city: "South Riding" },
             ].map((r, i) => (
               <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem', marginBottom: '1rem' }}>
-                <div style={{ color: '#fbbf24', marginBottom: '0.5rem' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div style={{ color: '#fbbf24', marginBottom: '0.5rem', fontWeight: 700 }}>Customer feedback</div>
                 <p style={{ lineHeight: 1.6, fontSize: '0.9rem', marginBottom: '0.5rem' }}>&ldquo;{r.text}&rdquo;</p>
                 <p style={{ fontSize: '0.8rem', color: '#999', margin: 0 }}>— {r.name}, {r.city}</p>
               </div>

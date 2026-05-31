@@ -168,7 +168,7 @@ export default function DeckBuilderLeesburgPage() {
       <ServicesHeader
         subtext="Leesburg, VA's Trusted Deck Company"
         title="Custom Deck Builder in Leesburg, VA"
-        description="Loudoun Decks builds composite, cedar and IPE decks across River Creek, Lansdowne and the historic district. Town of Leesburg + Loudoun County permits handled. 5-Star Google Rated."
+        description="Loudoun Decks builds composite, cedar and IPE decks across River Creek, Lansdowne and the historic district. Town of Leesburg + Loudoun County permits handled. review-supported reputation."
       />
       <ServiceMain
         subtitle="Historic Loudoun Craftsmanship"
@@ -179,7 +179,7 @@ export default function DeckBuilderLeesburgPage() {
           "Town of Leesburg & Loudoun County permits confirmed and filed",
           "Multi-level designs for sloped Potomac-facing lots",
           "Cable & glass railing for river and fairway views",
-          "5-Star Google Rated  -  call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
@@ -226,7 +226,7 @@ export default function DeckBuilderLeesburgPage() {
             </li>
           ))}
         
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/deck-builder-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>

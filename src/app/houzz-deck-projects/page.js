@@ -96,7 +96,7 @@ export default function HouzzProjectsPage() {
                 style={{ objectFit: 'cover' }}
                />
                <div style={{ position: 'absolute', bottom: 25, left: 25, right: 25, background: 'rgba(255,255,255,0.98)', padding: '1.5rem', borderRadius: 16, textAlign: 'center', backdropFilter: 'blur(8px)' }}>
-                  <div style={{ color: 'var(--color-primary)', fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.25rem' }}>5.0 ★★★★★</div>
+                  <div style={{ color: 'var(--color-primary)', fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.25rem' }}>Google review profile</div>
                   <p style={{ margin: 0, fontWeight: 800, color: '#111', fontSize: '1.2rem' }}>Verified Professional on Houzz</p>
                </div>
             </div>
@@ -149,7 +149,7 @@ export default function HouzzProjectsPage() {
           <div style={{ maxWidth: 800, margin: '0 auto' }}>
             <h2 style={S.h2}>Why Research Our Houzz Projects?</h2>
             <p style={S.p}>
-              Houzz is more than just a gallery; it is a community of homeowners and professionals sharing real-world feedback. When you visit our Houzz profile, you are seeing <strong>verified reviews</strong> and <strong>high-resolution photography</strong> from real jobsites in Loudoun County and Fairfax County.
+              Houzz is more than just a gallery; it is a community of homeowners and professionals sharing real-world feedback. When you visit our Houzz profile, you are seeing <strong>public reviews</strong> and <strong>high-resolution photography</strong> from real jobsites in Loudoun County and Fairfax County.
             </p>
             <h3 style={S.h3}>Serving Loudoun, Fairfax, and Prince William Counties</h3>
             <p style={S.p}>

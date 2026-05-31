@@ -16,8 +16,8 @@ import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-stafford-va',
-  title: '5-Star Deck Builder Stafford VA | Get a Free Quote in 24h',
-  description: 'Top-rated deck builder in Stafford, VA. ★ 5.0 Google Rated. Trex & TimberTech composite decks, screened porches. Best value in the NoVA region. Free estimate!',
+  title: 'Premium Deck Builder Stafford VA | Get a Free Quote in 24h',
+  description: 'Trusted deck builder in Stafford, VA. review-backed. Trex & TimberTech composite decks, screened porches. Best value in the NoVA region. Free estimate!',
 });
 
 const faqSchema = {
@@ -37,7 +37,7 @@ export default function StaffordDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Stafford" url="https://ldndecks.com/deck-builder-stafford-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-stafford-va" name="5-Star Deck Builder Stafford VA | Get a Free Quote in 24h" description="Top-rated deck builder in Stafford, VA. ★ 5.0 Google Rated. Trex &amp; TimberTech composite decks, screened porches. Best value in the NoVA region. Free estimate!" speakable />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-stafford-va" name="Premium Deck Builder Stafford VA | Get a Free Quote in 24h" description="Trusted deck builder in Stafford, VA. review-backed. Trex &amp; TimberTech composite decks, screened porches. Best value in the NoVA region. Free estimate!" speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Stafford, VA</h1>
@@ -46,7 +46,7 @@ export default function StaffordDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -131,7 +131,7 @@ export default function StaffordDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>

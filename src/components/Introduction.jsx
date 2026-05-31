@@ -73,7 +73,7 @@ export default function Introduction() {
           </div>
           <h2 className={styles.title}>Northern Virginia's Trusted<br /> Deck Builder & Contractor</h2>
           <p className={styles.description}>
-            For over 10 years, we&apos;ve built 500+ projects across Fairfax, Loudoun, and Prince William counties &mdash; from luxury decks in McLean and Vienna to townhome transformations in Sterling and Ashburn. As a leading <strong>deck contractor</strong>, we know the local permit process and HOA requirements better than anyone. Every project is personally overseen by Nick to ensure 5-star quality.
+            For over 10 years, we&apos;ve built 500+ projects across Fairfax, Loudoun, and Prince William counties &mdash; from luxury decks in McLean and Vienna to townhome transformations in Sterling and Ashburn. As a leading <strong>deck contractor</strong>, we know the local permit process and HOA requirements better than anyone. Every project is personally overseen by Nick to ensure professional quality.
           </p>
           <ul className={styles.checkList}>
             <li>

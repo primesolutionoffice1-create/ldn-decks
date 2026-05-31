@@ -17,7 +17,7 @@ export default function LocalBusinessSchema({ city, description, url, areaType =
     name: `Deck Builder in ${city}`,
     description:
       description ||
-      `Top-rated custom deck builder serving ${city}, Northern Virginia. Trex Platinum Partner and TimberTech Certified Installer.`,
+      `Trusted custom deck builder serving ${city}, Northern Virginia. Trex Platinum Partner and TimberTech Certified Installer.`,
     provider: { '@id': ORG_ID },
     areaServed: { '@type': areaType, name: areaName },
     ...(url ? { url } : {}),

@@ -15,7 +15,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 export const metadata = buildMetadata({
   path: '/near-you',
   title: 'Deck Builder Near Me | Northern Virginia (5 Counties)',
-  description: 'Find a 5-star deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, Prince William, Arlington & Stafford counties — custom decks, patios & porches.',
+  description: 'Find a trusted deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, Prince William, Arlington & Stafford counties — custom decks, patios & porches.',
 });
 
 const chooseItems = [
@@ -36,7 +36,7 @@ const chooseItems = [
 export default function NearYouPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/near-you" name="Deck Builder Near Me | Northern Virginia (5 Counties)" description="Find a 5-star deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties — custom decks, patios &amp; porches." speakable />
+      <WebPageSchema url="https://ldndecks.com/near-you" name="Deck Builder Near Me | Northern Virginia (5 Counties)" description="Find a trusted deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties — custom decks, patios &amp; porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder Near You"

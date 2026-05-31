@@ -68,8 +68,8 @@ const repairFAQs = [
     a: "Yes, we prioritize safety inspections for homeowners in Arlington and Loudoun who are concerned about wobbly railings or shifting structures."
   },
   {
-    q: "Are you a 5-Star Google Rated repair contractor?",
-    a: "Loudoun Decks is a 5-Star Google Rated deck builder known for honesty and quality in both new builds and complex restorations."
+    q: "Are you a Review-Supported repair contractor?",
+    a: "Loudoun Decks is a Review-Supported deck builder known for honesty and quality in both new builds and complex restorations."
   },
   {
     q: "Will repairing my deck improve my home's value?",
@@ -90,7 +90,7 @@ const expansionSections = [
     title: "Identifying Red Flags: When Your Deck Becomes a Hazard",
     paragraphs: [
       "Many homeowners in regions like Fairfax Station and Burke overlook the subtle signs of deck degradation. The most common 'red flag' is wobbly or loose railings. In Virginia, building codes have become much stricter regarding railing attachment methods because railings are responsible for preventing falls. If your railing posts are through-bolted rather than just nailed, you are in much better shape. If they move when you lean on them, you need immediate deck repair.",
-      "Another critical area is the stair system. Over time, the 'stringers' (the side supports of the stairs) can pull away from the deck or rot at the base where they touch the ground. We frequently handle stair restorations in Sterling and Herndon, reinforcing these high-traffic areas with custom steel brackets and new pressure-treated timber. Ensuring your stairs are level and secure is a top priority for any 5-Star Google Rated contractor.",
+      "Another critical area is the stair system. Over time, the 'stringers' (the side supports of the stairs) can pull away from the deck or rot at the base where they touch the ground. We frequently handle stair restorations in Sterling and Herndon, reinforcing these high-traffic areas with custom steel brackets and new pressure-treated timber. Ensuring your stairs are level and secure is a top priority for any review-supported contractor.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. As your custom deck builder and restoration expert, we perform deep-dive inspections to identify these hazards before they escalate into emergencies."
     ],
     listItems: [
@@ -131,7 +131,7 @@ export default function DeckRepairPage() {
         relatedServices={['https://ldndecks.com/services/deck-repair-and-structural-maintenance', 'https://ldndecks.com/services/deck-inspection', 'https://ldndecks.com/deck-repair-loudoun-county']}
       />
       <ServicesHeader
-        subtext="5-Star Google Rated Restoration"
+        subtext="Review-Supported Restoration"
         title="Professional Deck Repair & Structural Restoration"
         description="Loudoun Decks provides expert deck repair services across Loudoun County, Fairfax County, and Prince William County. Restore your deck's safety and beauty with NoVA's local experts."
       />

@@ -58,8 +58,8 @@ const windowFAQs = [
     a: "Yes. We offer laminated glass packages designed specifically for the higher noise levels in Arlington and near Dulles Airport."
   },
   {
-    q: "Are you a 5-Star Google Rated window contractor?",
-    a: "Loudoun Decks is a 5-Star Google Rated team known for the same precision in window replacement as we are in our custom deck builds."
+    q: "Are you a Review-Supported window contractor?",
+    a: "Loudoun Decks is a review-supported team known for the same precision in window replacement as we are in our custom deck builds."
   },
   {
     q: "What is the difference between an insert and a full-frame replacement?",
@@ -76,7 +76,7 @@ const expansionSections = [
     title: "The Energy Efficiency Imperative: Window Replacement in NoVA",
     paragraphs: [
       "In the diverse climate of Northern Virginia-where temperatures can swing from the single digits in January to over 100 degrees in July-your home's windows are the most critical bridge between your comfort and the elements. As a leading home improvement specialist in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks understands that window replacement is more than just an aesthetic upgrade. It is an investment in your home's thermal envelope and long-term utility savings.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We apply the same level of structural engineering and 5-Star attention to detail to our window projects as we do to our multi-level deck builds. Whether you are living in the historic districts of Leesburg or the modern developments of Ashburn, we help you select window systems that are specifically designed for the Mid-Atlantic’s specific humidity and solar exposure patterns.",
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We apply the same level of structural engineering and Premium attention to detail to our window projects as we do to our multi-level deck builds. Whether you are living in the historic districts of Leesburg or the modern developments of Ashburn, we help you select window systems that are specifically designed for the Mid-Atlantic’s specific humidity and solar exposure patterns.",
       "Searching for a window contractor near you often leads to 'national' chains that use a one-size-fits-all approach. At Loudoun Decks, we prioritize local expertise. We know which glass coatings work best for west-facing rooms in Sterling and which frame materials provide the best longevity for the wooded lots in Great Falls and Mclean."
     ]
   },
@@ -98,7 +98,7 @@ const expansionSections = [
     title: "The Science of Comfort: Glass Technology and Insulation",
     paragraphs: [
       "The 'magic' of a modern window replacement lies in the glass. We primarily install double-pane units filled with Argon gas-a heavy, clear, non-toxic gas that acts as a powerful insulator between the panes. In high-stakes markets like Arlington and Herndon, adding Low-E (Low Emissivity) coatings can drastically reduce the amount of UV light entering your home. This does more than just lower your cooling bills; it prevents your furniture, flooring, and artwork from fading due to sun exposure.",
-      "Noise reduction is another major benefit of professional window installation. For our clients near Dulles Airport or busy corridors like I-66 and the Capital Beltway, we offer specialized sound-dampening glass packages. These use varied glass thicknesses and laminated layers to disrupt sound waves, turning a noisy street into a quiet sanctuary. This 5-Star functionality is what sets premium window systems apart from budget-grade alternatives.",
+      "Noise reduction is another major benefit of professional window installation. For our clients near Dulles Airport or busy corridors like I-66 and the Capital Beltway, we offer specialized sound-dampening glass packages. These use varied glass thicknesses and laminated layers to disrupt sound waves, turning a noisy street into a quiet sanctuary. This Premium functionality is what sets premium window systems apart from budget-grade alternatives.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We take pride in being a deck company near you that also understands the thermal dynamics of your home’s interior, providing a holistic approach to your property's overall performance and value."
     ]
   },
@@ -107,7 +107,7 @@ const expansionSections = [
     paragraphs: [
       "Even the most expensive window in the world will fail if it's not installed correctly. Shoddy installation leads to air leaks, water infiltration, and operational issues within just a few years. At Loudoun Decks, our installation protocol is rigorous. We use precision laser leveling to ensure every window is perfectly square and plumb. We utilize high-grade expanding foam and professional-grade flashing to create a triple-layered seal against Virginia's heavy rains.",
       "We manage the entire project from initial measurements to final walkthrough. Our 'Full projects only' philosophy ensures that we are responsible for every detail, including the permit process in Stafford County and coordination with local building inspectors in Arlington. When we leave the job site, we ensure all debris is removed and your home is as clean as when we arrived, leaving only beautiful new views.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Choosing a 5-Star Google Rated contractor for your window replacement project means you are choosing peace of mind, professional communication, and a result that will look and perform flawlessly for decades."
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Choosing a review-supported contractor for your window replacement project means you are choosing peace of mind, professional communication, and a result that will look and perform flawlessly for decades."
     ]
   }
 ];
@@ -125,7 +125,7 @@ export default function WindowsPage() {
         relatedServices={['https://ldndecks.com/services/entry-doors']}
       />
       <ServicesHeader 
-        subtext="5-Star Google Rated Experts"
+        subtext="Review-Supported Experts"
         title="Window Replacement & Installation"
         description="Loudoun Decks provides premium energy-efficient window replacement for homeowners in Loudoun County, Fairfax County, and Prince William County. Enhance your home with 1,500+ words of expertise."
       />

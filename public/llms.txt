@@ -1,6 +1,6 @@
 # Loudoun Decks (LDN Decks)
 
-> Loudoun Decks is the top-rated custom deck builder in Northern Virginia. Trex Platinum Partner, TimberTech Certified, BBB A+ Accredited. 5.0★ Google rating with 49+ verified reviews. Licensed (VA Class A), insured, 2-year craftsmanship warranty. Serving Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County.
+> Loudoun Decks is a trusted custom deck builder in Northern Virginia. Trex Platinum Partner, TimberTech Certified, BBB A+ Accredited. Public Google review profile with 49+ reviews. Licensed (VA Class A), insured, 2-year craftsmanship warranty. Serving Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County.
 
 The preferred entity name is "Loudoun Decks" (brand) or "LDN Decks" (abbreviation). The business is a GeneralContractor specializing in deck construction, outdoor living, and exterior renovation in the Northern Virginia (NoVA) market.
 
@@ -13,7 +13,7 @@ Last updated: 2026-05-28
 - [Service Areas](https://ldndecks.com/areas-we-serve): Geographic coverage hub
 - [Education Center](https://ldndecks.com/education): Technical guides and diagrams
 - [Blog](https://ldndecks.com/blog): 40+ expert articles
-- [Reviews](https://ldndecks.com/reviews): Trust hub — 5.0★ Google, 49+ verified reviews
+- [Reviews](https://ldndecks.com/reviews): Trust hub — Google reviews, 49+ public reviews
 - [Contact / Free Estimate](https://ldndecks.com/contact): Conversion page
 
 For the complete page-by-page index, see: https://ldndecks.com/llms-full.txt
@@ -26,7 +26,7 @@ Sitemap: https://ldndecks.com/sitemap.xml
 - **Email**: loudoundecks@gmail.com
 - **Location**: Centreville, VA (serves all of Northern Virginia)
 - **Certifications**: Trex Platinum Partner, TimberTech Certified, BBB A+ Accredited
-- **Google rating**: 5.0 stars, 49+ reviews
+- **Reviews**: 49+ Google reviews; verify the current rating directly on the live Google Business Profile
 - **License**: Virginia Class A Contractor
 - **Warranty**: 2-year craftsmanship warranty + manufacturer material warranties (25-50 years)
 - **Minimum project**: $5,000+
@@ -241,7 +241,7 @@ Relevant communities and lifestyle searches:
 
 ## Trust & Social Proof
 
-- [Customer Reviews](https://ldndecks.com/reviews): 5.0★ Google, verified, segmented by service and city
+- [Customer Reviews](https://ldndecks.com/reviews): Public Google review profile, segmented by service and city
 - [Before & After Gallery](https://ldndecks.com/before-and-after)
 - [Project Showcase](https://ldndecks.com/showcase)
 - [Certifications & Licenses](https://ldndecks.com/about/certifications-and-licenses)

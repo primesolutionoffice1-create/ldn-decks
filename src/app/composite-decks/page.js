@@ -17,7 +17,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/composite-decks',
-  title: 'Premier Composite Deck Builder NoVA | 5-Star Custom Decks',
+  title: 'Premier Composite Deck Builder NoVA | Premium Custom Decks',
   description: 'Premier composite deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax & Leesburg.',
   image: '/images/img10.jpeg',
 });
@@ -29,7 +29,7 @@ const inclusions = [
   },
   {
     title: "Hidden Fasteners",
-    desc: "A completely smooth, splinter-free surface using industrial-grade hidden clips for a 5-Star luxury finish."
+    desc: "A completely smooth, splinter-free surface using industrial-grade hidden clips for a Premium luxury finish."
   },
   {
     title: "Structural Integrity",
@@ -86,7 +86,7 @@ const expansionSections = [
     paragraphs: [
       "In the competitive Northern Virginia real estate market, homeowners are increasingly moving away from traditional wood in favor of high-performance composite decking. As a leading composite deck builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks has mastered the art and science of these advanced materials. Our clients in Ashburn and Leesburg are looking for more than just a deck; they are looking for a permanent extension of their indoor luxury-one that doesn't require annual maintenance weekends.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. The transition to composite is driven by the desire for longevity and consistent aesthetics. Unlike natural wood, which can warp, splinter, and gray within just a few years of NoVA's humid cycles, composite materials maintain their rich color and structural integrity for decades. This 'set it and forget it' mentality is perfect for busy professionals in Arlington and the growing families in Gainesville.",
-      "As your custom deck builder, we don't just 'install' composite; we engineer it. This includes specialized joist spacing and structural reinforcement that compensates for the unique thermal expansion and weight characteristics of high-end composite boards. When you choose a 5-Star Google Rated local expert, you are ensuring your deck remains a beautiful, safe sanctuary year after year."
+      "As your custom deck builder, we don't just 'install' composite; we engineer it. This includes specialized joist spacing and structural reinforcement that compensates for the unique thermal expansion and weight characteristics of high-end composite boards. When you choose a Review-Supported local expert, you are ensuring your deck remains a beautiful, safe sanctuary year after year."
     ]
   },
   {
@@ -106,7 +106,7 @@ const expansionSections = [
   {
     title: "Low Maintenance vs. Zero Maintenance: Real Expectations",
     paragraphs: [
-      "While many contractors promise 'zero maintenance,' we prefer to be honest with our Northern Virginia clients. A composite deck is 'low-maintenance,' meaning it does not require sanding, staining, painting, or sealing-ever. However, like any outdoor surface in areas like Fairfax Station or Burke, it will collect dust, pollen, and leaves. A simple seasonal wash with mild soap and water is all that's required to keep your 5-Star space looking pristine.",
+      "While many contractors promise 'zero maintenance,' we prefer to be honest with our Northern Virginia clients. A composite deck is 'low-maintenance,' meaning it does not require sanding, staining, painting, or sealing-ever. However, like any outdoor surface in areas like Fairfax Station or Burke, it will collect dust, pollen, and leaves. A simple seasonal wash with mild soap and water is all that's required to keep your Premium space looking pristine.",
       "The beauty of this low-maintenance profile is the time and money it saves. Homeowners in Prince William County can spend their weekends enjoying their outdoor living space rather than laboring over it. Over a 10-year period, the cost of staining and professional sanding for a wood deck can easily exceed $5,000 to $8,000. When you factor in these savings, composite decking often pays for its price premium in just 5 to 7 years.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We provide our clients with a custom maintenance guide for their specific composite brand, ensuring they know exactly how to care for their investment for maximum longevity."
     ]
@@ -115,7 +115,7 @@ const expansionSections = [
     title: "Engineering Excellence in NoVA and Beyond",
     paragraphs: [
       "A composite deck is only as good as the structure beneath it. Because composite boards are more flexible than natural wood, they require a tighter joist spacing (often 12 inches on center vs the standard 16 inches) to prevent any 'bouncing' or sponginess when walking. We specialize in these structural adjustments for homes in Stafford and Arlington, ensuring that your foundation is as high-performance as your surface.",
-      "We handle the entire planning process, from CAD designs to building permits. Whether you are in Loudoun County or Prince William, we ensure that every aspect of your composite build is 'to code' and built to exceed local standards. Our 'Full projects only' philosophy means we manage everything: the design, the frame, the decking, and the final 5-Star walkthrough.",
+      "We handle the entire planning process, from CAD designs to building permits. Whether you are in Loudoun County or Prince William, we ensure that every aspect of your composite build is 'to code' and built to exceed local standards. Our 'Full projects only' philosophy means we manage everything: the design, the frame, the decking, and the final Premium walkthrough.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Choosing a composite deck builder near you who is dedicated to this material means you are getting an expert who knows exactly how to handle thermal expansion, fastener torquing, and color matching in our specific Mid-Atlantic environment."
     ]
   }
@@ -124,7 +124,7 @@ const expansionSections = [
 export default function CompositeDecksPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | 5-Star Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex Platinum Partner &amp; TimberTech Certified. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax &amp; Leesburg." speakable />
+      <WebPageSchema url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | Premium Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex Platinum Partner &amp; TimberTech Certified. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax &amp; Leesburg." speakable />
       <ServiceSchema
         name="Composite Deck Installation"
         description="Expert composite deck installation in Northern Virginia. Trex Platinum Partner and TimberTech Certified. 25-50 year warranties."
@@ -135,12 +135,12 @@ export default function CompositeDecksPage() {
         relatedServices={['https://ldndecks.com/trex-decks', 'https://ldndecks.com/timbertech-decks', 'https://ldndecks.com/services/new-decks']}
       />
       <ServicesHeader 
-        subtext="5-Star Google Rated Specialist"
+        subtext="Review-Supported Specialist"
         title="Premier Composite Deck Builder in Northern Virginia"
         description="Loudoun Decks is the leading composite deck builder in Loudoun County, Fairfax County, and Prince William County. High-performance, low-maintenance outdoor luxury."
       />
 
-      <AboveFoldCTA headline="Planning a custom composite deck in Northern Virginia? Talk to a 5-star Trex Platinum specialist today." />
+      <AboveFoldCTA headline="Planning a custom composite deck in Northern Virginia? Talk to a Trex Platinum specialist today." />
 
       {/* Pricing Anchor - Conversion Filtering */}
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>

@@ -139,7 +139,7 @@ export default function CompositeVsWoodPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Temporary (under 5 years):</strong> Selling soon or planning to replace later.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Natural wood preference:</strong> Some homeowners genuinely prefer real wood and are willing to maintain it. Cedar is better than PT in this case.</li>
           
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           </ul>
 

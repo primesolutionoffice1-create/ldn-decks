@@ -55,7 +55,7 @@ export async function GET() {
       <image:image>
         <image:loc>${SITE_URL}${ci.image}</image:loc>
         <image:title>${escapeXml(ci.title)}</image:title>
-        <image:caption>${escapeXml(ci.title)} Expert guide by Loudoun Decks, Northern Virginia's top-rated deck builder.</image:caption>
+        <image:caption>${escapeXml(ci.title)} Expert guide by Loudoun Decks, Northern Virginia's trusted deck builder.</image:caption>
       </image:image>
     </url>`);
   }

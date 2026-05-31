@@ -159,7 +159,7 @@ export default function DeckBuilderAshburnPage() {
       <ServicesHeader
         subtext="Ashburn, VA's #1 Rated Builder"
         title="Custom Deck Builder in Ashburn, VA"
-        description="Loudoun Decks builds premium composite and wood decks across Brambleton, Broadlands, Ashburn Village and One Loudoun. TrexPro Platinum. 5-Star Google Rated."
+        description="Loudoun Decks builds premium composite and wood decks across Brambleton, Broadlands, Ashburn Village and One Loudoun. TrexPro Platinum. review-supported reputation."
       />
       <ServiceMain
         subtitle="Ashburn's Trusted Choice"
@@ -170,7 +170,7 @@ export default function DeckBuilderAshburnPage() {
           "Brambleton, Broadlands & Ashburn Village ARC submissions handled",
           "Builder-grade deck replacement & composite resurfacing",
           "Multi-level designs for common-area-backing lots",
-          "5-Star Google Rated  -  call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
@@ -257,7 +257,7 @@ export default function DeckBuilderAshburnPage() {
             </li>
           ))}
         
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>

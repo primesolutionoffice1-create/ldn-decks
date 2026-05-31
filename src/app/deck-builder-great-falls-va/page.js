@@ -17,7 +17,7 @@ import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 export const metadata = buildMetadata({
   path: '/deck-builder-great-falls-va',
   title: 'Best Deck Builder in Great Falls, VA | Premium Composite Decks',
-  description: 'Top-rated deck builder for Great Falls, VA. Premium Trex & AZEK decks for $1M+ homes. 5.0★ Google. RPA-zone expertise. Free estimate. Call (571) 655-7207.',
+  description: 'Trusted deck builder for Great Falls, VA. Premium Trex & AZEK decks for $1M+ homes. Google reviews. RPA-zone expertise. Free estimate. Call (571) 655-7207.',
 });
 
 const faqSchema = {
@@ -39,7 +39,7 @@ export default function GreatFallsDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Great Falls" url="https://ldndecks.com/deck-builder-great-falls-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-great-falls-va" name="Best Deck Builder in Great Falls, VA | Premium Composite Decks" description="Top-rated deck builder for Great Falls, VA. Premium Trex &amp; AZEK decks for $1M+ homes. 5.0★ Google. RPA-zone expertise. Free estimate. Call (571) 655-7207." speakable />
+      <WebPageSchema url="https://ldndecks.com/deck-builder-great-falls-va" name="Best Deck Builder in Great Falls, VA | Premium Composite Decks" description="Trusted deck builder for Great Falls, VA. Premium Trex &amp; AZEK decks for $1M+ homes. Google reviews. RPA-zone expertise. Free estimate. Call (571) 655-7207." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -57,7 +57,7 @@ export default function GreatFallsDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>★★★★★ 5.0 on Google · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -148,7 +148,7 @@ export default function GreatFallsDeckBuilderPage() {
             </li>
           ))}
         
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>

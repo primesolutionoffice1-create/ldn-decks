@@ -5,7 +5,7 @@ import { BUSINESS } from '@/lib/business';
 export async function GET() {
   const content = `# Loudoun Decks (LDN Decks)
 
-> Top-rated custom deck builder in Northern Virginia. Trex Platinum Partner and TimberTech Certified Installer serving Loudoun, Fairfax, Prince William, Arlington & Stafford counties.
+> Trusted custom deck builder in Northern Virginia. Trex Platinum Partner and TimberTech Certified Installer serving Loudoun, Fairfax, Prince William, Arlington & Stafford counties.
 
 ## Company Overview
 - **Business**: Loudoun Decks (LDN Decks)
@@ -14,7 +14,7 @@ export async function GET() {
 - **Service area**: Loudoun, Fairfax, Prince William, Arlington & Stafford counties (Northern Virginia)
 - **Phone**: (571) 655-7207
 - **Website**: https://ldndecks.com
-- **Rating**: 5.0/5 stars from ${BUSINESS.aggregateRating.reviewCount}+ Google reviews
+- **Reviews**: ${BUSINESS.aggregateRating.reviewCount}+ Google reviews; verify the current rating directly on the live Google Business Profile
 - **Certifications**: Trex Platinum Partner, TimberTech Certified Installer
 
 ## Services

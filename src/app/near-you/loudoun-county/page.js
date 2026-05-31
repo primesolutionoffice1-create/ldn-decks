@@ -24,8 +24,8 @@ const LocationIcon = () => (
 
 export const metadata = buildMetadata({
   path: "/near-you/loudoun-county",
-  title: "5-Star Deck Builder Loudoun County VA | Free 24h Quote",
-  description: "Trusted deck contractor in Loudoun County. ★ 5.0 Google Rated. We handle all HOA permits & county codes. Get your free itemized estimate in 24 hours!",
+  title: "Premium Deck Builder Loudoun County VA | Free 24h Quote",
+  description: "Trusted deck contractor in Loudoun County. review-backed. We handle all HOA permits & county codes. Get your free itemized estimate in 24 hours!",
 });
 
 const loudounCities = [
@@ -56,7 +56,7 @@ const faqs = [
 export default function LoudounCountyPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/near-you/loudoun-county" name="Deck Builder in Loudoun County, VA" description="Trusted deck contractor in Loudoun County. 5.0 Google Rated. We handle all HOA permits and county codes." speakable />
+      <WebPageSchema url="https://ldndecks.com/near-you/loudoun-county" name="Deck Builder in Loudoun County, VA" description="Trusted deck contractor in Loudoun County. review-backed. We handle all HOA permits and county codes." speakable />
       <LocalBusinessSchema
         city="Loudoun County"
         areaType="AdministrativeArea"
@@ -203,7 +203,7 @@ export default function LoudounCountyPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (5.0★ Google) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>

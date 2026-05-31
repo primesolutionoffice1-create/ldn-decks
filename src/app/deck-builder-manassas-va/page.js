@@ -147,7 +147,7 @@ export default function ManassasDeckBuilderPage() {
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Historic district experience.</strong> Old Town Architectural Review submissions require elevation drawings, material samples and exterior color justification. We've successfully shepherded these through the process.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Trex Certified installer.</strong> Our crews train annually on Trex Enhance, Transcend and Signature systems plus the full TimberTech AZEK line.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Honest pricing for the local market.</strong> Manassas projects don't carry Loudoun overhead. Our quotes reflect that, and we'll show you the line items.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>5-Star Google Rated.</strong> Our reputation in Prince William County is built one finished deck at a time, and we'd rather walk away than rush a rebuild.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>review-supported reputation.</strong> Our reputation in Prince William County is built one finished deck at a time, and we'd rather walk away than rush a rebuild.</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Permits, HOA and Planning Support in Manassas</h2>
@@ -170,7 +170,7 @@ export default function ManassasDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
         </ul>

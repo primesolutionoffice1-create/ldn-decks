@@ -109,7 +109,7 @@ export default function BristowDeckBuilderPage() {
       <ServicesHeader
         subtext="Bristow, VA's Trusted Deck Company"
         title="Custom Deck Builder in Bristow, VA"
-        description="Loudoun Decks builds and resurfaces composite decks across Bristow  -  Bristow Manor, Braemar, Linton Hall, Victory Lakes, Kingsbrooke, Piney Branch. Prince William County permits handled. 5-Star Google Rated."
+        description="Loudoun Decks builds and resurfaces composite decks across Bristow  -  Bristow Manor, Braemar, Linton Hall, Victory Lakes, Kingsbrooke, Piney Branch. Prince William County permits handled. review-supported reputation."
       />
       <ServiceMain
         subtitle="Resurfacing Specialists for Bristow's Upgrade Cycle"
@@ -120,7 +120,7 @@ export default function BristowDeckBuilderPage() {
           "Resurfacing saves 40-60% when the frame is sound",
           "Bristow Manor, Braemar, Linton Hall HOA packages prepared",
           "Prince William County permits  -  2-4 week plan review",
-          "5-Star Google Rated  -  call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img26.jpeg"
         image2="/images/img36.jpeg"
@@ -165,7 +165,7 @@ export default function BristowDeckBuilderPage() {
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
             </li>
           ))}
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
         </ul>

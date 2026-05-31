@@ -8,7 +8,7 @@ const HomeSEOContent = () => {
       <div className={styles.container}>
         <div className={styles.grid}>
           <div className={styles.item}>
-            <h2 className={styles.heading}>Top-Rated Deck Contractor in Northern Virginia</h2>
+            <h2 className={styles.heading}>Trusted Deck Contractor in Northern Virginia</h2>
             <p className={styles.text}>
               Every home in Northern Virginia is unique, from the classic colonials in Vienna to the modern estates in Ashburn. Loudoun Decks is a local <strong>deck contractor</strong> and <strong>deck builder in Northern Virginia</strong> focused on permit-ready designs, clean structural work, and low-maintenance outdoor spaces. If you are comparing deck contractors, start with our <Link href="/how-to-choose-a-deck-builder-northern-virginia">deck builder hiring checklist</Link> and our <Link href="/before-and-after">before-and-after project gallery</Link>.
             </p>

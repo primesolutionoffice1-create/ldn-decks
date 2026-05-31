@@ -109,7 +109,7 @@ export default function DeckBuilderSpringfieldPage() {
       <ServicesHeader
         subtext="Springfield, VA's Trusted Deck Company"
         title="Custom Deck Builder in Springfield, VA"
-        description="Loudoun Decks builds composite decks and screened porches across Kingstowne, West Springfield, Franconia and Saratoga. Fairfax County permits handled. 5-Star Google Rated."
+        description="Loudoun Decks builds composite decks and screened porches across Kingstowne, West Springfield, Franconia and Saratoga. Fairfax County permits handled. review-supported reputation."
       />
       <ServiceMain
         subtitle="Smart Outdoor Living for Springfield Families"
@@ -120,7 +120,7 @@ export default function DeckBuilderSpringfieldPage() {
           "Kingstowne & Springfield HOA submissions handled",
           "Deck + patio combinations with under-deck drainage",
           "Fairfax County permits filed and inspected",
-          "5-Star Google Rated  -  call (571) 655-7207"
+          "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
@@ -165,7 +165,7 @@ export default function DeckBuilderSpringfieldPage() {
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
             </li>
           ))}
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>

@@ -103,7 +103,7 @@ const inputs = [
 ];
 
 const trustSignals = [
-  `${BUSINESS.aggregateRating.ratingValue} Google rating with ${BUSINESS.aggregateRating.reviewCount} reviews`,
+  `${BUSINESS.aggregateRating.reviewCount}+ Google reviews`,
   'A+ BBB Accredited Business',
   'Virginia DPOR licensed contractor',
   'Written, itemized estimates',
@@ -373,7 +373,7 @@ export default function DeckPaymentEstimatorPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Resources</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (5.0★ Google) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>

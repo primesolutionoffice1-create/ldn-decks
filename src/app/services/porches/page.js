@@ -17,15 +17,15 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/porches",
-  title: '5-Star Porch Builder NoVA | Screened & Open Porch Design',
-  description: 'Top-rated porch contractor in Northern Virginia. Custom screened porches, open-air pavilions & front porches. ★ 5.0 Google Rated. Free estimates in 24h.',
+  title: 'Premium Porch Builder NoVA | Screened & Open Porch Design',
+  description: 'Trusted porch contractor in Northern Virginia. Custom screened porches, open-air pavilions & front porches. review-backed. Free estimates in 24h.',
   image: "/images/img16.jpeg",
 });
 
 const inclusions = [
   { title: "Structural Integration", desc: "Designing porch rooflines and foundations that integrate seamlessly with your home's existing architecture in Loudoun and Fairfax." },
   { title: "Seasonal Comfort", desc: "Integrating ceiling fans, recessed lighting, and screening systems to extend your outdoor season across Northern Virginia." },
-  { title: "Durable Finishes", desc: "Using moisture-resistant materials and premium trim to ensure your porch remains a 5-Star space for decades." }
+  { title: "Durable Finishes", desc: "Using moisture-resistant materials and premium trim to ensure your porch remains a Premium space for decades." }
 ];
 
 const porchFAQs = [
@@ -35,7 +35,7 @@ const porchFAQs = [
   { q: "How long does porch construction take in Northern Virginia?", a: "Because porches involve roofing and often electrical work, the construction phase usually takes 3-5 weeks after permit approval." },
   { q: "What are the benefits of an open-air porch vs. screened?", a: "Open-air porches offer maximum airflow and an unobstructed garden feel, while screened porches provide 100% protection from insects and light rain." },
   { q: "Do you build front porches in Arlington?", a: "Yes. Loudoun Decks is a leading front porch remodeler in Arlington, helping homeowners improve curb appeal and functional entry space." },
-  { q: "Do your porches include a 5-Star Google Rated guarantee?", a: "We pride ourselves on being a 5-Star Google Rated deck and porch contractor, ensuring every client in NoVA receives premium communication and quality." },
+  { q: "Do your porches include a Review-Supported guarantee?", a: "We pride ourselves on being a Review-Supported deck and porch contractor, ensuring every client in NoVA receives premium communication and quality." },
   { q: "Will a new porch increase my home's resale value?", a: "In the Northern Virginia market, professional outdoor living spaces like custom porches often see a 70-80% return on investment (ROI)." }
 ];
 
@@ -67,7 +67,7 @@ const expansionSections = [
     paragraphs: [
       "The true magic of a custom porch build in Northern Virginia lies in the interior finishes. We go far beyond standard pressure-treated lumber. Our clients in Lansdowne and Leesburg often opt for tongue-and-groove cedar ceilings, mahogany flooring, or low-maintenance PVC beadboard. These materials elevate the space from a 'porch' to a 'luxury retreat.' We pay close attention to the details-recessed LED lighting on dimmers, high-powered ceiling fans for humid afternoons, and even infrared heaters for crisp November nights.",
       "Security and longevity are built into every finish. We use high-grade sealants and hidden fastener systems to ensure that your porch looks as clean and professional as your home's interior. We also specialize in 'Eze-Breeze' vertical track windows, which allow you to convert your screened porch into a three-season room by sliding clear vinyl panels over the screens to block the wind and cold.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. By choosing a 5-Star Google Rated contractor, you ensure that these technical details-like electrical grounding and structural load-bearing roof connections-are handled by experts who value your family's safety above all else."
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. By choosing a review-supported contractor, you ensure that these technical details-like electrical grounding and structural load-bearing roof connections-are handled by experts who value your family's safety above all else."
     ]
   },
   {
@@ -107,9 +107,9 @@ export default function PorchesPage() {
         relatedServices={['https://ldndecks.com/screened-porch-builder-northern-virginia', 'https://ldndecks.com/services/porches/screened-porch', 'https://ldndecks.com/services/porches/front-porch']}
       />
       <JsonLd data={porchFaqSchema} />
-      <WebPageSchema url="https://ldndecks.com/services/porches" name="5-Star Porch Builder NoVA | Screened &amp; Open Porch Design" description="Top-rated porch contractor in Northern Virginia. Custom screened porches, open-air pavilions &amp; front porches. ★ 5.0 Google Rated. Free estimates in 24h." speakable />
+      <WebPageSchema url="https://ldndecks.com/services/porches" name="Premium Porch Builder NoVA | Screened &amp; Open Porch Design" description="Trusted porch contractor in Northern Virginia. Custom screened porches, open-air pavilions &amp; front porches. review-backed. Free estimates in 24h." speakable />
       <ServicesHeader
-        subtext="5-Star Google Rated Builder"
+        subtext="Review-Supported Builder"
         title="Custom Porch Design & Construction"
         description="Loudoun Decks builds premium screened-in porches, open pavilions, and custom front porches across Loudoun County, Fairfax County, and Prince William County. Most custom porch projects start at $25,000+."
       />

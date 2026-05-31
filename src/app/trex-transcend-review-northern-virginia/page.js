@@ -39,12 +39,6 @@ const reviewSchema = {
     "brand": { "@type": "Brand", "name": "Trex" },
     "description": "Premium composite decking with deep wood grain, protective shell technology, and 25-year warranty.",
   },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "4.8",
-    "bestRating": "5",
-    "worstRating": "1",
-  },
   "author": {
     "@type": "Organization",
     "name": "Loudoun Decks",
@@ -240,7 +234,7 @@ export default function TrexTranscendReviewPage() {
                 <li>You want a proven product with 5+ years of Virginia climate data</li>
                 <li>Zero-maintenance is a priority</li>
               
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (5.0★ Google) →</Link></li>
+            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           </ul>
             </div>
