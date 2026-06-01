@@ -236,6 +236,30 @@ export function trackPhoneClick() {
   });
 }
 
+export function trackEmailClick({ ctaLocation, email } = {}) {
+  if (typeof window === 'undefined') return;
+  push({
+    event: 'email_click',
+    email_source: 'mailto_link',
+    cta_location: ctaLocation || null,
+    email: email || null,
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+  });
+}
+
+export function trackCtaClick({ ctaLocation, ctaLabel, href } = {}) {
+  if (typeof window === 'undefined') return;
+  push({
+    event: 'cta_click',
+    cta_location: ctaLocation || null,
+    cta_label: ctaLabel || null,
+    cta_href: href || null,
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+  });
+}
+
 /**
  * Fires the authoritative lead conversion event on /thank-you page-view
  * after ThankYouTracking verifies the server-issued confirmation token.

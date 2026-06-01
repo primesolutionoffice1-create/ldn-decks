@@ -5,6 +5,7 @@ import { blogPosts } from '@/lib/blogData';
 import { educationArticles } from '@/lib/educationData';
 import { showcaseProjects } from '@/lib/showcaseData';
 import { SITE_URL } from '@/lib/seo';
+import { getAllLocalServicePages } from '@/data/localServicePages';
 
 // Tier dates are fallbacks for entries whose source file we cannot resolve
 // (blog posts, education articles, showcase projects come from data files,
@@ -423,7 +424,17 @@ export default async function sitemap() {
                 freq: "monthly",
         }));
 
-        const allPages = [...staticPages, ...blogPaths, ...educationPaths, ...showcasePaths]
+        // Programmatic local service pages requested for Loudoun, Fairfax and
+        // Prince William. Lower priority than core hubs to keep crawl emphasis
+        // on the strongest pages while still exposing every city/service URL.
+        const localServicePaths = getAllLocalServicePages().map(({ path, service }) => ({
+                path,
+                priority: service.path === 'service' ? 0.82 : 0.78,
+                lastMod: TIER1,
+                freq: "monthly",
+        }));
+
+        const allPages = [...staticPages, ...localServicePaths, ...blogPaths, ...educationPaths, ...showcasePaths]
                 .filter(p => !isExcluded(p.path));
 
         return allPages.map(({ path, lastMod, videos }) => ({
