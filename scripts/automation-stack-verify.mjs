@@ -18,6 +18,7 @@
 const BASE = process.env.BASE_URL || 'http://localhost:3000';
 const SECRET = process.env.VAPI_WEBHOOK_SECRET || '';
 const OWNER_CELL = process.env.OWNER_CELL || '';
+const IS_LOCAL_TARGET = /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?(?:\/|$)/i.test(BASE);
 
 const RED = '\x1b[31m', GREEN = '\x1b[32m', YELLOW = '\x1b[33m', CYAN = '\x1b[36m', RESET = '\x1b[0m';
 
@@ -38,6 +39,14 @@ async function check(name, fn) {
     console.log(`${RED}FAIL${RESET}  ${err.message}`);
     fail++;
   }
+}
+
+async function checkVapi(name, fn) {
+  if (!SECRET && !IS_LOCAL_TARGET) {
+    await check(name, async () => 'skip');
+    return;
+  }
+  await check(name, fn);
 }
 
 function callVapi(path, fnName, params) {
@@ -65,7 +74,7 @@ async function expectJson(res, fn) {
 console.log(`\n${CYAN}╔════════════════════════════════════════════════════════════╗${RESET}`);
 console.log(`${CYAN}║${RESET}  LDN Decks Automation Stack — Verification`);
 console.log(`${CYAN}║${RESET}  Target: ${BASE}`);
-console.log(`${CYAN}║${RESET}  Secret: ${SECRET ? 'set' : 'UNSET (will fail auth on prod)'}`);
+console.log(`${CYAN}║${RESET}  Secret: ${SECRET ? 'set' : 'UNSET (protected Vapi checks will skip on prod)'}`);
 console.log(`${CYAN}╚════════════════════════════════════════════════════════════╝${RESET}\n`);
 
 console.log(`${CYAN}1. Env / Site reachable${RESET}`);
@@ -77,7 +86,7 @@ await check('site responds', async () => {
 
 console.log(`\n${CYAN}2. Pure-compute Vapi functions (no external deps)${RESET}`);
 
-await check('lookup-zip returns Loudoun for 20176', async () => {
+await checkVapi('lookup-zip returns Loudoun for 20176', async () => {
   const res = await callVapi('lookup-zip', 'lookup_zip', { zip: '20176' });
   const json = await expectJson(res);
   if (json.result?.county !== 'Loudoun') throw new Error(`got county=${json.result?.county}`);
@@ -85,7 +94,7 @@ await check('lookup-zip returns Loudoun for 20176', async () => {
   return 'Loudoun ✓';
 });
 
-await check('lookup-zip returns Other for out-of-area zip', async () => {
+await checkVapi('lookup-zip returns Other for out-of-area zip', async () => {
   const res = await callVapi('lookup-zip', 'lookup_zip', { zip: '21218' }); // Baltimore
   const json = await expectJson(res);
   if (json.result?.county !== 'Other') throw new Error(`got county=${json.result?.county}`);
@@ -93,14 +102,14 @@ await check('lookup-zip returns Other for out-of-area zip', async () => {
   return 'Other ✓';
 });
 
-await check('lookup-zip rejects invalid format', async () => {
+await checkVapi('lookup-zip rejects invalid format', async () => {
   const res = await callVapi('lookup-zip', 'lookup_zip', { zip: 'abc' });
   const json = await expectJson(res);
   if (!json.result?.error) throw new Error('expected error in response');
   return 'rejected ✓';
 });
 
-await check('material-pricing returns Trex Transcend range for 400 sqft moderate', async () => {
+await checkVapi('material-pricing returns Trex Transcend range for 400 sqft moderate', async () => {
   const res = await callVapi('material-pricing', 'get_material_pricing_range', {
     material: 'Trex Transcend',
     approx_sqft: 400,
@@ -112,7 +121,7 @@ await check('material-pricing returns Trex Transcend range for 400 sqft moderate
   return `$${json.result.low.toLocaleString()} – $${json.result.high.toLocaleString()}`;
 });
 
-await check('material-pricing handles cable rail add-on', async () => {
+await checkVapi('material-pricing handles cable rail add-on', async () => {
   const res = await callVapi('material-pricing', 'get_material_pricing_range', {
     material: 'Trex Transcend',
     approx_sqft: 400,
@@ -133,7 +142,7 @@ await check('material-pricing handles cable rail add-on', async () => {
   return '+ rail ✓';
 });
 
-await check('material-pricing rejects unknown material', async () => {
+await checkVapi('material-pricing rejects unknown material', async () => {
   const res = await callVapi('material-pricing', 'get_material_pricing_range', {
     material: 'Plywood',
     approx_sqft: 300,
@@ -145,7 +154,7 @@ await check('material-pricing rejects unknown material', async () => {
 
 console.log(`\n${CYAN}3. GHL-dependent Vapi functions${RESET}`);
 
-await check('check-availability returns slots (or fallback)', async () => {
+await checkVapi('check-availability returns slots (or fallback)', async () => {
   const res = await callVapi('check-availability', 'check_calendar_availability', {});
   const json = await expectJson(res);
   if (!Array.isArray(json.result?.slots) || json.result.slots.length === 0) {
@@ -154,7 +163,7 @@ await check('check-availability returns slots (or fallback)', async () => {
   return json.result.fallback ? 'fallback mode' : 'live GHL';
 });
 
-await check('create-lead with minimal fields succeeds', async () => {
+await checkVapi('create-lead with minimal fields succeeds', async () => {
   if (!process.env.GHL_INBOUND_WEBHOOK_URL) return 'skip';
   const res = await callVapi('create-lead', 'create_lead', {
     first_name: 'VerifyTest',
@@ -172,7 +181,7 @@ await check('create-lead with minimal fields succeeds', async () => {
 
 console.log(`\n${CYAN}4. Twilio-dependent functions (SMS to owner)${RESET}`);
 
-await check('alert-owner accepts but Twilio may skip', async () => {
+await checkVapi('alert-owner accepts but Twilio may skip', async () => {
   const res = await callVapi('alert-owner', 'send_sms_to_owner', {
     reason: 'verification test',
     caller_summary: 'Automation script verifying SMS path — ignore.',
