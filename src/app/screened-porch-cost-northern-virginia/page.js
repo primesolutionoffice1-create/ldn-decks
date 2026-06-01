@@ -154,7 +154,7 @@ export default function ScreenedPorchCostPage() {
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],
               ['/services/porches', 'Our Porch Building Services'],
               ['/deck-cost-calculator', 'NoVA Deck Cost Calculator'],
-              ['/deck-financing-northern-virginia', 'Financing in Northern Virginia'],
+              ['/deck-financing', 'Financing in Northern Virginia'],
               ['/how-tariffs-affect-deck-prices-2026', '2026 Tariff Impact on Deck Prices'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value?'],
             ].map(([href, text]) => (

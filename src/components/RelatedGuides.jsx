@@ -12,6 +12,7 @@ import Link from 'next/link';
 const CORNERSTONE_GUIDES = [
   { path: '/deck-builder-northern-virginia', title: 'Deck Builder in Northern Virginia', desc: 'Custom decks, permits, HOA support and local service areas.' },
   { path: '/northern-virginia-deck-building-guide', title: 'Complete Deck Building Guide for NoVA', desc: 'Everything in one place costs, materials, permits, HOA, timeline.' },
+  { path: '/deck-financing', title: 'Deck Financing Options', desc: 'Financing options may be available for eligible deck, resurfacing, repair and composite upgrade projects.' },
   { path: '/deck-payment-estimator', title: 'Deck Payment Estimator', desc: 'Plan payment ranges and project scope before requesting a consultation.' },
   { path: '/composite-deck-cost-northern-virginia', title: 'Composite Deck Cost in Northern Virginia', desc: 'Material pricing, real project costs, and what drives the price.' },
   { path: '/deck-cost-calculator', title: 'Free Deck Cost Calculator', desc: 'Get an instant estimate by material, size, and add-ons.' },
@@ -64,6 +65,7 @@ const CORNERSTONE_GUIDES = [
 ];
 
 const DECK_CORE_PRIORITY = [
+  '/deck-financing',
   '/deck-payment-estimator',
   '/deck-builder-northern-virginia',
   '/deck-permit-loudoun-county-virginia',

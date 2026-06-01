@@ -130,7 +130,7 @@ export default function Footer() {
               <li><Link href="/loudoun-county-hoa-deck-rules">HOA Deck Rules</Link></li>
               <li><Link href="/deck-financing">Deck Financing</Link></li>
               <li><Link href="/outdoor-living-northern-virginia">Outdoor Living</Link></li>
-              <li><Link href="/deck-financing-northern-virginia">Financing in NoVA</Link></li>
+              <li><Link href="/deck-payment-estimator">Payment Estimator</Link></li>
               <li><Link href="/deck-warranty-guide-northern-virginia">Warranty Guide</Link></li>
               <li><Link href="/services/porches/screened-porch">Screened Porches</Link></li>
               <li><Link href="/deck-permit-loudoun-county-virginia">Loudoun Deck Permits</Link></li>

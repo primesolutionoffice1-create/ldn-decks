@@ -6,6 +6,7 @@ import ServicesFooterInfo from '@/components/ServicesFooterInfo';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
+import FinancingCTA from '@/components/FinancingCTA';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
@@ -27,6 +28,7 @@ export default function ServicesPage() {
        </section>
 
        <ServicesGrid />
+       <FinancingCTA />
 
        <section style={{ padding: '4rem 0', background: '#fff', borderTop: '1px solid #eee' }}>
          <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 1.5rem', lineHeight: 1.8, color: '#333' }}>

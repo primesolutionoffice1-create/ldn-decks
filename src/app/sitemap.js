@@ -239,7 +239,8 @@ export default async function sitemap() {
                 { path: "/deck-builder-mclean-va",                     priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-kitchen-builder-northern-virginia",   priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-staining-northern-virginia",            priority: 0.85, lastMod: TIER1, freq: "weekly" },
-                { path: "/deck-financing-northern-virginia",           priority: 0.80, lastMod: TIER1, freq: "weekly" },
+                // /deck-financing-northern-virginia redirects to /deck-financing.
+                // Keep only the canonical financing campaign URL in the sitemap.
 
                 // Tier 1.5b - Deep competitor analysis pages (batch 2)
                 { path: "/how-long-to-build-a-deck-northern-virginia",  priority: 0.90, lastMod: TIER1, freq: "weekly" },

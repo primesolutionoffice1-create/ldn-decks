@@ -236,17 +236,21 @@ A screened porch in Northern Virginia costs $25,000–$70,000+ depending on size
 
 ## Financing & Payment Estimator Pages (2026)
 
+### Deck Financing in Northern Virginia
+URL: https://ldndecks.com/deck-financing
+Canonical financing campaign page for homeowners who want to build now and pay over time. Covers eligible project types such as new decks, deck resurfacing, composite decking upgrades, deck repair, and safety improvements. Uses compliant language: financing options may be available, subject to approval, terms may vary, and Loudoun Decks is not a lender.
+
 ### Monthly Payment on a Composite Deck in Northern Virginia
 URL: https://ldndecks.com/monthly-payment-composite-deck-northern-virginia
-Real monthly payment examples for $15,000–$70,000 composite decks at a sample 8.99% APR over 10 and 15 years. Six-row scenario table covers resurfacing ($15k → $190/mo over 10y) through covered premium deck ($70k → $886/mo over 10y). Includes APR band guidance (8–11% for 680–740 credit), home equity vs unsecured trade-off, and 7-step financing-to-finished-deck timeline.
+Payment-planning page for homeowners comparing composite deck project budgets and possible pay-over-time scenarios. Actual financing terms, rates, approval, and payment amounts depend on the financing provider and applicant qualifications.
 
 ### Trex Deck Cost vs Monthly Payment
 URL: https://ldndecks.com/trex-deck-cost-monthly-payment
-Trex tier breakdown — Enhance $35–$45/sqft installed, Transcend $45–$60/sqft, Signature $60–$80/sqft. Per-tier 350 sqft project total ($18k Enhance → $28k+ Signature) with matching 10y monthly payment at 8.99% APR. 25/50-year warranty comparison and what drives the Trex project amount up or down.
+Trex tier breakdown — Enhance, Transcend, and Signature planning context with installed project-budget examples. Any payment-estimator examples are illustrative only; actual financing terms may vary and are subject to approval.
 
 ### TimberTech & AZEK Deck Cost
 URL: https://ldndecks.com/timbertech-azek-deck-cost-northern-virginia
-Three-tier TimberTech breakdown — EDGE Prime+ $35–$45/sqft, PRO Reserve $45–$60/sqft, AZEK Vintage full PVC $60–$85/sqft. 50-year residential warranty on AZEK Vintage. Colorway gallery (English Walnut, Coastline, Mahogany, Dark Hickory, Weathered Teak). Construction detail (capped composite vs full PVC), monthly payment matrix.
+Three-tier TimberTech breakdown — EDGE Prime+, PRO Reserve, and AZEK Vintage full PVC. Includes warranty, colorway, and construction-detail context for homeowners comparing premium composite/PVC deck upgrades.
 
 ### Composite Deck Cost by Size
 URL: https://ldndecks.com/composite-deck-cost-by-size
@@ -254,15 +258,15 @@ Per-size cost matrix for 300, 400, 500, and 600 sqft composite decks in Northern
 
 ### Covered Deck Cost in Northern Virginia
 URL: https://ldndecks.com/covered-deck-cost-northern-virginia
-Cover type cost breakdown: open pergola ($8k–$18k add-on), solid pergola louvered/shingle ($15k–$35k), full hip/gable roof ($25k–$55k), screened porch conversion ($15k–$45k above the cover). Total project examples by size + monthly payment at 8.99% APR. Permit detail for covered structures (different load calculations, engineering drawings).
+Cover type cost breakdown for open pergolas, solid pergolas, full roof structures, and screened porch conversions. Includes permit detail for covered structures, including load calculations and engineering drawings.
 
 ### Wood vs Composite Deck Long-Term Cost
 URL: https://ldndecks.com/wood-vs-composite-deck-long-term-cost
-15-year total cost comparison for a 350 sqft deck in Northern Virginia. Upfront wood $10.5k–$16k vs composite $22k–$32k. But wood adds $7k–$15k+ in cumulative stain/seal ($360–$700/yr), sanding every 5 years, and board replacement years 8–15. Total 15-year cost often favors composite. Financing math: same APR, different principal.
+15-year total cost comparison for wood versus composite decks in Northern Virginia, including maintenance, sanding, board replacement, and long-term ownership trade-offs. Financing examples, when shown, are illustrative planning scenarios only.
 
 ### Resurface or Replace Before Financing? Decision Guide
 URL: https://ldndecks.com/resurface-or-replace-deck-financing
-Should you resurface or replace your deck before financing? Cost comparison table (350 sqft project: $18k–$28k resurface vs $25k–$38k replace = $7k–$10k saved). Binary structural inspection decision tree (joists/posts/footings/ledger). Financing math at 8.99% APR: $278/mo resurface vs $405/mo replace on the same loan terms.
+Decision guide for whether to resurface or replace before asking about financing options. Covers structural inspection criteria for joists, posts, footings, ledger conditions, resurfacing suitability, and repair-vs-replacement planning.
 
 ### Deck Resurfacing in Northern Virginia
 URL: https://ldndecks.com/deck-resurfacing-northern-virginia
@@ -270,7 +274,7 @@ County-by-county composite deck resurfacing service in Loudoun, Fairfax, Prince 
 
 ### Credit Score for Deck Financing
 URL: https://ldndecks.com/credit-score-deck-financing
-APR ranges by FICO credit score band. 760+ qualifies for 6.99–8.99% APR (excellent tier, promotional 0% offers, longer terms). 700–759 typically gets 8.99–11.99%. 660–699 sees 11.99–15.99%. Below 620 requires HELOC, co-signer, or wait-and-improve. Soft-pull pre-qualification process via Enhancify returns multi-lender offers in ~60 seconds with no credit score impact.
+Credit-readiness guidance for homeowners considering financing options. Explains that approval, rates, terms, and payment amounts are determined by the financing provider and are not guaranteed by Loudoun Decks.
 
 ### Best Time to Finance and Build a Deck in Northern Virginia
 URL: https://ldndecks.com/best-time-to-finance-build-deck-northern-virginia

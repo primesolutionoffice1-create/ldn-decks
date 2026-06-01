@@ -20,6 +20,11 @@ const links = [
     desc: 'Estimate project size, material tier, and budget range.',
   },
   {
+    href: '/deck-financing',
+    title: 'Deck Financing Options',
+    desc: 'Ask about current options for new decks, resurfacing, repair, and composite upgrades.',
+  },
+  {
     href: '/deck-builder-northern-virginia',
     title: 'Deck Builder Northern Virginia',
     desc: 'Custom decks, permits and HOA-ready planning across NoVA.',
