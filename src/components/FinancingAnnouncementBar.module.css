@@ -114,8 +114,8 @@
   line-height: 1;
 }
 
-/* Mobile — stack the sub copy under the headline so it reads cleanly. */
-@media (max-width: 640px) {
+/* Tablet — keep the bar but drop sub copy so it stays single-line. */
+@media (max-width: 1024px) {
   .bar {
     padding: 0.6rem 0.75rem;
     font-size: 0.84rem;
@@ -124,7 +124,7 @@
     font-size: 0.92rem;
   }
   .sub {
-    display: none; /* Keep mobile compact — headline + CTA carry the message */
+    display: none;
   }
   .divider {
     display: none;
@@ -132,5 +132,17 @@
   .cta {
     font-size: 0.76rem;
     padding: 0.2rem 0.6rem;
+  }
+}
+
+/* Phone — hide entirely. The Header renders a fixed mobileTopCallBar
+   ("Get A Free Estimate") at top:0 with z-index 9998 that would otherwise
+   overlay this bar, creating a double-orange / chip-poking-out collision.
+   Mobile users still see financing through (a) the mobile drawer menu
+   entry, and (b) the FinancingTeaser section near the top of the home
+   page. The bar returns at ≥1025px where the fixed call bar is hidden. */
+@media (max-width: 1024px) {
+  .bar {
+    display: none;
   }
 }
