@@ -8,6 +8,7 @@ export default function TrackedLink({
   children,
   ctaLocation,
   ctaLabel,
+  pageContext,
   className,
   style,
   ...rest
@@ -21,9 +22,9 @@ export default function TrackedLink({
       style={style}
       onClick={() => {
         if (isEmail) {
-          trackEmailClick({ ctaLocation, email: href.replace(/^mailto:/, '') });
+          trackEmailClick({ ctaLocation, email: href.replace(/^mailto:/, ''), pageContext });
         } else {
-          trackCtaClick({ ctaLocation, ctaLabel, href });
+          trackCtaClick({ ctaLocation, ctaLabel, href, pageContext });
         }
       }}
       {...rest}
@@ -32,4 +33,3 @@ export default function TrackedLink({
     </Link>
   );
 }
-

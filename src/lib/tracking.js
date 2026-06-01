@@ -176,6 +176,7 @@ export function trackFormSubmit({
   clickIds = {},
   utmParams = {},
   eventId,
+  pageContext,
 } = {}) {
   if (typeof window === 'undefined') return;
   const leadEventId = eventId || `lead_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
@@ -186,6 +187,7 @@ export function trackFormSubmit({
     event_id: leadEventId,
     email: email || null,
     phone: phone || null,
+    ...pageContextPayload(pageContext),
     page_location: window.location.href,
     page_path: window.location.pathname,
   });
@@ -204,6 +206,7 @@ export function trackFormSubmit({
     country: 'US',
     service: service || null,
     timeline: timeline || null,
+    ...pageContextPayload(pageContext),
     gclid: clickIds.gclid || null,
     gbraid: clickIds.gbraid || null,
     wbraid: clickIds.wbraid || null,
@@ -236,25 +239,49 @@ export function trackPhoneClick() {
   });
 }
 
-export function trackEmailClick({ ctaLocation, email } = {}) {
+function pageContextPayload(pageContext = {}) {
+  return {
+    city: pageContext.city || null,
+    county: pageContext.county || null,
+    service: pageContext.service || null,
+    page_type: pageContext.pageType || null,
+  };
+}
+
+export function trackPhoneClickWithContext({ ctaLocation, pageContext } = {}) {
+  if (typeof window === 'undefined') return;
+  push({
+    event: 'phone_click',
+    phone_source: 'tel_link',
+    cta_location: ctaLocation || null,
+    ...pageContextPayload(pageContext),
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+    page: window.location.pathname,
+  });
+}
+
+export function trackEmailClick({ ctaLocation, email, pageContext } = {}) {
   if (typeof window === 'undefined') return;
   push({
     event: 'email_click',
     email_source: 'mailto_link',
     cta_location: ctaLocation || null,
     email: email || null,
+    ...pageContextPayload(pageContext),
     page_location: window.location.href,
     page_path: window.location.pathname,
   });
 }
 
-export function trackCtaClick({ ctaLocation, ctaLabel, href } = {}) {
+export function trackCtaClick({ ctaLocation, ctaLabel, href, pageContext } = {}) {
   if (typeof window === 'undefined') return;
   push({
     event: 'cta_click',
     cta_location: ctaLocation || null,
     cta_label: ctaLabel || null,
     cta_href: href || null,
+    ...pageContextPayload(pageContext),
     page_location: window.location.href,
     page_path: window.location.pathname,
   });

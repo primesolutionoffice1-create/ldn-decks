@@ -38,6 +38,28 @@ function buildFaqs(city, service) {
   ];
 }
 
+function buildQuickAnswers(city, service) {
+  const profile = buildCityProfile(city);
+  return [
+    {
+      q: `How much does ${service.label.toLowerCase()} cost in ${city.city}?`,
+      a: `Most ${service.label.toLowerCase()} projects in ${city.city} fall between $${Number(service.lowPrice).toLocaleString()} and $${Number(service.highPrice).toLocaleString()} depending on size, elevation, materials, railings, stairs, porch or patio tie-ins, and review requirements.`,
+    },
+    {
+      q: `Do I need a permit in ${city.city}?`,
+      a: `${profile.permit}. We confirm the jurisdiction, prepare drawings, and coordinate inspection-ready details before construction starts.`,
+    },
+    {
+      q: 'What material performs best in Northern Virginia?',
+      a: `For low-maintenance projects, Trex, TimberTech, and AZEK usually perform best because they handle moisture, shade, freeze-thaw cycles, and heavy family use better than unfinished wood.`,
+    },
+    {
+      q: 'Who handles HOA approval?',
+      a: `Loudoun Decks prepares the drawings, material selections, colors, and scope language needed for HOA or architectural review in ${city.city} communities.`,
+    },
+  ];
+}
+
 function schemaForPage({ city, service, path }) {
   const url = `${SITE_URL}${path}`;
   const profile = buildCityProfile(city);
@@ -126,8 +148,16 @@ export default function LocalServicePage({ city, serviceKey }) {
   const profile = buildCityProfile(city);
   const path = `/${service.path}/${city.citySlug}`;
   const { faqs, schemas } = schemaForPage({ city, service, path });
+  const quickAnswers = buildQuickAnswers(city, service);
   const nearbyCities = profile.neighborhoods.slice(0, 4);
+  const proofAreas = profile.affluentAreas || profile.neighborhoods.slice(0, 3);
   const allServices = Object.values(servicePageTypes).filter((item) => item.path !== service.path);
+  const pageContext = {
+    city: city.city,
+    county: city.county,
+    service: service.label,
+    pageType: 'local_service',
+  };
 
   return (
     <main className={styles.page}>
@@ -145,11 +175,17 @@ export default function LocalServicePage({ city, serviceKey }) {
           <p className={styles.kicker}>{city.county} Local Service Page</p>
           <h1>{service.h1Noun} in {city.city}, VA</h1>
           <p className={styles.lead}>{cityIntro(city, service)}</p>
+          <div className={styles.trustStrip} aria-label="Loudoun Decks trust signals">
+            <span>TrexPro Platinum</span>
+            <span>TimberTech Certified</span>
+            <span>VA Class A Licensed</span>
+            <span>BBB Accredited</span>
+          </div>
           <div className={styles.ctaRow}>
-            <TrackedLink href="/get-estimate" ctaLocation={`${service.path}_${city.citySlug}_hero`} ctaLabel="Request Local Estimate" className={styles.primaryCta}>
+            <TrackedLink href="/get-estimate" ctaLocation={`${service.path}_${city.citySlug}_hero`} ctaLabel="Request Local Estimate" pageContext={pageContext} className={styles.primaryCta}>
               Request Local Estimate
             </TrackedLink>
-            <CallLink className={styles.secondaryCta}>Call {city.city} Team</CallLink>
+            <CallLink className={styles.secondaryCta} ctaLocation={`${service.path}_${city.citySlug}_hero_phone`} pageContext={pageContext}>Call {city.city} Team</CallLink>
           </div>
         </div>
         <div className={styles.heroImageWrap}>
@@ -177,6 +213,10 @@ export default function LocalServicePage({ city, serviceKey }) {
           <span>Materials</span>
           <strong>{service.materialFocus}</strong>
         </div>
+        <div>
+          <span>Project Fit</span>
+          <strong>{profile.projectFit}</strong>
+        </div>
       </section>
 
       <section className={styles.contentBand}>
@@ -188,6 +228,9 @@ export default function LocalServicePage({ city, serviceKey }) {
             </p>
             <p>
               In {city.county}, the small details matter: permit notes, railing height, footing depth, ledger flashing, HOA color rules, stormwater patterns, and inspection expectations. Loudoun Decks builds these items into the design package so the finished project feels polished and passes review cleanly.
+            </p>
+            <p>
+              For {city.city} addresses near {proofAreas.join(', ')}, we plan the scope around the way the property is actually used: sun exposure, privacy, stair traffic, furniture zones, maintenance expectations, and the level of finish the neighborhood supports.
             </p>
             <h3>Common {city.city} Projects</h3>
             <ul>
@@ -211,6 +254,21 @@ export default function LocalServicePage({ city, serviceKey }) {
         </div>
       </section>
 
+      <section className={styles.answerSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.kicker}>Fast Answers</p>
+          <h2>What {city.city} Homeowners Ask Before Booking</h2>
+        </div>
+        <div className={styles.answerGrid}>
+          {quickAnswers.map((item) => (
+            <article key={item.q} className={styles.answerCard}>
+              <h3>{item.q}</h3>
+              <p>{item.a}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className={styles.localSection}>
         <div>
           <p className={styles.kicker}>Neighborhood-Aware Design</p>
@@ -218,6 +276,7 @@ export default function LocalServicePage({ city, serviceKey }) {
           <p>
             Around {city.city}, outdoor projects often need to satisfy both the homeowner and the community review process. We tailor drawings, material selections, and scope language for the neighborhoods and property types around {nearbyCities.join(', ')} so the project reads as intentional from the street, the rear yard, and the inspection record.
           </p>
+          <p>{profile.proofAngle}</p>
         </div>
         <div className={styles.checklist}>
           <h3>What We Optimize</h3>
@@ -251,18 +310,27 @@ export default function LocalServicePage({ city, serviceKey }) {
           <p>Send a few details and we will respond with the right next step for your address, scope, and review requirements.</p>
         </div>
         <div className={styles.ctaRow}>
-          <TrackedLink href="/get-estimate" ctaLocation={`${service.path}_${city.citySlug}_final`} ctaLabel="Get Free Estimate" className={styles.primaryCta}>
+          <TrackedLink href="/get-estimate" ctaLocation={`${service.path}_${city.citySlug}_final`} ctaLabel="Get Free Estimate" pageContext={pageContext} className={styles.primaryCta}>
             Get Free Estimate
           </TrackedLink>
-          <TrackedLink href="mailto:office@ldndecks.com" ctaLocation={`${service.path}_${city.citySlug}_email`} ctaLabel="Email Office" className={styles.secondaryCta}>
+          <TrackedLink href="mailto:office@ldndecks.com" ctaLocation={`${service.path}_${city.citySlug}_email`} ctaLabel="Email Office" pageContext={pageContext} className={styles.secondaryCta}>
             Email Office
           </TrackedLink>
         </div>
       </section>
 
+      <div className={styles.mobileActionBar} aria-label={`${city.city} ${service.label} contact actions`}>
+        <TrackedLink href="/get-estimate" ctaLocation={`${service.path}_${city.citySlug}_mobile_sticky`} ctaLabel="Estimate" pageContext={pageContext}>
+          Estimate
+        </TrackedLink>
+        <CallLink ctaLocation={`${service.path}_${city.citySlug}_mobile_phone`} pageContext={pageContext}>
+          Call
+        </CallLink>
+      </div>
+
       <NamedAuthor context={`${service.label} in ${city.city}, ${city.county}`} lastUpdated="2026-06-01" />
       <RelatedGuides currentPath={path} />
-      <ContactHome />
+      <ContactHome pageContext={pageContext} />
     </main>
   );
 }

@@ -94,6 +94,26 @@
   background: #fff;
 }
 
+.trustStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.trustStrip span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid #e6ded7;
+  border-radius: 8px;
+  background: #fcfaf8;
+  color: #2a2623;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
 .heroImageWrap {
   position: relative;
   min-height: 470px;
@@ -108,7 +128,7 @@
 
 .quickGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
   max-width: 1220px;
   margin: 0 auto;
@@ -138,7 +158,8 @@
 }
 
 .contentBand,
-.faqSection {
+.faqSection,
+.answerSection {
   padding: 72px 32px;
   background: #fff;
 }
@@ -248,6 +269,38 @@
   margin: 0 auto;
 }
 
+.answerSection {
+  background: #f8f6f2;
+}
+
+.answerGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.answerCard {
+  border: 1px solid #e6ded7;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
+}
+
+.answerCard h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.answerCard p {
+  margin: 0;
+  color: #4f4842;
+  font-size: 0.94rem;
+  line-height: 1.62;
+}
+
 .faqCard {
   border: 1px solid #e6ded7;
   border-radius: 8px;
@@ -282,6 +335,10 @@
   margin-top: 0;
 }
 
+.mobileActionBar {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .hero,
   .contentGrid,
@@ -299,8 +356,9 @@
   }
 
   .quickGrid,
+  .answerGrid,
   .faqGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .finalCta {
@@ -312,6 +370,7 @@
   .hero,
   .quickGrid,
   .contentBand,
+  .answerSection,
   .faqSection,
   .localSection,
   .finalCta {
@@ -322,5 +381,40 @@
   .primaryCta,
   .secondaryCta {
     width: 100%;
+  }
+
+  .quickGrid,
+  .answerGrid,
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mobileActionBar {
+    position: sticky;
+    z-index: 20;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 10px 12px;
+    border-top: 1px solid #e6ded7;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+  }
+
+  .mobileActionBar a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border-radius: 8px;
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .mobileActionBar a:last-child {
+    background: #211d1a;
   }
 }

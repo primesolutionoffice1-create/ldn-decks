@@ -2,6 +2,8 @@
 
 Date: 2026-05-31
 
+Last verified: 2026-06-01
+
 ## Project
 
 - Project ID: `potent-howl-416318`
@@ -22,6 +24,17 @@ Date: 2026-05-31
 - Confirmed there are no Google API keys in this project.
 - Confirmed there are no user-managed service account keys for the default Compute Engine service account.
 - Added local non-secret project values to `.env.local`; local env files remain ignored and must not be committed.
+
+## Verification Evidence
+
+Verified on 2026-06-01 with `gcloud`:
+
+- `gcloud services api-keys list --project=potent-howl-416318` returned `[]`.
+- `gcloud services list --enabled --project=potent-howl-416318` did not include `generativelanguage.googleapis.com`, `aiplatform.googleapis.com`, or Maps APIs.
+- `gcloud billing budgets list` confirmed `LDN Decks Monthly Guardrail` at `$25 USD`.
+- `gcloud projects get-iam-policy potent-howl-416318` showed no broad `roles/editor` binding.
+- `gcloud iam service-accounts list` showed one default Compute Engine service account.
+- `gcloud iam service-accounts keys list --managed-by=user` for the default Compute Engine service account returned `[]`.
 
 ## Billing Guardrail
 
