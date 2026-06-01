@@ -12,7 +12,7 @@ import { getClickIds, getFbp, getUtmParams, CLICK_ID_KEYS, UTM_KEYS } from '@/li
 // Returning the same shape from every form means GTM, Meta CAPI, and the
 // /thank-you proof-of-conversion event all see a single, deduplicatable
 // lead — regardless of which form the user submitted.
-export function useLeadSubmit({ formType = 'quote' } = {}) {
+export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
   const router = useRouter();
   const hasTracked = useRef(false);
 
@@ -106,6 +106,7 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
           clickIds,
           utmParams,
           eventId,
+          pageContext,
         });
       }
       if (result.confirmationToken) {
