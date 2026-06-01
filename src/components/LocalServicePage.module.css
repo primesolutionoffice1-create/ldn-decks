@@ -78,6 +78,7 @@
   justify-content: center;
   min-height: 46px;
   padding: 0 18px;
+  box-sizing: border-box;
   border-radius: 8px;
   font-weight: 800;
   text-decoration: none;
@@ -381,6 +382,11 @@
   .primaryCta,
   .secondaryCta {
     width: 100%;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .quickGrid,
