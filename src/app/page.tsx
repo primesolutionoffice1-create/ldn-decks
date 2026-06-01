@@ -159,9 +159,9 @@ export default function Home() {
             <Hero />
             <DeferredPromoModal />
             <TrustSection />
+            <FinancingTeaser />
             <Features />
             <CalculatorCTA />
-            <FinancingTeaser />
             <MaterialPartners />
             <Introduction />
             <HowItWorks />

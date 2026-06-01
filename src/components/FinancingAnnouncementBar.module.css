@@ -1,0 +1,136 @@
+/* FinancingAnnouncementBar — site-wide top strip.
+   Brand-orange (--site-color #d14817) with subtle gradient and a soft shimmer
+   accent. Persistent on every page that renders the Header. */
+
+.bar {
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, #d14817 0%, #e15a26 50%, #d14817 100%);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  padding: 0.65rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s ease, filter 0.2s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bar:hover {
+  background: linear-gradient(90deg, #b13a13 0%, #c94a17 50%, #b13a13 100%);
+  filter: brightness(1.05);
+}
+
+/* Subtle moving shimmer to catch the eye without being obnoxious. */
+.bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 100%
+  );
+  animation: shimmer 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0%   { left: -100%; }
+  60%  { left: 100%; }
+  100% { left: 100%; }
+}
+
+.inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.icon {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.headline {
+  font-weight: 800;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+}
+
+.divider {
+  opacity: 0.55;
+  font-weight: 400;
+}
+
+.sub {
+  font-weight: 500;
+  opacity: 0.95;
+  font-size: 0.88rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 0.22rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  margin-left: 0.4rem;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.bar:hover .cta {
+  background: #fff;
+  color: var(--site-color, #d14817);
+  transform: translateX(2px);
+}
+
+.arrow {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Mobile — stack the sub copy under the headline so it reads cleanly. */
+@media (max-width: 640px) {
+  .bar {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.84rem;
+  }
+  .headline {
+    font-size: 0.92rem;
+  }
+  .sub {
+    display: none; /* Keep mobile compact — headline + CTA carry the message */
+  }
+  .divider {
+    display: none;
+  }
+  .cta {
+    font-size: 0.76rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
