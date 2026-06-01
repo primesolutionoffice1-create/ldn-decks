@@ -45,7 +45,7 @@ const nextConfig = {
       { source: '/tag/loudoun-county', destination: '/near-you/loudoun-county', permanent: true },
       { source: '/tag/gazebos', destination: '/services/gazebo-pergola', permanent: true },
       { source: '/composite-deck-builder-loudoun-2', destination: '/deck-builders-loudoun', permanent: true },
-      { source: '/contact-us', destination: '/contact', permanent: true },
+      { source: '/contact-us', destination: '/contact', statusCode: 301 },
       { source: '/best-composite-decking-virginia-trex-timbertech-fiberon', destination: '/trex-vs-timbertech-vs-azek', permanent: true },
       { source: '/timbertech-azek-decking', destination: '/timbertech-decks', permanent: true },
       // BEAST plan Cluster H: legacy /blog/ URL competing with apex owner at #4
