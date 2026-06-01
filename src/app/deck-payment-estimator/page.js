@@ -189,6 +189,15 @@ export default function DeckPaymentEstimatorPage() {
         </div>
       </section>
 
+      <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
+        <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 1.5rem' }}>
+          <p style={{ fontWeight: 700, marginBottom: '0.5rem' }}>Quick Answer:</p>
+          <p style={{ margin: 0, lineHeight: 1.7 }}>
+            A realistic deck payment starts with the full project amount, not just decking boards. Include demolition, framing repair, stairs, railings, lighting, permits, HOA documents, and county review assumptions before comparing monthly payments. Use the <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck cost calculator</Link> first, confirm permit constraints, then model the monthly payment here.
+          </p>
+        </div>
+      </section>
+
       <article style={{ padding: '3rem 0' }}>
         <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 1.5rem' }}>
 
@@ -252,6 +261,31 @@ export default function DeckPaymentEstimatorPage() {
             >
               Request the written estimate to confirm the final project amount
             </EstimatorTrackedLink>
+          </div>
+
+          <h2 style={S.h2}>Do Not Finance the First Rough Number</h2>
+          <p style={{ ...S.p, color: '#555' }}>
+            The cleanest financing path is cost first, permit second, payment third. Northern Virginia deck budgets move when a county reviewer requires deeper footings, a freestanding design, extra stair landings, upgraded railings, or revised HOA documents. Before you decide whether a monthly number fits, connect the estimate to the review path:
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1rem', marginBottom: '1rem' }}>
+            {[
+              { title: 'Permit path', body: 'Check the county guide before finalizing the amount.', links: [['/deck-permit-loudoun-county-virginia', 'Loudoun'], ['/deck-permit-fairfax-county-virginia', 'Fairfax'], ['/deck-permit-prince-william-county-virginia', 'Prince William'], ['/deck-permit-arlington-county-virginia', 'Arlington']] },
+              { title: 'Structure path', body: 'Validate footings, beams, joists, loads, stairs, and ledger attachment.', links: [['/tools/deck-footing-depth-calculator-virginia', 'Footings'], ['/tools/deck-beam-span-calculator-virginia', 'Beams'], ['/tools/deck-load-calculator-virginia', 'Loads'], ['/tools/deck-stair-calculator', 'Stairs']] },
+              { title: 'Value path', body: 'Compare payment comfort against resale and long-term maintenance value.', links: [['/deck-roi-calculator-northern-virginia', 'ROI calculator'], ['/wood-vs-composite-deck-long-term-cost', '15-year cost'], ['/does-a-deck-add-value-to-your-home', 'Home value']] },
+            ].map((group) => (
+              <div key={group.title} style={{ background: '#fff', border: '1px solid #e5e5e5', borderRadius: 12, padding: '1.35rem' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 800, marginTop: 0, marginBottom: '0.5rem' }}>{group.title}</h3>
+                <p style={{ fontSize: '0.92rem', color: '#555', lineHeight: 1.6, marginBottom: '0.85rem' }}>{group.body}</p>
+                <p style={{ margin: 0, lineHeight: 1.8 }}>
+                  {group.links.map(([href, label], i) => (
+                    <React.Fragment key={href}>
+                      {i > 0 ? ' · ' : ''}
+                      <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{label}</Link>
+                    </React.Fragment>
+                  ))}
+                </p>
+              </div>
+            ))}
           </div>
 
           {/* ============ FROM ESTIMATE TO REAL RATE ============ */}

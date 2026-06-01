@@ -50,7 +50,7 @@ export default function DeckROICalculatorPage() {
         path="/deck-roi-calculator-northern-virginia"
         image="/images/img13.jpeg"
         datePublished="2026-04-26"
-        dateModified="2026-04-26"
+        dateModified="2026-05-31"
       />
 
       {/* Hero */}
@@ -197,6 +197,15 @@ export default function DeckROICalculatorPage() {
             </table>
           </div>
           <p style={S.p}><strong>Pattern:</strong> Higher home values correlate with higher deck ROI. In markets where the median home exceeds $600,000, buyers actively seek and pay for outdoor living features. Below that threshold, decks still add value but the percentage return decreases.</p>
+
+          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>ROI Planning Path: Cost, Permit, Payment</h2>
+          <p style={S.p}>The highest ROI deck is not always the largest deck. It is the project that matches the home value, passes permit review cleanly, avoids structural surprises, and lands in a payment range the homeowner can keep comfortable. Use this sequence before locking the final scope:</p>
+          <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem', lineHeight: 1.9 }}>
+            <li><strong>Model the full project amount</strong> with the <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia deck cost calculator</Link>, including stairs, railings, lighting, demolition, and access.</li>
+            <li><strong>Confirm the county review path</strong> using the <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun</Link>, <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax</Link>, <Link href="/deck-permit-prince-william-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Prince William</Link>, or <Link href="/deck-permit-arlington-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Arlington</Link> permit guide before over-investing in a design that may need revision.</li>
+            <li><strong>Pressure-test the structure</strong> with the <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>footing</Link>, <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>beam</Link>, <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>joist</Link>, <Link href="/tools/deck-load-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>load</Link>, and <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>stair</Link> calculators.</li>
+            <li><strong>Translate the final amount into cash flow</strong> with the <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck payment estimator</Link> after the structural and permit assumptions are real.</li>
+          </ol>
 
           {/* ===== SECTION 6: Real Estate Agent Perspective ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>What Northern Virginia Real Estate Agents Say</h2>
