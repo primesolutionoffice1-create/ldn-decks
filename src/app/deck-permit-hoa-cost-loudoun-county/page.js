@@ -226,6 +226,9 @@ export default function DeckPermitHoaCostLoudounPage() {
             <li>Material spec — composite brand, framing lumber grade, fastener type</li>
             <li>HOA approval letter (when applicable)</li>
           </ul>
+          <p style={S.p}>
+            For the structural pieces that tend to slow reviews, cross-check the <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>, <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck joist span calculator</Link>, <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck beam span calculator</Link>, and <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link> before finalizing the HOA packet. Those details help align the aesthetic approval with the county permit review.
+          </p>
 
           <h2 style={S.h2}>Related Permit & HOA Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0, marginBottom: '1.5rem' }}>
@@ -237,6 +240,11 @@ export default function DeckPermitHoaCostLoudounPage() {
             <li style={{ marginBottom: '0.5rem' }}>
               <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
                 Deck Permits in Fairfax County →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/deck-permit-prince-william-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Deck Permits in Prince William County →
               </Link>
             </li>
             <li style={{ marginBottom: '0.5rem' }}>

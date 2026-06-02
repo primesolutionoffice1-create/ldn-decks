@@ -6,6 +6,7 @@ import "./globals.css";
 import Script from "next/script";
 import StructuredData from "../components/StructuredData";
 import WebVitalsReporter from "../components/WebVitalsReporter";
+import MetaPixelRouteTracker from "@/components/MetaPixelRouteTracker";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -200,6 +201,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <SpeedInsights />
                     <Analytics />
                     <WebVitalsReporter />
+                    <MetaPixelRouteTracker />
         </ContactProvider>
       </body>
     </html>

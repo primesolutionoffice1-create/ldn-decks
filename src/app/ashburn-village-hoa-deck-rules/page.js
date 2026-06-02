@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -16,13 +17,37 @@ export const metadata = buildMetadata({
   description: 'Replacing or building a deck in Ashburn Village? Learn how the Ashburn Village HOA review works, how it pairs with the Loudoun County permit, and how to get approved.',
 });
 
+const PATH = '/ashburn-village-hoa-deck-rules';
+
+const faqs = [
+  {
+    q: "Do I need HOA approval to replace a deck in Ashburn Village?",
+    a: "Yes. Even when you are replacing an existing deck, Ashburn Village requires approval through the community association's design review before work begins, because the new material, color, railing style, and any footprint change are exterior modifications. This is separate from the Loudoun County building permit.",
+  },
+  {
+    q: "Does replacing an old wood deck with composite need approval?",
+    a: "Yes. Switching from wood to composite changes the deck's color, texture, fascia, and railing system, so the new material and color samples should be included in the Ashburn Village design-review packet.",
+  },
+  {
+    q: "How long does Ashburn Village deck approval take?",
+    a: "Most Northern Virginia HOA design committees review complete applications within roughly 30 to 45 days. Submitting the site plan, scaled drawings, material samples, and contractor information early is the best way to keep a replacement project moving.",
+  },
+  {
+    q: "Does an Ashburn Village deck replacement also need a Loudoun County permit?",
+    a: "Usually yes. Deck replacement commonly touches railings, stairs, ledger attachment, framing, or footings, so the county permit and inspections should be planned alongside the HOA approval.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "Do I need HOA approval to replace a deck in Ashburn Village?", acceptedAnswer: { "@type": "Answer", text: "Yes. Even when you are replacing an existing deck, Ashburn Village requires approval through the community association's design review before work begins, because the new material, color, and railing style are an exterior change. This is separate from the Loudoun County building permit." } },
-    { "@type": "Question", name: "Does replacing an old wood deck with composite need approval?", acceptedAnswer: { "@type": "Answer", text: "Yes. Switching from wood to composite changes the deck's color, texture, and railing — all things community design review covers. Submit the new material and color samples for approval, and confirm current design guidelines with the Ashburn Village association." } },
-    { "@type": "Question", name: "How long does Ashburn Village deck approval take?", acceptedAnswer: { "@type": "Answer", text: "Most Northern Virginia HOA design committees review applications within roughly 30 to 45 days. Submitting a complete packet — application, scaled plan, drawings, and material samples — early and alongside the county permit is the best way to keep a replacement project moving." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `https://ldndecks.com${PATH}#faq`,
+  url: `https://ldndecks.com${PATH}`,
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 } };
@@ -31,7 +56,15 @@ export default function AshburnVillageHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/ashburn-village-hoa-deck-rules" name="Ashburn Village HOA Deck Rules &amp; Approval Guide" description="Replacing or building a deck in Ashburn Village? Learn how the Ashburn Village HOA review works, how it pairs with the Loudoun County permit, and how to get approved." speakable />
+      <ArticleSchema
+        title="Ashburn Village HOA Deck Rules & Approval Guide"
+        description="Ashburn Village deck replacement approval guide covering HOA review, Loudoun County permits, composite material samples, stairs, ledger attachment, and project timing."
+        path={PATH}
+        image="/images/img17.jpeg"
+        datePublished="2026-05-26"
+        dateModified="2026-06-02"
+      />
+      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Ashburn Village HOA Deck Rules &amp; Approval Guide" description="Replacing or building a deck in Ashburn Village? Learn how the Ashburn Village HOA review works, how it pairs with the Loudoun County permit, and how to get approved." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -64,16 +97,13 @@ export default function AshburnVillageHoaDeckRulesPage() {
 
           <h2 style={S.h2}>Two Approvals You Need</h2>
           <p style={S.p}>An Ashburn Village deck project requires <strong>two separate approvals</strong>. The <strong>HOA design review</strong> controls appearance &mdash; material, color, and style. The <strong>Loudoun County building permit</strong> controls structure and safety &mdash; footings, framing, ledger attachment, and railings. Replacing a deck almost always requires a permit, because guardrails, stairs, and decking are structural. Both can be pursued together; see our <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)' }}>Loudoun County deck permit guide</Link>.</p>
+          <p style={S.p}>For replacement projects, the permit reviewer cares most about the hidden structure: <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)' }}>ledger flashing and attachment</Link>, <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)' }}>joist spans</Link>, beam sizing, stair geometry, and railing connections. If stairs are changing, review the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)' }}>Virginia deck stair code guide</Link> and <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)' }}>deck stair construction diagram</Link> before the HOA packet is finalized.</p>
 
           <h2 style={S.h2}>How Loudoun Decks Handles Ashburn Village Approvals</h2>
           <p style={S.p}>We replace and rebuild decks throughout Ashburn Village, and we manage both approvals for you. We prepare the HOA design-review packet with the new material and color samples, submit the Loudoun County permit, and coordinate every inspection &mdash; including the structural checks that a replacement triggers. See more on our <Link href="/near-you/loudoun-county" style={{ color: 'var(--color-primary)' }}>Loudoun County page</Link> and <Link href="/deck-builder-ashburn-va" style={{ color: 'var(--color-primary)' }}>Ashburn deck builder page</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "Do I need approval to replace an existing deck?", a: "Yes. A replacement changes material, color, and railing style, so Ashburn Village design review is required before work begins — separate from the county permit." },
-            { q: "Does a wood-to-composite swap need approval?", a: "Yes. The new color and texture are an exterior change. Submit material and color samples, and confirm current guidelines with the association." },
-            { q: "Can Loudoun Decks handle the HOA paperwork?", a: "Yes. We prepare the full design-review packet and county permit application and coordinate inspections. Call 571-655-7207 to start." },
-          ].map((faq, i) => (
+          {faqs.map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
               <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
@@ -86,6 +116,9 @@ export default function AshburnVillageHoaDeckRulesPage() {
               ['/loudoun-county-hoa-deck-rules', 'Loudoun County HOA Deck Rules'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
               ['/deck-permit-hoa-cost-loudoun-county', 'Loudoun Permit + HOA Cost Breakdown'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Flashing & Attachment Guide'],
+              ['/education/deck-stair-code-rise-run-virginia', 'Virginia Deck Stair Code Guide'],
+              ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
               ['/ashburn-composite-deck-cost-financing', 'Ashburn Composite Deck Cost &amp; Financing'],
               ['/deck-resurfacing-vs-replacement', 'Deck Resurfacing vs Replacement'],
               ['/deck-builder-ashburn-va', 'Deck Builder in Ashburn'],

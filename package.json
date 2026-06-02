@@ -22,6 +22,7 @@
         "seo:audit-breadcrumbs": "node scripts/audit-breadcrumbs.mjs",
         "seo:verify-robots": "node scripts/verify-robots-indexnow.mjs",
         "seo:rank-track": "node scripts/rank-tracker-report.mjs",
+        "ads:verify-meta-route": "node scripts/verify-meta-pixel-route-tracking.mjs",
         "automation:verify": "node scripts/automation-stack-verify.mjs",
         "verify:financing": "node scripts/verify-financing-ui.mjs"
     },

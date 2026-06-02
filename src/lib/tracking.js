@@ -150,6 +150,28 @@ function trackMetaLead({ eventId } = {}) {
   sendWhenReady();
 }
 
+export function trackMetaPageView() {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  let attempts = 0;
+
+  function sendWhenReady() {
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'PageView');
+      return;
+    }
+
+    attempts += 1;
+    if (attempts < 10) {
+      window.setTimeout(sendWhenReady, 500);
+    }
+  }
+
+  sendWhenReady();
+}
+
 /**
  * Track quote form submission
  * Fires: GA4 generate_lead + Google Ads Form Lead + Enhanced Conversions.
