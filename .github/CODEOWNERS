@@ -1,0 +1,32 @@
+# Code ownership — anyone editing these files must have the listed owner(s)
+# review and approve the PR before it can merge into main.
+#
+# Format: <path-pattern>  @owner1 @owner2
+#
+# Update @primesolutionoffice1-create below to the actual GitHub handles
+# (you can list multiple, separated by spaces).
+
+# Project instructions — any change touches how every agent works.
+/CLAUDE.md                                                                    @primesolutionoffice1-create
+
+# Financing UI — protected so neither agent can quietly remove it.
+/src/components/FinancingAnnouncementBar.jsx                                  @primesolutionoffice1-create
+/src/components/FinancingAnnouncementBar.module.css                           @primesolutionoffice1-create
+/src/components/FinancingTeaser.jsx                                           @primesolutionoffice1-create
+/src/components/FinancingTeaser.module.css                                    @primesolutionoffice1-create
+/src/components/EnhancifyPaymentCalculator.jsx                                @primesolutionoffice1-create
+/src/components/EnhancifyWidget.jsx                                           @primesolutionoffice1-create
+
+# Site-wide wiring files that mount the financing components.
+/src/app/LayoutContent.jsx                                                    @primesolutionoffice1-create
+/src/app/page.tsx                                                             @primesolutionoffice1-create
+
+# Header is shared infrastructure but holds the financing pill + mobile entry.
+/src/components/Header.jsx                                                    @primesolutionoffice1-create
+
+# The financing verification guard itself.
+/scripts/verify-financing-ui.mjs                                              @primesolutionoffice1-create
+/.github/workflows/financing-ui-guard.yml                                     @primesolutionoffice1-create
+
+# Branch-protection / ownership rules.
+/.github/CODEOWNERS                                                           @primesolutionoffice1-create

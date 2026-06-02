@@ -22,7 +22,8 @@
         "seo:audit-breadcrumbs": "node scripts/audit-breadcrumbs.mjs",
         "seo:verify-robots": "node scripts/verify-robots-indexnow.mjs",
         "seo:rank-track": "node scripts/rank-tracker-report.mjs",
-        "automation:verify": "node scripts/automation-stack-verify.mjs"
+        "automation:verify": "node scripts/automation-stack-verify.mjs",
+        "verify:financing": "node scripts/verify-financing-ui.mjs"
     },
     "dependencies": {
         "@vercel/analytics": "^1.6.1",
