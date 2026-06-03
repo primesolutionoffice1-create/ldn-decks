@@ -20,11 +20,23 @@ Run:
 
 ```bash
 npm run seo:daily-check
+npm run seo:deployment-guard
 ```
 
 Passing means:
-- production sitemap is reachable and has at least 175 URLs;
+- production sitemap is reachable and has at least 721 URLs;
+- production sitemap has at least 464 local-service URLs;
 - priority pages are in sitemap;
 - priority pages return 200, have no noindex, and have matching canonicals;
 - `/social` still contains the verified citation signals;
 - IndexNow accepts the current URL submission.
+
+## Weekly authority pack
+
+Run:
+
+```bash
+npm run local:authority-pack
+```
+
+This writes a copy-paste-ready GBP/review/citation/backlink/GSC checklist to `docs/seo-ops/generated/`.

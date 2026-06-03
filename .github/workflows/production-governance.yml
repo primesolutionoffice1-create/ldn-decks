@@ -49,3 +49,6 @@ jobs:
 
       - name: Link audit
         run: npm run seo:link-audit
+
+      - name: Local SEO deployment guard
+        run: npm run seo:deployment-guard

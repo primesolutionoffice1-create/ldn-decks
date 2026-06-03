@@ -9,7 +9,9 @@ Win more qualified deck, porch, patio, pergola, and outdoor-living leads across 
 ## Weekly Website Cadence
 
 - Run `npm run seo:dominance` every Monday and save the generated dashboard in the vault.
+- Run `npm run seo:deployment-guard` after every deployment. Passing means the live sitemap still has at least 721 URLs and 464 local-service URLs.
 - Run `npm run seo:link-audit`, `npm run seo:validate-schema`, and `npm run seo:verify-robots -- --submit` after every SEO deployment.
+- Run `npm run local:authority-pack` weekly to generate the GBP, review, citation, backlink, GSC, and AI/entity action pack.
 - Inspect these priority URLs in Google Search Console first:
   - `https://ldndecks.com/service/ashburn`
   - `https://ldndecks.com/composite-decks/leesburg`
