@@ -24,9 +24,9 @@ const MapIcon = () => (
   </svg>
 );
 
-export default function ContactHome() {
+export default function ContactHome({ pageContext } = {}) {
   const [status, setStatus] = useState(null);
-  const submit = useLeadSubmit({ formType: 'homepage' });
+  const submit = useLeadSubmit({ formType: pageContext ? 'local_service' : 'homepage', pageContext });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,7 +55,7 @@ export default function ContactHome() {
               <div className={styles.iconBox}><PhoneIcon /></div>
               <div className={styles.infoText}>
                 <span>Call Us Anytime</span>
-                <CallLink display="+1 (571) 655-7207" />
+                <CallLink display="+1 (571) 655-7207" ctaLocation={pageContext ? 'contact_home_phone' : undefined} pageContext={pageContext} />
               </div>
             </div>
             

@@ -1,4 +1,9 @@
-const ORIGIN = 'https://ldndecks.com';
+const ORIGIN = process.env.SEO_AUDIT_ORIGIN || 'https://ldndecks.com';
+const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 721);
+const EXPECTED_LOCAL_SERVICE_URLS = Number(process.env.EXPECTED_LOCAL_SERVICE_URLS || 464);
+const KNOWN_BAD_SITEMAP_URLS = Number(process.env.KNOWN_BAD_SITEMAP_URLS || 260);
+
+const localServicePattern = /\/(service|composite-decks|wood-decks|deck-repair|screened-porches|pergolas|patios|outdoor-living)\//;
 
 const priorityPaths = [
   '/',
@@ -83,8 +88,12 @@ const failures = [];
 try {
   const sitemap = await getText(`${ORIGIN}/sitemap.xml`);
   const sitemapUrlCount = (sitemap.text.match(/<url>/g) || []).length;
+  const sitemapUrls = [...sitemap.text.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+  const localServiceUrlCount = sitemapUrls.filter((url) => localServicePattern.test(url)).length;
   if (!summarizeCheck('sitemap.xml is reachable', sitemap.ok, `${sitemap.status}`)) failures.push('sitemap status');
-  if (!summarizeCheck('sitemap URL count is healthy', sitemapUrlCount >= 175, `${sitemapUrlCount} URLs`)) failures.push('sitemap count');
+  if (!summarizeCheck('known 260-url sitemap regression absent', sitemapUrlCount !== KNOWN_BAD_SITEMAP_URLS, `${sitemapUrlCount} URLs`)) failures.push('known 260-url regression');
+  if (!summarizeCheck('sitemap URL count is healthy', sitemapUrlCount >= EXPECTED_SITEMAP_URLS, `${sitemapUrlCount} URLs`)) failures.push('sitemap count');
+  if (!summarizeCheck('local-service URL count is healthy', localServiceUrlCount >= EXPECTED_LOCAL_SERVICE_URLS, `${localServiceUrlCount} URLs`)) failures.push('local service sitemap count');
 
   for (const path of priorityPaths) {
     const loc = `${ORIGIN}${path === '/' ? '' : path}`;
@@ -135,7 +144,7 @@ try {
   } catch {
     indexNowResult = null;
   }
-  const indexNowOk = indexNow.ok && indexNowResult?.result?.ok === true && indexNowResult?.submitted >= 175;
+  const indexNowOk = indexNow.ok && indexNowResult?.result?.ok === true && indexNowResult?.submitted >= EXPECTED_SITEMAP_URLS;
   if (!summarizeCheck('IndexNow submission accepted', indexNowOk, indexNow.text.trim())) failures.push('indexnow');
 
   if (failures.length) {

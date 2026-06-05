@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -16,13 +17,37 @@ export const metadata = buildMetadata({
   description: 'Building a deck in Brambleton, VA? Learn how Brambleton HOA architectural review works, how it pairs with the Loudoun County permit, and how to get approved fast.',
 });
 
+const PATH = '/brambleton-hoa-deck-rules';
+
+const faqs = [
+  {
+    q: "Do I need HOA approval to build a deck in Brambleton?",
+    a: "Yes. Brambleton is a covenant-controlled community, so any deck, porch, or exterior structure must be approved by the Brambleton Community Association's design review process before construction begins. This approval is separate from the Loudoun County building permit.",
+  },
+  {
+    q: "How long does Brambleton HOA deck approval take?",
+    a: "Most Northern Virginia HOA design committees review complete applications within roughly 30 to 45 days. A complete submission with the application form, scaled site plan, construction drawings, and material and color samples is the best way to avoid a second review cycle.",
+  },
+  {
+    q: "What does the Brambleton HOA review for a deck?",
+    a: "Community design review for a deck typically covers the decking material and color, railing style, structure size and placement, stairs, screening, and how the deck relates to your home and lot.",
+  },
+  {
+    q: "Does a Brambleton deck also need a Loudoun County permit?",
+    a: "Usually yes. The HOA reviews appearance, while Loudoun County reviews structure and safety: footings, framing, ledger attachment, railings, and stair geometry. Both approvals should be planned together.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "Do I need HOA approval to build a deck in Brambleton?", acceptedAnswer: { "@type": "Answer", text: "Yes. Brambleton is a covenant-controlled community, so any deck, porch, or exterior structure must be approved by the Brambleton Community Association's design review process before construction begins. This approval is separate from — and in addition to — the Loudoun County building permit." } },
-    { "@type": "Question", name: "How long does Brambleton HOA deck approval take?", acceptedAnswer: { "@type": "Answer", text: "Most Northern Virginia HOA design committees review applications within roughly 30 to 45 days. A complete submission — application form, scaled site plan, construction drawings, and material and color samples — is the single best way to avoid a second review cycle. Submitting early, alongside the county permit application, keeps the project on schedule." } },
-    { "@type": "Question", name: "What does the Brambleton HOA review for a deck?", acceptedAnswer: { "@type": "Answer", text: "Community design review for a deck typically covers the decking material and color, railing style, the size and placement of the structure, and how it relates to your home and the lot. Always confirm the current design guidelines with the Brambleton Community Association, since standards are updated over time." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `https://ldndecks.com${PATH}#faq`,
+  url: `https://ldndecks.com${PATH}`,
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 } };
@@ -31,7 +56,15 @@ export default function BrambletonHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/brambleton-hoa-deck-rules" name="Brambleton HOA Deck Rules &amp; Approval Guide" description="Building a deck in Brambleton, VA? Learn how Brambleton HOA architectural review works, how it pairs with the Loudoun County permit, and how to get approved fast." speakable />
+      <ArticleSchema
+        title="Brambleton HOA Deck Rules & Approval Guide"
+        description="Brambleton deck approval guide covering HOA design review, Loudoun County permits, composite materials, stairs, ledger attachment, and project timing."
+        path={PATH}
+        image="/images/img32.jpeg"
+        datePublished="2026-05-26"
+        dateModified="2026-06-02"
+      />
+      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Brambleton HOA Deck Rules &amp; Approval Guide" description="Building a deck in Brambleton, VA? Learn how Brambleton HOA architectural review works, how it pairs with the Loudoun County permit, and how to get approved fast." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -65,16 +98,13 @@ export default function BrambletonHoaDeckRulesPage() {
           <h2 style={S.h2}>Two Approvals You Need</h2>
           <p style={S.p}>A Brambleton deck project requires <strong>two separate approvals</strong>, and they are easy to confuse:</p>
           <p style={S.p}><strong>1. HOA design review</strong> &mdash; the Brambleton Community Association controls appearance: material, color, and style. <strong>2. Loudoun County building permit</strong> &mdash; the county controls structure and safety: footings, framing, ledger attachment, and railings. You need both, and they can be pursued at the same time. See our <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)' }}>Loudoun County deck permit guide</Link> for the county side.</p>
+          <p style={S.p}>Brambleton&apos;s newer homes often make the exterior finish feel simple, but the permit packet still has to explain the hidden structure. Before the HOA packet is finalized, cross-check <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)' }}>ledger flashing and attachment</Link>, <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)' }}>joist spans</Link>, <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)' }}>beam spans</Link>, <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)' }}>Virginia stair code</Link>, and the <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)' }}>deck stair construction diagram</Link> so the aesthetic review and county permit do not drift apart.</p>
 
           <h2 style={S.h2}>How Loudoun Decks Handles Brambleton Approvals</h2>
           <p style={S.p}>As a licensed Loudoun County deck builder that works regularly in Brambleton, we manage both approvals for you. We prepare the full HOA design-review packet &mdash; scaled site plan, construction drawings, and material and color samples &mdash; submit the Loudoun County permit application, and schedule every inspection. You approve the design; we handle the paperwork. Explore our work across the area on our <Link href="/near-you/loudoun-county" style={{ color: 'var(--color-primary)' }}>Loudoun County page</Link> and <Link href="/deck-builder-brambleton-va" style={{ color: 'var(--color-primary)' }}>Brambleton deck builder page</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "Do I need HOA approval to build a deck in Brambleton?", a: "Yes. Any deck or exterior structure must be approved through the Brambleton Community Association's design review before construction — separate from the Loudoun County building permit." },
-            { q: "How long does approval take?", a: "Most NoVA HOA committees review within 30-45 days. A complete packet submitted early, alongside the county permit, is the best way to stay on schedule." },
-            { q: "Can Loudoun Decks handle the HOA paperwork?", a: "Yes. We prepare the full design-review packet and the county permit application, and coordinate all inspections. Call 571-655-7207 to start." },
-          ].map((faq, i) => (
+          {faqs.map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
               <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
@@ -88,6 +118,11 @@ export default function BrambletonHoaDeckRulesPage() {
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
               ['/deck-permit-hoa-cost-loudoun-county', 'Loudoun Permit + HOA Cost Breakdown'],
               ['/education/hoa-deck-approval-guidelines-nova', 'HOA Approval Walkthrough'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Flashing & Attachment Guide'],
+              ['/tools/deck-joist-span-calculator-virginia', 'Deck Joist Span Calculator'],
+              ['/tools/deck-beam-span-calculator-virginia', 'Deck Beam Span Calculator'],
+              ['/education/deck-stair-code-rise-run-virginia', 'Virginia Deck Stair Code Guide'],
+              ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
               ['/deck-builder-brambleton-va', 'Deck Builder in Brambleton'],
               ['/ashburn-composite-deck-cost-financing', 'Ashburn / Brambleton Deck Cost &amp; Financing'],
               ['/composite-decks', 'Composite Decking Options'],

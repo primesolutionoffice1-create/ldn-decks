@@ -8,6 +8,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import TrustBanner from '@/components/TrustBanner';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import EnhancifyPaymentCalculator from '@/components/EnhancifyPaymentCalculator';
 import NamedAuthor from '@/components/NamedAuthor';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
@@ -161,6 +162,21 @@ export default function TrexDeckCostMonthlyPaymentPage() {
             </Link>{' '}
             for an exact monthly number.
           </p>
+        </div>
+      </section>
+
+      <section style={{ background: '#fafafa', padding: '3rem 0', borderBottom: '1px solid #eee' }}>
+        <div style={{ ...S.container, maxWidth: 920 }}>
+          <h2 style={{ ...S.h2, marginTop: 0, textAlign: 'center', marginBottom: '0.5rem' }}>
+            Estimate Your Trex Deck Monthly Payment
+          </h2>
+          <p style={{ textAlign: 'center', color: '#666', maxWidth: 640, margin: '0 auto 2rem', fontSize: '1rem', lineHeight: 1.6 }}>
+            Enter your Trex project amount, term, and rate to see an estimated monthly payment. For illustration only —
+            actual rate and term depend on the lender and your credit profile.
+          </p>
+          <div style={{ background: '#fff', borderRadius: 14, padding: '2rem 1.5rem', border: '1px solid #e5e5e5', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+            <EnhancifyPaymentCalculator />
+          </div>
         </div>
       </section>
 

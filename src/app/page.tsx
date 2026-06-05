@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import CalculatorCTA from "@/components/CalculatorCTA";
+import FinancingTeaser from "@/components/FinancingTeaser";
 import Introduction from "@/components/Introduction";
 import MaterialPartners from "@/components/MaterialPartners";
 import NamedAuthor from "@/components/NamedAuthor";
@@ -158,6 +159,7 @@ export default function Home() {
             <Hero />
             <DeferredPromoModal />
             <TrustSection />
+            <FinancingTeaser />
             <Features />
             <CalculatorCTA />
             <MaterialPartners />

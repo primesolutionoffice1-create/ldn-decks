@@ -16,20 +16,58 @@ export const metadata = buildMetadata({
   description: 'Complete 2026 Arlington County deck permit guide: CPHD process, Permit Arlington portal, setbacks, historic-district review (Lyon Park, Maywood, Westover), inspection contacts, and timeline. We handle every step.',
 });
 
+const permitFaqs = [
+  {
+    q: "Do I need a permit to build a deck in Arlington County?",
+    a: "Yes. Any deck attached to your house, or any freestanding deck 30 inches or more above grade, requires an Arlington County building permit. Ground-level platforms under 30 inches with no attachment to the house may qualify for an exemption but still must respect zoning setbacks.",
+  },
+  {
+    q: "How long does Arlington County deck permit review take?",
+    a: "Plan review averages 3-5 weeks via the Permit Arlington web portal. Historic district design review in Lyon Park, Maywood, or Westover can add 2-4 weeks if your home is in a protected area.",
+  },
+  {
+    q: "How much does an Arlington County deck permit cost?",
+    a: "Arlington County deck permit fees are calculated on construction valuation, typically $200-$700 for residential deck projects. Larger multi-level builds or projects with structural complexity may run higher. We include permit fees in every estimate.",
+  },
+  {
+    q: "Where do I file an Arlington County deck permit?",
+    a: "Permit Arlington, the web portal operated by Arlington County CPHD, handles residential building permits including decks. Inspections are coordinated through Arlington Inspection Services at 703-228-3800.",
+  },
+  {
+    q: "Which Arlington neighborhoods require historic district review?",
+    a: "Lyon Park, Maywood, and Westover have the most active historic-overlay considerations for deck projects visible from the public right-of-way. Confirm the property against Arlington historic district maps before design decisions are finalized.",
+  },
+  {
+    q: "What documents does Arlington require for a deck permit?",
+    a: "A typical package includes a site plan with setbacks marked, structural drawings showing footings, beams, joists, ledger attachment, railings and stairs, a deck detail sheet, homeowner authorization, and historic district design review materials when applicable.",
+  },
+  {
+    q: "What inspections does Arlington County require for a deck?",
+    a: "Most Arlington deck permits need three inspections: footing before concrete is poured, framing before decking is installed, and final once the structure is complete with railings and stairs in place. We coordinate each inspection.",
+  },
+  {
+    q: "What are the deck setback rules in Arlington County?",
+    a: "Arlington setbacks vary by zoning district and lot size. Older neighborhoods often have tighter setbacks than Loudoun or Fairfax, so the certified plat and zoning district must be checked before a deck footprint is finalized.",
+  },
+  {
+    q: "Can I attach a deck ledger to brick veneer in Arlington?",
+    a: "No. Virginia building code prohibits attaching a structural deck ledger directly to brick veneer or stone siding. The ledger must attach to the home's structural rim joist behind the veneer, or the deck may need a freestanding design.",
+  },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "Do I need a permit to build a deck in Arlington County?", acceptedAnswer: { "@type": "Answer", text: "Yes. Any deck attached to your house, or any freestanding deck 30 inches or more above grade, requires an Arlington County building permit. Ground-level platforms under 30 inches with no attachment to the house may qualify for an exemption but still must respect zoning setbacks." } },
-    { "@type": "Question", name: "How long does Arlington County deck permit review take?", acceptedAnswer: { "@type": "Answer", text: "Plan review averages 3-5 weeks via the Permit Arlington web portal — typically one week longer than Fairfax County. Historic district design review (Lyon Park National Historic District, Maywood, Westover) adds 2-4 weeks if your home is in a protected area." } },
-    { "@type": "Question", name: "How much does an Arlington County deck permit cost?", acceptedAnswer: { "@type": "Answer", text: "Arlington County deck permit fees are calculated on construction valuation, typically $200-$700 for residential deck projects. Larger multi-level builds or projects with structural complexity may run higher. We include permit fees in every estimate." } },
-    { "@type": "Question", name: "Where do I file an Arlington County deck permit?", acceptedAnswer: { "@type": "Answer", text: "Permit Arlington — the web portal operated by Arlington County CPHD (Department of Community Planning, Housing & Development). All residential building permits, including decks, file through this portal. Inspections coordinated through Arlington Inspection Services at 703-228-3800." } },
-    { "@type": "Question", name: "Which Arlington neighborhoods require historic district review?", acceptedAnswer: { "@type": "Answer", text: "Lyon Park (a National Historic District with 1,165 contributing buildings) requires design review for any deck visible from the public right-of-way. Maywood and Westover have similar historic-overlay considerations. Lyon Village, while architecturally significant, does not require the same formal historic design review but its character influences material approval. Confirm your address against the Arlington historic district maps before designing." } },
-    { "@type": "Question", name: "What documents does Arlington require for a deck permit?", acceptedAnswer: { "@type": "Answer", text: "Required submission package: (1) site plan with setbacks marked against your certified plat, (2) structural drawings showing footings, beams, joists, ledger attachment, railings, and stairs, (3) deck detail sheet, (4) homeowner authorization signed for the contractor to file, (5) if applicable, historic district design review submission. We prepare every document in-house." } },
-    { "@type": "Question", name: "What inspections does Arlington County require for a deck?", acceptedAnswer: { "@type": "Answer", text: "Three required inspections: (1) footing inspection before concrete is poured, (2) framing inspection before decking is installed, (3) final inspection once the structure is complete with railings and stairs in place. All scheduled through Arlington Inspection Services at 703-228-3800. We coordinate every inspection." } },
-    { "@type": "Question", name: "What are the deck setback rules in Arlington County?", acceptedAnswer: { "@type": "Answer", text: "Arlington setbacks vary by zoning district and lot size. For most R-zone parcels: 5-foot side setback minimum, 10-foot rear setback minimum. Decks may sometimes extend into setbacks within published limits per Arlington's residential setback documentation. Tighter setbacks than Fairfax County are common in Arlington's older neighborhoods. We verify on every project before designing." } },
-    { "@type": "Question", name: "Can I attach a deck ledger to brick veneer in Arlington?", acceptedAnswer: { "@type": "Answer", text: "No. Virginia building code prohibits attaching a structural deck ledger directly to brick veneer or stone siding. The ledger must attach to the home's structural rim joist behind the veneer. Most Arlington homes (1920s-1940s construction in Lyon Park, Lyon Village, Cherrydale) have brick veneer fronts and require either a freestanding deck design or a ledger detail that penetrates to the rim joist with proper flashing." } },
-  ],
+  "@id": "https://ldndecks.com/deck-permit-arlington-county-virginia#faq",
+  url: "https://ldndecks.com/deck-permit-arlington-county-virginia",
+  mainEntity: permitFaqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: a,
+    },
+  })),
 };
 
 const S = {
@@ -99,7 +137,7 @@ export default function ArlingtonPermitPage() {
           <ol style={S.list}>
             <li id="how-to-step-1" style={S.listItem}><strong>Verify zoning + setbacks:</strong> Pull your certified plat. Mark the proposed deck&apos;s footprint and confirm it respects the side, rear, and (if applicable) corner-lot setbacks for your zoning district. Arlington setbacks are often tighter than other NoVA counties.</li>
             <li id="how-to-step-2" style={S.listItem}><strong>Confirm historic district status:</strong> If your home is in Lyon Park (National Historic District), Maywood, or Westover, your project requires Arlington Historic Preservation Program design review in addition to the building permit. Lyon Village homes need to demonstrate architectural compatibility but don&apos;t go through the same formal review.</li>
-            <li id="how-to-step-3" style={S.listItem}><strong>Upload the document package:</strong> Site plan with setbacks, structural drawings (footings, beams, joists, ledger detail, railings, stairs), homeowner authorization, and historic design review submission if applicable. For early footing assumptions, use the <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia</Link> before final permit review.</li>
+            <li id="how-to-step-3" style={S.listItem}><strong>Upload the document package:</strong> Site plan with setbacks, structural drawings (footings, beams, joists, ledger detail, railings, stairs), homeowner authorization, and historic design review submission if applicable. For early footing assumptions, use the <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia</Link>; for framing, review the <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Joist Span Calculator Virginia</Link> and <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Beam Span Calculator Virginia</Link>; for house attachment, see the <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link> before final permit review.</li>
             <li id="how-to-step-4" style={S.listItem}><strong>Pay county review fees:</strong> Calculated on construction valuation, typically $200–$700 for residential deck projects.</li>
             <li id="how-to-step-5" style={S.listItem}><strong>Monitor the portal:</strong> Address any reviewer comments or revision requests within the 3–5 week review window. Historic-district projects add 2–4 weeks.</li>
           </ol>
@@ -183,7 +221,15 @@ export default function ArlingtonPermitPage() {
             <li style={S.listItem}><strong>Concentrated load test:</strong> guardrails must withstand a 200-pound concentrated load at any single point.</li>
             <li style={S.listItem}><strong>Stair handrail:</strong> required for stairs with 4 or more risers; grip diameter and clearance per VRC R311.</li>
           </ul>
-          <p style={S.p}>For the full stair-design walkthrough, use our <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair calculator</Link> or read our <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code reference</Link>.</p>
+          <p style={S.p}>For the full stair-design walkthrough, use our <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair calculator</Link>, review the <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>, or read our <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code reference</Link>.</p>
+
+          <h2 style={{ ...S.h2, marginTop: '3rem' }}>Arlington Deck Permit FAQs</h2>
+          {permitFaqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 700, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
+              <p style={{ margin: '1rem 0 0', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+            </details>
+          ))}
 
           {/* ===== SECTION 8: Why we handle the entire permit ===== */}
           <div style={{ background: 'var(--color-dark)', color: '#fff', borderRadius: '16px', padding: '3.5rem', textAlign: 'center', marginTop: '4rem' }}>

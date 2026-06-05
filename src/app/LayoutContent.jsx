@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import React, { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Header from "../components/Header";
+import FinancingAnnouncementBar from "../components/FinancingAnnouncementBar";
 const Footer = dynamic(() => import("../components/Footer"), { ssr: true });
 import ScrollToTop from "../components/ScrollToTop";
 import FloatingCallButton from "../components/FloatingCallButton";
@@ -34,6 +35,7 @@ export default function LayoutContent({ children }) {
 
   return (
     <>
+      <FinancingAnnouncementBar />
       <Header />
       <Breadcrumbs />
       <main id="main">

@@ -15,13 +15,18 @@
         "seo:audit-images": "node scripts/audit-image-alt.mjs --verbose",
         "seo:audit-freshness": "node scripts/audit-content-freshness.mjs --verbose",
         "seo:weekly": "node scripts/seo-weekly-report.mjs",
+        "seo:dominance": "node scripts/seo-dominance-dashboard.mjs",
         "gbp:this-week": "node scripts/gbp-this-week.mjs",
         "blog:new": "node scripts/new-blog-post.mjs",
         "seo:audit-og": "node scripts/audit-og-images.mjs",
         "seo:audit-breadcrumbs": "node scripts/audit-breadcrumbs.mjs",
         "seo:verify-robots": "node scripts/verify-robots-indexnow.mjs",
         "seo:rank-track": "node scripts/rank-tracker-report.mjs",
-        "automation:verify": "node scripts/automation-stack-verify.mjs"
+        "seo:deployment-guard": "node scripts/verify-local-seo-deployment.mjs",
+        "local:authority-pack": "node scripts/generate-local-authority-pack.mjs",
+        "ads:verify-meta-route": "node scripts/verify-meta-pixel-route-tracking.mjs",
+        "automation:verify": "node scripts/automation-stack-verify.mjs",
+        "verify:financing": "node scripts/verify-financing-ui.mjs"
     },
     "dependencies": {
         "@vercel/analytics": "^1.6.1",

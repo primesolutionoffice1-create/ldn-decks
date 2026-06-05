@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -15,15 +16,41 @@ export const metadata = buildMetadata({
   description: 'Most NoVA HOAs require approval before deck construction. Learn the process, common restrictions, what to submit, and how we handle it 100% approval rate.',
 });
 
+const PATH = '/hoa-deck-rules-northern-virginia';
+
+const faqs = [
+  {
+    q: "Do I need HOA approval to build a deck in Northern Virginia?",
+    a: "Almost always yes. Most Northern Virginia homes in planned communities require architectural review committee approval before exterior construction, including deck replacement, new decks, screened porches, stairs, railings, and color changes.",
+  },
+  {
+    q: "What do I need to submit to my HOA?",
+    a: "Most HOA deck submissions need a site plan, scaled deck drawings, material list with brand and color, railing details, contractor license information, and sometimes a rendering or neighbor notification. We prepare the full package as part of our standard scope.",
+  },
+  {
+    q: "How long does HOA deck approval take?",
+    a: "Most Northern Virginia HOA deck approvals take 2-4 weeks, but communities with monthly ARC meetings can take 4-6 weeks if a deadline is missed. We track submission cycles for major Loudoun, Fairfax, and Prince William HOAs.",
+  },
+  {
+    q: "Can my HOA deny a deck?",
+    a: "Yes, but denials usually happen because of non-compliant colors, materials, railings, setbacks, or incomplete packets. We review guidelines before design and submit complete packages, which prevents most rejection reasons.",
+  },
+  {
+    q: "What happens if I build without HOA approval?",
+    a: "Building without HOA approval can trigger daily fines, required removal, resale title issues, or a lien for unpaid assessments. HOA approval should be secured before construction, alongside the county building permit.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "Do I need HOA approval to build a deck in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Almost always yes. Over 80% of Northern Virginia homes are in HOA communities that require architectural review committee (ARC) approval before exterior construction." } },
-    { "@type": "Question", name: "What do I need to submit to my HOA?", acceptedAnswer: { "@type": "Answer", text: "Typically: site plan, materials list with brand and color, railing style details, and sometimes a rendering. We prepare and submit the full package as part of our standard scope." } },
-    { "@type": "Question", name: "How long does HOA approval take?", acceptedAnswer: { "@type": "Answer", text: "2-4 weeks for most communities. Some meet monthly. We track submission deadlines for all major Loudoun, Fairfax, and Prince William HOAs." } },
-    { "@type": "Question", name: "Can my HOA deny a deck?", acceptedAnswer: { "@type": "Answer", text: "Denials are usually due to non-compliant materials or colors, not the concept of a deck. We review guidelines before submitting. Our approval rate is 100%." } },
-    { "@type": "Question", name: "What happens if I build without HOA approval?", acceptedAnswer: { "@type": "Answer", text: "Fines ($50-$200/day), liens on your property, or required removal. Also creates issues at home sale. Always get approval first." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `https://ldndecks.com${PATH}#faq`,
+  url: `https://ldndecks.com${PATH}`,
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, h3: { fontSize: '1.2rem', fontWeight: 600, margin: '1.5rem 0 0.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 } };
@@ -32,7 +59,15 @@ export default function HOADeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/hoa-deck-rules-northern-virginia" name="HOA Deck Rules in Northern Virginia (2026)" description="Most NoVA HOAs require approval before deck construction. Learn the process, common restrictions, what to submit, and how we handle it 100% approval rate." speakable />
+      <ArticleSchema
+        title="HOA Deck Rules in Northern Virginia"
+        description="Northern Virginia HOA deck approval guide covering ARC packets, county permits, material restrictions, timelines, and community-specific deck rules."
+        path={PATH}
+        image="/images/img15.jpeg"
+        datePublished="2026-05-26"
+        dateModified="2026-06-02"
+      />
+      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="HOA Deck Rules in Northern Virginia (2026)" description="Most NoVA HOAs require approval before deck construction. Learn the process, common restrictions, what to submit, and how we handle it 100% approval rate." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -59,6 +94,7 @@ export default function HOADeckRulesPage() {
           <h2 style={S.h2}>Do You Need HOA Approval?</h2>
           <p style={S.p}><strong>Almost certainly yes.</strong> Over 80% of Northern Virginia homes are in HOA communities. If you live in any planned development Broadlands, Ashburn Farm, Brambleton, South Riding, Belmont Country Club, Stone Ridge, One Loudoun, Reston, Burke Centre, or hundreds of others you need architectural review committee (ARC) approval before any exterior construction.</p>
           <p style={S.p}>This applies to new decks, replacements, screened porches, pergolas, fences, and even changing stain color. <strong>HOA approval is separate from your county building permit</strong> you need both.</p>
+          <p style={S.p}>For Loudoun projects, use the <Link href="/deck-permit-hoa-cost-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>permit and HOA cost breakdown</Link> to budget review fees and engineering drawings. For structural approval, pair the HOA packet with the <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger flashing guide</Link> and <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link> so the design matches both appearance rules and inspection requirements.</p>
 
           <h2 style={S.h2}>Common HOA Restrictions</h2>
           <h3 style={S.h3}>Materials &amp; Colors</h3>
@@ -130,13 +166,7 @@ export default function HOADeckRulesPage() {
           </div>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
-          {[
-            { q: "Do I need HOA approval?", a: "Almost always yes in Northern Virginia. Over 80% of homes are in HOA communities requiring architectural review." },
-            { q: "What do I submit?", a: "Site plan, materials list, railing details, sometimes a rendering. We prepare and submit everything." },
-            { q: "How long does approval take?", a: "2-4 weeks. We track review cycles for all major NoVA HOAs." },
-            { q: "Can the HOA deny my deck?", a: "Rarely and usually only for non-compliant materials. We review guidelines first. Our rate is 100%." },
-            { q: "What if I build without approval?", a: "Fines ($50-$200/day), liens, or required removal. Also creates sale issues." },
-          ].map((faq, i) => (
+          {faqs.map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
               <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
@@ -147,7 +177,12 @@ export default function HOADeckRulesPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/deck-permit-loudoun-county-virginia', 'Deck Permit Guide: Loudoun County'],
+              ['/deck-permit-fairfax-county-virginia', 'Deck Permit Guide: Fairfax County'],
+              ['/deck-permit-prince-william-county-virginia', 'Deck Permit Guide: Prince William County'],
+              ['/deck-permit-arlington-county-virginia', 'Deck Permit Guide: Arlington County'],
               ['/deck-permit-hoa-cost-loudoun-county', 'Loudoun Permit + HOA Cost Breakdown'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Flashing & Attachment Guide'],
+              ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/deck-builder-ashburn-va', 'Deck Builder in Ashburn, VA'],
               ['/ashburn-composite-deck-cost-financing', 'Ashburn Composite Deck Cost &amp; Financing'],

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -15,14 +16,42 @@ export const metadata = buildMetadata({
   description: 'Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you.',
 });
 
+const permitFaqs = [
+  {
+    q: "Do I need a permit for a deck in Prince William County?",
+    a: "Yes. Any deck attached to the house, over 200 square feet, more than 30 inches above grade, or located inside a setback/easement review area requires a Prince William County building permit. Ground-level freestanding decks under those thresholds may be exempt, but zoning still has to be checked.",
+  },
+  {
+    q: "How long does a deck permit take in Prince William County?",
+    a: "Plan review usually takes 2-4 weeks, and simple deck plans on standard lots can clear faster. We prepare the package, submit it to the right jurisdiction, track reviewer comments, and keep construction timing aligned with approval.",
+  },
+  {
+    q: "How much does a deck permit cost in Prince William County?",
+    a: "Prince William County deck permits commonly run $150-$500 depending on project scope and construction valuation. We include permit costs in the estimate so homeowners are not surprised by county fees later.",
+  },
+  {
+    q: "Which Prince William-area jurisdiction reviews my deck?",
+    a: "It depends on the property address. Prince William County, the City of Manassas, and the City of Manassas Park each have separate building departments. We verify the correct jurisdiction before drawings are finalized.",
+  },
+  {
+    q: "What inspections are required for a Prince William County deck?",
+    a: "Most permitted decks need three inspections: footing before concrete, framing before decking boards are installed, and final after railings, stairs, guards, and hardware are complete. We schedule and coordinate each inspection.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "Do I need a permit for a deck in Prince William County?", acceptedAnswer: { "@type": "Answer", text: "Yes any deck attached to the house, over 200 sqft, or more than 30 inches above grade requires a building permit in Prince William County. Ground-level freestanding decks under 200 sqft may be exempt." } },
-    { "@type": "Question", name: "How long does a deck permit take in Prince William County?", acceptedAnswer: { "@type": "Answer", text: "Plan review typically takes 2-4 weeks faster than Fairfax County. Simple deck plans on standard lots often process in under 2 weeks. We submit on your behalf and track the timeline." } },
-    { "@type": "Question", name: "How much does a deck permit cost in Prince William County?", acceptedAnswer: { "@type": "Answer", text: "Prince William County deck permits cost $150-$500 depending on project scope and valuation. Lower than Fairfax County on average. We include all permit costs in our estimates." } },
-    { "@type": "Question", name: "What inspections are required?", acceptedAnswer: { "@type": "Answer", text: "Three inspections: footing inspection (before pouring concrete), framing inspection (before decking goes on), and final inspection (completed structure). We schedule and coordinate all inspections." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://ldndecks.com/deck-permit-prince-william-county-virginia#faq",
+  url: "https://ldndecks.com/deck-permit-prince-william-county-virginia",
+  mainEntity: permitFaqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: a,
+    },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 }, th: { padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }, td: { padding: '0.75rem', borderBottom: '1px solid #eee' } };
@@ -32,6 +61,14 @@ export default function PWCountyPermitPage() {
     <>
       <JsonLd data={faqSchema} />
       <WebPageSchema url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you." speakable />
+      <ArticleSchema
+        title="Prince William County Deck Permit Guide for 2026"
+        description="Prince William County deck permit requirements, jurisdiction checks, structural details, inspections, timelines, and permit costs for Northern Virginia homeowners."
+        path="/deck-permit-prince-william-county-virginia"
+        image="/images/blog-permit-guide.png"
+        datePublished="2026-04-21"
+        dateModified="2026-06-02"
+      />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Permit Guide: Prince William County, VA</h1>
@@ -61,9 +98,9 @@ export default function PWCountyPermitPage() {
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Prepare plans:</strong> Site plan showing property lines, setbacks, and deck footprint. Structural drawings with footing sizes, beam/joist specs, ledger details. Material specifications.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Submit to PW County Development Services:</strong> Online or in-person submission. Include all required documents.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Zoning review:</strong> County checks setback compliance, lot coverage limits, and easement conflicts. PW County is generally faster than Fairfax for this step.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Building review:</strong> Structural review ensures code compliance footing depth, joist spacing, beam sizing, post spacing, ledger connection and railing height. See the <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia</Link>, the <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Joist Span Calculator Virginia</Link>, the <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Beam Span Calculator Virginia</Link>, our <Link href="/deck-footing-code-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing code guide</Link> and <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Building review:</strong> Structural review ensures code compliance footing depth, joist spacing, beam sizing, post spacing, ledger connection and railing height. See the <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia</Link>, the <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Joist Span Calculator Virginia</Link>, the <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Beam Span Calculator Virginia</Link>, our <Link href="/deck-footing-code-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing code guide</Link>, <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>, and <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Permit issuance:</strong> Once approved, permit must be posted at the job site.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Three inspections:</strong> Footing (before concrete), Framing (before decking), Final (complete structure).</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Three inspections:</strong> Footing (before concrete), framing (before decking), and final (complete structure). For stair layout before final inspection, use the <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link>, the <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>, and the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link>.</li>
           </ol>
 
           <h2 style={S.h2}>PW County vs Fairfax County Permit Comparison</h2>
@@ -102,13 +139,8 @@ export default function PWCountyPermitPage() {
           <p style={S.p}>Permits are part of our standard scope no extra charge. We prepare plans, submit applications, track review timelines, schedule all inspections, and resolve any reviewer comments. You don&apos;t deal with the county at all. If a deck was already built without approval, start with our guide to <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>unpermitted decks in Virginia</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "Do I need a permit?", a: "Yes if attached to house, over 200 sqft, or over 30\" above grade." },
-            { q: "How long?", a: "2-4 weeks faster than Fairfax County." },
-            { q: "How much?", a: "$150-$500 depending on project. Included in our estimate." },
-            { q: "Which jurisdiction am I in?", a: "PW County, City of Manassas, or Manassas Park. We determine and handle the correct one." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+          {permitFaqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
               <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
             </details>

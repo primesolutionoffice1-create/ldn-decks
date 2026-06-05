@@ -18,15 +18,38 @@ export const metadata = buildMetadata({
   image: '/images/blog-permit-guide.png',
 });
 
+const permitFaqs = [
+  {
+    q: "What size deck can you build without a permit in Virginia?",
+    a: "You can build without a permit only if the deck is less than 200 square feet, not more than 30 inches above grade, freestanding, and does not serve a required exit door. Attached decks require a permit regardless of size.",
+  },
+  {
+    q: "How deep do deck footings need to be in Loudoun County?",
+    a: "Deck footings must be a minimum of 24 inches deep to reach below the frost line and prevent seasonal shifting or frost heave.",
+  },
+  {
+    q: "Do I need 2x8 or 2x10 joists for my deck?",
+    a: "It depends on the span. 2x8s typically support up to 10 feet, while 2x10s safely cover 12 to 14 feet. We recommend 12-inch spacing for heavy composite decking like Trex.",
+  },
+  {
+    q: "Can I attach a deck ledger to brick veneer?",
+    a: "No. Virginia building code prohibits attaching a ledger board directly to brick veneer or stone siding. It must be attached to the structural rim joist of the house.",
+  },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "What size deck can you build without a permit in Virginia?", acceptedAnswer: { "@type": "Answer", text: "You can build without a permit only if the deck is less than 200 square feet, not more than 30 inches above grade, freestanding, and does not serve a required exit door. Attached decks require a permit regardless of size." } },
-    { "@type": "Question", name: "How deep do deck footings need to be in Loudoun County?", acceptedAnswer: { "@type": "Answer", text: "Deck footings must be a minimum of 24 inches deep to reach below the frost line and prevent seasonal shifting or frost heave." } },
-    { "@type": "Question", name: "Do I need 2x8 or 2x10 joists for my deck?", acceptedAnswer: { "@type": "Answer", text: "It depends on the span. 2x8s typically support up to 10 feet, while 2x10s safely cover 12 to 14 feet. We recommend 12-inch spacing for heavy composite decking like Trex." } },
-    { "@type": "Question", name: "Can I attach a deck ledger to brick veneer?", acceptedAnswer: { "@type": "Answer", text: "No. Virginia building code prohibits attaching a ledger board directly to brick veneer or stone siding. It must be attached to the structural rim joist of the house." } },
-  ],
+  "@id": "https://ldndecks.com/deck-permit-loudoun-county-virginia#faq",
+  url: "https://ldndecks.com/deck-permit-loudoun-county-virginia",
+  mainEntity: permitFaqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: a,
+    },
+  })),
 };
 
 const S = {
@@ -219,6 +242,14 @@ export default function LoudounPermitPage() {
 
           <h2 style={S.h2}>Stair and Railing Height Codes</h2>
           <p style={S.p}>Virginia code requires guardrails to be at least <strong>36 inches high</strong> for platforms over 30 inches above grade. Stairs require an <strong>8 1/4-inch maximum riser</strong> and <strong>9-inch minimum tread</strong>. Ensuring code compliance prevents falls and guarantees that rails can withstand a 200-pound concentrated load.</p>
+
+          <h2 style={{ ...S.h2, marginTop: '3rem' }}>Loudoun Deck Permit FAQs</h2>
+          {permitFaqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 700, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
+              <p style={{ margin: '1rem 0 0', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+            </details>
+          ))}
 
           <div style={{ background: 'var(--color-dark)', color: '#fff', borderRadius: '16px', padding: '3.5rem', textAlign: 'center', marginTop: '4rem' }}>
             <h3 style={{ color: '#fff', fontSize: '2rem', marginTop: 0, marginBottom: '1rem' }}>We Guarantee Full Approval</h3>

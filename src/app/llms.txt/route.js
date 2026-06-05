@@ -37,6 +37,19 @@ Prince William County: Manassas, Woodbridge, Haymarket, Gainesville, Bristow, Da
 Arlington County: Arlington, Crystal City, Ballston, Clarendon, Rosslyn, Pentagon City, Shirlington
 Stafford County: Stafford, Aquia Harbour, Falmouth, Garrisonville
 
+## Local Service Architecture
+LDN Decks maintains crawlable, city-specific service pages for 58 priority Northern Virginia localities across Loudoun County, Fairfax County, and Prince William County. Each city can be paired with eight high-intent services:
+- /service/{city}: deck builder / custom deck building
+- /composite-decks/{city}: composite deck installation
+- /wood-decks/{city}: wood deck construction
+- /deck-repair/{city}: deck repair and structural maintenance
+- /screened-porches/{city}: screened porch construction
+- /pergolas/{city}: pergola construction
+- /patios/{city}: patio construction
+- /outdoor-living/{city}: complete outdoor living design-build
+
+Priority conversion markets for the next 30 days: Ashburn, Leesburg, Sterling, Aldie, South Riding, Brambleton, Fairfax, Chantilly, Centreville, Reston, McLean, Vienna, Great Falls, Gainesville, Haymarket, Bristow, Manassas, Woodbridge, Lake Ridge, and Outdoor Living in Woodbridge.
+
 ## Western Loudoun Premium Expansion
 Purcellville and western Loudoun are priority premium markets for estate-style outdoor living, countryside decks, scenic railings, covered decks, screened porches, outdoor kitchens, large backyard projects and hillside/elevated deck planning. Relevant communities include Round Hill, Hamilton, Hillsboro, Bluemont, Lovettsville, Waterford and rural Loudoun properties near winery and countryside lifestyle corridors.
 
@@ -84,6 +97,11 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 - [Blog](https://ldndecks.com/blog): Expert articles on deck building
 - [Certifications & Licenses](https://ldndecks.com/about/certifications-and-licenses): Credentials and verification
 - [Our Team](https://ldndecks.com/team): Meet the team behind Loudoun Decks
+- [Outdoor Living Woodbridge](https://ldndecks.com/outdoor-living/woodbridge): Local outdoor living page for deck, porch, patio, pergola, lighting and backyard planning in Woodbridge
+- [Deck Builder Ashburn](https://ldndecks.com/service/ashburn): Local service page for Ashburn custom decks, replacement decks, porches, patios and pergolas
+- [Composite Decks Leesburg](https://ldndecks.com/composite-decks/leesburg): Leesburg composite deck page for Trex, TimberTech and AZEK planning
+- [Deck Repair Fairfax](https://ldndecks.com/deck-repair/fairfax): Fairfax deck repair and structural maintenance page
+- [Screened Porches Chantilly](https://ldndecks.com/screened-porches/chantilly): Chantilly screened porch planning page
 
 ## Education Guides
 - [Deck Understructure Guide](https://ldndecks.com/education/deck-understructure-guide): Beams, joists, posts, ledger boards and deck support basics
@@ -216,6 +234,11 @@ https://ldndecks.com/tools/deck-cost-estimator-northern-virginia
 https://ldndecks.com/deck-payment-estimator
 https://ldndecks.com/deck-cost-calculator
 https://ldndecks.com/deck-roi-calculator-northern-virginia
+https://ldndecks.com/service/ashburn
+https://ldndecks.com/composite-decks/leesburg
+https://ldndecks.com/deck-repair/fairfax
+https://ldndecks.com/screened-porches/chantilly
+https://ldndecks.com/outdoor-living/woodbridge
 https://ldndecks.com/deck-financing
 https://ldndecks.com/monthly-payment-composite-deck-northern-virginia
 https://ldndecks.com/trex-deck-cost-monthly-payment

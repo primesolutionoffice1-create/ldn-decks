@@ -1,0 +1,21 @@
+name: financing-ui-guard
+
+# Required status check on every PR that targets main, plus on direct main
+# pushes for belt-and-suspenders coverage. Fails fast if any agent removes
+# the financing UI wiring.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify financing UI is still wired up
+        run: node scripts/verify-financing-ui.mjs

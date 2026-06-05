@@ -1,5 +1,5 @@
 "use client";
-import { trackPhoneClick } from '@/lib/tracking';
+import { trackPhoneClick, trackPhoneClickWithContext } from '@/lib/tracking';
 
 // Business phone constants — every tel: link on the site should use these.
 // Centralizing here means a future number change is a 1-line edit
@@ -23,12 +23,20 @@ export default function CallLink({
   style,
   ariaLabel,
   display,
+  ctaLocation,
+  pageContext,
   ...rest
 }) {
   return (
     <a
       href={`tel:${BUSINESS_PHONE}`}
-      onClick={trackPhoneClick}
+      onClick={() => {
+        if (ctaLocation || pageContext) {
+          trackPhoneClickWithContext({ ctaLocation, pageContext });
+        } else {
+          trackPhoneClick();
+        }
+      }}
       className={className}
       style={style}
       aria-label={ariaLabel || `Call Loudoun Decks at ${BUSINESS_PHONE_DISPLAY}`}
