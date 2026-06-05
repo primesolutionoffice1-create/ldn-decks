@@ -178,6 +178,8 @@ export default function DeckReplacementPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Resurfacing vs Full Replacement →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/resurface-or-replace-deck-financing" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Resurface or Replace Before Financing? (cost math) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Composite Deck Cost in Northern Virginia →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-decks" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Composite Deck Replacement Options →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK Comparison →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
         </ul>

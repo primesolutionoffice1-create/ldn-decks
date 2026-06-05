@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -196,6 +197,15 @@ export default function CompositeDecksPage() {
       <ServicesCallToAction />
 
       <RelatedGuides currentPath="/composite-decks" />
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Composite Material Decision Guides</h2>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK Comparison →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Cost in Northern Virginia →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Resurfacing vs Full Deck Replacement →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-materials-comparison-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Material Comparison for Virginia Homes →</Link></li>
+        </ul>
+      </section>
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <ContactHome />

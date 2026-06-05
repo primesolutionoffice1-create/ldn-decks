@@ -166,6 +166,7 @@ export default function TrexVsTimberTechPage() {
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
               ['/trex-deck-cost-monthly-payment', 'Trex Deck Cost vs Monthly Payment (by tier)'],
               ['/timbertech-azek-deck-cost-northern-virginia', 'TimberTech & AZEK Deck Cost (EDGE / PRO / Vintage)'],
+              ['/composite-decks', 'Composite Deck Builder in Northern Virginia'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck Complete Comparison'],
               ['/wood-vs-composite-deck-long-term-cost', 'Wood vs Composite — 15-Year Long-Term Cost'],
               ['/trex-decks', 'Our Trex Decking Services'],
@@ -187,6 +188,7 @@ export default function TrexVsTimberTechPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Decks — Platinum Partner →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/timbertech-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>TimberTech AZEK Decks →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Installation →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Cost Guide →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
         </ul>
