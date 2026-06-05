@@ -262,6 +262,47 @@
   margin: 0 auto 28px;
 }
 
+.sectionHeader p:not(.kicker) {
+  max-width: 780px;
+  margin: 0;
+  color: #4f4842;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.moneyPathSection {
+  padding: 72px 32px;
+  background: #fff;
+}
+
+.moneyPathGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.moneyPathGrid a {
+  display: flex;
+  align-items: center;
+  min-height: 68px;
+  padding: 16px;
+  border: 1px solid #e6ded7;
+  border-radius: 8px;
+  background: #fcfaf8;
+  color: #211d1a;
+  font-size: 0.94rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.moneyPathGrid a:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
 .faqGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -358,7 +399,8 @@
 
   .quickGrid,
   .answerGrid,
-  .faqGrid {
+  .faqGrid,
+  .moneyPathGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -391,7 +433,8 @@
 
   .quickGrid,
   .answerGrid,
-  .faqGrid {
+  .faqGrid,
+  .moneyPathGrid {
     grid-template-columns: 1fr;
   }
 
