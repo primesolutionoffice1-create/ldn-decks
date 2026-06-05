@@ -35,6 +35,11 @@ const links = [
     desc: 'Trex, TimberTech and AZEK decks for NoVA homes.',
   },
   {
+    href: '/trex-vs-timbertech-vs-azek',
+    title: 'Trex vs TimberTech vs AZEK',
+    desc: 'Compare premium composite and PVC decking options.',
+  },
+  {
     href: '/services/deck-replacement',
     title: 'Deck Replacement',
     desc: 'Tear-down, resurfacing and wood-to-composite upgrades.',
@@ -48,6 +53,11 @@ const links = [
     href: '/composite-deck-cost-northern-virginia',
     title: 'Composite Deck Pricing',
     desc: '2026 cost guide — Trex, TimberTech & AZEK compared.',
+  },
+  {
+    href: '/deck-materials-comparison-virginia',
+    title: 'Deck Material Comparison',
+    desc: 'Wood, composite, PVC and premium board options.',
   },
   {
     href: '/reviews',

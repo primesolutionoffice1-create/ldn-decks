@@ -284,6 +284,7 @@ export default function DeckMaterialsComparisonPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK — Full Comparison'],
+              ['/composite-decks', 'Composite Deck Builder in Northern Virginia'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck — 15-Year Cost Analysis'],
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia (2026)'],
               ['/best-deck-stain-sealer-virginia', 'Best Deck Stain & Sealer for Virginia'],
