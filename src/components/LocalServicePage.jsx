@@ -60,6 +60,45 @@ function buildQuickAnswers(city, service) {
   ];
 }
 
+const relatedLinkLabels = {
+  '/composite-decks': 'Composite deck options',
+  '/trex-decks': 'Trex decking options',
+  '/timbertech-decks': 'TimberTech and AZEK options',
+  '/composite-deck-vs-wood-deck-virginia': 'Composite vs. wood guide',
+  '/services/new-decks': 'New deck construction',
+  '/services/deck-replacement': 'Deck replacement service',
+  '/services/deck-repair-and-structural-maintenance': 'Structural deck repair',
+  '/deck-safety-inspection-checklist': 'Deck safety inspection checklist',
+  '/deck-resurfacing-vs-replacement': 'Resurface or replace guide',
+  '/services/deck-resurfacing': 'Deck resurfacing service',
+  '/screened-porch-builder-northern-virginia': 'Screened porch builder',
+  '/services/porches': 'Porch services',
+  '/services/porches/screened-porch': 'Screened porch service',
+  '/three-season-room-northern-virginia': 'Three-season room guide',
+  '/services/gazebo-pergola': 'Pergola and gazebo service',
+  '/louvered-pergola-northern-virginia': 'Louvered pergola guide',
+  '/outdoor-living-northern-virginia': 'Outdoor living contractor',
+  '/deck-lighting-ideas-northern-virginia': 'Deck lighting ideas',
+  '/services/patios': 'Patio services',
+  '/stamped-concrete-patio-northern-virginia': 'Stamped concrete patios',
+  '/paver-vs-flagstone-patio-northern-virginia': 'Paver vs. flagstone guide',
+  '/deck-vs-patio-which-is-right': 'Deck vs. patio guide',
+  '/outdoor-kitchen-builder-northern-virginia': 'Outdoor kitchen builder',
+  '/services/fire-pits': 'Fire pit service',
+  '/deck-design-ideas-northern-virginia-2026': 'Deck design ideas',
+  '/wood-decks': 'Wood deck builder',
+  '/deck-maintenance-checklist-virginia': 'Deck maintenance checklist',
+  '/services/deck-maintenance': 'Deck maintenance service',
+};
+
+function labelForRelatedPath(path) {
+  if (relatedLinkLabels[path]) return relatedLinkLabels[path];
+  return path
+    .replace(/^\/+/, '')
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
+
 function schemaForPage({ city, service, path }) {
   const url = `${SITE_URL}${path}`;
   const profile = buildCityProfile(city);
@@ -152,6 +191,10 @@ export default function LocalServicePage({ city, serviceKey }) {
   const nearbyCities = profile.neighborhoods.slice(0, 4);
   const proofAreas = profile.affluentAreas || profile.neighborhoods.slice(0, 3);
   const allServices = Object.values(servicePageTypes).filter((item) => item.path !== service.path);
+  const relatedMoneyLinks = [...new Set(service.related)].map((href) => ({
+    href,
+    label: labelForRelatedPath(href),
+  }));
   const pageContext = {
     city: city.city,
     county: city.county,
@@ -286,6 +329,24 @@ export default function LocalServicePage({ city, serviceKey }) {
             <li>Drainage, grading, and traffic flow</li>
             <li>Lighting, stairs, privacy, and usable furniture zones</li>
           </ul>
+        </div>
+      </section>
+
+      <section className={styles.moneyPathSection} aria-label={`${service.label} planning links for ${city.city}`}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.kicker}>Plan The Details</p>
+          <h2>Next Pages for a Better {city.city} Scope</h2>
+          <p>
+            Use these guides to compare materials, repair paths, porch options, and full outdoor living upgrades before requesting a final {city.city} estimate.
+          </p>
+        </div>
+        <div className={styles.moneyPathGrid}>
+          {relatedMoneyLinks.map((item) => (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+          <Link href="/get-estimate">Request a written estimate</Link>
         </div>
       </section>
 
