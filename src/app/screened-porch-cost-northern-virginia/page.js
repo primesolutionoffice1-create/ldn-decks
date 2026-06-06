@@ -12,8 +12,9 @@ import WebPageSchema from '@/components/WebPageSchema';
 
 export const metadata = buildMetadata({
   path: '/screened-porch-cost-northern-virginia',
-  title: '2026 Screened Porch Cost NoVA | See Real Project Prices',
-  description: 'Screened porches in Northern Virginia cost $25,000-$70,000+. See 2026 price tables, EZE-Breeze costs & project examples. Get a free itemized quote today!',
+  title: '2026 Screened Porch Cost NoVA | Pricing Scenarios',
+  description: 'Screened porches in Northern Virginia cost $25,000-$70,000+. See 2026 price tables, EZE-Breeze costs, and planning scenarios before requesting an itemized quote.',
+  image: '/social/screened-porch-cost-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -31,12 +32,12 @@ export default function ScreenedPorchCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/screened-porch-cost-northern-virginia" name="2026 Screened Porch Cost NoVA | See Real Project Prices" description="Screened porches in Northern Virginia cost $25,000-$70,000+. See 2026 price tables, EZE-Breeze costs &amp; project examples. Get a free itemized quote today!" speakable />
+      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/screened-porch-cost-northern-virginia" name="2026 Screened Porch Cost NoVA | Pricing Scenarios" description="Screened porches in Northern Virginia cost $25,000-$70,000+. See 2026 price tables, EZE-Breeze costs, and planning scenarios before requesting an itemized quote." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How Much Does a Screened Porch Cost in Northern Virginia?</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>2026 pricing guide with real project examples</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>2026 pricing guide with sample planning scenarios</p>
         </div>
       </section>
       <TrustBanner />
@@ -119,11 +120,14 @@ export default function ScreenedPorchCostPage() {
           </div>
           <p style={S.p}><strong>Pro tip:</strong> Many clients combine both an open section for grilling and a screened section for dining. Costs 30–40% less than two separate structures.</p>
 
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Real Projects: What Our Clients Paid</h2>
+          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Sample Cost Scenarios</h2>
+          <p style={S.p}>
+            These examples are planning scenarios, not published client case studies. Final pricing should be confirmed after site access, structural support, electrical scope, county permit requirements, HOA review, and material selections are reviewed.
+          </p>
           {[
-            { price: '$34,000', desc: '180 sqft Screened Porch, Sterling', detail: 'Added to existing deck. Composite floor, EZE-Breeze windows, beadboard ceiling, 2 ceiling fans. Loudoun County permit. 3-week build.' },
-            { price: '$52,000', desc: '280 sqft Porch + 200 sqft Deck, Centreville', detail: 'New construction. Trex Transcend floor, retractable screens, pine ceiling, electric heater, TV mount. Connected to open deck. 5-week build.' },
-            { price: '$68,000', desc: '350 sqft Premium Porch, Great Falls', detail: 'AZEK floor, floor-to-ceiling retractable screens, stone fireplace, custom lighting, stained cedar ceiling, built-in bar. 6-week build.' },
+            { price: '$34,000', desc: '180 sqft screened porch planning scenario', detail: 'Composite floor, EZE-Breeze-style window package, beadboard-style ceiling finish, two ceiling fans, and standard permit coordination.' },
+            { price: '$52,000', desc: '280 sqft porch plus open deck planning scenario', detail: 'Trex Transcend-level flooring, retractable screen package, finished ceiling, electric heater allowance, TV blocking/wiring allowance, and an attached open deck zone.' },
+            { price: '$68,000', desc: '350 sqft premium porch planning scenario', detail: 'Premium PVC or capped-composite floor, larger screen/window openings, fireplace or heater allowance, upgraded lighting, stained ceiling finish, and custom trim details.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} {p.desc}</h3>
@@ -164,7 +168,7 @@ export default function ScreenedPorchCostPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Get Your Screened Porch Quote" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get Your Screened Porch Quote" buttonText="Get Free Estimate" link="/get-estimate" />
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Resources</h2>
@@ -172,7 +176,7 @@ export default function ScreenedPorchCostPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>
       </section>
       <RelatedGuides currentPath="/screened-porch-cost-northern-virginia" />

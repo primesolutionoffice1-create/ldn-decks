@@ -15,6 +15,7 @@ export const metadata = buildMetadata({
   path: '/louvered-pergola-northern-virginia',
   title: 'Louvered Pergola Builder in Northern Virginia',
   description: 'Motorized and manual louvered pergolas in Northern Virginia — adjustable-roof shade structures over decks and patios. $12,000-$35,000+. Free design consultation.',
+  image: '/social/louvered-pergola-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -32,7 +33,7 @@ export default function LouveredPergolaPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/louvered-pergola-northern-virginia" name="Louvered Pergola Builder in Northern Virginia" description="Motorized and manual louvered pergolas in Northern Virginia — adjustable-roof shade structures over decks and patios. $12,000-$35,000+. Free design consultation." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/louvered-pergola-northern-virginia" name="Louvered Pergola Builder in Northern Virginia" description="Motorized and manual louvered pergolas in Northern Virginia — adjustable-roof shade structures over decks and patios. $12,000-$35,000+. Free design consultation." speakable />
       <ServiceSchema
         name="Louvered Pergola Installation"
         description="Motorized louvered pergola systems in Northern Virginia. Adjustable aluminum roof structures for year-round outdoor living."
@@ -59,7 +60,7 @@ export default function LouveredPergolaPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Motorized &amp; adjustable-roof pergolas over decks and patios</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
           </div>
         </div>
       </section>
@@ -157,7 +158,7 @@ export default function LouveredPergolaPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Design Your Louvered Pergola" buttonText="Get Free Design Consultation" link="/contact" />
+      <SimpleCTA title="Design Your Louvered Pergola" buttonText="Get Free Design Consultation" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/louvered-pergola-northern-virginia" />

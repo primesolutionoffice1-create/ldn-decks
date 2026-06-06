@@ -14,7 +14,7 @@ export default function ShowcaseHeader() {
            Explore our stunning Decks projects showcase! At Loudoun Decks, we take pride in our beautifully crafted decks that transform outdoor spaces. From custom decks and patios to durable fences and gazebos, each project showcases our commitment to quality and customer satisfaction.
          </p>
          <p className={styles.description}>
-           Explore our Portfolio to see the craftsmanship and attention to detail we bring to every project. Let our work inspire your next outdoor space! Contact us today to learn more about our services and start planning your dream deck.
+           Explore our Portfolio to see the craftsmanship and attention to detail we bring to every project. Let our work inspire your next outdoor space, then request a written estimate when you are ready to plan your deck.
          </p>
       </div>
     </section>

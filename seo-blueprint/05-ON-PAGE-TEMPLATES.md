@@ -109,11 +109,8 @@ CTA placement:
       "price": "12000-85000"
     }
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "41"
-  },
+  // Keep Review/AggregateRating JSON-LD disabled unless policy-eligible
+  // and source-backed. Surface verified public review links in visible UI.
   "termsOfService": "https://ldndecks.com/about/warranty"
 }
 ```

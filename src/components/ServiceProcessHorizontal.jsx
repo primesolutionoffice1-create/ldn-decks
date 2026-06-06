@@ -10,15 +10,12 @@ const OrangeCheckIcon = () => (
   </svg>
 );
 
-import { useContact } from '@/context/ContactContext';
-
 export default function ServiceProcessHorizontal({ title, steps }) {
-  const { openContact } = useContact();
   return (
     <section className={styles.processSection}>
       <div className={styles.container}>
         <h2 className={styles.mainTitle}>{title}</h2>
-        
+
         <div className={styles.stepsGrid}>
           {steps.map((step, idx) => (
             <div key={idx} className={styles.stepCard}>
@@ -35,9 +32,9 @@ export default function ServiceProcessHorizontal({ title, steps }) {
           <p className={styles.ctaText}>
             Get Started Today! Ready to enhance your property with us? Contact us to schedule your <strong>Free consultation</strong>.
           </p>
-          <button onClick={openContact} className={styles.ctaButton}>
-            Contacts
-          </button>
+          <Link href="/get-estimate" className={styles.ctaButton}>
+            Get Free Estimate
+          </Link>
         </div>
       </div>
     </section>

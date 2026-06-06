@@ -6,6 +6,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS, FOUNDER_ID } from '@/lib/business';
 import WebPageSchema from '@/components/WebPageSchema';
 import CallLink from '@/components/CallLink';
 
@@ -13,6 +14,7 @@ export const metadata = buildMetadata({
   path: '/deck-cost-12x20-northern-virginia',
   title: '12x20 Deck Cost in Northern Virginia (2026)',
   description: 'How much does a 12x20 deck (240 sq ft) cost in Northern Virginia in 2026? Pressure-treated wood $7,000-$13,000, composite $15,000-$25,000, premium PVC $20,000-$32,000. Permits and HOA notes included.',
+  image: '/social/deck-cost-12x20-northern-virginia-social.png',
 });
 
 const articleSchema = {
@@ -20,7 +22,7 @@ const articleSchema = {
   headline: "How Much Does a 12x20 Deck Cost in Northern Virginia (2026)",
   datePublished: "2026-05-23",
   dateModified: "2026-05-23",
-  author: { "@type": "Person", name: "Nick", url: "https://ldndecks.com/team" },
+  author: { "@type": "Person", "@id": FOUNDER_ID, name: BUSINESS.founder.name, alternateName: "Nick", url: "https://ldndecks.com/team" },
   publisher: { "@type": "Organization", "@id": "https://ldndecks.com/#organization", name: "Loudoun Decks", url: "https://ldndecks.com" },
   about: "12x20 deck cost in Northern Virginia",
 };
@@ -43,7 +45,7 @@ export default function DeckCost12x20Page() {
   return (
     <>
       <JsonLd data={articleSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-cost-12x20-northern-virginia" name="12x20 Deck Cost in Northern Virginia (2026)" description="How much does a 12x20 deck (240 sq ft) cost in Northern Virginia in 2026? Pressure-treated wood $7,000-$13,000, composite $15,000-$25,000, premium PVC $20,000-$" speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-cost-12x20-northern-virginia" name="12x20 Deck Cost in Northern Virginia (2026)" description="How much does a 12x20 deck (240 sq ft) cost in Northern Virginia in 2026? Pressure-treated wood $7,000-$13,000, composite $15,000-$25,000, premium PVC $20,000-$" speakable />
       <JsonLd data={faqSchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -54,7 +56,7 @@ export default function DeckCost12x20Page() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>240 sq ft &middot; pressure-treated, composite, and PVC &middot; permits &amp; HOA included &middot; as of May 2026</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get a Free 12x20 Quote</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get a Free 12x20 Quote</Link>
           </div>
         </div>
       </section>
@@ -62,7 +64,7 @@ export default function DeckCost12x20Page() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <section data-speakable="true" style={{ background: '#fff8f0', borderLeft: '4px solid var(--color-primary)', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
-            <p style={{ margin: 0, fontWeight: 600, lineHeight: 1.6 }}><strong>TL;DR:</strong> As of May 2026, a 12x20 deck (240 sq ft) in Northern Virginia costs about <strong>$7,000&ndash;$13,000 in pressure-treated wood</strong>, <strong>$15,000&ndash;$25,000 in standard composite</strong>, and <strong>$20,000&ndash;$32,000 in premium composite or PVC</strong>. Pricing source: LDN Decks recent Loudoun and Fairfax County project quotes, 2026.</p>
+            <p style={{ margin: 0, fontWeight: 600, lineHeight: 1.6 }}><strong>TL;DR:</strong> As of May 2026, a 12x20 deck (240 sq ft) in Northern Virginia costs about <strong>$7,000&ndash;$13,000 in pressure-treated wood</strong>, <strong>$15,000&ndash;$25,000 in standard composite</strong>, and <strong>$20,000&ndash;$32,000 in premium composite or PVC</strong>. Pricing source: LDN Decks 2026 Northern Virginia estimating logic and market-rate planning ranges.</p>
           </section>
 
           <NamedAuthor context="Northern Virginia 12x20 deck builds" lastUpdated="May 2026" />
@@ -99,11 +101,16 @@ export default function DeckCost12x20Page() {
           <h2 style={S.h2}>Composite vs Pressure-Treated for a 12x20 &mdash; the 15-Year View</h2>
           <p style={S.p}>On a 12x20 footprint the upfront delta is roughly $8,000&ndash;$15,000 in favor of pressure-treated wood. But pressure-treated decks in Virginia&apos;s humid summers and freeze-thaw winters require power-washing, sanding, and re-staining roughly every 2 years &mdash; budget $400&ndash;$800 each cycle if you DIY, or $1,200&ndash;$2,000 professionally. Across 15 years that&apos;s $3,000&ndash;$15,000 in maintenance, plus typical board replacement around year 10&ndash;12. Composite eliminates almost all of it. We break the math down in detail in our <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)' }}>composite vs wood deck guide</Link>.</p>
 
-          <h2 style={S.h2}>Recent 12x20 Projects in Northern Virginia</h2>
+          <h2 style={S.h2}>12x20 Deck Planning Scenarios to Verify Before Case Study Use</h2>
+          <p style={S.p}>
+            These examples are planning scenarios for budget comparison, not published case studies. Before any item is
+            reused as a source-verified example, confirm the actual city, month/year, scope, permit or HOA status,
+            photos, and final estimate or invoice.
+          </p>
           {[
-            { price: '$17,400', desc: '12x20 Trex Select, Sterling', detail: 'Ground-level 12x20 in Trex Select Pebble Gray with composite balusters, a single 4-step stair set, and standard fascia. Loudoun County permit. 8 calendar days on site.' },
-            { price: '$22,800', desc: '12x20 Trex Transcend, Vienna', detail: 'Second-story 12x20 in Trex Transcend Spiced Rum with a Charcoal picture-frame border, black aluminum balusters, and 8-light LED stair riser package. Fairfax County permit. 11 calendar days on site.' },
-            { price: '$10,200', desc: '12x20 Pressure-Treated, Manassas', detail: 'Ground-level 12x20 pressure-treated wood with standard 2x2 wood balusters and a short stair to the lawn. Prince William County permit. 6 calendar days on site.' },
+            { price: '$16,000-$19,000', desc: '12x20 Trex Select, Sterling-style scope', detail: 'Ground-level 12x20 planning scenario in Trex Select Pebble Gray with composite balusters, a single short stair set, and standard fascia. Verify jurisdiction, permit path, and timeline before using as a source-verified example.' },
+            { price: '$21,000-$25,000', desc: '12x20 Trex Transcend, Vienna-style scope', detail: 'Second-story 12x20 planning scenario in Trex Transcend Spiced Rum with a Charcoal picture-frame border, black aluminum balusters, and stair-riser lighting allowance. Verify Fairfax permit, engineering, and source evidence before publishing as a formal example.' },
+            { price: '$9,000-$12,000', desc: '12x20 pressure-treated, Manassas-style scope', detail: 'Ground-level 12x20 pressure-treated planning scenario with standard wood balusters and a short lawn stair. Verify Prince William permit triggers and final quote evidence before treating as a source-verified example.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} &mdash; {p.desc}</h3>
@@ -135,18 +142,21 @@ export default function DeckCost12x20Page() {
             {[
               ['/deck-cost-16x20-northern-virginia', '16x20 Deck Cost (next size up)'],
               ['/deck-cost-20x20-northern-virginia', '20x20 Deck Cost (large)'],
+              ['/deck-payment-estimator', 'Deck Payment Estimator'],
+              ['/composite-deck-cost-by-size', 'Composite Deck Cost by Size'],
               ['/how-much-does-a-deck-cost-northern-virginia', 'Northern Virginia Deck Cost Guide (overview)'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck — 15-Year Cost'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
               ['/loudoun-county-hoa-deck-rules', 'Loudoun HOA Deck Rules'],
               ['/deck-cost-calculator', 'Free Deck Cost Calculator'],
+              ['/get-estimate', 'Get a Written 12x20 Estimate'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} &rarr;</Link></li>
             ))}
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Get an Exact 12x20 Quote — Free" buttonText="Request Free Estimate" link="/contact" />
+      <SimpleCTA title="Get an Exact 12x20 Quote — Free" buttonText="Request Free Estimate" link="/get-estimate" />
       <ContactHome />
     </>
   );

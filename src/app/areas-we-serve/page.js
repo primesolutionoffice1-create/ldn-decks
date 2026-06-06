@@ -5,13 +5,14 @@ import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import { BUSINESS } from '@/lib/business';
-import { getAllCityPaths } from '@/data/cityData';
+import { getAllCityPaths, getCanonicalCityUrl } from '@/data/cityData';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/areas-we-serve',
   title: 'Areas We Serve | Deck Builder Across Northern Virginia',
   description: 'Loudoun Decks serves 70+ cities across Loudoun, Fairfax, Prince William, Arlington & Stafford counties. Find your city and get a free deck estimate.',
+  image: '/social/areas-we-serve-social.png',
 });
 
 export default function AreasWeServePage() {
@@ -33,12 +34,12 @@ export default function AreasWeServePage() {
 
   return (
     <>
-      <WebPageSchema url="https://ldndecks.com/areas-we-serve" name="Areas We Serve | Deck Builder Across Northern Virginia" description="Loudoun Decks serves 70+ cities across Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties. Find your city and get a free deck estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/areas-we-serve" name="Areas We Serve | Deck Builder Across Northern Virginia" description="Loudoun Decks serves 70+ cities across Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties. Find your city and get a free deck estimate." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Areas We Serve</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom deck building across 70+ cities in Northern Virginia</p>
-          <p style={{ color: '#aaa', marginTop: '1rem', fontSize: '0.9rem' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ color: '#aaa', marginTop: '1rem', fontSize: '0.9rem' }}>Public Google review profile · Licensed &amp; Insured · Written warranty terms</p>
         </div>
       </section>
 
@@ -62,7 +63,7 @@ export default function AreasWeServePage() {
                   return (
                     <Link
                       key={city}
-                      href={`/near-you/${slug}/${city}`}
+                      href={getCanonicalCityUrl(slug, city)}
                       style={{
                         display: 'inline-block',
                         padding: '0.4rem 0.8rem',
@@ -115,12 +116,26 @@ export default function AreasWeServePage() {
 
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h2 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.75rem' }}>Don&apos;t See Your City?</h2>
-            <p style={{ lineHeight: 1.7 }}>We serve most of Northern Virginia. If your city isn&apos;t listed, call <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink> or <Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free estimate</Link> we&apos;ll confirm availability for your area within 24 hours.</p>
+            <p style={{ lineHeight: 1.7 }}>We serve most of Northern Virginia. If your city isn&apos;t listed, call <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink> or <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free estimate</Link> we&apos;ll confirm availability for your area within 24 hours.</p>
+          </div>
+
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Plan Before We Visit</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem', marginBottom: '2rem' }}>
+            {[
+              ['/deck-cost-calculator', 'Deck Cost Calculator'],
+              ['/deck-payment-estimator', 'Deck Payment Estimator'],
+              ['/reviews', 'Customer Reviews'],
+              ['/bbb-accredited-deck-builder-virginia', 'BBB Accredited Deck Builder'],
+              ['/before-and-after', 'Before & After Projects'],
+              ['/get-estimate', 'Request a Written Estimate'],
+            ].map(([href, text]) => (
+              <Link key={href} href={href} style={{ display: 'block', padding: '0.85rem', background: '#fff', border: '1px solid #e5e5e5', borderRadius: 6, fontSize: '0.9rem', color: 'var(--color-primary)', textDecoration: 'none', fontWeight: 700 }}>{text} →</Link>
+            ))}
           </div>
 
         </div>
       </article>
-      <SimpleCTA title="Find Us in Your Neighborhood" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Find Us in Your Neighborhood" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </>
   );

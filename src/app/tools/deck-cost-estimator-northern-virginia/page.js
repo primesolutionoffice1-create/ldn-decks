@@ -17,6 +17,7 @@ export const metadata = buildMetadata({
   path,
   title: 'Deck Cost Estimator Northern Virginia | LDN Decks',
   description: pageDescription,
+  image: '/social/deck-cost-estimator-northern-virginia-social.png',
 });
 
 const faqs = [
@@ -104,7 +105,7 @@ export default function DeckCostEstimatorNorthernVirginiaPage() {
     <main style={{ background: '#fff' }}>
       <JsonLd data={faqSchema} />
       <JsonLd data={webApplicationSchema} />
-      <WebPageSchema url={pageUrl} name={pageTitle} description={pageDescription} speakable />
+      <WebPageSchema dateModified="2026-06-01" url={pageUrl} name={pageTitle} description={pageDescription} speakable />
 
       <section style={{ background: '#17202a', color: '#fff', padding: '4rem 0 3rem' }}>
         <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 1.5rem' }}>

@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/credit-score-deck-financing',
   title: 'What Credit Score Do You Need for Deck Financing? (2026)',
   description: 'Credit score requirements for deck financing in Northern Virginia. Typical APR by score band, soft-pull pre-qualification process, and approval tips.',
-  image: '/images/deck_financing_contract.png',
+  image: '/social/credit-score-deck-financing-social.png',
 });
 
 const PATH = '/credit-score-deck-financing';
@@ -91,7 +91,7 @@ export default function CreditScoreDeckFinancingPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="What Credit Score Do You Need for Deck Financing? (2026)" description="Credit score requirements for deck financing in Northern Virginia. Typical APR by score band, soft-pull pre-qualification process, and approval tips." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="What Credit Score Do You Need for Deck Financing? (2026)" description="Credit score requirements for deck financing in Northern Virginia. Typical APR by score band, soft-pull pre-qualification process, and approval tips." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -111,8 +111,8 @@ export default function CreditScoreDeckFinancingPage() {
       <TrustBanner />
 
       <AboveFoldCTA
-        headline="Start with a written project estimate — a real project amount makes pre-qualification more accurate."
-        estimateHref="/contact"
+        headline="Start with a written project estimate — a final estimate amount makes pre-qualification more accurate."
+        estimateHref="/get-estimate"
         estimateLabel="Start with a Written Estimate"
       />
 
@@ -272,7 +272,7 @@ export default function CreditScoreDeckFinancingPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Start with a Written Estimate" buttonText="Get Free Written Estimate" link="/contact" />
+      <SimpleCTA title="Start with a Written Estimate" buttonText="Get Free Written Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />

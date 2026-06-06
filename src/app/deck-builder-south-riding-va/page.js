@@ -16,12 +16,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-south-riding-va',
   title: 'Deck Builder in South Riding, VA | Custom Trex Decks',
   description: "Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permits handled. Free estimate.",
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-south-riding-va-social.png',
 });
 
 const inclusions = [
@@ -71,7 +72,7 @@ const expansionSections = [
     title: "One Community, One Design Review Committee",
     paragraphs: [
       "South Riding is a single master-planned community of roughly 7,000 homes, all governed by South Riding Proprietary (SRP). Unlike areas with dozens of small HOAs, every exterior modification in South Riding goes through one Design Review Committee (DRC). The DRC cares about materials, colors and how a structure fits the community's visual standards, and it meets on a fixed schedule rather than reviewing on demand.",
-      "That fixed schedule means timing the submission correctly is as important as getting the drawings right. We prepare the full DRC package  -  site plan, material samples, color specifications  -  to match what the committee expects, and we submit early enough to land on the right agenda. A recent South Riding project, a 350 sqft Trex Enhance deck replacing a 15-year-old PT original, cleared the DRC on the first submission because the package was complete and the Toasted Sand color was already within SRP's approved palette.",
+      "That fixed schedule means timing the submission correctly is as important as getting the drawings right. We prepare the full DRC package  -  site plan, material samples, color specifications  -  to match what the committee expects, and we submit early enough to land on the right agenda. Verified South Riding project examples should be added only after owner-supplied photos, scope, date, and DRC details are available.",
       "Working with one governing body rather than many also means we know the DRC's patterns. Certain composite colors and railing styles have a strong approval track record in South Riding, and we steer material selection toward those proven choices from the first design meeting."
     ]
   },
@@ -110,11 +111,11 @@ export default function SouthRidingDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="South Riding" url="https://ldndecks.com/deck-builder-south-riding-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-south-riding-va" name="Deck Builder in South Riding, VA | Custom Trex Decks" description="Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-south-riding-va" name="Deck Builder in South Riding, VA | Custom Trex Decks" description="Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permits handled. Free estimate." speakable />
       <ServicesHeader
         subtext="South Riding, VA's Trusted Deck Company"
         title="Custom Deck Builder in South Riding, VA"
-        description="Loudoun Decks builds composite decks designed for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permits handled. review-supported reputation."
+        description="Loudoun Decks builds composite decks designed for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permits handled. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Built for South Riding's DRC Standards"
@@ -129,6 +130,19 @@ export default function SouthRidingDeckBuilderPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <PlanningUpdate
+        market="South Riding decks in 2026"
+        notes={[
+          "South Riding projects should align material, color, railing, and drainage decisions with SRP Design Review Committee expectations before submission.",
+          "Builder-grade deck upgrades should start with a frame inspection so resurfacing is recommended only when the ledger, joists, posts, and footings are sound.",
+          "Under-deck drainage, stair changes, railings, and footprint changes can affect both Loudoun County permit scope and SRP review materials."
+        ]}
+        links={[
+          { href: "/deck-permit-loudoun-county-virginia", label: "Loudoun permit guide" },
+          { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" },
+          { href: "/composite-deck-cost-northern-virginia", label: "Composite deck cost" }
+        ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -175,9 +189,9 @@ export default function SouthRidingDeckBuilderPage() {
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="South Riding" /></div></section>
-      <SimpleCTA title="Upgrade Your South Riding Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Upgrade Your South Riding Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-south-riding-va" />
-      <NamedAuthor context="South Riding and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="South Riding and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

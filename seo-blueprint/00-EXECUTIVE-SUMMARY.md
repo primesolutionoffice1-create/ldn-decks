@@ -60,7 +60,7 @@ The **fix is not more pages**. It is (a) ship the 14 technical fixes this week, 
 You don't need a 12-month transformation. You need:
 
 - **Week 1**: Ship 14 technical fixes from §1.
-- **Week 2**: Add Service + AggregateRating schema to every service/city page (no competitor has this).
+- **Week 2**: Add/validate Service schema on every service/city page; keep Review/AggregateRating JSON-LD disabled unless policy-eligible and source-backed.
 - **Week 3**: Launch financing partner + payment estimator; consolidate Ashburn/Leesburg copy.
 - **Week 4**: Publish 6 HOA pages + Arlington and Stafford city pages (close defensive coverage gap vs. Battlefield).
 - **Months 2–3**: Content calendar execution at 8 posts/month + GBP review velocity push.

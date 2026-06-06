@@ -10,7 +10,8 @@ import { BUSINESS } from '@/lib/business';
 export const metadata = buildMetadata({
   path: '/ldn-decks-reviews-yelp',
   title: 'Loudoun Decks Reviews | Yelp Deck Builder Northern Virginia',
-  description: 'Read real Yelp reviews for LDN Decks. Trusted deck builder in Northern Virginia — custom decks, Trex, and composite outdoor living projects. review-backed.',
+  description: 'Verify Loudoun Decks public review profiles on Yelp, Google, Houzz, and BBB before hiring a Northern Virginia deck builder.',
+  image: '/social/ldn-decks-reviews-yelp-social.png',
 });
 
 const S = {
@@ -19,68 +20,29 @@ const S = {
   p: { marginBottom: '1rem', lineHeight: 1.7 },
 };
 
-const yelpReviews = [
-  {
-    name: 'James R.',
-    location: 'Ashburn, VA',
-    project: 'Trex Composite Deck, 500 sqft',
-    rating: 5,
-    text: 'Nick and his team built us a 500 sqft Trex Transcend deck in Ashburn, from permit to final walkthrough in under 3 weeks. Every neighbor has asked who did it. Honest pricing, zero surprises, and they left the yard cleaner than they found it.',
-  },
-  {
-    name: 'Maria & Tom S.',
-    location: 'Leesburg, VA',
-    project: 'Composite Deck + Screened Porch',
-    rating: 5,
-    text: 'We got 4 quotes. Loudoun Decks wasn\u2019t the cheapest, but Nick came to the house, explained everything in detail, and showed us exactly why composite is worth it long-term. Two years later, our deck still looks brand new. Worth every penny.',
-  },
-  {
-    name: 'David K.',
-    location: 'South Riding, VA',
-    project: 'Deck Replacement + Railings',
-    rating: 5,
-    text: 'They handled the HOA submission and Loudoun County permit themselves \u2014 I didn\u2019t lift a finger on the paperwork. Deck was done in 10 days. The Trex Calm Shell color we chose looks incredible against our siding.',
-  },
-  {
-    name: 'Patricia W.',
-    location: 'Centreville, VA',
-    project: 'Screened Porch with EZE-Breeze',
-    rating: 5,
-    text: 'We wanted a screened porch that we could use from March through November. LDN Decks delivered exactly that \u2014 EZE-Breeze windows, ceiling fan, recessed lighting, pine ceiling. It\u2019s now the most-used room in our house. Fairfax County permit was handled entirely by their team.',
-  },
-  {
-    name: 'Robert M.',
-    location: 'Reston, VA',
-    project: 'Multi-Level Composite Deck',
-    rating: 5,
-    text: 'Had a two-level Trex deck built with cascading stairs and LED lighting. The Reston Association approval process was handled completely by Nick\u2019s team. Design, permits, HOA \u2014 all managed. The finished product is stunning and our property value definitely went up.',
-  },
-  {
-    name: 'Linda & Steve H.',
-    location: 'Sterling, VA',
-    project: 'Deck Resurfacing (Wood to Composite)',
-    rating: 5,
-    text: 'Our 15-year-old wood deck was falling apart. LDN Decks inspected the frame, said it was still solid, and resurfaced with Trex Enhance. Saved us thousands compared to a full rebuild. No staining ever again \u2014 that alone was worth it.',
-  },
+const reviewProfiles = [
+  { platform: 'Google', rating: 'Review profile', count: 'Verify current count', url: 'https://www.google.com/maps/place/Loudoun+Decks/', note: 'Verify current review count, text, names, photos, and business details directly on Google Maps.' },
+  { platform: 'Yelp', rating: 'Public profile', count: 'Review listing', url: 'https://www.yelp.com/biz/loudoun-decks-centreville', note: 'Open the public Yelp listing for current review text and profile details.' },
+  { platform: 'Houzz', rating: 'Public profile', count: 'Portfolio listing', url: 'https://www.houzz.com/pro/webuser-782541997/loudoun-decks', note: 'Review portfolio photos and profile details on Houzz.' },
+  { platform: 'BBB', rating: 'Public profile', count: 'Accreditation profile', url: 'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241', note: 'Verify current accreditation, rating, and licensing references directly on BBB.' },
 ];
 
 // No org-level `review` JSON-LD is emitted here. Self-serving Review markup
-// about Loudoun Decks is disallowed by Google's review-snippet policy and
-// risks a structured-data manual action. The customer reviews below remain
-// fully visible on-page as real homeowner proof.
+// about Loudoun Decks is disallowed by Google's review-snippet policy.
+// Review text should be verified on the original public platforms.
 
 export default function YelpReviewsPage() {
   return (
     <>
-      <WebPageSchema url="https://ldndecks.com/ldn-decks-reviews-yelp" name="Loudoun Decks Reviews | Yelp Deck Builder Northern Virginia" description="Read real Yelp reviews for LDN Decks. Trusted deck builder in Northern Virginia — custom decks, Trex, and composite outdoor living projects. review-backed." speakable />
+      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/ldn-decks-reviews-yelp" name="Loudoun Decks Reviews | Yelp Deck Builder Northern Virginia" description="Verify Loudoun Decks public review profiles on Yelp, Google, Houzz, and BBB before hiring a Northern Virginia deck builder." speakable />
       {/* Hero */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Loudoun Decks Reviews</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Real customer reviews from Northern Virginia homeowners on Yelp, Google &amp; Houzz</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Open public review profiles for Yelp, Google, Houzz, and BBB before you request an estimate.</p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1rem' }}>
             <span style={{ color: '#fbbf24', fontSize: '1rem', fontWeight: 700 }}>Public review profiles</span>
-            <span style={{ color: '#aaa' }}>Public review profile &middot; {BUSINESS.aggregateRating.reviewCount}+ reviews</span>
+            <span style={{ color: '#aaa' }}>Public review profile &middot; verify current count on Google Maps</span>
           </div>
         </div>
       </section>
@@ -88,7 +50,7 @@ export default function YelpReviewsPage() {
       {/* Trust Bar */}
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <p style={{ marginBottom: '0.5rem' }}>When choosing a deck builder in Northern Virginia, reviews matter. Our reputation is built on real projects, real results, and real homeowner satisfaction.</p>
+          <p style={{ marginBottom: '0.5rem' }}>When choosing a deck builder in Northern Virginia, reviews matter. This page routes homeowners to the public source profiles instead of republishing review excerpts without source verification.</p>
           <p style={{ margin: 0 }}>
             <a href="https://www.yelp.com/biz/loudoun-decks-centreville" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>View our Yelp profile &rarr;</a>
             {' '}&middot;{' '}
@@ -103,10 +65,7 @@ export default function YelpReviewsPage() {
           {/* Ratings Summary */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem', marginBottom: '3rem' }}>
             {[
-              { platform: 'Google', rating: 'Review profile', count: `${BUSINESS.aggregateRating.reviewCount}+ reviews`, url: 'https://www.google.com/maps/place/Loudoun+Decks/' },
-              { platform: 'Yelp', rating: 'Public profile', count: 'Review listing', url: 'https://www.yelp.com/biz/loudoun-decks-centreville' },
-              { platform: 'Houzz', rating: 'Public profile', count: 'Best of Houzz', url: 'https://www.houzz.com/pro/webuser-782541997/loudoun-decks' },
-              { platform: 'BBB', rating: 'A+', count: 'Accredited', url: 'https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241' },
+              ...reviewProfiles,
             ].map((p) => (
               <a key={p.platform} href={p.url} target="_blank" rel="noopener noreferrer" style={{ display: 'block', background: '#f9f9f9', borderRadius: 10, padding: '1.25rem', textAlign: 'center', textDecoration: 'none', color: 'inherit', border: '1px solid #e5e5e5' }}>
                 <p style={{ fontSize: '0.8rem', color: '#999', marginBottom: '0.25rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{p.platform}</p>
@@ -116,47 +75,50 @@ export default function YelpReviewsPage() {
             ))}
           </div>
 
-          {/* Reviews */}
-          <h2 style={S.h2}>What Clients Say About LDN Decks</h2>
+          {/* Review source verification */}
+          <h2 style={S.h2}>Verify Reviews at the Original Source</h2>
+          <p style={S.p}>
+            Review text, dates, ratings, and names can change over time. For accuracy, open the public profiles below and verify current review details directly on the original platform.
+          </p>
 
-          {yelpReviews.map((review, i) => (
-            <div key={i} style={{ background: '#f9f9f9', borderRadius: 10, padding: '1.5rem', marginBottom: '1.25rem', borderLeft: '4px solid var(--color-primary)' }}>
+          {reviewProfiles.map((profile) => (
+            <div key={profile.platform} style={{ background: '#f9f9f9', borderRadius: 10, padding: '1.5rem', marginBottom: '1.25rem', borderLeft: '4px solid var(--color-primary)' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
                 <div>
-                  <h3 style={{ fontSize: '1.05rem', fontWeight: 600, margin: 0 }}>{review.name}</h3>
-                  <p style={{ fontSize: '0.8rem', color: '#999', margin: 0 }}>{review.location} &middot; {review.project}</p>
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: 600, margin: 0 }}>{profile.platform}</h3>
+                  <p style={{ fontSize: '0.8rem', color: '#999', margin: 0 }}>{profile.count}</p>
                 </div>
                 <span style={{ color: '#fbbf24', fontSize: '1rem', fontWeight: 700 }}>Public review listing</span>
               </div>
-              <p style={{ lineHeight: 1.7, margin: 0, color: '#444' }}>&ldquo;{review.text}&rdquo;</p>
+              <p style={{ lineHeight: 1.7, margin: '0 0 0.8rem', color: '#444' }}>{profile.note}</p>
+              <a href={profile.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Open {profile.platform} profile &rarr;</a>
             </div>
           ))}
 
-          {/* CTA to leave review */}
+          {/* CTA to review profile */}
           <div style={{ background: 'var(--color-dark)', borderRadius: 12, padding: '2rem', textAlign: 'center', marginTop: '2rem', marginBottom: '3rem' }}>
-            <h2 style={{ color: '#fff', fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.75rem' }}>Worked With Us? Leave a Review</h2>
-            <p style={{ color: '#ccc', marginBottom: '1.5rem' }}>Your feedback helps other Northern Virginia homeowners find a trusted deck builder.</p>
+            <h2 style={{ color: '#fff', fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.75rem' }}>Worked With Us? Share Your Google Review</h2>
+            <p style={{ color: '#ccc', marginBottom: '1.5rem' }}>Your feedback helps other Northern Virginia homeowners find a trusted deck builder. Use our review page for Google review guidance, or open Yelp as a neutral public profile.</p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href="https://www.google.com/maps/place/Loudoun+Decks/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#4285F4', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>Review on Google</a>
-              <a href="https://www.yelp.com/biz/loudoun-decks-centreville" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#D32323', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>Review on Yelp</a>
-              <a href="https://www.houzz.com/pro/webuser-782541997/loudoun-decks" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#4DBC15', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>Review on Houzz</a>
+              <Link href="/review" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>Google Review Guidance</Link>
+              <a href="https://www.yelp.com/biz/loudoun-decks-centreville" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: 'transparent', color: '#fff', border: '1px solid rgba(255,255,255,.45)', padding: '0.75rem 1.5rem', borderRadius: 8, fontWeight: 600, textDecoration: 'none' }}>View Yelp Profile</a>
             </div>
           </div>
 
           {/* Why Reviews Matter */}
           <h2 style={S.h2}>Why Reviews Matter When Choosing a Contractor</h2>
-          <p style={S.p}>Online reviews are one of the strongest indicators of contractor quality. When you&apos;re investing $15,000&ndash;$75,000 in an outdoor living project, you need to know the company delivers on its promises.</p>
-          <p style={S.p}>Our clients consistently highlight:</p>
+          <p style={S.p}>Online reviews are one of the strongest indicators of contractor quality. When you&apos;re investing $15,000&ndash;$75,000 in an outdoor living project, you need to verify the company&apos;s reputation, licensing references, public profiles, project photos, and written estimate process.</p>
+          <p style={S.p}>When reviewing any contractor profile, check for:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Professional and responsive service</strong> &mdash; we answer calls and respond to emails within hours</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Accurate and detailed estimates</strong> &mdash; itemized quotes with no hidden costs</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Premium workmanship</strong> &mdash; Trex Platinum Partner quality on every build</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Reliable timelines</strong> &mdash; most projects completed in 1&ndash;3 weeks</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Full permit and HOA handling</strong> &mdash; you don&apos;t touch paperwork</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Recent review activity</strong> &mdash; current feedback is more useful than old volume alone.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Project specificity</strong> &mdash; look for deck, resurfacing, porch, permit, HOA, stair, or railing context.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Profile consistency</strong> &mdash; name, phone, address, service area, and licensing references should match across platforms.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Photo evidence</strong> &mdash; compare public profile photos with before/after galleries and project pages.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Written estimate process</strong> &mdash; a good contractor explains scope, material selections, permit triggers, and exclusions before construction.</li>
           </ul>
 
           {/* What We Build */}
-          <h2 style={S.h2}>What Our Reviewed Clients Hired Us For</h2>
+          <h2 style={S.h2}>Services to Review Before You Hire</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '3rem' }}>
             {[
               { title: 'Custom Composite Decks', price: 'From $15K', href: '/composite-decks' },
@@ -175,7 +137,7 @@ export default function YelpReviewsPage() {
 
           {/* Local SEO Keywords */}
           <h2 style={S.h2}>Deck Builder Near You &mdash; Northern Virginia</h2>
-          <p style={S.p}>If you&apos;re searching for a trusted deck contractor in Northern Virginia, our reviews speak for themselves. We serve:</p>
+          <p style={S.p}>If you&apos;re comparing deck contractors in Northern Virginia, review public profiles, project photos, service pages, and local permit guidance before requesting a written estimate. We serve:</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
             {['Ashburn', 'Leesburg', 'Sterling', 'Reston', 'Herndon', 'McLean', 'Great Falls', 'Vienna', 'Centreville', 'Fairfax', 'Chantilly', 'Manassas', 'Woodbridge', 'Burke', 'Springfield'].map(city => (
               <Link key={city} href={`/deck-builder-${city.toLowerCase().replace(/\s+/g, '-')}-va`} style={{ display: 'inline-block', padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.85rem', textDecoration: 'none', color: 'var(--color-dark)' }}>
@@ -204,7 +166,7 @@ export default function YelpReviewsPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Start Your Deck Project With Confidence" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Start Your Deck Project With Confidence" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/ldn-decks-reviews-yelp" />
       <ContactHome />
     </>

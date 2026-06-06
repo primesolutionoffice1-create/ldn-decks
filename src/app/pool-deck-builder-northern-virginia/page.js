@@ -14,6 +14,7 @@ export const metadata = buildMetadata({
   path: '/pool-deck-builder-northern-virginia',
   title: 'Pool Deck Builder in Northern Virginia | Composite & Paver Pool Decks',
   description: 'Custom pool decks NoVA: composite ($35-$75/sqft), pavers ($25-$50/sqft), stamped concrete ($15-$30/sqft). Code-compliant. Free estimate.',
+  image: '/social/pool-deck-builder-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -31,7 +32,7 @@ export default function PoolDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/pool-deck-builder-northern-virginia" name="Pool Deck Builder in Northern Virginia | Composite &amp; Paver Pool Decks" description="Custom pool decks NoVA: composite ($35-$75/sqft), pavers ($25-$50/sqft), stamped concrete ($15-$30/sqft). Code-compliant. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/pool-deck-builder-northern-virginia" name="Pool Deck Builder in Northern Virginia | Composite &amp; Paver Pool Decks" description="Custom pool decks NoVA: composite ($35-$75/sqft), pavers ($25-$50/sqft), stamped concrete ($15-$30/sqft). Code-compliant. Free estimate." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -49,7 +50,7 @@ export default function PoolDeckPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom pool decks: composite, pavers, and stamped concrete heat-resistant, code-compliant, built to last</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
         </div>
       </section>
@@ -133,7 +134,7 @@ export default function PoolDeckPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Design Your Pool Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Design Your Pool Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/pool-deck-builder-northern-virginia" />

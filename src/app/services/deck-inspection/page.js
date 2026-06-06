@@ -56,7 +56,7 @@ const expansionSections = [
     title: "Inspection vs repair — what comes next",
     paragraphs: [
       "An inspection is a diagnostic step, not a repair service. Once you understand the condition of your deck, you can make an informed decision about the right scope of work.",
-      "If the framing is sound but boards are worn, [deck resurfacing](/services/deck-resurfacing) replaces the surface while preserving the structure. If specific components have failed, [deck repair and structural maintenance](/services/deck-repair-and-structural-maintenance) targets only what is damaged. And if the frame, footings, and ledger are beyond saving, a full [deck replacement](/services/deck-replacement) is the safest and most economical long-term choice.",
+      "If the framing is sound but boards are worn, [deck resurfacing](/services/deck-resurfacing) replaces the surface while preserving the structure. If specific components have failed, [deck repair](/services/deck-repair) targets only what is damaged. And if the frame, footings, and ledger are beyond saving, a full [deck replacement](/services/deck-replacement) is the safest and most economical long-term choice.",
       "We are happy to walk you through the report findings and help you choose the option that fits your budget and timeline.",
     ]
   },
@@ -92,20 +92,21 @@ const faqs = [
 export const metadata = buildMetadata({
   path: "/services/deck-inspection",
       title: "Deck Inspection Loudoun VA | $350 Safety Audit | LDN Decks",
-  description: "Ensure your outdoor space is safe with a professional $350 deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards."
+  description: "Ensure your outdoor space is safe with a professional $350 deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards.",
+  image: "/social/deck-inspection-service-social.png",
 });
 
 export default function DeckInspectionPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/deck-inspection" name="Deck Inspection Loudoun VA | $350 Safety Audit | LDN Decks" description="Ensure your outdoor space is safe with a professional $350 deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/deck-inspection" name="Deck Inspection Loudoun VA | $350 Safety Audit | LDN Decks" description="Ensure your outdoor space is safe with a professional $350 deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards." speakable />
       <ServiceSchema
         name="Deck Safety Inspection"
         description="Professional structural deck inspection in Northern Virginia. Ledger board, posts, joists, railings checked."
         url="https://ldndecks.com/services/deck-inspection"
         category="Deck Inspection"
         price="150"
-        relatedServices={['https://ldndecks.com/services/deck-repair-and-structural-maintenance', 'https://ldndecks.com/services/deck-replacement']}
+        relatedServices={['https://ldndecks.com/services/deck-repair', 'https://ldndecks.com/services/deck-repair', 'https://ldndecks.com/services/deck-replacement']}
       />
       <ServicesHeader
         subtext="Deck Inspection Services"
@@ -113,7 +114,7 @@ export default function DeckInspectionPage() {
         description="Ensure the safety, structural integrity, and longevity of your deck with our professional inspection services. We identify hidden rot, structural issues, and potential safety hazards."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
       </section>
       <section style={{ padding: '80px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '36px', marginBottom: '20px', fontWeight: '700' }}>Providing Expert Deck Restoration Services</h2>
@@ -181,7 +182,7 @@ export default function DeckInspectionPage() {
         <p style={{ fontSize: '18px' }}>
           It is absolutely essential that older decks are routinely inspected and evaluated for structural retro-fitting
           or outright replacement. Changing out an outdated deck doesn&apos;t just modernize your backyard aesthetic,
-          raise your property value, and eliminate maintenance chores; it guarantees the fundamental safety of your
+          raise your property value, and eliminate maintenance chores; it helps confirm the fundamental safety of your
           family, friends, and guests. If your deck spans over 10 to 15 years old, begins to feel even slightly spongy
           underfoot, visibly sways when you walk, or exhibits extensive surface splintering and warping, it is definitely
           time for a professional change. If the structure was built without approvals, review <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>what happens with an unpermitted deck in Virginia</Link>
@@ -204,7 +205,7 @@ export default function DeckInspectionPage() {
       <Testimonials />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/deck-inspection" />
-      <SimpleCTA title="Schedule Your $350 Deck Inspection" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Schedule Your $350 Deck Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

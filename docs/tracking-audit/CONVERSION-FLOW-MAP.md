@@ -252,17 +252,17 @@ This is the headline issue. The homepage is the highest-traffic form, and it ski
 │ I-J. /thank-you renders, ThankYouTracking fires                             │
 │    File: ThankYouTracking.jsx                                               │
 │                                                                             │
-│    searchParams.get('eid') → null                                           │
-│    trackLeadConfirmed({ eventId: null })                                    │
+│    searchParams.get('eid') → UUID                                           │
+│    trackLeadConfirmed({ eventId: UUID })                                    │
 │                                                                             │
 │    dataLayer.push({                                                         │
 │      event: 'lead_confirmed',                                               │
-│      event_id: null,    ← cannot dedup against ANY other event              │
+│      event_id: UUID,    ← same dedup chain as form_submit + CAPI            │
 │      page: '/thank-you'                                                     │
 │    })                                                                       │
 │                                                                             │
-│    ⚠️  Conversion DOES fire — but with no event_id, no attribution chain   │
-│    ⚠️  Repeat reloads of /thank-you all dedupe-fail (all event_id=null)    │
+│    ✅  Conversion confirmation carries the same event_id                    │
+│    ⚠️  GTM / Google Ads dedup still must be verified externally            │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -270,13 +270,11 @@ This is the headline issue. The homepage is the highest-traffic form, and it ski
 
 | Step | Failure | Result |
 |------|---------|--------|
-| E | Hard-coded gap | gclid never reaches server, attribution permanently lost for these leads |
-| E | Hard-coded gap | No event_id generated → no dedup chain |
-| F | No click IDs in email | Sales team can't tag paid leads in CRM |
-| F | Meta CAPI fires without event_id | Server-side Lead event can't dedup against client Pixel if added |
-| G | trackFormSubmit not called | Google Ads / GA4 / Meta lose the primary submission signal |
-| H | No `?eid=` | Even the fallback `lead_confirmed` is unattributable |
-| Anywhere | User submits, reloads /thank-you 3x | 3 conversions counted (all event_id=null, all unique to dedup) |
+| E | Click ID capture fails | Paid attribution is weakened for that lead |
+| F | Email/CAPI delivery fails | Server-side lead evidence is incomplete |
+| G | trackFormSubmit fails | Google Ads / GA4 / Meta lose the primary submission signal |
+| H | No `?eid=` | `lead_confirmed` cannot share the dedup chain |
+| Anywhere | User submits, reloads /thank-you 3x | Dedup depends on GTM / Google Ads transaction_id configuration |
 
 ---
 
@@ -290,21 +288,24 @@ This is the headline issue. The homepage is the highest-traffic form, and it ski
                 ┌──────────────────┴──────────────────┐
                 │                                     │
                 ▼                                     ▼
-┌─────────────────────────────┐    ┌──────────────────────────────────────────┐
-│ Tracked links (3)           │    │ Untracked links (40+)                    │
-│                             │    │                                          │
-│ • Header.jsx:157            │    │ • All /deck-builder-{city}-va/ hero CTAs │
-│ • FloatingCallButton.jsx:18 │    │ • Blog post inline phone numbers         │
-│ • ContactForm.jsx:59        │    │ • DeckCostCalculatorWidget               │
-│                             │    │ • Service / about / press / financing    │
-│ onClick={trackPhoneClick}   │    │                                          │
-└──────────────┬──────────────┘    │ No onClick handler                       │
-               │                   │                                          │
-               ▼                   │ ❌ No dataLayer event                    │
-┌─────────────────────────────┐    │ ❌ No Google Ads phone conversion        │
-│ dataLayer.push({            │    │ ❌ No GA4 phone_call_click event          │
-│   event: 'phone_click',     │    │ ❌ Smart Bidding blind to phone leads    │
-│   phone: '+15716557207'     │    └──────────────────────────────────────────┘
+┌─────────────────────────────┐
+│ Tracked CallLink anchors    │
+│                             │
+│ • Header + floating CTA     │
+│ • Contact forms             │
+│ • City / service / content  │
+│ • Active raw tel scan clean │
+│                             │
+│ onClick={trackPhoneClick}   │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│ dataLayer.push({            │
+│   event: 'phone_click',     │
+│   phone_number, link_text,  │
+│   cta_location, page_path,  │
+│   click IDs, UTM values     │
 │ })                          │
 │                             │
 │ Native <a href="tel:..."/>  │
@@ -373,7 +374,7 @@ sendContactEmail returns success
        │   • ph = SHA256(normalized phone, E.164 1XXXXXXXXXX)
        │   • fn, ln, ct, st, zp, country = SHA256(lowercase)
        │   • fbc = `fb.1.${Date.now()}.${fbclid}` if fbclid present
-       │   • event_id = passed eventId   ← null for ContactHome
+       │   • event_id = passed eventId   ← shared by ContactForm + ContactHome
        │   • event_source_url = formData.get('source_url') || hardcoded fallback
        │
        └─ POST https://graph.facebook.com/v18.0/{PIXEL_ID}/events
@@ -395,8 +396,8 @@ Since we cannot read the GTM container without export, the audit assumes a "reas
 | `form_submit` | GA4 `generate_lead` | GA4 | event_id |
 | `lead_confirmed` | Google Ads `Lead` conversion | Google Ads | transaction_id = event_id |
 | `lead_confirmed` | GA4 `generate_lead` (alt path) | GA4 | event_id |
-| `phone_click` | Google Ads `Phone Click` conversion? | Google Ads | none |
-| `phone_click` | GA4 `phone_call_click` | GA4 | none |
+| `phone_click` | GA4 phone engagement event | GA4 | event_id |
+| `phone_click` | Google Ads phone-click conversion? | Google Ads | none — should be secondary or removed |
 
 **If both `form_submit` AND `lead_confirmed` map to the SAME Google Ads conversion action and dedup isn't on → double-count.** This is the single highest-impact unverified assumption.
 

@@ -15,18 +15,18 @@ export const metadata = buildMetadata({
   path: '/deck-warranty-guide-northern-virginia',
   title: 'Deck Warranty Guide | What\'s Covered in Northern Virginia',
   description: 'Understand deck warranties: Trex 25-year, TimberTech 30-50 year, workmanship coverage. What\'s covered, what voids it, and how to file a claim.',
-  image: '/images/img36.jpeg',
+  image: '/social/deck-warranty-guide-northern-virginia-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How long is the Trex decking warranty?", acceptedAnswer: { "@type": "Answer", text: "Trex offers a 25-year limited residential warranty on Enhance and Transcend product lines covering fade and stain resistance. The newer Trex Lineage line carries an industry-leading 50-year warranty. All Trex warranties are transferable to a subsequent homeowner." } },
+    { "@type": "Question", name: "How long is the Trex decking warranty?", acceptedAnswer: { "@type": "Answer", text: "Trex offers a 25-year limited residential warranty on Enhance and Transcend product lines covering fade and stain resistance. The newer Trex Lineage line carries a 50-year limited residential warranty. Homeowners should verify the current transfer terms directly with Trex." } },
     { "@type": "Question", name: "What voids a composite deck warranty?", acceptedAnswer: { "@type": "Answer", text: "Common warranty-voiding actions include improper installation (wrong joist spacing, no gapping), using non-approved fasteners, lack of building permits, improper cleaning with harsh chemicals or pressure washers above 3100 PSI, and failure to maintain adequate ventilation beneath the deck surface." } },
-    { "@type": "Question", name: "Does a deck warranty cover labor costs?", acceptedAnswer: { "@type": "Answer", text: "Most manufacturer warranties cover material replacement only, not labor to remove and reinstall. However, Trex Platinum partners like LDN Decks can activate enhanced warranty coverage that includes labor. Our separate 2-year workmanship warranty covers installation-related issues." } },
+    { "@type": "Question", name: "Does a deck warranty cover labor costs?", acceptedAnswer: { "@type": "Answer", text: "Most manufacturer warranties cover material replacement only, not labor to remove and reinstall. Some certified installer programs may offer enhanced terms, but homeowners should verify current manufacturer program details and review the contractor's written workmanship warranty terms before signing." } },
     { "@type": "Question", name: "Is a deck warranty transferable when I sell my home?", acceptedAnswer: { "@type": "Answer", text: "Yes. Trex, TimberTech, and AZEK warranties are all transferable to subsequent homeowners. Trex requires notification within 60 days of property transfer. TimberTech/AZEK warranties transfer automatically. This transferability adds real value at resale in Northern Virginia." } },
-    { "@type": "Question", name: "What does a workmanship warranty cover on a deck?", acceptedAnswer: { "@type": "Answer", text: "A workmanship warranty covers defects in the installation itself — things like improper ledger board attachment, inadequate flashing, incorrect joist spacing, loose railings, or structural settling. Our 2-year workmanship warranty covers all labor and materials to correct any installation defect." } },
+    { "@type": "Question", name: "What does a workmanship warranty cover on a deck?", acceptedAnswer: { "@type": "Answer", text: "A workmanship warranty covers defects in the installation itself — things like improper ledger board attachment, inadequate flashing, incorrect joist spacing, loose railings, or structural settling. The exact term, scope, exclusions, and remedy should be stated in the signed project paperwork." } },
     { "@type": "Question", name: "How do I file a warranty claim on my Trex deck?", acceptedAnswer: { "@type": "Answer", text: "Contact Trex directly at 1-800-289-8739 or file online at trex.com/warranty. You will need your proof of purchase, installation date, photos of the issue, and your installer's information. If your deck was built by a Trex Platinum partner, the claim process is expedited." } },
   ],
 };
@@ -43,10 +43,10 @@ export default function DeckWarrantyGuidePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-warranty-guide-northern-virginia" name="Deck Warranty Guide | What\" description="Understand deck warranties: Trex 25-year, TimberTech 30-50 year, workmanship coverage. What\'s covered, what voids it, and how to file a claim." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-warranty-guide-northern-virginia" name="Deck Warranty Guide | What\" description="Understand deck warranties: Trex 25-year, TimberTech 30-50 year, workmanship coverage. What\'s covered, what voids it, and how to file a claim." speakable />
       <ArticleSchema
         title="Deck Warranty Guide: What's Covered in Northern Virginia"
-        description="Understand deck warranties from Trex, TimberTech, AZEK, and Fiberon. What's covered, what voids your warranty, and how our workmanship guarantee protects you."
+        description="Understand deck warranties from Trex, TimberTech, AZEK, and Fiberon. What's covered, what voids coverage, and why written workmanship terms matter."
         path="/deck-warranty-guide-northern-virginia"
         image="/images/img36.jpeg"
         datePublished="2026-04-26"
@@ -57,7 +57,7 @@ export default function DeckWarrantyGuidePage() {
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Warranty Guide for Northern Virginia Homeowners (2026)</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Manufacturer warranties, workmanship guarantees, and what actually protects your investment</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Manufacturer warranties, written workmanship terms, and what actually protects your investment</p>
         </div>
       </section>
 
@@ -65,7 +65,7 @@ export default function DeckWarrantyGuidePage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Trex offers a <strong>25-year fade and stain warranty</strong> on most lines (50 years on Lineage). TimberTech/AZEK provides <strong>30&ndash;50 year coverage</strong>. But manufacturer warranties only cover materials &mdash; not installation errors. That&apos;s why our <strong>2-year workmanship warranty</strong> and Trex Platinum installer status matter. As a certified Trex Platinum partner, we activate the full warranty tier that uncertified installers cannot. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> to discuss warranty-backed installation.</p>
+          <p>Trex offers a <strong>25-year fade and stain warranty</strong> on most lines (50 years on Lineage). TimberTech/AZEK provides <strong>30&ndash;50 year coverage</strong>. But manufacturer warranties mainly cover materials &mdash; not every installation error. That&apos;s why written workmanship warranty terms and current manufacturer installer-program details matter. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> to discuss documented warranty terms.</p>
         </div>
       </section>
 
@@ -87,7 +87,7 @@ export default function DeckWarrantyGuidePage() {
 
           {/* ===== SECTION 1: Why Warranties Matter ===== */}
           <p style={S.p}>A new deck in Northern Virginia represents a $15,000&ndash;$60,000+ investment. At that price point, warranty coverage isn&apos;t an afterthought &mdash; it&apos;s a deciding factor. Yet most homeowners sign contracts without fully understanding what their warranty actually covers, what voids it, and who is responsible when something goes wrong five years down the road.</p>
-          <p style={S.p}>This guide breaks down every warranty layer that protects (or fails to protect) your deck: manufacturer product warranties, installer workmanship guarantees, and the critical role that installer certification plays in keeping your coverage intact. We&apos;ll also cover how to file a claim, the difference between warranty and insurance, and the specific warranty pitfalls we see most often in Loudoun, Fairfax, and Prince William counties.</p>
+          <p style={S.p}>This guide breaks down every warranty layer that protects (or fails to protect) your deck: manufacturer product warranties, written installer workmanship terms, and the critical role that installer certification can play in keeping your coverage intact. We&apos;ll also cover how to file a claim, the difference between warranty and insurance, and the specific warranty pitfalls we see most often in Loudoun, Fairfax, and Prince William counties.</p>
           <p style={S.p}>Whether you&apos;re comparing quotes, evaluating contractors, or dealing with a deck issue years after installation, this guide gives you the knowledge to protect your investment.</p>
 
           {/* ===== SECTION 2: Manufacturer Warranty Comparison ===== */}
@@ -138,7 +138,7 @@ export default function DeckWarrantyGuidePage() {
           <p style={S.p}>Covers the decking board&apos;s structural integrity &mdash; cracking, splitting, splintering, rotting, or termite damage. This is the most straightforward coverage: if a board physically fails under normal use, the manufacturer replaces it. Note that structural failure caused by improper installation (wrong joist spacing, no end support) is typically excluded.</p>
 
           <h3 style={S.h3}>Workmanship Warranty (Installer)</h3>
-          <p style={S.p}>This is separate from the manufacturer warranty and comes from your contractor. It covers defects in the installation itself &mdash; improper ledger attachment, flashing failures, inadequate drainage, loose railings, joist spacing errors, and structural settling. Our 2-year workmanship warranty covers 100% of labor and materials to correct any installation defect we caused. Many contractors offer only 1&ndash;2 years, and some offer nothing at all.</p>
+          <p style={S.p}>This is separate from the manufacturer warranty and comes from your contractor. It can cover defects in the installation itself &mdash; improper ledger attachment, flashing failures, inadequate drainage, loose railings, joist spacing errors, and structural settling. The exact term, scope, exclusions, and remedy should be written into the project paperwork instead of summarized verbally.</p>
 
           {/* ===== SECTION 4: What Voids a Warranty ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>What Voids a Deck Warranty</h2>
@@ -175,7 +175,7 @@ export default function DeckWarrantyGuidePage() {
               </thead>
               <tbody>
                 {[
-                  ['Trex Platinum Partner', 'Full 25-50 yr', 'Yes — included', 'Expedited', 'Top 1% by volume, training, quality audits'],
+                  ['Trex Platinum Partner', 'Full 25-50 yr', 'Verify current program terms', 'Verify with Trex', 'Confirm current profile and warranty terms directly with Trex'],
                   ['Trex Gold Partner', 'Full 25-50 yr', 'Partial', 'Standard', 'High volume, basic training'],
                   ['Trex Registered', 'Full 25-50 yr', 'No', 'Standard', 'Online registration only'],
                   ['Unlicensed / Unregistered', 'Full 25-50 yr*', 'No', 'Standard', 'None — but installation errors can void warranty'],
@@ -189,12 +189,12 @@ export default function DeckWarrantyGuidePage() {
               </tbody>
             </table>
           </div>
-          <p style={S.p}><strong>The critical distinction:</strong> When an unlicensed installer makes errors (wrong gapping, inadequate support, improper flashing), those errors void the manufacturer warranty. You still technically have a 25-year warranty, but the claim gets denied because the installation doesn&apos;t meet specifications. With a Trex Platinum partner like LDN Decks, the installation is guaranteed to meet every specification &mdash; and if it doesn&apos;t, our workmanship warranty covers the correction.</p>
-          <p style={S.p}>This is one of the most important factors when <Link href="/how-to-choose-a-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>choosing a deck builder</Link> in Northern Virginia. The cheapest quote often comes from an installer who can&apos;t activate the full warranty tier &mdash; and that &ldquo;savings&rdquo; becomes a liability when something goes wrong.</p>
+          <p style={S.p}><strong>The critical distinction:</strong> When an installer makes errors (wrong gapping, inadequate support, improper flashing), those errors can void the manufacturer warranty. You may still technically have a manufacturer warranty, but the claim can be denied because the installation does not meet specifications. With a source-verifiable installer, you can confirm current manufacturer profile details and review written workmanship terms before signing.</p>
+          <p style={S.p}>This is one of the most important factors when <Link href="/how-to-choose-a-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>choosing a deck builder</Link> in Northern Virginia. The cheapest quote can become a liability if the installer cannot document code compliance, manufacturer installation requirements, and clear service terms.</p>
 
-          {/* ===== SECTION 6: Our 2-Year Workmanship Warranty ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Our 2-Year Workmanship Warranty: What It Covers</h2>
-          <p style={S.p}>Beyond the manufacturer warranty, every LDN Decks project includes our 2-year workmanship guarantee. Here is exactly what it does and doesn&apos;t cover:</p>
+          {/* ===== SECTION 6: Written Workmanship Warranty Terms ===== */}
+          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Written Workmanship Warranty Terms: What to Review</h2>
+          <p style={S.p}>Beyond the manufacturer warranty, contractor workmanship terms should be documented in the signed project paperwork. Review the exact duration, scope, exclusions, service process, and whether structural, labor, resurfacing, or accessory coverage differs.</p>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '2rem' }}>
             <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: 8, padding: '1.25rem' }}>
@@ -227,7 +227,7 @@ export default function DeckWarrantyGuidePage() {
               </ul>
             </div>
           </div>
-          <p style={S.p}>Our workmanship warranty is non-prorated &mdash; year one and year two receive identical coverage. We don&apos;t phase out protection over time. If something we installed fails within two years, we fix it at zero cost to you.</p>
+          <p style={S.p}>Ask whether the workmanship warranty is prorated, whether labor and materials are handled differently, what documentation is required for a service request, and whether any maintenance responsibilities affect coverage.</p>
 
           {/* ===== SECTION 7: How to File a Warranty Claim ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>How to File a Deck Warranty Claim (Step by Step)</h2>
@@ -265,7 +265,7 @@ export default function DeckWarrantyGuidePage() {
                   ['Examples', 'Board cracks without cause', 'Ledger pulls away from house', 'Tree falls on deck in storm'],
                   ['Who pays', 'Manufacturer', 'Installer (us)', 'Insurance company'],
                   ['Deductible', 'None', 'None', '$500–$2,500 typical'],
-                  ['Duration', '25–50 years', '1–2 years (ours is 2)', 'Policy term (annual)'],
+                  ['Duration', '25–50 years', 'Written contractor term', 'Policy term (annual)'],
                   ['Claim effect', 'No premium increase', 'No cost to you', 'May increase premium'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
@@ -294,14 +294,14 @@ export default function DeckWarrantyGuidePage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>How Warranty Coverage Affects Resale Value</h2>
           <p style={S.p}>In Northern Virginia&apos;s competitive real estate market, a transferable 25&ndash;50 year warranty is a genuine selling point. Buyers &mdash; especially in Brambleton, Broadlands, One Loudoun, and South Riding &mdash; specifically ask about deck warranties during home inspections.</p>
           <p style={S.p}>A Trex or TimberTech warranty that transfers to the new owner effectively makes the deck a worry-free asset for the buyer. Combined with the fact that composite decks recoup 65&ndash;80% of their cost at resale in Northern Virginia, warranty coverage amplifies ROI. Conversely, a wood deck with no warranty (and visible maintenance needs) can actually reduce perceived home value.</p>
-          <p style={S.p}>We provide every client with a warranty package document that includes all manufacturer warranty certificates, our workmanship warranty, permit records, and maintenance guidelines &mdash; designed to be handed directly to a future buyer.</p>
+          <p style={S.p}>We provide project paperwork designed to keep manufacturer warranty information, written workmanship terms, permit records, and maintenance guidelines organized for future resale conversations.</p>
 
           {/* ===== SECTION 11: Choosing Materials Based on Warranty ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Choosing Deck Materials Based on Warranty Protection</h2>
           <p style={S.p}>If warranty coverage is a top priority, here is how to think about material selection:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', lineHeight: 2 }}>
             <li><strong>Best warranty protection:</strong> TimberTech AZEK (50-year, full PVC, most comprehensive coverage)</li>
-            <li><strong>Best warranty-to-cost ratio:</strong> Trex Transcend (25-year coverage at mid-range pricing, Platinum installer labor coverage)</li>
+            <li><strong>Best warranty-to-cost ratio:</strong> Trex Transcend (25-year coverage at mid-range pricing; verify current installer-program terms directly with Trex)</li>
             <li><strong>Best budget option with warranty:</strong> Trex Enhance (same 25-year warranty as Transcend at 20&ndash;30% lower cost)</li>
             <li><strong>Best premium warranty:</strong> Trex Lineage (50-year warranty with ultra-realistic aesthetics)</li>
             <li><strong>No warranty protection:</strong> Pressure-treated wood, cedar, redwood (zero manufacturer coverage on the finished product)</li>
@@ -313,10 +313,10 @@ export default function DeckWarrantyGuidePage() {
           {[
             { q: "How long is the Trex decking warranty?", a: "Trex offers a 25-year limited residential warranty on Enhance and Transcend lines covering fade and stain resistance. The Trex Lineage line carries a 50-year warranty. All Trex warranties are transferable to subsequent homeowners." },
             { q: "What voids a composite deck warranty?", a: "Improper installation (wrong joist spacing, no gapping), non-approved fasteners, lack of building permits, harsh pressure washing above 3,100 PSI, chlorine bleach cleaning, painting or staining the surface, and inadequate ventilation underneath the deck." },
-            { q: "Does a deck warranty cover labor costs?", a: "Most manufacturer warranties cover material replacement only. However, Trex Platinum partners like LDN Decks activate enhanced coverage that includes labor. Our separate 2-year workmanship warranty covers all installation-related issues at zero cost." },
+            { q: "Does a deck warranty cover labor costs?", a: "Most manufacturer warranties cover material replacement only. Some certified installer programs may offer enhanced terms, but current coverage should be verified directly with the manufacturer and in the contractor's written paperwork." },
             { q: "Is a deck warranty transferable when I sell my home?", a: "Yes. Trex requires notification within 60 days of transfer. TimberTech/AZEK warranties transfer automatically. This transferability adds real resale value — buyers in Northern Virginia specifically ask about deck warranty status." },
-            { q: "What does a workmanship warranty cover?", a: "Installation defects: ledger board attachment, flashing, joist spacing, railing post connections, stair stringer separation, fastener failure, and structural settling. Our 2-year warranty covers 100% of labor and materials to correct any defect." },
-            { q: "How do I file a Trex warranty claim?", a: "Contact Trex at 1-800-289-8739 or file at trex.com/warranty. Have your proof of purchase, installation date, photos, and installer information ready. Claims through Trex Platinum partners like us receive expedited processing (2-4 weeks vs 6-8 weeks)." },
+            { q: "What does a workmanship warranty cover?", a: "Workmanship terms can cover installation defects such as ledger attachment, flashing, joist spacing, railing post connections, stair stringer separation, fastener failure, or structural settling. Exact coverage depends on the written term, scope, exclusions, and remedy in the signed paperwork." },
+            { q: "How do I file a Trex warranty claim?", a: "Contact Trex at 1-800-289-8739 or file at trex.com/warranty. Have your proof of purchase, installation date, photos, and installer information ready. Ask Trex directly whether installer-program status affects the current claim review process." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
@@ -344,7 +344,7 @@ export default function DeckWarrantyGuidePage() {
         </div>
       </article>
 
-      <SimpleCTA title="Get Warranty-Backed Deck Installation" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get Deck Installation With Written Warranty Terms" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-warranty-guide-northern-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 

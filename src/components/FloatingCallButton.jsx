@@ -14,6 +14,7 @@ export default function FloatingCallButton() {
     <CallLink
       className={styles.floatingBtn}
       aria-label="Call Us Now"
+      data-cta-location="floating_call_button"
     >
       <div className={styles.iconWrapper}>
         <PhoneIcon />

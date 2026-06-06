@@ -47,7 +47,7 @@ export default function ContactHome({ pageContext } = {}) {
           </div>
           <h2 className={styles.title}>Ready To Build Your<br/>Dream Deck?</h2>
           <p className={styles.description}>
-            Reach out to our team of expert craftsmen today. Whether you have a firm plan in mind or need inspiration, we are here to provide a free consultation and exact quote for your outdoor project.
+            Reach out to our team of expert craftsmen today. Whether you have a firm plan in mind or need inspiration, we are here to prepare a useful written estimate path for your outdoor project.
           </p>
 
           <div className={styles.infoList}>
@@ -78,7 +78,7 @@ export default function ContactHome({ pageContext } = {}) {
         </div>
 
         <div className={styles.rightCol}>
-            <form onSubmit={handleSubmit} className={styles.contactForm}>
+            <form onSubmit={handleSubmit} className={styles.contactForm} data-form-location="homepage_contact_form">
               {/* Honeypot — bots auto-fill every input, real users never see this.
                   Server-side check in sendEmail.js silently accepts then drops. */}
               <input
@@ -89,8 +89,9 @@ export default function ContactHome({ pageContext } = {}) {
                 aria-hidden="true"
                 style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
               />
-              <h3>Get Your 100% Free Design Consultation</h3>
-              <p className={styles.formSubtext}>Licensed & Insured | Trex Platinum Partner | Review-Supported Team</p>
+              <input type="hidden" name="state" value="VA" />
+              <h3>Get a Free Project Consultation</h3>
+              <p className={styles.formSubtext}>Written Scopes | Manufacturer-Aligned Materials | Local Project Team</p>
               {status === "error" && <p style={{color: 'red', fontSize: '14px', marginBottom: '10px'}}>There was an error sending your message. Please try again.</p>}
               <div className={styles.formGrid}>
                 <div className={styles.inputGroup}>
@@ -122,8 +123,45 @@ export default function ContactHome({ pageContext } = {}) {
                     </select>
                   </div>
                 </div>
+              <div className={styles.formGrid}>
+                <div className={styles.inputGroup}>
+                  <input type="text" name="city" placeholder="City (e.g. Ashburn)" aria-label="Project City" autoComplete="address-level2" />
+                </div>
+                <div className={styles.inputGroup}>
+                  <select name="budgetRange" defaultValue="" aria-label="Approximate Budget Range">
+                    <option value="" disabled>Approximate Budget</option>
+                    <option value="$10K-$20K">$10K-$20K</option>
+                    <option value="$20K-$40K">$20K-$40K</option>
+                    <option value="$40K-$70K">$40K-$70K</option>
+                    <option value="$70K+">$70K+</option>
+                    <option value="Not Sure">Not Sure</option>
+                  </select>
+                </div>
+              </div>
+              <div className={styles.formGrid}>
+                <div className={styles.inputGroup}>
+                  <select name="materialInterest" defaultValue="" aria-label="Material Interest">
+                    <option value="" disabled>Material Interest</option>
+                    <option value="Trex">Trex</option>
+                    <option value="TimberTech/AZEK">TimberTech/AZEK</option>
+                    <option value="Composite">Composite</option>
+                    <option value="Pressure-Treated Wood">Pressure-Treated Wood</option>
+                    <option value="Not Sure">Not Sure</option>
+                  </select>
+                </div>
+                <div className={styles.inputGroup}>
+                  <select name="hoa" defaultValue="" aria-label="HOA or Permit Status">
+                    <option value="" disabled>HOA / Permit Status</option>
+                    <option value="HOA likely required">HOA likely required</option>
+                    <option value="Permit likely required">Permit likely required</option>
+                    <option value="HOA and permit likely required">HOA and permit likely required</option>
+                    <option value="Already approved">Already approved</option>
+                    <option value="Not sure">Not sure</option>
+                  </select>
+                </div>
+              </div>
               <div className={styles.inputGroup}>
-                <textarea name="message" placeholder="Tell us about your project (size, materials, location)..." rows="5" required aria-label="Project Details"></textarea>
+                <textarea name="message" placeholder="Tell us about your project (size, materials, photos/repairs, stairs, railings, drainage)..." rows="5" required aria-label="Project Details"></textarea>
               </div>
               <button type="submit" disabled={status === "submitting"} className={styles.submitBtn}>
                 {status === "submitting" ? "Sending..." : "Get My Free Quote →"}

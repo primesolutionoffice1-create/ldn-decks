@@ -17,7 +17,7 @@ export const metadata = buildMetadata({
   path: '/composite-deck-builder-loudoun',
   title: 'Composite Deck Builder Loudoun County, VA | Loudoun Decks',
   description: 'Premium composite deck builder in Loudoun County, VA. Trex and TimberTech decks, HOA support, permits, replacements, railings, stairs, and free estimates.',
-  image: '/images/img10.jpeg',
+  image: '/social/composite-deck-builder-loudoun-social.png',
 });
 
 const serviceHighlights = [
@@ -26,7 +26,7 @@ const serviceHighlights = [
   'Permit-ready framing, footings, stairs, railings, and code details',
   'HOA-friendly planning for Brambleton, Broadlands, Lansdowne, South Riding, and One Loudoun',
   'Premium railings, lighting, privacy screens, pergolas, and screened porch tie-ins',
-  'Clear scope, clean job sites, and a 5-year workmanship warranty on all labor',
+  'Clear scope, clean job sites, and written workmanship warranty terms',
 ];
 
 const communities = [
@@ -43,23 +43,10 @@ const communities = [
 const trustBadges = [
   'Trex Platinum Partner',
   'TimberTech/AZEK Installer',
-  `${BUSINESS.aggregateRating.reviewCount} Google Reviews`,
-  'BBB A+ Rated',
-  '5-Year Workmanship Warranty',
+  'Public Google Review Profile',
+  'BBB Profile Available',
+  'Written Warranty Terms',
   'Licensed Virginia Contractor',
-];
-
-const reviewSnippets = [
-  {
-    quote: 'Nick and his team built us a 500 sqft Trex Transcend deck in Ashburn, from permit to final walkthrough in under 3 weeks. Honest pricing, zero surprises, and they left the yard cleaner than they found it.',
-    name: 'James R.',
-    location: 'Ashburn, VA',
-  },
-  {
-    quote: "They handled the HOA submission and Loudoun County permit themselves, I didn't lift a finger on the paperwork. Deck was done in 10 days.",
-    name: 'David K.',
-    location: 'South Riding, VA',
-  },
 ];
 
 const projectExamples = [
@@ -127,17 +114,6 @@ const schema = [
     name: 'Composite Deck Builder Loudoun County, VA | Loudoun Decks',
     description: 'Premium composite deck builder serving Loudoun County homeowners with Trex, TimberTech, deck replacement, permits, HOA support, railings, stairs, and outdoor living upgrades.',
     about: { '@id': `${pageUrl}#service` },
-    breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    '@id': `${pageUrl}#breadcrumb`,
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ldndecks.com' },
-      { '@type': 'ListItem', position: 2, name: 'Composite Decks', item: 'https://ldndecks.com/composite-decks' },
-      { '@type': 'ListItem', position: 3, name: 'Composite Deck Builder Loudoun County', item: pageUrl },
-    ],
   },
   {
     '@context': 'https://schema.org',
@@ -164,7 +140,6 @@ const schema = [
       priceCurrency: 'USD',
       lowPrice: '15000',
       highPrice: '75000',
-      offerCount: '100',
     },
   },
   {
@@ -197,7 +172,7 @@ export default function CompositeDeckBuilderLoudounPage() {
   return (
     <main>
       {schema.map((item, index) => <JsonLd key={index} data={item} />)}
-      <WebPageSchema url="https://ldndecks.com/composite-deck-builder-loudoun" name="Composite Deck Builder Loudoun County, VA | Loudoun Decks" description="Premium composite deck builder in Loudoun County, VA. Trex and TimberTech decks, HOA support, permits, replacements, railings, stairs, and free estimates." speakable />
+      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/composite-deck-builder-loudoun" name="Composite Deck Builder Loudoun County, VA | Loudoun Decks" description="Premium composite deck builder in Loudoun County, VA. Trex and TimberTech decks, HOA support, permits, replacements, railings, stairs, and free estimates." speakable />
       <ServiceSchema
         name="Composite Deck Building in Loudoun County"
         description="Custom composite and wood deck construction across Loudoun County — Ashburn, Leesburg, Sterling, Brambleton and beyond. TrexPro Platinum installer."
@@ -243,18 +218,25 @@ export default function CompositeDeckBuilderLoudounPage() {
 
       <section style={{ ...S.section, background: '#f7f4ef' }}>
         <div style={S.container}>
-          <p style={S.eyebrow}>Homeowner proof</p>
-          <h2 style={S.h2}>Trusted by Loudoun homeowners for permits, HOA details, and clean composite deck builds</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 18, marginTop: 28 }}>
-            {reviewSnippets.map((review) => (
-              <figure key={review.name} style={{ ...S.card, margin: 0 }}>
-                <blockquote style={{ ...S.p, fontSize: 17, margin: '0 0 18px', color: '#2f2923' }}>&ldquo;{review.quote}&rdquo;</blockquote>
-                <figcaption style={{ color: '#6a5b50', fontWeight: 800 }}>{review.name} — {review.location}</figcaption>
-              </figure>
+          <p style={S.eyebrow}>Trust verification</p>
+          <h2 style={S.h2}>Verify Loudoun Decks before planning a composite deck</h2>
+          <p style={{ ...S.p, maxWidth: 820 }}>
+            We do not publish unsourced customer stories on this page. Homeowners can verify current review text, profile details, and project photos directly through the public review and portfolio pages before requesting a written estimate.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: 18, marginTop: 28 }}>
+            {[
+              ['/reviews', 'Public Google review profile'],
+              ['/bbb-accredited-deck-builder-virginia', 'BBB profile information'],
+              ['/houzz-deck-projects', 'Houzz project portfolio'],
+              ['/before-and-after', 'Before and after gallery'],
+            ].map(([href, label]) => (
+              <Link key={href} href={href} style={{ ...S.card, color: 'var(--color-primary, #d14817)', textDecoration: 'none', fontWeight: 800 }}>
+                {label} &rarr;
+              </Link>
             ))}
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 24 }}>
-            <Link href="/reviews" style={S.button}>Read All {BUSINESS.aggregateRating.reviewCount} Google Reviews</Link>
+            <Link href="/reviews" style={S.button}>Open Public Review Profiles</Link>
             <Link href="/before-and-after" style={S.outlineButton}>See Before &amp; After Projects</Link>
           </div>
         </div>
@@ -285,7 +267,7 @@ export default function CompositeDeckBuilderLoudounPage() {
               <li>Typical projects from $15,000+</li>
               <li>Trex and TimberTech/AZEK options</li>
               <li>Permit and HOA support included</li>
-              <li>5-year workmanship warranty on all labor</li>
+              <li>Written workmanship warranty terms provided with the project agreement</li>
             </ul>
           </aside>
         </div>

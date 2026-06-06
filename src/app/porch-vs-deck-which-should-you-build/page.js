@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/porch-vs-deck-which-should-you-build',
   title: 'Porch vs Deck: Which Should You Build? (2026 ROI Guide)',
   description: 'Porch vs deck compared cost, ROI, usable months, maintenance. Screened porches: $25k-$70k, 9-10 months use. Open decks: $15k-$45k, 5-6 months. We build both.',
+  image: '/social/porch-vs-deck-social.png',
 });
 
 const faqSchema = {
@@ -30,7 +31,7 @@ export default function PorchVsDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/porch-vs-deck-which-should-you-build" name="Porch vs Deck: Which Should You Build? (2026 ROI Guide)" description="Porch vs deck compared cost, ROI, usable months, maintenance. Screened porches: $25k-$70k, 9-10 months use. Open decks: $15k-$45k, 5-6 months. We build both." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/porch-vs-deck-which-should-you-build" name="Porch vs Deck: Which Should You Build? (2026 ROI Guide)" description="Porch vs deck compared cost, ROI, usable months, maintenance. Screened porches: $25k-$70k, 9-10 months use. Open decks: $15k-$45k, 5-6 months. We build both." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Porch vs Deck: Which Should You Build?</h1>
@@ -137,7 +138,7 @@ export default function PorchVsDeckPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Not Sure? We Build Both Free Consultation" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Not Sure? We Build Both Free Consultation" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/porch-vs-deck-which-should-you-build" />

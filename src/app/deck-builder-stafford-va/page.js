@@ -13,11 +13,13 @@ import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-stafford-va',
   title: 'Premium Deck Builder Stafford VA | Get a Free Quote in 24h',
-  description: 'Trusted deck builder in Stafford, VA. review-backed. Trex & TimberTech composite decks, screened porches. Best value in the NoVA region. Free estimate!',
+  description: 'Trusted deck builder in Stafford, VA. Trex & TimberTech composite decks, screened porches, clear scope, permit-aware planning, and free estimates.',
+  image: '/social/deck-builder-stafford-va-social.png',
 });
 
 const faqSchema = {
@@ -26,7 +28,7 @@ const faqSchema = {
     { "@type": "Question", name: "How much does a deck cost in Stafford, VA?", acceptedAnswer: { "@type": "Answer", text: "Stafford deck projects range from $15,000-$40,000. Composite decks: $28-$50/sqft installed. Stafford offers the best value in the Northern Virginia region same quality materials at 15-25% less than Fairfax or Loudoun due to lower labor and permit costs." } },
     { "@type": "Question", name: "Do I need a permit in Stafford County?", acceptedAnswer: { "@type": "Answer", text: "Yes Stafford County requires building permits for decks attached to the house or over 30 inches above grade. Plan review is typically 2-3 weeks faster than most NoVA counties. We handle all permitting." } },
     { "@type": "Question", name: "How long does a deck build take in Stafford?", acceptedAnswer: { "@type": "Answer", text: "Most Stafford composite deck projects take 2-4 weeks from permit approval to completion. Stafford County plan review is typically 2-3 weeks, which is faster than Fairfax or Loudoun counties." } },
-    { "@type": "Question", name: "What warranty do you offer on Stafford deck projects?", acceptedAnswer: { "@type": "Answer", text: "We provide a 2-year craftsmanship warranty on all Stafford builds. Trex and TimberTech composite materials carry separate manufacturer warranties of 25-50 years covering fade, stain and structural performance." } },
+    { "@type": "Question", name: "What warranty do you offer on Stafford deck projects?", acceptedAnswer: { "@type": "Answer", text: "Workmanship terms are confirmed in the written proposal for the selected scope. Trex and TimberTech composite materials carry separate manufacturer warranties that vary by product line and installation requirements." } },
     { "@type": "Question", name: "Which materials work best for Stafford's climate?", acceptedAnswer: { "@type": "Answer", text: "Stafford gets more sustained summer heat than northern Loudoun or Fairfax. Trex Transcend and TimberTech composite boards handle UV exposure and humidity well without warping, and lighter color options reduce heat absorption on south-facing decks." } },
     { "@type": "Question", name: "When is the best season to build a deck in Stafford?", acceptedAnswer: { "@type": "Answer", text: "We build year-round in Stafford County. Spring and fall are the most popular seasons. Winter builds are viable since Stafford sees less freeze disruption than areas farther north, and booking in the off-season often means shorter wait times." } },
   ],
@@ -37,18 +39,31 @@ export default function StaffordDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Stafford" url="https://ldndecks.com/deck-builder-stafford-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-stafford-va" name="Premium Deck Builder Stafford VA | Get a Free Quote in 24h" description="Trusted deck builder in Stafford, VA. review-backed. Trex &amp; TimberTech composite decks, screened porches. Best value in the NoVA region. Free estimate!" speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-stafford-va" name="Premium Deck Builder Stafford VA | Get a Free Quote in 24h" description="Trusted deck builder in Stafford, VA. Trex &amp; TimberTech composite decks, screened porches, clear scope, permit-aware planning, and free estimates." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Stafford, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Best value composite decks in the Northern Virginia region same quality, lower cost</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Composite decks in Stafford County with practical pricing, clear scope, and permit-aware planning</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · Licensed &amp; Insured · Written scope and warranty details provided before contract</p>
         </div>
       </section>
+      <PlanningUpdate
+        market="Stafford decks in 2026"
+        notes={[
+          "Stafford projects can price differently than Fairfax or Loudoun, but final cost still depends on deck size, access, stairs, railings, material line, and inspection findings.",
+          "County permit requirements and HOA rules should be confirmed before assuming a faster or simpler approval path.",
+          "Older Stafford decks should be inspected for ledger, footing, stair, and railing safety before resurfacing is recommended."
+        ]}
+        links={[
+          { href: "/deck-cost-calculator", label: "Deck cost calculator" },
+          { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" },
+          { href: "/deck-safety-inspection-checklist", label: "Safety checklist" }
+        ]}
+      />
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -61,11 +76,11 @@ export default function StaffordDeckBuilderPage() {
             />
           </div>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Stafford Modern Outdoor Living for Growing Families</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford County offers the best outdoor living value in the greater Northern Virginia area. Lower labor rates, faster permit processing, and larger lots mean your budget stretches 15-25% further than in Loudoun or Fairfax with identical Trex and TimberTech materials and the same expert craftsmanship.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford County can offer strong outdoor living value in the greater Northern Virginia area. Larger lots, different labor logistics, and less constrained site conditions may help some budgets stretch further than comparable Loudoun or Fairfax projects with similar Trex and TimberTech materials.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>15-25% lower costs:</strong> Same Trex/TimberTech materials, lower overall project cost vs Fairfax/Loudoun</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Fast permits:</strong> Stafford County plan review in 2-3 weeks (faster than most NoVA counties)</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Larger lots:</strong> More room for expansive outdoor living bigger decks at better per-sqft value</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Potential value advantage:</strong> Similar Trex/TimberTech materials with project cost driven by access, elevation, site work, railing and permit scope</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Permit planning:</strong> Stafford County review timelines vary by project complexity, drawings, zoning questions and inspection workload</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Larger lots:</strong> More room for expansive outdoor living and larger deck layouts when setbacks and site conditions allow</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Growing communities:</strong> Embrey Mill, Aquia Harbour, Garrisonville, Falmouth all active service areas</li>
           </ul>
 
@@ -86,10 +101,10 @@ export default function StaffordDeckBuilderPage() {
             ))}
           </div>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Stafford Project</h2>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Stafford Project Planning Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$26,000 380 sqft Trex Transcend Deck, Embrey Mill</h3>
-            <p style={{ lineHeight: 1.7 }}>Full composite deck for a growing family. Trex Transcend in Spiced Rum, aluminum railings, 8 LED stair lights, wide stairs to yard. Same materials as our $35k+ Fairfax projects Stafford pricing made it $9k less. Stafford County permit approved in 11 business days. 2.5-week build.</p>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>380 sqft Composite Deck Scenario, Embrey Mill</h3>
+            <p style={{ lineHeight: 1.7 }}>A typical Stafford composite deck concept might include Trex or TimberTech boards, aluminum railing, stair lighting, and wider stairs to the yard. Final pricing and timeline should be confirmed after Stafford County permit requirements, HOA rules, material selection, access, and footing conditions are reviewed. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Stafford Communities</h2>
@@ -102,9 +117,9 @@ export default function StaffordDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
           {[
             { q: "Deck cost in Stafford?", a: "$15,000-$40,000. Composite: $28-$50/sqft. 15-25% less than Fairfax/Loudoun for same materials." },
-            { q: "Permit timeline?", a: "Stafford County: 2-3 weeks plan review, faster than most NoVA counties. We handle everything." },
+            { q: "Permit timeline?", a: "Stafford County plan review is often practical for residential deck projects, but final timing depends on county workload, HOA review, revisions, weather, and project complexity." },
             { q: "How long does a deck build take?", a: "Most Stafford projects take 2-4 weeks from permit approval to completion. Faster county review means you're enjoying your deck sooner." },
-            { q: "What warranty do you offer?", a: "2-year craftsmanship warranty on all builds. Trex and TimberTech materials carry 25-50 year manufacturer warranties for fade, stain and structural performance." },
+            { q: "What warranty do you offer?", a: "Workmanship terms are confirmed in the written proposal for the selected scope. Trex and TimberTech manufacturer warranties vary by product line and installation requirements." },
             { q: "Best materials for Stafford's climate?", a: "Stafford gets more sustained summer heat than northern NoVA. Trex Transcend and TimberTech composites handle UV and humidity without warping. Lighter colors reduce heat on south-facing decks." },
             { q: "Best season to build?", a: "We build year-round in Stafford. Spring and fall are most popular. Winter builds are viable here since Stafford sees less freeze disruption, and off-season booking often means shorter wait times." },
           ].map((faq, i) => (
@@ -138,9 +153,9 @@ export default function StaffordDeckBuilderPage() {
         </ul>
       </section>
 
-      <SimpleCTA title="Best Value Decks in Northern Virginia" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Plan Your Stafford Deck With Clear Scope and Pricing" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-stafford-va" />
-      <NamedAuthor context="Stafford and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Stafford and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </>
   );

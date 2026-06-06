@@ -117,9 +117,9 @@ Live SERP scan + per-competitor fetch on 2026-05-11. Top 5 organic results captu
 
 ## Patterns the whole field shares
 
-1. **Schema is weak across the board.** Battlefield is the lone full-stack exception. **No competitor uses Service or Review schema.** This is your single biggest schema lever.
+1. **Schema is weak across the board.** Battlefield is the lone full-stack exception. **Service, FAQ, Breadcrumb, WebPage, Organization, and Person schema consistency** is the clean schema lever; do not use self-serving Review/AggregateRating JSON-LD unless policy-eligible.
 2. **Trex partnership is universal**, but **only LDN claims TrexPro Platinum**. Lead with this — H1, hero, schema `award`/`hasCredential`, OG image overlay.
-3. **2-year workmanship warranty** is the industry standard. Going to 5-year would be a clear differentiator (insurance/structural risk to evaluate).
+3. **verified written workmanship warranty terms should be confirmed by owner-approved policy before publishing duration or scope.
 4. **Financing is mentioned but partner names are hidden** — first to publish the partner + payment estimator wins this funnel.
 5. **No competitor has a 10-year+ workmanship warranty, no competitor names their financing partner publicly, no competitor has a working interactive cost calculator** (Battlefield's "calculator" is a CTA disguised as a calculator).
 6. **Photo galleries cap at ~21 projects.** A "Show me 100+ NoVA deck projects, filterable by city/material/style" gallery would be unmatched.
@@ -134,7 +134,7 @@ Live SERP scan + per-competitor fetch on 2026-05-11. Top 5 organic results captu
 | Named financing partner + estimator | nobody | everyone | Easy (pick partner first) |
 | Per-HOA pages (Brambleton, One Loudoun, etc.) | nobody | everyone | Medium |
 | Service schema on service pages | nobody | everyone | Easy |
-| Review/AggregateRating per page (not just home) | nobody | everyone | Easy |
+| Verified review proof surfaced without self-serving Review/AggregateRating JSON-LD | nobody | everyone | Medium |
 | HowTo schema for permit timelines | LDN (NoVAPermitTimeline) | everyone else | Done |
 | Author Person schema (E-E-A-T) | LDN (NamedAuthor) | everyone else | Done |
 | llms.txt | LDN | everyone else | Done |

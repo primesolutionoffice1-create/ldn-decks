@@ -73,16 +73,16 @@ export default function Introduction() {
           </div>
           <h2 className={styles.title}>Northern Virginia's Trusted<br /> Deck Builder & Contractor</h2>
           <p className={styles.description}>
-            For over 10 years, we&apos;ve built 500+ projects across Fairfax, Loudoun, and Prince William counties &mdash; from luxury decks in McLean and Vienna to townhome transformations in Sterling and Ashburn. As a leading <strong>deck contractor</strong>, we know the local permit process and HOA requirements better than anyone. Every project is personally overseen by Nick to ensure professional quality.
+            Loudoun Decks plans and builds custom outdoor living projects across Fairfax, Loudoun, and Prince William counties &mdash; from luxury decks in McLean and Vienna to townhome transformations in Sterling and Ashburn. As a local <strong>deck contractor</strong>, we help homeowners account for permits, HOA requirements, materials, access, and inspection timing before construction starts.
           </p>
           <ul className={styles.checkList}>
             <li>
               <CheckIcon />
-              <span>Trex Platinum Partner &amp; TimberTech Certified &mdash; highest tier in Northern Virginia</span>
+              <span>Trex and TimberTech product experience &mdash; verify current manufacturer profile details directly with each brand</span>
             </li>
             <li>
               <CheckIcon />
-              <span>100% permit approval rate &mdash; we handle all HOA and county submissions for you</span>
+              <span>Permit and HOA submission management &mdash; we prepare, file, and coordinate the paperwork for you</span>
             </li>
           </ul>
           <div className={styles.progressContainer}>

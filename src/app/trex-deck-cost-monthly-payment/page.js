@@ -17,7 +17,7 @@ export const metadata = buildMetadata({
   path: '/trex-deck-cost-monthly-payment',
   title: 'Trex Deck Cost vs Monthly Payment: 2026 Budget Guide',
   description: 'Real Trex deck costs by tier (Enhance, Transcend, Signature) and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia.',
-  image: '/showcase/img11.jpeg',
+  image: '/social/trex-deck-cost-monthly-payment-social.png',
 });
 
 const PATH = '/trex-deck-cost-monthly-payment';
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: 'Does Trex come with a warranty?',
-    a: 'Yes. Trex Enhance carries a 25-year limited residential warranty plus a 25-year fade & stain warranty. Trex Transcend carries 25-year limited residential plus 25-year fade & stain. Trex Signature carries a 50-year limited residential plus 50-year fade & stain warranty. Loudoun Decks adds a 5-year workmanship warranty on top of the manufacturer coverage.',
+    a: 'Yes. Trex Enhance carries a 25-year limited residential warranty plus a 25-year fade & stain warranty. Trex Transcend carries 25-year limited residential plus 25-year fade & stain. Trex Signature carries a 50-year limited residential plus 50-year fade & stain warranty. Loudoun Decks provides written workmanship warranty terms with the project agreement.',
   },
   {
     q: 'Is Trex better than wood for Northern Virginia humidity?',
@@ -125,7 +125,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Trex Deck Cost vs Monthly Payment: 2026 Budget Guide" description="Real Trex deck costs by tier (Enhance, Transcend, Signature) and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Trex Deck Cost vs Monthly Payment: 2026 Budget Guide" description="Real Trex deck costs by tier (Enhance, Transcend, Signature) and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -156,11 +156,11 @@ export default function TrexDeckCostMonthlyPaymentPage() {
           <p data-speakable>
             A <strong>350 sqft Trex deck</strong> in Northern Virginia runs <strong>$18,000–$40,000+</strong>{' '}
             depending on tier. At 8.99% APR over 10 years that&apos;s roughly <strong>$229–$506/month</strong>.
-            Run your real project amount through the{' '}
+            Run your written estimate amount through the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
             </Link>{' '}
-            for an exact monthly number.
+            for a planning monthly estimate.
           </p>
         </div>
       </section>
@@ -340,7 +340,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
       <SimpleCTA
         title="Plan Your Trex Deck Monthly Payment"
         buttonText="Get Free Written Estimate"
-        link="/contact"
+        link="/get-estimate"
       />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />

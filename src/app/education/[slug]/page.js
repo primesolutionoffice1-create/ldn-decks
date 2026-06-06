@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { educationArticles } from '@/lib/educationData';
 import { buildMetadata } from '@/lib/seo';
+import { BUSINESS, FOUNDER_ID, ORG_ID, WEBSITE_ID } from '@/lib/business';
+import JsonLd from '@/components/JsonLd';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesHome from '@/components/ServicesHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
@@ -87,6 +89,72 @@ function renderContentBlock(para, idx) {
   return <p key={idx}>{renderInline(para, `p${idx}`)}</p>;
 }
 
+function buildArticleAuthor(article) {
+  const authorName = article.author || BUSINESS.name;
+
+  if (authorName.toLowerCase().includes('team')) {
+    return {
+      '@type': 'Organization',
+      '@id': ORG_ID,
+      name: BUSINESS.name,
+      url: BUSINESS.url,
+    };
+  }
+
+  return {
+    '@type': 'Person',
+    '@id': FOUNDER_ID,
+    name: BUSINESS.founder.name,
+    jobTitle: BUSINESS.founder.jobTitle,
+    worksFor: { '@id': ORG_ID },
+    knowsAbout: BUSINESS.founder.knowsAbout,
+  };
+}
+
+function buildArticleSchema(article, clampedDate, clampedModifiedDate) {
+  const articleUrl = `${BUSINESS.url}/education/${article.slug}`;
+  const relatedMentions = (article.relatedLinks || []).map((item) => ({
+    '@type': 'WebPage',
+    '@id': `${BUSINESS.url}${item.href}`,
+    name: item.label,
+    description: item.description,
+    url: `${BUSINESS.url}${item.href}`,
+  }));
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${articleUrl}#article`,
+    isPartOf: { '@id': WEBSITE_ID },
+    headline: article.title,
+    image: [`${BUSINESS.url}${article.image}`],
+    datePublished: clampedDate.toISOString(),
+    dateModified: clampedModifiedDate.toISOString(),
+    author: [buildArticleAuthor(article)],
+    publisher: { '@id': ORG_ID },
+    description: article.excerpt,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': articleUrl,
+      url: articleUrl,
+    },
+    about: [
+      ...(article.tags || []).map((name) => ({ '@type': 'DefinedTerm', name })),
+      { '@type': 'Thing', name: 'Northern Virginia deck construction' },
+      { '@type': 'Thing', name: 'Deck permits and inspections' },
+    ],
+    mentions: relatedMentions,
+    citation: (article.sourceLinks || []).map((item) => item.href),
+    keywords: article.tags || [],
+    isAccessibleForFree: true,
+    inLanguage: 'en-US',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.leadParagraph', 'h1', 'h2'],
+    },
+  };
+}
+
 export default async function SingleEducationPage({ params }) {
   const resolvedParams = await params;
   const article = educationArticles.find(p => p.slug === resolvedParams.slug);
@@ -98,57 +166,12 @@ export default async function SingleEducationPage({ params }) {
   const paragraphs = article.content.split('\n\n');
 
   const articleDate = new Date(article.date);
+  const articleModifiedDate = new Date(article.dateModified || article.date);
   const today = new Date();
   const clampedDate = articleDate > today ? today : articleDate;
+  const clampedModifiedDate = articleModifiedDate > today ? today : articleModifiedDate;
 
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": `https://ldndecks.com/education/${article.slug}#article`,
-    "isPartOf": { "@id": "https://ldndecks.com/#website" },
-    "headline": article.title,
-    "image": [`https://ldndecks.com${article.image}`],
-    "datePublished": clampedDate.toISOString(),
-    "dateModified": clampedDate.toISOString(),
-    "author": [{
-      "@type": article.author && article.author.toLowerCase().includes('team') ? "Organization" : "Person",
-      "name": article.author,
-      "url": article.author && article.author.toLowerCase().includes('team')
-        ? "https://ldndecks.com"
-        : "https://ldndecks.com/team"
-    }],
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://ldndecks.com/#organization",
-      "name": "Loudoun Decks",
-      "url": "https://ldndecks.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://ldndecks.com/ldndecks-logo.webp"
-      }
-    },
-    "description": article.excerpt,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://ldndecks.com/education/${article.slug}`
-    },
-    "isAccessibleForFree": true,
-    "inLanguage": "en-US",
-    "speakable": {
-      "@type": "SpeakableSpecification",
-      "cssSelector": [".leadParagraph", "h1", "h2"]
-    }
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldndecks.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Education", "item": "https://ldndecks.com/education" },
-      { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://ldndecks.com/education/${article.slug}` },
-    ],
-  };
+  const articleSchema = buildArticleSchema(article, clampedDate, clampedModifiedDate);
 
   const faqSchema = article.faq && article.faq.length > 0 ? {
     "@context": "https://schema.org",
@@ -173,7 +196,7 @@ export default async function SingleEducationPage({ params }) {
     "contentUrl": `https://ldndecks.com${article.download.href}`,
     "url": `https://ldndecks.com${article.download.href}`,
     "isAccessibleForFree": true,
-    "publisher": { "@id": "https://ldndecks.com/#organization" },
+    "publisher": { "@id": ORG_ID },
     "about": article.tags || [],
   } : null;
 
@@ -191,32 +214,10 @@ export default async function SingleEducationPage({ params }) {
 
   return (
     <article className={styles.articlePage}>
-       <script
-         type="application/ld+json"
-         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-       />
-       <script
-         type="application/ld+json"
-         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-       />
-       {faqSchema && (
-         <script
-           type="application/ld+json"
-           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-         />
-       )}
-       {downloadableResourceSchema && (
-         <script
-           type="application/ld+json"
-           dangerouslySetInnerHTML={{ __html: JSON.stringify(downloadableResourceSchema) }}
-         />
-       )}
-       {checklistSchema && (
-         <script
-           type="application/ld+json"
-           dangerouslySetInnerHTML={{ __html: JSON.stringify(checklistSchema) }}
-         />
-       )}
+       <JsonLd data={articleSchema} />
+       {faqSchema && <JsonLd data={faqSchema} />}
+       {downloadableResourceSchema && <JsonLd data={downloadableResourceSchema} />}
+       {checklistSchema && <JsonLd data={checklistSchema} />}
 
        <div className={styles.heroSection}>
           <div className={styles.imgWrapper}>
@@ -239,6 +240,43 @@ export default async function SingleEducationPage({ params }) {
           <div className={styles.containerNarrow}>
              <div className={styles.contentBody}>
                <p className={styles.leadParagraph}>{renderInline(article.excerpt, 'lead')}</p>
+               {article.answerBlock && (
+                 <section
+                   style={{
+                     margin: '28px 0',
+                     padding: '1.25rem',
+                     borderLeft: '4px solid var(--button-color, #d14817)',
+                     background: '#fff7f3',
+                   }}
+                 >
+                   <h2 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#111' }}>Quick Answer</h2>
+                   {article.answerBlock.map((item, answerIndex) => (
+                     <p key={answerIndex} style={{ marginBottom: answerIndex === article.answerBlock.length - 1 ? 0 : '0.75rem' }}>
+                       {renderInline(item, `answer${answerIndex}`)}
+                     </p>
+                   ))}
+                 </section>
+               )}
+               {article.sourceLinks && article.sourceLinks.length > 0 && (
+                 <section
+                   style={{
+                     margin: '0 0 32px',
+                     padding: '1rem',
+                     border: '1px solid #e5e5e5',
+                     borderRadius: 8,
+                     background: '#fff',
+                   }}
+                 >
+                   <h2 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#111' }}>Source Context</h2>
+                   <ul style={{ paddingLeft: '1.2rem', margin: 0 }}>
+                     {article.sourceLinks.map((item) => (
+                       <li key={item.href} style={{ marginBottom: '0.4rem' }}>
+                         <a href={item.href} target="_blank" rel="noopener noreferrer">{item.label}</a>
+                       </li>
+                     ))}
+                   </ul>
+                 </section>
+               )}
                {article.download && (
                  <section
                    style={{
@@ -273,7 +311,7 @@ export default async function SingleEducationPage({ params }) {
 
                {article.relatedLinks && article.relatedLinks.length > 0 && (
                  <section style={{ marginTop: '44px' }}>
-                   <h2 style={{ marginBottom: '20px', color: '#111' }}>Related Stair Safety Resources</h2>
+                   <h2 style={{ marginBottom: '20px', color: '#111' }}>Related Resources</h2>
                    <div style={{ display: 'grid', gap: '0.85rem' }}>
                      {article.relatedLinks.map((item) => (
                        <Link
@@ -320,9 +358,9 @@ export default async function SingleEducationPage({ params }) {
                  <p>
                    Get a free, no-pressure consultation from a licensed Northern Virginia deck builder. Call{' '}
                    <CallLink style={{ color: 'var(--button-color)', fontWeight: 700 }} />{' '}
-                   or visit <Link href="/contact" style={{ color: 'var(--button-color)', fontWeight: 700 }}>ldndecks.com/contact</Link>.
+                   or visit <Link href="/get-estimate" style={{ color: 'var(--button-color)', fontWeight: 700 }}>ldndecks.com/get-estimate</Link>.
                  </p>
-                 <Link href="/contact" className={styles.ctaBtn}>Get a Free Estimate</Link>
+                 <Link href="/get-estimate" className={styles.ctaBtn}>Get a Free Estimate</Link>
                </div>
              </div>
           </div>

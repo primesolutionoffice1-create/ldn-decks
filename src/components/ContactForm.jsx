@@ -36,7 +36,7 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               <div className={styles.contactPoint}>
                 <strong>Phone:</strong>
                 <br/>
-                <CallLink aria-label="Call Loudoun Decks">(571) 655-7207</CallLink>
+                <CallLink aria-label="Call Loudoun Decks" data-cta-location="contact_form_info_column">(571) 655-7207</CallLink>
               </div>
               <div className={styles.contactPoint}>
                 <strong>Email:</strong>
@@ -56,7 +56,12 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
             </div>
           )}
           <div className={`${styles.formCol} ${noPadding ? styles.formColNoPadding : ''}`}>
-            <form onSubmit={handleSubmit} className={styles.formBlock} aria-label="Project Inquiry Form">
+            <form
+              onSubmit={handleSubmit}
+              className={styles.formBlock}
+              aria-label="Project Inquiry Form"
+              data-form-location={hideInfoCol ? 'embedded_contact_form' : 'contact_form'}
+            >
               {/* Honeypot — bots auto-fill every input, real users never see this.
                   Server-side check in sendEmail.js silently accepts then drops. */}
               <input
@@ -121,6 +126,41 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               </div>
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
+                  <label htmlFor="budgetRange">Approximate Budget</label>
+                  <select id="budgetRange" name="budgetRange" defaultValue="" className={styles.selectInput}>
+                    <option value="" disabled>Select Budget Range</option>
+                    <option value="$10K-$20K">$10K-$20K</option>
+                    <option value="$20K-$40K">$20K-$40K</option>
+                    <option value="$40K-$70K">$40K-$70K</option>
+                    <option value="$70K+">$70K+</option>
+                    <option value="Not Sure">Not Sure</option>
+                  </select>
+                </div>
+                <div className={styles.inputGroup}>
+                  <label htmlFor="materialInterest">Material Interest</label>
+                  <select id="materialInterest" name="materialInterest" defaultValue="" className={styles.selectInput}>
+                    <option value="" disabled>Select Material</option>
+                    <option value="Trex">Trex</option>
+                    <option value="TimberTech/AZEK">TimberTech/AZEK</option>
+                    <option value="Composite">Composite</option>
+                    <option value="Pressure-Treated Wood">Pressure-Treated Wood</option>
+                    <option value="Not Sure">Not Sure</option>
+                  </select>
+                </div>
+              </div>
+              <div className={styles.inputGroup}>
+                <label htmlFor="hoa">HOA / Permit Status</label>
+                <select id="hoa" name="hoa" defaultValue="" className={styles.selectInput}>
+                  <option value="" disabled>Select Status</option>
+                  <option value="HOA likely required">HOA likely required</option>
+                  <option value="Permit likely required">Permit likely required</option>
+                  <option value="HOA and permit likely required">HOA and permit likely required</option>
+                  <option value="Already approved">Already approved</option>
+                  <option value="Not sure">Not sure</option>
+                </select>
+              </div>
+              <div className={styles.row}>
+                <div className={styles.inputGroup}>
                   <label htmlFor="city">City</label>
                   <input id="city" name="city" type="text" placeholder="e.g. Ashburn" autoComplete="address-level2" />
                 </div>
@@ -143,7 +183,7 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                 className={styles.submitBtn}
                 aria-label={status === "submitting" ? "Submitting form" : "Submit project inquiry"}
               >
-                {status === "submitting" ? "Sending..." : "Submit Message"}
+                {status === "submitting" ? "Sending..." : "Request Written Estimate"}
               </button>
             </form>
           </div>

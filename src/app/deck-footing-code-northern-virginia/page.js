@@ -14,6 +14,7 @@ export const metadata = buildMetadata({
   path: '/deck-footing-code-northern-virginia',
   title: 'Deck Footing & Code Guide for Northern Virginia | LDN Decks',
   description: 'How deck footings and the Virginia Residential Code work in Northern Virginia — frost-depth footings, ledger attachment, joist spans, guardrails, and the inspections your deck must pass.',
+  image: '/social/deck-footing-code-northern-virginia-social.png',
 });
 
 const faqs = [
@@ -67,7 +68,7 @@ export default function DeckFootingCodePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-footing-code-northern-virginia" name="Deck Footing &amp; Code Guide for Northern Virginia | LDN Decks" description="How deck footings and the Virginia Residential Code work in Northern Virginia — frost-depth footings, ledger attachment, joist spans, guardrails, and the inspections your deck must pass." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-footing-code-northern-virginia" name="Deck Footing &amp; Code Guide for Northern Virginia | LDN Decks" description="How deck footings and the Virginia Residential Code work in Northern Virginia — frost-depth footings, ledger attachment, joist spans, guardrails, and the inspections your deck must pass." speakable />
       <ArticleSchema
         title="Deck Footing & Code Guide for Northern Virginia"
         description="How deck footings and the Virginia Residential Code work in Northern Virginia — frost-depth footings, ledger attachment, joist and beam spans, lateral-load connections, guardrails, stairs, and required inspections."
@@ -209,7 +210,7 @@ export default function DeckFootingCodePage() {
               Build it right the first time
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.82)', maxWidth: 600, margin: '0 auto 1.75rem', lineHeight: 1.65, fontSize: '1.05rem' }}>
-              We engineer footings, ledger connections, and framing to the Virginia Residential Code and handle every county inspection. See real projects in our <Link href="/before-and-after" style={{ color: '#fff', fontWeight: 600 }}>before &amp; after gallery</Link> and what homeowners say on our <Link href="/reviews" style={{ color: '#fff', fontWeight: 600 }}>reviews page</Link>.
+              We engineer footings, ledger connections, and framing to the Virginia Residential Code and handle every county inspection. Review photo examples in our <Link href="/before-and-after" style={{ color: '#fff', fontWeight: 600 }}>before &amp; after gallery</Link> and what homeowners say on our <Link href="/reviews" style={{ color: '#fff', fontWeight: 600 }}>reviews page</Link>.
             </p>
             <Link href="/get-estimate" style={{ background: 'var(--color-primary)', color: '#fff', padding: '1rem 2.25rem', borderRadius: 10, fontWeight: 800, textDecoration: 'none', display: 'inline-block', fontSize: '1.05rem' }}>
               Get a Free Estimate
@@ -219,7 +220,7 @@ export default function DeckFootingCodePage() {
         </div>
       </article>
 
-      <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-footing-code-northern-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 

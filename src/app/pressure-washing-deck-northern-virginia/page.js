@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/pressure-washing-deck-northern-virginia',
   title: 'Deck Pressure Washing in Northern Virginia | $150-$500 | LDN Decks',
   description: 'Pro deck pressure washing in Northern Virginia. $150-$500 for most decks. Removes mold, mildew, oxidation. Safe PSI for wood & composite.',
+  image: '/social/pressure-washing-deck-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -30,7 +31,7 @@ export default function PressureWashingDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/pressure-washing-deck-northern-virginia" name="Deck Pressure Washing in Northern Virginia | $150-$500 | LDN Decks" description="Pro deck pressure washing in Northern Virginia. $150-$500 for most decks. Removes mold, mildew, oxidation. Safe PSI for wood &amp; composite." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/pressure-washing-deck-northern-virginia" name="Deck Pressure Washing in Northern Virginia | $150-$500 | LDN Decks" description="Pro deck pressure washing in Northern Virginia. $150-$500 for most decks. Removes mold, mildew, oxidation. Safe PSI for wood &amp; composite." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Pressure Washing in Northern Virginia</h1>
@@ -144,7 +145,7 @@ export default function PressureWashingDeckPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Book Your Deck Washing" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Book Your Deck Washing" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/pressure-washing-deck-northern-virginia" />

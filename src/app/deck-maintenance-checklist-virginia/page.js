@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/deck-maintenance-checklist-virginia',
   title: 'Deck Maintenance Checklist for Virginia',
   description: 'Seasonal deck maintenance checklist for Virginia climate. Spring cleaning, summer care, fall prep, winter protection. Composite vs wood maintenance compared.',
+  image: '/social/deck-maintenance-checklist-virginia-social.png',
 });
 
 const faqSchema = {
@@ -34,7 +35,7 @@ export default function DeckMaintenancePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-maintenance-checklist-virginia" name="Deck Maintenance Checklist for Virginia" description="Seasonal deck maintenance checklist for Virginia climate. Spring cleaning, summer care, fall prep, winter protection. Composite vs wood maintenance compared." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-maintenance-checklist-virginia" name="Deck Maintenance Checklist for Virginia" description="Seasonal deck maintenance checklist for Virginia climate. Spring cleaning, summer care, fall prep, winter protection. Composite vs wood maintenance compared." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Maintenance Checklist for Virginia</h1>
@@ -140,6 +141,11 @@ export default function DeckMaintenancePage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Ledger board pulling away from house</strong> critical safety issue, call today</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Mold returns within weeks of cleaning</strong> may need board replacement or resurfacing</li>
           </ul>
+          <p style={S.p}>
+            If the checklist points to soft framing, wobbly railings, stair movement, or a ledger issue, start with our{' '}
+            <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service in Northern Virginia</Link>
+            {' '}before assuming the entire deck must be replaced.
+          </p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
@@ -157,6 +163,7 @@ export default function DeckMaintenancePage() {
             {[
               ['/deck-staining-northern-virginia', 'Deck Staining Services'],
               ['/services/deck-washing', 'Deck Washing Services'],
+              ['/services/deck-repair', 'Deck Repair Services'],
               ['/how-long-does-a-composite-deck-last', 'How Long Does a Composite Deck Last?'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood'],
               ['/services/deck-inspection', 'Deck Inspection Services'],
@@ -166,7 +173,7 @@ export default function DeckMaintenancePage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Deck Need More Than Maintenance? Free Inspection" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Deck Need More Than Maintenance? Free Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/deck-maintenance-checklist-virginia" />

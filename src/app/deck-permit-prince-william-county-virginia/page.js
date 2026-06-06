@@ -14,6 +14,7 @@ export const metadata = buildMetadata({
   path: '/deck-permit-prince-william-county-virginia',
   title: 'Prince William County Deck Permit Guide 2026 | Cost & Process',
   description: 'Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you.',
+  image: '/social/deck-permit-prince-william-county-social.png',
 });
 
 const permitFaqs = [
@@ -60,15 +61,7 @@ export default function PWCountyPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you." speakable />
-      <ArticleSchema
-        title="Prince William County Deck Permit Guide for 2026"
-        description="Prince William County deck permit requirements, jurisdiction checks, structural details, inspections, timelines, and permit costs for Northern Virginia homeowners."
-        path="/deck-permit-prince-william-county-virginia"
-        image="/images/blog-permit-guide.png"
-        datePublished="2026-04-21"
-        dateModified="2026-06-02"
-      />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Permit Guide: Prince William County, VA</h1>
@@ -136,7 +129,7 @@ export default function PWCountyPermitPage() {
           <p style={S.p}>Not sure which covers your property? Tell us your address we determine the correct jurisdiction and handle permitting accordingly.</p>
 
           <h2 style={S.h2}>We Handle Everything</h2>
-          <p style={S.p}>Permits are part of our standard scope no extra charge. We prepare plans, submit applications, track review timelines, schedule all inspections, and resolve any reviewer comments. You don&apos;t deal with the county at all. If a deck was already built without approval, start with our guide to <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>unpermitted decks in Virginia</Link>.</p>
+          <p style={S.p}>Permits are part of our standard scope no extra charge. We prepare plans, submit applications, track review timelines, schedule all inspections, and resolve any reviewer comments. You don&apos;t deal with the county at all. If a deck was already built without approval, start with our guide to <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>unpermitted decks in Virginia</Link>; if the existing structure needs correction before approval, review our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {permitFaqs.map((faq) => (
@@ -151,6 +144,7 @@ export default function PWCountyPermitPage() {
               ['/deck-permit-fairfax-county-virginia', 'Fairfax County Permit Guide'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Permit Guide'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules'],
+              ['/services/deck-repair', 'Deck Repair Service'],
               ['/deck-builder-manassas-va', 'Deck Builder Manassas'],
               ['/deck-builder-woodbridge-va', 'Deck Builder Woodbridge'],
             ].map(([href, text]) => (
@@ -159,8 +153,8 @@ export default function PWCountyPermitPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/contact" />
-      <NamedAuthor context="Prince William County" lastUpdated="2026-05-26" />
+      <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Prince William County" lastUpdated="2026-06-01" />
 
       <RelatedGuides currentPath="/deck-permit-prince-william-county-virginia" />
 

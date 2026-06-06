@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/deck-resurfacing-northern-virginia',
   title: 'Deck Resurfacing in Northern Virginia',
   description: 'Premium deck resurfacing in Northern Virginia. Keep your existing frame, install new composite boards & railings. Typical projects $15k–$30k+. Free inspection.',
-  image: '/showcase/img09.jpeg',
+  image: '/social/deck-resurfacing-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -93,7 +93,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema
+      <WebPageSchema dateModified="2026-06-01"
         url="https://ldndecks.com/deck-resurfacing-northern-virginia"
         name="Deck Resurfacing in Northern Virginia"
         description="Premium deck resurfacing in Northern Virginia. Keep your existing frame, install new composite boards & railings. Typical projects $15k–$30k+. Free inspection."
@@ -210,7 +210,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
             <li>New fascia, stair treads, risers, and stringers as needed</li>
             <li>Permit application (Loudoun, Fairfax, Prince William, Arlington, Alexandria)</li>
             <li>HOA submission packages including drawings, material spec, and color samples</li>
-            <li>5-year workmanship warranty + manufacturer material warranty (25–50 years)</li>
+            <li>Written workmanship warranty terms plus manufacturer material warranty information</li>
           </ul>
 
           <h2 style={S.h2}>Counties &amp; Cities We Cover</h2>
@@ -242,16 +242,21 @@ export default function DeckResurfacingNorthernVirginiaPage() {
             </Link>.
           </p>
 
-          <h2 style={S.h2}>Recent Resurfacing Projects in Northern Virginia</h2>
+          <h2 style={S.h2}>Resurfacing Planning Scenarios to Verify Before Case Study Use</h2>
+          <p style={S.p}>
+            The examples below are planning scenarios for budgeting and scope comparison, not formal case studies.
+            Before reusing any scenario as a source-verified example, match it to owner/source evidence: city,
+            month/year, signed scope, before/after photos, permit or HOA status, and final estimate or invoice.
+          </p>
           {[
-            { price: '$19,500', loc: 'South Riding, VA', detail: '280 sqft deck, 12 years old. Frame solid after inspection. Removed PT boards and railings, installed Trex Enhance Naturals with aluminum railings and stair lights. 1-week build, permit handled.' },
-            { price: '$22,000', loc: 'Brambleton, VA', detail: '300 sqft deck, 10 years old. Frame inspected OK. Installed Trex Transcend Tiki Torch with Trex Select composite railings. HOA approved. 1.5-week build.' },
-            { price: '$27,500', loc: 'Ashburn, VA', detail: '380 sqft deck. TimberTech AZEK Vintage Mahogany with black aluminum railings and recessed stair lighting. Picture-frame border. 2-week build, HOA pre-approved.' },
-            { price: '$31,000', loc: 'Fairfax, VA', detail: '420 sqft deck with two stair flights. Trex Signature with cable railing on view side, composite on house side. 2-week build, county permit handled.' },
+            { price: '$18,000-$22,000', loc: 'South Riding-style scope', detail: '280 sqft resurfacing scenario for an older pressure-treated surface with a sound frame after inspection. Budget assumes Trex Enhance Naturals, aluminum railings, stair-light allowance, and permit/HOA/timeline verification after scope review.' },
+            { price: '$21,000-$25,000', loc: 'Brambleton-style scope', detail: '300 sqft resurfacing scenario with mid-tier composite decking and composite railings. Use this for budget planning only until HOA status, inspection notes, and final material selections are verified.' },
+            { price: '$26,000-$31,000', loc: 'Ashburn-style scope', detail: '380 sqft premium resurfacing scenario using TimberTech AZEK Vintage-style PVC, black aluminum railing, recessed stair lighting, and a picture-frame border. Verify site access, framing condition, HOA status, and material quote before publishing as a source-verified example.' },
+            { price: '$30,000-$36,000', loc: 'Fairfax-style scope', detail: '420 sqft resurfacing scenario with two stair flights and mixed railing zones. County permit triggers, final inspection path, and project timeline must be confirmed from owner evidence before this becomes a formal case study.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem', borderLeft: '4px solid var(--color-primary)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', flexWrap: 'wrap', gap: '0.5rem' }}>
-                <span style={{ fontWeight: 700, color: 'var(--color-primary)' }}>Resurfacing</span>
+                <span style={{ fontWeight: 700, color: 'var(--color-primary)' }}>Planning scenario</span>
                 <span style={{ fontWeight: 600 }}>{p.price} · {p.loc}</span>
               </div>
               <p style={{ lineHeight: 1.7, fontSize: '0.95rem' }}>{p.detail}</p>
@@ -265,7 +270,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
             { q: 'Do I need a permit?', a: 'In Loudoun, Fairfax, Prince William, Arlington, and Alexandria, replacing the deck surface, railings, or stairs generally requires a permit. We handle the permit and HOA paperwork.' },
             { q: 'Can my deck be resurfaced?', a: 'Only if the frame passes structural inspection. Joists, beams, posts, footings, and ledger must all be sound. We offer free inspections.' },
             { q: 'How long does the build take?', a: 'On-site: 1–2 weeks for a typical 300–500 sqft deck. Total project timeline including permit and HOA: 4–8 weeks.' },
-            { q: 'What warranty do I get?', a: '5-year workmanship warranty from Loudoun Decks plus the manufacturer warranty on the decking material (25 years on Trex Enhance, 50 years on TimberTech AZEK).' },
+            { q: 'What warranty do I get?', a: 'Loudoun Decks provides written workmanship warranty terms with the project agreement, plus manufacturer warranty information for the selected decking material.' },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
@@ -300,7 +305,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
       <SimpleCTA
         title="Free Deck Resurfacing Inspection in Northern Virginia"
         buttonText="Schedule Free Inspection"
-        link="/contact"
+        link="/get-estimate"
       />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath="/deck-resurfacing-northern-virginia" />

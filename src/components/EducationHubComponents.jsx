@@ -175,7 +175,7 @@ export function EducationLeadCTA() {
         </div>
         <div className={styles.leadButtons}>
           <Link className={styles.primaryBtn} href="/deck-payment-estimator">Use the Deck Payment Estimator</Link>
-          <Link className={styles.secondaryBtn} href="/contact">Request a Free Estimate</Link>
+          <Link className={styles.secondaryBtn} href="/get-estimate">Request a Free Estimate</Link>
           <CallLink className={styles.secondaryBtn}>Call (571) 655-7207</CallLink>
         </div>
       </div>

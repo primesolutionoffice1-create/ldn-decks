@@ -16,12 +16,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-purcellville-va',
   title: 'Deck Builder in Purcellville, VA | Custom Trex & Cedar Decks',
   description: "Deck builder in Purcellville, VA. Composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. Free estimate.",
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-purcellville-va-social.png',
 });
 
 const inclusions = [
@@ -105,11 +106,11 @@ export default function PurcellvilleDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="Purcellville" url="https://ldndecks.com/deck-builder-purcellville-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-purcellville-va" name="Deck Builder in Purcellville, VA | Custom Trex & Cedar Decks" description="Deck builder in Purcellville, VA. Composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-purcellville-va" name="Deck Builder in Purcellville, VA | Custom Trex & Cedar Decks" description="Deck builder in Purcellville, VA. Composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. Free estimate." speakable />
       <ServicesHeader
         subtext="Purcellville, VA's Trusted Deck Company"
         title="Custom Deck Builder in Purcellville, VA"
-        description="Loudoun Decks builds composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. review-supported reputation."
+        description="Loudoun Decks builds composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Built for Western Loudoun's Larger Lots"
@@ -124,6 +125,18 @@ export default function PurcellvilleDeckBuilderPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <PlanningUpdate
+        market="Purcellville deck projects"
+        notes={[
+          'Western Loudoun lots should be screened for slope, access, soil and town-or-county zoning constraints before final pricing.',
+          'View-oriented decks need railing, shade and stair planning early so the structure protects the Blue Ridge sightline.',
+          'Natural wood, composite and PVC should be compared against maintenance tolerance, exposure and long-term budget.',
+        ]}
+        links={[
+          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
+          { href: '/deck-materials-comparison-virginia', label: 'Material comparison' },
+        ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -169,9 +182,9 @@ export default function PurcellvilleDeckBuilderPage() {
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Purcellville" /></div></section>
-      <SimpleCTA title="Build Your Dream Deck in Purcellville" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Dream Deck in Purcellville" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-purcellville-va" />
-      <NamedAuthor context="Purcellville and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Purcellville and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

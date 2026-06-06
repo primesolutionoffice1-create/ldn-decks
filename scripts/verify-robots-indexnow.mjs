@@ -18,10 +18,11 @@
 import https from 'node:https';
 import fs from 'node:fs';
 import path from 'node:path';
+import { resolveVaultReportsDir } from './lib/report-paths.mjs';
 
 const SITE = 'https://ldndecks.com';
 const INDEXNOW_KEY = 'ldndecks2026indexnow';
-const REPORT_DIR = '/Users/ldndecks/ldn-decks-growth-brain-vaults/ldn-decks/wiki/reports';
+const REPORT_DIR = resolveVaultReportsDir(path.resolve('.'));
 
 function fetchText(url) {
   return new Promise((resolve, reject) => {

@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
   path: '/outdoor-living-northern-virginia',
   title: 'Outdoor Living Contractor Northern Virginia | Decks, Patios, Porches',
   description: 'Outdoor living design and build in Northern Virginia. Custom decks, screened porches, patios, pergolas, outdoor kitchens and under-deck spaces.',
-  image: '/home-page-ldn.webp',
+  image: '/social/outdoor-living-northern-virginia-social.png',
 });
 
 const inclusions = [
@@ -104,7 +104,7 @@ const faqs = [
 export default function OutdoorLivingNorthernVirginiaPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/outdoor-living-northern-virginia" name="Outdoor Living Contractor Northern Virginia | Decks, Patios, Porches" description="Outdoor living design and build in Northern Virginia. Custom decks, screened porches, patios, pergolas, outdoor kitchens and under-deck spaces." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/outdoor-living-northern-virginia" name="Outdoor Living Contractor Northern Virginia | Decks, Patios, Porches" description="Outdoor living design and build in Northern Virginia. Custom decks, screened porches, patios, pergolas, outdoor kitchens and under-deck spaces." speakable />
       <ServiceSchema
         name="Outdoor Living Design and Build"
         description="Full-service outdoor living contractor in Northern Virginia. Decks, porches, patios, pergolas, outdoor kitchens, and backyard transformations."

@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/winterize-your-deck-northern-virginia',
   title: 'Winterize Your Deck in Northern VA',
   description: 'Protect your deck from Virginia freeze-thaw. 10-step winterization checklist for wood and composite decks. Free inspection.',
+  image: '/social/winterize-deck-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -30,7 +31,7 @@ export default function WinterizeDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/winterize-your-deck-northern-virginia" name="Winterize Your Deck in Northern VA" description="Protect your deck from Virginia freeze-thaw. 10-step winterization checklist for wood and composite decks. Free inspection." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/winterize-your-deck-northern-virginia" name="Winterize Your Deck in Northern VA" description="Protect your deck from Virginia freeze-thaw. 10-step winterization checklist for wood and composite decks. Free inspection." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How to Winterize Your Deck in Northern Virginia</h1>
@@ -129,7 +130,7 @@ export default function WinterizeDeckPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Deck Need Pre-Winter Repairs? Free Inspection" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Deck Need Pre-Winter Repairs? Free Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/winterize-your-deck-northern-virginia" />

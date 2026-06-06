@@ -5,7 +5,7 @@ import { showcaseProjects } from '@/lib/showcaseData';
 import { counties, slugify } from '@/data/cityData';
 
 /**
- * CountyRecentProjects — data-driven Recent Projects section for county hub pages.
+ * CountyRecentProjects — data-driven project profile section for county hub pages.
  *
  * Reads showcaseProjects (lib/showcaseData) + filters to projects whose
  * location city falls within the requested county per cityData. Renders
@@ -39,10 +39,11 @@ export default function CountyRecentProjects({ countySlug, limit = 6 }) {
     <section style={{ padding: '3rem 1.5rem', background: '#fafafa' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '0.5rem' }}>
-          Recent Projects in {county.name}
+          Project Profiles in {county.name}
         </h2>
         <p style={{ color: '#666', marginBottom: '2rem', lineHeight: 1.6 }}>
-          Selected completed projects from our {county.name} portfolio. Each links to the full project page with photos and specifications.
+          Selected showcase profiles connected to {county.name}. Verify project evidence, photos, and completion
+          details before using any profile as formal proof.
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
           {matching.map((project) => {

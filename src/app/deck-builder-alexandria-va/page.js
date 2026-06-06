@@ -17,18 +17,19 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-alexandria-va',
   title: 'Deck Builder in Alexandria VA | Trex Certified | Loudoun Decks',
   description: 'Trusted Alexandria, VA deck builder. Trex Platinum Partner. Custom composite decks, porches & pergolas. Licensed & insured. Free estimate in 24h — (571) 655-7207.',
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-alexandria-va-social.png',
 });
 
 const inclusions = [
   {
     title: "Alexandria Permit & HOA Expertise",
-    desc: "We navigate the requirements of both the City of Alexandria and Fairfax County, as well as local HOAs like Kingstowne, ensuring your deck project is approved quickly and correctly."
+    desc: "We navigate the requirements of both the City of Alexandria and Fairfax County, as well as local HOAs like Kingstowne, with permit-ready planning and clear submission details."
   },
   {
     title: "Premium Composite Specialists",
@@ -59,7 +60,7 @@ const alexandriaFAQs = [
   },
   {
     q: "Are you a Trex certified contractor in Alexandria VA?",
-    a: "Yes. Loudoun Decks is a Trex Platinum Partner, the highest certification level, giving our Alexandria clients access to top-tier warranties and expert installation."
+    a: "Yes. Loudoun Decks is a Trex Platinum Partner, giving Alexandria clients access to Trex product lines, manufacturer-backed warranty paths, and installation practices aligned with Trex requirements."
   },
   {
     q: "Do you build screened porches in Alexandria?",
@@ -71,8 +72,8 @@ const expansionSections = [
   {
     title: "Why Alexandria Homeowners Choose Loudoun Decks",
     paragraphs: [
-      "Alexandria neighborhoods \u2014 from the historic districts to newer developments near Kingstowne \u2014 each have unique characteristics and guidelines. We\u2019ve worked extensively across Alexandria and understand exactly how to design a deck that complements your home while meeting all local building codes and HOA requirements.",
-      "Recent Alexandria projects include a multi-level TimberTech deck (2024), a screened porch addition (2025), and a complete backyard transformation with a Trex Transcend deck and under-deck patio."
+      "Alexandria neighborhoods \u2014 from the historic districts to newer developments near Kingstowne \u2014 each have unique characteristics and guidelines. We plan around City of Alexandria, Fairfax County, HOA, and site constraints so the deck design complements the home while meeting local building codes.",
+      "Alexandria project scopes often include multi-level TimberTech decks, screened porch additions, and backyard transformations with Trex Transcend decks and under-deck patios. Specific project examples should be added only from verified owner-supplied evidence."
     ]
   },
   {
@@ -80,7 +81,7 @@ const expansionSections = [
     paragraphs: [
       "Alexandria, VA offers a mix of historic charm and modern suburban convenience. As a dedicated deck builder in Alexandria, Loudoun Decks brings premium craftsmanship to every project. We are not a volume builder focused on rushing through jobs; we are a detail-oriented team that prioritizes quality and longevity.",
       "Whether you're looking to replace an old wooden deck with modern composites or build a brand-new outdoor entertainment space from scratch, our team handles the entire process. We manage the Fairfax County/City of Alexandria permits, the HOA architectural review board submissions, and the structural engineering.",
-      "If you are looking for a deck builder near you in Alexandria that delivers guaranteed quality and a stress-free experience, Loudoun Decks is your partner. Our Google review profile reflects our commitment to our clients."
+      "If you are looking for a deck builder near you in Alexandria that prioritizes quality, code-aware planning, and clear communication, Loudoun Decks is your partner. Public review profiles can help homeowners evaluate reputation alongside license, insurance, materials, and scope detail."
     ]
   },
   {
@@ -88,13 +89,13 @@ const expansionSections = [
     paragraphs: [
       "The humid Virginia summers make composite decking the ideal choice for Alexandria homeowners. As a Trex Platinum Partner and TimberTech Certified contractor, we install decking that won't warp, splinter, or rot. Projects typically start around $20,000 and scale based on your specific design requirements.",
       "We specialize in designing decks that maximize the usable outdoor space of your property, even on tight townhome lots. Integrated lighting, custom railings, and built-in seating are standard requests that we execute flawlessly.",
-      "Every composite deck we build in Alexandria comes with a full manufacturer's warranty backed by our installation certification, ensuring your investment is protected for decades."
+      "Every composite deck proposal in Alexandria includes manufacturer warranty information for the selected product line and installation practices aligned with published manufacturer guidance."
     ],
     listItems: [
-      { label: "Trex Platinum Partner", text: "Highest certification level for Trex installation in Alexandria and Northern Virginia." },
+      { label: "Trex Platinum Partner", text: "Trex product-line familiarity and manufacturer-aligned installation practices for Alexandria and Northern Virginia." },
       { label: "TimberTech Certified", text: "Certified installer for the full TimberTech Pro and AZEK product lines." },
       { label: "Permit Ready", text: "Full handling of all Fairfax County and City of Alexandria permitting." },
-      { label: "Review-Supported", text: "Consistently supported by public reviews from homeowners across Northern Virginia." }
+      { label: "Public Profiles", text: "Homeowners can review public profiles and project documentation before approving a scope." }
     ]
   },
   {
@@ -111,11 +112,11 @@ export default function DeckBuilderAlexandriaPage() {
   return (
     <main>
       <LocalBusinessSchema city="Alexandria" url="https://ldndecks.com/deck-builder-alexandria-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-alexandria-va" name="Deck Builder in Alexandria VA | Trex Certified | Loudoun Decks" description="Trusted Alexandria, VA deck builder. Trex Platinum Partner. Custom composite decks, porches &amp; pergolas. Licensed &amp; insured. Free estimate in 24h — (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-alexandria-va" name="Deck Builder in Alexandria VA | Trex Certified | Loudoun Decks" description="Trusted Alexandria, VA deck builder. Trex Platinum Partner. Custom composite decks, porches &amp; pergolas. Licensed &amp; insured. Free estimate in 24h — (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Alexandria, VA's Trusted Deck Company"
         title="Custom Deck Builder in Alexandria, VA"
-        description="Loudoun Decks builds premium composite decks and screened porches in Alexandria. Trex Platinum Partner. review-supported reputation."
+        description="Loudoun Decks builds premium composite decks and screened porches in Alexandria. Trex Platinum Partner. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Historic & Modern Craftsmanship"
@@ -130,6 +131,19 @@ export default function DeckBuilderAlexandriaPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <PlanningUpdate
+        market="Alexandria decks in 2026"
+        notes={[
+          "Alexandria projects should verify whether the property is City of Alexandria, Fairfax County, or an HOA-controlled community such as Kingstowne before permit planning.",
+          "Townhome and historic-area decks need earlier planning around visibility, setbacks, railings, and material color than a typical suburban rear-yard build.",
+          "Older decks near Mount Vernon, Kingstowne, and the Potomac corridor should be inspected for ledger flashing, stair safety, and moisture exposure before resurfacing is priced."
+        ]}
+        links={[
+          { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
+          { href: "/deck-safety-inspection-checklist", label: "Safety checklist" },
+          { href: "/composite-deck-cost-northern-virginia", label: "Composite deck cost" }
+        ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -178,9 +192,9 @@ export default function DeckBuilderAlexandriaPage() {
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Alexandria" /></div></section>
-      <SimpleCTA title="Build Your Dream Deck in Alexandria" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Dream Deck in Alexandria" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-alexandria-va" />
-      <NamedAuthor context="Alexandria and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Alexandria and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

@@ -12,11 +12,13 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-tysons-va',
   title: 'Deck Builder in Tysons, VA | Modern Composite Decks | LDN Decks',
   description: 'Custom deck builder in Tysons, VA. Google reviews. Modern composite decks & rooftop terraces for Tysons townhomes and condos. Free estimate. (571) 655-7207.',
+  image: '/social/deck-builder-tysons-va-social.png',
 });
 
 const faqSchema = {
@@ -26,7 +28,7 @@ const faqSchema = {
     { "@type": "Question", name: "How much does a deck cost in Tysons?", acceptedAnswer: { "@type": "Answer", text: "Tysons deck projects range from $18,000-$50,000. Compact townhome decks: $18k-$30k. Single-family with screened porch: $35k-$50k. Composite: $40-$65/sqft installed." } },
     { "@type": "Question", name: "Which Tysons neighborhoods do you serve most often?", acceptedAnswer: { "@type": "Answer", text: "Our largest single-family-home volume in the Tysons area comes from Pimmit Hills (no mandatory HOA, quarter to one-third acre lots, 1950s-era ranches and Cape Cods often expanding with full rear decks and screened porches), Old Courthouse between Tysons and Vienna, and the Westgate Elementary area. Our compact-deck work concentrates in The Boro, One Park Crest, and the Ovation at Park Crest townhome and condo communities along the Tysons Corner urban core." } },
     { "@type": "Question", name: "Do I need a deck permit in Tysons? What's the Fairfax County process?", acceptedAnswer: { "@type": "Answer", text: "Yes for any deck attached to your house, over 256 sqft, or more than 16.5 inches above grade. Fairfax County deck construction is regulated by the setback table in Section 5100.1 of the Zoning Ordinance (decks can extend into setbacks within published limits). Within the Tysons Urban Center, the Planned Tysons Corner (PTC) District adds Comprehensive Plan design overlays. Permit Application Center 703-222-0801; review averages 3-6 weeks. We file the application as part of every Tysons project." } },
-    { "@type": "Question", name: "What about HOA approval for Tysons condos and townhomes?", acceptedAnswer: { "@type": "Answer", text: "Most Tysons-core communities (The Boro, One Park Crest, Ovation at Park Crest, Lerner-built townhomes) are managed by professional firms like FirstService Residential. Architectural Review approval typically takes 2-4 weeks once we submit material samples, renderings, and structural drawings. Pimmit Hills single-family homes have no mandatory HOA, which is one reason it's our highest-volume Tysons-area neighborhood." } },
+    { "@type": "Question", name: "What about HOA approval for Tysons condos and townhomes?", acceptedAnswer: { "@type": "Answer", text: "Most Tysons-core communities (The Boro, One Park Crest, Ovation at Park Crest, Lerner-built townhomes) are managed by professional firms like FirstService Residential. Architectural Review timing typically depends on the manager's calendar and the completeness of the material samples, renderings, and structural drawings. Pimmit Hills single-family homes have no mandatory HOA, which can make the approval path simpler than condo or townhome communities." } },
     { "@type": "Question", name: "What materials work best for the Tysons modern aesthetic?", acceptedAnswer: { "@type": "Answer", text: "Tysons leans contemporary: dark composite colors (Trex Transcend Lava Rock, TimberTech AZEK Dark Hickory, Vintage Mahogany), black or bronze aluminum cable railings, integrated low-voltage LED lighting, and clean linear pergolas. For light/coastal counterpoints we use TimberTech AZEK Coastline or Trex Transcend Tiki Torch. PVC decking (AZEK) outperforms composite on south-facing high-rise terraces where surface temperature matters." } },
     { "@type": "Question", name: "Do you build rooftop terraces and balcony decks in Tysons?", acceptedAnswer: { "@type": "Answer", text: "Yes. Rooftop terraces and elevated balcony rebuilds are common in Tysons-core townhomes. These projects require structural load review (often engineer-stamped), waterproof membrane coordination with the existing roof system, code-compliant guardrails 42 inches high, and association approval. AZEK or aluminum pedestal systems are typical; we coordinate with the building's roofing contractor when needed." } },
     { "@type": "Question", name: "How long does a Tysons deck project take from contract to walkthrough?", acceptedAnswer: { "@type": "Answer", text: "From signed contract: 8-12 weeks total. That includes 3-4 weeks for Fairfax County permit, 2-4 weeks for HOA/condo association approval (often runs in parallel with permit), 1-3 weeks for material delivery, and 1-3 weeks for construction depending on size. Compact 200 sqft townhome decks typically finish in 9-10 weeks; larger Pimmit Hills full-rear decks finish in 10-12 weeks." } },
@@ -39,18 +41,31 @@ export default function TysonsDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Tysons" url="https://ldndecks.com/deck-builder-tysons-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-tysons-va" name="Deck Builder in Tysons, VA | Modern Composite Decks | LDN Decks" description="Custom deck builder in Tysons, VA. Google reviews. Modern composite decks &amp; rooftop terraces for Tysons townhomes and condos. Free estimate. (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-tysons-va" name="Deck Builder in Tysons, VA | Modern Composite Decks | LDN Decks" description="Custom deck builder in Tysons, VA. Google reviews. Modern composite decks &amp; rooftop terraces for Tysons townhomes and condos. Free estimate. (571) 655-7207." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Modern Deck Builder in Tysons, VA</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Compact, modern composite decks &amp; terraces for Tysons townhomes &amp; single-family homes</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · Licensed &amp; Insured · Written scope and warranty details provided before contract</p>
         </div>
       </section>
+      <PlanningUpdate
+        market="Tysons decks in 2026"
+        notes={[
+          "Tysons projects should separate Pimmit Hills single-family work from urban-core townhome, condo, rooftop, and balcony scopes before pricing.",
+          "Fairfax County permits, association rules, load review, waterproofing, and railing height can all change the path for compact Tysons builds.",
+          "Rooftop and terrace projects need earlier coordination around structure, membrane protection, drainage, and association approvals than ground-level decks."
+        ]}
+        links={[
+          { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
+          { href: "/deck-railing-options-northern-virginia", label: "Railing options" },
+          { href: "/trex-vs-timbertech-vs-azek", label: "Material comparison" }
+        ]}
+      />
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -74,7 +89,7 @@ export default function TysonsDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>The two Tysons deck markets we serve</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Tysons isn&apos;t one market — it&apos;s two, and they call for different design vocabularies, permit paths, and price points. Understanding which Tysons you live in is the difference between a 9-week build and a 14-week one.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>The Tysons urban core</strong> — The Boro, One Park Crest, Ovation at Park Crest, and the newer Metro-oriented mixed-use blocks — is dense, vertical, and architecturally contemporary. Projects here are compact (150–300 sqft), often involve rooftop terraces or balcony rebuilds, and require coordination with professional management firms like FirstService Residential. Material specifications skew dark and modern (Lava Rock, Dark Hickory, Vintage Mahogany), railings are almost always black aluminum or cable, and lighting is integrated into the deck itself. Architectural Review approvals typically take 2–4 weeks.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>The single-family Tysons</strong> — Pimmit Hills, Old Courthouse, the Westgate Elementary area — sits just outside the Beltway ring around Tysons Corner Center. These are 1950s-era ranches, expanded Cape Cods, and a growing inventory of new-construction Contemporary and Craftsman townhomes on quarter to one-third acre lots. Pimmit Hills has no mandatory HOA, which is a major reason it&apos;s our highest-volume single-family neighborhood in the Tysons area. Projects here look more like Vienna or McLean builds: 350–600 sqft rear decks, screened porches added to homes that originally had none, and full outdoor-living layouts.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>The single-family Tysons</strong> — Pimmit Hills, Old Courthouse, the Westgate Elementary area — sits just outside the Beltway ring around Tysons Corner Center. These are 1950s-era ranches, expanded Cape Cods, and a growing inventory of new-construction Contemporary and Craftsman townhomes on quarter to one-third acre lots. Pimmit Hills has no mandatory HOA, which can simplify the approval path compared with managed condo or townhome communities. Projects here look more like Vienna or McLean builds: 350–600 sqft rear decks, screened porches added to homes that originally had none, and full outdoor-living layouts.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Tysons neighborhoods we serve</h2>
 
@@ -111,7 +126,7 @@ export default function TysonsDeckBuilderPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Every Tysons estimate includes free 3D design rendering before contract — you see photorealistic views of the finished deck from multiple angles, not generic &ldquo;starting at&rdquo; pricing. Need to spread the cost? <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing options</Link> may be available, subject to approval and provider terms.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Tysons estimates can include design visualization where the scope calls for it, so homeowners can evaluate layout, railing, stairs, privacy, and material choices before final approval. Need to spread the cost? <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck financing options</Link> may be available, subject to approval and provider terms.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Permits &amp; HOA approval for Tysons</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Tysons sits within the Fairfax County <strong>Planned Tysons Corner (PTC) District</strong> — a special zoning overlay created to implement the Tysons Comprehensive Plan&apos;s vision of a walkable urban center. For most residential deck projects, the PTC overlay means coordinating the Fairfax County building permit (Section 5100 of the Zoning Ordinance covers deck setback rules and Table 5100.1 lists allowed extensions into setbacks) with any community-specific design controls.</p>
@@ -119,23 +134,23 @@ export default function TysonsDeckBuilderPage() {
             <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>Fairfax County permit:</strong> Plan review takes 3–6 weeks. Online via the Department of Land Development Services portal. Permit fees are based on construction valuation. Inspections required at footing, framing, and final.</li>
             <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>HOA / condo association approval:</strong> Tysons-core communities (The Boro, One Park Crest, Ovation, Lerner townhomes) typically require material samples, color specs, and engineered drawings. Approval averages 2–4 weeks via FirstService Residential or the building&apos;s in-house management.</li>
             <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>Pimmit Hills:</strong> No mandatory HOA. Only the Fairfax County permit applies, which is one reason Pimmit Hills projects move 3–4 weeks faster than Tysons-core builds.</li>
-            <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>We file both packages in parallel</strong> from the day you sign — saving 4–6 weeks compared to builders who serialize the county and HOA submissions.</li>
+            <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>Parallel planning where feasible:</strong> county and HOA packages should be prepared together when the association allows it, reducing preventable waiting time.</li>
           </ul>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Full county-specific walkthrough: <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County deck permit guide</Link>.</p>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Tysons Project</h2>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Tysons Project Planning Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$28,000 220 sqft Modern Townhome Deck, The Boro</h3>
-            <p style={{ lineHeight: 1.7 }}>Compact but stunning: TimberTech AZEK deck in Coastline (light beach tone) with black aluminum cable railings, flush-mount LED deck lights, and integrated planter boxes. Designed for a rear-facing townhome with limited space. Fairfax County permit. HOA managed by FirstService approved in 2 weeks. 2-week build.</p>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>220 sqft Modern Townhome Deck Scenario</h3>
+            <p style={{ lineHeight: 1.7 }}>A compact Tysons townhome concept might use TimberTech AZEK or Trex boards, black aluminum or cable railing, low-profile lighting, and planter integration to maximize a small rear yard or terrace. Final pricing and timeline should be confirmed after Fairfax County requirements, association rules, access constraints, and waterproofing details are reviewed. Verified project examples should be added here only after owner-supplied photos, scope, date, and approval details are available.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Tysons homeowners choose Loudoun Decks</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Trex Platinum Partner</strong> — top 1% of national Trex dealers. Material allocation priority and dealer-only color access.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Trex Platinum Partner</strong> — Trex product-line familiarity and manufacturer-aligned installation practices.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>TimberTech Certified Installer</strong> — manufacturer-trained on PVC pedestal systems used in Tysons-core rooftop projects.</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>VA Class A Contractor License + BBB A-rated + NADRA member</strong> — every Tysons HOA approval packet ships with verified credentials.</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>In-house crews</strong> — no subcontractors on Tysons builds. Same team from demo to final walkthrough.</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>2-year workmanship warranty</strong> on top of the manufacturer&apos;s 25–50 year material warranty.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>VA Class A Contractor License</strong> — licensing and insurance details can be included with HOA or association packets when requested.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Coordinated project team</strong> — scope, access, material delivery, and site protection are planned before construction begins.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Warranty clarity</strong> — workmanship and manufacturer material warranty details should be confirmed in the written proposal for the selected system.</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ — building a deck in Tysons</h2>
@@ -180,9 +195,9 @@ export default function TysonsDeckBuilderPage() {
         </ul>
       </section>
 
-      <SimpleCTA title="Modern Deck for Modern Living" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Modern Deck for Modern Living" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-tysons-va" />
-      <NamedAuthor context="Tysons and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Tysons and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </>
   );

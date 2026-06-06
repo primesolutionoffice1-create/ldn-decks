@@ -123,10 +123,10 @@ export default function Header() {
   return (
     <div className={styles.headerWrapper}>
       {/* Mobile Sticky Top Call Bar */}
-      <button onClick={openContact} className={styles.mobileTopCallBar} aria-label="Open Contact Form">
+      <Link href="/get-estimate" className={styles.mobileTopCallBar} aria-label="Get a free deck estimate">
         <PhoneIcon />
         <span>Get A Free Estimate</span>
-      </button>
+      </Link>
 
       <header className={styles.header}>
         {/* Left Logo Area */}
@@ -162,7 +162,7 @@ export default function Header() {
                 </a>
               </div>
               <div className={styles.topBarItem}>
-                 <CallLink aria-label="Call Loudoun Decks">
+                 <CallLink aria-label="Call Loudoun Decks" data-cta-location="header_top_bar">
                     <PhoneIcon />
                     <span>(571) 655-7207</span>
                  </CallLink>
@@ -208,9 +208,11 @@ export default function Header() {
                   <Link href="/about" className={isActive("/about")}>About <CaretDownIcon /></Link>
                   <div className={styles.dropdown}>
                     <Link href="/contact">Our contacts</Link>
+                    <Link href="/reviews">Reviews</Link>
+                    <Link href="/bbb-accredited-deck-builder-virginia">BBB Accredited</Link>
                     <Link href="/about/why-choose-us">Why Choose Us</Link>
                     <Link href="/about/process">Our Process</Link>
-                    <Link href="/about/warranty">2-Year Warranty</Link>
+                    <Link href="/about/warranty">Warranty Terms</Link>
                     <Link href="/faqs">FAQ</Link>
                     <Link href="/blog">Blog & News</Link>
                   </div>
@@ -256,7 +258,7 @@ export default function Header() {
                       </div>
                     </div>
                     
-                    <Link href="/services/deck-repair-and-structural-maintenance" style={{ padding: '10px 20px', display: 'block' }}>Deck Repair &amp; Structural Maintenance</Link>
+                    <Link href="/services/deck-repair" style={{ padding: '10px 20px', display: 'block' }}>Deck Repair &amp; Structural Maintenance</Link>
                     <Link href="/services/deck-resurfacing" style={{ padding: '10px 20px', display: 'block' }}>Deck Resurfacing</Link>
                     <Link href="/services/trex-calm-shell" style={{ padding: '10px 20px', display: 'block' }}>Trex Calm Shell</Link>
                     <Link href="/services/deck-stair-lighting" style={{ padding: '10px 20px', display: 'block' }}>Deck Stair Lighting</Link>
@@ -306,7 +308,7 @@ export default function Header() {
                 </div>
               </nav>
 
-              <CallLink className={styles.callNowBtn} aria-label="Call Us">
+              <CallLink className={styles.callNowBtn} aria-label="Call Us" data-cta-location="header_main_nav">
                 <PhoneIcon />
                 <span>Call Now</span>
               </CallLink>
@@ -361,9 +363,11 @@ export default function Header() {
                <div className={styles.drawerAccordionInner}>
                 <div className={styles.mobileDropdown}>
                   <Link href="/contact" onClick={() => setIsMobileOpen(false)}>Our contacts</Link>
+                  <Link href="/reviews" onClick={() => setIsMobileOpen(false)}>Reviews</Link>
+                  <Link href="/bbb-accredited-deck-builder-virginia" onClick={() => setIsMobileOpen(false)}>BBB Accredited</Link>
                   <Link href="/about/why-choose-us" onClick={() => setIsMobileOpen(false)}>Why Choose Us</Link>
                   <Link href="/about/process" onClick={() => setIsMobileOpen(false)}>Our Process</Link>
-                  <Link href="/about/warranty" onClick={() => setIsMobileOpen(false)}>2-Year Warranty</Link>
+                  <Link href="/about/warranty" onClick={() => setIsMobileOpen(false)}>Warranty Terms</Link>
                   <Link href="/faqs" onClick={() => setIsMobileOpen(false)}>FAQ</Link>
                   <Link href="/blog" onClick={() => setIsMobileOpen(false)}>Blog & News</Link>
                 </div>
@@ -431,7 +435,7 @@ export default function Header() {
                      </div>
                   </div>
 
-                  <Link href="/services/deck-repair-and-structural-maintenance" onClick={() => setIsMobileOpen(false)}>Deck Repair &amp; Structural Maintenance</Link>
+                  <Link href="/services/deck-repair" onClick={() => setIsMobileOpen(false)}>Deck Repair &amp; Structural Maintenance</Link>
                   <Link href="/services/deck-resurfacing" onClick={() => setIsMobileOpen(false)}>Deck Resurfacing</Link>
                   <Link href="/services/trex-calm-shell" onClick={() => setIsMobileOpen(false)}>Trex Calm Shell</Link>
                   <Link href="/services/deck-stair-lighting" onClick={() => setIsMobileOpen(false)}>Deck Stair Lighting</Link>
@@ -517,8 +521,20 @@ export default function Header() {
                 onClick={() => setIsMobileOpen(false)}
                 style={{ color: 'var(--site-color)', fontWeight: 700 }}
               >
-                💳 Financing Available
+                Financing Available
               </Link>
+            </div>
+          </div>
+
+          <div className={styles.mobileNavItem}>
+            <div className={`${styles.mobileNavLink} ${isActive('/reviews')}`}>
+              <Link href="/reviews" onClick={() => setIsMobileOpen(false)}>Reviews</Link>
+            </div>
+          </div>
+
+          <div className={styles.mobileNavItem}>
+            <div className={`${styles.mobileNavLink} ${isActive('/get-estimate')}`}>
+              <Link href="/get-estimate" onClick={() => setIsMobileOpen(false)}>Get Estimate</Link>
             </div>
           </div>
 

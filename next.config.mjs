@@ -75,7 +75,6 @@ const nextConfig = {
       // Batch 2 - Legacy & WordPress Remnants
 
       { source: '/blog-deck-tips/2', destination: '/blog', permanent: true },
-      { source: '/ldn-decks-reviews-yelp', destination: '/reviews', permanent: true },
       { source: '/new-composite-deck-in-ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
       { source: '/new-deck-building-in-manassas', destination: '/deck-builder-manassas-va', permanent: true },
       { source: '/wood-multi-level-deck-in-chantilly', destination: '/deck-builder-chantilly-va', permanent: true },
@@ -151,14 +150,14 @@ const nextConfig = {
       { source: '/project-gallery', destination: '/showcase', permanent: true },
       { source: '/contacts', destination: '/contact', permanent: true },
       { source: '/blog-deck-tips', destination: '/blog', permanent: true },
-      { source: '/free-estimates', destination: '/contact', permanent: true },
+      { source: '/free-estimates', destination: '/get-estimate', permanent: true },
 
       { source: '/the-ultimate-deck-building-guide', destination: '/blog', permanent: true },
       { source: '/deck-replacement', destination: '/services/deck-replacement', permanent: true },
 
       // Services
       { source: '/services/new-decks-installation', destination: '/services/new-decks', permanent: true },
-      { source: '/services/deck-repair', destination: '/services/deck-repair-and-structural-maintenance', permanent: true },
+      { source: '/services/deck-repair-and-structural-maintenance', destination: '/services/deck-repair', permanent: true },
       { source: '/services/outdoor-power-washing', destination: '/services/outdoor-washing', permanent: true },
       { source: '/services/outdoor-power-washing/:path*', destination: '/services/outdoor-washing', permanent: true },
       { source: '/services/gazebos-and-pergolas', destination: '/services/gazebo-pergola', permanent: true },
@@ -170,7 +169,7 @@ const nextConfig = {
 
       // Location Hubs
       { source: '/top-decks-build-near-you', destination: '/near-you', permanent: true },
-      { source: '/get-quote', destination: '/contact', permanent: true },
+      { source: '/get-quote', destination: '/get-estimate', permanent: true },
       { source: '/deck-builders', destination: '/near-you', permanent: true },
       { source: '/deck-builder', destination: '/near-you', permanent: true },
       { source: '/deck-builder-in-loudoun-county', destination: '/near-you/loudoun-county', permanent: true },

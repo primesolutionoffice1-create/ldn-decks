@@ -5,19 +5,19 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
-import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/press',
   title: 'Press & Media Kit | Loudoun Decks',
   description: 'Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s trusted deck builder.',
+  image: '/social/press-media-kit-social.png',
 });
 
 export default function PressPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/press" name="Press &amp; Media Kit | Loudoun Decks" description="Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s trusted deck builder." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/press" name="Press &amp; Media Kit | Loudoun Decks" description="Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s trusted deck builder." speakable />
       <section style={{ background: 'var(--color-dark, #1a1a2e)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Press & Media Kit</h1>
@@ -41,10 +41,10 @@ export default function PressPage() {
                   ['Phone', '(571) 655-7207'],
                   ['Email', 'office@ldndecks.com'],
                   ['Website', 'ldndecks.com'],
-                  ['Google Reviews', `strong Google review profile (${BUSINESS.aggregateRating.reviewCount}+ public reviews)`],
+                  ['Google Reviews', 'public Google review profile; verify current count and rating directly on Google Maps'],
                   ['Certifications', 'Trex Platinum Partner, TimberTech Certified Installer'],
                   ['License', 'Virginia Class A Contractor (DPOR Licensed)'],
-                  ['Insurance', 'Fully insured general liability & workers\' comp'],
+                  ['Insurance', 'Insurance documentation available for project review'],
                   ['Owner', 'Nick Owner & Lead Designer, 10+ years experience'],
                 ].map(([label, value], i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
@@ -58,13 +58,13 @@ export default function PressPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Key Facts & Statistics</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem', lineHeight: 1.8 }}>
-            <li><strong>200+ custom deck projects</strong> completed across Northern Virginia</li>
-            <li><strong>Google review profile</strong> with {BUSINESS.aggregateRating.reviewCount}+ public reviews</li>
+            <li><strong>10+ years of custom deck experience</strong> across Northern Virginia</li>
+            <li><strong>Google review profile</strong> with current count and rating verified directly on Google Maps</li>
             <li><strong>70+ cities served</strong> across 5 Northern Virginia counties</li>
-            <li><strong>Trex Platinum Partner</strong> highest tier of Trex certification</li>
+            <li><strong>Trex profile</strong> verify current manufacturer directory details directly with Trex</li>
             <li><strong>TimberTech Certified Installer</strong> qualified for all product lines</li>
-            <li><strong>100% permit approval rate</strong> across Loudoun, Fairfax & Prince William counties</li>
-            <li><strong>2-Year Workmanship Warranty</strong> on all projects in addition to manufacturer warranties</li>
+            <li><strong>Permit and inspection coordination</strong> across Loudoun, Fairfax & Prince William counties</li>
+            <li><strong>Written workmanship warranty terms</strong> provided with project paperwork in addition to manufacturer warranty information</li>
             <li><strong>Average project value:</strong> $15,000–$65,000</li>
             <li><strong>Average build time:</strong> 1–4 weeks depending on scope</li>
           </ul>
@@ -96,12 +96,15 @@ export default function PressPage() {
           </p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Online Profiles</h2>
+          <p style={{ marginBottom: '1rem', color: '#555', lineHeight: 1.7 }}>
+            For a consolidated view of reputation signals, see our <Link href="/reviews" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 700 }}>customer reviews</Link>, <Link href="/ldn-decks-reviews-yelp" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 700 }}>Yelp public profile page</Link>, <Link href="/bbb-accredited-deck-builder-virginia" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 700 }}>BBB accreditation page</Link>, and <Link href="/houzz-deck-projects" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 700 }}>Houzz project portfolio</Link>.
+          </p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem', lineHeight: 2 }}>
             <li><a href="https://www.google.com/maps/place/Loudoun+Decks/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Google Business Profile</a></li>
             <li><a href="https://www.yelp.com/biz/loudoun-decks-centreville" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Yelp</a></li>
             <li><a href="https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Better Business Bureau</a></li>
             <li><a href="https://www.buildzoom.com/contractor/loudoun-decks" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>BuildZoom</a></li>
-            <li><a href="https://business.loudounchamber.org/list/member/loudoun-deck-30047.htm" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Loudoun Chamber of Commerce</a></li>
+            <li><a href="https://business.loudounchamber.org/list/member/loudoun-decks-30047" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Loudoun Chamber of Commerce</a></li>
             <li><a href="https://www.mapquest.com/us/virginia/loudoun-decks-532352487" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>MapQuest</a></li>
             <li><a href="https://www.facebook.com/profile.php?id=61574201228967" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Facebook</a></li>
             <li><a href="https://www.instagram.com/loudoundecks/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #d14817)' }}>Instagram</a></li>
@@ -113,6 +116,9 @@ export default function PressPage() {
           <p style={{ marginBottom: '0.5rem' }}><strong>Nick</strong> Owner & Lead Designer</p>
           <p style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:office@ldndecks.com" style={{ color: 'var(--color-primary, #d14817)' }}>office@ldndecks.com</a></p>
           <p style={{ marginBottom: '2rem' }}>Phone: <CallLink style={{ color: 'var(--color-primary, #d14817)' }}>(571) 655-7207</CallLink></p>
+          <p style={{ marginBottom: '2rem' }}>
+            Homeowners can <Link href="/get-estimate" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 700 }}>request a written estimate</Link>; past customers can <Link href="/review" style={{ color: 'var(--color-primary, #d14817)', fontWeight: 700 }}>leave a review</Link>.
+          </p>
 
           <div style={{ background: '#f8f9fa', padding: '2rem', borderRadius: 12, marginBottom: '2rem' }}>
             <h3 style={{ fontWeight: 700, marginBottom: '0.75rem' }}>Suggested Citation</h3>

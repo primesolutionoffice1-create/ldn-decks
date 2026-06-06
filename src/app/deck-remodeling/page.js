@@ -16,6 +16,7 @@ const _meta = buildMetadata({
   path: '/deck-remodeling',
   title: 'Custom Deck Remodeling & Upgrades | Transform Your Space',
   description: 'Upgrade your existing deck with modern features. From new railings to built-in lighting, we remodel decks to fit your modern lifestyle.',
+  image: '/social/deck-remodeling-social.png',
 });
 export const metadata = {
   ..._meta,
@@ -25,7 +26,7 @@ export const metadata = {
 export default function DeckRemodelingPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/deck-remodeling" name="Custom Deck Remodeling &amp; Upgrades | Transform Your Space" description="Upgrade your existing deck with modern features. From new railings to built-in lighting, we remodel decks to fit your modern lifestyle." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-remodeling" name="Custom Deck Remodeling &amp; Upgrades | Transform Your Space" description="Upgrade your existing deck with modern features. From new railings to built-in lighting, we remodel decks to fit your modern lifestyle." speakable />
       <ServiceSchema
         name="Deck Remodeling"
         description="Transform your existing deck with new features, materials, and design upgrades in Northern Virginia."

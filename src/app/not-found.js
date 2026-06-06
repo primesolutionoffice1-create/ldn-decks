@@ -42,7 +42,7 @@ export default function NotFound() {
               <li><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary, #d14817)', textDecoration: 'none', fontSize: '0.9rem' }}>Deck Cost in Northern Virginia</Link></li>
               <li><Link href="/services" style={{ color: 'var(--color-primary, #d14817)', textDecoration: 'none', fontSize: '0.9rem' }}>Our Services</Link></li>
               <li><Link href="/showcase" style={{ color: 'var(--color-primary, #d14817)', textDecoration: 'none', fontSize: '0.9rem' }}>Project Gallery</Link></li>
-              <li><Link href="/contact" style={{ color: 'var(--color-primary, #d14817)', textDecoration: 'none', fontSize: '0.9rem' }}>Get a Free Estimate</Link></li>
+              <li><Link href="/get-estimate" style={{ color: 'var(--color-primary, #d14817)', textDecoration: 'none', fontSize: '0.9rem' }}>Get a Free Estimate</Link></li>
             </ul>
           </div>
 

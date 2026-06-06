@@ -15,6 +15,7 @@ export const metadata = buildMetadata({
   path: '/three-season-room-northern-virginia',
   title: 'Three-Season Room Builder in Northern Virginia',
   description: 'Custom three-season rooms in Northern Virginia with Eze-Breeze windows — usable 9-10 months a year. $33,000-$60,000+. Free design consultation.',
+  image: '/social/three-season-room-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -32,7 +33,7 @@ export default function ThreeSeasonRoomPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/three-season-room-northern-virginia" name="Three-Season Room Builder in Northern Virginia" description="Custom three-season rooms in Northern Virginia with Eze-Breeze windows — usable 9-10 months a year. $33,000-$60,000+. Free design consultation." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/three-season-room-northern-virginia" name="Three-Season Room Builder in Northern Virginia" description="Custom three-season rooms in Northern Virginia with Eze-Breeze windows — usable 9-10 months a year. $33,000-$60,000+. Free design consultation." speakable />
       <ServiceSchema
         name="Three-Season Room Construction"
         description="Custom three-season room design and build in Northern Virginia. Enclosed outdoor rooms with EZE-Breeze windows for spring-to-fall enjoyment."
@@ -59,7 +60,7 @@ export default function ThreeSeasonRoomPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Sliding-window outdoor rooms usable 9&ndash;10 months a year</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
           </div>
         </div>
       </section>
@@ -157,7 +158,7 @@ export default function ThreeSeasonRoomPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Design Your Three-Season Room" buttonText="Get Free Design Consultation" link="/contact" />
+      <SimpleCTA title="Design Your Three-Season Room" buttonText="Get Free Design Consultation" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/three-season-room-northern-virginia" />

@@ -13,7 +13,8 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/400-square-foot-deck-cost-northern-virginia',
   title: '400 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks',
-  description: 'Real 2026 pricing for a 400 sqft composite deck in Northern Virginia. Trex Enhance $14k–$22k. Trex Transcend $20k–$30k. TimberTech AZEK $24k–$34k. Includes permit, design, and 3-inspection cost.',
+  description: '2026 planning pricing for a 400 sqft composite deck in Northern Virginia. Trex Enhance $14k–$22k. Trex Transcend $20k–$30k. TimberTech AZEK $24k–$34k. Includes permit, design, and 3-inspection cost.',
+  image: '/social/400-square-foot-deck-cost-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -22,7 +23,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "How much does a 400 square foot composite deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A 400 sqft composite deck in Northern Virginia costs $14,000–$34,000 installed in 2026. Trex Enhance lands at $14k–$22k. Trex Transcend lands at $20k–$30k. TimberTech AZEK premium PVC lands at $24k–$34k. The range includes design, materials, framing, footings, railings, basic lighting, permit, and the 3 required inspections. Multi-level designs, integrated outdoor kitchens, and premium railings (cable, glass) push above the range." } },
     { "@type": "Question", name: "Is 400 square feet a good size for a Northern Virginia deck?", acceptedAnswer: { "@type": "Answer", text: "400 sqft is one of the most common sizes for Northern Virginia homes — a balanced footprint that accommodates a dining table (typically 8 feet × 4 feet) plus a separate seating area without crowding. A 20-foot-by-20-foot or 16-foot-by-25-foot configuration are the two most popular layouts at this size. Common in Ashburn, Centreville, Vienna, and McLean on quarter-acre lots." } },
-    { "@type": "Question", name: "What does the typical 400 sqft deck quote include?", acceptedAnswer: { "@type": "Answer", text: "A proper 400 sqft quote includes: free 3D design rendering, complete material take-off, structural framing (joists, beams, ledger, footings), composite or wood surface boards, railings, stairs, basic post-cap lighting, Fairfax/Loudoun/Arlington/Prince William county building permit, 3 county inspections (footing, framing, final), and 2-year workmanship warranty. Excluded but common add-ons: built-in seating ($1.5–3k), pergola ($8–15k), integrated lighting ($1.5–3k), outdoor kitchen ($15–40k)." } },
+    { "@type": "Question", name: "What does the typical 400 sqft deck quote include?", acceptedAnswer: { "@type": "Answer", text: "A proper 400 sqft quote includes: free 3D design rendering, complete material take-off, structural framing (joists, beams, ledger, footings), composite or wood surface boards, railings, stairs, basic post-cap lighting, Fairfax/Loudoun/Arlington/Prince William county building permit, county inspections, and written warranty terms. Excluded but common add-ons: built-in seating ($1.5–3k), pergola ($8–15k), integrated lighting ($1.5–3k), outdoor kitchen ($15–40k)." } },
     { "@type": "Question", name: "How long does a 400 sqft deck project take?", acceptedAnswer: { "@type": "Answer", text: "From signed contract: 8–12 weeks. County permit review: 2–4 weeks (Loudoun) or 3–6 weeks (Fairfax/Arlington). HOA approval runs in parallel: 1–4 weeks depending on community. Material delivery: 1–3 weeks. Construction on-site: 1–2 weeks for a single-level 400 sqft build; 2–3 weeks for multi-level. Most 400 sqft projects break ground 4–5 weeks after contract." } },
     { "@type": "Question", name: "Should I build 400 sqft, or stretch to 500–600 sqft?", acceptedAnswer: { "@type": "Answer", text: "The marginal cost per square foot drops after 400 sqft because foundation, framing, and permit overhead are largely fixed. Going from 400 to 500 sqft adds maybe $4,000–$7,000 (not 25%). Going from 400 to 600 sqft adds $8,000–$15,000. If you'll use the bigger footprint — dining + lounging + a planter area — the upgrade usually pays off. If the lot or HOA setbacks cap you at 400 sqft, the size is excellent for most NoVA families." } },
     { "@type": "Question", name: "What materials work best at 400 sqft?", acceptedAnswer: { "@type": "Answer", text: "All three composite tiers work at 400 sqft. Trex Enhance (value tier) keeps total project budget closer to $14–22k and is appropriate for shaded yards. Trex Transcend (mid-premium) at $20–30k is the most-requested choice in Ashburn, Brambleton, Centreville, and Vienna — excellent color retention, scratch resistance, and the widest color palette. TimberTech AZEK (premium PVC) at $24–34k is best for south-facing decks with no shade (cooler surface temperature) and homes near pools." } },
@@ -44,10 +45,10 @@ export default function FourHundredSqftDeckCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/400-square-foot-deck-cost-northern-virginia" name="400 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks" description="Real 2026 pricing for a 400 sqft composite deck in Northern Virginia. Brand-by-brand breakdown plus included scope, permit cost, timeline, and common upgrades." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/400-square-foot-deck-cost-northern-virginia" name="400 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks" description="2026 planning pricing for a 400 sqft composite deck in Northern Virginia. Brand-by-brand breakdown plus included scope, permit cost, timeline, and common upgrades." speakable />
       <ArticleSchema
         title="400 Square Foot Deck Cost in Northern Virginia (2026)"
-        description="Definitive 2026 pricing for a 400 sqft composite deck in Northern Virginia by brand (Trex Enhance, Trex Transcend, TimberTech AZEK), included scope, permit cost, timeline, and most-common upgrades."
+        description="2026 planning pricing for a 400 sqft composite deck in Northern Virginia by brand (Trex Enhance, Trex Transcend, TimberTech AZEK), included scope, permit cost, timeline, and most-common upgrades."
         path="/400-square-foot-deck-cost-northern-virginia"
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
@@ -57,10 +58,10 @@ export default function FourHundredSqftDeckCostPage() {
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>400 Square Foot Deck Cost in Northern Virginia (2026)</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Real 2026 prices, brand-by-brand. Includes permit + 3 inspections + 2-year warranty.</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Real 2026 prices, brand-by-brand. Includes permit, inspection planning, and written warranty terms.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
           </div>
         </div>
       </section>
@@ -109,7 +110,7 @@ export default function FourHundredSqftDeckCostPage() {
             <li style={S.listItem}><strong>Stairs:</strong> code-compliant rise/run with handrails for 4+ risers</li>
             <li style={S.listItem}><strong>Basic lighting:</strong> 4–8 post-cap lights at stairs + perimeter</li>
             <li style={S.listItem}><strong>Permit + 3 inspections:</strong> we file every permit and meet every inspector on site</li>
-            <li style={S.listItem}><strong>2-year workmanship warranty</strong> on top of the manufacturer's 25–50 year material warranty</li>
+            <li style={S.listItem}><strong>Written workmanship warranty terms</strong> plus manufacturer material warranty information for the selected product line</li>
           </ul>
 
           <h2 style={S.h2}>Common upgrades and what they add</h2>
@@ -172,7 +173,7 @@ export default function FourHundredSqftDeckCostPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Get a free 3D rendering + itemized 400 sqft estimate" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get a free 3D rendering + itemized 400 sqft estimate" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/400-square-foot-deck-cost-northern-virginia" />
       <NamedAuthor context="Northern Virginia deck pricing" lastUpdated="2026-05-27" />
       <ContactHome />

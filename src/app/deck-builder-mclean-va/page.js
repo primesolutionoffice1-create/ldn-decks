@@ -17,12 +17,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-mclean-va',
   title: 'Deck Builder in McLean, VA | Trex Certified | Loudoun Decks',
   description: 'Trusted deck builder in McLean, VA. Google reviews. Specializing in luxury Trex & TimberTech decks, multi-level designs, and screened porches for McLean estates. Free estimate.',
-  image: '/images/img64.jpeg',
+  image: '/social/deck-builder-mclean-va-social.png',
 });
 
 const inclusions = [
@@ -32,7 +33,7 @@ const inclusions = [
   },
   {
     title: "Fairfax County RPA Experts",
-    desc: "Experienced with Resource Protection Area (RPA) reviews required for many McLean properties near the Potomac."
+    desc: "We screen early for Resource Protection Area (RPA) constraints that can affect many McLean properties near the Potomac."
   },
   {
     title: "Concierge Project Management",
@@ -86,11 +87,11 @@ const expansionSections = [
     title: "Engineering for McLean's Unique Landscapes",
     paragraphs: [
       "Many properties in McLean feature significant elevation changes or are located in environmentally sensitive areas near the Potomac River. Building in these zones requires a deck builder with deep engineering knowledge. We specialize in multi-level deck structures that turn sloped backyards into functional, beautiful entertainment hubs.",
-      "If your property falls within a Resource Protection Area (RPA), we manage the additional environmental reviews and mitigation plans required by Fairfax County. We ensure that your project is not only stunning but fully compliant with all local environmental regulations. Our experience in areas like Great Falls and McLean means we can anticipate these requirements early in the design phase, avoiding costly delays.",
+      "If your property falls within a Resource Protection Area (RPA), Fairfax County may require additional environmental review and mitigation planning. We screen for those constraints early in the design phase so the deck concept, access path, and permit path are realistic before pricing is finalized.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our reputation for structural integrity and Premium craftsmanship is why McLean homeowners consistently choose us for their most ambitious outdoor projects."
     ],
     listItems: [
-      { label: "RPA Expertise", text: "Specialized knowledge of environmental reviews for properties near the Potomac." },
+      { label: "RPA Screening", text: "Early review for environmental constraints that can affect properties near the Potomac." },
       { label: "Multi-Level Engineering", text: "Custom structural solutions for sloped and complex McLean lots." },
       { label: "Integrated Lighting", text: "Low-voltage LED systems that transform your McLean deck into a nighttime oasis." },
       { label: "Hidden Fasteners", text: "Screw-free deck surfaces for a clean, luxury finish that is safe for bare feet." }
@@ -119,11 +120,11 @@ export default function McLeanDeckBuilderPage() {
     <main>
       <JsonLd data={mcleanFaqSchema} />
       <LocalBusinessSchema city="McLean" url="https://ldndecks.com/deck-builder-mclean-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-mclean-va" name="Deck Builder in McLean, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in McLean, VA. Google reviews. Specializing in luxury Trex &amp; TimberTech decks, multi-level designs, and screened porches for McLean estates. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-mclean-va" name="Deck Builder in McLean, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in McLean, VA. Google reviews. Specializing in luxury Trex &amp; TimberTech decks, multi-level designs, and screened porches for McLean estates. Free estimate." speakable />
       <ServicesHeader
         subtext="McLean, VA's Choice for Luxury Decks"
         title="Custom Deck Builder in McLean, VA"
-        description="Loudoun Decks builds high-end composite decks, multi-level structures, and screened porches for McLean estates. Trex Platinum Partner. review-supported reputation."
+        description="Loudoun Decks builds high-end composite decks, multi-level structures, and screened porches for McLean estates. Trex Platinum Partner. publicly documented reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -132,7 +133,7 @@ export default function McLeanDeckBuilderPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: $5,000+</strong>
             <br />
-            We focus on <strong style={{ color: '#111' }}>full custom McLean builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
+            We focus on <strong style={{ color: '#111' }}>full custom McLean builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
           </p>
         </div>
       </section>
@@ -143,13 +144,26 @@ export default function McLeanDeckBuilderPage() {
         description="We design and build the luxury outdoor environments McLean homeowners demand. Custom multi-level builds, premium composite, and full permit management from $30k+."
         listItems={[
           "Trex Platinum & TimberTech Certified",
-          "Specialists in Fairfax County RPA environmental reviews",
+          "Early screening for Fairfax County RPA environmental constraints",
           "Custom multi-level & luxury estate designs",
           "Screened porches, outdoor kitchens & cable railings",
           "Public reviews - call (571) 655-7207"
         ]}
         image1="/images/img64.jpeg"
         image2="/images/img21.jpeg"
+      />
+      <PlanningUpdate
+        market="McLean decks in 2026"
+        notes={[
+          "McLean planning should screen for Fairfax County jurisdiction, HOA review, slope, and possible RPA constraints before premium materials are selected.",
+          "Large estate decks often need early decisions on glass, cable, aluminum railing, drainage, lighting, and screened porch integration.",
+          "For older McLean decks, the first budget question is whether the framing can be reused or whether a code-reset replacement is safer."
+        ]}
+        links={[
+          { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
+          { href: "/mclean-great-falls-premium-deck-budget", label: "McLean budget guide" },
+          { href: "/trex-vs-timbertech-vs-azek", label: "Premium material comparison" }
+        ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
       
@@ -163,12 +177,11 @@ export default function McLeanDeckBuilderPage() {
             sizes="(max-width: 900px) 100vw, 900px"
           />
         </div>
-        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured McLean Project: Langley Forest Retreat</h2>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>McLean Project Planning: Premium Deck + Outdoor Living</h2>
         <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
-          Our featured McLean project includes a <strong>$68,000 550 sqft Deck + Screened Porch</strong> in Langley Forest. 
-          This multi-level project utilized TimberTech AZEK in Dark Hickory with Trex Signature glass railings 
-          to preserve the views of the wooded lot. We managed the complex Fairfax County RPA review and building 
-          permit process, delivering a Premium result in just under 6 weeks.
+          Typical McLean scopes include 450 to 700 sqft multi-level composite decks, TimberTech AZEK or Trex Transcend boards,
+          glass or cable railing, lighting, screened porch tie-ins, and slope-aware access planning.
+          Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.
         </p>
       </div>
 
@@ -201,15 +214,19 @@ export default function McLeanDeckBuilderPage() {
           ))}
         
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
+            <li key="/bbb" style={{ marginBottom: '0.5rem' }}><Link href="/bbb-accredited-deck-builder-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>BBB Accredited Deck Builder →</Link></li>
+            <li key="/before-after" style={{ marginBottom: '0.5rem' }}><Link href="/before-and-after" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Before & After Premium Projects →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
+            <li key="/deck-payment-estimator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
+            <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Request a Written McLean Estimate →</Link></li>
             <li key="/deck-builder-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="McLean" /></div></section>
-      <SimpleCTA title="Build Your Luxury Deck in McLean" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Luxury Deck in McLean" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-mclean-va" />
-      <NamedAuthor context="Mclean and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="McLean and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

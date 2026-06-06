@@ -16,6 +16,7 @@ export const metadata = buildMetadata({
   path: '/near-you',
   title: 'Deck Builder Near Me | Northern Virginia (5 Counties)',
   description: 'Find a trusted deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, Prince William, Arlington & Stafford counties — custom decks, patios & porches.',
+  image: '/social/deck-builder-near-you-social.png',
 });
 
 const chooseItems = [
@@ -36,7 +37,7 @@ const chooseItems = [
 export default function NearYouPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/near-you" name="Deck Builder Near Me | Northern Virginia (5 Counties)" description="Find a trusted deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties — custom decks, patios &amp; porches." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/near-you" name="Deck Builder Near Me | Northern Virginia (5 Counties)" description="Find a trusted deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties — custom decks, patios &amp; porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder Near You"
@@ -53,7 +54,7 @@ export default function NearYouPage() {
                 Whether you’re planning a new deck, upgrading to composite, or improving your outdoor living area, our licensed team delivers quality craftsmanship and reliable service from start to finish.
               </p>
               <div className={styles.ctaWrapper}>
-                <Link href="/contact" className={styles.primaryBtn}>Contact Us Today</Link>
+                <Link href="/get-estimate" className={styles.primaryBtn}>Request Estimate</Link>
               </div>
             </div>
             <div className={styles.introImage}>
@@ -84,6 +85,31 @@ export default function NearYouPage() {
       <ServiceVisual image="/images/img11.jpeg" />
 
       <ServiceAreasGrid />
+
+      <section className={styles.countiesSection}>
+        <div className={styles.container}>
+          <div className={styles.countiesContent}>
+            <h2 className={styles.sectionTitle}>Local Planning Shortcuts</h2>
+            <p className={styles.sectionDesc}>
+              Before choosing a local deck builder, compare cost, proof, credentials, permits, and project fit.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+              {[
+                ['/deck-cost-calculator', 'Deck Cost Calculator'],
+                ['/deck-payment-estimator', 'Deck Payment Estimator'],
+                ['/reviews', 'Customer Reviews'],
+                ['/bbb-accredited-deck-builder-virginia', 'BBB Accredited Builder'],
+                ['/before-and-after', 'Before & After Projects'],
+                ['/get-estimate', 'Request Written Estimate'],
+              ].map(([href, text]) => (
+                <Link key={href} href={href} style={{ display: 'block', padding: '1rem', background: '#fff', border: '1px solid #e5e5e5', borderRadius: 8, color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none' }}>
+                  {text} →
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <HowItWorksTriple />
 

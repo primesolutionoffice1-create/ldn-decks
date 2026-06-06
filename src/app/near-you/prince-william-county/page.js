@@ -15,6 +15,7 @@ import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import CountyConversionLinks from '@/components/CountyConversionLinks';
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -25,7 +26,8 @@ const LocationIcon = () => (
 export const metadata = buildMetadata({
   path: "/near-you/prince-william-county",
   title: "Premium Deck Builder Prince William County VA | Free Quote",
-  description: "Professional deck contractor in Prince William County. review-backed. Custom decks, patios, and porches in Manassas, Woodbridge, and Haymarket. Free estimates.",
+  description: "Professional deck contractor in Prince William County with public review profile links, permit guidance, and custom decks, patios, and porches.",
+  image: "/social/prince-william-county-deck-builder-hub-social.png",
 });
 
 const pwcCities = [
@@ -61,7 +63,7 @@ export default function PrinceWilliamCountyPage() {
         description="LDN Decks builds custom decks, porches, patios, pergolas, and outdoor living spaces throughout Prince William County, VA."
         url="https://ldndecks.com/near-you/prince-william-county"
       />
-      <WebPageSchema url="https://ldndecks.com/near-you/prince-william-county" name="Premium Deck Builder Prince William County VA | Free Quote" description="Professional deck contractor in Prince William County. review-backed. Custom decks, patios, and porches in Manassas, Woodbridge, and Haymarket. Free estimates." speakable />
+      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/near-you/prince-william-county" name="Premium Deck Builder Prince William County VA | Free Quote" description="Professional deck contractor in Prince William County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Prince William County, VA"
@@ -163,6 +165,7 @@ export default function PrinceWilliamCountyPage() {
       </section>
       <CountyRecentProjects countySlug="prince-william-county" limit={6} />
       <RelatedGuides currentPath="/near-you/prince-william-county" />
+      <CountyConversionLinks county="Prince William County" permitHref="/deck-permit-prince-william-county-virginia" />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Builders by City</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -184,7 +187,7 @@ export default function PrinceWilliamCountyPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>
       </section>
       <ContactHome />

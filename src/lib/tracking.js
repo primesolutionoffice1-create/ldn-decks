@@ -2,6 +2,8 @@
 // GTM dataLayer helpers for ldndecks.com - SSR safe
 
 import { recordDedupHit } from '@/lib/attribution-debug';
+import { getClickIds, getUtmParams } from '@/lib/clickIds';
+import { BUSINESS } from '@/lib/business';
 
 /**
  * Push event to GTM dataLayer - no-ops on server render
@@ -194,6 +196,10 @@ export function trackFormSubmit({
   state,
   service,
   timeline,
+  budgetRange,
+  materialInterest,
+  hoa,
+  formLocation,
   formType = 'quote',
   clickIds = {},
   utmParams = {},
@@ -205,6 +211,7 @@ export function trackFormSubmit({
   push({
     event: 'generate_lead',
     form_type: formType,
+    form_location: formLocation || formType,
     lead_source: 'website_contact_form',
     event_id: leadEventId,
     email: email || null,
@@ -217,6 +224,7 @@ export function trackFormSubmit({
     event: 'form_submit',
     event_id: leadEventId,
     form_type: formType,
+    form_location: formLocation || formType,
     email: email || null,
     phone: phone || null,
     first_name: firstName || null,
@@ -228,6 +236,9 @@ export function trackFormSubmit({
     country: 'US',
     service: service || null,
     timeline: timeline || null,
+    budget_range: budgetRange || null,
+    material_interest: materialInterest || null,
+    hoa_permit_status: hoa || null,
     ...pageContextPayload(pageContext),
     gclid: clickIds.gclid || null,
     gbraid: clickIds.gbraid || null,
@@ -252,12 +263,37 @@ export function trackFormSubmit({
  * phone-conversion signal. Keep this event for GA4 reporting and
  * audience building only.
  */
-export function trackPhoneClick() {
+export function trackPhoneClick(event) {
   if (typeof window === 'undefined') return;
+  const clickIds = getClickIds();
+  const utmParams = getUtmParams();
+  const currentTarget = event?.currentTarget;
+  const linkText = currentTarget?.textContent?.replace(/\s+/g, ' ').trim().slice(0, 120) || null;
+  const ctaLocation =
+    currentTarget?.dataset?.ctaLocation ||
+    currentTarget?.getAttribute?.('aria-label') ||
+    null;
+
   push({
     event: 'phone_click',
+    event_id: `phone_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`,
     phone_source: 'tel_link',
+    phone_number: BUSINESS.telephone,
+    link_text: linkText,
+    cta_location: ctaLocation,
+    page_location: window.location.href,
+    page_path: window.location.pathname,
     page: window.location.pathname,
+    gclid: clickIds.gclid || null,
+    gbraid: clickIds.gbraid || null,
+    wbraid: clickIds.wbraid || null,
+    fbclid: clickIds.fbclid || null,
+    msclkid: clickIds.msclkid || null,
+    utm_source: utmParams.utm_source || null,
+    utm_medium: utmParams.utm_medium || null,
+    utm_campaign: utmParams.utm_campaign || null,
+    utm_content: utmParams.utm_content || null,
+    utm_term: utmParams.utm_term || null,
   });
 }
 

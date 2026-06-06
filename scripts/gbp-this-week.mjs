@@ -20,8 +20,9 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { resolveGbpOpsDir } from './lib/report-paths.mjs';
 
-const VAULT_ROOT = '/Users/ldndecks/ldn-decks-growth-brain-vaults/ldn-decks/wiki/deliverables/local-seo-fixes/gbp';
+const VAULT_ROOT = resolveGbpOpsDir(path.resolve('.'));
 const CALENDAR_PATH = path.join(VAULT_ROOT, 'post-calendar-90day.md');
 const THIS_WEEK_PATH = path.join(VAULT_ROOT, 'this-week.md');
 
@@ -60,7 +61,7 @@ function extractWeekBlock(section) {
   const image = (section.match(/^\*\*Image:\*\*\s*(.+)$/m) || [])[1] || '';
   let buttonText = '';
   let buttonLink = '';
-  const arrow = buttonLine.split('→');
+  const arrow = buttonLine.includes('→') ? buttonLine.split('→') : buttonLine.split('->');
   if (arrow.length === 2) {
     buttonText = arrow[0].trim();
     buttonLink = arrow[1].trim();

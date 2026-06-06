@@ -30,7 +30,7 @@ Subhead: "Three-season and screened-in porches engineered for NoVA's seasons —
 >
 > Custom screened porches that turn unused deck space into your favorite room — bug-free in summer, dry in spring, usable from March through November.
 >
-> **TrexPro Platinum · Class A Virginia · 5.0★ from 41+ NoVA homeowners**
+> **Class A Virginia · Manufacturer profile links · Public review profiles · BBB verification**
 >
 > [→ Get My Screened Porch Quote]   [☎ (571) 655-7207]
 >

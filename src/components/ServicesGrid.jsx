@@ -23,7 +23,7 @@ const servicesContent = [
     title: 'Deck Repair & Structural Maintenance',
     desc: 'Specialized structural repair for rotted support posts, sinking decks, and code violations. We fix "red-tagged" projects and ensure your deck is safe for years to come.',
     image: '/images/img04.jpeg',
-    link: '/services/deck-repair-and-structural-maintenance'
+    link: '/services/deck-repair'
   },
   {
     id: 3,

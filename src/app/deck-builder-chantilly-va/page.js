@@ -17,18 +17,19 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-chantilly-va',
   title: 'Deck Builder in Chantilly, VA | Trex Certified | Loudoun Decks',
   description: 'Trusted deck builder in Chantilly, VA. Trex Platinum Partner & TimberTech Certified. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-chantilly-va-social.png',
 });
 
 const inclusions = [
   {
     title: "Chantilly & Sully District Expertise",
-    desc: "We navigate the requirements of Fairfax County's Sully District and local HOAs, ensuring your deck project is approved quickly and correctly."
+    desc: "We navigate the requirements of Fairfax County's Sully District and local HOAs with permit-ready planning and clear submission details."
   },
   {
     title: "Premium Composite Specialists",
@@ -59,7 +60,7 @@ const chantillyFAQs = [
   },
   {
     q: "Are you a Trex certified contractor in Chantilly VA?",
-    a: "Yes. Loudoun Decks is a Trex Platinum Partner, the highest certification level, giving our Chantilly clients access to top-tier warranties and expert installation."
+    a: "Yes. Loudoun Decks is a Trex Platinum Partner, giving Chantilly clients access to Trex product lines, manufacturer-backed warranty paths, and installation practices aligned with Trex requirements."
   },
   {
     q: "Do you build screened porches in Chantilly?",
@@ -71,8 +72,8 @@ const expansionSections = [
   {
     title: "Why Chantilly Homeowners Choose Loudoun Decks",
     paragraphs: [
-      "Chantilly neighborhoods each have unique characteristics and guidelines. We\u2019ve worked extensively across the Route 50 corridor and understand exactly how to design a deck that complements your home while meeting all local building codes and HOA requirements.",
-      "Recent Chantilly projects include a multi-level TimberTech deck (2024), a screened porch addition near Pleasant Valley (2025), and a complete backyard transformation with a Trex Transcend deck and under-deck patio."
+      "Chantilly neighborhoods each have unique characteristics and guidelines. We plan around Route 50 corridor site conditions, Fairfax County permit expectations, HOA requirements, and local building codes so the deck design fits the home and review path.",
+      "Chantilly project scopes often include multi-level TimberTech decks, screened porch additions near Pleasant Valley, and backyard transformations with Trex Transcend decks and under-deck patios. Specific project examples should be added only from verified owner-supplied evidence."
     ]
   },
   {
@@ -80,7 +81,7 @@ const expansionSections = [
     paragraphs: [
       "Chantilly, VA offers a mix of historic significance and modern suburban convenience. As a dedicated deck builder in Chantilly, Loudoun Decks brings premium craftsmanship to every project. We are not a volume builder focused on rushing through jobs; we are a detail-oriented team that prioritizes quality and longevity.",
       "Whether you're looking to replace an old wooden deck with modern composites or build a brand-new outdoor entertainment space from scratch, our team handles the entire process. We manage the Fairfax County permits, the HOA architectural review board submissions, and the structural engineering.",
-      "If you are looking for a deck builder near you in Chantilly that delivers guaranteed quality and a stress-free experience, Loudoun Decks is your partner. Our Google review profile reflects our commitment to our clients."
+      "If you are looking for a deck builder near you in Chantilly that prioritizes quality, code-aware planning, and clear communication, Loudoun Decks is your partner. Public review profiles can help homeowners evaluate reputation alongside license, insurance, materials, and scope detail."
     ]
   },
   {
@@ -88,13 +89,13 @@ const expansionSections = [
     paragraphs: [
       "The humid Virginia summers make composite decking the ideal choice for Chantilly homeowners. As a Trex Platinum Partner and TimberTech Certified contractor, we install decking that won't warp, splinter, or rot. Projects typically start around $20,000 and scale based on your specific design requirements.",
       "We specialize in designing decks that maximize the usable outdoor space of your property. Integrated lighting, custom railings, and built-in seating are standard requests that we execute flawlessly.",
-      "Every composite deck we build in Chantilly comes with a full manufacturer's warranty backed by our installation certification, ensuring your investment is protected for decades."
+      "Every composite deck proposal in Chantilly includes manufacturer warranty information for the selected product line and installation practices aligned with published manufacturer guidance."
     ],
     listItems: [
-      { label: "Trex Platinum Partner", text: "Highest certification level for Trex installation in Chantilly and Northern Virginia." },
+      { label: "Trex Platinum Partner", text: "Trex product-line familiarity and manufacturer-aligned installation practices for Chantilly and Northern Virginia." },
       { label: "TimberTech Certified", text: "Certified installer for the full TimberTech Pro and AZEK product lines." },
       { label: "Permit Ready", text: "Full handling of all Fairfax County permitting and inspections." },
-      { label: "Review-Supported", text: "Consistently supported by public reviews from homeowners across Northern Virginia." }
+      { label: "Public Profiles", text: "Homeowners can review public profiles and project documentation before approving a scope." }
     ]
   },
   {
@@ -111,11 +112,11 @@ export default function DeckBuilderChantillyPage() {
   return (
     <main>
       <LocalBusinessSchema city="Chantilly" url="https://ldndecks.com/deck-builder-chantilly-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-chantilly-va" name="Deck Builder in Chantilly, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Chantilly, VA. Trex Platinum Partner &amp; TimberTech Certified. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-chantilly-va" name="Deck Builder in Chantilly, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Chantilly, VA. Trex Platinum Partner &amp; TimberTech Certified. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Chantilly, VA's Trusted Deck Company"
         title="Custom Deck Builder in Chantilly, VA"
-        description="Loudoun Decks builds premium composite decks and screened porches in Chantilly. Trex Platinum Partner. review-supported reputation."
+        description="Loudoun Decks builds premium composite decks and screened porches in Chantilly. Trex Platinum Partner. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Sully District Craftsmanship"
@@ -130,6 +131,19 @@ export default function DeckBuilderChantillyPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <PlanningUpdate
+        market="Chantilly decks in 2026"
+        notes={[
+          "Chantilly projects should confirm Fairfax County requirements, Sully District site constraints, and HOA rules before final design selections.",
+          "Many Route 50 corridor decks need early decisions on stairs, privacy, shade, and drainage because rear-yard grades vary widely.",
+          "Older pressure-treated decks should be inspected before resurfacing so unsafe ledger, railing, or footing conditions are not hidden under new boards."
+        ]}
+        links={[
+          { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
+          { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" },
+          { href: "/deck-cost-calculator", label: "Deck cost calculator" }
+        ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -178,9 +192,9 @@ export default function DeckBuilderChantillyPage() {
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Chantilly" /></div></section>
-      <SimpleCTA title="Build Your Dream Deck in Chantilly" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Dream Deck in Chantilly" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-chantilly-va" />
-      <NamedAuthor context="Chantilly and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Chantilly and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

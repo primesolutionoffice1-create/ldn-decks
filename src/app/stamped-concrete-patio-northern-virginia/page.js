@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/stamped-concrete-patio-northern-virginia',
   title: 'Stamped Concrete Patio Contractor Northern Virginia | 2026',
   description: 'Stamped concrete patio contractor in Northern Virginia. 2026 cost: $40-$70/sqft installed across Loudoun, Fairfax & Prince William. Slate, flagstone, brick, wood plank patterns. Freeze-thaw realities explained.',
+  image: '/social/stamped-concrete-patio-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -30,7 +31,7 @@ export default function StampedConcretePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/stamped-concrete-patio-northern-virginia" name="Stamped Concrete Patio Contractor Northern Virginia | 2026" description="Stamped concrete patio contractor in Northern Virginia. 2026 cost: $40-$70/sqft installed across Loudoun, Fairfax &amp; Prince William. Slate, flagstone, brick, wood plank patterns. Freeze-thaw realities explained." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/stamped-concrete-patio-northern-virginia" name="Stamped Concrete Patio Contractor Northern Virginia | 2026" description="Stamped concrete patio contractor in Northern Virginia. 2026 cost: $40-$70/sqft installed across Loudoun, Fairfax &amp; Prince William. Slate, flagstone, brick, wood plank patterns. Freeze-thaw realities explained." speakable />
       {/* Full-width Hero Image Section */}
       <section style={{ position: 'relative', width: '100%', height: '70vh', minHeight: '500px', overflow: 'hidden' }}>
         <Image
@@ -152,7 +153,7 @@ export default function StampedConcretePage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Design Your Patio" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Design Your Patio" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/stamped-concrete-patio-northern-virginia" />

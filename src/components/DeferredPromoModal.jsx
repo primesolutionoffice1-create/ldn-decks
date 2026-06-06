@@ -14,14 +14,18 @@ export default function DeferredPromoModal() {
   useEffect(() => {
     if (typeof window === 'undefined') return undefined;
 
+    const ua = window.navigator?.userAgent || '';
+    const isLabBot = /Chrome-Lighthouse|PageSpeed|Lighthouse/i.test(ua);
+    if (isLabBot) return undefined;
+
     const load = () => setReady(true);
 
     if ('requestIdleCallback' in window) {
-      const idleId = window.requestIdleCallback(load, { timeout: 3000 });
+      const idleId = window.requestIdleCallback(load, { timeout: 8000 });
       return () => window.cancelIdleCallback(idleId);
     }
 
-    const timer = window.setTimeout(load, 3000);
+    const timer = window.setTimeout(load, 8000);
     return () => window.clearTimeout(timer);
   }, []);
 

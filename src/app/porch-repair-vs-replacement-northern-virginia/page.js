@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/porch-repair-vs-replacement-northern-virginia',
   title: 'Porch Repair vs Replacement: Costs & Inspection in NoVA',
   description: 'Repair your porch for $2,000-$8,000 or replace for $25,000-$70,000. When each makes sense, inspection checklist, and cost comparison for Northern Virginia.',
+  image: '/social/porch-repair-vs-replacement-social.png',
 });
 
 const faqSchema = {
@@ -30,7 +31,7 @@ export default function PorchRepairPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/porch-repair-vs-replacement-northern-virginia" name="Porch Repair vs Replacement" description="Repair your porch for $2,000-$8,000 or replace for $25,000-$70,000. When each makes sense, inspection checklist, and cost comparison for Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/porch-repair-vs-replacement-northern-virginia" name="Porch Repair vs Replacement" description="Repair your porch for $2,000-$8,000 or replace for $25,000-$70,000. When each makes sense, inspection checklist, and cost comparison for Northern Virginia." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Porch Repair vs Replacement: Which Saves You Money?</h1>
@@ -114,14 +115,14 @@ export default function PorchRepairPage() {
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>You&apos;re already paying for labor, permits, and mobilization the incremental cost for new materials isn&apos;t much more</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>A repaired 20-year-old porch will need more repairs soon you&apos;re chasing a declining asset</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>A new porch comes with a full 2-year workmanship warranty + manufacturer material warranties</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>A new porch comes with written workmanship warranty terms plus manufacturer material warranty information</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>New construction brings the porch up to current building code (required at sale anyway)</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Composite materials mean the new porch needs near-zero maintenance going forward</li>
           </ul>
           <p style={S.p}><strong>Example:</strong> If a new screened porch costs $45,000 and repairs are quoted at $15,000+ (33%), strongly consider replacement. At $20,000+ (44%), replacement is almost certainly the better investment.</p>
 
           <h2 style={S.h2}>Free Porch Inspection</h2>
-          <p style={S.p}>Not sure if your porch needs repair or replacement? We offer <strong>free on-site inspections</strong>. We check every structural element posts, beams, joists, ledger, roof, footings and give you an honest assessment with photos. No obligation, no pressure.</p>
+          <p style={S.p}>Not sure if your porch needs repair or replacement? We offer <strong>free on-site inspections</strong>. We check every structural element posts, beams, joists, ledger, roof, footings and give you an honest assessment with photos. No obligation, no pressure. If the issue is tied to the deck structure, stairs, railings, or ledger connection rather than the porch roof system, start with our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
@@ -139,6 +140,7 @@ export default function PorchRepairPage() {
             {[
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost Guide'],
               ['/porch-vs-deck-which-should-you-build', 'Porch vs Deck'],
+              ['/services/deck-repair', 'Deck Repair Service'],
               ['/services/porches', 'Porch Building Services'],
               ['/services/deck-inspection', 'Deck & Porch Inspection'],
             ].map(([href, text]) => (
@@ -147,7 +149,7 @@ export default function PorchRepairPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Not Sure? Free Porch Inspection" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Not Sure? Free Porch Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/porch-repair-vs-replacement-northern-virginia" />

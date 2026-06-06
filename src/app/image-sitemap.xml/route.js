@@ -38,7 +38,7 @@ export async function GET() {
     { page: '/composite-deck-cost-northern-virginia', image: '/images/img11.jpeg', title: 'Composite Deck Cost Northern Virginia Brand-by-Brand Pricing' },
     { page: '/composite-deck-builder-loudoun', image: '/images/img10.jpeg', title: 'Composite Deck Builder Loudoun County VA' },
     { page: '/trex-vs-timbertech-vs-azek', image: '/home-page-ldn.webp', title: 'Trex vs TimberTech vs AZEK Comparison' },
-    { page: '/trex-transcend-review-northern-virginia', image: '/images/img36.jpeg', title: 'Trex Transcend Review Honest Assessment After 500+ Installs' },
+    { page: '/trex-transcend-review-northern-virginia', image: '/images/img36.jpeg', title: 'Trex Transcend Review for Northern Virginia Homes' },
     { page: '/composite-deck-vs-wood-deck-virginia', image: '/images/img16.jpeg', title: 'Composite Deck vs Wood Deck Virginia Comparison' },
     { page: '/deck-design-ideas-2026', image: '/images/img36.jpeg', title: 'Deck Design Ideas 2026 Northern Virginia' },
     { page: '/screened-porch-cost-northern-virginia', image: '/images/img23.jpeg', title: 'Screened Porch Cost Northern Virginia' },

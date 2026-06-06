@@ -16,6 +16,7 @@ export const metadata = buildMetadata({
   path: '/wood-decks',
   title: 'Expert Wood Deck Builder NoVA | Cedar & Hardwood Decks',
   description: 'The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax & Prince William counties.',
+  image: '/social/wood-decks-social.png',
 });
 
 const faqSchema = {
@@ -34,7 +35,7 @@ export default function WoodDecksPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/wood-decks" name="Expert Wood Deck Builder NoVA | Cedar &amp; Hardwood Decks" description="The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax &amp; Prince William counties." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/wood-decks" name="Expert Wood Deck Builder NoVA | Cedar &amp; Hardwood Decks" description="The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax &amp; Prince William counties." speakable />
       <ServiceSchema
         name="Wood Deck Construction"
         description="Custom wood deck building in Northern Virginia. Cedar, IPE, and pressure-treated lumber options with expert craftsmanship."
@@ -62,9 +63,9 @@ export default function WoodDecksPage() {
             <p style={{ color: '#eee', fontSize: '1.15rem', maxWidth: 640, lineHeight: 1.5 }}>Pressure-treated, cedar, redwood &amp; exotic hardwood decks — natural beauty meets honest craftsmanship for Loudoun, Fairfax &amp; Prince William counties</p>
             <div style={{ marginTop: '1.75rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-              <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+              <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
             </div>
-            <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#ddd' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 5-Year Warranty</p>
+            <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#ddd' }}>Public Google review profile · Licensed &amp; Insured · 5-Year Warranty</p>
           </div>
         </div>
       </section>
@@ -163,7 +164,7 @@ export default function WoodDecksPage() {
             <p style={{ marginBottom: '1.5rem', opacity: 0.95 }}>Free on-site consultation &middot; Honest pricing &middot; All wood species available</p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <CallLink style={{ background: '#fff', color: 'var(--color-primary)', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-              <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
+              <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
             </div>
           </div>
 
@@ -239,7 +240,7 @@ export default function WoodDecksPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Build Your Custom Wood Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Custom Wood Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/wood-decks" />

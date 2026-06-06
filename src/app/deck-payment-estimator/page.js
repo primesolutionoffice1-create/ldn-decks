@@ -18,6 +18,7 @@ export const metadata = buildMetadata({
   path: '/deck-payment-estimator',
   title: 'Deck Payment Estimator | Monthly Cost Calculator | Loudoun Decks',
   description: 'Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia.',
+  image: '/social/deck-payment-estimator-social.png',
 });
 
 const pageUrl = 'https://ldndecks.com/deck-payment-estimator';
@@ -103,9 +104,9 @@ const inputs = [
 ];
 
 const trustSignals = [
-  `${BUSINESS.aggregateRating.reviewCount}+ Google reviews`,
-  'A+ BBB Accredited Business',
-  'Virginia DPOR licensed contractor',
+  'Public review profiles linked',
+  'BBB profile available for verification',
+  'Virginia DPOR license verification encouraged',
   'Written, itemized estimates',
   'Soft-pull financing path available',
 ];
@@ -113,14 +114,14 @@ const trustSignals = [
 export default function DeckPaymentEstimatorPage() {
   return (
     <>
-      <WebPageSchema url="https://ldndecks.com/deck-payment-estimator" name="Deck Payment Estimator | Monthly Cost Calculator" description="Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-payment-estimator" name="Deck Payment Estimator | Monthly Cost Calculator" description="Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia." speakable />
       <ArticleSchema
         title="Deck Payment Estimator | Monthly Cost Calculator"
         description="Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia."
         path="/deck-payment-estimator"
         image="/showcase/img09.jpeg"
         datePublished="2026-04-12"
-        dateModified="2026-05-28"
+        dateModified="2026-06-01"
       />
       <ServiceSchema
         name="Deck Payment Estimator Tool"
@@ -159,7 +160,7 @@ export default function DeckPaymentEstimatorPage() {
               Estimate My Monthly Payment
             </EstimatorTrackedLink>
             <EstimatorTrackedLink
-              href="/contact"
+              href="/get-estimate"
               ctaLocation="hero_free_estimate"
               style={{ display: 'inline-block', background: 'transparent', color: 'var(--white)', padding: '0.95rem 1.5rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.25)' }}
             >
@@ -245,11 +246,11 @@ export default function DeckPaymentEstimatorPage() {
               A monthly payment model helps you compare project size, material level, and timeline before you overbuild or under-spec the deck. After the estimator gives you a comfortable range, the next step is a written project estimate that accounts for framing condition, permits, stairs, railings, and site access.
             </p>
             <EstimatorTrackedLink
-              href="/contact"
+              href="/get-estimate"
               ctaLocation="planning_filter_written_estimate"
               style={{ color: 'var(--color-primary)', fontWeight: 700 }}
             >
-              Request the written estimate to confirm the real project amount
+              Request the written estimate to confirm the final project amount
             </EstimatorTrackedLink>
           </div>
 
@@ -298,7 +299,7 @@ export default function DeckPaymentEstimatorPage() {
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem', marginBottom: '1rem' }}>
             <div style={{ background: '#fff', borderRadius: 12, padding: '1.6rem', border: '1px solid #e5e5e5', borderTop: '4px solid var(--color-primary)' }}>
-              <h3 style={{ fontWeight: 700, fontSize: '1.05rem', marginTop: 0, marginBottom: '0.5rem' }}>1. A real project amount</h3>
+              <h3 style={{ fontWeight: 700, fontSize: '1.05rem', marginTop: 0, marginBottom: '0.5rem' }}>1. A written estimate amount</h3>
               <p style={{ fontSize: '0.93rem', color: '#555', lineHeight: 1.6, margin: 0 }}>
                 Guessing the project cost is the biggest source of error. Use our <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck cost calculator</Link> for a data-backed range, or book a free on-site visit for a written, itemized estimate.
               </p>
@@ -329,7 +330,7 @@ export default function DeckPaymentEstimatorPage() {
               Book a free on-site consultation. We measure, design and hand you a written, itemized estimate &mdash; the accurate number to drop into this calculator.
             </p>
             <div style={{ display: 'flex', gap: '0.85rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <EstimatorTrackedLink href="/contact" ctaLocation="final_free_estimate" style={{ display: 'inline-block', background: 'var(--color-primary)', color: 'var(--white)', padding: '1rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.02rem' }}>
+              <EstimatorTrackedLink href="/get-estimate" ctaLocation="final_free_estimate" style={{ display: 'inline-block', background: 'var(--color-primary)', color: 'var(--white)', padding: '1rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.02rem' }}>
                 Get My Free Estimate
               </EstimatorTrackedLink>
               <CallLink style={{ display: 'inline-block', background: 'transparent', color: 'var(--color-dark)', padding: '1rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.02rem', border: '2px solid #ddd' }}>
@@ -348,8 +349,12 @@ export default function DeckPaymentEstimatorPage() {
               ['/monthly-payment-composite-deck-northern-virginia', 'Monthly Payment on a Composite Deck — Project Examples'],
               ['/deck-lighting-railings-stairs-addon-cost', 'Lighting, Railings & Stairs Add-On Cost Impact'],
               ['/deck-cost-calculator', 'Free Deck Cost Calculator — Estimate Your Project'],
+              ['/deck-cost-12x20-northern-virginia', '12x20 Deck Cost — Small Project Range'],
+              ['/deck-cost-16x20-northern-virginia', '16x20 Deck Cost — Family Deck Range'],
+              ['/deck-cost-20x20-northern-virginia', '20x20 Deck Cost — Entertaining Deck Range'],
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
               ['/composite-deck-cost-by-size', 'Composite Deck Cost by Size (300/400/500/600 sqft)'],
+              ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
               ['/get-estimate', 'Request Your Free Deck Estimate'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}>
@@ -366,7 +371,7 @@ export default function DeckPaymentEstimatorPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Build the Deck — Pay Monthly" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build the Deck — Pay Monthly" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-payment-estimator" />
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
@@ -375,7 +380,8 @@ export default function DeckPaymentEstimatorPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/bbb-accredited-deck-builder-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>BBB Accredited Deck Builder →</Link></li>
         </ul>
       </section>
       <ContactHome />

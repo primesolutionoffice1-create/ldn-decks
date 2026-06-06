@@ -12,7 +12,7 @@ export default function MobileStickyCTA({
     <aside className={styles.wrapper} aria-label="Mobile contact options">
       <p className={styles.microcopy}>{microcopy}</p>
       <div className={styles.actions}>
-        <CallLink className={styles.callButton} ariaLabel="Call Loudoun Decks now">
+        <CallLink className={styles.callButton} ariaLabel="Call Loudoun Decks now" data-cta-location="mobile_sticky_call">
           Call Now
         </CallLink>
         <Link className={styles.estimateButton} href={estimateHref} aria-label="Request a free deck estimate">

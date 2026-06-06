@@ -19,16 +19,15 @@ Risks specific to **whether a conversion is correctly attributed to the right cl
 
 **Where:** [ContactHome.jsx:31-42](../../src/components/ContactHome.jsx#L31-L42)
 **Affected conversions:** every form submission from the homepage (likely 40–70% of total form volume).
-**What goes wrong:** `getClickIds()` is never called, gclid/gbraid/wbraid/fbclid/msclkid never reach the server, lead email has no Attribution block, no `event_id` chains through.
+**Current status:** resolved locally. ContactHome now uses `useLeadSubmit()`, forwards click IDs/UTMs, generates `event_id`, and routes to `/thank-you?eid=...`.
 **Business impact:**
-- Cannot upload qualified homepage leads as Offline Conversions to Google Ads
-- Smart Bidding has no example of "homepage form = winning conversion" for any keyword/campaign
-- Sales team can't tell paid leads from organic in inbox
-- Meta CAPI fires with `event_id=null` → cannot dedupe against any client Pixel ever added
+- Homepage leads can now carry the same attribution chain as ContactForm leads when click IDs are present
+- Sales email/routing can receive attribution context
+- Meta CAPI and future client Pixel dedup can share the same `event_id`
 
-**Reporting distortion:** estimated **−40 to −70% of true paid lead volume** invisible to Google Ads' attribution engine.
+**Remaining risk:** GTM/Google Ads mapping still must be verified externally before scaling.
 
-**Fix:** see TRACKING-FIX-QUEUE.md #1. Extract `useLeadSubmit()` hook used by both ContactForm and ContactHome.
+**Fix status:** shared `useLeadSubmit()` hook is implemented for both ContactForm and ContactHome.
 
 ---
 
@@ -111,9 +110,9 @@ For home services with $25k+ deals, families often research together on multiple
 **Affected conversions:** any user who reloads, bookmarks, or browser-back-forwards to `/thank-you`.
 **What goes wrong:** `useEffect` re-runs on each mount; dataLayer push fires `lead_confirmed` again with the same `event_id`.
 - **If GTM dedup is configured** (transaction_id on Google Ads tag + "don't allow duplicates" enabled): only the first fire counts. ✅ Correct outcome.
-- **If GTM dedup is NOT configured** OR **event_id is null** (e.g., from ContactHome path): each fire counts as a separate conversion. ❌ Conversion count inflates over time.
+- **If GTM dedup is NOT configured**: each fire can count as a separate conversion. ❌ Conversion count inflates over time.
 
-For ContactHome (where event_id=null), every reload of /thank-you adds another Google Ads conversion that all dedupe-fail against each other.
+ContactHome now passes an `event_id`; the remaining risk is GTM/Google Ads dedup configuration, not missing homepage IDs.
 
 **Reporting distortion:** likely small (most users don't reload /thank-you), but unbounded — a power user who bookmarks /thank-you and revisits 10× adds 10 phantom conversions.
 

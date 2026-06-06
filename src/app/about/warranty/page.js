@@ -7,26 +7,29 @@ import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: "/about/warranty",
-  title: "2-Year Extended Labor Warranty | LDN Decks",
-  description: "Learn about our industry-leading 2-year extended labor warranty on all deck and screened porch projects in Northern Virginia.",
+  title: "Written Labor Warranty Terms | LDN Decks",
+  description: "Learn how Loudoun Decks documents workmanship warranty terms, manufacturer material coverage, and service expectations in project paperwork.",
+  image: "/social/deck-warranty-labor-social.png",
 });
 
 export default function WarrantyPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/about/warranty" name="2-Year Extended Labor Warranty | LDN Decks" description="Learn about our industry-leading 2-year extended labor warranty on all deck and screened porch projects in Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/about/warranty" name="Written Labor Warranty Terms | LDN Decks" description="Learn how Loudoun Decks documents workmanship warranty terms, manufacturer material coverage, and service expectations in project paperwork." speakable />
        <ServicesHeader 
          subtext="OUR PROMISE"
-         title="LDN DECKS EXTENDED 2 YEAR WARRANTY"
-         description="Most companies cover their labor for one year. We cover ours for two. If anything related to our workmanship comes up, we come back and take care of it."
+         title="LDN DECKS WRITTEN LABOR WARRANTY TERMS"
+         description="Workmanship warranty terms are documented in the project paperwork so homeowners can review the scope, coverage, exclusions, and service process before signing."
        />
 
        <section style={{ padding: '80px 20px', background: '#fff' }}>
          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-               <h2 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '20px' }}>What Our 2-Year Deck & Screen Porch Labor Warranty Entails</h2>
+               <h2 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '20px' }}>What Our Deck & Screen Porch Labor Warranty Terms Entail</h2>
                <p style={{ fontSize: '18px', color: '#555', lineHeight: '1.6', maxWidth: '800px', margin: '0 auto' }}>
-                 It covers workmanship-related issues that may arise after installation. If something wasn't installed correctly, we come back and fix it — at no labor cost to the customer.
+                 Written warranty terms clarify which workmanship-related issues are covered after installation,
+                 which manufacturer material warranties apply, and what service steps a homeowner should follow if a
+                 concern appears.
                </p>
             </div>
 
@@ -34,7 +37,7 @@ export default function WarrantyPage() {
                {/* Typically Covered */}
                <div style={{ background: '#f8fdf8', padding: '40px', borderRadius: '16px', border: '1px solid #e1f0e1' }}>
                   <h3 style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '24px', fontWeight: '700', color: '#2e7d32', marginBottom: '25px' }}>
-                     Typically Covered <span style={{ fontSize: '28px' }}>✅</span>
+                     Typically Covered
                   </h3>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                      {[
@@ -48,7 +51,7 @@ export default function WarrantyPage() {
                         "Minor settling corrections tied to labor"
                      ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '15px', fontSize: '16px', color: '#333', lineHeight: '1.4' }}>
-                           <span style={{ color: '#2e7d32', fontWeight: 'bold' }}>➤</span>
+                           <span style={{ color: '#2e7d32', fontWeight: 'bold' }}>-</span>
                            {item}
                         </li>
                      ))}
@@ -58,7 +61,7 @@ export default function WarrantyPage() {
                {/* Not Typically Covered */}
                <div style={{ background: '#fff9f9', padding: '40px', borderRadius: '16px', border: '1px solid #fce4e4' }}>
                   <h3 style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '24px', fontWeight: '700', color: '#c62828', marginBottom: '25px' }}>
-                     Not Typically Covered <span style={{ fontSize: '28px' }}>❌</span>
+                     Not Typically Covered
                   </h3>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                      {[
@@ -71,7 +74,7 @@ export default function WarrantyPage() {
                         "Ground movement unrelated to installation"
                      ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '15px', fontSize: '16px', color: '#333', lineHeight: '1.4' }}>
-                           <span style={{ color: '#c62828', fontWeight: 'bold' }}>➤</span>
+                           <span style={{ color: '#c62828', fontWeight: 'bold' }}>-</span>
                            {item}
                         </li>
                      ))}
@@ -79,15 +82,15 @@ export default function WarrantyPage() {
                </div>
             </div>
 
-            {/* How It's Better */}
+            {/* Why Written Terms Matter */}
             <div style={{ background: '#111', color: '#fff', padding: '60px', borderRadius: '24px', marginBottom: '60px' }}>
-               <h2 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '30px', textAlign: 'center' }}>How It's Better Than 1-Year Industry Standard</h2>
+               <h2 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '30px', textAlign: 'center' }}>Why Written Warranty Terms Matter</h2>
                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '30px' }}>
                   {[
-                     { title: "Two Seasonal Cycles", text: "Covers two full years of seasonal expansion and contraction instead of just one." },
-                     { title: "Real-World Use", text: "Allows ample time for structural settling and real-world usage to reveal any potential issues." },
-                     { title: "Workmanship Confidence", text: "Demonstrates our absolute confidence in the skills and precision of our in-house crews." },
-                     { title: "Peace of Mind", text: "Gives our customers extra security and peace of mind for their major home investment." }
+                     { title: "Clear Scope", text: "The signed paperwork should identify whether the issue is workmanship, manufacturer material coverage, maintenance, or site movement." },
+                     { title: "Service Path", text: "Homeowners know who to contact, what information to provide, and how a service review is handled." },
+                     { title: "Manufacturer Coverage", text: "Composite, PVC, railing, lighting, and accessory warranties can vary by product line and must be reviewed separately." },
+                     { title: "No Guesswork", text: "Durations, exclusions, and limits belong in writing, not in verbal summaries or marketing shorthand." }
                   ].map((item, i) => (
                      <div key={i} style={{ textAlign: 'left' }}>
                         <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#B58E3B', marginBottom: '10px' }}>{item.title}</h4>
@@ -100,9 +103,9 @@ export default function WarrantyPage() {
             {/* Quote Block */}
             <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
                <blockquote style={{ fontSize: '28px', fontStyle: 'italic', fontWeight: '600', color: '#111', lineHeight: '1.4', marginBottom: '20px', border: 'none', padding: 0 }}>
-                  "Most companies cover their labor for one year. We cover ours for two. If anything related to our workmanship comes up, we come back and take care of it."
+                  "Warranty terms should be clear before construction starts: what is covered, what is excluded, and how service requests are handled."
                </blockquote>
-               <p style={{ fontWeight: '700', color: '#B58E3B', textTransform: 'uppercase', letterSpacing: '1px' }}>— The LDN Decks Guarantee</p>
+               <p style={{ fontWeight: '700', color: '#B58E3B', textTransform: 'uppercase', letterSpacing: '1px' }}>LDN Decks Warranty Policy</p>
             </div>
          </div>
        </section>

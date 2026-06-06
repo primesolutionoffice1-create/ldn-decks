@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/ashburn-composite-deck-cost-financing',
   title: 'Ashburn Composite Deck Cost and Financing Guide (2026)',
   description: 'Ashburn VA composite deck cost — typical project pricing for Ashburn Village, Brambleton, Belmont, and Broadlands. HOA-aware planning + monthly payment.',
-  image: '/showcase/img12.jpeg',
+  image: '/social/ashburn-composite-deck-cost-financing-social.png',
 });
 
 const PATH = '/ashburn-composite-deck-cost-financing';
@@ -90,7 +90,7 @@ export default function AshburnCompositeDeckCostPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Ashburn Composite Deck Cost and Financing Guide (2026)" description="Ashburn VA composite deck cost — typical project pricing for Ashburn Village, Brambleton, Belmont, and Broadlands. HOA-aware planning + monthly payment." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Ashburn Composite Deck Cost and Financing Guide (2026)" description="Ashburn VA composite deck cost — typical project pricing for Ashburn Village, Brambleton, Belmont, and Broadlands. HOA-aware planning + monthly payment." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -256,7 +256,7 @@ export default function AshburnCompositeDeckCostPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Estimate an Ashburn Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Estimate an Ashburn Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Ashburn, Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />

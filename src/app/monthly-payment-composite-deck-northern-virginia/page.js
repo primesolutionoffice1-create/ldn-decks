@@ -16,8 +16,8 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/monthly-payment-composite-deck-northern-virginia',
   title: 'Monthly Payment on a Composite Deck in Northern Virginia',
-  description: 'See realistic monthly payments for a composite deck in Northern Virginia. $15k–$70k project examples at 8–10% APR over 10 and 15 years. Free estimator.',
-  image: '/showcase/img15.jpeg',
+  description: 'See realistic monthly payments for a composite deck in Northern Virginia. $15k–$70k planning examples at 8–10% APR over 10 and 15 years. Free estimator.',
+  image: '/social/monthly-payment-composite-deck-northern-virginia-social.png',
 });
 
 const PATH = '/monthly-payment-composite-deck-northern-virginia';
@@ -92,13 +92,13 @@ export default function MonthlyPaymentCompositeDeckPage() {
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="Monthly Payment on a Composite Deck in Northern Virginia"
-        description="See realistic monthly payments for a composite deck in Northern Virginia. $15k–$70k project examples at 8–10% APR over 10 and 15 years."
+        description="See realistic monthly payments for a composite deck in Northern Virginia. $15k–$70k planning examples at 8–10% APR over 10 and 15 years."
         path={PATH}
         image="/showcase/img15.jpeg"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Monthly Payment on a Composite Deck in Northern Virginia" description="See realistic monthly payments for a composite deck in Northern Virginia. $15k–$70k project examples at 8–10% APR over 10 and 15 years. Free estimator." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Monthly Payment on a Composite Deck in Northern Virginia" description="See realistic monthly payments for a composite deck in Northern Virginia. $15k–$70k planning examples at 8–10% APR over 10 and 15 years. Free estimator." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -118,7 +118,7 @@ export default function MonthlyPaymentCompositeDeckPage() {
       <TrustBanner />
 
       <AboveFoldCTA
-        headline="Want the monthly payment on your real project amount? Run the numbers in seconds with the deck payment estimator."
+        headline="Want the monthly payment on your written estimate amount? Run the numbers in seconds with the deck payment estimator."
         estimateHref="/deck-payment-estimator"
         estimateLabel="Estimate Monthly Payment"
       />
@@ -133,7 +133,7 @@ export default function MonthlyPaymentCompositeDeckPage() {
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
             </Link>{' '}
-            to model your real project amount.
+            to model your written estimate amount.
           </p>
         </div>
       </section>
@@ -328,7 +328,7 @@ export default function MonthlyPaymentCompositeDeckPage() {
       <SimpleCTA
         title="Plan Your Composite Deck Monthly Payment"
         buttonText="Get Free Written Estimate"
-        link="/contact"
+        link="/get-estimate"
       />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />

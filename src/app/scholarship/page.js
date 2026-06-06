@@ -7,12 +7,13 @@ export const metadata = buildMetadata({
   path: '/scholarship',
   title: '$500 Trades Scholarship | LDN Decks Northern Virginia',
   description: 'LDN Decks is proud to offer a $500 scholarship to students pursuing a career in the skilled trades. Learn more about eligibility and how to apply.',
+  image: '/social/trades-scholarship-social.png',
 });
 
 export default function ScholarshipPage() {
   return (
     <main className={styles.main}>
-      <WebPageSchema url="https://ldndecks.com/scholarship" name="$500 Trades Scholarship | LDN Decks Northern Virginia" description="LDN Decks is proud to offer a $500 scholarship to students pursuing a career in the skilled trades. Learn more about eligibility and how to apply." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/scholarship" name="$500 Trades Scholarship | LDN Decks Northern Virginia" description="LDN Decks is proud to offer a $500 scholarship to students pursuing a career in the skilled trades. Learn more about eligibility and how to apply." speakable />
       <header className={styles.hero}>
         <div className={styles.container}>
           <h1>LDN Decks Trades Scholarship</h1>

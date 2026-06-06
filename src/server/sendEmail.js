@@ -8,7 +8,7 @@ import { createLeadConfirmationToken } from './leadConfirmationToken';
 export async function sendContactEmail(formData) {
   try {
     // Honeypot guard — both ContactForm and ContactHome render a hidden
-    // company_website input. Real users never fill it; bots that auto-fill
+    // ldn_extra_field input. Real users never fill it; bots that auto-fill
     // every input do. Return success so the bot moves on instead of
     // retrying. No email is sent, no Meta CAPI event is fired, no client
     // tracking is triggered downstream (the client still navigates to
@@ -47,6 +47,10 @@ export async function sendContactEmail(formData) {
     const phone = formData.get('phone');
     const service = formData.get('service') || 'General Inquiry';
     const message = formData.get('message');
+    const timeline = formData.get('timeline');
+    const budgetRange = formData.get('budgetRange') || formData.get('budget');
+    const materialInterest = formData.get('materialInterest');
+    const hoa = formData.get('hoa');
     const address = formData.get('address');
     const city = formData.get('city');
     const state = formData.get('state');
@@ -99,6 +103,10 @@ export async function sendContactEmail(formData) {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Service Requested:</strong> ${service}</p>
+        ${timeline ? `<p><strong>Timeline:</strong> ${timeline}</p>` : ''}
+        ${budgetRange ? `<p><strong>Budget Range:</strong> ${budgetRange}</p>` : ''}
+        ${materialInterest ? `<p><strong>Material Interest:</strong> ${materialInterest}</p>` : ''}
+        ${hoa ? `<p><strong>HOA / Permit Status:</strong> ${hoa}</p>` : ''}
         ${fullAddress ? `<p><strong>Address:</strong> ${fullAddress}</p>` : ''}
         <h3>Message:</h3>
         <p>${message}</p>

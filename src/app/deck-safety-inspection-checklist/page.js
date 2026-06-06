@@ -14,6 +14,7 @@ export const metadata = buildMetadata({
   path: '/deck-safety-inspection-checklist',
   title: 'Deck Safety Inspection Checklist | Is Your Deck Safe? (2026)',
   description: '15-point deck safety inspection checklist. Check for rot, structural issues, railing stability, and code compliance. Free professional inspection available.',
+  image: '/social/deck-safety-inspection-checklist-social.png',
 });
 
 const faqSchema = {
@@ -82,7 +83,7 @@ export default function DeckInspectionPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-safety-inspection-checklist" name="Deck Safety Inspection Checklist | Is Your Deck Safe? (2026)" description="15-point deck safety inspection checklist. Check for rot, structural issues, railing stability, and code compliance. Free professional inspection available." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-safety-inspection-checklist" name="Deck Safety Inspection Checklist | Is Your Deck Safe? (2026)" description="15-point deck safety inspection checklist. Check for rot, structural issues, railing stability, and code compliance. Free professional inspection available." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -140,6 +141,13 @@ export default function DeckInspectionPage() {
           </ul>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>We offer <strong>free deck inspections</strong>. We check every structural element and give you an honest assessment with photos repair, resurface, or replace. No obligation. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink>.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            If any critical item fails, the next step is not a cosmetic upgrade. Start with our{' '}
+            <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link>
+            {' '}for an inspection-first repair path, or review{' '}
+            <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck replacement</Link>
+            {' '}when the main frame, ledger, posts, or footings are no longer practical to save.
+          </p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
             For the two failure points homeowners ask about most, review our guides to{' '}
             <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth planning</Link>
             {', '}
@@ -171,6 +179,8 @@ export default function DeckInspectionPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
+              ['/services/deck-repair', 'Deck Repair Service'],
+              ['/services/deck-replacement', 'Deck Replacement Service'],
               ['/services/deck-inspection', 'Professional Deck Inspection Service'],
               ['/tools/deck-footing-depth-calculator-virginia', 'Deck Footing Depth Calculator Virginia'],
               ['/tools/deck-stair-calculator', 'Virginia Deck Stair Calculator'],
@@ -187,7 +197,7 @@ export default function DeckInspectionPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Free Professional Deck Inspection" buttonText="Schedule Inspection" link="/contact" />
+      <SimpleCTA title="Free Professional Deck Inspection" buttonText="Schedule Inspection" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/deck-safety-inspection-checklist" />

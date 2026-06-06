@@ -9,7 +9,7 @@
 
 ```
 TITLE: Composite Deck Builder NoVA | TrexPro Platinum | Free Quote in 24h
-META:  Composite decks built across Northern Virginia by a TrexPro Platinum installer. Trex, TimberTech, AZEK, Deckorators — 5.0★ from 41+ homeowners. Free estimate.
+META:  Composite decks built across Northern Virginia by a Class A Virginia contractor. Trex, TimberTech, AZEK, Deckorators — public review profiles available. Free estimate.
 ```
 
 ---
@@ -28,9 +28,9 @@ Subhead: "TrexPro Platinum certified · Trex, TimberTech, AZEK, Deckorators · 2
 
 > ## Composite Deck Builders in Northern Virginia
 >
-> Premium composite decks engineered for NoVA's climate, permitted by us, built by TrexPro Platinum-certified carpenters.
+> Premium composite decks planned for NoVA's climate, permit requirements, HOA review, and manufacturer installation details.
 >
-> **TrexPro Platinum · 5.0★ from 41+ NoVA homeowners · 2-year workmanship warranty + Trex 25-year fade/stain warranty**
+> **Class A Virginia · Manufacturer profile links · Public review profiles · Written warranty terms verified in project paperwork**
 >
 > [→ Get My Composite Deck Estimate]   [☎ (571) 655-7207]
 >
@@ -42,9 +42,9 @@ Subhead: "TrexPro Platinum certified · Trex, TimberTech, AZEK, Deckorators · 2
 
 > When you choose composite decking — Trex, TimberTech, AZEK, or Deckorators — you're committing to a board system that should last 25–50 years with almost no maintenance. The brand makes the warranty. The installer makes the build last.
 >
-> TrexPro Platinum is the highest installer tier Trex grants. Fewer than 2% of certified contractors qualify. To earn it, we passed Trex's training certification, demonstrated multi-year volume, and maintained verified customer satisfaction. It means our crews know the brand-specific fastener systems, joist spacing, gapping requirements, and end-cap detailing that protect your warranty.
+> Manufacturer profile details should be verified directly with Trex, TimberTech, AZEK, or the relevant brand before relying on them. The useful homeowner question is whether the builder understands brand-specific fastener systems, joist spacing, gapping requirements, and end-cap detailing.
 >
-> Most "composite deck installers" in NoVA install composite. We're the ones Trex chose to send their highest-tier customers to.
+> Most "composite deck installers" in NoVA install composite. The safer differentiator is source-verifiable process: written scope, permit coordination, material specifications, and inspection-ready details.
 
 (Word count: ~125)
 
@@ -56,7 +56,7 @@ Subhead: "TrexPro Platinum certified · Trex, TimberTech, AZEK, Deckorators · 2
 
 ### Trex
 
-The original composite — and the brand we've installed more of than any in NoVA. Three core lines:
+The original composite and one of the brands homeowners ask about most often. Three core lines:
 
 - **Trex Transcend** — flagship board, deep multi-color streaking, 25-year fade/stain warranty, premium feel. Best for entertainment-grade decks.
 - **Trex Enhance Naturals** — mid-tier, lighter weight, lower price, 25-year warranty.
@@ -99,7 +99,7 @@ Mineral-based composite (Voyage line) — uniquely doesn't expand/contract with 
 
 1. **Free in-home consultation.** Site measurement, structural review of any existing frame, sample box.
 2. **3D design + fixed quote** within 5 business days.
-3. **HOA + county permit handled by us.** Loudoun, Fairfax, Prince William, Arlington — we know each county's specifics.
+3. **HOA + county permit coordination.** Loudoun, Fairfax, Prince William, Arlington — scope should match the signed agreement and jurisdiction requirements.
 4. **Build start.** Daily site cleanup, photo updates, dedicated project manager.
 5. **County inspections** at footing, framing, and final.
 6. **23-point pre-walkthrough** + final walkthrough + manufacturer warranty registration.
@@ -112,10 +112,10 @@ Mineral-based composite (Voyage line) — uniquely doesn't expand/contract with 
 
 (4-up grid with city + material + size.)
 
-- 600 sq ft Trex Transcend in Spiced Rum — Brambleton, Loudoun County
-- 480 sq ft TimberTech Vintage Mahogany — Vienna, Fairfax County
-- 380 sq ft AZEK Vintage English Walnut — Reston, Fairfax County
-- 720 sq ft Deckorators Voyage — Lansdowne, Loudoun County
+- [INSERT VERIFIED PROJECT — DO NOT PUBLISH UNTIL FILLED] Trex Transcend project — city, month/year, size, material color, permit/HOA status, and image paths required.
+- [INSERT VERIFIED PROJECT — DO NOT PUBLISH UNTIL FILLED] TimberTech/AZEK project — city, month/year, size, material color, permit/HOA status, and image paths required.
+- [INSERT VERIFIED PROJECT — DO NOT PUBLISH UNTIL FILLED] Resurfacing or replacement project — city, month/year, scope, final cost/range, and evidence source required.
+- [INSERT VERIFIED PROJECT — DO NOT PUBLISH UNTIL FILLED] Premium outdoor living project — city, month/year, features, permit/HOA status, and image paths required.
 
 [→ See full composite deck gallery](/showcase)
 
@@ -130,7 +130,7 @@ Mineral-based composite (Voyage line) — uniquely doesn't expand/contract with 
 > - **AZEK PVC (50-year limited)**: Fade, stain, structural — full polymer body.
 > - **Deckorators Voyage (50-year structural + 25-year fade/stain)**: Mineral-based core.
 >
-> Plus a **Loudoun Decks 2-year workmanship warranty** on every install — covering the build itself: fastener integrity, joist gapping, ledger detail, railing connection.
+> Add Loudoun Decks workmanship warranty details only after the exact verified term, scope, exclusions, and service-specific limitations are confirmed by owner-approved written policy.
 >
 > Maintenance: composite needs no staining. Periodic soap-and-water wash and seasonal debris clearing. We offer an [annual maintenance program](/services/deck-maintenance) for hands-off owners.
 
@@ -139,7 +139,7 @@ Mineral-based composite (Voyage line) — uniquely doesn't expand/contract with 
 ## H2 — "Composite Deck FAQs"
 
 **Q: How long does a composite deck last in Northern Virginia?**
-A: Composite decking is engineered for 25–50 years of service life. NoVA's freeze-thaw cycles and humidity don't materially shorten composite life when the deck is built to spec — though they do shorten wood deck life. Our oldest installed Trex deck in NoVA (2014) is still in original condition. See [how long does a composite deck last](/how-long-does-a-composite-deck-last).
+A: Composite decking is engineered for long service life, commonly 25–50 years depending on the product line and warranty. NoVA's freeze-thaw cycles and humidity make correct installation, ventilation, cleaning, and drainage important. See [how long does a composite deck last](/how-long-does-a-composite-deck-last).
 
 **Q: Trex vs TimberTech vs AZEK — which should I choose?**
 A: Trex Transcend is the most popular for general use. TimberTech Vintage has the most realistic wood grain. AZEK Vintage offers the longest warranty and best heat performance. We bring samples of all three to your consultation. Full breakdown: [Trex vs TimberTech vs AZEK](/trex-vs-timbertech-vs-azek).

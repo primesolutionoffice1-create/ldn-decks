@@ -16,6 +16,7 @@ export const metadata = buildMetadata({
   path: '/deck-resurfacing-vs-replacement',
   title: 'Deck Resurfacing vs Replacement',
   description: 'Resurface $15k-$30k+ (keep frame) or replace $20k-$50k+. When each makes sense, inspection guide, and Northern Virginia cost examples.',
+  image: '/social/deck-resurfacing-vs-replacement-social.png',
 });
 
 const faqSchema = {
@@ -34,7 +35,7 @@ export default function ResurfacingVsReplacementPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-resurfacing-vs-replacement" name="Deck Resurfacing vs Replacement" description="Resurface $15k-$30k+ (keep frame) or replace $20k-$50k+. When each makes sense, inspection guide, and Northern Virginia cost examples." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-resurfacing-vs-replacement" name="Deck Resurfacing vs Replacement" description="Resurface $15k-$30k+ (keep frame) or replace $20k-$50k+. When each makes sense, inspection guide, and Northern Virginia cost examples." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Resurfacing vs Replacement</h1>
@@ -50,7 +51,7 @@ export default function ResurfacingVsReplacementPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Resurface</strong> ($15k–$30k+) if your frame is solid and you want a full surface conversion with composite boards, railings, fascia, and stairs. <strong>Replace</strong> ($20k–$50k+) if joists are rotting, posts are leaning, footings shifted, or the deck feels bouncy. <strong>Small board, railing, or rot repairs are separate</strong> see our <Link href="/services/deck-repair-and-structural-maintenance" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck repair service</Link>.</p>
+          <p><strong>Resurface</strong> ($15k–$30k+) if your frame is solid and you want a full surface conversion with composite boards, railings, fascia, and stairs. <strong>Replace</strong> ($20k–$50k+) if joists are rotting, posts are leaning, footings shifted, or the deck feels bouncy. <strong>Small board, railing, or rot repairs are separate</strong> see our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck repair service</Link>.</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -133,12 +134,15 @@ export default function ResurfacingVsReplacementPage() {
             </div>
           </div>
 
-          <h2 style={S.h2}>Real Examples from Our Projects</h2>
+          <h2 style={S.h2}>Planning Scenarios to Verify Before Case Study Use</h2>
+          <p style={S.p}>
+            The examples below are budgeting scenarios for homeowner planning, not published formal case studies. Before any example is reused as a source-verified example, it must be matched to owner/source evidence: city, month/year, signed scope, photos, permit or HOA status, and final invoice or estimate record.
+          </p>
           {[
-            { type: 'Resurfacing', price: '$19,500', loc: 'South Riding', detail: '280 sqft deck, 12 years old. Frame solid after inspection. Removed PT boards, installed Trex Enhance + aluminum railings + stair lights. 1-week build.' },
-            { type: 'Resurfacing', price: '$22,000', loc: 'Brambleton', detail: '300 sqft, 10 years old. Frame inspected OK. Trex Transcend + Trex Select railings. HOA approved. 1.5-week build.' },
-            { type: 'Full Replacement', price: '$38,000', loc: 'Leesburg', detail: '480 sqft. 18-year-old deck with rotting joists and shifting footings. Full demolition + new footings + new framing + Trex Transcend + Signature railings + lighting. 3-week build.' },
-            { type: 'Full Replacement', price: '$28,000', loc: 'Sterling', detail: '320 sqft. Posts rotting at base, deck bounced when walked on. Unsafe replaced everything. Trex Transcend + aluminum railings. 2.5-week build.' },
+            { type: 'Resurfacing scenario', price: '$19,500 planning range', loc: 'South Riding-style scope', detail: '280 sqft deck, sound frame after inspection, old pressure-treated boards removed, Trex Enhance-style boards, aluminum railing, and stair lighting. Verify with source evidence before presenting as a source-verified example.' },
+            { type: 'Resurfacing scenario', price: '$22,000 planning range', loc: 'Brambleton-style scope', detail: '300 sqft deck, frame suitable for reuse, Trex Transcend-style boards, and Trex Select-style railings. Verify HOA status and source records before presenting as a source-verified example.' },
+            { type: 'Replacement scenario', price: '$38,000 planning range', loc: 'Leesburg-style scope', detail: '480 sqft replacement path where joists, footings, or ledger conditions make resurfacing inappropriate. New framing, composite boards, premium railing, and lighting. Verify records before case-study use.' },
+            { type: 'Replacement scenario', price: '$28,000 planning range', loc: 'Sterling-style scope', detail: '320 sqft replacement path where post rot, stair instability, or frame movement makes full rebuild the safer decision. Verify source evidence before formal case-study use.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem', borderLeft: `4px solid ${p.type === 'Resurfacing' ? '#2e7d32' : '#c62828'}` }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', flexWrap: 'wrap' }}>
@@ -168,12 +172,15 @@ export default function ResurfacingVsReplacementPage() {
               ['/before-and-after', 'Before & After Deck Transformations'],
               ['/resurface-or-replace-deck-financing', 'Resurface or Replace Before Financing? (decision math)'],
               ['/deck-resurfacing-northern-virginia', 'Deck Resurfacing in Northern Virginia (service area)'],
+              ['/services/deck-repair', 'Deck Repair Service'],
+              ['/services/deck-replacement', 'Deck Replacement Service'],
               ['/services/deck-resurfacing', 'Deck Resurfacing Services'],
               ['/composite-decks', 'Composite Deck Builder for Resurfacing Upgrades'],
               ['/education/deck-stair-safety-inspection-checklist', 'Deck Stair Safety Checklist PDF'],
               ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],
               ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
               ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing Guide'],
+              ['/deck-cost-calculator', 'Deck Cost Calculator'],
               ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Material Comparison'],
               ['/how-long-does-a-composite-deck-last', 'How Long Does a Deck Last?'],
@@ -186,7 +193,7 @@ export default function ResurfacingVsReplacementPage() {
         </div>
       </article>
       <ServicesCallToAction />
-      <SimpleCTA title="Free Deck Inspection Resurface or Replace?" buttonText="Schedule Free Inspection" link="/contact" />
+      <SimpleCTA title="Free Deck Inspection Resurface or Replace?" buttonText="Schedule Free Inspection" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/deck-resurfacing-vs-replacement" />

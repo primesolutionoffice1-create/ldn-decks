@@ -11,13 +11,12 @@ import NamedAuthor from '@/components/NamedAuthor';
 import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
-import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/composite-deck-cost-northern-virginia',
   title: 'How Much Does a Composite Deck Cost in Northern Virginia?',
-  description: 'Get the real 2026 pricing data for custom composite decks in Northern Virginia. Compare costs for Trex, TimberTech, sizing, and premium add-ons.',
-  image: '/showcase/img09.jpeg',
+  description: 'Get 2026 planning pricing data for custom composite decks in Northern Virginia. Compare costs for Trex, TimberTech, sizing, and premium add-ons.',
+  image: '/social/composite-deck-cost-northern-virginia-social.png',
 });
 
 const S = {
@@ -107,7 +106,7 @@ const faqs = [
   },
   {
     q: 'Does Trex add home value?',
-    a: 'Yes. Per Remodeling Magazine\'s Cost vs Value report, a mid-range composite deck recovers an average of 67.5% of installed cost at resale nationally — and the Mid-Atlantic (which includes Northern Virginia) consistently outperforms that national average by 4–8 percentage points. On NoVA properties valued $750k+, a Trex Transcend deck with named-builder credentials, manufacturer warranty registration, and integrated lighting frequently appraises into the 70–80% recovery band. The harder-to-quantify return is time-on-market: NoVA listings with finished outdoor living spaces sell measurably faster than comparable inventory without them.'
+    a: 'Yes, a Trex or comparable composite deck can support home value when it is designed, permitted, and documented well. Remodeling cost/value reports have historically shown composite deck additions recovering a meaningful portion of installed cost at resale, but the exact recovery varies by market, home price, condition, and buyer demand. In Northern Virginia, the stronger value case is usually practical: low maintenance, usable outdoor living space, manufacturer material documentation, and a finished feature buyers can understand quickly.'
   },
   {
     q: 'What is cheaper than Trex?',
@@ -141,7 +140,7 @@ const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   name: "Composite Deck Installation — Northern Virginia",
-  description: "Professionally installed composite deck (Trex, TimberTech AZEK, Fiberon) in Loudoun, Fairfax, Prince William and Arlington counties. Includes engineered framing, permits, hidden fasteners, composite railings, and 5-year workmanship warranty.",
+  description: "Professionally installed composite deck (Trex, TimberTech AZEK, Fiberon) in Loudoun, Fairfax, Prince William and Arlington counties. Scope can include framing, permits, hidden fasteners, composite railings, and written workmanship terms.",
   brand: { "@type": "Brand", name: "Loudoun Decks" },
   offers: {
     "@type": "AggregateOffer",
@@ -158,7 +157,7 @@ export default function CompositeDeckCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/composite-deck-cost-northern-virginia" name="How Much Does a Composite Deck Cost in Northern Virginia?" description="Get the real 2026 pricing data for custom composite decks in Northern Virginia. Compare costs for Trex, TimberTech, sizing, and premium add-ons." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/composite-deck-cost-northern-virginia" name="How Much Does a Composite Deck Cost in Northern Virginia?" description="Get 2026 planning pricing data for custom composite decks in Northern Virginia. Compare costs for Trex, TimberTech, sizing, and premium add-ons." speakable />
       <JsonLd data={productSchema} />
       <ArticleSchema
         title="Composite Deck Cost in Northern Virginia 2026: Complete Price Guide"
@@ -166,7 +165,7 @@ export default function CompositeDeckCostPage() {
         path="/composite-deck-cost-northern-virginia"
         image="/showcase/img09.jpeg"
         datePublished="2026-04-21"
-        dateModified="2026-05-11"
+        dateModified="2026-06-01"
         author="Nick — Owner, Loudoun Decks"
       />
 
@@ -193,7 +192,7 @@ export default function CompositeDeckCostPage() {
           <div style={S.callout}>
             <p style={{ fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</p>
             <p style={{ margin: 0, lineHeight: 1.75, fontSize: '1.02rem' }}>
-              <strong>A composite deck in Northern Virginia typically costs</strong> $30–$95 per square foot installed in 2026 — a 200 sqft Trex Enhance deck lands around $8,000–$14,000, a 400 sqft Trex Transcend build $24,000–$34,000, and a 500 sqft TimberTech AZEK premium build $40,000–$55,000. Total cost depends on deck size, material tier, stairs, railing system, second-story elevation, and site conditions (slope, soil, access). Loudoun Decks is a Virginia Class A licensed deck contractor in Northern Virginia and a Trex Platinum Partner — every estimate is itemized and free.
+              <strong>A composite deck in Northern Virginia typically costs</strong> $30–$95 per square foot installed in 2026 — a 200 sqft Trex Enhance deck lands around $8,000–$14,000, a 400 sqft Trex Transcend build $24,000–$34,000, and a 500 sqft TimberTech AZEK premium build $40,000–$55,000. Total cost depends on deck size, material tier, stairs, railing system, second-story elevation, and site conditions (slope, soil, access). Loudoun Decks provides itemized written estimates for Northern Virginia homeowners.
             </p>
           </div>
 
@@ -217,7 +216,7 @@ export default function CompositeDeckCostPage() {
             </a>
           </div>
 
-          <NamedAuthor context="Loudoun, Fairfax, Prince William, and Arlington counties" />
+          <NamedAuthor context="Loudoun, Fairfax, Prince William, and Arlington counties" lastUpdated="2026-06-01" />
         </div>
       </section>
 
@@ -251,7 +250,7 @@ export default function CompositeDeckCostPage() {
               defaultMaterial={3}
               defaultSqft={350}
               ctaLabel="Estimate Your Exact Deck Cost"
-              ctaHref="/contact"
+              ctaHref="/get-estimate"
             />
           </div>
           <p style={{ marginTop: '1.5rem', fontSize: '0.88rem', color: '#666' }}>
@@ -264,12 +263,12 @@ export default function CompositeDeckCostPage() {
       {/* COST BY SIZE — 4 tables, 3 tiers each */}
       <section id="cost-by-size" style={{ padding: '3rem 1.5rem', background: '#fafafa', borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
         <div style={S.container}>
-          <h2 style={S.h2}>2026 Composite Deck Cost by Size — Real Northern Virginia Pricing</h2>
+          <h2 style={S.h2}>2026 Composite Deck Cost by Size — Northern Virginia Planning Pricing</h2>
           <p style={S.p}>
-            Four common deck footprints, three material tiers each. Every total includes pressure-treated framing, the listed composite decking and railings, one stair flight, Loudoun or Fairfax County permit allowance, hidden fasteners, and our 5-year workmanship warranty. Standard rectangular geometry on grade — second-story builds, multi-level decks, and integrated lighting add $3,000–$8,000+ on top.
+            Four common deck footprints, three material tiers each. Every total assumes pressure-treated framing, the listed composite decking and railings, one stair flight, Loudoun or Fairfax County permit allowance, hidden fasteners, and written workmanship terms confirmed in the estimate. Standard rectangular geometry on grade — second-story builds, multi-level decks, and integrated lighting add $3,000–$8,000+ on top.
           </p>
           <p style={{ ...S.pMuted, fontSize: '0.88rem', fontStyle: 'italic', marginBottom: '2rem' }}>
-            Prices verified May 2026 against Trex, TimberTech, and Fiberon current MSRP plus Loudoun Decks installed-cost data from 200+ completed NoVA projects.
+            Prices checked May 2026 against manufacturer/dealer price references and Loudoun Decks installed-cost estimating logic. Final publication as invoice-backed project data requires matching each example to a source-verified project record.
           </p>
 
           {sizeMatrix.map((size, si) => (
@@ -382,7 +381,7 @@ export default function CompositeDeckCostPage() {
         <div style={S.container}>
           <h2 style={S.h2}>Where These Prices Come From — Manufacturer & Dealer Sources</h2>
           <p style={S.p}>
-            Every price range on this page is sourced from one of three categories: manufacturer published MSRP, certified dealer pricing programs, or Loudoun Decks internal cost data from completed Northern Virginia builds. We don&apos;t use guesses or industry averages; we use the same numbers we quote in our contracts. <strong>Prices verified May 2026.</strong>
+            Every price range on this page is based on one of three categories: manufacturer published pricing references, dealer pricing references, or Loudoun Decks installed-cost estimating logic for Northern Virginia. Treat these as planning ranges until a property-specific scope is measured and written. <strong>Prices verified May 2026.</strong>
           </p>
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.25rem' }}>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
@@ -395,7 +394,7 @@ export default function CompositeDeckCostPage() {
               <strong>Fiberon pricing</strong> — Fiberon.com product MSRP for Concordia, Sanctuary, and ArmorGuard lines. Fiberon contractor locator: <a href="https://www.fiberondecking.com/find-a-pro" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)' }}>fiberondecking.com/find-a-pro</a>.
             </li>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
-              <strong>NoVA labor &amp; installed-cost data</strong> — Loudoun Decks internal records from 200+ completed projects across Loudoun, Fairfax, Prince William, and Arlington counties (2022–2026).
+              <strong>NoVA labor &amp; installed-cost logic</strong> — Loudoun Decks estimating inputs for local labor, access, permit allowances, railings, stairs, and site conditions across Loudoun, Fairfax, Prince William, and Arlington counties.
             </li>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
               <strong>ROI &amp; resale data</strong> — Remodeling Magazine&apos;s annual <em>Cost vs Value</em> report (Mid-Atlantic, mid-range and upscale composite deck categories).
@@ -421,7 +420,10 @@ export default function CompositeDeckCostPage() {
             <li style={{ marginBottom: '0.7rem', lineHeight: 1.75 }}><strong>Permits &amp; HOA review.</strong> Fairfax County permits $600–$1,300 with sealed structural drawings. Loudoun County $400–$900. HOA architectural review is free but adds 1–4 weeks of timeline. See our <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County</Link> and <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County</Link> permit guides.</li>
           </ol>
 
-          <h3 style={S.h3}>Real Northern Virginia project examples</h3>
+          <h3 style={S.h3}>Northern Virginia pricing examples to verify against project records</h3>
+          <p style={S.pMuted}>
+            The examples below are useful estimating scenarios. Before any one is reused as a formal case study, match it to a signed estimate, invoice, photo set, city, date, and final scope.
+          </p>
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '1rem' }}>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
               <strong>Ashburn, 380 sqft Trex Transcend rebuild</strong> — single-level ground deck replacing aged pressure-treated, Spiced Rum boards, composite railing, one stair flight, LED riser lighting. Total: <strong>$28,400 installed</strong>.
@@ -531,7 +533,7 @@ export default function CompositeDeckCostPage() {
         </div>
       </section>
 
-      <SimpleCTA title="Get Your Exact Composite Deck Quote" buttonText="Request Free Estimate" link="/contact" />
+      <SimpleCTA title="Get Your Exact Composite Deck Quote" buttonText="Request Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/composite-deck-cost-northern-virginia" />
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
@@ -540,7 +542,7 @@ export default function CompositeDeckCostPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Builder in Northern Virginia →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/outdoor-living-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Outdoor Living in Northern Virginia →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/wood-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Wood Decks — Cedar, IPE & Pressure-Treated →</Link></li>

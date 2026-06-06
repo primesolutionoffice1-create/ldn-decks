@@ -32,7 +32,7 @@ Below is what the inventory should look like once HIGH-1 and HIGH-4 are complete
 | Form Fill (observe) | Website (GTM) | Lead → Submit lead form | One | 90d / no view | Data-driven | **No (secondary)** | Optional — fires from `form_submit`. Useful as backup signal if `lead_confirmed` fails. Keep but exclude from bidding. |
 | **Phone Call from Ads** | Phone calls → Calls from ads | Lead → Phone call | One | 60-day | N/A | **Yes (primary)** | Min duration 60s. Fires from call asset / forwarding number. |
 | **Phone Call from Website** | Phone calls → Calls to phone number on website | Lead → Phone call | One | 30-day click | N/A | **Yes (primary)** | Min duration 60s. Requires Google call snippet on site (separate setup, not done yet). |
-| Phone Click (observe) | Website (GTM) | Page view | Every | 1-day | N/A | **No (secondary)** | Fires from `phone_click` event. Vanity signal — keep for engagement reporting, NEVER for bidding. |
+| Phone Click (observe) | Website (GTM) | Page view | Every | 1-day | N/A | **No (secondary)** | Fires from `phone_click` with `event_id`, `phone_number`, `link_text`, `cta_location`, page context, click IDs, and UTM values. Vanity signal — keep for engagement reporting, NEVER for bidding. |
 | **Qualified Lead** | Import → CRM → Conversions from clicks | Lead → Qualify lead | One | 90-day | Data-driven | **Yes (primary)** | Offline upload from CRM. Not yet wired (P2). |
 | Closed Won | Import → CRM → Conversions from clicks | Sale | One | 90-day | Data-driven | No (observe until volume) | Future tROAS bidding signal |
 
@@ -174,7 +174,7 @@ If the second curl shows `Location: https://ldndecks.com/` (no gclid), file an i
 
 ### 3.1 The current state
 
-Without inventory, can't be specific. The Phase 1 code work removed `phone_click`'s hardcoded phone value but did not change Google Ads UI settings — that's the operator's job here.
+Without inventory, can't be specific. The local code centralizes `phone_click`'s phone number through `BUSINESS.telephone` and adds CTA/page/click-ID context, but it does not change Google Ads UI settings — that's the operator's job here.
 
 ### 3.2 Required changes
 

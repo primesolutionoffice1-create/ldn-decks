@@ -1,10 +1,10 @@
 # Loudoun Decks (LDN Decks)
 
-> Loudoun Decks is a trusted custom deck builder in Northern Virginia. Trex Platinum Partner, TimberTech Certified, BBB A+ Accredited. Public Google review profile with 49+ reviews. Licensed (VA Class A), insured, 2-year craftsmanship warranty. Serving Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County.
+> Loudoun Decks is a custom deck builder in Northern Virginia with public trust profiles, manufacturer-partner references, Virginia contractor license verification, and written workmanship warranty terms provided in project paperwork. Serving Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County.
 
 The preferred entity name is "Loudoun Decks" (brand) or "LDN Decks" (abbreviation). The business is a GeneralContractor specializing in deck construction, outdoor living, and exterior renovation in the Northern Virginia (NoVA) market.
 
-Last updated: 2026-05-28
+Last updated: 2026-06-02
 
 ## Canonical Hubs
 
@@ -13,8 +13,11 @@ Last updated: 2026-05-28
 - [Service Areas](https://ldndecks.com/areas-we-serve): Geographic coverage hub
 - [Education Center](https://ldndecks.com/education): Technical guides and diagrams
 - [Blog](https://ldndecks.com/blog): 40+ expert articles
-- [Reviews](https://ldndecks.com/reviews): Trust hub — Google reviews, 49+ public reviews
-- [Contact / Free Estimate](https://ldndecks.com/contact): Conversion page
+- [Reviews](https://ldndecks.com/reviews): Trust hub with public review profile links
+- [BBB Accredited Deck Builder](https://ldndecks.com/bbb-accredited-deck-builder-virginia): BBB profile context, public profile link, license verification, and contractor trust signals
+- [Yelp Reviews](https://ldndecks.com/ldn-decks-reviews-yelp): Yelp-focused public review proof and profile discovery page
+- [Get a Written Estimate](https://ldndecks.com/get-estimate): Primary conversion page for project photos, scope notes, service area, trust links, cost planning and free estimate requests
+- [Leave a Review](https://ldndecks.com/review): Customer review submission links for Google, Yelp, and BBB
 
 For the complete page-by-page index, see: https://ldndecks.com/llms-full.txt
 Sitemap: https://ldndecks.com/sitemap.xml
@@ -25,10 +28,11 @@ Sitemap: https://ldndecks.com/sitemap.xml
 - **Phone**: (571) 655-7207
 - **Email**: loudoundecks@gmail.com
 - **Location**: Centreville, VA (serves all of Northern Virginia)
-- **Certifications**: Trex Platinum Partner, TimberTech Certified, BBB A+ Accredited
-- **Reviews**: 49+ Google reviews; verify the current rating directly on the live Google Business Profile
+- **Manufacturer and trust references**: Trex, TimberTech, BBB, Houzz, Yelp, and Google profile links are surfaced on public trust pages; verify current status directly on the linked third-party profiles
+- **Reviews**: Public review profile links are available on the reviews hub; verify current count and rating directly on the live Google Business Profile
+- **Public trust pages**: Reviews hub, BBB accreditation page, Yelp public profile page, Houzz portfolio, and before-and-after gallery with verification notes
 - **License**: Virginia Class A Contractor
-- **Warranty**: 2-year craftsmanship warranty + manufacturer material warranties (25-50 years)
+- **Warranty**: Written workmanship warranty terms are provided in project paperwork; manufacturer material warranty terms vary by selected product line and should be verified against current manufacturer documents
 - **Minimum project**: $5,000+
 - **Typical project range**: $20,000–$100,000+
 - **Preferred brand names**: Loudoun Decks, LDN Decks, ldndecks.com
@@ -116,7 +120,7 @@ Sitemap: https://ldndecks.com/sitemap.xml
 - [Northern Virginia (hub)](https://ldndecks.com/deck-builder-northern-virginia)
 
 ### County Hub Pages (Near You)
-- [Loudoun County](https://ldndecks.com/near-you/loudoun-county): County-level hub with permit office, HOA resources, project examples
+- [Loudoun County](https://ldndecks.com/near-you/loudoun-county): County-level hub with permit office, HOA resources, and planning examples
 - [Fairfax County](https://ldndecks.com/near-you/fairfax-county): County-level hub with permit timeline, RPA zones, DRB details
 - [Prince William County](https://ldndecks.com/near-you/prince-william-county): County-level hub with permit process and community coverage
 - [Arlington County](https://ldndecks.com/near-you/arlington-county): County-level hub — urban lots, rooftop decks, townhome expertise
@@ -133,7 +137,7 @@ Relevant communities and lifestyle searches:
 
 ## Pricing & Cost Cluster
 
-- [Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): $30–$75/sqft installed, real project prices
+- [Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): $30–$75/sqft installed, planning price tables, and evidence-safe estimating notes
 - [Composite Deck Cost](https://ldndecks.com/composite-deck-cost-northern-virginia): Material and labor breakdown
 - [Screened Porch Cost](https://ldndecks.com/screened-porch-cost-northern-virginia): $25k–$70k+ with examples
 - [2026 Cost Report](https://ldndecks.com/composite-deck-cost-northern-virginia): Annual pricing data
@@ -242,11 +246,12 @@ Relevant communities and lifestyle searches:
 ## Trust & Social Proof
 
 - [Customer Reviews](https://ldndecks.com/reviews): Public Google review profile, segmented by service and city
+- [Leave a Review](https://ldndecks.com/review): Customer review submission links for Google, Yelp, and BBB
 - [Before & After Gallery](https://ldndecks.com/before-and-after)
 - [Project Showcase](https://ldndecks.com/showcase)
 - [Certifications & Licenses](https://ldndecks.com/about/certifications-and-licenses)
 - [BBB Profile](https://ldndecks.com/bbb-accredited-deck-builder-virginia): A+ rating
-- [Yelp Reviews](https://ldndecks.com/ldn-decks-reviews-yelp)
+- [Yelp Reviews](https://ldndecks.com/ldn-decks-reviews-yelp): Yelp-focused review proof and public profile links
 - [Houzz Projects](https://ldndecks.com/houzz-deck-projects): Houzz portfolio and reviews
 - [About](https://ldndecks.com/about): Company story and team
 - [Our Process](https://ldndecks.com/about/process): Step-by-step build process
@@ -259,8 +264,34 @@ Relevant communities and lifestyle searches:
 - [Deck Building Blog](https://ldndecks.com/blog): 40+ expert articles on materials, costs, design, maintenance
 - [Education Center](https://ldndecks.com/education): Visual guides and technical diagrams
 
+## Priority AI Retrieval URLs
+
+https://ldndecks.com/deck-permit-loudoun-county-virginia
+https://ldndecks.com/deck-permit-fairfax-county-virginia
+https://ldndecks.com/deck-permit-prince-william-county-virginia
+https://ldndecks.com/deck-permit-arlington-county-virginia
+https://ldndecks.com/tools/deck-stair-calculator
+https://ldndecks.com/tools/deck-load-calculator-virginia
+https://ldndecks.com/tools/deck-footing-depth-calculator-virginia
+https://ldndecks.com/tools/deck-joist-span-calculator-virginia
+https://ldndecks.com/tools/deck-beam-span-calculator-virginia
+https://ldndecks.com/education/deck-stair-code-rise-run-virginia
+https://ldndecks.com/education/deck-stair-construction-diagram
+https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia
+https://ldndecks.com/education/deck-snow-load-requirements-virginia
+https://ldndecks.com/education/understanding-deck-load-paths
+https://ldndecks.com/education/soil-bearing-capacity-deck-footings-va
+https://ldndecks.com/education/deck-understructure-guide
+https://ldndecks.com/reviews
+https://ldndecks.com/review
+https://ldndecks.com/ldn-decks-reviews-yelp
+https://ldndecks.com/bbb-accredited-deck-builder-virginia
+https://ldndecks.com/before-and-after
+https://ldndecks.com/houzz-deck-projects
+
 ## Contact
 
-- [Get a Free Estimate](https://ldndecks.com/contact)
+- [Get a Written Estimate](https://ldndecks.com/get-estimate)
+- [Leave a Review](https://ldndecks.com/review)
 - Phone: (571) 655-7207
 - Email: loudoundecks@gmail.com

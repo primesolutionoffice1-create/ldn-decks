@@ -138,7 +138,7 @@ export default function DeckFootingDepthCalculatorPage() {
     <main className={styles.page}>
       <JsonLd data={faqSchema} />
       <JsonLd data={webApplicationSchema} />
-      <WebPageSchema url={pageUrl} name={pageTitle} description={pageDescription} speakable />
+      <WebPageSchema dateModified="2026-06-01" url={pageUrl} name={pageTitle} description={pageDescription} speakable />
 
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -152,7 +152,7 @@ export default function DeckFootingDepthCalculatorPage() {
             <Link className={styles.primaryButton} href="#calculator">
               Use Calculator
             </Link>
-            <Link className={styles.secondaryButton} href="/contact">
+            <Link className={styles.secondaryButton} href="/get-estimate">
               Request Footing Review
             </Link>
           </div>
@@ -315,7 +315,7 @@ export default function DeckFootingDepthCalculatorPage() {
               planning for Northern Virginia decks.
             </p>
             <CallLink>Call (571) 655-7207</CallLink>
-            <Link href="/contact">Request an estimate</Link>
+            <Link href="/get-estimate">Request an estimate</Link>
             <Link href="/services/deck-inspection">Book a deck inspection</Link>
             <Link href="/deck-footing-code-northern-virginia">Read the footing code guide</Link>
           </aside>
@@ -359,10 +359,10 @@ export default function DeckFootingDepthCalculatorPage() {
           inspections and long-term durability in mind.
         </p>
         <div className={styles.ctaButtons}>
-          <Link className={styles.primaryButton} href="/contact">
+          <Link className={styles.primaryButton} href="/get-estimate">
             Request a Deck Estimate
           </Link>
-          <Link className={styles.secondaryButton} href="/services/deck-repair-and-structural-maintenance">
+          <Link className={styles.secondaryButton} href="/services/deck-repair">
             Review Repair Options
           </Link>
         </div>
@@ -377,7 +377,7 @@ export default function DeckFootingDepthCalculatorPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>
       </section>
       <RelatedGuides currentPath={path} category="deck-core" />

@@ -126,6 +126,12 @@ All have `Path=/`, `SameSite=Lax`.
 - `event_id: "<UUID>"`
 - `gclid`, `fbclid`, `msclkid` present
 - `form_type: "quote"`
+- `form_location: "contact_form"` or `"embedded_contact_form"`
+- `service` and `timeline` populated
+- Optional lead-quality fields present when selected:
+  - `budget_range`
+  - `material_interest`
+  - `hoa_permit_status`
 - `email`, `phone` populated
 
 ### 2.6 /thank-you page renders with event_id
@@ -367,6 +373,12 @@ Visit `/?gclid=PHASE1TEST` to seed the click ID. Submit the **homepage** form
 **PASS criteria:**
 - `dataLayer` has a `form_submit` event with `form_type: 'homepage'` and a
   non-null `event_id` (UUID format)
+- `form_location: 'homepage_contact_form'`
+- `city` and hidden `state: 'VA'` appear when submitted
+- Homepage lead-quality selections appear when selected:
+  - `budget_range`
+  - `material_interest`
+  - `hoa_permit_status`
 - Same `event_id` appears in URL as `?eid=<UUID>` on `/thank-you`
 - `dataLayer` has a `lead_confirmed` event on `/thank-you` with matching
   `event_id`
@@ -387,8 +399,12 @@ call button, the sticky mobile CTA, the header phone link, and any inline
 
 **PASS criteria:**
 - Every click adds a `phone_click` event to dataLayer
-- Each event has `phone_source: 'tel_link'` and the current page in `page`
-- No event has `phone: '+15716557207'` (old hardcoded payload removed)
+- Each event has `phone_source: 'tel_link'`, `phone_number`, `link_text`,
+  `cta_location`, `page_path`, and the current page in `page`
+- Header, floating button, mobile sticky, contact-form-side, and homepage
+  contact CTAs should include a stable `cta_location` value
+- Click IDs and UTM values should appear when the test URL includes them
+- No event has the old `phone` payload key
 - Visually inspect 3-5 city pages: phone CTAs render with the same styling
   as before (no CSS regression from the JSX swap)
 
@@ -398,11 +414,9 @@ call button, the sticky mobile CTA, the header phone link, and any inline
 - Console error referencing `trackPhoneClick` undefined (means an
   import was over-pruned)
 
-**Known excluded files:** `deck-builder-fairfax-va/page.js` and
-`trex-vs-timbertech-vs-azek/page.js` were excluded from the sweep because they
-had unrelated SEO edits uncommitted at the time of fix #2. These two pages
-still use raw `<a href="tel:...">` and **will not fire phone_click yet.**
-They get re-swept when the SEO branch merges.
+**Current sweep status:** active raw `href="tel:"` anchors should not exist in
+`src` outside the `CallLink` implementation/comment. If a phone CTA fails to
+fire `phone_click`, treat it as a regression and re-run the raw tel scan.
 
 ### 5.3 #3 — Consent defaults set before GTM container loads
 
@@ -433,7 +447,7 @@ Open DevTools → Console → run:
 const form = document.querySelector('form[aria-label*="Project Inquiry"]') ||
              document.querySelector('form.contactForm') ||
              document.querySelector('form');
-form.querySelector('[name="company_website"]').value = 'http://bot-example.com';
+form.querySelector('[name="ldn_extra_field"]').value = 'http://bot-example.com';
 // Fill the rest minimally and submit
 form.querySelector('[name="firstName"], [name="name"]').value = 'Bot';
 form.querySelector('[name="email"]').value = 'bot@example.com';
@@ -443,7 +457,7 @@ form.requestSubmit();
 ```
 
 **PASS criteria:**
-- Server log shows: `[sendContactEmail] honeypot triggered, silently
+- Server log shows: `[sendContactEmail] honeypot field populated, silently
   dropping submission`
 - **NO email arrives** in the inbox
 - **NO `form_submit` event** in dataLayer
@@ -458,7 +472,7 @@ form.requestSubmit();
 - User navigated to /thank-you
 
 Then verify legitimate submissions still work: reload page, fill the form
-normally (leaving `company_website` empty), submit. All section 2 tests
+normally (leaving `ldn_extra_field` empty), submit. All section 2 tests
 should still pass.
 
 ### 5.5 #10 — `lead_confirmed` does not re-fire on reload

@@ -147,11 +147,11 @@ Subject: NoVA deck permit fees rose 12% in 2026 — happy to be a source for a s
 
 Hi [Name],
 
-I'm Nick at Loudoun Decks, a TrexPro Platinum builder in Centreville. I noticed
+I'm Nick at Loudoun Decks, a Class A Virginia deck builder in Centreville. I noticed
 [Outlet] covers Loudoun home topics — wanted to flag a story angle:
 
-Loudoun County's deck permit fees went up [%] in [year]. We've built [N] decks
-in Loudoun in the last [period] and have permitted every one. I have hard data
+Loudoun County's deck permit fees went up [%] in [year]. We track permit and
+HOA planning details for Loudoun deck projects and can share source-backed notes
 on:
   • Average permit cost trend (2023 → 2026)
   • Approval timeline trend
@@ -168,12 +168,12 @@ ldndecks.com  ·  (571) 655-7207
 For local agent partnerships:
 
 ```
-Subject: Vendor list — TrexPro Platinum deck builder for your client referrals
+Subject: Vendor list — Class A deck builder for your client referrals
 
 Hi [Agent],
 
 Congrats on [recent listing in Brambleton/Vienna/etc.]. I'm Nick at Loudoun Decks —
-TrexPro Platinum certified builder in Centreville, 5.0★ from 41+ NoVA homeowners.
+Class A Virginia deck builder in Centreville with manufacturer profile links and public review profiles available for source verification.
 A few of your colleagues at [agent's brokerage] keep us on their preferred-vendor
 lists for clients prepping homes for sale or settling in.
 
@@ -230,7 +230,7 @@ You're starting from a known-good base (Ahrefs has your data). The goal isn't li
 
 ## Quick wins (do this week)
 
-1. Add LinkedIn + BBB profile to `sameAs` in `business.js` (per [08-TECHNICAL-FIXES.md §F3](08-TECHNICAL-FIXES.md))
+1. Keep BBB in organization `sameAs`; add LinkedIn only after the official company profile URL is created or claimed (per [08-TECHNICAL-FIXES.md §F3](08-TECHNICAL-FIXES.md))
 2. Verify your TrexPro Platinum listing surfaces on trex.com — request listing fix if not
 3. Submit to all 10 Tier 1 citations (per [04-LOCAL-SEO.md](04-LOCAL-SEO.md))
 4. Email 5 NoVA real estate agents with the "vendor partnership" template above

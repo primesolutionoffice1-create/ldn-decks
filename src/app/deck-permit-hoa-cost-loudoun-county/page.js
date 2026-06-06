@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/deck-permit-hoa-cost-loudoun-county',
   title: 'Deck Permit & HOA Costs in Loudoun County: 2026 Budget Guide',
   description: 'Loudoun County deck permit cost ($200–$1,200), HOA approval cost ($0–$500), timeline, drawings required, and total project amount impact.',
-  image: '/showcase/img17.jpeg',
+  image: '/social/deck-permit-hoa-cost-loudoun-county-social.png',
 });
 
 const PATH = '/deck-permit-hoa-cost-loudoun-county';
@@ -91,7 +91,7 @@ export default function DeckPermitHoaCostLoudounPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Deck Permit &amp; HOA Costs in Loudoun County: 2026 Budget Guide" description="Loudoun County deck permit cost ($200–$1,200), HOA approval cost ($0–$500), timeline, drawings required, and total project amount impact." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Deck Permit &amp; HOA Costs in Loudoun County: 2026 Budget Guide" description="Loudoun County deck permit cost ($200–$1,200), HOA approval cost ($0–$500), timeline, drawings required, and total project amount impact." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -112,7 +112,7 @@ export default function DeckPermitHoaCostLoudounPage() {
 
       <AboveFoldCTA
         headline="Want an HOA-ready written estimate that includes permit and architectural review costs?"
-        estimateHref="/contact"
+        estimateHref="/get-estimate"
         estimateLabel="Request an HOA-Ready Estimate"
       />
 
@@ -248,6 +248,16 @@ export default function DeckPermitHoaCostLoudounPage() {
               </Link>
             </li>
             <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Ledger Board Flashing Guide →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Deck Stair Construction Diagram →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
               <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
                 Deck Payment Estimator →
               </Link>
@@ -264,7 +274,7 @@ export default function DeckPermitHoaCostLoudounPage() {
         </div>
       </article>
 
-      <SimpleCTA title="HOA-Ready Estimate Including Permit Fees" buttonText="Request Written Estimate" link="/contact" />
+      <SimpleCTA title="HOA-Ready Estimate Including Permit Fees" buttonText="Request Written Estimate" link="/get-estimate" />
       <NamedAuthor context="Loudoun County" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />

@@ -15,7 +15,9 @@ const KNOWN_ROUTES = [
   ['/showcase', 'Project Showcase'],
   ['/blog', 'Blog'],
   ['/education', 'Deck Education Library'],
-  ['/contact', 'Get a Free Estimate'],
+  ['/get-estimate', 'Get a Free Estimate'],
+  ['/reviews', 'Customer Reviews'],
+  ['/review', 'Leave a Review'],
   ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost — Northern Virginia'],
   ['/northern-virginia-deck-building-guide', 'Northern Virginia Deck Building Guide'],
 
@@ -36,7 +38,7 @@ const KNOWN_ROUTES = [
   // Service pages
   ['/services/new-decks', 'New Deck Installation'],
   ['/services/deck-resurfacing', 'Deck Resurfacing'],
-  ['/services/deck-repair-and-structural-maintenance', 'Deck Repair & Structural Maintenance'],
+  ['/services/deck-repair', 'Deck Repair & Structural Maintenance'],
   ['/services/porches', 'Porches'],
   ['/services/porches/screened-porch', 'Screened-In Porches'],
   ['/services/patios', 'Patios'],

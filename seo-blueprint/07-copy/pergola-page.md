@@ -30,7 +30,7 @@ Subhead: "Cedar, vinyl, aluminum and louvered pergolas — built freestanding, a
 >
 > Hand-crafted pergolas designed around your home's lines — cedar warmth, vinyl maintenance-free, aluminum modern, or motorized louvered for full sun-and-rain control.
 >
-> **Class A Virginia · TrexPro Platinum · 5.0★ from 41+ NoVA homeowners**
+> **Class A Virginia · Manufacturer profile links · Public review profiles · BBB verification**
 >
 > [→ Get My Pergola Estimate]   [☎ (571) 655-7207]
 >

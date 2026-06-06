@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
   path: "/screened-porch-builder-northern-virginia",
   title: "Screened Porch Builder Northern Virginia | Custom Porches | Loudoun Decks",
   description: "Trusted screened porch builder in Northern Virginia. Custom screened-in porches, EZE-Breeze windows, and outdoor living spaces. Serving Loudoun, Fairfax, and Prince William Counties.",
-  image: "/images/img01.jpeg",
+  image: "/social/screened-porch-builder-northern-virginia-social.png",
 });
 
 const inclusions = [
@@ -137,7 +137,7 @@ const expansionSections = [
 export default function ScreenedPorchBuilderNovaPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/screened-porch-builder-northern-virginia" name="Screened Porch Builder Northern Virginia" description="Custom screened porches and 3-season rooms in Northern Virginia. EZE-Breeze, deck combos, permits handled. From $25,000." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/screened-porch-builder-northern-virginia" name="Screened Porch Builder Northern Virginia" description="Custom screened porches and 3-season rooms in Northern Virginia. EZE-Breeze, deck combos, permits handled. From $25,000." speakable />
       <ServiceSchema
         name="Screened Porch Construction"
         description="Custom screened porches and 3-season rooms in Northern Virginia. EZE-Breeze windows, structural engineering, permits and HOA approvals included."
@@ -212,7 +212,7 @@ export default function ScreenedPorchBuilderNovaPage() {
       <SimpleCTA 
         title="Start Your Screened Porch Project" 
         buttonText="Get Free Estimate" 
-        link="/contact" 
+        link="/get-estimate"
       />
       
       <RelatedGuides currentPath="/screened-porch-builder-northern-virginia" />

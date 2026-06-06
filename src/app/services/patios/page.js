@@ -18,7 +18,7 @@ export const metadata = buildMetadata({
   path: "/services/patios",
   title: 'Patio Contractor Northern Virginia | Paver, Stone & Stamped',
   description: 'Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone & natural stone. Loudoun, Fairfax, Prince William, Arlington. Free 24h estimate.',
-  image: '/showcase/img12.jpeg',
+  image: '/social/patio-contractor-northern-virginia-social.png',
 });
 
 const S = {
@@ -88,7 +88,7 @@ const patioProcess = [
   { title: 'Step 4 — Drainage infrastructure', desc: 'French drains, catch basins, and perimeter pitch detailing per Virginia clay-soil drainage standards. Pitch is 1/8\" per foot away from the house, invisible to the eye but absolute for water management.' },
   { title: 'Step 5 — Stone or paver installation', desc: 'Hand-set or mortar-set installation by our masonry crew. Each stone leveled to the adjacent piece, every joint dimensioned to spec, integrated lighting roughed in before final set.' },
   { title: 'Step 6 — Polymeric jointing & sealing', desc: 'Polymeric sand or mortar joints, swept and watered to a hardened cure. Optional invisible sealer on stone or stamped concrete to protect against staining and freeze-spalling.' },
-  { title: 'Step 7 — Final walkthrough & 5-year workmanship warranty', desc: 'Itemized punch-list walkthrough with you on-site, photo documentation filed to your project record, and our written 5-year workmanship warranty on every patio we install.' },
+  { title: 'Step 7 — Final walkthrough & written warranty terms', desc: 'Itemized punch-list walkthrough with you on-site, photo documentation filed to your project record, and written workmanship warranty terms included with the project agreement.' },
 ];
 
 const patioFAQs = [
@@ -118,7 +118,7 @@ const patioFAQs = [
   },
   {
     question: 'Can a patio be added to an existing deck or screened porch?',
-    answer: 'Yes — combined deck-and-patio builds are one of our most-requested projects in Vienna, McLean, Reston and Great Falls. The patio typically sits below an elevated deck (under-deck patio system with a dry ceiling) or extends off a ground-level deck into the yard. For under-deck installations we install a waterproof drainage ceiling between the joists so the patio space below stays dry through every storm. Pergolas and screened porches integrate directly onto the patio footprint, sharing footings and creating a unified outdoor living suite.'
+    answer: 'Yes — combined deck-and-patio builds are common in Vienna, McLean, Reston and Great Falls. The patio typically sits below an elevated deck (under-deck patio system with a dry ceiling) or extends off a ground-level deck into the yard. For under-deck installations we install a waterproof drainage ceiling between the joists so the patio space below stays dry through every storm. Pergolas and screened porches integrate directly onto the patio footprint, sharing footings and creating a unified outdoor living suite.'
   },
   {
     question: 'What is the ROI on a custom patio in Northern Virginia?',
@@ -162,7 +162,7 @@ export default function PatiosPage() {
     <main>
       <JsonLd data={faqSchemaData} />
       <JsonLd data={materialItemListSchema} />
-      <WebPageSchema url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone &amp; natural stone. Loudoun, Fairfax, Prince William, Arlington. Free 24h estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone &amp; natural stone. Loudoun, Fairfax, Prince William, Arlington. Free 24h estimate." speakable />
       <ServiceSchema
         name="Custom Patio Construction"
         description="Professional patio design and installation in Northern Virginia. Pavers, flagstone, stamped concrete, and natural stone patios."
@@ -190,19 +190,19 @@ export default function PatiosPage() {
             </p>
           </div>
 
-          <NamedAuthor context="Loudoun, Fairfax, Prince William and Arlington counties" lastUpdated="May 2026" />
+          <NamedAuthor context="Loudoun, Fairfax, Prince William and Arlington counties" lastUpdated="2026-06-01" />
 
           <h2 style={S.h2}>The Premier Patio Builder for Luxury Homes in Northern Virginia</h2>
           <p style={S.p}>
             A patio is the single most-used architectural feature in any NoVA backyard — used more days per year than the deck above it, the screened porch beside it, or the pool deck across from it. That utility makes the difference between a patio that quietly carries the property and one that becomes a maintenance line-item brutal at year five. Loudoun Decks builds the first kind. We work in bluestone, flagstone, travertine, and premium concrete pavers, on engineered bases designed for the freeze-thaw realities of Virginia clay soil, with drainage detailing that holds through the worst late-spring NoVA storm.
           </p>
           <p style={S.p}>
-            Our work spans the corridor from Leesburg and Ashburn through Vienna and McLean down to Manassas and Haymarket. The properties differ — historic homes in Old Town Fairfax, modern estates in Great Falls, townhomes in South Riding, custom rebuilds in Reston — but the standard is constant: a Virginia Class A licensed crew, sealed structural drawings where the county requires them, manufacturer-certified materials, and a 5-year workmanship warranty on every patio we hand off.
+            Our work spans the corridor from Leesburg and Ashburn through Vienna and McLean down to Manassas and Haymarket. The properties differ — historic homes in Old Town Fairfax, modern estates in Great Falls, townhomes in South Riding, custom rebuilds in Reston — but the standard is constant: Virginia Class A license verification, sealed structural drawings where the county requires them, manufacturer material documentation, and written workmanship warranty terms in the project agreement.
           </p>
 
           <h2 style={S.h2}>2026 Patio Cost in Northern Virginia</h2>
           <p style={S.p}>
-            Patio pricing in NoVA runs 25–35% above the national average, driven by Fairfax County&apos;s permit documentation standards, NoVA labor rates, and the engineered base and drainage required to perform on heavy clay soil. The table below reflects real 2026 builds we&apos;ve delivered across Loudoun, Fairfax, Prince William and Arlington — full-project costs, not material-only.
+            Patio pricing in NoVA runs 25–35% above the national average, driven by Fairfax County&apos;s permit documentation standards, NoVA labor rates, and the engineered base and drainage required to perform on heavy clay soil. The table below is a planning range for Loudoun, Fairfax, Prince William and Arlington homeowners — full-project costs, not material-only.
           </p>
           <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', borderRadius: 8, overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
@@ -229,7 +229,7 @@ export default function PatiosPage() {
             </table>
           </div>
           <p style={{ fontSize: '0.85rem', color: '#666', fontStyle: 'italic', marginBottom: '2rem' }}>
-            Ranges include base prep, drainage, materials, labor, permit fees, and our 5-year workmanship warranty. Excludes lighting electrical service, gas-line installation for outdoor kitchens, and tree removal where required by site conditions.
+            Ranges include base prep, drainage, materials, labor, and permit-fee allowances where applicable. Excludes lighting electrical service, gas-line installation for outdoor kitchens, tree removal, and final warranty terms that must be verified in the project agreement.
           </p>
 
           <h2 style={S.h2}>Pavers vs Stamped Concrete vs Natural Stone</h2>
@@ -304,7 +304,7 @@ export default function PatiosPage() {
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patio + composite deck</strong>: ground-level patio extending off a raised <Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex or TimberTech deck</Link>, sharing footings and creating multi-level outdoor zoning.</li>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patio + under-deck system</strong>: dry, fully usable <Link href="/services/under-deck-patios" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>under-deck patio</Link> with waterproof drainage ceiling between the joists.</li>
-            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patio + pergola</strong>: shaded patio with structural <Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>pergola</Link> overhead — most-requested combination for west-facing yards in Vienna, McLean and Great Falls.</li>
+            <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patio + pergola</strong>: shaded patio with structural <Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>pergola</Link> overhead — a common combination for west-facing yards in Vienna, McLean and Great Falls.</li>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patio + screened porch</strong>: open patio space adjacent to a <Link href="/services/porches/screened-porch" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>screened porch</Link>, sharing the same footing line and finish floor elevation.</li>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>Patio + fire feature + outdoor kitchen</strong>: the full luxury hardscape suite, with <Link href="/services/fire-pits" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>built-in fire pit</Link>, integrated grill station, and seating walls finished in the same stone.</li>
           </ul>
@@ -387,7 +387,7 @@ export default function PatiosPage() {
       </section>
 
       <ServiceAreasGrid />
-      <SimpleCTA title="Build Your Northern Virginia Patio" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Northern Virginia Patio" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/services/patios" />
       <ContactHome />
     </main>

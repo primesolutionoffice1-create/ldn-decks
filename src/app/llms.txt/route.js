@@ -5,7 +5,7 @@ import { BUSINESS } from '@/lib/business';
 export async function GET() {
   const content = `# Loudoun Decks (LDN Decks)
 
-> Trusted custom deck builder in Northern Virginia. Trex Platinum Partner and TimberTech Certified Installer serving Loudoun, Fairfax, Prince William, Arlington & Stafford counties.
+> Custom deck builder in Northern Virginia. TrexPro, TimberTech, BBB, Houzz, and public review profile links are available for homeowner verification across Loudoun, Fairfax, Prince William, Arlington & Stafford counties.
 
 ## Company Overview
 - **Business**: Loudoun Decks (LDN Decks)
@@ -14,8 +14,9 @@ export async function GET() {
 - **Service area**: Loudoun, Fairfax, Prince William, Arlington & Stafford counties (Northern Virginia)
 - **Phone**: (571) 655-7207
 - **Website**: https://ldndecks.com
-- **Reviews**: ${BUSINESS.aggregateRating.reviewCount}+ Google reviews; verify the current rating directly on the live Google Business Profile
+- **Reviews**: public Google review profile; verify the current count and rating directly on the live Google Business Profile
 - **Certifications**: Trex Platinum Partner, TimberTech Certified Installer
+- **Public trust pages**: Reviews hub, BBB accreditation page, Yelp public profile page, Houzz portfolio, and before-and-after gallery with verification notes
 
 ## Services
 - Custom composite deck building (Trex, TimberTech AZEK)
@@ -65,9 +66,14 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 ## Key Pages
 - [Deck Builder Northern Virginia](https://ldndecks.com/deck-builder-northern-virginia): Primary service hub for custom deck construction, permits, HOA support and local service areas
 - [Education Center](https://ldndecks.com/education): Expert homeowner guides for deck safety, structure, permits, HOA approvals, materials, costs, lighting, drainage and outdoor living decisions
-- [Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): Definitive 2026 pricing — brand-by-brand composite (Trex, TimberTech, AZEK, Fiberon), sizing tables, and total project budgets for Northern Virginia
+- [Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): 2026 planning pricing — brand-by-brand composite (Trex, TimberTech, AZEK, Fiberon), sizing tables, and total project budgets for Northern Virginia
 - [Deck Cost Estimator Northern Virginia](https://ldndecks.com/tools/deck-cost-estimator-northern-virginia): Interactive commercial planning estimator by size, material and add-ons with estimate-request path
 - [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator): Interactive calculator with instant estimates
+- [Get a Written Estimate](https://ldndecks.com/get-estimate): Primary conversion page for project photos, scope notes, service area, trust links, cost planning and free estimate requests
+- [Custom Deck Building Services](https://ldndecks.com/services/new-decks): Full-service design/build hub for custom decks, permits, HOA review, materials and inspections
+- [Deck Replacement](https://ldndecks.com/services/deck-replacement): Full tear-down and rebuild path for unsafe, aging or outdated decks
+- [Deck Resurfacing](https://ldndecks.com/services/deck-resurfacing): Surface conversion path when the existing frame is structurally sound
+- [Structural Deck Repair](https://ldndecks.com/services/deck-repair): Repair path for posts, ledgers, stairs, railings, failed inspections and structural maintenance
 - [Deck Footing Depth Calculator Virginia](https://ldndecks.com/tools/deck-footing-depth-calculator-virginia): Interactive footing depth, diameter, frost-depth and inspection planning tool for Northern Virginia decks
 - [Deck Beam Span Calculator Virginia](https://ldndecks.com/tools/deck-beam-span-calculator-virginia): Interactive beam span, post spacing, tributary width and framing warning tool for Northern Virginia deck planning
 - [Deck Joist Span Calculator Virginia](https://ldndecks.com/tools/deck-joist-span-calculator-virginia): Interactive joist span, spacing, cantilever and composite decking support planning tool for Northern Virginia decks
@@ -78,12 +84,16 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 - [Northern Virginia Deck Building Guide](https://ldndecks.com/northern-virginia-deck-building-guide): Complete building guide
 - [Services](https://ldndecks.com/services): All services offered
 - [Areas We Serve](https://ldndecks.com/areas-we-serve): Full service area map
-- [Reviews](https://ldndecks.com/reviews): Customer testimonials
+- [Reviews](https://ldndecks.com/reviews): Public review profile verification hub
+- [Google Review Guidance](https://ldndecks.com/review): Google-first review guidance for completed-project customers
+- [Yelp Profile](https://ldndecks.com/ldn-decks-reviews-yelp): Yelp public profile and source-verification links
 - [Referral Partners](https://ldndecks.com/referral-partners): Referral information for Realtors, inspectors, designers, BNI members, and local home-service partners
 - [FAQs](https://ldndecks.com/faqs): Frequently asked questions
 - [Showcase](https://ldndecks.com/showcase): Project gallery
-- [Before & After](https://ldndecks.com/before-and-after): Real deck transformations with costs, materials, and timelines
-- [Contact](https://ldndecks.com/contact): Free estimate request
+- [Before & After](https://ldndecks.com/before-and-after): Deck transformation photo gallery with verification notes before formal case-study use
+- [Houzz Project Portfolio](https://ldndecks.com/houzz-deck-projects): Portfolio and design context for decks, porches, patios and outdoor living projects
+- [BBB Accredited Deck Builder](https://ldndecks.com/bbb-accredited-deck-builder-virginia): BBB accreditation, rating context, public profile link and contractor trust signals
+- [Contact](https://ldndecks.com/contact): Secondary contact and business information page
 - [Screened Porch Cost](https://ldndecks.com/screened-porch-cost-northern-virginia): Screened porch pricing guide
 - [How Long Does a Composite Deck Last](https://ldndecks.com/how-long-does-a-composite-deck-last): Lifespan by brand
 - [Deck ROI & Home Value](https://ldndecks.com/does-a-deck-add-value-to-your-home): Resale value data
@@ -189,7 +199,7 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 - [Credit Score for Deck Financing](https://ldndecks.com/credit-score-deck-financing): Credit-readiness guidance for homeowners evaluating potential financing options; no approval, rate, or term is guaranteed
 - [Best Time to Finance and Build a Deck](https://ldndecks.com/best-time-to-finance-build-deck-northern-virginia): Season-by-season pricing, permit timing, lender promotional calendar
 - [Resurface or Replace Before Financing](https://ldndecks.com/resurface-or-replace-deck-financing): Cost comparison, structural inspection criteria, financing math
-- [Deck Resurfacing Northern Virginia](https://ldndecks.com/deck-resurfacing-northern-virginia): County-by-county resurfacing service area + project examples
+- [Deck Resurfacing Northern Virginia](https://ldndecks.com/deck-resurfacing-northern-virginia): County-by-county resurfacing service area and planning examples
 - [Deck Permit & HOA Cost Loudoun County](https://ldndecks.com/deck-permit-hoa-cost-loudoun-county): Permit fees, HOA approval cost, timeline, engineering drawing requirements
 - [Screened Porch Cost](https://ldndecks.com/screened-porch-cost-northern-virginia)
 - [How Long Does a Composite Deck Last](https://ldndecks.com/how-long-does-a-composite-deck-last) · [How Long to Build a Deck](https://ldndecks.com/how-long-to-build-a-deck-northern-virginia)
@@ -197,7 +207,7 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 
 ### Maintenance, Safety & Inspection
 - [Deck Safety Inspection Checklist](https://ldndecks.com/deck-safety-inspection-checklist) · [Deck Maintenance Checklist Virginia](https://ldndecks.com/deck-maintenance-checklist-virginia) · [Best Deck Stain/Sealer Virginia](https://ldndecks.com/best-deck-stain-sealer-virginia) · [Pressure Washing Deck](https://ldndecks.com/pressure-washing-deck-northern-virginia) · [Winterize Deck](https://ldndecks.com/winterize-your-deck-northern-virginia) · [Deck Staining](https://ldndecks.com/deck-staining-northern-virginia)
-- [Deck Repair Loudoun County](https://ldndecks.com/deck-repair-loudoun-county) · [Deck Repair](https://ldndecks.com/services/deck-repair-and-structural-maintenance) · [Deck Resurfacing vs Replacement](https://ldndecks.com/deck-resurfacing-vs-replacement)
+- [Deck Repair Loudoun County](https://ldndecks.com/deck-repair-loudoun-county) · [Deck Repair](https://ldndecks.com/services/deck-repair) · [Deck Resurfacing vs Replacement](https://ldndecks.com/deck-resurfacing-vs-replacement)
 
 ### Design & Inspiration
 - [Deck Design Ideas 2026](https://ldndecks.com/deck-design-ideas-2026) · [NoVA Design Ideas 2026](https://ldndecks.com/deck-design-ideas-northern-virginia-2026) · [Cable Railing](https://ldndecks.com/cable-railing-for-decks-northern-virginia) · [Deck Railing Options](https://ldndecks.com/deck-railing-options-northern-virginia) · [Deck Lighting Ideas](https://ldndecks.com/deck-lighting-ideas-northern-virginia) · [Under-Deck Ceiling Ideas](https://ldndecks.com/under-deck-ceiling-ideas) · [Deck Enclosure Ideas](https://ldndecks.com/deck-enclosure-ideas-northern-virginia) · [Pet-Friendly Deck Design](https://ldndecks.com/pet-friendly-deck-design) · [What Size Deck Should I Build](https://ldndecks.com/what-size-deck-should-i-build)
@@ -205,7 +215,7 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 
 ### Authority & Trust
 - [BBB Accredited Deck Builder Virginia](https://ldndecks.com/bbb-accredited-deck-builder-virginia)
-- [Certifications & Licenses](https://ldndecks.com/about/certifications-and-licenses): TrexPro Platinum, VA Class A, TimberTech Certified, NADRA
+- [Certifications & Licenses](https://ldndecks.com/about/certifications-and-licenses): VA Class A license, manufacturer profile links, NADRA, BBB, and public verification resources
 - [How to Choose a Deck Builder](https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia)
 - [Questions to Ask Before Building a Deck](https://ldndecks.com/questions-to-ask-before-building-a-deck)
 - [Deck Warranty Guide NoVA](https://ldndecks.com/deck-warranty-guide-northern-virginia)
@@ -225,6 +235,13 @@ across every parser variant.
 https://ldndecks.com/
 https://ldndecks.com/deck-builder-northern-virginia
 https://ldndecks.com/services
+https://ldndecks.com/areas-we-serve
+https://ldndecks.com/near-you
+https://ldndecks.com/get-estimate
+https://ldndecks.com/services/new-decks
+https://ldndecks.com/services/deck-replacement
+https://ldndecks.com/services/deck-resurfacing
+https://ldndecks.com/services/deck-repair
 https://ldndecks.com/composite-deck-cost-northern-virginia
 https://ldndecks.com/composite-deck-cost-by-size
 https://ldndecks.com/400-square-foot-deck-cost-northern-virginia
@@ -268,13 +285,42 @@ https://ldndecks.com/deck-builder-reston-va
 https://ldndecks.com/deck-builder-arlington-va
 https://ldndecks.com/deck-builder-tysons-va
 https://ldndecks.com/deck-builder-centreville-va
+https://ldndecks.com/deck-builder-south-riding-va
+https://ldndecks.com/deck-builder-brambleton-va
+https://ldndecks.com/deck-builder-oakton-va
+https://ldndecks.com/deck-builder-stafford-va
+https://ldndecks.com/near-you/loudoun-county
+https://ldndecks.com/near-you/fairfax-county
+https://ldndecks.com/near-you/prince-william-county
+https://ldndecks.com/near-you/arlington-county
+https://ldndecks.com/near-you/stafford-county
 https://ldndecks.com/deck-permit-loudoun-county-virginia
 https://ldndecks.com/deck-permit-fairfax-county-virginia
+https://ldndecks.com/deck-permit-prince-william-county-virginia
+https://ldndecks.com/deck-permit-arlington-county-virginia
+https://ldndecks.com/tools/deck-stair-calculator
+https://ldndecks.com/tools/deck-load-calculator-virginia
+https://ldndecks.com/tools/deck-footing-depth-calculator-virginia
+https://ldndecks.com/tools/deck-joist-span-calculator-virginia
+https://ldndecks.com/tools/deck-beam-span-calculator-virginia
+https://ldndecks.com/education/deck-stair-code-rise-run-virginia
+https://ldndecks.com/education/deck-stair-construction-diagram
+https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia
+https://ldndecks.com/education/deck-snow-load-requirements-virginia
+https://ldndecks.com/education/understanding-deck-load-paths
+https://ldndecks.com/education/soil-bearing-capacity-deck-footings-va
+https://ldndecks.com/education/deck-understructure-guide
+https://ldndecks.com/education/fairfax-county-deck-setbacks-zoning
 https://ldndecks.com/hoa-deck-rules-northern-virginia
 https://ldndecks.com/services/new-decks
 https://ldndecks.com/services/deck-resurfacing
 https://ldndecks.com/services/deck-replacement
 https://ldndecks.com/reviews
+https://ldndecks.com/review
+https://ldndecks.com/ldn-decks-reviews-yelp
+https://ldndecks.com/bbb-accredited-deck-builder-virginia
+https://ldndecks.com/before-and-after
+https://ldndecks.com/houzz-deck-projects
 https://ldndecks.com/about
 https://ldndecks.com/contact
 `;

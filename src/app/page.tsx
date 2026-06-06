@@ -33,7 +33,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   path: "/",
   title: 'Deck Builder Near Me in Northern VA | Loudoun Decks',
-  description: 'Review-backed Northern Virginia deck contractor for composite decks, Trex, TimberTech, replacements and screened porches. Permits handled.',
+  description: 'Northern Virginia deck contractor for composite decks, Trex, TimberTech, replacements and screened porches. Public review profiles and permits handled.',
 });
 
 // Homepage-specific WebPage schema — tells Google this is the main landing page.
@@ -62,7 +62,7 @@ const homepageSchema = {
     "https://ldndecks.com/trex-decks",
     "https://ldndecks.com/timbertech-decks",
     "https://ldndecks.com/services/deck-replacement",
-    "https://ldndecks.com/services/deck-repair-and-structural-maintenance",
+    "https://ldndecks.com/services/deck-repair",
     "https://ldndecks.com/services/deck-inspection",
     "https://ldndecks.com/deck-resurfacing-vs-replacement",
     "https://ldndecks.com/get-estimate",
@@ -130,7 +130,7 @@ const homepageSchema = {
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/covered-deck-builder-northern-virginia#service", "name": "Covered Deck Construction", "url": "https://ldndecks.com/covered-deck-builder-northern-virginia" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/outdoor-kitchen-builder-northern-virginia#service", "name": "Outdoor Kitchen Construction", "url": "https://ldndecks.com/outdoor-kitchen-builder-northern-virginia" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/gazebo-pergola#service", "name": "Pergola and Gazebo Construction", "url": "https://ldndecks.com/services/gazebo-pergola" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/deck-repair-and-structural-maintenance#service", "name": "Deck Repair & Structural Maintenance", "url": "https://ldndecks.com/services/deck-repair-and-structural-maintenance" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/deck-repair#service", "name": "Deck Repair & Structural Maintenance", "url": "https://ldndecks.com/services/deck-repair" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/patios#service", "name": "Patio Construction", "url": "https://ldndecks.com/services/patios" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/deck-inspection#service", "name": "Deck Inspection", "url": "https://ldndecks.com/services/deck-inspection" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://ldndecks.com/services/deck-stair-lighting#service", "name": "Deck Stair Lighting", "url": "https://ldndecks.com/services/deck-stair-lighting" } }

@@ -20,6 +20,7 @@ export const metadata = buildMetadata({
   path: '/services/deck-stair-lighting',
   title: 'Deck Stair Lighting Loudoun VA | LDN Decks',
   description: 'Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last in Loudoun, Fairfax & Prince William County.',
+  image: '/social/deck-stair-lighting-service-social.png',
 });
 
 const whyLdnDecks = [
@@ -132,7 +133,7 @@ const lightingFaqs = [
 export default function DeckStairLightingPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/deck-stair-lighting" name="Deck Stair Lighting Loudoun VA | LDN Decks" description="Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last in Loudoun, Fairfax &amp; Prince William County." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/deck-stair-lighting" name="Deck Stair Lighting Loudoun VA | LDN Decks" description="Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last in Loudoun, Fairfax &amp; Prince William County." speakable />
       <ServiceSchema
         name="Deck & Stair Lighting"
         description="Integrated LED deck lighting, stair riser lights, post cap lights, and under-rail strips for Northern Virginia decks."
@@ -147,7 +148,7 @@ export default function DeckStairLightingPage() {
         description="Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
       </section>
 
       <ServiceMain
@@ -199,7 +200,7 @@ export default function DeckStairLightingPage() {
       <ServiceAreasGrid />
 
       <RelatedGuides currentPath="/services/deck-stair-lighting" />
-      <SimpleCTA title="Light Up Your Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Light Up Your Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

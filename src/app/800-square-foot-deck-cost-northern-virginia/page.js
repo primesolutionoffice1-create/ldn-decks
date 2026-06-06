@@ -13,7 +13,8 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/800-square-foot-deck-cost-northern-virginia',
   title: '800 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks',
-  description: 'Real 2026 pricing for an 800 sqft estate-tier deck in Northern Virginia. Trex Transcend $38k–$58k. TimberTech AZEK $46k–$66k. Multi-level + outdoor kitchen + fire feature detailed.',
+  description: '2026 planning pricing for an 800 sqft estate-tier deck in Northern Virginia. Trex Transcend $38k–$58k. TimberTech AZEK $46k–$66k. Multi-level + outdoor kitchen + fire feature detailed.',
+  image: '/social/800-square-foot-deck-cost-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -22,7 +23,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "How much does an 800 square foot composite deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "An 800 sqft composite deck in Northern Virginia costs $30,000–$80,000+ installed in 2026. Trex Enhance lands at $30k–$42k. Trex Transcend lands at $38k–$58k. TimberTech AZEK lands at $46k–$66k. Multi-level designs (almost universal at this size) add $8k–$15k. Outdoor kitchens, pergolas, and integrated lighting push complete packages to $75k–$130k+. Includes permit, framing, railings, and 3 required inspections." } },
     { "@type": "Question", name: "Who builds an 800 sqft deck — what's the typical profile?", acceptedAnswer: { "@type": "Answer", text: "Estate-tier homes with 0.5+ acre lots. Common locations in our portfolio: Virginia Run, Belmont Country Club premier estates, Loudoun Valley Estates, Lansdowne Conservancy, Brambleton Estate sections, Great Falls, McLean Langley Forest, Donaldson Run (Arlington). Households at this scale typically host 12-20+ guests routinely, want fully separated zones for dining/lounging/grilling/fire-feature, and treat the deck as the home's primary outdoor entertainment anchor." } },
-    { "@type": "Question", name: "What's included in an 800 sqft deck quote?", acceptedAnswer: { "@type": "Answer", text: "Free 3D photorealistic design rendering with multiple viewing angles, engineered structural framing (sealed drawings for the larger load — 2×10 or 2×12 joists depending on spans, doubled beams, larger footings sized to soil bearing capacity), composite or wood surface boards with hidden fasteners on the field, picture-frame border (typical at this tier), premium railings, code-compliant stairs with handrails, integrated lighting (8–16 points), building permit, 3 county inspections, and 2-year workmanship warranty. Multi-level transition steps and additional stair sets included when designed in." } },
+    { "@type": "Question", name: "What's included in an 800 sqft deck quote?", acceptedAnswer: { "@type": "Answer", text: "Free 3D photorealistic design rendering with multiple viewing angles, engineered structural framing (sealed drawings for the larger load — 2×10 or 2×12 joists depending on spans, doubled beams, larger footings sized to soil bearing capacity), composite or wood surface boards with hidden fasteners on the field, picture-frame border (typical at this tier), premium railings, code-compliant stairs with handrails, integrated lighting (8–16 points), building permit, county inspections, and written warranty terms. Multi-level transition steps and additional stair sets included when designed in." } },
     { "@type": "Question", name: "How long does an 800 sqft deck project take?", acceptedAnswer: { "@type": "Answer", text: "From signed contract: 12–18 weeks. Engineered structural drawings: 1–2 weeks. County permit: 3–6 weeks (longer than smaller decks because of the sealed-drawings review). HOA approval in parallel: 2–4 weeks (the larger build often triggers in-person committee review at premium HOAs like Virginia Run or Belmont). Material delivery: 2–4 weeks. Construction on-site: 3–5 weeks for the deck alone; 5–8 weeks if the build includes an outdoor kitchen, pergola, or fire feature. Most 800 sqft projects break ground 6–8 weeks after contract." } },
     { "@type": "Question", name: "Is 800 sqft the threshold for engineered structural drawings?", acceptedAnswer: { "@type": "Answer", text: "Often yes. Fairfax and Loudoun counties require sealed structural drawings (engineer-stamped) when the deck exceeds certain span/load thresholds — typically triggered at 800+ sqft with multi-level designs, second-story attachment, or heavy point loads like outdoor kitchens or hot tubs. We coordinate with a Virginia-licensed structural engineer on every project that requires this; the cost is included in the project total." } },
     { "@type": "Question", name: "What materials work best at 800 sqft?", acceptedAnswer: { "@type": "Answer", text: "At 800 sqft, material quality differences become highly visible. TimberTech AZEK Vintage Mahogany and Coastline dominate this tier because the larger surface area exposes every color inconsistency, every gap variation, every thermal-expansion seam. AZEK PVC's tighter manufacturing tolerances and lower thermal coefficient pay off here. Trex Transcend Vintage Lantern and Spiced Rum are common alternates. Picture-frame borders in contrasting tones are nearly universal at this size — visual definition for the larger surface and a way to hide perimeter end-cuts." } },
@@ -46,10 +47,10 @@ export default function EightHundredSqftDeckCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/800-square-foot-deck-cost-northern-virginia" name="800 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks" description="Real 2026 pricing for an 800 sqft estate-tier composite deck in Northern Virginia. Multi-level configurations, outdoor kitchen + pergola + fire feature integration, sealed structural drawings, permit, timeline." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/800-square-foot-deck-cost-northern-virginia" name="800 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks" description="2026 planning pricing for an 800 sqft estate-tier composite deck in Northern Virginia. Multi-level configurations, outdoor kitchen + pergola + fire feature integration, sealed structural drawings, permit, timeline." speakable />
       <ArticleSchema
         title="800 Square Foot Deck Cost in Northern Virginia (2026)"
-        description="Definitive 2026 pricing for an 800 sqft estate-tier composite deck in Northern Virginia. Engineered structural framing, outdoor kitchen pairing, hot tub integration, premium HOA review."
+        description="2026 planning pricing for an 800 sqft estate-tier composite deck in Northern Virginia. Engineered structural framing, outdoor kitchen pairing, hot tub integration, premium HOA review."
         path="/800-square-foot-deck-cost-northern-virginia"
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
@@ -62,7 +63,7 @@ export default function EightHundredSqftDeckCostPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Estate-tier pricing. Multi-level + outdoor kitchen + fire feature integration.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
           </div>
         </div>
       </section>
@@ -181,7 +182,7 @@ export default function EightHundredSqftDeckCostPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Estate-tier deck project? Get a free 3D rendering + itemized 800 sqft estimate" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Estate-tier deck project? Get a free 3D rendering + itemized 800 sqft estimate" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/800-square-foot-deck-cost-northern-virginia" />
       <NamedAuthor context="Northern Virginia estate-tier deck pricing" lastUpdated="2026-05-27" />
       <ContactHome />

@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/deck-railing-options-northern-virginia',
   title: 'Deck Railing Options for Northern Virginia',
   description: 'Compare deck railing options: composite, aluminum, cable, glass, and wood. Prices from $30-$150/linear ft installed. Virginia code requirements included.',
+  image: '/social/deck-railing-options-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -31,7 +32,7 @@ export default function DeckRailingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-railing-options-northern-virginia" name="Deck Railing Options for Northern Virginia" description="Compare deck railing options: composite, aluminum, cable, glass, and wood. Prices from $30-$150/linear ft installed. Virginia code requirements included." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-railing-options-northern-virginia" name="Deck Railing Options for Northern Virginia" description="Compare deck railing options: composite, aluminum, cable, glass, and wood. Prices from $30-$150/linear ft installed. Virginia code requirements included." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -150,7 +151,7 @@ export default function DeckRailingPage() {
         </div>
       </article>
 
-      <SimpleCTA title="See Railing Samples at Our Showroom" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="See Railing Samples at Our Showroom" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/deck-railing-options-northern-virginia" />

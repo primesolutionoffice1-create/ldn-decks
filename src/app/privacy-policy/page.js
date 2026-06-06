@@ -5,13 +5,14 @@ export const metadata = buildMetadata({
   path: '/privacy-policy',
   title: 'Privacy Policy | LDN Decks',
   description: 'Learn how Loudoun Decks protects your personal information and privacy.',
+  image: '/social/privacy-policy-social.png',
 });
 
 export default function PrivacyPolicy() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '100px 20px', lineHeight: '1.6', color: '#333' }}>
       <h1>Privacy Policy</h1>
-      <p>Last Updated: May 2026</p>
+      <p>Last Updated: June 2026</p>
       
       <section style={{ marginTop: '40px' }}>
         <h2>1. Information We Collect</h2>
@@ -24,6 +25,9 @@ export default function PrivacyPolicy() {
         <h2>2. Cookies and Web Beacons</h2>
         <p>
           Like any other website, Loudoun Decks uses &apos;cookies&apos;. These cookies are used to store information including visitors&apos; preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users&apos; experience by customizing our web page content based on visitors&apos; browser type and/or other information.
+        </p>
+        <p>
+          When you first visit our site, you can accept or decline optional analytics and advertising cookies. Your choice is stored in your browser and can be changed by clearing site data for ldndecks.com.
         </p>
       </section>
 

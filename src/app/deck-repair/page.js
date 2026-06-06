@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ServicesHeader from '@/components/ServicesHeader';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
@@ -20,11 +21,11 @@ const _meta = buildMetadata({
   path: '/deck-repair',
   title: 'Deck Repair | Loudoun County & Fairfax VA | LDN Decks',
   description: 'Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection call (571) 655-7207.',
-  image: '/images/img05.jpeg',
+  image: '/social/deck-repair-social.png',
 });
 export const metadata = {
   ..._meta,
-  alternates: { canonical: 'https://ldndecks.com/services/deck-repair-and-structural-maintenance' },
+  alternates: { canonical: 'https://ldndecks.com/services/deck-repair' },
 };
 
 const inclusions = [
@@ -49,7 +50,7 @@ const repairFAQs = [
   },
   {
     q: "How much does a professional deck repair cost in Fairfax?",
-    a: "Small repairs like board replacement start at $500, while major structural restoration or resurfacing can range from $5,000 to $15,000 depending on the square footage."
+    a: "Professional deck repair pricing in Fairfax should be confirmed after the deck is inspected. Board replacement, railing stabilization, ledger work, stair repair, joist sistering, and resurfacing all price differently, and structural or permit-triggering work needs a written scope before the number is reliable."
   },
   {
     q: "Is it safer to repair or replace an old deck?",
@@ -68,8 +69,8 @@ const repairFAQs = [
     a: "Yes, we prioritize safety inspections for homeowners in Arlington and Loudoun who are concerned about wobbly railings or shifting structures."
   },
   {
-    q: "Are you a Review-Supported repair contractor?",
-    a: "Loudoun Decks is a Review-Supported deck builder known for honesty and quality in both new builds and complex restorations."
+    q: "Do you document repair findings before quoting?",
+    a: "Yes. Deck repair starts with inspection-first documentation so homeowners can understand visible safety issues, repair options, and when replacement may be smarter than repair."
   },
   {
     q: "Will repairing my deck improve my home's value?",
@@ -90,7 +91,7 @@ const expansionSections = [
     title: "Identifying Red Flags: When Your Deck Becomes a Hazard",
     paragraphs: [
       "Many homeowners in regions like Fairfax Station and Burke overlook the subtle signs of deck degradation. The most common 'red flag' is wobbly or loose railings. In Virginia, building codes have become much stricter regarding railing attachment methods because railings are responsible for preventing falls. If your railing posts are through-bolted rather than just nailed, you are in much better shape. If they move when you lean on them, you need immediate deck repair.",
-      "Another critical area is the stair system. Over time, the 'stringers' (the side supports of the stairs) can pull away from the deck or rot at the base where they touch the ground. We frequently handle stair restorations in Sterling and Herndon, reinforcing these high-traffic areas with custom steel brackets and new pressure-treated timber. Ensuring your stairs are level and secure is a top priority for any review-supported contractor.",
+      "Another critical area is the stair system. Over time, the 'stringers' (the side supports of the stairs) can pull away from the deck or rot at the base where they touch the ground. We frequently handle stair restorations in Sterling and Herndon, reinforcing these high-traffic areas with custom steel brackets and new pressure-treated timber. Ensuring your stairs are level, secure, and documented before repair begins is a core part of an inspection-first repair process.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. As your custom deck builder and restoration expert, we perform deep-dive inspections to identify these hazards before they escalate into emergencies."
     ],
     listItems: [
@@ -121,17 +122,16 @@ const expansionSections = [
 export default function DeckRepairPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/deck-repair" name="Deck Repair | Loudoun County &amp; Fairfax VA | LDN Decks" description="Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-repair" name="Deck Repair | Loudoun County &amp; Fairfax VA | LDN Decks" description="Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection call (571) 655-7207." speakable />
       <ServiceSchema
         name="Deck Repair"
         description="Deck repair services for Northern Virginia. Board replacement, railing repair, structural fixes, and code compliance remediation."
         url="https://ldndecks.com/deck-repair"
         category="Deck Repair"
-        price="3000"
-        relatedServices={['https://ldndecks.com/services/deck-repair-and-structural-maintenance', 'https://ldndecks.com/services/deck-inspection', 'https://ldndecks.com/deck-repair-loudoun-county']}
+        relatedServices={['https://ldndecks.com/services/deck-repair', 'https://ldndecks.com/services/deck-inspection', 'https://ldndecks.com/deck-repair-loudoun-county']}
       />
       <ServicesHeader
-        subtext="Review-Supported Restoration"
+        subtext="Inspection-First Restoration"
         title="Professional Deck Repair & Structural Restoration"
         description="Loudoun Decks provides expert deck repair services across Loudoun County, Fairfax County, and Prince William County. Restore your deck's safety and beauty with NoVA's local experts."
       />
@@ -142,15 +142,17 @@ export default function DeckRepairPage() {
           <p style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.75rem' }}>Worried about your deck&apos;s safety? Get a free inspection.</p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <CallLink style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Call (571) 655-7207</CallLink>
-            <a href="/contact" style={{ display: 'inline-block', background: 'var(--color-dark)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Get Free Estimate</a>
+            <a href="/get-estimate" style={{ display: 'inline-block', background: 'var(--color-dark)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Get Free Estimate</a>
           </div>
         </div>
       </section>
 
       <section style={{ background: '#fff8f1', borderLeft: '4px solid var(--color-primary)', padding: '1.25rem 1.5rem', maxWidth: 900, margin: '1.5rem auto', borderRadius: 8 }}>
         <p style={{ margin: 0, lineHeight: 1.7 }}>
-          <strong>Deep dive into structural repair scope, cost ranges, permit triggers, and the repair-vs-replace decision framework:</strong>{' '}
-          <a href="/services/deck-repair-and-structural-maintenance" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full Northern Virginia Structural Repair Hub →</a>
+          <strong>Deep dive into structural repair scope, permit triggers, and the repair-vs-replace decision framework:</strong>{' '}
+          <a href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full Northern Virginia Structural Repair Hub →</a>
+          {' '}For an inspection-first service overview, start with our{' '}
+          <a href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service in Northern Virginia</a>.
           {' '}If posts or piers are part of the concern, use the{' '}
           <a href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia</a>
           {' '}to understand footing depth, diameter, frost and soil-bearing planning before repair review.
@@ -182,12 +184,26 @@ export default function DeckRepairPage() {
 
       <ProcessSteps />
 
-      <SimpleCTA title="Deck Needs Repair? We Can Help." buttonText="Get Free Inspection" link="/contact" />
+      <SimpleCTA title="Deck Needs Repair? We Can Help." buttonText="Get Free Inspection" link="/get-estimate" />
 
       <ServicesFAQ canonicalUrl="https://ldndecks.com/deck-repair"
         title="Deck Repair & Maintenance FAQs"
         faqs={repairFAQs}
       />
+
+      <section style={{ padding: '2rem 0', background: '#fff' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ fontSize: '1.45rem', fontWeight: 700, marginBottom: '0.75rem' }}>Repair Planning Tools</h2>
+          <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
+            Repair pricing is inspection-first, but planning tools can help you compare whether a repair, resurfacing, or replacement conversation makes sense before the site visit.
+          </p>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '0.5rem' }}>
+            <li><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Compare repair, resurfacing, and full replacement →</Link></li>
+            <li><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Use the deck cost calculator for replacement/resurfacing planning →</Link></li>
+            <li><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Estimate monthly payment scenarios after scope is known →</Link></li>
+          </ul>
+        </div>
+      </section>
 
       <section style={{ padding: '3rem 0', background: '#fafafa' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

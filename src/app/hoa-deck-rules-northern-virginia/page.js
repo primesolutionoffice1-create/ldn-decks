@@ -13,43 +13,44 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/hoa-deck-rules-northern-virginia',
   title: 'HOA Deck Rules in Northern Virginia (2026)',
-  description: 'Most NoVA HOAs require approval before deck construction. Learn the process, common restrictions, what to submit, and how we handle it 100% approval rate.',
+  description: 'Most NoVA HOAs require approval before deck construction. Learn the process, common restrictions, what to submit, and how LDN Decks manages HOA packages.',
+  image: '/social/hoa-deck-rules-northern-virginia-social.png',
 });
 
 const PATH = '/hoa-deck-rules-northern-virginia';
 
 const faqs = [
   {
-    q: "Do I need HOA approval to build a deck in Northern Virginia?",
-    a: "Almost always yes. Most Northern Virginia homes in planned communities require architectural review committee approval before exterior construction, including deck replacement, new decks, screened porches, stairs, railings, and color changes.",
+    q: 'Do I need HOA approval to build a deck in Northern Virginia?',
+    a: 'Almost always yes. Over 80% of Northern Virginia homes are in HOA communities that require architectural review committee (ARC) approval before exterior construction. HOA approval is separate from the county building permit, so most deck projects need both before construction starts.',
   },
   {
-    q: "What do I need to submit to my HOA?",
-    a: "Most HOA deck submissions need a site plan, scaled deck drawings, material list with brand and color, railing details, contractor license information, and sometimes a rendering or neighbor notification. We prepare the full package as part of our standard scope.",
+    q: 'What do I need to submit to my HOA?',
+    a: 'Most HOAs ask for a site plan, material list with brand and color, railing details, deck dimensions, stair placement, and sometimes renderings or neighbor notification. We prepare the full package so the HOA can review aesthetics while the county reviews code and structure.',
   },
   {
-    q: "How long does HOA deck approval take?",
-    a: "Most Northern Virginia HOA deck approvals take 2-4 weeks, but communities with monthly ARC meetings can take 4-6 weeks if a deadline is missed. We track submission cycles for major Loudoun, Fairfax, and Prince William HOAs.",
+    q: 'How long does HOA approval take?',
+    a: 'Most Northern Virginia HOA approvals take 2-4 weeks, but monthly ARC meetings can stretch review to 4-6 weeks if the submission misses the cutoff. Loudoun, Fairfax, and Prince William county permits often run in parallel when the HOA allows it.',
   },
   {
-    q: "Can my HOA deny a deck?",
-    a: "Yes, but denials usually happen because of non-compliant colors, materials, railings, setbacks, or incomplete packets. We review guidelines before design and submit complete packages, which prevents most rejection reasons.",
+    q: 'Can my HOA deny a deck?',
+    a: 'Yes, but denials are usually caused by non-compliant materials, colors, setbacks, stair placement, railing style, or incomplete documentation. We review the written guidelines before submitting so preventable issues are addressed before the ARC sees the package.',
   },
   {
-    q: "What happens if I build without HOA approval?",
-    a: "Building without HOA approval can trigger daily fines, required removal, resale title issues, or a lien for unpaid assessments. HOA approval should be secured before construction, alongside the county building permit.",
+    q: 'What happens if I build without HOA approval?',
+    a: 'Unapproved deck work can trigger daily fines, liens, forced removal, or resale problems when title and buyer inspections flag the exterior change. Always secure written HOA approval and the required county permit before construction begins.',
   },
 ];
 
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `https://ldndecks.com${PATH}#faq`,
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `https://ldndecks.com${PATH}#faq`,
   url: `https://ldndecks.com${PATH}`,
   mainEntity: faqs.map(({ q, a }) => ({
-    "@type": "Question",
+    '@type': 'Question',
     name: q,
-    acceptedAnswer: { "@type": "Answer", text: a },
+    acceptedAnswer: { '@type': 'Answer', text: a },
   })),
 };
 
@@ -59,15 +60,15 @@ export default function HOADeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema dateModified="2026-06-05" url={`https://ldndecks.com${PATH}`} name="HOA Deck Rules in Northern Virginia (2026)" description="Most NoVA HOAs require approval before deck construction. Learn the process, common restrictions, what to submit, and how LDN Decks manages HOA packages." speakable />
       <ArticleSchema
         title="HOA Deck Rules in Northern Virginia"
-        description="Northern Virginia HOA deck approval guide covering ARC packets, county permits, material restrictions, timelines, and community-specific deck rules."
+        description="Northern Virginia HOA deck approval process, documents, material restrictions, county permit sequencing, and submission support."
         path={PATH}
         image="/images/img15.jpeg"
         datePublished="2026-05-26"
-        dateModified="2026-06-02"
+        dateModified="2026-06-05"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="HOA Deck Rules in Northern Virginia (2026)" description="Most NoVA HOAs require approval before deck construction. Learn the process, common restrictions, what to submit, and how we handle it 100% approval rate." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -100,11 +101,12 @@ export default function HOADeckRulesPage() {
           <h3 style={S.h3}>Materials &amp; Colors</h3>
           <p style={S.p}>Most HOAs specify approved material types and limit colors to earth tones. Some require specific brands. We check your HOA&apos;s design guidelines before selecting materials.</p>
           <h3 style={S.h3}>Railing Styles</h3>
-          <p style={S.p}>Many HOAs mandate railing profile, color, and spacing. Cable rail is restricted in some communities. We know which systems each community allows.</p>
+          <p style={S.p}>Many HOAs mandate railing profile, color, and spacing. Cable rail is restricted in some communities, so railing selections should be checked against the written community standards before the ARC packet is submitted.</p>
           <h3 style={S.h3}>Height &amp; Setback Requirements</h3>
           <p style={S.p}>HOAs often impose setback distances more restrictive than county code. Typical: 15–25 feet from rear property line, 10–15 feet from sides.</p>
           <h3 style={S.h3}>Screening &amp; Privacy</h3>
           <p style={S.p}>Some communities require lattice skirting below elevated decks, restrict privacy screen heights, or mandate specific screening materials.</p>
+          <p style={S.p}>County reviewers look at a different layer of the project: footings, framing, ledger attachment, railings, stairs, and inspection access. Homeowners can compare county requirements in the <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County deck permit guide</Link>, <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County deck permit guide</Link>, <Link href="/deck-permit-prince-william-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Prince William County deck permit guide</Link>, and <Link href="/deck-permit-arlington-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Arlington County deck permit guide</Link>. For structural details, review our <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link> and <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>The Approval Process (Step by Step)</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
@@ -128,9 +130,9 @@ export default function HOADeckRulesPage() {
               'Coordinate HOA approval with county permit submission',
             ].map((item, i) => <li key={i} style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>{item}</li>)}
           </ul>
-          <p style={{ ...S.p, fontWeight: 600 }}>Our HOA approval rate: 100%. We&apos;ve never had a final denial because we check compliance before submitting.</p>
+          <p style={{ ...S.p, fontWeight: 600 }}>We check compliance before submitting so the package is aligned with the HOA&apos;s written requirements and preventable revisions are reduced.</p>
 
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Communities We&apos;ve Built In</h2>
+          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>HOA Communities We Help Plan Around</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
             {(() => {
               // Communities with dedicated HOA-rules pages get linked; the rest render as plain text.
@@ -142,6 +144,8 @@ export default function HOADeckRulesPage() {
                 'One Loudoun': '/one-loudoun-hoa-deck-rules',
                 'Lansdowne': '/lansdowne-hoa-deck-rules',
                 'Ashburn Village': '/ashburn-village-hoa-deck-rules',
+                'Sully Station': '/sully-station-hoa-deck-rules',
+                'Virginia Run': '/virginia-run-hoa-deck-rules',
               };
               const groups = [
                 { county: 'Loudoun County', communities: ['Broadlands', 'Ashburn Farm', 'Ashburn Village', 'Belmont Country Club', 'Brambleton', 'Stone Ridge', 'One Loudoun', 'Loudoun Valley Estates', 'South Riding', 'Lansdowne', 'Potomac Falls'] },
@@ -165,7 +169,53 @@ export default function HOADeckRulesPage() {
             })()}
           </div>
 
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
+          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Fairfax HOA Planning by Project Type</h2>
+          <p style={S.p}>Fairfax County deck projects often need the HOA packet, county permit drawings, and structural details to agree before submission. Use the paths below to match the approval strategy to the property type and avoid serial review delays.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+            {[
+              {
+                title: 'Estate and golf-course decks',
+                copy: 'Virginia Run and similar estate lots usually need premium material samples, landscape integration notes, load-path clarity, and sometimes engineering coordination.',
+                links: [
+                  ['/virginia-run-hoa-deck-rules', 'Virginia Run HOA guide'],
+                  ['/deck-builder-centreville-va', 'Centreville deck builder'],
+                  ['/tools/deck-load-calculator-virginia', 'Virginia deck load calculator'],
+                ],
+              },
+              {
+                title: 'Townhome and master-planned decks',
+                copy: 'Sully Station, Centre Ridge, Newgate, and similar communities need tighter footprint, railing, stair, and color documentation before ARC review.',
+                links: [
+                  ['/sully-station-hoa-deck-rules', 'Sully Station HOA guide'],
+                  ['/deck-permit-fairfax-county-virginia', 'Fairfax permit guide'],
+                  ['/education/deck-stair-code-rise-run-virginia', 'Virginia deck stair code'],
+                ],
+              },
+              {
+                title: 'Replacement and resurfacing projects',
+                copy: 'Older wood decks need the packet to explain whether framing stays, where ledger flashing changes, and how stairs and guards are brought to current code.',
+                links: [
+                  ['/deck-resurfacing-vs-replacement', 'Resurface vs replace'],
+                  ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger flashing guide'],
+                  ['/near-you/fairfax-county', 'Fairfax County hub'],
+                ],
+              },
+            ].map(({ title, copy, links }) => (
+              <div key={title} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1rem', background: '#fafafa' }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '0.5rem' }}>{title}</h3>
+                <p style={{ marginBottom: '0.75rem', lineHeight: 1.6, color: '#555' }}>{copy}</p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                  {links.map(([href, text]) => (
+                    <li key={href} style={{ marginBottom: '0.35rem' }}>
+                      <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <h2 id="faq" style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {faqs.map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
@@ -178,11 +228,14 @@ export default function HOADeckRulesPage() {
             {[
               ['/deck-permit-loudoun-county-virginia', 'Deck Permit Guide: Loudoun County'],
               ['/deck-permit-fairfax-county-virginia', 'Deck Permit Guide: Fairfax County'],
+              ['/near-you/fairfax-county', 'Fairfax County Deck Builder Hub'],
+              ['/deck-builder-centreville-va', 'Deck Builder in Centreville, VA'],
+              ['/sully-station-hoa-deck-rules', 'Sully Station HOA Deck Rules'],
+              ['/virginia-run-hoa-deck-rules', 'Virginia Run HOA Deck Rules'],
               ['/deck-permit-prince-william-county-virginia', 'Deck Permit Guide: Prince William County'],
-              ['/deck-permit-arlington-county-virginia', 'Deck Permit Guide: Arlington County'],
               ['/deck-permit-hoa-cost-loudoun-county', 'Loudoun Permit + HOA Cost Breakdown'],
-              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Flashing & Attachment Guide'],
-              ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing Guide'],
+              ['/education/deck-stair-code-rise-run-virginia', 'Virginia Deck Stair Code Guide'],
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/deck-builder-ashburn-va', 'Deck Builder in Ashburn, VA'],
               ['/ashburn-composite-deck-cost-financing', 'Ashburn Composite Deck Cost &amp; Financing'],
@@ -194,8 +247,8 @@ export default function HOADeckRulesPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Don't Navigate HOA Alone" buttonText="Get Free Estimate" link="/contact" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <SimpleCTA title="Don't Navigate HOA Alone" buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-05" />
 
       <RelatedGuides currentPath="/hoa-deck-rules-northern-virginia" />
 

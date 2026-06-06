@@ -7,18 +7,23 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
+import VerifiedProjectProofSection from '@/components/VerifiedProjectProofSection';
 
 export const metadata = buildMetadata({
   path: '/showcase',
   title: 'Custom Deck Project Gallery | Trex Deck Designer & Showcase',
   description: 'Explore our portfolio of custom deck, porch, and patio projects across Northern Virginia. See why we are the leading Trex deck designer in the region.',
+  image: '/social/showcase-gallery-social.png',
 });
 
 export default function ShowcasePage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/showcase" name="Custom Deck Project Gallery | Trex Deck Designer &amp; Showcase" description="Explore our portfolio of custom deck, porch, and patio projects across Northern Virginia. See why we are the leading Trex deck designer in the region." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/showcase" name="Custom Deck Project Gallery | Trex Deck Designer &amp; Showcase" description="Explore our portfolio of custom deck, porch, and patio projects across Northern Virginia. See why we are the leading Trex deck designer in the region." speakable />
       <ShowcaseHeader />
+      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '2rem 1.5rem 0' }}>
+        <VerifiedProjectProofSection compact />
+      </div>
       <ShowcaseGrid />
       <ShowcaseStats />
       <Testimonials />

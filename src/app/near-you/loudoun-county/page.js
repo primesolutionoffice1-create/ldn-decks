@@ -12,6 +12,7 @@ import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import CountyConversionLinks from '@/components/CountyConversionLinks';
 import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
@@ -25,7 +26,8 @@ const LocationIcon = () => (
 export const metadata = buildMetadata({
   path: "/near-you/loudoun-county",
   title: "Premium Deck Builder Loudoun County VA | Free 24h Quote",
-  description: "Trusted deck contractor in Loudoun County. review-backed. We handle all HOA permits & county codes. Get your free itemized estimate in 24 hours!",
+  description: "Deck contractor in Loudoun County with public review profile links, HOA planning support, county permit guidance, and written estimate requests.",
+  image: "/social/loudoun-county-deck-builder-hub-social.png",
 });
 
 const loudounCities = [
@@ -56,7 +58,7 @@ const faqs = [
 export default function LoudounCountyPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/near-you/loudoun-county" name="Deck Builder in Loudoun County, VA" description="Trusted deck contractor in Loudoun County. review-backed. We handle all HOA permits and county codes." speakable />
+      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/near-you/loudoun-county" name="Deck Builder in Loudoun County, VA" description="Deck contractor in Loudoun County with public review profile links, HOA planning support, county permit guidance, and written estimate requests." speakable />
       <LocalBusinessSchema
         city="Loudoun County"
         areaType="AdministrativeArea"
@@ -114,11 +116,11 @@ export default function LoudounCountyPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Loudoun County Homeowners Choose LDN Decks</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Loudoun County is one of the wealthiest and fastest-growing counties in the United States, with median home values exceeding $700,000. Homeowners here demand premium outdoor living spaces that match the quality of their homes — and they expect contractors who understand the unique requirements of building in Loudoun.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks is based in the heart of Northern Virginia and has completed <strong>200+ custom deck projects</strong> across Loudoun County communities including Ashburn, Leesburg, Sterling, Brambleton, Broadlands, South Riding, Stone Ridge, Purcellville, and Aldie. We are a <strong>Trex Platinum Partner</strong> (highest certification tier) and <strong>TimberTech Certified Installer</strong>, meaning we install the best <Link href="/composite-decks">composite decking</Link> materials available with manufacturer-backed warranties up to 50 years.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks is based in the heart of Northern Virginia and plans custom deck projects across Loudoun County communities including Ashburn, Leesburg, Sterling, Brambleton, Broadlands, South Riding, Stone Ridge, Purcellville, and Aldie. We are a <strong>Trex Platinum Partner</strong> (highest certification tier) and <strong>TimberTech Certified Installer</strong>, meaning we install the best <Link href="/composite-decks">composite decking</Link> materials available with manufacturer-backed warranties up to 50 years.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Navigating Loudoun County HOA Requirements</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Over 80% of Loudoun County homes are in HOA-governed communities. Architectural Review Board (ARB) approval is required before any exterior modification — including decks, porches, patios, fences, and pergolas. Each community has different material restrictions, color requirements, setback rules, and height limits.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We have extensive experience submitting compliant proposals to Loudoun County HOAs including <strong>Brambleton Community Association</strong>, <strong>Broadlands HOA</strong>, <strong>Ashburn Village Corporation</strong>, <strong>Lansdowne on the Potomac</strong>, <strong>Stone Ridge Association</strong>, and <strong>South Riding Proprietary</strong>. Our approval rate is <strong>100%</strong> — we design specifically to your community&apos;s requirements so revisions are rare.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We have extensive experience submitting compliant proposals to Loudoun County HOAs including <strong>Brambleton Community Association</strong>, <strong>Broadlands HOA</strong>, <strong>Ashburn Village Corporation</strong>, <strong>Lansdowne on the Potomac</strong>, <strong>Stone Ridge Association</strong>, and <strong>South Riding Proprietary</strong>. We design around your community&apos;s written requirements before filing so revision risk is reduced.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Loudoun County Building Permits</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>All decks attached to a home or more than 30 inches above grade require a building permit from Loudoun County Department of Building and Development. The permit process typically takes <strong>10-15 business days</strong> for review. Three inspections are required: footings, framing, and final.</p>
@@ -196,6 +198,7 @@ export default function LoudounCountyPage() {
       </section>
       <CountyRecentProjects countySlug="loudoun-county" limit={6} />
       <RelatedGuides currentPath="/near-you/loudoun-county" />
+      <CountyConversionLinks county="Loudoun County" permitHref="/deck-permit-loudoun-county-virginia" />
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Explore Our Services</h2>
@@ -205,7 +208,7 @@ export default function LoudounCountyPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>
       </section>
       <ContactHome />

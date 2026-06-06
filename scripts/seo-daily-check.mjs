@@ -1,9 +1,26 @@
-const ORIGIN = process.env.SEO_AUDIT_ORIGIN || 'https://ldndecks.com';
+const argValue = (name) => {
+  const prefix = `${name}=`;
+  return process.argv.find((arg) => arg.startsWith(prefix))?.slice(prefix.length);
+};
+
+const ORIGIN = (
+  argValue('--origin') ||
+  process.env.SEO_CHECK_ORIGIN ||
+  process.env.SEO_AUDIT_ORIGIN ||
+  'https://ldndecks.com'
+).replace(/\/$/, '');
+const CANONICAL_ORIGIN = (
+  argValue('--canonical-origin') ||
+  process.env.SEO_CHECK_CANONICAL_ORIGIN ||
+  'https://ldndecks.com'
+).replace(/\/$/, '');
 const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 721);
 const EXPECTED_LOCAL_SERVICE_URLS = Number(process.env.EXPECTED_LOCAL_SERVICE_URLS || 464);
 const KNOWN_BAD_SITEMAP_URLS = Number(process.env.KNOWN_BAD_SITEMAP_URLS || 260);
-
 const localServicePattern = /\/(service|composite-decks|wood-decks|deck-repair|screened-porches|pergolas|patios|outdoor-living)\//;
+const submitIndexNowRequested = process.argv.includes('--submit-indexnow');
+const allowIndexNowSubmit = process.env.ALLOW_LIVE_INDEXNOW_SUBMIT === 'true';
+const shouldSubmitIndexNow = submitIndexNowRequested && allowIndexNowSubmit;
 
 const priorityPaths = [
   '/',
@@ -23,11 +40,21 @@ const priorityPaths = [
 ];
 
 const expectedCitationSignals = [
+  'google.com/maps/place/Loudoun+Decks',
   'yelp.com/biz/loudoun-decks-centreville',
-  'bbb.org/us/va/centreville',
+  'bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241',
+  'houzz.com/pro/webuser-782541997/loudoun-decks',
   'buildzoom.com/contractor/loudoun-decks',
-  'business.loudounchamber.org/list/member/loudoun-deck-30047.htm',
+  'business.loudounchamber.org/list/member/loudoun-decks-30047',
   'mapquest.com/us/virginia/loudoun-decks-532352487',
+];
+
+const citationPages = ['/press', '/social'];
+
+const forbiddenCitationSignals = [
+  'business.loudounchamber.org/list/member/loudoun-deck-30047.htm',
+  'yelp.com/biz/loudoun-decks-manassas',
+  'bbb.org/us/va/manassas/profile/deck-builder/loudoun-decks',
 ];
 
 const legacySitemapPaths = [
@@ -96,7 +123,7 @@ try {
   if (!summarizeCheck('local-service URL count is healthy', localServiceUrlCount >= EXPECTED_LOCAL_SERVICE_URLS, `${localServiceUrlCount} URLs`)) failures.push('local service sitemap count');
 
   for (const path of priorityPaths) {
-    const loc = `${ORIGIN}${path === '/' ? '' : path}`;
+    const loc = `${CANONICAL_ORIGIN}${path === '/' ? '' : path}`;
     if (!sitemap.text.includes(`<loc>${loc}</loc>`)) {
       failures.push(`missing sitemap URL: ${loc}`);
       summarizeCheck(`sitemap contains ${path}`, false);
@@ -120,7 +147,7 @@ try {
   for (const path of priorityPaths) {
     const page = await getText(`${ORIGIN}${path === '/' ? '' : path}`);
     const canonical = extractCanonical(page.text);
-    const expectedCanonical = `${ORIGIN}${path === '/' ? '' : path}`;
+    const expectedCanonical = `${CANONICAL_ORIGIN}${path === '/' ? '' : path}`;
     const routeName = path === '/' ? 'homepage' : path;
 
     if (!summarizeCheck(`${routeName} returns 200`, page.ok, `${page.status}`)) failures.push(`${path} status`);
@@ -130,22 +157,44 @@ try {
     }
   }
 
-  const social = await getText(`${ORIGIN}/social`);
-  for (const signal of expectedCitationSignals) {
-    if (!summarizeCheck(`/social contains ${signal}`, social.text.includes(signal))) {
-      failures.push(`/social missing ${signal}`);
+  for (const path of citationPages) {
+    const page = await getText(`${ORIGIN}${path}`);
+    for (const signal of expectedCitationSignals) {
+      if (!summarizeCheck(`${path} contains ${signal}`, page.text.includes(signal))) {
+        failures.push(`${path} missing ${signal}`);
+      }
+    }
+
+    for (const signal of forbiddenCitationSignals) {
+      if (!summarizeCheck(`${path} does not contain stale ${signal}`, !page.text.includes(signal))) {
+        failures.push(`${path} stale ${signal}`);
+      }
     }
   }
 
-  const indexNow = await getText(`${ORIGIN}/api/indexnow?submit=true`);
+  if (submitIndexNowRequested && !allowIndexNowSubmit) {
+    summarizeCheck(
+      'IndexNow live submission blocked by safety guard',
+      true,
+      'set ALLOW_LIVE_INDEXNOW_SUBMIT=true with --submit-indexnow only after approval',
+    );
+  }
+
+  const indexNow = await getText(`${ORIGIN}/api/indexnow${shouldSubmitIndexNow ? '?submit=true' : ''}`);
   let indexNowResult = null;
   try {
     indexNowResult = JSON.parse(indexNow.text);
   } catch {
     indexNowResult = null;
   }
-  const indexNowOk = indexNow.ok && indexNowResult?.result?.ok === true && indexNowResult?.submitted >= EXPECTED_SITEMAP_URLS;
-  if (!summarizeCheck('IndexNow submission accepted', indexNowOk, indexNow.text.trim())) failures.push('indexnow');
+  const indexNowOk = shouldSubmitIndexNow
+    ? indexNow.ok && indexNowResult?.result?.ok === true && indexNowResult?.submitted >= EXPECTED_SITEMAP_URLS
+    : indexNow.ok && indexNowResult?.total >= EXPECTED_SITEMAP_URLS;
+  const indexNowLabel = shouldSubmitIndexNow ? 'IndexNow submission accepted' : 'IndexNow preview is reachable';
+  const indexNowDetails = shouldSubmitIndexNow
+    ? indexNow.text.trim()
+    : `${indexNowResult?.total || 0} URLs; no live submission`;
+  if (!summarizeCheck(indexNowLabel, indexNowOk, indexNowDetails)) failures.push('indexnow');
 
   if (failures.length) {
     console.error(`\nSEO daily check failed: ${failures.join('; ')}`);

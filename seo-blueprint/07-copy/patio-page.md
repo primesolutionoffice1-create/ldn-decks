@@ -30,7 +30,7 @@ Subhead: "Paver, flagstone, and stamped concrete patios — designed and built w
 >
 > Hand-laid paver patios. Natural flagstone hardscape. Stamped concrete with custom borders. Built to integrate with your deck, pergola, fire feature, or outdoor kitchen.
 >
-> **Class A Virginia · TrexPro Platinum · 5.0★ from 41+ NoVA homeowners**
+> **Class A Virginia · Manufacturer profile links · Public review profiles · BBB verification**
 >
 > [→ Get My Patio Quote]   [☎ (571) 655-7207]
 >

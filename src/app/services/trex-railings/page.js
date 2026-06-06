@@ -18,7 +18,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/trex-railings",
   title: "Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades",
-  description: "Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish."
+  description: "Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish.",
+  image: "/social/trex-railings-service-social.png",
 });
 
 const expansionSections = [
@@ -107,7 +108,7 @@ const faqs = [
 export default function TrexRailingsPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/trex-railings" name="Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades" description="Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/trex-railings" name="Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades" description="Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish." speakable />
       <ServiceSchema
         name="Trex Railing Installation"
         description="Trex composite and aluminum railing systems for Northern Virginia decks. Signature, Select, and Transcend rail lines."
@@ -123,7 +124,7 @@ export default function TrexRailingsPage() {
         description="Upgrade your deck with modern Trex railing systems and a custom cocktail top - perfect for entertaining, relaxing, and adding a premium finish to your outdoor space."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
       </section>
       <ServiceMain
         subtitle="More Than Just a Railing"
@@ -164,7 +165,7 @@ export default function TrexRailingsPage() {
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/trex-railings" />
       <ServicesFAQ canonicalUrl="https://ldndecks.com/services/trex-railings" title="Trex Railings FAQs" faqs={faqs} />
-      <SimpleCTA title="Upgrade Your Deck Railings" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Upgrade Your Deck Railings" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

@@ -11,6 +11,7 @@ export const metadata = buildMetadata({
   path,
   title: 'Deck Planning Tools | Loudoun Decks',
   description: 'Free deck planning tools from Loudoun Decks for Northern Virginia homeowners, including footing depth, stair rise-run and project calculators.',
+  image: '/social/deck-planning-tools-social.png',
 });
 
 const itemListSchema = {
@@ -128,7 +129,7 @@ export default function DeckToolsPage() {
   return (
     <main>
       <JsonLd data={itemListSchema} />
-      <WebPageSchema
+      <WebPageSchema dateModified="2026-06-01"
         url={pageUrl}
         name="Deck Planning Tools"
         description="Free deck planning tools from Loudoun Decks for Northern Virginia homeowners."
@@ -184,7 +185,7 @@ export default function DeckToolsPage() {
             These tools help homeowners frame better questions before a consultation. They do not replace local permit review, engineering judgment, manufacturer instructions or a professional inspection. For final planning, Loudoun Decks can confirm measurements, structure, materials, permits, HOA requirements and safety details on site.
           </p>
           <p>
-            <Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 800 }}>
+            <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 800 }}>
               Request a professional deck estimate
             </Link>
           </p>

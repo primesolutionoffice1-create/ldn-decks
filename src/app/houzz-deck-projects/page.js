@@ -7,11 +7,13 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
+import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/houzz-deck-projects',
   title: 'Loudoun Decks on Houzz | Deck Projects in Northern Virginia',
   description: 'View Loudoun Decks projects on Houzz, including custom decks, screened porches, patios, and outdoor living spaces across Northern Virginia.',
+  image: '/social/houzz-deck-projects-social.png',
 });
 
 const pageSchema = {
@@ -35,7 +37,7 @@ export default function HouzzProjectsPage() {
   return (
     <>
       <JsonLd data={pageSchema} />
-      <WebPageSchema url="https://ldndecks.com/houzz-deck-projects" name="Loudoun Decks on Houzz | Deck Projects in Northern Virginia" description="View Loudoun Decks projects on Houzz, including custom decks, screened porches, patios, and outdoor living spaces across Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/houzz-deck-projects" name="Loudoun Decks on Houzz | Deck Projects in Northern Virginia" description="View Loudoun Decks projects on Houzz, including custom decks, screened porches, patios, and outdoor living spaces across Northern Virginia." speakable />
 
       {/* Hero Section */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '7rem 0 6rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
@@ -49,7 +51,7 @@ export default function HouzzProjectsPage() {
             Portfolio & Houzz Projects
           </h1>
           <p style={{ color: '#d1d5db', fontSize: '1.35rem', lineHeight: 1.6, maxWidth: 750, margin: '0 auto 3rem' }}>
-            Browse our verified Houzz projects showcasing high-end custom decks, screened porches, and backyard transformations across Northern Virginia.
+            Browse Loudoun Decks project photos and public profile information on Houzz, then verify current reviews and project details directly on the Houzz platform.
           </p>
           <div style={{ display: 'flex', gap: '1.25rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a 
@@ -82,9 +84,9 @@ export default function HouzzProjectsPage() {
               <p style={S.p}>
                 Our featured projects include everything from small urban deck replacements to massive, multi-level outdoor living complexes featuring integrated kitchens, fire pits, and luxury lighting. By browsing our work on Houzz, you can see how we navigate the unique topography and architectural styles of communities like Ashburn, Leesburg, and Reston.
               </p>
-              <div style={{ marginTop: '2rem', padding: '1.5rem', background: '#f3f4f6', borderRadius: 12, borderLeft: '5px solid var(--color-primary)' }}>
-                <p style={{ margin: 0, fontWeight: 700, fontSize: '1.1rem', color: '#111' }}>"Nick and his team are true professionals. The design they provided was exactly what we wanted for our backyard."</p>
-                <p style={{ margin: '0.5rem 0 0', color: '#6b7280', fontSize: '0.95rem' }}>— Satisfied Homeowner on Houzz</p>
+              <div style={{ marginTop: '2rem', padding: '1.5rem', background: '#fff8f1', borderRadius: 12, borderLeft: '5px solid var(--color-primary)' }}>
+                <p style={{ margin: 0, fontWeight: 700, fontSize: '1.1rem', color: '#111' }}>Evidence note: review text, reviewer names, dates, and ratings should be read on the original Houzz profile.</p>
+                <p style={{ margin: '0.5rem 0 0', color: '#6b7280', fontSize: '0.95rem', lineHeight: 1.6 }}>This page avoids republishing third-party review excerpts unless they are separately verified and approved for use.</p>
               </div>
             </div>
             <div style={{ position: 'relative', height: 500, borderRadius: 24, overflow: 'hidden', boxShadow: '0 30px 60px -12px rgba(0,0,0,0.25)', border: '1px solid #e5e7eb' }}>
@@ -96,8 +98,8 @@ export default function HouzzProjectsPage() {
                 style={{ objectFit: 'cover' }}
                />
                <div style={{ position: 'absolute', bottom: 25, left: 25, right: 25, background: 'rgba(255,255,255,0.98)', padding: '1.5rem', borderRadius: 16, textAlign: 'center', backdropFilter: 'blur(8px)' }}>
-                  <div style={{ color: 'var(--color-primary)', fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.25rem' }}>Google review profile</div>
-                  <p style={{ margin: 0, fontWeight: 800, color: '#111', fontSize: '1.2rem' }}>Verified Professional on Houzz</p>
+                  <div style={{ color: 'var(--color-primary)', fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.25rem' }}>Public profile</div>
+                  <p style={{ margin: 0, fontWeight: 800, color: '#111', fontSize: '1.2rem' }}>Verify current details on Houzz</p>
                </div>
             </div>
           </div>
@@ -115,7 +117,7 @@ export default function HouzzProjectsPage() {
               </div>
               <h3 style={S.h3}>Trex Certified Deck Builders</h3>
               <p style={S.p}>
-                We specialize in high-performance composite decking. As a Trex certified partner, we bring unmatched expertise to every build, ensuring your deck remains splinter-free and rot-resistant for decades.
+                We specialize in high-performance composite decking and install Trex systems according to manufacturer requirements. Product warranties and maintenance expectations should be verified against the current Trex line selected for your project.
               </p>
               <Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none' }}>Learn more about Trex →</Link>
             </div>
@@ -149,7 +151,7 @@ export default function HouzzProjectsPage() {
           <div style={{ maxWidth: 800, margin: '0 auto' }}>
             <h2 style={S.h2}>Why Research Our Houzz Projects?</h2>
             <p style={S.p}>
-              Houzz is more than just a gallery; it is a community of homeowners and professionals sharing real-world feedback. When you visit our Houzz profile, you are seeing <strong>public reviews</strong> and <strong>high-resolution photography</strong> from real jobsites in Loudoun County and Fairfax County.
+              Houzz is more than just a gallery; it is a public platform where homeowners and professionals share photos, profile details, and feedback. When you visit our Houzz profile, verify current review text, dates, ratings, and project images directly on Houzz.
             </p>
             <h3 style={S.h3}>Serving Loudoun, Fairfax, and Prince William Counties</h3>
             <p style={S.p}>
@@ -164,7 +166,7 @@ export default function HouzzProjectsPage() {
               <li>✅ <strong>Sterling</strong> - Deck resurfacing and upgrades.</li>
             </ul>
             <p style={S.p}>
-              By checking our local projects, you can see how we handle specific HOA requirements and local building codes, ensuring your project is compliant and beautiful.
+              By checking local project photos and then discussing your property with our team, you can compare design ideas against the HOA, permit, access, and code constraints that apply to your own home.
             </p>
           </div>
         </div>
@@ -191,12 +193,38 @@ export default function HouzzProjectsPage() {
         </div>
       </section>
 
+      <section style={{ ...S.section, background: '#fff' }}>
+        <div style={S.container}>
+          <h2 style={{ ...S.h2, textAlign: 'center' }}>Plan a Project Like the Ones You See on Houzz</h2>
+          <p style={{ ...S.p, maxWidth: 760, margin: '0 auto 2rem', textAlign: 'center' }}>
+            Use our local planning tools to compare budget, materials, permits, and photo-gallery context before requesting a quote.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+            {[
+              { label: 'Estimate deck cost', href: '/deck-cost-calculator' },
+              { label: 'Compare payment options', href: '/deck-payment-estimator' },
+              { label: 'Read customer reviews', href: '/reviews' },
+              { label: 'Verify BBB profile', href: '/bbb-accredited-deck-builder-virginia' },
+              { label: 'See project gallery', href: '/showcase' },
+              { label: 'Before and after projects', href: '/before-and-after' },
+              { label: 'Review composite decks', href: '/composite-decks' },
+              { label: 'Check permit rules', href: '/deck-permit-loudoun-county-virginia' },
+              { label: 'Request a quote', href: '/get-estimate' },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} style={{ display: 'block', padding: '1.1rem', border: '1px solid #e5e7eb', borderRadius: 12, color: '#111', background: '#f9fafb', textDecoration: 'none', fontWeight: 800 }}>
+                {item.label} →
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Gallery Section */}
       <section style={{ ...S.section, background: '#f3f4f6', textAlign: 'center' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={S.h2}>Backyard Inspiration Gallery</h2>
           <p style={{ ...S.p, margin: '0 auto 3rem', maxWidth: 700 }}>
-            Take a look at some of our favorite recent projects. Each of these homes now enjoys an outdoor space designed specifically for their lifestyle.
+            Take a look at design inspiration from our outdoor-living gallery. Project-specific location, date, cost, and homeowner story details should be verified before any image is reused as a formal case study.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginBottom: '4rem' }}>
              {[30, 31, 32, 33, 34, 35].map(num => (
@@ -224,6 +252,7 @@ export default function HouzzProjectsPage() {
       />
       
       <RelatedGuides currentPath="/houzz-deck-projects" />
+      <NamedAuthor context="Northern Virginia project research and Houzz profile verification" lastUpdated="2026-06-01" />
       <ContactHome />
     </>
   );

@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
   path: "/services/porches/front-porch",
   title: "Front Porch Builder Northern Virginia | Custom Curb Appeal Upgrades",
   description: "Custom front porches in Northern Virginia. Premium porticos, wraparound entries & curb appeal upgrades in Loudoun & Fairfax County. Free estimate.",
-  image: "/images/img22.jpeg",
+  image: "/social/front-porch-social.png",
 });
 
 const inclusions = [
@@ -92,7 +92,7 @@ const faqSchema = {
 export default function FrontPorchPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/porches/front-porch" name="Front Porch Builder Northern Virginia | Custom Curb Appeal Upgrades" description="Custom front porches in Northern Virginia. Premium porticos, wraparound entries &amp; curb appeal upgrades in Loudoun &amp; Fairfax County. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/porches/front-porch" name="Front Porch Builder Northern Virginia | Custom Curb Appeal Upgrades" description="Custom front porches in Northern Virginia. Premium porticos, wraparound entries &amp; curb appeal upgrades in Loudoun &amp; Fairfax County. Free estimate." speakable />
       <ServiceSchema
         name="Front Porch Construction"
         description="Custom front porch design and construction in Northern Virginia. Enhance curb appeal with covered or open porches."
@@ -159,7 +159,7 @@ export default function FrontPorchPage() {
       </section>
 
       <ServiceAreasGrid />
-      <SimpleCTA title="Design Your Front Porch" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Design Your Front Porch" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/services/porches/front-porch" />
       <ContactHome />
     </main>

@@ -10,6 +10,7 @@ export const metadata = {
     path: '/thank-you',
     title: 'Thank You | Loudoun Decks',
     description: 'Your message has been successfully sent. We will get back to you shortly to discuss your outdoor project.',
+    image: '/social/thank-you-social.png',
   }),
   robots: { index: false, follow: true },
 };
@@ -61,11 +62,14 @@ export default function ThankYouPage() {
           </div>
           
           <div className={styles.buttonGroup}>
-            <Link href="/" className={styles.homeBtn}>
-              Back to Home
+            <Link href="/reviews" className={styles.homeBtn}>
+              Read Homeowner Reviews
             </Link>
             <Link href="/showcase" className={styles.galleryBtn}>
               View Project Gallery
+            </Link>
+            <Link href="/before-and-after" className={styles.galleryBtn}>
+              Before &amp; After
             </Link>
           </div>
 

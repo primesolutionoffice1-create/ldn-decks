@@ -28,7 +28,7 @@ const HomeSEOContent = () => {
           <div className={styles.item}>
             <h2 className={styles.heading}>Local Deck Builders for NoVA City Searches</h2>
             <p className={styles.text}>
-              If you are comparing local deck builders in Ashburn, Sterling, McLean, Vienna, Herndon, Reston, Woodbridge, or Fairfax, use our city pages for project examples, permit notes, and neighborhood-specific service details: <Link href="/deck-builder-ashburn-va">Ashburn deck builder</Link>, <Link href="/deck-builder-woodbridge-va">Woodbridge deck builder</Link>, <Link href="/deck-builder-mclean-va">McLean deck builder</Link>, and <Link href="/areas-we-serve">all service areas</Link>.
+              If you are comparing local deck builders in Ashburn, Sterling, McLean, Vienna, Herndon, Reston, Woodbridge, or Fairfax, use our city pages for planning examples, permit notes, and neighborhood-specific service details: <Link href="/deck-builder-ashburn-va">Ashburn deck builder</Link>, <Link href="/deck-builder-woodbridge-va">Woodbridge deck builder</Link>, <Link href="/deck-builder-mclean-va">McLean deck builder</Link>, and <Link href="/areas-we-serve">all service areas</Link>.
             </p>
           </div>
         </div>

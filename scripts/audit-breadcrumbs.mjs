@@ -18,10 +18,11 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { resolveVaultReportsDir } from './lib/report-paths.mjs';
 
 const APP_DIR = path.resolve('src/app');
 const LABELS_FILE = path.resolve('src/lib/breadcrumbLabels.js');
-const REPORT_DIR = '/Users/ldndecks/ldn-decks-growth-brain-vaults/ldn-decks/wiki/reports';
+const REPORT_DIR = resolveVaultReportsDir(path.resolve('.'));
 
 function loadKnownSegments() {
   const src = fs.readFileSync(LABELS_FILE, 'utf8');

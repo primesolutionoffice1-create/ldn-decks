@@ -14,6 +14,7 @@ export const metadata = buildMetadata({
   path: '/best-time-to-build-a-deck-northern-virginia',
   title: 'Best Time to Build a Deck in Northern Virginia (2026)',
   description: 'Late winter/early spring gets the best pricing and fastest scheduling. Summer is peak season with 4-6 week waits. Month-by-month guide, hidden HOA + permit timeline, and how to time financing.',
+  image: '/social/best-time-to-build-deck-social.png',
 });
 
 const faqs = [
@@ -71,7 +72,7 @@ export default function BestTimeToBuildPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/best-time-to-build-a-deck-northern-virginia" name="Best Time to Build a Deck in Northern Virginia (2026)" description="Late winter/early spring gets the best pricing and fastest scheduling. Summer is peak season with 4-6 week waits. Month-by-month guide, hidden HOA + permit timeline, and how to time financing." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/best-time-to-build-a-deck-northern-virginia" name="Best Time to Build a Deck in Northern Virginia (2026)" description="Late winter/early spring gets the best pricing and fastest scheduling. Summer is peak season with 4-6 week waits. Month-by-month guide, hidden HOA + permit timeline, and how to time financing." speakable />
       <ArticleSchema
         title="Best Time to Build a Deck in Northern Virginia (2026)"
         description="Month-by-month guide to deck timing in Northern Virginia — pricing, wait times, weather, the hidden HOA + permit timeline before construction, and how to time financing."
@@ -237,7 +238,7 @@ export default function BestTimeToBuildPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Book Now for Spring/Summer Slots Filling Fast" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Book Now for Spring/Summer Slots Filling Fast" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/best-time-to-build-a-deck-northern-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 

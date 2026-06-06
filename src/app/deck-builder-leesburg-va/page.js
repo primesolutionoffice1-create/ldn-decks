@@ -16,12 +16,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-leesburg-va',
   title: 'Deck Builder in Leesburg, VA | Trex Certified | Loudoun Decks',
   description: 'Deck builder in Leesburg, VA. Custom Trex & cedar decks for River Creek, Lansdowne, Tavistock Farms & the historic district. Town of Leesburg + Loudoun County permits handled. Free estimate  -  (571) 655-7207.',
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-leesburg-va-social.png',
 });
 
 const inclusions = [
@@ -70,7 +71,7 @@ const leesburgFAQs = [
   },
   {
     q: "What's special about historic district deck projects?",
-    a: "Leesburg's historic district near King Street is governed by the Town of Leesburg's Architectural Review Board (ARB), which adds 4-6 weeks to the typical permit timeline. The ARB reviews material, scale, color, and how the deck reads from the public right-of-way. We file the ARB submission in parallel with the Town building permit, designed specifically to clear historic review on first round."
+    a: "Leesburg's historic district near King Street is governed by the Town of Leesburg's Architectural Review Board (ARB), which adds 4-6 weeks to the typical permit timeline. The ARB reviews material, scale, color, and how the deck reads from the public right-of-way. We prepare the ARB submission in parallel with the Town building permit so review questions can be answered quickly."
   },
   {
     q: "How long does a Leesburg deck project take from contract?",
@@ -123,9 +124,9 @@ const expansionSections = [
   {
     title: "Leesburg Neighborhoods We Build In",
     paragraphs: [
-      "Lansdowne (Conservancy and Lansdowne Woods) is our highest-volume Leesburg sub-market — the master-planned golf community split between the original Conservancy estate section and the 55+ Lansdowne Woods sub-community. Conservancy projects average 21-day ARC review and our portfolio there exceeds 14 completed projects. Common build: 500-700 sqft multi-level composite deck, $55k-$95k. See our dedicated Lansdowne HOA deck rules guide for the full submission process.",
-      "River Creek is the Potomac-side gated community where naturalist aesthetics dominate. Cedar and IPE remain popular here despite the higher maintenance, and cable rail submissions are routinely approved given the lot-context rationale (Potomac views, mature woods). Architectural review averages 21-28 days; our packets clear first-round when the lot-context documentation is included.",
-      "Beacon Hill is South Leesburg estate territory with HOA review averaging 14 days. Beacon Hill homes typically have larger lots and accommodate multi-level deck designs. We've completed 6+ projects here.",
+      "Lansdowne (Conservancy and Lansdowne Woods) is a master-planned golf community split between the original Conservancy estate section and the 55+ Lansdowne Woods sub-community. Conservancy projects often require detailed ARC review, and common scopes include 500-700 sqft multi-level composite decks in the $55k-$95k range. See our dedicated Lansdowne HOA deck rules guide for the full submission process.",
+      "River Creek is the Potomac-side gated community where naturalist aesthetics dominate. Cedar and IPE remain popular here despite the higher maintenance, and cable rail submissions usually need lot-context rationale such as Potomac views or mature woods. Architectural review timelines vary by packet completeness and committee schedule.",
+      "Beacon Hill is South Leesburg estate territory with HOA review considerations tied to larger lots and multi-level deck designs.",
       "Red Cedar is newer (2010+) development north of downtown with HOA review averaging 18 days. Common Red Cedar build: 400-500 sqft composite deck with aluminum railing, $35k-$52k.",
       "Brandon Park and Bellewood are mid-tier HOAs with 14-21 day review windows and flexible material approval policies — well-suited to the more value-conscious Leesburg deck budgets.",
       "Greenway Farm sits in Loudoun County's higher-end estate area with mixed HOA / no-HOA properties. Larger lot sizes (3-10 acres) typical; projects scale to $60k-$200k.",
@@ -153,7 +154,7 @@ const expansionSections = [
     paragraphs: [
       "Leesburg is unique among Loudoun towns: properties inside the Town of Leesburg corporate limits permit through the Town's building department; properties just outside the line permit through Loudoun County. The two operate independently with different timelines, fee structures, and submission portals.",
       "Town of Leesburg permits average 2-4 weeks plan review through the Town building department. Town fees are flat-tier based on construction valuation (typically $150-$500 for residential deck work). The Town's reviewer staff is smaller than the County's but typically faster on revision cycles.",
-      "Loudoun County permits average 2-4 weeks through the LandMARC portal. County fees are valuation-scaled (typically $150-$700). The LandMARC system requires specific PDF plan formats; we prepare every submission to that standard so first-round approval is the norm.",
+      "Loudoun County permits average 2-4 weeks through the LandMARC portal. County fees are valuation-scaled (typically $150-$700). The LandMARC system requires specific PDF plan formats; we prepare every submission to that standard so reviewer comments are easier to answer quickly.",
       "Historic district properties downtown add a third layer: the Town's Architectural Review Board (ARB) reviews exterior changes. ARB review adds 30-45 days. The ARB submission requires elevation drawings, material samples, color specifications, and (often) a public hearing for visible exterior modifications.",
       "Our standard Leesburg estimate identifies which jurisdiction applies on the very first call and what (if any) ARB review will be required. The wrong filing path is the most common source of a delayed Leesburg deck. See our full Loudoun County deck permit guide for the county-side walkthrough."
     ]
@@ -164,11 +165,11 @@ export default function DeckBuilderLeesburgPage() {
   return (
     <main>
       <LocalBusinessSchema city="Leesburg" url="https://ldndecks.com/deck-builder-leesburg-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-leesburg-va" name="Deck Builder in Leesburg, VA | Trex Certified | Loudoun Decks" description="Deck builder in Leesburg, VA. Custom Trex &amp; cedar decks for River Creek, Lansdowne, Tavistock Farms &amp; the historic district. Town of Leesburg + Loudoun County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-leesburg-va" name="Deck Builder in Leesburg, VA | Trex Certified | Loudoun Decks" description="Deck builder in Leesburg, VA. Custom Trex &amp; cedar decks for River Creek, Lansdowne, Tavistock Farms &amp; the historic district. Town of Leesburg + Loudoun County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Leesburg, VA's Trusted Deck Company"
         title="Custom Deck Builder in Leesburg, VA"
-        description="Loudoun Decks builds composite, cedar and IPE decks across River Creek, Lansdowne and the historic district. Town of Leesburg + Loudoun County permits handled. review-supported reputation."
+        description="Loudoun Decks builds composite, cedar and IPE decks across River Creek, Lansdowne and the historic district. Town of Leesburg + Loudoun County permits handled. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Historic Loudoun Craftsmanship"
@@ -183,6 +184,19 @@ export default function DeckBuilderLeesburgPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <PlanningUpdate
+        market="Leesburg decks in 2026"
+        notes={[
+          "Leesburg projects still start with a jurisdiction check because Town of Leesburg and Loudoun County permits follow separate paths.",
+          "Historic district projects need earlier material, color, and visibility planning before the ARB review window begins.",
+          "River Creek, Lansdowne, and Potomac-facing lots benefit from early railing and drainage decisions because slope and view preservation can change the budget."
+        ]}
+        links={[
+          { href: "/deck-permit-loudoun-county-virginia", label: "Loudoun permit guide" },
+          { href: "/lansdowne-hoa-deck-rules", label: "Lansdowne HOA guide" },
+          { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" }
+        ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -218,6 +232,7 @@ export default function DeckBuilderLeesburgPage() {
             ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
             ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
             ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
+            ['/services/deck-repair', 'Deck Repair Service in Northern Virginia'],
             ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
             ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
           ].map(([href, text]) => (
@@ -227,15 +242,19 @@ export default function DeckBuilderLeesburgPage() {
           ))}
         
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
+            <li key="/bbb" style={{ marginBottom: '0.5rem' }}><Link href="/bbb-accredited-deck-builder-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>BBB Accredited Deck Builder →</Link></li>
+            <li key="/before-after" style={{ marginBottom: '0.5rem' }}><Link href="/before-and-after" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Before & After Deck Projects →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
+            <li key="/deck-payment-estimator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
+            <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Request a Written Leesburg Estimate →</Link></li>
             <li key="/deck-builder-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Leesburg" /></div></section>
-      <SimpleCTA title="Build Your Dream Deck in Leesburg" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Dream Deck in Leesburg" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-leesburg-va" />
-      <NamedAuthor context="Leesburg and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Leesburg and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

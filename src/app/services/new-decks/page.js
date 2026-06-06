@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
   path: "/services/new-decks",
   title: "Custom Deck Builder Northern Virginia | Design & Build | Loudoun Decks",
   description: "Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood. Permits, HOA, footings, framing — full-service builds from $15,000+. Free estimate.",
-  image: "/showcase/img08.jpeg",
+  image: "/social/new-decks-social.png",
 });
 
 const expansionSections = [
@@ -28,7 +28,7 @@ const expansionSections = [
     paragraphs: [
       "Every deck project starts with a property walkthrough. We check the house-to-grade relationship, ledger attachment conditions, soil type, drainage patterns, utility locations, sun exposure and how the homeowner plans to use the space. These details drive the structural plan before any board selection happens.",
       "After the site review, we produce a dimensioned design with material specifications, a structural framing plan, and a written scope of work. If the home is in an [HOA-governed community](/hoa-deck-rules-northern-virginia), we prepare the architectural review submission concurrently with the county permit package so both approvals move in parallel.",
-      "Construction follows a four-inspection sequence: layout and footing, framing, railing/guard, and final. We schedule each inspection with the county and do not proceed to the next phase until the previous one clears. The homeowner gets a clean closeout with a passed final inspection, manufacturer warranty registration, and a maintenance guide.",
+      "Construction typically follows the inspection sequence required by the local jurisdiction, which may include layout, footing, framing, railing/guard, and final review. We schedule required inspections with the county and do not proceed past inspection hold points until the prior phase clears. The homeowner gets closeout documentation, manufacturer warranty information, and a maintenance guide.",
     ],
   },
   {
@@ -45,7 +45,7 @@ const expansionSections = [
       "Northern Virginia's climate — 90°F+ summers with 70%+ humidity, 50–80 freeze-thaw cycles per winter, heavy pollen in spring — punishes low-quality decking. Material selection is not a style decision; it is a performance decision. We install three categories of decking and guide homeowners to the right one based on budget, maintenance tolerance and aesthetic goals.",
     ],
     listItems: [
-      { label: "Trex composite", text: "Our most-installed material. Capped polymer shell resists scratching, staining and fading. Transcend, Enhance and Select tiers from $15,000+. 25-year residential warranty. See the full [Trex product guide](/trex-decks)." },
+      { label: "Trex composite", text: "A common premium composite choice. Capped polymer shell resists scratching, staining and fading. Transcend, Enhance and Select tiers from $15,000+. 25-year residential warranty. See the full [Trex product guide](/trex-decks)." },
       { label: "TimberTech / AZEK", text: "Premium PVC and composite lines with deeper wood-grain textures and the lowest moisture absorption in the category. AZEK Vintage is the gold standard for shaded or wooded lots. See our [TimberTech page](/timbertech-decks)." },
       { label: "Pressure-treated wood", text: "Still the right choice for budget-conscious projects where the homeowner accepts annual staining. We use #1 grade Southern Yellow Pine with ground-contact-rated posts and hot-dipped galvanized hardware. See our [composite vs wood comparison](/composite-deck-vs-wood-deck-virginia)." },
     ],
@@ -92,14 +92,14 @@ const expansionSections = [
     title: "Timeline — how long a deck project takes",
     paragraphs: [
       "A standard 400–600 sq ft composite deck takes 7–12 days of on-site construction after permits are in hand. Multi-level projects, screened porches, or builds with significant demolition of an existing structure run 3–5 weeks. The typical end-to-end timeline from signed contract to final inspection is 6–10 weeks, with 2–4 weeks consumed by permitting and the remainder by construction.",
-      "We build year-round in Northern Virginia. Concrete footings can be poured above 40°F, and composite materials are dimensionally stable in cold weather. Winter builds often benefit from faster permit processing and earlier scheduling. For seasonal guidance, see [the best time to build a deck in Northern Virginia](/best-time-to-build-a-deck-northern-virginia).",
+      "We build year-round in Northern Virginia when weather, footing conditions, material handling requirements, and inspection availability support the schedule. Winter builds can sometimes offer earlier scheduling windows, but permit timing still depends on the county and project complexity. For seasonal guidance, see [the best time to build a deck in Northern Virginia](/best-time-to-build-a-deck-northern-virginia).",
     ],
   },
   {
     title: "Warranty and long-term protection",
     paragraphs: [
-      "Every deck we build carries two layers of warranty. The decking manufacturer — Trex, TimberTech or AZEK — provides a 25-to-50-year limited residential warranty on materials, covering fading, staining, structural integrity and manufacturing defects. Our installation carries a separate workmanship warranty covering framing, connections, fasteners and finish quality.",
-      "Manufacturer warranties are only valid when the product is installed by a certified contractor following the manufacturer's published installation guide. As a TrexPro Platinum installer and TimberTech Certified contractor, our installations meet the requirements for full warranty coverage — a distinction that matters when you file a claim 10 years from now. For more detail, read our [deck warranty guide](/deck-warranty-guide-northern-virginia).",
+      "Every deck proposal should clarify two layers of protection: manufacturer material coverage for the selected Trex, TimberTech, or AZEK product line, and written workmanship warranty terms from the contractor. We review both before construction so homeowners understand what is covered, what is excluded, and what documentation should be kept.",
+      "Manufacturer warranties depend on product selection and installation according to the manufacturer's published guide. As a TrexPro Platinum installer and TimberTech Certified contractor, our process is built around documented installation standards, product-specific requirements, and clear project paperwork. For more detail, read our [deck warranty guide](/deck-warranty-guide-northern-virginia).",
     ],
   },
 ];
@@ -119,7 +119,7 @@ const newDeckFAQs = [
   },
   {
     q: "What is better — Trex, TimberTech or wood?",
-    a: "Each serves a different need. Trex is our most-installed composite — excellent scratch resistance and the widest color range. TimberTech/AZEK offers premium PVC options with the lowest moisture absorption, ideal for shaded lots. Pressure-treated wood is right for budget-conscious projects where annual maintenance is acceptable. We guide material selection based on your budget, maintenance tolerance and yard conditions.",
+    a: "Each serves a different need. Trex is a common premium composite choice with excellent scratch resistance and a wide color range. TimberTech/AZEK offers premium PVC options with the lowest moisture absorption, ideal for shaded lots. Pressure-treated wood is right for budget-conscious projects where annual maintenance is acceptable. We guide material selection based on your budget, maintenance tolerance and yard conditions.",
   },
   {
     q: "Can you build a deck on a sloped yard?",
@@ -127,15 +127,15 @@ const newDeckFAQs = [
   },
   {
     q: "What makes your framing different from a general contractor?",
-    a: "We size joists to the specific decking material's deflection table, not to a generic span chart. Composite boards require tighter joist spacing than wood. We bolt ledgers on a staggered pattern with proper flashing, pour footings to Virginia's 30-inch frost depth on undisturbed soil, and use hot-dipped galvanized or stainless hardware throughout. Every build passes four county inspections.",
+    a: "We size joists to the specific decking material's deflection table, not to a generic span chart. Composite boards often require tighter joist spacing than wood. Ledger attachment, flashing, footing depth, corrosion-resistant hardware, railing connections, and inspection hold points are documented in the permit and build plan for the specific jurisdiction.",
   },
   {
     q: "Do you build year-round?",
-    a: "Yes. Concrete footings can be poured above 40°F, and composite materials are dimensionally stable in cold weather. Winter builds often benefit from faster permit processing and earlier scheduling. We adjust gap spacing for thermal expansion based on ambient temperature at installation.",
+    a: "Yes, when weather, footing conditions, material requirements, and inspection availability allow it. Winter can sometimes open earlier scheduling windows, but permit timing still depends on the county. We adjust installation details such as board spacing around the manufacturer's temperature and expansion guidance.",
   },
   {
     q: "What warranty do I get?",
-    a: "Two layers: the decking manufacturer (Trex, TimberTech or AZEK) provides a 25-to-50-year limited residential warranty on materials. Our installation carries a separate workmanship warranty covering framing, connections, fasteners and finish quality. As a TrexPro Platinum and TimberTech Certified installer, our builds qualify for full manufacturer warranty coverage.",
+    a: "Two layers should be reviewed before signing: the current manufacturer material warranty for the selected Trex, TimberTech or AZEK product line, and Loudoun Decks' written workmanship warranty terms in the project paperwork. Coverage, exclusions, registration requirements and remedies vary by product and program, so we document the relevant warranty links and terms with the proposal.",
   },
 ];
 
@@ -148,7 +148,7 @@ const authorityLinks = [
 export default function NewDecksPage() {
   return (
     <main>
-      <WebPageSchema
+      <WebPageSchema dateModified="2026-06-01"
         url="https://ldndecks.com/services/new-decks"
         name="Custom Deck Builder Northern Virginia | Loudoun Decks"
         description="Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood. Permits, HOA, footings, framing — full-service builds from $15,000+."
@@ -169,7 +169,7 @@ export default function NewDecksPage() {
       />
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-05-26" />
+        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-06-01" />
       </section>
 
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
@@ -179,6 +179,7 @@ export default function NewDecksPage() {
             <br />
             Materials, size, elevation and design complexity affect pricing.{' '}
             <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Estimate monthly payments</Link>{' · '}
+            <Link href="/deck-cost-calculator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Use the cost calculator</Link>{' · '}
             <Link href="/composite-deck-cost-northern-virginia" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Full cost guide</Link>{' · '}
             <strong style={{ color: '#111' }}>Free in-home estimate included.</strong>
           </p>
@@ -217,7 +218,7 @@ export default function NewDecksPage() {
         </div>
       </section>
 
-      <SimpleCTA title="Ready to Start Your Custom Deck?" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Ready to Start Your Custom Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
 
       <section style={{ padding: '40px 20px', backgroundColor: '#f9f9f9', borderTop: '1px solid #eee' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -260,6 +261,12 @@ export default function NewDecksPage() {
             ['/wood-decks', 'Wood Decks — Cedar, IPE & Pressure-Treated'],
             ['/deck-builder-northern-virginia', 'Deck Builder in Northern Virginia'],
             ['/outdoor-living-northern-virginia', 'Outdoor Living in Northern Virginia'],
+            ['/deck-cost-calculator', 'Free Deck Cost Calculator'],
+            ['/deck-payment-estimator', 'Deck Payment Estimator'],
+            ['/before-and-after', 'Before & After Deck Projects'],
+            ['/reviews', 'Customer Reviews'],
+            ['/bbb-accredited-deck-builder-virginia', 'BBB Accredited Deck Builder'],
+            ['/get-estimate', 'Request a Written Estimate'],
           ].map(([href, text]) => (
             <li key={href} style={{ marginBottom: '0.5rem' }}>
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>

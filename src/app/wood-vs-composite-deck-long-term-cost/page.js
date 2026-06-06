@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/wood-vs-composite-deck-long-term-cost',
   title: 'Wood vs Composite Deck Long-Term Cost: 15-Year Analysis',
   description: 'Wood vs composite deck long-term cost in Northern Virginia. 15-year total cost including maintenance, repairs, financing, and resale impact.',
-  image: '/images/img16.jpeg',
+  image: '/social/wood-vs-composite-deck-long-term-cost-social.png',
 });
 
 const PATH = '/wood-vs-composite-deck-long-term-cost';
@@ -92,7 +92,7 @@ export default function WoodVsCompositeLongTermPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Wood vs Composite Deck Long-Term Cost: 15-Year Analysis" description="Wood vs composite deck long-term cost in Northern Virginia. 15-year total cost including maintenance, repairs, financing, and resale impact." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Wood vs Composite Deck Long-Term Cost: 15-Year Analysis" description="Wood vs composite deck long-term cost in Northern Virginia. 15-year total cost including maintenance, repairs, financing, and resale impact." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -262,7 +262,7 @@ export default function WoodVsCompositeLongTermPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Compare Lifetime Cost: Wood vs Composite" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Compare Lifetime Cost: Wood vs Composite" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />

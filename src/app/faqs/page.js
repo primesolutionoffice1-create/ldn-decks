@@ -10,13 +10,13 @@ export const metadata = buildMetadata({
   path: '/faqs',
   title: 'Deck Building FAQs | Northern Virginia | Loudoun Decks',
   description: 'Answers to common questions about deck building, materials, costs, timelines, permits, and HOA in Northern Virginia. Expert answers from Loudoun Decks.',
-  image: "/images/deck-inspection.png",
+  image: "/social/faqs-social.png",
 });
 
 export default function FAQPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/faqs" name="Deck Building FAQs | Northern Virginia | Loudoun Decks" description="Answers to common questions about deck building, materials, costs, timelines, permits, and HOA in Northern Virginia. Expert answers from Loudoun Decks." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/faqs" name="Deck Building FAQs | Northern Virginia | Loudoun Decks" description="Answers to common questions about deck building, materials, costs, timelines, permits, and HOA in Northern Virginia. Expert answers from Loudoun Decks." speakable />
       <FAQHeader />
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -29,7 +29,7 @@ export default function FAQPage() {
       <SimpleCTA
         title="Still have questions?"
         buttonText="Contact Us Today"
-        link="/contact"
+        link="/get-estimate"
       />
     </main>
   );

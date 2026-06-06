@@ -20,7 +20,7 @@ export const metadata = buildMetadata({
   path: '/timbertech-decks',
   title: 'TimberTech AZEK Deck Builder NoVA | Certified Contractor',
   description: 'TimberTech and AZEK deck builder in Northern Virginia. Premium PVC and composite decks for Loudoun, Fairfax and Prince William County. Free estimate.',
-  image: '/images/img12.jpeg',
+  image: '/social/timbertech-decks-social.png',
 });
 
 const inclusions = [
@@ -125,7 +125,7 @@ const expansionSections = [
 export default function TimberTechDecksPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/timbertech-decks" name="TimberTech AZEK Deck Builder Northern Virginia" description="TimberTech and AZEK deck builder in Northern Virginia. Premium PVC and composite decks for Loudoun, Fairfax and Prince William County." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/timbertech-decks" name="TimberTech AZEK Deck Builder Northern Virginia" description="TimberTech and AZEK deck builder in Northern Virginia. Premium PVC and composite decks for Loudoun, Fairfax and Prince William County." speakable />
       <ServiceSchema
         name="TimberTech AZEK Deck Installation"
         description="TimberTech and AZEK deck installation in Northern Virginia. Premium composite and PVC decking for Loudoun, Fairfax, and Prince William County homes."
@@ -148,7 +148,7 @@ export default function TimberTechDecksPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: 500 }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>TimberTech and AZEK projects typically start around $20,000+</strong>
             <br />
-            This page is for <strong style={{ color: '#111' }}>full TimberTech, AZEK, replacement, and resurfacing projects</strong>. You can <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>estimate your monthly deck payment</Link> before choosing a board line. For board repair or small fixes, see our <Link href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link>.
+            This page is for <strong style={{ color: '#111' }}>full TimberTech, AZEK, replacement, and resurfacing projects</strong>. You can <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>estimate your monthly deck payment</Link> before choosing a board line. For board repair or small fixes, see our <Link href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link>.
           </p>
         </div>
       </section>

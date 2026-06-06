@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/timbertech-azek-deck-cost-northern-virginia',
   title: 'TimberTech & AZEK Deck Cost: Premium PVC Budget Guide (2026)',
   description: 'TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples.',
-  image: '/showcase/img22.jpg',
+  image: '/social/timbertech-azek-deck-cost-northern-virginia-social.png',
 });
 
 const PATH = '/timbertech-azek-deck-cost-northern-virginia';
@@ -132,7 +132,7 @@ export default function TimberTechAzekDeckCostPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="TimberTech &amp; AZEK Deck Cost: Premium PVC Budget Guide (2026)" description="TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="TimberTech &amp; AZEK Deck Cost: Premium PVC Budget Guide (2026)" description="TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -168,7 +168,7 @@ export default function TimberTechAzekDeckCostPage() {
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
             </Link>{' '}
-            for the exact monthly number.
+            for a planning monthly estimate.
           </p>
         </div>
       </section>
@@ -295,7 +295,7 @@ export default function TimberTechAzekDeckCostPage() {
             <li>Stairs, lighting, fascia, skirt</li>
             <li>Permits and HOA submission for Loudoun, Fairfax, Prince William, Arlington, Alexandria</li>
             <li>Demolition of old deck and haul-away</li>
-            <li>5-year Loudoun Decks workmanship warranty on top of manufacturer coverage</li>
+            <li>Written workmanship warranty terms plus manufacturer warranty information for the selected TimberTech or AZEK product line</li>
           </ul>
 
           <h2 style={S.h2}>Financing a Premium PVC Deck</h2>
@@ -358,7 +358,7 @@ export default function TimberTechAzekDeckCostPage() {
       <SimpleCTA
         title="Plan Your TimberTech / AZEK Deck Budget"
         buttonText="Get Free Written Estimate"
-        link="/contact"
+        link="/get-estimate"
       />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />

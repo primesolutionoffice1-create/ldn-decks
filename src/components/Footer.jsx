@@ -96,6 +96,7 @@ export default function Footer() {
               <li><Link href="/before-and-after">Before &amp; After</Link></li>
               <li><Link href="/deck-cost-calculator">Cost Calculator</Link></li>
               <li><Link href="/reviews">Reviews</Link></li>
+              <li><Link href="/review">Leave a Review</Link></li>
               <li><Link href="/blog">Blog &amp; Tips</Link></li>
               <li><Link href="/education">Education Center</Link></li>
               <li><Link href="/areas-we-serve">Areas We Serve</Link></li>
@@ -140,6 +141,7 @@ export default function Footer() {
               <li><Link href="/areas-we-serve">Areas We Serve</Link></li>
               <li><Link href="/scholarship">Scholarship</Link></li>
               <li><Link href="/social">Social Media</Link></li>
+              <li><Link href="/get-estimate">Get a Free Estimate</Link></li>
             </ul>
           </div>
 

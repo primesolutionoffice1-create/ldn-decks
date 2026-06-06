@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './TrustBanner.module.css';
-import { BUSINESS } from '@/lib/business';
 
 export default function TrustBanner() {
   return (
@@ -9,7 +8,7 @@ export default function TrustBanner() {
         <div className={styles.icon} aria-hidden="true">🏆</div>
         <div className={styles.text}>
           <strong>Trex Platinum Partner</strong>
-          <span>Top 1% in North America</span>
+          <span>Profile and credential details available for review</span>
         </div>
       </div>
       <div className={styles.divider}></div>
@@ -17,15 +16,15 @@ export default function TrustBanner() {
         <div className={styles.icon} aria-hidden="true">⭐</div>
         <div className={styles.text}>
           <strong>Google Reviews</strong>
-          <span>{BUSINESS.aggregateRating.reviewCount}+ Google reviews</span>
+          <span>Public Google review profile</span>
         </div>
       </div>
       <div className={styles.divider}></div>
       <div className={styles.item}>
         <div className={styles.icon} aria-hidden="true">🛡️</div>
         <div className={styles.text}>
-          <strong>2-Year Warranty</strong>
-          <span>Workmanship Guaranteed</span>
+          <strong>Written Warranty Terms</strong>
+          <span>Review workmanship coverage in the project agreement</span>
         </div>
       </div>
       <div className={styles.divider}></div>

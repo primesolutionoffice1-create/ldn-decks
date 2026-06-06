@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/best-time-to-finance-build-deck-northern-virginia',
   title: 'When to Finance and Build a Deck in Northern Virginia (2026)',
   description: 'Best time of year to finance and build a deck in Northern Virginia. Pricing by season, permit timing, lender promotions, and material lead times.',
-  image: '/showcase/img07.jpeg',
+  image: '/social/best-time-to-finance-build-deck-northern-virginia-social.png',
 });
 
 const PATH = '/best-time-to-finance-build-deck-northern-virginia';
@@ -132,7 +132,7 @@ export default function BestTimeToFinanceBuildPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="When to Finance and Build a Deck in Northern Virginia (2026)" description="Best time of year to finance and build a deck in Northern Virginia. Pricing by season, permit timing, lender promotions, and material lead times." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="When to Finance and Build a Deck in Northern Virginia (2026)" description="Best time of year to finance and build a deck in Northern Virginia. Pricing by season, permit timing, lender promotions, and material lead times." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -153,7 +153,7 @@ export default function BestTimeToFinanceBuildPage() {
 
       <AboveFoldCTA
         headline="Want to time your build for the right season? Schedule a project estimate to start the planning timeline."
-        estimateHref="/contact"
+        estimateHref="/get-estimate"
         estimateLabel="Schedule Project Estimate"
       />
 
@@ -277,7 +277,7 @@ export default function BestTimeToFinanceBuildPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Schedule a Project Estimate" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Schedule a Project Estimate" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />

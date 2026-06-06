@@ -17,9 +17,9 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/trex-decks',
-  title: 'Trex Platinum Deck Builder NoVA | Review-Supported Contractor',
+  title: 'Trex Platinum Deck Builder NoVA | Composite Deck Contractor',
   description: 'Looking for a Trex Platinum Partner in Northern Virginia? Loudoun Decks specializes in premium Trex Transcend & Lineage installations. Free 24h estimates!',
-  image: '/images/img01.jpeg',
+  image: '/social/trex-decks-social.png',
 });
 
 const inclusions = [
@@ -77,8 +77,8 @@ const expansionSections = [
     title: "The Gold Standard of Outdoor Living: Trex Decks in Northern Virginia",
     paragraphs: [
       "When homeowners in Northern Virginia think of low-maintenance outdoor living, one name stands above the rest: Trex. As a certified Trex deck builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks has seen first-hand how this material has redefined the backyard experience. Our clients in Ashburn and Leesburg are increasingly opting for Trex because it provides the perfect balance of luxury aesthetics and rugged durability.",
-      "We specialize in the full Trex ecosystem, from the industry-leading Transcend® decking boards to the sophisticated Trex Signature® aluminum railing systems. A Trex deck is not just a platform; it is a high-performance floor designed to handle the active lifestyles of Northern Virginia families, from summer graduation parties to quiet mornings with coffee in the crisp NoVA air.",
-      "Choosing a custom deck builder who is intimately familiar with the Trex product line is critical for a valid warranty. Trex has specific installation requirements regarding joist spacing and hidden fastener torque settings. Our team is trained to meet and exceed these standards, ensuring your review-supported build is as safe as it is beautiful."
+      "We specialize in the full Trex ecosystem, from Transcend® decking boards to the sophisticated Trex Signature® aluminum railing systems. A Trex deck is not just a platform; it is a high-performance floor designed to handle the active lifestyles of Northern Virginia families, from summer graduation parties to quiet mornings with coffee in the crisp NoVA air.",
+      "Choosing a custom deck builder who is familiar with the Trex product line is critical for warranty-compliant installation. Trex has specific requirements for joist spacing, gapping, ventilation, and approved fasteners. Our team builds to documented manufacturer installation standards so the finished deck is as durable as it is beautiful."
     ]
   },
   {
@@ -116,7 +116,7 @@ const expansionSections = [
 export default function TrexDecksPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/trex-decks" name="Trex Platinum Deck Builder Northern Virginia" description="Certified Trex Platinum Partner in Northern Virginia. Trex Transcend, Select and Enhance installations with 25-year warranty." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/trex-decks" name="Trex Platinum Deck Builder Northern Virginia" description="Certified Trex Platinum Partner in Northern Virginia. Trex Transcend, Select and Enhance installations with 25-year warranty." speakable />
       <ServiceSchema
         name="Trex Deck Installation"
         description="Certified Trex Platinum Partner installer in Northern Virginia. Trex Enhance, Select, and Transcend product lines. 25-year warranty."
@@ -140,7 +140,7 @@ export default function TrexDecksPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>New Trex deck projects from $15,000+</strong>
             <br />
-            On this page we focus on <strong style={{ color: '#111' }}>full custom Trex builds</strong>. Use the <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>payment estimator tool</Link> to model monthly payments, or see our <Link href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link> for repair work, board replacement, railing, or structural fixes.
+            On this page we focus on <strong style={{ color: '#111' }}>full custom Trex builds</strong>. Use the <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>payment estimator tool</Link> to model monthly payments, or see our <Link href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link> for repair work, board replacement, railing, or structural fixes.
           </p>
         </div>
       </section>

@@ -31,7 +31,7 @@ export default function DeckCostCalculatorWidget({
   defaultMaterial = 3, // composite default per /composite-deck-cost-northern-virginia spec — Trex Transcend
   defaultSqft = 350,
   ctaLabel = 'Estimate Your Exact Deck Cost',
-  ctaHref = '/contact',
+  ctaHref = '/get-estimate',
 }) {
   const [sqft, setSqft] = useState(defaultSqft);
   const [material, setMaterial] = useState(defaultMaterial);
@@ -153,7 +153,7 @@ export default function DeckCostCalculatorWidget({
           <div style={{ marginTop: '1.5rem', padding: '1rem', background: '#fff', borderRadius: 8, border: '1px solid #e2e8f0' }}>
             <p style={{ fontWeight: 600, fontSize: '0.85rem', marginBottom: '0.5rem' }}>About this estimate</p>
             <p style={{ fontSize: '0.8rem', color: '#4a5568', lineHeight: 1.6 }}>
-              Based on 2026 Northern Virginia market rates from 200+ completed projects by Loudoun Decks.
+              Based on 2026 Northern Virginia market-rate estimating logic for planning conversations.
               Actual costs vary by site conditions, HOA requirements, and design complexity.
               For an exact price, request a free on-site consultation.
             </p>

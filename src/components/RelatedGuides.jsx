@@ -14,14 +14,18 @@ const CORNERSTONE_GUIDES = [
   { path: '/northern-virginia-deck-building-guide', title: 'Complete Deck Building Guide for NoVA', desc: 'Everything in one place costs, materials, permits, HOA, timeline.' },
   { path: '/deck-financing', title: 'Deck Financing Options', desc: 'Financing options may be available for eligible deck, resurfacing, repair and composite upgrade projects.' },
   { path: '/deck-payment-estimator', title: 'Deck Payment Estimator', desc: 'Plan payment ranges and project scope before requesting a consultation.' },
-  { path: '/composite-deck-cost-northern-virginia', title: 'Composite Deck Cost in Northern Virginia', desc: 'Material pricing, real project costs, and what drives the price.' },
+  { path: '/composite-deck-cost-northern-virginia', title: 'Composite Deck Cost in Northern Virginia', desc: 'Material pricing, verified source references, planning examples and what drives the price.' },
   { path: '/deck-cost-calculator', title: 'Free Deck Cost Calculator', desc: 'Get an instant estimate by material, size, and add-ons.' },
+  { path: '/composite-deck-cost-by-size', title: 'Composite Deck Cost by Size', desc: '300, 400, 500 and 600 sqft pricing examples with monthly payment ranges.' },
+  { path: '/deck-cost-12x20-northern-virginia', title: '12x20 Deck Cost', desc: 'Small-deck pricing by material, permit notes and realistic NoVA examples.' },
+  { path: '/deck-cost-16x20-northern-virginia', title: '16x20 Deck Cost', desc: 'Family-deck pricing for the most requested Northern Virginia footprint.' },
+  { path: '/deck-cost-20x20-northern-virginia', title: '20x20 Deck Cost', desc: 'Entertaining-scale deck pricing with structural and multi-level cost notes.' },
   { path: '/trex-vs-timbertech-vs-azek', title: 'Trex vs TimberTech vs AZEK', desc: 'Side-by-side brand comparison for Virginia climate.' },
   { path: '/timbertech-decks', title: 'TimberTech & AZEK Decks', desc: 'Premium PVC and composite deck options for Northern Virginia.' },
   { path: '/composite-deck-vs-wood-deck-virginia', title: 'Composite vs Wood Deck', desc: '15-year cost comparison composite wins long-term.' },
   { path: '/does-a-deck-add-value-to-your-home', title: 'Does a Deck Add Home Value?', desc: 'ROI data 60-80% recoup at resale in Northern Virginia.' },
   { path: '/how-to-choose-a-deck-builder-northern-virginia', title: 'How to Choose a Deck Builder', desc: '10 questions to ask + 5 red flags to avoid.' },
-  { path: '/screened-porch-cost-northern-virginia', title: 'Screened Porch Cost Guide', desc: '$25k-$70k+ with real project examples.' },
+  { path: '/screened-porch-cost-northern-virginia', title: 'Screened Porch Cost Guide', desc: '$25k-$70k+ planning ranges with permit and material notes.' },
   { path: '/deck-permit-loudoun-county-virginia', title: 'Deck Permits in Loudoun County', desc: 'Permit requirements, review steps and inspection context for Loudoun homeowners.' },
   { path: '/deck-permit-fairfax-county-virginia', title: 'Deck Permits in Fairfax County', desc: 'Requirements, timeline, fees, and inspection process.' },
   { path: '/hoa-deck-rules-northern-virginia', title: 'HOA Deck Rules in NoVA', desc: 'Approval process, common restrictions, and tips.' },
@@ -35,8 +39,11 @@ const CORNERSTONE_GUIDES = [
   { path: '/education/deck-stair-safety-inspection-checklist', title: 'Deck Stair Safety Checklist', desc: 'Printable stair safety checklist for treads, risers, rails, landings and warning signs.' },
   { path: '/education/common-deck-stair-inspection-failures-virginia', title: 'Common Stair Inspection Failures', desc: 'Uneven risers, weak rails, rotten stringers and other Virginia stair failures.' },
   { path: '/education/deck-stair-construction-diagram', title: 'Deck Stair Construction Diagram', desc: 'Stringers, treads, risers, landing pads and hardware explained.' },
-  { path: '/before-and-after', title: 'Before & After Deck Projects', desc: 'Project proof for deck replacements, composite upgrades and outdoor living work.' },
+  { path: '/before-and-after', title: 'Before & After Deck Projects', desc: 'Photo gallery with verification notes for deck replacements, composite upgrades and outdoor living work.' },
   { path: '/reviews', title: 'LDN Decks Reviews', desc: 'Homeowner feedback and trust signals for Northern Virginia deck projects.' },
+  { path: '/bbb-accredited-deck-builder-virginia', title: 'BBB Accredited Deck Builder', desc: 'BBB profile, A+ rating context and third-party trust signals.' },
+  { path: '/ldn-decks-reviews-yelp', title: 'LDN Decks Reviews on Yelp', desc: 'Yelp review profile and public reputation signals for homeowners.' },
+  { path: '/review', title: 'Leave a Review for LDN Decks', desc: 'Customer review submission links for Google, Yelp and BBB.' },
   { path: '/best-time-to-build-a-deck-northern-virginia', title: 'Best Time to Build a Deck', desc: 'Month-by-month calendar winter gets 10-15% better pricing.' },
   { path: '/deck-maintenance-checklist-virginia', title: 'Deck Maintenance Checklist', desc: 'Seasonal care guide for Virginia climate.' },
   { path: '/deck-railing-options-northern-virginia', title: 'Deck Railing Options & Costs', desc: 'Composite, aluminum, cable, glass compared.' },
@@ -50,7 +57,7 @@ const CORNERSTONE_GUIDES = [
   { path: '/pool-deck-builder-northern-virginia', title: 'Pool Deck Design & Safety', desc: 'Slip-resistant materials for Northern Virginia pools.' },
   { path: '/stamped-concrete-patio-northern-virginia', title: 'Stamped Concrete Patio Guide', desc: 'Colors, patterns, and cost per square foot.' },
   { path: '/under-deck-ceiling-ideas', title: 'Under-Deck Ceiling Ideas', desc: 'Dry-space solutions for multi-level decks.' },
-  { path: '/services/deck-repair-and-structural-maintenance', title: 'Deck Repair & Structural Maintenance', desc: 'Fixing rotted posts and failed inspections in Loudoun & Fairfax.' },
+  { path: '/services/deck-repair', title: 'Deck Repair Service', desc: 'Inspection-first deck repair for rot, stairs, railings, ledgers and unsafe framing.' },
   { path: '/blog/deck-structural-repair-rot-prevention', title: 'Deck Repair & Rot Prevention Guide', desc: 'Surgical structural fixes for Northern Virginia homes.' },
   { path: '/blog/loudoun-county-deck-permit-guide-2026', title: '2026 Loudoun Deck Permit Blueprint', desc: 'Everything you need to know for LandMARC approval.' },
   // Orphan-recovery additions (audited 2026-05-27): each previously had 0 inbound
@@ -65,6 +72,9 @@ const CORNERSTONE_GUIDES = [
 ];
 
 const DECK_CORE_PRIORITY = [
+  '/deck-cost-calculator',
+  '/composite-deck-cost-northern-virginia',
+  '/composite-deck-cost-by-size',
   '/deck-financing',
   '/deck-payment-estimator',
   '/deck-builder-northern-virginia',
@@ -84,6 +94,14 @@ const DECK_CORE_PRIORITY = [
   '/education/deck-stair-construction-diagram',
   '/before-and-after',
   '/reviews',
+  '/bbb-accredited-deck-builder-virginia',
+  '/ldn-decks-reviews-yelp',
+  '/review',
+];
+
+const TRUST_GUIDE_PATHS = [
+  '/bbb-accredited-deck-builder-virginia',
+  '/ldn-decks-reviews-yelp',
 ];
 
 export default function RelatedGuides({ currentPath, category = null }) {
@@ -133,13 +151,20 @@ export default function RelatedGuides({ currentPath, category = null }) {
   }
 
   // Smart rotation: use a hash of currentPath to deterministically select
-  // different guides for different pages — so ALL 13 cornerstone pages get exposure
+  // different guides for different pages so cornerstone and trust pages get exposure.
   const hash = currentPath.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
   const startIdx = hash % available.length;
-  const selected = [];
-  for (let i = 0; i < 5 && i < available.length; i++) {
-    selected.push(available[(startIdx + i) % available.length]);
+  const rotated = [];
+  for (let i = 0; i < available.length; i++) {
+    rotated.push(available[(startIdx + i) % available.length]);
   }
+  const trustGuides = TRUST_GUIDE_PATHS
+    .map(path => available.find(g => g.path === path))
+    .filter(Boolean);
+  const selected = [
+    ...trustGuides,
+    ...rotated.filter(g => !TRUST_GUIDE_PATHS.includes(g.path)),
+  ].slice(0, 6);
 
   return (
     <section style={{ background: '#f8f9fa', padding: '3rem 0', borderTop: '1px solid #e5e5e5' }}>

@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/paver-vs-flagstone-patio-northern-virginia',
   title: 'Paver Patio vs Flagstone Patio Northern Virginia | 2026',
   description: 'Paver patio contractor vs flagstone — cost, durability, maintenance, freeze-thaw performance in NoVA. 2026 installed pricing for Loudoun, Fairfax, Prince William. We build both.',
+  image: '/social/paver-vs-flagstone-patio-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -30,7 +31,7 @@ export default function PaverVsFlagstonePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/paver-vs-flagstone-patio-northern-virginia" name="Paver Patio vs Flagstone Patio Northern Virginia | 2026" description="Paver patio contractor vs flagstone — cost, durability, maintenance, freeze-thaw performance in NoVA. 2026 installed pricing for Loudoun, Fairfax, Prince William. We build both." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/paver-vs-flagstone-patio-northern-virginia" name="Paver Patio vs Flagstone Patio Northern Virginia | 2026" description="Paver patio contractor vs flagstone — cost, durability, maintenance, freeze-thaw performance in NoVA. 2026 installed pricing for Loudoun, Fairfax, Prince William. We build both." speakable />
       {/* Full-width Hero Image Section */}
       <section style={{ position: 'relative', width: '100%', height: '70vh', minHeight: '500px', overflow: 'hidden' }}>
         <Image
@@ -153,7 +154,7 @@ export default function PaverVsFlagstonePage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Design Your Dream Patio" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Design Your Dream Patio" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/paver-vs-flagstone-patio-northern-virginia" />

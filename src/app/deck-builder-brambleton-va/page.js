@@ -16,12 +16,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-brambleton-va',
   title: 'Deck Builder in Brambleton, VA | Custom Trex Decks',
   description: "Deck builder in Brambleton, VA. Composite decks built for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. Free estimate.",
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-brambleton-va-social.png',
 });
 
 const inclusions = [
@@ -71,8 +72,8 @@ const expansionSections = [
     title: "Brambleton's Design Review Board",
     paragraphs: [
       "Brambleton is a single master-planned community of roughly 6,500 homes, all governed by the Brambleton Community Association (BCA). Every exterior modification  -  decks, screened porches, pergolas, fences  -  goes through the BCA's Design Review Board (DRB) before construction begins. The DRB reviews material choices, colors and how the project fits Brambleton's architectural guidelines.",
-      "The DRB operates on a regular review cycle, and a complete submission package is the difference between approval in one round and a request for revisions that pushes the project to the next meeting. We prepare the full package  -  site plan, elevation drawings, material samples and color specifications  -  to match what the board requires. A recent Brambleton project, a 300 sqft Trex Enhance deck with composite railings and post cap lights, cleared the DRB in two weeks because the submission was complete on the first pass.",
-      "Because we build consistently in Brambleton, we know which composite colors and railing styles have the smoothest approval path. We steer material selection toward those proven options from the first design meeting, which saves time and avoids revision cycles."
+      "The DRB operates on a regular review cycle, and a complete submission package can be the difference between a clean review and a request for revisions that pushes the project to the next meeting. We prepare the full package  -  site plan, elevation drawings, material samples and color specifications  -  to match what the board requires.",
+      "Because Brambleton has consistent architectural standards, we steer material selection toward composite colors and railing styles that fit the community guidelines from the first design meeting. That keeps the review package focused and easier for the board to evaluate."
     ]
   },
   {
@@ -110,11 +111,11 @@ export default function BrambletonDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="Brambleton" url="https://ldndecks.com/deck-builder-brambleton-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-brambleton-va" name="Deck Builder in Brambleton, VA | Custom Trex Decks" description="Deck builder in Brambleton, VA. Composite decks built for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-brambleton-va" name="Deck Builder in Brambleton, VA | Custom Trex Decks" description="Deck builder in Brambleton, VA. Composite decks built for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. Free estimate." speakable />
       <ServicesHeader
         subtext="Brambleton, VA's Trusted Deck Company"
         title="Custom Deck Builder in Brambleton, VA"
-        description="Loudoun Decks builds composite decks designed for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. review-supported reputation."
+        description="Loudoun Decks builds composite decks designed for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Built for Brambleton's DRB Standards"
@@ -129,6 +130,18 @@ export default function BrambletonDeckBuilderPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <PlanningUpdate
+        market="Brambleton deck projects"
+        notes={[
+          'BCA Design Review Board planning should start before final color and railing selections are locked.',
+          'Many Brambleton builder-grade decks are now old enough to require a frame inspection before resurfacing is recommended.',
+          'Loudoun County permit planning and HOA review should run in parallel where the project scope allows.',
+        ]}
+        links={[
+          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
+          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
+        ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -175,9 +188,9 @@ export default function BrambletonDeckBuilderPage() {
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Brambleton" /></div></section>
-      <SimpleCTA title="Upgrade Your Brambleton Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Upgrade Your Brambleton Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-brambleton-va" />
-      <NamedAuthor context="Brambleton and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Brambleton and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

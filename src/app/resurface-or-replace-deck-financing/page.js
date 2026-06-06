@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/resurface-or-replace-deck-financing',
   title: 'Resurface or Replace Before Financing? 2026 Decision Guide',
   description: 'Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, and monthly payment math for Northern Virginia.',
-  image: '/images/img26.jpeg',
+  image: '/social/resurface-or-replace-deck-financing-social.png',
 });
 
 const PATH = '/resurface-or-replace-deck-financing';
@@ -88,7 +88,7 @@ export default function ResurfaceOrReplaceFinancingPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Resurface or Replace Before Financing? 2026 Decision Guide" description="Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, and monthly payment math for Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Resurface or Replace Before Financing? 2026 Decision Guide" description="Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, and monthly payment math for Northern Virginia." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -109,7 +109,7 @@ export default function ResurfaceOrReplaceFinancingPage() {
 
       <AboveFoldCTA
         headline="Not sure if your frame passes? Schedule a free structural inspection before you commit to a project amount."
-        estimateHref="/contact"
+        estimateHref="/get-estimate"
         estimateLabel="Schedule Free Inspection"
       />
 
@@ -120,9 +120,7 @@ export default function ResurfaceOrReplaceFinancingPage() {
             <strong>Resurface</strong> if the existing frame passes structural inspection — saves $7,000–$16,000+ and
             lowers the monthly payment by $100–$200/mo. <strong>Replace</strong> if joists, posts, footings, or ledger
             fail — financing a resurface on an unsafe frame is not a real saving. Free inspection at{' '}
-            <Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
-              /contact
-            </Link>.
+            <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>/get-estimate</Link>.
           </p>
         </div>
       </section>
@@ -219,7 +217,7 @@ export default function ResurfaceOrReplaceFinancingPage() {
           <p style={S.p}>
             Before you pre-qualify for financing on either path, schedule a free on-site inspection. We document frame
             condition with photos and a written report, then quote both options when both are viable. That gives you
-            two real project amounts to run through the{' '}
+            two written estimate amounts to run through the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
               deck payment estimator
             </Link>{' '}
@@ -256,7 +254,7 @@ export default function ResurfaceOrReplaceFinancingPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Price the Right Scope: Resurface or Replace?" buttonText="Schedule Free Inspection" link="/contact" />
+      <SimpleCTA title="Price the Right Scope: Resurface or Replace?" buttonText="Schedule Free Inspection" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />

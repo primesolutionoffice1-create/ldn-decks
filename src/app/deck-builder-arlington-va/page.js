@@ -11,11 +11,13 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-arlington-va',
   title: 'Premium Deck Builder Arlington VA | Get a Free Quote in 24h',
-  description: 'Trusted deck builder in Arlington, VA. review-backed. Custom composite decks & screened porches in Ballston, Clarendon & Rosslyn. Free 24h estimate.',
+  description: 'Trusted deck builder in Arlington, VA. Custom composite decks & screened porches in Ballston, Clarendon & Rosslyn. Free estimate.',
+  image: '/social/deck-builder-arlington-va-social.png',
 });
 
 const faqSchema = {
@@ -25,10 +27,10 @@ const faqSchema = {
     { "@type": "Question", name: "Does Arlington have special deck restrictions?", acceptedAnswer: { "@type": "Answer", text: "Yes. Arlington County has its own building department (CPHD) with setback rules often tighter than Fairfax County. The Lyon Park Historic District is a National Historic District with additional design review for visible exterior changes. Lyon Village, Maywood, and Westover also have historic-overlay considerations. We handle all Arlington County permitting and know the historic district requirements." } },
     { "@type": "Question", name: "What's the Arlington County deck permit process?", acceptedAnswer: { "@type": "Answer", text: "Arlington requires a building permit for any deck attached to your house and for any freestanding deck 30 inches or more above grade. Applications go through the Permit Arlington web portal (operated by Arlington County CPHD — Community Planning, Housing & Development). Required: site plan, structural drawings, deck details, and homeowner approval if applicable. Plan review averages 3-5 weeks. Inspections (footing, framing, final) coordinated through Inspection Services 703-228-3800. We file every package as part of the project." } },
     { "@type": "Question", name: "Which Arlington neighborhoods do you serve most?", acceptedAnswer: { "@type": "Answer", text: "Our highest single-family-home volume is in North Arlington — Lyon Park, Lyon Village, Cherrydale, Donaldson Run, Williamsburg, Maywood, Westover, Rock Spring, Country Club Hills, Yorktown, and Waverly Hills. In South Arlington we serve Aurora Hills, Forest Hills, Boulevard Manor, Fairlington, Shirlington, and Douglas Park. Urban-core projects (Ballston, Clarendon, Rosslyn, Pentagon City, Crystal City) are typically rooftop terraces and condo/townhome compact builds." } },
-    { "@type": "Question", name: "Can you build in the Lyon Park Historic District?", acceptedAnswer: { "@type": "Answer", text: "Yes. Lyon Park is a National Historic District with 1,165 contributing buildings, mostly 1920s-30s Craftsman bungalows, American Foursquares, Colonial Revivals, Tudor Revivals, and Cape Cods. Decks visible from the public right-of-way need design review for compatibility (materials, color, scale, railing style). We design Lyon Park decks specifically to clear historic review — typically Trex Transcend Spiced Rum or Tiki Torch tones, classic balustrade railings, and proportions matched to the original home." } },
+    { "@type": "Question", name: "Can you build in the Lyon Park Historic District?", acceptedAnswer: { "@type": "Answer", text: "Yes. Lyon Park is a National Historic District with 1,165 contributing buildings, mostly 1920s-30s Craftsman bungalows, American Foursquares, Colonial Revivals, Tudor Revivals, and Cape Cods. Decks visible from the public right-of-way need design review for compatibility, including materials, color, scale, and railing style. We design Lyon Park decks around those review factors." } },
     { "@type": "Question", name: "What materials work best for Arlington homes?", acceptedAnswer: { "@type": "Answer", text: "North Arlington historic neighborhoods (Lyon Park, Lyon Village, Cherrydale): warm-tone composites — Trex Transcend Tiki Torch, Spiced Rum, Havana Gold — with classic balustrade or aluminum-traditional railings. South Arlington modern renovations: cooler tones — Trex Transcend Island Mist, TimberTech AZEK Dark Hickory — with cable or horizontal-aluminum railings. PVC (AZEK) outperforms composite on compact south-facing decks where surface temperature matters." } },
     { "@type": "Question", name: "How long does an Arlington deck project take from contract?", acceptedAnswer: { "@type": "Answer", text: "8-12 weeks total. Arlington permit review averages 3-5 weeks (typically 1 week longer than Fairfax County). Historic district design review adds 2-4 weeks if your home is in Lyon Park, Maywood, or another protected area. Material delivery: 1-3 weeks. Build: 1-3 weeks. North Arlington two-level builds with screened porches: 10-12 weeks. Compact South Arlington single-level: 8-10 weeks." } },
-    { "@type": "Question", name: "Do you build screened porches in Arlington?", acceptedAnswer: { "@type": "Answer", text: "Yes — screened porches are one of our most-requested Arlington builds, especially in Lyon Park and Donaldson Run where mature tree canopy makes them year-round usable. Typical 250-350 sqft Arlington screened porch: $48,000-$78,000 including foundation, composite decking, screen system (often EZE-Breeze retractable panels), roof, and electric. We retrofit screen systems onto existing Arlington decks as well." } },
+    { "@type": "Question", name: "Do you build screened porches in Arlington?", acceptedAnswer: { "@type": "Answer", text: "Yes — screened porches are a strong fit for many Arlington homes, especially in Lyon Park and Donaldson Run where mature tree canopy makes them year-round usable. Typical 250-350 sqft Arlington screened porch: $48,000-$78,000 including foundation, composite decking, screen system (often EZE-Breeze retractable panels), roof, and electric. We retrofit screen systems onto existing Arlington decks as well." } },
   ],
 };
 
@@ -37,18 +39,31 @@ export default function ArlingtonDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Arlington" url="https://ldndecks.com/deck-builder-arlington-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-arlington-va" name="Premium Deck Builder Arlington VA | Get a Free Quote in 24h" description="Trusted deck builder in Arlington, VA. review-backed. Custom composite decks &amp; screened porches in Ballston, Clarendon &amp; Rosslyn. Free 24h estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-arlington-va" name="Premium Deck Builder Arlington VA | Get a Free Quote in 24h" description="Trusted deck builder in Arlington, VA. Custom composite decks &amp; screened porches in Ballston, Clarendon &amp; Rosslyn. Free estimate." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Arlington, VA</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Premium composite decks &amp; screened porches for Arlington homeowners</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · Licensed &amp; Insured · 2-Year Warranty</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · Licensed &amp; Insured · Written scope and warranty details provided before contract</p>
         </div>
       </section>
+      <PlanningUpdate
+        market="Arlington decks in 2026"
+        notes={[
+          "Arlington projects should start with CPHD permit requirements, setback review, and whether the home sits in or near a historic district.",
+          "Compact urban lots need early planning for privacy, stairs, drainage, railing style, and neighbor-facing details.",
+          "Historic-area designs should document material color, railing proportions, scale, and public-right-of-way visibility before review."
+        ]}
+        links={[
+          { href: "/deck-safety-inspection-checklist", label: "Safety checklist" },
+          { href: "/deck-railing-options-northern-virginia", label: "Railing options" },
+          { href: "/composite-deck-cost-northern-virginia", label: "Composite deck cost" }
+        ]}
+      />
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -64,8 +79,8 @@ export default function ArlingtonDeckBuilderPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Arlington County packs some of the highest property values in Northern Virginia into its 26 square miles. From the Bungalow neighborhoods of Clarendon to the established homes of Donaldson Run and Williamsburg, every outdoor square foot matters. We design decks that make the most of Arlington&apos;s compact but valuable lots.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Urban lot expertise:</strong> Tight setbacks, small yards, close neighbors we design privacy and function into every build</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Arlington County permitting:</strong> Own building department (CPHD) and the Permit Arlington portal we know them well</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Historic-district experience:</strong> Lyon Park, Maywood, Westover, Lyon Village we file design review packages that clear on first submission</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Arlington County permitting:</strong> Arlington has its own building department (CPHD) and Permit Arlington portal, so jurisdiction-specific planning matters.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Historic-district planning:</strong> Lyon Park, Maywood, Westover, and Lyon Village projects should document material, scale, railing, and visibility details before review.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>High-value properties:</strong> Median home value $750K+ means premium materials (AZEK, Trex Transcend) are the standard</li>
           </ul>
 
@@ -144,10 +159,10 @@ export default function ArlingtonDeckBuilderPage() {
             ))}
           </div>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Arlington Project</h2>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Arlington Project Planning Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$52,000 380 sqft Deck + Screened Porch, Donaldson Run</h3>
-            <p style={{ lineHeight: 1.7 }}>Two-level build on a sloped lot backing to Donaldson Run park. Upper dining deck (220 sqft) in TimberTech AZEK Coastline connected to a lower screened porch (160 sqft) with retractable EZE-Breeze panels. Cable railings on the upper level for tree-canopy views. Privacy lattice on the neighbor-facing side. Arlington County building permit. 4-week build.</p>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Deck + Screened Porch Scenario, Donaldson Run</h3>
+            <p style={{ lineHeight: 1.7 }}>A sloped North Arlington concept might pair an upper composite dining deck with a lower screened porch, cable or aluminum railing for tree-canopy views, and privacy treatment on neighbor-facing sides. Final pricing and timeline should be confirmed after Arlington County permit requirements, slope, drainage, access, and historic or neighborhood review factors are checked. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Arlington Neighborhoods</h2>
@@ -166,7 +181,7 @@ export default function ArlingtonDeckBuilderPage() {
             { q: "Can you build in the Lyon Park Historic District?", a: "Yes. Lyon Park has 1,165 contributing buildings (Craftsman bungalows, American Foursquares, Colonial Revivals, Tudor Revivals, Cape Cods). Visible decks need design review. We design Lyon Park decks specifically to clear historic review — warm-tone composites (Trex Transcend Spiced Rum, Tiki Torch), classic balustrade railings, proportions matched to the original home." },
             { q: "What materials work best for Arlington homes?", a: "North Arlington historic (Lyon Park, Lyon Village, Cherrydale): warm-tone composites — Trex Transcend Tiki Torch, Spiced Rum, Havana Gold — with classic balustrade or aluminum-traditional railings. South Arlington modern: cooler tones — Trex Transcend Island Mist, TimberTech AZEK Dark Hickory — with cable or horizontal-aluminum railings." },
             { q: "How long does an Arlington deck project take from contract?", a: "8-12 weeks total. Arlington permit review averages 3-5 weeks (1 week longer than Fairfax). Historic district design review adds 2-4 weeks if your home is in Lyon Park, Maywood, or another protected area. Material delivery: 1-3 weeks. Build: 1-3 weeks." },
-            { q: "Do you build screened porches in Arlington?", a: "Yes — screened porches are one of our most-requested Arlington builds, especially in Lyon Park and Donaldson Run where mature tree canopy makes them year-round usable. Typical 250-350 sqft screened porch: $48,000-$78,000 including foundation, decking, screen system (often EZE-Breeze retractable), roof, and electric." },
+            { q: "Do you build screened porches in Arlington?", a: "Yes — screened porches are a strong fit for many Arlington homes, especially in Lyon Park and Donaldson Run where mature tree canopy makes them year-round usable. Typical 250-350 sqft screened porch: $48,000-$78,000 including foundation, decking, screen system (often EZE-Breeze retractable), roof, and electric." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
@@ -196,9 +211,9 @@ export default function ArlingtonDeckBuilderPage() {
         </ul>
       </section>
 
-      <SimpleCTA title="Premium Outdoor Living for Arlington" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Premium Outdoor Living for Arlington" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-arlington-va" />
-      <NamedAuthor context="Arlington and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Arlington and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </>
   );

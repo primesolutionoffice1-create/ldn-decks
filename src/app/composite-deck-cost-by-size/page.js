@@ -15,8 +15,8 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/composite-deck-cost-by-size',
   title: 'Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples',
-  description: 'Composite deck cost by size — real 2026 pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia. Per-tier breakdown plus monthly payment.',
-  image: '/showcase/img18.jpeg',
+  description: 'Composite deck cost by size — 2026 planning pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia. Per-tier breakdown plus monthly payment.',
+  image: '/social/composite-deck-cost-by-size-social.png',
 });
 
 const PATH = '/composite-deck-cost-by-size';
@@ -118,13 +118,13 @@ export default function CompositeDeckCostBySizePage() {
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples"
-        description="Composite deck cost by size — real 2026 pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia."
+        description="Composite deck cost by size — 2026 planning pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia."
         path={PATH}
         image="/showcase/img18.jpeg"
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples" description="Composite deck cost by size — real 2026 pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia. Per-tier breakdown plus monthly payment." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples" description="Composite deck cost by size — 2026 planning pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia. Per-tier breakdown plus monthly payment." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -135,7 +135,7 @@ export default function CompositeDeckCostBySizePage() {
             Composite Deck Cost by Size: 300, 400, 500, and 600 Sq Ft Examples
           </h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: 1.6 }}>
-            Real 2026 pricing for composite decks in Northern Virginia by size and material tier, plus matching monthly
+            2026 planning pricing for composite decks in Northern Virginia by size and material tier, plus matching monthly
             payment ranges.
           </p>
         </div>
@@ -315,7 +315,7 @@ export default function CompositeDeckCostBySizePage() {
         </div>
       </article>
 
-      <SimpleCTA title="Get a Written Estimate by Deck Size" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get a Written Estimate by Deck Size" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />

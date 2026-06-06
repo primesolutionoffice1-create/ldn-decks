@@ -14,6 +14,7 @@ export const metadata = buildMetadata({
   path: '/multi-level-deck-builder-northern-virginia',
   title: 'Multi-Level Deck Builder Northern Virginia | LDN Decks',
   description: 'Custom multi-level decks in Northern Virginia from $35,000-$80,000+. Perfect for sloped lots and walkout basements. Trex & TimberTech. Free design consultation.',
+  image: '/social/multi-level-deck-builder-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -31,7 +32,7 @@ export default function MultiLevelDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/multi-level-deck-builder-northern-virginia" name="Multi-Level Deck Builder NoVA" description="Custom multi-level decks in Northern Virginia from $35,000-$80,000+. Perfect for sloped lots and walkout basements. Trex &amp; TimberTech. Free design consultation." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/multi-level-deck-builder-northern-virginia" name="Multi-Level Deck Builder NoVA" description="Custom multi-level decks in Northern Virginia from $35,000-$80,000+. Perfect for sloped lots and walkout basements. Trex &amp; TimberTech. Free design consultation." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -49,7 +50,7 @@ export default function MultiLevelDeckPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Two-story, split-level &amp; cascading decks for sloped lots and walkout basements</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
           </div>
         </div>
       </section>
@@ -143,7 +144,7 @@ export default function MultiLevelDeckPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Design Your Multi-Level Deck" buttonText="Get Free Design Consultation" link="/contact" />
+      <SimpleCTA title="Design Your Multi-Level Deck" buttonText="Get Free Design Consultation" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/multi-level-deck-builder-northern-virginia" />

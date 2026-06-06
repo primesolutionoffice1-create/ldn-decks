@@ -19,7 +19,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/entry-doors",
       title: "Entry Door Installation Loudoun VA | LDN Decks",
-  description: "Improve curb appeal, security, and energy efficiency with professional entry door installation in Northern Virginia. Custom fiberglass and wood door solutions."
+  description: "Improve curb appeal, security, and energy efficiency with professional entry door installation in Northern Virginia. Custom fiberglass and wood door solutions.",
+  image: "/social/entry-doors-service-social.png",
 });
 
 const expansionSections = [
@@ -52,11 +53,11 @@ const expansionSections = [
     title: "The Importance of Full-Frame Replacement",
     paragraphs: [
       "Many big-box store contractors offer 'slab replacement'—simply ripping the old door off the hinges and screwing a new one in the existing frame. This is a massive mistake if you want true performance.",
-      "At Loudoun Decks, we emphasize full-frame replacement. We remove the entire door unit down to the rough opening studs. This allows us to assess and repair any hidden water rot in the sill, install brand new threshold flashing, and shoot low-expansion foam insulation entirely around the new frame to guarantee a perfect seal."
+      "At Loudoun Decks, we emphasize full-frame replacement. We remove the entire door unit down to the rough opening studs. This allows us to assess and repair any hidden water rot in the sill, install brand new threshold flashing, and shoot low-expansion foam insulation around the new frame to support a durable weather seal."
     ],
     listItems: [
       { label: "Rot Repair", text: "We fix the underlying structural damage that previous leaky doors left behind." },
-      { label: "Flashing & Sealing", text: "We employ architectural-grade flashing tape and caulk to ensure water never penetrates the subfloor." },
+      { label: "Flashing & Sealing", text: "We employ architectural-grade flashing tape and caulk to help protect the subfloor from water intrusion." },
       { label: "Hardware Installation", text: "Precision drilling for deadbolts, smart-locks, and premium handlesets." },
       { label: "Trim & Molding", text: "Finished with beautiful interior casing and exterior brickmould that matches your home's aesthetics." }
     ]
@@ -118,7 +119,7 @@ export default function EntryDoorsPage() {
   return (
     <main>
       <JsonLd data={faqSchemaData} />
-      <WebPageSchema url="https://ldndecks.com/services/entry-doors" name="Entry Door Installation Loudoun VA | LDN Decks" description="Improve curb appeal, security, and energy efficiency with professional entry door installation in Northern Virginia. Custom fiberglass and wood door solutions." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/entry-doors" name="Entry Door Installation Loudoun VA | LDN Decks" description="Improve curb appeal, security, and energy efficiency with professional entry door installation in Northern Virginia. Custom fiberglass and wood door solutions." speakable />
       <ServiceSchema
         name="Entry Door Installation"
         description="Residential entry door replacement and installation in Northern Virginia. Fiberglass, steel, and wood door options."
@@ -135,7 +136,7 @@ export default function EntryDoorsPage() {
         description="Dramatically improve the curb appeal, security, and total energy efficiency of your property with professional entry door installation in Northern Virginia."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
       </section>
 
       <ServiceMain
@@ -171,7 +172,7 @@ export default function EntryDoorsPage() {
       <ServiceAreasGrid />
 
       <RelatedGuides currentPath="/services/entry-doors" />
-      <SimpleCTA title="Upgrade Your Entry Door" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Upgrade Your Entry Door" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

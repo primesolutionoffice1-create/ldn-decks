@@ -14,6 +14,7 @@ export const metadata = buildMetadata({
   path: '/deck-permit-arlington-county-virginia',
   title: 'Arlington County Deck Permit Guide (2026) | Loudoun Decks',
   description: 'Complete 2026 Arlington County deck permit guide: CPHD process, Permit Arlington portal, setbacks, historic-district review (Lyon Park, Maywood, Westover), inspection contacts, and timeline. We handle every step.',
+  image: '/social/deck-permit-arlington-county-social.png',
 });
 
 const permitFaqs = [
@@ -85,7 +86,7 @@ export default function ArlingtonPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-permit-arlington-county-virginia" name="Arlington County Deck Permit Guide (2026) | Loudoun Decks" description="Complete 2026 Arlington County deck permit guide: CPHD process, Permit Arlington portal, setbacks, historic-district review, inspection contacts, and timeline." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-permit-arlington-county-virginia" name="Arlington County Deck Permit Guide (2026) | Loudoun Decks" description="Complete 2026 Arlington County deck permit guide: CPHD process, Permit Arlington portal, setbacks, historic-district review, inspection contacts, and timeline." speakable />
       <ArticleSchema
         title="Arlington County Deck Permit Guide (2026)"
         description="The full 2026 Arlington County deck-permit process for homeowners and contractors: CPHD requirements, the Permit Arlington portal, setbacks, historic-district review (Lyon Park, Maywood, Westover), and the three required inspections."
@@ -126,7 +127,7 @@ export default function ArlingtonPermitPage() {
 
           <div style={S.callout}>
             <p style={{ margin: 0, fontWeight: 600 }}>Important note:</p>
-            <p style={{ margin: '0.5rem 0 0' }}>Insurance providers regularly deny injury or structural claims on unpermitted Arlington decks. Resale closings in Arlington — particularly in Lyon Park, Lyon Village, Cherrydale, and Donaldson Run — frequently catch unpermitted exterior work during the inspection contingency and force a permit retrofit (or demolition) before closing.</p>
+            <p style={{ margin: '0.5rem 0 0' }}>Insurance providers regularly deny injury or structural claims on unpermitted Arlington decks. Resale closings in Arlington — particularly in Lyon Park, Lyon Village, Cherrydale, and Donaldson Run — frequently catch unpermitted exterior work during the inspection contingency and force a permit retrofit (or demolition) before closing. If an existing deck needs correction before it can be approved, start with our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link>.</p>
           </div>
 
           {/* ===== SECTION 2: The Permit Arlington portal ===== */}
@@ -235,7 +236,7 @@ export default function ArlingtonPermitPage() {
           <div style={{ background: 'var(--color-dark)', color: '#fff', borderRadius: '16px', padding: '3.5rem', textAlign: 'center', marginTop: '4rem' }}>
             <h3 style={{ color: '#fff', fontSize: '2rem', marginTop: 0, marginBottom: '1rem' }}>We file every Arlington permit</h3>
             <p style={{ color: '#ccc', fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>From the zoning verification through historic design review (when applicable), document upload, fee payment, all three inspections, and the final certificate. You never log into Permit Arlington.</p>
-            <Link href="/contact" style={{ background: 'var(--color-primary)', color: '#fff', padding: '1.25rem 3rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 800, display: 'inline-block', fontSize: '1.1rem' }}>Get a free Arlington estimate</Link>
+            <Link href="/get-estimate" style={{ background: 'var(--color-primary)', color: '#fff', padding: '1.25rem 3rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 800, display: 'inline-block', fontSize: '1.1rem' }}>Get a free Arlington estimate</Link>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '3rem 0 1rem' }}>Related Arlington resources</h2>
@@ -251,7 +252,7 @@ export default function ArlingtonPermitPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Arlington deck project ahead? Skip the permit headache." buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Arlington deck project ahead? Skip the permit headache." buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-permit-arlington-county-virginia" />
       <NamedAuthor context="Arlington and Northern Virginia" lastUpdated="2026-05-27" />
       <ContactHome />

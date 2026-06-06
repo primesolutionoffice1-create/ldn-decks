@@ -16,12 +16,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-burke-va',
   title: 'Deck Builder in Burke, VA | Trex Certified | Loudoun Decks',
   description: 'Deck builder in Burke, VA. Custom Trex composite decks replacing aging wood in Burke Centre, Lakewood Hills & Rolling Valley. Fairfax County permits handled. Free estimate  -  (571) 655-7207.',
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-burke-va-social.png',
 });
 
 const inclusions = [
@@ -104,11 +105,11 @@ export default function DeckBuilderBurkePage() {
   return (
     <main>
       <LocalBusinessSchema city="Burke" url="https://ldndecks.com/deck-builder-burke-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-burke-va" name="Deck Builder in Burke, VA | Trex Certified | Loudoun Decks" description="Deck builder in Burke, VA. Custom Trex composite decks replacing aging wood in Burke Centre, Lakewood Hills &amp; Rolling Valley. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-burke-va" name="Deck Builder in Burke, VA | Trex Certified | Loudoun Decks" description="Deck builder in Burke, VA. Custom Trex composite decks replacing aging wood in Burke Centre, Lakewood Hills &amp; Rolling Valley. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Burke, VA's Trusted Deck Company"
         title="Custom Deck Builder in Burke, VA"
-        description="Loudoun Decks replaces aging wood decks with modern composite across Burke Centre, Lakewood Hills, Cherry Run and Rolling Valley. Fairfax County permits handled. review-supported reputation."
+        description="Loudoun Decks replaces aging wood decks with modern composite across Burke Centre, Lakewood Hills, Cherry Run and Rolling Valley. Fairfax County permits handled. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Established Neighborhoods, Modern Decks"
@@ -123,6 +124,18 @@ export default function DeckBuilderBurkePage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <PlanningUpdate
+        market="Burke deck replacements"
+        notes={[
+          'Older Burke decks should be evaluated at the ledger, joists, beams, posts and footings before a resurface is priced.',
+          'Fairfax County permit planning is especially important for full structural replacement and screened porch additions.',
+          'Heavy tree canopy affects board color, drainage, cleaning expectations and railing choices.',
+        ]}
+        links={[
+          { href: '/deck-safety-inspection-checklist', label: 'Safety inspection checklist' },
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+        ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -170,9 +183,9 @@ export default function DeckBuilderBurkePage() {
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Burke" /></div></section>
-      <SimpleCTA title="Replace Your Aging Burke Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Replace Your Aging Burke Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-burke-va" />
-      <NamedAuthor context="Burke and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Burke and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

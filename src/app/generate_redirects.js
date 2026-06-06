@@ -3,7 +3,7 @@ const { counties, slugify } = require('./src/data/cityData.js');
 const redirects = [
   // Core & Services
   { source: '/services/deck-replacement', destination: '/services/new-decks', permanent: true },
-  { source: '/get-quote', destination: '/contact', permanent: true },
+  { source: '/get-quote', destination: '/get-estimate', permanent: true },
 ];
 
 Object.keys(counties).forEach(countySlug => {

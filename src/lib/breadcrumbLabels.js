@@ -194,6 +194,7 @@ export const SEGMENT_LABELS = {
   'belmont-country-club-hoa-deck-rules': 'Belmont Country Club HOA Deck Rules',
   'tools': 'Tools & Calculators',
   'deck-beam-span-calculator-virginia': 'Deck Beam Span Calculator',
+  'deck-cost-estimator-northern-virginia': 'Deck Cost Estimator Northern Virginia',
   'deck-footing-depth-calculator-virginia': 'Deck Footing Depth Calculator',
   'deck-joist-span-calculator-virginia': 'Deck Joist Span Calculator',
   'deck-load-calculator-virginia': 'Deck Load Calculator',

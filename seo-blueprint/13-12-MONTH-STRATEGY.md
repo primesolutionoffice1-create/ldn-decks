@@ -47,7 +47,7 @@ By month 12 you will have: ~98 blog posts (matching Distinctive Deck Designs' mo
 - Local: launch `/near-you/alexandria-city`
 - Outreach: secure community sponsorship #1 (Habitat for Humanity Loudoun or INOVA gala)
 - CRO: A/B test #3 (trust strip placement)
-- Build out Reviews page: 30+ Review schema items, sortable by city/material
+- Build out Reviews page: 30+ verified review references/excerpts, sortable by city/material; keep Review schema disabled unless policy-eligible
 - KPI: GBP impressions +60% from baseline
 
 ---

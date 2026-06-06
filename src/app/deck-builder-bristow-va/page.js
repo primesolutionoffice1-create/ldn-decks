@@ -16,12 +16,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-bristow-va',
   title: 'Deck Builder in Bristow VA | Composite Deck Resurfacing & New Builds',
   description: "Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  save 40-60% by keeping a sound frame. New composite decks from $18k. Prince William County permits handled. Free estimate.",
-  image: '/images/img26.jpeg',
+  image: '/social/deck-builder-bristow-va-social.png',
 });
 
 const inclusions = [
@@ -105,11 +106,11 @@ export default function BristowDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="Bristow" url="https://ldndecks.com/deck-builder-bristow-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-bristow-va" name="Deck Builder in Bristow VA | Composite Deck Resurfacing & New Builds" description="Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  save 40-60% by keeping a sound frame. New composite decks from $18k. Prince William County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-bristow-va" name="Deck Builder in Bristow VA | Composite Deck Resurfacing & New Builds" description="Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  save 40-60% by keeping a sound frame. New composite decks from $18k. Prince William County permits handled. Free estimate." speakable />
       <ServicesHeader
         subtext="Bristow, VA's Trusted Deck Company"
         title="Custom Deck Builder in Bristow, VA"
-        description="Loudoun Decks builds and resurfaces composite decks across Bristow  -  Bristow Manor, Braemar, Linton Hall, Victory Lakes, Kingsbrooke, Piney Branch. Prince William County permits handled. review-supported reputation."
+        description="Loudoun Decks builds and resurfaces composite decks across Bristow  -  Bristow Manor, Braemar, Linton Hall, Victory Lakes, Kingsbrooke, Piney Branch. Prince William County permits handled. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Resurfacing Specialists for Bristow's Upgrade Cycle"
@@ -125,6 +126,19 @@ export default function BristowDeckBuilderPage() {
         image1="/images/img26.jpeg"
         image2="/images/img36.jpeg"
       />
+      <PlanningUpdate
+        market="Bristow decks in 2026"
+        notes={[
+          "Bristow resurfacing should begin with a framing inspection; savings only apply when the existing frame is structurally sound.",
+          "Braemar, Bristow Manor, Linton Hall, and nearby communities should have HOA material and railing rules checked before pricing is finalized.",
+          "Prince William County permit scope can change if stairs, railings, ledger, framing, or deck footprint are modified."
+        ]}
+        links={[
+          { href: "/deck-permit-prince-william-county-virginia", label: "Prince William permit guide" },
+          { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" },
+          { href: "/deck-cost-calculator", label: "Deck cost calculator" }
+        ]}
+      />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
         <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -136,9 +150,9 @@ export default function BristowDeckBuilderPage() {
             sizes="(max-width: 900px) 100vw, 900px"
           />
         </div>
-        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Featured Bristow Project</h2>
-        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>$21,000  -  300 sqft Deck Resurfacing in Braemar</h3>
-        <p style={{ lineHeight: 1.7, marginBottom: '1.5rem' }}>Resurfaced a 9-year-old builder PT deck with Trex Enhance in Clam Shell. Frame inspected and structurally sound  -  no member replacement needed. New aluminum railings, 6 stair lights. Braemar HOA approved in 10 days. Prince William County permit. 1.5-week build. The homeowner now has a 25-year warranty composite deck for less than the cost of a new wood deck.</p>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Bristow Project Planning Example</h2>
+        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>300 sqft Deck Resurfacing Scenario in Braemar</h3>
+        <p style={{ lineHeight: 1.7, marginBottom: '1.5rem' }}>A Bristow resurfacing candidate might keep an existing pressure-treated frame only after the ledger, joists, beams, posts, and footings inspect sound. Common upgrades include Trex Enhance or Transcend boards, new aluminum railing, stair lighting, fascia, and HOA-ready material documentation. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit or HOA details are available.</p>
       </div>
       <ServiceInclusions
         title="Why Bristow Homeowners Choose Loudoun Decks"
@@ -171,9 +185,9 @@ export default function BristowDeckBuilderPage() {
         </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Bristow" /></div></section>
-      <SimpleCTA title="Upgrade Your Bristow Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Upgrade Your Bristow Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-bristow-va" />
-      <NamedAuthor context="Bristow and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Bristow and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

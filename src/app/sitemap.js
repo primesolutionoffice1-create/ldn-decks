@@ -101,21 +101,29 @@ const EXCLUDE_PATHS = [
   '/deck-builder-in-fairfax-county',
   '/deck-builder-in-prince-william-county',
   // Phase 1 Cleanup Exclusions
-  '/near-you',
-  '/llms.txt',
-  '/llms-full.txt',
   '/showcase/rooftop-deck-washington-dc',
   '/blog/trex-vs-timbertech-vs-azek',
 ];
+
+const educationPriorityOverrides = new Map([
+  ['deck-stair-code-rise-run-virginia', { priority: 0.86, freq: 'weekly' }],
+  ['deck-stair-construction-diagram', { priority: 0.86, freq: 'weekly' }],
+  ['ledger-board-flashing-deck-attachment-virginia', { priority: 0.86, freq: 'weekly' }],
+  ['deck-snow-load-requirements-virginia', { priority: 0.84, freq: 'weekly' }],
+  ['understanding-deck-load-paths', { priority: 0.84, freq: 'weekly' }],
+  ['soil-bearing-capacity-deck-footings-va', { priority: 0.84, freq: 'weekly' }],
+  ['deck-understructure-guide', { priority: 0.82, freq: 'weekly' }],
+  ['deck-stair-safety-inspection-checklist', { priority: 0.82, freq: 'weekly' }],
+  ['common-deck-stair-inspection-failures-virginia', { priority: 0.82, freq: 'weekly' }],
+  ['fairfax-county-deck-setbacks-zoning', { priority: 0.80, freq: 'weekly' }],
+  ['hoa-deck-approval-guidelines-nova', { priority: 0.80, freq: 'weekly' }],
+]);
 
 export default async function sitemap() {
   const baseUrl = SITE_URL;
 
   // Filter helper
   const isExcluded = (path) => EXCLUDE_PATHS.some(ex => {
-    if (ex === '/near-you') {
-      return path === '/near-you';
-    }
     return path.startsWith(ex);
   });
 
@@ -153,13 +161,13 @@ export default async function sitemap() {
 		// /deck-remodeling removed — page canonical points to /services/deck-resurfacing
 		// (intentional consolidation). Submitting it caused "Alternate page with proper
 		// canonical tag" in GSC. The canonical target is already in the sitemap below.
-		// /deck-repair removed — page canonical points to /services/deck-repair-and-structural-maintenance
+		// /deck-repair removed — page canonical points to /services/deck-repair
 		// (intentional consolidation). NOTE: do NOT add to EXCLUDE_PATHS — startsWith would
 		// also drop /deck-repair-loudoun-county, which is self-canonical and must stay.
 		{ path: "/services",                     priority: 0.90, lastMod: TIER2, freq: "weekly" },
 		{ path: "/services/new-decks",           priority: 0.85, lastMod: TIER2, freq: "weekly" },
 		{ path: "/services/deck-resurfacing",    priority: 0.85, lastMod: TIER2, freq: "weekly" },
-		{ path: "/services/deck-repair-and-structural-maintenance", priority: 0.90, lastMod: TIER2, freq: "weekly" },
+		{ path: "/services/deck-repair", priority: 0.90, lastMod: TIER2, freq: "weekly" },
 		{ path: "/services/porches",             priority: 0.90, lastMod: TIER2, freq: "weekly" },
 		{ path: "/services/porches/front-porch", priority: 0.80, lastMod: TIER2, freq: "monthly" },
 		{ path: "/services/porches/open-porch",  priority: 0.80, lastMod: TIER2, freq: "monthly" },
@@ -194,7 +202,7 @@ export default async function sitemap() {
                 { path: "/services/entry-doors",         priority: 0.65, lastMod: TIER3, freq: "monthly" },
                 { path: "/faqs",                         priority: 0.75, lastMod: TIER3, freq: "monthly" },
                 { path: "/showcase",                     priority: 0.75, lastMod: TIER3, freq: "monthly" },
-                { path: "/houzz-deck-projects",          priority: 0.75, lastMod: TIER3, freq: "monthly" },
+                { path: "/houzz-deck-projects",          priority: 0.80, lastMod: TIER1, freq: "monthly" },
                 { path: "/blog",                         priority: 0.70, lastMod: TIER3, freq: "weekly" },
                 { path: "/education",                    priority: 0.75, lastMod: TIER1, freq: "weekly" },
                 { path: "/contact",                      priority: 0.70, lastMod: TIER3, freq: "monthly" },
@@ -202,7 +210,7 @@ export default async function sitemap() {
                 { path: "/bbb-accredited-deck-builder-virginia", priority: 0.85, lastMod: TIER1, freq: "monthly" },
                 { path: "/deck-financing",               priority: 0.85, lastMod: TIER1, freq: "monthly" },
                 { path: "/scholarship",                  priority: 0.60, lastMod: TIER1, freq: "yearly" },
-                { path: "/social",                       priority: 0.50, lastMod: TIER1, freq: "monthly" },
+                { path: "/social",                       priority: 0.55, lastMod: TIER1, freq: "monthly" },
                 { path: "/get-estimate",                 priority: 0.85, lastMod: TIER1, freq: "weekly" },
 
                 // Tier 1.5 - High-intent keyword/content pages (new)
@@ -276,6 +284,8 @@ export default async function sitemap() {
                 { path: "/about/warranty",                              priority: 0.75, lastMod: TIER2, freq: "monthly" },
                 { path: "/areas-we-serve",                              priority: 0.85, lastMod: TIER1, freq: "monthly" },
                 { path: "/reviews",                                     priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/review",                                      priority: 0.70, lastMod: TIER1, freq: "monthly" },
+                { path: "/ldn-decks-reviews-yelp",                     priority: 0.70, lastMod: TIER1, freq: "monthly" },
 
                 // Geo landing pages (standalone — premium markets)
                 { path: "/deck-builder-great-falls-va",                 priority: 0.92, lastMod: TIER1, freq: "weekly" },
@@ -327,9 +337,6 @@ export default async function sitemap() {
                 // 301 → /composite-deck-cost-northern-virginia (cannibalization fix).
                 { path: "/covered-deck-builder-northern-virginia",      priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-resurfacing-northern-virginia",         priority: 0.90, lastMod: TIER1, freq: "weekly" },
-                // /ldn-decks-reviews-yelp removed 2026-05-27: returns HTTP 308
-                // redirect — Bing rejects redirecting URLs in sitemap. Was
-                // re-added inadvertently; original Bing-SEO fix removed it.
                 { path: "/monthly-payment-composite-deck-northern-virginia", priority: 0.80, lastMod: TIER1, freq: "weekly" },
                 { path: "/timbertech-azek-deck-cost-northern-virginia", priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-deck-cost-monthly-payment",             priority: 0.80, lastMod: TIER1, freq: "weekly" },
@@ -408,11 +415,12 @@ export default async function sitemap() {
                 .map(post => {
                 const parsed = new Date(post.date);
                 const lastMod = isNaN(parsed.getTime()) ? TIER3 : parsed.toISOString().split('T')[0];
+                const override = educationPriorityOverrides.get(post.slug) || {};
                 return {
                         path: `/education/${post.slug}`,
-                        priority: 0.70,
+                        priority: override.priority || 0.70,
                         lastMod,
-                        freq: "monthly",
+                        freq: override.freq || "monthly",
                 };
         });
 
@@ -437,9 +445,11 @@ export default async function sitemap() {
         const allPages = [...staticPages, ...localServicePaths, ...blogPaths, ...educationPaths, ...showcasePaths]
                 .filter(p => !isExcluded(p.path));
 
-        return allPages.map(({ path, lastMod, videos }) => ({
+        return allPages.map(({ path, lastMod, priority, freq, videos }) => ({
                 url: `${baseUrl}${path}`,
                 lastModified: resolveLastMod(path, lastMod),
+                changeFrequency: freq,
+                priority,
                 ...(videos && { videos }),
         }));
 }

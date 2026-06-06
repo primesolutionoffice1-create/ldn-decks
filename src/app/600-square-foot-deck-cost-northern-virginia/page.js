@@ -13,7 +13,8 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/600-square-foot-deck-cost-northern-virginia',
   title: '600 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks',
-  description: 'Real 2026 pricing for a 600 sqft composite deck in Northern Virginia. Trex Transcend $28k–$42k. TimberTech AZEK $34k–$48k. Multi-level builds and outdoor-kitchen pairings detailed.',
+  description: '2026 planning pricing for a 600 sqft composite deck in Northern Virginia. Trex Transcend $28k–$42k. TimberTech AZEK $34k–$48k. Multi-level builds and outdoor-kitchen pairings detailed.',
+  image: '/social/600-square-foot-deck-cost-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -22,7 +23,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "How much does a 600 square foot composite deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A 600 sqft composite deck in Northern Virginia costs $22,000–$58,000 installed in 2026. Trex Enhance lands at $22k–$32k. Trex Transcend lands at $28k–$42k. TimberTech AZEK lands at $34k–$48k. Multi-level designs (the most common 600 sqft configuration) add $5k–$10k. Includes permit, framing, railings, basic lighting, and 3 required inspections." } },
     { "@type": "Question", name: "Why do most 600 sqft Northern Virginia decks become multi-level?", acceptedAnswer: { "@type": "Answer", text: "600 sqft is the inflection point where a single flat platform starts to feel cavernous and a multi-level design starts paying off. By splitting the footprint into an upper dining level (typically 300–350 sqft) connected via a wide step or two to a lower lounge level (250–300 sqft), the deck creates distinct functional zones without crowding either one. Wooded-lot homes in Donaldson Run, Brambleton, and Lansdowne particularly favor multi-level designs that follow natural slope." } },
-    { "@type": "Question", name: "What's included in a 600 sqft deck quote?", acceptedAnswer: { "@type": "Answer", text: "Free 3D design rendering, structural framing (joists 2×10 typical for spans up to 14 ft, beams, posts, footings 24+ inches deep), composite or wood surface boards with hidden fasteners on the field, railings (composite balustrade, aluminum, or cable), stairs with code-compliant rise/run, basic post-cap lighting, building permit, 3 county inspections (footing, framing, final), and 2-year workmanship warranty. Multi-level transition steps and additional stair sets included when designed in." } },
+    { "@type": "Question", name: "What's included in a 600 sqft deck quote?", acceptedAnswer: { "@type": "Answer", text: "Free 3D design rendering, structural framing (joists 2×10 typical for spans up to 14 ft, beams, posts, footings 24+ inches deep), composite or wood surface boards with hidden fasteners on the field, railings (composite balustrade, aluminum, or cable), stairs with code-compliant rise/run, basic post-cap lighting, building permit, county inspections, and written warranty terms. Multi-level transition steps and additional stair sets included when designed in." } },
     { "@type": "Question", name: "How long does a 600 sqft deck project take?", acceptedAnswer: { "@type": "Answer", text: "From signed contract: 9–13 weeks. County permit: 2–4 weeks (Loudoun) or 3–6 weeks (Fairfax/Arlington). HOA approval in parallel: 1–4 weeks. Material delivery: 1–3 weeks. Construction on-site: 2–3 weeks for single-level; 3–4 weeks for multi-level (the more common 600 sqft path). Most 600 sqft projects break ground 4–5 weeks after contract." } },
     { "@type": "Question", name: "Is 600 sqft a good size for outdoor kitchens?", acceptedAnswer: { "@type": "Answer", text: "Yes — 600 sqft is the sweet spot for outdoor kitchens because you can dedicate 80–120 sqft to a kitchen island + grilling area while still leaving 480+ sqft for dining and lounging. Outdoor kitchen islands typically run $15,000–$40,000 on top of the deck price. We coordinate gas, water, and electrical roughs into the deck framing so the kitchen integrates structurally rather than feeling bolted-on." } },
     { "@type": "Question", name: "What materials work best at 600 sqft?", acceptedAnswer: { "@type": "Answer", text: "Trex Transcend and TimberTech PRO/AZEK dominate at this size because the larger footprint exposes any color inconsistency or board-to-board variation that cheaper composites show. The wider color palette (Spiced Rum, Lava Rock, Vintage Mahogany, Coastline) lets you do contrasting picture-frame borders that anchor the larger surface visually. AZEK PVC outperforms composite at 600+ sqft because the larger surface area means more thermal expansion — PVC's lower coefficient of expansion keeps gap consistency over the long run." } },
@@ -45,10 +46,10 @@ export default function SixHundredSqftDeckCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/600-square-foot-deck-cost-northern-virginia" name="600 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks" description="Real 2026 pricing for a 600 sqft composite deck in Northern Virginia. Brand-by-brand breakdown, multi-level pairings, outdoor-kitchen integration, permit cost, timeline." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/600-square-foot-deck-cost-northern-virginia" name="600 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks" description="2026 planning pricing for a 600 sqft composite deck in Northern Virginia. Brand-by-brand breakdown, multi-level pairings, outdoor-kitchen integration, permit cost, timeline." speakable />
       <ArticleSchema
         title="600 Square Foot Deck Cost in Northern Virginia (2026)"
-        description="Definitive 2026 pricing for a 600 sqft composite deck in Northern Virginia. Multi-level configuration, outdoor kitchen pairing, premium materials, permit, and timeline."
+        description="2026 planning pricing for a 600 sqft composite deck in Northern Virginia. Multi-level configuration, outdoor kitchen pairing, premium materials, permit, and timeline."
         path="/600-square-foot-deck-cost-northern-virginia"
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
@@ -61,7 +62,7 @@ export default function SixHundredSqftDeckCostPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Real 2026 prices for the most popular multi-level size in NoVA. Brand-by-brand + outdoor-kitchen pairings.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
           </div>
         </div>
       </section>
@@ -69,7 +70,7 @@ export default function SixHundredSqftDeckCostPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick answer:</p>
-          <p>A 600 sqft composite deck in Northern Virginia costs <strong>$22,000–$58,000</strong> installed in 2026. Trex Enhance $22k–$32k. Trex Transcend $28k–$42k. TimberTech AZEK $34k–$48k. Multi-level builds (the most common 600 sqft path) add $5k–$10k. Includes permit + 3 inspections + 2-year warranty.</p>
+          <p>A 600 sqft composite deck in Northern Virginia costs <strong>$22,000–$58,000</strong> installed in 2026. Trex Enhance $22k–$32k. Trex Transcend $28k–$42k. TimberTech AZEK $34k–$48k. Multi-level builds (the most common 600 sqft path) add $5k–$10k. Includes permit planning, inspection planning, and written warranty terms.</p>
         </div>
       </section>
 
@@ -154,7 +155,7 @@ export default function SixHundredSqftDeckCostPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Get a free 3D rendering + itemized 600 sqft estimate" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get a free 3D rendering + itemized 600 sqft estimate" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/600-square-foot-deck-cost-northern-virginia" />
       <NamedAuthor context="Northern Virginia deck pricing" lastUpdated="2026-05-27" />
       <ContactHome />

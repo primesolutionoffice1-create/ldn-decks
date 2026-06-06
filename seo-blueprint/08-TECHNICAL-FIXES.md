@@ -102,6 +102,8 @@ export const buildAshburnServiceSchema = () => buildCityServiceSchema({
 
 ## §F3 — Add missing `@id` for Organization and WebSite
 
+**Implementation status — 2026-06-01:** `src/lib/business.js` is now the canonical source for `ORG_ID`, `WEBSITE_ID`, `FOUNDER_ID`, NAP, credentials, memberships, and organization `sameAs`. BBB is already present in organization `sameAs`; LinkedIn remains pending until an official company profile URL is created or claimed. Keep company profiles in organization `sameAs`, not founder/person `sameAs`. Do not emit self-serving `AggregateRating` or `Review` JSON-LD unless the current Google rich-results policy and verified source evidence support it.
+
 **Issue:** Homepage `WebPage` block references `https://ldndecks.com/#organization` and `https://ldndecks.com/#website` — neither `@id` is defined anywhere on the page.
 
 **Fix:** Update `src/lib/business.js` to include `@id` on the org block, and add a `WebSite` block to root layout via `StructuredData.jsx`.
@@ -172,15 +174,8 @@ export const buildAshburnServiceSchema = () => buildCityServiceSchema({
           "recognizedBy": { "@type": "Organization", "name": "Virginia Department of Professional and Occupational Regulation" }
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "41",
-        "bestRating": "5"
-      },
-      "review": [
-        // Pull 5 real Google reviews — see template below
-      ]
+      // Keep Review/AggregateRating JSON-LD disabled unless policy-eligible
+      // and source-backed. Surface verified public review links in visible UI.
     };
   }
 
@@ -358,6 +353,8 @@ Likely culprit: a `<link rel="preload">` tag in `src/app/page.js` AND a Next.js 
 ---
 
 ## §F9 — Self-host BBB seal
+
+**Implementation status — 2026-06-01:** BBB profile links are visible on trust/reputation surfaces. Only add or self-host a BBB seal if the badge asset and display terms are explicitly approved by BBB.
 
 **Issue:** `https://seal-dc-easternpa.bbb.org/seals/blue-seal-200-65-bbb-236091241.png` is preloaded from third-party origin on every page.
 

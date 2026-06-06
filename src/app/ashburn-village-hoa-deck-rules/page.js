@@ -15,38 +15,39 @@ export const metadata = buildMetadata({
   path: '/ashburn-village-hoa-deck-rules',
   title: 'Ashburn Village HOA Deck Rules & Approval Guide',
   description: 'Replacing or building a deck in Ashburn Village? Learn how the Ashburn Village HOA review works, how it pairs with the Loudoun County permit, and how to get approved.',
+  image: '/social/ashburn-village-hoa-deck-rules-social.png',
 });
 
 const PATH = '/ashburn-village-hoa-deck-rules';
 
 const faqs = [
   {
-    q: "Do I need HOA approval to replace a deck in Ashburn Village?",
-    a: "Yes. Even when you are replacing an existing deck, Ashburn Village requires approval through the community association's design review before work begins, because the new material, color, railing style, and any footprint change are exterior modifications. This is separate from the Loudoun County building permit.",
+    q: 'Do I need HOA approval to replace a deck in Ashburn Village?',
+    a: 'Yes. A replacement changes material, color, and railing style, so Ashburn Village design review is required before work begins. That approval is separate from the Loudoun County building permit.',
   },
   {
-    q: "Does replacing an old wood deck with composite need approval?",
-    a: "Yes. Switching from wood to composite changes the deck's color, texture, fascia, and railing system, so the new material and color samples should be included in the Ashburn Village design-review packet.",
+    q: 'Does replacing an old wood deck with composite need approval?',
+    a: 'Yes. The new color, texture, and railing system are exterior changes. Submit material and color samples, and confirm current guidelines with the Ashburn Village association.',
   },
   {
-    q: "How long does Ashburn Village deck approval take?",
-    a: "Most Northern Virginia HOA design committees review complete applications within roughly 30 to 45 days. Submitting the site plan, scaled drawings, material samples, and contractor information early is the best way to keep a replacement project moving.",
+    q: 'How long does Ashburn Village deck approval take?',
+    a: 'Most Northern Virginia HOA committees review within 30-45 days. A complete packet submitted early, alongside the county permit, is the best way to keep a replacement project moving.',
   },
   {
-    q: "Does an Ashburn Village deck replacement also need a Loudoun County permit?",
-    a: "Usually yes. Deck replacement commonly touches railings, stairs, ledger attachment, framing, or footings, so the county permit and inspections should be planned alongside the HOA approval.",
+    q: 'Can Loudoun Decks handle the Ashburn Village HOA paperwork?',
+    a: 'Yes. We prepare the design-review packet, county permit application, and inspection coordination for Ashburn Village deck projects. Call 571-655-7207 to start.',
   },
 ];
 
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `https://ldndecks.com${PATH}#faq`,
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `https://ldndecks.com${PATH}#faq`,
   url: `https://ldndecks.com${PATH}`,
   mainEntity: faqs.map(({ q, a }) => ({
-    "@type": "Question",
+    '@type': 'Question',
     name: q,
-    acceptedAnswer: { "@type": "Answer", text: a },
+    acceptedAnswer: { '@type': 'Answer', text: a },
   })),
 };
 
@@ -56,15 +57,15 @@ export default function AshburnVillageHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Ashburn Village HOA Deck Rules &amp; Approval Guide" description="Replacing or building a deck in Ashburn Village? Learn how the Ashburn Village HOA review works, how it pairs with the Loudoun County permit, and how to get approved." speakable />
       <ArticleSchema
-        title="Ashburn Village HOA Deck Rules & Approval Guide"
-        description="Ashburn Village deck replacement approval guide covering HOA review, Loudoun County permits, composite material samples, stairs, ledger attachment, and project timing."
+        title="Ashburn Village HOA Deck Rules and Approval Guide"
+        description="Ashburn Village HOA deck replacement approval, composite upgrade review, Loudoun County permit coordination, structural review points, and local deck builder support."
         path={PATH}
         image="/images/img17.jpeg"
         datePublished="2026-05-26"
-        dateModified="2026-06-02"
+        dateModified="2026-06-04"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Ashburn Village HOA Deck Rules &amp; Approval Guide" description="Replacing or building a deck in Ashburn Village? Learn how the Ashburn Village HOA review works, how it pairs with the Loudoun County permit, and how to get approved." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -74,7 +75,7 @@ export default function AshburnVillageHoaDeckRulesPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Deck replacement and approval for Ashburn Village &mdash; Loudoun County, VA</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
           </div>
         </div>
       </section>
@@ -97,7 +98,7 @@ export default function AshburnVillageHoaDeckRulesPage() {
 
           <h2 style={S.h2}>Two Approvals You Need</h2>
           <p style={S.p}>An Ashburn Village deck project requires <strong>two separate approvals</strong>. The <strong>HOA design review</strong> controls appearance &mdash; material, color, and style. The <strong>Loudoun County building permit</strong> controls structure and safety &mdash; footings, framing, ledger attachment, and railings. Replacing a deck almost always requires a permit, because guardrails, stairs, and decking are structural. Both can be pursued together; see our <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)' }}>Loudoun County deck permit guide</Link>.</p>
-          <p style={S.p}>For replacement projects, the permit reviewer cares most about the hidden structure: <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)' }}>ledger flashing and attachment</Link>, <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)' }}>joist spans</Link>, beam sizing, stair geometry, and railing connections. If stairs are changing, review the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)' }}>Virginia deck stair code guide</Link> and <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)' }}>deck stair construction diagram</Link> before the HOA packet is finalized.</p>
+          <p style={S.p}>Replacement projects should also check whether the existing ledger, flashing, stairs, and guardrail connections are reusable or need a full rebuild. Use our <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)' }}>ledger board flashing guide</Link>, <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)' }}>resurfacing vs replacement guide</Link>, and <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)' }}>Virginia deck stair code guide</Link> before locking the HOA scope.</p>
 
           <h2 style={S.h2}>How Loudoun Decks Handles Ashburn Village Approvals</h2>
           <p style={S.p}>We replace and rebuild decks throughout Ashburn Village, and we manage both approvals for you. We prepare the HOA design-review packet with the new material and color samples, submit the Loudoun County permit, and coordinate every inspection &mdash; including the structural checks that a replacement triggers. See more on our <Link href="/near-you/loudoun-county" style={{ color: 'var(--color-primary)' }}>Loudoun County page</Link> and <Link href="/deck-builder-ashburn-va" style={{ color: 'var(--color-primary)' }}>Ashburn deck builder page</Link>.</p>
@@ -116,9 +117,8 @@ export default function AshburnVillageHoaDeckRulesPage() {
               ['/loudoun-county-hoa-deck-rules', 'Loudoun County HOA Deck Rules'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
               ['/deck-permit-hoa-cost-loudoun-county', 'Loudoun Permit + HOA Cost Breakdown'],
-              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Flashing & Attachment Guide'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing Guide'],
               ['/education/deck-stair-code-rise-run-virginia', 'Virginia Deck Stair Code Guide'],
-              ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
               ['/ashburn-composite-deck-cost-financing', 'Ashburn Composite Deck Cost &amp; Financing'],
               ['/deck-resurfacing-vs-replacement', 'Deck Resurfacing vs Replacement'],
               ['/deck-builder-ashburn-va', 'Deck Builder in Ashburn'],
@@ -129,8 +129,8 @@ export default function AshburnVillageHoaDeckRulesPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Planning a Deck in Ashburn Village?" buttonText="Get Free Design Consultation" link="/contact" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <SimpleCTA title="Planning a Deck in Ashburn Village?" buttonText="Get Free Design Consultation" link="/get-estimate" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-04" />
 
       <RelatedGuides currentPath="/ashburn-village-hoa-deck-rules" />
 
