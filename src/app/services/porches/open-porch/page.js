@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
   path: "/services/porches/open-porch",
   title: "Open Porch Builder & Design | Northern Virginia",
   description: "Custom open porch design and construction in Northern Virginia. We build covered open-air porches, pavilions, and outdoor living rooms. Free estimates.",
-  image: "/images/img17.jpeg",
+  image: "/social/open-porch-social.png",
 });
 
 const inclusions = [
@@ -92,7 +92,7 @@ const faqSchema = {
 export default function OpenPorchPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/porches/open-porch" name="Open Porch Builder &amp; Design | Northern Virginia" description="Custom open porch design and construction in Northern Virginia. We build covered open-air porches, pavilions, and outdoor living rooms. Free estimates." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/porches/open-porch" name="Open Porch Builder &amp; Design | Northern Virginia" description="Custom open porch design and construction in Northern Virginia. We build covered open-air porches, pavilions, and outdoor living rooms. Free estimates." speakable />
       <ServiceSchema
         name="Open Porch Construction"
         description="Open-air porch design and build in Northern Virginia. Covered or uncovered with composite or wood decking."
@@ -159,7 +159,7 @@ export default function OpenPorchPage() {
       </section>
 
       <ServiceAreasGrid />
-      <SimpleCTA title="Build Your Open Porch" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Open Porch" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/services/porches/open-porch" />
       <ContactHome />
     </main>

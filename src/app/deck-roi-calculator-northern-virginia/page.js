@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
   path: '/deck-roi-calculator-northern-virginia',
   title: 'Deck ROI in Northern Virginia (2026)',
   description: 'How much value does a deck add in Northern Virginia? Composite recoups 65-80% at resale. Real ROI data by material, size, and county.',
-  image: '/images/img10.jpeg',
+  image: '/social/deck-roi-calculator-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -43,7 +43,7 @@ export default function DeckROICalculatorPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-roi-calculator-northern-virginia" name="Deck ROI in Northern Virginia (2026)" description="How much value does a deck add in Northern Virginia? Composite recoups 65-80% at resale. Real ROI data by material, size, and county." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-roi-calculator-northern-virginia" name="Deck ROI in Northern Virginia (2026)" description="How much value does a deck add in Northern Virginia? Composite recoups 65-80% at resale. Real ROI data by material, size, and county." speakable />
       <ArticleSchema
         title="Deck ROI in Northern Virginia: 2026 Home Value Data"
         description="How much value does a deck add in Northern Virginia? Real ROI data by material, project type, and county — plus the investment sweet spot."
@@ -316,7 +316,7 @@ export default function DeckROICalculatorPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Build a Deck That Adds Real Value" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build a Deck That Adds Real Value" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-roi-calculator-northern-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
@@ -327,7 +327,7 @@ export default function DeckROICalculatorPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>
       </section>
       <ContactHome />

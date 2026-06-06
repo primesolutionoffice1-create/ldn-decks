@@ -16,12 +16,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-reston-va',
   title: 'Expert Deck Builders in Reston VA | Custom Trex Decks',
   description: "Deck builder in Reston, VA. Composite decks designed for wooded lots and Reston Association DRB review  -  Lake Anne, Lake Audubon, South Lakes, North Point. Fairfax County permits handled. Free estimate.",
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-reston-va-social.png',
 });
 
 const inclusions = [
@@ -71,7 +72,7 @@ const expansionSections = [
     title: "One Association, One Design Review Board",
     paragraphs: [
       "Reston works differently from most Northern Virginia communities. Instead of dozens of small HOAs, nearly the entire community falls under the Reston Association, and its Design Review Board reviews every exterior change  -  decks included. The DRB cares about materials, colors and how a structure sits within Reston's wooded character, and it reviews on a fixed meeting calendar rather than on demand.",
-      "That means timing is everything. We prepare the DRB package  -  drawings, material samples, color specifications  -  to match what the board expects, and we submit it early enough to land on the right agenda. A recent Reston project, a multi-level TimberTech deck overlooking Lake Audubon, moved through the DRB and Fairfax County permit on parallel tracks so neither review held up the other."
+      "That means timing is everything. We prepare the DRB package  -  drawings, material samples, color specifications  -  to match what the board expects, and we submit it early enough to land on the right agenda. For larger Reston builds, DRB review and Fairfax County permit planning should be coordinated in parallel so one review path does not unnecessarily hold up the other."
     ]
   },
   {
@@ -110,11 +111,11 @@ export default function DeckBuilderRestonPage() {
   return (
     <main>
       <LocalBusinessSchema city="Reston" url="https://ldndecks.com/deck-builder-reston-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-reston-va" name="Expert Deck Builders in Reston VA | Custom Trex Decks" description="Deck builder in Reston, VA. Composite decks designed for wooded lots and Reston Association DRB review  -  Lake Anne, Lake Audubon, South Lakes, North Point. Fairfax County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-reston-va" name="Expert Deck Builders in Reston VA | Custom Trex Decks" description="Deck builder in Reston, VA. Composite decks designed for wooded lots and Reston Association DRB review  -  Lake Anne, Lake Audubon, South Lakes, North Point. Fairfax County permits handled. Free estimate." speakable />
       <ServicesHeader
         subtext="Reston, VA's Trusted Deck Company"
         title="Custom Deck Builder in Reston, VA"
-        description="Loudoun Decks builds composite decks designed for wooded lots and Reston Association DRB review. Lake Anne, South Lakes, North Point. Fairfax County permits handled. review-supported reputation."
+        description="Loudoun Decks builds composite decks designed for wooded lots and Reston Association DRB review. Lake Anne, South Lakes, North Point. Fairfax County permits handled. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Built for Reston's Wooded Lots"
@@ -129,6 +130,18 @@ export default function DeckBuilderRestonPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <PlanningUpdate
+        market="Reston deck projects"
+        notes={[
+          'Reston Association DRB timing should be mapped before construction windows are promised.',
+          'Wooded and sloped lots need early planning for root zones, staging, drainage and view-preserving railing choices.',
+          'Composite resurfacing is only appropriate after the frame, ledger and post bases are inspected.',
+        ]}
+        links={[
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/services/deck-inspection', label: 'Deck inspection' },
+        ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -173,15 +186,19 @@ export default function DeckBuilderRestonPage() {
           ))}
         
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
+            <li key="/bbb" style={{ marginBottom: '0.5rem' }}><Link href="/bbb-accredited-deck-builder-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>BBB Accredited Deck Builder →</Link></li>
+            <li key="/before-after" style={{ marginBottom: '0.5rem' }}><Link href="/before-and-after" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Before & After Deck Projects →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
+            <li key="/deck-payment-estimator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
             <li key="/deck-builder-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
+            <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Request a Written Reston Estimate →</Link></li>
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Reston" /></div></section>
-      <SimpleCTA title="Build Your Dream Deck in Reston" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Dream Deck in Reston" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-reston-va" />
-      <NamedAuthor context="Reston and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Reston and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

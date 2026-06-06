@@ -10,11 +10,11 @@ const standards = [
 
 const proofLinks = [
   ['Reviews from homeowners', '/reviews'],
-  ['Before and after projects', '/before-and-after'],
+  ['Before and after gallery', '/before-and-after'],
   ['Certifications and licenses', '/about/certifications-and-licenses'],
   ['Deck planning tools', '/tools'],
   ['Composite cost guide', '/composite-deck-cost-northern-virginia'],
-  ['Contact Loudoun Decks', '/contact'],
+  ['Request a written estimate', '/get-estimate'],
 ];
 
 export default function AboutTrustExpansion() {
@@ -28,7 +28,7 @@ export default function AboutTrustExpansion() {
             Loudoun Decks is built around one practical idea: premium deck projects go better when the
             homeowner understands the structure, material choices, timeline and approval path before work
             begins. That is why our site includes cost guides, permit guides, calculators, inspection
-            checklists and real project proof alongside the estimate request path.
+            checklists and evidence-gated photo resources alongside the estimate request path.
           </p>
           <p>
             The focus is Northern Virginia residential outdoor living: custom decks, composite deck

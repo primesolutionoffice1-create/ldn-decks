@@ -10,9 +10,16 @@ import ProcessSteps from '@/components/ProcessSteps';
 import WhyChooseDetails from '@/components/WhyChooseDetails';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
+import CountyConversionLinks from '@/components/CountyConversionLinks';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import styles from './CityPage.module.css';
 import { buildMetadata } from '@/lib/seo';
+
+const countyPermitGuides = {
+  'loudoun-county': '/deck-permit-loudoun-county-virginia',
+  'fairfax-county': '/deck-permit-fairfax-county-virginia',
+  'prince-william-county': '/deck-permit-prince-william-county-virginia',
+};
 
 // Unique local content for top geo-priority city pages
 const cityLocalContent = {
@@ -88,6 +95,7 @@ export async function generateMetadata({ params }) {
     path: `/near-you/${county}/${city}`,
     title: `Best Deck Builder in ${data.cityName} VA | Custom Decks & Patios`,
     description: `Searching for a trusted deck builder in ${data.cityName}, VA? Loudoun Decks offers premium custom composite decks, screened porches, and patio installations. Licensed & Insured. Get a free estimate today.`,
+    image: '/social/near-you-city-deck-builder-social.png',
     robots: { index: false, follow: true }
   });
 }
@@ -142,7 +150,7 @@ export default async function CityPage({ params }) {
   return (
     <main>
       <ServicesHeader
-        subtext={`Review-Supported Specialist in ${countyName}`}
+        subtext={`Local Deck Specialist in ${countyName}`}
         title={`Deck Builder in ${cityName}`}
         description={`Loudoun Decks is the premier custom deck builder in ${cityName}, VA. We help ${cityName} families create luxury outdoor living spaces with a focus on durability and Premium service.`}
       />
@@ -202,6 +210,7 @@ export default async function CityPage({ params }) {
       <ProcessSteps />
       <ServiceAreasGrid />
       <RelatedGuides currentPath={`/near-you/${county}/${citySlug}`} />
+      <CountyConversionLinks county={countyName} permitHref={countyPermitGuides[county]} />
       <ContactHome />
     </main>
   );

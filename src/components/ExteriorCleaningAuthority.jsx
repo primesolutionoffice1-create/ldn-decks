@@ -33,7 +33,7 @@ const CLEANING_DATA = {
       ['/services/deck-washing', 'deck washing'],
       ['/services/outdoor-washing', 'outdoor washing'],
       ['/services/house-siding-washing', 'siding washing'],
-      ['/contact', 'request an exterior cleaning estimate'],
+      ['/get-estimate', 'request an exterior cleaning estimate'],
     ],
     cta: 'Siding washing works best when it is coordinated with deck, patio and railing cleaning so the entire outdoor living area presents consistently.',
   },
@@ -51,7 +51,7 @@ const CLEANING_DATA = {
       ['/services/fence', 'fence installation'],
       ['/services/deck-washing', 'deck washing'],
       ['/services/patios', 'patio planning'],
-      ['/before-and-after', 'before and after project proof'],
+      ['/before-and-after', 'before and after photo gallery'],
     ],
     cta: 'Fence cleaning is a practical trust signal for the whole backyard: cleaner boundaries make deck resurfacing, patios and outdoor lighting look more finished.',
   },
@@ -99,7 +99,7 @@ export default function ExteriorCleaningAuthority({ type }) {
         <p style={{ lineHeight: 1.75, color: '#334155', margin: 0 }}>
           {data.cta} For larger backyard plans, pair this with <Link href="/services/new-decks">deck construction</Link>,{' '}
           <Link href="/services/deck-resurfacing">deck resurfacing</Link>, <Link href="/services/patios">patio work</Link>,{' '}
-          or a <Link href="/contact">professional estimate request</Link>.
+          or a <Link href="/get-estimate">professional estimate request</Link>.
         </p>
       </div>
     </section>

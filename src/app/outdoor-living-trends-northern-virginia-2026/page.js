@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
   path: '/outdoor-living-trends-northern-virginia-2026',
   title: 'Outdoor Living Trends in Northern Virginia (2026)',
   description: 'Top outdoor living trends for NoVA homeowners in 2026. Multi-level decks, outdoor kitchens, cable railings, mixed materials & more.',
-  image: '/images/img36.jpeg',
+  image: '/social/outdoor-living-trends-northern-virginia-2026-social.png',
 });
 
 const faqSchema = {
@@ -43,7 +43,7 @@ export default function OutdoorLivingTrendsPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/outdoor-living-trends-northern-virginia-2026" name="Outdoor Living Trends in Northern Virginia (2026)" description="Top outdoor living trends for NoVA homeowners in 2026. Multi-level decks, outdoor kitchens, cable railings, mixed materials &amp; more." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/outdoor-living-trends-northern-virginia-2026" name="Outdoor Living Trends in Northern Virginia (2026)" description="Top outdoor living trends for NoVA homeowners in 2026. Multi-level decks, outdoor kitchens, cable railings, mixed materials &amp; more." speakable />
       <ArticleSchema
         title="Outdoor Living Trends in Northern Virginia (2026)"
         description="Top outdoor living trends for NoVA homeowners in 2026. Multi-level decks, outdoor kitchens, cable railings, mixed materials & more."
@@ -87,7 +87,7 @@ export default function OutdoorLivingTrendsPage() {
 
           {/* ===== Intro ===== */}
           <p style={S.p}>Northern Virginia&apos;s outdoor living market has evolved dramatically. Homeowners in Ashburn, McLean, Reston, and Leesburg are no longer building simple rectangular decks they&apos;re creating full outdoor living rooms, dining areas, and entertainment zones that extend their homes by hundreds of usable square feet.</p>
-          <p style={S.p}>We&apos;ve tracked what our clients are requesting across 200+ projects in 2025&ndash;2026. Here are the 12 outdoor living trends driving the market right now with real cost data from Northern Virginia projects.</p>
+          <p style={S.p}>We&apos;ve tracked what Northern Virginia homeowners are requesting in 2025&ndash;2026. Here are the 12 outdoor living trends driving the market right now with planning cost ranges for decks, porches, patios, and outdoor living upgrades.</p>
 
           {/* ===== Trend 1 ===== */}
           <h2 style={S.h2}>1. Multi-Level Step-Down Decks</h2>
@@ -140,7 +140,7 @@ export default function OutdoorLivingTrendsPage() {
           {/* ===== Trend 9 ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>9. Louvered Pergolas</h2>
           <p style={S.p}>Motorized louvered <Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>pergolas</Link> are the premium shade solution for 2026. Unlike fixed pergolas or fabric canopies, louvered systems feature adjustable aluminum slats that rotate from fully open (full sun) to fully closed (rain protection) at the touch of a button.</p>
-          <p style={S.p}>Brands like StruXure and Azenco are the most installed in our market. They integrate with LED lighting, heaters, and even retractable screens. The investment is significant, but homeowners who install them consistently report they use their outdoor space 2&ndash;3 times more frequently.</p>
+          <p style={S.p}>Brands like StruXure and Azenco are common options homeowners compare for adjustable shade systems. They integrate with LED lighting, heaters, and even retractable screens. The investment is significant, so the right fit depends on sun exposure, privacy goals, electrical planning, and how often the outdoor space will be used.</p>
           <p style={S.p}><strong>Cost:</strong> $15,000&ndash;$40,000 | <strong>ROI:</strong> 50&ndash;65% | <strong>Build time:</strong> 1&ndash;2 weeks</p>
 
           {/* ===== Trend 10 ===== */}
@@ -257,7 +257,7 @@ export default function OutdoorLivingTrendsPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Ready to Build Your Dream Outdoor Space?" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Ready to Build Your Dream Outdoor Space?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/outdoor-living-trends-northern-virginia-2026" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 

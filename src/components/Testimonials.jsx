@@ -2,32 +2,28 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Testimonials.module.css';
-import { BUSINESS } from '@/lib/business';
 
-const testimonialsData = [
+const reviewProfiles = [
   {
     id: 1,
-    name: "James R.",
-    location: "Ashburn, VA",
-    project: "Trex Composite Deck, 500 sqft",
-    text: "Nick and his team built us a 500 sqft Trex Transcend deck in Ashburn, from permit to final walkthrough in under 3 weeks. Every neighbor has asked who did it. Honest pricing, zero surprises, and they left the yard cleaner than they found it.",
-    image: "/showcase/img01.jpg"
+    name: "Google Business Profile",
+    detail: "Public Google review profile. Verify current count, rating, and review text directly on Google Maps.",
+    href: "https://www.google.com/maps/place/Loudoun+Decks/",
+    image: "/images/img01.jpeg"
   },
   {
     id: 2,
-    name: "Maria & Tom S.",
-    location: "Leesburg, VA",
-    project: "Composite Deck + Screened Porch",
-    text: "We got 4 quotes. Loudoun Decks wasn\u2019t the cheapest, but Nick came to the house, explained everything in detail, and showed us exactly why composite is worth it long-term. Two years later, our deck still looks brand new. Worth every penny.",
-    image: "/showcase/img13.jpg"
+    name: "BBB Business Profile",
+    detail: "Verify current accreditation, rating, licensing references, and profile details directly on bbb.org.",
+    href: "https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241",
+    image: "/images/img13.jpeg"
   },
   {
     id: 3,
-    name: "David K.",
-    location: "South Riding, VA",
-    project: "Deck Replacement + Railings",
-    text: "They handled the HOA submission and Loudoun County permit themselves \u2014 I didn\u2019t lift a finger on the paperwork. Deck was done in 10 days. The Trex Calm Shell color we chose looks incredible against our siding.",
-    image: "/showcase/img21.jpg"
+    name: "Houzz Portfolio",
+    detail: "Review public portfolio details, photos, and profile information on the Houzz listing.",
+    href: "https://www.houzz.com/pro/webuser-782541997/loudoun-decks",
+    image: "/images/img21.jpeg"
   }
 ];
 
@@ -38,14 +34,14 @@ export default function Testimonials() {
         <div className={styles.header}>
           <div className={styles.subtextWrapper}>
             <span className={styles.line}></span>
-            <span className={styles.subtext}>Client Feedback</span>
+            <span className={styles.subtext}>Public Reputation</span>
             <span className={styles.line}></span>
           </div>
-          <h2 className={styles.title}>What Our Clients Say</h2>
+          <h2 className={styles.title}>Verify Loudoun Decks Reviews at the Source</h2>
         </div>
 
         <div className={styles.cardsGrid}>
-          {testimonialsData.map(t => (
+          {reviewProfiles.map(t => (
             <div key={t.id} className={styles.card}>
               <div className={styles.quoteIcon}>
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="var(--site-color)" opacity="0.2">
@@ -53,16 +49,16 @@ export default function Testimonials() {
                 </svg>
               </div>
               
-              <div className={styles.stars}>Customer feedback</div>
-              <p className={styles.reviewText}>&quot;{t.text}&quot;</p>
+              <div className={styles.stars}>Public profile</div>
+              <p className={styles.reviewText}>{t.detail}</p>
               
               <div className={styles.clientProfile}>
                 <div className={styles.avatarWrapper}>
-                  <Image src={t.image} alt={`Loudoun Decks ${t.project} customer in ${t.location}, Northern Virginia`} fill className={styles.avatar} sizes="65px" />
+                  <Image src={t.image} alt={`${t.name} verification resource for Loudoun Decks`} fill className={styles.avatar} sizes="65px" />
                 </div>
                 <div className={styles.clientInfo}>
                   <h4>{t.name}</h4>
-                  <span>{t.location} &middot; {t.project}</span>
+                  <a href={t.href} target="_blank" rel="noopener noreferrer">Open public profile &#8599;</a>
                 </div>
               </div>
             </div>
@@ -71,7 +67,10 @@ export default function Testimonials() {
 
         <div className={styles.reviewsCta}>
           <Link href="/reviews" className={styles.reviewsButton}>
-            Read All {BUSINESS.aggregateRating.reviewCount} Google Reviews &rarr;
+            Verify Public Review Profiles &rarr;
+          </Link>
+          <Link href="/review" className={styles.googleLink}>
+            Google Review Guidance &rarr;
           </Link>
           <a
             href="https://www.google.com/maps/place/Loudoun+Decks/"

@@ -14,8 +14,8 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/deck-permit-loudoun-county-virginia',
   title: 'Loudoun County Deck Permit Guide (2026) | Loudoun Decks',
-  description: 'Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Fast-track your deck build with our guaranteed permit process.',
-  image: '/images/blog-permit-guide.png',
+  description: 'Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Plan a cleaner deck build with professional permit coordination.',
+  image: '/social/deck-permit-loudoun-county-social.png',
 });
 
 const permitFaqs = [
@@ -67,14 +67,14 @@ export default function LoudounPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-permit-loudoun-county-virginia" name="Loudoun County Deck Permit Guide (2026) | Loudoun Decks" description="Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Fast-track your deck build with our guaranteed permit process." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-permit-loudoun-county-virginia" name="Loudoun County Deck Permit Guide (2026) | Loudoun Decks" description="Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Plan a cleaner deck build with professional permit coordination." speakable />
       <ArticleSchema
         title="Virginia Deck Building Code: 2026 Loudoun Permit Guide"
         description="Granular technical guide for 2026 Loudoun County deck permits. Footing depths, joist spans, ledger flashing, and LandMARC portal walkthrough."
         path="/deck-permit-loudoun-county-virginia"
         image="/images/blog-permit-guide.png"
         datePublished="2026-04-21"
-        dateModified="2026-05-13"
+        dateModified="2026-06-01"
       />
 
       {/* Hero Section */}
@@ -100,7 +100,7 @@ export default function LoudounPermitPage() {
             <li style={S.listItem}><strong>Project Essentials:</strong> Most projects require zoning, HOA, and structural building approvals.</li>
             <li style={S.listItem}>The new digital <strong>LandMARC system</strong> demands specific PDF plan formats.</li>
             <li style={S.listItem}>Unpermitted work voids warranties and disrupts property sales.</li>
-            <li style={S.listItem}>We guarantee full code compliance and approval for our clients.</li>
+            <li style={S.listItem}>We prepare projects around current code requirements and coordinate reviewer comments when they arise.</li>
           </ul>
 
           {/* ===== SECTION 1: Exemptions ===== */}
@@ -115,7 +115,7 @@ export default function LoudounPermitPage() {
           <ul style={S.list}>
             <li style={S.listItem}>Insurance providers frequently deny injury or structural claims on unpermitted decks; our guide to <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>building a deck without a permit</Link> explains the resale and enforcement risks.</li>
             <li style={S.listItem}>Unpermitted additions severely complicate home sales and often require demolition before closing.</li>
-            <li style={S.listItem}>Code enforcement officers issue costly stop-work orders and significant daily fines.</li>
+            <li style={S.listItem}>Code enforcement officers issue costly stop-work orders and significant daily fines. If an older deck needs structural corrections before it can pass review, compare the scope with our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link> and <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck replacement service</Link>.</li>
           </ul>
 
           {/* ===== SECTION 2: LandMARC Portal ===== */}
@@ -254,7 +254,7 @@ export default function LoudounPermitPage() {
           <div style={{ background: 'var(--color-dark)', color: '#fff', borderRadius: '16px', padding: '3.5rem', textAlign: 'center', marginTop: '4rem' }}>
             <h3 style={{ color: '#fff', fontSize: '2rem', marginTop: 0, marginBottom: '1rem' }}>We Guarantee Full Approval</h3>
             <p style={{ color: '#ccc', fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>Navigating LandMARC and Virginia USBC shouldn&apos;t be your full-time job. We handle every drawing, submission, and inspection.</p>
-            <Link href="/contact" style={{ background: 'var(--color-primary)', color: '#fff', padding: '1.25rem 3rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 800, display: 'inline-block', fontSize: '1.1rem', transition: 'transform 0.2s' }}>Request Your Technical Consultation</Link>
+            <Link href="/get-estimate" style={{ background: 'var(--color-primary)', color: '#fff', padding: '1.25rem 3rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 800, display: 'inline-block', fontSize: '1.1rem', transition: 'transform 0.2s' }}>Request Your Technical Consultation</Link>
           </div>
 
         </div>
@@ -277,9 +277,9 @@ export default function LoudounPermitPage() {
         </ul>
       </section>
 
-      <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-permit-loudoun-county-virginia" />
-      <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-06-01" />
 
       <ContactHome />
     </>

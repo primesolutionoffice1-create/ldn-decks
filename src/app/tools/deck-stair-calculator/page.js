@@ -18,7 +18,7 @@ export const metadata = buildMetadata({
   path,
   title: 'Virginia Deck Stair Calculator | Rise Run Planner | LDN Decks',
   description: pageDescription,
-  image: '/images/deck-inspection.png',
+  image: '/social/deck-stair-calculator-social.png',
 });
 
 const faqs = [
@@ -126,7 +126,7 @@ const relatedResources = [
     desc: 'Professional deck and stair safety inspections for Northern Virginia homes.',
   },
   {
-    href: '/services/deck-repair-and-structural-maintenance',
+    href: '/services/deck-repair',
     title: 'Deck Stair Repair',
     desc: 'Structural repair for rotted stringers, loose stairs, weak railings and failed inspections.',
   },
@@ -137,7 +137,7 @@ export default function DeckStairCalculatorPage() {
     <main className={styles.page}>
       <JsonLd data={faqSchema} />
       <JsonLd data={webApplicationSchema} />
-      <WebPageSchema url={pageUrl} name={pageTitle} description={pageDescription} speakable />
+      <WebPageSchema dateModified="2026-06-01" url={pageUrl} name={pageTitle} description={pageDescription} speakable />
 
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -151,7 +151,7 @@ export default function DeckStairCalculatorPage() {
             <Link className={styles.primaryButton} href="#calculator">
               Use Calculator
             </Link>
-            <Link className={styles.secondaryButton} href="/contact">
+            <Link className={styles.secondaryButton} href="/get-estimate">
               Request Stair Review
             </Link>
           </div>
@@ -278,7 +278,7 @@ export default function DeckStairCalculatorPage() {
               repair or rebuild deck stairs across Northern Virginia.
             </p>
             <CallLink>Call (571) 655-7207</CallLink>
-            <Link href="/contact">Request an estimate</Link>
+            <Link href="/get-estimate">Request an estimate</Link>
             <Link href="/services/deck-inspection">Book a deck inspection</Link>
           </aside>
         </div>
@@ -324,10 +324,10 @@ export default function DeckStairCalculatorPage() {
           with safety, permitting, railings, lighting and long-term durability in mind.
         </p>
         <div className={styles.ctaButtons}>
-          <Link className={styles.primaryButton} href="/contact">
+          <Link className={styles.primaryButton} href="/get-estimate">
             Request a Stair Estimate
           </Link>
-          <Link className={styles.secondaryButton} href="/services/deck-repair-and-structural-maintenance">
+          <Link className={styles.secondaryButton} href="/services/deck-repair">
             Review Repair Options
           </Link>
         </div>
@@ -342,7 +342,7 @@ export default function DeckStairCalculatorPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>
       </section>
       <RelatedGuides currentPath={path} category="deck-core" />

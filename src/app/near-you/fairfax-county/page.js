@@ -15,6 +15,7 @@ import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import CountyConversionLinks from '@/components/CountyConversionLinks';
 
 const LocationIcon = () => (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -25,7 +26,8 @@ const LocationIcon = () => (
 export const metadata = buildMetadata({
     path: "/near-you/fairfax-county",
     title: "Premium Deck Builder Fairfax County VA | Free 24h Quote",
-    description: "Trusted deck and outdoor living contractor in Fairfax County. review-backed. Custom decks, patios, and porches in Reston, Vienna, Mclean, and Alexandria.",
+    description: "Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches.",
+    image: "/social/fairfax-county-deck-builder-hub-social.png",
 });
 
 const fairfaxCities = [
@@ -63,7 +65,7 @@ export default function FairfaxCountyPage() {
           description="LDN Decks builds custom decks, screened porches, patios, and outdoor living spaces throughout Fairfax County, VA."
           url="https://ldndecks.com/near-you/fairfax-county"
         />
-      <WebPageSchema url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Free 24h Quote" description="Trusted deck and outdoor living contractor in Fairfax County. review-backed. Custom decks, patios, and porches in Reston, Vienna, Mclean, and Alexandria." speakable />
+      <WebPageSchema dateModified="2026-06-04" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Free 24h Quote" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
             <ServicesHeader
           subtext="Serving Northern Virginia"
           title="Deck Builder in Fairfax County, VA"
@@ -99,6 +101,12 @@ export default function FairfaxCountyPage() {
                 For full details on FIDO submissions, fees, and inspection timelines, see our{' '}
                 <Link href="/deck-permit-fairfax-county-virginia">Fairfax County deck permit guide</Link>.
             </p>
+                <p>
+                For HOA-controlled neighborhoods, compare the{' '}
+                <Link href="/hoa-deck-rules-northern-virginia">Northern Virginia HOA deck rules guide</Link>,{' '}
+                <Link href="/sully-station-hoa-deck-rules">Sully Station HOA guide</Link>, and{' '}
+                <Link href="/virginia-run-hoa-deck-rules">Virginia Run HOA guide</Link> before finalizing materials, railings, stairs, and permit drawings.
+            </p>
             </div>
             </div>
             </div>
@@ -113,7 +121,7 @@ export default function FairfaxCountyPage() {
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Fairfax County Building Permits & Codes</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County requires building permits for all attached decks and any deck over 200 square feet. Applications are submitted through the <strong>FIDO online system</strong> (Fairfax Inspections Database Online). Processing time is <strong>3-6 weeks</strong> — longer than Loudoun or Prince William counties. Three inspections required: footing, framing, final.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks handles the <strong>entire Fairfax County permit process</strong> including structural drawings, FIDO submission, and inspector coordination. We build to exceed Fairfax County&apos;s typical deck detail specifications and maintain a <strong>100% permit approval rate</strong>.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks handles the <strong>entire Fairfax County permit process</strong> including structural drawings, FIDO submission, and inspector coordination. We build to meet or exceed Fairfax County&apos;s typical deck detail specifications and address review comments when they arise.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Fairfax County (2026)</h3>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
@@ -132,7 +140,7 @@ export default function FairfaxCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Vienna & Oakton:</strong> <Link href="/services/deck-replacement">Deck replacements</Link> on 1980s-1990s colonials, <Link href="/screened-porch-builder-northern-virginia">screened porch additions</Link>, and pergola installations. Many homes here have original wood decks that are now 25-30 years old — prime candidates for composite upgrades.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Reston & Herndon:</strong> Reston Association-approved composite builds, townhome deck/patio combos, and elevated deck designs for wooded lots with grade changes. We have extensive experience with Reston&apos;s architectural review requirements.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Burke, Springfield & Lorton:</strong> Family-oriented deck builds with integrated lighting, stair systems, and multi-level designs for sloped lots. Budget-friendly Trex Enhance projects are popular here at $30-$50/sqft.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Centreville & Chantilly:</strong> Full deck replacements, composite resurfacing, and fence packages. HOA communities like Virginia Run and Sully Station have specific requirements we know well.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Centreville & Chantilly:</strong> Full deck replacements, composite resurfacing, and fence packages. HOA communities like <Link href="/virginia-run-hoa-deck-rules">Virginia Run</Link> and <Link href="/sully-station-hoa-deck-rules">Sully Station</Link> have specific requirements we know well.</p>
         </div>
       </article>
 
@@ -166,6 +174,7 @@ export default function FairfaxCountyPage() {
       </section>
       <CountyRecentProjects countySlug="fairfax-county" limit={6} />
       <RelatedGuides currentPath="/near-you/fairfax-county" />
+      <CountyConversionLinks county="Fairfax County" permitHref="/deck-permit-fairfax-county-virginia" />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Builders by City</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -186,7 +195,7 @@ export default function FairfaxCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Fairfax County" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Fairfax County" lastUpdated="2026-06-04" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
@@ -197,7 +206,7 @@ export default function FairfaxCountyPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>
       </section>
       <ContactHome />

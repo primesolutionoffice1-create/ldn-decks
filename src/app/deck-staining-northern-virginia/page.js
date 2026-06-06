@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/deck-staining-northern-virginia',
   title: 'Deck Staining in Northern Virginia',
   description: 'Professional deck staining in Northern Virginia. $3-$7/sqft. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207.',
+  image: '/social/deck-staining-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -31,7 +32,7 @@ export default function DeckStainingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-staining-northern-virginia" name="Deck Staining in Northern Virginia" description="Professional deck staining in Northern Virginia. $3-$7/sqft. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-staining-northern-virginia" name="Deck Staining in Northern Virginia" description="Professional deck staining in Northern Virginia. $3-$7/sqft. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -164,7 +165,7 @@ export default function DeckStainingPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Protect Your Deck Before Winter" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Protect Your Deck Before Winter" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/deck-staining-northern-virginia" />

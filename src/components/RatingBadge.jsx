@@ -1,5 +1,4 @@
 import React from 'react';
-import { BUSINESS } from '@/lib/business';
 
 /**
  * RatingBadge — Shows public Google review count as visible trust content only.
@@ -22,8 +21,8 @@ export default function RatingBadge() {
       }}
     >
       <span style={{ color: '#f59e0b', fontSize: '1rem' }}>Google reviews</span>
-      <span style={{ fontWeight: 600 }}>{BUSINESS.aggregateRating.reviewCount}+</span>
-      <span style={{ color: '#888' }}>public reviews</span>
+      <span style={{ fontWeight: 600 }}>Public profile</span>
+      <span style={{ color: '#888' }}>verify current count</span>
     </div>
   );
 }

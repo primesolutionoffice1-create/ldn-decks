@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { blogPosts } from '../src/lib/blogData.js';
 
 const appDir = path.resolve('src/app');
 const componentDir = path.resolve('src/components');
@@ -88,6 +89,83 @@ if (howToFiles.length) {
   fail(`HowTo schema is deprecated for Google rich results and should not be emitted:\n${howToFiles.join('\n')}`);
 }
 
+const entityPolicyFiles = schemaTypeFiles.filter(file => {
+  const source = fs.readFileSync(file, 'utf8');
+  return /https:\/\/ldndecks\.com\/#nick|['"]@id['"]\s*:\s*['"]#nick['"]/.test(source)
+    || /author\s*:\s*\{\s*['"]@type['"]\s*:\s*['"]Person['"]\s*,\s*name\s*:\s*['"]Nick['"]/.test(source)
+    || /['"]author['"]\s*:\s*\{\s*['"]@type['"]\s*:\s*['"]Person['"]\s*,\s*['"]name['"]\s*:\s*['"]Nick['"]/.test(source);
+});
+
+if (entityPolicyFiles.length) {
+  fail(`Founder/entity policy regression. Use FOUNDER_ID / https://ldndecks.com/#founder and BUSINESS.founder.name instead of legacy #nick or simple Nick author schema:\n${entityPolicyFiles.join('\n')}`);
+}
+
+const reviewSchemaFiles = schemaTypeFiles.filter(file => {
+  const source = fs.readFileSync(file, 'utf8');
+  return /['"]@type['"]\s*:\s*['"]AggregateRating['"]/.test(source)
+    || /['"]@type['"]\s*:\s*['"]Review['"]/.test(source)
+    || /(?:^|[,{]\s*)['"]review['"]\s*:/.test(source);
+});
+
+if (reviewSchemaFiles.length) {
+  fail(`Review/AggregateRating JSON-LD policy regression. Keep visible review proof, but do not emit self-serving Review or AggregateRating schema unless policy-eligible and source-backed:\n${reviewSchemaFiles.join('\n')}`);
+}
+
+function assertSourceContains(file, snippets, label) {
+  const source = fs.readFileSync(file, 'utf8');
+  const missing = snippets.filter((snippet) => !source.includes(snippet));
+  if (missing.length) {
+    fail(`${label} schema contract regression in ${path.relative(process.cwd(), file)}. Missing required source markers:\n${missing.join('\n')}`);
+  }
+}
+
+assertSourceContains(
+  path.join(appDir, 'education/[slug]/page.js'),
+  [
+    'function buildArticleSchema',
+    'publisher: { \'@id\': ORG_ID }',
+    'about:',
+    'mentions:',
+    'citation:',
+    '<JsonLd data={articleSchema} />',
+  ],
+  'Education Article',
+);
+
+assertSourceContains(
+  path.join(appDir, 'blog/[slug]/page.js'),
+  [
+    'function buildBlogPostingSchema',
+    'publisher: { \'@id\': ORG_ID }',
+    'about:',
+    'mentions: extractInternalMentions(post.content)',
+    'keywords:',
+    '<JsonLd data={articleSchema} />',
+  ],
+  'BlogPosting',
+);
+
+const highPriorityBlogCitationSlugs = [
+  'trex-vs-wood-decking',
+  'do-i-need-a-permit-for-a-deck-loudoun',
+  'trex-vs-timbertech-vs-azek',
+  'railing-heights-safety-and-codes',
+  'deck-structural-repair-rot-prevention',
+  'loudoun-county-deck-permit-guide-2026',
+];
+
+const weakHighPriorityBlogPosts = highPriorityBlogCitationSlugs
+  .map((slug) => blogPosts.find((post) => post.slug === slug))
+  .filter((post) => {
+    if (!post) return true;
+    const internalMentions = [...(post.content || '').matchAll(/\[([^\]]+)\]\((\/[^)]+)\)/g)];
+    return !post.sourceLinks?.length || !post.tags?.length || internalMentions.length < 2;
+  });
+
+if (weakHighPriorityBlogPosts.length) {
+  fail(`High-priority BlogPosting schema inputs lost citation/about/mention strength. Add sourceLinks, tags, and at least two internal markdown links for:\n${weakHighPriorityBlogPosts.map((post) => post?.slug || '[missing post]').join('\n')}`);
+}
+
 const jsonLdFiles = rgFiles('<JsonLd|application/ld\\+json', path.resolve('src'));
 const unsafeJsonLdWarnings = jsonLdFiles.filter(file => {
   const source = fs.readFileSync(file, 'utf8');
@@ -146,6 +224,8 @@ console.log(JSON.stringify({
   duplicateFaqRisks: 0,
   missingCanonicalRisks: 0,
   howToSchemaFiles: 0,
+  entityPolicyFiles: entityPolicyFiles.length,
+  reviewSchemaFiles: reviewSchemaFiles.length,
   napDriftFiles: napDriftFiles.length,
   unsafeJsonLdWarnings,
 }, null, 2));

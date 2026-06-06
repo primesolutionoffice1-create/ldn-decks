@@ -9,16 +9,17 @@ NoVA is a top-10 most-affluent and most-competitive metro in the US for home ser
 | Source | Name | Address | Phone | Status |
 |---|---|---|---|---|
 | Schema (homepage `GeneralContractor`) | Loudoun Decks | 13704 Winding Oak Cir, Centreville, VA 20121 | +15716557207 | ✓ |
-| Schema (Ashburn `HomeAndConstructionBusiness`) | Loudoun Decks | (varies) | +1-571-655-7207 | ⚠️ different format |
-| Visible HTML (homepage) | Loudoun Decks | NOT SHOWN in body, only schema | (571) 655-7207 | ⚠️ no on-page address block |
-| Footer | (verify) | (verify) | (571) 655-7207 | TBD |
-| Google Business Profile | (audit needed) | | | TBD |
-| BBB seal | (linked but no BBB profile in `sameAs`) | | | ⚠️ |
+| Shared org schema (`src/lib/business.js`) | Loudoun Decks | 13704 Winding Oak Cir, Centreville, VA 20121 | +15716557207 | ✓ source of truth |
+| Visible HTML / header | Loudoun Decks | 13704 Winding Oak Cir, Centreville, VA 20121 | (571) 655-7207 | ✓ display format |
+| Footer | Loudoun Decks | 13704 Winding Oak Cir, Centreville, VA 20121 | (571) 655-7207 | ✓ aligned |
+| Google Business Profile | Loudoun Decks | 13704 Winding Oak Cir, Centreville, VA 20121 | (571) 655-7207 | ✓ public profile linked in `sameAs`; live GBP dashboard still owner-controlled |
+| BBB profile | Loudoun Decks | Centreville, VA | profile URL in `sameAs` | ✓ |
 
-**3 NAP fixes:**
-1. **Standardize phone format everywhere to E.164 `+15716557207`** in schema; display as `(571) 655-7207` in HTML. Fix the Ashburn `HomeAndConstructionBusiness` block to match.
-2. **Add an on-page NAP block** in the footer (likely already there — verify). Format: `<p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">…</p>` with microdata reinforcement.
-3. **Add BBB profile URL to `sameAs`** in `src/lib/business.js`. Format: `https://www.bbb.org/us/va/centreville/profile/...`.
+**Current NAP policy:**
+1. Keep `src/lib/business.js` as the single source of truth for name, address, phone, sameAs, credentials, and membership data.
+2. Use E.164 `+15716557207` in JSON-LD and display `(571) 655-7207` in HTML.
+3. Keep organization profiles in `BUSINESS.sameAs`; do not place company profiles in Person-level `sameAs`.
+4. Do not emit `aggregateRating` or self-hosted review schema for the business. Google's review-snippet policy treats self-serving local business review markup as ineligible/risky.
 
 ---
 
@@ -47,15 +48,15 @@ You need to audit your existing GBP, then execute this list. I cannot read your 
 
 ```
 Loudoun Decks builds premium custom decks, screened porches, pergolas, and outdoor
-living spaces across Northern Virginia. As a TrexPro Platinum installer and
-Class A Virginia contractor, we serve homeowners throughout Loudoun, Fairfax,
-Prince William, and Arlington counties — from Ashburn and Leesburg to Reston,
-Vienna, McLean, and Manassas.
+living spaces across Northern Virginia. As a Class A Virginia contractor with
+manufacturer profile links available for homeowner verification, we serve homeowners
+throughout Loudoun, Fairfax, Prince William, and Arlington counties — from Ashburn
+and Leesburg to Reston, Vienna, McLean, and Manassas.
 
-Every deck is engineered to NoVA's permit and HOA requirements, built to a
-2-year workmanship warranty, and backed by 5-star reviews from 41+ local clients.
-Composite, Trex, AZEK, TimberTech, IPE, cedar, and pressure-treated decks.
-Free in-home consultations. Financing available.
+Projects are planned around NoVA's permit requirements, HOA review, material specs,
+and site conditions. Composite, Trex, AZEK, TimberTech, IPE, cedar, and
+pressure-treated decks. Public review profiles and warranty terms should be verified
+at the source before quoting specific counts, ratings, or coverage.
 
 Call (571) 655-7207 or request a free estimate at ldndecks.com.
 ```
@@ -69,8 +70,8 @@ For each service, GBP allows a 300-char description. Add ALL of these:
 | Service | Description |
 |---|---|
 | Custom deck construction | Architect-designed multi-level, second-story, and rooftop decks built to your home's character. |
-| Composite deck installation | Trex, TimberTech, AZEK, Deckorators — TrexPro Platinum certified. |
-| Trex deck installation | TrexPro Platinum tier — Trex Transcend, Enhance Naturals, Select. 25-yr fade/stain warranty. |
+| Composite deck installation | Trex, TimberTech, AZEK, Deckorators — verify current manufacturer profile details at the source. |
+| Trex deck installation | Trex Transcend, Enhance Naturals, Select — verify current Trex profile and warranty details at the source. |
 | Wood deck construction | Pressure-treated, cedar, IPE, mahogany — natural beauty, traditional craftsmanship. |
 | Deck resurfacing | Resurface existing frames with new composite or wood for 40–60% less than full replacement. |
 | Deck repair | Rot, loose railings, ledger boards, joist replacement, board replacement. |
@@ -110,7 +111,7 @@ Pre-seed 10 Q&As as the owner (allowed per Google policy):
 5. Do I need a permit? — Yes for any deck > 30" off grade in NoVA. We handle the permit process.
 6. What's the warranty? — 2 years workmanship + manufacturer warranties (Trex 25-yr fade/stain).
 7. Do you build screened porches? — Yes, three-season and screened-in porches.
-8. Do you do composite or wood? — Both. We're TrexPro Platinum for composite; cedar/IPE/PT for wood.
+8. Do you do composite or wood? — Both. We help homeowners compare Trex, TimberTech, AZEK, cedar, IPE, and pressure-treated wood by budget, maintenance, sun exposure, and design goals.
 9. What counties do you serve? — Loudoun, Fairfax, Prince William, Arlington, Stafford counties.
 10. Do you do small repairs? — Yes — board replacement, railing repair, full resurfacing.
 
@@ -131,13 +132,13 @@ Order matters. Submit in this order; verify NAP exact-match (name, address, phon
 | Facebook Business Page | Already linked — verify "About" section NAP |
 | Instagram Business | Already linked — verify bio + contact button |
 | Houzz | Already linked — Pro listing if not yet |
-| BBB | **Currently displaying seal but NOT in `sameAs`** — get the BBB profile URL and add it |
+| BBB | Linked in `sameAs`; keep public profile visible from `/social`, `/reviews`, `/about`, and `/team` |
 | LinkedIn Company Page | Currently missing from `sameAs` — create or claim |
 | YouTube channel | If you have project videos, create a brand channel and add to `sameAs` |
 
 ### Tier 2 — High value (next 20)
 
-NextDoor for Business · Angi · Thumbtack · HomeAdvisor · Porch.com · BuildZoom · Houzz Pro · Trustpilot · Trex.com Pro Locator (verify your TrexPro Platinum listing surfaces) · TimberTech Find a Contractor · AZEK Find a Contractor · Deckorators Locator · NADRA member directory (North American Deck and Railing Association) · NARI member directory (National Association of the Remodeling Industry) · Class A VA Contractor License Lookup · Loudoun County Chamber of Commerce · Northern Virginia Building Industry Association (NVBIA) · Better Homes & Gardens "Find a Pro" · This Old House Pros directory · Manta
+NextDoor for Business · Angi · Thumbtack · HomeAdvisor · Porch.com · BuildZoom · Houzz Pro · Trustpilot · Trex.com Pro Locator (verify current listing details) · TimberTech Find a Contractor · AZEK Find a Contractor · Deckorators Locator · NADRA member directory (North American Deck and Railing Association) · NARI member directory (National Association of the Remodeling Industry) · Class A VA Contractor License Lookup · Loudoun County Chamber of Commerce · Northern Virginia Building Industry Association (NVBIA) · Better Homes & Gardens "Find a Pro" · This Old House Pros directory · Manta
 
 ### Tier 3 — Local NoVA / niche (next 30)
 
@@ -184,7 +185,7 @@ Each `/deck-builder-{city}-va` page must include:
 - [ ] **Named HOAs in that city** linking to relevant `/{hoa}-hoa-deck-rules` page (if exists)
 - [ ] **City permit office link + address** (link to that city's building department)
 - [ ] **City climate notes** (e.g., "Loudoun's freeze-thaw cycles require…") — differentiates from generic
-- [ ] **At least 1 named project from that city** ("Recently completed: 480 sq ft Trex Transcend deck in [Subdivision], Ashburn — 6-week build")
+- [ ] **At least 1 verified project from that city** (`[INSERT VERIFIED PROJECT — DO NOT PUBLISH UNTIL FILLED]` with city, month/year, scope, material, photo paths, cost/range if publishable, and permit/HOA status)
 - [ ] **3 city-specific FAQs** (e.g., "Do I need a permit for a deck in Ashburn? Yes — Loudoun County requires…")
 - [ ] **LocalBusiness schema with serviceArea = that city** + adjacent cities
 - [ ] **2 internal links** — to county hub + to county HOA page + to county permit page
@@ -223,14 +224,18 @@ Each `/deck-builder-{city}-va` page must include:
       "openingHoursSpecification": [...],
       "priceRange": "$$$",
       "sameAs": [
-        "https://www.facebook.com/ldndecks",
-        "https://www.instagram.com/ldndecks",
-        "https://www.youtube.com/@ldndecks",
-        "https://www.linkedin.com/company/loudoun-decks",
-        "https://www.houzz.com/pro/ldndecks",
+        "https://x.com/ldndecks",
+        "https://www.instagram.com/loudoundecks/",
+        "https://www.facebook.com/profile.php?id=61573750423712",
+        "https://www.google.com/maps/place/Loudoun+Decks/",
+        "https://www.houzz.com/pro/webuser-782541997/loudoun-decks",
         "https://www.yelp.com/biz/loudoun-decks-centreville",
-        "https://www.bbb.org/us/va/centreville/profile/...",
-        "https://www.google.com/maps/place/?q=place_id:..."
+        "https://www.tiktok.com/@loudoun.decks",
+        "https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241",
+        "https://www.trustpilot.com/review/ldndecks.com",
+        "https://www.buildzoom.com/contractor/loudoun-decks",
+        "https://business.loudounchamber.org/list/member/loudoun-decks-30047",
+        "https://www.mapquest.com/us/virginia/loudoun-decks-532352487"
       ],
       "areaServed": [
         { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },
@@ -241,7 +246,7 @@ Each `/deck-builder-{city}-va` page must include:
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "TrexPro Platinum Installer",
+          "name": "Manufacturer profile verification",
           "credentialCategory": "certification",
           "recognizedBy": { "@type": "Organization", "name": "Trex Company, Inc." }
         },
@@ -251,19 +256,13 @@ Each `/deck-builder-{city}-va` page must include:
           "credentialCategory": "license",
           "recognizedBy": { "@type": "Organization", "name": "Virginia Department of Professional and Occupational Regulation" }
         }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "41",
-        "bestRating": "5"
-      }
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://ldndecks.com/deck-builder-ashburn-va#webpage",
       "url": "https://ldndecks.com/deck-builder-ashburn-va",
-      "name": "Deck Builder in Ashburn, VA | TrexPro Platinum | Loudoun Decks",
+      "name": "Deck Builder in Ashburn, VA | Class A Virginia | Loudoun Decks",
       "isPartOf": { "@id": "https://ldndecks.com/#website" },
       "about": { "@id": "https://ldndecks.com/#organization" },
       "primaryImageOfPage": {
@@ -311,23 +310,13 @@ Each `/deck-builder-{city}-va` page must include:
 6. BBB
 7. NextDoor (powerful in NoVA — every neighborhood has a NextDoor; word-of-mouth amplifier)
 
-### Review schema implementation
+### Review evidence policy
 
-Currently you emit `AggregateRating` but no individual `Review` objects. Add 5–10 individual `Review` items inside the `LocalBusiness`/`GeneralContractor` block:
+Keep review growth focused on verified public profiles and owner-approved excerpts. Do not emit self-serving `Review` or `AggregateRating` JSON-LD in `LocalBusiness` / `GeneralContractor` schema unless current Google policy, source evidence, and ownership approval make it eligible. Preferred execution:
 
-```jsonc
-"review": [
-  {
-    "@type": "Review",
-    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-    "author": { "@type": "Person", "name": "Sarah M." },
-    "datePublished": "2026-04-12",
-    "reviewBody": "Loudoun Decks built our 600 sq ft Trex Transcend deck in Brambleton in 4 weeks. Crew was punctual, permit handled by them, finish quality is exceptional.",
-    "publisher": { "@type": "Organization", "name": "Google" }
-  },
-  ...
-]
-```
+- Link clearly to Google, Yelp, BBB, Houzz, and other public profiles.
+- Surface real, attributed review evidence only when copied from a verified public profile or owner-supplied proof packet.
+- Keep `scripts/validate-seo-schema.mjs` green with `reviewSchemaFiles: 0`.
 
 **Source those snippets from your real Google reviews.** Don't fabricate. Pick 5–8 that mention specific cities/materials.
 

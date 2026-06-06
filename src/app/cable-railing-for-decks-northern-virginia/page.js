@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/cable-railing-for-decks-northern-virginia',
   title: 'Cable Railing for Decks (NoVA)',
   description: 'Cable railing $60-$100/linear ft in Northern Virginia. Horizontal vs vertical, VA code requirements & HOA considerations. We install all types.',
+  image: '/social/cable-railing-decks-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -31,7 +32,7 @@ export default function CableRailingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/cable-railing-for-decks-northern-virginia" name="Cable Railing for Decks (NoVA)" description="Cable railing $60-$100/linear ft in Northern Virginia. Horizontal vs vertical, VA code requirements &amp; HOA considerations. We install all types." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/cable-railing-for-decks-northern-virginia" name="Cable Railing for Decks (NoVA)" description="Cable railing $60-$100/linear ft in Northern Virginia. Horizontal vs vertical, VA code requirements &amp; HOA considerations. We install all types." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Cable Railing for Decks in Northern Virginia</h1>
@@ -176,7 +177,7 @@ export default function CableRailingPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="See Cable Railing Samples at Our Showroom" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="See Cable Railing Samples at Our Showroom" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/cable-railing-for-decks-northern-virginia" />

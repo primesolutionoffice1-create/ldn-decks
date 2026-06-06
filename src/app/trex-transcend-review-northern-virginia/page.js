@@ -13,8 +13,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/trex-transcend-review-northern-virginia',
   title: 'Trex Transcend Review 2026 | Is It Worth It for NoVA Homes?',
-  description: 'Honest Trex Transcend review from a Platinum Partner installer. 500+ installs in Northern Virginia durability, fade, heat, cost vs Lineage and TimberTech.',
-  image: '/images/img36.jpeg',
+  description: 'Honest Trex Transcend review for Northern Virginia homes: durability, fade, heat, cost vs Lineage and TimberTech, and installer planning notes.',
+  image: '/social/trex-transcend-review-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -30,27 +30,6 @@ const faqSchema = {
   ],
 };
 
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@type": "Product",
-    "name": "Trex Transcend Composite Decking",
-    "brand": { "@type": "Brand", "name": "Trex" },
-    "description": "Premium composite decking with deep wood grain, protective shell technology, and 25-year warranty.",
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "Loudoun Decks",
-    "url": "https://ldndecks.com",
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Loudoun Decks",
-  },
-  "reviewBody": "After installing 500+ Trex Transcend decks across Northern Virginia since 2019, Transcend remains our most-recommended product line for homeowners who want the best balance of aesthetics, durability, and value.",
-};
-
 const S = {
   h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' },
   h3: { fontSize: '1.2rem', fontWeight: 600, margin: '1.5rem 0 0.5rem' },
@@ -63,13 +42,12 @@ export default function TrexTranscendReviewPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/trex-transcend-review-northern-virginia" name="Trex Transcend Review 2026 | Is It Worth It for NoVA Homes?" description="Honest Trex Transcend review from a Platinum Partner installer. 500+ installs in Northern Virginia durability, fade, heat, cost vs Lineage and TimberTech." speakable />
-      <JsonLd data={reviewSchema} />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/trex-transcend-review-northern-virginia" name="Trex Transcend Review 2026 | Is It Worth It for NoVA Homes?" description="Honest Trex Transcend review for Northern Virginia homes: durability, fade, heat, cost vs Lineage and TimberTech, and installer planning notes." speakable />
       <ArticleSchema
         title="Trex Transcend Review 2026: Is It Worth the Investment for Virginia Homes?"
-        description="Honest Trex Transcend review from a Platinum Partner installer. 500+ installs in Northern Virginia."
+        description="Honest Trex Transcend review for Northern Virginia homes, including durability, fade, heat, installed cost, and brand-comparison planning notes."
         path="/trex-transcend-review-northern-virginia"
-        image="/images/img36.jpeg"
+        image="/social/trex-transcend-review-northern-virginia-social.png"
         datePublished="2026-04-21"
         dateModified="2026-04-23"
       />
@@ -78,15 +56,15 @@ export default function TrexTranscendReviewPage() {
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Trex Transcend Review: Is It Worth It for Virginia Homes?</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>An honest assessment after 500+ installations across Northern Virginia by a Trex Platinum Partner</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>An installer-focused assessment for Northern Virginia homeowners comparing Trex Transcend, Lineage, TimberTech, and AZEK</p>
         </div>
       </section>
 
       {/* Quick Verdict */}
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Our Verdict: 4.8/5</p>
-          <p>Trex Transcend is the <strong>best value in premium composite decking</strong> for Northern Virginia homes. It delivers near-hardwood aesthetics, proven 5+ year performance in Virginia&apos;s climate, and a 25-year warranty at 15–25% less than TimberTech AZEK. The only knock: dark colors get hot in direct summer sun. For most homeowners, Transcend is the sweet spot between Enhance (budget) and Lineage/AZEK (ultra-premium).</p>
+          <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Verdict</p>
+          <p>Trex Transcend is a strong premium composite choice for Northern Virginia homes. It delivers near-hardwood aesthetics, solid capped-composite performance, and a 25-year limited residential warranty at a lower installed price than many ultra-premium PVC options. The key tradeoff: dark colors can get hot in direct summer sun.</p>
         </div>
       </section>
 
@@ -107,8 +85,8 @@ export default function TrexTranscendReviewPage() {
           </div>
 
           {/* ===== Why We're Qualified ===== */}
-          <p style={S.p}>Most Trex Transcend reviews are written by people who&apos;ve never installed a board. We&apos;re a <strong>Trex Platinum Partner</strong> a designation held by fewer than 1% of deck builders in the United States and we&apos;ve installed Trex Transcend on over 500 projects across Loudoun, Fairfax, and Prince William counties since 2019. This review is based on real-world performance data, not manufacturer specs.</p>
-          <p style={S.p}>We also install TimberTech, AZEK, and Fiberon, so we have direct comparison experience across brands. We have no financial incentive to recommend one brand over another we install whatever is right for the project.</p>
+          <p style={S.p}>Most Trex Transcend reviews are written from a product-shopping angle, not an installation-planning angle. This review focuses on how the board behaves in Northern Virginia conditions: direct summer sun, shaded yards, HOA design review, railing choices, framing details, and long-term maintenance expectations.</p>
+          <p style={S.p}>Because Trex, TimberTech, AZEK, and Fiberon solve different design problems, the right recommendation depends on the yard, sun exposure, budget, railing system, and homeowner priorities.</p>
 
           {/* ===== Scorecard ===== */}
           <h2 style={S.h2}>Trex Transcend Scorecard</h2>
@@ -122,14 +100,14 @@ export default function TrexTranscendReviewPage() {
               <tbody>
                 {[
                   ['Aesthetics / Wood Grain', '4.5/5', 'Deep, multi-tonal grain. Best in the Trex lineup. Lineage is slightly more realistic.'],
-                  ['Durability', '5/5', 'Zero structural failures across 500+ installs. Shell protection performs as advertised.'],
+                  ['Durability', '5/5', 'Strong capped-composite performance when installed to manufacturer specifications and maintained as directed.'],
                   ['Fade Resistance', '4.5/5', 'Minor initial settling (60-90 days). After that, color holds beautifully over 5+ years.'],
                   ['Stain Resistance', '5/5', 'Wine, grease, ketchup, sunscreen everything washes off with soap and water.'],
                   ['Scratch Resistance', '4/5', 'Light scratches from dragged furniture are possible. They blend into the grain over time.'],
                   ['Heat Performance', '3.5/5', 'Dark colors get hot in direct Virginia sun. Lighter colors are noticeably cooler.'],
-                  ['Value for Money', '5/5', 'Best price-to-performance ratio in premium composite. 15-25% less than AZEK.'],
+                  ['Value for Money', '5/5', 'Strong premium-composite value compared with many ultra-premium PVC configurations.'],
                   ['Warranty', '4.5/5', '25-year fade & stain. Lifetime structural. Good but Lineage/AZEK offer 50-year.'],
-                  ['Overall', '4.8/5', 'Our most-recommended product for Northern Virginia homeowners.'],
+                  ['Overall', '4.8/5', 'A strong fit for many Northern Virginia homeowners comparing premium composite options.'],
                 ].map((row, i) => {
                   const isOverall = i === 8;
                   return (
@@ -151,19 +129,19 @@ export default function TrexTranscendReviewPage() {
           <p style={S.p}>Transcend boards feature a deep, multi-tonal grain pattern that photographs beautifully and looks natural at normal viewing distance. The Havana Gold and Spiced Rum colors, in particular, have a warmth that pairs perfectly with the red brick and stone colonial architecture that dominates Loudoun and Fairfax counties. Compared to the earlier Trex Select (now discontinued) or even the current Enhance line, Transcend is a significant step up in realism.</p>
 
           <h3 style={S.h3}>2. The Shell Protection Actually Works</h3>
-          <p style={S.p}>Trex&apos;s three-sided shell technology wraps the board&apos;s top and sides in a protective polymer cap. After 5+ years on our earliest Northern Virginia installs, we&apos;ve seen zero cap delamination, zero mold penetration through the cap, and no structural degradation. Virginia&apos;s freeze-thaw cycles (30+ per winter), summer humidity, and intense UV don&apos;t faze this product. The shell does what Trex says it does.</p>
+          <p style={S.p}>Trex&apos;s three-sided shell technology wraps the board&apos;s top and sides in a protective polymer cap. In Northern Virginia, the practical value is resistance to surface staining, splintering, and routine moisture exposure when the deck is detailed and ventilated correctly. Virginia&apos;s freeze-thaw cycles, summer humidity, and UV exposure make correct spacing, drainage, and cleaning habits important.</p>
 
           <h3 style={S.h3}>3. The Color Palette Is Designed for Mid-Atlantic Architecture</h3>
-          <p style={S.p}>Transcend offers 8 colors across two sub-collections. Our most-installed colors in Northern Virginia:</p>
+          <p style={S.p}>Transcend offers multiple colors across its sub-collections. These options are commonly compared by Northern Virginia homeowners:</p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { color: 'Havana Gold', desc: 'Warm medium brown. Our #1 seller. Complements brick, stone, and painted siding equally well.', pct: '35%' },
-              { color: 'Spiced Rum', desc: 'Rich reddish-brown. Popular in McLean, Great Falls, and Vienna where homes lean traditional.', pct: '25%' },
-              { color: 'Island Mist', desc: 'Cool medium gray. Clean, contemporary look. Stays cooler in direct sun than browns.', pct: '20%' },
-              { color: 'Lava Rock', desc: 'Deep charcoal brown. Dramatic and modern. Gets hottest in sun best for shaded decks.', pct: '10%' },
+              { color: 'Havana Gold', desc: 'Warm medium brown. Complements brick, stone, and painted siding equally well.' },
+              { color: 'Spiced Rum', desc: 'Rich reddish-brown. Often pairs well with traditional homes in McLean, Great Falls, and Vienna.' },
+              { color: 'Island Mist', desc: 'Cool medium gray. Clean, contemporary look. Typically feels cooler in direct sun than darker browns.' },
+              { color: 'Lava Rock', desc: 'Deep charcoal brown. Dramatic and modern. Best evaluated carefully for shaded or partially covered decks.' },
             ].map((c) => (
               <div key={c.color} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
-                <h4 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>{c.color} <span style={{ fontWeight: 400, color: '#999', fontSize: '0.85rem' }}>({c.pct} of our installs)</span></h4>
+                <h4 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>{c.color}</h4>
                 <p style={{ fontSize: '0.9rem', color: '#555', lineHeight: 1.5, margin: 0 }}>{c.desc}</p>
               </div>
             ))}
@@ -326,7 +304,7 @@ export default function TrexTranscendReviewPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Build Your Trex Transcend Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Trex Transcend Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/trex-transcend-review-northern-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 

@@ -10,6 +10,7 @@ export const metadata = buildMetadata({
   path: '/referral-partners',
   title: 'Referral Partners | LDN Decks Northern Virginia',
   description: 'Refer deck, porch, patio, and outdoor living projects to LDN Decks. Serving Loudoun, Fairfax, Prince William, Arlington, and Stafford.',
+  image: '/social/referral-partners-social.png',
 });
 
 const partnerTypes = [
@@ -107,7 +108,7 @@ export default function ReferralPartnersPage() {
               LDN Decks helps Northern Virginia homeowners plan, permit, and build custom decks, screened porches, patios, pergolas, and outdoor living spaces. If you work with homeowners, we make referrals simple: fast response, clear estimates, and professional updates.
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
-              <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minHeight: 48, background: 'var(--color-primary)', color: '#fff', padding: '0.9rem 1.35rem', borderRadius: 8, fontWeight: 800, textDecoration: 'none' }}>
+              <Link href="/get-estimate" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minHeight: 48, background: 'var(--color-primary)', color: '#fff', padding: '0.9rem 1.35rem', borderRadius: 8, fontWeight: 800, textDecoration: 'none' }}>
                 Send a Referral
               </Link>
               <CallLink style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minHeight: 48, color: '#fff', padding: '0.85rem 1.25rem', border: '2px solid rgba(255,255,255,0.45)', borderRadius: 8, fontWeight: 800, textDecoration: 'none' }}>
@@ -236,7 +237,7 @@ export default function ReferralPartnersPage() {
         </div>
       </section>
 
-      <SimpleCTA title="Have a homeowner to refer?" buttonText="Send a Referral or Request a Free Estimate" link="/contact" />
+      <SimpleCTA title="Have a homeowner to refer?" buttonText="Send a Referral or Request a Free Estimate" link="/get-estimate" />
       <ContactForm />
     </main>
   );

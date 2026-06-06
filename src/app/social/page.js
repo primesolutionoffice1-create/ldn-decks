@@ -3,12 +3,12 @@ import Link from 'next/link';
 import ContactHome from '@/components/ContactHome';
 import SimpleCTA from '@/components/SimpleCTA';
 import { buildMetadata } from '@/lib/seo';
-import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/social',
   title: 'Follow LDN Decks | Social Media & Online Profiles',
   description: 'Follow LDN Decks on X, Instagram, Facebook, Houzz, Yelp & more. See our latest deck projects, tips, and reviews across Northern Virginia.',
+  image: '/social/social-profiles-social.png',
 });
 
 // No page-level org JSON-LD here: the canonical #organization entity (with
@@ -42,7 +42,7 @@ const socialProfiles = [
     name: 'Google Business',
     handle: 'Loudoun Decks',
     url: 'https://www.google.com/maps/place/Loudoun+Decks/',
-    desc: `${BUSINESS.aggregateRating.reviewCount}+ Google reviews. See our location, hours, photos, and leave a review.`,
+    desc: 'Public Google Business Profile. Verify current reviews, hours, photos, and business details directly on Google.',
     color: '#4285F4',
     icon: 'G',
   },
@@ -81,7 +81,7 @@ const socialProfiles = [
   {
     name: 'Loudoun Chamber',
     handle: 'Loudoun Decks',
-    url: 'https://business.loudounchamber.org/list/member/loudoun-deck-30047.htm',
+    url: 'https://business.loudounchamber.org/list/member/loudoun-decks-30047',
     desc: 'Local business directory profile and Northern Virginia chamber citation.',
     color: '#0f766e',
     icon: 'LC',
@@ -158,19 +158,20 @@ export default function SocialPage() {
             ))}
           </div>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Leave Us a Review</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Your feedback helps other Northern Virginia homeowners find a trusted deck builder. If you&apos;ve worked with us, we&apos;d appreciate a quick review on any of these platforms:</p>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Review Guidance</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Your feedback helps other Northern Virginia homeowners find a trusted deck builder. If you&apos;ve worked with us, start with our Google review guidance page; Yelp remains a neutral public profile link.</p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
-            <a href="https://www.google.com/maps/place/Loudoun+Decks/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Review on Google</a>
-            <a href="https://www.yelp.com/biz/loudoun-decks-centreville" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#D32323', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Review on Yelp</a>
-            <a href="https://www.houzz.com/pro/webuser-782541997/loudoun-decks" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#4DBC15', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Review on Houzz</a>
+            <Link href="/review" style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Google Review Guidance</Link>
+            <a href="https://www.google.com/maps/place/Loudoun+Decks/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#fff', color: 'var(--color-dark)', border: '1px solid #e5e5e5', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Google Profile</a>
+            <a href="https://www.yelp.com/biz/loudoun-decks-centreville" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', background: '#fff', color: 'var(--color-dark)', border: '1px solid #e5e5e5', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>Yelp Profile</a>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>More About LDN Decks</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/before-and-after', 'Before & After Deck Transformations'],
-              ['/reviews', `Read Our ${BUSINESS.aggregateRating.reviewCount}+ Google Reviews`],
+              ['/reviews', 'Verify Public Review Profiles'],
+              ['/review', 'Google Review Guidance'],
               ['/team', 'Meet Our Team'],
               ['/about/certifications-and-licenses', 'Certifications & Licenses'],
               ['/showcase', 'Full Project Gallery'],
@@ -184,7 +185,7 @@ export default function SocialPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Ready to Start Your Deck Project?" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Ready to Start Your Deck Project?" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

@@ -14,39 +14,43 @@ export const metadata = buildMetadata({
   path: '/deck-permit-fairfax-county-virginia',
   title: 'Fairfax County Deck Permits Made Easy | Loudoun Decks',
   description: 'Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish.',
+  image: '/social/deck-permit-fairfax-county-social.png',
 });
 
-const permitFaqs = [
+const PATH = '/deck-permit-fairfax-county-virginia';
+
+const faqs = [
   {
-    q: "Do I need a permit for a deck in Fairfax County?",
-    a: "Yes if attached to house, over 200 sqft, or over 18\" above grade. Ground-level freestanding decks under 18\" may be exempt.",
+    q: "Do I need a permit to build a deck in Fairfax County?",
+    a: "Yes, any deck attached to a house, over 200 square feet, or more than 18 inches above grade requires a building permit in Fairfax County. Ground-level decks under 18 inches may be exempt.",
   },
   {
-    q: "How long does the permit take?",
-    a: "3-6 weeks for plan review. We submit and track the timeline for you.",
+    q: "How long does the Fairfax County deck permit take?",
+    a: "Plan review typically takes 3-6 weeks depending on seasonal demand. Simple deck plans on standard lots process faster. We submit on your behalf and track the timeline.",
   },
   {
-    q: "How much does the permit cost?",
-    a: "$150-$600 depending on project value. Included in our estimates.",
+    q: "How much does a deck permit cost in Fairfax County?",
+    a: "Fairfax County deck permits cost $150-$600 depending on project value and scope. We include permit costs in our estimates.",
   },
   {
-    q: "What inspections are needed?",
-    a: "Three: footing inspection before concrete, framing inspection before decking, and final inspection after the complete structure is ready. We coordinate all inspections.",
+    q: "What inspections are required for a Fairfax County deck?",
+    a: "Three inspections: footing inspection before concrete, framing inspection before decking, and final inspection after the complete structure is ready. We coordinate all inspections directly with the county.",
+  },
+  {
+    q: "Is HOA approval separate from the Fairfax County deck permit?",
+    a: "Yes. HOA architectural approval controls appearance, materials, colors, and community rules. Fairfax County permit review controls zoning, structure, footings, framing, ledger attachment, railings, stairs, and inspections. Many Fairfax projects need both approvals.",
   },
 ];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://ldndecks.com/deck-permit-fairfax-county-virginia#faq",
-  url: "https://ldndecks.com/deck-permit-fairfax-county-virginia",
-  mainEntity: permitFaqs.map(({ q, a }) => ({
+  "@id": `https://ldndecks.com${PATH}#faq`,
+  url: `https://ldndecks.com${PATH}`,
+  mainEntity: faqs.map(({ q, a }) => ({
     "@type": "Question",
     name: q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: a,
-    },
+    acceptedAnswer: { "@type": "Answer", text: a },
   })),
 };
 
@@ -56,14 +60,14 @@ export default function FairfaxPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-permit-fairfax-county-virginia" name="Fairfax County Deck Permits Made Easy | Loudoun Decks" description="Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish." speakable />
+      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Fairfax County Deck Permits Made Easy | Loudoun Decks" description="Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish." speakable />
       <ArticleSchema
-        title="Fairfax County Deck Permit Guide for 2026"
-        description="Fairfax County deck permit requirements, zoning review, structural details, inspections, timeline and costs for Northern Virginia homeowners."
-        path="/deck-permit-fairfax-county-virginia"
+        title="Fairfax County Deck Permit Guide"
+        description="Fairfax County deck permit requirements, FIDO submission planning, inspection sequence, HOA coordination, and structural detail guidance for Northern Virginia homeowners."
+        path={PATH}
         image="/images/img20.jpeg"
-        datePublished="2026-04-21"
-        dateModified="2026-05-26"
+        datePublished="2026-05-26"
+        dateModified="2026-06-04"
       />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
@@ -136,14 +140,14 @@ export default function FairfaxPermitPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Easement conflict (drainage, utility, or conservation)</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Incomplete application package</li>
           </ul>
-          <p style={S.p}>We review all of these before submitting. Our permit approval rate in Fairfax County is 100% because we check compliance first.</p>
+          <p style={S.p}>We review all of these before submitting so zoning, plan-format, and structural questions are handled before they become avoidable review comments.</p>
 
           <h2 style={S.h2}>What Happens If You Build Without a Permit?</h2>
           <p style={S.p}>We cover the full risk profile in <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>what happens if you build a deck without a permit in Virginia</Link>, but the practical issues usually show up as enforcement, insurance, and resale problems.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Stop-work order if discovered during construction</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Fines from Fairfax County code enforcement</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Required to retroactively permit (with penalties) or demolish</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Required to retroactively permit (with penalties), correct unsafe work through <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair</Link>, or demolish</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Title/sale issues unpermitted structures must be disclosed and may kill a deal</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Insurance won&apos;t cover injuries or damage on unpermitted structures</li>
           </ul>
@@ -151,9 +155,13 @@ export default function FairfaxPermitPage() {
           <h2 style={S.h2}>We Handle Everything</h2>
           <p style={S.p}>Permits are part of our standard scope no extra charge. We prepare plans, submit applications, coordinate zoning and building review, schedule all inspections, and resolve any reviewer comments. You don&apos;t deal with the county at all.</p>
 
+          <h2 style={S.h2}>Fairfax HOA and Permit Coordination</h2>
+          <p style={S.p}>Many Fairfax County projects need two tracks at the same time: the county permit for structure and safety, plus HOA architectural approval for appearance, material colors, railings, screening, stair placement, and neighborhood rules. The fastest path is to make the HOA packet and the FIDO permit packet agree before either reviewer sees the drawings.</p>
+          <p style={S.p}>For the countywide HOA process, start with our <Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia HOA deck rules guide</Link>. For Centreville communities with detailed ARC requirements, compare the <Link href="/sully-station-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Sully Station HOA deck approval guide</Link> and <Link href="/virginia-run-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia Run HOA deck approval guide</Link>. Homeowners comparing broader local planning can also review the <Link href="/near-you/fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County deck builder hub</Link> and the <Link href="/deck-builder-fairfax-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax VA deck contractor page</Link>.</p>
+
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
-          {permitFaqs.map((faq) => (
-            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+          {faqs.map((faq, i) => (
+            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
               <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
             </details>
@@ -173,6 +181,9 @@ export default function FairfaxPermitPage() {
               ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],
               ['/education/deck-stair-safety-inspection-checklist', 'Deck Stair Safety Checklist PDF'],
               ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in NoVA'],
+              ['/sully-station-hoa-deck-rules', 'Sully Station HOA Deck Rules'],
+              ['/virginia-run-hoa-deck-rules', 'Virginia Run HOA Deck Rules'],
+              ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost?'],
               ['/near-you/fairfax-county', 'Deck Builder in Fairfax County'],
             ].map(([href, text]) => (
@@ -182,8 +193,8 @@ export default function FairfaxPermitPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/contact" />
-      <NamedAuthor context="Fairfax County" lastUpdated="2026-05-26" />
+      <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Fairfax County" lastUpdated="2026-06-04" />
 
       <RelatedGuides currentPath="/deck-permit-fairfax-county-virginia" />
 

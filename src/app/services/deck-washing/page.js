@@ -19,7 +19,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/deck-washing",
   title: "Professional Deck Washing Loudoun VA | Safe Soft-Wash Restoration",
-  description: "Restore your outdoor wood or composite deck with professional low-pressure soft-washing in Northern Virginia. We safely remove algae, mold, and grime."
+  description: "Restore your outdoor wood or composite deck with professional low-pressure soft-washing in Northern Virginia. We safely remove algae, mold, and grime.",
+  image: "/social/deck-washing-service-social.png",
 });
 
 const expansionSections = [
@@ -125,7 +126,7 @@ export default function DeckWashingPage() {
   return (
     <main>
       <JsonLd data={faqSchemaData} />
-      <WebPageSchema url="https://ldndecks.com/services/deck-washing" name="Professional Deck Washing Loudoun VA | Safe Soft-Wash Restoration" description="Restore your outdoor wood or composite deck with professional low-pressure soft-washing in Northern Virginia. We safely remove algae, mold, and grime." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/deck-washing" name="Professional Deck Washing Loudoun VA | Safe Soft-Wash Restoration" description="Restore your outdoor wood or composite deck with professional low-pressure soft-washing in Northern Virginia. We safely remove algae, mold, and grime." speakable />
       <ServiceSchema
         name="Professional Deck Washing"
         description="Professional exterior residential deck cleaning, soft washing, and wood brightening services in Northern Virginia."
@@ -142,7 +143,7 @@ export default function DeckWashingPage() {
         description="Safely strip away years of grime, dangerous mildew, and gray oxidation without damaging your wood or composite boards."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
       </section>
 
       <ServiceMain
@@ -181,7 +182,7 @@ export default function DeckWashingPage() {
       <ServiceAreasGrid />
 
       <RelatedGuides currentPath="/services/deck-washing" />
-      <SimpleCTA title="Schedule Your Deck Cleaning" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Schedule Your Deck Cleaning" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

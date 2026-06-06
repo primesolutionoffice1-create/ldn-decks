@@ -17,10 +17,12 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 export const metadata = buildMetadata({
   path: "/services/deck-replacement",
   title: "Professional Deck Replacement Northern Virginia | Rebuild & Remodel",
-  description: "Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds."
+  description: "Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds.",
+  image: "/social/deck-replacement-service-social.png",
 });
 
 const replacementSections = [
@@ -60,10 +62,48 @@ const replacementBenefits = [
   { title: "Fixed Pricing", desc: "Detailed, itemized quotes with no hidden 'extra' fees during construction." }
 ];
 
+const replacementFaq = [
+  {
+    question: "When should I replace a deck instead of repairing it?",
+    answer: "Replacement usually deserves serious consideration when the ledger connection, footings, posts, joists, stairs, or railings have widespread deterioration, when the framing cannot safely support new boards, or when repair costs are approaching the cost of a rebuild. A structural evaluation should happen before that decision is made.",
+  },
+  {
+    question: "Can Loudoun Decks reuse my existing deck frame?",
+    answer: "Sometimes. Reuse depends on framing condition, age, spans, fasteners, flashing, footing depth, permit history, and whether the frame is suitable for the new decking and railing system. If the frame is not sound, replacement is safer than covering old problems with new boards.",
+  },
+  {
+    question: "Do full deck replacements require permits in Northern Virginia?",
+    answer: "Most full deck replacements in Loudoun, Fairfax, and Prince William counties require permit review, especially when framing, footings, ledger attachment, stairs, or guardrails are involved. HOA approval may also apply in communities such as Ashburn, Leesburg, Brambleton, South Riding, Reston, Vienna, and Gainesville.",
+  },
+  {
+    question: "Is composite decking worth it during a replacement?",
+    answer: "Composite or PVC decking often makes sense during a full replacement because the structure is already being reset. Homeowners commonly compare pressure-treated wood, Trex, TimberTech, and AZEK based on upfront cost, maintenance, heat, color, railing options, and long-term ownership goals.",
+  },
+  {
+    question: "How do I budget for a deck replacement?",
+    answer: "Start with size, height, stairs, railing, material tier, demolition, structural upgrades, permit/HOA needs, and site access. The deck cost calculator can help with planning ranges, but the final estimate should come from a site-specific scope review.",
+  },
+];
+
 export default function DeckReplacementPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description="Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds." speakable />
+      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description="Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds." speakable />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          '@id': 'https://ldndecks.com/services/deck-replacement#faq',
+          mainEntity: replacementFaq.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        }}
+      />
       <ServiceSchema
         name="Deck Replacement and Rebuilding"
         description="Professional deck replacement services including structural assessment, old deck removal, and premium composite rebuilds using Trex and TimberTech."
@@ -71,7 +111,7 @@ export default function DeckReplacementPage() {
         category="Deck Construction"
         lowPrice="15000"
         highPrice="65000"
-        relatedServices={['https://ldndecks.com/services/new-decks', 'https://ldndecks.com/services/deck-resurfacing', 'https://ldndecks.com/services/deck-repair-and-structural-maintenance']}
+        relatedServices={['https://ldndecks.com/services/new-decks', 'https://ldndecks.com/services/deck-resurfacing', 'https://ldndecks.com/services/deck-repair']}
       />
       <ServicesHeader
         subtext="Projects from $15,000+"
@@ -79,8 +119,22 @@ export default function DeckReplacementPage() {
         description="Don't let an aging, splintering deck hold you back. We specialize in tearing down old structures and building premium, low-maintenance outdoor retreats. Permits and HOA handled. Typical build timeline: 2-4 weeks."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-02" />
       </section>
+
+      <PlanningUpdate
+        market="Northern Virginia deck replacement in 2026"
+        notes={[
+          "Replacement is often the safer path when the ledger, footings, stairs, or railing system no longer match current code expectations.",
+          "A full rebuild can reset structural details for Loudoun, Fairfax, and Prince William County review instead of hiding old framing beneath new boards.",
+          "Homeowners comparing resurfacing and replacement should inspect the frame first, then price materials, railings, stairs, and permit scope."
+        ]}
+        links={[
+          { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" },
+          { href: "/deck-safety-inspection-checklist", label: "Safety inspection checklist" },
+          { href: "/deck-cost-calculator", label: "Deck cost calculator" }
+        ]}
+      />
 
       <AboveFoldCTA headline="Aging deck in Northern Virginia? Get a free structural evaluation and replacement estimate today." />
 
@@ -90,7 +144,7 @@ export default function DeckReplacementPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>Full deck replacement projects from $15,000+</strong>
             <br />
-            On this page we focus on <strong style={{ color: '#111' }}>full tear-down and rebuild projects</strong>. Looking for board replacement, railing or structural fixes on an otherwise sound deck? See our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
+            On this page we focus on <strong style={{ color: '#111' }}>full tear-down and rebuild projects</strong>. Looking for board replacement, railing or structural fixes on an otherwise sound deck? See our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
           <p style={{ fontSize: '15px', color: '#555', margin: '12px 0 0' }}>
             Planning a full rebuild across Loudoun, Fairfax, or Prince William? Start with the <Link href="/deck-builder-northern-virginia" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Northern Virginia deck builder guide</Link> for materials, permits, and project paths.
@@ -176,17 +230,35 @@ export default function DeckReplacementPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Replacement Cost &amp; Decision Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Resurfacing vs Full Replacement →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Deck Repair Service →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/resurface-or-replace-deck-financing" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Resurface or Replace Before Financing? (cost math) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Composite Deck Cost in Northern Virginia →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-decks" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Composite Deck Replacement Options →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK Comparison →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/before-and-after" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Before & After Replacement Projects →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Customer Reviews →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/bbb-accredited-deck-builder-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>BBB Accredited Deck Builder →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Request a Written Replacement Estimate →</Link></li>
         </ul>
       </section>
 
+      <section style={{ padding: '3rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.7rem', fontWeight: 800, marginBottom: '1rem' }}>Deck Replacement FAQ</h2>
+        <div style={{ display: 'grid', gap: '0.9rem' }}>
+          {replacementFaq.map((faq) => (
+            <details key={faq.question} style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: '1rem 1.1rem', background: '#fff' }}>
+              <summary style={{ cursor: 'pointer', fontWeight: 800, color: 'var(--color-dark)' }}>{faq.question}</summary>
+              <p style={{ color: '#475569', lineHeight: 1.7, margin: '0.8rem 0 0' }}>{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <RelatedGuides currentPath="/services/deck-replacement" />
-      <SimpleCTA title="Ready for a New Deck?" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Ready for a New Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

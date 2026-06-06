@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
 import styles from './HowItWorksTriple.module.css';
 
 const OrangeCheckIcon = () => (
@@ -24,11 +25,7 @@ const steps = [
   }
 ];
 
-import { useContact } from '@/context/ContactContext';
-
 export default function HowItWorksTriple() {
-  const { openContact } = useContact();
-
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -46,9 +43,9 @@ export default function HowItWorksTriple() {
         </div>
 
         <div className={styles.ctaWrapper}>
-          <button onClick={openContact} className={styles.ctaButton}>
+          <Link href="/get-estimate" className={styles.ctaButton}>
             Get Free Estimate Now
-          </button>
+          </Link>
         </div>
       </div>
     </section>

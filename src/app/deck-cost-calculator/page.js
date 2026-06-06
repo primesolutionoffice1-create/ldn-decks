@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
 import FinancingCTA from '@/components/FinancingCTA';
+import NamedAuthor from '@/components/NamedAuthor';
 
 // This page is a LINKABLE ASSET designed to attract backlinks from
 // real estate blogs, home improvement sites, and local news.
@@ -11,6 +12,29 @@ import FinancingCTA from '@/components/FinancingCTA';
 // Calculator UI + math now lives in DeckCostCalculatorWidget and is shared
 // with /composite-deck-cost-northern-virginia.
 
+const calculatorFaqs = [
+  {
+    q: 'How accurate is this deck cost calculator?',
+    a: 'The calculator is a planning tool for 2026 Northern Virginia deck budgets. Final quotes can change after site access, framing condition, stair layout, county permit scope, and HOA requirements are reviewed.',
+  },
+  {
+    q: 'Does the estimate include permits?',
+    a: 'The calculator includes a permit complexity setting, but the final proposal should confirm drawing needs, county fees, inspections, and HOA review requirements for the specific property.',
+  },
+  {
+    q: 'Why is Northern Virginia deck pricing higher than many online averages?',
+    a: 'Northern Virginia projects often involve higher labor costs, stricter county review, HOA architectural rules, elevated structures, and premium composite or PVC material selections.',
+  },
+  {
+    q: 'Should I use the calculator before requesting an estimate?',
+    a: 'Yes. Use it to understand the likely range, then request a written estimate so material choices, structural details, access, railing, stairs, lighting, and permit scope can be itemized.',
+  },
+  {
+    q: 'What is the lowest-cost deck material in the calculator?',
+    a: 'Pressure-treated wood is usually the lowest upfront-cost option. Composite and PVC cost more initially but reduce recurring staining and maintenance compared with wood.',
+  },
+];
+
 export default function DeckCostCalculator() {
   return (
     <main style={{ background: '#fff' }}>
@@ -18,6 +42,18 @@ export default function DeckCostCalculator() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Northern Virginia Deck Price Calculator</h1>
           <p style={{ color: '#cbd5e0', fontSize: '1.1rem' }}>Get an instant estimate for your deck project. Prices reflect 2026 Northern Virginia market rates.</p>
+        </div>
+      </section>
+
+      <section style={{ padding: '2rem 0 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ borderLeft: '4px solid #d14817', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 8, marginBottom: '1.5rem' }}>
+            <p style={{ fontWeight: 700, margin: '0 0 0.5rem', color: '#1a202c' }}>Quick Answer</p>
+            <p style={{ margin: 0, color: '#2d3748', lineHeight: 1.7 }}>
+              Use the calculator to estimate a Northern Virginia deck by square footage, material, railing, stairs, elevation, and permit complexity. Treat the result as a planning range, then request an itemized written estimate after site access, framing conditions, HOA rules, and county permit scope are confirmed.
+            </p>
+          </div>
+          <NamedAuthor context="Loudoun, Fairfax, Prince William, Arlington, and Stafford counties" lastUpdated="2026-06-02" />
         </div>
       </section>
 
@@ -84,9 +120,21 @@ export default function DeckCostCalculator() {
               </li>
             </ol>
             <p>
-              Ready for a precise estimate? <Link href="/contact" style={{ color: '#d14817', fontWeight: 600, textDecoration: 'underline' }}>Schedule a free on-site design consultation</Link> with the Loudoun Decks team today.
+              Ready for a precise estimate? <Link href="/get-estimate" style={{ color: '#d14817', fontWeight: 600, textDecoration: 'underline' }}>Schedule a free on-site design consultation</Link> with the Loudoun Decks team today.
             </p>
           </article>
+
+          <section style={{ marginTop: '4rem', padding: '2rem', background: '#fff8f1', border: '1px solid #f1d6bd', borderRadius: 8 }}>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', color: '#1a202c' }}>Deck Cost Calculator FAQ</h2>
+            <div style={{ display: 'grid', gap: '0.85rem' }}>
+              {calculatorFaqs.map((faq) => (
+                <details key={faq.q} style={{ background: '#ffffff', border: '1px solid #ead8ca', borderRadius: 8, padding: '1rem' }}>
+                  <summary style={{ cursor: 'pointer', fontWeight: 700, color: '#1a202c' }}>{faq.q}</summary>
+                  <p style={{ margin: '0.75rem 0 0', color: '#4a5568', lineHeight: 1.7 }}>{faq.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
 
           {/* Embed Code Section — this is what makes the page a LINKABLE ASSET */}
           <div style={{ marginTop: '4rem', padding: '2rem', background: '#f7fafc', borderRadius: 12, border: '1px solid #e2e8f0' }}>
@@ -117,9 +165,17 @@ export default function DeckCostCalculator() {
                 <p style={{ fontWeight: 600, color: '#d14817' }}>Deck Cost Guide 2026</p>
                 <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Full pricing breakdown by material</p>
               </Link>
-              <Link href="/composite-deck-cost-northern-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
-                <p style={{ fontWeight: 600, color: '#d14817' }}>Composite Deck Cost NoVA</p>
-                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Brand-by-brand 2026 pricing</p>
+              <Link href="/deck-cost-12x20-northern-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: '#d14817' }}>12x20 Deck Cost</p>
+                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>240 sqft pricing by material and permit scope</p>
+              </Link>
+              <Link href="/deck-cost-16x20-northern-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: '#d14817' }}>16x20 Deck Cost</p>
+                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Family-deck pricing and realistic planning examples</p>
+              </Link>
+              <Link href="/deck-cost-20x20-northern-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: '#d14817' }}>20x20 Deck Cost</p>
+                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>400 sqft entertaining deck cost and structure notes</p>
               </Link>
               <Link href="/trex-vs-timbertech-vs-azek" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
                 <p style={{ fontWeight: 600, color: '#d14817' }}>Trex vs TimberTech vs AZEK vs Fiberon</p>
@@ -144,6 +200,14 @@ export default function DeckCostCalculator() {
               <Link href="/monthly-payment-composite-deck-northern-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
                 <p style={{ fontWeight: 600, color: '#d14817' }}>Monthly Payment on a Composite Deck</p>
                 <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>$15k–$70k project payment examples</p>
+              </Link>
+              <Link href="/deck-permit-loudoun-county-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: '#d14817' }}>Loudoun Deck Permit Guide</p>
+                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Permit, inspection, and timeline notes before estimating</p>
+              </Link>
+              <Link href="/get-estimate" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
+                <p style={{ fontWeight: 600, color: '#d14817' }}>Get a Written Estimate</p>
+                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Turn the calculator range into an itemized project quote</p>
               </Link>
             </div>
           </div>

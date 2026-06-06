@@ -211,9 +211,10 @@ If match rate stays <40% after 2 weeks: the data quality is degraded. Check:
 
 ---
 
-## 5. Service and timeline reporting fields
+## 5. Lead quality reporting fields
 
-`service` and `timeline` are now pushed into dataLayer on `form_submit`. Do not map
+`service`, `timeline`, `budget_range`, `material_interest`, and
+`hoa_permit_status` are now pushed into dataLayer on `form_submit`. Do not map
 them into the User-Provided Data variable. Instead, add them as GA4 custom event
 parameters and, if useful, Google Ads custom variables or offline lead columns.
 
@@ -224,10 +225,14 @@ Recommended GA4 event parameter mapping on the `form_submit` or
 |---|---|
 | `lead_service` | `{{DLV - service}}` |
 | `lead_timeline` | `{{DLV - timeline}}` |
+| `lead_budget_range` | `{{DLV - budget_range}}` |
+| `lead_material_interest` | `{{DLV - material_interest}}` |
+| `lead_hoa_permit_status` | `{{DLV - hoa_permit_status}}` |
 | `form_type` | `{{DLV - form_type}}` if already created |
+| `form_location` | `{{DLV - form_location}}` |
 
-Both forms today: ContactForm has street/city/state inputs; ContactHome does not.
-Partial user data is expected and acceptable.
+Both forms today: ContactForm has street/city/state inputs; ContactHome has
+city plus hidden `state=VA`. Partial user data is expected and acceptable.
 
 ---
 

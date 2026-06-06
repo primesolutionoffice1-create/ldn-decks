@@ -10,7 +10,8 @@
  *   - UNMEASURED: file exists but is not in OG_IMAGE_DIMENSIONS so seo.js
  *     will emit og:image without width/height (scrapers must fetch the image
  *     to size it, increasing card rejection risk)
- *   - WRONG_RATIO: aspect ratio is not within 0.05 of 1.91:1 (FB/LI ideal)
+ *   - WRONG_RATIO: aspect ratio is outside the practical social-card band
+ *     (1.91:1 ideal; 16:9 accepted; portrait / square / 4:3 flagged)
  *   - SMALL: smaller than 600x315 (FB minimum for large card)
  *   - HEAVY: file >300 KB (slows render of share-card scrapers)
  *   - OK: passes all checks
@@ -23,14 +24,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
+import { resolveVaultReportsDir } from './lib/report-paths.mjs';
 
 const APP_DIR = path.resolve('src/app');
 const PUBLIC_DIR = path.resolve('public');
 const SEO_LIB = path.resolve('src/lib/seo.js');
-const REPORT_DIR = '/Users/ldndecks/ldn-decks-growth-brain-vaults/ldn-decks/wiki/reports';
+const REPORT_DIR = resolveVaultReportsDir(path.resolve('.'));
 
-const TARGET_RATIO = 1.91;
-const RATIO_TOLERANCE = 0.05;
+const IDEAL_RATIO = 1.91;
+const MIN_ACCEPTABLE_RATIO = 1.75;
+const MAX_ACCEPTABLE_RATIO = 1.95;
 const MIN_W = 600;
 const MIN_H = 315;
 const HEAVY_BYTES = 300 * 1024;
@@ -143,7 +146,7 @@ function audit() {
 
     const flags = [];
     if (!isMeasured) flags.push('UNMEASURED');
-    if (dims && (ratio < TARGET_RATIO - RATIO_TOLERANCE || ratio > TARGET_RATIO + RATIO_TOLERANCE)) {
+    if (dims && (ratio < MIN_ACCEPTABLE_RATIO || ratio > MAX_ACCEPTABLE_RATIO)) {
       flags.push(`WRONG_RATIO(${ratio.toFixed(2)}:1)`);
     }
     if (dims && (dims.width < MIN_W || dims.height < MIN_H)) flags.push('SMALL');

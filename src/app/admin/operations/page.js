@@ -49,6 +49,16 @@ const TIER1_ACTIONS = [
     status: 'awaiting-decision',
   },
   {
+    id: 'measurement-quality-rows',
+    title: 'Complete lead/call quality proof rows',
+    cadence: 'One-time gate, then weekly',
+    timeMinutes: 45,
+    leverage: 'Closes the measurement proof gap that keeps paid scaling red. Gives Smart Bidding a quality filter instead of raw lead volume.',
+    ready: 'Measurement integrity report + lead outcome validator + current owner evidence action packet',
+    nextStep: 'Verify Google Ads qualified-call attribution, add at least five real lead outcome rows from CRM/Jobber/call notes, run npm run measurement:lead-outcomes, then rerun npm run measurement:gate.',
+    status: 'awaiting-execution',
+  },
+  {
     id: 'crux-api-key',
     title: 'Enable CrUX API key',
     cadence: 'One-time',
@@ -112,6 +122,204 @@ const KPI_TARGETS = [
   { kpi: 'Review velocity (per month)', current: '~2-3', target30: '3-4', target90: '5-7', target365: '5-8 sustained' },
 ];
 
+const TECHNICAL_GATES = [
+  {
+    area: 'Website + lead routing',
+    status: 'active',
+    evidence: 'Production site, email backup, Sheets backup, and estimate form routing verified.',
+    nextStep: 'Keep weekly form-submit smoke test in the operating cadence.',
+  },
+  {
+    area: 'Consent / CMP',
+    status: 'active',
+    evidence: 'Consent banner and Consent Mode defaults are live; optional pixels load only after accepted consent.',
+    nextStep: 'Monitor consent acceptance rate after traffic volume grows.',
+  },
+  {
+    area: 'Lead quality proof',
+    status: 'partial',
+    evidence: 'Measurement gate passes website-side form proof; lead outcome CSV validation is available, but verified project case studies are still 0 and real lead outcome rows are missing.',
+    nextStep: 'Use the current owner evidence action packet, measurement integrity gate report, and npm run measurement:lead-outcomes to complete owner proof and validate lead outcomes.',
+  },
+  {
+    area: 'Vapi webhook secret',
+    status: 'active',
+    evidence: 'Vercel production/development secret is set and automation stack verification passes.',
+    nextStep: 'Confirm the same secret is configured in the Vapi dashboard.',
+  },
+  {
+    area: 'Phone click attribution',
+    status: 'partial',
+    evidence: 'All site phone links now route through CallLink and push event_id, UTMs, and click IDs.',
+    nextStep: 'Configure answered-call attribution through Google forwarding numbers, CallRail, or another call-tracking provider.',
+  },
+  {
+    area: 'DataForSEO',
+    status: 'partial',
+    evidence: 'Payload fallback deployed for 40501 Invalid Field errors on optional filters/location_code. Admin/API remain protected by 401 without a session.',
+    nextStep: 'If the DataForSEO UI still shows 40501, capture the task metadata; if it shows 401, replace API Login/API Password and rerun admin SEO checks.',
+  },
+  {
+    area: 'Scaling gate',
+    status: 'red',
+    evidence: 'Measurement gate result: 10 PASS, 1 WARN, 0 FAIL. The remaining warning is external Google Ads/GTM qualified-call attribution proof.',
+    nextStep: 'Do not scale aggressively until qualified-call attribution and 5-10 real lead outcomes validate with npm run measurement:lead-outcomes.',
+  },
+];
+
+function proofPaths(date) {
+  return {
+    actionPacket: `docs/seo/owner-evidence-action-packet-${date}.csv`,
+    photoManifest: `docs/seo/photo-ingestion-manifest-${date}.csv`,
+    projectIntake: `docs/seo/project-evidence-intake-${date}.csv`,
+    warrantyIntake: `docs/seo/warranty-terms-intake-${date}.csv`,
+    repairCostIntake: `docs/seo/repair-cost-ranges-intake-${date}.csv`,
+    handoff: `docs/seo/owner-evidence-handoff-${date}.md`,
+    sprintReport: `docs/seo/owner-evidence-sprint-${date}.md`,
+    sprintCsv: `docs/seo/owner-evidence-sprint-${date}.csv`,
+    unblockRunbook: `docs/seo/evidence-unblock-runbook-${date}.md`,
+    proofChecklist: `docs/seo/proof-source-checklist-${date}.md`,
+  };
+}
+
+function ownerEvidenceSprint(paths) {
+  return {
+    report: paths.sprintReport,
+    csv: paths.sprintCsv,
+    command: 'npm run seo:evidence-sprint',
+    blocks: [
+      'Repair media',
+      'Commercial proof',
+      'Project linkage',
+      'Privacy pass',
+      'Dry-run pass',
+    ],
+  };
+}
+
+function proofSourceWorkflow(paths) {
+  return [
+    {
+      step: '1. Capture original photos',
+      ownerAction: 'Collect original files for ledger failure, post rot, stair rebuild, railing repair, resurfacing before/after, joist sistering, and optional redacted permit/inspection proof.',
+      sourceFile: paths.photoManifest,
+      gate: 'No stock imagery. No public caption unless the photo is tied to a real project row.',
+    },
+    {
+      step: '2. Complete project rows',
+      ownerAction: 'Fill city/neighborhood, month/year, scope, materials, failure found, work performed, permit/HOA status, and before/after paths where known.',
+      sourceFile: paths.projectIntake,
+      gate: 'Unknown fields stay unknown. Do not promote rows to verified while placeholders remain.',
+    },
+    {
+      step: '3. Verify repair warranty wording',
+      ownerAction: 'Enter the exact workmanship warranty term, scope, exclusions, and whether structural/labor/resurfacing coverage differs.',
+      sourceFile: paths.warrantyIntake,
+      gate: 'Do not publish warranty duration or scope from memory.',
+    },
+    {
+      step: '4. Verify repair cost ranges',
+      ownerAction: 'Fill low/high/source for joist sistering, ledger reflash/rebolt, post replacement, and emergency stabilization from invoices, accepted estimates, calculator data, or owner-approved pricing policy.',
+      sourceFile: paths.repairCostIntake,
+      gate: 'No public repair cost range without a source and evidence status.',
+    },
+    {
+      step: '5. Dry-run, then promote',
+      ownerAction: 'Run dry-runs first. Promote to verified only after source review, then regenerate proof snippets and rerun prepublish evidence.',
+      sourceFile: paths.handoff,
+      gate: 'Prepublish must fail until every red proof blocker is actually resolved.',
+    },
+  ];
+}
+
+const PROOF_BLOCKERS = [
+  { page: '/before-and-after', verdict: 'blocked', issue: '2 missing evidence items; 4 partial project records; no verified project proof snippets.' },
+  { page: '/composite-deck-cost-northern-virginia', verdict: 'blocked', issue: '1 missing evidence item before project examples can become proof-backed.' },
+  { page: '/services/deck-repair', verdict: 'blocked', issue: 'No verified repair warranty term, no verified repair cost ranges, and missing repair photos.' },
+  { page: '/showcase', verdict: 'proof-incomplete', issue: '6 partial showcase records; verify photos, scope, city, date, and completion details before proof use.' },
+];
+
+function proofUnblockRunbook(paths) {
+  return {
+    report: paths.unblockRunbook,
+    checklist: paths.proofChecklist,
+    command: 'npm run seo:evidence-unblock -- --date latest',
+    ownerRows: 26,
+    photoRows: 17,
+    warrantyRows: 1,
+    repairCostRows: 4,
+    currentGate: '0 publish-ready, 1 proof-incomplete, 3 blocked',
+  };
+}
+
+function proofPreflightCommands(paths) {
+  return [
+    'npm run seo:evidence-unblock -- --date latest',
+    'npm run seo:evidence-sprint',
+    'npm run seo:validate-owner-intake',
+    `npm run seo:ingest-assets -- --file ${paths.photoManifest} --preflight`,
+    `npm run seo:ingest-assets -- --file ${paths.photoManifest} --dry-run`,
+    `npm run seo:import-evidence -- --type warranty_terms --file ${paths.warrantyIntake} --dry-run`,
+    `npm run seo:import-evidence -- --type repair_cost_ranges --file ${paths.repairCostIntake} --dry-run`,
+    `npm run seo:import-evidence -- --type projects --file ${paths.projectIntake} --dry-run`,
+  ];
+}
+
+function proofPromoteCommands(paths) {
+  return [
+    `npm run seo:ingest-assets -- --file ${paths.photoManifest} --allow-verified`,
+    `npm run seo:import-evidence -- --type warranty_terms --file ${paths.warrantyIntake} --allow-verified`,
+    `npm run seo:import-evidence -- --type repair_cost_ranges --file ${paths.repairCostIntake} --allow-verified`,
+    `npm run seo:import-evidence -- --type projects --file ${paths.projectIntake} --allow-verified`,
+  ];
+}
+
+const PROOF_FINAL_GATE_COMMANDS = [
+  'npm run seo:validate-evidence',
+  'npm run seo:proof-snippets',
+  'npm run seo:validate-proof-runtime',
+  'npm run seo:audit-placeholders',
+  'npm run seo:prepublish-evidence',
+  'npm run seo:evidence-regression',
+  'npm run seo:validate-schema',
+  'npm run build',
+];
+
+const PROOF_MINIMUM_PACKET = [
+  'City/county and month/year are filled without full address exposure.',
+  'Scope, materials, failure found, and work performed are concrete source-reviewed fields.',
+  'Permit/HOA status is documented or explicitly left unknown.',
+  'Before/after paths resolve after ingest and publication permission is confirmed.',
+  'Warranty, cost, review count, and permit outcomes are not quoted unless source verified.',
+];
+
+const RECENT_VERIFIED_BATCHES = [
+  {
+    name: 'RelatedGuides deck-core cleanup',
+    deployment: 'dpl_HjTJ1FRWyjgHB8HYuk8hm4C4JagU',
+    evidence: 'docs/seo/related-guides-deck-core-cleanup-2026-06-02.md',
+    result: 'Calculator now shows deck-core budget, permit, material and builder guides.',
+  },
+  {
+    name: 'Deck cost calculator OG asset',
+    deployment: 'dpl_4KZ7hyLj2XjeHJXJX4euq46Yaouu',
+    evidence: 'docs/seo/deck-cost-calculator-og-asset-2026-06-02.md',
+    result: 'Live OG/Twitter image uses /social/deck-cost-calculator-social.png.',
+  },
+  {
+    name: 'DataForSEO error hardening',
+    deployment: 'dpl_7LTkbb1ePB7oQysuU9sj5fJB2ic2',
+    evidence: 'docs/seo/dataforseo-error-hardening-2026-06-02.md',
+    result: 'Local API retries without optional fields if DataForSEO rejects them.',
+  },
+  {
+    name: 'Measurement integrity gate',
+    deployment: 'local report',
+    evidence: 'docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-2026-06-02.md',
+    result: 'Scaling gate remains RED because qualified call attribution is not proven.',
+  },
+];
+
 const S = {
   h1: { fontSize: '2rem', fontWeight: 800, margin: '0 0 0.5rem' },
   h2: { fontSize: '1.4rem', fontWeight: 700, margin: '2.5rem 0 1rem', borderBottom: '2px solid var(--color-primary)', paddingBottom: '0.5rem' },
@@ -124,8 +332,8 @@ const S = {
     fontSize: '0.75rem',
     fontWeight: 700,
     textTransform: 'uppercase',
-    background: status === 'awaiting-execution' ? '#fff3e0' : '#fce4ec',
-    color: status === 'awaiting-execution' ? '#e65100' : '#c2185b',
+    background: status === 'awaiting-execution' ? '#fff3e0' : status === 'active' ? '#e8f5e9' : status === 'partial' ? '#fff8e1' : '#fce4ec',
+    color: status === 'awaiting-execution' ? '#e65100' : status === 'active' ? '#1b5e20' : status === 'partial' ? '#8a5a00' : '#c2185b',
   }),
   meta: { fontSize: '0.85rem', color: '#666', margin: '0.4rem 0' },
   next: { background: '#f5f7fa', borderLeft: '3px solid var(--color-primary)', padding: '0.6rem 0.9rem', fontSize: '0.9rem', marginTop: '0.5rem' },
@@ -137,6 +345,13 @@ const S = {
 
 export default function OperationsDashboardPage() {
   const today = new Date().toISOString().split('T')[0];
+  const paths = proofPaths(today);
+  const sourceWorkflow = proofSourceWorkflow(paths);
+  const ownerSprint = ownerEvidenceSprint(paths);
+  const unblockRunbook = proofUnblockRunbook(paths);
+  const preflightCommands = proofPreflightCommands(paths);
+  const promoteCommands = proofPromoteCommands(paths);
+
   return (
     <main style={{ background: '#f7f9fc', minHeight: '100vh', padding: '2rem 1.5rem' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
@@ -152,6 +367,146 @@ export default function OperationsDashboardPage() {
           remaining work is execution by you (the things I cannot do for you because
           they need a login, capital, or a business decision).
         </div>
+
+        <h2 style={S.h2}>Technical gates — current readiness</h2>
+        <table style={S.table}>
+          <thead>
+            <tr>
+              <th style={S.th}>Area</th>
+              <th style={S.th}>Status</th>
+              <th style={S.th}>Evidence</th>
+              <th style={S.th}>Next step</th>
+            </tr>
+          </thead>
+          <tbody>
+            {TECHNICAL_GATES.map((gate) => (
+              <tr key={gate.area}>
+                <td style={S.td}><strong>{gate.area}</strong></td>
+                <td style={S.td}><span style={S.badge(gate.status)}>{gate.status}</span></td>
+                <td style={S.td}>{gate.evidence}</td>
+                <td style={S.td}>{gate.nextStep}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <h2 style={S.h2}>Proof source workflow — publish blockers</h2>
+        <div style={S.warn}>
+          <strong>Proof layer is the current growth ceiling.</strong> Do not deploy proof-heavy
+          claims until owner evidence is collected, imported, validated, and the prepublish gate passes.
+          The live unblock runbook is regenerated with <code>{unblockRunbook.command}</code>.
+        </div>
+        <div style={S.card}>
+          <h3 style={{ ...S.h3, marginTop: 0 }}>Evidence unblock runbook</h3>
+          <p style={S.meta}><strong>Report:</strong> <code>{unblockRunbook.report}</code></p>
+          <p style={S.meta}><strong>Proof checklist:</strong> <code>{unblockRunbook.checklist}</code></p>
+          <p style={S.meta}><strong>Current gate:</strong> {unblockRunbook.currentGate}</p>
+          <p style={S.meta}>
+            Intake scope: {unblockRunbook.ownerRows} owner rows · {unblockRunbook.photoRows} photo rows · {unblockRunbook.warrantyRows} warranty row · {unblockRunbook.repairCostRows} repair cost rows.
+          </p>
+          <div style={S.next}>
+            <strong>Use this before owner calls:</strong> regenerate the runbook, fill only source-backed fields, dry-run every import, then promote verified rows intentionally.
+          </div>
+        </div>
+        <div style={S.card}>
+          <h3 style={{ ...S.h3, marginTop: 0 }}>Owner evidence sprint</h3>
+          <p style={S.meta}><strong>Command:</strong> <code>{ownerSprint.command}</code></p>
+          <p style={S.meta}><strong>Report:</strong> <code>{ownerSprint.report}</code></p>
+          <p style={S.meta}><strong>CSV:</strong> <code>{ownerSprint.csv}</code></p>
+          <p style={S.meta}><strong>Blocks:</strong> {ownerSprint.blocks.join(' · ')}</p>
+          <div style={S.next}>
+            <strong>Operator rule:</strong> complete the sprint checklist before importing proof. If a row still has unknowns, keep it partial and leave the publish gate closed.
+          </div>
+        </div>
+        <h3 style={S.h3}>Minimum proof packet before anything becomes citable</h3>
+        <ul style={{ ...S.card, paddingLeft: '2rem', lineHeight: 1.8, marginTop: 0 }}>
+          {PROOF_MINIMUM_PACKET.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <table style={S.table}>
+          <thead>
+            <tr>
+              <th style={S.th}>Step</th>
+              <th style={S.th}>Owner action</th>
+              <th style={S.th}>Source file</th>
+              <th style={S.th}>Red gate</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sourceWorkflow.map((row) => (
+              <tr key={row.step}>
+                <td style={S.td}><strong>{row.step}</strong></td>
+                <td style={S.td}>{row.ownerAction}</td>
+                <td style={S.td}><code>{row.sourceFile}</code></td>
+                <td style={S.td}>{row.gate}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <h3 style={S.h3}>Current proof blockers</h3>
+        <table style={S.table}>
+          <thead>
+            <tr>
+              <th style={S.th}>Page</th>
+              <th style={S.th}>Verdict</th>
+              <th style={S.th}>What is missing</th>
+            </tr>
+          </thead>
+          <tbody>
+            {PROOF_BLOCKERS.map((row) => (
+              <tr key={row.page}>
+                <td style={S.td}><code>{row.page}</code></td>
+                <td style={S.td}><span style={S.badge(row.verdict === 'blocked' ? 'red' : 'partial')}>{row.verdict}</span></td>
+                <td style={S.td}>{row.issue}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <h3 style={S.h3}>Proof preflight / dry-run commands</h3>
+        <div style={{ ...S.card, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace', fontSize: '0.82rem', lineHeight: 1.75, overflowX: 'auto' }}>
+          {preflightCommands.map((command) => (
+            <div key={command}>{command}</div>
+          ))}
+        </div>
+
+        <h3 style={S.h3}>Proof promote commands — only after source review</h3>
+        <div style={{ ...S.card, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace', fontSize: '0.82rem', lineHeight: 1.75, overflowX: 'auto' }}>
+          {promoteCommands.map((command) => (
+            <div key={command}>{command}</div>
+          ))}
+        </div>
+
+        <h3 style={S.h3}>Final proof gates before merge/deploy</h3>
+        <div style={{ ...S.card, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace', fontSize: '0.82rem', lineHeight: 1.75, overflowX: 'auto' }}>
+          {PROOF_FINAL_GATE_COMMANDS.map((command) => (
+            <div key={command}>{command}</div>
+          ))}
+        </div>
+
+        <h2 style={S.h2}>Latest verified code-side batches</h2>
+        <table style={S.table}>
+          <thead>
+            <tr>
+              <th style={S.th}>Batch</th>
+              <th style={S.th}>Deployment</th>
+              <th style={S.th}>Evidence</th>
+              <th style={S.th}>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            {RECENT_VERIFIED_BATCHES.map((batch) => (
+              <tr key={batch.name}>
+                <td style={S.td}><strong>{batch.name}</strong></td>
+                <td style={S.td}><code>{batch.deployment}</code></td>
+                <td style={S.td}><code>{batch.evidence}</code></td>
+                <td style={S.td}>{batch.result}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
         <h2 style={S.h2}>Tier 1 — highest ROI / blocked on you</h2>
         {TIER1_ACTIONS.map((action) => (

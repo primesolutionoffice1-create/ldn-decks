@@ -11,18 +11,19 @@ export async function generateMetadata() {
     path: '/trex-performance-products',
     title: 'Trex Performance Outdoor Living Products | Loudoun Decks',
     description: 'Explore the full range of Trex performance-engineered outdoor living products. From high-durability composite decking to elegant railing systems, discover the Trex difference with Loudoun Decks.',
-  });
+    image: '/social/trex-performance-products-social.png',
+});
 }
 
 export default function TrexPerformancePage() {
   return (
     <main className={styles.main}>
-      <WebPageSchema url="https://ldndecks.com/trex-performance-products" name="Trex Performance Outdoor Living Products | Loudoun Decks" description="Explore the full range of Trex performance-engineered outdoor living products. From high-durability composite decking to elegant railing systems, discover the Trex difference with Loudoun Decks." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/trex-performance-products" name="Trex Performance Outdoor Living Products | Loudoun Decks" description="Explore the full range of Trex performance-engineered outdoor living products. From high-durability composite decking to elegant railing systems, discover the Trex difference with Loudoun Decks." speakable />
       <section className={styles.hero}>
         <div className={styles.container}>
           <h1>Trex Performance-Engineered™ <br /><span>Outdoor Living Products</span></h1>
           <p className={styles.subtitle}>
-            Explore the industry-leading technology behind the world’s #1 decking brand. 
+            Explore Trex decking technology, product lines, and material options for Northern Virginia projects.
             Loudoun Decks is a proud Trex partner, delivering engineering excellence to your backyard.
           </p>
         </div>
@@ -45,7 +46,7 @@ export default function TrexPerformancePage() {
         <div className={styles.container}>
           <h2>Ready to Build with the Best?</h2>
           <p>Get a free estimate for your Trex composite deck today.</p>
-          <a href="/contact" className={styles.ctaButton}>Get My Free Quote</a>
+          <a href="/get-estimate" className={styles.ctaButton}>Get My Free Quote</a>
         </div>
       </div>
 

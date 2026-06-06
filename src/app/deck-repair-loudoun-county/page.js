@@ -21,7 +21,7 @@ export const metadata = buildMetadata({
   path: '/deck-repair-loudoun-county',
   title: 'Deck Repair Loudoun County | Fix Rot, Railings & Ledger Boards',
   description: 'Expert deck repair in Loudoun County, VA. We fix rot, unstable railings, ledger board failures & structural damage. Ashburn, Leesburg, Sterling.',
-  image: '/images/img05.jpeg',
+  image: '/social/deck-repair-loudoun-county-social.png',
 });
 
 const inclusions = [
@@ -50,7 +50,7 @@ const pageFAQs = [
   },
   {
     q: "How much does deck repair cost in Loudoun County?",
-    a: "Deck repair costs in Loudoun County range from $500 for minor board replacements to $8,000-$15,000 for major structural restoration. We provide free on-site estimates with full itemized proposals so there are no surprises."
+    a: "Deck repair cost in Loudoun County should be confirmed after an on-site inspection. The price depends on whether the work is surface board replacement, railing repair, ledger flashing, joist sistering, post replacement, stair correction, resurfacing, or a permit-triggering structural repair. We provide itemized written proposals after the deck condition is documented."
   },
   {
     q: "Do you pull permits for deck repairs in Loudoun County?",
@@ -70,7 +70,7 @@ const pageFAQs = [
   },
   {
     q: "Are you a licensed and insured deck repair contractor in Loudoun County?",
-    a: "Yes. Loudoun Decks is a fully licensed and insured contractor operating in Loudoun County, Virginia. We are a review-supported company with deep roots in the Loudoun community and a track record of quality repairs."
+    a: "Yes. Loudoun Decks is a licensed and insured contractor operating in Loudoun County, Virginia. Homeowners can verify our company profile, service area, and project documentation before approving repair work."
   }
 ];
 
@@ -80,7 +80,7 @@ const expansionSections = [
     paragraphs: [
       "Loudoun County is one of the fastest-growing and most prosperous counties in the United States - and its homeowners expect a high standard when it comes to maintaining their properties. Decks in Loudoun County face a unique combination of environmental stressors: the high humidity and intense summer heat of Northern Virginia, followed by freeze-thaw cycles that expand and contract wood and concrete year after year. Loudoun Decks has spent years repairing and restoring decks in Ashburn, Leesburg, Sterling, Brambleton, and across the county - and we understand exactly what Loudoun homes need.",
       "Many Loudoun County decks were built in the construction boom of the 2000s and early 2010s, using pressure-treated lumber and builder-grade fasteners that are now approaching the end of their effective lifespan. These decks may look fine on the surface, but hidden rot in the ledger board, subframe joists, and post bases is extremely common. Our team performs thorough substructure inspections - crawling under the deck to check every joist, beam, and connection point - before providing a repair proposal.",
-      "If you are a Loudoun County homeowner searching for a deck contractor near you who combines local expertise with the highest standards of craftsmanship, Loudoun Decks is the team to call. We are Review-Supported, fully licensed and insured, and have completed hundreds of repairs throughout the county."
+      "If you are a Loudoun County homeowner searching for a deck contractor near you who combines local expertise with careful documentation, Loudoun Decks is the team to call. We approach repair work with inspection-first notes, photos where available, and written repair scopes instead of guesswork."
     ]
   },
   {
@@ -118,19 +118,17 @@ const expansionSections = [
 export default function DeckRepairLoudounCountyPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/deck-repair-loudoun-county" name="Deck Repair Loudoun County | Fix Rot, Railings &amp; Ledger Boards" description="Expert deck repair in Loudoun County, VA. We fix rot, unstable railings, ledger board failures &amp; structural damage. Ashburn, Leesburg, Sterling." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-repair-loudoun-county" name="Deck Repair Loudoun County | Fix Rot, Railings &amp; Ledger Boards" description="Expert deck repair in Loudoun County, VA. We fix rot, unstable railings, ledger board failures &amp; structural damage. Ashburn, Leesburg, Sterling." speakable />
       <ServiceSchema
         name="Deck Repair in Loudoun County"
         description="Expert deck repair across Loudoun County — rot and ledger board repair, joist and beam replacement, railing and stair safety upgrades."
         url="https://ldndecks.com/deck-repair-loudoun-county"
         category="Deck Repair"
-        lowPrice="1500"
-        highPrice="15000"
         areaServed={[{"@type":"AdministrativeArea","name":"Loudoun County, VA"}]}
-        relatedServices={['https://ldndecks.com/deck-repair', 'https://ldndecks.com/services/deck-repair-and-structural-maintenance', 'https://ldndecks.com/services/deck-inspection']}
+        relatedServices={['https://ldndecks.com/deck-repair', 'https://ldndecks.com/services/deck-repair', 'https://ldndecks.com/services/deck-inspection']}
       />
       <ServicesHeader
-        subtext="Loudoun County's Review-Supported Repair Team"
+        subtext="Loudoun County's Inspection-First Repair Team"
         title="Deck Repair Loudoun County"
         description="Loudoun Decks repairs decks throughout Ashburn, Leesburg, Sterling, Brambleton and all of Loudoun County. Rot repair, ledger board reinforcement, railing upgrades & full resurfacing. Free estimate."
       />
@@ -141,15 +139,17 @@ export default function DeckRepairLoudounCountyPage() {
           <p style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.75rem' }}>Concerned about your deck? Get a free safety inspection in Loudoun County.</p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <CallLink style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Call (571) 655-7207</CallLink>
-            <a href="/contact" style={{ display: 'inline-block', background: 'var(--color-dark)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Get Free Estimate</a>
+            <a href="/get-estimate" style={{ display: 'inline-block', background: 'var(--color-dark)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Get Free Estimate</a>
           </div>
         </div>
       </section>
 
       <section style={{ background: '#fff8f1', borderLeft: '4px solid var(--color-primary)', padding: '1.25rem 1.5rem', maxWidth: 900, margin: '1.5rem auto', borderRadius: 8 }}>
         <p style={{ margin: 0, lineHeight: 1.7 }}>
-          <strong>Beyond Loudoun-specific guidance:</strong> see the full Northern Virginia repair hub for structural decision frameworks, cost ranges by repair type, permit triggers across all NoVA counties, and the repair-vs-replace decision math.{' '}
-          <a href="/services/deck-repair-and-structural-maintenance" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Open the NoVA Structural Repair Hub →</a>
+          <strong>Beyond Loudoun-specific guidance:</strong> see the full Northern Virginia repair hub for structural decision frameworks, permit triggers across all NoVA counties, and the repair-vs-replace decision math.{' '}
+          <a href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Open the NoVA Structural Repair Hub →</a>
+          {' '}For the inspection-first service path, use our{' '}
+          <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service page</Link>.
         </p>
       </section>
 
@@ -177,21 +177,35 @@ export default function DeckRepairLoudounCountyPage() {
           Useful primers: <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth</Link>,
           {' '}<Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck joist sizing</Link>,
           {' '}<Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>unpermitted decks in Virginia</Link>, and
-          {' '}<Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck permit requirements</Link>.
+          {' '}<Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck permit requirements</Link>. If the inspection shows the frame is beyond practical repair, compare the scope with our
+          {' '}<Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck replacement service</Link>.
         </p>
       </section>
       <ServiceInclusions
         title="Why Loudoun County Homeowners Trust Loudoun Decks for Repairs"
-        description="We are local. We are licensed. We are review-supported reputation. And we treat every repair project in Loudoun County with the same care and precision as our premium new builds."
+        description="We are local. We are licensed. We are publicly documented reputation. And we treat every repair project in Loudoun County with the same care and precision as our premium new builds."
         items={inclusions}
       />
       <ProcessSteps />
-      <SimpleCTA title="Deck Needs Repair in Loudoun County?" buttonText="Get Free Inspection" link="/contact" />
+      <SimpleCTA title="Deck Needs Repair in Loudoun County?" buttonText="Get Free Inspection" link="/get-estimate" />
       <ServicesFAQ
         title="Deck Repair Loudoun County - FAQs"
         faqs={pageFAQs}
         canonicalUrl="https://ldndecks.com/deck-repair-loudoun-county"
       />
+      <section style={{ padding: '2rem 0', background: '#fff' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ fontSize: '1.45rem', fontWeight: 700, marginBottom: '0.75rem' }}>Loudoun Repair Planning Tools</h2>
+          <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
+            A Loudoun County repair estimate should follow inspection, especially when ledgers, railings, stairs, or structural framing are involved. These tools help you compare the broader budget path without treating a calculator result as a repair quote.
+          </p>
+          <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '0.5rem' }}>
+            <li><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Compare resurfacing vs replacement →</Link></li>
+            <li><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Use the deck cost calculator for larger-scope planning →</Link></li>
+            <li><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Review Loudoun County deck permit triggers →</Link></li>
+          </ul>
+        </div>
+      </section>
       <section style={{ padding: '3rem 0', background: '#fafafa' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.5rem' }}>Loudoun County Service Map</h2>

@@ -23,15 +23,15 @@ All events that exist in the system today, with current dedup state.
 
 ### `form_submit` (dataLayer)
 
-**Source:** [tracking.js:21-33](../../src/lib/tracking.js#L21-L33), pushed from [ContactForm.jsx:38](../../src/components/ContactForm.jsx#L38)
-**Carries:** `event_id`, `email`, `phone`, click IDs, page
+**Source:** [tracking.js](../../src/lib/tracking.js), pushed from the shared [useLeadSubmit.js](../../src/hooks/useLeadSubmit.js) hook.
+**Carries:** `event_id`, `email`, `phone`, click IDs, page, form location, service/timeline, and non-PII lead-quality fields
 
 | Trigger path | Fires? | event_id | Dedup gate | Outcome |
 |---|---|---|---|---|
 | ContactForm normal submit | ✅ Yes | ✅ Set (crypto UUID) | `hasTracked.current` ref blocks 2nd push in same instance | ✅ Single fire |
 | ContactForm — double-click on Submit button while submitting | ❌ Blocked | N/A | `status === "submitting"` disables button + `hasTracked.current` | ✅ Single fire |
 | ContactForm — submit, modal closes, user reopens modal, submits again | ⚠️ Yes (NEW event_id) | ✅ Set (different UUID) | Component re-mount = new ref. No higher-scope guard. | ❌ **2 conversions counted** (distinct event_ids) |
-| ContactHome (homepage form) submit | ❌ **NOT FIRED** | N/A | N/A | ❌ Missing entirely |
+| ContactHome (homepage form) submit | ✅ Yes | ✅ Set (crypto UUID) | Same shared hook path as ContactForm | ✅ Single fire |
 | `lead_confirmed` GTM trigger ALSO mapped to same Google Ads conversion | ⚠️ N/A | matches | GTM transaction_id dedup | If dedup ON → ✅ single. If OFF → ❌ **2 counted** |
 
 ### `lead_confirmed` (dataLayer)
@@ -42,7 +42,7 @@ All events that exist in the system today, with current dedup state.
 | Trigger path | Fires? | event_id | Dedup gate | Outcome |
 |---|---|---|---|---|
 | ContactForm submit → /thank-you?eid=UUID | ✅ Yes | ✅ Set | None client-side. GTM transaction_id assumed. | If GTM dedup ON → ✅ |
-| ContactHome submit → /thank-you (no eid) | ✅ Yes | ❌ **null** | None possible — event_id is null | ❌ **Every reload = +1 conversion** |
+| ContactHome submit → /thank-you?eid=UUID | ✅ Yes | ✅ Set | GTM transaction_id assumed. | If GTM dedup ON → ✅ |
 | User refreshes /thank-you?eid=UUID | ✅ Yes | ✅ Set (same UUID) | GTM transaction_id dedup IF configured | If dedup ON → ✅. If OFF → ❌ **2 counted** |
 | Browser back-forward to /thank-you | ✅ Yes | ✅ Set (same UUID) | useEffect re-runs; same gate | Same as above |
 | User shares /thank-you URL with friend → friend opens | ✅ Yes | ✅ Set (same UUID) | Same gate | If dedup ON → ✅ |
@@ -51,17 +51,17 @@ All events that exist in the system today, with current dedup state.
 
 ### `phone_click` (dataLayer)
 
-**Source:** [tracking.js:40-45](../../src/lib/tracking.js#L40-L45), called from 3 places only
-**Carries:** hardcoded `phone: '+15716557207'`
+**Source:** [tracking.js](../../src/lib/tracking.js), called by tracked `CallLink` anchors
+**Carries:** `event_id`, `phone_number`, `link_text`, `cta_location`, page context, click IDs, and UTM values
 
 | Trigger path | Fires? | event_id | Dedup gate | Outcome |
 |---|---|---|---|---|
-| Click Header phone link | ✅ Yes | ❌ Not set | None | Counts each click |
-| Click FloatingCallButton | ✅ Yes | ❌ Not set | None | Counts each click |
-| Click ContactForm sidebar phone | ✅ Yes | ❌ Not set | None | Counts each click |
-| Click any of the 40+ untracked `tel:` links | ❌ **NOT FIRED** | N/A | N/A | Missing |
-| User clicks tracked phone link 3 times | ✅ Fires 3× | ❌ None | None | ❌ **3 conversions counted** |
-| User clicks tracked link on phone, dialer opens, doesn't actually call | ✅ Fires | ❌ None | None | ❌ Vanity click, not real conversion |
+| Click Header phone link | ✅ Yes | ✅ Set | None | Counts each click |
+| Click FloatingCallButton | ✅ Yes | ✅ Set | None | Counts each click |
+| Click ContactForm sidebar phone | ✅ Yes | ✅ Set | None | Counts each click |
+| Click city/service/content CallLink | ✅ Yes | ✅ Set | None | Counts each click |
+| User clicks tracked phone link 3 times | ✅ Fires 3× | ✅ New ID each click | None | ❌ **3 engagement events** |
+| User clicks tracked link on phone, dialer opens, doesn't actually call | ✅ Fires | ✅ Set | None | ❌ Vanity click, not real conversion |
 
 ### Server-side Meta CAPI `Lead` event
 
@@ -116,14 +116,16 @@ Meta Lead: 1 (server-side only; safe)
 ```
 Action → Events fired
 ─────────────────────
-User submits homepage form → server returns success
-                           → Meta CAPI Lead (event_id=null) — server-side
-                           → router.push(/thank-you)   [no eid]
-                           → lead_confirmed (event_id=null)
+User submits homepage form → form_submit (UUID2)
+                           → server returns success
+                           → Meta CAPI Lead (UUID2) — server-side
+                           → router.push(/thank-you?eid=UUID2)
+                           → lead_confirmed (UUID2)
 
-Google Ads Lead conversion count: 1 (lead_confirmed only — form_submit never fired)
-  ⚠️  BUT: no event_id means future server-side CAPI / additional client events
-  cannot dedup against this one. Each /thank-you reload adds another +1.
+Google Ads Lead conversion count: 1 if GTM fires only on lead_confirmed with
+transaction_id=UUID2.
+  ⚠️  If GTM maps both form_submit and lead_confirmed to the same conversion
+  without transaction_id dedup, duplicate counting is still possible.
 GA4 generate_lead count: 1
 Meta Lead: 1
 ```
@@ -281,12 +283,11 @@ If any of these don't match, the dedup architecture is misconfigured.
 
 ## TL;DR
 
-**Today's worst-case duplicate risk:** every ContactHome submission can produce unlimited Google Ads conversions if the user reloads /thank-you, because `event_id=null` defeats every dedup gate downstream.
+**Today's worst-case duplicate risk:** GTM / Google Ads can still double-count if both `form_submit` and `lead_confirmed` map to the same conversion action without transaction_id dedup. ContactHome no longer has the `event_id=null` failure mode locally.
 
 **Fix priority:**
-1. Make ContactHome generate + pass an event_id (TRACKING-FIX-QUEUE.md #1)
-2. Verify or configure GTM transaction_id dedup on Google Ads Lead tag (TRACKING-FIX-QUEUE.md #4)
-3. Map Google Ads Lead conversion to ONLY `lead_confirmed`, not both events (TRACKING-FIX-QUEUE.md #4)
-4. Add sessionStorage guard in trackLeadConfirmed (TRACKING-FIX-QUEUE.md #10)
+1. Verify or configure GTM transaction_id dedup on Google Ads Lead tag (TRACKING-FIX-QUEUE.md #4)
+2. Map Google Ads Lead conversion to ONLY `lead_confirmed`, not both events (TRACKING-FIX-QUEUE.md #4)
+3. Keep the sessionStorage guard in trackLeadConfirmed active (TRACKING-FIX-QUEUE.md #10)
 
 After those four, the system is dedup-clean.

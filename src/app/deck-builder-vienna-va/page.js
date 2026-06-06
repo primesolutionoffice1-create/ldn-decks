@@ -17,18 +17,19 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-vienna-va',
   title: 'Deck Builder in Vienna, VA | Trex Certified | Loudoun Decks',
   description: 'Trusted deck builder in Vienna, VA. Google reviews. Custom Trex & TimberTech decks, screened porches & pergolas. Town of Vienna permit experts. Free estimate.',
-  image: '/images/img37.jpeg',
+  image: '/social/deck-builder-vienna-va-social.png',
 });
 
 const inclusions = [
   {
     title: "Town of Vienna Experts",
-    desc: "We navigate the unique building department requirements of the Town of Vienna, ensuring faster permit approvals for your project."
+    desc: "We navigate the unique building department requirements of the Town of Vienna and prepare the permit package around current town and Fairfax County expectations."
   },
   {
     title: "Fairfax Luxury Standards",
@@ -85,9 +86,9 @@ const expansionSections = [
   {
     title: "Navigating Vienna & Fairfax County Regulations",
     paragraphs: [
-      "Building in Vienna requires a deep understanding of local zoning and building codes. If your home is within the Town of Vienna limits, your project must go through the Town's specific building department. This often involves a faster review cycle but requires precise adherence to town-specific setbacks and height restrictions. Our team has built many projects within town limits and knows exactly how to get your plans approved efficiently.",
-      "For homes in the greater Vienna area that fall under Fairfax County jurisdiction, we utilize our years of experience with the Fairfax County Land Development Services (LDS) portal. We ensure every footing, every ledger connection, and every railing detail meets or exceeds the current building codes. We handle the 100% of the paperwork so you can focus on choosing your materials and design.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We take pride in our 100% permit approval rate across all NoVA jurisdictions, including the sometimes complex requirements of Vienna HOAs."
+      "Building in Vienna requires a deep understanding of local zoning and building codes. If your home is within the Town of Vienna limits, your project must go through the Town's specific building department. This often involves a faster review cycle but requires precise adherence to town-specific setbacks and height restrictions. We verify the jurisdiction, setback rules, and submission requirements before plans are finalized.",
+      "For homes in the greater Vienna area that fall under Fairfax County jurisdiction, we utilize our years of experience with the Fairfax County Land Development Services (LDS) portal. We ensure every footing, every ledger connection, and every railing detail meets or exceeds the current building codes. We manage the paperwork so you can focus on choosing your materials and design.",
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We prepare permit and HOA submissions carefully for NoVA jurisdictions, including the sometimes complex requirements of Vienna HOAs."
     ],
     listItems: [
       { label: "Town of Vienna Specialist", text: "Expertise in navigating the Town's specific building department and zoning rules." },
@@ -119,11 +120,11 @@ export default function ViennaDeckBuilderPage() {
     <main>
       <JsonLd data={viennaFaqSchema} />
       <LocalBusinessSchema city="Vienna" url="https://ldndecks.com/deck-builder-vienna-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-vienna-va" name="Deck Builder in Vienna, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Vienna, VA. Google reviews. Custom Trex &amp; TimberTech decks, screened porches &amp; pergolas. Town of Vienna permit experts. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-vienna-va" name="Deck Builder in Vienna, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Vienna, VA. Google reviews. Custom Trex &amp; TimberTech decks, screened porches &amp; pergolas. Town of Vienna permit experts. Free estimate." speakable />
       <ServicesHeader
-        subtext="Vienna, VA's #1 Rated Builder"
+        subtext="Vienna, VA Deck Builder"
         title="Custom Deck Builder in Vienna, VA"
-        description="Loudoun Decks builds premium composite and wood decks in Vienna, Tysons, and across Fairfax County. Trex Platinum Partner. review-supported reputation."
+        description="Loudoun Decks builds premium composite and wood decks in Vienna, Tysons, and across Fairfax County. Trex Platinum Partner. publicly documented reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -132,7 +133,7 @@ export default function ViennaDeckBuilderPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: $5,000+</strong>
             <br />
-            We focus on <strong style={{ color: '#111' }}>full custom Vienna builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
+            We focus on <strong style={{ color: '#111' }}>full custom Vienna builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
           </p>
         </div>
       </section>
@@ -151,6 +152,19 @@ export default function ViennaDeckBuilderPage() {
         image1="/images/img37.jpeg"
         image2="/images/img37.jpeg"
       />
+      <PlanningUpdate
+        market="Vienna decks in 2026"
+        notes={[
+          "Vienna projects need a first-step jurisdiction check because Town of Vienna and Fairfax County addresses can sit close together but follow different permit paths.",
+          "Mature trees, tighter lots, and older pressure-treated decks make repair-vs-replacement planning more important before a budget is finalized.",
+          "HOA and town review packets should show material selections, railings, stairs, and rear-yard visibility clearly before submission."
+        ]}
+        links={[
+          { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
+          { href: "/deck-safety-inspection-checklist", label: "Safety checklist" },
+          { href: "/composite-deck-cost-northern-virginia", label: "Composite deck cost" }
+        ]}
+      />
       <ServiceContentExpansion sections={expansionSections} />
       
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -165,10 +179,9 @@ export default function ViennaDeckBuilderPage() {
         </div>
         <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Vienna Luxury Outdoor Living in the Heart of Fairfax</h2>
         <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
-          Our featured Vienna project includes a <strong>$36,000 380 sqft Trex Transcend Deck</strong> in Vienna Woods. 
-          This project replaced a 15-year-old pressure-treated deck with a modern composite sanctuary featuring 
-          Trex Signature railings and integrated LED lighting. We handled the full Town of Vienna building permit 
-          and HOA approval process, completing the build in just 3 weeks.
+          Typical Vienna scopes include 320 to 450 sqft composite deck replacements, Trex or TimberTech surfaces,
+          aluminum railing upgrades, and lighting packages designed around mature lots and rear-yard privacy.
+          Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.
         </p>
       </div>
 
@@ -188,15 +201,19 @@ export default function ViennaDeckBuilderPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
+            <li key="/bbb" style={{ marginBottom: '0.5rem' }}><Link href="/bbb-accredited-deck-builder-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>BBB Accredited Deck Builder →</Link></li>
+            <li key="/before-after" style={{ marginBottom: '0.5rem' }}><Link href="/before-and-after" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Before & After Deck Projects →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
+            <li key="/deck-payment-estimator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
+            <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Request a Written Vienna Estimate →</Link></li>
         </ul>
       </section>
 
-      <SimpleCTA title="Build Your Dream Deck in Vienna" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Dream Deck in Vienna" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-vienna-va" />
-      <NamedAuthor context="Vienna and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Vienna and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

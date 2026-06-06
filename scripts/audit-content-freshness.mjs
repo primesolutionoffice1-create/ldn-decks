@@ -26,11 +26,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { resolveVaultReportsDir } from './lib/report-paths.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const REPO_ROOT = path.resolve(path.dirname(__filename), '..');
 const APP_DIR = path.resolve(REPO_ROOT, 'src/app');
-const VAULT_REPORTS = path.resolve(REPO_ROOT, '../../ldn-decks-growth-brain-vaults/ldn-decks/wiki/reports');
+const VAULT_REPORTS = resolveVaultReportsDir(REPO_ROOT);
 
 const TODAY = new Date();
 const TODAY_ISO = TODAY.toISOString().split('T')[0];
@@ -66,6 +67,11 @@ function extractDate(source, attr) {
   const re = new RegExp(`['"\`]?${attr}['"\`]?\\s*[:=]\\s*['"\`]?([\\d]{4}-[\\d]{2}-[\\d]{2})['"\`]?`);
   const m = source.match(re);
   return m ? m[1] : null;
+}
+
+function emitsDynamicDate(source, attr) {
+  const re = new RegExp(`['"\`]?${attr}['"\`]?\\s*:\\s*[^,\\n]*(toISOString\\(\\)|\\.date|date)`);
+  return re.test(source);
 }
 
 function priorityFor(urlPath) {
@@ -105,14 +111,18 @@ for (const file of files) {
   if (!emitsArticle && !emitsWebPage) continue;
   const dateModified = extractDate(source, 'dateModified');
   const datePublished = extractDate(source, 'datePublished');
+  const dynamicDateModified = !dateModified && emitsDynamicDate(source, 'dateModified');
+  const dynamicDatePublished = !datePublished && emitsDynamicDate(source, 'datePublished');
   const effectiveDate = dateModified || datePublished;
-  const klass = classifyAge(effectiveDate);
+  const klass = effectiveDate ? classifyAge(effectiveDate) : (dynamicDateModified || dynamicDatePublished ? 'FRESH' : 'UNDATED');
   const urlPath = urlFromFile(file);
   findings[klass].push({
     file: path.relative(REPO_ROOT, file),
     url: urlPath,
     dateModified,
     datePublished,
+    dynamicDateModified,
+    dynamicDatePublished,
     ageDays: effectiveDate ? Math.floor((TODAY - new Date(effectiveDate)) / (1000 * 60 * 60 * 24)) : null,
     priority: priorityFor(urlPath),
     emitsArticle,
@@ -189,8 +199,9 @@ const refreshQueue = [
 ];
 
 for (const item of refreshQueue.slice(0, 50)) {
+  const dateNote = item.dateModified || item.datePublished || (item.dynamicDateModified || item.dynamicDatePublished ? 'dynamic' : '—');
   reportLines.push(
-    `| [\`/${item.url}\`](https://ldndecks.com/${item.url}) | ${classifyAge(item.dateModified || item.datePublished)} | ${item.ageDays ?? '?'}d | ${item.priority} | ${item.dateModified || '—'} | ${TODAY_ISO} |`
+    `| [\`/${item.url}\`](https://ldndecks.com/${item.url}) | ${item.dynamicDateModified || item.dynamicDatePublished ? 'DYNAMIC' : classifyAge(item.dateModified || item.datePublished)} | ${item.ageDays ?? '?'}d | ${item.priority} | ${dateNote} | ${TODAY_ISO} |`
   );
 }
 

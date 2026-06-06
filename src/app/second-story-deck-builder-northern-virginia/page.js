@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
   path: '/second-story-deck-builder-northern-virginia',
   title: 'Second Story Deck Builder | Elevated Decks in NoVA',
   description: 'Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs ($35K-$75K+), and safety requirements explained.',
-  image: '/images/img09.jpeg',
+  image: '/social/second-story-deck-builder-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -43,7 +43,7 @@ export default function SecondStoryDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/second-story-deck-builder-northern-virginia" name="Second Story Deck Builder | Elevated Decks in NoVA" description="Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs ($35K-$75K+), and safety requirements explained." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/second-story-deck-builder-northern-virginia" name="Second Story Deck Builder | Elevated Decks in NoVA" description="Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs ($35K-$75K+), and safety requirements explained." speakable />
       <ArticleSchema
         title="Second Story Deck Builder in Northern Virginia: Elevated Decks Explained"
         description="Everything you need to know about building a second-story or elevated deck in Northern Virginia. Engineering, permits, costs, safety, and under-deck living."
@@ -88,7 +88,7 @@ export default function SecondStoryDeckBuilderPage() {
           {/* ===== SECTION 1: Intro ===== */}
           <p style={S.p}>Northern Virginia is home to thousands of walkout basement and split-level homes &mdash; properties where the main living level sits 8&ndash;12 feet above grade at the rear of the house. For these homeowners, a second-story deck isn&apos;t a luxury choice; it&apos;s the only practical way to create outdoor living space connected to the kitchen and family room.</p>
           <p style={S.p}>But elevated decks are fundamentally different from ground-level construction. The engineering is more complex, the permitting is more rigorous, the materials are heavier-duty, and the safety requirements are non-negotiable. Building an elevated deck without proper engineering and permitting isn&apos;t just a code violation &mdash; it&apos;s a genuine safety hazard.</p>
-          <p style={S.p}>This guide covers everything you need to know about planning, building, and budgeting a second-story deck in Northern Virginia &mdash; from structural engineering to under-deck living space, with real project costs from our builds across Loudoun, Fairfax, and Prince William counties.</p>
+          <p style={S.p}>This guide covers everything you need to know about planning, building, and budgeting a second-story deck in Northern Virginia &mdash; from structural engineering to under-deck living space, with planning cost ranges for common elevated-deck scopes across Loudoun, Fairfax, and Prince William counties.</p>
 
           {/* ===== SECTION 2: Why Second-Story Decks Are Different ===== */}
           <h2 style={S.h2}>Why Second-Story Decks Are Different from Ground-Level</h2>
@@ -231,25 +231,29 @@ export default function SecondStoryDeckBuilderPage() {
           <h3 style={S.h3}>Composite vs. Wood Decking on Elevated Structures</h3>
           <p style={S.p}>Composite is especially advantageous on elevated decks because maintenance access is more difficult. You can&apos;t easily stain and seal a deck that&apos;s 10 feet above grade &mdash; the scaffolding and access costs make annual wood maintenance impractical. Composite&apos;s zero-maintenance requirement eliminates this problem entirely.</p>
 
-          {/* ===== SECTION 9: Real Project Examples ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Real Second-Story Deck Projects with Costs</h2>
-          <p style={S.p}>These are actual elevated deck projects we&apos;ve completed in Northern Virginia:</p>
+          {/* ===== SECTION 9: Planning Scenarios ===== */}
+          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Second-Story Deck Planning Scenarios to Verify Before Case Study Use</h2>
+          <p style={S.p}>
+            These are budgeting scenarios for elevated-deck planning, not formal case studies. Before any example
+            is reused as a source-verified project example, confirm the actual city, month/year, engineering scope,
+            permit status, before/after photos, and final estimate or invoice.
+          </p>
 
           {[
             {
-              price: '$42,000',
-              desc: '320 sqft Trex Transcend, 9ft elevation — Ashburn',
-              detail: 'Walkout basement home in Brambleton. Trex Transcend in Spiced Rum with Signature railing. Engineered 6x6 post system with diagonal lateral bracing. Single straight staircase with composite treads. Loudoun County permit with PE-stamped plans. Built in 3.5 weeks.',
+              price: '$40,000-$46,000',
+              desc: '320 sqft Trex Transcend, 9ft elevation — Ashburn/Brambleton-style scope',
+              detail: 'Walkout-basement planning scenario with Trex Transcend-style decking, Signature-style railing, engineered 6x6 post system, diagonal lateral bracing, and a single straight staircase. Confirm PE-stamped plan requirements, Loudoun permit path, and timeline after site review.',
             },
             {
-              price: '$58,000',
-              desc: '400 sqft Trex Lineage + RainEscape — Leesburg',
-              detail: 'Elevated composite deck with Trex RainEscape under-deck drainage creating a dry patio below. Trex Lineage decking, cable railing system, wide cascading staircase with LED riser lights. Under-deck patio includes ceiling fan and recessed lighting. Loudoun County permit. 4.5-week build.',
+              price: '$56,000-$64,000',
+              desc: '400 sqft Trex Lineage + RainEscape — Leesburg-style scope',
+              detail: 'Elevated composite planning scenario with Trex RainEscape-style under-deck drainage, cable railing allowance, wide cascading staircase, LED riser-light allowance, and dry-patio electrical planning. Verify drainage design, electrical scope, permit path, and owner evidence before publishing as a formal case study.',
             },
             {
-              price: '$72,000',
-              desc: '500 sqft Multi-Level + Under-Deck Kitchen — Great Falls',
-              detail: 'Two-level elevated deck design. Upper level at 10ft above grade with dining and grilling zone. Lower bump-out at 4ft with fire pit lounge. Full RainEscape system. Under-deck space finished as outdoor kitchen with stone countertops. Fairfax County permit with engineered plans. 5-week build.',
+              price: '$68,000-$78,000',
+              desc: '500 sqft multi-level + under-deck kitchen — Great Falls-style scope',
+              detail: 'Two-level elevated-deck planning scenario with upper dining/grilling tier, lower lounge bump-out, full under-deck drainage allowance, and outdoor-kitchen finish planning. Confirm Fairfax engineering, permit path, specialty trades, photos, and final invoice evidence before using as a case study.',
             },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
@@ -339,7 +343,7 @@ export default function SecondStoryDeckBuilderPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Plan Your Elevated Deck Project" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Plan Your Elevated Deck Project" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/second-story-deck-builder-northern-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 

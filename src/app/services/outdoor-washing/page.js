@@ -17,7 +17,8 @@ import ServiceSchema from '@/components/ServiceSchema';
 export const metadata = buildMetadata({
   path: "/services/outdoor-washing",
   title: "Professional Outdoor Power Washing NoVA | Deck & Patio Cleaning",
-  description: "Restore your outdoor oasis with professional power washing services in Northern Virginia. We specialize in safe, effective cleaning for decks, patios, and fences."
+  description: "Restore your outdoor oasis with professional power washing services in Northern Virginia. We specialize in safe, effective cleaning for decks, patios, and fences.",
+  image: "/social/outdoor-washing-service-social.png",
 });
 
 const surfaces = [
@@ -57,7 +58,7 @@ const washingFAQs = [
 export default function OutdoorWashingPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/outdoor-washing" name="Professional Outdoor Power Washing NoVA | Deck &amp; Patio Cleaning" description="Restore your outdoor oasis with professional power washing services in Northern Virginia. We specialize in safe, effective cleaning for decks, patios, and fences." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/outdoor-washing" name="Professional Outdoor Power Washing NoVA | Deck &amp; Patio Cleaning" description="Restore your outdoor oasis with professional power washing services in Northern Virginia. We specialize in safe, effective cleaning for decks, patios, and fences." speakable />
       <ServiceSchema
         name="Outdoor Power Washing"
         description="Professional outdoor power washing in Northern Virginia — safe, effective cleaning for decks, patios, fences, and exterior surfaces."
@@ -73,7 +74,7 @@ export default function OutdoorWashingPage() {
         description="Loudoun Decks provides professional outdoor power washing for homeowners across Northern Virginia. Refresh your deck, patio, and fences with our trusted cleaning solutions."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
       </section>
 
       <ServiceMain
@@ -116,7 +117,7 @@ export default function OutdoorWashingPage() {
         faqs={washingFAQs}
       />
 
-      <SimpleCTA title="Book Your Outdoor Cleaning" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Book Your Outdoor Cleaning" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/services/outdoor-washing" />
       <ContactHome />
     </main>

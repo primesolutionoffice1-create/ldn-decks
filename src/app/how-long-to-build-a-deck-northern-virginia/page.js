@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/how-long-to-build-a-deck-northern-virginia',
   title: 'Deck Build Timeline in Northern Virginia | LDN Decks',
   description: 'Most decks take 2-4 weeks to build after permits. Full timeline: consultation (1 week), permits (2-6 weeks), construction (2-4 weeks). Total: 6-12 weeks.',
+  image: '/social/deck-build-timeline-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -31,7 +32,7 @@ export default function HowLongToBuildPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/how-long-to-build-a-deck-northern-virginia" name="How Long to Build a Deck in Virginia" description="Most decks take 2-4 weeks to build after permits. Full timeline: consultation (1 week), permits (2-6 weeks), construction (2-4 weeks). Total: 6-12 weeks." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/how-long-to-build-a-deck-northern-virginia" name="How Long to Build a Deck in Virginia" description="Most decks take 2-4 weeks to build after permits. Full timeline: consultation (1 week), permits (2-6 weeks), construction (2-4 weeks). Total: 6-12 weeks." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -168,7 +169,7 @@ export default function HowLongToBuildPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Ready to Start? Book Your Free Consultation" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Ready to Start? Book Your Free Consultation" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/how-long-to-build-a-deck-northern-virginia" />

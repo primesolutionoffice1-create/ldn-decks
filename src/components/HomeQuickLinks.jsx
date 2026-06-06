@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './HomeQuickLinks.module.css';
-import { BUSINESS } from '@/lib/business';
 
 const links = [
   {
@@ -61,8 +60,13 @@ const links = [
   },
   {
     href: '/reviews',
-    title: `${BUSINESS.aggregateRating.reviewCount}+ Google Reviews`,
-    desc: 'Read what Northern Virginia homeowners say about us.',
+    title: 'Public Review Profiles',
+    desc: 'Verify Google, BBB, Yelp, and Houzz profiles at the source.',
+  },
+  {
+    href: '/review',
+    title: 'Google Review Guidance',
+    desc: 'Share honest feedback on Google after a completed LDN Decks project.',
   },
   {
     href: '/areas-we-serve',

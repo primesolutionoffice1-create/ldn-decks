@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/mclean-great-falls-premium-deck-budget',
   title: 'McLean & Great Falls Premium Deck Budget Guide (2026)',
   description: 'Premium deck cost in McLean and Great Falls VA — typical $40k–$120k+ projects with AZEK Vintage, cable railings, integrated lighting, and covered structures.',
-  image: '/showcase/img20.jpg',
+  image: '/social/mclean-great-falls-premium-deck-budget-social.png',
 });
 
 const PATH = '/mclean-great-falls-premium-deck-budget';
@@ -100,7 +100,7 @@ export default function MclenGreatFallsPremiumPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="McLean &amp; Great Falls Premium Deck Budget Guide (2026)" description="Premium deck cost in McLean and Great Falls VA — typical $40k–$120k+ projects with AZEK Vintage, cable railings, integrated lighting, and covered structures." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="McLean &amp; Great Falls Premium Deck Budget Guide (2026)" description="Premium deck cost in McLean and Great Falls VA — typical $40k–$120k+ projects with AZEK Vintage, cable railings, integrated lighting, and covered structures." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -238,7 +238,7 @@ export default function MclenGreatFallsPremiumPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Plan a Premium Deck Project" buttonText="Get Free Written Estimate" link="/contact" />
+      <SimpleCTA title="Plan a Premium Deck Project" buttonText="Get Free Written Estimate" link="/get-estimate" />
       <NamedAuthor context="McLean &amp; Great Falls, Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />

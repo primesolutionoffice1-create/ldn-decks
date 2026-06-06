@@ -2,6 +2,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const importDir = path.resolve('google-ads-import');
+const outputDir = path.resolve('scripts/output');
+const stamp = new Date().toISOString().slice(0, 10);
+const jsonOut = path.join(outputDir, `google-ads-import-validation-${stamp}.json`);
+const mdOut = path.join(outputDir, `google-ads-import-validation-${stamp}.md`);
+const errors = [];
+const warnings = [];
 const requiredFiles = [
   '01-campaigns.csv',
   '02-ad-groups.csv',
@@ -157,11 +163,16 @@ function parseCsv(text) {
 function readCsv(fileName) {
   const filePath = path.join(importDir, fileName);
   if (!fs.existsSync(filePath)) {
-    throw new Error(`Missing required import file: ${fileName}`);
+    fail(`Missing required import file: ${fileName}`);
+    return [];
   }
 
   const rows = parseCsv(fs.readFileSync(filePath, 'utf8'));
   const [headers, ...body] = rows;
+  if (!headers?.length) {
+    fail(`${fileName} is empty or missing a header row`);
+    return [];
+  }
   return body.map(row => Object.fromEntries(headers.map((header, index) => [header, row[index] ?? ''])));
 }
 
@@ -170,7 +181,7 @@ function normalize(value) {
 }
 
 function fail(message) {
-  throw new Error(message);
+  errors.push(message);
 }
 
 function assertEveryPaused(rows, fileName) {
@@ -356,8 +367,8 @@ if (pmaxExpansionProblems.length) {
   fail(`PMax Final URL expansion must be Off: ${pmaxExpansionProblems.map(row => row.Campaign).join(', ')}`);
 }
 
-console.log(JSON.stringify({
-  ok: true,
+const result = {
+  ok: errors.length === 0,
   campaigns: campaigns.length,
   searchCampaigns: searchCampaigns.length,
   pmaxCampaigns: pmaxCampaigns.length,
@@ -365,5 +376,56 @@ console.log(JSON.stringify({
   keywords: keywords.length,
   responsiveSearchAds: ads.length,
   totalDailyBudget,
+  requiredFiles: requiredFiles.length,
+  errors,
+  warnings,
+  outputs: {
+    jsonOut,
+    mdOut,
+  },
   note: 'Full expansion budget is $205/day. Use README launch modes if spend cap is $150/day.',
-}, null, 2));
+};
+
+function renderMarkdown(summary) {
+  return [
+    '# Google Ads Import Validation',
+    '',
+    `Date: ${stamp}`,
+    `Status: ${summary.ok ? 'PASS' : 'FAIL'}`,
+    `Required files: ${summary.requiredFiles}`,
+    `Campaigns: ${summary.campaigns}`,
+    `Search campaigns: ${summary.searchCampaigns}`,
+    `PMax campaigns: ${summary.pmaxCampaigns}`,
+    `Ad groups: ${summary.adGroups}`,
+    `Keywords: ${summary.keywords}`,
+    `Responsive search ads: ${summary.responsiveSearchAds}`,
+    `Full expansion daily budget: $${summary.totalDailyBudget}/day`,
+    `Errors: ${summary.errors.length}`,
+    `Warnings: ${summary.warnings.length}`,
+    '',
+    '## Errors',
+    '',
+    ...(summary.errors.length ? summary.errors.map((item) => `- ${item}`) : ['- None']),
+    '',
+    '## Warnings',
+    '',
+    ...(summary.warnings.length ? summary.warnings.map((item) => `- ${item}`) : ['- None']),
+    '',
+    '## Launch Safety Notes',
+    '',
+    '- All import rows should remain paused until external Google Ads/GTM/call attribution and lead outcome gates are proven.',
+    '- The validator confirms local CSV structure, negatives, URLs, call assets, location targets, and PMax final URL expansion safety.',
+    `- ${summary.note}`,
+    '',
+  ].join('\n');
+}
+
+fs.mkdirSync(outputDir, { recursive: true });
+fs.writeFileSync(jsonOut, `${JSON.stringify(result, null, 2)}\n`);
+fs.writeFileSync(mdOut, renderMarkdown(result));
+
+console.log(JSON.stringify(result, null, 2));
+
+if (!result.ok) {
+  process.exit(1);
+}

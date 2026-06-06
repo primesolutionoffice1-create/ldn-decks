@@ -13,7 +13,7 @@ Original Phase 1 (5 fixes):
 | # | Status | Commit | Item |
 |---|---|---|---|
 | 1 | ✅ Done | `c9cefd8` | useLeadSubmit hook + wire ContactHome |
-| 2 | ✅ Done | `8e0ef30` | CallLink component + sweep 53 of 55 tel: links |
+| 2 | ✅ Done | `8e0ef30` + 2026-06-02 hardening | CallLink component + sweep all raw tel: links |
 | 3 | ✅ Done | `5f86dce` | Consent defaults beforeInteractive, GTM afterInteractive |
 | 8 | ✅ Done | `2774d7f` | Honeypot spam protection |
 | 10 | ✅ Done | `dca4820` | sessionStorage anti-replay |
@@ -262,27 +262,24 @@ export function useLeadSubmit({ formType = 'quote' } = {}) {
 
 ---
 
-## #2 🔴 P1 — Make all `tel:` links track phone clicks
+## #2 ✅ RESOLVED — Make all `tel:` links track phone clicks
 
 **Severity:** Critical
-**Business impact:** ~45% of total leads (phone calls) are invisible to Google Ads. Smart Bidding cannot optimize for phone leads. City pages (highest-converting LPs) look underperforming.
-**Affected conversions:** Every phone click from the 40+ untracked locations.
-**Estimated reporting distortion:** −10 to −25% of total phone-conversion volume.
+**Business impact:** local phone-click coverage is now in place through `CallLink`; Smart Bidding still needs qualified-call attribution before phone calls can safely influence bidding.
+**Affected conversions:** historical untracked phone-click locations are now covered locally; `phone_click` remains secondary engagement context.
+**Estimated reporting distortion:** unresolved for qualified calls until Google Ads call assets / website call forwarding are proven.
 
-### Why a component, not codemod
+### Current implementation
 
-The phone number is hardcoded in ~43 different files with varying inline styles. A codemod is brittle and high-risk. A reusable `<CallLink />` component lets you sweep + replace in one PR with a stable interface.
-
-### What to change
-
-**File 1: create `src/components/CallLink.jsx`** (new file)
+Raw phone links are centralized through `src/components/CallLink.jsx`. A source scan now shows only `CallLink.jsx` generates `tel:` links in `src`, which keeps phone-click tracking, display text, and the E.164 number in one place.
 
 ```jsx
 'use client';
 import { trackPhoneClick } from '@/lib/tracking';
+import { BUSINESS, BUSINESS_PHONE_DISPLAY } from '@/lib/business';
 
-const BUSINESS_PHONE = '+15716557207';
-const BUSINESS_PHONE_DISPLAY = '(571) 655-7207';
+export const BUSINESS_PHONE = BUSINESS.telephone;
+export { BUSINESS_PHONE_DISPLAY };
 
 export default function CallLink({
   children,
@@ -297,59 +294,33 @@ export default function CallLink({
       onClick={trackPhoneClick}
       className={className}
       style={style}
-      aria-label={ariaLabel || 'Call Loudoun Decks'}
+      aria-label={ariaLabel || `Call Loudoun Decks at ${BUSINESS_PHONE_DISPLAY}`}
     >
       {children || display || BUSINESS_PHONE_DISPLAY}
     </a>
   );
 }
-
-export { BUSINESS_PHONE, BUSINESS_PHONE_DISPLAY };
 ```
 
-**File 2-44: sweep all `tel:+15716557207` references**
+`trackPhoneClick(event)` now reads the phone number from `BUSINESS.telephone` and includes CTA/page context plus click IDs and UTM values:
 
-Use grep + manual replace (faster than a codemod given inline-style variance):
-
-```bash
-# Find every file needing migration
-grep -rln 'tel:+15716557207' src/
-
-# Pattern:
-# Before:  <a href="tel:+15716557207" style={...}>Call (571) 655-7207</a>
-# After:   <CallLink style={...}>Call (571) 655-7207</CallLink>
-#
-# Or for simple cases:
-# Before:  <a href="tel:+15716557207">(571) 655-7207</a>
-# After:   <CallLink />
-```
-
-Then add `import CallLink from '@/components/CallLink';` at top of each file.
-
-Update [tracking.js:40-45](../../src/lib/tracking.js#L40-L45) to remove the hardcoded phone string and add a source param:
-
-```diff
--export function trackPhoneClick() {
--  push({
--    event: 'phone_click',
--    phone: '+15716557207',
--  });
-+export function trackPhoneClick(event) {
-+  push({
-+    event: 'phone_click',
-+    phone_source: 'tel_link',
-+    page: typeof window !== 'undefined' ? window.location.pathname : null,
-+  });
- }
+```js
+push({
+  event: 'phone_click',
+  event_id,
+  phone_source: 'tel_link',
+  phone_number: BUSINESS.telephone,
+  link_text,
+  cta_location,
+  page_path,
+  click_ids,
+  utm_values,
+});
 ```
 
 ### Implementation risk
 
-**Low-medium.** ~43 file changes. Risk of:
-- Missing one (visually identical link without onClick)
-- Layout regressions where inline `style` props don't carry over cleanly
-
-Mitigation: after the sweep, run `grep -rln 'href="tel:' src/` and confirm only `CallLink.jsx` matches. Visually inspect 5–10 city pages in dev to confirm styling unchanged.
+**Closed locally.** Remaining risk is external measurement quality, not raw link coverage. Google Ads still needs qualified-call attribution before phone calls can safely influence bidding.
 
 **Note:** Don't deprecate `phone_click` as a primary Google Ads conversion yet — keep it as a GA4-only event until Layer 3 call tracking (ENHANCED-CONVERSIONS-PLAN.md) is in place. The real phone conversions will come from Google's forwarding numbers.
 
@@ -551,55 +522,47 @@ The dataLayer must contain `first_name`, `last_name`, `zip` — added in fix #1'
 
 ---
 
-## #8 🟠 P1 — Add spam protection to forms
+## #8 ✅ RESOLVED — Add spam protection to forms
 
 **Severity:** High
 **Business impact:** Bot form submissions inflate conversion count, poison Smart Bidding, can spike CPL by 2-5x within weeks of bot discovery.
 **Affected conversions:** All form conversions.
 
-### What to change
+### Current implementation
 
-**Minimum (honeypot, free, takes 15 min):**
+Both lead forms now include a hidden honeypot field:
 
-Add a hidden field that real users won't fill but bots will:
-
-```diff
-// ContactForm.jsx + ContactHome.jsx, inside the <form>
-
-  <div className={styles.row}>
-    {/* honeypot — bots fill anything visible, this field is hidden */}
-+   <input
-+     type="text"
-+     name="company_website"
-+     tabIndex={-1}
-+     autoComplete="off"
-+     style={{ position: 'absolute', left: '-9999px' }}
-+     aria-hidden="true"
-+   />
+```jsx
+<input
+  type="text"
+  name="ldn_extra_field"
+  tabIndex={-1}
+  autoComplete="off"
+  className="visually-hidden"
+  aria-hidden="true"
+/>
 ```
 
-```diff
-// sendEmail.js
+`sendEmail.js` rejects bot submissions before email delivery, CAPI, analytics, and thank-you routing. It checks the current `ldn_extra_field` field plus the legacy aliases `company_website` and `companyWebsite`.
 
-  export async function sendContactEmail(formData) {
-    try {
-+     // Honeypot — silently reject bot submissions
-+     if (formData.get('company_website')) {
-+       console.log('Honeypot triggered, rejecting submission');
-+       return { success: true }; // Lie to the bot — pretend it worked
-+     }
-+
-      const transporter = nodemailer.createTransport({...});
+Blocked bot behavior:
+
+```js
+return { success: true, skipped: true };
 ```
 
-**Better (Cloudflare Turnstile, free, invisible to users):**
+The response intentionally looks successful to bots, while `useLeadSubmit` avoids conversion tracking and thank-you navigation when `skipped` is true.
+
+### Optional future hardening
+
+Cloudflare Turnstile remains the next layer if spam appears in production:
 
 1. Sign up at cloudflare.com for a free Turnstile widget
 2. Add `<Script>` tag for the Turnstile JS to layout.js
 3. Add Turnstile widget to each form
 4. In sendEmail.js, verify the Turnstile token via Cloudflare API before processing
 
-Recommend starting with the honeypot today, adding Turnstile if spam still gets through.
+The honeypot baseline is complete today; add Turnstile only if real spam volume warrants the extra dependency.
 
 ### Implementation risk
 
@@ -845,7 +808,7 @@ When you have 100+ past customer records: hash + upload to Google Ads Audience M
 | 5 | GA4 SPA page_view trigger | P1 | 🟠 | 1h | None (GTM access) |
 | 6 | Enhanced Conversions hashing | P1 | 🟠 | 1h | #1 done |
 | 7 | Demote phone_click from primary | P1 | 🟠 | 15m | None (Ads UI) |
-| 8 | Spam protection (honeypot) | P1 | 🟠 | 30m | None |
+| 8 | Spam protection (honeypot) | P1 | ✅ | Done | Turnstile optional if spam persists |
 | 9 | Service selector on ContactForm | P2 | 🟡 | 30m | None |
 | 10 | sessionStorage anti-replay | P2 | 🟡 | 15m | None |
 | 11 | _fbp + source_url capture | P2 | 🟡 | 30m | #1 done |

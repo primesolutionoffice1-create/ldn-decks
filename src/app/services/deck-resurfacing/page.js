@@ -15,11 +15,12 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 export const metadata = buildMetadata({
   path: "/services/deck-resurfacing",
   title: 'Premium Deck Resurfacing NoVA | TimberTech Vintage Experts',
   description: 'Premium deck resurfacing in Northern Virginia from $15k+. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options.',
-  image: "/showcase/img05.jpeg",
+  image: "/social/deck-resurfacing-service-social.png",
 });
 
 const expansionSections = [
@@ -27,13 +28,13 @@ const expansionSections = [
     title: "Why Resurface with the TimberTech Vintage Collection",
     paragraphs: [
       "The TimberTech Vintage Collection is the gold standard of composite decking in the industry. While many homeowners are familiar with standard composite boards, Vintage stands apart by utilizing an Advanced PVC material core that contains zero wood fibers. This makes it a superior option compared to traditional [new deck construction](/services/new-decks) materials.",
-      "This 100% synthetic composition makes it effectively immune to the moisture, swelling, mold, and rot that slowly degrades traditional wood-composite blends in Northern Virginia's humid climate. Its proprietary capping technology resists fading and staining, ensuring your deck looks as vibrant in year 20 as it did on day one."
+      "This fully synthetic composition is designed to resist the moisture, swelling, mold, and rot pressures that slowly degrade traditional wood-composite blends in Northern Virginia's humid climate. Its proprietary capping technology is built for long-term fade and stain resistance when installed and maintained according to manufacturer guidance."
     ],
     listItems: [
       { label: "Unmatched Aesthetics", text: "Wire-brushed texture that perfectly mimics the intricate grain patterns of premium hardwood." },
       { label: "Advanced PVC Core", text: "Zero organic material means zero food source for mold, mildew, or termites." },
       { label: "Barefoot Friendly", text: "Stays up to 30% cooler than competitive composite products under the hot Virginia sun." },
-      { label: "Fade Resistance", text: "Backed by an industry-leading 50-Year Fade & Stain Warranty." },
+      { label: "Fade Resistance", text: "Manufacturer fade and stain warranty terms are reviewed against the selected TimberTech or AZEK product line." },
       { label: "Eco-Conscious", text: "Manufactured in the USA from over 50% recycled polymer material." }
     ]
   },
@@ -108,7 +109,7 @@ export default function DeckResurfacingPage() {
     <main>
       {/* Dynamic SEO Schemas */}
       <JsonLd data={faqSchemaData} />
-      <WebPageSchema url="https://ldndecks.com/services/deck-resurfacing" name="Premium Deck Resurfacing NoVA | TimberTech Vintage Experts" description="Premium deck resurfacing in Northern Virginia from $15k+. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/deck-resurfacing" name="Premium Deck Resurfacing NoVA | TimberTech Vintage Experts" description="Premium deck resurfacing in Northern Virginia from $15k+. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options." speakable />
       <ServiceSchema
         name="Custom Deck Resurfacing"
         description="Professional deck resurfacing services utilizing TimberTech Vintage Collection composite boards, structural reinforcement, and aluminum railings in Northern Virginia."
@@ -116,7 +117,7 @@ export default function DeckResurfacingPage() {
         category="Deck Construction"
         lowPrice="10000"
         highPrice="35000"
-        relatedServices={['https://ldndecks.com/services/deck-replacement', 'https://ldndecks.com/services/deck-repair-and-structural-maintenance', 'https://ldndecks.com/services/new-decks']}
+        relatedServices={['https://ldndecks.com/services/deck-replacement', 'https://ldndecks.com/services/deck-repair', 'https://ldndecks.com/services/new-decks']}
       />
 
       <ServicesHeader
@@ -125,8 +126,22 @@ export default function DeckResurfacingPage() {
         description="Don't tear down a structurally sound deck. Transform your outdated outdoor space into a premium retreat with high-end TimberTech Vintage Collection composite boards—engineered for beauty, durability, and a lifetime of performance."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
       </section>
+
+      <PlanningUpdate
+        market="Northern Virginia deck resurfacing in 2026"
+        notes={[
+          "Resurfacing is strongest when the posts, beams, joists, ledger, and footings are already sound enough to keep.",
+          "Railings, stairs, fascia, lighting, and composite/PVC board selection can change both permit scope and final cost.",
+          "If the inspection finds ledger failure, post rot, shifting footings, or widespread framing decay, replacement is usually the more responsible recommendation."
+        ]}
+        links={[
+          { href: "/deck-resurfacing-vs-replacement", label: "Resurfacing vs replacement" },
+          { href: "/services/deck-replacement", label: "Deck replacement" },
+          { href: "/trex-vs-timbertech-vs-azek", label: "Material comparison" }
+        ]}
+      />
 
       {/* Pricing Anchor - Conversion Filtering */}
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
@@ -134,7 +149,7 @@ export default function DeckResurfacingPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>Full resurfacing projects from $15,000+</strong>
             <br />
-            On this page we focus on <strong style={{ color: '#111' }}>full surface conversions</strong> with composite boards, upgraded railings, fascia, stairs, and safety review. Need a few boards swapped, railings reinforced, or rot patched? See our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
+            On this page we focus on <strong style={{ color: '#111' }}>full surface conversions</strong> with composite boards, upgraded railings, fascia, stairs, and safety review. Need a few boards swapped, railings reinforced, or rot patched? See our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
         </div>
       </section>
@@ -162,7 +177,8 @@ export default function DeckResurfacingPage() {
           {' '}<Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck beam span planning</Link>,
           {' '}<Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck joist span planning</Link>,
           {' '}<Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 joists</Link>, and
-          {' '}<Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck permit requirements</Link>.
+          {' '}<Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck permit requirements</Link>. When the frame needs targeted correction before resurfacing, start with our
+          {' '}<Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link>.
         </p>
       </section>
       <ServiceInclusions
@@ -220,12 +236,18 @@ export default function DeckResurfacingPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Deck Resurfacing in Northern Virginia (counties &amp; cities) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Resurfacing vs Full Replacement →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/resurface-or-replace-deck-financing" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Resurface or Replace Before Financing? (cost math) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Composite Deck Cost in Northern Virginia →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/before-and-after" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Before & After Resurfacing Projects →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Customer Reviews →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/bbb-accredited-deck-builder-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>BBB Accredited Deck Builder →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Request a Written Resurfacing Estimate →</Link></li>
         </ul>
       </section>
 
       <RelatedGuides currentPath="/services/deck-resurfacing" />
-      <SimpleCTA title="Resurface Your Deck Today" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Resurface Your Deck Today" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

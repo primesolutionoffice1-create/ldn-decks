@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -14,19 +15,24 @@ export const metadata = buildMetadata({
   path: '/virginia-run-hoa-deck-rules',
   title: 'Virginia Run HOA Deck Rules & Approval Guide | Loudoun Decks',
   description: 'Building a deck in Virginia Run, Centreville? The premier master-planned golf community of Centreville. Most detailed ARC, 21-35 day in-person committee review, $90-120/mo HOA, engineered drawings required. Premier estate-tier construction.',
+  image: '/social/virginia-run-hoa-deck-rules-social.png',
 });
+
+const PATH = '/virginia-run-hoa-deck-rules';
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
+  "@id": `https://ldndecks.com${PATH}#faq`,
+  url: `https://ldndecks.com${PATH}`,
   mainEntity: [
     { "@type": "Question", name: "Do I need HOA approval for a deck in Virginia Run?", acceptedAnswer: { "@type": "Answer", text: "Yes — and Virginia Run's review is the most detailed in the Centreville area. Every deck, screened porch, pergola, outdoor kitchen, fire feature, and exterior structure requires approval through the Virginia Run Community Association's Architectural Review Committee before construction begins. Virginia Run's premier golf-community standards demand physical material samples, color specifications, structural drawings, and (typically) an in-person committee meeting." } },
     { "@type": "Question", name: "How long does Virginia Run ARC review take?", acceptedAnswer: { "@type": "Answer", text: "Virginia Run's review averages 21-35 days depending on the next committee meeting cycle and project complexity. Submissions must be filed at least 14 days before the next scheduled committee meeting to be considered. Premier projects with outdoor kitchens, multi-level designs, or hot tub integrations typically require an in-person presentation; we coordinate scheduling and represent the project before the committee." } },
     { "@type": "Question", name: "What's the Virginia Run HOA fee?", acceptedAnswer: { "@type": "Answer", text: "Virginia Run HOA dues are typically $90-$120 per month, which covers access to pools, tennis courts, basketball courts, the community clubhouse, miles of trails, tot lots, and common area maintenance. The HOA fees fund the Architectural Review Committee's operations as well." } },
-    { "@type": "Question", name: "What does Virginia Run's ARC require in the submission packet?", acceptedAnswer: { "@type": "Answer", text: "Virginia Run requires the most comprehensive packet of any Centreville HOA: (1) physical material samples for every product (composite boards, railing components, post wraps), (2) color specifications with manufacturer codes, (3) architectural drawings showing all four elevations + plan view, (4) site plan with setbacks verified, (5) landscape integration plan (how the new deck reads from the golf course and common areas), (6) engineered structural drawings for multi-level or hot-tub-integration builds, (7) homeowner authorization, (8) in-person committee presentation for premier-tier projects. We carry the current Virginia Run submission template." } },
-    { "@type": "Question", name: "What's the Virginia Run deck aesthetic?", acceptedAnswer: { "@type": "Answer", text: "Virginia Run's premier estate-tier character favors premium materials and sophisticated design throughout. Approved selections skew premium: TimberTech AZEK Vintage Mahogany, Coastline, or Cypress; Trex Transcend Vintage Lantern or Spiced Rum (the warmest tones). Railings: composite balustrade with premium finishes, aluminum-traditional in custom colors, or cable rail on lots backing to common-area woods or the golf course. Integrated lighting, picture-frame borders, and custom post wraps are nearly universal at this tier." } },
+    { "@type": "Question", name: "What does Virginia Run's ARC require in the submission packet?", acceptedAnswer: { "@type": "Answer", text: "Virginia Run projects often need a more complete packet than simpler townhome communities: physical material samples, color specifications with manufacturer codes, architectural drawings, a site plan with setbacks, landscape integration notes, engineered structural drawings when required, homeowner authorization, and sometimes an in-person committee presentation for premier-tier projects. We prepare the packet around the current requirements before it is submitted." } },
+    { "@type": "Question", name: "What's the Virginia Run deck aesthetic?", acceptedAnswer: { "@type": "Answer", text: "Virginia Run's premier estate-tier character favors premium materials and sophisticated design throughout. Approved selections often skew premium: TimberTech AZEK Vintage Mahogany, Coastline, or Cypress; Trex Transcend Vintage Lantern or Spiced Rum; and railings such as composite balustrade, aluminum-traditional, or cable rail on lots backing to common-area woods or the golf course. Integrated lighting, picture-frame borders, and custom post wraps are common at this tier." } },
     { "@type": "Question", name: "How much does a Virginia Run deck cost?", acceptedAnswer: { "@type": "Answer", text: "Virginia Run projects routinely land in the premier estate tier: $55,000-$85,000+ for multi-level composite decks with screened porches. Home prices in Virginia Run typically range $700k-$1.2M, supporting premium material expectations. Full outdoor-living packages with integrated outdoor kitchens, fire features, and pergolas: $85,000-$200,000+. The premium pricing reflects the larger lot sizes, multi-level designs, premium materials, and the more detailed ARC + engineering process." } },
     { "@type": "Question", name: "Are engineered structural drawings required in Virginia Run?", acceptedAnswer: { "@type": "Answer", text: "Often yes. Virginia Run's premier-tier projects (multi-level decks 600+ sqft, decks with integrated hot tubs or outdoor kitchens, second-story decks, builds with concentrated point loads) require Virginia-licensed structural engineer's stamp on the framing plan, footing schedule, and load-path analysis. The ARC requires these drawings in addition to whatever the county requires. We coordinate engineering as part of the project total." } },
-    { "@type": "Question", name: "Can Loudoun Decks handle the Virginia Run ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. We've completed multiple Virginia Run projects and maintain the current ARC submission template. We prepare the full packet with physical material samples, schedule the in-person committee presentation, coordinate engineered structural drawings with a Virginia-licensed engineer, file the Fairfax County building permit in parallel, and manage every inspection through the project lifecycle. Our Centreville HQ at 13704 Winding Oak Cir is approximately 10 minutes from Virginia Run. Call 571-655-7207." } },
+    { "@type": "Question", name: "Can Loudoun Decks handle the Virginia Run ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. We prepare the full packet with physical material samples, coordinate in-person committee presentation needs when required, coordinate engineered structural drawings with a Virginia-licensed engineer, file the Fairfax County building permit in parallel, and manage inspection sequencing through the project lifecycle. Our Centreville HQ at 13704 Winding Oak Cir is approximately 10 minutes from Virginia Run. Call 571-655-7207." } },
   ],
 };
 
@@ -36,7 +42,15 @@ export default function VirginiaRunHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/virginia-run-hoa-deck-rules" name="Virginia Run HOA Deck Rules &amp; Approval Guide" description="Building a deck in Virginia Run, Centreville? The premier master-planned golf community. Most detailed ARC, 21-35 day in-person committee review, engineered drawings required. Premier estate-tier construction." speakable />
+      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Virginia Run HOA Deck Rules &amp; Approval Guide" description="Building a deck in Virginia Run, Centreville? The premier master-planned golf community. Most detailed ARC, 21-35 day in-person committee review, engineered drawings required. Premier estate-tier construction." speakable />
+      <ArticleSchema
+        title="Virginia Run HOA Deck Rules and Approval Guide"
+        description="Virginia Run HOA deck approval, Fairfax County permit coordination, engineered drawing triggers, landscape integration, and estate-tier deck planning."
+        path={PATH}
+        image="/images/img17.jpeg"
+        datePublished="2026-05-27"
+        dateModified="2026-06-04"
+      />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -46,7 +60,7 @@ export default function VirginiaRunHoaDeckRulesPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Centreville&apos;s premier golf community. The most detailed ARC in our service area &mdash; Virginia Run, Centreville, VA</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
           </div>
         </div>
       </section>
@@ -68,7 +82,7 @@ export default function VirginiaRunHoaDeckRulesPage() {
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}>Engineered structural drawings for multi-level builds, hot tub integrations, or concentrated point loads</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}>In-person committee presentation (typical for premier-tier projects)</li>
           </ul>
-          <p style={S.p}>Average review on a complete packet: <strong>21-35 days</strong> depending on the meeting cycle and project complexity. We&apos;ve completed multiple Virginia Run projects and our submission packets clear the committee on first round.</p>
+          <p style={S.p}>Average review on a complete packet: <strong>21-35 days</strong> depending on the meeting cycle and project complexity. The highest-leverage move is to align the ARC packet, engineering scope, material samples, and Fairfax County permit drawings before the next committee deadline.</p>
 
           <h2 style={S.h2}>Virginia Run&apos;s Premium Material Palette</h2>
           <p style={S.p}>Virginia Run&apos;s premier estate-tier character favors premium materials with sophisticated detail:</p>
@@ -77,7 +91,7 @@ export default function VirginiaRunHoaDeckRulesPage() {
             <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>Trex Transcend:</strong> Vintage Lantern, Spiced Rum, Tiki Torch (the warmest tones)</li>
             <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>TimberTech PRO Legacy:</strong> Espresso, Pecan</li>
             <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>Railings:</strong> composite balustrade with premium finishes, aluminum-traditional in custom colors, cable rail on lots backing to common-area woods or the golf course</li>
-            <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>Lighting:</strong> integrated low-voltage LED is universal — under-rail strip lighting, recessed step lights, post-cap lights</li>
+            <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>Lighting:</strong> integrated low-voltage LED is common — under-rail strip lighting, recessed step lights, post-cap lights</li>
             <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>Detail elements:</strong> custom post wraps, picture-frame borders, integrated planters, and concealed-fastener fields are expected at this tier</li>
           </ul>
 
@@ -89,6 +103,7 @@ export default function VirginiaRunHoaDeckRulesPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Structural engineering:</strong> Virginia-licensed structural engineer coordination for multi-level, hot tub, or outdoor-kitchen integration. 1-2 weeks upfront.</li>
           </ul>
           <p style={S.p}>All three run in parallel from contract day. Total project timeline from signed contract to break-ground: <strong>6-8 weeks</strong>.</p>
+          <p style={S.p}>For estate-tier designs, the structural narrative matters as much as the finish palette. Use our <Link href="/tools/deck-load-calculator-virginia" style={{ color: 'var(--color-primary)' }}>Virginia deck load calculator</Link>, <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)' }}>ledger board flashing guide</Link>, and <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)' }}>deck stair construction diagram</Link> to frame concentrated loads, ledger details, stairs, and inspection access before committee review.</p>
 
           <h2 style={S.h2}>Typical Virginia Run Deck Projects + Pricing</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
@@ -100,7 +115,7 @@ export default function VirginiaRunHoaDeckRulesPage() {
           <p style={S.p}>Use our <Link href="/800-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>800 sqft deck cost guide</Link> for detailed breakdown of estate-tier configurations — Virginia Run is one of the named estate-community references in that guide.</p>
 
           <h2 style={S.h2}>How Loudoun Decks Handles Virginia Run Approvals</h2>
-          <p style={S.p}>We carry the current Virginia Run ARC submission template, prepare the full packet with physical material samples + landscape integration plan + structural drawings, schedule the in-person committee presentation, coordinate engineered structural drawings with a Virginia-licensed engineer, file the Fairfax County permit in parallel, and manage every inspection through the project lifecycle. We&apos;ve completed multiple Virginia Run projects with first-round committee approval. Our Centreville HQ is 10 minutes from Virginia Run — fastest response times in our service area. See more on our <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)' }}>Centreville deck builder page</Link>.</p>
+          <p style={S.p}>We prepare the Virginia Run ARC packet with physical material samples, landscape integration notes, and structural drawings; coordinate engineered drawings with a Virginia-licensed engineer when required; file the Fairfax County permit in parallel; and manage inspection sequencing through the project lifecycle. Our Centreville HQ is about 10 minutes from Virginia Run. See more on our <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)' }}>Centreville deck builder page</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ — Virginia Run HOA deck approval</h2>
           {faqSchema.mainEntity.map((q, i) => (
@@ -116,13 +131,15 @@ export default function VirginiaRunHoaDeckRulesPage() {
             <li>→ <Link href="/sully-station-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Sully Station HOA deck rules</Link></li>
             <li>→ <Link href="/800-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>800 sqft estate-tier deck cost</Link></li>
             <li>→ <Link href="/multi-level-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Multi-level deck builder</Link></li>
+            <li>→ <Link href="/tools/deck-load-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck load calculator</Link></li>
+            <li>→ <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Ledger board flashing guide</Link></li>
             <li>→ <Link href="/outdoor-kitchen-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Outdoor kitchen builder</Link></li>
             <li>→ <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County permit guide</Link></li>
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Virginia Run estate project? We file every premier approval." buttonText="Get Free Estimate" link="/contact" />
-      <NamedAuthor context="Virginia Run (Centreville) — premier estate-tier deck construction" lastUpdated="2026-05-27" />
+      <SimpleCTA title="Virginia Run estate project? We file every premier approval." buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Virginia Run (Centreville) — premier estate-tier deck construction" lastUpdated="2026-06-04" />
       <RelatedGuides currentPath="/virginia-run-hoa-deck-rules" />
       <ContactHome />
     </>

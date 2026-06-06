@@ -20,7 +20,7 @@ export const metadata = buildMetadata({
   path: '/composite-decks',
   title: 'Premier Composite Deck Builder NoVA | Premium Custom Decks',
   description: 'Premier composite deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax & Leesburg.',
-  image: '/images/img10.jpeg',
+  image: '/social/composite-decks-social.png',
 });
 
 const inclusions = [
@@ -87,7 +87,7 @@ const expansionSections = [
     paragraphs: [
       "In the competitive Northern Virginia real estate market, homeowners are increasingly moving away from traditional wood in favor of high-performance composite decking. As a leading composite deck builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks has mastered the art and science of these advanced materials. Our clients in Ashburn and Leesburg are looking for more than just a deck; they are looking for a permanent extension of their indoor luxury-one that doesn't require annual maintenance weekends.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. The transition to composite is driven by the desire for longevity and consistent aesthetics. Unlike natural wood, which can warp, splinter, and gray within just a few years of NoVA's humid cycles, composite materials maintain their rich color and structural integrity for decades. This 'set it and forget it' mentality is perfect for busy professionals in Arlington and the growing families in Gainesville.",
-      "As your custom deck builder, we don't just 'install' composite; we engineer it. This includes specialized joist spacing and structural reinforcement that compensates for the unique thermal expansion and weight characteristics of high-end composite boards. When you choose a Review-Supported local expert, you are ensuring your deck remains a beautiful, safe sanctuary year after year."
+      "As your custom deck builder, we don't just 'install' composite; we engineer it. This includes specialized joist spacing and structural reinforcement that compensates for the unique thermal expansion and weight characteristics of high-end composite boards. When you choose a local expert with documented manufacturer installation practices, your deck has a stronger foundation for long-term performance."
     ]
   },
   {
@@ -125,7 +125,7 @@ const expansionSections = [
 export default function CompositeDecksPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | Premium Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex Platinum Partner &amp; TimberTech Certified. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax &amp; Leesburg." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | Premium Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex Platinum Partner &amp; TimberTech Certified. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax &amp; Leesburg." speakable />
       <ServiceSchema
         name="Composite Deck Installation"
         description="Expert composite deck installation in Northern Virginia. Trex Platinum Partner and TimberTech Certified. 25-50 year warranties."
@@ -136,7 +136,7 @@ export default function CompositeDecksPage() {
         relatedServices={['https://ldndecks.com/trex-decks', 'https://ldndecks.com/timbertech-decks', 'https://ldndecks.com/services/new-decks']}
       />
       <ServicesHeader 
-        subtext="Review-Supported Specialist"
+        subtext="Composite Deck Specialist"
         title="Premier Composite Deck Builder in Northern Virginia"
         description="Loudoun Decks is the leading composite deck builder in Loudoun County, Fairfax County, and Prince William County. High-performance, low-maintenance outdoor luxury."
       />
@@ -149,7 +149,7 @@ export default function CompositeDecksPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>Custom composite deck projects from $15,000+</strong>
             <br />
-            On this page we focus on <strong style={{ color: '#111' }}>full custom composite builds</strong>. In Loudoun County? See our <a href="/composite-deck-builder-loudoun" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Loudoun composite deck builder page</a>. Comparing brands? See our <a href="/trex-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Trex deck page</a> or <a href="/timbertech-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>TimberTech/AZEK deck page</a>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
+            On this page we focus on <strong style={{ color: '#111' }}>full custom composite builds</strong>. In Loudoun County? See our <a href="/composite-deck-builder-loudoun" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Loudoun composite deck builder page</a>. Comparing brands? See our <a href="/trex-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Trex deck page</a> or <a href="/timbertech-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>TimberTech/AZEK deck page</a>. Planning budget? Use the <a href="/deck-cost-calculator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck cost calculator</a> and <a href="/composite-deck-cost-by-size" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>composite cost by size guide</a>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
           <p style={{ fontSize: '15px', color: '#555', margin: '12px 0 0' }}>
             For the broader service-area overview, compare materials, permits, and county planning on our <a href="/deck-builder-northern-virginia" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Northern Virginia deck builder hub</a>.
@@ -184,6 +184,27 @@ export default function CompositeDecksPage() {
         description="Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our composite builds are designed for Northern Virginia's climate."
         items={inclusions}
       />
+
+      <section style={{ padding: '3rem 1.5rem', maxWidth: 1000, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.6rem', fontWeight: 800, marginBottom: '1rem' }}>Verify the Builder Before You Choose Composite</h2>
+        <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+          Composite decks are long-term investments. Compare photo galleries, public reviews, credentials, permits, and written estimate options before selecting a material package.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+          {[
+            ['/reviews', 'Customer Reviews'],
+            ['/bbb-accredited-deck-builder-virginia', 'BBB Accredited Builder'],
+            ['/before-and-after', 'Before & After Projects'],
+            ['/houzz-deck-projects', 'Houzz Portfolio'],
+            ['/deck-permit-loudoun-county-virginia', 'Loudoun Permit Guide'],
+            ['/get-estimate', 'Request Written Estimate'],
+          ].map(([href, text]) => (
+            <Link key={href} href={href} style={{ display: 'block', padding: '1rem', border: '1px solid #e5e5e5', borderRadius: 8, color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none', background: '#fff' }}>
+              {text} →
+            </Link>
+          ))}
+        </div>
+      </section>
 
       <ProcessSteps />
 

@@ -21,7 +21,7 @@ The good architectural news: the team has already done the hard parts right (ser
 | 🔴 Critical | 3 | Homepage form untracked; phone-CTA tracking gap; consent-mode race |
 | 🟠 High     | 5 | Duplicate-fire dependency on GTM config; SPA page_view risk; PII in dataLayer; phone_click as conversion signal; form spam exposure |
 | 🟡 Medium   | 4 | Service field gap on ContactForm; lead_confirmed re-fire on reload; missing `_fbp` / `source_url`; lazyOnload race |
-| 🟢 Low      | 3 | trackEvent dead code; hardcoded phone number; fbclid captured without Pixel client-side |
+| 🟢 Low      | 2 | trackEvent dead code; fbclid captured without Pixel client-side |
 
 Full enumeration in [TRACKING-FIX-QUEUE.md](./TRACKING-FIX-QUEUE.md).
 
@@ -46,49 +46,38 @@ These are working as intended and do not need changes:
 
 ## What is broken or risky
 
-### 🔴 CRITICAL-1: Homepage form is invisible to Google Ads
+### ✅ RESOLVED-1: Homepage form now uses shared attribution pipeline
 
-The homepage form ([ContactHome.jsx](../../src/components/ContactHome.jsx)) submits to the same `sendContactEmail` server action as ContactForm, but:
+The homepage form ([ContactHome.jsx](../../src/components/ContactHome.jsx)) now uses the shared `useLeadSubmit()` pipeline.
 
-- ❌ Does **NOT** call `trackFormSubmit` (no dataLayer event on submit)
-- ❌ Does **NOT** capture or forward `gclid`/`gbraid`/`wbraid`/`fbclid`/`msclkid` to the server (lead email has no attribution block, CRM gets no click ID for offline imports)
-- ❌ Does **NOT** generate an `event_id` (so the downstream `lead_confirmed` on /thank-you fires with `event_id: null`, defeating dedup against any future server-side or client-side conversion)
-- ❌ Does **NOT** pass `?eid=` to `/thank-you` — `ThankYouTracking` fires `lead_confirmed` with no correlation ID at all
-- ❌ Lead emails to `office@ldndecks.com` from homepage submissions have no "Attribution (paid ad click)" block — sales team has no idea which leads came from paid
+Current status:
 
-**Business impact:** the homepage is typically the highest-converting page for paid traffic. Every paid click that converts on the homepage form is currently **unattributable for offline conversion imports** — meaning Smart Bidding cannot learn from those wins. If `lead_confirmed` is mapped as the Google Ads conversion, the count is correct but lead source is blind. If `form_submit` is the mapped conversion, **homepage conversions are not counted at all in Google Ads.**
+- ✅ Calls `trackFormSubmit` on successful non-honeypot submissions.
+- ✅ Captures and forwards `gclid`/`gbraid`/`wbraid`/`fbclid`/`msclkid` to the server when present.
+- ✅ Generates an `event_id` for submit, email/CAPI forwarding, and `/thank-you` confirmation.
+- ✅ Passes `?eid=` and proof token context to `/thank-you` when email delivery succeeds.
+- ✅ Lead emails receive attribution fields when click IDs or UTM values are available.
+- ✅ Captures lead-quality context: city, hidden `state=VA`, service, timeline, budget range, material interest, and HOA/permit status.
 
-**Estimated reporting distortion:** the homepage form likely accounts for 40–70% of total form leads on a typical home-services site. Without GA4 data we can't pin the exact share, but assume the larger share for now.
+**Business impact:** homepage form attribution is no longer the primary local blocker. It is now ready for GTM/GA4/Google Ads variable mapping validation. Scaling remains gated by external proof: Google Ads qualified-call attribution, real lead outcomes, and owner/source lead-quality evidence.
 
-**Fix:** see [TRACKING-FIX-QUEUE.md](./TRACKING-FIX-QUEUE.md) item #1. Refactor `ContactHome` to use the same submission helper as `ContactForm`, or extract a shared `useLeadSubmit()` hook.
+**Historical note:** this item was a true critical finding when the audit was written. It is retained here as a resolved audit item so future reviews can see why the shared submit pipeline exists.
 
 ---
 
-### 🔴 CRITICAL-2: 40+ phone-CTA links across the site are untracked
+### ✅ RESOLVED-2: Phone CTA links now use tracked CallLink component
 
-`trackPhoneClick` is wired to **only three** of the dozens of `tel:+15716557207` links on the site:
+Phone CTA links now route through [CallLink.jsx](../../src/components/CallLink.jsx), which wraps `tel:+15716557207` and fires `trackPhoneClick`.
 
-✅ Tracked (3):
-- [Header.jsx:157](../../src/components/Header.jsx#L157)
-- [FloatingCallButton.jsx:18](../../src/components/FloatingCallButton.jsx#L18)
-- [ContactForm.jsx:59](../../src/components/ContactForm.jsx#L59)
+Current status:
 
-❌ Untracked (40+ across city pages, service pages, blog posts, hero CTAs):
-- All 25+ `/deck-builder-{city}-va/` hero "Call (571) 655-7207" buttons
-- `/before-and-after`, `/bbb-accredited-deck-builder-virginia`, `/deck-financing`, `/deck-repair`, `/get-estimate`, all blog informational pages
-- `DeckCostCalculatorWidget.jsx`
-- `/press`, `/areas-we-serve`, all `/about/*` pages
+- ✅ Raw `href="tel:"` scan in `src` returns no active raw anchors outside the `CallLink` comment.
+- ✅ Header, floating CTA, contact forms, city pages, service pages, tool pages, and major content CTAs use `CallLink`.
+- ✅ `phone_click` now carries click IDs and UTM values when available.
 
-**Business impact:** for premium home services, phone calls are the highest-quality lead type — they self-qualify (took the effort to call) and convert at 3–10× the rate of forms. **Right now Google Ads has no idea which campaigns / keywords / city pages are driving phone calls from organic or paid.** This means:
+**Business impact:** local phone-click coverage is no longer the primary blocker. The remaining risk is measurement integrity, not code coverage: `phone_click` is still only a click signal, not proof of a qualified call.
 
-- Phone-conversion-led Smart Bidding signals are massively undercounted
-- City landing pages — which are likely the best-converting paid LPs — appear underperforming in Google Ads
-- Cannot run Maximize Conversions or tCPA optimizing for phone calls
-- Cannot build remarketing audiences of "people who almost called"
-
-**Estimated reporting distortion:** if 50% of conversions are phone calls and only ~10% of phone CTAs are tracked → roughly **45% of total lead volume is invisible to Google Ads**.
-
-**Fix:** see queue item #2. Build a `<CallLink />` component that wraps `<a href="tel:...">` and fires `trackPhoneClick` automatically, then sweep all sites with codemod or grep+edit.
+**Scaling note:** keep `phone_click` as GA4/engagement context only. Google Ads scaling still requires website call forwarding or call-asset attribution proof before phone calls should influence bidding.
 
 ---
 
@@ -174,14 +163,16 @@ The right setup:
 
 ---
 
-### 🟠 HIGH-5: Form has no spam protection
+### ✅ RESOLVED HIGH-5: Honeypot spam protection added to both lead forms
 
-[ContactForm.jsx](../../src/components/ContactForm.jsx) and [ContactHome.jsx](../../src/components/ContactHome.jsx) submit directly to a server action with **no honeypot, no reCAPTCHA, no rate limiting, no Cloudflare Turnstile**.
+[ContactForm.jsx](../../src/components/ContactForm.jsx) and [ContactHome.jsx](../../src/components/ContactHome.jsx) now render a hidden `ldn_extra_field` honeypot. [sendEmail.js](../../src/app/actions/sendEmail.js) checks that field before email delivery, Meta CAPI, analytics navigation, or thank-you routing can happen.
 
-For a paid-traffic site in 2026, this is a Smart Bidding poisoner:
-- Spam bots fill the form → `form_submit` + `lead_confirmed` fire → conversions reported up → Google's optimization thinks junk traffic patterns convert → CPL skyrockets, lead quality collapses
+Current behavior:
+- Human submissions leave `ldn_extra_field` empty and continue through the normal lead flow.
+- Bot submissions that fill the hidden field return `{ success: true, skipped: true }`, so the bot sees a successful response while the hook does not fire conversion events or navigate to `/thank-you`.
+- `sendEmail.js` also accepts legacy honeypot aliases `company_website` and `companyWebsite` so older test payloads are still filtered.
 
-**Fix:** queue item #8 — add honeypot field + Cloudflare Turnstile (free) or hCaptcha. Reject server-side before firing events.
+**Remaining hardening:** Cloudflare Turnstile or rate limiting can still be added if spam appears in production, but the baseline Smart Bidding poison-control layer is in place.
 
 ---
 
@@ -227,9 +218,9 @@ Events pushed before GTM is ready queue in `dataLayer` and **do** process when G
 
 [tracking.js:67-74](../../src/lib/tracking.js#L67-L74) defines `trackEvent` — `grep -r "trackEvent"` shows no callers. Delete to reduce surface area.
 
-### 🟢 LOW-2: Hardcoded business phone in tracking event
+### ✅ RESOLVED LOW-2: Business phone centralized in tracking event
 
-[tracking.js:43](../../src/lib/tracking.js#L43) puts `+15716557207` literally in the `phone_click` dataLayer push. Doesn't break anything but should be a config constant.
+[tracking.js](../../src/lib/tracking.js) now reads the `phone_click` phone number from `BUSINESS.telephone` in [business.js](../../src/lib/business.js). `CallLink` also uses the same source of truth for the E.164 phone number and the shared display constant.
 
 ### 🟢 LOW-3: `fbclid` captured but no client-side Meta Pixel
 

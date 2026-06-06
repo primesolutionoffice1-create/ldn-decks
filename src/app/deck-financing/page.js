@@ -15,6 +15,7 @@ export const metadata = buildMetadata({
   path,
   title: 'Deck Financing in Northern Virginia | We Finance Your Deck Project',
   description: 'Explore deck financing options for new decks, resurfacing, repairs, and composite deck upgrades in Northern Virginia. Build now and pay over time.',
+  image: '/social/deck-financing-social.png',
 });
 
 const faqItems = [
@@ -125,25 +126,6 @@ const schemas = [
       },
     })),
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    '@id': `${pageUrl}#breadcrumb`,
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: BUSINESS.url,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Deck Financing',
-        item: pageUrl,
-      },
-    ],
-  },
 ];
 
 const S = {
@@ -191,7 +173,18 @@ export default function DeckFinancingPage() {
 
       <section style={{ ...S.section, background: '#f8fafc' }}>
         <div style={S.container}>
-          <NamedAuthor context="deck financing guidance for Northern Virginia homeowners" lastUpdated="May 2026" />
+          <div style={{ border: '1px solid #fed7aa', borderLeft: '5px solid var(--color-primary)', borderRadius: 8, padding: '1.25rem', background: '#fff7ed', marginBottom: '1.5rem' }}>
+            <h2 style={{ fontSize: '1.08rem', fontWeight: 900, margin: '0 0 0.55rem', color: 'var(--color-dark)' }}>Quick Answer</h2>
+            <p style={{ ...S.p, margin: 0 }}>
+              Deck financing in Northern Virginia can help qualified homeowners plan a new deck, replacement, resurfacing, or composite upgrade around monthly-payment flexibility instead of paying the full project cost upfront. Loudoun Decks is not a lender; financing availability, approval, rates, terms, and payments depend on the provider and final project scope.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.7rem', marginTop: '1rem' }}>
+              <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 800, textDecoration: 'none' }}>Estimate project range</Link>
+              <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 800, textDecoration: 'none' }}>Compare payment scenarios</Link>
+              <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 800, textDecoration: 'none' }}>Request written estimate</Link>
+            </div>
+          </div>
+          <NamedAuthor context="deck financing guidance for Northern Virginia homeowners" lastUpdated="2026-06-02" />
           <div style={{ marginTop: '2rem', display: 'grid', gridTemplateColumns: 'minmax(0, 1.05fr) minmax(280px, 0.95fr)', gap: '2rem', alignItems: 'start' }}>
             <div>
               <h2 style={S.h2}>Why finance your deck project?</h2>
@@ -280,7 +273,7 @@ export default function DeckFinancingPage() {
               ['/services/deck-resurfacing', 'Deck resurfacing'],
               ['/services/deck-repair', 'Deck repair'],
               ['/deck-cost-calculator', 'Deck cost calculator'],
-              ['/contact', 'Contact Loudoun Decks'],
+              ['/get-estimate', 'Request a written estimate'],
             ].map(([href, label]) => (
               <Link key={href} href={href} style={{ background: '#fff', color: 'var(--color-primary)', border: '1px solid #e2e8f0', borderRadius: 8, padding: '0.75rem 0.95rem', fontWeight: 800, textDecoration: 'none' }}>
                 {label}

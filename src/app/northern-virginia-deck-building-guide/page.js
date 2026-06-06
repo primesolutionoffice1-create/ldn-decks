@@ -14,6 +14,7 @@ export const metadata = buildMetadata({
   path: '/northern-virginia-deck-building-guide',
   title: 'The Complete Guide to Building a Deck in Northern Virginia (2026)',
   description: 'Everything you need to know about building a deck in Northern Virginia: costs, materials, permits, HOA, timeline, contractors, maintenance. The definitive 2026 guide.',
+  image: '/social/northern-virginia-deck-building-guide-social.png',
 });
 
 export default function MegaGuidePage() {
@@ -22,7 +23,7 @@ export default function MegaGuidePage() {
     { id: 'materials', title: '2. Choosing the Right Material', content: 'Trex Transcend is the best overall choice for most NoVA homeowners best balance of durability, appearance, and price ($45–$65/sqft). TimberTech AZEK is the premium pick ($50–$75/sqft, 50-year warranty). Trex Enhance is the budget option ($30–$50/sqft). Wood costs less upfront but more over 15 years when you add maintenance.', link: '/trex-vs-timbertech-vs-azek', linkText: 'Trex vs TimberTech vs AZEK comparison →' },
     { id: 'composite-vs-wood', title: '3. Composite vs Wood', content: 'Over 15 years, composite is actually cheaper than wood. Wood needs $300–$800/year in staining and repairs. Composite needs zero maintenance. Wood lasts 10–15 years; composite lasts 25–50 years. Composite recoups 65–80% at resale vs 50–65% for wood. For Virginia\'s freeze-thaw climate, composite is the clear winner.', link: '/composite-deck-vs-wood-deck-virginia', linkText: 'Full composite vs wood comparison →' },
     { id: 'permits', title: '4. Permits in Northern Virginia', content: 'Every deck attached to a house or over 30 inches above grade needs a building permit. Loudoun County: 10–15 business days. Fairfax County: 3–6 weeks. Prince William: 2–4 weeks. Three inspections required: footings, framing, final. Use the footing calculator to understand basic frost-depth planning before permit review. Cost: $200–$800. A quality builder handles all permits for you.', link: '/tools/deck-footing-depth-calculator-virginia', linkText: 'Deck footing depth calculator →' },
-    { id: 'hoa', title: '5. HOA Approval', content: 'Over 80% of NoVA homes are in HOA communities requiring architectural review before deck construction. Submit: site plan, materials list, color samples, railing details. Timeline: 2–4 weeks. Common restrictions: material type, colors, railing profile, setbacks. We handle all HOA submissions with a 100% approval rate.', link: '/hoa-deck-rules-northern-virginia', linkText: 'Complete HOA guide →' },
+    { id: 'hoa', title: '5. HOA Approval', content: 'Over 80% of NoVA homes are in HOA communities requiring architectural review before deck construction. Submit: site plan, materials list, color samples, railing details. Timeline: 2–4 weeks. Common restrictions: material type, colors, railing profile, setbacks. We prepare HOA submissions around the community guidelines before they are filed.', link: '/hoa-deck-rules-northern-virginia', linkText: 'Complete HOA guide →' },
     { id: 'size', title: '6. What Size Deck to Build', content: 'Couples: 150–200 sqft. Families of 4: 300–400 sqft. Entertainers: 500+ sqft. Average NoVA deck: 300–400 sqft. Don\'t exceed 20–25% of your backyard area. Allow 12×12 ft minimum for a 6-person dining table with walking room.', link: '/what-size-deck-should-i-build', linkText: 'Deck size guide with tables →' },
     { id: 'timeline', title: '7. How Long Does It Take?', content: 'Construction: 2–4 weeks for most decks. Full timeline including consultation, design, permits, and construction: 6–12 weeks. The biggest variable is permits Fairfax County can take 3–6 weeks alone. Start the process 2–3 months before your desired completion date.', link: '/how-long-to-build-a-deck-northern-virginia', linkText: 'Full timeline breakdown →' },
     { id: 'best-time', title: '8. Best Time to Build', content: 'February–April for best pricing and availability. May–August is peak season with 4–6 week waits. September–November is the second-best window. Winter builds get 10–15% better pricing due to lower demand.', link: '/best-time-to-build-a-deck-northern-virginia', linkText: 'Month-by-month building calendar →' },
@@ -43,7 +44,7 @@ export default function MegaGuidePage() {
   // scripts/validate-seo-schema.mjs.
   return (
     <>
-      <WebPageSchema url="https://ldndecks.com/northern-virginia-deck-building-guide" name="The Complete Guide to Building a Deck in Northern Virginia (2026)" description="Everything you need to know about building a deck in Northern Virginia: costs, materials, permits, HOA, timeline, contractors, maintenance. The definitive 2026 guide." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/northern-virginia-deck-building-guide" name="The Complete Guide to Building a Deck in Northern Virginia (2026)" description="Everything you need to know about building a deck in Northern Virginia: costs, materials, permits, HOA, timeline, contractors, maintenance. The definitive 2026 guide." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -87,7 +88,7 @@ export default function MegaGuidePage() {
                   <p style={{ marginBottom: '1rem', opacity: 0.9 }}>Free on-site consultation · Detailed estimate in 48 hours · We handle permits &amp; HOA</p>
                   <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <CallLink style={{ background: '#fff', color: 'var(--color-primary)', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-                    <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+                    <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
                   </div>
                 </div>
               )}
@@ -96,8 +97,8 @@ export default function MegaGuidePage() {
 
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '2rem', marginTop: '2rem' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>About This Guide</h2>
-            <p style={{ lineHeight: 1.7, marginBottom: '1rem' }}>This guide is written and maintained by <strong>Loudoun Decks</strong>, a Virginia Class A Licensed contractor and certified Trex Pro installer based in Centreville, VA. We&apos;ve built 200+ decks across Loudoun, Fairfax, and Prince William counties and maintain a public Google review profile with {BUSINESS.aggregateRating.reviewCount}+ reviews.</p>
-            <p style={{ lineHeight: 1.7 }}>Every data point reflects current 2026 Northern Virginia pricing, permit timelines, and market conditions. We update this guide quarterly. Questions? <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink> or <Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free consultation</Link>.</p>
+            <p style={{ lineHeight: 1.7, marginBottom: '1rem' }}>This guide is written and maintained by <strong>Loudoun Decks</strong>, a Virginia Class A Licensed contractor and certified Trex Pro installer based in Centreville, VA. Our team plans and builds decks across Loudoun, Fairfax, and Prince William counties and maintains a public Google review profile that homeowners can verify directly on Google Maps.</p>
+            <p style={{ lineHeight: 1.7 }}>Every data point reflects current 2026 Northern Virginia pricing, permit timelines, and market conditions. We update this guide quarterly. Questions? <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink> or <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free consultation</Link>.</p>
           </div>
         </div>
       </article>
@@ -114,7 +115,7 @@ export default function MegaGuidePage() {
         </ul>
       </section>
 
-      <SimpleCTA title="Build Your Dream Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Dream Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/northern-virginia-deck-building-guide" />

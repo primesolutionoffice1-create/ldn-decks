@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/eco-friendly-composite-decking',
   title: 'Eco-Friendly Composite Decking | Sustainable Deck Materials (2026)',
   description: 'Trex is made from 95% recycled materials. Composite decking diverts 500M+ lbs of plastic from landfills yearly. Build green without sacrificing quality.',
+  image: '/social/eco-friendly-composite-decking-social.png',
 });
 
 const faqSchema = {
@@ -30,7 +31,7 @@ export default function EcoFriendlyDeckingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/eco-friendly-composite-decking" name="Eco-Friendly Composite Decking | Sustainable Deck Materials (2026)" description="Trex is made from 95% recycled materials. Composite decking diverts 500M+ lbs of plastic from landfills yearly. Build green without sacrificing quality." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/eco-friendly-composite-decking" name="Eco-Friendly Composite Decking | Sustainable Deck Materials (2026)" description="Trex is made from 95% recycled materials. Composite decking diverts 500M+ lbs of plastic from landfills yearly. Build green without sacrificing quality." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -155,7 +156,7 @@ export default function EcoFriendlyDeckingPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Build Green Get Your Free Estimate" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Green Get Your Free Estimate" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/eco-friendly-composite-decking" />

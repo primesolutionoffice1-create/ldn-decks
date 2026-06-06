@@ -26,19 +26,19 @@ Enhanced Conversions + Offline Imports + proper call tracking is the difference 
 |---|---|---|
 | Click ID capture (gclid/gbraid/wbraid) | ✅ Working | [layout.js:62-64](../../src/app/layout.js#L62-L64) |
 | Cookie persistence | ✅ 90-day max-age | Same |
-| Server forwards click IDs to email | ✅ Working for ContactForm | [sendEmail.js:42-51](../../src/server/sendEmail.js#L42-L51) |
-| Shared `event_id` for dedup | ✅ Working for ContactForm | [ContactForm.jsx:30-33](../../src/components/ContactForm.jsx#L30-L33) |
+| Server forwards click IDs to email | ✅ Working for both lead forms | [sendEmail.js:42-51](../../src/server/sendEmail.js#L42-L51) |
+| Shared `event_id` for dedup | ✅ Working for both lead forms | [useLeadSubmit.js](../../src/hooks/useLeadSubmit.js) |
+| Lead-quality form signals | ✅ `budget_range`, `material_interest`, `hoa_permit_status` pushed to dataLayer | [tracking.js](../../src/lib/tracking.js) |
 | Email + phone reach dataLayer | ✅ Pushed plaintext (must be hashed in GTM) | [tracking.js:25-26](../../src/lib/tracking.js#L25-L26) |
 | Meta CAPI server-side with hashed PII | ✅ Working | [metaCapi.js](../../src/server/metaCapi.js) |
 | Thank-you noindex (blocks bot conversions) | ✅ | [thank-you/page.js:14](../../src/app/thank-you/page.js#L14) |
 
 ### ❌ What's missing to fully unlock Enhanced Conversions
 
-1. **ContactHome doesn't capture click IDs or generate event_id** — half the funnel is uninstrumented
-2. **GTM Enhanced Conversions toggle** — unverified; must be ON in the Google Ads Lead tag
-3. **Offline Conversion Import pipeline** — no CRM, no upload schedule, no qualified-lead definition
-4. **Call tracking** — no Google forwarding numbers, no website call conversion tag
-5. **Customer Match** — no audience uploads from past customers (suppression + lookalike seed)
+1. **GTM Enhanced Conversions toggle** — unverified; must be ON in the Google Ads Lead tag
+2. **Offline Conversion Import pipeline** — no CRM, no upload schedule, no qualified-lead definition
+3. **Call tracking** — no Google forwarding numbers, no website call conversion tag
+4. **Customer Match** — no audience uploads from past customers (suppression + lookalike seed)
 
 ---
 
@@ -328,7 +328,7 @@ Then create matching `Closed Won` action with monetary value. Use that one for t
 
 ### B. Calls from website (medium effort, high value)
 
-This is the big one — recovers the 40+ untracked tel: clicks across the site.
+This is the big one — upgrades tracked phone-click intent into qualified paid-call attribution through Google's website call forwarding.
 
 1. **Google Ads → Tools → Conversions → +New → Phone calls → "Calls to a phone number on your website"**
 2. Conversion name: `Phone Call from Website`
@@ -343,7 +343,7 @@ Google generates a JS snippet that dynamically replaces the on-page phone number
 - New HTML tag with the snippet code
 - Trigger: All Pages
 
-Then **every** `tel:+15716557207` link across the site (including all 40+ untracked ones) starts producing call conversion data **without any code changes** — Google handles the swap and the conversion fire.
+Then paid visitors who see the Google forwarding number can produce call conversion data without additional site-code changes — Google handles the number swap and the conversion fire.
 
 This is the highest-ROI tracking change you can make. **It alone may shift the appearance of Google Ads ROAS by 50%+** since the bulk of paid-driven calls become visible.
 

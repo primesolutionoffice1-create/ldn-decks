@@ -16,12 +16,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-lorton-va',
   title: 'Deck Builder in Lorton, VA | Trex Certified | Loudoun Decks',
   description: 'Deck builder in Lorton, VA. Custom Trex & composite decks for Laurel Hill, Crosspointe, Newington & Gunston. Fairfax County permits handled. Free estimate  -  (571) 655-7207.',
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-lorton-va-social.png',
 });
 
 const inclusions = [
@@ -72,7 +73,7 @@ const expansionSections = [
     paragraphs: [
       "Laurel Hill is the defining community in Lorton  -  a large-scale residential development built on the former Lorton Prison site starting around 2005. The homes are well-built, but the decks that came with them were not. Builders installed basic pressure-treated wood decks as standard features, using minimum-spec lumber, simple picket railings and the smallest footings that would pass inspection. These decks were designed to look finished on closing day, not to last two decades.",
       "That upgrade cycle is now well underway. Homes built in 2005-2010 have decks that are 15-20 years old, and the PT lumber is showing its age: splitting surface boards, rusted fastener heads, wobbly railings and in some cases soft spots in the framing where moisture has settled. The good news is that the homes themselves are solid and the lots are generous, which means there is room to build a better deck  -  often larger than the original  -  without pushing against setback limits.",
-      "We have completed multiple deck replacements in Laurel Hill and understand the community's lot layouts, rear-yard grades and HOA requirements. Most projects involve removing the old deck entirely, inspecting or replacing the ledger connection, and building a new composite deck on fresh framing engineered to current Virginia code."
+      "Laurel Hill replacement planning usually starts with the lot layout, rear-yard grade and HOA requirements. Many projects involve removing the old deck entirely, inspecting or replacing the ledger connection, and building a new composite deck on fresh framing engineered to current Virginia code."
     ]
   },
   {
@@ -105,11 +106,11 @@ export default function DeckBuilderLortonPage() {
   return (
     <main>
       <LocalBusinessSchema city="Lorton" url="https://ldndecks.com/deck-builder-lorton-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-lorton-va" name="Deck Builder in Lorton, VA | Trex Certified | Loudoun Decks" description="Deck builder in Lorton, VA. Custom Trex &amp; composite decks for Laurel Hill, Crosspointe, Newington &amp; Gunston. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-lorton-va" name="Deck Builder in Lorton, VA | Trex Certified | Loudoun Decks" description="Deck builder in Lorton, VA. Custom Trex &amp; composite decks for Laurel Hill, Crosspointe, Newington &amp; Gunston. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Lorton, VA's Trusted Deck Company"
         title="Custom Deck Builder in Lorton, VA"
-        description="Loudoun Decks builds composite decks and outdoor living spaces across Laurel Hill, Crosspointe, Newington and the South County area. Fairfax County permits handled. review-supported reputation."
+        description="Loudoun Decks builds composite decks and outdoor living spaces across Laurel Hill, Crosspointe, Newington and the South County area. Fairfax County permits handled. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Upgrading Lorton's Outdoor Living"
@@ -124,6 +125,18 @@ export default function DeckBuilderLortonPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <PlanningUpdate
+        market="Lorton deck projects"
+        notes={[
+          'Laurel Hill and Crosspointe projects should confirm HOA review needs before Fairfax County permit documents are finalized.',
+          'Wooded and conservation-adjacent lots may need early screening for RPA, setback or footing-location constraints.',
+          'Builder-grade replacements should include ledger, post-base and footing checks before choosing repair, resurface or rebuild.',
+        ]}
+        links={[
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/services/deck-inspection', label: 'Deck inspection' },
+        ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -171,9 +184,9 @@ export default function DeckBuilderLortonPage() {
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Lorton" /></div></section>
-      <SimpleCTA title="Get Your Lorton Deck Quote" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get Your Lorton Deck Quote" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-lorton-va" />
-      <NamedAuthor context="Lorton and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Lorton and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

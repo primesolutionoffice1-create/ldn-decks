@@ -21,7 +21,7 @@ export default function EducationHeader() {
           <Link href="/deck-payment-estimator" className={hubStyles.headerPrimaryBtn}>
             Use the Deck Payment Estimator
           </Link>
-          <Link href="/contact" className={hubStyles.headerSecondaryBtn}>
+          <Link href="/get-estimate" className={hubStyles.headerSecondaryBtn}>
             Get a Permit-Ready Estimate
           </Link>
           <Link href="/education/deck-material-comparison-2026" className={hubStyles.headerSecondaryBtn}>

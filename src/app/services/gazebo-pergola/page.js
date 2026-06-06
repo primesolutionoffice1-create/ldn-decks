@@ -22,7 +22,7 @@ export const metadata = buildMetadata({
   path: "/services/gazebo-pergola",
   title: "Gazebo & Pergola Builder | Loudoun VA | LDN Decks",
   description: "Add shade and stunning architectural character to your backyard with custom gazebos and pergolas in Northern Virginia. Expert design and build services.",
-  image: "/images/img67.webp",
+  image: "/social/gazebo-pergola-social.png",
 });
 
 const expansionSections = [
@@ -122,7 +122,7 @@ export default function GazeboPergolaPage() {
   return (
     <main>
       <JsonLd data={faqSchemaData} />
-      <WebPageSchema url="https://ldndecks.com/services/gazebo-pergola" name="Gazebo &amp; Pergola Builder | Loudoun VA | LDN Decks" description="Add shade and stunning architectural character to your backyard with custom gazebos and pergolas in Northern Virginia. Expert design and build services." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/gazebo-pergola" name="Gazebo &amp; Pergola Builder | Loudoun VA | LDN Decks" description="Add shade and stunning architectural character to your backyard with custom gazebos and pergolas in Northern Virginia. Expert design and build services." speakable />
       <ServiceSchema
         name="Custom Gazebos and Pergolas"
         description="Custom design and build services for luxury pergolas, gazebos, and outdoor shade structures in Northern Virginia."
@@ -139,7 +139,7 @@ export default function GazeboPergolaPage() {
         description="Add lasting value, incredible shade, and stunning architectural character to your outdoor space with a custom gazebo or pergola engineered by Loudoun Decks."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
       </section>
 
       <AboveFoldCTA headline="Custom gazebo or pergola in Northern Virginia? Talk to a NoVA outdoor-structure specialist today." />
@@ -217,7 +217,7 @@ export default function GazeboPergolaPage() {
       </section>
 
       <RelatedGuides currentPath="/services/gazebo-pergola" />
-      <SimpleCTA title="Design Your Pergola or Gazebo" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Design Your Pergola or Gazebo" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

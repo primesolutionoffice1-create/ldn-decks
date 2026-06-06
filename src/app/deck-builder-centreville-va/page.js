@@ -13,11 +13,13 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-centreville-va',
   title: 'Deck Builder in Centreville, VA | Trex | Loudoun Decks',
-  description: `Loudoun Decks is headquartered in Centreville, VA. Google reviews (${BUSINESS.aggregateRating.reviewCount}+ reviews). Custom Trex & composite decks, porches, patios. Visit our showroom. (571) 655-7207.`,
+  description: 'Loudoun Decks is headquartered in Centreville, VA. Custom Trex & composite decks, porches, patios. Visit our showroom. (571) 655-7207.',
+  image: '/social/deck-builder-centreville-va-social.png',
 });
 
 const faqSchema = {
@@ -41,7 +43,7 @@ export default function CentrevilleDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Centreville" url="https://ldndecks.com/deck-builder-centreville-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-centreville-va" name="Deck Builder in Centreville, VA | Trex | Loudoun Decks" description="" speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-centreville-va" name="Deck Builder in Centreville, VA | Trex | Loudoun Decks" description="" speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -59,9 +61,22 @@ export default function CentrevilleDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Visit Our Showroom</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Google reviews · {BUSINESS.aggregateRating.reviewCount} reviews · 13704 Winding Oak Cir, Centreville, VA 20121</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · 13704 Winding Oak Cir, Centreville, VA 20121 · Showroom by appointment</p>
         </div>
       </section>
+      <PlanningUpdate
+        market="Centreville decks in 2026"
+        notes={[
+          "Centreville projects should verify Fairfax County permit scope, HOA review path, and whether the homeowner wants showroom material selection before final pricing.",
+          "Sully Station, Centre Ridge, Newgate, Country Club Manor, and Virginia Run each need different material, color, and railing documentation.",
+          "Deck-plus-screened-porch scopes should plan footing, framing, drainage, and electrical details before HOA or permit submission."
+        ]}
+        links={[
+          { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
+          { href: "/deck-cost-calculator", label: "Deck cost calculator" },
+          { href: "/trex-vs-timbertech-vs-azek", label: "Material comparison" }
+        ]}
+      />
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
@@ -159,12 +174,12 @@ export default function CentrevilleDeckBuilderPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Every Centreville estimate includes a free 3D design rendering at our showroom. Visit, touch the materials, see the finished deck rendered in your backyard before contract. Need payment flexibility? See <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck financing options</Link>, subject to approval and provider terms.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Centreville homeowners can use the showroom to compare deck boards, railings, lighting, fascia, and porch options before final material selection. Need payment flexibility? See <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck financing options</Link>, subject to approval and provider terms.</p>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Centreville Project</h2>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Centreville Project Planning Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>$44,000 420 sqft Deck + 180 sqft Screened Porch, Virginia Run</h3>
-            <p style={{ lineHeight: 1.7 }}>Combined project: open Trex Transcend deck (Spiced Rum) for grilling connected to screened porch with EZE-Breeze windows and beadboard ceiling. Trex Signature railings, 10 LED stair lights. Fairfax County permit + Virginia Run HOA approved in one submission. 4.5-week build.</p>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Deck + Screened Porch Scenario, Virginia Run</h3>
+            <p style={{ lineHeight: 1.7 }}>A Centreville deck-plus-screened-porch concept might connect an open composite grilling deck to a screened porch with upgraded ceiling finish, lighting, and aluminum or composite railing. Final pricing and timeline should be confirmed after Fairfax County permit requirements, HOA rules, footing conditions, electrical needs, and material selections are reviewed. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ — building a deck in Centreville</h2>
@@ -212,9 +227,9 @@ export default function CentrevilleDeckBuilderPage() {
         </ul>
       </section>
 
-      <SimpleCTA title="Visit Our Centreville Showroom" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Visit Our Centreville Showroom" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-centreville-va" />
-      <NamedAuthor context="Centreville and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Centreville and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </>
   );

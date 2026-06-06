@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './PromoModal.module.css';
-import { useContact } from '@/context/ContactContext';
 import CallLink from '@/components/CallLink';
 
 const CloseIcon = () => (
@@ -18,7 +18,6 @@ const PhoneIcon = () => (
 );
 
 export default function PromoModal() {
-  const { openContact } = useContact();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -40,11 +39,6 @@ export default function PromoModal() {
       console.warn("Session storage not available", e);
     }
   }, []);
-
-  const handleGetEstimate = () => {
-    setIsOpen(false);
-    openContact();
-  };
 
   // Prevent background scrolling while modal is active
   useEffect(() => {
@@ -104,9 +98,9 @@ export default function PromoModal() {
               <PhoneIcon />
               Call Us
             </CallLink>
-            <button onClick={handleGetEstimate} className={styles.estimateBtn}>
+            <Link href="/get-estimate" onClick={() => setIsOpen(false)} className={styles.estimateBtn}>
               Get Free Estimate
-            </button>
+            </Link>
           </div>
         </div>
       </div>

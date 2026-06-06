@@ -8,7 +8,8 @@ import WebPageSchema from '@/components/WebPageSchema';
 export const metadata = buildMetadata({
   path: '/deck-cost-calculator',
   title: 'Deck Price Calculator | Northern Virginia 2026 Prices | Loudoun Decks',
-  description: 'Free interactive deck cost calculator for Northern Virginia. Get instant estimates by material, size, and add-ons. Based on 200+ real projects. 2026 pricing.',
+  description: 'Free interactive deck cost calculator for Northern Virginia. Estimate a 2026 planning range by material, size, railings, stairs, elevation, permits, and add-ons.',
+  image: '/social/deck-cost-calculator-social.png',
 });
 
 const PAGE_URL = `${BUSINESS.url}/deck-cost-calculator`;
@@ -31,11 +32,11 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'How accurate is this deck cost calculator?', acceptedAnswer: { '@type': 'Answer', text: 'The calculator reflects 2026 Northern Virginia pricing based on over 200 completed Loudoun Decks projects. Final quotes can vary 10–20% based on lot access, structural conditions, and HOA review requirements.' } },
-    { '@type': 'Question', name: 'Does the estimate include permits?', acceptedAnswer: { '@type': 'Answer', text: 'Permit and inspection fees ($200–$800 in Northern Virginia) are not included in the base estimate. Loudoun Decks handles permitting end-to-end and includes the cost in your final proposal.' } },
-    { '@type': 'Question', name: 'Why is Northern Virginia pricing higher than the state average?', acceptedAnswer: { '@type': 'Answer', text: 'NoVA deck pricing runs 25–35% above the Virginia state average due to higher labor rates, stricter county building codes, frequent HOA architectural review requirements, and proximity to Washington DC.' } },
-    { '@type': 'Question', name: 'Does a deck increase home value?', acceptedAnswer: { '@type': 'Answer', text: 'In Northern Virginia, a composite deck typically recoups 60–80% of its cost at resale. In premium markets like McLean, Great Falls, and Vienna, a quality deck can add $15,000–$40,000 to market value.' } },
-    { '@type': 'Question', name: 'What is the cheapest deck material?', acceptedAnswer: { '@type': 'Answer', text: 'Pressure-treated wood is the most affordable at $18–$35 per square foot installed, with a 10–15 year lifespan. Composite materials cost more upfront but have a 25–50 year lifespan with minimal maintenance.' } },
+    { '@type': 'Question', name: 'How accurate is this deck cost calculator?', acceptedAnswer: { '@type': 'Answer', text: 'The calculator is a planning tool for 2026 Northern Virginia deck budgets. Final quotes can change after site access, framing condition, stair layout, county permit scope, and HOA requirements are reviewed.' } },
+    { '@type': 'Question', name: 'Does the estimate include permits?', acceptedAnswer: { '@type': 'Answer', text: 'The calculator includes a permit complexity setting, but the final proposal should confirm drawing needs, county fees, inspections, and HOA review requirements for the specific property.' } },
+    { '@type': 'Question', name: 'Why is Northern Virginia deck pricing higher than many online averages?', acceptedAnswer: { '@type': 'Answer', text: 'Northern Virginia projects often involve higher labor costs, stricter county review, HOA architectural rules, elevated structures, and premium composite or PVC material selections.' } },
+    { '@type': 'Question', name: 'Should I use the calculator before requesting an estimate?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Use it to understand the likely range, then request a written estimate so material choices, structural details, access, railing, stairs, lighting, and permit scope can be itemized.' } },
+    { '@type': 'Question', name: 'What is the lowest-cost deck material in the calculator?', acceptedAnswer: { '@type': 'Answer', text: 'Pressure-treated wood is usually the lowest upfront-cost option. Composite and PVC cost more initially but reduce recurring staining and maintenance compared with wood.' } },
   ],
 };
 
@@ -44,9 +45,9 @@ export default function Layout({ children }) {
     <>
       <JsonLd data={webApplicationSchema} />
       <JsonLd data={faqSchema} />
-      <WebPageSchema url={PAGE_URL} name="Deck Price Calculator | Northern Virginia 2026 Prices" description="Free interactive deck cost calculator for Northern Virginia. Get instant estimates by material, size, and add-ons. Based on 200+ real projects." speakable />
+      <WebPageSchema url={PAGE_URL} name="Deck Price Calculator | Northern Virginia 2026 Prices" description="Free interactive deck cost calculator for Northern Virginia. Estimate a 2026 planning range by material, size, railings, stairs, elevation, permits, and add-ons." speakable />
       {children}
-      <RelatedGuides currentPath="/deck-cost-calculator" />
+      <RelatedGuides currentPath="/deck-cost-calculator" category="deck-core" />
       <ContactHome />
     </>
   );

@@ -62,13 +62,16 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
     const address = formData.get('address') || '';
     const zip = formData.get('zip') || '';
     // city + state lift Enhanced Conversions match rate from ~70% to
-    // ~80%+. Both fields exist on ContactForm; ContactHome doesn't
-    // collect them, so they'll be empty for homepage submits — that's
-    // fine, Google Ads accepts partial user_data.
+    // ~80%+. ContactForm collects both; ContactHome collects city plus
+    // hidden state=VA, so Google Ads still receives partial user_data.
     const city = formData.get('city') || '';
     const state = formData.get('state') || '';
     const service = formData.get('service') || '';
     const timeline = formData.get('timeline') || '';
+    const budgetRange = formData.get('budgetRange') || formData.get('budget') || '';
+    const materialInterest = formData.get('materialInterest') || '';
+    const hoa = formData.get('hoa') || '';
+    const formLocation = formElement?.dataset?.formLocation || formType;
 
     // ContactHome collects a single `name` field. Normalize it into
     // firstName/lastName before the server action so Meta CAPI gets the
@@ -102,6 +105,10 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
           state,
           service,
           timeline,
+          budgetRange,
+          materialInterest,
+          hoa,
+          formLocation,
           formType,
           clickIds,
           utmParams,

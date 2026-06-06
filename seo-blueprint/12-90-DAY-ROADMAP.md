@@ -58,7 +58,7 @@ Built on top of the 30-day baseline. Owners: **DEV**, **CONTENT**, **GBP**, **NI
 |---|---|---|
 | 59 | Build `/team/[slug]` dynamic route per author. Person schema, photo, bio, credentials. Start with Nick's profile. | DEV, NICK |
 | 60 | Add 3 more team pages (project manager, lead carpenter, designer) — even if 1-paragraph each | CONTENT |
-| 61 | Add Reviews page upgrade: pull 10 Google reviews via API, render with Review schema individually | DEV |
+| 61 | Add Reviews page upgrade: surface verified public review links and owner-approved excerpts; avoid self-serving Review JSON-LD unless eligible under current Google policy | DEV |
 | 62 | Build dynamic OG image generator (`app/blog/[slug]/opengraph-image.tsx` + service pages) | DEV |
 | 63 | Blog: #6 (AZEK Vintage vs Harvest) + #15 (Fairfax inspection checklist) | CONTENT |
 
@@ -118,9 +118,9 @@ Built on top of the 30-day baseline. Owners: **DEV**, **CONTENT**, **GBP**, **NI
 
 **Trust:**
 - 4 team Person pages live
-- 10 individual Review schema items embedded
+- Verified review evidence surfaced without self-serving Review/AggregateRating JSON-LD unless policy-eligible
 - Dynamic OG generator covering blog + services
-- BBB profile + LinkedIn in `sameAs`
+- BBB profile in organization `sameAs`; LinkedIn added only after official company profile is created or claimed
 
 **Local SEO:**
 - All Tier 1 citations live

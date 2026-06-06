@@ -82,7 +82,7 @@ export default async function ProjectPage({ params }) {
     "@type": "Service",
     "serviceType": "Deck building",
     "name": project.title,
-    "description": `${project.title} project completed in ${city}, VA. Professional deck and fence construction by Loudoun Decks.`,
+    "description": `${project.title} project profile for ${city}, VA. Verify project evidence, photos, and completion details before using this page as formal proof.`,
     "image": project.image,
     "provider": { "@id": "https://ldndecks.com/#organization" },
     "areaServed": { "@type": "Place", "name": `${city}, VA` }
@@ -121,7 +121,7 @@ export default async function ProjectPage({ params }) {
                   <li><strong>Status:</strong> Completed</li>
                   <li><strong>Category:</strong> {project.title.toLowerCase().includes('deck') ? 'Decking' : 'Fencing'}</li>
                 </ul>
-                <Link href="/contact" className={styles.ctaButton}>Interested in a similar project?</Link>
+                <Link href="/get-estimate" className={styles.ctaButton}>Interested in a similar project?</Link>
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@ export default async function ProjectPage({ params }) {
                 → Learn more about our <Link href={related.serviceHref} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{related.serviceLabel}</Link> service
               </li>
               <li>
-                → See more completed projects in our <Link href="/showcase" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>full showcase gallery</Link>
+                → See more project galleries in our <Link href="/showcase" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>full showcase gallery</Link>
               </li>
             </ul>
           </div>

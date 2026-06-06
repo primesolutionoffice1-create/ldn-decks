@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
   path: "/services/deck-maintenance",
   title: "Professional Deck Maintenance NoVA | Staining & Sealing Services",
   description: "Protect your outdoor investment with expert deck maintenance in Northern Virginia. We specialize in wood staining, sealing, and structural care.",
-  image: "/images/img14.jpeg",
+  image: "/social/deck-maintenance-social.png",
 });
 
 const maintenanceProcess = [
@@ -83,7 +83,7 @@ const maintenanceExpansionSections = [
     title: "When maintenance isn't enough",
     paragraphs: [
       "Sometimes a deck has deteriorated past the point where cleaning and sealing can restore it. Recognizing these signs early saves you from spending money on maintenance that cannot fix the underlying problem.",
-      "If you notice multiple soft or spongy joists, a ledger board pulling away from the house, posts leaning more than half an inch, or widespread surface rot across more than 30 percent of the boards, it is time to evaluate [structural repair](/services/deck-repair-and-structural-maintenance) or a full [deck resurfacing](/services/deck-resurfacing). Our team can assess whether targeted repairs will extend the deck's life or whether replacement is the better investment.",
+      "If you notice multiple soft or spongy joists, a ledger board pulling away from the house, posts leaning more than half an inch, or widespread surface rot across more than 30 percent of the boards, it is time to evaluate [deck repair](/services/deck-repair), structural maintenance, or a full [deck resurfacing](/services/deck-resurfacing). Our team can assess whether targeted repairs will extend the deck's life or whether replacement is the better investment.",
     ]
   },
 ];
@@ -118,14 +118,14 @@ const faqs = [
 export default function DeckMaintenancePage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/deck-maintenance" name="Professional Deck Maintenance NoVA | Staining &amp; Sealing Services" description="Protect your outdoor investment with expert deck maintenance in Northern Virginia. We specialize in wood staining, sealing, and structural care." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/deck-maintenance" name="Professional Deck Maintenance NoVA | Staining &amp; Sealing Services" description="Protect your outdoor investment with expert deck maintenance in Northern Virginia. We specialize in wood staining, sealing, and structural care." speakable />
       <ServiceSchema
         name="Deck Maintenance"
         description="Annual deck cleaning, inspection, and maintenance for Northern Virginia homeowners. Wood and composite."
         url="https://ldndecks.com/services/deck-maintenance"
         category="Deck Maintenance"
         price="300"
-        relatedServices={['https://ldndecks.com/services/deck-washing', 'https://ldndecks.com/services/deck-inspection']}
+        relatedServices={['https://ldndecks.com/services/deck-washing', 'https://ldndecks.com/services/deck-inspection', 'https://ldndecks.com/services/deck-repair']}
       />
       <ServicesHeader
         subtext="Deck Maintenance Services"
@@ -133,7 +133,7 @@ export default function DeckMaintenancePage() {
         description="Routine maintenance is the key to extending the life of your deck. Protect your outdoor living investment from sun damage, moisture, and extreme seasonal weather."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
       </section>
 
       <ServiceMain
@@ -164,7 +164,7 @@ export default function DeckMaintenancePage() {
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/deck-maintenance" />
       <ServicesFAQ canonicalUrl="https://ldndecks.com/services/deck-maintenance" title="Deck Maintenance FAQs" faqs={faqs} />
-      <SimpleCTA title="Book Your Deck Maintenance" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Book Your Deck Maintenance" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

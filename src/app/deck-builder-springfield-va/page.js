@@ -16,12 +16,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-springfield-va',
   title: 'Deck Builder in Springfield, VA | Trex Certified | Loudoun Decks',
   description: 'Deck builder in Springfield, VA. Custom Trex & composite decks for Kingstowne, West Springfield, Franconia & Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207.',
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-springfield-va-social.png',
 });
 
 const inclusions = [
@@ -58,7 +59,7 @@ const springfieldFAQs = [
   },
   {
     q: "Can you build a deck and patio combination in Springfield?",
-    a: "Yes. Deck-and-patio combinations are one of our most requested builds in Springfield, especially on lots where the grade drops away from the house. The deck extends from the main level, and a paver or stamped-concrete patio sits below at grade. Under-deck drainage systems keep the patio dry. This approach effectively doubles usable outdoor space."
+    a: "Yes. Deck-and-patio combinations are common in Springfield, especially on lots where the grade drops away from the house. The deck extends from the main level, and a paver or stamped-concrete patio sits below at grade. Under-deck drainage systems keep the patio dry. This approach effectively doubles usable outdoor space."
   },
   {
     q: "What materials work best for Springfield decks?",
@@ -105,11 +106,11 @@ export default function DeckBuilderSpringfieldPage() {
   return (
     <main>
       <LocalBusinessSchema city="Springfield" url="https://ldndecks.com/deck-builder-springfield-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-springfield-va" name="Deck Builder in Springfield, VA | Trex Certified | Loudoun Decks" description="Deck builder in Springfield, VA. Custom Trex &amp; composite decks for Kingstowne, West Springfield, Franconia &amp; Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-springfield-va" name="Deck Builder in Springfield, VA | Trex Certified | Loudoun Decks" description="Deck builder in Springfield, VA. Custom Trex &amp; composite decks for Kingstowne, West Springfield, Franconia &amp; Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Springfield, VA's Trusted Deck Company"
         title="Custom Deck Builder in Springfield, VA"
-        description="Loudoun Decks builds composite decks and screened porches across Kingstowne, West Springfield, Franconia and Saratoga. Fairfax County permits handled. review-supported reputation."
+        description="Loudoun Decks builds composite decks and screened porches across Kingstowne, West Springfield, Franconia and Saratoga. Fairfax County permits handled. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Smart Outdoor Living for Springfield Families"
@@ -124,6 +125,18 @@ export default function DeckBuilderSpringfieldPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <PlanningUpdate
+        market="Springfield deck projects"
+        notes={[
+          'Kingstowne and other HOA communities should be screened for architectural review requirements before permit documents are finalized.',
+          'Deck-and-patio combinations need drainage planning early, especially where a raised deck covers usable patio space.',
+          'Older Springfield homes may need a repair-vs-replace inspection before budget ranges are treated as firm.',
+        ]}
+        links={[
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/deck-vs-patio-which-is-right', label: 'Deck vs patio guide' },
+        ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -171,9 +184,9 @@ export default function DeckBuilderSpringfieldPage() {
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Springfield" /></div></section>
-      <SimpleCTA title="Upgrade Your Springfield Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Upgrade Your Springfield Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-springfield-va" />
-      <NamedAuthor context="Springfield and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Springfield and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

@@ -18,7 +18,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/windows",
       title: "Window Replacement Loudoun County | LDN Decks",
-  description: "Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal."
+  description: "Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal.",
+  image: "/social/windows-service-social.png",
 });
 
 const windowInclusions = [
@@ -58,8 +59,8 @@ const windowFAQs = [
     a: "Yes. We offer laminated glass packages designed specifically for the higher noise levels in Arlington and near Dulles Airport."
   },
   {
-    q: "Are you a Review-Supported window contractor?",
-    a: "Loudoun Decks is a review-supported team known for the same precision in window replacement as we are in our custom deck builds."
+    q: "How can I verify Loudoun Decks before a window project?",
+    a: "Review Loudoun Decks through public profile links, written estimates, licensing details, and source-verifiable warranty terms before approving any window replacement scope."
   },
   {
     q: "What is the difference between an insert and a full-frame replacement?",
@@ -67,7 +68,7 @@ const windowFAQs = [
   },
   {
     q: "Do your windows come with a warranty?",
-    a: "Yes. We provide a lifetime workmanship warranty along with manufacturer warranties covering glass breakage and seal failure for up to 20+ years."
+    a: "Window warranty terms should be reviewed in writing before signing. Manufacturer coverage can vary by selected window system, glass package, and installer requirements."
   }
 ];
 
@@ -107,7 +108,7 @@ const expansionSections = [
     paragraphs: [
       "Even the most expensive window in the world will fail if it's not installed correctly. Shoddy installation leads to air leaks, water infiltration, and operational issues within just a few years. At Loudoun Decks, our installation protocol is rigorous. We use precision laser leveling to ensure every window is perfectly square and plumb. We utilize high-grade expanding foam and professional-grade flashing to create a triple-layered seal against Virginia's heavy rains.",
       "We manage the entire project from initial measurements to final walkthrough. Our 'Full projects only' philosophy ensures that we are responsible for every detail, including the permit process in Stafford County and coordination with local building inspectors in Arlington. When we leave the job site, we ensure all debris is removed and your home is as clean as when we arrived, leaving only beautiful new views.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Choosing a review-supported contractor for your window replacement project means you are choosing peace of mind, professional communication, and a result that will look and perform flawlessly for decades."
+      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Choosing a contractor with written scopes, clear installation standards, and documented warranty terms gives your window replacement project a stronger path from measurement to final walkthrough."
     ]
   }
 ];
@@ -115,7 +116,7 @@ const expansionSections = [
 export default function WindowsPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/windows" name="Window Replacement Loudoun County | LDN Decks" description="Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/windows" name="Window Replacement Loudoun County | LDN Decks" description="Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal." speakable />
       <ServiceSchema
         name="Window Installation"
         description="Residential window replacement and installation in Northern Virginia. Energy-efficient vinyl, wood, and fiberglass windows."
@@ -125,12 +126,12 @@ export default function WindowsPage() {
         relatedServices={['https://ldndecks.com/services/entry-doors']}
       />
       <ServicesHeader 
-        subtext="Review-Supported Experts"
+        subtext="Documented Installation Standards"
         title="Window Replacement & Installation"
         description="Loudoun Decks provides premium energy-efficient window replacement for homeowners in Loudoun County, Fairfax County, and Prince William County. Enhance your home with 1,500+ words of expertise."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
       </section>
 
       <ServiceMain 
@@ -165,7 +166,7 @@ export default function WindowsPage() {
 
       <ServiceAreasGrid />
 
-      <SimpleCTA title="Get Your Window Quote" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get Your Window Quote" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/services/windows" />
       <ContactHome />
     </main>

@@ -19,7 +19,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/under-deck-patios",
   title: "Under Deck Patio Systems Loudoun VA | Waterproofing & Ceilings",
-  description: "Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio."
+  description: "Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio.",
+  image: "/social/under-deck-patios-service-social.png",
 });
 
 const expansionSections = [
@@ -103,7 +104,7 @@ const faqs = [
 export default function UnderDeckPatiosPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/under-deck-patios" name="Under Deck Patio Systems Loudoun VA | Waterproofing &amp; Ceilings" description="Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/under-deck-patios" name="Under Deck Patio Systems Loudoun VA | Waterproofing &amp; Ceilings" description="Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio." speakable />
       <ServiceSchema
         name="Under-Deck Patio Systems"
         description="Dry under-deck patio construction in Northern Virginia. Ceiling drainage systems that create usable space beneath elevated decks."
@@ -120,7 +121,7 @@ export default function UnderDeckPatiosPage() {
       />
       <AboveFoldCTA headline="Under-deck patio or dry-deck system in Northern Virginia? Talk to a NoVA outdoor-living specialist today." />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
       </section>
       <ServiceMain
         subtitle="Double Your Outdoor Living Space"
@@ -161,7 +162,7 @@ export default function UnderDeckPatiosPage() {
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/under-deck-patios" />
       <ServicesFAQ canonicalUrl="https://ldndecks.com/services/under-deck-patios" title="Under Deck Patio FAQs" faqs={faqs} />
-      <SimpleCTA title="Create Your Under-Deck Living Space" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Create Your Under-Deck Living Space" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

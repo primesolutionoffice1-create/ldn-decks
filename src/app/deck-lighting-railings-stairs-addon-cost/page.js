@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/deck-lighting-railings-stairs-addon-cost',
   title: 'Deck Lighting, Railings & Stairs: Add-On Cost Guide (2026)',
   description: 'Real cost for deck lighting, railings, and stairs in Northern Virginia. Per-linear-foot pricing, full package examples, and impact on monthly payment.',
-  image: '/showcase/light-img.jpeg',
+  image: '/social/deck-lighting-railings-stairs-addon-cost-social.png',
 });
 
 const PATH = '/deck-lighting-railings-stairs-addon-cost';
@@ -119,7 +119,7 @@ export default function DeckAddOnCostPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Deck Lighting, Railings &amp; Stairs: Add-On Cost Guide (2026)" description="Real cost for deck lighting, railings, and stairs in Northern Virginia. Per-linear-foot pricing, full package examples, and impact on monthly payment." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Deck Lighting, Railings &amp; Stairs: Add-On Cost Guide (2026)" description="Real cost for deck lighting, railings, and stairs in Northern Virginia. Per-linear-foot pricing, full package examples, and impact on monthly payment." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -251,7 +251,7 @@ export default function DeckAddOnCostPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Plan Realistic Add-On Budget" buttonText="Get Free Written Estimate" link="/contact" />
+      <SimpleCTA title="Plan Realistic Add-On Budget" buttonText="Get Free Written Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />

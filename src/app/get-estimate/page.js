@@ -4,6 +4,8 @@ import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import JsonLd from '@/components/JsonLd';
 import WebPageSchema from '@/components/WebPageSchema';
+import RelatedGuides from '@/components/RelatedGuides';
+import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
@@ -12,7 +14,7 @@ export const metadata = buildMetadata({
   path: '/get-estimate',
   title: 'Request a Deck Estimate Northern Virginia | Loudoun Decks',
   description: 'Request a deck estimate for composite decks, deck replacement, repairs, screened porches and outdoor living projects in Northern Virginia.',
-  image: '/images/img36.jpeg',
+  image: '/social/get-estimate-social.png',
 });
 
 const estimateFaq = [
@@ -37,14 +39,6 @@ const estimateFaq = [
 const getEstimateSchema = [
   {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ldndecks.com' },
-      { '@type': 'ListItem', position: 2, name: 'Request a Deck Estimate', item: 'https://ldndecks.com/get-estimate' },
-    ],
-  },
-  {
-    '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: estimateFaq.map((faq) => ({
       '@type': 'Question',
@@ -60,7 +54,7 @@ const getEstimateSchema = [
 export default function GetEstimatePage() {
   return (
     <>
-      <WebPageSchema url="https://ldndecks.com/get-estimate" name="Request a Deck Estimate Northern Virginia | Loudoun Decks" description="Request a deck estimate for composite decks, deck replacement, repairs, screened porches and outdoor living projects in Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/get-estimate" name="Request a Deck Estimate Northern Virginia | Loudoun Decks" description="Request a deck estimate for composite decks, deck replacement, repairs, screened porches and outdoor living projects in Northern Virginia." speakable />
       {getEstimateSchema.map((schema, index) => (
         <JsonLd key={index} data={schema} />
       ))}
@@ -71,7 +65,7 @@ export default function GetEstimatePage() {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
               <span style={{ color: '#fbbf24', fontSize: '1rem', fontWeight: 700 }}>Public reviews</span>
-              <span style={{ color: '#ccc', fontSize: '0.9rem' }}>Google reviews &middot; {BUSINESS.aggregateRating.reviewCount}+ reviews</span>
+              <span style={{ color: '#ccc', fontSize: '0.9rem' }}>Public Google review profile</span>
             </div>
             <h1 style={{ fontSize: '2.2rem', fontWeight: 700, lineHeight: 1.2, marginBottom: '1rem' }}>
               Request a Deck Estimate in Northern Virginia
@@ -84,10 +78,10 @@ export default function GetEstimatePage() {
             {/* Trust Badges */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '2rem' }}>
               {[
-                { label: 'Trex Platinum', sub: 'Top 1% in US' },
-                { label: '2-Year Warranty', sub: 'Workmanship' },
-                { label: '10+ Years', sub: 'Experience' },
-                { label: 'Licensed', sub: '& Insured' },
+                { label: 'TrexPro', sub: 'Verify profile' },
+                { label: 'Warranty', sub: 'Written terms' },
+                { label: 'Reviews', sub: 'Public profiles' },
+                { label: 'License', sub: 'Verify DPOR' },
               ].map(b => (
                 <div key={b.label} style={{ textAlign: 'center' }}>
                   <p style={{ fontWeight: 700, fontSize: '0.95rem', margin: 0, color: 'var(--color-primary)' }}>{b.label}</p>
@@ -120,14 +114,33 @@ export default function GetEstimatePage() {
         </div>
       </section>
 
+      <section style={{ background: '#fff', padding: '1.5rem 0 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ border: '1px solid #fed7aa', borderLeft: '5px solid var(--color-primary)', borderRadius: 8, padding: '1.2rem', background: '#fff7ed' }}>
+            <h2 style={{ fontSize: '1.05rem', fontWeight: 800, margin: '0 0 0.5rem' }}>Quick Answer</h2>
+            <p style={{ color: '#475569', lineHeight: 1.65, margin: 0 }}>
+              The fastest way to get a useful deck estimate is to send your project type, city, approximate size, photos, material goals, and any repair, permit, HOA, stair, railing, or drainage concerns. Loudoun Decks uses that detail to route you toward a written estimate, inspection, calculator path, or planning call.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.7rem', marginTop: '1rem' }}>
+              <Link href="#estimate-form" style={{ color: 'var(--color-primary)', fontWeight: 800, textDecoration: 'none' }}>Start estimate form</Link>
+              <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 800, textDecoration: 'none' }}>Use deck calculator</Link>
+              <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 800, textDecoration: 'none' }}>Request repair inspection</Link>
+            </div>
+          </div>
+          <div style={{ marginTop: '1.25rem' }}>
+            <NamedAuthor context="estimate triage for decks, resurfacing, repairs, screened porches, and outdoor living projects in Northern Virginia" lastUpdated="2026-06-02" />
+          </div>
+        </div>
+      </section>
+
       {/* Quick Stats Strip */}
       <section style={{ background: '#fff3e0', padding: '1rem 0' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
           {[
-            { num: '100+', label: 'Decks built' },
-            { num: '49+', label: 'Google reviews' },
-            { num: '2yr', label: 'Warranty' },
-            { num: '$15K+', label: 'Projects from' },
+            { num: 'Photos', label: 'Improve accuracy' },
+            { num: 'Google', label: 'review profile' },
+            { num: 'Scope', label: 'Before pricing' },
+            { num: 'Permit', label: 'Checked early' },
           ].map(s => (
             <div key={s.label} style={{ textAlign: 'center' }}>
               <p style={{ fontWeight: 700, fontSize: '1.3rem', margin: 0, color: 'var(--color-primary)' }}>{s.num}</p>
@@ -155,7 +168,7 @@ export default function GetEstimatePage() {
         </div>
       </section>
 
-      {/* Form + Social Proof */}
+      {/* Form + proof-safe trust path */}
       <section id="estimate-form" style={{ padding: '3rem 0', background: '#fff' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
 
@@ -175,22 +188,26 @@ export default function GetEstimatePage() {
             </div>
           </div>
 
-          {/* Right: Social Proof */}
+          {/* Right: Proof-safe trust path */}
           <div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: '1.5rem' }}>What Homeowners Say</h3>
-            {[
-              { text: "Nick and his team built us a 500 sqft Trex Transcend deck in Ashburn, from permit to final walkthrough in under 3 weeks. Every neighbor has asked who did it.", name: "James R.", city: "Ashburn" },
-              { text: "We got 4 quotes. Loudoun Decks wasn\u2019t the cheapest, but Nick explained everything in detail and showed us why composite is worth it. Two years later, our deck still looks brand new.", name: "Maria & Tom S.", city: "Leesburg" },
-              { text: "They handled the HOA submission and Loudoun County permit themselves \u2014 I didn\u2019t lift a finger. Deck was done in 10 days. The Trex Calm Shell color looks incredible.", name: "David K.", city: "South Riding" },
-            ].map((r, i) => (
-              <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem', marginBottom: '1rem' }}>
-                <div style={{ color: '#fbbf24', marginBottom: '0.5rem', fontWeight: 700 }}>Customer feedback</div>
-                <p style={{ lineHeight: 1.6, fontSize: '0.9rem', marginBottom: '0.5rem' }}>&ldquo;{r.text}&rdquo;</p>
-                <p style={{ fontSize: '0.8rem', color: '#999', margin: 0 }}>— {r.name}, {r.city}</p>
-              </div>
-            ))}
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1rem' }}>Verify Loudoun Decks Before You Request an Estimate</h3>
+            <p style={{ color: '#555', lineHeight: 1.65, fontSize: '0.92rem', marginBottom: '1rem' }}>
+              Review public profiles, planning guides, project photos, and permit resources before you share project details. We keep estimate conversations focused on scope, safety, budget, and the right next step.
+            </p>
+            <div style={{ display: 'grid', gap: '0.75rem', marginBottom: '1.5rem' }}>
+              {[
+                ['/reviews', 'Read public review sources'],
+                ['/bbb-accredited-deck-builder-virginia', 'Check BBB profile information'],
+                ['/team', 'Meet the team'],
+                ['/deck-permit-loudoun-county-virginia', 'Review Loudoun permit guidance'],
+              ].map(([href, label]) => (
+                <Link key={href} href={href} style={{ display: 'block', background: '#f9fafb', borderRadius: 8, padding: '0.95rem 1rem', color: 'var(--color-primary)', fontWeight: 800, textDecoration: 'none', border: '1px solid #e5e7eb' }}>
+                  {label} &rarr;
+                </Link>
+              ))}
+            </div>
 
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Recent Projects</h3>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Project Photos to Review</h3>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
               {['/images/img01.jpeg', '/images/img10.jpeg', '/images/img03.jpeg', '/images/img07.jpeg'].map((src, i) => (
                 <div key={i} style={{ position: 'relative', height: '140px', borderRadius: '8px', overflow: 'hidden' }}>
@@ -198,7 +215,7 @@ export default function GetEstimatePage() {
                 </div>
               ))}
             </div>
-            <Link href="/before-and-after" style={{ display: 'block', textAlign: 'center', color: 'var(--color-primary)', fontWeight: 600, marginTop: '0.75rem', fontSize: '0.9rem' }}>See all Before &amp; After projects &rarr;</Link>
+            <Link href="/before-and-after" style={{ display: 'block', textAlign: 'center', color: 'var(--color-primary)', fontWeight: 600, marginTop: '0.75rem', fontSize: '0.9rem' }}>Review before &amp; after gallery &rarr;</Link>
           </div>
         </div>
       </section>
@@ -213,7 +230,7 @@ export default function GetEstimatePage() {
               { title: 'Screened Porches', price: 'From $25K', desc: 'Bug-free 3-season rooms', href: '/screened-porch-cost-northern-virginia' },
               { title: 'Deck Resurfacing', price: 'From $15K', desc: 'Wood to composite upgrade', href: '/deck-resurfacing-vs-replacement' },
               { title: 'Pergolas & Gazebos', price: 'From $8K', desc: 'Shade structures', href: '/services/gazebo-pergola' },
-              { title: 'Structural Repair', price: 'From $2.5K', desc: 'Posts, ledger & inspection fixes', href: '/services/deck-repair-and-structural-maintenance' },
+              { title: 'Structural Repair', price: 'Inspection first', desc: 'Posts, ledger & inspection fixes', href: '/services/deck-repair' },
               { title: 'Patios & Hardscape', price: 'From $10K', desc: 'Pavers, flagstone, stamped', href: '/services/patios' },
             ].map(s => (
               <Link key={s.href} href={s.href} style={{ display: 'block', background: '#fff', borderRadius: 8, padding: '1.25rem', textDecoration: 'none', color: 'inherit', border: '1px solid #e5e5e5' }}>
@@ -256,6 +273,31 @@ export default function GetEstimatePage() {
           <p style={{ color: '#666', fontSize: '0.8rem', marginTop: '1rem' }}>Serving Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties</p>
         </div>
       </section>
+
+      <section style={{ padding: '3rem 0', background: '#fff' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, textAlign: 'center', marginBottom: '1.5rem' }}>Verify Before You Book</h2>
+          <p style={{ color: '#555', lineHeight: 1.7, textAlign: 'center', maxWidth: 720, margin: '0 auto 2rem' }}>
+            Compare reviews, credentials, project photos, planning tools, and local permit guidance before requesting the final written estimate.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+            {[
+              ['/reviews', 'Public Review Profiles'],
+              ['/bbb-accredited-deck-builder-virginia', 'BBB Accredited Deck Builder'],
+              ['/before-and-after', 'Before & After Projects'],
+              ['/houzz-deck-projects', 'Houzz Project Portfolio'],
+              ['/deck-cost-calculator', 'Deck Cost Calculator'],
+              ['/deck-permit-loudoun-county-virginia', 'Loudoun Permit Guide'],
+            ].map(([href, text]) => (
+              <Link key={href} href={href} style={{ display: 'block', padding: '1rem', border: '1px solid #e5e5e5', borderRadius: 8, color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none', background: '#fff' }}>
+                {text} &rarr;
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <RelatedGuides currentPath="/get-estimate" category="deck-core" />
     </>
   );
 }

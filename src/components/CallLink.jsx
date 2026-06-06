@@ -1,11 +1,12 @@
 "use client";
 import { trackPhoneClick, trackPhoneClickWithContext } from '@/lib/tracking';
+import { BUSINESS, BUSINESS_PHONE_DISPLAY } from '@/lib/business';
 
 // Business phone constants — every tel: link on the site should use these.
 // Centralizing here means a future number change is a 1-line edit
 // instead of a 40+ file sweep.
-export const BUSINESS_PHONE = '+15716557207';
-export const BUSINESS_PHONE_DISPLAY = '(571) 655-7207';
+export const BUSINESS_PHONE = BUSINESS.telephone;
+export { BUSINESS_PHONE_DISPLAY };
 
 // Tracked replacement for raw <a href="tel:..."> tags.
 //

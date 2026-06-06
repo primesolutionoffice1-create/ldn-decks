@@ -20,7 +20,7 @@ const _meta = buildMetadata({
     path: "/services/porches/screened-porch",
     title: "Screened Porch Builder & Contractor | Northern Virginia",
     description: "Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k. Trex Platinum installer.",
-  image: "/images/img01.jpeg",
+  image: "/social/screened-porch-builder-northern-virginia-social.png",
 });
 export const metadata = {
   ..._meta,
@@ -83,7 +83,7 @@ const screenedPorchCostRows = [
 export default function ScreenedPorchPage() {
     return (
       <main>
-      <WebPageSchema url="https://ldndecks.com/services/porches/screened-porch" name="Screened Porch Builder &amp; Contractor | Northern Virginia" description="Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k. Trex Platinum installer." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/porches/screened-porch" name="Screened Porch Builder &amp; Contractor | Northern Virginia" description="Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k. Trex Platinum installer." speakable />
         <ServiceSchema
         name="Screened Porch Construction"
         description="Custom screened porches in Northern Virginia. EZE-Breeze and four-season options. Trex Platinum and TimberTech certified installer."
@@ -206,7 +206,7 @@ export default function ScreenedPorchPage() {
             <li style={{ marginBottom: '0.5rem' }}><Link href="/covered-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Covered Deck Builder Northern Virginia →</Link></li>
           </ul>
         </section>
-        <SimpleCTA title="Build Your Screened Porch" buttonText="Get Free Estimate" link="/contact" />
+        <SimpleCTA title="Build Your Screened Porch" buttonText="Get Free Estimate" link="/get-estimate" />
         <RelatedGuides currentPath="/services/porches/screened-porch" />
         <ContactHome />
       </main>

@@ -14,6 +14,7 @@ export const metadata = buildMetadata({
   path: '/rooftop-deck-builder-northern-virginia',
   title: 'Rooftop Deck Builder in Northern Virginia | Loudoun Decks',
   description: 'Rooftop terrace + balcony deck builder for Northern Virginia townhomes, condos, and mid-rise residential. The Boro, One Park Crest, Arlington urban core. AZEK pedestal systems, structural review, HOA + condo association approval.',
+  image: '/social/rooftop-deck-builder-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -43,7 +44,7 @@ export default function RooftopDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/rooftop-deck-builder-northern-virginia" name="Rooftop Deck Builder in Northern Virginia | Loudoun Decks" description="Rooftop terrace + balcony deck builder for Northern Virginia townhomes, condos, and mid-rise residential. AZEK pedestal systems, structural review, condo association approval." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/rooftop-deck-builder-northern-virginia" name="Rooftop Deck Builder in Northern Virginia | Loudoun Decks" description="Rooftop terrace + balcony deck builder for Northern Virginia townhomes, condos, and mid-rise residential. AZEK pedestal systems, structural review, condo association approval." speakable />
       <ArticleSchema
         title="Rooftop Deck Builder in Northern Virginia (2026)"
         description="Definitive guide to rooftop terrace + balcony deck construction in Northern Virginia. Pedestal systems, structural review, multi-stakeholder approval process, target communities (Tysons The Boro, Arlington urban core), and 2026 pricing."
@@ -59,7 +60,7 @@ export default function RooftopDeckBuilderPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Rooftop terraces + balcony rebuilds for Tysons, Arlington, and the NoVA Metro corridor. AZEK pedestal systems. Structural-engineer coordinated. Condo + HOA approvals managed.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
           </div>
         </div>
       </section>
@@ -126,7 +127,7 @@ export default function RooftopDeckBuilderPage() {
             <li style={S.listItem}><strong>Premium rooftop with cable/glass railing + integrated lighting + planters</strong> (300–450 sqft): $42,000–$72,000</li>
             <li style={S.listItem}><strong>Common-area condo rooftop deck</strong> (board-budget governed, 800–2,000 sqft): $80,000–$250,000+</li>
           </ul>
-          <p style={S.p}>Pricing includes pedestal system, deck surface, railings (per spec), basic lighting, engineering coordination, four-stakeholder approvals, and 2-year workmanship warranty.</p>
+          <p style={S.p}>Pricing includes pedestal system, deck surface, railings (per spec), basic lighting, engineering coordination, four-stakeholder approvals, and written warranty terms.</p>
 
           <h2 style={S.h2}>FAQ — rooftop deck construction in Northern Virginia</h2>
           {faqSchema.mainEntity.map((q, i) => (
@@ -151,7 +152,7 @@ export default function RooftopDeckBuilderPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Tysons or Arlington rooftop project? Let's design it." buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Tysons or Arlington rooftop project? Let's design it." buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/rooftop-deck-builder-northern-virginia" />
       <NamedAuthor context="Northern Virginia rooftop terrace + balcony construction" lastUpdated="2026-05-27" />
       <ContactHome />

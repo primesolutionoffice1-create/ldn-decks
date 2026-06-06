@@ -18,6 +18,7 @@ export const metadata = buildMetadata({
   path: '/education',
   title: 'Northern Virginia Deck Education Center | Loudoun Decks',
   description: 'Expert guides for deck safety, permits, materials, costs, HOA approvals and outdoor living decisions in Northern Virginia.',
+  image: '/social/education-hub-social.png',
 });
 
 function buildEducationHubSchema() {
@@ -54,14 +55,6 @@ function buildEducationHubSchema() {
         '@id': 'https://ldndecks.com/education#guides',
         itemListElement,
       },
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ldndecks.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Education', item: 'https://ldndecks.com/education' },
-      ],
     },
     {
       '@context': 'https://schema.org',
@@ -105,7 +98,7 @@ export default function EducationPage() {
 
   return (
     <main className={hubStyles.educationPage}>
-      <WebPageSchema url="https://ldndecks.com/education" name="Northern Virginia Deck Education Center | Loudoun Decks" description="Expert guides for deck safety, permits, materials, costs, HOA approvals and outdoor living decisions in Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/education" name="Northern Virginia Deck Education Center | Loudoun Decks" description="Expert guides for deck safety, permits, materials, costs, HOA approvals and outdoor living decisions in Northern Virginia." speakable />
       {educationHubSchema.map((schema, index) => (
         <script
           key={index}

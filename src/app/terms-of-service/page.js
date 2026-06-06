@@ -5,6 +5,7 @@ export const metadata = buildMetadata({
   path: '/terms-of-service',
   title: 'Terms of Service | LDN Decks',
   description: 'Terms and conditions for using Loudoun Decks services.',
+  image: '/social/terms-of-service-social.png',
 });
 
 export default function TermsOfService() {

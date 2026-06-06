@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
 import styles from './StickyMobileCTA.module.css';
-import { useContact } from '@/context/ContactContext';
 import CallLink from '@/components/CallLink';
 
 const PhoneIcon = () => (
@@ -18,18 +18,16 @@ const EstimateIcon = () => (
 );
 
 export default function StickyMobileCTA() {
-  const { openContact } = useContact();
-
   return (
     <div className={styles.stickyBar}>
       <CallLink className={styles.callBtn}>
         <PhoneIcon />
         <span>Call Now</span>
       </CallLink>
-      <button onClick={openContact} className={styles.estimateBtn}>
+      <Link href="/get-estimate" className={styles.estimateBtn}>
         <EstimateIcon />
         <span>Quote</span>
-      </button>
+      </Link>
     </div>
   );
 }

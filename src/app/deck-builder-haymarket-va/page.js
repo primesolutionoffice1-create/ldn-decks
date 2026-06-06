@@ -16,12 +16,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-haymarket-va',
   title: 'Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots',
   description: "Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. Free estimate.",
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-haymarket-va-social.png',
 });
 
 const inclusions = [
@@ -93,8 +94,8 @@ const expansionSections = [
     title: "HOA Navigation for Dominion Valley and Piedmont",
     paragraphs: [
       "Dominion Valley and Piedmont are the two largest and most active HOA communities in Haymarket, and both run strict architectural review boards. The boards care about material type, color selection, railing style and how the deck relates to the home's existing architecture. Submitting a vague or incomplete package results in delays and revision requests.",
-      "We prepare Dominion Valley and Piedmont submissions with the same level of detail we would put in a county permit application: a scaled site plan showing the deck footprint relative to property lines and setbacks, elevation drawings showing height and railing, material specification sheets with manufacturer color samples, and a written scope of work. This level of preparation moves the application through review on the first pass rather than bouncing back for clarification.",
-      "Smaller Haymarket communities  -  Heathcote, Winterwood, Madison Crescent, Villages of Piedmont  -  have their own covenants and review processes, though they tend to be less formal than Dominion Valley or Piedmont. We check each community's requirements at the estimate stage so the homeowner knows exactly what approvals are needed before we start."
+      "We prepare Dominion Valley and Piedmont submissions with the same level of detail we would put in a county permit application: a scaled site plan showing the deck footprint relative to property lines and setbacks, elevation drawings showing height and railing, material specification sheets with manufacturer color samples, and a written scope of work. This level of preparation reduces preventable clarification requests.",
+      "Smaller Haymarket communities  -  Heathcote, Winterwood, Madison Crescent, Villages of Piedmont  -  have their own covenants and review processes, though they tend to be less formal than Dominion Valley or Piedmont. We check each community's requirements at the estimate stage so the homeowner knows which approvals may be needed before we start."
     ]
   },
   {
@@ -111,11 +112,11 @@ export default function DeckBuilderHaymarketPage() {
   return (
     <main>
       <LocalBusinessSchema city="Haymarket" url="https://ldndecks.com/deck-builder-haymarket-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-haymarket-va" name="Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots" description="Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-haymarket-va" name="Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots" description="Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. Free estimate." speakable />
       <ServicesHeader
         subtext="Haymarket, VA's Trusted Deck Company"
         title="Custom Deck Builder in Haymarket, VA"
-        description="Loudoun Decks builds multi-level composite decks designed for Haymarket's sloped lots and mountain views. Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. review-supported reputation."
+        description="Loudoun Decks builds multi-level composite decks designed for Haymarket's sloped lots and mountain views. Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Multi-Level Designs for Haymarket's Terrain"
@@ -131,6 +132,19 @@ export default function DeckBuilderHaymarketPage() {
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
       />
+      <PlanningUpdate
+        market="Haymarket decks in 2026"
+        notes={[
+          "Haymarket budgets should account for slope, stair runs, railing choice, and drainage because many lots are not flat backyard builds.",
+          "Dominion Valley, Piedmont, and other HOA communities need material and color decisions early enough to align with review calendars.",
+          "Prince William County permit planning should separate standard single-level decks from elevated or multi-level designs that need engineered details."
+        ]}
+        links={[
+          { href: "/deck-permit-prince-william-county-virginia", label: "Prince William permit guide" },
+          { href: "/deck-cost-calculator", label: "Deck cost calculator" },
+          { href: "/deck-railing-options-northern-virginia", label: "Railing options" }
+        ]}
+      />
       <ServiceContentExpansion sections={expansionSections} />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
         <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -142,9 +156,9 @@ export default function DeckBuilderHaymarketPage() {
             sizes="(max-width: 900px) 100vw, 900px"
           />
         </div>
-        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Featured Haymarket Project</h2>
-        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>$38,000  -  450 sqft Multi-Level Deck in Dominion Valley</h3>
-        <p style={{ lineHeight: 1.7, marginBottom: '1.5rem' }}>Three-level cascading deck on a sloped lot backing to mountain views. Upper dining level (220 sqft) at door height, mid-level lounge (150 sqft) stepped down 3.5 feet, ground-level fire pit pad (80 sqft) at grade. Trex Transcend in Spiced Rum with cable railing on upper levels for unobstructed sightlines. Integrated LED stair and post lighting throughout. Dominion Valley HOA approved on first submission. Prince William County permit. 3-week build.</p>
+        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Haymarket Project Planning Example</h2>
+        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>450 sqft Multi-Level Deck Planning Scenario</h3>
+        <p style={{ lineHeight: 1.7, marginBottom: '1.5rem' }}>A typical Haymarket sloped-lot concept might include an upper dining level at door height, a mid-level lounge stepped down with shorter stair runs, and a ground-level patio or fire pit area at grade. Material choices such as Trex Transcend, cable railing, and integrated stair lighting should be priced after the slope, HOA submission needs, and Prince William County permit requirements are confirmed. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.</p>
       </div>
       <ServiceInclusions
         title="Why Haymarket Homeowners Choose Loudoun Decks"
@@ -177,9 +191,9 @@ export default function DeckBuilderHaymarketPage() {
         </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Haymarket" /></div></section>
-      <SimpleCTA title="Build Your Dream Deck in Haymarket" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Dream Deck in Haymarket" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-haymarket-va" />
-      <NamedAuthor context="Haymarket and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Haymarket and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

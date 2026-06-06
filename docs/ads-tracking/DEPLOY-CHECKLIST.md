@@ -181,17 +181,21 @@ introduces a new surface to sanity-check before deploy.
 
 - [ ] Browse homepage → submit the homepage `ContactHome` form with the
       DevTools dataLayer panel open. **Confirm `form_submit` event fires
-      with `form_type: 'homepage'` and a non-null `event_id`.** (Before
-      Phase 1, this form was untracked end-to-end.)
+      with `form_type: 'homepage'`, `form_location:
+      'homepage_contact_form'`, non-null `event_id`, hidden `state: 'VA'`,
+      and any selected `budget_range`, `material_interest`, and
+      `hoa_permit_status`.** (Before Phase 1, this form was untracked
+      end-to-end.)
 - [ ] On homepage, click the floating "Call" button → confirm
       `phone_click` event appears in dataLayer with `phone_source:
-      'tel_link'`. Repeat on `/deck-builder-ashburn-va` to confirm city
-      page CTAs now track.
+      'tel_link'`, `phone_number`, `link_text`, `cta_location`, and the
+      current `page_path`. Repeat on `/deck-builder-ashburn-va` to confirm
+      city page CTAs now track.
 - [ ] DevTools → Network → reload homepage → confirm consent default
       `gtag('consent','default',...)` push appears in document HTML
       before any `gtm.js` network request.
 - [ ] DevTools → Console → on any page with a contact form:
-      `document.querySelector('[name="company_website"]')` returns the
+      `document.querySelector('[name="ldn_extra_field"]')` returns the
       hidden honeypot input.
 - [ ] Submit a form, land on `/thank-you?eid=<UUID>`, reload twice.
       Confirm `dataLayer` contains exactly **one** `lead_confirmed`
@@ -206,19 +210,12 @@ introduces a new surface to sanity-check before deploy.
 | Submitting a real form does NOT fire `form_submit` | Stop. Honeypot may be reading a stray real-user field as bot. |
 | `lead_confirmed` fires 2+ times on initial /thank-you load (not reload) | Stop. Anti-replay misconfigured. |
 
-### Known excluded files (Phase 1 follow-up)
+### Phone CTA sweep status
 
-The CallLink sweep deliberately skipped two files that had unrelated
-SEO content changes uncommitted on the branch:
-
-- `src/app/deck-builder-fairfax-va/page.js` — 1 phone CTA still raw
-- `src/app/trex-vs-timbertech-vs-azek/page.js` — 1 phone CTA still raw
-
-These two CTAs **will not fire `phone_click`** until either:
-1. The SEO branch (`feat/seo-audit-phase3-4`) merges and a follow-up
-   commit re-runs the sweep, OR
-2. A targeted follow-up commit applies CallLink to those two files
-   manually.
+Active raw `href="tel:"` anchors should not exist in `src` outside the
+`CallLink` implementation/comment. Before deploy, run a raw tel scan if phone
+tracking was touched; any active raw phone anchor should be treated as a
+regression.
 
 Estimated impact: ~2% of phone CTAs (2 of ~64) — small but worth tracking.
 

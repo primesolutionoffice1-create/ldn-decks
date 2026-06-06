@@ -15,6 +15,7 @@ export const metadata = buildMetadata({
   path: '/outdoor-kitchen-builder-northern-virginia',
   title: 'Outdoor Kitchen Builder in Northern Virginia | Design & Build',
   description: 'Custom outdoor kitchens in Northern Virginia from $15,000-$80,000+. Grill islands, pizza ovens, bars, full kitchens. Permits handled. Free estimate.',
+  image: '/social/outdoor-kitchen-builder-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -34,7 +35,7 @@ export default function OutdoorKitchenPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/outdoor-kitchen-builder-northern-virginia" name="Outdoor Kitchen Builder in Northern Virginia | Design &amp; Build" description="Custom outdoor kitchens in Northern Virginia from $15,000-$80,000+. Grill islands, pizza ovens, bars, full kitchens. Permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/outdoor-kitchen-builder-northern-virginia" name="Outdoor Kitchen Builder in Northern Virginia | Design &amp; Build" description="Custom outdoor kitchens in Northern Virginia from $15,000-$80,000+. Grill islands, pizza ovens, bars, full kitchens. Permits handled. Free estimate." speakable />
       <ServiceSchema
         name="Outdoor Kitchen Construction"
         description="Custom outdoor kitchen design and build in Northern Virginia. Built-in grills, bars, pizza ovens, countertops, and island configurations."
@@ -51,7 +52,7 @@ export default function OutdoorKitchenPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom design, permits &amp; build grill islands to full kitchens</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
         </div>
       </section>
@@ -163,7 +164,7 @@ export default function OutdoorKitchenPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Design Your Outdoor Kitchen" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Design Your Outdoor Kitchen" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/outdoor-kitchen-builder-northern-virginia" />

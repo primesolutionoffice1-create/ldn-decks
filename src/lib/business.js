@@ -28,8 +28,10 @@ export const BUSINESS = {
     { days: ['Saturday'], opens: '08:00', closes: '17:00' },
   ],
   // UI-only review count — NOT included as AggregateRating JSON-LD.
+  // Source: GBP owner-view proof ledger captured 2026-06-01.
+  // Keep this conservative or switch public copy to generic wording before deploy.
   aggregateRating: {
-    reviewCount: 49,
+    reviewCount: 47,
   },
   areaServed: [
     'Loudoun County, VA',
@@ -73,13 +75,18 @@ export const BUSINESS = {
       recognizedBy: 'AZEK Building Products',
     },
     {
+      name: 'BBB Accredited Business',
+      category: 'accreditation',
+      recognizedBy: 'Better Business Bureau',
+    },
+    {
       name: 'NADRA Builder/Contractor/Remodeler Membership',
       category: 'membership',
       recognizedBy: 'North American Deck and Railing Association',
     },
     {
-      name: 'Best of Houzz 2026',
-      category: 'award',
+      name: 'Houzz Public Profile',
+      category: 'profile',
       recognizedBy: 'Houzz',
     },
   ],
@@ -119,97 +126,16 @@ export const BUSINESS = {
     // explicitly represented vs the organization.
     sameAs: [],
   },
-  // Public client review excerpts — single source of truth for both the org-level
-  // `review` JSON-LD (emitted site-wide via buildOrganizationSchema) and the
-  // /reviews page cards. First name + last initial only, never full last names.
-  // `body` is the text shown on /reviews so on-page content matches schema.
-  reviews: [
-    {
-      author: 'Sarah J.',
-      city: 'Ashburn',
-      datePublished: '2026-03-15',
-      dateLabel: 'March 2026',
-      rating: 5,
-      project: '400 sqft Trex Transcend Deck',
-      platform: 'Google',
-      body: 'Loudoun Decks built our 400 sqft Trex deck in Ashburn. From design to final walkthrough, everything was professional and on schedule. The crew was respectful, clean, and skilled. Our deck looks amazing and we use it every evening now.',
-    },
-    {
-      author: 'Michael T.',
-      city: 'Leesburg',
-      datePublished: '2026-02-28',
-      dateLabel: 'February 2026',
-      rating: 5,
-      project: 'Deck Replacement — Wood to Composite',
-      platform: 'Google',
-      body: "Best contractor experience we've had in 15 years of homeownership. Nick and his team replaced our old wood deck with Trex Transcend in Leesburg. Handled the HOA submission, pulled all permits, and finished a day early. Highly recommend.",
-    },
-    {
-      author: 'Robert & Linda K.',
-      city: 'Centreville',
-      datePublished: '2026-01-20',
-      dateLabel: 'January 2026',
-      rating: 5,
-      project: 'Screened Porch with EZE-Breeze',
-      platform: 'Google',
-      body: "We had a screened porch built with EZE-Breeze windows in Centreville. The quality of work is outstanding. We've already used it through March evenings with just a space heater. Worth every penny.",
-    },
-    {
-      author: 'Jennifer M.',
-      city: 'Sterling',
-      datePublished: '2025-12-10',
-      dateLabel: 'December 2025',
-      rating: 5,
-      project: 'Multi-Level Composite Deck',
-      platform: 'Google',
-      body: 'Loudoun Decks designed and built a beautiful two-level deck for our family. The attention to detail was impressive — from the hidden fasteners to the integrated lighting. The permit process was handled entirely by them.',
-    },
-    {
-      author: 'David P.',
-      city: 'Reston',
-      datePublished: '2025-11-18',
-      dateLabel: 'November 2025',
-      rating: 5,
-      project: 'Deck Resurfacing',
-      platform: 'Google',
-      body: 'Had our 12-year-old wood deck resurfaced with TimberTech. The team was efficient, the communication was excellent, and the result looks like a brand new deck. No more annual staining — love it.',
-    },
-    {
-      author: 'Amanda S.',
-      city: 'McLean',
-      datePublished: '2025-10-05',
-      dateLabel: 'October 2025',
-      rating: 5,
-      project: 'Premium Deck + Outdoor Kitchen',
-      platform: 'Google',
-      body: 'We hired Loudoun Decks for a large project — AZEK deck with an outdoor kitchen island. The design process was collaborative, they understood our vision immediately, and the execution was flawless. Our neighbors keep asking who built it.',
-    },
-    {
-      author: 'Chris & Maria R.',
-      city: 'Vienna',
-      datePublished: '2025-09-20',
-      dateLabel: 'September 2025',
-      rating: 5,
-      project: 'Pergola with Lighting',
-      platform: 'Google',
-      body: "Beautiful pergola installation. The team was professional from day one. They suggested lighting options we hadn't considered that completely transformed the space. Great value for the quality delivered.",
-    },
-    {
-      author: 'Tom H.',
-      city: 'Fairfax',
-      datePublished: '2025-08-15',
-      dateLabel: 'August 2025',
-      rating: 5,
-      project: 'Fence + Deck Package',
-      platform: 'Google',
-      body: 'Got both a new composite deck and privacy fence done in one project. Saved money by bundling, and the timeline was faster than expected. Very happy with the communication throughout.',
-    },
-  ],
+  // Do not add individual review excerpts here unless they are copied from a
+  // verified public profile or owner-supplied evidence packet. Keeping this
+  // empty prevents accidentally publishing fabricated customer stories.
+  reviews: [],
 };
 
 export const ORG_ID = `${BUSINESS.url}/#organization`;
 export const WEBSITE_ID = `${BUSINESS.url}/#website`;
 export const FOUNDER_ID = `${BUSINESS.url}/#founder`;
+export const BUSINESS_PHONE_DISPLAY = '(571) 655-7207';
 
 // Builds the WebSite JSON-LD object.
 // Use this once in the root layout alongside buildOrganizationSchema.
@@ -294,9 +220,8 @@ export function buildOrganizationSchema() {
     // organization entity. Google's review-snippet policy disallows
     // self-serving Review structured data (a business marking up reviews
     // about itself) and it risks a "Spam: structured data" manual action.
-    // Visible reviews still render from BUSINESS.reviews on /reviews and
-    // related pages. aggregateRating is retained — keep reviewCount in
-    // sync with the live Google Business Profile total.
+    // aggregateRating is retained for visible UI copy only — keep
+    // reviewCount in sync with the live Google Business Profile total.
     areaServed: BUSINESS.areaServed.map(name => ({ '@type': 'AdministrativeArea', name })),
     sameAs: BUSINESS.sameAs,
     hasCredential: BUSINESS.credentials.map(c => ({

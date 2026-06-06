@@ -13,6 +13,7 @@ export const metadata = buildMetadata({
   path: '/deck-enclosure-ideas-northern-virginia',
   title: 'Deck Enclosure Ideas (Northern VA)',
   description: 'Enclose your existing deck: screens ($8k-$20k), EZE-Breeze 3-season ($15k-$35k), full sunroom ($40k-$80k+). Extend outdoor season to 9-10 months.',
+  image: '/social/deck-enclosure-ideas-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -30,7 +31,7 @@ export default function DeckEnclosurePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-enclosure-ideas-northern-virginia" name="Deck Enclosure Ideas (Northern VA)" description="Enclose your existing deck: screens ($8k-$20k), EZE-Breeze 3-season ($15k-$35k), full sunroom ($40k-$80k+). Extend outdoor season to 9-10 months." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-enclosure-ideas-northern-virginia" name="Deck Enclosure Ideas (Northern VA)" description="Enclose your existing deck: screens ($8k-$20k), EZE-Breeze 3-season ($15k-$35k), full sunroom ($40k-$80k+). Extend outdoor season to 9-10 months." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Enclosure Ideas for Northern Virginia</h1>
@@ -134,7 +135,7 @@ export default function DeckEnclosurePage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Enclose Your Deck Free Design Consultation" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Enclose Your Deck Free Design Consultation" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <RelatedGuides currentPath="/deck-enclosure-ideas-northern-virginia" />

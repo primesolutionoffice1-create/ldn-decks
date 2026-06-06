@@ -16,7 +16,7 @@ export default function ServicesCallToAction() {
           <CallLink className={styles.phoneButton}>
             Call Now: (571) 655-7207
           </CallLink>
-          <Link href="/contact" className={styles.estimateButton}>
+          <Link href="/get-estimate" className={styles.estimateButton}>
             Get Free Estimate
           </Link>
         </div>

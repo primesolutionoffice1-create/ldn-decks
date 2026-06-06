@@ -12,13 +12,14 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
+import PlanningUpdate from '@/components/PlanningUpdate';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-northern-virginia',
   title: 'Custom Deck Builder Northern Virginia | LDN Decks',
   description: 'Custom deck builder in Northern Virginia for composite decks, Trex, TimberTech, deck replacement, permits and HOA approvals across Loudoun and Fairfax.',
-  image: '/images/img36.jpeg',
+  image: '/social/deck-builder-northern-virginia-social.png',
 });
 
 const inclusions = [
@@ -109,7 +110,7 @@ const expansionSections = [
     title: 'Screened porches, outdoor kitchens and full outdoor living',
     paragraphs: [
       'Many Northern Virginia homeowners start with a deck and expand into a connected outdoor living space. A [screened porch](/screened-porch-builder-northern-virginia) turns a three-season deck into a year-round room, free from Loudoun and Fairfax County insects and pollen. [Covered decks](/covered-deck-builder-northern-virginia), [louvered pergolas](/louvered-pergola-northern-virginia) and [outdoor kitchens](/outdoor-kitchen-builder-northern-virginia) are the most common additions we design alongside new deck builds.',
-      'For homeowners focused on composite materials specifically, our [composite deck builder in Loudoun County](/composite-deck-builder-loudoun) page covers material selection, HOA handling and real project pricing in the communities where we build most often.',
+      'For homeowners focused on composite materials specifically, our [composite deck builder in Loudoun County](/composite-deck-builder-loudoun) page covers material selection, HOA handling and planning price ranges in the communities where we build most often.',
     ],
   },
 ];
@@ -218,7 +219,7 @@ export default function DeckBuilderNorthernVirginiaPage() {
   return (
     <main>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-northern-virginia" name="Custom Deck Builder in Northern Virginia" description="Custom deck builder in Northern Virginia for composite, PVC, wood, replacement, permits and HOA approvals. Serving Loudoun, Fairfax and Prince William." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-northern-virginia" name="Custom Deck Builder in Northern Virginia" description="Custom deck builder in Northern Virginia for composite, PVC, wood, replacement, permits and HOA approvals. Serving Loudoun, Fairfax and Prince William." speakable />
       <ServiceSchema
         url="https://ldndecks.com/deck-builder-northern-virginia"
         name="Custom Deck Builder in Northern Virginia"
@@ -252,8 +253,21 @@ export default function DeckBuilderNorthernVirginiaPage() {
         image1="/images/img36.jpeg"
         image2="/images/img25.jpeg"
       />
+      <PlanningUpdate
+        market="Northern Virginia deck projects"
+        notes={[
+          'County permit, HOA review, material selection and structural scope should be aligned before construction dates are treated as firm.',
+          'Deck replacement and resurfacing decisions should start with a frame, ledger, post and footing inspection.',
+          'Composite and PVC pricing remains sensitive to material tier, railing choice, stairs, elevation and 2026 supply conditions.',
+        ]}
+        links={[
+          { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost' },
+          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permits' },
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permits' },
+        ]}
+      />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-16" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
       </div>
       <ServiceInclusions
         title="What Homeowners Get With Loudoun Decks"
@@ -269,13 +283,18 @@ export default function DeckBuilderNorthernVirginiaPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
+            <li key="/bbb" style={{ marginBottom: '0.5rem' }}><Link href="/bbb-accredited-deck-builder-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>BBB Accredited Deck Builder →</Link></li>
+            <li key="/before-after" style={{ marginBottom: '0.5rem' }}><Link href="/before-and-after" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Before & After Deck Projects →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
+            <li key="/deck-payment-estimator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
+            <li key="/permit-loudoun" style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County Deck Permit Guide →</Link></li>
             <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
             <li key="/tools/deck-footing-depth-calculator-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia →</Link></li>
+            <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Request a Written Estimate →</Link></li>
         </ul>
       </section>
 
-      <SimpleCTA title="Ready to Build Your Northern Virginia Deck?" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Ready to Build Your Northern Virginia Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-northern-virginia" />
       <ContactHome />
     </main>

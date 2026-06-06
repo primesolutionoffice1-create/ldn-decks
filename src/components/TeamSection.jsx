@@ -22,7 +22,7 @@ const teamData = [
     name: 'Installation Team',
     role: 'Framing, decking, railing, and finish installation.',
     image: '/images/img19.jpeg',
-    alt: 'Deck installation craftsmanship on a completed project',
+    alt: 'Deck installation craftsmanship on a finished outdoor living build',
   },
 ];
 

@@ -18,7 +18,8 @@ import ExteriorCleaningAuthority from '@/components/ExteriorCleaningAuthority';
 export const metadata = buildMetadata({
   path: "/services/concrete-washing",
   title: "Professional Concrete Washing NoVA | Driveway & Walkway Cleaning",
-  description: "Restore your driveways, patios, and walkways with expert concrete washing in Northern Virginia. We remove deep-set stains, oil, and algae."
+  description: "Restore your driveways, patios, and walkways with expert concrete washing in Northern Virginia. We remove deep-set stains, oil, and algae.",
+  image: "/social/concrete-washing-service-social.png",
 });
 
 const inclusions = [
@@ -69,7 +70,7 @@ const expansionSections = [
     title: "Pricing and what affects cost",
     paragraphs: [
       "Most residential concrete washing projects in Northern Virginia fall between $200 and $1,000. The main cost drivers are total square footage, stain severity, surface type, and whether you add a protective sealer after cleaning. A standard two-car driveway with moderate algae staining typically lands in the lower portion of that range, while a large patio-plus-driveway project with oil pre-treatment and sealer application reaches the higher end.",
-      "We provide free on-site estimates so the price reflects your actual conditions rather than a generic quote. [Contact us for a concrete washing estimate](/contact) and we will walk the surfaces with you before any work begins."
+      "We provide free on-site estimates so the price reflects your actual conditions rather than a generic quote. [Request a concrete washing estimate](/get-estimate) and we will walk the surfaces with you before any work begins."
     ]
   }
 ];
@@ -77,7 +78,7 @@ const expansionSections = [
 export default function ConcreteWashingPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/concrete-washing" name="Professional Concrete Washing NoVA | Driveway &amp; Walkway Cleaning" description="Restore your driveways, patios, and walkways with expert concrete washing in Northern Virginia. We remove deep-set stains, oil, and algae." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/concrete-washing" name="Professional Concrete Washing NoVA | Driveway &amp; Walkway Cleaning" description="Restore your driveways, patios, and walkways with expert concrete washing in Northern Virginia. We remove deep-set stains, oil, and algae." speakable />
       <ServiceSchema
         name="Concrete Washing"
         description="Professional concrete and masonry washing in Northern Virginia — removing oil stains, algae, and ground-in dirt from driveways, patios, and walkways."
@@ -93,7 +94,7 @@ export default function ConcreteWashingPage() {
         description="Loudoun Decks provides expert concrete washing for homeowners in Northern Virginia, restoring the bright, clean look of your masonry."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
       </section>
 
       <ServiceMain
@@ -136,7 +137,7 @@ export default function ConcreteWashingPage() {
       />
 
       <RelatedGuides currentPath="/services/concrete-washing" />
-      <SimpleCTA title="Get Your Concrete Cleaned" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get Your Concrete Cleaned" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

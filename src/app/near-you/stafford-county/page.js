@@ -15,6 +15,7 @@ import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import CountyConversionLinks from '@/components/CountyConversionLinks';
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -25,7 +26,8 @@ const LocationIcon = () => (
 export const metadata = buildMetadata({
   path: "/near-you/stafford-county",
   title: "Premium Deck Builder Stafford County VA | Free Quote in 24h",
-  description: "Trusted deck and outdoor living contractor in Stafford County. review-backed. Custom decks, patios, and porches in Stafford, Aquia Harbour, Falmouth, and Garrisonville.",
+  description: "Deck and outdoor living contractor in Stafford County with public review profile links, permit guidance, and custom decks, patios, and porches.",
+  image: "/social/stafford-county-deck-builder-hub-social.png",
 });
 
 const staffordCities = [
@@ -60,7 +62,7 @@ export default function StaffordCountyPage() {
         description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Stafford County, VA."
         url="https://ldndecks.com/near-you/stafford-county"
       />
-      <WebPageSchema url="https://ldndecks.com/near-you/stafford-county" name="Premium Deck Builder Stafford County VA | Free Quote in 24h" description="Trusted deck and outdoor living contractor in Stafford County. review-backed. Custom decks, patios, and porches in Stafford, Aquia Harbour, Falmouth, and Garrisonville." speakable />
+      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/near-you/stafford-county" name="Premium Deck Builder Stafford County VA | Free Quote in 24h" description="Deck and outdoor living contractor in Stafford County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Stafford County, VA"
@@ -164,6 +166,7 @@ export default function StaffordCountyPage() {
       </section>
       <CountyRecentProjects countySlug="stafford-county" limit={6} />
       <RelatedGuides currentPath="/near-you/stafford-county" />
+      <CountyConversionLinks county="Stafford County" />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Builders by City</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -181,7 +184,7 @@ export default function StaffordCountyPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
         </ul>
       </section>
       <ContactHome />

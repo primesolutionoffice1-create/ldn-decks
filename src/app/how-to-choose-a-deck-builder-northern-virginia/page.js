@@ -14,7 +14,8 @@ import { BUSINESS } from '@/lib/business';
 export const metadata = buildMetadata({
   path: '/how-to-choose-a-deck-builder-northern-virginia',
   title: 'How to Choose a Deck Builder in Northern Virginia (2026)',
-  description: '10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license. From a review-supported NoVA deck builder.',
+  description: '10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license, warranty terms, and public profiles.',
+  image: '/social/choose-deck-builder-northern-virginia-social.png',
 });
 
 const faqSchema = {
@@ -33,7 +34,7 @@ export default function ChooseDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia" name="How to Choose a Deck Builder in Northern Virginia (10 Questions + Red Flags)" description="10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license. From a review-supported NoVA deck builder." speakable />
+      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia" name="How to Choose a Deck Builder in Northern Virginia (10 Questions + Red Flags)" description="10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license, warranty terms, and public profiles." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -66,8 +67,8 @@ export default function ChooseDeckBuilderPage() {
               { q: 'Will you pull the building permit?', detail: 'A quality builder handles permits and inspections. If they suggest skipping the permit, walk away.' },
               { q: 'Do you handle HOA submissions?', detail: 'In Northern Virginia, most homes need HOA approval. Your builder should prepare and submit the ARC package.' },
               { q: 'What brands/materials do you install?', detail: 'Look for Trex Pro, TimberTech, or AZEK certifications. Avoid builders who are vague about materials.' },
-              { q: 'Can I see recent local projects?', detail: 'Ask for 3-5 completed projects in your area, ideally within the last 12 months. Visit one if possible.' },
-              { q: 'What\'s your written warranty?', detail: 'Get the warranty in writing before signing. It should cover workmanship (2 years) separately from manufacturer material warranties.' },
+              { q: 'Can I see recent local references?', detail: 'Ask for 3-5 local photo examples or source-verified references in your area, ideally within the last 12 months. Visit one if the homeowner and builder can coordinate it.' },
+              { q: 'What are your written warranty terms?', detail: 'Get warranty terms in writing before signing. They should separate workmanship coverage from manufacturer material warranties and explain exclusions clearly.' },
               { q: 'What\'s included in the estimate?', detail: 'Materials, labor, permits, dumpster, cleanup, and timeline should all be itemized. Lump-sum quotes hide problems.' },
               { q: 'What\'s your projected timeline?', detail: 'Get a start date and estimated completion in writing. Ask what happens if weather or supply delays occur.' },
               { q: 'How do you handle change orders?', detail: 'Changes happen. A professional builder documents changes in writing with cost impact before proceeding.' },
@@ -110,11 +111,11 @@ export default function ChooseDeckBuilderPage() {
               {[
                 ['Licensed', 'Virginia Class A Contractor DPOR verified'],
                 ['Insured', 'Full liability + workers\' comp certificate on request'],
-                ['Permits', 'We pull all permits and coordinate every inspection 100% approval rate'],
-                ['HOA', 'We prepare and submit ARC packages 100% approval rate across 50+ communities'],
+                ['Permits', 'We pull permits, coordinate inspections, and address reviewer comments'],
+                ['HOA', 'We prepare and submit ARC packages for communities across Northern Virginia'],
                 ['Materials', 'Trex Pro certified installer + TimberTech + AZEK'],
-                ['Warranty', '2-year workmanship warranty in writing, on top of manufacturer warranties'],
-                ['Reviews', `${BUSINESS.aggregateRating.reviewCount}+ Google reviews`],
+                ['Warranty', 'Written workmanship warranty terms, on top of manufacturer warranty information'],
+                ['Reviews', 'Public Google review profile'],
                 ['References', 'Happy to share recent project contacts in your neighborhood'],
               ].map(([label, detail]) => (
                 <li key={label} style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}>
@@ -152,7 +153,7 @@ export default function ChooseDeckBuilderPage() {
           
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
+            <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Free Estimate →</Link></li>
           </ul>
         </div>
       </article>

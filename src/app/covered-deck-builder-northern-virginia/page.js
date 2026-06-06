@@ -19,6 +19,7 @@ export const metadata = buildMetadata({
   path: "/covered-deck-builder-northern-virginia",
   title: "Covered Deck Builder Northern Virginia | Open-Air Outdoor Living",
   description: "Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living.",
+  image: "/social/covered-deck-builder-northern-virginia-social.png",
 });
 
 const inclusions = [
@@ -92,7 +93,7 @@ const faqSchema = {
 export default function CoveredDeckPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/covered-deck-builder-northern-virginia" name="Covered Deck Builder Northern Virginia | Open-Air Outdoor Living" description="Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/covered-deck-builder-northern-virginia" name="Covered Deck Builder Northern Virginia | Open-Air Outdoor Living" description="Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living." speakable />
       <ServiceSchema
         name="Covered Deck Construction"
         description="Custom covered deck and roof-covered outdoor structures in Northern Virginia. Engineered for weather protection with premium materials."
@@ -165,7 +166,7 @@ export default function CoveredDeckPage() {
         </ul>
       </section>
 
-      <SimpleCTA title="Build Your Covered Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Covered Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/covered-deck-builder-northern-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 

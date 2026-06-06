@@ -21,7 +21,7 @@ const authorityGroups = [
       ['New custom decks', '/services/new-decks'],
       ['Composite decks', '/composite-decks'],
       ['Covered decks', '/covered-deck-builder-northern-virginia'],
-      ['Structural deck repair', '/services/deck-repair-and-structural-maintenance'],
+      ['Structural deck repair', '/services/deck-repair'],
     ],
   },
   {
@@ -66,7 +66,7 @@ export default function HomeAuthorityBridge() {
           ))}
         </div>
         <div className={styles.ctaRow}>
-          <Link className={styles.primary} href="/contact">Request an estimate</Link>
+          <Link className={styles.primary} href="/get-estimate">Request an estimate</Link>
           <Link className={styles.secondary} href="/reviews">Read homeowner reviews</Link>
         </div>
       </div>

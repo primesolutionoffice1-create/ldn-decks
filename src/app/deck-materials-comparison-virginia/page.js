@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
   path: '/deck-materials-comparison-virginia',
   title: 'Deck Materials Compared | 2026 Virginia Buyer\'s Guide',
   description: 'Compare every deck material: pressure-treated, cedar, Trex, TimberTech, AZEK, IPE, aluminum. Cost, lifespan, maintenance, and best use for Virginia.',
-  image: '/images/img11.jpeg',
+  image: '/social/deck-materials-comparison-virginia-social.png',
 });
 
 const faqSchema = {
@@ -43,12 +43,12 @@ export default function DeckMaterialsComparisonPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/deck-materials-comparison-virginia" name="Deck Materials Compared | 2026 Virginia Buyer\" description="Compare every deck material: pressure-treated, cedar, Trex, TimberTech, AZEK, IPE, aluminum. Cost, lifespan, maintenance, and best use for Virginia." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-materials-comparison-virginia" name="Deck Materials Compared | 2026 Virginia Buyer\" description="Compare every deck material: pressure-treated, cedar, Trex, TimberTech, AZEK, IPE, aluminum. Cost, lifespan, maintenance, and best use for Virginia." speakable />
       <ArticleSchema
         title="Deck Materials Compared: 2026 Virginia Buyer's Guide"
         description="Every deck material compared side-by-side: cost, lifespan, maintenance, heat retention, warranty, and best use case for Virginia homeowners."
         path="/deck-materials-comparison-virginia"
-        image="/images/img11.jpeg"
+        image="/social/deck-materials-comparison-virginia-social.png"
         datePublished="2026-04-26"
         dateModified="2026-04-26"
       />
@@ -157,12 +157,12 @@ export default function DeckMaterialsComparisonPage() {
           <p style={S.p}>Redwood is denser and more durable than cedar with superior natural rot resistance. It&apos;s also increasingly expensive and harder to source on the East Coast (most redwood is harvested in California). The aesthetic is undeniably gorgeous, but at $30&ndash;$45/sqft installed, you&apos;re approaching Trex Transcend pricing without any warranty or maintenance advantage. For most Virginia homeowners, composite makes more financial sense at this price point.</p>
 
           {/* ===== SECTION 5: Trex Composite ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Trex Composite: Our Most-Installed Material</h2>
-          <p style={S.p}>Trex is the world&apos;s largest composite decking manufacturer and the brand we install more than any other. As a <strong>Trex Platinum Partner</strong> (top 1% of installers nationally), we have deep experience with every product line.</p>
+          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Trex Composite: Common Premium Material Choice</h2>
+          <p style={S.p}>Trex is the world&apos;s largest composite decking manufacturer and one of the brands Northern Virginia homeowners ask about most often. Homeowners can verify current TrexPro profile details through the manufacturer before selecting a builder. We help compare the major Trex product lines against budget, sun exposure, maintenance tolerance, and design goals.</p>
           <h3 style={S.h3}>Trex Enhance ($30&ndash;$48/sqft)</h3>
           <p style={S.p}>The entry point into composite. Basics offers solid colors; Naturals adds multi-tonal wood grain. Both carry 25-year warranties. Best for homeowners who want composite durability at the closest price to wood. The aesthetic gap between Enhance and Transcend has narrowed significantly in recent years.</p>
           <h3 style={S.h3}>Trex Transcend ($45&ndash;$60/sqft)</h3>
-          <p style={S.p}>Our most-installed product. Deeper wood grain, thicker protective shell, and a color palette (Havana Gold, Spiced Rum, Island Mist, Lava Rock) designed to complement Virginia&apos;s red brick and stone architecture. 25-year warranty. This is the sweet spot for most Northern Virginia homeowners.</p>
+          <p style={S.p}>A commonly selected premium composite option. Deeper wood grain, thicker protective shell, and a color palette (Havana Gold, Spiced Rum, Island Mist, Lava Rock) designed to complement Virginia&apos;s red brick and stone architecture. 25-year warranty. This is the sweet spot for many Northern Virginia homeowners.</p>
           <h3 style={S.h3}>Trex Lineage ($50&ndash;$65/sqft)</h3>
           <p style={S.p}>Launched in 2024, Lineage features the most realistic wood grain in composite decking. Backed by a 50-year warranty. The premium over Transcend is 10&ndash;15%, which is well worth it for homeowners who want the absolute best Trex appearance with half-century coverage. For a full Trex lineup review, see our <Link href="/trex-transcend-review-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Transcend review</Link>.</p>
 
@@ -302,7 +302,7 @@ export default function DeckMaterialsComparisonPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Get Material Recommendations for Your Project" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get Material Recommendations for Your Project" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-materials-comparison-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 

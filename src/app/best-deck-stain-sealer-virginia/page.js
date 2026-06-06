@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
   path: '/best-deck-stain-sealer-virginia',
   title: 'Best Deck Stain & Sealer for Virginia Weather (2026)',
   description: 'Top deck stains and sealers tested in Virginia\'s climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks.',
-  image: '/images/img29.jpeg',
+  image: '/social/best-deck-stain-sealer-virginia-social.png',
 });
 
 const faqSchema = {
@@ -43,7 +43,7 @@ export default function BestDeckStainSealerPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/best-deck-stain-sealer-virginia" name="Best Deck Stain &amp; Sealer for Virginia Weather (2026)" description="Top deck stains and sealers tested in Virginia\'s climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/best-deck-stain-sealer-virginia" name="Best Deck Stain &amp; Sealer for Virginia Weather (2026)" description="Top deck stains and sealers tested in Virginia\'s climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks." speakable />
       <ArticleSchema
         title="Best Deck Stain & Sealer for Virginia Weather (2026)"
         description="Top deck stains and sealers tested in Virginia's climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks."
@@ -304,7 +304,7 @@ export default function BestDeckStainSealerPage() {
               </tbody>
             </table>
           </div>
-          <p style={S.p}><strong>When to DIY:</strong> If your deck is in good condition, ground-level, under 300 sqft, and you have a free weekend during the right season. <strong>When to hire a pro:</strong> Elevated decks (safety), decks over 400 sqft (time), and any deck that needs repair work before staining. A professional also guarantees even application uneven stain is the most visible DIY mistake.</p>
+          <p style={S.p}><strong>When to DIY:</strong> If your deck is in good condition, ground-level, under 300 sqft, and you have a free weekend during the right season. <strong>When to hire a pro:</strong> Elevated decks (safety), decks over 400 sqft (time), and any deck that needs repair work before staining. A professional helps achieve even application; uneven stain is the most visible DIY mistake.</p>
 
           {/* ===== SECTION 9: Common Mistakes ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>5 Deck Staining Mistakes That Ruin Virginia Decks</h2>
@@ -360,7 +360,7 @@ export default function BestDeckStainSealerPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Need Your Deck Stained or Sealed?" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Need Your Deck Stained or Sealed?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/best-deck-stain-sealer-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 

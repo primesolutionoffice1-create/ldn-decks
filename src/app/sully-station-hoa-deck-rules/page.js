@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -14,18 +15,23 @@ export const metadata = buildMetadata({
   path: '/sully-station-hoa-deck-rules',
   title: 'Sully Station HOA Deck Rules & Approval Guide | Loudoun Decks',
   description: 'Building or replacing a deck in Sully Station, Centreville? Architectural review for the 1,000-residence master-planned community on 1,100+ acres. 21-28 day timeline, material standards, Fairfax County permit coordination.',
+  image: '/social/sully-station-hoa-deck-rules-social.png',
 });
+
+const PATH = '/sully-station-hoa-deck-rules';
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
+  "@id": `https://ldndecks.com${PATH}#faq`,
+  url: `https://ldndecks.com${PATH}`,
   mainEntity: [
     { "@type": "Question", name: "Do I need HOA approval to build a deck in Sully Station?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every deck, screened porch, pergola, or exterior structure in Sully Station requires approval through the Sully Station II Community Association's architectural review process before construction begins. This is separate from the Fairfax County building permit, and both run in parallel from contract day for the fastest project timeline." } },
-    { "@type": "Question", name: "How long does Sully Station ARC review take?", acceptedAnswer: { "@type": "Answer", text: "Sully Station's review averages 21-28 days when the submission packet is complete on first round. The Association's master-planned process is standardized but more detailed than newer Loudoun communities given Sully Station's 1,000-unit scale and award-winning landscape design priorities. We carry the current submission template." } },
+    { "@type": "Question", name: "How long does Sully Station ARC review take?", acceptedAnswer: { "@type": "Answer", text: "Sully Station's review averages 21-28 days when the submission packet is complete on first round. The Association's master-planned process is standardized but more detailed than newer Loudoun communities given Sully Station's scale and landscape design priorities. We prepare the packet around the current requirements before it is submitted." } },
     { "@type": "Question", name: "What's Sully Station's architectural character?", acceptedAnswer: { "@type": "Answer", text: "Sully Station is an award-winning master-planned community covering 1,100+ landscaped acres in western Fairfax County, comprised of approximately 1,000 residences including single-family homes and townhomes. Home prices typically range $550,000 to $850,000. Architectural standards favor traditional design — warm-tone composites, composite balustrade or aluminum-traditional railings, proportions matching the home's existing footprint. The community's emphasis on landscape integration means new decks need to read as part of the home + landscape, not a bolt-on addition." } },
     { "@type": "Question", name: "What materials are approved in Sully Station?", acceptedAnswer: { "@type": "Answer", text: "Trex Transcend Spiced Rum, Havana Gold, Tiki Torch, Vintage Lantern are the most-requested colors. TimberTech AZEK Vintage Mahogany and PRO Legacy in similar warm tones also clear review consistently. Composite balustrade railings in deck-matching tones or aluminum-traditional railings in black or bronze. Cable rail is sometimes approved on lots backing to common-area landscape buffers — submit with photo documentation of the lot context." } },
     { "@type": "Question", name: "How much does a Sully Station deck cost?", acceptedAnswer: { "@type": "Answer", text: "Standard composite deck (350-500 sqft): $32,000-$52,000. Multi-level deck (450-650 sqft): $42,000-$68,000. Deck + screened porch combo: $52,000-$88,000. Full outdoor-living package (deck + outdoor kitchen + pergola): $75,000-$125,000+. Sully Station's $550k-$850k home values support mid-to-premium material choices." } },
-    { "@type": "Question", name: "Are townhome decks treated differently in Sully Station?", acceptedAnswer: { "@type": "Answer", text: "Sully Station's townhome sub-sections follow the same ARC process as the detached-home sections, but the design vocabulary is narrower (smaller footprints, more standardized railing styles). Townhome rear decks typically run 180-280 sqft and $22-38k. Approval often clears in 18-21 days given the more constrained design space. We've completed many Sully Station townhome rear-deck builds." } },
-    { "@type": "Question", name: "Can Loudoun Decks handle the Sully Station ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. Sully Station is one of our highest-volume Centreville sub-markets — our HQ at 13704 Winding Oak Cir is approximately 15 minutes from most Sully Station addresses. We maintain the current submission template, prepare the full ARC packet with material samples + structural drawings + landscape integration plan, file the Fairfax County building permit in parallel from contract day, and coordinate every inspection. Call 571-655-7207." } },
+    { "@type": "Question", name: "Are townhome decks treated differently in Sully Station?", acceptedAnswer: { "@type": "Answer", text: "Sully Station's townhome sub-sections follow the same ARC process as the detached-home sections, but the design vocabulary is narrower (smaller footprints, more standardized railing styles). Townhome rear decks typically run 180-280 sqft and $22-38k. Approval often clears in 18-21 days given the more constrained design space." } },
+    { "@type": "Question", name: "Can Loudoun Decks handle the Sully Station ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. Sully Station is a close Centreville service area for our HQ at 13704 Winding Oak Cir. We prepare the full ARC packet with material samples, structural drawings, and landscape integration notes; file the Fairfax County building permit in parallel from contract day; and coordinate inspection sequencing. Call 571-655-7207." } },
   ],
 };
 
@@ -35,7 +41,15 @@ export default function SullyStationHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/sully-station-hoa-deck-rules" name="Sully Station HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Sully Station, Centreville? Architectural review for the 1,000-residence master-planned community on 1,100+ acres. 21-28 day timeline, material standards, Fairfax County permit coordination." speakable />
+      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Sully Station HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Sully Station, Centreville? Architectural review for the 1,000-residence master-planned community on 1,100+ acres. 21-28 day timeline, material standards, Fairfax County permit coordination." speakable />
+      <ArticleSchema
+        title="Sully Station HOA Deck Rules and Approval Guide"
+        description="Sully Station HOA deck approval, Fairfax County permit coordination, landscape integration notes, structural review points, and Centreville deck builder support."
+        path={PATH}
+        image="/images/img17.jpeg"
+        datePublished="2026-05-27"
+        dateModified="2026-06-04"
+      />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -45,7 +59,7 @@ export default function SullyStationHoaDeckRulesPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Architectural review + Fairfax County permit for Sully Station &mdash; Centreville, VA</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
           </div>
         </div>
       </section>
@@ -66,10 +80,11 @@ export default function SullyStationHoaDeckRulesPage() {
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}>Landscape integration — Sully Station&apos;s award-winning landscape design philosophy means new decks need to read as part of the home + landscape</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}>Stairs, lighting, and how the deck reads from common-area sight lines</li>
           </ul>
-          <p style={S.p}>Average review on a complete packet: <strong>21-28 days</strong>. Townhome sub-sections typically clear faster (18-21 days). Common revision triggers: missing material samples, missing color code, landscape integration not addressed in the submission. We carry the current Sully Station submission template and our packets clear first-round review.</p>
+          <p style={S.p}>Average review on a complete packet: <strong>21-28 days</strong>. Townhome sub-sections typically clear faster (18-21 days). Common revision triggers: missing material samples, missing color code, landscape integration not addressed in the submission. We prepare the packet around Sully Station's current requirements and include the county-facing structural details before submission.</p>
 
           <h2 style={S.h2}>Two Approvals You Need</h2>
           <p style={S.p}>A Sully Station deck project requires <strong>two separate approvals running in parallel</strong>. The <strong>HOA architectural review</strong> controls appearance + landscape integration. The <strong>Fairfax County building permit</strong> controls structure and safety — footings, framing, ledger, railings, stairs. We file both packages from the day you sign so the approvals converge instead of stacking serially. Full county process: <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)' }}>Fairfax County deck permit guide</Link>.</p>
+          <p style={S.p}>For aging original decks, the submission should also make the replacement decision clear: whether the existing framing can be resurfaced, whether the ledger needs rebuild work, and how stairs and guardrails will meet current code. Compare the <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)' }}>resurfacing vs replacement guide</Link>, <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)' }}>ledger board flashing guide</Link>, and <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)' }}>Virginia deck stair code guide</Link> before finalizing the ARC scope.</p>
 
           <h2 style={S.h2}>Sully Station&apos;s Approved Material Palette</h2>
           <p style={S.p}>Sully Station&apos;s traditional design vocabulary favors warm-tone composites and classic railing systems:</p>
@@ -107,13 +122,15 @@ export default function SullyStationHoaDeckRulesPage() {
             <li>→ <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Centreville deck builder (our HQ city)</Link></li>
             <li>→ <Link href="/virginia-run-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia Run HOA deck rules (Centreville premier)</Link></li>
             <li>→ <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County permit guide</Link></li>
+            <li>→ <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Ledger board flashing guide</Link></li>
+            <li>→ <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link></li>
             <li>→ <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck resurfacing vs replacement</Link></li>
             <li>→ <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite deck cost guide</Link></li>
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Sully Station deck project? Our HQ is 15 minutes away." buttonText="Get Free Estimate" link="/contact" />
-      <NamedAuthor context="Sully Station (Centreville) and Fairfax County" lastUpdated="2026-05-27" />
+      <SimpleCTA title="Sully Station deck project? Our HQ is 15 minutes away." buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Sully Station (Centreville) and Fairfax County" lastUpdated="2026-06-04" />
       <RelatedGuides currentPath="/sully-station-hoa-deck-rules" />
       <ContactHome />
     </>

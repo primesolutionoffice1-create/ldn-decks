@@ -14,6 +14,7 @@ export const metadata = buildMetadata({
   path: '/trex-vs-timbertech-vs-azek',
   title: '2026 Trex vs TimberTech vs AZEK vs Fiberon | NoVA Guide',
   description: 'Which composite decking is best for Virginia? Side-by-side comparison of Trex, TimberTech AZEK, and Fiberon with 2026 pricing, heat, warranty and NoVA installer notes.',
+  image: '/social/trex-vs-timbertech-vs-azek-social.png',
 });
 
 const faqSchema = {
@@ -34,7 +35,7 @@ export default function TrexVsTimberTechPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/trex-vs-timbertech-vs-azek" name="2026 Trex vs TimberTech vs AZEK vs Fiberon | NoVA Guide" description="Which composite decking is best for Virginia? Side-by-side comparison of Trex, TimberTech AZEK, and Fiberon with 2026 pricing, heat, warranty and NoVA installer notes." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/trex-vs-timbertech-vs-azek" name="2026 Trex vs TimberTech vs AZEK vs Fiberon | NoVA Guide" description="Which composite decking is best for Virginia? Side-by-side comparison of Trex, TimberTech AZEK, and Fiberon with 2026 pricing, heat, warranty and NoVA installer notes." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -180,7 +181,7 @@ export default function TrexVsTimberTechPage() {
         </div>
       </article>
 
-      <SimpleCTA title="See Samples at Our Centreville Showroom" buttonText="Book Showroom Visit" link="/contact" />
+      <SimpleCTA title="See Samples at Our Centreville Showroom" buttonText="Book Showroom Visit" link="/get-estimate" />
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Brand Pages &amp; Services</h2>

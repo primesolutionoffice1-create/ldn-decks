@@ -17,12 +17,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-oakton-va',
   title: 'Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks',
   description: 'Custom deck builder in Oakton, VA. Google reviews. Trex Transcend & TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate.',
-  image: '/images/img64.jpeg',
+  image: '/social/deck-builder-oakton-va-social.png',
 });
 
 const inclusions = [
@@ -123,11 +124,11 @@ export default function OaktonDeckBuilderPage() {
     <main>
       <JsonLd data={oaktonFaqSchema} />
       <LocalBusinessSchema city="Oakton" url="https://ldndecks.com/deck-builder-oakton-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-oakton-va" name="Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks" description="Custom deck builder in Oakton, VA. Google reviews. Trex Transcend &amp; TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-oakton-va" name="Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks" description="Custom deck builder in Oakton, VA. Google reviews. Trex Transcend &amp; TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate." speakable />
       <ServicesHeader
         subtext="Oakton, VA's Premium Deck Builder"
         title="Custom Deck Builder in Oakton, VA"
-        description="Loudoun Decks builds premium composite decks, multi-level structures, and screened porches for Oakton's wooded estate properties. Trex Platinum Partner. review-supported reputation."
+        description="Loudoun Decks builds premium composite decks, multi-level structures, and screened porches for Oakton's wooded estate properties. Trex Platinum Partner. publicly documented reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -136,7 +137,7 @@ export default function OaktonDeckBuilderPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: $5,000+</strong>
             <br />
-            We focus on <strong style={{ color: '#111' }}>full custom Oakton builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
+            We focus on <strong style={{ color: '#111' }}>full custom Oakton builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
           </p>
         </div>
       </section>
@@ -155,6 +156,19 @@ export default function OaktonDeckBuilderPage() {
         image1="/images/img64.jpeg"
         image2="/images/img21.jpeg"
       />
+      <PlanningUpdate
+        market="Oakton decks in 2026"
+        notes={[
+          "Oakton projects should screen for wooded-lot constraints, mature tree root zones, slope, drainage, and Fairfax County permit requirements before design is finalized.",
+          "Deck replacement and resurfacing decisions should be based on the frame, ledger, footing, stair, and railing condition, not only surface-board age.",
+          "RPA or waterway-adjacent properties need early environmental review planning before premium deck features are priced."
+        ]}
+        links={[
+          { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
+          { href: "/deck-safety-inspection-checklist", label: "Safety checklist" },
+          { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" }
+        ]}
+      />
       <ServiceContentExpansion sections={expansionSections} />
 
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -167,13 +181,12 @@ export default function OaktonDeckBuilderPage() {
             sizes="(max-width: 900px) 100vw, 900px"
           />
         </div>
-        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Oakton Project: Fox Mill Estates Multi-Level Deck</h2>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Oakton Project Planning Example: Fox Mill Estates Multi-Level Deck</h2>
         <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
-          Our featured Oakton project includes a <strong>$52,000 500 sqft TimberTech AZEK multi-level deck</strong> in Fox Mill Estates.
-          Built in Dark Hickory with Trex Signature cable railing and integrated LED lighting throughout. This wooded lot required
-          careful root-zone protection for several mature oaks, with footings positioned to avoid critical root systems. The
-          multi-level design follows the natural grade change, creating an upper dining area connected to a lower lounging
-          level. Fairfax County permit with tree-save compliance. 4-week build.
+          A typical Oakton multi-level deck concept might include TimberTech AZEK or Trex boards, cable or aluminum railing,
+          integrated lighting, and a layout that follows natural grade changes between an upper dining area and lower lounge level.
+          Wooded lots should be reviewed for tree root zones, footing locations, drainage, and Fairfax County permit requirements.
+          Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.
         </p>
       </div>
 
@@ -209,9 +222,9 @@ export default function OaktonDeckBuilderPage() {
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Oakton" /></div></section>
-      <SimpleCTA title="Build Your Premium Oakton Deck" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Premium Oakton Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-oakton-va" />
-      <NamedAuthor context="Oakton and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Oakton and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

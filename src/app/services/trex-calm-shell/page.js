@@ -17,7 +17,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/trex-calm-shell",
   title: "Trex Clam Shell Deck Resurfacing Loudoun VA | Clean Modern Looks",
-  description: "Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing & installation."
+  description: "Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing & installation.",
+  image: "/social/trex-clam-shell-service-social.png",
 });
 
 const expansionSections = [
@@ -37,7 +38,7 @@ const expansionSections = [
     listItems: [
       { label: "Cost-Effective", text: "Save money compared to a full rebuild by utilizing your existing framing." },
       { label: "Faster Installation", text: "Complete your project in less time with fewer structural building requirements." },
-      { label: "Structural Evaluation", text: "We carefully inspect your sub-structure to guarantee it is safe and built to code before adding new boards." },
+      { label: "Structural Evaluation", text: "We carefully inspect your sub-structure to verify condition and code requirements before adding new boards." },
       { label: "Complete Upgrade", text: "Enjoy a brand new, modern deck surface without the mess of major demolition." }
     ]
   }
@@ -62,7 +63,7 @@ const whyLdnDecks = [
 export default function TrexCalmShellPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/trex-calm-shell" name="Trex Clam Shell Deck Resurfacing Loudoun VA | Clean Modern Looks" description="Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing &amp; installation." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/trex-calm-shell" name="Trex Clam Shell Deck Resurfacing Loudoun VA | Clean Modern Looks" description="Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing &amp; installation." speakable />
       <ServiceSchema
         name="Trex Calm Shell Decking"
         description="Trex Calm Shell color installation and showcase for Northern Virginia decks. Premium composite decking in a warm beige tone."
@@ -77,7 +78,7 @@ export default function TrexCalmShellPage() {
         description="Give your old deck a fresh, modern look with Trex Calm Shell - a premium composite color designed for durability, style, and low maintenance."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
       </section>
       <ServiceMain
         subtitle="A Smarter Alternative to Full Replacement"
@@ -116,7 +117,7 @@ export default function TrexCalmShellPage() {
         items={whyLdnDecks}
       />
       <ServiceAreasGrid />
-      <SimpleCTA title="Get Your Trex Calm Shell Quote" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get Your Trex Calm Shell Quote" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/services/trex-calm-shell" />
       <ContactHome />
     </main>

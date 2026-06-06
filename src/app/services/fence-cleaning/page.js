@@ -18,7 +18,8 @@ import ExteriorCleaningAuthority from '@/components/ExteriorCleaningAuthority';
 export const metadata = buildMetadata({
   path: "/services/fence-cleaning",
   title: "Professional Fence Cleaning NoVA | Wood & Composite Restoration",
-  description: "Restore your fence with professional cleaning services in Northern Virginia. We safely remove gray weathering, mold, and algae from wood and composite fencing."
+  description: "Restore your fence with professional cleaning services in Northern Virginia. We safely remove gray weathering, mold, and algae from wood and composite fencing.",
+  image: "/social/fence-cleaning-service-social.png",
 });
 
 const inclusions = [
@@ -70,7 +71,7 @@ const expansionSections = [
 export default function FenceCleaningPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/fence-cleaning" name="Professional Fence Cleaning NoVA | Wood &amp; Composite Restoration" description="Restore your fence with professional cleaning services in Northern Virginia. We safely remove gray weathering, mold, and algae from wood and composite fencing." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/fence-cleaning" name="Professional Fence Cleaning NoVA | Wood &amp; Composite Restoration" description="Restore your fence with professional cleaning services in Northern Virginia. We safely remove gray weathering, mold, and algae from wood and composite fencing." speakable />
       <ServiceSchema
         name="Fence Cleaning"
         description="Professional wood and composite fence cleaning in Northern Virginia — removing gray weathering, mold, and algae to restore your fencing."
@@ -86,7 +87,7 @@ export default function FenceCleaningPage() {
         description="Loudoun Decks provides professional fence cleaning for homeowners in Northern Virginia, helping maintain the integrity and appearance of your property boundaries."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
       </section>
 
       <ServiceMain
@@ -129,7 +130,7 @@ export default function FenceCleaningPage() {
       />
 
       <RelatedGuides currentPath="/services/fence-cleaning" />
-      <SimpleCTA title="Get Your Fence Cleaned" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get Your Fence Cleaned" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

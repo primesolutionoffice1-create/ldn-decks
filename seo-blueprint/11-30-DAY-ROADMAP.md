@@ -15,7 +15,7 @@ Owners noted as: **DEV** (developer/Nick), **CONTENT** (writer or Nick), **GBP**
 
 ### Day 2 (Tue)
 
-- **DEV** [08 §F3](08-TECHNICAL-FIXES.md): Add `@id` to `GeneralContractor`; add `WebSite` block in root layout via `StructuredData.jsx`. Add LinkedIn + BBB profile + GBP place_id URL to `sameAs`. **(2 hr)**
+- **DEV** [08 §F3](08-TECHNICAL-FIXES.md): Verify `@id` on `GeneralContractor`, `WebSite`, and `FOUNDER_ID`. Keep BBB and GBP in organization `sameAs`; add LinkedIn only after the official company profile URL is created or claimed. **(2 hr)**
 - **DEV** [01-AUDIT §4](01-AUDIT-FINDINGS.md): Replace form placeholders (`(555) 123-4567`, `you@example.com`, `123 Main St`) in `ContactForm.jsx`. **(30 min)**
 - **DEV** [01-AUDIT §5](01-AUDIT-FINDINGS.md) + [08 §F5](08-TECHNICAL-FIXES.md): Add `app/icon.ico`, `app/manifest.ts`, `themeColor` meta. Generate icon set (16/32/180/192/512). **(2 hr)**
 
@@ -47,7 +47,7 @@ Owners noted as: **DEV** (developer/Nick), **CONTENT** (writer or Nick), **GBP**
 ### Day 8 (Mon)
 
 - **DEV** [05 Templates](05-ON-PAGE-TEMPLATES.md): Add `Service` schema to all 5 service hubs (composite, screened porch, pergola, patio, custom decks). Use `buildCityServiceSchema()` pattern but for general service. **(3 hr)**
-- **DEV** [04 §Review schema](04-LOCAL-SEO.md): Add 5 individual `Review` items inside `GeneralContractor` block in `business.js`. Pull from real Google reviews — first-name only, no last names. **(2 hr)**
+- **DEV** [04 §Review policy](04-LOCAL-SEO.md): Improve visible review routing and evidence links, but do not add self-serving `Review` or `AggregateRating` JSON-LD unless current Google policy and verified source evidence support it. **(2 hr)**
 
 ### Day 9 (Tue)
 

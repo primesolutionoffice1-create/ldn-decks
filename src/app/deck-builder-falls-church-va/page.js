@@ -17,12 +17,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-falls-church-va',
   title: 'Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks',
   description: 'Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex & composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate.',
-  image: '/images/img64.jpeg',
+  image: '/social/deck-builder-falls-church-va-social.png',
 });
 
 const inclusions = [
@@ -117,11 +118,11 @@ export default function FallsChurchDeckBuilderPage() {
     <main>
       <JsonLd data={fallsChurchFaqSchema} />
       <LocalBusinessSchema city="Falls Church" url="https://ldndecks.com/deck-builder-falls-church-va" />
-      <WebPageSchema url="https://ldndecks.com/deck-builder-falls-church-va" name="Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks" description="Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex &amp; composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-falls-church-va" name="Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks" description="Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex &amp; composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate." speakable />
       <ServicesHeader
         subtext="Falls Church, VA's Compact Lot Deck Specialists"
         title="Custom Deck Builder in Falls Church, VA"
-        description="Loudoun Decks builds premium composite decks, screened porches, and outdoor living spaces for Falls Church homeowners. City of Falls Church + Fairfax County permits handled. review-supported reputation."
+        description="Loudoun Decks builds premium composite decks, screened porches, and outdoor living spaces for Falls Church homeowners. City of Falls Church + Fairfax County permits handled. publicly documented reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -130,7 +131,7 @@ export default function FallsChurchDeckBuilderPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: $5,000+</strong>
             <br />
-            We focus on <strong style={{ color: '#111' }}>full custom Falls Church builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair-and-structural-maintenance" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
+            We focus on <strong style={{ color: '#111' }}>full custom Falls Church builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
           </p>
         </div>
       </section>
@@ -149,6 +150,19 @@ export default function FallsChurchDeckBuilderPage() {
         image1="/images/img64.jpeg"
         image2="/images/img21.jpeg"
       />
+      <PlanningUpdate
+        market="Falls Church decks in 2026"
+        notes={[
+          "Falls Church projects should verify City of Falls Church vs Fairfax County jurisdiction before plans are drawn.",
+          "Compact lots need early planning around setbacks, privacy, railing type, stair placement, drainage, and neighbor-facing sightlines.",
+          "Older patio or deck replacements should confirm whether the new structure changes height, footprint, railings, or permit scope."
+        ]}
+        links={[
+          { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
+          { href: "/deck-vs-patio-which-is-right", label: "Deck vs patio" },
+          { href: "/deck-cost-calculator", label: "Deck cost calculator" }
+        ]}
+      />
       <ServiceContentExpansion sections={expansionSections} />
 
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -161,13 +175,12 @@ export default function FallsChurchDeckBuilderPage() {
             sizes="(max-width: 900px) 100vw, 900px"
           />
         </div>
-        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Featured Falls Church Project: City of Falls Church Patio Replacement</h2>
+        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Falls Church Planning Example: Compact-Lot Patio-to-Deck Upgrade</h2>
         <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
-          Our featured Falls Church project includes a <strong>$34,000 280 sqft Trex Transcend deck</strong> in Falls Church City.
-          This project replaced a 1960s-era concrete patio surround with an elevated composite deck featuring glass railing
-          for small-lot privacy. Permitted through the City of Falls Church building department and completed in just 2 weeks.
-          The glass railing system maximizes the sense of space on this compact property while providing a clean, modern aesthetic
-          that complements the neighborhood.
+          A compact Falls Church upgrade might replace an aging patio or small rear platform with a low-maintenance composite deck,
+          glass or aluminum railing, and a layout designed around privacy and limited yard depth. Final scope should be confirmed
+          after jurisdiction, setbacks, height, drainage, and permit requirements are reviewed. Verified project examples should
+          be added here only after owner-supplied photos, scope, date, and permit details are available.
         </p>
       </div>
 
@@ -203,9 +216,9 @@ export default function FallsChurchDeckBuilderPage() {
           </ul>
       </section>
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Falls Church" /></div></section>
-      <SimpleCTA title="Maximize Your Falls Church Outdoor Space" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Maximize Your Falls Church Outdoor Space" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-falls-church-va" />
-      <NamedAuthor context="Falls Church and Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Falls Church and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />
     </main>
   );

@@ -18,7 +18,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/fire-pits",
   title: "Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment",
-  description: "Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment."
+  description: "Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment.",
+  image: "/social/fire-pits-service-social.png",
 });
 
 const expansionSections = [
@@ -102,7 +103,7 @@ const faqs = [
 export default function FirePitsPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/fire-pits" name="Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment" description="Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/fire-pits" name="Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment" description="Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment." speakable />
       <ServiceSchema
         name="Custom Fire Pit Installation"
         description="Professional custom fire pit design and installation in Northern Virginia. Wood-burning, gas, and built-in stone fire pits with integrated seating areas."
@@ -118,7 +119,7 @@ export default function FirePitsPage() {
         description="Transform your backyard into a warm, inviting space with a custom-built fire pit - perfect for relaxing nights, entertaining guests, and adding value to your home."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="May 2026" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
       </section>
       <ServiceMain
         subtitle="More Than Just a Feature - It's the Centerpiece"
@@ -218,7 +219,7 @@ export default function FirePitsPage() {
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/fire-pits" />
       <ServicesFAQ canonicalUrl="https://ldndecks.com/services/fire-pits" title="Fire Pit FAQs" faqs={faqs} />
-      <SimpleCTA title="Build Your Dream Fire Pit" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Build Your Dream Fire Pit" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

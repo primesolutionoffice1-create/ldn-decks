@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ArticleSchema from '@/components/ArticleSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -14,10 +15,15 @@ export const metadata = buildMetadata({
   path: '/stone-ridge-hoa-deck-rules',
   title: 'Stone Ridge HOA Deck Rules & Approval Guide | Loudoun Decks',
   description: 'Building or replacing a deck in Stone Ridge, Loudoun County? Architectural review process, family-oriented design standards, 18-25 day approval timeline, and how it pairs with the Loudoun County permit.',
+  image: '/social/stone-ridge-hoa-deck-rules-social.png',
 });
+
+const PATH = '/stone-ridge-hoa-deck-rules';
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
+  "@id": `https://ldndecks.com${PATH}#faq`,
+  url: `https://ldndecks.com${PATH}`,
   mainEntity: [
     { "@type": "Question", name: "Do I need HOA approval for a deck in Stone Ridge?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every deck, screened porch, pergola, or exterior structure in Stone Ridge requires approval through the Stone Ridge Association's architectural review process before construction begins. This is separate from the Loudoun County building permit, and both run in parallel from contract day for the fastest project timeline." } },
     { "@type": "Question", name: "How long does Stone Ridge ARC review take?", acceptedAnswer: { "@type": "Answer", text: "Stone Ridge's review averages 18-25 days when the submission packet is complete. The Association's standardized process makes Stone Ridge one of the more predictable Loudoun HOAs to work with — provided the packet has all required documents (application, material samples, color specs, structural drawings, site plan with setbacks)." } },
@@ -34,7 +40,15 @@ export default function StoneRidgeHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/stone-ridge-hoa-deck-rules" name="Stone Ridge HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Stone Ridge, Loudoun County? Architectural review process, family-oriented design standards, approval timeline, county permit coordination." speakable />
+      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Stone Ridge HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Stone Ridge, Loudoun County? Architectural review process, family-oriented design standards, approval timeline, county permit coordination." speakable />
+      <ArticleSchema
+        title="Stone Ridge HOA Deck Rules and Approval Guide"
+        description="Stone Ridge HOA deck approval, Loudoun County permit coordination, family-oriented design standards, structural review points, and local deck builder support."
+        path={PATH}
+        image="/images/img17.jpeg"
+        datePublished="2026-05-27"
+        dateModified="2026-06-04"
+      />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -44,7 +58,7 @@ export default function StoneRidgeHoaDeckRulesPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Architectural review + Loudoun County permit for Stone Ridge &mdash; southern Loudoun County, VA</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Design Consultation</Link>
           </div>
         </div>
       </section>
@@ -64,10 +78,11 @@ export default function StoneRidgeHoaDeckRulesPage() {
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}>Setback verification against the lot&apos;s certified plat</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}>Stairs, lighting, and how the deck integrates with the home&apos;s elevation</li>
           </ul>
-          <p style={S.p}>Average review on a complete packet: <strong>18-25 days</strong>. Common revision triggers: missing material samples, missing color code, setback discrepancy. We carry the current Stone Ridge submission template and our packets clear first-round review.</p>
+          <p style={S.p}>Average review on a complete packet: <strong>18-25 days</strong>. Common revision triggers: missing material samples, missing color code, setback discrepancy. We prepare the packet around the current Stone Ridge requirements and check the county-facing structural details before submission.</p>
 
           <h2 style={S.h2}>Two Approvals You Need</h2>
           <p style={S.p}>A Stone Ridge deck project requires <strong>two separate approvals running in parallel</strong>. The <strong>HOA architectural review</strong> controls appearance. The <strong>Loudoun County building permit</strong> controls structure and safety. We file both packages from contract day. Full county process: <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)' }}>Loudoun County deck permit guide</Link>.</p>
+          <p style={S.p}>Replacement and elevated-deck submissions should also show how the ledger, flashing, stair layout, and load path will be handled. Start with our <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)' }}>ledger board flashing guide</Link>, <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)' }}>Virginia deck stair calculator</Link>, and <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)' }}>deck stair construction diagram</Link> before locking the HOA packet.</p>
 
           <h2 style={S.h2}>Stone Ridge&apos;s Approved Material Palette</h2>
           <p style={S.p}>Stone Ridge&apos;s traditional-to-transitional design vocabulary favors warm-tone composites and classic railing systems:</p>
@@ -104,13 +119,15 @@ export default function StoneRidgeHoaDeckRulesPage() {
             <li>→ <Link href="/deck-builder-south-riding-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>South Riding deck builder</Link></li>
             <li>→ <Link href="/loudoun-county-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County HOA deck rules</Link></li>
             <li>→ <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County permit guide</Link></li>
+            <li>→ <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Ledger board flashing guide</Link></li>
+            <li>→ <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link></li>
             <li>→ <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck resurfacing vs replacement</Link></li>
             <li>→ <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite deck cost guide</Link></li>
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Stone Ridge deck project? We handle every approval." buttonText="Get Free Estimate" link="/contact" />
-      <NamedAuthor context="Stone Ridge (Aldie/South Riding) and Loudoun County" lastUpdated="2026-05-27" />
+      <SimpleCTA title="Stone Ridge deck project? We handle every approval." buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Stone Ridge (Aldie/South Riding) and Loudoun County" lastUpdated="2026-06-04" />
       <RelatedGuides currentPath="/stone-ridge-hoa-deck-rules" />
       <ContactHome />
     </>

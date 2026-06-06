@@ -18,7 +18,8 @@ import ExteriorCleaningAuthority from '@/components/ExteriorCleaningAuthority';
 export const metadata = buildMetadata({
   path: "/services/house-siding-washing",
   title: "Professional House Siding Washing NoVA | Safe Exterior Cleaning",
-  description: "Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement."
+  description: "Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement.",
+  image: "/social/house-siding-washing-service-social.png",
 });
 
 const inclusions = [
@@ -76,7 +77,7 @@ const expansionSections = [
 export default function HouseSidingWashingPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/services/house-siding-washing" name="Professional House Siding Washing NoVA | Safe Exterior Cleaning" description="Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/house-siding-washing" name="Professional House Siding Washing NoVA | Safe Exterior Cleaning" description="Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement." speakable />
       <ServiceSchema
         name="House Siding Washing"
         description="Professional house siding washing in Northern Virginia — safely removing dirt, mold, and algae from vinyl and fiber cement siding."
@@ -92,7 +93,7 @@ export default function HouseSidingWashingPage() {
         description="Loudoun Decks provides professional house siding washing for homeowners in Northern Virginia, helping restore the original beauty of your home's exterior."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="May 2026" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
       </section>
 
       <ServiceMain
@@ -134,7 +135,7 @@ export default function HouseSidingWashingPage() {
         ]}
       />
 
-      <SimpleCTA title="Get Your Siding Cleaned" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Get Your Siding Cleaned" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/services/house-siding-washing" />
       <ContactHome />
     </main>

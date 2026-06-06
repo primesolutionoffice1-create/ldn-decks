@@ -9,8 +9,8 @@ This template solves the **64% Ashburn ↔ Leesburg similarity** flagged in [01-
 ## Title and meta
 
 ```
-TITLE: Deck Builder in {CITY}, VA | TrexPro Platinum | Free Quote
-META:  Custom decks, screened porches, and pergolas in {CITY}, VA. TrexPro Platinum installer, Class A, 5.0★ from 41+ {COUNTY} homeowners. Free estimate: (571) 655-7207.
+TITLE: Deck Builder in {CITY}, VA | Class A Virginia | Free Quote
+META:  Custom decks, screened porches, and pergolas in {CITY}, VA. Class A Virginia contractor, manufacturer profile links, public review profiles. Free estimate: (571) 655-7207.
 ```
 
 ---
@@ -29,11 +29,11 @@ Deck Builder in {CITY}, VA — Custom Decks, Porches and Pergolas
 >
 > Custom decks, screened porches and pergolas built for {CITY} homes. Engineered for {COUNTY}'s permit standards, designed around your HOA's requirements.
 >
-> **TrexPro Platinum · Class A Virginia · 5.0★ from 41+ NoVA homeowners**
+> **Class A Virginia · Manufacturer profile links · Public review profiles · BBB verification**
 >
 > [→ Get My {CITY} Deck Estimate]   [☎ (571) 655-7207]
 >
-> *Free in-home consultation · {DRIVE_TIME_FROM_HQ} from our Centreville HQ · We handle every {COUNTY} permit*
+> *Free in-home consultation · {DRIVE_TIME_FROM_HQ} from our Centreville HQ · Permit and HOA coordination available according to signed scope*
 
 ---
 
@@ -41,9 +41,9 @@ Deck Builder in {CITY}, VA — Custom Decks, Porches and Pergolas
 
 (2 paragraphs of city-specific reasoning.)
 
-> {CITY} homes are typically {ARCHITECTURAL_NOTES — e.g., "transitional-style on quarter-acre lots in Brambleton and Belmont communities"}. We've built decks across {CITY}'s {SUBDIVISIONS — name 3 specific subdivisions} for the past {N} years, which means we know the soil conditions, the {COUNTY} permit officials, and the architectural review committees that approve every project.
+> {CITY} homes are typically {ARCHITECTURAL_NOTES — e.g., "transitional-style on quarter-acre lots in Brambleton and Belmont communities"}. Use verified project evidence before naming completed work in {SUBDIVISIONS}. Without project evidence, describe local permit, HOA, soil, access, and material-planning considerations instead.
 >
-> As a TrexPro Platinum installer — the highest tier Trex grants — we're trusted by {COUNTY} homeowners who want their composite deck installed by the certified pros Trex itself recommends. We hold a Class A Virginia contractor license and full general-liability + workers'-comp insurance.
+> We hold a Class A Virginia contractor license and provide manufacturer profile links that homeowners can verify directly. Do not hardcode manufacturer tier, rank, rarity, review count, warranty duration, or completed-project claims unless backed by current source evidence.
 
 (City-specific tokens: ARCHITECTURAL_NOTES, SUBDIVISIONS, COUNTY, N years, etc.)
 
@@ -54,7 +54,7 @@ Deck Builder in {CITY}, VA — Custom Decks, Porches and Pergolas
 (3-up service grid.)
 
 - **[Custom decks →](/services/new-decks)** — Composite, Trex, AZEK, TimberTech, IPE, cedar.
-- **[Composite decks →](/composite-decks)** — TrexPro Platinum tier; Trex Transcend, Enhance, Select.
+- **[Composite decks →](/composite-decks)** — Trex, TimberTech, AZEK and other composite/PVC options compared by budget, sun exposure and maintenance expectations.
 - **[Screened porches →](/services/porches/screened-porch)** — Three-season and screened-in.
 - **[Pergolas →](/services/gazebo-pergola)** — Cedar, vinyl, aluminum, motorized louvered.
 - **[Patios →](/services/patios)** — Paver, flagstone, stamped concrete.
@@ -64,7 +64,7 @@ Deck Builder in {CITY}, VA — Custom Decks, Porches and Pergolas
 
 ## H2 — "Deck Costs in {CITY}, VA"
 
-> A typical {CITY} composite deck runs **$25–$60 per square foot installed**. A 400 sq ft Trex Transcend deck typically lands around $22,000–$30,000; a 600 sq ft cedar deck runs $28,000–$38,000.
+> A typical {CITY} composite deck runs **$25–$60 per square foot installed**. A 400 sq ft mid-tier composite planning scenario typically lands around $22,000–$30,000; a 600 sq ft cedar planning scenario runs $28,000–$38,000.
 >
 > Cost factors specific to {CITY}: {CITY_SPECIFIC_COST_FACTOR — e.g., "soil conditions in Brambleton typically require deeper footings due to {N}-ft clay layers" OR "many Lansdowne lots are sloped, requiring multi-level designs"}.
 >
@@ -160,7 +160,7 @@ Loudoun Decks
 (571) 655-7207 · office@ldndecks.com
 
 Serving {CITY}, {COUNTY}, and all of Northern Virginia
-TrexPro Platinum · Class A Virginia · BBB Accredited
+Class A Virginia · Manufacturer profile links · BBB verification
 ```
 
 ---
@@ -179,7 +179,7 @@ TrexPro Platinum · Class A Virginia · BBB Accredited
       "@type": "WebPage",
       "@id": "https://ldndecks.com/deck-builder-{slug}-va#webpage",
       "url": "https://ldndecks.com/deck-builder-{slug}-va",
-      "name": "Deck Builder in {CITY}, VA | TrexPro Platinum | Loudoun Decks",
+      "name": "Deck Builder in {CITY}, VA | Class A Virginia | Loudoun Decks",
       "isPartOf": { "@id": "https://ldndecks.com/#website" },
       "about": { "@id": "https://ldndecks.com/#organization" },
       "primaryImageOfPage": {

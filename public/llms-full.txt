@@ -2,7 +2,7 @@
 
 > This is the extended content index for Loudoun Decks (ldndecks.com). It provides page-level detail for AI retrieval systems, citation engines, and semantic indexing. For the summary version, see: https://ldndecks.com/llms.txt
 
-Last updated: 2026-05-28
+Last updated: 2026-06-01
 Sitemap: https://ldndecks.com/sitemap.xml
 Entity: Loudoun Decks LLC (dba "Loudoun Decks" / "LDN Decks")
 Location: Centreville, VA
@@ -29,7 +29,7 @@ Entity ID: https://ldndecks.com/#organization
 
 ### Composite Deck Builder Loudoun County
 - URL: https://ldndecks.com/composite-deck-builder-loudoun
-- Content: Detailed page on composite deck construction in Loudoun County. Trex and TimberTech focus, HOA support, permits, project examples.
+- Content: Detailed page on composite deck construction in Loudoun County. Trex and TimberTech focus, HOA support, permits, and planning examples.
 - Intent: Commercial — composite deck + Loudoun County
 - Updated: 2026-05-25
 
@@ -264,7 +264,7 @@ Entity ID: https://ldndecks.com/#organization
 
 ### How Much Does a Deck Cost in Northern Virginia?
 - URL: https://ldndecks.com/composite-deck-cost-northern-virginia
-- Content: Definitive cost guide — $30-$75/sqft installed. Real project price tables by material tier. Labor breakdown. What drives the price up or down.
+- Content: Definitive cost guide — $30-$75/sqft installed. Planning price tables by material tier. Labor breakdown. What drives the price up or down.
 - Intent: Informational/commercial — cost research phase
 - Updated: 2026-05-25
 
@@ -275,7 +275,7 @@ Entity ID: https://ldndecks.com/#organization
 
 ### Screened Porch Cost
 - URL: https://ldndecks.com/screened-porch-cost-northern-virginia
-- Content: $25k-$70k+ with real project examples. EZE-Breeze, retractable, traditional options priced.
+- Content: $25k-$70k+ with planning scenarios. EZE-Breeze, retractable, and traditional options priced for estimating.
 - Updated: 2026-05-25
 
 ### 2026 Deck Cost Report
@@ -355,7 +355,7 @@ Entity ID: https://ldndecks.com/#organization
 
 ### Composite Deck Cost by Size
 - URL: https://ldndecks.com/composite-deck-cost-by-size
-- Content: Real 2026 pricing for 300, 400, 500, and 600 sqft composite decks in Northern Virginia. Three-tier pricing (budget, mid, premium) per size, monthly payment estimates, and FAQ.
+- Content: 2026 planning pricing for 300, 400, 500, and 600 sqft composite decks in Northern Virginia. Three-tier pricing (budget, mid, premium) per size, monthly payment estimates, and FAQ.
 - Intent: Informational/commercial — size-specific cost research
 - Updated: 2026-05-27
 
@@ -620,7 +620,7 @@ Entity ID: https://ldndecks.com/#organization
 
 - [Customer Reviews Hub](https://ldndecks.com/reviews): Segmented by service type and city. Public Google review profile, review-count proof, mid-page CTA, FAQ.
 - [Before & After Gallery](https://ldndecks.com/before-and-after): Visual project transformations
-- [Project Showcase](https://ldndecks.com/showcase): Detailed case studies with specs
+- [Project Showcase](https://ldndecks.com/showcase): Project gallery; formal case-study details should be verified before citation
 - [Certifications](https://ldndecks.com/about/certifications-and-licenses): Trex Platinum, TimberTech, BBB, VA license
 - [BBB Profile](https://ldndecks.com/bbb-accredited-deck-builder-virginia): A+ rating verification
 - [Yelp Reviews](https://ldndecks.com/ldn-decks-reviews-yelp): Yelp presence

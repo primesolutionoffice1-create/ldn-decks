@@ -11,6 +11,7 @@ export const metadata = buildMetadata({
   path: '/blog',
   title: 'Deck Building Blog & Expert Tips | Loudoun Decks',
   description: 'Expert advice on deck materials, costs, maintenance, design trends, and outdoor living ideas for Northern Virginia homeowners. By Loudoun Decks.',
+  image: '/social/blog-social.png',
 });
 
 const blogCollectionSchema = {
@@ -37,7 +38,7 @@ const blogCollectionSchema = {
 export default function BlogPage() {
   return (
     <main>
-      <WebPageSchema url="https://ldndecks.com/blog" name="Deck Building Blog &amp; Expert Tips | Loudoun Decks" description="Expert advice on deck materials, costs, maintenance, design trends, and outdoor living ideas for Northern Virginia homeowners. By Loudoun Decks." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/blog" name="Deck Building Blog &amp; Expert Tips | Loudoun Decks" description="Expert advice on deck materials, costs, maintenance, design trends, and outdoor living ideas for Northern Virginia homeowners. By Loudoun Decks." speakable />
       <JsonLd data={blogCollectionSchema} />
       <BlogHeader />
       <BlogList />

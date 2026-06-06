@@ -14,7 +14,7 @@ export const metadata = buildMetadata({
   path: '/composite-deck-vs-wood-deck-virginia',
   title: 'Composite vs Wood Deck: 2026 Virginia Cost Comparison',
   description: 'Is composite decking cheaper than wood? 15-year total cost analysis for Northern Virginia homeowners. See lifespan, maintenance & ROI head-to-head.',
-  image: '/images/img16.jpeg',
+  image: '/social/composite-deck-vs-wood-deck-virginia-social.png',
 });
 
 const faqSchema = {
@@ -33,7 +33,7 @@ export default function CompositeVsWoodPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema url="https://ldndecks.com/composite-deck-vs-wood-deck-virginia" name="Composite vs Wood Deck: 2026 Virginia Cost Comparison" description="Is composite decking cheaper than wood? 15-year total cost analysis for Northern Virginia homeowners. See lifespan, maintenance &amp; ROI head-to-head." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/composite-deck-vs-wood-deck-virginia" name="Composite vs Wood Deck: 2026 Virginia Cost Comparison" description="Is composite decking cheaper than wood? 15-year total cost analysis for Northern Virginia homeowners. See lifespan, maintenance &amp; ROI head-to-head." speakable />
       <ArticleSchema
         title="Composite Deck vs Wood Deck: Complete Virginia Comparison (2026)"
         description="Composite vs wood deck cost, maintenance, lifespan, ROI compared for Virginia homeowners. 15-year total cost analysis."
@@ -174,7 +174,7 @@ export default function CompositeVsWoodPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Not Sure Which Material Fits Your Budget?" buttonText="Get Free Estimate" link="/contact" />
+      <SimpleCTA title="Not Sure Which Material Fits Your Budget?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/composite-deck-vs-wood-deck-virginia" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 

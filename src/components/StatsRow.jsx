@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './StatsRow.module.css';
 
 const statsData = [
-  { value: '100+', label: 'Deck & Fence Build' },
-  { value: '50+', label: 'Qualified Experts' },
-  { value: '30+', label: 'Years of Experience' },
-  { value: '200+', label: 'Happy Customers' }
+  { value: 'DPOR', label: 'License verification' },
+  { value: 'BBB', label: 'Public profile' },
+  { value: 'Trex', label: 'Installer profile' },
+  { value: 'Houzz', label: 'Portfolio profile' }
 ];
 
 export default function StatsRow() {

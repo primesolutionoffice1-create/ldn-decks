@@ -9,6 +9,8 @@ import ServicesHome from '@/components/ServicesHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import CallLink from '@/components/CallLink';
 import NamedAuthor from '@/components/NamedAuthor';
+import JsonLd from '@/components/JsonLd';
+import { BUSINESS, FOUNDER_ID, ORG_ID, WEBSITE_ID } from '@/lib/business';
 import styles from './BlogContent.module.css';
 
 // Pre-render all blog posts at build time for proper indexing
@@ -67,6 +69,99 @@ function renderInline(text, keyPrefix = 'i') {
   return nodes;
 }
 
+function buildArticleAuthor(post) {
+  const authorName = post.author || BUSINESS.name;
+
+  if (authorName.toLowerCase().includes('team')) {
+    return {
+      '@type': 'Organization',
+      '@id': ORG_ID,
+      name: BUSINESS.name,
+      url: BUSINESS.url,
+    };
+  }
+
+  return {
+    '@type': 'Person',
+    '@id': FOUNDER_ID,
+    name: BUSINESS.founder.name,
+    alternateName: 'Nick',
+    url: `${BUSINESS.url}/team`,
+    jobTitle: BUSINESS.founder.jobTitle,
+    worksFor: { '@id': ORG_ID },
+    knowsAbout: BUSINESS.founder.knowsAbout,
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      name: BUSINESS.founder.hasCredential,
+      credentialCategory: 'license',
+    },
+  };
+}
+
+function extractInternalMentions(content) {
+  const seen = new Set();
+  const mentions = [];
+  const linkRegex = /\[([^\]]+)\]\((\/[^)]+)\)/g;
+  let match;
+
+  while ((match = linkRegex.exec(content || '')) !== null) {
+    const [, label, href] = match;
+    if (seen.has(href)) continue;
+    seen.add(href);
+    mentions.push({
+      '@type': 'WebPage',
+      '@id': `${BUSINESS.url}${href}`,
+      name: label,
+      url: `${BUSINESS.url}${href}`,
+    });
+  }
+
+  return mentions;
+}
+
+function buildBlogPostingSchema(post, clampedDate, clampedModifiedDate) {
+  const postUrl = `${BUSINESS.url}/blog/${post.slug}`;
+  const terms = [
+    ...(post.category ? [post.category] : []),
+    ...(post.tags || []),
+  ];
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    '@id': `${postUrl}#article`,
+    isPartOf: { '@id': WEBSITE_ID },
+    headline: post.title,
+    image: [`${BUSINESS.url}${post.image}`],
+    datePublished: clampedDate.toISOString(),
+    dateModified: clampedModifiedDate.toISOString(),
+    author: [buildArticleAuthor(post)],
+    publisher: { '@id': ORG_ID },
+    description: post.excerpt,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': postUrl,
+      url: postUrl,
+    },
+    about: [
+      ...terms.map((name) => ({ '@type': 'DefinedTerm', name })),
+      { '@type': 'Thing', name: 'Northern Virginia deck construction' },
+      { '@type': 'Thing', name: 'Deck planning and outdoor living' },
+    ],
+    mentions: extractInternalMentions(post.content),
+    ...(post.sourceLinks && post.sourceLinks.length
+      ? { citation: post.sourceLinks.map((item) => item.href) }
+      : {}),
+    keywords: terms,
+    isAccessibleForFree: true,
+    inLanguage: 'en-US',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['[data-speakable]', 'h1', 'h2'],
+    },
+  };
+}
+
 export default async function SingleBlogPage({ params }) {
   const resolvedParams = await params;
   const post = blogPosts.find(p => p.slug === resolvedParams.slug);
@@ -78,100 +173,13 @@ export default async function SingleBlogPage({ params }) {
   // Pre-split the content by double newline to render paragraphs cleanly
   const paragraphs = post.content.split('\n\n');
 
-    const postDate = new Date(post.date);
-    const today = new Date();
-    const clampedDate = postDate > today ? today : postDate;
+  const postDate = new Date(post.date);
+  const postModifiedDate = new Date(post.dateModified || post.date);
+  const today = new Date();
+  const clampedDate = postDate > today ? today : postDate;
+  const clampedModifiedDate = postModifiedDate > today ? today : postModifiedDate;
 
-    const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "@id": `https://ldndecks.com/blog/${post.slug}#article`,
-    "isPartOf": { "@id": "https://ldndecks.com/#website" },
-    "headline": post.title,
-    "image": [`https://ldndecks.com${post.image}`],
-    "datePublished": clampedDate.toISOString(),
-    "dateModified": clampedDate.toISOString(),
-    "author": [
-      post.author && post.author.toLowerCase().includes('team')
-        ? {
-            "@type": "Organization",
-            "@id": "https://ldndecks.com/#organization",
-            "name": post.author,
-            "url": "https://ldndecks.com",
-          }
-        : {
-            "@type": "Person",
-            "@id": "https://ldndecks.com/#nick",
-            "name": post.author,
-            "url": "https://ldndecks.com/team",
-            "jobTitle": "Owner & Lead Designer, Loudoun Decks",
-            "worksFor": { "@id": "https://ldndecks.com/#organization" },
-            "hasCredential": [
-              {
-                "@type": "EducationalOccupationalCredential",
-                "name": "Virginia Class A Contractor License",
-                "credentialCategory": "license",
-                "recognizedBy": { "@type": "Organization", "name": "Virginia Department of Professional and Occupational Regulation" },
-              },
-              {
-                "@type": "EducationalOccupationalCredential",
-                "name": "TrexPro Platinum Installer",
-                "credentialCategory": "certification",
-                "recognizedBy": { "@type": "Organization", "name": "Trex Company, Inc." },
-              },
-              {
-                "@type": "EducationalOccupationalCredential",
-                "name": "TimberTech Certified Installer",
-                "credentialCategory": "certification",
-                "recognizedBy": { "@type": "Organization", "name": "AZEK / TimberTech" },
-              },
-            ],
-            "knowsAbout": [
-              "Composite deck construction",
-              "Trex Transcend and Enhance installation",
-              "TimberTech AZEK installation",
-              "Deck structural design and code compliance",
-              "Virginia residential building code USBC",
-              "Northern Virginia HOA architectural review",
-            ],
-          },
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://ldndecks.com/#organization",
-      "name": "Loudoun Decks",
-      "url": "https://ldndecks.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://ldndecks.com/ldndecks-logo.webp"
-      }
-    },
-    "description": post.excerpt,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://ldndecks.com/blog/${post.slug}`
-    },
-    "isAccessibleForFree": true,
-    "inLanguage": "en-US",
-    "speakable": {
-      "@type": "SpeakableSpecification",
-      // CSS modules hash class names in production (e.g. .leadParagraph →
-      // .BlogContent_leadParagraph__abc123), so we cannot reference the
-      // module class directly. Use unhashed data-speakable attributes plus
-      // the always-stable h1/h2 element selectors.
-      "cssSelector": ["[data-speakable]", "h1", "h2"]
-    }
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldndecks.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ldndecks.com/blog" },
-      { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://ldndecks.com/blog/${post.slug}` },
-    ],
-  };
+  const articleSchema = buildBlogPostingSchema(post, clampedDate, clampedModifiedDate);
 
   const faqSchema = post.faq && post.faq.length > 0 ? {
     "@context": "https://schema.org",
@@ -189,20 +197,8 @@ export default async function SingleBlogPage({ params }) {
 
   return (
     <article className={styles.articlePage}>
-       <script
-         type="application/ld+json"
-         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-       />
-       <script
-         type="application/ld+json"
-         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-       />
-       {faqSchema && (
-         <script
-           type="application/ld+json"
-           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-         />
-       )}
+       <JsonLd data={articleSchema} />
+       {faqSchema && <JsonLd data={faqSchema} />}
 
        {/* Hero Image Block */}
        <div className={styles.heroSection}>
@@ -288,9 +284,9 @@ export default async function SingleBlogPage({ params }) {
                  <p>
                    Get a free, no-pressure consultation from a licensed Northern Virginia deck builder. Call{' '}
                    <CallLink style={{ color: 'var(--button-color)', fontWeight: 700 }} />{' '}
-                   or visit <Link href="/contact" style={{ color: 'var(--button-color)', fontWeight: 700 }}>ldndecks.com/contact</Link>.
+                   or visit <Link href="/get-estimate" style={{ color: 'var(--button-color)', fontWeight: 700 }}>ldndecks.com/get-estimate</Link>.
                  </p>
-                 <Link href="/contact" className={styles.ctaBtn}>Get a Free Estimate</Link>
+                 <Link href="/get-estimate" className={styles.ctaBtn}>Get a Free Estimate</Link>
                </div>
              </div>
           </div>

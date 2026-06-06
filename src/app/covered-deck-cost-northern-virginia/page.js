@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   path: '/covered-deck-cost-northern-virginia',
   title: 'Covered Deck Cost in Northern Virginia: 2026 Budget Guide',
   description: 'Covered deck cost in Northern Virginia: $35,000–$85,000+ depending on roof type, size, and finishes. Per-tier pricing plus monthly payment examples.',
-  image: '/showcase/img16.jpeg',
+  image: '/social/covered-deck-cost-northern-virginia-social.png',
 });
 
 const PATH = '/covered-deck-cost-northern-virginia';
@@ -115,7 +115,7 @@ export default function CoveredDeckCostPage() {
         datePublished="2026-05-27"
         dateModified="2026-05-27"
       />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name="Covered Deck Cost in Northern Virginia: 2026 Budget Guide" description="Covered deck cost in Northern Virginia: $35,000–$85,000+ depending on roof type, size, and finishes. Per-tier pricing plus monthly payment examples." speakable />
+      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Covered Deck Cost in Northern Virginia: 2026 Budget Guide" description="Covered deck cost in Northern Virginia: $35,000–$85,000+ depending on roof type, size, and finishes. Per-tier pricing plus monthly payment examples." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -126,7 +126,7 @@ export default function CoveredDeckCostPage() {
             Covered Deck Cost and Payment Planning in Northern Virginia
           </h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: 1.6 }}>
-            Pergola, solid roof, full hip roof, or screened porch — pricing by roof type, total project examples, and
+            Pergola, solid roof, full hip roof, or screened porch — pricing by roof type, total planning examples, and
             matching monthly payment ranges for Northern Virginia homeowners.
           </p>
         </div>
@@ -150,7 +150,7 @@ export default function CoveredDeckCostPage() {
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
             </Link>{' '}
-            for the exact monthly number.
+            for a planning monthly estimate.
           </p>
         </div>
       </section>
@@ -282,7 +282,7 @@ export default function CoveredDeckCostPage() {
         </div>
       </article>
 
-      <SimpleCTA title="Plan a Covered Deck Budget" buttonText="Get Free Written Estimate" link="/contact" />
+      <SimpleCTA title="Plan a Covered Deck Budget" buttonText="Get Free Written Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />

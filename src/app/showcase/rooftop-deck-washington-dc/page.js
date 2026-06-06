@@ -13,14 +13,14 @@ export async function generateMetadata() {
     path: '/showcase/rooftop-deck-washington-dc',
     title: 'Rooftop Deck Construction Washington DC | Custom Outdoor Living',
     description: 'Premier rooftop deck builder in Washington DC. See our latest custom rooftop construction featuring premium materials, structural engineering, and stunning city views.',
-    image: '/showcase/img07.jpeg',
+    image: '/social/rooftop-deck-washington-dc-social.png',
   });
 }
 
 export default function RooftopDCPage() {
   return (
     <main className={styles.projectMain}>
-      <WebPageSchema url="https://ldndecks.com/showcase/rooftop-deck-washington-dc" name="Rooftop Deck Construction Washington DC | Custom Outdoor Living" description="Premier rooftop deck builder in Washington DC. See our latest custom rooftop construction featuring premium materials, structural engineering, and stunning city views." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/showcase/rooftop-deck-washington-dc" name="Rooftop Deck Construction Washington DC | Custom Outdoor Living" description="Premier rooftop deck builder in Washington DC. See our latest custom rooftop construction featuring premium materials, structural engineering, and stunning city views." speakable />
       <section className={styles.hero}>
         <div className={styles.container}>
           <Link href="/showcase" className={styles.backLink}>← Back to Showcase</Link>
@@ -51,7 +51,7 @@ export default function RooftopDCPage() {
                   <li><strong>Type:</strong> Rooftop Outdoor Living</li>
                   <li><strong>Status:</strong> Completed</li>
                 </ul>
-                <Link href="/contact" className={styles.ctaButton}>Get a Rooftop Deck Quote</Link>
+                <Link href="/get-estimate" className={styles.ctaButton}>Get a Rooftop Deck Quote</Link>
               </div>
             </div>
           </div>

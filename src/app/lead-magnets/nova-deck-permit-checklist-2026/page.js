@@ -1,9 +1,11 @@
 import { buildMetadata } from '@/lib/seo';
+import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/lead-magnets/nova-deck-permit-checklist-2026',
   title: '2026 NoVA Deck Permit Checklist — Printable Guide',
   description: 'Free printable 2026 Northern Virginia deck permit checklist covering Loudoun, Fairfax, Prince William, and Arlington counties. HOA review, site plan, footings, framing, final inspection.',
+  image: '/social/nova-deck-permit-checklist-social.png',
   noIndex: true,
 });
 
@@ -118,7 +120,7 @@ export default function NovaPermitChecklist2026() {
 
       <H2>What Loudoun Decks does differently</H2>
       <p>We file the county permit and the HOA architectural package in parallel from contract day. We&apos;ve handled the review process in every major NoVA HOA — packets typically clear first-round review because we maintain current submission templates per community. We also coordinate all three inspections (footing, framing, final) so you never have to be the inspection scheduler.</p>
-      <p>Call us at <a href="tel:5716557207">(571) 655-7207</a> or visit <a href="https://ldndecks.com/contact">ldndecks.com/contact</a> for a free 3D design consultation. Bring this checklist with you and we&apos;ll work through every line item together.</p>
+      <p>Call us at <CallLink>(571) 655-7207</CallLink> or visit <a href="https://ldndecks.com/get-estimate">ldndecks.com/get-estimate</a> for a free 3D design consultation. Bring this checklist with you and we&apos;ll work through every line item together.</p>
 
       <footer style={{ marginTop: 32, paddingTop: 16, borderTop: '1px solid #ccc', fontSize: 11, color: '#666' }}>
         <p style={{ margin: '4px 0' }}>© 2026 Loudoun Decks · 14140 Parke Long Ct, Suite K, Chantilly, VA 20151 · Virginia Class A Contractor</p>

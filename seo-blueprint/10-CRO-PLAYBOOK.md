@@ -6,7 +6,7 @@ You drive premium leads on a luxury-tier brand. Generic CRO doesn't apply: you d
 
 ## Core CRO principles for luxury home improvement
 
-1. **Trust before pricing.** Don't lead with $/sq ft; lead with TrexPro Platinum, Class A, 5.0★, and visible NAP.
+1. **Trust before pricing.** Don't lead with $/sq ft; lead with Class A license verification, manufacturer profile links, public review profiles, and visible NAP.
 2. **Reduce decision friction, not contact friction.** Give them tools to decide before requesting contact (calculators, comparisons, photos), then make the contact step low-friction.
 3. **One primary CTA per page.** "Get a Free Estimate" everywhere. Phone CTA is secondary.
 4. **Premium feel = white space, real photos, named projects.** No stock images. No clip-art badges.
@@ -103,7 +103,7 @@ You have multiple trust signals scattered. Consolidate into 4 reusable modules:
 Below the H1 + CTA, single line:
 
 ```
-TrexPro Platinum  ·  Class A Virginia  ·  5.0★ from 41+ Reviews  ·  BBB A+
+Class A Virginia · Manufacturer profile links · Public review profiles · BBB verification
 ```
 
 Make each segment a tooltip/link to the proof.
@@ -111,15 +111,15 @@ Make each segment a tooltip/link to the proof.
 ### Module 2: Mid-page trust block (3-up)
 
 Three cards with icons:
-1. 🏅 **Top-Tier Trex** — "TrexPro Platinum certified, fewer than 2% qualify."
+1. 🏅 **Manufacturer profile verification** — "Link to current Trex and TimberTech profile pages instead of hardcoding tier rarity."
 2. 📋 **Permit-Handled** — "Class A Virginia license; we submit every permit."
-3. ⭐ **Loved Locally** — "5.0★ Google rating from 41+ NoVA homeowners."
+3. ⭐ **Public review profiles** — "Verify current Google, BBB, Houzz, Yelp, and other public review profile details at the source."
 
 Place after the H2 "Why Northern Virginia Homeowners Choose Loudoun Decks" on every commercial page.
 
 ### Module 3: Visual badge row
 
-Logo strip with 5–6 badges (TrexPro Platinum, Class A, BBB A+, NADRA member, NARI member, Houzz Pro). Below the trust block. Each links to the respective directory profile.
+Logo strip with 5–6 badges (manufacturer profile links, Class A, BBB verification, NADRA member if current, NARI member if current, Houzz Pro). Below the trust block. Each links to the respective directory profile.
 
 ### Module 4: Review excerpt block
 
@@ -224,7 +224,7 @@ Review Clarity once weekly for the first month, then biweekly.
 ```
 /trex-vs-timbertech-vs-azek
   → reads comparison
-  → clicks "We're TrexPro Platinum, here's our composite deck service" (linked anchor in body)
+  → clicks "Here is how we compare composite deck options" (linked anchor in body)
   → /composite-decks
   → reads service page
   → clicks "Get My Composite Deck Estimate" (hero or end)
@@ -266,7 +266,7 @@ Review Clarity once weekly for the first month, then biweekly.
 
 Once Clarity is collecting data:
 
-1. **Headline test on homepage**: "Northern Virginia's TrexPro Platinum Deck Builder" vs current. Measure: estimate-form submissions.
+1. **Headline test on homepage**: "Northern Virginia Deck Builder" vs a material-focused variant. Measure: estimate-form submissions.
 2. **Form field count**: 5 fields vs 7 fields on `/get-estimate`. Measure: submission rate vs lead quality (manual review).
 3. **Trust-strip placement**: above CTA vs below CTA. Measure: scroll depth + click-through to gallery.
 4. **CTA copy**: "Get My Free Estimate" vs "Schedule My Free Consultation" vs "Get a 24-Hour Quote". Measure: click rate.
@@ -307,7 +307,7 @@ This single feature beats every NoVA competitor on financing transparency — th
 | Stage | What they want to see |
 |---|---|
 | TOFU (blog, cost guides) | Author bio + Person schema (you have NamedAuthor) |
-| MOFU (service pages, comparisons) | TrexPro Platinum + Class A + 5.0★ + warranty + financing |
+| MOFU (service pages, comparisons) | Class A + manufacturer profile links + public review profiles + verified warranty terms + financing disclosures |
 | BOFU (city pages, get-estimate) | Local proof: HOA approvals, named projects in their city, named customer quotes |
 | Post-conversion (thank-you) | "What happens next" timeline + trust reinforcement + optional second-step form |
 
