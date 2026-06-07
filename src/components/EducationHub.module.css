@@ -128,6 +128,92 @@
   gap: 18px;
 }
 
+.learningPath {
+  background: #f7f4ed;
+  border: 1px solid #e8dfd1;
+  border-radius: 8px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+  margin: 0 0 24px;
+  padding: 24px;
+}
+
+.learningPathIntro {
+  align-self: center;
+}
+
+.learningPathTitle {
+  color: #111;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.learningPathCopy {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.learningPathSteps {
+  display: grid;
+  gap: 10px;
+}
+
+.learningPathStep {
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #e8dfd1;
+  border-radius: 8px;
+  color: inherit;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: auto minmax(0, 1fr);
+  padding: 14px;
+  text-decoration: none;
+}
+
+.learningPathStep:hover {
+  border-color: var(--site-color);
+}
+
+.learningPathNumber {
+  align-items: center;
+  background: var(--site-color);
+  border-radius: 999px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 900;
+  height: 34px;
+  justify-content: center;
+  line-height: 1;
+  width: 34px;
+}
+
+.learningPathStepBody {
+  display: block;
+  min-width: 0;
+}
+
+.learningPathStepTitle {
+  color: #111;
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+
+.learningPathStepDesc {
+  color: #666;
+  display: block;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .clusterCard {
   border: 1px solid #e8e4dc;
   border-radius: 8px;
@@ -381,6 +467,10 @@
     grid-template-columns: 1fr;
   }
 
+  .learningPath {
+    grid-template-columns: 1fr;
+  }
+
   .routeGrid {
     grid-template-columns: 1fr;
   }
@@ -458,6 +548,14 @@
     padding: 20px;
   }
 
+  .learningPath {
+    padding: 18px;
+  }
+
+  .learningPathTitle {
+    font-size: 21px;
+  }
+
   .routePanel {
     padding: 20px;
   }
@@ -468,6 +566,7 @@
 
   .sectionCopy,
   .clusterDesc,
+  .learningPathCopy,
   .routeCopy,
   .leadCtaCopy,
   .leadQualifier,

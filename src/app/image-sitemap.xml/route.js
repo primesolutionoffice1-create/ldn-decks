@@ -46,6 +46,8 @@ export async function GET() {
     { page: '/before-and-after', image: '/images/img04.jpeg', title: 'Before and After Deck Transformations Northern Virginia' },
     { page: '/deck-permit-loudoun-county-virginia', image: '/images/img20.jpeg', title: 'Loudoun County Deck Permit Guide 2026' },
     { page: '/get-estimate', image: '/images/img36.jpeg', title: 'Free Deck Estimate LDN Decks Northern Virginia' },
+    { page: '/blog/why-composite-trex-decking-fades-sun-solutions', image: '/images/composite-deck-faded-vs-restored-before-after.png', title: 'Composite Deck Faded vs Restored Before and After' },
+    { page: '/blog/why-composite-trex-decking-fades-sun-solutions', image: '/images/composite-deck-sun-fade-field-photos.png', title: 'Composite Deck Sun Fading Field Photos' },
   ];
 
   for (const ci of contentImages) {

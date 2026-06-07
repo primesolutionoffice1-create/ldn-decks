@@ -78,6 +78,39 @@ const CLUSTERS = [
   },
 ];
 
+const FADING_LEARNING_PATH = [
+  {
+    step: '01',
+    title: 'Why does it fade?',
+    desc: 'Start with UV exposure, heat cycling, oxidation, staining and the difference between normal weathering and real board damage.',
+    href: '/blog/why-composite-trex-decking-fades-sun-solutions',
+  },
+  {
+    step: '02',
+    title: 'How to restore it?',
+    desc: 'Check whether the deck needs professional cleaning, brightening, spot treatment, board replacement or resurfacing.',
+    href: '/blog/how-to-restore-faded-composite-decking',
+  },
+  {
+    step: '03',
+    title: 'Trex vs TimberTech fade resistance',
+    desc: 'Compare Trex, TimberTech and AZEK for full-sun Northern Virginia decks before choosing a board line.',
+    href: '/blog/trex-vs-timbertech-fade-resistance-comparison',
+  },
+  {
+    step: '04',
+    title: 'Best colors for full sun',
+    desc: 'Use lighter colors, cooler tones and smarter picture-frame design to reduce heat and visible fading.',
+    href: '/blog/best-composite-deck-colors-full-sun-northern-virginia',
+  },
+  {
+    step: '05',
+    title: 'Resurface vs replace',
+    desc: 'Decide whether the surface can be renewed or whether the frame, ledger, footings or layout require replacement.',
+    href: '/blog/resurface-vs-replace-composite-deck-guide',
+  },
+];
+
 const LOCAL_GUIDES = [
   { label: 'Ashburn', href: '/deck-builder-ashburn-va' },
   { label: 'Leesburg', href: '/deck-builder-leesburg-va' },
@@ -130,6 +163,29 @@ export function EducationClusterNav() {
             repairs, covered outdoor living or design planning. Each path routes homeowners toward
             clearer research, stronger project decisions and the right estimate step.
           </p>
+        </div>
+        <div className={styles.learningPath} aria-labelledby="composite-fading-learning-path">
+          <div className={styles.learningPathIntro}>
+            <p className={styles.sectionEyebrow}>Composite deck fading learning path</p>
+            <h3 id="composite-fading-learning-path" className={styles.learningPathTitle}>
+              Diagnose fading before you clean, resurface or replace
+            </h3>
+            <p className={styles.learningPathCopy}>
+              Follow the sequence homeowners need in the field: identify the fading pattern, test restoration,
+              compare materials, choose full-sun colors, then decide whether resurfacing or replacement makes sense.
+            </p>
+          </div>
+          <div className={styles.learningPathSteps}>
+            {FADING_LEARNING_PATH.map((item) => (
+              <Link className={styles.learningPathStep} href={item.href} key={item.href}>
+                <span className={styles.learningPathNumber}>{item.step}</span>
+                <span className={styles.learningPathStepBody}>
+                  <span className={styles.learningPathStepTitle}>{item.title}</span>
+                  <span className={styles.learningPathStepDesc}>{item.desc}</span>
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
         <div className={styles.clusterGrid}>
           {CLUSTERS.map((cluster) => (
