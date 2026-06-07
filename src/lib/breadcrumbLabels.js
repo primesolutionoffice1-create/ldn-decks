@@ -217,6 +217,12 @@ export const SEGMENT_LABELS = {
   'sully-station-hoa-deck-rules': 'Sully Station HOA Deck Rules',
   'virginia-run-hoa-deck-rules': 'Virginia Run HOA Deck Rules',
 
+  // Service category hubs (city page path segments)
+  'outdoor-living': 'Outdoor Living',
+  'pergolas': 'Pergolas & Gazebos',
+  'screened-porches': 'Screened Porches',
+  'service': 'Services',
+
   // Lead-magnet pages
   'lead-magnets': 'Lead Magnets',
   'nova-deck-permit-checklist-2026': 'NoVA Deck Permit Checklist 2026',
