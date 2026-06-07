@@ -32,6 +32,21 @@ const CLUSTERS = [
     href: '/blog/why-composite-trex-decking-fades-sun-solutions',
   },
   {
+    title: 'How to Restore Faded Composite Decking',
+    desc: 'Learn when cleaning, brightening, spot treatment or resurfacing can improve a faded composite deck.',
+    href: '/blog/how-to-restore-faded-composite-decking',
+  },
+  {
+    title: 'Trex vs TimberTech Fade Resistance',
+    desc: 'Compare Trex, TimberTech and AZEK fade resistance for full-sun Northern Virginia deck projects.',
+    href: '/blog/trex-vs-timbertech-fade-resistance-comparison',
+  },
+  {
+    title: 'Best Composite Deck Colors for Full Sun',
+    desc: 'Choose lighter, cooler, more fade-resistant composite deck colors for exposed south- and west-facing decks.',
+    href: '/blog/best-composite-deck-colors-full-sun-northern-virginia',
+  },
+  {
     title: 'Covered Decks & Outdoor Living',
     desc: 'Explore covered decks, screened porches, under-deck drainage, lighting and comfort upgrades as one complete outdoor plan.',
     href: '/covered-deck-builder-northern-virginia',
@@ -40,6 +55,11 @@ const CLUSTERS = [
     title: 'Deck Repairs & Resurfacing',
     desc: 'Decide when resurfacing, structural repair or full replacement is the better path for an aging Northern Virginia deck.',
     href: '/deck-resurfacing-vs-replacement',
+  },
+  {
+    title: 'Resurface vs Replace Composite Deck',
+    desc: 'Use a practical inspection framework to decide whether an older composite deck needs resurfacing or full replacement.',
+    href: '/blog/resurface-vs-replace-composite-deck-guide',
   },
   {
     title: 'Trex vs TimberTech vs AZEK',
