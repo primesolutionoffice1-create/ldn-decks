@@ -58,6 +58,18 @@ Money-page links were added from:
 | Before-after image in image sitemap | Present |
 | Field-photo collage in image sitemap | Present |
 | GSC / Bing Webmaster indexing status | Blocked until read-only access or owner export is available |
+| Public search visibility | Exact new slugs not surfaced yet on 2026-06-07; expected for same-day pages |
+
+## Indexing Action Log - 2026-06-07
+
+| Channel | Status | Notes |
+|---|---|---|
+| Sitemap discovery | Complete | All five blog URLs are present in `/sitemap.xml`. |
+| Canonical discovery | Complete | All five URLs return `200` and self-referencing canonical tags. |
+| Image discovery | Complete | Both real field-photo assets are present in `/image-sitemap.xml`. |
+| IndexNow | Complete | Narrow five-URL submission accepted with `HTTP 200`; do not resubmit unless URLs change or owner approves a new exact batch. |
+| Google Search Console | Pending access | Need read-only URL Inspection / Performance access or owner screenshots/export. |
+| Bing Webmaster Tools | Pending access | Need read-only verified-site access or owner screenshots/export. |
 
 ## 7 / 14 / 30 Day Review Fields
 
