@@ -27,6 +27,11 @@ const CLUSTERS = [
     href: '/education/deck-material-comparison-2026',
   },
   {
+    title: 'Composite Deck Fading & Restoration',
+    desc: 'See real sun-faded composite deck photos, before-and-after restoration examples, and when to clean, resurface or replace.',
+    href: '/blog/why-composite-trex-decking-fades-sun-solutions',
+  },
+  {
     title: 'Covered Decks & Outdoor Living',
     desc: 'Explore covered decks, screened porches, under-deck drainage, lighting and comfort upgrades as one complete outdoor plan.',
     href: '/covered-deck-builder-northern-virginia',
