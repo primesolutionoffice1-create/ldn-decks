@@ -24,7 +24,7 @@ Date created: 2026-06-07
 | 2026-06-07 | Field photos added to article | Commit `50cade9` |
 | 2026-06-07 | Education hub cards added | Commits `4afee38`, `942ed1e` |
 | 2026-06-07 | Money-page internal links added | Commit `34ba822` |
-| 2026-06-07 | Education Learning Path + image sitemap + social drafts | Pending current commit |
+| 2026-06-07 | Education Learning Path + image sitemap + social drafts | Commit `fce2342` |
 
 ## Internal Links Added
 
@@ -46,6 +46,18 @@ Money-page links were added from:
 |---|---|---|
 | `/images/composite-deck-faded-vs-restored-before-after.png` | Hero + inline article image | Alt text present; image sitemap entry added |
 | `/images/composite-deck-sun-fade-field-photos.png` | Inline diagnostic article image | Alt text present; image sitemap entry added |
+
+## Live Read-Only Verification - 2026-06-07
+
+| Check | Result |
+|---|---|
+| Five blog URLs | `200` live |
+| Canonical tags | Present and self-referencing on all five URLs |
+| `/sitemap.xml` | `200` live |
+| `/image-sitemap.xml` | `200` live |
+| Before-after image in image sitemap | Present |
+| Field-photo collage in image sitemap | Present |
+| GSC / Bing Webmaster indexing status | Blocked until read-only access or owner export is available |
 
 ## 7 / 14 / 30 Day Review Fields
 
