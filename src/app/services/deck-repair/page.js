@@ -160,7 +160,12 @@ export default function DeckRepairPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Repair Decision Resources</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {[
+            ['/blog/how-to-restore-faded-composite-decking', 'How to Restore Faded Composite Decking'],
+            ['/blog/why-composite-trex-decking-fades-sun-solutions', 'Why Composite and Trex Decking Fades in the Sun'],
+            ['/blog/resurface-vs-replace-composite-deck-guide', 'Resurface vs Replace a Composite Deck'],
             ['/deck-resurfacing-vs-replacement', 'Resurfacing vs Full Replacement'],
+            ['/blog/resurface-vs-replace-composite-deck-guide', 'When to Resurface vs Replace Composite Decking'],
+            ['/blog/why-composite-trex-decking-fades-sun-solutions', 'Composite Deck Fading: Causes and Solutions'],
             ['/services/deck-replacement', 'Full Deck Replacement'],
             ['/services/deck-resurfacing', 'Deck Resurfacing'],
             ['/deck-cost-calculator', 'Free Deck Cost Calculator'],

@@ -164,9 +164,15 @@ export default function TrexVsTimberTechPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
+              ['/blog/trex-vs-timbertech-fade-resistance-comparison', 'Trex vs TimberTech Fade Resistance'],
+              ['/blog/best-composite-deck-colors-full-sun-northern-virginia', 'Best Composite Deck Colors for Full Sun'],
+              ['/blog/why-composite-trex-decking-fades-sun-solutions', 'Why Composite Decking Fades in the Sun'],
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
               ['/trex-deck-cost-monthly-payment', 'Trex Deck Cost vs Monthly Payment (by tier)'],
               ['/timbertech-azek-deck-cost-northern-virginia', 'TimberTech & AZEK Deck Cost (EDGE / PRO / Vintage)'],
+              ['/blog/trex-vs-timbertech-fade-resistance-comparison', 'Trex vs TimberTech Fade Resistance in Full Sun'],
+              ['/blog/best-composite-deck-colors-full-sun-northern-virginia', 'Best Composite Deck Colors for Full Sun'],
+              ['/blog/why-composite-trex-decking-fades-sun-solutions', 'Why Composite Decking Fades in the Sun'],
               ['/composite-decks', 'Composite Deck Builder in Northern Virginia'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck Complete Comparison'],
               ['/wood-vs-composite-deck-long-term-cost', 'Wood vs Composite — 15-Year Long-Term Cost'],

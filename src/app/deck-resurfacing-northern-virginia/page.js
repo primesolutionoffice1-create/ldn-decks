@@ -281,8 +281,14 @@ export default function DeckResurfacingNorthernVirginiaPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
+              ['/blog/resurface-vs-replace-composite-deck-guide', 'Resurface vs Replace a Faded Composite Deck'],
+              ['/blog/how-to-restore-faded-composite-decking', 'How to Restore Faded Composite Decking'],
+              ['/blog/why-composite-trex-decking-fades-sun-solutions', 'Why Composite Decking Fades in the Sun'],
               ['/services/deck-resurfacing', 'Deck Resurfacing Service Details'],
               ['/deck-resurfacing-vs-replacement', 'Resurfacing vs Full Replacement'],
+              ['/blog/how-to-restore-faded-composite-decking', 'How to Restore Faded Composite Decking'],
+              ['/blog/resurface-vs-replace-composite-deck-guide', 'When to Resurface vs Replace a Composite Deck'],
+              ['/blog/why-composite-trex-decking-fades-sun-solutions', 'Why Composite Decking Fades in the Sun'],
               ['/resurface-or-replace-deck-financing', 'Resurface or Replace Before Financing? (cost math)'],
               ['/services/deck-replacement', 'Full Deck Replacement'],
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia'],

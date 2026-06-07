@@ -161,9 +161,15 @@ export default function DeckMaintenancePage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
+              ['/blog/why-composite-trex-decking-fades-sun-solutions', 'Why Composite and Trex Decking Fades in the Sun'],
+              ['/blog/how-to-restore-faded-composite-decking', 'How to Restore Faded Composite Decking'],
+              ['/blog/best-composite-deck-colors-full-sun-northern-virginia', 'Best Composite Deck Colors for Full Sun'],
               ['/deck-staining-northern-virginia', 'Deck Staining Services'],
               ['/services/deck-washing', 'Deck Washing Services'],
               ['/services/deck-repair', 'Deck Repair Services'],
+              ['/blog/why-composite-trex-decking-fades-sun-solutions', 'Why Composite Decking Fades in the Sun'],
+              ['/blog/how-to-restore-faded-composite-decking', 'How to Restore Faded Composite Decking'],
+              ['/blog/best-composite-deck-colors-full-sun-northern-virginia', 'Best Composite Deck Colors for Full Sun'],
               ['/how-long-does-a-composite-deck-last', 'How Long Does a Composite Deck Last?'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood'],
               ['/services/deck-inspection', 'Deck Inspection Services'],

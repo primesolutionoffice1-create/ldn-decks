@@ -276,6 +276,8 @@ export default function TimberTechDecksPage() {
             ['/trex-decks', 'Trex Decks'],
             ['/composite-decks', 'Composite Decks'],
             ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
+            ['/blog/trex-vs-timbertech-fade-resistance-comparison', 'Trex vs TimberTech Fade Resistance'],
+            ['/blog/best-composite-deck-colors-full-sun-northern-virginia', 'Best Colors for Full Sun'],
             ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost'],
             ['/deck-builder-northern-virginia', 'Northern Virginia Deck Builder'],
             ['/deck-payment-estimator', 'Deck Payment Estimator'],
@@ -305,8 +307,13 @@ export default function TimberTechDecksPage() {
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>TimberTech &amp; AZEK Pricing</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/trex-vs-timbertech-fade-resistance-comparison" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech Fade Resistance Comparison →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/best-composite-deck-colors-full-sun-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Best TimberTech and Composite Colors for Full Sun →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/why-composite-trex-decking-fades-sun-solutions" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Why Composite Decking Fades in the Sun →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/timbertech-azek-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>TimberTech &amp; AZEK Deck Cost in Northern Virginia (EDGE / PRO / Vintage tiers) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK Comparison →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/trex-vs-timbertech-fade-resistance-comparison" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech Fade Resistance →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/why-composite-trex-decking-fades-sun-solutions" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Why Composite Decking Fades in the Sun →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full Composite Deck Cost in Northern Virginia →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>

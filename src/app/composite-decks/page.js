@@ -220,8 +220,18 @@ export default function CompositeDecksPage() {
       <RelatedGuides currentPath="/composite-decks" />
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Composite Material Decision Guides</h2>
+        <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
+          If sun exposure, color choice, or an older faded surface is part of the project, start with our composite fading
+          guide cluster before choosing boards or deciding between cleaning, resurfacing, and replacement.
+        </p>
         <ul style={{ listStyle: 'none', padding: 0 }}>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/why-composite-trex-decking-fades-sun-solutions" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Why Composite and Trex Decking Fades in the Sun →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/best-composite-deck-colors-full-sun-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Best Composite Deck Colors for Full Sun in Northern Virginia →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/how-to-restore-faded-composite-decking" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How to Restore Faded Composite Decking →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK Comparison →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/why-composite-trex-decking-fades-sun-solutions" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Why Composite Decking Fades in Full Sun →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/best-composite-deck-colors-full-sun-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Best Composite Deck Colors for Full Sun →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/trex-vs-timbertech-fade-resistance-comparison" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech Fade Resistance →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Cost in Northern Virginia →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Resurfacing vs Full Deck Replacement →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-materials-comparison-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Material Comparison for Virginia Homes →</Link></li>
