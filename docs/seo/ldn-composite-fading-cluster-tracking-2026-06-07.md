@@ -57,7 +57,8 @@ Money-page links were added from:
 | `/image-sitemap.xml` | `200` live |
 | Before-after image in image sitemap | Present |
 | Field-photo collage in image sitemap | Present |
-| GSC / Bing Webmaster indexing status | Blocked until read-only access or owner export is available |
+| GSC indexing status | Verified in Search Console on 2026-06-08: all five URLs show `URL is on Google` and `Page is indexed` |
+| Bing Webmaster indexing status | IndexNow accepted `HTTP 200`; Bing Webmaster UI/API status not separately verified |
 | Public search visibility | Exact new slugs not surfaced yet on 2026-06-07; expected for same-day pages |
 
 ## Indexing Action Log - 2026-06-07
@@ -68,8 +69,18 @@ Money-page links were added from:
 | Canonical discovery | Complete | All five URLs return `200` and self-referencing canonical tags. |
 | Image discovery | Complete | Both real field-photo assets are present in `/image-sitemap.xml`. |
 | IndexNow | Complete | Narrow five-URL submission accepted with `HTTP 200`; do not resubmit unless URLs change or owner approves a new exact batch. |
-| Google Search Console | Pending access | Need read-only URL Inspection / Performance access or owner screenshots/export. |
-| Bing Webmaster Tools | Pending access | Need read-only verified-site access or owner screenshots/export. |
+| Google Search Console | Complete | Chrome-authenticated GSC URL Inspection verified all five URLs as `URL is on Google` / `Page is indexed` on 2026-06-08. |
+| Bing Webmaster Tools | Partial complete | IndexNow accepted the five-URL payload with `HTTP 200`; no separate Bing Webmaster UI/API crawl-status verification was available. |
+
+## Google Search Console URL Inspection - 2026-06-08
+
+| URL | GSC status |
+|---|---|
+| https://ldndecks.com/blog/why-composite-trex-decking-fades-sun-solutions | `URL is on Google`; `Page is indexed` |
+| https://ldndecks.com/blog/how-to-restore-faded-composite-decking | `URL is on Google`; `Page is indexed` |
+| https://ldndecks.com/blog/trex-vs-timbertech-fade-resistance-comparison | `URL is on Google`; `Page is indexed` |
+| https://ldndecks.com/blog/best-composite-deck-colors-full-sun-northern-virginia | `URL is on Google`; `Page is indexed` |
+| https://ldndecks.com/blog/resurface-vs-replace-composite-deck-guide | `URL is on Google`; `Page is indexed` |
 
 ## 7 / 14 / 30 Day Review Fields
 
