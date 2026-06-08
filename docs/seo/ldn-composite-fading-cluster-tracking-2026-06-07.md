@@ -25,6 +25,8 @@ Date created: 2026-06-07
 | 2026-06-07 | Education hub cards added | Commits `4afee38`, `942ed1e` |
 | 2026-06-07 | Money-page internal links added | Commit `34ba822` |
 | 2026-06-07 | Education Learning Path + image sitemap + social drafts | Commit `fce2342` |
+| 2026-06-08 | Google Search Console indexing verified | Commit `365772c`; all five URLs indexed |
+| 2026-06-08 | Pinterest Pin 1 published | https://www.pinterest.com/pin/1058838562408988374 |
 
 ## Internal Links Added
 
@@ -46,6 +48,7 @@ Money-page links were added from:
 |---|---|---|
 | `/images/composite-deck-faded-vs-restored-before-after.png` | Hero + inline article image | Alt text present; image sitemap entry added |
 | `/images/composite-deck-sun-fade-field-photos.png` | Inline diagnostic article image | Alt text present; image sitemap entry added |
+| `/images/composite-deck-faded-vs-restored-pinterest-pin.png` | Pinterest Pin 1 | 1000x1500 Pinterest-optimized crop; published 2026-06-08 |
 
 ## Live Read-Only Verification - 2026-06-07
 
@@ -71,6 +74,12 @@ Money-page links were added from:
 | IndexNow | Complete | Narrow five-URL submission accepted with `HTTP 200`; do not resubmit unless URLs change or owner approves a new exact batch. |
 | Google Search Console | Complete | Chrome-authenticated GSC URL Inspection verified all five URLs as `URL is on Google` / `Page is indexed` on 2026-06-08. |
 | Bing Webmaster Tools | Partial complete | IndexNow accepted the five-URL payload with `HTTP 200`; no separate Bing Webmaster UI/API crawl-status verification was available. |
+
+## Distribution Log
+
+| Date | Channel | Item | Status | URL |
+|---|---|---|---|---|
+| 2026-06-08 | Pinterest | Pin 1 - Why Composite Decking Fades in the Sun | Published | https://www.pinterest.com/pin/1058838562408988374 |
 
 ## Google Search Console URL Inspection - 2026-06-08
 

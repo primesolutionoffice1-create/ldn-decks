@@ -4,18 +4,25 @@ Company: LDN Decks only
 Date: 2026-06-07
 Primary URL: https://ldndecks.com/blog/why-composite-trex-decking-fades-sun-solutions
 
+Update 2026-06-08: Pinterest Pin 1 was owner-approved and published.
+Live pin: https://www.pinterest.com/pin/1058838562408988374
+
 Do not publish, boost, schedule, send, or post live without explicit owner approval for the exact channel and draft.
 
 ## Asset Notes
 
 - Hero / before-after image: `/images/composite-deck-faded-vs-restored-before-after.png`
 - Field-photo collage: `/images/composite-deck-sun-fade-field-photos.png`
+- Pinterest-optimized before-after image: `/images/composite-deck-faded-vs-restored-pinterest-pin.png`
 - Use the before-after image for high-click visual posts.
 - Use the field-photo collage for education / diagnostic posts.
 
 ## Pinterest Pin Drafts
 
 ### Pin 1 - Main Problem
+
+Status: published 2026-06-08
+Live pin: https://www.pinterest.com/pin/1058838562408988374
 
 Title: Why Composite Decking Fades in the Sun
 

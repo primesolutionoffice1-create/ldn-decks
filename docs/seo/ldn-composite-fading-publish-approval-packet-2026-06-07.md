@@ -1,7 +1,10 @@
 # LDN Decks - Composite Fading Publish Approval Packet
-Status: needs-owner-approval / do-not-publish-live
+Status: partially published / remaining channels need-owner-approval
 Company: LDN Decks only
 Date: 2026-06-07
+
+Update 2026-06-08: Pinterest Pin 1 was owner-approved and published.
+Live pin: https://www.pinterest.com/pin/1058838562408988374
 
 ## Current State
 
@@ -18,13 +21,19 @@ Date: 2026-06-07
 
 Use this first because Pinterest rewards vertical, visual, problem-solution home improvement content and the before/after image is the strongest proof asset.
 
+Status: published 2026-06-08
+
+Live pin: https://www.pinterest.com/pin/1058838562408988374
+
 Title: Why Composite Decking Fades in the Sun
 
 Description: Composite decking can look washed out after years of UV exposure, heat, pollen, oxidation or surface buildup. See real before-and-after photos and learn when cleaning, restoration, resurfacing or replacement makes sense.
 
 Destination: https://ldndecks.com/blog/why-composite-trex-decking-fades-sun-solutions
 
-Image: `/images/composite-deck-faded-vs-restored-before-after.png`
+Image: `/images/composite-deck-faded-vs-restored-pinterest-pin.png`
+
+Alt text: Before-and-after composite deck boards showing sun-faded untreated decking beside a darker treated and restored section on a Northern Virginia deck.
 
 ### 2. Facebook / Instagram before-after post - second
 
@@ -67,6 +76,8 @@ Expected impact: More discovery for composite deck fading, restoration, resurfac
 Risk level: LOW.
 Rollback plan: Delete or edit the Pinterest pin.
 Approval required: YES
+
+Status: completed 2026-06-08.
 
 ## Approval Gate - Facebook / Instagram Post
 
