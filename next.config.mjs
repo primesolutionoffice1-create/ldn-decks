@@ -153,6 +153,7 @@ const nextConfig = {
       { source: '/free-estimates', destination: '/get-estimate', permanent: true },
 
       { source: '/the-ultimate-deck-building-guide', destination: '/blog', permanent: true },
+      { source: '/deck/replacement', destination: '/services/deck-replacement', permanent: true },
       { source: '/deck-replacement', destination: '/services/deck-replacement', permanent: true },
 
       // Services
