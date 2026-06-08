@@ -7,6 +7,9 @@ Primary URL: https://ldndecks.com/blog/why-composite-trex-decking-fades-sun-solu
 Update 2026-06-08: Pinterest Pin 1 was owner-approved and published.
 Live pin: https://www.pinterest.com/pin/1058838562408988374
 
+Update 2026-06-08: Facebook / Instagram before-after post was owner-approved and published through Meta Business Suite.
+Meta Content status: published / crossposted to `LDN Decks` and `loudoundecks`, Mon Jun 8, 9:36am.
+
 Do not publish, boost, schedule, send, or post live without explicit owner approval for the exact channel and draft.
 
 ## Asset Notes
@@ -14,6 +17,7 @@ Do not publish, boost, schedule, send, or post live without explicit owner appro
 - Hero / before-after image: `/images/composite-deck-faded-vs-restored-before-after.png`
 - Field-photo collage: `/images/composite-deck-sun-fade-field-photos.png`
 - Pinterest-optimized before-after image: `/images/composite-deck-faded-vs-restored-pinterest-pin.png`
+- Meta-optimized before-after image: `/images/composite-deck-faded-vs-restored-meta-post.png`
 - Use the before-after image for high-click visual posts.
 - Use the field-photo collage for education / diagnostic posts.
 
@@ -86,6 +90,10 @@ https://ldndecks.com/blog/why-composite-trex-decking-fades-sun-solutions
 CTA: Learn more
 
 ## Facebook / Instagram Draft
+
+Status: published 2026-06-08 through Meta Business Suite.
+Distribution: crossposted to `LDN Decks` and `loudoundecks`.
+Image used: `/images/composite-deck-faded-vs-restored-meta-post.png`
 
 Sun can change the look of composite decking over time, especially on open south- and west-facing decks in Northern Virginia.
 

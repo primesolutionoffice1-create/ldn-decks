@@ -27,6 +27,7 @@ Date created: 2026-06-07
 | 2026-06-07 | Education Learning Path + image sitemap + social drafts | Commit `fce2342` |
 | 2026-06-08 | Google Search Console indexing verified | Commit `365772c`; all five URLs indexed |
 | 2026-06-08 | Pinterest Pin 1 published | https://www.pinterest.com/pin/1058838562408988374 |
+| 2026-06-08 | Facebook / Instagram before-after post published | Meta Business Suite: crossposted to `LDN Decks` and `loudoundecks`, Mon Jun 8, 9:36am |
 
 ## Internal Links Added
 
@@ -49,6 +50,7 @@ Money-page links were added from:
 | `/images/composite-deck-faded-vs-restored-before-after.png` | Hero + inline article image | Alt text present; image sitemap entry added |
 | `/images/composite-deck-sun-fade-field-photos.png` | Inline diagnostic article image | Alt text present; image sitemap entry added |
 | `/images/composite-deck-faded-vs-restored-pinterest-pin.png` | Pinterest Pin 1 | 1000x1500 Pinterest-optimized crop; published 2026-06-08 |
+| `/images/composite-deck-faded-vs-restored-meta-post.png` | Facebook / Instagram before-after post | 1080x1350 Meta-optimized crop; published 2026-06-08 |
 
 ## Live Read-Only Verification - 2026-06-07
 
@@ -80,6 +82,7 @@ Money-page links were added from:
 | Date | Channel | Item | Status | URL |
 |---|---|---|---|---|
 | 2026-06-08 | Pinterest | Pin 1 - Why Composite Decking Fades in the Sun | Published | https://www.pinterest.com/pin/1058838562408988374 |
+| 2026-06-08 | Facebook / Instagram | Before-after composite fading post | Published / crossposted | Meta Business Suite content list |
 
 ## Google Search Console URL Inspection - 2026-06-08
 

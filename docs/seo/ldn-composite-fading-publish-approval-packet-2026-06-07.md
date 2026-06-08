@@ -6,6 +6,9 @@ Date: 2026-06-07
 Update 2026-06-08: Pinterest Pin 1 was owner-approved and published.
 Live pin: https://www.pinterest.com/pin/1058838562408988374
 
+Update 2026-06-08: Facebook / Instagram before-after post was owner-approved and published through Meta Business Suite.
+Meta Content status: published / crossposted to `LDN Decks` and `loudoundecks`, Mon Jun 8, 9:36am.
+
 ## Current State
 
 - Blog cluster: live
@@ -39,6 +42,10 @@ Alt text: Before-and-after composite deck boards showing sun-faded untreated dec
 
 Use this after Pinterest because it is the clearest trust-building post for homeowners who already follow or recognize LDN Decks.
 
+Status: published 2026-06-08 through Meta Business Suite.
+
+Distribution: crossposted to `LDN Decks` and `loudoundecks`.
+
 Caption:
 
 Sun can change the look of composite decking over time, especially on open south- and west-facing decks in Northern Virginia.
@@ -48,7 +55,7 @@ We added real field photos showing faded untreated boards next to a treated/rest
 Guide:
 https://ldndecks.com/blog/why-composite-trex-decking-fades-sun-solutions
 
-Image: `/images/composite-deck-faded-vs-restored-before-after.png`
+Image: `/images/composite-deck-faded-vs-restored-meta-post.png`
 
 ### 3. GBP post - third, only after owner confirms wording
 
@@ -87,6 +94,8 @@ Expected impact: More qualified resurfacing, repair and composite deck leads.
 Risk level: LOW.
 Rollback plan: Delete or edit the social post.
 Approval required: YES
+
+Status: completed 2026-06-08.
 
 ## Approval Gate - GBP Post
 
