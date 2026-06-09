@@ -36,9 +36,11 @@ const CORNERSTONE_GUIDES = [
   { path: '/tools/deck-joist-span-calculator-virginia', title: 'Deck Joist Span Calculator', desc: 'Estimate joist span, spacing, cantilever and composite decking support warnings.' },
   { path: '/tools/deck-load-calculator-virginia', title: 'Deck Load Calculator', desc: 'Estimate distributed deck load, beam line load, post load and heavy-upgrade warnings.' },
   { path: '/tools/deck-stair-calculator', title: 'Virginia Deck Stair Calculator', desc: 'Estimate deck stair rise, run, number of steps, tread depth and stair angle.' },
+  { path: '/education/deck-stair-code-rise-run-virginia', title: 'Virginia Deck Stair Code Guide', desc: 'Rise, run, handrail, guard, landing and lighting rules for inspection-ready stairs.' },
   { path: '/education/deck-stair-safety-inspection-checklist', title: 'Deck Stair Safety Checklist', desc: 'Printable stair safety checklist for treads, risers, rails, landings and warning signs.' },
   { path: '/education/common-deck-stair-inspection-failures-virginia', title: 'Common Stair Inspection Failures', desc: 'Uneven risers, weak rails, rotten stringers and other Virginia stair failures.' },
   { path: '/education/deck-stair-construction-diagram', title: 'Deck Stair Construction Diagram', desc: 'Stringers, treads, risers, landing pads and hardware explained.' },
+  { path: '/education/ledger-board-flashing-deck-attachment-virginia', title: 'Ledger Board Flashing Guide', desc: 'House-attachment flashing, fasteners, rot risk and collapse-prevention basics.' },
   { path: '/before-and-after', title: 'Before & After Deck Projects', desc: 'Photo gallery with verification notes for deck replacements, composite upgrades and outdoor living work.' },
   { path: '/reviews', title: 'LDN Decks Reviews', desc: 'Homeowner feedback and trust signals for Northern Virginia deck projects.' },
   { path: '/bbb-accredited-deck-builder-virginia', title: 'BBB Accredited Deck Builder', desc: 'BBB profile, A+ rating context and third-party trust signals.' },
@@ -89,9 +91,11 @@ const DECK_CORE_PRIORITY = [
   '/tools/deck-joist-span-calculator-virginia',
   '/tools/deck-load-calculator-virginia',
   '/tools/deck-stair-calculator',
+  '/education/deck-stair-code-rise-run-virginia',
   '/education/deck-stair-safety-inspection-checklist',
   '/education/common-deck-stair-inspection-failures-virginia',
   '/education/deck-stair-construction-diagram',
+  '/education/ledger-board-flashing-deck-attachment-virginia',
   '/before-and-after',
   '/reviews',
   '/bbb-accredited-deck-builder-virginia',
@@ -99,20 +103,41 @@ const DECK_CORE_PRIORITY = [
   '/review',
 ];
 
+const BLOG_COMMERCIAL_PRIORITY = [
+  '/deck-builder-northern-virginia',
+  '/covered-deck-builder-northern-virginia',
+  '/trex-vs-timbertech-vs-azek',
+  '/composite-deck-cost-northern-virginia',
+  '/services/deck-replacement',
+  '/deck-cost-calculator',
+  '/trex-decks',
+  '/timbertech-decks',
+  '/deck-permit-loudoun-county-virginia',
+  '/deck-permit-fairfax-county-virginia',
+];
+
 const TRUST_GUIDE_PATHS = [
   '/bbb-accredited-deck-builder-virginia',
   '/ldn-decks-reviews-yelp',
 ];
 
+function rotateGuides(guides, hash) {
+  if (guides.length === 0) return [];
+  const startIdx = hash % guides.length;
+  return guides.map((_, i) => guides[(startIdx + i) % guides.length]);
+}
+
 export default function RelatedGuides({ currentPath, category = null }) {
   // Filter out current page
   const available = CORNERSTONE_GUIDES.filter(g => g.path !== currentPath);
+  const hash = currentPath.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
 
-  if (category === 'deck-core') {
-    const selected = DECK_CORE_PRIORITY
+  if (category === 'deck-core' || category === 'blog-commercial') {
+    const priority = category === 'blog-commercial' ? BLOG_COMMERCIAL_PRIORITY : DECK_CORE_PRIORITY;
+    const priorityGuides = priority
       .map(path => available.find(g => g.path === path))
-      .filter(Boolean)
-      .slice(0, 6);
+      .filter(Boolean);
+    const selected = rotateGuides(priorityGuides, hash).slice(0, 6);
 
     return (
       <section style={{ background: '#f8f9fa', padding: '3rem 0', borderTop: '1px solid #e5e5e5' }}>
@@ -152,7 +177,6 @@ export default function RelatedGuides({ currentPath, category = null }) {
 
   // Smart rotation: use a hash of currentPath to deterministically select
   // different guides for different pages so cornerstone and trust pages get exposure.
-  const hash = currentPath.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
   const startIdx = hash % available.length;
   const rotated = [];
   for (let i = 0; i < available.length; i++) {
