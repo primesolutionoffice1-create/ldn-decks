@@ -9,6 +9,8 @@ Live pin: https://www.pinterest.com/pin/1058838562408988374
 Update 2026-06-08: Facebook / Instagram before-after post was owner-approved and published through Meta Business Suite.
 Meta Content status: published / crossposted to `LDN Decks` and `loudoundecks`, Mon Jun 8, 9:36am.
 
+Update 2026-06-10: GBP composite fading post was corrected by editing the existing image-only GBP post, adding the approved education copy, `Learn more` CTA, and destination URL. Google Business Profile shows the corrected post as `Pending` review. Do not duplicate/repost while pending.
+
 ## Current State
 
 - Blog cluster: live
@@ -16,7 +18,9 @@ Meta Content status: published / crossposted to `LDN Decks` and `loudoundecks`, 
 - Money-page internal links: live
 - Image sitemap: live with both real field-photo assets
 - IndexNow: already submitted once for the five canonical URLs
-- GSC / Bing indexing verification: blocked until read-only access or owner export is available
+- GSC: all five URLs verified indexed on 2026-06-08
+- Bing / IndexNow: five-URL submission accepted with `HTTP 200`
+- GBP: corrected post submitted 2026-06-10 and pending Google review
 
 ## Recommended Publishing Order
 
@@ -57,9 +61,11 @@ https://ldndecks.com/blog/why-composite-trex-decking-fades-sun-solutions
 
 Image: `/images/composite-deck-faded-vs-restored-meta-post.png`
 
-### 3. GBP post - third, only after owner confirms wording
+### 3. GBP post - third
 
 Use GBP after the social posts because GBP is a public business profile signal and should be reviewed more tightly.
+
+Status: corrected and resubmitted 2026-06-10; Google Business Profile status `Pending` review.
 
 Draft source: `/Users/ldndecks/ldn-decks-next/docs/seo/ldn-composite-fading-social-drafts-2026-06-07.md`
 
@@ -73,7 +79,8 @@ URL: https://ldndecks.com/blog/why-composite-trex-decking-fades-sun-solutions
 - Do not use Search Console URL Inspection submit.
 - Do not send lead follow-up email/text until owner approves exact recipient list.
 - Do not boost posts or start ads.
-- Do not edit GBP without exact approval.
+- Do not duplicate the GBP post while Google shows the corrected post as `Pending`.
+- Do not make additional GBP edits without exact approval.
 
 ## Approval Gate - Pinterest Pin 1
 
@@ -105,3 +112,5 @@ Expected impact: Better Maps trust signals and more education-driven clicks from
 Risk level: MEDIUM because GBP is a public business profile surface.
 Rollback plan: Delete or edit the GBP post.
 Approval required: YES
+
+Status: corrected and resubmitted 2026-06-10 by editing the existing image-only GBP post. Google Business Profile shows `Pending` review. Next action is read-only verification after Google finishes review; do not repost during pending state.

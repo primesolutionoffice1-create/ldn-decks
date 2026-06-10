@@ -10,6 +10,8 @@ Live pin: https://www.pinterest.com/pin/1058838562408988374
 Update 2026-06-08: Facebook / Instagram before-after post was owner-approved and published through Meta Business Suite.
 Meta Content status: published / crossposted to `LDN Decks` and `loudoundecks`, Mon Jun 8, 9:36am.
 
+Update 2026-06-10: GBP composite fading post was corrected by editing the existing image-only GBP post. The approved education copy, `Learn more` CTA, and destination URL were submitted. Google Business Profile shows `Pending` review. Do not duplicate/repost while pending.
+
 Do not publish, boost, schedule, send, or post live without explicit owner approval for the exact channel and draft.
 
 ## Asset Notes
@@ -78,7 +80,7 @@ Image: `/images/composite-deck-faded-vs-restored-before-after.png`
 
 ## GBP Post Draft
 
-Status: draft only / do not post live
+Status: corrected and resubmitted 2026-06-10 / pending Google Business Profile review
 
 Have a composite or Trex deck that looks faded in full sun? We put together a field guide with real photos showing the difference between sun-faded untreated boards and treated/restored sections.
 

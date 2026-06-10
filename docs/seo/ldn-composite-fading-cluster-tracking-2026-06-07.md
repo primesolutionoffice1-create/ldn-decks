@@ -28,6 +28,7 @@ Date created: 2026-06-07
 | 2026-06-08 | Google Search Console indexing verified | Commit `365772c`; all five URLs indexed |
 | 2026-06-08 | Pinterest Pin 1 published | https://www.pinterest.com/pin/1058838562408988374 |
 | 2026-06-08 | Facebook / Instagram before-after post published | Meta Business Suite: crossposted to `LDN Decks` and `loudoundecks`, Mon Jun 8, 9:36am |
+| 2026-06-10 | GBP composite fading post corrected and resubmitted | Existing image-only GBP post was edited with description + `Learn more` CTA; Google Business Profile shows `Pending` review |
 
 ## Internal Links Added
 
@@ -51,6 +52,7 @@ Money-page links were added from:
 | `/images/composite-deck-sun-fade-field-photos.png` | Inline diagnostic article image | Alt text present; image sitemap entry added |
 | `/images/composite-deck-faded-vs-restored-pinterest-pin.png` | Pinterest Pin 1 | 1000x1500 Pinterest-optimized crop; published 2026-06-08 |
 | `/images/composite-deck-faded-vs-restored-meta-post.png` | Facebook / Instagram before-after post | 1080x1350 Meta-optimized crop; published 2026-06-08 |
+| `/images/composite-deck-faded-vs-restored-meta-post.png` | Google Business Profile composite fading post | Submitted in corrected GBP post on 2026-06-10; status `Pending` review |
 
 ## Live Read-Only Verification - 2026-06-07
 
@@ -83,6 +85,7 @@ Money-page links were added from:
 |---|---|---|---|---|
 | 2026-06-08 | Pinterest | Pin 1 - Why Composite Decking Fades in the Sun | Published | https://www.pinterest.com/pin/1058838562408988374 |
 | 2026-06-08 | Facebook / Instagram | Before-after composite fading post | Published / crossposted | Meta Business Suite content list |
+| 2026-06-10 | Google Business Profile | Composite fading education post | Pending review after edit/resubmit | GBP posts list |
 
 ## Google Search Console URL Inspection - 2026-06-08
 
@@ -112,7 +115,8 @@ Fill from read-only GSC / GA4 / call data when available.
 - Bing Webmaster / IndexNow visibility: read-only only if access is available.
 - Google Search Console URL inspection or performance report: read-only only if access is available.
 - Do not submit additional IndexNow batches unless the owner approves exact URLs.
-- Do not publish social, GBP, email or SMS drafts without explicit owner approval.
+- Do not duplicate the GBP composite fading post while Google shows it as `Pending`.
+- Do not publish additional social, GBP, email or SMS drafts without explicit owner approval.
 
 ## Approval Gates
 
