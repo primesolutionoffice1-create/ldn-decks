@@ -999,7 +999,7 @@ reportLines.push('- [ ] Proof system preflight reviewed — run `npm run seo:pro
 reportLines.push('- [ ] Lead outcome rows reviewed — run `npm run measurement:lead-outcomes` after any real CRM/owner rows are added');
 reportLines.push('- [ ] Call attribution evidence reviewed — run `npm run measurement:call-attribution-evidence` after any Google Ads/GTM read-only evidence rows are added');
 reportLines.push('- [ ] Automation static gate reviewed — run `npm run automation:static` after any Vapi/GHL/Twilio route edit');
-reportLines.push('- [ ] Google Ads import pack reviewed — run `npm run ads:validate-imports` before any Ads Editor import or campaign activation');
+reportLines.push('- [ ] Google Ads import pack reviewed — run `npm run ads:validate-imports` before any Ads Editor import review; campaign activation/scaling remains blocked until `npm run scaling:readiness` is GREEN');
 reportLines.push('- [ ] Entity profile consistency reviewed — run `npm run seo:entity-profiles` after editing public profile/citation URLs');
 reportLines.push('- [ ] Rank tracker manual snapshot reviewed — run `npm run seo:rank-snapshot:validate` after any Ahrefs API/MCP or manual rank export is added');
 reportLines.push('- [ ] DataForSEO n8n MCP runbook reviewed — run `npm run dataforseo:n8n-mcp:validate` before building n8n MCP workflows');
