@@ -72,21 +72,15 @@ Risks specific to **whether a conversion is correctly attributed to the right cl
 
 ---
 
-## R4 🟠 No client-side Meta Pixel — server-only Lead events
+## R4 🟢 Client-side Meta Pixel present, CAPI activation still env-gated
 
-**Where:** [metaCapi.js](../../src/server/metaCapi.js) handles server-side; no client-side Pixel found
+**Where:** [layout.js](../../src/app/layout.js) loads the direct Pixel fallback after consent; [metaCapi.js](../../src/server/metaCapi.js) handles env-gated server-side CAPI.
 **Affected conversions:** all Meta-attributable conversions.
-**What goes wrong:** Meta CAPI alone delivers 60–75% match rate. Without a client-side Pixel, Meta is missing:
-- `fbp` cookie (set by client Pixel only) — currently empty in CAPI payload
-- Browser ID for ad-network signal pairing
-- Page view + scroll + button click engagement signals
-- Custom audiences based on site behavior (cart-style or content-view triggers)
+**Current status:** resolved site-side. The direct Pixel fallback initializes dataset `695923313293515` after accepted consent, sends `PageView`, and the route tracker sends one additional `PageView` per SPA navigation. The `ads:verify-meta-route` test passes with one initial PageView and two after navigation.
 
-**Reporting distortion:** Meta Ads ROAS reports will look 25–40% lower than reality. Lookalike audiences will train on a smaller seed pool.
+**Remaining risk:** production Meta CAPI still requires valid `META_PIXEL_ID` and `META_CAPI_ACCESS_TOKEN`; Meta Events Manager must confirm Browser + Server dedup with the same `event_id` before Meta scaling.
 
-**Fix:** add the Meta Pixel via GTM container. Fire `Lead` with `eventID: {{DLV - event_id}}` so it dedupes against the server-side CAPI Lead event. Capture `_fbp` cookie client-side and pass to server (TRACKING-FIX-QUEUE.md #11).
-
-**Note:** only do this if you're actually running Meta Ads. If you're not, the CAPI infrastructure is overhead for nothing.
+**Do not duplicate:** do not add a second Meta base Pixel through GTM while the direct fallback is active. If GTM is chosen later, first remove or disable the direct fallback and rerun `npm run ads:verify-meta-route`.
 
 ---
 
@@ -196,25 +190,23 @@ Each gets a fresh `event_id` (different UUIDs), so dedup won't catch them. Two d
 
 ---
 
-## R12 🟡 `event_source_url` hardcoded fallback in CAPI
+## R12 🟢 `event_source_url` forwarded to CAPI
 
-**Where:** [sendEmail.js:91](../../src/server/sendEmail.js#L91)
+**Where:** [useLeadSubmit.js](../../src/hooks/useLeadSubmit.js) appends `source_url`; [sendEmail.js](../../src/server/sendEmail.js) forwards it to CAPI.
 **Affected:** Meta CAPI attribution accuracy.
-**What goes wrong:** `formData.get('source_url') || 'https://ldndecks.com/contact'`. Since neither form appends `source_url`, every Meta CAPI Lead event is reported as occurring on `/contact` — regardless of which page hosted the form (homepage, city page, modal anywhere).
+**Current status:** resolved. Every shared lead form using `useLeadSubmit()` appends `window.location.href` as `source_url`. The `/contact` fallback now only applies if JavaScript cannot provide the current URL.
 
-**Reporting distortion:** Meta Ads "Conversions by landing page" report becomes useless. Every conversion looks like it came from /contact even when it came from the homepage hero form.
-
-**Fix:** add `formData.append('source_url', window.location.href)` in both submit handlers (TRACKING-FIX-QUEUE.md #11).
+**Remaining risk:** server-only or API-created leads that bypass `useLeadSubmit()` may not have a browser URL and should be treated separately in reporting.
 
 ---
 
-## R13 🟢 IP / User-Agent not captured for CAPI
+## R13 🟢 IP / User-Agent captured for CAPI
 
-**Where:** [metaCapi.js:78-79](../../src/server/metaCapi.js#L78-L79)
+**Where:** [sendEmail.js](../../src/server/sendEmail.js) reads request headers and passes them to [metaCapi.js](../../src/server/metaCapi.js).
 **Affected:** Meta CAPI match quality.
-**What goes wrong:** `client_ip_address` and `client_user_agent` are declared in the userData object but never populated (no `headers` access in the server action call to read them from). Meta CAPI uses these for match quality scoring; missing them drops Event Match Quality from ~7.5 to ~6.0 typically.
+**Current status:** resolved. `sendEmail.js` reads `x-forwarded-for`, `x-real-ip`, and `user-agent` from `next/headers` when request context is available. If headers are unavailable in a test/build context, the form still succeeds and CAPI degrades gracefully.
 
-**Fix:** in the server action, use `headers()` from `next/headers` to read `x-forwarded-for` and `user-agent`, pass into sendMetaLeadEvent.
+**Remaining risk:** final EMQ still depends on real Events Manager diagnostics after credentials are provisioned.
 
 ---
 
@@ -242,19 +234,19 @@ Each gets a fresh `event_id` (different UUIDs), so dedup won't catch them. Two d
 
 | ID | Sev | Risk | Reporting Distortion | Fix Effort |
 |----|-----|------|---------------------|-----------|
-| R1 | 🔴 | Homepage lead source lost | −40 to −70% paid attribution | Small (1 hook) |
+| R1 | ✅ | Homepage lead source lost | Resolved by shared `useLeadSubmit()` | Done |
 | R2 | 🔴 | Cookie-based click ID brittle | −20 to −30% multi-session | Medium (server-side GTM) |
 | R3 | 🔴 | SPA page_view broken | −100% /thank-you in GA4 | Small (GTM config) |
-| R4 | 🟠 | No client Meta Pixel | −25 to −40% Meta ROAS visible | Small (GTM tag) |
+| R4 | ✅ | No client Meta Pixel | Resolved by direct Pixel fallback | Done |
 | R5 | 🟠 | Cross-device gaps | Variable | Built-in (Enhanced Conv) |
-| R6 | 🟠 | Reload re-fires | +X% on power users | Small (sessionStorage) |
+| R6 | ✅ | Reload re-fires | Source-side session guard implemented | Done |
 | R7 | 🟠 | lazyOnload race | −10 to −25% phone clicks | Trivial (change strategy) |
 | R8 | 🟠 | Referrer-Policy strips | None (ads use click ID) | None |
 | R9 | 🟡 | www redirect query loss | TBD — verify | Small if broken |
 | R10 | 🟡 | Modal reopen double-fire | Low volume | Small |
 | R11 | 🟡 | Bounce after counted | Hard to measure | Operational |
-| R12 | 🟡 | CAPI source_url hardcoded | Meta "by page" broken | Trivial |
-| R13 | 🟢 | CAPI missing IP/UA | EMQ ~−1.5 points | Small |
+| R12 | ✅ | CAPI source_url forwarding | Resolved via `source_url` FormData | Done |
+| R13 | ✅ | CAPI missing IP/UA | Resolved via request headers | Done |
 | R14 | 🟢 | PII in dataLayer history | Privacy housekeeping | Small |
 | R15 | 🟢 | No Privacy Sandbox | Future (Q4 2026+) | Defer |
 
@@ -262,4 +254,4 @@ Each gets a fresh `event_id` (different UUIDs), so dedup won't catch them. Two d
 
 ## Reading the table
 
-If you fix only R1, R3, R7, and verify R8 (the four 🔴 items + the trivially-fixed 🟠), attribution moves from "untrustworthy" to "good enough for bid optimization." Everything else is incremental quality improvement.
+R1, R4, R6, R12, and R13 are now resolved in code. Remaining optimization blockers are primarily GTM/Google Ads configuration proof, real lead/call outcome rows, and offline revenue feedback.

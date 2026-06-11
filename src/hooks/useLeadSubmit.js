@@ -31,8 +31,9 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
 
     // Meta _fbp browser ID — only present after a Meta Pixel has set it
     // client-side. Sent server-side to Meta CAPI to raise match quality.
-    // Today this is typically null (no client Pixel installed yet); when
-    // a Pixel is added, this starts populating without any further wiring.
+    // Present after the direct Meta Pixel fallback or a future GTM Pixel sets
+    // the _fbp cookie. If consent is denied or the pixel is blocked, this
+    // stays absent and CAPI still degrades gracefully.
     const fbp = getFbp();
     if (fbp) formData.append('_fbp', fbp);
 

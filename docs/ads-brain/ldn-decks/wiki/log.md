@@ -3,11 +3,12 @@ brain_schema: ads-brain.v1
 created: "2026-05-15"
 type: log
 title: "Log"
-updated: "2026-05-16"
+updated: "2026-06-11"
 ---
 
 # Log
 
+- 2026-06-11 - Aligned attribution runbooks with current tracking code state: shared ContactHome/ContactForm `useLeadSubmit` flow, event ID propagation, browser Meta Pixel source, `event_source_url` forwarding, CAPI IP/User-Agent enrichment, and anti-duplicate `lead_confirmed` behavior. Verification passed: stale-risk `rg` scan, `npm run measurement:gate`, `npm run ads:validate-imports`, `npm run scaling:blocker-exit:validate`, `npm run lint`, and `npm run build`. No Google Ads, GTM, budget, bid strategy, or production deploy changes were made.
 - 2026-05-16 - Hardened Google Ads import validation after tracking sweep: confirmed `src` has no raw `tel:` anchors, both site lead forms use `useLeadSubmit`, `/thank-you` fires `lead_confirmed` from the shared event ID, and `ads:validate-imports` now fails on wrong call phone, wrong call schedule, repair keyword leakage into Composite/Replacement, missing repair-separation negatives, or ad-group final URL drift. Verification passed: `npm run ads:validate-imports`, `npm run lint`, `npm run build`.
 - 2026-05-16 - Completed current 1-to-5 implementation pass: active-only Google Ads search-term review, no aggressive new negatives due low data, Branded policy status appears clean in active Ads view, resurfacing/replacement pages stayed high-ticket only, phone-first CTA fixed through tracked `CallLink`, resurfacing pricing aligned to $15k+ across support pages, `/deck-builder-northern-virginia` hub verified in build/sitemap, lint/schema/build passed.
 - 2026-05-16 - Completed live 1-5 QA sprint: implemented/verified high-confidence exact negatives in active Composite and Replacement + Resurfacing campaigns; validated GTM Preview phone and form conversion firing; confirmed active Google Ads spend at $150/day across three Search campaigns; verified priority Ads landing pages, robots, and sitemap; recorded remaining Search Console issues for old failed sitemap submissions, 9 404 records, and mobile LCP groups at 2.7s.

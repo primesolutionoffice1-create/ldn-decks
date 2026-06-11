@@ -117,12 +117,12 @@ The site-side foundation is already in place: fbclid capture is live, Meta CAPI 
 
 ## What Phase 4 ships
 
-### 4A — Meta Pixel installed via GTM (not site code)
+### 4A — Meta Pixel browser source
 
-- GTM workspace adds Meta Pixel base code tag, trigger = All Pages
-- Meta Lead event tag, trigger = `lead_confirmed`, with `event_id` as event_id parameter
-- Same Enhanced Conversions match keys mapped from dataLayer (Meta calls these "Advanced Matching")
-- Workspace published
+- Current site code includes a direct Meta Pixel fallback for dataset `695923313293515`, consent-gated in `src/app/layout.js`.
+- Do not add a second Meta base Pixel tag in GTM unless the direct fallback is removed or disabled first.
+- Browser `PageView` route tracking must pass `npm run ads:verify-meta-route`: exactly one initial PageView and one additional PageView after SPA navigation.
+- If GTM is used later for Meta Lead, fire it from `lead_confirmed` with `event_id` mapped as Meta `eventID`, and validate dedup against CAPI before spend.
 
 ### 4B — Production CAPI env vars
 

@@ -70,8 +70,8 @@ All events that exist in the system today, with current dedup state.
 
 | Trigger path | Fires? | event_id | Dedup gate | Outcome |
 |---|---|---|---|---|
-| ContactForm submit (env configured) | ✅ Yes | ✅ Set | Meta dedupes within 7-day window vs client Pixel with same eventID | If client Pixel exists with same eventID → ✅ deduped. If no client Pixel → single event, fine. |
-| ContactHome submit (env configured) | ✅ Yes | ❌ **null** | None possible | If client Pixel later added → ❌ **cannot dedup**, double-counted |
+| ContactForm submit (env configured) | ✅ Yes | ✅ Set | Meta dedupes within 7-day window vs browser Pixel with same eventID | ✅ Dedup-ready |
+| ContactHome submit (env configured) | ✅ Yes | ✅ Set | Same shared `useLeadSubmit()` event_id path as ContactForm | ✅ Dedup-ready |
 | ContactForm submit (env NOT configured) | ❌ Skipped | N/A | N/A | ✅ Safe no-op |
 | sendMail throws BEFORE Meta call | ❌ Doesn't reach Meta call | N/A | N/A | ✅ Correct — server returned failure, no event |
 | Meta CAPI POST itself fails (404, 500, network) | ❌ Catch logged, not re-thrown | N/A | N/A | ✅ Fire-and-forget pattern correct |
@@ -188,11 +188,11 @@ This is "correct" in a sense — two leads were generated — but Smart Bidding 
 |---|---|---|---|
 | `hasTracked.current` ref | [ContactForm.jsx:14,36-39](../../src/components/ContactForm.jsx) | Per component instance | ✅ Prevents same-instance double-fire |
 | Submit button `disabled={status === "submitting"}` | ContactForm + ContactHome | Per submit attempt | ✅ Prevents double-click spam |
-| Shared `event_id` UUID in URL | ContactForm → /thank-you | Cross-page within session | ✅ For ContactForm only. ❌ Missing for ContactHome. |
+| Shared `event_id` UUID in URL | Shared `useLeadSubmit()` pipeline → /thank-you | Cross-page within session | ✅ ContactForm and ContactHome |
 | GTM `transaction_id` dedup | GTM container — **NOT VERIFIED** | Per Google Ads conversion action | ❓ Unknown |
 | Google Ads "Don't allow duplicate conversions" | Conversion action setting — **NOT VERIFIED** | Per conversion action | ❓ Unknown |
-| Meta `event_id` field on CAPI payload | [metaCapi.js:88](../../src/server/metaCapi.js#L88) | 7-day window per Meta Pixel | ✅ For ContactForm. ❌ Null for ContactHome. |
-| sessionStorage / localStorage anti-replay | **NOT IMPLEMENTED** | Per browser tab/session | ❌ None |
+| Meta `event_id` field on CAPI payload | [metaCapi.js:88](../../src/server/metaCapi.js#L88) | 7-day window per Meta Pixel | ✅ ContactForm and ContactHome |
+| sessionStorage anti-replay | [tracking.js](../../src/lib/tracking.js) | Per browser tab/session and event_id | ✅ Blocks same-session `lead_confirmed` re-fire |
 | Server-side idempotency key in sendContactEmail | **NOT IMPLEMENTED** | Per server action call | ❌ None — same form can submit twice, two emails sent |
 
 ---
@@ -202,8 +202,8 @@ This is "correct" in a sense — two leads were generated — but Smart Bidding 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │ 1. CLIENT-SIDE COMPONENT GUARD                                  │
-│    hasTracked.current (already exists in ContactForm)           │
-│    → Add to ContactHome                                         │
+│    hasTracked.current in shared useLeadSubmit pipeline          │
+│    → ContactForm and ContactHome both use it                    │
 └─────────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -211,7 +211,7 @@ This is "correct" in a sense — two leads were generated — but Smart Bidding 
 │ 2. SESSION-SCOPED ANTI-REPLAY                                   │
 │    sessionStorage.setItem(`lead_fired_${event_id}`, '1')        │
 │    → Block re-fire of lead_confirmed within session             │
-│    → Implement in trackLeadConfirmed                            │
+│    → Implemented in trackLeadConfirmed                          │
 └─────────────────────────────────────────────────────────────────┘
                               │
                               ▼

@@ -3,7 +3,7 @@ brain_schema: "ads-brain.v1"
 created: "2026-05-15"
 type: "index"
 title: "Index"
-updated: "2026-05-15"
+updated: "2026-06-11"
 ---
 
 # Index
@@ -92,6 +92,7 @@ updated: "2026-05-15"
 
 ## Recent Sources
 
+- [[Tracking and Attribution Risk Register]]
 - [[Ads Brain 2026 Production Research Brief]]
 - [[Brain Memory Sources]]
 - [[Claude Ads Reference]]
