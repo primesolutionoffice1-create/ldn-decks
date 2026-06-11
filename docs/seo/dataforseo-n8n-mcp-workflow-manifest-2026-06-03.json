@@ -1,0 +1,104 @@
+{
+  "workflowName": "LDN Decks DataForSEO MCP SEO Enrichment",
+  "date": "2026-06-03",
+  "status": "draft-read-only",
+  "targetDomain": "ldndecks.com",
+  "brand": "LDN Decks",
+  "sourceGuide": "https://dataforseo.com/help-center/connecting-dataforseo-mcp-server-to-your-n8n-workflows",
+  "purpose": "Define a safe n8n workflow blueprint for read-only DataForSEO MCP research on LDN Decks SEO, citation, SERP, competitor, and backlink context.",
+  "mcp": {
+    "mcpMode": "local",
+    "mcpServerCommand": "npx dataforseo-mcp-server http",
+    "localEndpoint": "http://localhost:3000",
+    "remoteEndpoint": "https://mcp.dataforseo.com/mcp",
+    "remoteEndpointAllowed": false,
+    "simpleFilter": true,
+    "requiredEnv": [
+      "DATAFORSEO_USERNAME",
+      "DATAFORSEO_PASSWORD",
+      "DATAFORSEO_SIMPLE_FILTER"
+    ],
+    "envMapping": {
+      "DATAFORSEO_USERNAME": "$DATAFORSEO_LOGIN",
+      "DATAFORSEO_PASSWORD": "$DATAFORSEO_PASSWORD",
+      "DATAFORSEO_SIMPLE_FILTER": "true"
+    }
+  },
+  "n8nNodes": [
+    {
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "required": true
+    },
+    {
+      "name": "AI Agent",
+      "type": "n8n-nodes-langchain.agent",
+      "required": true
+    },
+    {
+      "name": "MCP Client Tool",
+      "type": "n8n-nodes-langchain.mcpClientTool",
+      "required": true,
+      "endpoint": "http://localhost:3000"
+    },
+    {
+      "name": "Review Summary",
+      "type": "n8n-nodes-base.noOp",
+      "required": true
+    }
+  ],
+  "allowedUseCases": [
+    "SERP checks for LDN Decks service-area pages",
+    "Competitor/domain context for LDN Decks only",
+    "Backlink/referring-domain enrichment for LDN Decks only",
+    "AI and LLM visibility checks for LDN Decks only",
+    "Business listing and citation checks for LDN Decks only"
+  ],
+  "disallowedUseCases": [
+    "Publishing site content automatically",
+    "Changing Google Ads, GTM, GA4, GHL, Vapi, Twilio, Vercel, or DataForSEO account settings",
+    "Generating paid ad activation decisions without manual review",
+    "Running broad crawls without cost caps",
+    "Mixing unrelated domains into the LDN Decks workflow"
+  ],
+  "safety": {
+    "readOnly": true,
+    "requiresManualReview": true,
+    "storeCredentialsInRepo": false,
+    "storeBase64AuthHeadersInRepo": false,
+    "allowClientSideCredentialExposure": false,
+    "allowedDomains": [
+      "ldndecks.com"
+    ],
+    "disallowedDomains": []
+  },
+  "costCaps": {
+    "maxSeedKeywordsPerRun": 25,
+    "maxSerpTasksPerRun": 10,
+    "maxBacklinkTargetsPerRun": 3,
+    "maxBusinessListingTargetsPerRun": 5,
+    "maxRunsPerDay": 2,
+    "requiresManualApprovalAboveCap": true
+  },
+  "workflowPrompts": [
+    {
+      "id": "serp-priority-pages",
+      "prompt": "Use DataForSEO MCP in read-only mode to summarize SERP context for ldndecks.com priority deck service pages. Stay within the manifest cost caps and return findings only."
+    },
+    {
+      "id": "citation-context",
+      "prompt": "Use DataForSEO MCP in read-only mode to check business listing and citation context for LDN Decks and ldndecks.com. Do not include unrelated domains."
+    },
+    {
+      "id": "backlink-context",
+      "prompt": "Use DataForSEO MCP in read-only mode to summarize backlink and referring-domain context for ldndecks.com only. Do not modify accounts or submit anything externally."
+    }
+  ],
+  "validationCommand": "npm run dataforseo:n8n-mcp:workflow:validate",
+  "notes": [
+    "Use the local MCP server when DATAFORSEO_SIMPLE_FILTER is needed.",
+    "Keep real credentials only in the operator environment or n8n credential store.",
+    "Do not commit n8n workflow exports that contain credentials.",
+    "This manifest is a blueprint, not an active workflow export."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "targetDomain": "ldndecks.com",
+  "mode": "read_only",
+  "sourceWorkflow": "dataforseo-ldn-readonly-seo-enrichment.sample.json",
+  "sampleOnly": true,
+  "generatedBy": "sample-disabled-sanitized-workflow",
+  "findings": [
+    {
+      "id": "raw-sample-serp-001",
+      "type": "serp_context",
+      "source": "sample query: deck builder ashburn va",
+      "affectedUrl": "https://ldndecks.com/deck-builder-ashburn-va",
+      "summary": "Sample-only read-only SERP observation placeholder for validating raw findings handling.",
+      "evidenceStrength": "sample",
+      "confidence": "low",
+      "reviewOnly": true,
+      "publicClaimAllowed": false,
+      "adsActionAllowed": false,
+      "ownerReviewRequired": true,
+      "notes": "Do not copy into public claims, proof snippets, Ads actions, or citation edits."
+    },
+    {
+      "id": "raw-sample-citation-001",
+      "type": "citation_context",
+      "source": "sample source: ldndecks.com",
+      "affectedUrl": "https://ldndecks.com/social",
+      "summary": "Sample-only read-only citation context placeholder for validating scope and review gates.",
+      "evidenceStrength": "sample",
+      "confidence": "low",
+      "reviewOnly": true,
+      "publicClaimAllowed": false,
+      "adsActionAllowed": false,
+      "ownerReviewRequired": true,
+      "notes": "Owner or source review is required before any citation work item."
+    }
+  ]
+}
