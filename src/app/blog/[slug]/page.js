@@ -14,6 +14,8 @@ import { BUSINESS, FOUNDER_ID, ORG_ID, WEBSITE_ID } from '@/lib/business';
 import styles from './BlogContent.module.css';
 
 // Pre-render all blog posts at build time for proper indexing
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
