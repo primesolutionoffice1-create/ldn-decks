@@ -5,8 +5,38 @@ const ENDPOINT = process.env.CDP_ENDPOINT || 'http://127.0.0.1:9223';
 const TARGET_URL = process.env.TARGET_URL || 'http://localhost:3001/deck-safety-inspection-checklist?utm_source=facebook&utm_medium=carousel&utm_campaign=local_runtime_test';
 const FALLBACK_PATH = '/contact';
 
+function cdpLaunchCommand() {
+  const endpoint = new URL(ENDPOINT);
+  const port = endpoint.port || (endpoint.protocol === 'https:' ? '443' : '80');
+  return `/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --remote-debugging-port=${port} --user-data-dir=/tmp/ldn-meta-route-cdp`;
+}
+
+function cdpUnavailableResult(error) {
+  return {
+    status: 'BLOCKED_CDP_UNAVAILABLE',
+    endpoint: ENDPOINT,
+    targetUrl: TARGET_URL,
+    error: error?.cause?.code || error?.code || error?.message || 'CDP endpoint unavailable',
+    requiredSetup: [
+      `Start Chrome with remote debugging: ${cdpLaunchCommand()}`,
+      'Start the Next.js dev server on the TARGET_URL host before running this test.',
+      'Override CDP_ENDPOINT or TARGET_URL if using a different port.',
+    ],
+  };
+}
+
 async function getJson(path) {
-  const res = await fetch(`${ENDPOINT}${path}`);
+  let res;
+  try {
+    res = await fetch(`${ENDPOINT}${path}`);
+  } catch (error) {
+    if (error?.cause?.code === 'ECONNREFUSED' || error?.cause?.code === 'ENOTFOUND') {
+      const result = cdpUnavailableResult(error);
+      console.error(JSON.stringify(result, null, 2));
+      process.exit(1);
+    }
+    throw error;
+  }
   if (!res.ok) throw new Error(`${path} ${res.status}`);
   return res.json();
 }
