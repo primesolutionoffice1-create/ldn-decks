@@ -95,6 +95,7 @@
         "measurement:gate": "node scripts/measurement-integrity-gate.mjs",
         "measurement:call-attribution-evidence": "node scripts/validate-call-attribution-evidence.mjs",
         "measurement:lead-outcomes": "node scripts/validate-lead-outcome-rows.mjs",
+        "measurement:offline-preview": "node scripts/generate-google-ads-offline-preview.mjs",
         "scaling:readiness": "node scripts/generate-scaling-readiness-board.mjs",
         "scaling:evidence-request": "node scripts/generate-scaling-evidence-request.mjs",
         "scaling:evidence-request:validate": "node scripts/validate-scaling-evidence-request.mjs",

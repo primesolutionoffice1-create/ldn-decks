@@ -22,8 +22,10 @@ conversions, call Google Ads APIs, or store credentials.
 - Keep `Order ID` stable as `{event_id}::{conversion_name}`.
 - Treat `lead-quality-outcome-sample-template.csv` as review evidence only; do not upload it directly to Google Ads.
 - Add real rows to the latest `docs/ads-tracking/live-lead-outcomes-YYYY-MM-DD.csv`; `npm run measurement:lead-outcomes` automatically validates the newest live intake file when no explicit path is passed.
+- Use stage-specific timestamp fields (`qualified_at`, `estimate_scheduled_at`, `contract_signed_at`, `closed_paid_at`) in Google Ads import format: `YYYY-MM-DD HH:MM:SS-0400`.
 - Run `LEAD_OUTCOME_INPUT=path/to/file.csv npm run measurement:lead-outcomes` or `npm run measurement:lead-outcomes -- path/to/file.csv` to validate a specific CSV.
 - Run `npm run measurement:lead-outcomes` before using any real lead-outcome CSV for scaling decisions or offline-import prep.
+- Run `npm run measurement:offline-preview` to generate a local Google Ads CSV preview from validated live rows. This does not upload anything.
 - Do not upload Meta events from these templates. Meta activation is Phase 4.
 - Do not automate uploads until Phase 3 entry gates pass.
 - Fixtures are safe fake data. Replace names/emails/phones before any production

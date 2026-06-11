@@ -113,7 +113,11 @@ export function proofStagingGroups(date = proofStagingDate()) {
       required: false,
       description: 'Tracking, consent, admin tooling, and API surfaces that should be reviewed separately from the proof gate.',
       paths: [
+        `docs/ads-tracking/live-lead-outcomes-${date}.csv`,
         `docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-${date}.md`,
+        'docs/ads-tracking/PHASE-2-MANUAL-OFFLINE-UPLOAD-RUNBOOK.md',
+        'docs/ads-tracking/templates/',
+        'scripts/generate-google-ads-offline-preview.mjs',
         'scripts/measurement-integrity-gate.mjs',
         'scripts/validate-lead-outcome-rows.mjs',
         'src/app/admin/seo/',
