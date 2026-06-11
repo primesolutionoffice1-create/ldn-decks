@@ -129,7 +129,7 @@ export default function HouzzProjectsPage() {
               <p style={S.p}>
                 Experience the best of outdoor living without the bugs. Our screened porches feature premium EZE-Breeze windows and vaulted ceilings, creating a comfortable year-round retreat.
               </p>
-              <Link href="/services/porches/screened-porch" style={{ color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none' }}>View Porch Styles →</Link>
+              <Link href="/screened-porch-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none' }}>View Porch Styles →</Link>
             </div>
             <div style={S.card}>
               <div style={{ height: 200, position: 'relative', margin: '-2rem -2rem 1.5rem', borderRadius: '16px 16px 0 0', overflow: 'hidden' }}>

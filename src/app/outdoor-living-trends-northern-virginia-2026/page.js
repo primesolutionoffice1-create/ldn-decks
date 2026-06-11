@@ -235,7 +235,7 @@ export default function OutdoorLivingTrendsPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/deck-design-ideas-northern-virginia-2026', 'Deck Design Ideas for Northern Virginia (2026)'],
+              ['/deck-design-ideas-2026', 'Deck Design Ideas for Northern Virginia (2026)'],
               ['/multi-level-deck-builder-northern-virginia', 'Multi-Level Deck Builder in Northern Virginia'],
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost in Northern Virginia'],
               ['/outdoor-kitchen-builder-northern-virginia', 'Outdoor Kitchen Builder in Northern Virginia'],

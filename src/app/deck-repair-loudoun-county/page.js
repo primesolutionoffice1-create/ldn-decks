@@ -125,7 +125,7 @@ export default function DeckRepairLoudounCountyPage() {
         url="https://ldndecks.com/deck-repair-loudoun-county"
         category="Deck Repair"
         areaServed={[{"@type":"AdministrativeArea","name":"Loudoun County, VA"}]}
-        relatedServices={['https://ldndecks.com/deck-repair', 'https://ldndecks.com/services/deck-repair', 'https://ldndecks.com/services/deck-inspection']}
+        relatedServices={['https://ldndecks.com/services/deck-repair', 'https://ldndecks.com/services/deck-inspection']}
       />
       <ServicesHeader
         subtext="Loudoun County's Inspection-First Repair Team"

@@ -163,7 +163,7 @@ export default function OutdoorLivingNorthernVirginiaPage() {
             {[
               ['/composite-decks', 'Composite Decks', 'Low-maintenance Trex, TimberTech, and AZEK deck platforms.'],
               ['/services/deck-replacement', 'Deck Replacement', 'Full tear-down and rebuild for aging or unsafe wood decks.'],
-              ['/services/porches/screened-porch', 'Screened Porches', 'Bug-free covered living space for dining, relaxing, and entertaining.'],
+              ['/screened-porch-builder-northern-virginia', 'Screened Porches', 'Bug-free covered living space for dining, relaxing, and entertaining.'],
               ['/services/patios', 'Patios', 'Paver, bluestone, and hardscape zones that complete the backyard.'],
               ['/services/gazebo-pergola', 'Pergolas & Gazebos', 'Shade, structure, louvered roofs, and architectural definition.'],
               ['/services/under-deck-patios', 'Under-Deck Spaces', 'Dry lower patios with drainage, ceilings, fans, and lighting.'],

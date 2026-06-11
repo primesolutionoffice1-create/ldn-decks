@@ -245,7 +245,7 @@ export default function BeforeAndAfterPage() {
               { title: 'New Deck Construction', desc: 'Bare yard to custom outdoor living space.', link: '/services/new-decks' },
               { title: 'Deck Resurfacing', desc: 'New composite surface on existing frame. Save 25-40%.', link: '/services/deck-resurfacing' },
               { title: 'Full Deck Replacement', desc: 'Complete tear-down and rebuild with modern materials.', link: '/deck-resurfacing-vs-replacement' },
-              { title: 'Screened Porch Conversion', desc: 'Open deck to bug-free 3-season room.', link: '/services/porches/screened-porch' },
+              { title: 'Screened Porch Conversion', desc: 'Open deck to bug-free 3-season room.', link: '/screened-porch-builder-northern-virginia' },
               { title: 'Pool Deck Replacement', desc: 'Chlorine-resistant AZEK for poolside safety.', link: '/pool-deck-builder-northern-virginia' },
               { title: 'Multi-Level Builds', desc: 'Tiered decks for entertaining and defined zones.', link: '/multi-level-deck-builder-northern-virginia' },
             ].map(({ title, desc, link }) => (

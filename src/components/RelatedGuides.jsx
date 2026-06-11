@@ -67,8 +67,8 @@ const CORNERSTONE_GUIDES = [
   // crawlers discover them without relying on sitemap alone.
   { path: '/deck-design-ideas-2026', title: 'Deck Design Ideas 2026', desc: 'Current design trends, color combos and layout ideas for Northern Virginia homes.' },
   { path: '/deck-materials-comparison-virginia', title: 'Deck Materials Comparison', desc: 'Side-by-side wood, composite, PVC and aluminum decking for Virginia climate.' },
-  { path: '/deck-remodeling', title: 'Deck Remodeling Services', desc: 'Update, expand or reconfigure an existing deck without a full tear-down.' },
-  { path: '/deck-repair', title: 'Deck Repair Services', desc: 'Targeted structural and surface repairs for older Northern Virginia decks.' },
+  { path: '/services/deck-resurfacing', title: 'Deck Remodeling Services', desc: 'Update, expand or reconfigure an existing deck without a full tear-down.' },
+  { path: '/services/deck-repair', title: 'Deck Repair Services', desc: 'Targeted structural and surface repairs for older Northern Virginia decks.' },
   { path: '/questions-to-ask-before-building-a-deck', title: '20 Questions Before Building a Deck', desc: 'Budget, materials, permits, HOA and timeline questions every homeowner should answer.' },
   { path: '/winterize-your-deck-northern-virginia', title: 'Winterize Your Deck', desc: 'Northern Virginia winter prep checklist to prevent freeze-thaw damage.' },
 ];

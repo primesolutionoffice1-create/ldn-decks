@@ -89,7 +89,7 @@ const services = [
   { title: 'Composite Decking', href: '/composite-decks' },
   { title: 'Deck Replacement', href: '/services/deck-replacement' },
   { title: 'Deck Resurfacing', href: '/services/deck-resurfacing' },
-  { title: 'Screened Porches', href: '/services/porches/screened-porch' },
+  { title: 'Screened Porches', href: '/screened-porch-builder-northern-virginia' },
   { title: 'Pergolas', href: '/services/gazebo-pergola' },
   { title: 'Railings & Stairs', href: '/services/trex-railings' },
   { title: 'Outdoor Living Projects', href: '/services' },

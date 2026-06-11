@@ -74,7 +74,7 @@ const CLUSTERS = [
   {
     title: 'Design Inspiration & Planning',
     desc: 'Browse layout ideas, design priorities and planning choices before moving into pricing, permits and consultation.',
-    href: '/deck-design-ideas-northern-virginia-2026',
+    href: '/deck-design-ideas-2026',
   },
 ];
 
