@@ -27,6 +27,10 @@ const REQUIRED_PHRASES = [
   'docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv',
   'docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv',
   `docs/seo/owner-evidence-action-packet-${DATE}.csv`,
+  `docs/seo/project-evidence-intake-${DATE}.csv`,
+  `docs/seo/photo-ingestion-manifest-${DATE}.csv`,
+  `docs/seo/warranty-terms-intake-${DATE}.csv`,
+  `docs/seo/repair-cost-ranges-intake-${DATE}.csv`,
 ];
 
 const FORBIDDEN_PATTERNS = [

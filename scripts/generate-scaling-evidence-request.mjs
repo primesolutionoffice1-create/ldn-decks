@@ -43,9 +43,9 @@ function evidenceNeed(blocker) {
   if (blocker.id === 'owner-proof-evidence') {
     return {
       evidenceNeeded: 'Owner-approved proof packets for blocked/proof-incomplete pages: project photos, allowed project descriptions, service scope, location permission, warranty/repair-cost evidence where relevant, and privacy confirmation.',
-      whereToCollect: 'Owner evidence sprint checklist, owner evidence handoff, project intake, photo manifest, warranty rows, and repair-cost rows.',
-      doneWhen: '`npm run seo:proof-preflight` shows no blocked/proof-incomplete pages and prepublish is no longer expected-blocked.',
-      verifyCommand: 'npm run seo:proof-preflight && npm run seo:weekly',
+      whereToCollect: `docs/seo/project-evidence-intake-${DATE}.csv, docs/seo/photo-ingestion-manifest-${DATE}.csv, docs/seo/warranty-terms-intake-${DATE}.csv, docs/seo/repair-cost-ranges-intake-${DATE}.csv, plus docs/seo/owner-evidence-sprint-${DATE}.md and docs/seo/owner-evidence-handoff-${DATE}.md for the exact collection order and privacy gates.`,
+      doneWhen: '`npm run seo:validate-owner-intake` and `npm run seo:proof-preflight` show no blocked/proof-incomplete pages and prepublish is no longer expected-blocked.',
+      verifyCommand: 'npm run seo:validate-owner-intake && npm run seo:proof-preflight && npm run seo:weekly',
     };
   }
 

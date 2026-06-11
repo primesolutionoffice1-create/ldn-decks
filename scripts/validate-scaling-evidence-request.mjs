@@ -26,8 +26,8 @@ const REQUIRED_BLOCKERS = [
   {
     id: 'owner-proof-evidence',
     owner: 'owner',
-    verifyCommand: 'npm run seo:proof-preflight && npm run seo:weekly',
-    requiredPhrases: ['Owner-approved proof packets', 'blocked/proof-incomplete', 'privacy confirmation'],
+    verifyCommand: 'npm run seo:validate-owner-intake && npm run seo:proof-preflight && npm run seo:weekly',
+    requiredPhrases: ['Owner-approved proof packets', 'blocked/proof-incomplete', 'privacy confirmation', 'project-evidence-intake', 'photo-ingestion-manifest', 'warranty-terms-intake', 'repair-cost-ranges-intake'],
   },
 ];
 
