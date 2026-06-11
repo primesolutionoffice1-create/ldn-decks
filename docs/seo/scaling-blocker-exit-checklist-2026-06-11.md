@@ -3,8 +3,8 @@
 ## Summary
 
 - Scaling status: RED
-- Current blockers: 4
-- Local blockers: 1
+- Current blockers: 3
+- Local blockers: 0
 - Owner/external blockers: 3
 - Source board: `docs/seo/scaling-readiness-board-2026-06-11.md`
 
@@ -36,15 +36,6 @@
 - Exit command: `npm run seo:evidence-action-packet:validate && npm run seo:validate-owner-intake && npm run seo:proof-preflight && npm run seo:weekly`
 - Expected after exit: Proof preflight reports 0 blocked and 0 proof-incomplete pages; owner proof blocker disappears from scaling readiness.
 - Red flag: Unknown/placeholder project fields, missing privacy pass, unresolved repair warranty/cost evidence, or prepublish expected-blocked keeps this blocker open.
-
-### P0 - ads-import-pack
-
-- Owner: local
-- Current evidence: 10 Ads import errors.
-- Exit evidence: Fix Google Ads import validation before any Ads Editor import.
-- Exit command: `npm run scaling:readiness`
-- Expected after exit: Blocker disappears from scaling readiness.
-- Red flag: Any unresolved P0 evidence keeps this blocker open.
 
 ## Operating Rule
 

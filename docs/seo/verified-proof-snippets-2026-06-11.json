@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-11T15:35:27.264Z",
+  "generated": "2026-06-11T19:44:22.241Z",
   "source_ledger": "seo-blueprint/evidence/project-evidence-ledger.json",
   "publish_rule": "Only snippets in this file may be used as proof-bearing public modules. Skipped records are not public proof.",
   "snippets": [

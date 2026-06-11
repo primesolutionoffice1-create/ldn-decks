@@ -23,7 +23,7 @@ export default function TrustSection() {
               />
             </a>
             <a
-              href="https://www.nadra.org/membership/directory/builders"
+              href="https://www.nadra.org/membership/directory#!biz/id/69f274b54078d1282501ee3b"
               target="_blank"
               rel="noopener"
               className={styles.nadraCard}

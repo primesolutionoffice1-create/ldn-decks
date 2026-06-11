@@ -55,6 +55,7 @@ export const BUSINESS = {
     'https://www.buildzoom.com/contractor/loudoun-decks',
     'https://business.loudounchamber.org/list/member/loudoun-decks-30047',
     'https://www.mapquest.com/us/virginia/loudoun-decks-532352487',
+    'https://www.nadra.org/membership/directory#!biz/id/69f274b54078d1282501ee3b',
   ],
   // Professional credentials surfaced site-wide on the site — mirrored into
   // schema as hasCredential for E-E-A-T / entity-trust signals.
@@ -98,7 +99,7 @@ export const BUSINESS = {
       memberType: 'Deck Builder/Contractor/Remodeler Primary Member',
       memberSince: '2026-04-29',
       expires: '2027-04-29',
-      directoryUrl: 'https://www.nadra.org/membership/directory/builders',
+      directoryUrl: 'https://www.nadra.org/membership/directory#!biz/id/69f274b54078d1282501ee3b',
     },
   ],
   // Founder / Owner Person entity. Used as Author for ArticleSchema across
