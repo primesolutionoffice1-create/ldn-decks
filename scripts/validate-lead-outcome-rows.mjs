@@ -3,10 +3,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const DEFAULT_INPUT = 'docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv';
 const today = new Date().toISOString().slice(0, 10);
 const OUTPUT_JSON = `scripts/output/lead-outcome-validation-${today}.json`;
 const OUTPUT_MD = `scripts/output/lead-outcome-validation-${today}.md`;
+const SAMPLE_INPUT = 'docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv';
+const LIVE_INPUT_DIR = 'docs/ads-tracking';
+const LIVE_INPUT_PREFIX = 'live-lead-outcomes-';
 
 const REQUIRED_HEADERS = [
   'lead_date',
@@ -87,6 +89,20 @@ function parseCsv(text) {
   return rows.filter((items) => items.some((item) => item.trim()));
 }
 
+function latestLiveInput() {
+  const dir = path.join(ROOT, LIVE_INPUT_DIR);
+  if (!fs.existsSync(dir)) return null;
+  const candidates = fs.readdirSync(dir)
+    .filter((file) => file.startsWith(LIVE_INPUT_PREFIX) && file.endsWith('.csv'))
+    .sort();
+  const latest = candidates.at(-1);
+  return latest ? path.join(LIVE_INPUT_DIR, latest) : null;
+}
+
+function defaultInput() {
+  return latestLiveInput() || SAMPLE_INPUT;
+}
+
 function normalize(value) {
   return String(value ?? '').trim();
 }
@@ -154,8 +170,11 @@ function toObjects(rows) {
   return body.map((items) => Object.fromEntries(headers.map((header, index) => [header, normalize(items[index])])));
 }
 
-const inputArg = process.argv[2] || DEFAULT_INPUT;
+const inputArg = process.argv[2] || process.env.LEAD_OUTCOME_INPUT || defaultInput();
 const inputPath = path.resolve(ROOT, inputArg);
+const relativeInput = path.relative(ROOT, inputPath);
+const sampleInput = relativeInput === SAMPLE_INPUT;
+const liveInput = relativeInput.startsWith(`${LIVE_INPUT_DIR}/${LIVE_INPUT_PREFIX}`);
 const text = fs.readFileSync(inputPath, 'utf8');
 const parsed = parseCsv(text);
 const headers = parsed[0] || [];
@@ -173,12 +192,23 @@ const qualifiedRows = realRows.filter((row) => row.qualified.toLowerCase() === '
 const uploadEligibleRows = realRows.filter((row) => row.ads_action.toLowerCase() === 'eligible_qualified_lead_upload').length;
 const phoneRows = realRows.filter((row) => row.phone_or_form.toLowerCase() === 'phone').length;
 const rowsWithClickId = realRows.filter(hasClickId).length;
-const status = errors.length ? 'FAIL' : realRows.length >= 5 ? 'PASS' : realRows.length ? 'PARTIAL' : 'SAMPLE_ONLY';
+const status = errors.length
+  ? 'FAIL'
+  : realRows.length >= 5
+    ? 'PASS'
+    : realRows.length
+      ? 'PARTIAL'
+      : sampleInput
+        ? 'SAMPLE_ONLY'
+        : liveInput
+          ? 'LIVE_EMPTY'
+          : 'EMPTY';
 
 const result = {
   ok: errors.length === 0,
   status,
-  input: path.relative(ROOT, inputPath),
+  input: relativeInput,
+  inputType: sampleInput ? 'sample_template' : liveInput ? 'live_intake' : 'custom',
   rows: realRows.length,
   qualifiedRows,
   uploadEligibleRows,
@@ -217,6 +247,7 @@ ${warnings.length ? warnings.map((item) => `- ${item}`).join('\n') : '- none'}
 ## Gate Notes
 
 - \`SAMPLE_ONLY\` is expected for the template file.
+- \`LIVE_EMPTY\` means the current live intake file exists but has no real rows yet.
 - \`PARTIAL\` means real rows are present, but fewer than 5 rows are available.
 - \`PASS\` means the file has at least 5 real rows and no validation errors.
 - This validator does not upload anything to Google Ads and does not prove Google Ads call attribution by itself.

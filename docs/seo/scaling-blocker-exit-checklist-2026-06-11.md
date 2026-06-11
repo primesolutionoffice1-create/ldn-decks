@@ -22,11 +22,11 @@
 ### P0 - lead-outcome-rows
 
 - Owner: owner
-- Current evidence: 0 real rows, 0 qualified, status SAMPLE_ONLY.
+- Current evidence: 0 real rows, 0 qualified, status LIVE_EMPTY.
 - Exit evidence: At least 5 real lead outcome rows, 0 validation errors, qualified status supported by notes/evidence, and upload eligibility only when click IDs or approved enhanced/offline path exist.
 - Exit command: `npm run measurement:lead-outcomes && npm run scaling:readiness`
 - Expected after exit: Lead outcome validation reports PASS with 5+ real rows and this blocker disappears from scaling readiness.
-- Red flag: SAMPLE_ONLY, fewer than 5 real rows, unqualified upload-eligible rows, or phone rows without duration/evidence keeps this blocker open.
+- Red flag: SAMPLE_ONLY, LIVE_EMPTY, fewer than 5 real rows, unqualified upload-eligible rows, or phone rows without duration/evidence keeps this blocker open.
 
 ### P0 - owner-proof-evidence
 

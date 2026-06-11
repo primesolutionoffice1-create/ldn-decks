@@ -29,10 +29,10 @@ This bundle is the single local handoff for clearing the current scaling RED blo
 - Blocker id: lead-outcome-rows
 - Owner: owner
 - Rows needed: 5-10 real LDN Decks lead outcome rows
-- Source/template: `docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv`
-- Paste/update location: `docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv`
+- Source/template: `docs/ads-tracking/live-lead-outcomes-2026-06-11.csv`
+- Paste/update location: `docs/ads-tracking/live-lead-outcomes-2026-06-11.csv`
 - Verify: `npm run measurement:lead-outcomes && npm run scaling:readiness`
-- Guardrail: Do not mark rows upload-eligible unless click IDs or an approved enhanced/offline conversion path exists.
+- Guardrail: Do not mark rows upload-eligible unless click IDs or an approved enhanced/offline conversion path exists. Use docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv only as a shape reference.
 
 ### Owner Proof Evidence
 

@@ -14,6 +14,7 @@ const SOURCES = {
   evidenceRequest: `docs/ads-tracking/scaling-evidence-request-${DATE}.md`,
   blockerExit: `docs/seo/scaling-blocker-exit-checklist-${DATE}.md`,
   callAttributionTemplate: 'docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv',
+  leadOutcomeLive: `docs/ads-tracking/live-lead-outcomes-${DATE}.csv`,
   leadOutcomeTemplate: 'docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv',
   ownerEvidencePacket: `docs/seo/owner-evidence-action-packet-${DATE}.csv`,
 };
@@ -67,12 +68,12 @@ const sections = [
   {
     id: 'lead-outcome-rows',
     title: 'Lead Outcome Rows',
-    source: SOURCES.leadOutcomeTemplate,
+    source: SOURCES.leadOutcomeLive,
     owner: 'owner',
     rowsNeeded: '5-10 real LDN Decks lead outcome rows',
-    pasteInto: SOURCES.leadOutcomeTemplate,
+    pasteInto: SOURCES.leadOutcomeLive,
     verify: 'npm run measurement:lead-outcomes && npm run scaling:readiness',
-    guardrail: 'Do not mark rows upload-eligible unless click IDs or an approved enhanced/offline conversion path exists.',
+    guardrail: `Do not mark rows upload-eligible unless click IDs or an approved enhanced/offline conversion path exists. Use ${SOURCES.leadOutcomeTemplate} only as a shape reference.`,
   },
   {
     id: 'owner-proof-evidence',

@@ -24,10 +24,10 @@ This packet converts the current scaling readiness blockers into owner/external 
 
 - Owner: owner
 - Evidence needed: 5-10 real LDN Decks lead outcome rows with lead date, click ID when present, source/medium/campaign, city, service type, qualification status, call/form evidence, sales notes, and Ads action.
-- Where to collect: CRM/GHL, call notes or recordings, form lead records, and docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv.
+- Where to collect: CRM/GHL, call notes or recordings, form lead records, and docs/ads-tracking/live-lead-outcomes-2026-06-11.csv. Use docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv only as the shape reference.
 - Done when: `npm run measurement:lead-outcomes` returns PASS with at least 5 real rows and 0 errors.
 - Verification command: `npm run measurement:lead-outcomes && npm run scaling:readiness`
-- Current evidence: 0 real rows, 0 qualified, status SAMPLE_ONLY.
+- Current evidence: 0 real rows, 0 qualified, status LIVE_EMPTY.
 
 ### P0 - owner-proof-evidence
 

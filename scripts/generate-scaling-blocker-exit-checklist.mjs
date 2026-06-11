@@ -36,7 +36,7 @@ function exitPlan(blocker) {
       exitEvidence: 'At least 5 real lead outcome rows, 0 validation errors, qualified status supported by notes/evidence, and upload eligibility only when click IDs or approved enhanced/offline path exist.',
       exitCommand: 'npm run measurement:lead-outcomes && npm run scaling:readiness',
       expectedAfterExit: 'Lead outcome validation reports PASS with 5+ real rows and this blocker disappears from scaling readiness.',
-      redFlag: 'SAMPLE_ONLY, fewer than 5 real rows, unqualified upload-eligible rows, or phone rows without duration/evidence keeps this blocker open.',
+      redFlag: 'SAMPLE_ONLY, LIVE_EMPTY, fewer than 5 real rows, unqualified upload-eligible rows, or phone rows without duration/evidence keeps this blocker open.',
     };
   }
 
