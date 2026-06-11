@@ -1,0 +1,346 @@
+{
+  "version": "2026-06-01",
+  "owner": "LDN Decks",
+  "purpose": "Source of truth for project proof, review sources, warranty terms, and repair cost evidence used in SEO, GEO, Maps, SXO, schema, and AI-citation work.",
+  "policy": {
+    "noFabrication": true,
+    "verifiedMeans": "Owner-supplied evidence, public profile source, invoice/estimate data, permit record, or original project media has been inspected and recorded.",
+    "publishRule": "Only records with evidence_status = verified may be used as proof claims in public copy, schema, captions, case studies, or project cards.",
+    "photoRule": "Use original project photos only for proof-bearing project modules. Stock imagery may be used only for neutral decorative or educational assets, never as evidence.",
+    "privacyRule": "Do not store customer names, private addresses, phone numbers, emails, permit numbers, or unredacted documents in this ledger."
+  },
+  "projectRequiredFields": [
+    "project_id",
+    "city",
+    "neighborhood",
+    "month_year",
+    "service_type",
+    "materials",
+    "verified_scope",
+    "verified_failure",
+    "work_performed",
+    "permit_or_hoa_status",
+    "before_photo_path",
+    "after_photo_path",
+    "evidence_status",
+    "owner_notes"
+  ],
+  "allowedEvidenceStatuses": [
+    "missing",
+    "partial",
+    "verified",
+    "blocked"
+  ],
+  "assetRequirementRequiredFields": [
+    "asset_id",
+    "page",
+    "needed",
+    "evidence_status",
+    "owner_notes"
+  ],
+  "publicReviewSourceRequiredFields": [
+    "source_id",
+    "source_name",
+    "url",
+    "evidence_status",
+    "owner_notes"
+  ],
+  "warrantyTermRequiredFields": [
+    "warranty_id",
+    "service_type",
+    "term",
+    "scope",
+    "source",
+    "evidence_status",
+    "owner_notes"
+  ],
+  "repairCostRangeRequiredFields": [
+    "cost_id",
+    "repair_type",
+    "low",
+    "high",
+    "source",
+    "evidence_status",
+    "owner_notes"
+  ],
+  "projects": [
+    {
+      "project_id": "showcase-custom-deck-reston",
+      "city": "Reston",
+      "neighborhood": "unspecified",
+      "month_year": "February 2025",
+      "service_type": "Custom deck installation",
+      "materials": "Not specified",
+      "verified_scope": "Existing showcase image and public project page; before/after pair not yet verified.",
+      "verified_failure": "Before/after evidence missing",
+      "work_performed": "Custom deck installation",
+      "permit_or_hoa_status": "Not recorded",
+      "before_photo_path": null,
+      "after_photo_path": "/images/img01.jpeg",
+      "evidence_status": "partial",
+      "owner_notes": "Imported from existing public showcase data on 2026-06-01. Keep partial until owner-supplied before/after evidence, permit/HOA status, and scope are confirmed."
+    },
+    {
+      "project_id": "showcase-metal-fence-centreville",
+      "city": "Centreville",
+      "neighborhood": "unspecified",
+      "month_year": "February 2025",
+      "service_type": "Metal fence installation",
+      "materials": "Metal fence",
+      "verified_scope": "Existing showcase image and public project page; before/after pair not yet verified.",
+      "verified_failure": "Before/after evidence missing",
+      "work_performed": "New metal fence installation",
+      "permit_or_hoa_status": "Not recorded",
+      "before_photo_path": null,
+      "after_photo_path": "/fence.webp",
+      "evidence_status": "partial",
+      "owner_notes": "Imported from existing public showcase data on 2026-06-01. Keep partial until owner-supplied before/after evidence, permit/HOA status, and scope are confirmed."
+    },
+    {
+      "project_id": "showcase-deck-construction-manassas",
+      "city": "Manassas",
+      "neighborhood": "unspecified",
+      "month_year": "February 2025",
+      "service_type": "Deck construction",
+      "materials": "Not specified",
+      "verified_scope": "Existing showcase image and public project page; before/after pair not yet verified.",
+      "verified_failure": "Before/after evidence missing",
+      "work_performed": "Deck construction",
+      "permit_or_hoa_status": "Not recorded",
+      "before_photo_path": null,
+      "after_photo_path": "/images/img03.jpeg",
+      "evidence_status": "partial",
+      "owner_notes": "Imported from existing public showcase data on 2026-06-01. Keep partial until owner-supplied before/after evidence, permit/HOA status, and scope are confirmed."
+    },
+    {
+      "project_id": "showcase-deck-resurfacing-sterling",
+      "city": "Sterling",
+      "neighborhood": "unspecified",
+      "month_year": "December 2024",
+      "service_type": "Deck resurfacing",
+      "materials": "Not specified",
+      "verified_scope": "Existing showcase image and public project page; before/after pair not yet verified.",
+      "verified_failure": "Before/after evidence missing",
+      "work_performed": "Deck/balcony resurfacing",
+      "permit_or_hoa_status": "Not recorded",
+      "before_photo_path": null,
+      "after_photo_path": "/images/img04.jpeg",
+      "evidence_status": "partial",
+      "owner_notes": "Imported from existing public showcase data on 2026-06-01. Keep partial until owner-supplied before/after evidence, permit/HOA status, and scope are confirmed."
+    },
+    {
+      "project_id": "showcase-balcony-reconstruction-chantilly",
+      "city": "Chantilly",
+      "neighborhood": "unspecified",
+      "month_year": "November 2024",
+      "service_type": "Balcony reconstruction",
+      "materials": "Not specified",
+      "verified_scope": "Existing showcase image and public project page; before/after pair not yet verified.",
+      "verified_failure": "Before/after evidence missing",
+      "work_performed": "Balcony reconstruction",
+      "permit_or_hoa_status": "Not recorded",
+      "before_photo_path": null,
+      "after_photo_path": "/images/img05.jpeg",
+      "evidence_status": "partial",
+      "owner_notes": "Imported from existing public showcase data on 2026-06-01. Keep partial until owner-supplied before/after evidence, permit/HOA status, and scope are confirmed."
+    },
+    {
+      "project_id": "showcase-new-composite-deck-ashburn",
+      "city": "Ashburn",
+      "neighborhood": "unspecified",
+      "month_year": "October 2024",
+      "service_type": "Composite deck build",
+      "materials": "Composite decking",
+      "verified_scope": "Existing showcase image and public project page; before/after pair not yet verified.",
+      "verified_failure": "Before/after evidence missing",
+      "work_performed": "Built new composite deck",
+      "permit_or_hoa_status": "Not recorded",
+      "before_photo_path": null,
+      "after_photo_path": "/images/img10.jpeg",
+      "evidence_status": "partial",
+      "owner_notes": "Imported from existing public showcase data on 2026-06-01. Keep partial until owner-supplied before/after evidence, permit/HOA status, and scope are confirmed."
+    },
+    {
+      "project_id": "before-after-project-1",
+      "city": "Leesburg",
+      "neighborhood": null,
+      "month_year": "UNKNOWN - OWNER TO FILL",
+      "service_type": "Deck resurfacing",
+      "materials": "UNKNOWN - OWNER TO FILL",
+      "verified_scope": "Before/after image pair exists; owner must verify scope before public case-study use",
+      "verified_failure": "UNKNOWN - OWNER TO FILL",
+      "work_performed": "UNKNOWN - OWNER TO FILL",
+      "permit_or_hoa_status": "UNKNOWN - OWNER TO FILL",
+      "before_photo_path": "/Projectsbeforeandafter/project1before.jpeg",
+      "after_photo_path": "/Projectsbeforeandafter/project1after.jpeg",
+      "evidence_status": "partial",
+      "owner_notes": "OWNER TO FILL: month/year; neighborhood if safe; final material line/color; whether frame was reused; final cost or publishable range; timeline; permit/HOA status; whether any savings claim is publishable."
+    },
+    {
+      "project_id": "before-after-project-2",
+      "city": "Ashburn",
+      "neighborhood": null,
+      "month_year": "UNKNOWN - OWNER TO FILL",
+      "service_type": "Elevated deck modernization",
+      "materials": "UNKNOWN - OWNER TO FILL",
+      "verified_scope": "Before/after image pair exists; owner must verify structural scope before public case-study use",
+      "verified_failure": "UNKNOWN - OWNER TO FILL",
+      "work_performed": "UNKNOWN - OWNER TO FILL",
+      "permit_or_hoa_status": "UNKNOWN - OWNER TO FILL",
+      "before_photo_path": "/Projectsbeforeandafter/project2before.jpeg",
+      "after_photo_path": "/Projectsbeforeandafter/project2after.jpeg",
+      "evidence_status": "partial",
+      "owner_notes": "OWNER TO FILL: month/year; neighborhood/community if safe; final material line/color; frame/ledger/footing/stair/railing scope; final cost or publishable range; timeline; permit/HOA status; any code-compliance details."
+    },
+    {
+      "project_id": "before-after-project-3",
+      "city": "Manassas",
+      "neighborhood": null,
+      "month_year": "UNKNOWN - OWNER TO FILL",
+      "service_type": "Backyard deck revitalization",
+      "materials": "UNKNOWN - OWNER TO FILL",
+      "verified_scope": "Before/after image pair exists; owner must verify scope before public case-study use",
+      "verified_failure": "UNKNOWN - OWNER TO FILL",
+      "work_performed": "UNKNOWN - OWNER TO FILL",
+      "permit_or_hoa_status": "UNKNOWN - OWNER TO FILL",
+      "before_photo_path": "/Projectsbeforeandafter/project3before.jpeg",
+      "after_photo_path": "/Projectsbeforeandafter/project3after.jpeg",
+      "evidence_status": "partial",
+      "owner_notes": "OWNER TO FILL: month/year; neighborhood if safe; final material line/color; skirting/storage scope; final cost or publishable range; timeline; permit/HOA status."
+    },
+    {
+      "project_id": "before-after-project-4",
+      "city": "Sterling",
+      "neighborhood": null,
+      "month_year": "UNKNOWN - OWNER TO FILL",
+      "service_type": "Townhome deck transformation",
+      "materials": "UNKNOWN - OWNER TO FILL",
+      "verified_scope": "Before/after image pair exists; owner must verify scope before public case-study use",
+      "verified_failure": "UNKNOWN - OWNER TO FILL",
+      "work_performed": "UNKNOWN - OWNER TO FILL",
+      "permit_or_hoa_status": "UNKNOWN - OWNER TO FILL",
+      "before_photo_path": "/Projectsbeforeandafter/project4before.jpeg",
+      "after_photo_path": "/Projectsbeforeandafter/project4after.jpeg",
+      "evidence_status": "partial",
+      "owner_notes": "OWNER TO FILL: month/year; neighborhood/community if safe; final material line/color; townhome/HOA requirements; final cost or publishable range; timeline; permit/HOA status; remove any disruption/timeline claim unless verified."
+    }
+  ],
+  "warranty_terms": [],
+  "repair_cost_ranges": [],
+  "public_review_sources": [
+    {
+      "source_id": "google-business-profile",
+      "source_name": "Google Business Profile",
+      "url": "https://www.google.com/maps/place/Loudoun+Decks/",
+      "evidence_status": "verified",
+      "owner_notes": "Public profile URL listed in business schema."
+    },
+    {
+      "source_id": "bbb-profile",
+      "source_name": "Better Business Bureau",
+      "url": "https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241",
+      "evidence_status": "verified",
+      "owner_notes": "Public profile URL listed in business schema."
+    },
+    {
+      "source_id": "yelp-profile",
+      "source_name": "Yelp",
+      "url": "https://www.yelp.com/biz/loudoun-decks-centreville",
+      "evidence_status": "verified",
+      "owner_notes": "Public profile URL listed in business schema."
+    },
+    {
+      "source_id": "houzz-profile",
+      "source_name": "Houzz",
+      "url": "https://www.houzz.com/pro/webuser-782541997/loudoun-decks",
+      "evidence_status": "verified",
+      "owner_notes": "Public profile URL listed in business schema."
+    },
+    {
+      "source_id": "buildzoom-profile",
+      "source_name": "BuildZoom",
+      "url": "https://www.buildzoom.com/contractor/loudoun-decks",
+      "evidence_status": "verified",
+      "owner_notes": "Public profile URL listed in business schema."
+    }
+  ],
+  "asset_requirements": [
+    {
+      "asset_id": "deck-repair-hero-before-after",
+      "page": "/services/deck-repair",
+      "needed": "Hero before/after image pair for deck repair hub",
+      "evidence_status": "missing",
+      "owner_notes": "Use original project photos only; include city and month/year metadata if available."
+    },
+    {
+      "asset_id": "ledger-failure-photo",
+      "page": "/services/deck-repair",
+      "needed": "Ledger failure photo",
+      "evidence_status": "missing",
+      "owner_notes": "Redact private address or identifying house numbers before publishing."
+    },
+    {
+      "asset_id": "post-rot-photo",
+      "page": "/services/deck-repair",
+      "needed": "Post rot photo",
+      "evidence_status": "missing",
+      "owner_notes": "Show failure clearly enough for educational captioning."
+    },
+    {
+      "asset_id": "stair-rebuild-before-after",
+      "page": "/services/deck-repair",
+      "needed": "Stair rebuild before/after",
+      "evidence_status": "missing",
+      "owner_notes": "Do not add a project story until scope and date are confirmed."
+    },
+    {
+      "asset_id": "railing-repair-before-after",
+      "page": "/services/deck-repair",
+      "needed": "Railing repair before/after",
+      "evidence_status": "missing",
+      "owner_notes": "Confirm whether code spacing/height issues were corrected before claiming code repair."
+    },
+    {
+      "asset_id": "resurfacing-before-after",
+      "page": "/services/deck-repair",
+      "needed": "Composite resurfacing before/after",
+      "evidence_status": "missing",
+      "owner_notes": "Confirm framing inspection status before claiming the substructure was saved."
+    },
+    {
+      "asset_id": "joist-sistering-photo",
+      "page": "/services/deck-repair",
+      "needed": "Joist sistering or framing repair photo",
+      "evidence_status": "missing",
+      "owner_notes": "Include only if repair scope is verified by estimate, invoice, or owner confirmation."
+    },
+    {
+      "asset_id": "redacted-permit-or-inspection-screenshot",
+      "page": "/services/deck-repair",
+      "needed": "Optional redacted permit or inspection screenshot",
+      "evidence_status": "missing",
+      "owner_notes": "Remove owner name, property address, permit number, and private notes before public use."
+    },
+    {
+      "asset_id": "before-after-project-records",
+      "page": "/before-and-after",
+      "needed": "Owner-supplied project records for all four before/after cards: signed estimate or invoice, final scope, month/year, city/neighborhood, material selection, timeline, final cost, and permit/HOA status.",
+      "evidence_status": "missing",
+      "owner_notes": "Do not convert partial project summaries into proof-backed case studies until the matching project records are supplied and reviewed."
+    },
+    {
+      "asset_id": "before-after-image-metadata",
+      "page": "/before-and-after",
+      "needed": "Original image metadata or owner confirmation tying each before/after pair to the correct project city, month/year, and scope.",
+      "evidence_status": "missing",
+      "owner_notes": "Photo files exist in public/Projectsbeforeandafter, but project linkage details still need owner confirmation."
+    },
+    {
+      "asset_id": "composite-cost-example-records",
+      "page": "/composite-deck-cost-northern-virginia",
+      "needed": "Estimate/invoice-backed records for pricing examples before they are described as formal real project examples.",
+      "evidence_status": "missing",
+      "owner_notes": "Current page labels these as estimating scenarios. Upgrade only after signed estimate/invoice, city, month/year, scope, materials, and final cost are verified."
+    }
+  ]
+}

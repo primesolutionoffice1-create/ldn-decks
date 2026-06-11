@@ -1,0 +1,2 @@
+evidence_date,reviewer,source_system,conversion_name,call_source,primary_status,count_setting,min_call_duration_seconds,status,diagnostics_status,recent_conversions_30d,phone_click_primary_risk,evidence_url_or_screenshot,notes,gate_decision
+YYYY-MM-DD,SAMPLE,google_ads_conversions,Qualified phone call,Calls from ads,primary,one,60,Active,clean,0,no,attach-screenshot-or-readonly-export-url,Sample row only - replace with real Google Ads/GTM evidence,RED
