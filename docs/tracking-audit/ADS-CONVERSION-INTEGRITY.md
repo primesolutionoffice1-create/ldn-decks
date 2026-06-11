@@ -206,12 +206,12 @@ For each conversion action currently set as primary, apply this filter:
 
 After demoting noise signals:
 
-| Today (no Smart Bidding active) | Phase 1 ready state | After HIGH-1..4 verified |
+| Today (no Smart Bidding active) | Phase 1 ready state | After HIGH-1..4 verified plus scaling gates GREEN |
 |---|---|---|
-| Manual CPC / Max Clicks recommended until conversion data is clean | Same — DO NOT switch to Max Conversions yet | Switch to Max Conversions (no target) for 7-14 days to accumulate clean data |
+| Manual CPC / Max Clicks recommended until conversion data is clean | Same — DO NOT switch to Max Conversions yet | Consider Maximize Conversions only after `npm run scaling:readiness` is GREEN, live call-attribution evidence is non-empty/clean, and live lead-outcome thresholds are met |
 | Conversions column may be inflated by phone_click / form_submit duplication | Still inflated until GTM dedup is published | Conversions column reflects real, deduped conversions only |
 
-**Do not** switch to Max Conversions / tCPA / tROAS before this document and `GTM-VALIDATION-REPORT.md` are both signed off. Bidding on noisy data wastes budget faster than no bidding at all.
+**Do not** switch to Max Conversions / tCPA / tROAS before this document, `GTM-VALIDATION-REPORT.md`, and the current scaling readiness board are all signed off. Bidding on noisy or empty live data wastes budget faster than no bidding at all.
 
 ---
 
@@ -245,7 +245,7 @@ Click-ID propagation:
 Bid strategy:
   Current strategy:                     ______________
   Plan to switch:                       [ ] hold for HIGH-3 + offline imports
-                                        [ ] eligible to switch to Max Conversions now
+                                        [ ] eligible to review Maximize Conversions after scaling board GREEN
 
 Validated by:                           ______________________________
 Date:                                   ______________________________
