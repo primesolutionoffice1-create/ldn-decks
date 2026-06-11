@@ -17,6 +17,18 @@ function readJson(relativePath, fallback = null) {
   }
 }
 
+function readLatestOutputJson(prefix, fallback = null) {
+  try {
+    const files = fs.readdirSync(OUTPUT_DIR)
+      .filter((file) => file.startsWith(prefix) && file.endsWith('.json'))
+      .sort();
+    if (!files.length) return fallback;
+    return readJson(path.join('scripts/output', files.at(-1)), fallback);
+  } catch {
+    return fallback;
+  }
+}
+
 function readText(relativePath, fallback = '') {
   try {
     return fs.readFileSync(path.join(ROOT, relativePath), 'utf8');
@@ -625,8 +637,8 @@ function buildTaskBoard(tasks, business, publicProfiles) {
 function main() {
   const sprint = runJsonScript('scripts/generate-owner-evidence-sprint.mjs');
   const business = loadBusiness();
-  const coverage = readJson(`scripts/output/evidence-coverage-${today}.json`, readJson('scripts/output/evidence-coverage-2026-06-02.json', {}));
-  const readiness = readJson(`scripts/output/publish-readiness-${today}.json`, readJson('scripts/output/publish-readiness-2026-06-02.json', {}));
+  const coverage = readJson(`scripts/output/evidence-coverage-${today}.json`, readLatestOutputJson('evidence-coverage-', {}));
+  const readiness = readJson(`scripts/output/publish-readiness-${today}.json`, readLatestOutputJson('publish-readiness-', {}));
   const publicProfiles = mapPublicProfiles(business);
 
   const tasks = [

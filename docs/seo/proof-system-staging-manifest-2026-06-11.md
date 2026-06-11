@@ -118,6 +118,7 @@ Review and stage this group separately when it is intentional.
 
 - `docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-2026-06-11.md`
 - `scripts/measurement-integrity-gate.mjs`
+- `scripts/validate-lead-outcome-rows.mjs`
 - `src/app/admin/seo/`
 - `src/app/api/seo/`
 - `src/components/ConsentBanner.jsx`

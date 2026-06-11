@@ -78,6 +78,18 @@ function readJson(relativePath, fallback = null) {
   }
 }
 
+function readLatestOutputJson(prefix, fallback = null) {
+  try {
+    const files = fs.readdirSync(OUTPUT_DIR)
+      .filter((file) => file.startsWith(prefix) && file.endsWith('.json'))
+      .sort();
+    if (!files.length) return fallback;
+    return readJson(path.join('scripts/output', files.at(-1)), fallback);
+  } catch {
+    return fallback;
+  }
+}
+
 function pageFileForRoute(route) {
   const trimmed = route.replace(/^\//, '') || 'page';
   return path.join(SRC_APP, trimmed === 'page' ? 'page.js' : trimmed, 'page.js');
@@ -250,7 +262,7 @@ function actionRows(rows) {
 }
 
 function main() {
-  const readiness = readJson(`scripts/output/publish-readiness-${today}.json`, readJson('scripts/output/publish-readiness-2026-06-02.json', {}));
+  const readiness = readJson(`scripts/output/publish-readiness-${today}.json`, readLatestOutputJson('publish-readiness-', {}));
 
   const rows = TARGETS.map((target) => {
     const file = pageFileForRoute(target.route);
