@@ -136,7 +136,7 @@ function audit() {
     const abs = path.join(PUBLIC_DIR, img.replace(/^\//, ''));
     const exists = fs.existsSync(abs);
     if (!exists) {
-      findings.push({ severity: 'MISSING', image: img, usage });
+      findings.push({ severity: 'MISSING', image: img, flags: ['MISSING_FILE'], usage });
       continue;
     }
     const stat = fs.statSync(abs);
