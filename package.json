@@ -88,6 +88,8 @@
         "seo:proof-commands:validate": "node scripts/validate-proof-command-references.mjs",
         "brainstein:readiness": "node scripts/generate-brainstein-readiness-audit.mjs",
         "brainstein:readiness:validate": "node scripts/validate-brainstein-readiness-audit.mjs",
+        "brainstein:tasks": "node scripts/generate-brainstein-task-packets.mjs",
+        "brainstein:tasks:validate": "node scripts/validate-brainstein-task-packets.mjs",
         "automation:static": "node scripts/validate-automation-stack-static.mjs",
         "measurement:gate": "node scripts/measurement-integrity-gate.mjs",
         "measurement:call-attribution-evidence": "node scripts/validate-call-attribution-evidence.mjs",

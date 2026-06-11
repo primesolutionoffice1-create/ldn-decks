@@ -11,21 +11,19 @@ Use the commands only after reviewing the corresponding group. Do not mix proof 
 - Configured paths: 35
 - Existing paths: 35
 - Missing paths: 0
-- Dirty/staging-needed paths: 6
+- Dirty/staging-needed paths: 4
 
 Suggested command:
 
 ```bash
-git add 'package.json' 'scripts/generate-directory-citation-packets.mjs' 'scripts/validate-directory-citation-packets.mjs' 'scripts/validate-ai-discovery.mjs' 'scripts/validate-proof-command-references.mjs' 'src/data/verifiedProofSnippets.json'
+git add 'package.json' 'scripts/seo-weekly-report.mjs' 'scripts/evidence-anti-fabrication-regression.mjs' 'src/data/verifiedProofSnippets.json'
 ```
 
 Dirty/staging-needed paths:
 
 - `package.json`
-- `scripts/generate-directory-citation-packets.mjs`
-- `scripts/validate-directory-citation-packets.mjs`
-- `scripts/validate-ai-discovery.mjs`
-- `scripts/validate-proof-command-references.mjs`
+- `scripts/seo-weekly-report.mjs`
+- `scripts/evidence-anti-fabrication-regression.mjs`
 - `src/data/verifiedProofSnippets.json`
 
 ## Owner Handoff And Generated Proof Reports
@@ -35,24 +33,17 @@ Dirty/staging-needed paths:
 - Configured paths: 28
 - Existing paths: 28
 - Missing paths: 0
-- Dirty/staging-needed paths: 8
+- Dirty/staging-needed paths: 1
 
 Suggested command:
 
 ```bash
-git add 'docs/seo/owner-evidence-handoff-2026-06-11.md' 'docs/seo/verified-proof-snippets-2026-06-11.json' 'docs/seo/gbp-maps-proof-ops-board-2026-06-11.md' 'docs/seo/gbp-maps-proof-ops-board-2026-06-11.csv' 'docs/seo/internal-link-gap-report-2026-06-11.md' 'docs/seo/ldndecks-deep-seo-growth-map-2026-06-11.md' 'docs/seo/sxo-conversion-report-2026-06-11.md' 'docs/seo/proof-system-staging-manifest-2026-06-11.md'
+git add 'docs/seo/verified-proof-snippets-2026-06-11.json'
 ```
 
 Dirty/staging-needed paths:
 
-- `docs/seo/owner-evidence-handoff-2026-06-11.md`
 - `docs/seo/verified-proof-snippets-2026-06-11.json`
-- `docs/seo/gbp-maps-proof-ops-board-2026-06-11.md`
-- `docs/seo/gbp-maps-proof-ops-board-2026-06-11.csv`
-- `docs/seo/internal-link-gap-report-2026-06-11.md`
-- `docs/seo/ldndecks-deep-seo-growth-map-2026-06-11.md`
-- `docs/seo/sxo-conversion-report-2026-06-11.md`
-- `docs/seo/proof-system-staging-manifest-2026-06-11.md`
 
 ## Public Proof-Safety Copy And SEO Cleanup
 
@@ -61,22 +52,17 @@ Dirty/staging-needed paths:
 - Configured paths: 7
 - Existing paths: 7
 - Missing paths: 0
-- Dirty/staging-needed paths: 6
+- Dirty/staging-needed paths: 0
 
 Suggested command:
 
 ```bash
-git add 'public/llms.txt' 'public/llms-full.txt' 'src/app/llms.txt/route.js' 'src/app/llms-full.txt/route.js' 'src/components/' 'src/lib/'
+# Nothing dirty in this group.
 ```
 
 Dirty/staging-needed paths:
 
-- `public/llms.txt`
-- `public/llms-full.txt`
-- `src/app/llms.txt/route.js`
-- `src/app/llms-full.txt/route.js`
-- `src/components/`
-- `src/lib/`
+- none
 
 ## Generated Social / OG Assets
 

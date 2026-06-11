@@ -194,6 +194,26 @@ function parseCommercialEvidenceIntakeValidation(out) {
   return parseTrailingJsonObject(out);
 }
 
+function parseBrainsteinReadiness(out) {
+  return parseTrailingJsonObject(out);
+}
+
+function parseBrainsteinTaskPackets(out) {
+  return parseTrailingJsonObject(out);
+}
+
+function parseBrainsteinTaskPacketValidation(out) {
+  return parseTrailingJsonObject(out);
+}
+
+function parseProofCommandReferenceValidation(out) {
+  return parseTrailingJsonObject(out);
+}
+
+function parseDirectoryCitationValidation(out) {
+  return parseTrailingJsonObject(out);
+}
+
 function parseGrowthMap(out) {
   return parseTrailingJsonObject(out);
 }
@@ -545,6 +565,24 @@ console.log(`  ✓ Photo ingestion manifest validation (${results[60].ms}ms)`);
 results.push(run('Commercial evidence intake validation', 'node scripts/validate-commercial-evidence-intake.mjs'));
 console.log(`  ✓ Commercial evidence intake validation (${results[61].ms}ms)`);
 
+results.push(run('Owner evidence packet final refresh', 'node scripts/generate-owner-evidence-packet.mjs'));
+console.log(`  ✓ Owner evidence packet final refresh (${results[62].ms}ms)`);
+
+results.push(run('Brainstein readiness', 'node scripts/generate-brainstein-readiness-audit.mjs'));
+console.log(`  ✓ Brainstein readiness (${results[63].ms}ms)`);
+
+results.push(run('Brainstein task packets', 'node scripts/generate-brainstein-task-packets.mjs'));
+console.log(`  ✓ Brainstein task packets (${results[64].ms}ms)`);
+
+results.push(run('Brainstein task packet validation', 'node scripts/validate-brainstein-task-packets.mjs'));
+console.log(`  ✓ Brainstein task packet validation (${results[65].ms}ms)`);
+
+results.push(run('Proof command reference validation', 'node scripts/validate-proof-command-references.mjs'));
+console.log(`  ✓ Proof command reference validation (${results[66].ms}ms)`);
+
+results.push(run('Directory citation packet validation', 'node scripts/validate-directory-citation-packets.mjs'));
+console.log(`  ✓ Directory citation packet validation (${results[67].ms}ms)`);
+
 // ---------- Parse + summarize ----------
 
 const schema = parseSchemaValidator(results[0].out);
@@ -609,6 +647,12 @@ const evidenceUnblockValidation = parseEvidenceUnblockValidation(results[58].out
 const beforeAfterEvidenceValidation = parseBeforeAfterEvidenceValidation(results[59].out);
 const photoManifestValidation = parsePhotoManifestValidation(results[60].out);
 const commercialEvidenceIntakeValidation = parseCommercialEvidenceIntakeValidation(results[61].out);
+const ownerPacketFinal = parseOwnerEvidencePacket(results[62].out);
+const brainsteinReadiness = parseBrainsteinReadiness(results[63].out);
+const brainsteinTaskPackets = parseBrainsteinTaskPackets(results[64].out);
+const brainsteinTaskPacketValidation = parseBrainsteinTaskPacketValidation(results[65].out);
+const proofCommandReferenceValidation = parseProofCommandReferenceValidation(results[66].out);
+const directoryCitationValidation = parseDirectoryCitationValidation(results[67].out);
 
 const goodPct = images?.totalImages ? Math.round((images.GOOD / images.totalImages) * 100) : null;
 const linkPct = links?.internalLinks ? Math.round((100 * (links.internalLinks - (links.badCount || 0)) / links.internalLinks)) : null;
@@ -627,6 +671,9 @@ const placeholderMetric = placeholders
 const ownerPacketMetric = ownerPacket
   ? `${ownerPacket.rows ?? '?'} actions · ${ownerPacket.p0 ?? '?'} P0 · ${ownerPacket.p1 ?? '?'} P1`
   : '? owner actions';
+const ownerPacketFinalMetric = ownerPacketFinal
+  ? `${ownerPacketFinal.rows ?? '?'} actions · ${ownerPacketFinal.p0 ?? '?'} P0 · ${ownerPacketFinal.p1 ?? '?'} P1`
+  : '? final owner actions';
 const ownerIntakeMetric = ownerIntake
   ? `${ownerIntake.projectIntake ?? '?'} project · ${ownerIntake.photoManifest ?? '?'} photo · ${ownerIntake.sprintBlocks ?? '?'} sprint · ${ownerIntake.warrantyRows ?? '?'} warranty · ${ownerIntake.repairCostRows ?? '?'} cost · ${ownerIntake.errors ?? '?'} errors`
   : '? owner intake';
@@ -675,6 +722,18 @@ const photoManifestValidationMetric = photoManifestValidation
 const commercialEvidenceIntakeValidationMetric = commercialEvidenceIntakeValidation
   ? `${commercialEvidenceIntakeValidation.warrantyRows ?? '?'} warranty · ${commercialEvidenceIntakeValidation.repairCostRows ?? '?'} repair cost · ${commercialEvidenceIntakeValidation.blankWarrantyEvidenceFields ?? '?'} blank warranty fields · ${commercialEvidenceIntakeValidation.blankRepairCostEvidenceFields ?? '?'} blank cost fields · ${commercialEvidenceIntakeValidation.errors?.length ?? '?'} errors`
   : '? commercial evidence intake validation';
+const brainsteinReadinessMetric = brainsteinReadiness
+  ? `${brainsteinReadiness.maturity?.stage ?? '?'} · ${brainsteinReadiness.maturity?.gate ?? '?'} · ${brainsteinTaskPackets?.packets ?? proofPreflight?.brainsteinTaskPackets ?? '?'} task packets · ${brainsteinReadiness.directoryCitationGate?.errors?.length ?? '?'} citation errors`
+  : '? Brainstein readiness';
+const brainsteinTaskPacketValidationMetric = brainsteinTaskPacketValidation
+  ? `${brainsteinTaskPacketValidation.packets ?? '?'} packets · ${brainsteinTaskPacketValidation.errors?.length ?? '?'} errors`
+  : '? Brainstein task packet validation';
+const proofCommandReferenceMetric = proofCommandReferenceValidation
+  ? `${proofCommandReferenceValidation.commandRefs ?? '?'} command refs · ${proofCommandReferenceValidation.missingCommandRefs ?? '?'} missing refs · ${proofCommandReferenceValidation.missingScriptTargets ?? '?'} missing targets · ${proofCommandReferenceValidation.duplicateScripts?.length ?? 0} duplicate scripts`
+  : '? proof command references';
+const directoryCitationValidationMetric = directoryCitationValidation
+  ? `${directoryCitationValidation.packets?.length ?? '?'} packets · ${directoryCitationValidation.sameAsCount ?? '?'} sameAs · ${directoryCitationValidation.errors?.length ?? '?'} errors · ${directoryCitationValidation.warnings?.length ?? '?'} warnings`
+  : '? directory citation validation';
 const growthMapMetric = growthMap
   ? `${growthMap.routes ?? '?'} page modules · ${growthMap.ownerActions ?? '?'} owner actions · ${growthMap.blockedPages ?? '?'} blocked · ${growthMap.report ?? 'no report'}`
   : '? growth map';
@@ -803,6 +862,7 @@ const summaryLines = [
   `| Evidence ledger | ${evidence?.ok ? '✓ green' : '✗ red'} | ${evidenceProjectMetric} · ${evidenceReviewMetric} · ${evidence?.assetRequirements ?? '?'} asset requirements · ${evidence?.errors?.length ?? '?'} errors |`,
   `| Evidence coverage | ${coverage?.ok ? '✓ snapshot' : '✗ red'} | ${coverageMetric} |`,
   `| Owner evidence packet | ${ownerPacket?.ok ? '✓ generated' : '✗ red'} | ${ownerPacketMetric} |`,
+  `| Owner evidence packet final refresh | ${ownerPacketFinal?.ok ? '✓ generated' : '✗ red'} | ${ownerPacketFinalMetric} |`,
   `| Owner intake suite | ${ownerIntake?.ok ? '✓ ready' : '✗ red'} | ${ownerIntakeMetric} |`,
   `| Owner evidence handoff | ${ownerHandoff?.ok ? '✓ ready' : '✗ red'} | ${ownerHandoffMetric} |`,
   `| Owner evidence handoff validation | ${ownerHandoffValidation?.ok ? '✓ valid' : '✗ red'} | ${ownerHandoffValidationMetric} |`,
@@ -819,6 +879,10 @@ const summaryLines = [
   `| Before/after evidence resolution validation | ${beforeAfterEvidenceValidation?.ok ? '✓ valid' : '✗ red'} | ${beforeAfterEvidenceValidationMetric} |`,
   `| Photo ingestion manifest validation | ${photoManifestValidation?.ok ? '✓ valid' : '✗ red'} | ${photoManifestValidationMetric} |`,
   `| Commercial evidence intake validation | ${commercialEvidenceIntakeValidation?.ok ? '✓ valid' : '✗ red'} | ${commercialEvidenceIntakeValidationMetric} |`,
+  `| Brainstein readiness | ${brainsteinReadiness?.ok ? '✓ proof-gated' : '✗ red'} | ${brainsteinReadinessMetric} |`,
+  `| Brainstein task packet validation | ${brainsteinTaskPacketValidation?.ok ? '✓ valid' : '✗ red'} | ${brainsteinTaskPacketValidationMetric} |`,
+  `| Proof command reference validation | ${proofCommandReferenceValidation?.ok ? '✓ valid' : '✗ red'} | ${proofCommandReferenceMetric} |`,
+  `| Directory citation packet validation | ${directoryCitationValidation?.ok ? '✓ valid' : '✗ red'} | ${directoryCitationValidationMetric} |`,
   `| Public placeholders | ${(placeholders?.publicFindings ?? 0) === 0 ? '✓ clean' : '⚠ evidence-needed'} | ${placeholderMetric} |`,
   `| Image alt-text | ${goodPct != null && goodPct >= 85 ? '✓ healthy' : '⚠ review'} | ${images?.GOOD ?? '?'}/${images?.totalImages ?? '?'} GOOD (${goodPct ?? '?'}%) · ${images?.MISSING ?? '?'} MISSING · ${images?.GENERIC ?? '?'} GENERIC · ${images?.WEAK ?? '?'} WEAK |`,
   `| Internal links | ${linkPct != null && linkPct >= 95 ? '✓ healthy' : '⚠ review'} | ${links?.internalLinks ?? '?'} links audited · ${links?.badCount ?? '?'} bad (${linkPct ?? '?'}% pass) |`,
@@ -919,6 +983,11 @@ reportLines.push('- [ ] Owner evidence sprint checklist reviewed — run `npm ru
 reportLines.push('- [ ] Owner evidence sprint validation reviewed — run `npm run seo:evidence-sprint:validate` after editing owner sprint blocks or source files');
 reportLines.push('- [ ] Owner evidence action packet validated — run `npm run seo:evidence-action-packet:validate` after editing owner proof blockers');
 reportLines.push('- [ ] Proof source checklist reviewed — see `docs/seo/proof-source-checklist-' + today + '.md`');
+reportLines.push('- [ ] Directory citation packets reviewed — run `npm run seo:directory-citations:validate` after editing NADRA/Bing/Apple/Nextdoor/Angi proof packets');
+reportLines.push('- [ ] Proof command references reviewed — run `npm run seo:proof-commands:validate` after editing package scripts or proof command docs');
+reportLines.push('- [ ] Brainstein readiness reviewed — see `docs/seo/brainstein-readiness-audit-' + today + '.md`');
+reportLines.push('- [ ] Brainstein task packets reviewed — see `docs/seo/brainstein-task-packets-' + today + '.md`');
+reportLines.push('- [ ] Brainstein task packet validation reviewed — run `npm run brainstein:tasks:validate` after editing Brainstein packet generation');
 reportLines.push('- [ ] Internal link gap validation reviewed — run `npm run seo:internal-link-gap:validate` after editing priority money-page links');
 reportLines.push('- [ ] Deep SEO growth map validation reviewed — run `npm run seo:growth-map:validate` after editing growth-map logic or proof-gated candidate pages');
 reportLines.push('- [ ] SXO conversion report reviewed — see `docs/seo/sxo-conversion-report-' + today + '.md`');
