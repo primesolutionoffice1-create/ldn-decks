@@ -420,4 +420,4 @@ Before flipping the Smart Bidding switch:
 - [ ] Conversion action settings: Data-driven attribution, "Don't allow duplicate" ON
 - [ ] GTM Preview Mode confirms dedup via transaction_id
 
-When all five are checked, the account is ready for tCPA. Until then, stay on Maximize Conversions (or Manual CPC if testing).
+When all five are checked, the account is eligible for the next Smart Bidding readiness review, but not automatically ready for tCPA. Do not switch to Maximize Conversions, tCPA, or tROAS while `npm run scaling:readiness` remains `RED`, live call-attribution evidence is empty, or live lead-outcome rows are below the documented threshold. Until those gates pass, stay on the current manual/Max Clicks posture and keep Smart Bidding changes blocked.
