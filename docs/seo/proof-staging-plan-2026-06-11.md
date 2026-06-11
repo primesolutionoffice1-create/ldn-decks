@@ -11,17 +11,17 @@ Use the commands only after reviewing the corresponding group. Do not mix proof 
 - Configured paths: 35
 - Existing paths: 35
 - Missing paths: 0
-- Dirty/staging-needed paths: 1
+- Dirty/staging-needed paths: 0
 
 Suggested command:
 
 ```bash
-git add 'scripts/lib/'
+# Nothing dirty in this group.
 ```
 
 Dirty/staging-needed paths:
 
-- `scripts/lib/`
+- none
 
 ## Owner Handoff And Generated Proof Reports
 
@@ -87,12 +87,12 @@ Dirty/staging-needed paths:
 - Configured paths: 9
 - Existing paths: 5
 - Missing paths: 4
-- Dirty/staging-needed paths: 3
+- Dirty/staging-needed paths: 0
 
 Suggested command:
 
 ```bash
-git add 'docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-2026-06-11.md' 'scripts/measurement-integrity-gate.mjs' 'scripts/validate-lead-outcome-rows.mjs'
+# Nothing dirty in this group.
 ```
 
 Missing paths:
@@ -104,7 +104,5 @@ Missing paths:
 
 Dirty/staging-needed paths:
 
-- `docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-2026-06-11.md`
-- `scripts/measurement-integrity-gate.mjs`
-- `scripts/validate-lead-outcome-rows.mjs`
+- none
 
