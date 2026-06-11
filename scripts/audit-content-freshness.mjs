@@ -222,6 +222,11 @@ reportLines.push('- Pages with stale dates lose relevance to newer competitor co
 reportLines.push('- Cost pages (`/composite-deck-cost-*`, `/400-square-foot-deck-cost-*`, etc.) and permit pages are the most freshness-sensitive in our content portfolio.');
 reportLines.push('- Year-dated content (`-2026`, `-2025`) is especially fragile — a 2025-dated page in mid-2026 underperforms a 2026-dated peer page.');
 reportLines.push('');
+reportLines.push('## Related');
+reportLines.push('');
+reportLines.push('- [[wiki/reports/_index|Reports Hub]]');
+reportLines.push('- [[wiki/deliverables/local-seo-fixes/00 Overview|Local SEO Fixes Overview]]');
+reportLines.push('');
 
 fs.writeFileSync(reportFile, reportLines.join('\n'));
 console.log(`\nReport: ${path.relative(REPO_ROOT, reportFile)}`);

@@ -965,7 +965,7 @@ for (const result of results) {
 
 reportLines.push('## Weekly operating checks');
 reportLines.push('');
-reportLines.push('- [ ] GBP post published this week — see [[../deliverables/local-seo-fixes/gbp/this-week]]');
+reportLines.push('- [ ] GBP post published this week — see [[wiki/deliverables/local-seo-fixes/gbp/this-week|gbp/this-week]]');
 reportLines.push('- [ ] GBP cadence validator reviewed — run `npm run gbp:validate` before publishing or editing the 90-day queue');
 reportLines.push('- [ ] 3 Q&A seeds published this week');
 reportLines.push('- [ ] All new reviews this week responded to within 48h');
@@ -1019,9 +1019,9 @@ reportLines.push('- [ ] Scaling evidence bundle reviewed — run `npm run scalin
 reportLines.push('- [ ] Scaling evidence bundle validated — run `npm run scaling:evidence-bundle:validate` after editing bundle wording or source paths');
 reportLines.push('- [ ] Scaling blocker exit checklist reviewed — run `npm run scaling:blocker-exit` before reclassifying RED/YELLOW/GREEN');
 reportLines.push('- [ ] Scaling blocker exit checklist validated — run `npm run scaling:blocker-exit:validate` after editing exit criteria');
-reportLines.push('- [ ] Houzz Ashburn address reconciled (see [[../deliverables/local-seo-fixes/citation-live-state-audit]])');
-reportLines.push('- [ ] Loudoun proximity decision made (see [[../deliverables/local-seo-fixes/proximity/decision-memo]])');
-reportLines.push('- [ ] Outreach pack: at least 1 email sent this week (see [[../deliverables/local-seo-fixes/outreach-pack/00-README]])');
+reportLines.push('- [ ] Houzz Ashburn address reconciled (see [[wiki/deliverables/local-seo-fixes/citation-live-state-audit|citation-live-state-audit]])');
+reportLines.push('- [ ] Loudoun proximity decision made (see [[wiki/deliverables/local-seo-fixes/proximity/decision-memo|proximity/decision-memo]])');
+reportLines.push('- [ ] Outreach pack: at least 1 email sent this week (see [[wiki/deliverables/local-seo-fixes/outreach-pack/00-README|outreach-pack]])');
 reportLines.push('');
 
 reportLines.push('## What changed this week (manual fill-in)');
