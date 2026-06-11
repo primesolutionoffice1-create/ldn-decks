@@ -14,8 +14,8 @@ const REQUIRED_BLOCKERS = [
   {
     id: 'google-call-attribution',
     owner: 'external',
-    verifyCommand: 'npm run measurement:gate && npm run scaling:readiness',
-    requiredPhrases: ['Google Ads', 'GTM', 'qualified-call attribution'],
+    verifyCommand: 'npm run measurement:call-attribution-evidence && npm run measurement:gate && npm run scaling:readiness',
+    requiredPhrases: ['Google Ads', 'GTM', 'qualified-call attribution', 'live-call-attribution-evidence'],
   },
   {
     id: 'lead-outcome-rows',

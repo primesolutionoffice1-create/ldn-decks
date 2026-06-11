@@ -19,10 +19,10 @@ This bundle is the single local handoff for clearing the current scaling RED blo
 - Blocker id: google-call-attribution
 - Owner: external
 - Rows needed: 1 real read-only evidence row minimum
-- Source/template: `docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv`
-- Paste/update location: `docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv`
+- Source/template: `docs/ads-tracking/live-call-attribution-evidence-2026-06-11.csv`
+- Paste/update location: `docs/ads-tracking/live-call-attribution-evidence-2026-06-11.csv`
 - Verify: `npm run measurement:call-attribution-evidence && npm run measurement:gate && npm run scaling:readiness`
-- Guardrail: Do not make phone_click primary and do not change Google Ads, GTM, GA4, budgets, bidding, or conversions from this packet.
+- Guardrail: Do not make phone_click primary and do not change Google Ads, GTM, GA4, budgets, bidding, or conversions from this packet. Use docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv only as the shape reference.
 
 ### Lead Outcome Rows
 

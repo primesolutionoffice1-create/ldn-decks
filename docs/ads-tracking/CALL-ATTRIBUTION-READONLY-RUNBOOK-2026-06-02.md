@@ -115,17 +115,20 @@ Next action:
 Use:
 
 - `docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv`
+- `docs/ads-tracking/live-call-attribution-evidence-YYYY-MM-DD.csv` for real read-only evidence rows
 
 Validate the template or a real read-only evidence export with:
 
 ```bash
 npm run measurement:call-attribution-evidence
-node scripts/validate-call-attribution-evidence.mjs path/to/real-call-attribution-evidence.csv
+CALL_ATTRIBUTION_INPUT=path/to/real-call-attribution-evidence.csv npm run measurement:call-attribution-evidence
+npm run measurement:call-attribution-evidence -- path/to/real-call-attribution-evidence.csv
 ```
 
 Expected statuses:
 
 - `SAMPLE_ONLY`: template only; no real Google Ads/GTM evidence rows yet.
+- `LIVE_EMPTY`: the live intake file exists, but no real Google Ads/GTM evidence rows have been added yet.
 - `PARTIAL`: real rows are present, but the call-attribution blocker is not fully proven.
 - `FAIL`: required fields, diagnostics, primary/secondary risk, or gate decision rules are invalid.
 

@@ -11,17 +11,16 @@ Use the commands only after reviewing the corresponding group. Do not mix proof 
 - Configured paths: 35
 - Existing paths: 35
 - Missing paths: 0
-- Dirty/staging-needed paths: 2
+- Dirty/staging-needed paths: 1
 
 Suggested command:
 
 ```bash
-git add 'package.json' 'scripts/lib/'
+git add 'scripts/lib/'
 ```
 
 Dirty/staging-needed paths:
 
-- `package.json`
 - `scripts/lib/`
 
 ## Owner Handoff And Generated Proof Reports
@@ -85,15 +84,15 @@ Dirty/staging-needed paths:
 
 - Group id: `ads_measurement_admin`
 - Required group: no
-- Configured paths: 13
-- Existing paths: 9
+- Configured paths: 27
+- Existing paths: 23
 - Missing paths: 4
-- Dirty/staging-needed paths: 5
+- Dirty/staging-needed paths: 15
 
 Suggested command:
 
 ```bash
-git add 'docs/ads-tracking/live-lead-outcomes-2026-06-11.csv' 'docs/ads-tracking/PHASE-2-MANUAL-OFFLINE-UPLOAD-RUNBOOK.md' 'docs/ads-tracking/templates/' 'scripts/generate-google-ads-offline-preview.mjs' 'scripts/validate-lead-outcome-rows.mjs'
+git add 'docs/ads-tracking/live-call-attribution-evidence-2026-06-11.csv' 'docs/ads-tracking/scaling-evidence-bundle-2026-06-11.md' 'docs/ads-tracking/scaling-evidence-request-2026-06-11.csv' 'docs/ads-tracking/scaling-evidence-request-2026-06-11.md' 'docs/seo/scaling-blocker-exit-checklist-2026-06-11.csv' 'docs/seo/scaling-blocker-exit-checklist-2026-06-11.md' 'docs/seo/scaling-readiness-board-2026-06-11.md' 'docs/ads-tracking/CALL-ATTRIBUTION-READONLY-RUNBOOK-2026-06-02.md' 'docs/ads-tracking/templates/' 'scripts/generate-scaling-blocker-exit-checklist.mjs' 'scripts/generate-scaling-evidence-bundle.mjs' 'scripts/generate-scaling-evidence-request.mjs' 'scripts/validate-call-attribution-evidence.mjs' 'scripts/validate-scaling-evidence-bundle.mjs' 'scripts/validate-scaling-evidence-request.mjs'
 ```
 
 Missing paths:
@@ -105,9 +104,19 @@ Missing paths:
 
 Dirty/staging-needed paths:
 
-- `docs/ads-tracking/live-lead-outcomes-2026-06-11.csv`
-- `docs/ads-tracking/PHASE-2-MANUAL-OFFLINE-UPLOAD-RUNBOOK.md`
+- `docs/ads-tracking/live-call-attribution-evidence-2026-06-11.csv`
+- `docs/ads-tracking/scaling-evidence-bundle-2026-06-11.md`
+- `docs/ads-tracking/scaling-evidence-request-2026-06-11.csv`
+- `docs/ads-tracking/scaling-evidence-request-2026-06-11.md`
+- `docs/seo/scaling-blocker-exit-checklist-2026-06-11.csv`
+- `docs/seo/scaling-blocker-exit-checklist-2026-06-11.md`
+- `docs/seo/scaling-readiness-board-2026-06-11.md`
+- `docs/ads-tracking/CALL-ATTRIBUTION-READONLY-RUNBOOK-2026-06-02.md`
 - `docs/ads-tracking/templates/`
-- `scripts/generate-google-ads-offline-preview.mjs`
-- `scripts/validate-lead-outcome-rows.mjs`
+- `scripts/generate-scaling-blocker-exit-checklist.mjs`
+- `scripts/generate-scaling-evidence-bundle.mjs`
+- `scripts/generate-scaling-evidence-request.mjs`
+- `scripts/validate-call-attribution-evidence.mjs`
+- `scripts/validate-scaling-evidence-bundle.mjs`
+- `scripts/validate-scaling-evidence-request.mjs`
 

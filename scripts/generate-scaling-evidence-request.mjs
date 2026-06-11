@@ -25,9 +25,9 @@ function evidenceNeed(blocker) {
   if (blocker.id === 'google-call-attribution') {
     return {
       evidenceNeeded: 'Screenshots or read-only export showing Google Ads call conversion action source, status, counting, diagnostics, and GTM/website-call forwarding setup for the canonical LDN Decks phone number.',
-      whereToCollect: 'Google Ads conversions, Google Ads call assets/call reporting, GTM tags/triggers, and the call attribution read-only runbook.',
-      doneWhen: '`npm run measurement:gate` can be updated from external-proof WARN only after the evidence proves qualified-call attribution.',
-      verifyCommand: 'npm run measurement:gate && npm run scaling:readiness',
+      whereToCollect: `Google Ads conversions, Google Ads call assets/call reporting, GTM tags/triggers, and docs/ads-tracking/live-call-attribution-evidence-${DATE}.csv. Use docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv only as the shape reference.`,
+      doneWhen: '`npm run measurement:call-attribution-evidence` no longer returns SAMPLE_ONLY/LIVE_EMPTY and `npm run measurement:gate` can be updated from external-proof WARN only after the evidence proves qualified-call attribution.',
+      verifyCommand: 'npm run measurement:call-attribution-evidence && npm run measurement:gate && npm run scaling:readiness',
     };
   }
 

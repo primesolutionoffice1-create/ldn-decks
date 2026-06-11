@@ -23,6 +23,7 @@ const REQUIRED_PHRASES = [
   'public proof claims',
   'Keep scaling RED until the blocker disappears',
   'npm run scaling:readiness',
+  `docs/ads-tracking/live-call-attribution-evidence-${DATE}.csv`,
   'docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv',
   'docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv',
   `docs/seo/owner-evidence-action-packet-${DATE}.csv`,
