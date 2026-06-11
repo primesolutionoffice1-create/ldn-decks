@@ -40,9 +40,9 @@ This bundle is the single local handoff for clearing the current scaling RED blo
 - Owner: owner
 - Rows needed: All P0 owner proof rows needed for blocked proof pages
 - Source/template: `docs/seo/owner-evidence-action-packet-2026-06-11.csv`
-- Paste/update location: `docs/seo/owner-evidence-action-packet-2026-06-11.csv`
+- Paste/update location: `docs/seo/project-evidence-intake-2026-06-11.csv, docs/seo/photo-ingestion-manifest-2026-06-11.csv, docs/seo/warranty-terms-intake-2026-06-11.csv, and docs/seo/repair-cost-ranges-intake-2026-06-11.csv`
 - Verify: `npm run seo:evidence-action-packet:validate && npm run seo:validate-owner-intake && npm run seo:proof-preflight && npm run seo:weekly`
-- Guardrail: Do not publish unverified project proof claims, warranty terms, repair-cost ranges, or private owner/customer details.
+- Guardrail: Use docs/seo/owner-evidence-sprint-2026-06-11.md and docs/seo/owner-evidence-handoff-2026-06-11.md for collection order and privacy gates. Do not publish unverified project proof claims, warranty terms, repair-cost ranges, or private owner/customer details.
 
 ## Required Local Sequence
 

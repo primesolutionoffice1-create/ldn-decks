@@ -11,17 +11,17 @@ Use the commands only after reviewing the corresponding group. Do not mix proof 
 - Configured paths: 35
 - Existing paths: 35
 - Missing paths: 0
-- Dirty/staging-needed paths: 1
+- Dirty/staging-needed paths: 0
 
 Suggested command:
 
 ```bash
-git add 'scripts/lib/'
+# Nothing dirty in this group.
 ```
 
 Dirty/staging-needed paths:
 
-- `scripts/lib/`
+- none
 
 ## Owner Handoff And Generated Proof Reports
 
@@ -87,12 +87,12 @@ Dirty/staging-needed paths:
 - Configured paths: 27
 - Existing paths: 23
 - Missing paths: 4
-- Dirty/staging-needed paths: 15
+- Dirty/staging-needed paths: 10
 
 Suggested command:
 
 ```bash
-git add 'docs/ads-tracking/live-call-attribution-evidence-2026-06-11.csv' 'docs/ads-tracking/scaling-evidence-bundle-2026-06-11.md' 'docs/ads-tracking/scaling-evidence-request-2026-06-11.csv' 'docs/ads-tracking/scaling-evidence-request-2026-06-11.md' 'docs/seo/scaling-blocker-exit-checklist-2026-06-11.csv' 'docs/seo/scaling-blocker-exit-checklist-2026-06-11.md' 'docs/seo/scaling-readiness-board-2026-06-11.md' 'docs/ads-tracking/CALL-ATTRIBUTION-READONLY-RUNBOOK-2026-06-02.md' 'docs/ads-tracking/templates/' 'scripts/generate-scaling-blocker-exit-checklist.mjs' 'scripts/generate-scaling-evidence-bundle.mjs' 'scripts/generate-scaling-evidence-request.mjs' 'scripts/validate-call-attribution-evidence.mjs' 'scripts/validate-scaling-evidence-bundle.mjs' 'scripts/validate-scaling-evidence-request.mjs'
+git add 'docs/ads-tracking/scaling-evidence-bundle-2026-06-11.md' 'docs/ads-tracking/scaling-evidence-request-2026-06-11.csv' 'docs/ads-tracking/scaling-evidence-request-2026-06-11.md' 'docs/seo/scaling-blocker-exit-checklist-2026-06-11.csv' 'docs/seo/scaling-blocker-exit-checklist-2026-06-11.md' 'scripts/generate-scaling-blocker-exit-checklist.mjs' 'scripts/generate-scaling-evidence-bundle.mjs' 'scripts/generate-scaling-evidence-request.mjs' 'scripts/validate-scaling-evidence-bundle.mjs' 'scripts/validate-scaling-evidence-request.mjs'
 ```
 
 Missing paths:
@@ -104,19 +104,14 @@ Missing paths:
 
 Dirty/staging-needed paths:
 
-- `docs/ads-tracking/live-call-attribution-evidence-2026-06-11.csv`
 - `docs/ads-tracking/scaling-evidence-bundle-2026-06-11.md`
 - `docs/ads-tracking/scaling-evidence-request-2026-06-11.csv`
 - `docs/ads-tracking/scaling-evidence-request-2026-06-11.md`
 - `docs/seo/scaling-blocker-exit-checklist-2026-06-11.csv`
 - `docs/seo/scaling-blocker-exit-checklist-2026-06-11.md`
-- `docs/seo/scaling-readiness-board-2026-06-11.md`
-- `docs/ads-tracking/CALL-ATTRIBUTION-READONLY-RUNBOOK-2026-06-02.md`
-- `docs/ads-tracking/templates/`
 - `scripts/generate-scaling-blocker-exit-checklist.mjs`
 - `scripts/generate-scaling-evidence-bundle.mjs`
 - `scripts/generate-scaling-evidence-request.mjs`
-- `scripts/validate-call-attribution-evidence.mjs`
 - `scripts/validate-scaling-evidence-bundle.mjs`
 - `scripts/validate-scaling-evidence-request.mjs`
 

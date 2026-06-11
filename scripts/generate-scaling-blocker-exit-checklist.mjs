@@ -45,7 +45,7 @@ function exitPlan(blocker) {
       exitEvidence: 'Owner-filled proof packet rows imported safely, verified proof regenerated, no blocked/proof-incomplete pages, no public placeholders, and prepublish no longer expected-blocked.',
       exitCommand: 'npm run seo:evidence-action-packet:validate && npm run seo:validate-owner-intake && npm run seo:proof-preflight && npm run seo:weekly',
       expectedAfterExit: 'Proof preflight reports 0 blocked and 0 proof-incomplete pages; owner proof blocker disappears from scaling readiness.',
-      redFlag: 'Unknown/placeholder project fields, missing privacy pass, unresolved repair warranty/cost evidence, or prepublish expected-blocked keeps this blocker open.',
+      redFlag: 'Any incomplete project-evidence, photo-manifest, warranty-term, or repair-cost intake row; unknown/placeholder project fields; missing privacy pass; unresolved repair warranty/cost evidence; or prepublish expected-blocked keeps this blocker open.',
     };
   }
 

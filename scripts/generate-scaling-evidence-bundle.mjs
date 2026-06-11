@@ -18,6 +18,12 @@ const SOURCES = {
   leadOutcomeLive: `docs/ads-tracking/live-lead-outcomes-${DATE}.csv`,
   leadOutcomeTemplate: 'docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv',
   ownerEvidencePacket: `docs/seo/owner-evidence-action-packet-${DATE}.csv`,
+  ownerProjectIntake: `docs/seo/project-evidence-intake-${DATE}.csv`,
+  ownerPhotoManifest: `docs/seo/photo-ingestion-manifest-${DATE}.csv`,
+  ownerWarrantyTerms: `docs/seo/warranty-terms-intake-${DATE}.csv`,
+  ownerRepairCosts: `docs/seo/repair-cost-ranges-intake-${DATE}.csv`,
+  ownerEvidenceSprint: `docs/seo/owner-evidence-sprint-${DATE}.md`,
+  ownerEvidenceHandoff: `docs/seo/owner-evidence-handoff-${DATE}.md`,
 };
 
 function parseTrailingJson(output) {
@@ -82,9 +88,9 @@ const sections = [
     source: SOURCES.ownerEvidencePacket,
     owner: 'owner',
     rowsNeeded: 'All P0 owner proof rows needed for blocked proof pages',
-    pasteInto: SOURCES.ownerEvidencePacket,
+    pasteInto: `${SOURCES.ownerProjectIntake}, ${SOURCES.ownerPhotoManifest}, ${SOURCES.ownerWarrantyTerms}, and ${SOURCES.ownerRepairCosts}`,
     verify: 'npm run seo:evidence-action-packet:validate && npm run seo:validate-owner-intake && npm run seo:proof-preflight && npm run seo:weekly',
-    guardrail: 'Do not publish unverified project proof claims, warranty terms, repair-cost ranges, or private owner/customer details.',
+    guardrail: `Use ${SOURCES.ownerEvidenceSprint} and ${SOURCES.ownerEvidenceHandoff} for collection order and privacy gates. Do not publish unverified project proof claims, warranty terms, repair-cost ranges, or private owner/customer details.`,
   },
 ];
 

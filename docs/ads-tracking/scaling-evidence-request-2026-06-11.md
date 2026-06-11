@@ -33,9 +33,9 @@ This packet converts the current scaling readiness blockers into owner/external 
 
 - Owner: owner
 - Evidence needed: Owner-approved proof packets for blocked/proof-incomplete pages: project photos, allowed project descriptions, service scope, location permission, warranty/repair-cost evidence where relevant, and privacy confirmation.
-- Where to collect: Owner evidence sprint checklist, owner evidence handoff, project intake, photo manifest, warranty rows, and repair-cost rows.
-- Done when: `npm run seo:proof-preflight` shows no blocked/proof-incomplete pages and prepublish is no longer expected-blocked.
-- Verification command: `npm run seo:proof-preflight && npm run seo:weekly`
+- Where to collect: docs/seo/project-evidence-intake-2026-06-11.csv, docs/seo/photo-ingestion-manifest-2026-06-11.csv, docs/seo/warranty-terms-intake-2026-06-11.csv, docs/seo/repair-cost-ranges-intake-2026-06-11.csv, plus docs/seo/owner-evidence-sprint-2026-06-11.md and docs/seo/owner-evidence-handoff-2026-06-11.md for the exact collection order and privacy gates.
+- Done when: `npm run seo:validate-owner-intake` and `npm run seo:proof-preflight` show no blocked/proof-incomplete pages and prepublish is no longer expected-blocked.
+- Verification command: `npm run seo:validate-owner-intake && npm run seo:proof-preflight && npm run seo:weekly`
 - Current evidence: 3 blocked, 1 proof-incomplete, prepublish expected-blocked true. Owner action packet: 26 rows, 13 P0, 0 errors.
 
 ## Operating Rule
