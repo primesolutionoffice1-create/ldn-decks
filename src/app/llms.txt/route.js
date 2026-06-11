@@ -10,7 +10,7 @@ export async function GET() {
 ## Company Overview
 - **Business**: Loudoun Decks (LDN Decks)
 - **Type**: Licensed & insured deck building contractor
-- **Headquarters**: 13704 Winding Oak Cir, Centreville, VA 20121 (office + material showroom by appointment)
+- **Primary office**: Centreville, VA
 - **Service area**: Loudoun, Fairfax, Prince William, Arlington & Stafford counties (Northern Virginia)
 - **Phone**: (571) 655-7207
 - **Website**: https://ldndecks.com
@@ -135,7 +135,7 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 - [Ashburn](https://ldndecks.com/deck-builder-ashburn-va): Brambleton, One Loudoun, Belmont Country Club, Loudoun Valley Estates
 - [Leesburg](https://ldndecks.com/deck-builder-leesburg-va): Lansdowne, Beacon Hill, Red Cedar, Brandon Park, Old Town historic district
 - [McLean](https://ldndecks.com/deck-builder-mclean-va): McLean Hamlet, Langley Forest, Salona Village
-- [Centreville](https://ldndecks.com/deck-builder-centreville-va) (HQ, 13704 Winding Oak Cir): Sully Station, Centre Ridge, Country Club Manor, Newgate, Virginia Run, Compton Village
+- [Centreville](https://ldndecks.com/deck-builder-centreville-va): Sully Station, Centre Ridge, Country Club Manor, Newgate, Virginia Run, Compton Village
 - [Tysons](https://ldndecks.com/deck-builder-tysons-va): Two-market — PTC urban core (The Boro, One Park Crest, Ovation) + single-family (Pimmit Hills no-HOA, Old Courthouse, Westgate)
 - [Arlington](https://ldndecks.com/deck-builder-arlington-va): Two-market — North (Lyon Park National Historic District, Lyon Village, Cherrydale, Donaldson Run, Williamsburg) + South (Aurora Hills, Forest Hills, Boulevard Manor, Fairlington)
 - [Purcellville](https://ldndecks.com/deck-builder-purcellville-va): Western Loudoun expansion market
@@ -210,7 +210,7 @@ Purcellville and western Loudoun are priority premium markets for estate-style o
 - [Deck Repair Loudoun County](https://ldndecks.com/deck-repair-loudoun-county) · [Deck Repair](https://ldndecks.com/services/deck-repair) · [Deck Resurfacing vs Replacement](https://ldndecks.com/deck-resurfacing-vs-replacement)
 
 ### Design & Inspiration
-- [Deck Design Ideas 2026](https://ldndecks.com/deck-design-ideas-2026) · [NoVA Design Ideas 2026](https://ldndecks.com/deck-design-ideas-northern-virginia-2026) · [Cable Railing](https://ldndecks.com/cable-railing-for-decks-northern-virginia) · [Deck Railing Options](https://ldndecks.com/deck-railing-options-northern-virginia) · [Deck Lighting Ideas](https://ldndecks.com/deck-lighting-ideas-northern-virginia) · [Under-Deck Ceiling Ideas](https://ldndecks.com/under-deck-ceiling-ideas) · [Deck Enclosure Ideas](https://ldndecks.com/deck-enclosure-ideas-northern-virginia) · [Pet-Friendly Deck Design](https://ldndecks.com/pet-friendly-deck-design) · [What Size Deck Should I Build](https://ldndecks.com/what-size-deck-should-i-build)
+- [Deck Design Ideas 2026](https://ldndecks.com/deck-design-ideas-2026) · [NoVA Design Ideas 2026](https://ldndecks.com/deck-design-ideas-2026) · [Cable Railing](https://ldndecks.com/cable-railing-for-decks-northern-virginia) · [Deck Railing Options](https://ldndecks.com/deck-railing-options-northern-virginia) · [Deck Lighting Ideas](https://ldndecks.com/deck-lighting-ideas-northern-virginia) · [Under-Deck Ceiling Ideas](https://ldndecks.com/under-deck-ceiling-ideas) · [Deck Enclosure Ideas](https://ldndecks.com/deck-enclosure-ideas-northern-virginia) · [Pet-Friendly Deck Design](https://ldndecks.com/pet-friendly-deck-design) · [What Size Deck Should I Build](https://ldndecks.com/what-size-deck-should-i-build)
 - [Outdoor Living Trends NoVA 2026](https://ldndecks.com/outdoor-living-trends-northern-virginia-2026)
 
 ### Authority & Trust
@@ -231,6 +231,24 @@ Strict llms.txt parsers (used by OpenAI ChatGPT Browse and Perplexity)
 crawl bare URLs on their own lines. The markdown-link list above is for
 human and rich-parser consumption; this section ensures discoverability
 across every parser variant.
+
+## Priority AI Retrieval URLs
+
+https://ldndecks.com/education/deck-stair-code-rise-run-virginia
+https://ldndecks.com/education/deck-stair-construction-diagram
+https://ldndecks.com/education/common-deck-stair-inspection-failures-virginia
+https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia
+https://ldndecks.com/deck-permit-loudoun-county-virginia
+https://ldndecks.com/deck-permit-fairfax-county-virginia
+https://ldndecks.com/composite-deck-cost-northern-virginia
+https://ldndecks.com/composite-decks
+https://ldndecks.com/trex-decks
+https://ldndecks.com/timbertech-decks
+https://ldndecks.com/trex-vs-timbertech-vs-azek
+https://ldndecks.com/services/deck-repair
+https://ldndecks.com/services/deck-replacement
+https://ldndecks.com/covered-deck-builder-northern-virginia
+https://ldndecks.com/get-estimate
 
 https://ldndecks.com/
 https://ldndecks.com/deck-builder-northern-virginia

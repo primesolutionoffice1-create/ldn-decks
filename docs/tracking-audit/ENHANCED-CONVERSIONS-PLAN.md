@@ -170,7 +170,8 @@ Missing pieces:
  };
 ```
 
-ContactHome needs the same plus the gclid plumbing fix (TRACKING-FIX-QUEUE.md #1).
+ContactHome now uses the same shared `useLeadSubmit()` pipeline, including
+click IDs, UTMs, `source_url`, and `event_id`.
 
 #### C. GTM configuration
 

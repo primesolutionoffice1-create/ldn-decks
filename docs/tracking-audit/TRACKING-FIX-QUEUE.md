@@ -656,7 +656,10 @@ In ContactHome.jsx use `value="homepage"`.
 ## #11 🟡 P2 — Capture `_fbp` and `source_url`
 
 **Severity:** Medium
-**Business impact:** Meta CAPI event_source_url always reports `/contact`, breaking Meta's "Conversions by page" attribution. Meta match rate ~15% lower without `_fbp`.
+**Business impact:** resolved in code. `useLeadSubmit()` now appends
+`source_url`, and `_fbp` is captured when the consent-gated browser Pixel sets
+it. Remaining impact depends on real Meta CAPI credentials and Events Manager
+diagnostics.
 **Affected conversions:** Meta CAPI events.
 
 ### What to change

@@ -3,24 +3,26 @@ brain_schema: "ads-brain.v1"
 created: "2026-05-15"
 type: "hot"
 title: "Hot"
-updated: "2026-05-16"
+updated: "2026-06-11"
 ---
 
 # Hot
 
 ## Last Updated
 
-2026-05-16
+2026-06-11
 
 ## Key Recent Facts
 
 - Client: LDN Decks
 - Business type: local-service
 - Site: https://www.ldndecks.com
+- 2026-06-11: Attribution runbooks were aligned with the current code state after the Meta route-tracking fix. The docs no longer describe ContactHome as missing event IDs, no longer claim there is no client Meta Pixel source, no longer mark `event_source_url` as hardcoded, and no longer state IP/User-Agent are absent from CAPI. Verification passed: stale-risk `rg` scan, `npm run measurement:gate`, `npm run ads:validate-imports`, `npm run scaling:blocker-exit:validate`, `npm run lint`, and `npm run build`. No Google Ads, GTM, budget, bid strategy, or production deploy changes were made in this cleanup.
 - State: Synthesis complete across 22 imported source summaries. Ads Health Score: 57 (D). Code-side tracking fixes are complete, GTM Version 25 is live per `FINAL-ATTRIBUTION-SIGNOFF.md`, and Google Ads account-level conversion goals were cleaned up per `GOOGLE-ADS-CONVERSION-CLEANUP-LOG.md`. On 2026-05-16, GTM Preview verified live phone and form conversion tags firing once, active Google Ads spend was confirmed at $150/day across three Search campaigns, and high-confidence exact negatives were implemented/verified in Composite and Replacement + Resurfacing. The active-campaign search-term pass showed Composite and Replacement/Resurfacing are still too low-data for aggressive negatives; Branded has no significant search-term volume yet. SEO/schema hardening is live: deprecated HowTo schema removed, JSON-LD rendering centralized, duplicate FAQ risk remains 0, and citation/entity URLs were aligned for Yelp, BBB, BuildZoom, Loudoun Chamber, and MapQuest. Current code sprint added/verified a `/deck-builder-northern-virginia` service hub, aligned resurfacing pricing to $15k+ across key pages, fixed a phone CTA to use tracked `CallLink`, verified no raw `tel:` anchors in `src`, and hardened `ads:validate-imports` so the import pack now fails on wrong call phone, wrong call schedule, repair keyword leakage into high-ticket campaigns, missing repair-separation negatives, or final URL mismatches. The remaining blockers are 5-10 real-lead validation, Google Ads diagnostics after data accrues, mobile LCP at 2.7s groups in Search Console, and cleanup of old failed sitemap submissions / 404 index records.
 
 ## Recent Changes
 
+- 2026-06-11 - Attribution documentation cleanup: updated tracking/audit runbooks to reflect the current shared `useLeadSubmit` path, existing browser Meta Pixel source, event ID propagation, `event_source_url` forwarding, IP/User-Agent CAPI enrichment, and the anti-duplicate `lead_confirmed` guard. Kept Meta CAPI activation data-gated and kept Smart Bidding scaling blocked until real lead validation.
 - 2026-05-16 - Live QA sprint: verified form submit reaches `/thank-you` and fires GA4/Google Ads form conversion/user-provided-data tags once; verified phone click fires GA4 and Google Ads call conversion; confirmed active Google Ads budget is Composite $90/day, Replacement + Resurfacing $45/day, Branded $15/day; verified PMax/Demand Gen/repair campaigns are paused; live checked Ads landing pages, robots, sitemap, Core Web Vitals, Page indexing, and Sitemaps.
 - 2026-05-16 - Ads import guardrail sprint: verified all visible phone CTAs in `src` route through tracked `CallLink`; confirmed only two lead forms and both use `useLeadSubmit`; added validator checks for `+15716557207`, `Qualified Call (Ads) - 60s`, Mon-Fri call schedule, repair/campaign separation, and ad-group final URL alignment. `npm run ads:validate-imports`, `npm run lint`, and `npm run build` passed.
 - 2026-05-16 - 1-to-5 implementation pass: reviewed active-only search terms for Composite, Replacement + Resurfacing, and Branded; held new negatives because live active data is low-volume; confirmed no current Branded ad policy limitation in active Ads view; fixed a mislabeled phone CTA to use tracked `CallLink`; aligned resurfacing price language to $15k+ across Ads/SEO support pages; validated lint, schema, build, local canonicals, and sitemap canonical membership.
@@ -41,7 +43,7 @@ updated: "2026-05-16"
 
 ## Next Action
 
-Push/deploy the Ads import guardrail sprint, confirm Vercel success, then re-check the import validator after any Google Ads structure regeneration. After that, collect 5-10 real production leads, check Google Ads Enhanced Conversions diagnostics after 24-48h, then import real Google Ads performance/search terms. Do not broad-negative repair/contractor/near-me terms.
+Collect 5-10 real production leads, verify event ID consistency, click ID persistence, Enhanced Conversions diagnostics, and duplicate conversion rate, then import real Google Ads performance/search terms. Do not change budgets, bid strategies, or broad-negative repair/contractor/near-me terms until the measurement gate exits RED.
 
 ## Account
 

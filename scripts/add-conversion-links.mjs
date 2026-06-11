@@ -50,7 +50,7 @@ for (const page of toolPages) {
 const costPages = [
   'composite-deck-cost-northern-virginia',
   'screened-porch-cost-northern-virginia',
-  'deck-financing-northern-virginia',
+  'deck-financing',
   'deck-financing',
   'deck-payment-estimator',
   'how-much-does-a-deck-cost-northern-virginia',

@@ -27,7 +27,7 @@ const faqSchema = {
     { "@type": "Question", name: "Does a deck warranty cover labor costs?", acceptedAnswer: { "@type": "Answer", text: "Most manufacturer warranties cover material replacement only, not labor to remove and reinstall. Some certified installer programs may offer enhanced terms, but homeowners should verify current manufacturer program details and review the contractor's written workmanship warranty terms before signing." } },
     { "@type": "Question", name: "Is a deck warranty transferable when I sell my home?", acceptedAnswer: { "@type": "Answer", text: "Yes. Trex, TimberTech, and AZEK warranties are all transferable to subsequent homeowners. Trex requires notification within 60 days of property transfer. TimberTech/AZEK warranties transfer automatically. This transferability adds real value at resale in Northern Virginia." } },
     { "@type": "Question", name: "What does a workmanship warranty cover on a deck?", acceptedAnswer: { "@type": "Answer", text: "A workmanship warranty covers defects in the installation itself — things like improper ledger board attachment, inadequate flashing, incorrect joist spacing, loose railings, or structural settling. The exact term, scope, exclusions, and remedy should be stated in the signed project paperwork." } },
-    { "@type": "Question", name: "How do I file a warranty claim on my Trex deck?", acceptedAnswer: { "@type": "Answer", text: "Contact Trex directly at 1-800-289-8739 or file online at trex.com/warranty. You will need your proof of purchase, installation date, photos of the issue, and your installer's information. If your deck was built by a Trex Platinum partner, the claim process is expedited." } },
+    { "@type": "Question", name: "How do I file a warranty claim on my Trex deck?", acceptedAnswer: { "@type": "Answer", text: "Contact Trex directly at 1-800-289-8739 or file online at trex.com/warranty. You will need your proof of purchase, installation date, photos of the issue, and your installer's information. Confirm current warranty-claim steps and timing directly with Trex before relying on a specific timeline." } },
   ],
 };
 
@@ -246,7 +246,7 @@ export default function DeckWarrantyGuidePage() {
           <p style={S.p}>Manufacturers will ask for: proof of purchase or installation contract, installation date, photos of the defect, your installer&apos;s name and certification level, and confirmation that the deck was built with permits. If we built your deck, we can provide all of this documentation from our records.</p>
 
           <h3 style={S.h3}>Step 5: Inspection and Resolution</h3>
-          <p style={S.p}>The manufacturer may send an inspector or request additional photos. Approved claims typically result in replacement materials shipped to your address. As a Trex Platinum partner, our clients receive expedited claim processing &mdash; typically 2&ndash;4 weeks versus 6&ndash;8 weeks for standard claims.</p>
+          <p style={S.p}>The manufacturer may send an inspector or request additional photos. Approved claims typically result in replacement materials shipped to your address. Claim timing and review steps are controlled by the manufacturer, so homeowners should confirm the current warranty process directly with Trex before relying on a specific timeline.</p>
 
           {/* ===== SECTION 8: Warranty vs Insurance ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Warranty vs. Homeowner&apos;s Insurance: What&apos;s the Difference?</h2>

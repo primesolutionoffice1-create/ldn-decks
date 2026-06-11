@@ -312,6 +312,7 @@ export default async function sitemap() {
                 { path: "/deck-builder-woodbridge-va",                  priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-chantilly-va",                   priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-permit-prince-william-county-virginia",  priority: 0.85, lastMod: TIER1, freq: "weekly" },
+                { path: "/lead-magnets",                                priority: 0.65, lastMod: TIER1, freq: "monthly" },
                 { path: "/deck-builder-sterling-va",                    priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-fairfax-va",                     priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-oakton-va",                      priority: 0.90, lastMod: TIER1, freq: "weekly" },
@@ -370,10 +371,6 @@ export default async function sitemap() {
                 { path: "/tools/deck-stair-calculator",                priority: 0.88, lastMod: TIER1, freq: "monthly" },
                 { path: "/press",                                      priority: 0.80, lastMod: TIER1, freq: "monthly" },
 
-                // AI discovery files
-                { path: "/llms.txt",                                   priority: 0.50, lastMod: TIER1, freq: "monthly" },
-                { path: "/llms-full.txt",                              priority: 0.50, lastMod: TIER1, freq: "monthly" },
-
                 // Tier 4 - Evergreen / rarely changes
                 { path: "/about",                        priority: 0.65, lastMod: TIER4, freq: "monthly" },
                 { path: "/about/why-choose-us",          priority: 0.65, lastMod: TIER4, freq: "monthly" },
@@ -392,7 +389,7 @@ export default async function sitemap() {
         const blogPaths = blogPosts
                 .filter(post => {
                         const postDate = new Date(post.date);
-                        return postDate <= today;
+                        return postDate <= today && !post.canonicalPath;
                 })
                 .map(post => {
                 // Parse date like "April 4, 2026" to ISO

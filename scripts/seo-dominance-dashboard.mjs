@@ -108,6 +108,15 @@ const report = {
 };
 
 const lines = [
+  '---',
+  'type: report',
+  `title: "LDN Decks Dominance Dashboard - ${today}"`,
+  `created: "${today}"`,
+  `updated: "${today}"`,
+  'status: snapshot',
+  'tags: [seo, local-seo, dominance, automated]',
+  '---',
+  '',
   `# LDN Decks Dominance Dashboard - ${today}`,
   '',
   `Origin: ${ORIGIN}`,
@@ -140,6 +149,12 @@ const lines = [
   '- [ ] New reviews requested and all reviews answered',
   '- [ ] Citation/backlink outreach updated',
   '- [ ] GSC priority URLs inspected or submitted',
+  '',
+  '## Related',
+  '',
+  '- [[wiki/reports/_index|Reports Hub]]',
+  `- [[wiki/reports/seo-weekly-${today}|SEO Weekly Report ${today}]]`,
+  '- [[wiki/deliverables/local-seo-fixes/00 Overview|Local SEO Fixes Overview]]',
   '',
 ];
 

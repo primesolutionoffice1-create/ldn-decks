@@ -104,7 +104,7 @@ export default function PorchesPage() {
         url="https://ldndecks.com/services/porches"
         category="Porch Construction"
         price="25000"
-        relatedServices={['https://ldndecks.com/screened-porch-builder-northern-virginia', 'https://ldndecks.com/services/porches/screened-porch', 'https://ldndecks.com/services/porches/front-porch']}
+        relatedServices={['https://ldndecks.com/screened-porch-builder-northern-virginia', 'https://ldndecks.com/screened-porch-builder-northern-virginia', 'https://ldndecks.com/services/porches/front-porch']}
       />
       <JsonLd data={porchFaqSchema} />
       <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/porches" name="Premium Porch Builder NoVA | Screened &amp; Open Porch Design" description="Trusted porch contractor in Northern Virginia. Custom screened porches, open-air pavilions and front porches with local permit and design guidance." speakable />
@@ -153,7 +153,7 @@ export default function PorchesPage() {
             </p>
             <span style={{ color: 'var(--site-color)', fontWeight: '700', fontSize: '14px' }}>Explore Open Porch →</span>
           </Link>
-          <Link href="/services/porches/screened-porch" style={{ display: 'block', textDecoration: 'none', background: '#fff', border: '1px solid #e5e5e5', borderRadius: '8px', padding: '32px 28px', transition: 'box-shadow 0.2s ease', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+          <Link href="/screened-porch-builder-northern-virginia" style={{ display: 'block', textDecoration: 'none', background: '#fff', border: '1px solid #e5e5e5', borderRadius: '8px', padding: '32px 28px', transition: 'box-shadow 0.2s ease', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
             <div style={{ fontSize: '28px', marginBottom: '12px' }}>🪟</div>
             <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#111', marginBottom: '10px' }}>Screened Porch</h3>
             <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.6', marginBottom: '16px' }}>

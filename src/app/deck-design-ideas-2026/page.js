@@ -185,7 +185,7 @@ export default function DeckDesignIdeasPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/deck-design-ideas-northern-virginia-2026', 'Deck Design Ideas for Northern Virginia 2026'],
+              ['/deck-design-ideas-2026', 'Deck Design Ideas for Northern Virginia 2026'],
               ['/northern-virginia-deck-building-guide', 'Complete Deck Building Guide'],
               ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],

@@ -40,7 +40,7 @@ const KNOWN_ROUTES = [
   ['/services/deck-resurfacing', 'Deck Resurfacing'],
   ['/services/deck-repair', 'Deck Repair & Structural Maintenance'],
   ['/services/porches', 'Porches'],
-  ['/services/porches/screened-porch', 'Screened-In Porches'],
+  ['/screened-porch-builder-northern-virginia', 'Screened-In Porches'],
   ['/services/patios', 'Patios'],
   ['/services/gazebo-pergola', 'Gazebos & Pergolas'],
   ['/services/deck-maintenance', 'Deck Maintenance'],

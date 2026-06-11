@@ -30,14 +30,14 @@ const CATALOG = {
     description: 'Professional deck replacement services including structural assessment, old deck removal, and premium composite rebuilds using Trex and TimberTech.',
     lowPrice: '15000', highPrice: '65000',
     category: 'Deck Construction',
-    related: ['/services/new-decks', '/services/deck-resurfacing', '/services/deck-repair-and-structural-maintenance'],
+    related: ['/services/new-decks', '/services/deck-resurfacing', '/services/deck-repair'],
   },
   'services/deck-resurfacing': {
     name: 'Custom Deck Resurfacing',
     description: 'Professional deck resurfacing services utilizing TimberTech Vintage Collection composite boards, structural reinforcement, and aluminum railings in Northern Virginia.',
     lowPrice: '10000', highPrice: '35000',
     category: 'Deck Construction',
-    related: ['/services/deck-replacement', '/services/deck-repair-and-structural-maintenance', '/services/new-decks'],
+    related: ['/services/deck-replacement', '/services/deck-repair', '/services/new-decks'],
   },
   'services/deck-repair-and-structural-maintenance': {
     name: 'Deck Repair & Structural Maintenance',
@@ -51,7 +51,7 @@ const CATALOG = {
     description: 'Professional structural deck inspection in Northern Virginia. Ledger board, posts, joists, railings checked.',
     price: '150',
     category: 'Deck Inspection',
-    related: ['/services/deck-repair-and-structural-maintenance', '/services/deck-replacement'],
+    related: ['/services/deck-repair', '/services/deck-replacement'],
   },
   'services/deck-maintenance': {
     name: 'Deck Maintenance',
@@ -121,7 +121,7 @@ const CATALOG = {
     description: 'Custom front porches, screened porches, and open porches in Northern Virginia. Full design and build service.',
     price: '25000',
     category: 'Porch Construction',
-    related: ['/screened-porch-builder-northern-virginia', '/services/porches/screened-porch', '/services/porches/front-porch'],
+    related: ['/screened-porch-builder-northern-virginia', '/services/porches', '/services/porches/front-porch'],
   },
   'services/porches/screened-porch': {
     name: 'Screened Porch Construction',
@@ -270,7 +270,7 @@ const CATALOG = {
     description: 'Deck repair services for Northern Virginia. Board replacement, railing repair, structural fixes, and code compliance remediation.',
     price: '3000',
     category: 'Deck Repair',
-    related: ['/services/deck-repair-and-structural-maintenance', '/services/deck-inspection', '/deck-repair-loudoun-county'],
+    related: ['/services/deck-repair', '/services/deck-inspection', '/deck-repair-loudoun-county'],
   },
   'deck-repair-loudoun-county': {
     name: 'Deck Repair in Loudoun County',
@@ -278,7 +278,7 @@ const CATALOG = {
     lowPrice: '1500', highPrice: '15000',
     category: 'Deck Repair',
     area: [{ '@type': 'AdministrativeArea', name: 'Loudoun County, VA' }],
-    related: ['/deck-repair', '/services/deck-repair-and-structural-maintenance', '/services/deck-inspection'],
+    related: ['/services/deck-repair', '/deck-repair-loudoun-county', '/services/deck-inspection'],
   },
   'deck-remodeling': {
     name: 'Deck Remodeling',

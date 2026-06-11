@@ -133,7 +133,7 @@ export default function Footer() {
               <li><Link href="/outdoor-living-northern-virginia">Outdoor Living</Link></li>
               <li><Link href="/deck-payment-estimator">Payment Estimator</Link></li>
               <li><Link href="/deck-warranty-guide-northern-virginia">Warranty Guide</Link></li>
-              <li><Link href="/services/porches/screened-porch">Screened Porches</Link></li>
+              <li><Link href="/screened-porch-builder-northern-virginia">Screened Porches</Link></li>
               <li><Link href="/deck-permit-loudoun-county-virginia">Loudoun Deck Permits</Link></li>
               <li><Link href="/deck-permit-fairfax-county-virginia">Fairfax Deck Permits</Link></li>
               <li><Link href="/deck-permit-arlington-county-virginia">Arlington Deck Permits</Link></li>

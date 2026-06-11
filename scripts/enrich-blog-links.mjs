@@ -17,7 +17,7 @@ const ENRICHMENTS = {
   },
   'enclosed-porches-trending': {
     check: '/screened-porch-builder-northern-virginia',
-    links: '\\n\\n---\\n\\n**Related:** [Screened Porch Builder Northern Virginia](/screened-porch-builder-northern-virginia) · [Screened Porch Services](/services/porches/screened-porch) · [Three-Season Room Options](/three-season-room-northern-virginia)',
+    links: '\\n\\n---\\n\\n**Related:** [Screened Porch Builder Northern Virginia](/screened-porch-builder-northern-virginia) · [Three-Season Room Options](/three-season-room-northern-virginia)',
   },
   'deck-resurfacing-guide': {
     check: '/deck-resurfacing-northern-virginia',
@@ -32,8 +32,8 @@ const ENRICHMENTS = {
     links: '\\n\\n---\\n\\n**Related:** [Trex Decks — Platinum Partner](/trex-decks) · [TimberTech AZEK Decks](/timbertech-decks) · [Full Brand Comparison](/trex-vs-timbertech-vs-azek)',
   },
   'deck-structural-repair-rot-prevention': {
-    check: '/services/deck-repair-and-structural-maintenance',
-    links: '\\n\\n---\\n\\n**Related:** [Deck Repair & Structural Maintenance Services](/services/deck-repair-and-structural-maintenance) · [Deck Safety Inspection Checklist](/deck-safety-inspection-checklist)',
+    check: '/services/deck-repair',
+    links: '\\n\\n---\\n\\n**Related:** [Deck Repair & Structural Maintenance Services](/services/deck-repair) · [Deck Safety Inspection Checklist](/deck-safety-inspection-checklist)',
   },
   'screened-porch-vs-three-season-room-virginia': {
     check: '/screened-porch-builder-northern-virginia',

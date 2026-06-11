@@ -151,7 +151,7 @@ export default function FrontPorchPage() {
             Considering a different porch type?{' '}
             <Link href="/services/porches/open-porch" style={{ color: 'var(--site-color)', fontWeight: '600' }}>Open Porch</Link>
             {' '}|{' '}
-            <Link href="/services/porches/screened-porch" style={{ color: 'var(--site-color)', fontWeight: '600' }}>Screened Porch</Link>
+            <Link href="/screened-porch-builder-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: '600' }}>Screened Porch</Link>
             {' '}|{' '}
             <Link href="/services/porches" style={{ color: 'var(--site-color)', fontWeight: '600' }}>All Porch Types</Link>
           </p>

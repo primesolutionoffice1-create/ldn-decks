@@ -125,7 +125,7 @@ export default function DeckEnclosurePage() {
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost Guide'],
               ['/porch-vs-deck-which-should-you-build', 'Porch vs Deck'],
               ['/porch-repair-vs-replacement-northern-virginia', 'Porch Repair vs Replacement'],
-              ['/services/porches/screened-porch', 'Screened Porch Services'],
+              ['/screened-porch-builder-northern-virginia', 'Screened Porch Services'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>
             ))}

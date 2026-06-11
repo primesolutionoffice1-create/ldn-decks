@@ -186,9 +186,12 @@ This is the **working** path — properly instrumented end-to-end, modulo the is
 
 ---
 
-## 2. ContactHome submission (homepage form) — BROKEN PATH
+## 2. ContactHome submission (homepage form) — RESOLVED PATH
 
-This is the headline issue. The homepage is the highest-traffic form, and it skips every tracking step.
+This was the headline issue in the original audit. It is now resolved:
+ContactHome uses the shared `useLeadSubmit()` pipeline, so homepage and
+embedded forms forward click IDs, UTMs, `source_url`, and `event_id` through
+the same path as ContactForm.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -197,22 +200,19 @@ This is the headline issue. The homepage is the highest-traffic form, and it ski
                                    │
                                    ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│ D. User fills homepage form, clicks "Get My Free Quote →"                   │
-│    File: ContactHome.jsx:31-42                                              │
+│ D. User fills homepage form                                                 │
+│    File: ContactHome.jsx → useLeadSubmit()                                  │
 └──────────────────────────────────┬──────────────────────────────────────────┘
                                    │
                                    ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│ E. handleSubmit                                                             │
-│    File: ContactHome.jsx:31-42                                              │
+│ E. shared submit pipeline                                                   │
+│    File: useLeadSubmit.js                                                   │
 │                                                                             │
-│    const formData = new FormData(e.target);                                 │
-│    const result = await sendContactEmail(formData);                         │
-│                                                                             │
-│    ❌ NO getClickIds() call                                                 │
-│    ❌ NO click IDs appended to formData                                     │
-│    ❌ NO event_id generated                                                 │
-│    ❌ NO event_id appended to formData                                      │
+│    ✅ getClickIds() + getUtmParams()                                        │
+│    ✅ click IDs appended to formData                                        │
+│    ✅ source_url appended to formData                                       │
+│    ✅ event_id generated and appended                                       │
 └──────────────────────────────────┬──────────────────────────────────────────┘
                                    │
                                    ▼
@@ -220,31 +220,31 @@ This is the headline issue. The homepage is the highest-traffic form, and it ski
 │ F. sendContactEmail receives formData                                       │
 │    File: sendEmail.js                                                       │
 │                                                                             │
-│    formData.get('gclid') → null                                             │
-│    formData.get('event_id') → null                                          │
+│    formData.get('gclid') → value when paid click exists                     │
+│    formData.get('event_id') → UUID                                          │
 │                                                                             │
-│    Email sent to office@: NO "Attribution (paid ad click)" block            │
-│    sendMetaLeadEvent fires with eventId=null → Meta can't dedup             │
+│    Email sent to office@ with attribution block when click IDs exist        │
+│    sendMetaLeadEvent fires with eventId=UUID when env vars are configured   │
 │                                                                             │
-│    ❌ Lead source data lost forever                                         │
+│    ✅ Lead source data preserved for CRM/offline import                     │
 └──────────────────────────────────┬──────────────────────────────────────────┘
                                    │
                                    ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│ G. NO trackFormSubmit fired                                                 │
+│ G. trackFormSubmit fires after successful server action                      │
 │                                                                             │
-│    ❌ No form_submit event in dataLayer                                     │
-│    ❌ Google Ads conversion tag (if trigger = form_submit) never fires      │
-│    ❌ GA4 generate_lead event never fires                                   │
-│    ❌ Meta Pixel client-side Lead event never fires                         │
+│    ✅ form_submit event in dataLayer                                        │
+│    ✅ generate_lead event in dataLayer                                      │
+│    ✅ event_id and click IDs available to GTM                               │
+│    ✅ Google Ads should still use lead_confirmed as source of truth         │
 └──────────────────────────────────┬──────────────────────────────────────────┘
                                    │
                                    ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│ H. router.push('/thank-you')                                                │
-│    File: ContactHome.jsx:38                                                 │
+│ H. router.push('/thank-you?eid=...&proof=...')                              │
+│    File: useLeadSubmit.js                                                   │
 │                                                                             │
-│    ❌ NO ?eid= query parameter                                              │
+│    ✅ ?eid= query parameter + server-signed proof token                     │
 └──────────────────────────────────┬──────────────────────────────────────────┘
                                    │
                                    ▼

@@ -51,6 +51,10 @@ const nextConfig = {
       { source: '/pergolas', destination: '/services/gazebo-pergola', permanent: true },
       { source: '/screened-porches', destination: '/screened-porch-builder-northern-virginia', permanent: true },
       { source: '/outdoor-living', destination: '/outdoor-living-northern-virginia', permanent: true },
+      { source: '/deck-design-ideas-northern-virginia-2026', destination: '/deck-design-ideas-2026', permanent: true },
+      { source: '/deck-remodeling', destination: '/services/deck-resurfacing', permanent: true },
+      { source: '/deck-repair', destination: '/services/deck-repair', permanent: true },
+      { source: '/services/porches/screened-porch', destination: '/screened-porch-builder-northern-virginia', permanent: true },
       { source: '/best-composite-decking-virginia-trex-timbertech-fiberon', destination: '/trex-vs-timbertech-vs-azek', permanent: true },
       { source: '/timbertech-azek-decking', destination: '/timbertech-decks', permanent: true },
       // BEAST plan Cluster H: legacy /blog/ URL competing with apex owner at #4

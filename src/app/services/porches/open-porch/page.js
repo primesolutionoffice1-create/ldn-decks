@@ -149,7 +149,7 @@ export default function OpenPorchPage() {
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '15px', color: '#666' }}>
             Considering a different porch type?{' '}
-            <Link href="/services/porches/screened-porch" style={{ color: 'var(--site-color)', fontWeight: '600' }}>Screened Porch</Link>
+            <Link href="/screened-porch-builder-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: '600' }}>Screened Porch</Link>
             {' '}|{' '}
             <Link href="/services/porches/front-porch" style={{ color: 'var(--site-color)', fontWeight: '600' }}>Front Porch</Link>
             {' '}|{' '}

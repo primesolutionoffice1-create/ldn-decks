@@ -232,13 +232,13 @@ Events pushed before GTM is ready queue in `dataLayer` and **do** process when G
 
 | Channel / Signal | Distortion | Direction |
 |---|---|---|
-| Google Ads form conversions | **−40 to −70%** (homepage form leads invisible) | Undercount |
+| Google Ads form conversions | Homepage form invisibility resolved by shared `useLeadSubmit()`; residual trust depends on GTM `lead_confirmed` + transaction_id proof | Proof-gated |
 | Google Ads phone conversions | **−30 to −50%** (most CTAs untracked) | Undercount |
 | Total Google Ads conversion count | **+0 to +100%** depending on GTM dedup config | Could be over OR under |
-| Smart Bidding signal quality | **Severely degraded** — missing the highest-value leads (calls + homepage) | Bad |
+| Smart Bidding signal quality | Still not safe to scale until real lead/call quality rows and offline outcomes exist | Data-gated |
 | GA4 thank-you page_view | **−100%** if no History Change trigger | Undercount |
-| Meta CAPI match rate | **−15 to −25%** (no `_fbp`, no client Pixel) | Lower match |
-| Offline conversion-import readiness | **Half the funnel** (ContactForm yes; ContactHome no) | Half-broken |
+| Meta CAPI match rate | Browser Pixel exists; final EMQ depends on production CAPI credentials and Events Manager diagnostics | Proof-gated |
+| Offline conversion-import readiness | Click IDs and event_id are wired; real CRM/outcome rows remain sample-only | Data-gated |
 
 **Net read:** you cannot trust the conversion column in Google Ads today. Bid optimization on this data is optimizing toward noise.
 

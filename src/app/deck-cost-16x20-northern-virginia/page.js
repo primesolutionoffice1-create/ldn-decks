@@ -147,7 +147,7 @@ export default function DeckCost16x20Page() {
               ['/deck-cost-20x20-northern-virginia', '20x20 Deck Cost (larger)'],
               ['/deck-payment-estimator', 'Deck Payment Estimator'],
               ['/composite-deck-cost-by-size', 'Composite Deck Cost by Size'],
-              ['/how-much-does-a-deck-cost-northern-virginia', 'Northern Virginia Deck Cost Guide (overview)'],
+              ['/composite-deck-cost-northern-virginia', 'Northern Virginia Deck Cost Guide (overview)'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck — 15-Year Cost'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
               ['/loudoun-county-hoa-deck-rules', 'Loudoun HOA Deck Rules'],

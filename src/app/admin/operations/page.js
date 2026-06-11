@@ -179,7 +179,18 @@ function proofPaths(date) {
     sprintCsv: `docs/seo/owner-evidence-sprint-${date}.csv`,
     unblockRunbook: `docs/seo/evidence-unblock-runbook-${date}.md`,
     proofChecklist: `docs/seo/proof-source-checklist-${date}.md`,
+    directoryCitationStatus: `docs/seo/directory-citation-status-${date}.md`,
+    gbpMapsProofOpsBoard: `docs/seo/gbp-maps-proof-ops-board-${date}.md`,
   };
+}
+
+function operationsDateStamp(date = new Date()) {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(date);
 }
 
 function ownerEvidenceSprint(paths) {
@@ -193,6 +204,21 @@ function ownerEvidenceSprint(paths) {
       'Project linkage',
       'Privacy pass',
       'Dry-run pass',
+    ],
+  };
+}
+
+function directoryCitationGate(paths) {
+  return {
+    status: paths.directoryCitationStatus,
+    board: paths.gbpMapsProofOpsBoard,
+    command: 'npm run seo:directory-citations:validate',
+    rows: [
+      'NADRA directory',
+      'Bing Places',
+      'Apple Business Connect',
+      'Nextdoor',
+      'Angi',
     ],
   };
 }
@@ -344,10 +370,11 @@ const S = {
 };
 
 export default function OperationsDashboardPage() {
-  const today = new Date().toISOString().split('T')[0];
+  const today = operationsDateStamp();
   const paths = proofPaths(today);
   const sourceWorkflow = proofSourceWorkflow(paths);
   const ownerSprint = ownerEvidenceSprint(paths);
+  const citationGate = directoryCitationGate(paths);
   const unblockRunbook = proofUnblockRunbook(paths);
   const preflightCommands = proofPreflightCommands(paths);
   const promoteCommands = proofPromoteCommands(paths);
@@ -416,6 +443,16 @@ export default function OperationsDashboardPage() {
           <p style={S.meta}><strong>Blocks:</strong> {ownerSprint.blocks.join(' · ')}</p>
           <div style={S.next}>
             <strong>Operator rule:</strong> complete the sprint checklist before importing proof. If a row still has unknowns, keep it partial and leave the publish gate closed.
+          </div>
+        </div>
+        <div style={S.card}>
+          <h3 style={{ ...S.h3, marginTop: 0 }}>GBP / Maps proof ops</h3>
+          <p style={S.meta}><strong>Directory status:</strong> <code>{citationGate.status}</code></p>
+          <p style={S.meta}><strong>Board:</strong> <code>{citationGate.board}</code></p>
+          <p style={S.meta}><strong>Command:</strong> <code>{citationGate.command}</code></p>
+          <p style={S.meta}><strong>Rows:</strong> {citationGate.rows.join(' · ')}</p>
+          <div style={S.next}>
+            <strong>SameAs rule:</strong> keep Apple, Nextdoor, Angi, and other unresolved directories proof-gated until owner/admin screenshots confirm canonical public identity.
           </div>
         </div>
         <h3 style={S.h3}>Minimum proof packet before anything becomes citable</h3>

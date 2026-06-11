@@ -65,7 +65,7 @@ const expansionSections = [
     paragraphs: [
       "A covered deck is often one zone in a larger outdoor-living plan. Many Northern Virginia homeowners pair it with adjacent [custom deck construction](/services/new-decks), creating a layout with one shaded entertaining area and one open-sun lounging area.",
       "Covered decks also pair well with [custom fire pits](/services/fire-pits), under-deck patio drainage systems, and premium railing or lighting packages. The result is a more complete backyard environment instead of a single isolated feature.",
-      "If insect protection is a higher priority than open-air cooking and ventilation, we may recommend a [screened porch](/services/porches/screened-porch) instead. We can also help design hybrid spaces with both screened and fully open sections."
+      "If insect protection is a higher priority than open-air cooking and ventilation, we may recommend a [screened porch](/screened-porch-builder-northern-virginia) instead. We can also help design hybrid spaces with both screened and fully open sections."
     ]
   }
 ];
@@ -145,7 +145,7 @@ export default function CoveredDeckPage() {
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '15px', color: '#666' }}>
             Comparing porch and covered-living options?{' '}
-            <Link href="/services/porches/screened-porch" style={{ color: 'var(--site-color)', fontWeight: '600' }}>Screened Porch</Link>
+            <Link href="/screened-porch-builder-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: '600' }}>Screened Porch</Link>
             {' '}|{' '}
             <Link href="/services/porches/front-porch" style={{ color: 'var(--site-color)', fontWeight: '600' }}>Front Porch</Link>
             {' '}|{' '}

@@ -1,0 +1,4 @@
+snapshot_date,source,target_domain,keyword,device,location,position,previous_position,volume,keyword_difficulty,url,intent,status,notes
+YYYY-MM-DD,SAMPLE_ONLY,ldndecks.com,deck builder ashburn va,desktop,Ashburn VA,,,"0",,https://ldndecks.com/deck-builder-ashburn-va,local_commercial,sample_only,"Sample-only placeholder; replace with Ahrefs API/MCP or verified manual rank-tracker export before any ranking claim."
+YYYY-MM-DD,SAMPLE_ONLY,ldndecks.com,composite deck builder loudoun,desktop,Loudoun County VA,,,"0",,https://ldndecks.com/composite-deck-builder-loudoun,local_commercial,sample_only,"Sample-only placeholder; no live ranking, GBP, Ads, or public SEO claim is authorized."
+YYYY-MM-DD,SAMPLE_ONLY,ldndecks.com,deck repair loudoun county,desktop,Loudoun County VA,,,"0",,https://ldndecks.com/deck-repair-loudoun-county,local_service,sample_only,"Sample-only placeholder; use only to validate the snapshot shape."

@@ -10,7 +10,7 @@ const PAGES = [
   'cable-railing-for-decks-northern-virginia',
   'deck-design-ideas-2026',
   'deck-enclosure-ideas-northern-virginia',
-  'deck-financing-northern-virginia',
+  'deck-financing',
   'deck-lighting-ideas-northern-virginia',
   'deck-maintenance-checklist-virginia',
   'deck-permit-fairfax-county-virginia',
