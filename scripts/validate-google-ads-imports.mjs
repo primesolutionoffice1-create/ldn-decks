@@ -237,7 +237,7 @@ if (totalDailyBudget !== 205) {
 
 const nonSearchNetworkProblems = searchCampaigns.filter(row => row.Networks !== 'Google search; Search partners: off; Display network: off');
 if (nonSearchNetworkProblems.length) {
-  fail(`Search network settings are not launch-safe for: ${nonSearchNetworkProblems.map(row => row.Campaign).join(', ')}`);
+  fail(`Search network settings are not import-shape valid for: ${nonSearchNetworkProblems.map(row => row.Campaign).join(', ')}`);
 }
 
 for (const row of [...adGroups, ...keywords, ...ads, ...sitelinks, ...callouts, ...callAssets, ...locations, ...campaignNegatives]) {
