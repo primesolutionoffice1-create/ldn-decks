@@ -8,6 +8,12 @@ const ROOT = process.cwd();
 const DATE = localDateStamp();
 const OUTPUT_JSON = `scripts/output/scaling-readiness-board-${DATE}.json`;
 const OUTPUT_MD = `docs/seo/scaling-readiness-board-${DATE}.md`;
+const LIVE_CALL_ATTRIBUTION = `docs/ads-tracking/live-call-attribution-evidence-${DATE}.csv`;
+const LIVE_LEAD_OUTCOMES = `docs/ads-tracking/live-lead-outcomes-${DATE}.csv`;
+const OWNER_PROJECT_INTAKE = `docs/seo/project-evidence-intake-${DATE}.csv`;
+const OWNER_PHOTO_MANIFEST = `docs/seo/photo-ingestion-manifest-${DATE}.csv`;
+const OWNER_WARRANTY_TERMS = `docs/seo/warranty-terms-intake-${DATE}.csv`;
+const OWNER_REPAIR_COSTS = `docs/seo/repair-cost-ranges-intake-${DATE}.csv`;
 
 function parseTrailingJson(output) {
   const start = output.indexOf('{');
@@ -82,7 +88,7 @@ if (measurement.scalingGate === 'RED') {
     id: 'google-call-attribution',
     owner: 'external',
     priority: 'P0',
-    action: 'Verify Google Ads/GTM qualified-call attribution with the read-only runbook.',
+    action: `Add real Google Ads/GTM proof rows to ${LIVE_CALL_ATTRIBUTION}; then run \`npm run measurement:call-attribution-evidence && npm run measurement:gate && npm run scaling:readiness\`.`,
     evidence: `Measurement gate remains RED while google-call-attribution is WARN/external-proof-needed. Call attribution evidence status: ${callAttributionEvidence.status ?? 'unknown'}, ${callAttributionEvidence.rows ?? 0} real rows.`,
   });
 } else {
@@ -94,7 +100,7 @@ if ((leadOutcomes.rows ?? 0) < 5) {
     id: 'lead-outcome-rows',
     owner: 'owner',
     priority: 'P0',
-    action: 'Collect 5-10 real lead outcome rows and rerun `npm run measurement:lead-outcomes`.',
+    action: `Add 5-10 real lead outcome rows to ${LIVE_LEAD_OUTCOMES}; then run \`npm run measurement:lead-outcomes && npm run scaling:readiness\`.`,
     evidence: `${leadOutcomes.rows ?? 0} real rows, ${leadOutcomes.qualifiedRows ?? 0} qualified, status ${leadOutcomes.status ?? 'unknown'}.`,
   });
 } else if ((leadOutcomes.errors || []).length) {
@@ -114,7 +120,7 @@ if ((proofPreflight.blocked ?? 0) > 0 || (proofPreflight.proofIncomplete ?? 0) >
     id: 'owner-proof-evidence',
     owner: 'owner',
     priority: 'P0',
-    action: 'Complete owner evidence packets for blocked/proof-incomplete proof pages.',
+    action: `Complete ${OWNER_PROJECT_INTAKE}, ${OWNER_PHOTO_MANIFEST}, ${OWNER_WARRANTY_TERMS}, and ${OWNER_REPAIR_COSTS}; then run \`npm run seo:validate-owner-intake && npm run seo:proof-preflight && npm run seo:weekly\`.`,
     evidence: `${proofPreflight.blocked ?? 0} blocked, ${proofPreflight.proofIncomplete ?? 0} proof-incomplete, prepublish expected-blocked ${Boolean(proofPreflight.prepublishExpectedBlocked)}. Owner action packet: ${ownerEvidenceActionPacket.rows ?? '?'} rows, ${ownerEvidenceActionPacket.p0 ?? '?'} P0, ${ownerEvidenceActionPacket.errors?.length ?? '?'} errors.`,
   });
 } else {
@@ -194,7 +200,7 @@ ${readySignals.length ? readySignals.map((signal) => `- ${signal}`).join('\n') :
 
 ## Operating Rule
 
-Keep scaling RED while any P0 blocker remains. Do not activate or raise budgets based only on local import readiness; qualified-call attribution, real lead outcomes, and owner proof evidence must be proven first.
+Keep scaling RED while any P0 blocker remains. Use the exact files listed in Blockers, then rerun the listed commands. Do not activate or raise budgets based only on local import readiness; qualified-call attribution, real lead outcomes, and owner proof evidence must be proven first.
 `;
 
 fs.mkdirSync(path.dirname(path.join(ROOT, OUTPUT_JSON)), { recursive: true });

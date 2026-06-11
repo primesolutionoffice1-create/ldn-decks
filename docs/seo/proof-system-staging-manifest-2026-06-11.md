@@ -4,7 +4,7 @@ Purpose: keep the Brainstein / SEO proof-safety work mergeable without mixing ve
 
 ## Current Branch
 
-- Branch: `codex/owner-proof-scaling-handoff`
+- Branch: `codex/scaling-readiness-action-specificity`
 - Production deploy: no
 - Merge to main: no
 - Publish gate: intentionally blocked until owner evidence is verified
