@@ -13,6 +13,7 @@ const SOURCES = {
   scalingBoard: `docs/seo/scaling-readiness-board-${DATE}.md`,
   evidenceRequest: `docs/ads-tracking/scaling-evidence-request-${DATE}.md`,
   blockerExit: `docs/seo/scaling-blocker-exit-checklist-${DATE}.md`,
+  callAttributionLive: `docs/ads-tracking/live-call-attribution-evidence-${DATE}.csv`,
   callAttributionTemplate: 'docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv',
   leadOutcomeLive: `docs/ads-tracking/live-lead-outcomes-${DATE}.csv`,
   leadOutcomeTemplate: 'docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv',
@@ -58,12 +59,12 @@ const sections = [
   {
     id: 'google-call-attribution',
     title: 'Google Call Attribution Evidence',
-    source: SOURCES.callAttributionTemplate,
+    source: SOURCES.callAttributionLive,
     owner: 'external',
     rowsNeeded: '1 real read-only evidence row minimum',
-    pasteInto: SOURCES.callAttributionTemplate,
+    pasteInto: SOURCES.callAttributionLive,
     verify: 'npm run measurement:call-attribution-evidence && npm run measurement:gate && npm run scaling:readiness',
-    guardrail: 'Do not make phone_click primary and do not change Google Ads, GTM, GA4, budgets, bidding, or conversions from this packet.',
+    guardrail: `Do not make phone_click primary and do not change Google Ads, GTM, GA4, budgets, bidding, or conversions from this packet. Use ${SOURCES.callAttributionTemplate} only as the shape reference.`,
   },
   {
     id: 'lead-outcome-rows',

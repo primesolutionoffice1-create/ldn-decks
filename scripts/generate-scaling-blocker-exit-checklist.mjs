@@ -26,7 +26,7 @@ function exitPlan(blocker) {
     return {
       exitEvidence: 'Real Google Ads/GTM read-only evidence rows showing qualified-call conversion action source, primary/secondary status, 60s+ duration or approved threshold, clean diagnostics, and no phone_click primary Smart Bidding risk.',
       exitCommand: 'npm run measurement:call-attribution-evidence && npm run measurement:gate && npm run scaling:readiness',
-      expectedAfterExit: 'Call attribution evidence is no longer SAMPLE_ONLY; measurement gate no longer keeps google-call-attribution as external-proof blocker.',
+      expectedAfterExit: 'Call attribution evidence is no longer SAMPLE_ONLY/LIVE_EMPTY; measurement gate no longer keeps google-call-attribution as external-proof blocker.',
       redFlag: 'Any phone_click primary risk, missing diagnostics, or unproven Google forwarding/call-source setup keeps this blocker open.',
     };
   }

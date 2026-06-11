@@ -4,7 +4,9 @@ import path from 'node:path';
 import { localDateStamp } from './lib/local-date.mjs';
 
 const ROOT = process.cwd();
-const DEFAULT_INPUT = 'docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv';
+const SAMPLE_INPUT = 'docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv';
+const LIVE_INPUT_DIR = 'docs/ads-tracking';
+const LIVE_INPUT_PREFIX = 'live-call-attribution-evidence-';
 const DATE = localDateStamp();
 const OUTPUT_JSON = `scripts/output/call-attribution-evidence-validation-${DATE}.json`;
 const OUTPUT_MD = `scripts/output/call-attribution-evidence-validation-${DATE}.md`;
@@ -76,6 +78,20 @@ function normalize(value) {
   return String(value ?? '').trim();
 }
 
+function latestLiveInput() {
+  const dir = path.join(ROOT, LIVE_INPUT_DIR);
+  if (!fs.existsSync(dir)) return null;
+  const candidates = fs.readdirSync(dir)
+    .filter((file) => file.startsWith(LIVE_INPUT_PREFIX) && file.endsWith('.csv'))
+    .sort();
+  const latest = candidates.at(-1);
+  return latest ? path.join(LIVE_INPUT_DIR, latest) : null;
+}
+
+function defaultInput() {
+  return latestLiveInput() || SAMPLE_INPUT;
+}
+
 function toObjects(rows) {
   const [headers, ...body] = rows;
   return body.map((items) => Object.fromEntries(headers.map((header, index) => [header, normalize(items[index])])));
@@ -129,8 +145,11 @@ function validateRow(row, index) {
   return { errors, warnings };
 }
 
-const inputArg = process.argv[2] || DEFAULT_INPUT;
+const inputArg = process.argv[2] || process.env.CALL_ATTRIBUTION_INPUT || defaultInput();
 const inputPath = path.resolve(ROOT, inputArg);
+const relativeInput = path.relative(ROOT, inputPath);
+const sampleInput = relativeInput === SAMPLE_INPUT;
+const liveInput = relativeInput.startsWith(`${LIVE_INPUT_DIR}/${LIVE_INPUT_PREFIX}`);
 const text = fs.readFileSync(inputPath, 'utf8');
 const parsed = parseCsv(text);
 const headers = parsed[0] || [];
@@ -144,12 +163,21 @@ const warnings = extraHeaders.map((header) => `Extra header ignored: ${header}`)
 const primaryQualifiedRows = realRows.filter((row) => row.primary_status === 'primary' && Number.parseInt(row.min_call_duration_seconds || '0', 10) >= 60).length;
 const cleanDiagnosticsRows = realRows.filter((row) => row.diagnostics_status.toLowerCase() === 'clean').length;
 const phoneClickPrimaryRiskRows = realRows.filter((row) => row.phone_click_primary_risk === 'yes').length;
-const status = errors.length ? 'FAIL' : realRows.length ? 'PARTIAL' : 'SAMPLE_ONLY';
+const status = errors.length
+  ? 'FAIL'
+  : realRows.length
+    ? 'PARTIAL'
+    : sampleInput
+      ? 'SAMPLE_ONLY'
+      : liveInput
+        ? 'LIVE_EMPTY'
+        : 'EMPTY';
 
 const result = {
   ok: errors.length === 0,
   status,
-  input: path.relative(ROOT, inputPath),
+  input: relativeInput,
+  inputType: sampleInput ? 'sample_template' : liveInput ? 'live_intake' : 'custom',
   rows: realRows.length,
   primaryQualifiedRows,
   cleanDiagnosticsRows,
@@ -186,7 +214,9 @@ ${warnings.length ? warnings.map((item) => `- ${item}`).join('\n') : '- none'}
 ## Gate Notes
 
 - \`SAMPLE_ONLY\` is expected for the template file.
+- \`LIVE_EMPTY\` means the current live intake file exists but has no real Google Ads/GTM evidence rows yet.
 - \`PARTIAL\` means real read-only evidence rows are present but do not yet prove GREEN.
+- Use \`CALL_ATTRIBUTION_INPUT=path/to/file.csv npm run measurement:call-attribution-evidence\` or \`npm run measurement:call-attribution-evidence -- path/to/file.csv\` to validate a specific evidence export.
 - This validator does not change Google Ads, GTM, GA4, budgets, bidding, conversion actions, or account settings.
 `;
 

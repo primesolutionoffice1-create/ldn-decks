@@ -15,10 +15,10 @@ This packet converts the current scaling readiness blockers into owner/external 
 
 - Owner: external
 - Evidence needed: Screenshots or read-only export showing Google Ads call conversion action source, status, counting, diagnostics, and GTM/website-call forwarding setup for the canonical LDN Decks phone number.
-- Where to collect: Google Ads conversions, Google Ads call assets/call reporting, GTM tags/triggers, and the call attribution read-only runbook.
-- Done when: `npm run measurement:gate` can be updated from external-proof WARN only after the evidence proves qualified-call attribution.
-- Verification command: `npm run measurement:gate && npm run scaling:readiness`
-- Current evidence: Measurement gate remains RED while google-call-attribution is WARN/external-proof-needed. Call attribution evidence status: SAMPLE_ONLY, 0 real rows.
+- Where to collect: Google Ads conversions, Google Ads call assets/call reporting, GTM tags/triggers, and docs/ads-tracking/live-call-attribution-evidence-2026-06-11.csv. Use docs/ads-tracking/templates/call-attribution-readonly-evidence-template.csv only as the shape reference.
+- Done when: `npm run measurement:call-attribution-evidence` no longer returns SAMPLE_ONLY/LIVE_EMPTY and `npm run measurement:gate` can be updated from external-proof WARN only after the evidence proves qualified-call attribution.
+- Verification command: `npm run measurement:call-attribution-evidence && npm run measurement:gate && npm run scaling:readiness`
+- Current evidence: Measurement gate remains RED while google-call-attribution is WARN/external-proof-needed. Call attribution evidence status: LIVE_EMPTY, 0 real rows.
 
 ### P0 - lead-outcome-rows
 
