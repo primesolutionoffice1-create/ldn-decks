@@ -3,7 +3,7 @@
 **Branch:** `feat/ads-tracking-instrumentation`
 **Phase:** 1 — code complete; GTM/Ads UI configuration ready to execute
 **Last code verification:** 2026-05-15
-**Scope:** the single document that determines whether the attribution layer is production-ready for Smart Bidding decisions.
+**Scope:** the single document that determines whether the attribution layer is stable enough to enter a Smart Bidding readiness review. It does not approve bidding changes by itself.
 
 ## 2026-05-15 GTM publish update
 
@@ -18,13 +18,13 @@ The HIGH-1 GTM conversion migration is now live in container `GTM-N87MG6QS`.
 | Enhanced Conversions event trigger | PASS | `Google Ads - User Provided Data - Form Lead` fires on `lead_confirmed - Custom Event` |
 | Preview validation | PASS | Tag Assistant showed GA4 generate_lead, Google Ads Form Lead, and User Provided Data firing once on `lead_confirmed` |
 | Production real-lead validation | PENDING | Requires 5-10 real leads after publish |
-| Smart Bidding changes | BLOCKED | Do not change budgets, bid strategies, tCPA, tROAS, or Max Conversions until real-lead validation passes |
+| Smart Bidding changes | BLOCKED | Do not change budgets, bid strategies, tCPA, tROAS, or Max Conversions until real-lead validation passes, `npm run scaling:readiness` is GREEN, live call-attribution evidence is clean/non-empty, and lead-outcome rows meet the documented threshold |
 
 This document has two halves:
 - **Section A — Code Layer Sign-off**: conditions I can verify autonomously. Pre-filled below; the operator only checks the record.
 - **Section B — Operator Layer Sign-off**: conditions that require GTM container / Google Ads UI access. The operator (or their PPC consultant) fills these in after running the three preceding runbooks.
 
-**Hard rule:** no bid strategy changes, no Smart Bidding rollout, no production Meta CAPI activation, no tCPA/tROAS until **both** sections show all PASS.
+**Hard rule:** no bid strategy changes, no Smart Bidding rollout, no production Meta CAPI activation, no Maximize Conversions, and no tCPA/tROAS until **both** sections show all PASS, `npm run scaling:readiness` is GREEN, live call-attribution evidence is clean/non-empty, and live lead-outcome rows meet the documented threshold.
 
 ---
 
