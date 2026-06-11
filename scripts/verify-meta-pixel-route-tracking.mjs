@@ -168,6 +168,14 @@ async function main() {
   await send('Page.enable');
   await send('Runtime.enable');
   await send('Network.enable');
+  await send('Page.addScriptToEvaluateOnNewDocument', {
+    source: `
+      try {
+        localStorage.setItem('ldn_cookie_consent', 'accepted');
+        window.ldnConsentGranted = true;
+      } catch (e) {}
+    `,
+  });
   await send('Network.setBlockedURLs', { urls: ['*://connect.facebook.net/*', '*://www.facebook.com/tr*'] });
   await send('Page.navigate', { url: TARGET_URL });
   await waitForEvent('Page.loadEventFired');

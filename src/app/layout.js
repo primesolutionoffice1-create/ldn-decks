@@ -203,7 +203,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <WebVitalsReporter />
                     <MetaPixelRouteTracker />
                     <ConsentBanner />
-                    <MetaPixelRouteTracker />
         </ContactProvider>
       </body>
     </html>
