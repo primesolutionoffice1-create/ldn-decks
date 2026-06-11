@@ -29,7 +29,7 @@ Production deployment of the ads tracking branch (`feat/ads-tracking-instrumenta
 ### Tracking infrastructure prerequisites
 
 - [ ] GTM container `GTM-N87MG6QS` workspace accessible to deployer
-- [ ] Meta Business Manager access (if activating CAPI in same window)
+- [ ] Meta Business Manager access documented for the future gated CAPI activation window
 - [ ] Meta Pixel ID known (or accept the no-op posture)
 - [ ] Meta domain verification status for `ldndecks.com` confirmed in Brand Safety → Domains
 
@@ -83,21 +83,29 @@ Watch the deploy pipeline. Pass criteria:
 
 If any step fails: jump to `ROLLBACK-PLAN.md` immediately.
 
-### Step 5: Activate Meta CAPI (optional, can defer)
+### Step 5: Prepare Meta CAPI activation package (do not activate yet)
 
-If activating Meta CAPI in the same deploy window:
+Do **not** activate production Meta CAPI in the initial tracking deploy window.
+This step only prepares the activation package for a later gated patch after
+the attribution layer has clean live evidence.
 
 ```
 1. Get META_PIXEL_ID from Events Manager → Pixel details
 2. Get META_CAPI_ACCESS_TOKEN from Events Manager → Settings → Conversions API → Generate access token
-3. Add to Vercel: Settings → Environment Variables → Production
-4. Trigger new deploy (env changes don't hot-reload server actions in some configurations)
-5. Set META_CAPI_TEST_EVENT_CODE=TEST_$(date +%Y%m%d) for first test
-6. Submit test form
-7. Verify in Events Manager → Test Events tab within 30 sec
-8. Verify EMQ score ≥ 7.5 (excellent)
-9. Remove META_CAPI_TEST_EVENT_CODE and redeploy for production-quality events
+3. Store credentials only in the approved secret manager / Vercel env draft workflow
+4. Do not add production env values until the activation gate passes
+5. Run staging/local Test Events only with META_CAPI_TEST_EVENT_CODE
+6. Verify Events Manager can see Browser + Server events with the same event_id in test mode
+7. Document the result in PHASE-3-4-ACTIVATION-GATES.md before production activation
 ```
+
+Production Meta CAPI activation remains blocked until:
+
+- `npm run scaling:readiness` is GREEN
+- live call-attribution evidence is non-empty and clean
+- live lead-outcome rows meet the documented threshold
+- one clean validation window has no duplicate-fire or attribution-integrity regressions
+- the activation is shipped as a small separate patch with rollback instructions
 
 ### Step 6: Wire GTM tags to use lead_confirmed (10 min)
 
@@ -124,9 +132,9 @@ Required to fully realize the reliability patch:
 - [ ] Form submission count not regressed (Vercel Analytics page views on /thank-you)
 - [ ] Lead-notification email delivery not regressed (verify mailbox)
 - [ ] Google Ads conversions count not regressed (allow 24h for full attribution)
-- [ ] Meta Events Manager → Diagnostics tab shows no high-priority errors
-- [ ] Meta Events Manager → Overview shows Lead events flowing if CAPI activated
-- [ ] EMQ (Event Match Quality) score ≥ 7.5 if CAPI activated
+- [ ] Meta Events Manager → Diagnostics tab reviewed in test/staging mode only
+- [ ] Meta Events Manager → Overview remains production-CAPI quiet until the gated activation patch
+- [ ] EMQ (Event Match Quality) target recorded for later activation; do not use it as a same-window deploy gate
 
 ### Sentinel logs
 
@@ -147,7 +155,7 @@ Client-side (browser console while logged-in operator audits):
 | Smoke-test step 7 (email attribution block) missing | Server-side wiring failed. Check sendEmail.js. |
 | Vercel deploy fails or builds in CI fail | Stop. Investigate. |
 | First 1 hour shows >10% conversion drop in Google Ads | Rollback immediately per ROLLBACK-PLAN. Tracking change is suspect. |
-| Meta CAPI returns >5% non-2xx in first hour | Pause CAPI by unsetting env vars (no rollback needed; site keeps working). |
+| Meta CAPI production env vars are accidentally enabled before gates pass | Pause CAPI by unsetting env vars immediately; site keeps working because CAPI is env-gated. |
 
 ## Communication
 
@@ -158,7 +166,7 @@ Client-side (browser console while logged-in operator audits):
 ### Post-deploy
 
 - Notify analytics / reporting: "Google Ads conversions now use `lead_confirmed` event (page-view anchored); GTM tag rewired. Conversions Transaction ID = event_id from form. Dedup window 24h."
-- If CAPI activated: "Meta CAPI live. Lead events now flow from server. Expect EMQ score >7.5; expect attribution match-rate lift ~20-30% on iOS / Safari traffic over 7-day rolling window."
+- Future gated CAPI activation message only after gates pass: "Meta CAPI production activation is live. Browser + Server Lead events dedup by event_id. Monitor Events Manager diagnostics, duplicate rate, and EMQ over the next 7 days."
 
 ## Reviewer signoff
 
