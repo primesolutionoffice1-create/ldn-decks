@@ -266,24 +266,52 @@ B6 overall:                                                 PASS / FAIL
 
 # Section C — Final sign-off
 
-Both sections A and B must show all PASS. Once they do:
+Sections A and B are **attribution-stability gates**, not Smart Bidding
+activation approval. Both sections must show all PASS before any scaling
+review can begin, but they do not override the current scaling readiness board,
+live call-attribution intake, or live lead-outcome thresholds.
 
 ```
 Section A (code layer):           PASS  ← already verified
 Section B (operator layer):       PASS / FAIL
+Scaling readiness board:          RED / YELLOW / GREEN
+Live call-attribution evidence:   LIVE_EMPTY / PASS
+Live lead-outcome rows:           LIVE_EMPTY / PASS
 
-If both PASS:
+If A+B PASS but scaling readiness is not GREEN:
 
     ┌───────────────────────────────────────────────────────────────┐
     │                                                               │
-    │   ATTRIBUTION LAYER IS PRODUCTION-READY FOR SMART BIDDING     │
+    │   ATTRIBUTION LAYER IS STABLE, BUT SCALING REMAINS BLOCKED    │
+    │                                                               │
+    │   Keep current bidding posture. Do not switch to Maximize      │
+    │   Conversions, tCPA, tROAS, PMax expansion, or budget scaling  │
+    │   while `npm run scaling:readiness` remains RED/YELLOW, live   │
+    │   call attribution rows are empty, or live lead-outcome rows   │
+    │   are below threshold.                                         │
+    │                                                               │
+    │   Required before Smart Bidding review:                        │
+    │   - `npm run scaling:readiness` is GREEN                       │
+    │   - qualified-call attribution evidence is non-empty and clean │
+    │   - 5-10 real lead-outcome rows validate without errors        │
+    │   - duplicate/unattributed rates are inside the gate limits    │
+    │                                                               │
+    └───────────────────────────────────────────────────────────────┘
+
+If A+B PASS and scaling readiness is GREEN:
+
+    ┌───────────────────────────────────────────────────────────────┐
+    │                                                               │
+    │   ACCOUNT IS ELIGIBLE FOR SMART BIDDING REVIEW, NOT AUTO-SWAP │
     │                                                               │
     │   Next allowable steps:                                       │
-    │   - Switch one Search campaign to Maximize Conversions        │
-    │     (no target; observe for 7-14 days)                        │
+    │   - Review one Search campaign for Maximize Conversions test  │
+    │     only if qualified-call and lead-outcome evidence supports  │
+    │     it; observe for 7-14 days if approved                     │
     │   - Begin Offline Conversion Import pipeline (CRM → Ads)      │
-    │   - After 30+ Qualified Leads accumulated, switch to tCPA     │
-    │   - After 50+ Closed Won with value, consider tROAS           │
+    │   - After 30+ qualified conversions in 30 days, review tCPA   │
+    │   - After 50+ Closed Won with value and stable revenue data,  │
+    │     review tROAS                                              │
     │                                                               │
     │   Still PROHIBITED until further runbooks:                    │
     │   - Production Meta CAPI activation (needs B5 + 1 week data)  │
@@ -347,8 +375,9 @@ GTM:    Versions → previous → Set as Latest → Publish
 
 DO NOT
 ------
-- Switch to Max Conversions before B1+B4 PASS
-- Switch to tCPA / tROAS before 30+ Qualified Leads
+- Switch to Max Conversions before A+B PASS, scaling readiness GREEN, and
+  non-empty clean live call/lead-outcome evidence
+- Switch to tCPA / tROAS before the documented qualified/revenue thresholds pass
 - Activate prod Meta CAPI before B5 PASS + 1 week clean data
 - Change budgets >20% in any single edit
 - Edit multiple campaigns at once
