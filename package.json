@@ -12,6 +12,7 @@
         "seo:validate-schema": "node scripts/validate-seo-schema.mjs",
         "seo:daily-check": "node scripts/seo-daily-check.mjs",
         "seo:link-audit": "node scripts/seo-link-audit.mjs",
+        "seo:strict-crawl": "node scripts/strict-seo-crawl.mjs",
         "seo:audit-images": "node scripts/audit-image-alt.mjs --verbose",
         "seo:audit-freshness": "node scripts/audit-content-freshness.mjs --verbose",
         "seo:weekly": "node scripts/seo-weekly-report.mjs",
