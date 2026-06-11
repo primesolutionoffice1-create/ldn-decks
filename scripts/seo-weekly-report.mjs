@@ -903,7 +903,7 @@ const summaryLines = [
   `| Call attribution evidence validation | ${callAttributionEvidenceValidation?.ok ? '✓ validator ready' : '✗ red'} | ${callAttributionEvidenceMetric} |`,
   `| GBP cadence validation | ${gbpCadenceValidation?.ok ? '✓ ready' : '✗ red'} | ${gbpCadenceMetric} |`,
   `| Automation static validation | ${automationStaticValidation?.ok ? '✓ ready' : '✗ red'} | ${automationStaticMetric} |`,
-  `| Google Ads import validation | ${googleAdsImportValidation?.ok ? '✓ launch-safe local pack' : '✗ red'} | ${googleAdsImportMetric} |`,
+  `| Google Ads import validation | ${googleAdsImportValidation?.ok ? '✓ shape-valid local pack' : '✗ red'} | ${googleAdsImportMetric} |`,
   `| Entity profile consistency | ${entityProfileValidation?.ok ? '✓ canonical' : '✗ red'} | ${entityProfileMetric} |`,
   `| Rank tracker manual snapshot validation | ${rankTrackerManualSnapshotValidation?.ok ? '✓ guarded' : '✗ red'} | ${rankTrackerManualSnapshotMetric} |`,
   `| DataForSEO n8n MCP runbook validation | ${dataForSeoN8nMcpValidation?.ok ? '✓ valid' : '✗ red'} | ${dataForSeoN8nMcpMetric} |`,
