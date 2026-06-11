@@ -76,7 +76,7 @@ Risks specific to **whether a conversion is correctly attributed to the right cl
 
 **Where:** [layout.js](../../src/app/layout.js) loads the direct Pixel fallback after consent; [metaCapi.js](../../src/server/metaCapi.js) handles env-gated server-side CAPI.
 **Affected conversions:** all Meta-attributable conversions.
-**Current status:** resolved site-side. The direct Pixel fallback initializes dataset `695923313293515` after accepted consent, sends `PageView`, and the route tracker sends one additional `PageView` per SPA navigation. The `ads:verify-meta-route` test passes with one initial PageView and two after navigation.
+**Current status:** resolved site-side. The direct Pixel fallback initializes dataset `695923313293515` after accepted consent, sends `PageView`, and the route tracker sends one additional `PageView` per SPA navigation. The `ads:verify-meta-route` test is expected to show one initial PageView and two total PageViews after one SPA navigation. If it returns `BLOCKED_CDP_UNAVAILABLE`, start Chrome with the printed remote-debugging command and start the Next.js dev server before rerunning; that is a local test-harness blocker, not a Meta tracking failure.
 
 **Remaining risk:** production Meta CAPI still requires valid `META_PIXEL_ID` and `META_CAPI_ACCESS_TOKEN`; Meta Events Manager must confirm Browser + Server dedup with the same `event_id` before Meta scaling.
 
