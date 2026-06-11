@@ -48,7 +48,8 @@ roadmap as a hard sequence:
    adjustments.
 5. **Phase 4 — Meta activation.** Only after Google attribution and offline
    revenue feedback are stable, validate the existing direct Meta Pixel browser
-   source, avoid duplicate GTM base Pixel tags, and enable Meta CAPI credentials.
+   source, avoid duplicate GTM base Pixel tags, and enable Meta CAPI credentials
+   in a small separate gated activation patch with rollback instructions.
 
 Core rule: **reliable attribution first, optimization second, scale third.**
 

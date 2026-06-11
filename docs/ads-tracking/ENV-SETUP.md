@@ -27,7 +27,16 @@ EMAIL_TO=                         # Optional override for lead notification reci
 | `META_CAPI_TEST_EVENT_CODE` | **Optional** | Without it, events flow to production Meta. With it, events appear ONLY in Events Manager's "Test Events" tab. |
 | `EMAIL_USER` / `EMAIL_PASS` | **Required** | Pre-existing — form submission fails without these. Unchanged by this PR. |
 
-**Key principle:** The new Meta CAPI feature is **opt-in via env vars**. Deploying this branch without setting any Meta env vars is safe — the form continues working exactly as it did before, plus you get click-ID capture + the reliability patch as bonus improvements.
+**Key principle:** The new Meta CAPI feature is **opt-in via env vars**.
+Deploying this branch without setting any Meta env vars is safe — the form
+continues working exactly as it did before, plus you get click-ID capture + the
+reliability patch as bonus improvements.
+
+**Production gate:** Do not add `META_PIXEL_ID` or
+`META_CAPI_ACCESS_TOKEN` to Vercel Production until the Phase 4 activation gate
+passes: `npm run scaling:readiness` is GREEN, live call-attribution evidence is
+clean/non-empty, live lead-outcome rows meet the documented threshold, and a
+separate activation patch with rollback instructions is approved.
 
 ## How to obtain each Meta value
 
@@ -76,7 +85,11 @@ META_CAPI_ACCESS_TOKEN=EAAxxxxxxxxxxxxxxxxxxxx
 META_CAPI_TEST_EVENT_CODE=TEST_LOCAL_DEV
 ```
 
-### Vercel (production)
+### Vercel (production — future gated activation only)
+
+Do **not** use these steps during the initial tracking deploy. Production Meta
+CAPI activation must be a separate gated patch after the activation criteria
+above pass.
 
 1. Project → **Settings** → **Environment Variables**
 2. Add each:
@@ -86,6 +99,9 @@ META_CAPI_TEST_EVENT_CODE=TEST_LOCAL_DEV
 3. Repeat for `META_CAPI_ACCESS_TOKEN`
 4. Do NOT set `META_CAPI_TEST_EVENT_CODE` in production
 5. **Trigger a redeploy** — server actions don't hot-reload env vars in some Vercel configurations
+6. Run the production CAPI QA checklist and rollback monitor from
+   [DEPLOY-CHECKLIST.md](DEPLOY-CHECKLIST.md) and
+   [PHASE-3-4-ACTIVATION-GATES.md](PHASE-3-4-ACTIVATION-GATES.md)
 
 ### Other hosting providers
 
