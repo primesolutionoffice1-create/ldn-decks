@@ -115,6 +115,7 @@ export function proofStagingGroups(date = proofStagingDate()) {
       paths: [
         `docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-${date}.md`,
         'scripts/measurement-integrity-gate.mjs',
+        'scripts/validate-lead-outcome-rows.mjs',
         'src/app/admin/seo/',
         'src/app/api/seo/',
         'src/components/ConsentBanner.jsx',

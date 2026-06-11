@@ -3,7 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const REPORT_PATH = path.join(ROOT, 'docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-2026-06-02.md');
+const today = new Date().toISOString().slice(0, 10);
+const REPORT_PATH = path.join(ROOT, `docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-${today}.md`);
 
 function read(rel) {
   return fs.readFileSync(path.join(ROOT, rel), 'utf8');
@@ -143,7 +144,7 @@ const scalingGate =
     ? 'RED'
     : 'GREEN';
 
-const report = `# Measurement Integrity Gate - 2026-06-02
+const report = `# Measurement Integrity Gate - ${today}
 
 ## Result
 

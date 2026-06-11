@@ -11,20 +11,17 @@ Use the commands only after reviewing the corresponding group. Do not mix proof 
 - Configured paths: 35
 - Existing paths: 35
 - Missing paths: 0
-- Dirty/staging-needed paths: 4
+- Dirty/staging-needed paths: 1
 
 Suggested command:
 
 ```bash
-git add 'package.json' 'scripts/seo-weekly-report.mjs' 'scripts/evidence-anti-fabrication-regression.mjs' 'src/data/verifiedProofSnippets.json'
+git add 'scripts/lib/'
 ```
 
 Dirty/staging-needed paths:
 
-- `package.json`
-- `scripts/seo-weekly-report.mjs`
-- `scripts/evidence-anti-fabrication-regression.mjs`
-- `src/data/verifiedProofSnippets.json`
+- `scripts/lib/`
 
 ## Owner Handoff And Generated Proof Reports
 
@@ -33,17 +30,17 @@ Dirty/staging-needed paths:
 - Configured paths: 28
 - Existing paths: 28
 - Missing paths: 0
-- Dirty/staging-needed paths: 1
+- Dirty/staging-needed paths: 0
 
 Suggested command:
 
 ```bash
-git add 'docs/seo/verified-proof-snippets-2026-06-11.json'
+# Nothing dirty in this group.
 ```
 
 Dirty/staging-needed paths:
 
-- `docs/seo/verified-proof-snippets-2026-06-11.json`
+- none
 
 ## Public Proof-Safety Copy And SEO Cleanup
 
@@ -87,20 +84,19 @@ Dirty/staging-needed paths:
 
 - Group id: `ads_measurement_admin`
 - Required group: no
-- Configured paths: 8
-- Existing paths: 3
-- Missing paths: 5
-- Dirty/staging-needed paths: 0
+- Configured paths: 9
+- Existing paths: 5
+- Missing paths: 4
+- Dirty/staging-needed paths: 3
 
 Suggested command:
 
 ```bash
-# Nothing dirty in this group.
+git add 'docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-2026-06-11.md' 'scripts/measurement-integrity-gate.mjs' 'scripts/validate-lead-outcome-rows.mjs'
 ```
 
 Missing paths:
 
-- `docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-2026-06-11.md`
 - `src/app/admin/seo/`
 - `src/app/api/seo/`
 - `src/lib/dataforseo.js`
@@ -108,5 +104,7 @@ Missing paths:
 
 Dirty/staging-needed paths:
 
-- none
+- `docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-2026-06-11.md`
+- `scripts/measurement-integrity-gate.mjs`
+- `scripts/validate-lead-outcome-rows.mjs`
 

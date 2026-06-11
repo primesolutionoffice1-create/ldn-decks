@@ -4,8 +4,9 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const DEFAULT_INPUT = 'docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv';
-const OUTPUT_JSON = 'scripts/output/lead-outcome-validation-2026-06-02.json';
-const OUTPUT_MD = 'scripts/output/lead-outcome-validation-2026-06-02.md';
+const today = new Date().toISOString().slice(0, 10);
+const OUTPUT_JSON = `scripts/output/lead-outcome-validation-${today}.json`;
+const OUTPUT_MD = `scripts/output/lead-outcome-validation-${today}.md`;
 
 const REQUIRED_HEADERS = [
   'lead_date',
@@ -191,7 +192,7 @@ const result = {
   },
 };
 
-const md = `# Lead Outcome Validation - 2026-06-02
+const md = `# Lead Outcome Validation - ${today}
 
 ## Result
 
