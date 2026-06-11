@@ -4,7 +4,7 @@ Purpose: keep the Brainstein / SEO proof-safety work mergeable without mixing ve
 
 ## Current Branch
 
-- Branch: `codex/lead-outcome-intake-hardening`
+- Branch: `codex/revenue-feedback-intake-operator-tools`
 - Production deploy: no
 - Merge to main: no
 - Publish gate: intentionally blocked until owner evidence is verified
@@ -116,7 +116,11 @@ Tracking, consent, admin tooling, and API surfaces that should be reviewed separ
 
 Review and stage this group separately when it is intentional.
 
+- `docs/ads-tracking/live-lead-outcomes-2026-06-11.csv`
 - `docs/ads-tracking/MEASUREMENT-INTEGRITY-GATE-2026-06-11.md`
+- `docs/ads-tracking/PHASE-2-MANUAL-OFFLINE-UPLOAD-RUNBOOK.md`
+- `docs/ads-tracking/templates/`
+- `scripts/generate-google-ads-offline-preview.mjs`
 - `scripts/measurement-integrity-gate.mjs`
 - `scripts/validate-lead-outcome-rows.mjs`
 - `src/app/admin/seo/`

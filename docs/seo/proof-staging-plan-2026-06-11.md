@@ -11,17 +11,18 @@ Use the commands only after reviewing the corresponding group. Do not mix proof 
 - Configured paths: 35
 - Existing paths: 35
 - Missing paths: 0
-- Dirty/staging-needed paths: 0
+- Dirty/staging-needed paths: 2
 
 Suggested command:
 
 ```bash
-# Nothing dirty in this group.
+git add 'package.json' 'scripts/lib/'
 ```
 
 Dirty/staging-needed paths:
 
-- none
+- `package.json`
+- `scripts/lib/`
 
 ## Owner Handoff And Generated Proof Reports
 
@@ -30,17 +31,17 @@ Dirty/staging-needed paths:
 - Configured paths: 28
 - Existing paths: 28
 - Missing paths: 0
-- Dirty/staging-needed paths: 0
+- Dirty/staging-needed paths: 1
 
 Suggested command:
 
 ```bash
-# Nothing dirty in this group.
+git add 'docs/seo/proof-system-staging-manifest-2026-06-11.md'
 ```
 
 Dirty/staging-needed paths:
 
-- none
+- `docs/seo/proof-system-staging-manifest-2026-06-11.md`
 
 ## Public Proof-Safety Copy And SEO Cleanup
 
@@ -84,15 +85,15 @@ Dirty/staging-needed paths:
 
 - Group id: `ads_measurement_admin`
 - Required group: no
-- Configured paths: 9
-- Existing paths: 5
+- Configured paths: 13
+- Existing paths: 9
 - Missing paths: 4
-- Dirty/staging-needed paths: 0
+- Dirty/staging-needed paths: 5
 
 Suggested command:
 
 ```bash
-# Nothing dirty in this group.
+git add 'docs/ads-tracking/live-lead-outcomes-2026-06-11.csv' 'docs/ads-tracking/PHASE-2-MANUAL-OFFLINE-UPLOAD-RUNBOOK.md' 'docs/ads-tracking/templates/' 'scripts/generate-google-ads-offline-preview.mjs' 'scripts/validate-lead-outcome-rows.mjs'
 ```
 
 Missing paths:
@@ -104,5 +105,9 @@ Missing paths:
 
 Dirty/staging-needed paths:
 
-- none
+- `docs/ads-tracking/live-lead-outcomes-2026-06-11.csv`
+- `docs/ads-tracking/PHASE-2-MANUAL-OFFLINE-UPLOAD-RUNBOOK.md`
+- `docs/ads-tracking/templates/`
+- `scripts/generate-google-ads-offline-preview.mjs`
+- `scripts/validate-lead-outcome-rows.mjs`
 

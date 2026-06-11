@@ -45,7 +45,15 @@ const REQUIRED_HEADERS = [
   'ads_action',
 ];
 
+const OPTIONAL_HEADERS = [
+  'qualified_at',
+  'estimate_scheduled_at',
+  'contract_signed_at',
+  'closed_paid_at',
+];
+
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const GOOGLE_ADS_TIME_RE = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}[+-]\d{4}$/;
 const MONEY_RE = /^\$?\d[\d,]*(\.\d{1,2})?$/;
 
 function parseCsv(text) {
@@ -142,9 +150,26 @@ function validateRow(row, index) {
   }
   if (!hasRevenueValue(row.estimated_project_value)) errors.push(`${label}: estimated_project_value must be blank or a money value.`);
   if (!hasRevenueValue(row.closed_revenue_value)) errors.push(`${label}: closed_revenue_value must be blank or a money value.`);
+  OPTIONAL_HEADERS.filter((header) => header.endsWith('_at')).forEach((header) => {
+    if (row[header] && !GOOGLE_ADS_TIME_RE.test(row[header])) {
+      errors.push(`${label}: ${header} must use Google Ads import time format YYYY-MM-DD HH:MM:SS-0400.`);
+    }
+  });
 
   if (qualified === 'yes' && adsAction === 'eligible_qualified_lead_upload' && !hasClickId(row)) {
     errors.push(`${label}: eligible qualified lead uploads require gclid, gbraid, or wbraid.`);
+  }
+  if (qualified === 'yes' && adsAction === 'eligible_qualified_lead_upload' && row.gclid && !row.qualified_at) {
+    warnings.push(`${label}: qualified Google Ads offline upload preview needs qualified_at before CSV generation.`);
+  }
+  if (row.estimate_scheduled.toLowerCase() === 'yes' && row.gclid && !row.estimate_scheduled_at) {
+    warnings.push(`${label}: Estimate Scheduled upload preview needs estimate_scheduled_at.`);
+  }
+  if (row.won.toLowerCase() === 'yes' && row.gclid && !row.contract_signed_at) {
+    warnings.push(`${label}: Contract Signed upload preview needs contract_signed_at.`);
+  }
+  if (row.lead_stage.toLowerCase() === 'closed paid' && row.gclid && !row.closed_paid_at) {
+    warnings.push(`${label}: Closed Paid upload preview needs closed_paid_at.`);
   }
   if (qualified === 'yes' && adsAction === 'do_not_upload') {
     warnings.push(`${label}: qualified=yes but ads_action=do_not_upload; confirm this is intentional.`);
@@ -179,7 +204,7 @@ const text = fs.readFileSync(inputPath, 'utf8');
 const parsed = parseCsv(text);
 const headers = parsed[0] || [];
 const headerErrors = REQUIRED_HEADERS.filter((header) => !headers.includes(header)).map((header) => `Missing required header: ${header}`);
-const extraHeaders = headers.filter((header) => !REQUIRED_HEADERS.includes(header));
+const extraHeaders = headers.filter((header) => !REQUIRED_HEADERS.includes(header) && !OPTIONAL_HEADERS.includes(header));
 const rows = headerErrors.length ? [] : toObjects(parsed);
 const realRows = rows.filter((row) => !isSampleRow(row));
 const rowResults = realRows.map(validateRow);
@@ -235,6 +260,7 @@ const md = `# Lead Outcome Validation - ${today}
 - Rows with Google click ID: ${rowsWithClickId}
 - Errors: ${errors.length}
 - Warnings: ${warnings.length}
+- Optional upload timestamp fields supported: ${OPTIONAL_HEADERS.map((header) => `\`${header}\``).join(', ')}
 
 ## Errors
 
@@ -251,6 +277,7 @@ ${warnings.length ? warnings.map((item) => `- ${item}`).join('\n') : '- none'}
 - \`PARTIAL\` means real rows are present, but fewer than 5 rows are available.
 - \`PASS\` means the file has at least 5 real rows and no validation errors.
 - This validator does not upload anything to Google Ads and does not prove Google Ads call attribution by itself.
+- Google Ads offline upload previews require stage-specific timestamps in \`YYYY-MM-DD HH:MM:SS-0400\` format.
 `;
 
 fs.mkdirSync(path.dirname(path.join(ROOT, OUTPUT_JSON)), { recursive: true });
