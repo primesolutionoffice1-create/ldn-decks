@@ -14,6 +14,23 @@ function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
+function readJsonIfExists(file) {
+  try {
+    return readJson(file);
+  } catch {
+    return null;
+  }
+}
+
+function withoutGenerated(payload) {
+  const { generated, ...rest } = payload || {};
+  return rest;
+}
+
+function samePayloadIgnoringGenerated(a, b) {
+  return JSON.stringify(withoutGenerated(a)) === JSON.stringify(withoutGenerated(b));
+}
+
 function publicAssetExists(assetPath) {
   if (!assetPath || typeof assetPath !== 'string' || !assetPath.startsWith('/')) return false;
   return fs.existsSync(path.join(PUBLIC_DIR, assetPath.replace(/^\/+/, '')));
@@ -172,18 +189,22 @@ function main() {
     snippets.push(proofSnippetForReviewSource(source));
   }
 
-  const payload = {
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  fs.mkdirSync(RUNTIME_OUTPUT_DIR, { recursive: true });
+  const jsonPath = path.join(OUTPUT_DIR, `verified-proof-snippets-${today}.json`);
+  const mdPath = path.join(OUTPUT_DIR, `verified-proof-snippets-${today}.md`);
+  const previousPayload = readJsonIfExists(RUNTIME_OUTPUT_PATH) || readJsonIfExists(jsonPath);
+  const nextPayload = {
     generated: localIsoTimestamp(),
     source_ledger: path.relative(ROOT, LEDGER_PATH),
     publish_rule: 'Only snippets in this file may be used as proof-bearing public modules. Skipped records are not public proof.',
     snippets,
     skipped,
   };
+  const payload = samePayloadIgnoringGenerated(previousPayload, nextPayload)
+    ? { ...nextPayload, generated: previousPayload.generated }
+    : nextPayload;
 
-  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-  fs.mkdirSync(RUNTIME_OUTPUT_DIR, { recursive: true });
-  const jsonPath = path.join(OUTPUT_DIR, `verified-proof-snippets-${today}.json`);
-  const mdPath = path.join(OUTPUT_DIR, `verified-proof-snippets-${today}.md`);
   fs.writeFileSync(jsonPath, `${JSON.stringify(payload, null, 2)}\n`);
   fs.writeFileSync(mdPath, `${buildMarkdown(snippets, skipped, today)}\n`);
   fs.writeFileSync(RUNTIME_OUTPUT_PATH, `${JSON.stringify(payload, null, 2)}\n`);
