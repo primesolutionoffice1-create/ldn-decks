@@ -53,15 +53,15 @@ const ENRICHMENTS = {
   },
   'deck-stair-safety-inspection-checklist': {
     check: '/deck-safety-inspection-checklist',
-    links: '\\n\\n---\\n\\n**Related:** [Full Deck Safety Inspection Checklist](/deck-safety-inspection-checklist) · [Deck Repair & Structural Maintenance](/services/deck-repair-and-structural-maintenance) · [Deck Stair Calculator](/tools/deck-stair-calculator)',
+    links: '\\n\\n---\\n\\n**Related:** [Full Deck Safety Inspection Checklist](/deck-safety-inspection-checklist) · [Deck Repair & Structural Maintenance](/services/deck-repair) · [Deck Stair Calculator](/tools/deck-stair-calculator)',
   },
   'common-deck-stair-inspection-failures-virginia': {
     check: '/deck-safety-inspection-checklist',
-    links: '\\n\\n---\\n\\n**Related:** [Deck Safety Inspection Checklist](/deck-safety-inspection-checklist) · [Deck Repair Services](/services/deck-repair-and-structural-maintenance) · [Deck Stair Calculator](/tools/deck-stair-calculator)',
+    links: '\\n\\n---\\n\\n**Related:** [Deck Safety Inspection Checklist](/deck-safety-inspection-checklist) · [Deck Repair Services](/services/deck-repair) · [Deck Stair Calculator](/tools/deck-stair-calculator)',
   },
   'ledger-board-flashing-deck-attachment-virginia': {
     check: '/deck-safety-inspection-checklist',
-    links: '\\n\\n---\\n\\n**Related:** [Deck Safety Inspection Checklist](/deck-safety-inspection-checklist) · [Deck Repair & Structural Maintenance](/services/deck-repair-and-structural-maintenance) · [Deck Builder Northern Virginia](/deck-builder-northern-virginia)',
+    links: '\\n\\n---\\n\\n**Related:** [Deck Safety Inspection Checklist](/deck-safety-inspection-checklist) · [Deck Repair & Structural Maintenance](/services/deck-repair) · [Deck Builder Northern Virginia](/deck-builder-northern-virginia)',
   },
 };
 

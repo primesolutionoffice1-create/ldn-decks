@@ -50,10 +50,10 @@ Sitemap: https://ldndecks.com/sitemap.xml
 - [Deck Replacement](https://ldndecks.com/services/deck-replacement): Full tear-off and composite rebuild
 - [Deck Resurfacing](https://ldndecks.com/services/deck-resurfacing): Board-only upgrade on existing frame
 - [Deck Resurfacing NoVA](https://ldndecks.com/deck-resurfacing-northern-virginia): Wood-to-composite resurfacing guide with cost tiers, ROI data, permit info
-- [Deck Repair](https://ldndecks.com/services/deck-repair-and-structural-maintenance): Structural fixes — rotted posts, ledger boards, failed inspections
+- [Deck Repair](https://ldndecks.com/services/deck-repair): Structural fixes — rotted posts, ledger boards, failed inspections
 - [Deck Inspection](https://ldndecks.com/services/deck-inspection): Safety and structural assessments
-- [Deck Remodeling](https://ldndecks.com/deck-remodeling): Full deck renovation and remodel
-- [Deck Repair](https://ldndecks.com/deck-repair): Structural and cosmetic repair services
+- [Deck Remodeling](https://ldndecks.com/services/deck-resurfacing): Full deck renovation and remodel
+- [Deck Repair](https://ldndecks.com/services/deck-repair): Structural and cosmetic repair services
 - [Deck Repair Loudoun](https://ldndecks.com/deck-repair-loudoun-county): Loudoun County deck repair
 - [Resurfacing vs Replacement](https://ldndecks.com/deck-resurfacing-vs-replacement): Decision guide with cost comparison
 - [Porch Repair vs Replacement](https://ldndecks.com/porch-repair-vs-replacement-northern-virginia): Porch renovation decision guide
@@ -143,7 +143,7 @@ Relevant communities and lifestyle searches:
 - [2026 Cost Report](https://ldndecks.com/composite-deck-cost-northern-virginia): Annual pricing data
 - [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator): Interactive estimator
 - [Payment Estimator](https://ldndecks.com/deck-payment-estimator): Monthly payment ranges
-- [Financing Options](https://ldndecks.com/deck-financing-northern-virginia): Payment plans and lending
+- [Financing Options](https://ldndecks.com/deck-financing): Payment plans and lending
 - [Tariff Impact on Prices](https://ldndecks.com/how-tariffs-affect-deck-prices-2026): 2026 tariff analysis
 - [ROI Calculator](https://ldndecks.com/deck-roi-calculator-northern-virginia): Home value impact estimator
 - [Composite Deck Cost by Size](https://ldndecks.com/composite-deck-cost-by-size): 300–600 sqft pricing with per-tier breakdown
@@ -228,7 +228,7 @@ Relevant communities and lifestyle searches:
 - [Porch vs Deck](https://ldndecks.com/porch-vs-deck-which-should-you-build)
 - [Deck Railing Options](https://ldndecks.com/deck-railing-options-northern-virginia)
 - [Deck Lighting Ideas](https://ldndecks.com/deck-lighting-ideas-northern-virginia)
-- [Deck Design Ideas 2026](https://ldndecks.com/deck-design-ideas-northern-virginia-2026): Trending designs and styles
+- [Deck Design Ideas 2026](https://ldndecks.com/deck-design-ideas-2026): Trending designs and styles
 - [Deck Enclosure Ideas](https://ldndecks.com/deck-enclosure-ideas-northern-virginia): Screen, glass, and three-season options
 - [Cable Railing for Decks](https://ldndecks.com/cable-railing-for-decks-northern-virginia): Cable railing styles and costs
 - [Multi-Level Decks](https://ldndecks.com/multi-level-deck-builder-northern-virginia): Split-level and tiered deck builds
