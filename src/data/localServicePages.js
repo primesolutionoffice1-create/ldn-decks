@@ -591,7 +591,7 @@ export const servicePageTypes = {
     materialFocus: 'joist condition, posts, beams, footings, ledger flashing, stair geometry, railing attachment, and moisture damage',
     valueProp: 'a repair-first assessment that separates cosmetic fixes from safety-critical structural issues',
     projectTypes: ['structural inspections', 'stair and railing repair', 'deck resurfacing', 'board and fascia replacement'],
-    related: ['/services/deck-repair-and-structural-maintenance', '/deck-safety-inspection-checklist', '/deck-resurfacing-vs-replacement', '/services/deck-resurfacing'],
+    related: ['/services/deck-repair', '/deck-safety-inspection-checklist', '/deck-resurfacing-vs-replacement', '/services/deck-resurfacing'],
     lowPrice: '2500',
     highPrice: '45000',
     image: '/images/deck-inspection.png',

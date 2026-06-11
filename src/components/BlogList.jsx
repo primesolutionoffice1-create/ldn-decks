@@ -42,7 +42,7 @@ export default function BlogList() {
         <div className={styles.grid}>
           {sortedPosts.map(post => (
             <div key={post.id} className={styles.blogCard}>
-              <Link href={`/blog/${post.slug}`} className={styles.imgLink}>
+              <Link href={post.canonicalPath || `/blog/${post.slug}`} className={styles.imgLink}>
                 <div className={styles.imgWrapper}>
                   <Image src={post.image} alt={post.title} fill className={styles.cardImg} sizes="(max-width: 900px) 100vw, 45vw" />
                 </div>
@@ -55,14 +55,14 @@ export default function BlogList() {
                    <span className={styles.author}>{post.author}</span>
                  </div>
                  
-                 <Link href={`/blog/${post.slug}`} className={styles.titleLink}>
+                 <Link href={post.canonicalPath || `/blog/${post.slug}`} className={styles.titleLink}>
                    <h2 className={styles.title}>{post.title}</h2>
                  </Link>
                  
                  <p className={styles.excerpt}>{post.excerpt}</p>
                  
                  <div className={styles.cardFooter}>
-                   <Link href={`/blog/${post.slug}`} className={styles.readMoreBtn}>
+                   <Link href={post.canonicalPath || `/blog/${post.slug}`} className={styles.readMoreBtn}>
                      Read Article
                    </Link>
                    

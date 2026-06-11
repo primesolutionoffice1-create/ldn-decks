@@ -29,7 +29,7 @@ const blogCollectionSchema = {
     itemListElement: blogPosts.map((post, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      url: `https://ldndecks.com/blog/${post.slug}`,
+      url: `https://ldndecks.com${post.canonicalPath || `/blog/${post.slug}`}`,
       name: post.title,
     })),
   },

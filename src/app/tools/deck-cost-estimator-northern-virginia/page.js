@@ -84,7 +84,7 @@ const relatedResources = [
   ['/deck-cost-calculator', 'Detailed Deck Cost Calculator'],
   ['/deck-payment-estimator', 'Deck Payment Estimator'],
   ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost Guide'],
-  ['/deck-financing-northern-virginia', 'Deck Financing in Northern Virginia'],
+  ['/deck-financing', 'Deck Financing in Northern Virginia'],
   ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
   ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
   ['/tools/deck-footing-depth-calculator-virginia', 'Deck Footing Depth Calculator'],

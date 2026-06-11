@@ -12,9 +12,17 @@ export default function Breadcrumbs() {
   if (pathname === '/') return null;
 
   const pathSegments = pathname.split('/').filter(segment => segment !== '');
+  const canonicalBreadcrumbHrefs = {
+    service: '/services',
+    'outdoor-living': '/outdoor-living-northern-virginia',
+    patios: '/services/patios',
+    pergolas: '/services/gazebo-pergola',
+    'screened-porches': '/screened-porch-builder-northern-virginia',
+  };
 
   const breadcrumbs = pathSegments.map((segment, index) => {
-    const href = `/${pathSegments.slice(0, index + 1).join('/')}`;
+    const generatedHref = `/${pathSegments.slice(0, index + 1).join('/')}`;
+    const href = index === 0 ? canonicalBreadcrumbHrefs[segment] || generatedHref : generatedHref;
     const label = labelFor(segment);
 
     return { label, href };

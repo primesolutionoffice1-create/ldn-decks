@@ -389,7 +389,7 @@ export default async function sitemap() {
         const blogPaths = blogPosts
                 .filter(post => {
                         const postDate = new Date(post.date);
-                        return postDate <= today;
+                        return postDate <= today && !post.canonicalPath;
                 })
                 .map(post => {
                 // Parse date like "April 4, 2026" to ISO

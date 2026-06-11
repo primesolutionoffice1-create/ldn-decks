@@ -69,7 +69,7 @@ export const educationArticles = [
       { href: '/deck-footing-code-northern-virginia', label: 'Deck Footing Code Guide', description: 'Footing depth, inspections, ledger attachment and framing requirements in Northern Virginia.' },
       { href: '/tools/deck-load-calculator-virginia', label: 'Deck Load Calculator Virginia', description: 'Plan distributed loads and structural assumptions before permit review.' },
       { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Inspection path for older framing, ledger concerns, movement, rot and failed connections.' },
-      { href: '/services/deck-repair-and-structural-maintenance', label: 'Structural Deck Repair Service', description: 'Repair path for posts, beams, joists, ledgers, railings and stair connections.' },
+      { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Repair path for posts, beams, joists, ledgers, railings and stair connections.' },
     ]
   },
   {
@@ -160,7 +160,7 @@ export const educationArticles = [
       { href: '/education/soil-bearing-capacity-deck-footings-va', label: 'Soil Bearing Capacity and Footings', description: 'How Virginia clay soil affects footing size, settlement risk and load transfer.' },
       { href: '/deck-footing-code-northern-virginia', label: 'Deck Footing Code Guide', description: 'Footing depth, inspections, ledger attachment and deck code context.' },
       { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Inspection path for movement, settlement, ledger concerns and framing defects.' },
-      { href: '/services/deck-repair-and-structural-maintenance', label: 'Structural Deck Repair Service', description: 'Repair path for broken load paths, ledger defects, posts, beams and joists.' },
+      { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Repair path for broken load paths, ledger defects, posts, beams and joists.' },
       { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun County Deck Permit Guide', description: 'Local permit and inspection context for structural deck work.' },
       { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax County Deck Permit Guide', description: 'Fairfax permit and typical deck detail context for structural review.' },
     ]
@@ -322,7 +322,7 @@ export const educationArticles = [
       { href: '/deck-footing-code-northern-virginia', label: 'Deck Footing Code Guide', description: 'Footing depth, ledger attachment, joists, beams and deck inspections explained.' },
       { href: '/education/understanding-deck-load-paths', label: 'Deck Load Path Guide', description: 'How deck loads travel through boards, joists, beams, posts, footings and soil.' },
       { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Inspection path for footing settlement, post movement, soft soil and structural concerns.' },
-      { href: '/services/deck-repair-and-structural-maintenance', label: 'Structural Deck Repair Service', description: 'Repair path for failed footings, settling posts, beams, joists and ledger issues.' },
+      { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Repair path for failed footings, settling posts, beams, joists and ledger issues.' },
     ]
   },
   {
@@ -356,7 +356,7 @@ export const educationArticles = [
       { href: '/education/deck-stair-construction-diagram', label: 'Deck Stair Construction Diagram', description: 'A parts-level guide to stringers, treads, risers, landings, blocking and stair hardware.' },
       { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Inspection path for loose stairs, failed inspections, rot, movement and unsafe connections.' },
       { href: '/services/deck-repair', label: 'Deck Repair and Structural Maintenance', description: 'Repair help for unsafe stairs, failed inspections, rot, railings and deck framing issues.' },
-      { href: '/services/deck-repair-and-structural-maintenance', label: 'Structural Deck Repair Service', description: 'Structural repair path for ledger, stair, post, railing and framing issues.' },
+      { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Structural repair path for ledger, stair, post, railing and framing issues.' },
       { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun County Deck Permit Guide', description: 'Local permit, plan review and inspection context for Loudoun deck projects.' },
       { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax County Deck Permit Guide', description: 'Fairfax permit, inspection and deck detail planning context.' },
     ]
@@ -460,7 +460,7 @@ To plan a safe, comfortable stair system for your Northern Virginia deck, use th
       { href: '/education/common-deck-stair-inspection-failures-virginia', label: 'Common Deck Stair Inspection Failures', description: 'Inspection issues tied to uneven risers, weak handrails, rotten stringers and poor connections.' },
       { href: '/education/ledger-board-flashing-deck-attachment-virginia', label: 'Ledger Board Flashing and Deck Attachment', description: 'How the house connection affects overall deck and stair safety.' },
       { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Inspection path for stair movement, settlement, rot, loose rails and failed connections.' },
-      { href: '/services/deck-repair-and-structural-maintenance', label: 'Structural Deck Repair Service', description: 'Repair path for unsafe stairs, failed connections, ledgers, posts and framing.' },
+      { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Repair path for unsafe stairs, failed connections, ledgers, posts and framing.' },
       { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun County Deck Permit Guide', description: 'Permit and inspection context for stair rebuilds in Loudoun County.' },
       { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax County Deck Permit Guide', description: 'Fairfax County permit and typical deck detail planning context.' },
     ]
@@ -554,7 +554,7 @@ Need help checking or rebuilding deck stairs in Northern Virginia? Call 571-655-
       { href: '/education/deck-stair-construction-diagram', label: 'Deck Stair Construction Diagram', description: 'Understand the stair parts before checking treads, risers, stringers and landings.' },
       { href: '/education/deck-stair-code-rise-run-virginia', label: 'Virginia Deck Stair Code Guide', description: 'Review rise, run, handrail, guard and landing rules that shape inspection outcomes.' },
       { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Get a professional structural review when stairs move, bounce, rot or fail inspection.' },
-      { href: '/services/deck-repair-and-structural-maintenance', label: 'Structural Deck Repair Service', description: 'Repair path for failed stair, guard, ledger, post and framing conditions.' },
+      { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Repair path for failed stair, guard, ledger, post and framing conditions.' },
       { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun County Deck Permit Guide', description: 'Permit and inspection context for Loudoun County stair repair or rebuild work.' },
       { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax County Deck Permit Guide', description: 'Fairfax County deck permit and inspection context for stair work.' },
     ]
@@ -724,7 +724,7 @@ We inspect, repair and rebuild deck stairs with safety, permitting and long-term
       { href: '/education/deck-stair-code-rise-run-virginia', label: 'Virginia Deck Stair Code Guide', description: 'Understand the rise, run, handrail, guard and landing basics behind stair inspections.' },
       { href: '/services/deck-repair', label: 'Deck Repair and Structural Maintenance', description: 'Repair or rebuild support for failed inspections, rot, railings and unsafe stairs.' },
       { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Inspection path for failed stair checks, movement, rot, ledger issues and guard instability.' },
-      { href: '/services/deck-repair-and-structural-maintenance', label: 'Structural Deck Repair Service', description: 'Structural repair path for failed stairs, ledgers, guards, posts and framing.' },
+      { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Structural repair path for failed stairs, ledgers, guards, posts and framing.' },
       { href: '/deck-resurfacing-vs-replacement', label: 'Deck Resurfacing vs Replacement', description: 'Decide whether an older deck frame and stair system are worth saving.' },
       { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun County Deck Permit Guide', description: 'Local permit and inspection context for failed stair repairs or rebuilds.' },
       { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax County Deck Permit Guide', description: 'Fairfax permit and inspection context for stair correction work.' },
@@ -761,7 +761,7 @@ We inspect, repair and rebuild deck stairs with safety, permitting and long-term
       { href: '/education/deck-stair-safety-inspection-checklist', label: 'Deck Stair Safety Inspection Checklist', description: 'A printable homeowner checklist for unsafe stairs, rails, landings and stair connections.' },
       { href: '/education/common-deck-stair-inspection-failures-virginia', label: 'Common Deck Stair Inspection Failures', description: 'Related inspection failures involving stair-to-deck connections, fasteners and movement.' },
       { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Inspect ledger flashing, stair connections, rot, hardware and structural movement.' },
-      { href: '/services/deck-repair-and-structural-maintenance', label: 'Structural Deck Repair Service', description: 'Repair path for ledger failure, flashing defects, rot, posts, railings and stair connections.' },
+      { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Repair path for ledger failure, flashing defects, rot, posts, railings and stair connections.' },
       { href: '/deck-resurfacing-vs-replacement', label: 'Deck Resurfacing vs Replacement', description: 'Decide whether hidden ledger or stair damage makes repair, resurfacing or rebuild safer.' },
       { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun County Deck Permit Guide', description: 'Loudoun permit and framing inspection context for attached deck ledger work.' },
       { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax County Deck Permit Guide', description: 'Fairfax permit and typical deck detail context for ledger attachment and flashing.' },
@@ -801,7 +801,7 @@ We inspect, repair and rebuild deck stairs with safety, permitting and long-term
       { href: '/education/soil-bearing-capacity-deck-footings-va', label: 'Soil Bearing Capacity and Footings', description: 'How footing size and clay soil affect deck stability under heavy loads.' },
       { href: '/education/deck-understructure-guide', label: 'Deck Understructure Guide', description: 'Hidden framing, joists, beams, posts and footings explained.' },
       { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Inspection path after heavy snow, visible movement, bounce, settlement or ledger concerns.' },
-      { href: '/services/deck-repair-and-structural-maintenance', label: 'Structural Deck Repair Service', description: 'Repair path for failed ledgers, footings, posts, beams and joists.' },
+      { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Repair path for failed ledgers, footings, posts, beams and joists.' },
       { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun County Deck Permit Guide', description: 'Local permit and inspection context for structural reinforcement.' },
       { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax County Deck Permit Guide', description: 'Fairfax permit and inspection context for structural deck details.' },
     ]
