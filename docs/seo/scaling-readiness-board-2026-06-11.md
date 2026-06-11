@@ -21,11 +21,11 @@
 
 ## Blockers
 
-- P0 google-call-attribution (external): Verify Google Ads/GTM qualified-call attribution with the read-only runbook.
+- P0 google-call-attribution (external): Add real Google Ads/GTM proof rows to docs/ads-tracking/live-call-attribution-evidence-2026-06-11.csv; then run `npm run measurement:call-attribution-evidence && npm run measurement:gate && npm run scaling:readiness`.
   - Evidence: Measurement gate remains RED while google-call-attribution is WARN/external-proof-needed. Call attribution evidence status: LIVE_EMPTY, 0 real rows.
-- P0 lead-outcome-rows (owner): Collect 5-10 real lead outcome rows and rerun `npm run measurement:lead-outcomes`.
+- P0 lead-outcome-rows (owner): Add 5-10 real lead outcome rows to docs/ads-tracking/live-lead-outcomes-2026-06-11.csv; then run `npm run measurement:lead-outcomes && npm run scaling:readiness`.
   - Evidence: 0 real rows, 0 qualified, status LIVE_EMPTY.
-- P0 owner-proof-evidence (owner): Complete owner evidence packets for blocked/proof-incomplete proof pages.
+- P0 owner-proof-evidence (owner): Complete docs/seo/project-evidence-intake-2026-06-11.csv, docs/seo/photo-ingestion-manifest-2026-06-11.csv, docs/seo/warranty-terms-intake-2026-06-11.csv, and docs/seo/repair-cost-ranges-intake-2026-06-11.csv; then run `npm run seo:validate-owner-intake && npm run seo:proof-preflight && npm run seo:weekly`.
   - Evidence: 3 blocked, 1 proof-incomplete, prepublish expected-blocked true. Owner action packet: 26 rows, 13 P0, 0 errors.
 
 ## Ready Signals
@@ -34,4 +34,4 @@
 
 ## Operating Rule
 
-Keep scaling RED while any P0 blocker remains. Do not activate or raise budgets based only on local import readiness; qualified-call attribution, real lead outcomes, and owner proof evidence must be proven first.
+Keep scaling RED while any P0 blocker remains. Use the exact files listed in Blockers, then rerun the listed commands. Do not activate or raise budgets based only on local import readiness; qualified-call attribution, real lead outcomes, and owner proof evidence must be proven first.
