@@ -14,7 +14,7 @@
 |---|---:|---|
 | Measurement integrity gate | pass | 10 pass, 1 warn, 0 fail, scaling RED |
 | Call attribution evidence | pass | SAMPLE_ONLY, 0 real rows, 0 primary qualified-call rows, 0 errors |
-| Lead outcome rows | pass | SAMPLE_ONLY, 0 real rows, 0 qualified, 0 upload-eligible |
+| Lead outcome rows | pass | LIVE_EMPTY, 0 real rows, 0 qualified, 0 upload-eligible |
 | Owner evidence action packet | pass | 26 rows, 13 P0, 13 P1, 0 errors |
 | Proof system preflight | pass | 0 ready, 1 incomplete, 3 blocked, expected-blocked true |
 | Google Ads import pack | pass | 5 campaigns, 135 keywords, $205 daily budget, 0 errors |
@@ -24,7 +24,7 @@
 - P0 google-call-attribution (external): Verify Google Ads/GTM qualified-call attribution with the read-only runbook.
   - Evidence: Measurement gate remains RED while google-call-attribution is WARN/external-proof-needed. Call attribution evidence status: SAMPLE_ONLY, 0 real rows.
 - P0 lead-outcome-rows (owner): Collect 5-10 real lead outcome rows and rerun `npm run measurement:lead-outcomes`.
-  - Evidence: 0 real rows, 0 qualified, status SAMPLE_ONLY.
+  - Evidence: 0 real rows, 0 qualified, status LIVE_EMPTY.
 - P0 owner-proof-evidence (owner): Complete owner evidence packets for blocked/proof-incomplete proof pages.
   - Evidence: 3 blocked, 1 proof-incomplete, prepublish expected-blocked true. Owner action packet: 26 rows, 13 P0, 0 errors.
 

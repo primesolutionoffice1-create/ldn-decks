@@ -34,7 +34,7 @@ function evidenceNeed(blocker) {
   if (blocker.id === 'lead-outcome-rows') {
     return {
       evidenceNeeded: '5-10 real LDN Decks lead outcome rows with lead date, click ID when present, source/medium/campaign, city, service type, qualification status, call/form evidence, sales notes, and Ads action.',
-      whereToCollect: 'CRM/GHL, call notes or recordings, form lead records, and docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv.',
+      whereToCollect: `CRM/GHL, call notes or recordings, form lead records, and docs/ads-tracking/live-lead-outcomes-${DATE}.csv. Use docs/ads-tracking/templates/lead-quality-outcome-sample-template.csv only as the shape reference.`,
       doneWhen: '`npm run measurement:lead-outcomes` returns PASS with at least 5 real rows and 0 errors.',
       verifyCommand: 'npm run measurement:lead-outcomes && npm run scaling:readiness',
     };
