@@ -29,6 +29,7 @@ Date created: 2026-06-07
 | 2026-06-08 | Pinterest Pin 1 published | https://www.pinterest.com/pin/1058838562408988374 |
 | 2026-06-08 | Facebook / Instagram before-after post published | Meta Business Suite: crossposted to `LDN Decks` and `loudoundecks`, Mon Jun 8, 9:36am |
 | 2026-06-10 | GBP composite fading post corrected and resubmitted | Existing image-only GBP post was edited with description + `Learn more` CTA; Google Business Profile shows `Pending` review |
+| 2026-06-12 | Live URL verification | All 5 cluster URLs confirmed HTTP 200; GBP still Pending; IndexNow not resubmitted; no live action taken |
 
 ## Internal Links Added
 
