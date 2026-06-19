@@ -11,8 +11,7 @@ conversions, call Google Ads APIs, or store credentials.
 |---|---|
 | `airtable-leads-schema.csv` | Copy into Airtable setup work as the canonical field inventory for Leads, Jobs, and Conversion Uploads. |
 | `google-ads-offline-conversions-template.csv` | Starting CSV shape for manual Google Ads offline conversion uploads during Phase 2 V1. |
-| `lead-quality-outcome-sample-template.csv` | Lightweight 5-10 row review template for proving lead quality before offline uploads; use as a shape reference only. |
-| `call-attribution-readonly-evidence-template.csv` | Shape reference for Google Ads/GTM qualified-call attribution evidence; do not use as the live intake file. |
+| `lead-quality-outcome-sample-template.csv` | Lightweight 5-10 row review template for proving lead quality before offline uploads; validate with `npm run measurement:lead-outcomes`. |
 | `fixtures/lead-ingest-google-cpc.json` | Test payload for a Google Ads lead with `gclid`. |
 | `fixtures/lead-ingest-direct.json` | Test payload for a direct/no-click-ID lead. |
 
@@ -22,13 +21,7 @@ conversions, call Google Ads APIs, or store credentials.
 - Use `America/New_York` timestamps with explicit UTC offset, e.g. `2026-05-13 10:30:00-0400`.
 - Keep `Order ID` stable as `{event_id}::{conversion_name}`.
 - Treat `lead-quality-outcome-sample-template.csv` as review evidence only; do not upload it directly to Google Ads.
-- Add real rows to the latest `docs/ads-tracking/live-lead-outcomes-YYYY-MM-DD.csv`; `npm run measurement:lead-outcomes` automatically validates the newest live intake file when no explicit path is passed.
-- Use stage-specific timestamp fields (`qualified_at`, `estimate_scheduled_at`, `contract_signed_at`, `closed_paid_at`) in Google Ads import format: `YYYY-MM-DD HH:MM:SS-0400`.
-- Run `LEAD_OUTCOME_INPUT=path/to/file.csv npm run measurement:lead-outcomes` or `npm run measurement:lead-outcomes -- path/to/file.csv` to validate a specific CSV.
 - Run `npm run measurement:lead-outcomes` before using any real lead-outcome CSV for scaling decisions or offline-import prep.
-- Run `npm run measurement:offline-preview` to generate a local Google Ads CSV preview from validated live rows. This does not upload anything.
-- Add real qualified-call attribution evidence to the latest `docs/ads-tracking/live-call-attribution-evidence-YYYY-MM-DD.csv`; `npm run measurement:call-attribution-evidence` automatically validates the newest live call-attribution intake file when no explicit path is passed.
-- Run `CALL_ATTRIBUTION_INPUT=path/to/file.csv npm run measurement:call-attribution-evidence` or `npm run measurement:call-attribution-evidence -- path/to/file.csv` to validate a specific Google Ads/GTM evidence export.
 - Do not upload Meta events from these templates. Meta activation is Phase 4.
 - Do not automate uploads until Phase 3 entry gates pass.
 - Fixtures are safe fake data. Replace names/emails/phones before any production

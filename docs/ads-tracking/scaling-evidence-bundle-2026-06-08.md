@@ -1,16 +1,16 @@
-# Scaling Evidence Bundle - 2026-06-11
+# Scaling Evidence Bundle - 2026-06-08
 
 ## Summary
 
 This bundle is the single local handoff for clearing the current scaling RED blockers. It does not authorize Ads activation, budget increases, Smart Bidding changes, public proof claims, citation edits, or account-setting changes.
 
 - Scaling status: RED
-- Current blockers: 4
-- Local blockers: 1
+- Current blockers: 3
+- Local blockers: 0
 - Owner/external blockers: 3
-- Source board: `docs/seo/scaling-readiness-board-2026-06-11.md`
-- Evidence request: `docs/ads-tracking/scaling-evidence-request-2026-06-11.md`
-- Exit checklist: `docs/seo/scaling-blocker-exit-checklist-2026-06-11.md`
+- Source board: `docs/seo/scaling-readiness-board-2026-06-08.md`
+- Evidence request: `docs/ads-tracking/scaling-evidence-request-2026-06-08.md`
+- Exit checklist: `docs/seo/scaling-blocker-exit-checklist-2026-06-08.md`
 
 ## Evidence Sections
 
@@ -39,8 +39,8 @@ This bundle is the single local handoff for clearing the current scaling RED blo
 - Blocker id: owner-proof-evidence
 - Owner: owner
 - Rows needed: All P0 owner proof rows needed for blocked proof pages
-- Source/template: `docs/seo/owner-evidence-action-packet-2026-06-11.csv`
-- Paste/update location: `docs/seo/owner-evidence-action-packet-2026-06-11.csv`
+- Source/template: `docs/seo/owner-evidence-action-packet-2026-06-08.csv`
+- Paste/update location: `docs/seo/owner-evidence-action-packet-2026-06-08.csv`
 - Verify: `npm run seo:evidence-action-packet:validate && npm run seo:validate-owner-intake && npm run seo:proof-preflight && npm run seo:weekly`
 - Guardrail: Do not publish unverified project proof claims, warranty terms, repair-cost ranges, or private owner/customer details.
 

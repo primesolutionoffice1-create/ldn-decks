@@ -1,13 +1,13 @@
-# Scaling Evidence Request - 2026-06-11
+# Scaling Evidence Request - 2026-06-09
 
 ## Summary
 
 This packet converts the current scaling readiness blockers into owner/external evidence requests. It does not authorize Google Ads activation or budget increases.
 
 - Scaling status: RED
-- Local blockers: 1
+- Local blockers: 0
 - Owner/external blockers: 3
-- Source board: `docs/seo/scaling-readiness-board-2026-06-11.md`
+- Source board: `docs/seo/scaling-readiness-board-2026-06-09.md`
 
 ## Requests
 
@@ -37,15 +37,6 @@ This packet converts the current scaling readiness blockers into owner/external 
 - Done when: `npm run seo:proof-preflight` shows no blocked/proof-incomplete pages and prepublish is no longer expected-blocked.
 - Verification command: `npm run seo:proof-preflight && npm run seo:weekly`
 - Current evidence: 3 blocked, 1 proof-incomplete, prepublish expected-blocked true. Owner action packet: 26 rows, 13 P0, 0 errors.
-
-### P0 - ads-import-pack
-
-- Owner: local
-- Evidence needed: Fix Google Ads import validation before any Ads Editor import.
-- Where to collect: Owner/external source of record.
-- Done when: The blocker no longer appears in scaling readiness.
-- Verification command: `npm run scaling:readiness`
-- Current evidence: 10 Ads import errors.
 
 ## Operating Rule
 

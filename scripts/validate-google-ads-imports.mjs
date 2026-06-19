@@ -1,9 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { localDateStamp } from './lib/local-date.mjs';
 
 const importDir = path.resolve('google-ads-import');
 const outputDir = path.resolve('scripts/output');
-const stamp = new Date().toISOString().slice(0, 10);
+const stamp = localDateStamp();
 const jsonOut = path.join(outputDir, `google-ads-import-validation-${stamp}.json`);
 const mdOut = path.join(outputDir, `google-ads-import-validation-${stamp}.md`);
 const errors = [];
@@ -35,8 +36,8 @@ const requiredSharedNegatives = [
   'pallets',
   'home depot',
   'lowes',
-  'materials',
-  'lumber',
+  'materials only',
+  'lumber only',
   'stain',
   'paint',
   'sealer',
@@ -85,13 +86,48 @@ const requiredRepairSeparationNegatives = [
 
 const repairSeparatedCampaigns = [
   'SRCH | Composite | 3 Counties | Calls',
-  'SRCH | Replacement + Resurfacing | 3 Counties | Calls',
+];
+
+const requiredReplacementResurfacingNegatives = [
+  'deck refinishing',
+  'deck restoration',
+  'deck staining',
+  'deck sealing',
+  'deck painting',
+  'power washing',
+  'pressure washing',
+  'board repair',
+  'railing repair',
+  'stair repair',
+  'small deck repair',
+  'minor deck repair',
+  'deck repair cost',
+  'sunburst decks',
+  'nova deck doctor',
+];
+const requiredPremiumGeoNegatives = [
+  'deck repair',
+  'minor deck repair',
+  'small deck repair',
+  'deck refinishing',
+  'deck staining',
+  'power washing',
+  'pressure washing',
+  'handyman',
+  'materials only',
+  'permit only',
 ];
 
 const requiredLocations = [
   'Loudoun County, Virginia, United States',
   'Fairfax County, Virginia, United States',
   'Prince William County, Virginia, United States',
+];
+const premiumGeoCampaign = 'SRCH | Premium Geo | Arlington Alexandria McLean | Leads';
+const premiumGeoLocations = [
+  'Fairfax County, Virginia, United States',
+  'Arlington County, Virginia, United States',
+  'Alexandria, Virginia, United States',
 ];
 
 const requiredCallPhone = '+15716557207';
@@ -108,6 +144,10 @@ const expectedAdGroupFinalUrls = new Map([
   ['SRCH | Replacement + Resurfacing | 3 Counties | Calls||Replace Wood With Composite', 'https://www.ldndecks.com/services/deck-replacement/'],
   ['SRCH | Branded | 3 Counties | Calls||Brand Exact', 'https://www.ldndecks.com/contact/'],
   ['SRCH | Branded | 3 Counties | Calls||Brand Phrase', 'https://www.ldndecks.com/contact/'],
+  [`${premiumGeoCampaign}||McLean + Great Falls`, 'https://www.ldndecks.com/mclean-great-falls-premium-deck-budget/'],
+  [`${premiumGeoCampaign}||Arlington`, 'https://www.ldndecks.com/deck-builder-arlington-va/'],
+  [`${premiumGeoCampaign}||Alexandria`, 'https://www.ldndecks.com/deck-builder-alexandria-va/'],
+  [`${premiumGeoCampaign}||Vienna + Oakton`, 'https://www.ldndecks.com/deck-builder-vienna-va/'],
 ]);
 
 function parseCsv(text) {
@@ -226,18 +266,18 @@ const campaignNames = new Set(campaigns.map(row => row.Campaign));
 const searchCampaigns = campaigns.filter(row => row['Campaign type'] === 'Search');
 const pmaxCampaigns = campaigns.filter(row => row['Campaign type'] === 'Performance Max');
 
-if (searchCampaigns.length !== 4 || pmaxCampaigns.length !== 1) {
-  fail(`Expected 4 Search campaigns and 1 PMax campaign, found ${searchCampaigns.length} Search and ${pmaxCampaigns.length} PMax`);
+if (searchCampaigns.length !== 5 || pmaxCampaigns.length !== 1) {
+  fail(`Expected 5 Search campaigns and 1 PMax campaign, found ${searchCampaigns.length} Search and ${pmaxCampaigns.length} PMax`);
 }
 
 const totalDailyBudget = campaigns.reduce((sum, row) => sum + Number(row.Budget || 0), 0);
-if (totalDailyBudget !== 205) {
-  fail(`Expected full expansion budget to total $205/day, found $${totalDailyBudget}/day`);
+if (totalDailyBudget !== 235) {
+  fail(`Expected full expansion budget to total $235/day, found $${totalDailyBudget}/day`);
 }
 
-const nonSearchNetworkProblems = searchCampaigns.filter(row => row.Networks !== 'Google search; Search partners: off; Display network: off');
+const nonSearchNetworkProblems = searchCampaigns.filter(row => row.Networks !== 'Google Search');
 if (nonSearchNetworkProblems.length) {
-  fail(`Search network settings are not import-shape valid for: ${nonSearchNetworkProblems.map(row => row.Campaign).join(', ')}`);
+  fail(`Search campaigns must target Google Search only: ${nonSearchNetworkProblems.map(row => row.Campaign).join(', ')}`);
 }
 
 for (const row of [...adGroups, ...keywords, ...ads, ...sitelinks, ...callouts, ...callAssets, ...locations, ...campaignNegatives]) {
@@ -309,6 +349,40 @@ for (const campaignName of repairSeparatedCampaigns) {
   }
 }
 
+const replacementResurfacingCampaign = 'SRCH | Replacement + Resurfacing | 3 Counties | Calls';
+const replacementResurfacingNegativeSet = new Set(
+  campaignNegatives
+    .filter(row => row.Campaign === replacementResurfacingCampaign)
+    .map(row => normalize(row.Keyword)),
+);
+for (const negative of requiredReplacementResurfacingNegatives) {
+  if (!replacementResurfacingNegativeSet.has(negative)) {
+    fail(`Missing Replacement + Resurfacing campaign negative: ${negative}`);
+  }
+}
+
+const premiumGeoNegativeSet = new Set(
+  campaignNegatives
+    .filter(row => row.Campaign === premiumGeoCampaign)
+    .map(row => normalize(row.Keyword)),
+);
+for (const negative of requiredPremiumGeoNegatives) {
+  if (!premiumGeoNegativeSet.has(negative)) {
+    fail(`Missing Premium Geo campaign negative: ${negative}`);
+  }
+}
+
+const broadNegativeRows = [...sharedNegatives, ...campaignNegatives]
+  .filter(row => row['Match type'] === 'Broad');
+if (broadNegativeRows.length) {
+  fail(`Broad negative keywords found: ${broadNegativeRows.map(row => `${row.Campaign || row['Shared set']} / ${row.Keyword}`).join(', ')}`);
+}
+
+const nonCampaignNegativeRows = campaignNegatives.filter(row => row.Type !== 'Campaign negative');
+if (nonCampaignNegativeRows.length) {
+  fail(`Campaign negative rows missing Type=Campaign negative: ${nonCampaignNegativeRows.map(row => `${row.Campaign} / ${row.Keyword}`).join(', ')}`);
+}
+
 const repairKeywordLeaks = keywords.filter(row => (
   repairSeparatedCampaigns.includes(row.Campaign)
   && /\brepair\b/i.test(row.Keyword)
@@ -340,10 +414,17 @@ for (const [key, expectedUrl] of expectedAdGroupFinalUrls) {
 
 for (const campaign of campaigns) {
   const campaignLocations = locations.filter(row => row.Campaign === campaign.Campaign);
-  for (const location of requiredLocations) {
+  const expectedLocations = campaign.Campaign === premiumGeoCampaign ? premiumGeoLocations : requiredLocations;
+  for (const location of expectedLocations) {
     if (!campaignLocations.some(row => row.Location === location && row['Location option'] === 'Presence')) {
       fail(`${campaign.Campaign} is missing Presence target for ${location}`);
     }
+  }
+  const unexpectedLocations = campaign.Campaign === premiumGeoCampaign
+    ? campaignLocations.filter(row => !premiumGeoLocations.includes(row.Location))
+    : [];
+  if (unexpectedLocations.length) {
+    fail(`${campaign.Campaign} has unexpected location targets: ${unexpectedLocations.map(row => row.Location).join(', ')}`);
   }
 }
 
@@ -383,7 +464,7 @@ const result = {
     jsonOut,
     mdOut,
   },
-  note: 'Full expansion budget is $205/day. Use README launch modes if spend cap is $150/day.',
+  note: 'Full expansion budget is $235/day with Premium Geo included. Use README launch modes if spend cap is $150/day.',
 };
 
 function renderMarkdown(summary) {
