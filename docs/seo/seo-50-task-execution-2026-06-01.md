@@ -1,0 +1,813 @@
+# LDN Decks SEO/Reputation 50-Task Execution — 2026-06-01
+
+## Operating Rule
+Execute without pausing for per-task approval. Use safe, reversible, non-destructive edits. Verify with lint, build, deploy, and live HTML checks.
+
+## 50 Tasks for Today
+
+### Batch 1 — Commercial Service Hubs
+- [x] 01. Add cost calculator path to custom deck service hub.
+- [x] 02. Add payment estimator path to custom deck service hub.
+- [x] 03. Add reviews path to custom deck service hub.
+- [x] 04. Add BBB path to custom deck service hub.
+- [x] 05. Add before-and-after path to custom deck service hub.
+- [x] 06. Change custom deck CTA to `/get-estimate`.
+- [x] 07. Add cost calculator path to composite decks hub.
+- [x] 08. Add composite cost-by-size path to composite decks hub.
+- [x] 09. Add reviews path to composite decks hub.
+- [x] 10. Add BBB path to composite decks hub.
+- [x] 11. Add before-and-after path to composite decks hub.
+- [x] 12. Add Houzz portfolio path to composite decks hub.
+- [x] 13. Add get-estimate path to composite decks hub.
+- [x] 14. Add cost calculator path to Northern Virginia deck builder hub.
+- [x] 15. Add payment estimator path to Northern Virginia deck builder hub.
+- [x] 16. Add BBB path to Northern Virginia deck builder hub.
+- [x] 17. Add before-and-after path to Northern Virginia deck builder hub.
+- [x] 18. Change Northern Virginia deck builder CTA to `/get-estimate`.
+- [x] 19. Add deck replacement proof links.
+- [x] 20. Change deck replacement CTA to `/get-estimate`.
+
+### Batch 2 — Repair, Replacement, Resurfacing
+- [x] 21. Add cost calculator path to deck replacement.
+- [x] 22. Add before-and-after path to deck replacement.
+- [x] 23. Add reviews path to deck replacement.
+- [x] 24. Add BBB path to deck replacement.
+- [x] 25. Add get-estimate path to deck replacement.
+- [x] 26. Add cost calculator path to deck resurfacing.
+- [x] 27. Add composite cost guide path to deck resurfacing.
+- [x] 28. Add before-and-after path to deck resurfacing.
+- [x] 29. Add reviews path to deck resurfacing.
+- [x] 30. Add BBB path to deck resurfacing.
+- [x] 31. Add get-estimate path to deck resurfacing.
+- [x] 32. Change deck resurfacing CTA to `/get-estimate`.
+- [x] 33. Add structural repair decision section.
+- [x] 34. Add repair-to-replacement path.
+- [x] 35. Add repair-to-resurfacing path.
+- [x] 36. Add repair-to-cost-calculator path.
+- [x] 37. Add repair-to-reviews path.
+- [x] 38. Add repair-to-BBB path.
+- [x] 39. Add repair-to-get-estimate path.
+- [x] 40. Add repair-to-permit path.
+
+### Batch 3 — AI/GEO, Verification, Deployment
+- [x] 41. Add get-estimate to `llms.txt` key pages.
+- [x] 42. Add BBB to `llms.txt` key pages if missing.
+- [x] 43. Add Houzz to `llms.txt` key pages.
+- [x] 44. Add trust pages to bare URL index.
+- [x] 45. Add service hub links to AI-discoverable context.
+- [x] 46. Run lint.
+- [x] 47. Run production build.
+- [x] 48. Deploy to production.
+- [x] 49. Verify modified pages live with HTML checks.
+- [x] 50. Write Obsidian execution summary.
+
+## Continuation After Task 50
+
+User direction: continue without stopping and begin the next setup after each completed setup.
+
+- [x] 51. Consolidate founder/person schema from legacy `#nick` to canonical `#founder`.
+- [x] 52. Deploy founder/person schema consolidation to production.
+- [x] 53. Verify `/team` live markup uses `#founder` and not `#nick`.
+- [x] 54. Verify blog author schema uses `#founder` and not `#nick`.
+- [x] 55. Document founder/person consolidation in Obsidian.
+- [x] 56. Consolidate deck cost Article authors on 12x20, 16x20, and 20x20 pages to `FOUNDER_ID`.
+- [x] 57. Deploy deck cost founder author schema update.
+- [x] 58. Verify deck cost pages live with `#founder`, `Nicolae Zugrav`, and no targeted `#nick` matches.
+- [x] 59. Sync current SEO playbooks with organization `sameAs`, founder `sameAs`, and Review/AggregateRating policy.
+- [x] 60. Add schema policy guard to `scripts/validate-seo-schema.mjs`.
+- [x] 61. Remove self-serving `Review` JSON-LD from Trex Transcend review page while keeping visible review content.
+- [x] 62. Deploy schema policy guard and Trex review cleanup.
+- [x] 63. Verify live Trex review page emits `Article` and `FAQPage`, not `Review` or `AggregateRating`.
+- [x] 64. Clean current SEO playbooks of stale Review/AggregateRating instructions.
+- [x] 65. Run OG/social preview audit.
+- [x] 66. Run image alt SEO audit.
+- [x] 67. Run breadcrumb SEO audit.
+- [x] 68. Run content freshness audit.
+- [x] 69. Run robots/IndexNow verification.
+- [x] 70. Check Ahrefs Rank Tracker access via local script and Ahrefs MCP.
+- [x] 71. Document Ahrefs external blockers: missing local token and MCP `403 Insufficient plan`.
+- [x] 72. Run evidence ledger validation.
+- [x] 73. Generate GBP this-week plan for Tuesday, June 2, 2026.
+- [x] 74. Generate SEO weekly report.
+- [x] 75. Verify automation stack locally with Vapi secret loaded from `.env.local`.
+- [x] 76. Verify DataForSEO admin endpoints return 401 without admin session.
+- [x] 77. Document all continuation batches in Obsidian deliverables.
+- [x] 78. Add dedicated OG card for deck cost estimator tool.
+- [x] 79. Add dedicated OG card for deck load calculator tool.
+- [x] 80. Add dedicated OG card for deck stair calculator tool.
+- [x] 81. Register new social card dimensions in `src/lib/seo.js`.
+- [x] 82. Run OG audit and verify 18 healthy OG images with 0 issues.
+- [x] 83. Deploy tool social-card metadata to production.
+- [x] 84. Verify live `og:image` and `twitter:image` tags for all three tool pages.
+- [x] 85. Add dedicated OG card for Arlington County deck permit guide.
+- [x] 86. Add dedicated OG card for Prince William County deck permit guide.
+- [x] 87. Add dedicated OG card for Loudoun permit + HOA cost guide.
+- [x] 88. Register permit social-card dimensions in `src/lib/seo.js`.
+- [x] 89. Run OG audit and verify 21 healthy OG images with 0 issues.
+- [x] 90. Deploy permit social-card metadata to production.
+- [x] 91. Verify live `og:image` and `twitter:image` tags for all three permit/HOA pages.
+- [x] 92. Add dedicated OG card for 400 square foot deck cost guide.
+- [x] 93. Add dedicated OG card for 600 square foot deck cost guide.
+- [x] 94. Add dedicated OG card for 800 square foot deck cost guide.
+- [x] 95. Add dedicated OG card for deck payment estimator.
+- [x] 96. Add dedicated OG card for composite deck monthly payment guide.
+- [x] 97. Add dedicated OG card for Trex monthly payment guide.
+- [x] 98. Register cost/payment social-card dimensions in `src/lib/seo.js`.
+- [x] 99. Run OG audit and verify 27 healthy OG images with 0 issues.
+- [x] 100. Deploy cost/payment social-card metadata to production.
+- [x] 101. Verify live `og:image` and `twitter:image` tags for all six cost/payment pages.
+- [x] 102. Add dedicated OG card for Trex Transcend review.
+- [x] 103. Add dedicated OG card for TimberTech + AZEK cost guide.
+- [x] 104. Add dedicated OG card for composite vs wood comparison.
+- [x] 105. Add dedicated OG card for deck materials comparison guide.
+- [x] 106. Add dedicated OG card for composite deck cost-by-size guide.
+- [x] 107. Add dedicated OG card for composite decks service page.
+- [x] 108. Add dedicated OG card for Trex decks service page.
+- [x] 109. Add dedicated OG card for TimberTech decks service page.
+- [x] 110. Register material/comparison social-card dimensions in `src/lib/seo.js`.
+- [x] 111. Run OG audit and verify 35 healthy OG images with 0 issues.
+- [x] 112. Deploy material/comparison social-card metadata to production.
+- [x] 113. Verify live `og:image` and `twitter:image` tags for all eight material/comparison pages.
+- [x] 114. Add dedicated OG card for Loudoun County deck builder page.
+- [x] 115. Add dedicated OG card for Ashburn deck builder page.
+- [x] 116. Add dedicated OG card for Leesburg deck builder page.
+- [x] 117. Add dedicated OG card for Herndon deck builder page.
+- [x] 118. Add dedicated OG card for Reston deck builder page.
+- [x] 119. Add dedicated OG card for McLean deck builder page.
+- [x] 120. Add dedicated OG card for Vienna deck builder page.
+- [x] 121. Add dedicated OG card for Fairfax deck builder page.
+- [x] 122. Register local city social-card dimensions in `src/lib/seo.js`.
+- [x] 123. Run OG audit and verify 43 healthy OG images with 0 issues.
+- [x] 124. Deploy local city social-card metadata to production.
+- [x] 125. Verify live `og:image` and `twitter:image` tags for all eight local pages.
+- [x] 126. Add dedicated OG card for get-estimate conversion page.
+- [x] 127. Add dedicated OG card for before-and-after proof page.
+- [x] 128. Add dedicated OG card for Ashburn composite deck cost financing page.
+- [x] 129. Add dedicated OG card for best-time-to-finance guide.
+- [x] 130. Add dedicated OG card for credit-score deck financing guide.
+- [x] 131. Add dedicated OG card for resurface-or-replace financing guide.
+- [x] 132. Run OG audit and verify 49 healthy OG images with 0 issues.
+- [x] 133. Deploy conversion/financing social-card metadata to production.
+- [x] 134. Verify live `og:image` and `twitter:image` tags for all six conversion/financing pages.
+- [x] 135. Add dedicated OG card for Alexandria deck builder page.
+- [x] 136. Add dedicated OG card for Brambleton deck builder page.
+- [x] 137. Add dedicated OG card for Bristow deck builder page.
+- [x] 138. Add dedicated OG card for Chantilly deck builder page.
+- [x] 139. Add dedicated OG card for Gainesville deck builder page.
+- [x] 140. Add dedicated OG card for Haymarket deck builder page.
+- [x] 141. Add dedicated OG card for Manassas deck builder page.
+- [x] 142. Add dedicated OG card for Woodbridge deck builder page.
+- [x] 143. Run OG audit and verify 57 healthy OG images with 0 issues.
+- [x] 144. Deploy secondary-city social-card metadata to production.
+- [x] 145. Verify live `og:image` and `twitter:image` tags for all eight secondary city pages.
+- [x] 146. Submit updated sitemap batch via IndexNow after secondary-city deployment.
+- [x] 147. Add dedicated OG card for Burke deck builder page.
+- [x] 148. Add dedicated OG card for Falls Church deck builder page.
+- [x] 149. Add dedicated OG card for Lorton deck builder page.
+- [x] 150. Add dedicated OG card for Oakton deck builder page.
+- [x] 151. Add dedicated OG card for Purcellville deck builder page.
+- [x] 152. Add dedicated OG card for South Riding deck builder page.
+- [x] 153. Add dedicated OG card for Springfield deck builder page.
+- [x] 154. Add dedicated OG card for Northern Virginia deck builder hub.
+- [x] 155. Run OG audit and verify 65 healthy OG images with 0 issues.
+- [x] 156. Deploy remaining local/hub social-card metadata to production.
+- [x] 157. Verify live `og:image` and `twitter:image` tags for all eight local/hub pages.
+- [x] 158. Submit updated sitemap batch via IndexNow after remaining local/hub deployment.
+- [x] 159. Add dedicated OG card for deck design ideas 2026 page.
+- [x] 160. Add dedicated OG card for Northern Virginia deck design ideas 2026 page.
+- [x] 161. Add dedicated OG card for outdoor living Northern Virginia page.
+- [x] 162. Add dedicated OG card for outdoor living trends 2026 page.
+- [x] 163. Add dedicated OG card for McLean and Great Falls premium deck budget page.
+- [x] 164. Add dedicated OG card for covered deck cost page.
+- [x] 165. Add dedicated OG card for second-story deck builder page.
+- [x] 166. Add dedicated OG card for deck ROI calculator page.
+- [x] 167. Run OG audit and verify 73 healthy OG images with 0 issues.
+- [x] 168. Deploy design/outdoor/premium social-card metadata to production.
+- [x] 169. Verify live `og:image` and `twitter:image` tags for all eight design/outdoor/premium pages.
+- [x] 170. Submit updated sitemap batch via IndexNow after design/outdoor/premium deployment.
+- [x] 171. Add dedicated OG card for best deck stain and sealer Virginia guide.
+- [x] 172. Add dedicated OG card for composite deck builder Loudoun page.
+- [x] 173. Add dedicated OG card for deck lighting, railings, and stairs add-on cost page.
+- [x] 174. Add dedicated OG card for deck resurfacing Northern Virginia page.
+- [x] 175. Add dedicated OG card for deck warranty guide Northern Virginia page.
+- [x] 176. Add dedicated OG card for Loudoun County HOA deck rules page.
+- [x] 177. Add dedicated OG card for Washington DC rooftop deck showcase page.
+- [x] 178. Add dedicated OG card for wood vs composite long-term cost guide.
+- [x] 179. Verify no app page metadata still uses `/images/img36.jpeg`.
+- [x] 180. Run OG audit and verify 81 healthy OG images with 0 issues.
+- [x] 181. Deploy final generic OG cleanup metadata to production.
+- [x] 182. Verify live `og:image` and `twitter:image` tags for all eight final cleanup pages.
+- [x] 183. Run SEO daily check and submit updated sitemap batch via IndexNow after final cleanup deployment.
+- [x] 184. Add dedicated OG card for the FAQ hub page.
+- [x] 185. Add dedicated OG card for the services hub page.
+- [x] 186. Add dedicated OG card for the gazebo and pergola service page.
+- [x] 187. Add dedicated OG card for the new deck construction service page.
+- [x] 188. Add dedicated OG card for the porches service hub page.
+- [x] 189. Add dedicated OG card for the open porch service page.
+- [x] 190. Add dedicated OG card for the front porch service page.
+- [x] 191. Reuse the dedicated screened porch OG card for the legacy screened porch service URL.
+- [x] 192. Add dedicated OG card for the deck maintenance service page.
+- [x] 193. Add dedicated OG card for the deck resurfacing service page.
+- [x] 194. Run schema, OG image, link, lint, and production build verification for the services/FAQ batch.
+- [x] 195. Deploy services/FAQ social-card metadata to production.
+- [x] 196. Verify live `og:image` and `twitter:image` tags for all ten services/FAQ pages and submit IndexNow.
+- [x] 197. Add dedicated OG card for the About Loudoun Decks page.
+- [x] 198. Add dedicated OG card for the deck building process page.
+- [x] 199. Add dedicated OG card for the 2-year labor warranty page.
+- [x] 200. Add dedicated OG card for the why choose Loudoun Decks page.
+- [x] 201. Add dedicated OG card for certifications and licenses verification page.
+- [x] 202. Add dedicated OG card for the contact/free estimate page.
+- [x] 203. Add dedicated OG card for the reviews verification page.
+- [x] 204. Add dedicated OG card for the social profiles page.
+- [x] 205. Add dedicated OG card for the team page.
+- [x] 206. Add dedicated OG card for the BBB accredited deck builder page.
+- [x] 207. Run schema, OG image, link, lint, and production build verification for the trust/company batch.
+- [x] 208. Deploy trust/company social-card metadata to production.
+- [x] 209. Verify live `og:image` and `twitter:image` tags for all ten trust/company pages and submit IndexNow.
+- [x] 210. Add dedicated OG card for the Areas We Serve hub.
+- [x] 211. Add dedicated OG card for the Deck Builder Near You hub.
+- [x] 212. Add dedicated OG card for the Loudoun County deck builder hub.
+- [x] 213. Add dedicated OG card for the Fairfax County deck builder hub.
+- [x] 214. Add dedicated OG card for the Prince William County deck builder hub.
+- [x] 215. Add dedicated OG card for the Arlington County deck builder hub.
+- [x] 216. Add dedicated OG card for the Stafford County deck builder hub.
+- [x] 217. Add dedicated OG card for the blog hub.
+- [x] 218. Add dedicated OG card for the education hub.
+- [x] 219. Add dedicated OG card for the trades scholarship page.
+- [x] 220. Run schema, OG image, link, lint, and production build verification for the area/hub batch.
+- [x] 221. Deploy area/hub social-card metadata to production and force redeploy without cache after stale HTML was detected.
+- [x] 222. Verify exact live `<meta property="og:image">` and `<meta name="twitter:image">` tags for all ten area/hub pages.
+- [x] 223. Run SEO daily check and submit updated sitemap batch via IndexNow after area/hub deployment.
+- [x] 224. Add dedicated OG card for Arlington VA deck builder page.
+- [x] 225. Add dedicated OG card for Centreville VA deck builder page.
+- [x] 226. Add dedicated OG card for Great Falls VA deck builder page.
+- [x] 227. Add dedicated OG card for Stafford VA deck builder page.
+- [x] 228. Add dedicated OG card for Sterling VA deck builder page.
+- [x] 229. Add dedicated OG card for Tysons VA deck builder page.
+- [x] 230. Add dedicated OG card for the 12x20 Northern Virginia deck cost guide.
+- [x] 231. Add dedicated OG card for the 16x20 Northern Virginia deck cost guide.
+- [x] 232. Add dedicated OG card for the 20x20 Northern Virginia deck cost guide.
+- [x] 233. Add dedicated OG card for the best time to build a deck Northern Virginia guide.
+- [x] 234. Run schema, OG image, link, lint, and production build verification for the city/cost batch.
+- [x] 235. Deploy city/cost social-card metadata to production with a forced Vercel deploy.
+- [x] 236. Verify exact live `<meta property="og:image">` and `<meta name="twitter:image">` tags for all ten city/cost pages.
+- [x] 237. Run SEO daily check and submit updated sitemap batch via IndexNow after city/cost deployment.
+- [x] 238. Add dedicated OG card for Ashburn Village HOA deck rules page.
+- [x] 239. Add dedicated OG card for Belmont Country Club HOA deck rules page.
+- [x] 240. Add dedicated OG card for Brambleton HOA deck rules page.
+- [x] 241. Add dedicated OG card for Broadlands HOA deck rules page.
+- [x] 242. Add dedicated OG card for Northern Virginia HOA deck rules hub.
+- [x] 243. Add dedicated OG card for Lansdowne HOA deck rules page.
+- [x] 244. Add dedicated OG card for One Loudoun HOA deck rules page.
+- [x] 245. Add dedicated OG card for Stone Ridge HOA deck rules page.
+- [x] 246. Add dedicated OG card for Sully Station HOA deck rules page.
+- [x] 247. Add dedicated OG card for Virginia Run HOA deck rules page.
+- [x] 248. Run schema, OG image, link, lint, and production build verification for the HOA rules batch.
+- [x] 249. Deploy HOA rules social-card metadata to production with a forced Vercel deploy.
+- [x] 250. Verify exact live `<meta property="og:image">` and `<meta name="twitter:image">` tags for all ten HOA rules pages.
+- [x] 251. Run SEO daily check and submit updated sitemap batch via IndexNow after HOA rules deployment.
+- [x] 252. Add dedicated OG card for cable railing for decks Northern Virginia page.
+- [x] 253. Add dedicated OG card for covered deck builder Northern Virginia page.
+- [x] 254. Add dedicated OG card for deck enclosure ideas Northern Virginia page.
+- [x] 255. Add dedicated OG card for deck footing code Northern Virginia page.
+- [x] 256. Add dedicated OG card for deck lighting ideas Northern Virginia page.
+- [x] 257. Add dedicated OG card for deck maintenance checklist Virginia page.
+- [x] 258. Add dedicated OG card for deck railing options Northern Virginia page.
+- [x] 259. Add dedicated OG card for deck remodeling page.
+- [x] 260. Add dedicated OG card for deck resurfacing vs replacement page.
+- [x] 261. Add dedicated OG card for deck safety inspection checklist page.
+- [x] 262. Run schema, OG image, link, lint, and production build verification for the education/design batch.
+- [x] 263. Deploy education/design social-card metadata to production with a forced Vercel deploy.
+- [x] 264. Verify exact live `<meta property="og:image">` and `<meta name="twitter:image">` tags for all ten education/design pages.
+- [x] 265. Run SEO daily check and submit updated sitemap batch via IndexNow after education/design deployment.
+- [x] 266. Add dedicated OG card for deck staining Northern Virginia page.
+- [x] 267. Add dedicated OG card for deck vs patio decision page.
+- [x] 268. Add dedicated OG card for deck ROI/value page.
+- [x] 269. Add dedicated OG card for eco-friendly composite decking page.
+- [x] 270. Add dedicated OG card for Houzz deck projects page.
+- [x] 271. Add dedicated OG card for composite deck lifespan guide.
+- [x] 272. Add dedicated OG card for deck build timeline guide.
+- [x] 273. Add dedicated OG card for 2026 deck price tariffs page.
+- [x] 274. Add dedicated OG card for how to choose a deck builder page.
+- [x] 275. Add dedicated OG card for the complete Northern Virginia deck building guide.
+- [x] 276. Run schema, OG image, link, lint, and production build verification for the decision/comparison batch.
+- [x] 277. Deploy decision/comparison social-card metadata to production with a forced Vercel deploy.
+- [x] 278. Verify exact live `<meta property="og:image">` and `<meta name="twitter:image">` tags for all ten decision/comparison pages.
+- [x] 279. Run SEO daily check and submit updated sitemap batch via IndexNow after decision/comparison deployment.
+- [x] 280. Add dedicated OG card for concrete washing service page.
+- [x] 281. Add dedicated OG card for deck inspection service page.
+- [x] 282. Add dedicated OG card for deck replacement service page.
+- [x] 283. Add dedicated OG card for deck stair lighting service page.
+- [x] 284. Add dedicated OG card for deck washing service page.
+- [x] 285. Add dedicated OG card for entry doors service page.
+- [x] 286. Add dedicated OG card for fence installation service page.
+- [x] 287. Add dedicated OG card for fence cleaning service page.
+- [x] 288. Add dedicated OG card for fire pits service page.
+- [x] 289. Add dedicated OG card for house siding washing service page.
+- [x] 290. Run schema, OG image, link, lint, and production build verification for the service pages batch.
+- [x] 291. Deploy service pages social-card metadata to production with a forced Vercel deploy.
+- [x] 292. Verify exact live `<meta property="og:image">` and `<meta name="twitter:image">` tags for all ten service pages.
+- [x] 293. Run SEO daily check and submit updated sitemap batch via IndexNow after service pages deployment.
+- [x] 294. Add dedicated OG card for outdoor washing service page.
+- [x] 295. Add dedicated OG card for Trex Clam Shell service page.
+- [x] 296. Add dedicated OG card for Trex railings service page.
+- [x] 297. Add dedicated OG card for under-deck patios service page.
+- [x] 298. Add dedicated OG card for windows service page.
+- [x] 299. Add dedicated OG card for louvered pergola Northern Virginia page.
+- [x] 300. Add dedicated OG card for multi-level deck builder Northern Virginia page.
+- [x] 301. Add dedicated OG card for outdoor kitchen builder Northern Virginia page.
+- [x] 302. Add dedicated OG card for paver vs flagstone patio Northern Virginia page.
+- [x] 303. Add dedicated OG card for pet-friendly deck design page.
+- [x] 304. Run schema, OG image, link, lint, and production build verification for the outdoor/services batch.
+- [x] 305. Deploy outdoor/services social-card metadata to production with a forced Vercel deploy.
+- [x] 306. Verify exact live `<meta property="og:image">` and `<meta name="twitter:image">` tags for all ten outdoor/services pages.
+- [x] 307. Run SEO daily check and submit updated sitemap batch via IndexNow after outdoor/services deployment.
+- [x] 308. Add dedicated OG card for Yelp reviews proof page.
+- [x] 309. Add dedicated OG card for the printable NoVA deck permit checklist.
+- [x] 310. Add dedicated OG card for press and media kit page.
+- [x] 311. Add dedicated OG card for referral partners page.
+- [x] 312. Add dedicated OG card for leave a review page.
+- [x] 313. Add dedicated OG card for pool deck builder Northern Virginia page.
+- [x] 314. Add dedicated OG card for porch repair vs replacement guide.
+- [x] 315. Add dedicated OG card for porch vs deck comparison guide.
+- [x] 316. Add dedicated OG card for deck pressure washing guide.
+- [x] 317. Add dedicated OG card for questions before building a deck guide.
+- [x] 318. Run schema, OG image, link, lint, and production build verification for the trust/proof guides batch.
+- [x] 319. Deploy trust/proof guides social-card metadata to production with a forced Vercel deploy.
+- [x] 320. Verify exact live `<meta property="og:image">` and `<meta name="twitter:image">` tags for all ten trust/proof guide pages.
+- [x] 321. Run SEO daily check and submit updated sitemap batch via IndexNow after trust/proof guides deployment.
+- [x] 322. Add dedicated OG card for rooftop deck builder Northern Virginia page.
+- [x] 323. Add dedicated OG card for screened porch cost Northern Virginia page.
+- [x] 324. Add dedicated OG card for showcase gallery page.
+- [x] 325. Add dedicated OG card for stamped concrete patio Northern Virginia page.
+- [x] 326. Add dedicated OG card for three-season room Northern Virginia page.
+- [x] 327. Add dedicated OG card for deck planning tools page.
+- [x] 328. Add dedicated OG card for Trex performance products page.
+- [x] 329. Add dedicated OG card for under-deck ceiling ideas page.
+- [x] 330. Add dedicated OG card for what size deck should I build guide.
+- [x] 331. Add dedicated OG card for winterize your deck Northern Virginia guide.
+- [x] 332. Run schema, OG image, link, lint, and production build verification for the practical/commercial batch.
+- [x] 333. Deploy practical/commercial social-card metadata to production with a forced Vercel deploy.
+- [x] 334. Verify exact live `<meta property="og:image">` and `<meta name="twitter:image">` tags for all ten practical/commercial pages.
+- [x] 335. Run SEO daily check and submit updated sitemap batch via IndexNow after practical/commercial deployment.
+- [x] 336. Add dedicated OG card for dynamic near-you city deck builder pages.
+- [x] 337. Add dedicated OG card for privacy policy trust page.
+- [x] 338. Add dedicated OG card for terms of service page.
+- [x] 339. Add dedicated OG card for thank-you lead confirmation page.
+- [x] 340. Add dedicated OG card for wood decks page.
+- [x] 341. Add verified 1200x630 dimensions for all five final OG cards in the SEO metadata helper.
+- [x] 342. Run schema, OG image, link, lint, no-missing-image scan, and production build verification for the final remaining batch.
+- [x] 343. Deploy final remaining social-card metadata to production with a forced Vercel deploy.
+- [x] 344. Verify exact live `<meta property="og:image">` and `<meta name="twitter:image">` tags for all five final pages.
+- [x] 345. Run SEO daily check and submit updated sitemap batch via IndexNow after final remaining deployment.
+- [x] 346. Add a local measurement integrity gate script for consent, click IDs, form proof, phone tracking, call evidence, and proof runtime.
+- [x] 347. Add `npm run measurement:gate` so the scaling gate can be rerun without manual file inspection.
+- [x] 348. Run the measurement gate and confirm website-side form attribution passes while scaling remains RED.
+- [x] 349. Document the remaining Google Ads qualified-call attribution blocker in the generated measurement gate report.
+- [x] 350. Copy the measurement integrity gate report to Obsidian deliverables.
+- [x] 351. Audit local DataForSEO dashboard routes against the API errors shown in the DataForSEO error log.
+- [x] 352. Verify current DataForSEO documentation for Labs relevant pages, competitors domain, and Whois Overview request fields.
+- [x] 353. Add defensive fallback retries when DataForSEO rejects optional `location_code` fields on Labs endpoints.
+- [x] 354. Add defensive fallback retry when DataForSEO rejects optional `filters` on Whois Overview.
+- [x] 355. Run lint, measurement gate, build, forced Vercel deploy, live protection check, and daily SEO check after DataForSEO hardening.
+- [x] 356. Copy the DataForSEO error hardening report to Obsidian deliverables.
+- [x] 357. Audit `/deck-cost-calculator` as a linkable calculator asset.
+- [x] 358. Add a dedicated 1200x630 OG card for the deck price calculator.
+- [x] 359. Add explicit calculator `image` metadata in the route layout.
+- [x] 360. Run schema, OG image, file, link, lint, and production build verification for the calculator asset.
+- [x] 361. Deploy calculator social-card metadata to production with a forced Vercel deploy.
+- [x] 362. Verify exact live `og:image`, `twitter:image`, and image 200 status for `/deck-cost-calculator`.
+- [x] 363. Run SEO daily check and submit updated sitemap batch via IndexNow after calculator deployment.
+- [x] 364. Copy the calculator asset OG report to Obsidian deliverables.
+- [x] 365. Audit content freshness and internal link gap reports before choosing the next batch.
+- [x] 366. Confirm freshness queue is clear and priority internal-link targets are healthy.
+- [x] 367. Remove duplicate `/services/deck-repair` target from `RelatedGuides`.
+- [x] 368. Prioritize `deck-core` related guides on `/deck-cost-calculator`.
+- [x] 369. Verify RelatedGuides has zero duplicate paths, link audit is clean, lint passes, and production build succeeds.
+- [x] 370. Deploy RelatedGuides cleanup to production with a forced Vercel deploy.
+- [x] 371. Verify live calculator HTML contains the intended deck-core guide links.
+- [x] 372. Run SEO daily check and submit updated sitemap batch via IndexNow after RelatedGuides deployment.
+- [x] 373. Copy the RelatedGuides cleanup report to Obsidian deliverables.
+- [x] 374. Audit the admin operations dashboard for stale measurement, DataForSEO, and scaling gate status.
+- [x] 375. Add current technical gate evidence for lead quality proof, DataForSEO fallback hardening, call attribution, and scaling readiness.
+- [x] 376. Add the latest verified code-side batch table with deployment IDs and evidence report paths.
+- [x] 377. Point the measurement quality action to the 2026-06-02 measurement integrity gate and owner evidence packet.
+- [x] 378. Run lint, production build, forced Vercel deploy, live admin protection check, and SEO daily check.
+- [x] 379. Copy the admin operations readiness dashboard report to Obsidian deliverables.
+- [x] 380. Add visible FAQ content to `/deck-cost-calculator` so the FAQPage schema has matching on-page user content.
+- [x] 381. Remove unverified `200+ completed projects`/`200+ real projects` claims from calculator metadata, schema, and widget copy.
+- [x] 382. Regenerate the SXO conversion report after calculator FAQ/proof-safety updates.
+- [x] 383. Run schema validation, lint, production build, forced Vercel deploy, live HTML verification, and SEO daily check for calculator FAQ updates.
+- [x] 384. Copy the calculator FAQ proof-safety report to Obsidian deliverables.
+- [x] 385. Audit `/screened-porch-cost-northern-virginia` for unverified real-project wording.
+- [x] 386. Replace screened porch real-project/client-paid wording with proof-safe planning scenarios.
+- [x] 387. Update screened porch metadata and WebPage schema to use pricing-scenario language.
+- [x] 388. Run schema validation, lint, production build, forced Vercel deploy, live HTML verification, and SEO daily check for screened porch proof-safety.
+- [x] 389. Copy the screened porch proof-safety report to Obsidian deliverables.
+- [x] 390. Audit remaining public copy for risky `real projects` / `completed project examples` wording.
+- [x] 391. Replace deck footing CTA proof wording with before-and-after photo-example language.
+- [x] 392. Replace BBB local-area proof wording with planning-note and verified-reference language.
+- [x] 393. Replace Houzz proof wording with photo-gallery context language.
+- [x] 394. Run schema validation, lint, production build, forced Vercel deploy, live HTML verification, and SEO daily check for public proof-wording cleanup.
+- [x] 395. Copy the public proof-wording cleanup report to Obsidian deliverables.
+- [x] 396. Audit AI-discovery copy in `llms.txt`, `llms-full.txt`, RelatedGuides, homepage SEO content, About trust copy, and exterior-cleaning authority links.
+- [x] 397. Replace AI/GEO `project proof` and `real project proof` wording with evidence-gated gallery/trust terminology.
+- [x] 398. Update homepage/cross-link copy from project examples to planning examples where proof is not verified.
+- [x] 399. Run schema validation, lint, production build, forced Vercel deploy, live `llms.txt`/`llms-full.txt`/homepage verification, and SEO daily check for AI/GEO proof-safety.
+- [x] 400. Copy the AI/GEO proof-safety cleanup report to Obsidian deliverables.
+- [x] 401. Audit static `public/llms.txt` and `public/llms-full.txt` for stale proof and real-project pricing language.
+- [x] 402. Replace stale static AI-discovery wording with trust-link, gallery-with-verification, planning-example, and planning-price-table language.
+- [x] 403. Remove unverified 200+ project claims from Team, Press, Northern Virginia guide, Loudoun County hub, and outdoor living trends copy.
+- [x] 404. Replace real-project pricing/recent-quote wording on selected cost pages with market-rate estimating logic and planning ranges.
+- [x] 405. Run schema validation, lint, production build, forced Vercel deploy, live `llms`, Team, Press, cost-page verification, and SEO daily check.
+- [x] 406. Confirm IndexNow accepted the 260-URL sitemap submission after the proof-safety deploy.
+- [x] 407. Copy the static AI and 200-plus proof-safety cleanup report to Obsidian deliverables.
+- [x] 541. Found stale honeypot-risk language in the tracking audit.
+- [x] 542. Rewrote HIGH-5 as a resolved honeypot-control finding.
+- [x] 543. Rewrote fix queue item #8 with the implemented `ldn_extra_field` flow.
+- [x] 544. Updated the queue summary table from pending to done.
+- [x] 545. Verified the edited docs for stale wording and whitespace errors.
+- [x] 546. Scanned tracking and ads docs for stale ContactHome, honeypot, phone, and lead-quality claims.
+- [x] 547. Updated Enhanced Conversions current-state and missing-items tables.
+- [x] 548. Updated Duplicate Fire ContactHome `event_id` row.
+- [x] 549. Removed stale hardcoded-phone audit summary entry.
+- [x] 550. Rewrote phone fix queue item #2 as resolved current implementation.
+- [x] 551. Verified raw `tel:` centralization and stale-claim cleanup.
+- [x] 552. Corrected the Duplicate Fire `form_submit` ledger for ContactHome.
+- [x] 553. Ran the measurement integrity gate.
+- [x] 554. Confirmed scaling gate remains RED with only Google call attribution failing.
+- [x] 555. Ran proof-system preflight.
+- [x] 556. Confirmed proof controls are healthy and prepublish is expected-blocked.
+- [x] 557. Copied both operational gate reports into Obsidian.
+- [x] 558. Ran schema validation.
+- [x] 559. Confirmed schema/NAP/canonical risk checks are green.
+- [x] 560. Ran daily SEO check.
+- [x] 561. Confirmed sitemap, robots, core canonicals, profile links, and IndexNow passed.
+- [x] 562. Reviewed current call-attribution blocker language.
+- [x] 563. Created the read-only call attribution evidence runbook.
+- [x] 564. Added pass criteria for qualified-call attribution.
+- [x] 565. Copied the call attribution runbook to Obsidian.
+- [x] 566. Reviewed the existing Airtable lead schema.
+- [x] 567. Created a lightweight lead-quality outcome CSV template.
+- [x] 568. Created the lead-quality outcome rows runbook.
+- [x] 569. Validated CSV consistency.
+- [x] 570. Copied the lead-quality template and runbook into Obsidian.
+- [x] 571. Added the lead-quality outcome template to the ads-tracking template index.
+- [x] 572. Reviewed the Google Ads import validation script scope.
+- [x] 573. Ran `npm run ads:validate-imports`.
+- [x] 574. Confirmed local import assets pass validation without account changes.
+- [x] 575. Reviewed the Google Ads import README budget modes.
+- [x] 576. Summarized `$150/day` protected launch, `$205/day` expansion, and `$150/day` Deck Builders test modes.
+- [x] 577. Documented the no-accidental-enable safety rule.
+- [x] 578. Reviewed the internal link gap report.
+- [x] 579. Regenerated `npm run seo:internal-link-gap`.
+- [x] 580. Confirmed all five priority targets are healthy with gap 0.
+- [x] 581. Copied the refreshed internal link gap report to Obsidian.
+- [x] 582. Ran the content freshness audit.
+- [x] 583. Confirmed 188 audited pages are fresh.
+- [x] 584. Confirmed no high-priority refresh queue.
+- [x] 585. Copied the freshness report to Obsidian.
+- [x] 586. Ran the OG image audit.
+- [x] 587. Confirmed 201 pages and 193 unique OG images have 0 issues.
+- [x] 588. Copied the OG image audit JSON to Obsidian.
+- [x] 589. Ran the image alt audit.
+- [x] 590. Confirmed 0 missing, empty, generic, or weak alt findings.
+- [x] 591. Copied the image alt audit output to Obsidian.
+- [x] 592. Ran the breadcrumb audit.
+- [x] 593. Confirmed 0 unknown segments and 0 duplicate breadcrumb schemas.
+- [x] 594. Copied the breadcrumb audit output to Obsidian.
+- [x] 595. Ran `npm run seo:weekly`.
+- [x] 596. Confirmed technical SEO, proof runtime, placeholders, image, and link checks are healthy.
+- [x] 597. Confirmed publish readiness remains proof-gated.
+- [x] 598. Copied the weekly SEO report into Obsidian deliverables.
+- [x] 599. Ran the rank tracker refresh command.
+- [x] 600. Confirmed the blocker is missing `AHREFS_API_TOKEN`.
+- [x] 601. Ran owner evidence handoff generation.
+- [x] 602. Confirmed 26 owner rows and 5 sprint blocks.
+- [x] 603. Confirmed 3 blocked pages and 1 proof-incomplete page.
+- [x] 604. Copied owner evidence handoff and action packet files to Obsidian.
+- [x] 605. Ran public placeholder audit.
+- [x] 606. Confirmed 0 public findings and 0 affected routes.
+- [x] 607. Copied placeholder audit outputs to Obsidian.
+- [x] 608. Ran proof runtime validation.
+- [x] 609. Ran evidence ledger validation.
+- [x] 610. Confirmed proof system has 0 errors while verified project count remains 0.
+- [x] 611. Reviewed current docs/output git status count.
+- [x] 612. Created current readiness snapshot.
+- [x] 613. Ran internal link audit.
+- [x] 614. Confirmed 260 sitemap URLs, 317 internal links, and 0 bad links.
+- [x] 615. Ran robots/IndexNow verification, observed sandbox DNS failure, and reran with network access.
+- [x] 616. Confirmed robots, sitemap, AI bot declarations, image sitemap, and IndexNow key pass live verification.
+- [x] 617. Copied the live robots/IndexNow output to Obsidian.
+- [x] 618. Ran publish readiness gate.
+- [x] 619. Ran prepublish evidence gate and confirmed the block is expected.
+- [x] 620. Copied publish readiness reports to Obsidian.
+- [x] 621. Documented blocked and proof-incomplete pages.
+- [x] 622. Ran evidence coverage report.
+- [x] 623. Confirmed 10 partial projects and 11 missing asset requirements.
+- [x] 624. Copied evidence coverage outputs to Obsidian.
+- [x] 625. Regenerated verified proof snippets.
+- [x] 626. Validated proof runtime sync.
+- [x] 627. Confirmed 5 review-source snippets, 0 project snippets, and 10 skipped owner-evidence records.
+- [x] 628. Copied proof snippet artifacts to Obsidian.
+- [x] 629. Ran owner intake suite validation.
+- [x] 630. Confirmed owner intake has 0 errors.
+- [x] 631. Regenerated owner evidence sprint checklist.
+- [x] 632. Confirmed 13 P0 and 13 P1 owner actions.
+- [x] 633. Copied owner intake and sprint outputs to Obsidian.
+- [x] 634. Regenerated proof system staging manifest.
+- [x] 635. Ran proof staging check.
+- [x] 636. Regenerated proof staging plan.
+- [x] 637. Confirmed required missing paths are 0 across all staging groups.
+- [x] 638. Copied proof staging artifacts to Obsidian.
+- [x] 639. Regenerated SXO conversion report.
+- [x] 640. Confirmed SXO average score is 93 with 2 proof-gated targets.
+- [x] 641. Regenerated deep SEO growth map.
+- [x] 642. Confirmed 203 routes, 3 blocked pages, 1 proof-incomplete page, and 26 owner actions.
+- [x] 643. Copied SXO and growth map outputs to Obsidian.
+- [x] 644. Regenerated proof ops board.
+- [x] 645. Confirmed 42 owner/manual tasks, 18 P0 tasks, and 12 public profiles.
+- [x] 646. Copied proof source checklist and GBP/Maps proof ops board artifacts to Obsidian.
+- [x] 647. Refreshed current readiness snapshot after publish, evidence, staging, SXO, growth, and proof ops batches.
+- [x] 648. Ran lint.
+- [x] 649. Ran production build.
+- [x] 650. Confirmed lint/build pass and 342 static pages generated.
+- [x] 651. Ran live daily SEO check.
+- [x] 652. Confirmed sitemap, robots, canonicals, profile links, and IndexNow pass.
+- [x] 653. Regenerated photo ingestion manifest.
+- [x] 654. Regenerated commercial evidence intake.
+- [x] 655. Regenerated project evidence intake.
+- [x] 656. Ran anti-fabrication regression and confirmed 22 checks pass.
+- [x] 657. Regenerated owner evidence action packet.
+- [x] 658. Regenerated evidence unblock runbook.
+- [x] 659. Ran proof preflight and confirmed expected-blocked state.
+- [x] 660. Copied refreshed owner/evidence artifacts to Obsidian.
+- [x] 661. Refreshed current readiness snapshot after owner/evidence intake and anti-fabrication batches.
+- [x] 662. Re-ran owner intake validation after artifact refresh.
+- [x] 663. Confirmed owner intake remains valid with 0 errors.
+- [x] 664. Confirmed refreshed SEO docs and outputs pass `git diff --check`.
+- [x] 665. Re-ran measurement integrity gate.
+- [x] 666. Confirmed scaling gate remains RED with only `google-call-attribution` failing.
+- [x] 667. Copied updated measurement gate report to Obsidian.
+- [x] 668. Ran `gbp:this-week` and found missing GBP post calendar.
+- [x] 669. Added a proof-safe 12-week GBP post calendar.
+- [x] 670. Added GBP Q&A seed list and review response templates.
+- [x] 671. Updated the GBP weekly parser to accept ASCII `->` button separators.
+- [x] 672. Generated this week's GBP post.
+- [x] 673. Copied GBP weekly cadence files to Obsidian.
+- [x] 674. Tested GBP generator with forced Week 2.
+- [x] 675. Restored current Week 1 GBP this-week output.
+- [x] 676. Re-synced final GBP this-week output to Obsidian.
+- [x] 677. Expanded GBP Q&A seed list to 12 entries so it matches the admin dashboard reference.
+- [x] 678. Refreshed current readiness snapshot after GBP weekly cadence setup.
+- [x] 679. Validated GBP calendar and Q&A counts.
+- [x] 680. Confirmed current GBP this-week output is Week 1 with the correct link.
+- [x] 681. Confirmed GBP cadence files pass `git diff --check`.
+- [x] 682. Re-ran the post-GBP measurement integrity gate.
+- [x] 683. Confirmed scaling gate remains RED with only `google-call-attribution` failing.
+- [x] 684. Confirmed GBP, SEO doc, measurement doc, and tracking audit diff checks are clean and synced measurement reporting to Obsidian.
+- [x] 685. Re-ran `npm run seo:weekly` after GBP cadence setup.
+- [x] 686. Confirmed schema, evidence, anti-fabrication, proof runtime, placeholders, image alt, internal links, SXO, and proof staging checks still pass.
+- [x] 687. Confirmed weekly SEO remains proof-gated by missing owner evidence, not by technical SEO failures.
+- [x] 688. Copied the refreshed weekly SEO report into Obsidian deliverables.
+- [x] 689. Ran lint after GBP cadence and weekly SEO refresh.
+- [x] 690. Confirmed lint passed.
+- [x] 691. Ran production build.
+- [x] 692. Confirmed production build passed with 342 static pages generated.
+- [x] 693. Re-ran live daily SEO check after GBP cadence, weekly SEO, lint, and build.
+- [x] 694. Confirmed sitemap has 260 URLs, robots allows crawl, core pages are indexable, profile links are present, and IndexNow accepted 260 URLs.
+- [x] 695. Started local Next server on port 3412 for DataForSEO admin endpoint validation.
+- [x] 696. Confirmed key SEO admin endpoints return `401 Unauthorized` without admin session.
+- [x] 697. Confirmed refresh-capable endpoints default to `manual_refresh_required`.
+- [x] 698. Confirmed DataForSEO invalid-field fallbacks are present for Labs `location_code` and WHOIS `filters`.
+- [x] 699. Stopped the local server after validation.
+- [x] 700. Confirmed measurement, weekly SEO, build, daily check, DataForSEO validation, and ledger docs pass `git diff --check`.
+- [x] 701. Ran robots/IndexNow verification for AI crawler visibility.
+- [x] 702. Confirmed robots verification passed 6/6 with AI bots declared and sitemap count 260.
+- [x] 703. Detected live `llms.txt` was not matching the desired fresh local state closely enough for AI visibility verification.
+- [x] 704. Deployed the verified working tree to Vercel production.
+- [x] 705. Confirmed Vercel production build passed with 342 static pages generated and alias `ldndecks.com` updated.
+- [x] 706. Verified live `llms.txt` and `llms-full.txt` return 200 after deployment.
+- [x] 707. Confirmed live `llms.txt` includes estimate, trust, reputation, and safety-inspection discovery paths.
+- [x] 708. Re-ran post-deploy daily SEO check.
+- [x] 709. Confirmed post-deploy sitemap, robots, canonicals, profile links, and IndexNow submission pass.
+- [x] 710. Re-ran measurement integrity gate after production deploy.
+- [x] 711. Confirmed post-deploy scaling gate remains RED with only `google-call-attribution` failing.
+- [x] 712. Reviewed the LDN-only `google-call-attribution` blocker after unrelated-domain context cleanup.
+- [x] 713. Confirmed public LDN source, sitemap, robots, llms files, and live pages have no unrelated-domain contamination.
+- [x] 714. Updated the measurement gate so Google Ads call attribution is treated as external proof needed instead of a local code failure when the read-only runbook exists.
+- [x] 715. Re-ran `measurement:gate` and confirmed 10 PASS, 1 WARN, 0 FAIL; scaling remains RED pending external Google Ads/GTM proof and owner evidence.
+- [x] 716. Re-ran lint after measurement gate correction.
+- [x] 717. Re-ran live `seo:daily-check` and confirmed sitemap, robots, canonicals, profile links, and IndexNow pass with 260 URLs submitted.
+- [x] 718. Reviewed current readiness and selected lead outcome validation as the next non-external growth batch.
+- [x] 719. Added `scripts/validate-lead-outcome-rows.mjs` to validate real lead outcome CSVs before scaling decisions or offline-import prep.
+- [x] 720. Added `measurement:lead-outcomes` to `package.json`.
+- [x] 721. Updated the lead outcome runbook and template index with validator usage and pass/fail statuses.
+- [x] 722. Refreshed the current readiness snapshot to show measurement gate 10 PASS, 1 WARN, 0 FAIL and lead outcome validation readiness.
+- [x] 723. Ran `measurement:lead-outcomes` and confirmed the sample template validates as `SAMPLE_ONLY` with 0 errors.
+- [x] 724. Re-ran `measurement:gate` and lint after adding the lead outcome validator; both passed.
+- [x] 725. Integrated lead outcome validation into the weekly SEO aggregate report.
+- [x] 726. Added weekly summary metrics for lead outcome status, real rows, qualified rows, upload-eligible rows, and validation errors.
+- [x] 727. Added a weekly operating checklist reminder to rerun `measurement:lead-outcomes` after real CRM/owner rows are added.
+- [x] 728. Ran `seo:weekly` and caught a transient anti-fabrication summary mismatch from the in-flight weekly integration.
+- [x] 729. Re-ran `seo:weekly` after the integration was fully in place and confirmed evidence anti-fabrication passes 22/22.
+- [x] 730. Confirmed the weekly report now includes lead outcome validation as `SAMPLE_ONLY`, 0 real rows, 0 errors.
+- [x] 731. Reviewed `/admin/operations` for stale measurement and lead-quality proof copy.
+- [x] 732. Updated the internal operations dashboard to reference `measurement:lead-outcomes`.
+- [x] 733. Updated dashboard scaling evidence from 10 PASS / 1 FAIL to 10 PASS / 1 WARN / 0 FAIL.
+- [x] 734. Ran lint, build, `measurement:gate`, and `measurement:lead-outcomes` after the dashboard update.
+- [x] 735. Confirmed build passed with 342 static pages generated.
+- [x] 736. Deployed the verified LDN worktree to Vercel production.
+- [x] 737. Confirmed Vercel production build passed with 342 static pages generated.
+- [x] 738. Confirmed deployment `dpl_GSkYZHhXpFbqzLwNc7wJVYpcqAZa` is READY and aliased to `ldndecks.com`.
+- [x] 739. Smoke-tested live `/admin/operations` and confirmed it remains protected with `Authentication required`.
+- [x] 740. Re-ran post-deploy `seo:daily-check` and confirmed sitemap, robots, canonicals, profile links, and IndexNow pass with 260 URLs submitted.
+- [x] 741. Re-ran post-deploy `measurement:gate` and confirmed 10 PASS, 1 WARN, 0 FAIL.
+- [x] 742. Refreshed the current readiness snapshot after the admin operations lead outcome validator deployment.
+- [x] 743. Reviewed GBP this-week generator, post calendar, Q&A seeds, review templates, and current GBP output.
+- [x] 744. Added `scripts/validate-gbp-cadence.mjs` to validate the GBP post calendar, current this-week output, Q&A seeds, review templates, proof-safe public copy, and local route links.
+- [x] 745. Added `gbp:validate` to `package.json`.
+- [x] 746. Ran `gbp:validate` and confirmed 12 weeks, selected Week 1, 0 errors, and 0 warnings.
+- [x] 747. Re-ran `gbp:this-week` and confirmed Week 1 remains the correct active post for the June 2, 2026 Tuesday cadence window.
+- [x] 748. Re-ran `gbp:validate`, lint, and diff-check after the GBP cadence validator batch.
+- [x] 749. Integrated GBP cadence validation into `seo:weekly` with a summary metric and weekly operating checklist item.
+- [x] 750. Ran `seo:weekly` and caught a stale GBP operations vault copy with old post types, external links, missing local routes, incomplete Q&A structure, and missing review templates.
+- [x] 751. Synced the validated proof-safe GBP calendar, this-week post, Q&A seeds, and review templates from repo output into the GBP operations vault.
+- [x] 752. Re-ran `gbp:validate` against the vault source and confirmed 12 weeks, selected Week 1, 0 errors, and 0 warnings.
+- [x] 753. Re-ran `seo:weekly` and confirmed GBP cadence validation is green in the weekly aggregate report.
+- [x] 754. Searched the LDN Decks repo for `gpt-image-2` and OpenAI image-generation workflow references and confirmed none are present.
+- [x] 755. Re-ran production build after GBP/weekly validator work and confirmed 342 static pages generated.
+- [x] 756. Reviewed the Vapi automation verification script and current `/api/vapi/*` route stack.
+- [x] 757. Added `scripts/validate-automation-stack-static.mjs` to validate Vapi route presence, auth wrappers, production secret enforcement, soft external fallbacks, and local pricing/service-area knowledge sources without live credentials.
+- [x] 758. Added `automation:static` to `package.json`.
+- [x] 759. Ran `automation:static` and confirmed 9 routes, 0 errors, and 0 warnings.
+- [x] 760. Integrated automation static validation into `seo:weekly` with a summary metric and weekly operating checklist item.
+- [x] 761. Re-ran `seo:weekly` and confirmed automation static validation is green in the weekly aggregate report.
+- [x] 762. Re-ran `automation:static`, lint, and diff-check after the automation validator batch.
+- [x] 763. Re-ran production build after automation validator work and confirmed 342 static pages generated.
+- [x] 764. Reviewed the Google Ads Editor import validator and Phase 3/4 activation gates for the next local safety batch.
+- [x] 765. Updated `scripts/validate-google-ads-imports.mjs` to write reusable JSON and Markdown validation reports while preserving fail-on-error behavior.
+- [x] 766. Ran `ads:validate-imports` and confirmed 5 campaigns, 4 Search campaigns, 1 PMax campaign, 11 ad groups, 135 keywords, 22 RSAs, $205/day full expansion budget, 0 errors, and 0 warnings.
+- [x] 767. Integrated Google Ads import validation into `seo:weekly` with a summary metric and weekly operating checklist item.
+- [x] 768. Re-ran `seo:weekly` and confirmed Google Ads import validation is green in the weekly aggregate report.
+- [x] 769. Re-ran `ads:validate-imports`, lint, and diff-check after the Ads import reporting batch.
+- [x] 770. Re-ran production build after Ads import reporting work and confirmed 342 static pages generated.
+- [x] 771. Reviewed public profile and citation sources for LDN Decks.
+- [x] 772. Added `scripts/validate-entity-profile-consistency.mjs` to guard canonical GBP, BBB, Yelp, Houzz, BuildZoom, Loudoun Chamber, and MapQuest URLs.
+- [x] 773. Added `seo:entity-profiles` to `package.json`.
+- [x] 774. Ran `seo:entity-profiles` and caught stale Loudoun Chamber references on Press, Social, and the daily SEO signal list.
+- [x] 775. Fixed the stale Loudoun Chamber URL to `https://business.loudounchamber.org/list/member/loudoun-decks-30047`.
+- [x] 776. Integrated entity profile consistency validation into `seo:weekly`.
+- [x] 777. Re-ran `seo:entity-profiles`, `seo:weekly`, lint, diff-check, and production build after the citation fix.
+- [x] 778. Deployed the verified LDN Decks entity profile fix to production as `dpl_2Qo5Awj3wZxifZF7CmC6izrY4HAd`.
+- [x] 779. Confirmed live `/press` and `/social` contain the canonical Loudoun Chamber URL and do not contain stale `loudoun-deck-30047.htm`.
+- [x] 780. Re-ran post-deploy `seo:daily-check` and confirmed sitemap, profile links, canonicals, and IndexNow pass.
+- [x] 781. Re-ran diff-check, lint, and production build after final whitespace cleanup.
+- [x] 782. Deployed the final verified LDN Decks worktree to production as `dpl_G4Rmy9Hd1LhUgjJmUmhMWXaDpqub`.
+- [x] 783. Strengthened `seo:daily-check` to validate canonical profile links on both `/press` and `/social`.
+- [x] 784. Added daily-check rejection for stale Chamber, Yelp Manassas, and BBB Manassas citation URLs.
+- [x] 785. Re-ran the strengthened live daily SEO check and confirmed Press/Social canonical links pass while stale citation URLs are absent.
+- [x] 786. Added `scripts/generate-scaling-readiness-board.mjs` to aggregate measurement, lead outcome, proof preflight, and Ads import readiness.
+- [x] 787. Added `scaling:readiness` to `package.json`.
+- [x] 788. Ran `scaling:readiness` and confirmed scaling remains RED from 3 owner/external blockers with 0 local failures.
+- [x] 789. Integrated scaling readiness into `seo:weekly` summary and operating checks.
+- [x] 790. Re-ran `seo:weekly` and caught entity profile validator drift from stale URL negative checks.
+- [x] 791. Calibrated entity profile validation to allow stale URLs only inside the daily-check forbidden-signal guard list.
+- [x] 792. Re-ran `seo:entity-profiles`, `scaling:readiness`, and `seo:weekly`; all passed with scaling readiness classified as RED due to owner/external blockers only.
+- [x] 793. Added `scripts/generate-scaling-evidence-request.mjs` to convert scaling blockers into owner/external evidence requests.
+- [x] 794. Added `scaling:evidence-request` to `package.json`.
+- [x] 795. Generated Markdown and CSV evidence request packets for call attribution, lead outcome rows, and owner proof evidence.
+- [x] 796. Integrated scaling evidence request generation into `seo:weekly`.
+- [x] 797. Re-ran `seo:weekly` and confirmed scaling evidence requests are generated in the aggregate report.
+- [x] 798. Added `scripts/validate-scaling-evidence-request.mjs` to validate the Markdown/CSV evidence request packet.
+- [x] 799. Added `scaling:evidence-request:validate` to `package.json`.
+- [x] 800. Integrated scaling evidence request validation into `seo:weekly`.
+- [x] 801. Hardened `seo-link-audit` with bounded retry after a transient fetch failure on a live 200 route.
+- [x] 802. Re-ran link audit twice and confirmed 816 internal links with 0 bad.
+- [x] 803. Re-ran `seo:weekly` and confirmed internal links plus scaling evidence request validation are green.
+- [x] 804. Added call attribution read-only evidence CSV template.
+- [x] 805. Added `scripts/validate-call-attribution-evidence.mjs`.
+- [x] 806. Added `measurement:call-attribution-evidence` to `package.json`.
+- [x] 807. Integrated call attribution evidence status into `scaling:readiness`.
+- [x] 808. Integrated call attribution evidence validation into `seo:weekly`.
+- [x] 809. Re-ran `measurement:call-attribution-evidence`, `scaling:readiness`, and `seo:weekly`; all passed with call attribution evidence still SAMPLE_ONLY.
+- [x] 810. Added `scripts/validate-owner-evidence-action-packet.mjs`.
+- [x] 811. Added `seo:evidence-action-packet:validate` to `package.json`.
+- [x] 812. Improved owner evidence packet wording for repair cost verification gates and short asset actions.
+- [x] 813. Integrated owner evidence action packet validation into `scaling:readiness`.
+- [x] 814. Integrated owner evidence action packet validation into `seo:weekly`.
+- [x] 815. Re-ran `seo:evidence-action-packet:validate`, `scaling:readiness`, and `seo:weekly`; all passed with 26 action rows, 13 P0, 13 P1, and 0 errors.
+- [x] 816. Reviewed the DataForSEO source guide for connecting the MCP server to n8n workflows.
+- [x] 817. Added an LDN-only DataForSEO n8n MCP runbook.
+- [x] 818. Added `scripts/validate-dataforseo-n8n-mcp-runbook.mjs`.
+- [x] 819. Added `dataforseo:n8n-mcp:validate` to `package.json`.
+- [x] 820. Integrated DataForSEO n8n MCP runbook validation into `seo:weekly`.
+- [x] 821. Re-ran `dataforseo:n8n-mcp:validate` and `seo:weekly`; both passed with 0 errors.
+- [x] 822. Added `scripts/generate-scaling-blocker-exit-checklist.mjs`.
+- [x] 823. Added `scripts/validate-scaling-blocker-exit-checklist.mjs`.
+- [x] 824. Added `scaling:blocker-exit` and `scaling:blocker-exit:validate` to `package.json`.
+- [x] 825. Integrated scaling blocker exit checklist generation and validation into `seo:weekly`.
+- [x] 826. Re-ran `scaling:blocker-exit`, `scaling:blocker-exit:validate`, and `seo:weekly`; all passed with 3 blockers and 0 validation errors.
+- [x] 827. Added `docs/seo/dataforseo-n8n-mcp-workflow-manifest-2026-06-03.json` as a read-only LDN Decks blueprint for DataForSEO MCP in n8n.
+- [x] 828. Added `scripts/validate-dataforseo-n8n-mcp-workflow-manifest.mjs` to validate LDN-only scope, local MCP mode, n8n nodes, no-secret rules, read-only prompts, and cost caps.
+- [x] 829. Added `dataforseo:n8n-mcp:workflow:validate` to `package.json`.
+- [x] 830. Integrated DataForSEO n8n MCP workflow manifest validation into `seo:weekly`.
+- [x] 831. Ran `dataforseo:n8n-mcp:workflow:validate` and confirmed 0 errors and 0 warnings.
+- [x] 832. Re-ran `seo:weekly` and confirmed the DataForSEO workflow manifest validation reports `ldndecks.com`, local MCP, read-only, 6 cost caps, and 0 errors.
+- [x] 833. Added `docs/seo/dataforseo-n8n-mcp-import-preflight-2026-06-03.md` for safe n8n export/import checks.
+- [x] 834. Added `docs/seo/n8n-workflows/README.md` as the reserved sanitized export folder guard.
+- [x] 835. Added `scripts/validate-dataforseo-n8n-mcp-import-preflight.mjs` to block credentials, auth headers, active exports, non-LDN domains, missing MCP nodes, missing local endpoint, missing read-only prompts, and missing cost-cap references in future n8n workflow exports.
+- [x] 836. Added `dataforseo:n8n-mcp:import-preflight` to `package.json`.
+- [x] 837. Integrated DataForSEO n8n MCP import preflight into `seo:weekly`.
+- [x] 838. Ran `dataforseo:n8n-mcp:import-preflight` and confirmed READY_NO_EXPORTS with 0 errors and 0 warnings.
+- [x] 839. Re-ran `seo:weekly` and confirmed DataForSEO n8n MCP import preflight reports READY_NO_EXPORTS, 0 exports, 0 errors, and 0 warnings in the aggregate report.
+- [x] 840. Added `docs/seo/n8n-workflows/dataforseo-ldn-readonly-seo-enrichment.sample.json` as a sanitized disabled n8n workflow export sample.
+- [x] 841. Re-ran `dataforseo:n8n-mcp:import-preflight` and confirmed EXPORTS_VALIDATED with 1 export, 0 errors, and 0 warnings.
+- [x] 842. Re-ran `seo:weekly` and confirmed the aggregate report shows DataForSEO import preflight as EXPORTS_VALIDATED with 1 export, 0 errors, and 0 warnings.
+- [x] 843. Strengthened `scripts/validate-dataforseo-n8n-mcp-import-preflight.mjs` with structural checks for 4 required nodes, 3 required connections, local MCP endpoint, disabled execution saves, and sample metadata.
+- [x] 844. Updated DataForSEO import preflight docs to require `Manual Trigger -> AI Agent -> Review Summary` and MCP Client Tool attached through `ai_tool`.
+- [x] 845. Re-ran `dataforseo:n8n-mcp:import-preflight` and confirmed 1 export, 4 required nodes, 3 required connections, local MCP endpoint, 0 errors, and 0 warnings.
+- [x] 846. Re-ran `seo:weekly` and confirmed the aggregate report shows DataForSEO import preflight as EXPORTS_VALIDATED with 1 export, 4 nodes, 3 connections, 0 errors, and 0 warnings.
+- [x] 847. Added `docs/seo/dataforseo-n8n-findings-intake-2026-06-03.csv` with sample-only DataForSEO/n8n findings rows.
+- [x] 848. Added `docs/seo/dataforseo-n8n-findings-intake-2026-06-03.md` to keep DataForSEO workflow output as review-only findings, not public claims or Ads actions.
+- [x] 849. Added `scripts/validate-dataforseo-n8n-findings-intake.mjs` to validate LDN-only affected URLs, sample/real status, review-only action buckets, no public claims, no Ads actions, owner review, and no secrets.
+- [x] 850. Added `dataforseo:n8n-mcp:findings:validate` to `package.json`.
+- [x] 851. Integrated DataForSEO n8n findings intake validation into `seo:weekly`.
+- [x] 852. Re-ran `dataforseo:n8n-mcp:findings:validate` and `seo:weekly`; both passed with SAMPLE_ONLY, 3 rows, 0 real rows, 3 review-only rows, and 0 errors.
+- [x] 853. Added `scripts/generate-dataforseo-n8n-findings-review-board.mjs` to convert findings intake rows into a review-only board.
+- [x] 854. Added `scripts/validate-dataforseo-n8n-findings-review-board.mjs` to guard 0 public claims, 0 Ads actions, owner review, LDN URLs, and review-only decisions.
+- [x] 855. Added `dataforseo:n8n-mcp:findings:board` and `dataforseo:n8n-mcp:findings:board:validate` to `package.json`.
+- [x] 856. Integrated DataForSEO n8n findings review board generation and validation into `seo:weekly`.
+- [x] 857. Re-ran DataForSEO findings board generation, board validation, and weekly SEO; all passed with SAMPLE_ONLY, 3 rows, 0 public claims, 0 Ads actions, and 0 errors.
+- [x] 858. Added `scripts/validate-dataforseo-n8n-promotion-gate.mjs` to block findings promotion unless separate proof, owner-review, measurement, and scaling gates pass.
+- [x] 859. Added `dataforseo:n8n-mcp:promotion-gate` to `package.json`.
+- [x] 860. Integrated DataForSEO n8n promotion gate into `seo:weekly`.
+- [x] 861. Re-ran promotion gate and weekly SEO; both passed with NO_PROMOTABLE_FINDINGS, 3 rows, 0 candidates, 0 promotable rows, 0 public claims, 0 Ads actions, and 0 errors.
+- [x] 862. Added `scripts/generate-dataforseo-n8n-operator-handoff.mjs` to summarize DataForSEO/n8n gate status for operators.
+- [x] 863. Added `scripts/validate-dataforseo-n8n-operator-handoff.mjs` to guard read-only-only operator status, 0 promotable rows, 0 public claims, and 0 Ads actions.
+- [x] 864. Added `dataforseo:n8n-mcp:operator-handoff` and `dataforseo:n8n-mcp:operator-handoff:validate` to `package.json`.
+- [x] 865. Integrated DataForSEO n8n operator handoff generation and validation into `seo:weekly`.
+- [x] 866. Re-ran operator handoff, validator, and weekly SEO; all passed with READY_FOR_READ_ONLY_RUNS_ONLY, 0 promotable rows, 0 public claims, 0 Ads actions, and 0 errors.
+- [x] 867. Added `scripts/run-dataforseo-n8n-gates.mjs` to run the DataForSEO n8n setup, import, findings, promotion, and operator gates in canonical order.
+- [x] 868. Added `dataforseo:n8n-mcp:all` to `package.json` and integrated the all-gates sequence into `seo:weekly`.
+- [x] 869. Re-ran all-gates and weekly SEO; all-gates passed with PASS_READ_ONLY_ONLY, 9 steps, 0 failures, READY_FOR_READ_ONLY_RUNS_ONLY, 0 promotable rows, 0 public claims, and 0 Ads actions.
+- [x] 870. Added `docs/seo/dataforseo-n8n-raw-findings/` as the guarded dropbox for raw read-only n8n output before official findings intake.
+- [x] 871. Added `scripts/validate-dataforseo-n8n-raw-findings.mjs` and `dataforseo:n8n-mcp:raw-findings:validate` to block secrets, unrelated domains, non-LDN URLs, public claims, Ads actions, and non-review-only findings.
+- [x] 872. Integrated raw findings validation into DataForSEO all-gates, operator handoff, operator handoff validation, and weekly SEO reporting.
+- [x] 873. Re-ran raw findings validation and DataForSEO all-gates; both passed with SAMPLE_ONLY raw findings, 1 file, 2 sample findings, 0 real findings, 10 all-gate steps, and 0 failures.
+- [x] 874. Added `scripts/generate-dataforseo-n8n-findings-intake-draft.mjs` to generate review-only draft CSV rows from validated raw n8n output without editing the official intake automatically.
+- [x] 875. Added `dataforseo:n8n-mcp:findings:draft` and integrated draft generation into DataForSEO all-gates, operator handoff, operator handoff validation, and weekly SEO reporting.
+- [x] 876. Re-ran findings draft generation and DataForSEO all-gates; both passed with SAMPLE_ONLY draft rows, 2 rows, 0 real rows, 0 public claims, 0 Ads actions, 11 all-gate steps, and 0 failures.
+- [x] 877. Added `scripts/generate-scaling-evidence-bundle.mjs` to produce a single source-of-record handoff for the 3 current scaling RED blockers.
+- [x] 878. Added `scripts/validate-scaling-evidence-bundle.mjs` and npm scripts `scaling:evidence-bundle` / `scaling:evidence-bundle:validate`.
+- [x] 879. Integrated scaling evidence bundle generation and validation into `seo:weekly`.
+- [x] 880. Re-ran scaling evidence bundle generation and validation; both passed with RED preserved, 3 sections, 3 blockers, 0 missing sources, 0 errors, and 0 warnings.
+- [x] 881. Added `docs/seo/rank-tracker-manual-snapshot-2026-06-03.csv` and `.md` as a proof-safe fallback while Ahrefs API/MCP rank refresh is blocked.
+- [x] 882. Added `scripts/validate-rank-tracker-manual-snapshot.mjs` and `seo:rank-snapshot:validate`.
+- [x] 883. Integrated rank tracker manual snapshot validation into `seo:weekly`.
+- [x] 884. Re-ran rank snapshot validation; it passed with SAMPLE_ONLY, 3 rows, 0 real rows, 0 ranking rows, 0 errors, and 0 warnings.
+- [x] 885. Added `scripts/validate-proof-ops-board.mjs` to validate the GBP/Maps proof ops board, canonical NAP, owner/manual proof tasks, and proof-safety guardrails.
+- [x] 886. Added `seo:proof-ops-board:validate` and integrated proof ops board validation into `seo:weekly`.
+- [x] 887. Re-ran proof ops board generation and validation; both passed with 42 tasks, 18 P0, 42 owner/manual rows, 7 required lanes, 0 errors, and 0 warnings.
+- [x] 888. Added `scripts/validate-sxo-conversion-report.mjs` to validate high-intent SXO pages, proof-gated actions, CTA/calculator paths, unsafe pricing, and no live ranking/GBP claims.
+- [x] 889. Added `seo:sxo-conversion:validate` and integrated SXO validation into `seo:weekly`.
+- [x] 890. Re-ran SXO conversion generation and validation; both passed with 10 targets, average score 93, 2 proof-gated rows, 2 P0 actions, 0 missing CTA rows, 0 unsafe pricing rows, and 0 errors.
+- [x] 891. Added `scripts/validate-internal-link-gap-report.mjs` to validate the 5 priority money-page targets, minimum inbound thresholds, 0 gaps, proof-safe linking rules, and contamination guards.
+- [x] 892. Added `seo:internal-link-gap:validate` and integrated internal link gap validation into `seo:weekly`.
+- [x] 893. Re-ran internal link gap generation and validation; both passed with 203 pages scanned, 5 healthy targets, 0 gaps, 5 proof-safe rules, 0 errors, and 0 warnings.
+- [x] 894. Added `scripts/validate-deep-seo-growth-map.mjs` to validate growth-map inventory metrics, proof-gated pages, candidate-page guardrails, and required sections.
+- [x] 895. Added `seo:growth-map:validate` and integrated deep SEO growth map validation into `seo:weekly`.
+- [x] 896. Re-ran growth map generation and validation; both passed with 203 page modules, 816 internal links, 145 JSON-LD files, 188 fresh pages, 4 proof-gated pages, 6 candidate pages, 0 errors, and 0 warnings.
+- [x] 897. Added `scripts/validate-proof-source-checklist.mjs` to validate canonical identity, verified public profile rows, evidence type rules, minimum proof packet fields, non-citable rules, page unlock rules, current proof blockers, and publish-gate commands.
+- [x] 898. Added `seo:proof-source-checklist:validate` and integrated proof source checklist validation into `seo:weekly`.
+- [x] 899. Re-ran proof ops generation and proof source checklist validation; both passed with 12 profile rows, 6 evidence types, 13 minimum proof fields, 4 unlock rows, 4 blocker rows, 10 publish gate commands, 0 errors, and 0 warnings.
+- [x] 900. Added `scripts/validate-verified-proof-snippets.mjs` to validate docs/runtime proof snippet sync, source-ledger provenance, 0 project snippets while project evidence remains partial, 5 review/profile citations, skipped partial projects, and no rating/count/testimonial proof language.
+- [x] 901. Added `seo:proof-snippets:validate` and integrated verified proof snippets validation into `seo:weekly`.
+- [x] 902. Re-ran proof snippets generation and validation; both passed with 5 snippets, 0 project snippets, 5 review-source snippets, 10 skipped partial projects, runtime JSON synced, 0 errors, and 0 warnings.
+- [x] 903. Added `scripts/validate-owner-evidence-handoff.mjs` to validate owner handoff status, owner file references, proof blocker counts, dry-run commands, verified import commands, red gates, page verdicts, and intake suite counts.
+- [x] 904. Added `seo:evidence-handoff:validate` and integrated owner evidence handoff validation into `seo:weekly`.
+- [x] 905. Re-ran owner evidence handoff generation and validation; both passed with 26 owner rows, 13 P0, 13 P1, 10 project intake rows, 17 photo manifest rows, 1 warranty row, 4 repair cost rows, 3 blocked pages, 0 errors, and 0 warnings.
+- [x] 906. Added `scripts/validate-owner-evidence-sprint.mjs` to validate the 5 owner evidence sprint blocks, source files, P0/P1 priorities, proof-safe done criteria, privacy guardrails, and no premature verified-promotion instructions.
+- [x] 907. Added `seo:evidence-sprint:validate` and integrated owner evidence sprint validation into `seo:weekly`.
+- [x] 908. Re-ran owner evidence sprint generation and validation; both passed with 5 blocks, 4 P0 blocks, 1 P1 block, 26 owner rows, 11 asset actions, 10 project actions, 1 warranty action, 4 repair cost actions, 0 errors, and 0 warnings.
+- [x] 909. Added `scripts/validate-evidence-unblock-runbook.mjs` to validate current readiness, workload totals, intake file references, page workload rows, red gates, operator commands, and publish-ready rules.
+- [x] 910. Added the missing dated `before-after-evidence-resolution-2026-06-03` CSV/markdown pair required by the 2026-06-03 evidence unblock runbook.
+- [x] 911. Added `seo:evidence-unblock:validate` and integrated evidence unblock runbook validation into `seo:weekly`.
+- [x] 912. Re-ran evidence unblock generation and validation; both passed with 0 publish-ready pages, 3 blocked pages, 1 proof-incomplete page, 11 missing/partial assets, 10 partial projects, 1 missing warranty term, 4 missing repair cost ranges, 0 errors, and 0 warnings.
+- [x] 913. Added `scripts/validate-before-after-evidence-resolution.mjs` to validate the dated before/after evidence resolution CSV/markdown pair, 4 partial before/after project rows, 1 missing composite-cost evidence row, VERIFY-marker policy, owner evidence requirements, and dry-run/import commands.
+- [x] 914. Added `seo:before-after-evidence:validate` and integrated before/after evidence resolution validation into `seo:weekly`.
+- [x] 915. Re-ran before/after evidence resolution validation; it passed with 5 rows, 4 before/after partial rows, 1 composite-cost missing row, 0 errors, and 0 warnings.
+- [x] 916. Added `scripts/validate-photo-ingestion-manifest.mjs` to validate the dated photo ingestion manifest, 17 owner photo rows, 11 asset IDs, 6 before/after pairs, 5 single assets, original-photo-only rules, and empty owner `source_path` fields.
+- [x] 917. Added `seo:photo-manifest:validate` and integrated photo ingestion manifest validation into `seo:weekly`.
+- [x] 918. Re-ran photo manifest generation and validation; it passed with 17 rows, 11 asset IDs, 17 empty source paths, 17 partial rows, 0 errors, and 0 warnings.
+- [x] 919. Added `scripts/validate-commercial-evidence-intake.mjs` to validate the dated commercial intake report, warranty CSV, repair-cost CSV, blank evidence fields, partial status, source-backed pricing rules, and import dry-runs.
+- [x] 920. Added `seo:commercial-intake:validate` and integrated commercial evidence intake validation into `seo:weekly`.
+- [x] 921. Re-ran commercial intake generation and validation; it passed with 1 warranty row, 4 repair-cost rows, 3 blank warranty evidence fields, 12 blank repair-cost evidence fields, 0 imported verified rows, 0 errors, and 0 warnings.
+
+## Current External Blockers
+
+- Ahrefs rank-tracker refresh requires a valid `AHREFS_API_TOKEN` or a plan that allows the Rank Tracker API/MCP endpoint.
+- Evidence ledger has 0/6 verified project proof packets, so reputation proof depth still needs owner-supplied project evidence.
+- GHL live lead creation and Twilio SMS verification remain dependent on environment credentials.
+- Google Ads qualified-call attribution has no local code failure remaining, but still needs read-only Google Ads/GTM platform proof before scaling can move out of RED.
+- Real lead outcome rows can now be validated locally, but no real owner/CRM rows have been supplied yet.

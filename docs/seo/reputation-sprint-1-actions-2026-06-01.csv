@@ -1,0 +1,24 @@
+priority,workstream,page_or_asset,action,reason,status
+P0,dataforseo,https://app.dataforseo.com/api-access,Replace invalid API Login/API Password in local and Vercel Production,Live SEO data currently returns 40100,blocked_credentials
+P0,trust,/bbb-accredited-deck-builder-virginia,Link to /deck-builder-northern-virginia /deck-builders-loudoun /get-estimate,Pass trust authority into commercial pages,ready
+P0,trust,/reviews,Link to /showcase /deck-builder-northern-virginia /get-estimate,Turn review proof into conversion flow,ready
+P0,cost,/deck-cost-calculator,Use as primary outreach asset for realtors inspectors HOAs and suppliers,Most linkable homeowner utility asset,ready
+P0,cost,/deck-payment-estimator,Link from all financing and cost pages,Supports high-intent budget users,ready
+P1,cost,/composite-deck-cost-northern-virginia,Add hub links to size cost pages and payment estimator,Consolidates cost intent,ready
+P1,cost,/deck-cost-12x20-northern-virginia,Link to calculator payment estimator and composite cost hub,Captures size intent while reinforcing hub,ready
+P1,cost,/deck-cost-16x20-northern-virginia,Link to calculator payment estimator and composite cost hub,Captures size intent while reinforcing hub,ready
+P1,cost,/deck-cost-20x20-northern-virginia,Link to calculator payment estimator and composite cost hub,Captures size intent while reinforcing hub,ready
+P1,hoa,/loudoun-county-hoa-deck-rules,Make canonical HOA hub and link to community HOA pages,Builds local entity authority,ready
+P1,hoa,/ashburn-village-hoa-deck-rules,Link to Loudoun HOA hub Ashburn city page and get-estimate,Connects community intent to service area,ready
+P1,hoa,/brambleton-hoa-deck-rules,Link to Loudoun HOA hub Brambleton city page and get-estimate,Connects community intent to service area,ready
+P1,hoa,/broadlands-hoa-deck-rules,Link to Loudoun HOA hub Ashburn/Broadlands context and get-estimate,Connects community intent to service area,ready
+P1,permit,/deck-permit-loudoun-county-virginia,Link to footing calculator HOA cost page and Loudoun money page,Combines compliance and commercial intent,ready
+P1,permit,/deck-permit-fairfax-county-virginia,Link to footing calculator Fairfax city page and get-estimate,Combines compliance and commercial intent,ready
+P1,permit,/deck-permit-prince-william-county-virginia,Link to footing calculator Prince William county page and get-estimate,Combines compliance and commercial intent,ready
+P1,tools,/tools/deck-footing-depth-calculator-virginia,Link from permit/code pages and include CTA to inspection/estimate,Tool can earn links and leads,ready
+P1,tools,/tools/deck-stair-calculator,Link from stair/code/safety content and estimate CTA,Tool can earn links and leads,ready
+P2,outreach,/lead-magnets/nova-deck-permit-checklist-2026,Pitch to realtors inspectors HOAs and homeowner associations,Downloadable utility asset for backlinks,ready
+P2,outreach,/referral-partners,Create partner flow for realtors inspectors suppliers and designers,Supports local referral links,ready
+P2,entity,/press,Add latest authority wins and link to BBB Houzz Chamber/referral pages,Strengthens entity proof,ready
+P2,entity,/houzz-deck-projects,Link to showcase composite decks and get-estimate,Connects third-party proof to project proof,ready
+P2,measurement,/admin/seo,Re-run live DataForSEO after credential replacement,Confirms competitor/backlink/AI visibility data,blocked_credentials
