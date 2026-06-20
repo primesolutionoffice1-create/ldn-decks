@@ -15,8 +15,8 @@ import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-fairfax-va',
-  title: 'Deck Contractor Fairfax VA | Class A Licensed | Loudoun Decks',
-  description: 'Licensed Virginia Class A deck contractor in Fairfax, VA. Trex product-line planning serving Mosby Woods, Country Club Hills, Fair Lakes, Mantua, Fairfax Station. City of Fairfax + County permits handled.',
+  title: 'Deck Builder & Contractor Fairfax VA | Class A Licensed | Loudoun Decks',
+  description: 'Virginia Class A licensed deck builder and contractor in Fairfax, VA. New decks, deck repair, screened porches. Serving Mosby Woods, Country Club Hills, Fair Lakes, Mantua, Fairfax Station. City of Fairfax + County permits handled.',
   image: '/social/deck-builder-fairfax-va-social.png',
 });
 
@@ -84,12 +84,12 @@ export default function FairfaxDeckBuilderPage() {
     <main>
       <JsonLd data={fairfaxFaqSchema} />
       <LocalBusinessSchema city="Fairfax" url="https://ldndecks.com/deck-builder-fairfax-va" />
-      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Deck Contractor Fairfax VA | Class A Licensed | Loudoun Decks" description="Licensed Virginia Class A deck contractor in Fairfax, VA. Trex product-line planning serving Mosby Woods, Country Club Hills, Fair Lakes, Mantua, Fairfax Station. City of Fairfax + County permits handled." speakable />
+      <WebPageSchema dateModified="2026-06-20" url={`https://ldndecks.com${PATH}`} name="Deck Builder & Contractor Fairfax VA | Class A Licensed | Loudoun Decks" description="Virginia Class A licensed deck builder and contractor in Fairfax, VA. New decks, deck repair, screened porches. Mosby Woods, Country Club Hills, Fair Lakes, Mantua, Fairfax Station. City + County permits handled." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Contractor in Fairfax, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Virginia Class A licensed deck contractor and Trex product-line planning serving the City of Fairfax, Fair Lakes, Mantua and Fairfax Station. Composite and wood deck construction, screened porches, permit planning support.</p>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Builder & Contractor in Fairfax, VA</h1>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Virginia Class A licensed deck builder and contractor serving the City of Fairfax, Fair Lakes, Mantua and Fairfax Station. New composite decks, deck repair, screened porches, and permit planning support.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
@@ -157,7 +157,8 @@ export default function FairfaxDeckBuilderPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Composite is a strong fit for the Fairfax climate. The freeze-thaw cycles between January and March, the August humidity, and the heavy tree-pollen load through April all work against pressure-treated wood over time. Fairfax homeowners often compare Trex Transcend in Spiced Rum and Lava Rock for deeper grain, and Trex Enhance Naturals in Foggy Wharf or Toasted Sand for tree-canopy lots where lighter colors hide leaf staining and stay cooler underfoot.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>For Country Club Hills and Fairfax Station projects where homeowners want the absolute top of the market, we install TimberTech AZEK Vintage. The PVC core is highly moisture resistant, the grain has one of the strongest wood-look profiles in the category, and manufacturer warranty terms are documented before material selection. Every Trex and TimberTech deck we build in Fairfax ships with hidden fasteners on every board, butyl-tape ledger flashing, and stainless connectors at every load-critical joint. That's the install standard, not an upcharge.</p>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Deck Replacement and Resurfacing in Fairfax, VA</h2>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Deck Repair, Replacement and Resurfacing in Fairfax, VA</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Deck repair in Fairfax, VA ranges from replacing individual boards and tightening loose ledger bolts to full structural rebuilds on aging pressure-treated decks. If a board is soft, a post has visible rot, or the deck feels bouncy underfoot, we start with a structural assessment before recommending repair vs. replacement. Partial repairs on structurally sound decks typically run $1,500 to $6,000; full structural replacements run $30,000 to $45,000. We give you the inspection photos so you can see exactly what needs attention before signing anything.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The single most common call we get in Fairfax is some version of "my deck is 25 years old and the boards are splintering." That conversation almost always leads to a structural inspection, because at the 20-plus year mark the surface boards are usually telling you the framing has problems too. Bolted ledgers from the 90s frequently lack proper flashing and have water-damaged the rim joist behind them. Footings that met code in 1998 often don't meet current Fairfax County depth requirements.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>If the framing is sound, footings are intact and the ledger detail is safe, we resurface. A Trex Transcend resurface on a 380 sqft Mantua deck typically runs $16,000 to $24,000 and gives you a full new deck experience for two-thirds the cost of teardown. If the framing is past it, we tear down and rebuild from new footings. Full structural replacement on a typical Fairfax project runs $30,000 to $45,000 depending on size, board selection, and railing system. We send photos and a written structural assessment with every quote so you can see what we saw.</p>
 
