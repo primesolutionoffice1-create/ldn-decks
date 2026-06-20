@@ -57,7 +57,7 @@ export default function ServicesPage() {
              When you search for <strong>"deck builder near me"</strong>, you deserve a contractor who knows the specific building codes of Fairfax, Loudoun, and Prince William Counties. Our "Topical Authority" comes from years of hands-on experience navigating Northern Virginia's unique HOA requirements and soil conditions. We don't just build decks; we build structures that enhance your home's appraisal value and provide a safe sanctuary for your family.
            </p>
            <p style={{ marginTop: '1.5rem' }}>
-             Ready to start your project? From <strong>deck repair</strong> and resurfacing to massive luxury builds, our team is ready to provide a detailed, itemized quote within 24 hours of our consultation.
+             Ready to start your project? From <strong>deck repair</strong> and resurfacing to massive luxury builds, our team is ready to provide a detailed, itemized quote after review of our consultation.
            </p>
          </div>
        </section>

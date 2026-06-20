@@ -11,6 +11,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/composite-deck-cost-northern-virginia',
@@ -220,6 +221,21 @@ export default function CompositeDeckCostPage() {
         </div>
       </section>
 
+      <GeoAnswerBlock
+        question="How much does a composite deck cost in Northern Virginia?"
+        answer="A composite deck in Northern Virginia usually costs $30 to $95 per square foot installed in 2026. Most finished 300 to 400 square foot projects land between $22,000 and $38,000 when they include composite boards, railings, one stair run, permit coordination, hidden fasteners, and standard framing. Final cost depends on material tier, elevation, stairs, railings, lighting, access, slope, and county or HOA review."
+        facts={[
+          'Best cost page: /composite-deck-cost-northern-virginia',
+          'Primary conversion path: written estimate, not generic price quote',
+          'Proof status: planning ranges only until matched to signed project records',
+        ]}
+        links={[
+          { href: '/deck-cost-calculator', label: 'Deck cost calculator' },
+          { href: '/trex-vs-timbertech-vs-azek', label: 'Material comparison' },
+          { href: '/get-estimate', label: 'Get a written estimate' },
+        ]}
+      />
+
       {/* HERO IMAGE */}
       <section style={{ padding: '0 1.5rem 1.5rem' }}>
         <div style={S.container}>
@@ -385,7 +401,7 @@ export default function CompositeDeckCostPage() {
           </p>
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.25rem' }}>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
-              <strong>Trex pricing</strong> — Trex.com material MSRP for Enhance, Transcend, Signature, and Lineage product lines. Trex Platinum dealer pricing program. Trex installer locator: <a href="https://www.trex.com/contractors/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)' }}>trex.com/contractors</a>.
+              <strong>Trex pricing</strong> — Trex.com material MSRP for Enhance, Transcend, Signature, and Lineage product lines. Dealer pricing may vary by program and region. Trex installer locator: <a href="https://www.trex.com/contractors/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)' }}>trex.com/contractors</a>.
             </li>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
               <strong>TimberTech pricing</strong> — TimberTech.com product MSRP for AZEK Vintage, AZEK Harvest, PRO Legacy, and PRO Reserve lines. TimberTech Platinum dealer pricing. Installer locator: <a href="https://www.timbertech.com/locate-a-pro/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)' }}>locator.timbertech.com</a>.

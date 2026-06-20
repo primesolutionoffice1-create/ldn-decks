@@ -17,6 +17,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-reston-va',
@@ -86,13 +87,13 @@ const expansionSections = [
   {
     title: "Why Composite Wins on a Shaded Reston Lot",
     paragraphs: [
-      "Reston's tree canopy is beautiful and unforgiving. Constant shade, falling leaves and sap keep a wood deck damp and feed mildew, which forces a scrub-and-refinish cycle nobody enjoys. Composite sidesteps all of it  -  our TrexPro and TimberTech credentials cover the board lines engineered for precisely this shaded, debris-heavy setting.",
+      "Reston's tree canopy is beautiful and unforgiving. Constant shade, falling leaves and sap keep a wood deck damp and feed mildew, which forces a scrub-and-refinish cycle nobody enjoys. Composite sidesteps all of it  -  our Trex, TimberTech, and AZEK product experience cover the board lines engineered for precisely this shaded, debris-heavy setting.",
       "Material color matters here too: darker, earth-toned composite blends into the wooded backdrop the Reston covenants are written to protect. On sloped lots  -  common across Reston  -  an elevated or multi-level deck turns the grade into usable rooms, and glass or cable railing keeps lake and woodland views open. Reston projects typically start around $22,000 and scale with elevation, levels and railing choice.",
       "A Reston composite deck trades that seasonal upkeep for a decades-long manufacturer material warranty  -  one that stays enforceable because the certified installation behind it meets the manufacturer's spec."
     ],
     listItems: [
-      { label: "TrexPro Installer", text: "TrexPro Platinum tier  -  full Transcend, Enhance and Select catalog for Reston builds." },
-      { label: "TimberTech Certified", text: "Certified installer for the complete TimberTech Pro and AZEK product lines." },
+      { label: "Trex product planning", text: "Trex Transcend, Enhance and Select catalog options  -  full Transcend, Enhance and Select catalog for Reston builds." },
+      { label: "TimberTech and AZEK product planning", text: "TimberTech Pro and AZEK product-line planning." },
       { label: "DRB-Ready Submissions", text: "Material samples, color specs and drawings prepared for Reston Association review." },
       { label: "Tree-Protective Builds", text: "Root-zone protection and limited-access staging for wooded Reston lots." }
     ]
@@ -122,7 +123,7 @@ export default function DeckBuilderRestonPage() {
         title="Deck Builder Reston VA  -  Premium Craftsmanship"
         description="We design decks that belong under Reston's tree canopy and pass Design Review Board scrutiny. Elevated, multi-level builds and view-preserving railings from $22k+."
         listItems={[
-          "TrexPro & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "Reston Association DRB submissions prepared and timed",
           "Elevated & multi-level designs for wooded, sloped lots",
           "Glass & cable railing for Lake Anne and Lake Audubon views",
@@ -141,6 +142,20 @@ export default function DeckBuilderRestonPage() {
         links={[
           { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
           { href: '/services/deck-inspection', label: 'Deck inspection' },
+        ]}
+      />
+      <GeoAnswerBlock
+        question="What makes Reston deck projects different from other Fairfax County decks?"
+        answer="Reston deck projects often combine Fairfax County permitting with Reston Association Design Review Board planning, wooded-lot constraints, slope, drainage, root zones, privacy, and view-preserving railing choices. Before recommending resurfacing, Loudoun Decks checks the existing frame, ledger, posts, and stairs, then plans composite materials, DRB documentation, and an estimate path around the actual site conditions."
+        facts={[
+          'Primary buyer intent: DRB-ready composite deck planning, wooded-lot replacement, and elevated decks.',
+          'Proof status: Lake Anne, Lake Audubon, South Lakes, and project photo claims require proof-lock.',
+          'Conversion path: Fairfax permit guide, inspection path, and written Reston estimate.'
+        ]}
+        links={[
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/services/deck-inspection', label: 'Deck inspection' },
+          { href: '/get-estimate', label: 'Get a Reston estimate' }
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

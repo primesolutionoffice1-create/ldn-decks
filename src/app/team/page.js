@@ -10,7 +10,7 @@ import { FOUNDER_ID } from '@/lib/business';
 export const metadata = buildMetadata({
   path: '/team',
   title: 'Our Team | Professional Deck Builders & Porch Specialists',
-  description: 'Meet the expert deck builders and porch specialists at LDN Decks. Licensed, insured, and Trex Platinum certified with 10+ years of local experience.',
+  description: 'Meet the expert deck builders and porch specialists at LDN Decks. Licensed, insured, and Trex, TimberTech, and AZEK experienced with 10+ years of local experience.',
   image: '/social/team-social.png',
 });
 
@@ -24,7 +24,7 @@ const profilePageSchema = {
   '@id': 'https://ldndecks.com/team#profilepage',
   url: 'https://ldndecks.com/team',
   name: 'Our Team | Loudoun Decks',
-  description: 'Owner-led custom deck building team for Northern Virginia: Nick (Owner & Lead Designer, Virginia Class A Licensed Contractor, Trex Platinum Partner, TimberTech Certified Installer), Jeff Mineo (Head of Sales), and the master technician crew.',
+  description: 'Owner-led custom deck building team for Northern Virginia: Nick (Owner & Lead Designer, Virginia Class A Licensed Contractor, Trex product-line planning, TimberTech and AZEK product planning), Jeff Mineo (Head of Sales), and the master technician crew.',
   inLanguage: 'en-US',
   mainEntity: { '@id': FOUNDER_ID },
   about: { '@id': 'https://ldndecks.com/#organization' },
@@ -44,7 +44,7 @@ export default function TeamPage() {
   return (
     <main>
       <JsonLd data={profilePageSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/team" name="Our Team | Professional Deck Builders &amp; Porch Specialists" description="Meet the expert deck builders and porch specialists at LDN Decks. Licensed, insured, and Trex Platinum certified with 10+ years of local experience." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/team" name="Our Team | Professional Deck Builders &amp; Porch Specialists" description="Meet the expert deck builders and porch specialists at LDN Decks. Licensed, insured, and Trex, TimberTech, and AZEK experienced with 10+ years of local experience." speakable />
       <TeamHeader />
       <TeamGrid />
       <ContactHome />

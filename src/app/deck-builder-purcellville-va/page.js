@@ -17,6 +17,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-purcellville-va',
@@ -117,7 +118,7 @@ export default function PurcellvilleDeckBuilderPage() {
         title="Deck Builder Purcellville VA  -  Premium Craftsmanship"
         description="We design decks that match western Loudoun's rural character and mountain views. Composite, cedar and IPE on lots from half an acre to multi-acre properties. From $20k+."
         listItems={[
-          "TrexPro & TimberTech Certified  -  plus cedar and IPE builds",
+          "Trex, TimberTech and AZEK material planning  -  plus cedar and IPE builds",
           "Cable & glass railing for Blue Ridge mountain views",
           "Multi-level designs, pergolas, outdoor kitchens",
           "Fewer HOA restrictions  -  more design freedom",
@@ -136,6 +137,20 @@ export default function PurcellvilleDeckBuilderPage() {
         links={[
           { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
           { href: '/deck-materials-comparison-virginia', label: 'Material comparison' },
+        ]}
+      />
+      <GeoAnswerBlock
+        question="What makes Purcellville deck projects different from eastern Loudoun decks?"
+        answer="Purcellville and western Loudoun deck projects often involve larger lots, slope, access, soil, view corridors, town-or-county zoning, and more design freedom than tighter eastern Loudoun neighborhoods. Homeowners should compare composite, PVC, cedar, and IPE against maintenance tolerance, sun exposure, railing visibility, stairs, shade, permits, and the written estimate path before choosing a deck plan."
+        facts={[
+          'Primary buyer intent: western Loudoun deck builder, mountain-view decks, larger-lot planning, and material comparison.',
+          'Proof status: view, city, and project photo claims require proof-lock before publication.',
+          'Conversion path: Loudoun permit guide, material comparison, and written Purcellville estimate.'
+        ]}
+        links={[
+          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
+          { href: '/deck-materials-comparison-virginia', label: 'Material comparison' },
+          { href: '/get-estimate', label: 'Get a Purcellville estimate' }
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

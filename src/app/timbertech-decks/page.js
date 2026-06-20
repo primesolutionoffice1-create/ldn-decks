@@ -14,11 +14,12 @@ import ServicesCallToAction from '@/components/ServicesCallToAction';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import NamedAuthor from '@/components/NamedAuthor';
 import WebPageSchema from '@/components/WebPageSchema';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/timbertech-decks',
-  title: 'TimberTech AZEK Deck Builder NoVA | Certified Contractor',
+  title: 'TimberTech AZEK Deck Builder NoVA | Specialist Contractor',
   description: 'TimberTech and AZEK deck builder in Northern Virginia. Premium PVC and composite decks for Loudoun, Fairfax and Prince William County. Free estimate.',
   image: '/social/timbertech-decks-social.png',
 });
@@ -142,6 +143,21 @@ export default function TimberTechDecksPage() {
       />
 
       <AboveFoldCTA headline="Comparing TimberTech, AZEK, and Trex for a Northern Virginia deck? Talk to a premium composite specialist today." />
+
+      <GeoAnswerBlock
+        question="Who builds TimberTech and AZEK decks in Northern Virginia?"
+        answer="Loudoun Decks helps Northern Virginia homeowners compare and plan TimberTech Composite, AZEK Advanced PVC, Trex, railing, stairs, lighting, drainage, replacement, resurfacing, permits, HOA review, and written estimate paths. TimberTech and AZEK are often strong fits for homeowners who want low-maintenance decking, premium texture, moisture resistance, and a deck specification matched to Virginia sun, shade, humidity, and county review."
+        facts={[
+          'Best-fit projects: premium TimberTech decks, AZEK PVC upgrades, deck replacement, resurfacing, railings, stairs, and lighting',
+          'Primary local markets: Ashburn, Leesburg, Sterling, Reston, Fairfax, McLean, Vienna, Arlington, Alexandria, Manassas, and Woodbridge',
+          'Proof status: manufacturer status, project photos, exact city claims, and warranty claims require source verification before public case-study use',
+        ]}
+        links={[
+          { href: '/timbertech-azek-deck-cost-northern-virginia', label: 'TimberTech and AZEK cost' },
+          { href: '/trex-vs-timbertech-vs-azek', label: 'Compare deck brands' },
+          { href: '/get-estimate', label: 'Get a written estimate' },
+        ]}
+      />
 
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>

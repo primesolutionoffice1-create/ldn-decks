@@ -10,6 +10,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-permit-loudoun-county-virginia',
@@ -67,14 +68,14 @@ export default function LoudounPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-permit-loudoun-county-virginia" name="Loudoun County Deck Permit Guide (2026) | Loudoun Decks" description="Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Plan a cleaner deck build with professional permit coordination." speakable />
+      <WebPageSchema dateModified="2026-06-08" url="https://ldndecks.com/deck-permit-loudoun-county-virginia" name="Loudoun County Deck Permit Guide (2026) | Loudoun Decks" description="Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Plan a cleaner deck build with professional permit coordination." speakable />
       <ArticleSchema
         title="Virginia Deck Building Code: 2026 Loudoun Permit Guide"
         description="Granular technical guide for 2026 Loudoun County deck permits. Footing depths, joist spans, ledger flashing, and LandMARC portal walkthrough."
         path="/deck-permit-loudoun-county-virginia"
         image="/images/blog-permit-guide.png"
         datePublished="2026-04-21"
-        dateModified="2026-06-01"
+        dateModified="2026-06-08"
       />
 
       {/* Hero Section */}
@@ -92,6 +93,21 @@ export default function LoudounPermitPage() {
           <p><strong>A Loudoun County residential deck permit costs $150–$500</strong> for a standard deck and $400–$1,200 for a covered deck, with plan review taking <strong>2–4 weeks</strong> through the LandMARC portal. Any deck attached to the house, over 256 sqft, or more than 16.5&quot; above grade requires a permit. <strong>We handle the entire process</strong> — plans, LandMARC submission, and three inspections. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink>.</p>
         </div>
       </section>
+
+      <GeoAnswerBlock
+        question="Do decks in Loudoun County need permits and HOA approval?"
+        answer="Most attached decks in Loudoun County need permit review, and many community projects also need HOA architectural approval. The county permit checks structure, footing depth, ledger attachment, stairs, guards, setbacks, and inspections; the HOA usually checks appearance, materials, color, railings, screening, and neighborhood design rules. The safest path is to make the HOA packet and LandMARC permit packet match before submission."
+        facts={[
+          'Permit surface: Loudoun County LandMARC',
+          'HOA surface: community architectural review or ARC/DRB process',
+          'Proof status: county requirements should be checked against current official Loudoun guidance before citation',
+        ]}
+        links={[
+          { href: '/hoa-deck-rules-northern-virginia', label: 'HOA deck rules' },
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/lead-magnets/nova-deck-permit-checklist-2026', label: 'Permit checklist' },
+        ]}
+      />
 
       <article style={{ padding: '5rem 0', background: '#fff' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -252,8 +268,8 @@ export default function LoudounPermitPage() {
           ))}
 
           <div style={{ background: 'var(--color-dark)', color: '#fff', borderRadius: '16px', padding: '3.5rem', textAlign: 'center', marginTop: '4rem' }}>
-            <h3 style={{ color: '#fff', fontSize: '2rem', marginTop: 0, marginBottom: '1rem' }}>We Guarantee Full Approval</h3>
-            <p style={{ color: '#ccc', fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>Navigating LandMARC and Virginia USBC shouldn&apos;t be your full-time job. We handle every drawing, submission, and inspection.</p>
+            <h3 style={{ color: '#fff', fontSize: '2rem', marginTop: 0, marginBottom: '1rem' }}>We Build for Permit Approval</h3>
+            <p style={{ color: '#ccc', fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>Navigating LandMARC and Virginia USBC shouldn&apos;t be your full-time job. We prepare the drawings, submit the package, coordinate inspections, and explain any reviewer comments before they become change-order surprises.</p>
             <Link href="/get-estimate" style={{ background: 'var(--color-primary)', color: '#fff', padding: '1.25rem 3rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 800, display: 'inline-block', fontSize: '1.1rem', transition: 'transform 0.2s' }}>Request Your Technical Consultation</Link>
           </div>
 
@@ -277,9 +293,16 @@ export default function LoudounPermitPage() {
         </ul>
       </section>
 
+      <section style={{ padding: '1.5rem', maxWidth: 900, margin: '0 auto 2rem', background: '#f7fbff', border: '1px solid #d8e8f7', borderRadius: 12 }}>
+        <h2 style={{ margin: '0 0 0.5rem', fontSize: '1.35rem' }}>What your estimate clarifies</h2>
+        <p style={{ margin: 0, color: '#333', lineHeight: 1.7 }}>
+          The written estimate identifies expected permit fees, drawing requirements, inspection coordination, and HOA/ARC support so Loudoun homeowners can compare the full approved-project path, not just deck-board pricing.
+        </p>
+      </section>
+
       <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-permit-loudoun-county-virginia" />
-      <NamedAuthor context="Loudoun County" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-06-08" />
 
       <ContactHome />
     </>

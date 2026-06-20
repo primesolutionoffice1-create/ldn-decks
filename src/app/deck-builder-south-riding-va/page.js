@@ -21,7 +21,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 export const metadata = buildMetadata({
   path: '/deck-builder-south-riding-va',
   title: 'Deck Builder in South Riding, VA | Custom Trex Decks',
-  description: "Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permits handled. Free estimate.",
+  description: "Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permit planning support. Free estimate.",
   image: '/social/deck-builder-south-riding-va-social.png',
 });
 
@@ -91,10 +91,10 @@ const expansionSections = [
       "Color selection in South Riding is partly aesthetic and partly practical. Earth tones  -  Toasted Sand, Saddle, Spiced Rum  -  have the strongest DRC approval record and blend with the community's neutral siding palettes. Darker tones absorb more heat but hide dirt and leaf stain; lighter tones stay cooler underfoot but show debris sooner. We walk through the tradeoffs at the design meeting and recommend based on the home's orientation and the DRC's track record."
     ],
     listItems: [
-      { label: "TrexPro Installer", text: "TrexPro Platinum tier  -  full Transcend, Enhance and Select catalog for South Riding builds." },
-      { label: "TimberTech Certified", text: "Certified installer for the complete TimberTech Pro and AZEK product lines." },
+      { label: "Trex product planning", text: "Trex Transcend, Enhance and Select catalog options for South Riding builds." },
+      { label: "TimberTech and AZEK product planning", text: "TimberTech Pro and AZEK product-line planning." },
       { label: "DRC-Ready Submissions", text: "Material samples, color specs and drawings prepared for SRP Design Review Committee." },
-      { label: "Loudoun County Permits", text: "Full permit filing and 2-4 week plan review managed on your behalf." }
+      { label: "Loudoun County Permits", text: "Permit documentation support and 2-4 week plan review planning." }
     ]
   },
   {
@@ -111,18 +111,18 @@ export default function SouthRidingDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="South Riding" url="https://ldndecks.com/deck-builder-south-riding-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-south-riding-va" name="Deck Builder in South Riding, VA | Custom Trex Decks" description="Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-south-riding-va" name="Deck Builder in South Riding, VA | Custom Trex Decks" description="Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permit planning support. Free estimate." speakable />
       <ServicesHeader
         subtext="South Riding, VA's Trusted Deck Company"
         title="Custom Deck Builder in South Riding, VA"
-        description="Loudoun Decks builds composite decks designed for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permits handled. publicly documented reputation."
+        description="Loudoun Decks builds composite decks designed for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permit planning support. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Built for South Riding's DRC Standards"
         title="Deck Builder South Riding VA  -  Premium Craftsmanship"
         description="We replace aging builder-grade PT decks with composite and handle the SRP Design Review Committee process from drawings to approval. Most projects $20k-$45k."
         listItems={[
-          "TrexPro & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "SRP Design Review Committee submissions prepared and timed",
           "Builder-grade PT replacement  -  homes built 1998-2015",
           "Under-deck drainage for walkout basements and lower patios",

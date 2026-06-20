@@ -11,6 +11,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import EnhancifyPaymentCalculator from '@/components/EnhancifyPaymentCalculator';
 import NamedAuthor from '@/components/NamedAuthor';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -25,7 +26,7 @@ const PATH = '/trex-deck-cost-monthly-payment';
 const faqs = [
   {
     q: 'How much does a Trex deck cost in Northern Virginia?',
-    a: 'A Trex deck in Northern Virginia typically runs $35–$70 per square foot installed, depending on tier. A 350 sqft Trex Enhance project lands $18,000–$26,000; Trex Transcend usually runs $22,000–$32,000; Trex Signature (premium PVC-capped) usually runs $28,000–$40,000+ for the same size.',
+    a: 'A Trex deck in Northern Virginia typically runs $35–$70 per square foot installed, depending on tier. A 350 sqft Trex Enhance project lands $18,000–$26,000; Trex Transcend usually runs $22,000–$32,000; Trex Signature composite decking usually runs $28,000–$40,000+ for the same size.',
   },
   {
     q: 'What is the monthly payment on a $25,000 Trex deck?',
@@ -33,15 +34,15 @@ const faqs = [
   },
   {
     q: 'Which Trex tier gives the best long-term value?',
-    a: 'For most homeowners staying in the home 10+ years, Trex Transcend (mid tier) is the sweet spot — 25-year fade & stain warranty, full PVC shell, and a price that lands $4–$8/sqft over Enhance. Signature (full PVC) is the long-term winner if you want the deepest grain pattern, lightest color palette, and the longest manufacturer warranty.',
+    a: 'For most homeowners staying in the home 10+ years, Trex Transcend is the sweet spot because it pairs premium capped-composite performance with strong long-term warranty coverage and a price that lands below the highest-end Signature line. Signature is the long-term winner if you want the newest luxury board profile and a 50-year limited residential fade and stain warranty.',
   },
   {
     q: 'Does Trex come with a warranty?',
-    a: 'Yes. Trex Enhance carries a 25-year limited residential warranty plus a 25-year fade & stain warranty. Trex Transcend carries 25-year limited residential plus 25-year fade & stain. Trex Signature carries a 50-year limited residential plus 50-year fade & stain warranty. Loudoun Decks provides written workmanship warranty terms with the project agreement.',
+    a: 'Yes. Trex warranties vary by product line. Enhance carries 25-year limited residential and fade and stain coverage, Select carries 35-year coverage, and Transcend, Transcend Lineage, and Signature decking carry 50-year limited residential fade and stain coverage according to current Trex warranty information. Loudoun Decks provides written workmanship warranty terms with the project agreement.',
   },
   {
     q: 'Is Trex better than wood for Northern Virginia humidity?',
-    a: 'Yes. Northern Virginia humid summers and freeze-thaw winters cause pressure-treated wood to cup, split, and rot faster than the manufacturer rating. Trex is impervious to moisture penetration on all four sides of the board (PVC cap), eliminating most maintenance and most early board failures.',
+    a: 'Yes for many low-maintenance projects. Northern Virginia humid summers and freeze-thaw winters cause pressure-treated wood to cup, split, and rot faster than many homeowners expect. Trex composite boards remove the annual staining and sealing cycle and reduce common surface-maintenance issues compared with exposed wood.',
   },
   {
     q: 'How long does a Trex deck installation take?',
@@ -86,18 +87,18 @@ const tiers = [
   },
   {
     name: 'Trex Transcend',
-    sub: 'Mid tier — full PVC shell, deeper grain',
+    sub: 'Premium composite tier — deeper grain and stronger warranty coverage',
     range: '$45–$60 /sqft installed',
-    warranty: '25-yr residential + 25-yr fade & stain',
+    warranty: '50-yr limited residential fade & stain',
     project350: '$22,000–$32,000',
     project500: '$30,000–$42,000',
     monthly: '$279–$405 /mo over 10y',
   },
   {
     name: 'Trex Signature',
-    sub: 'Premium tier — full PVC, exotic grain palette',
+    sub: 'Luxury composite tier — newest high-end board profile',
     range: '$60–$80 /sqft installed',
-    warranty: '50-yr residential + 50-yr fade & stain',
+    warranty: '50-yr limited residential fade & stain',
     project350: '$28,000–$40,000+',
     project500: '$38,000–$52,000+',
     monthly: '$354–$506 /mo over 10y',
@@ -164,6 +165,23 @@ export default function TrexDeckCostMonthlyPaymentPage() {
           </p>
         </div>
       </section>
+
+      <GeoAnswerBlock
+        question="How much does a Trex deck cost per month in Northern Virginia?"
+        answer="A typical 350 sqft Trex deck in Northern Virginia runs about $18,000 to $40,000+ depending on Trex tier, railing, stairs, lighting, frame condition, permits, and HOA scope. At the sample 8.99% APR used on this page, that maps to roughly $229 to $506 per month over 10 years. Homeowners should use the payment estimator with their written estimate amount because the lender, term, APR, and optional upgrades change the real monthly payment."
+        facts={[
+          'Trex Enhance planning range: $35-$45 per sqft installed',
+          'Trex Transcend planning range: $45-$60 per sqft installed',
+          'Trex Signature planning range: $60-$80 per sqft installed',
+          'Proof status: warranty and financing terms should be verified against current Trex and lender documents before contract decisions',
+        ]}
+        links={[
+          { href: '/deck-payment-estimator', label: 'Deck payment estimator' },
+          { href: '/trex-decks', label: 'Trex deck planning' },
+          { href: '/trex-vs-timbertech-vs-azek', label: 'Compare Trex, TimberTech, AZEK' },
+          { href: '/get-estimate', label: 'Get a written estimate' },
+        ]}
+      />
 
       <section style={{ background: '#fafafa', padding: '3rem 0', borderBottom: '1px solid #eee' }}>
         <div style={{ ...S.container, maxWidth: 920 }}>
@@ -271,7 +289,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
 
           <h2 style={S.h2}>What Drives the Trex Project Amount</h2>
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
-            <li><strong>Tier:</strong> Enhance vs Transcend vs Signature — biggest single driver</li>
+            <li><strong>Tier:</strong> Enhance vs Transcend vs Signature composite decking — biggest single driver</li>
             <li><strong>Size:</strong> Per-square-foot cost is roughly linear up to ~500 sqft</li>
             <li><strong>Railings:</strong> Trex Select composite vs Signature aluminum vs cable — $40–$150 per linear foot</li>
             <li><strong>Stairs:</strong> Each stair flight adds $1,500–$4,000 depending on width and rise</li>

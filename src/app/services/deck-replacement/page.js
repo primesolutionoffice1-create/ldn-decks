@@ -18,6 +18,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 export const metadata = buildMetadata({
   path: "/services/deck-replacement",
   title: "Professional Deck Replacement Northern Virginia | Rebuild & Remodel",
@@ -138,6 +139,21 @@ export default function DeckReplacementPage() {
 
       <AboveFoldCTA headline="Aging deck in Northern Virginia? Get a free structural evaluation and replacement estimate today." />
 
+      <GeoAnswerBlock
+        question="When should a Northern Virginia homeowner replace a deck instead of repairing it?"
+        answer="A deck should usually be replaced when the ledger connection, footings, posts, joists, stairs, or railings show widespread deterioration, when the frame cannot safely accept new composite boards, or when repairs approach the cost of a rebuild. Replacement also resets structural details for current permit review, HOA documentation, modern railing systems, and low-maintenance composite or PVC decking."
+        facts={[
+          'Replacement path: unsafe structure, failing frame, major layout change, or full code reset',
+          'Repair path: isolated post, stair, railing, ledger, or board issues on an otherwise sound deck',
+          'Proof status: before/after claims require verified project evidence before public case-study use',
+        ]}
+        links={[
+          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
+          { href: '/services/deck-repair', label: 'Deck repair' },
+          { href: '/composite-deck-cost-northern-virginia', label: 'Replacement cost planning' },
+        ]}
+      />
+
       {/* Pricing Anchor - Conversion Filtering */}
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
@@ -225,6 +241,37 @@ export default function DeckReplacementPage() {
       />
       <ServiceAreasGrid />
       <ServicesCallToAction />
+
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Replacement by Local Market</h2>
+        <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
+          Replacement projects often depend on county permit review, HOA rules, access, and existing framing conditions. Use the local planning page closest to the property before requesting a written replacement estimate.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem', marginBottom: '1rem' }}>
+          {[
+            ['/deck-builder-ashburn-va', 'Ashburn deck replacement'],
+            ['/deck-builder-leesburg-va', 'Leesburg deck replacement'],
+            ['/deck-builder-fairfax-va', 'Fairfax deck replacement'],
+            ['/deck-builder-reston-va', 'Reston deck replacement'],
+            ['/deck-builder-mclean-va', 'McLean deck replacement'],
+            ['/deck-builder-arlington-va', 'Arlington deck replacement'],
+            ['/deck-builder-alexandria-va', 'Alexandria deck replacement'],
+            ['/deck-builder-manassas-va', 'Manassas deck replacement'],
+          ].map(([href, text]) => (
+            <Link key={href} href={href} style={{ display: 'block', padding: '0.85rem', background: '#fff', border: '1px solid #e5e5e5', borderRadius: 8, color: 'var(--site-color)', fontWeight: 700, textDecoration: 'none' }}>{text} →</Link>
+          ))}
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+          {[
+            ['/near-you/loudoun-county', 'Loudoun County planning hub'],
+            ['/near-you/fairfax-county', 'Fairfax County planning hub'],
+            ['/near-you/prince-william-county', 'Prince William County planning hub'],
+            ['/near-you/arlington-county', 'Arlington County planning hub'],
+          ].map(([href, text]) => (
+            <Link key={href} href={href} style={{ display: 'block', padding: '0.85rem', background: '#f9f9f9', border: '1px solid #e5e5e5', borderRadius: 8, color: '#222', fontWeight: 700, textDecoration: 'none' }}>{text} →</Link>
+          ))}
+        </div>
+      </section>
 
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Replacement Cost &amp; Decision Guides</h2>

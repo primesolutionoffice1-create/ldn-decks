@@ -18,6 +18,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-mclean-va',
@@ -59,8 +60,8 @@ const mcleanFAQs = [
     a: "Yes. We specialize in complete outdoor living environments for McLean homes, integrating high-end composite decks with stone outdoor kitchens, fire pits, and pergola structures."
   },
   {
-    q: "Are you a certified Trex Platinum builder in McLean?",
-    a: "Yes. Loudoun Decks is a Trex Platinum Partner, meaning our McLean clients get the highest level of craftsmanship and the full protection of Trex's best warranties."
+    q: "Do you build Trex and TimberTech decks in McLean?",
+    a: "Yes. Loudoun Decks builds Trex and TimberTech deck projects in McLean, and we help homeowners compare product lines, manufacturer warranty terms, colors, railing options, and project-specific installation requirements before final material selection."
   }
 ];
 
@@ -124,7 +125,7 @@ export default function McLeanDeckBuilderPage() {
       <ServicesHeader
         subtext="McLean, VA's Choice for Luxury Decks"
         title="Custom Deck Builder in McLean, VA"
-        description="Loudoun Decks builds high-end composite decks, multi-level structures, and screened porches for McLean estates. Trex Platinum Partner. publicly documented reputation."
+        description="Loudoun Decks builds high-end composite decks, multi-level structures, and screened porches for McLean estates. Trex product-line planning. publicly documented reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -141,9 +142,9 @@ export default function McLeanDeckBuilderPage() {
       <ServiceMain
         subtitle="McLean's Trusted Choice"
         title="Deck Builder McLean VA - Unmatched Craftsmanship"
-        description="We design and build the luxury outdoor environments McLean homeowners demand. Custom multi-level builds, premium composite, and full permit management from $30k+."
+        description="We design and build the luxury outdoor environments McLean homeowners demand. Custom multi-level builds, premium composite, and permit planning support from $30k+."
         listItems={[
-          "Trex Platinum & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "Early screening for Fairfax County RPA environmental constraints",
           "Custom multi-level & luxury estate designs",
           "Screened porches, outdoor kitchens & cable railings",
@@ -163,6 +164,20 @@ export default function McLeanDeckBuilderPage() {
           { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
           { href: "/mclean-great-falls-premium-deck-budget", label: "McLean budget guide" },
           { href: "/trex-vs-timbertech-vs-azek", label: "Premium material comparison" }
+        ]}
+      />
+      <GeoAnswerBlock
+        question="Who plans premium composite decks in McLean, VA?"
+        answer="McLean deck projects usually need premium material planning, Fairfax County permit review, slope and drainage checks, privacy planning, and early decisions on railings, lighting, screened porches, or outdoor kitchens. Loudoun Decks plans composite deck replacement and outdoor living scopes for McLean homeowners while keeping manufacturer, project, and neighborhood proof claims gated until verified evidence is available."
+        facts={[
+          'Primary buyer intent: premium composite decks, estate outdoor living, screened porches, and code-reset replacement.',
+          'Proof status: no McLean project/photo/manufacturer claim should be promoted without proof-lock.',
+          'Conversion path: premium budget guide, material comparison, and written estimate.'
+        ]}
+        links={[
+          { href: '/mclean-great-falls-premium-deck-budget', label: 'McLean budget guide' },
+          { href: '/trex-vs-timbertech-vs-azek', label: 'Material comparison' },
+          { href: '/get-estimate', label: 'Get a McLean estimate' }
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

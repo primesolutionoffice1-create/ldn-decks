@@ -117,7 +117,7 @@ export default function DeckBuilderSpringfieldPage() {
         title="Deck Builder Springfield VA  -  Premium Quality"
         description="Springfield's mix of ranches, colonials and townhomes calls for decks designed to fit  -  not a template. Composite builds from Trex and TimberTech, Kingstowne HOA handled, projects from $22k+."
         listItems={[
-          "TrexPro & TimberTech Certified installer",
+          "Trex, TimberTech and AZEK material planning",
           "Kingstowne & Springfield HOA submissions handled",
           "Deck + patio combinations with under-deck drainage",
           "Fairfax County permits filed and inspected",

@@ -14,6 +14,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: "/covered-deck-builder-northern-virginia",
@@ -26,7 +27,7 @@ const inclusions = [
   { title: "Structural Roofline Integration", desc: "We engineer covered-deck rooflines to tie directly into your home's existing structure, creating a seamless architectural extension instead of an afterthought addition." },
   { title: "Premium Finish Materials", desc: "Tongue-and-groove cedar ceilings, exposed timber beams, pressure-treated columns, or low-maintenance composite decking floors — selected to match your home's aesthetic." },
   { title: "Electrical & Comfort Systems", desc: "Ceiling fans for humid Northern Virginia summers, recessed LED lighting on dimmers, GFCI outlets for outdoor appliances, and optional infrared heaters for fall evenings." },
-  { title: "Full Permit Management", desc: "We handle engineering drawings, building permit applications, and inspection coordination with Loudoun, Fairfax, or Prince William County on your behalf." }
+  { title: "Permit Planning Support", desc: "We handle engineering drawings, building permit applications, and inspection coordination with Loudoun, Fairfax, or Prince William County on your behalf." }
 ];
 
 const expansionSections = [
@@ -108,6 +109,21 @@ export default function CoveredDeckPage() {
         subtext="Covered Deck Builder Northern Virginia"
         title="Custom Covered Deck Design & Construction"
         description="Build a roofed open-air outdoor living space with maximum airflow, weather protection, and premium design. Loudoun Decks creates covered decks, covered porches, and pavilion-style entertaining zones across Northern Virginia."
+      />
+
+      <GeoAnswerBlock
+        question="What is a covered deck, and when is it better than a screened porch?"
+        answer="A covered deck is a roofed outdoor living space that stays open on the sides for airflow, grilling, dining, and shade. It is usually better than a screened porch when homeowners want open-air cooking, stronger yard connection, and a pavilion-style entertaining area. A screened porch is better when insect protection is the main priority. In Northern Virginia, roofed deck projects need structural planning, permit review, roof-load details, and electrical coordination."
+        facts={[
+          'Best use: shade, rain protection, grilling, outdoor kitchens, open-air entertaining',
+          'Approval path: roofed structures usually require permit and structural review',
+          'Proof status: project photos need proof-lock before exact city/customer claims',
+        ]}
+        links={[
+          { href: '/screened-porch-builder-northern-virginia', label: 'Screened porch builder' },
+          { href: '/covered-deck-cost-northern-virginia', label: 'Covered deck cost' },
+          { href: '/outdoor-living-northern-virginia', label: 'Outdoor living' },
+        ]}
       />
 
       <section style={{ backgroundColor: '#f9f9f9', padding: '20px', borderBottom: '1px solid #eee', textAlign: 'center' }}>

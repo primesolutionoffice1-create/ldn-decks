@@ -42,7 +42,7 @@ export default function PressPage() {
                   ['Email', 'office@ldndecks.com'],
                   ['Website', 'ldndecks.com'],
                   ['Google Reviews', 'public Google review profile; verify current count and rating directly on Google Maps'],
-                  ['Certifications', 'Trex Platinum Partner, TimberTech Certified Installer'],
+                  ['Certifications', 'Trex product-line planning, TimberTech and AZEK product planning'],
                   ['License', 'Virginia Class A Contractor (DPOR Licensed)'],
                   ['Insurance', 'Insurance documentation available for project review'],
                   ['Owner', 'Nick Owner & Lead Designer, 10+ years experience'],
@@ -62,7 +62,7 @@ export default function PressPage() {
             <li><strong>Google review profile</strong> with current count and rating verified directly on Google Maps</li>
             <li><strong>70+ cities served</strong> across 5 Northern Virginia counties</li>
             <li><strong>Trex profile</strong> verify current manufacturer directory details directly with Trex</li>
-            <li><strong>TimberTech Certified Installer</strong> qualified for all product lines</li>
+            <li><strong>TimberTech and AZEK product planning</strong> qualified for all product lines</li>
             <li><strong>Permit and inspection coordination</strong> across Loudoun, Fairfax & Prince William counties</li>
             <li><strong>Written workmanship warranty terms</strong> provided with project paperwork in addition to manufacturer warranty information</li>
             <li><strong>Average project value:</strong> $15,000–$65,000</li>
@@ -124,7 +124,7 @@ export default function PressPage() {
             <h3 style={{ fontWeight: 700, marginBottom: '0.75rem' }}>Suggested Citation</h3>
             <p style={{ fontSize: '0.9rem', color: '#555', lineHeight: 1.7 }}>
               When citing Loudoun Decks in articles, please use:<br />
-              <em>&quot;According to Nick, owner of Loudoun Decks (ldndecks.com), a Trex Platinum Partner serving Northern Virginia...&quot;</em>
+              <em>&quot;According to Nick, owner of Loudoun Decks (ldndecks.com), a Trex product-line planning serving Northern Virginia...&quot;</em>
             </p>
           </div>
 

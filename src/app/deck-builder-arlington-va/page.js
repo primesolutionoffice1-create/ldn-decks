@@ -12,6 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-arlington-va',
@@ -62,6 +63,20 @@ export default function ArlingtonDeckBuilderPage() {
           { href: "/deck-safety-inspection-checklist", label: "Safety checklist" },
           { href: "/deck-railing-options-northern-virginia", label: "Railing options" },
           { href: "/composite-deck-cost-northern-virginia", label: "Composite deck cost" }
+        ]}
+      />
+      <GeoAnswerBlock
+        question="What should Arlington homeowners plan before building a deck?"
+        answer="Arlington deck projects should start with CPHD permit requirements, setbacks, lot access, privacy, drainage, railing style, and whether the home is in or near a historic district such as Lyon Park or Maywood. Loudoun Decks plans compact composite decks, screened porches, rooftop or balcony rebuilds, and replacement scopes around Arlington’s tighter lots and review requirements."
+        facts={[
+          'Primary buyer intent: compact outdoor living, screened porches, historic-review planning, and composite replacement.',
+          'Proof status: neighborhood and project-specific proof stays gated until owner evidence is attached.',
+          'Conversion path: cost guide, safety checklist, railing options, and written estimate.'
+        ]}
+        links={[
+          { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost' },
+          { href: '/deck-railing-options-northern-virginia', label: 'Railing options' },
+          { href: '/get-estimate', label: 'Get an Arlington estimate' }
         ]}
       />
       <article style={{ padding: '4rem 0' }}>

@@ -9,6 +9,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-permit-fairfax-county-virginia',
@@ -60,14 +61,14 @@ export default function FairfaxPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Fairfax County Deck Permits Made Easy | Loudoun Decks" description="Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish." speakable />
+      <WebPageSchema dateModified="2026-06-08" url={`https://ldndecks.com${PATH}`} name="Fairfax County Deck Permits Made Easy | Loudoun Decks" description="Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish." speakable />
       <ArticleSchema
         title="Fairfax County Deck Permit Guide"
         description="Fairfax County deck permit requirements, FIDO submission planning, inspection sequence, HOA coordination, and structural detail guidance for Northern Virginia homeowners."
         path={PATH}
         image="/images/img20.jpeg"
         datePublished="2026-05-26"
-        dateModified="2026-06-04"
+        dateModified="2026-06-08"
       />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
@@ -83,6 +84,21 @@ export default function FairfaxPermitPage() {
           <p data-speakable><strong>Yes</strong> any deck attached to a house, over 200 sqft, or more than 18&quot; above grade needs a Fairfax County building permit. Plan review takes 3–6 weeks. Permit costs $150–$600. <strong>We handle everything.</strong></p>
         </div>
       </section>
+
+      <GeoAnswerBlock
+        question="Do decks in Fairfax County need permits and HOA approval?"
+        answer="Most attached decks in Fairfax County need a building permit, and many neighborhoods also require HOA or architectural review. Fairfax County review focuses on zoning, setbacks, structure, footing depth, framing, ledger attachment, stairs, guards, and inspections. HOA review focuses on visible design choices such as material, color, railing style, screening, and placement. The fastest path is to align the HOA packet and county permit packet before submission."
+        facts={[
+          'Permit surface: Fairfax County permit and zoning review',
+          'HOA surface: community architectural approval when applicable',
+          'Proof status: county requirements should be checked against current official Fairfax guidance before citation',
+        ]}
+        links={[
+          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
+          { href: '/hoa-deck-rules-northern-virginia', label: 'HOA deck rules' },
+          { href: '/lead-magnets/nova-deck-permit-checklist-2026', label: 'Permit checklist' },
+        ]}
+      />
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -193,8 +209,15 @@ export default function FairfaxPermitPage() {
         </div>
       </article>
 
+      <section style={{ padding: '1.5rem', maxWidth: 900, margin: '0 auto 2rem', background: '#f7fbff', border: '1px solid #d8e8f7', borderRadius: 12 }}>
+        <h2 style={{ margin: '0 0 0.5rem', fontSize: '1.35rem' }}>What your estimate clarifies</h2>
+        <p style={{ margin: 0, color: '#333', lineHeight: 1.7 }}>
+          The written estimate identifies expected Fairfax County permit fees, FIDO drawing requirements, inspection coordination, and HOA/ARC support so you can compare the full approved-project path, not just deck-board pricing.
+        </p>
+      </section>
+
       <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Fairfax County" lastUpdated="2026-06-04" />
+      <NamedAuthor context="Fairfax County" lastUpdated="2026-06-08" />
 
       <RelatedGuides currentPath="/deck-permit-fairfax-county-virginia" />
 

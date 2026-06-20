@@ -110,7 +110,7 @@ const inclusions = [
   },
   {
     title: "Turnkey Installation",
-    desc: "From pouring massive concrete footings to the final coat of stain, we manage the entire build using in-house master carpenters."
+    desc: "From pouring massive concrete footings to the final coat of stain, we coordinate the build with documented scope, footings, carpentry, and finish details."
   },
   {
     title: "Integrated Electronics",

@@ -16,6 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CountyConversionLinks from '@/components/CountyConversionLinks';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -78,6 +79,20 @@ export default function ArlingtonCountyPage() {
         image1="/images/img11.jpeg"
         image2="/images/img32.jpeg"
       />
+      <GeoAnswerBlock
+        question="What makes Arlington County deck projects different?"
+        answer="Arlington County deck projects often involve compact lots, strict setbacks, stormwater concerns, historic-area review, rooftop or balcony constraints, and CPHD permit requirements. Homeowners should plan privacy, drainage, railing style, access, structural load, composite material options, and screened porch scope before approving a deck replacement or new outdoor living project."
+        facts={[
+          'Primary buyer intent: Arlington County deck builder, compact-lot planning, composite decks, and historic-review awareness.',
+          'Proof status: Arlington project and neighborhood claims require proof-lock.',
+          'Conversion path: Arlington page, composite cost guide, and written estimate.'
+        ]}
+        links={[
+          { href: '/deck-builder-arlington-va', label: 'Arlington city page' },
+          { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost' },
+          { href: '/get-estimate', label: 'Get an Arlington County estimate' }
+        ]}
+      />
       <section className={styles.permitSection}>
         <div className={styles.container}>
           <div className={styles.permitContent}>
@@ -110,7 +125,7 @@ export default function ArlingtonCountyPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Arlington County Homeowners Trust LDN Decks</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Arlington County features some of the highest property values in Virginia, with compact urban lots that demand creative design. Whether you reside in a classic craftsman bungalow in Cherrydale or a contemporary home in Clarendon, maximizing every square foot of your outdoor living space is essential to your home's functionality and resale value.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks is a premier outdoor living specialist in Northern Virginia. We bring certified <strong>Trex Platinum Partner</strong> and <strong>TimberTech Certified Installer</strong> capabilities to Arlington. Our design-build approach ensures that your custom <Link href="/composite-decks">composite deck</Link> or <Link href="/screened-porch-builder-northern-virginia">screened porch</Link> is engineered for maximum durability, visual elegance, and long-term low maintenance.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks is a premier outdoor living specialist in Northern Virginia. We bring Trex, TimberTech, and AZEK material planning capabilities to Arlington. Our design-build approach ensures that your custom <Link href="/composite-decks">composite deck</Link> or <Link href="/screened-porch-builder-northern-virginia">screened porch</Link> is engineered for maximum durability, visual elegance, and long-term low maintenance.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Arlington County Building Permits & Codes</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Arlington County requires structural building permits for all decks attached to a building, as well as freestanding decks higher than 30 inches above the surrounding grade. Permits are processed online through the <strong>Permit Arlington</strong> portal. Review timelines generally run <strong>3–4 weeks</strong>.</p>

@@ -149,7 +149,7 @@ export default function EightHundredSqftDeckCostPage() {
           </ul>
 
           <h2 style={S.h2}>Permit + sealed engineering (included)</h2>
-          <p style={S.p}>800 sqft triggers full permit + 3-inspection requirements plus, in most cases, sealed engineering. Permit fees scale with construction valuation — typically $400–$1,200 at this size. We file every package in parallel from contract day.</p>
+          <p style={S.p}>800 sqft triggers permit-ready planning plus typical 3-inspection requirements plus, in most cases, sealed engineering. Permit fees scale with construction valuation — typically $400–$1,200 at this size. We prepare permit documentation as part of the project schedule.</p>
           <ul style={S.list}>
             <li style={S.listItem}><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County permit guide</Link></li>
             <li style={S.listItem}><Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County permit guide</Link></li>

@@ -21,7 +21,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 export const metadata = buildMetadata({
   path: '/deck-builder-haymarket-va',
   title: 'Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots',
-  description: "Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. Free estimate.",
+  description: "Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William permit planning support. Free estimate.",
   image: '/social/deck-builder-haymarket-va-social.png',
 });
 
@@ -47,7 +47,7 @@ const haymarketFAQs = [
   },
   {
     q: "Can you build a multi-level deck on a sloped Haymarket lot?",
-    a: "Yes  -  multi-level decks are one of our core specialties and a natural fit for Haymarket's terrain. We design 2-3 level cascading decks that follow the grade, with each level serving a distinct function. Elevated sections require engineered drawings for Prince William County permit review, and we handle that engineering in-house."
+    a: "Yes  -  multi-level decks are one of our core specialties and a natural fit for Haymarket's terrain. We design 2-3 level cascading decks that follow the grade, with each level serving a distinct function. Elevated sections require engineered drawings for Prince William County permit review, and we scope those engineering requirements during planning."
   },
   {
     q: "How does the Dominion Valley HOA process work for decks?",
@@ -84,8 +84,8 @@ const expansionSections = [
       "For the largest builds  -  450+ square feet, multi-level, with cable railing and integrated lighting  -  we use 2x8 or 2x10 joists at 12-inch centers rather than the minimum 16-inch spacing. The tighter joist spacing eliminates any flex or bounce underfoot, which matters on an elevated platform where occupants are acutely aware of deck movement. It adds material cost but changes the feel of the finished deck entirely."
     ],
     listItems: [
-      { label: "TrexPro Platinum", text: "Full Transcend, Enhance and Select catalog  -  installed to manufacturer spec for warranty compliance." },
-      { label: "TimberTech Certified", text: "Complete TimberTech Pro and AZEK product lines for Haymarket's premium builds." },
+      { label: "Trex product-line planning", text: "Full Transcend, Enhance and Select catalog  -  installed to manufacturer spec for warranty compliance." },
+      { label: "TimberTech and AZEK product planning", text: "Complete TimberTech Pro and AZEK product lines for Haymarket's premium builds." },
       { label: "Cable & Glass Railing", text: "View-preserving railing systems engineered for elevated, multi-level Haymarket decks." },
       { label: "Structural Engineering", text: "In-house engineered drawings for elevated and multi-level decks  -  required for Prince William County permits." }
     ]
@@ -112,18 +112,18 @@ export default function DeckBuilderHaymarketPage() {
   return (
     <main>
       <LocalBusinessSchema city="Haymarket" url="https://ldndecks.com/deck-builder-haymarket-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-haymarket-va" name="Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots" description="Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-haymarket-va" name="Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots" description="Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William permit planning support. Free estimate." speakable />
       <ServicesHeader
         subtext="Haymarket, VA's Trusted Deck Company"
         title="Custom Deck Builder in Haymarket, VA"
-        description="Loudoun Decks builds multi-level composite decks designed for Haymarket's sloped lots and mountain views. Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William County permits handled. publicly documented reputation."
+        description="Loudoun Decks builds multi-level composite decks designed for Haymarket's sloped lots and mountain views. Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William permit planning support. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Multi-Level Designs for Haymarket's Terrain"
         title="Deck Builder Haymarket VA  -  Premium Craftsmanship"
         description="Haymarket's larger lots and elevation changes call for decks engineered to the site. Multi-level builds, cable railing for mountain and golf course views, and premium composite from $22k+."
         listItems={[
-          "TrexPro & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "Multi-level designs for sloped lots  -  2-3 level cascading decks",
           "Cable & glass railing for Bull Run Mountain and golf course views",
           "Dominion Valley & Piedmont HOA packages prepared",

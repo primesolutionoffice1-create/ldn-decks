@@ -16,6 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CountyConversionLinks from '@/components/CountyConversionLinks';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -50,7 +51,7 @@ const faqs = [
   { q: "Do you work throughout all of Prince William County?", a: "Yes. We serve homeowners across Prince William County, including Manassas, Manassas Park, Woodbridge, Dumfries, Quantico, Haymarket, Gainesville, Bristow, Nokesville, Lake Ridge, Montclair, Triangle and nearby communities." },
   { q: "How much does a new deck typically cost in Prince William County?", a: "In Prince William County, a 300 sq ft composite deck typically runs $14,000–$28,000 and a 500 sq ft multi-level deck $28,000–$48,000 — about 10–15% below Fairfax and Loudoun. Final pricing depends on materials, design, and site conditions. After a free on-site visit, we provide a clear written estimate." },
   { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget. Composite upgrades from aging pressure-treated wood are a popular project in Manassas, Woodbridge, and Lake Ridge." },
-  { q: "Do you handle permits for deck projects?", a: "Yes. Prince William County requires a permit for decks over 200 square feet or more than 30 inches above grade, with review typically taking just 2–3 weeks — the fastest of the major Northern Virginia counties. We handle submission, plan-review coordination, and all three required inspections." },
+  { q: "Do you help with permits for deck projects?", a: "Yes. Prince William County may require a permit for decks over 200 square feet or more than 30 inches above grade. We help homeowners identify permit triggers, plan submission requirements, coordinate plan-review questions, and understand inspection milestones before construction begins." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within a few weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
 ];
 
@@ -77,6 +78,20 @@ export default function PrinceWilliamCountyPage() {
         listItems={services}
         image1="/images/img05.jpeg"
         image2="/images/img13.jpeg"
+      />
+      <GeoAnswerBlock
+        question="Who plans deck replacement across Prince William County, VA?"
+        answer="Loudoun Decks plans deck replacement, resurfacing, composite upgrades, patios, porches, and outdoor living projects across Prince William County, including Manassas, Woodbridge, Gainesville, Haymarket, Bristow, and nearby communities. Homeowners should check Prince William permit triggers, framing condition, drainage, stairs, railings, material choices, and estimate scope before approving a project."
+        facts={[
+          'Primary buyer intent: Prince William County deck builder, replacement, composite upgrades, and permit guidance.',
+          'Proof status: city and project photo claims require proof-lock before public use.',
+          'Conversion path: Prince William permit guide, Manassas page, and written estimate.'
+        ]}
+        links={[
+          { href: '/deck-permit-prince-william-county-virginia', label: 'Prince William permit guide' },
+          { href: '/deck-builder-manassas-va', label: 'Manassas decks' },
+          { href: '/get-estimate', label: 'Get a Prince William estimate' }
+        ]}
       />
       <section className={styles.permitSection}>
         <div className={styles.container}>
@@ -112,7 +127,7 @@ export default function PrinceWilliamCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We build across Prince William County every week — from Manassas, Gainesville, and Haymarket to Bristow, Woodbridge, and Dale City. That on-the-ground presence means faster site visits, local material sourcing, and deep familiarity with county permit requirements.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Prince William County Permits</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County requires building permits for decks over 200 sqft or 30 inches above grade. Processing time is typically <strong>2-3 weeks</strong> — the fastest of the three major Northern Virginia counties. We handle the full permit process including submission, plan review coordination, and all three required inspections.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County may require building permits for decks over 200 sqft or 30 inches above grade. Review timing depends on scope and county workload. We help homeowners plan the permit path, submission requirements, plan-review coordination, and inspection milestones before construction begins.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Prince William County (2026)</h3>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>

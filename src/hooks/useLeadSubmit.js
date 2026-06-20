@@ -71,6 +71,7 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
     const timeline = formData.get('timeline') || '';
     const budgetRange = formData.get('budgetRange') || formData.get('budget') || '';
     const materialInterest = formData.get('materialInterest') || '';
+    const homeownerStatus = formData.get('homeownerStatus') || '';
     const hoa = formData.get('hoa') || '';
     const formLocation = formElement?.dataset?.formLocation || formType;
 
@@ -108,6 +109,7 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
           timeline,
           budgetRange,
           materialInterest,
+          homeownerStatus,
           hoa,
           formLocation,
           formType,

@@ -117,7 +117,7 @@ export default function DeckBuilderLortonPage() {
         title="Deck Builder Lorton VA  -  Premium Quality"
         description="Lorton's newer communities have builder-grade decks ready for a real upgrade. We replace them with Trex and TimberTech composite  -  cable railing for wooded views, proper engineering for conservation lots. Projects from $22k+."
         listItems={[
-          "TrexPro & TimberTech Certified installer",
+          "Trex, TimberTech and AZEK material planning",
           "Laurel Hill & Crosspointe HOA submissions handled",
           "Cable railing for wooded and conservation lot views",
           "Fairfax County permits filed and inspected",

@@ -61,7 +61,7 @@ export default function PWCountyPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you." speakable />
+      <WebPageSchema dateModified="2026-06-08" url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Permit Guide: Prince William County, VA</h1>
@@ -153,8 +153,16 @@ export default function PWCountyPermitPage() {
           </ul>
         </div>
       </article>
+
+      <section style={{ padding: '1.5rem', maxWidth: 900, margin: '0 auto 2rem', background: '#f7fbff', border: '1px solid #d8e8f7', borderRadius: 12 }}>
+        <h2 style={{ margin: '0 0 0.5rem', fontSize: '1.35rem' }}>What your estimate clarifies</h2>
+        <p style={{ margin: 0, color: '#333', lineHeight: 1.7 }}>
+          The written estimate identifies expected permit fees, the correct Prince William-area jurisdiction, drawing requirements, inspection coordination, and HOA/ARC support so you can compare the full approved-project path, not just deck-board pricing.
+        </p>
+      </section>
+
       <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Prince William County" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Prince William County" lastUpdated="2026-06-08" />
 
       <RelatedGuides currentPath="/deck-permit-prince-william-county-virginia" />
 

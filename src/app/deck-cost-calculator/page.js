@@ -1,9 +1,9 @@
-'use client';
 import React from 'react';
 import Link from 'next/link';
 import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
 import FinancingCTA from '@/components/FinancingCTA';
 import NamedAuthor from '@/components/NamedAuthor';
+import { buildMetadata } from '@/lib/seo';
 
 // This page is a LINKABLE ASSET designed to attract backlinks from
 // real estate blogs, home improvement sites, and local news.
@@ -11,6 +11,13 @@ import NamedAuthor from '@/components/NamedAuthor';
 //
 // Calculator UI + math now lives in DeckCostCalculatorWidget and is shared
 // with /composite-deck-cost-northern-virginia.
+
+export const metadata = buildMetadata({
+  path: '/deck-cost-calculator',
+  title: 'Deck Cost Calculator Northern Virginia | 2026 Price Tool',
+  description: 'Estimate 2026 deck cost in Northern Virginia by size, material, stairs, railing, elevation, and permit complexity before requesting an itemized quote.',
+  image: '/social/deck-cost-calculator-social.png',
+});
 
 const calculatorFaqs = [
   {

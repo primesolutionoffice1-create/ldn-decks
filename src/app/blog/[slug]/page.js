@@ -71,6 +71,27 @@ function renderInline(text, keyPrefix = 'i') {
   return nodes;
 }
 
+function parseMarkdownTable(block) {
+  const rows = block
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  if (rows.length < 3 || !rows[0].startsWith('|') || !/^\|?[\s:|\-]+\|?$/.test(rows[1])) {
+    return null;
+  }
+
+  const toCells = (line) => line.replace(/^\|/, '').replace(/\|$/, '').split('|').map((cell) => cell.trim());
+  const headers = toCells(rows[0]);
+  const bodyRows = rows.slice(2).map(toCells);
+
+  if (!headers.length || bodyRows.some((row) => row.length !== headers.length)) {
+    return null;
+  }
+
+  return { headers, bodyRows };
+}
+
 function buildArticleAuthor(post) {
   const authorName = post.author || BUSINESS.name;
 
@@ -232,6 +253,51 @@ export default async function SingleBlogPage({ params }) {
                  if (para.startsWith('### ')) {
                    return <h3 key={idx} style={{ marginTop: '30px', marginBottom: '15px', color: '#222' }}>{para.replace('### ', '')}</h3>;
                  }
+                 const table = parseMarkdownTable(para);
+                 if (table) {
+                   return (
+                     <div key={idx} style={{ overflowX: 'auto', margin: '32px 0' }}>
+                       <table style={{ width: '100%', borderCollapse: 'collapse', border: '1px solid #e5e7eb', fontSize: '0.95rem' }}>
+                         <thead>
+                           <tr>
+                             {table.headers.map((header, cellIdx) => (
+                               <th
+                                 key={cellIdx}
+                                 style={{
+                                   textAlign: 'left',
+                                   padding: '12px',
+                                   borderBottom: '2px solid #d1d5db',
+                                   background: '#f9fafb',
+                                   color: '#111827',
+                                 }}
+                               >
+                                 {renderInline(header, `t${idx}-h${cellIdx}`)}
+                               </th>
+                             ))}
+                           </tr>
+                         </thead>
+                         <tbody>
+                           {table.bodyRows.map((row, rowIdx) => (
+                             <tr key={rowIdx}>
+                               {row.map((cell, cellIdx) => (
+                                 <td
+                                   key={cellIdx}
+                                   style={{
+                                     padding: '12px',
+                                     borderTop: '1px solid #e5e7eb',
+                                     verticalAlign: 'top',
+                                   }}
+                                 >
+                                   {renderInline(cell, `t${idx}-r${rowIdx}-c${cellIdx}`)}
+                                 </td>
+                               ))}
+                             </tr>
+                           ))}
+                         </tbody>
+                       </table>
+                     </div>
+                   );
+                 }
                  // Inline image block: a paragraph that is just ![alt](src) renders as an
                  // illustration (diagram / infographic). Square dims because the current
                  // diagram set is 1024x1024; auto height keeps non-square images fluid.
@@ -295,7 +361,7 @@ export default async function SingleBlogPage({ params }) {
        </div>
        <ServicesHome />
        <ServiceAreasGrid />
-       <RelatedGuides currentPath={`/blog/${post.slug}`} />
+       <RelatedGuides currentPath={`/blog/${post.slug}`} category="blog-commercial" />
     </article>
   );
 }

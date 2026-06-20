@@ -18,11 +18,12 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-chantilly-va',
   title: 'Deck Builder in Chantilly, VA | Trex Certified | Loudoun Decks',
-  description: 'Trusted deck builder in Chantilly, VA. Trex Platinum Partner & TimberTech Certified. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
+  description: 'Trusted deck builder in Chantilly, VA. Trex product-line planning & TimberTech and AZEK product planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
   image: '/social/deck-builder-chantilly-va-social.png',
 });
 
@@ -33,7 +34,7 @@ const inclusions = [
   },
   {
     title: "Premium Composite Specialists",
-    desc: "As certified Trex Platinum and TimberTech installers, we deliver high-grade composite decking that withstands the variable Virginia weather while looking pristine."
+    desc: "With Trex, TimberTech, and AZEK material planning experience, we deliver high-grade composite decking that withstands the variable Virginia weather while looking pristine."
   },
   {
     title: "Route 50 Corridor Craftsmanship",
@@ -52,7 +53,7 @@ const chantillyFAQs = [
   },
   {
     q: "Do you handle the Fairfax County permitting process for Chantilly homes?",
-    a: "Yes. Building in Chantilly requires Fairfax County permits and local HOA approvals. We handle the entire permitting and architectural review submission process for you."
+    a: "Yes. Building in Chantilly requires Fairfax County permits and local HOA approvals. We coordinate permitting and architectural review planning for you."
   },
   {
     q: "How long does it take to build a deck in Chantilly?",
@@ -60,7 +61,7 @@ const chantillyFAQs = [
   },
   {
     q: "Are you a Trex certified contractor in Chantilly VA?",
-    a: "Yes. Loudoun Decks is a Trex Platinum Partner, giving Chantilly clients access to Trex product lines, manufacturer-backed warranty paths, and installation practices aligned with Trex requirements."
+    a: "Loudoun Decks plans Chantilly projects with Trex product-line options, manufacturer warranty documentation, and installation practices aligned with published Trex requirements."
   },
   {
     q: "Do you build screened porches in Chantilly?",
@@ -87,14 +88,14 @@ const expansionSections = [
   {
     title: "Composite Decking Specialists for Chantilly Homes",
     paragraphs: [
-      "The humid Virginia summers make composite decking the ideal choice for Chantilly homeowners. As a Trex Platinum Partner and TimberTech Certified contractor, we install decking that won't warp, splinter, or rot. Projects typically start around $20,000 and scale based on your specific design requirements.",
+      "The humid Virginia summers make composite decking the ideal choice for Chantilly homeowners. We plan Trex, TimberTech, and AZEK decking options with low-maintenance boards selected for Virginia humidity and freeze-thaw exposure. Projects typically start around $20,000 and scale based on your specific design requirements.",
       "We specialize in designing decks that maximize the usable outdoor space of your property. Integrated lighting, custom railings, and built-in seating are standard requests that we execute flawlessly.",
       "Every composite deck proposal in Chantilly includes manufacturer warranty information for the selected product line and installation practices aligned with published manufacturer guidance."
     ],
     listItems: [
-      { label: "Trex Platinum Partner", text: "Trex product-line familiarity and manufacturer-aligned installation practices for Chantilly and Northern Virginia." },
-      { label: "TimberTech Certified", text: "Certified installer for the full TimberTech Pro and AZEK product lines." },
-      { label: "Permit Ready", text: "Full handling of all Fairfax County permitting and inspections." },
+      { label: "Trex product-line planning", text: "Trex product-line familiarity and manufacturer-aligned installation practices for Chantilly and Northern Virginia." },
+      { label: "TimberTech and AZEK product planning", text: "TimberTech Pro and AZEK product-line planning for premium builds." },
+      { label: "Permit Ready", text: "Permit planning support for Fairfax County and inspections." },
       { label: "Public Profiles", text: "Homeowners can review public profiles and project documentation before approving a scope." }
     ]
   },
@@ -112,18 +113,18 @@ export default function DeckBuilderChantillyPage() {
   return (
     <main>
       <LocalBusinessSchema city="Chantilly" url="https://ldndecks.com/deck-builder-chantilly-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-chantilly-va" name="Deck Builder in Chantilly, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Chantilly, VA. Trex Platinum Partner &amp; TimberTech Certified. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-chantilly-va" name="Deck Builder in Chantilly, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Chantilly, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Chantilly, VA's Trusted Deck Company"
         title="Custom Deck Builder in Chantilly, VA"
-        description="Loudoun Decks builds premium composite decks and screened porches in Chantilly. Trex Platinum Partner. publicly documented reputation."
+        description="Loudoun Decks builds premium composite decks and screened porches in Chantilly. Trex product-line planning. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Sully District Craftsmanship"
         title="Deck Builder Chantilly VA  -  Premium Quality"
         description="We build the outdoor spaces Chantilly homeowners love. Custom designs, HOA-ready plans, and premium composite materials starting at $20k+."
         listItems={[
-          "Trex Platinum & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "Full Chantilly & Fairfax County Permit management",
           "Custom multi-level and single-level designs",
           "Screened porches, pergolas & under-deck patios",
@@ -143,6 +144,20 @@ export default function DeckBuilderChantillyPage() {
           { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
           { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" },
           { href: "/deck-cost-calculator", label: "Deck cost calculator" }
+        ]}
+      />
+      <GeoAnswerBlock
+        question="Why do Chantilly deck projects need early HOA and permit planning?"
+        answer="Chantilly deck projects often involve Fairfax County Sully District requirements, Route 50 corridor neighborhoods, HOA architectural review, and older wood deck replacement. Homeowners should check framing, ledger flashing, stairs, railings, material choices, HOA packet requirements, and Fairfax County permit details before choosing resurfacing, full replacement, or a screened porch addition."
+        facts={[
+          'Primary buyer intent: Chantilly deck builder, HOA-ready replacement, composite upgrades, and screened porches.',
+          'Proof status: exact neighborhood and completed-project claims require proof-lock.',
+          'Conversion path: Fairfax permit guide, HOA guide, and written estimate.'
+        ]}
+        links={[
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/hoa-deck-rules-northern-virginia', label: 'HOA deck rules' },
+          { href: '/get-estimate', label: 'Get a Chantilly estimate' }
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

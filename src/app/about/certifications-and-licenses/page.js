@@ -11,7 +11,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/about/certifications-and-licenses',
   title: 'Certifications & Licenses | Loudoun Decks | Verified Contractor',
-  description: 'Loudoun Decks: Virginia Class A Licensed, fully insured, Trex Pro certified, BBB accredited. Verify our credentials. Serving Loudoun, Fairfax & Prince William.',
+  description: 'Loudoun Decks: Virginia Class A Licensed, fully insured, Trex profile-verifiable, NADRA member, BBB accredited. Verify our credentials. Serving Loudoun, Fairfax & Prince William.',
   image: '/social/certifications-licenses-social.png',
 });
 
@@ -19,9 +19,20 @@ export const metadata = buildMetadata({
 // carries hasCredential (sourced from business.js) and is emitted once globally
 // by StructuredData in the root layout.
 export default function CertificationsPage() {
+  const nadraMembership = BUSINESS.memberships.find((membership) => membership.alternateName === 'NADRA');
+  const credentialCards = [
+    { title: 'Virginia Contractor License', detail: 'Class A Licensed Contractor — Virginia Department of Professional and Occupational Regulation (DPOR). Authorized for residential and commercial projects of any value in Virginia.', verify: 'Verify at dpor.virginia.gov → License Lookup', badge: 'DPOR Licensed' },
+    { title: 'Fully Insured', detail: 'Comprehensive general liability insurance and workers\' compensation coverage. Certificate of insurance available on request for any project.', verify: 'Request certificate: office@ldndecks.com', badge: 'Insured' },
+    { title: 'Trex Pro Installer', detail: 'Trex Pro installer with direct access to the full Trex product line. Trex Pro certification requires demonstrated installation expertise and ongoing training.', verify: 'Verify at trex.com/find-a-builder', badge: 'Trex Pro' },
+    { title: 'NADRA Member Profile', detail: 'North American Deck and Railing Association Builder/Contractor/Remodeler membership. The public profile is linked directly for consumer verification.', verify: 'View NADRA member profile', verifyHref: nadraMembership?.directoryUrl, badge: 'NADRA Member' },
+    { title: 'Google Review Profile', detail: 'Public Google reviews from Northern Virginia homeowners across Loudoun, Fairfax, and Prince William counties.', verify: 'Search "Loudoun Decks" on Google Maps and verify current count/rating directly', badge: 'Public reviews' },
+    { title: 'Written Workmanship Warranty Terms', detail: 'Project paperwork documents workmanship warranty terms, coverage scope, and how manufacturer material warranties are handled for the selected products.', verify: 'Warranty terms provided in writing with project paperwork', badge: 'Written Warranty' },
+    { title: 'Permit & Inspection Coordination', detail: 'Deck and porch projects often require county permit review, inspection scheduling, and HOA/ARC coordination. We prepare the project paperwork and coordinate the process with the relevant jurisdiction.', verify: 'Verify permit requirements with your county building department', badge: 'Permit Support' },
+  ];
+
   return (
     <>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/about/certifications-and-licenses" name="Certifications &amp; Licenses | Loudoun Decks | Verified Contractor" description="Loudoun Decks: Virginia Class A Licensed, fully insured, Trex Pro certified, BBB accredited. Verify our credentials. Serving Loudoun, Fairfax &amp; Prince William." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/about/certifications-and-licenses" name="Certifications &amp; Licenses | Loudoun Decks | Verified Contractor" description="Loudoun Decks: Virginia Class A Licensed, fully insured, Trex profile-verifiable, NADRA member, BBB accredited. Verify our credentials. Serving Loudoun, Fairfax &amp; Prince William." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Certifications &amp; Licenses</h1>
@@ -32,19 +43,19 @@ export default function CertificationsPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
-            {[
-              { title: 'Virginia Contractor License', detail: 'Class A Licensed Contractor — Virginia Department of Professional and Occupational Regulation (DPOR). Authorized for residential and commercial projects of any value in Virginia.', verify: 'Verify at dpor.virginia.gov → License Lookup', badge: 'DPOR Licensed' },
-              { title: 'Fully Insured', detail: 'Comprehensive general liability insurance and workers\' compensation coverage. Certificate of insurance available on request for any project.', verify: 'Request certificate: office@ldndecks.com', badge: 'Insured' },
-              { title: 'Trex Pro Installer', detail: 'Certified Trex Pro installer with direct access to the full Trex product line. Trex Pro certification requires demonstrated installation expertise and ongoing training.', verify: 'Verify at trex.com/find-a-builder', badge: 'Trex Pro' },
-              { title: 'Google Review Profile', detail: 'Public Google reviews from Northern Virginia homeowners across Loudoun, Fairfax, and Prince William counties.', verify: 'Search "Loudoun Decks" on Google Maps and verify current count/rating directly', badge: 'Public reviews' },
-              { title: 'Written Workmanship Warranty Terms', detail: 'Project paperwork documents workmanship warranty terms, coverage scope, and how manufacturer material warranties are handled for the selected products.', verify: 'Warranty terms provided in writing with project paperwork', badge: 'Written Warranty' },
-              { title: 'Permit & Inspection Coordination', detail: 'Deck and porch projects often require county permit review, inspection scheduling, and HOA/ARC coordination. We prepare the project paperwork and coordinate the process with the relevant jurisdiction.', verify: 'Verify permit requirements with your county building department', badge: 'Permit Support' },
-            ].map((item) => (
+            {credentialCards.map((item) => (
               <div key={item.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', border: '1px solid #e5e5e5' }}>
                 <p style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-primary)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{item.badge}</p>
                 <h2 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.75rem' }}>{item.title}</h2>
                 <p style={{ fontSize: '0.9rem', lineHeight: 1.6, color: '#555', marginBottom: '0.75rem' }}>{item.detail}</p>
-                <p style={{ fontSize: '0.8rem', color: '#888' }}><strong>Verify:</strong> {item.verify}</p>
+                <p style={{ fontSize: '0.8rem', color: '#888' }}>
+                  <strong>Verify:</strong>{' '}
+                  {item.verifyHref ? (
+                    <a href={item.verifyHref} target="_blank" rel="noopener nofollow" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{item.verify}</a>
+                  ) : (
+                    item.verify
+                  )}
+                </p>
               </div>
             ))}
           </div>

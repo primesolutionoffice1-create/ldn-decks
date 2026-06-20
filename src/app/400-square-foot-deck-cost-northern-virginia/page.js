@@ -141,7 +141,7 @@ export default function FourHundredSqftDeckCostPage() {
           <p style={S.p}>Scale up to <Link href="/800-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>800 sqft</Link> for estate-tier homes (Virginia Run, Belmont Country Club, Loudoun Valley Estates, Lansdowne) where multi-level builds with integrated outdoor kitchens and pergolas are the expectation.</p>
 
           <h2 style={S.h2}>Permit + inspection cost (included)</h2>
-          <p style={S.p}>The 400 sqft deck triggers full permit + 3-inspection requirements in every Northern Virginia county. Permit fees, scaled to construction valuation, typically run $150–$700 depending on county and project complexity. We file every package and coordinate every inspection — fees are included in the project total, not billed separately.</p>
+          <p style={S.p}>The 400 sqft deck triggers permit-ready planning plus typical 3-inspection requirements in every Northern Virginia county. Permit fees, scaled to construction valuation, typically run $150–$700 depending on county and project complexity. We prepare permit documentation and coordinate inspection planning — fees are included in the project total, not billed separately.</p>
           <ul style={S.list}>
             <li style={S.listItem}><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County permit guide</Link> — LandMARC portal, 5-step process</li>
             <li style={S.listItem}><Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County permit guide</Link> — Land Development Services portal</li>

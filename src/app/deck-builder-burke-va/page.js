@@ -17,6 +17,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-burke-va',
@@ -116,7 +117,7 @@ export default function DeckBuilderBurkePage() {
         title="Deck Builder Burke VA  -  Premium Quality"
         description="Burke's mature neighborhoods deserve decks built to last. We replace 20-30+ year-old wood decks with Trex and TimberTech composite, engineered for Burke's shaded lots and heavy tree canopy. Projects from $25k+."
         listItems={[
-          "TrexPro & TimberTech Certified installer",
+          "Trex, TimberTech and AZEK material planning",
           "Full deck replacement  -  footings to finish",
           "Burke Centre Conservancy ARC submissions handled",
           "Fairfax County permits filed and inspected",
@@ -135,6 +136,20 @@ export default function DeckBuilderBurkePage() {
         links={[
           { href: '/deck-safety-inspection-checklist', label: 'Safety inspection checklist' },
           { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+        ]}
+      />
+      <GeoAnswerBlock
+        question="What should Burke homeowners know before replacing an older deck?"
+        answer="Burke deck projects often involve mature Fairfax County lots, older pressure-treated decks, wooded backyards, drainage constraints, and HOA or neighborhood expectations. Before choosing resurfacing or full replacement, homeowners should inspect the ledger, joists, beams, posts, stairs, railings, and footings, then confirm Fairfax County permit needs and composite material options."
+        facts={[
+          'Primary buyer intent: Burke deck replacement, structural inspection, wooded-lot planning, and composite upgrades.',
+          'Proof status: Burke project and photo claims require proof-lock before public use.',
+          'Conversion path: safety checklist, Fairfax permit guide, and written estimate.'
+        ]}
+        links={[
+          { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/get-estimate', label: 'Get a Burke estimate' }
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

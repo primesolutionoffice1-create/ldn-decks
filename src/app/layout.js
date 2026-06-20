@@ -23,7 +23,7 @@ export const metadata = {
     default: 'Custom Deck Builders in Loudoun County VA | Loudoun Decks',
     template: '%s',  // pages set their own complete title
   },
-  description: 'Trex Pro & TimberTech certified deck builders serving Loudoun, Fairfax & Prince William VA. Custom decks, screened porches & pergolas. Free quote in 24h.',
+  description: 'Trex, TimberTech, and AZEK material planning for deck projects serving Loudoun, Fairfax & Prince William VA. Custom decks, screened porches & pergolas. Written estimates.',
   openGraph: {
     type: 'website',
     locale: 'en_US',

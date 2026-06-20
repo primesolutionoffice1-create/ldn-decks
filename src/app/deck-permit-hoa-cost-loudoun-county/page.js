@@ -89,9 +89,9 @@ export default function DeckPermitHoaCostLoudounPage() {
         path={PATH}
         image="/showcase/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-06-19"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Deck Permit &amp; HOA Costs in Loudoun County: 2026 Budget Guide" description="Loudoun County deck permit cost ($200–$1,200), HOA approval cost ($0–$500), timeline, drawings required, and total project amount impact." speakable />
+      <WebPageSchema dateModified="2026-06-19" url={`https://ldndecks.com${PATH}`} name="Deck Permit &amp; HOA Costs in Loudoun County: 2026 Budget Guide" description="Loudoun County deck permit cost ($200–$1,200), HOA approval cost ($0–$500), timeline, drawings required, and total project amount impact." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -176,6 +176,9 @@ export default function DeckPermitHoaCostLoudounPage() {
             project amount you finance, not in cash on top. Including $1,500 in permit/HOA fees in a $30,000 financed
             project adds about $19/month at 8.99% APR over 10 years. Excluding them creates surprise cash outflow.
           </p>
+          <p style={S.p}>
+            Before choosing a material or payment plan, model the full project with the <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck cost calculator</Link> and compare it against the <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>composite deck cost guide</Link>. Those two pages help separate the base deck budget from permit fees, HOA review, engineering drawings, railings, stairs, lighting, and covered-deck upgrades.
+          </p>
 
           <h2 style={S.h2}>Loudoun County Permit Process Step-By-Step</h2>
           <ol style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
@@ -258,6 +261,16 @@ export default function DeckPermitHoaCostLoudounPage() {
               </Link>
             </li>
             <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Deck Cost Calculator →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
+              <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                Composite Deck Cost Guide →
+              </Link>
+            </li>
+            <li style={{ marginBottom: '0.5rem' }}>
               <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
                 Deck Payment Estimator →
               </Link>
@@ -275,7 +288,7 @@ export default function DeckPermitHoaCostLoudounPage() {
       </article>
 
       <SimpleCTA title="HOA-Ready Estimate Including Permit Fees" buttonText="Request Written Estimate" link="/get-estimate" />
-      <NamedAuthor context="Loudoun County" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-06-19" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

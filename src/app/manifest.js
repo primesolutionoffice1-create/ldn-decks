@@ -6,7 +6,7 @@ export default function manifest() {
     name: 'Loudoun Decks',
     short_name: 'Loudoun Decks',
     description:
-      'TrexPro Platinum custom deck builder serving Loudoun, Fairfax, Prince William and Arlington counties in Northern Virginia.',
+      'Trex product-line planning custom deck builder serving Loudoun, Fairfax, Prince William and Arlington counties in Northern Virginia.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

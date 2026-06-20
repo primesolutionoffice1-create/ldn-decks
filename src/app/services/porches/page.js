@@ -74,7 +74,7 @@ const expansionSections = [
     title: "The Permit & Planning Journey in NoVA",
     paragraphs: [
       "Adding a roof structure to a deck or building a new porch from scratch changes the structural requirements of your home's foundation. This is why permitting is so critical in regions like Mount Vernon and Dale City. Every new post must be supported by footings that are calculated to handle the increased weight of the roof, as well as the 'snow load' requirements of Virginia winters. Our design team uses CAD software to ensure every beam and header is precisely sized for your specific dimensions.",
-      "We manage the entire permit cycle with your local building department, whether you are in Stafford County or the heart of Arlington. This including structural drawings, site plans, and coordinating with inspections. Our 'Full projects only' approach means we take responsibility for the entire lifecycle, so you don't have to worry about the red tape.",
+      "We coordinate the permit planning cycle with your local building department, whether you are in Stafford County or the heart of Arlington. This including structural drawings, site plans, and coordinating with inspections. Our 'Full projects only' approach means we take responsibility for the entire lifecycle, so you don't have to worry about the red tape.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Our local presence means we have established relationships with building inspectors across NoVA, leading to faster approvals and fewer headaches for our clients. We position Loudoun Decks as a premium builder because we don't cut corners on these essential hidden details."
     ]
   }

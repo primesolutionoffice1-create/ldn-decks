@@ -11,6 +11,7 @@ import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-resurfacing-vs-replacement',
@@ -54,6 +55,20 @@ export default function ResurfacingVsReplacementPage() {
           <p><strong>Resurface</strong> ($15k–$30k+) if your frame is solid and you want a full surface conversion with composite boards, railings, fascia, and stairs. <strong>Replace</strong> ($20k–$50k+) if joists are rotting, posts are leaning, footings shifted, or the deck feels bouncy. <strong>Small board, railing, or rot repairs are separate</strong> see our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck repair service</Link>.</p>
         </div>
       </section>
+      <GeoAnswerBlock
+        question="Should I resurface or replace my deck in Northern Virginia?"
+        answer="Resurfacing is the better choice when the existing frame, ledger, posts, beams, joists, stairs, and footings pass inspection and the homeowner mainly wants new composite boards and railings. Replacement is safer when the structure is rotten, bouncy, leaning, underbuilt, unpermitted, or unable to support the new surface. Loudoun Decks separates repair, resurfacing, and replacement so homeowners do not pay for a cosmetic upgrade over unsafe framing."
+        facts={[
+          'Resurfacing path: frame passes structural inspection',
+          'Replacement path: ledger, footing, post, joist, stair, or railing risk',
+          'Proof status: scenario examples require signed scope/project evidence before case-study use',
+        ]}
+        links={[
+          { href: '/services/deck-repair', label: 'Deck repair' },
+          { href: '/services/deck-replacement', label: 'Deck replacement' },
+          { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
+        ]}
+      />
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>

@@ -26,7 +26,7 @@ const inclusions = [
   { title: "Architectural Roofline Design", desc: "We design front porch rooflines that seamlessly integrate with your home's existing roofline, fascia, and soffit — creating a cohesive architectural statement rather than a bolt-on addition." },
   { title: "Premium Column & Railing Systems", desc: "Smooth PVC-wrapped columns, natural cedar posts, or fiber cement architectural columns. Matching railings in composite, aluminum, or painted wood — all coordinated with your home's exterior palette." },
   { title: "Durable Decking & Flooring", desc: "Premium composite decking, pressure-treated wood, or natural stone pavers for the porch floor — selected to complement your home's foundation material and style." },
-  { title: "Full Structural Engineering", desc: "Front porches attach directly to your home's structure. Every build we do includes engineered drawings, footing calculations for Virginia's frost line, and full permit documentation." }
+  { title: "Full Structural Engineering", desc: "Front porches attach directly to your home's structure. Every build we do includes engineered drawings, footing calculations for Virginia's frost line, and permit-ready documentation." }
 ];
 
 const expansionSections = [
@@ -55,7 +55,7 @@ const expansionSections = [
   {
     title: "What to Expect: Process, Permitting & Pricing",
     paragraphs: [
-      "Front porch projects in Loudoun County, Fairfax County, and Prince William County require a building permit. This involves structural drawings, a site plan, and coordination with your county's building department. We manage this entirely in-house, including all engineering documentation. Permit processing typically takes 3-6 weeks in Northern Virginia, after which construction begins.",
+      "Front porch projects in Loudoun County, Fairfax County, and Prince William County require a building permit. This involves structural drawings, a site plan, and coordination with your county's building department. We coordinate this through permit-ready documentation, including all engineering documentation. Permit processing typically takes 3-6 weeks in Northern Virginia, after which construction begins.",
       "Construction timelines vary by project scope. A simple portico can be completed in 1-2 weeks. A full-width front porch with integrated roofline and full railing system typically takes 3-5 weeks. We coordinate all required inspections and do not consider a project complete until it has received its certificate of occupancy.",
       "Front porch projects typically start at $20,000+ in Northern Virginia, depending on the scope, size, materials, and roofline complexity. Projects involving HOA-required materials, custom column styles, or wraparound configurations are priced at the higher end. We provide a detailed itemized estimate at your free on-site consultation with no obligation to proceed."
     ]
@@ -71,7 +71,7 @@ const expansionSections = [
 ];
 
 const faqs = [
-  { q: "Do I need a permit to build a front porch in Northern Virginia?", a: "Yes. Any roofed structure attached to your home — including a front porch or portico — requires a building permit in Loudoun, Fairfax, and Prince William Counties. We manage the entire permit process including structural engineering, site plans, and inspection coordination." },
+  { q: "Do I need a permit to build a front porch in Northern Virginia?", a: "Yes. Any roofed structure attached to your home — including a front porch or portico — requires a building permit in Loudoun, Fairfax, and Prince William Counties. We coordinate permit-ready documentation and inspection planning including structural engineering, site plans, and inspection coordination." },
   { q: "How much does a custom front porch cost in Northern Virginia?", a: "Front porch projects typically start at $20,000+ in Northern Virginia, depending on scope, size, materials, and roofline complexity. A simple portico over the front door costs less than a full wraparound porch. We provide a detailed itemized estimate at your free on-site consultation." },
   { q: "Does a front porch require HOA approval?", a: "In many Northern Virginia neighborhoods — Brambleton, Lansdowne, Ashburn Village, South Riding, and others — yes. HOA architectural review boards must approve exterior modifications. We prepare all submission documents and can design specifically to your HOA's material and color requirements." },
   { q: "How long does front porch construction take?", a: "A simple portico typically takes 1-2 weeks of construction after permit approval. A full-width front porch with integrated roofline typically takes 3-5 weeks. Permit processing in Northern Virginia typically takes 3-6 weeks before construction can begin." },

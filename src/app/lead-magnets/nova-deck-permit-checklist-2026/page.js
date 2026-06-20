@@ -95,7 +95,7 @@ export default function NovaPermitChecklist2026() {
       <ul style={{ listStyle: 'none', padding: 0 }}>
         <Item>Footing inspection scheduled BEFORE concrete is poured (inspector verifies hole depth, diameter, rebar)</Item>
         <Item>Framing inspection scheduled BEFORE decking is laid (inspector verifies ledger flashing, joist spacing, beam attachment, post hardware, blocking)</Item>
-        <Item>Stair framing complete with code-compliant rise/run (max 7.75&quot; rise, min 10&quot; run in VA)</Item>
+        <Item>Stair framing complete with code-compliant rise/run (Virginia residential stair geometry uses max 8.25&quot; rise and min 9&quot; tread depth)</Item>
         <Item>Railing height verified (minimum 36&quot; for residential decks 30&quot;+ above grade; baluster spacing &lt; 4&quot;)</Item>
       </ul>
 

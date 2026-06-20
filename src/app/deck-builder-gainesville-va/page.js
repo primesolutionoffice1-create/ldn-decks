@@ -22,7 +22,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 export const metadata = buildMetadata({
   path: '/deck-builder-gainesville-va',
   title: 'Deck Builder in Gainesville, VA | Trex Certified | Loudoun Decks',
-  description: 'Trusted deck builder in Gainesville, VA. Trex Platinum Partner & TimberTech Certified. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
+  description: 'Trusted deck builder in Gainesville, VA. Trex product-line planning & TimberTech and AZEK product planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
   image: '/social/deck-builder-gainesville-va-social.png',
 });
 
@@ -33,7 +33,7 @@ const inclusions = [
   },
   {
     title: "Premium Composite Specialists",
-    desc: "As certified Trex Platinum and TimberTech installers, we deliver high-grade composite decking that withstands the variable Virginia weather while looking pristine."
+    desc: "With Trex, TimberTech, and AZEK material planning experience, we deliver high-grade composite decking that withstands the variable Virginia weather while looking pristine."
   },
   {
     title: "Western PWC Craftsmanship",
@@ -52,7 +52,7 @@ const gainesvilleFAQs = [
   },
   {
     q: "Do you handle the Gainesville permitting process?",
-    a: "Yes. Building in Gainesville involves Prince William County regulations and strict HOA guidelines. We handle the entire permitting and HOA submission process for you."
+    a: "Yes. Building in Gainesville involves Prince William County regulations and strict HOA guidelines. We coordinate permitting and HOA submission planning for you."
   },
   {
     q: "How long does it take to build a deck in Gainesville?",
@@ -60,7 +60,7 @@ const gainesvilleFAQs = [
   },
   {
     q: "Are you a Trex certified contractor in Gainesville VA?",
-    a: "Yes. Loudoun Decks is a Trex Platinum Partner, giving Gainesville clients access to Trex product lines, manufacturer-backed warranty paths, and installation practices aligned with Trex requirements."
+    a: "Loudoun Decks plans Gainesville projects with Trex product-line options, manufacturer warranty documentation, and installation practices aligned with published Trex requirements."
   },
   {
     q: "Do you build screened porches in Gainesville?",
@@ -87,14 +87,14 @@ const expansionSections = [
   {
     title: "Composite Decking Specialists for Gainesville Homes",
     paragraphs: [
-      "The humid Virginia summers make composite decking the ideal choice for Gainesville homeowners. As a Trex Platinum Partner and TimberTech Certified contractor, we install decking that won't warp, splinter, or rot. Projects typically start around $20,000 and scale based on your specific design requirements.",
+      "The humid Virginia summers make composite decking the ideal choice for Gainesville homeowners. We plan Trex, TimberTech, and AZEK decking options with low-maintenance boards selected for Virginia humidity and freeze-thaw exposure. Projects typically start around $20,000 and scale based on your specific design requirements.",
       "We specialize in designing decks that maximize the usable outdoor space of your property. Integrated lighting, custom railings, and built-in seating are standard requests that we execute flawlessly.",
       "Every composite deck proposal in Gainesville includes manufacturer warranty information for the selected product line and installation practices aligned with published manufacturer guidance."
     ],
     listItems: [
-      { label: "Trex Platinum Partner", text: "Highest certification level for Trex installation in Gainesville and Prince William County." },
-      { label: "TimberTech Certified", text: "Certified installer for the full TimberTech Pro and AZEK product lines." },
-      { label: "Permit Ready", text: "Full handling of all Prince William County permitting and inspections." },
+      { label: "Trex product-line planning", text: "Highest certification level for Trex installation in Gainesville and Prince William County." },
+      { label: "TimberTech and AZEK product planning", text: "TimberTech Pro and AZEK product-line planning for premium builds." },
+      { label: "Permit Ready", text: "Permit planning support for Prince William County and inspections." },
       { label: "Public Profiles", text: "Homeowners can review public profiles and project documentation before approving a scope." }
     ]
   },
@@ -112,18 +112,18 @@ export default function DeckBuilderGainesvillePage() {
   return (
     <main>
       <LocalBusinessSchema city="Gainesville" url="https://ldndecks.com/deck-builder-gainesville-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-gainesville-va" name="Deck Builder in Gainesville, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Gainesville, VA. Trex Platinum Partner &amp; TimberTech Certified. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-gainesville-va" name="Deck Builder in Gainesville, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Gainesville, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Gainesville, VA's Trusted Deck Company"
         title="Custom Deck Builder in Gainesville, VA"
-        description="Loudoun Decks builds premium composite decks and screened porches in Gainesville. Trex Platinum Partner. publicly documented reputation."
+        description="Loudoun Decks builds premium composite decks and screened porches in Gainesville. Trex product-line planning. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Prince William County Craftsmanship"
         title="Deck Builder Gainesville VA  -  Premium Quality"
         description="We build the outdoor spaces Gainesville homeowners love. Custom designs, HOA-ready plans, and premium composite materials starting at $20k+."
         listItems={[
-          "Trex Platinum & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "Full Gainesville & Prince William County Permit management",
           "Custom multi-level and single-level designs",
           "Screened porches, pergolas & under-deck patios",

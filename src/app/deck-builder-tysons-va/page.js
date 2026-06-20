@@ -13,6 +13,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-tysons-va',
@@ -66,6 +67,20 @@ export default function TysonsDeckBuilderPage() {
           { href: "/trex-vs-timbertech-vs-azek", label: "Material comparison" }
         ]}
       />
+      <GeoAnswerBlock
+        question="What should Tysons homeowners check before planning a deck or terrace?"
+        answer="Tysons deck projects should first separate urban-core terrace, balcony, rooftop, townhome, and Pimmit Hills single-family scopes because each path changes structure, waterproofing, association review, permit details, railing height, and material selection. Loudoun Decks plans compact composite decks and outdoor living upgrades around Fairfax County requirements and the tighter access conditions common near Tysons."
+        facts={[
+          'Primary buyer intent: compact composite decks, rooftop terraces, townhome upgrades, and association-ready planning.',
+          'Proof status: rooftop, condo, and neighborhood project claims require proof-lock before public use.',
+          'Conversion path: Fairfax permit guide, railing options, material comparison, and written estimate.'
+        ]}
+        links={[
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/deck-railing-options-northern-virginia', label: 'Railing options' },
+          { href: '/get-estimate', label: 'Get a Tysons estimate' }
+        ]}
+      />
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -83,7 +98,7 @@ export default function TysonsDeckBuilderPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Modern aesthetic:</strong> Clean lines, aluminum or cable railings, dark composite colors (Lava Rock, Dark Hickory) matching Tysons&apos; contemporary architecture</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Townhome specialists:</strong> Compact 150-300 sqft builds that maximize small rear yards and rooftop spaces</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>High-rise adjacent:</strong> We work with HOAs and management companies in Tysons&apos; newer communities</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Fairfax County permitting:</strong> <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full permit guide</Link></li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Fairfax County permitting:</strong> <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Permit guide</Link></li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>The two Tysons deck markets we serve</h2>
@@ -132,7 +147,7 @@ export default function TysonsDeckBuilderPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Tysons sits within the Fairfax County <strong>Planned Tysons Corner (PTC) District</strong> — a special zoning overlay created to implement the Tysons Comprehensive Plan&apos;s vision of a walkable urban center. For most residential deck projects, the PTC overlay means coordinating the Fairfax County building permit (Section 5100 of the Zoning Ordinance covers deck setback rules and Table 5100.1 lists allowed extensions into setbacks) with any community-specific design controls.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
             <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>Fairfax County permit:</strong> Plan review takes 3–6 weeks. Online via the Department of Land Development Services portal. Permit fees are based on construction valuation. Inspections required at footing, framing, and final.</li>
-            <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>HOA / condo association approval:</strong> Tysons-core communities (The Boro, One Park Crest, Ovation, Lerner townhomes) typically require material samples, color specs, and engineered drawings. Approval averages 2–4 weeks via FirstService Residential or the building&apos;s in-house management.</li>
+            <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>HOA / condo association approval:</strong> Tysons-core communities (The Boro, One Park Crest, Ovation, Lerner townhomes) typically require material samples, color specs, and engineered drawings. Approval averages 2–4 weeks via FirstService Residential or the building&apos;s property-management team.</li>
             <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>Pimmit Hills:</strong> No mandatory HOA. Only the Fairfax County permit applies, which is one reason Pimmit Hills projects move 3–4 weeks faster than Tysons-core builds.</li>
             <li style={{ marginBottom: '0.4rem', lineHeight: 1.7 }}><strong>Parallel planning where feasible:</strong> county and HOA packages should be prepared together when the association allows it, reducing preventable waiting time.</li>
           </ul>
@@ -146,8 +161,8 @@ export default function TysonsDeckBuilderPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Tysons homeowners choose Loudoun Decks</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Trex Platinum Partner</strong> — Trex product-line familiarity and manufacturer-aligned installation practices.</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>TimberTech Certified Installer</strong> — manufacturer-trained on PVC pedestal systems used in Tysons-core rooftop projects.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Trex product-line planning</strong> — Trex product-line familiarity and manufacturer-aligned installation practices.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>TimberTech and AZEK product planning</strong> — manufacturer-trained on PVC pedestal systems used in Tysons-core rooftop projects.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>VA Class A Contractor License</strong> — licensing and insurance details can be included with HOA or association packets when requested.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Coordinated project team</strong> — scope, access, material delivery, and site protection are planned before construction begins.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Warranty clarity</strong> — workmanship and manufacturer material warranty details should be confirmed in the written proposal for the selected system.</li>

@@ -53,7 +53,7 @@ export default function DeckLifespanPage() {
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
               src="/images/img40.jpeg"
-              alt="Durable long-lasting composite deck build by Trex Platinum Partner"
+              alt="Durable long-lasting composite deck build by Trex product-line planning"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"
@@ -130,7 +130,7 @@ export default function DeckLifespanPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "How long does a Trex deck last?", a: "25-30+ years with minimal maintenance. Trex offers a 25-year warranty against structural failure." },
+            { q: "How long does a Trex deck last?", a: "25-30+ years with minimal maintenance. Trex offers a manufacturer warranty against structural failure." },
             { q: "How long does a wood deck last in Virginia?", a: "PT wood: 10-15 years with annual staining, 5-8 without. Cedar: 15-20 years. Virginia's freeze-thaw and humidity accelerate deterioration." },
             { q: "When to resurface vs replace?", a: "Resurface if the frame is solid and only boards are worn. Replace if joists are soft, posts rotting, or footings shifting. Free inspection to determine." },
           ].map((faq, i) => (

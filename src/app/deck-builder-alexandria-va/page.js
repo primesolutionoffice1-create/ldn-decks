@@ -18,11 +18,12 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-alexandria-va',
   title: 'Deck Builder in Alexandria VA | Trex Certified | Loudoun Decks',
-  description: 'Trusted Alexandria, VA deck builder. Trex Platinum Partner. Custom composite decks, porches & pergolas. Licensed & insured. Free estimate in 24h — (571) 655-7207.',
+  description: 'Trusted Alexandria, VA deck builder. Trex, TimberTech, and AZEK material planning. Custom composite decks, porches & pergolas. Licensed & insured. Free written estimate — (571) 655-7207.',
   image: '/social/deck-builder-alexandria-va-social.png',
 });
 
@@ -33,7 +34,7 @@ const inclusions = [
   },
   {
     title: "Premium Composite Specialists",
-    desc: "As certified Trex Platinum and TimberTech installers, we deliver high-grade composite decking that withstands the variable Virginia weather while looking pristine."
+    desc: "With Trex, TimberTech, and AZEK material planning experience, we deliver high-grade composite decking that withstands the variable Virginia weather while looking pristine."
   },
   {
     title: "Historic & Modern Craftsmanship",
@@ -52,7 +53,7 @@ const alexandriaFAQs = [
   },
   {
     q: "Do you handle the Alexandria permitting process?",
-    a: "Yes. Building in Alexandria can involve both City of Alexandria and Fairfax County regulations. We handle the entire permitting and HOA submission process for you."
+    a: "Yes. Building in Alexandria can involve both City of Alexandria and Fairfax County regulations. We coordinate permitting and HOA submission planning for you."
   },
   {
     q: "How long does it take to build a deck in Alexandria?",
@@ -60,7 +61,7 @@ const alexandriaFAQs = [
   },
   {
     q: "Are you a Trex certified contractor in Alexandria VA?",
-    a: "Yes. Loudoun Decks is a Trex Platinum Partner, giving Alexandria clients access to Trex product lines, manufacturer-backed warranty paths, and installation practices aligned with Trex requirements."
+    a: "Loudoun Decks plans Alexandria projects with Trex product-line options, manufacturer warranty documentation, and installation practices aligned with published Trex requirements."
   },
   {
     q: "Do you build screened porches in Alexandria?",
@@ -87,14 +88,14 @@ const expansionSections = [
   {
     title: "Composite Decking Specialists for Alexandria Homes",
     paragraphs: [
-      "The humid Virginia summers make composite decking the ideal choice for Alexandria homeowners. As a Trex Platinum Partner and TimberTech Certified contractor, we install decking that won't warp, splinter, or rot. Projects typically start around $20,000 and scale based on your specific design requirements.",
+      "The humid Virginia summers make composite decking the ideal choice for Alexandria homeowners. We plan Trex, TimberTech, and AZEK decking options with low-maintenance boards selected for Virginia humidity and freeze-thaw exposure. Projects typically start around $20,000 and scale based on your specific design requirements.",
       "We specialize in designing decks that maximize the usable outdoor space of your property, even on tight townhome lots. Integrated lighting, custom railings, and built-in seating are standard requests that we execute flawlessly.",
       "Every composite deck proposal in Alexandria includes manufacturer warranty information for the selected product line and installation practices aligned with published manufacturer guidance."
     ],
     listItems: [
-      { label: "Trex Platinum Partner", text: "Trex product-line familiarity and manufacturer-aligned installation practices for Alexandria and Northern Virginia." },
-      { label: "TimberTech Certified", text: "Certified installer for the full TimberTech Pro and AZEK product lines." },
-      { label: "Permit Ready", text: "Full handling of all Fairfax County and City of Alexandria permitting." },
+      { label: "Trex product-line planning", text: "Trex product-line familiarity and manufacturer-aligned installation practices for Alexandria and Northern Virginia." },
+      { label: "TimberTech and AZEK product planning", text: "TimberTech Pro and AZEK product-line planning for premium builds." },
+      { label: "Permit Ready", text: "Permit planning support for Fairfax County and City of Alexandria." },
       { label: "Public Profiles", text: "Homeowners can review public profiles and project documentation before approving a scope." }
     ]
   },
@@ -112,18 +113,18 @@ export default function DeckBuilderAlexandriaPage() {
   return (
     <main>
       <LocalBusinessSchema city="Alexandria" url="https://ldndecks.com/deck-builder-alexandria-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-alexandria-va" name="Deck Builder in Alexandria VA | Trex Certified | Loudoun Decks" description="Trusted Alexandria, VA deck builder. Trex Platinum Partner. Custom composite decks, porches &amp; pergolas. Licensed &amp; insured. Free estimate in 24h — (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-alexandria-va" name="Deck Builder in Alexandria VA | Trex Certified | Loudoun Decks" description="Trusted Alexandria, VA deck builder. Trex, TimberTech, and AZEK material planning. Custom composite decks, porches &amp; pergolas. Licensed &amp; insured. Free written estimate — (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Alexandria, VA's Trusted Deck Company"
         title="Custom Deck Builder in Alexandria, VA"
-        description="Loudoun Decks builds premium composite decks and screened porches in Alexandria. Trex Platinum Partner. publicly documented reputation."
+        description="Loudoun Decks builds premium composite decks and screened porches in Alexandria. Trex product-line planning. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Historic & Modern Craftsmanship"
         title="Deck Builder Alexandria VA  -  Premium Quality"
         description="We build the outdoor spaces Alexandria homeowners love. Custom designs, HOA-ready plans, and premium composite materials starting at $20k+."
         listItems={[
-          "Trex Platinum & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "Full Alexandria & Fairfax County Permit management",
           "Custom multi-level and single-level designs",
           "Screened porches, pergolas & under-deck patios",
@@ -143,6 +144,20 @@ export default function DeckBuilderAlexandriaPage() {
           { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
           { href: "/deck-safety-inspection-checklist", label: "Safety checklist" },
           { href: "/composite-deck-cost-northern-virginia", label: "Composite deck cost" }
+        ]}
+      />
+      <GeoAnswerBlock
+        question="What should Alexandria homeowners check before planning a deck?"
+        answer="Alexandria deck projects should start by confirming whether the property follows City of Alexandria, Fairfax County, HOA, or historic-area requirements. Homeowners should also review lot access, drainage, privacy, railing style, screened porch options, and whether composite resurfacing or full deck replacement is the safer path before approving a written estimate."
+        facts={[
+          'Primary buyer intent: Alexandria deck builder, historic or HOA planning, composite replacement, and screened porches.',
+          'Proof status: exact Alexandria project, customer, and photo claims require proof-lock.',
+          'Conversion path: permit planning, material comparison, and written estimate.'
+        ]}
+        links={[
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
+          { href: '/get-estimate', label: 'Get an Alexandria estimate' }
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

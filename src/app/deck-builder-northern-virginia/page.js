@@ -119,16 +119,21 @@ function ServiceLinkGrid() {
   const links = [
     ['/deck-builder-ashburn-va', 'Ashburn'],
     ['/deck-builder-leesburg-va', 'Leesburg'],
+    ['/deck-builder-sterling-va', 'Sterling'],
+    ['/deck-builder-purcellville-va', 'Purcellville'],
     ['/deck-builder-reston-va', 'Reston'],
+    ['/deck-builder-herndon-va', 'Herndon'],
     ['/deck-builder-mclean-va', 'McLean'],
     ['/deck-builder-vienna-va', 'Vienna'],
+    ['/deck-builder-tysons-va', 'Tysons'],
     ['/deck-builder-fairfax-va', 'Fairfax'],
     ['/deck-builder-centreville-va', 'Centreville'],
+    ['/deck-builder-chantilly-va', 'Chantilly'],
+    ['/deck-builder-burke-va', 'Burke'],
+    ['/deck-builder-arlington-va', 'Arlington'],
+    ['/deck-builder-alexandria-va', 'Alexandria'],
     ['/deck-builder-manassas-va', 'Manassas'],
     ['/deck-builder-great-falls-va', 'Great Falls'],
-    ['/deck-builder-herndon-va', 'Herndon'],
-    ['/deck-builder-sterling-va', 'Sterling'],
-    ['/deck-builder-chantilly-va', 'Chantilly'],
   ];
 
   return (
@@ -156,6 +161,30 @@ function ServiceLinkGrid() {
               }}
             >
               {label} deck builder
+            </Link>
+          ))}
+        </div>
+        <div style={{ marginTop: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+          {[
+            ['/near-you/loudoun-county', 'Loudoun County planning hub'],
+            ['/near-you/fairfax-county', 'Fairfax County planning hub'],
+            ['/near-you/prince-william-county', 'Prince William County planning hub'],
+            ['/near-you/arlington-county', 'Arlington County planning hub'],
+          ].map(([href, label]) => (
+            <Link
+              key={href}
+              href={href}
+              style={{
+                border: '1px solid #deded8',
+                borderRadius: 8,
+                padding: '0.9rem 1rem',
+                color: '#222',
+                fontWeight: 700,
+                textDecoration: 'none',
+                background: '#fff',
+              }}
+            >
+              {label}
             </Link>
           ))}
         </div>

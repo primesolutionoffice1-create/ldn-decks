@@ -9,6 +9,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/trex-vs-timbertech-vs-azek',
@@ -23,9 +24,9 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "Which composite decking is best for Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Trex Transcend offers the best balance of durability, heat resistance, and value at $45-$65/sqft. TimberTech AZEK is the premium pick at $50-$75/sqft with a 50-year warranty. Trex Enhance is the best budget option at $30-$50/sqft." } },
     { "@type": "Question", name: "Which composite decking stays coolest in the sun?", acceptedAnswer: { "@type": "Answer", text: "TimberTech AZEK and Trex Transcend stay 20-30°F cooler than standard composites in direct sun. Important for Virginia summers where temps exceed 90°F." } },
-    { "@type": "Question", name: "Is TimberTech better than Trex?", acceptedAnswer: { "@type": "Answer", text: "TimberTech AZEK has a longer warranty (50yr vs 25yr) and better scratch resistance, but costs 15-25% more. Trex Transcend matches TimberTech PRO in performance at a lower price." } },
-    { "@type": "Question", name: "Which composite decking has the longest warranty?", acceptedAnswer: { "@type": "Answer", text: "TimberTech AZEK at 50 years. Trex Transcend/Select: 25 years. TimberTech PRO: 30 years. Fiberon Concordia: 25 years residential plus a lifetime structural warranty." } },
-    { "@type": "Question", name: "Where does Fiberon fit against Trex and TimberTech?", acceptedAnswer: { "@type": "Answer", text: "Fiberon is the fourth major US capped-composite brand. Concordia is its premium line, comparable to Trex Transcend or TimberTech PRO on price and performance, with 4-sided PermaTech capping and a 25-year stain & fade warranty. Sanctuary is mid-tier. ArmorGuard is the budget line. Fiberon is owned by Fortune Brands and manufactured in North Carolina and Iowa." } },
+    { "@type": "Question", name: "Is TimberTech better than Trex?", acceptedAnswer: { "@type": "Answer", text: "TimberTech AZEK is often the premium PVC choice for moisture resistance and warranty package, while Trex Transcend is often the stronger value choice for composite performance at a lower price. The right pick depends on sun exposure, budget, color preference, and current manufacturer documentation." } },
+    { "@type": "Question", name: "Which composite decking has the longest warranty?", acceptedAnswer: { "@type": "Answer", text: "TimberTech AZEK Vintage currently carries limited lifetime product coverage plus 50-year fade and stain coverage. Current Trex warranty information lists 50-year limited residential fade and stain coverage for Transcend, Transcend Lineage, and Signature decking. Verify the exact warranty documents before choosing a product line." } },
+    { "@type": "Question", name: "Where does Fiberon fit against Trex and TimberTech?", acceptedAnswer: { "@type": "Answer", text: "Fiberon is the fourth major US capped-composite brand. Concordia is its premium line and is commonly cross-shopped against Trex Transcend or TimberTech PRO on price, appearance, and performance. Compare current Fiberon warranty documents, samples, heat exposure, and installed cost before choosing it over Trex or TimberTech." } },
   ],
 };
 
@@ -55,6 +56,21 @@ export default function TrexVsTimberTechPage() {
         <NamedAuthor context="Loudoun, Fairfax, Prince William, and Arlington counties" lastUpdated="May 2026" />
       </section>
 
+      <GeoAnswerBlock
+        question="Trex vs TimberTech vs AZEK: which deck material is best for Northern Virginia?"
+        answer="For most Northern Virginia homeowners, Trex Transcend is the best balance of price, color stability, and low maintenance. TimberTech AZEK is the premium PVC choice for homeowners who want the longest warranty and strong moisture resistance. Trex Enhance is the value option, while Fiberon Concordia is a credible premium composite alternative. Final selection should be confirmed with current manufacturer documentation, samples, sun exposure, budget, and written project scope."
+        facts={[
+          'Best value: Trex Enhance or Trex Transcend depending on budget',
+          'Best premium/PVC path: TimberTech AZEK',
+          'Proof status: no manufacturer-certified claim should be cited without current third-party profile verification',
+        ]}
+        links={[
+          { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost' },
+          { href: '/timbertech-azek-deck-cost-northern-virginia', label: 'TimberTech/AZEK cost' },
+          { href: '/trex-decks', label: 'Trex deck planning' },
+        ]}
+      />
+
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
@@ -83,7 +99,7 @@ export default function TrexVsTimberTechPage() {
               <tbody>
                 {[
                   ['Price/sqft', '$30–$50', '$45–$65', '$40–$60', '$50–$75', '$48–$70'],
-                  ['Warranty', '25 yr', '25 yr', '30 yr', '50 yr', '25 yr + lifetime structural'],
+                  ['Warranty', '25 yr', '50 yr', '30 yr', 'limited lifetime product + 50 yr fade/stain', '25 yr + lifetime structural'],
                   ['Material', 'Capped composite', 'Capped (enhanced shell)', 'Capped composite', 'Capped PVC', 'Capped composite (PermaTech)'],
                   ['Heat resistance', 'Good', 'Very Good', 'Good', 'Excellent', 'Very Good'],
                   ['Scratch resistance', 'Good', 'Very Good', 'Good', 'Excellent', 'Very Good'],
@@ -110,7 +126,7 @@ export default function TrexVsTimberTechPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Sanctuary (mid-range):</strong> 3-sided capping, 25-year stain &amp; fade warranty, narrower color palette. Mid-tier alternative to Trex Select or TimberTech PRO.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>ArmorGuard (budget):</strong> Single-sided capping, 25-year stain &amp; fade warranty. The Fiberon equivalent to Trex Enhance Basics.</li>
           </ul>
-          <p style={S.p}>For Virginia homeowners, the practical difference between Trex Transcend and Fiberon Concordia is mostly aesthetic — the Concordia grain pattern is slightly more pronounced and the color blends lean a touch warmer. Performance, warranty terms and installed cost are functionally identical. We carry both and bring samples to every estimate.</p>
+          <p style={S.p}>For Virginia homeowners, the practical difference between Trex Transcend and Fiberon Concordia is often aesthetic and specification-driven: the Concordia grain pattern is slightly more pronounced and the color blends lean a touch warmer. Compare current manufacturer warranty documents, board samples, heat exposure, and installed cost before choosing either product.</p>
 
           <h2 style={S.h2}>Why Material Matters in Virginia&apos;s Climate</h2>
           <h3 style={S.h3}>Freeze-Thaw Cycles (December–March)</h3>
@@ -150,9 +166,9 @@ export default function TrexVsTimberTechPage() {
           {[
             { q: "Which composite decking is best for Northern Virginia?", a: "Trex Transcend for most homeowners best balance of performance and price. TimberTech AZEK for premium budgets. Trex Enhance for value." },
             { q: "Which stays coolest in the sun?", a: "TimberTech AZEK and Trex Transcend stay 20-30°F cooler than standard composites. Critical for south-facing decks in Virginia summers." },
-            { q: "Is TimberTech better than Trex?", a: "AZEK has a longer warranty (50yr) and better scratch resistance but costs 15-25% more. Trex Transcend matches TimberTech PRO at a lower price." },
+            { q: "Is TimberTech better than Trex?", a: "AZEK is often the premium PVC choice for moisture resistance, warranty package, and high-end finish expectations. Trex Transcend is often the stronger value choice for composite performance at a lower price. The right pick depends on sun exposure, budget, color preference, and current manufacturer documentation." },
             { q: "Can you mix brands on the same deck?", a: "Yes for different components (e.g., Trex boards + TimberTech rails). Not recommended for mixing board brands on the same surface." },
-            { q: "Trex vs Fiberon — which should I pick?", a: "Functionally identical at the premium tier: Trex Transcend and Fiberon Concordia carry the same 25-year stain & fade warranty, similar installed cost ($45–$70/sqft), and comparable heat and scratch resistance. Pick by board appearance — Trex Transcend leans cooler-toned, Fiberon Concordia leans warmer-toned. We bring samples of both to every NoVA estimate." },
+            { q: "Trex vs Fiberon — which should I pick?", a: "At the premium tier, compare Trex Transcend and Fiberon Concordia by board appearance, warranty documents, availability, installed cost, heat exposure, and scratch-resistance expectations. Trex Transcend leans cooler-toned; Fiberon Concordia leans warmer-toned. We bring samples of both to every NoVA estimate." },
             { q: "Is Fiberon cheaper than TimberTech AZEK?", a: "Yes. Fiberon Concordia (premium) installs at $48–$70/sqft in Northern Virginia. TimberTech AZEK installs at $50–$75/sqft. AZEK's PVC core and 50-year warranty justify the premium for pool decks and high-use surfaces; for shaded or moderate-use decks Fiberon Concordia is the better price-to-performance pick." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>

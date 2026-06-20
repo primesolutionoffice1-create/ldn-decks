@@ -113,12 +113,24 @@ function buildArticleAuthor(article) {
 
 function buildArticleSchema(article, clampedDate, clampedModifiedDate) {
   const articleUrl = `${BUSINESS.url}/education/${article.slug}`;
+  const contentText = [article.excerpt, article.content]
+    .filter(Boolean)
+    .join(' ')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
   const relatedMentions = (article.relatedLinks || []).map((item) => ({
     '@type': 'WebPage',
     '@id': `${BUSINESS.url}${item.href}`,
     name: item.label,
     description: item.description,
     url: `${BUSINESS.url}${item.href}`,
+  }));
+  const quickAnswerParts = (article.answerBlock || []).map((text, index) => ({
+    '@type': 'WebPageElement',
+    '@id': `${articleUrl}#quick-answer-${index + 1}`,
+    name: `Quick answer ${index + 1}`,
+    text: text.replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
+    isPartOf: { '@id': `${articleUrl}#article` },
   }));
 
   return {
@@ -133,6 +145,8 @@ function buildArticleSchema(article, clampedDate, clampedModifiedDate) {
     author: [buildArticleAuthor(article)],
     publisher: { '@id': ORG_ID },
     description: article.excerpt,
+    articleSection: article.category,
+    wordCount: contentText.split(/\s+/).filter(Boolean).length,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': articleUrl,
@@ -144,15 +158,20 @@ function buildArticleSchema(article, clampedDate, clampedModifiedDate) {
       { '@type': 'Thing', name: 'Deck permits and inspections' },
     ],
     mentions: relatedMentions,
+    ...(quickAnswerParts.length > 0 ? { hasPart: quickAnswerParts } : {}),
     citation: (article.sourceLinks || []).map((item) => item.href),
     keywords: article.tags || [],
     isAccessibleForFree: true,
     inLanguage: 'en-US',
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['.leadParagraph', 'h1', 'h2'],
+      cssSelector: ['[data-speakable="education-lead"]', '[data-speakable="quick-answer"]'],
     },
   };
+}
+
+function hasVisibleModifiedDate(article) {
+  return article.dateModified && article.dateModified !== article.date;
 }
 
 export default async function SingleEducationPage({ params }) {
@@ -176,9 +195,15 @@ export default async function SingleEducationPage({ params }) {
   const faqSchema = article.faq && article.faq.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": article.faq.map(item => ({
+    "@id": `https://ldndecks.com/education/${article.slug}#faq`,
+    "url": `https://ldndecks.com/education/${article.slug}`,
+    "name": `${article.title} FAQs`,
+    "isPartOf": { "@id": `${BUSINESS.url}/education/${article.slug}#article` },
+    "mainEntity": article.faq.map((item, index) => ({
       "@type": "Question",
+      "@id": `https://ldndecks.com/education/${article.slug}#faq-${index + 1}`,
       "name": item.q,
+      "isPartOf": { "@id": `${BUSINESS.url}/education/${article.slug}#faq` },
       "acceptedAnswer": {
         "@type": "Answer",
         "text": item.a.replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
@@ -229,7 +254,13 @@ export default async function SingleEducationPage({ params }) {
                   <div className={styles.meta}>
                      <span className={styles.author}>By {article.author}</span>
                      <span className={styles.divider}>•</span>
-                     <span className={styles.date}>{article.date}</span>
+                     <span className={styles.date}>Published {article.date}</span>
+                     {hasVisibleModifiedDate(article) && (
+                       <>
+                         <span className={styles.divider}>•</span>
+                         <span className={styles.date}>Updated {article.dateModified}</span>
+                       </>
+                     )}
                   </div>
                 </div>
              </div>
@@ -239,9 +270,10 @@ export default async function SingleEducationPage({ params }) {
        <div className={styles.contentSection}>
           <div className={styles.containerNarrow}>
              <div className={styles.contentBody}>
-               <p className={styles.leadParagraph}>{renderInline(article.excerpt, 'lead')}</p>
+               <p className={styles.leadParagraph} data-speakable="education-lead">{renderInline(article.excerpt, 'lead')}</p>
                {article.answerBlock && (
                  <section
+                   data-speakable="quick-answer"
                    style={{
                      margin: '28px 0',
                      padding: '1.25rem',
@@ -367,7 +399,7 @@ export default async function SingleEducationPage({ params }) {
        </div>
        <ServicesHome />
        <ServiceAreasGrid />
-       <RelatedGuides currentPath={`/education/${article.slug}`} />
+       <RelatedGuides currentPath={`/education/${article.slug}`} category="deck-core" />
     </article>
   );
 }

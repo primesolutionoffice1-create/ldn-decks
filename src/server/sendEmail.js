@@ -50,6 +50,7 @@ export async function sendContactEmail(formData) {
     const timeline = formData.get('timeline');
     const budgetRange = formData.get('budgetRange') || formData.get('budget');
     const materialInterest = formData.get('materialInterest');
+    const homeownerStatus = formData.get('homeownerStatus');
     const hoa = formData.get('hoa');
     const address = formData.get('address');
     const city = formData.get('city');
@@ -106,6 +107,7 @@ export async function sendContactEmail(formData) {
         ${timeline ? `<p><strong>Timeline:</strong> ${timeline}</p>` : ''}
         ${budgetRange ? `<p><strong>Budget Range:</strong> ${budgetRange}</p>` : ''}
         ${materialInterest ? `<p><strong>Material Interest:</strong> ${materialInterest}</p>` : ''}
+        ${homeownerStatus ? `<p><strong>Homeowner / Decision Maker:</strong> ${homeownerStatus}</p>` : ''}
         ${hoa ? `<p><strong>HOA / Permit Status:</strong> ${hoa}</p>` : ''}
         ${fullAddress ? `<p><strong>Address:</strong> ${fullAddress}</p>` : ''}
         <h3>Message:</h3>

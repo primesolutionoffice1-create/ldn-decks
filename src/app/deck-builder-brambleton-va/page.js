@@ -87,14 +87,14 @@ const expansionSections = [
   {
     title: "Material Choices for Brambleton Homes",
     paragraphs: [
-      "Northern Virginia's climate  -  hot, humid summers and freeze-thaw winters  -  is hard on wood decks. Brambleton's PT originals show it clearly: cupping boards, surface cracking, mildew growth and the gray patina that comes from years of UV and moisture exposure. Composite boards are engineered to resist all of it. The manufacturer warranties (25-year limited on Trex Enhance, lifetime limited on Transcend) stay enforceable when a certified installer handles the build.",
+      "Northern Virginia's climate  -  hot, humid summers and freeze-thaw winters  -  is hard on wood decks. Brambleton's PT originals show it clearly: cupping boards, surface cracking, mildew growth and the gray patina that comes from years of UV and moisture exposure. Composite boards are engineered to resist all of it. The manufacturer warranties (25-year limited on Trex Enhance, lifetime limited on Transcend) stay enforceable when a installation follows published manufacturer guidance.",
       "Color choice in Brambleton balances aesthetics with DRB approval. Earth tones  -  Toasted Sand, Saddle, Foggy Wharf  -  blend with the community's neutral siding palettes and have the strongest approval records. We present DRB-friendly options at the design meeting, walk through the heat, maintenance and visual tradeoffs of each, and let homeowners choose with confidence that approval will follow."
     ],
     listItems: [
-      { label: "TrexPro Installer", text: "TrexPro Platinum tier  -  full Transcend, Enhance and Select catalog for Brambleton builds." },
-      { label: "TimberTech Certified", text: "Certified installer for the complete TimberTech Pro and AZEK product lines." },
+      { label: "Trex product planning", text: "Trex Transcend, Enhance and Select catalog options  -  full Transcend, Enhance and Select catalog for Brambleton builds." },
+      { label: "TimberTech and AZEK product planning", text: "TimberTech Pro and AZEK product-line planning." },
       { label: "DRB-Ready Submissions", text: "Material samples, color specs and drawings prepared for BCA Design Review Board." },
-      { label: "Loudoun County Permits", text: "Full permit filing and 2-4 week plan review managed on your behalf." }
+      { label: "Loudoun County Permits", text: "Permit documentation support and 2-4 week plan review planning." }
     ]
   },
   {
@@ -122,7 +122,7 @@ export default function BrambletonDeckBuilderPage() {
         title="Deck Builder Brambleton VA  -  Premium Craftsmanship"
         description="We replace aging builder-grade PT decks with composite and handle the BCA Design Review Board process from drawings to approval. Most projects $20k-$45k."
         listItems={[
-          "TrexPro & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "BCA Design Review Board submissions prepared and timed",
           "Builder-grade PT replacement  -  homes built 2004-2020",
           "Post cap lights, composite railings, hidden fasteners",

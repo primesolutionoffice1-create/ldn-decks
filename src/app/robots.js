@@ -43,8 +43,8 @@ export default function robots() {
   ];
   const DISALLOWS = [...PRIVATE_DISALLOWS, ...TRACKING_DISALLOWS];
 
-  // AI crawlers explicitly allowed for citation visibility.
-  const AI_BOTS = [
+  // Search-facing crawlers explicitly allowed for citation visibility.
+  const SEARCH_VISIBILITY_BOTS = [
     'Googlebot',
     'Bingbot',
     'GPTBot',
@@ -52,13 +52,17 @@ export default function robots() {
     'OAI-SearchBot',
     'ClaudeBot',
     'Claude-Web',
-    'anthropic-ai',
     'PerplexityBot',
-    'CCBot',
     'Applebot',
-    'Applebot-Extended',
+  ];
+
+  // Training / extended-use crawlers stay blocked until owner approval.
+  const TRAINING_BOTS = [
     'Google-Extended',
+    'Applebot-Extended',
     'Amazonbot',
+    'CCBot',
+    'anthropic-ai',
     'Bytespider',
     'cohere-ai',
   ];
@@ -73,10 +77,14 @@ export default function robots() {
         allow: '/',
         disallow: DISALLOWS,
       },
-      ...AI_BOTS.map(userAgent => ({
+      ...SEARCH_VISIBILITY_BOTS.map(userAgent => ({
         userAgent,
         allow: '/',
         disallow: DISALLOWS,
+      })),
+      ...TRAINING_BOTS.map(userAgent => ({
+        userAgent,
+        disallow: '/',
       })),
     ],
     sitemap: [

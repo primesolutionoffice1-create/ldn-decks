@@ -83,16 +83,40 @@ export default function AreasWeServePage() {
             </div>
           ))}
 
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', marginTop: '2rem' }}>Standalone City Pages</h2>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', marginTop: '2rem' }}>Priority City Pages</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '3rem' }}>
             {[
               ['/deck-builders-loudoun', 'Deck Builders Loudoun County'],
               ['/deck-builder-ashburn-va', 'Deck Builder Ashburn, VA'],
               ['/deck-builder-leesburg-va', 'Deck Builder Leesburg, VA'],
+              ['/deck-builder-sterling-va', 'Deck Builder Sterling, VA'],
+              ['/deck-builder-purcellville-va', 'Deck Builder Purcellville, VA'],
               ['/deck-builder-reston-va', 'Deck Builder Reston, VA'],
+              ['/deck-builder-herndon-va', 'Deck Builder Herndon, VA'],
               ['/deck-builder-mclean-va', 'Deck Builder McLean, VA'],
+              ['/deck-builder-vienna-va', 'Deck Builder Vienna, VA'],
+              ['/deck-builder-tysons-va', 'Deck Builder Tysons, VA'],
+              ['/deck-builder-fairfax-va', 'Deck Builder Fairfax, VA'],
+              ['/deck-builder-centreville-va', 'Deck Builder Centreville, VA'],
+              ['/deck-builder-chantilly-va', 'Deck Builder Chantilly, VA'],
+              ['/deck-builder-burke-va', 'Deck Builder Burke, VA'],
+              ['/deck-builder-arlington-va', 'Deck Builder Arlington, VA'],
+              ['/deck-builder-alexandria-va', 'Deck Builder Alexandria, VA'],
+              ['/deck-builder-manassas-va', 'Deck Builder Manassas, VA'],
             ].map(([href, text]) => (
               <Link key={href} href={href} style={{ display: 'inline-block', padding: '0.4rem 0.8rem', border: '2px solid var(--color-primary)', borderRadius: 20, fontSize: '0.9rem', color: 'var(--color-primary)', fontWeight: 600, textDecoration: 'none' }}>{text}</Link>
+            ))}
+          </div>
+
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>County Planning Hubs</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem', marginBottom: '3rem' }}>
+            {[
+              ['/near-you/loudoun-county', 'Loudoun County Deck Builder Hub'],
+              ['/near-you/fairfax-county', 'Fairfax County Deck Builder Hub'],
+              ['/near-you/prince-william-county', 'Prince William County Deck Builder Hub'],
+              ['/near-you/arlington-county', 'Arlington County Deck Builder Hub'],
+            ].map(([href, text]) => (
+              <Link key={href} href={href} style={{ display: 'block', padding: '0.85rem', background: '#fff', border: '1px solid #e5e5e5', borderRadius: 6, fontSize: '0.9rem', color: 'var(--color-primary)', textDecoration: 'none', fontWeight: 700 }}>{text} →</Link>
             ))}
           </div>
 
@@ -116,7 +140,7 @@ export default function AreasWeServePage() {
 
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h2 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.75rem' }}>Don&apos;t See Your City?</h2>
-            <p style={{ lineHeight: 1.7 }}>We serve most of Northern Virginia. If your city isn&apos;t listed, call <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink> or <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free estimate</Link> we&apos;ll confirm availability for your area within 24 hours.</p>
+            <p style={{ lineHeight: 1.7 }}>We serve most of Northern Virginia. If your city isn&apos;t listed, call <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink> or <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free estimate</Link> we&apos;ll confirm availability for your area after review.</p>
           </div>
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Plan Before We Visit</h2>

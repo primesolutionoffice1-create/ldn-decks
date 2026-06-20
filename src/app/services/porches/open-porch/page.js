@@ -26,7 +26,7 @@ const inclusions = [
   { title: "Structural Roofline Integration", desc: "We engineer open porch rooflines to tie directly into your home's existing structure, creating a seamless architectural extension rather than an afterthought addition." },
   { title: "Premium Finish Materials", desc: "Tongue-and-groove cedar ceilings, exposed timber beams, pressure-treated columns, or low-maintenance composite decking floors — selected to match your home's aesthetic." },
   { title: "Electrical & Comfort Systems", desc: "Ceiling fans for humid Northern Virginia summers, recessed LED lighting on dimmers, GFCI outlets for outdoor appliances, and optional infrared heaters for fall evenings." },
-  { title: "Full Permit Management", desc: "We handle all engineering drawings, building permit applications, and inspection coordination with Loudoun, Fairfax, or Prince William County on your behalf." }
+  { title: "Permit Planning Support", desc: "We handle all engineering drawings, building permit applications, and inspection coordination with Loudoun, Fairfax, or Prince William County on your behalf." }
 ];
 
 const expansionSections = [
@@ -71,7 +71,7 @@ const expansionSections = [
 ];
 
 const faqs = [
-  { q: "Do I need a permit for an open porch in Loudoun County?", a: "Yes. Any roofed structure attached to your home requires a building permit in Loudoun County and all Northern Virginia jurisdictions. We manage the entire permit process including structural engineering drawings, site plan preparation, and coordination with county inspectors." },
+  { q: "Do I need a permit for an open porch in Loudoun County?", a: "Yes. Any roofed structure attached to your home requires a building permit in Loudoun County and all Northern Virginia jurisdictions. We coordinate permit-ready documentation and inspection planning including structural engineering drawings, site plan preparation, and coordination with county inspectors." },
   { q: "How much does a custom open porch cost in Northern Virginia?", a: "Open porch projects in Northern Virginia typically start at $25,000+ for a basic attached covered porch with standard roofline and composite decking. Projects with integrated outdoor kitchens, premium timber framing, stone flooring, or complex architectural rooflines cost more. We provide a detailed itemized estimate during your free on-site consultation." },
   { q: "How long does open porch construction take?", a: "After permit approval (typically 3-6 weeks in Northern Virginia), construction of an attached open porch typically takes 2-4 weeks. A detached pavilion or freestanding covered structure can often be completed in 1-3 weeks, depending on complexity." },
   { q: "What is the difference between an open porch and a screened porch?", a: "An open porch has a roof but is open on the sides, offering maximum airflow and an unobstructed outdoor experience. A screened porch has a roof and screening on all open sides, providing full protection from insects and light rain. Open porches are ideal for cooking, fire features, and homeowners who prefer full openness. Screened porches are preferred by families who spend long hours outdoors during mosquito season." },

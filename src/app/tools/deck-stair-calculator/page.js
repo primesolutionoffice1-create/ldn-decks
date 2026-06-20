@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: 'How deep should deck stair treads be?',
-    a: 'A common residential deck stair planning minimum is 10 inches of tread depth. Many homeowners prefer 11 to 12 inches because it feels more stable underfoot, especially outdoors or when carrying items.',
+    a: 'Virginia residential stair geometry uses a 9-inch minimum tread depth. Many homeowners still prefer 10 to 12 inches because it feels more stable underfoot, especially outdoors or when carrying items.',
   },
   {
     q: 'Do deck stairs in Virginia need a permit?',
@@ -82,6 +82,22 @@ const webApplicationSchema = {
   publisher: { '@id': ORG_ID },
   provider: { '@id': ORG_ID },
   isPartOf: { '@id': WEBSITE_ID },
+  audience: {
+    '@type': 'Audience',
+    audienceType: 'Northern Virginia homeowners planning deck stairs, deck permits, deck repairs or structural deck upgrades',
+  },
+  featureList: [
+    'Deck stair riser count estimate',
+    'Deck stair tread and total run estimate',
+    'Stair angle and comfort warning',
+    'Permit and inspection planning guidance',
+  ],
+  about: [
+    { '@type': 'Thing', name: 'Virginia deck stair code' },
+    { '@type': 'Thing', name: 'Deck stair construction' },
+    { '@type': 'Thing', name: 'Deck permit planning' },
+    { '@type': 'Thing', name: 'Deck repair and inspection' },
+  ],
   offers: {
     '@type': 'Offer',
     price: '0',
@@ -121,6 +137,36 @@ const relatedResources = [
     desc: 'Understand stringers, treads, risers, blocking, landing pads and structural stair hardware.',
   },
   {
+    href: '/education/ledger-board-flashing-deck-attachment-virginia',
+    title: 'Ledger Board Flashing Guide',
+    desc: 'See how the house attachment, flashing, rim joist and lateral load path affect attached deck safety.',
+  },
+  {
+    href: '/services/deck-stair-lighting',
+    title: 'Deck Stair Lighting Service',
+    desc: 'Plan low-voltage stair and riser lighting while the stair framing, railings and wiring path are still open.',
+  },
+  {
+    href: '/deck-lighting-railings-stairs-addon-cost',
+    title: 'Lighting, Railings and Stairs Cost',
+    desc: 'Compare stair, railing and lighting add-on ranges before deciding whether to repair, rebuild or upgrade.',
+  },
+  {
+    href: '/deck-footing-code-northern-virginia',
+    title: 'Deck Footing and Code Guide',
+    desc: 'Connect stair planning to footings, ledger attachment, spans, guardrails and inspection sequencing.',
+  },
+  {
+    href: '/deck-permit-loudoun-county-virginia',
+    title: 'Loudoun County Deck Permit Guide',
+    desc: 'Plan stair geometry, drawings, LandMARC submission details and inspection checkpoints in Loudoun County.',
+  },
+  {
+    href: '/deck-permit-fairfax-county-virginia',
+    title: 'Fairfax County Deck Permit Guide',
+    desc: 'Understand Fairfax County plan review, FIDO permit planning, inspections and stair documentation needs.',
+  },
+  {
     href: '/services/deck-inspection',
     title: 'Deck Inspection Service',
     desc: 'Professional deck and stair safety inspections for Northern Virginia homes.',
@@ -137,7 +183,7 @@ export default function DeckStairCalculatorPage() {
     <main className={styles.page}>
       <JsonLd data={faqSchema} />
       <JsonLd data={webApplicationSchema} />
-      <WebPageSchema dateModified="2026-06-01" url={pageUrl} name={pageTitle} description={pageDescription} speakable />
+      <WebPageSchema dateModified="2026-06-18" url={pageUrl} name={pageTitle} description={pageDescription} speakable />
 
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -216,6 +262,34 @@ export default function DeckStairCalculatorPage() {
               local authority or a qualified professional.
             </p>
 
+            <h2>How Stair Math Connects to Permits and Structural Details</h2>
+            <p>
+              Stair calculations are only one part of a permit-ready deck plan. County reviewers also
+              look at the landing support, guard and handrail details, footing locations, ledger
+              attachment, drainage, and whether the stair run changes setbacks or HOA-visible layout.
+              If the stairs attach to an elevated or attached deck, review the{' '}
+              <Link href="/education/ledger-board-flashing-deck-attachment-virginia">
+                ledger board flashing guide
+              </Link>{' '}
+              and the{' '}
+              <Link href="/deck-footing-code-northern-virginia">
+                Northern Virginia deck footing and code guide
+              </Link>{' '}
+              before assuming the stair can be repaired in isolation.
+            </p>
+            <p>
+              Loudoun County, Fairfax County, Prince William County and Arlington can each review deck
+              stairs through a different permit workflow. For county-specific planning, compare the{' '}
+              <Link href="/deck-permit-loudoun-county-virginia">Loudoun County deck permit guide</Link>,{' '}
+              <Link href="/deck-permit-fairfax-county-virginia">Fairfax County deck permit guide</Link>,{' '}
+              <Link href="/deck-permit-prince-william-county-virginia">
+                Prince William County deck permit guide
+              </Link>{' '}
+              and <Link href="/deck-permit-arlington-county-virginia">Arlington County deck permit guide</Link>.
+              Those pages explain drawings, review timing, footing inspection, framing inspection and
+              final inspection requirements.
+            </p>
+
             <h2>When a Stair Layout Needs Professional Review</h2>
             <ul>
               <li>The deck is elevated, second-story or attached to the house.</li>
@@ -280,6 +354,8 @@ export default function DeckStairCalculatorPage() {
             <CallLink>Call (571) 655-7207</CallLink>
             <Link href="/get-estimate">Request an estimate</Link>
             <Link href="/services/deck-inspection">Book a deck inspection</Link>
+            <Link href="/deck-permit-loudoun-county-virginia">Plan a Loudoun permit</Link>
+            <Link href="/deck-permit-fairfax-county-virginia">Plan a Fairfax permit</Link>
           </aside>
         </div>
       </article>
@@ -293,6 +369,18 @@ export default function DeckStairCalculatorPage() {
             openings and landings, also check the{' '}
             <Link href="/tools/deck-load-calculator-virginia">deck load calculator</Link>{' '}
             and <Link href="/tools/deck-joist-span-calculator-virginia">deck joist span calculator</Link>.
+            If the project includes nighttime access or premium finish work, price the safety upgrade
+            against the{' '}
+            <Link href="/services/deck-stair-lighting">deck stair lighting service</Link>{' '}
+            and the{' '}
+            <Link href="/deck-lighting-railings-stairs-addon-cost">
+              lighting, railings and stairs cost guide
+            </Link>.
+            If the stairs connect to an attached deck, also check the{' '}
+            <Link href="/education/ledger-board-flashing-deck-attachment-virginia">
+              ledger flashing guide
+            </Link>{' '}
+            before approving repair scope.
           </p>
           <div className={styles.relatedGrid}>
             {relatedResources.map((item) => (
@@ -333,7 +421,7 @@ export default function DeckStairCalculatorPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Northern Virginia deck stair planning" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia deck stair planning" lastUpdated="2026-06-18" />
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Next Steps</h2>

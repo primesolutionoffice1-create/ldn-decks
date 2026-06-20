@@ -119,7 +119,7 @@ export default function ThreeSeasonRoomPage() {
 
           <h2 style={S.h2}>Real Three-Season Room Projects</h2>
           {[
-            { price: '$46,000', desc: '252 sqft Three-Season Room, Leesburg', detail: 'New roofed room off the kitchen with Eze-Breeze sliding vinyl windows, tongue-and-groove ceiling, recessed lighting, and a ceiling fan. Loudoun County permit and HOA approval handled in-house. 4.5-week build.' },
+            { price: '$46,000', desc: '252 sqft Three-Season Room, Leesburg', detail: 'New roofed room off the kitchen with Eze-Breeze sliding vinyl windows, tongue-and-groove ceiling, recessed lighting, and a ceiling fan. Loudoun County permit and HOA approval coordinated as part of the documented scope. 4.5-week build.' },
             { price: '$15,000', desc: 'Screened Porch Conversion, Centreville', detail: 'Existing screened porch upgraded with custom-measured Eze-Breeze panels retrofitted into the screen openings. No structural work needed. 1.5-week install.' },
             { price: '$61,000', desc: '320 sqft Three-Season Room + Deck, McLean', detail: 'Combined project: open Trex deck for grilling plus an attached three-season room with sliding windows, infrared heater, and an outdoor TV. Built as one structure. 6-week build.' },
           ].map((p, i) => (

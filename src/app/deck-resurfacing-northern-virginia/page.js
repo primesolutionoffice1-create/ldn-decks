@@ -196,7 +196,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
           </div>
           <p style={{ ...S.p, fontSize: '0.9rem', color: '#666' }}>
             Pricing includes demolition of old surface, frame inspection, new composite decking with hidden fasteners,
-            new railings, fascia, stair treads and risers, permit handling, and HOA submission. Lighting, picture-frame
+            new railings, fascia, stair treads and risers, permit planning, and HOA submission. Lighting, picture-frame
             borders, multi-color inlays, and structural reinforcement are priced separately.
           </p>
 

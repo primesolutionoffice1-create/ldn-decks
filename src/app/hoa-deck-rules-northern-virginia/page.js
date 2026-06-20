@@ -114,7 +114,7 @@ export default function HOADeckRulesPage() {
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Prepare the submission:</strong> site plan, materials list, railing details, sometimes a rendering.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Submit to the ARC</strong> via management portal (FirstService, SFMC, Cardinal, etc.).</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Wait for review</strong> most meet every 2–4 weeks. Average turnaround: 2–4 weeks.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Receive approval</strong> conditions typically involve minor color or railing changes. We address and resubmit within 48 hours.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Receive approval</strong> conditions typically involve minor color or railing changes. We address and resubmit after review.</li>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Apply for county building permit.</strong> We do both in parallel when possible.</li>
           </ol>
 

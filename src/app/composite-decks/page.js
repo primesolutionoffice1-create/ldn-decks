@@ -15,11 +15,12 @@ import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/composite-decks',
   title: 'Premier Composite Deck Builder NoVA | Premium Custom Decks',
-  description: 'Premier composite deck builder in Northern Virginia. Trex Platinum Partner & TimberTech Certified. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax & Leesburg.',
+  description: 'Premier composite deck builder in Northern Virginia. Trex, TimberTech and AZEK material planning. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax & Leesburg.',
   image: '/social/composite-decks-social.png',
 });
 
@@ -38,7 +39,7 @@ const inclusions = [
   },
   {
     title: "Permits & HOA Handled",
-    desc: "We manage the entire permit process and HOA architectural review submissions so you don't have to."
+    desc: "We coordinate permit-ready documentation and inspection planning and HOA architectural review submissions so you don't have to."
   },
   {
     title: "Typical Timeline: 2–4 Weeks",
@@ -57,7 +58,7 @@ const compositeFAQs = [
   },
   {
     q: "How many years does a composite deck last in Fairfax County?",
-    a: "A professionally installed composite deck by Loudoun Decks is designed to last 25 to 50 years with minimal maintenance."
+    a: "A professionally installed composite deck by Loudoun Decks is designed to last 25 years or more depending on product and care with minimal maintenance."
   },
   {
     q: "Do composite decks require any maintenance at all?",
@@ -125,10 +126,10 @@ const expansionSections = [
 export default function CompositeDecksPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | Premium Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex Platinum Partner &amp; TimberTech Certified. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax &amp; Leesburg." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | Premium Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax &amp; Leesburg." speakable />
       <ServiceSchema
         name="Composite Deck Installation"
-        description="Expert composite deck installation in Northern Virginia. Trex Platinum Partner and TimberTech Certified. 25-50 year warranties."
+        description="Expert composite deck installation in Northern Virginia. Trex, TimberTech and AZEK material planning. manufacturer material warranties."
         url="https://ldndecks.com/composite-decks"
         category="Deck Construction"
         lowPrice="20000"
@@ -141,7 +142,22 @@ export default function CompositeDecksPage() {
         description="Loudoun Decks is the leading composite deck builder in Loudoun County, Fairfax County, and Prince William County. High-performance, low-maintenance outdoor luxury."
       />
 
-      <AboveFoldCTA headline="Planning a custom composite deck in Northern Virginia? Talk to a Trex Platinum specialist today." />
+      <AboveFoldCTA headline="Planning a custom composite deck in Northern Virginia? Talk to a composite deck specialist today." />
+
+      <GeoAnswerBlock
+        question="Who is a composite deck builder for Northern Virginia homeowners?"
+        answer="Loudoun Decks is a Northern Virginia deck builder focused on composite deck planning, replacement, and outdoor living projects across Loudoun, Fairfax, Prince William, Arlington, Alexandria, and nearby service areas. Homeowners use this page to compare Trex, TimberTech, AZEK, Fiberon, railings, stairs, lighting, permits, HOA review, and estimate paths before choosing a low-maintenance composite deck."
+        facts={[
+          'Best-fit projects: custom composite decks, replacement decks, railings, stairs, lighting, and covered outdoor living',
+          'Primary local markets: Ashburn, Leesburg, Sterling, Reston, Fairfax, McLean, Vienna, Arlington, Alexandria, Manassas, and Woodbridge',
+          'Proof status: project photos, exact city claims, and manufacturer status require proof-lock before public citation',
+        ]}
+        links={[
+          { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost' },
+          { href: '/trex-vs-timbertech-vs-azek', label: 'Trex vs TimberTech vs AZEK' },
+          { href: '/get-estimate', label: 'Get a written estimate' },
+        ]}
+      />
 
       {/* Pricing Anchor - Conversion Filtering */}
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
@@ -165,12 +181,12 @@ export default function CompositeDecksPage() {
         title="Expert Composite Deck Contractor Serving NoVA"
         description="Ditch the staining and sanding. We specialize in premium composite deck installation for homeowners in Arlington, Stafford, and across Northern Virginia."
         listItems={[
-          "Certified Trex and AZEK installers",
+          "Trex and AZEK product-line planning",
           "Low-maintenance surfaces (no staining)",
           "Hidden fastener systems for seamless looks",
           "Scratch, stain, and fade resistant",
-          "Comprehensive 25-50 year warranties",
-          "All permits + HOA approvals handled",
+          "Manufacturer warranty documentation by product line",
+          "Permit and HOA documentation planned by scope",
           "See our before & after transformations"
         ]}
         image1="/images/img10.jpeg"
@@ -202,6 +218,31 @@ export default function CompositeDecksPage() {
             <Link key={href} href={href} style={{ display: 'block', padding: '1rem', border: '1px solid #e5e5e5', borderRadius: 8, color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none', background: '#fff' }}>
               {text} →
             </Link>
+          ))}
+        </div>
+      </section>
+
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 1000, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem' }}>Composite Deck Planning by Market</h2>
+        <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
+          Start with the local market page when permits, HOA rules, neighborhood layout, or county requirements are part of the composite deck decision.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+          {[
+            ['/deck-builder-ashburn-va', 'Ashburn composite decks'],
+            ['/deck-builder-leesburg-va', 'Leesburg composite decks'],
+            ['/deck-builder-fairfax-va', 'Fairfax composite decks'],
+            ['/deck-builder-mclean-va', 'McLean composite decks'],
+            ['/deck-builder-reston-va', 'Reston composite decks'],
+            ['/deck-builder-arlington-va', 'Arlington composite decks'],
+            ['/deck-builder-alexandria-va', 'Alexandria composite decks'],
+            ['/deck-builder-manassas-va', 'Manassas composite decks'],
+            ['/near-you/loudoun-county', 'Loudoun County deck planning'],
+            ['/near-you/fairfax-county', 'Fairfax County deck planning'],
+            ['/near-you/prince-william-county', 'Prince William County deck planning'],
+            ['/near-you/arlington-county', 'Arlington County deck planning'],
+          ].map(([href, text]) => (
+            <Link key={href} href={href} style={{ display: 'block', padding: '0.85rem', background: '#fff', border: '1px solid #e5e5e5', borderRadius: 8, color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none' }}>{text} →</Link>
           ))}
         </div>
       </section>

@@ -28,7 +28,7 @@ export async function GET() {
       <image:image>
         <image:loc>${SITE_URL}/home-page-ldn.webp</image:loc>
         <image:title>Loudoun Decks Custom Deck Builder Northern Virginia</image:title>
-        <image:caption>Custom composite deck building in Northern Virginia by Loudoun Decks. Trex Platinum Partner.</image:caption>
+        <image:caption>Custom composite deck building in Northern Virginia by Loudoun Decks.</image:caption>
       </image:image>
     </url>`);
 

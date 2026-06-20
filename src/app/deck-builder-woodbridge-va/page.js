@@ -22,7 +22,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 export const metadata = buildMetadata({
   path: '/deck-builder-woodbridge-va',
   title: 'Deck Builder in Woodbridge, VA | Trex Certified | Loudoun Decks',
-  description: 'Trusted deck builder in Woodbridge, VA. Trex Platinum Partner & TimberTech Certified. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
+  description: 'Trusted deck builder in Woodbridge, VA. Trex product-line planning & TimberTech and AZEK product planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
   image: '/social/deck-builder-woodbridge-va-social.png',
 });
 
@@ -33,7 +33,7 @@ const inclusions = [
   },
   {
     title: "Premium Composite Specialists",
-    desc: "As certified Trex Platinum and TimberTech installers, we deliver high-grade composite decking that withstands the variable Virginia weather near the Potomac."
+    desc: "With Trex, TimberTech, and AZEK material planning experience, we deliver high-grade composite decking that withstands the variable Virginia weather near the Potomac."
   },
   {
     title: "Prince William Craftsmanship",
@@ -60,7 +60,7 @@ const woodbridgeFAQs = [
   },
   {
     q: "Are you a Trex certified contractor in Woodbridge VA?",
-    a: "Yes. Loudoun Decks is a Trex Platinum Partner, giving Woodbridge clients access to Trex product lines, manufacturer-backed warranty paths, and installation practices aligned with Trex requirements."
+    a: "Loudoun Decks plans Woodbridge projects with Trex product-line options, manufacturer warranty documentation, and installation practices aligned with published Trex requirements."
   },
   {
     q: "Do you build screened porches in Woodbridge?",
@@ -87,14 +87,14 @@ const expansionSections = [
   {
     title: "Composite Decking Specialists for Woodbridge Homes",
     paragraphs: [
-      "The humidity and seasonal weather changes near the Potomac River make composite decking the ideal choice for Woodbridge homeowners. As a Trex Platinum Partner and TimberTech Certified contractor, we install decking that won't warp, splinter, or rot. Projects typically start around $20,000 and scale based on your specific design requirements.",
+      "The humidity and seasonal weather changes near the Potomac River make composite decking the ideal choice for Woodbridge homeowners. We plan Trex, TimberTech, and AZEK decking options with low-maintenance boards selected for Virginia humidity and freeze-thaw exposure. Projects typically start around $20,000 and scale based on your specific design requirements.",
       "We specialize in designing decks that maximize the usable outdoor space of your property, whether you have a steep sloped yard in Lake Ridge or a flat lot. Integrated lighting, custom railings, and built-in seating are standard requests that we execute flawlessly.",
       "Every composite deck proposal in Woodbridge includes manufacturer warranty information for the selected product line and installation practices aligned with published manufacturer guidance."
     ],
     listItems: [
-      { label: "Trex Platinum Partner", text: "Trex product-line familiarity and manufacturer-aligned installation practices for Woodbridge and Northern Virginia." },
-      { label: "TimberTech Certified", text: "Certified installer for the full TimberTech Pro and AZEK product lines." },
-      { label: "Prince William Permits", text: "Full handling of all Prince William County permitting and inspections." },
+      { label: "Trex product-line planning", text: "Trex product-line familiarity and manufacturer-aligned installation practices for Woodbridge and Northern Virginia." },
+      { label: "TimberTech and AZEK product planning", text: "TimberTech Pro and AZEK product-line planning for premium builds." },
+      { label: "Prince William Permits", text: "Permit planning support for Prince William County and inspections." },
       { label: "Public Profiles", text: "Homeowners can review public profiles and project documentation before approving a scope." }
     ]
   },
@@ -112,18 +112,18 @@ export default function DeckBuilderWoodbridgePage() {
   return (
     <main>
       <LocalBusinessSchema city="Woodbridge" url="https://ldndecks.com/deck-builder-woodbridge-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-woodbridge-va" name="Deck Builder in Woodbridge, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Woodbridge, VA. Trex Platinum Partner &amp; TimberTech Certified. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-woodbridge-va" name="Deck Builder in Woodbridge, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Woodbridge, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Woodbridge, VA's Trusted Deck Company"
         title="Custom Deck Builder in Woodbridge, VA"
-        description="Loudoun Decks builds premium composite decks and screened porches in Woodbridge, Lake Ridge, and Montclair. Trex Platinum Partner. publicly documented reputation."
+        description="Loudoun Decks builds premium composite decks and screened porches in Woodbridge, Lake Ridge, and Montclair. Trex product-line planning. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Prince William's Choice"
         title="Deck Builder Woodbridge VA  -  Premium Craftsmanship"
         description="We build the outdoor spaces Woodbridge homeowners love. Custom designs, HOA-ready plans, and premium composite materials starting at $20k+."
         listItems={[
-          "Trex Platinum & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "Full Prince William HOA & Permit management",
           "Custom multi-level and single-level designs",
           "Screened porches, pergolas & under-deck patios",

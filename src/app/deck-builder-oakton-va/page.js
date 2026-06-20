@@ -60,7 +60,7 @@ const oaktonFAQs = [
   },
   {
     q: "What deck materials do you recommend for Oakton homes?",
-    a: "For Oakton's premium market, we primarily recommend Trex Transcend and TimberTech AZEK. Both offer realistic wood-grain textures, exceptional fade resistance, and 25-50 year warranties. We pair these with Trex Signature cable railings or glass panel systems. AZEK's PVC construction is especially well-suited for Oakton's shaded, wooded lots where moisture retention can be a concern."
+    a: "For Oakton's premium market, we primarily recommend Trex Transcend and TimberTech AZEK. Both offer realistic wood-grain textures, exceptional fade resistance, and manufacturer material warranties. We pair these with Trex Signature cable railings or glass panel systems. AZEK's PVC construction is especially well-suited for Oakton's shaded, wooded lots where moisture retention can be a concern."
   },
   {
     q: "Can you build multi-level decks on sloped Oakton lots?",
@@ -128,7 +128,7 @@ export default function OaktonDeckBuilderPage() {
       <ServicesHeader
         subtext="Oakton, VA's Premium Deck Builder"
         title="Custom Deck Builder in Oakton, VA"
-        description="Loudoun Decks builds premium composite decks, multi-level structures, and screened porches for Oakton's wooded estate properties. Trex Platinum Partner. publicly documented reputation."
+        description="Loudoun Decks builds premium composite decks, multi-level structures, and screened porches for Oakton's wooded estate properties. Trex product-line planning. publicly documented reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -147,7 +147,7 @@ export default function OaktonDeckBuilderPage() {
         title="Deck Builder Oakton VA - Premium Builds for Wooded Estate Lots"
         description="We design and build the luxury outdoor environments Oakton homeowners expect. Multi-level builds, premium composite, tree protection, and full Fairfax County permit management from $30k+."
         listItems={[
-          "Trex Platinum & TimberTech AZEK Certified",
+          "Trex, TimberTech and AZEK material planning",
           "Specialists in wooded lot construction and tree preservation",
           "Custom multi-level designs for Oakton's sloped terrain",
           "Fairfax County permits including RPA environmental review",

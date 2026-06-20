@@ -17,11 +17,12 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-leesburg-va',
   title: 'Deck Builder in Leesburg, VA | Trex Certified | Loudoun Decks',
-  description: 'Deck builder in Leesburg, VA. Custom Trex & cedar decks for River Creek, Lansdowne, Tavistock Farms & the historic district. Town of Leesburg + Loudoun County permits handled. Free estimate  -  (571) 655-7207.',
+  description: 'Deck builder in Leesburg, VA. Custom Trex & cedar decks for River Creek, Lansdowne, Tavistock Farms & the historic district. Town of Leesburg + Loudoun County permit planning support. Free estimate  -  (571) 655-7207.',
   image: '/social/deck-builder-leesburg-va-social.png',
 });
 
@@ -102,13 +103,13 @@ const expansionSections = [
   {
     title: "Composite, Cedar and the Leesburg View Lot",
     paragraphs: [
-      "Material choice in Leesburg is more varied than in most NoVA towns. Composite leads for its low maintenance, and as a TrexPro installer and TimberTech Certified contractor we install the top-tier lines. But River Creek homeowners often still choose cedar or IPE for a natural-wood aesthetic, and the historic district frequently calls for AZEK's premium boards where a traditional finish matters. We build all of them well.",
+      "Material choice in Leesburg is more varied than in most NoVA towns. Composite leads for its low maintenance, and with Trex, TimberTech, and AZEK product-line planning, we help homeowners compare the top-tier lines. But River Creek homeowners often still choose cedar or IPE for a natural-wood aesthetic, and the historic district frequently calls for AZEK's premium boards where a traditional finish matters. We build all of them well.",
       "Leesburg's larger, sloped lots shape the design as much as the material. Where a yard falls toward the Potomac, a multi-level deck turns an awkward grade into usable rooms, and cable or glass railing keeps the river or golf-course view intact. Leesburg projects typically start around $20,000 and scale with slope, levels and railing choice.",
       "Composite boards ship with a long manufacturer material warranty; pairing it with a certified installation is what keeps that warranty enforceable a decade or two down the road."
     ],
     listItems: [
-      { label: "TrexPro installer", text: "TrexPro Platinum tier  -  full Transcend, Enhance and Select catalog for Leesburg builds." },
-      { label: "TimberTech Certified", text: "Certified installer for the complete TimberTech Pro and AZEK product lines." },
+      { label: "Trex product planning", text: "Trex Transcend, Enhance and Select catalog options for Leesburg builds." },
+      { label: "TimberTech and AZEK product planning", text: "TimberTech Pro and AZEK product-line planning." },
       { label: "Cedar & IPE Capable", text: "Natural-wood decks built to last for River Creek and historic-district homes." },
       { label: "Dual-Jurisdiction Permits", text: "Filing handled for both the Town of Leesburg and Loudoun County." }
     ]
@@ -165,18 +166,18 @@ export default function DeckBuilderLeesburgPage() {
   return (
     <main>
       <LocalBusinessSchema city="Leesburg" url="https://ldndecks.com/deck-builder-leesburg-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-leesburg-va" name="Deck Builder in Leesburg, VA | Trex Certified | Loudoun Decks" description="Deck builder in Leesburg, VA. Custom Trex &amp; cedar decks for River Creek, Lansdowne, Tavistock Farms &amp; the historic district. Town of Leesburg + Loudoun County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-leesburg-va" name="Deck Builder in Leesburg, VA | Trex Certified | Loudoun Decks" description="Deck builder in Leesburg, VA. Custom Trex &amp; cedar decks for River Creek, Lansdowne, Tavistock Farms &amp; the historic district. Town of Leesburg + Loudoun County permit planning support. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Leesburg, VA's Trusted Deck Company"
         title="Custom Deck Builder in Leesburg, VA"
-        description="Loudoun Decks builds composite, cedar and IPE decks across River Creek, Lansdowne and the historic district. Town of Leesburg + Loudoun County permits handled. publicly documented reputation."
+        description="Loudoun Decks builds composite, cedar and IPE decks across River Creek, Lansdowne and the historic district. Town of Leesburg + Loudoun County permit planning support. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Historic Loudoun Craftsmanship"
         title="Deck Builder Leesburg VA  -  Premium Quality"
         description="We build decks suited to Leesburg's two worlds  -  the historic district and the river communities. Slope-engineered designs, view-preserving railings, materials from $20k+."
         listItems={[
-          "TrexPro, TimberTech, cedar & IPE",
+          "Trex, TimberTech, AZEK, cedar & IPE",
           "Town of Leesburg & Loudoun County permits confirmed and filed",
           "Multi-level designs for sloped Potomac-facing lots",
           "Cable & glass railing for river and fairway views",
@@ -196,6 +197,20 @@ export default function DeckBuilderLeesburgPage() {
           { href: "/deck-permit-loudoun-county-virginia", label: "Loudoun permit guide" },
           { href: "/lansdowne-hoa-deck-rules", label: "Lansdowne HOA guide" },
           { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" }
+        ]}
+      />
+      <GeoAnswerBlock
+        question="What should Leesburg homeowners know before planning a deck?"
+        answer="Leesburg deck projects should start with a jurisdiction check because Town of Leesburg properties and nearby Loudoun County properties follow different permit paths. Historic district, River Creek, Lansdowne, Tavistock Farms, Beacon Hill, and Potomac-facing lots may also need earlier decisions on materials, railing visibility, slope, drainage, HOA or ARB review, and whether the existing deck can be resurfaced."
+        facts={[
+          'Primary buyer intent: permit clarity, historic review, premium composite materials, and sloped-lot planning.',
+          'Proof status: downtown, river-view, and neighborhood-specific project claims stay draft-only until evidence is attached.',
+          'Conversion path: written estimate plus permit and material planning.'
+        ]}
+        links={[
+          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
+          { href: '/lansdowne-hoa-deck-rules', label: 'Lansdowne HOA guide' },
+          { href: '/get-estimate', label: 'Get a Leesburg estimate' }
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

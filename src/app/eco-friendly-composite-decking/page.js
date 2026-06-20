@@ -127,7 +127,7 @@ export default function EcoFriendlyDeckingPage() {
               </tbody>
             </table>
           </div>
-          <p style={S.p}><strong>Our pick for sustainability:</strong> Trex highest recycled content (95%), USA-manufactured (two facilities including one in Virginia), and an active recycling program. As a certified Trex Pro installer, we&apos;re proud to build with the industry&apos;s most sustainable product. <Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Learn more about our Trex services</Link>.</p>
+          <p style={S.p}><strong>Our pick for sustainability:</strong> Trex highest recycled content (95%), USA-manufactured (two facilities including one in Virginia), and an active recycling program. As a Trex product-line planner, we&apos;re proud to build with the industry&apos;s most sustainable product. <Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Learn more about our Trex services</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[

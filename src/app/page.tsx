@@ -33,7 +33,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   path: "/",
   title: 'Deck Builder Near Me in Northern VA | Loudoun Decks',
-  description: 'Northern Virginia deck contractor for composite decks, Trex, TimberTech, replacements and screened porches. Public review profiles and permits handled.',
+  description: 'Northern Virginia deck contractor for composite decks, Trex, TimberTech, replacements and screened porches. Public profile links, permit planning, and HOA support.',
 });
 
 // Homepage-specific WebPage schema — tells Google this is the main landing page.
@@ -45,7 +45,7 @@ const homepageSchema = {
   "@id": "https://ldndecks.com/#webpage",
   "url": "https://ldndecks.com",
   "name": "Loudoun Decks — Custom Deck Builder in Northern Virginia",
-  "description": "Trusted deck contractor and composite deck builder serving Loudoun County, Fairfax County, Prince William County, and Northern Virginia. Trex Platinum Partner and TimberTech Certified. Deck replacement, resurfacing, screened porches, patios, pergolas, permits, and HOA support.",
+  "description": "Trusted deck contractor and composite deck builder serving Loudoun County, Fairfax County, Prince William County, and Northern Virginia. Deck replacement, resurfacing, screened porches, patios, pergolas, permit planning, and HOA support.",
   "isPartOf": { "@type": "WebSite", "@id": "https://ldndecks.com/#website" },
   "about": { "@id": "https://ldndecks.com/#organization" },
   "primaryImageOfPage": {
@@ -143,7 +143,7 @@ const videoSchema = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "name": "Loudoun Decks — Custom Deck Building in Northern Virginia",
-  "description": "See how Loudoun Decks transforms Northern Virginia backyards into luxury outdoor living spaces. Custom composite decks, screened porches, and outdoor kitchens by a Trex Platinum Partner.",
+  "description": "See how Loudoun Decks transforms Northern Virginia backyards into outdoor living spaces with custom composite decks, screened porches, and outdoor kitchens.",
   "thumbnailUrl": "https://ldndecks.com/home-page-ldn.webp",
   "uploadDate": "2025-01-15T08:00:00-05:00",
   "contentUrl": "https://ldndecks.com/introvideo.mp4",

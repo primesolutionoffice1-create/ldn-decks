@@ -214,7 +214,7 @@ export default function LoudounCountyHOADeckRulesPage() {
             <li><strong>Design within constraints:</strong> We design your deck to maximize your space and vision while respecting every HOA requirement. If a restriction conflicts with your goals, we discuss alternatives before investing in plans.</li>
             <li><strong>Complete documentation:</strong> Every submission includes every required document, properly formatted, with physical samples when requested. ARCs appreciate professional submissions &mdash; it signals that the project will be executed professionally.</li>
             <li><strong>Review communication:</strong> If the ARC administrator asks for clarification, we respond with the missing technical or design detail quickly so the packet keeps moving.</li>
-            <li><strong>Rapid response:</strong> If an ARC requests modifications or additional information, we respond within 24 hours to keep the review moving.</li>
+            <li><strong>Rapid response:</strong> If an ARC requests modifications or additional information, we respond after review to keep the review moving.</li>
           </ul>
 
           {/* ===== SECTION 6: HOA vs County Permit ===== */}

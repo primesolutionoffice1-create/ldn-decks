@@ -197,7 +197,7 @@ export default function SecondStoryDeckBuilderPage() {
           <p style={S.p}>Each guard post must resist a 200-pound force applied laterally at the top of the post. This means posts must be bolted through the rim joist (not just screwed) with specific hardware. Surface-mounted post bases with through-bolts are the standard approach for composite railing systems.</p>
 
           <h3 style={S.h3}>Stairway Requirements</h3>
-          <p style={S.p}>Elevated deck stairs must have consistent riser heights (maximum 7-3/4 inches, variation under 3/8 inch between any two risers), graspable handrails on both sides if the stairway exceeds 44 inches wide, and adequate lighting. Long stairways from second-story height require intermediate landings every 12 feet of vertical rise.</p>
+          <p style={S.p}>Elevated deck stairs must have consistent riser heights (Virginia residential stair geometry uses an 8 1/4-inch maximum riser, 9-inch minimum tread, and variation under 3/8 inch between any two risers), graspable handrails on both sides if the stairway exceeds 44 inches wide, and adequate lighting. Long stairways from second-story height require intermediate landings every 12 feet of vertical rise.</p>
 
           {/* ===== SECTION 7: Under-Deck Living Space ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Creating Dry Living Space Under Your Elevated Deck</h2>

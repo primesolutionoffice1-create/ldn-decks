@@ -54,7 +54,7 @@ const pageFAQs = [
   },
   {
     q: "Do you pull permits for deck repairs in Loudoun County?",
-    a: "Structural repairs in Loudoun County typically require a permit from Loudoun County Department of Building and Development. Loudoun Decks handles the full permitting process on your behalf, including structural drawings when required."
+    a: "Structural repairs in Loudoun County may require a permit from Loudoun County Department of Building and Development. Loudoun Decks helps identify likely permit triggers, structural drawing needs, and inspection milestones before repair work is scheduled."
   },
   {
     q: "How do I know if my Loudoun County deck needs repair or full replacement?",
@@ -101,7 +101,7 @@ const expansionSections = [
     title: "Deck Resurfacing in Loudoun County: The Cost-Effective Upgrade",
     paragraphs: [
       "For Loudoun County homeowners whose deck's substructure - posts, beams, and joists - is structurally sound but whose surface boards and railings are worn, deck resurfacing is an excellent alternative to full replacement. By removing the old decking surface and replacing it with new material, you can achieve a brand-new appearance and significantly improved safety at a fraction of the cost of demolishing and rebuilding the entire deck.",
-      "The most popular resurfacing upgrade in Loudoun County is replacing old pressure-treated pine boards with low-maintenance composite decking from Trex or TimberTech. As a Trex Platinum Partner and TimberTech Certified installer, Loudoun Decks has access to the full range of premium composite products. Composite decking requires no sealing or staining, is highly resistant to moisture and insect damage, and comes with manufacturer warranties of 25-50 years - making it an ideal long-term solution for Loudoun County's climate.",
+      "The most popular resurfacing upgrade in Loudoun County is replacing old pressure-treated pine boards with low-maintenance composite decking from Trex or TimberTech. As a Trex, TimberTech, and AZEK material planning, Loudoun Decks has access to the full range of premium composite products. Composite decking requires no sealing or staining, is highly resistant to moisture and insect damage, and comes with manufacturer warranties of 25-50 years - making it an ideal long-term solution for Loudoun County's climate.",
       "During any resurfacing project, we also take the opportunity to audit and reinforce the existing framing. We add joist hangers where they may be missing, upgrade rim board connections, and address any fastener corrosion we find. This comprehensive approach ensures that your resurfaced deck meets modern Loudoun County building standards and will serve your family safely for decades to come."
     ]
   },
@@ -109,7 +109,7 @@ const expansionSections = [
     title: "Loudoun County Deck Repair: Our Process",
     paragraphs: [
       "Every deck repair project in Loudoun County begins with a comprehensive on-site safety assessment. We don't simply quote the work you describe - we perform a full inspection of the visible deck surface, the substructure framing, the ledger connection, the footings, and the railing and stair systems. Our goal is to identify every safety issue and every repair need before we provide a proposal, so you have a complete picture of your deck's condition.",
-      "Once the scope is agreed upon, we handle all Loudoun County permit applications for structural work. Our team is experienced with the Loudoun County Department of Building and Development's requirements for deck repairs, including when structural drawings are required. We manage this process entirely on your behalf, and we schedule inspections with the county to ensure every repair is fully permitted and approved.",
+      "Once the scope is agreed upon, we support Loudoun County permit documentation for structural work. Our team is familiar with Department of Building and Development requirements for deck repairs, including when structural drawings may be required. Permit submissions, inspections, and approval steps are coordinated as part of the documented repair scope.",
       "We serve the full Loudoun County area for deck repairs: Ashburn, Leesburg, Sterling, Brambleton, Broadlands, One Loudoun, South Riding, Lansdowne, Purcellville, Round Hill, Middleburg, Lovettsville, Hamilton, Waterford, Hillsboro, Aldie, Arcola, Potomac Falls, and all surrounding communities. If you have a deck that needs attention anywhere in Loudoun County, Loudoun Decks is your local repair specialist."
     ]
   }

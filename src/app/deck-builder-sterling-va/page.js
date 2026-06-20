@@ -15,6 +15,7 @@ import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-sterling-va',
@@ -66,6 +67,20 @@ export default function SterlingDeckBuilderPage() {
           { href: "/deck-permit-loudoun-county-virginia", label: "Loudoun permit guide" },
           { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" },
           { href: "/deck-safety-inspection-checklist", label: "Safety checklist" }
+        ]}
+      />
+      <GeoAnswerBlock
+        question="When should Sterling homeowners resurface versus replace a deck?"
+        answer="Sterling homeowners should only choose resurfacing after the frame, ledger, joists, posts, stairs, railings, and footings are inspected. Many Sterling decks in Sugarland Run, Countryside, Cascades, Lowes Island, and Potomac Falls are old enough to need structural review before composite boards, railings, lighting, Loudoun County permits, and HOA requirements are finalized."
+        facts={[
+          'Primary buyer intent: deck replacement, resurfacing, Loudoun permit planning, and HOA-ready composite upgrades.',
+          'Proof status: Sterling neighborhood and completed-project claims require proof-lock.',
+          'Conversion path: resurface-vs-replace guide, Loudoun permit guide, safety checklist, and written estimate.'
+        ]}
+        links={[
+          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
+          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
+          { href: '/get-estimate', label: 'Get a Sterling estimate' }
         ]}
       />
       <article style={{ padding: '4rem 0' }}>

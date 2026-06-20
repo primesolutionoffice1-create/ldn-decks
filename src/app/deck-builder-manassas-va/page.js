@@ -11,6 +11,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-manassas-va',
@@ -97,7 +98,7 @@ export default function ManassasDeckBuilderPage() {
 
           <div style={{ borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
-            <p style={{ margin: 0, lineHeight: 1.65 }}>A custom composite deck in Manassas typically costs $18,000 to $35,000 installed. Prince William County permits average 2 to 3 weeks. We're Trex Certified and handle Wellington HOA, Bull Run Mountain Estates and Old Town Architectural Review submissions in-house.</p>
+            <p style={{ margin: 0, lineHeight: 1.65 }}>A custom composite deck in Manassas typically costs $18,000 to $35,000 installed. Prince William County permits average 2 to 3 weeks. We plan Trex product-line options and coordinate Wellington HOA, Bull Run Mountain Estates, and Old Town Architectural Review submission details with the homeowner.</p>
           </div>
 
           <PlanningUpdate
@@ -111,6 +112,21 @@ export default function ManassasDeckBuilderPage() {
               { href: "/deck-permit-prince-william-county-virginia", label: "Prince William permit guide" },
               { href: "/deck-safety-inspection-checklist", label: "Safety checklist" },
               { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" }
+            ]}
+          />
+
+          <GeoAnswerBlock
+            question="What should Manassas homeowners check before a deck replacement?"
+            answer="Manassas deck projects should confirm whether the home falls under City of Manassas, Manassas Park, Prince William County, HOA, or historic-area review before pricing is finalized. The safest first step is to inspect framing, ledger flashing, posts, footings, stairs, railings, and drainage, then choose resurfacing or full replacement with composite, PVC, or wood materials."
+            facts={[
+              'Primary buyer intent: Manassas deck builder, Prince William permit planning, replacement, and composite upgrades.',
+              'Proof status: exact Manassas project/photo claims require proof-lock.',
+              'Conversion path: Prince William permit guide, safety inspection, and written estimate.'
+            ]}
+            links={[
+              { href: '/deck-permit-prince-william-county-virginia', label: 'Prince William permit guide' },
+              { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
+              { href: '/get-estimate', label: 'Get a Manassas estimate' }
             ]}
           />
 
@@ -160,7 +176,7 @@ export default function ManassasDeckBuilderPage() {
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Three-jurisdiction planning.</strong> City of Manassas, Manassas Park and unincorporated Prince William County each have their own building departments and review expectations. We verify which path applies before plans are filed.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Historic district planning.</strong> Old Town Architectural Review submissions may require elevation drawings, material samples and exterior color justification. We prepare those details before the packet is submitted.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Trex Certified installer.</strong> Our crews train annually on Trex Enhance, Transcend and Signature systems plus the full TimberTech AZEK line.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Trex product-line planning.</strong> Our crews train annually on Trex Enhance, Transcend and Signature systems plus the full TimberTech AZEK line.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Honest pricing for the local market.</strong> Manassas projects don't carry Loudoun overhead. Our quotes reflect that, and we'll show you the line items.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Source-verifiable reputation.</strong> We point homeowners to public review profiles and third-party business listings so trust claims can be checked outside our own website.</li>
           </ul>

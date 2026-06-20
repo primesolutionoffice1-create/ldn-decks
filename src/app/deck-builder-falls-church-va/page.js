@@ -33,7 +33,7 @@ const inclusions = [
   },
   {
     title: "Dual Jurisdiction Permitting",
-    desc: "We determine whether your address falls under the City of Falls Church or Fairfax County, then manage the entire permit process for the correct jurisdiction."
+    desc: "We determine whether your address falls under the City of Falls Church or Fairfax County, then coordinate permit-ready documentation and inspection planning for the correct jurisdiction."
   },
   {
     title: "Privacy-Forward Design",
@@ -100,7 +100,7 @@ const expansionSections = [
     paragraphs: [
       "Falls Church is one of Northern Virginia's highest-value real estate markets. Modest 1950s-era ramblers on small lots regularly sell for $800,000 to $1.2 million, and new construction teardowns push well beyond that. In this market, homeowners expect materials and finishes that match their property values. We exclusively use premium composite and PVC decking — Trex Transcend, TimberTech AZEK, and similar top-tier products — because they deliver the aesthetics and longevity this market demands.",
       "Glass railings and stainless steel cable systems are among the most popular choices for Falls Church projects. On a compact lot, transparent railings make a small deck feel significantly larger by preserving sight lines to the yard and beyond. Hidden fastener systems eliminate visible screws for a clean, furniture-grade surface. Integrated LED lighting extends the usable hours of your deck through Virginia's long summer evenings.",
-      "These premium materials also eliminate the maintenance burden that traditional wood decks impose. In Virginia's humid climate, a pressure-treated wood deck needs sanding and staining every 1-2 years — a significant ongoing expense and inconvenience. Our composite builds are designed to look and perform beautifully for 25 to 50 years with nothing more than occasional cleaning."
+      "These premium materials also eliminate the maintenance burden that traditional wood decks impose. In Virginia's humid climate, a pressure-treated wood deck needs sanding and staining every 1-2 years — a significant ongoing expense and inconvenience. Our composite builds are designed to look and perform beautifully for 25 years or more depending on product and care with nothing more than occasional cleaning."
     ]
   },
   {
@@ -122,7 +122,7 @@ export default function FallsChurchDeckBuilderPage() {
       <ServicesHeader
         subtext="Falls Church, VA's Compact Lot Deck Specialists"
         title="Custom Deck Builder in Falls Church, VA"
-        description="Loudoun Decks builds premium composite decks, screened porches, and outdoor living spaces for Falls Church homeowners. City of Falls Church + Fairfax County permits handled. publicly documented reputation."
+        description="Loudoun Decks builds premium composite decks, screened porches, and outdoor living spaces for Falls Church homeowners. City of Falls Church + Fairfax County permit planning support. publicly documented reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -141,7 +141,7 @@ export default function FallsChurchDeckBuilderPage() {
         title="Deck Builder Falls Church VA - Smart Design for Compact Lots"
         description="We design and build premium outdoor living spaces that maximize Falls Church's smaller properties. Custom composite builds, dual-jurisdiction permitting, and privacy-first design from $25k+."
         listItems={[
-          "Trex Platinum & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "City of Falls Church + Fairfax County permit experts",
           "Compact lot specialists — multi-level & L-shaped designs",
           "Glass railings, privacy screens & integrated lighting",

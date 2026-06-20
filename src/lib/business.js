@@ -57,28 +57,15 @@ export const BUSINESS = {
     'https://www.mapquest.com/us/virginia/loudoun-decks-532352487',
     'https://www.nadra.org/membership/directory#!biz/id/69f274b54078d1282501ee3b',
   ],
-  // Professional credentials surfaced site-wide on the site — mirrored into
-  // schema as hasCredential for E-E-A-T / entity-trust signals.
+  // Professional credentials mirrored into schema as hasCredential.
+  // Keep this list limited to verifiable credentials. Manufacturer profiles,
+  // BBB, Houzz, Yelp, and other public trust references belong in sameAs or
+  // visible "verify directly" copy, not credential schema.
   credentials: [
-    {
-      name: 'TrexPro Platinum Installer',
-      category: 'certification',
-      recognizedBy: 'Trex Company, Inc.',
-    },
     {
       name: 'Class A Contractor License',
       category: 'license',
       recognizedBy: 'Virginia Department of Professional and Occupational Regulation',
-    },
-    {
-      name: 'TimberTech Certified Installer',
-      category: 'certification',
-      recognizedBy: 'AZEK Building Products',
-    },
-    {
-      name: 'BBB Accredited Business',
-      category: 'accreditation',
-      recognizedBy: 'Better Business Bureau',
     },
     {
       name: 'NADRA Builder/Contractor/Remodeler Membership',
@@ -96,6 +83,7 @@ export const BUSINESS = {
       name: 'North American Deck and Railing Association',
       alternateName: 'NADRA',
       url: 'https://www.nadra.org/',
+      logoPath: null, // Set to an original or NADRA-approved /badges/... asset only after owner proof is archived.
       memberType: 'Deck Builder/Contractor/Remodeler Primary Member',
       memberSince: '2026-04-29',
       expires: '2027-04-29',

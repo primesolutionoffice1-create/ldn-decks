@@ -17,6 +17,17 @@ export const metadata = {
   robots: { index: false, follow: false, nocache: true },
 };
 
+const OPERATIONS_TIME_ZONE = 'America/New_York';
+
+function operationsDateStamp(date = new Date()) {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: OPERATIONS_TIME_ZONE,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(date);
+}
+
 const TIER1_ACTIONS = [
   {
     id: 'gbp-weekly',
@@ -170,6 +181,8 @@ const TECHNICAL_GATES = [
 function proofPaths(date) {
   return {
     actionPacket: `docs/seo/owner-evidence-action-packet-${date}.csv`,
+    directoryCitationStatus: `docs/seo/directory-citation-status-${date}.md`,
+    directoryCitationValidation: `scripts/output/directory-citation-packet-validation-${date}.md`,
     photoManifest: `docs/seo/photo-ingestion-manifest-${date}.csv`,
     projectIntake: `docs/seo/project-evidence-intake-${date}.csv`,
     warrantyIntake: `docs/seo/warranty-terms-intake-${date}.csv`,
@@ -179,18 +192,25 @@ function proofPaths(date) {
     sprintCsv: `docs/seo/owner-evidence-sprint-${date}.csv`,
     unblockRunbook: `docs/seo/evidence-unblock-runbook-${date}.md`,
     proofChecklist: `docs/seo/proof-source-checklist-${date}.md`,
-    directoryCitationStatus: `docs/seo/directory-citation-status-${date}.md`,
-    gbpMapsProofOpsBoard: `docs/seo/gbp-maps-proof-ops-board-${date}.md`,
   };
 }
 
-function operationsDateStamp(date = new Date()) {
-  return new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'America/New_York',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  }).format(date);
+function directoryCitationGate(paths) {
+  return {
+    command: 'npm run seo:directory-citations:validate',
+    statusFile: paths.directoryCitationStatus,
+    validationReport: paths.directoryCitationValidation,
+    nadraProfileUrl: 'https://www.nadra.org/membership/directory#!biz/id/69f274b54078d1282501ee3b',
+    platforms: [
+      'NADRA directory',
+      'Bing Places',
+      'Apple Business Connect',
+      'Nextdoor',
+      'Angi',
+    ],
+    nadraProfileAffordance: 'Profile link affordance is present in the current proof gate; original/NADRA-approved logo asset is still owner-needed before replacing the text badge.',
+    rule: 'Only NADRA is currently allowed in organization sameAs from this batch. Bing, Apple, Nextdoor, and Angi stay proof-gated until screenshots/admin proof confirm canonical public identity.',
+  };
 }
 
 function ownerEvidenceSprint(paths) {
@@ -204,21 +224,6 @@ function ownerEvidenceSprint(paths) {
       'Project linkage',
       'Privacy pass',
       'Dry-run pass',
-    ],
-  };
-}
-
-function directoryCitationGate(paths) {
-  return {
-    status: paths.directoryCitationStatus,
-    board: paths.gbpMapsProofOpsBoard,
-    command: 'npm run seo:directory-citations:validate',
-    rows: [
-      'NADRA directory',
-      'Bing Places',
-      'Apple Business Connect',
-      'Nextdoor',
-      'Angi',
     ],
   };
 }
@@ -265,6 +270,70 @@ const PROOF_BLOCKERS = [
   { page: '/showcase', verdict: 'proof-incomplete', issue: '6 partial showcase records; verify photos, scope, city, date, and completion details before proof use.' },
 ];
 
+function gbpMapsReportPath(date) {
+  return `docs/seo/gbp-maps-proof-ops-board-${date}.md`;
+}
+
+const GBP_MAPS_PRIORITY_ACTIONS = [
+  {
+    priority: 'P0',
+    lane: 'GBP identity',
+    action: 'Verify GBP public identity matches canonical NAP.',
+    evidence: 'Screenshot showing Loudoun Decks, 13704 Winding Oak Cir, Centreville, VA 20121, and +15716557207.',
+    rule: 'Do not claim live GBP profile status from memory.',
+  },
+  {
+    priority: 'P0',
+    lane: 'GBP photos',
+    action: 'Upload original project photos tied to evidence-ledger priorities.',
+    evidence: 'Original files with city, month/year, project linkage, and publication permission where available.',
+    rule: 'No stock imagery and no project captions unless linked to a real project row.',
+  },
+  {
+    priority: 'P0',
+    lane: 'Citation cleanup',
+    action: 'Escalate BuildZoom license verification mismatch.',
+    evidence: 'Corrected public profile or support-thread screenshot.',
+    rule: 'Do not claim the listing is fixed until the live public profile reflects it.',
+  },
+  {
+    priority: 'P0',
+    lane: 'Citation cleanup',
+    action: 'Resolve Facebook NAP/name conflict or old Prime Solutions/Ashburn variant.',
+    evidence: 'Before/after screenshot or public URL showing corrected public identity.',
+    rule: 'Keep the canonical entity clean before adding new citations.',
+  },
+  {
+    priority: 'P1',
+    lane: 'GBP cadence',
+    action: 'Publish one weekly education-safe GBP post and seed/refine owner-controlled Q&A.',
+    evidence: 'Published post screenshot or GBP post URL plus Q&A screenshot.',
+    rule: 'Do not impersonate customers or fabricate customer questions.',
+  },
+  {
+    priority: 'P1',
+    lane: 'Directories',
+    action: 'Claim or complete Apple Business Connect, Bing Places, Trex, and TimberTech/AZEK profiles.',
+    evidence: 'Live profile URL, claim status, NAP screenshot, and target service URL used.',
+    rule: 'Use canonical NAP and truthful services only.',
+  },
+  {
+    priority: 'P1',
+    lane: 'Reviews',
+    action: 'Respond promptly to all new Google reviews and log reusable review-source evidence.',
+    evidence: 'Owner response screenshot or dashboard status.',
+    rule: 'Do not copy review excerpts into site content until source is logged.',
+  },
+];
+
+const GBP_WEEKLY_CADENCE = [
+  'Monday: run npm run gbp:this-week, choose an education-safe or verified-project GBP post, and publish manually.',
+  'Tuesday: upload original project photos tied to the evidence ledger; skip stock photos.',
+  'Wednesday: review GBP Q&A, services, categories, and unanswered questions.',
+  'Thursday: respond to new reviews and log any reusable public review source before surfacing it on site.',
+  'Friday: update citation cleanup statuses and attach screenshots or URLs to the owner evidence packet.',
+];
+
 function proofUnblockRunbook(paths) {
   return {
     report: paths.unblockRunbook,
@@ -282,7 +351,13 @@ function proofPreflightCommands(paths) {
   return [
     'npm run seo:evidence-unblock -- --date latest',
     'npm run seo:evidence-sprint',
+    'npm run seo:evidence-sprint:validate',
+    'npm run seo:evidence-action-packet',
+    'npm run seo:evidence-action-packet:validate',
     'npm run seo:validate-owner-intake',
+    'npm run seo:directory-citations:validate',
+    'npm run seo:proof-source-checklist:validate',
+    'npm run seo:proof-ops-board:validate',
     `npm run seo:ingest-assets -- --file ${paths.photoManifest} --preflight`,
     `npm run seo:ingest-assets -- --file ${paths.photoManifest} --dry-run`,
     `npm run seo:import-evidence -- --type warranty_terms --file ${paths.warrantyIntake} --dry-run`,
@@ -302,6 +377,7 @@ function proofPromoteCommands(paths) {
 
 const PROOF_FINAL_GATE_COMMANDS = [
   'npm run seo:validate-evidence',
+  'npm run seo:directory-citations:validate',
   'npm run seo:proof-snippets',
   'npm run seo:validate-proof-runtime',
   'npm run seo:audit-placeholders',
@@ -378,6 +454,7 @@ export default function OperationsDashboardPage() {
   const unblockRunbook = proofUnblockRunbook(paths);
   const preflightCommands = proofPreflightCommands(paths);
   const promoteCommands = proofPromoteCommands(paths);
+  const mapsReport = gbpMapsReportPath(today);
 
   return (
     <main style={{ background: '#f7f9fc', minHeight: '100vh', padding: '2rem 1.5rem' }}>
@@ -445,16 +522,6 @@ export default function OperationsDashboardPage() {
             <strong>Operator rule:</strong> complete the sprint checklist before importing proof. If a row still has unknowns, keep it partial and leave the publish gate closed.
           </div>
         </div>
-        <div style={S.card}>
-          <h3 style={{ ...S.h3, marginTop: 0 }}>GBP / Maps proof ops</h3>
-          <p style={S.meta}><strong>Directory status:</strong> <code>{citationGate.status}</code></p>
-          <p style={S.meta}><strong>Board:</strong> <code>{citationGate.board}</code></p>
-          <p style={S.meta}><strong>Command:</strong> <code>{citationGate.command}</code></p>
-          <p style={S.meta}><strong>Rows:</strong> {citationGate.rows.join(' · ')}</p>
-          <div style={S.next}>
-            <strong>SameAs rule:</strong> keep Apple, Nextdoor, Angi, and other unresolved directories proof-gated until owner/admin screenshots confirm canonical public identity.
-          </div>
-        </div>
         <h3 style={S.h3}>Minimum proof packet before anything becomes citable</h3>
         <ul style={{ ...S.card, paddingLeft: '2rem', lineHeight: 1.8, marginTop: 0 }}>
           {PROOF_MINIMUM_PACKET.map((item) => (
@@ -509,6 +576,19 @@ export default function OperationsDashboardPage() {
           ))}
         </div>
 
+        <h3 style={S.h3}>Directory citation proof gate</h3>
+        <div style={S.card}>
+          <p style={S.meta}><strong>Command:</strong> <code>{citationGate.command}</code></p>
+          <p style={S.meta}><strong>Status file:</strong> <code>{citationGate.statusFile}</code></p>
+          <p style={S.meta}><strong>Validation report:</strong> <code>{citationGate.validationReport}</code></p>
+          <p style={S.meta}><strong>Platforms:</strong> {citationGate.platforms.join(' · ')}</p>
+          <p style={S.meta}><strong>NADRA profile URL:</strong> <code>{citationGate.nadraProfileUrl}</code></p>
+          <p style={S.meta}><strong>NADRA profile:</strong> {citationGate.nadraProfileAffordance}</p>
+          <div style={S.next}>
+            <strong>sameAs rule:</strong> {citationGate.rule}
+          </div>
+        </div>
+
         <h3 style={S.h3}>Proof promote commands — only after source review</h3>
         <div style={{ ...S.card, fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace', fontSize: '0.82rem', lineHeight: 1.75, overflowX: 'auto' }}>
           {promoteCommands.map((command) => (
@@ -521,6 +601,43 @@ export default function OperationsDashboardPage() {
           {PROOF_FINAL_GATE_COMMANDS.map((command) => (
             <div key={command}>{command}</div>
           ))}
+        </div>
+
+        <h2 style={S.h2}>GBP / Maps proof ops — owner-only queue</h2>
+        <div style={S.warn}>
+          <strong>Maps growth is now operational, not a copywriting task.</strong> This board does not claim
+          live GBP rankings, photo counts, review velocity, or profile status without screenshots or API/source evidence.
+          Latest generated board: <code>{mapsReport}</code>.
+        </div>
+        <table style={S.table}>
+          <thead>
+            <tr>
+              <th style={S.th}>Priority</th>
+              <th style={S.th}>Lane</th>
+              <th style={S.th}>Owner action</th>
+              <th style={S.th}>Evidence required</th>
+              <th style={S.th}>Red gate</th>
+            </tr>
+          </thead>
+          <tbody>
+            {GBP_MAPS_PRIORITY_ACTIONS.map((row) => (
+              <tr key={`${row.lane}-${row.action}`}>
+                <td style={S.td}><span style={S.badge(row.priority === 'P0' ? 'red' : 'partial')}>{row.priority}</span></td>
+                <td style={S.td}><strong>{row.lane}</strong></td>
+                <td style={S.td}>{row.action}</td>
+                <td style={S.td}>{row.evidence}</td>
+                <td style={S.td}>{row.rule}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div style={S.card}>
+          <h3 style={{ ...S.h3, marginTop: 0 }}>Weekly Maps cadence</h3>
+          <ol style={{ paddingLeft: '1.25rem', lineHeight: 1.8, marginBottom: 0 }}>
+            {GBP_WEEKLY_CADENCE.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ol>
         </div>
 
         <h2 style={S.h2}>Latest verified code-side batches</h2>

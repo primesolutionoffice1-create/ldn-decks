@@ -195,7 +195,7 @@ export default function MclenGreatFallsPremiumPage() {
           <p style={S.p}>
             Fairfax County permit review for premium and covered decks runs 3–6 weeks. Premium projects almost always
             require engineering drawings ($500–$1,500), particularly for covered structures, steel framing, or sloped
-            sites. We coordinate the structural review and handle the full permit submission. HOA review, where
+            sites. We coordinate the structural review and coordinate the permit submission. HOA review, where
             applicable, runs in parallel.
           </p>
 

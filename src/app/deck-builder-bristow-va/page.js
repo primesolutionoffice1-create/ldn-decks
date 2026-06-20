@@ -21,7 +21,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 export const metadata = buildMetadata({
   path: '/deck-builder-bristow-va',
   title: 'Deck Builder in Bristow VA | Composite Deck Resurfacing & New Builds',
-  description: "Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  save 40-60% by keeping a sound frame. New composite decks from $18k. Prince William County permits handled. Free estimate.",
+  description: "Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  save 40-60% by keeping a sound frame. New composite decks from $18k. Prince William permit planning support. Free estimate.",
   image: '/social/deck-builder-bristow-va-social.png',
 });
 
@@ -80,7 +80,7 @@ const expansionSections = [
     title: "Why Composite Wins for Bristow's Newer Communities",
     paragraphs: [
       "Builder-grade PT wood was the default in Bristow because it was the cheapest option at scale. Builders installing 200 decks in a subdivision made material decisions based on per-unit cost, not on what the homeowner would want a decade later. Composite was available in the mid-2000s, but it was expensive and the early-generation products had fade and stain issues that made builders hesitant.",
-      "Today's composite is a different product entirely. Trex Enhance and Transcend, TimberTech Pro and AZEK  -  these lines resist fading, staining, scratching and mold growth in ways that early composite could not. They carry 25-year fade-and-stain warranties backed by the manufacturer, and certified installation ensures those warranties stay enforceable. For a Bristow homeowner replacing a deck that failed in 10 years, a material with a 25-year warranty changes the math entirely.",
+      "Today's composite is a different product entirely. Trex Enhance and Transcend, TimberTech Pro and AZEK  -  these lines resist fading, staining, scratching and mold growth in ways that early composite could not. They carry 25-year fade-and-stain warranties backed by the manufacturer, and certified installation ensures those warranties stay enforceable. For a Bristow homeowner replacing a deck that failed in 10 years, a material with a manufacturer warranty changes the math entirely.",
       "The maintenance difference matters in Bristow specifically because these are family neighborhoods. The hours spent sanding, staining and sealing a wood deck every spring  -  easily a full weekend  -  disappear with composite. A hose-down once or twice a year handles it. For homeowners with young kids and busy schedules, that time savings alone justifies the material upgrade."
     ]
   },
@@ -106,18 +106,18 @@ export default function BristowDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="Bristow" url="https://ldndecks.com/deck-builder-bristow-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-bristow-va" name="Deck Builder in Bristow VA | Composite Deck Resurfacing & New Builds" description="Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  save 40-60% by keeping a sound frame. New composite decks from $18k. Prince William County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-bristow-va" name="Deck Builder in Bristow VA | Composite Deck Resurfacing & New Builds" description="Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  save 40-60% by keeping a sound frame. New composite decks from $18k. Prince William permit planning support. Free estimate." speakable />
       <ServicesHeader
         subtext="Bristow, VA's Trusted Deck Company"
         title="Custom Deck Builder in Bristow, VA"
-        description="Loudoun Decks builds and resurfaces composite decks across Bristow  -  Bristow Manor, Braemar, Linton Hall, Victory Lakes, Kingsbrooke, Piney Branch. Prince William County permits handled. publicly documented reputation."
+        description="Loudoun Decks builds and resurfaces composite decks across Bristow  -  Bristow Manor, Braemar, Linton Hall, Victory Lakes, Kingsbrooke, Piney Branch. Prince William permit planning support. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Resurfacing Specialists for Bristow's Upgrade Cycle"
         title="Deck Builder Bristow VA  -  New Builds & Resurfacing"
         description="Bristow homes built 2005-2018 are entering the deck upgrade cycle. We inspect the frame, resurface with composite if it is sound, and build new when it is not. From $10k resurfacing to $45k new builds."
         listItems={[
-          "TrexPro & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "Resurfacing saves 40-60% when the frame is sound",
           "Bristow Manor, Braemar, Linton Hall HOA packages prepared",
           "Prince William County permits  -  2-4 week plan review",

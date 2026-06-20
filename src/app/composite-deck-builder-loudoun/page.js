@@ -41,7 +41,7 @@ const communities = [
 ];
 
 const trustBadges = [
-  'Trex Platinum Partner',
+  'public Trex profile and product-line familiarity',
   'TimberTech/AZEK Installer',
   'Public Google Review Profile',
   'BBB Profile Available',
@@ -175,7 +175,7 @@ export default function CompositeDeckBuilderLoudounPage() {
       <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/composite-deck-builder-loudoun" name="Composite Deck Builder Loudoun County, VA | Loudoun Decks" description="Premium composite deck builder in Loudoun County, VA. Trex and TimberTech decks, HOA support, permits, replacements, railings, stairs, and free estimates." speakable />
       <ServiceSchema
         name="Composite Deck Building in Loudoun County"
-        description="Custom composite and wood deck construction across Loudoun County — Ashburn, Leesburg, Sterling, Brambleton and beyond. TrexPro Platinum installer."
+        description="Custom composite and wood deck construction across Loudoun County — Ashburn, Leesburg, Sterling, Brambleton and beyond. Trex product-line planning."
         url="https://ldndecks.com/composite-deck-builder-loudoun"
         category="Deck Construction"
         lowPrice="18000"
@@ -192,7 +192,7 @@ export default function CompositeDeckBuilderLoudounPage() {
               Composite Deck Builder in Loudoun County, VA
             </h1>
             <p style={{ ...S.p, color: '#f4ede7', fontSize: 20 }}>
-              Design and build a low-maintenance Trex or TimberTech deck in Loudoun County with a local team that handles design, permits, HOA details, materials, framing, railings, stairs, and final walkthrough.
+              Design and build a low-maintenance Trex or TimberTech deck in Loudoun County with a local team that helps plan design, permits, HOA details, materials, framing, railings, stairs, and final walkthrough.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, margin: '30px 0 14px' }}>
               <Link href="/get-estimate" style={S.button}>Schedule My Free Composite Deck Consultation</Link>
@@ -432,7 +432,7 @@ export default function CompositeDeckBuilderLoudounPage() {
       <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
 
       <ContactHome />
-      <MobileStickyCTA microcopy="Trex + TimberTech decks | Loudoun permits handled" />
+      <MobileStickyCTA microcopy="Trex + TimberTech decks | Loudoun permit planning support" />
     </main>
   );
 }

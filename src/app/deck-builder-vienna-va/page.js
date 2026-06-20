@@ -18,6 +18,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-vienna-va',
@@ -124,7 +125,7 @@ export default function ViennaDeckBuilderPage() {
       <ServicesHeader
         subtext="Vienna, VA Deck Builder"
         title="Custom Deck Builder in Vienna, VA"
-        description="Loudoun Decks builds premium composite and wood decks in Vienna, Tysons, and across Fairfax County. Trex Platinum Partner. publicly documented reputation."
+        description="Loudoun Decks builds premium composite and wood decks in Vienna, Tysons, and across Fairfax County. Trex product-line planning. publicly documented reputation."
       />
 
       {/* Pricing Anchor - Conversion Filtering */}
@@ -143,7 +144,7 @@ export default function ViennaDeckBuilderPage() {
         title="Deck Builder Vienna VA - Premium Craftsmanship"
         description="We build the outdoor spaces Vienna homeowners are proud to show off. Custom designs, Town of Vienna permit expertise, and premium materials from $25k+."
         listItems={[
-          "Trex Platinum & TimberTech Certified",
+          "Trex, TimberTech and AZEK material planning",
           "Town of Vienna building permit experts",
           "Custom multi-level and single-level designs",
           "Screened porches, pergolas & outdoor kitchens",
@@ -163,6 +164,20 @@ export default function ViennaDeckBuilderPage() {
           { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
           { href: "/deck-safety-inspection-checklist", label: "Safety checklist" },
           { href: "/composite-deck-cost-northern-virginia", label: "Composite deck cost" }
+        ]}
+      />
+      <GeoAnswerBlock
+        question="What should Vienna homeowners confirm before building or replacing a deck?"
+        answer="Vienna deck projects should begin with a jurisdiction check because Town of Vienna and Fairfax County addresses can follow different permit paths. Homeowners should also review mature trees, rear-yard visibility, older framing, HOA or town documentation, composite material options, stairs, railings, and whether the project is a repair, resurfacing, or full replacement."
+        facts={[
+          'Primary buyer intent: Town of Vienna permit clarity, composite deck replacement, screened porches, and mature-lot planning.',
+          'Proof status: exact Vienna project and photo claims stay gated until owner evidence is attached.',
+          'Conversion path: Fairfax permit guide, safety checklist, composite cost guide, and written estimate.'
+        ]}
+        links={[
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
+          { href: '/get-estimate', label: 'Get a Vienna estimate' }
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

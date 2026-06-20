@@ -17,7 +17,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 export const metadata = buildMetadata({
   path: "/services/patios",
   title: 'Patio Contractor Northern Virginia | Paver, Stone & Stamped',
-  description: 'Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone & natural stone. Loudoun, Fairfax, Prince William, Arlington. Free 24h estimate.',
+  description: 'Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone & natural stone. Loudoun, Fairfax, Prince William, Arlington. written estimate.',
   image: '/social/patio-contractor-northern-virginia-social.png',
 });
 
@@ -94,7 +94,7 @@ const patioProcess = [
 const patioFAQs = [
   {
     question: 'How much does a patio cost in Northern Virginia in 2026?',
-    answer: 'A custom patio in Loudoun, Fairfax or Prince William County typically runs $14,000–$48,000 installed, depending on material and footprint. Concrete pavers at 250–300 sqft start near $14,000–$22,000. Stamped concrete runs $15,000–$25,000. Premium bluestone in the 350–450 sqft range lands at $28,000–$48,000. Full luxury hardscape suites with seating walls, fire features and outdoor kitchens run $75,000–$160,000+. Every Loudoun Decks estimate is itemized, written, and delivered within 48 hours of an on-site visit.'
+    answer: 'A custom patio in Loudoun, Fairfax or Prince William County typically runs $14,000–$48,000 installed, depending on material and footprint. Concrete pavers at 250–300 sqft start near $14,000–$22,000. Stamped concrete runs $15,000–$25,000. Premium bluestone in the 350–450 sqft range lands at $28,000–$48,000. Full luxury hardscape suites with seating walls, fire features and outdoor kitchens run $75,000–$160,000+. Every Loudoun Decks estimate is itemized, written, and delivered after an on-site visit.'
   },
   {
     question: 'Pavers vs stamped concrete vs natural stone — which is best for NoVA?',
@@ -102,7 +102,7 @@ const patioFAQs = [
   },
   {
     question: 'Do I need a permit for a patio in Loudoun, Fairfax or Prince William County?',
-    answer: 'Most at-grade patios under 256 sqft do not trigger a building permit in NoVA. Permits are required when the patio includes retaining walls over 2 feet (Fairfax and Loudoun), runs electrical or gas lines for outdoor kitchens, sits inside an RPA (Resource Protection Area) along stream corridors, or alters site grading and drainage. HOA architectural review is separate and applies in most planned communities — Brambleton, Lansdowne, Reston, Burke Centre and others — regardless of permit status. We handle every submission for our clients.'
+    answer: 'Most at-grade patios under 256 sqft do not trigger a building permit in NoVA. Permits are required when the patio includes retaining walls over 2 feet (Fairfax and Loudoun), runs electrical or gas lines for outdoor kitchens, sits inside an RPA (Resource Protection Area) along stream corridors, or alters site grading and drainage. HOA architectural review is separate and applies in most planned communities — Brambleton, Lansdowne, Reston, Burke Centre and others — regardless of permit status. We plan submission requirements with our clients.'
   },
   {
     question: 'How does Northern Virginia clay soil affect patio installation?',
@@ -162,7 +162,7 @@ export default function PatiosPage() {
     <main>
       <JsonLd data={faqSchemaData} />
       <JsonLd data={materialItemListSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone &amp; natural stone. Loudoun, Fairfax, Prince William, Arlington. Free 24h estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone &amp; natural stone. Loudoun, Fairfax, Prince William, Arlington. written estimate." speakable />
       <ServiceSchema
         name="Custom Patio Construction"
         description="Professional patio design and installation in Northern Virginia. Pavers, flagstone, stamped concrete, and natural stone patios."
@@ -176,7 +176,7 @@ export default function PatiosPage() {
       <ServicesHeader
         subtext="Patio Builder & Contractor — Northern Virginia"
         title="Custom Patio Contractor in Northern Virginia"
-        description="Virginia Class A licensed patio contractor serving Loudoun, Fairfax, Prince William, and Arlington counties. Paver patios, stamped concrete, bluestone, flagstone, and travertine hardscapes engineered for NoVA clay soil and freeze-thaw climate. Trex Platinum Partner — outdoor living suites that integrate seamlessly with decks, pergolas, and screened porches."
+        description="Virginia Class A licensed patio contractor serving Loudoun, Fairfax, Prince William, and Arlington counties. Paver patios, stamped concrete, bluestone, flagstone, and travertine hardscapes engineered for NoVA clay soil and freeze-thaw climate. Trex product-line planning — outdoor living suites that integrate seamlessly with decks, pergolas, and screened porches."
       />
 
       <AboveFoldCTA headline="Planning a paver, flagstone or bluestone patio in NoVA? Talk to a custom hardscape specialist today." />
@@ -186,7 +186,7 @@ export default function PatiosPage() {
           <div style={S.callout}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
             <p style={{ margin: 0, lineHeight: 1.7 }} data-speakable>
-              A custom patio in Northern Virginia typically costs $14,000–$48,000 installed for a 250–450 sqft build, with material running the largest cost lever — concrete pavers from $60/sqft, stamped concrete from $40/sqft, premium bluestone from $90/sqft. Loudoun Decks is a Virginia Class A licensed patio contractor and Trex Platinum Partner. We handle every county and HOA submission, engineer drainage into the base, and deliver an itemized written estimate within 48 hours of the on-site visit. Service area: Loudoun, Fairfax, Prince William, and Arlington counties.
+              A custom patio in Northern Virginia typically costs $14,000–$48,000 installed for a 250–450 sqft build, with material running the largest cost lever — concrete pavers from $60/sqft, stamped concrete from $40/sqft, premium bluestone from $90/sqft. Loudoun Decks is a Virginia Class A licensed patio contractor and Trex product-line planning. We plan county and HOA documentation with each scope, engineer drainage into the base, and deliver an itemized written estimate after the on-site visit. Service area: Loudoun, Fairfax, Prince William, and Arlington counties.
             </p>
           </div>
 
@@ -275,7 +275,7 @@ export default function PatiosPage() {
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}><strong>HOA architectural review</strong> applies regardless of permit status in Brambleton, Lansdowne, Reston, Burke Centre, South Riding, Broadlands, Belmont and most other planned NoVA communities.</li>
           </ul>
           <p style={S.pMuted}>
-            We handle every submission for our clients. See the full <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun</Link>, <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County</Link>, and <Link href="/deck-permit-prince-william-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Prince William County</Link> permit guides for fee schedules and timelines.
+            We plan submission requirements with our clients. See the full <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun</Link>, <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County</Link>, and <Link href="/deck-permit-prince-william-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Prince William County</Link> permit guides for fee schedules and timelines.
           </p>
 
           <h2 style={S.h2}>NoVA Clay Soil, Drainage & the Engineered Base</h2>

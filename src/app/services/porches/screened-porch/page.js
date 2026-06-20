@@ -19,7 +19,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 const _meta = buildMetadata({
     path: "/services/porches/screened-porch",
     title: "Screened Porch Builder & Contractor | Northern Virginia",
-    description: "Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k. Trex Platinum installer.",
+    description: "Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k.",
   image: "/social/screened-porch-builder-northern-virginia-social.png",
 });
 export const metadata = {
@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "Do you need a permit for a screened porch in Fairfax County?",
-    a: "Yes. Fairfax County requires a building permit for any screened porch because the roof structure is a structural addition tied to the house framing. Plan review through Fairfax County's Building Development Division runs 3–5 weeks and requires sealed structural drawings, ledger attachment details and footing schedules. The City of Fairfax runs faster at 2–3 weeks. We handle the full submission."
+    a: "Yes. Fairfax County requires a building permit for any screened porch because the roof structure is a structural addition tied to the house framing. Plan review through Fairfax County's Building Development Division often runs 3–5 weeks and may require sealed structural drawings, ledger attachment details and footing schedules. The City of Fairfax can run faster. We help homeowners plan the submission requirements and inspection milestones before construction begins."
   },
   {
     q: "What's the difference between a screened porch and a sunroom?",
@@ -83,10 +83,10 @@ const screenedPorchCostRows = [
 export default function ScreenedPorchPage() {
     return (
       <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/porches/screened-porch" name="Screened Porch Builder &amp; Contractor | Northern Virginia" description="Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k. Trex Platinum installer." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/porches/screened-porch" name="Screened Porch Builder &amp; Contractor | Northern Virginia" description="Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k." speakable />
         <ServiceSchema
         name="Screened Porch Construction"
-        description="Custom screened porches in Northern Virginia. EZE-Breeze and four-season options. Trex Platinum and TimberTech certified installer."
+        description="Custom screened porches in Northern Virginia with EZE-Breeze, four-season options, composite floor planning, permit planning, and written project scope."
         url="https://ldndecks.com/services/porches/screened-porch"
         category="Porch Construction"
         price="35000"
@@ -95,7 +95,7 @@ export default function ScreenedPorchPage() {
         <ServicesHeader
           subtext="Porch Services"
           title="Screened Porch Builder & Contractor in Northern Virginia"
-          description="Licensed Virginia Class A screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze four-season conversions, and full permit handling. Trex Platinum Partner and TimberTech Certified Installer."
+          description="Licensed Virginia Class A screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze four-season conversions, composite floor planning, and permit support."
         />
         <AboveFoldCTA headline="Planning a screened-in porch in Northern Virginia? Talk to a Class A licensed porch specialist today." />
 
@@ -103,7 +103,7 @@ export default function ScreenedPorchPage() {
           <div style={{ borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
             <p style={{ margin: 0, lineHeight: 1.65 }} data-speakable>
-              A custom screened-in porch in Northern Virginia typically costs $28,000 to $55,000 for a 200–350 sqft build with a composite floor, gable or shed roof, fiberglass screen and standard lighting. EZE-Breeze four-season conversions and premium fireplace builds run $55,000–$80,000. Fairfax County permits run 3–5 weeks; Loudoun County 2–4 weeks. We&apos;re a Virginia Class A licensed screened porch contractor and Trex Platinum installer.
+              A custom screened-in porch in Northern Virginia typically costs $28,000 to $55,000 for a 200–350 sqft build with a composite floor, gable or shed roof, fiberglass screen and standard lighting. EZE-Breeze four-season conversions and premium fireplace builds run $55,000–$80,000. Fairfax County permits often run 3–5 weeks; Loudoun County commonly runs 2–4 weeks. We&apos;re a Virginia Class A licensed screened porch contractor.
             </p>
           </div>
 
@@ -155,7 +155,7 @@ export default function ScreenedPorchPage() {
             </table>
           </div>
           <p style={{ fontSize: '0.88rem', color: '#666', fontStyle: 'italic', marginBottom: '2rem' }}>
-            Ranges include permit fees, structural drawings, all materials, and labor. Exclude HVAC, gas-line work, and custom millwork. Full itemized estimates ship within 48 hours of an on-site visit.
+            Ranges include permit fees, structural drawings, all materials, and labor. Exclude HVAC, gas-line work, and custom millwork. Full itemized estimates ship after review of an on-site visit.
           </p>
 
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
@@ -167,7 +167,7 @@ export default function ScreenedPorchPage() {
             A screened porch is structurally a roof attached to your house. That changes what you should expect from a screened porch contractor versus a deck-only crew. The non-negotiables: a current Virginia Class A contractor license verifiable at <em>dpor.virginia.gov</em>, sealed structural drawings on every Fairfax County submission, full liability and workers&apos; comp insurance, and ledger attachment details that meet current NoVA flashing and bolt schedule requirements.
           </p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
-            We&apos;re Trex Platinum Partner and TimberTech Certified Installer because the floor under a screened porch sees the same moisture and freeze-thaw stress as an open deck — and the materials we choose for that floor carry the same long-warranty installer credentials we use on uncovered builds. The roof, framing and screen system follow the same standard.
+            The floor under a screened porch sees the same moisture and freeze-thaw stress as an open deck, so material selection still matters. We help homeowners compare Trex, TimberTech, AZEK, Fiberon, and wood-floor options by moisture exposure, maintenance expectations, warranty terms, and the porch roof/framing scope.
           </p>
 
           <h2 style={{ fontSize: '1.85rem', fontWeight: 700, marginBottom: '1.25rem' }}>Screened Porch Builds We Specialize In</h2>
@@ -188,7 +188,7 @@ export default function ScreenedPorchPage() {
         <ServiceVisual image="/images/img28.jpeg" />
         <ServiceInclusions
           title="What Our Team Delivers"
-          description="Every screened porch ships with the structural detail, permit paperwork, and installer credentials that hold up under Fairfax County review and 25+ years of NoVA freeze-thaw."
+          description="Every screened porch is planned around structural detail, permit documentation, material requirements, and NoVA freeze-thaw exposure."
           items={inclusions}
         />
         <ProcessSteps />

@@ -86,14 +86,14 @@ export default function ArlingtonPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-permit-arlington-county-virginia" name="Arlington County Deck Permit Guide (2026) | Loudoun Decks" description="Complete 2026 Arlington County deck permit guide: CPHD process, Permit Arlington portal, setbacks, historic-district review, inspection contacts, and timeline." speakable />
+      <WebPageSchema dateModified="2026-06-08" url="https://ldndecks.com/deck-permit-arlington-county-virginia" name="Arlington County Deck Permit Guide (2026) | Loudoun Decks" description="Complete 2026 Arlington County deck permit guide: CPHD process, Permit Arlington portal, setbacks, historic-district review, inspection contacts, and timeline." speakable />
       <ArticleSchema
         title="Arlington County Deck Permit Guide (2026)"
         description="The full 2026 Arlington County deck-permit process for homeowners and contractors: CPHD requirements, the Permit Arlington portal, setbacks, historic-district review (Lyon Park, Maywood, Westover), and the three required inspections."
         path="/deck-permit-arlington-county-virginia"
         image="/images/blog-permit-guide.png"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-06-08"
       />
 
       <section style={{ background: 'linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/images/blog-permit-guide.png)', backgroundSize: 'cover', backgroundPosition: 'center', color: '#fff', padding: '8rem 0' }}>
@@ -232,7 +232,7 @@ export default function ArlingtonPermitPage() {
             </details>
           ))}
 
-          {/* ===== SECTION 8: Why we handle the entire permit ===== */}
+          {/* ===== SECTION 8: Permit planning support ===== */}
           <div style={{ background: 'var(--color-dark)', color: '#fff', borderRadius: '16px', padding: '3.5rem', textAlign: 'center', marginTop: '4rem' }}>
             <h3 style={{ color: '#fff', fontSize: '2rem', marginTop: 0, marginBottom: '1rem' }}>We file every Arlington permit</h3>
             <p style={{ color: '#ccc', fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>From the zoning verification through historic design review (when applicable), document upload, fee payment, all three inspections, and the final certificate. You never log into Permit Arlington.</p>
@@ -252,9 +252,16 @@ export default function ArlingtonPermitPage() {
         </div>
       </article>
 
+      <section style={{ padding: '1.5rem', maxWidth: 900, margin: '0 auto 2rem', background: '#f7fbff', border: '1px solid #d8e8f7', borderRadius: 12 }}>
+        <h2 style={{ margin: '0 0 0.5rem', fontSize: '1.35rem' }}>What your estimate clarifies</h2>
+        <p style={{ margin: 0, color: '#333', lineHeight: 1.7 }}>
+          The written estimate identifies expected Permit Arlington fees, historic-review considerations when relevant, drawing requirements, inspection coordination, and HOA/ARC support so Arlington homeowners can compare the full approved-project path, not just deck-board pricing.
+        </p>
+      </section>
+
       <SimpleCTA title="Arlington deck project ahead? Skip the permit headache." buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-permit-arlington-county-virginia" />
-      <NamedAuthor context="Arlington and Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Arlington and Northern Virginia" lastUpdated="2026-06-08" />
       <ContactHome />
     </>
   );

@@ -14,6 +14,7 @@ import ServicesCallToAction from '@/components/ServicesCallToAction';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/services/deck-repair',
@@ -97,6 +98,21 @@ export default function DeckRepairPage() {
         subtext="Structural Integrity Specialist"
         title="Deck Repair & Structural Maintenance"
         description="Don't let rot compromise your safety. We specialize in high-stakes structural repairs, post replacements, and code compliance for Northern Virginia homeowners."
+      />
+
+      <GeoAnswerBlock
+        question="When is deck repair enough, and when does repair become replacement?"
+        answer="Deck repair is enough when the problem is isolated: one rotted post, a loose railing, a stair issue, a ledger-flashing correction, or a failed inspection item on an otherwise sound structure. Repair becomes replacement when rot, movement, poor footings, weak ledger attachment, bouncy framing, or unsafe stairs affect the overall load path. Loudoun Decks inspects the structure first so the recommendation is repair, resurfacing, or replacement based on safety rather than guesswork."
+        facts={[
+          'Repair path: isolated structural or safety issue',
+          'Replacement path: system-wide load-path or framing failure',
+          'Proof status: no repair outcome should be cited as a case study without source records',
+        ]}
+        links={[
+          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
+          { href: '/services/deck-replacement', label: 'Deck replacement' },
+          { href: '/deck-safety-inspection-checklist', label: 'Deck safety checklist' },
+        ]}
       />
 
       <ServiceMain

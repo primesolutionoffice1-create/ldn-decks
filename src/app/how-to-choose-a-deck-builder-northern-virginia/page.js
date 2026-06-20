@@ -23,7 +23,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "How do I verify a deck builder's license in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Visit the Virginia DPOR License Lookup at https://dfrnet.dpor.virginia.gov/. Search by company name or license number. Every contractor doing work over $1,000 in Virginia must have a Class A, B, or C contractor license." } },
     { "@type": "Question", name: "What should I look for in a deck builder's estimate?", acceptedAnswer: { "@type": "Answer", text: "An itemized materials list (brand, model, color), separate labor cost, permit fees, dumpster/cleanup, project timeline, warranty terms in writing, and the contractor's Virginia license number." } },
-    { "@type": "Question", name: "Should I get multiple deck quotes?", acceptedAnswer: { "@type": "Answer", text: "Yes get 2-3 quotes from licensed contractors. Compare not just price, but scope, materials, warranty, timeline, and permit handling. The cheapest quote often excludes permits, cleanup, or uses inferior materials." } },
+    { "@type": "Question", name: "Should I get multiple deck quotes?", acceptedAnswer: { "@type": "Answer", text: "Yes get 2-3 quotes from licensed contractors. Compare not just price, but scope, materials, warranty, timeline, and permit planning. The cheapest quote often excludes permits, cleanup, or uses inferior materials." } },
     { "@type": "Question", name: "What are red flags when hiring a deck builder?", acceptedAnswer: { "@type": "Answer", text: "No Virginia contractor license, cash-only payment demands, no written warranty, no permit mentioned, can't provide recent local references, pressure to sign immediately, price significantly below all other quotes." } },
   ],
 };
@@ -50,7 +50,7 @@ export default function ChooseDeckBuilderPage() {
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
               src="/images/img25.jpeg"
-              alt="Professional deck construction detail showing Trex Platinum-tier craftsmanship by a Northern Virginia deck builder"
+              alt="Professional composite deck construction detail by a Northern Virginia deck builder"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 900px) 100vw, 900px"
@@ -113,7 +113,7 @@ export default function ChooseDeckBuilderPage() {
                 ['Insured', 'Full liability + workers\' comp certificate on request'],
                 ['Permits', 'We pull permits, coordinate inspections, and address reviewer comments'],
                 ['HOA', 'We prepare and submit ARC packages for communities across Northern Virginia'],
-                ['Materials', 'Trex Pro certified installer + TimberTech + AZEK'],
+                ['Materials', 'Trex profile-verifiable installer + TimberTech + AZEK'],
                 ['Warranty', 'Written workmanship warranty terms, on top of manufacturer warranty information'],
                 ['Reviews', 'Public Google review profile'],
                 ['References', 'Happy to share recent project contacts in your neighborhood'],

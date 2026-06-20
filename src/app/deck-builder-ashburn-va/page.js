@@ -16,12 +16,13 @@ import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-ashburn-va',
   title: 'Deck Builder in Ashburn, VA | Trex Certified | Loudoun Decks',
-  description: 'Deck builder in Ashburn, VA. TrexPro installer for Brambleton, Broadlands, Ashburn Village & One Loudoun. Builder-grade deck upgrades, HOA-ready designs. Free estimate  -  call (571) 655-7207.',
+  description: 'Deck builder in Ashburn, VA. Trex product planning for Brambleton, Broadlands, Ashburn Village & One Loudoun. Builder-grade deck upgrades, HOA-ready designs. Free estimate  -  call (571) 655-7207.',
   image: '/social/deck-builder-ashburn-va-social.png',
 });
 
@@ -32,7 +33,7 @@ const inclusions = [
   },
   {
     title: "Builder-Grade Deck Upgrades",
-    desc: "Most Ashburn homes were handed a builder-grade pressure-treated deck in the 2000s. We replace and resurface them with TrexPro-tier composite  -  Transcend, Enhance and Select."
+    desc: "Most Ashburn homes were handed a builder-grade pressure-treated deck in the 2000s. We replace and resurface them with Trex product-line composite  -  Transcend, Enhance and Select."
   },
   {
     title: "Engineered for Tight Loudoun Lots",
@@ -102,13 +103,13 @@ const expansionSections = [
   {
     title: "Composite Decking for Ashburn's West-Facing Yards",
     paragraphs: [
-      "Ashburn homeowners overwhelmingly choose composite, and not only for the low maintenance. Many of these yards take direct western sun, and a quality composite board with good heat performance  -  paired with smart shade design  -  makes the difference between a deck you use and one you avoid in July. As a TrexPro installer and TimberTech Certified contractor, we install the top-tier lines built for that exposure.",
+      "Ashburn homeowners overwhelmingly choose composite, and not only for the low maintenance. Many of these yards take direct western sun, and a quality composite board with good heat performance  -  paired with smart shade design  -  makes the difference between a deck you use and one you avoid in July. As a Trex product planning and TimberTech and AZEK product planning contractor, we install the top-tier lines built for that exposure.",
       "Multi-level decks are especially popular on Ashburn lots that back to common areas or wooded buffers, where a stepped design captures more usable square footage than a single wide platform. Built-in seating, pergola covers and low-voltage lighting are standard requests, and Ashburn projects typically start around $22,000 and scale with size and features.",
       "Every composite deck we build carries the manufacturer's material warranty backed by our installation certification  -  a meaningful pairing on a deck you expect to own for decades."
     ],
     listItems: [
-      { label: "TrexPro installer", text: "TrexPro Platinum tier  -  full Transcend, Enhance and Select catalog for Ashburn builds." },
-      { label: "TimberTech Certified", text: "Certified installer for the complete TimberTech Pro and AZEK product lines." },
+      { label: "Trex product planning", text: "Trex Transcend, Enhance and Select catalog options for Ashburn builds." },
+      { label: "TimberTech and AZEK product planning", text: "TimberTech Pro and AZEK product-line planning." },
       { label: "ARC-Ready Drawings", text: "Full CAD plans and color samples prepared for every Ashburn HOA submission." },
       { label: "Loudoun County Permits", text: "We file through the LandMARC portal and coordinate footing, framing and final inspections." }
     ]
@@ -155,19 +156,19 @@ const expansionSections = [
 export default function DeckBuilderAshburnPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-ashburn-va" name="Deck Builder in Ashburn, VA | Loudoun Decks" description="Custom composite deck builder in Ashburn serving Brambleton, Broadlands, Ashburn Village and One Loudoun. TrexPro Platinum installer." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-ashburn-va" name="Deck Builder in Ashburn, VA | Loudoun Decks" description="Custom composite deck builder in Ashburn serving Brambleton, Broadlands, Ashburn Village and One Loudoun. Trex product-line planning." speakable />
       <LocalBusinessSchema city="Ashburn" url="https://ldndecks.com/deck-builder-ashburn-va" />
       <ServicesHeader
         subtext="Ashburn, VA Deck Builder"
         title="Custom Deck Builder in Ashburn, VA"
-        description="Loudoun Decks builds premium composite and wood decks across Brambleton, Broadlands, Ashburn Village and One Loudoun. TrexPro Platinum. publicly documented reputation."
+        description="Loudoun Decks builds premium composite and wood decks across Brambleton, Broadlands, Ashburn Village and One Loudoun. Trex product-line planning. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Ashburn's Trusted Choice"
         title="Deck Builder Ashburn VA  -  Premium Craftsmanship"
-        description="We upgrade builder-grade Ashburn decks into outdoor spaces homeowners are proud to show off. HOA-ready CAD plans and TrexPro-tier materials from $22k+."
+        description="We upgrade builder-grade Ashburn decks into outdoor spaces homeowners are proud to show off. HOA-ready CAD plans and Trex product-line materials from $22k+."
         listItems={[
-          "TrexPro & TimberTech installer experience",
+          "Trex, TimberTech and AZEK material planning",
           "Brambleton, Broadlands & Ashburn Village ARC submissions handled",
           "Builder-grade deck replacement & composite resurfacing",
           "Multi-level designs for common-area-backing lots",
@@ -189,6 +190,20 @@ export default function DeckBuilderAshburnPage() {
         links={[
           { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
           { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
+        ]}
+      />
+      <GeoAnswerBlock
+        question="Who is a deck builder in Ashburn, VA for composite deck replacement?"
+        answer="Loudoun Decks plans composite deck replacement and outdoor living projects for Ashburn homeowners in Brambleton, Broadlands, Ashburn Village, One Loudoun, Ashburn Farm, and nearby Loudoun County communities. The best first step is a framing, ledger, post-base, HOA, and permit review so the homeowner can choose between resurfacing, full replacement, Trex, TimberTech, AZEK, railing, lighting, and financing paths."
+        facts={[
+          'Primary buyer intent: composite deck replacement, resurfacing, HOA approval, and premium outdoor living.',
+          'Proof status: city/project photo claims require proof-lock before stronger public use.',
+          'Conversion path: written estimate, permit planning, and material comparison.'
+        ]}
+        links={[
+          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
+          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
+          { href: '/get-estimate', label: 'Get an Ashburn estimate' }
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

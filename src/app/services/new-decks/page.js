@@ -18,7 +18,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: "/services/new-decks",
   title: "Custom Deck Builder Northern Virginia | Design & Build | Loudoun Decks",
-  description: "Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood. Permits, HOA, footings, framing — full-service builds from $15,000+. Free estimate.",
+  description: "Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood, permit planning, HOA support, footings and framing from $15,000+.",
   image: "/social/new-decks-social.png",
 });
 
@@ -53,9 +53,9 @@ const expansionSections = [
   {
     title: "Permits, inspections and HOA approvals in Northern Virginia",
     paragraphs: [
-      "Every attached deck in Northern Virginia requires a building permit — there is no square-footage exemption for structural additions. We handle the full permit lifecycle: preparing structural drawings, filing the application, scheduling inspections, and resolving any plan-review comments before construction begins.",
+      "Most attached decks in Northern Virginia require a building permit. We help homeowners plan the permit lifecycle: structural drawing needs, application requirements, inspection milestones, and plan-review questions before construction begins.",
       "Permit timelines vary by jurisdiction. [Loudoun County](/deck-permit-loudoun-county-virginia) processes through the LOLA portal in 2–4 weeks for standard residential decks. [Fairfax County](/deck-permit-fairfax-county-virginia) uses FIDO and typically runs 3–5 weeks. [Prince William County](/deck-permit-prince-william-county-virginia) processes in a similar window through their online portal. Screened porch and multi-level projects that require structural engineering review add 1–2 weeks.",
-      "For HOA-governed communities — Brambleton, Broadlands, Ashburn Village, Reston Association, South Riding and dozens more — we prepare the architectural review committee (ARC) package with CAD drawings, color samples, material cut sheets and a project narrative. We submit this concurrently with the county permit so you are not waiting months through sequential queues.",
+      "For HOA-governed communities — Brambleton, Broadlands, Ashburn Village, Reston Association, South Riding and dozens more — we help prepare the architectural review committee (ARC) package with CAD drawings, color samples, material cut sheets and a project narrative. Where appropriate, HOA review can run concurrently with county permit planning so you are not waiting months through sequential queues.",
     ],
   },
   {
@@ -99,7 +99,7 @@ const expansionSections = [
     title: "Warranty and long-term protection",
     paragraphs: [
       "Every deck proposal should clarify two layers of protection: manufacturer material coverage for the selected Trex, TimberTech, or AZEK product line, and written workmanship warranty terms from the contractor. We review both before construction so homeowners understand what is covered, what is excluded, and what documentation should be kept.",
-      "Manufacturer warranties depend on product selection and installation according to the manufacturer's published guide. As a TrexPro Platinum installer and TimberTech Certified contractor, our process is built around documented installation standards, product-specific requirements, and clear project paperwork. For more detail, read our [deck warranty guide](/deck-warranty-guide-northern-virginia).",
+      "Manufacturer warranties depend on product selection and installation according to the manufacturer's published guide. Our process is built around documented installation standards, product-specific requirements, and clear project paperwork. Homeowners should verify current manufacturer profile and warranty details directly with Trex, TimberTech, AZEK, or the selected brand. For more detail, read our [deck warranty guide](/deck-warranty-guide-northern-virginia).",
     ],
   },
 ];
@@ -114,8 +114,8 @@ const newDeckFAQs = [
     a: "A standard 400–600 sq ft composite deck takes 7–12 days of on-site construction after permits clear. Permitting adds 2–4 weeks depending on the county. Total timeline from contract to final inspection is typically 6–10 weeks. Multi-level or screened porch projects may extend to 10–14 weeks.",
   },
   {
-    q: "Do you handle deck permits and HOA approvals?",
-    a: "Yes. We prepare the full permit package — structural drawings, site plan, material specifications — and file with Loudoun County (LOLA), Fairfax County (FIDO) or Prince William County. For HOA-governed communities, we prepare and submit the architectural review committee package concurrently so both approvals move in parallel.",
+    q: "Do you help with deck permits and HOA approvals?",
+    a: "Yes. We help homeowners identify permit triggers, structural drawing needs, site plan requirements, material specifications, and county/HOA review steps for Loudoun County, Fairfax County, Prince William County, Arlington, and Stafford. Responsibilities and fees are confirmed in the written project scope.",
   },
   {
     q: "What is better — Trex, TimberTech or wood?",
@@ -151,12 +151,12 @@ export default function NewDecksPage() {
       <WebPageSchema dateModified="2026-06-01"
         url="https://ldndecks.com/services/new-decks"
         name="Custom Deck Builder Northern Virginia | Loudoun Decks"
-        description="Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood. Permits, HOA, footings, framing — full-service builds from $15,000+."
+        description="Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood, permit planning, HOA support, footings and framing from $15,000+."
         speakable
       />
       <ServiceSchema
         name="Custom Deck Construction"
-        description="Custom residential deck design and construction in Northern Virginia. Composite, PVC and wood decks with permits, HOA approvals, structural engineering and manufacturer warranty."
+        description="Custom residential deck design and construction in Northern Virginia. Composite, PVC and wood decks with permit planning, HOA support, structural planning and manufacturer warranty review."
         url="https://ldndecks.com/services/new-decks"
         category="Deck Construction"
         price="15000"
@@ -165,7 +165,7 @@ export default function NewDecksPage() {
       <ServicesHeader
         subtext="Northern Virginia's Full-Service Deck Builder"
         title="Custom Deck Design & Construction"
-        description="From structural planning to final inspection — we design and build permitted custom decks tailored to your home, yard and budget across Loudoun, Fairfax and Prince William counties."
+        description="From structural planning to final inspection — we design and build custom decks tailored to your home, yard and budget across Loudoun, Fairfax and Prince William counties."
       />
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
@@ -189,7 +189,7 @@ export default function NewDecksPage() {
       <ServiceMain
         subtitle="Designed for your home, not from a template"
         title="What a Custom Deck Build Includes"
-        description="A custom deck is a permitted structural addition designed for your specific house, yard, grade and lifestyle. We handle every phase — design, materials, permits, construction and inspections — so the homeowner gets a single point of accountability from first conversation to final walkthrough."
+        description="A custom deck is a structural addition designed for your specific house, yard, grade and lifestyle. We help coordinate design, materials, permit planning, construction and inspections so the homeowner has one project team from first conversation to final walkthrough."
         listTitle="Full-service scope"
         listItems={[
           "Structural design and dimensioned layout",

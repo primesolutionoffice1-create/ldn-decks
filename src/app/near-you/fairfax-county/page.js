@@ -16,6 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CountyConversionLinks from '@/components/CountyConversionLinks';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 const LocationIcon = () => (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -25,7 +26,7 @@ const LocationIcon = () => (
 
 export const metadata = buildMetadata({
     path: "/near-you/fairfax-county",
-    title: "Premium Deck Builder Fairfax County VA | Free 24h Quote",
+    title: "Premium Deck Builder Fairfax County VA | Written Estimates",
     description: "Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches.",
     image: "/social/fairfax-county-deck-builder-hub-social.png",
 });
@@ -65,7 +66,7 @@ export default function FairfaxCountyPage() {
           description="LDN Decks builds custom decks, screened porches, patios, and outdoor living spaces throughout Fairfax County, VA."
           url="https://ldndecks.com/near-you/fairfax-county"
         />
-      <WebPageSchema dateModified="2026-06-04" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Free 24h Quote" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-06-04" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Written Estimates" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
             <ServicesHeader
           subtext="Serving Northern Virginia"
           title="Deck Builder in Fairfax County, VA"
@@ -80,6 +81,20 @@ export default function FairfaxCountyPage() {
           image1="/images/img17.jpeg"
           image2="/images/img21.jpeg"
         />
+      <GeoAnswerBlock
+        question="What should Fairfax County homeowners know before building or replacing a deck?"
+        answer="Fairfax County deck projects should start with jurisdiction, permit, HOA, and structural planning because requirements can differ between Fairfax County, City of Fairfax, Vienna, Herndon, Arlington-adjacent areas, and local associations. Homeowners should inspect older framing, compare composite materials, confirm setbacks, and choose resurfacing or replacement before approving a written estimate."
+        facts={[
+          'Primary buyer intent: Fairfax County deck builder, permit-safe replacement, composite upgrades, and structural review.',
+          'Proof status: county, city, and project photo claims require proof-lock.',
+          'Conversion path: Fairfax permit guide, safety checklist, city pages, and written estimate.'
+        ]}
+        links={[
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
+          { href: '/get-estimate', label: 'Get a Fairfax County estimate' }
+        ]}
+      />
                   <section className={styles.permitSection}>
         <div className={styles.container}>
           <div className={styles.permitContent}>
@@ -117,7 +132,7 @@ export default function FairfaxCountyPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Fairfax County Homeowners Trust LDN Decks</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County is the most populous county in Virginia with over 1.1 million residents and median home values exceeding $650,000. The county&apos;s established neighborhoods — from Vienna and McLean to Burke and Springfield — represent decades of homeownership, and many properties are now due for outdoor living upgrades as original decks reach the end of their lifespan.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks brings <strong>Trex Platinum Partner</strong> and <strong>TimberTech Certified Installer</strong> expertise to every Fairfax County project. We understand the county&apos;s detailed building code requirements, HOA architectural review processes, and the high standards Fairfax homeowners expect.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks brings <strong>Trex, TimberTech, AZEK, and pressure-treated framing</strong> experience to every Fairfax County project. We understand the county&apos;s detailed building code requirements, HOA architectural review processes, and the high standards Fairfax homeowners expect.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Fairfax County Building Permits & Codes</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County requires building permits for all attached decks and any deck over 200 square feet. Applications are submitted through the <strong>FIDO online system</strong> (Fairfax Inspections Database Online). Processing time is <strong>3-6 weeks</strong> — longer than Loudoun or Prince William counties. Three inspections required: footing, framing, final.</p>

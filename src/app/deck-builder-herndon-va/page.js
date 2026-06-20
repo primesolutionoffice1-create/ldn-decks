@@ -18,11 +18,12 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-herndon-va',
   title: 'Deck Builder in Herndon, VA | Trex Certified | Loudoun Decks',
-  description: 'Trusted deck builder in Herndon, VA. Trex Platinum Partner & TimberTech Certified. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
+  description: 'Trusted deck builder in Herndon, VA. Trex, TimberTech and AZEK material planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
   image: '/social/deck-builder-herndon-va-social.png',
 });
 
@@ -33,7 +34,7 @@ const inclusions = [
   },
   {
     title: "Premium Composite Specialists",
-    desc: "As certified Trex Platinum and TimberTech installers, we deliver high-grade composite decking that withstands the variable Virginia weather while looking pristine."
+    desc: "With Trex, TimberTech, and AZEK material planning experience, we deliver high-grade composite decking that withstands the variable Virginia weather while looking pristine."
   },
   {
     title: "Tech Corridor Craftsmanship",
@@ -52,7 +53,7 @@ const herndonFAQs = [
   },
   {
     q: "Do you handle the Herndon permitting process?",
-    a: "Yes. Building in Herndon can sometimes involve both Town of Herndon and Fairfax County regulations. We handle the entire permitting and HOA submission process for you."
+    a: "Yes. Building in Herndon can sometimes involve both Town of Herndon and Fairfax County regulations. We coordinate permitting and HOA submission planning for you."
   },
   {
     q: "How long does it take to build a deck in Herndon?",
@@ -60,7 +61,7 @@ const herndonFAQs = [
   },
   {
     q: "Are you a Trex certified contractor in Herndon VA?",
-    a: "Yes. Loudoun Decks is a Trex Platinum Partner, giving Herndon clients access to Trex product lines, manufacturer-backed warranty paths, and installation practices aligned with Trex requirements."
+    a: "Loudoun Decks plans Herndon projects with Trex product-line options, manufacturer warranty documentation, and installation practices aligned with published Trex requirements."
   },
   {
     q: "Do you build screened porches in Herndon?",
@@ -87,14 +88,14 @@ const expansionSections = [
   {
     title: "Composite Decking Specialists for Herndon Homes",
     paragraphs: [
-      "The humid Virginia summers make composite decking the ideal choice for Herndon homeowners. As a Trex Platinum Partner and TimberTech Certified contractor, we install decking that won't warp, splinter, or rot. Projects typically start around $20,000 and scale based on your specific design requirements.",
+      "The humid Virginia summers make composite decking the ideal choice for Herndon homeowners. We plan Trex, TimberTech, and AZEK decking options for Herndon homes, with low-maintenance boards selected for Virginia humidity and freeze-thaw exposure. Projects typically start around $20,000 and scale based on your specific design requirements.",
       "We specialize in designing decks that maximize the usable outdoor space of your property. Integrated lighting, custom railings, and built-in seating are standard requests that we execute flawlessly.",
       "Every composite deck proposal in Herndon includes manufacturer warranty information for the selected product line and installation practices aligned with published manufacturer guidance."
     ],
     listItems: [
-      { label: "Trex Platinum Partner", text: "Trex product-line familiarity and manufacturer-aligned installation practices for Herndon and Northern Virginia." },
-      { label: "TimberTech Certified", text: "Certified installer for the full TimberTech Pro and AZEK product lines." },
-      { label: "Permit Ready", text: "Full handling of all Fairfax County and Town of Herndon permitting." },
+      { label: "Trex product-line planning", text: "Trex product-line familiarity and manufacturer-aligned installation practices for Herndon and Northern Virginia." },
+      { label: "TimberTech and AZEK product planning", text: "TimberTech Pro and AZEK product-line planning for premium builds." },
+      { label: "Permit Ready", text: "Permit planning support for Fairfax County and Town of Herndon." },
       { label: "Public Profiles", text: "Homeowners can review public profiles and project documentation before approving a scope." }
     ]
   },
@@ -112,19 +113,19 @@ export default function DeckBuilderHerndonPage() {
   return (
     <main>
       <LocalBusinessSchema city="Herndon" url="https://ldndecks.com/deck-builder-herndon-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-herndon-va" name="Deck Builder in Herndon, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Herndon, VA. Trex Platinum Partner &amp; TimberTech Certified. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-herndon-va" name="Deck Builder in Herndon, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Herndon, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Herndon, VA's Trusted Deck Company"
         title="Custom Deck Builder in Herndon, VA"
-        description="Loudoun Decks builds premium composite decks and screened porches in Herndon. Trex Platinum Partner. publicly documented reputation."
+        description="Loudoun Decks builds premium composite decks and screened porches in Herndon. Trex product-line planning. publicly documented reputation."
       />
       <ServiceMain
         subtitle="Dulles Corridor Craftsmanship"
         title="Deck Builder Herndon VA  -  Premium Quality"
         description="We build the outdoor spaces Herndon homeowners love. Custom designs, HOA-ready plans, and premium composite materials starting at $20k+."
         listItems={[
-          "Trex Platinum & TimberTech Certified",
-          "Full Herndon & Fairfax County Permit management",
+          "Trex, TimberTech and AZEK material planning",
+          "Herndon and Fairfax County permit planning support",
           "Custom multi-level and single-level designs",
           "Screened porches, pergolas & under-deck patios",
           "Public reviews - call (571) 655-7207"
@@ -143,6 +144,20 @@ export default function DeckBuilderHerndonPage() {
           { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
           { href: "/deck-safety-inspection-checklist", label: "Safety checklist" },
           { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" }
+        ]}
+      />
+      <GeoAnswerBlock
+        question="What should Herndon homeowners confirm before building a deck?"
+        answer="Herndon deck projects should confirm whether Town of Herndon, Fairfax County, HOA, or tech-corridor community rules apply before drawings and pricing are finalized. The first planning step should review composite material options, permit path, deck framing condition, screened porch options, railings, lighting, and whether the project is a resurfacing or full replacement."
+        facts={[
+          'Primary buyer intent: Herndon deck builder, Town of Herndon permits, composite decks, and screened porches.',
+          'Proof status: Herndon project/photo claims stay gated until owner-confirmed evidence is attached.',
+          'Conversion path: permit guide, material comparison, and written estimate.'
+        ]}
+        links={[
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/trex-vs-timbertech-vs-azek', label: 'Material comparison' },
+          { href: '/get-estimate', label: 'Get a Herndon estimate' }
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

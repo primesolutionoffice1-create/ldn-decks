@@ -10,6 +10,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -28,11 +29,11 @@ const faqs = [
   },
   {
     q: "What's the difference between TimberTech PRO and AZEK Vintage?",
-    a: 'TimberTech PRO is a capped polymer composite — a wood-flour core with a PVC cap on four sides. TimberTech AZEK Vintage is full PVC (no wood content), which makes it cooler underfoot in summer, more dimensionally stable, and carries the longest residential warranty in the industry (50-year limited + 50-year fade & stain).',
+    a: 'TimberTech PRO is capped composite decking. TimberTech AZEK Vintage is Advanced PVC decking with no wood content, which helps with moisture resistance, dimensional stability, and a premium warranty package that currently includes limited lifetime product coverage and 50-year fade and stain coverage.',
   },
   {
     q: 'Is AZEK worth the premium over Trex Transcend?',
-    a: 'For Northern Virginia humidity and sun exposure, AZEK Vintage typically lasts longer with less surface change than wood-core composites. The premium ($8–$15/sqft over Trex Transcend) is worth it for homeowners who want a 50-year warranty, the lowest surface temperature, and the deepest grain pattern. For most mid-range projects, Trex Transcend or TimberTech PRO Reserve are equally good options at a lower price.',
+    a: 'For Northern Virginia humidity and sun exposure, AZEK Vintage can be worth the premium for homeowners who prioritize Advanced PVC moisture resistance, lower-maintenance surface behavior, and the current limited lifetime product plus 50-year fade and stain warranty package. For many mid-range projects, Trex Transcend or TimberTech PRO Reserve can still be strong options at a lower price.',
   },
   {
     q: 'What is the monthly payment on a $35,000 AZEK deck?',
@@ -97,7 +98,7 @@ const tiers = [
     sub: 'Premium tier — full PVC, hardwood-mimic pattern',
     range: '$60–$85 /sqft installed',
     construction: 'Full PVC (no wood content), Alloy Armour Technology',
-    warranty: '50-yr residential + 50-yr fade & stain',
+    warranty: 'Limited lifetime product + 50-yr fade & stain',
     project350: '$28,000–$42,000+',
     monthly: '$354–$531 /mo over 10y',
   },
@@ -163,8 +164,8 @@ export default function TimberTechAzekDeckCostPage() {
           <p data-speakable>
             A <strong>350 sqft TimberTech deck</strong> in Northern Virginia runs <strong>$18,000–$42,000+</strong>{' '}
             depending on tier (EDGE / PRO / AZEK Vintage). At 8.99% APR over 10 years that&apos;s roughly{' '}
-            <strong>$228–$531/month</strong>. AZEK Vintage carries the industry&apos;s{' '}
-            <strong>50-year residential warranty</strong>. Run your project amount through the{' '}
+            <strong>$228–$531/month</strong>. AZEK Vintage currently carries{' '}
+            <strong>limited lifetime product coverage plus 50-year fade and stain coverage</strong>. Run your project amount through the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
             </Link>{' '}
@@ -172,6 +173,23 @@ export default function TimberTechAzekDeckCostPage() {
           </p>
         </div>
       </section>
+
+      <GeoAnswerBlock
+        question="How much does a TimberTech or AZEK deck cost per month in Northern Virginia?"
+        answer="A typical 350 sqft TimberTech or AZEK deck in Northern Virginia runs about $18,000 to $42,000+ depending on whether the project uses EDGE, PRO, or AZEK Vintage, plus railing, stairs, lighting, frame condition, permits, and HOA scope. At the sample 8.99% APR used on this page, that maps to roughly $228 to $531 per month over 10 years. Homeowners should model their written estimate amount before choosing a board line because premium PVC, railing, stairs, and financing terms change the real monthly payment."
+        facts={[
+          'TimberTech EDGE planning range: $35-$45 per sqft installed',
+          'TimberTech PRO planning range: $45-$60 per sqft installed',
+          'TimberTech AZEK Vintage planning range: $60-$85 per sqft installed',
+          'Proof status: warranty and financing terms should be verified against current TimberTech/AZEK and lender documents before contract decisions',
+        ]}
+        links={[
+          { href: '/deck-payment-estimator', label: 'Deck payment estimator' },
+          { href: '/timbertech-decks', label: 'TimberTech and AZEK planning' },
+          { href: '/trex-vs-timbertech-vs-azek', label: 'Compare deck brands' },
+          { href: '/get-estimate', label: 'Get a written estimate' },
+        ]}
+      />
 
       <article style={{ padding: '3.5rem 0' }}>
         <div style={S.container}>
@@ -218,8 +236,8 @@ export default function TimberTechAzekDeckCostPage() {
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
             <li><strong>Cooler underfoot in summer</strong> — full PVC reflects more heat than wood-core composites</li>
             <li><strong>Most dimensionally stable</strong> — no swelling or contracting from humidity cycles</li>
-            <li><strong>50-year residential warranty</strong> — longest in the industry, transferable to a new owner</li>
-            <li><strong>Lifetime fade & stain protection</strong> — Alloy Armour Technology, no surface chalking</li>
+            <li><strong>Premium warranty package</strong> — current AZEK Vintage coverage includes limited lifetime product coverage and 50-year fade and stain coverage</li>
+            <li><strong>50-year fade and stain protection</strong> — Alloy Armour Technology, no surface chalking</li>
             <li><strong>Premium grain pattern</strong> — low-gloss multi-tonal streaking that mimics premium hardwoods</li>
           </ul>
 
@@ -275,7 +293,7 @@ export default function TimberTechAzekDeckCostPage() {
           <p style={S.p}>
             TimberTech PRO Reserve and Trex Transcend are usually within $1–$3/sqft of each other on installed pricing.
             The deciding factor is grain pattern and warranty: TimberTech PRO carries 30-year fade & stain (vs Trex
-            Transcend&apos;s 25-year). AZEK Vintage&apos;s 50-year warranty is unmatched. For a complete brand
+            Transcend&apos;s 50-year current limited residential fade and stain coverage). AZEK Vintage&apos;s Advanced PVC warranty package is a premium reason to consider it. For a complete brand
             comparison, see{' '}
             <Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
               Trex vs TimberTech vs AZEK

@@ -19,7 +19,7 @@ import AboutTrustExpansion from '@/components/AboutTrustExpansion';
 export const metadata = buildMetadata({
   path: '/about',
   title: 'About Loudoun Decks | Trusted Deck Builder Northern Virginia',
-  description: "Meet the team behind Northern Virginia's trusted deck builder. VA Class A Licensed, Trex Platinum Partner, Google reviews. Founded by Nicolae Zugrav. Serving Loudoun, Fairfax & Prince William.",
+  description: "Meet the team behind Northern Virginia's trusted deck builder. VA Class A Licensed, Trex product-line planning, Google reviews. Founded by Nicolae Zugrav. Serving Loudoun, Fairfax & Prince William.",
   image: '/social/about-loudoun-decks-social.png',
 });
 
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
             {[
               { badge: 'VA Class A License', title: 'Virginia Contractor License', text: 'Class A Licensed by DPOR — authorized for projects of any value in Virginia.' },
-              { badge: 'TrexPro', title: 'Trex Profile Verification', text: 'TrexPro profile details should be verified directly through Trex before citing current status.' },
+              { badge: 'TrexPro', title: 'Trex Profile Verification', text: 'Trex profile details should be verified directly through Trex before citing current status.' },
               { badge: 'TimberTech', title: 'TimberTech Profile Verification', text: 'TimberTech installer details should be verified directly through AZEK/TimberTech before citing current status.' },
               { badge: 'BBB', title: 'BBB Business Profile', text: 'Better Business Bureau profile details, accreditation status, rating, and complaint history should be verified directly on BBB.' },
               { badge: 'NADRA', title: 'NADRA Member', text: 'North American Deck and Railing Association — Builder/Contractor/Remodeler member.' },
@@ -103,7 +103,7 @@ export default function AboutPage() {
           <p style={{ marginBottom: '2.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>View all certifications with verification links →</Link></p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>What We Build</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We specialize in composite deck construction and outdoor living projects across Northern Virginia. Every service listed below is work we do ourselves — no subcontractors, no referral fees, no middlemen.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We specialize in composite deck construction and outdoor living projects across Northern Virginia. Every service listed below is handled through the Loudoun Decks project team, with direct communication around scope, materials, scheduling, and site details.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem', marginBottom: '2.5rem' }}>
             {[
               ['/services/new-decks', 'Custom Deck Building'],

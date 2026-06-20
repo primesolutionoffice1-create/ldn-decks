@@ -117,9 +117,9 @@ export default function DeckAddOnCostPage() {
         path={PATH}
         image="/showcase/light-img.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-06-12"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Deck Lighting, Railings &amp; Stairs: Add-On Cost Guide (2026)" description="Real cost for deck lighting, railings, and stairs in Northern Virginia. Per-linear-foot pricing, full package examples, and impact on monthly payment." speakable />
+      <WebPageSchema dateModified="2026-06-12" url={`https://ldndecks.com${PATH}`} name="Deck Lighting, Railings &amp; Stairs: Add-On Cost Guide (2026)" description="Real cost for deck lighting, railings, and stairs in Northern Virginia. Per-linear-foot pricing, full package examples, and impact on monthly payment." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -181,6 +181,12 @@ export default function DeckAddOnCostPage() {
           <p style={S.p}>
             Stair pricing depends on rise (number of risers), tread depth, width, and configuration. Premium
             configurations like wraparound or cascading stairs add structural complexity and material cost.
+          </p>
+          <p style={S.p}>
+            Before finalizing a stair allowance, use the <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link> to estimate
+            step count and total run, then compare the plan against the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link> and
+            the <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>. That keeps the budget tied to real rise/run,
+            landing, handrail, and stringer requirements instead of a generic stair line item.
           </p>
           <CostList items={stairs} />
 
@@ -252,7 +258,7 @@ export default function DeckAddOnCostPage() {
       </article>
 
       <SimpleCTA title="Plan Realistic Add-On Budget" buttonText="Get Free Written Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-12" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>
