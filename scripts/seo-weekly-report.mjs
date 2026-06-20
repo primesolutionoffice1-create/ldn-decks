@@ -546,8 +546,8 @@ console.log(`  ✓ Directory citation packet validation (${results[62].ms}ms)`);
 results.push(run('Proof command reference validation', 'node scripts/validate-proof-command-references.mjs'));
 console.log(`  ✓ Proof command reference validation (${results[63].ms}ms)`);
 
-results.push(run('Owner evidence action packet final refresh', 'node scripts/generate-owner-evidence-packet.mjs'));
-console.log(`  ✓ Owner evidence action packet final refresh (${results[64].ms}ms)`);
+results.push(run('Owner evidence packet final refresh', 'node scripts/generate-owner-evidence-packet.mjs'));
+console.log(`  ✓ Owner evidence packet final refresh (${results[64].ms}ms)`);
 
 results.push(run('AI discovery validation', 'node scripts/validate-ai-discovery.mjs'));
 const aiDiscoveryRun = results[65];
