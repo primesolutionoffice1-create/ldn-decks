@@ -1,0 +1,156 @@
+{
+  "ledger_version": "1.0",
+  "created": "2026-06-01",
+  "domain": "ldndecks.com",
+  "policy": "Only record sources that were inspected or generated in the current repo/workflow. Do not use this ledger to support fabricated project, credential, warranty, review, or permit claims.",
+  "sources": [
+    {
+      "id": "repo-seo-audit-report-2026-05-31",
+      "type": "repo_artifact",
+      "path": "seo-blueprint/live-audit-2026-05-31/LDNDECKS-DEEP-SEO-AUDIT.md",
+      "date_inspected": "2026-06-01",
+      "claims_supported": [
+        "technical SEO baseline",
+        "GEO/SXO priority roadmap",
+        "proof-layer gap",
+        "OG-card backlog",
+        "freshness normalization backlog"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "schema-validator-command",
+      "type": "command_output",
+      "command": "npm run seo:validate-schema",
+      "date_inspected": "2026-05-31",
+      "claims_supported": [
+        "schema validator returned ok true",
+        "no duplicate FAQ risk",
+        "no HowTo schema",
+        "no NAP drift"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "breadcrumb-audit-command",
+      "type": "command_output",
+      "command": "npm run seo:audit-breadcrumbs",
+      "date_inspected": "2026-05-31",
+      "claims_supported": [
+        "0 unknown breadcrumb segments after fix",
+        "0 duplicate BreadcrumbList after fix"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "freshness-audit-command",
+      "type": "command_output",
+      "command": "npm run seo:audit-freshness",
+      "date_inspected": "2026-05-31",
+      "claims_supported": [
+        "187 audited pages",
+        "150 undated pages",
+        "0 stale pages",
+        "0 critical pages"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "og-audit-command",
+      "type": "command_output",
+      "command": "npm run seo:audit-og",
+      "date_inspected": "2026-05-31",
+      "claims_supported": [
+        "201 pages scanned",
+        "40 unique OG images",
+        "35 OG warnings remain after 16:9 normalization"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "robots-indexnow-command",
+      "type": "command_output",
+      "command": "npm run seo:verify-robots",
+      "date_inspected": "2026-05-31",
+      "claims_supported": [
+        "robots not blocking all",
+        "sitemap declared",
+        "AI bots declared",
+        "image sitemap reachable",
+        "IndexNow key matches"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "link-audit-command",
+      "type": "command_output",
+      "command": "npm run seo:link-audit",
+      "date_inspected": "2026-06-01",
+      "claims_supported": [
+        "260 sitemap URLs",
+        "318 internal links",
+        "0 bad links",
+        "link audit script runs with controlled concurrency"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "build-command",
+      "type": "command_output",
+      "command": "npm run build",
+      "date_inspected": "2026-06-01",
+      "claims_supported": [
+        "Next production build passed",
+        "342 static pages generated"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "reputation-sprint-doc",
+      "type": "repo_artifact",
+      "path": "docs/seo/reputation-sprint-1-2026-06-01.md",
+      "date_inspected": "2026-06-01",
+      "claims_supported": [
+        "DataForSEO currently blocked by 40100 credentials issue",
+        "priority page sets",
+        "internal linking plan",
+        "reputation sprint goals"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "seo-50-task-doc",
+      "type": "repo_artifact",
+      "path": "docs/seo/seo-50-task-execution-2026-06-01.md",
+      "date_inspected": "2026-06-01",
+      "claims_supported": [
+        "50-task execution checklist exists",
+        "commercial service hub internal linking work is marked completed",
+        "verification/deployment items are marked completed in the doc"
+      ],
+      "status": "partial",
+      "notes": "Checklist completion is a repo artifact, not independent proof. Verify against git diff, build, and live URL checks before treating as release evidence."
+    }
+  ],
+  "blocked_sources": [
+    {
+      "id": "dataforseo-live",
+      "reason": "Current API credentials return 40100 according to docs/seo/reputation-sprint-1-2026-06-01.md.",
+      "needed_for": [
+        "live maps/grid rankings",
+        "live competitor reports",
+        "keyword/backlink refreshes"
+      ]
+    },
+    {
+      "id": "owner-project-evidence",
+      "reason": "Real project photos, warranty terms, repair costs, and permit outcomes are owner-controlled evidence.",
+      "needed_for": [
+        "deck repair publish-readiness",
+        "case studies",
+        "proof-backed city/service modules",
+        "real project OG cards"
+      ]
+    }
+  ]
+}

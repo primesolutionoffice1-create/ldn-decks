@@ -1,0 +1,85 @@
+{
+  "manifest_version": "1.0",
+  "created": "2026-06-01",
+  "domain": "ldndecks.com",
+  "adapters": [
+    {
+      "id": "schema-validator",
+      "type": "repo_script",
+      "entrypoint": "scripts/validate-seo-schema.mjs",
+      "command": "npm run seo:validate-schema",
+      "purpose": "Validate schema safety, duplicate FAQ risk, HowTo sentinel, canonical risk, and NAP drift.",
+      "status": "active"
+    },
+    {
+      "id": "link-audit",
+      "type": "repo_script",
+      "entrypoint": "scripts/seo-link-audit.mjs",
+      "command": "npm run seo:link-audit",
+      "purpose": "Validate internal link integrity across sitemap URLs.",
+      "status": "active"
+    },
+    {
+      "id": "breadcrumb-audit",
+      "type": "repo_script",
+      "entrypoint": "scripts/audit-breadcrumbs.mjs",
+      "command": "npm run seo:audit-breadcrumbs",
+      "purpose": "Detect missing breadcrumb labels and duplicate BreadcrumbList JSON-LD.",
+      "status": "active"
+    },
+    {
+      "id": "freshness-audit",
+      "type": "repo_script",
+      "entrypoint": "scripts/audit-content-freshness.mjs",
+      "command": "npm run seo:audit-freshness",
+      "purpose": "Detect stale, critical, and undated WebPage/Article schema pages.",
+      "status": "active"
+    },
+    {
+      "id": "og-image-audit",
+      "type": "repo_script",
+      "entrypoint": "scripts/audit-og-images.mjs",
+      "command": "npm run seo:audit-og",
+      "purpose": "Detect missing, unmeasured, wrong-ratio, small, and heavy social preview images.",
+      "status": "active"
+    },
+    {
+      "id": "robots-indexnow",
+      "type": "repo_script",
+      "entrypoint": "scripts/verify-robots-indexnow.mjs",
+      "command": "npm run seo:verify-robots",
+      "purpose": "Verify production robots, sitemap, image sitemap, AI crawler access, and IndexNow key file.",
+      "status": "active"
+    },
+    {
+      "id": "gbp-this-week",
+      "type": "repo_script",
+      "entrypoint": "scripts/gbp-this-week.mjs",
+      "command": "npm run gbp:this-week",
+      "purpose": "Rotate GBP weekly post scaffold from the local ops calendar.",
+      "status": "active_with_source_dependency",
+      "dependency": "GBP calendar file must exist in the configured ops directory."
+    },
+    {
+      "id": "dataforseo-api",
+      "type": "app_route",
+      "entrypoints": [
+        "src/app/api/seo/overview/route.js",
+        "src/app/api/seo/competitors/route.js",
+        "src/app/api/seo/backlinks/route.js",
+        "src/app/api/seo/keyword-research/route.js",
+        "src/app/api/seo/llm-mentions/route.js"
+      ],
+      "purpose": "SEO admin dashboard data refresh for overview, competitors, backlinks, keyword research, and LLM mentions.",
+      "status": "blocked_by_credentials",
+      "blocker": "DataForSEO API credentials currently return 40100 per reputation sprint doc."
+    },
+    {
+      "id": "seo-admin-dashboard",
+      "type": "app_page",
+      "entrypoint": "src/app/admin/seo/page.js",
+      "purpose": "Operator interface for SEO API state and refresh workflows.",
+      "status": "present_unverified"
+    }
+  ]
+}
