@@ -69,20 +69,11 @@ Use CSV for V1. Do not connect Google Sheets yet.
 
 ### 2. Build the CSV
 
-First validate the live lead-outcome intake:
+Start from:
 
 ```txt
-npm run measurement:lead-outcomes
+docs/ads-tracking/templates/google-ads-offline-conversions-template.csv
 ```
-
-Then generate the local upload preview:
-
-```txt
-npm run measurement:offline-preview
-```
-
-The preview writes `docs/ads-tracking/google-ads-offline-upload-preview-YYYY-MM-DD.csv`.
-This is a local file only. It does not upload anything to Google Ads.
 
 For each upload view, create rows using this shape:
 
@@ -96,14 +87,9 @@ Rules:
 - If only `gbraid` / `wbraid` exists, use the Google Ads-supported column shape for enhanced iOS identifiers only after confirming the current Google import template. Do not guess.
 - If no click ID exists, skip manual CSV upload for now; hold those leads for Enhanced Conversions for Leads later.
 - `Conversion Time` must include timezone offset, e.g. `2026-05-13 10:30:00-0400`.
-- Use the matching stage timestamp from the live intake: `qualified_at`, `estimate_scheduled_at`, `contract_signed_at`, or `closed_paid_at`.
 - `Order ID` = `{event_id}::{conversion_name}`.
 - `Conversion Value` = 500 / 1000 / contract value / final paid value depending on event.
 - Currency always `USD`.
-
-If the preview reports `NO_UPLOAD_ROWS`, do not manually invent rows. Add real
-stage timestamps and click IDs to the live intake first, rerun validation, then
-rerun the preview.
 
 ### 3. Upload preview first
 
@@ -113,10 +99,6 @@ In Google Ads:
 2. Click **Preview** if available.
 3. Review warnings before applying.
 4. If preview has row-level errors, do not apply. Fix the CSV first.
-
-Use the Google Ads preview screen as the final safety check. The local preview
-generator is a preparation gate, not proof that Google accepted the conversion
-rows.
 
 ### 4. Apply upload
 
