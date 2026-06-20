@@ -13,12 +13,13 @@ import NamedAuthor from '@/components/NamedAuthor';
 import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/screened-porch-builder-northern-virginia",
-  title: "Screened Porch Builder Northern Virginia | Custom Porches | Loudoun Decks",
-  description: "Trusted screened porch builder in Northern Virginia. Custom screened-in porches, EZE-Breeze windows, and outdoor living spaces. Serving Loudoun, Fairfax, and Prince William Counties.",
+  title: "Screened Porch Contractor & Builder Northern Virginia | Loudoun Decks",
+  description: "Virginia Class A licensed screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze panels, permits handled. $28k–$80k.",
   image: "/social/screened-porch-builder-northern-virginia-social.png",
 });
 
@@ -73,6 +74,20 @@ const faqs = [
 ];
 
 const expansionSections = [
+  {
+    title: "How to choose a screened porch contractor in Northern Virginia",
+    paragraphs: [
+      "Selecting a screened porch contractor in Northern Virginia is different from hiring a standard deck crew. A screened porch is a roofed structure tied to the house framing — it requires structural engineering, roof load calculations, ledger attachment details, and a building permit in every NoVA jurisdiction. The contractor you hire must hold a current Virginia Class A contractor license (verifiable at dpor.virginia.gov), carry full liability and workers' compensation insurance, and have documented experience with permit submissions in Loudoun, Fairfax, and Prince William counties.",
+      "Ask any screened porch contractor you interview these three questions before signing a contract: (1) Who prepares the structural drawings — an in-house designer or a licensed engineer? (2) Does the estimate include permit fees and inspection coordination, or are those billed separately? (3) What happens if the county requests plan revisions — is that included or an extra charge? A contractor who cannot answer all three clearly is not the right fit for a NoVA screened porch project.",
+      "At Loudoun Decks, we are Virginia Class A licensed (DPOR-verifiable), carry full commercial liability and workers' comp, and prepare every permit submission in-house — structural drawings, site plans, material specs and HOA packages. Permit fees and revision cycles are included in the written estimate, not added as surprises during construction.",
+    ],
+    listItems: [
+      { label: "Verify Class A license", text: "Check dpor.virginia.gov before signing. Any screened porch contractor doing structural work in Virginia must hold a Class A or Class B license." },
+      { label: "Confirm permit handling", text: "A qualified screened porch contractor submits the full permit package — drawings, site plan, and footing schedule — not just a simple deck permit application." },
+      { label: "Require itemized estimates", text: "Written, line-item estimates protect against scope creep. Ask for a breakdown of materials, labor, permit fees, and drawing costs before committing." },
+      { label: "Check HOA experience", text: "In Ashburn, Brambleton, Broadlands, Reston and South Riding, HOA ARC approval runs parallel to the county permit. Your contractor should prepare both packages." },
+    ]
+  },
   {
     title: "Why Northern Virginia homeowners build screened porches",
     paragraphs: [
@@ -137,7 +152,7 @@ const expansionSections = [
 export default function ScreenedPorchBuilderNovaPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/screened-porch-builder-northern-virginia" name="Screened Porch Builder Northern Virginia" description="Custom screened porches and 3-season rooms in Northern Virginia. EZE-Breeze, deck combos, permits handled. From $25,000." speakable />
+      <WebPageSchema dateModified="2026-06-20" url="https://ldndecks.com/screened-porch-builder-northern-virginia" name="Screened Porch Contractor & Builder Northern Virginia" description="Virginia Class A licensed screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze four-season enclosures, permits handled. $28k–$80k." speakable />
       <ServiceSchema
         name="Screened Porch Construction"
         description="Custom screened porches and 3-season rooms in Northern Virginia. EZE-Breeze windows, structural engineering, permits and HOA approvals included."
@@ -149,10 +164,11 @@ export default function ScreenedPorchBuilderNovaPage() {
       />
 
       <ServicesHeader
-        subtext="Northern Virginia's Premier Porch Builder"
-        title="Screened Porch Builder Northern Virginia"
-        description="Enjoy the Virginia outdoors without the bugs. Custom screened-in porches, EZE-Breeze enclosures, and complete outdoor living transformations."
+        subtext="Northern Virginia's Premier Porch Contractor"
+        title="Screened Porch Contractor & Builder — Northern Virginia"
+        description="Virginia Class A licensed screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze four-season enclosures, permit and HOA management included."
       />
+      <AboveFoldCTA headline="Need a licensed screened porch contractor in Northern Virginia? Get a written itemized estimate from a Class A specialist." />
       
       <ServiceMain
         subtitle="Bug-Free Outdoor Living"
