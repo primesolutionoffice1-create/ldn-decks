@@ -8,6 +8,7 @@ import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import ServiceSchema from '@/components/ServiceSchema';
+import JsonLd from '@/components/JsonLd';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
@@ -65,6 +66,60 @@ const repairFAQs = [
   }
 ];
 
+const structuralRepairTriageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://ldndecks.com/services/deck-repair#structural-repair-triage",
+  name: "Northern Virginia structural deck repair triage path",
+  description: "Inspection-first path for unsafe stairs, loose railings, ledger rot, failed inspections, and repair-vs-replacement decisions.",
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  numberOfItems: 7,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Identify the visible safety symptom",
+      url: "https://ldndecks.com/deck-safety-inspection-checklist"
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Review stair construction and common stair failures",
+      url: "https://ldndecks.com/education/deck-stair-construction-diagram"
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Check ledger flashing and deck-to-house attachment risk",
+      url: "https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia"
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Estimate footing and support review needs",
+      url: "https://ldndecks.com/tools/deck-footing-depth-calculator-virginia"
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      name: "Compare repair, resurfacing, and replacement paths",
+      url: "https://ldndecks.com/deck-resurfacing-vs-replacement"
+    },
+    {
+      "@type": "ListItem",
+      position: 6,
+      name: "Confirm permit-sensitive structural work by county",
+      url: "https://ldndecks.com/deck-permit-fairfax-county-virginia"
+    },
+    {
+      "@type": "ListItem",
+      position: 7,
+      name: "Request a structural repair inspection and written scope",
+      url: "https://ldndecks.com/get-estimate"
+    }
+  ]
+};
+
 const expansionSections = [
   {
     title: "Structural Integrity: Beyond Just Surface Aesthetics",
@@ -86,6 +141,7 @@ const expansionSections = [
 export default function DeckRepairPage() {
   return (
     <main>
+      <JsonLd data={structuralRepairTriageSchema} />
       <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/services/deck-repair" name="Deck Repair Near Me Northern VA | Structural Deck Contractor" description="Need deck repair near you in Northern Virginia? We inspect rotted posts, sinking decks, railings, ledgers, and failed-inspection issues before recommending repair or replacement." speakable />
       <ServiceSchema
         name="Deck Repair & Structural Maintenance"
@@ -198,7 +254,7 @@ export default function DeckRepairPage() {
         </ul>
       </section>
 
-      <RelatedGuides currentPath="/services/deck-repair" />
+      <RelatedGuides currentPath="/services/deck-repair" category="structural-repair" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
 
       <ContactHome />

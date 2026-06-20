@@ -116,6 +116,21 @@ const BLOG_COMMERCIAL_PRIORITY = [
   '/deck-permit-fairfax-county-virginia',
 ];
 
+const STRUCTURAL_REPAIR_PRIORITY = [
+  '/services/deck-repair',
+  '/deck-resurfacing-vs-replacement',
+  '/education/deck-stair-construction-diagram',
+  '/education/deck-stair-safety-inspection-checklist',
+  '/education/common-deck-stair-inspection-failures-virginia',
+  '/education/ledger-board-flashing-deck-attachment-virginia',
+  '/tools/deck-stair-calculator',
+  '/tools/deck-footing-depth-calculator-virginia',
+  '/deck-permit-loudoun-county-virginia',
+  '/deck-permit-fairfax-county-virginia',
+  '/services/deck-replacement',
+  '/deck-cost-calculator',
+];
+
 const TRUST_GUIDE_PATHS = [
   '/bbb-accredited-deck-builder-virginia',
   '/ldn-decks-reviews-yelp',
@@ -132,12 +147,18 @@ export default function RelatedGuides({ currentPath, category = null }) {
   const available = CORNERSTONE_GUIDES.filter(g => g.path !== currentPath);
   const hash = currentPath.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
 
-  if (category === 'deck-core' || category === 'blog-commercial') {
-    const priority = category === 'blog-commercial' ? BLOG_COMMERCIAL_PRIORITY : DECK_CORE_PRIORITY;
+  if (category === 'deck-core' || category === 'blog-commercial' || category === 'structural-repair') {
+    const priority = category === 'blog-commercial'
+      ? BLOG_COMMERCIAL_PRIORITY
+      : category === 'structural-repair'
+        ? STRUCTURAL_REPAIR_PRIORITY
+        : DECK_CORE_PRIORITY;
     const priorityGuides = priority
       .map(path => available.find(g => g.path === path))
       .filter(Boolean);
-    const selected = rotateGuides(priorityGuides, hash).slice(0, 6);
+    const selected = category === 'structural-repair'
+      ? priorityGuides.slice(0, 6)
+      : rotateGuides(priorityGuides, hash).slice(0, 6);
 
     return (
       <section style={{ background: '#f8f9fa', padding: '3rem 0', borderTop: '1px solid #e5e5e5' }}>

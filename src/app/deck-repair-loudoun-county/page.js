@@ -149,7 +149,9 @@ export default function DeckRepairLoudounCountyPage() {
           <strong>Beyond Loudoun-specific guidance:</strong> see the full Northern Virginia repair hub for structural decision frameworks, permit triggers across all NoVA counties, and the repair-vs-replace decision math.{' '}
           <a href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Open the NoVA Structural Repair Hub →</a>
           {' '}For the inspection-first service path, use our{' '}
-          <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service page</Link>.
+          <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service page</Link>. If the concern is unsafe stairs or house-side attachment, start with the{' '}
+          <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link> and{' '}
+          <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link> before approving a repair scope.
         </p>
       </section>
 
@@ -176,6 +178,9 @@ export default function DeckRepairLoudounCountyPage() {
           and whether prior work was permitted. If the repair affects structural framing, railings, stairs, or load paths, a permit may be required.
           Useful primers: <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing depth</Link>,
           {' '}<Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck joist sizing</Link>,
+          {' '}<Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link>,
+          {' '}<Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checklist</Link>,
+          {' '}<Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>,
           {' '}<Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>unpermitted decks in Virginia</Link>, and
           {' '}<Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck permit requirements</Link>. If the inspection shows the frame is beyond practical repair, compare the scope with our
           {' '}<Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck replacement service</Link>.

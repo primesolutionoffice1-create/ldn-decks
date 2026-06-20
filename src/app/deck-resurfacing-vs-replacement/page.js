@@ -30,12 +30,61 @@ const faqSchema = {
   ],
 };
 
+const repairTriageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://ldndecks.com/deck-resurfacing-vs-replacement#repair-triage-path",
+  name: "Deck repair, resurfacing, and replacement decision path",
+  description: "Inspection-first sequence for deciding whether an older Northern Virginia deck needs targeted repair, composite resurfacing, or full replacement.",
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  numberOfItems: 6,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Check stair geometry and load path",
+      url: "https://ldndecks.com/education/deck-stair-construction-diagram"
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Screen for stair safety and inspection failures",
+      url: "https://ldndecks.com/education/deck-stair-safety-inspection-checklist"
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Verify ledger flashing and house attachment",
+      url: "https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia"
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Choose repair, resurfacing, or replacement path",
+      url: "https://ldndecks.com/services/deck-repair"
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      name: "Confirm county permit triggers",
+      url: "https://ldndecks.com/deck-permit-loudoun-county-virginia"
+    },
+    {
+      "@type": "ListItem",
+      position: 6,
+      name: "Request an inspection-first written estimate",
+      url: "https://ldndecks.com/get-estimate"
+    }
+  ]
+};
+
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 }, th: { padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }, td: { padding: '0.75rem', borderBottom: '1px solid #eee' } };
 
 export default function ResurfacingVsReplacementPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <JsonLd data={repairTriageSchema} />
       <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-resurfacing-vs-replacement" name="Deck Resurfacing vs Replacement" description="Resurface $15k-$30k+ (keep frame) or replace $20k-$50k+. When each makes sense, inspection guide, and Northern Virginia cost examples." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -211,7 +260,7 @@ export default function ResurfacingVsReplacementPage() {
       <SimpleCTA title="Free Deck Inspection Resurface or Replace?" buttonText="Schedule Free Inspection" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
-      <RelatedGuides currentPath="/deck-resurfacing-vs-replacement" />
+      <RelatedGuides currentPath="/deck-resurfacing-vs-replacement" category="structural-repair" />
 
       <ContactHome />
     </>
