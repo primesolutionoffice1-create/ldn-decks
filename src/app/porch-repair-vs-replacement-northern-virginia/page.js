@@ -122,7 +122,7 @@ export default function PorchRepairPage() {
           <p style={S.p}><strong>Example:</strong> If a new screened porch costs $45,000 and repairs are quoted at $15,000+ (33%), strongly consider replacement. At $20,000+ (44%), replacement is almost certainly the better investment.</p>
 
           <h2 style={S.h2}>Free Porch Inspection</h2>
-          <p style={S.p}>Not sure if your porch needs repair or replacement? We offer <strong>free on-site inspections</strong>. We check every structural element posts, beams, joists, ledger, roof, footings and give you an honest assessment with photos. No obligation, no pressure. If the issue is tied to the deck structure, stairs, railings, or ledger connection rather than the porch roof system, start with our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link>.</p>
+          <p style={S.p}>Not sure if your porch needs repair or replacement? We offer <strong>free on-site inspections</strong>. We check every structural element posts, beams, joists, ledger, roof, footings and give you an honest assessment with photos. No obligation, no pressure. If the issue is tied to the deck structure, stairs, railings, or ledger connection rather than the porch roof system, start with our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link>, compare stair parts with the <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>, and review the <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
@@ -141,6 +141,8 @@ export default function PorchRepairPage() {
               ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost Guide'],
               ['/porch-vs-deck-which-should-you-build', 'Porch vs Deck'],
               ['/services/deck-repair', 'Deck Repair Service'],
+              ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing Guide'],
               ['/services/porches', 'Porch Building Services'],
               ['/services/deck-inspection', 'Deck & Porch Inspection'],
             ].map(([href, text]) => (

@@ -114,39 +114,78 @@ const FADING_LEARNING_PATH = [
 const STRUCTURAL_SAFETY_PATH = [
   {
     step: '01',
+    title: 'Identify stair parts',
+    desc: 'Start with the diagram so stringers, treads, risers, landings, blocking and connectors are clear before code review.',
+    href: '/education/deck-stair-construction-diagram',
+  },
+  {
+    step: '02',
     title: 'Check stair code',
     desc: 'Start with Virginia rise, run, handrail, guard, landing and lighting basics before planning stair repair or rebuild work.',
     href: '/education/deck-stair-code-rise-run-virginia',
   },
   {
-    step: '02',
+    step: '03',
     title: 'Model rise and run',
     desc: 'Use the calculator to estimate riser count, tread depth, total run and stair angle before a professional inspection.',
     href: '/tools/deck-stair-calculator',
   },
   {
-    step: '03',
+    step: '04',
     title: 'Spot inspection failures',
     desc: 'Review uneven risers, weak rails, rotten stringers, poor landings, missing lighting and stair-to-deck separation.',
     href: '/education/common-deck-stair-inspection-failures-virginia',
   },
   {
-    step: '04',
+    step: '05',
     title: 'Inspect the ledger',
     desc: 'Understand flashing, rim-joist moisture, structural fasteners and the house connection behind attached deck safety.',
     href: '/education/ledger-board-flashing-deck-attachment-virginia',
   },
   {
-    step: '05',
+    step: '06',
     title: 'Confirm Loudoun permits',
     desc: 'Move from code research into Loudoun County permit planning before repair, resurfacing or replacement decisions.',
     href: '/deck-permit-loudoun-county-virginia',
   },
   {
-    step: '06',
+    step: '07',
     title: 'Compare Fairfax permits',
     desc: 'Review Fairfax County deck permit planning, typical deck details and inspection expectations for stair or ledger work.',
     href: '/deck-permit-fairfax-county-virginia',
+  },
+];
+
+const STRUCTURAL_REPAIR_PATH = [
+  {
+    step: '01',
+    title: 'Triage the repair',
+    desc: 'Use the Loudoun repair guide when the concern is rot, failed inspection, loose railings, unsafe stairs or ledger damage.',
+    href: '/deck-repair-loudoun-county',
+  },
+  {
+    step: '02',
+    title: 'Compare repair vs replacement',
+    desc: 'Decide whether the frame can be repaired, resurfaced or should be rebuilt before investing in finish materials.',
+    href: '/deck-resurfacing-vs-replacement',
+  },
+  {
+    step: '03',
+    title: 'Check structural service fit',
+    desc: 'Review the Northern Virginia structural repair hub for posts, ledgers, stairs, railings and failed-inspection scopes.',
+    href: '/services/deck-repair',
+  },
+  {
+    step: '04',
+    title: 'Confirm permit triggers',
+    desc: 'Use the county permit guides before approving work that affects framing, stairs, railings, footings or the house attachment.',
+    href: '/deck-permit-loudoun-county-virginia',
+  },
+  {
+    step: '05',
+    title: 'Request the written scope',
+    desc: 'Send photos and project notes when the issue looks structural, permit-sensitive or too broad for a surface repair.',
+    href: '/get-estimate',
   },
 ];
 
@@ -240,6 +279,30 @@ export function EducationClusterNav() {
           </div>
           <div className={styles.learningPathSteps}>
             {STRUCTURAL_SAFETY_PATH.map((item) => (
+              <Link className={styles.learningPathStep} href={item.href} key={item.href}>
+                <span className={styles.learningPathNumber}>{item.step}</span>
+                <span className={styles.learningPathStepBody}>
+                  <span className={styles.learningPathStepTitle}>{item.title}</span>
+                  <span className={styles.learningPathStepDesc}>{item.desc}</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className={styles.learningPath} aria-labelledby="structural-repair-learning-path">
+          <div className={styles.learningPathIntro}>
+            <p className={styles.sectionEyebrow}>Repair and replacement triage path</p>
+            <h3 id="structural-repair-learning-path" className={styles.learningPathTitle}>
+              Turn safety findings into the right repair, permit or estimate step
+            </h3>
+            <p className={styles.learningPathCopy}>
+              If a stair, ledger, railing or porch issue points to structural risk, move from the
+              education guides into repair triage, resurfacing-vs-replacement logic, permit checks
+              and a written scope request.
+            </p>
+          </div>
+          <div className={styles.learningPathSteps}>
+            {STRUCTURAL_REPAIR_PATH.map((item) => (
               <Link className={styles.learningPathStep} href={item.href} key={item.href}>
                 <span className={styles.learningPathNumber}>{item.step}</span>
                 <span className={styles.learningPathStepBody}>

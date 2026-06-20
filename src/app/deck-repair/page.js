@@ -217,7 +217,7 @@ export default function DeckRepairPage() {
 
       <ServiceAreasGrid />
 
-      <RelatedGuides currentPath="/deck-repair" />
+      <RelatedGuides currentPath="/deck-repair" category="structural-repair" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
 
       <ContactHome />
