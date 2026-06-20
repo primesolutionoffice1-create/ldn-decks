@@ -45,8 +45,7 @@ export default function NamedAuthor({ context = 'Northern Virginia', lastUpdated
           <span style={{ fontWeight: 500, color: '#555' }} itemProp="jobTitle">Owner &amp; Lead Designer, Loudoun Decks</span>
         </p>
         <p style={{ margin: 0, fontSize: '0.85rem', color: '#555', lineHeight: 1.55 }} itemProp="description">
-          Virginia Class A Licensed Contractor. Trex Platinum Partner and TimberTech Certified Installer.
-          10+ years building custom composite decks in {context}. {' '}
+          Virginia Class A Licensed Contractor. 10+ years planning custom composite deck projects in {context}, with Trex and TimberTech product details reviewed by scope.{' '}
           <Link href="/team" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Meet the team</Link>
         </p>
         {lastUpdated && (

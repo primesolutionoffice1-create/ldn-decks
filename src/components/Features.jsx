@@ -31,8 +31,8 @@ const HandshakeIcon = () => (
 const featuresData = [
   {
     icon: <RibbonIcon />,
-    title: 'TREX PLATINUM',
-    subtitle: 'Partner Status'
+    title: 'TREX OPTIONS',
+    subtitle: 'Material Planning'
   },
   {
     icon: <LeafIcon />,
@@ -46,8 +46,8 @@ const featuresData = [
   },
   {
     icon: <HandshakeIcon />,
-    title: 'FREE QUOTE',
-    subtitle: 'Within 24 Hours'
+    title: 'WRITTEN ESTIMATE',
+    subtitle: 'Scope-Based Pricing'
   }
 ];
 

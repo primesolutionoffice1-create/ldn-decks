@@ -9,7 +9,7 @@ const servicesData = [
   {
     id: 1,
     title: 'Custom Deck Builder',
-    description: 'Transform your backyard with a custom-designed deck. As a Trex Platinum builder, we offer the best warranties and craftsmanship in Northern Virginia.',
+    description: 'Transform your backyard with a custom-designed deck using Trex, TimberTech, wood, or PVC materials matched to your budget, HOA rules, and maintenance goals.',
     image: '/images/img58.jpeg',
     link: '/services/new-decks'
   },
@@ -44,7 +44,7 @@ export default function ServicesHome() {
             <h2 className={styles.title}>Everything Your Outdoor<br /> Space Needs</h2>
           </div>
           <div className={styles.descArea}>
-            <p>From ground-up deck construction to full outdoor living spaces, every project is custom-designed for your home, fully permitted, and backed by our warranty.</p>
+            <p>From ground-up deck construction to full outdoor living spaces, every project is custom-designed for your home with permit planning, material guidance, and written workmanship terms.</p>
           </div>
         </div>
         <div className={styles.cardsGrid}>

@@ -52,7 +52,7 @@ export default function HandCraftedDecks() {
         <div className={styles.header}>
           <h2>Professional Deck Building & Design</h2>
           <div className={styles.checkmarks}>
-            <span className={styles.checkItem}><CheckIcon /> Trex Platinum Partner</span>
+            <span className={styles.checkItem}><CheckIcon /> Trex & TimberTech Material Planning</span>
             <span className={styles.checkItem}><CheckIcon /> Custom Deck Designer</span>
             <span className={styles.checkItem}><CheckIcon /> Licensed & Insured Contractor</span>
           </div>

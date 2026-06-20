@@ -10,7 +10,7 @@ const teamMembers = [
     name: "Nick",
     role: "Owner & Lead Designer",
     image: "/team/Nick.jpg",
-    bio: "Founder and lead designer of Loudoun Decks with over 10 years of experience in custom deck construction across Northern Virginia. Virginia Class A Licensed Contractor. Trex Platinum Certified and TimberTech Certified Installer. Nick personally oversees deck planning from initial design through final inspection, with special focus on structure, materials, permits, and HOA requirements.",
+    bio: "Founder and lead designer of Loudoun Decks with over 10 years of experience in custom deck construction across Northern Virginia. Virginia Class A Licensed Contractor. Nick personally oversees deck planning from initial design through final inspection, with special focus on structure, materials, permits, and HOA requirements.",
     expertise: ["Custom deck design", "Trex & TimberTech systems", "HOA architectural review", "Structural engineering", "Permit management"],
   },
   {
@@ -54,7 +54,7 @@ export default function TeamGrid() {
     "worksFor": { "@type": "Organization", "@id": "https://ldndecks.com/#organization" },
     "image": "https://ldndecks.com/team/Nick.jpg",
     "url": "https://ldndecks.com/team",
-    "description": "Founder of Loudoun Decks with 10+ years of custom deck building experience in Northern Virginia. Virginia Class A Licensed Contractor, Trex Platinum Partner, TimberTech Certified Installer, and lead designer for deck planning across Loudoun, Fairfax, and Prince William counties.",
+    "description": "Founder of Loudoun Decks with 10+ years of custom deck building experience in Northern Virginia. Virginia Class A Licensed Contractor and lead designer for deck planning across Loudoun, Fairfax, and Prince William counties.",
     "knowsAbout": [
       "Composite decking installation",
       "Trex Transcend installation",
@@ -80,23 +80,11 @@ export default function TeamGrid() {
         "credentialCategory": "Professional License",
         "name": "Virginia Class A Contractor License",
         "recognizedBy": { "@type": "Organization", "name": "Virginia Department of Professional and Occupational Regulation (DPOR)" }
-      },
-      {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Manufacturer Certification",
-        "name": "Trex Platinum Partner",
-        "recognizedBy": { "@type": "Organization", "name": "Trex Company, Inc." }
-      },
-      {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Manufacturer Certification",
-        "name": "TimberTech Certified Installer",
-        "recognizedBy": { "@type": "Organization", "name": "TimberTech (The AZEK Company)" }
       }
     ],
     "award": [
-      "Trex Platinum Partner — highest installer tier",
-      "TimberTech Certified Installer",
+      "Trex product-line planning profile",
+      "TimberTech and AZEK product planning",
       'Google Business Profile reviews (verify current count on Google Maps)'
     ],
     "areaServed": [

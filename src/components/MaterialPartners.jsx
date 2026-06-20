@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './MaterialPartners.module.css';
 
 const partners = [
-  { name: 'Trex', sub: 'Platinum Partner' },
-  { name: 'TimberTech', sub: 'Certified Installer' },
+  { name: 'Trex', sub: 'Product planning' },
+  { name: 'TimberTech', sub: 'Product planning' },
   { name: 'Fiberon', sub: 'Premium Decking' },
   { name: 'Azek', sub: 'High-Performance' },
   { name: 'Wolf Home Products', sub: 'Outdoor Living' }

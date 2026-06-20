@@ -1,8 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import { BUSINESS } from '@/lib/business';
 import styles from './TrustSection.module.css';
 
 export default function TrustSection() {
+  const nadraMembership = BUSINESS.memberships.find((membership) => membership.alternateName === 'NADRA');
+  const nadraDirectoryUrl = nadraMembership?.directoryUrl || 'https://www.nadra.org/membership/directory#!biz/id/69f274b54078d1282501ee3b';
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -23,14 +27,27 @@ export default function TrustSection() {
               />
             </a>
             <a
-              href="https://www.nadra.org/membership/directory#!biz/id/69f274b54078d1282501ee3b"
+              href={nadraDirectoryUrl}
               target="_blank"
-              rel="noopener"
+              rel="noopener nofollow"
               className={styles.nadraCard}
+              aria-label="View Loudoun Decks NADRA Proud Member profile"
+              title="View Loudoun Decks NADRA Proud Member profile"
             >
-              <span className={styles.nadraKicker}>NADRA Member</span>
+              {nadraMembership?.logoPath ? (
+                <Image
+                  src={nadraMembership.logoPath}
+                  className={styles.nadraLogo}
+                  alt="Loudoun Decks NADRA Proud Member"
+                  width={220}
+                  height={90}
+                />
+              ) : (
+                <span className={styles.nadraKicker}>NADRA Proud Member</span>
+              )}
               <span className={styles.nadraTitle}>Deck Builder / Contractor / Remodeler</span>
               <span className={styles.nadraMeta}>Member since 2026</span>
+              <span className={styles.nadraProfileLink}>View NADRA member profile</span>
             </a>
           </div>
           

@@ -7,8 +7,8 @@ export default function TrustBanner() {
       <div className={styles.item}>
         <div className={styles.icon} aria-hidden="true">🏆</div>
         <div className={styles.text}>
-          <strong>Trex Platinum Partner</strong>
-          <span>Profile and credential details available for review</span>
+          <strong>Trex & TimberTech Options</strong>
+          <span>Material and warranty details reviewed by product line</span>
         </div>
       </div>
       <div className={styles.divider}></div>

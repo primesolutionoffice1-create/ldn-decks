@@ -33,7 +33,7 @@ export default function ServicesHeader({
             Call (571) 655-7207
           </CallLink>
         </div>
-        <p className={styles.trustText}>Free estimate &bull; No obligation &bull; Fully permitted builds</p>
+        <p className={styles.trustText}>Free estimate &bull; No obligation &bull; Permit-ready planning</p>
       </div>
     </section>
   );

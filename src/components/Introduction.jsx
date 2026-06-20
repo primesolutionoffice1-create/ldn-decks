@@ -82,7 +82,7 @@ export default function Introduction() {
             </li>
             <li>
               <CheckIcon />
-              <span>Permit and HOA submission management &mdash; we prepare, file, and coordinate the paperwork for you</span>
+              <span>Permit and HOA planning support &mdash; we help define paperwork, timing, and coordination before construction starts</span>
             </li>
           </ul>
           <div className={styles.progressContainer}>

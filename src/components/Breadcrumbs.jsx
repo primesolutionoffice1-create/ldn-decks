@@ -18,7 +18,6 @@ export default function Breadcrumbs() {
     patios: '/services/patios',
     pergolas: '/services/gazebo-pergola',
     'screened-porches': '/screened-porch-builder-northern-virginia',
-    'deck-repair': '/services/deck-repair',
   };
 
   const breadcrumbs = pathSegments.map((segment, index) => {

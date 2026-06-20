@@ -10,11 +10,11 @@ const faqsData = [
   },
   {
     question: "Do I need a permit to build a deck or fence?",
-    answer: "In most counties like Fairfax and Loudoun, yes. But don't worry—LDN Decks handles the entire permitting and HOA approval process for you. We ensure all plans are compliant with local Virginia building codes."
+    answer: "In many Northern Virginia jurisdictions, yes. Deck permits and HOA reviews depend on county, height, attachment, size, and community rules. LDN Decks helps homeowners identify likely permit triggers, plan documentation, and coordinate the next steps before construction starts."
   },
   {
     question: "What decking materials do you recommend for longevity?",
-    answer: "As a Trex Platinum Partner, we highly recommend composite or PVC decking for maximum durability and zero maintenance. These materials are perfect for the humid Virginia climate and come with 25-50 year warranties."
+    answer: "For long service life in Northern Virginia, we often recommend capped composite or PVC decking from brands such as Trex and TimberTech. These materials reduce staining and sealing work, resist moisture better than wood, and include manufacturer warranty programs that should be reviewed for the selected product line."
   },
   {
     question: "Can you resurface my existing deck instead of replacing it?",
@@ -22,7 +22,7 @@ const faqsData = [
   },
   {
     question: "What is the average cost to build a deck in NoVA?",
-    answer: "Deck building costs in Northern Virginia typically range from $15,000 to $45,000 depending on size and materials. We provide free, itemized estimates within 24 hours so you can review a written price for your specific vision."
+    answer: "Deck building costs in Northern Virginia often range from $15,000 to $45,000 depending on size, materials, stairs, railings, site access, and permit requirements. We provide itemized written estimates after the project scope is reviewed."
   }
 ];
 

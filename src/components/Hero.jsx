@@ -33,7 +33,7 @@ export default function Hero() {
         </h1>
         <p className={styles.heroDescription}>
           Need a deck contractor for a new composite deck, replacement, repair, or screened porch?
-          Loudoun Decks handles design, permits, HOA details, and estimates across Loudoun, Fairfax, and Prince William.
+          Loudoun Decks helps plan design, permits, HOA details, and estimates across Loudoun, Fairfax, and Prince William.
         </p>
         <HeroCTA />
       </div>

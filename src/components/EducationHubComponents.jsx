@@ -111,6 +111,45 @@ const FADING_LEARNING_PATH = [
   },
 ];
 
+const STRUCTURAL_SAFETY_PATH = [
+  {
+    step: '01',
+    title: 'Check stair code',
+    desc: 'Start with Virginia rise, run, handrail, guard, landing and lighting basics before planning stair repair or rebuild work.',
+    href: '/education/deck-stair-code-rise-run-virginia',
+  },
+  {
+    step: '02',
+    title: 'Model rise and run',
+    desc: 'Use the calculator to estimate riser count, tread depth, total run and stair angle before a professional inspection.',
+    href: '/tools/deck-stair-calculator',
+  },
+  {
+    step: '03',
+    title: 'Spot inspection failures',
+    desc: 'Review uneven risers, weak rails, rotten stringers, poor landings, missing lighting and stair-to-deck separation.',
+    href: '/education/common-deck-stair-inspection-failures-virginia',
+  },
+  {
+    step: '04',
+    title: 'Inspect the ledger',
+    desc: 'Understand flashing, rim-joist moisture, structural fasteners and the house connection behind attached deck safety.',
+    href: '/education/ledger-board-flashing-deck-attachment-virginia',
+  },
+  {
+    step: '05',
+    title: 'Confirm Loudoun permits',
+    desc: 'Move from code research into Loudoun County permit planning before repair, resurfacing or replacement decisions.',
+    href: '/deck-permit-loudoun-county-virginia',
+  },
+  {
+    step: '06',
+    title: 'Compare Fairfax permits',
+    desc: 'Review Fairfax County deck permit planning, typical deck details and inspection expectations for stair or ledger work.',
+    href: '/deck-permit-fairfax-county-virginia',
+  },
+];
+
 const LOCAL_GUIDES = [
   { label: 'Ashburn', href: '/deck-builder-ashburn-va' },
   { label: 'Leesburg', href: '/deck-builder-leesburg-va' },
@@ -177,6 +216,30 @@ export function EducationClusterNav() {
           </div>
           <div className={styles.learningPathSteps}>
             {FADING_LEARNING_PATH.map((item) => (
+              <Link className={styles.learningPathStep} href={item.href} key={item.href}>
+                <span className={styles.learningPathNumber}>{item.step}</span>
+                <span className={styles.learningPathStepBody}>
+                  <span className={styles.learningPathStepTitle}>{item.title}</span>
+                  <span className={styles.learningPathStepDesc}>{item.desc}</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className={styles.learningPath} aria-labelledby="structural-safety-learning-path">
+          <div className={styles.learningPathIntro}>
+            <p className={styles.sectionEyebrow}>Structural safety learning path</p>
+            <h3 id="structural-safety-learning-path" className={styles.learningPathTitle}>
+              Route stair, ledger and permit questions into one inspection-ready sequence
+            </h3>
+            <p className={styles.learningPathCopy}>
+              Follow the order a homeowner needs before calling: understand stair code, model the
+              geometry, identify failure signs, check the ledger connection, then confirm county
+              permit expectations.
+            </p>
+          </div>
+          <div className={styles.learningPathSteps}>
+            {STRUCTURAL_SAFETY_PATH.map((item) => (
               <Link className={styles.learningPathStep} href={item.href} key={item.href}>
                 <span className={styles.learningPathNumber}>{item.step}</span>
                 <span className={styles.learningPathStepBody}>

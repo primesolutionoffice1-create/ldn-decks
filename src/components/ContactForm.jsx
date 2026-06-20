@@ -126,14 +126,15 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               </div>
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="budgetRange">Approximate Budget</label>
-                  <select id="budgetRange" name="budgetRange" defaultValue="" className={styles.selectInput}>
+                  <label htmlFor="budgetRange">Approximate Budget <span className={styles.req}>*</span></label>
+                  <select id="budgetRange" name="budgetRange" required defaultValue="" className={styles.selectInput}>
                     <option value="" disabled>Select Budget Range</option>
-                    <option value="$10K-$20K">$10K-$20K</option>
-                    <option value="$20K-$40K">$20K-$40K</option>
-                    <option value="$40K-$70K">$40K-$70K</option>
-                    <option value="$70K+">$70K+</option>
-                    <option value="Not Sure">Not Sure</option>
+                    <option value="Under $15K">Under $15K</option>
+                    <option value="$15K-$25K">$15K-$25K</option>
+                    <option value="$25K-$50K">$25K-$50K</option>
+                    <option value="$50K-$100K">$50K-$100K</option>
+                    <option value="$100K+">$100K+</option>
+                    <option value="Not sure, full project">Not sure, but planning a full project</option>
                   </select>
                 </div>
                 <div className={styles.inputGroup}>
@@ -149,6 +150,16 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                 </div>
               </div>
               <div className={styles.inputGroup}>
+                <label htmlFor="homeownerStatus">Homeowner / Decision Maker <span className={styles.req}>*</span></label>
+                <select id="homeownerStatus" name="homeownerStatus" required defaultValue="" className={styles.selectInput}>
+                  <option value="" disabled>Select One</option>
+                  <option value="Homeowner decision maker">I am the homeowner / decision maker</option>
+                  <option value="Homeowner researching with partner">I am a homeowner researching with my partner</option>
+                  <option value="Property manager or authorized representative">I manage or represent the property</option>
+                  <option value="Not the homeowner">I am not the homeowner</option>
+                </select>
+              </div>
+              <div className={styles.inputGroup}>
                 <label htmlFor="hoa">HOA / Permit Status</label>
                 <select id="hoa" name="hoa" defaultValue="" className={styles.selectInput}>
                   <option value="" disabled>Select Status</option>
@@ -161,16 +172,16 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               </div>
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="city">City</label>
-                  <input id="city" name="city" type="text" placeholder="e.g. Ashburn" autoComplete="address-level2" />
+                  <label htmlFor="city">City <span className={styles.req}>*</span></label>
+                  <input id="city" name="city" type="text" required placeholder="e.g. Ashburn" autoComplete="address-level2" />
                 </div>
                 <div className={styles.inputGroup} style={{flex: 0.5}}>
                   <label htmlFor="state">State</label>
                   <input id="state" name="state" type="text" defaultValue="VA" autoComplete="address-level1" />
                 </div>
                 <div className={styles.inputGroup} style={{flex: 0.5}}>
-                  <label htmlFor="zip">ZIP</label>
-                  <input id="zip" name="zip" type="text" placeholder="Zip Code" autoComplete="postal-code" />
+                  <label htmlFor="zip">ZIP <span className={styles.req}>*</span></label>
+                  <input id="zip" name="zip" type="text" required placeholder="Zip Code" autoComplete="postal-code" />
                 </div>
               </div>
               <div className={styles.inputGroup}>

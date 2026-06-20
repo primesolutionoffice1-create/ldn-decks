@@ -218,8 +218,8 @@ export default function LocalServicePage({ city, serviceKey }) {
           <h1>{service.h1Noun} in {city.city}, VA</h1>
           <p className={styles.lead}>{cityIntro(city, service)}</p>
           <div className={styles.trustStrip} aria-label="Loudoun Decks trust signals">
-            <span>TrexPro Platinum</span>
-            <span>TimberTech Certified</span>
+            <span>Trex product-line planning</span>
+            <span>TimberTech and AZEK product planning</span>
             <span>VA Class A Licensed</span>
             <span>BBB Accredited</span>
           </div>

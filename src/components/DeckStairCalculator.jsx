@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from 'react';
 
-const COMMON_MAX_RISER = 7.75;
-const COMMON_MIN_TREAD = 10;
+const COMMON_MAX_RISER = 8.25;
+const COMMON_MIN_TREAD = 9;
 const COMMON_MIN_WIDTH = 36;
 
 function round(value, decimals = 2) {
@@ -32,7 +32,7 @@ function readNumber(value, fallback) {
 export default function DeckStairCalculator({ styles }) {
   const [totalRise, setTotalRise] = useState('48');
   const [preferredTreadDepth, setPreferredTreadDepth] = useState('11');
-  const [maxRiserHeight, setMaxRiserHeight] = useState('7.75');
+  const [maxRiserHeight, setMaxRiserHeight] = useState('8.25');
   const [stairWidth, setStairWidth] = useState('42');
   const [hasLanding, setHasLanding] = useState('yes');
   const [copied, setCopied] = useState(false);
@@ -50,7 +50,7 @@ export default function DeckStairCalculator({ styles }) {
     const warnings = [];
 
     if (maxRiser > COMMON_MAX_RISER) {
-      warnings.push('Your selected maximum riser is higher than the common 7.75 inch upper limit used in many residential deck stair layouts. Verify the local requirement before using this design.');
+      warnings.push('Your selected maximum riser is higher than the 8.25 inch upper limit used in Virginia residential stair geometry. Verify the local requirement before using this design.');
     }
 
     if (exactRiser > COMMON_MAX_RISER) {
@@ -60,7 +60,7 @@ export default function DeckStairCalculator({ styles }) {
     }
 
     if (tread < COMMON_MIN_TREAD) {
-      warnings.push('The selected tread depth is below the common 10 inch minimum used for many residential deck stairs.');
+      warnings.push('The selected tread depth is below the 9 inch minimum used in Virginia residential stair geometry.');
     }
 
     if (width < COMMON_MIN_WIDTH) {
@@ -149,7 +149,7 @@ export default function DeckStairCalculator({ styles }) {
 
           <label>
             <span>Preferred tread depth</span>
-            <small>Common planning target: 10 to 12 inches</small>
+            <small>Virginia minimum: 9 inches; comfort target: 10 to 12 inches</small>
             <input
               inputMode="decimal"
               type="number"
@@ -162,7 +162,7 @@ export default function DeckStairCalculator({ styles }) {
 
           <label>
             <span>Maximum riser height</span>
-            <small>Many residential layouts use 7.75 inches or less</small>
+            <small>Virginia maximum: 8.25 inches; lower often feels better</small>
             <input
               inputMode="decimal"
               type="number"

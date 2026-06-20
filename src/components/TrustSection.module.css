@@ -80,6 +80,15 @@
   color: #9a5d24;
 }
 
+.nadraLogo {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto 0.15rem;
+  object-fit: contain;
+}
+
 .nadraTitle {
   font-size: 0.95rem;
   font-weight: 800;
@@ -89,6 +98,15 @@
 .nadraMeta {
   font-size: 0.82rem;
   color: #6b7280;
+}
+
+.nadraProfileLink {
+  margin-top: 0.15rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #7f4f1f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .trexBlock {
