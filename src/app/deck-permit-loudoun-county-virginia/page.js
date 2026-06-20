@@ -21,6 +21,10 @@ export const metadata = buildMetadata({
 
 const permitFaqs = [
   {
+    q: "How much does a deck permit cost in Loudoun County?",
+    a: "Loudoun County deck permits typically cost $150–$500 for a standard deck and $400–$1,200 for a covered or elevated deck, based on construction valuation. We include permit costs in every estimate so homeowners are not surprised by county fees after signing.",
+  },
+  {
     q: "What size deck can you build without a permit in Virginia?",
     a: "You can build without a permit only if the deck is less than 200 square feet, not more than 30 inches above grade, freestanding, and does not serve a required exit door. Attached decks require a permit regardless of size.",
   },
@@ -296,7 +300,7 @@ export default function LoudounPermitPage() {
       <section style={{ padding: '1.5rem', maxWidth: 900, margin: '0 auto 2rem', background: '#f7fbff', border: '1px solid #d8e8f7', borderRadius: 12 }}>
         <h2 style={{ margin: '0 0 0.5rem', fontSize: '1.35rem' }}>What your estimate clarifies</h2>
         <p style={{ margin: 0, color: '#333', lineHeight: 1.7 }}>
-          The written estimate identifies expected permit fees, drawing requirements, inspection coordination, and HOA/ARC support so Loudoun homeowners can compare the full approved-project path, not just deck-board pricing.
+          We include permit costs in every estimate — no surprise county fees after signing. The written estimate also identifies drawing requirements, inspection coordination, and HOA/ARC support so Loudoun homeowners can compare the full approved-project path, not just deck-board pricing.
         </p>
       </section>
 
