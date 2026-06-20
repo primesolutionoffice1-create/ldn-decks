@@ -19,6 +19,7 @@ import https from 'node:https';
 import fs from 'node:fs';
 import path from 'node:path';
 import { resolveVaultReportsDir } from './lib/report-paths.mjs';
+import { localDateStamp } from './lib/local-date.mjs';
 
 const SITE = 'https://ldndecks.com';
 const INDEXNOW_KEY = 'ldndecks2026indexnow';
@@ -60,6 +61,46 @@ function postJson(url, payload) {
   });
 }
 
+function parseRobotsGroups(body) {
+  const groups = [];
+  let current = null;
+
+  for (const rawLine of body.split(/\r?\n/)) {
+    const line = rawLine.replace(/#.*/, '').trim();
+    if (!line) {
+      if (current) {
+        groups.push(current);
+        current = null;
+      }
+      continue;
+    }
+
+    const userAgent = line.match(/^user-agent:\s*(.+)$/i);
+    if (userAgent) {
+      if (!current) current = { userAgents: [], disallows: [] };
+      current.userAgents.push(userAgent[1].trim().toLowerCase());
+      continue;
+    }
+
+    const disallow = line.match(/^disallow:\s*(.*)$/i);
+    if (disallow && current) {
+      current.disallows.push(disallow[1].trim());
+    }
+  }
+
+  if (current) groups.push(current);
+  return groups;
+}
+
+function findBlockingGroups(body, protectedAgents) {
+  const protectedSet = new Set(protectedAgents.map((agent) => agent.toLowerCase()));
+  return parseRobotsGroups(body).filter((group) => {
+    const blocksAll = group.disallows.some((path) => path === '/');
+    if (!blocksAll) return false;
+    return group.userAgents.some((agent) => agent === '*' || protectedSet.has(agent));
+  });
+}
+
 async function main() {
   const submit = process.argv.includes('--submit');
   const checks = [];
@@ -73,9 +114,18 @@ async function main() {
       fail('robots.txt reachable', `status ${r.status}`);
     } else {
       if (/disallow:\s*\/\s*$/im.test(r.body)) {
-        fail('robots.txt is not blocking all', 'found "Disallow: /" — production should not block crawlers');
+        const protectedAgents = ['*', 'Googlebot', 'Bingbot', 'GPTBot', 'ClaudeBot', 'PerplexityBot', 'OAI-SearchBot'];
+        const blockingGroups = findBlockingGroups(r.body, protectedAgents);
+        if (blockingGroups.length) {
+          fail(
+            'robots.txt is not blocking search crawlers',
+            `found full disallow for: ${blockingGroups.map((group) => group.userAgents.join('/')).join(', ')}`,
+          );
+        } else {
+          pass('robots.txt not blocking search crawlers', 'full disallows only apply to training/extended-use bots');
+        }
       } else {
-        pass('robots.txt not blocking all', null);
+        pass('robots.txt not blocking search crawlers', null);
       }
       if (!/Sitemap:\s*https:\/\/ldndecks\.com\/sitemap\.xml/i.test(r.body)) {
         fail('robots.txt declares sitemap', 'no Sitemap: directive for sitemap.xml');
@@ -155,7 +205,8 @@ async function main() {
   // Print + persist
   const ok = checks.filter((c) => c.ok).length;
   const bad = checks.filter((c) => !c.ok).length;
-  console.log(`Robots + IndexNow Verification — ${new Date().toISOString().slice(0, 10)}`);
+  const stamp = localDateStamp();
+  console.log(`Robots + IndexNow Verification — ${stamp}`);
   console.log(`Site: ${SITE}`);
   console.log(`Submitted to IndexNow: ${submit ? 'yes' : 'no (pass --submit to enable)'}`);
   console.log('');
@@ -166,7 +217,7 @@ async function main() {
   console.log(`Passed: ${ok}  Failed: ${bad}`);
 
   fs.mkdirSync(REPORT_DIR, { recursive: true });
-  const dest = path.join(REPORT_DIR, `robots-indexnow-${new Date().toISOString().slice(0, 10)}.json`);
+  const dest = path.join(REPORT_DIR, `robots-indexnow-${stamp}.json`);
   fs.writeFileSync(dest, JSON.stringify({ site: SITE, submit, checks, submitResult, sitemapUrlCount: sitemapUrls.length }, null, 2));
   console.log(`Wrote report: ${dest}`);
 

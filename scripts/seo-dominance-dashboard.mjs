@@ -3,11 +3,13 @@ import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { localDateStamp, localIsoTimestamp } from './lib/local-date.mjs';
+import { parseTrailingJson } from './lib/parse-trailing-json.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const REPO_ROOT = path.resolve(path.dirname(__filename), '..');
 const ORIGIN = process.env.SEO_AUDIT_ORIGIN || 'https://ldndecks.com';
-const today = new Date().toISOString().split('T')[0];
+const today = localDateStamp();
 
 const priorityPaths = [
   '/service/ashburn',
@@ -75,13 +77,7 @@ function run(label, command) {
 }
 
 function jsonFromOutput(output) {
-  const match = output.match(/\{[\s\S]*\}\s*$/);
-  if (!match) return null;
-  try {
-    return JSON.parse(match[0]);
-  } catch {
-    return null;
-  }
+  return parseTrailingJson(output);
 }
 
 const sitemap = await fetchText(`${ORIGIN}/sitemap.xml`);
@@ -96,7 +92,7 @@ const linkJson = jsonFromOutput(linkAudit.out);
 
 const failedAudits = [schemaAudit, linkAudit, robotsAudit].filter(result => !result.ok).map(result => result.label);
 const report = {
-  generated: new Date().toISOString(),
+  generated: localIsoTimestamp(),
   origin: ORIGIN,
   sitemapUrls: sitemapUrls.length,
   localServiceUrls: localUrls.length,

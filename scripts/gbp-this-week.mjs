@@ -21,6 +21,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { resolveGbpOpsDir } from './lib/report-paths.mjs';
+import { localDateStamp } from './lib/local-date.mjs';
 
 const VAULT_ROOT = resolveGbpOpsDir(path.resolve('.'));
 const CALENDAR_PATH = path.join(VAULT_ROOT, 'post-calendar-90day.md');
@@ -82,7 +83,7 @@ function pickWeek(weeks, forced) {
 }
 
 function fmtDate(d) {
-  return d.toISOString().slice(0, 10);
+  return localDateStamp(d);
 }
 
 function renderThisWeek(week, blk) {

@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { localDateStamp } from './lib/local-date.mjs';
 
 const ORIGIN = 'https://ldndecks.com';
 const FETCH_ORIGIN = process.env.SEO_AUDIT_ORIGIN || ORIGIN;
@@ -7,7 +8,7 @@ const FETCH_TIMEOUT_MS = 8000;
 const FETCH_RETRIES = Number(process.env.SEO_LINK_AUDIT_FETCH_RETRIES || 2);
 const CRAWL_CONCURRENCY = Number(process.env.SEO_LINK_AUDIT_CRAWL_CONCURRENCY || 12);
 const STATUS_CONCURRENCY = Number(process.env.SEO_LINK_AUDIT_STATUS_CONCURRENCY || 24);
-const today = new Date().toISOString().split('T')[0];
+const today = localDateStamp();
 
 function normalizeInternalUrl(value) {
   try {

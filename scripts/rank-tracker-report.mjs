@@ -24,6 +24,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import https from 'node:https';
 import { resolveVaultReportsDir } from './lib/report-paths.mjs';
+import { localDateStamp } from './lib/local-date.mjs';
 
 const PROJECT_ID = 9182691;
 const PROJECT_NAME = 'Ldndecks';
@@ -42,7 +43,7 @@ const SELECT = [
 ];
 
 function todayISO() {
-  return new Date().toISOString().slice(0, 10);
+  return localDateStamp();
 }
 
 function instruct() {

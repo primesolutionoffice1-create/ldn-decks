@@ -19,6 +19,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { resolveVaultReportsDir } from './lib/report-paths.mjs';
+import { localDateStamp } from './lib/local-date.mjs';
 
 const APP_DIR = path.resolve('src/app');
 const LABELS_FILE = path.resolve('src/lib/breadcrumbLabels.js');
@@ -87,8 +88,9 @@ function audit() {
 
 function main() {
   const r = audit();
+  const stamp = localDateStamp();
 
-  console.log(`Breadcrumb Audit — ${new Date().toISOString().slice(0, 10)}`);
+  console.log(`Breadcrumb Audit — ${stamp}`);
   console.log(`Pages scanned: ${r.totalPages}`);
   console.log(`Known segments: see src/lib/breadcrumbLabels.js`);
   console.log('');
@@ -112,7 +114,7 @@ function main() {
   }
 
   fs.mkdirSync(REPORT_DIR, { recursive: true });
-  const dest = path.join(REPORT_DIR, `breadcrumb-audit-${new Date().toISOString().slice(0, 10)}.json`);
+  const dest = path.join(REPORT_DIR, `breadcrumb-audit-${stamp}.json`);
   fs.writeFileSync(dest, JSON.stringify(r, null, 2));
   console.log('');
   console.log(`Wrote report: ${dest}`);

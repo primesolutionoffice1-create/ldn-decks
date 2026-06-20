@@ -27,6 +27,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { resolveVaultReportsDir } from './lib/report-paths.mjs';
+import { localDateStamp } from './lib/local-date.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const REPO_ROOT = path.resolve(path.dirname(__filename), '..');
@@ -34,7 +35,7 @@ const APP_DIR = path.resolve(REPO_ROOT, 'src/app');
 const VAULT_REPORTS = resolveVaultReportsDir(REPO_ROOT);
 
 const TODAY = new Date();
-const TODAY_ISO = TODAY.toISOString().split('T')[0];
+const TODAY_ISO = localDateStamp(TODAY);
 
 // Pages we consider high-priority for freshness. Pricing + permit + city
 // pages weighted highest. URL patterns matched.

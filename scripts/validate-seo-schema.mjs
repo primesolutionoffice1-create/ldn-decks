@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { blogPosts } from '../src/lib/blogData.js';
+import { educationArticles } from '../src/lib/educationData.js';
 
 const appDir = path.resolve('src/app');
 const componentDir = path.resolve('src/components');
@@ -127,10 +128,46 @@ assertSourceContains(
     'about:',
     'mentions:',
     'citation:',
+    'const quickAnswerParts = (article.answerBlock || []).map',
+    '\'@type\': \'WebPageElement\'',
+    '\'@id\': `${articleUrl}#quick-answer-${index + 1}`',
+    'hasPart: quickAnswerParts',
+    'data-speakable="education-lead"',
+    'data-speakable="quick-answer"',
+    'cssSelector: [\'[data-speakable="education-lead"]\', \'[data-speakable="quick-answer"]\']',
     '<JsonLd data={articleSchema} />',
   ],
-  'Education Article',
+  'Education Article quick-answer retrieval',
 );
+
+const educationQuickAnswerIssues = [];
+let educationQuickAnswerPartCount = 0;
+let educationAnswerBlockArticleCount = 0;
+
+for (const article of educationArticles) {
+  if (!article.answerBlock) continue;
+
+  educationAnswerBlockArticleCount += 1;
+  if (!article.slug) {
+    educationQuickAnswerIssues.push('[missing slug] has answerBlock but no slug for stable hasPart @id generation');
+  }
+
+  if (!Array.isArray(article.answerBlock) || article.answerBlock.length === 0) {
+    educationQuickAnswerIssues.push(`${article.slug || '[missing slug]'} has an empty or non-array answerBlock`);
+    continue;
+  }
+
+  article.answerBlock.forEach((answer, index) => {
+    educationQuickAnswerPartCount += 1;
+    if (typeof answer !== 'string' || answer.trim().length < 40) {
+      educationQuickAnswerIssues.push(`${article.slug} answerBlock[${index}] is too short for a useful AI quick-answer entity`);
+    }
+  });
+}
+
+if (educationQuickAnswerIssues.length) {
+  fail(`Education quick-answer schema inputs regressed. answerBlock content must stay long enough to support Article.hasPart WebPageElement extraction:\n${educationQuickAnswerIssues.join('\n')}`);
+}
 
 assertSourceContains(
   path.join(appDir, 'blog/[slug]/page.js'),
@@ -227,5 +264,7 @@ console.log(JSON.stringify({
   entityPolicyFiles: entityPolicyFiles.length,
   reviewSchemaFiles: reviewSchemaFiles.length,
   napDriftFiles: napDriftFiles.length,
+  educationAnswerBlockArticleCount,
+  educationQuickAnswerPartCount,
   unsafeJsonLdWarnings,
 }, null, 2));

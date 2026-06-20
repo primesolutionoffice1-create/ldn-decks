@@ -25,6 +25,7 @@
         "seo:validate-evidence": "node scripts/validate-evidence-ledger.mjs",
         "seo:evidence-coverage": "node scripts/evidence-coverage-report.mjs",
         "seo:evidence-owner-packet": "node scripts/generate-owner-evidence-packet.mjs",
+        "seo:evidence-action-packet": "node scripts/generate-owner-evidence-packet.mjs",
         "seo:proof-snippets": "node scripts/generate-verified-proof-snippets.mjs",
         "seo:proof-snippets:validate": "node scripts/validate-verified-proof-snippets.mjs",
         "seo:validate-proof-runtime": "node scripts/validate-proof-runtime.mjs",

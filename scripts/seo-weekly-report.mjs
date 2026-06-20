@@ -13,6 +13,8 @@
  *   - validate-evidence-ledger.mjs (proof/evidence anti-fabrication gate)
  *   - seo-link-audit.mjs (internal + external link check)
  *   - audit-image-alt.mjs (image alt-text classification)
+ *   - gbp-this-week.mjs + validate-gbp-cadence.mjs (weekly GBP draft rotation + proof-safe cadence)
+ *   - validate-ai-discovery.mjs (AI retrieval route/file parity + address safety)
  *   - seo-daily-check.mjs (build + sitemap snapshot)
  *
  * Output:
@@ -28,19 +30,27 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { resolveVaultReportsDir } from './lib/report-paths.mjs';
+import { localDateStamp, localIsoTimestamp } from './lib/local-date.mjs';
+import { parseTrailingJson } from './lib/parse-trailing-json.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const REPO_ROOT = path.resolve(path.dirname(__filename), '..');
 
 const VAULT_REPORTS = resolveVaultReportsDir(REPO_ROOT);
 
-const today = new Date().toISOString().split('T')[0];
-const todayISO = new Date().toISOString();
+const today = localDateStamp();
+const todayISO = localIsoTimestamp();
 
 function run(label, cmd) {
   const start = Date.now();
   try {
-    const out = execSync(cmd, { cwd: REPO_ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
+    const out = execSync(cmd, {
+      cwd: REPO_ROOT,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'pipe'],
+      timeout: 180000,
+      maxBuffer: 10 * 1024 * 1024,
+    });
     return { label, ok: true, out, ms: Date.now() - start };
   } catch (e) {
     return { label, ok: false, out: (e.stdout || '') + '\n' + (e.stderr || ''), ms: Date.now() - start, error: e.message };
@@ -58,40 +68,7 @@ function parseSchemaValidator(out) {
 }
 
 function parseTrailingJsonObject(out) {
-  for (let start = out.lastIndexOf('{'); start !== -1; start = out.lastIndexOf('{', start - 1)) {
-    let depth = 0;
-    let inString = false;
-    let escaped = false;
-
-    for (let index = start; index < out.length; index += 1) {
-      const char = out[index];
-      if (inString) {
-        if (escaped) {
-          escaped = false;
-        } else if (char === '\\') {
-          escaped = true;
-        } else if (char === '"') {
-          inString = false;
-        }
-        continue;
-      }
-
-      if (char === '"') inString = true;
-      if (char === '{') depth += 1;
-      if (char === '}') depth -= 1;
-
-      if (depth === 0) {
-        const remainder = out.slice(index + 1).trim();
-        if (remainder) break;
-        try {
-          return JSON.parse(out.slice(start, index + 1));
-        } catch {
-          break;
-        }
-      }
-    }
-  }
-  return null;
+  return parseTrailingJson(out);
 }
 
 function parseImageAudit(out) {
@@ -194,26 +171,6 @@ function parseCommercialEvidenceIntakeValidation(out) {
   return parseTrailingJsonObject(out);
 }
 
-function parseBrainsteinReadiness(out) {
-  return parseTrailingJsonObject(out);
-}
-
-function parseBrainsteinTaskPackets(out) {
-  return parseTrailingJsonObject(out);
-}
-
-function parseBrainsteinTaskPacketValidation(out) {
-  return parseTrailingJsonObject(out);
-}
-
-function parseProofCommandReferenceValidation(out) {
-  return parseTrailingJsonObject(out);
-}
-
-function parseDirectoryCitationValidation(out) {
-  return parseTrailingJsonObject(out);
-}
-
 function parseGrowthMap(out) {
   return parseTrailingJsonObject(out);
 }
@@ -235,6 +192,18 @@ function parseProofOpsBoard(out) {
 }
 
 function parseProofOpsBoardValidation(out) {
+  return parseTrailingJsonObject(out);
+}
+
+function parseDirectoryCitationValidation(out) {
+  return parseTrailingJsonObject(out);
+}
+
+function parseProofCommandReferenceValidation(out) {
+  return parseTrailingJsonObject(out);
+}
+
+function parseAiDiscoveryValidation(out) {
   return parseTrailingJsonObject(out);
 }
 
@@ -388,8 +357,8 @@ console.log(`  ✓ Evidence ledger validator (${results[1].ms}ms)`);
 results.push(run('Evidence coverage report', 'node scripts/evidence-coverage-report.mjs'));
 console.log(`  ✓ Evidence coverage report (${results[2].ms}ms)`);
 
-results.push(run('Owner evidence packet', 'node scripts/generate-owner-evidence-packet.mjs'));
-console.log(`  ✓ Owner evidence packet (${results[3].ms}ms)`);
+results.push(run('Owner evidence action packet', 'node scripts/generate-owner-evidence-packet.mjs'));
+console.log(`  ✓ Owner evidence action packet (${results[3].ms}ms)`);
 
 results.push(run('Owner intake suite validator', 'node scripts/validate-owner-intake-suite.mjs'));
 console.log(`  ✓ Owner intake suite validator (${results[4].ms}ms)`);
@@ -456,6 +425,9 @@ console.log(`  ✓ Lead outcome validation (${results[24].ms}ms)`);
 
 results.push(run('Call attribution evidence validation', 'node scripts/validate-call-attribution-evidence.mjs'));
 console.log(`  ✓ Call attribution evidence validation (${results[25].ms}ms)`);
+
+const gbpThisWeekRotation = run('GBP this-week auto-rotation', 'node scripts/gbp-this-week.mjs');
+console.log(`  ${gbpThisWeekRotation.ok ? '✓' : '✗'} GBP this-week auto-rotation (${gbpThisWeekRotation.ms}ms)`);
 
 results.push(run('GBP cadence validation', 'node scripts/validate-gbp-cadence.mjs'));
 console.log(`  ✓ GBP cadence validation (${results[26].ms}ms)`);
@@ -553,6 +525,9 @@ console.log(`  ✓ Owner evidence handoff validation (${results[56].ms}ms)`);
 results.push(run('Owner evidence sprint validation', 'node scripts/validate-owner-evidence-sprint.mjs'));
 console.log(`  ✓ Owner evidence sprint validation (${results[57].ms}ms)`);
 
+const beforeAfterEvidenceResolution = run('Before/after evidence resolution', 'node scripts/generate-before-after-evidence-resolution.mjs');
+console.log(`  ${beforeAfterEvidenceResolution.ok ? '✓' : '✗'} Before/after evidence resolution (${beforeAfterEvidenceResolution.ms}ms)`);
+
 results.push(run('Evidence unblock runbook validation', 'node scripts/validate-evidence-unblock-runbook.mjs'));
 console.log(`  ✓ Evidence unblock runbook validation (${results[58].ms}ms)`);
 
@@ -565,30 +540,27 @@ console.log(`  ✓ Photo ingestion manifest validation (${results[60].ms}ms)`);
 results.push(run('Commercial evidence intake validation', 'node scripts/validate-commercial-evidence-intake.mjs'));
 console.log(`  ✓ Commercial evidence intake validation (${results[61].ms}ms)`);
 
-results.push(run('Owner evidence packet final refresh', 'node scripts/generate-owner-evidence-packet.mjs'));
-console.log(`  ✓ Owner evidence packet final refresh (${results[62].ms}ms)`);
-
-results.push(run('Brainstein readiness', 'node scripts/generate-brainstein-readiness-audit.mjs'));
-console.log(`  ✓ Brainstein readiness (${results[63].ms}ms)`);
-
-results.push(run('Brainstein task packets', 'node scripts/generate-brainstein-task-packets.mjs'));
-console.log(`  ✓ Brainstein task packets (${results[64].ms}ms)`);
-
-results.push(run('Brainstein task packet validation', 'node scripts/validate-brainstein-task-packets.mjs'));
-console.log(`  ✓ Brainstein task packet validation (${results[65].ms}ms)`);
+results.push(run('Directory citation packet validation', 'node scripts/validate-directory-citation-packets.mjs'));
+console.log(`  ✓ Directory citation packet validation (${results[62].ms}ms)`);
 
 results.push(run('Proof command reference validation', 'node scripts/validate-proof-command-references.mjs'));
-console.log(`  ✓ Proof command reference validation (${results[66].ms}ms)`);
+console.log(`  ✓ Proof command reference validation (${results[63].ms}ms)`);
 
-results.push(run('Directory citation packet validation', 'node scripts/validate-directory-citation-packets.mjs'));
-console.log(`  ✓ Directory citation packet validation (${results[67].ms}ms)`);
+results.push(run('Owner evidence action packet final refresh', 'node scripts/generate-owner-evidence-packet.mjs'));
+console.log(`  ✓ Owner evidence action packet final refresh (${results[64].ms}ms)`);
+
+results.push(run('AI discovery validation', 'node scripts/validate-ai-discovery.mjs'));
+const aiDiscoveryRun = results[65];
+console.log(`  ${aiDiscoveryRun.ok ? '✓' : '✗'} AI discovery validation (${aiDiscoveryRun.ms}ms)`);
 
 // ---------- Parse + summarize ----------
 
 const schema = parseSchemaValidator(results[0].out);
 const evidence = parseEvidenceValidator(results[1].out);
 const coverage = parseEvidenceCoverage(results[2].out);
-const ownerPacket = parseOwnerEvidencePacket(results[3].out);
+const ownerPacketInitial = parseOwnerEvidencePacket(results[3].out);
+const ownerPacketFinal = parseOwnerEvidencePacket(results[64].out);
+const ownerPacket = ownerPacketFinal || ownerPacketInitial;
 const ownerIntake = parseOwnerIntakeSuite(results[4].out);
 const ownerHandoff = parseOwnerEvidenceHandoff(results[5].out);
 const ownerSprint = parseOwnerEvidenceSprint(results[6].out);
@@ -647,12 +619,9 @@ const evidenceUnblockValidation = parseEvidenceUnblockValidation(results[58].out
 const beforeAfterEvidenceValidation = parseBeforeAfterEvidenceValidation(results[59].out);
 const photoManifestValidation = parsePhotoManifestValidation(results[60].out);
 const commercialEvidenceIntakeValidation = parseCommercialEvidenceIntakeValidation(results[61].out);
-const ownerPacketFinal = parseOwnerEvidencePacket(results[62].out);
-const brainsteinReadiness = parseBrainsteinReadiness(results[63].out);
-const brainsteinTaskPackets = parseBrainsteinTaskPackets(results[64].out);
-const brainsteinTaskPacketValidation = parseBrainsteinTaskPacketValidation(results[65].out);
-const proofCommandReferenceValidation = parseProofCommandReferenceValidation(results[66].out);
-const directoryCitationValidation = parseDirectoryCitationValidation(results[67].out);
+const directoryCitationValidation = parseDirectoryCitationValidation(results[62].out);
+const proofCommandReferenceValidation = parseProofCommandReferenceValidation(results[63].out);
+const aiDiscoveryValidation = parseAiDiscoveryValidation(aiDiscoveryRun.out);
 
 const goodPct = images?.totalImages ? Math.round((images.GOOD / images.totalImages) * 100) : null;
 const linkPct = links?.internalLinks ? Math.round((100 * (links.internalLinks - (links.badCount || 0)) / links.internalLinks)) : null;
@@ -671,9 +640,6 @@ const placeholderMetric = placeholders
 const ownerPacketMetric = ownerPacket
   ? `${ownerPacket.rows ?? '?'} actions · ${ownerPacket.p0 ?? '?'} P0 · ${ownerPacket.p1 ?? '?'} P1`
   : '? owner actions';
-const ownerPacketFinalMetric = ownerPacketFinal
-  ? `${ownerPacketFinal.rows ?? '?'} actions · ${ownerPacketFinal.p0 ?? '?'} P0 · ${ownerPacketFinal.p1 ?? '?'} P1`
-  : '? final owner actions';
 const ownerIntakeMetric = ownerIntake
   ? `${ownerIntake.projectIntake ?? '?'} project · ${ownerIntake.photoManifest ?? '?'} photo · ${ownerIntake.sprintBlocks ?? '?'} sprint · ${ownerIntake.warrantyRows ?? '?'} warranty · ${ownerIntake.repairCostRows ?? '?'} cost · ${ownerIntake.errors ?? '?'} errors`
   : '? owner intake';
@@ -722,18 +688,6 @@ const photoManifestValidationMetric = photoManifestValidation
 const commercialEvidenceIntakeValidationMetric = commercialEvidenceIntakeValidation
   ? `${commercialEvidenceIntakeValidation.warrantyRows ?? '?'} warranty · ${commercialEvidenceIntakeValidation.repairCostRows ?? '?'} repair cost · ${commercialEvidenceIntakeValidation.blankWarrantyEvidenceFields ?? '?'} blank warranty fields · ${commercialEvidenceIntakeValidation.blankRepairCostEvidenceFields ?? '?'} blank cost fields · ${commercialEvidenceIntakeValidation.errors?.length ?? '?'} errors`
   : '? commercial evidence intake validation';
-const brainsteinReadinessMetric = brainsteinReadiness
-  ? `${brainsteinReadiness.maturity?.stage ?? '?'} · ${brainsteinReadiness.maturity?.gate ?? '?'} · ${brainsteinTaskPackets?.packets ?? proofPreflight?.brainsteinTaskPackets ?? '?'} task packets · ${brainsteinReadiness.directoryCitationGate?.errors?.length ?? '?'} citation errors`
-  : '? Brainstein readiness';
-const brainsteinTaskPacketValidationMetric = brainsteinTaskPacketValidation
-  ? `${brainsteinTaskPacketValidation.packets ?? '?'} packets · ${brainsteinTaskPacketValidation.errors?.length ?? '?'} errors`
-  : '? Brainstein task packet validation';
-const proofCommandReferenceMetric = proofCommandReferenceValidation
-  ? `${proofCommandReferenceValidation.commandRefs ?? '?'} command refs · ${proofCommandReferenceValidation.missingCommandRefs ?? '?'} missing refs · ${proofCommandReferenceValidation.missingScriptTargets ?? '?'} missing targets · ${proofCommandReferenceValidation.duplicateScripts?.length ?? 0} duplicate scripts`
-  : '? proof command references';
-const directoryCitationValidationMetric = directoryCitationValidation
-  ? `${directoryCitationValidation.packets?.length ?? '?'} packets · ${directoryCitationValidation.sameAsCount ?? '?'} sameAs · ${directoryCitationValidation.errors?.length ?? '?'} errors · ${directoryCitationValidation.warnings?.length ?? '?'} warnings`
-  : '? directory citation validation';
 const growthMapMetric = growthMap
   ? `${growthMap.routes ?? '?'} page modules · ${growthMap.ownerActions ?? '?'} owner actions · ${growthMap.blockedPages ?? '?'} blocked · ${growthMap.report ?? 'no report'}`
   : '? growth map';
@@ -752,6 +706,15 @@ const proofOpsMetric = proofOpsBoard
 const proofOpsValidationMetric = proofOpsBoardValidation
   ? `${proofOpsBoardValidation.rows ?? '?'} rows · ${proofOpsBoardValidation.p0 ?? '?'} P0 · ${proofOpsBoardValidation.ownerNeeded ?? '?'} owner/manual · ${proofOpsBoardValidation.errors?.length ?? '?'} errors`
   : '? proof ops validation';
+const directoryCitationValidationMetric = directoryCitationValidation
+  ? `${directoryCitationValidation.packets?.length ?? '?'} packets · ${directoryCitationValidation.sameAsCount ?? '?'} sameAs · NADRA profile ${directoryCitationValidation.nadraProfileAffordance ? 'linked' : 'missing'} · ${directoryCitationValidation.errors?.length ?? '?'} errors · ${directoryCitationValidation.warnings?.length ?? '?'} warnings`
+  : '? directory citation validation';
+const proofCommandReferenceValidationMetric = proofCommandReferenceValidation
+  ? `${proofCommandReferenceValidation.checkedFiles ?? '?'} files · ${proofCommandReferenceValidation.commandRefs ?? '?'} refs · ${proofCommandReferenceValidation.uniqueCommands ?? '?'} commands · ${proofCommandReferenceValidation.actionPacketSequenceFiles ?? '?'} action-packet sequences · ${proofCommandReferenceValidation.missingCommandRefs ?? '?'} missing · ${proofCommandReferenceValidation.missingScriptTargets ?? '?'} missing targets · ${proofCommandReferenceValidation.duplicateScripts ?? '?'} duplicate scripts`
+  : '? proof command references';
+const aiDiscoveryValidationMetric = aiDiscoveryValidation
+  ? `${aiDiscoveryValidation.existingFiles ?? '?'} files · ${aiDiscoveryValidation.requiredUrls ?? '?'} priority URLs/file · ${aiDiscoveryValidation.errors?.length ?? '?'} errors · ${aiDiscoveryValidation.warnings?.length ?? '?'} warnings`
+  : '? AI discovery validation';
 const proofSourceChecklistValidationMetric = proofSourceChecklistValidation
   ? `${proofSourceChecklistValidation.profileRows ?? '?'} profiles · ${proofSourceChecklistValidation.evidenceTypeRows ?? '?'} evidence types · ${proofSourceChecklistValidation.unlockRows ?? '?'} unlock rules · ${proofSourceChecklistValidation.errors?.length ?? '?'} errors`
   : '? proof source checklist validation';
@@ -771,14 +734,20 @@ const proofStagingPlanMetric = proofStagingPlan
   ? `${proofStagingPlan.requiredMissing ?? '?'} required missing · ${proofStagingPlan.groups?.find((group) => group.id === 'proof_gate_core')?.dirty ?? '?'} core paths · ${proofStagingPlan.report ?? 'no report'}`
   : '? proof staging plan';
 const proofPreflightMetric = proofPreflight
-  ? `${proofPreflight.publishReady ?? '?'} ready · ${proofPreflight.proofIncomplete ?? '?'} incomplete · ${proofPreflight.blocked ?? '?'} blocked · prepublish ${proofPreflight.prepublishExpectedBlocked ? 'expected-blocked' : 'unexpected'} · ${proofPreflight.report ?? 'no report'}`
+  ? `${proofPreflight.publishReady ?? '?'} ready · ${proofPreflight.proofIncomplete ?? '?'} incomplete · ${proofPreflight.blocked ?? '?'} blocked · ${proofPreflight.proofCommandRefs ?? '?'} proof refs · ${proofPreflight.actionPacketSequenceFiles ?? '?'} action-packet sequences · prepublish ${proofPreflight.prepublishExpectedBlocked ? 'expected-blocked' : 'unexpected'} · ${proofPreflight.report ?? 'no report'}`
   : '? proof preflight';
+const brainsteinReadinessMetric = proofPreflight
+  ? `${proofPreflight.brainsteinMaturity ?? '?'} · ${proofPreflight.brainsteinGate ?? '?'} · ${proofPreflight.brainsteinTaskPackets ?? '?'} task packets`
+  : '? Brainstein readiness';
 const leadOutcomeMetric = leadOutcomeValidation
   ? `${leadOutcomeValidation.status ?? '?'} · ${leadOutcomeValidation.rows ?? '?'} real rows · ${leadOutcomeValidation.qualifiedRows ?? '?'} qualified · ${leadOutcomeValidation.uploadEligibleRows ?? '?'} upload-eligible · ${leadOutcomeValidation.errors?.length ?? '?'} errors`
   : '? lead outcomes';
 const callAttributionEvidenceMetric = callAttributionEvidenceValidation
   ? `${callAttributionEvidenceValidation.status ?? '?'} · ${callAttributionEvidenceValidation.rows ?? '?'} real rows · ${callAttributionEvidenceValidation.primaryQualifiedRows ?? '?'} primary qualified-call · ${callAttributionEvidenceValidation.errors?.length ?? '?'} errors`
   : '? call attribution evidence';
+const gbpThisWeekRotationMetric = gbpThisWeekRotation.ok
+  ? `auto-rotated before validation · ${gbpThisWeekRotation.out.trim().replace(/\s+/g, ' ')}`
+  : `rotation failed before validation · ${gbpThisWeekRotation.out.trim().replace(/\s+/g, ' ') || gbpThisWeekRotation.error || 'no output'}`;
 const gbpCadenceMetric = gbpCadenceValidation
   ? `${gbpCadenceValidation.calendarWeeks ?? '?'} weeks · selected Week ${gbpCadenceValidation.selectedWeek ?? '?'} · ${gbpCadenceValidation.errors ?? '?'} errors · ${gbpCadenceValidation.warnings ?? '?'} warnings`
   : '? GBP cadence';
@@ -861,8 +830,7 @@ const summaryLines = [
   `| Schema validator | ${schema?.ok ? '✓ green' : '✗ red'} | ${schema?.jsonLdFiles ?? '?'} JSON-LD files · ${schema?.howToSchemaFiles ?? '?'} HowTo (must be 0) · ${schema?.napDriftFiles ?? '?'} NAP drift (must be 0) |`,
   `| Evidence ledger | ${evidence?.ok ? '✓ green' : '✗ red'} | ${evidenceProjectMetric} · ${evidenceReviewMetric} · ${evidence?.assetRequirements ?? '?'} asset requirements · ${evidence?.errors?.length ?? '?'} errors |`,
   `| Evidence coverage | ${coverage?.ok ? '✓ snapshot' : '✗ red'} | ${coverageMetric} |`,
-  `| Owner evidence packet | ${ownerPacket?.ok ? '✓ generated' : '✗ red'} | ${ownerPacketMetric} |`,
-  `| Owner evidence packet final refresh | ${ownerPacketFinal?.ok ? '✓ generated' : '✗ red'} | ${ownerPacketFinalMetric} |`,
+  `| Owner evidence action packet | ${ownerPacket?.ok ? '✓ generated' : '✗ red'} | ${ownerPacketMetric} |`,
   `| Owner intake suite | ${ownerIntake?.ok ? '✓ ready' : '✗ red'} | ${ownerIntakeMetric} |`,
   `| Owner evidence handoff | ${ownerHandoff?.ok ? '✓ ready' : '✗ red'} | ${ownerHandoffMetric} |`,
   `| Owner evidence handoff validation | ${ownerHandoffValidation?.ok ? '✓ valid' : '✗ red'} | ${ownerHandoffValidationMetric} |`,
@@ -879,10 +847,6 @@ const summaryLines = [
   `| Before/after evidence resolution validation | ${beforeAfterEvidenceValidation?.ok ? '✓ valid' : '✗ red'} | ${beforeAfterEvidenceValidationMetric} |`,
   `| Photo ingestion manifest validation | ${photoManifestValidation?.ok ? '✓ valid' : '✗ red'} | ${photoManifestValidationMetric} |`,
   `| Commercial evidence intake validation | ${commercialEvidenceIntakeValidation?.ok ? '✓ valid' : '✗ red'} | ${commercialEvidenceIntakeValidationMetric} |`,
-  `| Brainstein readiness | ${brainsteinReadiness?.ok ? '✓ proof-gated' : '✗ red'} | ${brainsteinReadinessMetric} |`,
-  `| Brainstein task packet validation | ${brainsteinTaskPacketValidation?.ok ? '✓ valid' : '✗ red'} | ${brainsteinTaskPacketValidationMetric} |`,
-  `| Proof command reference validation | ${proofCommandReferenceValidation?.ok ? '✓ valid' : '✗ red'} | ${proofCommandReferenceMetric} |`,
-  `| Directory citation packet validation | ${directoryCitationValidation?.ok ? '✓ valid' : '✗ red'} | ${directoryCitationValidationMetric} |`,
   `| Public placeholders | ${(placeholders?.publicFindings ?? 0) === 0 ? '✓ clean' : '⚠ evidence-needed'} | ${placeholderMetric} |`,
   `| Image alt-text | ${goodPct != null && goodPct >= 85 ? '✓ healthy' : '⚠ review'} | ${images?.GOOD ?? '?'}/${images?.totalImages ?? '?'} GOOD (${goodPct ?? '?'}%) · ${images?.MISSING ?? '?'} MISSING · ${images?.GENERIC ?? '?'} GENERIC · ${images?.WEAK ?? '?'} WEAK |`,
   `| Internal links | ${linkPct != null && linkPct >= 95 ? '✓ healthy' : '⚠ review'} | ${links?.internalLinks ?? '?'} links audited · ${links?.badCount ?? '?'} bad (${linkPct ?? '?'}% pass) |`,
@@ -892,6 +856,9 @@ const summaryLines = [
   `| Deep SEO growth map validation | ${growthMapValidation?.ok ? '✓ valid' : '✗ red'} | ${growthMapValidationMetric} |`,
   `| Proof ops board | ${proofOpsBoard?.ok ? '✓ generated' : '✗ red'} | ${proofOpsMetric} |`,
   `| Proof ops board validation | ${proofOpsBoardValidation?.ok ? '✓ valid' : '✗ red'} | ${proofOpsValidationMetric} |`,
+  `| Directory citation packet validation | ${directoryCitationValidation?.ok ? '✓ sameAs-safe' : '✗ red'} | ${directoryCitationValidationMetric} |`,
+  `| Proof command reference validation | ${proofCommandReferenceValidation?.ok ? '✓ commands valid' : '✗ red'} | ${proofCommandReferenceValidationMetric} |`,
+  `| AI discovery validation | ${aiDiscoveryValidation?.ok ? '✓ retrieval-safe' : '✗ red'} | ${aiDiscoveryValidationMetric} |`,
   `| Proof source checklist validation | ${proofSourceChecklistValidation?.ok ? '✓ valid' : '✗ red'} | ${proofSourceChecklistValidationMetric} |`,
   `| SXO conversion report | ${sxoConversion?.ok ? '✓ generated' : '✗ red'} | ${sxoConversionMetric} |`,
   `| SXO conversion report validation | ${sxoConversionValidation?.ok ? '✓ valid' : '✗ red'} | ${sxoConversionValidationMetric} |`,
@@ -899,11 +866,13 @@ const summaryLines = [
   `| Proof system staging check | ${proofStaging?.ok ? '✓ stageable' : '✗ missing core'} | ${proofStagingMetric} |`,
   `| Proof staging plan | ${proofStagingPlan?.ok ? '✓ generated' : '✗ missing core'} | ${proofStagingPlanMetric} |`,
   `| Proof system preflight | ${proofPreflight?.ok ? '✓ healthy' : '✗ red'} | ${proofPreflightMetric} |`,
+  `| Brainstein readiness | ${proofPreflight?.brainsteinGate === 'proof-blocked' ? '⚠ proof-gated' : proofPreflight?.ok ? '✓ ready' : '✗ red'} | ${brainsteinReadinessMetric} |`,
   `| Lead outcome validation | ${leadOutcomeValidation?.ok ? '✓ validator ready' : '✗ red'} | ${leadOutcomeMetric} |`,
   `| Call attribution evidence validation | ${callAttributionEvidenceValidation?.ok ? '✓ validator ready' : '✗ red'} | ${callAttributionEvidenceMetric} |`,
+  `| GBP this-week auto-rotation | ${gbpThisWeekRotation.ok ? '✓ refreshed' : '✗ red'} | ${gbpThisWeekRotationMetric} |`,
   `| GBP cadence validation | ${gbpCadenceValidation?.ok ? '✓ ready' : '✗ red'} | ${gbpCadenceMetric} |`,
   `| Automation static validation | ${automationStaticValidation?.ok ? '✓ ready' : '✗ red'} | ${automationStaticMetric} |`,
-  `| Google Ads import validation | ${googleAdsImportValidation?.ok ? '✓ shape-valid local pack' : '✗ red'} | ${googleAdsImportMetric} |`,
+  `| Google Ads import validation | ${googleAdsImportValidation?.ok ? '✓ launch-safe local pack' : '✗ red'} | ${googleAdsImportMetric} |`,
   `| Entity profile consistency | ${entityProfileValidation?.ok ? '✓ canonical' : '✗ red'} | ${entityProfileMetric} |`,
   `| Rank tracker manual snapshot validation | ${rankTrackerManualSnapshotValidation?.ok ? '✓ guarded' : '✗ red'} | ${rankTrackerManualSnapshotMetric} |`,
   `| DataForSEO n8n MCP runbook validation | ${dataForSeoN8nMcpValidation?.ok ? '✓ valid' : '✗ red'} | ${dataForSeoN8nMcpMetric} |`,
@@ -950,7 +919,7 @@ const reportLines = [
   '',
 ];
 
-for (const result of results) {
+for (const result of [...results.slice(0, 26), gbpThisWeekRotation, ...results.slice(26)]) {
   reportLines.push(`### ${result.label}`);
   reportLines.push('');
   reportLines.push(`Status: ${result.ok ? '✓ green' : '✗ red'} · Runtime: ${result.ms}ms`);
@@ -965,12 +934,16 @@ for (const result of results) {
 
 reportLines.push('## Weekly operating checks');
 reportLines.push('');
-reportLines.push('- [ ] GBP post published this week — see [[wiki/deliverables/local-seo-fixes/gbp/this-week|gbp/this-week]]');
+reportLines.push('- [ ] GBP post published this week — see [[../deliverables/local-seo-fixes/gbp/this-week]]');
+reportLines.push('- [ ] GBP weekly draft auto-rotation reviewed — `npm run seo:weekly` runs `npm run gbp:this-week` before cadence validation');
 reportLines.push('- [ ] GBP cadence validator reviewed — run `npm run gbp:validate` before publishing or editing the 90-day queue');
 reportLines.push('- [ ] 3 Q&A seeds published this week');
 reportLines.push('- [ ] All new reviews this week responded to within 48h');
 reportLines.push('- [ ] Proof ops board reviewed — see `docs/seo/gbp-maps-proof-ops-board-' + today + '.md`');
 reportLines.push('- [ ] Proof ops board validation reviewed — run `npm run seo:proof-ops-board:validate` after editing GBP/Maps/proof tasks');
+reportLines.push('- [ ] Directory citation packet validation reviewed — run `npm run seo:directory-citations:validate` after editing NADRA, Bing Places, Apple Business Connect, Nextdoor, Angi, or organization `sameAs` records');
+reportLines.push('- [ ] Proof command reference validation reviewed — run `npm run seo:proof-commands:validate` after editing owner/proof docs or package scripts');
+reportLines.push('- [ ] AI discovery validation reviewed — run `npm run seo:validate-ai-discovery` after editing `public/llms*.txt`, `src/app/llms*.txt/route.js`, priority technical pages, or service-area address language');
 reportLines.push('- [ ] Proof source checklist validation reviewed — run `npm run seo:proof-source-checklist:validate` after editing proof-source, intake, or publish-gate wording');
 reportLines.push('- [ ] Verified proof snippets validation reviewed — run `npm run seo:proof-snippets:validate` after any owner evidence import or runtime proof snippet edit');
 reportLines.push('- [ ] Evidence unblock runbook reviewed — run `npm run seo:evidence-unblock -- --date latest`');
@@ -981,13 +954,9 @@ reportLines.push('- [ ] Commercial evidence intake validation reviewed — run `
 reportLines.push('- [ ] Owner evidence handoff validation reviewed — run `npm run seo:evidence-handoff:validate` after editing owner handoff wording, intake files, or proof import commands');
 reportLines.push('- [ ] Owner evidence sprint checklist reviewed — run `npm run seo:evidence-sprint`');
 reportLines.push('- [ ] Owner evidence sprint validation reviewed — run `npm run seo:evidence-sprint:validate` after editing owner sprint blocks or source files');
+reportLines.push('- [ ] Owner evidence action packet regenerated — run `npm run seo:evidence-action-packet` after editing owner proof blockers');
 reportLines.push('- [ ] Owner evidence action packet validated — run `npm run seo:evidence-action-packet:validate` after editing owner proof blockers');
 reportLines.push('- [ ] Proof source checklist reviewed — see `docs/seo/proof-source-checklist-' + today + '.md`');
-reportLines.push('- [ ] Directory citation packets reviewed — run `npm run seo:directory-citations:validate` after editing NADRA/Bing/Apple/Nextdoor/Angi proof packets');
-reportLines.push('- [ ] Proof command references reviewed — run `npm run seo:proof-commands:validate` after editing package scripts or proof command docs');
-reportLines.push('- [ ] Brainstein readiness reviewed — see `docs/seo/brainstein-readiness-audit-' + today + '.md`');
-reportLines.push('- [ ] Brainstein task packets reviewed — see `docs/seo/brainstein-task-packets-' + today + '.md`');
-reportLines.push('- [ ] Brainstein task packet validation reviewed — run `npm run brainstein:tasks:validate` after editing Brainstein packet generation');
 reportLines.push('- [ ] Internal link gap validation reviewed — run `npm run seo:internal-link-gap:validate` after editing priority money-page links');
 reportLines.push('- [ ] Deep SEO growth map validation reviewed — run `npm run seo:growth-map:validate` after editing growth-map logic or proof-gated candidate pages');
 reportLines.push('- [ ] SXO conversion report reviewed — see `docs/seo/sxo-conversion-report-' + today + '.md`');
@@ -996,10 +965,13 @@ reportLines.push('- [ ] Proof system staging manifest reviewed — see `docs/seo
 reportLines.push('- [ ] Proof system staging check reviewed — run `npm run seo:proof-staging-check`');
 reportLines.push('- [ ] Proof staging plan reviewed — see `docs/seo/proof-staging-plan-' + today + '.md`');
 reportLines.push('- [ ] Proof system preflight reviewed — run `npm run seo:proof-preflight`');
+reportLines.push('- [ ] Brainstein readiness reviewed — see `docs/seo/brainstein-readiness-audit-' + today + '.md` and `docs/seo/brainstein-task-packets-' + today + '.md`');
+reportLines.push('- [ ] Brainstein `proof-directory-citations` packet reviewed — confirm NADRA profile URL, original/NADRA-approved logo asset status, and Bing/Apple/Nextdoor/Angi proof gates before any `sameAs` promotion');
+reportLines.push('- [ ] Brainstein task packet validation reviewed — run `npm run brainstein:tasks:validate` after editing task packets or proof blockers');
 reportLines.push('- [ ] Lead outcome rows reviewed — run `npm run measurement:lead-outcomes` after any real CRM/owner rows are added');
 reportLines.push('- [ ] Call attribution evidence reviewed — run `npm run measurement:call-attribution-evidence` after any Google Ads/GTM read-only evidence rows are added');
 reportLines.push('- [ ] Automation static gate reviewed — run `npm run automation:static` after any Vapi/GHL/Twilio route edit');
-reportLines.push('- [ ] Google Ads import pack reviewed — run `npm run ads:validate-imports` before any Ads Editor import review; campaign activation/scaling remains blocked until `npm run scaling:readiness` is GREEN');
+reportLines.push('- [ ] Google Ads import pack reviewed — run `npm run ads:validate-imports` before any Ads Editor import or campaign activation');
 reportLines.push('- [ ] Entity profile consistency reviewed — run `npm run seo:entity-profiles` after editing public profile/citation URLs');
 reportLines.push('- [ ] Rank tracker manual snapshot reviewed — run `npm run seo:rank-snapshot:validate` after any Ahrefs API/MCP or manual rank export is added');
 reportLines.push('- [ ] DataForSEO n8n MCP runbook reviewed — run `npm run dataforseo:n8n-mcp:validate` before building n8n MCP workflows');
@@ -1019,9 +991,9 @@ reportLines.push('- [ ] Scaling evidence bundle reviewed — run `npm run scalin
 reportLines.push('- [ ] Scaling evidence bundle validated — run `npm run scaling:evidence-bundle:validate` after editing bundle wording or source paths');
 reportLines.push('- [ ] Scaling blocker exit checklist reviewed — run `npm run scaling:blocker-exit` before reclassifying RED/YELLOW/GREEN');
 reportLines.push('- [ ] Scaling blocker exit checklist validated — run `npm run scaling:blocker-exit:validate` after editing exit criteria');
-reportLines.push('- [ ] Houzz Ashburn address reconciled (see [[wiki/deliverables/local-seo-fixes/citation-live-state-audit|citation-live-state-audit]])');
-reportLines.push('- [ ] Loudoun proximity decision made (see [[wiki/deliverables/local-seo-fixes/proximity/decision-memo|proximity/decision-memo]])');
-reportLines.push('- [ ] Outreach pack: at least 1 email sent this week (see [[wiki/deliverables/local-seo-fixes/outreach-pack/00-README|outreach-pack]])');
+reportLines.push('- [ ] Houzz Ashburn address reconciled (see [[../deliverables/local-seo-fixes/citation-live-state-audit]])');
+reportLines.push('- [ ] Loudoun proximity decision made (see [[../deliverables/local-seo-fixes/proximity/decision-memo]])');
+reportLines.push('- [ ] Outreach pack: at least 1 email sent this week (see [[../deliverables/local-seo-fixes/outreach-pack/00-README]])');
 reportLines.push('');
 
 reportLines.push('## What changed this week (manual fill-in)');

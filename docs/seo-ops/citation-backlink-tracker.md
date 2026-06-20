@@ -9,8 +9,8 @@ Goal: fix NAP trust, then build local authority without spam links.
 |---|---|---|
 | Yelp | Live on `/social` | `https://www.yelp.com/biz/loudoun-decks-centreville` |
 | BBB | Live on `/social` | `https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241` |
-| BuildZoom | Live on `/social` and schema | `https://www.buildzoom.com/contractor/loudoun-decks` |
-| Loudoun Chamber | Live on `/social` and schema | `https://business.loudounchamber.org/list/member/loudoun-deck-30047.htm` |
+| BuildZoom | Live on `/social` and schema; 2026-06-12 license warning still needs approved correction | `https://www.buildzoom.com/contractor/loudoun-decks` |
+| Loudoun Chamber | Verified 2026-06-12 as current member profile and local authority anchor | `https://business.loudounchamber.org/list/member/loudoun-decks-30047` |
 | MapQuest | Live on `/social` and schema | `https://www.mapquest.com/us/virginia/loudoun-decks-532352487` |
 | Houzz | Live in schema | `https://www.houzz.com/pro/ldndecks` |
 
@@ -24,9 +24,9 @@ Goal: fix NAP trust, then build local authority without spam links.
 | 4 | Porch | Claim/complete profile | `/deck-builders-loudoun` |
 | 5 | Thumbtack | Create/optimize only if lead economics make sense | `/get-estimate` |
 | 6 | Nextdoor Business | Claim profile and service areas | Homepage |
-| 7 | Trex Find a Builder | Verify Platinum/installer profile link | `/trex-decks` |
-| 8 | TimberTech/AZEK directory | Verify installer profile link | `/timbertech-decks` |
-| 9 | NADRA directory | Add profile detail and project proof | `/about/certifications-and-licenses` |
+| 7 | Trex Find a Builder | Capture proof before using TrexPro/Platinum wording or outreach | `/trex-decks` |
+| 8 | TimberTech/AZEK directory | Capture OnBoard/locator proof before using certified/tier wording | `/timbertech-decks` |
+| 9 | NADRA directory | Capture current-standing/profile proof before using member badge as public claim | `/about/certifications-and-licenses` |
 
 ## Outreach backlink targets
 

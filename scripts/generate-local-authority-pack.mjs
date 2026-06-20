@@ -2,6 +2,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { localDateStamp } from './lib/local-date.mjs';
 
 const OUT_DIR = path.resolve('docs/seo-ops/generated');
 
@@ -62,7 +63,7 @@ const priorityUrls = [
 ];
 
 function isoDate(date) {
-  return date.toISOString().slice(0, 10);
+  return localDateStamp(date);
 }
 
 function weekNumber(date) {

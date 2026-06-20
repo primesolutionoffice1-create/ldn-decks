@@ -25,6 +25,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
 import { resolveVaultReportsDir } from './lib/report-paths.mjs';
+import { localDateStamp } from './lib/local-date.mjs';
 
 const APP_DIR = path.resolve('src/app');
 const PUBLIC_DIR = path.resolve('public');
@@ -181,8 +182,9 @@ function fmtUsage(u) {
 
 function main() {
   const { findings, pages } = audit();
+  const stamp = localDateStamp();
 
-  console.log(`OG Image Audit — ${new Date().toISOString().slice(0, 10)}`);
+  console.log(`OG Image Audit — ${stamp}`);
   console.log(`Pages scanned: ${pages}`);
   console.log(`Unique OG images: ${findings.length}`);
   console.log('');
@@ -197,7 +199,7 @@ function main() {
   console.log(`Healthy: ${findings.length - issues.length}`);
 
   fs.mkdirSync(REPORT_DIR, { recursive: true });
-  const dest = path.join(REPORT_DIR, `og-image-audit-${new Date().toISOString().slice(0, 10)}.json`);
+  const dest = path.join(REPORT_DIR, `og-image-audit-${stamp}.json`);
   fs.writeFileSync(dest, JSON.stringify({ pages, findings: findings.map(f => ({ ...f, usage: { ...f.usage, sources: [...f.usage.sources] } })) }, null, 2));
   console.log(`Wrote report: ${dest}`);
 
