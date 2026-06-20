@@ -220,10 +220,16 @@ for (const packet of PACKETS) {
 if (!businessSource.includes(`directoryUrl: '${NADRA_URL}'`)) {
   errors.push('NADRA membership directoryUrl does not use the supplied profile URL.');
 }
-if (!trustSectionSource.includes(`href="${NADRA_URL}"`)) {
+const trustSectionUsesNadraProfile = trustSectionSource.includes(`href="${NADRA_URL}"`)
+  || (
+    trustSectionSource.includes('href={nadraDirectoryUrl}')
+    && trustSectionSource.includes(`'${NADRA_URL}'`)
+    && trustSectionSource.includes('directoryUrl')
+  );
+if (!trustSectionUsesNadraProfile) {
   errors.push('NADRA badge link does not use the supplied profile URL.');
 }
-if (!trustSectionSource.includes('NADRA Member')) {
+if (!/NADRA (?:Proud )?Member/.test(trustSectionSource)) {
   warnings.push('NADRA badge text was not found in TrustSection.');
 }
 
