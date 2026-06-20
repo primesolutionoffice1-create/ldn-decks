@@ -1,0 +1,5 @@
+cost_id,repair_type,low,high,source,evidence_status,owner_notes
+joist-sistering,joist sistering,,,,partial,"Use historical invoice, accepted estimate, calculator data, or owner-confirmed pricing policy. Do not publish until source-backed."
+ledger-reflash-rebolt,ledger reflash/rebolt,,,,partial,"Use historical invoice, accepted estimate, calculator data, or owner-confirmed pricing policy. Do not publish until source-backed."
+post-replacement,post replacement,,,,partial,"Use historical invoice, accepted estimate, calculator data, or owner-confirmed pricing policy. Do not publish until source-backed."
+emergency-stabilization,emergency stabilization,,,,partial,"Use historical invoice, accepted estimate, calculator data, or owner-confirmed pricing policy. Do not publish until source-backed."

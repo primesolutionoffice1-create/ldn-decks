@@ -1,0 +1,114 @@
+{
+  "generated": "2026-06-03T15:59:27.089Z",
+  "source_ledger": "seo-blueprint/evidence/project-evidence-ledger.json",
+  "publish_rule": "Only snippets in this file may be used as proof-bearing public modules. Skipped records are not public proof.",
+  "snippets": [
+    {
+      "type": "public_review_source",
+      "source": "seo-blueprint/evidence/project-evidence-ledger.json",
+      "source_id": "google-business-profile",
+      "source_name": "Google Business Profile",
+      "url": "https://www.google.com/maps/place/Loudoun+Decks/",
+      "suggested_anchor": "Google Business Profile profile",
+      "safe_usage_note": "Use as a profile/source citation only. Do not quote ratings, counts, or review text unless separately verified and recorded."
+    },
+    {
+      "type": "public_review_source",
+      "source": "seo-blueprint/evidence/project-evidence-ledger.json",
+      "source_id": "bbb-profile",
+      "source_name": "Better Business Bureau",
+      "url": "https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241",
+      "suggested_anchor": "Better Business Bureau profile",
+      "safe_usage_note": "Use as a profile/source citation only. Do not quote ratings, counts, or review text unless separately verified and recorded."
+    },
+    {
+      "type": "public_review_source",
+      "source": "seo-blueprint/evidence/project-evidence-ledger.json",
+      "source_id": "yelp-profile",
+      "source_name": "Yelp",
+      "url": "https://www.yelp.com/biz/loudoun-decks-centreville",
+      "suggested_anchor": "Yelp profile",
+      "safe_usage_note": "Use as a profile/source citation only. Do not quote ratings, counts, or review text unless separately verified and recorded."
+    },
+    {
+      "type": "public_review_source",
+      "source": "seo-blueprint/evidence/project-evidence-ledger.json",
+      "source_id": "houzz-profile",
+      "source_name": "Houzz",
+      "url": "https://www.houzz.com/pro/webuser-782541997/loudoun-decks",
+      "suggested_anchor": "Houzz profile",
+      "safe_usage_note": "Use as a profile/source citation only. Do not quote ratings, counts, or review text unless separately verified and recorded."
+    },
+    {
+      "type": "public_review_source",
+      "source": "seo-blueprint/evidence/project-evidence-ledger.json",
+      "source_id": "buildzoom-profile",
+      "source_name": "BuildZoom",
+      "url": "https://www.buildzoom.com/contractor/loudoun-decks",
+      "suggested_anchor": "BuildZoom profile",
+      "safe_usage_note": "Use as a profile/source citation only. Do not quote ratings, counts, or review text unless separately verified and recorded."
+    }
+  ],
+  "skipped": [
+    {
+      "type": "project",
+      "id": "showcase-custom-deck-reston",
+      "status": "partial",
+      "reason": "Only verified projects can become public proof snippets."
+    },
+    {
+      "type": "project",
+      "id": "showcase-metal-fence-centreville",
+      "status": "partial",
+      "reason": "Only verified projects can become public proof snippets."
+    },
+    {
+      "type": "project",
+      "id": "showcase-deck-construction-manassas",
+      "status": "partial",
+      "reason": "Only verified projects can become public proof snippets."
+    },
+    {
+      "type": "project",
+      "id": "showcase-deck-resurfacing-sterling",
+      "status": "partial",
+      "reason": "Only verified projects can become public proof snippets."
+    },
+    {
+      "type": "project",
+      "id": "showcase-balcony-reconstruction-chantilly",
+      "status": "partial",
+      "reason": "Only verified projects can become public proof snippets."
+    },
+    {
+      "type": "project",
+      "id": "showcase-new-composite-deck-ashburn",
+      "status": "partial",
+      "reason": "Only verified projects can become public proof snippets."
+    },
+    {
+      "type": "project",
+      "id": "before-after-project-1",
+      "status": "partial",
+      "reason": "Only verified projects can become public proof snippets."
+    },
+    {
+      "type": "project",
+      "id": "before-after-project-2",
+      "status": "partial",
+      "reason": "Only verified projects can become public proof snippets."
+    },
+    {
+      "type": "project",
+      "id": "before-after-project-3",
+      "status": "partial",
+      "reason": "Only verified projects can become public proof snippets."
+    },
+    {
+      "type": "project",
+      "id": "before-after-project-4",
+      "status": "partial",
+      "reason": "Only verified projects can become public proof snippets."
+    }
+  ]
+}

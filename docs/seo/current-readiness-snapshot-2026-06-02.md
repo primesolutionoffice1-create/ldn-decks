@@ -1,0 +1,310 @@
+# Current Readiness Snapshot - 2026-06-02
+
+## Current Status
+
+- Website: operational
+- Lead routing: operational
+- Email backup: operational
+- Google Sheets backup: operational
+- Form attribution: strong locally
+- Phone-click coverage: centralized locally through `CallLink`
+- Consent/CMP: present locally and passes measurement gate checks
+- Lead outcome validation: template validator available locally
+- Proof runtime: healthy
+- Public placeholders: clean
+- Internal link priority targets: healthy
+- Internal link gap validation: current, 5 priority money pages healthy, 0 gaps, proof-safe linking rules guarded
+- Schema and daily SEO checks: passing
+- Publish readiness gate: healthy and expected-blocked
+- Evidence coverage: current
+- Evidence unblock runbook validation: current, 3 blocked pages, 1 proof-incomplete page, 11 missing/partial assets, 10 partial projects
+- Before/after evidence resolution validation: current, 4 before/after rows remain partial, 1 composite cost row remains missing, VERIFY-marker policy guarded
+- Owner intake/sprint files: valid, 0 intake errors
+- Owner evidence handoff validation: current, 26 owner rows, 13 P0, 13 P1, 10 project intake rows, 17 photo manifest rows, 3 blocked pages
+- Owner evidence sprint validation: current, 5 owner collection blocks, 4 P0, 1 P1, 0 errors
+- Photo/project/commercial intake files: regenerated and ready
+- Anti-fabrication regression: guarded
+- Verified proof snippets validation: current, 0 project snippets, 5 review/profile citations, 10 skipped partial projects, runtime JSON synced
+- Proof staging plan: stageable, 0 required missing paths
+- SXO conversion report: current, average score 93
+- SXO conversion report validation: current, 10 high-intent pages, 0 missing CTA rows, 0 unsafe pricing rows
+- Deep SEO growth map: current, 203 routes mapped
+- Deep SEO growth map validation: current, 203 page modules, 4 proof-gated pages guarded, 6 candidate pages guarded
+- GBP/Maps proof ops board: current, 42 owner/manual tasks
+- GBP/Maps proof ops board validation: current, 42 tasks, 18 P0, all owner/manual, 0 errors
+- Proof source checklist validation: current, 12 profile rows, 6 evidence types, 13 minimum proof fields, 4 page unlock rules, 4 current blockers
+- GBP weekly cadence: current, 12-week education-safe post calendar, 12 Q&A seeds, and local cadence validator
+- Automation static validation: current, 9 Vapi routes checked
+- Google Ads import validation: current, local Ads Editor pack reports to weekly SEO
+- Entity profile consistency: current, canonical GBP/BBB/Yelp/Houzz/BuildZoom/Loudoun Chamber/MapQuest URLs guarded
+- Rank tracker manual snapshot validation: current, sample-only fallback ready while `AHREFS_API_TOKEN` is missing
+- Scaling readiness board: current, 3 P0 blockers classified as owner/external, 0 local blockers
+- Scaling evidence request packet: current, 3 owner/external P0 requests generated and validated
+- Scaling evidence bundle: current, 3 source-of-record evidence sections generated and validated for current RED blockers
+- Call attribution evidence validation: template ready, sample-only until Google Ads/GTM read-only rows are supplied
+- Owner evidence action packet validation: current, 26 rows, 13 P0, 13 P1, 0 errors
+- DataForSEO n8n MCP runbook validation: current, setup/runbook guard added from DataForSEO source guide
+- DataForSEO n8n MCP workflow manifest validation: current, LDN-only read-only workflow blueprint with local MCP and cost caps
+- DataForSEO n8n MCP import preflight: current, 1 sanitized disabled sample export validated with 4 required nodes and 3 required connections
+- DataForSEO n8n raw findings validation: current, sample-only raw output dropbox guarded before official CSV intake
+- DataForSEO n8n findings intake draft: current, generated from validated raw output, sample-only, not official intake
+- DataForSEO n8n findings intake validation: current, sample-only intake ready, 3 rows, 0 real findings, all review-only
+- DataForSEO n8n findings review board: current, sample-only, 3 rows, 0 public claims, 0 Ads actions
+- DataForSEO n8n promotion gate: current, 0 candidates, 0 promotable rows, all sample findings blocked from promotion
+- DataForSEO n8n operator handoff: current, ready for read-only runs only, 0 promotable rows, 0 public claims, 0 Ads actions
+- DataForSEO n8n all gates: current, canonical ordered command passes 11/11 gates with read-only-only operator status
+- Scaling blocker exit checklist: current, 3 P0 exits generated and validated
+- Latest deployment: `dpl_G4Rmy9Hd1LhUgjJmUmhMWXaDpqub`, aliased to `ldndecks.com`
+- Image generation config: no `gpt-image-2` references found in LDN Decks repo
+- Scaling gate: RED
+
+## Why Scaling Is Still RED
+
+The remaining blockers are external proof blockers, not basic website health blockers:
+
+- Google Ads qualified-call attribution needs external Google Ads/GTM proof.
+- Real lead outcome rows are not yet collected; the CSV validator is ready.
+- Verified project proof snippets remain 0.
+- Owner evidence still needs project, photo, warranty, and repair-cost confirmation.
+- Rank tracker refresh is blocked by missing `AHREFS_API_TOKEN`.
+
+## Latest Green Checks
+
+- `npm run measurement:gate`: 10 pass, 1 warn, 0 fail (`google-call-attribution` external proof needed)
+- `npm run measurement:lead-outcomes`: sample template validates as expected `SAMPLE_ONLY`
+- `npm run gbp:validate`: pass, 12 weeks, selected Week 1, 0 errors, 0 warnings
+- `npm run automation:static`: pass, 9 Vapi routes, 0 errors, 0 warnings
+- `npm run ads:validate-imports`: pass, 5 campaigns, 135 keywords, $205/day full expansion budget, 0 errors
+- `npm run seo:entity-profiles`: pass, 7 canonical profiles, 12 sameAs URLs, 5 proof snippets, 0 errors, 0 warnings
+- `npm run seo:rank-snapshot:validate`: pass, SAMPLE_ONLY, 3 rows, 0 real rows, 0 ranking rows, 0 errors, 0 warnings
+- `npm run scaling:readiness`: pass, RED from 3 owner/external blockers, 0 local failures, 0 local blockers
+- `npm run scaling:evidence-request`: pass, 3 evidence requests generated
+- `npm run scaling:evidence-request:validate`: pass, 3 requests, 0 errors, 0 warnings
+- `npm run scaling:evidence-bundle`: pass, RED, 3 sections, 3 blockers, 0 missing sources
+- `npm run scaling:evidence-bundle:validate`: pass, RED, 3 sections, 3 blockers, 0 errors, 0 warnings
+- `npm run measurement:call-attribution-evidence`: pass, SAMPLE_ONLY, 0 real rows, 0 errors
+- `npm run seo:evidence-action-packet:validate`: pass, 26 rows, 13 P0, 13 P1, 0 errors
+- `npm run dataforseo:n8n-mcp:validate`: pass, 14 required phrases, 0 errors, 0 warnings
+- `npm run dataforseo:n8n-mcp:workflow:validate`: pass, LDN-only, local MCP, read-only, 6 cost cap fields, 0 errors, 0 warnings
+- `npm run dataforseo:n8n-mcp:import-preflight`: pass, EXPORTS_VALIDATED, 1 workflow export, 4 required nodes, 3 required connections, 0 errors, 0 warnings
+- `npm run dataforseo:n8n-mcp:raw-findings:validate`: pass, SAMPLE_ONLY, 1 file, 2 sample findings, 0 real findings, 0 errors, 0 warnings
+- `npm run dataforseo:n8n-mcp:findings:draft`: pass, SAMPLE_ONLY, 2 draft rows, 0 real draft rows, 0 public claims, 0 Ads actions, 0 errors, 0 warnings
+- `npm run dataforseo:n8n-mcp:findings:validate`: pass, SAMPLE_ONLY, 3 rows, 0 real rows, 3 review-only rows, 0 errors, 0 warnings
+- `npm run dataforseo:n8n-mcp:findings:board`: pass, SAMPLE_ONLY, 3 rows, 0 public claims, 0 Ads actions
+- `npm run dataforseo:n8n-mcp:findings:board:validate`: pass, SAMPLE_ONLY, 3 rows, 0 public claims, 0 Ads actions, 0 errors, 0 warnings
+- `npm run dataforseo:n8n-mcp:promotion-gate`: pass, NO_PROMOTABLE_FINDINGS, 3 rows, 0 candidates, 0 promotable rows, 0 errors, 0 warnings
+- `npm run dataforseo:n8n-mcp:operator-handoff`: pass, READY_FOR_READ_ONLY_RUNS_ONLY, 0 promotable, 0 public claims, 0 Ads actions
+- `npm run dataforseo:n8n-mcp:operator-handoff:validate`: pass, READY_FOR_READ_ONLY_RUNS_ONLY, 0 promotable, 0 public claims, 0 Ads actions, 0 errors
+- `npm run dataforseo:n8n-mcp:all`: pass, PASS_READ_ONLY_ONLY, 11 steps, 0 failures, READY_FOR_READ_ONLY_RUNS_ONLY
+- `npm run scaling:blocker-exit`: pass, 3 blocker exits generated
+- `npm run scaling:blocker-exit:validate`: pass, 3 blockers, 0 errors, 0 warnings
+- `npm run seo:link-audit`: pass, 816 internal links, 0 bad
+- `npm run seo:weekly`: pass, includes lead outcome validation, GBP cadence validation, automation static validation, Google Ads import validation, entity profile consistency, DataForSEO n8n runbook, workflow manifest, import preflight, findings intake, review board, promotion gate, operator handoff, all-gates sequence, scaling readiness, scaling evidence requests, and request validation; evidence anti-fabrication 22/22
+- `npm run build`: pass, 342 static pages
+- Production deploy: `dpl_G4Rmy9Hd1LhUgjJmUmhMWXaDpqub`
+- Post-deploy `npm run seo:daily-check`: pass, 260 sitemap URLs, Press/Social canonical profile links checked, stale citation URLs blocked, IndexNow accepted
+- Post-deploy Press/Social checks: canonical Loudoun Chamber URL present; stale `loudoun-deck-30047.htm` URL absent
+- `npm run seo:proof-preflight`: pass, expected-blocked
+- `npm run seo:validate-schema`: pass
+- `npm run seo:daily-check`: pass, 260 sitemap URLs, IndexNow accepted
+- `npm run ads:validate-imports`: pass
+- `npm run seo:internal-link-gap`: pass, 0 gaps
+- `npm run seo:audit-freshness`: pass, 188 fresh pages
+- `npm run seo:audit-og`: pass, 0 OG image issues
+- `npm run seo:audit-images`: pass, 0 missing/empty/generic/weak alts
+- `npm run seo:audit-breadcrumbs`: pass, 0 unknown segments, 0 duplicates
+- `npm run seo:weekly`: generated, technical stack healthy, proof-gated
+- `npm run seo:publish-readiness`: pass, 0 ready, 1 incomplete, 3 blocked
+- `npm run seo:prepublish-evidence`: expected-blocked
+- `npm run seo:evidence-coverage`: pass, 10 partial projects, 11 missing assets
+- `npm run seo:proof-snippets`: pass, 5 review-source snippets, 0 project snippets
+- `npm run seo:proof-snippets:validate`: pass, 5 snippets, 0 project snippets, 5 review-source snippets, 10 skipped partial projects, runtime synced, 0 errors, 0 warnings
+- `npm run seo:validate-owner-intake`: pass, 26 rows, 0 errors
+- `npm run seo:evidence-handoff`: pass, 26 owner rows, 10 project intake rows, 17 photo manifest rows, 3 blocked pages
+- `npm run seo:evidence-handoff:validate`: pass, 26 owner rows, 13 P0, 13 P1, 10 project intake rows, 17 photo manifest rows, 1 warranty row, 4 repair cost rows, 3 blocked pages, 0 errors, 0 warnings
+- `npm run seo:evidence-sprint`: pass, 5 blocks, 26 owner rows, 11 asset actions, 10 project actions, 1 warranty action, 4 repair cost actions
+- `npm run seo:evidence-sprint:validate`: pass, 5 blocks, 4 P0, 1 P1, 26 owner rows, 11 asset actions, 10 project actions, 1 warranty action, 4 repair cost actions, 0 errors, 0 warnings
+- `npm run seo:proof-staging-check`: pass, 0 required missing paths
+- `npm run seo:sxo-conversion`: pass, 93 average score
+- `npm run seo:sxo-conversion:validate`: pass, 10 targets, 93 average score, 2 proof-gated P0 actions, 0 missing CTA rows, 0 unsafe pricing rows, 0 errors
+- `npm run seo:growth-map`: pass, 203 routes, 26 owner actions
+- `npm run seo:growth-map:validate`: pass, 203 page modules, 816 internal links, 145 JSON-LD files, 188 fresh pages, 4 proof-gated pages, 6 candidate pages, 0 errors, 0 warnings
+- `npm run seo:proof-ops-board`: pass, 42 owner/manual tasks
+- `npm run seo:proof-ops-board:validate`: pass, 42 rows, 18 P0, 42 owner/manual, 0 errors, 0 warnings
+- `npm run seo:proof-source-checklist:validate`: pass, 12 profile rows, 6 evidence types, 13 minimum proof fields, 4 unlock rows, 4 blocker rows, 10 publish gate commands, 0 errors, 0 warnings
+- `npm run seo:internal-link-gap`: pass, 5 priority targets healthy, 0 gaps, 203 pages scanned
+- `npm run seo:internal-link-gap:validate`: pass, 5 targets, 5 healthy, 0 gaps, 203 pages scanned, 5 proof-safe rules, 0 errors, 0 warnings
+- `npm run seo:photo-manifest`: pass, 17 rows, 11 asset IDs
+- `npm run seo:commercial-intake`: pass, 1 warranty row, 4 repair-cost rows
+- `npm run seo:project-intake`: pass, 10 rows
+- `npm run seo:evidence-regression`: pass, 22 checks
+- `npm run seo:evidence-owner-packet`: pass, 26 rows, 13 P0, 13 P1
+- `npm run seo:evidence-unblock -- --date latest`: pass, 3 blocked, 1 proof-incomplete
+- `npm run seo:evidence-unblock:validate`: pass, 0 publish-ready, 3 blocked, 1 proof-incomplete, 11 missing/partial assets, 10 partial projects, 1 missing warranty term, 4 missing repair cost ranges, 0 errors, 0 warnings
+- `npm run seo:before-after-evidence:validate`: pass, 5 rows, 4 before/after partial rows, 1 composite cost missing row, 0 errors, 0 warnings
+- `npm run gbp:this-week`: pass, Week 1 copy-paste GBP post generated
+- `npm run gbp:validate`: pass, GBP calendar, this-week output, Q&A seeds, review templates, and local route links verified
+- `npm run automation:static`: pass, Vapi route presence, auth wrappers, production secret enforcement, soft fallbacks, and local knowledge sources verified
+- `npm run ads:validate-imports`: pass, local Google Ads Editor import pack is launch-safe while still paused
+- Project config search: no `gpt-image-2` or OpenAI image-generation workflow references found in LDN Decks
+- `npm run build`: pass, 342 static pages generated after GBP/weekly validator changes
+
+## Highest-Value Next Actions
+
+1. Read-only Google Ads call attribution review using `CALL-ATTRIBUTION-READONLY-RUNBOOK-2026-06-02.md`.
+2. Fill 5-10 real lead outcome rows using `lead-quality-outcome-sample-template.csv`, then run `npm run measurement:lead-outcomes`.
+3. Complete owner evidence packet P0 items.
+4. Add Ahrefs API token or use Ahrefs MCP to refresh rank tracker.
+5. Keep `phone_click` as secondary/observation only until qualified calls are proven.
+
+## Do Not Do Yet
+
+- Do not scale budgets aggressively.
+- Do not move `phone_click` into primary Smart Bidding.
+- Do not publish unverified project proof claims.
+- Do not mark partial owner evidence as verified.
+- Do not enable every paused Ads import campaign by accident.
+
+## Execution Ledger
+
+- Task 611: Reviewed current docs/output git status count.
+- Task 612: Created current readiness snapshot.
+- Task 647: Refreshed current readiness snapshot after publish, evidence, staging, SXO, growth, and proof ops batches.
+- Task 661: Refreshed current readiness snapshot after owner/evidence intake and anti-fabrication batches.
+- Task 678: Refreshed current readiness snapshot after GBP weekly cadence setup.
+- Task 718: Updated readiness after measurement gate changed from local FAIL to external-proof WARN.
+- Task 719: Added lead outcome row validation as the next local proof gate.
+- Task 742: Refreshed readiness after admin operations lead outcome validator deployment.
+- Task 743: Added GBP cadence validator.
+- Task 744: Confirmed GBP cadence validator passes with 12 weeks, 0 errors, and 0 warnings.
+- Task 749: Integrated GBP cadence validation into weekly SEO reporting.
+- Task 750: Caught stale GBP vault files through the weekly validator and synchronized them from the proof-safe repo copy.
+- Task 751: Re-ran weekly SEO and confirmed GBP cadence validation is green in the aggregate report.
+- Task 754: Confirmed no `gpt-image-2` or OpenAI image-generation workflow references exist in the LDN Decks repo.
+- Task 755: Re-ran production build after GBP/weekly validator work and confirmed 342 static pages generated.
+- Task 756: Added automation static validator for the Vapi/GHL/Twilio route stack.
+- Task 757: Integrated automation static validation into weekly SEO reporting.
+- Task 758: Confirmed automation static validation passes with 9 routes, 0 errors, and 0 warnings.
+- Task 763: Re-ran production build after automation validator work and confirmed 342 static pages generated.
+- Task 764: Updated Google Ads import validation to write reusable JSON/Markdown artifacts.
+- Task 765: Integrated Google Ads import validation into weekly SEO reporting.
+- Task 766: Confirmed Google Ads import validation passes with 5 campaigns, 135 keywords, $205/day full expansion budget, and 0 errors.
+- Task 770: Re-ran production build after Ads import reporting work and confirmed 342 static pages generated.
+- Task 771: Reviewed public profile and citation sources for LDN Decks.
+- Task 772: Added entity profile consistency validator for canonical GBP, BBB, Yelp, Houzz, BuildZoom, Loudoun Chamber, and MapQuest URLs.
+- Task 773: Fixed stale Loudoun Chamber URLs on Press, Social, and daily SEO signal checks.
+- Task 774: Integrated entity profile consistency validation into weekly SEO reporting.
+- Task 775: Confirmed entity profile validation, weekly SEO, lint, and production build pass.
+- Task 776: Deployed the verified entity profile fix to Vercel production as `dpl_2Qo5Awj3wZxifZF7CmC6izrY4HAd`.
+- Task 777: Confirmed live Press and Social pages contain the canonical Loudoun Chamber URL.
+- Task 778: Confirmed live Press and Social pages no longer contain stale `loudoun-deck-30047.htm`.
+- Task 779: Re-ran post-deploy daily SEO and confirmed sitemap, profile links, canonicals, and IndexNow pass.
+- Task 780: Re-deployed after final whitespace cleanup as `dpl_G4Rmy9Hd1LhUgjJmUmhMWXaDpqub`.
+- Task 781: Strengthened daily SEO checks to validate canonical citation URLs and reject stale citation URLs on both Press and Social.
+- Task 782: Added scaling readiness board to aggregate measurement, lead outcome, proof preflight, and Ads import readiness.
+- Task 783: Integrated scaling readiness into weekly SEO reporting.
+- Task 784: Calibrated entity profile validation so stale URLs are allowed only inside daily-check forbidden-signal guards.
+- Task 785: Confirmed scaling readiness is RED from 3 owner/external blockers and 0 local blockers.
+- Task 786: Re-ran weekly SEO and confirmed entity profile consistency and scaling readiness both report correctly.
+- Task 787: Added scaling evidence request generator for the 3 P0 owner/external blockers.
+- Task 788: Generated Markdown and CSV request packets for Google call attribution, lead outcome rows, and owner proof evidence.
+- Task 789: Integrated scaling evidence request generation into weekly SEO reporting.
+- Task 790: Re-ran weekly SEO and confirmed scaling evidence requests report as 3 requests, RED, 0 local blockers, 3 owner/external blockers.
+- Task 791: Added scaling evidence request validator.
+- Task 792: Integrated scaling evidence request validation into weekly SEO reporting.
+- Task 793: Hardened link audit fetch/status checks with bounded retry to avoid transient false broken-link findings.
+- Task 794: Re-ran link audit twice and confirmed 816 internal links with 0 bad.
+- Task 795: Re-ran weekly SEO and confirmed scaling evidence request validation and internal links are green.
+- Task 796: Added call attribution read-only evidence CSV template.
+- Task 797: Added call attribution evidence validator for Google Ads/GTM read-only evidence rows.
+- Task 798: Integrated call attribution evidence validation into scaling readiness and weekly SEO reporting.
+- Task 799: Re-ran weekly SEO and confirmed call attribution evidence validation reports SAMPLE_ONLY with 0 errors.
+- Task 800: Added owner evidence action packet validator.
+- Task 801: Improved owner action packet wording for repair cost gates and short asset actions.
+- Task 802: Integrated owner evidence action packet validation into scaling readiness and weekly SEO reporting.
+- Task 803: Re-ran weekly SEO and confirmed owner evidence action packet validation reports 26 rows, 13 P0, 13 P1, and 0 errors.
+- Task 804: Reviewed DataForSEO n8n MCP setup guide.
+- Task 805: Added LDN-only DataForSEO n8n MCP runbook with credential safety rules.
+- Task 806: Added DataForSEO n8n MCP runbook validator.
+- Task 807: Integrated DataForSEO n8n MCP runbook validation into weekly SEO reporting.
+- Task 808: Re-ran weekly SEO and confirmed DataForSEO n8n MCP runbook validation reports 14 required phrases, 0 errors, and 0 warnings.
+- Task 809: Added scaling blocker exit checklist generator.
+- Task 810: Added scaling blocker exit checklist validator.
+- Task 811: Integrated scaling blocker exit checklist generation and validation into weekly SEO reporting.
+- Task 812: Re-ran weekly SEO and confirmed blocker exit checklist reports 3 blockers, RED, 0 local blockers, 3 owner/external blockers, and 0 validation errors.
+- Task 813: Added DataForSEO n8n MCP workflow manifest blueprint for LDN-only read-only SEO enrichment.
+- Task 814: Added workflow manifest validator for local MCP mode, cost caps, no-secret rules, and LDN-only domain scope.
+- Task 815: Re-ran weekly SEO and confirmed DataForSEO workflow manifest validation reports `ldndecks.com`, local MCP, read-only, 6 cost caps, and 0 errors.
+- Task 816: Added DataForSEO n8n MCP import preflight to guard sanitized workflow exports before import or commit.
+- Task 817: Added reserved n8n workflow export folder with no-secret, LDN-only, disabled-export rules.
+- Task 818: Ran import preflight and confirmed READY_NO_EXPORTS with 0 errors and 0 warnings.
+- Task 819: Re-ran weekly SEO and confirmed DataForSEO import preflight reports READY_NO_EXPORTS, 0 exports, 0 errors, and 0 warnings.
+- Task 820: Added sanitized disabled DataForSEO n8n MCP sample workflow export for read-only LDN SEO enrichment.
+- Task 821: Re-ran import preflight and weekly SEO; both confirmed EXPORTS_VALIDATED, 1 export, 0 errors, and 0 warnings.
+- Task 822: Strengthened import preflight with structural n8n checks for required nodes, required connections, local endpoint, disabled execution saves, and sample metadata.
+- Task 823: Re-ran weekly SEO and confirmed DataForSEO import preflight reports EXPORTS_VALIDATED, 1 export, 4 nodes, 3 connections, 0 errors, and 0 warnings.
+- Task 824: Added DataForSEO n8n findings intake CSV and runbook to keep workflow output review-only.
+- Task 825: Added findings intake validator to block public claims, Ads actions, non-LDN URLs, secrets, and unreviewed automation.
+- Task 826: Integrated findings intake validation into weekly SEO and confirmed SAMPLE_ONLY, 3 rows, 0 real rows, 3 review-only rows, and 0 errors.
+- Task 827: Added DataForSEO n8n findings review board generator and validator.
+- Task 828: Integrated findings review board generation and validation into weekly SEO.
+- Task 829: Re-ran weekly SEO and confirmed the review board reports SAMPLE_ONLY, 3 rows, 0 public claims, 0 Ads actions, and 0 errors.
+- Task 830: Added DataForSEO n8n promotion gate to block findings from becoming public claims, verified proof, SEO tasks, citation edits, or Ads actions without separate gates.
+- Task 831: Integrated promotion gate into weekly SEO and confirmed NO_PROMOTABLE_FINDINGS with 3 rows, 0 candidates, 0 promotable rows, and 0 errors.
+- Task 832: Added DataForSEO n8n operator handoff generator and validator.
+- Task 833: Integrated operator handoff generation and validation into weekly SEO.
+- Task 834: Re-ran weekly SEO and confirmed operator handoff reports READY_FOR_READ_ONLY_RUNS_ONLY with 0 promotable rows, 0 public claims, 0 Ads actions, and 0 errors.
+- Task 835: Added DataForSEO n8n all-gates orchestrator as the canonical ordered command before operator use.
+- Task 836: Integrated DataForSEO n8n all-gates sequence into weekly SEO reporting.
+- Task 837: Re-ran all-gates and weekly SEO; all-gates reports PASS_READ_ONLY_ONLY with 9 steps, 0 failures, READY_FOR_READ_ONLY_RUNS_ONLY, 0 promotable rows, 0 public claims, and 0 Ads actions.
+- Task 838: Added DataForSEO n8n raw findings dropbox, sample payload, and validator to guard raw n8n output before official CSV intake.
+- Task 839: Integrated raw findings validation into DataForSEO all-gates, operator handoff, and weekly SEO reporting.
+- Task 840: Re-ran raw findings validation and all-gates; raw findings reports SAMPLE_ONLY with 1 file, 2 sample findings, 0 real findings, and all-gates reports PASS_READ_ONLY_ONLY with 10 steps and 0 failures.
+- Task 841: Added DataForSEO n8n findings intake draft generator to convert validated raw findings into review-only draft CSV rows without editing the official intake automatically.
+- Task 842: Integrated findings draft generation into DataForSEO all-gates, operator handoff, operator handoff validation, and weekly SEO reporting.
+- Task 843: Re-ran findings draft generation and all-gates; draft reports SAMPLE_ONLY with 2 rows, 0 real rows, 0 public claims, 0 Ads actions, and all-gates reports PASS_READ_ONLY_ONLY with 11 steps and 0 failures.
+- Task 844: Added scaling evidence bundle generator to combine the current RED blockers with the exact call attribution, lead outcome, and owner proof evidence source paths.
+- Task 845: Added scaling evidence bundle validator to guard the no-activation, no-budget-increase, no-Smart-Bidding, no-public-proof-claims rules.
+- Task 846: Integrated scaling evidence bundle generation and validation into weekly SEO reporting.
+- Task 847: Re-ran scaling evidence bundle generation and validation; bundle reports RED, 3 blockers, 3 sections, 0 missing sources, 0 errors, and 0 warnings.
+- Task 848: Added rank tracker manual snapshot CSV/doc fallback for Ahrefs API/MCP or verified manual exports while `AHREFS_API_TOKEN` is missing.
+- Task 849: Added `seo:rank-snapshot:validate` to guard sample-only rank rows, LDN-only URLs, no live ranking claims, no secrets, and no unrelated domains.
+- Task 850: Integrated rank tracker manual snapshot validation into weekly SEO reporting.
+- Task 851: Re-ran rank snapshot validation and confirmed SAMPLE_ONLY with 3 rows, 0 real rows, 0 ranking rows, 0 errors, and 0 warnings.
+- Task 852: Added GBP/Maps proof ops board validator to guard board shape, canonical NAP, proof-safety rules, owner/manual status, and citation-cleanup-only legacy-name mentions.
+- Task 853: Integrated proof ops board validation into weekly SEO reporting.
+- Task 854: Re-ran proof ops board generation and validation; board reports 42 tasks, 18 P0, 42 owner/manual rows, 7 required lanes, 0 errors, and 0 warnings.
+- Task 855: Added SXO conversion report validator to guard high-intent pages for CTA presence, calculator/payment paths, proof-gated P0 actions, no live ranking/GBP claims, and no unsafe repair pricing.
+- Task 856: Integrated SXO conversion report validation into weekly SEO reporting.
+- Task 857: Re-ran SXO conversion generation and validation; validation reports 10 targets, average score 93, 2 proof-gated rows, 2 P0 actions, 0 missing CTA rows, 0 unsafe pricing rows, and 0 errors.
+- Task 858: Added internal link gap report validation to guard the 5 priority money pages, minimum inbound thresholds, 0 gaps, proof-safe linking rules, and no unrelated project/image-model contamination.
+- Task 859: Added `seo:internal-link-gap:validate` and integrated internal link gap validation into weekly SEO reporting.
+- Task 860: Re-ran internal link gap generation and validation; validation reports 203 pages scanned, 5 healthy priority targets, 0 gaps, 5 proof-safe rules, 0 errors, and 0 warnings.
+- Task 861: Added deep SEO growth map validation to guard required sections, current inventory metrics, proof-gated pages, candidate-page ordering, and no unrelated project/image-model contamination.
+- Task 862: Added `seo:growth-map:validate` and integrated growth map validation into weekly SEO reporting.
+- Task 863: Re-ran growth map generation and validation; validation reports 203 page modules, 816 internal links, 145 JSON-LD files, 188 fresh pages, 4 proof-gated pages, 6 candidate pages, 0 errors, and 0 warnings.
+- Task 864: Added proof source checklist validation to guard canonical identity, public profile rows, evidence type rules, minimum proof packet fields, non-citable rules, page unlock rules, and publish-gate commands.
+- Task 865: Added `seo:proof-source-checklist:validate` and integrated proof source checklist validation into weekly SEO reporting.
+- Task 866: Re-ran proof ops generation and proof source checklist validation; validation reports 12 profile rows, 6 evidence types, 13 minimum proof fields, 4 unlock rows, 4 blocker rows, 10 publish gate commands, 0 errors, and 0 warnings.
+- Task 867: Added verified proof snippets validation to guard docs/runtime JSON sync, 0 project snippets while projects remain partial, 5 review/profile citations, skipped partial projects, and no rating/review-count/testimonial proof language.
+- Task 868: Added `seo:proof-snippets:validate` and integrated verified proof snippets validation into weekly SEO reporting.
+- Task 869: Re-ran proof snippets generation and validation; validation reports 5 snippets, 0 project snippets, 5 review-source snippets, 10 skipped partial projects, runtime synced, 0 errors, and 0 warnings.
+- Task 870: Added owner evidence handoff validation to guard owner-facing proof blocker status, owner file references, dry-run and verified import commands, red gates, page verdicts, and intake suite counts.
+- Task 871: Added `seo:evidence-handoff:validate` and integrated owner evidence handoff validation into weekly SEO reporting.
+- Task 872: Re-ran owner evidence handoff generation and validation; validation reports 26 owner rows, 13 P0, 13 P1, 10 project intake rows, 17 photo manifest rows, 1 warranty row, 4 repair cost rows, 3 blocked pages, 0 errors, and 0 warnings.
+- Task 873: Added owner evidence sprint validation to guard the 5 owner collection blocks, P0/P1 priorities, source files, done criteria, privacy/proof language, and no premature verified-promotion instructions.
+- Task 874: Added `seo:evidence-sprint:validate` and integrated owner evidence sprint validation into weekly SEO reporting.
+- Task 875: Re-ran owner evidence sprint generation and validation; validation reports 5 blocks, 4 P0, 1 P1, 26 owner rows, 11 asset actions, 10 project actions, 1 warranty action, 4 repair cost actions, 0 errors, and 0 warnings.
+- Task 876: Added evidence unblock runbook validation to guard current readiness, workload totals, intake file references, page workload rows, red gates, operator commands, and publish-ready rules.
+- Task 877: Added the missing dated `before-after-evidence-resolution-2026-06-03` CSV/markdown pair required by the 2026-06-03 unblock runbook.
+- Task 878: Added `seo:evidence-unblock:validate` and integrated evidence unblock runbook validation into weekly SEO reporting.
+- Task 879: Re-ran evidence unblock generation and validation; validation reports 0 publish-ready pages, 3 blocked pages, 1 proof-incomplete page, 11 missing/partial assets, 10 partial projects, 1 missing warranty term, 4 missing repair cost ranges, 0 errors, and 0 warnings.
+- Task 880: Added before/after evidence resolution validation to guard 4 partial before/after project rows, 1 missing composite-cost evidence row, VERIFY-marker policy, owner evidence requirements, and dry-run/import commands.
+- Task 881: Added `seo:before-after-evidence:validate` and integrated before/after evidence resolution validation into weekly SEO reporting.
+- Task 882: Re-ran before/after evidence resolution validation; validation reports 5 rows, 4 before/after partial rows, 1 composite-cost missing row, 0 errors, and 0 warnings.
+- Task 883: Added photo ingestion manifest validation to guard 17 owner photo rows, 11 asset IDs, original-photo-only rules, empty `source_path` fields, partial status, and no premature verified/photo-proof promotion.
+- Task 884: Added `seo:photo-manifest:validate` and integrated photo ingestion manifest validation into weekly SEO reporting.
+- Task 885: Re-ran photo manifest generation and validation; validation reports 17 rows, 11 asset IDs, 6 before/after pair asset IDs, 5 single asset IDs, 17 empty source paths, 17 partial rows, 0 errors, and 0 warnings.
+- Task 886: Added commercial evidence intake validation to guard 1 warranty row, 4 repair-cost rows, blank warranty/cost evidence fields, partial status, source-backed pricing rules, and dry-run importer compatibility.
+- Task 887: Added `seo:commercial-intake:validate` and integrated commercial evidence intake validation into weekly SEO reporting.
+- Task 888: Re-ran commercial intake generation and validation; validation reports 1 warranty row, 4 repair-cost rows, 3 blank warranty evidence fields, 12 blank repair-cost evidence fields, 0 imported verified rows, 0 errors, and 0 warnings.

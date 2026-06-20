@@ -1,0 +1,2 @@
+warranty_id,service_type,term,scope,source,evidence_status,owner_notes
+repair-workmanship-warranty-term,deck repair,,,,partial,"Provide exact verified repair workmanship warranty term, scope, exclusions, and whether structural/labor/resurfacing coverage differs. Do not guess."
