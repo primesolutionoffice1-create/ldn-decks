@@ -60,6 +60,7 @@ const nextConfig = {
       // BEAST plan Cluster H: legacy /blog/ URL competing with apex owner at #4
       // Explicit 301 (matches canonical-signal convention used for www→apex above)
       { source: '/blog/trex-vs-timbertech-vs-azek', destination: '/trex-vs-timbertech-vs-azek', statusCode: 301 },
+      { source: '/blog/under-deck-drainage-system-northern-virginia', destination: '/blog/under-deck-drainage-systems-northern-virginia', permanent: true },
       { source: '/rooftop-deck-washington-dc', destination: '/showcase/rooftop-deck-washington-dc', permanent: true },
       { source: '/trex-deck-builder-loudoun', destination: '/deck-builders-loudoun', permanent: true },
       // Cost-page cannibalization fix (2026-05-26): /composite-deck-cost-northern-virginia
