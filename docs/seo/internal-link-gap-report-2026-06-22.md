@@ -1,20 +1,20 @@
-# Internal Link Gap Report — 2026-06-21
+# Internal Link Gap Report — 2026-06-22
 
 Purpose: push internal authority toward the highest-intent LDN Decks money pages without creating new claims, fake proof, or doorway-style links.
 
 ## Summary
 
-- Pages scanned: 351
+- Pages scanned: 357
 - Priority targets: 16
 - Targets needing links: 0
 
 | Target | Current inbound page links | Minimum target | Gap | Status |
 |---|---:|---:|---:|---|
 | `/services/deck-repair` | 62 | 18 | 0 | healthy |
-| `/deck-cost-calculator` | 229 | 30 | 0 | healthy |
-| `/composite-deck-cost-northern-virginia` | 243 | 35 | 0 | healthy |
+| `/deck-cost-calculator` | 235 | 30 | 0 | healthy |
+| `/composite-deck-cost-northern-virginia` | 249 | 35 | 0 | healthy |
 | `/services/deck-resurfacing` | 32 | 18 | 0 | healthy |
-| `/services/deck-replacement` | 144 | 18 | 0 | healthy |
+| `/services/deck-replacement` | 150 | 18 | 0 | healthy |
 | `/education/deck-stair-code-rise-run-virginia` | 22 | 18 | 0 | healthy |
 | `/education/deck-stair-construction-diagram` | 28 | 18 | 0 | healthy |
 | `/education/ledger-board-flashing-deck-attachment-virginia` | 37 | 25 | 0 | healthy |
@@ -23,9 +23,9 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/composite-decks` | 26 | 22 | 0 | healthy |
 | `/trex-decks` | 21 | 15 | 0 | healthy |
 | `/timbertech-decks` | 14 | 10 | 0 | healthy |
-| `/trex-vs-timbertech-vs-azek` | 163 | 18 | 0 | healthy |
-| `/covered-deck-builder-northern-virginia` | 132 | 14 | 0 | healthy |
-| `/deck-builder-northern-virginia` | 160 | 30 | 0 | healthy |
+| `/trex-vs-timbertech-vs-azek` | 169 | 18 | 0 | healthy |
+| `/covered-deck-builder-northern-virginia` | 138 | 14 | 0 | healthy |
+| `/deck-builder-northern-virginia` | 166 | 30 | 0 | healthy |
 
 ## Rules
 
@@ -111,7 +111,7 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 - Target: `/deck-cost-calculator`
 - Intent: calculator-led commercial investigation
 - Suggested anchor family: "deck cost calculator" plus natural variants
-- Current inbound page links: 229
+- Current inbound page links: 235
 - Recommended minimum: 30
 - Gap: 0
 
@@ -166,6 +166,8 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-burke-va` | education |
 | `/blog/deck-builder-cascades-va` | education |
 | `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-fairfax-va` | education |
 | `/blog/deck-builder-falls-church-va` | education |
@@ -173,16 +175,14 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-great-falls-va` | education |
 | `/blog/deck-builder-hamilton-va` | education |
 | `/blog/deck-builder-haymarket-va` | education |
-| `/blog/deck-builder-herndon-va` | education |
-| `/blog/deck-builder-lansdowne-va` | education |
-| `/blog/deck-builder-leesburg-va` | education |
+| `/blog/deck-builder-haymarket-va` | education |
 
 ## Composite Deck Cost Guide
 
 - Target: `/composite-deck-cost-northern-virginia`
 - Intent: highest-priority cost money page
 - Suggested anchor family: "composite deck cost in Northern Virginia" plus natural variants
-- Current inbound page links: 243
+- Current inbound page links: 249
 - Recommended minimum: 35
 - Gap: 0
 
@@ -238,6 +238,8 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-burke-va` | education |
 | `/blog/deck-builder-cascades-va` | education |
 | `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-fairfax-va` | education |
 | `/blog/deck-builder-falls-church-va` | education |
@@ -245,8 +247,6 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-great-falls-va` | education |
 | `/blog/deck-builder-hamilton-va` | education |
 | `/blog/deck-builder-haymarket-va` | education |
-| `/blog/deck-builder-herndon-va` | education |
-| `/blog/deck-builder-lansdowne-va` | education |
 
 ## Deck Resurfacing Service
 
@@ -316,7 +316,7 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 - Target: `/services/deck-replacement`
 - Intent: full rebuild and repair-vs-replace leads
 - Suggested anchor family: "deck replacement service" plus natural variants
-- Current inbound page links: 144
+- Current inbound page links: 150
 - Recommended minimum: 18
 - Gap: 0
 
@@ -368,6 +368,8 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-burke-va` | education |
 | `/blog/deck-builder-cascades-va` | education |
 | `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-fairfax-va` | education |
 | `/blog/deck-builder-falls-church-va` | education |
@@ -375,12 +377,10 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-great-falls-va` | education |
 | `/blog/deck-builder-hamilton-va` | education |
 | `/blog/deck-builder-haymarket-va` | education |
+| `/blog/deck-builder-haymarket-va` | education |
 | `/blog/deck-builder-herndon-va` | education |
 | `/blog/deck-builder-lansdowne-va` | education |
 | `/blog/deck-builder-leesburg-va` | education |
-| `/blog/deck-builder-lorton-va` | education |
-| `/blog/deck-builder-manassas-va` | education |
-| `/blog/deck-builder-mclean-va` | education |
 
 ## Virginia Deck Stair Code Guide
 
@@ -863,7 +863,7 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 - Target: `/trex-vs-timbertech-vs-azek`
 - Intent: premium composite brand decision support and AI retrieval
 - Suggested anchor family: "Trex vs TimberTech vs AZEK comparison" plus natural variants
-- Current inbound page links: 163
+- Current inbound page links: 169
 - Recommended minimum: 18
 - Gap: 0
 
@@ -914,6 +914,8 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-burke-va` | education |
 | `/blog/deck-builder-cascades-va` | education |
 | `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-fairfax-va` | education |
 | `/blog/deck-builder-falls-church-va` | education |
@@ -921,20 +923,18 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-great-falls-va` | education |
 | `/blog/deck-builder-hamilton-va` | education |
 | `/blog/deck-builder-haymarket-va` | education |
+| `/blog/deck-builder-haymarket-va` | education |
 | `/blog/deck-builder-herndon-va` | education |
 | `/blog/deck-builder-lansdowne-va` | education |
 | `/blog/deck-builder-leesburg-va` | education |
 | `/blog/deck-builder-lorton-va` | education |
-| `/blog/deck-builder-manassas-va` | education |
-| `/blog/deck-builder-mclean-va` | education |
-| `/blog/deck-builder-oakton-va` | education |
 
 ## Covered Deck Builder Hub
 
 - Target: `/covered-deck-builder-northern-virginia`
 - Intent: high-ticket covered outdoor living and roof structure leads
 - Suggested anchor family: "covered deck builder in Northern Virginia" plus natural variants
-- Current inbound page links: 132
+- Current inbound page links: 138
 - Recommended minimum: 14
 - Gap: 0
 
@@ -984,6 +984,8 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-burke-va` | education |
 | `/blog/deck-builder-cascades-va` | education |
 | `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-fairfax-va` | education |
 | `/blog/deck-builder-falls-church-va` | education |
@@ -991,21 +993,19 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-great-falls-va` | education |
 | `/blog/deck-builder-hamilton-va` | education |
 | `/blog/deck-builder-haymarket-va` | education |
+| `/blog/deck-builder-haymarket-va` | education |
 | `/blog/deck-builder-herndon-va` | education |
 | `/blog/deck-builder-lansdowne-va` | education |
 | `/blog/deck-builder-leesburg-va` | education |
 | `/blog/deck-builder-lorton-va` | education |
 | `/blog/deck-builder-manassas-va` | education |
-| `/blog/deck-builder-mclean-va` | education |
-| `/blog/deck-builder-oakton-va` | education |
-| `/blog/deck-builder-purcellville-va` | education |
 
 ## Northern Virginia Deck Builder Hub
 
 - Target: `/deck-builder-northern-virginia`
 - Intent: regional deck builder authority and broad commercial demand
 - Suggested anchor family: "Northern Virginia deck builder" plus natural variants
-- Current inbound page links: 160
+- Current inbound page links: 166
 - Recommended minimum: 30
 - Gap: 0
 
@@ -1055,6 +1055,8 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-burke-va` | education |
 | `/blog/deck-builder-cascades-va` | education |
 | `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-centreville-va` | education |
+| `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-chantilly-va` | education |
 | `/blog/deck-builder-fairfax-va` | education |
 | `/blog/deck-builder-falls-church-va` | education |
@@ -1062,14 +1064,12 @@ Purpose: push internal authority toward the highest-intent LDN Decks money pages
 | `/blog/deck-builder-great-falls-va` | education |
 | `/blog/deck-builder-hamilton-va` | education |
 | `/blog/deck-builder-haymarket-va` | education |
+| `/blog/deck-builder-haymarket-va` | education |
 | `/blog/deck-builder-herndon-va` | education |
 | `/blog/deck-builder-lansdowne-va` | education |
 | `/blog/deck-builder-leesburg-va` | education |
 | `/blog/deck-builder-lorton-va` | education |
 | `/blog/deck-builder-manassas-va` | education |
-| `/blog/deck-builder-mclean-va` | education |
-| `/blog/deck-builder-oakton-va` | education |
-| `/blog/deck-builder-purcellville-va` | education |
 
 ## Next Implementation Order
 
