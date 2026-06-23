@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-const ORIGIN = (process.env.SEO_AUDIT_ORIGIN || 'https://ldndecks.com').replace(/\/$/, '');
+const CANONICAL_ORIGIN = 'https://ldndecks.com';
+const FETCH_ORIGIN = (process.env.SEO_AUDIT_ORIGIN || CANONICAL_ORIGIN).replace(/\/$/, '');
 const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 721);
 const EXPECTED_LOCAL_SERVICE_URLS = Number(process.env.EXPECTED_LOCAL_SERVICE_URLS || 464);
 const KNOWN_BAD_SITEMAP_URLS = Number(process.env.KNOWN_BAD_SITEMAP_URLS || 260);
@@ -22,7 +23,8 @@ const priorityPaths = [
 ];
 
 async function fetchText(url) {
-  const response = await fetch(url, {
+  const fetchUrl = url.replace(CANONICAL_ORIGIN, FETCH_ORIGIN);
+  const response = await fetch(fetchUrl, {
     headers: { 'user-agent': 'LDNDecksDeploymentGuard/1.0 (+https://ldndecks.com)' },
     signal: AbortSignal.timeout(TIMEOUT_MS),
   });
@@ -30,14 +32,14 @@ async function fetchText(url) {
 }
 
 async function fetchStatus(pathname) {
-  let response = await fetch(`${ORIGIN}${pathname}`, {
+  let response = await fetch(`${FETCH_ORIGIN}${pathname}`, {
     method: 'HEAD',
     headers: { 'user-agent': 'LDNDecksDeploymentGuard/1.0 (+https://ldndecks.com)' },
     signal: AbortSignal.timeout(TIMEOUT_MS),
   });
 
   if (response.status === 405) {
-    response = await fetch(`${ORIGIN}${pathname}`, {
+    response = await fetch(`${FETCH_ORIGIN}${pathname}`, {
       method: 'GET',
       headers: { 'user-agent': 'LDNDecksDeploymentGuard/1.0 (+https://ldndecks.com)' },
       signal: AbortSignal.timeout(TIMEOUT_MS),
@@ -65,7 +67,7 @@ let localServiceUrls = [];
 let priorityPages = [];
 
 try {
-  const sitemap = await fetchText(`${ORIGIN}/sitemap.xml`);
+  const sitemap = await fetchText(`${CANONICAL_ORIGIN}/sitemap.xml`);
   if (sitemap.ok) pass(checks, 'sitemap.xml reachable', `status ${sitemap.status}`);
   else fail(checks, 'sitemap.xml reachable', `status ${sitemap.status}`);
 
@@ -91,7 +93,7 @@ try {
   }
 
   for (const pathname of priorityPaths) {
-    const loc = `${ORIGIN}${pathname}`;
+    const loc = `${CANONICAL_ORIGIN}${pathname}`;
     if (sitemapUrls.includes(loc)) pass(checks, `sitemap contains ${pathname}`);
     else fail(checks, `sitemap contains ${pathname}`);
   }
@@ -102,21 +104,21 @@ try {
     else fail(checks, `${page.path} returns 200`, `status ${page.status}`);
   }
 
-  const robots = await fetchText(`${ORIGIN}/robots.txt`);
-  if (robots.ok && new RegExp(`Sitemap:\\s*${ORIGIN.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/sitemap\\.xml`, 'i').test(robots.text)) {
+  const robots = await fetchText(`${CANONICAL_ORIGIN}/robots.txt`);
+  if (robots.ok && new RegExp(`Sitemap:\\s*${CANONICAL_ORIGIN.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/sitemap\\.xml`, 'i').test(robots.text)) {
     pass(checks, 'robots.txt declares canonical sitemap');
   } else {
     fail(checks, 'robots.txt declares canonical sitemap', `status ${robots.status}`);
   }
 
-  const llms = await fetchText(`${ORIGIN}/llms.txt`);
+  const llms = await fetchText(`${CANONICAL_ORIGIN}/llms.txt`);
   if (llms.ok && /464 local service|Local Service Architecture|service\/ashburn/i.test(llms.text)) {
     pass(checks, 'llms.txt exposes local architecture');
   } else {
     fail(checks, 'llms.txt exposes local architecture', `status ${llms.status}`);
   }
 
-  const llmsFull = await fetchText(`${ORIGIN}/llms-full.txt`);
+  const llmsFull = await fetchText(`${CANONICAL_ORIGIN}/llms-full.txt`);
   if (llmsFull.ok && /464 local service|58 Northern Virginia localities|outdoor-living\/woodbridge/i.test(llmsFull.text)) {
     pass(checks, 'llms-full.txt exposes local architecture');
   } else {
@@ -129,7 +131,8 @@ try {
 const failed = checks.filter((check) => !check.ok);
 const report = {
   status: failed.length ? 'FAIL' : 'PASS',
-  origin: ORIGIN,
+  canonicalOrigin: CANONICAL_ORIGIN,
+  fetchOrigin: FETCH_ORIGIN,
   expectedSitemapUrls: EXPECTED_SITEMAP_URLS,
   expectedLocalServiceUrls: EXPECTED_LOCAL_SERVICE_URLS,
   sitemapUrls: sitemapUrls.length,

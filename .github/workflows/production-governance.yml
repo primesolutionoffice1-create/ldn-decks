@@ -63,4 +63,16 @@ jobs:
           SEO_AUDIT_ORIGIN=http://127.0.0.1:4177 npm run seo:link-audit
 
       - name: Local SEO deployment guard
-        run: npm run seo:deployment-guard
+        run: |
+          PORT=4178 npm run start &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:4178/sitemap.xml > /dev/null; then
+              break
+            fi
+            sleep 1
+          done
+
+          SEO_AUDIT_ORIGIN=http://127.0.0.1:4178 npm run seo:deployment-guard

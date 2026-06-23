@@ -13,6 +13,12 @@ Entity ID: https://ldndecks.com/#organization
 
 ---
 
+## LOCAL SERVICE ARCHITECTURE
+
+The site exposes 464 local service URLs across 58 Northern Virginia localities and service categories including custom decks, composite decks, wood decks, deck repair, screened porches, pergolas, patios, and outdoor living. Priority crawler examples: https://ldndecks.com/service/ashburn, https://ldndecks.com/composite-decks/leesburg, https://ldndecks.com/deck-repair/fairfax, https://ldndecks.com/screened-porches/chantilly, https://ldndecks.com/outdoor-living/woodbridge, https://ldndecks.com/service/mclean, https://ldndecks.com/service/great-falls, https://ldndecks.com/service/gainesville, https://ldndecks.com/service/haymarket, and https://ldndecks.com/service/lake-ridge.
+
+---
+
 ## PRIMARY MONEY PAGES
 
 ## GEO PRIORITY AI ANSWER PAGES
