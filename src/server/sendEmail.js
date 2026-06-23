@@ -4,6 +4,7 @@ import { headers } from 'next/headers';
 import nodemailer from 'nodemailer';
 import { sendMetaLeadEvent } from './metaCapi';
 import { createLeadConfirmationToken } from './leadConfirmationToken';
+import { sendN8nWebsiteLead } from './n8nLeadForwarder';
 
 export async function sendContactEmail(formData) {
   try {
@@ -133,6 +134,11 @@ export async function sendContactEmail(formData) {
       // headers() can throw if called outside a request-scoped context
       // (e.g., during build / unit test). CAPI degrades gracefully —
       // missing IP / UA drops EMQ score ~1.5 points but doesn't error.
+    }
+
+    const n8nResult = await sendN8nWebsiteLead(formData, { ipAddress, userAgent });
+    if (!n8nResult.ok && !n8nResult.skipped) {
+      console.error('[sendContactEmail] n8n website intake forward failed', n8nResult);
     }
 
     // Fire Meta CAPI server-side (non-blocking, env-gated — no-ops if creds absent).

@@ -49,6 +49,10 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
 
     if (typeof window !== 'undefined') {
       formData.append('source_url', window.location.href);
+      if (document.referrer) formData.append('referrer', document.referrer);
+    }
+    if (formElement?.dataset?.formLocation && !formData.get('form_name')) {
+      formData.append('form_name', formElement.dataset.formLocation);
     }
 
     // Read PII for Enhanced Conversions hashing in GTM. The dataLayer
