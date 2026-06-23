@@ -47,22 +47,23 @@ export default function robots() {
   const SEARCH_VISIBILITY_BOTS = [
     'Googlebot',
     'Bingbot',
+    'Google-Extended',
     'GPTBot',
     'ChatGPT-User',
     'OAI-SearchBot',
     'ClaudeBot',
     'Claude-Web',
+    'anthropic-ai',
     'PerplexityBot',
     'Applebot',
   ];
 
-  // Training / extended-use crawlers stay blocked until owner approval.
+  // Training / extended-use crawlers stay blocked unless owner-approved for
+  // AI visibility or public content discovery.
   const TRAINING_BOTS = [
-    'Google-Extended',
     'Applebot-Extended',
     'Amazonbot',
     'CCBot',
-    'anthropic-ai',
     'Bytespider',
     'cohere-ai',
   ];
