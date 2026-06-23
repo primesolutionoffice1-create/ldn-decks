@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import CallLink from '@/components/CallLink';
+import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
 
 // Above-the-fold conversion CTA for paid-search service landing pages.
 // Mirrors the pattern proven on /deck-repair (orange banner, phone + estimate).
@@ -9,6 +10,10 @@ export default function AboveFoldCTA({
   headline = 'Ready to start your project? Talk to a NoVA deck specialist today.',
   estimateHref = '/get-estimate',
   estimateLabel = 'Get Free Estimate',
+  showQuickForm = false,
+  quickFormService = 'Composite Decks',
+  quickFormLocation = 'paid_search_above_fold',
+  quickFormHeading = 'Get a written estimate path today',
 }) {
   return (
     <section
@@ -52,6 +57,13 @@ export default function AboveFoldCTA({
             {estimateLabel}
           </Link>
         </div>
+        {showQuickForm && (
+          <PaidSearchLeadForm
+            service={quickFormService}
+            formLocation={quickFormLocation}
+            heading={quickFormHeading}
+          />
+        )}
       </div>
     </section>
   );

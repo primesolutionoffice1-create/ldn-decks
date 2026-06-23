@@ -104,6 +104,55 @@ function hasNoindex(html) {
   return /<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html);
 }
 
+function getRobotsGroupRules(text, targetAgent) {
+  let agents = [];
+  let rules = [];
+  let sawRule = false;
+
+  const finishGroup = () => {
+    const matchesTarget = agents.some((agent) => agent.toLowerCase() === targetAgent.toLowerCase());
+    const finishedRules = matchesTarget ? rules : null;
+    agents = [];
+    rules = [];
+    sawRule = false;
+    return finishedRules;
+  };
+
+  for (const rawLine of text.split('\n')) {
+    const line = rawLine.replace(/#.*/, '').trim();
+    if (!line) continue;
+
+    const userAgentMatch = line.match(/^user-agent\s*:\s*(.+)$/i);
+    if (userAgentMatch) {
+      if (agents.length && sawRule) {
+        const finishedRules = finishGroup();
+        if (finishedRules) return finishedRules;
+      }
+
+      agents.push(userAgentMatch[1].trim());
+      continue;
+    }
+
+    const ruleMatch = line.match(/^(allow|disallow)\s*:\s*(.*)$/i);
+    if (ruleMatch && agents.length) {
+      sawRule = true;
+      rules.push({
+        directive: ruleMatch[1].toLowerCase(),
+        path: ruleMatch[2].trim(),
+      });
+    }
+  }
+
+  return finishGroup() || [];
+}
+
+function robotsAllowsMainSite(text) {
+  const defaultRules = getRobotsGroupRules(text, '*');
+  const disallowsRoot = defaultRules.some((rule) => rule.directive === 'disallow' && rule.path === '/');
+  const allowsRoot = defaultRules.some((rule) => rule.directive === 'allow' && rule.path === '/');
+  return allowsRoot && !disallowsRoot;
+}
+
 function summarizeCheck(name, passed, details = '') {
   const prefix = passed ? 'PASS' : 'FAIL';
   console.log(`${prefix} ${name}${details ? ` - ${details}` : ''}`);
@@ -134,7 +183,7 @@ try {
 
   const robots = await getText(`${ORIGIN}/robots.txt`);
   if (!summarizeCheck('robots.txt is reachable', robots.ok, `${robots.status}`)) failures.push('robots status');
-  if (!summarizeCheck('robots allows main site crawl', !/disallow:\s*\/\s*$/im.test(robots.text))) failures.push('robots disallow');
+  if (!summarizeCheck('robots allows main site crawl', robotsAllowsMainSite(robots.text))) failures.push('robots disallow');
 
   for (const path of legacySitemapPaths) {
     const legacy = await getHead(`${ORIGIN}${path}`);

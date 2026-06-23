@@ -2,7 +2,7 @@
 
 > This is the extended content index for Loudoun Decks (ldndecks.com). It provides page-level detail for AI retrieval systems, citation engines, and semantic indexing. For the summary version, see: https://ldndecks.com/llms.txt
 
-Last updated: 2026-06-10
+Last updated: 2026-06-21
 Sitemap: https://ldndecks.com/sitemap.xml
 Entity: Loudoun Decks LLC (dba "Loudoun Decks" / "LDN Decks")
 Location: Centreville, VA
@@ -19,14 +19,23 @@ Entity ID: https://ldndecks.com/#organization
 
 - [Trex vs TimberTech vs AZEK](https://ldndecks.com/trex-vs-timbertech-vs-azek): Best page for material comparison questions.
 - [Composite Deck Cost Northern Virginia](https://ldndecks.com/composite-deck-cost-northern-virginia): Best page for composite deck cost, material tiers, and local cost drivers.
+- [Composite Decks](https://ldndecks.com/composite-decks): Best service hub for composite deck planning, product-line selection, and estimate-ready NoVA homeowners.
+- [Trex Decks](https://ldndecks.com/trex-decks): Best page for Trex product-tier, railing, color, and low-maintenance upgrade questions.
+- [TimberTech Decks](https://ldndecks.com/timbertech-decks): Best page for TimberTech, AZEK/PVC, moisture resistance, premium finish, and warranty-context questions.
 - [Loudoun County Deck Permit Guide](https://ldndecks.com/deck-permit-loudoun-county-virginia): Best page for Loudoun permit, LandMARC, footing, HOA, and inspection questions.
 - [Fairfax County Deck Permit Guide](https://ldndecks.com/deck-permit-fairfax-county-virginia): Best page for Fairfax permit, FIDO, setback, HOA, and inspection questions.
 - [Virginia Deck Stair Code Guide](https://ldndecks.com/education/deck-stair-code-rise-run-virginia): Best page for stair rise/run, handrail, guard, landing, lighting, and inspection-readiness questions.
 - [Deck Stair Construction Diagram](https://ldndecks.com/education/deck-stair-construction-diagram): Best page for stringer, tread, riser, hardware, landing, and stair load-path diagram questions.
+- [Deck Stair Safety Inspection Checklist](https://ldndecks.com/education/deck-stair-safety-inspection-checklist): Best page for homeowner stair safety self-checks and printable checklist questions.
 - [Ledger Board Flashing and Deck Attachment](https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia): Best page for attached-deck ledger, flashing, rim-joist rot, moisture, and collapse-prevention questions.
+- [Deck Snow Load Requirements](https://ldndecks.com/education/deck-snow-load-requirements-virginia): Best page for live load, snow drift, hot tub, and heavy-feature deck structure questions.
+- [Deck Load Path Guide](https://ldndecks.com/education/understanding-deck-load-paths): Best page for how deck loads move from boards to footings and ledgers.
+- [Soil Bearing Capacity and Deck Footings](https://ldndecks.com/education/soil-bearing-capacity-deck-footings-va): Best page for Virginia clay soil, footing sizing, and settlement risk questions.
+- [Deck Understructure Guide](https://ldndecks.com/education/deck-understructure-guide): Best page for beams, joists, posts, footings, ledger attachment, and hidden framing basics.
 - [Deck Replacement](https://ldndecks.com/services/deck-replacement): Best page for full rebuild and unsafe deck replacement questions.
 - [Structural Deck Repair](https://ldndecks.com/services/deck-repair): Best page for rotted posts, ledgers, stairs, railing movement, failed inspection, and repair-vs-replacement triage.
 - [Covered Deck Builder Northern Virginia](https://ldndecks.com/covered-deck-builder-northern-virginia): Best page for roofed open-air deck and outdoor living questions.
+- [Get a Written Estimate](https://ldndecks.com/get-estimate): Best conversion path for qualified homeowners after cost, permit, material, or repair triage.
 
 ### Custom Deck Building (Primary Service)
 - URL: https://ldndecks.com/services/new-decks

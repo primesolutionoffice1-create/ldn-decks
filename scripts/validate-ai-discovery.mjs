@@ -8,10 +8,18 @@ const OUTPUT_DIR = path.join(ROOT, 'scripts/output');
 const DATE = localDateStamp();
 
 const FILES = [
-  'public/llms.txt',
-  'public/llms-full.txt',
-  'src/app/llms.txt/route.js',
-  'src/app/llms-full.txt/route.js',
+  { path: 'public/llms.txt' },
+  { path: 'public/llms-full.txt' },
+  {
+    path: 'src/app/llms.txt/route.js',
+    validatesContentFrom: 'public/llms.txt',
+    requiredSourceSnippets: ["readFile(CONTENT_PATH, 'utf8')", "'public', 'llms.txt'"],
+  },
+  {
+    path: 'src/app/llms-full.txt/route.js',
+    validatesContentFrom: 'public/llms-full.txt',
+    requiredSourceSnippets: ["readFile(CONTENT_PATH, 'utf8')", "'public', 'llms-full.txt'"],
+  },
 ];
 
 const FORBIDDEN_ADDRESS_PATTERNS = [
@@ -25,8 +33,13 @@ const FORBIDDEN_ADDRESS_PATTERNS = [
 const REQUIRED_PRIORITY_URLS = [
   'https://ldndecks.com/education/deck-stair-code-rise-run-virginia',
   'https://ldndecks.com/education/deck-stair-construction-diagram',
+  'https://ldndecks.com/education/deck-stair-safety-inspection-checklist',
   'https://ldndecks.com/education/common-deck-stair-inspection-failures-virginia',
   'https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia',
+  'https://ldndecks.com/education/deck-snow-load-requirements-virginia',
+  'https://ldndecks.com/education/understanding-deck-load-paths',
+  'https://ldndecks.com/education/soil-bearing-capacity-deck-footings-va',
+  'https://ldndecks.com/education/deck-understructure-guide',
   'https://ldndecks.com/deck-permit-loudoun-county-virginia',
   'https://ldndecks.com/deck-permit-fairfax-county-virginia',
   'https://ldndecks.com/composite-deck-cost-northern-virginia',
@@ -61,7 +74,8 @@ function main() {
   const warnings = [];
   const fileResults = [];
 
-  for (const relativePath of FILES) {
+  for (const file of FILES) {
+    const relativePath = file.path;
     const absolutePath = path.join(ROOT, relativePath);
     if (!fs.existsSync(absolutePath)) {
       errors.push(`Missing AI discovery file: ${relativePath}`);
@@ -69,7 +83,27 @@ function main() {
       continue;
     }
 
-    const text = fs.readFileSync(absolutePath, 'utf8');
+    const sourceText = fs.readFileSync(absolutePath, 'utf8');
+    let text = sourceText;
+    let validatesContentFrom = null;
+
+    if (file.validatesContentFrom) {
+      validatesContentFrom = file.validatesContentFrom;
+      const contentPath = path.join(ROOT, file.validatesContentFrom);
+
+      if (!fs.existsSync(contentPath)) {
+        errors.push(`${relativePath} validates missing AI discovery source: ${file.validatesContentFrom}`);
+      } else {
+        text = fs.readFileSync(contentPath, 'utf8');
+      }
+
+      for (const snippet of file.requiredSourceSnippets || []) {
+        if (!sourceText.includes(snippet)) {
+          errors.push(`${relativePath} is not wired to the canonical source; missing route snippet: ${snippet}`);
+        }
+      }
+    }
+
     const forbiddenMatches = [];
 
     for (const forbidden of FORBIDDEN_ADDRESS_PATTERNS) {
@@ -100,7 +134,9 @@ function main() {
     fileResults.push({
       path: relativePath,
       exists: true,
-      bytes: Buffer.byteLength(text, 'utf8'),
+      bytes: Buffer.byteLength(sourceText, 'utf8'),
+      validatesContentFrom,
+      validatedContentBytes: Buffer.byteLength(text, 'utf8'),
       forbiddenMatches,
       requiredUrls: urlCoverage,
       presentRequiredUrls: urlCoverage.filter((entry) => entry.count > 0).length,
@@ -137,9 +173,9 @@ function main() {
     '',
     '## File Coverage',
     '',
-    '| File | Required URLs Present | Forbidden Matches | Bytes |',
-    '|---|---:|---:|---:|',
-    ...fileResults.map((file) => `| \`${file.path}\` | ${file.presentRequiredUrls ?? 0}/${REQUIRED_PRIORITY_URLS.length} | ${file.forbiddenMatches?.length ?? 0} | ${file.bytes ?? 0} |`),
+    '| File | Validated Content | Required URLs Present | Forbidden Matches | Source Bytes | Content Bytes |',
+    '|---|---|---:|---:|---:|---:|',
+    ...fileResults.map((file) => `| \`${file.path}\` | ${file.validatesContentFrom ? `\`${file.validatesContentFrom}\`` : 'self'} | ${file.presentRequiredUrls ?? 0}/${REQUIRED_PRIORITY_URLS.length} | ${file.forbiddenMatches?.length ?? 0} | ${file.bytes ?? 0} | ${file.validatedContentBytes ?? file.bytes ?? 0} |`),
     '',
     '## Required URLs',
     '',

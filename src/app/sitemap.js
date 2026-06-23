@@ -75,6 +75,22 @@ function resolveLastMod(urlPath, tierFallback) {
   return gitMtime(file) || fsMtime(file) || tierFallback;
 }
 
+function parseContentDate(value) {
+  if (!value) return null;
+  const parsed = new Date(value);
+  if (isNaN(parsed.getTime())) return null;
+  return parsed;
+}
+
+function contentLastMod(item, fallback) {
+  const today = new Date();
+  const published = parseContentDate(item.date);
+  const modified = parseContentDate(item.dateModified);
+  const candidate = modified && (!published || modified >= published) ? modified : published;
+  const clamped = candidate && candidate <= today ? candidate : today;
+  return (clamped || parseContentDate(fallback) || today).toISOString().split('T')[0];
+}
+
 // Paths to exclude from sitemap (Technical Package Sprint 1)
 const EXCLUDE_PATHS = [
   '/admin',
@@ -388,17 +404,14 @@ export default async function sitemap() {
         const today = new Date();
         const blogPaths = blogPosts
                 .filter(post => {
-                        const postDate = new Date(post.date);
-                        return postDate <= today && !post.canonicalPath;
+                        const postDate = parseContentDate(post.date);
+                        return postDate && postDate <= today && !post.canonicalPath;
                 })
                 .map(post => {
-                // Parse date like "April 4, 2026" to ISO
-                const parsed = new Date(post.date);
-                const lastMod = isNaN(parsed.getTime()) ? TIER3 : parsed.toISOString().split('T')[0];
                 return {
                         path: `/blog/${post.slug}`,
                         priority: 0.70,
-                        lastMod,
+                        lastMod: contentLastMod(post, TIER3),
                         freq: "monthly",
                 };
         });
@@ -406,17 +419,15 @@ export default async function sitemap() {
         // Education articles — dynamically generated from educationData
         const educationPaths = educationArticles
                 .filter(post => {
-                        const postDate = new Date(post.date);
-                        return postDate <= today;
+                        const postDate = parseContentDate(post.date);
+                        return postDate && postDate <= today;
                 })
                 .map(post => {
-                const parsed = new Date(post.date);
-                const lastMod = isNaN(parsed.getTime()) ? TIER3 : parsed.toISOString().split('T')[0];
                 const override = educationPriorityOverrides.get(post.slug) || {};
                 return {
                         path: `/education/${post.slug}`,
                         priority: override.priority || 0.70,
-                        lastMod,
+                        lastMod: contentLastMod(post, TIER3),
                         freq: override.freq || "monthly",
                 };
         });

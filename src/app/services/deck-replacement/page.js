@@ -137,7 +137,13 @@ export default function DeckReplacementPage() {
         ]}
       />
 
-      <AboveFoldCTA headline="Aging deck in Northern Virginia? Get a free structural evaluation and replacement estimate today." />
+      <AboveFoldCTA
+        headline="Aging deck in Northern Virginia? Get a free structural evaluation and replacement estimate today."
+        showQuickForm
+        quickFormService="Deck Replacement"
+        quickFormLocation="paid_search_replacement_above_fold"
+        quickFormHeading="Need a deck replacement quote? Send the basics and we will call back."
+      />
 
       <GeoAnswerBlock
         question="When should a Northern Virginia homeowner replace a deck instead of repairing it?"

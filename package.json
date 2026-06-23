@@ -53,6 +53,8 @@
         "seo:generate-og-cards": "node scripts/generate-og-card-sprint.mjs",
         "seo:verify-robots": "node scripts/verify-robots-indexnow.mjs",
         "seo:validate-ai-discovery": "node scripts/validate-ai-discovery.mjs",
+        "seo:validate-sitemap-freshness": "node scripts/validate-sitemap-freshness.mjs",
+        "seo:validate-crawl-quality": "npm run seo:validate-ai-discovery && npm run seo:validate-sitemap-freshness",
         "seo:rank-track": "node scripts/rank-tracker-report.mjs",
         "seo:deployment-guard": "node scripts/verify-local-seo-deployment.mjs",
         "local:authority-pack": "node scripts/generate-local-authority-pack.mjs",
