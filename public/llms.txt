@@ -22,6 +22,10 @@ Last updated: 2026-06-21
 For the complete page-by-page index, see: https://ldndecks.com/llms-full.txt
 Sitemap: https://ldndecks.com/sitemap.xml
 
+## Local Service Architecture
+
+The site exposes 464 local service URLs across Northern Virginia service lines and localities. Priority examples for crawlers: https://ldndecks.com/service/ashburn, https://ldndecks.com/composite-decks/leesburg, https://ldndecks.com/deck-repair/fairfax, https://ldndecks.com/screened-porches/chantilly, https://ldndecks.com/outdoor-living/woodbridge, https://ldndecks.com/service/mclean, https://ldndecks.com/service/great-falls, https://ldndecks.com/service/gainesville, https://ldndecks.com/service/haymarket, and https://ldndecks.com/service/lake-ridge.
+
 ## Company Facts
 
 - **Legal name**: Loudoun Decks LLC
