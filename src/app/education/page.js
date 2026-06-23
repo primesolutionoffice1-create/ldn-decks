@@ -90,24 +90,30 @@ function buildEducationHubSchema() {
             {
               '@type': 'ListItem',
               position: 4,
+              url: 'https://ldndecks.com/education/deck-stair-safety-inspection-checklist',
+              name: 'Deck Stair Safety Inspection Checklist',
+            },
+            {
+              '@type': 'ListItem',
+              position: 5,
               url: 'https://ldndecks.com/education/common-deck-stair-inspection-failures-virginia',
               name: 'Common Deck Stair Inspection Failures',
             },
             {
               '@type': 'ListItem',
-              position: 5,
+              position: 6,
               url: 'https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia',
               name: 'Ledger Board Flashing and Deck Attachment',
             },
             {
               '@type': 'ListItem',
-              position: 6,
+              position: 7,
               url: 'https://ldndecks.com/deck-permit-loudoun-county-virginia',
               name: 'Loudoun County Deck Permit Guide',
             },
             {
               '@type': 'ListItem',
-              position: 7,
+              position: 8,
               url: 'https://ldndecks.com/deck-permit-fairfax-county-virginia',
               name: 'Fairfax County Deck Permit Guide',
             },

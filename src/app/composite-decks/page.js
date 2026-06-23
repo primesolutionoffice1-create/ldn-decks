@@ -142,7 +142,13 @@ export default function CompositeDecksPage() {
         description="Loudoun Decks is the leading composite deck builder in Loudoun County, Fairfax County, and Prince William County. High-performance, low-maintenance outdoor luxury."
       />
 
-      <AboveFoldCTA headline="Planning a custom composite deck in Northern Virginia? Talk to a composite deck specialist today." />
+      <AboveFoldCTA
+        headline="Planning a custom composite deck in Northern Virginia? Talk to a composite deck specialist today."
+        showQuickForm
+        quickFormService="Composite Decks"
+        quickFormLocation="paid_search_composite_above_fold"
+        quickFormHeading="Want pricing for a composite deck? Send the basics and we will call back."
+      />
 
       <GeoAnswerBlock
         question="Who is a composite deck builder for Northern Virginia homeowners?"

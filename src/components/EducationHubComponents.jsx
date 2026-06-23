@@ -132,24 +132,30 @@ const STRUCTURAL_SAFETY_PATH = [
   },
   {
     step: '04',
+    title: 'Self-check stair safety',
+    desc: 'Use the printable checklist to mark movement, tread depth, loose rails, stringer rot, landing risk and warning signs.',
+    href: '/education/deck-stair-safety-inspection-checklist',
+  },
+  {
+    step: '05',
     title: 'Spot inspection failures',
     desc: 'Review uneven risers, weak rails, rotten stringers, poor landings, missing lighting and stair-to-deck separation.',
     href: '/education/common-deck-stair-inspection-failures-virginia',
   },
   {
-    step: '05',
+    step: '06',
     title: 'Inspect the ledger',
     desc: 'Understand flashing, rim-joist moisture, structural fasteners and the house connection behind attached deck safety.',
     href: '/education/ledger-board-flashing-deck-attachment-virginia',
   },
   {
-    step: '06',
+    step: '07',
     title: 'Confirm Loudoun permits',
     desc: 'Move from code research into Loudoun County permit planning before repair, resurfacing or replacement decisions.',
     href: '/deck-permit-loudoun-county-virginia',
   },
   {
-    step: '07',
+    step: '08',
     title: 'Compare Fairfax permits',
     desc: 'Review Fairfax County deck permit planning, typical deck details and inspection expectations for stair or ledger work.',
     href: '/deck-permit-fairfax-county-virginia',
@@ -273,8 +279,8 @@ export function EducationClusterNav() {
             </h3>
             <p className={styles.learningPathCopy}>
               Follow the order a homeowner needs before calling: understand stair code, model the
-              geometry, identify failure signs, check the ledger connection, then confirm county
-              permit expectations.
+              geometry, self-check the stairs, identify failure signs, check the ledger connection,
+              then confirm county permit expectations.
             </p>
           </div>
           <div className={styles.learningPathSteps}>
