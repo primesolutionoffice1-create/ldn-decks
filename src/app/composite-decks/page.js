@@ -195,7 +195,7 @@ export default function CompositeDecksPage() {
           "Permit and HOA documentation planned by scope",
           "See our before & after transformations"
         ]}
-        image1="/images/img10.jpeg"
+        image1="/images/composite-deck-screened-porch-lighting.jpg"
         image2="/images/img11.jpeg"
       />
 
