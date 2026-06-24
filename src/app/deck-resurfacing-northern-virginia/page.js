@@ -143,8 +143,8 @@ export default function DeckResurfacingNorthernVirginiaPage() {
         <div style={S.container}>
           <div style={{ position: 'relative', width: '100%', height: '420px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/images/img26.jpeg"
-              alt="Composite deck resurfacing project in Northern Virginia"
+              src="/images/deck-resurfacing-screened-porch-railings.jpg"
+              alt="Composite deck resurfacing with white stairs, lattice skirting, and black railings in Northern Virginia"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 960px) 100vw, 960px"
