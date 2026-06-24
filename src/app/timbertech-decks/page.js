@@ -243,8 +243,10 @@ export default function TimberTechDecksPage() {
           'Moisture-resistant options for shaded and wooded NoVA yards',
           'Clear comparison against Trex before you choose materials',
         ]}
-        image1="/images/img12.jpeg"
-        image2="/images/img13.jpeg"
+        image1="/images/timbertech-deck-black-railings-northern-virginia.jpg"
+        image2="/images/timbertech-deck-detail-black-railing.jpg"
+        image1Alt="TimberTech deck with gray composite boards, black railings, wide stairs, and outdoor seating"
+        image2Alt="TimberTech deck stair and black railing detail with gray composite decking"
       />
 
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
