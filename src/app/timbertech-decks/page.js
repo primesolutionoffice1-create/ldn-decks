@@ -142,7 +142,13 @@ export default function TimberTechDecksPage() {
         description="Premium TimberTech and AZEK deck installation for homeowners who want low-maintenance performance, rich wood-look finishes, and a deck built for Virginia weather."
       />
 
-      <AboveFoldCTA headline="Comparing TimberTech, AZEK, and Trex for a Northern Virginia deck? Talk to a premium composite specialist today." />
+      <AboveFoldCTA
+        headline="Comparing TimberTech, AZEK, and Trex for a Northern Virginia deck? Talk to a premium composite specialist today."
+        showQuickForm
+        quickFormService="TimberTech AZEK Decks"
+        quickFormLocation="paid_search_timbertech_above_fold"
+        quickFormHeading="Want pricing for a TimberTech or AZEK deck? Send the basics and we will call back."
+      />
 
       <GeoAnswerBlock
         question="Who builds TimberTech and AZEK decks in Northern Virginia?"
@@ -164,7 +170,7 @@ export default function TimberTechDecksPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: 500 }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>TimberTech and AZEK projects typically start around $20,000+</strong>
             <br />
-            This page is for <strong style={{ color: '#111' }}>full TimberTech, AZEK, replacement, and resurfacing projects</strong>. You can <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>estimate your monthly deck payment</Link> before choosing a board line. For board repair or small fixes, see our <Link href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link>.
+            This page is for <strong style={{ color: '#111' }}>full TimberTech, AZEK, replacement, and resurfacing projects</strong>, not board-only retail purchases. You can <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>estimate your monthly deck payment</Link> before choosing a board line. For board repair or small fixes, see our <Link href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link>.
           </p>
         </div>
       </section>
@@ -226,7 +232,7 @@ export default function TimberTechDecksPage() {
 
       <ServiceMain
         subtitle="Premium PVC & Composite"
-        title="Certified TimberTech and AZEK Deck Contractor"
+        title="TimberTech and AZEK Deck Contractor"
         description="We build premium TimberTech and AZEK decks across Loudoun, Fairfax, and Prince William County, with careful material selection, structural preparation, permits, HOA support, and clean finish details."
         listItems={[
           'TimberTech Composite and AZEK Advanced PVC options',

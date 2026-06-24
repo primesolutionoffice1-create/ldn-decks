@@ -118,6 +118,10 @@ export default function DeckResurfacingNorthernVirginiaPage() {
         headline="Want to know if your deck is a resurfacing candidate? Schedule a free structural inspection before you commit."
         estimateHref="/get-estimate"
         estimateLabel="Schedule Free Inspection"
+        showQuickForm
+        quickFormService="Deck Resurfacing"
+        quickFormLocation="paid_search_resurfacing_above_fold"
+        quickFormHeading="Want to know if your frame can be resurfaced? Send the basics and we will call back."
       />
 
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
@@ -130,7 +134,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
             <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               full replacement
             </Link>{' '}
-            instead.
+            instead. This service is for installed resurfacing projects, not board-only retail purchases.
           </p>
         </div>
       </section>
