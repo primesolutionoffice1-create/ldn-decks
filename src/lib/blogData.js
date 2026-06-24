@@ -2552,7 +2552,7 @@ export const blogPosts = [
     id: 127,
     title: "Deck Builder in Chantilly VA: Fairfax County Permits, HOA & Costs 2026",
     slug: 'deck-builder-chantilly-va',
-    image: '/images/img5.jpeg',
+    image: '/images/cable-railing-deck-chantilly-va.png',
     date: 'June 22, 2026',
     author: 'Loudoun Decks Team',
     metaTitle: "Deck Builder Chantilly VA 2026 | LDN Decks — Fairfax County Expert",
