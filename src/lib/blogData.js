@@ -2505,7 +2505,7 @@ export const blogPosts = [
     id: 125,
     title: "Screened Porch Contractor in Northern Virginia: What to Look For and How to Hire",
     slug: 'screened-porch-contractor-northern-virginia',
-    image: '/images/img14.jpeg',
+    image: '/images/screened-porch-contractor-northern-virginia.png',
     date: 'June 22, 2026',
     author: 'Loudoun Decks Team',
     metaTitle: "Screened Porch Contractor Northern Virginia | LDN Decks — Loudoun & Fairfax",
