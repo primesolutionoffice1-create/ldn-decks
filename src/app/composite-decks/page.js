@@ -196,7 +196,9 @@ export default function CompositeDecksPage() {
           "See our before & after transformations"
         ]}
         image1="/images/composite-deck-screened-porch-lighting.jpg"
-        image2="/images/img11.jpeg"
+        image2="/images/composite-deck-screened-porch-detail.jpg"
+        image1Alt="Composite deck with screened porch, black railings, stair lighting, and outdoor seating"
+        image2Alt="Composite decking detail with black railing, integrated lighting, and outdoor seating"
       />
 
       <ServiceContentExpansion sections={expansionSections} />
