@@ -4,6 +4,7 @@ import { headers } from 'next/headers';
 import nodemailer from 'nodemailer';
 import { sendMetaLeadEvent } from './metaCapi';
 import { createLeadConfirmationToken } from './leadConfirmationToken';
+import { sendN8nWebsiteLead } from './n8nLeadForwarder';
 
 export async function sendContactEmail(formData) {
   try {
@@ -66,6 +67,12 @@ export async function sendContactEmail(formData) {
     const utmCampaign = formData.get('utm_campaign');
     const utmContent = formData.get('utm_content');
     const utmTerm = formData.get('utm_term');
+    const eventId = formData.get('event_id');
+    const sourceUrl = formData.get('source_url');
+    const formName = formData.get('form_name');
+    const pageType = formData.get('page_type');
+    const pageCity = formData.get('page_city');
+    const pageCounty = formData.get('page_county');
 
     let fullAddress = '';
     if (address || city || state || zip) {
@@ -75,6 +82,12 @@ export async function sendContactEmail(formData) {
     // Click IDs surfaced for CRM ingestion + manual offline-conversion uploads.
     // Empty when the visitor arrived organically; populated when paid traffic.
     const clickIdRows = [
+      eventId && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>event_id:</strong> ${eventId}</p>`,
+      sourceUrl && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>landing_page:</strong> ${sourceUrl}</p>`,
+      formName && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>form_name:</strong> ${formName}</p>`,
+      pageType && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_type:</strong> ${pageType}</p>`,
+      pageCity && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_city:</strong> ${pageCity}</p>`,
+      pageCounty && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_county:</strong> ${pageCounty}</p>`,
       gclid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>gclid:</strong> ${gclid}</p>`,
       gbraid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>gbraid:</strong> ${gbraid}</p>`,
       wbraid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>wbraid:</strong> ${wbraid}</p>`,
@@ -96,12 +109,12 @@ export async function sendContactEmail(formData) {
     const mailOptions = {
       from: `Loudoun Decks <${process.env.EMAIL_USER}>`,
       to: recipient,
-      replyTo: email,
+      ...(email ? { replyTo: email } : {}),
       subject: `New Lead: ${service} from ${name}`,
       html: `
         <h2>New Website Contact Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Email:</strong> ${email || 'Not provided'}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Service Requested:</strong> ${service}</p>
         ${timeline ? `<p><strong>Timeline:</strong> ${timeline}</p>` : ''}
@@ -135,10 +148,14 @@ export async function sendContactEmail(formData) {
       // missing IP / UA drops EMQ score ~1.5 points but doesn't error.
     }
 
+    const n8nResult = await sendN8nWebsiteLead(formData, { ipAddress, userAgent });
+    if (!n8nResult.ok && !n8nResult.skipped) {
+      console.error('[sendContactEmail] n8n website intake forward failed', n8nResult);
+    }
+
     // Fire Meta CAPI server-side (non-blocking, env-gated — no-ops if creds absent).
     // Same event_id as the client-side form_submit + lead_confirmed events,
     // so Meta dedupes any of the three that fire within the 7-day window.
-    const eventId = formData.get('event_id');
     sendMetaLeadEvent({
       email,
       phone,

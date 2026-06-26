@@ -13,6 +13,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -245,6 +246,13 @@ function FaqSection() {
 }
 
 export default function DeckBuilderNorthernVirginiaPage() {
+  const paidSearchContext = {
+    city: 'Northern Virginia',
+    county: 'Northern Virginia',
+    service: 'Deck replacement or composite deck',
+    pageType: 'paid_search_service_landing_page',
+  };
+
   return (
     <main>
       <JsonLd data={faqSchema} />
@@ -282,6 +290,27 @@ export default function DeckBuilderNorthernVirginiaPage() {
         image1="/images/img36.jpeg"
         image2="/images/img25.jpeg"
       />
+      <section style={{ background: '#fff7f2', padding: '2.5rem 1.5rem' }}>
+        <div style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: '1rem' }}>
+          <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+            <p style={{ margin: '0 0 0.4rem', color: '#d14817', fontSize: '0.78rem', fontWeight: 900, textTransform: 'uppercase' }}>
+              For Google Search homeowners
+            </p>
+            <h2 style={{ margin: 0, color: '#181818', fontSize: 'clamp(1.55rem, 2.4vw, 2.15rem)', lineHeight: 1.2, fontWeight: 900 }}>
+              Deck Replacement and Composite Deck Estimates Near You
+            </h2>
+            <p style={{ margin: '0.8rem auto 0', color: '#5c514b', lineHeight: 1.65, maxWidth: 700 }}>
+              If you are comparing deck builders near you, use the short form below for a same-week estimate path. We prioritize homeowners planning deck replacement, composite deck builds, and full outdoor living projects in Northern Virginia.
+            </p>
+          </div>
+          <PaidSearchLeadForm
+            service="Deck replacement or composite deck"
+            formLocation="paid_search_northern_virginia_deck_builder"
+            heading="Request a same-week deck replacement estimate"
+            pageContext={paidSearchContext}
+          />
+        </div>
+      </section>
       <PlanningUpdate
         market="Northern Virginia deck projects"
         notes={[

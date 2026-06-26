@@ -19,6 +19,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-alexandria-va',
@@ -110,6 +111,13 @@ const expansionSections = [
 ];
 
 export default function DeckBuilderAlexandriaPage() {
+  const paidSearchContext = {
+    city: 'Alexandria',
+    county: 'Alexandria / Fairfax County',
+    service: 'Deck replacement or composite deck',
+    pageType: 'paid_search_city_landing_page',
+  };
+
   return (
     <main>
       <LocalBusinessSchema city="Alexandria" url="https://ldndecks.com/deck-builder-alexandria-va" />
@@ -133,6 +141,27 @@ export default function DeckBuilderAlexandriaPage() {
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
       />
+      <section style={{ background: '#fff7f2', padding: '2.25rem 1.5rem' }}>
+        <div style={{ maxWidth: 980, margin: '0 auto' }}>
+          <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+            <p style={{ margin: '0 0 0.4rem', color: '#d14817', fontSize: '0.78rem', fontWeight: 900, textTransform: 'uppercase' }}>
+              Alexandria homeowner estimate path
+            </p>
+            <h2 style={{ margin: 0, color: '#181818', fontSize: 'clamp(1.45rem, 2.3vw, 2rem)', lineHeight: 1.2, fontWeight: 900 }}>
+              Deck Replacement and Composite Deck Estimates in Alexandria
+            </h2>
+            <p style={{ margin: '0.8rem auto 0', color: '#5c514b', lineHeight: 1.65, maxWidth: 700 }}>
+              Use this short form if you are comparing Alexandria deck builders for a replacement deck, composite deck, screened porch, or full outdoor living project. The form keeps paid-search attribution attached to the lead.
+            </p>
+          </div>
+          <PaidSearchLeadForm
+            service="Alexandria deck replacement or composite deck"
+            formLocation="paid_search_alexandria_deck_builder"
+            heading="Request an Alexandria deck estimate"
+            pageContext={paidSearchContext}
+          />
+        </div>
+      </section>
       <PlanningUpdate
         market="Alexandria decks in 2026"
         notes={[
@@ -151,7 +180,6 @@ export default function DeckBuilderAlexandriaPage() {
         answer="Alexandria deck projects should start by confirming whether the property follows City of Alexandria, Fairfax County, HOA, or historic-area requirements. Homeowners should also review lot access, drainage, privacy, railing style, screened porch options, and whether composite resurfacing or full deck replacement is the safer path before approving a written estimate."
         facts={[
           'Primary buyer intent: Alexandria deck builder, historic or HOA planning, composite replacement, and screened porches.',
-          'Proof status: exact Alexandria project, customer, and photo claims require proof-lock.',
           'Conversion path: permit planning, material comparison, and written estimate.'
         ]}
         links={[
