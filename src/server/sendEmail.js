@@ -4,6 +4,7 @@ import { headers } from 'next/headers';
 import nodemailer from 'nodemailer';
 import { sendMetaLeadEvent } from './metaCapi';
 import { createLeadConfirmationToken } from './leadConfirmationToken';
+import { sendGhlLead } from './ghl';
 import { sendN8nWebsiteLead } from './n8nLeadForwarder';
 
 export async function sendContactEmail(formData) {
@@ -117,8 +118,6 @@ export async function sendContactEmail(formData) {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
-
     // Capture IP + User-Agent from the request for Meta CAPI match quality.
     // headers() comes from next/headers — server-action context. The first
     // address in x-forwarded-for is the client (Vercel / proxies prepend
@@ -136,9 +135,32 @@ export async function sendContactEmail(formData) {
       // missing IP / UA drops EMQ score ~1.5 points but doesn't error.
     }
 
+    let emailResult = { ok: false };
+    try {
+      await transporter.sendMail(mailOptions);
+      emailResult = { ok: true };
+    } catch (error) {
+      console.error('[sendContactEmail] email delivery failed', error?.message || error);
+    }
+
+    const ghlResult = await sendGhlLead(formData);
+    if (!ghlResult.ok && !ghlResult.skipped) {
+      console.error('[sendContactEmail] GHL website lead forward failed', ghlResult);
+    }
+
     const n8nResult = await sendN8nWebsiteLead(formData, { ipAddress, userAgent });
     if (!n8nResult.ok && !n8nResult.skipped) {
       console.error('[sendContactEmail] n8n website intake forward failed', n8nResult);
+    }
+
+    const delivered = emailResult.ok || ghlResult.ok || n8nResult.ok;
+    if (!delivered) {
+      console.error('[sendContactEmail] all website lead delivery sinks failed', {
+        email: emailResult,
+        ghl: ghlResult,
+        n8n: n8nResult,
+      });
+      return { success: false, error: 'Failed to send lead' };
     }
 
     // Fire Meta CAPI server-side (non-blocking, env-gated — no-ops if creds absent).
