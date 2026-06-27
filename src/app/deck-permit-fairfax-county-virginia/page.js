@@ -91,7 +91,6 @@ export default function FairfaxPermitPage() {
         facts={[
           'Permit surface: Fairfax County permit and zoning review',
           'HOA surface: community architectural approval when applicable',
-          'Proof status: county requirements should be checked against current official Fairfax guidance before citation',
         ]}
         links={[
           { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },

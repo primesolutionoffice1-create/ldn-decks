@@ -204,7 +204,6 @@ export default function DeckBuilderLeesburgPage() {
         answer="Leesburg deck projects should start with a jurisdiction check because Town of Leesburg properties and nearby Loudoun County properties follow different permit paths. Historic district, River Creek, Lansdowne, Tavistock Farms, Beacon Hill, and Potomac-facing lots may also need earlier decisions on materials, railing visibility, slope, drainage, HOA or ARB review, and whether the existing deck can be resurfaced."
         facts={[
           'Primary buyer intent: permit clarity, historic review, premium composite materials, and sloped-lot planning.',
-          'Proof status: downtown, river-view, and neighborhood-specific project claims stay draft-only until evidence is attached.',
           'Conversion path: written estimate plus permit and material planning.'
         ]}
         links={[

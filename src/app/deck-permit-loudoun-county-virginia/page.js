@@ -104,7 +104,6 @@ export default function LoudounPermitPage() {
         facts={[
           'Permit surface: Loudoun County LandMARC',
           'HOA surface: community architectural review or ARC/DRB process',
-          'Proof status: county requirements should be checked against current official Loudoun guidance before citation',
         ]}
         links={[
           { href: '/hoa-deck-rules-northern-virginia', label: 'HOA deck rules' },

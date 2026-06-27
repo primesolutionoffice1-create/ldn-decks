@@ -62,7 +62,6 @@ export default function TrexVsTimberTechPage() {
         facts={[
           'Best value: Trex Enhance or Trex Transcend depending on budget',
           'Best premium/PVC path: TimberTech AZEK',
-          'Proof status: no manufacturer-certified claim should be cited without current third-party profile verification',
         ]}
         links={[
           { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost' },

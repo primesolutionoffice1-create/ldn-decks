@@ -143,7 +143,6 @@ export default function DeckBuilderBurkePage() {
         answer="Burke deck projects often involve mature Fairfax County lots, older pressure-treated decks, wooded backyards, drainage constraints, and HOA or neighborhood expectations. Before choosing resurfacing or full replacement, homeowners should inspect the ledger, joists, beams, posts, stairs, railings, and footings, then confirm Fairfax County permit needs and composite material options."
         facts={[
           'Primary buyer intent: Burke deck replacement, structural inspection, wooded-lot planning, and composite upgrades.',
-          'Proof status: Burke project and photo claims require proof-lock before public use.',
           'Conversion path: safety checklist, Fairfax permit guide, and written estimate.'
         ]}
         links={[

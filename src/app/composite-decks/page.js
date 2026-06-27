@@ -142,7 +142,13 @@ export default function CompositeDecksPage() {
         description="Loudoun Decks is the leading composite deck builder in Loudoun County, Fairfax County, and Prince William County. High-performance, low-maintenance outdoor luxury."
       />
 
-      <AboveFoldCTA headline="Planning a custom composite deck in Northern Virginia? Talk to a composite deck specialist today." />
+      <AboveFoldCTA
+        headline="Same-week composite deck estimate openings are available in Northern Virginia."
+        showQuickForm
+        quickFormService="Composite Decks"
+        quickFormLocation="paid_search_composite_above_fold"
+        quickFormHeading="Need composite deck pricing? Call now or send the short form."
+      />
 
       <GeoAnswerBlock
         question="Who is a composite deck builder for Northern Virginia homeowners?"
@@ -150,7 +156,6 @@ export default function CompositeDecksPage() {
         facts={[
           'Best-fit projects: custom composite decks, replacement decks, railings, stairs, lighting, and covered outdoor living',
           'Primary local markets: Ashburn, Leesburg, Sterling, Reston, Fairfax, McLean, Vienna, Arlington, Alexandria, Manassas, and Woodbridge',
-          'Proof status: project photos, exact city claims, and manufacturer status require proof-lock before public citation',
         ]}
         links={[
           { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost' },
@@ -165,7 +170,7 @@ export default function CompositeDecksPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>Custom composite deck projects from $15,000+</strong>
             <br />
-            On this page we focus on <strong style={{ color: '#111' }}>full custom composite builds</strong>. In Loudoun County? See our <a href="/composite-deck-builder-loudoun" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Loudoun composite deck builder page</a>. Comparing brands? See our <a href="/trex-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Trex deck page</a> or <a href="/timbertech-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>TimberTech/AZEK deck page</a>. Planning budget? Use the <a href="/deck-cost-calculator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck cost calculator</a> and <a href="/composite-deck-cost-by-size" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>composite cost by size guide</a>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
+            On this page we focus on <strong style={{ color: '#111' }}>full custom composite builds and installed deck projects</strong>, not board-only retail purchases. In Loudoun County? See our <a href="/composite-deck-builder-loudoun" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Loudoun composite deck builder page</a>. Comparing brands? See our <a href="/trex-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Trex deck page</a> or <a href="/timbertech-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>TimberTech/AZEK deck page</a>. Planning budget? Use the <a href="/deck-cost-calculator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck cost calculator</a> and <a href="/composite-deck-cost-by-size" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>composite cost by size guide</a>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
           <p style={{ fontSize: '15px', color: '#555', margin: '12px 0 0' }}>
             For the broader service-area overview, compare materials, permits, and county planning on our <a href="/deck-builder-northern-virginia" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Northern Virginia deck builder hub</a>.

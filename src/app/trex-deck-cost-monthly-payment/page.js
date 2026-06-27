@@ -173,7 +173,6 @@ export default function TrexDeckCostMonthlyPaymentPage() {
           'Trex Enhance planning range: $35-$45 per sqft installed',
           'Trex Transcend planning range: $45-$60 per sqft installed',
           'Trex Signature planning range: $60-$80 per sqft installed',
-          'Proof status: warranty and financing terms should be verified against current Trex and lender documents before contract decisions',
         ]}
         links={[
           { href: '/deck-payment-estimator', label: 'Deck payment estimator' },
