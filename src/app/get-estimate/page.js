@@ -211,8 +211,8 @@ export default function GetEstimatePage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
               {[
                 {
-                  src: '/images/img01.jpeg',
-                  alt: 'Screened porch and outdoor living project by Loudoun Decks in Northern Virginia',
+                  src: '/images/img13.jpeg',
+                  alt: 'Finished composite deck with white railing by Loudoun Decks in Northern Virginia',
                 },
                 {
                   src: '/showcase/img08.jpeg',
