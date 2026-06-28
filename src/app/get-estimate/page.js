@@ -209,9 +209,26 @@ export default function GetEstimatePage() {
 
             <h3 style={{ fontSize: '1.2rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Project Photos to Review</h3>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-              {['/images/img01.jpeg', '/images/img10.jpeg', '/images/img03.jpeg', '/images/img07.jpeg'].map((src, i) => (
-                <div key={i} style={{ position: 'relative', height: '140px', borderRadius: '8px', overflow: 'hidden' }}>
-                  <Image src={src} alt={`Recent custom deck project ${i + 1} by Loudoun Decks in Northern Virginia`} fill style={{ objectFit: 'cover' }} sizes="250px" />
+              {[
+                {
+                  src: '/images/img01.jpeg',
+                  alt: 'Screened porch and outdoor living project by Loudoun Decks in Northern Virginia',
+                },
+                {
+                  src: '/showcase/img08.jpeg',
+                  alt: 'Finished low-maintenance deck with clean composite boards by Loudoun Decks',
+                },
+                {
+                  src: '/images/img03.jpeg',
+                  alt: 'Elevated deck with stair lighting and cable railing by Loudoun Decks',
+                },
+                {
+                  src: '/images/screened-porch-cost-northern-virginia-2026.png',
+                  alt: 'Modern screened porch with black railing and wooded backyard view by Loudoun Decks',
+                },
+              ].map((photo) => (
+                <div key={photo.src} style={{ position: 'relative', height: '140px', borderRadius: '8px', overflow: 'hidden' }}>
+                  <Image src={photo.src} alt={photo.alt} fill style={{ objectFit: 'cover' }} sizes="250px" />
                 </div>
               ))}
             </div>
