@@ -156,7 +156,6 @@ export default function TimberTechDecksPage() {
         facts={[
           'Best-fit projects: premium TimberTech decks, AZEK PVC upgrades, deck replacement, resurfacing, railings, stairs, and lighting',
           'Primary local markets: Ashburn, Leesburg, Sterling, Reston, Fairfax, McLean, Vienna, Arlington, Alexandria, Manassas, and Woodbridge',
-          'Proof status: manufacturer status, project photos, exact city claims, and warranty claims require source verification before public case-study use',
         ]}
         links={[
           { href: '/timbertech-azek-deck-cost-northern-virginia', label: 'TimberTech and AZEK cost' },

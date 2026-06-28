@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
+import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
@@ -187,6 +188,12 @@ export default function CompositeDeckCostPage() {
 
       <TrustBanner />
 
+      <AboveFoldCTA
+        headline="Planning a contractor-installed composite deck? Get a written Northern Virginia estimate path before you choose materials."
+        estimateHref="/get-estimate"
+        estimateLabel="Request Written Estimate"
+      />
+
       {/* QUICK ANSWER — featured snippet bait */}
       <section data-speakable="true" style={{ padding: '2rem 1.5rem 0' }}>
         <div style={S.container}>
@@ -194,6 +201,9 @@ export default function CompositeDeckCostPage() {
             <p style={{ fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</p>
             <p style={{ margin: 0, lineHeight: 1.75, fontSize: '1.02rem' }}>
               <strong>A composite deck in Northern Virginia typically costs</strong> $30–$95 per square foot installed in 2026 — a 200 sqft Trex Enhance deck lands around $8,000–$14,000, a 400 sqft Trex Transcend build $24,000–$34,000, and a 500 sqft TimberTech AZEK premium build $40,000–$55,000. Total cost depends on deck size, material tier, stairs, railing system, second-story elevation, and site conditions (slope, soil, access). Loudoun Decks provides itemized written estimates for Northern Virginia homeowners.
+            </p>
+            <p style={{ margin: '0.8rem 0 0', lineHeight: 1.65, fontSize: '0.95rem', color: '#555' }}>
+              This guide is for contractor-installed deck projects, not loose board pricing or retail material sales.
             </p>
           </div>
 
@@ -227,7 +237,6 @@ export default function CompositeDeckCostPage() {
         facts={[
           'Best cost page: /composite-deck-cost-northern-virginia',
           'Primary conversion path: written estimate, not generic price quote',
-          'Proof status: planning ranges only until matched to signed project records',
         ]}
         links={[
           { href: '/deck-cost-calculator', label: 'Deck cost calculator' },

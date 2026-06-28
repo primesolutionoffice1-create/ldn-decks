@@ -86,7 +86,6 @@ export default function FairfaxCountyPage() {
         answer="Fairfax County deck projects should start with jurisdiction, permit, HOA, and structural planning because requirements can differ between Fairfax County, City of Fairfax, Vienna, Herndon, Arlington-adjacent areas, and local associations. Homeowners should inspect older framing, compare composite materials, confirm setbacks, and choose resurfacing or replacement before approving a written estimate."
         facts={[
           'Primary buyer intent: Fairfax County deck builder, permit-safe replacement, composite upgrades, and structural review.',
-          'Proof status: county, city, and project photo claims require proof-lock.',
           'Conversion path: Fairfax permit guide, safety checklist, city pages, and written estimate.'
         ]}
         links={[

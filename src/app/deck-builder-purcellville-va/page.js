@@ -144,7 +144,6 @@ export default function PurcellvilleDeckBuilderPage() {
         answer="Purcellville and western Loudoun deck projects often involve larger lots, slope, access, soil, view corridors, town-or-county zoning, and more design freedom than tighter eastern Loudoun neighborhoods. Homeowners should compare composite, PVC, cedar, and IPE against maintenance tolerance, sun exposure, railing visibility, stairs, shade, permits, and the written estimate path before choosing a deck plan."
         facts={[
           'Primary buyer intent: western Loudoun deck builder, mountain-view decks, larger-lot planning, and material comparison.',
-          'Proof status: view, city, and project photo claims require proof-lock before publication.',
           'Conversion path: Loudoun permit guide, material comparison, and written Purcellville estimate.'
         ]}
         links={[

@@ -126,7 +126,6 @@ export default function FairfaxDeckBuilderPage() {
             answer="Fairfax homeowners should confirm whether the property is controlled by Fairfax County or the City of Fairfax, then inspect the deck framing, ledger flashing, posts, stairs, railings, and footings before choosing resurfacing or full replacement. Loudoun Decks uses that review to plan composite materials, permit drawings, HOA packets, and a written estimate for Fairfax, Mantua, Mosby Woods, Fair Lakes, and nearby neighborhoods."
             facts={[
               'Primary buyer intent: aging deck replacement, permit-safe composite upgrades, and structural risk reduction.',
-              'Proof status: neighborhood project examples need proof-lock before stronger public claims.',
               'Conversion path: safety inspection, Fairfax permit guide, and written estimate.'
             ]}
             links={[

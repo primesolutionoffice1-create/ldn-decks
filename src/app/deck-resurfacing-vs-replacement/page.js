@@ -110,7 +110,6 @@ export default function ResurfacingVsReplacementPage() {
         facts={[
           'Resurfacing path: frame passes structural inspection',
           'Replacement path: ledger, footing, post, joist, stair, or railing risk',
-          'Proof status: scenario examples require signed scope/project evidence before case-study use',
         ]}
         links={[
           { href: '/services/deck-repair', label: 'Deck repair' },

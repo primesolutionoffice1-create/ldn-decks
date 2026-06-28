@@ -74,7 +74,6 @@ export default function SterlingDeckBuilderPage() {
         answer="Sterling homeowners should only choose resurfacing after the frame, ledger, joists, posts, stairs, railings, and footings are inspected. Many Sterling decks in Sugarland Run, Countryside, Cascades, Lowes Island, and Potomac Falls are old enough to need structural review before composite boards, railings, lighting, Loudoun County permits, and HOA requirements are finalized."
         facts={[
           'Primary buyer intent: deck replacement, resurfacing, Loudoun permit planning, and HOA-ready composite upgrades.',
-          'Proof status: Sterling neighborhood and completed-project claims require proof-lock.',
           'Conversion path: resurface-vs-replace guide, Loudoun permit guide, safety checklist, and written estimate.'
         ]}
         links={[

@@ -13,6 +13,7 @@ import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-arlington-va',
@@ -36,6 +37,13 @@ const faqSchema = {
 };
 
 export default function ArlingtonDeckBuilderPage() {
+  const paidSearchContext = {
+    city: 'Arlington',
+    county: 'Arlington County',
+    service: 'Deck replacement or composite deck',
+    pageType: 'paid_search_city_landing_page',
+  };
+
   return (
     <>
       <JsonLd data={faqSchema} />
@@ -50,6 +58,27 @@ export default function ArlingtonDeckBuilderPage() {
             <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
           <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · Licensed &amp; Insured · Written scope and warranty details provided before contract</p>
+        </div>
+      </section>
+      <section style={{ background: '#fff7f2', padding: '2.25rem 1.5rem' }}>
+        <div style={{ maxWidth: 980, margin: '0 auto' }}>
+          <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+            <p style={{ margin: '0 0 0.4rem', color: '#d14817', fontSize: '0.78rem', fontWeight: 900, textTransform: 'uppercase' }}>
+              Arlington homeowner estimate path
+            </p>
+            <h2 style={{ margin: 0, color: '#181818', fontSize: 'clamp(1.45rem, 2.3vw, 2rem)', lineHeight: 1.2, fontWeight: 900 }}>
+              Deck Replacement and Composite Deck Estimates in Arlington
+            </h2>
+            <p style={{ margin: '0.8rem auto 0', color: '#5c514b', lineHeight: 1.65, maxWidth: 700 }}>
+              Use this short form if you are planning a serious Arlington deck replacement, composite deck, screened porch, or outdoor living project. We prioritize homeowner requests with permit-ready scope and realistic project budgets.
+            </p>
+          </div>
+          <PaidSearchLeadForm
+            service="Arlington deck replacement or composite deck"
+            formLocation="paid_search_arlington_deck_builder"
+            heading="Request an Arlington deck estimate"
+            pageContext={paidSearchContext}
+          />
         </div>
       </section>
       <PlanningUpdate
@@ -70,7 +99,6 @@ export default function ArlingtonDeckBuilderPage() {
         answer="Arlington deck projects should start with CPHD permit requirements, setbacks, lot access, privacy, drainage, railing style, and whether the home is in or near a historic district such as Lyon Park or Maywood. Loudoun Decks plans compact composite decks, screened porches, rooftop or balcony rebuilds, and replacement scopes around Arlington’s tighter lots and review requirements."
         facts={[
           'Primary buyer intent: compact outdoor living, screened porches, historic-review planning, and composite replacement.',
-          'Proof status: neighborhood and project-specific proof stays gated until owner evidence is attached.',
           'Conversion path: cost guide, safety checklist, railing options, and written estimate.'
         ]}
         links={[

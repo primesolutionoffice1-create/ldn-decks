@@ -1,0 +1,2 @@
+Campaign,Final URL suffix,Apply status,Reason,Validation
+SRCH | Premium Geo | Arlington Alexandria McLean | Leads,utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_content={adgroupid}&utm_term={keyword},Ready for Google Ads Editor review,Pass campaign/ad group/keyword identifiers into lead forms and offline lead outcome records,After import submit one test lead from a paid-search URL and confirm utm_campaign utm_content utm_term landing_page event_id and click IDs appear in the lead email/webhook payload

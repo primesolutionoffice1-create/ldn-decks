@@ -85,7 +85,6 @@ export default function LoudounCountyPage() {
         answer="Loudoun Decks plans composite deck replacement, resurfacing, screened porch, and outdoor living projects across Loudoun County, including Ashburn, Leesburg, Sterling, Purcellville, Brambleton, Broadlands, and nearby communities. Loudoun projects should start with HOA, LandMARC permit, framing, material, railing, lighting, and written estimate planning before public project claims or proof assets are used."
         facts={[
           'Primary buyer intent: Loudoun County deck builder, composite replacement, HOA-ready decks, and permit planning.',
-          'Proof status: county and city project claims require proof-lock before publication.',
           'Conversion path: Loudoun permit guide, city pages, and written estimate.'
         ]}
         links={[

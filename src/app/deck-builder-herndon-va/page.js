@@ -151,7 +151,6 @@ export default function DeckBuilderHerndonPage() {
         answer="Herndon deck projects should confirm whether Town of Herndon, Fairfax County, HOA, or tech-corridor community rules apply before drawings and pricing are finalized. The first planning step should review composite material options, permit path, deck framing condition, screened porch options, railings, lighting, and whether the project is a resurfacing or full replacement."
         facts={[
           'Primary buyer intent: Herndon deck builder, Town of Herndon permits, composite decks, and screened porches.',
-          'Proof status: Herndon project/photo claims stay gated until owner-confirmed evidence is attached.',
           'Conversion path: permit guide, material comparison, and written estimate.'
         ]}
         links={[

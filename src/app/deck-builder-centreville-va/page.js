@@ -83,7 +83,6 @@ export default function CentrevilleDeckBuilderPage() {
         answer="Centreville has many established Fairfax County communities where older wood decks, townhome decks, and HOA-managed outdoor spaces need resurfacing, replacement, or screened-porch planning. Loudoun Decks is based in Centreville, so the practical first step is a local site review that checks framing, HOA rules, Fairfax County permit needs, materials, stairs, railings, drainage, and the written estimate path."
         facts={[
           'Primary buyer intent: local deck builder, deck replacement, HOA-ready composite upgrades, and showroom material selection.',
-          'Proof status: community-specific project claims require proof-lock before public use.',
           'Conversion path: material comparison, Fairfax permit guide, and written Centreville estimate.'
         ]}
         links={[

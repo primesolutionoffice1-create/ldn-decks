@@ -72,7 +72,6 @@ export default function TysonsDeckBuilderPage() {
         answer="Tysons deck projects should first separate urban-core terrace, balcony, rooftop, townhome, and Pimmit Hills single-family scopes because each path changes structure, waterproofing, association review, permit details, railing height, and material selection. Loudoun Decks plans compact composite decks and outdoor living upgrades around Fairfax County requirements and the tighter access conditions common near Tysons."
         facts={[
           'Primary buyer intent: compact composite decks, rooftop terraces, townhome upgrades, and association-ready planning.',
-          'Proof status: rooftop, condo, and neighborhood project claims require proof-lock before public use.',
           'Conversion path: Fairfax permit guide, railing options, material comparison, and written estimate.'
         ]}
         links={[

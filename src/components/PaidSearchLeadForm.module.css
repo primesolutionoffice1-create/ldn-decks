@@ -9,12 +9,47 @@
   box-shadow: 0 10px 24px rgba(39, 32, 28, 0.08);
 }
 
+.header {
+  margin: 0 0 14px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: #d14817;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 .heading {
-  margin: 0 0 12px;
+  margin: 0;
   color: #1f1f1f;
-  font-size: 1rem;
+  font-size: 1.12rem;
   font-weight: 800;
   line-height: 1.35;
+}
+
+.subheading {
+  margin: 6px 0 0;
+  color: #5c514b;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.callButton {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  margin: 0 0 10px;
+  padding: 13px 16px;
+  border-radius: 6px;
+  background: #111;
+  color: #fff;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
 }
 
 .grid {

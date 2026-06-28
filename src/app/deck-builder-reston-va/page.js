@@ -149,7 +149,6 @@ export default function DeckBuilderRestonPage() {
         answer="Reston deck projects often combine Fairfax County permitting with Reston Association Design Review Board planning, wooded-lot constraints, slope, drainage, root zones, privacy, and view-preserving railing choices. Before recommending resurfacing, Loudoun Decks checks the existing frame, ledger, posts, and stairs, then plans composite materials, DRB documentation, and an estimate path around the actual site conditions."
         facts={[
           'Primary buyer intent: DRB-ready composite deck planning, wooded-lot replacement, and elevated decks.',
-          'Proof status: Lake Anne, Lake Audubon, South Lakes, and project photo claims require proof-lock.',
           'Conversion path: Fairfax permit guide, inspection path, and written Reston estimate.'
         ]}
         links={[

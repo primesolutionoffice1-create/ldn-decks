@@ -151,7 +151,6 @@ export default function DeckBuilderChantillyPage() {
         answer="Chantilly deck projects often involve Fairfax County Sully District requirements, Route 50 corridor neighborhoods, HOA architectural review, and older wood deck replacement. Homeowners should check framing, ledger flashing, stairs, railings, material choices, HOA packet requirements, and Fairfax County permit details before choosing resurfacing, full replacement, or a screened porch addition."
         facts={[
           'Primary buyer intent: Chantilly deck builder, HOA-ready replacement, composite upgrades, and screened porches.',
-          'Proof status: exact neighborhood and completed-project claims require proof-lock.',
           'Conversion path: Fairfax permit guide, HOA guide, and written estimate.'
         ]}
         links={[

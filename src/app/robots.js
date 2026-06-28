@@ -56,12 +56,15 @@ export default function robots() {
     'anthropic-ai',
     'PerplexityBot',
     'Applebot',
+    // Applebot-Extended powers Apple Intelligence, Siri local search, and iOS
+    // Spotlight. Allowing it enables citation by Apple's AI systems without
+    // granting model-training rights (Apple separates search from training crawls).
+    'Applebot-Extended',
   ];
 
   // Training / extended-use crawlers stay blocked unless owner-approved for
   // AI visibility or public content discovery.
   const TRAINING_BOTS = [
-    'Applebot-Extended',
     'Amazonbot',
     'CCBot',
     'Bytespider',

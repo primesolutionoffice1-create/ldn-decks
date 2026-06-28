@@ -143,11 +143,11 @@ export default function CompositeDecksPage() {
       />
 
       <AboveFoldCTA
-        headline="Planning a custom composite deck in Northern Virginia? Talk to a composite deck specialist today."
+        headline="Same-week composite deck estimate openings are available in Northern Virginia."
         showQuickForm
         quickFormService="Composite Decks"
         quickFormLocation="paid_search_composite_above_fold"
-        quickFormHeading="Want pricing for a composite deck? Send the basics and we will call back."
+        quickFormHeading="Need composite deck pricing? Call now or send the short form."
       />
 
       <GeoAnswerBlock
@@ -156,7 +156,6 @@ export default function CompositeDecksPage() {
         facts={[
           'Best-fit projects: custom composite decks, replacement decks, railings, stairs, lighting, and covered outdoor living',
           'Primary local markets: Ashburn, Leesburg, Sterling, Reston, Fairfax, McLean, Vienna, Arlington, Alexandria, Manassas, and Woodbridge',
-          'Proof status: project photos, exact city claims, and manufacturer status require proof-lock before public citation',
         ]}
         links={[
           { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost' },
@@ -195,10 +194,8 @@ export default function CompositeDecksPage() {
           "Permit and HOA documentation planned by scope",
           "See our before & after transformations"
         ]}
-        image1="/images/composite-deck-screened-porch-lighting.jpg"
-        image2="/images/composite-deck-screened-porch-detail.jpg"
-        image1Alt="Composite deck with screened porch, black railings, stair lighting, and outdoor seating"
-        image2Alt="Composite decking detail with black railing, integrated lighting, and outdoor seating"
+        image1="/images/img10.jpeg"
+        image2="/images/img11.jpeg"
       />
 
       <ServiceContentExpansion sections={expansionSections} />

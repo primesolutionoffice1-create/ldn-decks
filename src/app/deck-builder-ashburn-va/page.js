@@ -197,7 +197,6 @@ export default function DeckBuilderAshburnPage() {
         answer="Loudoun Decks plans composite deck replacement and outdoor living projects for Ashburn homeowners in Brambleton, Broadlands, Ashburn Village, One Loudoun, Ashburn Farm, and nearby Loudoun County communities. The best first step is a framing, ledger, post-base, HOA, and permit review so the homeowner can choose between resurfacing, full replacement, Trex, TimberTech, AZEK, railing, lighting, and financing paths."
         facts={[
           'Primary buyer intent: composite deck replacement, resurfacing, HOA approval, and premium outdoor living.',
-          'Proof status: city/project photo claims require proof-lock before stronger public use.',
           'Conversion path: written estimate, permit planning, and material comparison.'
         ]}
         links={[

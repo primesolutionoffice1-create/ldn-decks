@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import CallLink from '@/components/CallLink';
+import CallLink, { BUSINESS_PHONE_DISPLAY } from '@/components/CallLink';
 import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
 
 // Above-the-fold conversion CTA for paid-search service landing pages.
@@ -7,13 +7,14 @@ import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
 // Phone link delegates to <CallLink> so phone_click tracking and the
 // centralized BUSINESS_PHONE constant stay in one place.
 export default function AboveFoldCTA({
-  headline = 'Ready to start your project? Talk to a NoVA deck specialist today.',
+  headline = 'Same-week estimate openings are available for Northern Virginia homeowners.',
   estimateHref = '/get-estimate',
-  estimateLabel = 'Get Free Estimate',
+  estimateLabel = 'Request Estimate',
   showQuickForm = false,
   quickFormService = 'Composite Decks',
   quickFormLocation = 'paid_search_above_fold',
   quickFormHeading = 'Get a written estimate path today',
+  pageContext,
 }) {
   return (
     <section
@@ -25,8 +26,13 @@ export default function AboveFoldCTA({
       }}
     >
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem', textAlign: 'center' }}>
-        <p style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.75rem' }}>
+        <p style={{ fontWeight: 800, fontSize: '1.15rem', marginBottom: '0.35rem', lineHeight: 1.35 }}>
           {headline}
+        </p>
+        <p style={{ color: '#5f4f47', fontSize: '0.95rem', margin: '0 0 0.85rem' }}>
+          {showQuickForm
+            ? 'For fastest scheduling today, call first. The form below is the backup path.'
+            : 'For fastest scheduling today, call first or request a written estimate online.'}
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <CallLink
@@ -40,7 +46,9 @@ export default function AboveFoldCTA({
               textDecoration: 'none',
               fontSize: '1rem',
             }}
-          />
+          >
+            Call Now: {BUSINESS_PHONE_DISPLAY}
+          </CallLink>
           <Link
             href={estimateHref}
             style={{
@@ -62,6 +70,7 @@ export default function AboveFoldCTA({
             service={quickFormService}
             formLocation={quickFormLocation}
             heading={quickFormHeading}
+            pageContext={pageContext}
           />
         )}
       </div>

@@ -99,16 +99,6 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               </div>
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="timeline">Project Timeline <span className={styles.req}>*</span></label>
-                  <select id="timeline" name="timeline" required defaultValue="" className={styles.selectInput}>
-                    <option value="" disabled>Select Start Date</option>
-                    <option value="Immediately">Immediately</option>
-                    <option value="1-3 Months">1-3 Months</option>
-                    <option value="3-6 Months">3-6 Months</option>
-                    <option value="Just Exploring">Just Exploring</option>
-                  </select>
-                </div>
-                <div className={styles.inputGroup}>
                   <label htmlFor="service">Service <span className={styles.req}>*</span></label>
                   <select id="service" name="service" required defaultValue="" className={styles.selectInput}>
                     <option value="" disabled>Select Service</option>
@@ -123,11 +113,25 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                     <option value="Other">Other</option>
                   </select>
                 </div>
+                <div className={styles.inputGroup}>
+                  <label htmlFor="city">City <span className={styles.req}>*</span></label>
+                  <input id="city" name="city" type="text" required placeholder="e.g. Ashburn" autoComplete="address-level2" />
+                </div>
               </div>
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="budgetRange">Approximate Budget <span className={styles.req}>*</span></label>
-                  <select id="budgetRange" name="budgetRange" required defaultValue="" className={styles.selectInput}>
+                  <label htmlFor="timeline">Project Timeline</label>
+                  <select id="timeline" name="timeline" defaultValue="" className={styles.selectInput}>
+                    <option value="" disabled>Select Start Date</option>
+                    <option value="Immediately">Immediately</option>
+                    <option value="1-3 Months">1-3 Months</option>
+                    <option value="3-6 Months">3-6 Months</option>
+                    <option value="Just Exploring">Just Exploring</option>
+                  </select>
+                </div>
+                <div className={styles.inputGroup}>
+                  <label htmlFor="budgetRange">Approximate Budget</label>
+                  <select id="budgetRange" name="budgetRange" defaultValue="" className={styles.selectInput}>
                     <option value="" disabled>Select Budget Range</option>
                     <option value="Under $15K">Under $15K</option>
                     <option value="$15K-$25K">$15K-$25K</option>
@@ -137,6 +141,8 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                     <option value="Not sure, full project">Not sure, but planning a full project</option>
                   </select>
                 </div>
+              </div>
+              <div className={styles.row}>
                 <div className={styles.inputGroup}>
                   <label htmlFor="materialInterest">Material Interest</label>
                   <select id="materialInterest" name="materialInterest" defaultValue="" className={styles.selectInput}>
@@ -148,16 +154,16 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                     <option value="Not Sure">Not Sure</option>
                   </select>
                 </div>
-              </div>
-              <div className={styles.inputGroup}>
-                <label htmlFor="homeownerStatus">Homeowner / Decision Maker <span className={styles.req}>*</span></label>
-                <select id="homeownerStatus" name="homeownerStatus" required defaultValue="" className={styles.selectInput}>
-                  <option value="" disabled>Select One</option>
-                  <option value="Homeowner decision maker">I am the homeowner / decision maker</option>
-                  <option value="Homeowner researching with partner">I am a homeowner researching with my partner</option>
-                  <option value="Property manager or authorized representative">I manage or represent the property</option>
-                  <option value="Not the homeowner">I am not the homeowner</option>
-                </select>
+                <div className={styles.inputGroup}>
+                  <label htmlFor="homeownerStatus">Homeowner Status</label>
+                  <select id="homeownerStatus" name="homeownerStatus" defaultValue="" className={styles.selectInput}>
+                    <option value="" disabled>Select One</option>
+                    <option value="Homeowner decision maker">I am the homeowner / decision maker</option>
+                    <option value="Homeowner researching with partner">Researching with my partner</option>
+                    <option value="Property manager or authorized representative">Property manager</option>
+                    <option value="Not the homeowner">Not the homeowner</option>
+                  </select>
+                </div>
               </div>
               <div className={styles.inputGroup}>
                 <label htmlFor="hoa">HOA / Permit Status</label>
@@ -170,24 +176,14 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                   <option value="Not sure">Not sure</option>
                 </select>
               </div>
-              <div className={styles.row}>
-                <div className={styles.inputGroup}>
-                  <label htmlFor="city">City <span className={styles.req}>*</span></label>
-                  <input id="city" name="city" type="text" required placeholder="e.g. Ashburn" autoComplete="address-level2" />
-                </div>
-                <div className={styles.inputGroup} style={{flex: 0.5}}>
-                  <label htmlFor="state">State</label>
-                  <input id="state" name="state" type="text" defaultValue="VA" autoComplete="address-level1" />
-                </div>
-                <div className={styles.inputGroup} style={{flex: 0.5}}>
-                  <label htmlFor="zip">ZIP <span className={styles.req}>*</span></label>
-                  <input id="zip" name="zip" type="text" required placeholder="Zip Code" autoComplete="postal-code" />
-                </div>
-              </div>
               <div className={styles.inputGroup}>
-                <label htmlFor="message">Message <span className={styles.req}>*</span></label>
-                <textarea id="message" name="message" required rows="6" placeholder="Tell us about your deck or outdoor project..."></textarea>
+                <label htmlFor="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your project (optional — we'll discuss details on the call)..."></textarea>
               </div>
+              <input type="hidden" name="state" value="VA" />
+              <p style={{ fontSize: '0.85rem', color: '#555', marginBottom: '0.75rem' }}>
+                We call back within 1 business day.
+              </p>
               <button
                 type="submit"
                 disabled={status === "submitting"}
