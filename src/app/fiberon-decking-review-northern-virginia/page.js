@@ -185,7 +185,10 @@ export default function FiberonReviewPage() {
 
       <NamedAuthor context="composite decking materials and installation in Northern Virginia" lastUpdated="2026-06-26" />
 
-      <ServicesFAQ faqs={faqs} />
+      <ServicesFAQ
+        canonicalUrl="https://ldndecks.com/fiberon-decking-review-northern-virginia"
+        faqs={faqs}
+      />
 
       <SimpleCTA
         title="Want to Compare Samples in Person?"

@@ -27,14 +27,6 @@ export const BUSINESS = {
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:00', closes: '19:00' },
     { days: ['Saturday'], opens: '08:00', closes: '17:00' },
   ],
-  // Verified from Google Business Profile — update whenever the count changes.
-  // Source: GBP proof ledger captured 2026-06-25 (49 reviews, 5.0 average).
-  aggregateRating: {
-    ratingValue: '5.0',
-    bestRating: '5',
-    worstRating: '1',
-    reviewCount: 49,
-  },
   areaServed: [
     'Loudoun County, VA',
     'Fairfax County, VA',
@@ -206,18 +198,6 @@ export function buildOrganizationSchema() {
       opens: h.opens,
       closes: h.closes,
     })),
-    // AggregateRating reflects verified Google Business Profile data, not
-    // self-authored reviews. Google's Sept 2019 policy prohibits self-serving
-    // `Review` objects; it explicitly supports `aggregateRating` on LocalBusiness
-    // when the data is sourced from a third-party review platform. This triggers
-    // star display in brand-search SERPs. Keep reviewCount in sync with GBP.
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: BUSINESS.aggregateRating.ratingValue,
-      bestRating: BUSINESS.aggregateRating.bestRating,
-      worstRating: BUSINESS.aggregateRating.worstRating,
-      reviewCount: BUSINESS.aggregateRating.reviewCount,
-    },
     areaServed: BUSINESS.areaServed.map(name => ({ '@type': 'AdministrativeArea', name })),
     sameAs: BUSINESS.sameAs,
     hasCredential: BUSINESS.credentials.map(c => ({
