@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { BUSINESS } from '@/lib/business';
-
 // Operations Dashboard — internal-only growth control surface.
 // no-indexed (robots: noindex), no schema, no AI-search exposure.
 // Bookmark this page (https://ldndecks.com/admin/operations) and use it
@@ -18,6 +17,7 @@ export const metadata = {
 };
 
 const OPERATIONS_TIME_ZONE = 'America/New_York';
+const GOOGLE_REVIEW_COUNT = 49;
 
 function operationsDateStamp(date = new Date()) {
   return new Intl.DateTimeFormat('en-CA', {
@@ -123,7 +123,7 @@ const WEEK3_OUTREACH = [
 ];
 
 const KPI_TARGETS = [
-  { kpi: 'Google reviews count', current: BUSINESS.aggregateRating.reviewCount, target30: '53', target90: '60+', target365: '100+' },
+  { kpi: 'Google reviews count', current: GOOGLE_REVIEW_COUNT, target30: '53', target90: '60+', target365: '100+' },
   { kpi: 'Composite authority score', current: '~85', target30: '87', target90: '90', target365: '93+' },
   { kpi: 'GBP weekly post cadence', current: '0', target30: '4', target90: '12', target365: '52' },
   { kpi: 'Manufacturer locator verifications', current: 'unconfirmed', target30: '3 verified', target90: '3 maintained', target365: '3 maintained' },

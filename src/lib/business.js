@@ -27,12 +27,6 @@ export const BUSINESS = {
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:00', closes: '19:00' },
     { days: ['Saturday'], opens: '08:00', closes: '17:00' },
   ],
-  // UI-only review count — NOT included as AggregateRating JSON-LD.
-  // Source: GBP owner-view proof ledger captured 2026-06-01.
-  // Keep this conservative or switch public copy to generic wording before deploy.
-  aggregateRating: {
-    reviewCount: 47,
-  },
   areaServed: [
     'Loudoun County, VA',
     'Fairfax County, VA',
@@ -204,13 +198,6 @@ export function buildOrganizationSchema() {
       opens: h.opens,
       closes: h.closes,
     })),
-    // aggregateRating removed — self-serving LocalBusiness markup violates Google Review Snippet policy (Sept 2019)
-    // Self-hosted `review` markup is intentionally NOT emitted on the
-    // organization entity. Google's review-snippet policy disallows
-    // self-serving Review structured data (a business marking up reviews
-    // about itself) and it risks a "Spam: structured data" manual action.
-    // aggregateRating is retained for visible UI copy only — keep
-    // reviewCount in sync with the live Google Business Profile total.
     areaServed: BUSINESS.areaServed.map(name => ({ '@type': 'AdministrativeArea', name })),
     sameAs: BUSINESS.sameAs,
     hasCredential: BUSINESS.credentials.map(c => ({

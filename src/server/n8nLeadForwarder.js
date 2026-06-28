@@ -44,8 +44,13 @@ function buildN8nWebsiteLeadPayload(formData, context = {}) {
     hoa: value(formData, 'hoa'),
     address: value(formData, 'address'),
     source_channel: 'ldndecks.com',
+    landing_page: value(formData, 'source_url') || process.env.NEXT_PUBLIC_SITE_URL || 'https://ldndecks.com',
     page_url: value(formData, 'source_url') || process.env.NEXT_PUBLIC_SITE_URL || 'https://ldndecks.com',
+    page_type: value(formData, 'page_type'),
+    page_city: value(formData, 'page_city'),
+    page_county: value(formData, 'page_county'),
     form_name: value(formData, 'form_name') || value(formData, 'formLocation') || 'ldndecks.com lead form',
+    keyword: value(formData, 'utm_term'),
     referrer: value(formData, 'referrer'),
     ip_hash: hashIp(context.ipAddress),
     user_agent: context.userAgent || '',
@@ -90,4 +95,3 @@ export async function sendN8nWebsiteLead(formData, context = {}) {
     clearTimeout(timeout);
   }
 }
-

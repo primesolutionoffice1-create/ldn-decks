@@ -84,7 +84,6 @@ export default function PrinceWilliamCountyPage() {
         answer="Loudoun Decks plans deck replacement, resurfacing, composite upgrades, patios, porches, and outdoor living projects across Prince William County, including Manassas, Woodbridge, Gainesville, Haymarket, Bristow, and nearby communities. Homeowners should check Prince William permit triggers, framing condition, drainage, stairs, railings, material choices, and estimate scope before approving a project."
         facts={[
           'Primary buyer intent: Prince William County deck builder, replacement, composite upgrades, and permit guidance.',
-          'Proof status: city and project photo claims require proof-lock before public use.',
           'Conversion path: Prince William permit guide, Manassas page, and written estimate.'
         ]}
         links={[

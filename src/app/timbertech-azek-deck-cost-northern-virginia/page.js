@@ -181,7 +181,6 @@ export default function TimberTechAzekDeckCostPage() {
           'TimberTech EDGE planning range: $35-$45 per sqft installed',
           'TimberTech PRO planning range: $45-$60 per sqft installed',
           'TimberTech AZEK Vintage planning range: $60-$85 per sqft installed',
-          'Proof status: warranty and financing terms should be verified against current TimberTech/AZEK and lender documents before contract decisions',
         ]}
         links={[
           { href: '/deck-payment-estimator', label: 'Deck payment estimator' },

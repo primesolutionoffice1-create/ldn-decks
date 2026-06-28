@@ -139,23 +139,13 @@ const homepageSchema = {
   }
 };
 
-const videoSchema = {
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Loudoun Decks — Custom Deck Building in Northern Virginia",
-  "description": "See how Loudoun Decks transforms Northern Virginia backyards into outdoor living spaces with custom composite decks, screened porches, and outdoor kitchens.",
-  "thumbnailUrl": "https://ldndecks.com/home-page-ldn.webp",
-  "uploadDate": "2025-01-15T08:00:00-05:00",
-  "contentUrl": "https://ldndecks.com/introvideo.mp4",
-  "embedUrl": "https://ldndecks.com/introvideo.mp4",
-  "publisher": { "@id": "https://ldndecks.com/#organization" }
-};
+// VideoObject is emitted by StructuredData (root layout) via buildVideoObjectSchema().
+// Emitting a second VideoObject here caused duplicate nodes with conflicting data.
 
 export default function Home() {
     return (
           <main className={styles.main}>
       <JsonLd data={homepageSchema} />
-      <JsonLd data={videoSchema} />
             <Hero />
             <DeferredPromoModal />
             <TrustSection />

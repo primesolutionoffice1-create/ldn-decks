@@ -84,7 +84,6 @@ export default function ArlingtonCountyPage() {
         answer="Arlington County deck projects often involve compact lots, strict setbacks, stormwater concerns, historic-area review, rooftop or balcony constraints, and CPHD permit requirements. Homeowners should plan privacy, drainage, railing style, access, structural load, composite material options, and screened porch scope before approving a deck replacement or new outdoor living project."
         facts={[
           'Primary buyer intent: Arlington County deck builder, compact-lot planning, composite decks, and historic-review awareness.',
-          'Proof status: Arlington project and neighborhood claims require proof-lock.',
           'Conversion path: Arlington page, composite cost guide, and written estimate.'
         ]}
         links={[

@@ -171,7 +171,6 @@ export default function McLeanDeckBuilderPage() {
         answer="McLean deck projects usually need premium material planning, Fairfax County permit review, slope and drainage checks, privacy planning, and early decisions on railings, lighting, screened porches, or outdoor kitchens. Loudoun Decks plans composite deck replacement and outdoor living scopes for McLean homeowners while keeping manufacturer, project, and neighborhood proof claims gated until verified evidence is available."
         facts={[
           'Primary buyer intent: premium composite decks, estate outdoor living, screened porches, and code-reset replacement.',
-          'Proof status: no McLean project/photo/manufacturer claim should be promoted without proof-lock.',
           'Conversion path: premium budget guide, material comparison, and written estimate.'
         ]}
         links={[

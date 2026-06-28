@@ -171,7 +171,6 @@ export default function ViennaDeckBuilderPage() {
         answer="Vienna deck projects should begin with a jurisdiction check because Town of Vienna and Fairfax County addresses can follow different permit paths. Homeowners should also review mature trees, rear-yard visibility, older framing, HOA or town documentation, composite material options, stairs, railings, and whether the project is a repair, resurfacing, or full replacement."
         facts={[
           'Primary buyer intent: Town of Vienna permit clarity, composite deck replacement, screened porches, and mature-lot planning.',
-          'Proof status: exact Vienna project and photo claims stay gated until owner evidence is attached.',
           'Conversion path: Fairfax permit guide, safety checklist, composite cost guide, and written estimate.'
         ]}
         links={[

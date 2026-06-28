@@ -133,7 +133,13 @@ export default function TrexDecksPage() {
         description="Loudoun Decks is the premier Trex installer in Loudoun County, Fairfax County, and Prince William County. Experience the ultimate in low-maintenance luxury."
       />
 
-      <AboveFoldCTA headline="Planning a Trex Transcend, Select or Enhance deck in NoVA? Talk to a composite deck specialist today." />
+      <AboveFoldCTA
+        headline="Planning a Trex Transcend, Select or Enhance deck in NoVA? Talk to a composite deck specialist today."
+        showQuickForm
+        quickFormService="Trex Decks"
+        quickFormLocation="paid_search_trex_above_fold"
+        quickFormHeading="Want pricing for a contractor-installed Trex deck? Call now or send the short form."
+      />
 
       <GeoAnswerBlock
         question="Who builds Trex decks for Northern Virginia homeowners?"
@@ -141,7 +147,6 @@ export default function TrexDecksPage() {
         facts={[
           'Best-fit projects: new Trex decks, deck replacement, railing upgrades, stairs, lighting, and covered outdoor living',
           'Primary local markets: Ashburn, Leesburg, Sterling, Reston, Fairfax, McLean, Vienna, Arlington, Alexandria, Manassas, and Woodbridge',
-          'Proof status: manufacturer status, project photos, exact city claims, and warranty claims require source verification before public case-study use',
         ]}
         links={[
           { href: '/trex-deck-cost-monthly-payment', label: 'Trex cost planning' },
@@ -156,7 +161,7 @@ export default function TrexDecksPage() {
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
             <strong style={{ color: '#111', fontSize: '18px' }}>New Trex deck projects from $15,000+</strong>
             <br />
-            On this page we focus on <strong style={{ color: '#111' }}>full custom Trex builds</strong>. Use the <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>payment estimator tool</Link> to model monthly payments, or see our <Link href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link> for repair work, board replacement, railing, or structural fixes.
+            On this page we focus on <strong style={{ color: '#111' }}>full contractor-installed Trex deck projects</strong>, not board-only retail purchases. Use the <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>payment estimator tool</Link> to model monthly payments, or see our <Link href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link> for repair work, board replacement, railing, or structural fixes.
           </p>
         </div>
       </section>

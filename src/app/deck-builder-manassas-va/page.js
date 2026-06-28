@@ -120,7 +120,6 @@ export default function ManassasDeckBuilderPage() {
             answer="Manassas deck projects should confirm whether the home falls under City of Manassas, Manassas Park, Prince William County, HOA, or historic-area review before pricing is finalized. The safest first step is to inspect framing, ledger flashing, posts, footings, stairs, railings, and drainage, then choose resurfacing or full replacement with composite, PVC, or wood materials."
             facts={[
               'Primary buyer intent: Manassas deck builder, Prince William permit planning, replacement, and composite upgrades.',
-              'Proof status: exact Manassas project/photo claims require proof-lock.',
               'Conversion path: Prince William permit guide, safety inspection, and written estimate.'
             ]}
             links={[

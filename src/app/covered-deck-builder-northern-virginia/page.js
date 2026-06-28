@@ -117,7 +117,6 @@ export default function CoveredDeckPage() {
         facts={[
           'Best use: shade, rain protection, grilling, outdoor kitchens, open-air entertaining',
           'Approval path: roofed structures usually require permit and structural review',
-          'Proof status: project photos need proof-lock before exact city/customer claims',
         ]}
         links={[
           { href: '/screened-porch-builder-northern-virginia', label: 'Screened porch builder' },
