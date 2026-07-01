@@ -67,7 +67,7 @@ export const showcaseProjects = [
     slug: "new-composite-deck-ashburn",
     title: "BUILD NEW COMPOSITE DECK",
     location: "Ashburn, October 2024",
-    image: "/images/img10.jpeg"
+    image: "/images/img13.jpeg"
   },
   {
     id: 13,

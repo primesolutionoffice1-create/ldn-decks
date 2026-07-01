@@ -562,7 +562,7 @@ export const servicePageTypes = {
     related: ['/composite-decks', '/trex-decks', '/timbertech-decks', '/composite-deck-vs-wood-deck-virginia'],
     lowPrice: '20000',
     highPrice: '90000',
-    image: '/images/img10.jpeg',
+    image: '/images/img13.jpeg',
   },
   'wood-decks': {
     path: 'wood-decks',
@@ -610,7 +610,7 @@ export const servicePageTypes = {
     related: ['/screened-porch-builder-northern-virginia', '/services/porches', '/three-season-room-northern-virginia', '/covered-deck-builder-northern-virginia'],
     lowPrice: '35000',
     highPrice: '110000',
-    image: '/images/img01.jpeg',
+    image: '/images/screened-porch-cost-northern-virginia-2026.jpg',
   },
   pergolas: {
     path: 'pergolas',
@@ -679,6 +679,35 @@ export function getCityBySlug(citySlug) {
   return getTargetCities().find((entry) => entry.citySlug === citySlug) || null;
 }
 
+// Core/spam update guardrail: only index programmatic city-service pages where
+// we have enough market priority and local differentiation to justify a
+// standalone search result. All other city-service permutations remain live
+// for users and internal discovery, but should be noindex/follow until project
+// proof, photos, and city-specific evidence are added.
+export const indexableLocalServiceCities = new Set([
+  'ashburn',
+  'leesburg',
+  'sterling',
+  'fairfax',
+  'reston',
+  'herndon',
+  'mclean',
+  'vienna',
+  'centreville',
+  'woodbridge',
+  'manassas',
+]);
+
+export const indexableLocalServiceKeys = new Set([
+  'composite-decks',
+  'deck-repair',
+  'screened-porches',
+]);
+
+export function shouldIndexLocalServicePage(serviceKey, citySlug) {
+  return indexableLocalServiceKeys.has(serviceKey) && indexableLocalServiceCities.has(citySlug);
+}
+
 export function getLocalServiceParams(serviceKey) {
   return getTargetCities().map(({ citySlug }) => ({
     city: citySlug,
@@ -693,6 +722,12 @@ export function getAllLocalServicePages() {
       service,
       city,
     }))
+  );
+}
+
+export function getIndexableLocalServicePages() {
+  return getAllLocalServicePages().filter(({ service, city }) =>
+    shouldIndexLocalServicePage(service.path, city.citySlug)
   );
 }
 

@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import LocalServicePage from '@/components/LocalServicePage';
-import { getCityBySlug, getLocalServiceParams, servicePageTypes } from '@/data/localServicePages';
+import { getCityBySlug, getLocalServiceParams, servicePageTypes, shouldIndexLocalServicePage } from '@/data/localServicePages';
 import { buildMetadata } from '@/lib/seo';
 
 const serviceKey = 'pergolas';
@@ -18,6 +18,7 @@ export async function generateMetadata({ params }) {
     title: `Pergola Builder ${cityData.city} VA | Custom Shade Structures`,
     description: `Pergola builder in ${cityData.city}, VA. Custom deck pergolas, patio pergolas, louvered covers, privacy screens, lighting and free estimates.`,
     image: servicePageTypes[serviceKey].image,
+    noIndex: !shouldIndexLocalServicePage(serviceKey, cityData.citySlug),
   });
 }
 

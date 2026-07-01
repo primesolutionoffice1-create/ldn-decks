@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import LocalServicePage from '@/components/LocalServicePage';
-import { getCityBySlug, getLocalServiceParams, servicePageTypes } from '@/data/localServicePages';
+import { getCityBySlug, getLocalServiceParams, servicePageTypes, shouldIndexLocalServicePage } from '@/data/localServicePages';
 import { buildMetadata } from '@/lib/seo';
 
 const serviceKey = 'patios';
@@ -18,6 +18,7 @@ export async function generateMetadata({ params }) {
     title: `Patio Contractor ${cityData.city} VA | Paver & Stone Patios`,
     description: `Patio contractor in ${cityData.city}, VA. Paver patios, bluestone, flagstone, stamped concrete, drainage planning and free local estimates.`,
     image: servicePageTypes[serviceKey].image,
+    noIndex: !shouldIndexLocalServicePage(serviceKey, cityData.citySlug),
   });
 }
 

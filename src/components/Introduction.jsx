@@ -56,7 +56,7 @@ export default function Introduction() {
           <div className={styles.frameOutline}></div>
           <div className={styles.mainImgWrapper}>
             <Image
-              src="/images/homepage-intro-timbertech-deck.png"
+              src="/images/homepage-intro-timbertech-deck.jpg"
               alt="TimberTech composite deck with screened porch, black railings and step lighting built by Loudoun Decks in Northern Virginia"
               fill
               className={styles.imgProps}

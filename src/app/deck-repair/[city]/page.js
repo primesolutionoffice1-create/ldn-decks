@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import LocalServicePage from '@/components/LocalServicePage';
-import { getCityBySlug, getLocalServiceParams, servicePageTypes } from '@/data/localServicePages';
+import { getCityBySlug, getLocalServiceParams, servicePageTypes, shouldIndexLocalServicePage } from '@/data/localServicePages';
 import { buildMetadata } from '@/lib/seo';
 
 const serviceKey = 'deck-repair';
@@ -18,6 +18,7 @@ export async function generateMetadata({ params }) {
     title: `Deck Repair ${cityData.city} VA | Structural Deck Contractor`,
     description: `Deck repair in ${cityData.city}, VA. Structural inspections, stair repair, railing repair, board replacement and resurfacing guidance from Loudoun Decks.`,
     image: servicePageTypes[serviceKey].image,
+    noIndex: !shouldIndexLocalServicePage(serviceKey, cityData.citySlug),
   });
 }
 

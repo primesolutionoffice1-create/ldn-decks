@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import LocalServicePage from '@/components/LocalServicePage';
-import { getCityBySlug, getLocalServiceParams, servicePageTypes } from '@/data/localServicePages';
+import { getCityBySlug, getLocalServiceParams, servicePageTypes, shouldIndexLocalServicePage } from '@/data/localServicePages';
 import { buildMetadata } from '@/lib/seo';
 
 const serviceKey = 'service';
@@ -18,6 +18,7 @@ export async function generateMetadata({ params }) {
     title: `Deck Builder in ${cityData.city} VA | Custom Decks & Porches`,
     description: `Local deck builder in ${cityData.city}, VA. Custom decks, composite decks, screened porches, patios and pergolas by Loudoun Decks. Free local estimate.`,
     image: servicePageTypes[serviceKey].image,
+    noIndex: !shouldIndexLocalServicePage(serviceKey, cityData.citySlug),
   });
 }
 

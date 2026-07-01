@@ -194,7 +194,7 @@ export default function CompositeDecksPage() {
           "Permit and HOA documentation planned by scope",
           "See our before & after transformations"
         ]}
-        image1="/images/img10.jpeg"
+        image1="/images/img13.jpeg"
         image2="/images/img11.jpeg"
       />
 
