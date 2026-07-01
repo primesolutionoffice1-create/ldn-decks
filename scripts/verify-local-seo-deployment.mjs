@@ -2,24 +2,24 @@
 
 const CANONICAL_ORIGIN = 'https://ldndecks.com';
 const FETCH_ORIGIN = (process.env.SEO_AUDIT_ORIGIN || CANONICAL_ORIGIN).replace(/\/$/, '');
-const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 721);
-const EXPECTED_LOCAL_SERVICE_URLS = Number(process.env.EXPECTED_LOCAL_SERVICE_URLS || 464);
+// After the May 2026 core update / June 2026 spam update hardening, the
+// sitemap intentionally submits only vetted local service pages. The broader
+// programmatic set remains live, but should stay out of the sitemap until each
+// page has enough local proof to be indexable.
+const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 385);
+const EXPECTED_LOCAL_SERVICE_URLS = Number(process.env.EXPECTED_LOCAL_SERVICE_URLS || 33);
 const KNOWN_BAD_SITEMAP_URLS = Number(process.env.KNOWN_BAD_SITEMAP_URLS || 260);
 const TIMEOUT_MS = Number(process.env.SEO_DEPLOYMENT_GUARD_TIMEOUT_MS || 12000);
 
 const localServicePattern = /\/(service|composite-decks|wood-decks|deck-repair|screened-porches|pergolas|patios|outdoor-living)\//;
 
 const priorityPaths = [
-  '/service/ashburn',
   '/composite-decks/leesburg',
   '/deck-repair/fairfax',
-  '/screened-porches/chantilly',
-  '/outdoor-living/woodbridge',
-  '/service/mclean',
-  '/service/great-falls',
-  '/service/gainesville',
-  '/service/haymarket',
-  '/service/lake-ridge',
+  '/screened-porches/ashburn',
+  '/composite-decks/mclean',
+  '/deck-repair/woodbridge',
+  '/screened-porches/reston',
 ];
 
 async function fetchText(url) {
@@ -119,7 +119,7 @@ try {
   }
 
   const llmsFull = await fetchText(`${CANONICAL_ORIGIN}/llms-full.txt`);
-  if (llmsFull.ok && /464 local service|58 Northern Virginia localities|outdoor-living\/woodbridge/i.test(llmsFull.text)) {
+  if (llmsFull.ok && /vetted city-service combinations|screened-porches\/woodbridge|Local Service Architecture/i.test(llmsFull.text)) {
     pass(checks, 'llms-full.txt exposes local architecture');
   } else {
     fail(checks, 'llms-full.txt exposes local architecture', `status ${llmsFull.status}`);
