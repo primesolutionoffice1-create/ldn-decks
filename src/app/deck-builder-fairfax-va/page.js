@@ -12,6 +12,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-fairfax-va',
@@ -96,6 +97,12 @@ export default function FairfaxDeckBuilderPage() {
           </div>
         </div>
       </section>
+      <CityLeadFormSection
+        city="Fairfax"
+        county="Fairfax County / City of Fairfax"
+        service="deck replacement or composite deck"
+        formLocation="paid_search_fairfax_deck_builder"
+      />
 
       <article style={{ padding: '3rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

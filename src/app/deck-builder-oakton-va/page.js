@@ -18,6 +18,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-oakton-va',
@@ -156,6 +157,12 @@ export default function OaktonDeckBuilderPage() {
         image1="/images/img64.jpeg"
         image2="/images/img21.jpeg"
       />
+      <CityLeadFormSection
+        city="Oakton"
+        county="Fairfax County"
+        service="premium deck replacement or composite deck"
+        formLocation="paid_search_oakton_deck_builder"
+      />
       <PlanningUpdate
         market="Oakton decks in 2026"
         notes={[
@@ -186,7 +193,7 @@ export default function OaktonDeckBuilderPage() {
           A typical Oakton multi-level deck concept might include TimberTech AZEK or Trex boards, cable or aluminum railing,
           integrated lighting, and a layout that follows natural grade changes between an upper dining area and lower lounge level.
           Wooded lots should be reviewed for tree root zones, footing locations, drainage, and Fairfax County permit requirements.
-          Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.
+          The right Oakton scope should be confirmed after a site visit, wooded-lot access review, root-zone planning, permit-path check, and structural inspection of any existing deck.
         </p>
       </div>
 

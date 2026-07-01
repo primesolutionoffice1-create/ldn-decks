@@ -17,6 +17,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -176,6 +177,12 @@ export default function DeckBuilderAshburnPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <CityLeadFormSection
+        city="Ashburn"
+        county="Loudoun County"
+        service="deck replacement or composite deck"
+        formLocation="paid_search_ashburn_deck_builder"
       />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
         <NamedAuthor context="Ashburn and Loudoun County" lastUpdated="2026-06-01" />

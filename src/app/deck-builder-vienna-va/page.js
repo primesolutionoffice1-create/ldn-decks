@@ -19,6 +19,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-vienna-va',
@@ -153,6 +154,12 @@ export default function ViennaDeckBuilderPage() {
         image1="/images/img37.jpeg"
         image2="/images/img37.jpeg"
       />
+      <CityLeadFormSection
+        city="Vienna"
+        county="Fairfax County"
+        service="deck replacement or composite deck"
+        formLocation="paid_search_vienna_deck_builder"
+      />
       <PlanningUpdate
         market="Vienna decks in 2026"
         notes={[
@@ -195,7 +202,7 @@ export default function ViennaDeckBuilderPage() {
         <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
           Typical Vienna scopes include 320 to 450 sqft composite deck replacements, Trex or TimberTech surfaces,
           aluminum railing upgrades, and lighting packages designed around mature lots and rear-yard privacy.
-          Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.
+          The right Vienna scope should be confirmed after a jurisdiction check, framing review, mature-tree planning, material selection, and HOA or town documentation review.
         </p>
       </div>
 

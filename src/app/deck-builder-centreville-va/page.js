@@ -193,7 +193,7 @@ export default function CentrevilleDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Centreville Project Planning Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Deck + Screened Porch Scenario, Virginia Run</h3>
-            <p style={{ lineHeight: 1.7 }}>A Centreville deck-plus-screened-porch concept might connect an open composite grilling deck to a screened porch with upgraded ceiling finish, lighting, and aluminum or composite railing. Final pricing and timeline should be confirmed after Fairfax County permit requirements, HOA rules, footing conditions, electrical needs, and material selections are reviewed. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.</p>
+            <p style={{ lineHeight: 1.7 }}>A Centreville deck-plus-screened-porch concept might connect an open composite grilling deck to a screened porch with upgraded ceiling finish, lighting, and aluminum or composite railing. Final pricing and timeline should be confirmed after Fairfax County permit requirements, HOA rules, footing conditions, electrical needs, and material selections are reviewed.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ — building a deck in Centreville</h2>

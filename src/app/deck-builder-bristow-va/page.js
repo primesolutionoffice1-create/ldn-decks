@@ -152,7 +152,7 @@ export default function BristowDeckBuilderPage() {
         </div>
         <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Bristow Project Planning Example</h2>
         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>300 sqft Deck Resurfacing Scenario in Braemar</h3>
-        <p style={{ lineHeight: 1.7, marginBottom: '1.5rem' }}>A Bristow resurfacing candidate might keep an existing pressure-treated frame only after the ledger, joists, beams, posts, and footings inspect sound. Common upgrades include Trex Enhance or Transcend boards, new aluminum railing, stair lighting, fascia, and HOA-ready material documentation. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit or HOA details are available.</p>
+        <p style={{ lineHeight: 1.7, marginBottom: '1.5rem' }}>A Bristow resurfacing candidate might keep an existing pressure-treated frame only after the ledger, joists, beams, posts, and footings inspect sound. Common upgrades include Trex Enhance or Transcend boards, new aluminum railing, stair lighting, fascia, and HOA-ready material documentation.</p>
       </div>
       <ServiceInclusions
         title="Why Bristow Homeowners Choose Loudoun Decks"

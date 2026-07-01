@@ -104,7 +104,7 @@ export default function StaffordDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Stafford Project Planning Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>380 sqft Composite Deck Scenario, Embrey Mill</h3>
-            <p style={{ lineHeight: 1.7 }}>A typical Stafford composite deck concept might include Trex or TimberTech boards, aluminum railing, stair lighting, and wider stairs to the yard. Final pricing and timeline should be confirmed after Stafford County permit requirements, HOA rules, material selection, access, and footing conditions are reviewed. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.</p>
+            <p style={{ lineHeight: 1.7 }}>A typical Stafford composite deck concept might include Trex or TimberTech boards, aluminum railing, stair lighting, and wider stairs to the yard. Final pricing and timeline should be confirmed after Stafford County permit requirements, HOA rules, material selection, access, and footing conditions are reviewed.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Stafford Communities</h2>
