@@ -48,7 +48,7 @@ export default function DeckROICalculatorPage() {
         title="Deck ROI in Northern Virginia: 2026 Home Value Data"
         description="How much value does a deck add in Northern Virginia? Real ROI data by material, project type, and county — plus the investment sweet spot."
         path="/deck-roi-calculator-northern-virginia"
-        image="/images/img10.jpeg"
+        image="/images/img13.jpeg"
         datePublished="2026-04-26"
         dateModified="2026-04-26"
       />
@@ -75,7 +75,7 @@ export default function DeckROICalculatorPage() {
           {/* Hero Image */}
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/images/img10.jpeg"
+              src="/images/img13.jpeg"
               alt="Beautiful composite deck adding value to a Northern Virginia home"
               fill
               style={{ objectFit: 'cover' }}

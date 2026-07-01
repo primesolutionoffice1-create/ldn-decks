@@ -223,7 +223,7 @@ export default function GetEstimatePage() {
                   alt: 'Elevated deck with stair lighting and cable railing by Loudoun Decks',
                 },
                 {
-                  src: '/images/screened-porch-cost-northern-virginia-2026.png',
+                  src: '/images/screened-porch-cost-northern-virginia-2026.jpg',
                   alt: 'Modern screened porch with black railing and wooded backyard view by Loudoun Decks',
                 },
               ].map((photo) => (

@@ -13,7 +13,7 @@ export const metadata = buildMetadata({
   path: '/fiberon-decking-review-northern-virginia',
   title: 'Fiberon Decking Review 2026 | How It Compares in Northern Virginia',
   description: 'Honest Fiberon composite decking review for Northern Virginia homeowners. How Fiberon Symmetry and Good Life compare to Trex and TimberTech in cost, heat, and durability.',
-  image: '/images/img10.jpeg',
+  image: '/images/img13.jpeg',
 });
 
 const faqs = [
@@ -54,7 +54,7 @@ export default function FiberonReviewPage() {
         title="Fiberon Decking Review 2026"
         description="How Fiberon Symmetry, Good Life, and Concordia compare to Trex and TimberTech for Northern Virginia homeowners — from an installer who has built with all major composite brands."
         path="/fiberon-decking-review-northern-virginia"
-        image="/images/img10.jpeg"
+        image="/images/img13.jpeg"
       />
 
       <article style={{ maxWidth: 860, margin: '2.5rem auto', padding: '0 1.5rem', lineHeight: '1.75' }}>

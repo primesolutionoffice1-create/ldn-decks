@@ -2,7 +2,7 @@
 
 > This is the extended content index for Loudoun Decks (ldndecks.com). It provides page-level detail for AI retrieval systems, citation engines, and semantic indexing. For the summary version, see: https://ldndecks.com/llms.txt
 
-Last updated: 2026-06-21
+Last updated: 2026-07-01
 Sitemap: https://ldndecks.com/sitemap.xml
 Entity: Loudoun Decks LLC (dba "Loudoun Decks" / "LDN Decks")
 Location: Centreville, VA
@@ -15,7 +15,7 @@ Entity ID: https://ldndecks.com/#organization
 
 ## LOCAL SERVICE ARCHITECTURE
 
-The site exposes 464 local service URLs across 58 Northern Virginia localities and service categories including custom decks, composite decks, wood decks, deck repair, screened porches, pergolas, patios, and outdoor living. Priority crawler examples: https://ldndecks.com/service/ashburn, https://ldndecks.com/composite-decks/leesburg, https://ldndecks.com/deck-repair/fairfax, https://ldndecks.com/screened-porches/chantilly, https://ldndecks.com/outdoor-living/woodbridge, https://ldndecks.com/service/mclean, https://ldndecks.com/service/great-falls, https://ldndecks.com/service/gainesville, https://ldndecks.com/service/haymarket, and https://ldndecks.com/service/lake-ridge.
+The site has a broad local service URL architecture across Northern Virginia, but only vetted city-service combinations are submitted for indexing. Priority crawl examples: https://ldndecks.com/composite-decks/ashburn, https://ldndecks.com/composite-decks/leesburg, https://ldndecks.com/deck-repair/fairfax, https://ldndecks.com/deck-repair/manassas, https://ldndecks.com/screened-porches/reston, and https://ldndecks.com/screened-porches/woodbridge. Other programmatic city-service URLs may remain live for users with noindex/follow until stronger local proof, photos, and project evidence are added.
 
 ---
 

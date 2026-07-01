@@ -52,7 +52,7 @@ const trustBadges = [
 const projectExamples = [
   {
     location: 'Ashburn / Brambleton',
-    image: '/images/img10.jpeg',
+    image: '/images/img13.jpeg',
     alt: 'Trex composite deck built by Loudoun Decks in Ashburn VA',
     text: 'Typical project: 400-600 sq ft Trex Transcend deck with picture-frame borders, privacy screening, and HOA-ready material selections.',
   },
@@ -201,7 +201,7 @@ export default function CompositeDeckBuilderLoudounPage() {
             <p style={{ color: '#cdbfb5', fontSize: 14, margin: 0 }}>For full deck builds, replacements, and premium outdoor living projects starting at $15,000+.</p>
           </div>
           <div style={{ position: 'relative', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', boxShadow: '0 30px 70px rgba(0,0,0,.35)' }}>
-            <Image src="/images/img10.jpeg" alt="Composite deck project by Loudoun Decks in Northern Virginia" fill priority sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
+            <Image src="/images/img13.jpeg" alt="Composite deck project by Loudoun Decks in Northern Virginia" fill priority sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>

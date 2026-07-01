@@ -77,7 +77,7 @@ export default function QuestionsPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
-              src="/images/img10.jpeg"
+              src="/images/img13.jpeg"
               alt="Consulting with a professional deck builder in Northern Virginia"
               fill
               style={{ objectFit: 'cover' }}

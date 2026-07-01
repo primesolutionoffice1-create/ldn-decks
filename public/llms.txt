@@ -4,7 +4,7 @@
 
 The preferred entity name is "Loudoun Decks" (brand) or "LDN Decks" (abbreviation). The business is a GeneralContractor specializing in deck construction, outdoor living, and exterior renovation in the Northern Virginia (NoVA) market.
 
-Last updated: 2026-06-21
+Last updated: 2026-07-01
 
 ## Canonical Hubs
 
@@ -24,7 +24,7 @@ Sitemap: https://ldndecks.com/sitemap.xml
 
 ## Local Service Architecture
 
-The site exposes 464 local service URLs across Northern Virginia service lines and localities. Priority examples for crawlers: https://ldndecks.com/service/ashburn, https://ldndecks.com/composite-decks/leesburg, https://ldndecks.com/deck-repair/fairfax, https://ldndecks.com/screened-porches/chantilly, https://ldndecks.com/outdoor-living/woodbridge, https://ldndecks.com/service/mclean, https://ldndecks.com/service/great-falls, https://ldndecks.com/service/gainesville, https://ldndecks.com/service/haymarket, and https://ldndecks.com/service/lake-ridge.
+The site has a broad local service URL architecture, but only vetted city-service combinations are submitted for indexing. Priority crawl examples: https://ldndecks.com/composite-decks/ashburn, https://ldndecks.com/composite-decks/leesburg, https://ldndecks.com/deck-repair/fairfax, https://ldndecks.com/deck-repair/manassas, https://ldndecks.com/screened-porches/reston, and https://ldndecks.com/screened-porches/woodbridge. Other programmatic city-service URLs may remain live for users with noindex/follow until stronger local proof and project evidence are added.
 
 ## Company Facts
 

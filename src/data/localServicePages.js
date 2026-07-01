@@ -610,7 +610,7 @@ export const servicePageTypes = {
     related: ['/screened-porch-builder-northern-virginia', '/services/porches', '/three-season-room-northern-virginia', '/covered-deck-builder-northern-virginia'],
     lowPrice: '35000',
     highPrice: '110000',
-    image: '/images/screened-porch-cost-northern-virginia-2026.png',
+    image: '/images/screened-porch-cost-northern-virginia-2026.jpg',
   },
   pergolas: {
     path: 'pergolas',
