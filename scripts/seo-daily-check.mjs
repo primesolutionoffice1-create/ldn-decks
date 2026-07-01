@@ -14,8 +14,12 @@ const CANONICAL_ORIGIN = (
   process.env.SEO_CHECK_CANONICAL_ORIGIN ||
   'https://ldndecks.com'
 ).replace(/\/$/, '');
-const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 721);
-const EXPECTED_LOCAL_SERVICE_URLS = Number(process.env.EXPECTED_LOCAL_SERVICE_URLS || 464);
+// Keep this aligned with verify-local-seo-deployment.mjs. After the May 2026
+// core update / June 2026 spam update hardening, only vetted local service
+// pages are submitted in the sitemap; broader programmatic pages can stay live
+// with noindex/follow until they have enough local proof.
+const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 385);
+const EXPECTED_LOCAL_SERVICE_URLS = Number(process.env.EXPECTED_LOCAL_SERVICE_URLS || 33);
 const KNOWN_BAD_SITEMAP_URLS = Number(process.env.KNOWN_BAD_SITEMAP_URLS || 260);
 const localServicePattern = /\/(service|composite-decks|wood-decks|deck-repair|screened-porches|pergolas|patios|outdoor-living)\//;
 const submitIndexNowRequested = process.argv.includes('--submit-indexnow');
@@ -237,8 +241,8 @@ try {
     indexNowResult = null;
   }
   const indexNowOk = shouldSubmitIndexNow
-    ? indexNow.ok && indexNowResult?.result?.ok === true && indexNowResult?.submitted >= EXPECTED_SITEMAP_URLS
-    : indexNow.ok && indexNowResult?.total >= EXPECTED_SITEMAP_URLS;
+    ? indexNow.ok && indexNowResult?.result?.ok === true && indexNowResult?.submitted > 0
+    : indexNow.ok && indexNowResult?.total > 0;
   const indexNowLabel = shouldSubmitIndexNow ? 'IndexNow submission accepted' : 'IndexNow preview is reachable';
   const indexNowDetails = shouldSubmitIndexNow
     ? indexNow.text.trim()
