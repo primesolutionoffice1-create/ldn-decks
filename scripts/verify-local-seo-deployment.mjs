@@ -112,7 +112,7 @@ try {
   }
 
   const llms = await fetchText(`${CANONICAL_ORIGIN}/llms.txt`);
-  if (llms.ok && /464 local service|Local Service Architecture|service\/ashburn/i.test(llms.text)) {
+  if (llms.ok && /vetted city-service combinations|screened-porches\/woodbridge|Local Service Architecture/i.test(llms.text)) {
     pass(checks, 'llms.txt exposes local architecture');
   } else {
     fail(checks, 'llms.txt exposes local architecture', `status ${llms.status}`);
