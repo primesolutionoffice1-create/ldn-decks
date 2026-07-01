@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import LocalServicePage from '@/components/LocalServicePage';
-import { getCityBySlug, getLocalServiceParams, servicePageTypes } from '@/data/localServicePages';
+import { getCityBySlug, getLocalServiceParams, servicePageTypes, shouldIndexLocalServicePage } from '@/data/localServicePages';
 import { buildMetadata } from '@/lib/seo';
 
 const serviceKey = 'composite-decks';
@@ -18,6 +18,7 @@ export async function generateMetadata({ params }) {
     title: `Composite Deck Builder ${cityData.city} VA | Trex & TimberTech`,
     description: `Composite deck builder in ${cityData.city}, VA. Trex, TimberTech and AZEK decks with permits, HOA support, hidden fasteners and free estimates.`,
     image: servicePageTypes[serviceKey].image,
+    noIndex: !shouldIndexLocalServicePage(serviceKey, cityData.citySlug),
   });
 }
 

@@ -315,6 +315,55 @@
   background: #f8f6f2;
 }
 
+.verificationSection {
+  padding: 72px 32px;
+  background: #211d1a;
+  color: #fff;
+}
+
+.verificationSection .sectionHeader p:not(.kicker) {
+  color: #f0e7dd;
+}
+
+.verificationGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.verificationGrid a {
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  text-decoration: none;
+}
+
+.verificationGrid a:hover {
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.verificationGrid span {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.verificationGrid strong {
+  color: #f5b181;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
 .answerGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -400,6 +449,7 @@
   .quickGrid,
   .answerGrid,
   .faqGrid,
+  .verificationGrid,
   .moneyPathGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -421,6 +471,11 @@
     padding-right: 18px;
   }
 
+  .verificationSection {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .primaryCta,
   .secondaryCta {
     width: 100%;
@@ -434,6 +489,7 @@
   .quickGrid,
   .answerGrid,
   .faqGrid,
+  .verificationGrid,
   .moneyPathGrid {
     grid-template-columns: 1fr;
   }

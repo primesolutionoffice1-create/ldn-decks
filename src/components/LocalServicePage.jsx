@@ -8,6 +8,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import TrackedLink from '@/components/TrackedLink';
 import { BUSINESS, ORG_ID } from '@/lib/business';
 import { SITE_URL } from '@/lib/seo';
+import { getVerifiedReviewSourceSnippets } from '@/lib/verifiedProof';
 import { buildCityProfile, servicePageTypes } from '@/data/localServicePages';
 import styles from './LocalServicePage.module.css';
 
@@ -194,6 +195,7 @@ export default function LocalServicePage({ city, serviceKey }) {
     href,
     label: labelForRelatedPath(href),
   }));
+  const publicReviewSources = getVerifiedReviewSourceSnippets();
   const pageContext = {
     city: city.city,
     county: city.county,
@@ -224,8 +226,8 @@ export default function LocalServicePage({ city, serviceKey }) {
             <span>BBB Accredited</span>
           </div>
           <div className={styles.ctaRow}>
-            <TrackedLink href="/get-estimate" ctaLocation={`${service.path}_${city.citySlug}_hero`} ctaLabel="Request Local Estimate" pageContext={pageContext} className={styles.primaryCta}>
-              Request Local Estimate
+            <TrackedLink href="/get-estimate" ctaLocation={`${service.path}_${city.citySlug}_hero`} ctaLabel="Request a Written Estimate" pageContext={pageContext} className={styles.primaryCta}>
+              Request a Written Estimate
             </TrackedLink>
             <CallLink className={styles.secondaryCta} ctaLocation={`${service.path}_${city.citySlug}_hero_phone`} pageContext={pageContext}>Call {city.city} Team</CallLink>
           </div>
@@ -310,6 +312,26 @@ export default function LocalServicePage({ city, serviceKey }) {
           ))}
         </div>
       </section>
+
+      {publicReviewSources.length > 0 && (
+        <section className={styles.verificationSection} aria-label="Public verification sources">
+          <div className={styles.sectionHeader}>
+            <p className={styles.kicker}>Verification Sources</p>
+            <h2>Check Loudoun Decks Before You Book</h2>
+            <p>
+              Use these public profiles to verify the company before requesting a {city.city} {service.label.toLowerCase()} estimate. Project case studies are added only after scope, photos, dates, and permission are confirmed.
+            </p>
+          </div>
+          <div className={styles.verificationGrid}>
+            {publicReviewSources.map((source) => (
+              <a key={source.id} href={source.sourceUrl} target="_blank" rel="noopener noreferrer">
+                <span>{source.label}</span>
+                <strong>Open public profile</strong>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className={styles.localSection}>
         <div>

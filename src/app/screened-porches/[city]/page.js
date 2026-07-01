@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import LocalServicePage from '@/components/LocalServicePage';
-import { getCityBySlug, getLocalServiceParams, servicePageTypes } from '@/data/localServicePages';
+import { getCityBySlug, getLocalServiceParams, servicePageTypes, shouldIndexLocalServicePage } from '@/data/localServicePages';
 import { buildMetadata } from '@/lib/seo';
 
 const serviceKey = 'screened-porches';
@@ -18,6 +18,7 @@ export async function generateMetadata({ params }) {
     title: `Screened Porch Builder ${cityData.city} VA | Three-Season Rooms`,
     description: `Screened porch builder in ${cityData.city}, VA. Custom porches, covered deck conversions, EZE-Breeze options, permits and HOA support.`,
     image: servicePageTypes[serviceKey].image,
+    noIndex: !shouldIndexLocalServicePage(serviceKey, cityData.citySlug),
   });
 }
 
