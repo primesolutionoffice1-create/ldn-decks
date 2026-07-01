@@ -16,6 +16,7 @@ import CallLink from '@/components/CallLink';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-sterling-va',
@@ -56,6 +57,11 @@ export default function SterlingDeckBuilderPage() {
           <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · Licensed &amp; Insured · Written scope and warranty details provided before contract</p>
         </div>
       </section>
+      <CityLeadFormSection
+        city="Sterling"
+        county="Loudoun County"
+        service="deck replacement, composite deck, or screened porch"
+      />
       <PlanningUpdate
         market="Sterling decks in 2026"
         notes={[

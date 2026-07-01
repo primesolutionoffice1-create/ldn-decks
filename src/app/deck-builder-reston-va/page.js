@@ -18,6 +18,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-reston-va',
@@ -131,6 +132,11 @@ export default function DeckBuilderRestonPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <CityLeadFormSection
+        city="Reston"
+        county="Fairfax County / Reston Association"
+        service="deck replacement, composite deck, or screened porch"
       />
       <PlanningUpdate
         market="Reston deck projects"

@@ -15,6 +15,7 @@ import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-centreville-va',
@@ -65,6 +66,11 @@ export default function CentrevilleDeckBuilderPage() {
           <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · 13704 Winding Oak Cir, Centreville, VA 20121 · Showroom by appointment</p>
         </div>
       </section>
+      <CityLeadFormSection
+        city="Centreville"
+        county="Fairfax County"
+        service="deck replacement, composite deck, or showroom planning visit"
+      />
       <PlanningUpdate
         market="Centreville decks in 2026"
         notes={[

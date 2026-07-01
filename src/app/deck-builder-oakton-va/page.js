@@ -161,7 +161,7 @@ export default function OaktonDeckBuilderPage() {
         city="Oakton"
         county="Fairfax County"
         service="premium deck replacement or composite deck"
-        formLocation="paid_search_oakton_deck_builder"
+        formLocation="local_city_oakton_deck_builder"
       />
       <PlanningUpdate
         market="Oakton decks in 2026"

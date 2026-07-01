@@ -6,7 +6,7 @@ export default function CityLeadFormSection({
   service = 'Deck replacement or composite deck',
   formLocation,
   heading,
-  pageType = 'paid_search_city_landing_page',
+  pageType = 'local_city_landing_page',
 }) {
   const cityService = `${city} ${service}`;
 
@@ -21,12 +21,13 @@ export default function CityLeadFormSection({
             Deck Replacement and Composite Deck Estimates in {city}
           </h2>
           <p style={{ margin: '0.8rem auto 0', color: '#5c514b', lineHeight: 1.65, maxWidth: 700 }}>
-            Use this short form if you are planning a serious {city} deck replacement, composite deck, screened porch, or outdoor living project. We prioritize homeowner requests with realistic project scope and budget.
+            Use this short form if you are planning a serious {city} deck replacement, composite deck, screened porch, or outdoor living project. We prioritize homeowner requests with clear project scope, location, and budget range.
           </p>
         </div>
         <PaidSearchLeadForm
           service={cityService}
-          formLocation={formLocation || `paid_search_${city.toLowerCase().replace(/[^a-z0-9]+/g, '_')}_deck_builder`}
+          formLocation={formLocation || `local_city_${city.toLowerCase().replace(/[^a-z0-9]+/g, '_')}_deck_builder`}
+          leadSource="Local SEO city page"
           heading={heading || `Request a ${city} deck estimate`}
           pageContext={{
             city,

@@ -101,7 +101,7 @@ export default function FairfaxDeckBuilderPage() {
         city="Fairfax"
         county="Fairfax County / City of Fairfax"
         service="deck replacement or composite deck"
-        formLocation="paid_search_fairfax_deck_builder"
+        formLocation="local_city_fairfax_deck_builder"
       />
 
       <article style={{ padding: '3rem 0' }}>

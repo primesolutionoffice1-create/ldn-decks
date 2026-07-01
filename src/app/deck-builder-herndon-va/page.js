@@ -19,6 +19,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-herndon-va',
@@ -132,6 +133,11 @@ export default function DeckBuilderHerndonPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <CityLeadFormSection
+        city="Herndon"
+        county="Fairfax County / Town of Herndon"
+        service="deck replacement, composite deck, or screened porch"
       />
       <PlanningUpdate
         market="Herndon decks in 2026"

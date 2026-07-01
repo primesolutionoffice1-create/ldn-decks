@@ -182,7 +182,7 @@ export default function DeckBuilderAshburnPage() {
         city="Ashburn"
         county="Loudoun County"
         service="deck replacement or composite deck"
-        formLocation="paid_search_ashburn_deck_builder"
+        formLocation="local_city_ashburn_deck_builder"
       />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
         <NamedAuthor context="Ashburn and Loudoun County" lastUpdated="2026-06-01" />

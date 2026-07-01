@@ -12,6 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-manassas-va',
@@ -92,6 +93,11 @@ export default function ManassasDeckBuilderPage() {
           </div>
         </div>
       </section>
+      <CityLeadFormSection
+        city="Manassas"
+        county="Prince William County / City of Manassas"
+        service="deck replacement, composite deck, or historic-area deck"
+      />
 
       <article style={{ padding: '3rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

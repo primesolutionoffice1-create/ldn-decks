@@ -67,7 +67,7 @@ export default function GreatFallsDeckBuilderPage() {
         city="Great Falls"
         county="Fairfax County"
         service="estate deck replacement or premium composite deck"
-        formLocation="paid_search_great_falls_deck_builder"
+        formLocation="local_city_great_falls_deck_builder"
       />
       <PlanningUpdate
         market="Great Falls decks in 2026"

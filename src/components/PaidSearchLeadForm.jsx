@@ -10,6 +10,7 @@ export default function PaidSearchLeadForm({
   formLocation = 'paid_search_above_fold',
   heading = 'Same-week estimate openings are available',
   pageContext,
+  leadSource = 'Google Search',
 }) {
   const [status, setStatus] = useState(null);
   const submit = useLeadSubmit({ formType: 'paid_search', pageContext });
@@ -43,7 +44,7 @@ export default function PaidSearchLeadForm({
       />
       <input type="hidden" name="state" value="VA" />
       <input type="hidden" name="service" value={service} />
-      <input type="hidden" name="leadSource" value="Google Search" />
+      <input type="hidden" name="leadSource" value={leadSource} />
       <input type="hidden" name="page_type" value={pageContext?.pageType || 'paid_search_landing_page'} />
       <input type="hidden" name="page_city" value={pageContext?.city || ''} />
       <input type="hidden" name="page_county" value={pageContext?.county || ''} />

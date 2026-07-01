@@ -18,6 +18,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-leesburg-va',
@@ -185,6 +186,11 @@ export default function DeckBuilderLeesburgPage() {
         ]}
         image1="/images/img36.jpeg"
         image2="/images/img37.jpeg"
+      />
+      <CityLeadFormSection
+        city="Leesburg"
+        county="Loudoun County / Town of Leesburg"
+        service="deck replacement, composite deck, or screened porch"
       />
       <PlanningUpdate
         market="Leesburg decks in 2026"
