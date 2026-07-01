@@ -158,7 +158,7 @@ export default function DeckBuilderHaymarketPage() {
         </div>
         <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Haymarket Project Planning Example</h2>
         <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1rem' }}>450 sqft Multi-Level Deck Planning Scenario</h3>
-        <p style={{ lineHeight: 1.7, marginBottom: '1.5rem' }}>A typical Haymarket sloped-lot concept might include an upper dining level at door height, a mid-level lounge stepped down with shorter stair runs, and a ground-level patio or fire pit area at grade. Material choices such as Trex Transcend, cable railing, and integrated stair lighting should be priced after the slope, HOA submission needs, and Prince William County permit requirements are confirmed. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.</p>
+        <p style={{ lineHeight: 1.7, marginBottom: '1.5rem' }}>A typical Haymarket sloped-lot concept might include an upper dining level at door height, a mid-level lounge stepped down with shorter stair runs, and a ground-level patio or fire pit area at grade. Material choices such as Trex Transcend, cable railing, and integrated stair lighting should be priced after the slope, HOA submission needs, and Prince William County permit requirements are confirmed.</p>
       </div>
       <ServiceInclusions
         title="Why Haymarket Homeowners Choose Loudoun Decks"

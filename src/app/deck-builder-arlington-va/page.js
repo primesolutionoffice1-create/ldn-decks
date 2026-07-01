@@ -205,7 +205,7 @@ export default function ArlingtonDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Arlington Project Planning Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Deck + Screened Porch Scenario, Donaldson Run</h3>
-            <p style={{ lineHeight: 1.7 }}>A sloped North Arlington concept might pair an upper composite dining deck with a lower screened porch, cable or aluminum railing for tree-canopy views, and privacy treatment on neighbor-facing sides. Final pricing and timeline should be confirmed after Arlington County permit requirements, slope, drainage, access, and historic or neighborhood review factors are checked. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.</p>
+            <p style={{ lineHeight: 1.7 }}>A sloped North Arlington concept might pair an upper composite dining deck with a lower screened porch, cable or aluminum railing for tree-canopy views, and privacy treatment on neighbor-facing sides. Final pricing and timeline should be confirmed after Arlington County permit requirements, slope, drainage, access, and historic or neighborhood review factors are checked.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Arlington Neighborhoods</h2>

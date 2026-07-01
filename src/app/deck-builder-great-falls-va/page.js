@@ -14,6 +14,7 @@ import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-great-falls-va',
@@ -62,12 +63,18 @@ export default function GreatFallsDeckBuilderPage() {
           <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · Licensed &amp; Insured · Written scope and warranty details provided before contract</p>
         </div>
       </section>
+      <CityLeadFormSection
+        city="Great Falls"
+        county="Fairfax County"
+        service="estate deck replacement or premium composite deck"
+        formLocation="paid_search_great_falls_deck_builder"
+      />
       <PlanningUpdate
         market="Great Falls decks in 2026"
         notes={[
           "Great Falls projects should screen early for Fairfax County RPA constraints, slope, septic locations, mature trees, and access paths.",
           "Estate-scale decks need early decisions on railings, drainage, screened porch tie-ins, outdoor kitchens, and lighting before pricing is finalized.",
-          "Verified project examples should be added only after owner photos, scope, dates, and permit or review details are available."
+          "The right Great Falls scope should be confirmed after RPA screening, septic-location review, tree protection planning, material selection, and permit-path review."
         ]}
         links={[
           { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
@@ -107,7 +114,7 @@ export default function GreatFallsDeckBuilderPage() {
           <h2 style={S.h2}>Great Falls Project Planning Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Estate Multi-Level Deck + Screened Porch Scenario</h3>
-            <p style={{ lineHeight: 1.7 }}>A Great Falls estate concept might include a multi-level TimberTech AZEK or Trex deck, screened porch, fireplace planning, premium railing, lighting, and view-sensitive layout. Final scope should be confirmed after Fairfax County permit requirements, RPA screening, septic location, tree protection, HOA or covenant rules, and site access are reviewed. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.</p>
+            <p style={{ lineHeight: 1.7 }}>A Great Falls estate concept might include a multi-level TimberTech AZEK or Trex deck, screened porch, fireplace planning, premium railing, lighting, and view-sensitive layout. Final scope should be confirmed after Fairfax County permit requirements, RPA screening, septic location, tree protection, HOA or covenant rules, and site access are reviewed.</p>
           </div>
 
           <h2 style={S.h2}>Permits &amp; RPA Zones in Great Falls</h2>

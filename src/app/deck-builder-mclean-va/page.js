@@ -19,6 +19,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-mclean-va',
@@ -153,6 +154,12 @@ export default function McLeanDeckBuilderPage() {
         image1="/images/img64.jpeg"
         image2="/images/img21.jpeg"
       />
+      <CityLeadFormSection
+        city="McLean"
+        county="Fairfax County"
+        service="premium deck replacement or composite deck"
+        formLocation="paid_search_mclean_deck_builder"
+      />
       <PlanningUpdate
         market="McLean decks in 2026"
         notes={[
@@ -195,7 +202,7 @@ export default function McLeanDeckBuilderPage() {
         <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
           Typical McLean scopes include 450 to 700 sqft multi-level composite decks, TimberTech AZEK or Trex Transcend boards,
           glass or cable railing, lighting, screened porch tie-ins, and slope-aware access planning.
-          Verified project examples should be added here only after owner-supplied photos, scope, date, and permit details are available.
+          The right McLean scope should be confirmed after a site visit, permit-path review, slope and drainage check, material selection, and any HOA or RPA screening.
         </p>
       </div>
 

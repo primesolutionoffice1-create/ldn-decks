@@ -122,7 +122,7 @@ export default function SterlingDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Sterling Project Planning Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Screened Porch Conversion Scenario, Sugarland Run</h3>
-            <p style={{ lineHeight: 1.7 }}>A Sterling screened porch conversion might reuse an existing frame only if the inspection confirms the ledger, joists, posts, beams, and footings are sound. Common upgrades include composite surface boards, railing changes, ceiling finish, fans, lighting, and screened or EZE-Breeze-style panels. Verified project examples should be added here only after owner-supplied photos, scope, date, and permit or HOA details are available.</p>
+            <p style={{ lineHeight: 1.7 }}>A Sterling screened porch conversion might reuse an existing frame only if the inspection confirms the ledger, joists, posts, beams, and footings are sound. Common upgrades include composite surface boards, railing changes, ceiling finish, fans, lighting, and screened or EZE-Breeze-style panels.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Sterling Neighborhoods We Build In</h2>

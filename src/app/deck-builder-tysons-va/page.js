@@ -14,6 +14,7 @@ import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-tysons-va',
@@ -54,6 +55,12 @@ export default function TysonsDeckBuilderPage() {
           <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · Licensed &amp; Insured · Written scope and warranty details provided before contract</p>
         </div>
       </section>
+      <CityLeadFormSection
+        city="Tysons"
+        county="Fairfax County"
+        service="modern deck replacement or composite terrace"
+        formLocation="paid_search_tysons_deck_builder"
+      />
       <PlanningUpdate
         market="Tysons decks in 2026"
         notes={[
@@ -155,7 +162,7 @@ export default function TysonsDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Tysons Project Planning Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>220 sqft Modern Townhome Deck Scenario</h3>
-            <p style={{ lineHeight: 1.7 }}>A compact Tysons townhome concept might use TimberTech AZEK or Trex boards, black aluminum or cable railing, low-profile lighting, and planter integration to maximize a small rear yard or terrace. Final pricing and timeline should be confirmed after Fairfax County requirements, association rules, access constraints, and waterproofing details are reviewed. Verified project examples should be added here only after owner-supplied photos, scope, date, and approval details are available.</p>
+            <p style={{ lineHeight: 1.7 }}>A compact Tysons townhome concept might use TimberTech AZEK or Trex boards, black aluminum or cable railing, low-profile lighting, and planter integration to maximize a small rear yard or terrace. Final pricing and timeline should be confirmed after Fairfax County requirements, association rules, access constraints, and waterproofing details are reviewed.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Tysons homeowners choose Loudoun Decks</h2>
