@@ -20,8 +20,10 @@ This project uses `.env.local` for local secrets and production hosting environm
 | `GOOGLE_SEARCH_CONSOLE_SITE_URL` | Server-only | Optional | Search Console property URL for server-side tooling. |
 | `GOOGLE_CRUX_API_KEY` | Server-only | Optional | CrUX / PageSpeed tooling key if used. |
 | `AHREFS_API_TOKEN` | Server-only | Optional | Ahrefs rank tracker script token. |
-| `EMAIL_USER` | Server-only | Required for forms | Gmail SMTP sender mailbox. |
-| `EMAIL_PASS` | Server-only | Required for forms | Gmail App Password. Do not use the normal mailbox password. |
+| `RESEND_API_KEY` | Server-only | Recommended for forms | Resend transactional email API key. Preferred over Gmail SMTP for production. |
+| `EMAIL_FROM` | Server-only | Recommended for forms | Verified sender address for Resend, for example `LDN Decks <office@ldndecks.com>`. |
+| `EMAIL_USER` | Server-only | Required for Gmail SMTP fallback | Gmail SMTP sender mailbox. |
+| `EMAIL_PASS` | Server-only | Required for Gmail SMTP fallback | Gmail App Password. Do not use the normal mailbox password. |
 | `EMAIL_TO` | Server-only | Recommended | Lead notification destination. |
 | `GHL_INBOUND_WEBHOOK_URL` | Server-only | Optional | GHL lead webhook. |
 | `GHL_API_KEY` | Server-only | Optional | GHL REST API key for Vapi flows. |
@@ -52,6 +54,8 @@ Never prefix these with `NEXT_PUBLIC_`:
 - `GOOGLE_SEARCH_CONSOLE_SITE_URL`
 - `GOOGLE_CRUX_API_KEY`
 - `AHREFS_API_TOKEN`
+- `RESEND_API_KEY`
+- `EMAIL_FROM`
 - `EMAIL_USER`
 - `EMAIL_PASS`
 - `EMAIL_TO`
@@ -97,7 +101,17 @@ Public API keys must still be restricted by API and HTTP referrer.
 
 ## Lead Email Delivery
 
-Lead forms use `src/server/sendEmail.js` and Gmail SMTP. These variables must be configured in Vercel Production:
+Lead forms use `src/server/sendEmail.js`. The preferred production route is Resend because it is built for transactional website notifications and avoids Gmail SMTP App Password fragility.
+
+Preferred Vercel Production variables:
+
+```bash
+RESEND_API_KEY=<resend-api-key>
+EMAIL_FROM=LDN Decks <office@ldndecks.com>
+EMAIL_TO=office@ldndecks.com
+```
+
+Fallback Gmail SMTP variables:
 
 ```bash
 EMAIL_USER=office@ldndecks.com
@@ -107,9 +121,11 @@ EMAIL_TO=office@ldndecks.com
 
 `EMAIL_PASS` must be a Google App Password generated from the Google account with 2-Step Verification enabled. A normal Gmail password will be rejected by Gmail SMTP with `535-5.7.8 BadCredentials`.
 
+If `RESEND_API_KEY` is set, the site uses Resend first. If it is not set, the site falls back to Gmail SMTP.
+
 After changing these variables in Vercel, redeploy production. Then submit a test form and check Vercel Runtime Logs for:
 
-- `[sendContactEmail] attempting to send lead email`
+- `[emailDelivery] attempting lead email via Resend` or `[emailDelivery] attempting lead email via Gmail SMTP`
 - no `[sendContactEmail] email delivery failed`
 - no `[sendContactEmail] lead accepted but email notification failed`
 

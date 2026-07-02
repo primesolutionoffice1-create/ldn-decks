@@ -1,4 +1,5 @@
 const REQUIRED_EMAIL_VARS = ['EMAIL_USER', 'EMAIL_PASS', 'EMAIL_TO'];
+const RESEND_EMAIL_VARS = ['RESEND_API_KEY', 'EMAIL_FROM', 'EMAIL_TO'];
 const BACKUP_CHANNEL_VARS = ['GHL_INBOUND_WEBHOOK_URL', 'N8N_WEBSITE_INTAKE_WEBHOOK_URL'];
 
 function isSet(name) {
@@ -26,13 +27,17 @@ function statusLine(label, ok, detail = '') {
 }
 
 const emailPass = process.env.EMAIL_PASS || '';
-const emailReady = REQUIRED_EMAIL_VARS.every(isSet) && appPasswordLooksValid(emailPass);
+const gmailSmtpReady = REQUIRED_EMAIL_VARS.every(isSet) && appPasswordLooksValid(emailPass);
+const resendReady = RESEND_EMAIL_VARS.every(isSet);
+const emailReady = gmailSmtpReady || resendReady;
 const hasBackupChannel = BACKUP_CHANNEL_VARS.some(isSet);
 
 console.log('Lead delivery environment check');
 console.log('No secret values are printed by this script.');
 console.log('');
 
+statusLine('RESEND_API_KEY', isSet('RESEND_API_KEY'), 'server-only transactional email key');
+statusLine('EMAIL_FROM', isSet('EMAIL_FROM'), 'verified sender for Resend, optional for Gmail SMTP');
 statusLine('EMAIL_USER', isSet('EMAIL_USER'), 'server-only Gmail sender');
 statusLine('EMAIL_PASS', isSet('EMAIL_PASS') && appPasswordLooksValid(emailPass), 'server-only Gmail App Password');
 statusLine('EMAIL_TO', isSet('EMAIL_TO'), 'lead notification recipient');
@@ -49,7 +54,9 @@ statusLine(
 
 if (!emailReady) {
   console.error('');
-  console.error('Lead email is not ready. Set EMAIL_USER, EMAIL_PASS, and EMAIL_TO in Vercel Production.');
+  console.error('Lead email is not ready. Configure one email provider in Vercel Production:');
+  console.error('- Resend: RESEND_API_KEY, EMAIL_FROM, EMAIL_TO');
+  console.error('- Gmail SMTP: EMAIL_USER, EMAIL_PASS, EMAIL_TO');
   console.error('For Gmail SMTP, EMAIL_PASS must be a Google App Password, not the normal mailbox password.');
   process.exit(1);
 }
@@ -60,4 +67,4 @@ if (!hasBackupChannel) {
 }
 
 console.log('');
-console.log('Lead email environment looks ready.');
+console.log(`Lead email environment looks ready via ${resendReady ? 'Resend' : 'Gmail SMTP'}.`);

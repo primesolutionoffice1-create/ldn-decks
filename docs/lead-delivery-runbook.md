@@ -2,17 +2,24 @@
 
 ## Current Issue
 
-Production form submissions reach the server action, but Gmail SMTP rejects the configured email credential with `535-5.7.8 BadCredentials`. That means the site can accept a lead through a backup path while the owner notification email does not arrive.
+Production form submissions reach the server action, and n8n/Telegram receives the lead, but Gmail SMTP rejects the configured email credential with `535-5.7.8 BadCredentials`. That means the site can accept a lead through Telegram while the owner notification email does not arrive.
 
 ## Root Cause
 
 Gmail SMTP does not accept a normal Google account password for this use case. `EMAIL_PASS` must be a Google App Password generated from the sender account after 2-Step Verification is enabled.
+
+The site now supports two email delivery providers:
+
+1. Resend, preferred for production transactional email.
+2. Gmail SMTP, fallback when `RESEND_API_KEY` is not set.
 
 ## Required Vercel Variables
 
 All of these are server-only and must not use `NEXT_PUBLIC_`:
 
 ```bash
+RESEND_API_KEY=<resend-api-key>
+EMAIL_FROM=LDN Decks <office@ldndecks.com>
 EMAIL_USER=office@ldndecks.com
 EMAIL_PASS=<google-app-password>
 EMAIL_TO=office@ldndecks.com
@@ -20,7 +27,20 @@ GHL_INBOUND_WEBHOOK_URL=<optional-backup-webhook>
 N8N_WEBSITE_INTAKE_WEBHOOK_URL=<optional-backup-webhook>
 ```
 
-## Manual Fix
+## Manual Fix Option A: Resend Preferred
+
+1. Create or open the Resend account.
+2. Add and verify `ldndecks.com`.
+3. Add the Resend DNS records for SPF/DKIM in the DNS provider.
+4. Create a production API key.
+5. Open Vercel -> LDN Decks project -> Settings -> Environment Variables.
+6. Set Production `RESEND_API_KEY`, `EMAIL_FROM`, and `EMAIL_TO`.
+7. Redeploy production.
+8. Submit one test lead from the live form.
+9. Check the inbox for `EMAIL_TO`.
+10. Check Vercel Runtime Logs for `[emailDelivery] attempting lead email via Resend` and no email failure line.
+
+## Manual Fix Option B: Gmail SMTP Fallback
 
 1. Open the Google account used for `EMAIL_USER`.
 2. Enable 2-Step Verification if it is not already enabled.
@@ -51,7 +71,7 @@ Production logs should not contain:
 [sendContactEmail] all website lead delivery sinks failed
 ```
 
-Production logs may contain `attempting to send lead email` for normal form submissions.
+Production logs may contain `[emailDelivery] attempting lead email via Resend` or `[emailDelivery] attempting lead email via Gmail SMTP` for normal form submissions.
 
 ## Backup Channels
 
@@ -67,7 +87,7 @@ This is intentional. It means the lead was not fully lost, but the email notific
 
 ## Recommended Upgrade
 
-For production reliability, move lead notifications from Gmail SMTP to a transactional provider such as Resend, Postmark, or SendGrid. Configure SPF, DKIM, and DMARC for `ldndecks.com`, then send from a verified domain address.
+For production reliability, use Resend with SPF, DKIM, and DMARC configured for `ldndecks.com`.
 
 ## Rollback
 

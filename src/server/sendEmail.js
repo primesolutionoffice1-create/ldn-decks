@@ -1,49 +1,11 @@
 'use server';
 
 import { headers } from 'next/headers';
-import nodemailer from 'nodemailer';
 import { sendMetaLeadEvent } from './metaCapi';
 import { createLeadConfirmationToken } from './leadConfirmationToken';
 import { sendGhlLead } from './ghl';
 import { sendN8nWebsiteLead } from './n8nLeadForwarder';
-
-function hasEmailCredentials() {
-  return Boolean(process.env.EMAIL_USER && process.env.EMAIL_PASS);
-}
-
-function emailConfigSummary() {
-  return {
-    hasEmailUser: Boolean(process.env.EMAIL_USER),
-    hasEmailPass: Boolean(process.env.EMAIL_PASS),
-    hasEmailTo: Boolean(process.env.EMAIL_TO),
-  };
-}
-
-function classifyEmailDeliveryError(error) {
-  const message = String(error?.message || error || '');
-  if (
-    message.includes('535-5.7.8')
-    || message.includes('Username and Password not accepted')
-    || message.includes('BadCredentials')
-  ) {
-    return {
-      type: 'gmail_bad_credentials',
-      message: 'Gmail SMTP rejected EMAIL_USER/EMAIL_PASS. Use a Google App Password, not the account password.',
-    };
-  }
-
-  if (message.includes('Invalid login')) {
-    return {
-      type: 'smtp_invalid_login',
-      message: 'SMTP rejected the configured login. Verify EMAIL_USER and EMAIL_PASS in hosting env vars.',
-    };
-  }
-
-  return {
-    type: 'smtp_delivery_failed',
-    message: 'SMTP delivery failed. Check hosting logs and provider status.',
-  };
-}
+import { sendLeadNotificationEmail } from './emailDelivery';
 
 export async function sendContactEmail(formData) {
   try {
@@ -133,7 +95,7 @@ export async function sendContactEmail(formData) {
     const recipient = process.env.EMAIL_TO || process.env.EMAIL_USER;
 
     const mailOptions = {
-      from: `Loudoun Decks <${process.env.EMAIL_USER}>`,
+      from: `Loudoun Decks <${process.env.EMAIL_FROM || process.env.EMAIL_USER || 'office@ldndecks.com'}>`,
       to: recipient,
       ...(email ? { replyTo: email } : {}),
       subject: `New Lead: ${service} from ${name}`,
@@ -172,40 +134,11 @@ export async function sendContactEmail(formData) {
       // missing IP / UA drops EMQ score ~1.5 points but doesn't error.
     }
 
-    let emailResult = { ok: false };
-    if (!hasEmailCredentials()) {
-      emailResult = {
-        ok: false,
-        skipped: true,
-        reason: 'missing_email_credentials',
-      };
-      console.error('[sendContactEmail] email delivery skipped: missing EMAIL_USER or EMAIL_PASS', emailConfigSummary());
-    } else {
-      console.log('[sendContactEmail] attempting to send lead email');
-      const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
-        auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASS,
-        },
-        debug: false,
-        logger: false,
-      });
-
-      try {
-        await transporter.sendMail(mailOptions);
-        emailResult = { ok: true };
-      } catch (error) {
-        const classifiedError = classifyEmailDeliveryError(error);
-        emailResult = {
-          ok: false,
-          errorType: classifiedError.type,
-          errorMessage: classifiedError.message,
-        };
-        console.error('[sendContactEmail] email delivery failed', classifiedError);
-      }
+    const emailResult = await sendLeadNotificationEmail(mailOptions);
+    if (!emailResult.ok && emailResult.skipped) {
+      console.error('[sendContactEmail] email delivery skipped', emailResult);
+    } else if (!emailResult.ok) {
+      console.error('[sendContactEmail] email delivery failed', emailResult);
     }
 
     const ghlResult = await sendGhlLead(formData);
