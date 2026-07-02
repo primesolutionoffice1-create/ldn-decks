@@ -20,8 +20,8 @@ This project uses `.env.local` for local secrets and production hosting environm
 | `GOOGLE_SEARCH_CONSOLE_SITE_URL` | Server-only | Optional | Search Console property URL for server-side tooling. |
 | `GOOGLE_CRUX_API_KEY` | Server-only | Optional | CrUX / PageSpeed tooling key if used. |
 | `AHREFS_API_TOKEN` | Server-only | Optional | Ahrefs rank tracker script token. |
-| `EMAIL_USER` | Server-only | Required for forms | SMTP username. |
-| `EMAIL_PASS` | Server-only | Required for forms | SMTP password or app password. |
+| `EMAIL_USER` | Server-only | Required for forms | Gmail SMTP sender mailbox. |
+| `EMAIL_PASS` | Server-only | Required for forms | Gmail App Password. Do not use the normal mailbox password. |
 | `EMAIL_TO` | Server-only | Recommended | Lead notification destination. |
 | `GHL_INBOUND_WEBHOOK_URL` | Server-only | Optional | GHL lead webhook. |
 | `GHL_API_KEY` | Server-only | Optional | GHL REST API key for Vapi flows. |
@@ -94,6 +94,30 @@ Public API keys must still be restricted by API and HTTP referrer.
 3. Add public `NEXT_PUBLIC_` variables only when browser code needs them.
 4. Use separate values for production and preview when possible.
 5. Redeploy after changing production env vars.
+
+## Lead Email Delivery
+
+Lead forms use `src/server/sendEmail.js` and Gmail SMTP. These variables must be configured in Vercel Production:
+
+```bash
+EMAIL_USER=office@ldndecks.com
+EMAIL_PASS=<google-app-password>
+EMAIL_TO=office@ldndecks.com
+```
+
+`EMAIL_PASS` must be a Google App Password generated from the Google account with 2-Step Verification enabled. A normal Gmail password will be rejected by Gmail SMTP with `535-5.7.8 BadCredentials`.
+
+After changing these variables in Vercel, redeploy production. Then submit a test form and check Vercel Runtime Logs for:
+
+- `[sendContactEmail] attempting to send lead email`
+- no `[sendContactEmail] email delivery failed`
+- no `[sendContactEmail] lead accepted but email notification failed`
+
+Run the local env check with:
+
+```bash
+npm run lead:delivery-env
+```
 
 ## Rotation
 

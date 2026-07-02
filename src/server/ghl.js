@@ -26,6 +26,9 @@ const SOURCE_TAGS = {
   Houzz: 'source-houzz',
   NextDoor: 'source-nextdoor',
   Direct: 'source-direct',
+  Website: 'source-website',
+  'Website Form': 'source-website',
+  'Local SEO city page': 'source-local-seo',
   Other: 'source-other',
 };
 

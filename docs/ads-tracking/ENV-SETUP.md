@@ -13,8 +13,8 @@ META_CAPI_ACCESS_TOKEN=           # Long token starting with EAA...
 META_CAPI_TEST_EVENT_CODE=        # Only set during testing; remove for production
 
 # === Pre-existing (unchanged by this PR) ===
-EMAIL_USER=                       # Gmail SMTP sender (already configured)
-EMAIL_PASS=                       # Gmail app password (already configured)
+EMAIL_USER=                       # Gmail SMTP sender
+EMAIL_PASS=                       # Gmail App Password, not the normal mailbox password
 EMAIL_TO=                         # Optional override for lead notification recipient
 ```
 
@@ -25,7 +25,7 @@ EMAIL_TO=                         # Optional override for lead notification reci
 | `META_PIXEL_ID` | **Optional** | Server-side Meta CAPI no-ops (returns `{success: false, skipped: true}`). Site continues working. No errors logged. |
 | `META_CAPI_ACCESS_TOKEN` | **Optional** | Same as above. Both must be present for CAPI to fire. |
 | `META_CAPI_TEST_EVENT_CODE` | **Optional** | Without it, events flow to production Meta. With it, events appear ONLY in Events Manager's "Test Events" tab. |
-| `EMAIL_USER` / `EMAIL_PASS` | **Required** | Pre-existing — form submission fails without these. Unchanged by this PR. |
+| `EMAIL_USER` / `EMAIL_PASS` | **Required** | Lead email fails without these. Gmail requires an App Password with 2-Step Verification enabled. |
 
 **Key principle:** The new Meta CAPI feature is **opt-in via env vars**. Deploying this branch without setting any Meta env vars is safe — the form continues working exactly as it did before, plus you get click-ID capture + the reliability patch as bonus improvements.
 
@@ -129,7 +129,7 @@ These were configured BEFORE this PR; do not modify as part of the ads tracking 
 
 ```bash
 EMAIL_USER=                       # Gmail SMTP sender for lead notification
-EMAIL_PASS=                       # Gmail app password
+EMAIL_PASS=                       # Gmail App Password
 EMAIL_TO=                         # Optional override for recipient (defaults to EMAIL_USER)
 ```
 

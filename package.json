@@ -7,6 +7,7 @@
         "build": "next build --webpack",
         "start": "next start",
         "lint": "eslint",
+        "lead:delivery-env": "node scripts/verify-lead-delivery-env.mjs",
         "ads:generate-imports": "node scripts/generate-google-ads-imports.mjs",
         "ads:validate-imports": "node scripts/validate-google-ads-imports.mjs",
         "ads:validate-premium-geo": "node scripts/validate-premium-geo-import.mjs",
