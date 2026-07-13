@@ -98,13 +98,13 @@ export default function RootLayout({ children }) {
           {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} try{var c=localStorage.getItem('ldn_cookie_consent');window.ldnConsentGranted=c==='accepted';}catch(e){window.ldnConsentGranted=false;} gtag('consent','default',{'ad_storage':window.ldnConsentGranted?'granted':'denied','ad_user_data':window.ldnConsentGranted?'granted':'denied','ad_personalization':window.ldnConsentGranted?'granted':'denied','analytics_storage':window.ldnConsentGranted?'granted':'denied'});`}
         </Script>
 
-        {/* Google Tag Manager — afterInteractive (not lazyOnload) so the
-            container loads close to user interaction. Earlier loading means
-            phone_click / form_submit events on fast-bouncing mobile traffic
-            are processed instead of being orphaned in the dataLayer queue. */}
+        {/* Google Tag Manager — lazyOnload so third-party tag execution does
+            not compete with the homepage hero image/text during mobile LCP.
+            The dataLayer still exists beforeInteractive, so early click/form
+            events are queued and processed when GTM loads. */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
