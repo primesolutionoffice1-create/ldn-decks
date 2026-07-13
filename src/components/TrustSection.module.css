@@ -116,9 +116,6 @@
   text-align: center;
   padding: 3rem 2rem;
   border-radius: 12px;
-  background-image: url('/images/img13.jpeg');
-  background-size: cover;
-  background-position: center;
   border: none;
   overflow: hidden;
   display: flex;
@@ -127,6 +124,11 @@
   align-items: center;
   color: #fff;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.trexImage {
+  object-fit: cover;
+  z-index: 0;
 }
 
 .trexBlock::before {

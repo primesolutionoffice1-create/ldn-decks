@@ -52,6 +52,14 @@ export default function TrustSection() {
           </div>
           
           <div className={styles.trexBlock}>
+            <Image
+              src="/images/img13.jpeg"
+              alt=""
+              fill
+              sizes="(max-width: 900px) 100vw, 600px"
+              quality={65}
+              className={styles.trexImage}
+            />
             <p className={styles.trexLabel}>Trex® Partner</p>
             <h2>Engineering Excellence</h2>
             <p className={styles.description}>
