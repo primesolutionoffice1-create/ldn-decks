@@ -34,7 +34,85 @@ const DECK_INSURANCE_CLAIM_SOURCE_LINKS = [
   { label: 'Ready.gov: Thunderstorms and Lightning safety guidance (retrieved July 15, 2026)', href: 'https://www.ready.gov/thunderstorms-lightning' },
 ];
 
-export const blogPosts = [
+const DUPLICATE_POST_IDS = new Set([62, 98, 121, 127, 128, 129, 130]);
+
+const GENERATED_BLOG_IMAGE_SLUGS = new Set([
+  'outdoor-kitchen-roi-built-in-grill',
+  'trex-deck-color-combinations-2026',
+  'how-to-restore-faded-composite-decking',
+  'deck-joist-rot-repair-northern-virginia',
+  'deck-ledger-board-problems-signs-repair',
+  'deck-post-footing-replacement-cost-northern-virginia',
+  'deck-permit-process-loudoun-county-step-by-step',
+  'how-long-does-deck-permit-take-northern-virginia',
+  'deck-permit-requirements-fairfax-county-2026',
+  'hoa-deck-approval-process-northern-virginia',
+  'how-much-does-deck-cost-northern-virginia-2026',
+  'deck-financing-options-northern-virginia',
+  'what-affects-deck-cost-most-northern-virginia',
+  'deck-design-ideas-small-backyards-northern-virginia',
+  'multi-level-deck-design-northern-virginia',
+  'covered-deck-vs-open-deck-northern-virginia',
+  'deck-lighting-ideas-northern-virginia-2026',
+  'deck-railing-options-northern-virginia',
+  'cable-railing-deck-northern-virginia',
+  'composite-railing-vs-aluminum-railing',
+  'deck-railing-code-requirements-northern-virginia-2026',
+  'trex-decking-review-northern-virginia',
+  'timbertech-vs-trex-northern-virginia-2026',
+  'azek-decking-review-northern-virginia',
+  'pressure-treated-deck-boards-guide-northern-virginia',
+  'how-to-clean-composite-deck-northern-virginia',
+  'deck-staining-guide-northern-virginia',
+  'how-to-power-wash-deck-without-damage',
+  'deck-winterization-checklist-northern-virginia',
+  'deck-collapse-warning-signs-northern-virginia',
+  'how-to-inspect-deck-safety-checklist',
+  'ledger-board-failure-deck-collapses-northern-virginia',
+  'repair-vs-replace-deck-northern-virginia',
+  'deck-builder-ashburn-va',
+  'deck-builder-leesburg-va',
+  'deck-builder-reston-va',
+  'deck-builder-mclean-va',
+  'deck-builder-sterling-va',
+  'deck-builder-herndon-va',
+  'deck-builder-great-falls-va',
+  'deck-builder-centreville-va',
+  'screened-porch-vs-three-season-room-northern-virginia',
+  'outdoor-kitchen-on-deck-northern-virginia',
+  'pergola-on-deck-northern-virginia',
+  'under-deck-drainage-systems-northern-virginia',
+  'composite-vs-pressure-treated-deck-total-cost-20-years',
+  'how-long-does-composite-deck-last-northern-virginia',
+  'how-to-choose-deck-contractor-northern-virginia',
+  'deck-builder-fairfax-va',
+  'deck-builder-burke-va',
+  'deck-builder-springfield-va',
+  'deck-builder-woodbridge-va',
+  'deck-builder-manassas-va',
+  'deck-builder-alexandria-va',
+  'deck-builder-lorton-va',
+  'deck-builder-annandale-va',
+  'deck-builder-vienna-va',
+  'deck-builder-falls-church-va',
+  'deck-builder-oakton-va',
+  'deck-builder-gainesville-va',
+  'deck-builder-haymarket-va',
+  'deck-builder-purcellville-va',
+  'deck-builder-south-riding-va',
+  'deck-builder-aldie-va',
+  'deck-builder-broadlands-va',
+  'deck-builder-lansdowne-va',
+  'deck-builder-brambleton-va',
+  'deck-builder-ashburn-farm-va',
+  'deck-builder-cascades-va',
+  'deck-builder-hamilton-va',
+  'deck-builder-bristow-va',
+  'deck-builder-occoquan-va',
+  'deck-builder-dale-city-va',
+]);
+
+const allBlogPosts = [
   {
     id: 1,
     title: 'Trex vs Wood Decking: Cost and Maintenance Comparison 2026',
@@ -2967,4 +3045,10 @@ We will determine whether the next construction step is an on-site deck inspecti
     ],
     disclaimer: 'This article provides general construction and claim-preparation information, not insurance, legal, engineering, or public-adjuster advice. Coverage depends on the specific policy and facts of loss. LDN Decks does not determine coverage or guarantee claim payment. Emergency, utility, tree-removal, engineering, permitting, and insurance decisions must be handled by the appropriate qualified party.'
   }
-]
+];
+
+export const blogPosts = allBlogPosts
+  .filter(({ id }) => !DUPLICATE_POST_IDS.has(id))
+  .map((post) => GENERATED_BLOG_IMAGE_SLUGS.has(post.slug)
+    ? { ...post, image: `/images/blog/generated/${post.slug}.jpg` }
+    : post);
