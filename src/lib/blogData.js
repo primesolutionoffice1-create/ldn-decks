@@ -25,6 +25,15 @@ const COMPOSITE_BRAND_SOURCE_LINKS = [
   { label: 'AZEK: PVC decking and warranty information', href: 'https://www.timbertech.com/products/decking/azek/' },
 ];
 
+const DECK_INSURANCE_CLAIM_SOURCE_LINKS = [
+  { label: 'Virginia SCC: When a Disaster Strikes - insured homeowners loss guide (retrieved July 15, 2026)', href: 'https://www.scc.virginia.gov/consumers/insurance/property-casualty-consumer/disaster-strikes-insured-homeowners-loss/' },
+  { label: 'Virginia SCC: Virginia Homeowners Insurance Guide (retrieved July 15, 2026)', href: 'https://www.scc.virginia.gov/consumers/insurance/property-casualty-consumer/virginia-homeowners-insurance-guide/' },
+  { label: 'NAIC: What You Should Know About Settling a Homeowners Insurance Claim (retrieved July 15, 2026)', href: 'https://content.naic.org/article/what-you-should-know-about-settling-homeowners-insurance-claim' },
+  { label: 'Fairfax County: Damage Reports for structural impacts (retrieved July 15, 2026)', href: 'https://www.fairfaxcounty.gov/landdevelopment/node/819' },
+  { label: 'Virginia DHCD: Uniform Statewide Building Code overview (retrieved July 15, 2026)', href: 'https://www.dhcd.virginia.gov/virginia-uniform-statewide-building-code-usbc' },
+  { label: 'Ready.gov: Thunderstorms and Lightning safety guidance (retrieved July 15, 2026)', href: 'https://www.ready.gov/thunderstorms-lightning' },
+];
+
 export const blogPosts = [
   {
     id: 1,
@@ -2777,5 +2786,185 @@ export const blogPosts = [
       { q: "How quickly can a deck project start in Dale City?", a: "Faster than most Northern Virginia communities. Because Dale City has no master HOA review process, the primary timeline driver is the Prince William County building permit — typically 10 to 20 business days. Once the permit is approved, material is ordered and construction can begin. In HOA-governed communities, homeowners typically wait an additional 30 to 60 days for architectural review before the permit can even be submitted." }
     ],
     disclaimer: "Prince William County permit requirements and project cost ranges are subject to change. HOA status varies by individual Dale City subdivision — always verify with LDN Decks at estimate time before assuming no HOA review is required."
+  },
+  {
+    id: 137,
+    title: 'Deck Insurance Claims in Northern Virginia: How We Help',
+    slug: 'deck-insurance-claims-northern-virginia',
+    image: '/images/deck-insurance-claims-northern-virginia.avif',
+    imagePosition: 'center center',
+    date: 'July 15, 2026',
+    dateModified: 'July 15, 2026',
+    author: 'Nick - Loudoun Decks',
+    metaTitle: 'Deck Insurance Claims Northern Virginia | LDN Decks',
+    metaDescription: 'Virginia insurers generally acknowledge claims within 10 working days. See how LDN Decks documents and repairs insurance-related deck damage safely today.',
+    category: 'Deck Safety & Repair',
+    tags: ['deck insurance claim', 'storm damaged deck', 'tree fell on deck', 'deck repair estimate', 'structural deck repair', 'Northern Virginia deck contractor'],
+    sourceLinks: DECK_INSURANCE_CLAIM_SOURCE_LINKS,
+    excerpt: 'LDN Decks works on deck repair and reconstruction projects associated with homeowners insurance claims. We document visible damage, prepare a written structural scope and estimate, and complete approved repair or rebuilding work across Northern Virginia.',
+    content: `A damaged deck can become part of a homeowners insurance claim after a windstorm, fallen tree, fire, vehicle impact, or another sudden event. The urgent question is not only whether the surface looks repairable. Homeowners also need to know whether the framing, ledger, posts, footings, stairs, and railings remain safe.
+
+LDN Decks helps Northern Virginia homeowners inspect and document deck damage, prepare a written repair or replacement estimate, and complete the approved construction scope. We can share project information with the homeowner and an insurance representative. The insurer alone determines coverage, deductibles, depreciation, and payment.
+
+**Key Takeaways**
+
+- Keep people away from a deck that moved, sagged, separated from the house, or still supports a fallen limb.
+- Photograph conditions before cleanup when it is safe, notify the insurer promptly, and preserve receipts and written records.
+- A deck contractor can document construction damage and price the work, but cannot promise insurance coverage or act as the claim decision-maker.
+- Final repairs should follow a complete structural evaluation, permit requirements, and the scope authorized by the homeowner.
+
+## What Should You Do First?
+
+Use this quick path before reading the detailed steps. It keeps urgent safety work separate from insurance paperwork and final construction.
+
+| Situation | First move |
+|---|---|
+| Downed wire, gas odor, fire, or immediate danger | Call emergency services or the utility and stay away |
+| Tree or heavy limb resting on the deck | Keep the area closed and call a qualified tree professional |
+| Stable scene with visible damage | Take safe overview photos and notify the insurer |
+| Unknown framing or connection damage | Request a complete deck evaluation |
+| Written scopes do not match | Compare specific construction items with the adjuster |
+
+## Does LDN Decks Work on Deck Projects Related to Insurance Claims?
+
+Yes. LDN Decks evaluates, estimates, repairs, and rebuilds decks involved in homeowners insurance claims across Northern Virginia. Our role is construction-focused: identify visible deck damage, define the structural work, provide a written estimate, and complete the contracted repair or replacement. We do not decide whether a policy covers the loss.
+
+An insurance-related project may involve several parties. The homeowner controls the property and hires the contractor. The insurer reviews the policy and claim. An adjuster evaluates the loss for the insurance company. A deck contractor evaluates the construction scope. Serious movement may also require a structural engineer, building inspector, arborist, electrician, or utility crew.
+
+Keeping those roles clear protects the homeowner. It also reduces confusion when the insurance estimate and the field conditions do not initially match.
+
+## What Types of Deck Damage Can Be Evaluated?
+
+Insurance-related deck work usually begins with a sudden event rather than ordinary aging. LDN Decks can evaluate projects involving a fallen tree or large branch, wind impact, fire exposure, vehicle impact, falling objects, and storm-related structural movement. We can also identify pre-existing rot or corrosion discovered after damaged materials are removed.
+
+Common inspection points include:
+
+- Decking, fascia, and fasteners
+- Guardrails, posts, and stair rails
+- Joists, rim boards, beams, and blocking
+- Support posts, post bases, and concrete footings
+- Ledger attachment, flashing, and the house rim area
+- Stairs, stringers, landings, and connections
+- Deck lighting, receptacles, gas lines, and outdoor-kitchen components
+
+A claim-triggering event and long-term deterioration are not the same condition. If impact damage exposes older rot, the written scope should separate the visible event damage from unrelated wear whenever field conditions allow. The insurer decides how the policy treats each condition.
+
+For immediate safety steps after a tree strike, use our [fallen-tree deck damage guide](/education/tree-fell-on-deck-storm-damage-northern-virginia).
+
+## How Should You Protect People and Document Deck Damage?
+
+Safety comes before claim paperwork. As of July 2026, [Ready.gov's Thunderstorms and Lightning guidance](https://www.ready.gov/thunderstorms-lightning) tells homeowners to watch for fallen power lines and trees after severe weather. Do not walk onto or beneath a deck that moved, cracked, pulled away from the house, or still holds unstable tree material.
+
+Call emergency services or the utility when there is fire, a gas odor, sparking, or a downed electrical line. Use a qualified tree-removal professional for a heavy or suspended limb. Cutting a loaded branch can suddenly transfer weight onto damaged framing.
+
+When the area can be viewed safely, take wide photographs of the entire deck, house connection, stairs, supports, fallen material, and surrounding grade. Add detail photos using camera zoom. Record the event date, approximate time, weather information, and any emergency work.
+
+As of July 2026, the [Virginia SCC guide, When a Disaster Strikes: Insured Homeowners Loss](https://www.scc.virginia.gov/consumers/insurance/property-casualty-consumer/disaster-strikes-insured-homeowners-loss/), advises homeowners to photograph conditions before cleanup. It also says to prevent more damage and keep receipts for temporary repairs. Do not delay emergency work only to take photographs.
+
+## Step 2: Notify the Insurance Company and Follow Its Instructions
+
+Contact the insurance agent or company soon after discovering a possible loss. As of July 2026, the [Virginia SCC Virginia Homeowners Insurance Guide](https://www.scc.virginia.gov/consumers/insurance/property-casualty-consumer/virginia-homeowners-insurance-guide/) says policies set duties and deadlines after a loss. These can include giving notice, preventing more damage, listing damaged items, and showing the damage when asked.
+
+Ask the insurer what it needs before permanent repairs begin. Questions may include:
+
+- Is an adjuster inspection required before material is removed?
+- Which photographs, inventories, estimates, and receipts should be submitted?
+- Are temporary stabilization or emergency tree-removal costs handled separately?
+- Does the policy contain a wind, named-storm, or other special deductible?
+- How should hidden damage discovered during demolition be reported?
+- Is mortgage-company involvement required for payment authorization?
+
+As of July 2026, the Virginia SCC guide says insurers generally must acknowledge a claim within **10 working days** under Virginia claim-handling rules. This does not guarantee coverage or a final decision within 10 days. Keep a dated call and email log. Ask the insurer to list any missing documents.
+
+## What Should a Complete Structural Deck Evaluation Include?
+
+A useful contractor estimate begins with the full deck load path, not only the broken boards. Impact at one corner can twist a beam, move a post, loosen a ledger, or disturb a footing elsewhere. Replacing the obvious surface damage would not correct those hidden structural changes.
+
+LDN Decks can prepare a deck-focused evaluation. It covers visible damage, safe access, removal assumptions, repair order, material matching, and permit needs. The written scope may include photographs, measurements, quantities, labor, and materials.
+
+In our estimating process, we separate three items whenever field conditions allow: damage tied to the reported event, older wear or decay, and code-related work needed to complete a safe repair. This keeps the construction scope easier for the homeowner and adjuster to review.
+
+Some conditions require specialists outside a deck contractor's role. Significant separation from the house, unusual movement, damage to the home, or a disputed structural approach may require a licensed professional engineer. Electrical, gas, tree-removal, and utility hazards require the appropriate qualified professional.
+
+Homeowners can also request a [professional deck inspection](/services/deck-inspection) or review our [structural deck repair service](/services/deck-repair) before deciding on repairs.
+
+## Step 4: Compare the Contractor Scope With the Insurance Estimate
+
+The contractor's estimate and the insurer's estimate serve different purposes. The contractor prices the construction work based on observed conditions and a proposed method. The adjuster applies policy terms, coverage decisions, deductibles, depreciation, and claim procedures. A difference between the two documents does not automatically mean either party acted incorrectly.
+
+In its May 2022 consumer article, [NAIC's What You Should Know About Settling a Homeowners Insurance Claim](https://content.naic.org/article/what-you-should-know-about-settling-homeowners-insurance-claim) explains that an adjuster calculates the claimed damage and may contact the contractor. NAIC says full home recovery after a major disaster can take **18 to 24 months**. A local deck claim may move much faster. Permits, engineering, tree removal, materials, and hidden damage can still affect timing.
+
+If the scopes differ, compare specific items:
+
+| Scope question | Contractor documentation | Insurance decision |
+|---|---|---|
+| What is physically damaged? | Photographs, measurements, field observations | Reviews claimed cause and covered damage |
+| What construction is required? | Repair method, quantities, labor, materials, permits | Determines which costs fall within policy coverage |
+| Is hidden damage present? | Documents conditions after authorized access or demolition | Decides how supplemental information is handled |
+| What will the project cost? | Provides a written estimate or proposal | Applies policy limits, deductibles and settlement rules |
+
+LDN Decks can clarify its own construction line items and provide additional field documentation when conditions change. We cannot interpret the policy for the homeowner or negotiate coverage as a public adjuster.
+
+## How Do Permits and Engineering Affect the Final Repair Scope?
+
+Deck repairs may require permits and inspections even after storm or impact damage. As of July 2026, the [Virginia DHCD Uniform Statewide Building Code overview](https://www.dhcd.virginia.gov/virginia-uniform-statewide-building-code-usbc) says the state code applies to building, maintaining, repairing, and renovating structures. Local building departments enforce it.
+
+As of July 2026, [Fairfax County's Damage Reports guidance](https://www.fairfaxcounty.gov/landdevelopment/node/819) allows owners and contractors to request an inspection after a natural disaster or major impact. Examples include a fallen tree, flood, or fire. Other Northern Virginia locations use their own process, so confirm the correct county or city for each property.
+
+Before final work begins, the homeowner should have a clear written construction scope, known permit responsibilities, material selections, payment terms, and a process for newly discovered damage. Our [Loudoun County permit guide](/deck-permit-loudoun-county-virginia) and [Fairfax County permit guide](/deck-permit-fairfax-county-virginia) explain common local requirements.
+
+## When Is Repair Enough, and When Is Replacement Better?
+
+Localized repair may be reasonable when the impact affected a limited railing, decking, stair, or framing area and the surrounding load path remains sound. A partial rebuild may work when one corner, stair assembly, beam section, or group of joists can be safely isolated and reconstructed.
+
+Replacement becomes more likely when the deck pulled away from the house, several framing zones moved, posts or footings shifted, a beam rotated, or extensive deterioration appears after opening the structure. Material discontinuation and code-required connection upgrades can also change the practical scope.
+
+The decision must follow field conditions rather than the appearance of the top boards. Our [resurfacing versus replacement guide](/deck-resurfacing-vs-replacement) explains why a new surface cannot compensate for unsafe framing.
+
+## What Does LDN Decks Provide During an Insurance-Related Project?
+
+LDN Decks can provide a deck-specific site evaluation, visible-condition documentation, a written repair or replacement estimate, construction sequencing, permit planning, and the contracted repair or rebuilding work. With the homeowner's authorization, we can answer construction questions from the insurer or adjuster about our scope.
+
+LDN Decks does not sell insurance, determine coverage, interpret policy language, set deductibles, approve claim payments, guarantee reimbursement, or act as a lawyer or public adjuster. We also will not inflate a scope or describe unrelated deterioration as event damage.
+
+That boundary is important. A reliable contractor should explain the building work clearly while leaving insurance decisions to the insurer and policy professionals.
+
+## Common Mistakes to Avoid During a Deck Claim
+
+**Walking onto the damaged deck.** Surface boards may conceal moved joists, failed connectors, or a loose ledger. Keep the area closed until it is evaluated.
+
+**Removing evidence before documentation.** Emergency work comes first, but photograph conditions and retain damaged material when the insurer requests it and safety allows.
+
+**Authorizing permanent repairs too early.** Ask the insurer what it needs before final construction changes the scene. Temporary stabilization and permanent rebuilding are different stages.
+
+**Assuming every cause is covered.** Coverage depends on the policy, cause of loss, exclusions, limits, endorsements, and deductibles. A contractor cannot guarantee the result.
+
+**Accepting a surface-only estimate.** A tree strike or impact can affect the ledger, beams, posts, footings, stairs, and connections beyond the visible break.
+
+**Signing over the entire insurance payment.** Virginia SCC consumer guidance recommends written contracts and progress-based payments rather than full advance payment for extensive work.
+
+## How Do You Start an Insurance-Related Deck Evaluation?
+
+Keep the area closed, report the possible loss to the insurer, and collect photographs and claim instructions. Then send LDN Decks the property address, safe overview photos, the event date, known hazards, and any insurer or adjuster documentation already available.
+
+We will determine whether the next construction step is an on-site deck inspection, coordination with tree removal, an engineering referral, or a repair or replacement estimate. [Request a deck damage evaluation](/get-estimate) or call 571-655-7207 for service across Loudoun, Fairfax, Prince William, Arlington, and nearby Northern Virginia communities.
+
+## Official Sources Used
+
+- [Virginia SCC, When a Disaster Strikes: Insured Homeowners Loss](https://www.scc.virginia.gov/consumers/insurance/property-casualty-consumer/disaster-strikes-insured-homeowners-loss/), retrieved July 15, 2026
+- [Virginia SCC, Virginia Homeowners Insurance Guide](https://www.scc.virginia.gov/consumers/insurance/property-casualty-consumer/virginia-homeowners-insurance-guide/), retrieved July 15, 2026
+- [NAIC, What You Should Know About Settling a Homeowners Insurance Claim](https://content.naic.org/article/what-you-should-know-about-settling-homeowners-insurance-claim), retrieved July 15, 2026
+- [Fairfax County, Damage Reports](https://www.fairfaxcounty.gov/landdevelopment/node/819), retrieved July 15, 2026
+- [Virginia DHCD, Uniform Statewide Building Code](https://www.dhcd.virginia.gov/virginia-uniform-statewide-building-code-usbc), retrieved July 15, 2026
+- [Ready.gov, Thunderstorms and Lightning](https://www.ready.gov/thunderstorms-lightning), retrieved July 15, 2026`,
+    faq: [
+      { q: 'Does homeowners insurance cover damage to a deck?', a: 'It may, depending on the policy, how the deck is classified, the cause of loss, exclusions, limits, and deductibles. Sudden wind, tree, fire, or impact damage may be handled differently from rot, wear, faulty maintenance, flood, or earth movement. Only the insurance company can make the coverage decision.' },
+      { q: 'Can LDN Decks work directly with my insurance adjuster?', a: 'With the homeowner\'s authorization, LDN Decks can answer construction questions, explain its written scope, and provide field documentation related to the deck estimate. We do not act as a public adjuster, interpret policy coverage, or negotiate the homeowner\'s legal insurance rights.' },
+      { q: 'Should I get a deck estimate before the adjuster visits?', a: 'Ask the insurer what it prefers. A contractor estimate can help document the construction scope, but many insurers want to inspect the damage before permanent repairs or demolition. Emergency safety work should not be delayed, and all safe pre-repair conditions, expenses, and temporary work should be documented.' },
+      { q: 'What happens if hidden deck damage appears during demolition?', a: 'Stop work in the affected area, photograph the newly exposed condition, and notify the homeowner. The homeowner should follow the insurer\'s supplemental documentation process before added work proceeds when insurance payment is expected. The construction contract should also explain how hidden conditions and change orders are handled.' },
+      { q: 'Do insurance-related deck repairs require a permit?', a: 'Structural work involving joists, beams, posts, footings, stairs, guards, or a ledger may require permits and inspections. Requirements depend on the jurisdiction and exact scope. LDN Decks can identify permit-sensitive work, but the county or city building department makes the final determination.' },
+      { q: 'Can LDN Decks guarantee that insurance will pay for the deck repair?', a: 'No. LDN Decks can document visible construction damage, prepare an estimate, and complete authorized work. Coverage, deductibles, depreciation, limits, exclusions, and settlement decisions belong to the insurance company under the homeowner\'s policy.' }
+    ],
+    disclaimer: 'This article provides general construction and claim-preparation information, not insurance, legal, engineering, or public-adjuster advice. Coverage depends on the specific policy and facts of loss. LDN Decks does not determine coverage or guarantee claim payment. Emergency, utility, tree-removal, engineering, permitting, and insurance decisions must be handled by the appropriate qualified party.'
   }
 ]
