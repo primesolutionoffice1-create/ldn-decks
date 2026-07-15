@@ -2768,7 +2768,7 @@ export const blogPosts = [
     id: 136,
     title: "Deck Builder in Dale City VA: Prince William County Permits & Costs 2026",
     slug: 'deck-builder-dale-city-va',
-    image: '/showcase/img12.jpeg',
+    image: '/images/img15.jpeg',
     date: 'June 24, 2026',
     author: 'Loudoun Decks Team',
     metaTitle: "Deck Builder Dale City VA 2026 | LDN Decks — Prince William County Expert",
