@@ -31,6 +31,15 @@ const FAIRFAX_SETBACK_SOURCE_LINKS = [
   { label: 'Fairfax County: when a permit is required', href: 'https://www.fairfaxcounty.gov/landdevelopment/when-permit-required' },
 ];
 
+const STORM_DAMAGE_SOURCE_LINKS = [
+  { label: 'Ready.gov: Thunderstorms & Lightning safety guidance', href: 'https://www.ready.gov/thunderstorms-lightning' },
+  { label: 'FEMA: Wind Retrofit Guide for Residential Buildings (FEMA P-804)', href: 'https://www.fema.gov/sites/default/files/documents/fema_rsl_fema-p-804-wind-retrofit-guide_042025.pdf' },
+  { label: 'OSHA: Storm debris tree-trimming hazards and protective practices', href: 'https://www.osha.gov/etools/hurricane/activity-sheets/waste-debris-removal/tree-trimming' },
+  { label: 'OSHA: Line-clearance tree trimming near energized power lines', href: 'https://www.osha.gov/etools/electric-power/overhead-line-work/line-clearance-tree-trimming-operations' },
+  { label: 'Fairfax County: Damage Reports for natural-disaster structural impacts', href: 'https://www.fairfaxcounty.gov/landdevelopment/node/819' },
+  { label: 'Virginia DHCD: current building codes and regulations', href: 'https://www.dhcd.virginia.gov/codes' },
+];
+
 const HOA_APPROVAL_SOURCE_LINKS = [
   { label: 'Loudoun County: deck permit documentation and inspections', href: 'https://www.loudoun.gov/1166/Decks' },
   { label: 'Loudoun County: HOA and POA responsibility notice', href: 'https://www.loudoun.gov/bdpermits' },
@@ -875,6 +884,166 @@ We inspect, repair and rebuild deck stairs with safety, permitting and long-term
       { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax County Deck Permit Guide', description: 'Fairfax permit and inspection context for joist spans, beams and structural details.' },
       { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun County Deck Permit Guide', description: 'Loudoun permit context for framing plans, structural details and inspection sequence.' },
       { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Repair path for sagging cantilevers, weak ledgers, failed guard posts and unsafe framing.' },
+    ]
+  },
+  {
+    id: 18,
+    title: 'What to Do When a Tree Falls on Your Deck After a Storm',
+    slug: 'tree-fell-on-deck-storm-damage-northern-virginia',
+    image: '/images/tree-fell-on-deck-storm-damage-northern-virginia.jpg',
+    date: 'July 15, 2026',
+    author: 'LDN Decks Team',
+    metaTitle: 'Tree Fell on Your Deck? Storm Damage Guide | LDN Decks',
+    metaDescription: 'A tree fell on your deck after a storm? Learn the immediate safety steps, hidden damage signs, inspection needs and repair options in Northern Virginia.',
+    category: 'Deck Safety & Repair',
+    tags: ['tree fell on deck', 'storm damaged deck', 'deck storm damage', 'structural deck repair', 'deck inspection northern virginia', 'fallen tree damage'],
+    excerpt: 'A fallen tree can damage far more than deck boards. Follow these safety, documentation and inspection steps before anyone walks on the deck or begins cleanup.',
+    answerBlock: [
+      'If a tree or large branch falls on your deck, keep everyone away, check for downed electrical lines from a safe distance, and call emergency or utility services when an immediate hazard exists. Do not walk on, beneath, or beside a deck that has moved or may still be carrying an unstable limb.',
+      'Document conditions from a safe location, then coordinate qualified tree removal with a complete structural deck evaluation. The inspection should cover decking, railings, joists, beams, posts, footings, ledger attachment, stairs, and any damage where the deck meets the house.',
+    ],
+    sourceLinks: STORM_DAMAGE_SOURCE_LINKS,
+    content: `A tree or heavy limb striking a deck creates a concentrated impact that the structure was not designed to receive. The visible damage may be a broken railing or several cracked boards, but the force can also twist joists, shift posts, bend connectors, disturb footings, or pull an attached deck away from the house.
+
+The right order after a storm is simple: protect people, identify immediate hazards, document conditions, plan safe tree removal, and evaluate the complete deck structure. Cosmetic repairs come later. This guide explains what Northern Virginia homeowners should do and which warning signs mean the deck should remain closed.
+
+## Step 1: Keep Everyone Away From the Deck
+
+[Ready.gov's thunderstorm safety guidance](https://www.ready.gov/thunderstorms-lightning) tells homeowners to watch for fallen power lines and trees after a storm and report them immediately. A damaged elevated deck adds another hazard because it can move without warning while still supporting the weight of a trunk or suspended branch.
+
+Keep children, pets, neighbors, and cleanup crews outside the affected area. Do not walk onto the deck for a closer look. Do not stand underneath it. If the deck is attached to the house, avoid the nearby interior doorway until you can see whether the wall, sliding door, or deck-to-house connection has moved.
+
+From a safe location, look for immediate hazards:
+
+- Downed or low electrical lines, sparking, or electrical equipment caught in the tree
+- A gas odor, damaged meter, fire, or smoke
+- A tree or branch that is still moving, suspended, split, or under visible tension
+- A deck that is leaning, sagging, separating from the house, or making cracking sounds
+- Blocked exits or damage to the home's exterior wall
+
+Leave the danger area and call 911 from a safe location when there is an immediate threat to life, fire, or a suspected gas emergency. Report downed or tree-contacted electrical lines to the utility from a safe location and follow its instructions. Do not touch the tree, deck, metal railing, or anything that may contact a conductor.
+
+A deck contractor cannot evaluate, de-energize, or clear electrical conductors, gas lines, meters, or energized accessories. Those hazards require the utility, emergency services, or an appropriately licensed electrical or gas professional after the utility has made the area safe.
+
+## Step 2: Document the Damage From a Safe Location
+
+Good documentation records the condition before cleanup changes the scene. It also helps an arborist, deck contractor, engineer, local inspector, or insurance adjuster understand what happened without asking you to enter an unsafe area.
+
+Use your phone's zoom rather than moving closer. Capture wide views of the tree, the entire deck, the house connection, the stairs, and the ground below. Then photograph visible details such as split framing, displaced railings, leaning posts, damaged siding, or shifted footings when they can be seen safely.
+
+Record the storm date and approximate time. Save weather alerts, emergency-service notes, tree-removal proposals, inspection reports, repair estimates, and receipts. If you plan to open an insurance claim, ask your own carrier what documentation it requires before cleanup begins. Coverage, deductibles, and approved work vary by policy, so a contractor should not promise that a particular repair will be covered.
+
+Do not delay emergency work to take photographs. Safety and preventing additional damage come first.
+
+## Step 3: Coordinate Tree Removal With Structural Safety
+
+[FEMA's Wind Retrofit Guide for Residential Buildings](https://www.fema.gov/sites/default/files/documents/fema_rsl_fema-p-804-wind-retrofit-guide_042025.pdf) identifies tree fall as a common form of damage after high-wind events and recommends using an arborist or tree-removal professional to assess vulnerable trees. Once a tree is resting on a deck, removal itself can change the forces acting on the structure.
+
+A trunk may be pressing the deck downward while a branch is pulling a railing sideways. Cutting one section can release stored tension or shift weight to a weaker framing member. The deck may also be supporting part of the tree that appears to rest on the ground.
+
+[OSHA's storm-debris tree-trimming guidance](https://www.osha.gov/etools/hurricane/activity-sheets/waste-debris-removal/tree-trimming) identifies unstable trees, falling objects, chainsaws, electrical contact, and changing work conditions as major cleanup hazards. OSHA's training materials also warn that storm damage can place trunks and limbs under pressure, allowing stored energy to release suddenly when a cut changes the load.
+
+Use a qualified arborist or tree-removal professional for heavy, suspended, or tensioned material. Tell the company that the supporting deck may be unstable. For serious damage, the tree professional should coordinate access and sequencing with the structural professional responsible for the deck. Temporary shoring should be designed or approved by a licensed structural engineer when significant movement, house-attachment damage, or an uncertain load path makes stabilization necessary.
+
+If any branch is touching or close to an electrical conductor, stop and contact the utility. [OSHA's line-clearance guidance](https://www.osha.gov/etools/electric-power/overhead-line-work/line-clearance-tree-trimming-operations) reserves this work for specially trained line-clearance tree trimmers using the required approach distances and equipment.
+
+Avoid do-it-yourself chainsaw work on a tree that touches a deck, home, utility, fence, or another tree. Do not use a vehicle, rope, winch, or deck railing to pull the trunk away.
+
+## Step 4: Inspect the Complete Deck Load Path
+
+A deck's load path carries weight from the boards through joists, beams or the house ledger, posts, footings, and soil. A tree strike can interrupt that path at several points. New surface boards cannot make the deck safe if hidden framing or connections have moved.
+
+A complete post-storm evaluation should cover:
+
+- **Decking and fascia:** cracked boards, pulled fasteners, crushed edges, buckling, and new gaps
+- **Guards and railings:** split posts, loose bases, bent brackets, and damage where guards connect to framing
+- **Joists and rim boards:** splits, rolling, twisting, crushing, failed hangers, and displaced blocking
+- **Beams:** cracks, rotation, separation between plies, and movement at bearing points
+- **Posts and connectors:** leaning posts, crushed fibers, bent hardware, and failed post-to-beam connections
+- **Footings and soil:** tilted concrete, lifted bases, settlement, cracking, or disturbed soil near uprooted roots
+- **Ledger and house connection:** separation, crushed siding, damaged flashing, failed fasteners, or movement in the house rim joist
+- **Stairs and landings:** shifted stringers, loose top connections, broken guards, or a landing that moved
+- **Utilities and accessories:** damaged deck lighting, receptacles, gas lines, grills, heaters, or outdoor kitchen equipment
+
+Our [deck load path guide](/education/understanding-deck-load-paths) explains how these parts work together. The [deck understructure guide](/education/deck-understructure-guide) shows the framing members hidden below the finished surface.
+
+## Warning Signs That Mean the Deck Should Stay Closed
+
+Any new movement after impact should be treated as a structural warning, not normal wear. Keep the deck closed until a qualified person evaluates it if you see one or more of these conditions:
+
+- The deck has a new slope, sag, bounce, twist, or gap
+- A beam or joist is split, crushed, or no longer seated in its connector
+- A post is leaning or has shifted on its footing
+- A footing is cracked, tilted, lifted, or surrounded by disturbed soil
+- A railing or stair moves under light pressure
+- The deck has pulled away from the house
+- The siding, door opening, ledger, or house rim area is visibly damaged
+- Metal connectors are bent, torn, or missing
+- Part of the tree remains suspended above the deck or access route
+- You hear continuing pops, cracks, or movement
+
+Do not test a questionable deck by walking, jumping, or placing weight on it. Movement that is small to the eye can represent a failed connection below the surface.
+
+## Step 5: Decide Between Repair, Partial Rebuild, and Replacement
+
+Repair may be practical when damage is isolated and the surrounding load path remains sound. Examples can include a localized railing section, a limited number of deck boards, or one framing member that can be safely supported and replaced without disturbing larger structural connections.
+
+A partial rebuild may fit damage concentrated in one zone, such as an outer corner, stair assembly, or section of guard framing. The contractor still needs to verify that connected joists, beams, posts, footings, and the ledger did not move when the impact occurred.
+
+Full replacement becomes more likely when several structural zones shifted, the deck separated from the house, posts or footings moved, a beam rotated, or the impact exposed widespread rot and corrosion. An older deck may also have pre-existing weaknesses that make a narrow repair unsafe or uneconomical.
+
+The decision should be based on field conditions, safe access, permit requirements, material compatibility, and engineering when needed. Our [deck resurfacing versus replacement guide](/deck-resurfacing-vs-replacement) explains why a good-looking surface is not enough when the framing below is compromised.
+
+## Step 6: Confirm Local Damage Assessment and Permit Requirements
+
+[Fairfax County Land Development Services](https://www.fairfaxcounty.gov/landdevelopment/node/819) allows property owners and contractors to request a Damage Assessment Report after natural-disaster damage or structural impacts such as a fallen tree. The report can help identify the scope of damage and the work needed to rebuild or repair.
+
+Permit requirements depend on the jurisdiction and the repair scope. Replacing surface boards may be treated differently from rebuilding load-bearing joists, beams, posts, footings, stairs, or a ledger connection. The [Virginia Department of Housing and Community Development](https://www.dhcd.virginia.gov/codes) states that Virginia's current statewide codes are administered through the Uniform Statewide Building Code, while local departments handle permitting and inspections.
+
+Before structural work begins, confirm the process with the relevant county or city. Start with our [Loudoun County deck permit guide](/deck-permit-loudoun-county-virginia) or [Fairfax County deck permit guide](/deck-permit-fairfax-county-virginia), then verify the project-specific requirements with the local authority.
+
+## What Homeowners Should Not Do After a Tree Strike
+
+The most common mistake is treating the scene like ordinary yard cleanup. A tree resting on a structure can store force, conceal broken framing, and move as branches are removed.
+
+- Do not walk onto the deck for close-up photos
+- Do not stand beneath the deck or suspended tree material
+- Do not cut, pull, or roll a loaded branch yourself
+- Do not use the damaged railing as an anchor point
+- Do not assume a few replacement boards will address hidden damage
+- Do not allow cosmetic work before the structural scope is documented
+- Do not accept an insurance-coverage guarantee from a contractor
+- Do not reopen the deck because the tree has been removed
+
+Tree removal eliminates the external load. It does not prove that the deck's framing, connectors, footings, or house attachment remain safe.
+
+## When to Request a Professional Deck Evaluation
+
+Request a professional evaluation after any tree trunk or substantial limb lands on an elevated deck, damages a railing, shifts a stair, or strikes near the house connection. An inspection is especially important when the deck is older, the impact exposed rot, or the structure changed position.
+
+The responsibilities are different. Emergency services address immediate threats to life, fire, and suspected gas emergencies. The utility controls electrical or utility hazards. A qualified arborist or tree-removal professional handles the tree. A deck contractor documents accessible deck damage and develops a repair scope. A licensed structural engineer should evaluate serious movement, house-attachment damage, shoring, unusual loading, or a disputed structural scope. The local building department determines permit and inspection requirements.
+
+LDN Decks evaluates storm-damaged decks across Northern Virginia and can prepare repair, partial reconstruction, or replacement recommendations based on visible conditions and the complete load path. Structural engineering, county review, utility coordination, or specialized tree removal may also be required depending on the damage.
+
+Keep the area closed until the hazards are controlled. Then request a [professional deck inspection](/services/deck-inspection) or review our [structural deck repair service](/services/deck-repair). For project-specific help, [request an estimate](/get-estimate) or call 571-655-7207.`,
+    faq: [
+      { q: 'Is a deck safe to use after a tree branch hits it?', a: 'Not until the impact has been evaluated. Even when only a railing or several boards appear damaged, the strike can twist joists, move posts, bend connectors, disturb footings, or affect the ledger where an attached deck meets the house.' },
+      { q: 'Should the tree be removed before the deck is inspected?', a: 'Emergency hazards come first, but heavy or suspended tree material should be removed through a planned sequence. A qualified tree-removal professional and structural contractor may need to coordinate because cutting one section can shift weight or release tension onto damaged framing.' },
+      { q: 'Can a storm-damaged deck be repaired without full replacement?', a: 'Sometimes. Localized damage may be repairable when the surrounding load path remains sound. Replacement becomes more likely when several framing zones moved, the deck separated from the house, posts or footings shifted, or widespread rot and corrosion are discovered.' },
+      { q: 'Who should inspect a deck after storm damage?', a: 'Use a qualified deck professional for a complete framing and connection evaluation. Serious movement, house damage, unusual geometry, or a disputed repair scope may also require a licensed structural engineer and review by the local building department.' },
+      { q: 'Does a permit apply to storm-related deck repairs in Northern Virginia?', a: 'It depends on the jurisdiction and scope. Structural work involving joists, beams, posts, footings, stairs, guards, or the ledger may require permits and inspections. Confirm the project with the county or city before structural repairs begin.' },
+      { q: 'What photos should I take after a tree falls on my deck?', a: 'From a safe location, capture wide views of the tree, entire deck, house connection, stairs, railings, and ground below. Add visible details such as split framing, leaning posts, shifted footings, or damaged siding without entering the danger zone.' },
+    ],
+    disclaimer: 'This article provides general homeowner safety and planning information. It is not a substitute for emergency services, utility guidance, an arborist, a professional structural inspection, engineering, insurance advice, or a local building authority decision.',
+    relatedLinks: [
+      { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Evaluate storm impact, movement, framing, connections, footings, ledgers, stairs and railings.' },
+      { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Repair planning for storm-damaged posts, beams, joists, ledgers, guards and stairs.' },
+      { href: '/education/understanding-deck-load-paths', label: 'Deck Load Path Guide', description: 'Learn how deck loads move through boards, joists, beams, posts, footings and the house connection.' },
+      { href: '/education/deck-understructure-guide', label: 'Deck Understructure Guide', description: 'Understand the hidden framing that should be checked after a tree strike.' },
+      { href: '/education/ledger-board-flashing-deck-attachment-virginia', label: 'Ledger Board and House Connection Guide', description: 'Review the highest-risk connection on an attached deck.' },
+      { href: '/deck-safety-inspection-checklist', label: 'Deck Safety Inspection Checklist', description: 'Review visible warning signs while staying outside the damaged area.' },
+      { href: '/deck-resurfacing-vs-replacement', label: 'Deck Resurfacing vs Replacement', description: 'Compare repair and replacement decisions when existing framing may be compromised.' },
+      { href: '/get-estimate', label: 'Request a Storm-Damage Deck Evaluation', description: 'Ask LDN Decks to review repair or replacement options in Northern Virginia.' },
     ]
   }
 ];
