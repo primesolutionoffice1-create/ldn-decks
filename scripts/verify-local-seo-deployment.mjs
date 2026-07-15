@@ -6,7 +6,9 @@ const FETCH_ORIGIN = (process.env.SEO_AUDIT_ORIGIN || CANONICAL_ORIGIN).replace(
 // sitemap intentionally submits only vetted local service pages. The broader
 // programmatic set remains live, but should stay out of the sitemap until each
 // page has enough local proof to be indexable.
-const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 385);
+// Seven duplicate blog records were consolidated in July 2026; five of those
+// records were sitemap-eligible, so the intentional canonical total is now 380.
+const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 380);
 const EXPECTED_LOCAL_SERVICE_URLS = Number(process.env.EXPECTED_LOCAL_SERVICE_URLS || 33);
 const KNOWN_BAD_SITEMAP_URLS = Number(process.env.KNOWN_BAD_SITEMAP_URLS || 260);
 const TIMEOUT_MS = Number(process.env.SEO_DEPLOYMENT_GUARD_TIMEOUT_MS || 12000);
