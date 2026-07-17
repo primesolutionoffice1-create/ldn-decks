@@ -6,7 +6,7 @@
 
 .topFooter {
   background-color: var(--black); 
-  background-image: url('/footer-bg.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/footer-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,17 +14,8 @@
   position: relative;
 }
 
-/* Optional tiny overlay to darken wood texture if needed */
-.topFooter::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.4); 
-  pointer-events: none;
-}
-
 .container {
-  position: relative; /* to stay above the pseudo-overlay */
+  position: relative;
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;

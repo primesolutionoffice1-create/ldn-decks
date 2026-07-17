@@ -30,7 +30,7 @@
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 60%;
   height: 100%;
   background: linear-gradient(
@@ -41,12 +41,14 @@
   );
   animation: shimmer 6s ease-in-out infinite;
   pointer-events: none;
+  transform: translateX(-170%);
+  will-change: transform;
 }
 
 @keyframes shimmer {
-  0%   { left: -100%; }
-  60%  { left: 100%; }
-  100% { left: 100%; }
+  0%   { transform: translateX(-170%); }
+  60%  { transform: translateX(170%); }
+  100% { transform: translateX(170%); }
 }
 
 .inner {
