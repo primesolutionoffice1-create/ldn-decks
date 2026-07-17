@@ -13,7 +13,7 @@ export default function Hero() {
         fill
         priority
         fetchPriority="high"
-        sizes="100vw"
+        sizes="(min-width: 1200px) 1200px, 100vw"
         quality={65}
         style={{ objectFit: 'cover' }}
       />

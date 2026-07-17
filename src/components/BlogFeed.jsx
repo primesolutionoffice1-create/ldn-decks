@@ -20,7 +20,7 @@ export default function BlogFeed() {
         
         <div className={styles.grid}>
           {latestPosts.map((post) => (
-            <Link href={`/blog/${post.slug}`} key={post.id} className={styles.card}>
+            <Link href={`/blog/${post.slug}`} prefetch={false} key={post.id} className={styles.card}>
               <div className={styles.imageWrapper}>
                 <Image 
                   src={post.image} 
@@ -41,7 +41,7 @@ export default function BlogFeed() {
         </div>
         
         <div className={styles.footer}>
-          <Link href="/blog" className={styles.viewAll}>
+          <Link href="/blog" prefetch={false} className={styles.viewAll}>
             View All Articles
           </Link>
         </div>
