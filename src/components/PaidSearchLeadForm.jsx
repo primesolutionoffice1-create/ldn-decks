@@ -22,7 +22,9 @@ export default function PaidSearchLeadForm({
 
     setStatus('submitting');
     const result = await submit(event.currentTarget);
-    if (!result.success) {
+    if (result.success) {
+      setStatus('success');
+    } else {
       setStatus('error');
     }
   }
@@ -59,6 +61,9 @@ export default function PaidSearchLeadForm({
       </div>
       {status === 'error' && (
         <p className={styles.error}>The form did not send. Please call us or try again.</p>
+      )}
+      {status === 'success' && (
+        <p className={styles.success}>Message received. We will review your project details and follow up shortly.</p>
       )}
       <CallLink className={styles.callButton}>
         Call {BUSINESS_PHONE_DISPLAY}

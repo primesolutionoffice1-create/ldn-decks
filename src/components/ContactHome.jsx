@@ -34,7 +34,11 @@ export default function ContactHome({ pageContext } = {}) {
     e.nativeEvent?.stopImmediatePropagation?.();
     setStatus("submitting");
     const result = await submit(e.target);
-    if (!result.success) setStatus("error");
+    if (result.success) {
+      setStatus("success");
+    } else {
+      setStatus("error");
+    }
   };
 
   return (
@@ -92,6 +96,7 @@ export default function ContactHome({ pageContext } = {}) {
               <input type="hidden" name="state" value="VA" />
               <h3>Get a Free Project Consultation</h3>
               <p className={styles.formSubtext}>Written Scopes | Manufacturer-Aligned Materials | Local Project Team</p>
+              {status === "success" && <p style={{color: '#245c2b', fontSize: '14px', marginBottom: '10px'}}>Message received. We will review your project details and follow up shortly.</p>}
               {status === "error" && <p style={{color: 'red', fontSize: '14px', marginBottom: '10px'}}>There was an error sending your message. Please try again.</p>}
               <div className={styles.formGrid}>
                 <div className={styles.inputGroup}>

@@ -128,12 +128,13 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
         router.push(
           `/thank-you?eid=${encodeURIComponent(eventId)}&proof=${encodeURIComponent(result.confirmationToken)}`
         );
+        return { success: true, eventId, confirmationReady: true };
       } else {
-        // Fail conversion tracking closed but keep the homeowner experience
-        // successful if email delivery worked and token signing is misconfigured.
-        router.push('/thank-you');
+        // Fail conversion tracking closed if token signing is misconfigured.
+        // Do not navigate to /thank-you without server-confirmed proof because
+        // path-based GTM tags could treat that page view as a conversion.
+        return { success: true, eventId, confirmationReady: false };
       }
-      return { success: true, eventId };
     }
     return { success: false };
   };

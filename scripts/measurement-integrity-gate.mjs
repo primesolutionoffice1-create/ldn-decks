@@ -42,6 +42,7 @@ const layout = read('src/app/layout.js');
 const consent = read('src/components/ConsentBanner.jsx');
 const tracking = read('src/lib/tracking.js');
 const thankYouTracking = read('src/components/ThankYouTracking.jsx');
+const leadSubmit = read('src/hooks/useLeadSubmit.js');
 const callLink = read('src/components/CallLink.jsx');
 const proofRuntime = read('src/lib/verifiedProof.js');
 const proofData = JSON.parse(read('src/data/verifiedProofSnippets.json'));
@@ -105,6 +106,13 @@ const checks = [
     'Form lead conversion requires server-confirmed proof token',
     thankYouTracking.includes('/api/lead-confirmation/verify') && tracking.includes("event: 'lead_confirmed'") ? 'PASS' : 'FAIL',
     'ThankYouTracking verifies token before pushing lead_confirmed.'
+  ),
+  check(
+    'thank-you-fallback',
+    'Forms do not navigate to /thank-you without server proof',
+    !leadSubmit.includes("router.push('/thank-you')") && leadSubmit.includes('confirmationReady: false') ? 'PASS' : 'FAIL',
+    'useLeadSubmit fails conversion tracking closed when confirmationToken is missing.',
+    'A plain /thank-you fallback can trigger path-based conversion tags without a real server-confirmed lead.'
   ),
   check(
     'lead-dedup',
