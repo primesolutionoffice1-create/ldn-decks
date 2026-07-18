@@ -189,6 +189,7 @@ export const SEGMENT_LABELS = {
   'ashburn-village-hoa-deck-rules': 'Ashburn Village HOA Deck Rules',
   'brambleton-hoa-deck-rules': 'Brambleton HOA Deck Rules',
   'broadlands-hoa-deck-rules': 'Broadlands HOA Deck Rules',
+  'deck-builder-broadlands-va': 'Deck Builder Broadlands, VA',
   'lansdowne-hoa-deck-rules': 'Lansdowne HOA Deck Rules',
   'one-loudoun-hoa-deck-rules': 'One Loudoun HOA Deck Rules',
   'stone-ridge-hoa-deck-rules': 'Stone Ridge HOA Deck Rules',

@@ -186,6 +186,7 @@ export default function DeckBuilderLansdownePage() {
           {[
             ['/lansdowne-hoa-deck-rules', 'Lansdowne HOA deck rules'],
             ['/deck-builder-leesburg-va', 'Leesburg deck builder'],
+            ['/deck-builder-broadlands-va', 'Broadlands deck builder'],
             ['/near-you/loudoun-county', 'Loudoun County deck builder hub'],
             ['/deck-permit-loudoun-county-virginia', 'Loudoun County deck permit guide'],
             ['/services/deck-replacement', 'Deck replacement services'],

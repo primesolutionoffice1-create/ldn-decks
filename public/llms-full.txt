@@ -95,6 +95,12 @@ The site has a broad local service URL architecture across Northern Virginia, bu
 - Neighborhoods: River Creek, Lansdowne, Tavistock Farms, Potomac Station, Exeter, Historic District
 - Updated: 2026-05-25
 
+### Broadlands
+- URL: https://ldndecks.com/deck-builder-broadlands-va
+- Content: Broadlands deck builder page focused on composite replacement, Broadlands Community Association review, Loudoun County permits, and the late-1990s/early-2000s deck replacement cycle.
+- Neighborhoods: Broadlands, Southern Walk, Claiborne Parkway corridor, Ashburn-area planned communities
+- Updated: 2026-07-18
+
 ### Sterling
 - URL: https://ldndecks.com/deck-builder-sterling-va
 - Content: Sterling deck builder — Cascades, Countryside, Sugarland Run HOAs. Builder-grade upgrade focus. Loudoun County permits.
