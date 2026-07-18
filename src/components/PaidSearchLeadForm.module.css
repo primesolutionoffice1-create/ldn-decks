@@ -112,6 +112,13 @@
   font-weight: 700;
 }
 
+.success {
+  margin: 0 0 10px;
+  color: #245c2b;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 @media (max-width: 640px) {
   .form {
     padding: 14px;
