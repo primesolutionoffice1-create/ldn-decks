@@ -225,7 +225,7 @@ export default function DeckBuilderAshburnPage() {
         </div>
         <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1rem', color: 'var(--color-primary)' }}>Deck Cost in Ashburn, VA (2026 Pricing)</h2>
         <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-          Ashburn deck pricing reflects the community standards in Brambleton, Broadlands and One Loudoun — most homeowners choose mid-to-premium composite materials. Here is how recent Ashburn projects have landed:
+          Ashburn deck pricing reflects the community standards in Brambleton, Broadlands and <Link href="/deck-builder-one-loudoun-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>One Loudoun</Link> — most homeowners choose mid-to-premium composite materials. Here is how recent Ashburn projects have landed:
         </p>
         <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>

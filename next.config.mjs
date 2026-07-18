@@ -213,6 +213,8 @@ const nextConfig = {
       { source: '/near-you/purcellville', destination: '/deck-builder-purcellville-va', permanent: true },
       { source: '/near-you/lansdowne-va', destination: '/deck-builder-lansdowne-va', permanent: true },
       { source: '/near-you/lansdowne', destination: '/deck-builder-lansdowne-va', permanent: true },
+      { source: '/near-you/one-loudoun-va', destination: '/deck-builder-one-loudoun-va', permanent: true },
+      { source: '/near-you/one-loudoun', destination: '/deck-builder-one-loudoun-va', permanent: true },
 
       // Fairfax County Cities
       { source: '/near-you/alexandria-va', destination: '/deck-builder-alexandria-va', permanent: true },
@@ -251,6 +253,7 @@ const nextConfig = {
       { source: '/near-you/loudoun-county/brambleton', destination: '/deck-builder-brambleton-va', permanent: true },
       { source: '/near-you/loudoun-county/south-riding', destination: '/deck-builder-south-riding-va', permanent: true },
       { source: '/near-you/loudoun-county/lansdowne', destination: '/deck-builder-lansdowne-va', permanent: true },
+      { source: '/near-you/loudoun-county/one-loudoun', destination: '/deck-builder-one-loudoun-va', permanent: true },
       { source: '/near-you/fairfax-county/alexandria', destination: '/deck-builder-alexandria-va', permanent: true },
       { source: '/near-you/fairfax-county/fairfax', destination: '/deck-builder-fairfax-va', permanent: true },
       { source: '/near-you/fairfax-county/vienna', destination: '/deck-builder-vienna-va', permanent: true },
@@ -291,6 +294,7 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-lovettsville', destination: '/near-you/loudoun-county/lovettsville', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-hamilton', destination: '/near-you/loudoun-county/hamilton', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-lansdowne', destination: '/deck-builder-lansdowne-va', permanent: true },
+      { source: '/top-decks-build-near-you/deck-builder-in-one-loudoun', destination: '/deck-builder-one-loudoun-va', permanent: true },
 
       // Fairfax County cities
       { source: '/top-decks-build-near-you/deck-builder-in-herndon', destination: '/deck-builder-herndon-va', permanent: true },
@@ -379,6 +383,7 @@ const nextConfig = {
       { source: '/service/cascades', destination: '/deck-builder-cascades-va', permanent: true },
       { source: '/service/south-riding', destination: '/deck-builder-south-riding-va', permanent: true },
       { source: '/service/purcellville', destination: '/deck-builder-purcellville-va', permanent: true },
+      { source: '/service/one-loudoun', destination: '/deck-builder-one-loudoun-va', permanent: true },
       { source: '/service/stafford', destination: '/deck-builder-stafford-va', permanent: true },
 
       // Major City Page Consolidation (Redirect dynamic to static SEO-optimized)
