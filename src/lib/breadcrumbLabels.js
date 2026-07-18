@@ -70,6 +70,7 @@ export const SEGMENT_LABELS = {
   'deck-builder-purcellville-va': 'Deck Builder Purcellville, VA',
   'deck-builder-brambleton-va': 'Deck Builder Brambleton, VA',
   'deck-builder-south-riding-va': 'Deck Builder South Riding, VA',
+  'deck-builder-lansdowne-va': 'Deck Builder Lansdowne, VA',
   'deck-builder-alexandria-va': 'Deck Builder Alexandria, VA',
   'deck-builder-fairfax-va': 'Deck Builder Fairfax, VA',
   'deck-builder-vienna-va': 'Deck Builder Vienna, VA',

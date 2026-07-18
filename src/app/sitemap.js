@@ -164,6 +164,7 @@ export default async function sitemap() {
 		{ path: "/deck-builders-loudoun",        priority: 0.95, lastMod: TIER1, freq: "weekly" },
 		{ path: "/deck-builder-ashburn-va",      priority: 0.92, lastMod: TIER1, freq: "weekly" },
 		{ path: "/deck-builder-leesburg-va",     priority: 0.92, lastMod: TIER1, freq: "weekly" },
+		{ path: "/deck-builder-lansdowne-va",    priority: 0.90, lastMod: TIER1, freq: "weekly" },
 		{ path: "/deck-builder-reston-va",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
 		// REMOVED: non-canonical (canonical is /deck-design-ideas-2026)
 		{ path: "/deck-repair-loudoun-county",             priority: 0.92, lastMod: TIER1, freq: "weekly" },
