@@ -107,6 +107,12 @@ The site has a broad local service URL architecture across Northern Virginia, bu
 - Neighborhoods: Broadlands, Southern Walk, Claiborne Parkway corridor, Ashburn-area planned communities
 - Updated: 2026-07-18
 
+### Cascades
+- URL: https://ldndecks.com/deck-builder-cascades-va
+- Content: Cascades deck builder page focused on Potomac Falls/Sterling planned-community deck replacement, Cascades Community Association review, Loudoun County permits, composite resurfacing vs replacement, railings, stairs, lighting, and wooded or park-backed lots.
+- Neighborhoods: Cascades, Lowes Island, Potomac Falls, Countryside, Algonkian, Route 7 corridor
+- Updated: 2026-07-18
+
 ### Sterling
 - URL: https://ldndecks.com/deck-builder-sterling-va
 - Content: Sterling deck builder — Cascades, Countryside, Sugarland Run HOAs. Builder-grade upgrade focus. Loudoun County permits.

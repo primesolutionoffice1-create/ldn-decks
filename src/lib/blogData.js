@@ -2552,6 +2552,7 @@ const allBlogPosts = [
     id: 123,
     title: "Deck Builder in Cascades VA: Loudoun County Permits, HOA & Costs 2026",
     slug: 'deck-builder-cascades-va',
+    canonicalPath: '/deck-builder-cascades-va',
     image: '/images/img07.jpeg',
     date: 'June 21, 2026',
     author: 'Loudoun Decks Team',

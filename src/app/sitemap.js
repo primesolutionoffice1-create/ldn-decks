@@ -166,6 +166,7 @@ export default async function sitemap() {
 		{ path: "/deck-builder-leesburg-va",     priority: 0.92, lastMod: TIER1, freq: "weekly" },
 		{ path: "/deck-builder-lansdowne-va",    priority: 0.90, lastMod: TIER1, freq: "weekly" },
 		{ path: "/deck-builder-broadlands-va",   priority: 0.90, lastMod: TIER1, freq: "weekly" },
+		{ path: "/deck-builder-cascades-va",     priority: 0.90, lastMod: TIER1, freq: "weekly" },
 		{ path: "/deck-builder-aldie-va",        priority: 0.90, lastMod: TIER1, freq: "weekly" },
 		{ path: "/deck-builder-reston-va",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
 		// REMOVED: non-canonical (canonical is /deck-design-ideas-2026)
