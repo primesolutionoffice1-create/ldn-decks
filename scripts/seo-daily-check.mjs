@@ -17,9 +17,10 @@ const CANONICAL_ORIGIN = (
 // Keep this aligned with verify-local-seo-deployment.mjs. After the May 2026
 // core update / June 2026 spam update hardening, only vetted local service
 // pages are submitted in the sitemap; broader programmatic pages can stay live
-// with noindex/follow until they have enough local proof. P0 city canonical
-// consolidation in July 2026 removed four duplicate blog city URLs and added
-// one canonical Lansdowne city page, bringing the clean sitemap floor to 377.
+// with noindex/follow until they have enough local proof. P0/P1 city canonical
+// consolidation in July 2026 removed duplicate city surfaces and promoted
+// vetted city pages. Broadlands replaces its near-you URL in the sitemap, so
+// the clean sitemap floor remains 377.
 const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 377);
 const EXPECTED_LOCAL_SERVICE_URLS = Number(process.env.EXPECTED_LOCAL_SERVICE_URLS || 33);
 const KNOWN_BAD_SITEMAP_URLS = Number(process.env.KNOWN_BAD_SITEMAP_URLS || 260);

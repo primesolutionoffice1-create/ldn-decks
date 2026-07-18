@@ -2434,6 +2434,7 @@ const allBlogPosts = [
     id: 118,
     title: "Deck Builder in Broadlands VA: Loudoun County Permits, HOA & Costs 2026",
     slug: 'deck-builder-broadlands-va',
+    canonicalPath: '/deck-builder-broadlands-va',
     image: '/showcase/img08.jpeg',
     date: 'June 19, 2026',
     author: 'Loudoun Decks Team',
