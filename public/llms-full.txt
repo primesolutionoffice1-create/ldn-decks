@@ -89,6 +89,12 @@ The site has a broad local service URL architecture across Northern Virginia, bu
 - Neighborhoods: Broadlands, Ashburn Village, One Loudoun, Belmont Country Club, Moorefield Station
 - Updated: 2026-05-25
 
+### Aldie
+- URL: https://ldndecks.com/deck-builder-aldie-va
+- Content: Aldie deck builder page focused on Stone Ridge, Willowsford, Route 50 planned communities, Loudoun County permits, HOA packet planning, premium composite decks, screened porches, and larger outdoor living projects.
+- Neighborhoods: Stone Ridge, Willowsford, Virginia Oaks, Kirkpatrick Farms, rural Aldie, Route 50 corridor
+- Updated: 2026-07-18
+
 ### Leesburg
 - URL: https://ldndecks.com/deck-builder-leesburg-va
 - Content: Historic district to River Creek. Dual-jurisdiction permits (Town of Leesburg vs Loudoun County). Cedar, IPE, and composite. Potomac-facing view lots. 1500+ words.

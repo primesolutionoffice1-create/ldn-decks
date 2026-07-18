@@ -65,6 +65,7 @@ export const SEGMENT_LABELS = {
 
   // Canonical city pages (deck-builder-{city}-va)
   'deck-builder-ashburn-va': 'Deck Builder Ashburn, VA',
+  'deck-builder-aldie-va': 'Deck Builder Aldie, VA',
   'deck-builder-leesburg-va': 'Deck Builder Leesburg, VA',
   'deck-builder-sterling-va': 'Deck Builder Sterling, VA',
   'deck-builder-purcellville-va': 'Deck Builder Purcellville, VA',
