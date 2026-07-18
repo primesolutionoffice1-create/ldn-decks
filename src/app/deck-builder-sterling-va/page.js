@@ -194,7 +194,8 @@ export default function SterlingDeckBuilderPage() {
               ['/deck-builder-leesburg-va', 'Leesburg'],
               ['/deck-builder-herndon-va', 'Herndon'],
               ['/deck-builder-reston-va', 'Reston'],
-              ['/deck-builder-ashburn-va', 'Broadlands'],
+              ['/deck-builder-broadlands-va', 'Broadlands'],
+              ['/deck-builder-cascades-va', 'Cascades'],
               ['/near-you/loudoun-county', 'Potomac Falls'],
             ].map(([href, text]) => (
               <Link key={href} href={href} style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>{text}</Link>
