@@ -14,6 +14,7 @@ import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
+import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-arlington-va',
@@ -105,6 +106,28 @@ export default function ArlingtonDeckBuilderPage() {
           { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost' },
           { href: '/deck-railing-options-northern-virginia', label: 'Railing options' },
           { href: '/get-estimate', label: 'Get an Arlington estimate' }
+        ]}
+      />
+      <PremiumCityLeadQualifier
+        city="Arlington"
+        county="Arlington County"
+        intro="Arlington homeowners usually need more than a square-foot price. The right estimate should account for tight access, parking and staging, privacy, historic-area visibility, drainage, stair placement, railing style, and whether the existing frame is safe enough to resurface."
+        projectTypes={[
+          'Composite deck replacement on compact lots',
+          'Screened porch or covered-deck additions',
+          'Two-level decks on sloped North Arlington yards',
+          'Rooftop, balcony, or townhome rear-yard rebuilds',
+        ]}
+        planningSignals={[
+          'Photos of the current deck or backyard',
+          'Approximate size, height, and stair location',
+          'HOA or historic-review notes if applicable',
+          'Preferred material direction: Trex, TimberTech, AZEK, or budget comparison',
+        ]}
+        links={[
+          { href: '/get-estimate', label: 'Request Arlington estimate', primary: true },
+          { href: '/deck-permit-arlington-county-virginia', label: 'Arlington permit guide' },
+          { href: '/composite-deck-cost-northern-virginia', label: 'Composite cost guide' },
         ]}
       />
       <article style={{ padding: '4rem 0' }}>
