@@ -185,6 +185,7 @@ export default function DeckBuilderBroadlandsPage() {
         <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
           {[
             ['/broadlands-hoa-deck-rules', 'Broadlands HOA deck rules'],
+            ['/deck-builder-aldie-va', 'Aldie deck builder'],
             ['/deck-builder-ashburn-va', 'Ashburn deck builder'],
             ['/deck-builder-brambleton-va', 'Brambleton deck builder'],
             ['/deck-builder-lansdowne-va', 'Lansdowne deck builder'],

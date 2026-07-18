@@ -2411,6 +2411,7 @@ const allBlogPosts = [
     id: 117,
     title: "Deck Builder in Aldie VA: Loudoun County Permits, HOA & Costs 2026",
     slug: 'deck-builder-aldie-va',
+    canonicalPath: '/deck-builder-aldie-va',
     image: '/showcase/img07.jpeg',
     date: 'June 19, 2026',
     author: 'Nick - Loudoun Decks',

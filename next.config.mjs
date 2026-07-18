@@ -64,6 +64,7 @@ const nextConfig = {
       // commercial city-page intent and are paired with canonicalPath in
       // blogData so redirected sources are not submitted in the sitemap.
       { source: '/blog/deck-builder-alexandria-va', destination: '/deck-builder-alexandria-va', statusCode: 301 },
+      { source: '/blog/deck-builder-aldie-va', destination: '/deck-builder-aldie-va', statusCode: 301 },
       { source: '/blog/deck-builder-broadlands-va', destination: '/deck-builder-broadlands-va', statusCode: 301 },
       { source: '/blog/deck-builder-leesburg-va', destination: '/deck-builder-leesburg-va', statusCode: 301 },
       { source: '/blog/deck-builder-lansdowne-va', destination: '/deck-builder-lansdowne-va', statusCode: 301 },
@@ -199,8 +200,8 @@ const nextConfig = {
       { source: '/near-you/broadlands', destination: '/deck-builder-broadlands-va', permanent: true },
       { source: '/near-you/sterling-va', destination: '/deck-builder-sterling-va', permanent: true },
       { source: '/near-you/sterling', destination: '/deck-builder-sterling-va', permanent: true },
-      { source: '/near-you/aldie-va', destination: '/near-you/loudoun-county/aldie', permanent: true },
-      { source: '/near-you/aldie', destination: '/near-you/loudoun-county/aldie', permanent: true },
+      { source: '/near-you/aldie-va', destination: '/deck-builder-aldie-va', permanent: true },
+      { source: '/near-you/aldie', destination: '/deck-builder-aldie-va', permanent: true },
       { source: '/near-you/middleburg-va', destination: '/near-you/loudoun-county/middleburg', permanent: true },
       { source: '/near-you/middleburg', destination: '/near-you/loudoun-county/middleburg', permanent: true },
       { source: '/near-you/round-hill-va', destination: '/near-you/loudoun-county/round-hill', permanent: true },
@@ -239,6 +240,7 @@ const nextConfig = {
       // 301 from /near-you/[county]/[city] → /deck-builder-[city]-va (canonical)
       { source: '/near-you/loudoun-county/ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
       { source: '/near-you/loudoun-county/leesburg', destination: '/deck-builder-leesburg-va', permanent: true },
+      { source: '/near-you/loudoun-county/aldie', destination: '/deck-builder-aldie-va', permanent: true },
       { source: '/near-you/loudoun-county/broadlands', destination: '/deck-builder-broadlands-va', permanent: true },
       { source: '/near-you/loudoun-county/sterling', destination: '/deck-builder-sterling-va', permanent: true },
       { source: '/near-you/loudoun-county/purcellville', destination: '/deck-builder-purcellville-va', permanent: true },
@@ -274,7 +276,7 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-leesburg', destination: '/deck-builder-leesburg-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-sterling', destination: '/deck-builder-sterling-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-sterling-va', destination: '/deck-builder-sterling-va', permanent: true },
-      { source: '/top-decks-build-near-you/deck-builder-in-aldie', destination: '/near-you/loudoun-county/aldie', permanent: true },
+      { source: '/top-decks-build-near-you/deck-builder-in-aldie', destination: '/deck-builder-aldie-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-middleburg', destination: '/near-you/loudoun-county/middleburg', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-purcellville', destination: '/deck-builder-purcellville-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-round-hill', destination: '/near-you/loudoun-county/round-hill', permanent: true },
