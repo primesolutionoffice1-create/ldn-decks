@@ -20,6 +20,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-vienna-va',
@@ -184,6 +185,28 @@ export default function ViennaDeckBuilderPage() {
           { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
           { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
           { href: '/get-estimate', label: 'Get a Vienna estimate' }
+        ]}
+      />
+      <PremiumCityLeadQualifier
+        city="Vienna"
+        county="Fairfax County"
+        intro="Vienna estimates work best when the project is qualified by jurisdiction, age of the existing deck, town or HOA documentation, mature-tree impact, privacy needs, and whether the homeowner wants a simple replacement or a higher-finish composite outdoor living upgrade."
+        projectTypes={[
+          'Composite deck replacement for mature Vienna lots',
+          'Town of Vienna or Fairfax County permit-ready deck plans',
+          'Screened porch, pergola, and outdoor living additions',
+          'Resurfacing decisions where the frame needs safety review first',
+        ]}
+        planningSignals={[
+          'Exact jurisdiction: Town of Vienna or Fairfax County',
+          'Current deck age, photos, and visible framing concerns',
+          'HOA, town review, or neighbor-facing visibility requirements',
+          'Material direction: Trex, TimberTech, AZEK, wood comparison, or budget planning',
+        ]}
+        links={[
+          { href: '/get-estimate', label: 'Request Vienna estimate', primary: true },
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

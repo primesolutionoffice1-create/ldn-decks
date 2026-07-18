@@ -20,6 +20,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-mclean-va',
@@ -202,6 +203,28 @@ export default function McLeanDeckBuilderPage() {
           { href: '/mclean-great-falls-premium-deck-budget', label: 'McLean budget guide' },
           { href: '/trex-vs-timbertech-vs-azek', label: 'Material comparison' },
           { href: '/get-estimate', label: 'Get a McLean estimate' }
+        ]}
+      />
+      <PremiumCityLeadQualifier
+        city="McLean"
+        county="Fairfax County"
+        intro="McLean leads are most valuable when the first conversation separates a basic repair from a full composite replacement, screened porch, covered deck, or estate outdoor living scope. The estimate should account for slope, privacy, RPA exposure, access, railings, lighting, drainage, and whether the existing frame can safely support resurfacing."
+        projectTypes={[
+          'Estate composite deck replacement with Trex, TimberTech, or AZEK planning',
+          'Deck plus screened porch, covered structure, or outdoor kitchen scope',
+          'Multi-level decks for sloped or privacy-sensitive McLean yards',
+          'Code-reset replacement where old framing, ledger, stairs, or footings need review',
+        ]}
+        planningSignals={[
+          'Photos of the current deck, rear elevation, stairs, and access path',
+          'HOA, architectural review, or RPA concerns if known',
+          'Preferred material tier, railing style, lighting, and drainage needs',
+          'Whether the goal is replacement, resurfacing, screened porch, or full outdoor living',
+        ]}
+        links={[
+          { href: '/get-estimate', label: 'Request McLean estimate', primary: true },
+          { href: '/mclean-great-falls-premium-deck-budget', label: 'Premium budget guide' },
+          { href: '/trex-vs-timbertech-vs-azek', label: 'Compare premium materials' },
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
