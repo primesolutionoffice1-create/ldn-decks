@@ -60,6 +60,13 @@ const nextConfig = {
       // BEAST plan Cluster H: legacy /blog/ URL competing with apex owner at #4
       // Explicit 301 (matches canonical-signal convention used for www→apex above)
       { source: '/blog/trex-vs-timbertech-vs-azek', destination: '/trex-vs-timbertech-vs-azek', statusCode: 301 },
+      // P0 city canonical consolidation. These blog articles duplicate the
+      // commercial city-page intent and are paired with canonicalPath in
+      // blogData so redirected sources are not submitted in the sitemap.
+      { source: '/blog/deck-builder-alexandria-va', destination: '/deck-builder-alexandria-va', statusCode: 301 },
+      { source: '/blog/deck-builder-leesburg-va', destination: '/deck-builder-leesburg-va', statusCode: 301 },
+      { source: '/blog/deck-builder-lansdowne-va', destination: '/deck-builder-lansdowne-va', statusCode: 301 },
+      { source: '/blog/deck-builder-mclean-va', destination: '/deck-builder-mclean-va', statusCode: 301 },
       { source: '/blog/under-deck-drainage-system-northern-virginia', destination: '/blog/under-deck-drainage-systems-northern-virginia', permanent: true },
       { source: '/rooftop-deck-washington-dc', destination: '/showcase/rooftop-deck-washington-dc', permanent: true },
       { source: '/trex-deck-builder-loudoun', destination: '/deck-builders-loudoun', permanent: true },
@@ -197,6 +204,8 @@ const nextConfig = {
       { source: '/near-you/round-hill', destination: '/near-you/loudoun-county/round-hill', permanent: true },
       { source: '/near-you/purcellville-va', destination: '/deck-builder-purcellville-va', permanent: true },
       { source: '/near-you/purcellville', destination: '/deck-builder-purcellville-va', permanent: true },
+      { source: '/near-you/lansdowne-va', destination: '/deck-builder-lansdowne-va', permanent: true },
+      { source: '/near-you/lansdowne', destination: '/deck-builder-lansdowne-va', permanent: true },
 
       // Fairfax County Cities
       { source: '/near-you/alexandria-va', destination: '/deck-builder-alexandria-va', permanent: true },
@@ -231,6 +240,7 @@ const nextConfig = {
       { source: '/near-you/loudoun-county/purcellville', destination: '/deck-builder-purcellville-va', permanent: true },
       { source: '/near-you/loudoun-county/brambleton', destination: '/deck-builder-brambleton-va', permanent: true },
       { source: '/near-you/loudoun-county/south-riding', destination: '/deck-builder-south-riding-va', permanent: true },
+      { source: '/near-you/loudoun-county/lansdowne', destination: '/deck-builder-lansdowne-va', permanent: true },
       { source: '/near-you/fairfax-county/alexandria', destination: '/deck-builder-alexandria-va', permanent: true },
       { source: '/near-you/fairfax-county/fairfax', destination: '/deck-builder-fairfax-va', permanent: true },
       { source: '/near-you/fairfax-county/vienna', destination: '/deck-builder-vienna-va', permanent: true },
@@ -269,7 +279,7 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-broadlands', destination: '/near-you/loudoun-county/broadlands', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-lovettsville', destination: '/near-you/loudoun-county/lovettsville', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-hamilton', destination: '/near-you/loudoun-county/hamilton', permanent: true },
-      { source: '/top-decks-build-near-you/deck-builder-in-lansdowne', destination: '/near-you/loudoun-county/lansdowne', permanent: true },
+      { source: '/top-decks-build-near-you/deck-builder-in-lansdowne', destination: '/deck-builder-lansdowne-va', permanent: true },
 
       // Fairfax County cities
       { source: '/top-decks-build-near-you/deck-builder-in-herndon', destination: '/deck-builder-herndon-va', permanent: true },
