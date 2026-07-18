@@ -68,7 +68,7 @@ export default function OneLoudounHoaDeckRulesPage() {
 
           <h2 style={S.h2}>Building a Deck in One Loudoun</h2>
           <p style={S.p}>One Loudoun is the mixed-use Metro-corridor development at the heart of Ashburn — a walkable urban planning concept that blends townhomes, detached single-family homes, condos, retail, restaurants, and the One Loudoun Plaza commercial core. Deck projects here split into three distinct categories: compact rear decks on the townhomes, full-size rear decks on the detached estate-section homes, and rooftop terrace builds on the Metro-corridor townhomes designed with rooftop access.</p>
-          <p style={S.p}>Whichever category your home falls into, the approval path goes through the One Loudoun community ARC + the Loudoun County building permit. We file both in parallel from contract day. See our broader <Link href="/deck-builder-ashburn-va" style={{ color: 'var(--color-primary)' }}>Ashburn deck builder page</Link> for context, and <Link href="/rooftop-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)' }}>rooftop deck builder page</Link> if your project is elevated.</p>
+          <p style={S.p}>Whichever category your home falls into, the approval path goes through the One Loudoun community ARC + the Loudoun County building permit. We file both in parallel from contract day. Start with our dedicated <Link href="/deck-builder-one-loudoun-va" style={{ color: 'var(--color-primary)' }}>One Loudoun deck builder page</Link> for project planning, see our broader <Link href="/deck-builder-ashburn-va" style={{ color: 'var(--color-primary)' }}>Ashburn deck builder page</Link> for context, and use the <Link href="/rooftop-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)' }}>rooftop deck builder page</Link> if your project is elevated.</p>
 
           <h2 style={S.h2}>How One Loudoun Architectural Review Works</h2>
           <p style={S.p}>One Loudoun is managed by <strong>FirstService Residential</strong>, one of the largest residential community management firms in Northern Virginia. ARC submissions generally follow a standardized documentation process:</p>
@@ -106,7 +106,7 @@ export default function OneLoudounHoaDeckRulesPage() {
           </ul>
 
           <h2 style={S.h2}>How Loudoun Decks Handles One Loudoun Approvals</h2>
-          <p style={S.p}>We prepare the ARC packet with material samples, color specifications, drawings or renderings where needed, Loudoun County permit filing, and inspection coordination. See more on our <Link href="/deck-builder-ashburn-va" style={{ color: 'var(--color-primary)' }}>Ashburn deck builder page</Link>.</p>
+          <p style={S.p}>We prepare the ARC packet with material samples, color specifications, drawings or renderings where needed, Loudoun County permit filing, and inspection coordination. See more on our <Link href="/deck-builder-one-loudoun-va" style={{ color: 'var(--color-primary)' }}>One Loudoun deck builder page</Link> or the broader <Link href="/deck-builder-ashburn-va" style={{ color: 'var(--color-primary)' }}>Ashburn deck builder page</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ — One Loudoun HOA deck approval</h2>
           {faqSchema.mainEntity.map((q, i) => (
@@ -119,6 +119,7 @@ export default function OneLoudounHoaDeckRulesPage() {
           <h2 style={{ fontSize: '1.4rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related guides</h2>
           <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
             <li>→ <Link href="/deck-builder-ashburn-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Ashburn deck builder</Link></li>
+            <li>→ <Link href="/deck-builder-one-loudoun-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>One Loudoun deck builder</Link></li>
             <li>→ <Link href="/rooftop-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Rooftop deck builder NoVA</Link></li>
             <li>→ <Link href="/loudoun-county-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County HOA deck rules</Link></li>
             <li>→ <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County permit guide</Link></li>
