@@ -8,7 +8,7 @@ import styles from './PaidSearchLeadForm.module.css';
 export default function PaidSearchLeadForm({
   service = 'Composite Decks',
   formLocation = 'paid_search_above_fold',
-  heading = 'Same-week estimate openings are available',
+  heading = 'Request a written deck estimate',
   pageContext,
 }) {
   const [status, setStatus] = useState(null);
@@ -47,13 +47,13 @@ export default function PaidSearchLeadForm({
       <input type="hidden" name="page_type" value={pageContext?.pageType || 'paid_search_landing_page'} />
       <input type="hidden" name="page_city" value={pageContext?.city || ''} />
       <input type="hidden" name="page_county" value={pageContext?.county || ''} />
-      <input type="hidden" name="message" value={`Paid search quick estimate request for ${service}.`} />
+      <input type="hidden" name="message" value={`Paid search written estimate request for ${service}.`} />
 
       <div className={styles.header}>
-        <p className={styles.eyebrow}>Fastest response today</p>
+        <p className={styles.eyebrow}>Priority homeowner review</p>
         <p className={styles.heading}>{heading}</p>
         <p className={styles.subheading}>
-          We will prioritize homeowners ready for a deck replacement or composite deck estimate.
+          We prioritize homeowners ready to discuss scope, budget, and the right deck solution.
         </p>
       </div>
       {status === 'error' && (
@@ -70,7 +70,7 @@ export default function PaidSearchLeadForm({
         <select className={styles.select} name="timeline" required defaultValue="" aria-label="Project timeline">
           <option value="" disabled>How soon?</option>
           <option value="Immediately">Ready now</option>
-          <option value="Same-week estimate">Same-week estimate</option>
+          <option value="Written estimate this week">Written estimate this week</option>
           <option value="1-3 Months">1-3 months</option>
           <option value="3-6 Months">3-6 months</option>
           <option value="Just Exploring">Just exploring</option>
@@ -98,11 +98,11 @@ export default function PaidSearchLeadForm({
           <option value="Not Sure">Not sure</option>
         </select>
         <button className={`${styles.submit} ${styles.full}`} type="submit" disabled={status === 'submitting'}>
-          {status === 'submitting' ? 'Sending...' : 'Request Same-Week Estimate'}
+          {status === 'submitting' ? 'Sending...' : 'Request Written Estimate'}
         </button>
       </div>
       <p className={styles.note}>
-        Calls are the quickest path today. The short form still preserves paid-ad attribution for follow-up.
+        Calls are the quickest path today. The short form helps us route your project details before follow-up.
       </p>
     </form>
   );

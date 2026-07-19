@@ -5,6 +5,12 @@ import { recordDedupHit } from '@/lib/attribution-debug';
 import { getClickIds, getUtmParams } from '@/lib/clickIds';
 import { BUSINESS } from '@/lib/business';
 
+const GOOGLE_ADS_LEAD_CONVERSION_SEND_TO =
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO ||
+  'AW-16888402136/KNF1CJur4tlbENihgvU-';
+const GOOGLE_ADS_LEAD_CONVERSION_VALUE = 1;
+const GOOGLE_ADS_LEAD_CONVERSION_CURRENCY = 'USD';
+
 /**
  * Push event to GTM dataLayer - no-ops on server render
  */
@@ -34,6 +40,10 @@ function leadFiredKey(eventId) {
   return eventId ? `lead_fired_${eventId}` : null;
 }
 
+function leadAttributionKey(eventId) {
+  return eventId ? `lead_attribution_${eventId}` : null;
+}
+
 function getPendingLeadSet() {
   if (typeof window === 'undefined') return null;
   window.__ldnPendingLeadIds = window.__ldnPendingLeadIds || new Set();
@@ -51,6 +61,32 @@ export function markLeadConfirmationPending(eventId) {
   } catch {
     // Browser storage can fail in private/embedded contexts; the in-memory
     // pending set still protects the same SPA submission flow.
+  }
+}
+
+function storeLeadAttributionPayload(eventId, payload) {
+  if (typeof window === 'undefined' || !eventId || !payload) return;
+  try {
+    if (window.sessionStorage) {
+      window.sessionStorage.setItem(leadAttributionKey(eventId), JSON.stringify(payload));
+    }
+  } catch {
+    // Enhanced-conversion enrichment is best effort. The conversion event still
+    // fires without it when browser storage is unavailable or blocked.
+  }
+}
+
+function consumeLeadAttributionPayload(eventId) {
+  if (typeof window === 'undefined' || !eventId) return {};
+  try {
+    const key = leadAttributionKey(eventId);
+    const raw = window.sessionStorage?.getItem(key);
+    if (!raw) return {};
+    window.sessionStorage.removeItem(key);
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
   }
 }
 
@@ -152,6 +188,43 @@ function trackMetaLead({ eventId } = {}) {
   sendWhenReady();
 }
 
+function trackGoogleAdsLead({ eventId, attributionPayload = {} } = {}) {
+  if (typeof window === 'undefined' || !eventId || !GOOGLE_ADS_LEAD_CONVERSION_SEND_TO) {
+    return;
+  }
+
+  const payload = {
+    send_to: GOOGLE_ADS_LEAD_CONVERSION_SEND_TO,
+    transaction_id: eventId,
+    event_id: eventId,
+    value: GOOGLE_ADS_LEAD_CONVERSION_VALUE,
+    currency: GOOGLE_ADS_LEAD_CONVERSION_CURRENCY,
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+    form_location: attributionPayload.form_location || null,
+    form_type: attributionPayload.form_type || null,
+    service: attributionPayload.service || null,
+    city: attributionPayload.city || null,
+    state: attributionPayload.state || null,
+  };
+
+  let attempts = 0;
+
+  function sendWhenReady() {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', payload);
+      return;
+    }
+
+    attempts += 1;
+    if (attempts < 10) {
+      window.setTimeout(sendWhenReady, 500);
+    }
+  }
+
+  sendWhenReady();
+}
+
 export function trackMetaPageView() {
   if (typeof window === 'undefined') {
     return;
@@ -209,21 +282,7 @@ export function trackFormSubmit({
 } = {}) {
   if (typeof window === 'undefined') return;
   const leadEventId = eventId || `lead_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
-  push({
-    event: 'generate_lead',
-    form_type: formType,
-    form_location: formLocation || formType,
-    lead_source: 'website_contact_form',
-    event_id: leadEventId,
-    email: email || null,
-    phone: phone || null,
-    ...pageContextPayload(pageContext),
-    page_location: window.location.href,
-    page_path: window.location.pathname,
-  });
-  push({
-    event: 'form_submit',
-    event_id: leadEventId,
+  const attributionPayload = {
     form_type: formType,
     form_location: formLocation || formType,
     email: email || null,
@@ -252,6 +311,29 @@ export function trackFormSubmit({
     utm_campaign: utmParams.utm_campaign || null,
     utm_content: utmParams.utm_content || null,
     utm_term: utmParams.utm_term || null,
+  };
+  storeLeadAttributionPayload(leadEventId, attributionPayload);
+
+  push({
+    event: 'generate_lead',
+    form_type: formType,
+    form_location: formLocation || formType,
+    lead_source: 'website_contact_form',
+    event_id: leadEventId,
+    transaction_id: leadEventId,
+    value: GOOGLE_ADS_LEAD_CONVERSION_VALUE,
+    currency: GOOGLE_ADS_LEAD_CONVERSION_CURRENCY,
+    email: email || null,
+    phone: phone || null,
+    ...pageContextPayload(pageContext),
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+  });
+  push({
+    event: 'form_submit',
+    event_id: leadEventId,
+    transaction_id: leadEventId,
+    ...attributionPayload,
     page: window.location.pathname,
   });
 }
@@ -390,11 +472,20 @@ export function trackLeadConfirmed({ eventId } = {}) {
     // The pending-lead guard already confirmed this came from this SPA flow.
   }
 
+  const attributionPayload = consumeLeadAttributionPayload(eventId);
+
   push({
     event: 'lead_confirmed',
     event_id: eventId,
+    transaction_id: eventId,
+    value: GOOGLE_ADS_LEAD_CONVERSION_VALUE,
+    currency: GOOGLE_ADS_LEAD_CONVERSION_CURRENCY,
+    ...attributionPayload,
+    page_location: window.location.href,
+    page_path: window.location.pathname,
     page: window.location.pathname,
   });
+  trackGoogleAdsLead({ eventId, attributionPayload });
   trackMetaLead({ eventId });
   trackPinterestLead({ eventId });
 }
