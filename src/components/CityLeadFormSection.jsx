@@ -9,6 +9,7 @@ export default function CityLeadFormSection({
   pageType = 'local_city_landing_page',
 }) {
   const cityService = `${city} ${service}`;
+  const estimateArticle = /^[aeiou]/i.test(city.trim()) ? 'an' : 'a';
 
   return (
     <section style={{ background: '#fff7f2', padding: '2.25rem 1.5rem' }}>
@@ -28,7 +29,7 @@ export default function CityLeadFormSection({
           service={cityService}
           formLocation={formLocation || `local_city_${city.toLowerCase().replace(/[^a-z0-9]+/g, '_')}_deck_builder`}
           leadSource="Local SEO city page"
-          heading={heading || `Request a ${city} deck estimate`}
+          heading={heading || `Request ${estimateArticle} ${city} deck estimate`}
           pageContext={{
             city,
             county,
