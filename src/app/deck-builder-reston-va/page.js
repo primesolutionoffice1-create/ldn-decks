@@ -19,6 +19,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-reston-va',
@@ -161,6 +162,28 @@ export default function DeckBuilderRestonPage() {
           { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
           { href: '/services/deck-inspection', label: 'Deck inspection' },
           { href: '/get-estimate', label: 'Get a Reston estimate' }
+        ]}
+      />
+      <PremiumCityLeadQualifier
+        city="Reston"
+        county="Fairfax County and Reston Association"
+        intro="Reston estimates are strongest when DRB timing, wooded-lot access, slope, drainage, root-zone protection, privacy, and frame condition are reviewed before the homeowner compares surface materials. That keeps serious composite replacement and screened porch requests separate from small repair-only needs."
+        projectTypes={[
+          'Reston Association DRB-ready composite deck replacement',
+          'Elevated or multi-level decks for wooded and sloped lots',
+          'Screened porch additions under mature tree canopy',
+          'Resurfacing decisions where frame, ledger, posts, and stairs need inspection first',
+        ]}
+        planningSignals={[
+          'Current deck photos plus views of stairs, posts, ledger area, and rear-yard slope',
+          'Reston Association cluster, DRB notes, or exterior color/material guidance',
+          'Tree canopy, drainage, root-zone, and equipment access constraints',
+          'Preferred path: resurfacing, full replacement, screened porch, or phased outdoor living',
+        ]}
+        links={[
+          { href: '/get-estimate', label: 'Request Reston estimate', primary: true },
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+          { href: '/hoa-deck-rules-northern-virginia', label: 'HOA planning guide' },
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

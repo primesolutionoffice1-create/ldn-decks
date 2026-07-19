@@ -15,6 +15,7 @@ import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-tysons-va',
@@ -85,6 +86,28 @@ export default function TysonsDeckBuilderPage() {
           { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
           { href: '/deck-railing-options-northern-virginia', label: 'Railing options' },
           { href: '/get-estimate', label: 'Get a Tysons estimate' }
+        ]}
+      />
+      <PremiumCityLeadQualifier
+        city="Tysons"
+        county="Fairfax County"
+        intro="Tysons leads need qualification before pricing because a compact townhome deck, rooftop terrace, balcony rebuild, and Pimmit Hills rear-yard deck all have different structure, waterproofing, association, access, railing, and permit requirements."
+        projectTypes={[
+          'Compact composite decks for Tysons townhomes and small rear yards',
+          'Rooftop terrace or balcony rebuilds with waterproofing and load review',
+          'Pimmit Hills full-rear decks and screened porch additions',
+          'Modern railing, lighting, and privacy upgrades for urban-core homes',
+        ]}
+        planningSignals={[
+          'Property type: townhome, condo, rooftop, balcony, or single-family home',
+          'Association or property-manager approval requirements',
+          'Access path, material staging, waterproofing, and structural load questions',
+          'Preferred scope: compact deck, terrace rebuild, screened porch, or full rear-yard upgrade',
+        ]}
+        links={[
+          { href: '/get-estimate', label: 'Request Tysons estimate', primary: true },
+          { href: '/deck-railing-options-northern-virginia', label: 'Railing options' },
+          { href: '/trex-vs-timbertech-vs-azek', label: 'Material comparison' },
         ]}
       />
       <article style={{ padding: '4rem 0' }}>
