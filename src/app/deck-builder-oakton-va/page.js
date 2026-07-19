@@ -19,6 +19,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-oakton-va',
@@ -174,6 +175,28 @@ export default function OaktonDeckBuilderPage() {
           { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
           { href: "/deck-safety-inspection-checklist", label: "Safety checklist" },
           { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" }
+        ]}
+      />
+      <PremiumCityLeadQualifier
+        city="Oakton"
+        county="Fairfax County"
+        intro="Oakton projects need early qualification around wooded-lot constraints, tree roots, grade change, drainage, RPA exposure, and whether the homeowner wants a premium composite replacement, multi-level structure, screened porch, or a repair path instead."
+        projectTypes={[
+          'Premium composite replacement on wooded estate lots',
+          'Multi-level decks for sloped Oakton backyards',
+          'Screened porch and deck combinations near mature tree canopy',
+          'RPA-aware or waterway-adjacent planning where extra review may apply',
+        ]}
+        planningSignals={[
+          'Photos showing the current deck, slope, trees, stairs, and equipment access',
+          'Any RPA, stream, drainage, or tree-save concerns already known',
+          'Existing frame age and whether resurfacing is being considered',
+          'Preferred material tier: Trex Transcend, TimberTech/AZEK, railing, lighting, and drainage',
+        ]}
+        links={[
+          { href: '/get-estimate', label: 'Request Oakton estimate', primary: true },
+          { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
+          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

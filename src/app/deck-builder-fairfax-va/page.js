@@ -13,6 +13,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-fairfax-va',
@@ -139,6 +140,28 @@ export default function FairfaxDeckBuilderPage() {
               { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
               { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
               { href: '/get-estimate', label: 'Get a Fairfax estimate' }
+            ]}
+          />
+          <PremiumCityLeadQualifier
+            city="Fairfax"
+            county="Fairfax County, City of Fairfax, and Fairfax Station"
+            intro="Fairfax and Fairfax Station estimates should separate city vs county jurisdiction, old-deck structural risk, wooded-lot access, HOA requirements, and whether the homeowner needs resurfacing, full replacement, screened porch, or a larger composite outdoor living plan."
+            projectTypes={[
+              'Aging deck replacement in Mosby Woods, Mantua, and Country Club Hills',
+              'Fairfax Station and Fairlee multi-level decks on wooded or sloped lots',
+              'Composite resurfacing only after frame, ledger, posts, and footings pass review',
+              'Deck plus screened porch combinations for higher-value rear-yard projects',
+            ]}
+            planningSignals={[
+              'Exact jurisdiction: City of Fairfax, Fairfax County, or Fairfax Station area',
+              'Photos showing current deck age, framing concerns, stairs, posts, and ledger area',
+              'HOA or architectural review packet requirements',
+              'Preferred scope: repair, resurfacing, replacement, screened porch, or full outdoor living',
+            ]}
+            links={[
+              { href: '/get-estimate', label: 'Request Fairfax estimate', primary: true },
+              { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+              { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
             ]}
           />
 
