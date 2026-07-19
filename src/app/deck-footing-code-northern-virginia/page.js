@@ -68,13 +68,13 @@ export default function DeckFootingCodePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-footing-code-northern-virginia" name="Deck Footing &amp; Code Guide for Northern Virginia | LDN Decks" description="How deck footings and the Virginia Residential Code work in Northern Virginia — frost-depth footings, ledger attachment, joist spans, guardrails, and the inspections your deck must pass." speakable />
+      <WebPageSchema dateModified="2026-07-18" url="https://ldndecks.com/deck-footing-code-northern-virginia" name="Deck Footing &amp; Code Guide for Northern Virginia | LDN Decks" description="How deck footings and the Virginia Residential Code work in Northern Virginia — frost-depth footings, ledger attachment, joist spans, guardrails, and the inspections your deck must pass." speakable />
       <ArticleSchema
         title="Deck Footing & Code Guide for Northern Virginia"
         description="How deck footings and the Virginia Residential Code work in Northern Virginia — frost-depth footings, ledger attachment, joist and beam spans, lateral-load connections, guardrails, stairs, and required inspections."
         path="/deck-footing-code-northern-virginia"
         datePublished="2026-05-21"
-        dateModified="2026-05-21"
+        dateModified="2026-07-18"
       />
 
       {/* Hero */}
@@ -106,7 +106,7 @@ export default function DeckFootingCodePage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <p style={S.p}>
-            Most of what makes a deck safe is invisible once the boards go down. This guide explains the structure and the code behind a Northern Virginia deck in plain terms — so you understand what your builder is doing and what the county inspector is looking for. Decks here are governed by the <strong>Virginia Residential Code</strong>, the state-adopted version of the International Residential Code (IRC), and Loudoun, Fairfax, and Prince William counties all enforce it.
+            Most of what makes a deck safe is invisible once the boards go down. This guide explains the structure and the code behind a Northern Virginia deck in plain terms — so you understand what your builder is doing and what the county inspector is looking for. Decks here are governed by the <strong>Virginia Residential Code</strong>, the state-adopted version of the International Residential Code (IRC), and Loudoun, Fairfax, and Prince William counties all enforce it. For stair-specific planning, pair this page with the <Link href="/education/deck-stair-code-rise-run-virginia" style={S.link}>Virginia deck stair code guide</Link> and the <Link href="/tools/deck-stair-calculator" style={S.link}>deck stair calculator</Link>.
           </p>
 
           <h2 style={S.h2}>Footing depth and the Northern Virginia frost line</h2>
@@ -140,7 +140,7 @@ export default function DeckFootingCodePage() {
             <li style={S.li}>Paired with a <strong>lateral-load connection</strong> — tension devices that tie the deck framing back into the house framing, which the IRC requires on attached decks.</li>
           </ul>
           <p style={S.p}>
-            If a deck cannot get a sound ledger connection — for example, behind certain veneers — the safer answer is a <strong>freestanding deck</strong> on its own posts. That is a design decision worth making early.
+            If a deck cannot get a sound ledger connection — for example, behind certain veneers — the safer answer is a <strong>freestanding deck</strong> on its own posts. That is a design decision worth making early. The <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={S.link}>ledger board flashing guide</Link> explains the attachment and water-control details that should be checked before resurfacing, stair repair, or deck replacement.
           </p>
 
           <h2 style={S.h2}>Joists, beams, and spans</h2>
@@ -162,7 +162,7 @@ export default function DeckFootingCodePage() {
           <ul style={S.list}>
             <li style={S.li}><strong>Guardrails</strong> are required on any deck surface more than 30 inches above grade, and must be at least <strong>36 inches tall</strong>.</li>
             <li style={S.li}><strong>The 4-inch sphere rule</strong> — balusters must be spaced so a 4-inch sphere cannot pass through, so a small child cannot slip between them.</li>
-            <li style={S.li}><strong>Stairs</strong> have their own limits on riser height and tread depth, and guards/handrails are required on stair runs. The inspector confirms the exact dimensions of your run at the final inspection.</li>
+            <li style={S.li}><strong>Stairs</strong> have their own limits on riser height and tread depth, and guards/handrails are required on stair runs. Start with the <Link href="/education/deck-stair-construction-diagram" style={S.link}>deck stair construction diagram</Link>, then confirm the exact dimensions with the <Link href="/tools/deck-stair-calculator" style={S.link}>deck stair calculator</Link>. The inspector confirms the finished run at the final inspection.</li>
             <li style={S.li}><strong>Guards must resist load</strong> — a code-compliant rail is engineered to take a concentrated load, not just look solid.</li>
           </ul>
 
@@ -175,6 +175,9 @@ export default function DeckFootingCodePage() {
           </ul>
           <p style={S.p}>
             When we build, scheduling and meeting these inspections is part of the job — see how the permit itself works in your county&apos;s guide: <Link href="/deck-permit-loudoun-county-virginia" style={S.link}>Loudoun</Link>, <Link href="/deck-permit-fairfax-county-virginia" style={S.link}>Fairfax</Link>, or <Link href="/deck-permit-prince-william-county-virginia" style={S.link}>Prince William</Link>.
+          </p>
+          <p style={S.p}>
+            A stair rebuild can touch all three inspections: footing depth at the landing, framing and top-connection hardware before decking hides the structure, and final inspection for risers, treads, guards, handrails, and lighting. If an existing stair moves or failed inspection, use the <Link href="/education/common-deck-stair-inspection-failures-virginia" style={S.link}>common deck stair inspection failures guide</Link> before deciding whether the scope is a repair or rebuild.
           </p>
 
           <h2 style={S.h2}>Common code mistakes we see</h2>
@@ -222,7 +225,7 @@ export default function DeckFootingCodePage() {
 
       <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-footing-code-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-07-18" />
 
       <ContactHome />
     </>

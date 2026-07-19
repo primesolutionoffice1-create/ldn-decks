@@ -105,6 +105,47 @@ const webApplicationSchema = {
   },
 };
 
+const stairPlanningSequenceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  '@id': `${pageUrl}#stair-planning-sequence`,
+  name: 'How to plan deck stair rise, run and permit review in Northern Virginia',
+  description: 'A homeowner planning sequence for using the Virginia deck stair calculator with code, construction, permit and inspection resources.',
+  inLanguage: 'en-US',
+  isPartOf: { '@id': `${pageUrl}#webapplication` },
+  numberOfItems: 4,
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Measure the finished total rise',
+      url: `${pageUrl}#calculator`,
+      description: 'Measure from the finished deck surface to the finished landing surface, not to unfinished soil or a temporary grade.',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Model riser count, tread depth and total run',
+      url: `${pageUrl}#calculator`,
+      description: 'Use the calculator to estimate equal riser height, tread count, stair angle and the horizontal run needed in the yard.',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Compare the layout against code and construction details',
+      url: `${BUSINESS.url}/education/deck-stair-code-rise-run-virginia`,
+      description: 'Review the Virginia deck stair code guide and deck stair construction diagram before deciding whether the stair can be repaired or should be rebuilt.',
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      name: 'Check permit, landing and ledger dependencies',
+      url: `${BUSINESS.url}/deck-permit-loudoun-county-virginia`,
+      description: 'Confirm county permit rules, landing support, guard and handrail details, and ledger or framing conditions before construction.',
+    },
+  ],
+};
+
 const relatedResources = [
   {
     href: '/tools/deck-load-calculator-virginia',
@@ -183,7 +224,8 @@ export default function DeckStairCalculatorPage() {
     <main className={styles.page}>
       <JsonLd data={faqSchema} />
       <JsonLd data={webApplicationSchema} />
-      <WebPageSchema dateModified="2026-06-18" url={pageUrl} name={pageTitle} description={pageDescription} speakable />
+      <JsonLd data={stairPlanningSequenceSchema} />
+      <WebPageSchema dateModified="2026-07-18" url={pageUrl} name={pageTitle} description={pageDescription} speakable />
 
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -263,6 +305,12 @@ export default function DeckStairCalculatorPage() {
             </p>
 
             <h2>How Stair Math Connects to Permits and Structural Details</h2>
+            <ol>
+              <li>Measure the finished total rise from deck surface to finished landing surface.</li>
+              <li>Use the calculator to model equal risers, tread depth, stair angle and total run.</li>
+              <li>Compare the result against the stair code guide, construction diagram and inspection-failure guide.</li>
+              <li>Confirm county permit, landing, footing, handrail, guard, lighting and ledger dependencies before repair or rebuild work starts.</li>
+            </ol>
             <p>
               Stair calculations are only one part of a permit-ready deck plan. County reviewers also
               look at the landing support, guard and handrail details, footing locations, ledger
