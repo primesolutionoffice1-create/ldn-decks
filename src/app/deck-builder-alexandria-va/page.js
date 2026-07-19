@@ -20,6 +20,7 @@ import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
+import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-alexandria-va',
@@ -186,6 +187,28 @@ export default function DeckBuilderAlexandriaPage() {
           { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
           { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
           { href: '/get-estimate', label: 'Get an Alexandria estimate' }
+        ]}
+      />
+      <PremiumCityLeadQualifier
+        city="Alexandria"
+        county="Alexandria and Fairfax County"
+        intro="Alexandria leads are highest quality when the estimate starts with the jurisdiction, existing deck condition, HOA or historic-area requirements, and whether the homeowner wants a simple replacement, composite upgrade, screened porch, or a larger outdoor living plan."
+        projectTypes={[
+          'Composite deck replacement near Kingstowne, Mount Vernon, and Old Town-adjacent neighborhoods',
+          'Screened porches and covered-deck additions',
+          'Townhome and compact-lot deck rebuilds',
+          'Resurfacing decisions where framing condition must be checked first',
+        ]}
+        planningSignals={[
+          'Current deck photos and visible framing concerns',
+          'Whether the address is City of Alexandria or Fairfax County',
+          'HOA documents, historic-area notes, or community guidelines',
+          'Preferred scope: resurfacing, full replacement, screened porch, or phased outdoor living',
+        ]}
+        links={[
+          { href: '/get-estimate', label: 'Request Alexandria estimate', primary: true },
+          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
+          { href: '/screened-porch-builder-northern-virginia', label: 'Screened porch planning' },
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

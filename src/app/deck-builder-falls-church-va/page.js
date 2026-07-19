@@ -18,6 +18,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-falls-church-va',
@@ -161,6 +162,28 @@ export default function FallsChurchDeckBuilderPage() {
           { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
           { href: "/deck-vs-patio-which-is-right", label: "Deck vs patio" },
           { href: "/deck-cost-calculator", label: "Deck cost calculator" }
+        ]}
+      />
+      <PremiumCityLeadQualifier
+        city="Falls Church"
+        county="City of Falls Church and Fairfax County"
+        intro="Falls Church leads need early filtering because compact lots, dual jurisdiction, setbacks, privacy, neighbor-facing sightlines, and older patio or deck conditions can change whether the right project is resurfacing, full replacement, screened porch, or a custom compact-lot outdoor living build."
+        projectTypes={[
+          'Compact-lot composite deck replacement',
+          'Townhome or small-yard layouts with privacy planning',
+          'Screened porch or covered-deck additions where setbacks allow',
+          'Patio-to-deck upgrades with drainage, height, and permit review',
+        ]}
+        planningSignals={[
+          'Exact address jurisdiction: City of Falls Church or Fairfax County',
+          'Photos showing lot depth, neighbor-facing sides, stairs, and current structure',
+          'HOA, deed covenant, or architectural-review requirements',
+          'Preferred path: resurface, full replacement, screened porch, or compact outdoor room',
+        ]}
+        links={[
+          { href: '/get-estimate', label: 'Request Falls Church estimate', primary: true },
+          { href: '/deck-vs-patio-which-is-right', label: 'Deck vs patio planning' },
+          { href: '/composite-deck-cost-northern-virginia', label: 'Composite cost guide' },
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />

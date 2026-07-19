@@ -15,6 +15,7 @@ import CallLink from '@/components/CallLink';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-great-falls-va',
@@ -107,6 +108,28 @@ export default function GreatFallsDeckBuilderPage() {
           { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
           { href: "/mclean-great-falls-premium-deck-budget", label: "Premium budget guide" },
           { href: "/trex-vs-timbertech-vs-azek", label: "Material comparison" }
+        ]}
+      />
+      <PremiumCityLeadQualifier
+        city="Great Falls"
+        county="Fairfax County"
+        intro="Great Falls deck estimates should screen for estate-lot complexity before a number is trusted. Slope, mature trees, septic layouts, RPA exposure, long access paths, drainage, privacy, screened porch tie-ins, and premium material choices can all change the correct scope."
+        projectTypes={[
+          'Estate composite replacement with premium railing and lighting packages',
+          'Wooded or sloped-lot outdoor living decks',
+          'Deck plus screened porch, covered dining, or outdoor kitchen scopes',
+          'Code-reset replacement where framing, ledger, footings, stairs, or guards need review',
+        ]}
+        planningSignals={[
+          'Photos showing grade, trees, current structure, and equipment access',
+          'Septic, well, RPA, or drainage constraints if known',
+          'Preferred scope: deck only, covered deck, screened porch, or outdoor living phase',
+          'Material direction: Trex, TimberTech/AZEK, railing, lighting, and drainage',
+        ]}
+        links={[
+          { href: '/get-estimate', label: 'Request Great Falls estimate', primary: true },
+          { href: '/mclean-great-falls-premium-deck-budget', label: 'Premium budget guide' },
+          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
         ]}
       />
       <article style={{ padding: '4rem 0' }}>
