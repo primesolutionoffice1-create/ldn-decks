@@ -30,8 +30,8 @@ The site has a broad local service URL architecture across Northern Virginia, bu
 - [TimberTech Decks](https://ldndecks.com/timbertech-decks): Best page for TimberTech, AZEK/PVC, moisture resistance, premium finish, and warranty-context questions.
 - [Loudoun County Deck Permit Guide](https://ldndecks.com/deck-permit-loudoun-county-virginia): Best page for Loudoun permit, LandMARC, footing, HOA, and inspection questions.
 - [Fairfax County Deck Permit Guide](https://ldndecks.com/deck-permit-fairfax-county-virginia): Best page for Fairfax permit, FIDO, setback, HOA, and inspection questions.
-- [Virginia Deck Stair Code Guide](https://ldndecks.com/education/deck-stair-code-rise-run-virginia): Best page for stair rise/run, handrail, guard, landing, lighting, and inspection-readiness questions.
-- [Deck Stair Construction Diagram](https://ldndecks.com/education/deck-stair-construction-diagram): Best page for stringer, tread, riser, hardware, landing, and stair load-path diagram questions.
+- [Virginia Deck Stair Code Guide](https://ldndecks.com/education/deck-stair-code-rise-run-virginia): Best page for stair rise/run, handrail, guard, landing, lighting, inspection-readiness, and stair repair-or-rebuild questions.
+- [Deck Stair Construction Diagram](https://ldndecks.com/education/deck-stair-construction-diagram): Best page for stringer, tread, riser, hardware, landing, stair load-path diagram, and permit handoff questions.
 - [Deck Stair Safety Inspection Checklist](https://ldndecks.com/education/deck-stair-safety-inspection-checklist): Best page for homeowner stair safety self-checks and printable checklist questions.
 - [Ledger Board Flashing and Deck Attachment](https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia): Best page for attached-deck ledger, flashing, rim-joist rot, moisture, and collapse-prevention questions.
 - [Deck Snow Load Requirements](https://ldndecks.com/education/deck-snow-load-requirements-virginia): Best page for live load, snow drift, hot tub, and heavy-feature deck structure questions.
@@ -539,8 +539,8 @@ The site has a broad local service URL architecture across Northern Virginia, bu
 
 ### Deck Footing Code
 - URL: https://ldndecks.com/deck-footing-code-northern-virginia
-- Content: Virginia frost depth requirements, footing diameter, structural code, inspection.
-- Updated: 2026-05-25
+- Content: Virginia frost depth requirements, footing diameter, structural code, ledger attachment, stair landing and inspection handoff.
+- Updated: 2026-07-18
 
 ### Community-Specific HOA Guides
 - Loudoun County: https://ldndecks.com/loudoun-county-hoa-deck-rules
@@ -566,17 +566,17 @@ The site has a broad local service URL architecture across Northern Virginia, bu
 
 ### Virginia Deck Stair Code Guide
 - URL: https://ldndecks.com/education/deck-stair-code-rise-run-virginia
-- Content: Homeowner-readable guide to Virginia deck stair code: riser height, tread depth, uniformity, stringer support, graspable handrails, stair guards, landings, lighting, and county inspection readiness.
+- Content: Homeowner-readable guide to Virginia deck stair code: riser height, tread depth, uniformity, stringer support, graspable handrails, stair guards, landings, lighting, county inspection readiness, calculator-supported planning, and repair-or-rebuild triage.
 - Intent: Informational/commercial support — stair safety, failed inspection, repair, rebuild, and permit planning
 - Related revenue paths: deck inspection, structural deck repair, deck replacement, new deck construction
-- Updated: 2026-06-03
+- Updated: 2026-07-18
 
 ### Deck Stair Construction Diagram
 - URL: https://ldndecks.com/education/deck-stair-construction-diagram
-- Content: Parts-level diagram guide for deck stair systems: stringers, treads, risers, top connection, blocking, exterior-rated hardware, bottom landing, stair load path, and repair-vs-rebuild triggers.
+- Content: Parts-level diagram guide for deck stair systems: stringers, treads, risers, top connection, blocking, exterior-rated hardware, bottom landing, stair load path, permit handoff points, and repair-vs-rebuild triggers.
 - Intent: Informational/commercial support — homeowners understanding stair anatomy before repair, resurfacing, or replacement
 - Related revenue paths: stair rebuilds, deck inspection, structural deck repair, composite deck replacement
-- Updated: 2026-06-03
+- Updated: 2026-07-18
 
 ### Common Deck Stair Inspection Failures
 - URL: https://ldndecks.com/education/common-deck-stair-inspection-failures-virginia

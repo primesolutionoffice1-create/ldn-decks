@@ -7,14 +7,15 @@ const ROOT = process.cwd();
 const OUTPUT_DIR = path.join(ROOT, 'scripts/output');
 const DATE = localDateStamp();
 const SITEMAP_BODY_PATH = path.join(ROOT, '.next/server/app/sitemap.xml.body');
+const MIN_EXPECTED_SITEMAP_URLS = 350;
 
 const REQUIRED_ENTRIES = [
   {
     label: 'Virginia deck stair code',
     url: 'https://ldndecks.com/education/deck-stair-code-rise-run-virginia',
     source: 'src/lib/educationData.js',
-    sourceDateSnippet: "dateModified: 'June 18, 2026'",
-    expectedLastmod: '2026-06-18',
+    sourceDateSnippet: "dateModified: 'July 18, 2026'",
+    expectedLastmod: '2026-07-18',
     expectedChangefreq: 'weekly',
     expectedPriority: '0.86',
   },
@@ -22,8 +23,8 @@ const REQUIRED_ENTRIES = [
     label: 'Deck stair construction diagram',
     url: 'https://ldndecks.com/education/deck-stair-construction-diagram',
     source: 'src/lib/educationData.js',
-    sourceDateSnippet: "dateModified: 'June 3, 2026'",
-    expectedLastmod: '2026-06-03',
+    sourceDateSnippet: "dateModified: 'July 18, 2026'",
+    expectedLastmod: '2026-07-18',
     expectedChangefreq: 'weekly',
     expectedPriority: '0.86',
   },
@@ -78,7 +79,10 @@ function main() {
   const entries = extractSitemapEntries(sitemapXml);
   const entryByUrl = new Map(entries.map((entry) => [entry.url, entry]));
 
-  assert(entries.length >= 700, `Expected at least 700 sitemap URLs, found ${entries.length}.`, errors);
+  // Current sitemap intentionally excludes broad noindex programmatic city-service
+  // pages; keep this as a floor for accidental sitemap collapse, not a stale
+  // target from the larger pre-pruning sitemap surface.
+  assert(entries.length >= MIN_EXPECTED_SITEMAP_URLS, `Expected at least ${MIN_EXPECTED_SITEMAP_URLS} sitemap URLs, found ${entries.length}.`, errors);
 
   const checkedEntries = REQUIRED_ENTRIES.map((required) => {
     const sourcePath = path.join(ROOT, required.source);
