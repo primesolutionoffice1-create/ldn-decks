@@ -53,11 +53,11 @@ export default function ThankYouPage() {
             </div>
             <div className={styles.step}>
               <div className={styles.dot}></div>
-              <span>We&apos;ll call you to schedule a free on-site visit</span>
+              <span>We&apos;ll call you to confirm scope, location, and next steps</span>
             </div>
             <div className={styles.step}>
               <div className={styles.dot}></div>
-              <span>You&apos;ll get a detailed 3D design &amp; quote</span>
+              <span>You&apos;ll get a detailed design review and written estimate</span>
             </div>
           </div>
           
