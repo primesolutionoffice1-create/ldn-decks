@@ -47,6 +47,60 @@ const proofRuntime = read('src/lib/verifiedProof.js');
 const proofData = JSON.parse(read('src/data/verifiedProofSnippets.json'));
 const appAndComponents = walk('src/app').concat(walk('src/components'), walk('src/lib'));
 const callAttributionRunbookExists = exists('docs/ads-tracking/CALL-ATTRIBUTION-READONLY-RUNBOOK-2026-06-02.md');
+const callAttributionEvidencePath = `docs/ads-tracking/live-call-attribution-evidence-${today}.csv`;
+
+function parseCsvLine(line) {
+  const values = [];
+  let field = '';
+  let quoted = false;
+  for (let index = 0; index < line.length; index += 1) {
+    const char = line[index];
+    const next = line[index + 1];
+    if (quoted) {
+      if (char === '"' && next === '"') {
+        field += '"';
+        index += 1;
+      } else if (char === '"') {
+        quoted = false;
+      } else {
+        field += char;
+      }
+    } else if (char === '"') {
+      quoted = true;
+    } else if (char === ',') {
+      values.push(field);
+      field = '';
+    } else {
+      field += char;
+    }
+  }
+  values.push(field);
+  return values.map((value) => value.trim());
+}
+
+function readCallAttributionEvidence() {
+  if (!exists(callAttributionEvidencePath)) {
+    return { rows: 0, primaryQualifiedRows: 0, activeRows: 0, source: callAttributionEvidencePath };
+  }
+  const lines = read(callAttributionEvidencePath).split(/\r?\n/).filter(Boolean);
+  const [headerLine, ...bodyLines] = lines;
+  const headers = parseCsvLine(headerLine || '');
+  const rows = bodyLines.map((line) => {
+    const values = parseCsvLine(line);
+    return Object.fromEntries(headers.map((header, index) => [header, values[index] || '']));
+  });
+  const primaryQualifiedRows = rows.filter((row) => (
+    row.source_system === 'google_ads_conversions'
+    && row.conversion_name.toLowerCase().includes('qualified call')
+    && row.call_source.toLowerCase().includes('calls from ads')
+    && row.primary_status === 'primary'
+    && row.count_setting === 'one'
+    && Number.parseInt(row.min_call_duration_seconds || '0', 10) >= 60
+    && row.phone_click_primary_risk === 'no'
+  )).length;
+  const activeRows = rows.filter((row) => row.status.toLowerCase().includes('active')).length;
+  return { rows: rows.length, primaryQualifiedRows, activeRows, source: callAttributionEvidencePath };
+}
 
 const rawTelMatches = appAndComponents
   .filter((rel) => rel !== 'src/components/CallLink.jsx')
@@ -60,6 +114,8 @@ const gtmScriptIndex = layout.indexOf('id="gtm-script"');
 const proofProjectCount = (proofData?.snippets || []).filter((item) => item.type === 'project_case_study').length;
 const reviewSourceCount = (proofData?.snippets || []).filter((item) => item.type === 'public_review_source').length;
 const skippedProofCount = (proofData?.skipped || []).length;
+const callEvidence = readCallAttributionEvidence();
+const hasQualifiedCallEvidence = callEvidence.primaryQualifiedRows > 0 && callEvidence.activeRows > 0;
 
 const checks = [
   check(
@@ -122,11 +178,13 @@ const checks = [
   check(
     'google-call-attribution',
     'Google Ads qualified call attribution needs external proof',
-    callAttributionRunbookExists && tracking.includes("event: 'phone_click'") ? 'WARN' : 'FAIL',
-    callAttributionRunbookExists
-      ? 'Website-side phone clicks are tracked as secondary events and a read-only Google Ads/GTM evidence runbook exists.'
+    hasQualifiedCallEvidence ? 'PASS' : callAttributionRunbookExists && tracking.includes("event: 'phone_click'") ? 'WARN' : 'FAIL',
+    hasQualifiedCallEvidence
+      ? `Read-only evidence in ${callEvidence.source} shows ${callEvidence.primaryQualifiedRows} active primary qualified call conversion row.`
+      : callAttributionRunbookExists
+        ? 'Website-side phone clicks are tracked as secondary events and a read-only Google Ads/GTM evidence runbook exists.'
       : 'No local evidence proves Google Ads website call forwarding numbers or qualified-call conversion diagnostics are configured.',
-    'Owner/GTM/Google Ads evidence is still required before call conversions can be used for scaling.'
+    hasQualifiedCallEvidence ? 'Diagnostics tab was not separately captured; keep monitoring before aggressive scaling.' : 'Owner/GTM/Google Ads evidence is still required before call conversions can be used for scaling.'
   ),
   check(
     'verified-proof-runtime',
@@ -164,7 +222,7 @@ ${checks.map((item) => `- ${statusIcon(item.status)} ${item.label}
 
 The website-side form attribution layer is strong enough for controlled reporting: click IDs are captured, Consent Mode defaults precede GTM, the CMP can grant or deny optional tracking, and the authoritative form event is server-confirmed before \`lead_confirmed\` fires.
 
-The account is not ready for aggressive scaling because qualified phone-call attribution still needs external Google Ads/GTM evidence and verified project lead-quality proof is still missing. \`phone_click\` should stay secondary/observational until Google Ads website-call forwarding and qualified-call diagnostics are confirmed.
+The account is not ready for aggressive scaling because verified project lead-quality proof is still missing and offline/upload eligibility is not complete. \`phone_click\` should stay secondary/observational; the current qualified call evidence supports controlled reporting but not full Smart Bidding scale by itself.
 
 ## Next Actions
 

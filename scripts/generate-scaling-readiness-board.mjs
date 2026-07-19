@@ -83,7 +83,7 @@ const adsImports = gates.find((gate) => gate.id === 'ads-imports')?.json || {};
 const blockers = [];
 const readySignals = [];
 
-if (measurement.scalingGate === 'RED') {
+if ((callAttributionEvidence.primaryQualifiedRows ?? 0) < 1) {
   blockers.push({
     id: 'google-call-attribution',
     owner: 'external',
@@ -92,7 +92,7 @@ if (measurement.scalingGate === 'RED') {
     evidence: `Measurement gate remains RED while google-call-attribution is WARN/external-proof-needed. Call attribution evidence status: ${callAttributionEvidence.status ?? 'unknown'}, ${callAttributionEvidence.rows ?? 0} real rows.`,
   });
 } else {
-  readySignals.push('Measurement gate is not RED.');
+  readySignals.push(`${callAttributionEvidence.primaryQualifiedRows} active primary qualified-call evidence row validates.`);
 }
 
 if ((leadOutcomes.rows ?? 0) < 5) {
@@ -113,6 +113,16 @@ if ((leadOutcomes.rows ?? 0) < 5) {
   });
 } else {
   readySignals.push(`${leadOutcomes.rows} real lead outcome rows validate.`);
+}
+
+if ((leadOutcomes.rows ?? 0) >= 5 && (leadOutcomes.uploadEligibleRows ?? 0) < 3) {
+  blockers.push({
+    id: 'offline-upload-eligibility',
+    owner: 'owner',
+    priority: 'P0',
+    action: `Make at least 3 qualified lead rows upload-eligible in ${LIVE_LEAD_OUTCOMES} by adding click IDs or an approved Enhanced/Offline conversion path; then run \`npm run measurement:lead-outcomes && npm run scaling:readiness\`.`,
+    evidence: `${leadOutcomes.rows ?? 0} real rows validate, but only ${leadOutcomes.uploadEligibleRows ?? 0} are upload-eligible.`,
+  });
 }
 
 if ((proofPreflight.blocked ?? 0) > 0 || (proofPreflight.proofIncomplete ?? 0) > 0) {
