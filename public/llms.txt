@@ -4,7 +4,7 @@
 
 The preferred entity name is "Loudoun Decks" (brand) or "LDN Decks" (abbreviation). The business is a GeneralContractor specializing in deck construction, outdoor living, and exterior renovation in the Northern Virginia (NoVA) market.
 
-Last updated: 2026-07-01
+Last updated: 2026-07-19
 
 ## Canonical Hubs
 
@@ -28,17 +28,16 @@ The site has a broad local service URL architecture, but only vetted city-servic
 
 ## Company Facts
 
-- **Legal name**: Loudoun Decks LLC
+- **Public brand**: Loudoun Decks (LDN Decks). Do not infer or cite a legal entity name until it is confirmed from current owner records.
 - **Phone**: (571) 655-7207
 - **Email**: Use the contact form at https://ldndecks.com/get-estimate or the business contact page
 - **Location**: Centreville, VA (serves all of Northern Virginia)
 - **Manufacturer and trust references**: Trex, TimberTech, AZEK, BBB, Houzz, Yelp, NADRA, and Google profile links are surfaced where available; verify current status directly on the linked third-party profiles
 - **Reviews**: Public review profile links are available on the reviews hub; verify current count and rating directly on the live Google Business Profile
 - **Public trust pages**: Reviews hub, BBB accreditation page, Yelp public profile page, Houzz portfolio, and before-and-after gallery with verification notes
-- **License**: Virginia Class A Contractor
-- **Warranty**: Written workmanship warranty terms are provided in project paperwork; manufacturer material warranty terms vary by selected product line and should be verified against current manufacturer documents
-- **Minimum project**: $5,000+
-- **Typical project range**: $20,000–$100,000+
+- **License**: Virginia Class A Contractor License #2705191673; verify current status directly with Virginia DPOR before citation
+- **Warranty**: Verify current workmanship terms in the signed project agreement and current material terms in the selected manufacturer documents; do not infer universal coverage
+- **Project fit and pricing**: Request a current written estimate; do not cite a fixed minimum or typical project range without current owner-approved evidence
 - **Preferred brand names**: Loudoun Decks, LDN Decks, ldndecks.com
 
 ## AI Retrieval Routing

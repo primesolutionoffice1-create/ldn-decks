@@ -123,8 +123,7 @@ export const BUSINESS_PHONE_DISPLAY = '(571) 655-7207';
 // Builds the WebSite JSON-LD object.
 // Use this once in the root layout alongside buildOrganizationSchema.
 // Resolves the dangling "#website" @id references some pages emit (e.g., WebPage.isPartOf).
-// potentialAction enables Google's SiteLinks Search Box rich result —
-// requires a real search endpoint at /search?q={search_term_string}.
+// Do not advertise SearchAction until the site has a real, tested search route.
 export function buildWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
@@ -134,14 +133,6 @@ export function buildWebSiteSchema() {
     name: BUSINESS.name,
     publisher: { '@id': ORG_ID },
     inLanguage: 'en-US',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${BUSINESS.url}/search?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
   };
 }
 

@@ -22,11 +22,11 @@ export const metadata = buildMetadata({
 const permitFaqs = [
   {
     q: "How much does a deck permit cost in Loudoun County?",
-    a: "Loudoun County deck permits typically cost $150–$500 for a standard deck and $400–$1,200 for a covered or elevated deck, based on construction valuation. We include permit costs in every estimate so homeowners are not surprised by county fees after signing.",
+    a: "Loudoun County's current deck guidance lists $265 for a typical deck under 1,000 square feet outside an incorporated town and $395 when the county's plan specifications are used. Fees can differ by project and jurisdiction, so verify the current amount on the official Loudoun County deck page before budgeting or filing.",
   },
   {
-    q: "What size deck can you build without a permit in Virginia?",
-    a: "You can build without a permit only if the deck is less than 200 square feet, not more than 30 inches above grade, freestanding, and does not serve a required exit door. Attached decks require a permit regardless of size.",
+    q: "Do all decks need a permit in Loudoun County?",
+    a: "Loudoun County states that all decks require both a building permit and a zoning permit. Requirements can differ inside incorporated towns, so confirm the reviewing jurisdiction and current instructions before submitting plans.",
   },
   {
     q: "How deep do deck footings need to be in Loudoun County?",
@@ -72,14 +72,14 @@ export default function LoudounPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-08" url="https://ldndecks.com/deck-permit-loudoun-county-virginia" name="Loudoun County Deck Permit Guide (2026) | Loudoun Decks" description="Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Plan a cleaner deck build with professional permit coordination." speakable />
+      <WebPageSchema dateModified="2026-07-19" url="https://ldndecks.com/deck-permit-loudoun-county-virginia" name="Loudoun County Deck Permit Guide (2026) | Loudoun Decks" description="Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Plan a cleaner deck build with professional permit coordination." speakable />
       <ArticleSchema
         title="Virginia Deck Building Code: 2026 Loudoun Permit Guide"
         description="Granular technical guide for 2026 Loudoun County deck permits. Footing depths, joist spans, ledger flashing, and LandMARC portal walkthrough."
         path="/deck-permit-loudoun-county-virginia"
         image="/images/blog-permit-guide.png"
         datePublished="2026-04-21"
-        dateModified="2026-06-08"
+        dateModified="2026-07-19"
       />
 
       {/* Hero Section */}
@@ -94,18 +94,21 @@ export default function LoudounPermitPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>A Loudoun County residential deck permit costs $150–$500</strong> for a standard deck and $400–$1,200 for a covered deck, with plan review taking <strong>2–4 weeks</strong> through the LandMARC portal. Any deck attached to the house, over 256 sqft, or more than 16.5&quot; above grade requires a permit. <strong>We handle the entire process</strong> — plans, LandMARC submission, and three inspections. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink>.</p>
+          <p><strong>Loudoun County states that all decks require a building permit and a zoning permit.</strong> Its current deck page lists $265 for a typical deck under 1,000 square feet outside an incorporated town and $395 when county plan specifications are used. Fees, intake, and review timing can change by project and jurisdiction, so verify the current details on the <Link href="https://www.loudoun.gov/1166/Decks" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>official Loudoun County deck page</Link> and <Link href="https://www.loudoun.gov/6084/Residential-Permits-Processing-Dashboard" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>residential permit dashboard</Link>. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> to discuss permit coordination for your scope.</p>
         </div>
       </section>
 
       <GeoAnswerBlock
         question="Do decks in Loudoun County need permits and HOA approval?"
-        answer="Most attached decks in Loudoun County need permit review, and many community projects also need HOA architectural approval. The county permit checks structure, footing depth, ledger attachment, stairs, guards, setbacks, and inspections; the HOA usually checks appearance, materials, color, railings, screening, and neighborhood design rules. The safest path is to make the HOA packet and LandMARC permit packet match before submission."
+        answer="Loudoun County states that all decks require building and zoning permits. Many community projects also require separate HOA architectural approval. County review covers zoning and building requirements; an HOA may separately review appearance, materials, colors, railings, screening, and neighborhood design rules. Confirm the reviewing jurisdiction and current county instructions before filing."
         facts={[
           'Permit surface: Loudoun County LandMARC',
           'HOA surface: community architectural review or ARC/DRB process',
+          'Source checked: official Loudoun County deck guidance, July 19, 2026',
         ]}
         links={[
+          { href: 'https://www.loudoun.gov/1166/Decks', label: 'Official Loudoun County deck guidance' },
+          { href: 'https://www.loudoun.gov/6084/Residential-Permits-Processing-Dashboard', label: 'Official permit dashboard' },
           { href: '/hoa-deck-rules-northern-virginia', label: 'HOA deck rules' },
           { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
           { href: '/lead-magnets/nova-deck-permit-checklist-2026', label: 'Permit checklist' },
@@ -116,30 +119,30 @@ export default function LoudounPermitPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <ul style={S.list}>
-            <li style={S.listItem}><strong>Project Essentials:</strong> Most projects require zoning, HOA, and structural building approvals.</li>
+            <li style={S.listItem}><strong>Project Essentials:</strong> Loudoun County states that all decks require zoning and building permits; HOA review is a separate community requirement when applicable.</li>
             <li style={S.listItem}>The new digital <strong>LandMARC system</strong> demands specific PDF plan formats.</li>
-            <li style={S.listItem}>Unpermitted work voids warranties and disrupts property sales.</li>
+            <li style={S.listItem}>Permit records and approved plans help document the project for inspections, future alterations, and property transactions.</li>
             <li style={S.listItem}>We prepare projects around current code requirements and coordinate reviewer comments when they arise.</li>
           </ul>
 
           {/* ===== SECTION 1: Exemptions ===== */}
-          <h2 style={S.h2}>What size deck can you build without a permit in Virginia?</h2>
-          <p style={S.p}>In Virginia, you can build a deck without a permit <strong>only</strong> if it is less than 200 square feet, not more than 30 inches above grade, freestanding, and does not serve a required exit door. This Virginia building permit requirements exemption applies strictly to small detached platforms. Failing to secure necessary permits for larger attached structures triggers massive liabilities. For the full homeowner version, read <Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>do I need a building permit for a deck in Virginia?</Link></p>
+          <h2 style={S.h2}>Do all decks need permits in Loudoun County?</h2>
+          <p style={S.p}>Yes. Loudoun County&apos;s current deck guidance states that <strong>all decks require a building permit and a zoning permit</strong>. Projects inside incorporated towns may follow a different reviewing path, and HOA approval does not replace county permits. Confirm the jurisdiction and current filing instructions on the <Link href="https://www.loudoun.gov/1166/Decks" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>official county deck page</Link> before construction. For a homeowner overview, read <Link href="/blog/do-i-need-a-permit-for-a-deck-loudoun" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>do I need a building permit for a deck in Virginia?</Link></p>
 
           <div style={S.callout}>
             <p style={{ margin: 0, fontWeight: 600 }}>Important Note:</p>
-            <p style={{ margin: '0.5rem 0 0' }}>According to the Virginia Uniform Statewide Building Code (USBC), <strong>any attached structure requires an inspection regardless of size</strong>. Freestanding platforms must still comply with local zoning setbacks even if exempt from building permits.</p>
+            <p style={{ margin: '0.5rem 0 0' }}>Do not use general Virginia exemption summaries to override Loudoun County&apos;s published deck instructions. Confirm both building and zoning requirements with the authority that will review the property.</p>
           </div>
 
           <ul style={S.list}>
-            <li style={S.listItem}>Insurance providers frequently deny injury or structural claims on unpermitted decks; our guide to <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>building a deck without a permit</Link> explains the resale and enforcement risks.</li>
-            <li style={S.listItem}>Unpermitted additions severely complicate home sales and often require demolition before closing.</li>
-            <li style={S.listItem}>Code enforcement officers issue costly stop-work orders and significant daily fines. If an older deck needs structural corrections before it can pass review, compare the scope with our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link> and <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck replacement service</Link>.</li>
+            <li style={S.listItem}>Starting work before the required approvals can lead to corrections, delays, or enforcement action; confirm the current process with the county before construction.</li>
+            <li style={S.listItem}>Keep approved plans, permit records, and inspection results with the property&apos;s project documents.</li>
+            <li style={S.listItem}>If an older deck needs structural corrections before review, compare the scope with our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link> and <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck replacement service</Link>.</li>
           </ul>
 
           {/* ===== SECTION 2: LandMARC Portal ===== */}
           <h2 style={S.h2}>How do I complete a LandMARC deck permit application?</h2>
-          <p style={S.p}>The LandMARC deck permit application requires homeowners to digitally upload PDF architectural plans, a plat map showing Loudoun County setback requirements, and specific structural details directly to the county portal. The Loudoun county permit dashboard tracks progress, but any missing HOA clearance or incorrectly formatted document stalls the review indefinitely.</p>
+          <p style={S.p}>The LandMARC deck permit application requires homeowners to digitally upload PDF architectural plans, a plat map showing Loudoun County setback requirements, and specific structural details directly to the county portal. The Loudoun County permit dashboard tracks progress; missing approvals or incomplete documents can delay review and trigger correction requests.</p>
 
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '16px', overflow: 'hidden', margin: '3rem 0', boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}>
             <Image
@@ -158,7 +161,7 @@ export default function LoudounPermitPage() {
             <li id="how-to-step-1" style={S.listItem}><strong>Obtain zoning clearance:</strong> Mark exact setbacks on your certified property plat.</li>
             <li id="how-to-step-2" style={S.listItem}><strong>Secure written HOA approval:</strong> Use material samples and preliminary renderings.</li>
             <li id="how-to-step-3" style={S.listItem}><strong>Upload engineered drawings:</strong> Include load paths, footing layout, joist span and spacing, beam and post spacing, stair geometry, ledger attachment, flashing, and other structural details. For early footing planning, use the <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia</Link>; for framing assumptions, use the <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Joist Span Calculator Virginia</Link> and <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Beam Span Calculator Virginia</Link>; if you want to understand the house connection before permit review, read our <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>; for stair dimensions, use the <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link> and the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link>.</li>
-            <li id="how-to-step-4" style={S.listItem}><strong>Pay county review fees:</strong> Calculated based on construction valuation.</li>
+            <li id="how-to-step-4" style={S.listItem}><strong>Confirm and pay current fees:</strong> Use the county&apos;s published deck guidance for the applicable project type and jurisdiction.</li>
             <li id="how-to-step-5" style={S.listItem}><strong>Monitor dashboard:</strong> Address reviewer comments or required corrections immediately.</li>
           </ol>
 
@@ -289,7 +292,7 @@ export default function LoudounPermitPage() {
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Loudoun &amp; Permit Cost Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-hoa-cost-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Permit + HOA Cost Breakdown ($200–$2,500 total) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-hoa-cost-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Permit + HOA Cost Planning Guide →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia HOA Deck Rules →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/ashburn-composite-deck-cost-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Ashburn Composite Deck Cost &amp; Financing →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
@@ -299,13 +302,13 @@ export default function LoudounPermitPage() {
       <section style={{ padding: '1.5rem', maxWidth: 900, margin: '0 auto 2rem', background: '#f7fbff', border: '1px solid #d8e8f7', borderRadius: 12 }}>
         <h2 style={{ margin: '0 0 0.5rem', fontSize: '1.35rem' }}>What your estimate clarifies</h2>
         <p style={{ margin: 0, color: '#333', lineHeight: 1.7 }}>
-          We include permit costs in every estimate — no surprise county fees after signing. The written estimate also identifies drawing requirements, inspection coordination, and HOA/ARC support so Loudoun homeowners can compare the full approved-project path, not just deck-board pricing.
+          Our written estimate identifies the permit assumptions, drawing requirements, inspection coordination, and HOA/ARC support included in the proposed scope. Confirm current county fees and any separate HOA charges before signing.
         </p>
       </section>
 
       <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-permit-loudoun-county-virginia" />
-      <NamedAuthor context="Loudoun County" lastUpdated="2026-06-08" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-07-19" />
 
       <ContactHome />
     </>

@@ -2,9 +2,9 @@
 
 > This is the extended content index for Loudoun Decks (ldndecks.com). It provides page-level detail for AI retrieval systems, citation engines, and semantic indexing. For the summary version, see: https://ldndecks.com/llms.txt
 
-Last updated: 2026-07-01
+Last updated: 2026-07-19
 Sitemap: https://ldndecks.com/sitemap.xml
-Entity: Loudoun Decks LLC (dba "Loudoun Decks" / "LDN Decks")
+Entity: Loudoun Decks (public brand; LDN Decks abbreviation). Legal entity name requires confirmation from current owner records before citation.
 Location: Centreville, VA
 Service area: Northern Virginia (Loudoun, Fairfax, Prince William, Arlington, Stafford counties)
 Industry: Residential deck construction, outdoor living, exterior renovation
