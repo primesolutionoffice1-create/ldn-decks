@@ -177,6 +177,12 @@ The site has a broad local service URL architecture across Northern Virginia, bu
 - Neighborhoods: Fairfax City, Fairfax Station, University area
 - Updated: 2026-05-25
 
+### Fairfax Station
+- URL: https://ldndecks.com/deck-builder-fairfax-station-va
+- Content: Premium wooded-lot and estate-style deck projects in Fairfax Station. Composite deck replacement, screened porch combinations, premium railings, outdoor living plans, drainage and access planning, HOA review, and Fairfax County permits.
+- Neighborhoods: South Run, Crosspointe, Barrington, Fairlee, Clifton-adjacent wooded lots
+- Updated: 2026-07-19
+
 ### Oakton
 - URL: https://ldndecks.com/deck-builder-oakton-va
 - Content: Affluent wooded lots (0.5-2+ acres). Premium materials (AZEK, Trex Transcend). Difficult Run RPA considerations. Fairfax County permits.
