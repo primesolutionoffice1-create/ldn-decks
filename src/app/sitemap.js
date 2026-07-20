@@ -336,6 +336,7 @@ export default async function sitemap() {
                 { path: "/lead-magnets",                                priority: 0.65, lastMod: TIER1, freq: "monthly" },
                 { path: "/deck-builder-sterling-va",                    priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-fairfax-va",                     priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/deck-builder-fairfax-station-va",             priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-oakton-va",                      priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-falls-church-va",                priority: 0.88, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-builder-gainesville-va",                 priority: 0.88, lastMod: TIER1, freq: "weekly" },
