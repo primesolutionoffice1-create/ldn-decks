@@ -56,6 +56,7 @@ import LayoutContent from "./LayoutContent";
 
 const PINTEREST_TAG_ID = "2612622395697";
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || process.env.META_PIXEL_ID || "695923313293515";
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-16888402136";
 // Microsoft Clarity — heatmaps + session recordings (CRO playbook §Heatmap).
 // No fallback ID on purpose: the tag is a no-op until NEXT_PUBLIC_CLARITY_PROJECT_ID
 // is set in the Vercel environment. Create the project at https://clarity.microsoft.com,
@@ -113,6 +114,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-N87MG6QS');`,
           }}
         />
+
+        {/* Google Ads direct fallback — keeps lead conversion tracking alive
+            if GTM tags are paused by Google's malware scanner. Consent Mode
+            defaults above still control storage and personalization state. */}
+        <Script
+          id="google-ads-direct-tag"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-direct-config" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','${GOOGLE_ADS_ID}');`}
+        </Script>
 
         {/* Meta Pixel — direct fallback because Events Manager showed the
             `leads` dataset had never received events. Lead conversions are
