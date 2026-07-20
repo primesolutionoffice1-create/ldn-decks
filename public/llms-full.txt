@@ -2,7 +2,7 @@
 
 > This is the extended content index for Loudoun Decks (ldndecks.com). It provides page-level detail for AI retrieval systems, citation engines, and semantic indexing. For the summary version, see: https://ldndecks.com/llms.txt
 
-Last updated: 2026-07-19
+Last updated: 2026-07-20
 Sitemap: https://ldndecks.com/sitemap.xml
 Entity: Loudoun Decks (public brand; LDN Decks abbreviation). Legal entity name requires confirmation from current owner records before citation.
 Location: Centreville, VA
@@ -283,6 +283,12 @@ The site has a broad local service URL architecture across Northern Virginia, bu
 - URL: https://ldndecks.com/deck-builder-alexandria-va
 - Content: Old Town historic district, Del Ray, West End. City of Alexandria and Fairfax County split.
 - Updated: 2026-05-25
+
+### Mount Vernon and Alexandria Outdoor Living
+- URL: https://ldndecks.com/outdoor-living-mount-vernon-alexandria-va
+- Content: Premium outdoor living page for Mount Vernon, Fort Hunt, Belle Haven, Waynewood, Hollin Hall, Old Town-adjacent Alexandria, Del Ray, and Kingstowne. Focuses on composite deck replacement, screened porches, covered decks, patios, railings, lighting, drainage, Fairfax County or City of Alexandria permit planning, HOA or historic-area constraints, and high-value backyard upgrades.
+- Intent: Commercial — outdoor living contractor, Mount Vernon deck builder, Alexandria screened porch and deck planning, premium backyard design
+- Updated: 2026-07-20
 
 ### Stafford
 - URL: https://ldndecks.com/deck-builder-stafford-va

@@ -246,6 +246,7 @@ export default function DeckBuilderAlexandriaPage() {
             ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
             ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
             ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
+            ['/outdoor-living-mount-vernon-alexandria-va', 'Mount Vernon & Alexandria Outdoor Living Planning'],
           ].map(([href, text]) => (
             <li key={href} style={{ marginBottom: '0.5rem' }}>
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
