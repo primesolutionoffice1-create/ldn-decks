@@ -375,6 +375,7 @@ export default async function sitemap() {
                 { path: "/wood-vs-composite-deck-long-term-cost",      priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-living-northern-virginia",            priority: 0.95, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-living-mount-vernon-alexandria-va",   priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/premium-composite-deck-replacement-arlington-alexandria-mclean-va", priority: 0.92, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-performance-products",                   priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/timbertech-decks",                            priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 // REMOVED: canonicalized to /deck-design-ideas-2026
