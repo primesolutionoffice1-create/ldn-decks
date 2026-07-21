@@ -308,6 +308,7 @@ export default function McLeanDeckBuilderPage() {
             ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
             ['/timbertech-azek-deck-cost-northern-virginia', 'TimberTech &amp; AZEK Premium Deck Cost'],
             ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Comparison'],
+            ['/premium-composite-deck-replacement-arlington-alexandria-mclean-va', 'Premium Composite Replacement for Arlington, Alexandria & McLean'],
           ].map(([href, text]) => (
             <li key={href} style={{ marginBottom: '0.5rem' }}>
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>

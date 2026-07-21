@@ -178,6 +178,9 @@ export default function CompositeDecksPage() {
           <p style={{ fontSize: '15px', color: '#555', margin: '12px 0 0' }}>
             Want to see estimated monthly payments for Trex and TimberTech projects? Use our <a href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck payment estimator</a>.
           </p>
+          <p style={{ fontSize: '15px', color: '#555', margin: '12px 0 0' }}>
+            Comparing a high-value replacement in Arlington, Alexandria, or McLean? Start with the <Link href="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>premium composite replacement guide</Link> before selecting Trex, TimberTech, AZEK, railings, lighting, or a full rebuild scope.
+          </p>
         </div>
       </section>
 
@@ -238,6 +241,7 @@ export default function CompositeDecksPage() {
             ['/deck-builder-leesburg-va', 'Leesburg composite decks'],
             ['/deck-builder-fairfax-va', 'Fairfax composite decks'],
             ['/deck-builder-mclean-va', 'McLean composite decks'],
+            ['/premium-composite-deck-replacement-arlington-alexandria-mclean-va', 'Premium Arlington/Alexandria/McLean replacement'],
             ['/deck-builder-reston-va', 'Reston composite decks'],
             ['/deck-builder-arlington-va', 'Arlington composite decks'],
             ['/deck-builder-alexandria-va', 'Alexandria composite decks'],
@@ -280,6 +284,7 @@ export default function CompositeDecksPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/trex-vs-timbertech-fade-resistance-comparison" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech Fade Resistance →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Cost in Northern Virginia →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Resurfacing vs Full Deck Replacement →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Premium Composite Replacement for Arlington, Alexandria &amp; McLean →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-materials-comparison-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Material Comparison for Virginia Homes →</Link></li>
         </ul>
       </section>

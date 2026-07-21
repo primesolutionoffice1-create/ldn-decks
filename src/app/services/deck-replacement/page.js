@@ -171,6 +171,9 @@ export default function DeckReplacementPage() {
           <p style={{ fontSize: '15px', color: '#555', margin: '12px 0 0' }}>
             Planning a full rebuild across Loudoun, Fairfax, or Prince William? Start with the <Link href="/deck-builder-northern-virginia" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Northern Virginia deck builder guide</Link> for materials, permits, and project paths.
           </p>
+          <p style={{ fontSize: '15px', color: '#555', margin: '12px 0 0' }}>
+            In Arlington, Alexandria, or McLean? Use the <Link href="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>premium composite replacement corridor guide</Link> for higher-value project planning, materials, permits, railings, lighting, and estimate prep.
+          </p>
         </div>
       </section>
 
@@ -287,6 +290,7 @@ export default function DeckReplacementPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/resurface-or-replace-deck-financing" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Resurface or Replace Before Financing? (cost math) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Composite Deck Cost in Northern Virginia →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-decks" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Composite Deck Replacement Options →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Premium Composite Replacement in Arlington, Alexandria &amp; McLean →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK Comparison →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>

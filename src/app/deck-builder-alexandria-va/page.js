@@ -247,6 +247,7 @@ export default function DeckBuilderAlexandriaPage() {
             ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
             ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
             ['/outdoor-living-mount-vernon-alexandria-va', 'Mount Vernon & Alexandria Outdoor Living Planning'],
+            ['/premium-composite-deck-replacement-arlington-alexandria-mclean-va', 'Premium Composite Replacement for Arlington, Alexandria & McLean'],
           ].map(([href, text]) => (
             <li key={href} style={{ marginBottom: '0.5rem' }}>
               <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
