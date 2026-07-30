@@ -158,7 +158,7 @@ export default function DeckMaterialsComparisonPage() {
 
           {/* ===== SECTION 5: Trex Composite ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Trex Composite: Common Premium Material Choice</h2>
-          <p style={S.p}>Trex is the world&apos;s largest composite decking manufacturer and one of the brands Northern Virginia homeowners ask about most often. Homeowners can verify current TrexPro profile details through the manufacturer before selecting a builder. We help compare the major Trex product lines against budget, sun exposure, maintenance tolerance, and design goals.</p>
+          <p style={S.p}>Trex is the world&apos;s largest composite decking manufacturer and one of the brands Northern Virginia homeowners ask about most often. Homeowners can verify current Trex product-line verification details through the manufacturer before selecting a builder. We help compare the major Trex product lines against budget, sun exposure, maintenance tolerance, and design goals.</p>
           <h3 style={S.h3}>Trex Enhance ($30&ndash;$48/sqft)</h3>
           <p style={S.p}>The entry point into composite. Basics offers solid colors; Naturals adds multi-tonal wood grain. Both carry 25-year warranties. Best for homeowners who want composite durability at the closest price to wood. The aesthetic gap between Enhance and Transcend has narrowed significantly in recent years.</p>
           <h3 style={S.h3}>Trex Transcend ($45&ndash;$60/sqft)</h3>

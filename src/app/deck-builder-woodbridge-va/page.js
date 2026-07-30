@@ -22,7 +22,7 @@ import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-woodbridge-va',
-  title: 'Deck Builder in Woodbridge, VA | Trex Certified | Loudoun Decks',
+  title: 'Deck Builder in Woodbridge, VA | Composite Decks | Loudoun Decks',
   description: 'Trusted deck builder in Woodbridge, VA. Trex product-line planning & TimberTech and AZEK product planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
   image: '/social/deck-builder-woodbridge-va-social.png',
 });
@@ -113,7 +113,7 @@ export default function DeckBuilderWoodbridgePage() {
   return (
     <main>
       <LocalBusinessSchema city="Woodbridge" url="https://ldndecks.com/deck-builder-woodbridge-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-woodbridge-va" name="Deck Builder in Woodbridge, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Woodbridge, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-woodbridge-va" name="Deck Builder in Woodbridge, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Woodbridge, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Woodbridge, VA's Trusted Deck Company"
         title="Custom Deck Builder in Woodbridge, VA"

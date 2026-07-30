@@ -22,7 +22,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-ashburn-va',
-  title: 'Deck Builder in Ashburn, VA | Trex Certified | Loudoun Decks',
+  title: 'Deck Builder in Ashburn, VA | Composite Decks | Loudoun Decks',
   description: 'Deck builder in Ashburn, VA. Trex product planning for Brambleton, Broadlands, Ashburn Village & One Loudoun. Builder-grade deck upgrades, HOA-ready designs. Free estimate  -  call (571) 655-7207.',
   image: '/social/deck-builder-ashburn-va-social.png',
 });

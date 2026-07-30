@@ -20,7 +20,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-springfield-va',
-  title: 'Deck Builder in Springfield, VA | Trex Certified | Loudoun Decks',
+  title: 'Deck Builder in Springfield, VA | Composite Decks | Loudoun Decks',
   description: 'Deck builder in Springfield, VA. Custom Trex & composite decks for Kingstowne, West Springfield, Franconia & Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207.',
   image: '/social/deck-builder-springfield-va-social.png',
 });
@@ -106,7 +106,7 @@ export default function DeckBuilderSpringfieldPage() {
   return (
     <main>
       <LocalBusinessSchema city="Springfield" url="https://ldndecks.com/deck-builder-springfield-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-springfield-va" name="Deck Builder in Springfield, VA | Trex Certified | Loudoun Decks" description="Deck builder in Springfield, VA. Custom Trex &amp; composite decks for Kingstowne, West Springfield, Franconia &amp; Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-springfield-va" name="Deck Builder in Springfield, VA | Composite Decks | Loudoun Decks" description="Deck builder in Springfield, VA. Custom Trex &amp; composite decks for Kingstowne, West Springfield, Franconia &amp; Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Springfield, VA's Trusted Deck Company"
         title="Custom Deck Builder in Springfield, VA"

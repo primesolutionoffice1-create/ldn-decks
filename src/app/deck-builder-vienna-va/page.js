@@ -24,7 +24,7 @@ import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-vienna-va',
-  title: 'Deck Builder in Vienna, VA | Trex Certified | Loudoun Decks',
+  title: 'Deck Builder in Vienna, VA | Composite Decks | Loudoun Decks',
   description: 'Trusted deck builder in Vienna, VA. Google reviews. Custom Trex & TimberTech decks, screened porches & pergolas. Town of Vienna permit experts. Free estimate.',
   image: '/social/deck-builder-vienna-va-social.png',
 });
@@ -123,7 +123,7 @@ export default function ViennaDeckBuilderPage() {
     <main>
       <JsonLd data={viennaFaqSchema} />
       <LocalBusinessSchema city="Vienna" url="https://ldndecks.com/deck-builder-vienna-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-vienna-va" name="Deck Builder in Vienna, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Vienna, VA. Google reviews. Custom Trex &amp; TimberTech decks, screened porches &amp; pergolas. Town of Vienna permit experts. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-vienna-va" name="Deck Builder in Vienna, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Vienna, VA. Google reviews. Custom Trex &amp; TimberTech decks, screened porches &amp; pergolas. Town of Vienna permit experts. Free estimate." speakable />
       <ServicesHeader
         subtext="Vienna, VA Deck Builder"
         title="Custom Deck Builder in Vienna, VA"

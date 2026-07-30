@@ -413,7 +413,7 @@ export default function CompositeDeckCostPage() {
               <strong>Trex pricing</strong> — Trex.com material MSRP for Enhance, Transcend, Signature, and Lineage product lines. Dealer pricing may vary by program and region. Trex installer locator: <a href="https://www.trex.com/contractors/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)' }}>trex.com/contractors</a>.
             </li>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
-              <strong>TimberTech pricing</strong> — TimberTech.com product MSRP for AZEK Vintage, AZEK Harvest, PRO Legacy, and PRO Reserve lines. TimberTech Platinum dealer pricing. Installer locator: <a href="https://www.timbertech.com/locate-a-pro/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)' }}>locator.timbertech.com</a>.
+              <strong>TimberTech pricing</strong> — TimberTech.com product MSRP for AZEK Vintage, AZEK Harvest, PRO Legacy, and PRO Reserve lines. Regional dealer pricing may vary by supplier, product line, and availability. Installer locator: <a href="https://www.timbertech.com/locate-a-pro/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)' }}>locator.timbertech.com</a>.
             </li>
             <li style={{ marginBottom: '0.55rem', lineHeight: 1.7 }}>
               <strong>Fiberon pricing</strong> — Fiberon.com product MSRP for Concordia, Sanctuary, and ArmorGuard lines. Fiberon contractor locator: <a href="https://www.fiberondecking.com/find-a-pro" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)' }}>fiberondecking.com/find-a-pro</a>.

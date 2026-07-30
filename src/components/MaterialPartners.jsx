@@ -1,27 +1,27 @@
 import React from 'react';
 import styles from './MaterialPartners.module.css';
 
-const partners = [
+const materials = [
   { name: 'Trex', sub: 'Product planning' },
   { name: 'TimberTech', sub: 'Product planning' },
-  { name: 'Fiberon', sub: 'Premium Decking' },
-  { name: 'Azek', sub: 'High-Performance' },
-  { name: 'Wolf Home Products', sub: 'Outdoor Living' }
+  { name: 'Fiberon', sub: 'Decking options' },
+  { name: 'AZEK', sub: 'PVC options' },
+  { name: 'Wolf Home Products', sub: 'Outdoor living options' }
 ];
 
 export default function MaterialPartners() {
-  const allPartners = [...partners, ...partners]; // Double for seamless loop
+  const allMaterials = [...materials, ...materials]; // Double for seamless loop
 
   return (
     <section className={styles.partnersSection}>
       <div className={styles.container}>
-        <h2 className={styles.heading}>Our Trusted Material Partners</h2>
+        <h2 className={styles.heading}>Composite & PVC Decking Options We Build With</h2>
         <div className={styles.ticker}>
           <div className={styles.tickerTrack}>
-            {allPartners.map((partner, index) => (
+            {allMaterials.map((material, index) => (
               <div key={index} className={styles.partnerCard}>
-                <span className={styles.partnerName}>{partner.name}</span>
-                <span className={styles.partnerSub}>{partner.sub}</span>
+                <span className={styles.partnerName}>{material.name}</span>
+                <span className={styles.partnerSub}>{material.sub}</span>
               </div>
             ))}
           </div>

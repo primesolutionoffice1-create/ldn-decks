@@ -16,8 +16,8 @@ import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-manassas-va',
-  title: 'Deck Builder in Manassas, VA | Trex Certified | Loudoun Decks',
-  description: 'Manassas deck builder serving Old Town, Wellington, Bull Run and Sudley Springs. Trex Certified composite decks, screened porches and historic-district builds.',
+  title: 'Deck Builder in Manassas, VA | Composite Decks | Loudoun Decks',
+  description: 'Manassas deck builder serving Old Town, Wellington, Bull Run and Sudley Springs. Trex and composite deck planning, screened porches and historic-district builds.',
   image: '/social/deck-builder-manassas-va-social.png',
 });
 
@@ -81,12 +81,12 @@ export default function ManassasDeckBuilderPage() {
     <main>
       <JsonLd data={manassasFaqSchema} />
       <LocalBusinessSchema city="Manassas" url="https://ldndecks.com/deck-builder-manassas-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-manassas-va" name="Deck Builder in Manassas, VA | Trex Certified | Loudoun Decks" description="Manassas deck builder serving Old Town, Wellington, Bull Run and Sudley Springs. Trex Certified composite decks, screened porches and historic-district builds." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-manassas-va" name="Deck Builder in Manassas, VA | Composite Decks | Loudoun Decks" description="Manassas deck builder serving Old Town, Wellington, Bull Run and Sudley Springs. Trex and composite deck planning, screened porches and historic-district builds." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Builder in Manassas, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Trex Certified composite decks, screened porches and historic-district outdoor living for Manassas, Manassas Park and Prince William County.</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Trex and composite deck planning, screened porches and historic-district outdoor living for Manassas, Manassas Park and Prince William County.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
@@ -213,7 +213,7 @@ export default function ManassasDeckBuilderPage() {
       </section>
 
 
-      <SimpleCTA title="Build Your Manassas Deck With a Trex Certified Team" buttonText="Get Free Estimate" link="/get-estimate" />
+      <SimpleCTA title="Build Your Manassas Deck With a Composite Deck Team" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-manassas-va" />
       <NamedAuthor context="Manassas and Northern Virginia" lastUpdated="2026-06-01" />
       <ContactHome />

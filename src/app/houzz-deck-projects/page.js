@@ -115,7 +115,7 @@ export default function HouzzProjectsPage() {
               <div style={{ height: 200, position: 'relative', margin: '-2rem -2rem 1.5rem', borderRadius: '16px 16px 0 0', overflow: 'hidden' }}>
                 <Image src="/images/img13.jpeg" alt="Custom composite deck construction project in Northern Virginia featured on Houzz by Loudoun Decks" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
               </div>
-              <h3 style={S.h3}>Trex Certified Deck Builders</h3>
+              <h3 style={S.h3}>Composite Deck Builders</h3>
               <p style={S.p}>
                 We specialize in high-performance composite decking and install Trex systems according to manufacturer requirements. Product warranties and maintenance expectations should be verified against the current Trex line selected for your project.
               </p>

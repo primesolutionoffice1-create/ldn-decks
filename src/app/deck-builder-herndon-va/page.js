@@ -23,7 +23,7 @@ import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-herndon-va',
-  title: 'Deck Builder in Herndon, VA | Trex Certified | Loudoun Decks',
+  title: 'Deck Builder in Herndon, VA | Composite Decks | Loudoun Decks',
   description: 'Trusted deck builder in Herndon, VA. Trex, TimberTech and AZEK material planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
   image: '/social/deck-builder-herndon-va-social.png',
 });
@@ -114,7 +114,7 @@ export default function DeckBuilderHerndonPage() {
   return (
     <main>
       <LocalBusinessSchema city="Herndon" url="https://ldndecks.com/deck-builder-herndon-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-herndon-va" name="Deck Builder in Herndon, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Herndon, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-herndon-va" name="Deck Builder in Herndon, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Herndon, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Herndon, VA's Trusted Deck Company"
         title="Custom Deck Builder in Herndon, VA"
