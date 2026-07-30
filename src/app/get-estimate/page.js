@@ -78,7 +78,7 @@ export default function GetEstimatePage() {
             {/* Trust Badges */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '2rem' }}>
               {[
-                { label: 'TrexPro', sub: 'Verify profile' },
+                { label: 'Trex', sub: 'Verify profile' },
                 { label: 'Warranty', sub: 'Written terms' },
                 { label: 'Reviews', sub: 'Public profiles' },
                 { label: 'License', sub: 'Verify DPOR' },

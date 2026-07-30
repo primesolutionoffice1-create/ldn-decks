@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "What is Fiberon's warranty compared to Trex?",
-    a: 'Fiberon Symmetry carries a 25-year fade/stain warranty, similar to Trex Enhance. Fiberon Concordia matches the 30-year Trex Transcend warranty. Both brands honor their warranties through certified installers — one reason we invest in Trex and TimberTech certification rather than spreading across all brands.',
+    a: 'Fiberon Symmetry carries a 25-year fade/stain warranty, similar to Trex Enhance. Fiberon Concordia matches the 30-year Trex Transcend warranty. Warranty coverage depends on the selected product line and current manufacturer requirements, so homeowners should verify terms directly before purchase.',
   },
   {
     q: 'Can I see Fiberon samples before deciding?',

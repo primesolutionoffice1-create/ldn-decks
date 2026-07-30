@@ -22,7 +22,7 @@ import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-chantilly-va',
-  title: 'Deck Builder in Chantilly, VA | Trex Certified | Loudoun Decks',
+  title: 'Deck Builder in Chantilly, VA | Composite Decks | Loudoun Decks',
   description: 'Trusted deck builder in Chantilly, VA. Trex product-line planning & TimberTech and AZEK product planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
   image: '/social/deck-builder-chantilly-va-social.png',
 });
@@ -113,7 +113,7 @@ export default function DeckBuilderChantillyPage() {
   return (
     <main>
       <LocalBusinessSchema city="Chantilly" url="https://ldndecks.com/deck-builder-chantilly-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-chantilly-va" name="Deck Builder in Chantilly, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Chantilly, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-chantilly-va" name="Deck Builder in Chantilly, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Chantilly, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Chantilly, VA's Trusted Deck Company"
         title="Custom Deck Builder in Chantilly, VA"

@@ -21,7 +21,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-gainesville-va',
-  title: 'Deck Builder in Gainesville, VA | Trex Certified | Loudoun Decks',
+  title: 'Deck Builder in Gainesville, VA | Composite Decks | Loudoun Decks',
   description: 'Trusted deck builder in Gainesville, VA. Trex product-line planning & TimberTech and AZEK product planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.',
   image: '/social/deck-builder-gainesville-va-social.png',
 });
@@ -112,7 +112,7 @@ export default function DeckBuilderGainesvillePage() {
   return (
     <main>
       <LocalBusinessSchema city="Gainesville" url="https://ldndecks.com/deck-builder-gainesville-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-gainesville-va" name="Deck Builder in Gainesville, VA | Trex Certified | Loudoun Decks" description="Trusted deck builder in Gainesville, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-gainesville-va" name="Deck Builder in Gainesville, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Gainesville, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Gainesville, VA's Trusted Deck Company"
         title="Custom Deck Builder in Gainesville, VA"

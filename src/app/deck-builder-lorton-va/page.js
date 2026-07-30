@@ -20,7 +20,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-lorton-va',
-  title: 'Deck Builder in Lorton, VA | Trex Certified | Loudoun Decks',
+  title: 'Deck Builder in Lorton, VA | Composite Decks | Loudoun Decks',
   description: 'Deck builder in Lorton, VA. Custom Trex & composite decks for Laurel Hill, Crosspointe, Newington & Gunston. Fairfax County permits handled. Free estimate  -  (571) 655-7207.',
   image: '/social/deck-builder-lorton-va-social.png',
 });
@@ -106,7 +106,7 @@ export default function DeckBuilderLortonPage() {
   return (
     <main>
       <LocalBusinessSchema city="Lorton" url="https://ldndecks.com/deck-builder-lorton-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-lorton-va" name="Deck Builder in Lorton, VA | Trex Certified | Loudoun Decks" description="Deck builder in Lorton, VA. Custom Trex &amp; composite decks for Laurel Hill, Crosspointe, Newington &amp; Gunston. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-lorton-va" name="Deck Builder in Lorton, VA | Composite Decks | Loudoun Decks" description="Deck builder in Lorton, VA. Custom Trex &amp; composite decks for Laurel Hill, Crosspointe, Newington &amp; Gunston. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Lorton, VA's Trusted Deck Company"
         title="Custom Deck Builder in Lorton, VA"

@@ -109,7 +109,7 @@ const expansionSections = [
     paragraphs: [
       "What separates a Loudoun Decks project from a standard installation is our use of the complete Trex ecosystem. For our elevated deck builds in Stafford and Arlington, we often recommend the Trex RainEscape system. This unique drainage system is installed over the joists and under the decking, diverting water away into a gutter system. This allows the area under the deck to stay completely dry, essentially creating a 'covered patio' for no-cost additional living space.",
       "We also specialize in Trex lighting. These low-voltage LED systems are designed to fit perfectly into Trex posts and stairs, providing a warm, sophisticated glow that enhances safety and allows you to enjoy your deck long after the sun goes down. As your custom deck builder, we handle all the electrical integration, ensuring your new outdoor space is fully ready for nighttime entertaining from day one.",
-      "Our approach ensures that your Trex deck is a complete, cohesive architectural statement that increases your home value and delivers lasting value. Every Trex project includes the manufacturer warranty backed by our TrexPro profile details that homeowners should verify directly with Trex."
+      "Our approach ensures that your Trex deck is a complete, cohesive architectural statement that increases your home value and delivers lasting value. Manufacturer warranty coverage depends on the selected Trex product line and current installation requirements, which homeowners should verify directly with Trex."
     ]
   }
 ];
@@ -128,9 +128,9 @@ export default function TrexDecksPage() {
         relatedServices={['https://ldndecks.com/composite-decks', 'https://ldndecks.com/timbertech-decks', 'https://ldndecks.com/services/new-decks']}
       />
       <ServicesHeader
-        subtext="Trex Pro Builder"
+        subtext="Trex Product-Line Planning"
         title="Custom Trex Deck Building & Installation"
-        description="Loudoun Decks is the premier Trex installer in Loudoun County, Fairfax County, and Prince William County. Experience the ultimate in low-maintenance luxury."
+        description="Loudoun Decks helps homeowners plan and build Trex composite decks across Loudoun County, Fairfax County, and Prince William County. Experience low-maintenance outdoor living with clear product guidance and written estimates."
       />
 
       <AboveFoldCTA
@@ -226,7 +226,7 @@ export default function TrexDecksPage() {
         title="Expert Trex Contractor Serving Northern Virginia"
         description="Trex Transcend® provides a beautiful, splinter-free surface that lasts for decades. We specialize in custom brand-name builds across Arlington, Stafford, and total NoVA."
         listItems={[
-          "Trex Pro installation specialists",
+          "Trex product-line planning and installation experience",
           "Trex Transcend® & Signature® collections",
           "Low-maintenance (never stain or sand again)",
           "Integrated Trex lighting and drainage systems",

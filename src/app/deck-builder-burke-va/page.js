@@ -21,7 +21,7 @@ import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-burke-va',
-  title: 'Deck Builder in Burke, VA | Trex Certified | Loudoun Decks',
+  title: 'Deck Builder in Burke, VA | Composite Decks | Loudoun Decks',
   description: 'Deck builder in Burke, VA. Custom Trex composite decks replacing aging wood in Burke Centre, Lakewood Hills & Rolling Valley. Fairfax County permits handled. Free estimate  -  (571) 655-7207.',
   image: '/social/deck-builder-burke-va-social.png',
 });
@@ -106,7 +106,7 @@ export default function DeckBuilderBurkePage() {
   return (
     <main>
       <LocalBusinessSchema city="Burke" url="https://ldndecks.com/deck-builder-burke-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-burke-va" name="Deck Builder in Burke, VA | Trex Certified | Loudoun Decks" description="Deck builder in Burke, VA. Custom Trex composite decks replacing aging wood in Burke Centre, Lakewood Hills &amp; Rolling Valley. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-burke-va" name="Deck Builder in Burke, VA | Composite Decks | Loudoun Decks" description="Deck builder in Burke, VA. Custom Trex composite decks replacing aging wood in Burke Centre, Lakewood Hills &amp; Rolling Valley. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Burke, VA's Trusted Deck Company"
         title="Custom Deck Builder in Burke, VA"

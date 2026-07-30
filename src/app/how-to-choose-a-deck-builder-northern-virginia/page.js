@@ -66,7 +66,7 @@ export default function ChooseDeckBuilderPage() {
               { q: 'Do you carry liability insurance and workers\' comp?', detail: 'Without it, you\'re personally liable if a worker is injured on your property. Ask for a certificate of insurance.' },
               { q: 'Will you pull the building permit?', detail: 'A quality builder handles permits and inspections. If they suggest skipping the permit, walk away.' },
               { q: 'Do you handle HOA submissions?', detail: 'In Northern Virginia, most homes need HOA approval. Your builder should prepare and submit the ARC package.' },
-              { q: 'What brands/materials do you install?', detail: 'Look for Trex Pro, TimberTech, or AZEK certifications. Avoid builders who are vague about materials.' },
+              { q: 'What brands/materials do you install?', detail: 'Ask builders how they work with Trex, TimberTech, or AZEK product lines and verify any certification claims directly with the manufacturer. Avoid builders who are vague about materials.' },
               { q: 'Can I see recent local references?', detail: 'Ask for 3-5 local photo examples or source-verified references in your area, ideally within the last 12 months. Visit one if the homeowner and builder can coordinate it.' },
               { q: 'What are your written warranty terms?', detail: 'Get warranty terms in writing before signing. They should separate workmanship coverage from manufacturer material warranties and explain exclusions clearly.' },
               { q: 'What\'s included in the estimate?', detail: 'Materials, labor, permits, dumpster, cleanup, and timeline should all be itemized. Lump-sum quotes hide problems.' },

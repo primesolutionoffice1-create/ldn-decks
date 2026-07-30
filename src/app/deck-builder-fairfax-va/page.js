@@ -216,7 +216,7 @@ export default function FairfaxDeckBuilderPage() {
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Two-jurisdiction planning.</strong> City of Fairfax and Fairfax County are entirely separate building departments with different timelines and review standards. We verify which office controls your parcel before plans are submitted.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Engineered structural drawings.</strong> Fairfax County requires sealed plans with ledger details, bolt schedules and footing depths. We package those details up front so reviewer comments are easier to resolve.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Replacement specialists.</strong> Two-thirds of our Fairfax workload is deck replacement on aging mid-century homes. We've seen what fails and we know how to rebuild it correctly.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Trex Certified, TimberTech installer.</strong> Full Trex catalog plus TimberTech AZEK Vintage and Pro lines available on every Fairfax quote.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Trex and TimberTech product planning.</strong> Full Trex catalog plus TimberTech AZEK Vintage and Pro lines available on every Fairfax quote.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Honest scoping.</strong> If your existing deck can be safely resurfaced, we'll tell you. If it can't, you'll get the photo evidence to understand why.</li>
           </ul>
 
@@ -257,7 +257,7 @@ export default function FairfaxDeckBuilderPage() {
       </section>
 
 
-      <SimpleCTA title="Build Your Fairfax Deck With a Trex Certified Team" buttonText="Get Free Estimate" link="/get-estimate" />
+      <SimpleCTA title="Build Your Fairfax Deck With a Composite Deck Team" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-fairfax-va" />
       <ContactHome />
     </main>

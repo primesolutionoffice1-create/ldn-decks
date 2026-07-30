@@ -24,7 +24,7 @@ import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-mclean-va',
-  title: 'Deck Builder in McLean, VA | Trex Certified | Loudoun Decks',
+  title: 'Deck Builder in McLean, VA | Composite Decks | Loudoun Decks',
   description: 'Premium deck builder in McLean, VA for composite deck replacement, Trex and TimberTech planning, screened porches, and estate outdoor living projects.',
   image: '/social/deck-builder-mclean-va-social.png',
 });
@@ -141,7 +141,7 @@ export default function McLeanDeckBuilderPage() {
     <main>
       <JsonLd data={mcleanFaqSchema} />
       <LocalBusinessSchema city="McLean" url="https://ldndecks.com/deck-builder-mclean-va" />
-      <WebPageSchema dateModified="2026-07-06" url="https://ldndecks.com/deck-builder-mclean-va" name="Deck Builder in McLean, VA | Trex Certified | Loudoun Decks" description="Premium deck builder in McLean, VA for composite deck replacement, Trex and TimberTech planning, screened porches, and estate outdoor living projects." speakable />
+      <WebPageSchema dateModified="2026-07-06" url="https://ldndecks.com/deck-builder-mclean-va" name="Deck Builder in McLean, VA | Composite Decks | Loudoun Decks" description="Premium deck builder in McLean, VA for composite deck replacement, Trex and TimberTech planning, screened porches, and estate outdoor living projects." speakable />
       <ServicesHeader
         subtext="McLean, VA's Choice for Luxury Decks"
         title="Custom Deck Builder in McLean, VA"

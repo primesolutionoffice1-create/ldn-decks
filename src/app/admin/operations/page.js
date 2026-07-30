@@ -97,7 +97,7 @@ const WEEK1_OUTREACH = [
   { name: 'Send PR pitch — Patch Leesburg', file: 'wiki/.../outreach-pack/01-pr-pitches.md', section: 'Pitch 2' },
   { name: 'Send PR pitch — NoVA Magazine', file: 'wiki/.../outreach-pack/01-pr-pitches.md', section: 'Pitch 3' },
   { name: 'Send PR pitch — Washingtonian', file: 'wiki/.../outreach-pack/01-pr-pitches.md', section: 'Pitch 4' },
-  { name: 'Verify Trex Pro Locator listing', file: 'wiki/.../outreach-pack/04-manufacturer-verifications.md', section: 'Verification 1' },
+  { name: 'Verify Trex Locator listing', file: 'wiki/.../outreach-pack/04-manufacturer-verifications.md', section: 'Verification 1' },
   { name: 'Verify TimberTech Pro Locator listing', file: 'wiki/.../outreach-pack/04-manufacturer-verifications.md', section: 'Verification 2' },
   { name: 'Verify NADRA member directory', file: 'wiki/.../outreach-pack/04-manufacturer-verifications.md', section: 'Verification 3' },
 ];

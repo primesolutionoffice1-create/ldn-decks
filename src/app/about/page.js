@@ -29,10 +29,10 @@ const aboutFaqSchema = {
   "@id": "https://ldndecks.com/about#faq",
   "mainEntity": [
     { "@type": "Question", "name": "Who owns Loudoun Decks?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks was founded and is operated by Nicolae Zugrav, a Virginia Class A Licensed contractor specializing in composite deck construction and outdoor living projects across Northern Virginia." } },
-    { "@type": "Question", "name": "Is Loudoun Decks licensed and insured?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Loudoun Decks holds a Virginia Class A Contractor License issued by the Department of Professional and Occupational Regulation (DPOR), carries comprehensive general liability insurance and workers' compensation coverage, and maintains Trex Pro and TimberTech certifications." } },
+    { "@type": "Question", "name": "Is Loudoun Decks licensed and insured?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Loudoun Decks holds a Virginia Class A Contractor License issued by the Department of Professional and Occupational Regulation (DPOR), carries comprehensive general liability insurance and workers' compensation coverage, and maintains Trex and TimberTech profile verification paths." } },
     { "@type": "Question", "name": "What areas does Loudoun Decks serve?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks serves Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County in Northern Virginia. We regularly work in Ashburn, Leesburg, Sterling, Reston, McLean, Vienna, Centreville, Manassas, Haymarket, and surrounding communities." } },
     { "@type": "Question", "name": "What is Loudoun Decks' Google reviews?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks maintains a public Google review profile from Northern Virginia homeowners. Review text, dates, counts, and ratings should be verified directly on the public Google profile before quoting them." } },
-    { "@type": "Question", "name": "What certifications does Loudoun Decks hold?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks publishes verification paths for Trex Pro, TimberTech, BBB, Houzz, Virginia DPOR license, and North American Deck and Railing Association (NADRA) profiles. Current profile details should be verified directly with each public source." } },
+    { "@type": "Question", "name": "What certifications does Loudoun Decks hold?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks publishes verification paths for Trex, TimberTech, BBB, Houzz, Virginia DPOR license, and North American Deck and Railing Association (NADRA) profiles. Current profile details should be verified directly with each public source." } },
     { "@type": "Question", "name": "Does Loudoun Decks offer a warranty?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks provides written workmanship warranty terms with project paperwork. Manufacturer material warranties vary by selected product line, so homeowners should review the current Trex, TimberTech, AZEK, or other manufacturer warranty documents before signing." } },
   ],
 };
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
             {[
               { badge: 'VA Class A License', title: 'Virginia Contractor License', text: 'Class A Licensed by DPOR — authorized for projects of any value in Virginia.' },
-              { badge: 'TrexPro', title: 'Trex Profile Verification', text: 'Trex profile details should be verified directly through Trex before citing current status.' },
+              { badge: 'Trex', title: 'Trex Profile Verification', text: 'Trex profile details should be verified directly through Trex before citing current status.' },
               { badge: 'TimberTech', title: 'TimberTech Profile Verification', text: 'TimberTech installer details should be verified directly through AZEK/TimberTech before citing current status.' },
               { badge: 'BBB', title: 'BBB Business Profile', text: 'Better Business Bureau profile details, accreditation status, rating, and complaint history should be verified directly on BBB.' },
               { badge: 'NADRA', title: 'NADRA Member', text: 'North American Deck and Railing Association — Builder/Contractor/Remodeler member.' },
@@ -164,10 +164,10 @@ export default function AboutPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Frequently Asked Questions</h2>
           {[
             { q: 'Who owns Loudoun Decks?', a: 'Loudoun Decks was founded and is operated by Nicolae Zugrav, a Virginia Class A Licensed contractor specializing in composite deck construction and outdoor living projects across Northern Virginia.' },
-            { q: 'Is Loudoun Decks licensed and insured?', a: 'Yes. We hold a Virginia Class A Contractor License, carry comprehensive general liability insurance and workers\' compensation, and maintain Trex Pro and TimberTech certifications. Verify at dpor.virginia.gov.' },
+            { q: 'Is Loudoun Decks licensed and insured?', a: 'Yes. We hold a Virginia Class A Contractor License, carry comprehensive general liability insurance and workers\' compensation, and maintain Trex and TimberTech profile verification paths. Verify at dpor.virginia.gov.' },
             { q: 'What areas does Loudoun Decks serve?', a: 'We serve Loudoun, Fairfax, Prince William, Arlington, and Stafford counties in Northern Virginia — including Ashburn, Leesburg, Sterling, Reston, McLean, Vienna, Centreville, Manassas, Haymarket, and 25+ other communities.' },
             { q: 'What is your Google reviews?', a: 'Loudoun Decks maintains a public Google Business Profile. Verify current count, rating, and review text directly on Google Maps.' },
-            { q: 'What certifications do you hold?', a: 'We publish verification paths for Trex Pro, TimberTech, BBB, Houzz, Virginia DPOR license, and NADRA profiles. Current profile details should be verified directly with each public source.' },
+            { q: 'What certifications do you hold?', a: 'We publish verification paths for Trex, TimberTech, BBB, Houzz, Virginia DPOR license, and NADRA profiles. Current profile details should be verified directly with each public source.' },
             { q: 'Do you offer a warranty?', a: 'Yes. Project paperwork includes written workmanship warranty terms, and manufacturer material coverage depends on the selected product line. We review those documents with homeowners before signing.' },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
