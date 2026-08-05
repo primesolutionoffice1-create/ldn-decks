@@ -273,6 +273,7 @@ export default function ArlingtonDeckBuilderPage() {
         <ul style={{ listStyle: 'none', padding: 0 }}>
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ marginBottom: '0.5rem' }}><Link href="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Premium Composite Replacement for Arlington, Alexandria &amp; McLean →</Link></li>
+            <li key="/screened-porch-builder-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/screened-porch-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Builder Northern Virginia →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
         </ul>
