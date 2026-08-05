@@ -346,6 +346,7 @@ const nextConfig = {
       { source: '/deck-builder-manassas', destination: '/deck-builder-manassas-va', permanent: true },
 
       // Old /decks-build-near-you/ pattern (typo variant without "top-")
+      { source: '/decks-build-near-you/deck-builder-in-loudoun-county', destination: '/near-you/loudoun-county', permanent: true },
       { source: '/decks-build-near-you/:path*', destination: '/near-you', permanent: true },
 
       // Old Showcase Redirects
