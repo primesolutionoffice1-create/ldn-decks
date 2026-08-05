@@ -8,11 +8,19 @@ export async function GET() {
   // Google News requires posts within 2 days. Older posts cause sitemap rejection.
   const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000;
   const now = Date.now();
-  const entries = blogPosts
-    .map(post => {
-      const date = new Date(post.date);
-      if (isNaN(date.getTime())) return null;
-      if (now - date.getTime() > TWO_DAYS_MS) return null;
+  const withDates = blogPosts
+    .map(post => ({ post, date: new Date(post.date) }))
+    .filter(({ date }) => !isNaN(date.getTime()));
+  const fresh = withDates.filter(({ date }) => now - date.getTime() <= TWO_DAYS_MS);
+  // Google News only features posts under 2 days old, but an EMPTY urlset makes
+  // Search Console report "Missing XML tag" (no <url> element). When nothing is
+  // fresh, fall back to the single most recent post with its real date: the XML
+  // stays valid, Google simply skips the stale entry for the News surface.
+  const selected = fresh.length
+    ? fresh
+    : withDates.sort((a, b) => b.date - a.date).slice(0, 1);
+  const entries = selected
+    .map(({ post, date }) => {
       const isoDate = date.toISOString();
       return `
     <url>
