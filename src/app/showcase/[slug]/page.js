@@ -40,6 +40,75 @@ function getRelatedLinks(project) {
   return { cityName, cityHref, serviceHref, serviceLabel };
 }
 
+function getProjectCategory(project) {
+  const title = project.title.toLowerCase();
+  if (title.includes('fence')) return 'custom fence and gate project';
+  if (title.includes('resurfacing')) return 'deck resurfacing project';
+  if (title.includes('balcony')) return 'balcony or multi-level deck project';
+  if (title.includes('composite')) return 'composite deck project';
+  if (title.includes('rooftop')) return 'rooftop deck project';
+  return 'deck construction project';
+}
+
+function getProjectPlanningNotes(project, related) {
+  const category = getProjectCategory(project);
+  const isFence = category.includes('fence');
+  const isComposite = category.includes('composite');
+  const isResurfacing = category.includes('resurfacing');
+  const isBalcony = category.includes('balcony') || category.includes('multi-level') || project.title.toLowerCase().includes('multi');
+
+  const definition = isFence
+    ? `This ${category} in ${related.cityName}, Virginia shows how exterior privacy, gate placement, property access, and finish details should be planned before installation begins.`
+    : `This ${category} in ${related.cityName}, Virginia shows the type of structural planning, material selection, access review, and finishing decisions that matter before a Northern Virginia homeowner approves a deck scope.`;
+
+  const facts = [
+    `Market: ${related.cityName}, Virginia`,
+    `Project category: ${category}`,
+    `Public proof status: gallery record only until project evidence, owner permission, and final scope details are confirmed`,
+    isFence
+      ? 'Planning focus: property lines, gate swing, post layout, privacy, grade changes, and finish consistency'
+      : 'Planning focus: framing condition, footings, ledger attachment, stairs, railings, material exposure, and permit path',
+    isComposite
+      ? 'Material note: composite deck planning should compare board tier, color, heat exposure, hidden fasteners, fascia, and railing package'
+      : isResurfacing
+        ? 'Resurfacing note: resurfacing is appropriate only when the existing frame, ledger, footings, stairs, and rails are safe for reuse'
+        : isBalcony
+          ? 'Structural note: elevated or balcony projects need careful load-path review, guardrail planning, and inspection-ready details'
+          : 'Material note: final deck material should be selected after sun exposure, maintenance expectations, budget, and railing style are reviewed',
+  ];
+
+  const steps = isFence
+    ? [
+        'Confirm property lines, utilities, HOA rules, gate locations, and access needs.',
+        'Select post spacing, height, privacy level, hardware, and finish details.',
+        'Prepare a written scope that separates required installation details from optional upgrades.',
+        'Schedule installation after materials, access, and homeowner approvals are clear.',
+      ]
+    : [
+        'Inspect the existing site, grade, access path, and any current deck framing before pricing.',
+        'Confirm permit, HOA, setback, stair, railing, and inspection requirements for the jurisdiction.',
+        'Choose the right material package, including boards, fascia, railings, lighting, and fasteners.',
+        'Prepare a written scope that separates structural requirements from optional finish upgrades.',
+      ];
+
+  const faqs = [
+    {
+      q: `Is this ${related.cityName} project a verified case study?`,
+      a: 'This page is a public gallery record. It should not be used as a formal case study until project scope, photos, date, location, and owner permission are verified in the evidence ledger.',
+    },
+    {
+      q: `Can Loudoun Decks build a similar project in ${related.cityName}?`,
+      a: `Yes. Homeowners can use this gallery page as a starting point, then request a written estimate so the team can review site access, scope, materials, budget, timeline, and local requirements for ${related.cityName}.`,
+    },
+    {
+      q: 'What information makes the estimate more accurate?',
+      a: 'Send photos of the current outdoor area, approximate dimensions, desired materials, railing preferences, stair or access concerns, HOA documents if available, and whether the project is repair, resurfacing, replacement, or new construction.',
+    },
+  ];
+
+  return { category, definition, facts, steps, faqs };
+}
+
 export async function generateStaticParams() {
   return showcaseProjects.map((project) => ({
     slug: project.slug,
@@ -73,6 +142,7 @@ export default async function ProjectPage({ params }) {
   const city = project.location.split(',')[0];
   const date = project.location.split(',')[1]?.trim();
   const related = getRelatedLinks(project);
+  const planning = getProjectPlanningNotes(project, related);
 
   // Project page schema describes the completed work as a Service example and
   // references the single canonical org (@id #organization) via `provider`.
@@ -87,10 +157,23 @@ export default async function ProjectPage({ params }) {
     "provider": { "@id": "https://ldndecks.com/#organization" },
     "areaServed": { "@type": "Place", "name": `${city}, VA` }
   };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": planning.faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
 
   return (
     <main className={styles.projectMain}>
       <JsonLd data={projectSchema} />
+      <JsonLd data={faqSchema} />
       <section className={styles.hero}>
         <div className={styles.container}>
           <Link href="/showcase" className={styles.backLink}>← Back to Showcase</Link>
@@ -129,12 +212,41 @@ export default async function ProjectPage({ params }) {
           <div className={styles.description}>
             <h2>About this Project</h2>
             <p>
-              This {project.title.toLowerCase()} project in {project.location.split(',')[0]} showcases our commitment to quality and attention to detail.
-              Loudoun Decks worked closely with the homeowner to design and build a space that perfectly fits their vision and property.
+              {planning.definition}
             </p>
             <p>
-              We used premium materials to ensure durability and style, resulting in a beautiful outdoor extension of the home that will last for years to come.
+              Loudoun Decks uses project gallery pages to help homeowners understand scope, planning questions, and local context before requesting an estimate. Formal case-study claims, customer quotes, ratings, and detailed project outcomes are added only after owner permission and evidence are confirmed.
             </p>
+
+            <h2>Project planning facts</h2>
+            <ul style={{ paddingLeft: '1.25rem', lineHeight: 1.75, color: '#444', marginBottom: '2rem' }}>
+              {planning.facts.map((fact) => (
+                <li key={fact}>{fact}</li>
+              ))}
+            </ul>
+
+            <h2>How a similar project is planned</h2>
+            <ol style={{ paddingLeft: '1.25rem', lineHeight: 1.75, color: '#444', marginBottom: '2rem' }}>
+              {planning.steps.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+
+            <h2>Estimate preparation for {related.cityName} homeowners</h2>
+            <p>
+              The strongest estimate starts with the address, photos, rough dimensions, preferred material direction, budget range, timeline, and any HOA or permit notes. For elevated decks, resurfacing, balcony work, or structural replacement, the frame and load path should be reviewed before finish materials are selected.
+            </p>
+            <p>
+              Homeowners comparing contractors should verify public profiles, ask how permit and inspection responsibilities are handled, and confirm whether the proposal separates required structural work from optional finish upgrades.
+            </p>
+
+            <h2>Project FAQ</h2>
+            {planning.faqs.map((faq) => (
+              <details key={faq.q} style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: '1rem', marginBottom: '0.75rem', background: '#fff' }}>
+                <summary style={{ cursor: 'pointer', fontWeight: 700 }}>{faq.q}</summary>
+                <p style={{ marginTop: '0.75rem', marginBottom: 0 }}>{faq.a}</p>
+              </details>
+            ))}
 
             <h3 style={{ marginTop: '2rem', marginBottom: '0.75rem' }}>Related on Loudoun Decks</h3>
             <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
