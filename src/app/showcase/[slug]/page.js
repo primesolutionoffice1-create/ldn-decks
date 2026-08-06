@@ -62,6 +62,10 @@ function getProjectPlanningNotes(project, related) {
     : `This ${category} in ${related.cityName}, Virginia shows the type of structural planning, material selection, access review, and finishing decisions that matter before a Northern Virginia homeowner approves a deck scope.`;
 
   const facts = [
+    `1 service market: ${related.cityName}, Virginia`,
+    `1 project category: ${category}`,
+    '4 planning steps: site review, local requirements, material selection, and written scope review',
+    '5 estimate inputs: photos, rough dimensions, material direction, budget range, and timeline',
     `Market: ${related.cityName}, Virginia`,
     `Project category: ${category}`,
     `Public proof status: gallery record only until project evidence, owner permission, and final scope details are confirmed`,
@@ -79,16 +83,16 @@ function getProjectPlanningNotes(project, related) {
 
   const steps = isFence
     ? [
-        'Confirm property lines, utilities, HOA rules, gate locations, and access needs.',
-        'Select post spacing, height, privacy level, hardware, and finish details.',
-        'Prepare a written scope that separates required installation details from optional upgrades.',
-        'Schedule installation after materials, access, and homeowner approvals are clear.',
+        'Step 1: Confirm property lines, utilities, HOA rules, gate locations, and access needs.',
+        'Step 2: Select post spacing, height, privacy level, hardware, and finish details.',
+        'Step 3: Prepare a written scope that separates required installation details from optional upgrades.',
+        'Step 4: Schedule installation after materials, access, and homeowner approvals are clear.',
       ]
     : [
-        'Inspect the existing site, grade, access path, and any current deck framing before pricing.',
-        'Confirm permit, HOA, setback, stair, railing, and inspection requirements for the jurisdiction.',
-        'Choose the right material package, including boards, fascia, railings, lighting, and fasteners.',
-        'Prepare a written scope that separates structural requirements from optional finish upgrades.',
+        'Step 1: Inspect the existing site, grade, access path, and any current deck framing before pricing.',
+        'Step 2: Confirm permit, HOA, setback, stair, railing, and inspection requirements for the jurisdiction.',
+        'Step 3: Choose the right material package, including boards, fascia, railings, lighting, and fasteners.',
+        'Step 4: Prepare a written scope that separates structural requirements from optional finish upgrades.',
       ];
 
   const faqs = [
@@ -232,12 +236,62 @@ export default async function ProjectPage({ params }) {
               ))}
             </ol>
 
+            <h2>Similar project comparison</h2>
+            <p>
+              Homeowners should compare this gallery record vs a formal proposal. A gallery record gives visual
+              context, while a proposal should confirm measurements, structural requirements, material selections,
+              permit path, HOA notes, pricing, and schedule assumptions.
+            </p>
+            <p>
+              The most useful comparison is not simply old deck vs new deck or wood vs composite. It is a scope
+              comparison: what the homeowner can see in the gallery, what must be measured on site, what must be
+              verified for code or HOA approval, and what should be written into the final proposal. That separation
+              protects the homeowner from assuming that a visual example automatically includes the same structure,
+              access conditions, railing layout, stair count, lighting, or finish details.
+            </p>
+            <ul style={{ paddingLeft: '1.25rem', lineHeight: 1.75, color: '#444', marginBottom: '2rem' }}>
+              <li><strong>Gallery record:</strong> useful for design inspiration, local context, and project-category planning.</li>
+              <li><strong>Written proposal:</strong> required for scope, price, materials, build sequence, and approval details.</li>
+              <li><strong>Inspection-ready plan:</strong> needed when framing, footings, ledger attachment, stairs, or guards are involved.</li>
+            </ul>
+
             <h2>Estimate preparation for {related.cityName} homeowners</h2>
             <p>
               The strongest estimate starts with the address, photos, rough dimensions, preferred material direction, budget range, timeline, and any HOA or permit notes. For elevated decks, resurfacing, balcony work, or structural replacement, the frame and load path should be reviewed before finish materials are selected.
             </p>
             <p>
               Homeowners comparing contractors should verify public profiles, ask how permit and inspection responsibilities are handled, and confirm whether the proposal separates required structural work from optional finish upgrades.
+            </p>
+            <p>
+              For Northern Virginia projects, the biggest planning differences often come from elevation, stair
+              layout, framing condition, access, drainage, HOA standards, and whether the work is a new build,
+              resurfacing, structural repair, or full replacement. LDN Decks uses gallery pages to help homeowners
+              start that conversation with clearer expectations before a site-specific estimate is prepared.
+            </p>
+            <p>
+              A homeowner looking at a similar project should also think about what is not visible in one photograph.
+              Footing depth, joist spacing, beam sizing, ledger flashing, post hardware, stair geometry, guardrail
+              connections, drainage, and demolition conditions can all change the final scope. Two projects may look
+              similar from the yard but require very different construction work once the existing structure and site
+              conditions are reviewed.
+            </p>
+            <p>
+              The best next step is to turn the visual reference into a practical checklist. Identify the preferred
+              deck surface, railing style, stair direction, privacy needs, lighting interest, and any must-have
+              features. Then gather 6 inputs before requesting pricing: photos, approximate dimensions, current
+              structure condition, material preference, timing goal, and HOA or permit documents if available.
+            </p>
+            <p>
+              LDN Decks keeps gallery language proof-safe because homeowners should not be pushed by vague promises.
+              A project page can show planning context, but the written proposal is where specific scope, exclusions,
+              materials, schedule assumptions, and approval responsibilities belong. That separation makes the
+              estimate clearer and gives both the homeowner and contractor a better path to a premium finished result.
+            </p>
+            <p>
+              This also helps families compare contractors more calmly. Instead of choosing from photos alone, they
+              can ask each builder the same practical questions about structure, approvals, materials, warranty
+              documentation, cleanup expectations, and how changes are handled before work starts.
+              Clear answers make the final decision easier.
             </p>
 
             <h2>Project FAQ</h2>
@@ -262,6 +316,9 @@ export default async function ProjectPage({ params }) {
                 → See more project galleries in our <Link href="/showcase" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>full showcase gallery</Link>
               </li>
             </ul>
+            <p style={{ marginTop: '1.5rem', color: '#666', fontSize: '0.95rem' }}>
+              Updated 2026-08-06 for project-planning context, proof boundaries, and AI-readable extraction blocks.
+            </p>
           </div>
         </div>
       </section>

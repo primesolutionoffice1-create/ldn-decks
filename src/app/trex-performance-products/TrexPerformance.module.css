@@ -34,9 +34,194 @@
   line-height: 1.6;
 }
 
+.guideSection,
+.compareSection,
+.stepsSection,
+.faqSection {
+  padding: 4.5rem 0;
+  background: #fff;
+}
+
+.compareSection,
+.faqSection {
+  background: #f7f6f1;
+}
+
+.kicker {
+  margin: 0 0 0.75rem;
+  color: #E65C2B;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.guideSection h2,
+.compareSection h2,
+.stepsSection h2,
+.faqSection h2 {
+  margin: 0 0 1rem;
+  color: #151515;
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.lead {
+  max-width: 900px;
+  color: #444;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  margin: 0 0 1.75rem;
+}
+
+.factGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.factGrid article,
+.decisionRow,
+.faqItem {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  padding: 1.25rem;
+}
+
+.factGrid strong {
+  display: block;
+  color: #151515;
+  font-size: 1.15rem;
+  margin-bottom: 0.45rem;
+}
+
+.factGrid span,
+.decisionRow p,
+.faqItem p,
+.catalogIntro p,
+.boundaryNote {
+  color: #505050;
+  line-height: 1.65;
+}
+
+.decisionTable {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.decisionRow h3 {
+  margin: 0 0 0.6rem;
+  color: #151515;
+  font-size: 1.15rem;
+}
+
+.decisionRow p {
+  margin: 0 0 1rem;
+}
+
+.linkRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.linkRow a {
+  color: #B9471E;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.stepsList {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: 1.5rem 0;
+  list-style: none;
+  counter-reset: trex-step;
+}
+
+.stepsList li {
+  counter-increment: trex-step;
+  border-left: 4px solid #E65C2B;
+  background: #fff;
+  padding: 1rem;
+  color: #444;
+  line-height: 1.55;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.stepsList li::before {
+  content: counter(trex-step, decimal-leading-zero);
+  display: block;
+  color: #E65C2B;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.boundaryNote {
+  max-width: 900px;
+  margin: 1.25rem 0 0;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  background: #fafafa;
+}
+
+.catalogIntro {
+  margin-bottom: 1.5rem;
+}
+
+.catalogIntro h2 {
+  margin: 0 0 0.75rem;
+  color: #151515;
+  font-size: 1.8rem;
+}
+
+.catalogIntro p {
+  max-width: 860px;
+  margin: 0;
+}
+
+.contextBlock {
+  margin-top: 2rem;
+  max-width: 920px;
+}
+
+.contextBlock h2 {
+  margin: 0 0 0.8rem;
+  color: #151515;
+  font-size: 1.7rem;
+}
+
+.contextBlock p {
+  color: #505050;
+  line-height: 1.7;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.faqItem summary {
+  cursor: pointer;
+  color: #151515;
+  font-weight: 800;
+}
+
+.faqItem p {
+  margin: 0.75rem 0 0;
+}
+
 .iframeSection {
   padding: 4rem 0;
-  margin-top: -3rem; /* Overlap slightly with hero for better flow */
+  background: #fff;
 }
 
 .iframeWrapper {
@@ -98,5 +283,26 @@
   
   .iframe {
     height: 700px;
+  }
+
+  .guideSection,
+  .compareSection,
+  .stepsSection,
+  .faqSection {
+    padding: 3rem 0;
+  }
+
+  .guideSection h2,
+  .compareSection h2,
+  .stepsSection h2,
+  .faqSection h2 {
+    font-size: 1.75rem;
+  }
+
+  .factGrid,
+  .decisionTable,
+  .stepsList,
+  .faqGrid {
+    grid-template-columns: 1fr;
   }
 }
