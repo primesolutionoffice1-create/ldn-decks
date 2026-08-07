@@ -60,6 +60,9 @@ export default function robots() {
     // Spotlight. Allowing it enables citation by Apple's AI systems without
     // granting model-training rights (Apple separates search from training crawls).
     'Applebot-Extended',
+    // Bytespider (ByteDance) moved out of TRAINING_BOTS 2026-08-07 per owner
+    // decision: AI visibility in ByteDance surfaces outweighs training concerns.
+    'Bytespider',
   ];
 
   // Training / extended-use crawlers stay blocked unless owner-approved for
@@ -67,7 +70,6 @@ export default function robots() {
   const TRAINING_BOTS = [
     'Amazonbot',
     'CCBot',
-    'Bytespider',
     'cohere-ai',
   ];
 
