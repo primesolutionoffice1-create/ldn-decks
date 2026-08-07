@@ -137,6 +137,32 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-belmont', destination: '/near-you/loudoun-county/belmont', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-fort-belvoir', destination: '/near-you/fairfax-county/fort-belvoir', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-merrifield', destination: '/near-you/fairfax-county/merrifield', permanent: true },
+
+      // City-duplicate blog posts consolidated into canonical city pages (2026-08-07).
+      // 22 /blog/deck-builder-*-va posts targeted the same queries as the /deck-builder-*-va
+      // service pages — classic cannibalization. 301 merges signals into the canonical page.
+      { source: '/blog/deck-builder-ashburn-va', destination: '/deck-builder-ashburn-va', permanent: true },
+      { source: '/blog/deck-builder-reston-va', destination: '/deck-builder-reston-va', permanent: true },
+      { source: '/blog/deck-builder-sterling-va', destination: '/deck-builder-sterling-va', permanent: true },
+      { source: '/blog/deck-builder-herndon-va', destination: '/deck-builder-herndon-va', permanent: true },
+      { source: '/blog/deck-builder-great-falls-va', destination: '/deck-builder-great-falls-va', permanent: true },
+      { source: '/blog/deck-builder-centreville-va', destination: '/deck-builder-centreville-va', permanent: true },
+      { source: '/blog/deck-builder-chantilly-va', destination: '/deck-builder-chantilly-va', permanent: true },
+      { source: '/blog/deck-builder-fairfax-va', destination: '/deck-builder-fairfax-va', permanent: true },
+      { source: '/blog/deck-builder-burke-va', destination: '/deck-builder-burke-va', permanent: true },
+      { source: '/blog/deck-builder-springfield-va', destination: '/deck-builder-springfield-va', permanent: true },
+      { source: '/blog/deck-builder-woodbridge-va', destination: '/deck-builder-woodbridge-va', permanent: true },
+      { source: '/blog/deck-builder-manassas-va', destination: '/deck-builder-manassas-va', permanent: true },
+      { source: '/blog/deck-builder-lorton-va', destination: '/deck-builder-lorton-va', permanent: true },
+      { source: '/blog/deck-builder-vienna-va', destination: '/deck-builder-vienna-va', permanent: true },
+      { source: '/blog/deck-builder-falls-church-va', destination: '/deck-builder-falls-church-va', permanent: true },
+      { source: '/blog/deck-builder-oakton-va', destination: '/deck-builder-oakton-va', permanent: true },
+      { source: '/blog/deck-builder-gainesville-va', destination: '/deck-builder-gainesville-va', permanent: true },
+      { source: '/blog/deck-builder-haymarket-va', destination: '/deck-builder-haymarket-va', permanent: true },
+      { source: '/blog/deck-builder-purcellville-va', destination: '/deck-builder-purcellville-va', permanent: true },
+      { source: '/blog/deck-builder-south-riding-va', destination: '/deck-builder-south-riding-va', permanent: true },
+      { source: '/blog/deck-builder-brambleton-va', destination: '/deck-builder-brambleton-va', permanent: true },
+      { source: '/blog/deck-builder-bristow-va', destination: '/deck-builder-bristow-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-mount-vernon', destination: '/near-you/fairfax-county/mount-vernon', permanent: true },
 
       { source: '/top-decks-build-near-you/deck-builder-in-hillsboro', destination: '/near-you/loudoun-county/hillsboro', permanent: true },
