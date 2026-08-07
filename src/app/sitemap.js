@@ -409,11 +409,39 @@ export default async function sitemap() {
         // The 5 indexable /near-you/{county} hubs remain in staticPages above.
 
         // Blog posts — dynamically generated from blogData with real publish dates
+        // CITY_DUPLICATE_BLOG_SLUGS: 22 posts 301-redirected to their canonical
+        // /deck-builder-*-va city pages (next.config.mjs, 2026-08-07) — kept out
+        // of the sitemap so we never submit redirecting URLs.
+        const CITY_DUPLICATE_BLOG_SLUGS = new Set([
+                'deck-builder-ashburn-va',
+                'deck-builder-reston-va',
+                'deck-builder-sterling-va',
+                'deck-builder-herndon-va',
+                'deck-builder-great-falls-va',
+                'deck-builder-centreville-va',
+                'deck-builder-chantilly-va',
+                'deck-builder-fairfax-va',
+                'deck-builder-burke-va',
+                'deck-builder-springfield-va',
+                'deck-builder-woodbridge-va',
+                'deck-builder-manassas-va',
+                'deck-builder-lorton-va',
+                'deck-builder-vienna-va',
+                'deck-builder-falls-church-va',
+                'deck-builder-oakton-va',
+                'deck-builder-gainesville-va',
+                'deck-builder-haymarket-va',
+                'deck-builder-purcellville-va',
+                'deck-builder-south-riding-va',
+                'deck-builder-brambleton-va',
+                'deck-builder-bristow-va',
+        ]);
         const today = new Date();
         const blogPaths = blogPosts
                 .filter(post => {
                         const postDate = parseContentDate(post.date);
-                        return postDate && postDate <= today && !post.canonicalPath;
+                        return postDate && postDate <= today && !post.canonicalPath
+                                && !CITY_DUPLICATE_BLOG_SLUGS.has(post.slug);
                 })
                 .map(post => {
                 return {

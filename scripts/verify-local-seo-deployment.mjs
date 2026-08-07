@@ -8,8 +8,11 @@ const FETCH_ORIGIN = (process.env.SEO_AUDIT_ORIGIN || CANONICAL_ORIGIN).replace(
 // page has enough local proof to be indexable.
 // P0/P1 city canonicalization in July 2026 removed duplicate city surfaces and
 // promoted vetted city pages. Broadlands replaces its near-you URL in the
-// sitemap, so the intentional canonical total remains 377.
-const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 377);
+// sitemap, so the intentional canonical total remained 377.
+// 2026-08-07: 22 /blog/deck-builder-*-va posts were 301-redirected to their
+// canonical city pages and removed from the sitemap (cannibalization fix),
+// lowering the intentional canonical total to 355.
+const EXPECTED_SITEMAP_URLS = Number(process.env.EXPECTED_SITEMAP_URLS || 355);
 const EXPECTED_LOCAL_SERVICE_URLS = Number(process.env.EXPECTED_LOCAL_SERVICE_URLS || 33);
 const KNOWN_BAD_SITEMAP_URLS = Number(process.env.KNOWN_BAD_SITEMAP_URLS || 260);
 const TIMEOUT_MS = Number(process.env.SEO_DEPLOYMENT_GUARD_TIMEOUT_MS || 12000);
