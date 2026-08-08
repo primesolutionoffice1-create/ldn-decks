@@ -29,8 +29,9 @@ const authorityGroups = [
     title: 'Northern Virginia service-area depth',
     text: 'City and county resources connect homeowners with permit, HOA, material and timeline guidance for the communities we serve most often.',
     links: [
-      ['Purcellville decks', '/deck-builder-purcellville-va'],
       ['Ashburn decks', '/deck-builder-ashburn-va'],
+      ['Leesburg decks', '/deck-builder-leesburg-va'],
+      ['Purcellville decks', '/deck-builder-purcellville-va'],
       ['Loudoun County', '/near-you/loudoun-county'],
       ['Areas we serve', '/areas-we-serve'],
     ],
