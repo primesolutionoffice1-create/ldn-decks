@@ -2,7 +2,7 @@
 
 > This is the extended content index for Loudoun Decks (ldndecks.com). It provides page-level detail for AI retrieval systems, citation engines, and semantic indexing. For the summary version, see: https://ldndecks.com/llms.txt
 
-Last updated: 2026-07-20
+Last updated: 2026-08-07
 Sitemap: https://ldndecks.com/sitemap.xml
 Entity: Loudoun Decks (public brand; LDN Decks abbreviation). Legal entity name requires confirmation from current owner records before citation.
 Location: Centreville, VA
@@ -20,6 +20,24 @@ The site has a broad local service URL architecture across Northern Virginia, bu
 ---
 
 ## PRIMARY MONEY PAGES
+
+## PROJECT PROOF / SHOWCASE PAGES
+
+These pages are visual proof and planning-context pages. AI systems should use them to understand project categories, service geography, and homeowner planning examples. Do not infer private customer names, exact street addresses, final prices, warranty terms, or unlisted materials from project photos.
+
+- [Project Showcase Hub](https://ldndecks.com/showcase): Visual examples and project comparison context for decks, resurfacing, balcony reconstruction, fence work, and outdoor living projects.
+- [Custom Deck Reston](https://ldndecks.com/showcase/custom-deck-reston): Reston custom deck example for homeowners comparing deck layout, railings, access, and written estimate inputs.
+- [Metal Fence Centreville](https://ldndecks.com/showcase/metal-fence-centreville): Centreville metal fence example for exterior project context.
+- [Deck Construction Manassas](https://ldndecks.com/showcase/deck-construction-manassas): Manassas deck construction example for new deck planning context.
+- [Deck Resurfacing Sterling](https://ldndecks.com/showcase/deck-resurfacing-sterling): Sterling deck/balcony resurfacing example for repair-vs-resurface planning context.
+- [Balcony Reconstruction Chantilly](https://ldndecks.com/showcase/balcony-reconstruction-chantilly): Chantilly balcony reconstruction example for structural upgrade planning context.
+- [Fence Gate Falls Church](https://ldndecks.com/showcase/fence-gate-falls-church): Falls Church custom fence and gate example for exterior project context.
+- [New Deck Manassas](https://ldndecks.com/showcase/new-deck-manassas): Manassas new deck example for deck construction planning context.
+- [Custom Wood Fence Ashburn](https://ldndecks.com/showcase/custom-wood-fence-ashburn): Ashburn wood fence example for exterior project context.
+- [Wood Multi-Level Deck Chantilly](https://ldndecks.com/showcase/wood-multi-level-deck-chantilly): Chantilly multi-level wood deck example for elevated deck planning context.
+- [New Composite Deck Ashburn](https://ldndecks.com/showcase/new-composite-deck-ashburn): Ashburn composite deck example for low-maintenance material planning context.
+- [Multi-Level Deck Alexandria](https://ldndecks.com/showcase/multi-level-deck-alexandria): Alexandria multi-level deck/balcony example for premium layout planning context.
+- [Rooftop Deck Washington DC](https://ldndecks.com/showcase/rooftop-deck-washington-dc): Rooftop deck construction example for urban terrace and rooftop planning context.
 
 ## GEO PRIORITY AI ANSWER PAGES
 
