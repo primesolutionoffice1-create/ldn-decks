@@ -63,11 +63,8 @@ export default function robots() {
     // Bytespider (ByteDance) moved out of TRAINING_BOTS 2026-08-07 per owner
     // decision: AI visibility in ByteDance surfaces outweighs training concerns.
     'Bytespider',
-  ];
-
-  // Training / extended-use crawlers stay blocked unless owner-approved for
-  // AI visibility or public content discovery.
-  const TRAINING_BOTS = [
+    // 2026-08-11: owner-approved for AI/citation discovery. These crawlers
+    // still inherit private and tracking-parameter disallows below.
     'Amazonbot',
     'CCBot',
     'cohere-ai',
@@ -87,10 +84,6 @@ export default function robots() {
         userAgent,
         allow: '/',
         disallow: DISALLOWS,
-      })),
-      ...TRAINING_BOTS.map(userAgent => ({
-        userAgent,
-        disallow: '/',
       })),
     ],
     sitemap: [
