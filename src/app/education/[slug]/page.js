@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServicesHome from '@/components/ServicesHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import CallLink from '@/components/CallLink';
+import MidArticleCta from '@/components/MidArticleCta';
 import styles from '@/app/blog/[slug]/BlogContent.module.css';
 
 // Pre-render all education articles at build time for proper indexing
@@ -184,6 +185,17 @@ export default async function SingleEducationPage({ params }) {
 
   const paragraphs = article.content.split('\n\n');
 
+  // Mid-article CTA slot: nearest H2 boundary to the midpoint (see blog
+  // template for rationale). Short guides skip it.
+  const h2Indexes = paragraphs
+    .map((para, i) => (para.startsWith('## ') ? i : -1))
+    .filter((i) => i > 0);
+  const midCtaIdx = paragraphs.length >= 16 && h2Indexes.length
+    ? h2Indexes.reduce((best, i) =>
+        Math.abs(i - paragraphs.length / 2) < Math.abs(best - paragraphs.length / 2) ? i : best,
+      h2Indexes[0])
+    : -1;
+
   const articleDate = new Date(article.date);
   const articleModifiedDate = new Date(article.dateModified || article.date);
   const today = new Date();
@@ -339,7 +351,12 @@ export default async function SingleEducationPage({ params }) {
                  </section>
                )}
 
-               {paragraphs.map(renderContentBlock)}
+               {paragraphs.map((para, idx) => (
+                 <React.Fragment key={`block-${idx}`}>
+                   {idx === midCtaIdx && <MidArticleCta />}
+                   {renderContentBlock(para, idx)}
+                 </React.Fragment>
+               ))}
 
                {article.relatedLinks && article.relatedLinks.length > 0 && (
                  <section style={{ marginTop: '44px' }}>

@@ -9,6 +9,7 @@ import ServicesHome from '@/components/ServicesHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import CallLink from '@/components/CallLink';
 import NamedAuthor from '@/components/NamedAuthor';
+import MidArticleCta from '@/components/MidArticleCta';
 import JsonLd from '@/components/JsonLd';
 import { BUSINESS, FOUNDER_ID, ORG_ID, WEBSITE_ID } from '@/lib/business';
 import styles from './BlogContent.module.css';
@@ -196,6 +197,18 @@ export default async function SingleBlogPage({ params }) {
   // Pre-split the content by double newline to render paragraphs cleanly
   const paragraphs = post.content.split('\n\n');
 
+  // Mid-article CTA slot: the H2 boundary nearest the article midpoint, so
+  // the aside lands between sections instead of splitting one. Short posts
+  // (under 16 blocks) skip it — the conclusionBox is close enough there.
+  const h2Indexes = paragraphs
+    .map((para, i) => (para.startsWith('## ') ? i : -1))
+    .filter((i) => i > 0);
+  const midCtaIdx = paragraphs.length >= 16 && h2Indexes.length
+    ? h2Indexes.reduce((best, i) =>
+        Math.abs(i - paragraphs.length / 2) < Math.abs(best - paragraphs.length / 2) ? i : best,
+      h2Indexes[0])
+    : -1;
+
   const postDate = new Date(post.date);
   const postModifiedDate = new Date(post.dateModified || post.date);
   const today = new Date();
@@ -257,7 +270,12 @@ export default async function SingleBlogPage({ params }) {
                <p className={styles.leadParagraph} data-speakable>{renderInline(post.excerpt, 'lead')}</p>
                {paragraphs.map((para, idx) => {
                  if (para.startsWith('## ')) {
-                   return <h2 key={idx} style={{ marginTop: '40px', marginBottom: '20px', color: '#111' }}>{para.replace('## ', '')}</h2>;
+                   return (
+                     <React.Fragment key={idx}>
+                       {idx === midCtaIdx && <MidArticleCta />}
+                       <h2 style={{ marginTop: '40px', marginBottom: '20px', color: '#111' }}>{para.replace('## ', '')}</h2>
+                     </React.Fragment>
+                   );
                  }
                  if (para.startsWith('### ')) {
                    return <h3 key={idx} style={{ marginTop: '30px', marginBottom: '15px', color: '#222' }}>{para.replace('### ', '')}</h3>;
