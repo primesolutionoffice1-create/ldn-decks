@@ -71,6 +71,10 @@ const nextConfig = {
       { source: '/blog/deck-builder-lansdowne-va', destination: '/deck-builder-lansdowne-va', statusCode: 301 },
       { source: '/blog/deck-builder-mclean-va', destination: '/deck-builder-mclean-va', statusCode: 301 },
       { source: '/blog/under-deck-drainage-system-northern-virginia', destination: '/blog/under-deck-drainage-systems-northern-virginia', permanent: true },
+      // Near-duplicate consolidation: two smart-deck posts split impressions;
+      // technologies (weaker) folds into technology-trends (stronger), paired
+      // with canonicalPath in blogData so the source drops out of the sitemap.
+      { source: '/blog/smart-deck-technologies-2026', destination: '/blog/smart-deck-technology-trends-2026', statusCode: 301 },
       { source: '/rooftop-deck-washington-dc', destination: '/showcase/rooftop-deck-washington-dc', permanent: true },
       { source: '/trex-deck-builder-loudoun', destination: '/deck-builders-loudoun', permanent: true },
       // Cost-page cannibalization fix (2026-05-26): /composite-deck-cost-northern-virginia

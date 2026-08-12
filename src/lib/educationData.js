@@ -73,6 +73,7 @@ export const educationArticles = [
       { q: 'What is the standard joist spacing for a composite deck?', a: 'While 16 inches on-center is common, professional builders often recommend 12-inch on-center spacing for composite decking to prevent any bouncy feel underfoot.' }
     ],
     relatedLinks: [
+      { href: '/education/helical-piers-vs-concrete-footings-virginia', label: 'Helical Piers vs Concrete Footings', description: 'When steel piers beat poured concrete in Virginia clay — sizing, excavation and structural support.' },
       { href: '/education/understanding-deck-load-paths', label: 'Deck Load Path Guide', description: 'How load travels from deck boards through joists, beams, posts, footings and soil.' },
       { href: '/education/ledger-board-flashing-deck-attachment-virginia', label: 'Ledger Board Flashing Guide', description: 'Why the house connection is the highest-risk joint on attached decks.' },
       { href: '/deck-footing-code-northern-virginia', label: 'Deck Footing Code Guide', description: 'Footing depth, inspections, ledger attachment and framing requirements in Northern Virginia.' },
@@ -167,6 +168,7 @@ export const educationArticles = [
       { q: 'Why are deck footings so important?', a: 'Footings are the final destination of the load path. They spread the immense concentrated weight of the deck over a large area of solid earth, preventing the structure from sinking.' }
     ],
     relatedLinks: [
+      { href: '/education/helical-piers-vs-concrete-footings-virginia', label: 'Helical Piers vs Concrete Footings', description: 'When steel piers beat poured concrete in Virginia clay — sizing, excavation and structural support.' },
       { href: '/tools/deck-load-calculator-virginia', label: 'Deck Load Calculator Virginia', description: 'Estimate distributed deck loads and planning assumptions before engineering review.' },
       { href: '/education/deck-understructure-guide', label: 'Deck Understructure Guide', description: 'Beams, joists, posts, ledger boards, footings and hidden framing explained.' },
       { href: '/education/ledger-board-flashing-deck-attachment-virginia', label: 'Ledger Board Flashing Guide', description: 'How the attached-deck house connection affects the overall load path.' },
@@ -329,6 +331,7 @@ export const educationArticles = [
       { q: 'How deep must deck footings be dug in Virginia?', a: 'Footings must be dug below the local frost line, which means a minimum depth of 24 to 30 inches in Northern Virginia to prevent shifting from frost heave.' }
     ],
     relatedLinks: [
+      { href: '/education/helical-piers-vs-concrete-footings-virginia', label: 'Helical Piers vs Concrete Footings', description: 'When steel piers beat poured concrete in Virginia clay — sizing, excavation and structural support.' },
       { href: '/tools/deck-footing-depth-calculator-virginia', label: 'Deck Footing Depth Calculator Virginia', description: 'Estimate footing depth, diameter, frost-depth guidance and inspection notes.' },
       { href: '/tools/deck-beam-span-calculator-virginia', label: 'Deck Beam Span Calculator Virginia', description: 'Estimate beam span, post spacing, tributary width and framing warnings.' },
       { href: '/tools/deck-joist-span-calculator-virginia', label: 'Deck Joist Span Calculator Virginia', description: 'Estimate joist span, spacing, cantilever and composite decking support warnings.' },
