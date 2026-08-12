@@ -338,7 +338,7 @@ export default function TimberTechDecksPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/trex-vs-timbertech-fade-resistance-comparison" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech Fade Resistance →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/why-composite-trex-decking-fades-sun-solutions" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Why Composite Decking Fades in the Sun →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full Composite Deck Cost in Northern Virginia →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck contractor serving Northern Virginia TimberTech and AZEK projects →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
         </ul>
       </section>
