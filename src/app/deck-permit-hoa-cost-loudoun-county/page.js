@@ -10,51 +10,76 @@ import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-permit-hoa-cost-loudoun-county',
   title: 'Deck Permit & HOA Costs in Loudoun County: 2026 Budget Guide',
-  description: 'Loudoun County deck permit cost ($200–$1,200), HOA approval cost ($0–$500), timeline, drawings required, and total project amount impact.',
+  description: 'Source-checked Loudoun County deck permit and HOA cost planning: LandMARC fees, ARC review, engineering drawings, inspections, and total budget impact.',
   image: '/social/deck-permit-hoa-cost-loudoun-county-social.png',
 });
 
 const PATH = '/deck-permit-hoa-cost-loudoun-county';
 
 const costRows = [
-  ['Loudoun County deck permit', '$200–$800', '10–15 business days', 'Standard residential deck'],
-  ['Loudoun County covered deck permit', '$400–$1,200', '2–4 weeks', 'Roof structure requires extra review'],
-  ['HOA application fee', '$0–$300', 'Bundled with submission', 'Most NoVA HOAs charge a flat review fee'],
-  ['HOA architectural review', '$0–$500', '2–6 weeks', 'Required before permit submission in most HOA neighborhoods'],
+  ['Loudoun County typical deck permit', 'Verify current county fee', 'Standard processing when county-typical', 'County fees are invoiced at intake and paid before review'],
+  ['Covered deck or non-typical deck permit', 'Higher review budget', 'Longer if plan review/trades apply', 'Roof, electrical, hot tub, spa, or grading scope can add permits'],
+  ['HOA application fee', 'Verify with the association', 'Submit with the complete ARC packet', 'Fees and deposits vary by community'],
+  ['HOA architectural review', 'Verify with the association', 'Meeting schedule varies', 'HOA approval is separate from county permitting'],
   ['Engineering drawings (if required)', '$500–$1,500', '1–2 weeks', 'Covered decks, complex framing, or sloped sites'],
-  ['Permit revisions (if needed)', '$0–$200', '1–2 weeks', 'Rare with experienced builders'],
-  ['Inspections (3 standard)', 'Included in permit', '1–3 days each', 'Footings → framing → final'],
+  ['Permit revisions (if needed)', 'Case-specific', '1–2 weeks', 'Avoided by aligning HOA aesthetics with permit drawings'],
+  ['Inspections (3 standard)', 'Included in permit workflow', 'Schedule one work day ahead', 'Footings → framing → final; framing/final may combine if accessible'],
 ];
 
 const faqs = [
   {
     q: 'How much does a deck permit cost in Loudoun County?',
-    a: 'Loudoun County deck permits run $200–$800 for a standard residential deck and $400–$1,200 for a covered deck. The fee scales with project value and roof type. Permit review takes 10–15 business days for standard decks and 2–4 weeks for covered structures.',
+    a: 'Use Loudoun County\'s official deck page and fee schedule before filing. The county says fees are calculated from the application details, invoiced at intake, and must be paid before review starts. For homeowner budgeting, permit, HOA, engineering, and revision contingency are usually planned together instead of treated as separate surprises.',
   },
   {
     q: 'How much does HOA approval cost in Loudoun?',
-    a: 'Most Loudoun HOAs charge $0–$500 for architectural review of a deck project. Brambleton, Ashburn Village, Stone Ridge, Broadlands, and Belmont fall in this range. Some communities charge a small application fee ($50–$300); others bundle it into annual dues.',
+    a: 'HOA application fees, review fees, and refundable construction deposits vary by association and can change. Confirm the current amount directly with the community manager or ARC/DRB before submitting. HOA approval is separate from the Loudoun County permit fee.',
   },
   {
     q: 'How long does HOA approval take in Loudoun County?',
-    a: 'Most HOA architectural review committees meet monthly. Typical turnaround is 2–6 weeks from a complete submission. Ashburn Village, Brambleton, and Stone Ridge are usually on the faster end (2–4 weeks). Smaller HOAs without dedicated committees can take longer.',
+    a: 'Timing depends on the association\'s meeting calendar, submission deadline, packet completeness, and revision requests. Ask the community manager for the current ARC/DRB schedule before committing to a construction start date.',
   },
   {
     q: 'Do I need a permit for a small deck in Loudoun?',
-    a: 'Yes for any deck attached to the house or higher than 30 inches off the ground. Free-standing ground-level platforms under 30" can sometimes be built without a permit, but adding railings, stairs, or attaching to the house triggers the permit requirement.',
+    a: 'Check Loudoun County\'s current deck guidance before assuming an exemption. The county deck page states that deck projects use building and zoning permits, and projects inside incorporated towns may follow a different review path. HOA approval is separate and does not replace county review.',
   },
   {
     q: 'Should permit and HOA costs be included in deck financing?',
-    a: 'Yes. The project amount you enter into the deck payment estimator should reflect total project cost, including permits, HOA fees, engineering drawings, and contingency for revisions. Loudoun homeowners typically budget $500–$2,500 for permit and HOA combined.',
+    a: 'If those items are part of the financed contract amount, include the verified permit, HOA, engineering, and revision allowances in the project budget. Confirm which costs are included in the written estimate and which are paid directly to the county, association, or engineer.',
   },
   {
     q: 'Who handles the permit and HOA submission?',
-    a: 'We do, as part of every project. The Loudoun building permit application, drawings, HOA architectural review package, color samples, material specs, and revision responses are all handled by the project manager. Most homeowners do not interact with the county or HOA directly.',
+    a: 'Responsibility should be stated in the written project scope. Depending on the contract and association rules, the contractor may prepare permit drawings and HOA materials while the homeowner signs, pays fees, or submits owner-required forms. Confirm the exact division of responsibility before work begins.',
+  },
+];
+
+const officialReferences = [
+  {
+    name: 'Loudoun County deck permit guidance',
+    href: 'https://www.loudoun.gov/1166/Decks',
+    description: 'Official deck requirements, fee language, inspection sequence, rejection reasons, and LandMARC inspection scheduling.',
+  },
+  {
+    name: 'Loudoun County fee schedules and payment options',
+    href: 'https://www.loudoun.gov/5126/Fee-Schedules',
+    description: 'Official fee schedule and payment guidance, including intake invoicing and payment-before-review language.',
+  },
+  {
+    name: 'Loudoun County residential and commercial construction permits',
+    href: 'https://www.loudoun.gov/4265/Residential-and-Commercial-Construction-',
+    description: 'Official permit application, plan review, contractor license, grading, well/septic, and LandMARC submission context.',
+  },
+  {
+    name: 'Loudoun County LandMARC permit updates',
+    href: 'https://www.loudoun.gov/Blog.aspx?CID=88',
+    description: 'Official processing updates, including county-typical deck timeline context and dashboard routing.',
   },
 ];
 
@@ -67,6 +92,25 @@ const faqSchema = {
     '@type': 'Question',
     name: q,
     acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+};
+
+const officialReferenceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  '@id': `https://ldndecks.com${PATH}#official-source-references`,
+  name: 'Official Loudoun County permit and fee references for deck and HOA budget planning',
+  itemListOrder: 'https://schema.org/ItemListOrderAscending',
+  numberOfItems: officialReferences.length,
+  itemListElement: officialReferences.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    item: {
+      '@type': 'WebPage',
+      name: item.name,
+      url: item.href,
+      description: item.description,
+    },
   })),
 };
 
@@ -83,15 +127,16 @@ export default function DeckPermitHoaCostLoudounPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+      <JsonLd data={officialReferenceSchema} />
       <ArticleSchema
         title="Deck Permit & HOA Costs in Loudoun County: 2026 Budget Guide"
-        description="Loudoun County deck permit cost, HOA approval cost, timeline, drawings required, and total project amount impact."
+        description="Source-checked Loudoun County deck permit and HOA cost planning: LandMARC fee timing, ARC review, engineering drawings, inspections, and total project amount impact."
         path={PATH}
         image="/showcase/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-06-19"
+        dateModified="2026-08-13"
       />
-      <WebPageSchema dateModified="2026-06-19" url={`https://ldndecks.com${PATH}`} name="Deck Permit &amp; HOA Costs in Loudoun County: 2026 Budget Guide" description="Loudoun County deck permit cost ($200–$1,200), HOA approval cost ($0–$500), timeline, drawings required, and total project amount impact." speakable />
+      <WebPageSchema dateModified="2026-08-13" url={`https://ldndecks.com${PATH}`} name="Deck Permit &amp; HOA Costs in Loudoun County: 2026 Budget Guide" description="Source-checked Loudoun County deck permit and HOA cost planning: LandMARC fees, ARC review, engineering drawings, inspections, and total budget impact." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -120,13 +165,47 @@ export default function DeckPermitHoaCostLoudounPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            In Loudoun County, expect <strong>$200–$800</strong> for a standard residential deck permit (10–15 business
-            days) and <strong>$0–$500</strong> for HOA architectural review (2–6 weeks). Add{' '}
-            <strong>$500–$1,500</strong> for engineering drawings if you&apos;re building a covered deck or complex
-            framing. Most Loudoun homeowners budget <strong>$500–$2,500</strong> total for permit + HOA + engineering.
+            In Loudoun County, verify the current permit fee on the official county deck and fee-schedule pages before
+            filing. County fees are calculated from application details, invoiced at intake, and paid before review
+            begins. HOA fees, deposits, and review timing must be confirmed with the individual association. Engineering
+            costs are project-specific when a covered deck, complex framing, slope, hot tub, spa, electrical, or
+            non-typical detail changes the submission.
           </p>
         </div>
       </section>
+
+      <PlanningUpdate
+        market="Loudoun County permit and HOA budget planning"
+        title="August 2026 Source Check"
+        notes={[
+          'Loudoun County deck guidance says fees are calculated from the application details and additional equipment can require separate permits.',
+          'The county fee page says permitting fees are invoiced at intake and must be paid before review starts.',
+          'Official deck inspections are footing, framing, and final; framing and final may combine only when framing and mechanical attachments are at least 42 inches above grade.',
+          'The LandMARC update notes county-typical deck timelines remain on standard processing even while some zoning-review permit types have extended timelines.',
+        ]}
+        links={[
+          { href: 'https://www.loudoun.gov/1166/Decks', label: 'Official deck guidance' },
+          { href: 'https://www.loudoun.gov/5126/Fee-Schedules', label: 'Fee schedules' },
+          { href: 'https://www.loudoun.gov/Blog.aspx?CID=88', label: 'LandMARC updates' },
+        ]}
+      />
+
+      <GeoAnswerBlock
+        question="How should Loudoun homeowners budget for deck permit and HOA approval?"
+        answer="Budget permit, HOA, engineering, and inspection-readiness together. Loudoun County controls building and zoning permit review through LandMARC and official fee schedules, while HOA architectural review separately controls materials, colors, railings, screening, stairs, and neighborhood appearance. A permit-ready written estimate should identify the county path, HOA packet needs, drawing assumptions, equipment permits, footing/framing/final inspection sequence, and whether stair, ledger, lighting, hot tub, spa, or covered-deck scope changes the budget."
+        facts={[
+          'Primary county path: Loudoun County deck guidance and LandMARC',
+          'Primary HOA path: community ARC/DRB architectural review',
+          'Conversion path: HOA-ready written estimate with permit scope, structural details, and inspection sequencing',
+        ]}
+        links={[
+          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
+          { href: '/loudoun-county-hoa-deck-rules', label: 'Loudoun HOA rules' },
+          { href: '/education/ledger-board-flashing-deck-attachment-virginia', label: 'Ledger flashing' },
+          { href: '/education/deck-stair-code-rise-run-virginia', label: 'Stair code' },
+          { href: '/get-estimate', label: 'Get a written estimate' },
+        ]}
+      />
 
       <article style={{ padding: '3.5rem 0' }}>
         <div style={S.container}>
@@ -145,7 +224,8 @@ export default function DeckPermitHoaCostLoudounPage() {
           <h2 style={{ ...S.h2, marginTop: 0 }}>Loudoun County Deck Permit & HOA Cost Breakdown</h2>
           <p style={S.p}>
             The table below shows every line item that adds to permit and HOA cost for a typical Loudoun County deck
-            project in 2026. Permit fees vary with project value and roof type; HOA fees vary by community.
+            project in 2026. County permit fees should be verified against the official fee schedule and application
+            details because they are invoiced at intake; HOA fees vary by community.
           </p>
           <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -180,15 +260,30 @@ export default function DeckPermitHoaCostLoudounPage() {
             Before choosing a material or payment plan, model the full project with the <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck cost calculator</Link> and compare it against the <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>composite deck cost guide</Link>. Those two pages help separate the base deck budget from permit fees, HOA review, engineering drawings, railings, stairs, lighting, and covered-deck upgrades.
           </p>
 
+          <section id="official-source-references" style={{ padding: '1.5rem', margin: '2rem 0 3rem', background: '#f8fafc', border: '1px solid #d9e2ec', borderRadius: 12 }}>
+            <p style={{ margin: 0, color: '#46515f', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, fontSize: 12 }}>Official source links checked for this update</p>
+            <h2 style={{ margin: '6px 0 12px', fontSize: '1.35rem' }}>Verify Permit Fees Before Filing</h2>
+            <p style={{ margin: '0 0 1rem', lineHeight: 1.7, color: '#333' }}>Use the county pages below before treating any permit-fee range as final. HOA fees still come from the individual community, so they should be confirmed before the ARC packet is submitted.</p>
+            <ul style={{ paddingLeft: '1.25rem', margin: 0 }}>
+              {officialReferences.map((item) => (
+                <li key={item.href} style={{ marginBottom: '0.75rem', lineHeight: 1.6 }}>
+                  <Link href={item.href} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>{item.name}</Link>
+                  <span style={{ color: '#555' }}> — {item.description}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
           <h2 style={S.h2}>Loudoun County Permit Process Step-By-Step</h2>
           <ol style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
             <li><strong>Design & site plan</strong> — we create the deck plan, site survey overlay, and material spec</li>
-            <li><strong>HOA architectural review submission</strong> — typically required before permit application</li>
-            <li><strong>HOA approval letter</strong> — included with the county permit application</li>
-            <li><strong>Loudoun County permit application</strong> — online through Loudoun&apos;s building department portal</li>
-            <li><strong>County review</strong> — 10–15 business days for standard, longer for covered decks</li>
-            <li><strong>Permit issuance</strong> — payment of fees and pick-up of approved drawings</li>
-            <li><strong>Construction</strong> — 3 inspections during the build (footings, framing, final)</li>
+            <li><strong>HOA architectural review submission</strong> — when applicable, confirm the community's required packet and sequencing</li>
+            <li><strong>HOA approval documentation</strong> — retain it with the project records and provide it where the reviewing authority or contract requires it</li>
+            <li><strong>Loudoun County permit application</strong> — online through LandMARC or in person when needed</li>
+            <li><strong>County intake and invoice</strong> — permit fees are invoiced at intake and paid before review starts</li>
+            <li><strong>County review</strong> — county-typical decks follow standard processing; zoning, roof, trade, grading, well/septic, hot tub, or spa scope can add review paths</li>
+            <li><strong>Permit issuance</strong> — approved plans or the typical deck detail must stay available on site</li>
+            <li><strong>Construction inspections</strong> — footing before concrete, framing before decking, and final; schedule each inspection one work day ahead</li>
           </ol>
 
           <h2 style={S.h2}>Common Loudoun County HOA Communities We Build In</h2>
@@ -228,6 +323,7 @@ export default function DeckPermitHoaCostLoudounPage() {
             <li>Stair stringer specifications and handrail continuity</li>
             <li>Material spec — composite brand, framing lumber grade, fastener type</li>
             <li>HOA approval letter (when applicable)</li>
+            <li>Separate equipment or trade details when the deck includes electrical fixtures, hot tubs, spas, or other attached equipment</li>
           </ul>
           <p style={S.p}>
             For the structural pieces that tend to slow reviews, cross-check the <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>, <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck joist span calculator</Link>, <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck beam span calculator</Link>, and <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link> before finalizing the HOA packet. Those details help align the aesthetic approval with the county permit review.
@@ -288,8 +384,8 @@ export default function DeckPermitHoaCostLoudounPage() {
       </article>
 
       <SimpleCTA title="HOA-Ready Estimate Including Permit Fees" buttonText="Request Written Estimate" link="/get-estimate" />
-      <NamedAuthor context="Loudoun County" lastUpdated="2026-06-19" />
-      <RelatedGuides currentPath={PATH} />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-08-13" />
+      <RelatedGuides currentPath={PATH} category="permit-approval" />
       <ContactHome />
     </>
   );
