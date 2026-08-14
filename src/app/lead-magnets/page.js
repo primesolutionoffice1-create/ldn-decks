@@ -7,6 +7,7 @@ export const metadata = buildMetadata({
   title: 'Northern Virginia Deck Planning Resources',
   description: 'Printable deck planning resources from Loudoun Decks, including the 2026 NoVA deck permit checklist for Loudoun, Fairfax, Prince William, and Arlington homeowners.',
   image: '/social/nova-deck-permit-checklist-social.png',
+  noIndex: true,
 });
 
 const resources = [
