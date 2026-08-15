@@ -2,7 +2,11 @@
 import { useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { sendContactEmail } from '@/server/sendEmail';
-import { markLeadConfirmationPending, trackFormSubmit } from '@/lib/tracking';
+import {
+  markLeadConfirmationPending,
+  trackFormSubmit,
+  trackGoogleAdsLeadOnConfirmedSubmit,
+} from '@/lib/tracking';
 import { getClickIds, getFbp, getUtmParams, CLICK_ID_KEYS, UTM_KEYS } from '@/lib/clickIds';
 
 // Shared submission pipeline for every lead form on the site.
@@ -100,7 +104,7 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
       // cross-component / re-mount dedup happens via event_id downstream.
       if (!hasTracked.current) {
         hasTracked.current = true;
-        trackFormSubmit({
+        const trackingReceipt = trackFormSubmit({
           email,
           phone,
           firstName,
@@ -121,6 +125,10 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
           utmParams,
           eventId,
           pageContext,
+        });
+        trackGoogleAdsLeadOnConfirmedSubmit({
+          eventId,
+          attributionPayload: trackingReceipt?.attributionPayload || {},
         });
       }
       if (result.confirmationToken) {

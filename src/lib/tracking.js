@@ -40,6 +40,10 @@ function leadFiredKey(eventId) {
   return eventId ? `lead_fired_${eventId}` : null;
 }
 
+function googleAdsLeadFiredKey(eventId) {
+  return eventId ? `google_ads_lead_fired_${eventId}` : null;
+}
+
 function leadAttributionKey(eventId) {
   return eventId ? `lead_attribution_${eventId}` : null;
 }
@@ -48,6 +52,23 @@ function getPendingLeadSet() {
   if (typeof window === 'undefined') return null;
   window.__ldnPendingLeadIds = window.__ldnPendingLeadIds || new Set();
   return window.__ldnPendingLeadIds;
+}
+
+function getGoogleAdsLeadFiredSet() {
+  if (typeof window === 'undefined') return null;
+  window.__ldnGoogleAdsLeadFiredIds = window.__ldnGoogleAdsLeadFiredIds || new Set();
+  return window.__ldnGoogleAdsLeadFiredIds;
+}
+
+function adsDebug(event, details = {}) {
+  if (
+    typeof process === 'undefined' ||
+    process.env.NEXT_PUBLIC_ADS_DEBUG !== '1' ||
+    typeof console === 'undefined'
+  ) {
+    return;
+  }
+  console.info('[ldnAds]', event, details);
 }
 
 export function markLeadConfirmationPending(eventId) {
@@ -189,7 +210,18 @@ function trackMetaLead({ eventId } = {}) {
 }
 
 function trackGoogleAdsLead({ eventId, attributionPayload = {} } = {}) {
-  if (typeof window === 'undefined' || !eventId || !GOOGLE_ADS_LEAD_CONVERSION_SEND_TO) {
+  if (typeof window === 'undefined') {
+    adsDebug('google_ads_lead_skipped', { eventId: eventId || null, reason: 'server_render' });
+    return;
+  }
+
+  if (!eventId) {
+    adsDebug('google_ads_lead_skipped', { reason: 'missing_event_id' });
+    return;
+  }
+
+  if (!GOOGLE_ADS_LEAD_CONVERSION_SEND_TO) {
+    adsDebug('google_ads_lead_skipped', { eventId, reason: 'missing_send_to' });
     return;
   }
 
@@ -213,16 +245,99 @@ function trackGoogleAdsLead({ eventId, attributionPayload = {} } = {}) {
   function sendWhenReady() {
     if (typeof window.gtag === 'function') {
       window.gtag('event', 'conversion', payload);
+      adsDebug('google_ads_lead_sent', {
+        eventId,
+        send_to: GOOGLE_ADS_LEAD_CONVERSION_SEND_TO,
+        transaction_id: eventId,
+      });
       return;
     }
 
     attempts += 1;
     if (attempts < 10) {
       window.setTimeout(sendWhenReady, 500);
+      return;
     }
+
+    adsDebug('google_ads_lead_skipped', {
+      eventId,
+      reason: 'gtag_unavailable_after_retries',
+      attempts,
+    });
   }
 
   sendWhenReady();
+}
+
+function reserveGoogleAdsLeadConversion(eventId) {
+  if (typeof window === 'undefined') {
+    return { shouldSend: false, reason: 'server_render' };
+  }
+
+  if (!eventId) {
+    return { shouldSend: false, reason: 'missing_event_id' };
+  }
+
+  const firedSet = getGoogleAdsLeadFiredSet();
+  if (firedSet?.has(eventId)) {
+    return { shouldSend: false, reason: 'memory_dedup' };
+  }
+
+  const firedKey = googleAdsLeadFiredKey(eventId);
+  let storageStatus = 'unavailable';
+
+  try {
+    if (window.sessionStorage) {
+      storageStatus = 'available';
+      if (window.sessionStorage.getItem(firedKey)) {
+        recordDedupHit();
+        return { shouldSend: false, reason: 'session_storage_dedup' };
+      }
+    }
+  } catch (error) {
+    storageStatus = 'read_error';
+    adsDebug('google_ads_lead_storage_error', {
+      eventId,
+      phase: 'read',
+      message: error?.message || String(error),
+    });
+  }
+
+  if (firedSet) firedSet.add(eventId);
+
+  try {
+    if (window.sessionStorage) {
+      window.sessionStorage.setItem(firedKey, '1');
+      storageStatus = 'reserved';
+    }
+  } catch (error) {
+    storageStatus = 'write_error';
+    adsDebug('google_ads_lead_storage_error', {
+      eventId,
+      phase: 'write',
+      message: error?.message || String(error),
+    });
+  }
+
+  return { shouldSend: true, reason: 'reserved', storageStatus };
+}
+
+export function trackGoogleAdsLeadOnConfirmedSubmit({ eventId, attributionPayload = {} } = {}) {
+  const reservation = reserveGoogleAdsLeadConversion(eventId);
+  if (!reservation.shouldSend) {
+    adsDebug('google_ads_lead_deduplicated', {
+      eventId: eventId || null,
+      reason: reservation.reason,
+    });
+    return;
+  }
+
+  adsDebug('google_ads_lead_send_queued', {
+    eventId,
+    reason: reservation.reason,
+    storageStatus: reservation.storageStatus,
+  });
+  trackGoogleAdsLead({ eventId, attributionPayload });
 }
 
 export function trackMetaPageView() {
@@ -249,7 +364,9 @@ export function trackMetaPageView() {
 
 /**
  * Track quote form submission
- * Fires: GA4 generate_lead + Google Ads Form Lead + Enhanced Conversions.
+ * Fires: GA4 generate_lead + form_submit attribution payload.
+ * Google Ads direct conversion fires after the server confirms the submit in
+ * useLeadSubmit, using the same event_id and attribution payload.
  * Click IDs (gclid/gbraid/wbraid/fbclid/msclkid) are pushed to dataLayer so GTM
  * can forward them to Google Ads conversion tags and store for offline import.
  *
@@ -336,6 +453,8 @@ export function trackFormSubmit({
     ...attributionPayload,
     page: window.location.pathname,
   });
+
+  return { eventId: leadEventId, attributionPayload };
 }
 
 /**
@@ -432,9 +551,9 @@ export function trackCtaClick({ ctaLocation, ctaLabel, href, pageContext } = {})
 /**
  * Fires the authoritative lead conversion event on /thank-you page-view
  * after ThankYouTracking verifies the server-issued confirmation token.
- * GTM should map this event (not form_submit) to the Google Ads Lead
- * conversion action — /thank-you is only reached after sendContactEmail
- * succeeds, so this event is proof-of-conversion.
+ * GTM may map this event for tags that still depend on lead_confirmed; the
+ * direct Google Ads conversion is already fired on confirmed submit so it is
+ * not dependent on this later page view.
  *
  * event_id matches the one passed into ContactForm's form_submit event,
  * enabling client-side dedup in GTM and server-side dedup if CAPI/Google
@@ -485,7 +604,6 @@ export function trackLeadConfirmed({ eventId } = {}) {
     page_path: window.location.pathname,
     page: window.location.pathname,
   });
-  trackGoogleAdsLead({ eventId, attributionPayload });
   trackMetaLead({ eventId });
   trackPinterestLead({ eventId });
 }
