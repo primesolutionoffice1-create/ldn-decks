@@ -13,6 +13,13 @@ function emailConfigSummary() {
 
 function classifyEmailDeliveryError(error) {
   const message = String(error?.message || error || '');
+  if (message.includes('Resend email API failed')) {
+    return {
+      type: 'resend_delivery_failed',
+      message: message.replace(/\s+/g, ' ').slice(0, 320),
+    };
+  }
+
   if (
     message.includes('535-5.7.8')
     || message.includes('Username and Password not accepted')
@@ -119,7 +126,7 @@ export async function sendLeadNotificationEmail(mailOptions) {
       const resendResult = {
         ok: false,
         provider: 'resend',
-        errorType: 'resend_delivery_failed',
+        errorType: classifiedError.type,
         errorMessage: classifiedError.message,
       };
       console.error('[emailDelivery] Resend delivery failed', resendResult);
