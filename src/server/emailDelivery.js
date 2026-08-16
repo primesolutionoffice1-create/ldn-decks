@@ -60,6 +60,20 @@ function resendSenderAddress() {
   return process.env.RESEND_FROM || process.env.EMAIL_FROM || 'office@ldndecks.com';
 }
 
+function resendFromHeader() {
+  const configuredSender = String(resendSenderAddress()).trim();
+
+  if (/^[^<>\s@]+@[^<>\s@]+\.[^<>\s@]+$/.test(configuredSender)) {
+    return `LDN Decks <${configuredSender}>`;
+  }
+
+  if (/^[^<>]+<[^<>\s@]+@[^<>\s@]+\.[^<>\s@]+>$/.test(configuredSender)) {
+    return configuredSender;
+  }
+
+  return 'LDN Decks <office@ldndecks.com>';
+}
+
 async function sendWithResend(mailOptions) {
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -68,7 +82,7 @@ async function sendWithResend(mailOptions) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: `LDN Decks <${resendSenderAddress()}>`,
+      from: resendFromHeader(),
       to: Array.isArray(mailOptions.to) ? mailOptions.to : [mailOptions.to],
       reply_to: mailOptions.replyTo ? [mailOptions.replyTo] : undefined,
       subject: mailOptions.subject,
