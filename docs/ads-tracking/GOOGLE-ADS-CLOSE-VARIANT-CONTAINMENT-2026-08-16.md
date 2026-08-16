@@ -58,3 +58,13 @@ Close variants are not all bad. Some product terms like `trex decking` and `timb
 ## Expected Result
 
 Cleaner search term intake, less CTR damage from competitor/product-only impressions, and better routing of brand/material searches into the intended ad groups.
+
+## Live Execution Result - 2026-08-16
+
+- Script executed in Google Ads as `LDN Close Variant Containment 2026-08-16`.
+- Run time: Aug 16, 2026 7:47:20 AM to 7:48:53 AM New York time.
+- UI result: 56 attempted changes, 55 successful, 1 error.
+- Logs ended with `Done. Added: 56. Skipped existing or dry-run: 0. DRY_RUN=false`.
+- The one UI error was `Keywords cannot be longer than 80 characters` for the long Trex Enhance Basics product-name negative.
+- No rerun needed because the successful negative `[trex enhance]` already covers that long product-only query family.
+- Local script and CSV were cleaned to remove the >80-character negative so future reruns should not trigger this error.

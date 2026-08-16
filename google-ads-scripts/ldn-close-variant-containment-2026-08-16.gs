@@ -29,7 +29,6 @@ const CAMPAIGN_NEGATIVES = [
       'trex deck panels',
       'trex enhance',
       'trex enhance 16 ft',
-      'trex enhance basics 1 in x 6 in x 16 ft clam shell grooved scalloped composite deck board',
       'trex enhance naturals',
       'trex toasted sand decking',
       'toasted sand trex',
