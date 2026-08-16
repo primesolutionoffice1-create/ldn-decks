@@ -48,7 +48,7 @@ const CAMPAIGN_NEGATIVES = [
       'deckorators decking',
       'wpc decking price',
     ],
-    phrase: [],
+    phrase: ['trex enhance basics'],
   },
   {
     campaign: 'SRCH | Replacement + Resurfacing | 3 Counties | Calls',

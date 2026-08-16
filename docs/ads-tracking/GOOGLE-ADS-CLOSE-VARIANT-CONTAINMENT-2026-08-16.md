@@ -66,5 +66,6 @@ Cleaner search term intake, less CTR damage from competitor/product-only impress
 - UI result: 56 attempted changes, 55 successful, 1 error.
 - Logs ended with `Done. Added: 56. Skipped existing or dry-run: 0. DRY_RUN=false`.
 - The one UI error was `Keywords cannot be longer than 80 characters` for the long Trex Enhance Basics product-name negative.
-- No rerun needed because the successful negative `[trex enhance]` already covers that long product-only query family.
-- Local script and CSV were cleaned to remove the >80-character negative so future reruns should not trigger this error.
+- Fix: replace the >80-character exact negative with phrase negative `"trex enhance basics"` in `SRCH | Composite | 3 Counties | Calls`.
+- Local script and CSV were cleaned to remove the >80-character negative and include the shorter phrase negative.
+- Follow-up live fix: one-off script `LDN Trex Enhance Basics Negative Fix 2026-08-16` ran Aug 16, 2026 8:10 AM New York time and finished successfully with 1 successful change and 0 errors.
