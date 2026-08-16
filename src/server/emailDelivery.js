@@ -112,14 +112,38 @@ export async function sendLeadNotificationEmail(mailOptions) {
       return await sendWithResend(normalizedMailOptions);
     } catch (error) {
       const classifiedError = classifyEmailDeliveryError(error);
-      const result = {
+      const resendResult = {
         ok: false,
         provider: 'resend',
         errorType: 'resend_delivery_failed',
         errorMessage: classifiedError.message,
       };
-      console.error('[emailDelivery] Resend delivery failed', result);
-      return result;
+      console.error('[emailDelivery] Resend delivery failed', resendResult);
+
+      if (!hasGmailSmtpCredentials()) {
+        return resendResult;
+      }
+
+      console.warn('[emailDelivery] falling back to Gmail SMTP after Resend failure');
+      try {
+        const gmailResult = await sendWithGmailSmtp(normalizedMailOptions);
+        return {
+          ...gmailResult,
+          fallbackFrom: 'resend',
+        };
+      } catch (gmailError) {
+        const gmailClassifiedError = classifyEmailDeliveryError(gmailError);
+        const gmailResult = {
+          ok: false,
+          provider: 'gmail_smtp',
+          fallbackFrom: 'resend',
+          errorType: gmailClassifiedError.type,
+          errorMessage: gmailClassifiedError.message,
+          primaryProvider: resendResult,
+        };
+        console.error('[emailDelivery] Gmail SMTP fallback failed', gmailClassifiedError);
+        return gmailResult;
+      }
     }
   }
 
