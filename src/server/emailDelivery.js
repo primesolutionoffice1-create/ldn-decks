@@ -49,6 +49,10 @@ function senderAddress() {
   return process.env.EMAIL_FROM || process.env.EMAIL_USER || 'office@ldndecks.com';
 }
 
+function resendSenderAddress() {
+  return process.env.RESEND_FROM || process.env.EMAIL_FROM || 'office@ldndecks.com';
+}
+
 async function sendWithResend(mailOptions) {
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -57,7 +61,7 @@ async function sendWithResend(mailOptions) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: mailOptions.from,
+      from: `LDN Decks <${resendSenderAddress()}>`,
       to: Array.isArray(mailOptions.to) ? mailOptions.to : [mailOptions.to],
       reply_to: mailOptions.replyTo ? [mailOptions.replyTo] : undefined,
       subject: mailOptions.subject,
