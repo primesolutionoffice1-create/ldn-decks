@@ -1,0 +1,60 @@
+# Google Ads Close Variant Containment - 2026-08-16
+
+## Decision
+
+Do not look for a "disable close variants" switch. Google Ads exact and phrase keywords remain eligible for close variants, so containment must be done with negative keywords, routing negatives, and campaign/ad group discipline.
+
+## Source Data
+
+- `docs/ads-tracking/Loudoun Decks Builder-2+Current view+2026-06-30.csv`
+- Ads account scope observed in the export:
+  - `SRCH | Branded | 3 Counties | Calls`
+  - `SRCH | Composite | 3 Counties | Calls`
+  - `SRCH | Replacement + Resurfacing | 3 Counties | Calls`
+  - `SRCH | Premium Geo | Arlington Alexandria McLean | Leads`
+
+## Key Read
+
+Close variants are not all bad. Some product terms like `trex decking` and `timbertech decking` generated clicks at low CPC in this export. The problem set is narrower:
+
+- competitor terms with no account benefit,
+- material-only/product-line-only terms that are not contractor intent,
+- low-quality price/affordable modifiers in Premium Geo,
+- Trex/TimberTech/AZEK/composite queries falling into generic or resurfacing ad groups.
+
+## Files Created
+
+- `google-ads-import/15-close-variant-containment-negatives-2026-08-16.csv`
+- `google-ads-scripts/ldn-close-variant-containment-2026-08-16.gs`
+
+## What The Script Does
+
+- Adds campaign-level negatives for competitor terms:
+  - `glk custom decking`
+  - `sundeck medics`
+  - `valer deck and patio`
+  - `deck man reviews`
+  - `armor fence deck & patio nova`
+  - `veterans choice deck and fence`
+  - `nova decks and exteriors reviews`
+- Adds product/material-only negatives to Composite.
+- Adds Premium Geo cleanup negatives:
+  - `"affordable"`
+  - `"cheap"`
+  - `"amish"`
+  - `[deck builders manassas va]`
+- Adds ad-group routing negatives:
+  - Composite Deck Builder blocks `"trex"`, `"timbertech"`, `"azek"`.
+  - Deck Resurfacing blocks `"trex"`, `"timbertech"`, `"azek"`, `"composite"`.
+
+## What It Does Not Do
+
+- Does not change bids.
+- Does not change budgets.
+- Does not pause campaigns.
+- Does not alter conversion settings.
+- Does not block high-intent terms like `trex deck builder near me`, `deck replacement near me`, or `deck resurfacing`.
+
+## Expected Result
+
+Cleaner search term intake, less CTR damage from competitor/product-only impressions, and better routing of brand/material searches into the intended ad groups.
