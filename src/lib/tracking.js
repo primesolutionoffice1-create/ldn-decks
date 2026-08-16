@@ -11,12 +11,22 @@ const GOOGLE_ADS_LEAD_CONVERSION_SEND_TO =
 const GOOGLE_ADS_LEAD_CONVERSION_VALUE = 1;
 const GOOGLE_ADS_LEAD_CONVERSION_CURRENCY = 'USD';
 
+function ensureTagLayer() {
+  if (typeof window === 'undefined') return;
+  window.dataLayer = window.dataLayer || [];
+  if (typeof window.gtag !== 'function') {
+    window.gtag = function gtagFallback() {
+      window.dataLayer.push(arguments);
+    };
+  }
+}
+
 /**
  * Push event to GTM dataLayer - no-ops on server render
  */
 function push(event) {
   if (typeof window === 'undefined') return;
-  window.dataLayer = window.dataLayer || [];
+  ensureTagLayer();
   window.dataLayer.push(event);
 }
 
@@ -192,6 +202,7 @@ function trackGoogleAdsLead({ eventId, attributionPayload = {} } = {}) {
   if (typeof window === 'undefined' || !eventId || !GOOGLE_ADS_LEAD_CONVERSION_SEND_TO) {
     return;
   }
+  ensureTagLayer();
 
   const payload = {
     send_to: GOOGLE_ADS_LEAD_CONVERSION_SEND_TO,
