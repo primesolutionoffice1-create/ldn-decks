@@ -56,6 +56,10 @@ import LayoutContent from "./LayoutContent";
 
 const PINTEREST_TAG_ID = "2612622395697";
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || process.env.META_PIXEL_ID || "695923313293515";
+const GOOGLE_ADS_LEAD_CONVERSION_SEND_TO =
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO ||
+  "AW-16888402136/KNF1CJur4tIbENihgvU-";
+const GOOGLE_ADS_ID = GOOGLE_ADS_LEAD_CONVERSION_SEND_TO.split("/")[0];
 // Microsoft Clarity — heatmaps + session recordings (CRO playbook §Heatmap).
 // No fallback ID on purpose: the tag is a no-op until NEXT_PUBLIC_CLARITY_PROJECT_ID
 // is set in the Vercel environment. Create the project at https://clarity.microsoft.com,
@@ -96,6 +100,19 @@ export default function RootLayout({ children }) {
             Optional tracking stays denied until the visitor accepts the CMP. */}
         <Script id="gtm-consent-defaults" strategy="beforeInteractive">
           {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} try{var c=localStorage.getItem('ldn_cookie_consent');window.ldnConsentGranted=c==='accepted';}catch(e){window.ldnConsentGranted=false;} gtag('consent','default',{'ad_storage':window.ldnConsentGranted?'granted':'denied','ad_user_data':window.ldnConsentGranted?'granted':'denied','ad_personalization':window.ldnConsentGranted?'granted':'denied','analytics_storage':window.ldnConsentGranted?'granted':'denied'});`}
+        </Script>
+
+        {/* Google Ads base tag — direct fallback for the authoritative
+            lead_confirmed conversion. GTM still receives the same dataLayer
+            events, but this keeps the Ads conversion action from depending
+            solely on container-side tag wiring. */}
+        <Script
+          id="google-ads-base-tag"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-config" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${GOOGLE_ADS_ID}', { send_page_view: false });`}
         </Script>
 
         {/* Google Tag Manager — afterInteractive (not lazyOnload) so the
