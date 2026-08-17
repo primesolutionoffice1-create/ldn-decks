@@ -12,6 +12,14 @@ const LOUDOUN_PERMIT_SOURCE_LINKS = [
   { label: 'Loudoun County: building permits and LandMARC access', href: 'https://www.loudoun.gov/bdpermits' },
 ];
 
+const DECK_REPLACEMENT_CHECKLIST_SOURCE_LINKS = [
+  VIRGINIA_DECK_CODE_SOURCE_LINKS[0],
+  VIRGINIA_DECK_CODE_SOURCE_LINKS[1],
+  VIRGINIA_DECK_CODE_SOURCE_LINKS[2],
+  { label: 'Loudoun County: Typical Residential Deck Detail PDF', href: 'https://www.loudoun.gov/DocumentView.aspx?DID=878' },
+  { label: 'Fairfax County: when a permit is required', href: 'https://www.fairfaxcounty.gov/landdevelopment/when-permit-required' },
+];
+
 const VIRGINIA_STRUCTURE_SOURCE_LINKS = [
   VIRGINIA_DECK_CODE_SOURCE_LINKS[0],
   VIRGINIA_DECK_CODE_SOURCE_LINKS[1],
@@ -3056,6 +3064,172 @@ We will determine whether the next construction step is an on-site deck inspecti
       { q: 'Can LDN Decks guarantee that insurance will pay for the deck repair?', a: 'No. LDN Decks can document visible construction damage, prepare an estimate, and complete authorized work. Coverage, deductibles, depreciation, limits, exclusions, and settlement decisions belong to the insurance company under the homeowner\'s policy.' }
     ],
     disclaimer: 'This article provides general construction and claim-preparation information, not insurance, legal, engineering, or public-adjuster advice. Coverage depends on the specific policy and facts of loss. LDN Decks does not determine coverage or guarantee claim payment. Emergency, utility, tree-removal, engineering, permitting, and insurance decisions must be handled by the appropriate qualified party.'
+  },
+  {
+    id: 138,
+    title: 'Deck Replacement Checklist for Loudoun County Homes',
+    slug: 'deck-replacement-checklist-loudoun-county',
+    image: '/images/blog/generated/how-to-inspect-deck-safety-checklist.jpg',
+    imagePosition: 'center center',
+    date: 'August 14, 2026',
+    dateModified: 'August 14, 2026',
+    author: 'Nick - Loudoun Decks',
+    metaTitle: 'Deck Replacement Checklist for Loudoun County Homes | LDN Decks',
+    metaDescription: 'Use this Loudoun County deck replacement checklist to inspect framing, permits, railings, stairs, HOA review, and estimate readiness before rebuilding.',
+    category: 'Deck Replacement',
+    tags: ['deck replacement checklist', 'Loudoun County decks', 'deck safety', 'deck permit Loudoun County', 'deck builder Ashburn VA', 'composite decking Loudoun County'],
+    sourceLinks: DECK_REPLACEMENT_CHECKLIST_SOURCE_LINKS,
+    excerpt: 'Use this deck replacement checklist before rebuilding an older Loudoun County deck. It helps homeowners organize safety issues, permit questions, HOA review, material decisions, and estimate-ready details before work starts.',
+    content: `A deck replacement in Loudoun County should start with a clear checklist, not a quick surface-board decision. The visible decking is only one layer. The real replacement decision depends on the ledger, flashing, joists, beams, posts, footings, stairs, guards, drainage, permits, HOA approval, and the way the new deck will be used.
+
+LDN Decks uses this type of checklist when speaking with homeowners in Ashburn, Leesburg, Sterling, Broadlands, Brambleton, South Riding, Aldie, Lansdowne, Purcellville, and nearby Northern Virginia communities. It is written for planning. It is not a substitute for a county review, an engineered design, or an on-site structural inspection.
+
+**Key Takeaways**
+
+- Replace the whole deck when the structure, ledger, posts, footings, or stairs are no longer reliable.
+- Do not assume resurfacing is enough until the framing and house connection are inspected.
+- As of August 14, 2026, Loudoun County states that all decks require a building permit and zoning permit.
+- HOA review should happen before final material ordering when your community requires architectural approval.
+- A clean estimate request should include dimensions, photos, access notes, material preferences, and any permit or HOA documents already available.
+
+## 1. Decide Whether This Is Resurfacing or Full Replacement
+
+The first decision is whether the existing structure can safely remain. Resurfacing means removing old deck boards and installing new surface material on acceptable framing. Replacement means rebuilding part or all of the structural system.
+
+Resurfacing may be practical when the joists are straight, properly supported, well flashed at the house, free from significant decay, and sized for the intended decking. Full replacement becomes more likely when joists are soft, fasteners are badly corroded, the ledger is questionable, posts are embedded or rotted near grade, beams are split or sagging, stairs are unstable, or the deck no longer matches the way the home is used.
+
+For older Loudoun homes, especially decks built 15 to 30 years ago, the cheapest option on paper can become the most expensive option if new composite boards are installed over failing framing. Start with structure first, finish material second.
+
+Related: compare the decision in our [repair versus replacement guide](/blog/repair-vs-replace-deck-northern-virginia) and [deck resurfacing versus replacement guide](/deck-resurfacing-vs-replacement).
+
+## 2. Check the House Connection and Ledger Area
+
+The ledger is the board that connects an attached deck to the house. When it fails, the deck can separate from the home. Homeowners should not remove siding, flashing, or structural components themselves, but they can look for warning signs before requesting a professional evaluation.
+
+Look for water staining below the door, soft trim, missing or damaged flashing, rusted fastener heads, gaps between the deck and house, pulled siding, tilted posts, or a deck surface that slopes toward the home. Interior signs can matter too: stains near the door, swollen flooring, or soft subflooring at the threshold may indicate water has been entering behind the deck connection.
+
+If the ledger area looks suspect, do not treat the project as a cosmetic board swap. Ask for a structural replacement scope and confirm permit requirements before work begins.
+
+## 3. Inspect Framing, Beams, Posts, and Footings
+
+A useful replacement checklist follows the load path from the deck boards down to the ground. Surface boards sit on joists. Joists bear on beams or ledgers. Beams bear on posts. Posts transfer load into footings. A weakness at any point can change the replacement scope.
+
+Homeowners can photograph:
+
+- Joist ends near the house and beam
+- Beam seams, cracks, rotations, or sagging areas
+- Post bases, especially where wood meets concrete or soil
+- Footings that are heaved, cracked, undersized, buried, or out of alignment
+- Hardware with red rust, missing fasteners, or visible movement
+- Areas under planters, grills, mats, hot tubs, or shaded sections that stay wet
+
+Do not rely only on the top deck boards. A deck may look acceptable from above while the framing underneath is already past its service life.
+
+## 4. Review Stairs, Guards, Railings, and Landings
+
+Stairs and railings often reveal whether the deck needs more than a surface refresh. Loose guard posts, moving stair stringers, uneven risers, soft landings, cracked treads, missing handrail returns, and wobbly stair rails should be documented before pricing the project.
+
+If the deck is being replaced, the stair and railing system should be treated as part of the full design. Homeowners should decide early whether they want traditional composite rail, aluminum rail, cable rail, privacy sections, gates, lighting, or a wider stair for traffic from the kitchen to the yard.
+
+Related: review [deck railing options in Northern Virginia](/blog/deck-railing-options-northern-virginia) and [deck railing code requirements](/blog/deck-railing-code-requirements-northern-virginia-2026).
+
+## 5. Confirm Loudoun County Permit and Zoning Requirements
+
+As of August 14, 2026, [Loudoun County's deck permit page](https://www.loudoun.gov/1166/Decks) says a building permit and zoning permit are required for all decks. The county also lists documentation commonly needed for review, including a property plat or house location survey showing the house, proposed deck location, setbacks, and related information. If the property is inside an incorporated town, town zoning approval may also apply.
+
+The official [Loudoun County Typical Residential Deck Detail PDF](https://www.loudoun.gov/DocumentView.aspx?DID=878) is useful for understanding plan and inspection expectations. As of the county document reviewed August 14, 2026, decks less than 42 inches from ground level require a framing inspection before deck floor boards are installed.
+
+That matters for replacement planning. If framing must be inspected before decking covers it, the schedule should allow the inspection step before final boards go down. Permit and inspection requirements can change, so confirm directly with Loudoun County before starting work.
+
+For adjacent projects outside Loudoun, Fairfax County also provides a current [permit requirement guide](https://www.fairfaxcounty.gov/landdevelopment/when-permit-required) for homeowners. Jurisdiction should be verified by property address.
+
+## 6. Check HOA and Community Requirements Before Ordering Material
+
+Many Loudoun County communities require architectural review before a visible exterior project begins. Ashburn Village, Ashburn Farm, Broadlands, Brambleton, Lansdowne, South Riding, Stone Ridge, Willowsford, and similar communities can have different rules for color, railing type, privacy screens, stairs, lattice, lighting, and under-deck finishes.
+
+A practical HOA package usually includes:
+
+- Property address and homeowner contact information
+- Plat or survey with proposed deck footprint
+- Existing and proposed dimensions
+- Material brand, color, railing type, and trim details
+- Elevation or sketch if the association asks for it
+- Contractor information and license details when required
+- Neighbor acknowledgment forms if required by that community
+
+Do not wait until the deck is ready to build before checking HOA rules. HOA review can affect design, color, lead time, and schedule.
+
+## 7. Choose Replacement Materials for Loudoun Weather
+
+Northern Virginia decks handle sun, humidity, thunderstorms, freeze-thaw movement, pollen, leaf debris, and shaded moisture. Material selection should match the exposure of the yard.
+
+Pressure-treated lumber has lower upfront cost but needs routine maintenance and can split, cup, or weather quickly. Composite decking costs more upfront but reduces staining and sanding work. PVC decking can perform well in high-moisture or high-sun settings, depending on budget and design goals.
+
+For Loudoun homeowners comparing composite lines, prepare these decisions before requesting final pricing:
+
+| Decision | Why it matters |
+|---|---|
+| Board material | Drives cost, warranty expectations, heat feel, and maintenance |
+| Board color | Affects heat, HOA approval, and house compatibility |
+| Railing type | Changes budget, visibility, maintenance, and style |
+| Stair layout | Changes traffic flow, structure, and inspection needs |
+| Lighting | Requires early planning for wiring, transformers, and controls |
+| Under-deck use | May require drainage, ceiling, or dry-space details |
+
+Related: see [TimberTech vs Trex in Northern Virginia](/blog/timbertech-vs-trex-northern-virginia-2026), [composite versus pressure-treated total cost](/blog/composite-vs-pressure-treated-deck-total-cost-20-years), and [deck lighting ideas](/blog/deck-lighting-ideas-northern-virginia-2026).
+
+## 8. Prepare Estimate-Ready Photos and Measurements
+
+The best estimate request is specific. Before calling a deck builder, gather clear photos from the yard, both side elevations, the deck surface, stairs, railing, ledger area, underside framing, posts, footings, and the access path from driveway to backyard. Include photos of obstacles such as fences, steep slopes, tight gates, trees, HVAC units, walkout basements, patios, and drainage issues.
+
+Useful measurements include overall deck width and projection, height from grade to deck surface, stair width, number of stair treads, railing length, and the approximate location of doors or utilities. If you do not have exact dimensions, photographs with a tape measure visible are still helpful.
+
+Send any old permit drawings, HOA guidelines, plat, survey, or inspection reports if available. These documents can shorten the discovery phase and help separate design questions from permit questions.
+
+## 9. Know When to Stop Using the Deck
+
+Stop using the deck and keep people off it if you see movement at the house connection, major sagging, loose guard posts, stairs pulling away, cracked beams, posts shifting, soft framing, missing hardware, or sudden storm impact. Do not host, grill, store heavy items, or place planters on a deck that may have structural damage.
+
+If the issue is serious, request a professional deck inspection before allowing normal use. For visible failure signs, review our [deck collapse warning signs guide](/blog/deck-collapse-warning-signs-northern-virginia) and [deck safety inspection checklist](/blog/how-to-inspect-deck-safety-checklist).
+
+## Final Loudoun County Deck Replacement Checklist
+
+Use this list before requesting a final proposal:
+
+| Checklist item | Status to confirm |
+|---|---|
+| Existing deck age and known repair history | Confirmed or unknown |
+| Ledger and flashing condition | Needs inspection |
+| Joists, beams, posts, footings | Photographed and reviewed |
+| Stairs, guards, and landings | Included in scope |
+| Resurfacing vs full replacement decision | Confirmed after structure review |
+| Loudoun building and zoning permit path | Confirmed with county |
+| HOA or town approval | Confirmed if applicable |
+| Material brand, color, railing, lighting | Selected or narrowed |
+| Access, disposal, and staging | Reviewed |
+| Estimate documents and photos | Ready to send |
+
+## How LDN Decks Can Help
+
+LDN Decks can inspect the existing deck, identify whether resurfacing or full replacement is the more responsible path, prepare a replacement scope, help organize permit-sensitive details, and build the new deck after approvals are in place.
+
+For homes in Ashburn, Leesburg, Sterling, Broadlands, Brambleton, South Riding, Aldie, Lansdowne, Purcellville, and nearby Loudoun County communities, [request a deck replacement estimate](/get-estimate) or call 571-655-7207. If you are still collecting project details, start with the [contact page](/contact) and attach photos when available.
+
+## Official Sources Used
+
+- [Virginia DHCD, current building code adoption and code collections](https://www.dhcd.virginia.gov/index.php/codes), retrieved August 14, 2026
+- [Virginia DHCD, Uniform Statewide Building Code overview](https://www.dhcd.virginia.gov/virginia-uniform-statewide-building-code-usbc), retrieved August 14, 2026
+- [Loudoun County, Decks](https://www.loudoun.gov/1166/Decks), retrieved August 14, 2026
+- [Loudoun County, Typical Residential Deck Detail PDF](https://www.loudoun.gov/DocumentView.aspx?DID=878), retrieved August 14, 2026
+- [Fairfax County, When a Permit is Required](https://www.fairfaxcounty.gov/landdevelopment/when-permit-required), retrieved August 14, 2026`,
+    faq: [
+      { q: 'Does Loudoun County require a permit to replace a deck?', a: 'As of August 14, 2026, Loudoun County says all decks require a building permit and zoning permit. Replacement scope, drawings, inspections, town zoning, and HOA requirements vary by property, so homeowners should confirm directly with Loudoun County before work starts.' },
+      { q: 'Can I replace only the deck boards?', a: 'Sometimes, but only when the existing framing, ledger, posts, beams, footings, stairs, and guards are suitable for reuse. If the structure is decayed, undersized, poorly flashed, moving, or past practical service life, full replacement is usually the more responsible path.' },
+      { q: 'What photos should I send for a deck replacement estimate?', a: 'Send wide photos of the entire deck, close photos of the house connection, underside framing, beams, posts, footings, stairs, railings, access path, and any damage. A plat, survey, HOA guidelines, old permit drawings, or inspection report is also helpful.' },
+      { q: 'How long does HOA approval take in Loudoun County?', a: 'HOA timing varies by community. Some associations review quickly, while others use monthly architectural review cycles. Homeowners should check their community rules before finalizing colors, railing type, privacy screens, stairs, or lighting.' },
+      { q: 'When should I stop using an old deck?', a: 'Stop using the deck if it is separating from the house, sagging, moving, has loose guardrails or stairs, shows serious rot, has shifted posts or cracked beams, or was hit by a storm, tree, or vehicle. Ask for a professional inspection before normal use resumes.' }
+    ],
+    disclaimer: 'This article provides general homeowner planning guidance, not legal, engineering, or code advice. Permit requirements, inspection sequencing, HOA rules, and product specifications can change and vary by property. Always verify current requirements with Loudoun County, any incorporated town, your HOA, and the appropriate licensed professional before starting work.'
   }
 ];
 
