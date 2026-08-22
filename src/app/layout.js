@@ -58,7 +58,7 @@ const PINTEREST_TAG_ID = "2612622395697";
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || process.env.META_PIXEL_ID || "695923313293515";
 const GOOGLE_ADS_LEAD_CONVERSION_SEND_TO =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO ||
-  "AW-16888402136/KNF1CJur4tIbENihgvU-";
+  "AW-16888402136/IxFhCJHb_uUcENihgvU-";
 const GOOGLE_ADS_ID = GOOGLE_ADS_LEAD_CONVERSION_SEND_TO.split("/")[0];
 // Microsoft Clarity — heatmaps + session recordings (CRO playbook §Heatmap).
 // No fallback ID on purpose: the tag is a no-op until NEXT_PUBLIC_CLARITY_PROJECT_ID

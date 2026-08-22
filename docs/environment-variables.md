@@ -17,7 +17,7 @@ This project uses `.env.local` for local secrets and production hosting environm
 | `ADMIN_USERNAME` | Server-only | Recommended | Admin Basic Auth username. Defaults to `admin`. |
 | `ADMIN_PASSWORD` | Server-only | Required for production admin | Admin Basic Auth password. |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Public | Optional | GA4 public measurement ID. |
-| `NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO` | Public | Recommended | Google Ads lead conversion `send_to` destination for the confirmed `Submit lead form` action. Current value: `AW-16888402136/KNF1CJur4tIbENihgvU-`. |
+| `NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO` | Public | Recommended | Google Ads lead conversion `send_to` destination for the confirmed `Submit lead form (1)` action. Current value: `AW-16888402136/IxFhCJHb_uUcENihgvU-`. |
 | `GOOGLE_SEARCH_CONSOLE_SITE_URL` | Server-only | Optional | Search Console property URL for server-side tooling. |
 | `GOOGLE_CRUX_API_KEY` | Server-only | Optional | CrUX / PageSpeed tooling key if used. |
 | `AHREFS_API_TOKEN` | Server-only | Optional | Ahrefs rank tracker script token. |
