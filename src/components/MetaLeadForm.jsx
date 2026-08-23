@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useLeadSubmit } from "@/hooks/useLeadSubmit";
 import styles from "./MetaLeadForm.module.css";
@@ -13,9 +13,14 @@ const pageContext = {
 export default function MetaLeadForm() {
   const [step, setStep] = useState(1);
   const [status, setStatus] = useState(null);
-  const [submittedAt] = useState(() => Date.now());
   const formRef = useRef(null);
   const submit = useLeadSubmit({ formType: "paid_social", pageContext });
+
+  useEffect(() => {
+    if (formRef.current?.elements?.submittedAt) {
+      formRef.current.elements.submittedAt.value = String(Date.now());
+    }
+  }, []);
 
   function continueToContact() {
     const requiredFields = formRef.current?.querySelectorAll('[data-step="1"] [required]') || [];
@@ -58,7 +63,7 @@ export default function MetaLeadForm() {
         aria-hidden="true"
         className={styles.honeypot}
       />
-      <input type="hidden" name="submittedAt" value={submittedAt} />
+      <input type="hidden" name="submittedAt" defaultValue="" />
       <input type="hidden" name="state" value="VA" />
       <input type="hidden" name="leadSource" value="Meta Paid Social" />
       <input type="hidden" name="page_type" value="paid_social_landing_page" />
