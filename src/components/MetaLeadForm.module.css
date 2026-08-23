@@ -1,0 +1,216 @@
+.form {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  color: #18222b;
+  border: 1px solid #d9e0e5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 18px 50px rgba(7, 17, 25, 0.2);
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.formHeader h2 {
+  margin: 0.2rem 0 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #bb3e12;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.stepLabel {
+  flex: 0 0 auto;
+  margin: 0.1rem 0 0;
+  color: #596772;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.progress {
+  height: 4px;
+  margin: 1rem 0 1.25rem;
+  overflow: hidden;
+  background: #e6ebee;
+  border-radius: 2px;
+}
+
+.progress span {
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: #c8491b;
+  transition: width 180ms ease;
+}
+
+.progress span.progressComplete {
+  width: 100%;
+}
+
+.fieldset {
+  display: grid;
+  gap: 0.9rem;
+  min-width: 0;
+  border: 0;
+}
+
+.fieldset[hidden] {
+  display: none;
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.fieldGroup {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+  color: #26333d;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.fieldGroup small {
+  color: #66747e;
+  font-weight: 500;
+}
+
+.fieldGroup input,
+.fieldGroup select,
+.fieldGroup textarea {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #bdc8cf;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #18222b;
+  font: inherit;
+  font-weight: 500;
+  padding: 0.72rem 0.8rem;
+}
+
+.fieldGroup textarea {
+  min-height: 82px;
+  resize: vertical;
+}
+
+.fieldGroup input:focus,
+.fieldGroup select:focus,
+.fieldGroup textarea:focus {
+  outline: 3px solid rgba(200, 73, 27, 0.2);
+  border-color: #c8491b;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+}
+
+.primaryButton,
+.backButton {
+  min-height: 50px;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.primaryButton {
+  border: 1px solid #c8491b;
+  background: #c8491b;
+  color: #ffffff;
+  padding: 0.8rem 1rem;
+}
+
+.primaryButton:hover {
+  background: #a9360e;
+  border-color: #a9360e;
+}
+
+.primaryButton:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.backButton {
+  border: 1px solid #bdc8cf;
+  background: #ffffff;
+  color: #26333d;
+  padding: 0.8rem 1.1rem;
+}
+
+.error {
+  margin: 0;
+  padding: 0.7rem;
+  border-left: 4px solid #b42318;
+  background: #fef3f2;
+  color: #912018;
+  font-size: 0.84rem;
+}
+
+.privacy {
+  margin: 0.9rem 0 0;
+  color: #66747e;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.privacy a {
+  color: #9f320d;
+  text-decoration: underline;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 560px) {
+  .form {
+    padding: 1.15rem;
+  }
+
+  .formHeader h2 {
+    font-size: 1.18rem;
+  }
+
+  .twoColumns,
+  .actions {
+    grid-template-columns: 1fr;
+  }
+
+  .backButton {
+    order: 2;
+  }
+}
