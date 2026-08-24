@@ -169,17 +169,14 @@ function schemaForPage({ city, service, path }) {
     })),
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: service.label, item: `${SITE_URL}${service.related[0] || '/services'}` },
-      { '@type': 'ListItem', position: 3, name: `${city.city}, VA`, item: url },
-    ],
-  };
+  // BreadcrumbList intentionally omitted here. Breadcrumbs.jsx already emits one
+  // for every non-home route, and it is the authoritative copy because its trail
+  // matches the breadcrumb the visitor actually sees. Emitting a second list from
+  // this template produced two competing BreadcrumbList entities per city page —
+  // identical trails differing only in the final item ("Ashburn" vs "Ashburn, VA")
+  // — which leaves Google to pick one arbitrarily or ignore both.
 
-  return { faqs, schemas: [serviceSchema, localBusinessSchema, faqSchema, breadcrumbSchema] };
+  return { faqs, schemas: [serviceSchema, localBusinessSchema, faqSchema] };
 }
 
 export default function LocalServicePage({ city, serviceKey }) {
