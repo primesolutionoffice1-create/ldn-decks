@@ -90,7 +90,7 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                 </div>
                 <div className={styles.inputGroup}>
                   <label htmlFor="phone">Phone Number <span className={styles.req}>*</span></label>
-                  <input id="phone" name="phone" type="tel" required placeholder="(571) 555-0100" autoComplete="tel" aria-label="Your phone number" />
+                  <input id="phone" name="phone" type="tel" required placeholder="Phone Number" autoComplete="tel" aria-label="Your phone number" />
                 </div>
               </div>
               <div className={styles.inputGroup}>
