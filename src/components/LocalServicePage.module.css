@@ -117,6 +117,7 @@
 
 .heroImageWrap {
   position: relative;
+  aspect-ratio: 16 / 11;
   min-height: 470px;
   border-radius: 8px;
   overflow: hidden;
@@ -156,6 +157,39 @@
   color: #211d1a;
   font-size: 1.02rem;
   line-height: 1.48;
+}
+
+.cityServiceNav {
+  padding: 34px 32px 48px;
+  background: #fff;
+}
+
+.cityServiceGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.cityServiceGrid a {
+  display: flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 14px 16px;
+  border: 1px solid #e6ded7;
+  border-radius: 8px;
+  background: #fcfaf8;
+  color: #211d1a;
+  font-size: 0.93rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.cityServiceGrid a:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .contentBand,
@@ -447,6 +481,7 @@
   }
 
   .quickGrid,
+  .cityServiceGrid,
   .answerGrid,
   .faqGrid,
   .verificationGrid,
@@ -462,6 +497,7 @@
 @media (max-width: 560px) {
   .hero,
   .quickGrid,
+  .cityServiceNav,
   .contentBand,
   .answerSection,
   .faqSection,
@@ -487,6 +523,7 @@
   }
 
   .quickGrid,
+  .cityServiceGrid,
   .answerGrid,
   .faqGrid,
   .verificationGrid,

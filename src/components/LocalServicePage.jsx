@@ -12,6 +12,37 @@ import { getVerifiedReviewSourceSnippets } from '@/lib/verifiedProof';
 import { buildCityProfile, servicePageTypes } from '@/data/localServicePages';
 import styles from './LocalServicePage.module.css';
 
+const STATIC_DECK_BUILDER_CITY_SLUGS = new Set([
+  'alexandria',
+  'arlington',
+  'ashburn',
+  'brambleton',
+  'bristow',
+  'burke',
+  'centreville',
+  'chantilly',
+  'fairfax',
+  'falls-church',
+  'gainesville',
+  'great-falls',
+  'haymarket',
+  'herndon',
+  'leesburg',
+  'lorton',
+  'manassas',
+  'mclean',
+  'oakton',
+  'purcellville',
+  'reston',
+  'south-riding',
+  'springfield',
+  'stafford',
+  'sterling',
+  'tysons',
+  'vienna',
+  'woodbridge',
+]);
+
 function cityIntro(city, service) {
   const profile = buildCityProfile(city);
   return `${city.city} homeowners planning ${service.intro} need a contractor who understands ${profile.context}. Loudoun Decks designs and builds around ${profile.homeStyle}, with ${profile.permit} handled before crews arrive.`;
@@ -193,6 +224,14 @@ export default function LocalServicePage({ city, serviceKey }) {
     label: labelForRelatedPath(href),
   }));
   const publicReviewSources = getVerifiedReviewSourceSnippets();
+  const localServiceHref = (item) =>
+    item.path === 'service'
+      ? (STATIC_DECK_BUILDER_CITY_SLUGS.has(city.citySlug) ? `/deck-builder-${city.citySlug}-va` : `/service/${city.citySlug}`)
+      : `/${item.path}/${city.citySlug}`;
+  const siblingServiceLinks = allServices.map((item) => ({
+    href: localServiceHref(item),
+    label: `${item.label} in ${city.city}`,
+  }));
   const pageContext = {
     city: city.city,
     county: city.county,
@@ -260,6 +299,23 @@ export default function LocalServicePage({ city, serviceKey }) {
         </div>
       </section>
 
+      <section className={styles.cityServiceNav} aria-label={`Compare Loudoun Decks services in ${city.city}`}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.kicker}>More {city.city} Services</p>
+          <h2>Compare Related Outdoor Projects in {city.city}</h2>
+          <p>
+            Homeowners often compare several scopes before deciding. These local service pages help connect {service.label.toLowerCase()} with the other deck, porch, patio, pergola, and outdoor living options available in {city.city}.
+          </p>
+        </div>
+        <div className={styles.cityServiceGrid}>
+          {siblingServiceLinks.map((item) => (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section className={styles.contentBand}>
         <div className={styles.contentGrid}>
           <article>
@@ -280,12 +336,12 @@ export default function LocalServicePage({ city, serviceKey }) {
           </article>
 
           <aside className={styles.sidePanel}>
-            <h2>Connect This Page</h2>
-            <p>Explore the related service and city pages most relevant to {city.city} homeowners.</p>
+            <h2>Plan Around {city.city}</h2>
+            <p>Explore the service and county pages most relevant to {city.city} homeowners.</p>
             <div className={styles.linkList}>
-              {allServices.slice(0, 7).map((item) => (
-                <Link key={item.path} href={`/${item.path}/${city.citySlug}`}>
-                  {item.label} in {city.city}
+              {siblingServiceLinks.map((item) => (
+                <Link key={item.href} href={item.href}>
+                  {item.label}
                 </Link>
               ))}
               <Link href={`/near-you/${city.countySlug}`}>{city.county} service area</Link>
