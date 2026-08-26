@@ -100,6 +100,7 @@ export default function PaidSearchLeadForm({
           <option value="">Material (optional)</option>
           <option value="Trex">Trex</option>
           <option value="TimberTech/AZEK">TimberTech/AZEK</option>
+          <option value="Fiberon">Fiberon</option>
           <option value="Composite">Composite</option>
           <option value="Not Sure">Not sure</option>
         </select>

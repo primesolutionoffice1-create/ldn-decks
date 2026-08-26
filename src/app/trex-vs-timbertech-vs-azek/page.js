@@ -190,6 +190,7 @@ export default function TrexVsTimberTechPage() {
               ['/blog/why-composite-trex-decking-fades-sun-solutions', 'Why Composite Decking Fades in the Sun'],
               ['/composite-decks', 'Composite Deck Builder in Northern Virginia'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck Complete Comparison'],
+              ['/replace-wood-deck-with-composite-northern-virginia', 'Replace Wood Deck With Composite'],
               ['/wood-vs-composite-deck-long-term-cost', 'Wood vs Composite — 15-Year Long-Term Cost'],
               ['/trex-decks', 'Our Trex Decking Services'],
               ['/does-a-deck-add-value-to-your-home', 'Does a Deck Add Value to Your Home?'],

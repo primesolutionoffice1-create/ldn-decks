@@ -179,7 +179,7 @@ export default function CompositeDecksPage() {
             Want to see estimated monthly payments for Trex and TimberTech projects? Use our <a href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck payment estimator</a>.
           </p>
           <p style={{ fontSize: '15px', color: '#555', margin: '12px 0 0' }}>
-            Comparing a high-value replacement in Arlington, Alexandria, or McLean? Start with the <Link href="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>premium composite replacement guide</Link> before selecting Trex, TimberTech, AZEK, railings, lighting, or a full rebuild scope.
+            Replacing an aging wood deck? Start with the <Link href="/replace-wood-deck-with-composite-northern-virginia" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>wood-to-composite replacement guide</Link>. Comparing a high-value replacement in Arlington, Alexandria, or McLean? Start with the <Link href="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>premium composite replacement guide</Link> before selecting Trex, TimberTech, AZEK, Fiberon, railings, lighting, or a full rebuild scope.
           </p>
         </div>
       </section>
@@ -246,6 +246,7 @@ export default function CompositeDecksPage() {
             ['/deck-builder-arlington-va', 'Arlington composite decks'],
             ['/deck-builder-alexandria-va', 'Alexandria composite decks'],
             ['/deck-builder-manassas-va', 'Manassas composite decks'],
+            ['/replace-wood-deck-with-composite-northern-virginia', 'Replace wood deck with composite'],
             ['/near-you/loudoun-county', 'Loudoun County deck planning'],
             ['/near-you/fairfax-county', 'Fairfax County deck planning'],
             ['/near-you/prince-william-county', 'Prince William County deck planning'],
@@ -291,6 +292,7 @@ export default function CompositeDecksPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/trex-vs-timbertech-fade-resistance-comparison" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech Fade Resistance →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Cost in Northern Virginia →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Resurfacing vs Full Deck Replacement →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/replace-wood-deck-with-composite-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Replace Wood Deck With Composite →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Premium Composite Replacement for Arlington, Alexandria &amp; McLean →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-materials-comparison-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Material Comparison for Virginia Homes →</Link></li>
         </ul>
