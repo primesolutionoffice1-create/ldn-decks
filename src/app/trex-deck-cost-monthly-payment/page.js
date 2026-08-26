@@ -297,6 +297,17 @@ export default function TrexDeckCostMonthlyPaymentPage() {
             <li><strong>Picture-frame border:</strong> $400–$900 per typical deck</li>
             <li><strong>Permits & HOA:</strong> $300–$1,500 depending on county and HOA process</li>
           </ul>
+          <p style={S.p}>
+            Before locking a Trex payment amount, use the{' '}
+            <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+              Virginia deck stair calculator
+            </Link>{' '}
+            and the{' '}
+            <Link href="/deck-lighting-railings-stairs-addon-cost" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+              lighting, railings and stairs add-on cost guide
+            </Link>{' '}
+            to keep stair, railing, and lighting allowances tied to the real project scope.
+          </p>
 
           <h2 style={S.h2}>Trex Deck Financing in Northern Virginia</h2>
           <p style={S.p}>
