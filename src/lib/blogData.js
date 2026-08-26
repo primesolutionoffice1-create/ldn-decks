@@ -33,6 +33,11 @@ const COMPOSITE_BRAND_SOURCE_LINKS = [
   { label: 'AZEK: PVC decking and warranty information', href: 'https://www.timbertech.com/products/decking/azek/' },
 ];
 
+const NORTHERN_VIRGINIA_DECK_REPAIR_SOURCE_LINKS = [
+  ...VIRGINIA_DECK_CODE_SOURCE_LINKS,
+  { label: 'Prince William County: Residential Deck permit guidance', href: 'https://www.pwcva.gov/department/building-development-division/residential-deck' },
+];
+
 const DECK_INSURANCE_CLAIM_SOURCE_LINKS = [
   { label: 'Virginia SCC: When a Disaster Strikes - insured homeowners loss guide (retrieved July 15, 2026)', href: 'https://www.scc.virginia.gov/consumers/insurance/property-casualty-consumer/disaster-strikes-insured-homeowners-loss/' },
   { label: 'Virginia SCC: Virginia Homeowners Insurance Guide (retrieved July 15, 2026)', href: 'https://www.scc.virginia.gov/consumers/insurance/property-casualty-consumer/virginia-homeowners-insurance-guide/' },
@@ -969,6 +974,140 @@ const allBlogPosts = [
       { q: "How much does a structural deck repair cost in Northern Virginia?", a: "Targeted structural repairs vary significantly by scope. Replacing a few rotted joists can cost $800 to $2,500. Ledger board replacement with proper flashing ranges from $1,500 to $4,000 depending on access and deck complexity. Full post and footing replacement runs $500 to $1,200 per post location. A complete structural assessment identifies exact scope before any cost is confirmed." }
     ],
     disclaimer: "This article provides general homeowner guidance on deck structural warning signs and is not a substitute for a professional in-person structural inspection. Structural safety depends on many factors not visible to the untrained eye. Always obtain a licensed professional inspection before determining whether a deck is safe for use."
+  },
+  {
+    id: 139,
+    title: "2016 Decks Are Hitting the 10-Year Problem: Framing Rot, Ledger Damage, and Replacement Decisions",
+    slug: '2016-deck-framing-rot-replacement-northern-virginia',
+    image: '/images/blog/generated/deck-joist-rot-repair-northern-virginia.jpg',
+    date: 'August 26, 2026',
+    author: 'Nick - Loudoun Decks',
+    metaTitle: "2016 Deck Framing Rot & Replacement Guide | Northern Virginia",
+    metaDescription: "Ten-year-old decks built around 2016 can hide joist, ledger, post and footing rot. Learn when to repair or replace in Fairfax, Loudoun and Prince William.",
+    category: 'Maintenance & Repair',
+    tags: ['2016 deck repair northern virginia', '10 year old deck problems', 'deck framing rot fairfax county', 'deck replacement prince william county', 'deck repair loudoun county', 'trex deck framing rot', 'deck ledger repair fairfax'],
+    sourceLinks: NORTHERN_VIRGINIA_DECK_REPAIR_SOURCE_LINKS,
+    excerpt: "Decks built around 2016 are now reaching the age where surface boards can still look acceptable while the hidden pressure-treated frame begins to show rot, water damage, loose ledger connections, post base decay, and footing movement. This guide explains what Northern Virginia homeowners should inspect before investing in resurfacing or replacement.",
+    content: `A deck built around 2016 is not old in calendar years, but in Northern Virginia it has already lived through ten humid summers, ten freeze-thaw cycles, heavy pollen seasons, leaf buildup, storm water, and constant UV exposure. That is enough time for hidden framing problems to develop, especially on shaded lots in Fairfax County, Fairfax City, Loudoun County, and Prince William County.
+
+The main issue is simple: the surface can look better than the structure. A composite or Trex surface may still appear usable while the pressure-treated joists, ledger board, beams, posts, and stair framing underneath are absorbing water in the same small failure points year after year.
+
+![Rotted deck framing under an existing Northern Virginia deck, showing why a 10-year inspection matters before resurfacing or replacement.](/images/blog/generated/deck-joist-rot-repair-northern-virginia.jpg)
+
+## Why 2016 Decks Are Becoming a Lead-Quality Repair Opportunity
+
+Many homes built or renovated around 2016 were sold with builder-grade decks, fast production framing, or early composite upgrades installed over pressure-treated lumber. The deck may have passed inspection when built, but that does not mean every moisture detail was built for a 25-year service life.
+
+In our market, the most common 10-year deck issues are:
+
+- joist-top rot where deck boards trap water against the frame
+- ledger staining or rot where flashing was incomplete or poorly integrated
+- post base rot where the post sits too close to concrete or soil moisture
+- stair stringer rot because stairs collect water and debris
+- loose railing posts where fasteners have moved or the blocking has softened
+- heaved or cracked footings from repeated freeze-thaw movement
+- corrosion at joist hangers, post bases, and ledger fasteners
+
+The homeowner message is not panic. The right message is inspection first, then a clear repair-or-replace decision.
+
+## The Biggest Mistake: Replacing Boards Before Checking the Frame
+
+The expensive mistake is installing new composite decking over a frame that has not been exposed, probed, and documented. New boards hide the structure again. If the joists or ledger are already compromised, the homeowner pays twice: once for the surface upgrade and again when the frame has to be rebuilt.
+
+Before any resurfacing, the old boards should come off and the contractor should inspect:
+
+| Area | What to Check | Why It Matters |
+| --- | --- | --- |
+| Joist tops | Soft spots, black staining, splitting, water channels | This is where water sits after every rain |
+| Joist ends | Rot at hangers and beam pockets | End grain absorbs moisture quickly |
+| Ledger board | Staining, separation, missing flashing, rust trails | Ledger failure is one of the most serious deck risks |
+| Posts | Soft wood at the base, lean, soil contact | Posts carry the deck load to the footing |
+| Footings | Cracks, heave, tilt, shallow depth signs | Movement stresses the entire frame |
+| Hardware | Rust, missing fasteners, wrong connectors | Connections fail before wood always looks bad |
+
+## Fairfax, Fairfax City, Loudoun, and Prince William: What We See Locally
+
+In **Fairfax County and Fairfax City**, many 2016-era decks sit on shaded lots with mature trees. Shade keeps the frame damp longer after storms, especially around joist tops, stair framing, and the ledger area. The deck may dry slowly even when the surface looks clean.
+
+In **Loudoun County**, especially Ashburn, Brambleton, Broadlands, Leesburg, Sterling, Aldie, and South Riding, many homes have HOA-governed decks with composite surfaces and pressure-treated framing. These are strong candidates for resurfacing only if the frame passes inspection.
+
+In **Prince William County**, including Gainesville, Haymarket, Bristow, Manassas, Woodbridge, and Dale City, site slope and drainage often matter. Elevated decks, walkout basements, and clay soil can put extra stress on posts, footings, stairs, and ledger connections.
+
+## The 10-Year Homeowner Inspection
+
+A homeowner can do a basic screen before calling a contractor. Do not remove structural components, and do not use the deck for heavy gatherings if it feels unstable.
+
+Check these items:
+
+1. Walk the deck and feel for bounce, soft spots, or sagging.
+2. Push the railing from side to side. It should feel rigid.
+3. Look under the deck for dark joist tops, cracked beams, or rust stains.
+4. Probe suspect joists and post bases with a screwdriver. Healthy wood resists pressure.
+5. Look at the ledger where the deck meets the house. Water staining, gaps, or missing flashing are warning signs.
+6. Check stairs separately. Stair stringers often fail before the main deck frame.
+7. Photograph every suspicious area before asking for an estimate.
+
+![Ledger board water damage at the house connection, one of the highest-risk inspection points for attached decks.](/images/blog/generated/deck-ledger-board-problems-signs-repair.jpg)
+
+## Repair, Resurface, or Replace?
+
+The right scope depends on how much of the structure is affected.
+
+**Repair is usually reasonable** when the damage is isolated: one or two joists, a small stair section, a railing post block, or a single post base. These repairs still need to be done correctly, and structural work may require permit review depending on scope and jurisdiction.
+
+**Resurfacing can make sense** when the frame is solid, the ledger is properly flashed, the posts and footings are stable, and the homeowner wants the same footprint. This is often the best value when a 2016 deck has ugly or faded boards but healthy framing.
+
+**Replacement is the better answer** when rot is widespread, the ledger is compromised, multiple posts or footings are failing, the deck is undersized for current use, or the homeowner wants a different layout, stairs, roof, screened porch, or larger outdoor living space.
+
+## What LDN Decks Should Offer These Homeowners
+
+For this customer segment, the strongest offer is not just "deck repair." It is a clear diagnostic path:
+
+- free visual deck assessment
+- photos of problem areas
+- repair vs resurfacing vs replacement recommendation
+- permit and inspection guidance for the local county
+- options for composite decking, railing, stair lighting, and upgraded framing protection
+- itemized scope before the homeowner commits
+
+That framing matters because a homeowner with a 10-year-old deck is usually not sure whether they have a $2,500 repair, a $14,000 resurfacing project, or a full replacement. The contractor who explains the decision clearly wins trust.
+
+![Deck post and footing comparison showing older moisture-damaged support versus a properly elevated post base.](/images/blog/generated/deck-post-footing-replacement-cost-northern-virginia.jpg)
+
+## Prevention Details That Should Be Included in a Replacement
+
+When a deck is rebuilt or resurfaced, the new structure should solve the moisture problem that created the failure. Key details include:
+
+- butyl joist tape on the top of every joist
+- correct ledger flashing with water directed away from the house
+- rated structural screws or bolts, not generic fasteners
+- hot-dipped galvanized or stainless hardware where required
+- post bases elevated off concrete so water can drain
+- properly sized footings below local frost depth
+- stair framing protected the same way as the main deck frame
+- ventilation and drainage under the deck where possible
+
+These details are not cosmetic. They are what help a replacement last.
+
+## Best Next Step
+
+If your deck was built around 2016 and you are seeing soft boards, loose railings, dark framing, rusty hardware, ledger staining, or stair movement, do not guess from the surface. Get the frame inspected before spending money on new boards.
+
+[LDN Decks](/contact) inspects and repairs decks across Loudoun County, Fairfax County, Fairfax City, and Prince William County. We can help you decide whether your deck needs targeted repair, resurfacing, or a full replacement.
+
+[Schedule a Free Deck Inspection](/get-estimate)
+
+---
+
+**Related:** [Deck Joist Rot Repair Guide](/blog/deck-joist-rot-repair-northern-virginia) · [Deck Ledger Board Problems](/blog/deck-ledger-board-problems-signs-repair) · [Deck Post and Footing Replacement Cost](/blog/deck-post-footing-replacement-cost-northern-virginia) · [Repair vs Replace a Deck](/blog/repair-vs-replace-deck-northern-virginia) · [Deck Repair Services](/services/deck-repair) · [Deck Replacement Services](/services/deck-replacement)`,
+    faq: [
+      { q: "Is a 10-year-old deck already too old?", a: "No. A 10-year-old deck is not automatically at the end of its life. The concern is hidden moisture damage. In Northern Virginia, a deck built around 2016 should be inspected for joist-top rot, ledger flashing problems, post base decay, stair framing issues, and hardware corrosion before any resurfacing or replacement decision is made." },
+      { q: "Why can a Trex or composite deck have framing rot underneath?", a: "Composite boards can outlast the pressure-treated frame below them. Water can still collect on joist tops, at fastener penetrations, at hanger pockets, and behind the ledger board. If joist tape, flashing, drainage, or ventilation were weak, the frame can rot even while the composite surface still looks acceptable." },
+      { q: "Should I repair or replace a deck built in 2016?", a: "Repair usually makes sense when damage is isolated. Resurfacing makes sense when the frame is solid and the homeowner wants the same footprint. Replacement is better when rot is widespread, the ledger is compromised, multiple posts or footings are failing, or the owner wants a larger or redesigned deck." },
+      { q: "Do structural deck repairs require permits in Northern Virginia?", a: "Many structural repairs do require permit review, especially ledger work, post and footing replacement, joist replacement, and major resurfacing. Requirements vary by Loudoun County, Fairfax County, Fairfax City, and Prince William County, so the project scope should be checked before work starts." },
+      { q: "What should I photograph before asking for a deck repair estimate?", a: "Photograph the deck surface, stairs, railings, underside framing, joist ends, ledger board, post bases, footings, rusted hardware, and any areas that feel soft or unstable. Clear photos help the contractor understand whether the project is likely repair, resurfacing, or replacement before the site visit." }
+    ],
+    disclaimer: "This article provides general homeowner guidance for Northern Virginia decks built around 2016. It is not a substitute for an in-person structural inspection, engineering review, or county permit determination. Structural deck safety depends on site conditions, original construction, materials, drainage, and maintenance history."
   },
   {
     id: 54,
