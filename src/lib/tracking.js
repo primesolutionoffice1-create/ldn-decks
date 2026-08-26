@@ -551,9 +551,9 @@ export function trackCtaClick({ ctaLocation, ctaLabel, href, pageContext } = {})
 /**
  * Fires the authoritative lead conversion event on /thank-you page-view
  * after ThankYouTracking verifies the server-issued confirmation token.
- * GTM may map this event for tags that still depend on lead_confirmed; the
- * direct Google Ads conversion is already fired on confirmed submit so it is
- * not dependent on this later page view.
+ * GTM may map this event for tags that depend on lead_confirmed. The paid-social
+ * deck estimate route also defers its direct Google Ads fallback until this
+ * server-confirmed point; other form routes retain their existing behavior.
  *
  * event_id matches the one passed into ContactForm's form_submit event,
  * enabling client-side dedup in GTM and server-side dedup if CAPI/Google
@@ -604,6 +604,9 @@ export function trackLeadConfirmed({ eventId } = {}) {
     page_path: window.location.pathname,
     page: window.location.pathname,
   });
+  if (attributionPayload.form_location === 'paid_social_deck_project_estimate') {
+    trackGoogleAdsLeadOnConfirmedSubmit({ eventId, attributionPayload });
+  }
   trackMetaLead({ eventId });
   trackPinterestLead({ eventId });
 }

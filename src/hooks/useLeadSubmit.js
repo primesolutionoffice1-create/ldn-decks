@@ -82,6 +82,8 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
     const homeownerStatus = formData.get('homeownerStatus') || '';
     const hoa = formData.get('hoa') || '';
     const formLocation = formElement?.dataset?.formLocation || formType;
+    const requiresServerConfirmedGoogleAds =
+      formLocation === 'paid_social_deck_project_estimate';
 
     // ContactHome collects a single `name` field. Normalize it into
     // firstName/lastName before the server action so Meta CAPI gets the
@@ -126,10 +128,12 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
           eventId,
           pageContext,
         });
-        trackGoogleAdsLeadOnConfirmedSubmit({
-          eventId,
-          attributionPayload: trackingReceipt?.attributionPayload || {},
-        });
+        if (!requiresServerConfirmedGoogleAds) {
+          trackGoogleAdsLeadOnConfirmedSubmit({
+            eventId,
+            attributionPayload: trackingReceipt?.attributionPayload || {},
+          });
+        }
       }
       if (result.confirmationToken) {
         markLeadConfirmationPending(eventId);
