@@ -129,6 +129,17 @@ async function verifyRouteDefersUntilConfirmation() {
     formType: 'paid_social',
     formLocation: 'paid_social_deck_project_estimate',
   });
+  const preConfirmationLeads = tracking.window.dataLayer.filter(
+    (event) => event.event === 'generate_lead'
+  );
+  const formSubmits = tracking.window.dataLayer.filter(
+    (event) => event.event === 'form_submit'
+  );
+  assert.equal(preConfirmationLeads.length, 0);
+  assert.equal(formSubmits.length, 1);
+  assert.equal(formSubmits[0].event_id, 'event-123');
+  assert.equal(formSubmits[0].transaction_id, 'event-123');
+
   api.markLeadConfirmationPending('event-123');
   api.trackLeadConfirmed({ eventId: 'event-123' });
   api.trackLeadConfirmed({ eventId: 'event-123' });

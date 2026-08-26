@@ -364,7 +364,9 @@ export function trackMetaPageView() {
 
 /**
  * Track quote form submission
- * Fires: GA4 generate_lead + form_submit attribution payload.
+ * Fires: form_submit attribution payload.
+ * GA4 generate_lead is emitted only after server confirmation, when GTM maps
+ * lead_confirmed to the authoritative conversion event.
  * Google Ads direct conversion fires after the server confirms the submit in
  * useLeadSubmit, using the same event_id and attribution payload.
  * Click IDs (gclid/gbraid/wbraid/fbclid/msclkid) are pushed to dataLayer so GTM
@@ -431,21 +433,6 @@ export function trackFormSubmit({
   };
   storeLeadAttributionPayload(leadEventId, attributionPayload);
 
-  push({
-    event: 'generate_lead',
-    form_type: formType,
-    form_location: formLocation || formType,
-    lead_source: 'website_contact_form',
-    event_id: leadEventId,
-    transaction_id: leadEventId,
-    value: GOOGLE_ADS_LEAD_CONVERSION_VALUE,
-    currency: GOOGLE_ADS_LEAD_CONVERSION_CURRENCY,
-    email: email || null,
-    phone: phone || null,
-    ...pageContextPayload(pageContext),
-    page_location: window.location.href,
-    page_path: window.location.pathname,
-  });
   push({
     event: 'form_submit',
     event_id: leadEventId,
