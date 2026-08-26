@@ -1,0 +1,41 @@
+Level,Negative keyword,Match type,Reason
+Account,diy,Phrase,Blocks non-buyer traffic
+Account,do it yourself,Phrase,Blocks non-buyer traffic
+Account,how to,Phrase,Blocks instructional traffic
+Account,plans,Phrase,Blocks design-only traffic
+Account,blueprints,Phrase,Blocks design-only traffic
+Account,free,Phrase,Blocks low-budget traffic
+Account,cheap,Phrase,Blocks low-budget traffic
+Account,used,Phrase,Blocks used-material traffic
+Account,materials only,Phrase,Blocks retail board shoppers
+Account,decking boards only,Phrase,Blocks retail board shoppers
+Account,home depot,Phrase,Blocks retail shoppers
+Account,lowes,Phrase,Blocks retail shoppers
+Account,menards,Phrase,Blocks retail shoppers
+Account,cost per board,Phrase,Blocks material-only cost research
+Account,price per board,Phrase,Blocks material-only cost research
+Account,jobs,Phrase,Blocks employment traffic
+Account,career,Phrase,Blocks employment traffic
+Account,salary,Phrase,Blocks employment traffic
+Account,training,Phrase,Blocks education traffic
+Account,classes,Phrase,Blocks education traffic
+Campaign,deck stain,Phrase,Wrong service intent
+Campaign,deck staining,Phrase,Wrong service intent
+Campaign,deck paint,Phrase,Wrong service intent
+Campaign,deck painting,Phrase,Wrong service intent
+Campaign,power wash,Phrase,Wrong service intent
+Campaign,pressure wash,Phrase,Wrong service intent
+Campaign,sealer,Phrase,Maintenance-only traffic
+Campaign,sealant,Phrase,Maintenance-only traffic
+Campaign,cleaner,Phrase,Maintenance-only traffic
+Campaign,cleaning,Phrase,Maintenance-only traffic
+Campaign,repair kit,Phrase,Low-value repair traffic
+Campaign,board only,Phrase,Material-only traffic
+Campaign,samples only,Phrase,Material-only traffic
+Campaign,wholesale,Phrase,Material-only traffic
+Campaign,supplier,Phrase,Material supplier traffic
+Campaign,distributor,Phrase,Material supplier traffic
+Ad group - Fiberon Comparison,lowes fiberon,Phrase,Retail shopper traffic
+Ad group - Fiberon Comparison,home depot fiberon,Phrase,Retail shopper traffic
+Ad group - Fiberon Comparison,fiberon boards,Phrase,Material-only shopper traffic
+Ad group - Fiberon Comparison,fiberon price per board,Phrase,Material-only shopper traffic

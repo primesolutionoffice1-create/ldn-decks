@@ -178,6 +178,7 @@ export default function FiberonReviewPage() {
           <strong>Compare brands:</strong>{' '}
           <Link href="/trex-transcend-review-northern-virginia">Trex Transcend Review</Link> ·{' '}
           <Link href="/trex-vs-timbertech-vs-azek">Trex vs TimberTech vs AZEK</Link> ·{' '}
+          <Link href="/replace-wood-deck-with-composite-northern-virginia">Replace Wood Deck With Composite</Link> ·{' '}
           <Link href="/composite-deck-cost-northern-virginia">Composite Deck Cost Guide NoVA</Link>
         </p>
 

@@ -212,6 +212,7 @@ export const SEGMENT_LABELS = {
   'deck-permit-hoa-cost-loudoun-county': 'Deck Permit & HOA Cost — Loudoun County',
   'resurface-or-replace-deck-financing': 'Resurface or Replace — Financing Guide',
   'wood-vs-composite-deck-long-term-cost': 'Wood vs Composite Deck Long-Term Cost',
+  'replace-wood-deck-with-composite-northern-virginia': 'Replace Wood Deck With Composite',
 
   // Filled from scripts/audit-breadcrumbs.mjs 2026-05-28
   'best-time-to-finance-build-deck-northern-virginia': 'Best Time to Finance & Build a Deck in NoVA',
