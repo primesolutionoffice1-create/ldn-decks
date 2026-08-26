@@ -7,7 +7,7 @@ import { BUSINESS } from '@/lib/business';
 
 const GOOGLE_ADS_LEAD_CONVERSION_SEND_TO =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO ||
-  'AW-16888402136/IxFhCJHb_uUcENihgvU-';
+  'AW-16888402136/KNF1CJur4tIbENihgvU-';
 const GOOGLE_ADS_LEAD_CONVERSION_VALUE = 1;
 const GOOGLE_ADS_LEAD_CONVERSION_CURRENCY = 'USD';
 
@@ -454,9 +454,10 @@ export function trackCtaClick({ ctaLocation, ctaLabel, href, pageContext } = {})
  * Anti-replay: useEffect re-runs on /thank-you reload or back-forward
  * navigation; without a guard, each re-mount fires another conversion
  * with the same event_id. GTM transaction_id dedup catches this in the
- * tag layer, but we block at the source too — belt-and-braces. The
- * sessionStorage key is scoped to event_id, so legitimate new
- * submissions (different event_id, even from the same user) still fire.
+ * tag layer, and sessionStorage blocks repeat fires on the same device.
+ * Server-side proof verification in ThankYouTracking is the authority
+ * that this was a real submitted lead, so local pending state is consumed
+ * when present but must not block a verified conversion.
  */
 export function trackLeadConfirmed({ eventId } = {}) {
   if (typeof window === 'undefined') return;
@@ -472,15 +473,13 @@ export function trackLeadConfirmed({ eventId } = {}) {
     // sessionStorage unavailable; continue with the pending-lead guard below.
   }
 
-  if (!consumeLeadConfirmationPending(eventId)) {
-    return;
-  }
+  consumeLeadConfirmationPending(eventId);
 
   try {
     if (window.sessionStorage) window.sessionStorage.setItem(firedKey, '1');
   } catch (e) {
     // sessionStorage unavailable (Safari private mode, embedded contexts).
-    // The pending-lead guard already confirmed this came from this SPA flow.
+    // Google Ads transaction_id still deduplicates repeat conversions.
   }
 
   const attributionPayload = consumeLeadAttributionPayload(eventId);
