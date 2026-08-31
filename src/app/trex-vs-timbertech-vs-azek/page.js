@@ -10,6 +10,7 @@ import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import AboveFoldCTA from '@/components/AboveFoldCTA';
 
 export const metadata = buildMetadata({
   path: '/trex-vs-timbertech-vs-azek',
@@ -44,6 +45,11 @@ export default function TrexVsTimberTechPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>The four major composite decking brands compared head-to-head for Northern Virginia. 2026 pricing, warranties, heat performance and installer notes.</p>
         </div>
       </section>
+
+      <AboveFoldCTA
+        headline="Choosing between Trex, TimberTech, AZEK, or Fiberon? Compare samples and get a written installed estimate."
+        estimateLabel="Compare Materials & Get Estimate"
+      />
 
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -117,6 +123,12 @@ export default function TrexVsTimberTechPage() {
               </tbody>
             </table>
           </div>
+
+          <SimpleCTA
+            title="Ready to Compare Installed Options for Your Deck?"
+            buttonText="Get a Material & Installation Estimate"
+            link="/get-estimate"
+          />
 
           <h2 style={S.h2}>Where Fiberon Fits</h2>
           <p style={S.p}>Fiberon is the fourth major US capped-composite brand and the most common cross-shop against Trex Transcend in the NoVA market. Owned by Fortune Brands Innovations since 2021 and manufactured in New London, North Carolina and Meridian, Idaho, it sits in the same price-and-performance band as Transcend with a slightly different look and feel.</p>
