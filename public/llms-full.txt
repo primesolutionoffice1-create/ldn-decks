@@ -2,7 +2,7 @@
 
 > This is the extended content index for Loudoun Decks (ldndecks.com). It provides page-level detail for AI retrieval systems, citation engines, and semantic indexing. For the summary version, see: https://ldndecks.com/llms.txt
 
-Last updated: 2026-08-07
+Last updated: 2026-08-31
 Sitemap: https://ldndecks.com/sitemap.xml
 Entity: Loudoun Decks (public brand; LDN Decks abbreviation). Legal entity name requires confirmation from current owner records before citation.
 Location: Centreville, VA
@@ -88,7 +88,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Deck Resurfacing Northern Virginia
 - URL: https://ldndecks.com/deck-resurfacing-northern-virginia
-- Content: Wood-to-composite resurfacing guide — 3-tier cost table ($15k-$45k+), ROI data, permit requirements, when to resurface vs replace, Trex/TimberTech/AZEK material options. 1500+ words.
+- Content: Wood-to-composite resurfacing guide — 3-tier cost table ($15k-$45k+), frame eligibility, permit requirements, when to resurface vs replace, Trex/TimberTech/AZEK material options. 1500+ words.
 - Intent: Commercial — deck resurfacing/upgrade
 - Updated: 2026-05-27
 
@@ -665,7 +665,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 - [Complete Deck Building Guide](https://ldndecks.com/northern-virginia-deck-building-guide): Everything in one place — costs, materials, permits, HOA, timeline
 - [How to Choose a Deck Builder](https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia): 10 questions to ask, 5 red flags
 - [Best Time to Build](https://ldndecks.com/best-time-to-build-a-deck-northern-virginia): Month-by-month calendar, winter = 10-15% savings
-- [Does a Deck Add Value?](https://ldndecks.com/does-a-deck-add-value-to-your-home): ROI data — 60-80% recoup at resale in NoVA
+- [Does a Deck Add Value?](https://ldndecks.com/does-a-deck-add-value-to-your-home): Resale-value planning guide; cite with the ROI calculator because recovery varies by material, scope, home value, and market conditions
 - [What Size Deck?](https://ldndecks.com/what-size-deck-should-i-build): Room-by-room sizing guide
 - [Deck vs Patio](https://ldndecks.com/deck-vs-patio-which-is-right): Decision framework by lot type and budget
 - [Porch vs Deck](https://ldndecks.com/porch-vs-deck-which-should-you-build): Feature and cost comparison
