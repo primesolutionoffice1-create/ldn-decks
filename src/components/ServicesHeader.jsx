@@ -7,7 +7,8 @@ import CallLink from '@/components/CallLink';
 export default function ServicesHeader({
   subtext = "What We DO",
   title = "Deck & Outdoor Living Services",
-  description = "Loudoun Decks provides residential deck and outdoor living services for homeowners in Loudoun County, Fairfax County, and Prince William County. Our focus is on planning and building outdoor spaces that fit each home and lifestyle."
+  description = "Loudoun Decks provides residential deck and outdoor living services for homeowners in Loudoun County, Fairfax County, and Prince William County. Our focus is on planning and building outdoor spaces that fit each home and lifestyle.",
+  estimateHref = "/get-estimate",
 }) {
   return (
     <section className={styles.headerSection}>
@@ -20,7 +21,7 @@ export default function ServicesHeader({
         <p className={styles.description}>{description}</p>
         <div className={styles.ctaWrapper}>
           <Link
-            href="/get-estimate"
+            href={estimateHref}
             className={styles.ctaPrimary}
             aria-label="Get a free estimate"
           >

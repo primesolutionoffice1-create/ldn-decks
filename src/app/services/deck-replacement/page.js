@@ -118,7 +118,19 @@ export default function DeckReplacementPage() {
         subtext="Projects from $15,000+"
         title="Professional Deck Replacement in Northern Virginia"
         description="Don't let an aging, splintering deck hold you back. We specialize in tearing down old structures and building premium, low-maintenance outdoor retreats. Permits and HOA handled. Typical build timeline: 2-4 weeks."
+        estimateHref="#deck-replacement-estimate"
       />
+
+      <div id="deck-replacement-estimate" style={{ scrollMarginTop: '24px' }}>
+        <AboveFoldCTA
+          headline="Aging deck in Northern Virginia? Get a free structural evaluation and replacement estimate today."
+          showQuickForm
+          quickFormService="Deck Replacement"
+          quickFormLocation="paid_search_replacement_above_fold"
+          quickFormHeading="Need a deck replacement quote? Send the basics and we will call back."
+        />
+      </div>
+
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
         <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-02" />
       </section>
@@ -135,14 +147,6 @@ export default function DeckReplacementPage() {
           { href: "/deck-safety-inspection-checklist", label: "Safety inspection checklist" },
           { href: "/deck-cost-calculator", label: "Deck cost calculator" }
         ]}
-      />
-
-      <AboveFoldCTA
-        headline="Aging deck in Northern Virginia? Get a free structural evaluation and replacement estimate today."
-        showQuickForm
-        quickFormService="Deck Replacement"
-        quickFormLocation="paid_search_replacement_above_fold"
-        quickFormHeading="Need a deck replacement quote? Send the basics and we will call back."
       />
 
       <GeoAnswerBlock
