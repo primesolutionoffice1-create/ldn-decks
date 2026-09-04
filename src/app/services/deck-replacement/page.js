@@ -19,6 +19,8 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import DecisionSupportSection from '@/components/DecisionSupportSection';
+import ArticleSchema from '@/components/ArticleSchema';
 export const metadata = buildMetadata({
   path: "/services/deck-replacement",
   title: "Professional Deck Replacement Northern Virginia | Rebuild & Remodel",
@@ -34,8 +36,8 @@ const replacementSections = [
     ],
     listItems: [
       { label: "1. Safety First", text: "We identify and fix hidden structural failures in old ledger boards or joists." },
-      { label: "2. Value Increase", text: "A new composite deck offers a significantly higher ROI than patching up an old wood one." },
-      { label: "3. Zero Maintenance", text: "Trade in your yearly staining and sanding for a deck that stays beautiful for 25+ years." },
+      { label: "2. Value Planning", text: "A new composite deck can be the stronger long-term choice when repairs would leave old structural risk in place." },
+      { label: "3. Lower Maintenance", text: "Trade regular staining and sanding for a lower-maintenance composite or PVC surface selected for your project goals." },
       { label: "4. Modern Aesthetics", text: "Update your home's look with current colors, hidden fasteners, and sleek railing systems." }
     ]
   },
@@ -48,19 +50,19 @@ const replacementSections = [
       { label: "Structural Audit", text: "We perform a deep-dive inspection of your existing framing to see what can be safely salvaged." },
       { label: "Clean Tear-Down", text: "Eco-friendly removal and disposal of your old, rotted, or infested deck materials." },
       { label: "Framing Reinforcement", text: "We reinforce existing joists or pour new footings to meet modern building codes." },
-      { label: "Composite Transformation", text: "Expert installation of Trex, AZEK, or TimberTech boards with a 25-year manufacturer warranty." }
+      { label: "Composite Transformation", text: "Installation of Trex, AZEK, or TimberTech boards with product-specific manufacturer warranty terms reviewed during material selection." }
     ]
   }
 ];
 
 const replacementBenefits = [
-  { title: "Code Compliance", desc: "We ensure every rebuild meets or exceeds current VA building codes." },
-  { title: "Trex Specialists", desc: "Authorized installers for the world's #1 decking brand." },
+  { title: "Code Compliance", desc: "We plan rebuilds around current Northern Virginia permit and inspection requirements." },
+  { title: "Composite Deck Planning", desc: "Trex, TimberTech, and AZEK/PVC options are matched to budget, exposure, railing plan, and maintenance goals." },
   { title: "Clean Jobsite", desc: "No debris left behind; we respect your lawn and landscaping." },
   { title: "Permits & HOA Handled", desc: "We coordinate county permit requirements and HOA architectural review details." },
   { title: "Typical Timeline: 2-4 Weeks", desc: "Most full replacement builds take 2-4 weeks once permits and material selections are complete." },
   { title: "Before & After Results", desc: "See completed deck transformations so you can compare old wood decks with finished composite rebuilds." },
-  { title: "Fixed Pricing", desc: "Detailed, itemized quotes with no hidden 'extra' fees during construction." }
+  { title: "Written Proposal", desc: "Detailed, itemized scope and pricing after inspection, material selection, and permit path review." }
 ];
 
 const replacementFaq = [
@@ -86,10 +88,118 @@ const replacementFaq = [
   },
 ];
 
+const replacementDecisionColumns = [
+  {
+    title: "Replacement is the right conversation when",
+    items: [
+      "Ledger attachment, posts, footings, joists, stairs, or railings show system-wide deterioration or unsafe movement.",
+      "The owner wants to reset layout, structure, permits, railings, stairs, lighting, and low-maintenance decking in one scope.",
+      "Repair or resurfacing would leave old structural risk underneath a new surface.",
+    ],
+  },
+  {
+    title: "Do not overbuy replacement when",
+    items: [
+      "The issue is a localized failed inspection item, isolated rot, a loose railing, or one stair section on an otherwise sound deck.",
+      "The existing frame passes inspection and the main goal is new composite boards, railings, fascia, and lighting.",
+      "Budget planning has not separated repair, resurfacing, and full rebuild assumptions.",
+    ],
+  },
+  {
+    title: "Best next step",
+    items: [
+      "Run the repair/resurface/replacement comparison before treating every aging deck as a teardown.",
+      "Use the cost calculator and permit guides to model the rebuild path by county and project size.",
+      "Request a written replacement scope only after the inspection confirms the old structure should not be kept.",
+    ],
+  },
+];
+
+const replacementGeoAnswers = [
+  {
+    id: 'deck-replacement-cost-answer',
+    q: 'How much does deck replacement cost?',
+    a: 'Deck replacement cost depends on size, framing scope, demolition, stair layout, railing, decking material, permits, HOA requirements, and whether hidden structural damage is found. Composite replacement usually costs more than basic wood replacement, but it can reduce future maintenance and improve long-term usability.',
+  },
+  {
+    id: 'reuse-old-deck-framing',
+    q: 'Can old deck framing be reused?',
+    a: 'Old framing can sometimes be reused, but only if it is structurally sound, code-compliant, properly flashed, and compatible with the new decking system. Many replacement projects reveal ledger, joist, stair, or footing issues that should be corrected before new boards and railings are installed.',
+  },
+  {
+    id: 'deck-replacement-timeline',
+    q: 'How long does deck replacement take?',
+    a: 'Deck replacement timing depends on design, permits, HOA approval, demolition, material availability, weather, and inspection schedules. A straightforward replacement may be faster than a full redesign, while elevated decks, stairs, covered areas, lighting, or structural corrections usually require more planning and build time.',
+  },
+  {
+    id: 'deck-replacement-permits',
+    q: 'Do deck replacements need permits?',
+    a: 'Many deck replacements in Northern Virginia require permits when structural components, footings, ledgers, stairs, railings, or layout dimensions change. Permit requirements vary by county and project scope. Homeowners should confirm requirements before construction so inspections, code details, and HOA documentation are handled correctly.',
+  },
+  {
+    id: 'composite-deck-replacement-value',
+    q: 'Is composite worth it for deck replacement?',
+    a: 'Composite is often worth considering for replacement when the homeowner wants lower maintenance, better long-term appearance, and fewer staining or sealing cycles. The value depends on project budget, expected ownership period, sun exposure, design goals, and whether the existing frame needs significant structural work.',
+  },
+];
+
 export default function DeckReplacementPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description="Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds." speakable />
+      <WebPageSchema dateModified="2026-09-04" url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description="Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds." speakable />
+      <ArticleSchema
+        title="Deck Replacement in Northern Virginia"
+        description="Deck replacement planning guide for Northern Virginia homeowners comparing repair, resurfacing, full rebuilds, structural code resets, local permit paths, composite materials, and written estimate routing."
+        path="/services/deck-replacement"
+        image="/social/deck-replacement-service-social.png"
+        datePublished="2026-05-26"
+        dateModified="2026-09-04"
+        speakable={[
+          '#deck-replacement-answer',
+          '#deck-replacement-decision-support',
+          '#deck-replacement-code-reset',
+          '#deck-replacement-local-markets',
+          '#deck-replacement-cost-guides',
+          '#deck-replacement-estimate-routing',
+        ]}
+        citableParts={[
+          {
+            id: 'deck-replacement-answer',
+            name: 'Deck Replacement Quick Answer',
+            text: 'Deck replacement is usually the right path when ledger attachment, footings, posts, joists, stairs, or railings show widespread deterioration or when repair costs approach a full rebuild.',
+          },
+          ...replacementGeoAnswers.map((item) => ({
+            id: item.id,
+            name: item.q,
+            text: item.a,
+          })),
+          {
+            id: 'deck-replacement-decision-support',
+            name: 'Deck Replacement Decision Support',
+            text: 'Homeowners should compare repair, resurfacing, and full replacement before treating every aging deck as a teardown, with frame condition deciding the correct path.',
+          },
+          {
+            id: 'deck-replacement-code-reset',
+            name: 'Deck Replacement Code Reset',
+            text: 'A full deck replacement can reset footings, joist sizing, ledger connections, square layout, permit history, stairs, railings, and low-maintenance decking in one scope.',
+          },
+          {
+            id: 'deck-replacement-local-markets',
+            name: 'Deck Replacement Local Market Routing',
+            text: 'Deck replacement planning should route by Northern Virginia market because county permits, HOA rules, access, and existing framing conditions change the written scope.',
+          },
+          {
+            id: 'deck-replacement-cost-guides',
+            name: 'Deck Replacement Cost and Decision Guides',
+            text: 'Deck replacement budget planning should compare resurfacing versus replacement, repair-first issues, composite costs, material comparisons, payment estimates, before-and-after proof, and written estimate requests.',
+          },
+          {
+            id: 'deck-replacement-estimate-routing',
+            name: 'Deck Replacement Estimate Routing',
+            text: 'A written deck replacement estimate should follow a structural evaluation, material choice, permit path, local-market review, and repair/resurface/replacement decision.',
+          },
+        ]}
+      />
       <JsonLd
         data={{
           '@context': 'https://schema.org',
@@ -107,7 +217,7 @@ export default function DeckReplacementPage() {
       />
       <ServiceSchema
         name="Deck Replacement and Rebuilding"
-        description="Professional deck replacement services including structural assessment, old deck removal, and premium composite rebuilds using Trex and TimberTech."
+        description="Professional deck replacement services including structural assessment, old deck removal, and composite or PVC rebuild planning using Trex, TimberTech, and AZEK options."
         url="https://ldndecks.com/services/deck-replacement"
         category="Deck Construction"
         lowPrice="15000"
@@ -117,7 +227,7 @@ export default function DeckReplacementPage() {
       <ServicesHeader
         subtext="Projects from $15,000+"
         title="Professional Deck Replacement in Northern Virginia"
-        description="Don't let an aging, splintering deck hold you back. We specialize in tearing down old structures and building premium, low-maintenance outdoor retreats. Permits and HOA handled. Typical build timeline: 2-4 weeks."
+        description="Don't let an aging, splintering deck hold you back. We inspect old structures, separate repair from replacement, and build low-maintenance outdoor retreats with permit and HOA planning included in the written scope."
         estimateHref="#deck-replacement-estimate"
       />
 
@@ -132,7 +242,7 @@ export default function DeckReplacementPage() {
       </div>
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-02" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-09-04" />
       </section>
 
       <PlanningUpdate
@@ -149,20 +259,50 @@ export default function DeckReplacementPage() {
         ]}
       />
 
-      <GeoAnswerBlock
-        question="When should a Northern Virginia homeowner replace a deck instead of repairing it?"
-        answer="A deck should usually be replaced when the ledger connection, footings, posts, joists, stairs, or railings show widespread deterioration, when the frame cannot safely accept new composite boards, or when repairs approach the cost of a rebuild. Replacement also resets structural details for current permit review, HOA documentation, modern railing systems, and low-maintenance composite or PVC decking."
-        facts={[
-          'Replacement path: unsafe structure, failing frame, major layout change, or full code reset',
-          'Repair path: isolated post, stair, railing, ledger, or board issues on an otherwise sound deck',
-          'Proof status: before/after claims require verified project evidence before public case-study use',
-        ]}
-        links={[
-          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
-          { href: '/services/deck-repair', label: 'Deck repair' },
-          { href: '/composite-deck-cost-northern-virginia', label: 'Replacement cost planning' },
-        ]}
-      />
+      <section id="deck-replacement-answer" data-speakable="deck-replacement-answer">
+        <GeoAnswerBlock
+          question="When should a Northern Virginia homeowner replace a deck instead of repairing it?"
+          answer="A deck should usually be replaced when the ledger connection, footings, posts, joists, stairs, or railings show widespread deterioration, when the frame cannot safely accept new composite boards, or when repairs approach the cost of a rebuild. Replacement also resets structural details for current permit review, HOA documentation, modern railing systems, and low-maintenance composite or PVC decking."
+          facts={[
+            'Replacement path: unsafe structure, failing frame, major layout change, or full code reset',
+            'Repair path: isolated post, stair, railing, ledger, or board issues on an otherwise sound deck',
+            'Proof status: before/after claims require verified project evidence before public case-study use',
+          ]}
+          links={[
+            { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
+            { href: '/services/deck-repair', label: 'Deck repair' },
+            { href: '/composite-deck-cost-northern-virginia', label: 'Replacement cost planning' },
+          ]}
+        />
+      </section>
+
+      <section style={{ padding: '2.5rem 1.5rem', background: '#fff' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
+            {replacementGeoAnswers.map((item) => (
+              <section key={item.id} id={item.id} data-speakable={item.id} style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '1rem', background: '#fbfdff' }}>
+                <h2 style={{ fontSize: '1.08rem', fontWeight: 800, marginBottom: '0.55rem' }}>{item.q}</h2>
+                <p style={{ margin: 0, lineHeight: 1.65, color: '#334155' }}>{item.a}</p>
+              </section>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="deck-replacement-decision-support" data-speakable="deck-replacement-decision-support">
+        <DecisionSupportSection
+          eyebrow="Replacement triage"
+          title="Replace when the structure needs a reset"
+          intro="Full replacement is a high-value path when it solves safety, code, layout, and long-term material goals together. It should not be the default answer for isolated repair items or a frame that still qualifies for resurfacing."
+          columns={replacementDecisionColumns}
+          links={[
+            { href: '/deck-resurfacing-vs-replacement', label: 'Compare all three paths' },
+            { href: '/services/deck-repair', label: 'Review repair-first issues' },
+            { href: '/deck-cost-calculator', label: 'Model rebuild cost' },
+            { href: '/deck-permit-fairfax-county-virginia', label: 'Check permit planning' },
+          ]}
+        />
+      </section>
 
       {/* Pricing Anchor - Conversion Filtering */}
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
@@ -187,7 +327,7 @@ export default function DeckReplacementPage() {
           <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
             <strong style={{ color: '#222' }}>Full deck replacement projects typically range from $20,000-$50,000</strong>
             {' '}— deck size, structural condition, materials, and railing upgrades affect final pricing.{' '}
-            <strong>Free structural evaluation, permit guidance, and HOA coordination included.</strong>
+            <strong>Structural evaluation, permit guidance, and HOA coordination are confirmed in the written project scope.</strong>
           </p>
         </div>
       </section>
@@ -195,7 +335,7 @@ export default function DeckReplacementPage() {
       <ServiceMain
         subtitle="Northern Virginia's Rebuild Experts"
         title="Is it Time to Replace Your Deck?"
-        description="If your deck is over 15 years old, shows signs of wood rot, or requires constant sanding and staining, a professional replacement is your best investment. We help Northern Virginia homeowners transition from old pressure-treated wood to luxury composite decking."
+        description="If your deck is over 15 years old, shows signs of wood rot, or requires constant sanding and staining, replacement may be the safer long-term investment. We help Northern Virginia homeowners compare repair, resurfacing, wood replacement, and composite or PVC rebuild options."
         listItems={[
           "Full removal of existing structural debris",
           "Verification of framing and footing integrity",
@@ -209,7 +349,7 @@ export default function DeckReplacementPage() {
         image2="/images/img06.jpeg"
       />
       <ServiceContentExpansion sections={replacementSections} />
-      <section style={{ padding: '20px 20px 40px', maxWidth: '900px', margin: '0 auto', lineHeight: 1.7 }}>
+      <section id="deck-replacement-code-reset" data-speakable="deck-replacement-code-reset" style={{ padding: '20px 20px 40px', maxWidth: '900px', margin: '0 auto', lineHeight: 1.7 }}>
         <h2 style={{ fontSize: '30px', marginBottom: '16px', fontWeight: 800 }}>Replacement Is Also a Code Reset</h2>
         <p style={{ fontSize: '17px', color: '#555', marginBottom: 0 }}>
           A full replacement lets us correct the problems that make older decks fail: shallow footings, undersized joists,
@@ -255,7 +395,7 @@ export default function DeckReplacementPage() {
       <ServiceAreasGrid />
       <ServicesCallToAction />
 
-      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+      <section id="deck-replacement-local-markets" data-speakable="deck-replacement-local-markets" style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Replacement by Local Market</h2>
         <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
           Replacement projects often depend on county permit review, HOA rules, access, and existing framing conditions. Use the local planning page closest to the property before requesting a written replacement estimate.
@@ -286,7 +426,7 @@ export default function DeckReplacementPage() {
         </div>
       </section>
 
-      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+      <section id="deck-replacement-cost-guides" data-speakable="deck-replacement-cost-guides" style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Replacement Cost &amp; Decision Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Resurfacing vs Full Replacement →</Link></li>
@@ -318,8 +458,10 @@ export default function DeckReplacementPage() {
         </div>
       </section>
 
-      <RelatedGuides currentPath="/services/deck-replacement" />
-      <SimpleCTA title="Ready for a New Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
+      <RelatedGuides currentPath="/services/deck-replacement" category="ai-retrieval" />
+      <section id="deck-replacement-estimate-routing" data-speakable="deck-replacement-estimate-routing">
+        <SimpleCTA title="Ready for a New Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
+      </section>
       <ContactHome />
     </main>
   );

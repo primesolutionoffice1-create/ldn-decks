@@ -16,6 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 const _meta = buildMetadata({
   path: '/deck-repair',
@@ -62,7 +63,7 @@ const repairFAQs = [
   },
   {
     q: "How long will a deck repair last in Virginia's climate?",
-    a: "A professional structural repair using high-grade pressure-treated lumber or composite can extend the life of your deck by 10-15 years or more."
+    a: "Repair lifespan depends on what failed, how much of the structure is corrected, drainage, fasteners, exposure, and ongoing maintenance. A site inspection should separate a limited repair from resurfacing or full replacement before any lifespan expectation is used for budgeting."
   },
   {
     q: "Do you offer emergency deck safety inspections?",
@@ -82,17 +83,17 @@ const expansionSections = [
   {
     title: "The Critical Importance of Deck Maintenance in Northern Virginia",
     paragraphs: [
-      "Residential decks in Northern Virginia are subject to extreme environmental stress. Between the high humidity of our summers and the snow and ice cycles of winter, even the best-built decks eventually require professional attention. As a leading deck builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks understands that deck repair is not just about aesthetics-it's about preserving a critical structural component of your home.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We have seen countless decks in Ashburn and Leesburg that look healthy on the surface but have significant rot hidden beneath the decking boards. This is why we advocate for proactive maintenance and professional safety audits. Catching a loose ledger or a rotting post early can save you thousands of dollars in full replacement costs and prevent potentially dangerous structural failures.",
-      "If you are searching for a deck contractor near you who values safety and structural integrity, look no further. Our team provides comprehensive restoration services designed specifically for the unique architectural styles and building codes found across NoVA and Stafford."
+      "Residential decks in Northern Virginia face humidity, rain, freeze-thaw cycles, and heavy seasonal use. Deck repair is not just about appearance; it is about understanding whether the boards, railings, stairs, ledger, posts, beams, joists, and footings are still performing safely.",
+      "Loudoun Decks serves Loudoun County, Fairfax County, and Prince William County with inspection-first repair planning. A deck can look healthy on the surface while hiding rot beneath boards or around structural connections. Finding a loose ledger, rotted post, or unsafe stair detail early can help homeowners choose repair, resurfacing, or replacement before the scope grows.",
+      "If you are searching for a deck contractor near you who values safety and structural integrity, start with the full structural repair hub linked on this page. It explains the repair-versus-replacement decision in more detail."
     ]
   },
   {
     title: "Identifying Red Flags: When Your Deck Becomes a Hazard",
     paragraphs: [
       "Many homeowners in regions like Fairfax Station and Burke overlook the subtle signs of deck degradation. The most common 'red flag' is wobbly or loose railings. In Virginia, building codes have become much stricter regarding railing attachment methods because railings are responsible for preventing falls. If your railing posts are through-bolted rather than just nailed, you are in much better shape. If they move when you lean on them, you need immediate deck repair.",
-      "Another critical area is the stair system. Over time, the 'stringers' (the side supports of the stairs) can pull away from the deck or rot at the base where they touch the ground. We frequently handle stair restorations in Sterling and Herndon, reinforcing these high-traffic areas with custom steel brackets and new pressure-treated timber. Ensuring your stairs are level, secure, and documented before repair begins is a core part of an inspection-first repair process.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. As your custom deck builder and restoration expert, we perform deep-dive inspections to identify these hazards before they escalate into emergencies."
+      "Another critical area is the stair system. Over time, stair stringers can pull away from the deck or rot at the base where they touch the ground. Ensuring your stairs are level, secure, and documented before repair begins is a core part of an inspection-first repair process.",
+      "Loudoun Decks serves Loudoun County, Fairfax County, and Prince William County with repair review that looks for structural warning signs before they become larger project issues."
     ],
     listItems: [
       { label: "Ledger Board Failures", text: "The #1 cause of deck collapses; we ensure your deck is physically bolted to the house's rim joist." },
@@ -106,15 +107,15 @@ const expansionSections = [
     paragraphs: [
       "One of our most popular services for homeowners in Loudoun County and Arlington is 'Deck Resurfacing.' This process is ideal if your deck's 'skeleton'-the posts, beams, and joists-is still structurally sound but the top boards are splintering or warped. By removing the surface material and replacing it with brand-new wood or low-maintenance composite like Trex, you can get a 'new deck' look for a fraction of the cost of a full knockdown and rebuild.",
       "During a resurfacing project, we also take the opportunity to reinforce the existing structure. We add 'joist hangers' where they might be missing and double-up on beams to bring the deck in line with modern safety standards. This hybrid approach is extremely popular in Great Falls and Mclean, where large existing footprints make full replacements prohibitively expensive or complicated with modern zoning setbacks.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. Whether you need a simple board swap or a massive structural overhaul, we approach every repair project with the same level of care and precision as our new $50k+ custom builds."
+      "Loudoun Decks serves Loudoun County, Fairfax County, and Prince William County with repair, resurfacing, and replacement planning so homeowners can approve the right scope instead of guessing from surface wear alone."
     ]
   },
   {
     title: "The Loudoun Decks Restoration Protocol",
     paragraphs: [
-      "Our deck repair process begins with a comprehensive safety audit. We don't just quote you for what you asked for; we tell you what you *need* to be safe. Our technicians crawl into the substructure to check for rot and fastener integrity. In areas like Gainesville and Manassas, where older neighborhoods often feature decks built 20+ years ago, these audits are literally lifesavers.",
+      "Our deck repair process begins with a safety-focused inspection. We do not want to quote a cosmetic repair when the substructure needs attention, so the review includes visible rot, fastener condition, railings, stairs, ledger attachment, and support posts.",
       "Once we identify the scope, we source materials that match your existing deck as closely as possible. We specialize in working with aged cedar, pressure-treated pine, and all major composite brands. Our goal is for the repair to be as invisible as possible, maintaining the cohesive look of your outdoor space. We also provide advice on staining and sealing to ensure the new wood integrates perfectly with the old.",
-      "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We are proud to be the premier deck company near you for restorations, helping Northern Virginia homeowners protect their families and their real estate investments."
+      "Loudoun Decks serves Loudoun County, Fairfax County, and Prince William County with repair and restoration planning for homeowners who need a practical path from safety concern to written scope."
     ]
   }
 ];
@@ -122,7 +123,7 @@ const expansionSections = [
 export default function DeckRepairPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-repair" name="Deck Repair | Loudoun County &amp; Fairfax VA | LDN Decks" description="Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-09-04" url="https://ldndecks.com/deck-repair" name="Deck Repair | Loudoun County &amp; Fairfax VA | LDN Decks" description="Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection call (571) 655-7207." speakable />
       <ServiceSchema
         name="Deck Repair"
         description="Deck repair services for Northern Virginia. Board replacement, railing repair, structural fixes, and code compliance remediation."
@@ -133,7 +134,21 @@ export default function DeckRepairPage() {
       <ServicesHeader
         subtext="Inspection-First Restoration"
         title="Professional Deck Repair & Structural Restoration"
-        description="Loudoun Decks provides expert deck repair services across Loudoun County, Fairfax County, and Prince William County. Restore your deck's safety and beauty with NoVA's local experts."
+        description="Loudoun Decks provides inspection-first deck repair services across Loudoun County, Fairfax County, and Prince William County. Start here, then use the structural repair hub for deeper repair-vs-replacement guidance."
+      />
+
+      <GeoAnswerBlock
+        question="Should I use this deck repair page or the structural repair hub?"
+        answer="This page introduces deck repair services, while the full structural repair hub at /services/deck-repair is the preferred guide for repair-versus-replacement decisions. Use the hub when the issue involves rot, loose railings, failing stairs, ledger movement, sinking posts, failed inspection items, or uncertainty about whether resurfacing is safe."
+        facts={[
+          'Canonical repair authority: /services/deck-repair',
+          'Best use: route homeowners from basic repair interest to inspection-first structural guidance',
+        ]}
+        links={[
+          { href: '/services/deck-repair', label: 'Structural repair hub' },
+          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
+          { href: '/services/deck-replacement', label: 'Deck replacement' },
+        ]}
       />
 
       {/* Urgent CTA critical for Ads landing page conversion */}
@@ -209,7 +224,7 @@ export default function DeckRepairPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.5rem' }}>Deck Repair Service Area</h2>
           <p style={{ fontSize: '0.95rem', color: '#555', marginBottom: '1.5rem' }}>
-            Based in Centreville, VA we serve Loudoun, Fairfax, Prince William, Arlington, and Stafford counties same-day estimates within a 40-mile radius.
+            Based in Centreville, VA, we serve Loudoun, Fairfax, Prince William, Arlington, and Stafford counties. Appointment availability depends on project type, schedule, distance, and scope.
           </p>
           <GoogleMapEmbed city="Centreville" state="VA" height="380px" />
         </div>
@@ -218,7 +233,7 @@ export default function DeckRepairPage() {
       <ServiceAreasGrid />
 
       <RelatedGuides currentPath="/deck-repair" category="structural-repair" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-09-04" />
 
       <ContactHome />
     </main>

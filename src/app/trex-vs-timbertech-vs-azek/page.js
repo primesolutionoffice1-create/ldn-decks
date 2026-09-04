@@ -11,6 +11,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
+import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata = buildMetadata({
   path: '/trex-vs-timbertech-vs-azek',
@@ -33,11 +34,75 @@ const faqSchema = {
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, h3: { fontSize: '1.2rem', fontWeight: 600, margin: '1.5rem 0 0.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 }, th: { padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }, td: { padding: '0.75rem', borderBottom: '1px solid #eee' } };
 
+const materialGeoAnswers = [
+  {
+    id: 'best-composite-deck-brand-answer',
+    q: 'Is Trex, TimberTech, or AZEK best?',
+    a: 'There is no single best brand for every deck. Trex is often a strong value choice, TimberTech offers broad design and performance options, and AZEK/PVC is often selected for premium moisture resistance and low-maintenance finish needs. The right choice depends on budget, exposure, maintenance expectations, and design priorities.',
+  },
+  {
+    id: 'trex-best-fit',
+    q: 'When is Trex the best fit?',
+    a: 'Trex is often a good fit when a homeowner wants proven composite decking, strong value, and a wide range of color and railing combinations. It is commonly considered for replacement decks where the priority is low maintenance, familiar product availability, and a balanced cost-to-appearance decision.',
+  },
+  {
+    id: 'timbertech-best-fit',
+    q: 'When is TimberTech the best fit?',
+    a: 'TimberTech is often a good fit when the homeowner wants more design flexibility, premium color options, and multiple performance tiers. It can work well for Northern Virginia homes where the deck needs to match upgraded outdoor living features such as lighting, railings, stairs, screened spaces, or covered structures.',
+  },
+  {
+    id: 'azek-pvc-best-fit',
+    q: 'When is AZEK/PVC the best fit?',
+    a: 'AZEK/PVC is often a good fit when moisture resistance, premium appearance, and long-term low-maintenance performance are major priorities. It is commonly considered for higher-end projects, shaded or damp conditions, pool-adjacent spaces, and homeowners who want a lighter-weight synthetic decking option.',
+  },
+  {
+    id: 'decking-brand-cost-comparison',
+    q: 'Which brand costs the most?',
+    a: 'AZEK/PVC and premium TimberTech lines often price higher than value-focused composite options, while Trex commonly gives homeowners a strong middle-ground choice. Final installed cost depends on board line, railing, stairs, framing, fascia, lighting, and permit requirements, not just the decking board itself.',
+  },
+  {
+    id: 'decking-warranty-decision',
+    q: 'Do warranties decide the best brand?',
+    a: 'Warranties should be part of the decision, but they should not be the only factor. Homeowners should compare current manufacturer warranty terms, exclusions, installation requirements, stain and fade coverage, and labor coverage. The deck design, framing condition, drainage, exposure, and installer workmanship also matter.',
+  },
+];
+
 export default function TrexVsTimberTechPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/trex-vs-timbertech-vs-azek" name="2026 Trex vs TimberTech vs AZEK vs Fiberon | NoVA Guide" description="Which composite decking is best for Virginia? Side-by-side comparison of Trex, TimberTech AZEK, and Fiberon with 2026 pricing, heat, warranty and NoVA installer notes." speakable />
+      <WebPageSchema dateModified="2026-09-04" url="https://ldndecks.com/trex-vs-timbertech-vs-azek" name="2026 Trex vs TimberTech vs AZEK vs Fiberon | NoVA Guide" description="Which composite decking is best for Virginia? Side-by-side comparison of Trex, TimberTech AZEK, and Fiberon with 2026 pricing, heat, warranty and NoVA installer notes." speakable />
+      <ArticleSchema
+        title="Trex vs TimberTech vs AZEK vs Fiberon: Northern Virginia Deck Material Guide"
+        description="Side-by-side comparison of Trex, TimberTech, AZEK, and Fiberon decking for Northern Virginia homeowners, including pricing, heat, warranties, and installer planning notes."
+        path="/trex-vs-timbertech-vs-azek"
+        image="/images/img05.jpeg"
+        datePublished="2026-05-01"
+        dateModified="2026-09-04"
+        speakable={['[data-speakable]', '#material-side-by-side-comparison', '#material-recommendation-northern-virginia', '#material-related-estimate-guides']}
+        citableParts={[
+          {
+            id: 'material-side-by-side-comparison',
+            name: 'Trex vs TimberTech vs AZEK vs Fiberon Side-by-Side Comparison',
+            text: 'The material comparison table evaluates Trex Enhance, Trex Transcend, TimberTech PRO, TimberTech AZEK, and Fiberon Concordia by installed price, warranty, material type, heat resistance, scratch resistance, color options, fade resistance, recycled content, and best-fit use case.',
+          },
+          {
+            id: 'material-recommendation-northern-virginia',
+            name: 'Northern Virginia Composite Deck Material Recommendation',
+            text: 'For most Northern Virginia homeowners, Trex Transcend is the balanced value recommendation, TimberTech AZEK is the premium PVC path, Trex Enhance is the budget option, and Fiberon Concordia is a Trex Transcend alternative that should be compared by samples, warranty documents, installed cost, heat exposure, and written scope.',
+          },
+          ...materialGeoAnswers.map((item) => ({
+            id: item.id,
+            name: item.q,
+            text: item.a,
+          })),
+          {
+            id: 'material-related-estimate-guides',
+            name: 'Material Cost and Estimate Guide Links',
+            text: 'Material selection should continue into composite deck cost, Trex monthly payment, TimberTech and AZEK cost, TimberTech deck planning, deck material comparison, deck payment estimator, and the written composite deck estimate path.',
+          },
+        ]}
+      />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -54,12 +119,12 @@ export default function TrexVsTimberTechPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Our Recommendation:</p>
-          <p data-speakable><strong>Best overall:</strong> Trex Transcend ($45–$65/sqft). <strong>Best premium:</strong> TimberTech AZEK ($50–$75/sqft, 50-yr warranty). <strong>Best value:</strong> Trex Enhance ($30–$50/sqft). <strong>Best Trex alternative:</strong> Fiberon Concordia ($48–$70/sqft). We install all four <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>call for samples</CallLink>.</p>
+          <p data-speakable><strong>Best overall fit depends on the project:</strong> Trex is often the value-balanced composite path, TimberTech offers broad design and performance tiers, and AZEK/PVC is often the premium low-moisture option. Compare current manufacturer documents, samples, sun exposure, railing plan, and written installed scope before choosing. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call for samples</CallLink>.</p>
         </div>
       </section>
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, Prince William, and Arlington counties" lastUpdated="May 2026" />
+        <NamedAuthor context="Loudoun, Fairfax, Prince William, and Arlington counties" lastUpdated="2026-09-04" />
       </section>
 
       <GeoAnswerBlock
@@ -76,6 +141,22 @@ export default function TrexVsTimberTechPage() {
         ]}
       />
 
+      <section style={{ padding: '2.5rem 1.5rem', background: '#fff' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <p style={{ color: '#555', lineHeight: 1.65, marginBottom: '1.5rem' }}>
+            Brand warranty and product details should be checked against current manufacturer documentation before contract decisions. This guide is a Northern Virginia planning comparison, not a substitute for product-specific warranty review.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
+            {materialGeoAnswers.map((item) => (
+              <section key={item.id} id={item.id} data-speakable={item.id} style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '1rem', background: '#fbfdff' }}>
+                <h2 style={{ fontSize: '1.08rem', fontWeight: 800, marginBottom: '0.55rem' }}>{item.q}</h2>
+                <p style={{ margin: 0, lineHeight: 1.65, color: '#334155' }}>{item.a}</p>
+              </section>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
@@ -91,7 +172,7 @@ export default function TrexVsTimberTechPage() {
             />
           </div>
 
-          <h2 style={S.h2}>Side-by-Side Comparison</h2>
+          <h2 id="material-side-by-side-comparison" data-speakable="material-side-by-side-comparison" style={S.h2}>Side-by-Side Comparison</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead>
@@ -149,7 +230,7 @@ export default function TrexVsTimberTechPage() {
           <h3 style={S.h3}>UV Fade</h3>
           <p style={S.p}>All brands fade slightly in the first 6–12 months, then stabilize. Trex Transcend and AZEK use multi-tonal color technology that makes fading virtually undetectable. Lighter colors hide fading better.</p>
 
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Our Recommendation for Northern Virginia</h2>
+          <h2 id="material-recommendation-northern-virginia" data-speakable="material-recommendation-northern-virginia" style={{ ...S.h2, marginTop: '2.5rem' }}>Our Recommendation for Northern Virginia</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem' }}>
               <p style={{ fontSize: '0.85rem', color: '#888', marginBottom: '0.25rem' }}>Budget under $25k</p>
@@ -188,7 +269,7 @@ export default function TrexVsTimberTechPage() {
             </details>
           ))}
 
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
+          <h2 id="material-related-estimate-guides" data-speakable="material-related-estimate-guides" style={{ ...S.h2, marginTop: '2.5rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
               ['/blog/trex-vs-timbertech-fade-resistance-comparison', 'Trex vs TimberTech Fade Resistance'],
@@ -197,9 +278,10 @@ export default function TrexVsTimberTechPage() {
               ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
               ['/trex-deck-cost-monthly-payment', 'Trex Deck Cost vs Monthly Payment (by tier)'],
               ['/timbertech-azek-deck-cost-northern-virginia', 'TimberTech & AZEK Deck Cost (EDGE / PRO / Vintage)'],
-              ['/blog/trex-vs-timbertech-fade-resistance-comparison', 'Trex vs TimberTech Fade Resistance in Full Sun'],
-              ['/blog/best-composite-deck-colors-full-sun-northern-virginia', 'Best Composite Deck Colors for Full Sun'],
-              ['/blog/why-composite-trex-decking-fades-sun-solutions', 'Why Composite Decking Fades in the Sun'],
+              ['/timbertech-decks', 'TimberTech and AZEK Deck Planning'],
+              ['/deck-materials-comparison-virginia', 'Deck Materials Comparison for Virginia Homes'],
+              ['/deck-payment-estimator', 'Deck Payment Estimator'],
+              ['/get-estimate', 'Request a Written Composite Deck Estimate'],
               ['/composite-decks', 'Composite Deck Builder in Northern Virginia'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck Complete Comparison'],
               ['/replace-wood-deck-with-composite-northern-virginia', 'Replace Wood Deck With Composite'],
@@ -220,7 +302,7 @@ export default function TrexVsTimberTechPage() {
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Brand Pages &amp; Services</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Decks — Platinum Partner →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Decking Options →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/timbertech-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>TimberTech AZEK Decks →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Installation →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Cost Guide →</Link></li>
@@ -228,7 +310,7 @@ export default function TrexVsTimberTechPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>
         </ul>
       </section>
-      <RelatedGuides currentPath="/trex-vs-timbertech-vs-azek" />
+      <RelatedGuides currentPath="/trex-vs-timbertech-vs-azek" category="ai-retrieval" />
       <ContactHome />
     </>
   );

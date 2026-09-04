@@ -112,11 +112,11 @@ const faqs = [
   },
   {
     q: 'What is cheaper than Trex?',
-    a: 'Three real alternatives. (1) Pressure-treated pine at $18–$35/sqft installed — cheapest upfront, most expensive over 10 years once maintenance is counted. (2) Cedar at $25–$45/sqft installed — middle ground, lasts 15–20 years in NoVA climate, requires sealing. (3) Fiberon Good Life or ArmorGuard at $28–$45/sqft installed — Fortune Brands–owned composite competitor, capped composite construction, 25-year stain & fade warranty. The honest answer for most NoVA homeowners staying 5+ years: Trex Enhance at $30–$50/sqft beats every cheaper option once you factor maintenance and replacement timing.'
+    a: 'Common lower-upfront-cost alternatives include pressure-treated pine, cedar, and value-tier capped composite lines. Pressure-treated wood usually costs less at installation but needs more regular maintenance. Cedar sits between wood and composite for appearance and upkeep. Value-tier capped composite can be a practical middle path. The best choice depends on maintenance tolerance, ownership horizon, frame condition, and written installed scope.'
   },
   {
     q: 'How long does composite decking last?',
-    a: 'Service life varies by capping tier. Capped composite (Trex Transcend, TimberTech PRO, Fiberon Concordia) holds 25+ years with negligible visible aging. Capped PVC (TimberTech AZEK Vintage, Trex Signature) holds 30–50 years with even less aging — full PVC cores don\'t absorb moisture at all. Uncapped first-generation composites (early 2000s Trex, before the shell technology) failed in 10–15 years; that\'s the source of the "composite goes bad" reputation, but it doesn\'t apply to any composite sold since ~2012. Every brand we install today carries a 25-year stain & fade warranty minimum; TimberTech AZEK carries 50 years.'
+    a: 'Composite decking lifespan depends on the brand, board line, installation details, exposure, ventilation, cleaning, and warranty terms. Modern capped composite and PVC boards are designed for long service life and lower maintenance than wood, but homeowners should compare current manufacturer documents before relying on a specific warranty length or coverage statement.'
   },
   {
     q: 'Can you pressure wash composite decking?',
@@ -125,6 +125,34 @@ const faqs = [
   {
     q: 'Why are composite decks more expensive upfront than wood?',
     a: 'Three reasons. (1) Material cost: composite boards run $4–$12 per linear foot vs $2–$4 for pressure-treated pine. (2) Engineering: composite expands and contracts more with temperature, so fastening, gapping, and joist spacing are tighter — that\'s installation labor. (3) Hidden fasteners: composite is almost always installed with concealed clip systems (Trex Hideaway, CONCEALoc, Cortex) which cost more and install slower than face-screwed wood. The payoff is back-end: composite eliminates the $1,500–$2,500 every-two-years maintenance cost wood requires, and the boards still look new at year 15 when wood needs replacement.'
+  },
+];
+
+const compositeGeoAnswers = [
+  {
+    id: 'composite-cost-drivers',
+    q: 'What drives the price of a composite deck?',
+    a: 'The largest cost drivers are deck size, framing condition, height, stair complexity, railing type, fascia, lighting, privacy features, and the selected decking brand. Trex, TimberTech, and AZEK/PVC each have different board profiles, warranties, and finish levels. Permits, HOA rules, and access conditions can also change the final proposal.',
+  },
+  {
+    id: 'composite-vs-wood-cost',
+    q: 'Is composite decking more expensive than wood?',
+    a: 'Composite decking usually costs more upfront than pressure-treated wood, but it can reduce long-term maintenance because it does not need regular staining or sealing like wood. For many Northern Virginia homeowners, the better fit depends on how long they plan to stay, desired appearance, maintenance tolerance, and total project scope.',
+  },
+  {
+    id: 'composite-brand-budget-fit',
+    q: 'Which composite brand is best for budget planning?',
+    a: 'Trex is often considered for value-focused composite projects, TimberTech for a broader range of looks and performance tiers, and AZEK/PVC for buyers prioritizing low moisture absorption and premium finish options. The best choice depends on the home, sun exposure, deck height, railing plan, and budget target.',
+  },
+  {
+    id: 'composite-permit-cost-impact',
+    q: 'Do permits affect composite deck cost?',
+    a: 'Permits can affect composite deck cost when the project includes new framing, structural changes, stairs, ledger work, footings, or major layout changes. In Northern Virginia, county and HOA requirements should be checked before final pricing. Permit scope can influence engineering, timeline, inspections, and documentation.',
+  },
+  {
+    id: 'composite-project-timeline',
+    q: 'How long does a composite deck project take?',
+    a: 'Many composite deck projects take several weeks from design and approvals through construction, but timing depends on permit review, HOA approvals, material availability, weather, and build complexity. A small resurfacing project can move faster than a full structural replacement with stairs, lighting, and railing upgrades.',
   },
 ];
 
@@ -159,7 +187,7 @@ export default function CompositeDeckCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/composite-deck-cost-northern-virginia" name="How Much Does a Composite Deck Cost in Northern Virginia?" description="Get 2026 planning pricing data for custom composite decks in Northern Virginia. Compare costs for Trex, TimberTech, sizing, and premium add-ons." speakable />
+      <WebPageSchema dateModified="2026-09-04" url="https://ldndecks.com/composite-deck-cost-northern-virginia" name="How Much Does a Composite Deck Cost in Northern Virginia?" description="Get 2026 planning pricing data for custom composite decks in Northern Virginia. Compare costs for Trex, TimberTech, sizing, and premium add-ons." speakable />
       <JsonLd data={productSchema} />
       <ArticleSchema
         title="Composite Deck Cost in Northern Virginia 2026: Complete Price Guide"
@@ -167,15 +195,54 @@ export default function CompositeDeckCostPage() {
         path="/composite-deck-cost-northern-virginia"
         image="/showcase/img09.jpeg"
         datePublished="2026-04-21"
-        dateModified="2026-06-01"
+        dateModified="2026-09-04"
         author="Nick — Owner, Loudoun Decks"
+        speakable={[
+          '#composite-cost-answer',
+          '#composite-estimate-routing',
+          '#cost-by-size',
+          '#trex-vs-timbertech',
+          '#financing',
+        ]}
+        citableParts={[
+          {
+            id: 'composite-cost-answer',
+            name: 'Composite deck cost quick answer',
+            text: 'A composite deck in Northern Virginia typically costs $30-$95 per square foot installed in 2026, with most finished 300-400 square foot projects landing between $22,000 and $38,000 depending on material tier, stairs, railing, elevation, permits, and site conditions.',
+          },
+          {
+            id: 'composite-estimate-routing',
+            name: 'Composite estimate routing by scope',
+            text: 'Composite pricing gets more accurate when the project is routed by scope first: replacement status, framing condition, permit path, HOA review, railing system, stairs, and covered-deck potential can move the final estimate more than a single board upgrade.',
+          },
+          ...compositeGeoAnswers.map((item) => ({
+            id: item.id,
+            name: item.q,
+            text: item.a,
+          })),
+          {
+            id: 'cost-by-size',
+            name: 'Composite deck cost by size',
+            text: 'The cost-by-size table compares four common deck footprints across budget composite, mid-tier capped composite, and premium composite or PVC tiers, including material, labor, permit allowance, total installed range, and typical spend.',
+          },
+          {
+            id: 'trex-vs-timbertech',
+            name: 'Trex vs TimberTech installed cost comparison',
+            text: 'Trex and TimberTech are compared by installed cost, warranty, heat retention, fade resistance, fastener compatibility, board profile, color options, recycled content, and maintenance for Northern Virginia projects.',
+          },
+          {
+            id: 'financing',
+            name: 'Composite deck financing path',
+            text: 'Financing guidance should start with a clear written scope, then model current options for eligible new decks, resurfacing, repairs, and composite upgrades with the deck payment estimator before requesting a written estimate.',
+          },
+        ]}
       />
 
       {/* Hero */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-primary)', fontWeight: 600, marginBottom: '0.6rem' }}>
-            2026 PRICING  ·  Updated for 2026 material pricing trends
+            2026 PRICING  ·  Updated September 4, 2026 for estimate routing
           </p>
           <h1 style={{ fontSize: '2.6rem', fontWeight: 700, marginBottom: '1rem', letterSpacing: '-0.015em' }}>
             Composite Deck Cost in Northern Virginia (2026)
@@ -195,12 +262,12 @@ export default function CompositeDeckCostPage() {
       />
 
       {/* QUICK ANSWER — featured snippet bait */}
-      <section data-speakable="true" style={{ padding: '2rem 1.5rem 0' }}>
+      <section id="composite-cost-answer" data-speakable="composite-cost-answer" style={{ padding: '2rem 1.5rem 0' }}>
         <div style={S.container}>
           <div style={S.callout}>
             <p style={{ fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</p>
             <p style={{ margin: 0, lineHeight: 1.75, fontSize: '1.02rem' }}>
-              <strong>A composite deck in Northern Virginia typically costs</strong> $30–$95 per square foot installed in 2026 — a 200 sqft Trex Enhance deck lands around $8,000–$14,000, a 400 sqft Trex Transcend build $24,000–$34,000, and a 500 sqft TimberTech AZEK premium build $40,000–$55,000. Total cost depends on deck size, material tier, stairs, railing system, second-story elevation, and site conditions (slope, soil, access). Loudoun Decks provides itemized written estimates for Northern Virginia homeowners.
+              <strong>A composite deck in Northern Virginia typically costs</strong> $30–$95 per square foot installed as 2026 planning guidance. A smaller value-tier project may start lower, while larger premium composite or PVC builds with stairs, railings, lighting, elevation, and permit requirements can cost substantially more. Final pricing depends on site conditions, framing condition, material tier, access, and written scope.
             </p>
             <p style={{ margin: '0.8rem 0 0', lineHeight: 1.65, fontSize: '0.95rem', color: '#555' }}>
               This guide is for contractor-installed deck projects, not loose board pricing or retail material sales.
@@ -227,7 +294,7 @@ export default function CompositeDeckCostPage() {
             </a>
           </div>
 
-          <NamedAuthor context="Loudoun, Fairfax, Prince William, and Arlington counties" lastUpdated="2026-06-01" />
+          <NamedAuthor context="Loudoun, Fairfax, Prince William, and Arlington counties" lastUpdated="2026-09-04" />
         </div>
       </section>
 
@@ -244,6 +311,22 @@ export default function CompositeDeckCostPage() {
           { href: '/get-estimate', label: 'Get a written estimate' },
         ]}
       />
+
+      <section style={{ padding: '2.5rem 1.5rem', background: '#fff' }}>
+        <div style={S.container}>
+          <p style={{ ...S.pMuted, fontSize: '0.92rem', marginBottom: '1.5rem' }}>
+            Pricing guidance updated September 4, 2026. These are Northern Virginia planning ranges, not a final quote. LDN Decks confirms final pricing after reviewing structure, access, materials, permit scope, and HOA requirements.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
+            {compositeGeoAnswers.map((item) => (
+              <section key={item.id} id={item.id} data-speakable={item.id} style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '1rem', background: '#fbfdff' }}>
+                <h2 style={{ fontSize: '1.08rem', fontWeight: 800, marginBottom: '0.55rem' }}>{item.q}</h2>
+                <p style={{ margin: 0, lineHeight: 1.65, color: '#334155' }}>{item.a}</p>
+              </section>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* HERO IMAGE */}
       <section style={{ padding: '0 1.5rem 1.5rem' }}>
@@ -285,8 +368,33 @@ export default function CompositeDeckCostPage() {
         </div>
       </section>
 
+      <section id="composite-estimate-routing" data-speakable="composite-estimate-routing" style={{ padding: '3rem 1.5rem', borderTop: '1px solid #eaeaea' }}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Choose the Right Estimate Path Before Comparing Composite Brands</h2>
+          <p style={S.p}>
+            Composite pricing gets more accurate when the project is routed by scope first. A Trex or TimberTech board choice is only one input; replacement status, framing condition, permit path, HOA review, railing system, stairs, and covered-deck potential usually move the final number more than a single board upgrade.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.9rem', marginTop: '1.25rem' }}>
+            {[
+              ['/services/deck-replacement', 'Full replacement', 'Use this path when the existing frame, ledger, posts, stairs, or railing system may need to be rebuilt before composite boards go on.'],
+              ['/services/deck-resurfacing', 'Resurfacing candidate', 'Use this path when the framing may be sound and the main decision is surface boards, railings, fasteners, and trim.'],
+              ['/deck-permit-hoa-cost-loudoun-county', 'Permit and HOA planning', 'Use this path when Loudoun HOA review, permit fees, drawings, or approval timing need to be budgeted before signing.'],
+              ['/covered-deck-cost-northern-virginia', 'Covered-deck upgrade', 'Use this path when the deck may support a roof, porch, screened area, lighting, fans, or outdoor living package.'],
+            ].map(([href, title, desc]) => (
+              <Link key={href} href={href} style={{ display: 'block', padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit', background: '#fff', height: '100%' }}>
+                <p style={{ fontWeight: 700, color: 'var(--color-primary)', margin: 0, marginBottom: '0.35rem' }}>{title}</p>
+                <p style={{ fontSize: '0.9rem', color: '#4a5568', margin: 0, lineHeight: 1.55 }}>{desc}</p>
+              </Link>
+            ))}
+          </div>
+          <p style={{ ...S.pMuted, marginTop: '1.25rem', marginBottom: 0 }}>
+            Material decision next: compare <Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex decks</Link>, <Link href="/timbertech-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>TimberTech and AZEK decks</Link>, or the full <Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK guide</Link> after the scope path is clear.
+          </p>
+        </div>
+      </section>
+
       {/* COST BY SIZE — 4 tables, 3 tiers each */}
-      <section id="cost-by-size" style={{ padding: '3rem 1.5rem', background: '#fafafa', borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
+      <section id="cost-by-size" data-speakable="cost-by-size" style={{ padding: '3rem 1.5rem', background: '#fafafa', borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
         <div style={S.container}>
           <h2 style={S.h2}>2026 Composite Deck Cost by Size — Northern Virginia Planning Pricing</h2>
           <p style={S.p}>
@@ -335,7 +443,7 @@ export default function CompositeDeckCostPage() {
       </section>
 
       {/* TREX VS TIMBERTECH COMPARISON */}
-      <section id="trex-vs-timbertech" style={{ padding: '3rem 1.5rem' }}>
+      <section id="trex-vs-timbertech" data-speakable="trex-vs-timbertech" style={{ padding: '3rem 1.5rem' }}>
         <div style={S.container}>
           <h2 style={S.h2}>Trex vs TimberTech — Installed Cost & Performance</h2>
           <p style={S.p}>
@@ -364,7 +472,7 @@ export default function CompositeDeckCostPage() {
             </table>
           </div>
           <p style={S.pMuted}>
-            For a full 4-way comparison with Fiberon and AZEK side-by-side, see <Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK vs Fiberon</Link>. For deeper Trex line specifics: <Link href="/trex-transcend-review-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Transcend review for NoVA</Link>.
+            For a full 4-way comparison with Fiberon and AZEK side-by-side, see <Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK vs Fiberon</Link>. If resale value is part of the material decision, use the <Link href="/deck-roi-calculator-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia deck ROI calculator</Link> before finalizing the scope. For deeper Trex line specifics: <Link href="/trex-transcend-review-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Transcend review for NoVA</Link>.
           </p>
         </div>
       </section>
@@ -484,7 +592,7 @@ export default function CompositeDeckCostPage() {
       </section>
 
       {/* FINANCING */}
-      <section id="financing" style={{ padding: '3rem 1.5rem', background: '#fafafa', borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
+      <section id="financing" data-speakable="financing" style={{ padding: '3rem 1.5rem', background: '#fafafa', borderTop: '1px solid #eaeaea', borderBottom: '1px solid #eaeaea' }}>
         <div style={S.container}>
           <h2 style={S.h2}>Financing Your Composite Deck</h2>
           <p style={S.p}>
@@ -532,11 +640,14 @@ export default function CompositeDeckCostPage() {
               ['/composite-deck-cost-by-size', 'Composite Cost by Size', '300 / 400 / 500 / 600 sqft pricing breakdown'],
               ['/monthly-payment-composite-deck-northern-virginia', 'Monthly Payment on a Composite Deck', '$15k–$70k project payment ranges'],
               ['/deck-lighting-railings-stairs-addon-cost', 'Lighting, Railings &amp; Stairs Add-On Costs', 'Per-linear-foot pricing for the biggest add-ons'],
+              ['/tools/deck-stair-calculator', 'Virginia Deck Stair Calculator', 'Model rise, run, stair count and landing pressure before pricing stairs'],
               ['/credit-score-deck-financing', 'Credit Score for Deck Financing', 'Credit-readiness guidance'],
               ['/wood-vs-composite-deck-long-term-cost', 'Wood vs Composite — 15-Yr Cost', '15-year total including maintenance + financing'],
+              ['/deck-roi-calculator-northern-virginia', 'Deck ROI Calculator', 'Estimate resale recovery and net enjoyment cost'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK vs Fiberon', 'Full 4-way comparison'],
+              ['/deck-materials-comparison-virginia', 'Deck Materials Comparison', 'Wood, composite, PVC and premium material tradeoffs'],
               ['/how-tariffs-affect-deck-prices-2026', '2026 Deck Tariff Impact', 'How import duties moved the market'],
-              ['/composite-deck-cost-northern-virginia', 'Deck Cost (All Materials)', 'Composite, wood, and cedar pricing side by side'],
+              ['/deck-builder-northern-virginia', 'Northern Virginia Deck Builder', 'Estimate path, permit routing, composite material planning'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Decision', 'Total-cost-of-ownership math'],
               ['/does-a-deck-add-value-to-your-home', 'Deck ROI &amp; Home Value', 'What composite recoups at resale'],
               ['/services/deck-replacement', 'Deck Replacement Services', 'Full rebuild scope and pricing'],
@@ -559,7 +670,7 @@ export default function CompositeDeckCostPage() {
       </section>
 
       <SimpleCTA title="Get Your Exact Composite Deck Quote" buttonText="Request Free Estimate" link="/get-estimate" />
-      <RelatedGuides currentPath="/composite-deck-cost-northern-virginia" />
+      <RelatedGuides currentPath="/composite-deck-cost-northern-virginia" category="ai-retrieval" />
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Resources</h2>
