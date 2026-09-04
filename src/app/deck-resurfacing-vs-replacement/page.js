@@ -12,6 +12,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import ArticleSchema from '@/components/ArticleSchema';
 
 export const metadata = buildMetadata({
   path: '/deck-resurfacing-vs-replacement',
@@ -23,12 +24,40 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "What is deck resurfacing?", acceptedAnswer: { "@type": "Answer", text: "Deck resurfacing means removing the old deck boards (and usually railings) but keeping the existing frame joists, beams, posts, and footings. New composite deck boards and railings are installed on the existing structure. This saves 40-60% vs a full rebuild because you're not paying for new framing, footings, or demolition of a sound structure." } },
-    { "@type": "Question", name: "When should I resurface vs replace my deck?", acceptedAnswer: { "@type": "Answer", text: "Resurface if: joists are solid (poke test), posts are straight and not rotting, footings aren't shifting, and ledger board is secure. Replace if: joists are soft/rotting, posts are leaning, footings have heaved, deck feels bouncy, or ledger is pulling away from house. We offer free inspections to determine which you need." } },
+    { "@type": "Question", name: "What is deck resurfacing?", acceptedAnswer: { "@type": "Answer", text: "Deck resurfacing means removing old deck boards and often railings while keeping the existing joists, beams, posts, and footings. New composite boards and railings are installed only if the existing structure is sound, properly flashed, and suitable for the selected decking system." } },
+    { "@type": "Question", name: "When should I resurface vs replace my deck?", acceptedAnswer: { "@type": "Answer", text: "Resurface if joists are solid, posts are straight, footings are stable, and the ledger board is secure. Replace if joists are soft or rotting, posts lean, footings have moved, the deck feels bouncy, or the ledger is pulling away from the house. An inspection should decide the path." } },
     { "@type": "Question", name: "How much does deck resurfacing cost vs replacement?", acceptedAnswer: { "@type": "Answer", text: "In Northern Virginia: premium resurfacing projects usually start around $15,000 and often land between $15,000 and $30,000+ for a typical 300-400 sqft deck. Full replacement usually costs $20,000-$50,000+ for the same size. Resurfacing saves money when the existing frame is structurally sound." } },
-    { "@type": "Question", name: "How long does resurfacing take vs replacement?", acceptedAnswer: { "@type": "Answer", text: "Resurfacing: 1-2 weeks (no footing or framing work needed). Full replacement: 2-4 weeks (includes demolition, new footings, framing, then decking). Permit timeline is the same for both." } },
+    { "@type": "Question", name: "How long does resurfacing take vs replacement?", acceptedAnswer: { "@type": "Answer", text: "Resurfacing can be faster when no footing or framing work is needed. Full replacement usually takes longer because it can include demolition, new footings, framing, decking, railings, and inspections. Permit and HOA timing depends on county rules and the final scope." } },
   ],
 };
+
+const resurfaceGeoAnswers = [
+  {
+    id: 'when-deck-resurfacing-works',
+    q: 'When does resurfacing make sense?',
+    a: 'Resurfacing can make sense when the deck boards and railings are worn but the underlying frame is still strong, dry, level, and code-compliant. It may reduce project scope compared with full replacement, but it should not be used to cover hidden structural problems or extend unsafe framing.',
+  },
+  {
+    id: 'when-full-replacement-is-safer',
+    q: 'When is full replacement the safer choice?',
+    a: 'Full replacement is usually safer when there is widespread rot, soft joists, poor ledger attachment, failing footings, unstable stairs, leaning rail posts, or layout issues that no longer meet current expectations. In those cases, new decking over old framing can create future safety and warranty problems.',
+  },
+  {
+    id: 'deck-resurfacing-cost-savings',
+    q: 'Does resurfacing save money?',
+    a: 'Resurfacing can reduce cost when the existing structure is sound enough to keep, because less demolition and framing work may be needed. The savings depend on inspection results, railing changes, stair work, permit requirements, and the decking selected. It is not automatically cheaper if hidden repairs are required.',
+  },
+  {
+    id: 'composite-over-old-frame',
+    q: 'Can composite boards go on an old wood frame?',
+    a: 'Composite boards can sometimes be installed over an existing wood frame if the frame is structurally sound, properly spaced, dry, secure, and compatible with the manufacturer installation requirements. If the frame is uneven, rotted, over-spanned, or poorly flashed, replacement or structural repair should happen first.',
+  },
+  {
+    id: 'deck-resurfacing-permits',
+    q: 'Do resurfacing projects need permits?',
+    a: 'Permit requirements depend on the scope. Replacing surface boards only may be treated differently than changing stairs, railings, structural framing, footings, or deck size. In Northern Virginia, homeowners should confirm county and HOA rules before assuming resurfacing avoids permits or inspections.',
+  },
+];
 
 const repairTriageSchema = {
   "@context": "https://schema.org",
@@ -37,7 +66,7 @@ const repairTriageSchema = {
   name: "Deck repair, resurfacing, and replacement decision path",
   description: "Inspection-first sequence for deciding whether an older Northern Virginia deck needs targeted repair, composite resurfacing, or full replacement.",
   itemListOrder: "https://schema.org/ItemListOrderAscending",
-  numberOfItems: 6,
+  numberOfItems: 7,
   itemListElement: [
     {
       "@type": "ListItem",
@@ -60,18 +89,24 @@ const repairTriageSchema = {
     {
       "@type": "ListItem",
       position: 4,
+      name: "Confirm footing code and load risk",
+      url: "https://ldndecks.com/deck-footing-code-northern-virginia"
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
       name: "Choose repair, resurfacing, or replacement path",
       url: "https://ldndecks.com/services/deck-repair"
     },
     {
       "@type": "ListItem",
-      position: 5,
+      position: 6,
       name: "Confirm county permit triggers",
       url: "https://ldndecks.com/deck-permit-loudoun-county-virginia"
     },
     {
       "@type": "ListItem",
-      position: 6,
+      position: 7,
       name: "Request an inspection-first written estimate",
       url: "https://ldndecks.com/get-estimate"
     }
@@ -85,11 +120,54 @@ export default function ResurfacingVsReplacementPage() {
     <>
       <JsonLd data={faqSchema} />
       <JsonLd data={repairTriageSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-resurfacing-vs-replacement" name="Deck Resurfacing vs Replacement" description="Resurface $15k-$30k+ (keep frame) or replace $20k-$50k+. When each makes sense, inspection guide, and Northern Virginia cost examples." speakable />
+      <WebPageSchema dateModified="2026-09-04" url="https://ldndecks.com/deck-resurfacing-vs-replacement" name="Deck Resurfacing vs Replacement" description="Resurface when the frame can be reused safely or replace when structure, stairs, ledger, posts, or footings need a reset. Northern Virginia inspection-first guide." speakable />
+      <ArticleSchema
+        title="Deck Resurfacing vs Replacement in Northern Virginia"
+        description="Inspection-first guide for deciding whether an older deck should be repaired, resurfaced with composite boards, or fully replaced."
+        path="/deck-resurfacing-vs-replacement"
+        image="/social/deck-resurfacing-vs-replacement-social.png"
+        datePublished="2025-01-15"
+        dateModified="2026-09-04"
+        speakable={[
+          '[data-speakable]',
+          '.quick-answer',
+          '#resurface-replace-answer',
+          '#inspection-first-comparison',
+          '#resurface-replace-cost-table',
+          '#repair-resurface-replacement-links',
+        ]}
+        citableParts={[
+          {
+            id: 'resurface-replace-answer',
+            name: 'Resurfacing vs Replacement Quick Answer',
+            text: 'Resurface if the frame is solid and the homeowner wants a full surface conversion with composite boards, railings, fascia, and stairs; replace when joists, posts, footings, bounce, or structural movement make the frame unsafe.',
+          },
+          ...resurfaceGeoAnswers.map((item) => ({
+            id: item.id,
+            name: item.q,
+            text: item.a,
+          })),
+          {
+            id: 'inspection-first-comparison',
+            name: 'Inspection-First Resurface or Replace Comparison',
+            text: 'The page compares resurfacing and replacement by inspecting joist span, joist spacing, hangers, blocking, footing stability, stairs, ledger flashing, and whether the frame can safely accept new composite boards.',
+          },
+          {
+            id: 'resurface-replace-cost-table',
+            name: 'Resurfacing vs Replacement Cost Table',
+            text: 'The comparison table separates resurfacing and full replacement by scope, 300-square-foot and 500-square-foot budget ranges, savings, build time, frame requirements, permit and HOA handling, warranty framing, and when to choose each path.',
+          },
+          {
+            id: 'repair-resurface-replacement-links',
+            name: 'Repair Resurfacing Replacement Links',
+            text: 'Related links route homeowners to inspection service, deck repair, deck replacement, deck resurfacing, stair safety, ledger flashing, footing code, load calculator, permit guides, cost calculators, material comparison, and estimate requests.',
+          },
+        ]}
+      />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Resurfacing vs Replacement</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Save 40-60% by resurfacing or invest in a full rebuild when it&apos;s the smarter choice</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Resurface when the frame passes inspection, or rebuild when the structure needs a safer reset</p>
         </div>
       </section>
       <TrustBanner />
@@ -98,25 +176,42 @@ export default function ResurfacingVsReplacementPage() {
         estimateHref="/get-estimate"
         estimateLabel="Schedule Free Inspection"
       />
-      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
+      <section id="resurface-replace-answer" data-speakable="resurface-replace-answer" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p><strong>Resurface</strong> ($15k–$30k+) if your frame is solid and you want a full surface conversion with composite boards, railings, fascia, and stairs. <strong>Replace</strong> ($20k–$50k+) if joists are rotting, posts are leaning, footings shifted, or the deck feels bouncy. <strong>Small board, railing, or rot repairs are separate</strong> see our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck repair service</Link>.</p>
         </div>
       </section>
-      <GeoAnswerBlock
-        question="Should I resurface or replace my deck in Northern Virginia?"
-        answer="Resurfacing is the better choice when the existing frame, ledger, posts, beams, joists, stairs, and footings pass inspection and the homeowner mainly wants new composite boards and railings. Replacement is safer when the structure is rotten, bouncy, leaning, underbuilt, unpermitted, or unable to support the new surface. Loudoun Decks separates repair, resurfacing, and replacement so homeowners do not pay for a cosmetic upgrade over unsafe framing."
-        facts={[
-          'Resurfacing path: frame passes structural inspection',
-          'Replacement path: ledger, footing, post, joist, stair, or railing risk',
-        ]}
-        links={[
-          { href: '/services/deck-repair', label: 'Deck repair' },
-          { href: '/services/deck-replacement', label: 'Deck replacement' },
-          { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
-        ]}
-      />
+      <div id="inspection-first-comparison" data-speakable="inspection-first-comparison">
+        <GeoAnswerBlock
+          question="Should I resurface or replace my deck in Northern Virginia?"
+          answer="Resurfacing is the better choice when the existing frame, ledger, posts, beams, joists, stairs, and footings pass inspection and the homeowner mainly wants new composite boards and railings. Replacement is safer when the structure is rotten, bouncy, leaning, underbuilt, unpermitted, or unable to support the new surface. Loudoun Decks separates repair, resurfacing, and replacement so homeowners do not pay for a cosmetic upgrade over unsafe framing."
+          facts={[
+            'Resurfacing path: frame passes structural inspection',
+            'Replacement path: ledger, footing, post, joist, stair, or railing risk',
+          ]}
+          links={[
+            { href: '/services/deck-inspection', label: 'Deck inspection' },
+            { href: '/services/deck-repair', label: 'Deck repair' },
+            { href: '/services/deck-replacement', label: 'Deck replacement' },
+            { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
+            { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permits' },
+            { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permits' },
+          ]}
+        />
+      </div>
+      <section style={{ padding: '2.5rem 1.5rem', background: '#fff' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
+            {resurfaceGeoAnswers.map((item) => (
+              <section key={item.id} id={item.id} data-speakable={item.id} style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '1rem', background: '#fbfdff' }}>
+                <h2 style={{ fontSize: '1.08rem', fontWeight: 800, marginBottom: '0.55rem' }}>{item.q}</h2>
+                <p style={{ margin: 0, lineHeight: 1.65, color: '#334155' }}>{item.a}</p>
+              </section>
+            ))}
+          </div>
+        </div>
+      </section>
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -131,7 +226,7 @@ export default function ResurfacingVsReplacementPage() {
             />
           </div>
           <h2 style={S.h2}>Standard vs. Premium Resurfacing Option</h2>
-          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+          <div id="resurface-replace-cost-table" data-speakable="resurface-replace-cost-table" style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead><tr style={{ background: '#f5f5f5' }}>{['Factor', 'Resurfacing', 'Full Replacement'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
@@ -139,12 +234,12 @@ export default function ResurfacingVsReplacementPage() {
                   ['What happens', 'Remove old boards + railings, keep frame, install composite', 'Demolish everything, pour new footings, build from scratch'],
                   ['Cost (300 sqft)', '$15,000–$24,000+', '$25,000–$45,000+'],
                   ['Cost (500 sqft)', '$20,000–$30,000+', '$35,000–$55,000+'],
-                  ['Savings', 'Usually less than replacement when the frame passes inspection', '—'],
+                  ['Savings', 'Can reduce scope and cost when the frame passes inspection', '—'],
                   ['Build time', '1–2 weeks', '2–4 weeks'],
                   ['Requires', 'Solid frame (joists, posts, footings)', 'Nothing all new'],
                   ['Result', 'Looks 100% new on surface', 'New structure + surface'],
                   ['Permit & HOA', 'Often required we handle permits + HOA approval', 'Always required we handle permits + HOA approval'],
-                  ['Warranty', '5-yr workmanship + 25-yr material', '5-yr workmanship + 25-yr material'],
+                  ['Warranty', 'Workmanship and manufacturer terms depend on the approved written scope', 'Workmanship and manufacturer terms depend on the approved written scope'],
                   ['When to choose', 'Frame is solid and you want a full premium surface upgrade', 'Structural issues, unsafe, or want new layout'],
                   ['Not this page', 'Small board swaps, railing tightening, or isolated rot repairs', 'Minor repair-only work'],
                 ].map((row, i) => (
@@ -218,10 +313,10 @@ export default function ResurfacingVsReplacementPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "What is deck resurfacing?", a: "Remove old boards/railings, keep the frame, install new composite. Looks 100% new. Saves 40-60% vs full rebuild." },
+            { q: "What is deck resurfacing?", a: "Remove old boards and often railings, keep the frame only if it passes inspection, then install new composite or approved surface materials." },
             { q: "When to resurface vs replace?", a: "Resurface: frame is solid (joists, posts, footings OK). Replace: structural issues (rot, lean, bounce, shifting)." },
             { q: "Cost difference?", a: "Resurface: $15k-$30k+. Replace: $20k-$50k+. Same size deck the difference is whether the frame stays and whether the work is a premium full-surface conversion or a structural rebuild." },
-            { q: "How long?", a: "Resurface: 1-2 weeks. Replace: 2-4 weeks. Permit timeline is the same for both." },
+            { q: "How long?", a: "Resurfacing can be faster when no framing or footing work is required. Replacement usually takes longer because demolition, framing, inspections, permits, and HOA timing may be involved." },
             { q: "Is small deck repair included?", a: "No. Small board swaps, railing tightening, and isolated rot repairs belong on the deck repair service, not the replacement or resurfacing path." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
@@ -230,10 +325,11 @@ export default function ResurfacingVsReplacementPage() {
             </details>
           ))}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
+          <div id="repair-resurface-replacement-links" data-speakable="repair-resurface-replacement-links">
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/before-and-after', 'Before & After Deck Transformations'],
               ['/resurface-or-replace-deck-financing', 'Resurface or Replace Before Financing? (decision math)'],
+              ['/services/deck-inspection', 'Professional Deck Inspection Service'],
               ['/deck-resurfacing-northern-virginia', 'Deck Resurfacing in Northern Virginia (service area)'],
               ['/services/deck-repair', 'Deck Repair Service'],
               ['/services/deck-replacement', 'Deck Replacement Service'],
@@ -243,23 +339,27 @@ export default function ResurfacingVsReplacementPage() {
               ['/education/common-deck-stair-inspection-failures-virginia', 'Common Deck Stair Inspection Failures'],
               ['/education/deck-stair-construction-diagram', 'Deck Stair Construction Diagram'],
               ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing Guide'],
+              ['/deck-footing-code-northern-virginia', 'Deck Footing Code Guide'],
+              ['/tools/deck-load-calculator-virginia', 'Deck Load Calculator Virginia'],
+              ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
+              ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
               ['/deck-cost-calculator', 'Deck Cost Calculator'],
               ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Material Comparison'],
-              ['/how-long-does-a-composite-deck-last', 'How Long Does a Deck Last?'],
               ['/deck-safety-inspection-checklist', 'Deck Safety Inspection Checklist'],
-              ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood'],
+              ['/get-estimate', 'Get an Inspection-First Estimate'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link></li>
             ))}
           </ul>
+          </div>
         </div>
       </article>
       <ServicesCallToAction />
       <SimpleCTA title="Free Deck Inspection Resurface or Replace?" buttonText="Schedule Free Inspection" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-09-04" />
 
-      <RelatedGuides currentPath="/deck-resurfacing-vs-replacement" category="structural-repair" />
+      <RelatedGuides currentPath="/deck-resurfacing-vs-replacement" category="ai-retrieval" />
 
       <ContactHome />
     </>
