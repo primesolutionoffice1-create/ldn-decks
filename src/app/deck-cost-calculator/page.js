@@ -4,6 +4,7 @@ import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
 import FinancingCTA from '@/components/FinancingCTA';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
+import { calculatorFaqs } from '@/data/deckCostCalculatorFaqs';
 
 // This page is a LINKABLE ASSET designed to attract backlinks from
 // real estate blogs, home improvement sites, and local news.
@@ -14,33 +15,10 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-cost-calculator',
-  title: 'Deck Cost Calculator Northern Virginia | 2026 Price Tool',
-  description: 'Estimate 2026 deck cost in Northern Virginia by size, material, stairs, railing, elevation, and permit complexity before requesting an itemized quote.',
+  title: 'Deck Cost Calculator Northern Virginia | Budget Planner',
+  description: 'Explore an illustrative deck budget by size, material and selected add-ons. Review model assumptions, then request an itemized Northern Virginia project quote.',
   image: '/social/deck-cost-calculator-social.png',
 });
-
-const calculatorFaqs = [
-  {
-    q: 'How accurate is this deck cost calculator?',
-    a: 'The calculator is a planning tool for 2026 Northern Virginia deck budgets. Final quotes can change after site access, framing condition, stair layout, county permit scope, and HOA requirements are reviewed.',
-  },
-  {
-    q: 'Does the estimate include permits?',
-    a: 'The calculator includes a permit complexity setting, but the final proposal should confirm drawing needs, county fees, inspections, and HOA review requirements for the specific property.',
-  },
-  {
-    q: 'Why is Northern Virginia deck pricing higher than many online averages?',
-    a: 'Northern Virginia projects often involve higher labor costs, stricter county review, HOA architectural rules, elevated structures, and premium composite or PVC material selections.',
-  },
-  {
-    q: 'Should I use the calculator before requesting an estimate?',
-    a: 'Yes. Use it to understand the likely range, then request a written estimate so material choices, structural details, access, railing, stairs, lighting, and permit scope can be itemized.',
-  },
-  {
-    q: 'What is the lowest-cost deck material in the calculator?',
-    a: 'Pressure-treated wood is usually the lowest upfront-cost option. Composite and PVC cost more initially but reduce recurring staining and maintenance compared with wood.',
-  },
-];
 
 export default function DeckCostCalculator() {
   return (
@@ -48,7 +26,7 @@ export default function DeckCostCalculator() {
       <section style={{ background: '#1a202c', color: '#ffffff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Northern Virginia Deck Price Calculator</h1>
-          <p style={{ color: '#cbd5e0', fontSize: '1.1rem' }}>Get an instant estimate for your deck project. Prices reflect 2026 Northern Virginia market rates.</p>
+          <p style={{ color: '#cbd5e0', fontSize: '1.1rem' }}>Explore an illustrative deck budget by size, material and selected add-ons. These assumptions are not verified Northern Virginia market rates.</p>
         </div>
       </section>
 
@@ -57,10 +35,10 @@ export default function DeckCostCalculator() {
           <div style={{ borderLeft: '4px solid #d14817', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 8, marginBottom: '1.5rem' }}>
             <p style={{ fontWeight: 700, margin: '0 0 0.5rem', color: '#1a202c' }}>Quick Answer</p>
             <p style={{ margin: 0, color: '#2d3748', lineHeight: 1.7 }}>
-              Use the calculator to estimate a Northern Virginia deck by square footage, material, railing, stairs, elevation, and permit complexity. Treat the result as a planning range, then request an itemized written estimate after site access, framing conditions, HOA rules, and county permit scope are confirmed.
+              The calculator combines square footage, a material preset and selected add-ons, then applies a 25-35% model adjustment. Stairs and railings are included only when selected; there is no elevation or permit setting. Treat the result as an illustrative scenario, not a guaranteed price, and request an itemized written estimate for your property.
             </p>
           </div>
-          <NamedAuthor context="Loudoun, Fairfax, Prince William, Arlington, and Stafford counties" lastUpdated="2026-06-02" />
+          <NamedAuthor context="Loudoun, Fairfax, Prince William, Arlington, and Stafford counties" lastUpdated="2026-09-13" />
         </div>
       </section>
 
@@ -75,59 +53,59 @@ export default function DeckCostCalculator() {
           <div style={{ margin: '2rem 0' }}>
             <FinancingCTA
               title="Want to compare deck financing options after estimating cost?"
-              body="Use this calculator to frame the project range, then ask us about current financing options for eligible deck builds, resurfacing, repairs, and composite upgrades. Subject to approval. Terms may vary."
+              body="Use this calculator to explore an illustrative budget, then ask us about current financing options for eligible deck builds, resurfacing, repairs, and composite upgrades. Subject to approval. Terms may vary."
             />
           </div>
 
           <article style={{ marginTop: '4rem', lineHeight: 1.8, color: '#2d3748' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1.5rem', color: '#1a202c' }}>How Much Does a Deck Cost in Northern Virginia? (2026 Guide)</h2>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1.5rem', color: '#1a202c' }}>From an Illustrative Budget to a Written Deck Quote</h2>
             <p>
-              If you are planning a backyard renovation in Fairfax, Loudoun, or Prince William County, understanding the <strong>cost to build a deck</strong> is likely your first priority. In 2026, Northern Virginia remains one of the most competitive and premium markets for outdoor construction in the United States.
+              A deck budget starts with scope, not a regional average. For a property in Fairfax, Loudoun or elsewhere in Northern Virginia, record the approximate size, preferred decking, stairs and railing needs before requesting a proposal. The calculator can compare those choices, but it cannot inspect the site or establish an installed price.
             </p>
             <p>
-              The average <strong>deck installation cost</strong> for a professional project in our region typically ranges from <strong>$15,000 to $45,000</strong>. However, high-end luxury builds with integrated kitchens, masonry, and multi-level architecture can exceed $80,000. Use our calculator above to get a baseline estimate for your specific square footage and material preferences.
+              Its material and add-on rates are preset assumptions, not supplier quotes or a dataset of completed local projects. The low scenario adds 25% to the base plus selected add-ons; the high scenario adds 35%. That adjustment is illustrative, not a measured Northern Virginia premium, an itemized fee schedule or a guarantee that every project expense is covered.
             </p>
 
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Breaking Down Deck Price per Square Foot</h3>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>What Does a Price per Square Foot Include?</h3>
             <p>
-              When comparing quotes from different contractors, you will often hear about <strong>deck price per square foot</strong>. This metric varies significantly based on the height of the structure, soil conditions, and the complexity of the framing.
+              Compare square-foot prices only after matching the scope. A decking-board price, a resurfacing proposal and a new structural deck are different purchases. Ask each contractor to identify these items:
             </p>
             <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}><strong>Pressure-Treated Wood:</strong> $25 - $40 per sq. ft. (installed)</li>
-              <li style={{ marginBottom: '0.5rem' }}><strong>Standard Composite (Trex Enhance):</strong> $45 - $65 per sq. ft.</li>
-              <li style={{ marginBottom: '0.5rem' }}><strong>Premium PVC (TimberTech AZEK):</strong> $70 - $95 per sq. ft.</li>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Decking:</strong> manufacturer, product line, layout, fasteners, fascia and installation labor.</li>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Structure:</strong> retained framing, required repairs, new supports and any design work.</li>
+              <li style={{ marginBottom: '0.5rem' }}><strong>Other scope:</strong> demolition, disposal, stairs, railing, access, approvals and cleanup, with exclusions stated.</li>
             </ul>
 
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>The Cost of Trex Decking vs. Traditional Wood</h3>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Compare Maintenance Without Assuming a Payback</h3>
             <p>
-              Many homeowners ask: <em>Is the cost of Trex decking worth it?</em> While the upfront <strong>composite deck cost</strong> is 40% to 60% higher than pressure-treated pine, the long-term ROI is indisputable. A wood deck requires professional power-washing, sanding, and staining every two years—a service that costs roughly $1,500 - $2,500 per visit in Northern Virginia.
+              Compare actual installation quotes with the care requirements for the selected product. Exposure, cleaning frequency, repair needs and whether you hire maintenance help affect future spending. This calculator does not estimate maintenance savings, resale value or a break-even year.
             </p>
             <p>
-              Over a 10-year period, the &quot;cheaper&quot; wood deck actually becomes more expensive than a premium composite installation due to these hidden maintenance taxes. Additionally, composite materials like Trex and TimberTech carry 25-year to 50-year fade and stain warranties, protecting your home&apos;s appraisal value far better than natural wood.
+              Composite and PVC decking still need care. Check the selected product&apos;s cleaning instructions and warranty terms in the <a href="https://www.trex.com/customer-support/trex-owners/downloads/" style={{ color: '#d14817', textDecoration: 'underline' }}>Trex documents</a> or <a href="https://www.timbertech.com/resources/installation-guides/" style={{ color: '#d14817', textDecoration: 'underline' }}>TimberTech installation and care guides</a>. A product warranty is not a promised service life for the existing frame.
             </p>
 
             <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Deck Replacement Cost: Resurfacing vs. Full Tear-Down</h3>
             <p>
-              If you have an existing structure that is fading or splintering, you may be looking for the <strong>deck replacement cost</strong>. If your underlying frame (posts, beams, and joists) is still structurally sound, we can often perform a &quot;resurface.&quot; This involves removing the old boards and installing new composite decking and railings on the existing skeleton.
+              Resurfacing replaces the walking surface while retaining suitable framing. It is an option only after the supports, connections, joist layout and proposed materials are reviewed. The calculator has no structural-condition assessment or separate resurfacing mode; it cannot decide whether your frame is reusable.
             </p>
             <p>
-              A resurface project can save you 30% to 50% compared to a full tear-down and rebuild. However, if your deck was built before modern Virginia building codes or shows signs of deep-seated rot, a full replacement is required for safety and permit compliance.
+              Localized defects may call for defined repairs; extensive deterioration or unsuitable framing may call for replacement. Age alone does not settle that decision. Request separate scopes for feasible options, including how hidden damage will be documented and priced, rather than assuming a fixed savings percentage.
             </p>
 
             <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Factors Influencing Deck Costs in NoVA</h3>
             <ol style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
               <li style={{ marginBottom: '1rem' }}>
-                <strong>Elevation &amp; Height:</strong> Second-story decks require massive 6x6 engineered posts and increased labor for safety rigging, adding $3,000 - $7,000 to the base price.
+                <strong>Height, access and structure:</strong> Confirm deck elevation, equipment access, footing conditions and support design during the site review. These conditions are not calculator inputs.
               </li>
               <li style={{ marginBottom: '1rem' }}>
-                <strong>Permits &amp; HOAs:</strong> Fairfax and Loudoun County have some of the strictest permitting offices in the country. Professional architectural drawings and permit fees typically range from $800 - $1,500.
+                <strong>Permits and HOA review:</strong> Confirm the exact work with the local authority using <a href="https://www.loudoun.gov/1166/Decks" style={{ color: '#d14817', textDecoration: 'underline' }}>Loudoun&apos;s deck guidance</a> or <a href="https://www.fairfaxcounty.gov/landdevelopment/when-permit-required" style={{ color: '#d14817', textDecoration: 'underline' }}>Fairfax&apos;s permit guidance</a>. Ask who handles drawings, applications, fees and inspections. Check HOA requirements separately.
               </li>
               <li style={{ marginBottom: '1rem' }}>
-                <strong>Lighting &amp; Add-ons:</strong> Low-voltage LED lighting systems, custom built-in benches, and picture-frame borders are the details that transform a standard deck into a luxury retreat.
+                <strong>Selected add-ons:</strong> Stairs, railings and other options contribute only when checked. Their preset allowances do not measure stair dimensions, railing lengths or electrical work. Have quantities and specifications itemized in the proposal.
               </li>
             </ol>
             <p>
-              Ready for a precise estimate? <Link href="/get-estimate" style={{ color: '#d14817', fontWeight: 600, textDecoration: 'underline' }}>Schedule a free on-site design consultation</Link> with the Loudoun Decks team today.
+              Ready to define your project scope? <Link href="/get-estimate" style={{ color: '#d14817', fontWeight: 600, textDecoration: 'underline' }}>Schedule a free on-site design consultation</Link> with the Loudoun Decks team and request a written estimate with assumptions and exclusions.
             </p>
           </article>
 

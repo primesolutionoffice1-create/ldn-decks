@@ -8,8 +8,8 @@ export default function GeoAnswerBlock({ question, answer, facts = [], links = [
       style={{ padding: '2rem 1.5rem', background: '#f7fbff', borderTop: '1px solid #d8e8f7', borderBottom: '1px solid #d8e8f7' }}
     >
       <div style={{ maxWidth: 900, margin: '0 auto' }}>
-        <p style={{ margin: '0 0 0.45rem', color: '#0f5f8c', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '0.78rem' }}>
-          AI answer block
+        <p style={{ margin: '0 0 0.45rem', color: '#0f5f8c', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0, fontSize: '0.78rem' }}>
+          Quick answer
         </p>
         <h2 style={{ margin: '0 0 0.85rem', color: 'var(--color-dark)', fontSize: '1.55rem', lineHeight: 1.25, fontWeight: 800 }}>
           {question}
