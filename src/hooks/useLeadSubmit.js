@@ -164,7 +164,10 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
 
   return function submit(formElement) {
     if (inFlight.current) return inFlight.current;
-    const request = submitOnce(formElement);
+    const request = submitOnce(formElement).catch(() => {
+      // Delivery is unconfirmed; retain the ID and wait for a manual retry.
+      return { success: false, error: 'delivery_unconfirmed' };
+    });
     inFlight.current = request.then((result) => {
       if (result?.success) {
         // Retries share an ID; a later inquiry after success is a new lead.

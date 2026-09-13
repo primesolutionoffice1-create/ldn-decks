@@ -215,6 +215,64 @@ await check('double submit is single-flight; failed request retries keep event I
   assert.equal((await next).success, true);
 });
 
+await check('rejected delivery resolves failure without analytics or auto-retry; manual retry keeps the event ID', async () => {
+  for (const choice of ['declined', 'accepted']) {
+    for (const formLocation of ['contact_form', 'paid_social_deck_project_estimate']) {
+      const { context: c, timers } = makeBrowser({ choice });
+      loadTracking(c);
+      c.FormData = TestFormData;
+      let idCounter = 0;
+      c.crypto = { randomUUID: () => `synthetic-rejected-${++idCounter}` };
+      c.useRef = (value) => ({ current: value });
+      const navigation = [];
+      c.useRouter = () => ({ push: (url) => navigation.push(url) });
+      let platformCalls = 0;
+      c.fbq = c.pintrk = () => { platformCalls += 1; };
+      const sent = [];
+      let release;
+      let reject;
+      c.sendContactEmail = (form) => {
+        sent.push(form);
+        return new Promise((resolve, fail) => { release = resolve; reject = fail; });
+      };
+      vm.runInContext(source('src/hooks/useLeadSubmit.js'), c);
+      const submit = c.useLeadSubmit();
+      const form = { dataset: { formLocation }, fields: { name: 'Synthetic Test', phone: '2025550147', email: 'person@example.test' } };
+      const initialEvents = c.dataLayer.length;
+      const first = submit(form);
+      const duplicate = submit(form);
+      assert.equal(first, duplicate);
+      reject(new TypeError('Failed to fetch'));
+      const result = await first;
+      assert.deepEqual({ ...result }, { success: false, error: 'delivery_unconfirmed' });
+      assert.equal(await duplicate, result);
+      assert.equal(sent.length, 1);
+      assert.equal(timers.length, 0);
+      assert.equal(c.dataLayer.length, initialEvents);
+      assert.equal(platformCalls, 0);
+      assert.equal(navigation.length, 0);
+      assert.equal(c.__ldnPendingLeadIds?.size || 0, 0);
+      assert.equal(c.__ldnLeadAttribution?.size || 0, 0);
+
+      const retry = submit(form);
+      assert.equal(retry, submit(form));
+      assert.equal(sent.length, 2);
+      assert.equal(sent[1].get('event_id'), sent[0].get('event_id'));
+      release({ success: true, confirmationToken: 'synthetic-proof' });
+      const confirmed = await retry;
+      assert.equal(confirmed.success, true);
+      assert.equal(confirmed.eventId, sent[0].get('event_id'));
+      assert.equal(navigation.length, 1);
+      assert.equal(c.dataLayer.filter((entry) => entry.event === 'form_submit').length, 1);
+      c.trackLeadConfirmed({ eventId: confirmed.eventId });
+      c.trackLeadConfirmed({ eventId: confirmed.eventId });
+      assert.equal(c.dataLayer.filter((entry) => entry.event === 'lead_confirmed').length, 1);
+      assert.equal(c.dataLayer.filter((entry) => entry[0] === 'event' && entry[1] === 'conversion').length, 1);
+      assert.equal(sent.length, 2);
+    }
+  }
+});
+
 await check('denied-consent reload preserves minimal deferred-conversion routing', () => {
   const { context: first } = makeBrowser({ choice: 'declined' });
   loadTracking(first);

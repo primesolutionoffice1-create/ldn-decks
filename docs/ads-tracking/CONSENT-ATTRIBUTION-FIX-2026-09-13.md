@@ -20,6 +20,7 @@ The separate CRO branch and the original dirty SEO checkout were preserved. No G
 8. Concurrent submits through the shared hook reuse one in-flight promise. Failed/rejected attempts retain the event ID for retry. After terminal success, a subsequent inquiry gets a new ID. Optional tag errors do not turn a delivered request into an error shown to the customer.
 9. Direct Ads and thank-you events retain the same transaction/event ID. Storage-blocked SPA confirmation and denied-consent reloads retain non-personal routing. Consented enrichment is consumed on confirmation; its receipt is eligible for use for 30 minutes. Session storage is not a background-expiring database: stale receipts are removed on cleanup/read or when the browser discards the session.
 10. Both offline generators now share validation before writing. Duplicate order IDs, bad CSV structure, invalid values, missing actual stage times and braid-only eligible rows fail the batch with nonzero exit. No invented noon/fixed-offset timestamps. Explicit denied/invalid consent blocks eligible exports even if a stale GCLID exists. Historical files without a consent column require manual consent review and produce warnings.
+11. Release preview testing exposed an unhandled rejected Server Action fetch: the contact form stayed on Sending. The shared hook now resolves a failure result on rejection so callers can restore their error/retry UI. It preserves the event ID and never retries delivery automatically. Regression coverage includes accepted/declined consent and ordinary/paid-social forms.
 
 ## Measurement boundaries
 
@@ -35,7 +36,7 @@ The UI's existing privacy-policy instructions for clearing site data remain unch
 | --- | --- |
 | `npm run build` after final application changes | PASS; 904 generated pages |
 | `npm run lint` | PASS; informational Babel large-file notice for pre-existing blogData.js |
-| `npm run measurement:verify-consent` | PASS; 12 synthetic scenarios |
+| `npm run measurement:verify-consent` | PASS; 13 synthetic scenarios |
 | `npm run measurement:verify-lead-confirmed` | PASS; ordinary and deferred-confirmation routes |
 | `npm run measurement:test-offline` | PASS; 114 synthetic tests |
 | `npm run verify:financing` | PASS; protected financing UI intact |
@@ -47,7 +48,9 @@ The UI's existing privacy-policy instructions for clearing site data remain unch
 
 The consent scenarios cover unknown/invalid/refused state, acceptance, blocked localStorage, blocked sessionStorage, malformed/blocked cookies, SPA ID persistence, non-renewal of cookie expiry, revocation, source deduplication, denied-consent reload routing, single-flight submission, retry/new-inquiry IDs, optional-tag failure isolation, server advertising-data sanitization, absent Meta consent/environment variables and SSR safety.
 
-Tests use stubs and synthetic values only. No real email, CRM lead, Meta test event, Google conversion or offline upload was sent. Successful lead delivery was simulated at the application boundary, not proven against production credentials.
+Automated tests use stubs and synthetic values only. During release QA, one explicitly labeled non-customer request was attempted on Vercel preview with consent declined, no click IDs, a reserved fictional phone number and the business contact email. The request rejected in the browser; delivery was not established, no matching QA email was found in the connected mailbox, and no successful preview lead POST was observed in the inspected logs. This is not a business lead or evidence of delivery. No offline upload or Meta Test Event was performed.
+
+Initial release commit `814ebcdc` is in PR #165. Its four remote checks passed and its Vercel preview reached READY. The rejected-fetch fix requires another CI/preview cycle before merge. Live Tag Assistant connected to the existing production GTM container; Conversion Linker and the GA4 base tag fired once, with no form/call conversions on page load. The live GTM form tag uses `lead_confirmed` and `{{DLV - event_id}}`; production JavaScript matches its conversion destination through the environment override. The container's 48-hour diagnostic warning is not proof the tag is currently absent.
 
 The legacy `npm run ads:verify-meta-route` browser check could not run: its localhost:9223 CDP endpoint was unavailable/blocked. It was not bypassed or retried with another browser-control mechanism. The UI checks used the supported CUA browser instead; a live Meta route/event test remains unverified.
 
