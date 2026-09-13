@@ -192,7 +192,7 @@ function verifyConfirmedFallbackWithoutPendingState() {
     api.trackLeadConfirmed({ eventId: 'second-verified-lead' });
     assert.equal(context.window.dataLayer.filter(e => e.event === 'lead_confirmed').length, 2);
     assert.equal(gtagCalls.length, 2);
-    assert.equal(gtagCalls[0][2].send_to, 'AW-16888402136/KNF1CJur4tIbENihgvU-');
+    assert.equal(gtagCalls[0][2].send_to, 'AW-16888402136/IxFhCJHb_uUcENihgvU-');
   }
 }
 

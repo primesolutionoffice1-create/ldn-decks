@@ -6,9 +6,10 @@ import { getClickIds, getUtmParams } from '@/lib/clickIds';
 import { BUSINESS } from '@/lib/business';
 import { hasTrackingConsent, trackingPageUrl } from '@/lib/trackingConsent';
 
+// Match GTM's primary "Submit lead form (1)" action so transaction IDs deduplicate.
 const GOOGLE_ADS_LEAD_CONVERSION_SEND_TO =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO ||
-  'AW-16888402136/KNF1CJur4tIbENihgvU-';
+  'AW-16888402136/IxFhCJHb_uUcENihgvU-';
 const GOOGLE_ADS_LEAD_CONVERSION_VALUE = 1;
 const GOOGLE_ADS_LEAD_CONVERSION_CURRENCY = 'USD';
 
