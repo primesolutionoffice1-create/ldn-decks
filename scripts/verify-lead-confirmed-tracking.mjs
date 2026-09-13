@@ -24,14 +24,14 @@ function makeSessionStorage() {
   };
 }
 
-function loadTracking({ gtagCalls = [] } = {}) {
+function loadTracking({ gtagCalls = [], storageBlocked = false, omitGtag = false, sendTo } = {}) {
   const source = stripImports(fs.readFileSync(TRACKING_PATH, 'utf8'))
     .replaceAll('export function ', 'function ');
   const sessionStorage = makeSessionStorage();
   const context = {
     BUSINESS: { telephone: '+17035550123' },
     console,
-    process: { env: { NODE_ENV: 'test' } },
+    process: { env: { NODE_ENV: 'test', ...(sendTo ? { NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO: sendTo } : {}) } },
     recordDedupHit() {},
     getClickIds() { return {}; },
     getUtmParams() { return {}; },
@@ -49,8 +49,15 @@ function loadTracking({ gtagCalls = [] } = {}) {
     },
   };
 
+  if (storageBlocked) {
+    Object.defineProperty(context.window, 'sessionStorage', {
+      get() { throw new Error('Storage blocked'); },
+    });
+  }
+  if (omitGtag) delete context.window.gtag;
+
   vm.runInNewContext(
-    `${source}\nglobalThis.__trackingExports = {\n  markLeadConfirmationPending,\n  trackFormSubmit,\n  trackLeadConfirmed,\n};`,
+    `${source}\nglobalThis.__trackingExports = {\n  markLeadConfirmationPending,\n  trackFormSubmit,\n  trackLeadConfirmed,\n  trackGoogleAdsLeadOnConfirmedSubmit,\n};`,
     context,
     { filename: 'src/lib/tracking.js' }
   );
@@ -174,6 +181,61 @@ async function verifyOtherFormsKeepCurrentBehavior() {
   assert.equal(googleAdsCalls[0].eventId, 'event-123');
 }
 
+function verifyConfirmedFallbackWithoutPendingState() {
+  for (const storageBlocked of [false, true]) {
+    const gtagCalls = [];
+    const context = loadTracking({ gtagCalls, storageBlocked });
+    const api = context.__trackingExports;
+    // These calls represent ThankYouTracking after server proof verification.
+    api.trackLeadConfirmed({ eventId: 'verified-without-local-receipt' });
+    api.trackLeadConfirmed({ eventId: 'verified-without-local-receipt' });
+    api.trackLeadConfirmed({ eventId: 'second-verified-lead' });
+    assert.equal(context.window.dataLayer.filter(e => e.event === 'lead_confirmed').length, 2);
+    assert.equal(gtagCalls.length, 2);
+    assert.equal(gtagCalls[0][2].send_to, 'AW-16888402136/KNF1CJur4tIbENihgvU-');
+  }
+}
+
+function verifySubmitAndThankYouShareReservation() {
+  const gtagCalls = [];
+  const context = loadTracking({ gtagCalls, storageBlocked: true });
+  const api = context.__trackingExports;
+  api.trackGoogleAdsLeadOnConfirmedSubmit({ eventId: 'ordinary-confirmed-lead' });
+  api.trackLeadConfirmed({ eventId: 'ordinary-confirmed-lead' });
+  assert.equal(gtagCalls.length, 1);
+  assert.equal(context.window.dataLayer.filter(e => e.event === 'lead_confirmed').length, 1);
+}
+
+function verifyMissingGtagQueuesOneConversion() {
+  const sendTo = 'AW-123456789/test-only-label';
+  const context = loadTracking({ omitGtag: true, storageBlocked: true, sendTo });
+  const api = context.__trackingExports;
+  const consentCommand = ['consent', 'default', { ad_storage: 'denied' }];
+  context.window.dataLayer.push(consentCommand);
+  api.trackLeadConfirmed({ eventId: 'queued-verified-lead' });
+  api.trackLeadConfirmed({ eventId: 'queued-verified-lead' });
+  const queued = context.window.dataLayer.filter(e => e[0] === 'event' && e[1] === 'conversion');
+  assert.equal(queued.length, 1);
+  assert.equal(queued[0][2].transaction_id, 'queued-verified-lead');
+  assert.equal(queued[0][2].send_to, sendTo);
+  assert.equal(context.window.dataLayer[0], consentCommand);
+  assert.equal(context.window.dataLayer.filter(e => e.event === 'lead_confirmed').length, 1);
+}
+
+function verifyRestrictedTagLayerDoesNotThrow() {
+  for (const key of ['dataLayer', 'gtag', 'fbq', 'pintrk']) {
+    const context = loadTracking();
+    Object.defineProperty(context.window, key, {
+      get() { throw new Error('Tag global blocked'); },
+    });
+    assert.doesNotThrow(() => context.__trackingExports.trackLeadConfirmed({ eventId: 'restricted-tag-lead' }), key);
+  }
+}
+
 await verifyRouteDefersUntilConfirmation();
 await verifyOtherFormsKeepCurrentBehavior();
+verifyConfirmedFallbackWithoutPendingState();
+verifySubmitAndThankYouShareReservation();
+verifyMissingGtagQueuesOneConversion();
+verifyRestrictedTagLayerDoesNotThrow();
 console.log('Server-confirmed lead tracking checks passed.');

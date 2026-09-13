@@ -8,9 +8,23 @@ import { hasTrackingConsent, trackingPageUrl } from '@/lib/trackingConsent';
 
 const GOOGLE_ADS_LEAD_CONVERSION_SEND_TO =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO ||
-  'AW-16888402136/1VhbCLSqreIcENihgvU-';
+  'AW-16888402136/KNF1CJur4tIbENihgvU-';
 const GOOGLE_ADS_LEAD_CONVERSION_VALUE = 1;
 const GOOGLE_ADS_LEAD_CONVERSION_CURRENCY = 'USD';
+
+function ensureTagLayer() {
+  if (typeof window === 'undefined') return;
+  try {
+    window.dataLayer = window.dataLayer || [];
+    if (typeof window.gtag !== 'function') {
+      window.gtag = function gtagFallback() {
+        window.dataLayer.push(arguments);
+      };
+    }
+  } catch {
+    // Restricted tag globals must not break a confirmed lead's UI.
+  }
+}
 
 /**
  * Push event to GTM dataLayer - no-ops on server render
@@ -18,7 +32,7 @@ const GOOGLE_ADS_LEAD_CONVERSION_CURRENCY = 'USD';
 function push(event) {
   if (typeof window === 'undefined') return;
   try {
-    window.dataLayer = window.dataLayer || [];
+    ensureTagLayer();
     window.dataLayer.push(event);
   } catch {
     // Optional tags must never prevent navigation or lead delivery.
@@ -63,6 +77,12 @@ function getGoogleAdsLeadFiredSet() {
   if (typeof window === 'undefined') return null;
   window.__ldnGoogleAdsLeadFiredIds = window.__ldnGoogleAdsLeadFiredIds || new Set();
   return window.__ldnGoogleAdsLeadFiredIds;
+}
+
+function getConfirmedLeadFiredSet() {
+  if (typeof window === 'undefined') return null;
+  window.__ldnConfirmedLeadIds = window.__ldnConfirmedLeadIds || new Set();
+  return window.__ldnConfirmedLeadIds;
 }
 
 function adsDebug(event, details = {}) {
@@ -191,8 +211,12 @@ function trackPinterestLead({ eventId } = {}) {
 
   function sendWhenReady() {
     if (!hasTrackingConsent()) return;
-    if (typeof window.pintrk === 'function') {
-      try { window.pintrk('track', 'lead', payload); } catch {}
+    try {
+      if (typeof window.pintrk === 'function') {
+        window.pintrk('track', 'lead', payload);
+        return;
+      }
+    } catch {
       return;
     }
 
@@ -214,8 +238,12 @@ function trackMetaLead({ eventId } = {}) {
 
   function sendWhenReady() {
     if (!hasTrackingConsent()) return;
-    if (typeof window.fbq === 'function') {
-      try { window.fbq('track', 'Lead', {}, eventId ? { eventID: eventId } : undefined); } catch {}
+    try {
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Lead', {}, eventId ? { eventID: eventId } : undefined);
+        return;
+      }
+    } catch {
       return;
     }
 
@@ -243,6 +271,7 @@ function trackGoogleAdsLead({ eventId, attributionPayload = {} } = {}) {
     adsDebug('google_ads_lead_skipped', { eventId, reason: 'missing_send_to' });
     return;
   }
+  ensureTagLayer();
 
   const payload = {
     send_to: GOOGLE_ADS_LEAD_CONVERSION_SEND_TO,
@@ -262,20 +291,20 @@ function trackGoogleAdsLead({ eventId, attributionPayload = {} } = {}) {
   let attempts = 0;
 
   function sendWhenReady() {
-    if (typeof window.gtag === 'function') {
-      // Keep consent-mode measurement, without customer enrichment on refusal.
-      try {
+    try {
+      if (typeof window.gtag === 'function') {
+        // Keep consent-mode measurement, without customer enrichment on refusal.
         window.gtag('event', 'conversion', hasTrackingConsent()
           ? payload : { ...payload, city: null, state: null, service: null });
-      } catch {
-        adsDebug('google_ads_lead_skipped', { eventId, reason: 'tag_error' });
+        adsDebug('google_ads_lead_sent', {
+          eventId,
+          send_to: GOOGLE_ADS_LEAD_CONVERSION_SEND_TO,
+          transaction_id: eventId,
+        });
         return;
       }
-      adsDebug('google_ads_lead_sent', {
-        eventId,
-        send_to: GOOGLE_ADS_LEAD_CONVERSION_SEND_TO,
-        transaction_id: eventId,
-      });
+    } catch {
+      adsDebug('google_ads_lead_skipped', { eventId, reason: 'tag_error' });
       return;
     }
 
@@ -569,9 +598,9 @@ export function trackCtaClick({ ctaLocation, ctaLabel, href, pageContext } = {})
 /**
  * Fires the authoritative lead conversion event on /thank-you page-view
  * after ThankYouTracking verifies the server-issued confirmation token.
- * GTM may map this event for tags that depend on lead_confirmed. The paid-social
- * deck estimate route also defers its direct Google Ads fallback until this
- * server-confirmed point; other form routes retain their existing behavior.
+ * GTM may map this event for tags that depend on lead_confirmed. The direct
+ * Google Ads fallback covers every verified route and reuses its reservation
+ * if the ordinary form already sent it after the successful server response.
  *
  * event_id matches the one passed into ContactForm's form_submit event,
  * enabling client-side dedup in GTM and server-side dedup if CAPI/Google
@@ -580,14 +609,20 @@ export function trackCtaClick({ ctaLocation, ctaLabel, href, pageContext } = {})
  * Anti-replay: useEffect re-runs on /thank-you reload or back-forward
  * navigation; without a guard, each re-mount fires another conversion
  * with the same event_id. GTM transaction_id dedup catches this in the
- * tag layer, but we block at the source too — belt-and-braces. The
- * sessionStorage key is scoped to event_id, so legitimate new
- * submissions (different event_id, even from the same user) still fire.
+ * tag layer, and sessionStorage blocks repeat fires on the same device.
+ * Server-side proof verification in ThankYouTracking is the authority
+ * that this was a real submitted lead, so local pending state is consumed
+ * when present but must not block a verified conversion.
  */
 export function trackLeadConfirmed({ eventId } = {}) {
   if (typeof window === 'undefined') return;
   if (!eventId) return;
 
+  const firedSet = getConfirmedLeadFiredSet();
+  if (firedSet.has(eventId)) {
+    recordDedupHit();
+    return;
+  }
   const firedKey = leadFiredKey(eventId);
   try {
     if (window.sessionStorage && window.sessionStorage.getItem(firedKey)) {
@@ -595,18 +630,17 @@ export function trackLeadConfirmed({ eventId } = {}) {
       return;
     }
   } catch {
-    // sessionStorage unavailable; continue with the pending-lead guard below.
+    // The in-memory guard still covers repeated mounts in this document.
   }
 
-  if (!consumeLeadConfirmationPending(eventId)) {
-    return;
-  }
+  consumeLeadConfirmationPending(eventId);
+  firedSet.add(eventId);
 
   try {
     if (window.sessionStorage) window.sessionStorage.setItem(firedKey, '1');
   } catch (e) {
     // sessionStorage unavailable (Safari private mode, embedded contexts).
-    // The pending-lead guard already confirmed this came from this SPA flow.
+    // Google Ads transaction_id still deduplicates repeat conversions.
   }
 
   const attributionPayload = consumeLeadAttributionPayload(eventId);
@@ -622,9 +656,7 @@ export function trackLeadConfirmed({ eventId } = {}) {
     page_path: window.location.pathname,
     page: window.location.pathname,
   });
-  if (attributionPayload.form_location === 'paid_social_deck_project_estimate') {
-    trackGoogleAdsLeadOnConfirmedSubmit({ eventId, attributionPayload });
-  }
+  trackGoogleAdsLeadOnConfirmedSubmit({ eventId, attributionPayload });
   trackMetaLead({ eventId });
   trackPinterestLead({ eventId });
 }
