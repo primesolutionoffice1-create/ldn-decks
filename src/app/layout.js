@@ -87,19 +87,18 @@ export default function RootLayout({ children }) {
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms.txt" title="LLM content index" />
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms-full.txt" title="LLM full content" />
         
-        {/* Ad click ID capture — runs before GTM so click IDs are available
-            for Enhanced Conversions and offline-conversion gclid imports. */}
-        <Script id="click-id-capture" strategy="beforeInteractive">
-          {`(function(){try{var u=new URL(window.location.href);var keys=['gclid','gbraid','wbraid','fbclid','msclkid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];var ttl=60*60*24*90;keys.forEach(function(k){var v=u.searchParams.get(k);if(v){document.cookie=k+'='+encodeURIComponent(v)+'; max-age='+ttl+'; path=/; SameSite=Lax';}});}catch(e){}})();`}
-        </Script>
-
         {/* Consent Mode defaults — MUST run before the GTM container script
             so tags fire with explicit consent state from the very first event.
             beforeInteractive guarantees this script executes before any
             afterInteractive / lazyOnload script regardless of network order.
             Optional tracking stays denied until the visitor accepts the CMP. */}
         <Script id="gtm-consent-defaults" strategy="beforeInteractive">
-          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} try{var c=localStorage.getItem('ldn_cookie_consent');window.ldnConsentGranted=c==='accepted';}catch(e){window.ldnConsentGranted=false;} gtag('consent','default',{'ad_storage':window.ldnConsentGranted?'granted':'denied','ad_user_data':window.ldnConsentGranted?'granted':'denied','ad_personalization':window.ldnConsentGranted?'granted':'denied','analytics_storage':window.ldnConsentGranted?'granted':'denied'});`}
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} window.ldnConsentChoice=null;try{var c=localStorage.getItem('ldn_cookie_consent');if(c==='accepted'||c==='declined')window.ldnConsentChoice=c;}catch(e){}window.ldnConsentGranted=window.ldnConsentChoice==='accepted'; gtag('consent','default',{'ad_storage':window.ldnConsentGranted?'granted':'denied','ad_user_data':window.ldnConsentGranted?'granted':'denied','ad_personalization':window.ldnConsentGranted?'granted':'denied','analytics_storage':window.ldnConsentGranted?'granted':'denied'});gtag('set','ads_data_redaction',true);`}
+        </Script>
+        {/* Capture on a consented landing or after acceptance, never before it.
+            getClickIds also invokes this for a later SPA landing. */}
+        <Script id="click-id-capture" strategy="beforeInteractive">
+          {`window.ldnCaptureClickIds=function(){if(window.ldnConsentGranted!==true)return;try{var u=new URL(window.location.href);var keys=['gclid','gbraid','wbraid','fbclid','msclkid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];var ttl=60*60*24*90;keys.forEach(function(k){var v=u.searchParams.get(k);if(v){var encoded=encodeURIComponent(v);var match=document.cookie.match(new RegExp('(?:^|; )'+k+'=([^;]*)'));if(!match||match[1]!==encoded)document.cookie=k+'='+encoded+'; max-age='+ttl+'; path=/; SameSite=Lax'+(u.protocol==='https:'?'; Secure':'');}});}catch(e){}};window.ldnCaptureClickIds();window.addEventListener('ldn:consent-accepted',window.ldnCaptureClickIds);`}
         </Script>
 
         {/* Google Ads base tag — direct fallback for the authoritative
@@ -179,36 +178,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         )}
       </head>
       <body>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-N87MG6QS"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-            title="Google Tag Manager Noscript"
-          />
-        </noscript>
-        <noscript>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            alt=""
-            src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
-          />
-        </noscript>
-        <noscript>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            alt=""
-            src={`https://ct.pinterest.com/v3/?event=init&tid=${PINTEREST_TAG_ID}&noscript=1`}
-          />
-        </noscript>
+        {/* No noscript ad beacons: consent cannot be established without JS. */}
         <ContactProvider>
           <a href="#main" className="skip-link">Skip to main content</a>
           <StructuredData />

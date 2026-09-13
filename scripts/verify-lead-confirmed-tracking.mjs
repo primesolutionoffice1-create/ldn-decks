@@ -35,6 +35,8 @@ function loadTracking({ gtagCalls = [] } = {}) {
     recordDedupHit() {},
     getClickIds() { return {}; },
     getUtmParams() { return {}; },
+    hasTrackingConsent() { return true; },
+    trackingPageUrl(value) { const url = new URL(value); return url.origin + url.pathname; },
     window: {
       dataLayer: [],
       gtag(...args) { gtagCalls.push(args); },
@@ -60,6 +62,8 @@ class TestFormData {
     this.values = new Map(Object.entries(formElement?.fields || {}));
   }
   append(key, value) { this.values.set(key, value); }
+  set(key, value) { this.values.set(key, value); }
+  delete(key) { this.values.delete(key); }
   get(key) { return this.values.get(key) || ''; }
 }
 
@@ -69,6 +73,10 @@ function loadLeadSubmit({ formLocation, googleAdsCalls = [] } = {}) {
   const context = {
     CLICK_ID_KEYS: [],
     UTM_KEYS: [],
+    CONSENT_VERSION: 'test',
+    hasTrackingConsent() { return true; },
+    sanitizeLeadAdvertisingData() {},
+    trackingPageUrl(value) { const url = new URL(value); return url.origin + url.pathname; },
     FormData: TestFormData,
     crypto: { randomUUID() { return 'event-123'; } },
     document: { referrer: '' },
