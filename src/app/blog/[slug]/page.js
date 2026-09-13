@@ -371,7 +371,7 @@ export default async function SingleBlogPage({ params }) {
                )}
 
                <div style={{ marginTop: '40px' }}>
-                 <NamedAuthor context="Northern Virginia" lastUpdated={post.date} />
+                 <NamedAuthor context="Northern Virginia" lastUpdated={post.dateModified || post.date} />
                </div>
 
                <div className={styles.conclusionBox}>

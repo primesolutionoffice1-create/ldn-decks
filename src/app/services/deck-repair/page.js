@@ -90,7 +90,7 @@ const repairDecisionColumns = [
     items: [
       "Inspect stairs, ledger flashing, posts, footings, and railings before choosing repair, resurfacing, or replacement.",
       "Use the calculator and decision guides for planning, then request a site-specific written scope.",
-      "Keep proof claims out of the public case-study layer until photos, scope, warranty terms, and outcomes are verified.",
+      "Ask for photos of the observed damage, a written repair scope and clear exclusions for concealed conditions.",
     ],
   },
 ];
@@ -124,7 +124,7 @@ const repairGeoAnswers = [
   {
     id: 'damaged-deck-safety',
     q: 'Is it safe to use a damaged deck?',
-    a: 'A damaged deck should be treated cautiously until the cause is known. Loose railings, soft boards, sagging stairs, ledger separation, severe rot, or visible movement can indicate structural risk. Homeowners should limit use and schedule an inspection before assuming the deck is safe for normal activity.',
+    a: 'Do not use a deck or stairs that appear unstable until a qualified professional has assessed them. Loose railings, soft boards, sagging stairs, ledger separation, severe rot or visible movement can indicate structural risk. Keep people away from affected areas and do not test the structure by loading it.',
   },
 ];
 
@@ -204,14 +204,14 @@ export default function DeckRepairPage() {
   return (
     <main>
       <JsonLd data={structuralRepairTriageSchema} />
-      <WebPageSchema dateModified="2026-09-04" url="https://ldndecks.com/services/deck-repair" name="Deck Repair Near Me Northern VA | Structural Deck Contractor" description="Need deck repair near you in Northern Virginia? We inspect rotted posts, sinking decks, railings, ledgers, and failed-inspection issues before recommending repair or replacement." speakable />
+      <WebPageSchema dateModified="2026-09-13" url="https://ldndecks.com/services/deck-repair" name="Deck Repair Near Me Northern VA | Structural Deck Contractor" description="Need deck repair near you in Northern Virginia? We inspect rotted posts, sinking decks, railings, ledgers, and failed-inspection issues before recommending repair or replacement." speakable />
       <ArticleSchema
         title="Deck Repair in Northern Virginia"
         description="Inspection-first deck repair guide for deciding when an unsafe or aging deck needs targeted structural repair, resurfacing, or full replacement."
         path="/services/deck-repair"
         image="/social/deck-repair-social.png"
         datePublished="2026-06-02"
-        dateModified="2026-09-04"
+        dateModified="2026-09-13"
         speakable={[
           '[data-speakable]',
           '#deck-repair-answer',
@@ -223,7 +223,7 @@ export default function DeckRepairPage() {
           {
             id: 'deck-repair-answer',
             name: 'Deck Repair Quick Answer',
-            text: 'Deck repair is enough when the issue is isolated to a post, railing, stair, ledger-flashing correction, or failed inspection item on an otherwise sound structure.',
+            text: 'Deck repair may be enough when an assessment confirms isolated damage and an otherwise suitable structure. Widespread decay, movement, failing footings or inadequate connections may require replacement or substantial rebuilding. Replacing surface boards does not resolve a structural problem. Ask for a written assessment that distinguishes reusable framing, required repairs and concealed conditions.',
           },
           ...repairGeoAnswers.map((item) => ({
             id: item.id,
@@ -263,11 +263,11 @@ export default function DeckRepairPage() {
       <div id="deck-repair-answer" data-speakable="deck-repair-answer">
         <GeoAnswerBlock
           question="When is deck repair enough, and when does repair become replacement?"
-          answer="Deck repair is enough when the problem is isolated: one rotted post, a loose railing, a stair issue, a ledger-flashing correction, or a failed inspection item on an otherwise sound structure. Repair becomes replacement when rot, movement, poor footings, weak ledger attachment, bouncy framing, or unsafe stairs affect the overall load path. Loudoun Decks inspects the structure first so the recommendation is repair, resurfacing, or replacement based on safety rather than guesswork."
+          answer="Deck repair may be enough when an assessment confirms isolated damage and an otherwise suitable structure. Widespread decay, movement, failing footings or inadequate connections may require replacement or substantial rebuilding. Replacing surface boards does not resolve a structural problem. Ask for a written assessment that distinguishes reusable framing, required repairs and concealed conditions."
           facts={[
             'Repair path: isolated structural or safety issue',
             'Replacement path: system-wide load-path or framing failure',
-            'Proof status: no repair outcome should be cited as a case study without source records',
+            'Ask for damage photos, scope, exclusions and written change-order terms.',
           ]}
           links={[
             { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
@@ -389,7 +389,7 @@ export default function DeckRepairPage() {
       </section>
 
       <RelatedGuides currentPath="/services/deck-repair" category="ai-retrieval" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-09-04" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-09-13" />
 
       <ContactHome />
     </main>
