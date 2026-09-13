@@ -1,7 +1,7 @@
 # Consent and attribution safety patch
 
 Date: September 13, 2026.
-Status: implemented and tested locally; release authorized September 13. PR preparation underway; production deployment is not yet verified. The PR timeline is the authoritative release record.
+Status: implemented and tested; release authorized September 13. Draft PR #165 is open; production merge is held until actual delivery is verified. The PR timeline is the authoritative release record.
 Branch: `codex/ads-consent-safety-20260913`.
 Base: `51c57c9b12a1e7fc7b811476f60a909a19e10ec5` from origin/main.
 Worktree: `/private/tmp/ldn-ads-consent-safety-20260913`.
@@ -51,6 +51,19 @@ The consent scenarios cover unknown/invalid/refused state, acceptance, blocked l
 Automated tests use stubs and synthetic values only. During release QA, one explicitly labeled non-customer request was attempted on Vercel preview with consent declined, no click IDs, a reserved fictional phone number and the business contact email. The request rejected in the browser; delivery was not established, no matching QA email was found in the connected mailbox, and no successful preview lead POST was observed in the inspected logs. This is not a business lead or evidence of delivery. No offline upload or Meta Test Event was performed.
 
 Initial release commit `814ebcdc` is in PR #165. Its four remote checks passed and its Vercel preview reached READY. The rejected-fetch fix requires another CI/preview cycle before merge. Live Tag Assistant connected to the existing production GTM container; Conversion Linker and the GA4 base tag fired once, with no form/call conversions on page load. The live GTM form tag uses `lead_confirmed` and `{{DLV - event_id}}`; production JavaScript matches its conversion destination through the environment override. The container's 48-hour diagnostic warning is not proof the tag is currently absent.
+
+### Release follow-up
+
+- Commit `09e58864` passed all four remote checks. Its Vercel preview reached READY.
+- A second, explicitly labeled synthetic Chrome submission reached the preview server. The UI displayed an error and restored the submit button; it did not navigate to a false success page.
+- Preview server logs confirmed missing `EMAIL_USER` and `RESEND_API_KEY`, with GHL unconfigured and `N8N_WEBSITE_INTAKE_WEBHOOK_URL` absent. An existing `EMAIL_PASS` alone cannot enable SMTP. All delivery sinks failed. This is a Preview configuration finding, not evidence of a production email outage.
+- Production `EMAIL_USER` exists as a write-only secret. Its value was not recovered or changed. No production environment variables were modified.
+- Both available n8n connectors returned `AUTHENTICATION_ERROR` on real API operations despite their health endpoint reporting OK. The proposed isolated QA workflow was not created. The n8n browser session requires sign-in; no API keys were created.
+- Vercel CLI authentication works. The branch-specific Preview environment listing contains no overrides. No QA environment variables were added.
+- Latest main commit `b42ff0b5` (PR #166) was integrated into this isolated branch without conflicts in merge commit `ba59ea5d`. Those already-merged GEO changes are not new work in PR #165. After integration, build passed with 904 generated pages; lint, schema, financing, 13 consent scenarios, confirmed-lead checks and 114 offline tests passed. Remote checks must pass again on the pushed head.
+- Repository rules inspected during release did not show enforced review/status-check requirements. This is a governance gap, not permission to bypass the documented PR and verification process; no rules were changed.
+
+Next release gate: authenticate the existing n8n session or supply the confirmed SMTP username through Vercel, configure a branch-only test delivery sink, and verify labeled ordinary/paid-social submissions through receipt and signed confirmation. Then review the current-head CI results before merge. Never enable a QA-only sink in Production. After deployment, verify a labeled production receipt using the unchanged operational destination. Safari/iOS, CRM reconciliation, vendor consent audit and offline-import readiness remain explicitly unverified; they must not be represented as completed or used to justify scaling.
 
 The legacy `npm run ads:verify-meta-route` browser check could not run: its localhost:9223 CDP endpoint was unavailable/blocked. It was not bypassed or retried with another browser-control mechanism. The UI checks used the supported CUA browser instead; a live Meta route/event test remains unverified.
 
