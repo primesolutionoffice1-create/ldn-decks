@@ -32,7 +32,6 @@ const imageGallerySchema = {
     "provider": { "@id": "https://ldndecks.com/#organization" }
   },
   "image": [
-    { "@type": "ImageObject", "url": "https://ldndecks.com/Projectsbeforeandafter/project1after.jpeg", "name": "Deck resurfacing before and after photo pair", "description": "Before and after deck photo pair with project details pending owner verification before use as a formal case study." },
     { "@type": "ImageObject", "url": "https://ldndecks.com/Projectsbeforeandafter/project2after.jpeg", "name": "Elevated deck before and after photo pair", "description": "Before and after elevated deck photo pair with project details pending owner verification before use as a formal case study." },
     { "@type": "ImageObject", "url": "https://ldndecks.com/Projectsbeforeandafter/project3after.jpeg", "name": "Backyard deck before and after photo pair", "description": "Before and after backyard deck photo pair with project details pending owner verification before use as a formal case study." },
     { "@type": "ImageObject", "url": "https://ldndecks.com/Projectsbeforeandafter/project4after.jpeg", "name": "Townhome deck before and after photo pair", "description": "Before and after townhome deck photo pair with project details pending owner verification before use as a formal case study." }
@@ -40,23 +39,6 @@ const imageGallerySchema = {
 };
 
 const projects = [
-  {
-    id: 1,
-    title: 'Wood to Composite Resurfacing',
-    location: 'Leesburg, VA',
-    county: 'Loudoun County',
-    dateLabel: 'Date pending owner verification',
-    beforeImg: '/Projectsbeforeandafter/project1before.jpeg',
-    afterImg: '/Projectsbeforeandafter/project1after.jpeg',
-    beforeAlt: 'Weathered wood deck with traditional vertical balusters before resurfacing in Leesburg VA',
-    afterAlt: 'Modern white composite deck with black metal railings after resurfacing in Leesburg VA',
-    material: 'Trex Enhance Naturals Foggy Wharf',
-    size: '280 sqft',
-    duration: 'Timeline pending',
-    cost: 'Cost pending',
-    description: 'This aging wood deck was functionally sound but aesthetically tired. We performed a full composite resurfacing, replacing the old wood boards and railings with high-performance Trex materials. The white fascia and black railing contrast perfectly with the light gray decking.',
-    evidenceNote: 'Project record needed before publishing final date, timeline, cost, frame-reuse details, or savings claims.',
-  },
   {
     id: 2,
     title: 'Elevated Deck Modernization',
@@ -119,20 +101,20 @@ export default function BeforeAndAfterPage() {
   return (
     <>
       <JsonLd data={imageGallerySchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/before-and-after" name="Before &amp; After Deck Projects | Northern Virginia | LDN Decks" description="See before and after deck transformation photos across Northern Virginia with project details marked for verification where records are still needed." speakable />
+      <WebPageSchema dateModified="2026-09-13" url="https://ldndecks.com/before-and-after" name="Before &amp; After Deck Projects | Northern Virginia | LDN Decks" description="See before and after deck transformation photos across Northern Virginia with project details marked for verification where records are still needed." speakable />
       <ArticleSchema
         title="Before & After Deck Projects Northern Virginia"
         description="Before and after deck transformation photos from LDN Decks projects across Northern Virginia, with project details marked for verification where records are still needed."
         path="/before-and-after"
         image="/images/img04.jpeg"
         datePublished="2026-04-21"
-        dateModified="2026-06-01"
+        dateModified="2026-09-13"
       />
 
       {/* Hero */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Before &amp; After Deck Transformations</h1>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem', overflowWrap: 'anywhere' }}>Before &amp; After Deck Transformations</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Before and after deck photos from Loudoun, Fairfax &amp; Prince William counties with project details marked for verification where needed</p>
           <p style={{ color: '#aaa', marginTop: '1rem', fontSize: '0.9rem' }}>Public review profiles &middot; Trex material options &middot; Written scope and warranty terms confirmed in each estimate</p>
         </div>
@@ -156,6 +138,16 @@ export default function BeforeAndAfterPage() {
 
           <VerifiedProjectProofSection />
 
+          <section id="resurfacing-estimate-planning" style={{ marginBottom: '3rem', paddingBottom: '2rem', borderBottom: '1px solid #e5e5e5' }}>
+            <h2 style={S.h2}>Planning a wood-to-composite resurfacing project?</h2>
+            <p style={S.p}>Ask us to itemize decking, fascia, railings and stairs separately from any framing repairs. Your written estimate should identify what can stay, what must change and what remains concealed. Photos of surface finishes cannot establish whether a frame is suitable for reuse.</p>
+            <p style={{ ...S.p, marginBottom: 0 }}>
+              <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600, textDecoration: 'underline' }}>Compare resurfacing and replacement</Link>
+              {' or '}
+              <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600, textDecoration: 'underline' }}>request a written resurfacing estimate</Link>.
+            </p>
+          </section>
+
           {/* Project Cards */}
           {projects.map((project, idx) => (
             <section key={project.id} style={{ marginBottom: '4rem', paddingBottom: '3rem', borderBottom: idx < projects.length - 1 ? '1px solid #e5e5e5' : 'none' }}>
@@ -163,7 +155,7 @@ export default function BeforeAndAfterPage() {
               <p style={{ color: '#666', fontSize: '0.9rem', marginBottom: '1.5rem' }}>{project.location} &middot; {project.county} &middot; {project.dateLabel}</p>
 
               {/* Before/After Image Grid */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 18rem), 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
                 <div>
                   <div style={{ position: 'relative', width: '100%', height: '280px', borderRadius: '8px', overflow: 'hidden' }}>
                     <Image src={project.beforeImg} alt={project.beforeAlt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 50vw, 440px" />
@@ -179,7 +171,7 @@ export default function BeforeAndAfterPage() {
               </div>
 
               {/* Project Details Grid */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', background: '#f9f9f9', borderRadius: '8px', padding: '1.25rem', marginBottom: '1.25rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr))', gap: '1rem', background: '#f9f9f9', borderRadius: '8px', padding: '1.25rem', marginBottom: '1.25rem' }}>
                 <div>
                   <p style={{ fontSize: '0.75rem', color: '#999', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem' }}>Material</p>
                   <p style={{ fontWeight: 600, fontSize: '0.9rem' }}>{project.material}</p>
@@ -209,7 +201,7 @@ export default function BeforeAndAfterPage() {
           {/* Summary Stats */}
           <div style={{ background: 'var(--color-dark)', color: '#fff', borderRadius: '12px', padding: '2rem', marginBottom: '3rem' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1.5rem', textAlign: 'center' }}>Projects at a Glance</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', textAlign: 'center' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr))', gap: '1.5rem', textAlign: 'center' }}>
               <div>
                 <p style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--color-primary)' }}>Verify</p>
                 <p style={{ color: '#aaa', fontSize: '0.85rem' }}>Cost records before publishing</p>
@@ -240,7 +232,7 @@ export default function BeforeAndAfterPage() {
 
           {/* Types of Transformations */}
           <h2 style={S.h2}>Types of Deck Transformations We Build</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 16rem), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               { title: 'New Deck Construction', desc: 'Bare yard to custom outdoor living space.', link: '/services/new-decks' },
               { title: 'Deck Resurfacing', desc: 'New composite surface on existing frame. Save 25-40%.', link: '/services/deck-resurfacing' },
@@ -283,7 +275,7 @@ export default function BeforeAndAfterPage() {
 
       <SimpleCTA title="Ready to Transform Your Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/before-and-after" />
-      <NamedAuthor context="Northern Virginia before-and-after project verification" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Northern Virginia before-and-after project verification" lastUpdated="2026-09-13" />
       <ContactHome />
     </>
   );

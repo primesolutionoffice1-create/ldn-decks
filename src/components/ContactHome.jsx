@@ -91,7 +91,19 @@ export default function ContactHome({ pageContext } = {}) {
                 tabIndex={-1}
                 autoComplete="new-password"
                 aria-hidden="true"
-                style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+                style={{
+                  position: 'absolute',
+                  width: 1,
+                  height: 1,
+                  padding: 0,
+                  margin: 0,
+                  border: 0,
+                  opacity: 0,
+                  overflow: 'hidden',
+                  clip: 'rect(0 0 0 0)',
+                  clipPath: 'inset(50%)',
+                  pointerEvents: 'none',
+                }}
               />
               <input type="hidden" name="state" value="VA" />
               <h3>Get a Free Project Consultation</h3>
