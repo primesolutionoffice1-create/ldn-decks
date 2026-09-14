@@ -61,7 +61,7 @@ export default function GetEstimatePage() {
 
       {/* Hero Above the Fold: Trust + CTA */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '3rem 0 2rem' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '3rem', alignItems: 'center' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
               <span style={{ color: '#fbbf24', fontSize: '1rem', fontWeight: 700 }}>Public reviews</span>
@@ -170,7 +170,7 @@ export default function GetEstimatePage() {
 
       {/* Form + proof-safe trust path */}
       <section id="estimate-form" style={{ padding: '3rem 0', background: '#fff' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '3rem' }}>
 
           {/* Left: Form */}
           <div>
