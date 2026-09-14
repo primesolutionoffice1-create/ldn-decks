@@ -24,6 +24,19 @@
   padding: 0 20px;
 }
 
+.logoArea a {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  line-height: 0;
+}
+
+.logoArea img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
 .headerRight {
   flex: 1;
   display: flex;
@@ -562,7 +575,8 @@
 /* Mobile View (<= 768px) */
 @media screen and (max-width: 768px) {
   .logoArea {
-    width: 160px; /* Smaller for mobile */
+    width: clamp(170px, 56vw, 200px); /* Keep logo visible without 320px overflow */
+    padding: 0 10px;
   }
 
   .topBar {
