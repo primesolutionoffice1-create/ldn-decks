@@ -25,22 +25,22 @@ import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 export const metadata = buildMetadata({
   path: '/deck-builder-vienna-va',
   title: 'Deck Builder in Vienna, VA | Composite Decks | Loudoun Decks',
-  description: 'Trusted deck builder in Vienna, VA. Google reviews. Custom Trex & TimberTech decks, screened porches & pergolas. Town of Vienna permit experts. Free estimate.',
+  description: 'Vienna VA deck builder for composite deck replacement, Town of Vienna and Fairfax County permit-path planning, railings, stairs, screened porches, and written estimates.',
   image: '/social/deck-builder-vienna-va-social.png',
 });
 
 const inclusions = [
   {
-    title: "Town of Vienna Experts",
-    desc: "We navigate the unique building department requirements of the Town of Vienna and prepare the permit package around current town and Fairfax County expectations."
+    title: "Town and County Permit-Path Planning",
+    desc: "We verify whether the property is inside Town limits and prepare the project scope around current Town of Vienna zoning review and Fairfax County building-permit requirements."
   },
   {
     title: "Fairfax Luxury Standards",
     desc: "Building high-end outdoor spaces that match the premium real estate of Vienna, Windover Heights, and Tysons Woods."
   },
   {
-    title: "Full Project Management",
-    desc: "From initial CAD designs to HOA submissions and final county inspections, we handle the entire process in Vienna."
+    title: "Project Coordination",
+    desc: "We organize drawings, material selections, HOA documentation, permit-path requirements, and inspection milestones around the confirmed project scope."
   }
 ];
 
@@ -50,16 +50,16 @@ const viennaFAQs = [
     a: "Most professional deck projects in Vienna range from $25,000 to $65,000. Composite decks (Trex/AZEK) typically average between $40 and $65 per square foot installed, depending on structural needs and railing choices."
   },
   {
-    q: "Do I need a permit for a deck in the Town of Vienna?",
-    a: "Yes. If your property is within the Town of Vienna limits, you need a permit from the Town's building department. If you are in the Vienna zip code but outside town limits, you fall under Fairfax County. We handle the process for both."
+    q: "How does Town of Vienna deck permit routing work?",
+    a: "For properties inside Town limits, Fairfax County serves as the building official while the Town reviews the project for Town zoning and related requirements. Applicants should confirm the current Town and County submission sequence for their scope. Vienna ZIP-code homes outside Town limits usually follow Fairfax County review without the Town step."
   },
   {
     q: "Do HOAs in Vienna allow composite decking?",
-    a: "Yes, nearly all Vienna HOAs (like those in Vienna Woods or Country Creek) approve and often prefer composite decking due to its consistent appearance and lack of maintenance issues over time."
+    a: "Many Vienna HOAs and architectural committees consider composite decking, but approval depends on the community's current standards and the submitted product line, color, railing style, stair location, and visibility. HOA review is separate from Town or County permit review."
   },
   {
     q: "How long does it take to build a deck in Vienna?",
-    a: "Permit review usually takes 2-4 weeks. Once the permit is issued, construction of a standard composite deck typically takes 1-2 weeks. Screened porches or multi-level projects may take 3-4 weeks."
+    a: "On-site construction for a standard composite replacement may take 1-2 weeks after approvals, while screened porches, multi-level decks, major stair rebuilds, and structural corrections can take longer. Approval timing varies with Town, County, HOA, revision, and engineering requirements."
   },
   {
     q: "Are you a licensed deck builder in Fairfax County?",
@@ -89,14 +89,14 @@ const expansionSections = [
   {
     title: "Navigating Vienna & Fairfax County Regulations",
     paragraphs: [
-      "Building in Vienna requires a deep understanding of local zoning and building codes. If your home is within the Town of Vienna limits, your project must go through the Town's specific building department. This often involves a faster review cycle but requires precise adherence to town-specific setbacks and height restrictions. We verify the jurisdiction, setback rules, and submission requirements before plans are finalized.",
-      "For homes in the greater Vienna area that fall under Fairfax County jurisdiction, we utilize our years of experience with the Fairfax County Land Development Services (LDS) portal. We ensure every footing, every ledger connection, and every railing detail meets or exceeds the current building codes. We manage the paperwork so you can focus on choosing your materials and design.",
+      "Building in Vienna starts with a jurisdiction check. Fairfax County serves as the building official for properties inside the Town, while the Town reviews applicable zoning and site requirements. The exact submission sequence should be confirmed against the current Town and County instructions before plans are finalized.",
+      "For homes in the greater Vienna area outside Town limits, projects generally follow Fairfax County Land Development Services review. The scope should account for footings, ledger attachment, flashing, railings, stair geometry, setbacks, environmental constraints, and any engineered details required by the reviewing authority.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We prepare permit and HOA submissions carefully for NoVA jurisdictions, including the sometimes complex requirements of Vienna HOAs."
     ],
     listItems: [
-      { label: "Town of Vienna Specialist", text: "Expertise in navigating the Town's specific building department and zoning rules." },
-      { label: "Fairfax County Compliant", text: "All projects outside town limits are built to the highest Fairfax County safety standards." },
-      { label: "HOA Submission Management", text: "We provide full CAD drawings and site plans for your HOA's architectural review board." },
+      { label: "Jurisdiction Check", text: "Confirm whether Town of Vienna zoning review and Fairfax County building review apply to the address and scope." },
+      { label: "Fairfax County Planning", text: "Prepare the project around current County submission requirements, adopted code, and approved details." },
+      { label: "HOA Documentation", text: "Organize the drawings and material details requested by the applicable architectural review process." },
       { label: "Licensed & Insured", text: "Class A Contractor status with full workers' comp and liability coverage for your protection." }
     ]
   },
@@ -123,7 +123,7 @@ export default function ViennaDeckBuilderPage() {
     <main>
       <JsonLd data={viennaFaqSchema} />
       <LocalBusinessSchema city="Vienna" url="https://ldndecks.com/deck-builder-vienna-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-vienna-va" name="Deck Builder in Vienna, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Vienna, VA. Google reviews. Custom Trex &amp; TimberTech decks, screened porches &amp; pergolas. Town of Vienna permit experts. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-08-15" url="https://ldndecks.com/deck-builder-vienna-va" name="Deck Builder in Vienna, VA | Composite Decks | Loudoun Decks" description="Vienna VA deck builder for composite deck replacement, Town of Vienna and Fairfax County permit-path planning, railings, stairs, screened porches, and written estimates." speakable />
       <ServicesHeader
         subtext="Vienna, VA Deck Builder"
         title="Custom Deck Builder in Vienna, VA"
@@ -144,10 +144,10 @@ export default function ViennaDeckBuilderPage() {
       <ServiceMain
         subtitle="Vienna's Trusted Choice"
         title="Deck Builder Vienna VA - Premium Craftsmanship"
-        description="We build the outdoor spaces Vienna homeowners are proud to show off. Custom designs, Town of Vienna permit expertise, and premium materials from $25k+."
+        description="We build Vienna composite deck replacements and outdoor living projects around jurisdiction checks, structural planning, premium materials, and written scopes from $25k+."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
-          "Town of Vienna building permit experts",
+          "Town of Vienna and Fairfax County permit-path planning",
           "Custom multi-level and single-level designs",
           "Screened porches, pergolas & outdoor kitchens",
           "Public reviews - call (571) 655-7207"
