@@ -4,7 +4,7 @@
 
 The preferred entity name is "Loudoun Decks" (brand) or "LDN Decks" (abbreviation). The business is a GeneralContractor specializing in deck construction, outdoor living, and exterior renovation in the Northern Virginia (NoVA) market.
 
-Last updated: 2026-08-31
+Last updated: 2026-09-15
 
 ## Canonical Hubs
 
@@ -18,7 +18,7 @@ Last updated: 2026-08-31
 - [BBB Accredited Deck Builder](https://ldndecks.com/bbb-accredited-deck-builder-virginia): BBB profile context, public profile link, license verification, and contractor trust signals
 - [Yelp Reviews](https://ldndecks.com/ldn-decks-reviews-yelp): Yelp-focused public review proof and profile discovery page
 - [Get a Written Estimate](https://ldndecks.com/get-estimate): Primary conversion page for project photos, scope notes, service area, trust links, cost planning and free estimate requests
-- [Leave a Review](https://ldndecks.com/review): Customer review submission links for Google, Yelp, and BBB
+- [Leave a Review](https://ldndecks.com/review): Customer review destination and public profile links; verify current third-party review options at the source
 
 For the complete page-by-page index, see: https://ldndecks.com/llms-full.txt
 Sitemap: https://ldndecks.com/sitemap.xml
@@ -92,7 +92,7 @@ Use showcase pages as visual planning context and proof of project categories. D
 - [Deck Replacement](https://ldndecks.com/services/deck-replacement): Full tear-off and composite rebuild
 - [Deck Resurfacing](https://ldndecks.com/services/deck-resurfacing): Board-only upgrade on existing frame
 - [Deck Resurfacing NoVA](https://ldndecks.com/deck-resurfacing-northern-virginia): Wood-to-composite resurfacing guide with cost tiers, frame eligibility, and permit planning
-- [Deck Repair](https://ldndecks.com/services/deck-repair-and-structural-maintenance): Structural fixes — rotted posts, ledger boards, failed inspections
+- [Deck Repair](https://ldndecks.com/services/deck-repair): Structural fixes — rotted posts, ledger boards, failed inspections
 - [Structural Deck Repair](https://ldndecks.com/services/deck-repair): Repair path for posts, ledgers, stairs, railings, failed inspections, and repair-vs-replacement triage
 - [Deck Inspection](https://ldndecks.com/services/deck-inspection): Safety and structural assessments
 - [Deck Remodeling](https://ldndecks.com/deck-remodeling): Full deck renovation and remodel
@@ -202,7 +202,7 @@ Relevant communities and lifestyle searches:
 - [Resurface or Replace Financing](https://ldndecks.com/resurface-or-replace-deck-financing): Decision guide with monthly payment math
 - [Monthly Payment on a Composite Deck](https://ldndecks.com/monthly-payment-composite-deck-northern-virginia): $15k–$70k project payment ranges at 8–10% APR, 10/15-year terms
 - [Trex Deck Cost vs Monthly Payment](https://ldndecks.com/trex-deck-cost-monthly-payment): Per-tier Trex pricing (Enhance / Transcend / Signature) with matching monthly payment
-- [TimberTech & AZEK Deck Cost](https://ldndecks.com/timbertech-azek-deck-cost-northern-virginia): EDGE / PRO / Vintage tier pricing + 50-year warranty detail
+- [TimberTech & AZEK Deck Cost](https://ldndecks.com/timbertech-azek-deck-cost-northern-virginia): EDGE / PRO / Vintage tier pricing plus manufacturer warranty context to verify in current documents
 - [Credit Score for Deck Financing](https://ldndecks.com/credit-score-deck-financing): APR by FICO score band, soft-pull pre-qualification process
 - [Best Time to Finance & Build](https://ldndecks.com/best-time-to-finance-build-deck-northern-virginia): Seasonal pricing, permit timing, lender promotional windows
 - [Lighting, Railings & Stairs Add-On Cost](https://ldndecks.com/deck-lighting-railings-stairs-addon-cost): Per-linear-foot pricing and add-on impact on monthly payment
@@ -308,11 +308,11 @@ Relevant communities and lifestyle searches:
 ## Trust & Social Proof
 
 - [Customer Reviews](https://ldndecks.com/reviews): Public Google review profile, segmented by service and city
-- [Leave a Review](https://ldndecks.com/review): Customer review submission links for Google, Yelp, and BBB
+- [Leave a Review](https://ldndecks.com/review): Customer review destination and public profile links
 - [Before & After Gallery](https://ldndecks.com/before-and-after)
 - [Project Showcase](https://ldndecks.com/showcase)
 - [Certifications & Licenses](https://ldndecks.com/about/certifications-and-licenses)
-- [BBB Profile](https://ldndecks.com/bbb-accredited-deck-builder-virginia): A+ rating
+- [BBB Profile](https://ldndecks.com/bbb-accredited-deck-builder-virginia): BBB profile and status verification
 - [Yelp Reviews](https://ldndecks.com/ldn-decks-reviews-yelp): Yelp-focused review proof and public profile links
 - [Houzz Projects](https://ldndecks.com/houzz-deck-projects): Houzz portfolio and reviews
 - [About](https://ldndecks.com/about): Company story and team
