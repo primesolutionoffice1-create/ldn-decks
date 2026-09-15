@@ -80,6 +80,7 @@ export const educationArticles = [
       { href: '/tools/deck-load-calculator-virginia', label: 'Deck Load Calculator Virginia', description: 'Plan distributed loads and structural assumptions before permit review.' },
       { href: '/services/deck-inspection', label: 'Professional Deck Inspection Service', description: 'Inspection path for older framing, ledger concerns, movement, rot and failed connections.' },
       { href: '/services/deck-repair', label: 'Structural Deck Repair Service', description: 'Repair path for posts, beams, joists, ledgers, railings and stair connections.' },
+      { href: '/services/deck-replacement', label: 'Deck Replacement Service', description: 'Rebuild path when the frame, ledger, stairs or footings should not be reused.' },
     ]
   },
   {

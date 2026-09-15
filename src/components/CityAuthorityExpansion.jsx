@@ -319,7 +319,10 @@ export default function CityAuthorityExpansion({ cityKey }) {
           real service intent: <Link href="/services/new-decks">new deck construction</Link>,{' '}
           <Link href="/services/deck-replacement">deck replacement</Link>,{' '}
           <Link href="/services/deck-resurfacing">deck resurfacing</Link>,{' '}
-          <Link href="/services/deck-inspection">deck inspections</Link>, and the technical tools
+          <Link href="/services/deck-repair">deck repair</Link>,{' '}
+          <Link href="/services/deck-inspection">deck inspections</Link>,{' '}
+          <Link href="/composite-decks">composite decks</Link>,{' '}
+          <Link href="/covered-deck-builder-northern-virginia">covered decks</Link>, and the technical tools
           homeowners use before they request an estimate.
         </p>
 
