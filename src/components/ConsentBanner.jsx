@@ -2,44 +2,36 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { CONSENT_KEY, applyTrackingConsent, clearAttributionCookies, clearLeadAttribution, getConsentChoice } from '@/lib/trackingConsent';
 import styles from './ConsentBanner.module.css';
-
-const CONSENT_KEY = 'ldn_cookie_consent';
 
 export default function ConsentBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
-      try {
-        setVisible(!localStorage.getItem(CONSENT_KEY));
-      } catch {
-        setVisible(false);
+      const choice = getConsentChoice();
+      setVisible(!choice);
+      if (choice !== 'accepted') {
+        clearAttributionCookies();
+        clearLeadAttribution();
       }
     }, 0);
 
-    return () => window.clearTimeout(timer);
+    function onStorage(event) {
+      if (event.key !== CONSENT_KEY && event.key !== null) return;
+      applyTrackingConsent(event.newValue, { persist: false });
+      setVisible(event.newValue !== 'accepted' && event.newValue !== 'declined');
+    }
+    window.addEventListener('storage', onStorage);
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener('storage', onStorage);
+    };
   }, []);
 
   function updateConsent(value) {
-    try {
-      localStorage.setItem(CONSENT_KEY, value);
-      window.ldnConsentGranted = value === 'accepted';
-      if (typeof window.gtag === 'function') {
-        window.gtag('consent', 'update', {
-          ad_storage: value === 'accepted' ? 'granted' : 'denied',
-          ad_user_data: value === 'accepted' ? 'granted' : 'denied',
-          ad_personalization: value === 'accepted' ? 'granted' : 'denied',
-          analytics_storage: value === 'accepted' ? 'granted' : 'denied',
-        });
-      }
-      if (value === 'accepted') {
-        window.dispatchEvent(new Event('ldn:consent-accepted'));
-      }
-    } catch {
-      // If storage is blocked, keep the user's immediate choice in memory.
-      window.ldnConsentGranted = value === 'accepted';
-    }
+    applyTrackingConsent(value);
     setVisible(false);
   }
 

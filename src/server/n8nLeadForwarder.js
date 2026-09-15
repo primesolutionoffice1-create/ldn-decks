@@ -55,6 +55,9 @@ function buildN8nWebsiteLeadPayload(formData, context = {}) {
     ip_hash: hashIp(context.ipAddress),
     user_agent: context.userAgent || '',
     submitted_at: new Date().toISOString(),
+    ad_consent: value(formData, 'ad_consent') === 'granted' ? 'granted' : 'denied',
+    ad_consent_version: value(formData, 'ad_consent_version'),
+    ad_consent_recorded_at: value(formData, 'ad_consent_recorded_at'),
   };
 
   for (const key of [...CLICK_ID_FIELDS, ...UTM_FIELDS]) {

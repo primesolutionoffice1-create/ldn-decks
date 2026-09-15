@@ -41,6 +41,12 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Attribution safety checks
+        run: |
+          npm run measurement:verify-lead-confirmed
+          npm run measurement:verify-consent
+          npm run measurement:test-offline
+
       - name: Build
         run: npm run build
 

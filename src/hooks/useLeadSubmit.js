@@ -8,6 +8,7 @@ import {
   trackGoogleAdsLeadOnConfirmedSubmit,
 } from '@/lib/tracking';
 import { getClickIds, getFbp, getUtmParams, CLICK_ID_KEYS, UTM_KEYS } from '@/lib/clickIds';
+import { CONSENT_VERSION, hasTrackingConsent, sanitizeLeadAdvertisingData, trackingPageUrl } from '@/lib/trackingConsent';
 
 // Shared submission pipeline for every lead form on the site.
 // Owns: click-ID forwarding to server, event_id generation, dedup guard,
@@ -19,9 +20,14 @@ import { getClickIds, getFbp, getUtmParams, CLICK_ID_KEYS, UTM_KEYS } from '@/li
 export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
   const router = useRouter();
   const hasTracked = useRef(false);
+  const inFlight = useRef(null);
+  const eventIdRef = useRef(null);
 
-  return async function submit(formElement) {
+  async function submitOnce(formElement) {
     const formData = new FormData(formElement);
+    formData.set('ad_consent', hasTrackingConsent() ? 'granted' : 'denied');
+    formData.set('ad_consent_version', CONSENT_VERSION);
+    formData.set('ad_consent_recorded_at', new Date().toISOString());
 
     const clickIds = getClickIds();
     CLICK_ID_KEYS.forEach((k) => {
@@ -46,14 +52,15 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
     //   - client lead_confirmed dataLayer event (/thank-you mount)
     //   - server Meta CAPI Lead event (fired inside sendContactEmail)
     //   - any future Google Ads server-side conversion API call
-    const eventId = (typeof crypto !== 'undefined' && crypto.randomUUID)
+    const eventId = eventIdRef.current || ((typeof crypto !== 'undefined' && crypto.randomUUID)
       ? crypto.randomUUID()
-      : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-    formData.append('event_id', eventId);
+      : `${Date.now()}-${Math.random().toString(36).slice(2)}`);
+    eventIdRef.current = eventId;
+    formData.set('event_id', eventId);
 
     if (typeof window !== 'undefined') {
-      formData.append('source_url', window.location.href);
-      if (document.referrer) formData.append('referrer', document.referrer);
+      formData.set('source_url', trackingPageUrl(window.location.href));
+      if (document.referrer) formData.set('referrer', trackingPageUrl(document.referrer));
     }
     if (formElement?.dataset?.formLocation && !formData.get('form_name')) {
       formData.append('form_name', formElement.dataset.formLocation);
@@ -91,6 +98,7 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
     if (firstName && !formData.get('firstName')) formData.append('firstName', firstName);
     if (lastName && !formData.get('lastName')) formData.append('lastName', lastName);
 
+    sanitizeLeadAdvertisingData(formData);
     const result = await sendContactEmail(formData);
 
     // Honeypot-triggered submissions return { success: true, skipped: true }.
@@ -101,42 +109,45 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
     }
 
     if (result?.success) {
-      // hasTracked guards against React Strict Mode double-fire and
-      // any future double-submit edge cases. Same-instance only;
-      // cross-component / re-mount dedup happens via event_id downstream.
+      // Track once per successful request. Cross-route dedup uses event_id;
+      // the in-flight guard below prevents concurrent delivery attempts.
       if (!hasTracked.current) {
         hasTracked.current = true;
-        const trackingReceipt = trackFormSubmit({
-          email,
-          phone,
-          firstName,
-          lastName,
-          address,
-          zip,
-          city,
-          state,
-          service,
-          timeline,
-          budgetRange,
-          materialInterest,
-          homeownerStatus,
-          hoa,
-          formLocation,
-          formType,
-          clickIds,
-          utmParams,
-          eventId,
-          pageContext,
-        });
-        if (!requiresServerConfirmedGoogleAds) {
-          trackGoogleAdsLeadOnConfirmedSubmit({
+        try {
+          const trackingReceipt = trackFormSubmit({
+            email,
+            phone,
+            firstName,
+            lastName,
+            address,
+            zip,
+            city,
+            state,
+            service,
+            timeline,
+            budgetRange,
+            materialInterest,
+            homeownerStatus,
+            hoa,
+            formLocation,
+            formType,
+            clickIds,
+            utmParams,
             eventId,
-            attributionPayload: trackingReceipt?.attributionPayload || {},
+            pageContext,
           });
+          if (!requiresServerConfirmedGoogleAds) {
+            trackGoogleAdsLeadOnConfirmedSubmit({
+              eventId,
+              attributionPayload: trackingReceipt?.attributionPayload || {},
+            });
+          }
+        } catch {
+          // A delivered estimate request must not appear failed because a tag is blocked.
         }
       }
       if (result.confirmationToken) {
-        markLeadConfirmationPending(eventId);
+        try { markLeadConfirmationPending(eventId); } catch {}
         router.push(
           `/thank-you?eid=${encodeURIComponent(eventId)}&proof=${encodeURIComponent(result.confirmationToken)}`
         );
@@ -149,5 +160,22 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
       }
     }
     return { success: false };
+  }
+
+  return function submit(formElement) {
+    if (inFlight.current) return inFlight.current;
+    const request = submitOnce(formElement).catch(() => {
+      // Delivery is unconfirmed; retain the ID and wait for a manual retry.
+      return { success: false, error: 'delivery_unconfirmed' };
+    });
+    inFlight.current = request.then((result) => {
+      if (result?.success) {
+        // Retries share an ID; a later inquiry after success is a new lead.
+        eventIdRef.current = null;
+        hasTracked.current = false;
+      }
+      return result;
+    }).finally(() => { inFlight.current = null; });
+    return inFlight.current;
   };
 }

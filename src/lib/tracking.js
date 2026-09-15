@@ -4,20 +4,26 @@
 import { recordDedupHit } from '@/lib/attribution-debug';
 import { getClickIds, getUtmParams } from '@/lib/clickIds';
 import { BUSINESS } from '@/lib/business';
+import { hasTrackingConsent, trackingPageUrl } from '@/lib/trackingConsent';
 
+// Match GTM's primary "Submit lead form (1)" action so transaction IDs deduplicate.
 const GOOGLE_ADS_LEAD_CONVERSION_SEND_TO =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO ||
-  'AW-16888402136/KNF1CJur4tIbENihgvU-';
+  'AW-16888402136/IxFhCJHb_uUcENihgvU-';
 const GOOGLE_ADS_LEAD_CONVERSION_VALUE = 1;
 const GOOGLE_ADS_LEAD_CONVERSION_CURRENCY = 'USD';
 
 function ensureTagLayer() {
   if (typeof window === 'undefined') return;
-  window.dataLayer = window.dataLayer || [];
-  if (typeof window.gtag !== 'function') {
-    window.gtag = function gtagFallback() {
-      window.dataLayer.push(arguments);
-    };
+  try {
+    window.dataLayer = window.dataLayer || [];
+    if (typeof window.gtag !== 'function') {
+      window.gtag = function gtagFallback() {
+        window.dataLayer.push(arguments);
+      };
+    }
+  } catch {
+    // Restricted tag globals must not break a confirmed lead's UI.
   }
 }
 
@@ -26,8 +32,12 @@ function ensureTagLayer() {
  */
 function push(event) {
   if (typeof window === 'undefined') return;
-  ensureTagLayer();
-  window.dataLayer.push(event);
+  try {
+    ensureTagLayer();
+    window.dataLayer.push(event);
+  } catch {
+    // Optional tags must never prevent navigation or lead delivery.
+  }
 }
 
 function hasSessionEventFired(key) {
@@ -70,6 +80,12 @@ function getGoogleAdsLeadFiredSet() {
   return window.__ldnGoogleAdsLeadFiredIds;
 }
 
+function getConfirmedLeadFiredSet() {
+  if (typeof window === 'undefined') return null;
+  window.__ldnConfirmedLeadIds = window.__ldnConfirmedLeadIds || new Set();
+  return window.__ldnConfirmedLeadIds;
+}
+
 function adsDebug(event, details = {}) {
   if (
     typeof process === 'undefined' ||
@@ -97,9 +113,18 @@ export function markLeadConfirmationPending(eventId) {
 
 function storeLeadAttributionPayload(eventId, payload) {
   if (typeof window === 'undefined' || !eventId || !payload) return;
+  const receipt = {
+    expiresAt: Date.now() + 30 * 60 * 1000,
+    payload: hasTrackingConsent() ? payload : {
+      form_type: payload.form_type,
+      form_location: payload.form_location,
+    },
+  };
+  window.__ldnLeadAttribution = window.__ldnLeadAttribution || new Map();
+  window.__ldnLeadAttribution.set(eventId, receipt);
   try {
     if (window.sessionStorage) {
-      window.sessionStorage.setItem(leadAttributionKey(eventId), JSON.stringify(payload));
+      window.sessionStorage.setItem(leadAttributionKey(eventId), JSON.stringify(receipt));
     }
   } catch {
     // Enhanced-conversion enrichment is best effort. The conversion event still
@@ -109,16 +134,19 @@ function storeLeadAttributionPayload(eventId, payload) {
 
 function consumeLeadAttributionPayload(eventId) {
   if (typeof window === 'undefined' || !eventId) return {};
+  let receipt = window.__ldnLeadAttribution?.get(eventId);
+  window.__ldnLeadAttribution?.delete(eventId);
   try {
     const key = leadAttributionKey(eventId);
     const raw = window.sessionStorage?.getItem(key);
-    if (!raw) return {};
     window.sessionStorage.removeItem(key);
-    const parsed = JSON.parse(raw);
-    return parsed && typeof parsed === 'object' ? parsed : {};
-  } catch {
-    return {};
-  }
+    if (!receipt && raw) receipt = JSON.parse(raw);
+  } catch {}
+  if (!(receipt?.expiresAt > Date.now()) || !receipt.payload || typeof receipt.payload !== 'object') return {};
+  return hasTrackingConsent() ? receipt.payload : {
+    form_type: receipt.payload.form_type,
+    form_location: receipt.payload.form_location,
+  };
 }
 
 function consumeLeadConfirmationPending(eventId) {
@@ -169,13 +197,13 @@ export function trackEstimatorEvent(eventName, {
     estimated_total_interest: typeof totalInterest === 'number' ? Math.round(totalInterest) : null,
     cta_location: ctaLocation || null,
     financing_option: optionType || null,
-    page_location: window.location.href,
+    page_location: trackingPageUrl(window.location.href),
     page_path: window.location.pathname,
   });
 }
 
 function trackPinterestLead({ eventId } = {}) {
-  if (typeof window === 'undefined') {
+  if (typeof window === 'undefined' || !hasTrackingConsent()) {
     return;
   }
 
@@ -183,8 +211,13 @@ function trackPinterestLead({ eventId } = {}) {
   let attempts = 0;
 
   function sendWhenReady() {
-    if (typeof window.pintrk === 'function') {
-      window.pintrk('track', 'lead', payload);
+    if (!hasTrackingConsent()) return;
+    try {
+      if (typeof window.pintrk === 'function') {
+        window.pintrk('track', 'lead', payload);
+        return;
+      }
+    } catch {
       return;
     }
 
@@ -198,15 +231,20 @@ function trackPinterestLead({ eventId } = {}) {
 }
 
 function trackMetaLead({ eventId } = {}) {
-  if (typeof window === 'undefined') {
+  if (typeof window === 'undefined' || !hasTrackingConsent()) {
     return;
   }
 
   let attempts = 0;
 
   function sendWhenReady() {
-    if (typeof window.fbq === 'function') {
-      window.fbq('track', 'Lead', {}, eventId ? { eventID: eventId } : undefined);
+    if (!hasTrackingConsent()) return;
+    try {
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Lead', {}, eventId ? { eventID: eventId } : undefined);
+        return;
+      }
+    } catch {
       return;
     }
 
@@ -242,7 +280,7 @@ function trackGoogleAdsLead({ eventId, attributionPayload = {} } = {}) {
     event_id: eventId,
     value: GOOGLE_ADS_LEAD_CONVERSION_VALUE,
     currency: GOOGLE_ADS_LEAD_CONVERSION_CURRENCY,
-    page_location: window.location.href,
+    page_location: trackingPageUrl(window.location.href),
     page_path: window.location.pathname,
     form_location: attributionPayload.form_location || null,
     form_type: attributionPayload.form_type || null,
@@ -254,13 +292,20 @@ function trackGoogleAdsLead({ eventId, attributionPayload = {} } = {}) {
   let attempts = 0;
 
   function sendWhenReady() {
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'conversion', payload);
-      adsDebug('google_ads_lead_sent', {
-        eventId,
-        send_to: GOOGLE_ADS_LEAD_CONVERSION_SEND_TO,
-        transaction_id: eventId,
-      });
+    try {
+      if (typeof window.gtag === 'function') {
+        // Keep consent-mode measurement, without customer enrichment on refusal.
+        window.gtag('event', 'conversion', hasTrackingConsent()
+          ? payload : { ...payload, city: null, state: null, service: null });
+        adsDebug('google_ads_lead_sent', {
+          eventId,
+          send_to: GOOGLE_ADS_LEAD_CONVERSION_SEND_TO,
+          transaction_id: eventId,
+        });
+        return;
+      }
+    } catch {
+      adsDebug('google_ads_lead_skipped', { eventId, reason: 'tag_error' });
       return;
     }
 
@@ -352,15 +397,16 @@ export function trackGoogleAdsLeadOnConfirmedSubmit({ eventId, attributionPayloa
 }
 
 export function trackMetaPageView() {
-  if (typeof window === 'undefined') {
+  if (typeof window === 'undefined' || !hasTrackingConsent()) {
     return;
   }
 
   let attempts = 0;
 
   function sendWhenReady() {
+    if (!hasTrackingConsent()) return;
     if (typeof window.fbq === 'function') {
-      window.fbq('track', 'PageView');
+      try { window.fbq('track', 'PageView'); } catch {}
       return;
     }
 
@@ -385,8 +431,8 @@ export function trackMetaPageView() {
  *
  * firstName/lastName/zip carry user-provided data for Google Ads Enhanced
  * Conversions for Web. GTM's Google Ads conversion tag template hashes
- * these client-side before the conversion request leaves the browser; no
- * plaintext PII reaches Google.
+ * these client-side. Container mappings still require live QA; enrichment is
+ * omitted when advertising consent has not been granted.
  */
 export function trackFormSubmit({
   email,
@@ -412,7 +458,7 @@ export function trackFormSubmit({
 } = {}) {
   if (typeof window === 'undefined') return;
   const leadEventId = eventId || `lead_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
-  const attributionPayload = {
+  const enrichedPayload = {
     form_type: formType,
     form_location: formLocation || formType,
     email: email || null,
@@ -441,6 +487,10 @@ export function trackFormSubmit({
     utm_campaign: utmParams.utm_campaign || null,
     utm_content: utmParams.utm_content || null,
     utm_term: utmParams.utm_term || null,
+  };
+  const attributionPayload = hasTrackingConsent() ? enrichedPayload : {
+    form_type: formType,
+    form_location: formLocation || formType,
   };
   storeLeadAttributionPayload(leadEventId, attributionPayload);
 
@@ -482,7 +532,7 @@ export function trackPhoneClick(event) {
     phone_number: BUSINESS.telephone,
     link_text: linkText,
     cta_location: ctaLocation,
-    page_location: window.location.href,
+    page_location: trackingPageUrl(window.location.href),
     page_path: window.location.pathname,
     page: window.location.pathname,
     gclid: clickIds.gclid || null,
@@ -514,7 +564,7 @@ export function trackPhoneClickWithContext({ ctaLocation, pageContext } = {}) {
     phone_source: 'tel_link',
     cta_location: ctaLocation || null,
     ...pageContextPayload(pageContext),
-    page_location: window.location.href,
+    page_location: trackingPageUrl(window.location.href),
     page_path: window.location.pathname,
     page: window.location.pathname,
   });
@@ -528,7 +578,7 @@ export function trackEmailClick({ ctaLocation, email, pageContext } = {}) {
     cta_location: ctaLocation || null,
     email: email || null,
     ...pageContextPayload(pageContext),
-    page_location: window.location.href,
+    page_location: trackingPageUrl(window.location.href),
     page_path: window.location.pathname,
   });
 }
@@ -541,7 +591,7 @@ export function trackCtaClick({ ctaLocation, ctaLabel, href, pageContext } = {})
     cta_label: ctaLabel || null,
     cta_href: href || null,
     ...pageContextPayload(pageContext),
-    page_location: window.location.href,
+    page_location: trackingPageUrl(window.location.href),
     page_path: window.location.pathname,
   });
 }
@@ -549,9 +599,9 @@ export function trackCtaClick({ ctaLocation, ctaLabel, href, pageContext } = {})
 /**
  * Fires the authoritative lead conversion event on /thank-you page-view
  * after ThankYouTracking verifies the server-issued confirmation token.
- * GTM may map this event for tags that depend on lead_confirmed. The paid-social
- * deck estimate route also defers its direct Google Ads fallback until this
- * server-confirmed point; other form routes retain their existing behavior.
+ * GTM may map this event for tags that depend on lead_confirmed. The direct
+ * Google Ads fallback covers every verified route and reuses its reservation
+ * if the ordinary form already sent it after the successful server response.
  *
  * event_id matches the one passed into ContactForm's form_submit event,
  * enabling client-side dedup in GTM and server-side dedup if CAPI/Google
@@ -569,6 +619,11 @@ export function trackLeadConfirmed({ eventId } = {}) {
   if (typeof window === 'undefined') return;
   if (!eventId) return;
 
+  const firedSet = getConfirmedLeadFiredSet();
+  if (firedSet.has(eventId)) {
+    recordDedupHit();
+    return;
+  }
   const firedKey = leadFiredKey(eventId);
   try {
     if (window.sessionStorage && window.sessionStorage.getItem(firedKey)) {
@@ -576,10 +631,11 @@ export function trackLeadConfirmed({ eventId } = {}) {
       return;
     }
   } catch {
-    // sessionStorage unavailable; continue with the pending-lead guard below.
+    // The in-memory guard still covers repeated mounts in this document.
   }
 
   consumeLeadConfirmationPending(eventId);
+  firedSet.add(eventId);
 
   try {
     if (window.sessionStorage) window.sessionStorage.setItem(firedKey, '1');
@@ -597,7 +653,7 @@ export function trackLeadConfirmed({ eventId } = {}) {
     value: GOOGLE_ADS_LEAD_CONVERSION_VALUE,
     currency: GOOGLE_ADS_LEAD_CONVERSION_CURRENCY,
     ...attributionPayload,
-    page_location: window.location.href,
+    page_location: trackingPageUrl(window.location.href),
     page_path: window.location.pathname,
     page: window.location.pathname,
   });

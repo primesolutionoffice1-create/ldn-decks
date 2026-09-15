@@ -6,6 +6,7 @@ import { createLeadConfirmationToken } from './leadConfirmationToken';
 import { sendGhlLead } from './ghl';
 import { sendN8nWebsiteLead } from './n8nLeadForwarder';
 import { sendLeadNotificationEmail } from './emailDelivery';
+import { sanitizeLeadAdvertisingData } from '@/lib/trackingConsent';
 
 export async function sendContactEmail(formData) {
   try {
@@ -32,6 +33,7 @@ export async function sendContactEmail(formData) {
       return { success: true, skipped: true };
     }
 
+    const advertisingConsent = sanitizeLeadAdvertisingData(formData);
     const name = formData.get('name') || `${formData.get('firstName')} ${formData.get('lastName')}`;
     const email = formData.get('email');
     const phone = formData.get('phone');
@@ -77,6 +79,7 @@ export async function sendContactEmail(formData) {
       pageType && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_type:</strong> ${pageType}</p>`,
       pageCity && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_city:</strong> ${pageCity}</p>`,
       pageCounty && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_county:</strong> ${pageCounty}</p>`,
+      `<p style="color:#666;font-size:11px;margin:2px 0"><strong>ad_consent:</strong> ${advertisingConsent ? 'granted' : 'denied'}</p>`,
       gclid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>gclid:</strong> ${gclid}</p>`,
       gbraid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>gbraid:</strong> ${gbraid}</p>`,
       wbraid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>wbraid:</strong> ${wbraid}</p>`,
@@ -123,15 +126,15 @@ export async function sendContactEmail(formData) {
     // their own hops); fall back to the direct connection if absent.
     let ipAddress = null;
     let userAgent = null;
-    try {
-      const h = await headers();
-      const xff = h.get('x-forwarded-for') || '';
-      ipAddress = xff.split(',')[0].trim() || h.get('x-real-ip') || null;
-      userAgent = h.get('user-agent') || null;
-    } catch (e) {
-      // headers() can throw if called outside a request-scoped context
-      // (e.g., during build / unit test). CAPI degrades gracefully —
-      // missing IP / UA drops EMQ score ~1.5 points but doesn't error.
+    if (advertisingConsent) {
+      try {
+        const h = await headers();
+        const xff = h.get('x-forwarded-for') || '';
+        ipAddress = xff.split(',')[0].trim() || h.get('x-real-ip') || null;
+        userAgent = h.get('user-agent') || null;
+      } catch {
+        // Enrichment is optional outside a request-scoped context.
+      }
     }
 
     const emailResult = await sendLeadNotificationEmail(mailOptions);
@@ -181,6 +184,7 @@ export async function sendContactEmail(formData) {
     // Same event_id as the client-side form_submit + lead_confirmed events,
     // so Meta dedupes any of the three that fire within the 7-day window.
     sendMetaLeadEvent({
+      advertisingConsent: advertisingConsent ? 'granted' : 'denied',
       email,
       phone,
       firstName: formData.get('firstName'),
