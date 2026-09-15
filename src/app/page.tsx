@@ -33,7 +33,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   path: "/",
   title: 'Deck Builder Near Me in Northern VA | Loudoun Decks',
-  description: 'Northern Virginia deck contractor for composite decks, Trex, TimberTech, replacements and screened porches. Public profile links, permit planning, and HOA support.',
+  description: 'Northern Virginia deck contractor for composite decks, Trex, TimberTech, deck replacement, screened porches, permit planning, and written estimates.',
 });
 
 // Homepage-specific WebPage schema — tells Google this is the main landing page.
@@ -45,7 +45,7 @@ const homepageSchema = {
   "@id": "https://ldndecks.com/#webpage",
   "url": "https://ldndecks.com",
   "name": "Loudoun Decks — Custom Deck Builder in Northern Virginia",
-  "description": "Trusted deck contractor and composite deck builder serving Loudoun County, Fairfax County, Prince William County, and Northern Virginia. Deck replacement, resurfacing, screened porches, patios, pergolas, permit planning, and HOA support.",
+  "description": "Trusted deck contractor and composite deck builder serving Loudoun County, Fairfax County, Prince William County, and Northern Virginia. Deck replacement, resurfacing, screened porches, patios, pergolas, permit planning, and written estimates.",
   "isPartOf": { "@type": "WebSite", "@id": "https://ldndecks.com/#website" },
   "about": { "@id": "https://ldndecks.com/#organization" },
   "primaryImageOfPage": {
