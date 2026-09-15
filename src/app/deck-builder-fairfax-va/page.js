@@ -17,8 +17,8 @@ import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-fairfax-va',
-  title: 'Deck Builder & Contractor Fairfax VA | Class A Licensed | Loudoun Decks',
-  description: 'Virginia Class A licensed deck builder and contractor in Fairfax, VA. New decks, deck repair, screened porches. Serving Mosby Woods, Country Club Hills, Fair Lakes, Mantua, Fairfax Station. City of Fairfax + County permits handled.',
+  title: 'Fairfax VA Deck Builder | Class A Contractor | Loudoun Decks',
+  description: 'Fairfax VA deck builder for composite decks, replacements, repairs, and screened porches with City of Fairfax and Fairfax County permit planning.',
   image: '/social/deck-builder-fairfax-va-social.png',
 });
 
@@ -86,7 +86,7 @@ export default function FairfaxDeckBuilderPage() {
     <main>
       <JsonLd data={fairfaxFaqSchema} />
       <LocalBusinessSchema city="Fairfax" url="https://ldndecks.com/deck-builder-fairfax-va" />
-      <WebPageSchema dateModified="2026-06-20" url={`https://ldndecks.com${PATH}`} name="Deck Builder & Contractor Fairfax VA | Class A Licensed | Loudoun Decks" description="Virginia Class A licensed deck builder and contractor in Fairfax, VA. New decks, deck repair, screened porches. Mosby Woods, Country Club Hills, Fair Lakes, Mantua, Fairfax Station. City + County permits handled." speakable />
+      <WebPageSchema dateModified="2026-09-14" url={`https://ldndecks.com${PATH}`} name="Fairfax VA Deck Builder | Class A Contractor | Loudoun Decks" description="Fairfax VA deck builder for composite decks, replacements, repairs, and screened porches with City of Fairfax and Fairfax County permit planning." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
