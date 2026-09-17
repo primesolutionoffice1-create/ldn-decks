@@ -127,10 +127,10 @@ export default function CentrevilleDeckBuilderPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>For Centreville homeowners, our best-fit projects are full deck replacements, composite upgrades, resurfacing, screened porches, railings, lighting, and outdoor-living scopes where the structure, permit path, HOA package, and material selection need professional review.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { title: 'Custom Composite Decks', range: '$22k–$85k+', link: '/services/new-decks' },
-              { title: 'Deck Replacement', range: '$22k–$85k+', link: '/services/deck-replacement' },
+              { title: 'Custom Composite Decks', range: 'Project-specific estimate', link: '/services/new-decks' },
+              { title: 'Deck Replacement', range: 'Inspection-led estimate', link: '/services/deck-replacement' },
               { title: 'Deck Resurfacing', range: '$15k–$30k+', link: '/services/deck-resurfacing' },
-              { title: 'Screened Porches', range: '$48k–$78k', link: '/services/porches' },
+              { title: 'Screened Porches', range: 'Project-specific estimate', link: '/services/porches' },
               { title: 'Pergolas & Gazebos', range: '$10k–$30k', link: '/services/gazebo-pergola' },
               { title: 'Outdoor Kitchens', range: '$15k–$80k', link: '/outdoor-kitchen-builder-northern-virginia' },
               { title: 'Railings & Lighting', range: 'Add-on packages', link: '/deck-lighting-railings-stairs-addon-cost' },

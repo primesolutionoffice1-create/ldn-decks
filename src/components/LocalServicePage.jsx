@@ -6,7 +6,7 @@ import ContactHome from '@/components/ContactHome';
 import NamedAuthor from '@/components/NamedAuthor';
 import RelatedGuides from '@/components/RelatedGuides';
 import TrackedLink from '@/components/TrackedLink';
-import { BUSINESS, ORG_ID } from '@/lib/business';
+import { ORG_ID } from '@/lib/business';
 import { SITE_URL } from '@/lib/seo';
 import { getVerifiedReviewSourceSnippets } from '@/lib/verifiedProof';
 import { buildCityProfile, servicePageTypes } from '@/data/localServicePages';
@@ -135,7 +135,6 @@ function labelForRelatedPath(path) {
 
 function schemaForPage({ city, service, path }) {
   const url = `${SITE_URL}${path}`;
-  const profile = buildCityProfile(city);
   const faqs = buildFaqs(city, service);
 
   const serviceSchema = {
@@ -165,33 +164,6 @@ function schemaForPage({ city, service, path }) {
     })),
   };
 
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'GeneralContractor',
-    '@id': `${url}#local-business`,
-    name: `${BUSINESS.name} - ${city.city} ${service.label}`,
-    branchOf: { '@id': ORG_ID },
-    url,
-    telephone: BUSINESS.telephone,
-    email: BUSINESS.email,
-    image: `${SITE_URL}${service.image}`,
-    priceRange: BUSINESS.priceRange,
-    address: { '@type': 'PostalAddress', ...BUSINESS.address },
-    geo: { '@type': 'GeoCoordinates', ...BUSINESS.geo },
-    areaServed: [
-      { '@type': 'City', name: `${city.city}, VA` },
-      { '@type': 'AdministrativeArea', name: city.county },
-      ...profile.neighborhoods.map((name) => ({ '@type': 'Place', name })),
-    ],
-    openingHoursSpecification: BUSINESS.openingHours.map((h) => ({
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: h.days,
-      opens: h.opens,
-      closes: h.closes,
-    })),
-    sameAs: BUSINESS.sameAs,
-  };
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -210,7 +182,8 @@ function schemaForPage({ city, service, path }) {
   // identical trails differing only in the final item ("Ashburn" vs "Ashburn, VA")
   // — which leaves Google to pick one arbitrarily or ignore both.
 
-  return { faqs, schemas: [serviceSchema, localBusinessSchema, faqSchema] };
+  // Service areas refer to the root business; they are not separate branches.
+  return { faqs, schemas: [serviceSchema, faqSchema] };
 }
 
 export default function LocalServicePage({ city, serviceKey }) {
