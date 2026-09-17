@@ -54,10 +54,13 @@
         "seo:generate-og-cards": "node scripts/generate-og-card-sprint.mjs",
         "seo:verify-robots": "node scripts/verify-robots-indexnow.mjs",
         "seo:validate-ai-discovery": "node scripts/validate-ai-discovery.mjs",
+        "seo:validate-priority-internal-links": "node scripts/validate-priority-internal-links.mjs",
         "seo:validate-sitemap-freshness": "node scripts/validate-sitemap-freshness.mjs",
-        "seo:validate-crawl-quality": "npm run seo:validate-ai-discovery && npm run seo:validate-sitemap-freshness",
+        "seo:validate-image-sitemap": "node scripts/validate-image-sitemap.mjs",
+        "seo:validate-crawl-quality": "npm run seo:validate-ai-discovery && npm run seo:validate-priority-internal-links && npm run seo:validate-sitemap-freshness && npm run seo:validate-image-sitemap",
         "seo:rank-track": "node scripts/rank-tracker-report.mjs",
         "seo:deployment-guard": "node scripts/verify-local-seo-deployment.mjs",
+        "seo:verify-local-entities": "node scripts/verify-local-service-entities.mjs",
         "local:authority-pack": "node scripts/generate-local-authority-pack.mjs",
         "ads:verify-meta-route": "node scripts/verify-meta-pixel-route-tracking.mjs",
         "verify:financing": "node scripts/verify-financing-ui.mjs",
@@ -113,8 +116,8 @@
     "dependencies": {
         "@vercel/analytics": "^1.6.1",
         "@vercel/speed-insights": "^1.3.1",
-        "next": "16.3.0",
-        "nodemailer": "^9.0.1",
+        "next": "16.3.5",
+        "nodemailer": "^9.1.1",
         "react": "19.2.4",
         "react-dom": "19.2.4"
     },
@@ -122,6 +125,6 @@
         "@types/node": "25.6.0",
         "@types/react": "19.2.14",
         "eslint": "^9",
-        "eslint-config-next": "16.2.2"
+        "eslint-config-next": "16.3.5"
     }
 }

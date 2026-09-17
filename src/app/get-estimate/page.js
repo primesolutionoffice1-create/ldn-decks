@@ -27,6 +27,10 @@ const estimateFaq = [
     answer: 'Yes. Loudoun Decks can estimate deck repairs, structural concerns, resurfacing, replacement, stairs, railings, and composite upgrades across Northern Virginia.',
   },
   {
+    question: 'How do I request structural repair or a combined deck-and-porch estimate?',
+    answer: 'Choose the closest service and describe the full project in your message. For structural repair, select Other and list the posts, framing, stairs, railing, or deck areas that concern you. For a combined project, describe the deck, porch, stairs, railing, and other work you want considered.',
+  },
+  {
     question: 'How quickly will Loudoun Decks respond?',
     answer: 'Most estimate requests receive a follow-up within the same business day or the next business day, depending on project detail and schedule volume.',
   },
@@ -54,14 +58,14 @@ const getEstimateSchema = [
 export default function GetEstimatePage() {
   return (
     <>
-      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/get-estimate" name="Request a Deck Estimate Northern Virginia | Loudoun Decks" description="Request a deck estimate for composite decks, deck replacement, repairs, screened porches and outdoor living projects in Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-09-15" url="https://ldndecks.com/get-estimate" name="Request a Deck Estimate Northern Virginia | Loudoun Decks" description="Request a deck estimate for composite decks, deck replacement, repairs, screened porches and outdoor living projects in Northern Virginia." speakable />
       {getEstimateSchema.map((schema, index) => (
         <JsonLd key={index} data={schema} />
       ))}
 
       {/* Hero Above the Fold: Trust + CTA */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '3rem 0 2rem' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '3rem', alignItems: 'center' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
               <span style={{ color: '#fbbf24', fontSize: '1rem', fontWeight: 700 }}>Public reviews</span>
@@ -128,7 +132,7 @@ export default function GetEstimatePage() {
             </div>
           </div>
           <div style={{ marginTop: '1.25rem' }}>
-            <NamedAuthor context="estimate triage for decks, resurfacing, repairs, screened porches, and outdoor living projects in Northern Virginia" lastUpdated="2026-06-02" />
+            <NamedAuthor context="estimate triage for decks, resurfacing, repairs, screened porches, and outdoor living projects in Northern Virginia" lastUpdated="2026-09-15" />
           </div>
         </div>
       </section>
@@ -170,13 +174,19 @@ export default function GetEstimatePage() {
 
       {/* Form + proof-safe trust path */}
       <section id="estimate-form" style={{ padding: '3rem 0', background: '#fff' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '3rem' }}>
 
           {/* Left: Form */}
           <div>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>Request Your Free Estimate</h2>
             <p style={{ color: '#666', marginBottom: '1.5rem', fontSize: '0.9rem' }}>Tell us about your project, location, timeline, and concerns. More detail helps us route you toward the right estimate, repair review, or planning conversation.</p>
             <ContactForm hideInfoCol noPadding />
+            <div style={{ background: '#fff7ed', border: '1px solid #fed7aa', borderRadius: 10, padding: '1rem', marginTop: '1rem' }}>
+              <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '0.5rem' }}>Repair or combined project?</h3>
+              <p style={{ color: '#555', lineHeight: 1.65, fontSize: '0.88rem', margin: 0 }}>
+                For structural repairs, choose Other and describe the affected posts, framing, stairs, railing, or deck area in your message. For a combined deck-and-porch project, select the main project type and list the other work you want included. If photos are ready, mention that in your message so the team can confirm the next step.
+              </p>
+            </div>
             <div style={{ background: '#f8fafc', border: '1px solid #e5e7eb', borderRadius: 10, padding: '1rem', marginTop: '1rem' }}>
               <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '0.5rem' }}>For the strongest estimate request, include:</h3>
               <ul style={{ color: '#555', lineHeight: 1.7, fontSize: '0.88rem', margin: 0, paddingLeft: '1.1rem' }}>

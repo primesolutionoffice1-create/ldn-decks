@@ -25,7 +25,7 @@ const S = {
 export default function ReviewPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01"
+      <WebPageSchema dateModified="2026-09-17"
         url="https://ldndecks.com/review"
         name="Google Review Guidance for Loudoun Decks"
         description="Share your completed Loudoun Decks project experience on Google."
@@ -102,13 +102,13 @@ export default function ReviewPage() {
           </p>
           <div style={{ background: '#f8fafc', borderRadius: 10, padding: '1.5rem', marginBottom: '2.5rem' }}>
             <p style={{ margin: 0, lineHeight: 1.8, color: '#334155' }}>
-              Review template: &ldquo;LDN Decks helped with our [project type] in [city]. The estimate was [clear/helpful], the team communicated about [timeline/materials/permit or HOA steps], and the finished outdoor space now [how you use it].&rdquo;
+              Please describe your own experience in your own words. Honest feedback is welcome, whether positive, mixed, or negative. No particular rating or wording is expected.
             </p>
           </div>
 
-          <h2 style={S.h2}>Need Help Before Leaving a Review?</h2>
+          <h2 style={S.h2}>Need Project Support?</h2>
           <p style={S.p}>
-            If something about your project still needs attention, please contact us first so we can review it directly. We want every finished project to be something you are comfortable recommending.
+            If something about your project needs attention, our team is available to help. Contacting us is optional and is not a condition for leaving a public review.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.85rem 1.25rem', borderRadius: 8, fontWeight: 800, textDecoration: 'none' }}>

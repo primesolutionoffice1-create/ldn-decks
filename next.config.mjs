@@ -12,6 +12,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      { source: '/review-request', destination: 'https://ldndecks.com/review', statusCode: 301 },
       // Primary Domain Normalization (www -> non-www)
       // Moving this to the top ensures 1-hop redirection for Googlebot.
       {

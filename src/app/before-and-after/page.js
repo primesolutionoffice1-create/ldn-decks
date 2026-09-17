@@ -158,13 +158,13 @@ export default function BeforeAndAfterPage() {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 18rem), 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
                 <div>
                   <div style={{ position: 'relative', width: '100%', height: '280px', borderRadius: '8px', overflow: 'hidden' }}>
-                    <Image src={project.beforeImg} alt={project.beforeAlt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 50vw, 440px" />
+                    <Image src={project.beforeImg} alt={project.beforeAlt} fill loading="lazy" style={{ objectFit: 'cover' }} sizes="auto, (max-width: 900px) calc(100vw - 48px), 418px" />
                     <span style={{ position: 'absolute', top: '0.75rem', left: '0.75rem', background: 'rgba(0,0,0,0.7)', color: '#fff', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 600 }}>BEFORE</span>
                   </div>
                 </div>
                 <div>
                   <div style={{ position: 'relative', width: '100%', height: '280px', borderRadius: '8px', overflow: 'hidden' }}>
-                    <Image src={project.afterImg} alt={project.afterAlt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 50vw, 440px" />
+                    <Image src={project.afterImg} alt={project.afterAlt} fill loading="lazy" style={{ objectFit: 'cover' }} sizes="auto, (max-width: 900px) calc(100vw - 48px), 418px" />
                     <span style={{ position: 'absolute', top: '0.75rem', left: '0.75rem', background: 'var(--color-primary)', color: '#fff', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 600 }}>AFTER</span>
                   </div>
                 </div>

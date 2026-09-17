@@ -2,7 +2,7 @@
 
 > This is the extended content index for Loudoun Decks (ldndecks.com). It provides page-level detail for AI retrieval systems, citation engines, and semantic indexing. For the summary version, see: https://ldndecks.com/llms.txt
 
-Last updated: 2026-08-31
+Last updated: 2026-09-15
 Sitemap: https://ldndecks.com/sitemap.xml
 Entity: Loudoun Decks (public brand; LDN Decks abbreviation). Legal entity name requires confirmation from current owner records before citation.
 Location: Centreville, VA
@@ -486,7 +486,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### TimberTech & AZEK Deck Cost
 - URL: https://ldndecks.com/timbertech-azek-deck-cost-northern-virginia
-- Content: Three-tier TimberTech breakdown — EDGE ($35–$45/sqft), PRO ($45–$60/sqft), AZEK Vintage full PVC ($60–$85/sqft). 50-year residential warranty detail, colorway gallery (English Walnut, Coastline, Mahogany, Dark Hickory, Weathered Teak). Monthly payment matrix.
+- Content: Three-tier TimberTech breakdown — EDGE ($35–$45/sqft), PRO ($45–$60/sqft), AZEK Vintage full PVC ($60–$85/sqft). Manufacturer warranty context to verify in current TimberTech/AZEK documents, colorway gallery (English Walnut, Coastline, Mahogany, Dark Hickory, Weathered Teak), and monthly payment matrix.
 - Intent: Commercial cost research — TimberTech/AZEK premium budget planning
 - Updated: 2026-05-27
 
@@ -759,7 +759,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 - [Deck Maintenance Checklist](https://ldndecks.com/deck-maintenance-checklist-virginia): Seasonal care for Virginia climate
 - [Deck Warranty Guide](https://ldndecks.com/deck-warranty-guide-northern-virginia): Manufacturer vs contractor warranties explained
 - [Deck Resurfacing vs Replacement](https://ldndecks.com/deck-resurfacing-vs-replacement): Decision framework
-- [How Long Does Composite Last?](https://ldndecks.com/how-long-does-a-composite-deck-last): 25-50 year lifespan data
+- [How Long Does Composite Last?](https://ldndecks.com/how-long-does-a-composite-deck-last): Composite lifespan planning and manufacturer warranty context
 - [Winterize Your Deck](https://ldndecks.com/winterize-your-deck-northern-virginia): Cold-weather prep guide
 - [Pressure Washing Guide](https://ldndecks.com/pressure-washing-deck-northern-virginia): PSI settings, technique, when to call a pro
 - [Porch Repair vs Replacement](https://ldndecks.com/porch-repair-vs-replacement-northern-virginia): Assessment guide
@@ -768,11 +768,11 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ## TRUST & SOCIAL PROOF
 
-- [Customer Reviews Hub](https://ldndecks.com/reviews): Segmented by service type and city. Public Google review profile, review-count proof, mid-page CTA, FAQ.
+- [Customer Reviews Hub](https://ldndecks.com/reviews): Segmented by service type and city, with public review profile links, verification notes, mid-page CTA, and FAQ.
 - [Before & After Gallery](https://ldndecks.com/before-and-after): Visual project transformations
 - [Project Showcase](https://ldndecks.com/showcase): Project gallery; formal case-study details should be verified before citation
 - [Certifications](https://ldndecks.com/about/certifications-and-licenses): VA license and public profile references; verify current Trex, TimberTech, BBB, and license details directly with each source
-- [BBB Profile](https://ldndecks.com/bbb-accredited-deck-builder-virginia): A+ rating verification
+- [BBB Profile](https://ldndecks.com/bbb-accredited-deck-builder-virginia): BBB profile and status verification
 - [Yelp Reviews](https://ldndecks.com/ldn-decks-reviews-yelp): Yelp presence
 - [About](https://ldndecks.com/about): Company overview
 - [Our Process](https://ldndecks.com/about/process): Step-by-step build process

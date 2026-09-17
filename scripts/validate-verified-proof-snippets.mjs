@@ -8,6 +8,12 @@ const DOCS_DIR = path.join(ROOT, 'docs/seo');
 const OUTPUT_DIR = path.join(ROOT, 'scripts/output');
 const RUNTIME_JSON = path.join(ROOT, 'src/data/verifiedProofSnippets.json');
 const today = localDateStamp();
+// Validate the latest evidence packet, not an assumed daily regeneration.
+const packetDate = fs.readdirSync(DOCS_DIR)
+  .map((name) => name.match(/^verified-proof-snippets-(\d{4}-\d{2}-\d{2})\.json$/)?.[1])
+  .filter((date) => date && date <= today)
+  .sort()
+  .at(-1) || today;
 
 const REQUIRED_REVIEW_SOURCE_IDS = new Set([
   'google-business-profile',
@@ -39,8 +45,8 @@ function sameJson(a, b) {
 function main() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
-  const docJsonPath = path.join(DOCS_DIR, `verified-proof-snippets-${today}.json`);
-  const docMdPath = path.join(DOCS_DIR, `verified-proof-snippets-${today}.md`);
+  const docJsonPath = path.join(DOCS_DIR, `verified-proof-snippets-${packetDate}.json`);
+  const docMdPath = path.join(DOCS_DIR, `verified-proof-snippets-${packetDate}.md`);
   const validationJsonPath = path.join(OUTPUT_DIR, `verified-proof-snippets-validation-${today}.json`);
   const validationMdPath = path.join(OUTPUT_DIR, `verified-proof-snippets-validation-${today}.md`);
   const errors = [];

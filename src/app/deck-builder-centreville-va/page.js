@@ -20,7 +20,7 @@ import CityLeadFormSection from '@/components/CityLeadFormSection';
 export const metadata = buildMetadata({
   path: '/deck-builder-centreville-va',
   title: 'Deck Builder in Centreville, VA | Trex | Loudoun Decks',
-  description: 'Loudoun Decks is headquartered in Centreville, VA. Custom Trex & composite decks, porches, patios. Visit our showroom. (571) 655-7207.',
+  description: 'Centreville deck builder for composite deck replacement, resurfacing, screened porches, railings, lighting, and showroom material planning.',
   image: '/social/deck-builder-centreville-va-social.png',
 });
 
@@ -45,7 +45,7 @@ export default function CentrevilleDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Centreville" url="https://ldndecks.com/deck-builder-centreville-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-centreville-va" name="Deck Builder in Centreville, VA | Trex | Loudoun Decks" description="" speakable />
+      <WebPageSchema dateModified="2026-09-17" url="https://ldndecks.com/deck-builder-centreville-va" name="Deck Builder in Centreville, VA | Trex | Loudoun Decks" description="Centreville deck builder for composite deck replacement, resurfacing, screened porches, railings, lighting, and showroom material planning." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -124,16 +124,17 @@ export default function CentrevilleDeckBuilderPage() {
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Services in Centreville</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>For Centreville homeowners, our best-fit projects are full deck replacements, composite upgrades, resurfacing, screened porches, railings, lighting, and outdoor-living scopes where the structure, permit path, HOA package, and material selection need professional review.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { title: 'Custom Composite Decks', range: '$20k–$55k', link: '/services/new-decks' },
+              { title: 'Custom Composite Decks', range: 'Project-specific estimate', link: '/services/new-decks' },
+              { title: 'Deck Replacement', range: 'Inspection-led estimate', link: '/services/deck-replacement' },
               { title: 'Deck Resurfacing', range: '$15k–$30k+', link: '/services/deck-resurfacing' },
-              { title: 'Screened Porches', range: '$25k–$65k', link: '/services/porches' },
+              { title: 'Screened Porches', range: 'Project-specific estimate', link: '/services/porches' },
               { title: 'Pergolas & Gazebos', range: '$10k–$30k', link: '/services/gazebo-pergola' },
               { title: 'Outdoor Kitchens', range: '$15k–$80k', link: '/outdoor-kitchen-builder-northern-virginia' },
-              { title: 'Fencing', range: '$5k–$15k', link: '/services/fence' },
-              { title: 'Patios', range: '$8k–$25k', link: '/services/patios' },
-              { title: 'Deck Staining', range: '$600–$2k', link: '/deck-staining-northern-virginia' },
+              { title: 'Railings & Lighting', range: 'Add-on packages', link: '/deck-lighting-railings-stairs-addon-cost' },
+              { title: 'Structural Deck Review', range: 'Inspection-led scope', link: '/services/deck-repair' },
             ].map((item) => (
               <Link key={item.title} href={item.link} style={{ display: 'block', background: '#f9f9f9', borderRadius: 8, padding: '1rem', textDecoration: 'none', color: 'inherit' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.25rem', fontSize: '0.95rem' }}>{item.title}</h3>
@@ -249,7 +250,7 @@ export default function CentrevilleDeckBuilderPage() {
 
       <SimpleCTA title="Visit Our Centreville Showroom" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-centreville-va" />
-      <NamedAuthor context="Centreville and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Centreville and Northern Virginia" lastUpdated="2026-09-17" />
       <ContactHome />
     </>
   );
