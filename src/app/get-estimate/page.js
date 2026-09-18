@@ -118,66 +118,12 @@ export default function GetEstimatePage() {
         </div>
       </section>
 
-      <section style={{ background: '#fff', padding: '1.5rem 0 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ border: '1px solid #fed7aa', borderLeft: '5px solid var(--color-primary)', borderRadius: 8, padding: '1.2rem', background: '#fff7ed' }}>
-            <h2 style={{ fontSize: '1.05rem', fontWeight: 800, margin: '0 0 0.5rem' }}>Quick Answer</h2>
-            <p style={{ color: '#475569', lineHeight: 1.65, margin: 0 }}>
-              The fastest way to get a useful deck estimate is to send your project type, city, approximate size, photos, material goals, and any repair, permit, HOA, stair, railing, or drainage concerns. Loudoun Decks uses that detail to route you toward a written estimate, inspection, calculator path, or planning call.
-            </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.7rem', marginTop: '1rem' }}>
-              <Link href="#estimate-form" style={{ color: 'var(--color-primary)', fontWeight: 800, textDecoration: 'none' }}>Start estimate form</Link>
-              <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 800, textDecoration: 'none' }}>Use deck calculator</Link>
-              <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 800, textDecoration: 'none' }}>Request repair inspection</Link>
-            </div>
-          </div>
-          <div style={{ marginTop: '1.25rem' }}>
-            <NamedAuthor context="estimate triage for decks, resurfacing, repairs, screened porches, and outdoor living projects in Northern Virginia" lastUpdated="2026-09-15" />
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Stats Strip */}
-      <section style={{ background: '#fff3e0', padding: '1rem 0' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
-          {[
-            { num: 'Photos', label: 'Improve accuracy' },
-            { num: 'Google', label: 'review profile' },
-            { num: 'Scope', label: 'Before pricing' },
-            { num: 'Permit', label: 'Checked early' },
-          ].map(s => (
-            <div key={s.label} style={{ textAlign: 'center' }}>
-              <p style={{ fontWeight: 700, fontSize: '1.3rem', margin: 0, color: 'var(--color-primary)' }}>{s.num}</p>
-              <p style={{ fontSize: '0.8rem', color: '#666', margin: 0 }}>{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Estimate Fit */}
-      <section style={{ padding: '2.5rem 0', background: '#fff' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
-            {[
-              { title: 'Best-fit projects', text: 'Composite decks, deck replacement, resurfacing, screened porches, stairs, railings, lighting, structural repair, and outdoor living upgrades.' },
-              { title: 'What helps us price faster', text: 'Photos, rough dimensions, city or county, HOA status, material preference, repair symptoms, and whether permits are already in progress.' },
-              { title: 'What happens next', text: 'We review your project, clarify scope, discuss budget range, and schedule the right next step if the project is a fit.' },
-            ].map((item) => (
-              <div key={item.title} style={{ border: '1px solid #e5e5e5', borderRadius: 10, padding: '1.25rem', background: '#fff' }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '0.5rem' }}>{item.title}</h2>
-                <p style={{ color: '#555', lineHeight: 1.6, fontSize: '0.92rem', margin: 0 }}>{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Form + proof-safe trust path */}
-      <section id="estimate-form" style={{ padding: '3rem 0', background: '#fff' }}>
+      <section id="estimate-form" style={{ padding: '3rem 0', background: '#fff', scrollMarginTop: '12rem' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '3rem' }}>
 
           {/* Left: Form */}
-          <div>
+          <div style={{ minWidth: 0 }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>Request Your Free Estimate</h2>
             <p style={{ color: '#666', marginBottom: '1.5rem', fontSize: '0.9rem' }}>Tell us about your project, location, timeline, and concerns. More detail helps us route you toward the right estimate, repair review, or planning conversation.</p>
             <ContactForm hideInfoCol noPadding />
@@ -199,7 +145,7 @@ export default function GetEstimatePage() {
           </div>
 
           {/* Right: Proof-safe trust path */}
-          <div>
+          <div style={{ minWidth: 0 }}>
             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1rem' }}>Verify Loudoun Decks Before You Request an Estimate</h3>
             <p style={{ color: '#555', lineHeight: 1.65, fontSize: '0.92rem', marginBottom: '1rem' }}>
               Review public profiles, planning guides, project photos, and permit resources before you share project details. We keep estimate conversations focused on scope, safety, budget, and the right next step.
@@ -248,6 +194,14 @@ export default function GetEstimatePage() {
       </section>
 
       {/* Services Strip */}
+      <section style={{ padding: '2rem 0', background: '#fff', borderTop: '1px solid #e5e5e5' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>What happens next</h2>
+          <p style={{ color: '#555', lineHeight: 1.7 }}>We review your project, clarify scope, discuss budget range, and schedule the right next step if the project is a fit.</p>
+          <NamedAuthor context="estimate triage for decks, resurfacing, repairs, screened porches, and outdoor living projects in Northern Virginia" lastUpdated="2026-09-15" />
+        </div>
+      </section>
+
       <section style={{ padding: '3rem 0', background: '#f9f9f9' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, textAlign: 'center', marginBottom: '2rem' }}>What We Build</h2>
