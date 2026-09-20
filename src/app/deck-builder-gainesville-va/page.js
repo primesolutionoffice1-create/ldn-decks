@@ -176,6 +176,7 @@ export default function DeckBuilderGainesvillePage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {[
+            ['/blog/trex-foggy-wharf-deck-gainesville-va', 'Gainesville Project: Trex Foggy Wharf Deck and Black Railings'],
             ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
             ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
             ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],

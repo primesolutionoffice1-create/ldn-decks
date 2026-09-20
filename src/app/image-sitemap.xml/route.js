@@ -34,6 +34,10 @@ export async function GET() {
 
   // Key content page images
   const contentImages = [
+    {"page": "/blog/trex-foggy-wharf-deck-gainesville-va", "image": "/images/projects/gainesville-foggy-wharf/01-gainesville-trex-foggy-wharf-deck.jpg", "title": "Trex Foggy Wharf deck in Gainesville Virginia"},
+    {"page": "/blog/trex-foggy-wharf-deck-gainesville-va", "image": "/images/projects/gainesville-foggy-wharf/02-foggy-wharf-cocktail-top-black-railing.jpg", "title": "Foggy Wharf cocktail top and Classic Black-on-Black railing"},
+    {"page": "/blog/trex-foggy-wharf-deck-gainesville-va", "image": "/images/projects/gainesville-foggy-wharf/03-gainesville-matching-fascia.jpg", "title": "Matching Foggy Wharf fascia on Gainesville deck"},
+    {"page": "/blog/trex-foggy-wharf-deck-gainesville-va", "image": "/images/projects/gainesville-foggy-wharf/04-gainesville-deck-exterior.jpg", "title": "Gainesville Trex deck exterior with black railings"},
     { page: '/composite-deck-cost-northern-virginia', image: '/social/composite-deck-cost-northern-virginia-social.png', title: 'Composite Deck Cost Northern Virginia Trex TimberTech AZEK Estimate' },
     { page: '/composite-deck-cost-northern-virginia', image: '/images/img13.jpeg', title: 'Deck Cost Guide Northern Virginia 2026' },
     { page: '/composite-deck-cost-northern-virginia', image: '/images/img11.jpeg', title: 'Composite Deck Cost Northern Virginia Brand-by-Brand Pricing' },

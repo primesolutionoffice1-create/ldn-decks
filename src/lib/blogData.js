@@ -127,6 +127,41 @@ const GENERATED_BLOG_IMAGE_SLUGS = new Set([
 
 const allBlogPosts = [
   {
+  "id": 139,
+  "title": "Trex Foggy Wharf Deck in Gainesville, VA",
+  "slug": "trex-foggy-wharf-deck-gainesville-va",
+  "image": "/images/projects/gainesville-foggy-wharf/01-gainesville-trex-foggy-wharf-deck.jpg",
+  "date": "September 20, 2026",
+  "dateModified": "September 20, 2026",
+  "author": "Loudoun Decks Team",
+  "metaTitle": "Trex Foggy Wharf Deck in Gainesville, VA | Loudoun Decks",
+  "metaDescription": "See this Gainesville deck by Loudoun Decks: Trex Enhance Foggy Wharf decking, matching fascia and cocktail top, with Classic Black-on-Black railings.",
+  "category": "Project Showcases",
+  "tags": [
+    "Gainesville VA",
+    "Trex Enhance",
+    "Foggy Wharf",
+    "black deck railings",
+    "cocktail railing"
+  ],
+  "excerpt": "A Gainesville project featuring Trex Enhance Foggy Wharf decking, matching fascia and cocktail top, and Classic Black-on-Black railings.",
+  "content": "Loudoun Decks built this deck in Gainesville, Virginia, using Trex Enhance decking in Foggy Wharf, matching fascia, a Foggy Wharf cocktail rail top, and Trex Enhance Classic Black-on-Black railings. The photographs show how the gray decking and black railing work together against the home's warm exterior and wooded backyard.\n\nFor homeowners comparing Trex Foggy Wharf colors online, this project offers a view of the material across a full deck surface, along the perimeter, and from the yard below. Each perspective reveals a different part of the same material palette.\n\n## Gainesville Project Materials at a Glance\n\n| Project detail | Material and color |\n|---|---|\n| Location | Gainesville, Virginia |\n| Decking | Trex Enhance in Foggy Wharf |\n| Fascia | Trex Enhance matching Foggy Wharf |\n| Cocktail rail top | Trex Enhance in Foggy Wharf |\n| Railing system | Trex Enhance Classic Black-on-Black |\n| Builder | Loudoun Decks |\n\nThe material selections above are the specifications for this Loudoun Decks project. The photographs below document the deck itself, including its surface, railing details, and exterior finish.\n\n![Trex Enhance Foggy Wharf decking with black railings at this Loudoun Decks project in Gainesville, Virginia.](/images/projects/gainesville-foggy-wharf/01-gainesville-trex-foggy-wharf-deck.jpg)\n\n## What Foggy Wharf Looks Like on This Deck\n\nFoggy Wharf creates a gray surface with visible variation along the boards. In these photographs, the lighter decking contrasts with the dark railing and the reddish-brown exterior of the house. The board pattern remains visible both near the doors and toward the outside edge.\n\nThat variation is a useful detail to consider when choosing a deck color. A small sample helps you compare the shade with your siding, while photographs of a full installation help you picture the overall effect. Daylight, shade, camera exposure, and your screen can all change how a color appears. View a physical sample at your own home before making a final selection.\n\nIf you are exploring the wider material range, our [Trex decking page](/trex-decks) explains how to begin planning a Trex project with Loudoun Decks.\n\n## Classic Black-on-Black Railings and a Matching Cocktail Top\n\nThe railing system on this Gainesville deck is Trex Enhance Classic Black-on-Black. Black posts and vertical balusters outline the deck, while the gray Foggy Wharf cocktail top repeats the decking color along the upper edge.\n\nThis detail connects two parts of the design: the broad gray deck surface and the darker perimeter. From inside the deck, the repeated gray color is especially clear at the railing corner. From the yard, the black railing makes a distinct frame above the matching fascia.\n\n![Foggy Wharf cocktail rail top above the Trex Enhance Classic Black-on-Black railing on the Gainesville deck.](/images/projects/gainesville-foggy-wharf/02-foggy-wharf-cocktail-top-black-railing.jpg)\n\nWhen discussing a similar design, specify both the railing system and the cocktail top color. Saying only \u201cblack railing\u201d leaves out a visible part of this project. Our [deck railing options guide](/deck-railing-options-northern-virginia) provides a starting point for comparing railing styles.\n\n## Matching Fascia Finishes the Outside Edge\n\nThe matching Foggy Wharf fascia carries the gray palette around the exposed deck edge. It is easiest to see in the exterior photographs, where the fascia forms a continuous visual band below the black railing.\n\nFor an elevated deck, that outside view matters alongside the view from the deck itself. Looking at both helps you decide how the decking, trim, railing, and house exterior will relate to each other.\n\n![Matching Foggy Wharf fascia beneath black railings, viewed from the side of the Gainesville project.](/images/projects/gainesville-foggy-wharf/03-gainesville-matching-fascia.jpg)\n\n![Exterior view of the Gainesville deck showing matching gray fascia and black railings against the house.](/images/projects/gainesville-foggy-wharf/04-gainesville-deck-exterior.jpg)\n\n## Planning a Similar Deck in Gainesville\n\nUse this project as a visual reference when describing the combination you want: Trex Enhance Foggy Wharf decking, matching fascia and cocktail top, with Classic Black-on-Black railings. Bring photos of your home and the areas where you want the deck to connect so we can discuss how those finishes fit your property.\n\nYour layout, access, existing conditions, and selected details will shape the proposal. Visit our [Gainesville deck builder page](/deck-builder-gainesville-va) to explore local services, or [request a deck estimate](/get-estimate) and mention this Foggy Wharf project. Loudoun Decks can help you turn the material combination you like into a plan for your own outdoor space.",
+  "faq": [
+    {
+      "q": "What decking color is used on this Gainesville deck?",
+      "a": "This Loudoun Decks project uses Trex Enhance decking in Foggy Wharf, with matching Foggy Wharf fascia and a cocktail rail top."
+    },
+    {
+      "q": "Which black railing system is shown in the project photos?",
+      "a": "The project features Trex Enhance Classic Black-on-Black railings, paired with a Trex Enhance Foggy Wharf cocktail top."
+    },
+    {
+      "q": "Can I request a similar deck in Gainesville?",
+      "a": "Yes. Request an estimate from Loudoun Decks and mention this Gainesville Foggy Wharf project. We can discuss your property, layout, material choices, and project scope."
+    }
+  ]
+},
+  {
     id: 1,
     title: 'Trex vs Wood Decking: Cost and Maintenance Comparison 2026',
     slug: 'trex-vs-wood-decking',
