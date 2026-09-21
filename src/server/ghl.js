@@ -22,6 +22,7 @@ const SOURCE_TAGS = {
   'Google Search': 'source-google-search',
   GBP: 'source-gbp',
   'Meta Ad': 'source-meta',
+  Instagram: 'source-instagram',
   Referral: 'source-referral',
   Houzz: 'source-houzz',
   NextDoor: 'source-nextdoor',
@@ -125,7 +126,7 @@ function normalizePhone(raw) {
   return String(raw);
 }
 
-function inferSourceTag(utmSource, gclid, fbclid, msclkid) {
+function inferSourceTag(utmSource, gclid, fbclid, msclkid, utmMedium) {
   if (fbclid) return SOURCE_TAGS['Meta Ad'];
   if (msclkid) return 'source-bing-ads';
   if (gclid) {
@@ -135,7 +136,11 @@ function inferSourceTag(utmSource, gclid, fbclid, msclkid) {
   }
   if (utmSource) {
     const s = String(utmSource).toLowerCase();
+    const m = String(utmMedium || '').toLowerCase();
     if (s.includes('google')) return SOURCE_TAGS['Google Search'];
+    // Organic Instagram (bio link / profile) is tagged separately from paid
+    // Meta so GHL reporting does not fold link-in-bio leads into ad spend.
+    if (s.includes('instagram') && ['bio', 'social', 'organic'].includes(m)) return SOURCE_TAGS['Instagram'];
     if (s.includes('meta') || s.includes('facebook') || s.includes('instagram')) return SOURCE_TAGS['Meta Ad'];
     if (s.includes('gbp') || s.includes('gmb')) return SOURCE_TAGS['GBP'];
     if (s.includes('houzz')) return SOURCE_TAGS['Houzz'];
@@ -182,7 +187,7 @@ export async function sendGhlLead(formData) {
     });
 
     const sourceTag = SOURCE_TAGS[leadSource]
-      || inferSourceTag(attribution.utm_source, attribution.gclid, attribution.fbclid, attribution.msclkid);
+      || inferSourceTag(attribution.utm_source, attribution.gclid, attribution.fbclid, attribution.msclkid, attribution.utm_medium);
     const projectTag = PROJECT_TAGS[projectType] || null;
 
     // Material interest can arrive as comma-separated string (legacy) or

@@ -5,16 +5,22 @@ import Link from "next/link";
 import { useLeadSubmit } from "@/hooks/useLeadSubmit";
 import styles from "./MetaLeadForm.module.css";
 
-const pageContext = {
-  pageType: "paid_social_landing_page",
-  service: "Deck Project",
-};
-
-export default function MetaLeadForm() {
+// Defaults preserve the original paid-social behavior exactly; other landing
+// pages (e.g. /instagram) override the attribution and copy via props.
+export default function MetaLeadForm({
+  leadSource = "Meta Paid Social",
+  pageType = "paid_social_landing_page",
+  formLocation = "paid_social_deck_project_estimate",
+  formType = "paid_social",
+  eyebrow = "Project fit review",
+  heading = "Tell us what you are planning",
+  submitLabel = "Request my consultation",
+} = {}) {
   const [step, setStep] = useState(1);
   const [status, setStatus] = useState(null);
   const formRef = useRef(null);
-  const submit = useLeadSubmit({ formType: "paid_social", pageContext });
+  const pageContext = { pageType, service: "Deck Project" };
+  const submit = useLeadSubmit({ formType, pageContext });
 
   useEffect(() => {
     if (formRef.current?.elements?.submittedAt) {
@@ -52,7 +58,7 @@ export default function MetaLeadForm() {
       ref={formRef}
       className={styles.form}
       onSubmit={handleSubmit}
-      data-form-location="paid_social_deck_project_estimate"
+      data-form-location={formLocation}
       aria-label="Northern Virginia deck project request"
     >
       <input
@@ -65,13 +71,13 @@ export default function MetaLeadForm() {
       />
       <input type="hidden" name="submittedAt" defaultValue="" />
       <input type="hidden" name="state" value="VA" />
-      <input type="hidden" name="leadSource" value="Meta Paid Social" />
-      <input type="hidden" name="page_type" value="paid_social_landing_page" />
+      <input type="hidden" name="leadSource" value={leadSource} />
+      <input type="hidden" name="page_type" value={pageType} />
 
       <div className={styles.formHeader}>
         <div>
-          <p className={styles.eyebrow}>Project fit review</p>
-          <h2>Tell us what you are planning</h2>
+          <p className={styles.eyebrow}>{eyebrow}</p>
+          <h2>{heading}</h2>
         </div>
         <p className={styles.stepLabel}>Step {step} of 2</p>
       </div>
@@ -185,7 +191,7 @@ export default function MetaLeadForm() {
             Back
           </button>
           <button className={styles.primaryButton} type="submit" disabled={status === "submitting"}>
-            {status === "submitting" ? "Sending..." : "Request my consultation"}
+            {status === "submitting" ? "Sending..." : submitLabel}
           </button>
         </div>
       </fieldset>
