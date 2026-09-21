@@ -449,6 +449,14 @@ const nextConfig = {
       { source: '/page/:n*', destination: '/blog', permanent: true },
       { source: '/blog/page/:n*', destination: '/blog', permanent: true },
 
+      // "Wood to composite" URL family (2026-09-20). /wood-to-composite was a
+      // live 404 that never existed as a route; the intent is served by the
+      // replace-wood-deck page. Cover the natural slug variants too.
+      { source: '/wood-to-composite', destination: '/replace-wood-deck-with-composite-northern-virginia', permanent: true },
+      { source: '/wood-to-composite-deck', destination: '/replace-wood-deck-with-composite-northern-virginia', permanent: true },
+      { source: '/wood-deck-to-composite', destination: '/replace-wood-deck-with-composite-northern-virginia', permanent: true },
+      { source: '/convert-wood-deck-to-composite', destination: '/replace-wood-deck-with-composite-northern-virginia', permanent: true },
+
 
       // Single-hop www → non-www canonical redirect
       // Eliminates 2-hop chain: http://www → https://www → https://non-www
