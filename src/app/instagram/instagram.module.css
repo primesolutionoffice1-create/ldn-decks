@@ -1,0 +1,145 @@
+/* Elements unique to /instagram. Page layout, hero, process steps, final CTA
+   and footer styles are reused from ../deck-project-estimate/page.module.css.
+   Mobile-first: nearly all Instagram traffic arrives on phones. */
+
+.quickActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.smsButton,
+.callNow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.smsButton {
+  border: 1px solid #c8491b;
+  background: #c8491b;
+  color: #ffffff;
+}
+
+.smsButton:hover {
+  border-color: #a9360e;
+  background: #a9360e;
+}
+
+.callNow {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: transparent;
+  color: #ffffff;
+}
+
+.callNow:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.proof {
+  border-bottom: 1px solid #e1e6e9;
+  background: #f5f7f8;
+}
+
+.proofInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.25rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+}
+
+.proofInner div {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.proofInner strong {
+  font-size: 0.88rem;
+}
+
+.proofInner span {
+  color: #60707b;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.gallery {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid #e1e6e9;
+  background: #ffffff;
+}
+
+.galleryGrid {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.pair {
+  margin: 0;
+}
+
+.pairImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.imageBox {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #e6ebee;
+}
+
+.imageBox img {
+  object-fit: cover;
+}
+
+.imageLabel {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: rgba(20, 35, 45, 0.85);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.caption {
+  margin: 0.6rem 0 0;
+  color: #60707b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 621px) {
+  .quickActions {
+    max-width: 440px;
+  }
+
+  .proofInner {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 901px) {
+  .galleryGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}

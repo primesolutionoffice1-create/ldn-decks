@@ -23,7 +23,7 @@ export default function LayoutContent({ children }) {
   
   // Define paths that should not have header/footer
   const isThankYouPage = pathname === "/thank-you";
-  const isFocusedLandingPage = pathname === "/deck-project-estimate";
+  const isFocusedLandingPage = pathname === "/deck-project-estimate" || pathname === "/instagram";
   const hasPageSpecificMobileCTA = pathname === "/composite-deck-builder-loudoun";
 
   if (isThankYouPage) {
