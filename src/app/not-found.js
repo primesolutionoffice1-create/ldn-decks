@@ -3,6 +3,14 @@ import Link from 'next/link';
 import styles from './not-found.module.css';
 import NotFoundSuggestions from '../components/NotFoundSuggestions';
 
+// Without this the 404 page inherits the root layout's default title and
+// description (the homepage's), which is misleading in the tab, in crawler
+// reports, and in link previews. Next.js already adds noindex for not-found.
+export const metadata = {
+  title: 'Page Not Found | Loudoun Decks',
+  description: 'The page you are looking for does not exist. Browse our deck services, project gallery, and Northern Virginia cost guides.',
+};
+
 export default function NotFound() {
   return (
     <div className={styles.notFoundWrapper}>
