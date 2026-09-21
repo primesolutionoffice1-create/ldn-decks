@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '100px 20px', lineHeight: '1.6', color: '#333' }}>
       <h1>Privacy Policy</h1>
-      <p>Last Updated: June 2026</p>
+      <p>Last Updated: September 2026</p>
       
       <section style={{ marginTop: '40px' }}>
         <h2>1. Information We Collect</h2>
@@ -31,6 +31,12 @@ export default function PrivacyPolicy() {
         </p>
       </section>
 
+      <p>
+        If you accept optional advertising tracking, we use the Reddit Pixel to measure page visits
+        and confirmed estimate requests. Reddit may receive browser and device information and
+        advertising identifiers. We do not send your form answers, email address, or phone number
+        through this integration, and automatic email and phone matching is disabled.
+      </p>
       <section style={{ marginTop: '30px' }}>
         <h2>3. Google DoubleClick DART Cookie</h2>
         <p>
@@ -45,6 +51,7 @@ export default function PrivacyPolicy() {
         </p>
         <ul>
           <li>Google: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/ads</a></li>
+          <li>Reddit: <a href="https://www.reddit.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">Reddit Privacy Policy</a></li>
           <li>Pinterest: <a href="https://policy.pinterest.com/en/privacy-policy" target="_blank" rel="noopener noreferrer">https://policy.pinterest.com/en/privacy-policy</a></li>
         </ul>
       </section>

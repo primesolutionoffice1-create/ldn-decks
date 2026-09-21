@@ -4,6 +4,7 @@
 import { recordDedupHit } from '@/lib/attribution-debug';
 import { getClickIds, getUtmParams } from '@/lib/clickIds';
 import { BUSINESS } from '@/lib/business';
+import { trackRedditConfirmedLead } from '@/lib/redditTracking';
 
 const GOOGLE_ADS_LEAD_CONVERSION_SEND_TO =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO ||
@@ -604,4 +605,5 @@ export function trackLeadConfirmed({ eventId } = {}) {
   trackGoogleAdsLeadOnConfirmedSubmit({ eventId, attributionPayload });
   trackMetaLead({ eventId });
   trackPinterestLead({ eventId });
+  void trackRedditConfirmedLead({ eventId }).catch(() => {});
 }

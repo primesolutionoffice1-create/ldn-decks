@@ -7,6 +7,7 @@ import Script from "next/script";
 import StructuredData from "../components/StructuredData";
 import WebVitalsReporter from "../components/WebVitalsReporter";
 import MetaPixelRouteTracker from "@/components/MetaPixelRouteTracker";
+import RedditPixelTracker from "@/components/RedditPixelTracker";
 import ConsentBanner from "../components/ConsentBanner";
 
 const outfit = Outfit({
@@ -219,6 +220,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <Analytics />
                     <WebVitalsReporter />
                     <MetaPixelRouteTracker />
+                    <RedditPixelTracker />
                     <ConsentBanner />
         </ContactProvider>
       </body>
