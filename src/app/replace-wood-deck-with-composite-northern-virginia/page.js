@@ -110,7 +110,7 @@ const beforeAfterPairs = [
 ];
 
 const baLabel = {
-  position: 'absolute', top: 10, left: 10, zIndex: 1,
+  position: 'absolute', bottom: 10, left: 10, zIndex: 1,
   padding: '0.25rem 0.6rem', borderRadius: 999,
   fontSize: '0.72rem', fontWeight: 900, letterSpacing: '0.08em', textTransform: 'uppercase',
 };
