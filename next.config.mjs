@@ -477,16 +477,16 @@ const nextConfig = {
     // then promote to enforcing `Content-Security-Policy` once the report
     // stream is clean. Allowlist covers: Vercel infra, GTM + GA + Google
     // Ads conversion endpoints, Fonts + AdSense, Ahrefs analytics, Meta
-    // Pixel, Pinterest Tag, Google Maps embed, YouTube/Vimeo
+    // Pixel, Pinterest Tag, Reddit Pixel, Google Maps embed, YouTube/Vimeo
     // (if/when embedded), Next.js inline-style/script needs, and image
     // sources used by next/image including the BBB seal (self-hosted).
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googletagservices.com https://www.googleadservices.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://analytics.ahrefs.com https://*.vercel-scripts.com https://va.vercel-scripts.com https://www.google.com https://www.gstatic.com https://s.pinimg.com https://connect.facebook.net https://www.clarity.ms https://*.clarity.ms",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googletagservices.com https://www.googleadservices.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://analytics.ahrefs.com https://*.vercel-scripts.com https://va.vercel-scripts.com https://www.google.com https://www.gstatic.com https://s.pinimg.com https://connect.facebook.net https://www.clarity.ms https://*.clarity.ms https://www.redditstatic.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.redditstatic.com",
       "font-src 'self' https://fonts.gstatic.com data:",
-      "img-src 'self' data: blob: https://*.googleusercontent.com https://www.google-analytics.com https://*.google.com https://*.googletagmanager.com https://pagead2.googlesyndication.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://maps.gstatic.com https://maps.googleapis.com https://ct.pinterest.com https://*.pinimg.com https://www.facebook.com https://*.facebook.com",
-      "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.ahrefs.com https://*.vercel-insights.com https://vitals.vercel-insights.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://td.doubleclick.net https://adservice.google.com https://ct.pinterest.com https://*.pinterest.com https://www.facebook.com https://*.facebook.com https://*.clarity.ms https://c.bing.com",
+      "img-src 'self' data: blob: https://*.googleusercontent.com https://www.google-analytics.com https://*.google.com https://*.googletagmanager.com https://pagead2.googlesyndication.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://maps.gstatic.com https://maps.googleapis.com https://ct.pinterest.com https://*.pinimg.com https://www.facebook.com https://*.facebook.com https://alb.reddit.com",
+      "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.ahrefs.com https://*.vercel-insights.com https://vitals.vercel-insights.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://td.doubleclick.net https://adservice.google.com https://ct.pinterest.com https://*.pinterest.com https://www.facebook.com https://*.facebook.com https://*.clarity.ms https://c.bing.com https://pixel-config.reddit.com https://ads.reddit.com https://www.redditstatic.com https://alb.reddit.com",
       "frame-src 'self' https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://td.doubleclick.net https://www.youtube.com https://www.youtube-nocookie.com https://ct.pinterest.com",
       "object-src 'none'",
       "base-uri 'self'",

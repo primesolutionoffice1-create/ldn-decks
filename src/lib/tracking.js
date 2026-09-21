@@ -5,6 +5,7 @@ import { recordDedupHit } from '@/lib/attribution-debug';
 import { getClickIds, getUtmParams } from '@/lib/clickIds';
 import { BUSINESS } from '@/lib/business';
 import { trackRedditConfirmedLead } from '@/lib/redditTracking';
+import { track as trackVercelEvent } from '@vercel/analytics';
 
 const GOOGLE_ADS_LEAD_CONVERSION_SEND_TO =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO ||
@@ -497,6 +498,10 @@ export function trackPhoneClick(event) {
     utm_content: utmParams.utm_content || null,
     utm_term: utmParams.utm_term || null,
   });
+  trackVercelEvent('phone_cta_click', {
+    path: window.location.pathname,
+    cta_location: ctaLocation,
+  });
 }
 
 function pageContextPayload(pageContext = {}) {
@@ -518,6 +523,10 @@ export function trackPhoneClickWithContext({ ctaLocation, pageContext } = {}) {
     page_location: window.location.href,
     page_path: window.location.pathname,
     page: window.location.pathname,
+  });
+  trackVercelEvent('phone_cta_click', {
+    path: window.location.pathname,
+    cta_location: ctaLocation || null,
   });
 }
 
@@ -601,6 +610,9 @@ export function trackLeadConfirmed({ eventId } = {}) {
     page_location: window.location.href,
     page_path: window.location.pathname,
     page: window.location.pathname,
+  });
+  trackVercelEvent('lead_confirmed', {
+    path: window.location.pathname,
   });
   trackGoogleAdsLeadOnConfirmedSubmit({ eventId, attributionPayload });
   trackMetaLead({ eventId });
