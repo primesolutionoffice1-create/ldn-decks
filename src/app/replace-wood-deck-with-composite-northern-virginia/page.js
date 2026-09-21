@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ServicesHeader from '@/components/ServicesHeader';
 import WebPageSchema from '@/components/WebPageSchema';
 import ServiceSchema from '@/components/ServiceSchema';
@@ -74,12 +75,52 @@ const boxStyle = {
   background: '#fff',
 };
 
+// Before/after pairs reused from /before-and-after. Photo paths, alt text, titles
+// and locations are the ones already published there. No dates, costs, timelines
+// or material names are shown here: those are still marked for owner verification
+// on the gallery page, and this is a paid-search landing page.
+const beforeAfterPairs = [
+  {
+    id: 'ashburn',
+    title: 'Elevated Deck Modernization',
+    location: 'Ashburn, VA',
+    beforeImg: '/Projectsbeforeandafter/project2before.jpeg',
+    afterImg: '/Projectsbeforeandafter/project2after.jpeg',
+    beforeAlt: 'High-elevation wood deck with moss and algae growth before replacement in Ashburn VA',
+    afterAlt: 'New white and black composite elevated deck after construction in Ashburn VA',
+  },
+  {
+    id: 'manassas',
+    title: 'Full Backyard Revitalization',
+    location: 'Manassas, VA',
+    beforeImg: '/Projectsbeforeandafter/project3before.jpeg',
+    afterImg: '/Projectsbeforeandafter/project3after.jpeg',
+    beforeAlt: 'Weathered gray wood deck with vertical pickets before renovation in Manassas VA',
+    afterAlt: 'New gray composite deck with modern white railings and matching skirting in Manassas VA',
+  },
+  {
+    id: 'sterling',
+    title: 'Townhome Deck Transformation',
+    location: 'Sterling, VA',
+    beforeImg: '/Projectsbeforeandafter/project4before.jpeg',
+    afterImg: '/Projectsbeforeandafter/project4after.jpeg',
+    beforeAlt: 'Worn townhome wood deck before full renovation in Sterling VA',
+    afterAlt: 'Modern white and gray composite townhome deck with black railings in Sterling VA',
+  },
+];
+
+const baLabel = {
+  position: 'absolute', top: 10, left: 10, zIndex: 1,
+  padding: '0.25rem 0.6rem', borderRadius: 999,
+  fontSize: '0.72rem', fontWeight: 900, letterSpacing: '0.08em', textTransform: 'uppercase',
+};
+
 export default function ReplaceWoodDeckWithCompositePage() {
   return (
     <main>
       <WebPageSchema
         datePublished="2026-08-26"
-        dateModified="2026-08-26"
+        dateModified="2026-09-21"
         url={pageUrl}
         name="Replace Wood Deck With Composite | Northern Virginia"
         description="Replace an aging wood deck with composite decking in Northern Virginia. Trex, TimberTech, AZEK and Fiberon guidance, resurfacing vs full replacement, permits and written estimates."
@@ -168,6 +209,50 @@ export default function ReplaceWoodDeckWithCompositePage() {
           { href: '/deck-payment-estimator', label: 'Payment estimator' },
         ]}
       />
+
+      <section aria-labelledby="before-after-heading" style={{ padding: '56px 20px', background: '#fff', borderTop: '1px solid #f3f4f6' }}>
+        <div style={{ maxWidth: 1060, margin: '0 auto' }}>
+          <p style={{ margin: '0 0 0.45rem', color: '#c2410c', fontWeight: 900, textTransform: 'uppercase', fontSize: '0.78rem' }}>
+            Real Northern Virginia projects
+          </p>
+          <h2 id="before-after-heading" style={{ margin: '0 0 0.75rem', fontSize: 'clamp(1.6rem, 3vw, 2.35rem)' }}>
+            See the Difference: Aging Wood Before, Composite After
+          </h2>
+          <p style={{ maxWidth: 820, color: '#4b5563', lineHeight: 1.7, margin: '0 0 1.6rem' }}>
+            Same homes, same footprints. Weathered, mossy pressure-treated wood on the left; the finished composite deck with new railings and stairs on the right.
+          </p>
+
+          <div style={{ display: 'grid', gap: '1.5rem' }}>
+            {beforeAfterPairs.map((pair) => (
+              <figure key={pair.id} style={{ margin: 0, border: '1px solid #e5e7eb', borderRadius: 10, overflow: 'hidden', background: '#f9fafb' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 4, background: '#e5e7eb' }}>
+                  <div style={{ position: 'relative', aspectRatio: '4 / 3', background: '#d1d5db' }}>
+                    <span style={{ ...baLabel, background: '#111827', color: '#fff' }}>Before</span>
+                    <Image src={pair.beforeImg} alt={pair.beforeAlt} fill loading="lazy" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1100px) 50vw, 520px" style={{ objectFit: 'cover' }} />
+                  </div>
+                  <div style={{ position: 'relative', aspectRatio: '4 / 3', background: '#d1d5db' }}>
+                    <span style={{ ...baLabel, background: '#c2410c', color: '#fff' }}>After</span>
+                    <Image src={pair.afterImg} alt={pair.afterAlt} fill loading="lazy" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1100px) 50vw, 520px" style={{ objectFit: 'cover' }} />
+                  </div>
+                </div>
+                <figcaption style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '0.5rem', padding: '0.8rem 1rem', color: '#111827', fontWeight: 700 }}>
+                  <span>{pair.title}</span>
+                  <span style={{ color: '#6b7280', fontWeight: 600 }}>{pair.location}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.9rem', marginTop: '1.4rem' }}>
+            <Link href="/get-estimate" style={{ color: '#fff', background: '#c2410c', borderRadius: 6, padding: '0.8rem 1rem', fontWeight: 900, textDecoration: 'none' }}>
+              Get a free estimate for your deck
+            </Link>
+            <Link href="/before-and-after" style={{ color: '#111827', fontWeight: 700 }}>
+              See more before &amp; after projects
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <section style={{ padding: '56px 20px', background: '#fff' }}>
         <div style={{ maxWidth: 1060, margin: '0 auto' }}>
@@ -284,7 +369,7 @@ export default function ReplaceWoodDeckWithCompositePage() {
 
       <ServicesFAQ canonicalUrl={pageUrl} title="Wood to Composite Replacement FAQs" faqs={faqs} />
       <RelatedGuides currentPath={pagePath} />
-      <NamedAuthor context="wood-to-composite deck replacement in Northern Virginia" lastUpdated="2026-08-26" />
+      <NamedAuthor context="wood-to-composite deck replacement in Northern Virginia" lastUpdated="2026-09-21" />
     </main>
   );
 }
