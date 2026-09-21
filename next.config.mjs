@@ -140,7 +140,7 @@ const nextConfig = {
       { source: '/top-decks-build-near-you/deck-builder-in-arcola', destination: '/near-you/loudoun-county/arcola', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-dunn-loring', destination: '/near-you/fairfax-county/dunn-loring', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-belmont', destination: '/near-you/loudoun-county/belmont', permanent: true },
-      { source: '/top-decks-build-near-you/deck-builder-in-fort-belvoir', destination: '/near-you/fairfax-county/fort-belvoir', permanent: true },
+      { source: '/top-decks-build-near-you/deck-builder-in-fort-belvoir', destination: '/near-you/fairfax-county', permanent: true }, // city page never existed
       { source: '/top-decks-build-near-you/deck-builder-in-merrifield', destination: '/near-you/fairfax-county/merrifield', permanent: true },
 
       // City-duplicate blog posts consolidated into canonical city pages (2026-08-07).
@@ -170,7 +170,7 @@ const nextConfig = {
       { source: '/blog/deck-builder-bristow-va', destination: '/deck-builder-bristow-va', permanent: true },
       { source: '/top-decks-build-near-you/deck-builder-in-mount-vernon', destination: '/near-you/fairfax-county/mount-vernon', permanent: true },
 
-      { source: '/top-decks-build-near-you/deck-builder-in-hillsboro', destination: '/near-you/loudoun-county/hillsboro', permanent: true },
+      { source: '/top-decks-build-near-you/deck-builder-in-hillsboro', destination: '/near-you/loudoun-county', permanent: true }, // city page never existed
       { source: '/top-decks-build-near-you/deck-builder-in-occoquan', destination: '/near-you/prince-william-county/occoquan', permanent: true },
       { source: '/deck-projects-showcase/new-custom-wood-fence-ashburn', destination: '/services/fence', permanent: true },
 
@@ -442,6 +442,24 @@ const nextConfig = {
       { source: '/wood-to-composite-deck', destination: '/replace-wood-deck-with-composite-northern-virginia', permanent: true },
       { source: '/wood-deck-to-composite', destination: '/replace-wood-deck-with-composite-northern-virginia', permanent: true },
       { source: '/convert-wood-deck-to-composite', destination: '/replace-wood-deck-with-composite-northern-virginia', permanent: true },
+
+      // GSC "Not found (404)" report, 2026-09-21: real content URLs Google keeps
+      // crawling (old WordPress slugs, shorthand guesses, a www-only near-you
+      // path). Each mapped to the page that serves the same intent; every
+      // destination verified 200 before commit. Garbage probes (/$, /*, /&,
+      // /mo, /bbb) and stale _next/static hashes are left as 404 on purpose.
+      { source: '/near-you/loudoun-county/lucketts', destination: '/near-you/loudoun-county', permanent: true },
+      { source: '/deck-contractor-northern-virginia', destination: '/deck-builder-northern-virginia', permanent: true },
+      { source: '/fairfax-hoa-rules', destination: '/hoa-deck-rules-northern-virginia', permanent: true },
+      { source: '/before-after', destination: '/showcase', permanent: true },
+      { source: '/deck-stair-construction-diagram', destination: '/education/deck-stair-construction-diagram', permanent: true },
+      { source: '/deck-vs-patio-guide', destination: '/deck-vs-patio-which-is-right', permanent: true },
+      { source: '/virginia-deck-stair-code', destination: '/education/deck-stair-code-rise-run-virginia', permanent: true },
+      { source: '/permit-loudoun', destination: '/deck-permit-loudoun-county-virginia', permanent: true },
+      { source: '/deck-permit-fairfax', destination: '/deck-permit-fairfax-county-virginia', permanent: true },
+      { source: '/deck-cost-loudoun-county', destination: '/composite-deck-cost-northern-virginia', permanent: true },
+      { source: '/custom-fence-heavy-gate-falls-church-va', destination: '/showcase/fence-gate-falls-church', permanent: true },
+      { source: '/deck-ledger-board-flashing', destination: '/education/ledger-board-flashing-deck-attachment-virginia', permanent: true },
 
 
       // Single-hop www → non-www canonical redirect
