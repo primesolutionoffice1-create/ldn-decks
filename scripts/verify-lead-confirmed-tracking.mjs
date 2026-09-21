@@ -28,6 +28,7 @@ function loadTracking({ gtagCalls = [] } = {}) {
   const source = stripImports(fs.readFileSync(TRACKING_PATH, 'utf8'))
     .replaceAll('export function ', 'function ');
   const sessionStorage = makeSessionStorage();
+  const vercelEvents = [];
   const context = {
     BUSINESS: { telephone: '+17035550123' },
     console,
@@ -35,6 +36,8 @@ function loadTracking({ gtagCalls = [] } = {}) {
     recordDedupHit() {},
     getClickIds() { return {}; },
     getUtmParams() { return {}; },
+    async trackRedditConfirmedLead() {},
+    trackVercelEvent(name, properties) { vercelEvents.push({ name, properties }); },
     window: {
       dataLayer: [],
       gtag(...args) { gtagCalls.push(args); },
@@ -45,6 +48,7 @@ function loadTracking({ gtagCalls = [] } = {}) {
       sessionStorage,
       setTimeout(fn) { fn(); },
     },
+    __vercelEvents: vercelEvents,
   };
 
   vm.runInNewContext(
@@ -152,6 +156,9 @@ async function verifyRouteDefersUntilConfirmation() {
   assert.equal(gtagCalls[0][1], 'conversion');
   assert.equal(gtagCalls[0][2].event_id, 'event-123');
   assert.equal(gtagCalls[0][2].transaction_id, 'event-123');
+  assert.equal(tracking.__vercelEvents.length, 1);
+  assert.equal(tracking.__vercelEvents[0].name, 'lead_confirmed');
+  assert.equal(tracking.__vercelEvents[0].properties.path, '/thank-you');
 }
 
 async function verifyOtherFormsKeepCurrentBehavior() {
