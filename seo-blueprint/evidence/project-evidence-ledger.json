@@ -161,6 +161,38 @@
       "owner_notes": "Imported from existing public showcase data on 2026-06-01. Keep partial until owner-supplied before/after evidence, permit/HOA status, and scope are confirmed."
     },
     {
+      "project_id": "showcase-wood-multi-level-deck-chantilly",
+      "city": "Chantilly",
+      "neighborhood": "unspecified",
+      "month_year": "November 2024",
+      "service_type": "Wood multi-level deck",
+      "materials": "Not specified",
+      "verified_scope": "Existing showcase image and public project page; before/after pair not yet verified.",
+      "verified_failure": "Before/after evidence missing",
+      "work_performed": "Wood multi-level deck construction",
+      "permit_or_hoa_status": "Not recorded",
+      "before_photo_path": null,
+      "after_photo_path": "/images/img11.jpeg",
+      "evidence_status": "partial",
+      "owner_notes": "Intake for GEO-PROOF-004 on 2026-09-21 (previously absent from this ledger). Imported from existing public showcase data at /showcase/wood-multi-level-deck-chantilly. Keep partial until owner-supplied before/after evidence, exact wood species/material, permit/HOA status, and scope are confirmed."
+    },
+    {
+      "project_id": "blog-trex-foggy-wharf-deck-gainesville-va",
+      "city": "Gainesville",
+      "neighborhood": "unspecified",
+      "month_year": "September 2026",
+      "service_type": "Composite deck build (Trex Enhance)",
+      "materials": "Trex Enhance Foggy Wharf decking with matching Foggy Wharf fascia, a cocktail-top rail cap, and Classic Black-on-Black aluminum railings",
+      "verified_scope": "Published blog post at /blog/trex-foggy-wharf-deck-gainesville-va with project photos and FAQ text confirming decking line, color, fascia, and railing selection; before/after image pair and homeowner problem statement not yet recorded.",
+      "verified_failure": "Homeowner problem/before condition not recorded",
+      "work_performed": "Installed Trex Enhance Foggy Wharf decking with matching fascia, cocktail-top rail cap, and Classic Black-on-Black aluminum railings",
+      "permit_or_hoa_status": "Not recorded",
+      "before_photo_path": null,
+      "after_photo_path": "/images/projects/gainesville-foggy-wharf/01-gainesville-trex-foggy-wharf-deck.jpg",
+      "evidence_status": "partial",
+      "owner_notes": "Intake for GEO-PROOF-006 on 2026-09-21 (previously had no ledger entry). Material/color facts here are drawn directly from the blog post's own published text, not invented. Homeowner problem, exact scope/dimensions, permit/HOA status, and public-use image-rights confirmation still needed before this can support a case-study claim beyond what the blog post already states. Governing jurisdiction: Gainesville is unincorporated Prince William County, VA — in scope."
+    },
+    {
       "project_id": "before-after-project-1",
       "city": "Leesburg",
       "neighborhood": null,
