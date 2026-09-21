@@ -127,6 +127,50 @@ const GENERATED_BLOG_IMAGE_SLUGS = new Set([
 
 const allBlogPosts = [
   {
+  "id": 140,
+  "title": "Screened Porch with Trex Select in Purcellville, VA",
+  "slug": "screened-porch-trex-select-purcellville-va",
+  "image": "/images/projects/purcellville-screened-porch/purcellville-screened-porch-01-retouched.png",
+  "date": "September 20, 2026",
+  "dateModified": "September 20, 2026",
+  "author": "Loudoun Decks Team",
+  "metaTitle": "Purcellville Screened Porch with Trex Select | Loudoun Decks",
+  "metaDescription": "Explore a Loudoun Decks screened porch project in Purcellville with Trex Select decking, backyard stairs, and a future Eze-Breeze enclosure option.",
+  "category": "Project Showcases",
+  "tags": [
+    "Purcellville VA",
+    "screened porch",
+    "Trex Select",
+    "porch design"
+  ],
+  "excerpt": "A Purcellville screened porch with Trex Select decking and backyard access, plus planning considerations for a possible future Eze-Breeze enclosure.",
+  "content": "This Loudoun Decks screened porch project in Purcellville, Virginia, pairs Trex Select decking with a roofed outdoor space, screened wall openings, and stairs to the backyard. It offers a useful starting point for homeowners who want to spend more time outside with shade overhead and a screen barrier between their seating area and insects.\n\nThe project shown here is a screened porch. Eze-Breeze is discussed below as a possible future enclosure option, subject to a separate site assessment; it is not presented as installed on this project.\n\n**Photo note:** Project photos digitally retouched for presentation; fine details may differ.\n\n## A Screened Porch Connected to the Backyard\n\nThe photographs show a roof attached to the house, white trim, dark railing balusters, lattice below the deck, and an adjacent open landing. The stairs connect that landing to the lawn, keeping an outdoor route alongside the screened area.\n\nThat combination gives a homeowner two ways to enjoy the same backyard: a sheltered place to sit and an open area for stepping outside. When planning a similar layout, think about the route from the house door to the seating area, where guests will walk, and how furniture will fit without blocking access.\n\n![AI-retouched project photo: screened porch exterior with white trim and dark balusters in Purcellville.](/images/projects/purcellville-screened-porch/purcellville-screened-porch-01-retouched.png)\n\n## Trex Select Decking and a Coordinated Exterior\n\nTrex Select is the decking product specified for this project. The porch design combines the deck surface with white framing details and contrasting dark balusters, creating a consistent appearance from the landing to the stairs.\n\n| Project element | What this presentation covers |\n|---|---|\n| Location | Purcellville, Virginia |\n| Decking | Trex Select |\n| Outdoor space | Roofed screened porch and adjacent open landing |\n| Access | Stairs connecting the deck to the backyard |\n| Future enclosure discussion | Optional Eze-Breeze assessment, not an installed feature |\n\nWhen choosing finishes for your own project, compare physical decking samples against your siding and trim. A retouched photograph is not a reliable way to choose an exact product color. Our [Trex decking page](/trex-decks) is a starting point for discussing materials with Loudoun Decks.\n\n![AI-retouched project photo: view across the open landing toward the screened porch entry.](/images/projects/purcellville-screened-porch/purcellville-screened-porch-02-retouched.png)\n\n## Shade, Screens, and Summer Airflow\n\nA roof creates shade over the porch, while screened openings allow outdoor air to move through the space. Screens help limit insects entering through the enclosed openings; door habits, screen condition, and gaps also matter.\n\nComfort still depends on sun direction, wind, temperature, and the position of nearby buildings. During planning, discuss the hours when you expect to use the porch and where the strongest sun reaches the house. Those details help guide the layout rather than treating every backyard as the same setting.\n\nExplore our [screened porch services](/screened-porch-builder-northern-virginia) for more planning considerations.\n\n![AI-retouched project photo: backyard stairs beside the screened porch and white lattice trim.](/images/projects/purcellville-screened-porch/purcellville-screened-porch-04-retouched.png)\n\n## Could Eze-Breeze Be a Future Upgrade?\n\nFor homeowners considering an enclosure later, Eze-Breeze offers vinyl porch panel systems with vertical or horizontal operation. The [manufacturer's porch systems overview](https://ezebreeze.com/porches/) explains the options, and its [product FAQ](https://ezebreeze.com/eze-breeze-faq/) discusses ventilation, configurations, and project-specific installation questions.\n\nFor this project, that remains a future possibility to evaluate. Existing openings, framing, drainage, ventilation, and applicable approvals would need review before proposing a conversion. An enclosure should not be assumed to create a conditioned room, a waterproof space, or comfortable year-round use. Read our [three-season room planning page](/three-season-room-northern-virginia) to discuss the difference between a screened porch and a more enclosed outdoor space.\n\n## Plan Your Purcellville Porch\n\nTell us how you want to use the space: quiet mornings, outdoor meals, or time with family near the backyard. Share photographs of your house, your access needs, and whether a future enclosure is something you want considered during design.\n\nVisit our [Purcellville deck builder page](/deck-builder-purcellville-va), or [request an estimate](/get-estimate) and mention this Trex Select screened porch. We can review your property and discuss a scope that fits the way you want to live outdoors.",
+  "sourceLinks": [
+    {
+      "label": "Eze-Breeze porch enclosure systems",
+      "href": "https://ezebreeze.com/porches/"
+    },
+    {
+      "label": "Eze-Breeze product and installation FAQ",
+      "href": "https://ezebreeze.com/eze-breeze-faq/"
+    }
+  ],
+  "faq": [
+    {
+      "q": "What decking is used for this screened porch?",
+      "a": "Trex Select is the decking product specified for this Loudoun Decks project. Compare physical samples when selecting a color for your own porch."
+    },
+    {
+      "q": "Is Eze-Breeze installed on this project?",
+      "a": "No. This presentation shows a screened porch. Eze-Breeze is discussed only as a possible future enclosure option, subject to site assessment and a separate scope."
+    },
+    {
+      "q": "Are the project photographs retouched?",
+      "a": "Yes. The photographs have been retouched with AI and carry a Loudoun Decks contact watermark. Fine details may differ from the originals; use physical samples and project documentation for exact material and construction decisions."
+    }
+  ]
+},
+  {
   "id": 139,
   "title": "Trex Foggy Wharf Deck in Gainesville, VA",
   "slug": "trex-foggy-wharf-deck-gainesville-va",
