@@ -182,6 +182,7 @@ export default function PurcellvilleDeckBuilderPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {[
+            ['/blog/screened-porch-trex-select-purcellville-va', 'Purcellville Project: Screened Porch with Trex Select'],
             ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
             ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
             ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],

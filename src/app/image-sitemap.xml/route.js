@@ -34,6 +34,9 @@ export async function GET() {
 
   // Key content page images
   const contentImages = [
+    {"page": "/blog/screened-porch-trex-select-purcellville-va", "image": "/images/projects/purcellville-screened-porch/purcellville-screened-porch-01-retouched.png", "title": "Screened porch exterior in Purcellville - AI-retouched project photo"},
+    {"page": "/blog/screened-porch-trex-select-purcellville-va", "image": "/images/projects/purcellville-screened-porch/purcellville-screened-porch-02-retouched.png", "title": "Screened porch entry and open landing in Purcellville - AI-retouched project photo"},
+    {"page": "/blog/screened-porch-trex-select-purcellville-va", "image": "/images/projects/purcellville-screened-porch/purcellville-screened-porch-04-retouched.png", "title": "Backyard stairs and screened porch in Purcellville - AI-retouched project photo"},
     {"page": "/blog/trex-foggy-wharf-deck-gainesville-va", "image": "/images/projects/gainesville-foggy-wharf/01-gainesville-trex-foggy-wharf-deck.jpg", "title": "Trex Foggy Wharf deck in Gainesville Virginia"},
     {"page": "/blog/trex-foggy-wharf-deck-gainesville-va", "image": "/images/projects/gainesville-foggy-wharf/02-foggy-wharf-cocktail-top-black-railing.jpg", "title": "Foggy Wharf cocktail top and Classic Black-on-Black railing"},
     {"page": "/blog/trex-foggy-wharf-deck-gainesville-va", "image": "/images/projects/gainesville-foggy-wharf/03-gainesville-matching-fascia.jpg", "title": "Matching Foggy Wharf fascia on Gainesville deck"},
