@@ -29,6 +29,8 @@ export default function ThankYouTracking() {
         });
         const result = await response.json();
         if (!cancelled && result?.ok) {
+          // Capture and verify proof first; never send it in advertising page URLs.
+          window.history.replaceState(window.history.state, '', window.location.pathname);
           trackLeadConfirmed({ eventId });
         }
       } catch {
