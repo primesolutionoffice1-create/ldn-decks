@@ -4,6 +4,7 @@ import { resolve } from 'node:path';
 import { blogPosts } from '@/lib/blogData';
 import { educationArticles } from '@/lib/educationData';
 import { showcaseProjects } from '@/lib/showcaseData';
+import { getSoroArticles } from '@/lib/soro';
 import { SITE_URL } from '@/lib/seo';
 import { getIndexableLocalServicePages } from '@/data/localServicePages';
 import { localServiceBuyerFaqs } from '@/data/localServiceBuyerFaqs';
@@ -228,6 +229,7 @@ export default async function sitemap() {
                 { path: "/showcase",                     priority: 0.75, lastMod: TIER3, freq: "monthly" },
                 { path: "/houzz-deck-projects",          priority: 0.80, lastMod: TIER1, freq: "monthly" },
                 { path: "/blog",                         priority: 0.70, lastMod: TIER3, freq: "weekly" },
+                { path: "/insights",                     priority: 0.70, lastMod: TIER3, freq: "weekly" },
                 { path: "/education",                    priority: 0.75, lastMod: TIER1, freq: "weekly" },
                 { path: "/contact",                      priority: 0.70, lastMod: TIER3, freq: "monthly" },
                 { path: "/referral-partners",            priority: 0.70, lastMod: TIER3, freq: "monthly" },
@@ -471,6 +473,19 @@ export default async function sitemap() {
                 };
         });
 
+        // Insights — imported from the Soro RSS feed (src/lib/soro.js). Fetched
+        // with revalidate:false so the sitemap stays a build-time artifact (git
+        // lastmod for static routes is only resolvable at build). If the feed
+        // is disabled, empty or unreachable this is [] and only /insights
+        // (in staticPages above) is listed.
+        const soroArticles = await getSoroArticles({ revalidate: false }).catch(() => []);
+        const insightPaths = soroArticles.map(article => ({
+                path: `/insights/${article.slug}`,
+                priority: 0.65,
+                lastMod: article.date ? article.date.split('T')[0] : TIER3,
+                freq: "monthly",
+        }));
+
         // Showcase projects — dynamically generated from showcaseData
         const showcasePaths = showcaseProjects.map(project => ({
                 path: `/showcase/${project.slug}`,
@@ -490,7 +505,7 @@ export default async function sitemap() {
                 freq: "monthly",
         }));
 
-        const allPages = [...staticPages, ...localServicePaths, ...blogPaths, ...educationPaths, ...showcasePaths]
+        const allPages = [...staticPages, ...localServicePaths, ...blogPaths, ...educationPaths, ...insightPaths, ...showcasePaths]
                 .filter(p => !isExcluded(p.path));
 
         return allPages.map(({ path, lastMod, priority, freq, videos }) => ({

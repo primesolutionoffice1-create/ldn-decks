@@ -40,6 +40,7 @@ This project uses `.env.local` for local secrets and production hosting environm
 | `META_CAPI_ACCESS_TOKEN` | Server-only | Optional | Meta CAPI token. |
 | `META_CAPI_TEST_EVENT_CODE` | Server-only | Optional | Meta CAPI test code. |
 | `NEXT_PUBLIC_CLARITY_PROJECT_ID` | Public | Optional | Microsoft Clarity public project ID. |
+| `SORO_RSS_URL` | Server-only | Optional | Soro RSS feed that powers `/insights`. Defaults to the LDN Decks feed hard-coded in `src/lib/soro.js`, so no Vercel change is needed unless the feed moves. |
 
 ## Server-Only Variables
 
