@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Loudoun Decks Insights</title>
+    <link>https://app.trysoro.com</link>
+    <description>Sample feed used by scripts/verify-soro-feed.mjs. Not live data.</description>
+    <language>en-us</language>
+    <atom:link href="https://app.trysoro.com/api/rss/example" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title><![CDATA[Composite Decking &amp; Winter Weather: What Northern Virginia Homeowners Should Know]]></title>
+      <link>https://app.trysoro.com/p/composite-decking-winter-weather</link>
+      <guid isPermaLink="false">soro-item-0001</guid>
+      <pubDate>Mon, 21 Sep 2026 14:30:00 GMT</pubDate>
+      <category>Composite Decking</category>
+      <category><![CDATA[Maintenance & Care]]></category>
+      <description>&lt;p&gt;A short &lt;strong&gt;summary&lt;/strong&gt; of how composite boards behave through freeze &amp;amp; thaw cycles.&lt;/p&gt;</description>
+      <enclosure url="https://cdn.example.com/soro/winter-deck.jpg" length="123456" type="image/jpeg"/>
+      <content:encoded><![CDATA[
+        <h1>Composite Decking & Winter Weather</h1>
+        <p class="lead" style="color:red" onclick="alert('x')">Composite boards <b>expand and contract</b> with temperature swings. <script>alert("xss")</script>Plan gapping accordingly.</p>
+        <style>.hidden{display:none}</style>
+        <iframe src="https://evil.example.com/embed"></iframe>
+        <h2>Snow removal</h2>
+        <ul>
+          <li>Use a <em>plastic</em> shovel.</li>
+          <li>Skip rock salt; see the <a href="https://ldndecks.com/deck-maintenance-checklist-virginia?utm_source=soro#winter">maintenance checklist</a>.</li>
+          <li>Manufacturer guidance: <a href="https://www.trex.com/care" target="_self" onmouseover="steal()">Trex care page</a>.</li>
+          <li>Bad link: <a href="javascript:alert(1)">should be stripped</a>.</li>
+        </ul>
+        <figure>
+          <img src="https://cdn.example.com/soro/winter-deck.jpg" alt="Composite deck after snowfall" width="1200" height="800" onerror="hack()">
+          <figcaption>Composite deck after snowfall</figcaption>
+        </figure>
+        <img src="http://insecure.example.com/pic.png" alt="insecure image">
+        <table>
+          <thead><tr><th>Board</th><th>Gap</th></tr></thead>
+          <tbody><tr><td>Trex Transcend</td><td colspan="1">1/4 in</td></tr></tbody>
+        </table>
+        <blockquote>Always follow the manufacturer's installation guide.</blockquote>
+        <div><span>Wrapped text stays.</span></div>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Screened Porch vs. Covered Deck: Choosing for Loudoun County Lots</title>
+      <link>https://app.trysoro.com/p/screened-porch-vs-covered-deck</link>
+      <guid>https://app.trysoro.com/p/screened-porch-vs-covered-deck</guid>
+      <pubDate>Tue, 15 Sep 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Soro</dc:creator>
+      <category>Outdoor Living</category>
+      <description><![CDATA[Two popular ways to extend the season on a Loudoun County backyard, compared on structure, permitting and daily use.]]></description>
+      <content:encoded><![CDATA[
+        <p>Both options add covered square footage; the difference is enclosure.</p>
+        <h3>Permits</h3>
+        <p>Either structure needs a county permit. Start at <a href="/deck-permit-loudoun-county-virginia">our Loudoun permit guide</a>.</p>
+        <p>Unclosed paragraph with <strong>bold text
+      ]]></content:encoded>
+    </item>
+  </channel>
+</rss>
