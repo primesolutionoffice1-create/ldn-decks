@@ -18,6 +18,7 @@
         "seo:audit-freshness": "node scripts/audit-content-freshness.mjs --verbose",
         "seo:weekly": "node scripts/seo-weekly-report.mjs",
         "seo:dominance": "node scripts/seo-dominance-dashboard.mjs",
+        "social:images": "python3 scripts/social-images/generate.py",
         "gbp:this-week": "node scripts/gbp-this-week.mjs",
         "gbp:validate": "node scripts/validate-gbp-cadence.mjs",
         "blog:new": "node scripts/new-blog-post.mjs",

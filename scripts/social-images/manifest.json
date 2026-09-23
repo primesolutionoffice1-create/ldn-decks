@@ -1,0 +1,3022 @@
+{
+  "_readme": "Edit title/subtitle/eyebrow/accent/photo freely. Regenerate images with `npm run social:images`. `--rebuild-manifest` overwrites this file from page metadata.",
+  "accents": [
+    "oak",
+    "sage",
+    "steel",
+    "gold"
+  ],
+  "photos": [
+    "chantilly",
+    "homepage-top",
+    "gainesville",
+    "purcellville-porch",
+    "nova-porch"
+  ],
+  "notes": [
+    "subtitle scrubbed: 400-square-foot-deck-cost-northern-virginia-social",
+    "subtitle scrubbed: 600-square-foot-deck-cost-northern-virginia-social",
+    "subtitle scrubbed: 800-square-foot-deck-cost-northern-virginia-social",
+    "title overridden: bbb-accredited-deck-builder-social: 'BBB Accredited Deck Builder in Northern Virginia' -> 'Licensed & Insured Deck Builder in Northern Virginia'",
+    "subtitle scrubbed: bbb-accredited-deck-builder-social",
+    "subtitle scrubbed: cable-railing-decks-northern-virginia-social",
+    "subtitle scrubbed: certifications-licenses-social",
+    "subtitle scrubbed: composite-decks-social",
+    "subtitle scrubbed: covered-deck-cost-northern-virginia-social",
+    "subtitle scrubbed: deck-builder-bristow-va-social",
+    "subtitle scrubbed: deck-builders-loudoun-social",
+    "subtitle scrubbed: deck-cost-12x20-northern-virginia-social",
+    "subtitle scrubbed: deck-cost-16x20-northern-virginia-social",
+    "subtitle scrubbed: deck-cost-20x20-northern-virginia-social",
+    "subtitle scrubbed: deck-enclosure-ideas-northern-virginia-social",
+    "subtitle scrubbed: deck-inspection-service-social",
+    "subtitle scrubbed: deck-lighting-ideas-northern-virginia-social",
+    "subtitle scrubbed: deck-permit-prince-william-county-social",
+    "subtitle scrubbed: deck-railing-options-northern-virginia-social",
+    "subtitle scrubbed: deck-replacement-service-social",
+    "subtitle scrubbed: deck-resurfacing-northern-virginia-social",
+    "subtitle scrubbed: deck-resurfacing-service-social",
+    "subtitle scrubbed: deck-resurfacing-vs-replacement-social",
+    "subtitle scrubbed: deck-staining-northern-virginia-social",
+    "subtitle scrubbed: ldn-decks-reviews-yelp-social",
+    "subtitle scrubbed: louvered-pergola-northern-virginia-social",
+    "subtitle scrubbed: mclean-great-falls-premium-deck-budget-social",
+    "subtitle scrubbed: monthly-payment-composite-deck-northern-virginia-social",
+    "subtitle scrubbed: multi-level-deck-builder-northern-virginia-social",
+    "subtitle scrubbed: new-decks-social",
+    "subtitle scrubbed: outdoor-kitchen-builder-northern-virginia-social",
+    "subtitle scrubbed: pool-deck-builder-northern-virginia-social",
+    "subtitle scrubbed: porch-repair-vs-replacement-social",
+    "subtitle scrubbed: porch-vs-deck-social",
+    "subtitle scrubbed: pressure-washing-deck-northern-virginia-social",
+    "subtitle scrubbed: reviews-social",
+    "subtitle scrubbed: screened-porch-cost-northern-virginia-social",
+    "subtitle scrubbed: second-story-deck-builder-northern-virginia-social",
+    "subtitle scrubbed: services-social",
+    "subtitle scrubbed: stamped-concrete-patio-northern-virginia-social",
+    "subtitle scrubbed: sully-station-hoa-deck-rules-social",
+    "subtitle scrubbed: three-season-room-northern-virginia-social",
+    "title overridden: trades-scholarship-social: '$500 Trades Scholarship' -> 'Loudoun Decks Trades Scholarship'",
+    "subtitle scrubbed: trades-scholarship-social",
+    "title overridden: trex-performance-products-social: 'Trex Performance Outdoor Living Products' -> 'Trex Performance Products'",
+    "subtitle scrubbed: under-deck-ceiling-ideas-social",
+    "subtitle scrubbed: virginia-run-hoa-deck-rules-social"
+  ],
+  "images": [
+    {
+      "file": "400-square-foot-deck-cost-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "chantilly",
+      "title": "400 Square Foot Deck Cost in Northern Virginia (2026)",
+      "subtitle": "2026 planning pricing for a 400 sqft composite deck in Northern Virginia. Includes permit, design, and 3-inspection cost.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/400-square-foot-deck-cost-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "600-square-foot-deck-cost-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "nova-porch",
+      "title": "600 Square Foot Deck Cost in Northern Virginia (2026)",
+      "subtitle": "2026 planning pricing for a 600 sqft composite deck in Northern Virginia. Multi-level builds and outdoor-kitchen pairings detailed.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/600-square-foot-deck-cost-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "800-square-foot-deck-cost-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "homepage-top",
+      "title": "800 Square Foot Deck Cost in Northern Virginia (2026)",
+      "subtitle": "2026 planning pricing for an 800 sqft estate-tier deck in Northern Virginia. Multi-level + outdoor kitchen + fire feature detailed.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/800-square-foot-deck-cost-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "about-loudoun-decks-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "About Loudoun Decks",
+      "subtitle": "Meet the team behind Northern Virginia's trusted deck builder. VA Class A Licensed, Trex product-line planning, Google reviews. Founded by Nicolae Zugrav. Serving Loudoun, Fairfax & Prince William.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/about/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "areas-we-serve-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Areas We Serve",
+      "subtitle": "Loudoun Decks serves 70+ cities across Loudoun, Fairfax, Prince William, Arlington & Stafford counties. Find your city and get a free deck estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/areas-we-serve/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "arlington-county-deck-builder-hub-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Premium Deck Builder Arlington County VA",
+      "subtitle": "Deck and outdoor living contractor in Arlington County with public review profile links, permit guidance, and custom decks, patios, and porches.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/near-you/arlington-county/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "ashburn-composite-deck-cost-financing-social.png",
+      "category": "financing",
+      "eyebrow": "FINANCING",
+      "accent": "gold",
+      "photo": "homepage-top",
+      "title": "Ashburn Composite Deck Cost and Financing Guide (2026)",
+      "subtitle": "Ashburn VA composite deck cost — typical project pricing for Ashburn Village, Brambleton, Belmont, and Broadlands. HOA-aware planning + monthly payment.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/ashburn-composite-deck-cost-financing/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "ashburn-village-hoa-deck-rules-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "homepage-top",
+      "title": "Ashburn Village HOA Deck Rules & Approval Guide",
+      "subtitle": "Replacing or building a deck in Ashburn Village? Learn how the Ashburn Village HOA review works, how it pairs with the Loudoun County permit, and how to get approved.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/ashburn-village-hoa-deck-rules/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "bbb-accredited-deck-builder-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Licensed & Insured Deck Builder in Northern Virginia",
+      "subtitle": "Custom composite decks and porches built for Northern Virginia homes.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/bbb-accredited-deck-builder-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "before-and-after-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Before & After Deck Projects",
+      "subtitle": "See before and after deck transformation photos across Northern Virginia with project details marked for verification where records are still needed.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/before-and-after/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "belmont-country-club-hoa-deck-rules-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "chantilly",
+      "title": "Belmont Country Club HOA Deck Rules & Approval Guide",
+      "subtitle": "Building a deck in Belmont Country Club, Ashburn? The most detailed ARC review in Ashburn — material samples, in-person committee, 21-35 day timeline. Premier estate-tier deck construction.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/belmont-country-club-hoa-deck-rules/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "best-deck-stain-sealer-virginia-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Best Deck Stain & Sealer for Virginia Weather (2026)",
+      "subtitle": "Top deck stains and sealers tested in Virginia's climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/best-deck-stain-sealer-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "best-time-to-build-deck-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Best Time to Build a Deck in Northern Virginia (2026)",
+      "subtitle": "Late winter/early spring gets the best pricing and fastest scheduling. Summer is peak season with 4-6 week waits. Month-by-month guide, hidden HOA + permit timeline, and how to time financing.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/best-time-to-build-a-deck-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "best-time-to-finance-build-deck-northern-virginia-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "When to Finance and Build a Deck in Northern Virginia (2026)",
+      "subtitle": "Best time of year to finance and build a deck in Northern Virginia. Pricing by season, permit timing, lender promotions, and material lead times.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/best-time-to-finance-build-deck-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "blog-social.png",
+      "category": "blog",
+      "eyebrow": "GUIDES",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Building Blog & Expert Tips",
+      "subtitle": "Expert advice on deck materials, costs, maintenance, design trends, and outdoor living ideas for Northern Virginia homeowners. By Loudoun Decks.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/blog/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "brambleton-hoa-deck-rules-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "homepage-top",
+      "title": "Brambleton HOA Deck Rules & Approval Guide",
+      "subtitle": "Building a deck in Brambleton, VA? Learn how Brambleton HOA architectural review works, how it pairs with the Loudoun County permit, and how to get approved fast.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/brambleton-hoa-deck-rules/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "broadlands-hoa-deck-rules-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "chantilly",
+      "title": "Broadlands HOA Deck Rules & Approval Guide",
+      "subtitle": "Building a deck in Broadlands, Ashburn? Learn how the Broadlands HOA architectural review works, how it pairs with the Loudoun County permit, and how to get approved.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/broadlands-hoa-deck-rules/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "cable-railing-decks-northern-virginia-social.png",
+      "category": "railing",
+      "eyebrow": "RAILINGS",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Cable Railing for Decks (NoVA)",
+      "subtitle": "Horizontal vs vertical, VA code requirements & HOA considerations. We install all types.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/cable-railing-for-decks-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "certifications-licenses-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Certifications & Licenses",
+      "subtitle": "Verify our credentials. Serving Loudoun, Fairfax & Prince William.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/about/certifications-and-licenses/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "choose-deck-builder-northern-virginia-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "How to Choose a Deck Builder in Northern Virginia (2026)",
+      "subtitle": "10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license, warranty terms, and public profiles.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/how-to-choose-a-deck-builder-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "composite-deck-builder-loudoun-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Composite Deck Builder Loudoun County, VA",
+      "subtitle": "Premium composite deck builder in Loudoun County, VA. Trex and TimberTech decks, HOA support, permits, replacements, railings, stairs, and free estimates.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/composite-deck-builder-loudoun/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "composite-deck-cost-by-size-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "purcellville-porch",
+      "title": "Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples",
+      "subtitle": "Composite deck cost by size — 2026 planning pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia. Per-tier breakdown plus monthly payment.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/composite-deck-cost-by-size/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "composite-deck-cost-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "chantilly",
+      "title": "How Much Does a Composite Deck Cost in Northern Virginia?",
+      "subtitle": "Plan a Northern Virginia composite deck budget. Compare calculator scenarios, understand exclusions, and prepare a written Trex or TimberTech installation estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/composite-deck-cost-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "composite-deck-lifespan-virginia-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "How Long Does a Composite Deck Last?",
+      "subtitle": "Composite decks last 25-50 years in Virginia. Trex: 25+ yrs, TimberTech AZEK: 50 yrs. See brand lifespans & signs your deck needs replacement. Free inspection!",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/how-long-does-a-composite-deck-last/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "composite-deck-vs-wood-deck-virginia-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Composite vs Wood Deck: 2026 Virginia Cost Comparison",
+      "subtitle": "Is composite decking cheaper than wood? 15-year total cost analysis for Northern Virginia homeowners. See lifespan, maintenance & ROI head-to-head.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/composite-deck-vs-wood-deck-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "composite-decks-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Premier Composite Deck Builder NoVA",
+      "subtitle": "Premier composite deck builder in Northern Virginia. Trex, TimberTech and AZEK material planning.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/composite-decks/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "concrete-washing-service-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Professional Concrete Washing NoVA",
+      "subtitle": "Restore your driveways, patios, and walkways with expert concrete washing in Northern Virginia. We remove deep-set stains, oil, and algae.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/concrete-washing/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "contact-loudoun-decks-social.png",
+      "category": "contact",
+      "eyebrow": "CONTACT",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Contact Loudoun Decks",
+      "subtitle": "Get a free deck estimate. Call (571) 655-7207 or submit a request. Composite deck builders serving Loudoun, Fairfax & Prince William counties.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/contact/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "covered-deck-builder-northern-virginia-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "nova-porch",
+      "title": "Covered Deck Builder Northern Virginia",
+      "subtitle": "Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/covered-deck-builder-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "covered-deck-cost-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "purcellville-porch",
+      "title": "Covered Deck Cost in Northern Virginia: 2026 Budget Guide",
+      "subtitle": "Per-tier pricing plus monthly payment examples.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/covered-deck-cost-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "credit-score-deck-financing-social.png",
+      "category": "financing",
+      "eyebrow": "FINANCING",
+      "accent": "gold",
+      "photo": "nova-porch",
+      "title": "What Credit Score Do You Need for Deck Financing? (2026)",
+      "subtitle": "Credit score requirements for deck financing in Northern Virginia. Typical APR by score band, soft-pull pre-qualification process, and approval tips.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/credit-score-deck-financing/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-beam-span-calculator-virginia-pinterest.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Beam Span Calculator Virginia",
+      "subtitle": "Custom composite decks, porches and outdoor living spaces for Northern Virginia homes.",
+      "size": [
+        1000,
+        1500
+      ],
+      "source": null,
+      "title_derived_from_filename": true
+    },
+    {
+      "file": "deck-beam-span-calculator-virginia-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Deck Beam Span Calculator Virginia",
+      "subtitle": "Estimate deck beam span, post spacing, tributary width and framing review warnings for Northern Virginia deck planning.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/tools/deck-beam-span-calculator-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-build-timeline-northern-virginia-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Build Timeline in Northern Virginia",
+      "subtitle": "Most decks take 2-4 weeks to build after permits. Full timeline: consultation (1 week), permits (2-6 weeks), construction (2-4 weeks). Total: 6-12 weeks.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/how-long-to-build-a-deck-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-alexandria-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Builder in Alexandria VA",
+      "subtitle": "Trusted Alexandria, VA deck builder. Trex, TimberTech, and AZEK material planning. Custom composite decks, porches & pergolas. Licensed & insured. Free written estimate — (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-alexandria-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-arlington-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Premium Deck Builder Arlington VA",
+      "subtitle": "Trusted deck builder in Arlington, VA. Custom composite decks & screened porches in Ballston, Clarendon & Rosslyn. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-arlington-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-ashburn-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Builder in Ashburn, VA",
+      "subtitle": "Deck builder in Ashburn, VA for Trex and composite deck upgrades in Brambleton, Broadlands, Ashburn Village, and One Loudoun. Request a written estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-ashburn-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-brambleton-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Builder in Brambleton, VA",
+      "subtitle": "Deck builder in Brambleton, VA. Composite decks built for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-brambleton-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-bristow-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Builder in Bristow VA",
+      "subtitle": "Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  save 40-60% by keeping a sound frame. Prince William permit planning support. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-bristow-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-burke-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Deck Builder in Burke, VA",
+      "subtitle": "Deck builder in Burke, VA. Custom Trex composite decks replacing aging wood in Burke Centre, Lakewood Hills & Rolling Valley. Fairfax County permits handled. Free estimate  -  (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-burke-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-centreville-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Deck Builder in Centreville, VA",
+      "subtitle": "Centreville deck builder for composite deck replacement, resurfacing, screened porches, railings, lighting, and showroom material planning.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-centreville-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-chantilly-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Builder in Chantilly, VA",
+      "subtitle": "Trusted deck builder in Chantilly, VA. Trex product-line planning & TimberTech and AZEK product planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-chantilly-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-fairfax-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Fairfax VA Deck Builder",
+      "subtitle": "Fairfax VA deck builder for composite decks, replacements, repairs, and screened porches with City of Fairfax and Fairfax County permit planning.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-fairfax-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-falls-church-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Builder in Falls Church, VA",
+      "subtitle": "Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex & composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-falls-church-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-gainesville-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Builder in Gainesville, VA",
+      "subtitle": "Trusted deck builder in Gainesville, VA. Trex product-line planning & TimberTech and AZEK product planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-gainesville-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-great-falls-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Builder in Great Falls, VA",
+      "subtitle": "Premium deck builder in Great Falls, VA for estate composite deck replacement, Trex and AZEK planning, screened porches, RPA screening, and outdoor living projects.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-great-falls-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-haymarket-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Builder in Haymarket VA",
+      "subtitle": "Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William permit planning support. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-haymarket-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-herndon-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Deck Builder in Herndon, VA",
+      "subtitle": "Trusted deck builder in Herndon, VA. Trex, TimberTech and AZEK material planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-herndon-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-leesburg-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Builder in Leesburg, VA",
+      "subtitle": "Deck builder in Leesburg, VA. Custom Trex & cedar decks for River Creek, Lansdowne, Tavistock Farms & the historic district. Town of Leesburg + Loudoun County permit planning support. Free estimate  -  (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-leesburg-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-lorton-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Builder in Lorton, VA",
+      "subtitle": "Deck builder in Lorton, VA. Custom Trex & composite decks for Laurel Hill, Crosspointe, Newington & Gunston. Fairfax County permits handled. Free estimate  -  (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-lorton-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-manassas-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Builder in Manassas, VA",
+      "subtitle": "Manassas deck builder serving Old Town, Wellington, Bull Run and Sudley Springs. Trex and composite deck planning, screened porches and historic-district builds.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-manassas-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-mclean-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Builder in McLean, VA",
+      "subtitle": "Premium deck builder in McLean, VA for composite deck replacement, Trex and TimberTech planning, screened porches, and estate outdoor living projects.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-mclean-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-near-you-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Deck Builder Near Me",
+      "subtitle": "Find a trusted deck builder near you in Northern Virginia. Loudoun Decks serves Loudoun, Fairfax, Prince William, Arlington & Stafford counties — custom decks, patios & porches.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/near-you/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-northern-virginia-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Custom Deck Builder Northern Virginia",
+      "subtitle": "Custom deck builder in Northern Virginia for composite decks, Trex, TimberTech, deck replacement, permits and HOA approvals across Loudoun and Fairfax.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-oakton-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Builder in Oakton, VA",
+      "subtitle": "Custom deck builder in Oakton, VA. Google reviews. Trex Transcend & TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-oakton-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-purcellville-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Builder in Purcellville, VA",
+      "subtitle": "Deck builder in Purcellville, VA. Composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-purcellville-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-reston-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Expert Deck Builders in Reston VA",
+      "subtitle": "Deck builder in Reston, VA. Composite decks designed for wooded lots and Reston Association DRB review  -  Lake Anne, Lake Audubon, South Lakes, North Point. Fairfax County permits handled. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-reston-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-south-riding-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Builder in South Riding, VA",
+      "subtitle": "Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permit planning support. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-south-riding-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-springfield-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Builder in Springfield, VA",
+      "subtitle": "Deck builder in Springfield, VA. Custom Trex & composite decks for Kingstowne, West Springfield, Franconia & Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-springfield-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-stafford-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Premium Deck Builder Stafford VA",
+      "subtitle": "Trusted deck builder in Stafford, VA. Trex & TimberTech composite decks, screened porches, clear scope, permit-aware planning, and free estimates.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-stafford-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-sterling-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Builder in Sterling, VA",
+      "subtitle": "Trusted deck builder in Sterling, VA. Google reviews. Trex & TimberTech decks, screened porches. Loudoun County permits & HOA handled. Free estimate. (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-sterling-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-tysons-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Builder in Tysons, VA",
+      "subtitle": "Custom deck builder in Tysons, VA. Google reviews. Modern composite decks & rooftop terraces for Tysons townhomes and condos. Free estimate. (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-tysons-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-vienna-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Builder in Vienna, VA",
+      "subtitle": "Trusted deck builder in Vienna, VA. Google reviews. Custom Trex & TimberTech decks, screened porches & pergolas. Town of Vienna permit experts. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-vienna-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builder-woodbridge-va-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Deck Builder in Woodbridge, VA",
+      "subtitle": "Trusted deck builder in Woodbridge, VA. Trex product-line planning & TimberTech and AZEK product planning. Custom composite decks, screened porches & pergolas. Free estimate  -  call (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builder-woodbridge-va/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-builders-loudoun-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Custom Deck Builder in Loudoun County, VA",
+      "subtitle": "Local deck builder in Loudoun County, VA.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-builders-loudoun/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-building-process-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Our Deck Building Process",
+      "subtitle": "From free consultation to final walkthrough — our 6-step deck building process in Northern Virginia. Design, permits, HOA, construction, and warranty.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/about/process/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-cost-12x20-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "purcellville-porch",
+      "title": "12x20 Deck Cost in Northern Virginia (2026)",
+      "subtitle": "How much does a 12x20 deck (240 sq ft) cost in Northern Virginia in 2026? Permits and HOA notes included.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-cost-12x20-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-cost-16x20-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "chantilly",
+      "title": "16x20 Deck Cost in Northern Virginia (2026)",
+      "subtitle": "How much does a 16x20 deck (320 sq ft) cost in Northern Virginia in 2026? Permits and HOA notes included.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-cost-16x20-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-cost-20x20-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "homepage-top",
+      "title": "20x20 Deck Cost in Northern Virginia (2026)",
+      "subtitle": "How much does a 20x20 deck (400 sq ft) cost in Northern Virginia in 2026? Permits and HOA notes included.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-cost-20x20-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-cost-calculator-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "purcellville-porch",
+      "title": "Deck Cost Calculator Northern Virginia",
+      "subtitle": "Explore an illustrative deck budget by size, material and selected add-ons. Review model assumptions, then request an itemized Northern Virginia project quote.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-cost-calculator/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-cost-estimator-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "chantilly",
+      "title": "Deck Cost Estimator Northern Virginia",
+      "subtitle": "Estimate custom deck cost in Northern Virginia by size, material and add-ons, then compare next steps for permits, financing and a written deck estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/tools/deck-cost-estimator-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-design-ideas-2026-social.png",
+      "category": "design",
+      "eyebrow": "DESIGN IDEAS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Design Ideas 2026",
+      "subtitle": "See 15 deck design ideas for 2026 with photos, price ranges, colors, and NoVA contractor tips for composite, porch, pergola, and outdoor kitchen builds.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-design-ideas-2026/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-design-ideas-northern-virginia-2026-social.png",
+      "category": "design",
+      "eyebrow": "DESIGN IDEAS",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Design Ideas Northern Virginia 2026",
+      "subtitle": "Top deck design ideas for Northern Virginia homeowners in 2026. Composite decks, multi-level builds, screened porches & pergolas. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-design-ideas-northern-virginia-2026/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-enclosure-ideas-northern-virginia-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Deck Enclosure Ideas (Northern VA)",
+      "subtitle": "Extend outdoor season to 9-10 months.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-enclosure-ideas-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-financing-social.png",
+      "category": "financing",
+      "eyebrow": "FINANCING",
+      "accent": "gold",
+      "photo": "nova-porch",
+      "title": "Deck Financing in Northern Virginia",
+      "subtitle": "Explore deck financing options for new decks, resurfacing, repairs, and composite deck upgrades in Northern Virginia. Build now and pay over time.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-financing/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-footing-code-northern-virginia-social.png",
+      "category": "permit",
+      "eyebrow": "PERMITS & CODES",
+      "accent": "steel",
+      "photo": "chantilly",
+      "title": "Deck Footing & Code Guide for Northern Virginia",
+      "subtitle": "How deck footings and the Virginia Residential Code work in Northern Virginia — frost-depth footings, ledger attachment, joist spans, guardrails, and the inspections your deck must pass.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-footing-code-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-footing-depth-calculator-virginia-pinterest.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Footing Depth Calculator Virginia",
+      "subtitle": "Custom composite decks, porches and outdoor living spaces for Northern Virginia homes.",
+      "size": [
+        1000,
+        1500
+      ],
+      "source": null,
+      "title_derived_from_filename": true
+    },
+    {
+      "file": "deck-footing-depth-calculator-virginia-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Footing Depth Calculator Virginia",
+      "subtitle": "Estimate deck footing depth, footing diameter, frost-depth guidance and inspection notes for Northern Virginia deck planning.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/tools/deck-footing-depth-calculator-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-inspection-service-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Inspection Loudoun VA",
+      "subtitle": "We identify hidden structural rot, foundational settling, and safety hazards.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/deck-inspection/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-joist-span-calculator-virginia-pinterest.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Joist Span Calculator Virginia",
+      "subtitle": "Custom composite decks, porches and outdoor living spaces for Northern Virginia homes.",
+      "size": [
+        1000,
+        1500
+      ],
+      "source": null,
+      "title_derived_from_filename": true
+    },
+    {
+      "file": "deck-joist-span-calculator-virginia-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Joist Span Calculator Virginia",
+      "subtitle": "Estimate deck joist span, joist spacing, cantilever limits and composite decking support warnings for Northern Virginia deck planning.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/tools/deck-joist-span-calculator-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-lighting-ideas-northern-virginia-social.png",
+      "category": "lighting",
+      "eyebrow": "DECK LIGHTING",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Lighting Ideas (Northern VA)",
+      "subtitle": "8 deck lighting options: post caps, stair risers, under-rail, string lights, recessed, landscape. Transform your deck for evening use.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-lighting-ideas-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-lighting-railings-stairs-addon-cost-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "nova-porch",
+      "title": "Deck Lighting, Railings & Stairs: Add-On Cost Guide (2026)",
+      "subtitle": "Real cost for deck lighting, railings, and stairs in Northern Virginia. Per-linear-foot pricing, full package examples, and impact on monthly payment.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-lighting-railings-stairs-addon-cost/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-load-calculator-virginia-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Deck Load Calculator Virginia",
+      "subtitle": "Estimate deck load, beam line load, post load and heavy-upgrade warnings for Northern Virginia deck planning.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/tools/deck-load-calculator-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-maintenance-checklist-virginia-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Maintenance Checklist for Virginia",
+      "subtitle": "Seasonal deck maintenance checklist for Virginia climate. Spring cleaning, summer care, fall prep, winter protection. Composite vs wood maintenance compared.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-maintenance-checklist-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-maintenance-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Professional Deck Maintenance NoVA",
+      "subtitle": "Protect your outdoor investment with expert deck maintenance in Northern Virginia. We specialize in wood staining, sealing, and structural care.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/deck-maintenance/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-materials-comparison-virginia-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Materials Compared",
+      "subtitle": "Compare every deck material: pressure-treated, cedar, Trex, TimberTech, AZEK, IPE, aluminum. Cost, lifespan, maintenance, and best use for Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-materials-comparison-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-payment-estimator-social.png",
+      "category": "financing",
+      "eyebrow": "FINANCING",
+      "accent": "gold",
+      "photo": "purcellville-porch",
+      "title": "Deck Payment Estimator",
+      "subtitle": "Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-payment-estimator/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-permit-arlington-county-social.png",
+      "category": "permit",
+      "eyebrow": "PERMITS & CODES",
+      "accent": "steel",
+      "photo": "nova-porch",
+      "title": "Arlington County Deck Permit Guide (2026)",
+      "subtitle": "Complete 2026 Arlington County deck permit guide: CPHD process, Permit Arlington portal, setbacks, historic-district review (Lyon Park, Maywood, Westover), inspection contacts, and timeline. We handle every step.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-permit-arlington-county-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-permit-fairfax-county-social.png",
+      "category": "permit",
+      "eyebrow": "PERMITS & CODES",
+      "accent": "steel",
+      "photo": "nova-porch",
+      "title": "Fairfax County Deck Permits Made Easy",
+      "subtitle": "Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-permit-fairfax-county-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-permit-hoa-cost-loudoun-county-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "homepage-top",
+      "title": "Deck Permit & HOA Costs in Loudoun County: 2026 Budget Guide",
+      "subtitle": "Source-checked Loudoun County deck permit and HOA cost planning: LandMARC fees, ARC review, engineering drawings, inspections, and total budget impact.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-permit-hoa-cost-loudoun-county/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-permit-loudoun-county-social.png",
+      "category": "permit",
+      "eyebrow": "PERMITS & CODES",
+      "accent": "steel",
+      "photo": "purcellville-porch",
+      "title": "Loudoun County Deck Permit Guide (2026)",
+      "subtitle": "Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Plan a cleaner deck build with professional permit coordination.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-permit-loudoun-county-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-permit-prince-william-county-social.png",
+      "category": "permit",
+      "eyebrow": "PERMITS & CODES",
+      "accent": "steel",
+      "photo": "purcellville-porch",
+      "title": "Prince William County Deck Permit Guide 2026",
+      "subtitle": "Full process explained — we handle it for you.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-permit-prince-william-county-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-planning-tools-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Planning Tools",
+      "subtitle": "Free deck planning tools from Loudoun Decks for Northern Virginia homeowners, including footing depth, stair rise-run and project calculators.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/tools/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-prices-tariffs-2026-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "homepage-top",
+      "title": "How Tariffs Affect Deck Prices in 2026",
+      "subtitle": "Tariffs have increased composite decking costs 8-15% in 2026. How this affects your project, which materials are impacted, and how to save. Expert analysis.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/how-tariffs-affect-deck-prices-2026/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-railing-options-northern-virginia-social.png",
+      "category": "railing",
+      "eyebrow": "RAILINGS",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Railing Options for Northern Virginia",
+      "subtitle": "Compare deck railing options: composite, aluminum, cable, glass, and wood. Virginia code requirements included.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-railing-options-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-remodeling-social.png",
+      "category": "repair",
+      "eyebrow": "DECK REPAIR",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Custom Deck Remodeling & Upgrades",
+      "subtitle": "Upgrade your existing deck with modern features. From new railings to built-in lighting, we remodel decks to fit your modern lifestyle.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-remodeling/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-repair-loudoun-county-social.png",
+      "category": "repair",
+      "eyebrow": "DECK REPAIR",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Repair Loudoun County",
+      "subtitle": "Expert deck repair in Loudoun County, VA. We fix rot, unstable railings, ledger board failures & structural damage. Ashburn, Leesburg, Sterling.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-repair-loudoun-county/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-repair-social.png",
+      "category": "repair",
+      "eyebrow": "DECK REPAIR",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Repair",
+      "subtitle": "Professional deck repair in Northern Virginia. Fix rot, wobbly railings, and ledger board failures. Free safety inspection call (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-repair/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-repair-structural-maintenance-social.png",
+      "category": "repair",
+      "eyebrow": "DECK REPAIR",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Repair Structural Maintenance",
+      "subtitle": "Custom composite decks, porches and outdoor living spaces for Northern Virginia homes.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": null,
+      "title_derived_from_filename": true
+    },
+    {
+      "file": "deck-replacement-service-social.png",
+      "category": "repair",
+      "eyebrow": "DECK REPAIR",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Professional Deck Replacement Northern Virginia",
+      "subtitle": "Full deck replacement in Northern Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/deck-replacement/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-resurfacing-northern-virginia-social.png",
+      "category": "resurfacing",
+      "eyebrow": "DECK RESURFACING",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Resurfacing in Northern Virginia",
+      "subtitle": "Premium deck resurfacing in Northern Virginia. Keep your existing frame, install new composite boards & railings. Free inspection.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-resurfacing-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-resurfacing-service-social.png",
+      "category": "resurfacing",
+      "eyebrow": "DECK RESURFACING",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Premium Deck Resurfacing NoVA",
+      "subtitle": "Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/deck-resurfacing/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-resurfacing-vs-replacement-social.png",
+      "category": "resurfacing",
+      "eyebrow": "DECK RESURFACING",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Resurfacing vs Replacement",
+      "subtitle": "When each makes sense, inspection guide, and Northern Virginia cost examples.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-resurfacing-vs-replacement/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-roi-calculator-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "homepage-top",
+      "title": "Deck ROI in Northern Virginia (2026)",
+      "subtitle": "How much value does a deck add in Northern Virginia? Composite recoups 65-80% at resale. Real ROI data by material, size, and county.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-roi-calculator-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-safety-inspection-checklist-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Safety Inspection Checklist",
+      "subtitle": "15-point deck safety inspection checklist. Check for rot, structural issues, railing stability, and code compliance. Free professional inspection available.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-safety-inspection-checklist/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-staining-northern-virginia-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Deck Staining in Northern Virginia",
+      "subtitle": "Professional deck staining in Northern Virginia. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-staining-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-stair-calculator-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Virginia Deck Stair Calculator",
+      "subtitle": "Calculate deck stair rise, run, number of steps, tread depth and stair angle for Northern Virginia deck planning. Includes safety warnings and code review guidance.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/tools/deck-stair-calculator/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-stair-lighting-service-social.png",
+      "category": "lighting",
+      "eyebrow": "DECK LIGHTING",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Deck Stair Lighting Loudoun VA",
+      "subtitle": "Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last in Loudoun, Fairfax & Prince William County.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/deck-stair-lighting/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-vs-patio-which-is-right-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Deck vs Patio: Which Is Right for You?",
+      "subtitle": "Deck vs patio cost, maintenance, ROI, and best use compared for Northern Virginia homeowners. We build both. Free consultation.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-vs-patio-which-is-right/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-warranty-guide-northern-virginia-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Warranty Guide",
+      "subtitle": "Understand deck warranties: Trex 25-year, TimberTech 30-50 year, workmanship coverage. What's covered, what voids it, and how to file a claim.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/deck-warranty-guide-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-warranty-labor-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Written Labor Warranty Terms",
+      "subtitle": "Learn how Loudoun Decks documents workmanship warranty terms, manufacturer material coverage, and service expectations in project paperwork.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/about/warranty/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "deck-washing-service-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Professional Deck Washing Loudoun VA",
+      "subtitle": "Restore your outdoor wood or composite deck with professional low-pressure soft-washing in Northern Virginia. We safely remove algae, mold, and grime.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/deck-washing/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "does-a-deck-add-value-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "homepage-top",
+      "title": "Does a Deck Add Value to Your Home? (2026 ROI Data)",
+      "subtitle": "A composite deck recoups 60-80% at resale in Northern Virginia. 2026 ROI data, what buyers look for, and when a deck hurts resale value.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/does-a-deck-add-value-to-your-home/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "eco-friendly-composite-decking-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Eco-Friendly Composite Decking",
+      "subtitle": "Trex is made from 95% recycled materials. Composite decking diverts 500M+ lbs of plastic from landfills yearly. Build green without sacrificing quality.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/eco-friendly-composite-decking/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "education-hub-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Northern Virginia Deck Education Center",
+      "subtitle": "Expert guides for deck safety, permits, materials, costs, HOA approvals and outdoor living decisions in Northern Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/education/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "entry-doors-service-social.png",
+      "category": "services",
+      "eyebrow": "SERVICES",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Entry Door Installation Loudoun VA",
+      "subtitle": "Improve curb appeal, security, and energy efficiency with professional entry door installation in Northern Virginia. Custom fiberglass and wood door solutions.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/entry-doors/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "fairfax-county-deck-builder-hub-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Premium Deck Builder Fairfax County VA",
+      "subtitle": "Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/near-you/fairfax-county/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "faqs-social.png",
+      "category": "blog",
+      "eyebrow": "GUIDES",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Deck Building FAQs",
+      "subtitle": "Answers to common questions about deck building, materials, costs, timelines, permits, and HOA in Northern Virginia. Expert answers from Loudoun Decks.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/faqs/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "fence-cleaning-service-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Professional Fence Cleaning NoVA",
+      "subtitle": "Restore your fence with professional cleaning services in Northern Virginia. We safely remove gray weathering, mold, and algae from wood and composite fencing.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/fence-cleaning/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "fence-installation-service-social.png",
+      "category": "services",
+      "eyebrow": "SERVICES",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Fence Installation Loudoun County",
+      "subtitle": "Loudoun Decks provides expert fence installation for homeowners in Loudoun County, Fairfax, and Prince William. Custom wood, vinyl, and aluminum fencing.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/fence/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "fire-pits-service-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "nova-porch",
+      "title": "Custom Fire Pit Installation Loudoun VA",
+      "subtitle": "Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/fire-pits/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "front-porch-social.png",
+      "category": "porch",
+      "eyebrow": "PORCHES",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Front Porch Builder Northern Virginia",
+      "subtitle": "Custom front porches in Northern Virginia. Premium porticos, wraparound entries & curb appeal upgrades in Loudoun & Fairfax County. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/porches/front-porch/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "gazebo-pergola-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Gazebo & Pergola Builder",
+      "subtitle": "Add shade and stunning architectural character to your backyard with custom gazebos and pergolas in Northern Virginia. Expert design and build services.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/gazebo-pergola/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "get-estimate-social.png",
+      "category": "contact",
+      "eyebrow": "CONTACT",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Request a Deck Estimate Northern Virginia",
+      "subtitle": "Request a deck estimate for composite decks, deck replacement, repairs, screened porches and outdoor living projects in Northern Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/get-estimate/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "hoa-deck-rules-northern-virginia-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "purcellville-porch",
+      "title": "HOA Deck Rules in Northern Virginia (2026)",
+      "subtitle": "Most NoVA HOAs require approval before deck construction. Learn the process, common restrictions, what to submit, and how LDN Decks manages HOA packages.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/hoa-deck-rules-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "house-siding-washing-service-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Professional House Siding Washing NoVA",
+      "subtitle": "Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/house-siding-washing/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "houzz-deck-projects-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Loudoun Decks on Houzz",
+      "subtitle": "View Loudoun Decks projects on Houzz, including custom decks, screened porches, patios, and outdoor living spaces across Northern Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/houzz-deck-projects/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "lansdowne-hoa-deck-rules-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "nova-porch",
+      "title": "Lansdowne HOA Deck Rules & Approval Guide",
+      "subtitle": "Building or replacing a deck in Lansdowne, Leesburg? Architectural review process for Lansdowne Conservancy + Lansdowne Woods, 18-25 day timeline, material standards, and how it pairs with the Loudoun County building permit.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/lansdowne-hoa-deck-rules/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "ldn-decks-reviews-yelp-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Loudoun Decks Reviews",
+      "subtitle": "Custom composite decks, porches and outdoor living spaces for Northern Virginia homes.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/ldn-decks-reviews-yelp/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "leave-review-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Google Review Guidance for Loudoun Decks",
+      "subtitle": "Share your completed Loudoun Decks project experience on Google. Thank you for helping other Northern Virginia homeowners choose confidently.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/review/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "loudoun-county-deck-builder-hub-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Premium Deck Builder Loudoun County VA",
+      "subtitle": "Deck contractor in Loudoun County with public review profile links, HOA planning support, county permit guidance, and written estimate requests.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/near-you/loudoun-county/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "loudoun-county-hoa-deck-rules-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "homepage-top",
+      "title": "Loudoun County HOA Deck Rules",
+      "subtitle": "HOA deck rules for Brambleton, Broadlands, One Loudoun, Ashburn Farm, Lansdowne & more. Color restrictions, material requirements, approval process.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/loudoun-county-hoa-deck-rules/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "louvered-pergola-northern-virginia-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Louvered Pergola Builder in Northern Virginia",
+      "subtitle": "Motorized and manual louvered pergolas in Northern Virginia — adjustable-roof shade structures over decks and patios. Free design consultation.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/louvered-pergola-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "mclean-great-falls-premium-deck-budget-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "nova-porch",
+      "title": "McLean & Great Falls Premium Deck Budget Guide (2026)",
+      "subtitle": "Custom composite decks, porches and outdoor living spaces for Northern Virginia homes.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/mclean-great-falls-premium-deck-budget/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "monthly-payment-composite-deck-northern-virginia-social.png",
+      "category": "financing",
+      "eyebrow": "FINANCING",
+      "accent": "gold",
+      "photo": "chantilly",
+      "title": "Monthly Payment on a Composite Deck in Northern Virginia",
+      "subtitle": "See realistic monthly payments for a composite deck in Northern Virginia. Free estimator.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/monthly-payment-composite-deck-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "multi-level-deck-builder-northern-virginia-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Multi-Level Deck Builder Northern Virginia",
+      "subtitle": "Perfect for sloped lots and walkout basements. Trex & TimberTech. Free design consultation.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/multi-level-deck-builder-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "near-you-city-deck-builder-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Best Deck Builder in ${data.cityName} VA",
+      "subtitle": "Searching for a trusted deck builder in ${data.cityName}, VA? Loudoun Decks offers premium custom composite decks, screened porches, and patio installations. Licensed & Insured. Get a free estimate today.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/near-you/[county]/[city]/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "new-decks-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Custom Deck Builder Northern Virginia",
+      "subtitle": "Custom deck design and construction in Northern Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/new-decks/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "northern-virginia-deck-building-guide-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "The Complete Guide to Building a Deck in Northern Virginia (2026)",
+      "subtitle": "Everything you need to know about building a deck in Northern Virginia: costs, materials, permits, HOA, timeline, contractors, maintenance. The definitive 2026 guide.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/northern-virginia-deck-building-guide/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "nova-deck-permit-checklist-social.png",
+      "category": "permit",
+      "eyebrow": "PERMITS & CODES",
+      "accent": "steel",
+      "photo": "purcellville-porch",
+      "title": "Northern Virginia Deck Planning Resources",
+      "subtitle": "Printable deck planning resources from Loudoun Decks, including the 2026 NoVA deck permit checklist for Loudoun, Fairfax, Prince William, and Arlington homeowners.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/lead-magnets/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "one-loudoun-hoa-deck-rules-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "homepage-top",
+      "title": "One Loudoun HOA Deck Rules & Approval Guide",
+      "subtitle": "Building a deck in One Loudoun, Ashburn? Architectural review for townhomes + estates, modern design vocabulary, FirstService Residential management, and how it pairs with the Loudoun County permit.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/one-loudoun-hoa-deck-rules/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "open-porch-social.png",
+      "category": "porch",
+      "eyebrow": "PORCHES",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Open Porch Builder & Design",
+      "subtitle": "Custom open porch design and construction in Northern Virginia. We build covered open-air porches, pavilions, and outdoor living rooms. Free estimates.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/porches/open-porch/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "outdoor-kitchen-builder-northern-virginia-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "nova-porch",
+      "title": "Outdoor Kitchen Builder in Northern Virginia",
+      "subtitle": "Grill islands, pizza ovens, bars, full kitchens. Permits handled. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/outdoor-kitchen-builder-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "outdoor-living-northern-virginia-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Outdoor Living Contractor Northern Virginia",
+      "subtitle": "Outdoor living design and build in Northern Virginia. Custom decks, screened porches, patios, pergolas, outdoor kitchens and under-deck spaces.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/outdoor-living-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "outdoor-living-trends-northern-virginia-2026-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "nova-porch",
+      "title": "Outdoor Living Trends in Northern Virginia (2026)",
+      "subtitle": "Top outdoor living trends for NoVA homeowners in 2026. Multi-level decks, outdoor kitchens, cable railings, mixed materials & more.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/outdoor-living-trends-northern-virginia-2026/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "outdoor-washing-service-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Professional Outdoor Power Washing NoVA",
+      "subtitle": "Restore your outdoor oasis with professional power washing services in Northern Virginia. We specialize in safe, effective cleaning for decks, patios, and fences.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/outdoor-washing/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "patio-contractor-northern-virginia-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Patio Contractor Northern Virginia",
+      "subtitle": "Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone & natural stone. Loudoun, Fairfax, Prince William, Arlington. written estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/patios/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "paver-vs-flagstone-patio-northern-virginia-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Paver Patio vs Flagstone Patio Northern Virginia",
+      "subtitle": "Paver patio contractor vs flagstone — cost, durability, maintenance, freeze-thaw performance in NoVA. 2026 installed pricing for Loudoun, Fairfax, Prince William. We build both.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/paver-vs-flagstone-patio-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "pet-friendly-deck-design-social.png",
+      "category": "design",
+      "eyebrow": "DESIGN IDEAS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Pet-Friendly Deck Design: Build a Deck Your Dog Will Love (2026)",
+      "subtitle": "Design a pet-friendly deck: scratch-resistant composite, safe railings, shade zones, pet gates, easy-clean surfaces. Tips from Northern Virginia deck builders.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/pet-friendly-deck-design/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "pool-deck-builder-northern-virginia-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Pool Deck Builder in Northern Virginia",
+      "subtitle": "Code-compliant. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/pool-deck-builder-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "porch-repair-vs-replacement-social.png",
+      "category": "porch",
+      "eyebrow": "PORCHES",
+      "accent": "sage",
+      "photo": "nova-porch",
+      "title": "Porch Repair vs Replacement: Costs & Inspection in NoVA",
+      "subtitle": "When each makes sense, inspection checklist, and cost comparison for Northern Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/porch-repair-vs-replacement-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "porch-vs-deck-social.png",
+      "category": "porch",
+      "eyebrow": "PORCHES",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Porch vs Deck: Which Should You Build? (2026 ROI Guide)",
+      "subtitle": "Porch vs deck compared cost, ROI, usable months, maintenance. We build both.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/porch-vs-deck-which-should-you-build/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "porches-social.png",
+      "category": "porch",
+      "eyebrow": "PORCHES",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Premium Porch Builder NoVA",
+      "subtitle": "Trusted porch contractor in Northern Virginia. Custom screened porches, open-air pavilions and front porches with local permit and design guidance.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/porches/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "press-media-kit-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Press & Media Kit",
+      "subtitle": "Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia's trusted deck builder.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/press/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "pressure-washing-deck-northern-virginia-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Deck Pressure Washing in Northern Virginia",
+      "subtitle": "Pro deck pressure washing in Northern Virginia. Removes mold, mildew, oxidation. Safe PSI for wood & composite.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/pressure-washing-deck-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "prince-william-county-deck-builder-hub-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Premium Deck Builder Prince William County VA",
+      "subtitle": "Professional deck contractor in Prince William County with public review profile links, permit guidance, and custom decks, patios, and porches.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/near-you/prince-william-county/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "privacy-policy-social.png",
+      "category": "other",
+      "eyebrow": "NORTHERN VIRGINIA",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Privacy Policy",
+      "subtitle": "Learn how Loudoun Decks protects your personal information and privacy.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/privacy-policy/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "questions-before-building-deck-social.png",
+      "category": "tools",
+      "eyebrow": "PLANNING TOOLS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "20 Questions Before Building a Deck (2026)",
+      "subtitle": "20 questions every homeowner should answer before building a deck: budget, materials, permits, HOA, timeline. From a trusted NoVA builder.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/questions-to-ask-before-building-a-deck/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "referral-partners-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Referral Partners",
+      "subtitle": "Refer deck, porch, patio, and outdoor living projects to LDN Decks. Serving Loudoun, Fairfax, Prince William, Arlington, and Stafford.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/referral-partners/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "resurface-or-replace-deck-financing-social.png",
+      "category": "financing",
+      "eyebrow": "FINANCING",
+      "accent": "gold",
+      "photo": "purcellville-porch",
+      "title": "Resurface or Replace Before Financing? 2026 Decision Guide",
+      "subtitle": "Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, and monthly payment math for Northern Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/resurface-or-replace-deck-financing/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "reviews-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Loudoun Decks Reviews",
+      "subtitle": "Verify current review text directly on the source platforms.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/reviews/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "rooftop-deck-builder-northern-virginia-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Rooftop Deck Builder in Northern Virginia",
+      "subtitle": "Rooftop terrace + balcony deck builder for Northern Virginia townhomes, condos, and mid-rise residential. The Boro, One Park Crest, Arlington urban core. AZEK pedestal systems, structural review, HOA + condo association approval.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/rooftop-deck-builder-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "rooftop-deck-washington-dc-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Rooftop Deck Construction Washington DC",
+      "subtitle": "Premier rooftop deck builder in Washington DC. See our latest custom rooftop construction featuring premium materials, structural engineering, and stunning city views.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/showcase/rooftop-deck-washington-dc/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "screened-porch-builder-northern-virginia-social.png",
+      "category": "screened-porch",
+      "eyebrow": "SCREENED PORCHES",
+      "accent": "sage",
+      "photo": "nova-porch",
+      "title": "Screened Porch Builder in Northern Virginia",
+      "subtitle": "Screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze panels, permit planning, and written estimates.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/screened-porch-builder-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "screened-porch-cost-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "nova-porch",
+      "title": "2026 Screened Porch Cost NoVA",
+      "subtitle": "See 2026 price tables, EZE-Breeze costs, and planning scenarios before requesting an itemized quote.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/screened-porch-cost-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "second-story-deck-builder-northern-virginia-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Second Story Deck Builder",
+      "subtitle": "Custom second-story and elevated deck construction in Northern Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/second-story-deck-builder-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "services-social.png",
+      "category": "services",
+      "eyebrow": "SERVICES",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Deck Building & Outdoor Living Services",
+      "subtitle": "Custom decks, screened porches, pergolas, patios, fencing & more in Northern Virginia. Free estimates: (571) 655-7207.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "showcase-gallery-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Custom Deck Project Gallery",
+      "subtitle": "Explore our portfolio of custom deck, porch, and patio projects across Northern Virginia. See why we are the leading Trex deck designer in the region.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/showcase/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "social-profiles-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Follow LDN Decks",
+      "subtitle": "Follow LDN Decks on X, Instagram, Facebook, Houzz, Yelp & more. See our latest deck projects, tips, and reviews across Northern Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/social/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "stafford-county-deck-builder-hub-social.png",
+      "category": "city",
+      "eyebrow": "SERVICE AREA",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Premium Deck Builder Stafford County VA",
+      "subtitle": "Deck and outdoor living contractor in Stafford County with public review profile links, permit guidance, and custom decks, patios, and porches.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/near-you/stafford-county/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "stamped-concrete-patio-northern-virginia-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "nova-porch",
+      "title": "Stamped Concrete Patio Contractor Northern Virginia",
+      "subtitle": "Stamped concrete patio contractor in Northern Virginia. Slate, flagstone, brick, wood plank patterns. Freeze-thaw realities explained.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/stamped-concrete-patio-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "stone-ridge-hoa-deck-rules-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "homepage-top",
+      "title": "Stone Ridge HOA Deck Rules & Approval Guide",
+      "subtitle": "Building or replacing a deck in Stone Ridge, Loudoun County? Architectural review process, family-oriented design standards, 18-25 day approval timeline, and how it pairs with the Loudoun County permit.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/stone-ridge-hoa-deck-rules/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "sully-station-hoa-deck-rules-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "chantilly",
+      "title": "Sully Station HOA Deck Rules & Approval Guide",
+      "subtitle": "Building or replacing a deck in Sully Station, Centreville? 21-28 day timeline, material standards, Fairfax County permit coordination.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/sully-station-hoa-deck-rules/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "team-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Our Team",
+      "subtitle": "Meet the expert deck builders and porch specialists at LDN Decks. Licensed, insured, and Trex, TimberTech, and AZEK experienced with 10+ years of local experience.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/team/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "terms-of-service-social.png",
+      "category": "services",
+      "eyebrow": "SERVICES",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Terms of Service",
+      "subtitle": "Terms and conditions for using Loudoun Decks services.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/terms-of-service/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "thank-you-social.png",
+      "category": "contact",
+      "eyebrow": "CONTACT",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Thank You",
+      "subtitle": "Your message has been successfully sent. We will get back to you shortly to discuss your outdoor project.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/thank-you/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "three-season-room-northern-virginia-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "nova-porch",
+      "title": "Three-Season Room Builder in Northern Virginia",
+      "subtitle": "Custom three-season rooms in Northern Virginia with Eze-Breeze windows — usable 9-10 months a year. Free design consultation.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/three-season-room-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "timbertech-azek-deck-cost-northern-virginia-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "purcellville-porch",
+      "title": "TimberTech & AZEK Deck Cost: Premium PVC Budget Guide (2026)",
+      "subtitle": "TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/timbertech-azek-deck-cost-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "timbertech-decks-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "TimberTech AZEK Deck Builder NoVA",
+      "subtitle": "TimberTech and AZEK deck builder in Northern Virginia. Premium PVC and composite decks for Loudoun, Fairfax and Prince William County. Free estimate.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/timbertech-decks/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "trades-scholarship-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Loudoun Decks Trades Scholarship",
+      "subtitle": "Learn more about eligibility and how to apply.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/scholarship/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "trex-clam-shell-service-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Trex Clam Shell Deck Resurfacing Loudoun VA",
+      "subtitle": "Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing & installation.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/trex-calm-shell/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "trex-deck-cost-monthly-payment-social.png",
+      "category": "financing",
+      "eyebrow": "FINANCING",
+      "accent": "gold",
+      "photo": "homepage-top",
+      "title": "Trex Deck Cost vs Monthly Payment: 2026 Budget Guide",
+      "subtitle": "Real Trex deck costs by tier (Enhance, Transcend, Signature) and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/trex-deck-cost-monthly-payment/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "trex-decks-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Trex Deck Builder NoVA",
+      "subtitle": "Looking for a Trex product-line planning in Northern Virginia? Loudoun Decks specializes in premium Trex Transcend & Lineage installations. Free written estimates!",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/trex-decks/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "trex-performance-products-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Trex Performance Products",
+      "subtitle": "Explore the full range of Trex performance-engineered outdoor living products. From high-durability composite decking to elegant railing systems, discover the Trex difference with Loudoun Decks.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/trex-performance-products/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "trex-railings-service-social.png",
+      "category": "railing",
+      "eyebrow": "RAILINGS",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Trex Railings With Cocktail Top Loudoun VA",
+      "subtitle": "Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/trex-railings/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "trex-transcend-review-northern-virginia-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Trex Transcend Review 2026",
+      "subtitle": "Honest Trex Transcend review for Northern Virginia homes: durability, fade, heat, cost vs Lineage and TimberTech, and installer planning notes.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/trex-transcend-review-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "trex-vs-timbertech-vs-azek-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Trex vs TimberTech vs AZEK: Northern Virginia Buyer Guide",
+      "subtitle": "Compare Trex, TimberTech Composite and Advanced PVC (AZEK) by product, site conditions, warranty documents and written installed scope.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/trex-vs-timbertech-vs-azek/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "under-deck-ceiling-ideas-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "nova-porch",
+      "title": "Under-Deck Ceiling Ideas (5 Options)",
+      "subtitle": "Turn the space under your elevated deck into usable living area. Under-deck drainage systems, ceiling panels, lighting.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/under-deck-ceiling-ideas/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "under-deck-patios-service-social.png",
+      "category": "outdoor-living",
+      "eyebrow": "OUTDOOR LIVING",
+      "accent": "sage",
+      "photo": "purcellville-porch",
+      "title": "Under Deck Patio Systems Loudoun VA",
+      "subtitle": "Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/under-deck-patios/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "virginia-run-hoa-deck-rules-social.png",
+      "category": "hoa",
+      "eyebrow": "HOA DECK RULES",
+      "accent": "steel",
+      "photo": "homepage-top",
+      "title": "Virginia Run HOA Deck Rules & Approval Guide",
+      "subtitle": "Building a deck in Virginia Run, Centreville? The premier master-planned golf community of Centreville. Premier estate-tier construction.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/virginia-run-hoa-deck-rules/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "what-size-deck-should-i-build-social.png",
+      "category": "design",
+      "eyebrow": "DESIGN IDEAS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "What Size Deck Should I Build? (Guide by Use + Budget)",
+      "subtitle": "Deck size guide: 150-200 sqft for couples, 300-400 for families, 500+ for entertaining. Recommendations by use and Northern Virginia lot sizes.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/what-size-deck-should-i-build/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "why-choose-loudoun-decks-social.png",
+      "category": "about",
+      "eyebrow": "ABOUT",
+      "accent": "oak",
+      "photo": "purcellville-porch",
+      "title": "Why Choose LDN Decks",
+      "subtitle": "Why Northern Virginia homeowners choose LDN Decks: verified public profiles, local planning support, written warranty terms, and clear project scopes.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/about/why-choose-us/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "windows-service-social.png",
+      "category": "services",
+      "eyebrow": "SERVICES",
+      "accent": "oak",
+      "photo": "nova-porch",
+      "title": "Window Replacement Loudoun County",
+      "subtitle": "Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/services/windows/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "winterize-deck-northern-virginia-social.png",
+      "category": "maintenance",
+      "eyebrow": "DECK CARE",
+      "accent": "oak",
+      "photo": "chantilly",
+      "title": "Winterize Your Deck in Northern VA",
+      "subtitle": "Protect your deck from Virginia freeze-thaw. 10-step winterization checklist for wood and composite decks. Free inspection.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/winterize-your-deck-northern-virginia/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "wood-decks-social.png",
+      "category": "materials",
+      "eyebrow": "MATERIALS",
+      "accent": "oak",
+      "photo": "homepage-top",
+      "title": "Expert Wood Deck Builder NoVA",
+      "subtitle": "The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax & Prince William counties.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/wood-decks/page.js",
+      "title_derived_from_filename": false
+    },
+    {
+      "file": "wood-vs-composite-deck-long-term-cost-social.png",
+      "category": "cost",
+      "eyebrow": "COST GUIDE",
+      "accent": "gold",
+      "photo": "homepage-top",
+      "title": "Wood vs Composite Deck Long-Term Cost: 15-Year Analysis",
+      "subtitle": "Wood vs composite deck long-term cost in Northern Virginia. 15-year total cost including maintenance, repairs, financing, and resale impact.",
+      "size": [
+        1200,
+        630
+      ],
+      "source": "src/app/wood-vs-composite-deck-long-term-cost/page.js",
+      "title_derived_from_filename": false
+    }
+  ]
+}
