@@ -42,6 +42,8 @@ MAX_BYTES = 350 * 1024
 
 WORDMARK = "LOUDOUN DECKS"
 DOMAIN = "ldndecks.com"
+PHONE = "(571) 655-7207"
+RIGHT_TXT = f"{PHONE}  ·  {DOMAIN}"
 BOTTOM_LEFT = "Virginia Class A Contractor · NADRA Member · Northern Virginia"
 
 ACCENT = {
@@ -648,14 +650,14 @@ def render(entry: dict) -> Image.Image:
     br_font = font("SemiBold", 22)
     bottom_y = H - 55 if not portrait else H - margin - 4
     left_txt = BOTTOM_LEFT
-    right_w = br_font.getlength(DOMAIN)
+    right_w = br_font.getlength(RIGHT_TXT)
     if portrait:
         # stack: domain above the credentials line
-        draw.text((margin, bottom_y - 34), DOMAIN, font=br_font, fill=white, anchor="ls")
+        draw.text((margin, bottom_y - 34), RIGHT_TXT, font=br_font, fill=white, anchor="ls")
         draw.text((margin, bottom_y), left_txt, font=bl_font, fill=(255, 255, 255, 178), anchor="ls")
     else:
         draw.text((margin, bottom_y + 14), left_txt, font=bl_font, fill=(255, 255, 255, 178), anchor="ls")
-        draw.text((W - margin, bottom_y + 14), DOMAIN, font=br_font, fill=white, anchor="rs")
+        draw.text((W - margin, bottom_y + 14), RIGHT_TXT, font=br_font, fill=white, anchor="rs")
         if margin + bl_font.getlength(left_txt) + 32 > W - margin - right_w:
             raise ValueError("bottom row overlaps")
 
