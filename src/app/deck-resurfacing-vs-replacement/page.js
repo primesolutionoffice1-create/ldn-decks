@@ -197,6 +197,7 @@ export default function ResurfacingVsReplacementPage() {
             { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
             { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permits' },
             { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permits' },
+            { href: '/deck-permit-prince-william-county-virginia', label: 'Prince William permits' },
           ]}
         />
       </div>
@@ -343,6 +344,7 @@ export default function ResurfacingVsReplacementPage() {
               ['/tools/deck-load-calculator-virginia', 'Deck Load Calculator Virginia'],
               ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
               ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
+              ['/deck-permit-prince-william-county-virginia', 'Prince William County Deck Permit Guide'],
               ['/deck-cost-calculator', 'Deck Cost Calculator'],
               ['/composite-deck-cost-northern-virginia', 'Deck Cost Guide'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Material Comparison'],
