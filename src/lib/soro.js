@@ -14,7 +14,7 @@
 // directly under plain Node.
 
 export const DEFAULT_SORO_RSS_URL =
-  'https://app.trysoro.com/api/rss/18ae6d31-ecfe-4299-bbcc-d4788ec51274';
+  'https://app.trysoro.com/api/rss/b118511e-16b5-4090-880a-fb5a10feafa1';
 
 export const SORO_REVALIDATE_SECONDS = 3600;
 
