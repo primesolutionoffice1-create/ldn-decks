@@ -154,7 +154,7 @@ export default function ReplaceWoodDeckWithCompositePage() {
       <ServicesHeader
         subtext="Wood to composite replacement"
         title="Replace an Aging Wood Deck With Composite Decking"
-        description="A focused estimate path for Northern Virginia homeowners who want to stop staining, fix unsafe structure, and upgrade to Trex, TimberTech, AZEK, or Fiberon-level composite planning."
+        description="Plan a lower-maintenance deck for your Northern Virginia home. Compare resurfacing with full replacement, starting with your existing frame, stairs, railings, and preferred decking."
         path={pagePath}
         image="/images/homepage-intro-timbertech-deck.jpg"
       />
@@ -163,13 +163,13 @@ export default function ReplaceWoodDeckWithCompositePage() {
         <div style={{ maxWidth: 1050, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.25rem', alignItems: 'center' }}>
           <div>
             <p style={{ margin: '0 0 0.45rem', color: '#c2410c', fontWeight: 900, textTransform: 'uppercase', fontSize: '0.78rem' }}>
-              Built for high-intent homeowners
+              Planning your wood-to-composite upgrade
             </p>
             <h2 style={{ margin: 0, fontSize: 'clamp(1.55rem, 3vw, 2.35rem)', lineHeight: 1.12 }}>
-              If the old wood deck is costing weekends, repairs, and worry, this is the right conversion path.
+              Is it time to resurface your wood deck or replace it?
             </h2>
             <p style={{ margin: '0.85rem 0 0', color: '#4b5563', lineHeight: 1.65 }}>
-              This page is not for retail board shopping or small handyman repairs. It is for homeowners comparing resurfacing versus full replacement, modern composite materials, safer stairs and railings, permits, HOA review, and a written scope.
+              Plan a wood-to-composite project around your existing structure, material preferences, stairs, and railings. Compare resurfacing with full replacement, including permits, HOA review, and a written scope. This estimate is for an installed project, not retail board purchases or small handyman repairs.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.7rem', marginTop: '1rem' }}>
               <CallLink style={{ color: '#fff', background: '#111827', borderRadius: 6, padding: '0.75rem 1rem', fontWeight: 900, textDecoration: 'none' }}>
@@ -199,9 +199,9 @@ export default function ReplaceWoodDeckWithCompositePage() {
         question="Who should replace a wood deck with composite in Northern Virginia?"
         answer="The best fit is a homeowner with an aging wood deck who wants less maintenance, safer structure, modern railings, better stairs, lighting, and a long-term outdoor living upgrade. The right estimate starts with the existing frame condition, not just board color."
         facts={[
-          'Best-fit intent: aging wood deck replacement, full composite upgrade, serious resurfacing decision, or premium outdoor living scope.',
-          'Primary project signals: homeowner decision maker, visible wear, unsafe rails or stairs, repeated staining, and interest in Trex, TimberTech, AZEK, or Fiberon.',
-          'Lead quality filter: budget, timeline, address, photos, material interest, and HOA or permit constraints should be captured before proposal work.',
+          'Start with the existing frame: its condition helps determine whether resurfacing or full replacement makes sense.',
+          'Consider what you want to change: worn boards, stairs, railings, repeated staining, or the overall layout, along with your interest in Trex, TimberTech, AZEK, or Fiberon.',
+          'For your estimate, share your address, deck photos, budget range, timeline, material preferences, and any HOA or permit concerns.',
         ]}
         links={[
           { href: '/trex-vs-timbertech-vs-azek', label: 'Compare composite brands' },
@@ -282,9 +282,9 @@ export default function ReplaceWoodDeckWithCompositePage() {
               </ul>
             </div>
             <div style={boxStyle}>
-              <h3 style={{ marginTop: 0 }}>Best lead-quality signal</h3>
+              <h3 style={{ marginTop: 0 }}>What to include in your estimate request</h3>
               <p style={{ margin: 0, color: '#4b5563', lineHeight: 1.65 }}>
-                A strong lead includes address, photos, budget range, timeline, material preference, and whether the homeowner is open to structural replacement if resurfacing is not safe.
+                Share your address, deck photos, budget range, timeline, and material preferences. Let us know whether you are considering resurfacing, full replacement, or need help deciding after the structure is reviewed.
               </p>
             </div>
           </div>
@@ -297,7 +297,7 @@ export default function ReplaceWoodDeckWithCompositePage() {
             Composite Brands Homeowners Are Comparing
           </h2>
           <p style={{ maxWidth: 820, color: '#4b5563', lineHeight: 1.7, margin: '0 0 1.4rem' }}>
-            Searchers compare brand names before they call. The page has to answer that intent directly so paid traffic does not bounce back to competitors.
+            Compare Trex, TimberTech, AZEK, and Fiberon by color, finish, maintenance needs, warranty terms, and the requirements of your deck. Confirm which product lines are available for your project before choosing a material.
           </p>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', border: '1px solid #e5e7eb' }}>
@@ -328,16 +328,16 @@ export default function ReplaceWoodDeckWithCompositePage() {
       <section style={{ padding: '56px 20px', background: '#111827', color: '#fff' }}>
         <div style={{ maxWidth: 1060, margin: '0 auto' }}>
           <h2 style={{ margin: '0 0 0.75rem', fontSize: 'clamp(1.6rem, 3vw, 2.35rem)' }}>
-            Campaign Fit: Where This Page Should Receive Google Ads Traffic
+            Plan the Scope of Your Composite Deck Replacement
           </h2>
           <p style={{ maxWidth: 820, color: '#d1d5db', lineHeight: 1.7, margin: '0 0 1.4rem' }}>
-            This page should be used for high-intent searches tied to old wood deck replacement, composite upgrade, Trex replacement, TimberTech replacement, Fiberon comparison, and resurfacing versus full replacement.
+            Start with what you want to keep and what needs to change. Your estimate should account for the existing structure, your preferred decking, and any changes to stairs, railings, or layout.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
             {[
-              ['High priority', 'replace wood deck with composite, composite deck replacement, wood deck replacement, replace deck boards with composite'],
-              ['Premium modifier', 'Trex deck replacement, TimberTech deck replacement, AZEK deck replacement, Fiberon decking installer'],
-              ['Lead quality filter', 'Homeowner, written estimate, full project, structure, permit, HOA, budget range, timeline'],
+              ['Resurface or replace', 'Compare replacing the wood boards on a suitable frame with rebuilding the deck when the structure or layout needs to change.'],
+              ['Choose your decking', 'Compare materials, colors, railing details, and maintenance needs. Confirm the available product lines and installation scope for your project.'],
+              ['Prepare for a written estimate', 'Share deck photos, your address, budget range, and preferred timeline, plus any permit or HOA concerns that may affect the scope.'],
             ].map(([title, text]) => (
               <div key={title} style={{ border: '1px solid rgba(255,255,255,0.16)', borderRadius: 8, padding: '1.15rem', background: 'rgba(255,255,255,0.06)' }}>
                 <h3 style={{ marginTop: 0, color: '#fb923c' }}>{title}</h3>
