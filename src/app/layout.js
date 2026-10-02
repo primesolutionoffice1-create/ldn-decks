@@ -156,13 +156,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         
-        {/* Ahrefs Analytics */}
-        <Script
-          id="ahrefs-analytics"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `function ldnLoadAhrefs(){if(window.__ldnAhrefsLoaded||!window.ldnConsentGranted)return;window.__ldnAhrefsLoaded=true;var s=document.createElement('script');s.async=true;s.src='https://analytics.ahrefs.com/analytics.js';s.setAttribute('data-key','3i7ZUj2Ik0UT5pH1a3mooQ');document.head.appendChild(s);}ldnLoadAhrefs();window.addEventListener('ldn:consent-accepted',ldnLoadAhrefs);`,
-          }}
+        {/* Ahrefs Web Analytics — cookieless and stores no personal data, so
+            it is not gated on the consent banner. Rendered as a plain async
+            <script> (not next/script or a consent-gated loader) so the tag is
+            present in the server HTML: Ahrefs' "Script installation" check
+            reads the page source and reported "Script isn't found" while the
+            tag was only injected client-side after consent. */}
+        <script
+          async
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="3i7ZUj2Ik0UT5pH1a3mooQ"
         />
 
         {/* Microsoft Clarity — heatmaps & session recordings (CRO playbook
