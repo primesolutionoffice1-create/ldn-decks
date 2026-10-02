@@ -112,7 +112,8 @@
         "scaling:evidence-bundle": "node scripts/generate-scaling-evidence-bundle.mjs",
         "scaling:evidence-bundle:validate": "node scripts/validate-scaling-evidence-bundle.mjs",
         "scaling:blocker-exit": "node scripts/generate-scaling-blocker-exit-checklist.mjs",
-        "scaling:blocker-exit:validate": "node scripts/validate-scaling-blocker-exit-checklist.mjs"
+        "scaling:blocker-exit:validate": "node scripts/validate-scaling-blocker-exit-checklist.mjs",
+        "seo:verify-ahrefs": "node scripts/verify-ahrefs-analytics.mjs"
     },
     "dependencies": {
         "@vercel/analytics": "^1.6.1",
