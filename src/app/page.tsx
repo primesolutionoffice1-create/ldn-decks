@@ -32,7 +32,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   path: "/",
-  title: 'Deck Builder Near Me in Northern VA | Loudoun Decks',
+  title: 'Custom Deck Builder in Northern Virginia | Loudoun Decks',
   description: 'Northern Virginia deck contractor for composite decks, Trex, TimberTech, deck replacement, screened porches, permit planning, and written estimates.',
 });
 
