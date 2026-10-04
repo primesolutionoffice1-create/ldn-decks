@@ -3,7 +3,15 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useContact } from '@/context/ContactContext';
+import { BUSINESS } from '@/lib/business';
 import styles from './Footer.module.css';
+
+const LICENSE_NUMBER = BUSINESS.founder.hasCredential.match(/#(\d+)/)?.[1];
+if (!LICENSE_NUMBER) {
+  throw new Error('Virginia Class A license number is missing from site identity.');
+}
+
+const CONTRACTOR_FOOTER_LINE = `${BUSINESS.name} is a Virginia Class A contractor, license #${LICENSE_NUMBER}, at ${BUSINESS.address.streetAddress}, ${BUSINESS.address.addressLocality}, ${BUSINESS.address.addressRegion} ${BUSINESS.address.postalCode}.`;
 
 const PhoneIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -167,6 +175,7 @@ export default function Footer() {
 
       {/* Bottom Solid Black Bar */}
       <div className={styles.bottomBar}>
+        <p className={styles.contractorLine}>{CONTRACTOR_FOOTER_LINE}</p>
         <div className={styles.containerBottom}>
           <p>© Copyrights are Reserved by LDN Decks | <Link href="/privacy-policy">Privacy Policy</Link> | <Link href="/terms-of-service">Terms of Service</Link></p>
 
