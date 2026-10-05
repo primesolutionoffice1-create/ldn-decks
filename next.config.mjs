@@ -360,6 +360,9 @@ const nextConfig = {
       // Stafford County cities
       { source: '/top-decks-build-near-you/deck-builder-in-stafford', destination: '/deck-builder-stafford-va', permanent: true },
 
+      // Specific legacy Sterling post. Must stay above the catch-all, which sends leftovers to /near-you.
+      { source: '/top-decks-build-near-you/new-decks-in-sterling-va-loudoun-decks', destination: '/deck-builder-sterling-va', permanent: true },
+
       // Catch-all for any remaining old city URLs not covered above
       { source: '/top-decks-build-near-you/:path*', destination: '/near-you', permanent: true },
 

@@ -108,6 +108,16 @@
   position: relative; /* Context for absolute scroll button */
 }
 
+.contractorLine {
+  max-width: 1200px;
+  margin: 0 auto 16px;
+  padding: 0 40px;
+  color: #cfcfcf;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
 .containerBottom {
   max-width: 1200px;
   margin: 0 auto;
