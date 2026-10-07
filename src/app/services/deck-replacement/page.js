@@ -146,18 +146,19 @@ const replacementGeoAnswers = [
 export default function DeckReplacementPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-09-04" url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description="Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds." speakable />
+      <WebPageSchema dateModified="2026-10-05" url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description="Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds." speakable />
       <ArticleSchema
         title="Deck Replacement in Northern Virginia"
         description="Deck replacement planning guide for Northern Virginia homeowners comparing repair, resurfacing, full rebuilds, structural code resets, local permit paths, composite materials, and written estimate routing."
         path="/services/deck-replacement"
         image="/social/deck-replacement-service-social.png"
         datePublished="2026-05-26"
-        dateModified="2026-09-04"
+        dateModified="2026-10-05"
         speakable={[
           '#deck-replacement-answer',
           '#deck-replacement-decision-support',
           '#deck-replacement-code-reset',
+          '#deck-replacement-structural-handoff',
           '#deck-replacement-local-markets',
           '#deck-replacement-cost-guides',
           '#deck-replacement-estimate-routing',
@@ -182,6 +183,11 @@ export default function DeckReplacementPage() {
             id: 'deck-replacement-code-reset',
             name: 'Deck Replacement Code Reset',
             text: 'A full deck replacement can reset footings, joist sizing, ledger connections, square layout, permit history, stairs, railings, and low-maintenance decking in one scope.',
+          },
+          {
+            id: 'deck-replacement-structural-handoff',
+            name: 'Deck Replacement Structural Handoff',
+            text: 'Deck replacement decisions should route through stair, ledger, footing, permit, repair, and inspection resources before a homeowner approves a full rebuild scope.',
           },
           {
             id: 'deck-replacement-local-markets',
@@ -217,7 +223,7 @@ export default function DeckReplacementPage() {
       />
       <ServiceSchema
         name="Deck Replacement and Rebuilding"
-        description="Professional deck replacement services including structural assessment, old deck removal, and composite or PVC rebuild planning using Trex, TimberTech, and AZEK options."
+        description="Professional deck replacement services including structural assessment, old deck removal, and premium composite rebuilds using Trex and TimberTech."
         url="https://ldndecks.com/services/deck-replacement"
         category="Deck Construction"
         lowPrice="15000"
@@ -242,7 +248,7 @@ export default function DeckReplacementPage() {
       </div>
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-09-04" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-05" />
       </section>
 
       <PlanningUpdate
@@ -358,6 +364,27 @@ export default function DeckReplacementPage() {
           {' '}<Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>joist sizing</Link>,
           {' '}<Link href="/blog/3-4-5-rule-decking" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>square layout</Link>, and
           {' '}<Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>permit history</Link> so the rebuild is clean from day one.
+        </p>
+      </section>
+      <section id="deck-replacement-structural-handoff" data-speakable="deck-replacement-structural-handoff" style={{ padding: '0 20px 44px', maxWidth: '900px', margin: '0 auto', lineHeight: 1.7 }}>
+        <h2 style={{ fontSize: '28px', marginBottom: '14px', fontWeight: 800 }}>Structure-First Replacement Handoff</h2>
+        <p style={{ fontSize: '17px', color: '#555', marginBottom: '1rem' }}>
+          Replacement decisions should start with the weak point that makes the old deck unsafe. Before approving a full rebuild, use the
+          {' '}<Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link>,
+          {' '}<Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>stair code guide</Link>,
+          {' '}<Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>, and
+          {' '}<Link href="/education/common-deck-stair-inspection-failures-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>common stair inspection failures</Link> to separate stair layout issues from broader framing failure.
+        </p>
+        <p style={{ fontSize: '17px', color: '#555', marginBottom: '1rem' }}>
+          For attached decks, inspect the house connection with the
+          {' '}<Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link> and confirm whether the rim joist, fastener pattern, membrane, and Z-flashing support repair, partial reconstruction, or full replacement.
+        </p>
+        <p style={{ fontSize: '17px', color: '#555', marginBottom: 0 }}>
+          County approval paths matter too. A Loudoun, Fairfax, Prince William, or Arlington replacement scope should check the
+          {' '}<Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun permit guide</Link>,
+          {' '}<Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax permit guide</Link>,
+          {' '}<Link href="/deck-permit-prince-william-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Prince William permit guide</Link>, and
+          {' '}<Link href="/deck-permit-arlington-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Arlington permit guide</Link> before framing, stair, ledger, railing, or footing assumptions are written into the estimate.
         </p>
       </section>
       <section style={{ padding: '80px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>

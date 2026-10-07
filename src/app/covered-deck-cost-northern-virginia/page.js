@@ -113,9 +113,9 @@ export default function CoveredDeckCostPage() {
         path={PATH}
         image="/showcase/img16.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-06"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Covered Deck Cost in Northern Virginia: 2026 Budget Guide" description="Covered deck cost in Northern Virginia: $35,000–$85,000+ depending on roof type, size, and finishes. Per-tier pricing plus monthly payment examples." speakable />
+      <WebPageSchema dateModified="2026-10-06" url={`https://ldndecks.com${PATH}`} name="Covered Deck Cost in Northern Virginia: 2026 Budget Guide" description="Covered deck cost in Northern Virginia: $35,000–$85,000+ depending on roof type, size, and finishes. Per-tier pricing plus monthly payment examples." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -227,6 +227,30 @@ export default function CoveredDeckCostPage() {
             A free inspection answers all three.
           </p>
 
+          <section id="covered-deck-cost-structural-handoff" style={{ background: '#f7f9f8', border: '1px solid #e2e8e5', borderRadius: 12, padding: '1.5rem', margin: '2rem 0' }}>
+            <h2 style={{ ...S.h2, marginTop: 0 }}>Covered Deck Structural, Stair and Permit Handoff</h2>
+            <p style={S.p}>
+              Covered deck pricing should be finalized only after the existing frame, ledger, roof load path, stairs,
+              footings, and county permit route are understood. If an older deck cannot carry roof loads or needs a
+              broader layout reset, start with a{' '}
+              <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+                structure-first deck replacement plan
+              </Link>
+              {' '}before locking in roof, ceiling, lighting, or screened-conversion allowances.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(245px, 1fr))', gap: '0.75rem', margin: 0 }}>
+              <li><Link href="/covered-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Covered deck builder planning</Link></li>
+              <li><Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck stair calculator</Link></li>
+              <li><Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link></li>
+              <li><Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Ledger flashing and attachment guide</Link></li>
+              <li><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County deck permit guide</Link></li>
+              <li><Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County deck permit guide</Link></li>
+              <li><Link href="/deck-permit-prince-william-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Prince William County deck permit guide</Link></li>
+              <li><Link href="/deck-permit-arlington-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Arlington County deck permit guide</Link></li>
+              <li><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a written covered-deck estimate</Link></li>
+            </ul>
+          </section>
+
           <h2 style={S.h2}>Financing a Covered Deck Project</h2>
           <p style={S.p}>
             Covered decks usually finance well because the project amount is high enough to make the lender review
@@ -283,7 +307,7 @@ export default function CoveredDeckCostPage() {
       </article>
 
       <SimpleCTA title="Plan a Covered Deck Budget" buttonText="Get Free Written Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-06" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

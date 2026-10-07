@@ -126,7 +126,7 @@ const expansionSections = [
 export default function TimberTechDecksPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/timbertech-decks" name="TimberTech AZEK Deck Builder Northern Virginia" description="TimberTech and AZEK deck builder in Northern Virginia. Premium PVC and composite decks for Loudoun, Fairfax and Prince William County." speakable />
+      <WebPageSchema dateModified="2026-10-05" url="https://ldndecks.com/timbertech-decks" name="TimberTech AZEK Deck Builder Northern Virginia" description="TimberTech and AZEK deck builder in Northern Virginia. Premium PVC and composite decks for Loudoun, Fairfax and Prince William County." speakable />
       <ServiceSchema
         name="TimberTech AZEK Deck Installation"
         description="TimberTech and AZEK deck installation in Northern Virginia. Premium composite and PVC decking for Loudoun, Fairfax, and Prince William County homes."
@@ -171,6 +171,30 @@ export default function TimberTechDecksPage() {
             <br />
             This page is for <strong style={{ color: '#111' }}>full TimberTech, AZEK, replacement, and resurfacing projects</strong>, not board-only retail purchases. You can <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>estimate your monthly deck payment</Link> before choosing a board line. For board repair or small fixes, see our <Link href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link>.
           </p>
+        </div>
+      </section>
+
+      <section id="timbertech-structural-permit-handoff" style={{ padding: '2.25rem 1.5rem', background: '#fff' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <h2 style={{ fontSize: '1.55rem', fontWeight: 800, marginBottom: '0.75rem' }}>Structural, Stair and Permit Handoff</h2>
+          <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
+            For TimberTech and AZEK replacement projects, premium boards should follow the structural decision. Confirm whether the frame, ledger, stairs, rail posts, drainage, and county permit path fit the selected composite or Advanced PVC scope before choosing a finish package.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+            {[
+              ['/services/deck-replacement', 'Deck replacement decision'],
+              ['/premium-composite-deck-replacement-arlington-alexandria-mclean-va', 'Premium Arlington/Alexandria/McLean replacement'],
+              ['/tools/deck-stair-calculator', 'Deck stair calculator'],
+              ['/education/deck-stair-code-rise-run-virginia', 'Virginia stair code'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger flashing guide'],
+              ['/deck-permit-loudoun-county-virginia', 'Loudoun permit guide'],
+              ['/deck-permit-fairfax-county-virginia', 'Fairfax permit guide'],
+              ['/deck-permit-prince-william-county-virginia', 'Prince William permit guide'],
+              ['/deck-permit-arlington-county-virginia', 'Arlington permit guide'],
+            ].map(([href, text]) => (
+              <Link key={href} href={href} style={{ display: 'block', padding: '0.85rem', border: '1px solid #e5e5e5', borderRadius: 8, color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none' }}>{text} &rarr;</Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -249,7 +273,7 @@ export default function TimberTechDecksPage() {
       />
 
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-05-26" />
+        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-10-05" />
       </div>
       <ServiceContentExpansion sections={expansionSections} />
 

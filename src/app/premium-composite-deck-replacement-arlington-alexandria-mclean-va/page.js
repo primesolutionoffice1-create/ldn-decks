@@ -122,7 +122,7 @@ export default function PremiumCompositeReplacementCorridorPage() {
     <main>
       <WebPageSchema
         datePublished="2026-07-21"
-        dateModified="2026-07-21"
+        dateModified="2026-10-07"
         url={pageUrl}
         name="Premium Composite Deck Replacement | Arlington, Alexandria & McLean"
         description="Premium composite deck replacement for Arlington, Alexandria and McLean homeowners. Trex, TimberTech, AZEK, permits, HOA planning, railings, lighting, stairs and written estimates."
@@ -239,6 +239,39 @@ export default function PremiumCompositeReplacementCorridorPage() {
         ]}
       />
 
+      <section id="premium-composite-structural-handoff" style={{ background: '#fff', padding: '56px 20px', borderTop: '1px solid #eee2d7', borderBottom: '1px solid #eee2d7' }}>
+        <div style={{ maxWidth: 920, margin: '0 auto' }}>
+          <h2 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.4rem)', margin: '0 0 16px', color: '#111' }}>
+            Structural, Stair, Permit and Estimate Handoff
+          </h2>
+          <p style={{ color: '#555', lineHeight: 1.7, margin: '0 0 20px' }}>
+            Premium composite replacement should not start with board color alone; premium boards should follow the structural decision. Use this Structural, Stair and Permit Handoff as the corridor-specific planning path, then validate the broader <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck replacement scope</Link>, stair geometry, ledger condition, permit path, and written estimate requirements before selecting Trex, TimberTech, AZEK, railings, lighting, fascia, or drainage upgrades.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 14 }}>
+            {[
+              ['/tools/deck-stair-calculator', 'Stair calculator', 'Model rise, run, tread depth, angle, and step count before rebuilding stairs.'],
+              ['/education/deck-stair-code-rise-run-virginia', 'Virginia stair code', 'Check rise/run, guards, handrails, landings, and inspection-readiness.'],
+              ['/education/deck-stair-construction-diagram', 'Stair construction diagram', 'Review stringers, treads, risers, hardware, load path, and landing details.'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger flashing guide', 'Confirm the attached-deck connection, moisture risk, fasteners, and replacement triggers.'],
+              ['/deck-permit-loudoun-county-virginia', 'Loudoun permit guide', 'Use for Loudoun high-value replacement planning, HOA prep, and inspection handoff.'],
+              ['/deck-permit-arlington-county-virginia', 'Arlington permit guide', 'Use for Arlington County zoning, tight-lot, and inspection routing.'],
+              ['/deck-permit-fairfax-county-virginia', 'Fairfax permit guide', 'Use for McLean, Fairfax County, RPA, HOA, and inspection planning.'],
+              ['/deck-permit-prince-william-county-virginia', 'Prince William permit guide', 'Use for nearby western NoVA replacement, review, and inspection routing.'],
+              ['/get-estimate', 'Written estimate', 'Send address, photos, scope, material goals, budget range, timeline, and HOA notes.'],
+            ].map(([href, title, text]) => (
+              <Link
+                key={href}
+                href={href}
+                style={{ border: '1px solid #eadfd2', borderRadius: 8, padding: 18, color: '#111', textDecoration: 'none', background: '#fffaf6' }}
+              >
+                <h3 style={{ margin: '0 0 8px', fontSize: '1.05rem' }}>{title}</h3>
+                <p style={{ margin: 0, color: '#5a514b', lineHeight: 1.55 }}>{text}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <ServiceContentExpansion sections={expansionSections} />
 
       <section style={{ background: '#f7f4ed', padding: '64px 20px' }}>
@@ -306,7 +339,7 @@ export default function PremiumCompositeReplacementCorridorPage() {
       />
 
       <RelatedGuides currentPath={pagePath} category="deck-core" />
-      <NamedAuthor context="Arlington, Alexandria, McLean, and Northern Virginia premium composite deck replacement" lastUpdated="2026-07-21" />
+      <NamedAuthor context="Arlington, Alexandria, McLean, and Northern Virginia premium composite deck replacement" lastUpdated="2026-10-07" />
       <ContactHome />
     </main>
   );

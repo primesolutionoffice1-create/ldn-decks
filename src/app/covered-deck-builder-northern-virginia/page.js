@@ -94,7 +94,7 @@ const faqSchema = {
 export default function CoveredDeckPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/covered-deck-builder-northern-virginia" name="Covered Deck Builder Northern Virginia | Open-Air Outdoor Living" description="Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living." speakable />
+      <WebPageSchema dateModified="2026-10-06" url="https://ldndecks.com/covered-deck-builder-northern-virginia" name="Covered Deck Builder Northern Virginia | Open-Air Outdoor Living" description="Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living." speakable />
       <ServiceSchema
         name="Covered Deck Construction"
         description="Custom covered deck and roof-covered outdoor structures in Northern Virginia. Engineered for weather protection with premium materials."
@@ -171,6 +171,28 @@ export default function CoveredDeckPage() {
 
       <ServiceAreasGrid />
 
+      <section id="covered-deck-structural-handoff" style={{ padding: '2rem 1.5rem', maxWidth: 960, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Covered Deck Structural, Permit and Cost Handoff</h2>
+        <p style={{ lineHeight: 1.7, color: '#444' }}>
+          A roofed deck changes the structure, permit path, and budget compared with an open deck. If your existing frame,
+          ledger, stairs, or footings are not ready for roof load, start with a{' '}
+          <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck replacement plan</Link>
+          {' '}or a focused structural review before choosing finishes.
+        </p>
+        <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '0.75rem', marginTop: '1rem' }}>
+          <li><Link href="/covered-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Covered deck cost and payment planning</Link></li>
+          <li><Link href="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Premium composite replacement planning</Link></li>
+          <li><Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck stair calculator for roofed-deck layouts</Link></li>
+          <li><Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link></li>
+          <li><Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Ledger flashing and attachment guide</Link></li>
+          <li><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County deck permit guide</Link></li>
+          <li><Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County deck permit guide</Link></li>
+          <li><Link href="/deck-permit-prince-william-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Prince William County deck permit guide</Link></li>
+          <li><Link href="/deck-permit-arlington-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Arlington County deck permit guide</Link></li>
+          <li><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a written covered-deck estimate</Link></li>
+        </ul>
+      </section>
+
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Covered Deck Pricing &amp; Planning</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -183,7 +205,7 @@ export default function CoveredDeckPage() {
 
       <SimpleCTA title="Build Your Covered Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/covered-deck-builder-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-06" />
 
       <ContactHome />
     </main>
