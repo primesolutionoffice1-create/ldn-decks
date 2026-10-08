@@ -72,6 +72,13 @@ Never prefix these with `NEXT_PUBLIC_`:
 - `TWILIO_FROM`
 - `META_CAPI_ACCESS_TOKEN`
 - `META_CAPI_TEST_EVENT_CODE`
+- `OPENROUTER_API_KEY`
+- `ANTHROPIC_API_KEY`
+- `DATABASE_URL`
+- `CRON_SECRET`
+- `LEAD_TRIAGE_SUMMARY_TO`
+
+Lead triage setup, the morning cron, and the cost estimate are in [lead-triage/README.md](lead-triage/README.md).
 
 ## Public Variables
 

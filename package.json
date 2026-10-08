@@ -113,13 +113,16 @@
         "scaling:evidence-bundle:validate": "node scripts/validate-scaling-evidence-bundle.mjs",
         "scaling:blocker-exit": "node scripts/generate-scaling-blocker-exit-checklist.mjs",
         "scaling:blocker-exit:validate": "node scripts/validate-scaling-blocker-exit-checklist.mjs",
-        "seo:verify-ahrefs": "node scripts/verify-ahrefs-analytics.mjs"
+        "seo:verify-ahrefs": "node scripts/verify-ahrefs-analytics.mjs",
+        "lead-triage:dry-run": "node scripts/lead-triage-dry-run.mjs",
+        "test:lead-triage": "node --test src/lib/lead-triage/*.test.mjs"
     },
     "dependencies": {
         "@vercel/analytics": "^1.6.1",
         "@vercel/speed-insights": "^1.3.1",
         "next": "16.3.5",
         "nodemailer": "^9.1.1",
+        "pg": "^8.23.1",
         "react": "19.2.4",
         "react-dom": "19.2.4"
     },

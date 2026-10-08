@@ -1,0 +1,22 @@
+{
+  "captured": "2026-10-08",
+  "endpoint": "https://services1.arcgis.com/ioennV6PpG5Xodq0/arcgis/rest/services/Building_Records_PLUS/FeatureServer/0",
+  "catalog": "https://data.virginia.gov/dataset/building-records-plus",
+  "note": "Real public row used to lock field names. Issued 2017-03-02, which is outside the 2000-2010 target. The 2000-2010 residential deck/porch query returned zero rows on the capture date: the layer's earliest ISSUED_DATE is 2006-03-24 (158 rows through 2010) and those project names are blank or commercial. Do not ingest this fixture as if it fell inside the target window.",
+  "features": [
+    {
+      "attributes": {
+        "RECORDID": "ALTR-170610221",
+        "APPTYPEALIAS": "Residential Addition/Alteration",
+        "PROJECT_NAME": "SCREEN PORCH W OPEN DECK",
+        "RECORD_STATUS": null,
+        "ISSUED_DATE": 1488412800000,
+        "ADDRESS_1": null,
+        "CITY": "FAIRFAX STATION",
+        "STATE": "VA",
+        "ZIP_CODE": null,
+        "DEVELOPMENT_CENTER": null
+      }
+    }
+  ]
+}

@@ -10,6 +10,7 @@ const nextConfig = {
   turbopack: {
     root: __dirname,
   },
+  serverExternalPackages: ['pg'],
   async redirects() {
     return [
       { source: '/review-request', destination: 'https://ldndecks.com/review', statusCode: 301 },
