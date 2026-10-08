@@ -1,36 +1,48 @@
 "use client";
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useLeadSubmit } from '@/hooks/useLeadSubmit';
+import { createSubmissionGate } from '@/lib/submissionGate';
 import CallLink, { BUSINESS_PHONE_DISPLAY } from '@/components/CallLink';
 import styles from './PaidSearchLeadForm.module.css';
 
 export default function PaidSearchLeadForm({
+  formId,
   service = 'Composite Decks',
   formLocation = 'paid_search_above_fold',
   heading = 'Request a written deck estimate',
   pageContext,
-  leadSource = 'Google Search',
+  leadSource = '',
 }) {
   const [status, setStatus] = useState(null);
+  const submissionGateRef = useRef(createSubmissionGate());
   const submit = useLeadSubmit({ formType: 'paid_search', pageContext });
 
   async function handleSubmit(event) {
     event.preventDefault();
     event.stopPropagation();
     event.nativeEvent?.stopImmediatePropagation?.();
+    if (status === 'success') return;
 
     setStatus('submitting');
-    const result = await submit(event.currentTarget);
-    if (result.success) {
-      setStatus('success');
-    } else {
+    try {
+      const attempt = await submissionGateRef.current.run(() => submit(event.currentTarget));
+      if (attempt.skipped) return;
+      const result = attempt.result;
+      if (result.success) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Paid search form submission failed:', error?.message || error);
       setStatus('error');
     }
   }
 
   return (
     <form
+      id={formId}
       className={styles.form}
       onSubmit={handleSubmit}
       data-form-location={formLocation}
@@ -60,19 +72,23 @@ export default function PaidSearchLeadForm({
         </p>
       </div>
       {status === 'error' && (
-        <p className={styles.error}>The form did not send. Please call us or try again.</p>
+        <p className={styles.error} role="alert">The form did not send. Please call us or try again.</p>
       )}
       {status === 'success' && (
-        <p className={styles.success}>Message received. We will review your project details and follow up shortly.</p>
+        <p className={styles.success} role="status">Message received. We will review your project details and follow up shortly.</p>
       )}
       <CallLink className={styles.callButton}>
         Call {BUSINESS_PHONE_DISPLAY}
       </CallLink>
       <div className={styles.grid}>
-        <input className={styles.field} name="name" required placeholder="Name" autoComplete="name" />
-        <input className={styles.field} name="phone" required type="tel" placeholder="Phone" autoComplete="tel" />
-        <input className={styles.field} name="city" required placeholder="City" autoComplete="address-level2" />
-        <input className={styles.field} name="email" type="email" placeholder="Email (optional)" autoComplete="email" />
+        <label className={styles.visuallyHidden} htmlFor={`${formLocation}-name`}>Name</label>
+        <input id={`${formLocation}-name`} className={styles.field} name="name" required placeholder="Name" autoComplete="name" />
+        <label className={styles.visuallyHidden} htmlFor={`${formLocation}-phone`}>Phone</label>
+        <input id={`${formLocation}-phone`} className={styles.field} name="phone" required type="tel" placeholder="Phone" autoComplete="tel" />
+        <label className={styles.visuallyHidden} htmlFor={`${formLocation}-city`}>Project city</label>
+        <input id={`${formLocation}-city`} className={styles.field} name="city" required placeholder="City" autoComplete="address-level2" />
+        <label className={styles.visuallyHidden} htmlFor={`${formLocation}-email`}>Email (optional)</label>
+        <input id={`${formLocation}-email`} className={styles.field} name="email" type="email" placeholder="Email (optional)" autoComplete="email" />
         <select className={styles.select} name="timeline" required defaultValue="" aria-label="Project timeline">
           <option value="" disabled>How soon?</option>
           <option value="Immediately">Ready now</option>
@@ -104,9 +120,13 @@ export default function PaidSearchLeadForm({
           <option value="Composite">Composite</option>
           <option value="Not Sure">Not sure</option>
         </select>
-        <button className={`${styles.submit} ${styles.full}`} type="submit" disabled={status === 'submitting'}>
-          {status === 'submitting' ? 'Sending...' : 'Request Written Estimate'}
+        <button className={`${styles.submit} ${styles.full}`} type="submit" disabled={status === 'submitting' || status === 'success'}>
+          {status === 'success' ? 'Message Received' : status === 'submitting' ? 'Sending...' : 'Request Written Estimate'}
         </button>
+        <p className={`${styles.note} ${styles.full}`}>
+          By submitting, you ask us to contact you about this project. See our{' '}
+          <a href="/privacy-policy">Privacy Policy</a>. Optional advertising consent is managed separately.
+        </p>
       </div>
       <p className={styles.note}>
         Calls are the quickest path today. The short form helps us route your project details before follow-up.

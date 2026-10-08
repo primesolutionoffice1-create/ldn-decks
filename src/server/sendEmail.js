@@ -2,10 +2,11 @@
 
 import { headers } from 'next/headers';
 import { sendMetaLeadEvent } from './metaCapi';
-import { createLeadConfirmationToken } from './leadConfirmationToken';
+import { createLeadConfirmationToken, verifyLeadConfirmationToken } from './leadConfirmationToken';
 import { sendGhlLead } from './ghl';
 import { sendN8nWebsiteLead } from './n8nLeadForwarder';
 import { sendLeadNotificationEmail } from './emailDelivery';
+import { deriveServerLeadSource, sanitizeLeadUrl } from '@/lib/leadPrivacy';
 
 export async function sendContactEmail(formData) {
   try {
@@ -57,11 +58,30 @@ export async function sendContactEmail(formData) {
     const utmContent = formData.get('utm_content');
     const utmTerm = formData.get('utm_term');
     const eventId = formData.get('event_id');
-    const sourceUrl = formData.get('source_url');
+    const submittedSourceUrl = formData.get('source_url');
+    const submittedReferrer = formData.get('referrer');
     const formName = formData.get('form_name');
     const pageType = formData.get('page_type');
     const pageCity = formData.get('page_city');
     const pageCounty = formData.get('page_county');
+
+    // Request headers are authoritative for the current form page. Client URL
+    // fields are sanitized fallbacks and never carry query strings or hashes.
+    let ipAddress = null;
+    let userAgent = null;
+    let requestReferrer = '';
+    try {
+      const h = await headers();
+      const xff = h.get('x-forwarded-for') || '';
+      ipAddress = xff.split(',')[0].trim() || h.get('x-real-ip') || null;
+      userAgent = h.get('user-agent') || null;
+      requestReferrer = h.get('referer') || '';
+    } catch {
+      // headers() can throw outside request scope (build/tests). Delivery still
+      // works and the sanitized submitted source remains available as fallback.
+    }
+    const sourceUrl = deriveServerLeadSource({ requestReferrer, submittedSourceUrl });
+    const referrer = sanitizeLeadUrl(submittedReferrer);
 
     let fullAddress = '';
     if (address || city || state || zip) {
@@ -73,6 +93,7 @@ export async function sendContactEmail(formData) {
     const clickIdRows = [
       eventId && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>event_id:</strong> ${eventId}</p>`,
       sourceUrl && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>landing_page:</strong> ${sourceUrl}</p>`,
+      referrer && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>referrer:</strong> ${referrer}</p>`,
       formName && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>form_name:</strong> ${formName}</p>`,
       pageType && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_type:</strong> ${pageType}</p>`,
       pageCity && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_city:</strong> ${pageCity}</p>`,
@@ -117,23 +138,6 @@ export async function sendContactEmail(formData) {
       `,
     };
 
-    // Capture IP + User-Agent from the request for Meta CAPI match quality.
-    // headers() comes from next/headers — server-action context. The first
-    // address in x-forwarded-for is the client (Vercel / proxies prepend
-    // their own hops); fall back to the direct connection if absent.
-    let ipAddress = null;
-    let userAgent = null;
-    try {
-      const h = await headers();
-      const xff = h.get('x-forwarded-for') || '';
-      ipAddress = xff.split(',')[0].trim() || h.get('x-real-ip') || null;
-      userAgent = h.get('user-agent') || null;
-    } catch (e) {
-      // headers() can throw if called outside a request-scoped context
-      // (e.g., during build / unit test). CAPI degrades gracefully —
-      // missing IP / UA drops EMQ score ~1.5 points but doesn't error.
-    }
-
     const emailResult = await sendLeadNotificationEmail(mailOptions);
     if (!emailResult.ok && emailResult.skipped) {
       console.error('[sendContactEmail] email delivery skipped', emailResult);
@@ -177,25 +181,6 @@ export async function sendContactEmail(formData) {
       return { success: false, error: 'Failed to send lead' };
     }
 
-    // Fire Meta CAPI server-side (non-blocking, env-gated — no-ops if creds absent).
-    // Same event_id as the client-side form_submit + lead_confirmed events,
-    // so Meta dedupes any of the three that fire within the 7-day window.
-    sendMetaLeadEvent({
-      email,
-      phone,
-      firstName: formData.get('firstName'),
-      lastName: formData.get('lastName'),
-      city,
-      state,
-      zip,
-      fbclid,
-      fbp: formData.get('_fbp'),
-      eventId,
-      eventSourceUrl: formData.get('source_url') || 'https://ldndecks.com/contact',
-      ipAddress,
-      userAgent,
-    }).catch((err) => console.error('Meta CAPI fire-and-forget error:', err?.message || err));
-
     return {
       success: true,
       confirmationToken: createLeadConfirmationToken(eventId),
@@ -204,4 +189,56 @@ export async function sendContactEmail(formData) {
     console.error('Email error:', error?.message || error);
     return { success: false, error: 'Failed to send email' };
   }
+}
+
+export async function sendConfirmedMetaLeadEvent(formData, confirmationToken) {
+  const optionalTrackingConsent = formData.get('optional_tracking_consent');
+  const eventId = formData.get('event_id');
+  if (optionalTrackingConsent !== 'accepted' || !eventId || !confirmationToken) {
+    return { success: false, skipped: true };
+  }
+
+  const proof = verifyLeadConfirmationToken(eventId, confirmationToken);
+  if (!proof.ok) {
+    return { success: false, skipped: true, error: 'invalid confirmation proof' };
+  }
+
+  const rawName = String(formData.get('name') || '').trim();
+  const firstName = formData.get('firstName') || rawName.split(' ')[0] || '';
+  const lastName = formData.get('lastName') || rawName.split(' ').slice(1).join(' ') || '';
+
+  let ipAddress = null;
+  let userAgent = null;
+  let requestReferrer = '';
+  try {
+    const h = await headers();
+    const xff = h.get('x-forwarded-for') || '';
+    ipAddress = xff.split(',')[0].trim() || h.get('x-real-ip') || null;
+    userAgent = h.get('user-agent') || null;
+    requestReferrer = h.get('referer') || '';
+  } catch {
+    // The transport still degrades safely when request headers are unavailable.
+  }
+
+  const eventSourceUrl = deriveServerLeadSource({
+    requestReferrer,
+    submittedSourceUrl: formData.get('source_url'),
+  }) || 'https://ldndecks.com/contact';
+
+  return sendMetaLeadEvent({
+    email: formData.get('email'),
+    phone: formData.get('phone'),
+    firstName,
+    lastName,
+    city: formData.get('city'),
+    state: formData.get('state'),
+    zip: formData.get('zip'),
+    fbclid: formData.get('fbclid'),
+    fbp: formData.get('_fbp'),
+    eventId,
+    eventSourceUrl,
+    ipAddress,
+    userAgent,
+    optionalTrackingConsent,
+  });
 }

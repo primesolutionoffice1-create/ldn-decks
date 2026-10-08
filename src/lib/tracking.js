@@ -7,11 +7,7 @@ import { BUSINESS } from '@/lib/business';
 import { trackRedditConfirmedLead } from '@/lib/redditTracking';
 import { track as trackVercelEvent } from '@vercel/analytics';
 
-const GOOGLE_ADS_LEAD_CONVERSION_SEND_TO =
-  process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_CONVERSION_SEND_TO ||
-  'AW-16888402136/KNF1CJur4tIbENihgvU-';
-const GOOGLE_ADS_LEAD_CONVERSION_VALUE = 1;
-const GOOGLE_ADS_LEAD_CONVERSION_CURRENCY = 'USD';
+const firedLeadIds = new Set();
 
 function ensureTagLayer() {
   if (typeof window === 'undefined') return;
@@ -52,10 +48,6 @@ function leadFiredKey(eventId) {
   return eventId ? `lead_fired_${eventId}` : null;
 }
 
-function googleAdsLeadFiredKey(eventId) {
-  return eventId ? `google_ads_lead_fired_${eventId}` : null;
-}
-
 function leadAttributionKey(eventId) {
   return eventId ? `lead_attribution_${eventId}` : null;
 }
@@ -64,23 +56,6 @@ function getPendingLeadSet() {
   if (typeof window === 'undefined') return null;
   window.__ldnPendingLeadIds = window.__ldnPendingLeadIds || new Set();
   return window.__ldnPendingLeadIds;
-}
-
-function getGoogleAdsLeadFiredSet() {
-  if (typeof window === 'undefined') return null;
-  window.__ldnGoogleAdsLeadFiredIds = window.__ldnGoogleAdsLeadFiredIds || new Set();
-  return window.__ldnGoogleAdsLeadFiredIds;
-}
-
-function adsDebug(event, details = {}) {
-  if (
-    typeof process === 'undefined' ||
-    process.env.NEXT_PUBLIC_ADS_DEBUG !== '1' ||
-    typeof console === 'undefined'
-  ) {
-    return;
-  }
-  console.info('[ldnAds]', event, details);
 }
 
 export function markLeadConfirmationPending(eventId) {
@@ -219,138 +194,6 @@ function trackMetaLead({ eventId } = {}) {
   }
 
   sendWhenReady();
-}
-
-function trackGoogleAdsLead({ eventId, attributionPayload = {} } = {}) {
-  if (typeof window === 'undefined') {
-    adsDebug('google_ads_lead_skipped', { eventId: eventId || null, reason: 'server_render' });
-    return;
-  }
-
-  if (!eventId) {
-    adsDebug('google_ads_lead_skipped', { reason: 'missing_event_id' });
-    return;
-  }
-
-  if (!GOOGLE_ADS_LEAD_CONVERSION_SEND_TO) {
-    adsDebug('google_ads_lead_skipped', { eventId, reason: 'missing_send_to' });
-    return;
-  }
-  ensureTagLayer();
-
-  const payload = {
-    send_to: GOOGLE_ADS_LEAD_CONVERSION_SEND_TO,
-    transaction_id: eventId,
-    event_id: eventId,
-    value: GOOGLE_ADS_LEAD_CONVERSION_VALUE,
-    currency: GOOGLE_ADS_LEAD_CONVERSION_CURRENCY,
-    page_location: window.location.href,
-    page_path: window.location.pathname,
-    form_location: attributionPayload.form_location || null,
-    form_type: attributionPayload.form_type || null,
-    service: attributionPayload.service || null,
-    city: attributionPayload.city || null,
-    state: attributionPayload.state || null,
-  };
-
-  let attempts = 0;
-
-  function sendWhenReady() {
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'conversion', payload);
-      adsDebug('google_ads_lead_sent', {
-        eventId,
-        send_to: GOOGLE_ADS_LEAD_CONVERSION_SEND_TO,
-        transaction_id: eventId,
-      });
-      return;
-    }
-
-    attempts += 1;
-    if (attempts < 10) {
-      window.setTimeout(sendWhenReady, 500);
-      return;
-    }
-
-    adsDebug('google_ads_lead_skipped', {
-      eventId,
-      reason: 'gtag_unavailable_after_retries',
-      attempts,
-    });
-  }
-
-  sendWhenReady();
-}
-
-function reserveGoogleAdsLeadConversion(eventId) {
-  if (typeof window === 'undefined') {
-    return { shouldSend: false, reason: 'server_render' };
-  }
-
-  if (!eventId) {
-    return { shouldSend: false, reason: 'missing_event_id' };
-  }
-
-  const firedSet = getGoogleAdsLeadFiredSet();
-  if (firedSet?.has(eventId)) {
-    return { shouldSend: false, reason: 'memory_dedup' };
-  }
-
-  const firedKey = googleAdsLeadFiredKey(eventId);
-  let storageStatus = 'unavailable';
-
-  try {
-    if (window.sessionStorage) {
-      storageStatus = 'available';
-      if (window.sessionStorage.getItem(firedKey)) {
-        recordDedupHit();
-        return { shouldSend: false, reason: 'session_storage_dedup' };
-      }
-    }
-  } catch (error) {
-    storageStatus = 'read_error';
-    adsDebug('google_ads_lead_storage_error', {
-      eventId,
-      phase: 'read',
-      message: error?.message || String(error),
-    });
-  }
-
-  if (firedSet) firedSet.add(eventId);
-
-  try {
-    if (window.sessionStorage) {
-      window.sessionStorage.setItem(firedKey, '1');
-      storageStatus = 'reserved';
-    }
-  } catch (error) {
-    storageStatus = 'write_error';
-    adsDebug('google_ads_lead_storage_error', {
-      eventId,
-      phase: 'write',
-      message: error?.message || String(error),
-    });
-  }
-
-  return { shouldSend: true, reason: 'reserved', storageStatus };
-}
-
-export function trackGoogleAdsLeadOnConfirmedSubmit({ eventId, attributionPayload = {} } = {}) {
-  const reservation = reserveGoogleAdsLeadConversion(eventId);
-  if (!reservation.shouldSend) {
-    adsDebug('google_ads_lead_deduplicated', {
-      eventId: eventId || null,
-      reason: reservation.reason,
-    });
-    return;
-  }
-
-  adsDebug('google_ads_lead_send_queued', {
-    eventId,
-    reason: reservation.reason,
-    storageStatus: reservation.storageStatus,
-  });
-  trackGoogleAdsLead({ eventId, attributionPayload });
 }
 
 export function trackMetaPageView() {
@@ -559,18 +402,17 @@ export function trackCtaClick({ ctaLocation, ctaLabel, href, pageContext } = {})
 /**
  * Fires the authoritative lead conversion event on /thank-you page-view
  * after ThankYouTracking verifies the server-issued confirmation token.
- * GTM may map this event for tags that depend on lead_confirmed. The paid-social
- * deck estimate route also defers its direct Google Ads fallback until this
- * server-confirmed point; other form routes retain their existing behavior.
+ * GTM owns the Google Ads conversion dispatch for this event so there is one
+ * accountable Ads conversion path for every verified lead.
  *
  * event_id matches the one passed into ContactForm's form_submit event,
- * enabling client-side dedup in GTM and server-side dedup if CAPI/Google
- * Ads Conversions API is added later.
+ * enabling client-side dedup in this module and GTM.
  *
  * Anti-replay: useEffect re-runs on /thank-you reload or back-forward
  * navigation; without a guard, each re-mount fires another conversion
  * with the same event_id. GTM transaction_id dedup catches this in the
- * tag layer, and sessionStorage blocks repeat fires on the same device.
+ * tag layer, while an in-memory Set plus sessionStorage block repeat fires
+ * in the current browser context.
  * Server-side proof verification in ThankYouTracking is the authority
  * that this was a real submitted lead, so local pending state is consumed
  * when present but must not block a verified conversion.
@@ -578,6 +420,11 @@ export function trackCtaClick({ ctaLocation, ctaLabel, href, pageContext } = {})
 export function trackLeadConfirmed({ eventId } = {}) {
   if (typeof window === 'undefined') return;
   if (!eventId) return;
+
+  if (firedLeadIds.has(eventId)) {
+    recordDedupHit();
+    return;
+  }
 
   const firedKey = leadFiredKey(eventId);
   try {
@@ -589,13 +436,15 @@ export function trackLeadConfirmed({ eventId } = {}) {
     // sessionStorage unavailable; continue with the pending-lead guard below.
   }
 
+  // Mark the ID before any downstream dispatch. This remains effective when
+  // sessionStorage is blocked or throws in private/embedded contexts.
+  firedLeadIds.add(eventId);
   consumeLeadConfirmationPending(eventId);
 
   try {
     if (window.sessionStorage) window.sessionStorage.setItem(firedKey, '1');
-  } catch (e) {
-    // sessionStorage unavailable (Safari private mode, embedded contexts).
-    // Google Ads transaction_id still deduplicates repeat conversions.
+  } catch {
+    // The in-memory Set remains the current-page dedup fallback.
   }
 
   const attributionPayload = consumeLeadAttributionPayload(eventId);
@@ -604,8 +453,6 @@ export function trackLeadConfirmed({ eventId } = {}) {
     event: 'lead_confirmed',
     event_id: eventId,
     transaction_id: eventId,
-    value: GOOGLE_ADS_LEAD_CONVERSION_VALUE,
-    currency: GOOGLE_ADS_LEAD_CONVERSION_CURRENCY,
     ...attributionPayload,
     page_location: window.location.href,
     page_path: window.location.pathname,
@@ -614,7 +461,6 @@ export function trackLeadConfirmed({ eventId } = {}) {
   trackVercelEvent('lead_confirmed', {
     path: window.location.pathname,
   });
-  trackGoogleAdsLeadOnConfirmedSubmit({ eventId, attributionPayload });
   trackMetaLead({ eventId });
   trackPinterestLead({ eventId });
   void trackRedditConfirmedLead({ eventId }).catch(() => {});

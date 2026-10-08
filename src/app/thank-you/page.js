@@ -18,9 +18,6 @@ export const metadata = {
 export default function ThankYouPage() {
   return (
     <div className={styles.thankYouWrapper}>
-      <Suspense fallback={null}>
-        <ThankYouTracking />
-      </Suspense>
       <div className={styles.container}>
         <div className={styles.imageCol}>
           <Image
@@ -34,33 +31,17 @@ export default function ThankYouPage() {
         </div>
         
         <div className={styles.contentCol}>
-          <div className={styles.successBadge}>
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          
-          <h1 className={styles.title}>Message Received!</h1>
-          <p className={styles.message}>
-            Thank you for reaching out to Loudoun Decks. We&apos;ve received your inquiry and our team is already reviewing your project details.
-          </p>
-          
-          <div className={styles.nextSteps}>
-            <h3>What happens next?</h3>
-            <div className={styles.step}>
-              <div className={styles.dot}></div>
-              <span>A design expert will review your request</span>
-            </div>
-            <div className={styles.step}>
-              <div className={styles.dot}></div>
-              <span>We&apos;ll call you to confirm scope, location, and next steps</span>
-            </div>
-            <div className={styles.step}>
-              <div className={styles.dot}></div>
-              <span>You&apos;ll get a detailed design review and written estimate</span>
-            </div>
-          </div>
-          
+          <Suspense
+            fallback={(
+              <>
+                <h1 className={styles.title}>Confirming Your Request</h1>
+                <p className={styles.message}>Please wait while we securely confirm that your message was received.</p>
+              </>
+            )}
+          >
+            <ThankYouTracking />
+          </Suspense>
+
           <div className={styles.buttonGroup}>
             <Link href="/reviews" className={styles.homeBtn}>
               Read Homeowner Reviews

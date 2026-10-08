@@ -1,13 +1,21 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { useContact } from '@/context/ContactContext';
 import styles from './ContactForm.module.css';
 import { useLeadSubmit } from '@/hooks/useLeadSubmit';
+import { createSubmissionGate } from '@/lib/submissionGate';
 import CallLink from '@/components/CallLink';
 
 export default function ContactForm({ hideInfoCol = false, noPadding = false }) {
   const [status, setStatus] = useState(null);
+  const submissionGateRef = useRef(createSubmissionGate());
   const [submittedAt] = useState(() => Date.now());
+  const pathname = usePathname();
+  const restrictedBudgetRoute = [
+    '/services/deck-replacement',
+    '/services/deck-resurfacing',
+  ].includes(pathname);
   const { closeContact } = useContact();
   const submit = useLeadSubmit({ formType: 'quote' });
 
@@ -15,11 +23,23 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
     e.preventDefault();
     e.stopPropagation();
     e.nativeEvent?.stopImmediatePropagation?.();
+    if (status === "success") return;
+
     setStatus("submitting");
-    const result = await submit(e.target);
-    if (result.success) {
-      closeContact();
-    } else {
+    try {
+      const attempt = await submissionGateRef.current.run(() => submit(e.target));
+      if (attempt.skipped) return;
+      const result = attempt.result;
+      if (result.success && result.confirmationReady) {
+        closeContact();
+      } else if (result.success) {
+        setStatus("success");
+      } else {
+        alert("Failed to send message. Please try again.");
+        setStatus(null);
+      }
+    } catch (error) {
+      console.error('Contact form submission failed:', error?.message || error);
       alert("Failed to send message. Please try again.");
       setStatus(null);
     }
@@ -73,6 +93,11 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                 style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
               />
               <input type="hidden" name="submittedAt" value={submittedAt} />
+              {status === "success" && (
+                <p role="status" style={{ color: '#245c2b', fontSize: '14px', marginBottom: '10px' }}>
+                  Message received. We will review your project details and follow up shortly.
+                </p>
+              )}
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
                   <label htmlFor="firstName">First Name <span className={styles.req}>*</span></label>
@@ -133,7 +158,9 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                   <label htmlFor="budgetRange">Approximate Budget</label>
                   <select id="budgetRange" name="budgetRange" defaultValue="" className={styles.selectInput}>
                     <option value="" disabled>Select Budget Range</option>
-                    <option value="Under $15K">Under $15K</option>
+                    {!restrictedBudgetRoute && (
+                      <option value="Under $15K">Under $15K</option>
+                    )}
                     <option value="$15K-$25K">$15K-$25K</option>
                     <option value="$25K-$50K">$25K-$50K</option>
                     <option value="$50K-$100K">$50K-$100K</option>
@@ -186,12 +213,22 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               </p>
               <button
                 type="submit"
-                disabled={status === "submitting"}
+                disabled={status === "submitting" || status === "success"}
                 className={styles.submitBtn}
-                aria-label={status === "submitting" ? "Submitting form" : "Submit project inquiry"}
+                aria-label={
+                  status === "success"
+                    ? "Message received"
+                    : status === "submitting"
+                      ? "Submitting form"
+                      : "Submit project inquiry"
+                }
               >
-                {status === "submitting" ? "Sending..." : "Request Written Estimate"}
+                {status === "success" ? "Message Received" : status === "submitting" ? "Sending..." : "Request Written Estimate"}
               </button>
+              <p style={{ fontSize: '0.85rem', color: '#555', marginTop: '0.75rem' }}>
+                By submitting, you ask us to contact you about this project. See our{' '}
+                <a href="/privacy-policy">Privacy Policy</a>. Optional advertising consent is managed separately.
+              </p>
             </form>
           </div>
         </div>

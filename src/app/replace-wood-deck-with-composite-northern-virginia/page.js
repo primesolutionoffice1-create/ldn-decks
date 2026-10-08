@@ -184,7 +184,6 @@ export default function ReplaceWoodDeckWithCompositePage() {
             service="Wood Deck to Composite Replacement"
             formLocation="wood_to_composite_above_fold"
             heading="Request a wood-to-composite replacement estimate"
-            leadSource="Google Search"
             pageContext={{
               pageType: 'paid_search_landing_page',
               service: 'wood_deck_to_composite_replacement',

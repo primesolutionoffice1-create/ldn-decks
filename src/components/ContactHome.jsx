@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './ContactHome.module.css';
 import { useLeadSubmit } from '@/hooks/useLeadSubmit';
+import { createSubmissionGate } from '@/lib/submissionGate';
 import CallLink from '@/components/CallLink';
 
 const PhoneIcon = () => (
@@ -24,19 +25,33 @@ const MapIcon = () => (
   </svg>
 );
 
-export default function ContactHome({ pageContext } = {}) {
+export default function ContactHome({ formType, formLocation, service, pageContext } = {}) {
   const [status, setStatus] = useState(null);
-  const submit = useLeadSubmit({ formType: pageContext ? 'local_service' : 'homepage', pageContext });
+  const submissionGateRef = useRef(createSubmissionGate());
+  const resolvedFormType = formType || (pageContext ? 'local_service' : 'homepage');
+  const resolvedFormLocation = formLocation || (pageContext ? 'local_service_contact_form' : 'homepage_contact_form');
+  const resolvedService = service || pageContext?.serviceLabel || '';
+  const restrictLowBudget = ['Deck Replacement', 'Deck Resurfacing'].includes(resolvedService);
+  const submit = useLeadSubmit({ formType: resolvedFormType, pageContext });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     e.stopPropagation();
     e.nativeEvent?.stopImmediatePropagation?.();
+    if (status === "success") return;
+
     setStatus("submitting");
-    const result = await submit(e.target);
-    if (result.success) {
-      setStatus("success");
-    } else {
+    try {
+      const attempt = await submissionGateRef.current.run(() => submit(e.currentTarget));
+      if (attempt.skipped) return;
+      const result = attempt.result;
+      if (result.success) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error('Homepage contact form submission failed:', error?.message || error);
       setStatus("error");
     }
   };
@@ -82,7 +97,7 @@ export default function ContactHome({ pageContext } = {}) {
         </div>
 
         <div className={styles.rightCol}>
-            <form onSubmit={handleSubmit} className={styles.contactForm} data-form-location="homepage_contact_form">
+            <form onSubmit={handleSubmit} className={styles.contactForm} data-form-location={resolvedFormLocation}>
               {/* Honeypot — bots auto-fill every input, real users never see this.
                   Server-side check in sendEmail.js silently accepts then drops. */}
               <input
@@ -106,10 +121,13 @@ export default function ContactHome({ pageContext } = {}) {
                 }}
               />
               <input type="hidden" name="state" value="VA" />
+              <input type="hidden" name="page_type" value={pageContext?.pageType || ''} />
+              <input type="hidden" name="page_city" value={pageContext?.city || ''} />
+              <input type="hidden" name="page_county" value={pageContext?.county || ''} />
               <h3>Get a Free Project Consultation</h3>
               <p className={styles.formSubtext}>Written Scopes | Manufacturer-Aligned Materials | Local Project Team</p>
-              {status === "success" && <p style={{color: '#245c2b', fontSize: '14px', marginBottom: '10px'}}>Message received. We will review your project details and follow up shortly.</p>}
-              {status === "error" && <p style={{color: 'red', fontSize: '14px', marginBottom: '10px'}}>There was an error sending your message. Please try again.</p>}
+              {status === "success" && <p role="status" style={{color: '#245c2b', fontSize: '14px', marginBottom: '10px'}}>Message received. We will review your project details and follow up shortly.</p>}
+              {status === "error" && <p role="alert" style={{color: 'red', fontSize: '14px', marginBottom: '10px'}}>There was an error sending your message. Please try again.</p>}
               <div className={styles.formGrid}>
                 <div className={styles.inputGroup}>
                   <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
@@ -121,11 +139,12 @@ export default function ContactHome({ pageContext } = {}) {
                   <input type="tel" name="phone" placeholder="Phone Number" required aria-label="Phone Number" />
                 </div>
                 <div className={styles.inputGroup}>
-                  <select name="service" required defaultValue="" aria-label="Select Service">
+                  <select name="service" required defaultValue={resolvedService} aria-label="Select Service">
                     <option value="" disabled>Select Service</option>
                     <option value="New Decks">New Decks</option>
+                    <option value="Deck Replacement">Deck Replacement</option>
                     <option value="Deck Resurfacing">Deck Resurfacing</option>
-                    <option value="Porches">Screened Porches</option>
+                    <option value="Screened Porches">Screened Porches</option>
                     <option value="Fencing">Fencing</option>
                     <option value="Other">Other</option>
                   </select>
@@ -147,10 +166,13 @@ export default function ContactHome({ pageContext } = {}) {
                 <div className={styles.inputGroup}>
                   <select name="budgetRange" defaultValue="" aria-label="Approximate Budget Range">
                     <option value="" disabled>Approximate Budget</option>
-                    <option value="$10K-$20K">$10K-$20K</option>
-                    <option value="$20K-$40K">$20K-$40K</option>
-                    <option value="$40K-$70K">$40K-$70K</option>
-                    <option value="$70K+">$70K+</option>
+                    {!restrictLowBudget && (
+                      <option value="$10K-$20K">$10K-$20K</option>
+                    )}
+                    <option value="$15K-$25K">$15K-$25K</option>
+                    <option value="$25K-$50K">$25K-$50K</option>
+                    <option value="$50K-$100K">$50K-$100K</option>
+                    <option value="$100K+">$100K+</option>
                     <option value="Not Sure">Not Sure</option>
                   </select>
                 </div>
@@ -180,10 +202,13 @@ export default function ContactHome({ pageContext } = {}) {
               <div className={styles.inputGroup}>
                 <textarea name="message" placeholder="Tell us about your project (size, materials, photos/repairs, stairs, railings, drainage)..." rows="5" required aria-label="Project Details"></textarea>
               </div>
-              <button type="submit" disabled={status === "submitting"} className={styles.submitBtn}>
-                {status === "submitting" ? "Sending..." : "Get My Free Quote →"}
+              <button type="submit" disabled={status === "submitting" || status === "success"} className={styles.submitBtn}>
+                {status === "success" ? "Message Received" : status === "submitting" ? "Sending..." : "Get My Free Quote →"}
               </button>
-              <p className={styles.privacyNote}>We value your privacy. No spam, only helpful deck experts.</p>
+              <p className={styles.privacyNote}>
+                By submitting, you ask us to contact you about this project. See our{' '}
+                <a href="/privacy-policy">Privacy Policy</a>. Optional advertising consent is managed separately.
+              </p>
             </form>
         </div>
       </div>

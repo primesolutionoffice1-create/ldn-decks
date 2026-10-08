@@ -105,6 +105,8 @@
         "measurement:call-attribution-evidence": "node scripts/validate-call-attribution-evidence.mjs",
         "measurement:lead-outcomes": "node scripts/validate-lead-outcome-rows.mjs",
         "measurement:verify-lead-confirmed": "node scripts/verify-lead-confirmed-tracking.mjs",
+        "measurement:verify-lead-ux": "node scripts/verify-lead-ux.mjs",
+        "measurement:verify-consent": "node scripts/verify-consent-tracking.mjs",
         "ads:offline-from-lead-outcomes": "node scripts/generate-google-ads-offline-from-lead-outcomes.mjs",
         "scaling:readiness": "node scripts/generate-scaling-readiness-board.mjs",
         "scaling:evidence-request": "node scripts/generate-scaling-evidence-request.mjs",

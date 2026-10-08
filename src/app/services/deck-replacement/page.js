@@ -11,7 +11,6 @@ import RelatedGuides from '@/components/RelatedGuides';
 import JsonLd from '@/components/JsonLd';
 import ServiceSchema from '@/components/ServiceSchema';
 import SimpleCTA from '@/components/SimpleCTA';
-import AboveFoldCTA from '@/components/AboveFoldCTA';
 import ServicesCallToAction from '@/components/ServicesCallToAction';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
@@ -27,6 +26,13 @@ export const metadata = buildMetadata({
   description: "Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds.",
   image: "/social/deck-replacement-service-social.png",
 });
+
+const PAGE_CONTEXT = {
+  pageType: 'paid_search_landing_page',
+  service: 'deck_replacement',
+  intent: 'deck_replacement',
+  county: 'Northern Virginia',
+};
 
 const replacementSections = [
   {
@@ -224,20 +230,17 @@ export default function DeckReplacementPage() {
         highPrice="65000"
         relatedServices={['https://ldndecks.com/services/new-decks', 'https://ldndecks.com/services/deck-resurfacing', 'https://ldndecks.com/services/deck-repair']}
       />
-      <ServicesHeader
-        subtext="Projects from $15,000+"
-        title="Professional Deck Replacement in Northern Virginia"
-        description="Don't let an aging, splintering deck hold you back. We inspect old structures, separate repair from replacement, and build low-maintenance outdoor retreats with permit and HOA planning included in the written scope."
-        estimateHref="#deck-replacement-estimate"
-      />
-
       <div id="deck-replacement-estimate" style={{ scrollMarginTop: '24px' }}>
-        <AboveFoldCTA
-          headline="Aging deck in Northern Virginia? Get a free structural evaluation and replacement estimate today."
+        <ServicesHeader
+          subtext="Projects from $15,000+"
+          title="Professional Deck Replacement in Northern Virginia"
+          description="Don't let an aging, splintering deck hold you back. We inspect old structures, separate repair from replacement, and build low-maintenance outdoor retreats with permit and HOA planning included in the written scope."
+          estimateHref="#deck-replacement-estimate"
           showQuickForm
           quickFormService="Deck Replacement"
           quickFormLocation="paid_search_replacement_above_fold"
           quickFormHeading="Need a deck replacement quote? Send the basics and we will call back."
+          pageContext={PAGE_CONTEXT}
         />
       </div>
 
@@ -462,7 +465,12 @@ export default function DeckReplacementPage() {
       <section id="deck-replacement-estimate-routing" data-speakable="deck-replacement-estimate-routing">
         <SimpleCTA title="Ready for a New Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
       </section>
-      <ContactHome />
+      <ContactHome
+        formType="paid_search"
+        formLocation="paid_search_replacement_terminal"
+        service="Deck Replacement"
+        pageContext={PAGE_CONTEXT}
+      />
     </main>
   );
 }

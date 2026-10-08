@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { clearAttributionCookies, persistAttributionCookies } from '@/lib/clickIds';
 import styles from './ConsentBanner.module.css';
 
 const CONSENT_KEY = 'ldn_cookie_consent';
@@ -34,7 +35,10 @@ export default function ConsentBanner() {
         });
       }
       if (value === 'accepted') {
+        persistAttributionCookies();
         window.dispatchEvent(new Event('ldn:consent-accepted'));
+      } else {
+        clearAttributionCookies();
       }
     } catch {
       // If storage is blocked, keep the user's immediate choice in memory.

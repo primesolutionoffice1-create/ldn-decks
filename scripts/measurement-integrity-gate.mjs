@@ -42,6 +42,7 @@ const layout = read('src/app/layout.js');
 const consent = read('src/components/ConsentBanner.jsx');
 const tracking = read('src/lib/tracking.js');
 const thankYouTracking = read('src/components/ThankYouTracking.jsx');
+const leadConfirmationClient = read('src/lib/leadConfirmationClient.js');
 const leadSubmit = read('src/hooks/useLeadSubmit.js');
 const callLink = read('src/components/CallLink.jsx');
 const proofRuntime = read('src/lib/verifiedProof.js');
@@ -85,7 +86,7 @@ const checks = [
     'click-id-capture',
     'Paid click IDs are captured on landing',
     ['gclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid'].every((key) => layout.includes(key)) && layout.includes('click-id-capture') ? 'PASS' : 'FAIL',
-    'beforeInteractive click-id-capture script stores paid IDs in 90-day cookies.'
+    'beforeInteractive capture keeps paid IDs in page memory and writes 90-day first-party cookies only after explicit acceptance.'
   ),
   check(
     'raw-tel-scan',
@@ -104,21 +105,31 @@ const checks = [
   check(
     'lead-confirmed',
     'Form lead conversion requires server-confirmed proof token',
-    thankYouTracking.includes('/api/lead-confirmation/verify') && tracking.includes("event: 'lead_confirmed'") ? 'PASS' : 'FAIL',
-    'ThankYouTracking verifies token before pushing lead_confirmed.'
+    thankYouTracking.includes('consumeLeadConfirmationReceipt') &&
+      thankYouTracking.includes('verifyLeadConfirmation') &&
+      leadConfirmationClient.includes('/api/lead-confirmation/verify') &&
+      tracking.includes("event: 'lead_confirmed'")
+      ? 'PASS'
+      : 'FAIL',
+    'ThankYouTracking removes the session receipt, then verifies its token before pushing lead_confirmed.'
   ),
   check(
     'thank-you-fallback',
-    'Forms do not navigate to /thank-you without server proof',
-    !leadSubmit.includes("router.push('/thank-you')") && leadSubmit.includes('confirmationReady: false') ? 'PASS' : 'FAIL',
-    'useLeadSubmit fails conversion tracking closed when confirmationToken is missing.',
-    'A plain /thank-you fallback can trigger path-based conversion tags without a real server-confirmed lead.'
+    'Forms use a storage-backed handoff to a clean /thank-you URL',
+    leadSubmit.includes('storeLeadConfirmationReceipt') &&
+      leadSubmit.includes("router.push('/thank-you')") &&
+      !leadSubmit.includes('/thank-you?eid=') &&
+      leadSubmit.includes('confirmationReady: false')
+      ? 'PASS'
+      : 'FAIL',
+    'useLeadSubmit navigates only after storing the receipt and keeps successful delivery inline when storage is unavailable.',
+    'An unverified /thank-you page view must remain neutral and must not be treated as a conversion.'
   ),
   check(
     'lead-dedup',
-    'lead_confirmed has source-side anti-replay',
-    tracking.includes('leadFiredKey') && tracking.includes('consumeLeadConfirmationPending') && tracking.includes('recordDedupHit') ? 'PASS' : 'FAIL',
-    'tracking.js guards lead_confirmed with pending and fired session keys.'
+    'lead_confirmed has client-side anti-replay',
+    tracking.includes('firedLeadIds') && tracking.includes('leadFiredKey') && tracking.includes('recordDedupHit') ? 'PASS' : 'FAIL',
+    'tracking.js guards lead_confirmed with an in-memory fired-ID Set and a fired session key.'
   ),
   check(
     'vapi-call-webhook',
@@ -170,7 +181,7 @@ ${checks.map((item) => `- ${statusIcon(item.status)} ${item.label}
 
 ## Readiness Assessment
 
-The website-side form attribution layer is strong enough for controlled reporting: click IDs are captured, Consent Mode defaults precede GTM, the CMP can grant or deny optional tracking, and the authoritative form event is server-confirmed before \`lead_confirmed\` fires.
+The website-side form attribution layer is strong enough for controlled reporting: click-ID persistence is consent-gated, Consent Mode defaults precede GTM, the CMP can grant or deny optional tracking, and the authoritative form event is server-confirmed before \`lead_confirmed\` fires.
 
 The account is not ready for aggressive scaling because qualified phone-call attribution still needs external Google Ads/GTM evidence and verified project lead-quality proof is still missing. \`phone_click\` should stay secondary/observational until Google Ads website-call forwarding and qualified-call diagnostics are confirmed.
 
