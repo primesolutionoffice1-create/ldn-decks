@@ -1,0 +1,67 @@
+{
+  "captured": "2026-10-08",
+  "endpoint": "https://logis.loudoun.gov/gis/rest/services/LMARC/LandMARC_Permits/MapServer/1/query",
+  "note": "Three real Building (Residential) rows from the 2000-2010 deck/porch query. The same query returned count 11 on the capture date. ISSUEDATE is epoch milliseconds. ADDRESSLINE1 is the street number and ADDRESSLINE2 is the street name.",
+  "features": [
+    {
+      "attributes": {
+        "PermitNumber": "B80061870200",
+        "PermitType": "Building (Residential)",
+        "PermitStatus": "Issued",
+        "PermitWorkClass": "Deck - County Typical",
+        "CITY": "LEESBURG",
+        "STATE": "VA",
+        "ISSUEDATE": 963806400000,
+        "DESCRIPTION": "DECK/CO TYPICAL",
+        "SQUAREFEET": 0,
+        "VALUE": 0,
+        "ADDRESSLINE1": "413",
+        "ADDRESSLINE2": "ANDROMEDA",
+        "ADDRESSLINE3": "",
+        "STREETTYPE": "TER",
+        "PREDIRECTION": "",
+        "POSTDIRECTION": ""
+      }
+    },
+    {
+      "attributes": {
+        "PermitNumber": "B30164840100",
+        "PermitType": "Building (Residential)",
+        "PermitStatus": "Issued",
+        "PermitWorkClass": "Addition",
+        "CITY": "ASHBURN",
+        "STATE": "VA",
+        "ISSUEDATE": 1057809600000,
+        "DESCRIPTION": "DECK BTWN DETACHED GARAGE & TWNHSE",
+        "SQUAREFEET": 0,
+        "VALUE": 0,
+        "ADDRESSLINE1": "20303",
+        "ADDRESSLINE2": "LEIER",
+        "ADDRESSLINE3": "",
+        "STREETTYPE": "PL",
+        "PREDIRECTION": "",
+        "POSTDIRECTION": ""
+      }
+    },
+    {
+      "attributes": {
+        "PermitNumber": "B40078510100",
+        "PermitType": "Building (Residential)",
+        "PermitStatus": "Issued",
+        "PermitWorkClass": "Deck - County Typical",
+        "CITY": "CHANTILLY",
+        "STATE": "VA",
+        "ISSUEDATE": 1080532800000,
+        "DESCRIPTION": "DECK/CO TYPICAL/2 LEVEL",
+        "SQUAREFEET": 0,
+        "VALUE": 0,
+        "ADDRESSLINE1": "43885",
+        "ADDRESSLINE2": "PARAMOUNT",
+        "ADDRESSLINE3": "",
+        "STREETTYPE": "PL",
+        "PREDIRECTION": "",
+        "POSTDIRECTION": ""
+      }
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import { createLeadConfirmationToken } from './leadConfirmationToken';
 import { sendGhlLead } from './ghl';
 import { sendN8nWebsiteLead } from './n8nLeadForwarder';
 import { sendLeadNotificationEmail } from './emailDelivery';
+import { scheduleLeadTriage } from '@/lib/lead-triage/schedule.mjs';
 
 export async function sendContactEmail(formData) {
   try {
@@ -176,6 +177,26 @@ export async function sendContactEmail(formData) {
       });
       return { success: false, error: 'Failed to send lead' };
     }
+
+    // Triage runs after the response. A failure here must not change the
+    // success the form already earned from email, GHL, or n8n.
+    scheduleLeadTriage({
+      eventId: String(eventId || ''),
+      name: String(name || ''),
+      email: String(email || ''),
+      phone: String(phone || ''),
+      service: String(service || ''),
+      message: String(message || ''),
+      timeline: String(timeline || ''),
+      budgetRange: String(budgetRange || ''),
+      materialInterest: String(materialInterest || ''),
+      city: String(city || pageCity || ''),
+      state: String(state || ''),
+      address: String(address || ''),
+      zip: String(zip || ''),
+      formName: String(formName || ''),
+      sourceUrl: String(sourceUrl || ''),
+    });
 
     // Fire Meta CAPI server-side (non-blocking, env-gated — no-ops if creds absent).
     // Same event_id as the client-side form_submit + lead_confirmed events,
