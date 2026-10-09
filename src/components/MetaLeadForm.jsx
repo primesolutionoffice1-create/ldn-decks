@@ -45,10 +45,18 @@ export default function MetaLeadForm({
     event.preventDefault();
     event.stopPropagation();
     event.nativeEvent?.stopImmediatePropagation?.();
-    setStatus("submitting");
+    if (status === "submitting" || status === "success") return;
 
-    const result = await submit(event.currentTarget);
-    if (!result.success) {
+    setStatus("submitting");
+    try {
+      const result = await submit(event.currentTarget);
+      if (result.success) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error('Meta lead form submission failed:', error?.message || error);
       setStatus("error");
     }
   }
@@ -185,13 +193,20 @@ export default function MetaLeadForm({
         {status === "error" && (
           <p className={styles.error} role="alert">The request did not send. Please try again or call us.</p>
         )}
+        {status === "success" && (
+          <p role="status">Message received. We will review your project details and follow up shortly.</p>
+        )}
 
         <div className={styles.actions}>
           <button className={styles.backButton} type="button" onClick={() => setStep(1)}>
             Back
           </button>
-          <button className={styles.primaryButton} type="submit" disabled={status === "submitting"}>
-            {status === "submitting" ? "Sending..." : submitLabel}
+          <button
+            className={styles.primaryButton}
+            type="submit"
+            disabled={status === "submitting" || status === "success"}
+          >
+            {status === "success" ? "Message received" : status === "submitting" ? "Sending..." : submitLabel}
           </button>
         </div>
       </fieldset>

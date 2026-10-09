@@ -10,6 +10,28 @@
   padding: 0 40px;
 }
 
+.withQuickForm {
+  padding: 32px 0;
+  text-align: left;
+}
+
+.heroGrid {
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(420px, 1.15fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.heroCopy {
+  min-width: 0;
+}
+
+.heroGrid .subtextWrapper,
+.heroGrid .ctaWrapper {
+  justify-content: flex-start;
+}
+
 .subtextWrapper {
   display: flex;
   align-items: center;
@@ -104,7 +126,27 @@
   letter-spacing: 0.2px;
 }
 
+@media screen and (max-width: 900px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .withQuickForm {
+    padding: 24px 0 32px;
+  }
+
+  .heroGrid .description {
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
   .title {
     font-size: 36px;
   }

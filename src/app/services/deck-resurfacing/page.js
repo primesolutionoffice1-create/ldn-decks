@@ -23,6 +23,13 @@ export const metadata = buildMetadata({
   image: "/social/deck-resurfacing-service-social.png",
 });
 
+const PAGE_CONTEXT = {
+  pageType: 'paid_search_landing_page',
+  service: 'deck_resurfacing',
+  intent: 'deck_resurfacing',
+  county: 'Northern Virginia',
+};
+
 const expansionSections = [
   {
     title: "Why Resurface with the TimberTech Vintage Collection",
@@ -115,16 +122,24 @@ export default function DeckResurfacingPage() {
         description="Professional deck resurfacing services utilizing TimberTech Vintage Collection composite boards, structural reinforcement, and aluminum railings in Northern Virginia."
         url="https://ldndecks.com/services/deck-resurfacing"
         category="Deck Construction"
-        lowPrice="10000"
+        lowPrice="15000"
         highPrice="35000"
         relatedServices={['https://ldndecks.com/services/deck-replacement', 'https://ldndecks.com/services/deck-repair', 'https://ldndecks.com/services/new-decks']}
       />
 
-      <ServicesHeader
-        subtext="Deck Resurfacing Loudoun VA"
-        title="Upgrade Your Deck with TimberTech Vintage Collection"
-        description="Don't tear down a structurally sound deck. Transform your outdated outdoor space into a premium retreat with high-end TimberTech Vintage Collection composite boards—engineered for beauty, durability, and a lifetime of performance."
-      />
+      <div id="deck-resurfacing-estimate" style={{ scrollMarginTop: '24px' }}>
+        <ServicesHeader
+          subtext="Projects from $15,000+"
+          title="Deck Resurfacing in Northern Virginia"
+          description="We inspect the existing frame first, then plan new composite or PVC decking, railings, stairs, fascia, lighting, permits, and HOA scope only when the structure is sound enough to keep."
+          estimateHref="#deck-resurfacing-estimate"
+          showQuickForm
+          quickFormService="Deck Resurfacing"
+          quickFormLocation="paid_search_resurfacing_above_fold"
+          quickFormHeading="Want to know whether your frame can be resurfaced? Send the basics and we will call back."
+          pageContext={PAGE_CONTEXT}
+        />
+      </div>
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
         <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
       </section>
@@ -253,7 +268,12 @@ export default function DeckResurfacingPage() {
 
       <RelatedGuides currentPath="/services/deck-resurfacing" />
       <SimpleCTA title="Resurface Your Deck Today" buttonText="Get Free Estimate" link="/get-estimate" />
-      <ContactHome />
+      <ContactHome
+        formType="paid_search"
+        formLocation="paid_search_resurfacing_terminal"
+        service="Deck Resurfacing"
+        pageContext={PAGE_CONTEXT}
+      />
     </main>
   );
 }

@@ -99,6 +99,10 @@ function buildEventPayload({
  * @returns {Promise<{success: boolean, skipped?: boolean, error?: string}>}
  */
 export async function sendMetaLeadEvent(lead) {
+  if (lead?.optionalTrackingConsent !== 'accepted') {
+    return { success: false, skipped: true, error: 'optional tracking consent not accepted' };
+  }
+
   const pixelId = process.env.META_PIXEL_ID;
   const accessToken = process.env.META_CAPI_ACCESS_TOKEN;
   const testEventCode = process.env.META_CAPI_TEST_EVENT_CODE;

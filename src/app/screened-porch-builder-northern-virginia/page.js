@@ -13,7 +13,6 @@ import NamedAuthor from '@/components/NamedAuthor';
 import RelatedGuides from '@/components/RelatedGuides';
 import SimpleCTA from '@/components/SimpleCTA';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import AboveFoldCTA from '@/components/AboveFoldCTA';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import ArticleSchema from '@/components/ArticleSchema';
 import { buildMetadata } from '@/lib/seo';
@@ -26,6 +25,12 @@ export const metadata = buildMetadata({
 });
 
 const PATH = '/screened-porch-builder-northern-virginia';
+const PAGE_CONTEXT = {
+  pageType: 'paid_search_landing_page',
+  service: 'screened_porch',
+  intent: 'screened_porch_builder',
+  county: 'Northern Virginia',
+};
 
 const inclusions = [
   {
@@ -261,8 +266,12 @@ export default function ScreenedPorchBuilderNovaPage() {
         subtext="Northern Virginia's Premier Porch Contractor"
         title="Screened Porch Contractor & Builder — Northern Virginia"
         description="Screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze planning, structural scope review, and permit or HOA coordination in the written proposal."
+        showQuickForm
+        quickFormService="Screened Porches"
+        quickFormLocation="paid_search_screened_porch_above_fold"
+        quickFormHeading="Planning a screened porch? Send the project basics and we will call back."
+        pageContext={PAGE_CONTEXT}
       />
-      <AboveFoldCTA headline="Need a screened porch contractor in Northern Virginia? Get a written itemized estimate after structure, permits, and HOA needs are reviewed." />
 
       <section id="screened-porch-builder-answer" data-speakable="screened-porch-builder-answer">
         <GeoAnswerBlock
@@ -402,7 +411,12 @@ export default function ScreenedPorchBuilderNovaPage() {
       </section>
       
       <RelatedGuides currentPath="/screened-porch-builder-northern-virginia" category="ai-retrieval" />
-      <ContactHome />
+      <ContactHome
+        formType="paid_search"
+        formLocation="paid_search_screened_porch_terminal"
+        service="Screened Porches"
+        pageContext={PAGE_CONTEXT}
+      />
     </main>
   );
 }

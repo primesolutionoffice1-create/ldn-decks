@@ -1,17 +1,18 @@
 'use client';
 import { useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { sendContactEmail } from '@/server/sendEmail';
+import { sendConfirmedMetaLeadEvent, sendContactEmail } from '@/server/sendEmail';
 import {
   markLeadConfirmationPending,
   trackFormSubmit,
-  trackGoogleAdsLeadOnConfirmedSubmit,
 } from '@/lib/tracking';
 import { getClickIds, getFbp, getUtmParams, CLICK_ID_KEYS, UTM_KEYS } from '@/lib/clickIds';
+import { getOptionalTrackingConsent, sanitizeLeadUrl } from '@/lib/leadPrivacy';
+import { storeLeadConfirmationReceipt } from '@/lib/leadConfirmationClient';
 
 // Shared submission pipeline for every lead form on the site.
 // Owns: click-ID forwarding to server, event_id generation, dedup guard,
-// dataLayer push, and SPA navigation to /thank-you?eid=<event_id>.
+// dataLayer push, and a session-scoped handoff to a clean /thank-you URL.
 //
 // Returning the same shape from every form means GTM, Meta CAPI, and the
 // /thank-you proof-of-conversion event all see a single, deduplicatable
@@ -50,10 +51,13 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
       ? crypto.randomUUID()
       : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
     formData.append('event_id', eventId);
+    formData.append('optional_tracking_consent', getOptionalTrackingConsent());
 
     if (typeof window !== 'undefined') {
-      formData.append('source_url', window.location.href);
-      if (document.referrer) formData.append('referrer', document.referrer);
+      const sourceUrl = sanitizeLeadUrl(window.location.href);
+      const referrer = sanitizeLeadUrl(document.referrer);
+      if (sourceUrl) formData.append('source_url', sourceUrl);
+      if (referrer) formData.append('referrer', referrer);
     }
     if (formElement?.dataset?.formLocation && !formData.get('form_name')) {
       formData.append('form_name', formElement.dataset.formLocation);
@@ -82,8 +86,6 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
     const homeownerStatus = formData.get('homeownerStatus') || '';
     const hoa = formData.get('hoa') || '';
     const formLocation = formElement?.dataset?.formLocation || formType;
-    const requiresServerConfirmedGoogleAds =
-      formLocation === 'paid_social_deck_project_estimate';
 
     // ContactHome collects a single `name` field. Normalize it into
     // firstName/lastName before the server action so Meta CAPI gets the
@@ -106,7 +108,7 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
       // cross-component / re-mount dedup happens via event_id downstream.
       if (!hasTracked.current) {
         hasTracked.current = true;
-        const trackingReceipt = trackFormSubmit({
+        trackFormSubmit({
           email,
           phone,
           firstName,
@@ -128,19 +130,24 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
           eventId,
           pageContext,
         });
-        if (!requiresServerConfirmedGoogleAds) {
-          trackGoogleAdsLeadOnConfirmedSubmit({
-            eventId,
-            attributionPayload: trackingReceipt?.attributionPayload || {},
-          });
-        }
       }
       if (result.confirmationToken) {
-        markLeadConfirmationPending(eventId);
-        router.push(
-          `/thank-you?eid=${encodeURIComponent(eventId)}&proof=${encodeURIComponent(result.confirmationToken)}`
-        );
-        return { success: true, eventId, confirmationReady: true };
+        const receiptStored = storeLeadConfirmationReceipt(eventId, result.confirmationToken);
+        if (receiptStored) {
+          if (formData.get('optional_tracking_consent') === 'accepted') {
+            sendConfirmedMetaLeadEvent(formData, result.confirmationToken).catch((error) => {
+              console.error('Meta CAPI post-confirmation error:', error?.message || error);
+            });
+          }
+          markLeadConfirmationPending(eventId);
+          router.push('/thank-you');
+          return { success: true, eventId, confirmationReady: true };
+        }
+
+        // Delivery succeeded, but browser storage is unavailable. Keep the
+        // user on the form for its inline success state rather than leaking
+        // proof in the URL or showing an unverified confirmation page.
+        return { success: true, eventId, confirmationReady: false };
       } else {
         // Fail conversion tracking closed if token signing is misconfigured.
         // Do not navigate to /thank-you without server-confirmed proof because

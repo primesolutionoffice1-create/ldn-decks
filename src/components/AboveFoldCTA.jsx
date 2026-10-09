@@ -15,6 +15,7 @@ export default function AboveFoldCTA({
   quickFormLocation = 'paid_search_above_fold',
   quickFormHeading = 'Get a written estimate path today',
   pageContext,
+  leadSource,
 }) {
   return (
     <section
@@ -71,6 +72,7 @@ export default function AboveFoldCTA({
             formLocation={quickFormLocation}
             heading={quickFormHeading}
             pageContext={pageContext}
+            leadSource={leadSource}
           />
         )}
       </div>

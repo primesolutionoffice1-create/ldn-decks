@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '100px 20px', lineHeight: '1.6', color: '#333' }}>
       <h1>Privacy Policy</h1>
-      <p>Last Updated: September 2026</p>
+      <p>Last Updated: October 2026</p>
       
       <section style={{ marginTop: '40px' }}>
         <h2>1. Information We Collect</h2>
@@ -24,10 +24,10 @@ export default function PrivacyPolicy() {
       <section style={{ marginTop: '30px' }}>
         <h2>2. Cookies and Web Beacons</h2>
         <p>
-          Like any other website, Loudoun Decks uses &apos;cookies&apos;. These cookies are used to store information including visitors&apos; preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users&apos; experience by customizing our web page content based on visitors&apos; browser type and/or other information.
+          Loudoun Decks uses essential browser storage to remember your privacy choice. If you accept optional tracking, we may also store advertising click identifiers and campaign parameters, such as gclid and UTM values, in first-party cookies for up to 90 days. We use those values to understand which marketing source produced an estimate request and to support offline conversion reporting.
         </p>
         <p>
-          When you first visit our site, you can accept or decline optional analytics and advertising cookies. Your choice is stored in your browser and can be changed by clearing site data for ldndecks.com.
+          Optional analytics and advertising storage is denied by default. You can accept or decline it in the privacy banner. Your choice is stored in your browser and can be reset by clearing site data for ldndecks.com.
         </p>
       </section>
 
