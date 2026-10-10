@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Breadcrumbs.module.css';
 import { labelFor } from '@/lib/breadcrumbLabels';
+import { getCanonicalBreadcrumbHref } from '@/lib/breadcrumbRoutes';
 import JsonLd from './JsonLd';
 
 export default function Breadcrumbs() {
@@ -12,17 +13,9 @@ export default function Breadcrumbs() {
   if (pathname === '/') return null;
 
   const pathSegments = pathname.split('/').filter(segment => segment !== '');
-  const canonicalBreadcrumbHrefs = {
-    service: '/services',
-    'outdoor-living': '/outdoor-living-northern-virginia',
-    patios: '/services/patios',
-    pergolas: '/services/gazebo-pergola',
-    'screened-porches': '/screened-porch-builder-northern-virginia',
-  };
-
   const breadcrumbs = pathSegments.map((segment, index) => {
     const generatedHref = `/${pathSegments.slice(0, index + 1).join('/')}`;
-    const href = index === 0 ? canonicalBreadcrumbHrefs[segment] || generatedHref : generatedHref;
+    const href = index === 0 ? getCanonicalBreadcrumbHref(segment, generatedHref) : generatedHref;
     const label = labelFor(segment);
 
     return { label, href };

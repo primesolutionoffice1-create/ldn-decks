@@ -328,6 +328,7 @@ export default async function sitemap() {
                 { path: "/eco-friendly-composite-decking",              priority: 0.80, lastMod: TIER1, freq: "monthly" },
                 { path: "/questions-to-ask-before-building-a-deck",     priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/trex-transcend-review-northern-virginia",       priority: 0.90, lastMod: TIER1, freq: "weekly" },
+                { path: "/fiberon-decking-review-northern-virginia",       priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/deck-design-ideas-2026",                      priority: 0.90, lastMod: TIER1, freq: "weekly" },
                 { path: "/best-deck-stain-sealer-virginia",             priority: 0.85, lastMod: TIER1, freq: "weekly" },
                 { path: "/outdoor-living-trends-northern-virginia-2026", priority: 0.85, lastMod: TIER1, freq: "weekly" },

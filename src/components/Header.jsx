@@ -68,11 +68,7 @@ const MinusIcon = () => (
   </svg>
 );
 
-import { counties, slugify, getCanonicalCityUrl } from '@/data/cityData';
-
-
-// Using slugify imported from cityData
-
+import { counties, getCanonicalCityUrl, getIndexableCitiesForCounty } from '@/data/cityData';
 
 import { useContact } from '@/context/ContactContext';
 import CallLink from '@/components/CallLink';
@@ -277,7 +273,7 @@ export default function Header() {
                           {county.name} <CaretRightIcon />
                         </Link>
                         <div className={styles.subMenu}>
-                          {county.cities.slice(0, 15).map(city => (
+                          {getIndexableCitiesForCounty(countySlug).slice(0, 15).map(city => (
                             <Link key={city} href={getCanonicalCityUrl(countySlug, city)} onClick={() => setIsMobileOpen(false)}>{city}, VA</Link>
                           ))}
                         </div>
@@ -471,7 +467,7 @@ export default function Header() {
                       <div className={`${styles.drawerAccordion} ${activeSubMenu[countySlug] ? styles.expanded : ''}`}>
                         <div className={styles.drawerAccordionInner}>
                           <div className={styles.mobileDropdown} style={{ background: 'transparent' }}>
-                            {county.cities.slice(0, 15).map(city => (
+                            {getIndexableCitiesForCounty(countySlug).slice(0, 15).map(city => (
                               <Link key={city} href={getCanonicalCityUrl(countySlug, city)} onClick={() => setIsMobileOpen(false)} style={{ paddingLeft: '50px', fontSize: '13px' }}>- {city}, VA</Link>
                             ))}
                           </div>
