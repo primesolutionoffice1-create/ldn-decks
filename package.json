@@ -59,6 +59,7 @@
         "seo:validate-sitemap-freshness": "node scripts/validate-sitemap-freshness.mjs",
         "seo:validate-image-sitemap": "node scripts/validate-image-sitemap.mjs",
         "seo:validate-crawl-quality": "npm run seo:validate-ai-discovery && npm run seo:validate-priority-internal-links && npm run seo:validate-sitemap-freshness && npm run seo:validate-image-sitemap",
+        "seo:validate-crawl-remediation": "node --no-warnings scripts/validate-seo-crawl-remediation.mjs",
         "seo:rank-track": "node scripts/rank-tracker-report.mjs",
         "seo:deployment-guard": "node scripts/verify-local-seo-deployment.mjs",
         "seo:verify-local-entities": "node scripts/verify-local-service-entities.mjs",

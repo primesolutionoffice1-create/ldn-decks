@@ -68,6 +68,14 @@ export const canonicalCities = new Set([
   'stafford' // Stafford
 ]);
 
+export function isCanonicalCity(city) {
+  return canonicalCities.has(slugify(city));
+}
+
+export function getIndexableCitiesForCounty(countySlug) {
+  return counties[countySlug]?.cities.filter(isCanonicalCity) || [];
+}
+
 // Helper to get the canonical URL for a city, avoiding redirects
 export function getCanonicalCityUrl(countySlug, city) {
   const citySlug = slugify(city);
@@ -77,19 +85,12 @@ export function getCanonicalCityUrl(countySlug, city) {
   return `/near-you/${countySlug}/${citySlug}`;
 }
 
-// Returns an internal URL for a city ONLY if a real page exists for it,
-// otherwise null. Canonical cities resolve to their standalone
-// /deck-builder-{city}-va page; other cities present in cityData resolve to
-// their /near-you/{county}/{city} page. Names like "Ashburn, VA" are accepted.
-// Use this for county-page city lists so they never link to a 404.
+// Returns an indexable canonical city URL, otherwise null. Use this on
+// indexable directory surfaces so intentionally noindex city templates remain
+// visible as plain text without receiving crawl equity.
 export function getCityLink(countySlug, cityName) {
   const citySlug = slugify(String(cityName).replace(/,?\s*VA\s*$/i, ''));
-  if (canonicalCities.has(citySlug)) {
-    return `/deck-builder-${citySlug}-va`;
-  }
   const county = counties[countySlug];
-  if (county && county.cities.some((c) => slugify(c) === citySlug)) {
-    return `/near-you/${countySlug}/${citySlug}`;
-  }
-  return null;
+  if (!county?.cities.some((city) => slugify(city) === citySlug)) return null;
+  return canonicalCities.has(citySlug) ? `/deck-builder-${citySlug}-va` : null;
 }

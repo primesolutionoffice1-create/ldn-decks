@@ -5,7 +5,7 @@ import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import { BUSINESS } from '@/lib/business';
-import { getAllCityPaths, getCanonicalCityUrl } from '@/data/cityData';
+import { getAllCityPaths, getCityLink } from '@/data/cityData';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -60,23 +60,27 @@ export default function AreasWeServePage() {
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                 {county.cities.map((city) => {
                   const cityName = city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ');
-                  return (
+                  const href = getCityLink(slug, city);
+                  const cityChipStyle = {
+                    display: 'inline-block',
+                    padding: '0.4rem 0.8rem',
+                    border: '1px solid #e5e5e5',
+                    borderRadius: 20,
+                    fontSize: '0.9rem',
+                    color: 'var(--color-dark)',
+                  };
+                  return href ? (
                     <Link
                       key={city}
-                      href={getCanonicalCityUrl(slug, city)}
-                      style={{
-                        display: 'inline-block',
-                        padding: '0.4rem 0.8rem',
-                        border: '1px solid #e5e5e5',
-                        borderRadius: 20,
-                        fontSize: '0.9rem',
-                        color: 'var(--color-dark)',
-                        textDecoration: 'none',
-                        transition: 'all 0.2s',
-                      }}
+                      href={href}
+                      style={{ ...cityChipStyle, textDecoration: 'none', transition: 'all 0.2s' }}
                     >
                       {cityName}, VA
                     </Link>
+                  ) : (
+                    <span key={city} style={cityChipStyle}>
+                      {cityName}, VA
+                    </span>
                   );
                 })}
               </div>

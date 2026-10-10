@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { counties, slugify, getCanonicalCityUrl } from '@/data/cityData';
+import { counties, getCanonicalCityUrl, isCanonicalCity } from '@/data/cityData';
 import styles from './ServiceAreasGrid.module.css';
 
 const LocationIcon = () => (
@@ -26,16 +26,23 @@ export default function ServiceAreasGrid() {
                   <h3 className={styles.countyTitle}>{county.name}</h3>
                 </Link>
                 <ul className={styles.cityList}>
-                  {county.cities.map((city, cIdx) => (
-                    <li key={cIdx}>
-                      <Link 
-                        href={getCanonicalCityUrl(countySlug, city)}
-                        className={styles.cityLink}
-                        title={`Deck Builder in ${city}, VA`}
-                      >
-                        <LocationIcon />
-                        {city}, VA
-                      </Link>
+                  {county.cities.map((city) => (
+                    <li key={city}>
+                      {isCanonicalCity(city) ? (
+                        <Link
+                          href={getCanonicalCityUrl(countySlug, city)}
+                          className={styles.cityLink}
+                          title={`Deck Builder in ${city}, VA`}
+                        >
+                          <LocationIcon />
+                          {city}, VA
+                        </Link>
+                      ) : (
+                        <span className={styles.cityLabel}>
+                          <LocationIcon />
+                          {city}, VA
+                        </span>
+                      )}
                     </li>
                   ))}
                 </ul>
