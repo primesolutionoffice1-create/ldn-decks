@@ -86,14 +86,14 @@ export default function ArlingtonPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-08" url="https://ldndecks.com/deck-permit-arlington-county-virginia" name="Arlington County Deck Permit Guide (2026) | Loudoun Decks" description="Complete 2026 Arlington County deck permit guide: CPHD process, Permit Arlington portal, setbacks, historic-district review, inspection contacts, and timeline." speakable />
+      <WebPageSchema dateModified="2026-10-05" url="https://ldndecks.com/deck-permit-arlington-county-virginia" name="Arlington County Deck Permit Guide (2026) | Loudoun Decks" description="Complete 2026 Arlington County deck permit guide: CPHD process, Permit Arlington portal, setbacks, historic-district review, inspection contacts, and timeline." speakable />
       <ArticleSchema
         title="Arlington County Deck Permit Guide (2026)"
         description="The full 2026 Arlington County deck-permit process for homeowners and contractors: CPHD requirements, the Permit Arlington portal, setbacks, historic-district review (Lyon Park, Maywood, Westover), and the three required inspections."
         path="/deck-permit-arlington-county-virginia"
         image="/images/blog-permit-guide.png"
         datePublished="2026-05-27"
-        dateModified="2026-06-08"
+        dateModified="2026-10-05"
       />
 
       <section style={{ background: 'linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/images/blog-permit-guide.png)', backgroundSize: 'cover', backgroundPosition: 'center', color: '#fff', padding: '8rem 0' }}>
@@ -127,7 +127,7 @@ export default function ArlingtonPermitPage() {
 
           <div style={S.callout}>
             <p style={{ margin: 0, fontWeight: 600 }}>Important note:</p>
-            <p style={{ margin: '0.5rem 0 0' }}>Insurance providers regularly deny injury or structural claims on unpermitted Arlington decks. Resale closings in Arlington — particularly in Lyon Park, Lyon Village, Cherrydale, and Donaldson Run — frequently catch unpermitted exterior work during the inspection contingency and force a permit retrofit (or demolition) before closing. If an existing deck needs correction before it can be approved, start with our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link>.</p>
+            <p style={{ margin: '0.5rem 0 0' }}>Insurance providers regularly deny injury or structural claims on unpermitted Arlington decks. Resale closings in Arlington — particularly in Lyon Park, Lyon Village, Cherrydale, and Donaldson Run — frequently catch unpermitted exterior work during the inspection contingency and force a permit retrofit (or demolition) before closing. If an existing deck needs correction before it can be approved, start with a <Link href="/services/deck-inspection" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>professional deck inspection</Link>, then compare <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair</Link> with <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck replacement</Link>.</p>
           </div>
 
           {/* ===== SECTION 2: The Permit Arlington portal ===== */}
@@ -222,7 +222,7 @@ export default function ArlingtonPermitPage() {
             <li style={S.listItem}><strong>Concentrated load test:</strong> guardrails must withstand a 200-pound concentrated load at any single point.</li>
             <li style={S.listItem}><strong>Stair handrail:</strong> required for stairs with 4 or more risers; grip diameter and clearance per VRC R311.</li>
           </ul>
-          <p style={S.p}>For the full stair-design walkthrough, use our <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair calculator</Link>, review the <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>, or read our <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code reference</Link>.</p>
+          <p style={S.p}>For the full stair-design walkthrough, use our <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair calculator</Link>, review the <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>, or read our <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code reference</Link>. Before final inspection, homeowners can also use the <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checklist</Link> and compare <Link href="/education/common-deck-stair-inspection-failures-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>common stair inspection failures</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '3rem' }}>Arlington Deck Permit FAQs</h2>
           {permitFaqs.map((faq) => (
@@ -241,6 +241,7 @@ export default function ArlingtonPermitPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '3rem 0 1rem' }}>Related Arlington resources</h2>
           <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
+            <li>→ <Link href="/lead-magnets/nova-deck-permit-checklist-2026" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2026 NoVA deck permit checklist</Link></li>
             <li>→ <Link href="/deck-builder-arlington-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Arlington deck builder services + neighborhoods we serve</Link></li>
             <li>→ <Link href="/near-you/arlington-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Arlington County overview</Link></li>
             <li>→ <Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia HOA deck rules</Link></li>
@@ -261,7 +262,7 @@ export default function ArlingtonPermitPage() {
 
       <SimpleCTA title="Arlington deck project ahead? Skip the permit headache." buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-permit-arlington-county-virginia" />
-      <NamedAuthor context="Arlington and Northern Virginia" lastUpdated="2026-06-08" />
+      <NamedAuthor context="Arlington and Northern Virginia" lastUpdated="2026-10-05" />
       <ContactHome />
     </>
   );

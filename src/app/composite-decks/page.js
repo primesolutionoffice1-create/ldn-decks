@@ -126,7 +126,7 @@ const expansionSections = [
 export default function CompositeDecksPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | Premium Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax &amp; Leesburg." speakable />
+      <WebPageSchema dateModified="2026-10-06" url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | Premium Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax &amp; Leesburg." speakable />
       <ServiceSchema
         name="Composite Deck Installation"
         description="Expert composite deck installation in Northern Virginia. Trex, TimberTech and AZEK material planning. manufacturer material warranties."
@@ -134,7 +134,7 @@ export default function CompositeDecksPage() {
         category="Deck Construction"
         lowPrice="20000"
         highPrice="80000"
-        relatedServices={['https://ldndecks.com/trex-decks', 'https://ldndecks.com/timbertech-decks', 'https://ldndecks.com/services/new-decks']}
+        relatedServices={['https://ldndecks.com/trex-decks', 'https://ldndecks.com/timbertech-decks', 'https://ldndecks.com/services/deck-replacement', 'https://ldndecks.com/services/new-decks']}
       />
       <ServicesHeader 
         subtext="Composite Deck Specialist"
@@ -181,6 +181,30 @@ export default function CompositeDecksPage() {
           <p style={{ fontSize: '15px', color: '#555', margin: '12px 0 0' }}>
             Replacing an aging wood deck? Start with the <Link href="/replace-wood-deck-with-composite-northern-virginia" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>wood-to-composite replacement guide</Link>. Comparing a high-value replacement in Arlington, Alexandria, or McLean? Start with the <Link href="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>premium composite replacement guide</Link> before selecting Trex, TimberTech, AZEK, Fiberon, railings, lighting, or a full rebuild scope.
           </p>
+        </div>
+      </section>
+
+      <section id="composite-structural-permit-handoff" style={{ padding: '2.25rem 1.5rem', background: '#fff' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <h2 style={{ fontSize: '1.55rem', fontWeight: 800, marginBottom: '0.75rem' }}>Structural, Stair and Permit Handoff</h2>
+          <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
+            For composite replacement projects, premium boards should follow the structural decision. Before comparing Trex, TimberTech, AZEK, Fiberon, railings, or lighting, confirm whether the existing frame can safely stay, whether stairs need code correction, and which county permit path applies.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+            {[
+              ['/services/deck-replacement', 'Deck replacement decision'],
+              ['/tools/deck-stair-calculator', 'Deck stair calculator'],
+              ['/education/deck-stair-code-rise-run-virginia', 'Virginia stair code'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger flashing guide'],
+              ['/deck-permit-loudoun-county-virginia', 'Loudoun permit guide'],
+              ['/deck-permit-fairfax-county-virginia', 'Fairfax permit guide'],
+              ['/deck-permit-prince-william-county-virginia', 'Prince William permit guide'],
+              ['/deck-permit-arlington-county-virginia', 'Arlington permit guide'],
+              ['/get-estimate', 'Written estimate path'],
+            ].map(([href, text]) => (
+              <Link key={href} href={href} style={{ display: 'block', padding: '0.85rem', border: '1px solid #e5e5e5', borderRadius: 8, color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none' }}>{text} &rarr;</Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -297,7 +321,7 @@ export default function CompositeDecksPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-materials-comparison-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Material Comparison for Virginia Homes →</Link></li>
         </ul>
       </section>
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-06" />
 
       <ContactHome />
     </main>
