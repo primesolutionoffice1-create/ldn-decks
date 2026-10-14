@@ -5,6 +5,7 @@ import SimpleCTA from '@/components/SimpleCTA';
 import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
+import { buildFAQSchema } from '@/lib/faqSchema';
 
 export const metadata = buildMetadata({
   path: '/faqs',
@@ -14,8 +15,14 @@ export const metadata = buildMetadata({
 });
 
 export default function FAQPage() {
+  const faqSchema = buildFAQSchema();
+  
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/faqs" name="Deck Building FAQs | Northern Virginia | Loudoun Decks" description="Answers to common questions about deck building, materials, costs, timelines, permits, and HOA in Northern Virginia. Expert answers from Loudoun Decks." speakable />
       <FAQHeader />
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
