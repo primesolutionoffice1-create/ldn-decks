@@ -172,6 +172,7 @@ const RECORD_COLUMNS = [
   'status',
   'classification',
   'draft',
+  'personalization',
   'summary_sent_at',
   'created_at',
   'updated_at',
@@ -196,6 +197,7 @@ export function rowToRecord(row) {
     status: row.status,
     classification: row.classification || null,
     draft: row.draft || null,
+    personalization: row.personalization || null,
     summarySentAt: row.summary_sent_at ? toIso(row.summary_sent_at) : null,
     createdAt: toIso(row.created_at),
     updatedAt: toIso(row.updated_at),
@@ -227,11 +229,13 @@ CREATE TABLE IF NOT EXISTS lead_triage_records (
   status TEXT NOT NULL,
   classification JSONB,
   draft JSONB,
+  personalization JSONB,
   summary_sent_at TIMESTAMPTZ,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   UNIQUE (source, external_id)
 );
+ALTER TABLE lead_triage_records ADD COLUMN IF NOT EXISTS personalization JSONB;
 CREATE TABLE IF NOT EXISTS lead_triage_meta (
   id TEXT PRIMARY KEY,
   value JSONB NOT NULL
@@ -266,7 +270,7 @@ export async function createPostgresStore(connectionString) {
       const timestamp = nowIso();
       const inserted = await query(
         `INSERT INTO lead_triage_records (${RECORD_COLUMNS.join(', ')})
-         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13::jsonb,$14,$15::jsonb,$16::jsonb,$17,$18,$19)
+         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13::jsonb,$14,$15::jsonb,$16::jsonb,$17::jsonb,$18,$19,$20)
          RETURNING *`,
         [
           id,
@@ -285,6 +289,7 @@ export async function createPostgresStore(connectionString) {
           record.status || 'pending',
           record.classification ? JSON.stringify(record.classification) : null,
           record.draft ? JSON.stringify(record.draft) : null,
+          record.personalization ? JSON.stringify(record.personalization) : null,
           record.summarySentAt || null,
           record.createdAt || timestamp,
           timestamp,
@@ -310,8 +315,9 @@ export async function createPostgresStore(connectionString) {
            status = $11,
            classification = $12::jsonb,
            draft = $13::jsonb,
-           summary_sent_at = $14,
-           updated_at = $15
+           personalization = $14::jsonb,
+           summary_sent_at = $15,
+           updated_at = $16
          WHERE id = $1
          RETURNING *`,
         [
@@ -328,6 +334,7 @@ export async function createPostgresStore(connectionString) {
           next.status,
           next.classification ? JSON.stringify(next.classification) : null,
           next.draft ? JSON.stringify(next.draft) : null,
+          next.personalization ? JSON.stringify(next.personalization) : null,
           next.summarySentAt || null,
           next.updatedAt,
         ],

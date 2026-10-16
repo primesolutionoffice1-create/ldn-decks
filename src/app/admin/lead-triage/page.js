@@ -30,6 +30,8 @@ export default async function LeadTriagePage() {
       <h1 style={{ fontSize: '2rem', marginBottom: '0.25rem' }}>Today&apos;s leads</h1>
       <p style={{ color: '#333' }}>
         {today ? today.date : 'Eastern time'} · mode {mode} · cutoff {cutoff}. Drafts stay in storage until someone at the office sends them.
+        {' '}
+        <a href="/admin/competitor-map">Competitor coverage map</a>
       </p>
       {errorMessage ? (
         <p role="alert">The lead store could not be read. Set DATABASE_URL on Vercel, or run a local dry run. ({errorMessage})</p>
@@ -70,6 +72,25 @@ function LeadTable({ title, rows, empty }) {
   );
 }
 
+function Personalization({ brief }) {
+  if (!brief) return null;
+  const names = (brief.competitors || []).map((competitor) => competitor.name);
+  return (
+    <div style={{ margin: '0.4rem 0', color: '#333' }}>
+      <p style={{ margin: '0.2rem 0' }}>{brief.headline}</p>
+      <p style={{ margin: '0.2rem 0' }}>
+        Existing pages:{' '}
+        <a href={brief.cityPage}>{brief.cityPage}</a>
+        {brief.cityPageNote ? ` (${brief.cityPageNote})` : ''}
+        {' · '}
+        <a href={brief.servicePage}>{brief.servicePage}</a>
+      </p>
+      {brief.organicNote ? <p style={{ margin: '0.2rem 0' }}>{brief.organicNote}</p> : null}
+      {names.length ? <p style={{ margin: '0.2rem 0' }}>Snapshot competitors: {names.join(', ')}</p> : null}
+    </div>
+  );
+}
+
 function LeadCard({ record }) {
   return (
     <article style={{ borderTop: '1px solid #ddd', padding: '0.9rem 0' }}>
@@ -82,6 +103,7 @@ function LeadCard({ record }) {
       <p style={{ margin: '0.2rem 0', color: '#444' }}>
         {record.phone || 'No phone'} · {record.email || 'No email'}
       </p>
+      <Personalization brief={record.personalization} />
       {record.draft?.text ? (
         <pre style={{ whiteSpace: 'pre-wrap', fontFamily: 'Georgia, serif', background: '#faf7f4', padding: '0.8rem' }}>
           {record.draft.text}

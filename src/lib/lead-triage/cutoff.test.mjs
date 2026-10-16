@@ -401,6 +401,7 @@ test('postgres row mapping keeps the draft flag off', () => {
     status: 'passed',
     classification: { bucket: 'passed', rank: 80 },
     draft: { sendable: false, autoSent: false, text: 'Hi' },
+    personalization: { appliedToPublicSite: false, cityPage: '/deck-builder-ashburn-va' },
     summary_sent_at: null,
     created_at: '2026-10-08T11:00:00.000Z',
     updated_at: '2026-10-08T11:00:00.000Z',
@@ -408,6 +409,8 @@ test('postgres row mapping keeps the draft flag off', () => {
   assert.equal(record.externalId, 'evt');
   assert.equal(record.draft.sendable, false);
   assert.equal(record.draft.autoSent, false);
+  assert.equal(record.personalization.appliedToPublicSite, false);
+  assert.equal(record.personalization.cityPage, '/deck-builder-ashburn-va');
 });
 
 test('cron and today endpoints require a secret in production', () => {

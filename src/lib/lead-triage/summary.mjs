@@ -22,6 +22,27 @@ export function sourceLabel(source) {
   return source || 'Unknown';
 }
 
+function personalizationItems(record) {
+  const brief = record.personalization;
+  if (!brief?.cityPage) return '';
+  const note = brief.cityPageNote ? ` (${escapeHtml(brief.cityPageNote)})` : '';
+  const organic = brief.organicNote
+    ? `<li><strong>Organic note:</strong> ${escapeHtml(brief.organicNote)}</li>`
+    : '';
+  const names = (brief.competitors || []).map((competitor) => competitor.name).filter(Boolean);
+  const competitors = names.length
+    ? `<li><strong>Competitors in this snapshot:</strong> ${escapeHtml(names.join(', '))}</li>`
+    : '';
+  return `<li><strong>Existing pages:</strong> ${escapeHtml(brief.cityPage)}${note} and ${escapeHtml(brief.servicePage)}</li>${organic}${competitors}`;
+}
+
+function personalizationText(record) {
+  const brief = record.personalization;
+  if (!brief?.cityPage) return '';
+  const note = brief.cityPageNote ? ` (${brief.cityPageNote})` : '';
+  return `Existing pages: ${brief.cityPage}${note} and ${brief.servicePage}`;
+}
+
 function draftBlock(record) {
   if (!record.draft?.text) return '<p><em>No draft stored.</em></p>';
   const channel = record.draft.channel === 'internal_call_note'
@@ -43,6 +64,7 @@ export function buildSummaryEmail({ dateKey, top, counts, mode, cutoff, permitNo
         <li><strong>Score:</strong> ${escapeHtml(record.classification?.rank ?? '—')}</li>
         <li><strong>Phone:</strong> ${escapeHtml(record.phone || '—')}</li>
         <li><strong>Email:</strong> ${escapeHtml(record.email || '—')}</li>
+        ${personalizationItems(record)}
       </ul>
       ${draftBlock(record)}
     `).join('');
@@ -62,6 +84,7 @@ export function buildSummaryEmail({ dateKey, top, counts, mode, cutoff, permitNo
     `Passed ${counts.passed || 0}, review ${counts.needs_human_review || 0}, rejected ${counts.rejected || 0}.`,
     ...top.map((record, index) => [
       `${index + 1}. ${sourceLabel(record.source)} | ${record.city || '—'} | ${leadJobLabel(record)} | score ${record.classification?.rank ?? '—'}`,
+      personalizationText(record),
       record.draft?.text || '(no draft)',
     ].join('\n')),
   ].join('\n\n');

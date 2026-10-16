@@ -26,7 +26,8 @@ The dry run prints a JSON summary. `customerContacted` stays `false`.
 
 Today's queue is also available at:
 
-- `/admin/lead-triage` — same Basic Auth as the other `/admin` pages (`ADMIN_USERNAME` / `ADMIN_PASSWORD`)
+- `/admin/lead-triage` — same Basic Auth as the other `/admin` pages (`ADMIN_USERNAME` / `ADMIN_PASSWORD`). Each card includes a personalization brief: the existing city page, the existing service page, and competitors from the snapshot below.
+- `/admin/competitor-map` — the 13 service cities against the 2026-05-11 competitor note. Same Basic Auth. Nothing on this page is published to the public site.
 - `GET /api/lead-triage/today` — `Authorization: Bearer $CRON_SECRET`, or the same Basic Auth credentials
 
 Locally, with no admin password and no cron secret, the JSON route is open so you can try it. Production refuses it until one of those secrets is set.
@@ -108,8 +109,16 @@ Rough volume: 40 website leads and about 20 permit rows a month, with about half
 
 Budget **about $1–5 per month** so a price change, retries, or a one-time permit backfill still fits. A 2,000-row permit backfill at the Jev rate above is still under a dollar. The morning email is the only message this pipeline sends, and it goes to the office.
 
+## Personalization brief
+
+Classification stores a brief on the lead. It names one existing city page and one existing service page, plus any competitors in that city from the snapshot below. `appliedToPublicSite` is always `false`. The brief is for the office queue and the morning email. It does not create a page, rewrite a page, or change what a visitor sees.
+
+Dale City has no city page, so that brief points at `/deck-builder-woodbridge-va` and says so. A city with no mapped page points at `/areas-we-serve`.
+
+## Competitor coverage map
+
+`/admin/competitor-map` reads `seo-blueprint/02-COMPETITOR-INTEL.md`, captured 2026-05-11. It is a stored snapshot, not a live scrape and not a review crawl. Organic notes exist only for the three head queries in that note: Ashburn (organic #1), Leesburg (not in the top 10), and Fairfax (organic rank 5–8). Leesburg and Fairfax are the recorded gaps. Competitors with no city in the note are listed separately. Review counts appear only when that note recorded them.
+
 ## Not in this pipeline
 
-No Facebook, Nextdoor, or Craigslist collection. Those terms do not allow it.
-
-Next, after this is running on real leads: website personalization, then a competitor review map.
+No Facebook, Nextdoor, or Craigslist collection. Those terms do not allow it. The competitor map does not add them.

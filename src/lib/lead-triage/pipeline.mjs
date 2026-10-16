@@ -1,5 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { classifyLead } from './classify.mjs';
+import { buildPersonalization } from './personalize.mjs';
 import {
   easternDayBounds,
   isSevenAmEastern,
@@ -33,6 +34,7 @@ export function blankRecord(fields) {
     status: 'pending',
     classification: null,
     draft: null,
+    personalization: null,
     summarySentAt: null,
     createdAt: fields.createdAt || timestamp,
     updatedAt: timestamp,
@@ -66,10 +68,12 @@ export async function classifyStoredRecord(id, deps = {}) {
         draftError = String(error?.message || error).slice(0, 500);
       }
     }
+    const storedClassification = draftError ? { ...classification, draftError } : classification;
     return store.update(id, {
       status: classification.bucket,
-      classification: draftError ? { ...classification, draftError } : classification,
+      classification: storedClassification,
       draft,
+      personalization: buildPersonalization({ ...record, classification: storedClassification }),
     });
   } catch (error) {
     return store.update(id, {
