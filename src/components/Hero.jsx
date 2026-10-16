@@ -32,8 +32,9 @@ export default function Hero() {
           Custom Deck Builder Near You in Northern Virginia
         </h1>
         <p className={styles.heroDescription}>
-          Need a deck contractor for a new composite deck, replacement, repair, or screened porch?
-          Loudoun Decks helps plan design, permits, HOA details, and estimates across Loudoun, Fairfax, and Prince William.
+          Loudoun Decks builds, replaces, resurfaces, and repairs wood and composite decks in Northern Virginia,
+          including Leesburg, Ashburn, Sterling, and Centreville across Loudoun, Fairfax, and Prince William counties.
+          We plan design, permits, HOA details, and written estimates.
         </p>
         <HeroCTA />
       </div>
