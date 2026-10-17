@@ -141,3 +141,36 @@ export function gapCities() {
 export function unassignedCompetitors() {
   return COMPETITORS.filter((competitor) => competitor.cities.length === 0);
 }
+
+// Organic gaps first, then cities nobody in the snapshot named, then the rest.
+// A city that was already ranking stays at the bottom of the work list.
+export function prioritizeCoverage(rows = coverageRows()) {
+  return [...rows].sort((left, right) => {
+    const priority = coveragePriority(right) - coveragePriority(left);
+    if (priority !== 0) return priority;
+    return left.city.localeCompare(right.city);
+  });
+}
+
+export function coverageAction(row, pagePath) {
+  const page = pagePath || '/areas-we-serve';
+  if (row?.organicGap === true) {
+    return `Organic gap in the snapshot. Use the existing page ${page}.`;
+  }
+  if (row?.organicGap === false) {
+    return `This head query was already ranking. Keep using ${page}.`;
+  }
+  if (!row?.competitors?.length) {
+    return `No competitor in the snapshot names ${row?.city || 'this city'}. The existing page is ${page}.`;
+  }
+  const count = row.competitors.length;
+  const noun = count === 1 ? 'competitor' : 'competitors';
+  return `${count} ${noun} in the snapshot name ${row.city}. The existing page is ${page}.`;
+}
+
+function coveragePriority(row) {
+  if (row.organicGap === true) return 3;
+  if (!row.competitors?.length) return 2;
+  if (row.organicGap === false) return 0;
+  return 1;
+}

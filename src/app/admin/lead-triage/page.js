@@ -1,4 +1,5 @@
 import { resolveCutoff, resolveMode } from '@/lib/lead-triage/config.mjs';
+import { answerLines, explainLead } from '@/lib/lead-triage/explain.mjs';
 import { listToday } from '@/lib/lead-triage/pipeline.mjs';
 import { leadJobLabel, sourceLabel } from '@/lib/lead-triage/summary.mjs';
 
@@ -39,6 +40,7 @@ export default async function LeadTriagePage() {
       {today ? <Counts counts={today.counts} /> : null}
       {today ? <LeadTable title="Cleared the cutoff" rows={today.passed} empty="No leads cleared the cutoff yet today." /> : null}
       {today ? <LeadTable title="Needs a person" rows={today.review} empty="Nothing is waiting for review." /> : null}
+      {today ? <LeadTable title="Set aside" rows={today.rejected} empty="Nothing was set aside today." /> : null}
     </main>
   );
 }
@@ -69,6 +71,21 @@ function LeadTable({ title, rows, empty }) {
       <h2 style={{ fontSize: '1.25rem' }}>{title}</h2>
       {rows.length === 0 ? <p>{empty}</p> : rows.map((record) => <LeadCard key={record.id} record={record} />)}
     </section>
+  );
+}
+
+function AnswerList({ record }) {
+  const lines = answerLines(record);
+  if (lines.length === 0) return null;
+  return (
+    <ul style={{ margin: '0.4rem 0', paddingLeft: '1.1rem' }}>
+      {lines.map((line) => (
+        <li key={line.questionId} style={{ color: line.meetsCutoff ? '#333' : '#d14817' }}>
+          {line.label}: {line.value} · {line.confidence}
+          {line.meetsCutoff ? '' : ` · under ${line.cutoff}`}
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -103,14 +120,18 @@ function LeadCard({ record }) {
       <p style={{ margin: '0.2rem 0', color: '#444' }}>
         {record.phone || 'No phone'} · {record.email || 'No email'}
       </p>
+      {explainLead(record).map((line) => (
+        <p key={line} style={{ margin: '0.2rem 0' }}>{line}</p>
+      ))}
+      <AnswerList record={record} />
       <Personalization brief={record.personalization} />
       {record.draft?.text ? (
         <pre style={{ whiteSpace: 'pre-wrap', fontFamily: 'Georgia, serif', background: '#faf7f4', padding: '0.8rem' }}>
           {record.draft.text}
         </pre>
-      ) : (
+      ) : record.status === 'passed' ? (
         <p>No draft stored.</p>
-      )}
+      ) : null}
     </article>
   );
 }

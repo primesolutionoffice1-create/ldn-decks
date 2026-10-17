@@ -163,6 +163,7 @@ export async function listToday(deps = {}) {
     top,
     passed,
     review: todays.filter((record) => record.status === 'needs_human_review'),
+    rejected: todays.filter((record) => record.status === 'rejected'),
   };
 }
 
@@ -193,6 +194,8 @@ export async function runNightly(deps = {}) {
   const mail = buildSummaryEmail({
     dateKey: bounds.dateKey,
     top: today.top,
+    review: today.review,
+    rejected: today.rejected,
     counts: today.counts,
     mode,
     cutoff: today.top[0]?.classification?.cutoff ?? deps.cutoff,

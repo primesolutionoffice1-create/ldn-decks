@@ -1,10 +1,12 @@
 import {
   COMPETITOR_SNAPSHOT_DATE,
   COMPETITOR_SNAPSHOT_SOURCE,
-  coverageRows,
+  coverageAction,
   gapCities,
+  prioritizeCoverage,
   unassignedCompetitors,
 } from '@/lib/lead-triage/competitorMap.mjs';
+import { cityPageFor } from '@/lib/lead-triage/personalize.mjs';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -16,7 +18,10 @@ export const metadata = {
 };
 
 export default function CompetitorMapPage() {
-  const rows = coverageRows();
+  const rows = prioritizeCoverage().map((row) => {
+    const page = cityPageFor(row.city);
+    return { ...row, page, action: coverageAction(row, page.path) };
+  });
   const gaps = gapCities();
   const unassigned = unassignedCompetitors();
 
@@ -32,12 +37,17 @@ export default function CompetitorMapPage() {
         <a href="/admin/lead-triage">Today&apos;s leads</a>
       </p>
       <p>
-        Organic gaps in that head-query set: {gaps.length ? gaps.join(', ') : 'none recorded'}.
-        Other cities were not scored in the snapshot.
+        Work the organic gaps first ({gaps.length ? gaps.join(', ') : 'none recorded'}), then cities no competitor named.
+        Cities that were already ranking stay at the bottom. Other cities were not in the head-query set.
       </p>
-      {rows.map((row) => (
+      {rows.map((row, index) => (
         <section key={row.city} style={{ borderTop: '1px solid #ddd', padding: '0.9rem 0' }}>
-          <h2 style={{ fontSize: '1.15rem', margin: '0 0 0.3rem' }}>{row.city}</h2>
+          <h2 style={{ fontSize: '1.15rem', margin: '0 0 0.3rem' }}>{index + 1}. {row.city}</h2>
+          <p style={{ margin: '0.2rem 0' }}>{row.action}</p>
+          <p style={{ margin: '0.2rem 0' }}>
+            <a href={row.page.path}>{row.page.path}</a>
+            {row.page.note ? ` (${row.page.note})` : ''}
+          </p>
           <p style={{ margin: '0.2rem 0' }}>{row.organicNote}</p>
           {row.competitors.length === 0 ? (
             <p style={{ margin: '0.2rem 0' }}>No competitor in the snapshot lists this city.</p>

@@ -1,4 +1,5 @@
 import { OFFICE_EMAIL, summaryRecipient } from './config.mjs';
+import { explainLead } from './explain.mjs';
 import { jobLabel } from './questions.mjs';
 
 export function escapeHtml(value) {
@@ -51,7 +52,38 @@ function draftBlock(record) {
   return `<p><strong>${escapeHtml(channel)}</strong></p><pre style="white-space:pre-wrap;font-family:Georgia,serif">${escapeHtml(record.draft.text)}</pre>`;
 }
 
-export function buildSummaryEmail({ dateKey, top, counts, mode, cutoff, permitNotes = [], to = summaryRecipient() }) {
+function reasonList(records) {
+  return (records || []).slice(0, 5).map((record) => {
+    const lines = explainLead(record).map((line) => `<li>${escapeHtml(line)}</li>`).join('');
+    return `
+      <h3>${escapeHtml(record.contactName || record.address || 'Permit prospect')} — ${escapeHtml(record.city || 'City unknown')}</h3>
+      <ul>
+        ${lines}
+        <li><strong>Phone:</strong> ${escapeHtml(record.phone || '—')}</li>
+        <li><strong>Email:</strong> ${escapeHtml(record.email || '—')}</li>
+      </ul>
+    `;
+  }).join('');
+}
+
+function reasonText(records) {
+  return (records || []).slice(0, 5).map((record) => [
+    `${record.contactName || record.address || 'Permit prospect'} — ${record.city || 'City unknown'}`,
+    ...explainLead(record),
+  ].join('\n'));
+}
+
+export function buildSummaryEmail({
+  dateKey,
+  top,
+  review = [],
+  rejected = [],
+  counts,
+  mode,
+  cutoff,
+  permitNotes = [],
+  to = summaryRecipient(),
+}) {
   const subject = `Loudoun Decks morning leads — ${dateKey} (${top.length} ready)`;
   const items = top.length === 0
     ? '<p>No leads cleared the cutoff today.</p>'
@@ -62,6 +94,7 @@ export function buildSummaryEmail({ dateKey, top, counts, mode, cutoff, permitNo
         <li><strong>City:</strong> ${escapeHtml(record.city || '—')}</li>
         <li><strong>Job type:</strong> ${escapeHtml(leadJobLabel(record))}</li>
         <li><strong>Score:</strong> ${escapeHtml(record.classification?.rank ?? '—')}</li>
+        ${explainLead(record).map((line) => `<li>${escapeHtml(line)}</li>`).join('')}
         <li><strong>Phone:</strong> ${escapeHtml(record.phone || '—')}</li>
         <li><strong>Email:</strong> ${escapeHtml(record.email || '—')}</li>
         ${personalizationItems(record)}
@@ -75,6 +108,8 @@ export function buildSummaryEmail({ dateKey, top, counts, mode, cutoff, permitNo
     <p>Mode: ${escapeHtml(mode)}. Confidence cutoff: ${escapeHtml(cutoff)}.</p>
     <p>Today: ${counts.passed || 0} passed, ${counts.needs_human_review || 0} need a person, ${counts.rejected || 0} set aside, ${counts.pending || 0} still waiting, ${counts.error || 0} errors.</p>
     ${items}
+    ${review.length ? `<h2>Needs a person</h2>${reasonList(review)}` : ''}
+    ${rejected.length ? `<h2>Set aside</h2>${reasonList(rejected)}` : ''}
     ${notes ? `<h3>Permit sources</h3><ul>${notes}</ul>` : ''}
     <p>Review the queue at /admin/lead-triage. Reply from ${escapeHtml(OFFICE_EMAIL)} when you are ready.</p>
   `;
@@ -84,9 +119,12 @@ export function buildSummaryEmail({ dateKey, top, counts, mode, cutoff, permitNo
     `Passed ${counts.passed || 0}, review ${counts.needs_human_review || 0}, rejected ${counts.rejected || 0}.`,
     ...top.map((record, index) => [
       `${index + 1}. ${sourceLabel(record.source)} | ${record.city || '—'} | ${leadJobLabel(record)} | score ${record.classification?.rank ?? '—'}`,
+      ...explainLead(record),
       personalizationText(record),
       record.draft?.text || '(no draft)',
     ].join('\n')),
+    ...(review.length ? ['Needs a person', ...reasonText(review)] : []),
+    ...(rejected.length ? ['Set aside', ...reasonText(rejected)] : []),
   ].join('\n\n');
   return {
     from: `Loudoun Decks <${OFFICE_EMAIL}>`,

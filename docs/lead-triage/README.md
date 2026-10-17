@@ -11,7 +11,7 @@ The public site is unchanged. Homepage copy, city pages, the footer, and existin
 3. **Classification.** [Jev](https://openrouter.ai/docs/guides/community/jev) (`typesafe/jev-1.13`) via OpenRouter's [Decisions API](https://openrouter.ai/docs/guides/community/jev-tutorial). Each answer comes back with a probability. Website questions: service type, job likely at least $3,500, inside the service area, urgency, spam. Permit questions: residential deck or porch, new versus replacement.
 4. **Cutoff.** Default confidence is `0.70` (`LEAD_TRIAGE_CONFIDENCE_CUTOFF`). Anything below that is stored as `needs_human_review`. Confident spam, out-of-area, or under-minimum leads are `rejected`. Confident fits are `passed`.
 5. **Drafts.** Passed records get a short reply from Claude Sonnet (`claude-sonnet-5-5` unless `ANTHROPIC_MODEL` is set). The draft is stored with `sendable: false`. Nothing is emailed to the lead.
-6. **Morning mail.** Vercel Cron calls `/api/lead-triage/cron` at 11:00 and 12:00 UTC. The handler runs only when the clock in `America/New_York` says 7:00 AM, so the summary lands at 7:00 in both EDT (11:00 UTC) and EST (12:00 UTC). The other tick returns without working. The message goes to `office@ldndecks.com` and includes the top 5 passed leads from that Eastern day: source, city, job type, score, and the draft.
+6. **Morning mail.** Vercel Cron calls `/api/lead-triage/cron` at 11:00 and 12:00 UTC. The handler runs only when the clock in `America/New_York` says 7:00 AM, so the summary lands at 7:00 in both EDT (11:00 UTC) and EST (12:00 UTC). The other tick returns without working. The message goes to `office@ldndecks.com`. It includes the top 5 passed leads (source, city, job type, score, draft) plus up to 5 leads that need a person and up to 5 that were set aside, each with a plain-language reason.
 
 ## Run it locally
 
@@ -117,7 +117,9 @@ Dale City has no city page, so that brief points at `/deck-builder-woodbridge-va
 
 ## Competitor coverage map
 
-`/admin/competitor-map` reads `seo-blueprint/02-COMPETITOR-INTEL.md`, captured 2026-05-11. It is a stored snapshot, not a live scrape and not a review crawl. Organic notes exist only for the three head queries in that note: Ashburn (organic #1), Leesburg (not in the top 10), and Fairfax (organic rank 5–8). Leesburg and Fairfax are the recorded gaps. Competitors with no city in the note are listed separately. Review counts appear only when that note recorded them.
+`/admin/competitor-map` reads `seo-blueprint/02-COMPETITOR-INTEL.md`, captured 2026-05-11. It is a stored snapshot, not a live scrape and not a review crawl. The page is a work list: Leesburg and Fairfax (the recorded organic gaps) come first, then cities no competitor named, then cities that were already ranking. Each row names the existing city page. Organic notes exist only for the three head queries in that note: Ashburn (organic #1), Leesburg (not in the top 10), and Fairfax (organic rank 5–8). Competitors with no city in the note are listed separately. Review counts appear only when that note recorded them.
+
+The lead card and the morning email say why a record needs a person or was set aside. A review line names the weak question, its confidence, the 0.70 cutoff, and the best guess. A passed lead says the draft is stored and has not been sent.
 
 ## Not in this pipeline
 
