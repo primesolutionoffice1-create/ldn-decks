@@ -41,7 +41,8 @@ export default function Hero() {
           </span>
         </a>
         <h1 className={styles.title}>
-          Custom Deck Builder Near You in Northern Virginia
+          <span className={styles.titleFull}>Custom Deck Builder Near You in Northern Virginia</span>
+          <span className={styles.titleShort}>Composite decks, replacements, and screened porches in Loudoun, Fairfax, and Prince William.</span>
         </h1>
         <p className={styles.heroDescription}>
           <span className={styles.descFull}>
@@ -49,7 +50,7 @@ export default function Hero() {
             Loudoun Decks helps plan design, permits, HOA details, and estimates across Loudoun, Fairfax, and Prince William.
           </span>
           <span className={styles.descShort}>
-            New decks, replacements, repairs, and screened porches in Loudoun, Fairfax, and Prince William.
+            Class A licensed. County permits and HOA review are part of the written plan.
           </span>
         </p>
         <HeroCTA />

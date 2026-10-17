@@ -26,7 +26,7 @@ export default function MobileProofStrip() {
   return (
     <section className={styles.strip} aria-label="Deck planning facts" data-proof-strip>
       <div className={styles.inner}>
-        <p className={styles.kicker}>Planning facts, not a quote</p>
+        <p className={styles.kicker}>Plan with real ranges</p>
         <ul className={styles.facts}>
           <li>
             <span className={styles.label}>Pressure-treated wood</span>
@@ -44,7 +44,7 @@ export default function MobileProofStrip() {
           </li>
         </ul>
         <p className={styles.note}>
-          Ranges come from the public planning model. Railings, stairs, permits, and the site visit change the written estimate. The monthly figure is an illustration, not a lender offer.
+          Not a written quote. Stairs, railings, permits, and the site visit change the price. The monthly figure is an illustration, not a lender offer.
         </p>
         <div className={styles.links}>
           <Link href="/tools/deck-cost-estimator-northern-virginia">Open the cost estimator</Link>

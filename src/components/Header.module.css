@@ -641,12 +641,16 @@
     border-bottom: 1px solid rgba(26, 26, 26, 0.08);
   }
 
+  .mobileBrandOffer {
+    display: none;
+  }
+
   .mobileTopCallBar {
     position: static;
     order: 2;
     flex: 1;
     min-width: 0;
-    min-height: 68px;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -687,23 +691,6 @@
 
   .mobileTopEstimate {
     display: none;
-  }
-
-  .mobileBrandOffer {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    max-width: 100%;
-    min-height: 28px;
-    padding: 2px 2px 4px;
-    overflow: visible;
-    color: #3d3832;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1.25;
-    white-space: normal;
-    text-decoration: underline;
-    text-underline-offset: 2px;
   }
 
   .mobileTopCallBar svg {
