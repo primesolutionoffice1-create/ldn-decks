@@ -1,78 +1,94 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { BUSINESS } from '@/lib/business';
 import styles from './TrustSection.module.css';
+
+const WORK = [
+  {
+    href: '/blog/trex-foggy-wharf-deck-gainesville-va',
+    src: '/images/projects/gainesville-foggy-wharf/04-gainesville-deck-exterior.jpg',
+    alt: 'Trex Enhance deck with gray fascia and black railings in Gainesville, Virginia',
+    kicker: 'Deck',
+    caption: 'Trex Enhance deck · Gainesville, VA',
+  },
+  {
+    href: '/blog/screened-porch-trex-select-purcellville-va',
+    src: '/images/projects/purcellville-screened-porch/purcellville-screened-porch-01-retouched.png',
+    alt: 'Screened porch with white trim and dark balusters in Purcellville, Virginia',
+    kicker: 'Screened porch',
+    caption: 'Screened porch · Purcellville, VA',
+  },
+];
 
 export default function TrustSection() {
   const nadraMembership = BUSINESS.memberships.find((membership) => membership.alternateName === 'NADRA');
   const nadraDirectoryUrl = nadraMembership?.directoryUrl || 'https://www.nadra.org/membership/directory#!biz/id/69f274b54078d1282501ee3b';
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} aria-labelledby="built-work-heading">
       <div className={styles.container}>
-        <div className={styles.accreditationRow}>
-          <div className={styles.bbbBlock}>
-            <p className={styles.label}>Verified Excellence</p>
-            <a 
-              href="https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241/#sealclick" 
-              target="_blank" 
-              rel="nofollow"
-            >
-              <Image
-                src="/badges/bbb-a-plus-seal.png"
-                className={styles.bbbSealImg}
-                alt="Loudoun Decks BBB Business Review"
-                width={200}
-                height={65}
-              />
-            </a>
-            <a
-              href={nadraDirectoryUrl}
-              target="_blank"
-              rel="noopener nofollow"
-              className={styles.nadraCard}
-              aria-label="View Loudoun Decks NADRA Proud Member profile"
-              title="View Loudoun Decks NADRA Proud Member profile"
-            >
-              {nadraMembership?.logoPath ? (
+        <h2 id="built-work-heading">Decks, screened porches, and patios</h2>
+        <p className={styles.intro}>
+          Built in Loudoun, Fairfax, and Prince William. The written estimate names the product line, the county permit, and the HOA review.
+        </p>
+
+        <div className={styles.workGrid}>
+          {WORK.map((project) => (
+            <Link key={project.href} href={project.href} className={styles.workCard}>
+              <div className={styles.workPhoto}>
                 <Image
-                  src={nadraMembership.logoPath}
-                  className={styles.nadraLogo}
-                  alt="Loudoun Decks NADRA Proud Member"
-                  width={220}
-                  height={90}
+                  src={project.src}
+                  alt={project.alt}
+                  fill
+                  sizes="(max-width: 800px) 100vw, 380px"
+                  quality={75}
+                  className={styles.workImage}
                 />
-              ) : (
-                <span className={styles.nadraKicker}>NADRA Proud Member</span>
-              )}
-              <span className={styles.nadraTitle}>Deck Builder / Contractor / Remodeler</span>
-              <span className={styles.nadraMeta}>Member since 2026</span>
-              <span className={styles.nadraProfileLink}>View NADRA member profile</span>
-            </a>
-          </div>
-          
-          <article className={styles.trexBlock}>
-            <div className={styles.trexPhoto}>
-              <Image
-                src="/images/img13.jpeg"
-                alt="New composite deck with white railings and black balusters built in Ashburn, Virginia"
-                fill
-                sizes="(max-width: 900px) 100vw, 720px"
-                quality={75}
-                className={styles.trexImage}
-              />
-            </div>
-            <div className={styles.trexCopy}>
-              <p className={styles.trexLabel}>Trex® partner</p>
-              <h2>Trex decks we build in Northern Virginia</h2>
-              <p className={styles.description}>
-                We install Trex decking, railings, and stairs. The written estimate names the product line, the county permit, and the HOA review.
-              </p>
-              <a href="/trex-performance-products" className={styles.trexLink}>
-                View Trex products
-              </a>
-            </div>
-          </article>
+              </div>
+              <p className={styles.workKicker}>{project.kicker}</p>
+              <p className={styles.workCaption}>{project.caption}</p>
+            </Link>
+          ))}
+
+          <Link href="/services/patios" className={`${styles.workCard} ${styles.patioCard}`}>
+            <p className={styles.workKicker}>Patio</p>
+            <p className={styles.workCaption}>
+              Paver and stone patios, planned with the deck or the porch.
+            </p>
+            <span className={styles.patioLink}>Patio planning</span>
+          </Link>
+        </div>
+
+        <div className={styles.credentialRow}>
+          <a
+            href="https://www.bbb.org/us/va/centreville/profile/deck-builder/loudoun-decks-0241-236091241/#sealclick"
+            target="_blank"
+            rel="nofollow"
+            className={styles.credentialLink}
+          >
+            <Image
+              src="/badges/bbb-a-plus-seal.png"
+              className={styles.bbbSealImg}
+              alt="Loudoun Decks BBB Business Review"
+              width={160}
+              height={52}
+            />
+          </a>
+          <a
+            href={nadraDirectoryUrl}
+            target="_blank"
+            rel="noopener nofollow"
+            className={styles.credentialLink}
+          >
+            NADRA Member
+          </a>
+          <Link href="/about/certifications-and-licenses" className={styles.credentialLink}>
+            VA Class A #2705191673
+          </Link>
+          <Link href="/trex-performance-products" className={styles.credentialLink}>
+            Trex partner
+          </Link>
         </div>
       </div>
     </section>
