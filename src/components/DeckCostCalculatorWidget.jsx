@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import CallLink from '@/components/CallLink';
 import { MATERIALS, ADDONS, calculateDeckBudget, formatBudget as fmt } from '@/lib/deckBudgetModel';
+import styles from './DeckCostCalculatorWidget.module.css';
 
 export { MATERIALS, ADDONS } from '@/lib/deckBudgetModel';
 
@@ -83,7 +84,7 @@ export default function DeckCostCalculatorWidget({
       </div>
 
       <div style={{ minWidth: 0 }}>
-        <div style={{ background: '#f7fafc', borderRadius: 8, padding: '1.25rem', position: 'sticky', top: '2rem' }}>
+        <div className={styles.result}>
           <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1.25rem' }}>Illustrative Budget</h3>
 
           <div style={{ marginBottom: '1rem' }}>

@@ -104,6 +104,10 @@
   color: rgba(255, 255, 255, 0.95);
 }
 
+.descShort {
+  display: none;
+}
+
 .highlight {
   color: var(--site-color);
 }
@@ -192,13 +196,19 @@
   }
 
   .heroDescription {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    display: block;
+    overflow: visible;
     font-size: 15px;
     line-height: 1.4;
     margin-bottom: 14px;
+  }
+
+  .descFull {
+    display: none;
+  }
+
+  .descShort {
+    display: inline;
   }
 
   .subtextWrapper {

@@ -1,0 +1,13 @@
+.result {
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 1.25rem;
+  position: sticky;
+  top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .result {
+    position: static;
+  }
+}
