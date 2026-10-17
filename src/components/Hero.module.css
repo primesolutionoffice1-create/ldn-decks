@@ -104,7 +104,9 @@
   color: rgba(255, 255, 255, 0.95);
 }
 
-.descShort {
+.descShort,
+.titleShort,
+.estimateShort {
   display: none;
 }
 
@@ -173,11 +175,19 @@
     padding: 0 20px;
   }
 
-  .ratingFull {
+  .trustBadge {
     display: none;
   }
 
-  .ratingShort {
+  .titleFull,
+  .descFull,
+  .estimateFull,
+  .ctaButton {
+    display: none;
+  }
+
+  .titleShort,
+  .estimateShort {
     display: inline;
   }
 
@@ -189,7 +199,7 @@
   }
 
   .title {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.15;
     letter-spacing: -0.025em;
     margin-bottom: 8px;
@@ -215,11 +225,6 @@
     display: none;
   }
 
-  .trustBadge {
-    margin-bottom: 12px;
-    padding: 6px 12px;
-  }
-
   .line {
     width: 20px;
   }
@@ -229,17 +234,16 @@
     letter-spacing: 2px;
   }
 
-  .ctaButton, .ctaButtonAlt {
+  .ctaButtonAlt {
     width: 100%;
     min-height: 48px;
     padding: 12px 16px;
     border-radius: 12px;
+    border: 2px solid #fff;
+    background: var(--site-color, #d14817);
+    color: #fff;
     font-weight: 800;
     text-align: center;
-  }
-
-  .ctaButton {
-    border: 2px solid #fff;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
   }
 }
