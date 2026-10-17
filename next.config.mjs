@@ -10,6 +10,9 @@ const nextConfig = {
   turbopack: {
     root: __dirname,
   },
+  // The dev server allows localhost only. Agents and browsers that open
+  // http://127.0.0.1:3000 are blocked from dev assets, so the page stays static.
+  allowedDevOrigins: ['127.0.0.1'],
   serverExternalPackages: ['pg'],
   async redirects() {
     return [
