@@ -40,9 +40,31 @@
 }
 
 .callBtn {
-  background: #f7f4ed;
-  color: var(--black);
-  border: 1px solid #e5e0d5;
+  background: #1c1917;
+  color: #fff;
+  border: 1px solid #1c1917;
+}
+
+.callText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  line-height: 1.05;
+}
+
+.callKicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.callNumber {
+  font-size: 13px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
 }
 
 .estimateBtn {
@@ -52,6 +74,22 @@
 
 .estimateBtn svg {
   display: none;
+}
+
+@media screen and (max-width: 360px) {
+  .callBtn svg {
+    display: none;
+  }
+
+  .callText {
+    align-items: center;
+    width: 100%;
+  }
+
+  .callNumber {
+    font-size: 12px;
+    letter-spacing: -0.04em;
+  }
 }
 
 @media screen and (max-width: 768px) {

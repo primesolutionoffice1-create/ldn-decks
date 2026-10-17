@@ -126,7 +126,8 @@ export default function Header() {
       <div className={styles.mobileTopCallBar} role="navigation" aria-label="Call or request an estimate">
         <CallLink className={styles.mobileTopAction} ctaLocation="mobile_top_bar">
           <PhoneIcon />
-          <span>Call (571) 655-7207</span>
+          <span className={styles.mobileTopCallWord}>Call</span>
+          <span className={styles.mobileTopNumber}>(571) 655-7207</span>
         </CallLink>
         <Link href="/get-estimate" className={styles.mobileTopEstimate}>
           Estimate

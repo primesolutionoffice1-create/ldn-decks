@@ -22,7 +22,10 @@ export default function StickyMobileCTA() {
     <div className={styles.stickyBar}>
       <CallLink className={styles.callBtn}>
         <PhoneIcon />
-        <span>Call Now</span>
+        <span className={styles.callText}>
+          <span className={styles.callKicker}>Call</span>
+          <span className={styles.callNumber}>(571) 655-7207</span>
+        </span>
       </CallLink>
       <Link href="/get-estimate" className={styles.estimateBtn}>
         <EstimateIcon />
