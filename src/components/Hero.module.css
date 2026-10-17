@@ -81,6 +81,10 @@
   letter-spacing: 1px;
 }
 
+.ratingShort {
+  display: none;
+}
+
 .title {
   font-size: 56px;
   font-weight: 800;
@@ -156,28 +160,48 @@
 
 @media screen and (max-width: 768px) {
   .heroSection {
-    height: 68vh;
-    min-height: 470px;
+    height: auto;
+    min-height: 0;
+    padding: 16px 0 12px;
+  }
+
+  .ratingFull {
+    display: none;
+  }
+
+  .ratingShort {
+    display: inline;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
   }
 
   .title {
-    font-size: 28px;
-    margin-bottom: 14px;
+    font-size: 26px;
+    margin-bottom: 8px;
   }
 
   .heroDescription {
-    font-size: 16px;
-    line-height: 1.45;
-    margin-bottom: 26px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 12px;
   }
 
   .subtextWrapper {
-    margin-bottom: 16px;
+    display: none;
   }
 
   .trustBadge {
-    margin-bottom: 14px;
-    padding: 7px 12px;
+    margin-bottom: 10px;
+    padding: 6px 12px;
   }
 
   .line {
@@ -190,6 +214,8 @@
   }
 
   .ctaButton, .ctaButtonAlt {
-    padding: 13px 28px;
+    width: 100%;
+    padding: 14px 16px;
+    text-align: center;
   }
 }

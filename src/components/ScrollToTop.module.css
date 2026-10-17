@@ -37,9 +37,10 @@
 
 @media screen and (max-width: 768px) {
   .scrollBtn {
-    bottom: 25px;
-    right: 25px;
-    width: 45px;
-    height: 45px;
+    bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+    left: 12px;
+    right: auto;
+    width: 40px;
+    height: 40px;
   }
 }
