@@ -20,7 +20,7 @@ export default function BlogFeed() {
         
         <div className={styles.grid}>
           {latestPosts.map((post) => (
-            <Link href={`/blog/${post.slug}`} prefetch={false} key={post.id} className={styles.card}>
+            <Link href={`/blog/${post.slug}`} prefetch={false} key={post.slug} className={styles.card}>
               <div className={styles.imageWrapper}>
                 <Image 
                   src={post.image} 

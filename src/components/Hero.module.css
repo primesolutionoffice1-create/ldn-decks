@@ -81,6 +81,10 @@
   letter-spacing: 1px;
 }
 
+.ratingShort {
+  display: none;
+}
+
 .title {
   font-size: 56px;
   font-weight: 800;
@@ -98,6 +102,12 @@
   margin-left: auto;
   margin-right: auto;
   color: rgba(255, 255, 255, 0.95);
+}
+
+.descShort,
+.titleShort,
+.estimateShort {
+  display: none;
 }
 
 .highlight {
@@ -156,28 +166,63 @@
 
 @media screen and (max-width: 768px) {
   .heroSection {
-    height: 68vh;
-    min-height: 470px;
+    height: auto;
+    min-height: 0;
+    padding: 16px 0 14px;
   }
 
-  .title {
-    font-size: 28px;
-    margin-bottom: 14px;
-  }
-
-  .heroDescription {
-    font-size: 16px;
-    line-height: 1.45;
-    margin-bottom: 26px;
-  }
-
-  .subtextWrapper {
-    margin-bottom: 16px;
+  .content {
+    padding: 0 20px;
   }
 
   .trustBadge {
+    display: none;
+  }
+
+  .titleFull,
+  .descFull,
+  .estimateFull,
+  .ctaButton {
+    display: none;
+  }
+
+  .titleShort,
+  .estimateShort {
+    display: inline;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+  }
+
+  .heroDescription {
+    display: block;
+    overflow: visible;
+    font-size: 15px;
+    line-height: 1.4;
     margin-bottom: 14px;
-    padding: 7px 12px;
+  }
+
+  .descFull {
+    display: none;
+  }
+
+  .descShort {
+    display: inline;
+  }
+
+  .subtextWrapper {
+    display: none;
   }
 
   .line {
@@ -189,7 +234,16 @@
     letter-spacing: 2px;
   }
 
-  .ctaButton, .ctaButtonAlt {
-    padding: 13px 28px;
+  .ctaButtonAlt {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 2px solid #fff;
+    background: var(--site-color, #d14817);
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
   }
 }
