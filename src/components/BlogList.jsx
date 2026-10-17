@@ -41,7 +41,7 @@ export default function BlogList() {
       <div className={styles.container}>
         <div className={styles.grid}>
           {sortedPosts.map(post => (
-            <div key={post.id} className={styles.blogCard}>
+            <div key={post.slug} className={styles.blogCard}>
               <Link href={post.canonicalPath || `/blog/${post.slug}`} className={styles.imgLink}>
                 <div className={styles.imgWrapper}>
                   <Image src={post.image} alt={post.title} fill className={styles.cardImg} sizes="(max-width: 900px) 100vw, 45vw" />
