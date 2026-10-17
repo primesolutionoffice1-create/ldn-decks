@@ -663,17 +663,26 @@
   .mobileTopAction {
     min-height: 44px;
     width: 100%;
-    padding: 4px 2px;
-    justify-content: flex-start;
-    color: var(--site-color, #d14817);
-    font-size: 16px;
-    letter-spacing: -0.02em;
+    padding: 0 12px;
+    justify-content: center;
+    gap: 6px;
+    background: #1c1917;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
   }
 
   .mobileTopAction span {
     overflow: visible;
     text-overflow: unset;
     white-space: nowrap;
+  }
+
+  .mobileTopNumber {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
   }
 
   .mobileTopEstimate {
@@ -701,6 +710,7 @@
     animation: none;
     width: 16px;
     height: 16px;
+    color: #fff;
   }
 
   .header {
@@ -764,5 +774,17 @@
   /* Hide Our Team | News | FAQs string on tiny screens */
   .topBarRight {
     display: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .mobileTopCallWord {
+    display: none;
+  }
+
+  .mobileTopAction {
+    padding: 0 8px;
+    font-size: 14px;
+    gap: 5px;
   }
 }
