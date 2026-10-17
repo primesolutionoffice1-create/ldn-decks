@@ -1106,7 +1106,7 @@ Bring photos, approximate dimensions and your preferred materials to a [Loudoun 
     disclaimer: "This article provides general homeowner guidance on deck structural warning signs and is not a substitute for a professional in-person structural inspection. Structural safety depends on many factors not visible to the untrained eye. Always obtain a licensed professional inspection before determining whether a deck is safe for use."
   },
   {
-    id: 139,
+    id: 141,
     title: "2016 Decks Are Hitting the 10-Year Problem: Framing Rot, Ledger Damage, and Replacement Decisions",
     slug: '2016-deck-framing-rot-replacement-northern-virginia',
     image: '/images/blog/generated/deck-joist-rot-repair-northern-virginia.jpg',

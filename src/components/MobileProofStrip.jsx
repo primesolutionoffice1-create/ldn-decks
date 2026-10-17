@@ -40,6 +40,7 @@ export default function MobileProofStrip() {
             <span className={styles.label}>Financing example</span>
             <strong>${monthly}/mo</strong>
             <span className={styles.meta}>${amount} at {aprPercent}% for {SAMPLE_TERM_YEARS} years</span>
+            <Link href="/deck-payment-estimator" className={styles.cardLink}>Check your rate</Link>
           </li>
         </ul>
         <p className={styles.note}>
@@ -48,7 +49,6 @@ export default function MobileProofStrip() {
         <div className={styles.links}>
           <Link href="/tools/deck-cost-estimator-northern-virginia">Open the cost estimator</Link>
           <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">Read public Google reviews</a>
-          <Link href="/deck-payment-estimator">Check your rate</Link>
         </div>
       </div>
     </section>

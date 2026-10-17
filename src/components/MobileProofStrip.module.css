@@ -58,6 +58,16 @@
   color: #4b453c;
 }
 
+.cardLink {
+  grid-column: 1 / -1;
+  margin-top: 6px;
+  color: var(--site-color, #d14817);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .note {
   margin: 0 0 8px;
   font-size: 13px;
