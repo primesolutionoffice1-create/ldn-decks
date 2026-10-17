@@ -78,27 +78,6 @@
   line-height: 1.35;
 }
 
-.patioCard {
-  align-self: start;
-  justify-content: flex-start;
-  padding: 1.15rem 0 0.35rem;
-  background: #f7f6f1;
-}
-
-.patioCard .workCaption {
-  color: #3d3832;
-  font-weight: 500;
-}
-
-.patioLink {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  margin: 0.35rem 1rem 0.85rem;
-  color: #d14817;
-  font-weight: 800;
-}
-
 .credentialRow {
   display: flex;
   flex-wrap: wrap;

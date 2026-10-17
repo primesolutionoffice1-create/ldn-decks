@@ -19,6 +19,13 @@ const WORK = [
     kicker: 'Screened porch',
     caption: 'Screened porch · Purcellville, VA',
   },
+  {
+    href: '/services/patios',
+    src: '/showcase/img12.jpeg',
+    alt: 'Natural stone patio with a fire feature in Fairfax County, Virginia',
+    kicker: 'Patio',
+    caption: 'Stone patio · Fairfax County',
+  },
 ];
 
 export default function TrustSection() {
@@ -51,13 +58,6 @@ export default function TrustSection() {
             </Link>
           ))}
 
-          <Link href="/services/patios" className={`${styles.workCard} ${styles.patioCard}`}>
-            <p className={styles.workKicker}>Patio</p>
-            <p className={styles.workCaption}>
-              Paver and stone patios, planned with the deck or the porch.
-            </p>
-            <span className={styles.patioLink}>Patio planning</span>
-          </Link>
         </div>
 
         <div className={styles.credentialRow}>
