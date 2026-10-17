@@ -1,6 +1,7 @@
 import { randomUUID } from 'node:crypto';
 import { classifyLead } from './classify.mjs';
 import { buildPersonalization } from './personalize.mjs';
+import { attachPreview, buildVisitorPreview, findPreviewRecord } from './preview.mjs';
 import {
   easternDayBounds,
   isSevenAmEastern,
@@ -73,7 +74,11 @@ export async function classifyStoredRecord(id, deps = {}) {
       status: classification.bucket,
       classification: storedClassification,
       draft,
-      personalization: buildPersonalization({ ...record, classification: storedClassification }),
+      personalization: attachPreview(
+        buildPersonalization({ ...record, classification: storedClassification }),
+        storedClassification,
+        record.personalization,
+      ),
     });
   } catch (error) {
     return store.update(id, {
@@ -85,6 +90,15 @@ export async function classifyStoredRecord(id, deps = {}) {
       },
     });
   }
+}
+
+export async function loadPreview(token, deps = {}) {
+  const store = await storeOf(deps);
+  const record = findPreviewRecord(await store.list(), token);
+  if (!record) return null;
+  const preview = buildVisitorPreview(record);
+  if (!preview) return null;
+  return { record, preview };
 }
 
 export async function ingestPermits(deps = {}) {

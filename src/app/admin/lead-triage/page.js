@@ -104,6 +104,12 @@ function Personalization({ brief }) {
       </p>
       {brief.organicNote ? <p style={{ margin: '0.2rem 0' }}>{brief.organicNote}</p> : null}
       {names.length ? <p style={{ margin: '0.2rem 0' }}>Snapshot competitors: {names.join(', ')}</p> : null}
+      {brief.previewPath ? (
+        <p style={{ margin: '0.2rem 0' }}>
+          Customer page, unlinked from the public site:{' '}
+          <a href={brief.previewPath}>{brief.previewPath}</a>
+        </p>
+      ) : null}
     </div>
   );
 }

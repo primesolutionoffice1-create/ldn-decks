@@ -1,6 +1,6 @@
 # Loudoun Decks / LDN Decks
 # Premium deck builder serving Northern Virginia.
-# Last updated: 2026-05-30
+# Last updated: 2026-10-17
 
 # Default: allow all crawlers full access
 User-agent: *
@@ -8,6 +8,7 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 Disallow: /*?*utm_
 Disallow: /*?*gclid=
 Disallow: /*?*fbclid=
@@ -19,6 +20,7 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 Disallow: /*?*utm_
 Disallow: /*?*gclid=
 Disallow: /*?*fbclid=
@@ -29,12 +31,14 @@ Allow: /images/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: Google-Extended
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 Disallow: /*?*utm_
 Disallow: /*?*gclid=
 Disallow: /*?*fbclid=
@@ -46,6 +50,7 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 Disallow: /*?*utm_
 Disallow: /*?*gclid=
 Disallow: /*?*fbclid=
@@ -57,72 +62,84 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: Claude-Web
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: anthropic-ai
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: CCBot
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: Applebot
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: Applebot-Extended
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: cohere-ai
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 User-agent: Bytespider
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /draft/
+Disallow: /r/
 
 # Static assets — always accessible
 Allow: /images/

@@ -34,7 +34,10 @@ function personalizationItems(record) {
   const competitors = names.length
     ? `<li><strong>Competitors in this snapshot:</strong> ${escapeHtml(names.join(', '))}</li>`
     : '';
-  return `<li><strong>Existing pages:</strong> ${escapeHtml(brief.cityPage)}${note} and ${escapeHtml(brief.servicePage)}</li>${organic}${competitors}`;
+  const preview = brief.previewPath
+    ? `<li><strong>Customer page, send it yourself:</strong> ${escapeHtml(brief.previewPath)}</li>`
+    : '';
+  return `<li><strong>Existing pages:</strong> ${escapeHtml(brief.cityPage)}${note} and ${escapeHtml(brief.servicePage)}</li>${preview}${organic}${competitors}`;
 }
 
 function personalizationText(record) {

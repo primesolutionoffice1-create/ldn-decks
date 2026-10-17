@@ -33,6 +33,7 @@ export default function robots() {
     '/admin/',
     '/api/',
     '/draft/',
+    '/r/',
   ];
 
   const TRACKING_DISALLOWS = [

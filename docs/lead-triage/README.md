@@ -111,7 +111,9 @@ Budget **about $1–5 per month** so a price change, retries, or a one-time perm
 
 ## Personalization brief
 
-Classification stores a brief on the lead. It names one existing city page and one existing service page, plus any competitors in that city from the snapshot below. `appliedToPublicSite` is always `false`. The brief is for the office queue and the morning email. It does not create a page, rewrite a page, or change what a visitor sees.
+Classification stores a brief on the lead. It names one existing city page and one existing service page, plus any competitors in that city from the snapshot below. `appliedToPublicSite` is always `false`. The brief is for the office queue and the morning email. It does not rewrite a city page, the homepage, the footer, or a redirect.
+
+A passed lead, and a lead that needs a person, also gets an unlinked page at `/r/<token>`. The office can paste that link into a reply they send themselves. The page greets the homeowner, gives the office phone, and links to the existing city and service pages. It does not show the draft, the score, the competitor list, or the homeowner's email. A rejected lead has no page. `robots.txt` disallows `/r/`. The token stays the same if the lead is classified again.
 
 Dale City has no city page, so that brief points at `/deck-builder-woodbridge-va` and says so. A city with no mapped page points at `/areas-we-serve`.
 
