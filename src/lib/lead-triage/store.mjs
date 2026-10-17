@@ -238,8 +238,23 @@ CREATE TABLE IF NOT EXISTS lead_triage_meta (
 );
 `;
 
+async function loadPg() {
+  // A static import of the driver makes the dev compiler fail every page when
+  // the package is not installed yet. Postgres is only used when DATABASE_URL is set.
+  const { createRequire } = await import('node:module');
+  const require = createRequire(import.meta.url);
+  try {
+    return require(['pg'].join(''));
+  } catch (error) {
+    if (error?.code === 'MODULE_NOT_FOUND' || error?.code === 'ERR_MODULE_NOT_FOUND') {
+      throw new Error('The pg package is not installed. Run npm ci before using DATABASE_URL.');
+    }
+    throw error;
+  }
+}
+
 export async function createPostgresStore(connectionString) {
-  const pgModule = await import('pg');
+  const pgModule = await loadPg();
   const Pool = pgModule.default?.Pool || pgModule.Pool;
   const pool = new Pool(poolConfig(connectionString));
   let ready;
