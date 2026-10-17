@@ -110,74 +110,71 @@
 }
 
 .trexBlock {
-  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.85fr);
   width: 100%;
-  max-width: 600px;
-  text-align: center;
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  border: none;
+  max-width: 760px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e7e1d6;
+  border-radius: 12px;
+  background: #f7f6f1;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.trexPhoto {
+  position: relative;
+  min-height: 280px;
 }
 
 .trexImage {
   object-fit: cover;
-  z-index: 0;
 }
 
-.trexBlock::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(26, 26, 26, 0.4) 100%);
-  z-index: 1;
+.trexCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.5rem 1.35rem;
 }
 
-.trexBlock > * {
-  position: relative;
-  z-index: 2;
-}
-
-.trexBlock h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #fff;
+.trexBlock h2 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 1.55rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 .trexLabel {
-  font-size: 0.9rem;
-  font-weight: 700;
+  margin: 0;
+  color: #d14817;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #ccc;
-  margin-bottom: 1rem;
 }
 
 .description {
-  color: #eee;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  font-size: 1.05rem;
+  margin: 0;
+  color: #3d3832;
+  font-size: 0.98rem;
+  line-height: 1.5;
 }
 
 .trexLink {
-  display: inline-block;
-  background-color: #E65C2B;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 0.25rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 10px;
+  background: #d14817;
   color: #fff;
-  padding: 0.8rem 2rem;
-  border-radius: 4px;
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
 .trexLink:hover {
@@ -195,6 +192,14 @@
 @media screen and (max-width: 768px) {
   .section {
     padding: 2.5rem 0;
+  }
+
+  .trexBlock {
+    grid-template-columns: 1fr;
+  }
+
+  .trexPhoto {
+    min-height: 210px;
   }
   
   .trexIframe {

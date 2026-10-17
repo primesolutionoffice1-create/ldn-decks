@@ -51,25 +51,28 @@ export default function TrustSection() {
             </a>
           </div>
           
-          <div className={styles.trexBlock}>
-            <Image
-              src="/images/img13.jpeg"
-              alt=""
-              fill
-              sizes="(max-width: 900px) 100vw, 600px"
-              quality={65}
-              className={styles.trexImage}
-            />
-            <p className={styles.trexLabel}>Trex® Partner</p>
-            <h2>Engineering Excellence</h2>
-            <p className={styles.description}>
-              Discover the technology behind the world’s #1 decking brand. 
-              Explore the full Trex performance-engineered product line.
-            </p>
-            <a href="/trex-performance-products" className={styles.trexLink}>
-              View Trex Products →
-            </a>
-          </div>
+          <article className={styles.trexBlock}>
+            <div className={styles.trexPhoto}>
+              <Image
+                src="/images/img13.jpeg"
+                alt="New composite deck with white railings and black balusters built in Ashburn, Virginia"
+                fill
+                sizes="(max-width: 900px) 100vw, 420px"
+                quality={65}
+                className={styles.trexImage}
+              />
+            </div>
+            <div className={styles.trexCopy}>
+              <p className={styles.trexLabel}>Trex® partner</p>
+              <h2>Trex decks we build in Northern Virginia</h2>
+              <p className={styles.description}>
+                We install Trex decking, railings, and stairs. The written estimate names the product line, the county permit, and the HOA review.
+              </p>
+              <a href="/trex-performance-products" className={styles.trexLink}>
+                View Trex products
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
