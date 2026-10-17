@@ -337,9 +337,9 @@ export default function Header() {
           <Image
             src="/ldndecks-logo.webp"
             alt="Loudoun Decks — Northern Virginia deck builder"
-            width={120}
-            height={60}
-            style={{ objectFit: "contain" }}
+            width={100}
+            height={100}
+            style={{ objectFit: "contain", width: 100, height: 100 }}
           />
           <button
             className={styles.closeBtn}

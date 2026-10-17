@@ -84,6 +84,46 @@
   outline-offset: 2px;
 }
 
+@media (max-width: 768px) {
+  .inner {
+    padding: 14px 20px 16px;
+  }
+
+  .kicker {
+    margin-bottom: 10px;
+    letter-spacing: 0.06em;
+  }
+
+  .facts {
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .facts li {
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+
+  .facts strong {
+    font-size: 17px;
+    letter-spacing: -0.02em;
+  }
+
+  .note {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .links {
+    gap: 6px 14px;
+  }
+
+  .links a {
+    font-size: 13px;
+  }
+}
+
 @media (min-width: 800px) {
   .inner {
     padding: 18px 24px 20px;

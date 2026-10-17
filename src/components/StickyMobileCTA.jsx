@@ -26,7 +26,7 @@ export default function StickyMobileCTA() {
       </CallLink>
       <Link href="/get-estimate" className={styles.estimateBtn}>
         <EstimateIcon />
-        <span>Quote</span>
+        <span>Estimate</span>
       </Link>
     </div>
   );

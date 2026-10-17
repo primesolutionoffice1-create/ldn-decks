@@ -21,20 +21,20 @@ body {
 
 @media (max-width: 1024px) {
   html {
-    scroll-padding-top: calc(64px + env(safe-area-inset-top, 0px));
+    scroll-padding-top: calc(56px + env(safe-area-inset-top, 0px));
   }
 
   input,
   select,
   textarea,
   label {
-    scroll-margin-top: calc(72px + env(safe-area-inset-top, 0px));
+    scroll-margin-top: calc(64px + env(safe-area-inset-top, 0px));
   }
 }
 
 @media (max-width: 768px) {
   body {
-    padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
   }
 }
 

@@ -37,7 +37,7 @@
 
 @media screen and (max-width: 768px) {
   .scrollBtn {
-    bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
     left: 12px;
     right: auto;
     width: 40px;
