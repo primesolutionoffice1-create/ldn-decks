@@ -6,11 +6,12 @@ import styles from './TrustSection.module.css';
 
 const WORK = [
   {
-    href: '/blog/trex-foggy-wharf-deck-gainesville-va',
-    src: '/images/projects/gainesville-foggy-wharf/04-gainesville-deck-exterior.jpg',
-    alt: 'Trex Enhance deck with gray fascia and black railings in Gainesville, Virginia',
+    href: '/composite-decks',
+    src: '/images/projects/mclean-composite-deck/mclean-deck-exterior.jpg',
+    alt: 'Composite deck with brown railings, black balusters, and stairs in McLean, Virginia',
     kicker: 'Deck',
-    caption: 'Trex Enhance deck · Gainesville, VA',
+    caption: 'Composite deck · McLean, VA',
+    objectPosition: 'center 68%',
   },
   {
     href: '/blog/screened-porch-trex-select-purcellville-va',
@@ -51,6 +52,7 @@ export default function TrustSection() {
                   sizes="(max-width: 800px) 100vw, 380px"
                   quality={75}
                   className={styles.workImage}
+                  style={{ objectPosition: project.objectPosition || 'center' }}
                 />
               </div>
               <p className={styles.workKicker}>{project.kicker}</p>
