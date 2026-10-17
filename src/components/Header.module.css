@@ -7,6 +7,10 @@
   display: none;
 }
 
+.mobileBrandOffer {
+  display: none;
+}
+
 .header {
   display: flex;
   width: 100%;
@@ -617,61 +621,125 @@
   }
 }
 
-/* Mobile View (<= 768px) */
+/* Mobile View (<= 768px)
+   One bar: logo, the real phone number, a free-estimate line, and the menu.
+   The separate orange strip and the empty beige stage both go away. */
 @media screen and (max-width: 768px) {
-  .header {
-    position: relative;
+  .headerWrapper {
+    position: sticky;
+    top: 0;
+    z-index: 9998;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 112px;
+    gap: 2px;
+    padding: calc(4px + env(safe-area-inset-top, 0px)) 8px 4px 4px;
     background: #f7f6f1;
-    box-shadow: none;
     border-bottom: 1px solid rgba(26, 26, 26, 0.08);
   }
 
+  .mobileTopCallBar {
+    position: static;
+    order: 2;
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1px;
+    width: auto;
+    max-width: none;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    box-shadow: none;
+  }
+
+  .mobileTopAction {
+    min-height: 24px;
+    justify-content: flex-start;
+    color: var(--site-color, #d14817);
+    font-size: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .mobileTopEstimate {
+    display: none;
+  }
+
+  .mobileBrandOffer {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    color: #3d3832;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .mobileTopCallBar svg {
+    animation: none;
+    width: 16px;
+    height: 16px;
+  }
+
+  .header {
+    display: contents;
+    min-height: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
   .logoArea {
-    width: 100%;
+    order: 1;
+    width: auto;
     max-width: none;
     background: transparent;
-    padding: 6px 64px;
-    justify-content: center;
+    padding: 0;
   }
 
   .logoArea a {
-    width: 100px;
-    max-width: 100px;
+    width: 68px;
+    max-width: 68px;
   }
 
   .logoArea img {
     display: block;
-    width: 100px;
-    height: 100px;
-    max-width: 100px;
-    max-height: 100px;
+    width: 68px;
+    height: 68px;
+    max-width: 68px;
+    max-height: 68px;
     object-fit: contain;
   }
 
-  .headerRight {
-    position: absolute;
-    top: 0;
-    right: 12px;
-    bottom: 0;
-    width: auto;
-    justify-content: center;
-  }
-
+  .headerRight,
   .mainNav {
+    display: contents;
+    position: static;
     width: auto;
-    height: 100%;
+    height: auto;
     padding: 0;
     background: transparent;
-    justify-content: flex-end;
   }
 
   .mobileToggle {
+    order: 3;
     width: 44px;
     height: 44px;
+    margin-left: 6px;
     border-radius: 12px;
+  }
+
+  .mobileTopAction:focus-visible,
+  .mobileBrandOffer:focus-visible {
+    outline: 2px solid var(--site-color, #d14817);
+    outline-offset: 2px;
   }
 
   .topBar {

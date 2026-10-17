@@ -33,6 +33,17 @@ body {
 }
 
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: calc(84px + env(safe-area-inset-top, 0px));
+  }
+
+  input,
+  select,
+  textarea,
+  label {
+    scroll-margin-top: calc(92px + env(safe-area-inset-top, 0px));
+  }
+
   body {
     padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
   }
