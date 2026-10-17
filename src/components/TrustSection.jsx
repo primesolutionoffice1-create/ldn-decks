@@ -57,8 +57,8 @@ export default function TrustSection() {
                 src="/images/img13.jpeg"
                 alt="New composite deck with white railings and black balusters built in Ashburn, Virginia"
                 fill
-                sizes="(max-width: 900px) 100vw, 420px"
-                quality={65}
+                sizes="(max-width: 900px) 100vw, 720px"
+                quality={75}
                 className={styles.trexImage}
               />
             </div>
