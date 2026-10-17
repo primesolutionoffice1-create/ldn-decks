@@ -131,6 +131,9 @@ export default function Header() {
         <Link href="/get-estimate" className={styles.mobileTopEstimate}>
           Estimate
         </Link>
+        <Link href="/get-estimate" className={styles.mobileBrandOffer}>
+          Free deck estimate in Northern Virginia
+        </Link>
       </div>
 
       <header className={styles.header}>
