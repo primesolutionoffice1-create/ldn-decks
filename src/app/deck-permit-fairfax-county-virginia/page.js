@@ -61,14 +61,14 @@ export default function FairfaxPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-08" url={`https://ldndecks.com${PATH}`} name="Fairfax County Deck Permits Made Easy | Loudoun Decks" description="Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish." speakable />
+      <WebPageSchema dateModified="2026-10-05" url={`https://ldndecks.com${PATH}`} name="Fairfax County Deck Permits Made Easy | Loudoun Decks" description="Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish." speakable />
       <ArticleSchema
         title="Fairfax County Deck Permit Guide"
         description="Fairfax County deck permit requirements, FIDO submission planning, inspection sequence, HOA coordination, and structural detail guidance for Northern Virginia homeowners."
         path={PATH}
         image="/images/img20.jpeg"
         datePublished="2026-05-26"
-        dateModified="2026-06-08"
+        dateModified="2026-10-05"
       />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
@@ -134,7 +134,7 @@ export default function FairfaxPermitPage() {
               <ul style={{ paddingLeft: '1.25rem', marginTop: '0.5rem' }}>
                 <li>Footing inspection holes dug, before concrete is poured</li>
                 <li>Framing inspection joists, beams, ledger, hardware installed, before decking goes on. If you are comparing framing options, read <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>.</li>
-                <li>Final inspection complete structure including railings, stairs, and fasteners. For stair terminology and layout, use the <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link> and see our <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>; for inspection dimensions, see the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>stair code guide</Link>; and for homeowner red flags before final review, use the <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checklist</Link>.</li>
+                <li>Final inspection complete structure including railings, stairs, and fasteners. For stair terminology and layout, use the <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link> and see our <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>; for inspection dimensions, see the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>stair code guide</Link>; and for homeowner red flags before final review, use the <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checklist</Link> and <Link href="/education/common-deck-stair-inspection-failures-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>common stair inspection failures</Link>.</li>
               </ul>
             </li>
           </ol>
@@ -162,7 +162,7 @@ export default function FairfaxPermitPage() {
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Stop-work order if discovered during construction</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Fines from Fairfax County code enforcement</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Required to retroactively permit (with penalties), correct unsafe work through <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair</Link>, or demolish</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Required to retroactively permit (with penalties), schedule a <Link href="/services/deck-inspection" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>professional deck inspection</Link>, correct unsafe work through <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair</Link>, choose <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck replacement</Link>, or demolish</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Title/sale issues unpermitted structures must be disclosed and may kill a deal</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Insurance won&apos;t cover injuries or damage on unpermitted structures</li>
           </ul>
@@ -216,7 +216,7 @@ export default function FairfaxPermitPage() {
       </section>
 
       <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Fairfax County" lastUpdated="2026-06-08" />
+      <NamedAuthor context="Fairfax County" lastUpdated="2026-10-05" />
 
       <RelatedGuides currentPath="/deck-permit-fairfax-county-virginia" />
 

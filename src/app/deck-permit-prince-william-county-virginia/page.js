@@ -61,7 +61,15 @@ export default function PWCountyPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-08" url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you." speakable />
+      <WebPageSchema dateModified="2026-10-05" url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you." speakable />
+      <ArticleSchema
+        title="Prince William County Deck Permit Guide 2026"
+        description="Prince William County deck permit requirements, jurisdiction checks, inspections, structural review, stair safety handoffs, and repair-or-replacement planning for Northern Virginia homeowners."
+        path="/deck-permit-prince-william-county-virginia"
+        image="/social/deck-permit-prince-william-county-social.png"
+        datePublished="2026-06-08"
+        dateModified="2026-10-05"
+      />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Permit Guide: Prince William County, VA</h1>
@@ -93,7 +101,7 @@ export default function PWCountyPermitPage() {
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Zoning review:</strong> County checks setback compliance, lot coverage limits, and easement conflicts. PW County is generally faster than Fairfax for this step.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Building review:</strong> Structural review ensures code compliance footing depth, joist spacing, beam sizing, post spacing, ledger connection and railing height. See the <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia</Link>, the <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Joist Span Calculator Virginia</Link>, the <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Beam Span Calculator Virginia</Link>, our <Link href="/deck-footing-code-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck footing code guide</Link>, <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>, and <Link href="/blog/2x8-vs-2x10-deck-joists" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2x8 vs 2x10 deck joists</Link>.</li>
             <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Permit issuance:</strong> Once approved, permit must be posted at the job site.</li>
-            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Three inspections:</strong> Footing (before concrete), framing (before decking), and final (complete structure). For stair layout before final inspection, use the <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link>, the <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>, and the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link>.</li>
+            <li style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Three inspections:</strong> Footing (before concrete), framing (before decking), and final (complete structure). For stair layout before final inspection, use the <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair calculator</Link>, the <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>, the <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia deck stair code guide</Link>, the <Link href="/education/deck-stair-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair safety checklist</Link>, and <Link href="/education/common-deck-stair-inspection-failures-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>common stair inspection failures</Link>.</li>
           </ol>
 
           <h2 style={S.h2}>PW County vs Fairfax County Permit Comparison</h2>
@@ -129,7 +137,14 @@ export default function PWCountyPermitPage() {
           <p style={S.p}>Not sure which covers your property? Tell us your address we determine the correct jurisdiction and handle permitting accordingly.</p>
 
           <h2 style={S.h2}>We Handle Everything</h2>
-          <p style={S.p}>Permits are part of our standard scope no extra charge. We prepare plans, submit applications, track review timelines, schedule all inspections, and resolve any reviewer comments. You don&apos;t deal with the county at all. If a deck was already built without approval, start with our guide to <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>unpermitted decks in Virginia</Link>; if the existing structure needs correction before approval, review our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link>.</p>
+          <p style={S.p}>Permits are part of our standard scope no extra charge. We prepare plans, submit applications, track review timelines, schedule all inspections, and resolve any reviewer comments. You don&apos;t deal with the county at all. If a deck was already built without approval, start with our guide to <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>unpermitted decks in Virginia</Link>; if the existing structure needs correction before approval, schedule a <Link href="/services/deck-inspection" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>professional deck inspection</Link> and compare <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair</Link> with <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck replacement</Link>.</p>
+
+          <div style={{ padding: '1.5rem', margin: '2rem 0', background: '#fff7f1', border: '1px solid #f3d3bd', borderRadius: 12 }}>
+            <p style={{ margin: 0, color: '#7a3210', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, fontSize: 12 }}>Free download</p>
+            <h3 style={{ margin: '6px 0 6px', fontSize: '1.25rem' }}>2026 NoVA Deck Permit Checklist</h3>
+            <p style={{ margin: '0 0 12px', color: '#333' }}>Use the same six-stage checklist for Prince William, Fairfax, Loudoun, and Arlington: site plan, HOA review, drawings, inspections, and final closeout.</p>
+            <Link href="/lead-magnets/nova-deck-permit-checklist-2026" style={{ color: '#d14817', fontWeight: 700, textDecoration: 'underline' }}>Open the printable checklist →</Link>
+          </div>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {permitFaqs.map((faq) => (
@@ -162,7 +177,7 @@ export default function PWCountyPermitPage() {
       </section>
 
       <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Prince William County" lastUpdated="2026-06-08" />
+      <NamedAuthor context="Prince William County" lastUpdated="2026-10-05" />
 
       <RelatedGuides currentPath="/deck-permit-prince-william-county-virginia" />
 

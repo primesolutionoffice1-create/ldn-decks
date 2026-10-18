@@ -363,6 +363,26 @@
   font-weight: 800;
 }
 
+.handoffBox {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin: 1.25rem 0 1.5rem;
+  padding: 1rem;
+}
+
+.handoffBox h3 {
+  margin-top: 0;
+}
+
+.handoffBox p {
+  margin-top: 0;
+}
+
+.handoffBox ul {
+  margin-bottom: 0;
+}
+
 .sidePanel {
   position: sticky;
   top: 6rem;

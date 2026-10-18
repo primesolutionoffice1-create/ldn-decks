@@ -13,7 +13,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 const pageTitle = 'Trex vs TimberTech vs AZEK: Northern Virginia Buyer Guide';
 const pageDescription = 'Compare Trex, TimberTech Composite and Advanced PVC (AZEK) by product, site conditions, warranty documents and written installed scope.';
-const modifiedDate = '2026-09-13';
+const modifiedDate = '2026-10-06';
 const pageImage = '/images/img05.jpeg';
 
 export const metadata = buildMetadata({
@@ -153,7 +153,7 @@ export default function TrexVsTimberTechPage() {
       <article style={{ padding: '2.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ color: '#555', lineHeight: 1.7 }}>
-            By <Link href="/team" style={S.link}>Nick (Nicolae Zugrav), Loudoun Decks</Link>. Published <time dateTime="2026-05-01">May 1, 2026</time>. Updated <time dateTime={modifiedDate}>September 13, 2026</time>.
+            By <Link href="/team" style={S.link}>Nick (Nicolae Zugrav), Loudoun Decks</Link>. Published <time dateTime="2026-05-01">May 1, 2026</time>. Updated <time dateTime={modifiedDate}>October 6, 2026</time>.
           </p>
           <p style={S.p}>This is a contractor's document-based buying guide, not a laboratory comparison or a record of product tests. Manufacturer links were checked on September 13, 2026. Written estimates establish project pricing; this page does not assign installed prices or performance scores to brands.</p>
 
@@ -218,6 +218,32 @@ export default function TrexVsTimberTechPage() {
           </figure>
           <p style={S.p}>On a resurfacing project, ask the contractor to record which parts of the frame can remain and which need further inspection. The written scope should address support spacing, board direction, stairs, fastening and any preparation required for the selected product. Use the manufacturer's current instructions, not one spacing rule assumed to fit every board.</p>
           <p style={S.p}>Request a clear approval point for concealed damage found after removal. New decking is not a substitute for structural repairs. Our <Link href="/deck-resurfacing-vs-replacement" style={S.link}>resurfacing versus replacement guide</Link> explains the decision to review before committing to a surface upgrade.</p>
+
+          <section id="material-structural-permit-handoff" style={{ margin: '2rem 0', padding: '1.5rem', border: '1px solid #e5e5e5', borderRadius: 8, background: '#fff' }}>
+            <h2 style={{ ...S.h2, marginTop: 0 }}>Structural, Stair and Permit Handoff</h2>
+            <p style={S.p}>
+              When Trex, TimberTech, AZEK, or Fiberon is part of a replacement conversation, premium boards should follow the structural decision. Use the links below to check whether the project is really resurfacing, full replacement, stair correction, ledger correction, or county-permit planning before comparing finishes.
+            </p>
+            <ul style={{ paddingLeft: '1.25rem', lineHeight: 1.7 }}>
+              {[
+                ['/services/deck-replacement', 'Deck replacement decision'],
+                ['/premium-composite-deck-replacement-arlington-alexandria-mclean-va', 'Premium Arlington/Alexandria/McLean replacement'],
+                ['/tools/deck-stair-calculator', 'Deck stair calculator'],
+                ['/education/deck-stair-code-rise-run-virginia', 'Virginia stair code guide'],
+                ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger flashing and deck attachment'],
+                ['/deck-permit-loudoun-county-virginia', 'Loudoun County deck permit guide'],
+                ['/deck-permit-fairfax-county-virginia', 'Fairfax County deck permit guide'],
+                ['/deck-permit-prince-william-county-virginia', 'Prince William County deck permit guide'],
+                ['/deck-permit-arlington-county-virginia', 'Arlington County deck permit guide'],
+                ['/get-estimate', 'Written estimate request'],
+              ].map(([href, label]) => (
+                <li key={href} style={{ marginBottom: '0.5rem' }}><Link href={href} style={S.link}>{label}</Link></li>
+              ))}
+            </ul>
+            <p style={S.p}>
+              This keeps a brand comparison from turning into a board-only decision. The estimate should identify the material, framing assumptions, stair and railing scope, permit responsibility, county inspection path, and the approval point for hidden structural repairs.
+            </p>
+          </section>
 
           <h2 style={S.h2}>Compare Warranty Documents, Not Headline Years</h2>
           <p style={S.p}>Ask for the documents that apply to the named collection and purchase date. Treat manufacturer product coverage, fade and stain coverage, replacement labor and contractor workmanship as separate questions. A long product warranty is not a promise that every part of your installed deck will be replaced at no cost.</p>

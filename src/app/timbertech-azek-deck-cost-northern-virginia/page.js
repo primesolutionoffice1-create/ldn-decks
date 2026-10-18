@@ -131,9 +131,9 @@ export default function TimberTechAzekDeckCostPage() {
         path={PATH}
         image="/showcase/img22.jpg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-06"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="TimberTech &amp; AZEK Deck Cost: Premium PVC Budget Guide (2026)" description="TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples." speakable />
+      <WebPageSchema dateModified="2026-10-06" url={`https://ldndecks.com${PATH}`} name="TimberTech &amp; AZEK Deck Cost: Premium PVC Budget Guide (2026)" description="TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -315,6 +315,56 @@ export default function TimberTechAzekDeckCostPage() {
             <li>Written workmanship warranty terms plus manufacturer warranty information for the selected TimberTech or AZEK product line</li>
           </ul>
 
+          <section id="timbertech-azek-structural-handoff" style={{ background: '#f7f5f2', border: '1px solid #e5ded5', borderRadius: 12, padding: '1.5rem', margin: '2rem 0' }}>
+            <h2 style={{ ...S.h2, marginTop: 0, marginBottom: '0.75rem' }}>Structural, Stair and Permit Handoff</h2>
+            <p data-speakable style={S.p}>
+              TimberTech PRO and AZEK Vintage budgets should not be chosen from board price alone; premium boards should follow the structural decision.
+              If the existing frame, ledger, stairs, guards, footings, or county permit scope cannot support a premium PVC upgrade, plan the project as a{' '}
+              <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
+                deck replacement
+              </Link>{' '}
+              instead of a surface-only material swap.
+            </p>
+            <p style={S.p}>
+              Before locking an AZEK/PVC allowance, route stair geometry through the{' '}
+              <Link href="/tools/deck-stair-calculator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
+                Virginia deck stair calculator
+              </Link>
+              , confirm rise/run basics against the{' '}
+              <Link href="/education/deck-stair-code-rise-run-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
+                Virginia deck stair code guide
+              </Link>
+              , and check attached-deck water risk with the{' '}
+              <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
+                ledger flashing guide
+              </Link>
+              .
+            </p>
+            <p style={{ ...S.p, marginBottom: 0 }}>
+              County review changes the real budget too: start with{' '}
+              <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
+                Loudoun
+              </Link>
+              ,{' '}
+              <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
+                Fairfax
+              </Link>
+              ,{' '}
+              <Link href="/deck-permit-prince-william-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
+                Prince William
+              </Link>
+              , or{' '}
+              <Link href="/deck-permit-arlington-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
+                Arlington
+              </Link>{' '}
+              permit planning, then request a{' '}
+              <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
+                written estimate
+              </Link>{' '}
+              that separates structure, stairs, railing, lighting, permits, and selected TimberTech/AZEK board line.
+            </p>
+          </section>
+
           <h2 style={S.h2}>Financing a Premium PVC Deck</h2>
           <p style={S.p}>
             AZEK and TimberTech PRO are priced toward the top of the composite market. Many Northern Virginia
@@ -356,6 +406,12 @@ export default function TimberTechAzekDeckCostPage() {
               ['/deck-payment-estimator', 'Deck Payment Estimator'],
               ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
+              ['/services/deck-replacement', 'Deck Replacement and Rebuild Planning'],
+              ['/premium-composite-deck-replacement-arlington-alexandria-mclean-va', 'Premium Arlington/Alexandria/McLean Replacement'],
+              ['/tools/deck-stair-calculator', 'Virginia Deck Stair Calculator'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger Board Flashing Guide'],
+              ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
+              ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
               ['/trex-deck-cost-monthly-payment', 'Trex Deck Cost vs Monthly Payment'],
               ['/monthly-payment-composite-deck-northern-virginia', 'Monthly Payment on a Composite Deck'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],
@@ -377,7 +433,7 @@ export default function TimberTechAzekDeckCostPage() {
         buttonText="Get Free Written Estimate"
         link="/get-estimate"
       />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-06" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

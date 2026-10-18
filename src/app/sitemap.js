@@ -29,6 +29,23 @@ const TIER2 = daysAgo(7);
 const TIER3 = daysAgo(30);
 const TIER4 = daysAgo(180);
 
+const STATIC_LASTMOD_OVERRIDES = new Map([
+  ['/tools', '2026-10-03'],
+  ['/tools/deck-stair-calculator', '2026-10-04'],
+  ['/services/deck-stair-lighting', '2026-10-04'],
+  ['/services/deck-replacement', '2026-10-05'],
+  ['/deck-permit-loudoun-county-virginia', '2026-10-05'],
+  ['/deck-permit-fairfax-county-virginia', '2026-10-05'],
+  ['/deck-permit-arlington-county-virginia', '2026-10-05'],
+  ['/deck-permit-prince-william-county-virginia', '2026-10-05'],
+  ['/composite-decks', '2026-10-06'],
+  ['/covered-deck-builder-northern-virginia', '2026-10-06'],
+  ['/covered-deck-cost-northern-virginia', '2026-10-06'],
+  ['/timbertech-azek-deck-cost-northern-virginia', '2026-10-06'],
+  ['/trex-vs-timbertech-vs-azek', '2026-10-06'],
+  ['/premium-composite-deck-replacement-arlington-alexandria-mclean-va', '2026-10-07'],
+]);
+
 // Maps a URL path to the source page.js file. Returns null if no file found
 // (route comes from a dynamic data source, or path is the homepage with no
 // extra segment).
@@ -72,6 +89,8 @@ function fsMtime(filePath) {
 // Resolves the most accurate lastModified date for a route, with a tiered
 // fallback ladder: git mtime → fs mtime → caller-supplied tier date.
 function resolveLastMod(urlPath, tierFallback) {
+  const staticOverride = STATIC_LASTMOD_OVERRIDES.get(urlPath);
+  if (staticOverride) return staticOverride;
   const buyerFaqDate = localServiceBuyerFaqs[urlPath]?.dateModified;
   if (buyerFaqDate) return buyerFaqDate;
   const file = pathToPageFile(urlPath);

@@ -70,7 +70,7 @@ const itemListSchema = {
     },
     {
       '@type': 'ListItem',
-      position: 8,
+      position: 9,
       name: 'Deck Financing Options',
       url: `${BUSINESS.url}/deck-financing`,
     },
@@ -129,7 +129,7 @@ export default function DeckToolsPage() {
   return (
     <main>
       <JsonLd data={itemListSchema} />
-      <WebPageSchema dateModified="2026-06-01"
+      <WebPageSchema dateModified="2026-10-03"
         url={pageUrl}
         name="Deck Planning Tools"
         description="Free deck planning tools from Loudoun Decks for Northern Virginia homeowners."

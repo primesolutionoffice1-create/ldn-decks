@@ -117,7 +117,7 @@ const expansionSections = [
 export default function TrexDecksPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/trex-decks" name="Trex Deck Builder Northern Virginia" description="Trex product-line planning in Northern Virginia. Trex Transcend, Select and Enhance installations with manufacturer warranty." speakable />
+      <WebPageSchema dateModified="2026-10-05" url="https://ldndecks.com/trex-decks" name="Trex Deck Builder Northern Virginia" description="Trex product-line planning in Northern Virginia. Trex Transcend, Select and Enhance installations with manufacturer warranty." speakable />
       <ServiceSchema
         name="Trex Deck Installation"
         description="Trex product-line planning installer in Northern Virginia. Trex Enhance, Select, and Transcend product lines. manufacturer warranty."
@@ -163,6 +163,30 @@ export default function TrexDecksPage() {
             <br />
             On this page we focus on <strong style={{ color: '#111' }}>full contractor-installed Trex deck projects</strong>, not board-only retail purchases. Use the <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>payment estimator tool</Link> to model monthly payments, or see our <Link href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link> for repair work, board replacement, railing, or structural fixes.
           </p>
+        </div>
+      </section>
+
+      <section id="trex-structural-permit-handoff" style={{ padding: '2.25rem 1.5rem', background: '#fff' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <h2 style={{ fontSize: '1.55rem', fontWeight: 800, marginBottom: '0.75rem' }}>Structural, Stair and Permit Handoff</h2>
+          <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
+            For Trex replacement projects, premium boards should follow the structural decision. Confirm whether the existing frame, ledger, stairs, rail posts, and county permit path can support the selected Trex scope before treating the board line as the whole project.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+            {[
+              ['/services/deck-replacement', 'Deck replacement decision'],
+              ['/premium-composite-deck-replacement-arlington-alexandria-mclean-va', 'Premium Arlington/Alexandria/McLean replacement'],
+              ['/tools/deck-stair-calculator', 'Deck stair calculator'],
+              ['/education/deck-stair-code-rise-run-virginia', 'Virginia stair code'],
+              ['/education/ledger-board-flashing-deck-attachment-virginia', 'Ledger flashing guide'],
+              ['/deck-permit-loudoun-county-virginia', 'Loudoun permit guide'],
+              ['/deck-permit-fairfax-county-virginia', 'Fairfax permit guide'],
+              ['/deck-permit-prince-william-county-virginia', 'Prince William permit guide'],
+              ['/deck-permit-arlington-county-virginia', 'Arlington permit guide'],
+            ].map(([href, text]) => (
+              <Link key={href} href={href} style={{ display: 'block', padding: '0.85rem', border: '1px solid #e5e5e5', borderRadius: 8, color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'none' }}>{text} &rarr;</Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -237,7 +261,7 @@ export default function TrexDecksPage() {
       />
 
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-05-26" />
+        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-10-05" />
       </div>
       <ServiceContentExpansion sections={expansionSections} />
 

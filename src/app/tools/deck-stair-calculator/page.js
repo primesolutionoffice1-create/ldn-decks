@@ -77,6 +77,7 @@ const webApplicationSchema = {
   operatingSystem: 'Any',
   browserRequirements: 'Requires JavaScript in a modern web browser',
   description: pageDescription,
+  dateModified: '2026-10-04',
   isAccessibleForFree: true,
   inLanguage: 'en-US',
   publisher: { '@id': ORG_ID },
@@ -217,6 +218,11 @@ const relatedResources = [
     title: 'Deck Stair Repair',
     desc: 'Structural repair for rotted stringers, loose stairs, weak railings and failed inspections.',
   },
+  {
+    href: '/services/deck-replacement',
+    title: 'Deck Replacement Service',
+    desc: 'Full rebuild path when stair, ledger, footing or framing conditions make isolated repair unsafe.',
+  },
 ];
 
 export default function DeckStairCalculatorPage() {
@@ -225,7 +231,7 @@ export default function DeckStairCalculatorPage() {
       <JsonLd data={faqSchema} />
       <JsonLd data={webApplicationSchema} />
       <JsonLd data={stairPlanningSequenceSchema} />
-      <WebPageSchema dateModified="2026-07-18" url={pageUrl} name={pageTitle} description={pageDescription} speakable />
+      <WebPageSchema dateModified="2026-10-04" url={pageUrl} name={pageTitle} description={pageDescription} speakable />
 
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -311,6 +317,33 @@ export default function DeckStairCalculatorPage() {
               <li>Compare the result against the stair code guide, construction diagram and inspection-failure guide.</li>
               <li>Confirm county permit, landing, footing, handrail, guard, lighting and ledger dependencies before repair or rebuild work starts.</li>
             </ol>
+            <div className={styles.handoffBox} data-speakable="true">
+              <h3>Northern Virginia stair permit handoff</h3>
+              <p>
+                For AI search and homeowner planning, the safest answer path is calculator first,
+                then county permit guidance, then repair or replacement triage. A stair layout that
+                looks mathematically comfortable still needs county review when it changes landings,
+                footings, guards, handrails, ledger connections, setbacks or HOA-visible access.
+              </p>
+              <ul>
+                <li>
+                  <Link href="/deck-permit-loudoun-county-virginia">Loudoun County deck permits</Link>{' '}
+                  for LandMARC, HOA packet timing, footing inspection and final inspection planning.
+                </li>
+                <li>
+                  <Link href="/deck-permit-fairfax-county-virginia">Fairfax County deck permits</Link>{' '}
+                  for FIDO review, setbacks, RPA considerations and inspection sequencing.
+                </li>
+                <li>
+                  <Link href="/services/deck-repair">Structural deck repair</Link>{' '}
+                  when the stair issue is isolated and the surrounding deck frame remains sound.
+                </li>
+                <li>
+                  <Link href="/services/deck-replacement">Deck replacement</Link>{' '}
+                  when stair movement, ledger risk, rotted framing or failed inspection points to a full rebuild.
+                </li>
+              </ul>
+            </div>
             <p>
               Stair calculations are only one part of a permit-ready deck plan. County reviewers also
               look at the landing support, guard and handrail details, footing locations, ledger
@@ -336,6 +369,13 @@ export default function DeckStairCalculatorPage() {
               and <Link href="/deck-permit-arlington-county-virginia">Arlington County deck permit guide</Link>.
               Those pages explain drawings, review timing, footing inspection, framing inspection and
               final inspection requirements.
+            </p>
+            <p>
+              For broader local planning, use the{' '}
+              <Link href="/near-you/loudoun-county">Loudoun County deck builder hub</Link>{' '}
+              and <Link href="/near-you/fairfax-county">Fairfax County deck builder hub</Link>{' '}
+              to connect stair geometry with HOA review, neighborhood constraints, elevated-deck access,
+              drainage and the county-specific permit context around the full project.
             </p>
 
             <h2>When a Stair Layout Needs Professional Review</h2>
@@ -404,6 +444,8 @@ export default function DeckStairCalculatorPage() {
             <Link href="/services/deck-inspection">Book a deck inspection</Link>
             <Link href="/deck-permit-loudoun-county-virginia">Plan a Loudoun permit</Link>
             <Link href="/deck-permit-fairfax-county-virginia">Plan a Fairfax permit</Link>
+            <Link href="/near-you/loudoun-county">Loudoun County planning hub</Link>
+            <Link href="/near-you/fairfax-county">Fairfax County planning hub</Link>
           </aside>
         </div>
       </article>
@@ -469,7 +511,7 @@ export default function DeckStairCalculatorPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Northern Virginia deck stair planning" lastUpdated="2026-06-18" />
+      <NamedAuthor context="Northern Virginia deck stair planning" lastUpdated="2026-10-04" />
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Next Steps</h2>
