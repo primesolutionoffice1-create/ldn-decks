@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { mkdtemp, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -411,6 +412,14 @@ test('postgres row mapping keeps the draft flag off', () => {
   assert.equal(record.draft.autoSent, false);
   assert.equal(record.personalization.appliedToPublicSite, false);
   assert.equal(record.personalization.cityPage, '/deck-builder-ashburn-va');
+});
+
+test('postgres driver is loaded only when the store is used', () => {
+  const source = readFileSync(new URL('./store.mjs', import.meta.url), 'utf8');
+  assert.equal(source.includes("import('pg')"), false);
+  assert.equal(source.includes('import("pg")'), false);
+  assert.equal(source.includes("require('pg')"), false);
+  assert.equal(source.includes('require("pg")'), false);
 });
 
 test('cron and today endpoints require a secret in production', () => {
