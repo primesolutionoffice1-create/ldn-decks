@@ -313,6 +313,9 @@ export default function Header() {
                 </div>
               </nav>
 
+              <Link href="/get-estimate" className={styles.estimateNavLink}>
+                Get estimate
+              </Link>
               <CallLink className={styles.callNowBtn} aria-label="Call Us" data-cta-location="header_main_nav">
                 <PhoneIcon />
                 <span>Call Now</span>

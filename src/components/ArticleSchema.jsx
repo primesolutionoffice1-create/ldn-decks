@@ -1,6 +1,6 @@
 import React from 'react';
 import JsonLd from './JsonLd';
-import { FOUNDER_ID } from '@/lib/business';
+import { BUSINESS, FOUNDER_ID } from '@/lib/business';
 
 /**
  * ArticleSchema — Structured data for informational/guide pages.
@@ -55,7 +55,7 @@ export default function ArticleSchema({
         '@id': FOUNDER_ID,
         name: 'Nicolae Zugrav',
         alternateName: 'Nick',
-        jobTitle: 'Owner & Lead Designer',
+        jobTitle: BUSINESS.founder.jobTitle,
         url: 'https://ldndecks.com/team',
       },
       {

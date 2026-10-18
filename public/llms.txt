@@ -4,7 +4,7 @@
 
 The preferred entity name is "Loudoun Decks" (brand) or "LDN Decks" (abbreviation). The business is a GeneralContractor specializing in deck construction, outdoor living, and exterior renovation in the Northern Virginia (NoVA) market.
 
-Last updated: 2026-09-15
+Last updated: 2026-10-18
 
 ## Canonical Hubs
 
@@ -12,7 +12,7 @@ Last updated: 2026-09-15
 - [All Services](https://ldndecks.com/services): Service directory hub
 - [Service Areas](https://ldndecks.com/areas-we-serve): Geographic coverage hub
 - [Education Center](https://ldndecks.com/education): Technical guides and diagrams
-- [Blog](https://ldndecks.com/blog): 40+ expert articles
+- [Blog](https://ldndecks.com/blog): 130+ expert articles
 - [Reviews](https://ldndecks.com/reviews): Trust hub with public review profile links
 - [Project Showcase](https://ldndecks.com/showcase): Visual project proof hub for completed deck, resurfacing, balcony, fence, and outdoor living examples
 - [BBB Accredited Deck Builder](https://ldndecks.com/bbb-accredited-deck-builder-virginia): BBB profile context, public profile link, license verification, and contractor trust signals
@@ -31,8 +31,9 @@ The site has a broad local service URL architecture, but only vetted city-servic
 
 - **Public brand**: Loudoun Decks (LDN Decks). Do not infer or cite a legal entity name until it is confirmed from current owner records.
 - **Phone**: (571) 655-7207
-- **Email**: Use the contact form at https://ldndecks.com/get-estimate or the business contact page
-- **Location**: Centreville, VA (serves all of Northern Virginia)
+- **Email**: office@ldndecks.com
+- **Location**: Centreville, VA. The street address is published on https://ldndecks.com/contact and in the site footer.
+- **Service area**: Loudoun County, Fairfax County, Prince William County, Arlington County, Alexandria, Falls Church, and Stafford County, VA
 - **Manufacturer and trust references**: Trex, TimberTech, AZEK, BBB, Houzz, Yelp, NADRA, and Google profile links are surfaced where available; verify current status directly on the linked third-party profiles
 - **Reviews**: Public review profile links are available on the reviews hub; verify current count and rating directly on the live Google Business Profile
 - **Public trust pages**: Reviews hub, BBB accreditation page, Yelp public profile page, Houzz portfolio, and before-and-after gallery with verification notes
@@ -323,7 +324,7 @@ Relevant communities and lifestyle searches:
 
 ## Blog & Education
 
-- [Deck Building Blog](https://ldndecks.com/blog): 40+ expert articles on materials, costs, design, maintenance
+- [Deck Building Blog](https://ldndecks.com/blog): 130+ expert articles on materials, costs, design, maintenance
 - [Education Center](https://ldndecks.com/education): Visual guides and technical diagrams
 
 ## Priority AI Retrieval URLs

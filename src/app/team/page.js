@@ -5,7 +5,7 @@ import ContactHome from '@/components/ContactHome';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
-import { FOUNDER_ID } from '@/lib/business';
+import { BUSINESS, FOUNDER_ID } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/team',
@@ -24,7 +24,7 @@ const profilePageSchema = {
   '@id': 'https://ldndecks.com/team#profilepage',
   url: 'https://ldndecks.com/team',
   name: 'Our Team | Loudoun Decks',
-  description: 'Owner-led custom deck building team for Northern Virginia: Nick (Owner & Lead Designer, Virginia Class A Licensed Contractor, Trex product-line planning, TimberTech and AZEK product planning), Jeff Mineo (Head of Sales), and the master technician crew.',
+  description: `Owner-led custom deck building team for Northern Virginia: Nick (${BUSINESS.founder.jobTitle}, Virginia Class A Licensed Contractor, Trex product-line planning, TimberTech and AZEK product planning), Jeff Mineo (Head of Sales), and the master technician crew.`,
   inLanguage: 'en-US',
   mainEntity: { '@id': FOUNDER_ID },
   about: { '@id': 'https://ldndecks.com/#organization' },

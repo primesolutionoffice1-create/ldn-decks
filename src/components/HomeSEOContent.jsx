@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+import { BUSINESS } from '@/lib/business';
 import styles from './HomeSEOContent.module.css';
+
+const PHONE_DISPLAY = '(571) 655-7207';
 
 const HomeSEOContent = () => {
   return (
@@ -11,6 +14,9 @@ const HomeSEOContent = () => {
             <h2 className={styles.heading}>Trusted Deck Contractor in Northern Virginia</h2>
             <p className={styles.text}>
               Every home in Northern Virginia is unique, from the classic colonials in Vienna to the modern estates in Ashburn. Loudoun Decks is a local <strong>deck contractor</strong> and <strong>deck builder in Northern Virginia</strong> focused on permit-ready designs, clean structural work, and low-maintenance outdoor spaces. If you are comparing deck contractors, start with our <Link href="/how-to-choose-a-deck-builder-northern-virginia">deck builder hiring checklist</Link> and our <Link href="/before-and-after">before-and-after project gallery</Link>.
+            </p>
+            <p className={styles.text} data-speakable="true">
+              {BUSINESS.name} is a Virginia Class A contractor, license #2705191673, at {BUSINESS.address.streetAddress}, {BUSINESS.address.addressLocality}, {BUSINESS.address.addressRegion} {BUSINESS.address.postalCode}. The service area is {BUSINESS.areaServed.join(', ')}. Call <a href={`tel:${BUSINESS.telephone}`}>{PHONE_DISPLAY}</a> or <Link href="/get-estimate">request a written estimate</Link>.
             </p>
           </div>
           <div className={styles.item}>

@@ -8,7 +8,7 @@ import { BUSINESS, FOUNDER_ID } from '@/lib/business';
 const teamMembers = [
   {
     name: "Nick",
-    role: "Owner & Lead Designer",
+    role: BUSINESS.founder.jobTitle,
     image: "/team/Nick.jpg",
     bio: "Founder and lead designer of Loudoun Decks with over 10 years of experience in custom deck construction across Northern Virginia. Virginia Class A Licensed Contractor. Nick personally oversees deck planning from initial design through final inspection, with special focus on structure, materials, permits, and HOA requirements.",
     expertise: ["Custom deck design", "Trex & TimberTech systems", "HOA architectural review", "Structural engineering", "Permit management"],
@@ -50,7 +50,7 @@ export default function TeamGrid() {
     "@id": FOUNDER_ID,
     "name": BUSINESS.founder.name,
     "alternateName": "Nick",
-    "jobTitle": "Owner & Lead Designer",
+    "jobTitle": BUSINESS.founder.jobTitle,
     "worksFor": { "@type": "Organization", "@id": "https://ldndecks.com/#organization" },
     "image": "https://ldndecks.com/team/Nick.jpg",
     "url": "https://ldndecks.com/team",
@@ -81,11 +81,6 @@ export default function TeamGrid() {
         "name": "Virginia Class A Contractor License",
         "recognizedBy": { "@type": "Organization", "name": "Virginia Department of Professional and Occupational Regulation (DPOR)" }
       }
-    ],
-    "award": [
-      "Trex product-line planning profile",
-      "TimberTech and AZEK product planning",
-      'Google Business Profile reviews (verify current count on Google Maps)'
     ],
     "areaServed": [
       { "@type": "AdministrativeArea", "name": "Loudoun County, VA" },

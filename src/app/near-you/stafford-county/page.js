@@ -16,6 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CountyConversionLinks from '@/components/CountyConversionLinks';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -48,7 +49,7 @@ const services = [
 const faqs = [
   { q: "Do you build decks in Stafford County?", a: "Yes. LDN Decks serves all of Stafford County including Stafford, Aquia Harbour, Falmouth, Garrisonville, Brooke, Widewater, Embrey Mill, and surrounding neighborhoods." },
   { q: "Does Stafford County require a deck permit?", a: "Yes. Most decks attached to a home or over 30 inches above grade require a building permit. Stafford County's Department of Development Services has one of the fastest review times in our service area, typically 2 weeks. We handle all permits." },
-  { q: "How much does a deck cost in Stafford County?", a: "Stafford County deck prices are generally 10-15% lower than Fairfax and Loudoun counties due to lower local labor and operational costs. A typical 300 sqft composite deck runs $14,000-$26,000 depending on materials." },
+  { q: "How much does a deck cost in Stafford County?", a: "Stafford County deck cost depends on size, elevation, materials, railings, stairs, demolition, and site access. Loudoun Decks does not publish a fixed Stafford price. Use the Northern Virginia composite deck cost guide to prepare the scope, then request a written estimate for the property." },
   { q: "Do you work with Stafford HOAs?", a: "Yes. We prepare all architectural review board submission materials and design to your community's guidelines." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within 2-3 weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
 ];
@@ -67,6 +68,19 @@ export default function StaffordCountyPage() {
         subtext="Serving Northern Virginia"
         title="Deck Builder in Stafford County, VA"
         description="Loudoun Decks is a trusted local deck and outdoor living contractor serving homeowners throughout Stafford County. We design and build custom decks, patios, porches, and outdoor spaces."
+      />
+      <GeoAnswerBlock
+        question="Who builds decks in Stafford County, VA?"
+        answer="Loudoun Decks plans and builds custom decks, screened porches, and outdoor living projects for Stafford County homeowners, including Stafford, Aquia Harbour, Falmouth, Garrisonville, Brooke, Widewater, and Embrey Mill. Stafford projects start with the county permit, the site conditions, and a written estimate."
+        facts={[
+          'Service area includes Stafford County, VA, from the company service-area list.',
+          'License: VA Class A Contractor License #2705191673. Verify current status with Virginia DPOR.',
+        ]}
+        links={[
+          { href: '/get-estimate', label: 'Request a Stafford estimate' },
+          { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost guide' },
+          { href: '/deck-builder-northern-virginia', label: 'Northern Virginia deck builder' },
+        ]}
       />
       <ServiceMain
         subtitle="Expert Craftsmanship"
@@ -115,17 +129,15 @@ export default function StaffordCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford County requires structural building permits for all decks attached to a dwelling and all freestanding decks over 30 inches above the surrounding ground. Building permit plans are reviewed by the <strong>Stafford County Department of Development Services</strong>. Stafford boasts one of the fastest permitting timelines in Northern Virginia, with processing times averaging just <strong>10 to 15 business days (2 weeks)</strong>.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Stafford's spacious yards generally offer fewer setback and lot coverage constraints compared to Fairfax or Arlington. This allows for grander, multi-zone outdoor entertainment spaces — including expansive custom decks, outdoor kitchens, and hardscape fire pits. We coordinate permit planning, including zoning layouts, plan submission, and inspector walkthroughs for structural footings, framing, and final approval.</p>
 
-          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Stafford County (2026)</h3>
-          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-              <thead><tr style={{ background: '#f5f5f5' }}><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project Type</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Estimated Cost Range</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Average Timeline</th></tr></thead>
-              <tbody>
-                {[['300 sqft Composite Deck', '$14,000 – $26,000', '1-2 weeks'], ['500 sqft Multi-Level Deck', '$26,000 – $46,000', '2-4 weeks'], ['Screened Porch (250 sqft)', '$28,000 – $52,000', '3-5 weeks'], ['Deck Replacement (wood to composite)', '$15,000 – $30,000', '1-2 weeks'], ['Paver Patio (300 sqft)', '$9,000 – $22,000', '1-2 weeks']].map((r, i) => (
-                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>{r.map((c, j) => <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{c}</td>)}</tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Planning a Stafford County deck budget</h3>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>
+            Stafford County deck cost depends on size, elevation, materials, railings, stairs, demolition, and site access. Loudoun Decks does not publish a fixed Stafford price. Use the{' '}
+            <Link href="/composite-deck-cost-northern-virginia">Northern Virginia composite deck cost guide</Link>{' '}
+            to prepare the scope, then <Link href="/get-estimate">request a written estimate</Link> for the property.
+          </p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            Common Stafford scopes include a composite deck, a multi-level deck, a screened porch, a wood-to-composite replacement, and a paver patio.
+          </p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects by Stafford Neighborhood</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Embrey Mill & Augustine:</strong> Large-scale family composite decks with integrated LED lighting, wide steps to the yard, and lower-level <Link href="/services/patios">paver patios</Link>. Capped composite materials are highly popular here to create low-maintenance backyards for active, growing families.</p>

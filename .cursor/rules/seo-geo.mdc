@@ -1,0 +1,17 @@
+---
+description: SEO and GEO rules for indexation, metadata, structured data, llms.txt, and local content on ldndecks.com.
+globs: src/lib/seo.js,src/app/robots.js,src/app/sitemap.js,src/lib/business.js,public/llms.txt,public/llms-full.txt,src/components/GeoAnswerBlock.jsx
+alwaysApply: false
+---
+
+# SEO and GEO
+
+- Take phone, address, license, service area, and credentials from `src/lib/business.js`. Do not invent reviews, awards, prices, or project statistics.
+- Canonical host is `https://ldndecks.com` with no trailing slash. Do not change a public URL without a redirect and updated internal links.
+- `src/app/robots.js` is the only robots source. Do not add `public/robots.txt`.
+- Structured data must match the visible page. Do not put placeholder text in JSON-LD.
+- Do not generate near-duplicate city or service pages to chase keywords.
+- `llms.txt`, schema, and crawler access are discovery aids. Do not describe them as ranking or citation guarantees.
+- A sitemap URL is not proof the URL is indexed. Missing Search Console access is not proof of zero traffic.
+- Keep the financing UI wired. See `CLAUDE.md`.
+- Before a production SEO change, run `npm run build` and `npm run seo:validate-schema`.
