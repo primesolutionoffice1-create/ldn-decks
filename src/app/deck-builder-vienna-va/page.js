@@ -63,7 +63,7 @@ const viennaFAQs = [
   },
   {
     q: "Are you a licensed deck builder in Fairfax County?",
-    a: "Yes, Loudoun Decks is a Class A licensed contractor, fully insured, and carries specialized certifications from Trex (Platinum Partner) and TimberTech."
+    a: "Yes. Loudoun Decks is a Virginia Class A licensed contractor, license #2705191673, and is insured. Current manufacturer program status should be verified with Trex or TimberTech for the product on the estimate."
   }
 ];
 

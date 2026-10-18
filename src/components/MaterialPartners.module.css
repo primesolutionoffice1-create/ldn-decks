@@ -2,6 +2,8 @@
   padding: 60px 0;
   background-color: #fcfcfc;
   border-bottom: 1px solid #efefef;
+  max-width: 100%;
+  overflow: clip;
 }
 
 .container {
@@ -21,7 +23,9 @@
 }
 
 .ticker {
-  overflow: hidden;
+  overflow: clip;
+  max-width: 100%;
+  contain: inline-size;
   padding: 20px 0;
   white-space: nowrap;
   position: relative;

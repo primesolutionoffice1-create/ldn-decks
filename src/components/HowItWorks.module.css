@@ -78,8 +78,23 @@
 }
 
 @media screen and (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
+    min-width: 0;
+  }
+
+  .stepCard {
+    padding: 24px 16px;
+    min-width: 0;
+  }
+
+  .stepTitle,
+  .stepDesc {
+    overflow-wrap: anywhere;
   }
   
   .title {

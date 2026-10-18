@@ -186,13 +186,13 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Great Falls
 - URL: https://ldndecks.com/deck-builder-great-falls-va
-- Content: Luxury estate properties ($1.5M+ average). RPA zone expertise for Potomac River properties. AZEK and Trex Transcend. $40k-$100k+ projects. Fairfax County permits.
+- Content: Estate properties and RPA considerations near the Potomac. AZEK and Trex Transcend product planning. Fairfax County permits. Request a written estimate for price.
 - Neighborhoods: Estate lots (1-5+ acres), River communities
 - Updated: 2026-05-25
 
 ### Fairfax
 - URL: https://ldndecks.com/deck-builder-fairfax-va
-- Content: City of Fairfax and Fairfax County distinction. Established neighborhoods, university area. Fairfax County permits.
+- Content: The City of Fairfax is an independent city. Fairfax County is a separate jurisdiction. Confirm the parcel before choosing a permit office.
 - Neighborhoods: Fairfax City, Fairfax Station, University area
 - Updated: 2026-05-25
 
@@ -262,7 +262,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Manassas
 - URL: https://ldndecks.com/deck-builder-manassas-va
-- Content: City of Manassas and Manassas Park. Mix of historic and newer developments. Prince William County permits.
+- Content: The City of Manassas and the City of Manassas Park are independent cities. They are not part of Prince William County. Each has its own permit office.
 - Updated: 2026-05-25
 
 ### Woodbridge

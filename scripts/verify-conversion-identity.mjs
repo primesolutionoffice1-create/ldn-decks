@@ -116,6 +116,20 @@ for (const name of ['McLean', 'Great Falls', 'South Riding', 'One Loudoun', 'Fal
 if (!areasPage.includes('county.cities') || !areasPage.includes('getCityLink')) {
   errors.push('Areas page no longer renders community names from cityData');
 }
+if (!areasPage.includes('City of Fairfax') || !areasPage.includes('Manassas Park')) {
+  errors.push('Areas page does not list the independent cities separately');
+}
+const faqSchema = read('src/lib/faqSchema.js');
+if (/two\s+offices/i.test(faqSchema) || faqSchema.includes('Platinum Partner') || faqSchema.includes('TimberTech Certified')) {
+  errors.push('FAQ schema still publishes an unconfirmed office or certification claim');
+}
+if (!faqSchema.includes('SERVICE_AREA_FAQ_ANSWER')) {
+  errors.push('FAQ schema is not using the shared service-area answer');
+}
+const businessGeo = read('src/lib/business.js');
+if (businessGeo.includes('city.latitude') || businessGeo.includes("latitude: '39.")) {
+  errors.push('City-center coordinates are still stored for the business geo');
+}
 
 const quickLinks = read('src/components/HomeQuickLinks.jsx');
 if (quickLinks.includes('70+') || quickLinks.includes('Loudoun, Fairfax & Prince William')) {

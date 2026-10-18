@@ -16,10 +16,12 @@ export default function ServicesFooterInfo() {
              <div className={styles.countyBadge}>Loudoun County</div>
              <div className={styles.countyBadge}>Fairfax County</div>
              <div className={styles.countyBadge}>Prince William County</div>
+             <div className={styles.countyBadge}>Arlington County</div>
+             <div className={styles.countyBadge}>Stafford County</div>
            </div>
 
            <p className={styles.citiesText}>
-              We regularly work in cities such as <strong>Ashburn, Leesburg, Sterling, Centreville, Reston, Woodbridge, and Manassas</strong>. You can also <Link href="/houzz-deck-projects" style={{ color: 'var(--site-color)', fontWeight: 600 }}>view our project gallery on Houzz</Link> to see our work in these areas.
+              Independent cities we serve include Alexandria, Falls Church, the City of Fairfax, Manassas, and Manassas Park. They are not part of the neighboring counties. <Link href="/areas-we-serve" style={{ color: 'var(--site-color)', fontWeight: 600 }}>View all service areas</Link>.
            </p>
         </div>
       </div>

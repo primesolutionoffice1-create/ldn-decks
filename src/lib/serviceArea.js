@@ -68,6 +68,28 @@ if (BUSINESS.areaServed.length !== DECLARED_AREAS.length) {
 
 export const COVERAGE_SENTENCE = 'Serving Loudoun, Fairfax, Prince William, Arlington, and Stafford counties, plus Alexandria and Falls Church.';
 
+export const SERVICE_AREA_FAQ_ANSWER = 'Loudoun Decks is based in Centreville, Virginia, and serves Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County, plus the independent cities of Alexandria, Falls Church, Fairfax, Manassas, and Manassas Park. A mailing address or ZIP code does not decide which office issues the building permit.';
+
+// Published places that are Virginia independent cities. lookupCountySlug is only
+// the existing cityData key used to resolve the current URL. It is not a parent.
+export const INDEPENDENT_CITY_PLACES = [
+  { name: 'Alexandria', label: 'Alexandria', lookupCountySlug: 'fairfax-county' },
+  { name: 'Falls Church', label: 'Falls Church', lookupCountySlug: 'fairfax-county' },
+  { name: 'Fairfax', label: 'City of Fairfax', lookupCountySlug: 'fairfax-county' },
+  { name: 'Manassas', label: 'Manassas', lookupCountySlug: 'prince-william-county' },
+  { name: 'Manassas Park', label: 'Manassas Park', lookupCountySlug: 'prince-william-county' },
+];
+
+const INDEPENDENT_CITY_NAMES = new Set(INDEPENDENT_CITY_PLACES.map((place) => place.name));
+
+export function independentCityLabel(cityName) {
+  return INDEPENDENT_CITY_PLACES.find((place) => place.name === cityName)?.label || null;
+}
+
+export function isIndependentCityName(cityName) {
+  return INDEPENDENT_CITY_NAMES.has(cityName);
+}
+
 export const AREAS_META_DESCRIPTION = 'Communities across Northern Virginia: Loudoun, Fairfax, Prince William, Arlington, and Stafford counties, plus Alexandria and Falls Church.';
 
 const REQUIRED_COVERAGE_NAMES = ['Loudoun', 'Fairfax', 'Prince William', 'Arlington', 'Stafford', 'Alexandria', 'Falls Church'];

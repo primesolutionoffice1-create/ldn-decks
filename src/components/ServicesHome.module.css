@@ -181,4 +181,15 @@
   .servicesSection {
     padding: 60px 0;
   }
+  .container {
+    padding: 0 16px;
+  }
+  .header {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .titleArea {
+    min-width: 0;
+    max-width: 100%;
+  }
 }

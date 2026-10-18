@@ -6,13 +6,14 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import { counties, getCityLink } from '@/data/cityData';
 import CallLink from '@/components/CallLink';
-import { AREAS_META_DESCRIPTION, COMMUNITIES_LABEL, COVERAGE_SENTENCE } from '@/lib/serviceArea';
+import { AREAS_META_DESCRIPTION, COMMUNITIES_LABEL, COVERAGE_SENTENCE, INDEPENDENT_CITY_PLACES } from '@/lib/serviceArea';
 
 const AREAS_TITLE = 'Areas We Serve | Deck Builder Across Northern Virginia';
-const INDEPENDENT_CITIES = [
-  { name: 'Alexandria', countySlug: 'fairfax-county' },
-  { name: 'Falls Church', countySlug: 'fairfax-county' },
-];
+const INDEPENDENT_CITIES = INDEPENDENT_CITY_PLACES.map((place) => ({
+  name: place.name,
+  label: place.label,
+  countySlug: place.lookupCountySlug,
+}));
 const INDEPENDENT_NAMES = new Set(INDEPENDENT_CITIES.map((city) => city.name));
 const COUNTY_ORDER = [
   'loudoun-county',
@@ -22,8 +23,8 @@ const COUNTY_ORDER = [
   'stafford-county',
 ];
 const COUNTY_NOTES = {
-  'fairfax-county': 'Alexandria and Falls Church are independent cities and are listed in their own group. Some Fairfax County properties use those names as a mailing address. The mailing name or ZIP does not decide which office issues the building permit.',
-  'prince-william-county': 'Manassas and Manassas Park are independent cities. They stay in this group because the site already publishes them here. A mailing address does not decide permit authority.',
+  'fairfax-county': 'Alexandria, Falls Church, and the City of Fairfax are independent cities. They are listed in their own group. Some Fairfax County properties use those names as a mailing address. The mailing name or ZIP does not decide which office issues the building permit.',
+  'prince-william-county': 'Manassas and Manassas Park are independent cities. They are listed in their own group, not as part of Prince William County. A mailing address does not decide permit authority.',
 };
 
 export const metadata = buildMetadata({
@@ -33,7 +34,7 @@ export const metadata = buildMetadata({
   image: '/social/areas-we-serve-social.png',
 });
 
-function CityChip({ countySlug, cityName }) {
+function CityChip({ countySlug, cityName, label = cityName }) {
   const href = getCityLink(countySlug, cityName);
   const cityChipStyle = {
     display: 'inline-block',
@@ -45,10 +46,10 @@ function CityChip({ countySlug, cityName }) {
   };
   return href ? (
     <Link href={href} style={{ ...cityChipStyle, textDecoration: 'none' }}>
-      {cityName}, VA
+      {label}, VA
     </Link>
   ) : (
-    <span style={cityChipStyle}>{cityName}, VA</span>
+    <span style={cityChipStyle}>{label}, VA</span>
   );
 }
 
@@ -97,11 +98,11 @@ export default function AreasWeServePage() {
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', borderBottom: '2px solid var(--color-primary)', paddingBottom: '0.5rem' }}>Independent cities</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.9rem' }}>
             {INDEPENDENT_CITIES.map((city) => (
-              <CityChip key={city.name} countySlug={city.countySlug} cityName={city.name} />
+              <CityChip key={city.name} countySlug={city.countySlug} cityName={city.name} label={city.label} />
             ))}
           </div>
           <p style={{ color: '#555', lineHeight: 1.6, marginBottom: '3rem', fontSize: '0.95rem' }}>
-            Alexandria and Falls Church are Virginia independent cities. They also appear in some Fairfax County mailing addresses. Confirm the property and the permit office before work starts.
+            Alexandria, Falls Church, the City of Fairfax, Manassas, and Manassas Park are Virginia independent cities. They are not administratively part of Fairfax County or Prince William County. Some nearby properties still use those names on a mailing address. Confirm the parcel before permit paperwork.
           </p>
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', marginTop: '2rem' }}>Priority City Pages</h2>

@@ -278,7 +278,7 @@ export default function CompositeDeckCostBySizePage() {
             </li>
             <li style={{ marginBottom: '0.5rem' }}>
               <Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
-                Trex Decks — Platinum Partner →
+                Trex Decks →
               </Link>
             </li>
             <li style={{ marginBottom: '0.5rem' }}>

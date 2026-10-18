@@ -11,6 +11,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  min-width: 0;
 }
 
 /* Images Left Side */
@@ -192,6 +193,16 @@
 @media screen and (max-width: 768px) {
   .introSection {
     padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .imagesCol,
+  .contentCol {
+    min-width: 0;
+    max-width: 100%;
   }
 
   .imagesCol {

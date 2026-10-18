@@ -32,7 +32,7 @@ export const metadata = buildMetadata({
 });
 
 const pwcCities = [
-  "Manassas, VA", "Manassas Park, VA", "Woodbridge, VA", "Dumfries, VA",
+  "Woodbridge, VA", "Dumfries, VA",
   "Quantico, VA", "Haymarket, VA", "Gainesville, VA", "Bristow, VA",
   "Nokesville, VA", "Lake Ridge, VA", "Montclair, VA", "Triangle, VA"
 ];
@@ -48,8 +48,8 @@ const services = [
 ];
 
 const faqs = [
-  { q: "Do you work throughout all of Prince William County?", a: "Yes. We serve homeowners across Prince William County, including Manassas, Manassas Park, Woodbridge, Dumfries, Quantico, Haymarket, Gainesville, Bristow, Nokesville, Lake Ridge, Montclair, Triangle and nearby communities." },
-  { q: "How much does a new deck typically cost in Prince William County?", a: "In Prince William County, a 300 sq ft composite deck typically runs $14,000–$28,000 and a 500 sq ft multi-level deck $28,000–$48,000 — about 10–15% below Fairfax and Loudoun. Final pricing depends on materials, design, and site conditions. After a free on-site visit, we provide a clear written estimate." },
+  { q: "Do you work throughout all of Prince William County?", a: "Yes. We serve homeowners in Prince William County, including Woodbridge, Dumfries, Haymarket, Gainesville, Bristow, Nokesville, Lake Ridge, Montclair, and Triangle. Manassas and Manassas Park are separate independent cities. We serve them too, and their permit offices are not the Prince William County office." },
+  { q: "How much does a new deck typically cost in Prince William County?", a: "The price depends on the property, the size, the structure, and the material. After a site visit, we provide a written estimate. This page does not publish one price or a percentage comparison for every Prince William project." },
   { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget. Composite upgrades from aging pressure-treated wood are a popular project in Manassas, Woodbridge, and Lake Ridge." },
   { q: "Do you help with permits for deck projects?", a: "Yes. Prince William County may require a permit for decks over 200 square feet or more than 30 inches above grade. We help homeowners identify permit triggers, plan submission requirements, coordinate plan-review questions, and understand inspection milestones before construction begins." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within a few weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
@@ -73,7 +73,7 @@ export default function PrinceWilliamCountyPage() {
       <ServiceMain
         subtitle="Professional Excellence"
         title="Custom Outdoor Living for Prince William Homeowners"
-        description="From the growing communities of Gainesville and Haymarket to the historic areas of Manassas, we deliver quality craftsmanship and reliable service throughout Prince William County."
+        description="From Gainesville and Haymarket to Woodbridge and Bristow, we build for Prince William County homeowners. Manassas and Manassas Park are independent cities with their own permit offices."
         listTitle="Services We Provide in PWC:"
         listItems={services}
         image1="/images/img05.jpeg"
@@ -81,7 +81,7 @@ export default function PrinceWilliamCountyPage() {
       />
       <GeoAnswerBlock
         question="Who plans deck replacement across Prince William County, VA?"
-        answer="Loudoun Decks plans deck replacement, resurfacing, composite upgrades, patios, porches, and outdoor living projects across Prince William County, including Manassas, Woodbridge, Gainesville, Haymarket, Bristow, and nearby communities. Homeowners should check Prince William permit triggers, framing condition, drainage, stairs, railings, material choices, and estimate scope before approving a project."
+        answer="Loudoun Decks plans deck replacement, resurfacing, composite upgrades, patios, porches, and outdoor living projects in Prince William County, including Woodbridge, Gainesville, Haymarket, and Bristow. Manassas and Manassas Park are independent cities, not parts of the county. Confirm the parcel before choosing a permit office."
         facts={[
           'Primary buyer intent: Prince William County deck builder, replacement, composite upgrades, and permit guidance.',
           'Conversion path: Prince William permit guide, Manassas page, and written estimate.'
@@ -122,29 +122,19 @@ export default function PrinceWilliamCountyPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Prince William County Homeowners Choose LDN Decks</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County offers some of the best value in Northern Virginia real estate, with median home prices around $500,000 and rapidly growing communities in Gainesville, Haymarket, and Bristow. Homeowners here are investing in <Link href="/outdoor-living-northern-virginia">low-maintenance outdoor living</Link> to maximize their property value and extend their usable living space.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We build across Prince William County every week — from Manassas, Gainesville, and Haymarket to Bristow, Woodbridge, and Dale City. That on-the-ground presence means faster site visits, local material sourcing, and deep familiarity with county permit requirements.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County includes growing communities in Gainesville, Haymarket, and Bristow. Homeowners there plan <Link href="/outdoor-living-northern-virginia">outdoor living</Link> projects around the county permit office. Manassas and Manassas Park use their own city offices.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We build in Prince William County, from Gainesville and Haymarket to Bristow, Woodbridge, and Dale City. The written estimate names the permit office for the property.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Prince William County Permits</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County may require building permits for decks over 200 sqft or 30 inches above grade. Review timing depends on scope and county workload. We help homeowners plan the permit path, submission requirements, plan-review coordination, and inspection milestones before construction begins.</p>
 
-          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Prince William County (2026)</h3>
-          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-              <thead><tr style={{ background: '#f5f5f5' }}><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Cost Range</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Timeline</th></tr></thead>
-              <tbody>
-                {[['300 sqft Composite Deck', '$14,000 – $28,000', '1-2 weeks'], ['500 sqft Multi-Level Deck', '$28,000 – $48,000', '2-3 weeks'], ['Screened Porch', '$30,000 – $55,000', '3-4 weeks'], ['Deck Replacement', '$16,000 – $32,000', '1-2 weeks'], ['Fence Installation', '$4,000 – $12,000', '1 week']].map((r, i) => (
-                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>{r.map((c, j) => <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{c}</td>)}</tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7, fontSize: '0.9rem', color: '#666' }}>Prince William County pricing is typically 10-15% lower than Fairfax or Loudoun due to lower labor costs and less complex HOA requirements.</p>
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Prince William County</h3>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>A written estimate is the price for a Prince William County project. Size, structure, access, and material change the number, so this page does not publish a fixed range or a percentage comparison with other counties.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects by Area</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Manassas & Manassas Park:</strong> Full <Link href="/services/deck-replacement">deck replacements</Link> on 1990s-2000s homes, <Link href="/composite-decks">composite upgrades</Link> from aging pressure-treated wood, and combined deck + fence packages for privacy.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Manassas and Manassas Park:</strong> These are independent cities next to the county, not county communities. The <Link href="/deck-builder-manassas-va">Manassas deck page</Link> covers city projects. County projects use the Prince William permit office.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Gainesville & Haymarket:</strong> New construction decks on recently built homes in Heritage Hunt, Dominion Valley, and Piedmont communities. Multi-level designs for walkout basements are especially popular on the rolling terrain.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Woodbridge & Lake Ridge:</strong> Budget-friendly Trex Enhance composite builds ($30-$50/sqft), <Link href="/screened-porch-builder-northern-virginia">screened porch additions</Link> for waterfront and lakeside properties, and <Link href="/services/under-deck-patios">under-deck patio systems</Link> that create dry space below elevated decks.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Woodbridge and Lake Ridge:</strong> <Link href="/screened-porch-builder-northern-virginia">Screened porch additions</Link> and <Link href="/services/under-deck-patios">under-deck patio systems</Link> are common requests. The estimate names the product and the price.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Bristow & Nokesville:</strong> Large estate decks with panoramic views, outdoor kitchens, and fire pit integration. The larger lot sizes in western Prince William allow for expansive outdoor living packages.</p>
         </div>
       </article>
@@ -174,7 +164,7 @@ export default function PrinceWilliamCountyPage() {
       <RatingBadge />
       <section style={{ padding: '2rem 1.5rem' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <GoogleMapEmbed city="Manassas" state="VA" height="360px" />
+          <GoogleMapEmbed city="Woodbridge" state="VA" height="360px" />
         </div>
       </section>
       <CountyRecentProjects countySlug="prince-william-county" limit={6} />

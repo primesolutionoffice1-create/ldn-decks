@@ -12,6 +12,9 @@
   .section {
     padding: 2rem 0;
   }
+  .card {
+    padding: 1.25rem 1rem;
+  }
 }
 
 .container {
@@ -22,6 +25,7 @@
   grid-template-columns: 1fr;
   gap: 2.5rem;
   align-items: center;
+  min-width: 0;
 }
 
 @media (min-width: 900px) {
@@ -33,6 +37,7 @@
 
 .intro {
   max-width: 460px;
+  min-width: 0;
 }
 
 .eyebrow {
@@ -51,6 +56,7 @@
   line-height: 1.15;
   margin: 0 0 1rem;
   color: #fff;
+  overflow-wrap: anywhere;
 }
 
 .lede {
@@ -67,12 +73,16 @@
   padding: 2rem 1.75rem;
   box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 0;
+  max-width: 100%;
 }
 
 .amountRow {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.35rem;
   margin-bottom: 0.85rem;
 }
 
@@ -173,6 +183,7 @@
   border-top: 1px solid #eee;
   padding-top: 1.25rem;
   margin-top: 0.25rem;
+  min-width: 0;
 }
 
 @media (min-width: 520px) {
@@ -229,7 +240,10 @@
   padding: 0.95rem 1.5rem;
   border-radius: 10px;
   text-decoration: none;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+  min-width: 0;
   transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
   box-shadow: 0 6px 16px -4px rgba(209, 72, 23, 0.45);
 }

@@ -37,19 +37,24 @@ export const BUSINESS = {
     'Stafford County, VA',
   ],
   // Expanded service areas for AI search visibility
+  // Community names already published on city pages. containedIn is set only
+  // when the place is administratively inside that county. Independent cities
+  // have no containedIn. Coordinates are not stored here: city-center points
+  // are not the business location.
   cityServed: [
-    { name: 'Ashburn', county: 'Loudoun County', latitude: '39.0438', longitude: '-77.4874' },
-    { name: 'Leesburg', county: 'Loudoun County', latitude: '39.1156', longitude: '-77.5636' },
-    { name: 'Sterling', county: 'Loudoun County', latitude: '39.0062', longitude: '-77.4286' },
-    { name: 'Reston', county: 'Fairfax County', latitude: '38.9586', longitude: '-77.3570' },
-    { name: 'McLean', county: 'Fairfax County', latitude: '38.9339', longitude: '-77.1773' },
-    { name: 'Arlington', county: 'Arlington County', latitude: '38.8816', longitude: '-77.0910' },
-    { name: 'Vienna', county: 'Fairfax County', latitude: '38.9012', longitude: '-77.2653' },
-    { name: 'Great Falls', county: 'Fairfax County', latitude: '39.0067', longitude: '-77.2928' },
-    { name: 'Centreville', county: 'Fairfax County', latitude: '38.8404', longitude: '-77.4286' },
-    { name: 'Manassas', county: 'Prince William County', latitude: '38.7509', longitude: '-77.4752' },
-    { name: 'Fairfax', county: 'Fairfax County', latitude: '38.8462', longitude: '-77.3064' },
-    { name: 'Herndon', county: 'Fairfax County', latitude: '38.9696', longitude: '-77.3861' },
+    { name: 'Ashburn', containedIn: 'Loudoun County' },
+    { name: 'Leesburg', containedIn: 'Loudoun County' },
+    { name: 'Sterling', containedIn: 'Loudoun County' },
+    { name: 'Reston', containedIn: 'Fairfax County' },
+    { name: 'McLean', containedIn: 'Fairfax County' },
+    { name: 'Arlington', containedIn: 'Arlington County' },
+    { name: 'Vienna', containedIn: 'Fairfax County' },
+    { name: 'Great Falls', containedIn: 'Fairfax County' },
+    { name: 'Centreville', containedIn: 'Fairfax County' },
+    { name: 'Manassas', type: 'independent-city' },
+    { name: 'Manassas Park', type: 'independent-city' },
+    { name: 'City of Fairfax', type: 'independent-city' },
+    { name: 'Herndon', containedIn: 'Fairfax County' },
   ],
   knowsAbout: [
     'Composite Decking',
@@ -226,14 +231,16 @@ export function buildOrganizationSchema() {
       closes: h.closes,
     })),
     areaServed: [
-      ...BUSINESS.areaServed.map(name => ({ '@type': 'AdministrativeArea', name })),
+      ...BUSINESS.areaServed.map(name => ({
+        '@type': name === 'Alexandria, VA' || name === 'Falls Church, VA' ? 'City' : 'AdministrativeArea',
+        name,
+      })),
       ...BUSINESS.cityServed.map(city => ({
         '@type': 'City',
         name: city.name,
-        containedInPlace: {
-          '@type': 'AdministrativeArea',
-          name: city.county,
-        },
+        ...(city.containedIn
+          ? { containedInPlace: { '@type': 'AdministrativeArea', name: city.containedIn } }
+          : {}),
       })),
     ],
     knowsAbout: BUSINESS.knowsAbout,

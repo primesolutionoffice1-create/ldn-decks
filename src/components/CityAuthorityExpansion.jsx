@@ -57,8 +57,9 @@ const CITY_DATA = {
   },
   fallsChurch: {
     name: 'Falls Church',
-    county: 'Fairfax County',
+    county: 'City of Falls Church',
     permit: '/deck-permit-fairfax-county-virginia',
+    permitGuideLabel: 'Fairfax County deck permit guide, for parcels outside the city',
     nearby: 'Arlington, McLean, Vienna and Annandale',
     intent: 'compact premium decks, privacy-conscious outdoor rooms and replacement decks for older homes',
     lot: 'smaller infill lots where setbacks, privacy and efficient layouts drive the design',
@@ -180,6 +181,7 @@ const CITY_DATA = {
     name: 'Alexandria',
     county: 'City of Alexandria',
     permit: '/deck-permit-fairfax-county-virginia',
+    permitGuideLabel: 'Fairfax County deck permit guide, for parcels outside the city',
     nearby: 'Old Town, Del Ray, Rosemont, North Ridge and Beverley Hills',
     intent: 'composite conversions of weathered wood decks, screened porches on Del Ray bungalows and historic-district-compliant rebuilds in Old Town',
     lot: 'older Alexandria stock — many federal-period and Victorian rowhouses with second-story rear decks, plus mid-century Del Ray bungalows and Beverley Hills colonials',
@@ -352,7 +354,7 @@ export default function CityAuthorityExpansion({ cityKey }) {
         </p>
         <p style={{ lineHeight: 1.75, color: '#334155', marginBottom: '1rem' }}>
           Permit and inspection requirements should be checked before design is finalized. The
-          relevant starting point for this page is the <Link href={city.permit}>{city.county} deck permit guide</Link>,
+          relevant starting point for this page is the <Link href={city.permit}>{city.permitGuideLabel || `${city.county} deck permit guide`}</Link>,
           supported by the <Link href="/education/deck-understructure-guide">deck understructure guide</Link>,{' '}
           <Link href="/education/understanding-deck-load-paths">deck load path guide</Link>, and{' '}
           <Link href="/education/ledger-board-flashing-deck-attachment-virginia">ledger flashing guide</Link>.
