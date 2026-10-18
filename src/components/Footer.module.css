@@ -198,6 +198,13 @@
 }
 
 /* --- Media Queries --- */
+@media screen and (min-width: 769px) and (max-width: 1240px) {
+  .socials {
+    /* The back-to-top button sits on the lower right at these widths. */
+    margin-right: 80px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 1fr 1fr;
@@ -206,11 +213,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .bottomBar {
-    /* Clear the fixed Call / Quote bar so the license line can be read in full. */
-    padding-bottom: 96px;
-  }
-
   .container {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -226,6 +228,8 @@
     flex-wrap: wrap;
     max-width: 100%;
     margin-right: 0;
+    /* The back-to-top button sits on the lower left, above the call bar. */
+    margin-left: 24px;
   }
 }
 
