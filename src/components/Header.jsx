@@ -122,11 +122,20 @@ export default function Header() {
 
   return (
     <div className={styles.headerWrapper}>
-      {/* Mobile Sticky Top Call Bar */}
-      <Link href="/get-estimate" className={styles.mobileTopCallBar} aria-label="Get a free deck estimate">
-        <PhoneIcon />
-        <span>Get A Free Estimate</span>
-      </Link>
+      {/* Fixed phone bar. The number is a real tel: link. Estimate stays a separate control. */}
+      <div className={styles.mobileTopCallBar} role="navigation" aria-label="Call or request an estimate">
+        <CallLink className={styles.mobileTopAction} ctaLocation="mobile_top_bar">
+          <PhoneIcon />
+          <span className={styles.mobileTopCallWord}>Call</span>
+          <span className={styles.mobileTopNumber}>(571) 655-7207</span>
+        </CallLink>
+        <Link href="/get-estimate" className={styles.mobileTopEstimate}>
+          Estimate
+        </Link>
+        <Link href="/get-estimate" className={styles.mobileBrandOffer}>
+          Free deck estimate in Northern Virginia
+        </Link>
+      </div>
 
       <header className={styles.header}>
         {/* Left Logo Area */}
@@ -332,9 +341,9 @@ export default function Header() {
           <Image
             src="/ldndecks-logo.webp"
             alt="Loudoun Decks — Northern Virginia deck builder"
-            width={120}
-            height={60}
-            style={{ objectFit: "contain" }}
+            width={100}
+            height={100}
+            style={{ objectFit: "contain", width: 100, height: 100 }}
           />
           <button
             className={styles.closeBtn}

@@ -72,7 +72,45 @@
   border: 1px solid #d1d5db;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
+  .banner {
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    max-height: none;
+  }
+
+  .copy {
+    min-width: 0;
+    gap: 2px;
+    font-size: 13px;
+  }
+
+  .actions {
+    flex: 0 0 auto;
+  }
+
+  .copy strong {
+    font-size: 14px;
+  }
+
+  .copy span {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .primary,
+  .secondary {
+    min-height: 40px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 360px) {
   .banner {
     align-items: stretch;
     flex-direction: column;

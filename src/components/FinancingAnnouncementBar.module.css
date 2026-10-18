@@ -137,12 +137,10 @@
   }
 }
 
-/* Phone — hide entirely. The Header renders a fixed mobileTopCallBar
-   ("Get A Free Estimate") at top:0 with z-index 9998 that would otherwise
-   overlay this bar, creating a double-orange / chip-poking-out collision.
-   Mobile users still see financing through (a) the mobile drawer menu
-   entry, and (b) the FinancingTeaser section near the top of the home
-   page. The bar returns at ≥1025px where the fixed call bar is hidden. */
+/* Phone and tablet — hide entirely. Header renders a fixed call bar at
+   top:0. Showing this announcement there stacks two bars. Mobile users
+   still see financing in the drawer, the planning strip, and FinancingTeaser.
+   The bar returns at ≥1025px where the fixed call bar is hidden. */
 @media (max-width: 1024px) {
   .bar {
     display: none;

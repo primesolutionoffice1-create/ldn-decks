@@ -50,6 +50,7 @@ export const viewport = {
   themeColor: '#d14817',
   width: 'device-width',
   initialScale: 1,
+  viewportFit: 'cover',
 };
 
 import { ContactProvider } from "@/context/ContactContext";
