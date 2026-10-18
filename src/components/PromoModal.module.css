@@ -60,21 +60,20 @@
   transform: rotate(90deg);
 }
 
-.imageContainer {
-  position: relative;
+.brandPanel {
   width: 45%;
   min-height: 400px;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 36px;
+  border-right: 1px solid #eeeae4;
 }
 
-.logoOverlay {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 8px 12px;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.brandPanel img {
+  width: min(220px, 100%);
+  height: auto;
 }
 
 .textContent {
@@ -174,9 +173,16 @@
     max-width: 450px;
   }
   
-  .imageContainer {
+  .brandPanel {
     width: 100%;
-    min-height: 220px;
+    min-height: 168px;
+    padding: 28px 24px;
+    border-right: 0;
+    border-bottom: 1px solid #eeeae4;
+  }
+
+  .brandPanel img {
+    width: min(180px, 70%);
   }
 
   .textContent {

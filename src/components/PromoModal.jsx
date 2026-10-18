@@ -67,23 +67,14 @@ export default function PromoModal() {
         >
           <CloseIcon />
         </button>
-        <div className={styles.imageContainer}>
+        <div className={styles.brandPanel}>
           <Image
-            src="/images/img63.jpeg"
-            alt="Custom Trex composite deck built by Loudoun Decks in Northern Virginia"
-            fill
-            style={{ objectFit: 'cover' }}
-            sizes="(max-width: 600px) 100vw, 400px"
+            src="/ldndecks-logo.webp"
+            alt="Loudoun Decks"
+            width={220}
+            height={114}
+            priority
           />
-          <div className={styles.logoOverlay}>
-            <Image
-              src="/ldndecks-logo.webp"
-              alt="Loudoun Decks — Northern Virginia deck builder logo"
-              width={140}
-              height={50}
-              style={{ objectFit: 'contain' }}
-            />
-          </div>
         </div>
         <div className={styles.textContent}>
           <h2>Ready for Your Dream Deck?</h2>
