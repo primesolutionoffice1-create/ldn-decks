@@ -4,88 +4,105 @@ import SimpleCTA from '@/components/SimpleCTA';
 import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
-import { BUSINESS } from '@/lib/business';
-import { getAllCityPaths, getCityLink } from '@/data/cityData';
+import { counties, getCityLink } from '@/data/cityData';
 import CallLink from '@/components/CallLink';
+import { AREAS_META_DESCRIPTION, COMMUNITIES_LABEL, COVERAGE_SENTENCE } from '@/lib/serviceArea';
+
+const AREAS_TITLE = 'Areas We Serve | Deck Builder Across Northern Virginia';
+const INDEPENDENT_CITIES = [
+  { name: 'Alexandria', countySlug: 'fairfax-county' },
+  { name: 'Falls Church', countySlug: 'fairfax-county' },
+];
+const INDEPENDENT_NAMES = new Set(INDEPENDENT_CITIES.map((city) => city.name));
+const COUNTY_ORDER = [
+  'loudoun-county',
+  'fairfax-county',
+  'prince-william-county',
+  'arlington-county',
+  'stafford-county',
+];
+const COUNTY_NOTES = {
+  'fairfax-county': 'Alexandria and Falls Church are independent cities and are listed in their own group. Some Fairfax County properties use those names as a mailing address. The mailing name or ZIP does not decide which office issues the building permit.',
+  'prince-william-county': 'Manassas and Manassas Park are independent cities. They stay in this group because the site already publishes them here. A mailing address does not decide permit authority.',
+};
 
 export const metadata = buildMetadata({
   path: '/areas-we-serve',
-  title: 'Areas We Serve | Deck Builder Across Northern Virginia',
-  description: 'Loudoun Decks serves 70+ cities across Loudoun, Fairfax, Prince William, Arlington & Stafford counties. Find your city and get a free deck estimate.',
+  title: AREAS_TITLE,
+  description: AREAS_META_DESCRIPTION,
   image: '/social/areas-we-serve-social.png',
 });
 
-export default function AreasWeServePage() {
-  const cities = getAllCityPaths();
-
-  const counties = {
-    'loudoun-county': { name: 'Loudoun County', hub: '/near-you/loudoun-county', cities: [] },
-    'fairfax-county': { name: 'Fairfax County', hub: '/near-you/fairfax-county', cities: [] },
-    'prince-william-county': { name: 'Prince William County', hub: '/near-you/prince-william-county', cities: [] },
-    'arlington-county': { name: 'Arlington County', hub: '/near-you/arlington-county', cities: [] },
-    'stafford-county': { name: 'Stafford County', hub: '/near-you/stafford-county', cities: [] },
+function CityChip({ countySlug, cityName }) {
+  const href = getCityLink(countySlug, cityName);
+  const cityChipStyle = {
+    display: 'inline-block',
+    padding: '0.4rem 0.8rem',
+    border: '1px solid #e5e5e5',
+    borderRadius: 20,
+    fontSize: '0.9rem',
+    color: 'var(--color-dark)',
   };
+  return href ? (
+    <Link href={href} style={{ ...cityChipStyle, textDecoration: 'none' }}>
+      {cityName}, VA
+    </Link>
+  ) : (
+    <span style={cityChipStyle}>{cityName}, VA</span>
+  );
+}
 
-  cities.forEach(({ county, city }) => {
-    if (counties[county]) {
-      counties[county].cities.push(city);
-    }
-  });
+export default function AreasWeServePage() {
 
   return (
     <>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/areas-we-serve" name="Areas We Serve | Deck Builder Across Northern Virginia" description="Loudoun Decks serves 70+ cities across Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties. Find your city and get a free deck estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/areas-we-serve" name={AREAS_TITLE} description={AREAS_META_DESCRIPTION} speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Areas We Serve</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Custom deck building across 70+ cities in Northern Virginia</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>{COMMUNITIES_LABEL}</p>
           <p style={{ color: '#aaa', marginTop: '1rem', fontSize: '0.9rem' }}>Public Google review profile · Licensed &amp; Insured · Written warranty terms</p>
         </div>
       </section>
 
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <p>We serve <strong>Loudoun County, Fairfax County, Prince William County, Arlington County, and Stafford County</strong> in Northern Virginia. If your city is listed below, we build there. If it&apos;s not listed, <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>call us</CallLink> we likely serve your area too.</p>
+          <p>{COVERAGE_SENTENCE} If your community is listed below, we build there. If it is not listed, <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>call us</CallLink> or <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request an estimate</Link> and we will confirm whether we can take the project.</p>
         </div>
       </section>
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
-          {Object.entries(counties).map(([slug, county]) => (
-            <div key={slug} style={{ marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', borderBottom: '2px solid var(--color-primary)', paddingBottom: '0.5rem' }}>
-                <Link href={county.hub} style={{ color: 'var(--color-dark)', textDecoration: 'none' }}>{county.name}</Link>
-              </h2>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                {county.cities.map((city) => {
-                  const cityName = city.charAt(0).toUpperCase() + city.slice(1).replace(/-/g, ' ');
-                  const href = getCityLink(slug, city);
-                  const cityChipStyle = {
-                    display: 'inline-block',
-                    padding: '0.4rem 0.8rem',
-                    border: '1px solid #e5e5e5',
-                    borderRadius: 20,
-                    fontSize: '0.9rem',
-                    color: 'var(--color-dark)',
-                  };
-                  return href ? (
-                    <Link
-                      key={city}
-                      href={href}
-                      style={{ ...cityChipStyle, textDecoration: 'none', transition: 'all 0.2s' }}
-                    >
-                      {cityName}, VA
-                    </Link>
-                  ) : (
-                    <span key={city} style={cityChipStyle}>
-                      {cityName}, VA
-                    </span>
-                  );
-                })}
+          {COUNTY_ORDER.map((slug) => {
+            const county = counties[slug];
+            const cityNames = county.cities.filter((city) => !INDEPENDENT_NAMES.has(city));
+            return (
+              <div key={slug} style={{ marginBottom: '3rem' }}>
+                <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', borderBottom: '2px solid var(--color-primary)', paddingBottom: '0.5rem' }}>
+                  <Link href={`/near-you/${slug}`} style={{ color: 'var(--color-dark)', textDecoration: 'none' }}>{county.name}</Link>
+                </h2>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                  {cityNames.map((cityName) => (
+                    <CityChip key={cityName} countySlug={slug} cityName={cityName} />
+                  ))}
+                </div>
+                {COUNTY_NOTES[slug] ? (
+                  <p style={{ color: '#555', lineHeight: 1.6, marginTop: '0.9rem', fontSize: '0.95rem' }}>{COUNTY_NOTES[slug]}</p>
+                ) : null}
               </div>
-            </div>
-          ))}
+            );
+          })}
+
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', borderBottom: '2px solid var(--color-primary)', paddingBottom: '0.5rem' }}>Independent cities</h2>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.9rem' }}>
+            {INDEPENDENT_CITIES.map((city) => (
+              <CityChip key={city.name} countySlug={city.countySlug} cityName={city.name} />
+            ))}
+          </div>
+          <p style={{ color: '#555', lineHeight: 1.6, marginBottom: '3rem', fontSize: '0.95rem' }}>
+            Alexandria and Falls Church are Virginia independent cities. They also appear in some Fairfax County mailing addresses. Confirm the property and the permit office before work starts.
+          </p>
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', marginTop: '2rem' }}>Priority City Pages</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '3rem' }}>
@@ -119,6 +136,7 @@ export default function AreasWeServePage() {
               ['/near-you/fairfax-county', 'Fairfax County Deck Builder Hub'],
               ['/near-you/prince-william-county', 'Prince William County Deck Builder Hub'],
               ['/near-you/arlington-county', 'Arlington County Deck Builder Hub'],
+              ['/near-you/stafford-county', 'Stafford County Deck Builder Hub'],
             ].map(([href, text]) => (
               <Link key={href} href={href} style={{ display: 'block', padding: '0.85rem', background: '#fff', border: '1px solid #e5e5e5', borderRadius: 6, fontSize: '0.9rem', color: 'var(--color-primary)', textDecoration: 'none', fontWeight: 700 }}>{text} →</Link>
             ))}
@@ -144,7 +162,7 @@ export default function AreasWeServePage() {
 
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h2 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.75rem' }}>Don&apos;t See Your City?</h2>
-            <p style={{ lineHeight: 1.7 }}>We serve most of Northern Virginia. If your city isn&apos;t listed, call <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink> or <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free estimate</Link> we&apos;ll confirm availability for your area after review.</p>
+            <p style={{ lineHeight: 1.7 }}>If your community is not listed, call <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink> or <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>request a free estimate</Link>. We will confirm whether the property is in the published service area before scheduling.</p>
           </div>
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Plan Before We Visit</h2>

@@ -1,0 +1,70 @@
+{
+  "verifiedOn": "2026-10-18",
+  "method": "HTTP GET of production HTML before this branch, plus repository read of f782f17d",
+  "productionShaBeforeLot": "f782f17d",
+  "site": "https://ldndecks.com",
+  "limits": [
+    "No Google Search Console, GA4, CRM, or Google Business Profile session was available.",
+    "No form was submitted.",
+    "JSON-LD was not fully parsed in this baseline pass; tag presence is recorded from the HTML response.",
+    "Vercel preview HTML is login-gated and is not a substitute for production HTML."
+  ],
+  "routes": [
+    {
+      "url": "https://ldndecks.com/",
+      "status": 200,
+      "title": "Custom Deck Builder in Northern Virginia | Loudoun Decks",
+      "canonical": "https://ldndecks.com",
+      "xRobotsTag": null,
+      "noindexInHeadSample": false,
+      "evidence": "HTML contains both the full H1 sentence and the mobile short sentence naming only Loudoun, Fairfax, and Prince William. The homepage also contains 70+."
+    },
+    {
+      "url": "https://ldndecks.com/contact",
+      "status": 200,
+      "title": "Contact Loudoun Decks | Free Deck Estimate Northern VA",
+      "canonical": "https://ldndecks.com/contact",
+      "xRobotsTag": null,
+      "noindexInHeadSample": false,
+      "evidence": "Alexandria, Falls Church, and Stafford are present. 70+ is absent."
+    },
+    {
+      "url": "https://ldndecks.com/get-estimate",
+      "status": 200,
+      "title": "Request a Deck Estimate Northern Virginia | Loudoun Decks",
+      "canonical": "https://ldndecks.com/get-estimate",
+      "xRobotsTag": null,
+      "noindexInHeadSample": false,
+      "evidence": "Alexandria, Falls Church, and Stafford are present in the FAQ. The footer line still names five counties only."
+    },
+    {
+      "url": "https://ldndecks.com/areas-we-serve",
+      "status": 200,
+      "title": "Areas We Serve | Deck Builder Across Northern Virginia",
+      "canonical": "https://ldndecks.com/areas-we-serve",
+      "xRobotsTag": null,
+      "noindexInHeadSample": false,
+      "evidence": "70+ is present. Stafford appears in the county chip group. The county-hub list omits Stafford."
+    },
+    {
+      "url": "https://ldndecks.com/deck-financing",
+      "status": 200,
+      "title": "Deck Financing in Northern Virginia | We Finance Your Deck",
+      "canonical": "https://ldndecks.com/deck-financing",
+      "xRobotsTag": null,
+      "noindexInHeadSample": false,
+      "evidence": "Source CTAs point at /get-estimate and the payment tools. #localbusiness is not a navigation target."
+    },
+    {
+      "url": "https://ldndecks.com/robots.txt",
+      "status": 200,
+      "evidence": "Production robots.txt returned 200. Source rules allow / and disallow /admin/, /api/, /draft/, and tracking parameters."
+    },
+    {
+      "url": "https://ldndecks.com/sitemap.xml",
+      "status": 200,
+      "bytes": 64093,
+      "evidence": "Sitemap index or urlset returned 200. Child image and news sitemaps are declared from src/app/robots.js only when applicable."
+    }
+  ]
+}

@@ -36,7 +36,6 @@ if (!business.includes('export function formatServiceArea')) {
 const consumers = [
   'src/components/ContactForm.jsx',
   'src/components/ServiceAreasGrid.jsx',
-  'src/components/Hero.jsx',
   'src/components/TrustSection.jsx',
   'src/components/HomeSEOContent.jsx',
   'src/components/TeamGrid.jsx',
@@ -72,6 +71,70 @@ if (!financing.includes('#organization')) {
 const header = read('src/components/Header.jsx');
 if (!header.includes('Financing Available') || !header.includes('/deck-payment-estimator')) {
   errors.push('Header financing entry is missing');
+}
+
+const serviceArea = read('src/lib/serviceArea.js');
+const coverageMatch = serviceArea.match(/export const COVERAGE_SENTENCE = '([^']+)';/);
+const areasMetaMatch = serviceArea.match(/export const AREAS_META_DESCRIPTION = '([^']+)';/);
+const COVERAGE_SENTENCE = coverageMatch?.[1] || '';
+const AREAS_META_DESCRIPTION = areasMetaMatch?.[1] || '';
+const declaredCount = (serviceArea.match(/match: '/g) || []).length;
+const hero = read('src/components/Hero.jsx');
+const heroH1 = 'Custom Deck Builder Near You in Northern Virginia';
+if (!hero.includes(`<h1 className={styles.title}>${heroH1}</h1>`)) {
+  errors.push('Homepage hero no longer uses one H1 for the Northern Virginia promise');
+}
+if (hero.includes('titleShort') || hero.includes('titleFull') || hero.includes('descShort')) {
+  errors.push('Homepage hero still swaps a second headline or description');
+}
+if (!hero.includes('COVERAGE_SENTENCE') || !hero.includes('View all service areas') || !hero.includes('AREAS_HUB_PATH')) {
+  errors.push('Homepage hero is missing the shared coverage line or service-area link');
+}
+if (!COVERAGE_SENTENCE.includes('Alexandria') || !COVERAGE_SENTENCE.includes('Falls Church') || !COVERAGE_SENTENCE.includes('Stafford')) {
+  errors.push('Coverage sentence dropped a declared area');
+}
+
+const areasPage = read('src/app/areas-we-serve/page.js');
+if (areasPage.includes('70+')) {
+  errors.push('Areas page still claims an undemonstrated 70+ total');
+}
+if (!areasPage.includes('Stafford County Deck Builder Hub') || !areasPage.includes('Independent cities')) {
+  errors.push('Areas page is missing the Stafford hub or independent-city group');
+}
+if (areasPage.includes('charAt(0).toUpperCase()')) {
+  errors.push('Areas page still title-cases community slugs');
+}
+if (!areasPage.includes('AREAS_META_DESCRIPTION') || AREAS_META_DESCRIPTION.includes('70+')) {
+  errors.push('Areas metadata is not using the shared community description');
+}
+const cityData = read('src/data/cityData.js');
+for (const name of ['McLean', 'Great Falls', 'South Riding', 'One Loudoun', 'Falls Church', 'Manassas Park', 'Alexandria']) {
+  if (!cityData.includes(`"${name}"`)) {
+    errors.push(`cityData is missing the published community ${name}`);
+  }
+}
+if (!areasPage.includes('county.cities') || !areasPage.includes('getCityLink')) {
+  errors.push('Areas page no longer renders community names from cityData');
+}
+
+const quickLinks = read('src/components/HomeQuickLinks.jsx');
+if (quickLinks.includes('70+') || quickLinks.includes('Loudoun, Fairfax & Prince William')) {
+  errors.push('Homepage Areas We Serve card still describes only three counties or an undemonstrated total');
+}
+
+const estimate = read('src/app/get-estimate/page.js');
+if (estimate.includes('Serving Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties')) {
+  errors.push('Estimate page still uses the five-county coverage line');
+}
+if (!estimate.includes('View all service areas')) {
+  errors.push('Estimate page is missing the visible service-area link');
+}
+
+if (declaredCount !== requiredAreas.length) {
+  errors.push('Public service-area registry does not match the confirmed area list');
+}
+if (serviceArea.includes('businessConfirmation') || serviceArea.includes('pending')) {
+  errors.push('Public service-area module exposes an internal confirmation note');
 }
 
 if (errors.length) {
