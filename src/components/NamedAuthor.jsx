@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BUSINESS } from '@/lib/business';
 
 // Surfaces a named project lead on commercial service pages.
 // AI Overviews extract named-provider snippets when they exist; Person schema is
@@ -42,7 +43,7 @@ export default function NamedAuthor({ context = 'Northern Virginia', lastUpdated
         <p style={{ margin: '0.15rem 0 0.25rem', fontSize: '1rem', fontWeight: 700 }}>
           <span itemProp="name">Nick</span>
           {' — '}
-          <span style={{ fontWeight: 500, color: '#555' }} itemProp="jobTitle">Owner &amp; Lead Designer, Loudoun Decks</span>
+          <span style={{ fontWeight: 500, color: '#555' }} itemProp="jobTitle">{BUSINESS.founder.jobTitle}, Loudoun Decks</span>
         </p>
         <p style={{ margin: 0, fontSize: '0.85rem', color: '#555', lineHeight: 1.55 }} itemProp="description">
           Virginia Class A Licensed Contractor. 10+ years planning custom composite deck projects in {context}, with Trex and TimberTech product details reviewed by scope.{' '}

@@ -13,6 +13,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import { BUSINESS } from '@/lib/business';
 import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
 import { buildMetadata } from '@/lib/seo';
 
@@ -274,6 +276,20 @@ export default function DeckBuilderNorthernVirginiaPage() {
         subtext="Northern Virginia Deck Builder"
         title="Custom Deck Builder in Northern Virginia"
         description="Loudoun Decks designs and builds permitted custom decks for homeowners across Loudoun, Fairfax, Prince William, Arlington and Stafford counties."
+      />
+      <GeoAnswerBlock
+        question="Who is the deck builder for Northern Virginia?"
+        answer={`${BUSINESS.name} (${BUSINESS.alternateName}) designs and builds custom decks for homeowners in ${BUSINESS.areaServed.join(', ')}. The company is a Virginia Class A contractor, license #2705191673, based at ${BUSINESS.address.streetAddress}, ${BUSINESS.address.addressLocality}, ${BUSINESS.address.addressRegion} ${BUSINESS.address.postalCode}. A written estimate is the next step after the property, scope, and county requirements are reviewed.`}
+        facts={[
+          `Phone: (571) 655-7207`,
+          `License: ${BUSINESS.founder.hasCredential}`,
+          'Materials discussed on the site include Trex, TimberTech, and AZEK. Confirm the current product line in the written estimate.',
+        ]}
+        links={[
+          { href: '/get-estimate', label: 'Request a written estimate' },
+          { href: '/composite-decks', label: 'Composite decks' },
+          { href: '/about/certifications-and-licenses', label: 'License and certifications' },
+        ]}
       />
       <ServiceMain
         subtitle="Design, permits and build"

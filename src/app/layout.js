@@ -29,7 +29,7 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Loudoun Decks',
-    images: ['/home-page-ldn.webp'],
+    images: ['/og-default.webp'],
   },
 };
 // Icons are now auto-detected from app/icon.png (32px) and app/apple-icon.png (180px)

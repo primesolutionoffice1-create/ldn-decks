@@ -271,6 +271,29 @@
 }
 
 /* --- Contact Area --- */
+.estimateNavLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-right: 8px;
+  padding: 0 4px;
+  color: #1a1a1a;
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.estimateNavLink:hover {
+  color: var(--site-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .estimateNavLink {
+    display: none;
+  }
+}
+
 .callNowBtn {
   display: flex;
   align-items: center;

@@ -6,6 +6,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import CallLink from '@/components/CallLink';
+import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/press',
@@ -45,7 +46,7 @@ export default function PressPage() {
                   ['Certifications', 'Trex product-line planning, TimberTech and AZEK product planning'],
                   ['License', 'Virginia Class A Contractor (DPOR Licensed)'],
                   ['Insurance', 'Insurance documentation available for project review'],
-                  ['Owner', 'Nick Owner & Lead Designer, 10+ years experience'],
+                  ['Owner', `Nick ${BUSINESS.founder.jobTitle}, 10+ years experience`],
                 ].map(([label, value], i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     <td style={{ padding: '0.75rem', fontWeight: 600, borderBottom: '1px solid #eee', width: '35%' }}>{label}</td>
@@ -113,7 +114,7 @@ export default function PressPage() {
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Media Contact</h2>
-          <p style={{ marginBottom: '0.5rem' }}><strong>Nick</strong> Owner & Lead Designer</p>
+          <p style={{ marginBottom: '0.5rem' }}><strong>Nick</strong> {BUSINESS.founder.jobTitle}</p>
           <p style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:office@ldndecks.com" style={{ color: 'var(--color-primary, #d14817)' }}>office@ldndecks.com</a></p>
           <p style={{ marginBottom: '2rem' }}>Phone: <CallLink style={{ color: 'var(--color-primary, #d14817)' }}>(571) 655-7207</CallLink></p>
           <p style={{ marginBottom: '2rem' }}>
