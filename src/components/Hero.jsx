@@ -1,7 +1,7 @@
 import styles from './Hero.module.css';
 import Image from 'next/image';
 import HeroCTA from './HeroCTA';
-import { BUSINESS } from '@/lib/business';
+import { BUSINESS, formatServiceArea } from '@/lib/business';
 
 const MAPS_URL = BUSINESS.sameAs.find((url) => url.includes('google.com/maps/place/Loudoun+Decks'))
   || 'https://www.google.com/maps/place/Loudoun+Decks/';
@@ -47,7 +47,7 @@ export default function Hero() {
         <p className={styles.heroDescription}>
           <span className={styles.descFull}>
             Need a deck contractor for a new composite deck, replacement, repair, or screened porch?
-            Loudoun Decks helps plan design, permits, HOA details, and estimates across Loudoun, Fairfax, and Prince William.
+            Loudoun Decks helps plan design, permits, HOA details, and estimates in {formatServiceArea().replaceAll(' County', '')}.
           </span>
           <span className={styles.descShort}>
             Class A licensed. County permits and HOA review are part of the written plan.

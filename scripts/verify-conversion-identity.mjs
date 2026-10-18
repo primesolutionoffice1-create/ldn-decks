@@ -36,6 +36,10 @@ if (!business.includes('export function formatServiceArea')) {
 const consumers = [
   'src/components/ContactForm.jsx',
   'src/components/ServiceAreasGrid.jsx',
+  'src/components/Hero.jsx',
+  'src/components/TrustSection.jsx',
+  'src/components/HomeSEOContent.jsx',
+  'src/components/TeamGrid.jsx',
   'src/app/get-estimate/page.js',
   'src/app/contact/page.js',
 ];

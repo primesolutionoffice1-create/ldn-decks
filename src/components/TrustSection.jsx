@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BUSINESS } from '@/lib/business';
+import { BUSINESS, formatServiceArea } from '@/lib/business';
 import styles from './TrustSection.module.css';
 
 const WORK = [
@@ -37,7 +37,7 @@ export default function TrustSection() {
       <div className={styles.container}>
         <h2 id="built-work-heading">Decks, screened porches, and patios</h2>
         <p className={styles.intro}>
-          Built in Loudoun, Fairfax, and Prince William. The written estimate names the product line, the county permit, and the HOA review.
+          Built for homeowners in {formatServiceArea().replaceAll(' County', '')}. The written estimate names the product line, the county permit, and the HOA review.
         </p>
 
         <div className={styles.workGrid}>

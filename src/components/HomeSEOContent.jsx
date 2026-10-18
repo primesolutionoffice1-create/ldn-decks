@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { BUSINESS } from '@/lib/business';
+import { BUSINESS, formatServiceArea } from '@/lib/business';
 import styles from './HomeSEOContent.module.css';
 
 const PHONE_DISPLAY = '(571) 655-7207';
@@ -22,7 +22,7 @@ const HomeSEOContent = () => {
           <div className={styles.item}>
             <h2 className={styles.heading}>Composite Deck Builder Near You</h2>
             <p className={styles.text}>
-              Homeowners searching for a <strong>composite deck builder near me</strong> usually need a clear path from ideas to a real estimate. We build Trex, TimberTech, and AZEK decks for Loudoun, Fairfax, and Prince William homes, including design, framing, hidden fasteners, railing options, permits, and HOA submissions. Compare materials in our <Link href="/composite-decks">composite deck building service</Link>, then use the <Link href="/deck-cost-calculator">deck cost calculator</Link> or the <Link href="/composite-deck-cost-northern-virginia">Northern Virginia composite deck cost guide</Link>.
+              Homeowners searching for a <strong>composite deck builder near me</strong> usually need a clear path from ideas to a real estimate. We build Trex, TimberTech, and AZEK decks for homes in {formatServiceArea().replaceAll(' County', '')}, including design, framing, hidden fasteners, railing options, permits, and HOA submissions. Compare materials in our <Link href="/composite-decks">composite deck building service</Link>, then use the <Link href="/deck-cost-calculator">deck cost calculator</Link> or the <Link href="/composite-deck-cost-northern-virginia">Northern Virginia composite deck cost guide</Link>.
             </p>
           </div>
           <div className={styles.item}>

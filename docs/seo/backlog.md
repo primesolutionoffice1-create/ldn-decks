@@ -59,6 +59,24 @@ Pagini protejate, deja în sitemap și cu cerere de ofertă: `/`, `/get-estimate
 - Indicator: nu este un indicator de lead. Se reverifică la următorul audit de schema.
 - Stare: testat local. HTML-ul de la `/deck-financing` nu mai conține `#localbusiness`.
 
+### LDN-SEO-006 — P1 — homepage-ul numea doar trei județe
+
+- Dovadă, 2026-10-18: căutarea web pentru „deck builder Loudoun County VA” a citat hero-ul live cu Loudoun, Fairfax și Prince William. În cod, același text este în `Hero` (paragraf), `TrustSection`, `HomeSEOContent` și în descrierea schema din `TeamGrid`.
+- Nu am schimbat H1-ul. Varianta scurtă din H1 încă numește trei județe pe mobil, pentru că este în interiorul H1.
+- Implementare: paragraful de sub H1, secțiunea de încredere și paragraful SEO folosesc lista confirmată, fără cuvântul County, ca să rămână lizibilă.
+- Stare: implementat local în același branch, după primul lot.
+
+## Preview
+
+PR #220. CI a trecut pe commit-ul primului lot. Preview-ul Vercel răspunde cu pagina de autentificare, nu cu site-ul, deci condiția de preview nu este îndeplinită și lotul nu a fost publicat.
+
+## Concurenți observați
+
+Sursă: căutare web din 2026-10-18, nu un SERP local și nu un pachet Maps. Nu am copiat afirmațiile lor și nu am volum de căutare.
+
+- Loudoun: xScape, Stoneridge Decks, Loudoun Deck and Fence. Loudoun Decks apare pe propriile URL-uri.
+- Stafford: Stoneridge Decks, Archadeck of Fredericksburg-Woodbridge, Northern Deckworks, deckbuilderstafford.com. Pagina de permise a județului nu este un concurent.
+
 ## Așteaptă aprobare
 
 - LDN-SEO-004, P2: tabelele de preț rămase, inclusiv Prince William. Ștergerea lor schimbă o promisiune publicată. Nu le-am modificat.
