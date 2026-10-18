@@ -35,7 +35,7 @@ function personalizationItems(record) {
     ? `<li><strong>Competitors in this snapshot:</strong> ${escapeHtml(names.join(', '))}</li>`
     : '';
   const preview = brief.previewPath
-    ? `<li><strong>Customer page, send it yourself:</strong> ${escapeHtml(brief.previewPath)}</li>`
+    ? `<li><strong>Customer page, send it yourself:</strong> ${escapeHtml(brief.previewPath)}. This page does not load the public layout or marketing tags.</li>`
     : '';
   return `<li><strong>Existing pages:</strong> ${escapeHtml(brief.cityPage)}${note} and ${escapeHtml(brief.servicePage)}</li>${preview}${organic}${competitors}`;
 }
@@ -44,7 +44,10 @@ function personalizationText(record) {
   const brief = record.personalization;
   if (!brief?.cityPage) return '';
   const note = brief.cityPageNote ? ` (${brief.cityPageNote})` : '';
-  return `Existing pages: ${brief.cityPage}${note} and ${brief.servicePage}`;
+  const preview = brief.previewPath
+    ? ` Customer page, send it yourself: ${brief.previewPath}. It does not load the public layout or marketing tags.`
+    : '';
+  return `Existing pages: ${brief.cityPage}${note} and ${brief.servicePage}.${preview}`;
 }
 
 function draftBlock(record) {

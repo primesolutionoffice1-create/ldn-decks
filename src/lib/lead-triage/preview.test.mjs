@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFileSync } from 'node:fs';
 import { blankRecord, classifyStoredRecord, loadPreview } from './pipeline.mjs';
-import { buildVisitorPreview } from './preview.mjs';
+import { buildVisitorPreview, renderPreviewDocument, renderPreviewNotFound } from './preview.mjs';
 import { createMemoryStore } from './store.mjs';
 
 const NOW = '2026-10-08T11:00:00.000Z';
@@ -79,4 +79,47 @@ test('robots.txt disallows the customer page prefix and the sitemap list does no
   assert.equal(published.includes('Disallow: /r\n') || published.includes('Disallow: /r\r'), false);
   const sitemap = readFileSync(new URL('../../app/sitemap.js', import.meta.url), 'utf8');
   assert.equal(sitemap.includes('/r/'), false);
+});
+
+test('the customer document leaves out marketing tags and does not leak the token', () => {
+  const html = renderPreviewDocument({
+    title: 'Ada — Screened porch / enclosure in Leesburg | Loudoun Decks',
+    greeting: 'Ada, this page is for your screened porch / enclosure in Leesburg.',
+    body: 'Call (571) 655-7207. <script>alert(1)</script>',
+    phone: '(571) 655-7207',
+    phoneHref: 'tel:+15716557207',
+    cityPage: '/deck-builder-leesburg-va',
+    servicePage: '/screened-porch-builder-northern-virginia',
+    cityPageNote: null,
+  });
+  assert.match(html, /Ada, this page is for your screened porch \/ enclosure in Leesburg\./);
+  assert.match(html, /href="\/deck-builder-leesburg-va" rel="noreferrer" referrerpolicy="no-referrer"/);
+  assert.match(html, /name="referrer" content="no-referrer"/);
+  assert.match(html, /noindex, nofollow, noarchive/);
+  assert.match(html, /&lt;script&gt;alert\(1\)&lt;\/script&gt;/);
+  assert.doesNotMatch(html, /<script/i);
+  for (const marker of ['googletagmanager', 'ahrefs', 'facebook', 'pinterest', 'pinimg', 'clarity.ms', 'GTM-', 'gtag', 'dataLayer']) {
+    assert.equal(html.toLowerCase().includes(marker.toLowerCase()), false, marker);
+  }
+
+  const hostile = renderPreviewDocument({
+    title: 'Ok',
+    greeting: 'Ok',
+    body: 'Ok',
+    phone: '(571) 655-7207',
+    phoneHref: 'javascript:alert(1)',
+    cityPage: 'https://evil.example/steal',
+    servicePage: '/services/new-decks',
+  });
+  assert.doesNotMatch(hostile, /javascript:/);
+  assert.match(hostile, /href="\/areas-we-serve"/);
+  assert.match(hostile, /href="\/services\/new-decks"/);
+  assert.doesNotMatch(renderPreviewNotFound(), /<script/i);
+
+  const route = readFileSync(new URL('../../app/r/[token]/route.js', import.meta.url), 'utf8');
+  assert.match(route, /referrer-policy/);
+  assert.equal(route.includes('tel:'), false);
+  const layout = readFileSync(new URL('../../app/layout.js', import.meta.url), 'utf8');
+  assert.match(layout, /GTM-N87MG6QS/);
+  assert.match(layout, /analytics\.ahrefs\.com/);
 });

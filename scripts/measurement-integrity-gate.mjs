@@ -21,7 +21,7 @@ function walk(dir, files = []) {
     const stat = fs.statSync(abs);
     if (stat.isDirectory()) {
       walk(rel, files);
-    } else if (/\.(js|jsx|ts|tsx)$/.test(entry)) {
+    } else if (/\.(js|jsx|mjs|ts|tsx)$/.test(entry)) {
       files.push(rel);
     }
   }
@@ -49,8 +49,13 @@ const proofData = JSON.parse(read('src/data/verifiedProofSnippets.json'));
 const appAndComponents = walk('src/app').concat(walk('src/components'), walk('src/lib'));
 const callAttributionRunbookExists = exists('docs/ads-tracking/CALL-ATTRIBUTION-READONLY-RUNBOOK-2026-06-02.md');
 
+const rawTelAllow = new Set([
+  'src/components/CallLink.jsx',
+  // Private customer page. A tracked phone click would send the token path to analytics.
+  'src/lib/lead-triage/preview.mjs',
+]);
 const rawTelMatches = appAndComponents
-  .filter((rel) => rel !== 'src/components/CallLink.jsx')
+  .filter((rel) => !rawTelAllow.has(rel) && !/\.test\.(mjs|js|jsx|ts|tsx)$/.test(rel))
   .flatMap((rel) => {
     const source = read(rel);
     return source.includes('tel:') ? [rel] : [];
@@ -91,7 +96,7 @@ const checks = [
     'raw-tel-scan',
     'Visible phone links route through tracked CallLink',
     rawTelMatches.length === 0 ? 'PASS' : 'FAIL',
-    rawTelMatches.length ? rawTelMatches.join(', ') : 'No raw tel: usage outside src/components/CallLink.jsx.',
+    rawTelMatches.length ? rawTelMatches.join(', ') : 'No raw tel: usage outside CallLink and the private customer page.',
     rawTelMatches.length ? 'Raw tel links can bypass phone_click tracking.' : ''
   ),
   check(

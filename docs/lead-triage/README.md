@@ -115,6 +115,8 @@ Classification stores a brief on the lead. It names one existing city page and o
 
 A passed lead, and a lead that needs a person, also gets an unlinked page at `/r/<token>`. The office can paste that link into a reply they send themselves. The page greets the homeowner, gives the office phone, and links to the existing city and service pages. It does not show the draft, the score, the competitor list, or the homeowner's email. A rejected lead has no page. `robots.txt` disallows `/r/`. The token stays the same if the lead is classified again.
 
+That page is its own document. It does not use the public site layout, so the response does not include the header, the footer, Google Tag Manager, Ahrefs, or ad pixels. The response sends `Referrer-Policy: no-referrer`, and the city and service links do the same, so the token is not attached to the next page. The public homepage, city pages, and measurement tags stay on every other route.
+
 Dale City has no city page, so that brief points at `/deck-builder-woodbridge-va` and says so. A city with no mapped page points at `/areas-we-serve`.
 
 ## Competitor coverage map

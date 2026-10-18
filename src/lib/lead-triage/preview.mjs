@@ -3,6 +3,8 @@ import { OFFICE_PHONE_DISPLAY } from './config.mjs';
 
 const TOKEN_PATTERN = /^[A-Za-z0-9_-]{22,}$/;
 const PREVIEW_BUCKETS = new Set(['passed', 'needs_human_review']);
+// Untracked on purpose. CallLink would report the token path as a phone click.
+const PREVIEW_PHONE_HREF = 'tel:+15716557207';
 
 export function createPreviewToken() {
   return randomBytes(18).toString('base64url');
@@ -53,9 +55,58 @@ export function buildVisitorPreview(record) {
     cityPageNote: brief.cityPageNote || null,
     servicePage: brief.servicePage,
     phone: OFFICE_PHONE_DISPLAY,
-    phoneHref: 'tel:+15716557207',
+    phoneHref: PREVIEW_PHONE_HREF,
     appliedToPublicSite: false,
   };
+}
+
+export function renderPreviewDocument(preview) {
+  const phoneHref = preview?.phoneHref === PREVIEW_PHONE_HREF ? PREVIEW_PHONE_HREF : '';
+  const phone = escapeHtml(preview?.phone);
+  const phoneLink = phoneHref
+    ? `<a href="${phoneHref}" rel="noreferrer" referrerpolicy="no-referrer">${phone}</a>`
+    : phone;
+  const note = preview?.cityPageNote ? ` (${escapeHtml(preview.cityPageNote)})` : '';
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>${escapeHtml(preview?.title)}</title>
+<style>
+  body{margin:0;background:#f7f4ef;color:#1c1c1c;font-family:Georgia,"Times New Roman",serif}
+  main{max-width:40rem;margin:2.5rem auto;padding:0 1.25rem 3rem}
+  h1{font-size:1.8rem;line-height:1.3;font-weight:600}
+  p{font-size:1.08rem;line-height:1.55}
+  a{color:#9a3412}
+</style>
+</head>
+<body>
+<main id="main">
+<h1>${escapeHtml(preview?.greeting)}</h1>
+<p>${escapeHtml(preview?.body)}</p>
+<p>${phoneLink}</p>
+<p><a href="${escapeHtml(safeInternalPath(preview?.cityPage))}" rel="noreferrer" referrerpolicy="no-referrer">City page</a>${note} · <a href="${escapeHtml(safeInternalPath(preview?.servicePage))}" rel="noreferrer" referrerpolicy="no-referrer">Service page</a></p>
+</main>
+</body>
+</html>`;
+}
+
+export function renderPreviewNotFound() {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Page not found | Loudoun Decks</title>
+</head>
+<body>
+<main id="main"><h1>Page not found</h1></main>
+</body>
+</html>`;
 }
 
 function firstName(value) {
@@ -67,4 +118,20 @@ function firstName(value) {
 function cleanPlace(value) {
   const text = String(value || '').replace(/[<>]/g, '').trim();
   return text.slice(0, 80);
+}
+
+function safeInternalPath(value) {
+  const path = String(value || '');
+  if (!path.startsWith('/') || path.startsWith('//') || /[\s\\"'<>]/.test(path)) {
+    return '/areas-we-serve';
+  }
+  return path;
+}
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }

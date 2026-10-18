@@ -64,7 +64,13 @@ export function proxy(request) {
     );
   }
 
-  return NextResponse.next();
+  const response = NextResponse.next();
+  if (pathname.startsWith('/r/')) {
+    response.headers.set('Referrer-Policy', 'no-referrer');
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+    response.headers.set('X-Content-Type-Options', 'nosniff');
+  }
+  return response;
 }
 
 function authorizeAdmin(request) {

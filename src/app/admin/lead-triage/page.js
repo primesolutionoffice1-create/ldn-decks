@@ -106,7 +106,7 @@ function Personalization({ brief }) {
       {names.length ? <p style={{ margin: '0.2rem 0' }}>Snapshot competitors: {names.join(', ')}</p> : null}
       {brief.previewPath ? (
         <p style={{ margin: '0.2rem 0' }}>
-          Customer page, unlinked from the public site:{' '}
+          Customer page, unlinked from the public site. It does not load the public header, footer, or marketing tags:{' '}
           <a href={brief.previewPath}>{brief.previewPath}</a>
         </p>
       ) : null}
