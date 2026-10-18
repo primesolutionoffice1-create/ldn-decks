@@ -86,12 +86,14 @@ export default function TrustSection() {
           <Link href="/about/certifications-and-licenses" className={styles.credentialLink}>
             VA Class A #2705191673
           </Link>
-          <Link href="/trex-performance-products" className={styles.credentialLink}>
-            Trex partner
-          </Link>
-          <Link href="/timbertech-decks" className={styles.credentialLink}>
-            TimberTech partner
-          </Link>
+          <span className={styles.partnerPair}>
+            <Link href="/trex-performance-products" className={styles.credentialLink}>
+              Trex partner
+            </Link>
+            <Link href="/timbertech-decks" className={styles.credentialLink}>
+              TimberTech partner
+            </Link>
+          </span>
         </div>
       </div>
     </section>
