@@ -111,11 +111,35 @@
 .contractorLine {
   max-width: 1200px;
   margin: 0 auto 16px;
-  padding: 0 40px;
-  color: #cfcfcf;
+  padding: 0 40px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  color: #f3f1ec;
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.65;
   font-weight: 500;
+}
+
+/* The centered 1200px row already clears the fixed call button on wide
+   screens. Below that, end the row before the button while keeping the
+   sentence aligned with the footer columns. */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .contractorLine {
+    width: auto;
+    max-width: none;
+    margin-left: calc((100% - 1200px) / 2);
+    margin-right: 120px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .contractorLine {
+    width: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 120px;
+    padding-right: 24px;
+  }
 }
 
 .containerBottom {
@@ -174,6 +198,13 @@
 }
 
 /* --- Media Queries --- */
+@media screen and (min-width: 769px) and (max-width: 1240px) {
+  .socials {
+    /* The back-to-top button sits on the lower right at these widths. */
+    margin-right: 80px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     grid-template-columns: 1fr 1fr;
@@ -197,6 +228,8 @@
     flex-wrap: wrap;
     max-width: 100%;
     margin-right: 0;
+    /* The back-to-top button sits on the lower left, above the call bar. */
+    margin-left: 24px;
   }
 }
 
