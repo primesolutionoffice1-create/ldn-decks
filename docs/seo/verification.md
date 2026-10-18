@@ -28,4 +28,18 @@ Lighthouse was not run. These checks are not field Core Web Vitals and they are 
 
 ## Production
 
-Filled in after the Vercel deploy of `main`. See the commit recorded below once the deploy is confirmed.
+Confirmed 2026-10-18 after Vercel reported success for `f8ccd2ef` (`Align SEO facts, discovery files, and the estimate path. (#218)`). No second deploy was started. No estimate form was submitted.
+
+| Check | Result |
+| --- | --- |
+| https://ldndecks.com | 200. Title exact. Canonical `https://ldndecks.com`. `og:image` is `/og-default.webp` |
+| Homepage HTML | License `#2705191673`, street address, "Get estimate", and "Financing Available" |
+| `/robots.txt` | 200. `User-Agent: *`, `Disallow: /admin/`, Amazonbot present. No static-file comment header |
+| `/llms.txt` | Email, Centreville location, service area, 130+. Street number absent |
+| `/sitemap.xml` | 200 |
+| `/near-you/stafford-county` | No `$14,000` or `$26,000`. Stafford answer and the written-estimate path are present |
+| `/deck-builder-northern-virginia` | Quick answer and license are present |
+| `/showcase/rooftop-deck-washington-dc` | `noindex, follow, max-image-preview:large` |
+| `/get-estimate` | 200. Form was not submitted |
+
+A sitemap response and a successful deploy are not proof of Google indexation.
