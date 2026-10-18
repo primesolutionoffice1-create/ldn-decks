@@ -150,7 +150,9 @@ function schemaForPage({ city, service, path }) {
     areaServed: {
       '@type': 'City',
       name: `${city.city}, VA`,
-      containedInPlace: { '@type': 'AdministrativeArea', name: city.county },
+      ...(city.administrativeParent
+        ? { containedInPlace: { '@type': 'AdministrativeArea', name: city.administrativeParent } }
+        : {}),
     },
     offers: {
       '@type': 'AggregateOffer',
@@ -320,7 +322,7 @@ export default function LocalServicePage({ city, serviceKey }) {
                   {item.label}
                 </Link>
               ))}
-              <Link href={`/near-you/${city.countySlug}`}>{city.county} service area</Link>
+              <Link href={`/near-you/${city.countySlug}`}>{city.hubName || city.county} service area</Link>
               <Link href="/contact">Contact Loudoun Decks</Link>
             </div>
           </aside>

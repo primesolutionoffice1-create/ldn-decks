@@ -173,13 +173,22 @@
   .title {
     font-size: 36px;
   }
+  .container {
+    padding: 0 16px;
+  }
   .cardsGrid {
     grid-template-columns: 1fr;
+    min-width: 0;
+  }
+  .card {
+    padding: 28px 16px;
+    min-width: 0;
   }
   .card:nth-child(3) {
     max-width: 100%;
   }
   .reviewText {
     min-height: auto;
+    overflow-wrap: anywhere;
   }
 }

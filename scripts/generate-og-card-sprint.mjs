@@ -530,7 +530,7 @@ const CARDS = [
     file: 'about-loudoun-decks-social.png',
     kicker: 'TRUSTED LOCAL BUILDER',
     title: 'About Loudoun Decks',
-    subtitle: 'Class A licensed, Trex Platinum, TimberTech certified',
+    subtitle: 'Class A licensed builder based in Centreville',
     accent: [84, 126, 176],
   },
   {
@@ -558,7 +558,7 @@ const CARDS = [
     file: 'certifications-licenses-social.png',
     kicker: 'VERIFY CREDENTIALS',
     title: 'Certifications + Licenses',
-    subtitle: 'Virginia Class A, insured, Trex Pro and BBB profile links',
+    subtitle: 'Virginia Class A contractor license',
     accent: [78, 132, 170],
   },
   {
@@ -598,9 +598,9 @@ const CARDS = [
   },
   {
     file: 'areas-we-serve-social.png',
-    kicker: '70+ SERVICE AREAS',
+    kicker: 'SERVICE AREA',
     title: 'Areas We Serve',
-    subtitle: 'Loudoun, Fairfax, Prince William, Arlington and Stafford',
+    subtitle: 'Serving Northern Virginia',
     accent: [84, 126, 176],
   },
   {
@@ -621,14 +621,14 @@ const CARDS = [
     file: 'fairfax-county-deck-builder-hub-social.png',
     kicker: 'FAIRFAX COUNTY',
     title: 'Deck Builder Hub',
-    subtitle: 'Reston, McLean, Vienna, Herndon, Fairfax and Falls Church',
+    subtitle: 'Reston, McLean, Vienna, Herndon and Centreville',
     accent: [78, 132, 170],
   },
   {
     file: 'prince-william-county-deck-builder-hub-social.png',
     kicker: 'PRINCE WILLIAM',
     title: 'Deck Builder Hub',
-    subtitle: 'Manassas, Woodbridge, Haymarket, Gainesville and Bristow',
+    subtitle: 'Woodbridge, Haymarket, Gainesville and Bristow',
     accent: [191, 130, 62],
   },
   {
@@ -1541,7 +1541,13 @@ function drawCard(card) {
 }
 
 fs.mkdirSync(OUT_DIR, { recursive: true });
-for (const card of CARDS) {
+const requested = process.argv.slice(2);
+const selected = requested.length ? CARDS.filter((card) => requested.includes(card.file)) : CARDS;
+if (requested.length && selected.length !== requested.length) {
+  console.error(`Unknown OG card: ${requested.filter((file) => !selected.some((card) => card.file === file)).join(', ')}`);
+  process.exit(1);
+}
+for (const card of selected) {
   const out = path.join(OUT_DIR, card.file);
   fs.writeFileSync(out, drawCard(card));
   console.log(`wrote ${path.relative(process.cwd(), out)}`);

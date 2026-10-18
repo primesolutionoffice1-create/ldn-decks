@@ -10,7 +10,7 @@ The public list stays the seven areas already in `BUSINESS.areaServed`: Loudoun 
 
 Alexandria and Falls Church are Virginia independent cities. The registry gives them `type: independent-city` and no county parent. `cityData.js` still lists them under `fairfax-county` so existing `/deck-builder-alexandria-va` and `/deck-builder-falls-church-va` lookups stay valid. The areas page shows them in an independent-city group and explains that a Fairfax mailing address is not permit authority.
 
-Manassas and Manassas Park are independent cities. They remain in the Prince William group because that is the published grouping and their existing URLs were not retargeted. The page now says so. Fairfax city and Fairfax County stay as already published; `/deck-builder-fairfax-va` was not removed.
+Correction, 18 October 2026, later the same day: Manassas, Manassas Park, and the City of Fairfax are Virginia independent cities. Showing them inside Prince William County or Fairfax County was an administrative error, not a commercial restriction. They now appear in the independent-city group. Existing URLs are unchanged. This correction does not add or remove a served area and does not wait for a new commercial confirmation.
 
 Community labels on the areas page now come from the original `cityData` names, so McLean, Great Falls, South Riding, and One Loudoun keep their capitals. Localities without a canonical city URL stay plain text through `getCityLink`.
 

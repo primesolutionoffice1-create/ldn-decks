@@ -33,18 +33,22 @@
 .videoWrapper {
   position: relative;
   width: 100%;
-  max-width: 1000px;
+  max-width: min(1000px, 100%);
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   background-color: #000;
+  min-width: 0;
+  contain: inline-size;
 }
 
 .video {
   width: 100%;
+  max-width: 100%;
   display: block;
   aspect-ratio: 16 / 9;
+  height: auto;
 }
 
 @media (max-width: 768px) {

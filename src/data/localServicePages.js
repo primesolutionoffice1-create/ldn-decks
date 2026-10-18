@@ -1,4 +1,5 @@
 import { counties, slugify } from '@/data/cityData';
+import { independentCityLabel } from '@/lib/serviceArea';
 
 export const targetCountySlugs = [
   'loudoun-county',
@@ -665,13 +666,18 @@ export const servicePageTypes = {
 export function getTargetCities() {
   return targetCountySlugs.flatMap((countySlug) => {
     const county = counties[countySlug];
-    return county.cities.map((city) => ({
-      city,
-      citySlug: slugify(city),
-      county: county.name,
-      countySlug,
-      profile: cityProfiles[slugify(city)] || null,
-    }));
+    return county.cities.map((city) => {
+      const label = independentCityLabel(city);
+      return {
+        city,
+        citySlug: slugify(city),
+        county: label || county.name,
+        administrativeParent: label ? null : county.name,
+        hubName: county.name,
+        countySlug,
+        profile: cityProfiles[slugify(city)] || null,
+      };
+    });
   });
 }
 

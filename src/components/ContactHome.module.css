@@ -11,14 +11,21 @@
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  min-width: 0;
+}
+
+.leftCol {
+  min-width: 0;
 }
 
 /* Left Column */
 .subtextWrapper {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 15px;
+  min-width: 0;
 }
 
 .subtext {
@@ -91,6 +98,7 @@
   font-size: 19px;
   color: var(--black);
   font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .infoText a {
@@ -98,6 +106,7 @@
   color: var(--black);
   font-weight: 800;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .infoText a:hover {
@@ -111,6 +120,7 @@
   border-radius: 12px;
   border: 1px solid #f0f0f0;
   box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+  min-width: 0;
 }
 
 .contactForm h3 {
@@ -129,6 +139,7 @@
 
 .inputGroup {
   margin-bottom: 20px;
+  min-width: 0;
 }
 
 .inputGroup input,
@@ -143,6 +154,8 @@
   background: var(--white);
   transition: all 0.3s ease;
   color: #333;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .inputGroup input:focus,

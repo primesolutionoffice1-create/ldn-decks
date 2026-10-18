@@ -229,7 +229,9 @@ const NAP_DRIFT_PATTERNS = [
 ];
 
 const napDriftFiles = [];
-for (const file of appFiles.concat(rgFiles('.', componentDir).filter(f => /\.(js|jsx|ts|tsx|mjs)$/.test(f)))) {
+const libDir = path.resolve('src/lib');
+const libFiles = walkSourceFiles(libDir).filter((file) => !file.endsWith('blogData.js') && !file.endsWith('educationData.js'));
+for (const file of appFiles.concat(rgFiles('.', componentDir).filter(f => /\.(js|jsx|ts|tsx|mjs)$/.test(f)), libFiles)) {
   // Skip vault, audits, and the canonical record itself
   if (file.includes('lib/business.js')) continue;
   if (file.includes('NAP Source of Truth')) continue;

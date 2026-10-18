@@ -11,6 +11,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  min-width: 0;
 }
 
 .textSide {
@@ -68,6 +69,8 @@
 
 .visualSide {
   position: relative;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .mockupContainer {
@@ -123,6 +126,8 @@
 .slider {
   -webkit-appearance: none;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   height: 8px;
   background: #edf2f7;
   border-radius: 5px;
