@@ -1,0 +1,78 @@
+// Public service-area labels derived from BUSINESS.areaServed.
+// Internal confirmation notes stay in docs/seo and are not exported here,
+// so they cannot ship in a client bundle or in public JSON-LD.
+
+import { BUSINESS } from './business';
+
+export const AREAS_HUB_PATH = '/areas-we-serve';
+export const COMMUNITIES_LABEL = 'Communities across Northern Virginia';
+
+export const DECLARED_AREAS = [
+  {
+    id: 'loudoun-county',
+    match: 'Loudoun County, VA',
+    type: 'county',
+    path: '/near-you/loudoun-county',
+  },
+  {
+    id: 'fairfax-county',
+    match: 'Fairfax County, VA',
+    type: 'county',
+    path: '/near-you/fairfax-county',
+  },
+  {
+    id: 'prince-william-county',
+    match: 'Prince William County, VA',
+    type: 'county',
+    path: '/near-you/prince-william-county',
+  },
+  {
+    id: 'arlington-county',
+    match: 'Arlington County, VA',
+    type: 'county',
+    path: '/near-you/arlington-county',
+  },
+  {
+    id: 'stafford-county',
+    match: 'Stafford County, VA',
+    type: 'county',
+    path: '/near-you/stafford-county',
+  },
+  {
+    id: 'alexandria',
+    match: 'Alexandria, VA',
+    type: 'independent-city',
+    path: '/deck-builder-alexandria-va',
+  },
+  {
+    id: 'falls-church',
+    match: 'Falls Church, VA',
+    type: 'independent-city',
+    path: '/deck-builder-falls-church-va',
+  },
+].map((area) => ({
+  ...area,
+  name: area.match.replace(/, VA$/, ''),
+  publishedCoverage: true,
+}));
+
+const businessNames = new Set(BUSINESS.areaServed);
+for (const area of DECLARED_AREAS) {
+  if (!businessNames.has(area.match)) {
+    throw new Error(`Declared area ${area.match} is missing from BUSINESS.areaServed`);
+  }
+}
+if (BUSINESS.areaServed.length !== DECLARED_AREAS.length) {
+  throw new Error('BUSINESS.areaServed and DECLARED_AREAS drifted apart');
+}
+
+export const COVERAGE_SENTENCE = 'Serving Loudoun, Fairfax, Prince William, Arlington, and Stafford counties, plus Alexandria and Falls Church.';
+
+export const AREAS_META_DESCRIPTION = 'Communities across Northern Virginia: Loudoun, Fairfax, Prince William, Arlington, and Stafford counties, plus Alexandria and Falls Church.';
+
+const REQUIRED_COVERAGE_NAMES = ['Loudoun', 'Fairfax', 'Prince William', 'Arlington', 'Stafford', 'Alexandria', 'Falls Church'];
+for (const name of REQUIRED_COVERAGE_NAMES) {
+  if (!COVERAGE_SENTENCE.includes(name) || !AREAS_META_DESCRIPTION.includes(name)) {
+    throw new Error(`Service-area copy dropped ${name}`);
+  }
+}

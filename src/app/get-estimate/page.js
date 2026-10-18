@@ -251,7 +251,10 @@ export default function GetEstimatePage() {
               Try Cost Calculator
             </Link>
           </div>
-          <p style={{ color: '#666', fontSize: '0.8rem', marginTop: '1rem' }}>Serving Loudoun, Fairfax, Prince William, Arlington &amp; Stafford counties</p>
+          <p style={{ color: '#e8e8e8', fontSize: '0.95rem', marginTop: '1rem' }}>
+            Serving Northern Virginia.{' '}
+            <Link href="/areas-we-serve" style={{ color: '#fff', fontWeight: 700 }}>View all service areas</Link>
+          </p>
         </div>
       </section>
 

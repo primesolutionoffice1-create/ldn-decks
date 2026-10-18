@@ -5,11 +5,12 @@ import ContactForm from '@/components/ContactForm';
 import SimpleCTA from '@/components/SimpleCTA';
 import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
+import { COVERAGE_SENTENCE } from '@/lib/serviceArea';
 
 export const metadata = buildMetadata({
   path: '/referral-partners',
   title: 'Referral Partners | LDN Decks Northern Virginia',
-  description: 'Refer deck, porch, patio, and outdoor living projects to LDN Decks. Serving Loudoun, Fairfax, Prince William, Arlington, and Stafford.',
+  description: 'Refer deck, porch, patio, and outdoor living projects to LDN Decks in Loudoun, Fairfax, Prince William, Arlington, Stafford, Alexandria, and Falls Church.',
   image: '/social/referral-partners-social.png',
 });
 
@@ -116,7 +117,7 @@ export default function ReferralPartnersPage() {
               </CallLink>
             </div>
             <p style={{ marginTop: '1rem', color: '#d9d2ca', fontSize: '0.95rem' }}>
-              Serving Loudoun, Fairfax, Prince William, Arlington, Stafford, and surrounding Northern Virginia communities.
+              {COVERAGE_SENTENCE}
             </p>
           </div>
         </div>

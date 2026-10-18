@@ -11,6 +11,7 @@ import AboveFoldCTA from '@/components/AboveFoldCTA';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
+import { COVERAGE_SENTENCE } from '@/lib/serviceArea';
 
 export const metadata = buildMetadata({
   path: '/deck-resurfacing-northern-virginia',
@@ -107,7 +108,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
           </h1>
           <p style={{ color: '#ccc', fontSize: '1.15rem', lineHeight: 1.6 }}>
             Keep your existing deck frame, install new composite boards and railings, and save 40–60% vs a full
-            rebuild. Serving Loudoun, Fairfax, Prince William, Arlington, and Alexandria.
+            rebuild. {COVERAGE_SENTENCE}
           </p>
         </div>
       </section>

@@ -71,7 +71,7 @@ const links = [
   {
     href: '/areas-we-serve',
     title: 'Areas We Serve',
-    desc: '70+ cities across Loudoun, Fairfax & Prince William.',
+    desc: 'Loudoun, Fairfax, Prince William, Arlington, Stafford, Alexandria, and Falls Church.',
   },
   {
     href: '/screened-porch-builder-northern-virginia',

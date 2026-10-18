@@ -61,7 +61,7 @@ export default function PressPage() {
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem', lineHeight: 1.8 }}>
             <li><strong>10+ years of custom deck experience</strong> across Northern Virginia</li>
             <li><strong>Google review profile</strong> with current count and rating verified directly on Google Maps</li>
-            <li><strong>70+ cities served</strong> across 5 Northern Virginia counties</li>
+            <li><strong>Communities across Northern Virginia</strong> in Loudoun, Fairfax, Prince William, Arlington, and Stafford counties, plus Alexandria and Falls Church</li>
             <li><strong>Trex profile</strong> verify current manufacturer directory details directly with Trex</li>
             <li><strong>TimberTech and AZEK product planning</strong> qualified for all product lines</li>
             <li><strong>Permit and inspection coordination</strong> across Loudoun, Fairfax & Prince William counties</li>

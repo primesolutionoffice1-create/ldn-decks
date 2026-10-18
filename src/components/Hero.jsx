@@ -1,7 +1,9 @@
 import styles from './Hero.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import HeroCTA from './HeroCTA';
-import { BUSINESS, formatServiceArea } from '@/lib/business';
+import { BUSINESS } from '@/lib/business';
+import { AREAS_HUB_PATH, COVERAGE_SENTENCE } from '@/lib/serviceArea';
 
 const MAPS_URL = BUSINESS.sameAs.find((url) => url.includes('google.com/maps/place/Loudoun+Decks'))
   || 'https://www.google.com/maps/place/Loudoun+Decks/';
@@ -40,19 +42,13 @@ export default function Hero() {
             <span className={styles.ratingShort}>Public Google reviews</span>
           </span>
         </a>
-        <h1 className={styles.title}>
-          <span className={styles.titleFull}>Custom Deck Builder Near You in Northern Virginia</span>
-          <span className={styles.titleShort}>Composite decks, replacements, and screened porches in Loudoun, Fairfax, and Prince William.</span>
-        </h1>
-        <p className={styles.heroDescription}>
-          <span className={styles.descFull}>
-            Need a deck contractor for a new composite deck, replacement, repair, or screened porch?
-            Loudoun Decks helps plan design, permits, HOA details, and estimates in {formatServiceArea().replaceAll(' County', '')}.
-          </span>
-          <span className={styles.descShort}>
-            Class A licensed. County permits and HOA review are part of the written plan.
-          </span>
+        <h1 className={styles.title}>Custom Deck Builder Near You in Northern Virginia</h1>
+        <p className={styles.subtitle}>Custom composite decks, deck replacements, and screened porches.</p>
+        <p className={styles.coverage}>
+          {COVERAGE_SENTENCE}{' '}
+          <Link href={AREAS_HUB_PATH} className={styles.coverageLink}>View all service areas</Link>
         </p>
+        <p className={styles.licenseLine}>Class A licensed. County permits and HOA review are part of the written plan.</p>
         <HeroCTA />
       </div>
     </section>
