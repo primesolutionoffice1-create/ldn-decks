@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import JsonLd from './JsonLd';
 import styles from './TeamGrid.module.css';
-import { BUSINESS, FOUNDER_ID } from '@/lib/business';
+import { BUSINESS, FOUNDER_ID, formatServiceArea } from '@/lib/business';
 
 const teamMembers = [
   {
@@ -54,7 +54,7 @@ export default function TeamGrid() {
     "worksFor": { "@type": "Organization", "@id": "https://ldndecks.com/#organization" },
     "image": "https://ldndecks.com/team/Nick.jpg",
     "url": "https://ldndecks.com/team",
-    "description": "Founder of Loudoun Decks with 10+ years of custom deck building experience in Northern Virginia. Virginia Class A Licensed Contractor and lead designer for deck planning across Loudoun, Fairfax, and Prince William counties.",
+    "description": `Founder of Loudoun Decks with 10+ years of custom deck building experience in Northern Virginia. Virginia Class A Licensed Contractor and lead designer for deck planning across ${formatServiceArea()}.`,
     "knowsAbout": [
       "Composite decking installation",
       "Trex Transcend installation",

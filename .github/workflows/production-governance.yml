@@ -47,6 +47,9 @@ jobs:
       - name: Validate schema
         run: npm run seo:validate-schema
 
+      - name: Verify conversion identity
+        run: npm run seo:verify-conversion-identity
+
       - name: Link audit
         run: |
           PORT=4177 npm run start &

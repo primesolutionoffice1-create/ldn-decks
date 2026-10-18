@@ -1,11 +1,12 @@
 "use client";
-import React, { useRef, useState } from 'react';
+import React, { useId, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { useContact } from '@/context/ContactContext';
 import styles from './ContactForm.module.css';
 import { useLeadSubmit } from '@/hooks/useLeadSubmit';
 import { createSubmissionGate } from '@/lib/submissionGate';
 import CallLink from '@/components/CallLink';
+import { formatServiceArea } from '@/lib/business';
 
 export default function ContactForm({ hideInfoCol = false, noPadding = false }) {
   const [status, setStatus] = useState(null);
@@ -18,6 +19,8 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
   ].includes(pathname);
   const { closeContact } = useContact();
   const submit = useLeadSubmit({ formType: 'quote' });
+  const fieldId = useId();
+  const id = (name) => `${fieldId}-${name}`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -66,7 +69,7 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               <div className={styles.contactPoint}>
                 <strong>Service Areas:</strong>
                 <br/>
-                Loudoun County, Fairfax County, Prince William County, Arlington, and Stafford.
+                {formatServiceArea()}.
               </div>
               <div className={styles.contactPoint}>
                 <strong>Primary Location:</strong>
@@ -100,32 +103,32 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               )}
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="firstName">First Name <span className={styles.req}>*</span></label>
-                  <input id="firstName" name="firstName" type="text" required placeholder="First Name" autoComplete="given-name" />
+                  <label htmlFor={id('firstName')}>First Name <span className={styles.req}>*</span></label>
+                  <input id={id('firstName')} name="firstName" type="text" required placeholder="First Name" autoComplete="given-name" />
                 </div>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="lastName">Last Name <span className={styles.req}>*</span></label>
-                  <input id="lastName" name="lastName" type="text" required placeholder="Last Name" autoComplete="family-name" />
+                  <label htmlFor={id('lastName')}>Last Name <span className={styles.req}>*</span></label>
+                  <input id={id('lastName')} name="lastName" type="text" required placeholder="Last Name" autoComplete="family-name" />
                 </div>
               </div>
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="email">Email Address <span className={styles.req}>*</span></label>
-                  <input id="email" name="email" type="email" required placeholder="name@email.com" autoComplete="email" aria-label="Your email address" />
+                  <label htmlFor={id('email')}>Email Address <span className={styles.req}>*</span></label>
+                  <input id={id('email')} name="email" type="email" required placeholder="name@email.com" autoComplete="email" aria-label="Your email address" />
                 </div>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="phone">Phone Number <span className={styles.req}>*</span></label>
-                  <input id="phone" name="phone" type="tel" required placeholder="Phone Number" autoComplete="tel" aria-label="Your phone number" />
+                  <label htmlFor={id('phone')}>Phone Number <span className={styles.req}>*</span></label>
+                  <input id={id('phone')} name="phone" type="tel" required placeholder="Phone Number" autoComplete="tel" aria-label="Your phone number" />
                 </div>
               </div>
               <div className={styles.inputGroup}>
-                <label htmlFor="address">Address</label>
-                <input id="address" name="address" type="text" placeholder="Street address" autoComplete="street-address" aria-label="Your street address" />
+                <label htmlFor={id('address')}>Address</label>
+                <input id={id('address')} name="address" type="text" placeholder="Street address" autoComplete="street-address" aria-label="Your street address" />
               </div>
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="service">Service <span className={styles.req}>*</span></label>
-                  <select id="service" name="service" required defaultValue="" className={styles.selectInput}>
+                  <label htmlFor={id('service')}>Service <span className={styles.req}>*</span></label>
+                  <select id={id('service')} name="service" required defaultValue="" className={styles.selectInput}>
                     <option value="" disabled>Select Service</option>
                     <option value="New Decks">New Decks</option>
                     <option value="Deck Replacement">Deck Replacement</option>
@@ -139,14 +142,14 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                   </select>
                 </div>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="city">City <span className={styles.req}>*</span></label>
-                  <input id="city" name="city" type="text" required placeholder="e.g. Ashburn" autoComplete="address-level2" />
+                  <label htmlFor={id('city')}>City <span className={styles.req}>*</span></label>
+                  <input id={id('city')} name="city" type="text" required placeholder="e.g. Ashburn" autoComplete="address-level2" />
                 </div>
               </div>
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="timeline">Project Timeline</label>
-                  <select id="timeline" name="timeline" defaultValue="" className={styles.selectInput}>
+                  <label htmlFor={id('timeline')}>Project Timeline</label>
+                  <select id={id('timeline')} name="timeline" defaultValue="" className={styles.selectInput}>
                     <option value="" disabled>Select Start Date</option>
                     <option value="Immediately">Immediately</option>
                     <option value="1-3 Months">1-3 Months</option>
@@ -155,8 +158,8 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                   </select>
                 </div>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="budgetRange">Approximate Budget</label>
-                  <select id="budgetRange" name="budgetRange" defaultValue="" className={styles.selectInput}>
+                  <label htmlFor={id('budgetRange')}>Approximate Budget</label>
+                  <select id={id('budgetRange')} name="budgetRange" defaultValue="" className={styles.selectInput}>
                     <option value="" disabled>Select Budget Range</option>
                     {!restrictedBudgetRoute && (
                       <option value="Under $15K">Under $15K</option>
@@ -171,8 +174,8 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               </div>
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="materialInterest">Material Interest</label>
-                  <select id="materialInterest" name="materialInterest" defaultValue="" className={styles.selectInput}>
+                  <label htmlFor={id('materialInterest')}>Material Interest</label>
+                  <select id={id('materialInterest')} name="materialInterest" defaultValue="" className={styles.selectInput}>
                     <option value="" disabled>Select Material</option>
                     <option value="Trex">Trex</option>
                     <option value="TimberTech/AZEK">TimberTech/AZEK</option>
@@ -182,8 +185,8 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                   </select>
                 </div>
                 <div className={styles.inputGroup}>
-                  <label htmlFor="homeownerStatus">Homeowner Status</label>
-                  <select id="homeownerStatus" name="homeownerStatus" defaultValue="" className={styles.selectInput}>
+                  <label htmlFor={id('homeownerStatus')}>Homeowner Status</label>
+                  <select id={id('homeownerStatus')} name="homeownerStatus" defaultValue="" className={styles.selectInput}>
                     <option value="" disabled>Select One</option>
                     <option value="Homeowner decision maker">I am the homeowner / decision maker</option>
                     <option value="Homeowner researching with partner">Researching with my partner</option>
@@ -193,8 +196,8 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                 </div>
               </div>
               <div className={styles.inputGroup}>
-                <label htmlFor="hoa">HOA / Permit Status</label>
-                <select id="hoa" name="hoa" defaultValue="" className={styles.selectInput}>
+                <label htmlFor={id('hoa')}>HOA / Permit Status</label>
+                <select id={id('hoa')} name="hoa" defaultValue="" className={styles.selectInput}>
                   <option value="" disabled>Select Status</option>
                   <option value="HOA likely required">HOA likely required</option>
                   <option value="Permit likely required">Permit likely required</option>
@@ -204,8 +207,8 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
                 </select>
               </div>
               <div className={styles.inputGroup}>
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tell us about your project (optional — we'll discuss details on the call)..."></textarea>
+                <label htmlFor={id('message')}>Message</label>
+                <textarea id={id('message')} name="message" rows="4" placeholder="Tell us about your project (optional — we'll discuss details on the call)..."></textarea>
               </div>
               <input type="hidden" name="state" value="VA" />
               <p style={{ fontSize: '0.85rem', color: '#555', marginBottom: '0.75rem' }}>
