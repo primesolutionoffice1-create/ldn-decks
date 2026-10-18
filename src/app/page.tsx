@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Hero from "@/components/Hero";
+import MobileProofStrip from "@/components/MobileProofStrip";
 import Features from "@/components/Features";
 import CalculatorCTA from "@/components/CalculatorCTA";
 import FinancingTeaser from "@/components/FinancingTeaser";
@@ -147,6 +148,7 @@ export default function Home() {
           <main className={styles.main}>
       <JsonLd data={homepageSchema} />
             <Hero />
+            <MobileProofStrip />
             <DeferredPromoModal />
             <TrustSection />
             <FinancingTeaser />

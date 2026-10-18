@@ -10,7 +10,8 @@ export default function HeroCTA() {
         Call (571) 655-7207
       </CallLink>
       <Link href="/get-estimate" className={styles.ctaButtonAlt}>
-        Request Free Estimate
+        <span className={styles.estimateFull}>Request Free Estimate</span>
+        <span className={styles.estimateShort}>Get a written estimate</span>
       </Link>
     </div>
   );

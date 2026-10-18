@@ -19,6 +19,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (max-width: 1024px) {
+  html {
+    scroll-padding-top: calc(56px + env(safe-area-inset-top, 0px));
+  }
+
+  input,
+  select,
+  textarea,
+  label {
+    scroll-margin-top: calc(64px + env(safe-area-inset-top, 0px));
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: calc(100px + env(safe-area-inset-top, 0px));
+  }
+
+  input,
+  select,
+  textarea,
+  label {
+    scroll-margin-top: calc(108px + env(safe-area-inset-top, 0px));
+  }
+
+  body {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

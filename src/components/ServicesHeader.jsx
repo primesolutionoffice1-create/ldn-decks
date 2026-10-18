@@ -1,9 +1,16 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './ServicesHeader.module.css';
 import CallLink from '@/components/CallLink';
 import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
+import MobileProofStrip from '@/components/MobileProofStrip';
+
+function showsDeckPlanningFacts(pathname = '') {
+  return /deck|trex|timbertech|porch|pergola|patio|gazebo|outdoor-living|composite|fiberon|azek|railing/i.test(pathname)
+    || pathname.startsWith('/near-you');
+}
 
 export default function ServicesHeader({
   subtext = "What We DO",
@@ -17,6 +24,7 @@ export default function ServicesHeader({
   pageContext,
   leadSource,
 }) {
+  const pathname = usePathname() || '';
   const quickFormId = `${quickFormLocation}-form`;
 
   return (
@@ -28,7 +36,6 @@ export default function ServicesHeader({
             <span className={styles.line}></span>
           </div>
           <h1 className={styles.title}>{title}</h1>
-          <p className={styles.description}>{description}</p>
           <div className={styles.ctaWrapper}>
             <Link
               href={showQuickForm ? `#${quickFormId}` : estimateHref}
@@ -44,7 +51,6 @@ export default function ServicesHeader({
               Call (571) 655-7207
             </CallLink>
           </div>
-          <p className={styles.trustText}>Free estimate &bull; No obligation &bull; Permit-ready planning</p>
         </div>
         {showQuickForm && (
           <PaidSearchLeadForm
@@ -56,6 +62,11 @@ export default function ServicesHeader({
             leadSource={leadSource}
           />
         )}
+      </div>
+      {showsDeckPlanningFacts(pathname) ? <MobileProofStrip /> : null}
+      <div className={styles.container}>
+        <p className={styles.description}>{description}</p>
+        <p className={styles.trustText}>Free estimate &bull; No obligation &bull; Permit-ready planning</p>
       </div>
     </section>
   );
