@@ -7,7 +7,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
-import { BUSINESS } from '@/lib/business';
+import { formatServiceArea } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -36,7 +36,7 @@ const estimateFaq = [
   },
   {
     question: 'What areas do you serve?',
-    answer: 'Loudoun Decks serves homeowners across Northern Virginia, including Loudoun County, Fairfax County, Prince William County, Arlington, Alexandria, Ashburn, Leesburg, Sterling, Herndon, Reston, Vienna, McLean, and nearby communities.',
+    answer: `Loudoun Decks serves homeowners in ${formatServiceArea()}. A written estimate is the next step for a property in that area.`,
   },
 ];
 

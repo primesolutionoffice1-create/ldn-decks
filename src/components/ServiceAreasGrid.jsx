@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { counties, getCanonicalCityUrl, isCanonicalCity } from '@/data/cityData';
+import { formatServiceArea } from '@/lib/business';
 import styles from './ServiceAreasGrid.module.css';
 
 const LocationIcon = () => (
@@ -14,7 +15,7 @@ export default function ServiceAreasGrid() {
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>Local Expertise Across Northern Virginia</h2>
         <p className={styles.sectionSubtitle}>
-          Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, Prince William County, Arlington, and Stafford.
+          Loudoun Decks serves homeowners in {formatServiceArea()}.
         </p>
         
         <div className={styles.columns}>

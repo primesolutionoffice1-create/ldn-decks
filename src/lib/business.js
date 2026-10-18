@@ -120,6 +120,12 @@ export const WEBSITE_ID = `${BUSINESS.url}/#website`;
 export const FOUNDER_ID = `${BUSINESS.url}/#founder`;
 export const BUSINESS_PHONE_DISPLAY = '(571) 655-7207';
 
+export function formatServiceArea(areas = BUSINESS.areaServed) {
+  const names = areas.map((name) => name.replace(/, VA$/, ''));
+  if (names.length <= 1) return names.join('');
+  return `${names.slice(0, -1).join(', ')}, and ${names[names.length - 1]}`;
+}
+
 // Builds the WebSite JSON-LD object.
 // Use this once in the root layout alongside buildOrganizationSchema.
 // Resolves the dangling "#website" @id references some pages emit (e.g., WebPage.isPartOf).
