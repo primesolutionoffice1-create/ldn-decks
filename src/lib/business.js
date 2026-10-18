@@ -236,15 +236,6 @@ export function buildOrganizationSchema() {
         },
       })),
     ],
-    geo: [
-      { '@type': 'GeoCoordinates', ...BUSINESS.geo },
-      ...BUSINESS.cityServed.map(city => ({
-        '@type': 'GeoCoordinates',
-        latitude: city.latitude,
-        longitude: city.longitude,
-        name: `${city.name} Service Area`,
-      })),
-    ],
     knowsAbout: BUSINESS.knowsAbout,
     sameAs: BUSINESS.sameAs,
     hasCredential: BUSINESS.credentials.map(c => ({

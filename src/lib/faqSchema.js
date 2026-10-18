@@ -10,7 +10,7 @@ export const faqSchemaData = {
       "name": "What areas does Loudoun Decks serve in Northern Virginia?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Loudoun Decks serves all of Northern Virginia with two office locations in Centreville and Manassas. Our primary service areas include Loudoun County (Ashburn, Leesburg, Sterling, Brambleton, Broadlands, Aldie, South Riding, Purcellville), Fairfax County (Reston, Herndon, Fairfax, Centreville, Vienna, McLean, Great Falls, Chantilly, Burke, Springfield, Falls Church, Oakton, Tysons, Alexandria), Prince William County (Manassas, Woodbridge, Haymarket, Gainesville, Bristow, Dale City), Arlington County (Arlington, Crystal City, Ballston, Clarendon), and Stafford County (Stafford, Aquia Harbour, Falmouth). We serve 50+ cities total across Northern Virginia."
+        "text": "Loudoun Decks serves Northern Virginia, including Loudoun County (Ashburn, Leesburg, Sterling, Brambleton, Broadlands, Aldie, South Riding, Purcellville), Fairfax County (Reston, Herndon, Fairfax, Centreville, Vienna, McLean, Great Falls, Chantilly, Burke, Springfield, Falls Church, Oakton, Tysons, Alexandria), Prince William County (Manassas, Woodbridge, Haymarket, Gainesville, Bristow), Arlington County (Arlington), and Stafford County (Stafford). We are based in Centreville, VA."
       }
     },
     {
@@ -26,7 +26,7 @@ export const faqSchemaData = {
       "name": "What types of composite decking materials do you install?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "As a Trex Platinum Partner and TimberTech Certified Installer, we specialize in premium composite decking materials. We install Trex (Enhance and Transcend lines), TimberTech (PRO composite and AZEK PVC lines), and Fiberon composite decking. We also build pressure-treated wood and cedar decks. Each material has unique benefits: Trex offers excellent value and durability, TimberTech AZEK provides maximum stain and fade resistance with all-PVC construction, and Trex Transcend sits in the premium middle ground. We help homeowners choose the best option based on budget, aesthetics, maintenance preferences, and specific project requirements."
+        "text": "We specialize in premium composite decking materials. We install Trex (Enhance and Transcend lines), TimberTech (PRO composite and AZEK PVC lines), and Fiberon composite decking. We also build pressure-treated wood and cedar decks. Each material has unique benefits: Trex offers excellent value and durability, TimberTech AZEK provides maximum stain and fade resistance with all-PVC construction, and Trex Transcend sits in the premium middle ground. We help homeowners choose the best option based on budget, aesthetics, maintenance preferences, and specific project requirements. Verify current manufacturer profile details directly with each brand."
       }
     },
     {
