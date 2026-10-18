@@ -89,6 +89,9 @@ export default function TrustSection() {
           <Link href="/trex-performance-products" className={styles.credentialLink}>
             Trex partner
           </Link>
+          <Link href="/timbertech-decks" className={styles.credentialLink}>
+            TimberTech partner
+          </Link>
         </div>
       </div>
     </section>
