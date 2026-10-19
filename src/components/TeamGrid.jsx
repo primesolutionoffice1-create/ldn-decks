@@ -10,7 +10,7 @@ const teamMembers = [
     name: "Nick",
     role: BUSINESS.founder.jobTitle,
     image: "/team/Nick.jpg",
-    bio: "Founder and lead designer of Loudoun Decks with over 10 years of experience in custom deck construction across Northern Virginia. Virginia Class A Licensed Contractor. Nick personally oversees deck planning from initial design through final inspection, with special focus on structure, materials, permits, and HOA requirements.",
+    bio: "Founder and lead designer of Loudoun Decks. Virginia Class A Licensed Contractor. Nick oversees deck planning from initial design through final inspection, with focus on structure, materials, permits, and HOA requirements. A year count is not published.",
     expertise: ["Custom deck design", "Trex & TimberTech systems", "HOA architectural review", "Structural engineering", "Permit management"],
   },
   {
@@ -24,7 +24,7 @@ const teamMembers = [
     name: "Alex, Daniel & Bet",
     role: "Master Technicians",
     image: "/team/alexdanielandbet.jpeg",
-    bio: "Our lead construction team brings a combined 10+ years of hands-on deck building experience. Specialists in composite installation (Trex, TimberTech AZEK), structural framing, custom railing systems, and precision carpentry. They handle every phase of construction from footing installation to final trim, ensuring code compliance and exceptional craftsmanship on every project.",
+    bio: "The lead construction team installs composite decking (Trex, TimberTech, AZEK), structural framing, custom railing systems, and finish carpentry. They handle construction from footing installation to final trim. A combined year count is not published.",
     expertise: ["Composite installation", "Structural framing", "Custom railings", "Precision carpentry", "Code compliance"],
   }
 ];
@@ -54,7 +54,7 @@ export default function TeamGrid() {
     "worksFor": { "@type": "Organization", "@id": "https://ldndecks.com/#organization" },
     "image": "https://ldndecks.com/team/Nick.jpg",
     "url": "https://ldndecks.com/team",
-    "description": `Founder of Loudoun Decks with 10+ years of custom deck building experience in Northern Virginia. Virginia Class A Licensed Contractor and lead designer for deck planning across ${formatServiceArea()}.`,
+    "description": `Founder of Loudoun Decks. Virginia Class A Licensed Contractor and lead designer for deck planning across ${formatServiceArea()}. A year count is not published.`,
     "knowsAbout": [
       "Composite decking installation",
       "Trex Transcend installation",
