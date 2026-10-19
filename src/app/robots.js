@@ -52,6 +52,8 @@ export default function robots() {
     'ChatGPT-User',
     'OAI-SearchBot',
     'ClaudeBot',
+    'Claude-SearchBot',
+    'Claude-User',
     'Claude-Web',
     'anthropic-ai',
     'PerplexityBot',

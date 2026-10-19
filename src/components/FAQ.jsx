@@ -18,7 +18,7 @@ const faqsData = [
   },
   {
     question: "Can you resurface my existing deck instead of replacing it?",
-    answer: "Absolutely! As a leading deck contractor, we often resurface sound frames to save homeowners up to 40% on costs. We remove old surface boards and replace them with premium Trex or TimberTech composite."
+    answer: "When the existing frame is structurally sound, resurfacing replaces the surface boards without rebuilding the whole structure. Whether it costs less than a full replacement depends on the frame, stairs, railings, and scope, so any saving is confirmed only in a written estimate after an inspection. We remove old surface boards and replace them with premium Trex or TimberTech composite."
   },
   {
     question: "What is the average cost to build a deck in NoVA?",
