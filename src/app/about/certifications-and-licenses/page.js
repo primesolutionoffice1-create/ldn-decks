@@ -11,7 +11,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/about/certifications-and-licenses',
   title: 'Certifications & Licenses | Loudoun Decks | Verified Contractor',
-  description: 'Loudoun Decks: Virginia Class A Licensed, fully insured, Trex profile-verifiable, NADRA member, BBB accredited. Verify our credentials. Serving Loudoun, Fairfax & Prince William.',
+  description: 'Loudoun Decks publishes Virginia Class A license #2705191673 and a NADRA profile link. Insurance, BBB accreditation, and manufacturer program status are not stated here.',
   image: '/social/certifications-licenses-social.png',
 });
 
@@ -22,7 +22,7 @@ export default function CertificationsPage() {
   const nadraMembership = BUSINESS.memberships.find((membership) => membership.alternateName === 'NADRA');
   const credentialCards = [
     { title: 'Virginia Contractor License', detail: 'Class A Licensed Contractor — Virginia Department of Professional and Occupational Regulation (DPOR). Authorized for residential and commercial projects of any value in Virginia.', verify: 'Verify at dpor.virginia.gov → License Lookup', badge: 'DPOR Licensed' },
-    { title: 'Fully Insured', detail: 'Comprehensive general liability insurance and workers\' compensation coverage. Certificate of insurance available on request for any project.', verify: 'Request certificate: office@ldndecks.com', badge: 'Insured' },
+    { title: 'Insurance certificate', detail: 'A current general-liability or workers\' compensation certificate is not published on this page. Do not treat this page as proof of coverage.', verify: 'Ask for the certificate with the written estimate: office@ldndecks.com', badge: 'Not published here' },
     { title: 'Trex Product-Line Verification', detail: 'Trex product-line planning and installation experience. Homeowners should verify any current Trex profile details directly through Trex before citing status.', verify: 'Verify at trex.com/find-a-builder', badge: 'Trex Verify' },
     { title: 'NADRA Member Profile', detail: 'North American Deck and Railing Association Builder/Contractor/Remodeler membership. The public profile is linked directly for consumer verification.', verify: 'View NADRA member profile', verifyHref: nadraMembership?.directoryUrl, badge: 'NADRA Member' },
     { title: 'Google Review Profile', detail: 'Public Google reviews from Northern Virginia homeowners across Loudoun, Fairfax, and Prince William counties.', verify: 'Search "Loudoun Decks" on Google Maps and verify current count/rating directly', badge: 'Public reviews' },
@@ -32,7 +32,7 @@ export default function CertificationsPage() {
 
   return (
     <>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/about/certifications-and-licenses" name="Certifications &amp; Licenses | Loudoun Decks | Verified Contractor" description="Loudoun Decks: Virginia Class A Licensed, fully insured, Trex profile-verifiable, NADRA member, BBB accredited. Verify our credentials. Serving Loudoun, Fairfax &amp; Prince William." speakable />
+      <WebPageSchema dateModified="2026-10-19" url="https://ldndecks.com/about/certifications-and-licenses" name="Certifications &amp; Licenses | Loudoun Decks | Verified Contractor" description="Loudoun Decks publishes Virginia Class A license #2705191673 and a NADRA profile link. Insurance, BBB accreditation, and manufacturer program status are not stated here." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Certifications &amp; Licenses</h1>
@@ -61,7 +61,7 @@ export default function CertificationsPage() {
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Credentials Matter</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Virginia law requires any contractor performing work over a written estimate to hold a valid DPOR license. Unlicensed contractors leave you with:</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Virginia DPOR&apos;s contractor consumer statement, reviewed 19 October 2026, says a Class A license is required at $150,000 or more, a Class B license from $30,000 up to that amount, and a Class C license above $1,000 and below $30,000. Those are state license thresholds, not a Loudoun Decks price. The statement is at dpor.virginia.gov. Unlicensed work can leave a homeowner with:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>No legal recourse if work is defective</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Personal liability if a worker is injured on your property (no workers&apos; comp)</li>
@@ -71,13 +71,13 @@ export default function CertificationsPage() {
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><Link href="/how-to-choose-a-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read our full guide to choosing a deck builder →</Link></p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Service Area</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Licensed and insured to operate across Northern Virginia:</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The published service area is Loudoun County, Fairfax County, Prince William County, Arlington County, Alexandria, Falls Church, and Stafford County.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               { county: 'Loudoun County', cities: 'Ashburn, Leesburg, Sterling, Brambleton, South Riding, Broadlands, Purcellville, Aldie, Middleburg' },
-              { county: 'Fairfax County', cities: 'McLean, Vienna, Reston, Great Falls, Herndon, Fairfax, Centreville, Chantilly, Oakton, Tysons, Falls Church' },
+              { county: 'Fairfax County', cities: 'McLean, Vienna, Reston, Great Falls, Herndon, Fairfax, Centreville, Chantilly, Oakton, Tysons' },
               { county: 'Prince William County', cities: 'Manassas, Woodbridge, Haymarket, Gainesville, Bristow, Dumfries, Lake Ridge' },
-              { county: 'Also Serving', cities: 'Arlington County, Stafford County, and surrounding areas' },
+              { county: 'Also serving', cities: 'Arlington County, Alexandria, Falls Church, and Stafford County' },
             ].map((area) => (
               <div key={area.county}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.25rem', fontSize: '0.95rem' }}>{area.county}</h3>
@@ -88,7 +88,7 @@ export default function CertificationsPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Contact</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <p style={{ marginBottom: '0.5rem' }}><strong>Loudoun Decks LLC</strong></p>
+            <p style={{ marginBottom: '0.5rem' }}><strong>Loudoun Decks</strong></p>
             <p style={{ marginBottom: '0.5rem' }}>13704 Winding Oak Cir, Centreville, VA 20121</p>
             <p style={{ marginBottom: '0.5rem' }}>Phone: <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink></p>
             <p style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:office@ldndecks.com" style={{ color: 'var(--color-primary)' }}>office@ldndecks.com</a></p>
@@ -110,8 +110,8 @@ export default function CertificationsPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Verified, Licensed, Insured — Get Your Free Estimate" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <SimpleCTA title="Request a written estimate" buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-19" />
 
       <ContactHome />
     </>

@@ -10,6 +10,7 @@ import WhyChooseFAQ from '@/components/WhyChooseFAQ';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import { WRITTEN_ESTIMATE } from '@/lib/publicPricing';
 
 export const metadata = buildMetadata({
   path: "/about/why-choose-us",
@@ -21,10 +22,9 @@ export const metadata = buildMetadata({
 const verifiedFacts = [
   'Virginia DPOR Class A Contractor License #2705191673 — verifiable at dpor.virginia.gov before any contract is signed.',
   'Member of the North American Deck and Railing Association (NADRA), the trade association for deck professionals.',
-  'Founder and lead contractor Nicolae Zugrav has 10+ years planning custom composite deck projects in Northern Virginia.',
-  'Typical new deck projects in Northern Virginia range from a written estimate to a written estimate depending on size, materials, stairs, railings, site access, and permits.',
-  'Standard deck construction usually takes 1 to 2 weeks from the day building begins, weather permitting.',
-  'Resurfacing a structurally sound frame with composite boards can save homeowners up to 40% versus full replacement.',
+  'Founder and lead contractor Nicolae Zugrav leads custom composite deck planning in Northern Virginia. A year count is not published.',
+  WRITTEN_ESTIMATE,
+  'A construction duration is not published. The written estimate states the schedule for that project.',
   'Service area: Loudoun, Fairfax, Prince William, Arlington, and Stafford counties, plus Alexandria and Falls Church.',
   'Public profiles on BBB, Houzz, Yelp, Google, and Trustpilot carry the same business data as this site — verify us at the source.',
 ];
@@ -39,7 +39,7 @@ const comparisonRows = [
 export default function WhyChooseUsPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/about/why-choose-us" name="Why Choose LDN Decks | Northern Virginia" description="Why Northern Virginia homeowners choose LDN Decks: verified public profiles, local planning support, written warranty terms, and clear project scopes." speakable />
+      <WebPageSchema dateModified="2026-10-19" url="https://ldndecks.com/about/why-choose-us" name="Why Choose LDN Decks | Northern Virginia" description="Why Northern Virginia homeowners choose LDN Decks: verified public profiles, local planning support, written warranty terms, and clear project scopes." speakable />
       <WhyChooseHeader />
 
       <section style={{ padding: '70px 20px', background: '#fff' }} aria-labelledby="why-definition">

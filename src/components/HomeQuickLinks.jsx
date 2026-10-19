@@ -111,7 +111,7 @@ const links = [
   {
     href: '/team',
     title: 'Meet Our Team',
-    desc: 'Deck building expertise across Northern Virginia.',
+    desc: 'Licensed deck builders in Northern Virginia.',
   },
   {
     href: '/press',

@@ -10,7 +10,7 @@ import { BUSINESS, FOUNDER_ID } from '@/lib/business';
 export const metadata = buildMetadata({
   path: '/team',
   title: 'Our Team | Professional Deck Builders & Porch Specialists',
-  description: 'Meet the expert deck builders and porch specialists at LDN Decks. Licensed, insured, and Trex, TimberTech, and AZEK experienced with 10+ years of local experience.',
+  description: 'Meet the deck builders at LDN Decks. Virginia Class A licensed. Trex, TimberTech, and AZEK program status is not stated here.',
   image: '/social/team-social.png',
 });
 
@@ -44,7 +44,7 @@ export default function TeamPage() {
   return (
     <main>
       <JsonLd data={profilePageSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/team" name="Our Team | Professional Deck Builders &amp; Porch Specialists" description="Meet the expert deck builders and porch specialists at LDN Decks. Licensed, insured, and Trex, TimberTech, and AZEK experienced with 10+ years of local experience." speakable />
+      <WebPageSchema dateModified="2026-10-19" url="https://ldndecks.com/team" name="Our Team | Professional Deck Builders &amp; Porch Specialists" description="Meet the deck builders at LDN Decks. Virginia Class A licensed. Trex, TimberTech, and AZEK program status is not stated here." speakable />
       <TeamHeader />
       <TeamGrid />
       <ContactHome />

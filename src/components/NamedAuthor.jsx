@@ -46,7 +46,7 @@ export default function NamedAuthor({ context = 'Northern Virginia', lastUpdated
           <span style={{ fontWeight: 500, color: '#555' }} itemProp="jobTitle">{BUSINESS.founder.jobTitle}, Loudoun Decks</span>
         </p>
         <p style={{ margin: 0, fontSize: '0.85rem', color: '#555', lineHeight: 1.55 }} itemProp="description">
-          Virginia Class A Licensed Contractor. Planning custom composite deck projects in {context}, with Trex and TimberTech product details reviewed by scope.{' '}
+          Virginia Class A Licensed Contractor. Deck planning in {context} is scoped in the written estimate. Trex and TimberTech program status is not stated here.{' '}
           <Link href="/team" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Meet the team</Link>
         </p>
         {lastUpdated && (
