@@ -18,7 +18,7 @@ export const metadata = buildMetadata({
 export default function PressPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/press" name="Press &amp; Media Kit | Loudoun Decks" description="Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s trusted deck builder." speakable />
+      <WebPageSchema dateModified="2026-10-19" url="https://ldndecks.com/press" name="Press &amp; Media Kit | Loudoun Decks" description="Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s trusted deck builder." speakable />
       <section style={{ background: 'var(--color-dark, #1a1a2e)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Press & Media Kit</h1>
@@ -45,8 +45,8 @@ export default function PressPage() {
                   ['Google Reviews', 'public Google review profile; verify current count and rating directly on Google Maps'],
                   ['Certifications', 'Trex product-line planning, TimberTech and AZEK product planning'],
                   ['License', 'Virginia Class A Contractor (DPOR Licensed)'],
-                  ['Insurance', 'Insurance documentation available for project review'],
-                  ['Owner', `Nick ${BUSINESS.founder.jobTitle}, 10+ years experience`],
+                  ['Insurance', 'A current insurance certificate is not published on this page'],
+                  ['Owner', `Nick ${BUSINESS.founder.jobTitle}`],
                 ].map(([label, value], i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     <td style={{ padding: '0.75rem', fontWeight: 600, borderBottom: '1px solid #eee', width: '35%' }}>{label}</td>
@@ -59,11 +59,11 @@ export default function PressPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Key Facts & Statistics</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem', lineHeight: 1.8 }}>
-            <li><strong>10+ years of custom deck experience</strong> across Northern Virginia</li>
+            <li><strong>Experience duration</strong> is not published. A year count needs owner records before it can be cited.</li>
             <li><strong>Google review profile</strong> with current count and rating verified directly on Google Maps</li>
             <li><strong>Communities across Northern Virginia</strong> in Loudoun, Fairfax, Prince William, Arlington, and Stafford counties, plus Alexandria and Falls Church</li>
             <li><strong>Trex profile</strong> verify current manufacturer directory details directly with Trex</li>
-            <li><strong>TimberTech and AZEK product planning</strong> qualified for all product lines</li>
+            <li><strong>TimberTech and AZEK product planning</strong> is discussed by project. A manufacturer program level is not stated.</li>
             <li><strong>Permit and inspection coordination</strong> across Loudoun, Fairfax & Prince William counties</li>
             <li><strong>Written workmanship warranty terms</strong> provided with project paperwork in addition to manufacturer warranty information</li>
             <li><strong>Average project value:</strong> a written estimate</li>
