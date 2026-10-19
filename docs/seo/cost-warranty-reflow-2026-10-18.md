@@ -35,6 +35,43 @@ Lot after PR #222 (`c8cec428`). Closed lot was not reopened. This file is the pe
 - The warranty guide separates the Trex product warranty from the TrexPro labor warranty and links the two Trex booklets checked on 18 October 2026.
 - Grid tracks that used a fixed `minmax(Npx, 1fr)` now use `minmax(min(100%, Npx), 1fr)`, so a narrow container does not widen the page. Wide tables keep local horizontal scrolling. The permit timing table’s scroller is a keyboard-focusable region. No new `overflow-x: hidden` was added on `html` or `body`.
 
+## Publication
+
+Guides whose visible wording changed and that already carried `dateModified` were set to 2026-10-18 because the price or warranty wording was reviewed. Dates were not bumped on pages that were not edited.
+
+| Item | Record |
+| --- | --- |
+| Feature commit | `c4a98d68` on `cursor/cost-warranty-reflow-6c80` |
+| Pull request | https://github.com/primesolutionoffice1-create/ldn-decks/pull/223 |
+| Squash on `main` | `a8a63a34fc9d842161d4426a1efc057da6ea3bda` (19 October 2026, 00:17:45 UTC) |
+| Prior production commit | `c8cec428` (PR #222). That lot was not reopened. |
+| Vercel production | Success at 00:19:04 UTC. https://vercel.com/primesolutionoffice1-creates-projects/ldn-decks-9j57/89XwfChagubAg2KUK6Mv8xYZbbPQ |
+| GitHub deployment | `7162871882`, environment Production, state success |
+| Production URL checked | https://ldndecks.com |
+| Post-merge CI | GitHub Actions run 39180137524 succeeded (lint, build, schema, conversion identity, link audit, local SEO deployment guard). Financing UI verify on run 39180137525 succeeded. |
+
+No second deployment was started. Vercel deployed `a8a63a34` automatically from `main`.
+
+## Live check (19 October 2026, after the production deployment)
+
+Checked the production HTML. A 200 alone was not treated as proof. Pages were indexable (`index, follow` on the homepage; `noindex` was absent on the permit page). No estimate form was submitted.
+
+| Check | Result |
+| --- | --- |
+| Homepage title | `Custom Deck Builder in Northern Virginia \| Loudoun Decks` |
+| Homepage H1 | One H1: `Custom Deck Builder Near You in Northern Virginia` |
+| Financing | “Financing Available” on the homepage, payment estimator, and both monthly-payment pages. Illustrated payment copy is present. “As low as” is absent. |
+| Organization geo | Only `38.83966`, `-77.43927` |
+| Closed-lot regressions | “two offices” and “70+” absent on the homepage |
+| Warranty page | “With Platinum installer” absent. “TrexPro Platinum” appears only as one of Trex’s three named levels, followed by “Loudoun Decks does not state a TrexPro, TrexPro Gold, or TrexPro Platinum level”. “Lineage is not named” is present. Both official flippingbook links are present. |
+| Permit page | County fees `$265`, `$100`, `$165`, `$395`, `$335`, and `$230` are present, with “Loudoun County fee checked October 18, 2026” and `loudoun.gov/1166/Decks`. Engineering is “Quoted by the engineer”. HOA is “Set by the association”. |
+| Composite cost guide | “Updated October 18, 2026” and “written estimate” are present. `$45`, `$65`, `$30`, and `/sqft` are absent. |
+| Resurfacing service page | `AggregateOffer` and `lowPrice` are absent. |
+| `llms.txt` and `llms-full.txt` | No `$` digit tokens. |
+| `/get-estimate` | The form is present. It was not submitted. |
+
+Homepage dollar amounts that remain are the financing illustration (visitor-chosen amount, labeled as not a Loudoun Decks price) and the contact-form budget brackets the visitor selects. They are not a published project price.
+
 ## Status
 
-See the commit, pull request, deployment, and live check recorded after this file ships. Guides whose visible wording changed and that already carried `dateModified` were set to 2026-10-18 because the price or warranty wording was reviewed. Dates were not bumped on pages that were not edited.
+Published and checked on https://ldndecks.com at `a8a63a34`. Loudoun Decks’ TrexPro level remains unconfirmed, and no owner-approved deck price ledger was added.
