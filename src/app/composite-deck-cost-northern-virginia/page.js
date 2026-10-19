@@ -10,16 +10,14 @@ import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import WebPageSchema from '@/components/WebPageSchema';
 import { buildMetadata } from '@/lib/seo';
-import { calculateDeckBudget, formatBudget } from '@/lib/deckBudgetModel';
+import { WRITTEN_ESTIMATE } from '@/lib/publicPricing';
 
 const path = '/composite-deck-cost-northern-virginia';
-const updated = '2026-09-13';
+const updated = '2026-10-18';
 const description = 'Plan a Northern Virginia composite deck budget. Compare calculator scenarios, understand exclusions, and prepare a written Trex or TimberTech installation estimate.';
 export const metadata = buildMetadata({ path, title: 'How Much Does a Composite Deck Cost in Northern Virginia?', description, image: '/social/composite-deck-cost-northern-virginia-social.png' });
 
-const range = (budget) => `${formatBudget(budget.low)} - ${formatBudget(budget.high)}`;
-const example = calculateDeckBudget(400, 3, [0, 1]);
-const quickAnswer = `For a 400-square-foot composite deck, this calculator models ${range(example)} with Trex Transcend, one stair flight and composite railings. This is an illustrative budget, not a Northern Virginia market average or a quote. Actual installed cost depends on the measured design, framing, site access, permits and written inclusions.`;
+const quickAnswer = `A 400-square-foot composite deck is a scope example, not a price. ${WRITTEN_ESTIMATE}`;
 
 const S = {
   container: { width: '100%', maxWidth: 960, margin: '0 auto', padding: '0 1.25rem', minWidth: 0 },
@@ -39,7 +37,7 @@ const answers = [
 ];
 
 const faqs = [
-  { q: 'How much does a 20x20 composite deck cost in Northern Virginia?', a: `A 20x20 deck is 400 square feet. With Trex Transcend, one stair flight and composite railings selected, the calculator on this page produces ${range(example)}. Those are preset modeling assumptions, not a completed-project price. Confirm demolition, framing, footings, permits, electrical work and cleanup in a property-specific estimate.` },
+  { q: 'How much does a 20x20 composite deck cost in Northern Virginia?', a: `A 20x20 deck is 400 square feet. ${WRITTEN_ESTIMATE} Confirm demolition, framing, footings, permits, electrical work, stairs, and railings in that estimate.` },
   { q: 'Does the calculator include railings and stairs?', a: 'Only when you select those add-ons. The size table below shows both the base scenario and the scenario with one stair flight and composite railings. Neither output verifies the length of your railing, stair height, existing structure or local permit fees. Those details need an itemized estimate.' },
   { q: 'Is a manufacturer material estimate the same as an installed quote?', a: 'No. A material estimate covers its listed products and assumptions. The Trex material calculator explicitly separates labor. An installed proposal should also identify demolition, structure, labor, stairs, railings, permits and cleanup as applicable. Compare the included quantities and exclusions before comparing the totals.' },
   { q: 'Can the existing frame reduce the cost?', a: 'Reusing a suitable frame can reduce the work compared with rebuilding it, but eligibility depends on an inspection and the proposed design. New decking does not correct deteriorated framing, inadequate connections or unsuitable joist spacing. Ask for separate resurfacing and replacement scopes when both remain feasible after evaluation.' },
@@ -86,7 +84,7 @@ export default function CompositeDeckCostPage() {
         <div style={S.container}>
           <h2 style={S.h2}>How much should you budget for a composite deck?</h2>
           <p style={S.p}>{quickAnswer}</p>
-          <p style={{ ...S.p, fontSize: '0.9rem' }}>By Loudoun Decks Team. Updated September 13, 2026: calculator assumptions, quote inclusions and manufacturer references.</p>
+          <p style={{ ...S.p, fontSize: '0.9rem' }}>By Loudoun Decks Team. Updated October 18, 2026: removed unsourced calculator totals and kept the scope questions for a written estimate.</p>
           <nav aria-label="Composite deck cost topics" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
             {[['#calculator', 'Calculator'], ['#cost-by-size', 'Cost by size'], ['#composite-estimate-routing', 'Compare quotes'], ['#trex-vs-timbertech', 'Materials'], ['#faqs', 'Questions']].map(([href, label]) => <a key={href} href={href} style={S.link}>{label}</a>)}
           </nav>
@@ -100,7 +98,7 @@ export default function CompositeDeckCostPage() {
       <section id="calculator" style={S.section}>
         <div style={S.container}>
           <h2 style={S.h2}>Composite deck budget calculator</h2>
-          <p style={S.p}>Choose a size, material and optional features. The result is a scenario built from preset rates and a planning adjustment. It does not measure your property or establish a supplier price. Railings and stairs are optional inputs; verify all required work before treating any total as a project budget.</p>
+          <p style={S.p}>Choose a size, material, and optional features. The planner records that scope. It does not calculate a dollar total, measure the property, or establish a supplier price.</p>
           <DeckCostCalculatorWidget defaultMaterial={3} defaultSqft={400} defaultAddons={[0, 1]} ctaLabel="Request a Written Estimate" ctaHref="/get-estimate" />
           <p style={{ ...S.p, marginTop: '1.5rem' }}><Link href="/deck-cost-calculator" style={S.link}>Open the standalone deck calculator</Link>.</p>
         </div>
@@ -109,12 +107,12 @@ export default function CompositeDeckCostPage() {
       <section id="cost-by-size" style={{ ...S.section, background: '#f8faf9' }}>
         <div style={S.container}>
           <h2 style={S.h2}>Composite deck cost by size: calculator scenarios</h2>
-          <p style={S.p}>Every row uses the calculator&apos;s Trex Transcend assumptions: $45-$65 per square foot, then a 25%-35% adjustment. The second scenario also adds $1,500-$4,000 for one stair flight and $3,000-$8,000 for composite railings before that adjustment. These are arithmetic examples, not surveyed prices or completed Loudoun Decks projects.</p>
-          <div style={{ overflowX: 'auto' }} tabIndex={0} role="region" aria-label="Budget scenarios by deck size">
-            <table style={{ width: '100%', minWidth: 480, borderCollapse: 'collapse', background: '#fff' }}>
-              <caption style={{ textAlign: 'left', paddingBottom: '0.75rem', fontWeight: 600 }}>Same assumptions, different floor areas</caption>
-              <thead><tr>{['Floor area', 'Base scenario', 'With one stair flight and composite railings'].map((label) => <th key={label} scope="col" style={S.cell}>{label}</th>)}</tr></thead>
-              <tbody>{[200, 300, 400, 500].map((sqft) => <tr key={sqft}><th scope="row" style={S.cell}>{sqft} sq ft</th><td style={S.cell}>{range(calculateDeckBudget(sqft))}</td><td style={S.cell}>{range(calculateDeckBudget(sqft, 3, [0, 1]))}</td></tr>)}</tbody>
+          <p style={S.p}>Floor area alone does not set the price. The same square footage can be a new deck or a resurfacing, and it can include or exclude demolition, new framing, stairs, and railings.</p>
+          <div style={{ overflowX: 'auto' }} tabIndex={0} role="region" aria-label="Scope questions by deck size">
+            <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff' }}>
+              <caption style={{ textAlign: 'left', paddingBottom: '0.75rem', fontWeight: 600 }}>Ask for these items at each size</caption>
+              <thead><tr>{['Floor area', 'Base scope to confirm', 'Also confirm when stairs or railings are added'].map((label) => <th key={label} scope="col" style={S.cell}>{label}</th>)}</tr></thead>
+              <tbody>{[200, 300, 400, 500].map((sqft) => <tr key={sqft}><th scope="row" style={S.cell}>{sqft} sq ft</th><td style={S.cell}>New structure or resurfacing, decking collection, footings, and demolition</td><td style={S.cell}>Stair flights, railing length, and whether those items are in the same proposal</td></tr>)}</tbody>
             </table>
           </div>
           <p style={{ ...S.p, marginTop: '1rem' }}>Actual railing length, stair height, structural work, demolition, permit fees, electrical work and access are not measured by this table. Ask for them to be included or excluded explicitly in your proposal.</p>

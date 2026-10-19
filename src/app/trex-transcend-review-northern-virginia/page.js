@@ -25,8 +25,8 @@ const faqSchema = {
     { "@type": "Question", name: "Does Trex Transcend fade?", acceptedAnswer: { "@type": "Answer", text: "All composite decking experiences minor initial color settling in the first 60-90 days as the UV stabilizers activate. After that, Transcend holds its color exceptionally well. After 5+ years on our earliest Northern Virginia installs, fade is minimal and even not patchy." } },
     { "@type": "Question", name: "How hot does Trex Transcend get in the sun?", acceptedAnswer: { "@type": "Answer", text: "Darker Transcend colors (Lava Rock, Spiced Rum) can reach 130-150°F in direct Virginia summer sun. Lighter colors (Island Mist, Rope Swing) stay 15-20 degrees cooler. For pool decks and barefoot areas, we recommend lighter colors or TimberTech AZEK which runs slightly cooler." } },
     { "@type": "Question", name: "How long does Trex Transcend last?", acceptedAnswer: { "@type": "Answer", text: "Trex warranties Transcend for 25 years against structural damage, fade, and stain. Real-world lifespan is 30-40+ years with basic maintenance (occasional soap and water wash). Our earliest Transcend installs in Loudoun County (2019) still look excellent." } },
-    { "@type": "Question", name: "What is the difference between Trex Transcend and Lineage?", acceptedAnswer: { "@type": "Answer", text: "Lineage is Trex's newest premium line with a more realistic wood grain pattern and a 50-year warranty (vs 25 for Transcend). Lineage costs 10-15% more than Transcend. Both use the same shell technology. Lineage is worth it if you want the absolute most realistic wood look in composite." } },
-    { "@type": "Question", name: "How much does a Trex Transcend deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Trex Transcend costs $45-$65 per square foot installed in Northern Virginia. A typical 300 sqft deck runs $22,000-$30,000 including railings and stairs. A 500 sqft deck runs $35,000-$48,000." } },
+    { "@type": "Question", name: "What is the difference between Trex Transcend and Lineage?", acceptedAnswer: { "@type": "Answer", text: "Lineage is Trex's newest premium line with a more realistic wood grain pattern and a 50-year warranty (vs 25 for Transcend). Lineage the written estimate shows the collection difference. Both use the same shell technology. Lineage is worth it if you want the absolute most realistic wood look in composite." } },
+    { "@type": "Question", name: "How much does a Trex Transcend deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Trex Transcend is priced in a written estimate per square foot installed in Northern Virginia. A typical 300 sqft deck is priced in a written estimate including railings and stairs. A 500 sqft deck is priced in a written estimate." } },
   ],
 };
 
@@ -42,14 +42,14 @@ export default function TrexTranscendReviewPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/trex-transcend-review-northern-virginia" name="Trex Transcend Review 2026 | Is It Worth It for NoVA Homes?" description="Honest Trex Transcend review for Northern Virginia homes: durability, fade, heat, cost vs Lineage and TimberTech, and installer planning notes." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/trex-transcend-review-northern-virginia" name="Trex Transcend Review 2026 | Is It Worth It for NoVA Homes?" description="Honest Trex Transcend review for Northern Virginia homes: durability, fade, heat, cost vs Lineage and TimberTech, and installer planning notes." speakable />
       <ArticleSchema
         title="Trex Transcend Review 2026: Is It Worth the Investment for Virginia Homes?"
         description="Honest Trex Transcend review for Northern Virginia homes, including durability, fade, heat, installed cost, and brand-comparison planning notes."
         path="/trex-transcend-review-northern-virginia"
         image="/social/trex-transcend-review-northern-virginia-social.png"
         datePublished="2026-04-21"
-        dateModified="2026-04-23"
+        dateModified="2026-10-18"
       />
 
       {/* Hero */}
@@ -151,7 +151,7 @@ export default function TrexTranscendReviewPage() {
           <p style={S.p}>From a contractor&apos;s perspective, Transcend boards are dimensionally stable, cut cleanly with standard carbide-tipped blades, and the hidden fastener system (Trex Hideaway) seats reliably. Board-to-board color consistency is excellent within a lot. We rarely encounter warped or defective boards Trex&apos;s quality control is among the best in the industry.</p>
 
           <h3 style={S.h3}>5. The Price-to-Performance Ratio Is Unmatched</h3>
-          <p style={S.p}>At <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>$45–$65 per square foot installed</Link> in Northern Virginia, Transcend delivers 90% of the aesthetics and 100% of the durability of products costing 15–25% more (TimberTech AZEK, Trex Lineage). For homeowners who want premium without ultra-premium pricing, it&apos;s the mathematical sweet spot.</p>
+          <p style={S.p}>At <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>a written estimate per square foot installed</Link> in Northern Virginia, Transcend delivers 90% of the aesthetics and 100% of the durability of products costing 15–25% more (TimberTech AZEK, Trex Lineage). For homeowners who want premium without ultra-premium pricing, it&apos;s the mathematical sweet spot.</p>
 
           {/* ===== What We Don't Like ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>What We Don&apos;t Like About Trex Transcend</h2>
@@ -180,7 +180,7 @@ export default function TrexTranscendReviewPage() {
               </thead>
               <tbody>
                 {[
-                  ['Cost/sqft (installed)', '$45–$65', '$30–$48', '$50–$65', '$55–$75'],
+                  ['Cost/sqft (installed)', 'a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
                   ['Wood grain realism', 'Very good', 'Good', 'Best in class', 'Very good'],
                   ['Warranty', '25 yr fade/stain', '25 yr fade/stain', '50 yr fade/stain', '50 yr fade/stain'],
                   ['Core material', 'Wood-plastic composite', 'Wood-plastic composite', 'Wood-plastic composite', 'Full PVC (no wood)'],
@@ -221,7 +221,7 @@ export default function TrexTranscendReviewPage() {
               <ul style={{ paddingLeft: '1.2rem', lineHeight: 1.8 }}>
                 <li>Your deck borders a pool (consider AZEK for chlorine resistance)</li>
                 <li>You want maximum barefoot comfort in full sun (choose lighter colors or AZEK)</li>
-                <li>Budget is under $20k (Trex Enhance is better value at smaller sizes)</li>
+                <li>Budget is under a written estimate (Trex Enhance is better value at smaller sizes)</li>
                 <li>You want the absolute most realistic wood look (Lineage)</li>
                 <li>50-year warranty is important to you (Lineage or AZEK)</li>
               </ul>
@@ -231,9 +231,9 @@ export default function TrexTranscendReviewPage() {
           {/* ===== Real Projects ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Trex Transcend on Real Northern Virginia Projects</h2>
           {[
-            { price: '$28,000', color: 'Havana Gold', location: 'Ashburn', size: '350 sqft', detail: 'Single-level deck with picture-frame border and Trex Signature railings. Brambleton HOA approved. After 2 years: zero fade, zero staining, zero maintenance beyond seasonal washing.' },
-            { price: '$44,000', color: 'Spiced Rum', location: 'Leesburg', size: '480 sqft (two-level)', detail: 'Multi-level deck with cascading stairs and integrated LED lighting. The warm Spiced Rum tone complements the home\'s stone facade perfectly. Homeowner reports using the deck daily from April through October.' },
-            { price: '$36,000', color: 'Island Mist', location: 'Reston', size: '400 sqft', detail: 'Modern deck with cable railings. Client chose Island Mist specifically for heat management their deck gets full afternoon sun. After 18 months: significantly cooler than their neighbor\'s dark composite and still looks brand new.' },
+            { price: 'a written estimate', color: 'Havana Gold', location: 'Ashburn', size: '350 sqft', detail: 'Single-level deck with picture-frame border and Trex Signature railings. Brambleton HOA approved. After 2 years: zero fade, zero staining, zero maintenance beyond seasonal washing.' },
+            { price: 'a written estimate', color: 'Spiced Rum', location: 'Leesburg', size: '480 sqft (two-level)', detail: 'Multi-level deck with cascading stairs and integrated LED lighting. The warm Spiced Rum tone complements the home\'s stone facade perfectly. Homeowner reports using the deck daily from April through October.' },
+            { price: 'a written estimate', color: 'Island Mist', location: 'Reston', size: '400 sqft', detail: 'Modern deck with cable railings. Client chose Island Mist specifically for heat management their deck gets full afternoon sun. After 18 months: significantly cooler than their neighbor\'s dark composite and still looks brand new.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} {p.color}, {p.location} ({p.size})</h3>
@@ -253,11 +253,11 @@ export default function TrexTranscendReviewPage() {
               </thead>
               <tbody>
                 {[
-                  ['200 sqft', '$9,000–$13,000', '$15,000–$20,000'],
-                  ['300 sqft', '$13,500–$19,500', '$22,000–$30,000'],
-                  ['400 sqft', '$18,000–$26,000', '$28,000–$40,000'],
-                  ['500 sqft', '$22,500–$32,500', '$35,000–$48,000'],
-                  ['600+ sqft (multi-level)', '$27,000–$39,000', '$42,000–$60,000+'],
+                  ['200 sqft', 'a written estimate', 'a written estimate'],
+                  ['300 sqft', 'a written estimate', 'a written estimate'],
+                  ['400 sqft', 'a written estimate', 'a written estimate'],
+                  ['500 sqft', 'a written estimate', 'a written estimate'],
+                  ['600+ sqft (multi-level)', 'a written estimate', 'a written estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: j === 2 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>)}
@@ -275,8 +275,8 @@ export default function TrexTranscendReviewPage() {
             { q: "Does Trex Transcend fade?", a: "Minor initial color settling in the first 60-90 days. After that, it holds its color beautifully. Our earliest installs (2019) show minimal, even fade." },
             { q: "How hot does Trex Transcend get in the sun?", a: "Dark colors reach 130-150°F in direct Virginia summer sun. Lighter colors (Island Mist, Rope Swing) stay 15-20 degrees cooler. For pool decks, consider AZEK." },
             { q: "How long does Trex Transcend last?", a: "25-year warranty. Real-world lifespan is 30-40+ years. Our earliest Northern Virginia installs (2019) still look excellent." },
-            { q: "What's the difference between Transcend and Lineage?", a: "Lineage has a more realistic wood grain and a 50-year warranty. Costs 10-15% more. Both use the same shell technology." },
-            { q: "How much does a Trex Transcend deck cost?", a: "$45-$65 per square foot installed. 300 sqft deck: $22,000-$30,000. 500 sqft: $35,000-$48,000." },
+            { q: "What's the difference between Transcend and Lineage?", a: "Lineage has a more realistic wood grain and a 50-year warranty. The written estimate shows the difference. Both use the same shell technology." },
+            { q: "How much does a Trex Transcend deck cost?", a: "a written estimate per square foot installed. 300 sqft deck: a written estimate. 500 sqft: a written estimate." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
@@ -306,7 +306,7 @@ export default function TrexTranscendReviewPage() {
 
       <SimpleCTA title="Build Your Trex Transcend Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/trex-transcend-review-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <ContactHome />
     </>

@@ -13,14 +13,14 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/multi-level-deck-builder-northern-virginia',
   title: 'Multi-Level Deck Builder Northern Virginia | LDN Decks',
-  description: 'Custom multi-level decks in Northern Virginia from $35,000-$80,000+. Perfect for sloped lots and walkout basements. Trex & TimberTech. Free design consultation.',
+  description: 'Custom multi-level decks in Northern Virginia from a written estimate. Perfect for sloped lots and walkout basements. Trex & TimberTech. Free design consultation.',
   image: '/social/multi-level-deck-builder-northern-virginia-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a multi-level deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Multi-level composite decks in Northern Virginia cost $35,000-$80,000+ depending on total square footage, number of levels, materials, and features. A typical two-level deck (400-600 sqft total) runs $40,000-$65,000 with Trex Transcend and standard railings." } },
+    { "@type": "Question", name: "How much does a multi-level deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Multi-level composite decks in Northern Virginia are priced in a written estimate depending on total square footage, number of levels, materials, and features. A typical two-level deck (400-600 sqft total) is priced in a written estimate with Trex Transcend and standard railings." } },
     { "@type": "Question", name: "Are multi-level decks good for sloped yards?", acceptedAnswer: { "@type": "Answer", text: "Yes multi-level decks are the ideal solution for sloped lots, which are common in Northern Virginia. Instead of fighting the grade with retaining walls, the deck follows the natural slope with stepped levels connected by stairs. This turns unusable hillside into functional outdoor living space." } },
     { "@type": "Question", name: "How long does a multi-level deck take to build?", acceptedAnswer: { "@type": "Answer", text: "3-5 weeks of construction time for most two-level decks. Three-level or larger projects: 4-6 weeks. Total timeline including design, permits, and construction: 8-14 weeks." } },
   ],
@@ -32,7 +32,7 @@ export default function MultiLevelDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/multi-level-deck-builder-northern-virginia" name="Multi-Level Deck Builder NoVA" description="Custom multi-level decks in Northern Virginia from $35,000-$80,000+. Perfect for sloped lots and walkout basements. Trex &amp; TimberTech. Free design consultation." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/multi-level-deck-builder-northern-virginia" name="Multi-Level Deck Builder NoVA" description="Custom multi-level decks in Northern Virginia from a written estimate. Perfect for sloped lots and walkout basements. Trex &amp; TimberTech. Free design consultation." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -62,12 +62,12 @@ export default function MultiLevelDeckPage() {
           <p style={S.p}>A multi-level design solves this by creating <strong>distinct outdoor zones at different heights</strong>, connected by stairs. Each level serves a purpose: upper dining near the kitchen door, lower lounge closer to the yard, and sometimes a ground-level patio with fire pit.</p>
 
           <h2 style={S.h2}>Multi-Level Deck Configurations</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { title: 'Two-Level Step-Down', desc: 'Upper level off the house (dining/grill), lower level 2-4 steps down (lounge/seating). Most common and cost-effective.', range: '$35k–$55k', size: '350–500 sqft' },
-              { title: 'Cascading Three-Level', desc: 'Follows the slope of a hillside with 3 distinct platforms. Ideal for steep grades. Each level can have its own purpose.', range: '$50k–$80k+', size: '500–800 sqft' },
-              { title: 'Walkout Basement Deck', desc: 'Second-story deck off main floor with stairs down to a ground-level patio or lower deck near the walkout basement.', range: '$40k–$70k', size: '400–600 sqft' },
-              { title: 'Wrap-Around Multi-Level', desc: 'Deck wraps around 2+ sides of the house with level changes to follow the home\'s footprint and grade changes.', range: '$55k–$90k+', size: '600–1,000 sqft' },
+              { title: 'Two-Level Step-Down', desc: 'Upper level off the house (dining/grill), lower level 2-4 steps down (lounge/seating). Most common and cost-effective.', range: 'a written estimate', size: '350–500 sqft' },
+              { title: 'Cascading Three-Level', desc: 'Follows the slope of a hillside with 3 distinct platforms. Ideal for steep grades. Each level can have its own purpose.', range: 'a written estimate', size: '500–800 sqft' },
+              { title: 'Walkout Basement Deck', desc: 'Second-story deck off main floor with stairs down to a ground-level patio or lower deck near the walkout basement.', range: 'a written estimate', size: '400–600 sqft' },
+              { title: 'Wrap-Around Multi-Level', desc: 'Deck wraps around 2+ sides of the house with level changes to follow the home\'s footprint and grade changes.', range: 'a written estimate', size: '600–1,000 sqft' },
             ].map((config) => (
               <div key={config.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>{config.title}</h3>
@@ -83,10 +83,10 @@ export default function MultiLevelDeckPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Total Size', 'PT Wood', 'Trex Transcend', 'TimberTech AZEK'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['350 sqft (2-level)', '$12k–$20k', '$22k–$35k', '$25k–$40k'],
-                  ['500 sqft (2-level)', '$16k–$28k', '$32k–$50k', '$35k–$55k'],
-                  ['600 sqft (3-level)', '$20k–$35k', '$40k–$60k', '$45k–$70k'],
-                  ['800+ sqft (wrap/cascade)', '$28k–$45k', '$52k–$80k', '$60k–$90k+'],
+                  ['350 sqft (2-level)', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['500 sqft (2-level)', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['600 sqft (3-level)', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['800+ sqft (wrap/cascade)', 'a written estimate', 'a written estimate', 'a written estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -109,9 +109,9 @@ export default function MultiLevelDeckPage() {
 
           <h2 style={S.h2}>Real Multi-Level Projects</h2>
           {[
-            { price: '$42,000', desc: '450 sqft Two-Level, Ashburn (Broadlands)', detail: 'Upper dining level (250 sqft) off kitchen slider + lower lounge (200 sqft) with built-in bench. Trex Transcend Island Mist, Trex Signature railings, 8 stair lights. Loudoun County permit. 3.5-week build.' },
-            { price: '$58,000', desc: '550 sqft Three-Level Cascade, Leesburg', detail: 'Three-level deck following a steep hillside grade. Top level dining (200 sqft), mid-level conversation (200 sqft), ground-level fire pit pad (150 sqft). TimberTech PRO in Dark Roast. Cable railings on upper levels. 4.5-week build.' },
-            { price: '$73,000', desc: '700 sqft Wrap-Around + Screened Porch, McLean', detail: 'L-shaped multi-level wrapping two sides of the house. Upper screened porch (250 sqft) + open deck dining (250 sqft) + lower walkout level (200 sqft). AZEK Vintage in Dark Hickory. 6-week build.' },
+            { price: 'a written estimate', desc: '450 sqft Two-Level, Ashburn (Broadlands)', detail: 'Upper dining level (250 sqft) off kitchen slider + lower lounge (200 sqft) with built-in bench. Trex Transcend Island Mist, Trex Signature railings, 8 stair lights. Loudoun County permit. 3.5-week build.' },
+            { price: 'a written estimate', desc: '550 sqft Three-Level Cascade, Leesburg', detail: 'Three-level deck following a steep hillside grade. Top level dining (200 sqft), mid-level conversation (200 sqft), ground-level fire pit pad (150 sqft). TimberTech PRO in Dark Roast. Cable railings on upper levels. 4.5-week build.' },
+            { price: 'a written estimate', desc: '700 sqft Wrap-Around + Screened Porch, McLean', detail: 'L-shaped multi-level wrapping two sides of the house. Upper screened porch (250 sqft) + open deck dining (250 sqft) + lower walkout level (200 sqft). AZEK Vintage in Dark Hickory. 6-week build.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} {p.desc}</h3>
@@ -121,7 +121,7 @@ export default function MultiLevelDeckPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "How much does a multi-level deck cost?", a: "Two-level composite: $35k-$55k. Three-level: $50k-$80k+. 20-40% more than single-level due to stairs and framing transitions." },
+            { q: "How much does a multi-level deck cost?", a: "Two-level composite: a written estimate. Three-level: a written estimate. 20-40% more than single-level due to stairs and framing transitions." },
             { q: "Good for sloped yards?", a: "Ideal. Multi-level follows the natural grade instead of fighting it. Turns unusable hillside into functional space." },
             { q: "How long to build?", a: "Two-level: 3-5 weeks. Three-level or larger: 4-6 weeks. Total with permits: 8-14 weeks." },
           ].map((faq, i) => (
@@ -145,7 +145,7 @@ export default function MultiLevelDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Design Your Multi-Level Deck" buttonText="Get Free Design Consultation" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/multi-level-deck-builder-northern-virginia" />
 

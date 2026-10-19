@@ -79,7 +79,7 @@ export default function ExteriorCleaningAuthority({ type }) {
           deck, porch, railing and backyard as one space, not disconnected surfaces.
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', marginBottom: '1.75rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1rem', marginBottom: '1.75rem' }}>
           <div style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 8, padding: '1.25rem' }}>
             <h3 style={{ fontSize: '1rem', fontWeight: 800, marginBottom: '0.75rem' }}>Cleaning process</h3>
             <ol style={{ margin: 0, paddingLeft: '1.25rem', lineHeight: 1.7 }}>

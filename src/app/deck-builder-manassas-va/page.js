@@ -32,7 +32,7 @@ const manassasFAQs = [
   },
   {
     q: "What's the typical cost for a composite deck in Manassas?",
-    a: "Most Manassas projects land between $18,000 and $35,000 for a 300 to 450 sqft Trex Enhance or Transcend build with aluminum railings. Pricing in Prince William County typically runs 10 to 15 percent below comparable builds in Loudoun or Fairfax due to lower lot acquisition costs feeding into local trade rates."
+    a: "Most Manassas projects land between a written estimate and a written estimate for a 300 to 450 sqft Trex Enhance or Transcend build with aluminum railings. Pricing in Prince William County typically runs 10 to 15 percent below comparable builds in Loudoun or Fairfax due to lower lot acquisition costs feeding into local trade rates."
   },
   {
     q: "Can you handle HOA approvals in Wellington or Bull Run Mountain Estates?",
@@ -59,12 +59,12 @@ const manassasFaqSchema = {
 };
 
 const manassasServices = [
-  { title: 'New Composite Decks', range: 'From $18k', link: '/services/new-decks' },
-  { title: 'Deck Resurfacing', range: 'From $15k', link: '/services/deck-resurfacing' },
-  { title: 'Screened Porches', range: 'From $22k', link: '/services/porches' },
-  { title: 'Pergolas & Gazebos', range: 'From $8k', link: '/services/gazebo-pergola' },
-  { title: 'Paver Patios', range: 'From $8k', link: '/services/patios' },
-  { title: 'Privacy Fencing', range: 'From $4k', link: '/services/fence' },
+  { title: 'New Composite Decks', range: 'From a written estimate', link: '/services/new-decks' },
+  { title: 'Deck Resurfacing', range: 'From a written estimate', link: '/services/deck-resurfacing' },
+  { title: 'Screened Porches', range: 'From a written estimate', link: '/services/porches' },
+  { title: 'Pergolas & Gazebos', range: 'From a written estimate', link: '/services/gazebo-pergola' },
+  { title: 'Paver Patios', range: 'From a written estimate', link: '/services/patios' },
+  { title: 'Privacy Fencing', range: 'From a written estimate', link: '/services/fence' },
 ];
 
 const manassasNeighborhoods = [
@@ -81,7 +81,7 @@ export default function ManassasDeckBuilderPage() {
     <main>
       <JsonLd data={manassasFaqSchema} />
       <LocalBusinessSchema city="Manassas" url="https://ldndecks.com/deck-builder-manassas-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-manassas-va" name="Deck Builder in Manassas, VA | Composite Decks | Loudoun Decks" description="Manassas deck builder serving Old Town, Wellington, Bull Run and Sudley Springs. Trex and composite deck planning, screened porches and historic-district builds." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-manassas-va" name="Deck Builder in Manassas, VA | Composite Decks | Loudoun Decks" description="Manassas deck builder serving Old Town, Wellington, Bull Run and Sudley Springs. Trex and composite deck planning, screened porches and historic-district builds." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -104,7 +104,7 @@ export default function ManassasDeckBuilderPage() {
 
           <div style={{ borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
-            <p style={{ margin: 0, lineHeight: 1.65 }}>A custom composite deck in Manassas typically costs $18,000 to $35,000 installed. Prince William County permits average 2 to 3 weeks. We plan Trex product-line options and coordinate Wellington HOA, Bull Run Mountain Estates, and Old Town Architectural Review submission details with the homeowner.</p>
+            <p style={{ margin: 0, lineHeight: 1.65 }}>A custom composite deck in Manassas typically is priced in a written estimate installed. Prince William County permits average 2 to 3 weeks. We plan Trex product-line options and coordinate Wellington HOA, Bull Run Mountain Estates, and Old Town Architectural Review submission details with the homeowner.</p>
           </div>
 
           <PlanningUpdate
@@ -150,15 +150,15 @@ export default function ManassasDeckBuilderPage() {
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Loudoun Decks structures Manassas scopes around what local homeowners actually need: a clean, durable deck that respects the home's age and architecture without pricing the owner out of the project. Manassas project pricing typically lands 10 to 15 percent below comparable Loudoun and Fairfax builds, and that gap has nothing to do with quality. It's lot economics, trade rates and overhead.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Trex and TimberTech Composite Decks in Manassas</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The vast majority of new builds we install in Prince William County are capped composite. Trex Enhance Naturals is the volume choice for Wellington, Ashleigh and Stonewall Heights homeowners who want a 25-year fade and stain warranty without pushing the budget past $25,000 on a 350 sqft footprint. When clients want the deeper grain pattern and the heavier board feel, we step them up to Trex Transcend in Spiced Rum or Lava Rock, or to TimberTech AZEK Vintage on Old Town historic projects where the visual match to the existing trim matters.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The vast majority of new builds we install in Prince William County are capped composite. Trex Enhance Naturals is the volume choice for Wellington, Ashleigh and Stonewall Heights homeowners who want a 25-year fade and stain warranty without pushing the budget past a written estimate on a 350 sqft footprint. When clients want the deeper grain pattern and the heavier board feel, we step them up to Trex Transcend in Spiced Rum or Lava Rock, or to TimberTech AZEK Vintage on Old Town historic projects where the visual match to the existing trim matters.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Composite is the right call for Manassas's climate. Bull Run watershed humidity, the freeze-thaw cycles in January, and the heavy summer pollen drops from the oaks around Sudley Springs all chew through pressure-treated wood inside a decade. Capped composite ignores all of it. We use hidden fasteners on every Trex install, breathable flashing tape at the ledger, and stainless lag connections rated for the loads our engineer specs into the structural drawings.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Deck Replacement and Resurfacing in Manassas, VA</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>A surprising number of Stonewall Heights and Sudley Springs homes still have their original pressure-treated decks from the late 80s. By the time a homeowner calls us, the surface boards are usually splintering, the railings are loose, and the joists may or may not be salvageable. Our first step is always a structural inspection. If the framing is sound, footings are intact, and the ledger is properly flashed, we can resurface with composite for $10,000 to $18,000 and give you a deck that performs like new.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>If the framing is rotted, the ledger was nailed instead of bolted, or the footings have shifted, resurfacing isn't safe. We tear down and rebuild from new footings up. Full replacement on a 350 sqft Manassas project typically runs $22,000 to $30,000 depending on board selection and railing system. We'll tell you which path is appropriate before we quote, with photos.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>A surprising number of Stonewall Heights and Sudley Springs homes still have their original pressure-treated decks from the late 80s. By the time a homeowner calls us, the surface boards are usually splintering, the railings are loose, and the joists may or may not be salvageable. Our first step is always a structural inspection. If the framing is sound, footings are intact, and the ledger is properly flashed, we can resurface with composite for a written estimate to a written estimate and give you a deck that performs like new.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>If the framing is rotted, the ledger was nailed instead of bolted, or the footings have shifted, resurfacing isn't safe. We tear down and rebuild from new footings up. Full replacement on a 350 sqft Manassas project typically is priced in a written estimate depending on board selection and railing system. We'll tell you which path is appropriate before we quote, with photos.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Outdoor Living Services in Manassas</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {manassasServices.map((item) => (
               <Link key={item.title} href={item.link} style={{ display: 'block', background: '#f9f9f9', borderRadius: 8, padding: '1.1rem', textDecoration: 'none', color: 'inherit', border: '1px solid #ececec' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.35rem', fontSize: '1rem' }}>{item.title}</h3>
@@ -215,7 +215,7 @@ export default function ManassasDeckBuilderPage() {
 
       <SimpleCTA title="Build Your Manassas Deck With a Composite Deck Team" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-manassas-va" />
-      <NamedAuthor context="Manassas and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Manassas and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

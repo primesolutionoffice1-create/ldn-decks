@@ -200,7 +200,7 @@ export default function DeckFinancingPage() {
           <p style={{ ...S.p, maxWidth: 760 }}>
             Financing options may be available for several deck project types. Eligibility depends on the provider, approval, and final project details.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 230px), 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {eligibleProjects.map((project) => (
               <Link key={project.href} href={project.href} style={{ ...S.card, color: 'inherit', textDecoration: 'none', display: 'block' }}>
                 <h3 style={{ color: 'var(--color-primary)', fontSize: '1.08rem', fontWeight: 800, margin: '0 0 0.5rem' }}>{project.title}</h3>
@@ -214,7 +214,7 @@ export default function DeckFinancingPage() {
       <section style={{ ...S.section, background: '#fff7ed' }}>
         <div style={S.container}>
           <h2 style={S.h2}>How the financing process works</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {[
               ['1', 'Request a free estimate', 'Tell us about the deck, resurfacing, repair, or upgrade you want to plan.'],
               ['2', 'Confirm the right project scope', 'We inspect, measure, and explain the difference between repair, resurfacing, replacement, and a new build.'],

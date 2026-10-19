@@ -17,7 +17,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 export const metadata = buildMetadata({
   path: '/deck-resurfacing-vs-replacement',
   title: 'Deck Resurfacing vs Replacement',
-  description: 'Resurface $15k-$30k+ (keep frame) or replace $20k-$50k+. When each makes sense, inspection guide, and Northern Virginia cost examples.',
+  description: 'Resurface a written estimate (keep frame) or replace a written estimate. When each makes sense, inspection guide, and Northern Virginia cost examples.',
   image: '/social/deck-resurfacing-vs-replacement-social.png',
 });
 
@@ -26,7 +26,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "What is deck resurfacing?", acceptedAnswer: { "@type": "Answer", text: "Deck resurfacing means removing old deck boards and often railings while keeping the existing joists, beams, posts, and footings. New composite boards and railings are installed only if the existing structure is sound, properly flashed, and suitable for the selected decking system." } },
     { "@type": "Question", name: "When should I resurface vs replace my deck?", acceptedAnswer: { "@type": "Answer", text: "Resurface if joists are solid, posts are straight, footings are stable, and the ledger board is secure. Replace if joists are soft or rotting, posts lean, footings have moved, the deck feels bouncy, or the ledger is pulling away from the house. An inspection should decide the path." } },
-    { "@type": "Question", name: "How much does deck resurfacing cost vs replacement?", acceptedAnswer: { "@type": "Answer", text: "In Northern Virginia: premium resurfacing projects usually start around $15,000 and often land between $15,000 and $30,000+ for a typical 300-400 sqft deck. Full replacement usually costs $20,000-$50,000+ for the same size. Resurfacing saves money when the existing frame is structurally sound." } },
+    { "@type": "Question", name: "How much does deck resurfacing cost vs replacement?", acceptedAnswer: { "@type": "Answer", text: "In Northern Virginia: premium resurfacing projects usually start around a written estimate and often land between a written estimate and a written estimate for a typical 300-400 sqft deck. Full replacement usually is priced in a written estimate for the same size. Resurfacing saves money when the existing frame is structurally sound." } },
     { "@type": "Question", name: "How long does resurfacing take vs replacement?", acceptedAnswer: { "@type": "Answer", text: "Resurfacing can be faster when no footing or framing work is needed. Full replacement usually takes longer because it can include demolition, new footings, framing, decking, railings, and inspections. Permit and HOA timing depends on county rules and the final scope." } },
   ],
 };
@@ -120,14 +120,14 @@ export default function ResurfacingVsReplacementPage() {
     <>
       <JsonLd data={faqSchema} />
       <JsonLd data={repairTriageSchema} />
-      <WebPageSchema dateModified="2026-09-04" url="https://ldndecks.com/deck-resurfacing-vs-replacement" name="Deck Resurfacing vs Replacement" description="Resurface when the frame can be reused safely or replace when structure, stairs, ledger, posts, or footings need a reset. Northern Virginia inspection-first guide." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-resurfacing-vs-replacement" name="Deck Resurfacing vs Replacement" description="Resurface when the frame can be reused safely or replace when structure, stairs, ledger, posts, or footings need a reset. Northern Virginia inspection-first guide." speakable />
       <ArticleSchema
         title="Deck Resurfacing vs Replacement in Northern Virginia"
         description="Inspection-first guide for deciding whether an older deck should be repaired, resurfaced with composite boards, or fully replaced."
         path="/deck-resurfacing-vs-replacement"
         image="/social/deck-resurfacing-vs-replacement-social.png"
         datePublished="2025-01-15"
-        dateModified="2026-09-04"
+        dateModified="2026-10-18"
         speakable={[
           '[data-speakable]',
           '.quick-answer',
@@ -179,7 +179,7 @@ export default function ResurfacingVsReplacementPage() {
       <section id="resurface-replace-answer" data-speakable="resurface-replace-answer" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Resurface</strong> ($15k–$30k+) if your frame is solid and you want a full surface conversion with composite boards, railings, fascia, and stairs. <strong>Replace</strong> ($20k–$50k+) if joists are rotting, posts are leaning, footings shifted, or the deck feels bouncy. <strong>Small board, railing, or rot repairs are separate</strong> see our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck repair service</Link>.</p>
+          <p><strong>Resurface</strong> (a written estimate) if your frame is solid and you want a full surface conversion with composite boards, railings, fascia, and stairs. <strong>Replace</strong> (a written estimate) if joists are rotting, posts are leaning, footings shifted, or the deck feels bouncy. <strong>Small board, railing, or rot repairs are separate</strong> see our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck repair service</Link>.</p>
         </div>
       </section>
       <div id="inspection-first-comparison" data-speakable="inspection-first-comparison">
@@ -203,7 +203,7 @@ export default function ResurfacingVsReplacementPage() {
       </div>
       <section style={{ padding: '2.5rem 1.5rem', background: '#fff' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1rem' }}>
             {resurfaceGeoAnswers.map((item) => (
               <section key={item.id} id={item.id} data-speakable={item.id} style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '1rem', background: '#fbfdff' }}>
                 <h2 style={{ fontSize: '1.08rem', fontWeight: 800, marginBottom: '0.55rem' }}>{item.q}</h2>
@@ -233,8 +233,8 @@ export default function ResurfacingVsReplacementPage() {
               <tbody>
                 {[
                   ['What happens', 'Remove old boards + railings, keep frame, install composite', 'Demolish everything, pour new footings, build from scratch'],
-                  ['Cost (300 sqft)', '$15,000–$24,000+', '$25,000–$45,000+'],
-                  ['Cost (500 sqft)', '$20,000–$30,000+', '$35,000–$55,000+'],
+                  ['Cost (300 sqft)', 'a written estimate', 'a written estimate'],
+                  ['Cost (500 sqft)', 'a written estimate', 'a written estimate'],
                   ['Savings', 'Can reduce scope and cost when the frame passes inspection', '—'],
                   ['Build time', '1–2 weeks', '2–4 weeks'],
                   ['Requires', 'Solid frame (joists, posts, footings)', 'Nothing all new'],
@@ -268,7 +268,7 @@ export default function ResurfacingVsReplacementPage() {
             {'. We also check the house connection explained in our '}
             <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             <div style={{ background: '#e8f5e9', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, color: '#2e7d32', marginBottom: '0.75rem' }}>RESURFACE ✓ (frame passes)</h3>
               <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem' }}>
@@ -278,7 +278,7 @@ export default function ResurfacingVsReplacementPage() {
                 <li style={{ marginBottom: '0.5rem' }}>Ledger: secure, flashing intact</li>
                 <li style={{ marginBottom: '0.5rem' }}>Beams: no cracks, no sag</li>
               </ul>
-              <p style={{ fontSize: '0.9rem', fontWeight: 600, marginTop: '0.75rem' }}>Cost: $15k–$30k+ | Time: 1–2 weeks | Permits + HOA handled</p>
+              <p style={{ fontSize: '0.9rem', fontWeight: 600, marginTop: '0.75rem' }}>Cost: a written estimate | Time: 1–2 weeks | Permits + HOA handled</p>
             </div>
             <div style={{ background: '#ffebee', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, color: '#c62828', marginBottom: '0.75rem' }}>REPLACE ✗ (frame fails)</h3>
@@ -289,7 +289,7 @@ export default function ResurfacingVsReplacementPage() {
                 <li style={{ marginBottom: '0.5rem' }}>Ledger: pulling away from house</li>
                 <li style={{ marginBottom: '0.5rem' }}>Deck: bounces when walked on</li>
               </ul>
-              <p style={{ fontSize: '0.9rem', fontWeight: 600, marginTop: '0.75rem' }}>Cost: $20k–$50k | Time: 2–4 weeks | Permits + HOA handled</p>
+              <p style={{ fontSize: '0.9rem', fontWeight: 600, marginTop: '0.75rem' }}>Cost: a written estimate | Time: 2–4 weeks | Permits + HOA handled</p>
             </div>
           </div>
 
@@ -298,10 +298,10 @@ export default function ResurfacingVsReplacementPage() {
             The examples below are budgeting scenarios for homeowner planning, not published formal case studies. Before any example is reused as a source-verified example, it must be matched to owner/source evidence: city, month/year, signed scope, photos, permit or HOA status, and final invoice or estimate record.
           </p>
           {[
-            { type: 'Resurfacing scenario', price: '$19,500 planning range', loc: 'South Riding-style scope', detail: '280 sqft deck, sound frame after inspection, old pressure-treated boards removed, Trex Enhance-style boards, aluminum railing, and stair lighting. Verify with source evidence before presenting as a source-verified example.' },
-            { type: 'Resurfacing scenario', price: '$22,000 planning range', loc: 'Brambleton-style scope', detail: '300 sqft deck, frame suitable for reuse, Trex Transcend-style boards, and Trex Select-style railings. Verify HOA status and source records before presenting as a source-verified example.' },
-            { type: 'Replacement scenario', price: '$38,000 planning range', loc: 'Leesburg-style scope', detail: '480 sqft replacement path where joists, footings, or ledger conditions make resurfacing inappropriate. New framing, composite boards, premium railing, and lighting. Verify records before case-study use.' },
-            { type: 'Replacement scenario', price: '$28,000 planning range', loc: 'Sterling-style scope', detail: '320 sqft replacement path where post rot, stair instability, or frame movement makes full rebuild the safer decision. Verify source evidence before formal case-study use.' },
+            { type: 'Resurfacing scenario', price: 'a written estimate planning range', loc: 'South Riding-style scope', detail: '280 sqft deck, sound frame after inspection, old pressure-treated boards removed, Trex Enhance-style boards, aluminum railing, and stair lighting. Verify with source evidence before presenting as a source-verified example.' },
+            { type: 'Resurfacing scenario', price: 'a written estimate planning range', loc: 'Brambleton-style scope', detail: '300 sqft deck, frame suitable for reuse, Trex Transcend-style boards, and Trex Select-style railings. Verify HOA status and source records before presenting as a source-verified example.' },
+            { type: 'Replacement scenario', price: 'a written estimate planning range', loc: 'Leesburg-style scope', detail: '480 sqft replacement path where joists, footings, or ledger conditions make resurfacing inappropriate. New framing, composite boards, premium railing, and lighting. Verify records before case-study use.' },
+            { type: 'Replacement scenario', price: 'a written estimate planning range', loc: 'Sterling-style scope', detail: '320 sqft replacement path where post rot, stair instability, or frame movement makes full rebuild the safer decision. Verify source evidence before formal case-study use.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem', borderLeft: `4px solid ${p.type === 'Resurfacing' ? '#2e7d32' : '#c62828'}` }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', flexWrap: 'wrap' }}>
@@ -316,7 +316,7 @@ export default function ResurfacingVsReplacementPage() {
           {[
             { q: "What is deck resurfacing?", a: "Remove old boards and often railings, keep the frame only if it passes inspection, then install new composite or approved surface materials." },
             { q: "When to resurface vs replace?", a: "Resurface: frame is solid (joists, posts, footings OK). Replace: structural issues (rot, lean, bounce, shifting)." },
-            { q: "Cost difference?", a: "Resurface: $15k-$30k+. Replace: $20k-$50k+. Same size deck the difference is whether the frame stays and whether the work is a premium full-surface conversion or a structural rebuild." },
+            { q: "Cost difference?", a: "Resurface: a written estimate. Replace: a written estimate. Same size deck the difference is whether the frame stays and whether the work is a premium full-surface conversion or a structural rebuild." },
             { q: "How long?", a: "Resurfacing can be faster when no framing or footing work is required. Replacement usually takes longer because demolition, framing, inspections, permits, and HOA timing may be involved." },
             { q: "Is small deck repair included?", a: "No. Small board swaps, railing tightening, and isolated rot repairs belong on the deck repair service, not the replacement or resurfacing path." },
           ].map((faq, i) => (
@@ -359,7 +359,7 @@ export default function ResurfacingVsReplacementPage() {
       </article>
       <ServicesCallToAction />
       <SimpleCTA title="Free Deck Inspection Resurface or Replace?" buttonText="Schedule Free Inspection" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-09-04" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/deck-resurfacing-vs-replacement" category="ai-retrieval" />
 

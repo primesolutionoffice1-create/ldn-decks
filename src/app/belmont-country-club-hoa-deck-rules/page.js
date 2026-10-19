@@ -29,7 +29,7 @@ const faqSchema = {
     { "@type": "Question", name: "How long does Belmont Country Club ARC review take?", acceptedAnswer: { "@type": "Answer", text: "Belmont's review averages 21-35 days, depending on the next committee meeting cycle and the complexity of the project. Premium estate projects with outdoor kitchens or multi-level designs often require an in-person presentation; we coordinate scheduling. Submission packets must be filed at least 14 days before the next scheduled committee meeting to be considered." } },
     { "@type": "Question", name: "What does Belmont's ARC require in the submission packet?", acceptedAnswer: { "@type": "Answer", text: "Belmont submissions commonly need material samples or manufacturer specifications, color specifications with product codes, architectural drawings showing elevations and plan view, a site plan with setbacks, landscape impact notes, engineered structural drawings for complex builds, and homeowner authorization for contractor support." } },
     { "@type": "Question", name: "What's the Belmont Country Club deck aesthetic?", acceptedAnswer: { "@type": "Answer", text: "Belmont's premier estate-tier character favors premium materials, sophisticated design, and high-quality detail throughout. Approved selections skew premium: TimberTech AZEK Vintage Mahogany, Coastline, or Brownstone; Trex Transcend Vintage Lantern or Spiced Rum (the warmest tones). Railings: composite balustrade with premium finishes, aluminum-traditional in custom colors, or cable rail on lots backing to common-area woods or the golf course. Integrated lighting, picture-frame borders, and custom post wraps are nearly universal at this tier." } },
-    { "@type": "Question", name: "How much does a Belmont Country Club deck cost?", acceptedAnswer: { "@type": "Answer", text: "Belmont projects routinely land in the premier estate tier: $75,000-$150,000+ for typical multi-level composite decks with screened porches, integrated outdoor kitchens, or fire features. Estate-tier full outdoor-living packages reach $150,000-$300,000+. The premium pricing reflects Belmont's $1.5-3M+ home values, larger lot sizes that support multi-level designs, premium material expectations, and the more detailed ARC + engineering process." } },
+    { "@type": "Question", name: "How much does a Belmont Country Club deck cost?", acceptedAnswer: { "@type": "Answer", text: "Belmont projects routinely land in the premier estate tier: a written estimate for typical multi-level composite decks with screened porches, integrated outdoor kitchens, or fire features. Estate-tier full outdoor-living packages reach a written estimate. The premium pricing reflects Belmont's a written estimateM+ home values, larger lot sizes that support multi-level designs, premium material expectations, and the more detailed ARC + engineering process." } },
     { "@type": "Question", name: "Are engineered structural drawings required in Belmont?", acceptedAnswer: { "@type": "Answer", text: "Almost always. Belmont's premium tier of projects (multi-level decks 600+ sqft, decks with integrated hot tubs or outdoor kitchens, second-story decks, builds with concentrated point loads) require Virginia-licensed structural engineer's stamp on the framing plan, footing schedule, and load-path analysis. The ARC requires these drawings in addition to whatever the county requires. We coordinate engineering as part of the project total — typically adds 1-2 weeks to the upfront timeline." } },
     { "@type": "Question", name: "Can Loudoun Decks handle the Belmont Country Club ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. We prepare the ARC packet with material samples or specifications, support committee presentation needs when required, coordinate engineered structural drawings, file the Loudoun County building permit in parallel, and manage inspection scheduling. Call 571-655-7207." } },
   ],
@@ -41,14 +41,14 @@ export default function BelmontCountryClubHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Belmont Country Club HOA Deck Rules &amp; Approval Guide" description="Building a deck in Belmont Country Club, Ashburn? Detailed ARC review, material samples, committee timing, Loudoun County permit coordination, and premier deck planning." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Belmont Country Club HOA Deck Rules &amp; Approval Guide" description="Building a deck in Belmont Country Club, Ashburn? Detailed ARC review, material samples, committee timing, Loudoun County permit coordination, and premier deck planning." speakable />
       <ArticleSchema
         title="Belmont Country Club HOA Deck Rules and Approval Guide"
         description="Belmont Country Club ARC review, premium deck material planning, Loudoun County permit coordination, structural engineering triggers, and local deck builder support."
         path={PATH}
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-06-04"
+        dateModified="2026-10-18"
       />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -67,7 +67,7 @@ export default function BelmontCountryClubHoaDeckRulesPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <h2 style={S.h2}>Building a Deck in Belmont Country Club</h2>
-          <p style={S.p}>Belmont Country Club is Ashburn&apos;s premier estate-tier community — anchored by the Belmont Country Club golf course, with home values typically in the $1.5-3M+ range, larger lot sizes that support multi-level designs and full outdoor-living packages, and the most detailed architectural review process in the Ashburn area. Deck projects here are estate-tier in every dimension: premium materials, sophisticated design, multi-level configurations, integrated outdoor kitchens, fire features, and engineered structural framing.</p>
+          <p style={S.p}>Belmont Country Club is Ashburn&apos;s premier estate-tier community — anchored by the Belmont Country Club golf course, with home values typically in the a written estimateM+ range, larger lot sizes that support multi-level designs and full outdoor-living packages, and the most detailed architectural review process in the Ashburn area. Deck projects here are estate-tier in every dimension: premium materials, sophisticated design, multi-level configurations, integrated outdoor kitchens, fire features, and engineered structural framing.</p>
           <p style={S.p}>Belmont&apos;s approval process is more involved than other Ashburn HOAs, but the resulting deck quality and community fit reflects the investment. See our broader <Link href="/deck-builder-ashburn-va" style={{ color: 'var(--color-primary)' }}>Ashburn deck builder page</Link> for Brambleton/Broadlands/One Loudoun context.</p>
 
           <h2 style={S.h2}>How Belmont&apos;s ARC Works — the Most Detailed in Ashburn</h2>
@@ -106,10 +106,10 @@ export default function BelmontCountryClubHoaDeckRulesPage() {
 
           <h2 style={S.h2}>Typical Belmont Deck Projects + Pricing</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Premier composite deck</strong> (500-700 sqft, multi-level): $58,000-$95,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck + screened porch combo</strong>: $75,000-$120,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Full outdoor-living package</strong> (deck + outdoor kitchen + pergola + fire feature): $120,000-$220,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Estate-tier four-zone deck</strong> (dining + lounging + grilling + hot tub or fire pit): $180,000-$300,000+</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Premier composite deck</strong> (500-700 sqft, multi-level): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck + screened porch combo</strong>: a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Full outdoor-living package</strong> (deck + outdoor kitchen + pergola + fire feature): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Estate-tier four-zone deck</strong> (dining + lounging + grilling + hot tub or fire pit): a written estimate</li>
           </ul>
           <p style={S.p}>Use our <Link href="/800-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>800 sqft deck cost guide</Link> for detailed breakdown of estate-tier configurations.</p>
 
@@ -138,7 +138,7 @@ export default function BelmontCountryClubHoaDeckRulesPage() {
         </div>
       </article>
       <SimpleCTA title="Belmont Country Club deck project? We file every premier approval." buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Belmont Country Club (Ashburn) — premier estate-tier deck construction" lastUpdated="2026-06-04" />
+      <NamedAuthor context="Belmont Country Club (Ashburn) — premier estate-tier deck construction" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath="/belmont-country-club-hoa-deck-rules" />
       <ContactHome />
     </>

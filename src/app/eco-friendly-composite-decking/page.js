@@ -92,7 +92,7 @@ export default function EcoFriendlyDeckingPage() {
           </ol>
 
           <h2 style={S.h2}>Sustainability by the Numbers</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               { stat: '500M+', label: 'Pounds of plastic and wood diverted from landfills each year by Trex' },
               { stat: '95%', label: 'Recycled content in every Trex deck board' },

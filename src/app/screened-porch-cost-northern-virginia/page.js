@@ -13,15 +13,15 @@ import WebPageSchema from '@/components/WebPageSchema';
 export const metadata = buildMetadata({
   path: '/screened-porch-cost-northern-virginia',
   title: '2026 Screened Porch Cost NoVA | Pricing Scenarios',
-  description: 'Screened porches in Northern Virginia cost $25,000-$70,000+. See 2026 price tables, EZE-Breeze costs, and planning scenarios before requesting an itemized quote.',
+  description: 'Screened porches in Northern Virginia are priced in a written estimate. See 2026 price tables, EZE-Breeze costs, and planning scenarios before requesting an itemized quote.',
   image: '/social/screened-porch-cost-northern-virginia-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a screened porch cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A screened porch costs $25,000-$70,000+ depending on size, materials, and features. Basic 150 sqft starts at $25,000. Mid-range 250 sqft with composite floor and EZE-Breeze: $40k-$55k. Premium 300+ sqft with fireplace: $60k-$80k+." } },
-    { "@type": "Question", name: "Is a screened porch worth the investment?", acceptedAnswer: { "@type": "Answer", text: "Yes. Screened porches recoup 70-85% at resale and extend usable outdoor season from 5 months to 9-10 months." } },
+    { "@type": "Question", name: "How much does a screened porch cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A screened porch is priced in a written estimate depending on size, materials, and features. Basic 150 sqft starts at a written estimate. Mid-range 250 sqft with composite floor and EZE-Breeze: a written estimate. Premium 300+ sqft with fireplace: a written estimate." } },
+    { "@type": "Question", name: "Is a screened porch worth the investment?", acceptedAnswer: { "@type": "Answer", text: "Yes. Screened porches recoup not a fixed percentage at resale and extend usable outdoor season from 5 months to 9-10 months." } },
     { "@type": "Question", name: "Can you add a screened porch to an existing deck?", acceptedAnswer: { "@type": "Answer", text: "In many cases yes if the existing framing and footings support the added weight. We inspect the structure before quoting." } },
   ],
 };
@@ -32,7 +32,7 @@ export default function ScreenedPorchCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/screened-porch-cost-northern-virginia" name="2026 Screened Porch Cost NoVA | Pricing Scenarios" description="Screened porches in Northern Virginia cost $25,000-$70,000+. See 2026 price tables, EZE-Breeze costs, and planning scenarios before requesting an itemized quote." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/screened-porch-cost-northern-virginia" name="2026 Screened Porch Cost NoVA | Pricing Scenarios" description="Screened porches in Northern Virginia are priced in a written estimate. See 2026 price tables, EZE-Breeze costs, and planning scenarios before requesting an itemized quote." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -45,7 +45,7 @@ export default function ScreenedPorchCostPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} data-speakable="true">
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p data-speakable>A screened porch in Northern Virginia costs <strong>$25,000–$70,000+</strong>. Basic 150 sqft: $25k. Mid-range 250 sqft with EZE-Breeze: $40k–$55k. Premium 300+ sqft with fireplace: $60k–$80k+.</p>
+          <p data-speakable>A screened porch in Northern Virginia costs <strong>a written estimate</strong>. Basic 150 sqft: a written estimate. Mid-range 250 sqft with EZE-Breeze: a written estimate. Premium 300+ sqft with fireplace: a written estimate.</p>
         </div>
       </section>
 
@@ -78,9 +78,9 @@ export default function ScreenedPorchCostPage() {
               </thead>
               <tbody>
                 {[
-                  ['150 sqft (10×15)', '$25k–$30k', '$30k–$40k', '$40k–$50k'],
-                  ['250 sqft (12×20)', '$35k–$45k', '$45k–$55k', '$55k–$70k'],
-                  ['400+ sqft (16×25+)', '$50k–$60k', '$60k–$75k', '$75k–$100k+'],
+                  ['150 sqft (10×15)', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['250 sqft (12×20)', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['400+ sqft (16×25+)', 'a written estimate', 'a written estimate', 'a written estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 2 ? 600 : 400, color: j === 2 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>)}
@@ -104,11 +104,11 @@ export default function ScreenedPorchCostPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Feature', 'Open Deck (250 sqft)', 'Screened Porch (250 sqft)'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Cost', '$18k–$35k', '$35k–$55k'],
+                  ['Cost', 'a written estimate', 'a written estimate'],
                   ['Usable months/year', '5–6', '9–10'],
                   ['Bug protection', 'None', 'Full'],
                   ['Rain use', 'No', 'Yes (with roof)'],
-                  ['Resale ROI', '60–75%', '70–85%'],
+                  ['Resale ROI', '60–75%', 'not a fixed percentage'],
                   ['Best for', 'Grilling, sunbathing', 'Dining, entertaining'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
@@ -125,9 +125,9 @@ export default function ScreenedPorchCostPage() {
             These examples are planning scenarios, not published client case studies. Final pricing should be confirmed after site access, structural support, electrical scope, county permit requirements, HOA review, and material selections are reviewed.
           </p>
           {[
-            { price: '$34,000', desc: '180 sqft screened porch planning scenario', detail: 'Composite floor, EZE-Breeze-style window package, beadboard-style ceiling finish, two ceiling fans, and standard permit coordination.' },
-            { price: '$52,000', desc: '280 sqft porch plus open deck planning scenario', detail: 'Trex Transcend-level flooring, retractable screen package, finished ceiling, electric heater allowance, TV blocking/wiring allowance, and an attached open deck zone.' },
-            { price: '$68,000', desc: '350 sqft premium porch planning scenario', detail: 'Premium PVC or capped-composite floor, larger screen/window openings, fireplace or heater allowance, upgraded lighting, stained ceiling finish, and custom trim details.' },
+            { price: 'a written estimate', desc: '180 sqft screened porch planning scenario', detail: 'Composite floor, EZE-Breeze-style window package, beadboard-style ceiling finish, two ceiling fans, and standard permit coordination.' },
+            { price: 'a written estimate', desc: '280 sqft porch plus open deck planning scenario', detail: 'Trex Transcend-level flooring, retractable screen package, finished ceiling, electric heater allowance, TV blocking/wiring allowance, and an attached open deck zone.' },
+            { price: 'a written estimate', desc: '350 sqft premium porch planning scenario', detail: 'Premium PVC or capped-composite floor, larger screen/window openings, fireplace or heater allowance, upgraded lighting, stained ceiling finish, and custom trim details.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} {p.desc}</h3>
@@ -137,8 +137,8 @@ export default function ScreenedPorchCostPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "How much does a screened porch cost in Northern Virginia?", a: "$25,000-$70,000+ depending on size, materials, and features." },
-            { q: "Is a screened porch worth it?", a: "Yes 70-85% ROI at resale and extends outdoor season from 5 to 9-10 months." },
+            { q: "How much does a screened porch cost in Northern Virginia?", a: "a written estimate depending on size, materials, and features." },
+            { q: "Is a screened porch worth it?", a: "Yes not a fixed percentage ROI at resale and extends outdoor season from 5 to 9-10 months." },
             { q: "Can you add screens to an existing deck?", a: "Often yes, if the framing supports the added weight. We inspect before quoting." },
             { q: "What are EZE-Breeze windows?", a: "Vinyl panels that convert a screened porch into a 3-season room. Slide up for airflow, close for wind/rain protection. Our most-requested upgrade." },
           ].map((faq, i) => (

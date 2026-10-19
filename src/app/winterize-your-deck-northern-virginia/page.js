@@ -79,7 +79,7 @@ export default function WinterizeDeckPage() {
           </ol>
 
           <h2 style={S.h2}>Winter Do&apos;s and Don&apos;ts</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             <div style={{ background: '#e8f5e9', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, color: '#2e7d32', marginBottom: '0.75rem' }}>DO</h3>
               <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem' }}>

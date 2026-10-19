@@ -39,7 +39,7 @@ const fairfaxFAQs = [
   },
   {
     q: "What's the typical cost for a composite deck in Fairfax?",
-    a: "Most Fairfax composite deck builds land between $25,000 and $50,000 for a 350 to 500 sqft footprint. Trex Enhance Naturals projects start near the bottom of that range, and TimberTech AZEK Vintage with cable rail and integrated lighting commonly runs to the top end."
+    a: "Most Fairfax composite deck builds land between a written estimate and a written estimate for a 350 to 500 sqft footprint. Trex Enhance Naturals projects start near the bottom of that range, and TimberTech AZEK Vintage with cable rail and integrated lighting commonly runs to the top end."
   },
   {
     q: "Do you replace old wood decks in Fairfax's 1950s-70s neighborhoods?",
@@ -64,12 +64,12 @@ const fairfaxFaqSchema = {
 };
 
 const fairfaxServices = [
-  { title: 'New Composite Decks', range: 'From $25k', link: '/services/new-decks' },
-  { title: 'Deck Resurfacing', range: 'From $15k', link: '/services/deck-resurfacing' },
-  { title: 'Screened Porches', range: 'From $28k', link: '/services/porches' },
-  { title: 'Pergolas & Gazebos', range: 'From $10k', link: '/services/gazebo-pergola' },
-  { title: 'Paver Patios', range: 'From $10k', link: '/services/patios' },
-  { title: 'Privacy Fencing', range: 'From $5k', link: '/services/fence' },
+  { title: 'New Composite Decks', range: 'From a written estimate', link: '/services/new-decks' },
+  { title: 'Deck Resurfacing', range: 'From a written estimate', link: '/services/deck-resurfacing' },
+  { title: 'Screened Porches', range: 'From a written estimate', link: '/services/porches' },
+  { title: 'Pergolas & Gazebos', range: 'From a written estimate', link: '/services/gazebo-pergola' },
+  { title: 'Paver Patios', range: 'From a written estimate', link: '/services/patios' },
+  { title: 'Privacy Fencing', range: 'From a written estimate', link: '/services/fence' },
 ];
 
 const fairfaxNeighborhoods = [
@@ -86,7 +86,7 @@ export default function FairfaxDeckBuilderPage() {
     <main>
       <JsonLd data={fairfaxFaqSchema} />
       <LocalBusinessSchema city="Fairfax" url="https://ldndecks.com/deck-builder-fairfax-va" />
-      <WebPageSchema dateModified="2026-09-14" url={`https://ldndecks.com${PATH}`} name="Fairfax VA Deck Builder | Class A Contractor | Loudoun Decks" description="Fairfax VA deck builder for composite decks, replacements, repairs, and screened porches with City of Fairfax and Fairfax County permit planning." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Fairfax VA Deck Builder | Class A Contractor | Loudoun Decks" description="Fairfax VA deck builder for composite decks, replacements, repairs, and screened porches with City of Fairfax and Fairfax County permit planning." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -110,7 +110,7 @@ export default function FairfaxDeckBuilderPage() {
 
           <div style={{ borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
-            <p style={{ margin: 0, lineHeight: 1.65 }} data-speakable>A custom composite deck in Fairfax, VA typically costs $25,000 to $50,000 installed. Fairfax County permits run 3 to 5 weeks; City of Fairfax 2 to 3 weeks. Loudoun Decks is a Virginia Class A licensed deck contractor in Fairfax, Trex, TimberTech and AZEK material planning, with permit packages prepared for both jurisdictions.</p>
+            <p style={{ margin: 0, lineHeight: 1.65 }} data-speakable>A custom composite deck in Fairfax, VA typically is priced in a written estimate installed. Fairfax County permits run 3 to 5 weeks; City of Fairfax 2 to 3 weeks. Loudoun Decks is a Virginia Class A licensed deck contractor in Fairfax, Trex, TimberTech and AZEK material planning, with permit packages prepared for both jurisdictions.</p>
           </div>
 
           <NamedAuthor context="Fairfax County and the City of Fairfax" />
@@ -187,12 +187,12 @@ export default function FairfaxDeckBuilderPage() {
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>For Country Club Hills and Fairfax Station projects where homeowners want the absolute top of the market, we install TimberTech AZEK Vintage. The PVC core is highly moisture resistant, the grain has one of the strongest wood-look profiles in the category, and manufacturer warranty terms are documented before material selection. Every Trex and TimberTech deck we build in Fairfax ships with hidden fasteners on every board, butyl-tape ledger flashing, and stainless connectors at every load-critical joint. That's the install standard, not an upcharge.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Deck Repair, Replacement and Resurfacing in Fairfax, VA</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Deck repair in Fairfax, VA ranges from replacing individual boards and tightening loose ledger bolts to full structural rebuilds on aging pressure-treated decks. If a board is soft, a post has visible rot, or the deck feels bouncy underfoot, we start with a structural assessment before recommending repair vs. replacement. Partial repairs on structurally sound decks typically run $1,500 to $6,000; full structural replacements run $30,000 to $45,000. We give you the inspection photos so you can see exactly what needs attention before signing anything.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Deck repair in Fairfax, VA ranges from replacing individual boards and tightening loose ledger bolts to full structural rebuilds on aging pressure-treated decks. If a board is soft, a post has visible rot, or the deck feels bouncy underfoot, we start with a structural assessment before recommending repair vs. replacement. Partial repairs on structurally sound decks typically are priced in a written estimate; full structural replacements are priced in a written estimate. We give you the inspection photos so you can see exactly what needs attention before signing anything.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The single most common call we get in Fairfax is some version of "my deck is 25 years old and the boards are splintering." That conversation almost always leads to a structural inspection, because at the 20-plus year mark the surface boards are usually telling you the framing has problems too. Bolted ledgers from the 90s frequently lack proper flashing and have water-damaged the rim joist behind them. Footings that met code in 1998 often don't meet current Fairfax County depth requirements.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>If the framing is sound, footings are intact and the ledger detail is safe, we resurface. A Trex Transcend resurface on a 380 sqft Mantua deck typically runs $16,000 to $24,000 and gives you a full new deck experience for two-thirds the cost of teardown. If the framing is past it, we tear down and rebuild from new footings. Full structural replacement on a typical Fairfax project runs $30,000 to $45,000 depending on size, board selection, and railing system. We send photos and a written structural assessment with every quote so you can see what we saw.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>If the framing is sound, footings are intact and the ledger detail is safe, we resurface. A Trex Transcend resurface on a 380 sqft Mantua deck typically is priced in a written estimate and gives you a full new deck experience for two-thirds the cost of teardown. If the framing is past it, we tear down and rebuild from new footings. Full structural replacement on a typical Fairfax project is priced in a written estimate depending on size, board selection, and railing system. We send photos and a written structural assessment with every quote so you can see what we saw.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Outdoor Living Services in Fairfax</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {fairfaxServices.map((item) => (
               <Link key={item.title} href={item.link} style={{ display: 'block', background: '#f9f9f9', borderRadius: 8, padding: '1.1rem', textDecoration: 'none', color: 'inherit', border: '1px solid #ececec' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.35rem', fontSize: '1rem' }}>{item.title}</h3>

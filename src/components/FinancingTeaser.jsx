@@ -39,9 +39,7 @@ export default function FinancingTeaser() {
             Financing available — build now, pay monthly
           </h2>
           <p className={styles.lede}>
-            Most Northern Virginia composite-deck projects fit a comfortable monthly payment.
-            Move the slider to see what a typical 10-year term looks like, then check your real rate
-            in 60 seconds with a soft credit pull.
+            Move the slider to illustrate a 10-year payment at about 9% APR. The amount is your input, not a Loudoun Decks price. The lender sets the actual rate, term, and payment.
           </p>
         </div>
 
@@ -80,7 +78,7 @@ export default function FinancingTeaser() {
 
           <div className={styles.resultRow}>
             <div className={styles.resultBlock}>
-              <span className={styles.resultLabel}>As low as</span>
+              <span className={styles.resultLabel}>Illustrated payment</span>
               <span className={styles.resultValue}>
                 {formatUSD(Math.round(monthly))}
                 <span className={styles.resultUnit}>/mo</span>

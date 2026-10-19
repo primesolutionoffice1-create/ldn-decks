@@ -15,7 +15,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/covered-deck-cost-northern-virginia',
   title: 'Covered Deck Cost in Northern Virginia: 2026 Budget Guide',
-  description: 'Covered deck cost in Northern Virginia: $35,000–$85,000+ depending on roof type, size, and finishes. Per-tier pricing plus monthly payment examples.',
+  description: 'Covered deck cost in Northern Virginia: a written estimate depending on roof type, size, and finishes. Per-tier pricing plus monthly payment examples.',
   image: '/social/covered-deck-cost-northern-virginia-social.png',
 });
 
@@ -25,44 +25,44 @@ const roofTypes = [
   {
     name: 'Open Pergola',
     desc: 'Slatted roof — shade and architecture, no full weather protection',
-    range: '$8,000–$18,000 add-on',
+    range: 'a written estimate add-on',
     notes: 'Often added to an existing deck or as part of a new build',
   },
   {
     name: 'Solid Pergola (Louvered or Shingle)',
     desc: 'Full overhead protection with louvered (adjustable) or fixed shingle roof',
-    range: '$15,000–$35,000 add-on',
+    range: 'a written estimate add-on',
     notes: 'Best balance of weather coverage and architectural appeal',
   },
   {
     name: 'Covered Deck (Hip or Gable Roof)',
     desc: 'Full pitched roof matching the house — feels like an extension of the home',
-    range: '$25,000–$55,000 add-on',
+    range: 'a written estimate add-on',
     notes: 'Premium choice — adds the most resale value and weather coverage',
   },
   {
     name: 'Screened Porch Conversion',
     desc: 'Covered deck enclosed with screens and optional EZE-Breeze windows',
-    range: '$15,000–$45,000 above the cover',
+    range: 'a written estimate above the cover',
     notes: 'Extends usable season from 5 months to 9–10 months',
   },
 ];
 
 const totals = [
-  ['300 sqft covered deck (mid composite + solid pergola)', '$35,000–$50,000', '$443–$633 /mo (10y)'],
-  ['400 sqft covered deck (mid composite + hip roof)', '$48,000–$68,000', '$608–$861 /mo (10y)'],
-  ['500 sqft covered deck (premium composite + hip roof)', '$60,000–$85,000+', '$759–$1,076 /mo (10y)'],
-  ['350 sqft covered deck + screened porch conversion', '$55,000–$75,000', '$696–$949 /mo (10y)'],
+  ['300 sqft covered deck (mid composite + solid pergola)', 'a written estimate', 'a lender-calculated payment (10y)'],
+  ['400 sqft covered deck (mid composite + hip roof)', 'a written estimate', 'a lender-calculated payment (10y)'],
+  ['500 sqft covered deck (premium composite + hip roof)', 'a written estimate', 'a lender-calculated payment (10y)'],
+  ['350 sqft covered deck + screened porch conversion', 'a written estimate', 'a lender-calculated payment (10y)'],
 ];
 
 const faqs = [
   {
     q: 'How much does a covered deck cost in Northern Virginia?',
-    a: 'A covered deck in Northern Virginia typically runs $35,000–$85,000+ depending on size, roof type, and finish level. The roof structure adds $15,000–$55,000 to a comparable open deck. Solid pergolas land in the middle; full pitched roofs are the premium option.',
+    a: 'A covered deck in Northern Virginia typically is priced in a written estimate depending on size, roof type, and finish level. The roof structure adds a written estimate to a comparable open deck. Solid pergolas land in the middle; full pitched roofs are the premium option.',
   },
   {
-    q: 'What is the monthly payment on a $55,000 covered deck?',
-    a: 'At a sample 8.99% APR, a $55,000 covered deck financed over 10 years is roughly $696/month and roughly $558/month over 15 years. Many homeowners model 15-year terms on covered decks because the project amount is higher.',
+    q: 'What is the monthly payment on a a written estimate covered deck?',
+    a: 'At a sample 8.99% APR, a a written estimate covered deck financed over 10 years is roughly a lender-calculated paymentnth and roughly a lender-calculated paymentnth over 15 years. Many homeowners model 15-year terms on covered decks because the project amount is higher.',
   },
   {
     q: "What's the difference between a pergola, covered deck, and screened porch?",
@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: 'Does a covered deck add more home value than an open deck?',
-    a: 'Generally yes. A covered deck adds roughly 70–85% of its cost to home resale value vs 65–80% for an open deck, because it functions as a true outdoor room. Screened porches recoup at the high end of that range in Northern Virginia.',
+    a: 'Generally yes. A covered deck adds roughly not a fixed percentage of its cost to home resale value vs not a fixed percentage for an open deck, because it functions as a true outdoor room. Screened porches recoup at the high end of that range in Northern Virginia.',
   },
   {
     q: 'Can I add a cover to my existing deck?',
@@ -109,13 +109,13 @@ export default function CoveredDeckCostPage() {
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="Covered Deck Cost in Northern Virginia: 2026 Budget Guide"
-        description="Covered deck cost in Northern Virginia: $35,000–$85,000+ depending on roof type, size, and finishes."
+        description="Covered deck cost in Northern Virginia: a written estimate depending on roof type, size, and finishes."
         path={PATH}
         image="/showcase/img16.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Covered Deck Cost in Northern Virginia: 2026 Budget Guide" description="Covered deck cost in Northern Virginia: $35,000–$85,000+ depending on roof type, size, and finishes. Per-tier pricing plus monthly payment examples." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Covered Deck Cost in Northern Virginia: 2026 Budget Guide" description="Covered deck cost in Northern Virginia: a written estimate depending on roof type, size, and finishes. Per-tier pricing plus monthly payment examples." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -144,9 +144,9 @@ export default function CoveredDeckCostPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            A <strong>covered deck</strong> in Northern Virginia runs <strong>$35,000–$85,000+</strong> depending on
-            size, roof type, and finish. The roof adds $15,000–$55,000 over a comparable open deck. At 8.99% APR over
-            10 years, that&apos;s roughly <strong>$443–$1,076/month</strong>. Run your project amount through the{' '}
+            A <strong>covered deck</strong> in Northern Virginia runs <strong>a written estimate</strong> depending on
+            size, roof type, and finish. The roof adds a written estimate over a comparable open deck. At 8.99% APR over
+            10 years, that&apos;s roughly <strong>a lender-calculated paymentnth</strong>. Run your project amount through the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
             </Link>{' '}
@@ -215,7 +215,7 @@ export default function CoveredDeckCostPage() {
           <p style={S.p}>
             A covered deck is treated as a roofed structure by Loudoun, Fairfax, and Prince William county building
             departments. Load calculations include snow load, wind load, and post-to-beam capacity at the cover
-            connection points. Structural drawings are often required, which adds $500–$1,500 in engineering cost. We
+            connection points. Structural drawings are often required, which adds a written estimate in engineering cost. We
             coordinate the structural review and handle the permit submission.
           </p>
 
@@ -283,7 +283,7 @@ export default function CoveredDeckCostPage() {
       </article>
 
       <SimpleCTA title="Plan a Covered Deck Budget" buttonText="Get Free Written Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

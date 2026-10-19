@@ -133,7 +133,7 @@ export default function HOADeckRulesPage() {
           <p style={{ ...S.p, fontWeight: 600 }}>We check compliance before submitting so the package is aligned with the HOA&apos;s written requirements and preventable revisions are reduced.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>HOA Communities We Help Plan Around</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
             {(() => {
               // Communities with dedicated HOA-rules pages get linked; the rest render as plain text.
               const HOA_PAGE = {
@@ -171,7 +171,7 @@ export default function HOADeckRulesPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Fairfax HOA Planning by Project Type</h2>
           <p style={S.p}>Fairfax County deck projects often need the HOA packet, county permit drawings, and structural details to agree before submission. Use the paths below to match the approval strategy to the property type and avoid serial review delays.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               {
                 title: 'Estate and golf-course decks',

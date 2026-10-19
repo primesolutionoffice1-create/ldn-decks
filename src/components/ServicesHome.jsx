@@ -16,7 +16,7 @@ const servicesData = [
   {
     id: 2,
     title: 'Deck Resurfacing',
-    description: 'Premium wood-to-composite resurfacing for structurally sound frames. Full surface conversions start from $15k with boards, railings, fascia, and safety review.',
+    description: 'Wood-to-composite resurfacing for frames that pass inspection. The written estimate lists boards, railings, fascia, and what stays in the existing structure.',
     image: '/showcase/img04.jpg',
     link: '/services/deck-resurfacing'
   },

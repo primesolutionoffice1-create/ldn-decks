@@ -81,7 +81,7 @@ const whyLdnDecks = [
 const faqs = [
   {
     q: "How much do Trex railings cost in Northern Virginia?",
-    a: "Trex railing installation in Loudoun County and Fairfax County typically ranges from $150 to $250 per linear foot installed, including labor. A standard 40-linear-foot deck railing project with cocktail top averages $6,000–$10,000 depending on the Trex system (Transcend vs. Select) and infill style chosen."
+    a: "Trex railing installation in Loudoun County and Fairfax County typically ranges from a written estimate to a written estimate per linear foot installed, including labor. A standard 40-linear-foot deck railing project with cocktail top averages a written estimate depending on the Trex system (Transcend vs. Select) and infill style chosen."
   },
   {
     q: "What is the difference between cable, composite, and aluminum railings?",
@@ -108,7 +108,7 @@ const faqs = [
 export default function TrexRailingsPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/trex-railings" name="Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades" description="Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/trex-railings" name="Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades" description="Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish." speakable />
       <ServiceSchema
         name="Trex Railing Installation"
         description="Trex composite and aluminum railing systems for Northern Virginia decks. Signature, Select, and Transcend rail lines."
@@ -124,7 +124,7 @@ export default function TrexRailingsPage() {
         description="Upgrade your deck with modern Trex railing systems and a custom cocktail top - perfect for entertaining, relaxing, and adding a premium finish to your outdoor space."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
       </section>
       <ServiceMain
         subtitle="More Than Just a Railing"
@@ -148,7 +148,7 @@ export default function TrexRailingsPage() {
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From standard railings to a premium entertaining space.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
             <Image src="/showcase/img06.jpg" alt="Before Trex railing upgrade — aged wood railing on a Northern Virginia composite deck" fill style={{ objectFit: 'cover' }} />
           </div>

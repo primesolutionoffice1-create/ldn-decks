@@ -226,7 +226,7 @@ export default async function SingleBlogPage({ params }) {
       "acceptedAnswer": {
         "@type": "Answer",
         // Strip basic markdown out of the answer text for the schema payload
-        "text": item.a.replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
+        "text": item.a.replace(/\*\*([^*]+)\*\*/g, 'a written estimate').replace(/\[([^\]]+)\]\([^)]+\)/g, 'a written estimate'),
       },
     })),
   } : null;

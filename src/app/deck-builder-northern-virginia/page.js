@@ -105,7 +105,7 @@ const expansionSections = [
   {
     title: 'What a Northern Virginia deck project costs',
     paragraphs: [
-      'Deck pricing in Northern Virginia varies by size, materials, elevation and site conditions. Most homeowners invest between $18,000 and $65,000 for a professionally built composite deck. A straightforward 300 sq ft Trex Enhance deck starts around $18,000–$24,000, a mid-range 400–500 sq ft Trex Transcend build lands in the $28,000–$45,000 range, and larger multi-level projects or outdoor living packages with screened porches, pergolas and lighting can reach $55,000–$90,000+.',
+      'Deck pricing in Northern Virginia varies by size, materials, elevation and site conditions. Most homeowners invest between a written estimate and a written estimate for a professionally built composite deck. A straightforward 300 sq ft Trex Enhance deck starts around a written estimate, a mid-range 400–500 sq ft Trex Transcend build lands in the a written estimate range, and larger multi-level projects or outdoor living packages with screened porches, pergolas and lighting can reach a written estimate.',
       'We publish transparent [cost data for Northern Virginia decks](/composite-deck-cost-northern-virginia), a [composite deck cost breakdown](/composite-deck-cost-northern-virginia) and a [monthly payment estimator](/deck-payment-estimator) so you can plan before the first conversation. Every written estimate from Loudoun Decks includes materials, labor, permits, inspections and cleanup — no surprise line items.',
     ],
   },
@@ -148,7 +148,7 @@ function ServiceLinkGrid() {
         <p style={{ color: '#555', lineHeight: 1.7, maxWidth: 760, marginBottom: '1.5rem' }}>
           Use these local pages when you want city-specific examples, permit notes and neighborhood context.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.75rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '0.75rem' }}>
           {links.map(([href, label]) => (
             <Link
               key={href}
@@ -167,7 +167,7 @@ function ServiceLinkGrid() {
             </Link>
           ))}
         </div>
-        <div style={{ marginTop: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+        <div style={{ marginTop: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '0.75rem' }}>
           {[
             ['/near-you/loudoun-county', 'Loudoun County planning hub'],
             ['/near-you/fairfax-county', 'Fairfax County planning hub'],
@@ -213,7 +213,7 @@ function ProjectProcessSection() {
         <p style={{ color: '#d6d6d6', lineHeight: 1.7, maxWidth: 760, marginBottom: '2rem' }}>
           The process is designed to remove uncertainty before materials arrive: scope first, approvals second, construction third.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem' }}>
           {steps.map(([number, title, desc]) => (
             <div key={number} style={{ border: '1px solid rgba(255,255,255,0.16)', borderRadius: 8, padding: '1.25rem', background: 'rgba(255,255,255,0.04)' }}>
               <p style={{ color: 'var(--color-primary)', fontSize: '0.8rem', fontWeight: 800, marginBottom: '0.75rem' }}>{number}</p>
@@ -258,7 +258,7 @@ export default function DeckBuilderNorthernVirginiaPage() {
   return (
     <main>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-northern-virginia" name="Custom Deck Builder in Northern Virginia" description="Custom deck builder in Northern Virginia for composite, PVC, wood, replacement, permits and HOA approvals. Serving Loudoun, Fairfax and Prince William." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-northern-virginia" name="Custom Deck Builder in Northern Virginia" description="Custom deck builder in Northern Virginia for composite, PVC, wood, replacement, permits and HOA approvals. Serving Loudoun, Fairfax and Prince William." speakable />
       <ServiceSchema
         url="https://ldndecks.com/deck-builder-northern-virginia"
         name="Custom Deck Builder in Northern Virginia"
@@ -341,7 +341,7 @@ export default function DeckBuilderNorthernVirginiaPage() {
         ]}
       />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       </div>
       <ServiceInclusions
         title="What Homeowners Get With Loudoun Decks"

@@ -32,7 +32,7 @@ export default function CertificationsPage() {
 
   return (
     <>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/about/certifications-and-licenses" name="Certifications &amp; Licenses | Loudoun Decks | Verified Contractor" description="Loudoun Decks: Virginia Class A Licensed, fully insured, Trex profile-verifiable, NADRA member, BBB accredited. Verify our credentials. Serving Loudoun, Fairfax &amp; Prince William." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/about/certifications-and-licenses" name="Certifications &amp; Licenses | Loudoun Decks | Verified Contractor" description="Loudoun Decks: Virginia Class A Licensed, fully insured, Trex profile-verifiable, NADRA member, BBB accredited. Verify our credentials. Serving Loudoun, Fairfax &amp; Prince William." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Certifications &amp; Licenses</h1>
@@ -42,7 +42,7 @@ export default function CertificationsPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
             {credentialCards.map((item) => (
               <div key={item.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', border: '1px solid #e5e5e5' }}>
                 <p style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-primary)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{item.badge}</p>
@@ -61,7 +61,7 @@ export default function CertificationsPage() {
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Credentials Matter</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Virginia law requires any contractor performing work over $1,000 to hold a valid DPOR license. Unlicensed contractors leave you with:</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Virginia law requires any contractor performing work over a written estimate to hold a valid DPOR license. Unlicensed contractors leave you with:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>No legal recourse if work is defective</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Personal liability if a worker is injured on your property (no workers&apos; comp)</li>
@@ -72,7 +72,7 @@ export default function CertificationsPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Service Area</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Licensed and insured to operate across Northern Virginia:</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               { county: 'Loudoun County', cities: 'Ashburn, Leesburg, Sterling, Brambleton, South Riding, Broadlands, Purcellville, Aldie, Middleburg' },
               { county: 'Fairfax County', cities: 'McLean, Vienna, Reston, Great Falls, Herndon, Fairfax, Centreville, Chantilly, Oakton, Tysons, Falls Church' },
@@ -111,7 +111,7 @@ export default function CertificationsPage() {
         </div>
       </article>
       <SimpleCTA title="Verified, Licensed, Insured — Get Your Free Estimate" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <ContactHome />
     </>

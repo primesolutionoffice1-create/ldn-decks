@@ -22,24 +22,24 @@ export const metadata = buildMetadata({
 const PATH = '/wood-vs-composite-deck-long-term-cost';
 
 const fifteenYear = [
-  { item: 'Upfront cost (350 sqft)', wood: '$10,500–$16,000', composite: '$22,000–$32,000', diff: 'Composite +$12k–$16k' },
-  { item: 'Annual stain/seal (15 yrs)', wood: '$5,400–$10,500 ($360–$700/yr)', composite: '$0', diff: 'Composite saves $5.4k–$10.5k' },
-  { item: 'Sanding (every 5 yrs)', wood: '$1,500–$3,000', composite: '$0', diff: 'Composite saves $1.5k–$3k' },
-  { item: 'Board replacement (years 8–15)', wood: '$2,000–$5,000', composite: '$0–$500', diff: 'Composite saves $2k–$4.5k' },
-  { item: 'Cleaning (15 yrs)', wood: '$0–$750', composite: '$300–$750', diff: 'Roughly equal' },
-  { item: 'TOTAL 15-year cost', wood: '$19,400–$35,250', composite: '$22,300–$33,250', diff: 'Composite often equal or LESS' },
+  { item: 'Upfront cost (350 sqft)', wood: 'a written estimate', composite: 'a written estimate', diff: 'Composite priced in the written estimate' },
+  { item: 'Annual stain/seal (15 yrs)', wood: 'a written estimate (a written estimate/yr)', composite: 'a written estimate', diff: 'Composite saves a written estimate' },
+  { item: 'Sanding (every 5 yrs)', wood: 'a written estimate', composite: 'a written estimate', diff: 'Composite saves a written estimate' },
+  { item: 'Board replacement (years 8–15)', wood: 'a written estimate', composite: 'a written estimate', diff: 'Composite saves a written estimate' },
+  { item: 'Cleaning (15 yrs)', wood: 'a written estimate', composite: 'a written estimate', diff: 'Roughly equal' },
+  { item: 'TOTAL 15-year cost', wood: 'a written estimate', composite: 'a written estimate', diff: 'Composite often equal or LESS' },
   { item: 'Lifespan after 15 yrs', wood: 'Near end of life', composite: '10–35 years remaining', diff: 'Composite wins long-term' },
-  { item: 'Resale recoup', wood: '50–65%', composite: '65–80%', diff: 'Composite adds $5k–$10k+ at resale' },
+  { item: 'Resale recoup', wood: 'not a fixed percentage', composite: 'not a fixed percentage', diff: 'Composite adds a written estimate at resale' },
 ];
 
 const faqs = [
   {
     q: 'Is composite cheaper than wood over 15 years?',
-    a: 'Often yes. A 350 sqft pressure-treated wood deck costs $10,500–$16,000 upfront, but adds $7,000–$15,000+ in 15-year maintenance (stain, seal, sand, board replacement). A composite deck costs $22,000–$32,000 upfront and adds only $300–$1,250 in 15-year maintenance. Total 15-year cost often equal or favoring composite.',
+    a: 'Often yes. A 350 sqft pressure-treated wood deck is priced in a written estimate upfront, but adds a written estimate in 15-year maintenance (stain, seal, sand, board replacement). A composite deck is priced in a written estimate upfront and adds only a written estimate in 15-year maintenance. Total 15-year cost often equal or favoring composite.',
   },
   {
     q: 'How much does wood deck maintenance cost in Northern Virginia?',
-    a: 'Wood deck maintenance in Northern Virginia runs $360–$700 per year for stain/seal, plus $1,500–$3,000 every ~5 years for sanding, plus $2,000–$5,000 in board replacement between years 8–15. Total 15-year maintenance: $7,000–$15,000+ depending on size and exposure.',
+    a: 'Wood deck maintenance in Northern Virginia is priced in a written estimate per year for stain/seal, plus a written estimate every ~5 years for sanding, plus a written estimate in board replacement between years 8–15. Total 15-year maintenance: a written estimate depending on size and exposure.',
   },
   {
     q: 'How long does a wood deck last in Northern Virginia?',
@@ -51,11 +51,11 @@ const faqs = [
   },
   {
     q: 'Does composite add more home value than wood?',
-    a: 'Yes. Composite decks recoup 65–80% of cost at resale in Northern Virginia; wood decks recoup 50–65%. Homes with composite decks also tend to sell 3–5 days faster in the active NoVA market. A $30,000 composite deck typically adds $19,500–$24,000 to resale value.',
+    a: 'Yes. Composite decks recoup not a fixed percentage of cost at resale in Northern Virginia; wood decks recoup not a fixed percentage. Homes with composite decks also tend to sell 3–5 days faster in the active NoVA market. A a written estimate composite deck typically adds a written estimate to resale value.',
   },
   {
     q: 'Does the math change for short-term homeowners?',
-    a: 'Yes. If you\'re planning to sell within 5 years, the resale recoup difference (composite +$5k–$10k+) often justifies the higher upfront cost. Wood is hardest to justify in the 5–10 year horizon — high upfront annual maintenance starts to compound right when you might sell.',
+    a: 'Yes. If you\'re planning to sell within 5 years, the resale recoup difference (composite priced in the written estimate) often justifies the higher upfront cost. Wood is hardest to justify in the 5–10 year horizon — high upfront annual maintenance starts to compound right when you might sell.',
   },
 ];
 
@@ -90,9 +90,9 @@ export default function WoodVsCompositeLongTermPage() {
         path={PATH}
         image="/images/img16.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Wood vs Composite Deck Long-Term Cost: 15-Year Analysis" description="Wood vs composite deck long-term cost in Northern Virginia. 15-year total cost including maintenance, repairs, financing, and resale impact." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Wood vs Composite Deck Long-Term Cost: 15-Year Analysis" description="Wood vs composite deck long-term cost in Northern Virginia. 15-year total cost including maintenance, repairs, financing, and resale impact." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -121,9 +121,9 @@ export default function WoodVsCompositeLongTermPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            A 350 sqft <strong>wood deck</strong> costs $10.5k–$16k upfront but adds <strong>$7k–$15k+</strong> in
-            15-year stain, seal, sand, and board replacement. A <strong>composite deck</strong> costs $22k–$32k upfront
-            and adds only $300–$1,250 in 15-year maintenance. <strong>Total 15-year cost is often equal or favors
+            A 350 sqft <strong>wood deck</strong> is priced in a written estimate upfront but adds <strong>a written estimate</strong> in
+            15-year stain, seal, sand, and board replacement. A <strong>composite deck</strong> is priced in a written estimate upfront
+            and adds only a written estimate in 15-year maintenance. <strong>Total 15-year cost is often equal or favors
             composite</strong>, and composite typically lasts 10–35 more years after that.
           </p>
         </div>
@@ -181,18 +181,18 @@ export default function WoodVsCompositeLongTermPage() {
 
           <h2 style={S.h2}>Financing Math: Different Principal, Same APR</h2>
           <p style={S.p}>
-            A wood deck financed at $13,000 over 10 years at 8.99% APR is roughly $165/month. A composite deck financed
-            at $27,000 over the same terms is roughly $342/month. Composite costs $177/month more in financing — but
-            the wood deck adds $30–$60/month in maintenance not on the loan. Real cost gap is usually $100–$120/month,
-            not the $177 the loan suggests.
+            A wood deck financed at a written estimate over 10 years at 8.99% APR is roughly a lender-calculated paymentnth. A composite deck financed
+            at a written estimate over the same terms is roughly a lender-calculated paymentnth. Composite is priced in a lender-calculated paymentnth more in financing — but
+            the wood deck adds a lender-calculated paymentnth in maintenance not on the loan. Real cost gap is usually a lender-calculated paymentnth,
+            not the a written estimate the loan suggests.
           </p>
 
           <h2 style={S.h2}>Resale Value Impact in Northern Virginia</h2>
           <p style={S.p}>
             Buyers in Loudoun, Fairfax, and Prince William increasingly expect composite decks. Listings with wood
             decks (especially older wood decks) sit longer on the market and get lower offers on the deck component.
-            Composite typically recoups 65–80% of original cost at resale; wood recoups 50–65%. On a $25,000 deck, that
-            gap is $3,750–$5,000 at resale.
+            Composite typically recoups not a fixed percentage of original cost at resale; wood recoups not a fixed percentage. On a a written estimate deck, that
+            gap is a written estimate at resale.
           </p>
 
           <h2 style={S.h2}>When Wood Still Makes Sense</h2>
@@ -263,7 +263,7 @@ export default function WoodVsCompositeLongTermPage() {
       </article>
 
       <SimpleCTA title="Compare Lifetime Cost: Wood vs Composite" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

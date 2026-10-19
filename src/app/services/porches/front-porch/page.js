@@ -57,7 +57,7 @@ const expansionSections = [
     paragraphs: [
       "Front porch projects in Loudoun County, Fairfax County, and Prince William County require a building permit. This involves structural drawings, a site plan, and coordination with your county's building department. We coordinate this through permit-ready documentation, including all engineering documentation. Permit processing typically takes 3-6 weeks in Northern Virginia, after which construction begins.",
       "Construction timelines vary by project scope. A simple portico can be completed in 1-2 weeks. A full-width front porch with integrated roofline and full railing system typically takes 3-5 weeks. We coordinate all required inspections and do not consider a project complete until it has received its certificate of occupancy.",
-      "Front porch projects typically start at $20,000+ in Northern Virginia, depending on the scope, size, materials, and roofline complexity. Projects involving HOA-required materials, custom column styles, or wraparound configurations are priced at the higher end. We provide a detailed itemized estimate at your free on-site consultation with no obligation to proceed."
+      "Front porch projects typically start at a written estimate in Northern Virginia, depending on the scope, size, materials, and roofline complexity. Projects involving HOA-required materials, custom column styles, or wraparound configurations are priced at the higher end. We provide a detailed itemized estimate at your free on-site consultation with no obligation to proceed."
     ]
   },
   {
@@ -72,7 +72,7 @@ const expansionSections = [
 
 const faqs = [
   { q: "Do I need a permit to build a front porch in Northern Virginia?", a: "Yes. Any roofed structure attached to your home — including a front porch or portico — requires a building permit in Loudoun, Fairfax, and Prince William Counties. We coordinate permit-ready documentation and inspection planning including structural engineering, site plans, and inspection coordination." },
-  { q: "How much does a custom front porch cost in Northern Virginia?", a: "Front porch projects typically start at $20,000+ in Northern Virginia, depending on scope, size, materials, and roofline complexity. A simple portico over the front door costs less than a full wraparound porch. We provide a detailed itemized estimate at your free on-site consultation." },
+  { q: "How much does a custom front porch cost in Northern Virginia?", a: "Front porch projects typically start at a written estimate in Northern Virginia, depending on scope, size, materials, and roofline complexity. A simple portico over the front door costs less than a full wraparound porch. We provide a detailed itemized estimate at your free on-site consultation." },
   { q: "Does a front porch require HOA approval?", a: "In many Northern Virginia neighborhoods — Brambleton, Lansdowne, Ashburn Village, South Riding, and others — yes. HOA architectural review boards must approve exterior modifications. We prepare all submission documents and can design specifically to your HOA's material and color requirements." },
   { q: "How long does front porch construction take?", a: "A simple portico typically takes 1-2 weeks of construction after permit approval. A full-width front porch with integrated roofline typically takes 3-5 weeks. Permit processing in Northern Virginia typically takes 3-6 weeks before construction can begin." },
   { q: "What is the return on investment for a front porch?", a: "A well-designed front porch in the Northern Virginia market typically returns 65-85% of its cost at resale, while significantly reducing days on market. In neighborhoods where front porches are architecturally consistent, the return can be higher. The functional and lifestyle value while you live in the home is separate from the resale value." },
@@ -92,7 +92,7 @@ const faqSchema = {
 export default function FrontPorchPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/porches/front-porch" name="Front Porch Builder Northern Virginia | Custom Curb Appeal Upgrades" description="Custom front porches in Northern Virginia. Premium porticos, wraparound entries &amp; curb appeal upgrades in Loudoun &amp; Fairfax County. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/porches/front-porch" name="Front Porch Builder Northern Virginia | Custom Curb Appeal Upgrades" description="Custom front porches in Northern Virginia. Premium porticos, wraparound entries &amp; curb appeal upgrades in Loudoun &amp; Fairfax County. Free estimate." speakable />
       <ServiceSchema
         name="Front Porch Construction"
         description="Custom front porch design and construction in Northern Virginia. Enhance curb appeal with covered or open porches."
@@ -115,7 +115,7 @@ export default function FrontPorchPage() {
       {/* Pricing Anchor */}
       <section style={{ backgroundColor: '#f9f9f9', padding: '20px', borderBottom: '1px solid #eee', textAlign: 'center' }}>
         <p style={{ fontSize: '15px', color: '#555', margin: '0 auto', maxWidth: '800px' }}>
-          <strong style={{ color: '#222' }}>Front porch projects typically start at $20,000+</strong>
+          <strong style={{ color: '#222' }}>Front porch projects typically start at a written estimate</strong>
           {' '}— scope, size, HOA requirements, and roofline complexity affect final pricing.{' '}
           <strong>Free in-home estimate included.</strong>
         </p>

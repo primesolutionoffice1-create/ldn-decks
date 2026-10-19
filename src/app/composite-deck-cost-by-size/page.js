@@ -26,56 +26,56 @@ const sizes = [
     sqft: 300,
     label: '300 sqft (e.g. 15×20)',
     use: 'Standard family deck for a townhouse or smaller single-family yard.',
-    budget: '$16,500–$24,000',
-    mid: '$22,000–$32,000',
-    premium: '$28,000–$38,000+',
-    monthlyMid: '$278–$405 /mo (10y)',
+    budget: 'a written estimate',
+    mid: 'a written estimate',
+    premium: 'a written estimate',
+    monthlyMid: 'a lender-calculated payment (10y)',
   },
   {
     sqft: 400,
     label: '400 sqft (e.g. 20×20)',
     use: 'Mid-size deck with seating zone, grill area, and dining table.',
-    budget: '$20,000–$30,000',
-    mid: '$27,000–$38,000',
-    premium: '$34,000–$46,000+',
-    monthlyMid: '$342–$481 /mo (10y)',
+    budget: 'a written estimate',
+    mid: 'a written estimate',
+    premium: 'a written estimate',
+    monthlyMid: 'a lender-calculated payment (10y)',
   },
   {
     sqft: 500,
     label: '500 sqft (e.g. 25×20)',
     use: 'Large entertaining deck with multiple zones, pergola-ready.',
-    budget: '$24,000–$35,000',
-    mid: '$32,000–$45,000',
-    premium: '$40,000–$55,000+',
-    monthlyMid: '$405–$570 /mo (10y)',
+    budget: 'a written estimate',
+    mid: 'a written estimate',
+    premium: 'a written estimate',
+    monthlyMid: 'a lender-calculated payment (10y)',
   },
   {
     sqft: 600,
     label: '600 sqft (e.g. 20×30 or 24×25)',
     use: 'Premium outdoor living space — two zones, often two stair flights, room for built-ins.',
-    budget: '$28,000–$42,000',
-    mid: '$38,000–$55,000',
-    premium: '$48,000–$70,000+',
-    monthlyMid: '$481–$696 /mo (10y)',
+    budget: 'a written estimate',
+    mid: 'a written estimate',
+    premium: 'a written estimate',
+    monthlyMid: 'a lender-calculated payment (10y)',
   },
 ];
 
 const faqs = [
   {
     q: 'How much does a 300 sqft composite deck cost in Northern Virginia?',
-    a: 'A 300 sqft composite deck in Northern Virginia runs $16,500–$38,000+ depending on tier. Budget composite (Trex Enhance, Fiberon Good Life) lands $16,500–$24,000. Mid-tier (Trex Transcend, TimberTech PRO) runs $22,000–$32,000. Premium (Trex Signature, AZEK Vintage) runs $28,000–$38,000+.',
+    a: 'A 300 sqft composite deck in Northern Virginia is priced in a written estimate depending on tier. Budget composite (Trex Enhance, Fiberon Good Life) lands a written estimate. Mid-tier (Trex Transcend, TimberTech PRO) is priced in a written estimate. Premium (Trex Signature, AZEK Vintage) is priced in a written estimate.',
   },
   {
     q: 'How much does a 400 sqft composite deck cost?',
-    a: 'A 400 sqft composite deck in Northern Virginia typically runs $20,000–$46,000+. Pricing scales roughly linearly with size, but a 400 sqft deck often includes an extra stair flight, deeper joists, and more railing — which adds $2,000–$5,000 over a strict per-square-foot calculation.',
+    a: 'A 400 sqft composite deck in Northern Virginia typically is priced in a written estimate. Pricing scales roughly linearly with size, but a 400 sqft deck often includes an extra stair flight, deeper joists, and more railing — which adds a written estimate over a strict per-square-foot calculation.',
   },
   {
     q: 'What does a 500 sqft composite deck cost installed?',
-    a: 'A 500 sqft composite deck in Northern Virginia runs $24,000–$55,000+. At this size, picture-frame borders, multi-zone layouts, lighting packages, and railings become a larger share of the total cost. Most 500 sqft projects land in the mid-tier $32,000–$45,000 range.',
+    a: 'A 500 sqft composite deck in Northern Virginia is priced in a written estimate. At this size, picture-frame borders, multi-zone layouts, lighting packages, and railings become a larger share of the total cost. Most 500 sqft projects land in the mid-tier a written estimate range.',
   },
   {
     q: 'How much does a 600 sqft composite deck cost?',
-    a: 'A 600 sqft composite deck in Northern Virginia runs $28,000–$70,000+ installed. Decks this size almost always include two stair flights, a more complex framing plan, full railing system, and often built-in seating or planter benches that add to the project amount.',
+    a: 'A 600 sqft composite deck in Northern Virginia is priced in a written estimate installed. Decks this size almost always include two stair flights, a more complex framing plan, full railing system, and often built-in seating or planter benches that add to the project amount.',
   },
   {
     q: 'Does the cost scale linearly with size?',
@@ -122,9 +122,9 @@ export default function CompositeDeckCostBySizePage() {
         path={PATH}
         image="/showcase/img18.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples" description="Composite deck cost by size — 2026 planning pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia. Per-tier breakdown plus monthly payment." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples" description="Composite deck cost by size — 2026 planning pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia. Per-tier breakdown plus monthly payment." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -154,8 +154,8 @@ export default function CompositeDeckCostBySizePage() {
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
             In Northern Virginia, composite decks land in these ranges by size:{' '}
-            <strong>300 sqft $16.5k–$38k+</strong>, <strong>400 sqft $20k–$46k+</strong>,{' '}
-            <strong>500 sqft $24k–$55k+</strong>, <strong>600 sqft $28k–$70k+</strong>. The wide ranges reflect material
+            <strong>300 sqft a written estimate</strong>, <strong>400 sqft a written estimate</strong>,{' '}
+            <strong>500 sqft a written estimate</strong>, <strong>600 sqft a written estimate</strong>. The wide ranges reflect material
             tier (budget vs mid vs premium). Run your project amount through the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               payment estimator
@@ -193,7 +193,7 @@ export default function CompositeDeckCostBySizePage() {
                 <span style={{ fontWeight: 700, color: 'var(--color-primary)' }}>{s.monthlyMid}</span>
               </div>
               <p style={{ ...S.p, color: '#666', fontSize: '0.95rem', marginBottom: '0.75rem' }}>{s.use}</p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.5rem 1rem', fontSize: '0.9rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '0.5rem 1rem', fontSize: '0.9rem' }}>
                 <div><strong>Budget:</strong> {s.budget}</div>
                 <div><strong>Mid:</strong> {s.mid}</div>
                 <div><strong>Premium:</strong> {s.premium}</div>
@@ -209,11 +209,11 @@ export default function CompositeDeckCostBySizePage() {
             because permits, mobilization, and design overhead are roughly fixed regardless of size.
           </p>
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
-            <li><strong>Railings:</strong> $40–$150 per linear foot — bigger decks have proportionally more</li>
-            <li><strong>Stairs:</strong> $1,500–$4,000 per flight — bigger decks often need a second flight</li>
-            <li><strong>Lighting:</strong> $1,500–$5,000 — scales with deck perimeter, not surface area</li>
+            <li><strong>Railings:</strong> a written estimate per linear foot — bigger decks have proportionally more</li>
+            <li><strong>Stairs:</strong> a written estimate per flight — bigger decks often need a second flight</li>
+            <li><strong>Lighting:</strong> a written estimate — scales with deck perimeter, not surface area</li>
             <li><strong>Footings:</strong> One additional footing per ~100 sqft of new deck</li>
-            <li><strong>Permits:</strong> Roughly flat $300–$1,500 across all sizes</li>
+            <li><strong>Permits:</strong> Roughly flat a written estimate across all sizes</li>
           </ul>
 
           <h2 style={S.h2}>What Drives the Tier Choice</h2>
@@ -316,7 +316,7 @@ export default function CompositeDeckCostBySizePage() {
       </article>
 
       <SimpleCTA title="Get a Written Estimate by Deck Size" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

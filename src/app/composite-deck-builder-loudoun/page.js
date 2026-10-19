@@ -73,7 +73,7 @@ const projectExamples = [
 const faqItems = [
   {
     q: 'How much does a composite deck cost in Loudoun County?',
-    a: 'Most full composite deck projects in Loudoun County start around $15,000 and commonly fall between $25,000 and $50,000+, depending on size, height, stairs, railing type, lighting, demolition, and material line. Premium multi-level outdoor living projects can exceed that range.',
+    a: 'Most full composite deck projects in Loudoun County start around a written estimate and commonly fall between a written estimate and a written estimate, depending on size, height, stairs, railing type, lighting, demolition, and material line. Premium multi-level outdoor living projects can exceed that range.',
   },
   {
     q: 'Do I need a permit for a composite deck in Loudoun County?',
@@ -172,7 +172,7 @@ export default function CompositeDeckBuilderLoudounPage() {
   return (
     <main>
       {schema.map((item, index) => <JsonLd key={index} data={item} />)}
-      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/composite-deck-builder-loudoun" name="Composite Deck Builder Loudoun County, VA | Loudoun Decks" description="Premium composite deck builder in Loudoun County, VA. Trex and TimberTech decks, HOA support, permits, replacements, railings, stairs, and free estimates." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/composite-deck-builder-loudoun" name="Composite Deck Builder Loudoun County, VA | Loudoun Decks" description="Premium composite deck builder in Loudoun County, VA. Trex and TimberTech decks, HOA support, permits, replacements, railings, stairs, and free estimates." speakable />
       <ServiceSchema
         name="Composite Deck Building in Loudoun County"
         description="Custom composite and wood deck construction across Loudoun County — Ashburn, Leesburg, Sterling, Brambleton and beyond. Trex product-line planning."
@@ -198,7 +198,7 @@ export default function CompositeDeckBuilderLoudounPage() {
               <Link href="/get-estimate" style={S.button}>Schedule My Free Composite Deck Consultation</Link>
               <CallLink style={{ ...S.outlineButton, color: '#fff', borderColor: 'rgba(255,255,255,.55)' }}>Call (571) 655-7207</CallLink>
             </div>
-            <p style={{ color: '#cdbfb5', fontSize: 14, margin: 0 }}>For full deck builds, replacements, and premium outdoor living projects starting at $15,000+.</p>
+            <p style={{ color: '#cdbfb5', fontSize: 14, margin: 0 }}>For full deck builds, replacements, and premium outdoor living projects starting at a written estimate.</p>
           </div>
           <div style={{ position: 'relative', aspectRatio: '4 / 3', borderRadius: 8, overflow: 'hidden', boxShadow: '0 30px 70px rgba(0,0,0,.35)' }}>
             <Image src="/images/img13.jpeg" alt="Composite deck project by Loudoun Decks in Northern Virginia" fill priority sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
@@ -264,7 +264,7 @@ export default function CompositeDeckBuilderLoudounPage() {
             <h2 style={{ fontSize: 28, margin: '0 0 16px' }}>Project Fit</h2>
             <p style={{ ...S.p, fontSize: 16 }}>This page is for homeowners planning a full composite deck build, serious replacement, or outdoor living upgrade.</p>
             <ul style={{ margin: 0, paddingLeft: 20, color: '#333', lineHeight: 1.8 }}>
-              <li>Typical projects from $15,000+</li>
+              <li>Typical projects from a written estimate</li>
               <li>Trex and TimberTech/AZEK options</li>
               <li>Permit and HOA support included</li>
               <li>Written workmanship warranty terms provided with the project agreement</li>
@@ -382,9 +382,9 @@ export default function CompositeDeckBuilderLoudounPage() {
               </thead>
               <tbody>
                 {[
-                  ['Straightforward composite deck', '$15,000-$30,000+', 'Ground-level or modest raised deck with standard railing.'],
-                  ['Deck replacement with stairs/railings', '$25,000-$50,000+', 'Older wood deck removed and rebuilt with composite surfaces.'],
-                  ['Premium outdoor living deck', '$50,000-$75,000+', 'Larger layout, upgraded railing, lighting, privacy, pergola, or porch tie-in.'],
+                  ['Straightforward composite deck', 'a written estimate', 'Ground-level or modest raised deck with standard railing.'],
+                  ['Deck replacement with stairs/railings', 'a written estimate', 'Older wood deck removed and rebuilt with composite surfaces.'],
+                  ['Premium outdoor living deck', 'a written estimate', 'Larger layout, upgraded railing, lighting, privacy, pergola, or porch tie-in.'],
                 ].map((row) => (
                   <tr key={row[0]} style={{ borderTop: '1px solid #eee' }}>
                     {row.map((cell) => <td key={cell} style={{ padding: 18, color: '#333', lineHeight: 1.55 }}>{cell}</td>)}
@@ -429,7 +429,7 @@ export default function CompositeDeckBuilderLoudounPage() {
       </section>
 
       <RelatedGuides currentPath="/composite-deck-builder-loudoun" />
-      <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-10-18" />
 
       <ContactHome />
       <MobileStickyCTA microcopy="Trex + TimberTech decks | Loudoun permit planning support" />

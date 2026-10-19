@@ -11,15 +11,15 @@ import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/pressure-washing-deck-northern-virginia',
-  title: 'Deck Pressure Washing in Northern Virginia | $150-$500 | LDN Decks',
-  description: 'Pro deck pressure washing in Northern Virginia. $150-$500 for most decks. Removes mold, mildew, oxidation. Safe PSI for wood & composite.',
+  title: 'Deck Pressure Washing in Northern Virginia | a written estimate | LDN Decks',
+  description: 'Pro deck pressure washing in Northern Virginia. a written estimate for most decks. Removes mold, mildew, oxidation. Safe PSI for wood & composite.',
   image: '/social/pressure-washing-deck-northern-virginia-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does deck pressure washing cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck pressure washing costs $150-$500 in Northern Virginia depending on deck size. Small (under 200 sqft): $150-$250. Medium (200-400 sqft): $250-$400. Large (400+ sqft): $400-$500+. Includes prep, washing, and rinse." } },
+    { "@type": "Question", name: "How much does deck pressure washing cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck pressure washing is priced in a written estimate in Northern Virginia depending on deck size. Small (under 200 sqft): a written estimate. Medium (200-400 sqft): a written estimate. Large (400+ sqft): a written estimate. Includes prep, washing, and rinse." } },
     { "@type": "Question", name: "Can you pressure wash a composite deck?", acceptedAnswer: { "@type": "Answer", text: "Yes, but with caution. Composite decks should only be washed at 1,500 PSI max with a fan tip (40-degree). Higher pressure or direct nozzle can damage the cap surface. We recommend soft washing (low pressure + cleaning solution) for composite safer and equally effective." } },
     { "@type": "Question", name: "How often should I pressure wash my deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Wood decks: wash annually (spring recommended) before staining. Composite decks: wash once or twice yearly to remove pollen, mold from organic debris. Virginia's humidity makes annual washing important for both materials." } },
   ],
@@ -31,7 +31,7 @@ export default function PressureWashingDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/pressure-washing-deck-northern-virginia" name="Deck Pressure Washing in Northern Virginia | $150-$500 | LDN Decks" description="Pro deck pressure washing in Northern Virginia. $150-$500 for most decks. Removes mold, mildew, oxidation. Safe PSI for wood &amp; composite." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/pressure-washing-deck-northern-virginia" name="Deck Pressure Washing in Northern Virginia | a written estimate | LDN Decks" description="Pro deck pressure washing in Northern Virginia. a written estimate for most decks. Removes mold, mildew, oxidation. Safe PSI for wood &amp; composite." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Pressure Washing in Northern Virginia</h1>
@@ -41,7 +41,7 @@ export default function PressureWashingDeckPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Deck pressure washing: <strong>$150–$500</strong> for most decks. Removes mold, mildew, pollen, gray oxidation. Wood decks: 1,200-1,500 PSI max with fan tip. Composite: soft wash (low pressure + cleaner) recommended. Annual washing in Virginia&apos;s humid climate.</p>
+          <p>Deck pressure washing: <strong>a written estimate</strong> for most decks. Removes mold, mildew, pollen, gray oxidation. Wood decks: 1,200-1,500 PSI max with fan tip. Composite: soft wash (low pressure + cleaner) recommended. Annual washing in Virginia&apos;s humid climate.</p>
         </div>
       </section>
 
@@ -64,11 +64,11 @@ export default function PressureWashingDeckPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Deck Size', 'Wash Only', 'Wash + Brightener', 'Wash + Stain Prep'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Under 200 sqft', '$150–$250', '$200–$300', '$250–$350'],
-                  ['200–300 sqft', '$250–$350', '$300–$400', '$350–$500'],
-                  ['300–400 sqft', '$300–$400', '$350–$450', '$400–$550'],
-                  ['400–500 sqft', '$350–$450', '$400–$500', '$500–$650'],
-                  ['500+ sqft', '$400–$500+', '$500–$600+', '$600–$750+'],
+                  ['Under 200 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['200–300 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['300–400 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['400–500 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['500+ sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -80,7 +80,7 @@ export default function PressureWashingDeckPage() {
           <p style={{ fontSize: '0.85rem', color: '#888', fontStyle: 'italic' }}>Wash + Brightener recommended before staining. Wash + Stain Prep includes sanding rough spots.</p>
 
           <h2 style={S.h2}>Wood vs Composite Different Washing Approaches</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, marginBottom: '0.75rem' }}>Wood Deck Washing</h3>
               <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem' }}>
@@ -122,7 +122,7 @@ export default function PressureWashingDeckPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "Cost to pressure wash a deck?", a: "$150-$500 depending on size. Medium deck (200-400 sqft): $250-$400." },
+            { q: "Cost to pressure wash a deck?", a: "a written estimate depending on size. Medium deck (200-400 sqft): a written estimate." },
             { q: "Can you pressure wash composite?", a: "Yes soft wash preferred (low pressure + cleaner). Max 1,500 PSI with fan tip. Never zero-degree nozzle." },
             { q: "How often in Virginia?", a: "Wood: annually (spring before stain). Composite: 1-2x yearly. Virginia humidity makes annual washing important." },
           ].map((faq, i) => (
@@ -146,7 +146,7 @@ export default function PressureWashingDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Book Your Deck Washing" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/pressure-washing-deck-northern-virginia" />
 

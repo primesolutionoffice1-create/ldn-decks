@@ -77,7 +77,7 @@ export default function ShowcasePage() {
             For resurfacing or elevated work, the estimate should also separate structural requirements vs optional
             finish upgrades before the homeowner approves the project.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {[
               ['Definition', 'A project gallery page shows visual scope, location context, and the planning questions a similar homeowner should ask before approving a deck or outdoor living proposal.'],
               ['Planning facts', 'The strongest estimate uses 7 inputs: photos, dimensions, existing frame condition, material preferences, permit or HOA notes, budget range, and timeline.'],

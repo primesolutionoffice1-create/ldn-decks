@@ -30,7 +30,7 @@ const faqSchema = {
     { "@type": "Question", name: "Who manages the One Loudoun ARC?", acceptedAnswer: { "@type": "Answer", text: "One Loudoun is managed by FirstService Residential, one of the largest residential community management firms in Northern Virginia. Submissions generally go through a documented review process with material samples or specifications, color specs, structural drawings, and homeowner authorization." } },
     { "@type": "Question", name: "What's the One Loudoun design aesthetic?", acceptedAnswer: { "@type": "Answer", text: "One Loudoun leans contemporary — Metro-corridor mixed-use architecture, walkable urban planning, modern home styles. Approved deck materials skew toward darker composite tones (Trex Transcend Lava Rock, Dark Hickory, Vintage Lantern; TimberTech AZEK Vintage Mahogany or Coastline). Black aluminum or cable railings are common. Integrated low-voltage lighting is nearly universal. Traditional balustrade railings are also approved but less popular than the modern systems." } },
     { "@type": "Question", name: "Do townhome rear decks need full ARC review?", acceptedAnswer: { "@type": "Answer", text: "Yes. Even compact 180-280 sqft townhome rear decks need architectural review. Townhome submissions can move faster when the rules are standardized and the packet is complete, but timing still depends on the manager's review calendar and any requested revisions." } },
-    { "@type": "Question", name: "What does a One Loudoun deck cost?", acceptedAnswer: { "@type": "Answer", text: "Townhome rear decks (180-280 sqft): $22,000-$38,000. Detached single-family decks (400-600 sqft): $38,000-$65,000. Rooftop terrace builds on Metro-corridor townhomes: $28,000-$58,000 (see our dedicated rooftop deck builder page for the structural + approval details). Premium estate-tier projects with outdoor kitchens and multi-level designs: $65,000-$120,000+." } },
+    { "@type": "Question", name: "What does a One Loudoun deck cost?", acceptedAnswer: { "@type": "Answer", text: "Townhome rear decks (180-280 sqft): a written estimate. Detached single-family decks (400-600 sqft): a written estimate. Rooftop terrace builds on Metro-corridor townhomes: a written estimate (see our dedicated rooftop deck builder page for the structural + approval details). Premium estate-tier projects with outdoor kitchens and multi-level designs: a written estimate." } },
     { "@type": "Question", name: "Can Loudoun Decks handle the One Loudoun ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. We prepare the ARC packet with material samples or specifications, color specs, drawings or renderings where needed, file the Loudoun County building permit in parallel, and coordinate inspection scheduling. Call 571-655-7207." } },
   ],
 };
@@ -41,14 +41,14 @@ export default function OneLoudounHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="One Loudoun HOA Deck Rules &amp; Approval Guide" description="Building a deck in One Loudoun, Ashburn? Architectural review for townhomes and detached homes, modern design vocabulary, and Loudoun County permit coordination." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="One Loudoun HOA Deck Rules &amp; Approval Guide" description="Building a deck in One Loudoun, Ashburn? Architectural review for townhomes and detached homes, modern design vocabulary, and Loudoun County permit coordination." speakable />
       <ArticleSchema
         title="One Loudoun HOA Deck Rules and Approval Guide"
         description="One Loudoun ARC review, townhome and detached deck planning, Loudoun County permit coordination, modern material choices, and local deck builder support."
         path={PATH}
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-06-04"
+        dateModified="2026-10-18"
       />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -98,11 +98,11 @@ export default function OneLoudounHoaDeckRulesPage() {
 
           <h2 style={S.h2}>Typical One Loudoun Deck Projects + Pricing</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Townhome rear deck</strong> (180-280 sqft): $22,000-$38,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Detached single-family rear deck</strong> (400-600 sqft): $38,000-$65,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Rooftop terrace</strong> (Metro-corridor townhomes): $28,000-$58,000 — see <Link href="/rooftop-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)' }}>rooftop deck builder</Link></li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Multi-level estate-section deck</strong> (600-800 sqft): $58,000-$95,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Full outdoor-living package</strong> (deck + screened porch + outdoor kitchen): $85,000-$140,000+</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Townhome rear deck</strong> (180-280 sqft): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Detached single-family rear deck</strong> (400-600 sqft): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Rooftop terrace</strong> (Metro-corridor townhomes): a written estimate — see <Link href="/rooftop-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)' }}>rooftop deck builder</Link></li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Multi-level estate-section deck</strong> (600-800 sqft): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Full outdoor-living package</strong> (deck + screened porch + outdoor kitchen): a written estimate</li>
           </ul>
 
           <h2 style={S.h2}>How Loudoun Decks Handles One Loudoun Approvals</h2>
@@ -130,7 +130,7 @@ export default function OneLoudounHoaDeckRulesPage() {
         </div>
       </article>
       <SimpleCTA title="One Loudoun deck project? We file every approval in parallel." buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="One Loudoun (Ashburn) and Loudoun County" lastUpdated="2026-06-04" />
+      <NamedAuthor context="One Loudoun (Ashburn) and Loudoun County" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath="/one-loudoun-hoa-deck-rules" />
       <ContactHome />
     </>

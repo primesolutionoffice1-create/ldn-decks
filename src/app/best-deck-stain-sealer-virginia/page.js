@@ -26,7 +26,7 @@ const faqSchema = {
     { "@type": "Question", name: "How often should you stain a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Most Virginia decks need re-staining every 2-3 years with semi-transparent stain, or every 3-5 years with solid stain. South-facing decks with full sun exposure may need attention every 18-24 months. Transparent sealers typically last only 1-2 years in Virginia's climate." } },
     { "@type": "Question", name: "Is oil-based or water-based deck stain better for Virginia?", acceptedAnswer: { "@type": "Answer", text: "Water-based stains are generally better for Virginia. They handle humidity better during application, dry faster (critical during unpredictable Virginia weather), resist mildew growth, and meet current VOC regulations. Oil-based stains penetrate deeper but take 24-48 hours to dry and are more prone to mildew in humid conditions." } },
     { "@type": "Question", name: "When is the best time to stain a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "The best months to stain a deck in Virginia are April-May and September-October. Temperatures should be 50-85°F with low humidity (below 50%) and no rain forecast for 48 hours. Avoid summer months when humidity regularly exceeds 70% and temperatures above 90°F cause stain to dry too quickly." } },
-    { "@type": "Question", name: "How much does professional deck staining cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck staining in Northern Virginia costs $2-$5 per square foot, including pressure washing, prep, and two coats. A typical 300 sqft deck runs $600-$1,500 depending on condition and product choice. DIY costs $0.50-$1.50/sqft for materials only." } },
+    { "@type": "Question", name: "How much does professional deck staining cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck staining in Northern Virginia is priced in a written estimate per square foot, including pressure washing, prep, and two coats. A typical 300 sqft deck is priced in a written estimate depending on condition and product choice. DIY is priced in priced in a written estimate for materials only." } },
     { "@type": "Question", name: "Should I stain or seal my new pressure-treated deck?", acceptedAnswer: { "@type": "Answer", text: "Wait 3-6 months before staining a new pressure-treated deck to let the wood dry and the treatment chemicals cure. Apply a water repellent sealer immediately if desired, but stain adhesion is poor on freshly treated lumber. Perform a water droplet test if water beads up, the wood isn't ready for stain." } },
   ],
 };
@@ -43,14 +43,14 @@ export default function BestDeckStainSealerPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/best-deck-stain-sealer-virginia" name="Best Deck Stain &amp; Sealer for Virginia Weather (2026)" description="Top deck stains and sealers tested in Virginia\'s climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/best-deck-stain-sealer-virginia" name="Best Deck Stain &amp; Sealer for Virginia Weather (2026)" description="Top deck stains and sealers tested in Virginia\'s climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks." speakable />
       <ArticleSchema
         title="Best Deck Stain & Sealer for Virginia Weather (2026)"
         description="Top deck stains and sealers tested in Virginia's climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks."
         path="/best-deck-stain-sealer-virginia"
         image="/images/img29.jpeg"
         datePublished="2026-04-23"
-        dateModified="2026-04-23"
+        dateModified="2026-10-18"
       />
 
       {/* Hero */}
@@ -102,16 +102,16 @@ export default function BestDeckStainSealerPage() {
               </thead>
               <tbody>
                 {[
-                  ['TWP 1500', 'Semi-Trans', 'Water', '200-300 sqft', '2-3 yrs', '$45-$55', 'Overall best for Virginia'],
-                  ['Defy Extreme', 'Semi-Trans', 'Water', '150-250 sqft', '2-3 yrs', '$40-$50', 'Best UV protection'],
-                  ['Benjamin Moore Arborcoat', 'Solid', 'Water', '250-350 sqft', '4-6 yrs', '$55-$65', 'Older/weathered wood'],
-                  ['Cabot Australian Timber Oil', 'Semi-Trans', 'Oil', '200-400 sqft', '2-3 yrs', '$38-$48', 'Hardwood decks (ipe, mahogany)'],
-                  ['Ready Seal', 'Semi-Trans', 'Oil', '150-250 sqft', '2-3 yrs', '$35-$42', 'Easiest DIY application'],
-                  ['DEFY Epoxy Fortified', 'Semi-Trans', 'Water', '150-250 sqft', '3-4 yrs', '$50-$58', 'High-traffic decks'],
-                  ['Sherwin-Williams SuperDeck', 'Semi-Trans', 'Water', '200-300 sqft', '2-3 yrs', '$42-$52', 'Wide color selection'],
-                  ['Thompson\'s WaterSeal Signature', 'Semi-Trans', 'Water', '200-300 sqft', '2-3 yrs', '$30-$38', 'Budget-friendly option'],
-                  ['Penofin Blue Label', 'Transparent', 'Oil', '300-500 sqft', '1-2 yrs', '$48-$58', 'Natural cedar look'],
-                  ['Olympic Elite', 'Semi-Trans', 'Water', '200-250 sqft', '2-3 yrs', '$38-$45', 'Pressure-treated pine'],
+                  ['TWP 1500', 'Semi-Trans', 'Water', '200-300 sqft', '2-3 yrs', 'a written estimate', 'Overall best for Virginia'],
+                  ['Defy Extreme', 'Semi-Trans', 'Water', '150-250 sqft', '2-3 yrs', 'a written estimate', 'Best UV protection'],
+                  ['Benjamin Moore Arborcoat', 'Solid', 'Water', '250-350 sqft', '4-6 yrs', 'a written estimate', 'Older/weathered wood'],
+                  ['Cabot Australian Timber Oil', 'Semi-Trans', 'Oil', '200-400 sqft', '2-3 yrs', 'a written estimate', 'Hardwood decks (ipe, mahogany)'],
+                  ['Ready Seal', 'Semi-Trans', 'Oil', '150-250 sqft', '2-3 yrs', 'a written estimate', 'Easiest DIY application'],
+                  ['DEFY Epoxy Fortified', 'Semi-Trans', 'Water', '150-250 sqft', '3-4 yrs', 'a written estimate', 'High-traffic decks'],
+                  ['Sherwin-Williams SuperDeck', 'Semi-Trans', 'Water', '200-300 sqft', '2-3 yrs', 'a written estimate', 'Wide color selection'],
+                  ['Thompson\'s WaterSeal Signature', 'Semi-Trans', 'Water', '200-300 sqft', '2-3 yrs', 'a written estimate', 'Budget-friendly option'],
+                  ['Penofin Blue Label', 'Transparent', 'Oil', '300-500 sqft', '1-2 yrs', 'a written estimate', 'Natural cedar look'],
+                  ['Olympic Elite', 'Semi-Trans', 'Water', '200-250 sqft', '2-3 yrs', 'a written estimate', 'Pressure-treated pine'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => (
@@ -283,14 +283,14 @@ export default function BestDeckStainSealerPage() {
               </thead>
               <tbody>
                 {[
-                  ['Stain (2 gallons)', '$70-$130', 'Included'],
-                  ['Pressure washer rental', '$75-$100/day', 'Included'],
-                  ['Deck cleaner/brightener', '$20-$40', 'Included'],
-                  ['Brushes, rollers, tape', '$30-$50', 'Included'],
-                  ['Sander rental + sandpaper', '$40-$60', 'Included'],
-                  ['Labor', '$0 (your time: 12-16 hrs)', '$400-$900'],
-                  ['Total (300 sqft)', '$235-$380', '$600-$1,500'],
-                  ['Cost per sqft', '$0.75-$1.25', '$2.00-$5.00'],
+                  ['Stain (2 gallons)', 'a written estimate', 'Included'],
+                  ['Pressure washer rental', 'a written estimate/day', 'Included'],
+                  ['Deck cleaner/brightener', 'a written estimate', 'Included'],
+                  ['Brushes, rollers, tape', 'a written estimate', 'Included'],
+                  ['Sander rental + sandpaper', 'a written estimate', 'Included'],
+                  ['Labor', 'a written estimate (your time: 12-16 hrs)', 'a written estimate'],
+                  ['Total (300 sqft)', 'a written estimate', 'a written estimate'],
+                  ['Cost per sqft', 'a written estimate', 'a written estimate'],
                 ].map((row, i) => {
                   const isTotal = i >= 6;
                   return (
@@ -331,7 +331,7 @@ export default function BestDeckStainSealerPage() {
             { q: "How often should you stain a deck in Virginia?", a: "Every 2-3 years with semi-transparent stain, or 3-5 years with solid stain. South-facing full-sun decks may need re-staining every 18-24 months." },
             { q: "Is oil-based or water-based deck stain better for Virginia?", a: "Water-based is better for 90% of Virginia applications. It handles humidity, dries faster, and resists mildew. Use oil-based only on hardwood decks during dry fall weather." },
             { q: "When is the best time to stain a deck in Virginia?", a: "April-May and September-October are ideal. Temperatures 50-85°F, humidity below 50%, and 48 hours of dry weather are the key requirements." },
-            { q: "How much does professional deck staining cost in Northern Virginia?", a: "Professional deck staining costs $2-$5 per square foot including prep, pressure washing, and two coats. A typical 300 sqft deck runs $600-$1,500." },
+            { q: "How much does professional deck staining cost in Northern Virginia?", a: "Professional deck staining is priced in a written estimate per square foot including prep, pressure washing, and two coats. A typical 300 sqft deck is priced in a written estimate." },
             { q: "Should I stain or seal my new pressure-treated deck?", a: "Wait 3-6 months for the wood to dry and chemicals to cure. Perform a water droplet test if water beads, the wood isn't ready. You can apply a water repellent sealer immediately, but stain should wait." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
@@ -362,7 +362,7 @@ export default function BestDeckStainSealerPage() {
 
       <SimpleCTA title="Need Your Deck Stained or Sealed?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/best-deck-stain-sealer-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <ContactHome />
     </>

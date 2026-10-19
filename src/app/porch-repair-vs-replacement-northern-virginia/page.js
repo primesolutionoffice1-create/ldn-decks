@@ -12,7 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/porch-repair-vs-replacement-northern-virginia',
   title: 'Porch Repair vs Replacement: Costs & Inspection in NoVA',
-  description: 'Repair your porch for $2,000-$8,000 or replace for $25,000-$70,000. When each makes sense, inspection checklist, and cost comparison for Northern Virginia.',
+  description: 'Repair your porch for a written estimate or replace for a written estimate. When each makes sense, inspection checklist, and cost comparison for Northern Virginia.',
   image: '/social/porch-repair-vs-replacement-social.png',
 });
 
@@ -20,8 +20,8 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "Should I repair or replace my porch?", acceptedAnswer: { "@type": "Answer", text: "Repair if: damage is limited to surface boards, screens, or trim structure is solid. Replace if: posts are rotting at the base, roof is sagging, foundation is shifting, or framing is soft/spongy. When repair costs exceed 40-50% of replacement cost, replacement is the better long-term investment." } },
-    { "@type": "Question", name: "How much does porch repair cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Porch repairs in Northern Virginia: screen replacement $300-$1,200, board replacement $500-$3,000, post repair $800-$2,500, railing repair $500-$2,000. Most repairs fall between $1,500 and $8,000." } },
-    { "@type": "Question", name: "How much does a new porch cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A new screened porch in Northern Virginia costs $25,000-$70,000+ depending on size, materials, and features. Open porches: $15,000-$40,000. Full porch replacement including demolition of the old structure adds $2,000-$5,000." } },
+    { "@type": "Question", name: "How much does porch repair cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Porch repairs in Northern Virginia: screen replacement a written estimate, board replacement a written estimate, post repair a written estimate, railing repair a written estimate. Most repairs fall between a written estimate and a written estimate." } },
+    { "@type": "Question", name: "How much does a new porch cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A new screened porch in Northern Virginia is priced in a written estimate depending on size, materials, and features. Open porches: a written estimate. Full porch replacement including demolition of the old structure adds a written estimate." } },
   ],
 };
 
@@ -31,7 +31,7 @@ export default function PorchRepairPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/porch-repair-vs-replacement-northern-virginia" name="Porch Repair vs Replacement" description="Repair your porch for $2,000-$8,000 or replace for $25,000-$70,000. When each makes sense, inspection checklist, and cost comparison for Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/porch-repair-vs-replacement-northern-virginia" name="Porch Repair vs Replacement" description="Repair your porch for a written estimate or replace for a written estimate. When each makes sense, inspection checklist, and cost comparison for Northern Virginia." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Porch Repair vs Replacement: Which Saves You Money?</h1>
@@ -41,7 +41,7 @@ export default function PorchRepairPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Rule of Thumb:</p>
-          <p><strong>Repair</strong> when damage is cosmetic/surface-level and structure is sound ($1,500–$8,000). <strong>Replace</strong> when repair costs exceed 40–50% of replacement cost, or when structural elements (posts, beams, roof) are failing ($25,000–$70,000+). We offer free inspections to determine which you need.</p>
+          <p><strong>Repair</strong> when damage is cosmetic/surface-level and structure is sound (a written estimate). <strong>Replace</strong> when repair costs exceed 40–50% of replacement cost, or when structural elements (posts, beams, roof) are failing (a written estimate). We offer free inspections to determine which you need.</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -58,9 +58,9 @@ export default function PorchRepairPage() {
             />
           </div>
           <h2 style={S.h2}>The &apos;Pick-Test&apos; How to Check Your Porch&apos;s Structural Integrity</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             <div style={{ background: '#e8f5e9', borderRadius: 8, padding: '1.5rem' }}>
-              <h3 style={{ fontWeight: 700, color: '#2e7d32', marginBottom: '0.75rem' }}>REPAIR ✓ ($1,500–$8,000)</h3>
+              <h3 style={{ fontWeight: 700, color: '#2e7d32', marginBottom: '0.75rem' }}>REPAIR ✓ (a written estimate)</h3>
               <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem' }}>
                 <li style={{ marginBottom: '0.5rem' }}>Torn or damaged screens (replace panels)</li>
                 <li style={{ marginBottom: '0.5rem' }}>Worn/faded floor boards but frame is solid</li>
@@ -72,7 +72,7 @@ export default function PorchRepairPage() {
               </ul>
             </div>
             <div style={{ background: '#ffebee', borderRadius: 8, padding: '1.5rem' }}>
-              <h3 style={{ fontWeight: 700, color: '#c62828', marginBottom: '0.75rem' }}>REPLACE ✗ ($25,000–$70,000+)</h3>
+              <h3 style={{ fontWeight: 700, color: '#c62828', marginBottom: '0.75rem' }}>REPLACE ✗ (a written estimate)</h3>
               <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem' }}>
                 <li style={{ marginBottom: '0.5rem' }}>Posts rotting at base (structural failure risk)</li>
                 <li style={{ marginBottom: '0.5rem' }}>Roof sagging or rafters cracked</li>
@@ -91,16 +91,16 @@ export default function PorchRepairPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Repair', 'Cost Range', 'Timeline'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Screen panel replacement (per panel)', '$150–$400', '1 day'],
-                  ['Full screen re-screening', '$800–$2,500', '1–2 days'],
-                  ['Floor board replacement (partial)', '$500–$3,000', '1–3 days'],
-                  ['Post repair/reinforcement', '$800–$2,500', '1–2 days'],
-                  ['Railing repair/replacement', '$500–$2,000', '1–2 days'],
-                  ['Roof leak repair', '$500–$2,000', '1 day'],
-                  ['Ceiling repair/paint', '$400–$1,500', '1–2 days'],
-                  ['Floor staining/refinishing', '$600–$2,000', '2–3 days'],
-                  ['EZE-Breeze panel replacement', '$300–$800/panel', '1 day'],
-                  ['Structural joist sister (reinforce)', '$1,500–$4,000', '2–3 days'],
+                  ['Screen panel replacement (per panel)', 'a written estimate', '1 day'],
+                  ['Full screen re-screening', 'a written estimate', '1–2 days'],
+                  ['Floor board replacement (partial)', 'a written estimate', '1–3 days'],
+                  ['Post repair/reinforcement', 'a written estimate', '1–2 days'],
+                  ['Railing repair/replacement', 'a written estimate', '1–2 days'],
+                  ['Roof leak repair', 'a written estimate', '1 day'],
+                  ['Ceiling repair/paint', 'a written estimate', '1–2 days'],
+                  ['Floor staining/refinishing', 'a written estimate', '2–3 days'],
+                  ['EZE-Breeze panel replacement', 'a written estimate/panel', '1 day'],
+                  ['Structural joist sister (reinforce)', 'a written estimate', '2–3 days'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -119,7 +119,7 @@ export default function PorchRepairPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>New construction brings the porch up to current building code (required at sale anyway)</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Composite materials mean the new porch needs near-zero maintenance going forward</li>
           </ul>
-          <p style={S.p}><strong>Example:</strong> If a new screened porch costs $45,000 and repairs are quoted at $15,000+ (33%), strongly consider replacement. At $20,000+ (44%), replacement is almost certainly the better investment.</p>
+          <p style={S.p}><strong>Example:</strong> If a new screened porch is priced in a written estimate and repairs are quoted at a written estimate (33%), strongly consider replacement. At a written estimate (44%), replacement is almost certainly the better investment.</p>
 
           <h2 style={S.h2}>Free Porch Inspection</h2>
           <p style={S.p}>Not sure if your porch needs repair or replacement? We offer <strong>free on-site inspections</strong>. We check every structural element posts, beams, joists, ledger, roof, footings and give you an honest assessment with photos. No obligation, no pressure. If the issue is tied to the deck structure, stairs, railings, or ledger connection rather than the porch roof system, start with our <Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck repair service</Link>, compare stair parts with the <Link href="/education/deck-stair-construction-diagram" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck stair construction diagram</Link>, and review the <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link>.</p>
@@ -127,8 +127,8 @@ export default function PorchRepairPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
             { q: "Should I repair or replace my porch?", a: "Repair if damage is surface-level and structure is sound. Replace if posts are rotting, roof is sagging, or repair costs exceed 40-50% of replacement." },
-            { q: "How much does porch repair cost?", a: "Most repairs: $1,500-$8,000. Screen replacement: $300-$2,500. Board replacement: $500-$3,000. Post repair: $800-$2,500." },
-            { q: "How much for a new porch?", a: "Screened porch: $25k-$70k. Open porch: $15k-$40k. Add $2k-$5k for demolition of old structure." },
+            { q: "How much does porch repair cost?", a: "Most repairs: a written estimate. Screen replacement: a written estimate. Board replacement: a written estimate. Post repair: a written estimate." },
+            { q: "How much for a new porch?", a: "Screened porch: a written estimate. Open porch: a written estimate. Add a written estimate for demolition of old structure." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
@@ -152,7 +152,7 @@ export default function PorchRepairPage() {
         </div>
       </article>
       <SimpleCTA title="Not Sure? Free Porch Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/porch-repair-vs-replacement-northern-virginia" />
 

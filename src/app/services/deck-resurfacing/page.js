@@ -19,7 +19,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 export const metadata = buildMetadata({
   path: "/services/deck-resurfacing",
   title: 'Premium Deck Resurfacing NoVA | TimberTech Vintage Experts',
-  description: 'Premium deck resurfacing in Northern Virginia from $15k+. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options.',
+  description: 'Premium deck resurfacing in Northern Virginia from a written estimate. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options.',
   image: "/social/deck-resurfacing-service-social.png",
 });
 
@@ -116,7 +116,7 @@ export default function DeckResurfacingPage() {
     <main>
       {/* Dynamic SEO Schemas */}
       <JsonLd data={faqSchemaData} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/deck-resurfacing" name="Premium Deck Resurfacing NoVA | TimberTech Vintage Experts" description="Premium deck resurfacing in Northern Virginia from $15k+. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/deck-resurfacing" name="Premium Deck Resurfacing NoVA | TimberTech Vintage Experts" description="Premium deck resurfacing in Northern Virginia from a written estimate. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options." speakable />
       <ServiceSchema
         name="Custom Deck Resurfacing"
         description="Professional deck resurfacing services utilizing TimberTech Vintage Collection composite boards, structural reinforcement, and aluminum railings in Northern Virginia."
@@ -129,7 +129,7 @@ export default function DeckResurfacingPage() {
 
       <div id="deck-resurfacing-estimate" style={{ scrollMarginTop: '24px' }}>
         <ServicesHeader
-          subtext="Projects from $15,000+"
+          subtext="Projects from a written estimate"
           title="Deck Resurfacing in Northern Virginia"
           description="We inspect the existing frame first, then plan new composite or PVC decking, railings, stairs, fascia, lighting, permits, and HOA scope only when the structure is sound enough to keep."
           estimateHref="#deck-resurfacing-estimate"
@@ -141,7 +141,7 @@ export default function DeckResurfacingPage() {
         />
       </div>
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
       </section>
 
       <PlanningUpdate
@@ -162,7 +162,7 @@ export default function DeckResurfacingPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Full resurfacing projects from $15,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Full resurfacing projects from a written estimate</strong>
             <br />
             On this page we focus on <strong style={{ color: '#111' }}>full surface conversions</strong> with composite boards, upgraded railings, fascia, stairs, and safety review. Need a few boards swapped, railings reinforced, or rot patched? See our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
@@ -204,7 +204,7 @@ export default function DeckResurfacingPage() {
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>Same base structure. Completely transformed aesthetic.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
             <Image src="/showcase/img03.jpg" alt="Before deck resurfacing — old pressure-treated wood deck in Northern Virginia" fill style={{ objectFit: 'cover' }} />
           </div>

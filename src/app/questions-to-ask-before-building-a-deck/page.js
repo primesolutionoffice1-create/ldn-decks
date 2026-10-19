@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "What is the first thing to consider before building a deck?", acceptedAnswer: { "@type": "Answer", text: "Budget. Know your realistic range before talking to contractors. In Northern Virginia, composite decks cost $15,000-$45,000 for 300-500 sqft. This sets the scope for everything else: size, materials, and features." } },
+    { "@type": "Question", name: "What is the first thing to consider before building a deck?", acceptedAnswer: { "@type": "Answer", text: "Budget. Know your realistic range before talking to contractors. In Northern Virginia, composite decks are priced in a written estimate for 300-500 sqft. This sets the scope for everything else: size, materials, and features." } },
     { "@type": "Question", name: "Do I need a permit to build a deck?", acceptedAnswer: { "@type": "Answer", text: "Almost always yes in Northern Virginia. Any deck attached to your house or over 30 inches above grade requires a building permit from your county (Loudoun, Fairfax, Prince William). Plus HOA approval if applicable." } },
     { "@type": "Question", name: "How do I know if my yard is suitable for a deck?", acceptedAnswer: { "@type": "Answer", text: "Almost any yard can accommodate a deck. Key factors: slope (multi-level designs work on hills), setback distances from property lines (varies by county), underground utilities (call 811 before digging), and drainage patterns. A contractor evaluates all of this during the free consultation." } },
   ],
@@ -28,7 +28,7 @@ const faqSchema = {
 const questions = [
   {
     category: 'Budget & Planning', items: [
-      { q: 'What is my realistic budget?', a: 'Composite decks in NoVA: $15k-$45k for 300-500 sqft. Include railings, stairs, lighting, permits in your number not just the deck surface.', link: '/composite-deck-cost-northern-virginia' },
+      { q: 'What is my realistic budget?', a: 'Composite decks in NoVA: a written estimate for 300-500 sqft. Include railings, stairs, lighting, permits in your number not just the deck surface.', link: '/composite-deck-cost-northern-virginia' },
       { q: 'Should I finance or pay cash?', a: 'Financing options may be available for eligible deck projects, subject to approval and provider terms. Compare your project scope, cash flow, and long-term priorities before choosing.', link: '/deck-financing' },
       { q: 'What size deck do I need?', a: 'Couples: 150-200 sqft. Families: 300-400 sqft. Entertainers: 500+. Don\'t exceed 20-25% of your backyard.', link: '/what-size-deck-should-i-build' },
       { q: 'When is the best time to build?', a: 'Feb-Apr for best pricing. May-Aug is peak with 4-6 week waits. Start 2-3 months before desired completion.', link: '/best-time-to-build-a-deck-northern-virginia' },
@@ -36,10 +36,10 @@ const questions = [
   },
   {
     category: 'Materials', items: [
-      { q: 'Composite or wood?', a: 'Composite costs more upfront but less over 15 years. Zero maintenance, 25-50 year lifespan, better resale ROI. Wood only makes sense for tight budgets under $10k.', link: '/composite-deck-vs-wood-deck-virginia' },
+      { q: 'Composite or wood?', a: 'Composite costs more upfront but less over 15 years. Zero maintenance, 25-50 year lifespan, better resale ROI. Wood only makes sense for tight budgets under a written estimate.', link: '/composite-deck-vs-wood-deck-virginia' },
       { q: 'Which composite brand?', a: 'Trex Transcend = best overall. TimberTech AZEK = premium. Trex Enhance = budget. All are excellent for Virginia climate.', link: '/trex-vs-timbertech-vs-azek' },
-      { q: 'What railing should I choose?', a: 'Composite ($40-$70/ft) = most popular. Aluminum ($35-$60/ft) = modern clean. Cable ($60-$100/ft) = best view. Check HOA before choosing.', link: '/deck-railing-options-northern-virginia' },
-      { q: 'Do I need lighting?', a: 'Strongly recommended. Post caps + stair risers ($500-$1,200) are essential for safety and ambiance. Include in initial build 30-50% cheaper than retrofitting.', link: '/deck-lighting-ideas-northern-virginia' },
+      { q: 'What railing should I choose?', a: 'Composite (a written estimate) = most popular. Aluminum (a written estimate) = modern clean. Cable (a written estimate) = best view. Check HOA before choosing.', link: '/deck-railing-options-northern-virginia' },
+      { q: 'Do I need lighting?', a: 'Strongly recommended. Post caps + stair risers (a written estimate) are essential for safety and ambiance. Include in initial build different from adding it later.', link: '/deck-lighting-ideas-northern-virginia' },
     ]
   },
   {
@@ -60,10 +60,10 @@ const questions = [
   },
   {
     category: 'Design & Features', items: [
-      { q: 'Should I add a screened porch?', a: 'If bugs or weather limit your outdoor time: yes. Extends season from 5 months to 9-10. ROI: 70-85% at resale. Many combine open deck + screened section.', link: '/screened-porch-cost-northern-virginia' },
-      { q: 'Will my deck add home value?', a: 'Yes. Composite: 65-80% ROI. Screened porch: 70-85%. In NoVA\'s competitive market, outdoor living space sells homes faster.', link: '/does-a-deck-add-value-to-your-home' },
+      { q: 'Should I add a screened porch?', a: 'If bugs or weather limit your outdoor time: yes. Extends season from 5 months to 9-10. ROI: not a fixed percentage at resale. Many combine open deck + screened section.', link: '/screened-porch-cost-northern-virginia' },
+      { q: 'Will my deck add home value?', a: 'Yes. Composite: not a fixed percentage ROI. Screened porch: not a fixed percentage. In NoVA\'s competitive market, outdoor living space sells homes faster.', link: '/does-a-deck-add-value-to-your-home' },
       { q: 'Do I need stairs?', a: 'If deck is above grade: yes (code requirement for egress). Wider stairs (4 ft) feel more generous. Include lighting on every staircase.' },
-      { q: 'What about the space under an elevated deck?', a: 'Add an under-deck ceiling/drainage system ($3k-$15k) to create a dry patio, storage, or hot tub area below. Doubles your outdoor space.', link: '/under-deck-ceiling-ideas' },
+      { q: 'What about the space under an elevated deck?', a: 'Add an under-deck ceiling/drainage system (a written estimate) to create a dry patio, storage, or hot tub area below. Doubles your outdoor space.', link: '/under-deck-ceiling-ideas' },
     ]
   },
 ];
@@ -72,7 +72,7 @@ export default function QuestionsPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/questions-to-ask-before-building-a-deck" name="20 Questions Before Building a Deck (2026)" description="20 questions every homeowner should answer before building a deck: budget, materials, permits, HOA, timeline. From a trusted NoVA builder." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/questions-to-ask-before-building-a-deck" name="20 Questions Before Building a Deck (2026)" description="20 questions every homeowner should answer before building a deck: budget, materials, permits, HOA, timeline. From a trusted NoVA builder." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -122,7 +122,7 @@ export default function QuestionsPage() {
         </div>
       </article>
       <SimpleCTA title="Ready? We'll Answer Every Question on the Phone" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/questions-to-ask-before-building-a-deck" />
 

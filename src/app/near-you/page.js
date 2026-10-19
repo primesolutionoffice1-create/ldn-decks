@@ -93,7 +93,7 @@ export default function NearYouPage() {
             <p className={styles.sectionDesc}>
               Before choosing a local deck builder, compare cost, proof, credentials, permits, and project fit.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
               {[
                 ['/deck-cost-calculator', 'Deck Cost Calculator'],
                 ['/deck-payment-estimator', 'Deck Payment Estimator'],

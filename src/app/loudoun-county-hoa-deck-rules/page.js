@@ -71,14 +71,14 @@ export default function LoudounCountyHOADeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Loudoun County HOA Deck Rules | Community Guide" description="HOA deck rules for Brambleton, Broadlands, One Loudoun, Ashburn Farm, Lansdowne &amp; more. Color restrictions, material requirements, approval process." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Loudoun County HOA Deck Rules | Community Guide" description="HOA deck rules for Brambleton, Broadlands, One Loudoun, Ashburn Farm, Lansdowne &amp; more. Color restrictions, material requirements, approval process." speakable />
       <ArticleSchema
         title="Loudoun County HOA Deck Rules: Community-by-Community Guide"
         description="HOA deck rules for every major Loudoun County community. Color restrictions, material requirements, approval timelines, and how we handle submissions."
         path={PATH}
         image="/images/img08.jpeg"
         datePublished="2026-04-26"
-        dateModified="2026-06-04"
+        dateModified="2026-10-18"
       />
 
       {/* Hero */}
@@ -234,7 +234,7 @@ export default function LoudounCountyHOADeckRulesPage() {
                   ['Required by', 'Your HOA covenants (private)', 'Loudoun County (government)'],
                   ['What they review', 'Colors, materials, size, location', 'Engineering, footings, framing, connections'],
                   ['Timeline', '2–6 weeks', '2–4 weeks'],
-                  ['Cost', 'Free (usually)', '$200–$500'],
+                  ['Cost', 'Free (usually)', 'a written estimate'],
                   ['Order', 'Submit first', 'Submit after HOA approves (or simultaneously)'],
                   ['Inspections', 'None (some do final review)', 'Foundation, framing, final'],
                 ].map((row, i) => (
@@ -336,7 +336,7 @@ export default function LoudounCountyHOADeckRulesPage() {
 
       <SimpleCTA title="Build an HOA-Approved Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/loudoun-county-hoa-deck-rules" />
-      <NamedAuthor context="Loudoun County" lastUpdated="2026-06-04" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-10-18" />
 
       <ContactHome />
     </>

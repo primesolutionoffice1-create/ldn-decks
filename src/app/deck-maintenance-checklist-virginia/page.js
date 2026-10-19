@@ -35,7 +35,7 @@ export default function DeckMaintenancePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-maintenance-checklist-virginia" name="Deck Maintenance Checklist for Virginia" description="Seasonal deck maintenance checklist for Virginia climate. Spring cleaning, summer care, fall prep, winter protection. Composite vs wood maintenance compared." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-maintenance-checklist-virginia" name="Deck Maintenance Checklist for Virginia" description="Seasonal deck maintenance checklist for Virginia climate. Spring cleaning, summer care, fall prep, winter protection. Composite vs wood maintenance compared." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Maintenance Checklist for Virginia</h1>
@@ -115,12 +115,12 @@ export default function DeckMaintenancePage() {
               <tbody>
                 {[
                   ['Cleaning', '2x/year + power wash', '1-2x/year soap & water'],
-                  ['Staining/sealing', 'Every 1-2 years ($600-$2,000)', 'Never'],
+                  ['Staining/sealing', 'Every 1-2 years (a written estimate)', 'Never'],
                   ['Sanding', 'Every 2-3 years', 'Never'],
                   ['Board replacement', 'As needed (rot, cracks)', 'Extremely rare'],
-                  ['Annual cost', '$300-$800', '$0-$50'],
+                  ['Annual cost', 'a written estimate', 'a written estimate'],
                   ['Time per year', '8-15 hours', '1-2 hours'],
-                  ['15-year maintenance total', '$6,000-$12,000+', '$200-$750'],
+                  ['15-year maintenance total', 'a written estimate', 'a written estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     <td style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: 600 }}>{row[0]}</td>
@@ -180,7 +180,7 @@ export default function DeckMaintenancePage() {
         </div>
       </article>
       <SimpleCTA title="Deck Need More Than Maintenance? Free Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/deck-maintenance-checklist-virginia" />
 

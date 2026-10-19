@@ -208,7 +208,7 @@ export default function FinancingCalculator() {
       <style jsx>{`
         .financing-calculator-grid {
           display: grid;
-          grid-template-columns: minmax(0, 1fr) minmax(260px, 1fr);
+          grid-template-columns: minmax(0, 1fr) minmax(min(100%, 260px), 1fr);
           gap: 2rem;
           align-items: center;
         }

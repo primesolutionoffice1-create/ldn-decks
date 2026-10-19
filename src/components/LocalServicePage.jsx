@@ -78,7 +78,7 @@ function buildQuickAnswers(city, service) {
   return [
     {
       q: `How much does ${service.label.toLowerCase()} cost in ${city.city}?`,
-      a: `Most ${service.label.toLowerCase()} projects in ${city.city} fall between $${Number(service.lowPrice).toLocaleString()} and $${Number(service.highPrice).toLocaleString()} depending on size, elevation, materials, railings, stairs, porch or patio tie-ins, and review requirements.`,
+      a: `Loudoun Decks does not publish a fixed price for ${service.label.toLowerCase()} in ${city.city}. Size, elevation, materials, demolition, structure, stairs, railings, and permit review change the total. Request a written estimate for the project.`,
     },
     {
       q: `Do I need a permit in ${city.city}?`,
@@ -153,12 +153,6 @@ function schemaForPage({ city, service, path }) {
       ...(city.administrativeParent
         ? { containedInPlace: { '@type': 'AdministrativeArea', name: city.administrativeParent } }
         : {}),
-    },
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'USD',
-      lowPrice: service.lowPrice,
-      highPrice: service.highPrice,
     },
     isRelatedTo: service.related.map((relatedUrl) => ({
       '@type': 'Service',

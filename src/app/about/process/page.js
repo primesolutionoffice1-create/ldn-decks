@@ -28,7 +28,7 @@ export default function ProcessPage() {
         <h2 id="process-by-numbers" style={{ fontSize: '1.7rem', fontWeight: 800, marginBottom: 14 }}>
           The process, by the numbers
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 14 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: 14 }}>
           {[
             'End-to-end timeline: typically 6–10 weeks from signed contract to final inspection — 2–4 weeks of permitting, then 1–2 weeks of construction for a standard deck.',
             'Permit review windows: Loudoun County ~2–4 weeks (LOLA), Fairfax County ~3–5 weeks (FIDO), Prince William in a similar window.',
@@ -48,7 +48,7 @@ export default function ProcessPage() {
         <h2 id="process-inspections" style={{ fontSize: '1.7rem', fontWeight: 800, marginBottom: 14 }}>
           What the county inspects, in order
         </h2>
-        <ol style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 14, listStyle: 'none', padding: 0, margin: 0 }}>
+        <ol style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: 14, listStyle: 'none', padding: 0, margin: 0 }}>
           {[
             'Step 1: Layout and footing inspection — hole depth and bearing soil verified before any concrete is poured.',
             'Step 2: Framing inspection — ledger attachment, joist sizing and hardware checked against the approved plan.',

@@ -76,7 +76,7 @@ const whyLdnDecks = [
 const faqs = [
   {
     q: "How much does a custom fire pit cost in Northern Virginia?",
-    a: "Custom fire pit installations in Loudoun County and Fairfax County typically range from $1,500 to $6,000 depending on size, materials, and fuel type. Gas fire pits with natural stone and integrated seating walls are on the higher end, while simple wood-burning paver designs start around $1,500–$2,500."
+    a: "Custom fire pit installations in Loudoun County and Fairfax County typically range from a written estimate to a written estimate depending on size, materials, and fuel type. Gas fire pits with natural stone and integrated seating walls are on the higher end, while simple wood-burning paver designs start around a written estimate."
   },
   {
     q: "Do I need a permit to install a fire pit in Northern Virginia?",
@@ -103,7 +103,7 @@ const faqs = [
 export default function FirePitsPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/fire-pits" name="Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment" description="Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/fire-pits" name="Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment" description="Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment." speakable />
       <ServiceSchema
         name="Custom Fire Pit Installation"
         description="Professional custom fire pit design and installation in Northern Virginia. Wood-burning, gas, and built-in stone fire pits with integrated seating areas."
@@ -119,7 +119,7 @@ export default function FirePitsPage() {
         description="Transform your backyard into a warm, inviting space with a custom-built fire pit - perfect for relaxing nights, entertaining guests, and adding value to your home."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
       </section>
       <ServiceMain
         subtitle="More Than Just a Feature - It's the Centerpiece"
@@ -148,13 +148,13 @@ export default function FirePitsPage() {
             </thead>
             <tbody>
               {[
-                ['Portable fire bowl/table', '$500–$2,000', 'Propane/gas', 'Flexibility, rentals, small spaces'],
-                ['Built-in gas fire pit', '$3,000–$8,000', 'Natural gas line', 'Clean, instant, deck-adjacent'],
-                ['Stone surround (wood-burning)', '$5,000–$12,000', 'Wood logs', 'Large lots, campfire experience'],
-                ['Fire pit + seating wall', '$8,000–$18,000', 'Gas or wood', 'Gathering spot, entertaining'],
-                ['Fire pit + paver patio combo', '$12,000–$25,000', 'Gas or wood', 'Complete outdoor room at grade'],
-                ['Fire table (rectangular)', '$2,000–$6,000', 'Propane/natural gas', 'Dining integration, modern look'],
-                ['Deck-integrated gas feature', '$4,000–$10,000', 'Natural gas', 'Built into deck with non-combustible pad'],
+                ['Portable fire bowl/table', 'a written estimate', 'Propane/gas', 'Flexibility, rentals, small spaces'],
+                ['Built-in gas fire pit', 'a written estimate', 'Natural gas line', 'Clean, instant, deck-adjacent'],
+                ['Stone surround (wood-burning)', 'a written estimate', 'Wood logs', 'Large lots, campfire experience'],
+                ['Fire pit + seating wall', 'a written estimate', 'Gas or wood', 'Gathering spot, entertaining'],
+                ['Fire pit + paver patio combo', 'a written estimate', 'Gas or wood', 'Complete outdoor room at grade'],
+                ['Fire table (rectangular)', 'a written estimate', 'Propane/natural gas', 'Dining integration, modern look'],
+                ['Deck-integrated gas feature', 'a written estimate', 'Natural gas', 'Built into deck with non-combustible pad'],
               ].map((row, i) => (
                 <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                   {row.map((cell, j) => (
@@ -167,7 +167,7 @@ export default function FirePitsPage() {
         </div>
 
         <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Gas vs Wood-Burning Fire Pit</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
           <div style={{ background: '#fff3e0', border: '2px solid var(--color-primary)', borderRadius: 8, padding: '1.5rem' }}>
             <h3 style={{ fontWeight: 700, marginBottom: '0.75rem', color: 'var(--color-primary)' }}>Gas Fire Pit (Recommended for NoVA)</h3>
             <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem', listStyleType: 'disc' }}>
@@ -202,7 +202,7 @@ export default function FirePitsPage() {
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From empty backyard to a warm, inviting gathering space.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
             <Image src="/showcase/img17.jpeg" alt="Before fire pit installation — Northern Virginia deck patio space" fill style={{ objectFit: 'cover' }} />
           </div>

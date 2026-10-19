@@ -28,7 +28,7 @@ const permitFaqs = [
   },
   {
     q: "How much does an Arlington County deck permit cost?",
-    a: "Arlington County deck permit fees are calculated on construction valuation, typically $200-$700 for residential deck projects. Larger multi-level builds or projects with structural complexity may run higher. We include permit fees in every estimate.",
+    a: "Arlington County deck permit fees are calculated on construction valuation, typically a written estimate for residential deck projects. Larger multi-level builds or projects with structural complexity may run higher. We include permit fees in every estimate.",
   },
   {
     q: "Where do I file an Arlington County deck permit?",
@@ -86,14 +86,14 @@ export default function ArlingtonPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-08" url="https://ldndecks.com/deck-permit-arlington-county-virginia" name="Arlington County Deck Permit Guide (2026) | Loudoun Decks" description="Complete 2026 Arlington County deck permit guide: CPHD process, Permit Arlington portal, setbacks, historic-district review, inspection contacts, and timeline." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-permit-arlington-county-virginia" name="Arlington County Deck Permit Guide (2026) | Loudoun Decks" description="Complete 2026 Arlington County deck permit guide: CPHD process, Permit Arlington portal, setbacks, historic-district review, inspection contacts, and timeline." speakable />
       <ArticleSchema
         title="Arlington County Deck Permit Guide (2026)"
         description="The full 2026 Arlington County deck-permit process for homeowners and contractors: CPHD requirements, the Permit Arlington portal, setbacks, historic-district review (Lyon Park, Maywood, Westover), and the three required inspections."
         path="/deck-permit-arlington-county-virginia"
         image="/images/blog-permit-guide.png"
         datePublished="2026-05-27"
-        dateModified="2026-06-08"
+        dateModified="2026-10-18"
       />
 
       <section style={{ background: 'linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/images/blog-permit-guide.png)', backgroundSize: 'cover', backgroundPosition: 'center', color: '#fff', padding: '8rem 0' }}>
@@ -106,7 +106,7 @@ export default function ArlingtonPermitPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Yes, you need a permit.</strong> Any deck attached to your house or any freestanding deck more than 30 inches above grade requires an Arlington County building permit, filed through the Permit Arlington portal operated by the Department of Community Planning, Housing &amp; Development (CPHD). Plan review takes <strong>3–5 weeks</strong>. Permit fees: <strong>$200–$700</strong>. Historic district homes in Lyon Park, Maywood, or Westover need <strong>additional design review</strong>. Inspections coordinated through <strong>703-228-3800</strong>. <strong>We handle every step.</strong> <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink>.</p>
+          <p><strong>Yes, you need a permit.</strong> Any deck attached to your house or any freestanding deck more than 30 inches above grade requires an Arlington County building permit, filed through the Permit Arlington portal operated by the Department of Community Planning, Housing &amp; Development (CPHD). Plan review takes <strong>3–5 weeks</strong>. Permit fees: <strong>a written estimate</strong>. Historic district homes in Lyon Park, Maywood, or Westover need <strong>additional design review</strong>. Inspections coordinated through <strong>703-228-3800</strong>. <strong>We handle every step.</strong> <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink>.</p>
         </div>
       </section>
 
@@ -139,7 +139,7 @@ export default function ArlingtonPermitPage() {
             <li id="how-to-step-1" style={S.listItem}><strong>Verify zoning + setbacks:</strong> Pull your certified plat. Mark the proposed deck&apos;s footprint and confirm it respects the side, rear, and (if applicable) corner-lot setbacks for your zoning district. Arlington setbacks are often tighter than other NoVA counties.</li>
             <li id="how-to-step-2" style={S.listItem}><strong>Confirm historic district status:</strong> If your home is in Lyon Park (National Historic District), Maywood, or Westover, your project requires Arlington Historic Preservation Program design review in addition to the building permit. Lyon Village homes need to demonstrate architectural compatibility but don&apos;t go through the same formal review.</li>
             <li id="how-to-step-3" style={S.listItem}><strong>Upload the document package:</strong> Site plan with setbacks, structural drawings (footings, beams, joists, ledger detail, railings, stairs), homeowner authorization, and historic design review submission if applicable. For early footing assumptions, use the <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Footing Depth Calculator Virginia</Link>; for framing, review the <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Joist Span Calculator Virginia</Link> and <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Beam Span Calculator Virginia</Link>; for house attachment, see the <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>ledger board flashing guide</Link> before final permit review.</li>
-            <li id="how-to-step-4" style={S.listItem}><strong>Pay county review fees:</strong> Calculated on construction valuation, typically $200–$700 for residential deck projects.</li>
+            <li id="how-to-step-4" style={S.listItem}><strong>Pay county review fees:</strong> Calculated on construction valuation, typically a written estimate for residential deck projects.</li>
             <li id="how-to-step-5" style={S.listItem}><strong>Monitor the portal:</strong> Address any reviewer comments or revision requests within the 3–5 week review window. Historic-district projects add 2–4 weeks.</li>
           </ol>
 
@@ -261,7 +261,7 @@ export default function ArlingtonPermitPage() {
 
       <SimpleCTA title="Arlington deck project ahead? Skip the permit headache." buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-permit-arlington-county-virginia" />
-      <NamedAuthor context="Arlington and Northern Virginia" lastUpdated="2026-06-08" />
+      <NamedAuthor context="Arlington and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </>
   );

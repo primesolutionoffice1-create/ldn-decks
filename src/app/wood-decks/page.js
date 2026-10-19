@@ -22,9 +22,9 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a wood deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Wood decks in Northern Virginia cost $18-$45 per square foot installed. Pressure-treated wood: $18-$35/sqft. Cedar: $25-$45/sqft. Redwood: $30-$50/sqft. Exotic hardwoods (Ipe, Cumaru, Tigerwood): $35-$65/sqft. A typical 300-500 sqft wood deck: $5,400-$22,500." } },
+    { "@type": "Question", name: "How much does a wood deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Wood decks in Northern Virginia are priced in a written estimate per square foot installed. Pressure-treated wood: priced in a written estimate. Cedar: priced in a written estimate. Redwood: priced in a written estimate. Exotic hardwoods (Ipe, Cumaru, Tigerwood): priced in a written estimate. A typical 300-500 sqft wood deck: a written estimate." } },
     { "@type": "Question", name: "How long does a wood deck last in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Lifespan varies by wood type and maintenance: pressure-treated 10-15 years (5-8 without maintenance), cedar 15-20 years, redwood 20-25 years, ipe and other hardwoods 25-40+ years. Virginia's freeze-thaw cycles and humidity require annual sealing/staining for all wood types." } },
-    { "@type": "Question", name: "Wood deck or composite — which is better in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Composite is better long-term in Virginia's humid, freeze-thaw climate. Wood costs less upfront ($18-$45/sqft vs $30-$75 for composite) but requires $300-$800/year in maintenance and lasts half as long. Over 15 years, composite is actually cheaper. Wood makes sense only for tight budgets, exotic hardwood aesthetics, or temporary structures." } },
+    { "@type": "Question", name: "Wood deck or composite — which is better in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Composite is better long-term in Virginia's humid, freeze-thaw climate. Wood costs less upfront (priced in a written estimate vs a written estimate for composite) but requires a written estimate/year in maintenance and lasts half as long. Over 15 years, composite is actually cheaper. Wood makes sense only for tight budgets, exotic hardwood aesthetics, or temporary structures." } },
     { "@type": "Question", name: "What is the best wood for outdoor decks?", acceptedAnswer: { "@type": "Answer", text: "For Virginia climate: cedar (best balance of cost and durability), pressure-treated southern yellow pine (best budget), or ipe (best premium — naturally rot-resistant, 40+ year lifespan). Avoid untreated softwoods. Always seal/stain annually." } },
   ],
 };
@@ -35,7 +35,7 @@ export default function WoodDecksPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/wood-decks" name="Expert Wood Deck Builder NoVA | Cedar &amp; Hardwood Decks" description="The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax &amp; Prince William counties." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/wood-decks" name="Expert Wood Deck Builder NoVA | Cedar &amp; Hardwood Decks" description="The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax &amp; Prince William counties." speakable />
       <ServiceSchema
         name="Wood Deck Construction"
         description="Custom wood deck building in Northern Virginia. Cedar, IPE, and pressure-treated lumber options with expert craftsmanship."
@@ -75,13 +75,13 @@ export default function WoodDecksPage() {
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ textAlign: 'center', fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.5rem' }}>Wood Deck Projects &amp; Inspiration</h2>
           <p style={{ textAlign: 'center', color: '#555', marginBottom: '2rem', maxWidth: 700, margin: '0 auto 2rem' }}>From classic pressure-treated builds to modern wood deck designs — see what&apos;s possible for your Northern Virginia home</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1.25rem' }}>
             {[
               { src: '/images/wood-deck-classic.jpg', title: 'Classic Elevated Wood Deck', desc: 'Traditional second-story deck with stairs and full railings — the most common wood deck configuration for Northern Virginia homes.' },
               { src: '/images/wood-deck-ground.jpg', title: 'Ground-Level Wood Deck', desc: 'Low-profile wood platform with integrated bench seating — perfect for flat lots, no railings required at this height.' },
               { src: '/images/wood-deck-with-railings.jpg', title: 'Wood Deck with Wood Railings', desc: 'Pressure-treated wood deck with matching wood railing system — cohesive natural look that ages beautifully.' },
               { src: '/images/wood-deck-living.jpg', title: 'Wood Deck Outdoor Living', desc: 'Wood deck transformed into a full outdoor living room with Adirondack chairs and view of the surroundings.' },
-              { src: '/images/wood-deck-pt-pine.jpg', title: 'Pressure-Treated Pine Detail', desc: 'Close-up of fresh PT pine deck boards — the most affordable wood deck option starting at $18/sqft.' },
+              { src: '/images/wood-deck-pt-pine.jpg', title: 'Pressure-Treated Pine Detail', desc: 'Close-up of fresh PT pine deck boards — the most affordable wood deck option starting at priced in a written estimate.' },
               { src: '/images/wood-deck-stained-floor.jpg', title: 'Stained Wood Deck Surface', desc: 'Cedar or stained pine deck with rich brown finish — natural wood beauty with weather protection.' },
             ].map((item) => (
               <figure key={item.src} style={{ margin: 0, borderRadius: 10, overflow: 'hidden', boxShadow: '0 4px 16px rgba(0,0,0,0.08)', background: '#fff', display: 'flex', flexDirection: 'column' }}>
@@ -110,7 +110,7 @@ export default function WoodDecksPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Wood decks in Northern Virginia cost <strong>$18&ndash;$45/sqft installed</strong>. Pressure-treated $18&ndash;$35, cedar $25&ndash;$45, exotic hardwoods $35&ndash;$65. Last 10&ndash;40 years depending on species. Require annual sealing in Virginia&apos;s freeze-thaw climate. Lower upfront cost than composite, higher long-term cost due to maintenance.</p>
+          <p>Wood decks in Northern Virginia cost <strong>a written estimate&ndash;priced in a written estimate</strong>. Pressure-treated a written estimate&ndash;a written estimate, cedar a written estimate&ndash;a written estimate, exotic hardwoods a written estimate&ndash;a written estimate. Last 10&ndash;40 years depending on species. Require annual sealing in Virginia&apos;s freeze-thaw climate. Lower upfront cost than composite, higher long-term cost due to maintenance.</p>
         </div>
       </section>
 
@@ -127,12 +127,12 @@ export default function WoodDecksPage() {
               </thead>
               <tbody>
                 {[
-                  ['Pressure-Treated Pine', '$18–$35', '10–15 years', 'Stain/seal yearly', 'Budget builds, basic decks'],
-                  ['Western Red Cedar', '$25–$45', '15–20 years', 'Seal every 2 yrs', 'Natural look, balanced cost'],
-                  ['California Redwood', '$30–$50', '20–25 years', 'Seal every 2 yrs', 'Premium aesthetic, west coast feel'],
-                  ['Ipe (Brazilian Walnut)', '$45–$65', '40+ years', 'Annual oil', 'Ultra-premium, naturally rot-resistant'],
-                  ['Cumaru (Brazilian Teak)', '$35–$55', '30–40 years', 'Annual oil', 'Premium hardwood alternative'],
-                  ['Tigerwood', '$35–$55', '25–35 years', 'Annual oil', 'Striking grain pattern'],
+                  ['Pressure-Treated Pine', 'a written estimate', '10–15 years', 'Stain/seal yearly', 'Budget builds, basic decks'],
+                  ['Western Red Cedar', 'a written estimate', '15–20 years', 'Seal every 2 yrs', 'Natural look, balanced cost'],
+                  ['California Redwood', 'a written estimate', '20–25 years', 'Seal every 2 yrs', 'Premium aesthetic, west coast feel'],
+                  ['Ipe (Brazilian Walnut)', 'a written estimate', '40+ years', 'Annual oil', 'Ultra-premium, naturally rot-resistant'],
+                  ['Cumaru (Brazilian Teak)', 'a written estimate', '30–40 years', 'Annual oil', 'Premium hardwood alternative'],
+                  ['Tigerwood', 'a written estimate', '25–35 years', 'Annual oil', 'Striking grain pattern'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -145,19 +145,19 @@ export default function WoodDecksPage() {
           <h2 style={S.h2}>Wood Deck Options Explained</h2>
 
           <h3 style={S.h3}>Pressure-Treated Wood (Most Common)</h3>
-          <p style={S.p}>The default choice for budget-conscious homeowners. Southern yellow pine treated with copper-based preservatives to resist rot, decay, and insect damage. Most affordable option at $18&ndash;$35/sqft installed. Lasts 10&ndash;15 years with annual staining; only 5&ndash;8 years without. Looks decent when new but turns gray within 12 months without stain.</p>
+          <p style={S.p}>The default choice for budget-conscious homeowners. Southern yellow pine treated with copper-based preservatives to resist rot, decay, and insect damage. Most affordable option at a written estimate&ndash;priced in a written estimate. Lasts 10&ndash;15 years with annual staining; only 5&ndash;8 years without. Looks decent when new but turns gray within 12 months without stain.</p>
 
           <h3 style={S.h3}>Western Red Cedar</h3>
-          <p style={S.p}>Natural beauty without chemical treatment. Cedar has natural rot resistance from oils in the wood. Stays cooler underfoot than PT (lighter color, lower density). Costs $25&ndash;$45/sqft installed. Lasts 15&ndash;20 years with bi-annual sealing. Develops a silver patina over time if left unstained — many homeowners prefer this aged look.</p>
+          <p style={S.p}>Natural beauty without chemical treatment. Cedar has natural rot resistance from oils in the wood. Stays cooler underfoot than PT (lighter color, lower density). Costs a written estimate&ndash;priced in a written estimate. Lasts 15&ndash;20 years with bi-annual sealing. Develops a silver patina over time if left unstained — many homeowners prefer this aged look.</p>
 
           <h3 style={S.h3}>California Redwood</h3>
-          <p style={S.p}>Premium softwood with deep red color and natural rot resistance. More dimensionally stable than cedar (less warping/cupping). Costs $30&ndash;$50/sqft installed. Lasts 20&ndash;25 years with proper care. Less common in Virginia due to East Coast availability and price.</p>
+          <p style={S.p}>Premium softwood with deep red color and natural rot resistance. More dimensionally stable than cedar (less warping/cupping). Costs a written estimate&ndash;priced in a written estimate. Lasts 20&ndash;25 years with proper care. Less common in Virginia due to East Coast availability and price.</p>
 
           <h3 style={S.h3}>Ipe (Brazilian Walnut) &mdash; The Premium Choice</h3>
-          <p style={S.p}>One of the densest, most durable woods available — naturally fire-resistant, rot-resistant, and insect-resistant without any treatment. Costs $45&ndash;$65/sqft installed. Lasts 40+ years with minimal maintenance (annual oil application). Beautiful dark brown color that ages to gray if untreated. Ipe is heavy and hard to work with — installation requires specialty tools and skilled labor.</p>
+          <p style={S.p}>One of the densest, most durable woods available — naturally fire-resistant, rot-resistant, and insect-resistant without any treatment. Costs a written estimate&ndash;priced in a written estimate. Lasts 40+ years with minimal maintenance (annual oil application). Beautiful dark brown color that ages to gray if untreated. Ipe is heavy and hard to work with — installation requires specialty tools and skilled labor.</p>
 
           <h3 style={S.h3}>Cumaru &amp; Tigerwood (Mid-Premium Hardwoods)</h3>
-          <p style={S.p}>Brazilian hardwoods similar to Ipe but more affordable and easier to install. Cumaru ($35&ndash;$55/sqft) is sometimes called &quot;Brazilian Teak&quot; — golden-brown with natural durability. Tigerwood ($35&ndash;$55/sqft) features striking dark grain stripes. Both last 25&ndash;40 years with annual oil.</p>
+          <p style={S.p}>Brazilian hardwoods similar to Ipe but more affordable and easier to install. Cumaru (a written estimate&ndash;priced in a written estimate) is sometimes called &quot;Brazilian Teak&quot; — golden-brown with natural durability. Tigerwood (a written estimate&ndash;priced in a written estimate) features striking dark grain stripes. Both last 25&ndash;40 years with annual oil.</p>
 
           <div style={{ background: 'var(--color-primary)', color: '#fff', borderRadius: 8, padding: '2rem', marginTop: '2rem', marginBottom: '2rem', textAlign: 'center' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.75rem' }}>Get Your Wood Deck Estimate</h2>
@@ -173,7 +173,7 @@ export default function WoodDecksPage() {
 
           <h3 style={S.h3}>Choose WOOD when:</h3>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Budget under $15,000 (PT wood is the only option in this range)</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Budget under a written estimate (PT wood is the only option in this range)</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>You love the look and feel of natural wood — especially exotic hardwoods like Ipe</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>You enjoy the maintenance ritual (annual sealing/staining)</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Selling within 5 years (PT wood is fine for short-term)</li>
@@ -197,14 +197,14 @@ export default function WoodDecksPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>UV exposure (200+ sunny days):</strong> Bleaches color, breaks down lignin fibers — UV-resistant stain helps</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Carpenter bees &amp; termites:</strong> Common in Virginia — annual inspection critical</li>
           </ul>
-          <p style={S.p}><strong>Annual maintenance schedule:</strong> Spring power wash + brightener + stain ($600&ndash;$2,000 by deck size). Fall: clear leaves, inspect for damage. Plan to spend $300&ndash;$800/year on a 300 sqft wood deck.</p>
+          <p style={S.p}><strong>Annual maintenance schedule:</strong> Spring power wash + brightener + stain (a written estimate&ndash;a written estimate by deck size). Fall: clear leaves, inspect for damage. Plan to spend a written estimate&ndash;a written estimate/year on a 300 sqft wood deck.</p>
           <p style={S.p}><Link href="/deck-staining-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>See our deck staining services &rarr;</Link></p>
 
           <h2 style={S.h2}>Real Wood Deck Projects</h2>
           {[
-            { price: '$8,500', desc: '300 sqft Pressure-Treated Deck, Manassas', detail: 'Budget-friendly PT pine deck for a young family. Standard aluminum railings, 4 stair lights. 1.5-week build. Client got a quality wood deck for under $9k.' },
-            { price: '$22,000', desc: '380 sqft Cedar Deck, Vienna', detail: 'Western Red Cedar deck with cedar railings and posts. Custom built-in bench. Stained natural cedar tone. 2.5-week build. Beautiful warm aesthetic that matches client\'s craftsman-style home.' },
-            { price: '$48,000', desc: '500 sqft Ipe Deck, McLean', detail: 'Premium Brazilian Walnut deck with hidden fasteners and stainless hardware. Cable railings for views. 4-week build. 40+ year lifespan with annual oil — will outlast composite.' },
+            { price: 'a written estimate', desc: '300 sqft Pressure-Treated Deck, Manassas', detail: 'Budget-friendly PT pine deck for a young family. Standard aluminum railings, 4 stair lights. 1.5-week build. Client got a quality wood deck for under a written estimate.' },
+            { price: 'a written estimate', desc: '380 sqft Cedar Deck, Vienna', detail: 'Western Red Cedar deck with cedar railings and posts. Custom built-in bench. Stained natural cedar tone. 2.5-week build. Beautiful warm aesthetic that matches client\'s craftsman-style home.' },
+            { price: 'a written estimate', desc: '500 sqft Ipe Deck, McLean', detail: 'Premium Brazilian Walnut deck with hidden fasteners and stainless hardware. Cable railings for views. 4-week build. 40+ year lifespan with annual oil — will outlast composite.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} — {p.desc}</h3>
@@ -214,7 +214,7 @@ export default function WoodDecksPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "Cost of a wood deck in Northern Virginia?", a: "$18-$45/sqft installed. PT pine: $18-$35. Cedar: $25-$45. Ipe: $45-$65. Typical 300-500 sqft: $5,400-$22,500." },
+            { q: "Cost of a wood deck in Northern Virginia?", a: "priced in a written estimate. PT pine: a written estimate. Cedar: a written estimate. Ipe: a written estimate. Typical 300-500 sqft: a written estimate." },
             { q: "How long does a wood deck last?", a: "PT pine: 10-15 years. Cedar: 15-20. Redwood: 20-25. Ipe: 40+. Annual sealing required for all in Virginia climate." },
             { q: "Wood or composite?", a: "Composite is better long-term in Virginia (durability + zero maintenance). Wood makes sense for tight budgets, exotic aesthetic, or short-term ownership." },
             { q: "Best wood for outdoor decks?", a: "Cedar (balance of cost and durability), PT pine (budget), or Ipe (premium, 40+ year life)." },
@@ -241,7 +241,7 @@ export default function WoodDecksPage() {
         </div>
       </article>
       <SimpleCTA title="Build Your Custom Wood Deck" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/wood-decks" />
 

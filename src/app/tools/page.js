@@ -152,7 +152,7 @@ export default function DeckToolsPage() {
 
       <section style={{ padding: '3rem 0', background: '#f8fafc' }}>
         <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1rem' }}>
             {tools.map((tool) => (
               <Link
                 key={tool.href}

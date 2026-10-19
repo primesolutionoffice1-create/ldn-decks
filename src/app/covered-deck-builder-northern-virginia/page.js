@@ -58,7 +58,7 @@ const expansionSections = [
     paragraphs: [
       "Every attached covered deck or open-air porch in Northern Virginia requires a building permit because the roof structure changes the load path of your home. We prepare the structural drawings, site information, and permit package, then coordinate directly with the county during review.",
       "Once permits are approved, a typical attached covered deck often takes 2 to 4 weeks of construction depending on roof complexity, electrical, stairs, and finish scope. Freestanding pavilions or simpler detached structures can move faster.",
-      "Most custom covered deck projects in Northern Virginia start around $25,000+, and larger premium outdoor living builds can climb from there depending on size, framing complexity, ceiling treatment, lighting, rails, and tie-in work. We provide itemized estimates during the on-site consultation so homeowners can see where the dollars are actually going."
+      "Most custom covered deck projects in Northern Virginia start around a written estimate, and larger premium outdoor living builds can climb from there depending on size, framing complexity, ceiling treatment, lighting, rails, and tie-in work. We provide itemized estimates during the on-site consultation so homeowners can see where the dollars are actually going."
     ]
   },
   {
@@ -73,7 +73,7 @@ const expansionSections = [
 
 const faqs = [
   { q: "What is the difference between a covered deck and a screened porch?", a: "A covered deck has a roof but remains open on the sides, which preserves airflow and supports outdoor kitchens, grills, and fire features more naturally. A screened porch has a roof and screen walls, which adds bug protection but changes ventilation and how the space is used." },
-  { q: "How much does a covered deck cost in Northern Virginia?", a: "Most custom covered deck projects in Northern Virginia start around $25,000+ and increase based on roof design, decking material, electrical scope, railing package, stairs, and site complexity. Premium outdoor living projects with kitchens or high-end finishes cost more." },
+  { q: "How much does a covered deck cost in Northern Virginia?", a: "Most custom covered deck projects in Northern Virginia start around a written estimate and increase based on roof design, decking material, electrical scope, railing package, stairs, and site complexity. Premium outdoor living projects with kitchens or high-end finishes cost more." },
   { q: "Do I need a permit for a covered deck in Loudoun County or Fairfax County?", a: "Yes. Any roofed structure attached to the home generally requires a building permit in Northern Virginia jurisdictions. We handle the permit package, structural coordination, and inspection scheduling." },
   { q: "Can you build a roof over an existing deck?", a: "In many cases, yes, but only if the existing deck framing, footings, and attachment details can safely support the added roof load. We evaluate the structure before recommending a covered-deck conversion." },
   { q: "Are covered decks good for outdoor kitchens?", a: "Yes. Covered decks work especially well for outdoor kitchens, grills, smokers, and pizza ovens because they provide weather protection while keeping the space open to the air." },
@@ -94,7 +94,7 @@ const faqSchema = {
 export default function CoveredDeckPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/covered-deck-builder-northern-virginia" name="Covered Deck Builder Northern Virginia | Open-Air Outdoor Living" description="Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/covered-deck-builder-northern-virginia" name="Covered Deck Builder Northern Virginia | Open-Air Outdoor Living" description="Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living." speakable />
       <ServiceSchema
         name="Covered Deck Construction"
         description="Custom covered deck and roof-covered outdoor structures in Northern Virginia. Engineered for weather protection with premium materials."
@@ -127,7 +127,7 @@ export default function CoveredDeckPage() {
 
       <section style={{ backgroundColor: '#f9f9f9', padding: '20px', borderBottom: '1px solid #eee', textAlign: 'center' }}>
         <p style={{ fontSize: '15px', color: '#555', margin: '0 auto', maxWidth: '800px' }}>
-          <strong style={{ color: '#222' }}>Covered deck projects typically start at $25,000+</strong>
+          <strong style={{ color: '#222' }}>Covered deck projects typically start at a written estimate</strong>
           {' '}— roof complexity, size, materials, and electrical integration affect final pricing.{' '}
           <strong>Free in-home estimate included.</strong>
         </p>
@@ -183,7 +183,7 @@ export default function CoveredDeckPage() {
 
       <SimpleCTA title="Build Your Covered Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/covered-deck-builder-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <ContactHome />
     </main>

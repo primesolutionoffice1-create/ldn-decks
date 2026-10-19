@@ -22,7 +22,7 @@ const verifiedFacts = [
   'Virginia DPOR Class A Contractor License #2705191673 — verifiable at dpor.virginia.gov before any contract is signed.',
   'Member of the North American Deck and Railing Association (NADRA), the trade association for deck professionals.',
   'Founder and lead contractor Nicolae Zugrav has 10+ years planning custom composite deck projects in Northern Virginia.',
-  'Typical new deck projects in Northern Virginia range from $15,000 to $45,000 depending on size, materials, stairs, railings, site access, and permits.',
+  'Typical new deck projects in Northern Virginia range from a written estimate to a written estimate depending on size, materials, stairs, railings, site access, and permits.',
   'Standard deck construction usually takes 1 to 2 weeks from the day building begins, weather permitting.',
   'Resurfacing a structurally sound frame with composite boards can save homeowners up to 40% versus full replacement.',
   'Service area: Loudoun, Fairfax, Prince William, Arlington, and Stafford counties, plus Alexandria and Falls Church.',
@@ -39,7 +39,7 @@ const comparisonRows = [
 export default function WhyChooseUsPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-08-06" url="https://ldndecks.com/about/why-choose-us" name="Why Choose LDN Decks | Northern Virginia" description="Why Northern Virginia homeowners choose LDN Decks: verified public profiles, local planning support, written warranty terms, and clear project scopes." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/about/why-choose-us" name="Why Choose LDN Decks | Northern Virginia" description="Why Northern Virginia homeowners choose LDN Decks: verified public profiles, local planning support, written warranty terms, and clear project scopes." speakable />
       <WhyChooseHeader />
 
       <section style={{ padding: '70px 20px', background: '#fff' }} aria-labelledby="why-definition">
@@ -60,7 +60,7 @@ export default function WhyChooseUsPage() {
           <h3 style={{ fontSize: '22px', fontWeight: 800, margin: '28px 0 14px', color: '#111' }}>
             Verified facts homeowners check first
           </h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '14px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '14px' }}>
             {verifiedFacts.map((fact) => (
               <article key={fact} style={{ border: '1px solid #e5e7eb', borderRadius: 8, background: '#fafafa', padding: '18px' }}>
                 <p style={{ margin: 0, color: '#444', lineHeight: 1.6 }}>{fact}</p>
@@ -117,7 +117,7 @@ export default function WhyChooseUsPage() {
       <ProjectProcess />
       <WhyChooseDetails />
       <WhyChooseFAQ />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-08-06" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
     </main>
   );
 }

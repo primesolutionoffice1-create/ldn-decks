@@ -31,7 +31,7 @@ export default function TariffsDeckPricesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/how-tariffs-affect-deck-prices-2026" name="How Tariffs Affect Deck Prices in 2026 | What Homeowners Should Know" description="Tariffs have increased composite decking costs 8-15% in 2026. How this affects your project, which materials are impacted, and how to save. Expert analysis." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/how-tariffs-affect-deck-prices-2026" name="How Tariffs Affect Deck Prices in 2026 | What Homeowners Should Know" description="Tariffs have increased composite decking costs 8-15% in 2026. How this affects your project, which materials are impacted, and how to save. Expert analysis." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How Tariffs Affect Deck Prices in 2026</h1>
@@ -63,13 +63,13 @@ export default function TariffsDeckPricesPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Material', '2025 Price/sqft', '2026 Price/sqft', 'Increase', 'Why'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Aluminum railings', '$35–$55/ft', '$40–$65/ft', '10–20%', 'Aluminum tariffs on imports'],
-                  ['Stainless steel hardware', '$0.50–$1.50/pc', '$0.55–$1.70/pc', '10–15%', 'Steel tariffs'],
-                  ['Imported hardwood (Ipe, Cumaru)', '$12–$20/sqft', '$14–$25/sqft', '15–25%', 'Lumber tariffs + supply chain'],
-                  ['Trex Composite', '$8–$16/sqft', '$8.50–$17/sqft', '5–8%', 'Domestic, recycled minimal impact'],
-                  ['TimberTech AZEK', '$14–$20/sqft', '$15–$22/sqft', '5–10%', 'Mostly domestic PVC'],
-                  ['Pressure-treated lumber', '$2–$4/sqft', '$2.10–$4.20/sqft', '3–5%', 'Domestic supply, steady'],
-                  ['Cedar', '$6–$10/sqft', '$6.50–$11/sqft', '5–10%', 'Canadian supply, some tariff impact'],
+                  ['Aluminum railings', 'a written estimate', 'a written estimate', '10–20%', 'Aluminum tariffs on imports'],
+                  ['Stainless steel hardware', 'a written estimate/pc', 'a written estimate/pc', '10–15%', 'Steel tariffs'],
+                  ['Imported hardwood (Ipe, Cumaru)', 'priced in a written estimate', 'priced in a written estimate', '15–25%', 'Lumber tariffs + supply chain'],
+                  ['Trex Composite', 'priced in a written estimate', 'priced in a written estimate', '5–8%', 'Domestic, recycled minimal impact'],
+                  ['TimberTech AZEK', 'priced in a written estimate', 'priced in a written estimate', '5–10%', 'Mostly domestic PVC'],
+                  ['Pressure-treated lumber', 'priced in a written estimate', 'priced in a written estimate', '3–5%', 'Domestic supply, steady'],
+                  ['Cedar', 'priced in a written estimate', 'priced in a written estimate', '5–10%', 'Canadian supply, some tariff impact'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: j === 3 && parseInt(cell) > 10 ? '#c62828' : (j === 3 && parseInt(cell) <= 8 ? '#2e7d32' : 'inherit') }}>{cell}</td>)}
@@ -80,12 +80,12 @@ export default function TariffsDeckPricesPage() {
           </div>
 
           <h2 style={S.h2}>How This Affects Your Project Cost</h2>
-          <p style={S.p}>For a typical $35,000 composite deck project in Northern Virginia:</p>
+          <p style={S.p}>For a typical a written estimate composite deck project in Northern Virginia:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Materials (~50% of cost):</strong> $17,500 → now $18,500–$19,250 (+$1,000–$1,750)</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Labor (~40% of cost):</strong> $14,000 → up 3–5% regardless of tariffs (+$420–$700)</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Permits/overhead (~10%):</strong> $3,500 → relatively stable</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Total impact:</strong> $1,500–$2,500 more than the same project in 2025 (4–7% overall increase)</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Materials (~50% of cost):</strong> a written estimate → now a written estimate (priced in the written estimate)</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Labor (~40% of cost):</strong> a written estimate → up 3–5% regardless of tariffs (priced in the written estimate)</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Permits/overhead (~10%):</strong> a written estimate → relatively stable</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Total impact:</strong> a written estimate more than the same project in 2025 (4–7% overall increase)</li>
           </ul>
 
           <h2 style={S.h2}>How to Minimize Tariff Impact</h2>
@@ -133,7 +133,7 @@ export default function TariffsDeckPricesPage() {
         </div>
       </article>
       <SimpleCTA title="Lock In Today's Prices Get Your Free Estimate" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/how-tariffs-affect-deck-prices-2026" />
 

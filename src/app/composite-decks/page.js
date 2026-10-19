@@ -20,7 +20,7 @@ import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 export const metadata = buildMetadata({
   path: '/composite-decks',
   title: 'Premier Composite Deck Builder NoVA | Premium Custom Decks',
-  description: 'Premier composite deck builder in Northern Virginia. Trex, TimberTech and AZEK material planning. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax & Leesburg.',
+  description: 'Premier composite deck builder in Northern Virginia. Trex, TimberTech and AZEK material planning. Custom low-maintenance decks from a written estimate in Ashburn, Fairfax & Leesburg.',
   image: '/social/composite-decks-social.png',
 });
 
@@ -109,7 +109,7 @@ const expansionSections = [
     title: "Low Maintenance vs. Zero Maintenance: Real Expectations",
     paragraphs: [
       "While many contractors promise 'zero maintenance,' we prefer to be honest with our Northern Virginia clients. A composite deck is 'low-maintenance,' meaning it does not require sanding, staining, painting, or sealing-ever. However, like any outdoor surface in areas like Fairfax Station or Burke, it will collect dust, pollen, and leaves. A simple seasonal wash with mild soap and water is all that's required to keep your Premium space looking pristine.",
-      "The beauty of this low-maintenance profile is the time and money it saves. Homeowners in Prince William County can spend their weekends enjoying their outdoor living space rather than laboring over it. Over a 10-year period, the cost of staining and professional sanding for a wood deck can easily exceed $5,000 to $8,000. When you factor in these savings, composite decking often pays for its price premium in just 5 to 7 years.",
+      "The beauty of this low-maintenance profile is the time and money it saves. Homeowners in Prince William County can spend their weekends enjoying their outdoor living space rather than laboring over it. Over a 10-year period, the cost of staining and professional sanding for a wood deck can easily exceed a written estimate to a written estimate. When you factor in these savings, composite decking often pays for its price premium in just 5 to 7 years.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We provide our clients with a custom maintenance guide for their specific composite brand, ensuring they know exactly how to care for their investment for maximum longevity."
     ]
   },
@@ -126,7 +126,7 @@ const expansionSections = [
 export default function CompositeDecksPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | Premium Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom low-maintenance decks from $15k+ in Ashburn, Fairfax &amp; Leesburg." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | Premium Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom low-maintenance decks from a written estimate in Ashburn, Fairfax &amp; Leesburg." speakable />
       <ServiceSchema
         name="Composite Deck Installation"
         description="Expert composite deck installation in Northern Virginia. Trex, TimberTech and AZEK material planning. manufacturer material warranties."
@@ -168,7 +168,7 @@ export default function CompositeDecksPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Custom composite deck projects from $15,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Custom composite deck projects from a written estimate</strong>
             <br />
             On this page we focus on <strong style={{ color: '#111' }}>full custom composite builds and installed deck projects</strong>, not board-only retail purchases. In Loudoun County? See our <a href="/composite-deck-builder-loudoun" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Loudoun composite deck builder page</a>. Comparing brands? See our <a href="/trex-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Trex deck page</a> or <a href="/timbertech-decks" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>TimberTech/AZEK deck page</a>. Planning budget? Use the <a href="/deck-cost-calculator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck cost calculator</a> and <a href="/composite-deck-cost-by-size" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>composite cost by size guide</a>. Looking for repair work, board replacement, railing or structural fixes? See our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
@@ -214,7 +214,7 @@ export default function CompositeDecksPage() {
         <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1.5rem' }}>
           Composite decks are long-term investments. Compare photo galleries, public reviews, credentials, permits, and written estimate options before selecting a material package.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem' }}>
           {[
             ['/reviews', 'Customer Reviews'],
             ['/bbb-accredited-deck-builder-virginia', 'BBB Accredited Builder'],
@@ -235,7 +235,7 @@ export default function CompositeDecksPage() {
         <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
           Start with the local market page when permits, HOA rules, neighborhood layout, or county requirements are part of the composite deck decision.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '0.75rem' }}>
           {[
             ['/deck-builder-ashburn-va', 'Ashburn composite decks'],
             ['/deck-builder-leesburg-va', 'Leesburg composite decks'],
@@ -297,7 +297,7 @@ export default function CompositeDecksPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-materials-comparison-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Material Comparison for Virginia Homes →</Link></li>
         </ul>
       </section>
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <ContactHome />
     </main>

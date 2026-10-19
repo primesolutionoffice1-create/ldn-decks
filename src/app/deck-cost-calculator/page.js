@@ -38,7 +38,7 @@ export default function DeckCostCalculator() {
               The calculator combines square footage, a material preset and selected add-ons, then applies a 25-35% model adjustment. Stairs and railings are included only when selected; there is no elevation or permit setting. Treat the result as an illustrative scenario, not a guaranteed price, and request an itemized written estimate for your property.
             </p>
           </div>
-          <NamedAuthor context="Loudoun, Fairfax, Prince William, Arlington, and Stafford counties" lastUpdated="2026-09-13" />
+          <NamedAuthor context="Loudoun, Fairfax, Prince William, Arlington, and Stafford counties" lastUpdated="2026-10-18" />
         </div>
       </section>
 
@@ -145,7 +145,7 @@ export default function DeckCostCalculator() {
           {/* Related guides */}
           <div style={{ marginTop: '3rem', padding: '2rem 0', borderTop: '1px solid #e2e8f0' }}>
             <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '1rem' }}>Learn More About Deck Costs</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem' }}>
               <Link href="/composite-deck-cost-northern-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
                 <p style={{ fontWeight: 600, color: '#d14817' }}>Deck Cost Guide 2026</p>
                 <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Full pricing breakdown by material</p>
@@ -184,7 +184,7 @@ export default function DeckCostCalculator() {
               </Link>
               <Link href="/monthly-payment-composite-deck-northern-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
                 <p style={{ fontWeight: 600, color: '#d14817' }}>Monthly Payment on a Composite Deck</p>
-                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>$15k–$70k project payment examples</p>
+                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>a written estimate project payment examples</p>
               </Link>
               <Link href="/deck-permit-loudoun-county-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
                 <p style={{ fontWeight: 600, color: '#d14817' }}>Loudoun Deck Permit Guide</p>

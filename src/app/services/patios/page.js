@@ -34,18 +34,18 @@ const S = {
 };
 
 const patioCostRows = [
-  ['Concrete pavers (entry)', '200–300 sqft', 'Standard paver, basic 6\" base, simple rectangular layout', '$14,000–$22,000', '$60–$80/sqft'],
-  ['Stamped concrete (mid)', '300–400 sqft', 'Slate or flagstone stamp pattern, integral color, sealer', '$15,000–$25,000', '$40–$65/sqft'],
-  ['Natural stone — flagstone (mid-premium)', '300–400 sqft', 'Irregular Pennsylvania flagstone, hand-fit, polymeric joints', '$22,000–$38,000', '$70–$95/sqft'],
-  ['Bluestone — natural cleft (premium)', '300–450 sqft', 'Full pattern bluestone, dimensional cut, sealed border', '$28,000–$48,000', '$90–$115/sqft'],
-  ['Bluestone — thermal finish (luxury)', '350–500 sqft', 'Thermal-flat bluestone, mortar set, integrated steps & lighting', '$45,000–$75,000', '$120–$165/sqft'],
-  ['Luxury hardscape suite', '500+ sqft', 'Bluestone or travertine, seating walls, fire feature, outdoor kitchen', '$75,000–$160,000+', 'project-based'],
+  ['Concrete pavers (entry)', '200–300 sqft', 'Standard paver, basic 6\" base, simple rectangular layout', 'a written estimate', 'priced in a written estimate'],
+  ['Stamped concrete (mid)', '300–400 sqft', 'Slate or flagstone stamp pattern, integral color, sealer', 'a written estimate', 'priced in a written estimate'],
+  ['Natural stone — flagstone (mid-premium)', '300–400 sqft', 'Irregular Pennsylvania flagstone, hand-fit, polymeric joints', 'a written estimate', 'priced in a written estimate'],
+  ['Bluestone — natural cleft (premium)', '300–450 sqft', 'Full pattern bluestone, dimensional cut, sealed border', 'a written estimate', 'priced in a written estimate'],
+  ['Bluestone — thermal finish (luxury)', '350–500 sqft', 'Thermal-flat bluestone, mortar set, integrated steps & lighting', 'a written estimate', 'priced in a written estimate'],
+  ['Luxury hardscape suite', '500+ sqft', 'Bluestone or travertine, seating walls, fire feature, outdoor kitchen', 'a written estimate', 'project-based'],
 ];
 
 const materialComparison = [
   {
     name: 'Concrete Pavers',
-    cost: '$60–$90/sqft installed',
+    cost: 'priced in a written estimate',
     durability: '30+ years',
     freezeThaw: 'Excellent — individually flexible',
     look: 'Uniform, engineered',
@@ -54,16 +54,16 @@ const materialComparison = [
   },
   {
     name: 'Stamped Concrete',
-    cost: '$40–$70/sqft installed',
+    cost: 'priced in a written estimate',
     durability: '15–25 years',
     freezeThaw: 'Vulnerable — cracks if base settles',
     look: 'Mimics stone or brick patterns',
     repair: 'Patch and re-stamp; rarely invisible',
-    bestFor: 'Larger footprints, budgets under $25k, walkway connectors',
+    bestFor: 'Larger footprints, budgets under a written estimate, walkway connectors',
   },
   {
     name: 'Natural Stone (Bluestone / Flagstone)',
-    cost: '$90–$165/sqft installed',
+    cost: 'priced in a written estimate',
     durability: '50+ years',
     freezeThaw: 'Excellent — natural stone, replaceable piece by piece',
     look: 'Premium, distinctive, color depth no synthetic can match',
@@ -72,7 +72,7 @@ const materialComparison = [
   },
   {
     name: 'Travertine',
-    cost: '$85–$130/sqft installed',
+    cost: 'priced in a written estimate',
     durability: '40+ years',
     freezeThaw: 'Excellent — naturally cool, low absorption when sealed',
     look: 'European, soft cream to walnut tones',
@@ -94,7 +94,7 @@ const patioProcess = [
 const patioFAQs = [
   {
     question: 'How much does a patio cost in Northern Virginia in 2026?',
-    answer: 'A custom patio in Loudoun, Fairfax or Prince William County typically runs $14,000–$48,000 installed, depending on material and footprint. Concrete pavers at 250–300 sqft start near $14,000–$22,000. Stamped concrete runs $15,000–$25,000. Premium bluestone in the 350–450 sqft range lands at $28,000–$48,000. Full luxury hardscape suites with seating walls, fire features and outdoor kitchens run $75,000–$160,000+. Every Loudoun Decks estimate is itemized, written, and delivered after an on-site visit.'
+    answer: 'A custom patio in Loudoun, Fairfax or Prince William County typically is priced in a written estimate installed, depending on material and footprint. Concrete pavers at 250–300 sqft start near a written estimate. Stamped concrete is priced in a written estimate. Premium bluestone in the 350–450 sqft range is priced in a written estimate. Full luxury hardscape suites with seating walls, fire features and outdoor kitchens are priced in a written estimate. Every Loudoun Decks estimate is itemized, written, and delivered after an on-site visit.'
   },
   {
     question: 'Pavers vs stamped concrete vs natural stone — which is best for NoVA?',
@@ -122,7 +122,7 @@ const patioFAQs = [
   },
   {
     question: 'What is the ROI on a custom patio in Northern Virginia?',
-    answer: 'A premium hardscape patio recovers 55–75% of its installed cost at resale in the NoVA market, with luxury bluestone and integrated outdoor-kitchen builds often exceeding 75% cost recovery on properties valued at $1M+ (Remodeling Magazine and National Association of Realtors Outdoor Features Reports). The bigger return is on time-on-market: NoVA homes with finished outdoor living spaces sell measurably faster than comparable inventory without them. For owners holding 7+ years, a patio is among the highest-ROI outdoor additions you can make — second only to a full composite deck plus screened porch combination.'
+    answer: 'A premium hardscape patio recovers 55–75% of its installed cost at resale in the NoVA market, with luxury bluestone and integrated outdoor-kitchen builds often exceeding 75% cost recovery on properties valued at a written estimateM+ (Remodeling Magazine and National Association of Realtors Outdoor Features Reports). The bigger return is on time-on-market: NoVA homes with finished outdoor living spaces sell measurably faster than comparable inventory without them. For owners holding 7+ years, a patio is among the highest-ROI outdoor additions you can make — second only to a full composite deck plus screened porch combination.'
   },
 ];
 
@@ -162,7 +162,7 @@ export default function PatiosPage() {
     <main>
       <JsonLd data={faqSchemaData} />
       <JsonLd data={materialItemListSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone &amp; natural stone. Loudoun, Fairfax, Prince William, Arlington. written estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Licensed Virginia Class A patio contractor in Northern Virginia. Paver patios, stamped concrete, bluestone &amp; natural stone. Loudoun, Fairfax, Prince William, Arlington. written estimate." speakable />
       <ServiceSchema
         name="Custom Patio Construction"
         description="Professional patio design and installation in Northern Virginia. Pavers, flagstone, stamped concrete, and natural stone patios."
@@ -186,11 +186,11 @@ export default function PatiosPage() {
           <div style={S.callout}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
             <p style={{ margin: 0, lineHeight: 1.7 }} data-speakable>
-              A custom patio in Northern Virginia typically costs $14,000–$48,000 installed for a 250–450 sqft build, with material running the largest cost lever — concrete pavers from $60/sqft, stamped concrete from $40/sqft, premium bluestone from $90/sqft. Loudoun Decks is a Virginia Class A licensed patio contractor and Trex product-line planning. We plan county and HOA documentation with each scope, engineer drainage into the base, and deliver an itemized written estimate after the on-site visit. Service area: Loudoun, Fairfax, Prince William, and Arlington counties.
+              A custom patio in Northern Virginia typically is priced in a written estimate installed for a 250–450 sqft build, with material running the largest cost lever — concrete pavers from priced in a written estimate, stamped concrete from priced in a written estimate, premium bluestone from priced in a written estimate. Loudoun Decks is a Virginia Class A licensed patio contractor and Trex product-line planning. We plan county and HOA documentation with each scope, engineer drainage into the base, and deliver an itemized written estimate after the on-site visit. Service area: Loudoun, Fairfax, Prince William, and Arlington counties.
             </p>
           </div>
 
-          <NamedAuthor context="Loudoun, Fairfax, Prince William and Arlington counties" lastUpdated="2026-06-01" />
+          <NamedAuthor context="Loudoun, Fairfax, Prince William and Arlington counties" lastUpdated="2026-10-18" />
 
           <h2 style={S.h2}>The Premier Patio Builder for Luxury Homes in Northern Virginia</h2>
           <p style={S.p}>
@@ -314,7 +314,7 @@ export default function PatiosPage() {
 
           <h2 style={S.h2}>Patio ROI & Resale Value in Northern Virginia</h2>
           <p style={S.p}>
-            A premium hardscape patio recovers 55–75% of its installed cost at resale in the NoVA market (Remodeling Magazine and NAR Outdoor Features Reports). On properties valued at $1M+ in Great Falls, McLean, Vienna and Ashburn, luxury bluestone builds with integrated fire features and outdoor kitchens often exceed 75% cost recovery. The under-reported value is time-on-market: NoVA homes with finished outdoor living spaces sell measurably faster than comparable inventory.
+            A premium hardscape patio recovers 55–75% of its installed cost at resale in the NoVA market (Remodeling Magazine and NAR Outdoor Features Reports). On properties valued at a written estimateM+ in Great Falls, McLean, Vienna and Ashburn, luxury bluestone builds with integrated fire features and outdoor kitchens often exceed 75% cost recovery. The under-reported value is time-on-market: NoVA homes with finished outdoor living spaces sell measurably faster than comparable inventory.
           </p>
           <p style={S.p}>
             For owners holding 7+ years, a patio is among the highest-ROI outdoor additions you can make — second only to a full composite deck plus screened porch combination. The longer you own the home, the more the freeze-thaw resilience of natural stone and premium pavers pays back.
@@ -339,7 +339,7 @@ export default function PatiosPage() {
           <p style={S.p}>
             We build patios across Northern Virginia. Cluster density is heaviest in Loudoun, Fairfax and Prince William; we also serve Arlington and Stafford on a case-by-case basis.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {neighborhoods.map((n) => (
               <div key={n.county} style={{ background: '#fff', border: '1px solid #ececec', borderRadius: 8, padding: '1.2rem' }}>
                 <h3 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.4rem', color: 'var(--color-primary)' }}>{n.county}</h3>
@@ -357,7 +357,7 @@ export default function PatiosPage() {
         <div style={S.container}>
           <h2 style={S.h2}>Patio Project Gallery</h2>
           <p style={S.pMuted}>A closer look at recent NoVA hardscape builds.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             <div style={{ position: 'relative', height: '380px', borderRadius: 8, overflow: 'hidden' }}>
               <Image src="/showcase/img11.jpeg" alt="Custom bluestone patio installation Northern Virginia — Loudoun County build" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 50vw" />
             </div>

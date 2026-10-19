@@ -29,7 +29,7 @@ const faqSchema = {
     { "@type": "Question", name: "How long does Lansdowne architectural review take?", acceptedAnswer: { "@type": "Answer", text: "Lansdowne's review averages 18-25 days when the submission packet is complete on first submission. Incomplete packets — missing material samples, missing color specs, missing structural drawings — restart the clock. We prepare the packet around the current requirements for the relevant Lansdowne sub-community before it is submitted." } },
     { "@type": "Question", name: "What's the difference between Lansdowne Conservancy and Lansdowne Woods?", acceptedAnswer: { "@type": "Answer", text: "Lansdowne is a master-planned golf community split into multiple sub-communities. The Conservancy is the original estate-tier section with the most detailed architectural review (typically requires physical material samples submitted in person). Lansdowne Woods is a 55+ active-adult sub-community with its own slightly streamlined review process. Each sub-community has its own ARC and submission requirements — we file separately based on your specific section." } },
     { "@type": "Question", name: "What materials are approved in Lansdowne?", acceptedAnswer: { "@type": "Answer", text: "Lansdowne's architectural standards favor warm-tone composites and traditional balustrade railings consistent with the community's golf-course estate character. Trex Transcend Spiced Rum, Havana Gold, Tiki Torch, and Vintage Lantern are reliably approved. TimberTech AZEK Vintage Mahogany and PRO Legacy in similar warm tones also clear review. Aluminum-traditional railings are preferred over cable rail in most Lansdowne sections (cable is sometimes approved on specific lots backing to common-area woods). Color specs must match the manufacturer's actual sample card — printed renderings without the physical sample slow review." } },
-    { "@type": "Question", name: "How much does a Lansdowne deck typically cost?", acceptedAnswer: { "@type": "Answer", text: "Lansdowne deck projects routinely land in the premium tier: $45,000-$95,000 for a typical 400-600 sqft composite deck with screened porch or multi-level. Estate-tier Lansdowne Conservancy projects with integrated outdoor kitchens, fire features, and pergolas reach $75,000-$150,000. Pricing reflects the larger lot sizes, the multi-level designs that suit the rolling terrain, and the premium material expectations." } },
+    { "@type": "Question", name: "How much does a Lansdowne deck typically cost?", acceptedAnswer: { "@type": "Answer", text: "Lansdowne deck projects routinely land in the premium tier: a written estimate for a typical 400-600 sqft composite deck with screened porch or multi-level. Estate-tier Lansdowne Conservancy projects with integrated outdoor kitchens, fire features, and pergolas reach a written estimate. Pricing reflects the larger lot sizes, the multi-level designs that suit the rolling terrain, and the premium material expectations." } },
     { "@type": "Question", name: "Can Loudoun Decks handle the Lansdowne approval paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. We prepare the full architectural review packet with physical material samples and color specs, file the Loudoun County building permit in parallel, and coordinate inspection sequencing through the project lifecycle. Call 571-655-7207." } },
   ],
 };
@@ -40,14 +40,14 @@ export default function LansdowneHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Lansdowne HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Lansdowne, Leesburg? Architectural review process for the Conservancy and Lansdowne Woods, 18-25 day timeline, material standards, county permit coordination." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Lansdowne HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Lansdowne, Leesburg? Architectural review process for the Conservancy and Lansdowne Woods, 18-25 day timeline, material standards, county permit coordination." speakable />
       <ArticleSchema
         title="Lansdowne HOA Deck Rules and Approval Guide"
         description="Lansdowne HOA deck approval, Loudoun County permit coordination, material samples, structural review points, and local deck builder support."
         path={PATH}
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-06-04"
+        dateModified="2026-10-18"
       />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -98,10 +98,10 @@ export default function LansdowneHoaDeckRulesPage() {
           <h2 style={S.h2}>Typical Lansdowne Deck Projects + Pricing</h2>
           <p style={S.p}>Lansdowne&apos;s larger lots and estate-tier home values support some of our most ambitious Loudoun County builds:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Standard composite deck</strong> (400-500 sqft): $42,000-$58,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Multi-level deck</strong> (500-700 sqft): $58,000-$85,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck + screened porch combo</strong>: $65,000-$95,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Estate-tier full outdoor-living package</strong> (deck + outdoor kitchen + pergola + fire feature): $95,000-$150,000+</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Standard composite deck</strong> (400-500 sqft): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Multi-level deck</strong> (500-700 sqft): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck + screened porch combo</strong>: a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Estate-tier full outdoor-living package</strong> (deck + outdoor kitchen + pergola + fire feature): a written estimate</li>
           </ul>
 
           <h2 style={S.h2}>How Loudoun Decks Handles Lansdowne Approvals</h2>
@@ -128,7 +128,7 @@ export default function LansdowneHoaDeckRulesPage() {
         </div>
       </article>
       <SimpleCTA title="Lansdowne deck project? We handle every approval." buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Lansdowne (Leesburg) and Loudoun County" lastUpdated="2026-06-04" />
+      <NamedAuthor context="Lansdowne (Leesburg) and Loudoun County" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath="/lansdowne-hoa-deck-rules" />
       <ContactHome />
     </>

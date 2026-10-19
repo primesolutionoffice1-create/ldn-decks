@@ -20,10 +20,10 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "Is a composite deck cheaper than wood in the long run?", acceptedAnswer: { "@type": "Answer", text: "Yes. Over 15 years, composite costs $3,000-$5,000 in total maintenance vs $8,000-$15,000+ for wood. The upfront premium is recovered within 5-7 years." } },
+    { "@type": "Question", name: "Is a composite deck cheaper than wood in the long run?", acceptedAnswer: { "@type": "Answer", text: "Yes. Over 15 years, composite is priced in a written estimate in total maintenance vs a written estimate for wood. The upfront premium is not given a published payback period." } },
     { "@type": "Question", name: "How long does a composite deck last vs wood?", acceptedAnswer: { "@type": "Answer", text: "Composite: 25-50 years. Pressure-treated wood: 10-15 years with annual maintenance. Cedar: 15-20 years with maintenance." } },
     { "@type": "Question", name: "Which is better for Virginia's climate?", acceptedAnswer: { "@type": "Answer", text: "Composite. Virginia's freeze-thaw cycles and humid summers accelerate wood deterioration. Capped composites are impervious to moisture penetration." } },
-    { "@type": "Question", name: "Does composite or wood have better resale value?", acceptedAnswer: { "@type": "Answer", text: "Composite recoups 65-80% at resale vs 50-65% for wood. Buyers prefer composite because it signals low maintenance." } },
+    { "@type": "Question", name: "Does composite or wood have better resale value?", acceptedAnswer: { "@type": "Answer", text: "Composite recoups not a fixed percentage at resale vs not a fixed percentage for wood. Buyers prefer composite because it signals low maintenance." } },
   ],
 };
 
@@ -33,13 +33,13 @@ export default function CompositeVsWoodPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/composite-deck-vs-wood-deck-virginia" name="Composite vs Wood Deck: 2026 Virginia Cost Comparison" description="Is composite decking cheaper than wood? 15-year total cost analysis for Northern Virginia homeowners. See lifespan, maintenance &amp; ROI head-to-head." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/composite-deck-vs-wood-deck-virginia" name="Composite vs Wood Deck: 2026 Virginia Cost Comparison" description="Is composite decking cheaper than wood? 15-year total cost analysis for Northern Virginia homeowners. See lifespan, maintenance &amp; ROI head-to-head." speakable />
       <ArticleSchema
         title="Composite Deck vs Wood Deck: Complete Virginia Comparison (2026)"
         description="Composite vs wood deck cost, maintenance, lifespan, ROI compared for Virginia homeowners. 15-year total cost analysis."
         path="/composite-deck-vs-wood-deck-virginia"
         datePublished="2025-05-01"
-        dateModified="2026-04-23"
+        dateModified="2026-10-18"
       />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
@@ -52,7 +52,7 @@ export default function CompositeVsWoodPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Bottom Line:</p>
-          <p data-speakable>Wood costs less upfront ($18–$35/sqft vs $30–$75/sqft), but composite is cheaper over 15 years when you add maintenance. Composite lasts 2–3x longer, requires zero staining, and has better resale value. For Virginia&apos;s climate, composite wins.</p>
+          <p data-speakable>Wood costs less upfront (priced in a written estimate vs priced in a written estimate), but composite is cheaper over 15 years when you add maintenance. Composite lasts 2–3x longer, requires zero staining, and has better resale value. For Virginia&apos;s climate, composite wins.</p>
         </div>
       </section>
 
@@ -77,16 +77,16 @@ export default function CompositeVsWoodPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Factor', 'Pressure-Treated Wood', 'Composite (Trex/TimberTech)'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Upfront cost', '$18–$35/sqft', '$30–$75/sqft'],
-                  ['Annual maintenance', '$300–$800/year', '$0–$50/year'],
-                  ['15-year total (300 sqft)', '$15,000–$25,000+', '$12,000–$23,000'],
+                  ['Upfront cost', 'priced in a written estimate', 'priced in a written estimate'],
+                  ['Annual maintenance', 'a written estimate/year', 'a written estimate/year'],
+                  ['15-year total (300 sqft)', 'a written estimate', 'a written estimate'],
                   ['Lifespan', '10–15 years', '25–50 years'],
                   ['Maintenance', 'Stain/seal every 1–2 yrs, sand, replace rotted boards', 'Occasional soap & water wash'],
                   ['Splinters', 'Yes (worsens with age)', 'Never'],
                   ['Warping/cracking', 'Common after 3–5 years', 'Rare (capped technology)'],
                   ['Mold/rot resistance', 'Low without annual treatment', 'High (impervious cap)'],
                   ['Color retention', 'Fades to gray in 1–2 years', 'Minimal fade, stabilizes at 6 months'],
-                  ['Resale ROI', '50–65%', '65–80%'],
+                  ['Resale ROI', 'not a fixed percentage', 'not a fixed percentage'],
                   ['Warranty', 'None (labor only)', '25–50 years (manufacturer)'],
                   ['Environmental', 'Chemical treatment, shorter life', 'Trex = 95% recycled materials'],
                 ].map((row, i) => (
@@ -107,12 +107,12 @@ export default function CompositeVsWoodPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Cost Component', 'PT Wood', 'Trex Transcend'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Initial build (300 sqft)', '$8,000', '$16,000'],
-                  ['Staining/sealing (every 2 yrs × 7)', '$4,200', '$0'],
-                  ['Board replacement (yr 8–12)', '$2,500', '$0'],
-                  ['Power washing (annual)', '$2,250', '$750'],
+                  ['Initial build (300 sqft)', 'a written estimate', 'a written estimate'],
+                  ['Staining/sealing (every 2 yrs × 7)', 'a written estimate', 'a written estimate'],
+                  ['Board replacement (yr 8–12)', 'a written estimate', 'a written estimate'],
+                  ['Power washing (annual)', 'a written estimate', 'a written estimate'],
                   ['Your time (weekends maintaining)', '100+ hours', '~5 hours'],
-                  ['15-Year Total', '$16,950', '$16,750'],
+                  ['15-Year Total', 'a written estimate', 'a written estimate'],
                 ].map((row, i) => {
                   const isTotal = i === 5;
                   return (
@@ -126,7 +126,7 @@ export default function CompositeVsWoodPage() {
               </tbody>
             </table>
           </div>
-          <p style={S.p}>At year 15, the wood deck needs full replacement ($8,000+). The composite deck has 10–35 years of life remaining.</p>
+          <p style={S.p}>At year 15, the wood deck needs full replacement (a written estimate). The composite deck has 10–35 years of life remaining.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Virginia Climate: Why It Matters</h2>
           <p style={S.p}><strong>Freeze-thaw (Dec–Mar):</strong> Wood absorbs water. When it freezes, it expands and cracks. After 50–80 cycles per winter, untreated boards split within 3–4 years. Composite&apos;s capped surface prevents moisture entry entirely.</p>
@@ -135,7 +135,7 @@ export default function CompositeVsWoodPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>When Wood Still Makes Sense</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Tight budget (under $10k):</strong> If budget is the primary constraint and you need a functional deck now.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Tight budget (under a written estimate):</strong> If budget is the primary constraint and you need a functional deck now.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Temporary (under 5 years):</strong> Selling soon or planning to replace later.</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Natural wood preference:</strong> Some homeowners genuinely prefer real wood and are willing to maintain it. Cedar is better than PT in this case.</li>
           
@@ -145,9 +145,9 @@ export default function CompositeVsWoodPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "Is composite cheaper than wood long-term?", a: "Yes. Over 15 years, composite costs $3,000-$5,000 in maintenance vs $8,000-$15,000+ for wood. The upfront premium is recovered within 5-7 years." },
+            { q: "Is composite cheaper than wood long-term?", a: "Yes. Over 15 years, composite is priced in a written estimate in maintenance vs a written estimate for wood. The upfront premium is not given a published payback period." },
             { q: "How long does composite last vs wood?", a: "Composite: 25-50 years. PT wood: 10-15 years with annual maintenance, 5-8 years without. Cedar: 15-20 years." },
-            { q: "Which has better resale value?", a: "Composite recoups 65-80% vs 50-65% for wood. Buyers prefer composite because it signals low maintenance." },
+            { q: "Which has better resale value?", a: "Composite recoups not a fixed percentage vs not a fixed percentage for wood. Buyers prefer composite because it signals low maintenance." },
             { q: "Which is better for Virginia?", a: "Composite. Freeze-thaw cycles and humidity accelerate wood deterioration. Capped composites are impervious to moisture." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
@@ -176,7 +176,7 @@ export default function CompositeVsWoodPage() {
 
       <SimpleCTA title="Not Sure Which Material Fits Your Budget?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/composite-deck-vs-wood-deck-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

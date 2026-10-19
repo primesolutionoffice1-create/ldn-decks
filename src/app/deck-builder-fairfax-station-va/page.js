@@ -27,7 +27,7 @@ export const metadata = buildMetadata({
 const faqs = [
   {
     q: 'How much does a composite deck cost in Fairfax Station?',
-    a: 'Most Fairfax Station composite deck projects start around $30,000 for a serious replacement and can run $55,000 to $95,000+ when the scope includes a larger footprint, stairs, lighting, premium railings, screened porch work, or complex wooded-lot access. The best estimate comes after checking the existing framing, ledger, footings, site slope, and permit requirements.',
+    a: 'Most Fairfax Station composite deck projects start around a written estimate for a serious replacement and can are priced in a written estimate when the scope includes a larger footprint, stairs, lighting, premium railings, screened porch work, or complex wooded-lot access. The best estimate comes after checking the existing framing, ledger, footings, site slope, and permit requirements.',
   },
   {
     q: 'Do Fairfax Station deck projects need Fairfax County permits?',
@@ -114,7 +114,7 @@ export default function FairfaxStationDeckBuilderPage() {
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Fairfax Station" url={`https://ldndecks.com${PATH}`} />
       <WebPageSchema
-        dateModified="2026-07-19"
+        dateModified="2026-10-18"
         url={`https://ldndecks.com${PATH}`}
         name="Deck Builder in Fairfax Station, VA | Premium Composite Decks"
         description="Premium deck builder in Fairfax Station, VA for wooded lots, South Run, Crosspointe, Barrington, composite decks, screened porches, deck replacement, and Fairfax County permits."
@@ -155,7 +155,7 @@ export default function FairfaxStationDeckBuilderPage() {
           <div style={{ borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
             <p style={{ margin: 0, lineHeight: 1.7 }} data-speakable>
-              Fairfax Station deck projects should be planned as premium structural work, not basic deck add-ons. Most serious composite deck replacements start around $30,000, with larger wooded-lot, screened porch, railing, lighting, and outdoor living scopes often reaching $55,000 to $95,000+. The key steps are confirming Fairfax County permit needs, checking the existing structure, planning drainage and access, and choosing materials that handle shade, moisture, and tree debris.
+              Fairfax Station deck projects should be planned as premium structural work, not basic deck add-ons. Most serious composite deck replacements start around a written estimate, with larger wooded-lot, screened porch, railing, lighting, and outdoor living scopes often reaching a written estimate to a written estimate. The key steps are confirming Fairfax County permit needs, checking the existing structure, planning drainage and access, and choosing materials that handle shade, moisture, and tree debris.
             </p>
           </div>
 
@@ -232,7 +232,7 @@ export default function FairfaxStationDeckBuilderPage() {
           </p>
 
           <h2 style={{ fontSize: '1.85rem', fontWeight: 800, marginBottom: '1rem' }}>Common Fairfax Station Project Scopes</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1rem', marginBottom: '2.25rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 230px), 1fr))', gap: '1rem', marginBottom: '2.25rem' }}>
             {projectScopes.map((scope) => (
               <Link key={scope.title} href={scope.href} style={{ display: 'block', padding: '1.15rem', border: '1px solid #e5e7eb', borderRadius: 8, color: 'inherit', textDecoration: 'none', background: '#fff' }}>
                 <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.05rem', fontWeight: 800 }}>{scope.title}</h3>

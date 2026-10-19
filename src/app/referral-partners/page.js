@@ -88,7 +88,7 @@ const S = {
   eyebrow: { color: 'var(--color-primary)', fontWeight: 800, letterSpacing: '0.04em', textTransform: 'uppercase', fontSize: '0.82rem', marginBottom: '0.75rem' },
   h2: { fontSize: 'clamp(1.8rem, 3vw, 2.45rem)', lineHeight: 1.15, marginBottom: '1rem', color: 'var(--color-dark)' },
   p: { lineHeight: 1.7, color: '#4b5563', fontSize: '1.02rem' },
-  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' },
+  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem' },
   card: { background: '#fff', border: '1px solid #e8e2da', borderRadius: 8, padding: '1.35rem', boxShadow: '0 10px 24px rgba(28, 23, 19, 0.06)' },
 };
 
@@ -153,7 +153,7 @@ export default function ReferralPartnersPage() {
 
       <section style={{ ...S.section, background: '#f7f4ef' }}>
         <div style={S.container}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem', alignItems: 'start' }}>
             <div>
               <p style={S.eyebrow}>What to send us</p>
               <h2 style={S.h2}>Ideal Referral Types</h2>
@@ -201,7 +201,7 @@ export default function ReferralPartnersPage() {
 
       <section style={{ ...S.section, background: '#2c241f', color: '#fff' }}>
         <div style={S.container}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1.25rem', alignItems: 'center' }}>
             <div>
               <p style={{ ...S.eyebrow, color: '#f2b37b' }}>Service areas</p>
               <h2 style={{ ...S.h2, color: '#fff' }}>Northern Virginia Coverage for Local Referral Partners</h2>

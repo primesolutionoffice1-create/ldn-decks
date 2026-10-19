@@ -44,7 +44,7 @@ const inclusions = [
 const burkeFAQs = [
   {
     q: "How much does a new deck cost in Burke, VA?",
-    a: "Burke composite deck projects typically range from $25,000 to $55,000, depending on size, material tier and site conditions. A standard 300-400 sqft Trex Transcend deck with aluminum railings runs $32,000-$42,000 installed. Full replacements that require new footings and framing sit at the higher end. We provide itemized estimates after a site visit  -  no ballpark numbers over the phone."
+    a: "Burke composite deck projects typically range from a written estimate to a written estimate, depending on size, material tier and site conditions. A standard 300-400 sqft Trex Transcend deck with aluminum railings is priced in a written estimate installed. Full replacements that require new footings and framing sit at the higher end. We provide itemized estimates after a site visit  -  no ballpark numbers over the phone."
   },
   {
     q: "Does Burke Centre HOA allow composite decking?",
@@ -81,7 +81,7 @@ const expansionSections = [
     title: "Fairfax County Permits for Burke Properties",
     paragraphs: [
       "Burke is unincorporated Fairfax County, so all deck permits run through the county's Land Development Services office. A standard deck permit requires a site plan, structural drawings showing footing size and spacing, ledger connection details and guardrail specifications. Plan review currently runs 3-6 weeks, with occasional longer waits during peak season.",
-      "We prepare the full submission package  -  engineered drawings that meet Fairfax County's requirements  -  and file it electronically. Once approved, three inspections follow: footing, framing and final. Our crew schedules each inspection at the appropriate build phase so there is no idle time between steps. The permit fee for a typical Burke deck runs $300-$500 depending on project valuation."
+      "We prepare the full submission package  -  engineered drawings that meet Fairfax County's requirements  -  and file it electronically. Once approved, three inspections follow: footing, framing and final. Our crew schedules each inspection at the appropriate build phase so there is no idle time between steps. The permit fee for a typical Burke deck is priced in a written estimate depending on project valuation."
     ]
   },
   {
@@ -97,7 +97,7 @@ const expansionSections = [
     paragraphs: [
       "A screened porch paired with an open deck is one of the most common builds we do in Burke. The combination gives homeowners a bug-free dining or seating area under roof and an open section for grilling and sun. In Burke's tree-heavy lots, the screened section also keeps falling debris off the furniture.",
       "Structurally, we frame the screened porch into the deck from the start. The posts, headers and roof tie-in are part of the original engineering, not an afterthought. This means one permit, one build schedule and a finished product that looks intentional rather than added on. The roof pitch is set to clear the home's existing roofline and drain properly  -  a detail that matters on Burke's tight-setback lots.",
-      "Cost for a combined deck-and-screened-porch build in Burke typically runs $45,000-$65,000 depending on total square footage and finish level. It is a larger investment than a deck alone, but it effectively adds a three-season room to the home at a fraction of what an interior addition would cost."
+      "Cost for a combined deck-and-screened-porch build in Burke typically is priced in a written estimate depending on total square footage and finish level. It is a larger investment than a deck alone, but it effectively adds a three-season room to the home at a fraction of what an interior addition would cost."
     ]
   }
 ];
@@ -106,7 +106,7 @@ export default function DeckBuilderBurkePage() {
   return (
     <main>
       <LocalBusinessSchema city="Burke" url="https://ldndecks.com/deck-builder-burke-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-burke-va" name="Deck Builder in Burke, VA | Composite Decks | Loudoun Decks" description="Deck builder in Burke, VA. Custom Trex composite decks replacing aging wood in Burke Centre, Lakewood Hills &amp; Rolling Valley. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-burke-va" name="Deck Builder in Burke, VA | Composite Decks | Loudoun Decks" description="Deck builder in Burke, VA. Custom Trex composite decks replacing aging wood in Burke Centre, Lakewood Hills &amp; Rolling Valley. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Burke, VA's Trusted Deck Company"
         title="Custom Deck Builder in Burke, VA"
@@ -115,7 +115,7 @@ export default function DeckBuilderBurkePage() {
       <ServiceMain
         subtitle="Established Neighborhoods, Modern Decks"
         title="Deck Builder Burke VA  -  Premium Quality"
-        description="Burke's mature neighborhoods deserve decks built to last. We replace 20-30+ year-old wood decks with Trex and TimberTech composite, engineered for Burke's shaded lots and heavy tree canopy. Projects from $25k+."
+        description="Burke's mature neighborhoods deserve decks built to last. We replace 20-30+ year-old wood decks with Trex and TimberTech composite, engineered for Burke's shaded lots and heavy tree canopy. Projects from a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "Full deck replacement  -  footings to finish",
@@ -199,7 +199,7 @@ export default function DeckBuilderBurkePage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Burke" /></div></section>
       <SimpleCTA title="Replace Your Aging Burke Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-burke-va" />
-      <NamedAuthor context="Burke and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Burke and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

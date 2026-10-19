@@ -160,7 +160,7 @@ export default function ReplaceWoodDeckWithCompositePage() {
       />
 
       <section style={{ background: '#fff7ed', borderBottom: '1px solid #fed7aa', padding: '22px 20px' }}>
-        <div style={{ maxWidth: 1050, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.25rem', alignItems: 'center' }}>
+        <div style={{ maxWidth: 1050, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '1.25rem', alignItems: 'center' }}>
           <div>
             <p style={{ margin: '0 0 0.45rem', color: '#c2410c', fontWeight: 900, textTransform: 'uppercase', fontSize: '0.78rem' }}>
               Built for high-intent homeowners
@@ -224,7 +224,7 @@ export default function ReplaceWoodDeckWithCompositePage() {
           <div style={{ display: 'grid', gap: '1.5rem' }}>
             {beforeAfterPairs.map((pair) => (
               <figure key={pair.id} style={{ margin: 0, border: '1px solid #e5e7eb', borderRadius: 10, overflow: 'hidden', background: '#f9fafb' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 4, background: '#e5e7eb' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 4, background: '#e5e7eb' }}>
                   <div style={{ position: 'relative', aspectRatio: '4 / 3', background: '#d1d5db' }}>
                     <span style={{ ...baLabel, background: '#111827', color: '#fff' }}>Before</span>
                     <Image src={pair.beforeImg} alt={pair.beforeAlt} fill loading="lazy" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1100px) 50vw, 520px" style={{ objectFit: 'cover' }} />
@@ -261,7 +261,7 @@ export default function ReplaceWoodDeckWithCompositePage() {
           <p style={{ maxWidth: 820, color: '#4b5563', lineHeight: 1.7, margin: '0 0 1.4rem' }}>
             The expensive mistake is installing premium composite boards over a weak frame. Composite replacement should start with structure: ledger, flashing, joists, beams, posts, footings, stairs, guards, drainage, and code readiness.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem' }}>
             <div style={boxStyle}>
               <h3 style={{ marginTop: 0 }}>Resurfacing can work when...</h3>
               <ul style={{ paddingLeft: '1.1rem', color: '#4b5563', lineHeight: 1.65 }}>
@@ -332,7 +332,7 @@ export default function ReplaceWoodDeckWithCompositePage() {
           <p style={{ maxWidth: 820, color: '#d1d5db', lineHeight: 1.7, margin: '0 0 1.4rem' }}>
             This page should be used for high-intent searches tied to old wood deck replacement, composite upgrade, Trex replacement, TimberTech replacement, Fiberon comparison, and resurfacing versus full replacement.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '1rem' }}>
             {[
               ['High priority', 'replace wood deck with composite, composite deck replacement, wood deck replacement, replace deck boards with composite'],
               ['Premium modifier', 'Trex deck replacement, TimberTech deck replacement, AZEK deck replacement, Fiberon decking installer'],

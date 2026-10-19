@@ -21,14 +21,14 @@ export const metadata = buildMetadata({
 
 const PATH = '/credit-score-deck-financing';
 
-// Total interest computed from (monthly × 120) − $30,000 principal at lowest
+// Total interest computed from (monthly × 120) − a written estimate principal at lowest
 // APR in each band; provides a citable cost-of-credit fact per band.
 const scoreBands = [
-  { band: '760+', tier: 'Excellent', apr: '6.99–8.99%', approval: 'Most flexible — promotional 0% offers, longer terms, higher loan amounts', monthly30k: '$348–$380 /mo (10y)', interest30k: '$11,760–$15,600' },
-  { band: '700–759', tier: 'Good', apr: '8.99–11.99%', approval: 'Strong approval odds across most lenders; mid-range APR', monthly30k: '$380–$430 /mo (10y)', interest30k: '$15,600–$21,600' },
-  { band: '660–699', tier: 'Fair', apr: '11.99–15.99%', approval: 'Approval likely but at higher APR; some lenders may cap loan size', monthly30k: '$430–$486 /mo (10y)', interest30k: '$21,600–$28,320' },
-  { band: '620–659', tier: 'Below Average', apr: '15.99–22.99%', approval: 'Limited lender options; longer terms may help monthly payment', monthly30k: '$486–$571 /mo (10y)', interest30k: '$28,320–$38,520' },
-  { band: 'Below 620', tier: 'Subprime', apr: '22.99%+', approval: 'Conventional home-improvement lenders typically decline; HELOC, co-signer, or cash plan recommended', monthly30k: '$571+ /mo (10y)', interest30k: '$38,520+' },
+  { band: '760+', tier: 'Excellent', apr: '6.99–8.99%', approval: 'Most flexible — promotional 0% offers, longer terms, higher loan amounts', monthly30k: 'a lender-calculated payment (10y)', interest30k: 'a written estimate' },
+  { band: '700–759', tier: 'Good', apr: '8.99–11.99%', approval: 'Strong approval odds across most lenders; mid-range APR', monthly30k: 'a lender-calculated payment (10y)', interest30k: 'a written estimate' },
+  { band: '660–699', tier: 'Fair', apr: '11.99–15.99%', approval: 'Approval likely but at higher APR; some lenders may cap loan size', monthly30k: 'a lender-calculated payment (10y)', interest30k: 'a written estimate' },
+  { band: '620–659', tier: 'Below Average', apr: '15.99–22.99%', approval: 'Limited lender options; longer terms may help monthly payment', monthly30k: 'a lender-calculated payment (10y)', interest30k: 'a written estimate' },
+  { band: 'Below 620', tier: 'Subprime', apr: '22.99%+', approval: 'Conventional home-improvement lenders typically decline; HELOC, co-signer, or cash plan recommended', monthly30k: 'a lender-calculated payment (10y)', interest30k: 'a written estimate' },
 ];
 
 const faqs = [
@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: 'Can I finance a deck with a 650 credit score?',
-    a: 'Yes, often. Many home-improvement lenders work with credit scores in the 620–680 range, though APR will be higher (12–18%). The monthly payment difference can be material — a $30,000 deck at 16% APR is roughly $50–$80/month more than the same loan at 9%.',
+    a: 'Yes, often. Many home-improvement lenders work with credit scores in the 620–680 range, though APR will be higher (12–18%). The monthly payment difference can be material — a a written estimate deck at 16% APR is roughly a lender-calculated paymentnth more than the same loan at 9%.',
   },
   {
     q: 'Does my income matter as much as my credit score?',
@@ -89,9 +89,9 @@ export default function CreditScoreDeckFinancingPage() {
         path={PATH}
         image="/images/deck_financing_contract.png"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="What Credit Score Do You Need for Deck Financing? (2026)" description="Credit score requirements for deck financing in Northern Virginia. Typical APR by score band, soft-pull pre-qualification process, and approval tips." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="What Credit Score Do You Need for Deck Financing? (2026)" description="Credit score requirements for deck financing in Northern Virginia. Typical APR by score band, soft-pull pre-qualification process, and approval tips." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -162,7 +162,7 @@ export default function CreditScoreDeckFinancingPage() {
           <h2 style={{ ...S.h2, marginTop: 0 }}>APR and Approval by Credit Score Band</h2>
           <p style={S.p}>
             The table below shows typical 2026 home-improvement APR ranges by FICO credit score band, plus the
-            corresponding monthly payment on a $30,000 deck at the lower end of each band&apos;s APR range, financed
+            corresponding monthly payment on a a written estimate deck at the lower end of each band&apos;s APR range, financed
             over 10 years. These are typical Northern Virginia lender ranges via aggregators like Enhancify.
           </p>
           <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
@@ -172,8 +172,8 @@ export default function CreditScoreDeckFinancingPage() {
                   <th style={S.th}>Credit Score</th>
                   <th style={S.th}>Tier</th>
                   <th style={S.th}>Typical APR</th>
-                  <th style={S.th}>$30k Monthly (10y)</th>
-                  <th style={S.th}>$30k Total Interest (10y)</th>
+                  <th style={S.th}>a written estimate Monthly (10y)</th>
+                  <th style={S.th}>a written estimate Total Interest (10y)</th>
                 </tr>
               </thead>
               <tbody>
@@ -191,8 +191,8 @@ export default function CreditScoreDeckFinancingPage() {
           </div>
           <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 8, padding: '1rem 1.25rem', marginBottom: '1.25rem' }}>
             <p data-speakable style={{ margin: 0, fontWeight: 600 }}>
-              A $30,000 deck financed at 9% APR over 10 years costs approximately $45,600 total — $15,600 in interest.
-              At 16% APR the same loan costs about $58,320 total — $28,320 in interest, a $12,720 difference over the
+              A a written estimate deck financed at 9% APR over 10 years costs approximately a written estimate total — a written estimate in interest.
+              At 16% APR the same loan costs about a written estimate total — a written estimate in interest, a a written estimate difference over the
               life of the loan for the same project amount.
             </p>
           </div>
@@ -273,7 +273,7 @@ export default function CreditScoreDeckFinancingPage() {
       </article>
 
       <SimpleCTA title="Start with a Written Estimate" buttonText="Get Free Written Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

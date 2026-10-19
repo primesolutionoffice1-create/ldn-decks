@@ -58,7 +58,7 @@ const getEstimateSchema = [
 export default function GetEstimatePage() {
   return (
     <>
-      <WebPageSchema dateModified="2026-09-15" url="https://ldndecks.com/get-estimate" name="Request a Deck Estimate Northern Virginia | Loudoun Decks" description="Request a deck estimate for composite decks, deck replacement, repairs, screened porches and outdoor living projects in Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/get-estimate" name="Request a Deck Estimate Northern Virginia | Loudoun Decks" description="Request a deck estimate for composite decks, deck replacement, repairs, screened porches and outdoor living projects in Northern Virginia." speakable />
       {getEstimateSchema.map((schema, index) => (
         <JsonLd key={index} data={schema} />
       ))}
@@ -198,21 +198,21 @@ export default function GetEstimatePage() {
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>What happens next</h2>
           <p style={{ color: '#555', lineHeight: 1.7 }}>We review your project, clarify scope, discuss budget range, and schedule the right next step if the project is a fit.</p>
-          <NamedAuthor context="estimate triage for decks, resurfacing, repairs, screened porches, and outdoor living projects in Northern Virginia" lastUpdated="2026-09-15" />
+          <NamedAuthor context="estimate triage for decks, resurfacing, repairs, screened porches, and outdoor living projects in Northern Virginia" lastUpdated="2026-10-18" />
         </div>
       </section>
 
       <section style={{ padding: '3rem 0', background: '#f9f9f9' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, textAlign: 'center', marginBottom: '2rem' }}>What We Build</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1.25rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 230px), 1fr))', gap: '1.25rem' }}>
             {[
-              { title: 'Custom Composite Decks', price: 'From $15K', desc: 'Trex, TimberTech & AZEK', href: '/composite-deck-cost-northern-virginia' },
-              { title: 'Screened Porches', price: 'From $25K', desc: 'Bug-free 3-season rooms', href: '/screened-porch-cost-northern-virginia' },
-              { title: 'Deck Resurfacing', price: 'From $15K', desc: 'Wood to composite upgrade', href: '/deck-resurfacing-vs-replacement' },
-              { title: 'Pergolas & Gazebos', price: 'From $8K', desc: 'Shade structures', href: '/services/gazebo-pergola' },
+              { title: 'Custom Composite Decks', price: 'From a written estimate', desc: 'Trex, TimberTech & AZEK', href: '/composite-deck-cost-northern-virginia' },
+              { title: 'Screened Porches', price: 'From a written estimate', desc: 'Bug-free 3-season rooms', href: '/screened-porch-cost-northern-virginia' },
+              { title: 'Deck Resurfacing', price: 'From a written estimate', desc: 'Wood to composite upgrade', href: '/deck-resurfacing-vs-replacement' },
+              { title: 'Pergolas & Gazebos', price: 'From a written estimate', desc: 'Shade structures', href: '/services/gazebo-pergola' },
               { title: 'Structural Repair', price: 'Inspection first', desc: 'Posts, ledger & inspection fixes', href: '/services/deck-repair' },
-              { title: 'Patios & Hardscape', price: 'From $10K', desc: 'Pavers, flagstone, stamped', href: '/services/patios' },
+              { title: 'Patios & Hardscape', price: 'From a written estimate', desc: 'Pavers, flagstone, stamped', href: '/services/patios' },
             ].map(s => (
               <Link key={s.href} href={s.href} style={{ display: 'block', background: '#fff', borderRadius: 8, padding: '1.25rem', textDecoration: 'none', color: 'inherit', border: '1px solid #e5e5e5' }}>
                 <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0.25rem' }}>{s.title}</h3>
@@ -264,7 +264,7 @@ export default function GetEstimatePage() {
           <p style={{ color: '#555', lineHeight: 1.7, textAlign: 'center', maxWidth: 720, margin: '0 auto 2rem' }}>
             Compare reviews, credentials, project photos, planning tools, and local permit guidance before requesting the final written estimate.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem' }}>
             {[
               ['/reviews', 'Public Review Profiles'],
               ['/bbb-accredited-deck-builder-virginia', 'BBB Accredited Deck Builder'],

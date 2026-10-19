@@ -32,26 +32,11 @@ export default function ServiceSchema({
     areaServed: areaServed || DEFAULT_AREA_SERVED,
   };
 
-  if (lowPrice && highPrice) {
-    schema.offers = {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'USD',
-      lowPrice,
-      highPrice,
-    };
-  } else if (price) {
-    schema.offers = {
-      '@type': 'Offer',
-      priceCurrency: 'USD',
-      price,
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        priceCurrency: 'USD',
-        price,
-        unitText: 'per project',
-      },
-    };
-  }
+  // Dollar offers are not emitted. Published lowPrice/highPrice/price props are
+  // unsourced planning figures, and AggregateOffer would present them as an offer.
+  void lowPrice;
+  void highPrice;
+  void price;
 
   if (relatedServices?.length) {
     schema.isRelatedTo = relatedServices.map(svcUrl => ({

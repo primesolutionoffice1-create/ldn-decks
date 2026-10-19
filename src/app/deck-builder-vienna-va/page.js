@@ -47,7 +47,7 @@ const inclusions = [
 const viennaFAQs = [
   {
     q: "How much does a custom deck cost in Vienna, VA?",
-    a: "Most professional deck projects in Vienna range from $25,000 to $65,000. Composite decks (Trex/AZEK) typically average between $40 and $65 per square foot installed, depending on structural needs and railing choices."
+    a: "Most professional deck projects in Vienna range from a written estimate to a written estimate. Composite decks (Trex/AZEK) typically average between a written estimate and a written estimate per square foot installed, depending on structural needs and railing choices."
   },
   {
     q: "Do I need a permit for a deck in the Town of Vienna?",
@@ -112,7 +112,7 @@ const expansionSections = [
     title: "The Financial ROI of a Premium Deck in Vienna",
     paragraphs: [
       "In the competitive Vienna and Tysons Corner real estate markets, curb appeal and outdoor amenities are top priorities for buyers. A professionally installed composite deck by a Premium rated builder is one of the highest ROI investments you can make in your home. It expands your living square footage for a fraction of the cost of an indoor addition.",
-      "Moreover, by choosing low-maintenance materials, you are saving thousands of dollars over the lifespan of the deck. Traditional wood decks in Virginia's humid climate require professional staining every 2 years—a cost that can easily exceed $8,000 over a decade. A composite deck by Loudoun Decks eliminates these costs, paying for its premium price point in just a few short years.",
+      "Moreover, by choosing low-maintenance materials, you are saving thousands of dollars over the lifespan of the deck. Traditional wood decks in Virginia's humid climate require professional staining every 2 years—a cost that can easily exceed a written estimate over a decade. A composite deck by Loudoun Decks eliminates these costs, paying for its premium price point in just a few short years.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. We are committed to building high-value, high-performance decks that enhance your lifestyle and your property value in the heart of Northern Virginia."
     ]
   }
@@ -123,7 +123,7 @@ export default function ViennaDeckBuilderPage() {
     <main>
       <JsonLd data={viennaFaqSchema} />
       <LocalBusinessSchema city="Vienna" url="https://ldndecks.com/deck-builder-vienna-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-vienna-va" name="Deck Builder in Vienna, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Vienna, VA. Google reviews. Custom Trex &amp; TimberTech decks, screened porches &amp; pergolas. Town of Vienna permit experts. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-vienna-va" name="Deck Builder in Vienna, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Vienna, VA. Google reviews. Custom Trex &amp; TimberTech decks, screened porches &amp; pergolas. Town of Vienna permit experts. Free estimate." speakable />
       <ServicesHeader
         subtext="Vienna, VA Deck Builder"
         title="Custom Deck Builder in Vienna, VA"
@@ -134,7 +134,7 @@ export default function ViennaDeckBuilderPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: $5,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: a written estimate</strong>
             <br />
             We focus on <strong style={{ color: '#111' }}>full custom Vienna builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
           </p>
@@ -144,7 +144,7 @@ export default function ViennaDeckBuilderPage() {
       <ServiceMain
         subtitle="Vienna's Trusted Choice"
         title="Deck Builder Vienna VA - Premium Craftsmanship"
-        description="We build the outdoor spaces Vienna homeowners are proud to show off. Custom designs, Town of Vienna permit expertise, and premium materials from $25k+."
+        description="We build the outdoor spaces Vienna homeowners are proud to show off. Custom designs, Town of Vienna permit expertise, and premium materials from a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "Town of Vienna building permit experts",
@@ -257,7 +257,7 @@ export default function ViennaDeckBuilderPage() {
 
       <SimpleCTA title="Build Your Dream Deck in Vienna" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-vienna-va" />
-      <NamedAuthor context="Vienna and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Vienna and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

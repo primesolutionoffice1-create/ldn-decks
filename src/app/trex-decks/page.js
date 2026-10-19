@@ -117,7 +117,7 @@ const expansionSections = [
 export default function TrexDecksPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/trex-decks" name="Trex Deck Builder Northern Virginia" description="Trex product-line planning in Northern Virginia. Trex Transcend, Select and Enhance installations with manufacturer warranty." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/trex-decks" name="Trex Deck Builder Northern Virginia" description="Trex product-line planning in Northern Virginia. Trex Transcend, Select and Enhance installations with manufacturer warranty." speakable />
       <ServiceSchema
         name="Trex Deck Installation"
         description="Trex product-line planning installer in Northern Virginia. Trex Enhance, Select, and Transcend product lines. manufacturer warranty."
@@ -159,7 +159,7 @@ export default function TrexDecksPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>New Trex deck projects from $15,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>New Trex deck projects from a written estimate</strong>
             <br />
             On this page we focus on <strong style={{ color: '#111' }}>full contractor-installed Trex deck projects</strong>, not board-only retail purchases. Use the <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>payment estimator tool</Link> to model monthly payments, or see our <Link href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link> for repair work, board replacement, railing, or structural fixes.
           </p>
@@ -173,9 +173,9 @@ export default function TrexDecksPage() {
             Trex Deck Cost in Northern Virginia (2026)
           </h2>
           <p data-speakable style={{ marginBottom: '1.5rem', lineHeight: 1.7, color: '#2d3748' }}>
-            A Trex deck in Northern Virginia typically runs <strong>$35–$80 per square foot installed</strong>,
-            depending on tier. A 350 sqft Trex Enhance project lands $18,000–$26,000; Trex Transcend usually runs
-            $22,000–$32,000; Trex Signature composite decking usually runs $28,000–$40,000+ for the same
+            A Trex deck in Northern Virginia typically runs <strong>a written estimate per square foot installed</strong>,
+            depending on tier. A 350 sqft Trex Enhance project lands a written estimate; Trex Transcend usually runs
+            a written estimate; Trex Signature composite decking usually is priced in a written estimate for the same
             size.
           </p>
           <div style={{ overflowX: 'auto', marginBottom: '1.25rem' }}>
@@ -191,20 +191,20 @@ export default function TrexDecksPage() {
               <tbody>
                 <tr>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>Trex Enhance</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$35–$45</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$18,000–$26,000</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>25-yr residential + 25-yr fade &amp; stain</td>
                 </tr>
                 <tr style={{ background: '#fafafa' }}>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>Trex Transcend</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$45–$60</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$22,000–$32,000</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>25-yr residential + 25-yr fade &amp; stain</td>
                 </tr>
                 <tr>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>Trex Signature</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$60–$80</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$28,000–$40,000+</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>50-yr residential + 50-yr fade &amp; stain</td>
                 </tr>
               </tbody>
@@ -237,7 +237,7 @@ export default function TrexDecksPage() {
       />
 
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-05-26" />
+        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-10-18" />
       </div>
       <ServiceContentExpansion sections={expansionSections} />
 

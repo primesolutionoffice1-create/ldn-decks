@@ -50,7 +50,7 @@ const services = [
 const faqs = [
   { q: "Do you build decks in Arlington County?", a: "Yes. LDN Decks serves all of Arlington County including Arlington, Crystal City, Ballston, Clarendon, Rosslyn, Pentagon City, Shirlington, Cherrydale, Lyon Village, Bluemont, Fairlington, and surrounding neighborhoods." },
   { q: "Does Arlington County require a deck permit?", a: "Yes. Most decks attached to a home or over 30 inches above grade require a building permit. Arlington also has strict historic district overlays in some areas. We handle all permits." },
-  { q: "How much does a deck cost in Arlington?", a: "Arlington deck costs run 25-35% above the Virginia average due to tight urban lots and premium materials. A typical 300 sqft composite deck runs $17,000-$34,000 depending on materials and complexity." },
+  { q: "How much does a deck cost in Arlington?", a: "Arlington deck costs run 25-35% above the Virginia average due to tight urban lots and premium materials. A typical 300 sqft composite deck is priced in a written estimate depending on materials and complexity." },
   { q: "Do you work with Arlington HOAs and community groups?", a: "Yes. We prepare all HOA submission documents and design within your community's architectural and historic overlay requirements." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within 2-4 weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
 ];
@@ -64,7 +64,7 @@ export default function ArlingtonCountyPage() {
         description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Arlington County, VA."
         url="https://ldndecks.com/near-you/arlington-county"
       />
-      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/near-you/arlington-county" name="Premium Deck Builder Arlington County VA | Free Quote in 24h" description="Deck and outdoor living contractor in Arlington County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/near-you/arlington-county" name="Premium Deck Builder Arlington County VA | Free Quote in 24h" description="Deck and outdoor living contractor in Arlington County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Arlington County, VA"
@@ -135,7 +135,7 @@ export default function ArlingtonCountyPage() {
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead><tr style={{ background: '#f5f5f5' }}><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project Type</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Estimated Cost Range</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Average Timeline</th></tr></thead>
               <tbody>
-                {[['300 sqft Composite Deck', '$17,000 – $34,000', '1-2 weeks'], ['500 sqft Multi-Level Deck', '$33,000 – $56,000', '2-4 weeks'], ['Screened Porch (250 sqft)', '$36,000 – $66,000', '3-5 weeks'], ['Deck Replacement (wood to composite)', '$19,000 – $38,000', '1-2 weeks'], ['Paver Patio (300 sqft)', '$11,000 – $26,000', '1-2 weeks']].map((r, i) => (
+                {[['300 sqft Composite Deck', 'a written estimate', '1-2 weeks'], ['500 sqft Multi-Level Deck', 'a written estimate', '2-4 weeks'], ['Screened Porch (250 sqft)', 'a written estimate', '3-5 weeks'], ['Deck Replacement (wood to composite)', 'a written estimate', '1-2 weeks'], ['Paver Patio (300 sqft)', 'a written estimate', '1-2 weeks']].map((r, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>{r.map((c, j) => <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{c}</td>)}</tr>
                 ))}
               </tbody>
@@ -191,7 +191,7 @@ export default function ArlingtonCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

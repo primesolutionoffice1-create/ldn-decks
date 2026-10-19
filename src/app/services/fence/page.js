@@ -40,7 +40,7 @@ const inclusions = [
 const fenceFAQs = [
   {
     q: "How much does a privacy fence cost in Loudoun County?",
-    a: "Standard 6-foot wood privacy fences in Loudoun County typically cost between $35 and $65 per linear foot, while vinyl and aluminum options range from $50 to $90+."
+    a: "Standard 6-foot wood privacy fences in Loudoun County typically cost between a written estimate and a written estimate per linear foot, while vinyl and aluminum options range from a written estimate to a written estimate."
   },
   {
     q: "Do I need a building permit for a fence in Fairfax County?",
@@ -135,14 +135,14 @@ export default function FencePage() {
         relatedServices={['https://ldndecks.com/services/fence-cleaning', 'https://ldndecks.com/services/new-decks']}
       />
       <JsonLd data={fenceFaqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/fence" name="Fence Installation Loudoun County | LDN Decks" description="Loudoun Decks provides expert fence installation for homeowners in Loudoun County, Fairfax, and Prince William. Custom wood, vinyl, and aluminum fencing." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/fence" name="Fence Installation Loudoun County | LDN Decks" description="Loudoun Decks provides expert fence installation for homeowners in Loudoun County, Fairfax, and Prince William. Custom wood, vinyl, and aluminum fencing." speakable />
       <ServicesHeader
         subtext="Documented Fence Installation"
         title="Custom Fence Design & Installation"
         description="Loudoun Decks provides premier fence construction for homeowners in Loudoun County, Fairfax County, and Prince William County. Secure, private, and beautiful yard sanctuaries."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
       </section>
 
       <ServiceMain
@@ -167,8 +167,8 @@ export default function FencePage() {
         <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Building a fence and deck at the same time saves money through shared mobilization, site prep, material delivery, and dumpster costs. Many homeowners add privacy fencing when they build or replace their deck.</p>
         <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
           <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Example: 350 sqft Deck + 120 ft Privacy Fence</h3>
-          <p style={{ marginBottom: '0.5rem' }}>Separate projects: $30,000 (deck) + $6,000 (fence) = $36,000</p>
-          <p style={{ marginBottom: '0.5rem' }}>Bundled together: $30,500 total <strong>saves $5,500 (15%)</strong></p>
+          <p style={{ marginBottom: '0.5rem' }}>Separate projects: a written estimate (deck) + a written estimate (fence) = a written estimate</p>
+          <p style={{ marginBottom: '0.5rem' }}>Bundled together: a written estimate total <strong>saves a written estimate (15%)</strong></p>
           <p style={{ fontSize: '0.9rem', color: '#555' }}>Same materials, same quality, same warranty just smarter scheduling.</p>
         </div>
       </section>

@@ -77,7 +77,7 @@ const expansionSections = [
 export default function HouseSidingWashingPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/house-siding-washing" name="Professional House Siding Washing NoVA | Safe Exterior Cleaning" description="Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/house-siding-washing" name="Professional House Siding Washing NoVA | Safe Exterior Cleaning" description="Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement." speakable />
       <ServiceSchema
         name="House Siding Washing"
         description="Professional house siding washing in Northern Virginia — safely removing dirt, mold, and algae from vinyl and fiber cement siding."
@@ -93,7 +93,7 @@ export default function HouseSidingWashingPage() {
         description="Loudoun Decks provides professional house siding washing for homeowners in Northern Virginia, helping restore the original beauty of your home's exterior."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       </section>
 
       <ServiceMain
@@ -130,7 +130,7 @@ export default function HouseSidingWashingPage() {
           { q: "How often should I wash my siding in Northern Virginia?", a: "Most homes benefit from washing every 1 to 2 years because of humidity, pollen and shaded elevations. North-facing walls, wooded lots and siding near decks or porches often need attention sooner." },
           { q: "Can siding washing be done with deck or patio cleaning?", a: "Yes. Coordinating siding, deck, patio and railing cleaning usually creates a better finished look because the whole outdoor living area is refreshed at once instead of leaving one surface visibly older than the others." },
           { q: "Do you protect landscaping and deck boards during siding washing?", a: "Yes. We pre-rinse and protect nearby plants, deck boards, railings, furniture and exterior details where needed, then control the rinse path so cleaning solution and debris do not collect around sensitive areas." },
-          { q: "How much does house siding washing cost?", a: "Most residential siding washing in Northern Virginia ranges from $300 to $1,200. The final price depends on the size of the home, number of stories, siding material, and the severity of mold or staining. We provide free on-site estimates so the quote reflects your actual conditions." },
+          { q: "How much does house siding washing cost?", a: "Most residential siding washing in Northern Virginia ranges from a written estimate to a written estimate. The final price depends on the size of the home, number of stories, siding material, and the severity of mold or staining. We provide free on-site estimates so the quote reflects your actual conditions." },
           { q: "Can siding washing remove paint or damage surfaces?", a: "Our soft-wash method is specifically designed to avoid surface damage. We use low-pressure application and adjust detergent strength and rinse pressure for each material — vinyl, fiber cement, painted wood, stucco, and brick each get a tailored approach. The goal is to remove buildup while preserving the finish underneath." }
         ]}
       />

@@ -65,7 +65,7 @@ export default function ReviewPage() {
       <section style={S.section}>
         <div style={S.container}>
           <h2 style={S.h2}>Share Your Experience on Google</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
             {[
               {
                 title: 'Google',

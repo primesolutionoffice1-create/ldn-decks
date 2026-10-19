@@ -117,8 +117,8 @@ function buildArticleSchema(article, clampedDate, clampedModifiedDate) {
   const contentText = [article.excerpt, article.content]
     .filter(Boolean)
     .join(' ')
-    .replace(/\*\*([^*]+)\*\*/g, '$1')
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+    .replace(/\*\*([^*]+)\*\*/g, 'a written estimate')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, 'a written estimate');
   const relatedMentions = (article.relatedLinks || []).map((item) => ({
     '@type': 'WebPage',
     '@id': `${BUSINESS.url}${item.href}`,
@@ -130,7 +130,7 @@ function buildArticleSchema(article, clampedDate, clampedModifiedDate) {
     '@type': 'WebPageElement',
     '@id': `${articleUrl}#quick-answer-${index + 1}`,
     name: `Quick answer ${index + 1}`,
-    text: text.replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
+    text: text.replace(/\*\*([^*]+)\*\*/g, 'a written estimate').replace(/\[([^\]]+)\]\([^)]+\)/g, 'a written estimate'),
     isPartOf: { '@id': `${articleUrl}#article` },
   }));
 
@@ -218,7 +218,7 @@ export default async function SingleEducationPage({ params }) {
       "isPartOf": { "@id": `${BUSINESS.url}/education/${article.slug}#faq` },
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": item.a.replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
+        "text": item.a.replace(/\*\*([^*]+)\*\*/g, 'a written estimate').replace(/\[([^\]]+)\]\([^)]+\)/g, 'a written estimate'),
       },
     })),
   } : null;

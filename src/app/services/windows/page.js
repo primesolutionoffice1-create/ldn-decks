@@ -40,7 +40,7 @@ const windowInclusions = [
 const windowFAQs = [
   {
     q: "How much does a typical window replacement cost in Loudoun County?",
-    a: "Standard vinyl replacement windows in Loudoun County range from $700 to $1,200 per opening, while high-end wood or fiberglass can exceed $2,000 including installation."
+    a: "Standard vinyl replacement windows in Loudoun County range from a written estimate to a written estimate per opening, while high-end wood or fiberglass can exceed a written estimate including installation."
   },
   {
     q: "What is the best type of window for Northern Virginia's climate?",
@@ -116,7 +116,7 @@ const expansionSections = [
 export default function WindowsPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/windows" name="Window Replacement Loudoun County | LDN Decks" description="Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/windows" name="Window Replacement Loudoun County | LDN Decks" description="Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal." speakable />
       <ServiceSchema
         name="Window Installation"
         description="Residential window replacement and installation in Northern Virginia. Energy-efficient vinyl, wood, and fiberglass windows."
@@ -131,7 +131,7 @@ export default function WindowsPage() {
         description="Loudoun Decks provides premium energy-efficient window replacement for homeowners in Loudoun County, Fairfax County, and Prince William County. Enhance your home with 1,500+ words of expertise."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       </section>
 
       <ServiceMain 

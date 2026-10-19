@@ -51,7 +51,7 @@ const services = [
 
 const faqs = [
   { q: "Do you work throughout all of Fairfax County?", a: "Yes. We serve homeowners across Fairfax County, including Alexandria, Fairfax, Vienna, Reston, Herndon, Mclean, Falls Church, Annandale, Burke, Springfield, Chantilly, Centreville, Oakton, Great Falls, Lorton, Tysons, West Springfield and nearby communities." },
-  { q: "How much does a new deck typically cost in Fairfax County?", a: "In Fairfax County, a 300 sq ft composite deck typically runs $16,000–$32,000 and a 500 sq ft multi-level deck $32,000–$55,000. Final pricing depends on materials, design details, and site conditions. After a free on-site visit, we provide a clear written estimate so you know exactly what to expect." },
+  { q: "How much does a new deck typically cost in Fairfax County?", a: "In Fairfax County, a 300 sq ft composite deck typically is priced in a written estimate and a 500 sq ft multi-level deck a written estimate. Final pricing depends on materials, design details, and site conditions. After a free on-site visit, we provide a clear written estimate so you know exactly what to expect." },
   { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget. Deck replacements are especially common on the 1980s–1990s colonials throughout Vienna, Oakton, and Burke." },
   { q: "Do you handle permits for deck projects?", a: "Yes. Fairfax County requires a permit for all attached decks and any deck over 200 square feet, submitted through the FIDO online system. Review typically takes 3–6 weeks plus footing, framing, and final inspections. We prepare the structural drawings and handle the entire FIDO submission and inspector coordination." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within a few weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
@@ -66,7 +66,7 @@ export default function FairfaxCountyPage() {
           description="LDN Decks builds custom decks, screened porches, patios, and outdoor living spaces throughout Fairfax County, VA."
           url="https://ldndecks.com/near-you/fairfax-county"
         />
-      <WebPageSchema dateModified="2026-06-04" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Written Estimates" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Written Estimates" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
             <ServicesHeader
           subtext="Serving Northern Virginia"
           title="Deck Builder in Fairfax County, VA"
@@ -130,7 +130,7 @@ export default function FairfaxCountyPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Fairfax County Homeowners Trust LDN Decks</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County is the most populous county in Virginia with over 1.1 million residents and median home values exceeding $650,000. The county&apos;s established neighborhoods — from Vienna and McLean to Burke and Springfield — represent decades of homeownership, and many properties are now due for outdoor living upgrades as original decks reach the end of their lifespan.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County is the most populous county in Virginia with over 1.1 million residents and median home values exceeding a written estimate. The county&apos;s established neighborhoods — from Vienna and McLean to Burke and Springfield — represent decades of homeownership, and many properties are now due for outdoor living upgrades as original decks reach the end of their lifespan.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks brings <strong>Trex, TimberTech, AZEK, and pressure-treated framing</strong> experience to every Fairfax County project. We understand the county&apos;s detailed building code requirements, HOA architectural review processes, and the high standards Fairfax homeowners expect.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Fairfax County Building Permits & Codes</h3>
@@ -142,7 +142,7 @@ export default function FairfaxCountyPage() {
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead><tr style={{ background: '#f5f5f5' }}><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Cost Range</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Timeline</th></tr></thead>
               <tbody>
-                {[['300 sqft Composite Deck', '$16,000 – $32,000', '1-2 weeks'], ['500 sqft Multi-Level Deck', '$32,000 – $55,000', '2-4 weeks'], ['Screened Porch', '$35,000 – $65,000', '3-5 weeks'], ['Deck Replacement', '$20,000 – $40,000', '1-2 weeks'], ['Paver Patio', '$12,000 – $28,000', '1-2 weeks']].map((r, i) => (
+                {[['300 sqft Composite Deck', 'a written estimate', '1-2 weeks'], ['500 sqft Multi-Level Deck', 'a written estimate', '2-4 weeks'], ['Screened Porch', 'a written estimate', '3-5 weeks'], ['Deck Replacement', 'a written estimate', '1-2 weeks'], ['Paver Patio', 'a written estimate', '1-2 weeks']].map((r, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>{r.map((c, j) => <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{c}</td>)}</tr>
                 ))}
               </tbody>
@@ -153,7 +153,7 @@ export default function FairfaxCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>McLean & Great Falls:</strong> Premium AZEK and Trex Transcend decks on estate properties, <Link href="/outdoor-kitchen-builder-northern-virginia">outdoor kitchens</Link>, multi-zone entertainment areas combining deck + screened porch + patio. These high-value homes demand exceptional quality and design.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Vienna & Oakton:</strong> <Link href="/services/deck-replacement">Deck replacements</Link> on 1980s-1990s colonials, <Link href="/screened-porch-builder-northern-virginia">screened porch additions</Link>, and pergola installations. Many homes here have original wood decks that are now 25-30 years old — prime candidates for composite upgrades.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Reston & Herndon:</strong> Reston Association-approved composite builds, townhome deck/patio combos, and elevated deck designs for wooded lots with grade changes. We have extensive experience with Reston&apos;s architectural review requirements.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Burke, Springfield & Lorton:</strong> Family-oriented deck builds with integrated lighting, stair systems, and multi-level designs for sloped lots. Budget-friendly Trex Enhance projects are popular here at $30-$50/sqft.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Burke, Springfield & Lorton:</strong> Family-oriented deck builds with integrated lighting, stair systems, and multi-level designs for sloped lots. Budget-friendly Trex Enhance projects are popular here at priced in a written estimate.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Centreville & Chantilly:</strong> Full deck replacements, composite resurfacing, and fence packages. HOA communities like <Link href="/virginia-run-hoa-deck-rules">Virginia Run</Link> and <Link href="/sully-station-hoa-deck-rules">Sully Station</Link> have specific requirements we know well.</p>
         </div>
       </article>
@@ -209,7 +209,7 @@ export default function FairfaxCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Fairfax County" lastUpdated="2026-06-04" />
+      <NamedAuthor context="Fairfax County" lastUpdated="2026-10-18" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

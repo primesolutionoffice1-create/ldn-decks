@@ -24,7 +24,7 @@ const PATH = '/resurface-or-replace-deck-financing';
 const faqs = [
   {
     q: 'Is resurfacing cheaper to finance than full replacement?',
-    a: 'Yes, when the existing frame passes inspection. A 350 sqft composite resurfacing typically runs $18,000–$28,000, while a full replacement runs $25,000–$45,000+. Lower project amount = lower monthly payment at the same APR and term.',
+    a: 'Yes, when the existing frame passes inspection. A 350 sqft composite resurfacing typically is priced in a written estimate, while a full replacement is priced in a written estimate. Lower project amount = lower monthly payment at the same APR and term.',
   },
   {
     q: 'Can I finance just the resurfacing portion?',
@@ -70,10 +70,10 @@ const S = {
 };
 
 const rows = [
-  ['350 sqft project', '$18,000–$28,000', '$25,000–$38,000', '$7,000–$10,000 saved'],
-  ['450 sqft project', '$22,000–$34,000', '$32,000–$46,000', '$10,000–$12,000 saved'],
-  ['600 sqft project', '$28,000–$42,000', '$42,000–$58,000', '$14,000–$16,000 saved'],
-  ['Monthly /mo @ 8.99% 10y (350 sqft mid)', '$278/mo (resurface $22k)', '$405/mo (replace $32k)', '$127/mo less'],
+  ['350 sqft project', 'a written estimate', 'a written estimate', 'a written estimate saved'],
+  ['450 sqft project', 'a written estimate', 'a written estimate', 'a written estimate saved'],
+  ['600 sqft project', 'a written estimate', 'a written estimate', 'a written estimate saved'],
+  ['Monthly /mo @ 8.99% 10y (350 sqft mid)', 'a lender-calculated payment (resurface a written estimate)', 'a lender-calculated payment (replace a written estimate)', 'a lender-calculated payment less'],
 ];
 
 export default function ResurfaceOrReplaceFinancingPage() {
@@ -86,9 +86,9 @@ export default function ResurfaceOrReplaceFinancingPage() {
         path={PATH}
         image="/images/img26.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Resurface or Replace Before Financing? 2026 Decision Guide" description="Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, and monthly payment math for Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Resurface or Replace Before Financing? 2026 Decision Guide" description="Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, and monthly payment math for Northern Virginia." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -117,8 +117,8 @@ export default function ResurfaceOrReplaceFinancingPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            <strong>Resurface</strong> if the existing frame passes structural inspection — saves $7,000–$16,000+ and
-            lowers the monthly payment by $100–$200/mo. <strong>Replace</strong> if joists, posts, footings, or ledger
+            <strong>Resurface</strong> if the existing frame passes structural inspection — saves a written estimate and
+            lowers the monthly payment by a lender-calculated payment. <strong>Replace</strong> if joists, posts, footings, or ledger
             fail — financing a resurface on an unsafe frame is not a real saving. Free inspection at{' '}
             <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>/get-estimate</Link>.
           </p>
@@ -171,10 +171,10 @@ export default function ResurfaceOrReplaceFinancingPage() {
           <p style={S.p}>
             We don&apos;t recommend resurfacing because it&apos;s cheaper. We recommend it when the existing frame
             passes structural inspection. Reusing a failing frame is a warranty problem and a safety risk — saving
-            $10,000 on the project amount means nothing if the deck fails inspection two years later. The decision tree
+            a written estimate on the project amount means nothing if the deck fails inspection two years later. The decision tree
             is binary:
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             <div style={{ background: '#e8f5e9', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, color: '#2e7d32', marginTop: 0, marginBottom: '0.75rem' }}>RESURFACE ✓</h3>
               <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem', margin: 0 }}>
@@ -199,10 +199,10 @@ export default function ResurfaceOrReplaceFinancingPage() {
 
           <h2 style={S.h2}>Financing Math: Same APR, Different Principal</h2>
           <p style={S.p}>
-            The APR a lender offers is based on your credit profile, not the project type. So a $22,000 resurface and a
-            $32,000 replacement, financed at the same APR over the same term, differ only in monthly payment and total
-            interest. At 8.99% over 10 years: resurface is $278/mo with ~$11,200 total interest; replacement is $405/mo
-            with ~$16,600 total interest. Same loan terms, different principal.
+            The APR a lender offers is based on your credit profile, not the project type. So a a written estimate resurface and a
+            a written estimate replacement, financed at the same APR over the same term, differ only in monthly payment and total
+            interest. At 8.99% over 10 years: resurface is a lender-calculated payment with ~a written estimate total interest; replacement is a lender-calculated payment
+            with ~a written estimate total interest. Same loan terms, different principal.
           </p>
 
           <h2 style={S.h2}>When Replacement Pays Off Long-Term</h2>
@@ -255,7 +255,7 @@ export default function ResurfaceOrReplaceFinancingPage() {
       </article>
 
       <SimpleCTA title="Price the Right Scope: Resurface or Replace?" buttonText="Schedule Free Inspection" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

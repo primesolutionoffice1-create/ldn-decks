@@ -51,7 +51,7 @@ const alexandriaFAQs = [
   },
   {
     q: "What is the cost of a composite deck in Alexandria?",
-    a: "A professional composite deck in Alexandria typically ranges from $20,000 to $50,000+, depending on size, materials, multi-level design, and add-ons like screened porches."
+    a: "A professional composite deck in Alexandria typically ranges from a written estimate to a written estimate, depending on size, materials, multi-level design, and add-ons like screened porches."
   },
   {
     q: "Do you handle the Alexandria permitting process?",
@@ -90,7 +90,7 @@ const expansionSections = [
   {
     title: "Composite Decking Specialists for Alexandria Homes",
     paragraphs: [
-      "The humid Virginia summers make composite decking the ideal choice for Alexandria homeowners. We plan Trex, TimberTech, and AZEK decking options with low-maintenance boards selected for Virginia humidity and freeze-thaw exposure. Projects typically start around $20,000 and scale based on your specific design requirements.",
+      "The humid Virginia summers make composite decking the ideal choice for Alexandria homeowners. We plan Trex, TimberTech, and AZEK decking options with low-maintenance boards selected for Virginia humidity and freeze-thaw exposure. Projects typically start around a written estimate and scale based on your specific design requirements.",
       "We specialize in designing decks that maximize the usable outdoor space of your property, even on tight townhome lots. Integrated lighting, custom railings, and built-in seating are standard requests that we execute flawlessly.",
       "Every composite deck proposal in Alexandria includes manufacturer warranty information for the selected product line and installation practices aligned with published manufacturer guidance."
     ],
@@ -122,7 +122,7 @@ export default function DeckBuilderAlexandriaPage() {
   return (
     <main>
       <LocalBusinessSchema city="Alexandria" url="https://ldndecks.com/deck-builder-alexandria-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-alexandria-va" name="Deck Builder in Alexandria VA | Composite Decks | Loudoun Decks" description="Trusted Alexandria, VA deck builder. Trex, TimberTech, and AZEK material planning. Custom composite decks, porches &amp; pergolas. Licensed &amp; insured. Free written estimate — (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-alexandria-va" name="Deck Builder in Alexandria VA | Composite Decks | Loudoun Decks" description="Trusted Alexandria, VA deck builder. Trex, TimberTech, and AZEK material planning. Custom composite decks, porches &amp; pergolas. Licensed &amp; insured. Free written estimate — (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Alexandria, VA's Trusted Deck Company"
         title="Custom Deck Builder in Alexandria, VA"
@@ -131,7 +131,7 @@ export default function DeckBuilderAlexandriaPage() {
       <ServiceMain
         subtitle="Historic & Modern Craftsmanship"
         title="Deck Builder Alexandria VA  -  Premium Quality"
-        description="We build the outdoor spaces Alexandria homeowners love. Custom designs, HOA-ready plans, and premium composite materials starting at $20k+."
+        description="We build the outdoor spaces Alexandria homeowners love. Custom designs, HOA-ready plans, and premium composite materials starting at a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "Full Alexandria & Fairfax County Permit management",
@@ -262,7 +262,7 @@ export default function DeckBuilderAlexandriaPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Alexandria" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Alexandria" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-alexandria-va" />
-      <NamedAuthor context="Alexandria and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Alexandria and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

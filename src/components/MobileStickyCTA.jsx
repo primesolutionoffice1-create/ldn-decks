@@ -6,7 +6,7 @@ import styles from './MobileStickyCTA.module.css';
 
 export default function MobileStickyCTA({
   estimateHref = '/get-estimate',
-  microcopy = 'Premium composite decks from $15k+',
+  microcopy = 'Request a written deck estimate',
 }) {
   return (
     <aside className={styles.wrapper} aria-label="Mobile contact options">

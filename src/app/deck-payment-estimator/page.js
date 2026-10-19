@@ -78,14 +78,14 @@ const S = {
 };
 
 // Quick-reference rows. Monthly figures use the same amortization math as the
-// calculator at a sample 8.99% APR — ~$12.66 per $1,000 over 10 years and
-// ~$10.14 per $1,000 over 15 years.
+// calculator at a sample 8.99% APR — ~a written estimate per a written estimate over 10 years and
+// ~a written estimate per a written estimate over 15 years.
 const scenarios = [
-  { amount: '$20,000', ten: '$253', fifteen: '$203' },
-  { amount: '$30,000', ten: '$380', fifteen: '$304' },
-  { amount: '$40,000', ten: '$506', fifteen: '$406' },
-  { amount: '$55,000', ten: '$696', fifteen: '$558' },
-  { amount: '$70,000', ten: '$886', fifteen: '$709' },
+  { amount: 'a written estimate', ten: 'a written estimate', fifteen: 'a written estimate' },
+  { amount: 'a written estimate', ten: 'a written estimate', fifteen: 'a written estimate' },
+  { amount: 'a written estimate', ten: 'a written estimate', fifteen: 'a written estimate' },
+  { amount: 'a written estimate', ten: 'a written estimate', fifteen: 'a written estimate' },
+  { amount: 'a written estimate', ten: 'a written estimate', fifteen: 'a written estimate' },
 ];
 
 const inputs = [
@@ -114,14 +114,14 @@ const trustSignals = [
 export default function DeckPaymentEstimatorPage() {
   return (
     <>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-payment-estimator" name="Deck Payment Estimator | Monthly Cost Calculator" description="Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-payment-estimator" name="Deck Payment Estimator | Monthly Cost Calculator" description="Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia." speakable />
       <ArticleSchema
         title="Deck Payment Estimator | Monthly Cost Calculator"
         description="Estimate the monthly payment on a custom deck. Free deck loan calculator — adjust project amount, APR and term to see your monthly cost. Northern Virginia."
         path="/deck-payment-estimator"
         image="/showcase/img09.jpeg"
         datePublished="2026-04-12"
-        dateModified="2026-06-01"
+        dateModified="2026-10-18"
       />
       <ServiceSchema
         name="Deck Payment Estimator Tool"
@@ -178,7 +178,7 @@ export default function DeckPaymentEstimatorPage() {
             <p style={{ fontSize: '0.78rem', color: '#999', textAlign: 'center', marginTop: '1.25rem', marginBottom: 0, fontStyle: 'italic' }}>
               For illustration only. Actual rate, term and monthly payment are determined by your lender based on creditworthiness.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.75rem', marginTop: '1.5rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '0.75rem', marginTop: '1.5rem' }}>
               {trustSignals.map((signal) => (
                 <div key={signal} style={{ background: '#fafafa', border: '1px solid #eee', borderRadius: 8, padding: '0.8rem', textAlign: 'center', fontSize: '0.86rem', color: '#444', fontWeight: 600 }}>
                   {signal}
@@ -206,7 +206,7 @@ export default function DeckPaymentEstimatorPage() {
           <p style={{ ...S.p, color: '#555' }}>
             The estimator has three inputs. Understanding what each one does makes the result far more useful than a single number:
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem', marginBottom: '1rem' }}>
             {inputs.map((item, i) => (
               <div key={item.label} style={{ background: '#fff', borderRadius: 10, padding: '1.4rem', border: '1px solid #e5e5e5' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.5rem' }}>
@@ -267,7 +267,7 @@ export default function DeckPaymentEstimatorPage() {
           <p style={{ ...S.p, color: '#555' }}>
             The cleanest financing path is cost first, permit second, payment third. Northern Virginia deck budgets move when a county reviewer requires deeper footings, a freestanding design, extra stair landings, upgraded railings, or revised HOA documents. Before you decide whether a monthly number fits, connect the estimate to the review path:
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1rem', marginBottom: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 230px), 1fr))', gap: '1rem', marginBottom: '1rem' }}>
             {[
               { title: 'Permit path', body: 'Check the county guide before finalizing the amount.', links: [['/deck-permit-loudoun-county-virginia', 'Loudoun'], ['/deck-permit-fairfax-county-virginia', 'Fairfax'], ['/deck-permit-prince-william-county-virginia', 'Prince William'], ['/deck-permit-arlington-county-virginia', 'Arlington']] },
               { title: 'Structure path', body: 'Validate footings, beams, joists, loads, stairs, and ledger attachment.', links: [['/tools/deck-footing-depth-calculator-virginia', 'Footings'], ['/tools/deck-beam-span-calculator-virginia', 'Beams'], ['/tools/deck-load-calculator-virginia', 'Loads'], ['/tools/deck-stair-calculator', 'Stairs']] },
@@ -310,7 +310,7 @@ export default function DeckPaymentEstimatorPage() {
           <p style={{ ...S.p, color: '#555' }}>
             The financing-curious homeowner&apos;s most-asked question. Three steps, ~60 seconds total, no commitment:
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               { n: 1, title: 'Soft credit check', body: 'Enter income, address, and project amount. Enhancify runs a soft pull — your credit score is not affected. Multiple lender offers return in ~60 seconds.' },
               { n: 2, title: 'Compare offers', body: 'Review APR, term, and monthly payment side-by-side. Pick the one that fits your budget. Still no hard inquiry, still no commitment.' },
@@ -331,7 +331,7 @@ export default function DeckPaymentEstimatorPage() {
           <p style={{ ...S.p, color: '#555' }}>
             An estimate is only as good as the two numbers you feed it. Tighten both and the monthly payment becomes genuinely useful:
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem', marginBottom: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1.25rem', marginBottom: '1rem' }}>
             <div style={{ background: '#fff', borderRadius: 12, padding: '1.6rem', border: '1px solid #e5e5e5', borderTop: '4px solid var(--color-primary)' }}>
               <h3 style={{ fontWeight: 700, fontSize: '1.05rem', marginTop: 0, marginBottom: '0.5rem' }}>1. A written estimate amount</h3>
               <p style={{ fontSize: '0.93rem', color: '#555', lineHeight: 1.6, margin: 0 }}>

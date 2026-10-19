@@ -12,14 +12,14 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-lighting-ideas-northern-virginia',
   title: 'Deck Lighting Ideas (Northern VA)',
-  description: '8 deck lighting options: post caps, stair risers, under-rail, string lights, recessed, landscape. Costs from $500-$5,000. Transform your deck for evening use.',
+  description: '8 deck lighting options: post caps, stair risers, under-rail, string lights, recessed, landscape. Costs from a written estimate. Transform your deck for evening use.',
   image: '/social/deck-lighting-ideas-northern-virginia-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does deck lighting cost?", acceptedAnswer: { "@type": "Answer", text: "Deck lighting in Northern Virginia costs $500-$5,000+ depending on type and scope. Post cap lights: $50-$100 each. Stair riser lights: $40-$80 each. Under-rail LED strips: $300-$800. A full lighting package for a 300 sqft deck typically runs $1,500-$3,500." } },
+    { "@type": "Question", name: "How much does deck lighting cost?", acceptedAnswer: { "@type": "Answer", text: "Deck lighting in Northern Virginia is priced in a written estimate depending on type and scope. Post cap lights: a written estimate each. Stair riser lights: a written estimate each. Under-rail LED strips: a written estimate. A full lighting package for a 300 sqft deck typically is priced in a written estimate." } },
     { "@type": "Question", name: "What is the best lighting for a deck?", acceptedAnswer: { "@type": "Answer", text: "LED post cap lights + stair riser lights are the best combination for most decks. They provide safety lighting on stairs, ambient glow from posts, and integrate cleanly with composite railing systems like Trex Signature. Add under-rail LED strips for a premium look." } },
     { "@type": "Question", name: "Can you add lighting to an existing deck?", acceptedAnswer: { "@type": "Answer", text: "Yes. Post cap lights and solar options require no wiring. Hardwired stair lights and under-rail strips require running low-voltage wire under the deck boards easier on composite decks where boards can be partially removed and reinstalled." } },
   ],
@@ -31,7 +31,7 @@ export default function DeckLightingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-lighting-ideas-northern-virginia" name="Deck Lighting Ideas (Northern VA)" description="8 deck lighting options: post caps, stair risers, under-rail, string lights, recessed, landscape. Costs from $500-$5,000. Transform your deck for evening use." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-lighting-ideas-northern-virginia" name="Deck Lighting Ideas (Northern VA)" description="8 deck lighting options: post caps, stair risers, under-rail, string lights, recessed, landscape. Costs from a written estimate. Transform your deck for evening use." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -57,14 +57,14 @@ export default function DeckLightingPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Type', 'Cost', 'Power', 'Best For', 'Difficulty'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Post cap lights', '$50–$100 each', 'Low voltage / Solar', 'Ambient glow, railing accents', 'Easy (retrofit OK)'],
-                  ['Stair riser lights', '$40–$80 each', 'Low voltage', 'Safety, code compliance', 'Medium (wiring needed)'],
-                  ['Under-rail LED strips', '$300–$800 total', 'Low voltage', 'Ambient, modern look', 'Medium'],
-                  ['Recessed deck lights (in-board)', '$60–$120 each', 'Low voltage', 'Flush, minimal, pathway', 'Hard (install with deck)'],
-                  ['String lights / bistro lights', '$30–$150', 'Plug-in / Solar', 'Casual, festive, warm vibe', 'Easy (DIY)'],
-                  ['Landscape spotlights (up-light)', '$80–$200 each', 'Low voltage', 'Drama, architectural accent', 'Medium (ground install)'],
-                  ['Under-deck soffit lights', '$500–$1,500', 'Line voltage', 'Light area below elevated deck', 'Hard (electrical permit)'],
-                  ['Smart LED (color changing)', '$100–$300 each', 'Low voltage / WiFi', 'Party mode, holiday colors', 'Medium'],
+                  ['Post cap lights', 'a written estimate each', 'Low voltage / Solar', 'Ambient glow, railing accents', 'Easy (retrofit OK)'],
+                  ['Stair riser lights', 'a written estimate each', 'Low voltage', 'Safety, code compliance', 'Medium (wiring needed)'],
+                  ['Under-rail LED strips', 'a written estimate total', 'Low voltage', 'Ambient, modern look', 'Medium'],
+                  ['Recessed deck lights (in-board)', 'a written estimate each', 'Low voltage', 'Flush, minimal, pathway', 'Hard (install with deck)'],
+                  ['String lights / bistro lights', 'a written estimate', 'Plug-in / Solar', 'Casual, festive, warm vibe', 'Easy (DIY)'],
+                  ['Landscape spotlights (up-light)', 'a written estimate each', 'Low voltage', 'Drama, architectural accent', 'Medium (ground install)'],
+                  ['Under-deck soffit lights', 'a written estimate', 'Line voltage', 'Light area below elevated deck', 'Hard (electrical permit)'],
+                  ['Smart LED (color changing)', 'a written estimate each', 'Low voltage / WiFi', 'Party mode, holiday colors', 'Medium'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -75,11 +75,11 @@ export default function DeckLightingPage() {
           </div>
 
           <h2 style={S.h2}>Our Recommended Lighting Packages</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { tier: 'Essential', price: '$500–$1,200', items: '4 post cap lights + 6 stair riser lights', desc: 'Safety + ambiance. Covers code requirements and looks great. Best for budget-conscious builds.' },
-              { tier: 'Popular', price: '$1,500–$3,000', items: 'Post caps + stair risers + under-rail LED strips', desc: 'The full package most clients choose. Warm ambient glow from every angle. Dramatic at night.' },
-              { tier: 'Premium', price: '$3,000–$5,000+', items: 'All above + recessed deck lights + landscape spots + smart controls', desc: 'Total transformation. Dimmable, color-programmable, controlled from your phone. Showpiece-level deck.' },
+              { tier: 'Essential', price: 'a written estimate', items: '4 post cap lights + 6 stair riser lights', desc: 'Safety + ambiance. Covers code requirements and looks great. Best for budget-conscious builds.' },
+              { tier: 'Popular', price: 'a written estimate', items: 'Post caps + stair risers + under-rail LED strips', desc: 'The full package most clients choose. Warm ambient glow from every angle. Dramatic at night.' },
+              { tier: 'Premium', price: 'a written estimate', items: 'All above + recessed deck lights + landscape spots + smart controls', desc: 'Total transformation. Dimmable, color-programmable, controlled from your phone. Showpiece-level deck.' },
             ].map((pkg) => (
               <div key={pkg.tier} style={{ background: pkg.tier === 'Popular' ? '#fff3e0' : '#f9f9f9', border: pkg.tier === 'Popular' ? '2px solid var(--color-primary)' : '1px solid #eee', borderRadius: 8, padding: '1.25rem' }}>
                 <p style={{ fontSize: '0.8rem', color: pkg.tier === 'Popular' ? 'var(--color-primary)' : '#888', fontWeight: 600 }}>{pkg.tier === 'Popular' ? 'Most Popular' : pkg.tier}</p>
@@ -104,7 +104,7 @@ export default function DeckLightingPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "How much does deck lighting cost?", a: "Basic (post caps + stairs): $500-$1,200. Popular package with LED strips: $1,500-$3,000. Premium with smart controls: $3,000-$5,000+." },
+            { q: "How much does deck lighting cost?", a: "Basic (post caps + stairs): a written estimate. Popular package with LED strips: a written estimate. Premium with smart controls: a written estimate." },
             { q: "What's the best deck lighting?", a: "Post cap lights + stair risers + under-rail LED strips our most-requested combo. Warm white (2700K) looks best on composite." },
             { q: "Can I add lights to an existing deck?", a: "Yes. Solar post caps need no wiring. Hardwired options require running low-voltage wire easier on composite decks." },
           ].map((faq, i) => (
@@ -131,7 +131,7 @@ export default function DeckLightingPage() {
         </div>
       </article>
       <SimpleCTA title="Include Lighting in Your Deck Design" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/deck-lighting-ideas-northern-virginia" />
 

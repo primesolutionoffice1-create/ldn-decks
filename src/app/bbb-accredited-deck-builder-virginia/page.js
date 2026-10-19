@@ -115,7 +115,7 @@ const cities = [
 export default function BBBPage() {
   return (
     <>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/bbb-accredited-deck-builder-virginia" name="BBB Accredited Deck Builder in Northern Virginia | Loudoun Decks" description="Verify Loudoun Decks on BBB and review public profile details, licensing references, deck services, and Northern Virginia service areas." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/bbb-accredited-deck-builder-virginia" name="BBB Accredited Deck Builder in Northern Virginia | Loudoun Decks" description="Verify Loudoun Decks on BBB and review public profile details, licensing references, deck services, and Northern Virginia service areas." speakable />
       <JsonLd data={webPageSchema} />
       <JsonLd data={faqSchema} />
 
@@ -158,7 +158,7 @@ export default function BBBPage() {
 
           <h2 style={S.h2}>Why BBB Accreditation Matters When Choosing a Deck Builder</h2>
           <p style={S.p}>
-            For most homeowners, a deck is a $20,000&ndash;$60,000+ investment. The right contractor delivers a structure that lasts decades. The wrong contractor can leave you with code violations, voided manufacturer warranties, or unfinished work. That gap is why third-party verification matters.
+            For most homeowners, a deck is a a written estimate&ndash;a written estimate investment. The right contractor delivers a structure that lasts decades. The wrong contractor can leave you with code violations, voided manufacturer warranties, or unfinished work. That gap is why third-party verification matters.
           </p>
           <p style={S.p}>
             The Better Business Bureau provides a separate, public profile where homeowners can review a company&apos;s contact information, listed credentials, and accreditation status. Accreditation reflects a business&apos;s commitment to the BBB&apos;s published Standards for Trust &mdash; including transparency, responsiveness, and honest representation.
@@ -169,7 +169,7 @@ export default function BBBPage() {
 
           <h2 style={S.h2}>Loudoun Decks BBB Profile Highlights</h2>
           <p style={S.p}>The following details are publicly available on our BBB Business Profile:</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 260px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {profileHighlights.map((h) => (
               <div key={h.label} style={{ background: '#f9f9f9', borderRadius: 10, padding: '1.25rem', borderLeft: '4px solid var(--color-primary)' }}>
                 <p style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.25rem' }}>{h.label}</p>
@@ -183,7 +183,7 @@ export default function BBBPage() {
 
           <h2 style={S.h2}>Trusted Deck Building Services</h2>
           <p style={S.p}>Our BBB profile categorizes us as a Deck Builder, Deck Repair, Patio Contractor, Gazebo Builder, Deck Maintenance, and Fence Contractor. Here are the projects we build for Northern Virginia homeowners:</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '0.75rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))', gap: '0.75rem', marginBottom: '2rem' }}>
             {services.map((s) => (
               <Link key={s.href} href={s.href} style={{ display: 'block', background: '#fff', borderRadius: 8, padding: '1rem', textDecoration: 'none', color: 'inherit', border: '1px solid #e5e5e5', transition: 'border-color 0.2s' }}>
                 <p style={{ fontSize: '0.95rem', fontWeight: 600, margin: 0 }}>{s.title} &rarr;</p>
@@ -294,7 +294,7 @@ export default function BBBPage() {
 
       <SimpleCTA title="Ready to Build with a Trusted Deck Contractor?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/bbb-accredited-deck-builder-virginia" />
-      <NamedAuthor context="Northern Virginia trust profile verification" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Northern Virginia trust profile verification" lastUpdated="2026-10-18" />
 
       <ContactHome />
     </>

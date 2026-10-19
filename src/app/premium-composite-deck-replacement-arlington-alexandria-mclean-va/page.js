@@ -249,7 +249,7 @@ export default function PremiumCompositeReplacementCorridorPage() {
           <p style={{ maxWidth: 780, margin: '0 auto 32px', textAlign: 'center', color: '#555', lineHeight: 1.65 }}>
             Use these pages to validate city fit, permit path, material choice, budget, and structural readiness before requesting a detailed proposal.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(235px, 1fr))', gap: 16 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 235px), 1fr))', gap: 16 }}>
             {[
               ['/deck-builder-arlington-va', 'Arlington Deck Builder', 'Local deck replacement, access, permit, and premium composite planning.'],
               ['/deck-builder-alexandria-va', 'Alexandria Deck Builder', 'City, Fairfax County, HOA, Mount Vernon, and outdoor living context.'],

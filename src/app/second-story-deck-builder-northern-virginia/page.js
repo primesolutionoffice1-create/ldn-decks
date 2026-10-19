@@ -14,7 +14,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/second-story-deck-builder-northern-virginia',
   title: 'Second Story Deck Builder | Elevated Decks in NoVA',
-  description: 'Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs ($35K-$75K+), and safety requirements explained.',
+  description: 'Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs (a written estimate), and safety requirements explained.',
   image: '/social/second-story-deck-builder-northern-virginia-social.png',
 });
 
@@ -22,10 +22,10 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a second-story deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A second-story deck in Northern Virginia costs $35,000-$75,000+ depending on size, material, and complexity. A typical 300 sqft elevated composite deck runs $40,000-$55,000. Multi-level designs with under-deck living space can exceed $75,000. The elevation premium adds 25-40% compared to a ground-level deck of the same size." } },
-    { "@type": "Question", name: "Do second-story decks require engineering in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes. Virginia building code requires engineered plans for elevated structures, especially those exceeding 8 feet above grade. A licensed structural engineer must stamp the plans, which costs $800-$2,000 depending on complexity. Engineering ensures proper load calculations, lateral bracing, and connection details for safety." } },
+    { "@type": "Question", name: "How much does a second-story deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A second-story deck in Northern Virginia is priced in a written estimate depending on size, material, and complexity. A typical 300 sqft elevated composite deck is priced in a written estimate. Multi-level designs with under-deck living space can exceed a written estimate. The elevation premium adds 25-40% compared to a ground-level deck of the same size." } },
+    { "@type": "Question", name: "Do second-story decks require engineering in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes. Virginia building code requires engineered plans for elevated structures, especially those exceeding 8 feet above grade. A licensed structural engineer must stamp the plans, which is priced in a written estimate depending on complexity. Engineering ensures proper load calculations, lateral bracing, and connection details for safety." } },
     { "@type": "Question", name: "What is the railing height requirement for a second-story deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Virginia building code requires 42-inch railings on any deck surface more than 30 inches above grade. Baluster spacing must not exceed 4 inches (so a 4-inch sphere cannot pass through). Guard posts must be anchored to resist a 200-pound lateral load. These requirements are strictly enforced for elevated decks." } },
-    { "@type": "Question", name: "Can I create living space under my second-story deck?", acceptedAnswer: { "@type": "Answer", text: "Yes. Trex RainEscape or similar membrane systems capture water from the upper deck and channel it into gutters, creating a completely dry patio, outdoor living room, or storage area underneath. This effectively doubles your usable outdoor space. Cost for the drainage system adds $3,000-$6,000 to the project." } },
+    { "@type": "Question", name: "Can I create living space under my second-story deck?", acceptedAnswer: { "@type": "Answer", text: "Yes. Trex RainEscape or similar membrane systems capture water from the upper deck and channel it into gutters, creating a completely dry patio, outdoor living room, or storage area underneath. This effectively doubles your usable outdoor space. Cost for the drainage system adds a written estimate to the project." } },
     { "@type": "Question", name: "How long does it take to build a second-story deck?", acceptedAnswer: { "@type": "Answer", text: "A second-story deck typically takes 3-5 weeks to build, compared to 1.5-3 weeks for a ground-level deck. The additional time accounts for deeper footings, taller post installation, more complex framing, and additional inspections required for elevated structures." } },
     { "@type": "Question", name: "Is a second-story deck safe?", acceptedAnswer: { "@type": "Answer", text: "Yes, when properly engineered and built to code. Modern building codes require specific post sizes, lateral bracing, connection hardware, and footing depths that ensure structural safety. The key is hiring a licensed contractor who pulls proper permits and passes all inspections. An unpermitted elevated deck is a serious safety and liability risk." } },
   ],
@@ -43,14 +43,14 @@ export default function SecondStoryDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/second-story-deck-builder-northern-virginia" name="Second Story Deck Builder | Elevated Decks in NoVA" description="Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs ($35K-$75K+), and safety requirements explained." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/second-story-deck-builder-northern-virginia" name="Second Story Deck Builder | Elevated Decks in NoVA" description="Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs (a written estimate), and safety requirements explained." speakable />
       <ArticleSchema
         title="Second Story Deck Builder in Northern Virginia: Elevated Decks Explained"
         description="Everything you need to know about building a second-story or elevated deck in Northern Virginia. Engineering, permits, costs, safety, and under-deck living."
         path="/second-story-deck-builder-northern-virginia"
         image="/images/img09.jpeg"
         datePublished="2026-04-26"
-        dateModified="2026-04-26"
+        dateModified="2026-10-18"
       />
 
       {/* Hero */}
@@ -65,7 +65,7 @@ export default function SecondStoryDeckBuilderPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Second-story decks in Northern Virginia cost <strong>$35,000&ndash;$75,000+</strong> depending on size and material. They require <strong>engineered plans</strong>, <strong>deeper footings</strong>, <strong>lateral bracing</strong>, and <strong>42-inch railings</strong>. The elevation premium adds 25&ndash;40% over ground-level construction. With <strong>Trex RainEscape</strong>, you can create dry living space underneath &mdash; effectively doubling your outdoor square footage. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a consultation on your elevated deck project.</p>
+          <p>Second-story decks in Northern Virginia cost <strong>a written estimate&ndash;a written estimate</strong> depending on size and material. They require <strong>engineered plans</strong>, <strong>deeper footings</strong>, <strong>lateral bracing</strong>, and <strong>42-inch railings</strong>. The elevation premium adds 25&ndash;40% over ground-level construction. With <strong>Trex RainEscape</strong>, you can create dry living space underneath &mdash; effectively doubling your outdoor square footage. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a consultation on your elevated deck project.</p>
         </div>
       </section>
 
@@ -119,11 +119,11 @@ export default function SecondStoryDeckBuilderPage() {
               </thead>
               <tbody>
                 {[
-                  ['Ground-Level', '0–2 ft', '$35–$55', '$18,000–$28,000', 'Baseline', 'Rarely'],
-                  ['Low Elevated', '2–4 ft', '$40–$62', '$22,000–$33,000', '+15–20%', 'Sometimes'],
-                  ['Mid Elevated', '4–8 ft', '$48–$70', '$28,000–$42,000', '+25–35%', 'Yes'],
-                  ['Second-Story', '8–12 ft', '$55–$80', '$35,000–$55,000', '+35–50%', 'Always'],
-                  ['High Second-Story', '12+ ft', '$65–$90+', '$45,000–$75,000+', '+50%+', 'Always'],
+                  ['Ground-Level', '0–2 ft', 'a written estimate', 'a written estimate', 'Baseline', 'Rarely'],
+                  ['Low Elevated', '2–4 ft', 'a written estimate', 'a written estimate', '+15–20%', 'Sometimes'],
+                  ['Mid Elevated', '4–8 ft', 'a written estimate', 'a written estimate', '+25–35%', 'Yes'],
+                  ['Second-Story', '8–12 ft', 'a written estimate', 'a written estimate', '+35–50%', 'Always'],
+                  ['High Second-Story', '12+ ft', 'a written estimate', 'a written estimate', '+50%+', 'Always'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i === 3 ? '#fff7ed' : (i % 2 ? '#fafafa' : '#fff') }}>
                     {row.map((cell, j) => (
@@ -150,7 +150,7 @@ export default function SecondStoryDeckBuilderPage() {
           <p style={S.p}>Elevated structures experience greater wind exposure. The engineer calculates wind forces based on the deck&apos;s height, exposure category, and local wind speed data. Lateral bracing and connection hardware are designed to resist these forces.</p>
 
           <h3 style={S.h3}>Structural Engineer Stamp</h3>
-          <p style={S.p}>Loudoun, Fairfax, and Prince William counties all require stamped engineering plans for elevated decks. The engineer specifies post sizes, beam dimensions, joist spacing, connection hardware, footing sizes, and lateral bracing requirements. Engineering costs $800&ndash;$2,000 depending on project complexity. We work with trusted structural engineers who specialize in residential deck design and turn plans around in 1&ndash;2 weeks.</p>
+          <p style={S.p}>Loudoun, Fairfax, and Prince William counties all require stamped engineering plans for elevated decks. The engineer specifies post sizes, beam dimensions, joist spacing, connection hardware, footing sizes, and lateral bracing requirements. Engineering is priced in a written estimate&ndash;a written estimate depending on project complexity. We work with trusted structural engineers who specialize in residential deck design and turn plans around in 1&ndash;2 weeks.</p>
 
           {/* ===== SECTION 5: Permit Requirements ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Permit Requirements for Elevated Decks</h2>
@@ -171,7 +171,7 @@ export default function SecondStoryDeckBuilderPage() {
                   ['Footing inspection', 'Yes', 'Yes — more detailed'],
                   ['Framing inspection', 'Yes', 'Yes — includes bracing review'],
                   ['Final inspection', 'Yes', 'Yes — includes railing load test'],
-                  ['Permit fee', '$200–$500', '$400–$800'],
+                  ['Permit fee', 'a written estimate', 'a written estimate'],
                   ['Review timeline', '2–4 weeks', '3–5 weeks'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
@@ -216,14 +216,14 @@ export default function SecondStoryDeckBuilderPage() {
           </ul>
 
           <h3 style={S.h3}>Under-Deck System Costs</h3>
-          <p style={S.p}>Trex RainEscape adds $3,000&ndash;$6,000 to the project depending on area coverage. When you consider that you&apos;re effectively creating a second outdoor living area (which would otherwise require a separate covered structure costing $15,000&ndash;$30,000+), the ROI is exceptional. See our <Link href="/under-deck-ceiling-ideas" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>under-deck ceiling guide</Link> for more design options.</p>
+          <p style={S.p}>Trex RainEscape adds a written estimate&ndash;a written estimate to the project depending on area coverage. When you consider that you&apos;re effectively creating a second outdoor living area (which would otherwise require a separate covered structure costing a written estimate&ndash;a written estimate), the ROI is exceptional. See our <Link href="/under-deck-ceiling-ideas" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>under-deck ceiling guide</Link> for more design options.</p>
 
           {/* ===== SECTION 8: Material Considerations ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Material Considerations for Elevated Decks</h2>
           <p style={S.p}>Elevation affects material selection in several ways:</p>
 
           <h3 style={S.h3}>Heavier Beams and Joists</h3>
-          <p style={S.p}>Where a ground-level deck might use 2x8 joists on 16-inch centers, an elevated deck often requires 2x10 or 2x12 joists, doubled or tripled beams, and 6x6 (or larger) posts. This additional structural lumber adds $2,000&ndash;$5,000 to material costs.</p>
+          <p style={S.p}>Where a ground-level deck might use 2x8 joists on 16-inch centers, an elevated deck often requires 2x10 or 2x12 joists, doubled or tripled beams, and 6x6 (or larger) posts. This additional structural lumber adds a written estimate&ndash;a written estimate to material costs.</p>
 
           <h3 style={S.h3}>Larger Footings</h3>
           <p style={S.p}>Standard 12-inch diameter sonotube footings may not be sufficient for the loads transferred through tall posts. Engineers frequently specify 18&ndash;24 inch footings for second-story construction. Helical piers are an excellent alternative &mdash; they&apos;re driven into competent soil regardless of surface conditions and provide precise load-bearing capacity.</p>
@@ -241,17 +241,17 @@ export default function SecondStoryDeckBuilderPage() {
 
           {[
             {
-              price: '$40,000-$46,000',
+              price: 'a written estimate',
               desc: '320 sqft Trex Transcend, 9ft elevation — Ashburn/Brambleton-style scope',
               detail: 'Walkout-basement planning scenario with Trex Transcend-style decking, Signature-style railing, engineered 6x6 post system, diagonal lateral bracing, and a single straight staircase. Confirm PE-stamped plan requirements, Loudoun permit path, and timeline after site review.',
             },
             {
-              price: '$56,000-$64,000',
+              price: 'a written estimate',
               desc: '400 sqft Trex Lineage + RainEscape — Leesburg-style scope',
               detail: 'Elevated composite planning scenario with Trex RainEscape-style under-deck drainage, cable railing allowance, wide cascading staircase, LED riser-light allowance, and dry-patio electrical planning. Verify drainage design, electrical scope, permit path, and owner evidence before publishing as a formal case study.',
             },
             {
-              price: '$68,000-$78,000',
+              price: 'a written estimate',
               desc: '500 sqft multi-level + under-deck kitchen — Great Falls-style scope',
               detail: 'Two-level elevated-deck planning scenario with upper dining/grilling tier, lower lounge bump-out, full under-deck drainage allowance, and outdoor-kitchen finish planning. Confirm Fairfax engineering, permit path, specialty trades, photos, and final invoice evidence before using as a case study.',
             },
@@ -296,7 +296,7 @@ export default function SecondStoryDeckBuilderPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Common Mistakes with Elevated Deck Construction</h2>
 
           <h3 style={S.h3}>Skipping Engineering</h3>
-          <p style={S.p}>Some contractors try to build elevated decks &ldquo;by experience&rdquo; without engineering. This is both a code violation and a safety hazard. Structural failures in elevated decks cause serious injuries. Engineering costs $800&ndash;$2,000 &mdash; a tiny fraction of a $40,000+ project and a non-negotiable investment in safety.</p>
+          <p style={S.p}>Some contractors try to build elevated decks &ldquo;by experience&rdquo; without engineering. This is both a code violation and a safety hazard. Structural failures in elevated decks cause serious injuries. Engineering is priced in a written estimate&ndash;a written estimate &mdash; a tiny fraction of a a written estimate project and a non-negotiable investment in safety.</p>
 
           <h3 style={S.h3}>Undersized Posts</h3>
           <p style={S.p}>Using 4x4 posts on a second-story deck because &ldquo;that&apos;s what we always use.&rdquo; A 4x4 post spanning 10 feet has a fraction of the lateral rigidity of a 6x6. The engineer specifies the correct post size &mdash; trust the engineering, not habit.</p>
@@ -305,15 +305,15 @@ export default function SecondStoryDeckBuilderPage() {
           <p style={S.p}>The most dangerous shortcut. Without diagonal bracing between posts, an elevated deck can collapse laterally under dynamic loads. This is the failure mode responsible for most deck collapse injuries in the United States. Every elevated deck we build includes engineered lateral bracing.</p>
 
           <h3 style={S.h3}>Ignoring the Under-Deck Opportunity</h3>
-          <p style={S.p}>Building an elevated deck without a RainEscape system wastes the potential of the space below. Adding the drainage system during initial construction costs $3,000&ndash;$6,000. Retrofitting it later costs significantly more because you have to access the joist cavities from below, which requires scaffolding. Plan ahead.</p>
+          <p style={S.p}>Building an elevated deck without a RainEscape system wastes the potential of the space below. Adding the drainage system during initial construction is priced in a written estimate&ndash;a written estimate. Retrofitting it later costs significantly more because you have to access the joist cavities from below, which requires scaffolding. Plan ahead.</p>
 
           {/* ===== SECTION 12: FAQs ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "How much does a second-story deck cost in Northern Virginia?", a: "$35,000-$75,000+ depending on size, material, and complexity. A typical 300 sqft elevated composite deck runs $40,000-$55,000. The elevation premium adds 25-40% over ground-level construction." },
-            { q: "Do second-story decks require engineering?", a: "Yes. Virginia code requires PE-stamped engineered plans for elevated structures. Engineering costs $800-$2,000 and ensures proper load calculations, bracing, and connection details. This is non-negotiable for safety." },
+            { q: "How much does a second-story deck cost in Northern Virginia?", a: "a written estimate depending on size, material, and complexity. A typical 300 sqft elevated composite deck is priced in a written estimate. The elevation premium adds 25-40% over ground-level construction." },
+            { q: "Do second-story decks require engineering?", a: "Yes. Virginia code requires PE-stamped engineered plans for elevated structures. Engineering is priced in a written estimate and ensures proper load calculations, bracing, and connection details. This is non-negotiable for safety." },
             { q: "What is the railing height for an elevated deck in Virginia?", a: "42 inches minimum for any deck surface more than 30 inches above grade. Baluster spacing must not exceed 4 inches. Guard posts must resist a 200-pound lateral load." },
-            { q: "Can I create living space under my second-story deck?", a: "Yes. Trex RainEscape creates a completely dry space underneath for $3,000-$6,000 additional. This gives you a covered patio, outdoor kitchen area, or storage that would otherwise cost $15,000-$30,000+ as a separate structure." },
+            { q: "Can I create living space under my second-story deck?", a: "Yes. Trex RainEscape creates a completely dry space underneath for a written estimate additional. This gives you a covered patio, outdoor kitchen area, or storage that would otherwise are priced in a written estimate as a separate structure." },
             { q: "How long does a second-story deck take to build?", a: "3-5 weeks of active construction, plus 6-8 weeks of pre-construction (engineering, permitting, HOA approval). Total timeline: 10-14 weeks from consultation to completion." },
             { q: "Is a second-story deck safe?", a: "Absolutely, when properly engineered and built to code. Modern building codes require specific post sizes, lateral bracing, connection hardware, and footing depths. The key is hiring a licensed contractor who pulls permits and passes all inspections." },
           ].map((faq, i) => (
@@ -345,7 +345,7 @@ export default function SecondStoryDeckBuilderPage() {
 
       <SimpleCTA title="Plan Your Elevated Deck Project" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/second-story-deck-builder-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <ContactHome />
     </>
