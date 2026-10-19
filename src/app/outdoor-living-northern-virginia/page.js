@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     q: 'How much does an outdoor living project cost in Northern Virginia?',
-    a: 'Most serious outdoor living projects start around $25,000 and can reach $75,000-$150,000+ when combining decks, porches, patios, kitchens, lighting, and premium materials.',
+    a: 'Most serious outdoor living projects start around a written estimate and can reach a written estimate when combining decks, porches, patios, kitchens, lighting, and premium materials.',
   },
   {
     q: 'Should I build everything at once or in phases?',
@@ -104,7 +104,7 @@ const faqs = [
 export default function OutdoorLivingNorthernVirginiaPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/outdoor-living-northern-virginia" name="Outdoor Living Contractor Northern Virginia | Decks, Patios, Porches" description="Outdoor living design and build in Northern Virginia. Custom decks, screened porches, patios, pergolas, outdoor kitchens and under-deck spaces." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/outdoor-living-northern-virginia" name="Outdoor Living Contractor Northern Virginia | Decks, Patios, Porches" description="Outdoor living design and build in Northern Virginia. Custom decks, screened porches, patios, pergolas, outdoor kitchens and under-deck spaces." speakable />
       <ServiceSchema
         name="Outdoor Living Design and Build"
         description="Full-service outdoor living contractor in Northern Virginia. Decks, porches, patios, pergolas, outdoor kitchens, and backyard transformations."
@@ -125,7 +125,7 @@ export default function OutdoorLivingNorthernVirginiaPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: 500 }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Outdoor living projects typically start around $25,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Outdoor living projects typically start around a written estimate</strong>
             <br />
             Best fit for homeowners planning <strong style={{ color: '#111' }}>full backyard upgrades</strong>: decks, porches, patios, shade structures, lighting, and multi-zone outdoor spaces.
           </p>
@@ -159,7 +159,7 @@ export default function OutdoorLivingNorthernVirginiaPage() {
           <p style={{ maxWidth: 760, margin: '0 auto 32px', textAlign: 'center', color: '#555', lineHeight: 1.65 }}>
             Each service can stand alone, but the highest-value projects are planned as one system.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: 16 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 230px), 1fr))', gap: 16 }}>
             {[
               ['/composite-decks', 'Composite Decks', 'Low-maintenance Trex, TimberTech, and AZEK deck platforms.'],
               ['/services/deck-replacement', 'Deck Replacement', 'Full tear-down and rebuild for aging or unsafe wood decks.'],
@@ -187,7 +187,7 @@ export default function OutdoorLivingNorthernVirginiaPage() {
       <ServiceAreasGrid />
       <ServicesCallToAction />
       <RelatedGuides currentPath="/outdoor-living-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <ContactHome />
     </main>

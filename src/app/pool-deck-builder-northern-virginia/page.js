@@ -13,14 +13,14 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/pool-deck-builder-northern-virginia',
   title: 'Pool Deck Builder in Northern Virginia | Composite & Paver Pool Decks',
-  description: 'Custom pool decks NoVA: composite ($35-$75/sqft), pavers ($25-$50/sqft), stamped concrete ($15-$30/sqft). Code-compliant. Free estimate.',
+  description: 'Custom pool decks NoVA: composite (priced in a written estimate), pavers (priced in a written estimate), stamped concrete (priced in a written estimate). Code-compliant. Free estimate.',
   image: '/social/pool-deck-builder-northern-virginia-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a pool deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Pool deck costs in Northern Virginia: composite decking $35-$75/sqft, paver patios $25-$50/sqft, stamped concrete $15-$30/sqft. A typical 400-600 sqft pool deck runs $15,000-$45,000 depending on material and complexity." } },
+    { "@type": "Question", name: "How much does a pool deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Pool deck costs in Northern Virginia: composite decking priced in a written estimate, paver patios priced in a written estimate, stamped concrete priced in a written estimate. A typical 400-600 sqft pool deck is priced in a written estimate depending on material and complexity." } },
     { "@type": "Question", name: "What is the best material for a pool deck?", acceptedAnswer: { "@type": "Answer", text: "For barefoot comfort and heat: pavers or light-colored composite (Trex Transcend or TimberTech AZEK stay 20-30°F cooler). For budget: stamped concrete. Avoid dark-colored materials they absorb heat and become uncomfortable in Virginia summers." } },
     { "@type": "Question", name: "Do I need a fence around my pool deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes. Virginia building code requires a barrier (fence, wall, or approved railing) at least 48 inches high around all residential pools. Gates must be self-closing and self-latching. Your pool deck design must incorporate code-compliant barriers." } },
   ],
@@ -32,7 +32,7 @@ export default function PoolDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/pool-deck-builder-northern-virginia" name="Pool Deck Builder in Northern Virginia | Composite &amp; Paver Pool Decks" description="Custom pool decks NoVA: composite ($35-$75/sqft), pavers ($25-$50/sqft), stamped concrete ($15-$30/sqft). Code-compliant. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/pool-deck-builder-northern-virginia" name="Pool Deck Builder in Northern Virginia | Composite &amp; Paver Pool Decks" description="Custom pool decks NoVA: composite (priced in a written estimate), pavers (priced in a written estimate), stamped concrete (priced in a written estimate). Code-compliant. Free estimate." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -63,11 +63,11 @@ export default function PoolDeckPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Material', 'Cost/sqft', '500 sqft Total', 'Heat', 'Slip Resistance', 'Maintenance'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Pavers (concrete/brick)', '$25–$50', '$12k–$25k', 'Cool–moderate', 'Excellent', 'Re-level every 5-10 yrs'],
-                  ['Natural stone (bluestone/travertine)', '$35–$65', '$18k–$33k', 'Cool', 'Good', 'Seal every 2-3 yrs'],
-                  ['Composite (Trex/TimberTech)', '$35–$75', '$18k–$38k', 'Moderate (AZEK best)', 'Good', 'Occasional wash'],
-                  ['Stamped concrete', '$15–$30', '$8k–$15k', 'Hot', 'Fair (add non-slip finish)', 'Reseal every 2-3 yrs'],
-                  ['Wood (PT/cedar)', '$18–$35', '$9k–$18k', 'Moderate', 'Fair (when wet)', 'Stain/seal yearly, splinter risk'],
+                  ['Pavers (concrete/brick)', 'a written estimate', 'a written estimate', 'Cool–moderate', 'Excellent', 'Re-level every 5-10 yrs'],
+                  ['Natural stone (bluestone/travertine)', 'a written estimate', 'a written estimate', 'Cool', 'Good', 'Seal every 2-3 yrs'],
+                  ['Composite (Trex/TimberTech)', 'a written estimate', 'a written estimate', 'Moderate (AZEK best)', 'Good', 'Occasional wash'],
+                  ['Stamped concrete', 'a written estimate', 'a written estimate', 'Hot', 'Fair (add non-slip finish)', 'Reseal every 2-3 yrs'],
+                  ['Wood (PT/cedar)', 'a written estimate', 'a written estimate', 'Moderate', 'Fair (when wet)', 'Stain/seal yearly, splinter risk'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -95,12 +95,12 @@ export default function PoolDeckPage() {
 
           <h2 style={S.h2}>Pool Deck + Living Space Combos</h2>
           <p style={S.p}>The most impactful pool deck projects combine the pool surround with outdoor living features:</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { title: 'Pool Deck + Outdoor Kitchen', range: '$55k–$100k+', desc: 'Grill island with bar seating overlooking the pool' },
-              { title: 'Pool Deck + Pergola', range: '$40k–$75k', desc: 'Shade structure for lounging near the pool' },
-              { title: 'Pool Deck + Fire Pit', range: '$30k–$55k', desc: 'Evening gathering spot next to the pool area' },
-              { title: 'Pool Deck + Composite Deck', range: '$45k–$85k', desc: 'Elevated composite dining deck connected to ground-level pool surround' },
+              { title: 'Pool Deck + Outdoor Kitchen', range: 'a written estimate', desc: 'Grill island with bar seating overlooking the pool' },
+              { title: 'Pool Deck + Pergola', range: 'a written estimate', desc: 'Shade structure for lounging near the pool' },
+              { title: 'Pool Deck + Fire Pit', range: 'a written estimate', desc: 'Evening gathering spot next to the pool area' },
+              { title: 'Pool Deck + Composite Deck', range: 'a written estimate', desc: 'Elevated composite dining deck connected to ground-level pool surround' },
             ].map((combo) => (
               <div key={combo.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.25rem', fontSize: '1rem' }}>{combo.title}</h3>
@@ -112,7 +112,7 @@ export default function PoolDeckPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "How much does a pool deck cost?", a: "Pavers: $25-$50/sqft. Composite: $35-$75/sqft. Stamped concrete: $15-$30/sqft. Typical 500 sqft pool deck: $15k-$38k." },
+            { q: "How much does a pool deck cost?", a: "Pavers: priced in a written estimate. Composite: priced in a written estimate. Stamped concrete: priced in a written estimate. Typical 500 sqft pool deck: a written estimate." },
             { q: "Best material for a pool deck?", a: "Pavers for most cool, slip-resistant, replaceable. AZEK for elevated pool decks. Stamped concrete for budget." },
             { q: "Do I need a fence around my pool?", a: "Yes Virginia requires 48\" barrier with self-closing/self-latching gate. We integrate barriers into the deck design." },
           ].map((faq, i) => (
@@ -135,7 +135,7 @@ export default function PoolDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Design Your Pool Deck" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/pool-deck-builder-northern-virginia" />
 

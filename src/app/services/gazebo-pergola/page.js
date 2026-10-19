@@ -122,7 +122,7 @@ export default function GazeboPergolaPage() {
   return (
     <main>
       <JsonLd data={faqSchemaData} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/gazebo-pergola" name="Gazebo &amp; Pergola Builder | Loudoun VA | LDN Decks" description="Add shade and stunning architectural character to your backyard with custom gazebos and pergolas in Northern Virginia. Expert design and build services." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/gazebo-pergola" name="Gazebo &amp; Pergola Builder | Loudoun VA | LDN Decks" description="Add shade and stunning architectural character to your backyard with custom gazebos and pergolas in Northern Virginia. Expert design and build services." speakable />
       <ServiceSchema
         name="Custom Gazebos and Pergolas"
         description="Custom design and build services for luxury pergolas, gazebos, and outdoor shade structures in Northern Virginia."
@@ -139,7 +139,7 @@ export default function GazeboPergolaPage() {
         description="Add lasting value, incredible shade, and stunning architectural character to your outdoor space with a custom gazebo or pergola engineered by Loudoun Decks."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
       </section>
 
       <AboveFoldCTA headline="Custom gazebo or pergola in Northern Virginia? Talk to a NoVA outdoor-structure specialist today." />
@@ -174,11 +174,11 @@ export default function GazeboPergolaPage() {
             </thead>
             <tbody>
               {[
-                ['Basic attached', '8x10 to 12x14', 'Pressure-treated wood', '$8k–$14k', 'Budget shade over deck'],
-                ['Standard attached', '10x12 to 14x16', 'Vinyl/composite/cedar', '$12k–$22k', 'Most popular low maintenance'],
-                ['Freestanding', '10x10 to 16x20', 'Vinyl/composite/wood', '$14k–$28k', 'Garden focal point, patio shade'],
-                ['Louvered roof (motorized)', '10x12 to 16x20', 'Aluminum + composite', '$20k–$35k+', 'Adjustable shade + rain protection'],
-                ['Pergola + deck combo', 'Varies', 'Matches deck material', '$30k–$55k total', 'Complete outdoor room'],
+                ['Basic attached', '8x10 to 12x14', 'Pressure-treated wood', 'a written estimate', 'Budget shade over deck'],
+                ['Standard attached', '10x12 to 14x16', 'Vinyl/composite/cedar', 'a written estimate', 'Most popular low maintenance'],
+                ['Freestanding', '10x10 to 16x20', 'Vinyl/composite/wood', 'a written estimate', 'Garden focal point, patio shade'],
+                ['Louvered roof (motorized)', '10x12 to 16x20', 'Aluminum + composite', 'a written estimate', 'Adjustable shade + rain protection'],
+                ['Pergola + deck combo', 'Varies', 'Matches deck material', 'a written estimate total', 'Complete outdoor room'],
               ].map((row, i) => (
                 <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                   {row.map((cell, j) => (

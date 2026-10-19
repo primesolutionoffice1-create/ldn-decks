@@ -24,13 +24,15 @@ export const metadata = buildMetadata({
 const PATH = '/deck-permit-hoa-cost-loudoun-county';
 
 const costRows = [
-  ['Loudoun County typical deck permit', 'Verify current county fee', 'Standard processing when county-typical', 'County fees are invoiced at intake and paid before review'],
-  ['Covered deck or non-typical deck permit', 'Higher review budget', 'Longer if plan review/trades apply', 'Roof, electrical, hot tub, spa, or grading scope can add permits'],
-  ['HOA application fee', 'Verify with the association', 'Submit with the complete ARC packet', 'Fees and deposits vary by community'],
-  ['HOA architectural review', 'Verify with the association', 'Meeting schedule varies', 'HOA approval is separate from county permitting'],
-  ['Engineering drawings (if required)', '$500–$1,500', '1–2 weeks', 'Covered decks, complex framing, or sloped sites'],
-  ['Permit revisions (if needed)', 'Case-specific', '1–2 weeks', 'Avoided by aligning HOA aesthetics with permit drawings'],
-  ['Inspections (3 standard)', 'Included in permit workflow', 'Schedule one work day ahead', 'Footings → framing → final; framing/final may combine if accessible'],
+  ['County Typical Deck Detail, outside an incorporated town, under 1,000 sq ft', '$265', 'Building permit and county zoning permit', 'Loudoun County fee checked October 18, 2026 at loudoun.gov/1166/Decks'],
+  ['County Typical Deck Detail, outside a town, 1,000 sq ft or more', '$165 plus a square-footage fee', 'County zoning permit plus the size-based fee', 'The county calculates the size-based fee from the application'],
+  ['County Typical Deck Detail, inside an incorporated town, under 1,000 sq ft', '$100', 'Building permit only', 'Town zoning is a separate approval'],
+  ['Decks built to plan specifications, outside a town, under 1,000 sq ft', '$395', 'Building permit, plan review, and county zoning permit', 'Loudoun County fee checked October 18, 2026 on the same page'],
+  ['Decks built to plan specifications, outside a town, 1,000 sq ft or more', '$335 plus a square-footage fee', 'County zoning permit and plan review, plus the size-based fee', 'Electrical, hot tub, or spa equipment can add separate permits'],
+  ['Decks built to plan specifications, inside a town, under 1,000 sq ft', '$230', 'County building permit and plan review', 'Town review is separate'],
+  ['HOA application or deposit', 'Set by the association', 'Submit with the complete ARC packet', 'Not a Loudoun County fee'],
+  ['Engineering drawings, when required', 'Quoted by the engineer', 'Depends on the drawing set', 'Loudoun Decks does not publish an engineering fee'],
+  ['Inspections', 'Part of the permit workflow', 'Schedule one work day ahead', 'Footing, framing, and final; framing and final may be combined when accessible'],
 ];
 
 const faqs = [
@@ -134,9 +136,9 @@ export default function DeckPermitHoaCostLoudounPage() {
         path={PATH}
         image="/showcase/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-08-13"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-08-13" url={`https://ldndecks.com${PATH}`} name="Deck Permit &amp; HOA Costs in Loudoun County: 2026 Budget Guide" description="Source-checked Loudoun County deck permit and HOA cost planning: LandMARC fees, ARC review, engineering drawings, inspections, and total budget impact." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Deck Permit &amp; HOA Costs in Loudoun County: 2026 Budget Guide" description="Source-checked Loudoun County deck permit and HOA cost planning: LandMARC fees, ARC review, engineering drawings, inspections, and total budget impact." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -252,9 +254,9 @@ export default function DeckPermitHoaCostLoudounPage() {
 
           <h2 style={S.h2}>How Permit + HOA Cost Shapes Monthly Payment</h2>
           <p style={S.p}>
-            Permit and HOA costs are a small share of total project amount — usually 1–3%. But they belong in the
-            project amount you finance, not in cash on top. Including $1,500 in permit/HOA fees in a $30,000 financed
-            project adds about $19/month at 8.99% APR over 10 years. Excluding them creates surprise cash outflow.
+            County permit fees above are Loudoun County charges checked on October 18, 2026, not a Loudoun Decks price.
+            HOA fees and engineering fees are separate. If a financed contract includes those items, the written estimate
+            should say so. The lender calculates any change in the monthly payment.
           </p>
           <p style={S.p}>
             Before choosing a material or payment plan, model the full project with the <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck cost calculator</Link> and compare it against the <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>composite deck cost guide</Link>. Those two pages help separate the base deck budget from permit fees, HOA review, engineering drawings, railings, stairs, lighting, and covered-deck upgrades.
@@ -384,7 +386,7 @@ export default function DeckPermitHoaCostLoudounPage() {
       </article>
 
       <SimpleCTA title="HOA-Ready Estimate Including Permit Fees" buttonText="Request Written Estimate" link="/get-estimate" />
-      <NamedAuthor context="Loudoun County" lastUpdated="2026-08-13" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} category="permit-approval" />
       <ContactHome />
     </>

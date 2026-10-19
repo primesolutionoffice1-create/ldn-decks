@@ -48,7 +48,7 @@ const gainesvilleFAQs = [
   },
   {
     q: "What is the cost of a composite deck in Gainesville?",
-    a: "A professional composite deck in Gainesville typically ranges from $20,000 to $50,000+, depending on size, materials, multi-level design, and add-ons like screened porches."
+    a: "A professional composite deck in Gainesville typically ranges from a written estimate to a written estimate, depending on size, materials, multi-level design, and add-ons like screened porches."
   },
   {
     q: "Do you handle the Gainesville permitting process?",
@@ -87,7 +87,7 @@ const expansionSections = [
   {
     title: "Composite Decking Specialists for Gainesville Homes",
     paragraphs: [
-      "The humid Virginia summers make composite decking the ideal choice for Gainesville homeowners. We plan Trex, TimberTech, and AZEK decking options with low-maintenance boards selected for Virginia humidity and freeze-thaw exposure. Projects typically start around $20,000 and scale based on your specific design requirements.",
+      "The humid Virginia summers make composite decking the ideal choice for Gainesville homeowners. We plan Trex, TimberTech, and AZEK decking options with low-maintenance boards selected for Virginia humidity and freeze-thaw exposure. Projects typically start around a written estimate and scale based on your specific design requirements.",
       "We specialize in designing decks that maximize the usable outdoor space of your property. Integrated lighting, custom railings, and built-in seating are standard requests that we execute flawlessly.",
       "Every composite deck proposal in Gainesville includes manufacturer warranty information for the selected product line and installation practices aligned with published manufacturer guidance."
     ],
@@ -112,7 +112,7 @@ export default function DeckBuilderGainesvillePage() {
   return (
     <main>
       <LocalBusinessSchema city="Gainesville" url="https://ldndecks.com/deck-builder-gainesville-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-gainesville-va" name="Deck Builder in Gainesville, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Gainesville, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-gainesville-va" name="Deck Builder in Gainesville, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Gainesville, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Gainesville, VA's Trusted Deck Company"
         title="Custom Deck Builder in Gainesville, VA"
@@ -121,7 +121,7 @@ export default function DeckBuilderGainesvillePage() {
       <ServiceMain
         subtitle="Prince William County Craftsmanship"
         title="Deck Builder Gainesville VA  -  Premium Quality"
-        description="We build the outdoor spaces Gainesville homeowners love. Custom designs, HOA-ready plans, and premium composite materials starting at $20k+."
+        description="We build the outdoor spaces Gainesville homeowners love. Custom designs, HOA-ready plans, and premium composite materials starting at a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "Full Gainesville & Prince William County Permit management",
@@ -194,7 +194,7 @@ export default function DeckBuilderGainesvillePage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Gainesville" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Gainesville" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-gainesville-va" />
-      <NamedAuthor context="Gainesville and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Gainesville and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

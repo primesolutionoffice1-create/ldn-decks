@@ -47,7 +47,7 @@ const inclusions = [
 const mcleanFAQs = [
   {
     q: "How much does a custom deck cost in McLean, VA?",
-    a: "Many serious McLean composite deck replacements and outdoor living projects plan around $40,000 to $120,000+, depending on size, framing condition, material tier, railing, lighting, stairs, drainage, and whether the scope includes a screened porch or covered structure. Smaller repair-only work should be evaluated separately."
+    a: "Many serious McLean composite deck replacements and outdoor living projects plan around a written estimate to a written estimate, depending on size, framing condition, material tier, railing, lighting, stairs, drainage, and whether the scope includes a screened porch or covered structure. Smaller repair-only work should be evaluated separately."
   },
   {
     q: "Do I need HOA approval for a deck in McLean?",
@@ -121,17 +121,17 @@ const expansionSections = [
 const projectScenarios = [
   {
     title: "Code-reset composite replacement",
-    range: "$40k-$75k+ planning range",
+    range: "a written estimate planning range",
     details: "Best for older pressure-treated decks where ledger, footings, stairs, and guardrails need inspection before reuse is considered. Typical upgrades include Trex or TimberTech decking, aluminum railing, code-compliant stairs, lighting, and a cleaner access plan."
   },
   {
     title: "Estate outdoor living deck",
-    range: "$65k-$120k+ planning range",
+    range: "a written estimate planning range",
     details: "Best for larger McLean homes that need a 500-800 sqft entertainment deck, AZEK or premium composite boards, glass/cable/aluminum railing, low-voltage lighting, privacy planning, under-deck drainage, and slope-aware layout."
   },
   {
     title: "Deck + screened porch or covered structure",
-    range: "$80k-$150k+ planning range",
+    range: "a written estimate planning range",
     details: "Best when the deck is part of a larger outdoor room with roof tie-in, screened porch, heaters, fan, fireplace, or covered dining zone. These projects need early review for structure, drainage, RPA exposure, and Fairfax County permit path."
   }
 ];
@@ -141,7 +141,7 @@ export default function McLeanDeckBuilderPage() {
     <main>
       <JsonLd data={mcleanFaqSchema} />
       <LocalBusinessSchema city="McLean" url="https://ldndecks.com/deck-builder-mclean-va" />
-      <WebPageSchema dateModified="2026-07-06" url="https://ldndecks.com/deck-builder-mclean-va" name="Deck Builder in McLean, VA | Composite Decks | Loudoun Decks" description="Premium deck builder in McLean, VA for composite deck replacement, Trex and TimberTech planning, screened porches, and estate outdoor living projects." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-mclean-va" name="Deck Builder in McLean, VA | Composite Decks | Loudoun Decks" description="Premium deck builder in McLean, VA for composite deck replacement, Trex and TimberTech planning, screened porches, and estate outdoor living projects." speakable />
       <ServicesHeader
         subtext="McLean, VA's Choice for Luxury Decks"
         title="Custom Deck Builder in McLean, VA"
@@ -152,7 +152,7 @@ export default function McLeanDeckBuilderPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>McLean premium planning range: most serious projects start around $40,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>McLean premium planning range: most serious projects start around a written estimate</strong>
             <br />
             We focus on <strong style={{ color: '#111' }}>full replacement, composite, screened porch, and outdoor living scopes</strong>. Need a repair instead? Visit our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
           </p>
@@ -254,7 +254,7 @@ export default function McLeanDeckBuilderPage() {
             These are planning scenarios, not final quotes. A McLean estimate should be confirmed after site access, framing condition,
             Fairfax County permit path, HOA requirements, drainage, and material selections are reviewed.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '1rem' }}>
             {projectScenarios.map((scenario) => (
               <article key={scenario.title} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 8, padding: '1.25rem' }}>
                 <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.4rem' }}>{scenario.title}</h3>
@@ -329,7 +329,7 @@ export default function McLeanDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="McLean" /></div></section>
       <SimpleCTA title="Build Your Luxury Deck in McLean" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-mclean-va" />
-      <NamedAuthor context="McLean and Northern Virginia" lastUpdated="2026-07-06" />
+      <NamedAuthor context="McLean and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

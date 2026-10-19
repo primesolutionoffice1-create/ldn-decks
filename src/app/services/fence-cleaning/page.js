@@ -71,7 +71,7 @@ const expansionSections = [
 export default function FenceCleaningPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/fence-cleaning" name="Professional Fence Cleaning NoVA | Wood &amp; Composite Restoration" description="Restore your fence with professional cleaning services in Northern Virginia. We safely remove gray weathering, mold, and algae from wood and composite fencing." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/fence-cleaning" name="Professional Fence Cleaning NoVA | Wood &amp; Composite Restoration" description="Restore your fence with professional cleaning services in Northern Virginia. We safely remove gray weathering, mold, and algae from wood and composite fencing." speakable />
       <ServiceSchema
         name="Fence Cleaning"
         description="Professional wood and composite fence cleaning in Northern Virginia — removing gray weathering, mold, and algae to restore your fencing."
@@ -87,7 +87,7 @@ export default function FenceCleaningPage() {
         description="Loudoun Decks provides professional fence cleaning for homeowners in Northern Virginia, helping maintain the integrity and appearance of your property boundaries."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       </section>
 
       <ServiceMain
@@ -124,7 +124,7 @@ export default function FenceCleaningPage() {
           { q: "Is fence cleaning safe for plants along the fence line?", a: "We pre-rinse and protect landscaping where needed, then control the cleaning and rinse process around planting beds. Dense vines, delicate shrubs and neighbor-side plantings are reviewed before the work begins." },
           { q: "Can you clean composite or vinyl fencing?", a: "Yes. Composite and vinyl fencing need a different approach than wood. We focus on removing algae, dirt film, sprinkler mineral marks and surface staining without abrasive scrubbing that could dull the finish." },
           { q: "When should a fence be cleaned before a deck or patio project?", a: "Fence cleaning is useful before deck resurfacing, patio installation, lighting upgrades or backyard photography because a dirty boundary can make a newly improved outdoor living area look unfinished." },
-          { q: "How much does fence cleaning cost?", a: "Most residential fence cleaning projects in Northern Virginia range from $200 to $800. The final price depends on linear footage, fence height, material type, and the condition of the surface. We provide free on-site estimates so the quote reflects your specific fence." },
+          { q: "How much does fence cleaning cost?", a: "Most residential fence cleaning projects in Northern Virginia range from a written estimate to a written estimate. The final price depends on linear footage, fence height, material type, and the condition of the surface. We provide free on-site estimates so the quote reflects your specific fence." },
           { q: "Should I clean my fence before staining or sealing?", a: "Yes. Cleaning removes the gray oxidation layer and opens the wood pores so stain or sealer can penetrate properly and bond to fresh wood fiber. Applying stain over a dirty or weathered surface leads to poor adhesion and premature finish failure." }
         ]}
       />

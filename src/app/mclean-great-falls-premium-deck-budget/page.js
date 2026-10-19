@@ -15,7 +15,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/mclean-great-falls-premium-deck-budget',
   title: 'McLean & Great Falls Premium Deck Budget Guide (2026)',
-  description: 'Premium deck cost in McLean and Great Falls VA — typical $40k–$120k+ projects with AZEK Vintage, cable railings, integrated lighting, and covered structures.',
+  description: 'Premium deck cost in McLean and Great Falls VA — typical a written estimate projects with AZEK Vintage, cable railings, integrated lighting, and covered structures.',
   image: '/social/mclean-great-falls-premium-deck-budget-social.png',
 });
 
@@ -24,40 +24,40 @@ const PATH = '/mclean-great-falls-premium-deck-budget';
 const tiers = [
   {
     name: 'Premium Open Deck',
-    range: '$40,000–$70,000',
+    range: 'a written estimate',
     desc: '500–700 sqft AZEK Vintage or Trex Signature with aluminum or cable railings and full lighting package',
-    monthly: '$506–$886 /mo (10y)',
+    monthly: 'a lender-calculated payment (10y)',
   },
   {
     name: 'Premium with Pergola',
-    range: '$55,000–$90,000',
+    range: 'a written estimate',
     desc: 'Premium deck with louvered or cedar pergola, integrated lighting, picture-frame border, and high-end railings',
-    monthly: '$696–$1,139 /mo (10y)',
+    monthly: 'a lender-calculated payment (10y)',
   },
   {
     name: 'Covered Premium Deck',
-    range: '$75,000–$120,000+',
+    range: 'a written estimate',
     desc: 'Full hip or gable roof matching the house, AZEK Vintage or wide-plank PVC, integrated audio/lighting/heating',
-    monthly: '$949–$1,519 /mo (10y)',
+    monthly: 'a lender-calculated payment (10y)',
   },
 ];
 
 const faqs = [
   {
     q: 'How much does a premium deck cost in McLean or Great Falls?',
-    a: 'Premium decks in McLean and Great Falls typically run $40,000–$120,000+ depending on size, roof type, and finish level. Most projects in these markets specify Trex Signature or TimberTech AZEK Vintage with aluminum or cable railings, full lighting packages, and frequently a pergola or full roof structure.',
+    a: 'Premium decks in McLean and Great Falls typically are priced in a written estimate depending on size, roof type, and finish level. Most projects in these markets specify Trex Signature or TimberTech AZEK Vintage with aluminum or cable railings, full lighting packages, and frequently a pergola or full roof structure.',
   },
   {
-    q: 'What is the monthly payment on a $75,000 premium deck?',
-    a: 'At a sample 8.99% APR, a $75,000 deck financed over 10 years is roughly $949/month and roughly $761/month over 15 years. Premium deck projects often use longer terms (12–15 years) to keep monthly payment comfortable while preserving cash for landscaping and interior work.',
+    q: 'What is the monthly payment on a a written estimate premium deck?',
+    a: 'At a sample 8.99% APR, a a written estimate deck financed over 10 years is roughly a lender-calculated paymentnth and roughly a lender-calculated paymentnth over 15 years. Premium deck projects often use longer terms (12–15 years) to keep monthly payment comfortable while preserving cash for landscaping and interior work.',
   },
   {
     q: 'Why are decks more expensive in McLean and Great Falls than other NoVA areas?',
-    a: 'Three factors: larger average project size (most jobs are 500–800 sqft vs 300–500 sqft elsewhere), premium material preference (AZEK Vintage, cable railings, integrated lighting are baseline rather than upgrades), and frequent covered structures or pergolas that add $15,000–$55,000.',
+    a: 'Three factors: larger average project size (most jobs are 500–800 sqft vs 300–500 sqft elsewhere), premium material preference (AZEK Vintage, cable railings, integrated lighting are baseline rather than upgrades), and frequent covered structures or pergolas that add a written estimate.',
   },
   {
     q: 'Do you build covered decks in Great Falls and McLean?',
-    a: 'Yes. Covered decks are increasingly common in both markets — usually with full hip or gable roofs designed to match the house exterior. Pricing runs $75,000–$120,000+ depending on roof complexity and finish.',
+    a: 'Yes. Covered decks are increasingly common in both markets — usually with full hip or gable roofs designed to match the house exterior. Pricing is priced in a written estimate depending on roof complexity and finish.',
   },
   {
     q: 'How long do premium deck projects take?',
@@ -94,13 +94,13 @@ export default function MclenGreatFallsPremiumPage() {
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="McLean & Great Falls Premium Deck Budget Guide (2026)"
-        description="Premium deck cost in McLean and Great Falls VA — typical $40k–$120k+ projects with AZEK Vintage, cable railings, integrated lighting, and covered structures."
+        description="Premium deck cost in McLean and Great Falls VA — typical a written estimate projects with AZEK Vintage, cable railings, integrated lighting, and covered structures."
         path={PATH}
         image="/showcase/img20.jpg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="McLean &amp; Great Falls Premium Deck Budget Guide (2026)" description="Premium deck cost in McLean and Great Falls VA — typical $40k–$120k+ projects with AZEK Vintage, cable railings, integrated lighting, and covered structures." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="McLean &amp; Great Falls Premium Deck Budget Guide (2026)" description="Premium deck cost in McLean and Great Falls VA — typical a written estimate projects with AZEK Vintage, cable railings, integrated lighting, and covered structures." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -111,7 +111,7 @@ export default function MclenGreatFallsPremiumPage() {
             McLean and Great Falls Premium Deck Budget Guide
           </h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: 1.6 }}>
-            Premium-tier decks in McLean and Great Falls typically run $40,000–$120,000+ with AZEK Vintage, cable
+            Premium-tier decks in McLean and Great Falls typically are priced in a written estimate with AZEK Vintage, cable
             railings, integrated lighting, and full roof structures. Here&apos;s how to plan one.
           </p>
         </div>
@@ -129,9 +129,9 @@ export default function MclenGreatFallsPremiumPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            Premium decks in <strong>McLean and Great Falls</strong> typically run <strong>$40,000–$120,000+</strong>{' '}
-            depending on size, roof type, and finish. Premium open deck: $40k–$70k. With pergola: $55k–$90k. Covered
-            deck: $75k–$120k+. At 8.99% APR over 10 years, that&apos;s roughly <strong>$506–$1,519/month</strong>.
+            Premium decks in <strong>McLean and Great Falls</strong> typically run <strong>a written estimate</strong>{' '}
+            depending on size, roof type, and finish. Premium open deck: a written estimate. With pergola: a written estimate. Covered
+            deck: a written estimate. At 8.99% APR over 10 years, that&apos;s roughly <strong>a lender-calculated paymentnth</strong>.
           </p>
         </div>
       </section>
@@ -169,8 +169,8 @@ export default function MclenGreatFallsPremiumPage() {
 
           <h2 style={S.h2}>What Drives Premium Pricing in These Markets</h2>
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
-            <li><strong>Material:</strong> AZEK Vintage or Trex Signature ($60–$85/sqft installed) rather than entry composite</li>
-            <li><strong>Railings:</strong> Aluminum or cable rather than composite — adds $40–$60/linear ft</li>
+            <li><strong>Material:</strong> AZEK Vintage or Trex Signature (priced in a written estimate) rather than entry composite</li>
+            <li><strong>Railings:</strong> Aluminum or cable rather than composite — adds a written estimate/linear ft</li>
             <li><strong>Lighting:</strong> Recessed deck lights, smart-controlled stair lights, integrated post lighting</li>
             <li><strong>Structure:</strong> Often a pergola or covered roof rather than open deck</li>
             <li><strong>Finish details:</strong> Picture-frame borders, multi-color inlays, built-in seating, planter benches</li>
@@ -194,7 +194,7 @@ export default function MclenGreatFallsPremiumPage() {
           <h2 style={S.h2}>Permit and Timeline Notes</h2>
           <p style={S.p}>
             Fairfax County permit review for premium and covered decks runs 3–6 weeks. Premium projects almost always
-            require engineering drawings ($500–$1,500), particularly for covered structures, steel framing, or sloped
+            require engineering drawings (a written estimate), particularly for covered structures, steel framing, or sloped
             sites. We coordinate the structural review and coordinate the permit submission. HOA review, where
             applicable, runs in parallel.
           </p>
@@ -239,7 +239,7 @@ export default function MclenGreatFallsPremiumPage() {
       </article>
 
       <SimpleCTA title="Plan a Premium Deck Project" buttonText="Get Free Written Estimate" link="/get-estimate" />
-      <NamedAuthor context="McLean &amp; Great Falls, Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="McLean &amp; Great Falls, Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

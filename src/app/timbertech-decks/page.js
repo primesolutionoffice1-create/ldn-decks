@@ -58,7 +58,7 @@ const timberTechFAQs = [
   },
   {
     q: 'How much does a TimberTech deck cost in Northern Virginia?',
-    a: 'Most TimberTech and AZEK projects we discuss start around $20,000 and can reach $45,000-$80,000+ for elevated, multi-level, or feature-rich decks with premium railing, lighting, stairs, and dry-space systems.',
+    a: 'Most TimberTech and AZEK projects we discuss start around a written estimate and can reach a written estimate for elevated, multi-level, or feature-rich decks with premium railing, lighting, stairs, and dry-space systems.',
   },
   {
     q: 'Does TimberTech handle Virginia humidity well?',
@@ -126,7 +126,7 @@ const expansionSections = [
 export default function TimberTechDecksPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/timbertech-decks" name="TimberTech AZEK Deck Builder Northern Virginia" description="TimberTech and AZEK deck builder in Northern Virginia. Premium PVC and composite decks for Loudoun, Fairfax and Prince William County." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/timbertech-decks" name="TimberTech AZEK Deck Builder Northern Virginia" description="TimberTech and AZEK deck builder in Northern Virginia. Premium PVC and composite decks for Loudoun, Fairfax and Prince William County." speakable />
       <ServiceSchema
         name="TimberTech AZEK Deck Installation"
         description="TimberTech and AZEK deck installation in Northern Virginia. Premium composite and PVC decking for Loudoun, Fairfax, and Prince William County homes."
@@ -167,7 +167,7 @@ export default function TimberTechDecksPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: 500 }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>TimberTech and AZEK projects typically start around $20,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>TimberTech and AZEK projects typically start around a written estimate</strong>
             <br />
             This page is for <strong style={{ color: '#111' }}>full TimberTech, AZEK, replacement, and resurfacing projects</strong>, not board-only retail purchases. You can <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>estimate your monthly deck payment</Link> before choosing a board line. For board repair or small fixes, see our <Link href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link>.
           </p>
@@ -181,10 +181,10 @@ export default function TimberTechDecksPage() {
             TimberTech &amp; AZEK Deck Cost in Northern Virginia (2026)
           </h2>
           <p data-speakable style={{ marginBottom: '1.5rem', lineHeight: 1.7, color: '#2d3748' }}>
-            TimberTech and AZEK decks in Northern Virginia run <strong>$35–$85 per square foot installed</strong>,
-            depending on tier. EDGE Prime+ runs $35–$45/sqft, PRO Reserve runs $45–$60/sqft, and the premium AZEK
-            Vintage full-PVC line runs $60–$85/sqft. A 350 sqft AZEK Vintage project typically lands
-            <strong> $28,000–$42,000+</strong> with the industry-longest 50-year residential warranty.
+            TimberTech and AZEK decks in Northern Virginia run <strong>a written estimate per square foot installed</strong>,
+            depending on tier. EDGE Prime+ is priced in priced in a written estimate, PRO Reserve is priced in priced in a written estimate, and the premium AZEK
+            Vintage full-PVC line is priced in priced in a written estimate. A 350 sqft AZEK Vintage project typically lands
+            <strong> a written estimate</strong> with the industry-longest 50-year residential warranty.
           </p>
           <div style={{ overflowX: 'auto', marginBottom: '1.25rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
@@ -199,20 +199,20 @@ export default function TimberTechDecksPage() {
               <tbody>
                 <tr>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>TimberTech EDGE Prime+</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$35–$45</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$18,000–$26,000</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>25-yr residential + 25-yr fade &amp; stain</td>
                 </tr>
                 <tr style={{ background: '#fafafa' }}>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>TimberTech PRO Reserve</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$45–$60</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$22,000–$32,000</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>30-yr residential + 30-yr fade &amp; stain</td>
                 </tr>
                 <tr>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>TimberTech AZEK Vintage</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$60–$85</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>$28,000–$42,000+</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>50-yr residential + 50-yr fade &amp; stain</td>
                 </tr>
               </tbody>
@@ -249,7 +249,7 @@ export default function TimberTechDecksPage() {
       />
 
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-05-26" />
+        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-10-18" />
       </div>
       <ServiceContentExpansion sections={expansionSections} />
 
@@ -261,7 +261,7 @@ export default function TimberTechDecksPage() {
           <p style={{ maxWidth: 760, margin: '0 auto 32px', textAlign: 'center', color: '#555', lineHeight: 1.65 }}>
             Different searches need different answers. We route homeowners toward the project path that fits the deck they actually need.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 18 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: 18 }}>
             {[
               ['New TimberTech Deck', 'Design-first projects with premium surface, rail, lighting, stairs, and outdoor-living integration.'],
               ['AZEK PVC Upgrade', 'Premium PVC option for homeowners prioritizing moisture resistance, lighter boards, and luxury finish detail.'],
@@ -294,7 +294,7 @@ export default function TimberTechDecksPage() {
 
       <section style={{ padding: '56px 20px', maxWidth: 1000, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.8rem', marginBottom: 18 }}>Compare Your Options</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: 16 }}>
           {[
             ['/trex-decks', 'Trex Decks'],
             ['/composite-decks', 'Composite Decks'],

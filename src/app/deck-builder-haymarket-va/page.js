@@ -43,7 +43,7 @@ const inclusions = [
 const haymarketFAQs = [
   {
     q: "How much does a deck cost in Haymarket, VA?",
-    a: "Haymarket composite decks typically run $22,000 to $55,000+. Larger lots in Dominion Valley and Piedmont support bigger builds, and multi-level designs on sloped lots add engineering and framing cost. Composite boards install at roughly $32-$58 per square foot depending on the product line. Cable and glass railing systems  -  common on view lots  -  add $150-$250 per linear foot over standard aluminum."
+    a: "Haymarket composite decks typically are priced in a written estimate. Larger lots in Dominion Valley and Piedmont support bigger builds, and multi-level designs on sloped lots add engineering and framing cost. Composite boards install at roughly a written estimate per square foot depending on the product line. Cable and glass railing systems  -  common on view lots  -  add a written estimate per linear foot over standard aluminum."
   },
   {
     q: "Can you build a multi-level deck on a sloped Haymarket lot?",
@@ -79,7 +79,7 @@ const expansionSections = [
   {
     title: "Premium Materials for Haymarket Estates",
     paragraphs: [
-      "Haymarket's larger homes and lots call for materials that match the scale. Trex Transcend and TimberTech AZEK  -  the premium composite and PVC lines  -  are the most common choices in Dominion Valley and Piedmont, where homeowners expect a finished product consistent with $600,000-$1M+ homes. These lines offer deeper wood-grain textures, richer color palettes and the strongest fade-and-stain warranties in the industry.",
+      "Haymarket's larger homes and lots call for materials that match the scale. Trex Transcend and TimberTech AZEK  -  the premium composite and PVC lines  -  are the most common choices in Dominion Valley and Piedmont, where homeowners expect a finished product consistent with a written estimateM+ homes. These lines offer deeper wood-grain textures, richer color palettes and the strongest fade-and-stain warranties in the industry.",
       "Material selection also has to account for Haymarket's exposure. Elevated decks on open lots catch full sun and wind in ways that a sheltered suburban backyard does not. Premium composite lines are engineered with UV-resistant caps that hold color under direct Southern exposure  -  important on a west-facing Haymarket deck that takes afternoon sun from April through October. The 25-year fade-and-stain warranties on Trex Transcend and TimberTech AZEK are backed by the manufacturer, and certified installation keeps them enforceable.",
       "For the largest builds  -  450+ square feet, multi-level, with cable railing and integrated lighting  -  we use 2x8 or 2x10 joists at 12-inch centers rather than the minimum 16-inch spacing. The tighter joist spacing eliminates any flex or bounce underfoot, which matters on an elevated platform where occupants are acutely aware of deck movement. It adds material cost but changes the feel of the finished deck entirely."
     ],
@@ -112,7 +112,7 @@ export default function DeckBuilderHaymarketPage() {
   return (
     <main>
       <LocalBusinessSchema city="Haymarket" url="https://ldndecks.com/deck-builder-haymarket-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-haymarket-va" name="Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots" description="Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William permit planning support. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-haymarket-va" name="Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots" description="Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William permit planning support. Free estimate." speakable />
       <ServicesHeader
         subtext="Haymarket, VA's Trusted Deck Company"
         title="Custom Deck Builder in Haymarket, VA"
@@ -121,7 +121,7 @@ export default function DeckBuilderHaymarketPage() {
       <ServiceMain
         subtitle="Multi-Level Designs for Haymarket's Terrain"
         title="Deck Builder Haymarket VA  -  Premium Craftsmanship"
-        description="Haymarket's larger lots and elevation changes call for decks engineered to the site. Multi-level builds, cable railing for mountain and golf course views, and premium composite from $22k+."
+        description="Haymarket's larger lots and elevation changes call for decks engineered to the site. Multi-level builds, cable railing for mountain and golf course views, and premium composite from a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "Multi-level designs for sloped lots  -  2-3 level cascading decks",
@@ -193,7 +193,7 @@ export default function DeckBuilderHaymarketPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Haymarket" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Haymarket" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-haymarket-va" />
-      <NamedAuthor context="Haymarket and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Haymarket and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

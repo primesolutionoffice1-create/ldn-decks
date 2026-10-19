@@ -45,7 +45,7 @@ const inclusions = [
 const fallsChurchFAQs = [
   {
     q: "How much does a custom deck cost in Falls Church, VA?",
-    a: "Falls Church deck projects typically range from $25,000 to $60,000. Smaller lot sizes keep square footage modest, but homeowners in this market expect premium finishes — Trex Transcend, glass or cable railings, and integrated lighting. Composite decks run $40-$65 per square foot installed depending on material and complexity."
+    a: "Falls Church deck projects typically range from a written estimate to a written estimate. Smaller lot sizes keep square footage modest, but homeowners in this market expect premium finishes — Trex Transcend, glass or cable railings, and integrated lighting. Composite decks are priced in a written estimate per square foot installed depending on material and complexity."
   },
   {
     q: "Do I need a City of Falls Church permit or a Fairfax County permit?",
@@ -99,7 +99,7 @@ const expansionSections = [
   {
     title: "Premium Materials for a Premium Market",
     paragraphs: [
-      "Falls Church is one of Northern Virginia's highest-value real estate markets. Modest 1950s-era ramblers on small lots regularly sell for $800,000 to $1.2 million, and new construction teardowns push well beyond that. In this market, homeowners expect materials and finishes that match their property values. We exclusively use premium composite and PVC decking — Trex Transcend, TimberTech AZEK, and similar top-tier products — because they deliver the aesthetics and longevity this market demands.",
+      "Falls Church is one of Northern Virginia's highest-value real estate markets. Modest 1950s-era ramblers on small lots regularly sell for a written estimate to a written estimate million, and new construction teardowns push well beyond that. In this market, homeowners expect materials and finishes that match their property values. We exclusively use premium composite and PVC decking — Trex Transcend, TimberTech AZEK, and similar top-tier products — because they deliver the aesthetics and longevity this market demands.",
       "Glass railings and stainless steel cable systems are among the most popular choices for Falls Church projects. On a compact lot, transparent railings make a small deck feel significantly larger by preserving sight lines to the yard and beyond. Hidden fastener systems eliminate visible screws for a clean, furniture-grade surface. Integrated LED lighting extends the usable hours of your deck through Virginia's long summer evenings.",
       "These premium materials also eliminate the maintenance burden that traditional wood decks impose. In Virginia's humid climate, a pressure-treated wood deck needs sanding and staining every 1-2 years — a significant ongoing expense and inconvenience. Our composite builds are designed to look and perform beautifully for 25 years or more depending on product and care with nothing more than occasional cleaning."
     ]
@@ -119,7 +119,7 @@ export default function FallsChurchDeckBuilderPage() {
     <main>
       <JsonLd data={fallsChurchFaqSchema} />
       <LocalBusinessSchema city="Falls Church" url="https://ldndecks.com/deck-builder-falls-church-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-falls-church-va" name="Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks" description="Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex &amp; composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-falls-church-va" name="Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks" description="Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex &amp; composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate." speakable />
       <ServicesHeader
         subtext="Falls Church, VA's Compact Lot Deck Specialists"
         title="Custom Deck Builder in Falls Church, VA"
@@ -130,7 +130,7 @@ export default function FallsChurchDeckBuilderPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: $5,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: a written estimate</strong>
             <br />
             We focus on <strong style={{ color: '#111' }}>full custom Falls Church builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
           </p>
@@ -140,7 +140,7 @@ export default function FallsChurchDeckBuilderPage() {
       <ServiceMain
         subtitle="Falls Church's Trusted Choice"
         title="Deck Builder Falls Church VA - Smart Design for Compact Lots"
-        description="We design and build premium outdoor living spaces that maximize Falls Church's smaller properties. Custom composite builds, dual-jurisdiction permitting, and privacy-first design from $25k+."
+        description="We design and build premium outdoor living spaces that maximize Falls Church's smaller properties. Custom composite builds, dual-jurisdiction permitting, and privacy-first design from a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "City of Falls Church + Fairfax County permit experts",
@@ -241,7 +241,7 @@ export default function FallsChurchDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Falls Church" /></div></section>
       <SimpleCTA title="Maximize Your Falls Church Outdoor Space" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-falls-church-va" />
-      <NamedAuthor context="Falls Church and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Falls Church and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

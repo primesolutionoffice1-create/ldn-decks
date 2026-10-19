@@ -51,7 +51,7 @@ const brambletonFAQs = [
   },
   {
     q: "What does a composite deck cost in Brambleton?",
-    a: "Brambleton composite decks generally run $20,000 to $45,000. Most projects involve replacing builder-grade PT wood with Trex or TimberTech composite on 300-500 sqft suburban lots. Costs depend on size, material tier, railing choice and whether the existing frame can be reused."
+    a: "Brambleton composite decks generally are priced in a written estimate. Most projects involve replacing builder-grade PT wood with Trex or TimberTech composite on 300-500 sqft suburban lots. Costs depend on size, material tier, railing choice and whether the existing frame can be reused."
   },
   {
     q: "How long does a Brambleton deck project take?",
@@ -59,7 +59,7 @@ const brambletonFAQs = [
   },
   {
     q: "Can I resurface my Brambleton deck instead of replacing it entirely?",
-    a: "If the existing frame is structurally sound  -  which we inspect for free  -  resurfacing replaces only the deck boards and railings. This saves 40-60% compared to a full tear-down and rebuild and is a common choice for Brambleton homes where the original frame is under 15 years old."
+    a: "If the existing frame is structurally sound  -  which we inspect for free  -  resurfacing replaces only the deck boards and railings. This keeps a sound frame instead of rebuilding it compared to a full tear-down and rebuild and is a common choice for Brambleton homes where the original frame is under 15 years old."
   },
   {
     q: "Does Brambleton allow composite decking materials?",
@@ -81,7 +81,7 @@ const expansionSections = [
     paragraphs: [
       "Brambleton was built in phases from 2004 through 2020. The earlier homes  -  now 10 to 20 years old  -  came with basic pressure-treated wood decks that are graying, splintering and past the point where annual staining makes financial sense. Even the newer phases (2015-2020) used builder-grade PT that ages quickly in Northern Virginia's humid climate.",
       "The standard Brambleton upgrade replaces old PT boards with Trex Enhance or Transcend composite, swaps builder-grade wood railings for composite or aluminum railings, and adds hidden fasteners for a screw-free surface. Post cap lights on the railing are a frequent addition  -  they improve evening usability and add curb appeal, which matters in a community where homes are visible to neighbors on all sides.",
-      "On Brambleton homes where the original deck frame is structurally sound  -  typically homes built after 2010  -  resurfacing delivers the full visual transformation at 40-60% less than a complete rebuild. We inspect the frame before recommending the approach, and the inspection is part of every free estimate."
+      "On Brambleton homes where the original deck frame is structurally sound  -  typically homes built after 2010  -  resurfacing delivers the full visual transformation at less demolition than a complete rebuild. We inspect the frame before recommending the approach, and the inspection is part of every free estimate."
     ]
   },
   {
@@ -111,7 +111,7 @@ export default function BrambletonDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="Brambleton" url="https://ldndecks.com/deck-builder-brambleton-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-brambleton-va" name="Deck Builder in Brambleton, VA | Custom Trex Decks" description="Deck builder in Brambleton, VA. Composite decks built for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-brambleton-va" name="Deck Builder in Brambleton, VA | Custom Trex Decks" description="Deck builder in Brambleton, VA. Composite decks built for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. Free estimate." speakable />
       <ServicesHeader
         subtext="Brambleton, VA's Trusted Deck Company"
         title="Custom Deck Builder in Brambleton, VA"
@@ -120,7 +120,7 @@ export default function BrambletonDeckBuilderPage() {
       <ServiceMain
         subtitle="Built for Brambleton's DRB Standards"
         title="Deck Builder Brambleton VA  -  Premium Craftsmanship"
-        description="We replace aging builder-grade PT decks with composite and handle the BCA Design Review Board process from drawings to approval. Most projects $20k-$45k."
+        description="We replace aging builder-grade PT decks with composite and handle the BCA Design Review Board process from drawings to approval. Most projects a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "BCA Design Review Board submissions prepared and timed",
@@ -190,7 +190,7 @@ export default function BrambletonDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Brambleton" /></div></section>
       <SimpleCTA title="Upgrade Your Brambleton Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-brambleton-va" />
-      <NamedAuthor context="Brambleton and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Brambleton and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

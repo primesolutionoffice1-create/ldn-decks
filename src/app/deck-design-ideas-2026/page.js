@@ -17,21 +17,21 @@ export const metadata = buildMetadata({
 });
 
 const designs = [
-  { title: 'Multi-Level Step-Down', desc: 'Two or three levels following your yard\'s natural slope. Upper dining near the kitchen, lower lounge closer to the yard. Perfect for NoVA\'s hilly terrain.', range: '$35k–$80k', link: '/multi-level-deck-builder-northern-virginia', tags: ['Trending', 'Best for slopes'], image: '/images/img01.jpeg' },
-  { title: 'Deck + Screened Porch Combo', desc: 'Open composite deck for grilling connected to a screened section for bug-free dining. Our #1 most-requested design. Extends usable season to 9-10 months.', range: '$45k–$75k', link: '/screened-porch-cost-northern-virginia', tags: ['Most Popular'], image: '/images/img02.jpeg' },
-  { title: 'Integrated Outdoor Kitchen', desc: 'Built-in grill island, bar seating, and prep counter integrated directly into the deck design. Stone or stucco island on reinforced deck framing.', range: '$55k–$100k+', link: '/outdoor-kitchen-builder-northern-virginia', tags: ['Premium', 'Entertaining'], image: '/images/img03.jpeg' },
-  { title: 'Low-Profile Ground-Level', desc: 'Floating deck just inches above grade. No railings needed. Clean, modern look that blends with the landscape. Great for flat yards and pool surrounds.', range: '$12k–$25k', tags: ['Budget-friendly', 'Modern'], image: '/images/img04.jpeg' },
-  { title: 'Wraparound Deck', desc: 'Continuous deck wrapping two or more sides of the house. Multiple access points from different rooms. Creates a resort-like perimeter around your home.', range: '$50k–$90k+', tags: ['Estate homes'], image: '/images/img05.jpeg' },
-  { title: 'Cable Railing View Deck', desc: 'Elevated deck with cable railings for maximum view transparency. Perfect for hilltop lots and homes overlooking trees, water, or mountains.', range: '$35k–$65k', link: '/cable-railing-for-decks-northern-virginia', tags: ['Modern', 'Best for views'], image: '/images/img06.jpeg' },
-  { title: 'Mixed Material: Deck + Stone Patio', desc: 'Raised composite deck connected by stairs to a ground-level stone or paver patio with fire pit. Two distinct zones at different levels.', range: '$40k–$70k', link: '/deck-vs-patio-which-is-right', tags: ['Popular combo'], image: '/images/img07.jpeg' },
-  { title: 'Pergola-Covered Deck', desc: 'Deck with an attached or freestanding pergola providing partial shade. Optional: louvered roof panels for adjustable coverage, or climbing vines for natural shade.', range: '$30k–$55k', link: '/services/gazebo-pergola', tags: ['Shade solution'], image: '/images/img08.jpeg' },
-  { title: 'Under-Deck Living Space', desc: 'Second-story deck with a finished ceiling underneath, creating a covered patio on the lower level. Under-deck drainage keeps it completely dry.', range: '$45k–$80k', link: '/under-deck-ceiling-ideas', tags: ['Doubles space'], image: '/images/img09.jpeg' },
-  { title: 'Deck with Built-In Seating', desc: 'Integrated benches along the perimeter or as a focal centerpiece. Saves space vs freestanding furniture. Can include storage underneath.', range: '$20k–$40k', tags: ['Space-saving'], image: '/images/img13.jpeg' },
-  { title: 'Boardwalk-Style Deck', desc: 'Long, narrow deck extending into the yard like a boardwalk. Connects the house to a detached feature (fire pit, garden, shed). Creates visual drama.', range: '$15k–$30k', tags: ['Unique'], image: '/images/img11.jpeg' },
-  { title: 'Hot Tub Deck', desc: 'Reinforced deck section designed to support hot tub weight (3,000-5,000 lbs filled). Privacy screens, step-up platform, and dedicated electrical.', range: '$25k–$50k', tags: ['Relaxation'], image: '/images/img12.jpeg' },
-  { title: 'Smart Deck (Automated Lighting + Audio)', desc: 'WiFi-controlled LED lighting, built-in Bluetooth speakers, and automated screen systems. The tech-forward outdoor living space.', range: '$30k–$55k', link: '/deck-lighting-ideas-northern-virginia', tags: ['Tech', '2026 Trend'], image: '/images/img14.jpeg' },
-  { title: 'EZE-Breeze 3-Season Room', desc: 'Screened porch with EZE-Breeze vinyl panels that slide open in summer and close for wind/rain protection. Extends use to March-November.', range: '$35k–$65k', link: '/deck-enclosure-ideas-northern-virginia', tags: ['3-Season'], image: '/images/img15.jpeg' },
-  { title: 'Fire Feature Deck', desc: 'Deck designed around a fire element: gas fire pit built into a stone-topped table, or a fire bowl on a non-combustible pad.', range: '$25k–$45k', link: '/services/fire-pits', tags: ['Evening living'], image: '/images/img16.jpeg' },
+  { title: 'Multi-Level Step-Down', desc: 'Two or three levels following your yard\'s natural slope. Upper dining near the kitchen, lower lounge closer to the yard. Perfect for NoVA\'s hilly terrain.', range: 'a written estimate', link: '/multi-level-deck-builder-northern-virginia', tags: ['Trending', 'Best for slopes'], image: '/images/img01.jpeg' },
+  { title: 'Deck + Screened Porch Combo', desc: 'Open composite deck for grilling connected to a screened section for bug-free dining. Our #1 most-requested design. Extends usable season to 9-10 months.', range: 'a written estimate', link: '/screened-porch-cost-northern-virginia', tags: ['Most Popular'], image: '/images/img02.jpeg' },
+  { title: 'Integrated Outdoor Kitchen', desc: 'Built-in grill island, bar seating, and prep counter integrated directly into the deck design. Stone or stucco island on reinforced deck framing.', range: 'a written estimate', link: '/outdoor-kitchen-builder-northern-virginia', tags: ['Premium', 'Entertaining'], image: '/images/img03.jpeg' },
+  { title: 'Low-Profile Ground-Level', desc: 'Floating deck just inches above grade. No railings needed. Clean, modern look that blends with the landscape. Great for flat yards and pool surrounds.', range: 'a written estimate', tags: ['Budget-friendly', 'Modern'], image: '/images/img04.jpeg' },
+  { title: 'Wraparound Deck', desc: 'Continuous deck wrapping two or more sides of the house. Multiple access points from different rooms. Creates a resort-like perimeter around your home.', range: 'a written estimate', tags: ['Estate homes'], image: '/images/img05.jpeg' },
+  { title: 'Cable Railing View Deck', desc: 'Elevated deck with cable railings for maximum view transparency. Perfect for hilltop lots and homes overlooking trees, water, or mountains.', range: 'a written estimate', link: '/cable-railing-for-decks-northern-virginia', tags: ['Modern', 'Best for views'], image: '/images/img06.jpeg' },
+  { title: 'Mixed Material: Deck + Stone Patio', desc: 'Raised composite deck connected by stairs to a ground-level stone or paver patio with fire pit. Two distinct zones at different levels.', range: 'a written estimate', link: '/deck-vs-patio-which-is-right', tags: ['Popular combo'], image: '/images/img07.jpeg' },
+  { title: 'Pergola-Covered Deck', desc: 'Deck with an attached or freestanding pergola providing partial shade. Optional: louvered roof panels for adjustable coverage, or climbing vines for natural shade.', range: 'a written estimate', link: '/services/gazebo-pergola', tags: ['Shade solution'], image: '/images/img08.jpeg' },
+  { title: 'Under-Deck Living Space', desc: 'Second-story deck with a finished ceiling underneath, creating a covered patio on the lower level. Under-deck drainage keeps it completely dry.', range: 'a written estimate', link: '/under-deck-ceiling-ideas', tags: ['Doubles space'], image: '/images/img09.jpeg' },
+  { title: 'Deck with Built-In Seating', desc: 'Integrated benches along the perimeter or as a focal centerpiece. Saves space vs freestanding furniture. Can include storage underneath.', range: 'a written estimate', tags: ['Space-saving'], image: '/images/img13.jpeg' },
+  { title: 'Boardwalk-Style Deck', desc: 'Long, narrow deck extending into the yard like a boardwalk. Connects the house to a detached feature (fire pit, garden, shed). Creates visual drama.', range: 'a written estimate', tags: ['Unique'], image: '/images/img11.jpeg' },
+  { title: 'Hot Tub Deck', desc: 'Reinforced deck section designed to support hot tub weight (3,000-5,000 lbs filled). Privacy screens, step-up platform, and dedicated electrical.', range: 'a written estimate', tags: ['Relaxation'], image: '/images/img12.jpeg' },
+  { title: 'Smart Deck (Automated Lighting + Audio)', desc: 'WiFi-controlled LED lighting, built-in Bluetooth speakers, and automated screen systems. The tech-forward outdoor living space.', range: 'a written estimate', link: '/deck-lighting-ideas-northern-virginia', tags: ['Tech', '2026 Trend'], image: '/images/img14.jpeg' },
+  { title: 'EZE-Breeze 3-Season Room', desc: 'Screened porch with EZE-Breeze vinyl panels that slide open in summer and close for wind/rain protection. Extends use to March-November.', range: 'a written estimate', link: '/deck-enclosure-ideas-northern-virginia', tags: ['3-Season'], image: '/images/img15.jpeg' },
+  { title: 'Fire Feature Deck', desc: 'Deck designed around a fire element: gas fire pit built into a stone-topped table, or a fire bowl on a non-combustible pad.', range: 'a written estimate', link: '/services/fire-pits', tags: ['Evening living'], image: '/images/img16.jpeg' },
 ];
 
 const faqSchema = {
@@ -65,7 +65,7 @@ export default function DeckDesignIdeasPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-design-ideas-2026" name="Deck Design Ideas 2026 | 15 Photos, Costs &amp; Trends" description="See 15 deck design ideas for 2026 with photos, price ranges, colors, and NoVA contractor tips for composite, porch, pergola, and outdoor kitchen builds." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-design-ideas-2026" name="Deck Design Ideas 2026 | 15 Photos, Costs &amp; Trends" description="See 15 deck design ideas for 2026 with photos, price ranges, colors, and NoVA contractor tips for composite, porch, pergola, and outdoor kitchen builds." speakable />
       <JsonLd data={gallerySchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -91,17 +91,17 @@ export default function DeckDesignIdeasPage() {
                 <tr style={{ borderBottom: '1px solid #eee' }}>
                   <td style={{ padding: '0.75rem' }}>Multi-Level Deck</td>
                   <td style={{ padding: '0.75rem' }}>Sloped Yards</td>
-                  <td style={{ padding: '0.75rem' }}>$35k+</td>
+                  <td style={{ padding: '0.75rem' }}>a written estimate</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid #eee' }}>
                   <td style={{ padding: '0.75rem' }}>Deck + Porch Combo</td>
                   <td style={{ padding: '0.75rem' }}>All-Season Use</td>
-                  <td style={{ padding: '0.75rem' }}>$45k+</td>
+                  <td style={{ padding: '0.75rem' }}>a written estimate</td>
                 </tr>
                 <tr>
                   <td style={{ padding: '0.75rem' }}>Smart Deck</td>
                   <td style={{ padding: '0.75rem' }}>Tech Lovers</td>
-                  <td style={{ padding: '0.75rem' }}>$30k+</td>
+                  <td style={{ padding: '0.75rem' }}>a written estimate</td>
                 </tr>
               </tbody>
             </table>
@@ -121,7 +121,7 @@ export default function DeckDesignIdeasPage() {
               priority
             />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '2rem', marginBottom: '4rem' }}>
             {designs.map((d, i) => (
               <div key={i} style={{ background: '#fff', borderRadius: 12, overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', border: '1px solid #eee' }}>
                 <div style={{ position: 'relative', height: '200px' }}>
@@ -150,7 +150,7 @@ export default function DeckDesignIdeasPage() {
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>2026 Color Trends</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               { color: '#8B7355', name: 'Spiced Rum', brand: 'Trex Transcend', note: '#1 most requested' },
               { color: '#9CA3AF', name: 'Island Mist', brand: 'Trex Transcend', note: 'Cool gray tone' },
@@ -203,7 +203,7 @@ export default function DeckDesignIdeasPage() {
         </div>
       </article>
       <SimpleCTA title="Planning One of These Designs in Northern Virginia?" buttonText="Get a Local Deck Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/deck-design-ideas-2026" />
 

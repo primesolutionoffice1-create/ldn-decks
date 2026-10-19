@@ -64,7 +64,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Custom Deck Building (Primary Service)
 - URL: https://ldndecks.com/services/new-decks
-- Content: Complete guide to new deck construction — build process, footings, framing, materials (Trex, TimberTech, AZEK, wood), permits across 3 counties, 3-tier cost breakdown ($22k-$90k+), drainage, upgrades, timeline, warranty. 2000+ words.
+- Content: Complete guide to new deck construction — build process, footings, framing, materials (Trex, TimberTech, AZEK, wood), permits across 3 counties, 3-tier cost breakdown (a written estimate), drainage, upgrades, timeline, warranty. 2000+ words.
 - Intent: Commercial — homeowner ready to build a new deck
 - Updated: 2026-05-26
 
@@ -82,13 +82,13 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Screened Porch Builder Northern Virginia
 - URL: https://ldndecks.com/screened-porch-builder-northern-virginia
-- Content: 1800+ words — screened porch vs three-season room vs sunroom comparison, cost breakdown (3 tiers: $25k-$70k+), permits, materials, features, 8 FAQs.
+- Content: 1800+ words — screened porch vs three-season room vs sunroom comparison, cost breakdown (3 tiers: a written estimate), permits, materials, features, 8 FAQs.
 - Intent: Commercial — screened porch construction
 - Updated: 2026-05-25
 
 ### Deck Resurfacing Northern Virginia
 - URL: https://ldndecks.com/deck-resurfacing-northern-virginia
-- Content: Wood-to-composite resurfacing guide — 3-tier cost table ($15k-$45k+), frame eligibility, permit requirements, when to resurface vs replace, Trex/TimberTech/AZEK material options. 1500+ words.
+- Content: Wood-to-composite resurfacing guide — 3-tier cost table (a written estimate), frame eligibility, permit requirements, when to resurface vs replace, Trex/TimberTech/AZEK material options. 1500+ words.
 - Intent: Commercial — deck resurfacing/upgrade
 - Updated: 2026-05-27
 
@@ -347,7 +347,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### How Much Does a Deck Cost in Northern Virginia?
 - URL: https://ldndecks.com/composite-deck-cost-northern-virginia
-- Content: Definitive cost guide — $30-$75/sqft installed. Planning price tables by material tier. Labor breakdown. What drives the price up or down.
+- Content: Definitive cost guide — priced in a written estimate. Planning price tables by material tier. Labor breakdown. What drives the price up or down.
 - Intent: Informational/commercial — cost research phase
 - Updated: 2026-05-25
 
@@ -358,7 +358,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Screened Porch Cost
 - URL: https://ldndecks.com/screened-porch-cost-northern-virginia
-- Content: $25k-$70k+ with planning scenarios. EZE-Breeze, retractable, and traditional options priced for estimating.
+- Content: a written estimate with planning scenarios. EZE-Breeze, retractable, and traditional options priced for estimating.
 - Updated: 2026-05-25
 
 ### 2026 Deck Cost Report
@@ -396,7 +396,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### 400 Square Foot Deck Cost
 - URL: https://ldndecks.com/400-square-foot-deck-cost-northern-virginia
-- Content: 2026 pricing for a 400 sqft composite deck in Northern Virginia. Trex Enhance $14k–$22k. Trex Transcend $20k–$30k. TimberTech AZEK $24k–$34k.
+- Content: 2026 pricing for a 400 sqft composite deck in Northern Virginia. Trex Enhance is priced in a written estimate. Trex Transcend is priced in a written estimate. TimberTech AZEK is priced in a written estimate.
 - Intent: Commercial — size-specific cost research
 - Updated: 2026-05-28
 
@@ -408,31 +408,31 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### 800 Square Foot Deck Cost
 - URL: https://ldndecks.com/800-square-foot-deck-cost-northern-virginia
-- Content: 2026 pricing for an 800 sqft estate-tier deck in Northern Virginia. $38k–$66k+ range.
+- Content: 2026 pricing for an 800 sqft estate-tier deck in Northern Virginia. a written estimate range.
 - Intent: Commercial — size-specific cost research
 - Updated: 2026-05-28
 
 ### 12x20 Deck Cost
 - URL: https://ldndecks.com/deck-cost-12x20-northern-virginia
-- Content: 12x20 (240 sqft) deck cost — wood $7k–$13k, composite $15k–$25k, PVC $20k–$32k.
+- Content: 12x20 (240 sqft) deck cost — wood a written estimate, composite a written estimate, PVC a written estimate.
 - Intent: Commercial — dimension-specific cost research
 - Updated: 2026-05-28
 
 ### 16x20 Deck Cost
 - URL: https://ldndecks.com/deck-cost-16x20-northern-virginia
-- Content: 16x20 (320 sqft) deck cost — wood $9k–$17k, composite $20k–$32k, PVC $26k–$42k.
+- Content: 16x20 (320 sqft) deck cost — wood a written estimate, composite a written estimate, PVC a written estimate.
 - Intent: Commercial — dimension-specific cost research
 - Updated: 2026-05-28
 
 ### 20x20 Deck Cost
 - URL: https://ldndecks.com/deck-cost-20x20-northern-virginia
-- Content: 20x20 (400 sqft) deck cost — wood $12k–$21k, composite $24k–$40k, PVC $32k–$52k.
+- Content: 20x20 (400 sqft) deck cost — wood a written estimate, composite a written estimate, PVC a written estimate.
 - Intent: Commercial — dimension-specific cost research
 - Updated: 2026-05-28
 
 ### Deck Financing Options
 - URL: https://ldndecks.com/deck-financing
-- Content: Finance your custom deck with monthly payments. $0 down options, soft credit pre-qualification.
+- Content: Finance your custom deck with monthly payments. a written estimate down options, soft credit pre-qualification.
 - Intent: Commercial — financing research
 - Updated: 2026-05-28
 
@@ -444,7 +444,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Covered Deck Cost Northern Virginia
 - URL: https://ldndecks.com/covered-deck-cost-northern-virginia
-- Content: Covered deck cost guide — $35k–$85k+. Roof type comparison (pergola, solid pergola, hip/gable roof, screened porch conversion). Total project pricing with monthly payment examples.
+- Content: Covered deck cost guide — a written estimate. Roof type comparison (pergola, solid pergola, hip/gable roof, screened porch conversion). Total project pricing with monthly payment examples.
 - Intent: Informational/commercial — covered deck budget planning
 - Updated: 2026-05-27
 
@@ -462,31 +462,31 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Resurface or Replace — Financing Decision Guide
 - URL: https://ldndecks.com/resurface-or-replace-deck-financing
-- Content: Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, monthly payment math. Resurfacing saves $7k–$16k per project.
+- Content: Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, monthly payment math. Resurfacing saves a written estimate per project.
 - Intent: Informational/commercial — pre-financing decision
 - Updated: 2026-05-27
 
 ### Deck Permit & HOA Cost in Loudoun County
 - URL: https://ldndecks.com/deck-permit-hoa-cost-loudoun-county
-- Content: Loudoun County deck permit fees ($200–$1,200), HOA approval cost ($0–$500), timeline, engineering drawing requirements, inspection schedule. Total permit+HOA budget: $500–$2,500.
+- Content: Loudoun County deck permit fees (a written estimate), HOA approval cost (a written estimate), timeline, engineering drawing requirements, inspection schedule. Total permit+HOA budget: a written estimate.
 - Intent: Informational — permit and HOA budget planning
 - Updated: 2026-05-27
 
 ### Monthly Payment on a Composite Deck in Northern Virginia
 - URL: https://ldndecks.com/monthly-payment-composite-deck-northern-virginia
-- Content: Real monthly payment examples for $15k–$70k composite decks. Six-row scenario table at 8.99% APR over 10 and 15 years ($190–$886 /mo range). Lender pre-qualification process, what the project amount should include, financing math vs cash.
+- Content: Real monthly payment examples for a written estimate composite decks. Six-row scenario table at 8.99% APR over 10 and 15 years (a lender-calculated payment range). Lender pre-qualification process, what the project amount should include, financing math vs cash.
 - Intent: Financing planning — monthly payment research before contractor outreach
 - Updated: 2026-05-27
 
 ### Trex Deck Cost vs Monthly Payment
 - URL: https://ldndecks.com/trex-deck-cost-monthly-payment
-- Content: Trex tier breakdown (Enhance $35–$45/sqft, Transcend $45–$60/sqft, Signature $60–$80/sqft installed) with per-tier 350/500 sqft project totals and matching monthly payments at 8.99% APR. Warranty comparison and add-on cost guidance.
+- Content: Trex tier breakdown (Enhance priced in a written estimate, Transcend priced in a written estimate, Signature priced in a written estimate) with per-tier 350/500 sqft project totals and matching monthly payments at 8.99% APR. Warranty comparison and add-on cost guidance.
 - Intent: Commercial cost research — Trex-specific budget planning
 - Updated: 2026-05-27
 
 ### TimberTech & AZEK Deck Cost
 - URL: https://ldndecks.com/timbertech-azek-deck-cost-northern-virginia
-- Content: Three-tier TimberTech breakdown — EDGE ($35–$45/sqft), PRO ($45–$60/sqft), AZEK Vintage full PVC ($60–$85/sqft). Manufacturer warranty context to verify in current TimberTech/AZEK documents, colorway gallery (English Walnut, Coastline, Mahogany, Dark Hickory, Weathered Teak), and monthly payment matrix.
+- Content: Three-tier TimberTech breakdown — EDGE (priced in a written estimate), PRO (priced in a written estimate), AZEK Vintage full PVC (priced in a written estimate). Manufacturer warranty context to verify in current TimberTech/AZEK documents, colorway gallery (English Walnut, Coastline, Mahogany, Dark Hickory, Weathered Teak), and monthly payment matrix.
 - Intent: Commercial cost research — TimberTech/AZEK premium budget planning
 - Updated: 2026-05-27
 
@@ -504,13 +504,13 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Deck Lighting, Railings & Stairs Add-On Cost
 - URL: https://ldndecks.com/deck-lighting-railings-stairs-addon-cost
-- Content: Per-linear-foot pricing for railings (composite $40–$70/ft, aluminum $50–$90/ft, cable $60–$110/ft, glass $90–$160/ft). Stair configurations ($1,500–$15,000+). Lighting packages ($200–$5,000+). Build-time vs retrofit cost delta (30–50% premium for retrofit).
+- Content: Per-linear-foot pricing for railings (composite a written estimate, aluminum a written estimate, cable a written estimate, glass a written estimate). Stair configurations (a written estimate). Lighting packages (a written estimate). Build-time vs retrofit cost delta (30–50% premium for retrofit).
 - Intent: Commercial cost research — add-on budgeting
 - Updated: 2026-05-27
 
 ### McLean & Great Falls Premium Deck Budget
 - URL: https://ldndecks.com/mclean-great-falls-premium-deck-budget
-- Content: Premium-tier deck pricing for McLean and Great Falls — premium open deck $40k–$70k, with pergola $55k–$90k, covered deck $75k–$120k+. AZEK Vintage and Trex Signature emphasis, cable railings, integrated lighting, covered structures. Fairfax County permit + engineering coordination notes.
+- Content: Premium-tier deck pricing for McLean and Great Falls — premium open deck a written estimate, with pergola a written estimate, covered deck a written estimate. AZEK Vintage and Trex Signature emphasis, cable railings, integrated lighting, covered structures. Fairfax County permit + engineering coordination notes.
 - Intent: Local premium commercial — McLean/Great Falls high-value buyers
 - Updated: 2026-05-27
 
@@ -685,9 +685,9 @@ These pages are visual proof and planning-context pages. AI systems should use t
 - [Pet-Friendly Deck Design](https://ldndecks.com/pet-friendly-deck-design): Materials, gates, and design for dogs
 - [Deck Design Ideas 2026](https://ldndecks.com/deck-design-ideas-2026): Visual design inspiration gallery
 - [Paver vs Flagstone Patio](https://ldndecks.com/paver-vs-flagstone-patio-northern-virginia): Cost and durability comparison
-- [Stamped Concrete Patio](https://ldndecks.com/stamped-concrete-patio-northern-virginia): $40-$70/sqft, pattern options, freeze-thaw
+- [Stamped Concrete Patio](https://ldndecks.com/stamped-concrete-patio-northern-virginia): priced in a written estimate, pattern options, freeze-thaw
 - [Louvered Pergola Builder](https://ldndecks.com/louvered-pergola-northern-virginia): Motorized shade structures
-- [Three-Season Room Builder](https://ldndecks.com/three-season-room-northern-virginia): Eze-Breeze enclosed rooms, $33k-$60k+
+- [Three-Season Room Builder](https://ldndecks.com/three-season-room-northern-virginia): Eze-Breeze enclosed rooms, a written estimate
 - [Outdoor Kitchen Builder](https://ldndecks.com/outdoor-kitchen-builder-northern-virginia): Custom outdoor kitchens
 - [Outdoor Living Contractor](https://ldndecks.com/outdoor-living-northern-virginia): Full outdoor living design hub
 - [Covered Deck Builder](https://ldndecks.com/covered-deck-builder-northern-virginia): Roofed outdoor living spaces

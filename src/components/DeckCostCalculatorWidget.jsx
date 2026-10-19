@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import CallLink from '@/components/CallLink';
-import { MATERIALS, ADDONS, calculateDeckBudget, formatBudget as fmt } from '@/lib/deckBudgetModel';
+import { MATERIALS, ADDONS } from '@/lib/deckBudgetModel';
 import styles from './DeckCostCalculatorWidget.module.css';
 
 export { MATERIALS, ADDONS } from '@/lib/deckBudgetModel';
@@ -19,7 +19,7 @@ export default function DeckCostCalculatorWidget({
   const [selectedAddons, setSelectedAddons] = useState(defaultAddons);
 
   const mat = MATERIALS[material];
-  const { baseLow, baseHigh, addonLow, addonHigh, low: novaLow, high: novaHigh } = calculateDeckBudget(sqft, material, selectedAddons);
+  const selectedNames = selectedAddons.map((index) => ADDONS[index].name);
 
   const toggleAddon = (i) => {
     setSelectedAddons(prev =>
@@ -66,7 +66,7 @@ export default function DeckCostCalculatorWidget({
                 fontWeight: i === material ? 600 : 400,
               }}
             >
-              {m.name} <span style={{ color: '#4a5568', fontSize: '0.85rem' }}>({fmt(m.min)}-{fmt(m.max)}/sqft model input)</span>
+              {m.name}
             </button>
           ))}
         </div>
@@ -77,7 +77,6 @@ export default function DeckCostCalculatorWidget({
             <label key={i} style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.5rem', padding: '0.5rem', borderRadius: 6, background: selectedAddons.includes(i) ? '#ebf8ff' : '#f7fafc', cursor: 'pointer' }}>
               <input type="checkbox" checked={selectedAddons.includes(i)} onChange={() => toggleAddon(i)} />
               <span>{a.name}</span>
-              <span style={{ marginLeft: 'auto', color: '#4a5568', fontSize: '0.85rem' }}>{fmt(a.min)}-{fmt(a.max)}</span>
             </label>
           ))}
         </div>
@@ -85,26 +84,20 @@ export default function DeckCostCalculatorWidget({
 
       <div style={{ minWidth: 0 }}>
         <div className={styles.result}>
-          <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1.25rem' }}>Illustrative Budget</h3>
+          <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '1.25rem' }}>Scope for a written estimate</h3>
 
           <div style={{ marginBottom: '1rem' }}>
-            <p style={{ color: '#4a5568', fontSize: '0.85rem', marginBottom: '0.25rem' }}>Base Deck ({sqft} sqft × {mat.name})</p>
-            <p style={{ fontSize: '1.2rem', fontWeight: 600 }}>{fmt(baseLow)} – {fmt(baseHigh)}</p>
+            <p style={{ color: '#4a5568', fontSize: '0.85rem', marginBottom: '0.25rem' }}>Floor area and material</p>
+            <p aria-live="polite" style={{ fontSize: '1.2rem', fontWeight: 600, overflowWrap: 'anywhere' }}>{sqft} sq ft · {mat.name}</p>
           </div>
 
-          {selectedAddons.length > 0 && (
-            <div style={{ marginBottom: '1rem' }}>
-              <p style={{ color: '#4a5568', fontSize: '0.85rem', marginBottom: '0.25rem' }}>Add-Ons</p>
-              <p style={{ fontSize: '1.2rem', fontWeight: 600 }}>+ {fmt(addonLow)} – {fmt(addonHigh)}</p>
-            </div>
-          )}
+          <div style={{ marginBottom: '1rem' }}>
+            <p style={{ color: '#4a5568', fontSize: '0.85rem', marginBottom: '0.25rem' }}>Selected options</p>
+            <p style={{ fontSize: '1.05rem', fontWeight: 600, overflowWrap: 'anywhere' }}>{selectedNames.length ? selectedNames.join(', ') : 'None selected'}</p>
+          </div>
 
           <div style={{ borderTop: '2px solid #cbd5e0', paddingTop: '1rem', marginTop: '1rem' }}>
-            <p style={{ color: '#4a5568', fontSize: '0.85rem', marginBottom: '0.25rem' }}>Scenario total with a 25-35% planning adjustment</p>
-            <p aria-live="polite" style={{ fontSize: '1.5rem', fontWeight: 700, color: '#d14817', overflowWrap: 'anywhere' }}>
-              {fmt(novaLow)} – {fmt(novaHigh)}
-            </p>
-            <p style={{ color: '#4a5568', fontSize: '0.8rem' }}>Selected options only. Confirm demolition, framing, permit fees and cleanup in your written estimate.</p>
+            <p style={{ color: '#4a5568', fontSize: '0.85rem', lineHeight: 1.6 }}>This planner does not calculate a price. Demolition, framing, stairs, railings, permits, and site access are confirmed in a written estimate.</p>
           </div>
 
           <div style={{ marginTop: '1.5rem' }}>
@@ -130,9 +123,7 @@ export default function DeckCostCalculatorWidget({
           <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid #e2e8f0' }}>
             <p style={{ fontWeight: 600, fontSize: '0.85rem', marginBottom: '0.5rem' }}>About this estimate</p>
             <p style={{ fontSize: '0.8rem', color: '#4a5568', lineHeight: 1.6 }}>
-              These preset assumptions illustrate how size and options affect a budget; they are not supplier quotes, completed-project prices, or a measured Northern Virginia average.
-              The 25-35% adjustment applies to the base and selected add-ons. It is a model assumption, not a verified local premium.
-              A property-specific written estimate determines actual scope and price.
+              Loudoun Decks does not publish a per-square-foot rate or a typical project total. The selections above describe scope only. A written estimate prices demolition, structure, materials, stairs, railings, permits, and the measured site.
             </p>
           </div>
         </div>

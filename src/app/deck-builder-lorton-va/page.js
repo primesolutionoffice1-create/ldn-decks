@@ -43,7 +43,7 @@ const inclusions = [
 const lortonFAQs = [
   {
     q: "How much does a new deck cost in Lorton, VA?",
-    a: "Lorton composite deck projects typically range from $22,000 to $50,000. A standard 300-350 sqft Trex Transcend deck with aluminum railings runs $26,000-$36,000 installed. Laurel Hill builder-grade replacements tend toward the middle of that range, while larger builds with cable railing, multiple levels or screened-porch additions reach higher."
+    a: "Lorton composite deck projects typically range from a written estimate to a written estimate. A standard 300-350 sqft Trex Transcend deck with aluminum railings is priced in a written estimate installed. Laurel Hill builder-grade replacements tend toward the middle of that range, while larger builds with cable railing, multiple levels or screened-porch additions reach higher."
   },
   {
     q: "Do Laurel Hill and Crosspointe HOAs allow composite decking?",
@@ -89,7 +89,7 @@ const expansionSections = [
     paragraphs: [
       "Lorton is unincorporated Fairfax County, so all deck permits are processed through the county's Land Development Services office. The standard deck permit requires a site plan, structural drawings showing footing dimensions and spacing, ledger attachment details and guardrail specifications. Current plan review times run 3-6 weeks, with occasional delays during the spring peak.",
       "Some Lorton properties  -  particularly those near Mason Neck and along Pohick Creek  -  fall within Resource Protection Areas (RPAs) or Environmental Protection Corridors. These zones carry additional setback and disturbance requirements that affect where deck footings can be placed. We identify RPA status early in the design process and adjust the deck footprint accordingly, so the permit application is not returned for revision.",
-      "The permit fee for a typical Lorton deck runs $300-$500 depending on project valuation. We prepare and file the complete submission package electronically and schedule the three required inspections  -  footing, framing and final  -  at the appropriate build phases."
+      "The permit fee for a typical Lorton deck is priced in a written estimate depending on project valuation. We prepare and file the complete submission package electronically and schedule the three required inspections  -  footing, framing and final  -  at the appropriate build phases."
     ]
   },
   {
@@ -97,7 +97,7 @@ const expansionSections = [
     paragraphs: [
       "Lorton and the broader South County area have a stronger connection to the outdoors than most of inner Fairfax County. Mason Neck State Park, Pohick Bay Regional Park, and the Occoquan River are minutes away, and many homeowners chose Lorton specifically for that access. A well-designed deck extends that outdoor lifestyle to the backyard  -  a place to eat, relax and spend time outside without driving somewhere first.",
       "For Lorton families, a deck-and-screened-porch combination is one of the most practical builds. The open deck section handles grilling and open-air seating, while the screened porch provides a bug-free zone from May through October  -  critical in Lorton's tree-heavy environment where mosquitoes are a fact of life. We frame the porch into the deck structure from the start so it reads as one intentional build rather than an addition.",
-      "Lorton's lot sizes  -  typically a quarter acre to a third of an acre in Laurel Hill and Crosspointe  -  support these larger builds without crowding the yard. Combined deck-and-screened-porch projects here typically run $40,000-$60,000, creating a three-season outdoor room that adds genuine living space to the home."
+      "Lorton's lot sizes  -  typically a quarter acre to a third of an acre in Laurel Hill and Crosspointe  -  support these larger builds without crowding the yard. Combined deck-and-screened-porch projects here typically are priced in a written estimate, creating a three-season outdoor room that adds genuine living space to the home."
     ]
   }
 ];
@@ -106,7 +106,7 @@ export default function DeckBuilderLortonPage() {
   return (
     <main>
       <LocalBusinessSchema city="Lorton" url="https://ldndecks.com/deck-builder-lorton-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-lorton-va" name="Deck Builder in Lorton, VA | Composite Decks | Loudoun Decks" description="Deck builder in Lorton, VA. Custom Trex &amp; composite decks for Laurel Hill, Crosspointe, Newington &amp; Gunston. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-lorton-va" name="Deck Builder in Lorton, VA | Composite Decks | Loudoun Decks" description="Deck builder in Lorton, VA. Custom Trex &amp; composite decks for Laurel Hill, Crosspointe, Newington &amp; Gunston. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Lorton, VA's Trusted Deck Company"
         title="Custom Deck Builder in Lorton, VA"
@@ -115,7 +115,7 @@ export default function DeckBuilderLortonPage() {
       <ServiceMain
         subtitle="Upgrading Lorton's Outdoor Living"
         title="Deck Builder Lorton VA  -  Premium Quality"
-        description="Lorton's newer communities have builder-grade decks ready for a real upgrade. We replace them with Trex and TimberTech composite  -  cable railing for wooded views, proper engineering for conservation lots. Projects from $22k+."
+        description="Lorton's newer communities have builder-grade decks ready for a real upgrade. We replace them with Trex and TimberTech composite  -  cable railing for wooded views, proper engineering for conservation lots. Projects from a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "Laurel Hill & Crosspointe HOA submissions handled",
@@ -186,7 +186,7 @@ export default function DeckBuilderLortonPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Lorton" /></div></section>
       <SimpleCTA title="Get Your Lorton Deck Quote" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-lorton-va" />
-      <NamedAuthor context="Lorton and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Lorton and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

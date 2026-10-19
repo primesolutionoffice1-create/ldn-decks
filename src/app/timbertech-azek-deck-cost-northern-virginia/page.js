@@ -25,7 +25,7 @@ const PATH = '/timbertech-azek-deck-cost-northern-virginia';
 const faqs = [
   {
     q: 'How much does a TimberTech or AZEK deck cost in Northern Virginia?',
-    a: 'Installed cost in Northern Virginia: TimberTech EDGE Prime+ runs $35–$45/sqft, TimberTech PRO Reserve runs $45–$60/sqft, and TimberTech AZEK Vintage (full PVC) runs $60–$85/sqft. A 350 sqft AZEK Vintage project typically lands $28,000–$42,000+.',
+    a: 'Installed cost in Northern Virginia: TimberTech EDGE Prime+ is priced in priced in a written estimate, TimberTech PRO Reserve is priced in priced in a written estimate, and TimberTech AZEK Vintage (full PVC) is priced in priced in a written estimate. A 350 sqft AZEK Vintage project typically lands a written estimate.',
   },
   {
     q: "What's the difference between TimberTech PRO and AZEK Vintage?",
@@ -36,8 +36,8 @@ const faqs = [
     a: 'For Northern Virginia humidity and sun exposure, AZEK Vintage can be worth the premium for homeowners who prioritize Advanced PVC moisture resistance, lower-maintenance surface behavior, and the current limited lifetime product plus 50-year fade and stain warranty package. For many mid-range projects, Trex Transcend or TimberTech PRO Reserve can still be strong options at a lower price.',
   },
   {
-    q: 'What is the monthly payment on a $35,000 AZEK deck?',
-    a: 'At a sample 8.99% APR, a $35,000 AZEK deck financed over 10 years is roughly $443/month and roughly $355/month over 15 years. Pre-qualification through a soft credit pull returns your real APR and term without affecting your credit score.',
+    q: 'What is the monthly payment on a a written estimate AZEK deck?',
+    a: 'At a sample 8.99% APR, a a written estimate AZEK deck financed over 10 years is roughly a lender-calculated paymentnth and roughly a lender-calculated paymentnth over 15 years. Pre-qualification through a soft credit pull returns your real APR and term without affecting your credit score.',
   },
   {
     q: 'Does AZEK Vintage come in a board pattern that looks like real wood?',
@@ -78,39 +78,39 @@ const tiers = [
   {
     name: 'TimberTech EDGE',
     sub: 'Entry tier — capped composite (Prime+ collection)',
-    range: '$35–$45 /sqft installed',
+    range: 'a written estimate /sqft installed',
     construction: 'Capped composite, wood-flour core, PVC cap',
     warranty: '25-yr residential + 25-yr fade & stain',
-    project350: '$18,000–$26,000',
-    monthly: '$228–$329 /mo over 10y',
+    project350: 'a written estimate',
+    monthly: 'a lender-calculated payment over 10y',
   },
   {
     name: 'TimberTech PRO',
     sub: 'Mid tier — Reserve & Legacy collections',
-    range: '$45–$60 /sqft installed',
+    range: 'a written estimate /sqft installed',
     construction: 'Capped composite, polymer-blend core, full PVC cap',
     warranty: '30-yr residential + 30-yr fade & stain',
-    project350: '$22,000–$32,000',
-    monthly: '$278–$405 /mo over 10y',
+    project350: 'a written estimate',
+    monthly: 'a lender-calculated payment over 10y',
   },
   {
     name: 'TimberTech AZEK Vintage',
     sub: 'Premium tier — full PVC, hardwood-mimic pattern',
-    range: '$60–$85 /sqft installed',
+    range: 'a written estimate /sqft installed',
     construction: 'Full PVC (no wood content), Alloy Armour Technology',
     warranty: 'Limited lifetime product + 50-yr fade & stain',
-    project350: '$28,000–$42,000+',
-    monthly: '$354–$531 /mo over 10y',
+    project350: 'a written estimate',
+    monthly: 'a lender-calculated payment over 10y',
   },
 ];
 
 // 8.99% APR amortization: total = monthly × months; interest = total − principal
 const paymentMatrix = [
-  ['$20,000', '$253', '$203', '$10,360'],
-  ['$28,000', '$355', '$284', '$14,600'],
-  ['$35,000', '$443', '$355', '$18,160'],
-  ['$42,000', '$532', '$426', '$21,840'],
-  ['$55,000', '$696', '$558', '$28,520'],
+  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
 ];
 
 const colorways = [
@@ -131,9 +131,9 @@ export default function TimberTechAzekDeckCostPage() {
         path={PATH}
         image="/showcase/img22.jpg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="TimberTech &amp; AZEK Deck Cost: Premium PVC Budget Guide (2026)" description="TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="TimberTech &amp; AZEK Deck Cost: Premium PVC Budget Guide (2026)" description="TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -162,9 +162,9 @@ export default function TimberTechAzekDeckCostPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            A <strong>350 sqft TimberTech deck</strong> in Northern Virginia runs <strong>$18,000–$42,000+</strong>{' '}
+            A <strong>350 sqft TimberTech deck</strong> in Northern Virginia runs <strong>a written estimate</strong>{' '}
             depending on tier (EDGE / PRO / AZEK Vintage). At 8.99% APR over 10 years that&apos;s roughly{' '}
-            <strong>$228–$531/month</strong>. AZEK Vintage currently carries{' '}
+            <strong>a lender-calculated paymentnth</strong>. AZEK Vintage currently carries{' '}
             <strong>limited lifetime product coverage plus 50-year fade and stain coverage</strong>. Run your project amount through the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
@@ -176,11 +176,11 @@ export default function TimberTechAzekDeckCostPage() {
 
       <GeoAnswerBlock
         question="How much does a TimberTech or AZEK deck cost per month in Northern Virginia?"
-        answer="A typical 350 sqft TimberTech or AZEK deck in Northern Virginia runs about $18,000 to $42,000+ depending on whether the project uses EDGE, PRO, or AZEK Vintage, plus railing, stairs, lighting, frame condition, permits, and HOA scope. At the sample 8.99% APR used on this page, that maps to roughly $228 to $531 per month over 10 years. Homeowners should model their written estimate amount before choosing a board line because premium PVC, railing, stairs, and financing terms change the real monthly payment."
+        answer="A typical 350 sqft TimberTech or AZEK deck in Northern Virginia runs about a written estimate to a written estimate depending on whether the project uses EDGE, PRO, or AZEK Vintage, plus railing, stairs, lighting, frame condition, permits, and HOA scope. At the sample 8.99% APR used on this page, that maps to roughly a written estimate to a written estimate per month over 10 years. Homeowners should model their written estimate amount before choosing a board line because premium PVC, railing, stairs, and financing terms change the real monthly payment."
         facts={[
-          'TimberTech EDGE planning range: $35-$45 per sqft installed',
-          'TimberTech PRO planning range: $45-$60 per sqft installed',
-          'TimberTech AZEK Vintage planning range: $60-$85 per sqft installed',
+          'TimberTech EDGE planning range: a written estimate per sqft installed',
+          'TimberTech PRO planning range: a written estimate per sqft installed',
+          'TimberTech AZEK Vintage planning range: a written estimate per sqft installed',
         ]}
         links={[
           { href: '/deck-payment-estimator', label: 'Deck payment estimator' },
@@ -218,7 +218,7 @@ export default function TimberTechAzekDeckCostPage() {
                 <span style={{ fontWeight: 700, color: 'var(--color-primary)' }}>{t.range}</span>
               </div>
               <p style={{ ...S.p, color: '#666', fontSize: '0.95rem', marginBottom: '0.75rem' }}>{t.sub}</p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.5rem 1rem', fontSize: '0.9rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '0.5rem 1rem', fontSize: '0.9rem' }}>
                 <div><strong>Construction:</strong> {t.construction}</div>
                 <div><strong>Warranty:</strong> {t.warranty}</div>
                 <div><strong>350 sqft project:</strong> {t.project350}</div>
@@ -241,7 +241,7 @@ export default function TimberTechAzekDeckCostPage() {
           </ul>
 
           <h2 style={S.h2}>Popular AZEK Vintage Colorways in Northern Virginia</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {colorways.map((c) => (
               <div key={c.name} style={{ background: '#fafafa', border: '1px solid #eee', borderRadius: 8, padding: '1.1rem' }}>
                 <h3 style={{ fontWeight: 700, marginTop: 0, marginBottom: '0.4rem', fontSize: '1rem' }}>{c.name}</h3>
@@ -279,9 +279,9 @@ export default function TimberTechAzekDeckCostPage() {
           </div>
           <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 8, padding: '1rem 1.25rem', marginBottom: '1.25rem' }}>
             <p data-speakable style={{ margin: 0, fontWeight: 600 }}>
-              A $35,000 TimberTech AZEK Vintage deck financed at 8.99% APR over 10 years costs approximately $53,160
-              total — $18,160 in interest. A 15-year term lowers the monthly payment to $355 but raises total interest
-              to roughly $28,900.
+              A a written estimate TimberTech AZEK Vintage deck financed at 8.99% APR over 10 years costs approximately a written estimate
+              total — a written estimate in interest. A 15-year term lowers the monthly payment to a written estimate but raises total interest
+              to roughly a written estimate.
             </p>
           </div>
           <p style={{ ...S.p, fontSize: '0.85rem', color: '#777', fontStyle: 'italic' }}>
@@ -290,7 +290,7 @@ export default function TimberTechAzekDeckCostPage() {
 
           <h2 style={S.h2}>TimberTech vs Trex: Side-by-Side</h2>
           <p style={S.p}>
-            TimberTech PRO Reserve and Trex Transcend are usually within $1–$3/sqft of each other on installed pricing.
+            TimberTech PRO Reserve and Trex Transcend are usually within priced in a written estimate of each other on installed pricing.
             The deciding factor is grain pattern and warranty: TimberTech PRO carries 30-year fade & stain (vs Trex
             Transcend&apos;s 50-year current limited residential fade and stain coverage). AZEK Vintage&apos;s Advanced PVC warranty package is a premium reason to consider it. For a complete brand
             comparison, see{' '}
@@ -377,7 +377,7 @@ export default function TimberTechAzekDeckCostPage() {
         buttonText="Get Free Written Estimate"
         link="/get-estimate"
       />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

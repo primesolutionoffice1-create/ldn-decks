@@ -12,17 +12,17 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-staining-northern-virginia',
   title: 'Deck Staining in Northern Virginia',
-  description: 'Professional deck staining in Northern Virginia. $3-$7/sqft. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207.',
+  description: 'Professional deck staining in Northern Virginia. priced in a written estimate. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207.',
   image: '/social/deck-staining-northern-virginia-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does deck staining cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck staining in Northern Virginia costs $3-$7 per square foot, or $600-$2,100 for a typical 200-300 sqft deck. Price depends on deck condition, stain type, and prep work required." } },
+    { "@type": "Question", name: "How much does deck staining cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck staining in Northern Virginia is priced in a written estimate per square foot, or a written estimate for a typical 200-300 sqft deck. Price depends on deck condition, stain type, and prep work required." } },
     { "@type": "Question", name: "How often should you stain a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Every 1-2 years for high-traffic decks, every 2-3 years for moderate use. Virginia's freeze-thaw cycles and UV exposure break down stain faster than milder climates. South-facing decks need more frequent treatment." } },
     { "@type": "Question", name: "What's the best time to stain a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Late spring (April-May) or early fall (September-October) when temperatures are 50-85°F with low humidity and no rain forecast for 48 hours. Avoid summer heat (stain dries too fast) and winter cold (won't cure)." } },
-    { "@type": "Question", name: "Should I stain or replace my old deck?", acceptedAnswer: { "@type": "Answer", text: "Stain if: boards are structurally sound, just faded or gray. Replace if: boards are soft, splintering badly, or rotting. If you're spending $2,000+ on staining an old deck, consider resurfacing with composite the last stain job you'll ever need." } },
+    { "@type": "Question", name: "Should I stain or replace my old deck?", acceptedAnswer: { "@type": "Answer", text: "Stain if: boards are structurally sound, just faded or gray. Replace if: boards are soft, splintering badly, or rotting. If you're spending a written estimate on staining an old deck, consider resurfacing with composite the last stain job you'll ever need." } },
   ],
 };
 
@@ -32,7 +32,7 @@ export default function DeckStainingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-staining-northern-virginia" name="Deck Staining in Northern Virginia" description="Professional deck staining in Northern Virginia. $3-$7/sqft. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-staining-northern-virginia" name="Deck Staining in Northern Virginia" description="Professional deck staining in Northern Virginia. priced in a written estimate. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -87,11 +87,11 @@ export default function DeckStainingPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Deck Size', 'Basic (transparent)', 'Semi-Transparent', 'Solid Stain'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['150 sqft', '$450–$750', '$600–$900', '$750–$1,050'],
-                  ['200 sqft', '$600–$1,000', '$800–$1,200', '$1,000–$1,400'],
-                  ['300 sqft', '$900–$1,500', '$1,200–$1,800', '$1,500–$2,100'],
-                  ['400 sqft', '$1,200–$2,000', '$1,600–$2,400', '$2,000–$2,800'],
-                  ['500+ sqft', '$1,500–$2,500', '$2,000–$3,000', '$2,500–$3,500'],
+                  ['150 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['200 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['300 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['400 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['500+ sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -140,7 +140,7 @@ export default function DeckStainingPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "How much does deck staining cost?", a: "$3-$7/sqft, or $600-$2,100 for a typical 200-300 sqft deck including power washing and prep." },
+            { q: "How much does deck staining cost?", a: "priced in a written estimate, or a written estimate for a typical 200-300 sqft deck including power washing and prep." },
             { q: "How often should I stain in Virginia?", a: "Every 1-3 years depending on stain type, sun exposure, and traffic. Semi-transparent every 2-3 years is the sweet spot." },
             { q: "Best time to stain?", a: "Late spring (April-May) or early fall (September-October). 50-85°F, low humidity, no rain for 48 hours." },
             { q: "Stain or replace?", a: "Stain if boards are sound but faded. Replace/resurface if boards are soft, rotting, or splintering badly." },
@@ -166,7 +166,7 @@ export default function DeckStainingPage() {
       </article>
 
       <SimpleCTA title="Protect Your Deck Before Winter" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/deck-staining-northern-virginia" />
 

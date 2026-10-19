@@ -13,7 +13,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-permit-prince-william-county-virginia',
   title: 'Prince William County Deck Permit Guide 2026 | Cost & Process',
-  description: 'Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you.',
+  description: 'Deck permits in Prince William County, VA: 2–4 week plan review, a written estimate cost, 3 required inspections. Full process explained — we handle it for you.',
   image: '/social/deck-permit-prince-william-county-social.png',
 });
 
@@ -28,7 +28,7 @@ const permitFaqs = [
   },
   {
     q: "How much does a deck permit cost in Prince William County?",
-    a: "Prince William County deck permits commonly run $150-$500 depending on project scope and construction valuation. We include permit costs in the estimate so homeowners are not surprised by county fees later.",
+    a: "Prince William County deck permits commonly are priced in a written estimate depending on project scope and construction valuation. We include permit costs in the estimate so homeowners are not surprised by county fees later.",
   },
   {
     q: "Which Prince William-area jurisdiction reviews my deck?",
@@ -61,7 +61,7 @@ export default function PWCountyPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-08" url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Deck permits in Prince William County, VA: 2–4 week plan review, $150–$500 cost, 3 required inspections. Full process explained — we handle it for you." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Deck permits in Prince William County, VA: 2–4 week plan review, a written estimate cost, 3 required inspections. Full process explained — we handle it for you." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Permit Guide: Prince William County, VA</h1>
@@ -71,7 +71,7 @@ export default function PWCountyPermitPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} data-speakable="true">
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p data-speakable><strong>Yes permits are required.</strong> Plan review takes <strong>2–4 weeks</strong> (faster than Fairfax). Cost: <strong>$150–$500</strong>. Three inspections: footings, framing, final. <strong>We handle everything.</strong></p>
+          <p data-speakable><strong>Yes permits are required.</strong> Plan review takes <strong>2–4 weeks</strong> (faster than Fairfax). Cost: <strong>a written estimate</strong>. Three inspections: footings, framing, final. <strong>We handle everything.</strong></p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -103,7 +103,7 @@ export default function PWCountyPermitPage() {
               <tbody>
                 {[
                   ['Plan review time', '2–4 weeks', '3–6 weeks'],
-                  ['Permit cost', '$150–$500', '$200–$600'],
+                  ['Permit cost', 'a written estimate', 'a written estimate'],
                   ['Online submission', 'Yes', 'Yes'],
                   ['Inspections', '3 (same)', '3 (same)'],
                   ['Typical setback (rear)', '20–25 ft', '25–35 ft'],
@@ -162,7 +162,7 @@ export default function PWCountyPermitPage() {
       </section>
 
       <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Prince William County" lastUpdated="2026-06-08" />
+      <NamedAuthor context="Prince William County" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/deck-permit-prince-william-county-virginia" />
 

@@ -54,8 +54,8 @@ export default function NovaPermitChecklist2026() {
 
       <H2>Stage 2 — Contractor verification</H2>
       <ul style={{ listStyle: 'none', padding: 0 }}>
-        <Item>Verified Virginia Class A Contractor License (required for any project over $10,000 — search at <a href="https://dpor.virginia.gov">dpor.virginia.gov</a>)</Item>
-        <Item>Confirmed contractor carries general liability insurance ($1M minimum recommended)</Item>
+        <Item>Verified Virginia Class A Contractor License (required for any project over a written estimate — search at <a href="https://dpor.virginia.gov">dpor.virginia.gov</a>)</Item>
+        <Item>Confirmed contractor carries general liability insurance (a written estimateM minimum recommended)</Item>
         <Item>Confirmed contractor carries workers comp coverage</Item>
         <Item>Read at least 10 recent Google reviews and one BBB profile</Item>
         <Item>Got 2 written estimates (NOT phone quotes) — itemized line items, not lump sums</Item>
@@ -78,7 +78,7 @@ export default function NovaPermitChecklist2026() {
             <li>Arlington: APS portal (2–3 weeks plan review)</li>
           </ul>
         </Item>
-        <Item>Paid permit fee ($150–$500 depending on county and deck size)</Item>
+        <Item>Paid permit fee (a written estimate depending on county and deck size)</Item>
       </ul>
 
       <H2>Stage 4 — HOA architectural review (parallel with permit)</H2>
@@ -86,7 +86,7 @@ export default function NovaPermitChecklist2026() {
         <Item>Completed HOA application form (varies by community)</Item>
         <Item>Submitted site plan + elevation + material specs to ARB / DRC</Item>
         <Item>Submitted color samples or photos for railing, fascia, and decking material</Item>
-        <Item>Paid HOA review fee (usually $25–$100)</Item>
+        <Item>Paid HOA review fee (usually a written estimate)</Item>
         <Item>Confirmed approval timeline (Brambleton 14–21 days, Broadlands 14–21, Ashburn Village 18–21, Lansdowne 18–25, Virginia Run 21–35 in-person committee)</Item>
         <Item>Received written ARB / DRC approval letter — DO NOT START WORK WITHOUT IT</Item>
       </ul>
@@ -111,7 +111,7 @@ export default function NovaPermitChecklist2026() {
 
       <H2>Common reasons projects get delayed</H2>
       <ul style={{ paddingLeft: 18 }}>
-        <li><strong>Owner pulls permit to save $150:</strong> voids warranty, shifts liability, and triggers re-inspection if work doesn&apos;t match the plan.</li>
+        <li><strong>Owner pulls permit to save a written estimate:</strong> voids warranty, shifts liability, and triggers re-inspection if work doesn&apos;t match the plan.</li>
         <li><strong>HOA review starts AFTER permit approval:</strong> serial workflow adds 3–6 weeks. Always submit HOA + county simultaneously.</li>
         <li><strong>Ledger flashing not shown on plans:</strong> instant red flag at framing inspection — reviewers know this is the #1 source of catastrophic deck failure.</li>
         <li><strong>Footing depth too shallow:</strong> 36&quot; below grade is the NoVA frost-line minimum; 24&quot; concrete cylinders fail every time.</li>

@@ -54,7 +54,7 @@ const loudounFAQs = [
         },
         {
                 q: "What is the average cost of a custom composite deck in Ashburn?",
-                a: "A professional Trex deck in Ashburn generally ranges from $20,000 to $50,000+, depending on size, multi-level architecture, and integrated lighting."
+                a: "A professional Trex deck in Ashburn generally ranges from a written estimate to a written estimate, depending on size, multi-level architecture, and integrated lighting."
         },
         {
                 q: "Can I review public feedback before hiring Loudoun Decks?",
@@ -114,7 +114,7 @@ const expansionSections = [
 export default function DeckBuildersLoudounPage() {
         return (
                 <main>
-      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/deck-builders-loudoun" name="Custom Deck Builder in Loudoun County, VA | Loudoun Decks" description="Local deck builder in Loudoun County, VA. Composite deck planning, BBB profile links, screened porches, pergolas, and written estimates." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builders-loudoun" name="Custom Deck Builder in Loudoun County, VA | Loudoun Decks" description="Local deck builder in Loudoun County, VA. Composite deck planning, BBB profile links, screened porches, pergolas, and written estimates." speakable />
                         <ServiceSchema
         name="Custom Deck Building in Loudoun County"
         description="Custom composite and wood deck construction across Loudoun County — Ashburn, Leesburg, Sterling, Brambleton. Trex product-line planning, HOA and permit planning."
@@ -158,7 +158,7 @@ export default function DeckBuildersLoudounPage() {
                         />
                         <ServiceAreasGrid />
                         <RelatedGuides currentPath="/deck-builders-loudoun" />
-                        <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+                        <NamedAuthor context="Loudoun County" lastUpdated="2026-10-18" />
 
                         <ContactHome />
                 </main>

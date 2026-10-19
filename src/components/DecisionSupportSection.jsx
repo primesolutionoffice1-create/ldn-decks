@@ -15,7 +15,7 @@ export default function DecisionSupportSection({
       <h2 style={{ fontSize: '30px', margin: '0 0 12px', fontWeight: 850, color: '#1f2933' }}>{title}</h2>
       <p style={{ fontSize: '17px', color: '#4b5563', margin: '0 0 22px', maxWidth: 860 }}>{intro}</p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px', alignItems: 'stretch' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '16px', alignItems: 'stretch' }}>
         {columns.map((column) => (
           <article
             key={column.title}

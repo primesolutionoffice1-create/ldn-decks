@@ -22,45 +22,45 @@ export const metadata = buildMetadata({
 const PATH = '/deck-lighting-railings-stairs-addon-cost';
 
 const railings = [
-  { name: 'Composite (Trex Select / TimberTech RadianceRail)', range: '$40–$70 /linear ft', notes: 'Most popular; HOA-friendly; matches deck color' },
-  { name: 'Aluminum (Trex Signature / TimberTech Impression)', range: '$50–$90 /linear ft', notes: 'Modern look; thin profile; durable; common in McLean / Great Falls' },
-  { name: 'Cable Rail', range: '$60–$110 /linear ft', notes: 'View-preserving; some HOAs restrict; high-end aesthetic' },
-  { name: 'Glass Panel', range: '$90–$160 /linear ft', notes: 'Premium; unobstructed view; HOA-restricted in some Loudoun communities' },
-  { name: 'Pressure-Treated Wood', range: '$30–$50 /linear ft', notes: 'Cheapest; requires annual stain/seal; ages poorly in NoVA climate' },
+  { name: 'Composite (Trex Select / TimberTech RadianceRail)', range: 'a written estimate /linear ft', notes: 'Most popular; HOA-friendly; matches deck color' },
+  { name: 'Aluminum (Trex Signature / TimberTech Impression)', range: 'a written estimate /linear ft', notes: 'Modern look; thin profile; durable; common in McLean / Great Falls' },
+  { name: 'Cable Rail', range: 'a written estimate /linear ft', notes: 'View-preserving; some HOAs restrict; high-end aesthetic' },
+  { name: 'Glass Panel', range: 'a written estimate /linear ft', notes: 'Premium; unobstructed view; HOA-restricted in some Loudoun communities' },
+  { name: 'Pressure-Treated Wood', range: 'a written estimate /linear ft', notes: 'Cheapest; requires annual stain/seal; ages poorly in NoVA climate' },
 ];
 
 const stairs = [
-  { type: 'Single straight flight (3–4 risers)', range: '$1,500–$2,800', notes: 'Most common — backyard ground transition' },
-  { type: 'Single straight flight (5–7 risers)', range: '$2,500–$4,500', notes: 'Elevated deck with longer drop to grade' },
-  { type: 'L-shape stairs with landing', range: '$3,500–$6,000', notes: 'Multi-direction descent; common for side-yard exits' },
-  { type: 'Wide entertainment stairs (6+ ft)', range: '$4,000–$8,000', notes: 'Architectural focal point; doubles as casual seating' },
-  { type: 'Wraparound or cascading stairs', range: '$6,000–$15,000+', notes: 'Premium feature; common in McLean / Great Falls / Belmont' },
+  { type: 'Single straight flight (3–4 risers)', range: 'a written estimate', notes: 'Most common — backyard ground transition' },
+  { type: 'Single straight flight (5–7 risers)', range: 'a written estimate', notes: 'Elevated deck with longer drop to grade' },
+  { type: 'L-shape stairs with landing', range: 'a written estimate', notes: 'Multi-direction descent; common for side-yard exits' },
+  { type: 'Wide entertainment stairs (6+ ft)', range: 'a written estimate', notes: 'Architectural focal point; doubles as casual seating' },
+  { type: 'Wraparound or cascading stairs', range: 'a written estimate', notes: 'Premium feature; common in McLean / Great Falls / Belmont' },
 ];
 
 const lighting = [
-  { name: 'Post-cap LED lights (4 corners)', range: '$200–$600', notes: 'Basic safety/aesthetic lighting' },
-  { name: 'Riser lights (full stair set)', range: '$400–$1,200', notes: 'Safety lighting for stairs; significant nighttime improvement' },
-  { name: 'Under-rail LED strip', range: '$800–$2,000', notes: 'Continuous accent lighting around perimeter' },
-  { name: 'Recessed deck lights (8–16 fixtures)', range: '$1,200–$3,500', notes: 'Premium ambient lighting in the deck surface' },
-  { name: 'Smart-controlled system w/ app', range: '$2,000–$5,000+', notes: 'Multi-zone control; color-changing; integrates with home automation' },
+  { name: 'Post-cap LED lights (4 corners)', range: 'a written estimate', notes: 'Basic safety/aesthetic lighting' },
+  { name: 'Riser lights (full stair set)', range: 'a written estimate', notes: 'Safety lighting for stairs; significant nighttime improvement' },
+  { name: 'Under-rail LED strip', range: 'a written estimate', notes: 'Continuous accent lighting around perimeter' },
+  { name: 'Recessed deck lights (8–16 fixtures)', range: 'a written estimate', notes: 'Premium ambient lighting in the deck surface' },
+  { name: 'Smart-controlled system w/ app', range: 'a written estimate', notes: 'Multi-zone control; color-changing; integrates with home automation' },
 ];
 
 const faqs = [
   {
     q: 'How much do composite railings cost per linear foot in Northern Virginia?',
-    a: 'Composite railings (Trex Select, TimberTech RadianceRail) run $40–$70 per linear foot installed in Northern Virginia. A 300 sqft deck typically needs 60–80 linear feet of railing, so the railing portion is usually $2,400–$5,600 of the total project. Aluminum runs $50–$90/ft; cable runs $60–$110/ft.',
+    a: 'Composite railings (Trex Select, TimberTech RadianceRail) are priced in a written estimate per linear foot installed in Northern Virginia. A 300 sqft deck typically needs 60–80 linear feet of railing, so the railing portion is usually a written estimate of the total project. Aluminum is priced in a written estimate; cable is priced in a written estimate.',
   },
   {
     q: 'How much do deck stairs cost?',
-    a: 'A standard 3–4 riser stair flight runs $1,500–$2,800 in Northern Virginia. A 5–7 riser flight (for elevated decks) runs $2,500–$4,500. L-shape stairs with a landing run $3,500–$6,000. Wide entertainment stairs (6+ ft) run $4,000–$8,000 and become an architectural feature.',
+    a: 'A standard 3–4 riser stair flight is priced in a written estimate in Northern Virginia. A 5–7 riser flight (for elevated decks) is priced in a written estimate. L-shape stairs with a landing are priced in a written estimate. Wide entertainment stairs (6+ ft) are priced in a written estimate and become an architectural feature.',
   },
   {
     q: 'How much does deck lighting cost?',
-    a: 'Basic post-cap lighting (4 corners) runs $200–$600. A full stair riser-light set runs $400–$1,200. A premium package with under-rail LED, recessed deck lights, and smart control runs $3,000–$5,000+. Lighting is 30–50% cheaper installed during the initial build than retrofitted later.',
+    a: 'Basic post-cap lighting (4 corners) is priced in a written estimate. A full stair riser-light set is priced in a written estimate. A premium package with under-rail LED, recessed deck lights, and smart control is priced in a written estimate. Lighting is 30–50% cheaper installed during the initial build than retrofitted later.',
   },
   {
     q: 'Which add-on changes the monthly payment the most?',
-    a: 'Lighting packages and premium railing upgrades each add $2,000–$5,000 to project amount — about $25–$65/month in financing at typical rates. Wraparound or cascading stairs can add $6,000–$15,000, which moves monthly payment $75–$190. Plan add-ons knowing the financing impact upfront.',
+    a: 'Lighting packages and premium railing upgrades each add a written estimate to project amount — about a lender-calculated paymentnth in financing at typical rates. Wraparound or cascading stairs can add a written estimate, which moves monthly payment a written estimate. Plan add-ons knowing the financing impact upfront.',
   },
   {
     q: 'Should I add lighting at build time or wait?',
@@ -117,9 +117,9 @@ export default function DeckAddOnCostPage() {
         path={PATH}
         image="/showcase/light-img.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-06-12"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-06-12" url={`https://ldndecks.com${PATH}`} name="Deck Lighting, Railings &amp; Stairs: Add-On Cost Guide (2026)" description="Real cost for deck lighting, railings, and stairs in Northern Virginia. Per-linear-foot pricing, full package examples, and impact on monthly payment." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Deck Lighting, Railings &amp; Stairs: Add-On Cost Guide (2026)" description="Real cost for deck lighting, railings, and stairs in Northern Virginia. Per-linear-foot pricing, full package examples, and impact on monthly payment." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -148,9 +148,9 @@ export default function DeckAddOnCostPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            In Northern Virginia: <strong>railings</strong> run $40–$160 per linear ft depending on material (composite,
-            aluminum, cable, glass). <strong>Stairs</strong> run $1,500–$15,000+ depending on configuration.{' '}
-            <strong>Lighting packages</strong> run $200–$5,000+ from basic post-caps to full smart-controlled systems.
+            In Northern Virginia: <strong>railings</strong> are priced in a written estimate per linear ft depending on material (composite,
+            aluminum, cable, glass). <strong>Stairs</strong> are priced in a written estimate depending on configuration.{' '}
+            <strong>Lighting packages</strong> are priced in a written estimate from basic post-caps to full smart-controlled systems.
             These add-ons are 30–50% cheaper installed at build time than retrofitted.
           </p>
         </div>
@@ -200,9 +200,9 @@ export default function DeckAddOnCostPage() {
 
           <h2 style={S.h2}>How Add-Ons Move the Monthly Payment</h2>
           <p style={S.p}>
-            Each add-on category typically adds $2,000–$5,000 to project amount, which translates to roughly
-            $25–$65/month in financing at typical rates over 10 years. A premium package (upgraded railings + full
-            lighting + entertainment stairs) can add $12,000–$25,000, which is $150–$315/month. Build the budget
+            Each add-on category typically adds a written estimate to project amount, which translates to roughly
+            a lender-calculated paymentnth in financing at typical rates over 10 years. A premium package (upgraded railings + full
+            lighting + entertainment stairs) can add a written estimate, which is a lender-calculated paymentnth. Build the budget
             knowing the financing impact, not just the sticker price.
           </p>
 
@@ -258,7 +258,7 @@ export default function DeckAddOnCostPage() {
       </article>
 
       <SimpleCTA title="Plan Realistic Add-On Budget" buttonText="Get Free Written Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-12" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

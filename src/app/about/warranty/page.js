@@ -100,7 +100,7 @@ export default function WarrantyPage() {
                 manufacturer warranty literature. This makes future questions easier to route and reduces confusion
                 between workmanship, material performance, maintenance, and damage outside the original scope.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '14px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '14px' }}>
                 {warrantyFacts.map((fact) => (
                   <article key={fact} style={{ border: '1px solid #e5e7eb', borderRadius: 8, background: '#fafafa', padding: '18px' }}>
                     <p style={{ margin: 0, color: '#444', lineHeight: 1.6 }}>{fact}</p>
@@ -118,7 +118,7 @@ export default function WarrantyPage() {
                </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '40px', marginBottom: '60px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '40px', marginBottom: '60px' }}>
                {/* Typically Covered */}
                <div style={{ background: '#f8fdf8', padding: '40px', borderRadius: '16px', border: '1px solid #e1f0e1' }}>
                   <h3 style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '24px', fontWeight: '700', color: '#2e7d32', marginBottom: '25px' }}>
@@ -170,7 +170,7 @@ export default function WarrantyPage() {
             {/* Why Written Terms Matter */}
             <div style={{ background: '#111', color: '#fff', padding: '60px', borderRadius: '24px', marginBottom: '60px' }}>
                <h2 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '30px', textAlign: 'center' }}>Why Written Warranty Terms Matter</h2>
-               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '30px' }}>
+               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '30px' }}>
                   {[
                      { title: "Clear Scope", text: "The signed paperwork should identify whether the issue is workmanship, manufacturer material coverage, maintenance, or site movement." },
                      { title: "Service Path", text: "Homeowners know who to contact, what information to provide, and how a service review is handled." },
@@ -189,7 +189,7 @@ export default function WarrantyPage() {
               <h2 id="warranty-service-process" style={{ fontSize: '32px', fontWeight: '700', marginBottom: '20px', color: '#111', textAlign: 'center' }}>
                 How warranty service requests are reviewed
               </h2>
-              <ol style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '16px', listStyle: 'none', padding: 0, margin: 0, counterReset: 'warrantyStep' }}>
+              <ol style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 210px), 1fr))', gap: '16px', listStyle: 'none', padding: 0, margin: 0, counterReset: 'warrantyStep' }}>
                 {serviceSteps.map((step) => (
                   <li key={step} style={{ counterIncrement: 'warrantyStep', border: '1px solid #e5e7eb', borderLeft: '4px solid #B58E3B', borderRadius: 8, padding: '18px', background: '#fff', color: '#444', lineHeight: 1.6 }}>
                     <span style={{ display: 'block', color: '#B58E3B', fontWeight: 900, marginBottom: '8px' }}>Step</span>
@@ -208,7 +208,7 @@ export default function WarrantyPage() {
                 needs review later, these records help separate the original installation scope from weather exposure,
                 normal aging, product coverage, homeowner changes, or unrelated site movement.
               </p>
-              <div style={{ background: '#f7f6f1', borderRadius: 12, padding: '28px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '14px' }}>
+              <div style={{ background: '#f7f6f1', borderRadius: 12, padding: '28px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '14px' }}>
                 {[
                   'Signed agreement and final written scope',
                   'Approved change orders and selections',
@@ -232,7 +232,7 @@ export default function WarrantyPage() {
                 landscaping changes, or damage after completion. The correct path depends on the signed paperwork and
                 the visible condition of the deck.
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '16px' }}>
                 <article style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: '20px', background: '#fff' }}>
                   <h3 style={{ margin: '0 0 10px', color: '#111' }}>Workmanship path</h3>
                   <p style={{ margin: 0, color: '#555', lineHeight: 1.65 }}>
@@ -269,7 +269,7 @@ export default function WarrantyPage() {
               <h2 id="warranty-faq" style={{ fontSize: '32px', fontWeight: '700', marginBottom: '20px', color: '#111', textAlign: 'center' }}>
                 Written warranty FAQs
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '14px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '14px' }}>
                 {warrantyFaqs.map((faq) => (
                   <details key={faq.q} style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: '18px', background: '#fff' }}>
                     <summary style={{ cursor: 'pointer', fontWeight: 800, color: '#111' }}>{faq.q}</summary>

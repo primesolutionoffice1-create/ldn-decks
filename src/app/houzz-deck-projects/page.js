@@ -75,7 +75,7 @@ export default function HouzzProjectsPage() {
       {/* intro Content */}
       <section style={S.section}>
         <div style={S.container}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', alignItems: 'flex-start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '4rem', alignItems: 'flex-start' }}>
             <div>
               <h2 style={S.h2}>A Showcase of Craftsmanship</h2>
               <p style={S.p}>
@@ -110,7 +110,7 @@ export default function HouzzProjectsPage() {
       <section style={{ ...S.section, background: '#f9fafb' }}>
         <div style={S.container}>
           <h2 style={{ ...S.h2, textAlign: 'center', marginBottom: '4rem' }}>Our Specialties Across Northern Virginia</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem' }}>
             <div style={S.card}>
               <div style={{ height: 200, position: 'relative', margin: '-2rem -2rem 1.5rem', borderRadius: '16px 16px 0 0', overflow: 'hidden' }}>
                 <Image src="/images/img13.jpeg" alt="Custom composite deck construction project in Northern Virginia featured on Houzz by Loudoun Decks" fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
@@ -199,7 +199,7 @@ export default function HouzzProjectsPage() {
           <p style={{ ...S.p, maxWidth: 760, margin: '0 auto 2rem', textAlign: 'center' }}>
             Use our local planning tools to compare budget, materials, permits, and photo-gallery context before requesting a quote.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem' }}>
             {[
               { label: 'Estimate deck cost', href: '/deck-cost-calculator' },
               { label: 'Compare payment options', href: '/deck-payment-estimator' },
@@ -226,7 +226,7 @@ export default function HouzzProjectsPage() {
           <p style={{ ...S.p, margin: '0 auto 3rem', maxWidth: 700 }}>
             Take a look at design inspiration from our outdoor-living gallery. Project-specific location, date, cost, and homeowner story details should be verified before any image is reused as a formal case study.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginBottom: '4rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '1.5rem', marginBottom: '4rem' }}>
              {[30, 31, 32, 33, 34, 35].map(num => (
                <div key={num} style={{ height: 250, position: 'relative', borderRadius: 20, overflow: 'hidden', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}>
                  <Image src={`/images/img${num}.jpeg`} alt={`Loudoun Decks Project Showcase ${num}`} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />

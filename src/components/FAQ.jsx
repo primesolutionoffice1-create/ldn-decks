@@ -22,7 +22,7 @@ const faqsData = [
   },
   {
     question: "What is the average cost to build a deck in NoVA?",
-    answer: "Deck building costs in Northern Virginia often range from $15,000 to $45,000 depending on size, materials, stairs, railings, site access, and permit requirements. We provide itemized written estimates after the project scope is reviewed."
+    answer: "Loudoun Decks does not publish a fixed deck price. Size, materials, demolition, structure, stairs, railings, site access, and permits change the total. Request a written estimate after the scope is reviewed."
   }
 ];
 

@@ -63,8 +63,8 @@ const maintenanceExpansionSections = [
     title: "Composite vs wood maintenance",
     paragraphs: [
       "Composite and wood decks share the same climate but require very different care routines. Understanding the distinction helps you budget accurately and avoid unnecessary work.",
-      "Composite decking like Trex, TimberTech, and Fiberon needs periodic cleaning with a composite-safe cleaner to remove organic staining, but it never requires sanding, staining, or sealing. Over five years, composite maintenance typically costs $400 to $800 total.",
-      "Pressure-treated or hardwood decks need annual cleaning plus staining and sealing every one to two years. Over the same five-year period, professional wood maintenance averages $2,500 to $4,000 — but it preserves the natural beauty and structural life of the lumber.",
+      "Composite decking like Trex, TimberTech, and Fiberon needs periodic cleaning with a composite-safe cleaner to remove organic staining, but it never requires sanding, staining, or sealing. Over five years, composite maintenance typically is priced in a written estimate total.",
+      "Pressure-treated or hardwood decks need annual cleaning plus staining and sealing every one to two years. Over the same five-year period, professional wood maintenance averages a written estimate to a written estimate — but it preserves the natural beauty and structural life of the lumber.",
     ]
   },
   {
@@ -76,7 +76,7 @@ const maintenanceExpansionSections = [
       { label: "Rot and decay", text: "Unsealed wood absorbs moisture that feeds fungal growth inside the grain, leading to soft, structurally compromised boards and framing." },
       { label: "Structural failure", text: "Corroded fasteners, loose ledger connections, and weakened joists from water damage can lead to partial or full deck collapse." },
       { label: "Warranty voiding", text: "Most composite decking warranties require regular cleaning. Neglect can void coverage on products that cost thousands to install." },
-      { label: "Costly full replacement", text: "A $500 annual maintenance visit prevents the $15,000 to $30,000 cost of a full deck replacement. Our [deck maintenance checklist for Virginia](/deck-maintenance-checklist-virginia) walks you through what to watch for between professional visits." },
+      { label: "Costly full replacement", text: "A a written estimate annual maintenance visit prevents the a written estimate to a written estimate cost of a full deck replacement. Our [deck maintenance checklist for Virginia](/deck-maintenance-checklist-virginia) walks you through what to watch for between professional visits." },
     ]
   },
   {
@@ -91,7 +91,7 @@ const maintenanceExpansionSections = [
 const faqs = [
   {
     q: "How much does professional deck maintenance cost in Northern Virginia?",
-    a: "Deck maintenance in Loudoun County, Fairfax County, and Prince William County typically ranges from $300 to $900 depending on deck size, condition, and the services needed. A full clean, sand, and stain on a 400 sq ft wood deck averages around $500–$700."
+    a: "Deck maintenance in Loudoun County, Fairfax County, and Prince William County typically ranges from a written estimate to a written estimate depending on deck size, condition, and the services needed. A full clean, sand, and stain on a 400 sq ft wood deck averages around a written estimate."
   },
   {
     q: "How often should I have my deck professionally maintained?",
@@ -111,14 +111,14 @@ const faqs = [
   },
   {
     q: "What happens if I skip deck maintenance for several years?",
-    a: "Neglected decks in Northern Virginia's climate develop deep moisture damage, rot, and structural instability. What starts as a $500 maintenance job can escalate into a $10,000–$20,000 full deck replacement. Annual or biannual maintenance is the most cost-effective way to protect your investment."
+    a: "Neglected decks in Northern Virginia's climate develop deep moisture damage, rot, and structural instability. What starts as a a written estimate maintenance job can escalate into a a written estimate full deck replacement. Annual or biannual maintenance is the most cost-effective way to protect your investment."
   }
 ];
 
 export default function DeckMaintenancePage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/deck-maintenance" name="Professional Deck Maintenance NoVA | Staining &amp; Sealing Services" description="Protect your outdoor investment with expert deck maintenance in Northern Virginia. We specialize in wood staining, sealing, and structural care." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/deck-maintenance" name="Professional Deck Maintenance NoVA | Staining &amp; Sealing Services" description="Protect your outdoor investment with expert deck maintenance in Northern Virginia. We specialize in wood staining, sealing, and structural care." speakable />
       <ServiceSchema
         name="Deck Maintenance"
         description="Annual deck cleaning, inspection, and maintenance for Northern Virginia homeowners. Wood and composite."
@@ -133,7 +133,7 @@ export default function DeckMaintenancePage() {
         description="Routine maintenance is the key to extending the life of your deck. Protect your outdoor living investment from sun damage, moisture, and extreme seasonal weather."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       </section>
 
       <ServiceMain

@@ -23,7 +23,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 export const metadata = buildMetadata({
   path: "/services/deck-replacement",
   title: "Professional Deck Replacement Northern Virginia | Rebuild & Remodel",
-  description: "Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds.",
+  description: "Full deck replacement in Northern Virginia. Projects from a written estimate, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds.",
   image: "/social/deck-replacement-service-social.png",
 });
 
@@ -152,14 +152,14 @@ const replacementGeoAnswers = [
 export default function DeckReplacementPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-09-04" url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description="Full deck replacement in Northern Virginia. Projects from $15k+, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description="Full deck replacement in Northern Virginia. Projects from a written estimate, permits and HOA handled, 2-4 week typical build timeline, composite rebuilds." speakable />
       <ArticleSchema
         title="Deck Replacement in Northern Virginia"
         description="Deck replacement planning guide for Northern Virginia homeowners comparing repair, resurfacing, full rebuilds, structural code resets, local permit paths, composite materials, and written estimate routing."
         path="/services/deck-replacement"
         image="/social/deck-replacement-service-social.png"
         datePublished="2026-05-26"
-        dateModified="2026-09-04"
+        dateModified="2026-10-18"
         speakable={[
           '#deck-replacement-answer',
           '#deck-replacement-decision-support',
@@ -232,7 +232,7 @@ export default function DeckReplacementPage() {
       />
       <div id="deck-replacement-estimate" style={{ scrollMarginTop: '24px' }}>
         <ServicesHeader
-          subtext="Projects from $15,000+"
+          subtext="Projects from a written estimate"
           title="Professional Deck Replacement in Northern Virginia"
           description="Don't let an aging, splintering deck hold you back. We inspect old structures, separate repair from replacement, and build low-maintenance outdoor retreats with permit and HOA planning included in the written scope."
           estimateHref="#deck-replacement-estimate"
@@ -245,7 +245,7 @@ export default function DeckReplacementPage() {
       </div>
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-09-04" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
       </section>
 
       <PlanningUpdate
@@ -281,7 +281,7 @@ export default function DeckReplacementPage() {
 
       <section style={{ padding: '2.5rem 1.5rem', background: '#fff' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1rem' }}>
             {replacementGeoAnswers.map((item) => (
               <section key={item.id} id={item.id} data-speakable={item.id} style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '1rem', background: '#fbfdff' }}>
                 <h2 style={{ fontSize: '1.08rem', fontWeight: 800, marginBottom: '0.55rem' }}>{item.q}</h2>
@@ -311,7 +311,7 @@ export default function DeckReplacementPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Full deck replacement projects from $15,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Full deck replacement projects from a written estimate</strong>
             <br />
             On this page we focus on <strong style={{ color: '#111' }}>full tear-down and rebuild projects</strong>. Looking for board replacement, railing or structural fixes on an otherwise sound deck? See our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
@@ -328,7 +328,7 @@ export default function DeckReplacementPage() {
       <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
-            <strong style={{ color: '#222' }}>Full deck replacement projects typically range from $20,000-$50,000</strong>
+            <strong style={{ color: '#222' }}>Full deck replacement projects typically range from a written estimate</strong>
             {' '}— deck size, structural condition, materials, and railing upgrades affect final pricing.{' '}
             <strong>Structural evaluation, permit guidance, and HOA coordination are confirmed in the written project scope.</strong>
           </p>
@@ -368,7 +368,7 @@ export default function DeckReplacementPage() {
         <p style={{ fontSize: '18px', color: '#555', maxWidth: '800px', margin: '0 auto 50px', lineHeight: '1.6' }}>
           If your deck exhibits any of the following issues, a full replacement is often the safest and most cost-effective solution.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', alignItems: 'stretch' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '20px', alignItems: 'stretch' }}>
           <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
             <Image src="/torndeck.webp" alt="Severe board rot and splintering on an aged Northern Virginia wood deck — full replacement needed" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
           </div>
@@ -403,7 +403,7 @@ export default function DeckReplacementPage() {
         <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
           Replacement projects often depend on county permit review, HOA rules, access, and existing framing conditions. Use the local planning page closest to the property before requesting a written replacement estimate.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem', marginBottom: '1rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '0.75rem', marginBottom: '1rem' }}>
           {[
             ['/deck-builder-ashburn-va', 'Ashburn deck replacement'],
             ['/deck-builder-leesburg-va', 'Leesburg deck replacement'],
@@ -417,7 +417,7 @@ export default function DeckReplacementPage() {
             <Link key={href} href={href} style={{ display: 'block', padding: '0.85rem', background: '#fff', border: '1px solid #e5e5e5', borderRadius: 8, color: 'var(--site-color)', fontWeight: 700, textDecoration: 'none' }}>{text} →</Link>
           ))}
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '0.75rem' }}>
           {[
             ['/near-you/loudoun-county', 'Loudoun County planning hub'],
             ['/near-you/fairfax-county', 'Fairfax County planning hub'],

@@ -22,7 +22,7 @@ export const metadata = buildMetadata({
 const permitFaqs = [
   {
     q: "How much does a deck permit cost in Loudoun County?",
-    a: "Loudoun County's current deck guidance lists $265 for a typical deck under 1,000 square feet outside an incorporated town and $395 when the county's plan specifications are used. Fees can differ by project and jurisdiction, so verify the current amount on the official Loudoun County deck page before budgeting or filing.",
+    a: "Loudoun County's current deck guidance lists a written estimate for a typical deck under 1,000 square feet outside an incorporated town and a written estimate when the county's plan specifications are used. Fees can differ by project and jurisdiction, so verify the current amount on the official Loudoun County deck page before budgeting or filing.",
   },
   {
     q: "Do all decks need a permit in Loudoun County?",
@@ -72,14 +72,14 @@ export default function LoudounPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-07-19" url="https://ldndecks.com/deck-permit-loudoun-county-virginia" name="Loudoun County Deck Permit Guide (2026) | Loudoun Decks" description="Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Plan a cleaner deck build with professional permit coordination." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-permit-loudoun-county-virginia" name="Loudoun County Deck Permit Guide (2026) | Loudoun Decks" description="Everything you need to know about Loudoun County deck permits, setbacks, and HOA approvals. Plan a cleaner deck build with professional permit coordination." speakable />
       <ArticleSchema
         title="Virginia Deck Building Code: 2026 Loudoun Permit Guide"
         description="Granular technical guide for 2026 Loudoun County deck permits. Footing depths, joist spans, ledger flashing, and LandMARC portal walkthrough."
         path="/deck-permit-loudoun-county-virginia"
         image="/images/blog-permit-guide.png"
         datePublished="2026-04-21"
-        dateModified="2026-07-19"
+        dateModified="2026-10-18"
       />
 
       {/* Hero Section */}
@@ -94,7 +94,7 @@ export default function LoudounPermitPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Loudoun County states that all decks require a building permit and a zoning permit.</strong> Its current deck page lists $265 for a typical deck under 1,000 square feet outside an incorporated town and $395 when county plan specifications are used. Fees, intake, and review timing can change by project and jurisdiction, so verify the current details on the <Link href="https://www.loudoun.gov/1166/Decks" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>official Loudoun County deck page</Link> and <Link href="https://www.loudoun.gov/6084/Residential-Permits-Processing-Dashboard" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>residential permit dashboard</Link>. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> to discuss permit coordination for your scope.</p>
+          <p><strong>Loudoun County states that all decks require a building permit and a zoning permit.</strong> Its current deck page lists a written estimate for a typical deck under 1,000 square feet outside an incorporated town and a written estimate when county plan specifications are used. Fees, intake, and review timing can change by project and jurisdiction, so verify the current details on the <Link href="https://www.loudoun.gov/1166/Decks" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>official Loudoun County deck page</Link> and <Link href="https://www.loudoun.gov/6084/Residential-Permits-Processing-Dashboard" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>residential permit dashboard</Link>. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> to discuss permit coordination for your scope.</p>
         </div>
       </section>
 
@@ -308,7 +308,7 @@ export default function LoudounPermitPage() {
 
       <SimpleCTA title="Ready for a Code-Compliant Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-permit-loudoun-county-virginia" />
-      <NamedAuthor context="Loudoun County" lastUpdated="2026-07-19" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-10-18" />
 
       <ContactHome />
     </>

@@ -54,7 +54,7 @@ const restonFAQs = [
   },
   {
     q: "What does a composite deck cost in Reston?",
-    a: "Reston composite decks generally run $22,000 to $55,000+. Wooded, sloped lots that need elevated or multi-level framing  -  plus tree-protection during construction  -  sit toward the higher end of that range."
+    a: "Reston composite decks generally are priced in a written estimate. Wooded, sloped lots that need elevated or multi-level framing  -  plus tree-protection during construction  -  sit toward the higher end of that range."
   },
   {
     q: "Why is composite the usual choice in Reston?",
@@ -90,7 +90,7 @@ const expansionSections = [
     title: "Why Composite Wins on a Shaded Reston Lot",
     paragraphs: [
       "Reston's tree canopy is beautiful and unforgiving. Constant shade, falling leaves and sap keep a wood deck damp and feed mildew, which forces a scrub-and-refinish cycle nobody enjoys. Composite sidesteps all of it  -  our Trex, TimberTech, and AZEK product experience cover the board lines engineered for precisely this shaded, debris-heavy setting.",
-      "Material color matters here too: darker, earth-toned composite blends into the wooded backdrop the Reston covenants are written to protect. On sloped lots  -  common across Reston  -  an elevated or multi-level deck turns the grade into usable rooms, and glass or cable railing keeps lake and woodland views open. Reston projects typically start around $22,000 and scale with elevation, levels and railing choice.",
+      "Material color matters here too: darker, earth-toned composite blends into the wooded backdrop the Reston covenants are written to protect. On sloped lots  -  common across Reston  -  an elevated or multi-level deck turns the grade into usable rooms, and glass or cable railing keeps lake and woodland views open. Reston projects typically start around a written estimate and scale with elevation, levels and railing choice.",
       "A Reston composite deck trades that seasonal upkeep for a decades-long manufacturer material warranty  -  one that stays enforceable because the certified installation behind it meets the manufacturer's spec."
     ],
     listItems: [
@@ -114,7 +114,7 @@ export default function DeckBuilderRestonPage() {
   return (
     <main>
       <LocalBusinessSchema city="Reston" url="https://ldndecks.com/deck-builder-reston-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-reston-va" name="Expert Deck Builders in Reston VA | Custom Trex Decks" description="Deck builder in Reston, VA. Composite decks designed for wooded lots and Reston Association DRB review  -  Lake Anne, Lake Audubon, South Lakes, North Point. Fairfax County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-reston-va" name="Expert Deck Builders in Reston VA | Custom Trex Decks" description="Deck builder in Reston, VA. Composite decks designed for wooded lots and Reston Association DRB review  -  Lake Anne, Lake Audubon, South Lakes, North Point. Fairfax County permits handled. Free estimate." speakable />
       <ServicesHeader
         subtext="Reston, VA's Trusted Deck Company"
         title="Custom Deck Builder in Reston, VA"
@@ -123,7 +123,7 @@ export default function DeckBuilderRestonPage() {
       <ServiceMain
         subtitle="Built for Reston's Wooded Lots"
         title="Deck Builder Reston VA  -  Premium Craftsmanship"
-        description="We design decks that belong under Reston's tree canopy and pass Design Review Board scrutiny. Elevated, multi-level builds and view-preserving railings from $22k+."
+        description="We design decks that belong under Reston's tree canopy and pass Design Review Board scrutiny. Elevated, multi-level builds and view-preserving railings from a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "Reston Association DRB submissions prepared and timed",
@@ -241,7 +241,7 @@ export default function DeckBuilderRestonPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Reston" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Reston" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-reston-va" />
-      <NamedAuthor context="Reston and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Reston and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

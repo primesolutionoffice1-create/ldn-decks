@@ -19,7 +19,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 const _meta = buildMetadata({
     path: "/services/porches/screened-porch",
     title: "Screened Porch Builder & Contractor | Northern Virginia",
-    description: "Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k.",
+    description: "Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. a written estimate.",
   image: "/social/screened-porch-builder-northern-virginia-social.png",
 });
 export const metadata = {
@@ -45,7 +45,7 @@ const inclusions = [
 const faqs = [
   {
     q: "How much does a screened-in porch cost in Northern Virginia?",
-    a: "Most screened porch builds in Loudoun, Fairfax and Prince William counties run $28,000 to $55,000 for a 200–350 sqft footprint with a shed or gable roof, composite deck floor, fiberglass screen and standard lighting. Four-season EZE-Breeze conversions, vaulted ceilings with tongue-and-groove cladding, or attached fireplaces push complete projects into the $55,000–$80,000 range. We send a written, itemized cost letter with every estimate."
+    a: "Most screened porch builds in Loudoun, Fairfax and Prince William counties are priced in a written estimate for a 200–350 sqft footprint with a shed or gable roof, composite deck floor, fiberglass screen and standard lighting. Four-season EZE-Breeze conversions, vaulted ceilings with tongue-and-groove cladding, or attached fireplaces push complete projects into the a written estimate range. We send a written, itemized cost letter with every estimate."
   },
   {
     q: "Do you need a permit for a screened porch in Fairfax County?",
@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: "What's the difference between a screened porch and a sunroom?",
-    a: "A screened porch uses insect screening on the side walls, has no climate control, and is built for warm-season use. A sunroom uses glass on the side walls, may include heating or cooling, and qualifies as conditioned living space — which means stricter permitting, an HVAC tie-in and higher cost ($55k–$120k+). EZE-Breeze panel systems sit between the two: glazed acrylic panels that slide open for screen-porch use in summer and close down for shoulder-season use in spring and fall."
+    a: "A screened porch uses insect screening on the side walls, has no climate control, and is built for warm-season use. A sunroom uses glass on the side walls, may include heating or cooling, and qualifies as conditioned living space — which means stricter permitting, an HVAC tie-in and higher cost (a written estimate). EZE-Breeze panel systems sit between the two: glazed acrylic panels that slide open for screen-porch use in summer and close down for shoulder-season use in spring and fall."
   },
   {
     q: "Can you build a screened porch on an existing deck?",
@@ -74,16 +74,16 @@ const faqs = [
 ];
 
 const screenedPorchCostRows = [
-  ['Basic screened porch (200 sqft)', 'Shed roof, fiberglass screen, composite floor, standard lighting', '$28,000–$38,000'],
-  ['Standard screened porch (250–300 sqft)', 'Gable roof, premium screen, ceiling fan, recessed LEDs, knee wall', '$38,000–$55,000'],
-  ['Premium screened porch (300–400 sqft)', 'Vaulted ceiling with T&G cladding, motorized retractable screens, fireplace', '$55,000–$70,000'],
-  ['EZE-Breeze four-season porch (300 sqft)', 'Panelized acrylic walls, screen mode + closed mode, infrared heaters', '$60,000–$80,000'],
+  ['Basic screened porch (200 sqft)', 'Shed roof, fiberglass screen, composite floor, standard lighting', 'a written estimate'],
+  ['Standard screened porch (250–300 sqft)', 'Gable roof, premium screen, ceiling fan, recessed LEDs, knee wall', 'a written estimate'],
+  ['Premium screened porch (300–400 sqft)', 'Vaulted ceiling with T&G cladding, motorized retractable screens, fireplace', 'a written estimate'],
+  ['EZE-Breeze four-season porch (300 sqft)', 'Panelized acrylic walls, screen mode + closed mode, infrared heaters', 'a written estimate'],
 ];
 
 export default function ScreenedPorchPage() {
     return (
       <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/porches/screened-porch" name="Screened Porch Builder &amp; Contractor | Northern Virginia" description="Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. $28k–$80k." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/porches/screened-porch" name="Screened Porch Builder &amp; Contractor | Northern Virginia" description="Screened-in porch construction in Loudoun, Fairfax, Prince William VA. NoVA-licensed screened porch contractor. EZE-Breeze, motorized screens, four-season conversions. a written estimate." speakable />
         <ServiceSchema
         name="Screened Porch Construction"
         description="Custom screened porches in Northern Virginia with EZE-Breeze, four-season options, composite floor planning, permit planning, and written project scope."
@@ -103,7 +103,7 @@ export default function ScreenedPorchPage() {
           <div style={{ borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
             <p style={{ margin: 0, lineHeight: 1.65 }} data-speakable>
-              A custom screened-in porch in Northern Virginia typically costs $28,000 to $55,000 for a 200–350 sqft build with a composite floor, gable or shed roof, fiberglass screen and standard lighting. EZE-Breeze four-season conversions and premium fireplace builds run $55,000–$80,000. Fairfax County permits often run 3–5 weeks; Loudoun County commonly runs 2–4 weeks. We&apos;re a Virginia Class A licensed screened porch contractor.
+              A custom screened-in porch in Northern Virginia typically is priced in a written estimate for a 200–350 sqft build with a composite floor, gable or shed roof, fiberglass screen and standard lighting. EZE-Breeze four-season conversions and premium fireplace builds are priced in a written estimate. Fairfax County permits often run 3–5 weeks; Loudoun County commonly runs 2–4 weeks. We&apos;re a Virginia Class A licensed screened porch contractor.
             </p>
           </div>
 

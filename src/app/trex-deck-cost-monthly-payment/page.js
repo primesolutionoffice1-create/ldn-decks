@@ -26,11 +26,11 @@ const PATH = '/trex-deck-cost-monthly-payment';
 const faqs = [
   {
     q: 'How much does a Trex deck cost in Northern Virginia?',
-    a: 'A Trex deck in Northern Virginia typically runs $35–$70 per square foot installed, depending on tier. A 350 sqft Trex Enhance project lands $18,000–$26,000; Trex Transcend usually runs $22,000–$32,000; Trex Signature composite decking usually runs $28,000–$40,000+ for the same size.',
+    a: 'A Trex deck in Northern Virginia typically is priced in a written estimate per square foot installed, depending on tier. A 350 sqft Trex Enhance project lands a written estimate; Trex Transcend usually is priced in a written estimate; Trex Signature composite decking usually is priced in a written estimate for the same size.',
   },
   {
-    q: 'What is the monthly payment on a $25,000 Trex deck?',
-    a: 'At a sample 8.99% APR, a $25,000 Trex deck financed over 10 years is roughly $317/month and roughly $254/month over 15 years. Promotional 0% interest options exist for shorter payoff windows. Pre-qualification through a soft credit pull returns your real number without affecting your credit score.',
+    q: 'What is the monthly payment on a a written estimate Trex deck?',
+    a: 'At a sample 8.99% APR, a a written estimate Trex deck financed over 10 years is roughly a lender-calculated paymentnth and roughly a lender-calculated paymentnth over 15 years. Promotional 0% interest options exist for shorter payoff windows. Pre-qualification through a soft credit pull returns your real number without affecting your credit score.',
   },
   {
     q: 'Which Trex tier gives the best long-term value?',
@@ -79,39 +79,39 @@ const tiers = [
   {
     name: 'Trex Enhance',
     sub: 'Naturals & Basics — budget tier',
-    range: '$35–$45 /sqft installed',
+    range: 'a written estimate /sqft installed',
     warranty: '25-yr residential + 25-yr fade & stain',
-    project350: '$18,000–$26,000',
-    project500: '$25,000–$33,000',
-    monthly: '$229–$330 /mo over 10y',
+    project350: 'a written estimate',
+    project500: 'a written estimate',
+    monthly: 'a lender-calculated payment over 10y',
   },
   {
     name: 'Trex Transcend',
     sub: 'Premium composite tier — deeper grain and stronger warranty coverage',
-    range: '$45–$60 /sqft installed',
+    range: 'a written estimate /sqft installed',
     warranty: '50-yr limited residential fade & stain',
-    project350: '$22,000–$32,000',
-    project500: '$30,000–$42,000',
-    monthly: '$279–$405 /mo over 10y',
+    project350: 'a written estimate',
+    project500: 'a written estimate',
+    monthly: 'a lender-calculated payment over 10y',
   },
   {
     name: 'Trex Signature',
     sub: 'Luxury composite tier — newest high-end board profile',
-    range: '$60–$80 /sqft installed',
+    range: 'a written estimate /sqft installed',
     warranty: '50-yr limited residential fade & stain',
-    project350: '$28,000–$40,000+',
-    project500: '$38,000–$52,000+',
-    monthly: '$354–$506 /mo over 10y',
+    project350: 'a written estimate',
+    project500: 'a written estimate',
+    monthly: 'a lender-calculated payment over 10y',
   },
 ];
 
 // 8.99% APR amortization: total = monthly × months; interest = total − principal
 const paymentMatrix = [
-  ['$18,000', '$228', '$183', '$9,360'],
-  ['$25,000', '$317', '$254', '$13,040'],
-  ['$32,000', '$405', '$324', '$16,600'],
-  ['$40,000', '$506', '$406', '$20,720'],
-  ['$50,000', '$633', '$507', '$25,960'],
+  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
 ];
 
 export default function TrexDeckCostMonthlyPaymentPage() {
@@ -124,9 +124,9 @@ export default function TrexDeckCostMonthlyPaymentPage() {
         path={PATH}
         image="/showcase/img11.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Trex Deck Cost vs Monthly Payment: 2026 Budget Guide" description="Real Trex deck costs by tier (Enhance, Transcend, Signature) and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Trex Deck Cost vs Monthly Payment: 2026 Budget Guide" description="Real Trex deck costs by tier (Enhance, Transcend, Signature) and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -155,8 +155,8 @@ export default function TrexDeckCostMonthlyPaymentPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            A <strong>350 sqft Trex deck</strong> in Northern Virginia runs <strong>$18,000–$40,000+</strong>{' '}
-            depending on tier. At 8.99% APR over 10 years that&apos;s roughly <strong>$229–$506/month</strong>.
+            A <strong>350 sqft Trex deck</strong> in Northern Virginia runs <strong>a written estimate</strong>{' '}
+            depending on tier. At 8.99% APR over 10 years that&apos;s roughly <strong>a lender-calculated paymentnth</strong>.
             Run your written estimate amount through the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
@@ -168,11 +168,11 @@ export default function TrexDeckCostMonthlyPaymentPage() {
 
       <GeoAnswerBlock
         question="How much does a Trex deck cost per month in Northern Virginia?"
-        answer="A typical 350 sqft Trex deck in Northern Virginia runs about $18,000 to $40,000+ depending on Trex tier, railing, stairs, lighting, frame condition, permits, and HOA scope. At the sample 8.99% APR used on this page, that maps to roughly $229 to $506 per month over 10 years. Homeowners should use the payment estimator with their written estimate amount because the lender, term, APR, and optional upgrades change the real monthly payment."
+        answer="A typical 350 sqft Trex deck in Northern Virginia runs about a written estimate to a written estimate depending on Trex tier, railing, stairs, lighting, frame condition, permits, and HOA scope. At the sample 8.99% APR used on this page, that maps to roughly a written estimate to a written estimate per month over 10 years. Homeowners should use the payment estimator with their written estimate amount because the lender, term, APR, and optional upgrades change the real monthly payment."
         facts={[
-          'Trex Enhance planning range: $35-$45 per sqft installed',
-          'Trex Transcend planning range: $45-$60 per sqft installed',
-          'Trex Signature planning range: $60-$80 per sqft installed',
+          'Trex Enhance planning range: a written estimate per sqft installed',
+          'Trex Transcend planning range: a written estimate per sqft installed',
+          'Trex Signature planning range: a written estimate per sqft installed',
         ]}
         links={[
           { href: '/deck-payment-estimator', label: 'Deck payment estimator' },
@@ -225,7 +225,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
                 <span style={{ fontWeight: 700, color: 'var(--color-primary)' }}>{t.range}</span>
               </div>
               <p style={{ ...S.p, color: '#666', fontSize: '0.95rem', marginBottom: '0.75rem' }}>{t.sub}</p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.5rem 1rem', fontSize: '0.9rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '0.5rem 1rem', fontSize: '0.9rem' }}>
                 <div><strong>350 sqft project:</strong> {t.project350}</div>
                 <div><strong>500 sqft project:</strong> {t.project500}</div>
                 <div><strong>Warranty:</strong> {t.warranty}</div>
@@ -263,9 +263,9 @@ export default function TrexDeckCostMonthlyPaymentPage() {
           </div>
           <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 8, padding: '1rem 1.25rem', marginBottom: '1.25rem' }}>
             <p data-speakable style={{ margin: 0, fontWeight: 600 }}>
-              A $25,000 Trex Enhance deck financed at 8.99% APR over 10 years costs approximately $38,040 total —
-              $13,040 in interest. A 15-year term lowers the monthly payment to $254 but raises total interest to
-              roughly $20,720.
+              A a written estimate Trex Enhance deck financed at 8.99% APR over 10 years costs approximately a written estimate total —
+              a written estimate in interest. A 15-year term lowers the monthly payment to a written estimate but raises total interest to
+              roughly a written estimate.
             </p>
           </div>
           <p style={{ ...S.p, fontSize: '0.85rem', color: '#777', fontStyle: 'italic' }}>
@@ -275,7 +275,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
           <h2 style={S.h2}>How Trex Compares to Other Composite Brands</h2>
           <p style={S.p}>
             Trex is one of three premium composite brands we install regularly in Northern Virginia. TimberTech (AZEK
-            Vintage) and Fiberon are the others. Trex Transcend and TimberTech PRO are usually within $1–$3/sqft of
+            Vintage) and Fiberon are the others. Trex Transcend and TimberTech PRO are usually within priced in a written estimate of
             each other. For a side-by-side brand comparison, see{' '}
             <Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
               Trex vs TimberTech vs AZEK
@@ -290,12 +290,12 @@ export default function TrexDeckCostMonthlyPaymentPage() {
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
             <li><strong>Tier:</strong> Enhance vs Transcend vs Signature composite decking — biggest single driver</li>
             <li><strong>Size:</strong> Per-square-foot cost is roughly linear up to ~500 sqft</li>
-            <li><strong>Railings:</strong> Trex Select composite vs Signature aluminum vs cable — $40–$150 per linear foot</li>
-            <li><strong>Stairs:</strong> Each stair flight adds $1,500–$4,000 depending on width and rise</li>
-            <li><strong>Lighting:</strong> Post-cap + riser + recessed adds $1,500–$5,000</li>
-            <li><strong>Frame condition:</strong> Reusing a sound frame saves $4,000–$10,000+</li>
-            <li><strong>Picture-frame border:</strong> $400–$900 per typical deck</li>
-            <li><strong>Permits & HOA:</strong> $300–$1,500 depending on county and HOA process</li>
+            <li><strong>Railings:</strong> Trex Select composite vs Signature aluminum vs cable — a written estimate per linear foot</li>
+            <li><strong>Stairs:</strong> Each stair flight adds a written estimate depending on width and rise</li>
+            <li><strong>Lighting:</strong> Post-cap + riser + recessed adds a written estimate</li>
+            <li><strong>Frame condition:</strong> Reusing a sound frame saves a written estimate</li>
+            <li><strong>Picture-frame border:</strong> a written estimate per typical deck</li>
+            <li><strong>Permits & HOA:</strong> a written estimate depending on county and HOA process</li>
           </ul>
 
           <h2 style={S.h2}>Trex Deck Financing in Northern Virginia</h2>
@@ -359,7 +359,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
         buttonText="Get Free Written Estimate"
         link="/get-estimate"
       />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

@@ -51,7 +51,7 @@ const southRidingFAQs = [
   },
   {
     q: "What does a composite deck cost in South Riding?",
-    a: "South Riding composite decks generally run $20,000 to $45,000. Most projects involve replacing a 10-25 year old builder-grade PT deck with Trex or TimberTech composite. Typical builds are 300-500 sqft on standard suburban lots."
+    a: "South Riding composite decks generally are priced in a written estimate. Most projects involve replacing a 10-25 year old builder-grade PT deck with Trex or TimberTech composite. Typical builds are 300-500 sqft on standard suburban lots."
   },
   {
     q: "How long does a South Riding deck project take?",
@@ -80,8 +80,8 @@ const expansionSections = [
     title: "South Riding's Builder-Grade Upgrade Cycle",
     paragraphs: [
       "South Riding was built in phases from 1998 through 2015, and nearly every home came with a basic pressure-treated wood deck. Those early decks are now 10 to 25 years old  -  graying, splintering, and past the point where annual staining makes economic sense. The community is in the middle of a generational upgrade cycle, and composite decking is the standard replacement.",
-      "The typical South Riding upgrade replaces the old PT boards with Trex Enhance or Transcend composite, swaps out the original wood railings for aluminum or composite railings, and adds hidden fasteners for a clean surface. If the existing frame is structurally sound  -  and on decks under 15 years old it often is  -  resurfacing saves 40-60% compared to a full tear-down and rebuild.",
-      "What makes South Riding projects predictable is lot consistency. Most homes sit on similar suburban lots with similar deck footprints (300-500 sqft), similar floor heights and similar access paths. That consistency lets us estimate accurately and build efficiently, keeping most projects in the $20,000-$45,000 range."
+      "The typical South Riding upgrade replaces the old PT boards with Trex Enhance or Transcend composite, swaps out the original wood railings for aluminum or composite railings, and adds hidden fasteners for a clean surface. If the existing frame is structurally sound  -  and on decks under 15 years old it often is  -  resurfacing keeps a sound frame instead of rebuilding it compared to a full tear-down and rebuild.",
+      "What makes South Riding projects predictable is lot consistency. Most homes sit on similar suburban lots with similar deck footprints (300-500 sqft), similar floor heights and similar access paths. That consistency lets us estimate accurately and build efficiently, keeping most projects in the a written estimate range."
     ]
   },
   {
@@ -111,7 +111,7 @@ export default function SouthRidingDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="South Riding" url="https://ldndecks.com/deck-builder-south-riding-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-south-riding-va" name="Deck Builder in South Riding, VA | Custom Trex Decks" description="Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permit planning support. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-south-riding-va" name="Deck Builder in South Riding, VA | Custom Trex Decks" description="Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permit planning support. Free estimate." speakable />
       <ServicesHeader
         subtext="South Riding, VA's Trusted Deck Company"
         title="Custom Deck Builder in South Riding, VA"
@@ -120,7 +120,7 @@ export default function SouthRidingDeckBuilderPage() {
       <ServiceMain
         subtitle="Built for South Riding's DRC Standards"
         title="Deck Builder South Riding VA  -  Premium Craftsmanship"
-        description="We replace aging builder-grade PT decks with composite and handle the SRP Design Review Committee process from drawings to approval. Most projects $20k-$45k."
+        description="We replace aging builder-grade PT decks with composite and handle the SRP Design Review Committee process from drawings to approval. Most projects a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "SRP Design Review Committee submissions prepared and timed",
@@ -191,7 +191,7 @@ export default function SouthRidingDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="South Riding" /></div></section>
       <SimpleCTA title="Upgrade Your South Riding Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-south-riding-va" />
-      <NamedAuthor context="South Riding and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="South Riding and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

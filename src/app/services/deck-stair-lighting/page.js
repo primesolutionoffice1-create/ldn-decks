@@ -98,7 +98,7 @@ const expansionSections = [
       { label: "Surface-mount fixtures", text: "Post cap lights, rail-mounted fixtures, and fascia lights can be added without removing any decking. Wiring is routed along the underside of the frame or inside hollow railing channels." },
       { label: "Partial-access retrofit", text: "When the underside of the deck is accessible, low-voltage wire can be fished through joists and up through small holes drilled in stair risers for a fully recessed look." },
       { label: "Battery and solar alternatives", text: "For decks where running wire is impractical, battery-powered riser lights and solar post caps provide a no-wire option with easy seasonal replacement." },
-      { label: "Typical cost range", text: "Retrofit lighting on an existing Northern Virginia deck typically runs $1,200 to $3,500 depending on fixture count, power source, and accessibility. A pre-wired installation during construction saves roughly 30 to 40 percent." },
+      { label: "Typical cost range", text: "Retrofit lighting on an existing Northern Virginia deck typically is priced in a written estimate depending on fixture count, power source, and accessibility. A pre-wired installation during construction saves roughly 30 to 40 percent." },
     ]
   },
 ];
@@ -106,7 +106,7 @@ const expansionSections = [
 const lightingFaqs = [
   {
     q: "How much does deck stair lighting cost in Northern Virginia?",
-    a: "A typical low-voltage LED stair lighting package for a residential deck in Loudoun, Fairfax, or Prince William County ranges from $1,500 to $3,500 installed, depending on the number of fixtures and whether wiring is pre-run during construction or retrofitted."
+    a: "A typical low-voltage LED stair lighting package for a residential deck in Loudoun, Fairfax, or Prince William County ranges from a written estimate to a written estimate installed, depending on the number of fixtures and whether wiring is pre-run during construction or retrofitted."
   },
   {
     q: "How long does a deck lighting installation take?",
@@ -133,7 +133,7 @@ const lightingFaqs = [
 export default function DeckStairLightingPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/deck-stair-lighting" name="Deck Stair Lighting Loudoun VA | LDN Decks" description="Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last in Loudoun, Fairfax &amp; Prince William County." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/deck-stair-lighting" name="Deck Stair Lighting Loudoun VA | LDN Decks" description="Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last in Loudoun, Fairfax &amp; Prince William County." speakable />
       <ServiceSchema
         name="Deck & Stair Lighting"
         description="Integrated LED deck lighting, stair riser lights, post cap lights, and under-rail strips for Northern Virginia decks."
@@ -148,7 +148,7 @@ export default function DeckStairLightingPage() {
         description="Custom-built LED lighting systems installed directly into your deck stairs - clean, modern, and built to last."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       </section>
 
       <ServiceMain
@@ -171,7 +171,7 @@ export default function DeckStairLightingPage() {
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>Same deck. Completely different experience.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
             <Image src="/showcase/light-img.jpeg" alt="Before deck stair lighting — unlit Northern Virginia composite deck stairs" fill style={{ objectFit: 'cover' }} />
           </div>

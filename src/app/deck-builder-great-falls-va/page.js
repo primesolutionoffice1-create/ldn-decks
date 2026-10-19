@@ -27,7 +27,7 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a deck cost in Great Falls, VA?", acceptedAnswer: { "@type": "Answer", text: "Many serious Great Falls composite deck replacements and outdoor living projects plan around $45,000-$140,000+, depending on size, framing condition, slope, access, material tier, railing, lighting, drainage, septic constraints, and whether the scope includes a screened porch or covered structure." } },
+    { "@type": "Question", name: "How much does a deck cost in Great Falls, VA?", acceptedAnswer: { "@type": "Answer", text: "Many serious Great Falls composite deck replacements and outdoor living projects plan around a written estimate, depending on size, framing condition, slope, access, material tier, railing, lighting, drainage, septic constraints, and whether the scope includes a screened porch or covered structure." } },
     { "@type": "Question", name: "Do I need special permits for a deck in Great Falls?", acceptedAnswer: { "@type": "Answer", text: "Great Falls is in Fairfax County, so standard building permits are required. Some Great Falls lots are in or near RPA (Resource Protection Area) zones near the Potomac River, which may require additional environmental review. We screen for these constraints during planning." } },
     { "@type": "Question", name: "Do Great Falls homes have HOA restrictions on decks?", acceptedAnswer: { "@type": "Answer", text: "Some Great Falls neighborhoods have deed covenants or HOA architectural review. Many estate-lot homes have no HOA. We research your specific property's restrictions before design begins." } },
     { "@type": "Question", name: "How long does a premium deck project take in Great Falls?", acceptedAnswer: { "@type": "Answer", text: "Great Falls estate-scale projects often take 5-8 weeks from permit approval to completion. Fairfax County plan review commonly runs 3-6 weeks. Projects requiring RPA environmental review, covered structure engineering, septic coordination, or tree/access planning may take longer." } },
@@ -41,17 +41,17 @@ const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' },
 const projectScenarios = [
   {
     title: 'Estate composite replacement',
-    range: '$45k-$85k+ planning range',
+    range: 'a written estimate planning range',
     desc: 'Best for older Great Falls decks where framing, ledger, stairs, and guardrails need inspection before reuse is considered. Typical upgrades include Trex or TimberTech/AZEK decking, aluminum railing, code-compliant stairs, lighting, and a cleaner access plan.',
   },
   {
     title: 'Wooded or sloped-lot outdoor living deck',
-    range: '$70k-$130k+ planning range',
+    range: 'a written estimate planning range',
     desc: 'Best for larger homes with mature trees, grade change, privacy needs, septic layout, drainage questions, and long stair runs. These projects need slope-aware structure, material planning, drainage review, and early permit-path screening.',
   },
   {
     title: 'Deck + screened porch or covered structure',
-    range: '$90k-$160k+ planning range',
+    range: 'a written estimate planning range',
     desc: 'Best when the deck is part of a larger outdoor room with roof tie-in, screened porch, heaters, fan, fireplace, or covered dining zone. These scopes need engineering, roof integration, RPA screening where relevant, and Fairfax County permit review.',
   },
 ];
@@ -61,7 +61,7 @@ export default function GreatFallsDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Great Falls" url="https://ldndecks.com/deck-builder-great-falls-va" />
-      <WebPageSchema dateModified="2026-07-06" url="https://ldndecks.com/deck-builder-great-falls-va" name="Deck Builder in Great Falls, VA | Premium Composite Decks" description="Premium deck builder in Great Falls, VA for estate composite deck replacement, Trex and AZEK planning, screened porches, RPA screening, and outdoor living projects." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-great-falls-va" name="Deck Builder in Great Falls, VA | Premium Composite Decks" description="Premium deck builder in Great Falls, VA for estate composite deck replacement, Trex and AZEK planning, screened porches, RPA screening, and outdoor living projects." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -85,7 +85,7 @@ export default function GreatFallsDeckBuilderPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Great Falls premium planning range: many serious projects start around $45,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Great Falls premium planning range: many serious projects start around a written estimate</strong>
             <br />
             We focus on <strong style={{ color: '#111' }}>estate composite replacement, screened porch, covered deck, and outdoor living scopes</strong>. Need a repair instead? Visit our <Link href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</Link>.
           </p>
@@ -147,7 +147,7 @@ export default function GreatFallsDeckBuilderPage() {
 
           <h2 style={S.h2}>Great Falls Premium Project Scenarios</h2>
           <p style={S.p}>These are planning scenarios, not final quotes. A Great Falls estimate should be confirmed after site access, framing condition, slope, septic location, Fairfax County permit path, RPA exposure, drainage, and material selections are reviewed.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {projectScenarios.map((scenario) => (
               <article key={scenario.title} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 8, padding: '1.25rem' }}>
                 <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.4rem' }}>{scenario.title}</h3>
@@ -158,12 +158,12 @@ export default function GreatFallsDeckBuilderPage() {
           </div>
 
           <h2 style={S.h2}>What We Build in Great Falls</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { title: 'Estate Composite Decks', desc: 'Multi-level AZEK, TimberTech, and Trex builds with premium railings, lighting, stairs, drainage, and site-specific access planning', range: '$45k-$130k+' },
-              { title: 'Screened Porches & Covered Decks', desc: 'Roof tie-ins, screened rooms, heaters, fans, fireplace planning, cedar ceilings, and all-season comfort decisions', range: '$80k-$160k+' },
-              { title: 'Pool and Rear-Yard Deck Zones', desc: 'Composite or PVC decking around pools and rear-yard entertainment areas with code-compliant barriers and drainage planning', range: '$55k-$120k+' },
-              { title: 'Outdoor Living Add-Ons', desc: 'Outdoor kitchens, covered dining, lighting, privacy screens, and under-deck drainage planned as one cohesive scope', range: '$35k-$90k+' },
+              { title: 'Estate Composite Decks', desc: 'Multi-level AZEK, TimberTech, and Trex builds with premium railings, lighting, stairs, drainage, and site-specific access planning', range: 'a written estimate' },
+              { title: 'Screened Porches & Covered Decks', desc: 'Roof tie-ins, screened rooms, heaters, fans, fireplace planning, cedar ceilings, and all-season comfort decisions', range: 'a written estimate' },
+              { title: 'Pool and Rear-Yard Deck Zones', desc: 'Composite or PVC decking around pools and rear-yard entertainment areas with code-compliant barriers and drainage planning', range: 'a written estimate' },
+              { title: 'Outdoor Living Add-Ons', desc: 'Outdoor kitchens, covered dining, lighting, privacy screens, and under-deck drainage planned as one cohesive scope', range: 'a written estimate' },
             ].map((item) => (
               <div key={item.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>{item.title}</h3>
@@ -187,7 +187,7 @@ export default function GreatFallsDeckBuilderPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "How much does a deck cost in Great Falls?", a: "Many serious Great Falls composite deck replacements and outdoor living projects plan around $45,000-$140,000+, depending on size, framing condition, slope, access, material tier, railing, lighting, drainage, septic constraints, and whether the scope includes a screened porch or covered structure." },
+            { q: "How much does a deck cost in Great Falls?", a: "Many serious Great Falls composite deck replacements and outdoor living projects plan around a written estimate, depending on size, framing condition, slope, access, material tier, railing, lighting, drainage, septic constraints, and whether the scope includes a screened porch or covered structure." },
             { q: "Do I need special permits?", a: "Standard Fairfax County permits plus potential RPA review for lots near the Potomac. We handle everything including environmental submissions." },
             { q: "HOA restrictions?", a: "Varies — some neighborhoods have covenants, many estate lots have no HOA. We research your property before design." },
             { q: "How long does a premium project take?", a: "Estate-scale projects often take 5-8 weeks from permit approval. Fairfax County review commonly runs 3-6 weeks, and RPA, septic, tree access, or covered-structure engineering can extend the timeline." },
@@ -241,7 +241,7 @@ export default function GreatFallsDeckBuilderPage() {
       </section>
       <SimpleCTA title="Get Your Great Falls Deck Quote" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-great-falls-va" />
-      <NamedAuthor context="Great Falls and Northern Virginia" lastUpdated="2026-07-06" />
+      <NamedAuthor context="Great Falls and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </>
   );

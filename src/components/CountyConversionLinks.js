@@ -19,7 +19,7 @@ export default function CountyConversionLinks({ county, permitHref }) {
       <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>
         Plan Your {county} Deck Project
       </h2>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '0.75rem' }}>
         {links.map((link) => (
           <Link
             key={link.href}

@@ -84,7 +84,7 @@ export default function AboutPage() {
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Credentials You Can Verify</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
             {[
               { badge: 'VA Class A License', title: 'Virginia Contractor License', text: 'Class A Licensed by DPOR — authorized for projects of any value in Virginia.' },
               { badge: 'Trex', title: 'Trex Profile Verification', text: 'Trex profile details should be verified directly through Trex before citing current status.' },
@@ -104,7 +104,7 @@ export default function AboutPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>What We Build</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We specialize in composite deck construction and outdoor living projects across Northern Virginia. Every service listed below is handled through the Loudoun Decks project team, with direct communication around scope, materials, scheduling, and site details.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem', marginBottom: '2.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '0.75rem', marginBottom: '2.5rem' }}>
             {[
               ['/services/new-decks', 'Custom Deck Building'],
               ['/composite-decks', 'Composite Decks'],
@@ -125,7 +125,7 @@ export default function AboutPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Where We Work</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Loudoun Decks operates exclusively in Northern Virginia. We are based in Centreville and serve homeowners within a 40-mile radius — close enough that Nick can be on any jobsite within 45 minutes.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
             {[
               { county: 'Loudoun County', cities: 'Ashburn, Leesburg, Sterling, Brambleton, South Riding, Purcellville', href: '/areas-we-serve' },
               { county: 'Fairfax County', cities: 'Reston, McLean, Vienna, Great Falls, Centreville, Herndon, Chantilly, Oakton', href: '/areas-we-serve' },
@@ -146,7 +146,7 @@ export default function AboutPage() {
           <p style={{ marginBottom: '2.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Open public review profiles →</Link></p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>How We Work</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
             {[
               { step: '1', title: 'Free Consultation', text: 'Call or submit the online form. We discuss your project, answer questions, and schedule a site visit if it is a good fit.' },
               { step: '2', title: 'Site Visit & Design', text: 'On-site walkthrough to measure, assess structural conditions, discuss materials, and produce a dimensioned design with a written scope.' },

@@ -21,7 +21,7 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How do I verify a deck builder's license in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Visit the Virginia DPOR License Lookup at https://dfrnet.dpor.virginia.gov/. Search by company name or license number. Every contractor doing work over $1,000 in Virginia must have a Class A, B, or C contractor license." } },
+    { "@type": "Question", name: "How do I verify a deck builder's license in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Visit the Virginia DPOR License Lookup at https://dfrnet.dpor.virginia.gov/. Search by company name or license number. Every contractor doing work over a written estimate in Virginia must have a Class A, B, or C contractor license." } },
     { "@type": "Question", name: "What should I look for in a deck builder's estimate?", acceptedAnswer: { "@type": "Answer", text: "An itemized materials list (brand, model, color), separate labor cost, permit fees, dumpster/cleanup, project timeline, warranty terms in writing, and the contractor's Virginia license number." } },
     { "@type": "Question", name: "Should I get multiple deck quotes?", acceptedAnswer: { "@type": "Answer", text: "Yes get 2-3 quotes from licensed contractors. Compare not just price, but scope, materials, warranty, timeline, and permit planning. The cheapest quote often excludes permits, cleanup, or uses inferior materials." } },
     { "@type": "Question", name: "What are red flags when hiring a deck builder?", acceptedAnswer: { "@type": "Answer", text: "No Virginia contractor license, cash-only payment demands, no written warranty, no permit mentioned, can't provide recent local references, pressure to sign immediately, price significantly below all other quotes." } },
@@ -34,7 +34,7 @@ export default function ChooseDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia" name="How to Choose a Deck Builder in Northern Virginia (10 Questions + Red Flags)" description="10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license, warranty terms, and public profiles." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia" name="How to Choose a Deck Builder in Northern Virginia (10 Questions + Red Flags)" description="10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license, warranty terms, and public profiles." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -62,7 +62,7 @@ export default function ChooseDeckBuilderPage() {
           <h2 style={S.h2}>10 Questions to Ask Before You Hire</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             {[
-              { q: 'Are you licensed in Virginia?', detail: 'Virginia requires a DPOR contractor license for any work over $1,000. Ask for their license number and verify it at dpor.virginia.gov.' },
+              { q: 'Are you licensed in Virginia?', detail: 'Virginia requires a DPOR contractor license for any work over a written estimate. Ask for their license number and verify it at dpor.virginia.gov.' },
               { q: 'Do you carry liability insurance and workers\' comp?', detail: 'Without it, you\'re personally liable if a worker is injured on your property. Ask for a certificate of insurance.' },
               { q: 'Will you pull the building permit?', detail: 'A quality builder handles permits and inspections. If they suggest skipping the permit, walk away.' },
               { q: 'Do you handle HOA submissions?', detail: 'In Northern Virginia, most homes need HOA approval. Your builder should prepare and submit the ARC package.' },
@@ -83,7 +83,7 @@ export default function ChooseDeckBuilderPage() {
           <h2 style={S.h2}>5 Red Flags Walk Away If You See These</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             {[
-              { flag: 'No Virginia contractor license', why: 'Illegal for work over $1,000. Zero recourse if something goes wrong.' },
+              { flag: 'No Virginia contractor license', why: 'Illegal for work over a written estimate. Zero recourse if something goes wrong.' },
               { flag: 'Cash-only or large upfront payment', why: 'Standard is 10-30% deposit, progress payments, and final on completion. 50%+ upfront is a red flag.' },
               { flag: 'No written warranty', why: 'Verbal promises are worthless. If they won\'t put it in writing, they won\'t honor it.' },
               { flag: 'Suggests skipping the permit', why: 'Unpermitted decks create legal liability, insurance issues, and kill home sales.' },
@@ -101,8 +101,8 @@ export default function ChooseDeckBuilderPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Visit <strong>dpor.virginia.gov</strong> → License Lookup</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Search by company name or license number</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Verify the license is <strong>active</strong> (not expired or revoked)</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Check the classification: <strong>Class A</strong> (unlimited), <strong>Class B</strong> (up to $120k), or <strong>Class C</strong> (up to $10k)</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>For deck projects over $10k (most composite decks), you need a Class A or B contractor</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Check the classification: <strong>Class A</strong> (unlimited), <strong>Class B</strong> (up to a written estimate), or <strong>Class C</strong> (up to a written estimate)</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>For deck projects over a written estimate (most composite decks), you need a Class A or B contractor</li>
           </ol>
 
           <h2 style={S.h2}>Our Credentials (Transparent Answer to Every Question Above)</h2>
@@ -127,7 +127,7 @@ export default function ChooseDeckBuilderPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "How do I verify a contractor's license?", a: "Visit dpor.virginia.gov → License Lookup. Search by name or number. Must be active, Class A or B for projects over $10k." },
+            { q: "How do I verify a contractor's license?", a: "Visit dpor.virginia.gov → License Lookup. Search by name or number. Must be active, Class A or B for projects over a written estimate." },
             { q: "What should be in the estimate?", a: "Itemized materials (brand/model/color), labor, permits, dumpster, cleanup, timeline, and warranty all in writing." },
             { q: "Should I get multiple quotes?", a: "Yes 2-3 quotes from licensed contractors. Compare scope, materials, and warranty, not just price." },
             { q: "What are the biggest red flags?", a: "No license, cash-only demands, no written warranty, suggesting to skip permits, and prices far below other quotes." },
@@ -159,7 +159,7 @@ export default function ChooseDeckBuilderPage() {
       </article>
 
       <SimpleCTA title="We'll Answer All 10 Questions on the Phone" buttonText="Call (571) 655-7207" link="phone" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/how-to-choose-a-deck-builder-northern-virginia" />
 

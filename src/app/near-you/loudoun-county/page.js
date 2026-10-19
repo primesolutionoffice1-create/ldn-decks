@@ -50,7 +50,7 @@ const services = [
 
 const faqs = [
   { q: "Do you work throughout all of Loudoun County?", a: "Yes. We serve homeowners across Loudoun County, including Ashburn, Leesburg, Sterling, Aldie, Middleburg, Round Hill, Purcellville, Lovettsville, Hamilton, Waterford, Brambleton, South Riding, Stone Ridge, Broadlands and nearby communities." },
-  { q: "How much does a new deck typically cost in Loudoun County?", a: "In Loudoun County, a 300 sq ft composite deck typically runs $15,000–$30,000 and a 500 sq ft multi-level deck $30,000–$50,000. Loudoun pricing runs about 25–35% above the Virginia average due to higher labor rates and HOA requirements. After a free on-site visit, we provide a clear written estimate so you know exactly what to expect." },
+  { q: "How much does a new deck typically cost in Loudoun County?", a: "In Loudoun County, a 300 sq ft composite deck typically is priced in a written estimate and a 500 sq ft multi-level deck a written estimate. Loudoun pricing runs about 25–35% above the Virginia average due to higher labor rates and HOA requirements. After a free on-site visit, we provide a clear written estimate so you know exactly what to expect." },
   { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget. Composite replacement is our most requested service in Ashburn, Brambleton, and Broadlands as original wood decks reach the end of their life." },
   { q: "Do you handle permits for deck projects?", a: "Yes. Any deck attached to a home or more than 30 inches above grade requires a Loudoun County building permit, with review typically taking 10–15 business days and three inspections — footings, framing, and final. We prepare the structural drawings and coordinate permit documentation planning as part of the project planning scope." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within a few weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
@@ -59,7 +59,7 @@ const faqs = [
 export default function LoudounCountyPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/near-you/loudoun-county" name="Deck Builder in Loudoun County, VA" description="Deck contractor in Loudoun County with public review profile links, HOA planning support, county permit guidance, and written estimate requests." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/near-you/loudoun-county" name="Deck Builder in Loudoun County, VA" description="Deck contractor in Loudoun County with public review profile links, HOA planning support, county permit guidance, and written estimate requests." speakable />
       <LocalBusinessSchema
         city="Loudoun County"
         areaType="AdministrativeArea"
@@ -94,7 +94,7 @@ export default function LoudounCountyPage() {
         ]}
       />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+        <NamedAuthor context="Loudoun County" lastUpdated="2026-10-18" />
       </div>
       <section className={styles.permitSection}>
         <div className={styles.container}>
@@ -129,7 +129,7 @@ export default function LoudounCountyPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Loudoun County Homeowners Choose LDN Decks</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Loudoun County is one of the wealthiest and fastest-growing counties in the United States, with median home values exceeding $700,000. Homeowners here demand premium outdoor living spaces that match the quality of their homes — and they expect contractors who understand the unique requirements of building in Loudoun.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Loudoun County is one of the wealthiest and fastest-growing counties in the United States, with median home values exceeding a written estimate. Homeowners here demand premium outdoor living spaces that match the quality of their homes — and they expect contractors who understand the unique requirements of building in Loudoun.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks is based in Northern Virginia and plans custom deck projects across Loudoun County communities including Ashburn, Leesburg, Sterling, Brambleton, Broadlands, South Riding, Stone Ridge, Purcellville, and Aldie. We help homeowners compare Trex, TimberTech, and other <Link href="/composite-decks">composite decking</Link> options with manufacturer warranty information and material guidance tied to the project scope.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Navigating Loudoun County HOA Requirements</h3>
@@ -153,12 +153,12 @@ export default function LoudounCountyPage() {
               </thead>
               <tbody>
                 {[
-                  ['300 sqft Composite Deck', '$15,000 – $30,000', '1-2 weeks'],
-                  ['500 sqft Multi-Level Deck', '$30,000 – $50,000', '2-3 weeks'],
-                  ['Screened Porch (250 sqft)', '$35,000 – $60,000', '3-4 weeks'],
-                  ['Deck Replacement (wood → composite)', '$18,000 – $35,000', '1-2 weeks'],
-                  ['Pergola or Gazebo', '$8,000 – $20,000', '1 week'],
-                  ['Paver Patio (300 sqft)', '$10,000 – $25,000', '1-2 weeks'],
+                  ['300 sqft Composite Deck', 'a written estimate', '1-2 weeks'],
+                  ['500 sqft Multi-Level Deck', 'a written estimate', '2-3 weeks'],
+                  ['Screened Porch (250 sqft)', 'a written estimate', '3-4 weeks'],
+                  ['Deck Replacement (wood → composite)', 'a written estimate', '1-2 weeks'],
+                  ['Pergola or Gazebo', 'a written estimate', '1 week'],
+                  ['Paver Patio (300 sqft)', 'a written estimate', '1-2 weeks'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => (

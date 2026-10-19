@@ -12,14 +12,14 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-enclosure-ideas-northern-virginia',
   title: 'Deck Enclosure Ideas (Northern VA)',
-  description: 'Enclose your existing deck: screens ($8k-$20k), EZE-Breeze 3-season ($15k-$35k), full sunroom ($40k-$80k+). Extend outdoor season to 9-10 months.',
+  description: 'Enclose your existing deck: screens (a written estimate), EZE-Breeze 3-season (a written estimate), full sunroom (a written estimate). Extend outdoor season to 9-10 months.',
   image: '/social/deck-enclosure-ideas-northern-virginia-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does it cost to enclose a deck?", acceptedAnswer: { "@type": "Answer", text: "Basic screen enclosure: $8,000-$20,000. EZE-Breeze 3-season room: $15,000-$35,000. Full sunroom conversion: $40,000-$80,000+. Cost depends on existing deck condition, size, and enclosure type." } },
+    { "@type": "Question", name: "How much does it cost to enclose a deck?", acceptedAnswer: { "@type": "Answer", text: "Basic screen enclosure: a written estimate. EZE-Breeze 3-season room: a written estimate. Full sunroom conversion: a written estimate. Cost depends on existing deck condition, size, and enclosure type." } },
     { "@type": "Question", name: "Can I enclose my existing deck?", acceptedAnswer: { "@type": "Answer", text: "Usually yes if the deck framing and footings can support the added weight of posts, roof structure, and wall panels. We inspect the existing structure first. Some decks need footing upgrades or joist reinforcement before enclosing." } },
     { "@type": "Question", name: "What is the difference between a screened porch and a 3-season room?", acceptedAnswer: { "@type": "Answer", text: "A screened porch uses mesh screens keeps bugs out but doesn't block wind or cold. A 3-season room uses EZE-Breeze vinyl panels that slide open like screens in summer and close for wind/rain protection in spring and fall, extending usable season from 6 months to 9-10 months." } },
   ],
@@ -31,7 +31,7 @@ export default function DeckEnclosurePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-enclosure-ideas-northern-virginia" name="Deck Enclosure Ideas (Northern VA)" description="Enclose your existing deck: screens ($8k-$20k), EZE-Breeze 3-season ($15k-$35k), full sunroom ($40k-$80k+). Extend outdoor season to 9-10 months." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-enclosure-ideas-northern-virginia" name="Deck Enclosure Ideas (Northern VA)" description="Enclose your existing deck: screens (a written estimate), EZE-Breeze 3-season (a written estimate), full sunroom (a written estimate). Extend outdoor season to 9-10 months." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Enclosure Ideas for Northern Virginia</h1>
@@ -41,7 +41,7 @@ export default function DeckEnclosurePage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Three enclosure levels: <strong>Screen enclosure</strong> ($8k–$20k) bugs out, breeze in. <strong>EZE-Breeze 3-season</strong> ($15k–$35k) our most popular, extends season to 9–10 months. <strong>Full sunroom</strong> ($40k–$80k+) year-round, climate-controlled.</p>
+          <p>Three enclosure levels: <strong>Screen enclosure</strong> (a written estimate) bugs out, breeze in. <strong>EZE-Breeze 3-season</strong> (a written estimate) our most popular, extends season to 9–10 months. <strong>Full sunroom</strong> (a written estimate) year-round, climate-controlled.</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -65,7 +65,7 @@ export default function DeckEnclosurePage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Feature', 'Screen Enclosure', 'EZE-Breeze 3-Season', 'Full Sunroom'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Cost (250 sqft)', '$8k–$20k', '$15k–$35k', '$40k–$80k+'],
+                  ['Cost (250 sqft)', 'a written estimate', 'a written estimate', 'a written estimate'],
                   ['Usable months', '6–7 (Apr–Oct)', '9–10 (Mar–Nov)', '12 (year-round)'],
                   ['Bug protection', 'Full', 'Full', 'Full'],
                   ['Wind/rain protection', 'Minimal', 'Good (panels close)', 'Complete'],
@@ -74,7 +74,7 @@ export default function DeckEnclosurePage() {
                   ['Permit required', 'Usually yes', 'Yes', 'Yes + more complex'],
                   ['Construction time', '1–2 weeks', '2–3 weeks', '4–8 weeks'],
                   ['Best for', 'Bug-free dining', 'Extended 3-season living', 'Year-round room addition'],
-                  ['ROI at resale', '65–75%', '70–85%', '50–70%'],
+                  ['ROI at resale', '65–75%', 'not a fixed percentage', 'not a fixed percentage'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : (j === 2 ? 600 : 400), color: j === 2 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>)}
@@ -84,19 +84,19 @@ export default function DeckEnclosurePage() {
             </table>
           </div>
 
-          <h2 style={S.h2}>Screen Enclosure ($8,000–$20,000)</h2>
+          <h2 style={S.h2}>Screen Enclosure (a written estimate)</h2>
           <p style={S.p}>The simplest and most affordable option. We add posts, a roof structure, and fiberglass screen panels to your existing deck. Keeps bugs out entirely while maintaining open-air airflow. Best for homeowners who mainly want mosquito protection for dining and relaxing.</p>
           <p style={S.p}><strong>Includes:</strong> Treated or aluminum posts, roof framing with shingles or metal, fiberglass screen panels, screen door, ceiling fan rough-in.</p>
 
-          <h2 style={S.h2}>EZE-Breeze 3-Season Room ($15,000–$35,000)</h2>
+          <h2 style={S.h2}>EZE-Breeze 3-Season Room (a written estimate)</h2>
           <p style={S.p}><strong>Our most popular enclosure.</strong> EZE-Breeze vinyl-glazed panels replace traditional screens. They slide up like double-hung windows for full airflow in summer, then close tight for wind and rain protection in spring and fall. Extends your outdoor season from 6 months to 9–10 months.</p>
-          <p style={S.p}><strong>Includes:</strong> Everything in screen enclosure + EZE-Breeze 4-track vertical sliding panels, tongue-and-groove ceiling, recessed lighting, multiple electrical outlets. Optional: ceiling heater ($500–$1,500) for chilly evenings.</p>
-          <p style={S.p}><strong>Why it&apos;s the sweet spot:</strong> 70–85% ROI at resale (highest of any enclosure type), 40–60% cheaper than a full sunroom, and most Northern Virginia buyers specifically look for EZE-Breeze porches in listings.</p>
+          <p style={S.p}><strong>Includes:</strong> Everything in screen enclosure + EZE-Breeze 4-track vertical sliding panels, tongue-and-groove ceiling, recessed lighting, multiple electrical outlets. Optional: ceiling heater (a written estimate) for chilly evenings.</p>
+          <p style={S.p}><strong>Why it&apos;s the sweet spot:</strong> not a fixed percentage ROI at resale (highest of any enclosure type), 40–60% cheaper than a full sunroom, and most Northern Virginia buyers specifically look for EZE-Breeze porches in listings.</p>
 
-          <h2 style={S.h2}>Full Sunroom Conversion ($40,000–$80,000+)</h2>
+          <h2 style={S.h2}>Full Sunroom Conversion (a written estimate)</h2>
           <p style={S.p}>A permanent, climate-controlled room addition. Insulated walls, real windows (double/triple-pane), HVAC connection, and finished interior. Functions as a year-round living space essentially adding a room to your home.</p>
           <p style={S.p}><strong>Includes:</strong> Insulated framing, real windows, HVAC ductwork, electrical panel connection, insulated roof, drywall or finished ceiling, flooring (tile, LVP, or hardwood).</p>
-          <p style={S.p}><strong>Consideration:</strong> Full sunrooms have lower ROI (50–70%) because the cost is high relative to the appraised value increase. They make financial sense when you need the living space not as a pure investment play.</p>
+          <p style={S.p}><strong>Consideration:</strong> Full sunrooms have lower ROI (not a fixed percentage) because the cost is high relative to the appraised value increase. They make financial sense when you need the living space not as a pure investment play.</p>
 
           <h2 style={S.h2}>Can Your Existing Deck Handle an Enclosure?</h2>
           <p style={S.p}>Most decks built in the last 15 years can support a screen or EZE-Breeze enclosure if:</p>
@@ -110,7 +110,7 @@ export default function DeckEnclosurePage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "How much to enclose a deck?", a: "Screen: $8k-$20k. EZE-Breeze 3-season: $15k-$35k. Full sunroom: $40k-$80k+." },
+            { q: "How much to enclose a deck?", a: "Screen: a written estimate. EZE-Breeze 3-season: a written estimate. Full sunroom: a written estimate." },
             { q: "Can I enclose my existing deck?", a: "Usually yes if framing supports the weight. We inspect first. Some need footing or joist upgrades." },
             { q: "Screen porch vs 3-season room?", a: "Screens keep bugs out but not wind/cold. EZE-Breeze panels close for wind/rain protection, extending use to 9-10 months. Most popular choice in NoVA." },
           ].map((faq, i) => (
@@ -136,7 +136,7 @@ export default function DeckEnclosurePage() {
         </div>
       </article>
       <SimpleCTA title="Enclose Your Deck Free Design Consultation" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/deck-enclosure-ideas-northern-virginia" />
 

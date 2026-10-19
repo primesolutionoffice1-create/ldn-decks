@@ -8,7 +8,7 @@ const jurisdictions = [
   {
     name: 'Loudoun County',
     timeline: '2–4 weeks',
-    fee: '$150–$500',
+    fee: 'See the current county fee schedule',
     portal: 'LOLA online portal',
     note: 'Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. Plan review runs faster in winter, slower at spring peak.',
     href: '/deck-permit-loudoun-county-virginia',
@@ -16,7 +16,7 @@ const jurisdictions = [
   {
     name: 'Fairfax County',
     timeline: '3–5 weeks',
-    fee: '$200–$650',
+    fee: 'See the current county fee schedule',
     portal: 'PLUS / Building Development Division',
     note: 'The most documentation-heavy jurisdiction in NoVA. Sealed structural drawings, ledger bolt schedules and footing depths required up front.',
     href: '/deck-permit-fairfax-county-virginia',
@@ -24,7 +24,7 @@ const jurisdictions = [
   {
     name: 'City of Fairfax',
     timeline: '2–3 weeks',
-    fee: '$150–$450',
+    fee: 'See the current county fee schedule',
     portal: 'City Building Department',
     note: 'Independent jurisdiction from Fairfax County. Smaller queue, faster revision cycles. Verify which department covers your parcel before drawing plans.',
     href: '/deck-builder-fairfax-va',
@@ -32,7 +32,7 @@ const jurisdictions = [
   {
     name: 'Prince William County',
     timeline: '2–4 weeks',
-    fee: '$150–$525',
+    fee: 'See the current county fee schedule',
     portal: 'ePortal',
     note: 'Decks attached to a single-family home require a permit regardless of size. Setback rules vary by zoning district.',
     href: '/deck-permit-prince-william-county-virginia',
@@ -48,17 +48,17 @@ export default function NoVAPermitTimeline() {
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         <div style={{ marginBottom: '1.5rem' }}>
           <p style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-primary)', fontWeight: 600, marginBottom: '0.5rem' }}>
-            Permit timelines &amp; fees, 2026
+            Permit timing, 2026
           </p>
           <h2 id="nova-permit-timeline" style={{ fontSize: '1.85rem', fontWeight: 700, marginBottom: '0.6rem' }} data-speakable>
             How long does a deck permit take in Northern Virginia?
           </h2>
           <p style={{ fontSize: '1rem', lineHeight: 1.7, color: '#444', maxWidth: 800 }}>
-            Plan review timing and fees in the four NoVA jurisdictions we file in every week. Numbers reflect current 2026 residential deck-permit queues — we update this table when county fee schedules change. Loudoun Decks handles every submission for our clients; you never log into a county portal.
+            Plan-review timing below is a planning note, not a county promise. Permit fees are not listed here; use the current county fee schedule. Loudoun County's published deck fees are on the Loudoun permit guide. Confirm which office covers the property before filing.
           </p>
         </div>
 
-        <div style={{ overflowX: 'auto' }}>
+        <div style={{ overflowX: 'auto', maxWidth: '100%', minWidth: 0 }} tabIndex={0} role="region" aria-label="Northern Virginia deck permit timing">
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.92rem', background: '#fff', borderRadius: 8, overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
             <thead>
               <tr style={{ background: '#f0efea' }}>

@@ -14,7 +14,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/deck-roi-calculator-northern-virginia',
   title: 'Deck ROI in Northern Virginia (2026)',
-  description: 'How much value does a deck add in Northern Virginia? Composite recoups 65-80% at resale. Real ROI data by material, size, and county.',
+  description: 'How much value does a deck add in Northern Virginia? Composite recoups not a fixed percentage at resale. Real ROI data by material, size, and county.',
   image: '/social/deck-roi-calculator-northern-virginia-social.png',
 });
 
@@ -22,12 +22,12 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much value does a deck add to a home in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A composite deck in Northern Virginia recoups 65-80% of its cost at resale, significantly above the national average of 50-65%. A $35,000 Trex Transcend deck typically adds $22,750-$28,000 to your home's market value. Wood decks in good condition recoup 50-65%." } },
-    { "@type": "Question", name: "What type of deck gives the best ROI?", acceptedAnswer: { "@type": "Answer", text: "A mid-range composite deck (Trex Transcend or TimberTech Pro) in the $25,000-$45,000 range delivers the best ROI in Northern Virginia at 70-80% recoup. Basic wood decks recoup less because buyers discount for future maintenance. Ultra-premium builds over $60K recoup a lower percentage but still add substantial value." } },
-    { "@type": "Question", name: "Does a screened porch have better ROI than a deck?", acceptedAnswer: { "@type": "Answer", text: "In Northern Virginia, screened porches recoup 60-75% while open decks recoup 65-80%. However, screened porches cost significantly more ($40K-$80K+), so the absolute dollar value added can be higher. The best ROI per dollar spent is an open composite deck." } },
+    { "@type": "Question", name: "How much value does a deck add to a home in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A composite deck in Northern Virginia recoups not a fixed percentage of its cost at resale, significantly above the national average of not a fixed percentage. A a written estimate Trex Transcend deck typically adds a written estimate to your home's market value. Wood decks in good condition recoup not a fixed percentage." } },
+    { "@type": "Question", name: "What type of deck gives the best ROI?", acceptedAnswer: { "@type": "Answer", text: "A mid-range composite deck (Trex Transcend or TimberTech Pro) in the a written estimate range delivers the best ROI in Northern Virginia at 70-80% recoup. Basic wood decks recoup less because buyers discount for future maintenance. Ultra-premium builds over a written estimate recoup a lower percentage but still add substantial value." } },
+    { "@type": "Question", name: "Does a screened porch have better ROI than a deck?", acceptedAnswer: { "@type": "Answer", text: "In Northern Virginia, screened porches recoup 60-75% while open decks recoup not a fixed percentage. However, screened porches cost significantly more (a written estimate), so the absolute dollar value added can be higher. The best ROI per dollar spent is an open composite deck." } },
     { "@type": "Question", name: "Does deck ROI vary by county in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes. Fairfax County and western Loudoun County see the highest deck ROI (70-80%) due to higher home values and buyer expectations. Prince William County averages 60-72%. Arlington sees 65-75%. Higher-value markets generally deliver better deck ROI because outdoor living space is a stronger differentiator." } },
-    { "@type": "Question", name: "Does a deck without a permit affect home value?", acceptedAnswer: { "@type": "Answer", text: "Yes, significantly. An unpermitted deck is flagged during home inspections and can reduce your home's value by $5,000-$15,000 or more. Buyers may require removal or retrofitting as a condition of sale. In competitive Northern Virginia markets, unpermitted structures are a red flag that can kill deals." } },
-    { "@type": "Question", name: "What is the ROI sweet spot for deck investment?", acceptedAnswer: { "@type": "Answer", text: "In Northern Virginia, the sweet spot is $25,000-$45,000 invested in a composite deck. This range delivers the highest percentage return (70-80%) because it meets buyer expectations without over-improving for the neighborhood. Going below $20K risks looking cheap; going above $50K starts delivering diminishing returns." } },
+    { "@type": "Question", name: "Does a deck without a permit affect home value?", acceptedAnswer: { "@type": "Answer", text: "Yes, significantly. An unpermitted deck is flagged during home inspections and can reduce your home's value by a written estimate or more. Buyers may require removal or retrofitting as a condition of sale. In competitive Northern Virginia markets, unpermitted structures are a red flag that can kill deals." } },
+    { "@type": "Question", name: "What is the ROI sweet spot for deck investment?", acceptedAnswer: { "@type": "Answer", text: "In Northern Virginia, the sweet spot is a written estimate invested in a composite deck. This range delivers the highest percentage return (70-80%) because it meets buyer expectations without over-improving for the neighborhood. Going below a written estimate risks looking cheap; going above a written estimate starts delivering diminishing returns." } },
   ],
 };
 
@@ -43,14 +43,14 @@ export default function DeckROICalculatorPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-roi-calculator-northern-virginia" name="Deck ROI in Northern Virginia (2026)" description="How much value does a deck add in Northern Virginia? Composite recoups 65-80% at resale. Real ROI data by material, size, and county." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-roi-calculator-northern-virginia" name="Deck ROI in Northern Virginia (2026)" description="How much value does a deck add in Northern Virginia? Composite recoups not a fixed percentage at resale. Real ROI data by material, size, and county." speakable />
       <ArticleSchema
         title="Deck ROI in Northern Virginia: 2026 Home Value Data"
         description="How much value does a deck add in Northern Virginia? Real ROI data by material, project type, and county — plus the investment sweet spot."
         path="/deck-roi-calculator-northern-virginia"
         image="/images/img13.jpeg"
         datePublished="2026-04-26"
-        dateModified="2026-05-31"
+        dateModified="2026-10-18"
       />
 
       {/* Hero */}
@@ -65,7 +65,7 @@ export default function DeckROICalculatorPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>A composite deck in Northern Virginia recoups <strong>65&ndash;80% of its cost at resale</strong> &mdash; well above the national average of 50&ndash;65%. Wood decks recoup <strong>50&ndash;65%</strong>. The investment sweet spot is <strong>$25,000&ndash;$45,000</strong> in composite decking, which delivers the highest percentage return while meeting buyer expectations in Loudoun, Fairfax, and Prince William counties. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a free estimate.</p>
+          <p>A composite deck in Northern Virginia recoups <strong>65&ndash;80% of its cost at resale</strong> &mdash; well above the national average of 50&ndash;65%. Wood decks recoup <strong>50&ndash;65%</strong>. The investment sweet spot is <strong>a written estimate&ndash;a written estimate</strong> in composite decking, which delivers the highest percentage return while meeting buyer expectations in Loudoun, Fairfax, and Prince William counties. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a free estimate.</p>
         </div>
       </section>
 
@@ -103,12 +103,12 @@ export default function DeckROICalculatorPage() {
               </thead>
               <tbody>
                 {[
-                  ['Pressure-Treated Wood', '$8,000–$12,000', '50–60%', '$4,000–$7,200', 'Basic — needs work'],
-                  ['Cedar', '$12,000–$18,000', '55–65%', '$6,600–$11,700', 'Nice but aging'],
-                  ['Trex Enhance', '$15,000–$22,000', '65–75%', '$9,750–$16,500', 'Good composite'],
-                  ['Trex Transcend', '$22,000–$30,000', '70–80%', '$15,400–$24,000', 'Premium — move-in ready'],
-                  ['TimberTech AZEK', '$28,000–$38,000', '65–75%', '$18,200–$28,500', 'Luxury — impressive'],
-                  ['Trex Lineage', '$25,000–$35,000', '70–80%', '$17,500–$28,000', 'Top tier — wow factor'],
+                  ['Pressure-Treated Wood', 'a written estimate', '50–60%', 'a written estimate', 'Basic — needs work'],
+                  ['Cedar', 'a written estimate', '55–65%', 'a written estimate', 'Nice but aging'],
+                  ['Trex Enhance', 'a written estimate', '65–75%', 'a written estimate', 'Good composite'],
+                  ['Trex Transcend', 'a written estimate', '70–80%', 'a written estimate', 'Premium — move-in ready'],
+                  ['TimberTech AZEK', 'a written estimate', '65–75%', 'a written estimate', 'Luxury — impressive'],
+                  ['Trex Lineage', 'a written estimate', '70–80%', 'a written estimate', 'Top tier — wow factor'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => (
@@ -134,12 +134,12 @@ export default function DeckROICalculatorPage() {
               </thead>
               <tbody>
                 {[
-                  ['Basic Composite Deck', '$18,000–$28,000', '70–80%', '$12,600–$22,400', 'Best ROI per dollar'],
-                  ['Multi-Level Deck', '$35,000–$55,000', '65–75%', '$22,750–$41,250', 'Larger homes'],
-                  ['Screened Porch', '$40,000–$80,000', '60–75%', '$24,000–$60,000', 'Year-round use'],
-                  ['Outdoor Kitchen + Deck', '$50,000–$90,000', '55–70%', '$27,500–$63,000', 'Entertainers'],
-                  ['Deck + Patio Combo', '$30,000–$50,000', '65–75%', '$19,500–$37,500', 'Balanced approach'],
-                  ['Deck Resurfacing', '$15,000–$30,000+', '75–85%', '$11,250–$25,500+', 'Highest ROI %'],
+                  ['Basic Composite Deck', 'a written estimate', '70–80%', 'a written estimate', 'Best ROI per dollar'],
+                  ['Multi-Level Deck', 'a written estimate', '65–75%', 'a written estimate', 'Larger homes'],
+                  ['Screened Porch', 'a written estimate', '60–75%', 'a written estimate', 'Year-round use'],
+                  ['Outdoor Kitchen + Deck', 'a written estimate', '55–70%', 'a written estimate', 'Entertainers'],
+                  ['Deck + Patio Combo', 'a written estimate', '65–75%', 'a written estimate', 'Balanced approach'],
+                  ['Deck Resurfacing', 'a written estimate', '75–85%', 'a written estimate', 'Highest ROI %'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => (
@@ -157,7 +157,7 @@ export default function DeckROICalculatorPage() {
           <p style={S.p}>The national average deck ROI is 50&ndash;65%. Northern Virginia consistently delivers 65&ndash;80%. Several factors drive this premium:</p>
 
           <h3 style={S.h3}>Higher Home Values Create Higher Expectations</h3>
-          <p style={S.p}>The median home price in Loudoun County is approximately $680,000; Fairfax County exceeds $700,000. At these price points, buyers expect finished outdoor living spaces. A home without a deck or with a deteriorating wood deck is perceived as incomplete &mdash; and priced accordingly. In communities like Brambleton, Broadlands, and One Loudoun, a quality deck isn&apos;t a luxury; it&apos;s a baseline expectation.</p>
+          <p style={S.p}>The median home price in Loudoun County is approximately a written estimate; Fairfax County exceeds a written estimate. At these price points, buyers expect finished outdoor living spaces. A home without a deck or with a deteriorating wood deck is perceived as incomplete &mdash; and priced accordingly. In communities like Brambleton, Broadlands, and One Loudoun, a quality deck isn&apos;t a luxury; it&apos;s a baseline expectation.</p>
 
           <h3 style={S.h3}>Three-Season Climate Maximizes Usage</h3>
           <p style={S.p}>Northern Virginia&apos;s climate allows outdoor living from April through November &mdash; roughly 7&ndash;8 months of the year. This extended use period makes outdoor space more valuable per square foot than in markets with shorter outdoor seasons. Buyers factor this into their willingness to pay.</p>
@@ -181,11 +181,11 @@ export default function DeckROICalculatorPage() {
               </thead>
               <tbody>
                 {[
-                  ['Loudoun County', '$680,000', '$30,000–$45,000', '72–80%', '$21,600–$36,000', 'Highest ROI — strong buyer demand'],
-                  ['Fairfax County', '$710,000', '$32,000–$50,000', '70–80%', '$22,400–$40,000', 'Premium markets (McLean, Great Falls) push higher'],
-                  ['Prince William County', '$520,000', '$22,000–$35,000', '60–72%', '$13,200–$25,200', 'Good ROI — value-conscious buyers'],
-                  ['Arlington County', '$750,000', '$28,000–$42,000', '65–75%', '$18,200–$31,500', 'Smaller lots limit deck size'],
-                  ['Stafford County', '$450,000', '$18,000–$30,000', '55–68%', '$9,900–$20,400', 'Growing market — ROI rising'],
+                  ['Loudoun County', 'a written estimate', 'a written estimate', '72–80%', 'a written estimate', 'Highest ROI — strong buyer demand'],
+                  ['Fairfax County', 'a written estimate', 'a written estimate', '70–80%', 'a written estimate', 'Premium markets (McLean, Great Falls) push higher'],
+                  ['Prince William County', 'a written estimate', 'a written estimate', '60–72%', 'a written estimate', 'Good ROI — value-conscious buyers'],
+                  ['Arlington County', 'a written estimate', 'a written estimate', '65–75%', 'a written estimate', 'Smaller lots limit deck size'],
+                  ['Stafford County', 'a written estimate', 'a written estimate', '55–68%', 'a written estimate', 'Growing market — ROI rising'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => (
@@ -196,7 +196,7 @@ export default function DeckROICalculatorPage() {
               </tbody>
             </table>
           </div>
-          <p style={S.p}><strong>Pattern:</strong> Higher home values correlate with higher deck ROI. In markets where the median home exceeds $600,000, buyers actively seek and pay for outdoor living features. Below that threshold, decks still add value but the percentage return decreases.</p>
+          <p style={S.p}><strong>Pattern:</strong> Higher home values correlate with higher deck ROI. In markets where the median home exceeds a written estimate, buyers actively seek and pay for outdoor living features. Below that threshold, decks still add value but the percentage return decreases.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>ROI Planning Path: Cost, Permit, Payment</h2>
           <p style={S.p}>The highest ROI deck is not always the largest deck. It is the project that matches the home value, passes permit review cleanly, avoids structural surprises, and lands in a payment range the homeowner can keep comfortable. Use this sequence before locking the final scope:</p>
@@ -223,34 +223,34 @@ export default function DeckROICalculatorPage() {
           <p style={S.p}>Not every deck increases home value. Here are the scenarios where a deck can actually hurt your resale position:</p>
 
           <h3 style={S.h3}>Cheap Materials That Look Cheap</h3>
-          <p style={S.p}>A bare pressure-treated deck with no stain, basic wood railings, and visible hardware communicates &ldquo;budget project.&rdquo; Buyers in communities like Brambleton or Broadlands expect composite or better. A cheap deck on a $600K+ home actually lowers the perceived property quality.</p>
+          <p style={S.p}>A bare pressure-treated deck with no stain, basic wood railings, and visible hardware communicates &ldquo;budget project.&rdquo; Buyers in communities like Brambleton or Broadlands expect composite or better. A cheap deck on a a written estimate home actually lowers the perceived property quality.</p>
 
           <h3 style={S.h3}>No Building Permit</h3>
-          <p style={S.p}>An unpermitted deck triggers major red flags during inspection. Buyers may demand removal, expensive retroactive permitting, or a $10,000&ndash;$20,000 price reduction. In some cases, unpermitted structures have killed deals entirely. Always build with permits &mdash; see our <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County permit guide</Link>.</p>
+          <p style={S.p}>An unpermitted deck triggers major red flags during inspection. Buyers may demand removal, expensive retroactive permitting, or a a written estimate&ndash;a written estimate price reduction. In some cases, unpermitted structures have killed deals entirely. Always build with permits &mdash; see our <Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County permit guide</Link>.</p>
 
           <h3 style={S.h3}>Poor Condition and Deferred Maintenance</h3>
           <p style={S.p}>A wood deck that hasn&apos;t been stained in five years, has visible rot, or wobbles when walked on subtracts value. Buyers calculate the cost to repair or replace &mdash; and their estimate is always higher than reality. If you&apos;re selling within two years and have a deteriorating wood deck, either resurface it with composite or demolish it and sell the yard as a blank canvas.</p>
 
           <h3 style={S.h3}>Over-Improving for the Neighborhood</h3>
-          <p style={S.p}>A $75,000 multi-level deck with outdoor kitchen on a $400,000 townhome in Manassas will not recoup proportionally. The deck exceeds what comparable homes offer, and buyers aren&apos;t willing to pay the premium. Match your deck investment to your home&apos;s value bracket &mdash; generally 5&ndash;10% of home value is the sweet spot.</p>
+          <p style={S.p}>A a written estimate multi-level deck with outdoor kitchen on a a written estimate townhome in Manassas will not recoup proportionally. The deck exceeds what comparable homes offer, and buyers aren&apos;t willing to pay the premium. Match your deck investment to your home&apos;s value bracket &mdash; generally 5&ndash;10% of home value is the sweet spot.</p>
 
           {/* ===== SECTION 8: Cost vs Value Sweet Spot ===== */}
-          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>The Investment Sweet Spot: $25K&ndash;$45K</h2>
+          <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>The Investment Sweet Spot: a written estimate&ndash;a written estimate</h2>
           <p style={S.p}>After analyzing hundreds of projects and their impact on resale, we&apos;ve identified a clear investment sweet spot for Northern Virginia homeowners:</p>
 
           <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
             <h3 style={{ fontWeight: 700, marginBottom: '1rem', color: '#166534', fontSize: '1.15rem' }}>The Sweet Spot Formula</h3>
             <ul style={{ paddingLeft: '1.2rem', lineHeight: 2 }}>
-              <li><strong>Investment:</strong> $25,000&ndash;$45,000</li>
+              <li><strong>Investment:</strong> a written estimate&ndash;a written estimate</li>
               <li><strong>Material:</strong> Trex Transcend or TimberTech Pro (mid-premium composite)</li>
               <li><strong>Size:</strong> 300&ndash;450 square feet</li>
               <li><strong>Features:</strong> Quality railing + one staircase + optional lighting</li>
               <li><strong>Expected ROI:</strong> 70&ndash;80% at resale</li>
-              <li><strong>Value added:</strong> $17,500&ndash;$36,000</li>
-              <li><strong>Net enjoyment cost:</strong> $5,000&ndash;$9,000 over years of use before selling</li>
+              <li><strong>Value added:</strong> a written estimate&ndash;a written estimate</li>
+              <li><strong>Net enjoyment cost:</strong> a written estimate&ndash;a written estimate over years of use before selling</li>
             </ul>
           </div>
-          <p style={S.p}>Think of it this way: a $35,000 deck that adds $26,000 in resale value costs you only $9,000 in &ldquo;net enjoyment cost&rdquo; &mdash; the price of years of outdoor living, entertaining, and daily quality of life. For most homeowners, that math works regardless of when they plan to sell.</p>
+          <p style={S.p}>Think of it this way: a a written estimate deck that adds a written estimate in resale value costs you only a written estimate in &ldquo;net enjoyment cost&rdquo; &mdash; the price of years of outdoor living, entertaining, and daily quality of life. For most homeowners, that math works regardless of when they plan to sell.</p>
 
           {/* ===== SECTION 9: Maximizing Your Deck ROI ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>7 Ways to Maximize Your Deck&apos;s ROI</h2>
@@ -262,16 +262,16 @@ export default function DeckROICalculatorPage() {
           <p style={S.p}>This is non-negotiable for ROI. Permitted decks with passing inspection records are verified assets. Unpermitted decks are liabilities. We handle 100% of the permitting process.</p>
 
           <h3 style={S.h3}>3. Add Lighting</h3>
-          <p style={S.p}>A $2,000&ndash;$4,000 LED lighting package disproportionately increases perceived value because it transforms the deck into an evening destination and photographs beautifully for listings.</p>
+          <p style={S.p}>A a written estimate&ndash;a written estimate LED lighting package disproportionately increases perceived value because it transforms the deck into an evening destination and photographs beautifully for listings.</p>
 
           <h3 style={S.h3}>4. Invest in Quality Railings</h3>
           <p style={S.p}>Railings are the most visible element from ground level. Clean composite or cable railings signal quality to buyers walking the yard during a showing. Budget aluminum railings are fine; rusty or wobbly wood railings are not.</p>
 
           <h3 style={S.h3}>5. Keep It Proportional</h3>
-          <p style={S.p}>Match deck investment to home value. The 5&ndash;10% rule works well: on a $600,000 home, invest $30,000&ndash;$60,000. On a $400,000 home, invest $20,000&ndash;$40,000.</p>
+          <p style={S.p}>Match deck investment to home value. The 5&ndash;10% rule works well: on a a written estimate home, invest a written estimate&ndash;a written estimate. On a a written estimate home, invest a written estimate&ndash;a written estimate.</p>
 
           <h3 style={S.h3}>6. Maintain Before Selling</h3>
-          <p style={S.p}>If you&apos;re selling within a year, clean the deck professionally, tighten any loose railings, and replace any damaged boards. A $500 cleaning and tune-up can protect $20,000+ in perceived value.</p>
+          <p style={S.p}>If you&apos;re selling within a year, clean the deck professionally, tighten any loose railings, and replace any damaged boards. A a written estimate cleaning and tune-up can protect a written estimate in perceived value.</p>
 
           <h3 style={S.h3}>7. Document Everything for the Buyer</h3>
           <p style={S.p}>Provide the buyer with the permit approval, warranty certificates (Trex, TimberTech, and AZEK warranties are all transferable), maintenance records, and your installer&apos;s information. This package communicates professionalism and protects the value narrative.</p>
@@ -280,11 +280,11 @@ export default function DeckROICalculatorPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>When Do You &ldquo;Break Even&rdquo; on a Deck?</h2>
           <p style={S.p}>ROI at resale is one metric. But a deck also delivers daily value through use. Here is how to think about the financial timeline:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', lineHeight: 2 }}>
-            <li><strong>Year 0:</strong> You invest $35,000 in a Trex Transcend deck.</li>
+            <li><strong>Year 0:</strong> You invest a written estimate in a Trex Transcend deck.</li>
             <li><strong>Years 1&ndash;5:</strong> You enjoy the deck daily, host gatherings, increase your living space by 350 sqft. Zero maintenance cost.</li>
-            <li><strong>Year 5:</strong> If you sell, the deck adds ~$26,000 to home value. Net enjoyment cost: $9,000 for 5 years of use = $150/month.</li>
-            <li><strong>Year 10:</strong> Still looks great, zero maintenance. A comparable wood deck would have cost $3,000&ndash;$5,000 in staining and repairs by now.</li>
-            <li><strong>Year 15:</strong> Composite deck still performing. Wood deck would need replacement ($10,000+). Composite has saved you money overall.</li>
+            <li><strong>Year 5:</strong> If you sell, the deck adds ~a written estimate to home value. Net enjoyment cost: a written estimate for 5 years of use = a lender-calculated paymentnth.</li>
+            <li><strong>Year 10:</strong> Still looks great, zero maintenance. A comparable wood deck would have are priced in a written estimate&ndash;a written estimate in staining and repairs by now.</li>
+            <li><strong>Year 15:</strong> Composite deck still performing. Wood deck would need replacement (a written estimate). Composite has saved you money overall.</li>
             <li><strong>Year 25:</strong> Warranty still active. The deck has delivered 25 years of use for a net cost that&apos;s actually less than what you would have spent maintaining wood.</li>
           </ul>
           <p style={S.p}>For a detailed cost comparison over time, see our <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>composite deck cost guide</Link> and <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>full deck pricing guide</Link>.</p>
@@ -292,12 +292,12 @@ export default function DeckROICalculatorPage() {
           {/* ===== SECTION 11: FAQs ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "How much value does a deck add to a home in Northern Virginia?", a: "A composite deck recoups 65-80% of its cost at resale. A $35,000 Trex Transcend deck typically adds $22,750-$28,000 to your home's market value. This exceeds the national average of 50-65% due to NoVA's high home values and buyer demand for outdoor space." },
-            { q: "What type of deck gives the best ROI?", a: "A mid-range composite deck (Trex Transcend or TimberTech Pro) in the $25,000-$45,000 range delivers the best ROI at 70-80%. Deck resurfacing delivers the highest percentage return (75-85%) because the investment is lower." },
-            { q: "Does a screened porch have better ROI than a deck?", a: "Screened porches recoup 60-75% while open decks recoup 65-80%. However, screened porches cost more ($40K-$80K+), so absolute value added can be higher. The best ROI per dollar is an open composite deck." },
+            { q: "How much value does a deck add to a home in Northern Virginia?", a: "A composite deck recoups not a fixed percentage of its cost at resale. A a written estimate Trex Transcend deck typically adds a written estimate to your home's market value. This exceeds the national average of not a fixed percentage due to NoVA's high home values and buyer demand for outdoor space." },
+            { q: "What type of deck gives the best ROI?", a: "A mid-range composite deck (Trex Transcend or TimberTech Pro) in the a written estimate range delivers the best ROI at 70-80%. Deck resurfacing delivers the highest percentage return (75-85%) because the investment is lower." },
+            { q: "Does a screened porch have better ROI than a deck?", a: "Screened porches recoup 60-75% while open decks recoup not a fixed percentage. However, screened porches cost more (a written estimate), so absolute value added can be higher. The best ROI per dollar is an open composite deck." },
             { q: "Does deck ROI vary by county?", a: "Yes. Loudoun and Fairfax counties see 70-80% ROI due to higher home values. Prince William averages 60-72%. Higher-value markets deliver better deck ROI because outdoor living is a stronger differentiator for buyers." },
-            { q: "Does a deck without a permit affect home value?", a: "Significantly. Unpermitted decks are flagged during inspection and can reduce value by $5,000-$15,000+. Buyers may demand removal or retrofitting. In competitive NoVA markets, unpermitted structures kill deals." },
-            { q: "What is the ROI sweet spot for deck investment?", a: "$25,000-$45,000 in composite decking delivers the highest percentage return (70-80%). This meets buyer expectations without over-improving. Match your investment to 5-10% of your home's value." },
+            { q: "Does a deck without a permit affect home value?", a: "Significantly. Unpermitted decks are flagged during inspection and can reduce value by a written estimate. Buyers may demand removal or retrofitting. In competitive NoVA markets, unpermitted structures kill deals." },
+            { q: "What is the ROI sweet spot for deck investment?", a: "a written estimate in composite decking delivers the highest percentage return (70-80%). This meets buyer expectations without over-improving. Match your investment to 5-10% of your home's value." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
@@ -327,7 +327,7 @@ export default function DeckROICalculatorPage() {
 
       <SimpleCTA title="Build a Deck That Adds Real Value" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-roi-calculator-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

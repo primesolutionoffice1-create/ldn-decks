@@ -65,7 +65,7 @@ const expansionSections = [
 const faqs = [
   {
     q: "How much does a deck inspection cost in Northern Virginia?",
-    a: "Our comprehensive deck inspection is a flat $350 for most residential decks in Loudoun, Fairfax, and Prince William counties. The fee covers a full structural evaluation, written report with photos, and a professional recommendation for next steps."
+    a: "Our comprehensive deck inspection is a flat a written estimate for most residential decks in Loudoun, Fairfax, and Prince William counties. The fee covers a full structural evaluation, written report with photos, and a professional recommendation for next steps."
   },
   {
     q: "How long does a deck inspection take?",
@@ -85,21 +85,21 @@ const faqs = [
   },
   {
     q: "Is your deck inspection covered if I hire you for repairs?",
-    a: "Yes. If you move forward with a repair, resurfacing, or replacement project with LDN Decks, we credit the $350 inspection fee toward the project cost."
+    a: "Yes. If you move forward with a repair, resurfacing, or replacement project with LDN Decks, we credit the a written estimate inspection fee toward the project cost."
   },
 ];
 
 export const metadata = buildMetadata({
   path: "/services/deck-inspection",
-      title: "Deck Inspection Loudoun VA | $350 Safety Audit | LDN Decks",
-  description: "Ensure your outdoor space is safe with a professional $350 deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards.",
+      title: "Deck Inspection Loudoun VA | a written estimate Safety Audit | LDN Decks",
+  description: "Ensure your outdoor space is safe with a professional a written estimate deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards.",
   image: "/social/deck-inspection-service-social.png",
 });
 
 export default function DeckInspectionPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/deck-inspection" name="Deck Inspection Loudoun VA | $350 Safety Audit | LDN Decks" description="Ensure your outdoor space is safe with a professional $350 deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/deck-inspection" name="Deck Inspection Loudoun VA | a written estimate Safety Audit | LDN Decks" description="Ensure your outdoor space is safe with a professional a written estimate deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards." speakable />
       <ServiceSchema
         name="Deck Safety Inspection"
         description="Professional structural deck inspection in Northern Virginia. Ledger board, posts, joists, railings checked."
@@ -110,22 +110,22 @@ export default function DeckInspectionPage() {
       />
       <ServicesHeader
         subtext="Deck Inspection Services"
-        title="Comprehensive Deck Inspection for $350"
+        title="Comprehensive Deck Inspection for a written estimate"
         description="Ensure the safety, structural integrity, and longevity of your deck with our professional inspection services. We identify hidden rot, structural issues, and potential safety hazards."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
       </section>
       <section style={{ padding: '80px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '36px', marginBottom: '20px', fontWeight: '700' }}>Providing Expert Deck Restoration Services</h2>
         <p style={{ fontSize: '18px', color: '#555', maxWidth: '800px', margin: '0 auto 50px', lineHeight: '1.6' }}>
           Over time, even the most well-built decks fall victim to weathering, moisture, and foundational settling.
-          Our $350 specialized deck inspection evaluates your entire structure from the footers to the railings.
+          Our a written estimate specialized deck inspection evaluates your entire structure from the footers to the railings.
           If we find issues, our restoration experts can repair, reinforce, and completely revitalize your older deck
           through <Link href="/services/deck-resurfacing">deck resurfacing</Link>, saving you thousands compared to a
           full <Link href="/services/new-decks">new deck build</Link>.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', alignItems: 'stretch' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '20px', alignItems: 'stretch' }}>
           <div style={{ position: 'relative', height: '300px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
             <Image src="/torndeck.webp" alt="Old wood deck showing rot damage requiring inspection — Northern Virginia deck safety assessment" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" style={{ objectFit: 'cover' }} />
           </div>
@@ -186,7 +186,7 @@ export default function DeckInspectionPage() {
           family, friends, and guests. If your deck spans over 10 to 15 years old, begins to feel even slightly spongy
           underfoot, visibly sways when you walk, or exhibits extensive surface splintering and warping, it is definitely
           time for a professional change. If the structure was built without approvals, review <Link href="/blog/deck-without-permit-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>what happens with an unpermitted deck in Virginia</Link>
-          {' '}before repairs begin. Let our experts assess your structure with a comprehensive $350 inspection to
+          {' '}before repairs begin. Let our experts assess your structure with a comprehensive a written estimate inspection to
           keep your outdoor living space safe, secure, and beautiful for years to come.
         </p>
         <section style={{ marginTop: '40px', padding: '30px', backgroundColor: '#f9f9f9', borderRadius: '12px', textAlign: 'center' }}>
@@ -205,7 +205,7 @@ export default function DeckInspectionPage() {
       <Testimonials />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/deck-inspection" />
-      <SimpleCTA title="Schedule Your $350 Deck Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
+      <SimpleCTA title="Schedule Your a written estimate Deck Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

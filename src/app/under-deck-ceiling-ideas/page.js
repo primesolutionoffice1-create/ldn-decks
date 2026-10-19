@@ -12,14 +12,14 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/under-deck-ceiling-ideas',
   title: 'Under-Deck Ceiling Ideas (5 Options)',
-  description: 'Turn the space under your elevated deck into usable living area. Under-deck drainage systems, ceiling panels, lighting. $3,000-$15,000 in Northern Virginia.',
+  description: 'Turn the space under your elevated deck into usable living area. Under-deck drainage systems, ceiling panels, lighting. a written estimate in Northern Virginia.',
   image: '/social/under-deck-ceiling-ideas-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does an under-deck ceiling system cost?", acceptedAnswer: { "@type": "Answer", text: "Under-deck ceiling systems in Northern Virginia cost $8-$25 per square foot installed. For a typical 300 sqft under-deck area: basic gutter system $3,000-$5,000, vinyl ceiling panels $5,000-$10,000, premium aluminum ceiling with lighting $8,000-$15,000." } },
+    { "@type": "Question", name: "How much does an under-deck ceiling system cost?", acceptedAnswer: { "@type": "Answer", text: "Under-deck ceiling systems in Northern Virginia are priced in a written estimate per square foot installed. For a typical 300 sqft under-deck area: basic gutter system a written estimate, vinyl ceiling panels a written estimate, premium aluminum ceiling with lighting a written estimate." } },
     { "@type": "Question", name: "What is the best under-deck drainage system?", acceptedAnswer: { "@type": "Answer", text: "Trex RainEscape and Zip-UP UnderDeck are the two leading systems. Trex RainEscape is a trough-and-tape system installed above the joists invisible from below. Zip-UP is a panel system that serves as both ceiling and drainage. Both keep the area below 100% dry." } },
     { "@type": "Question", name: "Can I finish the space under my deck?", acceptedAnswer: { "@type": "Answer", text: "Yes an under-deck drainage/ceiling system creates a dry, usable space below. Common uses: patio seating, outdoor kitchen, storage, dog run, hot tub placement. It effectively doubles your outdoor living area on a two-story deck." } },
   ],
@@ -31,7 +31,7 @@ export default function UnderDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/under-deck-ceiling-ideas" name="Under-Deck Ceiling Ideas (5 Options)" description="Turn the space under your elevated deck into usable living area. Under-deck drainage systems, ceiling panels, lighting. $3,000-$15,000 in Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/under-deck-ceiling-ideas" name="Under-Deck Ceiling Ideas (5 Options)" description="Turn the space under your elevated deck into usable living area. Under-deck drainage systems, ceiling panels, lighting. a written estimate in Northern Virginia." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Under-Deck Ceiling Ideas</h1>
@@ -59,11 +59,11 @@ export default function UnderDeckPage() {
 
           <div style={{ marginBottom: '2rem' }}>
             {[
-              { num: '1', title: 'Trex RainEscape (Drainage Only)', cost: '$3,000–$5,000', desc: 'A trough-and-tape system installed above the joists, between the deck boards and the framing. Channels water to gutters and downspouts. Invisible from below you see the bare joists. Best for: homeowners who want dry space below without finishing the ceiling.', pros: 'Affordable, hidden, compatible with any deck board', cons: 'No finished look joists still visible below' },
-              { num: '2', title: 'Vinyl Ceiling Panels (Zip-UP, Under Deck Oasis)', cost: '$5,000–$10,000', desc: 'Interlocking vinyl panels that snap between joists. Serve as both ceiling and drainage water runs through channels to the perimeter. Creates a clean, white ceiling appearance below.', pros: 'Clean finished look, drainage + ceiling in one, DIY-friendly', cons: 'Limited colors (mostly white), can yellow over time' },
-              { num: '3', title: 'Aluminum Ceiling System', cost: '$8,000–$15,000', desc: 'Premium aluminum panels in multiple colors and profiles. The best-looking option resembles a finished interior ceiling. Integrated drainage, recessed lighting compatible, and lasts indefinitely.', pros: 'Best appearance, lighting integration, no yellowing, lifetime durability', cons: 'Higher cost, professional install required' },
-              { num: '4', title: 'Tongue-and-Groove Wood Ceiling', cost: '$6,000–$12,000', desc: 'Cedar or pine boards installed across the joist bottoms with a waterproof membrane above. Beautiful natural look but requires separate drainage system (like RainEscape above).', pros: 'Warm natural aesthetic, paintable/stainable', cons: 'Needs separate drainage, wood maintenance over time' },
-              { num: '5', title: 'Corrugated Metal Ceiling', cost: '$4,000–$8,000', desc: 'Galvanized or painted metal panels mounted to joists at a slight angle for drainage. Industrial/modern aesthetic. Simple, effective, and extremely durable.', pros: 'Durable, unique look, good drainage, affordable', cons: 'Louder in rain, limited aesthetic appeal' },
+              { num: '1', title: 'Trex RainEscape (Drainage Only)', cost: 'a written estimate', desc: 'A trough-and-tape system installed above the joists, between the deck boards and the framing. Channels water to gutters and downspouts. Invisible from below you see the bare joists. Best for: homeowners who want dry space below without finishing the ceiling.', pros: 'Affordable, hidden, compatible with any deck board', cons: 'No finished look joists still visible below' },
+              { num: '2', title: 'Vinyl Ceiling Panels (Zip-UP, Under Deck Oasis)', cost: 'a written estimate', desc: 'Interlocking vinyl panels that snap between joists. Serve as both ceiling and drainage water runs through channels to the perimeter. Creates a clean, white ceiling appearance below.', pros: 'Clean finished look, drainage + ceiling in one, DIY-friendly', cons: 'Limited colors (mostly white), can yellow over time' },
+              { num: '3', title: 'Aluminum Ceiling System', cost: 'a written estimate', desc: 'Premium aluminum panels in multiple colors and profiles. The best-looking option resembles a finished interior ceiling. Integrated drainage, recessed lighting compatible, and lasts indefinitely.', pros: 'Best appearance, lighting integration, no yellowing, lifetime durability', cons: 'Higher cost, professional install required' },
+              { num: '4', title: 'Tongue-and-Groove Wood Ceiling', cost: 'a written estimate', desc: 'Cedar or pine boards installed across the joist bottoms with a waterproof membrane above. Beautiful natural look but requires separate drainage system (like RainEscape above).', pros: 'Warm natural aesthetic, paintable/stainable', cons: 'Needs separate drainage, wood maintenance over time' },
+              { num: '5', title: 'Corrugated Metal Ceiling', cost: 'a written estimate', desc: 'Galvanized or painted metal panels mounted to joists at a slight angle for drainage. Industrial/modern aesthetic. Simple, effective, and extremely durable.', pros: 'Durable, unique look, good drainage, affordable', cons: 'Louder in rain, limited aesthetic appeal' },
             ].map((opt) => (
               <div key={opt.num} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '0.5rem' }}>
@@ -88,11 +88,11 @@ export default function UnderDeckPage() {
           </ul>
 
           <h2 style={S.h2}>Add Lighting Below</h2>
-          <p style={S.p}>Under-deck spaces tend to be dark. With an aluminum or wood ceiling, you can add recessed LED lights ($1,000–$2,500 for a typical area) that transform the space into an inviting evening room. Vinyl panels can accommodate surface-mount fixtures. Even the basic RainEscape system works with string lights hung from joists.</p>
+          <p style={S.p}>Under-deck spaces tend to be dark. With an aluminum or wood ceiling, you can add recessed LED lights (a written estimate for a typical area) that transform the space into an inviting evening room. Vinyl panels can accommodate surface-mount fixtures. Even the basic RainEscape system works with string lights hung from joists.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "How much does an under-deck ceiling cost?", a: "Basic drainage (RainEscape): $3k-$5k. Vinyl panels: $5k-$10k. Premium aluminum: $8k-$15k. For a typical 300 sqft under-deck area." },
+            { q: "How much does an under-deck ceiling cost?", a: "Basic drainage (RainEscape): a written estimate. Vinyl panels: a written estimate. Premium aluminum: a written estimate. For a typical 300 sqft under-deck area." },
             { q: "Best under-deck drainage system?", a: "Trex RainEscape (hidden, affordable) or Zip-UP (ceiling + drainage in one). Both keep the space 100% dry." },
             { q: "Can I finish the space under my deck?", a: "Yes drainage/ceiling system creates dry usable space. Common uses: patio seating, outdoor kitchen, hot tub, storage." },
           ].map((faq, i) => (
@@ -115,7 +115,7 @@ export default function UnderDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Double Your Outdoor Space" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/under-deck-ceiling-ideas" />
 

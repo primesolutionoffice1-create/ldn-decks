@@ -212,7 +212,7 @@ export default function MountVernonAlexandriaOutdoorLivingPage() {
           <p style={{ maxWidth: 780, margin: '0 auto 32px', textAlign: 'center', color: '#555', lineHeight: 1.65 }}>
             These guides help homeowners compare scope, cost, permits, structure, and material choices before requesting a high-quality estimate.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(235px, 1fr))', gap: 16 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 235px), 1fr))', gap: 16 }}>
             {[
               ['/deck-builder-alexandria-va', 'Alexandria Deck Builder', 'Broad local service page for Alexandria deck and porch searches.'],
               ['/outdoor-living-northern-virginia', 'Outdoor Living Hub', 'Full backyard planning across decks, patios, porches, lighting, and shade.'],

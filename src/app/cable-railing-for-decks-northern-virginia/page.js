@@ -12,14 +12,14 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/cable-railing-for-decks-northern-virginia',
   title: 'Cable Railing for Decks (NoVA)',
-  description: 'Cable railing $60-$100/linear ft in Northern Virginia. Horizontal vs vertical, VA code requirements & HOA considerations. We install all types.',
+  description: 'Cable railing a written estimate/linear ft in Northern Virginia. Horizontal vs vertical, VA code requirements & HOA considerations. We install all types.',
   image: '/social/cable-railing-decks-northern-virginia-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does cable railing cost for a deck?", acceptedAnswer: { "@type": "Answer", text: "Cable railing in Northern Virginia costs $60-$100 per linear foot installed, or $3,600-$6,000 for a typical 60-foot deck perimeter. Stainless steel cables with aluminum posts are the most common configuration. Premium all-stainless systems run $80-$120/ft." } },
+    { "@type": "Question", name: "How much does cable railing cost for a deck?", acceptedAnswer: { "@type": "Answer", text: "Cable railing in Northern Virginia is priced in a written estimate per linear foot installed, or a written estimate for a typical 60-foot deck perimeter. Stainless steel cables with aluminum posts are the most common configuration. Premium all-stainless systems are priced in a written estimate." } },
     { "@type": "Question", name: "Is cable railing allowed by Virginia building code?", acceptedAnswer: { "@type": "Answer", text: "Yes cable railing meets Virginia building code if cables are spaced no more than 3 inches apart (center-to-center) and the system passes a 200-lb concentrated load test at the top rail. Posts must be spaced per manufacturer specifications, typically 4-6 feet." } },
     { "@type": "Question", name: "Do HOAs allow cable railing in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Some do, some don't. Cable railing is a modern aesthetic that some traditional communities restrict. We check your specific HOA guidelines before recommending cable rail. If restricted, aluminum railings offer a similar clean look at lower cost." } },
     { "@type": "Question", name: "Horizontal vs vertical cable railing which is better?", acceptedAnswer: { "@type": "Answer", text: "Horizontal cables are more popular and less expensive, providing clean sightlines. Vertical cables have a more traditional look but cost 10-20% more due to additional cables needed. Both meet Virginia building code. Horizontal is not recommended for homes with small children who might use cables as a ladder." } },
@@ -32,7 +32,7 @@ export default function CableRailingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/cable-railing-for-decks-northern-virginia" name="Cable Railing for Decks (NoVA)" description="Cable railing $60-$100/linear ft in Northern Virginia. Horizontal vs vertical, VA code requirements &amp; HOA considerations. We install all types." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/cable-railing-for-decks-northern-virginia" name="Cable Railing for Decks (NoVA)" description="Cable railing a written estimate/linear ft in Northern Virginia. Horizontal vs vertical, VA code requirements &amp; HOA considerations. We install all types." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Cable Railing for Decks in Northern Virginia</h1>
@@ -42,7 +42,7 @@ export default function CableRailingPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Cable railing costs <strong>$60–$100/linear ft installed</strong> ($3,600–$6,000 for a typical deck). Meets Virginia code at ≤3&quot; spacing. Best for: elevated decks with scenic views. Check HOA first some restrict cable rail. We install Feeney CableRail, Atlantis Rail, and custom stainless systems.</p>
+          <p>Cable railing costs <strong>a written estimate/linear ft installed</strong> (a written estimate for a typical deck). Meets Virginia code at ≤3&quot; spacing. Best for: elevated decks with scenic views. Check HOA first some restrict cable rail. We install Feeney CableRail, Atlantis Rail, and custom stainless systems.</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -66,11 +66,11 @@ export default function CableRailingPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Configuration', 'Cost/linear ft', '60 ft Total', 'Look', 'Maintenance'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['SS cable + aluminum posts', '$60–$80', '$3,600–$4,800', 'Modern, clean most popular', 'Re-tension cables yearly'],
-                  ['SS cable + wood posts', '$50–$70', '$3,000–$4,200', 'Warm modern blend', 'Re-tension + stain wood posts'],
-                  ['SS cable + SS posts (all stainless)', '$80–$120', '$4,800–$7,200', 'Premium contemporary', 'Re-tension only'],
-                  ['Vertical cables + aluminum', '$70–$100', '$4,200–$6,000', 'Traditional-modern hybrid', 'Minimal'],
-                  ['Cable + composite posts (Trex)', '$70–$90', '$4,200–$5,400', 'Matches composite deck', 'Re-tension only'],
+                  ['SS cable + aluminum posts', 'a written estimate', 'a written estimate', 'Modern, clean most popular', 'Re-tension cables yearly'],
+                  ['SS cable + wood posts', 'a written estimate', 'a written estimate', 'Warm modern blend', 'Re-tension + stain wood posts'],
+                  ['SS cable + SS posts (all stainless)', 'a written estimate', 'a written estimate', 'Premium contemporary', 'Re-tension only'],
+                  ['Vertical cables + aluminum', 'a written estimate', 'a written estimate', 'Traditional-modern hybrid', 'Minimal'],
+                  ['Cable + composite posts (Trex)', 'a written estimate', 'a written estimate', 'Matches composite deck', 'Re-tension only'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: i === 0 && j === 0 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>)}
@@ -81,7 +81,7 @@ export default function CableRailingPage() {
           </div>
 
           <h2 style={S.h2}>Horizontal vs Vertical Cable Railing</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             <div style={{ background: '#fff3e0', border: '2px solid var(--color-primary)', borderRadius: 8, padding: '1.25rem' }}>
               <p style={{ fontSize: '0.8rem', color: 'var(--color-primary)', fontWeight: 600 }}>Most Popular</p>
               <h3 style={{ fontWeight: 700, marginBottom: '0.5rem' }}>Horizontal Cables</h3>
@@ -132,11 +132,11 @@ export default function CableRailingPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>✅ Modern or contemporary home design</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>✅ No small children (or choose vertical cables)</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>✅ HOA approves cable railing</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>❌ Avoid if: small children, traditional HOA, budget under $3,000 for railings</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>❌ Avoid if: small children, traditional HOA, budget under a written estimate for railings</li>
           </ul>
 
           <h2 style={S.h2}>Brands We Install</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               { name: 'Feeney CableRail', desc: 'Industry leader. Quick-Connect fittings, marine-grade stainless. Works with wood, composite, or metal posts.' },
               { name: 'Atlantis Rail', desc: 'Premium all-stainless systems. RailEasy and HandiSwage lines. Multiple post styles.' },
@@ -151,7 +151,7 @@ export default function CableRailingPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "How much does cable railing cost?", a: "$60-$100/linear ft installed. Typical 60ft deck: $3,600-$6,000." },
+            { q: "How much does cable railing cost?", a: "a written estimate/linear ft installed. Typical 60ft deck: a written estimate." },
             { q: "Is it code-compliant in Virginia?", a: "Yes at ≤3\" cable spacing and 200-lb load rating. We ensure code compliance on every install." },
             { q: "HOA-approved?", a: "Varies. Some restrict cable rail. We check your HOA first. Aluminum is a good alternative if restricted." },
             { q: "Horizontal or vertical?", a: "Horizontal is more popular and 10-20% cheaper. Vertical is safer for homes with small children." },
@@ -178,7 +178,7 @@ export default function CableRailingPage() {
         </div>
       </article>
       <SimpleCTA title="See Cable Railing Samples at Our Showroom" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/cable-railing-for-decks-northern-virginia" />
 

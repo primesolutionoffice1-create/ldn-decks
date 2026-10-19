@@ -46,7 +46,7 @@ const inclusions = [
 const oaktonFAQs = [
   {
     q: "How much does a custom deck cost in Oakton, VA?",
-    a: "Oakton deck projects typically range from $30,000 to $75,000+. This reflects the larger lot sizes, premium material expectations (Trex Transcend, TimberTech AZEK), and the multi-level designs common on Oakton's sloped, wooded properties. Composite decks run $40-$65 per square foot installed depending on material and complexity."
+    a: "Oakton deck projects typically range from a written estimate to a written estimate. This reflects the larger lot sizes, premium material expectations (Trex Transcend, TimberTech AZEK), and the multi-level designs common on Oakton's sloped, wooded properties. Composite decks are priced in a written estimate per square foot installed depending on material and complexity."
   },
   {
     q: "What permits does Oakton require for a deck?",
@@ -92,7 +92,7 @@ const expansionSections = [
   {
     title: "Premium Materials for Oakton Properties",
     paragraphs: [
-      "Oakton's real estate market sets clear expectations for quality. Homes here range from $800,000 to well over $2 million, and homeowners invest accordingly in their outdoor spaces. We build exclusively with Trex Transcend, TimberTech AZEK, and comparable premium composites because these are the materials that match the caliber of Oakton properties. Standard-grade composite or pressure-treated lumber simply does not belong on homes in this market.",
+      "Oakton's real estate market sets clear expectations for quality. Homes here range from a written estimate to well over a written estimate million, and homeowners invest accordingly in their outdoor spaces. We build exclusively with Trex Transcend, TimberTech AZEK, and comparable premium composites because these are the materials that match the caliber of Oakton properties. Standard-grade composite or pressure-treated lumber simply does not belong on homes in this market.",
       "For Oakton projects, Trex Signature cable railings and glass panel systems are the most popular choices. Cable railings complement the wooded setting by preserving views of the tree canopy and natural landscape. Hidden fastener systems create a screw-free deck surface that feels like finished furniture. Integrated LED lighting — both in-deck and under-rail — extends the usable hours of your outdoor space through Virginia's long summer evenings and into the fall entertaining season.",
       "The investment in premium materials pays for itself in two ways. First, you eliminate the ongoing maintenance costs that plague wood decks in Virginia's humid climate — no annual staining, no sanding, no board replacement. Second, in Oakton's competitive real estate market, a professionally built composite deck with modern railings and lighting is a genuine asset that buyers prioritize. Our Trex and TimberTech projects are designed to stay beautiful for 25 to 50 years with nothing more than occasional cleaning."
     ]
@@ -126,7 +126,7 @@ export default function OaktonDeckBuilderPage() {
     <main>
       <JsonLd data={oaktonFaqSchema} />
       <LocalBusinessSchema city="Oakton" url="https://ldndecks.com/deck-builder-oakton-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-oakton-va" name="Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks" description="Custom deck builder in Oakton, VA. Google reviews. Trex Transcend &amp; TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-oakton-va" name="Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks" description="Custom deck builder in Oakton, VA. Google reviews. Trex Transcend &amp; TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate." speakable />
       <ServicesHeader
         subtext="Oakton, VA's Premium Deck Builder"
         title="Custom Deck Builder in Oakton, VA"
@@ -137,7 +137,7 @@ export default function OaktonDeckBuilderPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: $5,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: a written estimate</strong>
             <br />
             We focus on <strong style={{ color: '#111' }}>full custom Oakton builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
           </p>
@@ -147,7 +147,7 @@ export default function OaktonDeckBuilderPage() {
       <ServiceMain
         subtitle="Oakton's Trusted Choice"
         title="Deck Builder Oakton VA - Premium Builds for Wooded Estate Lots"
-        description="We design and build the luxury outdoor environments Oakton homeowners expect. Multi-level builds, premium composite, tree protection, and full Fairfax County permit management from $30k+."
+        description="We design and build the luxury outdoor environments Oakton homeowners expect. Multi-level builds, premium composite, tree protection, and full Fairfax County permit management from a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "Specialists in wooded lot construction and tree preservation",
@@ -254,7 +254,7 @@ export default function OaktonDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Oakton" /></div></section>
       <SimpleCTA title="Build Your Premium Oakton Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-oakton-va" />
-      <NamedAuthor context="Oakton and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Oakton and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

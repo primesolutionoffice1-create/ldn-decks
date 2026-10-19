@@ -131,7 +131,7 @@ export default function AreasWeServePage() {
           </div>
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>County Planning Hubs</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem', marginBottom: '3rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '0.75rem', marginBottom: '3rem' }}>
             {[
               ['/near-you/loudoun-county', 'Loudoun County Deck Builder Hub'],
               ['/near-you/fairfax-county', 'Fairfax County Deck Builder Hub'],
@@ -144,7 +144,7 @@ export default function AreasWeServePage() {
           </div>
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Our Services Across All Areas</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '0.75rem', marginBottom: '2rem' }}>
             {[
               ['/services/new-decks', 'Custom Deck Construction'],
               ['/services/deck-resurfacing', 'Deck Resurfacing'],
@@ -167,7 +167,7 @@ export default function AreasWeServePage() {
           </div>
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Plan Before We Visit</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '0.75rem', marginBottom: '2rem' }}>
             {[
               ['/deck-cost-calculator', 'Deck Cost Calculator'],
               ['/deck-payment-estimator', 'Deck Payment Estimator'],

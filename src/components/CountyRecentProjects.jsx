@@ -45,7 +45,7 @@ export default function CountyRecentProjects({ countySlug, limit = 6 }) {
           Selected showcase profiles connected to {county.name}. Verify project evidence, photos, and completion
           details before using any profile as formal proof.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1.5rem' }}>
           {matching.map((project) => {
             const city = project.location.split(',')[0].trim();
             const date = project.location.split(',')[1]?.trim() || '';

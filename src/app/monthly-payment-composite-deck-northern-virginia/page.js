@@ -16,7 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/monthly-payment-composite-deck-northern-virginia',
   title: 'Monthly Payment on a Composite Deck in Northern Virginia',
-  description: 'See realistic monthly payments for a composite deck in Northern Virginia. $15k–$70k planning examples at 8–10% APR over 10 and 15 years. Free estimator.',
+  description: 'See realistic monthly payments for a composite deck in Northern Virginia. a written estimate planning examples at 8–10% APR over 10 and 15 years. Free estimator.',
   image: '/social/monthly-payment-composite-deck-northern-virginia-social.png',
 });
 
@@ -24,8 +24,8 @@ const PATH = '/monthly-payment-composite-deck-northern-virginia';
 
 const faqs = [
   {
-    q: 'How much is the monthly payment on a $30,000 composite deck?',
-    a: 'At a sample 8.99% APR, a $30,000 composite deck financed over 10 years is roughly $380/month and roughly $304/month over 15 years. The longer term lowers the monthly payment but raises total interest. Your real rate and term come from a lender pre-qualification, not from the estimator.',
+    q: 'How much is the monthly payment on a a written estimate composite deck?',
+    a: 'At a sample 8.99% APR, a a written estimate composite deck financed over 10 years is roughly a lender-calculated paymentnth and roughly a lender-calculated paymentnth over 15 years. The longer term lowers the monthly payment but raises total interest. Your real rate and term come from a lender pre-qualification, not from the estimator.',
   },
   {
     q: 'What APR should I model for deck financing in Northern Virginia?',
@@ -75,15 +75,15 @@ const S = {
 };
 
 // Monthly figures use the same amortization math as the estimator at 8.99% APR
-// ($12.66/mo per $1k over 10 years, $10.14/mo per $1k over 15 years).
+// (a lender-calculated payment per a written estimate over 10 years, a lender-calculated payment per a written estimate over 15 years).
 // Total interest = (monthly × months) − principal.
 const scenarios = [
-  { amount: '$15,000', use: 'Composite resurfacing on existing frame', ten: '$190', fifteen: '$152', interest10: '$7,800' },
-  { amount: '$22,000', use: '250 sqft composite deck, mid tier', ten: '$278', fifteen: '$223', interest10: '$11,360' },
-  { amount: '$30,000', use: '350 sqft composite, mid tier, railings', ten: '$380', fifteen: '$304', interest10: '$15,600' },
-  { amount: '$40,000', use: '450 sqft composite, premium tier', ten: '$506', fifteen: '$406', interest10: '$20,720' },
-  { amount: '$55,000', use: '600 sqft composite + lighting + stairs', ten: '$696', fifteen: '$558', interest10: '$28,520' },
-  { amount: '$70,000', use: 'Covered composite deck w/ premium railings', ten: '$886', fifteen: '$709', interest10: '$36,320' },
+  { amount: 'a written estimate', use: 'Composite resurfacing on existing frame', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
+  { amount: 'a written estimate', use: '250 sqft composite deck, mid tier', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
+  { amount: 'a written estimate', use: '350 sqft composite, mid tier, railings', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
+  { amount: 'a written estimate', use: '450 sqft composite, premium tier', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
+  { amount: 'a written estimate', use: '600 sqft composite + lighting + stairs', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
+  { amount: 'a written estimate', use: 'Covered composite deck w/ premium railings', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
 ];
 
 export default function MonthlyPaymentCompositeDeckPage() {
@@ -92,13 +92,13 @@ export default function MonthlyPaymentCompositeDeckPage() {
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="Monthly Payment on a Composite Deck in Northern Virginia"
-        description="See realistic monthly payments for a composite deck in Northern Virginia. $15k–$70k planning examples at 8–10% APR over 10 and 15 years."
+        description="See realistic monthly payments for a composite deck in Northern Virginia. a written estimate planning examples at 8–10% APR over 10 and 15 years."
         path={PATH}
         image="/showcase/img15.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="Monthly Payment on a Composite Deck in Northern Virginia" description="See realistic monthly payments for a composite deck in Northern Virginia. $15k–$70k planning examples at 8–10% APR over 10 and 15 years. Free estimator." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Monthly Payment on a Composite Deck in Northern Virginia" description="See realistic monthly payments for a composite deck in Northern Virginia. a written estimate planning examples at 8–10% APR over 10 and 15 years. Free estimator." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -109,7 +109,7 @@ export default function MonthlyPaymentCompositeDeckPage() {
             How Much Is a Monthly Payment on a Composite Deck in Northern Virginia?
           </h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: 1.6 }}>
-            Real-world monthly payment examples for composite decks $15,000–$70,000, modeled at a typical 8–10% APR
+            Real-world monthly payment examples for composite decks a written estimate, modeled at a typical 8–10% APR
             over 10- and 15-year terms.
           </p>
         </div>
@@ -127,8 +127,8 @@ export default function MonthlyPaymentCompositeDeckPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            A <strong>$30,000 composite deck</strong> in Northern Virginia financed at a sample 8.99% APR runs roughly{' '}
-            <strong>$380/month over 10 years</strong> or <strong>$304/month over 15 years</strong>. Pricing depends on
+            A <strong>a written estimate composite deck</strong> in Northern Virginia financed at a sample 8.99% APR runs roughly{' '}
+            <strong>a lender-calculated paymentnth over 10 years</strong> or <strong>a lender-calculated paymentnth over 15 years</strong>. Pricing depends on
             credit profile, lender, and term. Use the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
@@ -145,11 +145,11 @@ export default function MonthlyPaymentCompositeDeckPage() {
           </p>
           <p data-speakable style={{ marginBottom: 0, lineHeight: 1.7 }}>
             Most of our financed deck clients in Loudoun and Fairfax counties land in the{' '}
-            <strong>$25,000–$45,000 project range</strong>, with monthly payments typically{' '}
-            <strong>$315–$570 at ~9% APR over 10 years</strong>. The <strong>10-year term is the most popular choice</strong>,
+            <strong>a written estimate project range</strong>, with monthly payments typically{' '}
+            <strong>a written estimate at ~9% APR over 10 years</strong>. The <strong>10-year term is the most popular choice</strong>,
             followed by 15-year terms for homeowners prioritizing lower monthly payment and short 5-year terms for cash-
             flow flexible buyers who want to minimize total interest. Resurfacing projects (existing-frame composite
-            upgrades) tend to start around $15,000; covered decks with premium railings and lighting can reach $80,000+.
+            upgrades) tend to start around a written estimate; covered decks with premium railings and lighting can reach a written estimate.
           </p>
         </div>
       </section>
@@ -218,9 +218,9 @@ export default function MonthlyPaymentCompositeDeckPage() {
           </div>
           <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 8, padding: '1rem 1.25rem', marginBottom: '1.25rem' }}>
             <p data-speakable style={{ margin: 0, fontWeight: 600 }}>
-              At 8.99% APR over 10 years, a $30,000 composite deck costs approximately $45,600 total — $15,600 in
-              interest over the life of the loan. A 15-year term lowers the monthly payment to $304 but raises total
-              interest to roughly $24,720.
+              At 8.99% APR over 10 years, a a written estimate composite deck costs approximately a written estimate total — a written estimate in
+              interest over the life of the loan. A 15-year term lowers the monthly payment to a written estimate but raises total
+              interest to roughly a written estimate.
             </p>
           </div>
           <p style={{ ...S.p, fontSize: '0.85rem', color: '#777', fontStyle: 'italic' }}>
@@ -259,7 +259,7 @@ export default function MonthlyPaymentCompositeDeckPage() {
           <h2 style={S.h2}>Composite vs Wood: Long-Term Cost Matters More Than Monthly</h2>
           <p style={S.p}>
             A composite deck typically costs 20–40% more upfront than pressure-treated wood, which raises the monthly
-            payment slightly. Over 15 years the math reverses: composite avoids the $8,000–$15,000+ in cumulative
+            payment slightly. Over 15 years the math reverses: composite avoids the a written estimate in cumulative
             stain, seal, sand, and board replacement cost that pressure-treated wood requires. The{' '}
             <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
               composite vs wood comparison
@@ -330,7 +330,7 @@ export default function MonthlyPaymentCompositeDeckPage() {
         buttonText="Get Free Written Estimate"
         link="/get-estimate"
       />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

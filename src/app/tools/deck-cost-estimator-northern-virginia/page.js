@@ -146,7 +146,7 @@ export default function DeckCostEstimatorNorthernVirginiaPage() {
       <section style={{ padding: '3rem 0' }}>
         <div style={{ maxWidth: 940, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '1rem' }}>What Changes a Deck Estimate in Northern Virginia?</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem' }}>
             {costDrivers.map(([title, desc]) => (
               <div key={title} style={{ border: '1px solid #e2e8f0', borderRadius: 8, padding: '1.1rem', background: '#fff' }}>
                 <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#17202a', margin: '0 0 0.45rem' }}>{title}</h3>
@@ -175,7 +175,7 @@ export default function DeckCostEstimatorNorthernVirginiaPage() {
       <section style={{ padding: '3rem 0', background: '#f8fafc' }}>
         <div style={{ maxWidth: 940, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.6rem', fontWeight: 800, marginBottom: '1rem' }}>Related Cost and Planning Resources</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '0.8rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '0.8rem' }}>
             {relatedResources.map(([href, label]) => (
               <Link
                 key={href}

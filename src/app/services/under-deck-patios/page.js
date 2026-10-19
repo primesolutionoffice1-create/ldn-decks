@@ -77,7 +77,7 @@ const whyLdnDecks = [
 const faqs = [
   {
     q: "How much does an under deck patio system cost in Northern Virginia?",
-    a: "Under deck patio systems in Loudoun County and Fairfax County typically range from $15 to $30 per square foot installed, putting a 300 sq ft project between $4,500 and $9,000. The final cost depends on the drainage system chosen, ceiling finish, lighting, and whether electrical work is needed."
+    a: "Under deck patio systems in Loudoun County and Fairfax County typically range from a written estimate to a written estimate per square foot installed, putting a 300 sq ft project between a written estimate and a written estimate. The final cost depends on the drainage system chosen, ceiling finish, lighting, and whether electrical work is needed."
   },
   {
     q: "What is the RainEscape drainage system and how does it work?",
@@ -104,7 +104,7 @@ const faqs = [
 export default function UnderDeckPatiosPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/under-deck-patios" name="Under Deck Patio Systems Loudoun VA | Waterproofing &amp; Ceilings" description="Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/under-deck-patios" name="Under Deck Patio Systems Loudoun VA | Waterproofing &amp; Ceilings" description="Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio." speakable />
       <ServiceSchema
         name="Under-Deck Patio Systems"
         description="Dry under-deck patio construction in Northern Virginia. Ceiling drainage systems that create usable space beneath elevated decks."
@@ -121,7 +121,7 @@ export default function UnderDeckPatiosPage() {
       />
       <AboveFoldCTA headline="Under-deck patio or dry-deck system in Northern Virginia? Talk to a NoVA outdoor-living specialist today." />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
       </section>
       <ServiceMain
         subtitle="Double Your Outdoor Living Space"
@@ -145,7 +145,7 @@ export default function UnderDeckPatiosPage() {
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From unused space to a fully functional outdoor area.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
             <Image src="/showcase/img19.jpg" alt="Before under-deck patio upgrade — exposed framing on a Loudoun County multi-level deck" fill style={{ objectFit: 'cover' }} />
           </div>

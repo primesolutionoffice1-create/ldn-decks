@@ -49,7 +49,7 @@ const woodbridgeFAQs = [
   },
   {
     q: "What is the cost of a composite deck in Woodbridge?",
-    a: "A professional composite deck in Woodbridge typically ranges from $20,000 to $50,000+, depending on size, materials, multi-level design, and add-ons like screened porches."
+    a: "A professional composite deck in Woodbridge typically ranges from a written estimate to a written estimate, depending on size, materials, multi-level design, and add-ons like screened porches."
   },
   {
     q: "Do Woodbridge HOAs approve composite deck designs?",
@@ -88,7 +88,7 @@ const expansionSections = [
   {
     title: "Composite Decking Specialists for Woodbridge Homes",
     paragraphs: [
-      "The humidity and seasonal weather changes near the Potomac River make composite decking the ideal choice for Woodbridge homeowners. We plan Trex, TimberTech, and AZEK decking options with low-maintenance boards selected for Virginia humidity and freeze-thaw exposure. Projects typically start around $20,000 and scale based on your specific design requirements.",
+      "The humidity and seasonal weather changes near the Potomac River make composite decking the ideal choice for Woodbridge homeowners. We plan Trex, TimberTech, and AZEK decking options with low-maintenance boards selected for Virginia humidity and freeze-thaw exposure. Projects typically start around a written estimate and scale based on your specific design requirements.",
       "We specialize in designing decks that maximize the usable outdoor space of your property, whether you have a steep sloped yard in Lake Ridge or a flat lot. Integrated lighting, custom railings, and built-in seating are standard requests that we execute flawlessly.",
       "Every composite deck proposal in Woodbridge includes manufacturer warranty information for the selected product line and installation practices aligned with published manufacturer guidance."
     ],
@@ -113,7 +113,7 @@ export default function DeckBuilderWoodbridgePage() {
   return (
     <main>
       <LocalBusinessSchema city="Woodbridge" url="https://ldndecks.com/deck-builder-woodbridge-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-woodbridge-va" name="Deck Builder in Woodbridge, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Woodbridge, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-woodbridge-va" name="Deck Builder in Woodbridge, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Woodbridge, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Woodbridge, VA's Trusted Deck Company"
         title="Custom Deck Builder in Woodbridge, VA"
@@ -122,7 +122,7 @@ export default function DeckBuilderWoodbridgePage() {
       <ServiceMain
         subtitle="Prince William's Choice"
         title="Deck Builder Woodbridge VA  -  Premium Craftsmanship"
-        description="We build the outdoor spaces Woodbridge homeowners love. Custom designs, HOA-ready plans, and premium composite materials starting at $20k+."
+        description="We build the outdoor spaces Woodbridge homeowners love. Custom designs, HOA-ready plans, and premium composite materials starting at a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "Full Prince William HOA & Permit management",
@@ -199,7 +199,7 @@ export default function DeckBuilderWoodbridgePage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Woodbridge" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Woodbridge" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-woodbridge-va" />
-      <NamedAuthor context="Woodbridge and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Woodbridge and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

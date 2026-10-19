@@ -29,7 +29,7 @@ const faqSchema = {
     { "@type": "Question", name: "How long does Stone Ridge ARC review take?", acceptedAnswer: { "@type": "Answer", text: "Stone Ridge's review averages 18-25 days when the submission packet is complete. The Association's standardized process makes Stone Ridge one of the more predictable Loudoun HOAs to work with — provided the packet has all required documents (application, material samples, color specs, structural drawings, site plan with setbacks)." } },
     { "@type": "Question", name: "What's Stone Ridge's architectural character?", acceptedAnswer: { "@type": "Answer", text: "Stone Ridge is a master-planned community of roughly 5,800 homes in southern Loudoun County (Aldie/South Riding area), established in the early 2000s. Architectural standards favor traditional-to-transitional design — composite balustrade or aluminum-traditional railings, warm-tone composite materials (Trex Transcend Spiced Rum, Havana Gold; TimberTech AZEK Vintage Mahogany), and proportions matching the home's existing footprint. Cable rail is occasionally approved on specific lots but is not the community default." } },
     { "@type": "Question", name: "What materials are typically approved in Stone Ridge?", acceptedAnswer: { "@type": "Answer", text: "Trex Transcend Spiced Rum, Havana Gold, Tiki Torch, Vintage Lantern. TimberTech AZEK Vintage Mahogany. TimberTech PRO Legacy. Trex Enhance for budget-conscious builds also clears review. Composite balustrade railings in tones matching the deck, or aluminum-traditional railings in black or bronze. Color specifications must reference the manufacturer's actual code; printed-only renderings without samples often trigger revision requests." } },
-    { "@type": "Question", name: "How much does a Stone Ridge deck cost?", acceptedAnswer: { "@type": "Answer", text: "Standard composite deck (350-500 sqft): $28,000-$48,000. Multi-level deck (450-650 sqft): $38,000-$62,000. Deck + screened porch combo: $48,000-$78,000. Full outdoor-living package (deck + outdoor kitchen + pergola): $65,000-$105,000+. Stone Ridge's mid-tier suburban character supports a wide pricing range depending on home size and project scope." } },
+    { "@type": "Question", name: "How much does a Stone Ridge deck cost?", acceptedAnswer: { "@type": "Answer", text: "Standard composite deck (350-500 sqft): a written estimate. Multi-level deck (450-650 sqft): a written estimate. Deck + screened porch combo: a written estimate. Full outdoor-living package (deck + outdoor kitchen + pergola): a written estimate. Stone Ridge's mid-tier suburban character supports a wide pricing range depending on home size and project scope." } },
     { "@type": "Question", name: "Can Loudoun Decks handle the Stone Ridge ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. We maintain the current Stone Ridge Association submission template, prepare the full architectural review packet, file the Loudoun County building permit in parallel from contract day, and coordinate every inspection (footing, framing, final). The homeowner never logs into the portal or meets the committee directly. Call 571-655-7207." } },
   ],
 };
@@ -40,14 +40,14 @@ export default function StoneRidgeHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Stone Ridge HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Stone Ridge, Loudoun County? Architectural review process, family-oriented design standards, approval timeline, county permit coordination." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Stone Ridge HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Stone Ridge, Loudoun County? Architectural review process, family-oriented design standards, approval timeline, county permit coordination." speakable />
       <ArticleSchema
         title="Stone Ridge HOA Deck Rules and Approval Guide"
         description="Stone Ridge HOA deck approval, Loudoun County permit coordination, family-oriented design standards, structural review points, and local deck builder support."
         path={PATH}
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-06-04"
+        dateModified="2026-10-18"
       />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -96,11 +96,11 @@ export default function StoneRidgeHoaDeckRulesPage() {
 
           <h2 style={S.h2}>Typical Stone Ridge Deck Projects + Pricing</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Standard composite deck</strong> (350-500 sqft): $28,000-$48,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Multi-level deck</strong> (450-650 sqft): $38,000-$62,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck + screened porch combo</strong>: $48,000-$78,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Full outdoor-living package</strong> (deck + outdoor kitchen + pergola): $65,000-$105,000+</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Re-deck / resurface of original builder deck</strong> (if framing is sound): $18,000-$32,000</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Standard composite deck</strong> (350-500 sqft): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Multi-level deck</strong> (450-650 sqft): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck + screened porch combo</strong>: a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Full outdoor-living package</strong> (deck + outdoor kitchen + pergola): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Re-deck / resurface of original builder deck</strong> (if framing is sound): a written estimate</li>
           </ul>
 
           <h2 style={S.h2}>How Loudoun Decks Handles Stone Ridge Approvals</h2>
@@ -127,7 +127,7 @@ export default function StoneRidgeHoaDeckRulesPage() {
         </div>
       </article>
       <SimpleCTA title="Stone Ridge deck project? We handle every approval." buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Stone Ridge (Aldie/South Riding) and Loudoun County" lastUpdated="2026-06-04" />
+      <NamedAuthor context="Stone Ridge (Aldie/South Riding) and Loudoun County" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath="/stone-ridge-hoa-deck-rules" />
       <ContactHome />
     </>

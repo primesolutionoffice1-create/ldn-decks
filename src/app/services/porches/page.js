@@ -29,7 +29,7 @@ const inclusions = [
 ];
 
 const porchFAQs = [
-  { q: "How much does a custom porch cost in Fairfax County?", a: "Custom porch projects in Fairfax County typically range from $25,000 to $75,000+ depending on roofing complexity, screening systems, and electrical integration." },
+  { q: "How much does a custom porch cost in Fairfax County?", a: "Custom porch projects in Fairfax County typically range from a written estimate to a written estimate depending on roofing complexity, screening systems, and electrical integration." },
   { q: "Is a permit required for a screened-in porch in Loudoun County?", a: "Yes. Any structural addition like a porch requires a building permit in Loudoun County. We handle the entire engineering and application process for you." },
   { q: "Can I convert my existing deck into a screened porch?", a: "Often, yes. If the existing foundation and framing can support the additional dead load of a roof, we can resurface and screen your deck into a beautiful porch." },
   { q: "How long does porch construction take in Northern Virginia?", a: "Because porches involve roofing and often electrical work, the construction phase usually takes 3-5 weeks after permit approval." },
@@ -107,21 +107,21 @@ export default function PorchesPage() {
         relatedServices={['https://ldndecks.com/screened-porch-builder-northern-virginia', 'https://ldndecks.com/screened-porch-builder-northern-virginia', 'https://ldndecks.com/services/porches/front-porch']}
       />
       <JsonLd data={porchFaqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/porches" name="Premium Porch Builder NoVA | Screened &amp; Open Porch Design" description="Trusted porch contractor in Northern Virginia. Custom screened porches, open-air pavilions and front porches with local permit and design guidance." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/porches" name="Premium Porch Builder NoVA | Screened &amp; Open Porch Design" description="Trusted porch contractor in Northern Virginia. Custom screened porches, open-air pavilions and front porches with local permit and design guidance." speakable />
       <ServicesHeader
         subtext="Permit-Aware Porch Builder"
         title="Custom Porch Design & Construction"
-        description="Loudoun Decks builds premium screened-in porches, open pavilions, and custom front porches across Loudoun County, Fairfax County, and Prince William County. Most custom porch projects start at $25,000+."
+        description="Loudoun Decks builds premium screened-in porches, open pavilions, and custom front porches across Loudoun County, Fairfax County, and Prince William County. Most custom porch projects start at a written estimate."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
       </section>
 
       {/* Pricing Anchor */}
       <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
-            <strong style={{ color: '#222' }}>Most custom porch projects start at $25,000+</strong>
+            <strong style={{ color: '#222' }}>Most custom porch projects start at a written estimate</strong>
             {' '}— roofing complexity, screening systems, and electrical integration affect final pricing.{' '}
             <strong>Free estimate included.</strong>
           </p>
@@ -136,7 +136,7 @@ export default function PorchesPage() {
         <p style={{ textAlign: 'center', color: '#555', fontSize: '17px', marginBottom: '40px' }}>
           Every porch type serves a different lifestyle. Explore your options below.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '24px' }}>
           <Link href="/services/porches/front-porch" style={{ display: 'block', textDecoration: 'none', background: '#fff', border: '1px solid #e5e5e5', borderRadius: '8px', padding: '32px 28px', transition: 'box-shadow 0.2s ease', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
             <div style={{ fontSize: '28px', marginBottom: '12px' }}>🏡</div>
             <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#111', marginBottom: '10px' }}>Front Porch</h3>

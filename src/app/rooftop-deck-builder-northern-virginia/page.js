@@ -22,7 +22,7 @@ const faqSchema = {
   "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "Do you build rooftop decks in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes. Rooftop terraces and elevated balcony rebuilds are one of our specialty service lines, concentrated in the Tysons urban core (The Boro, One Park Crest, Ovation at Park Crest), Arlington's Ballston/Clarendon/Rosslyn condos, and the newer Metro-corridor townhomes throughout NoVA. These projects require structural load review (often engineer-stamped), waterproof membrane coordination with the existing roof system, code-compliant guardrails 42 inches high, and condo/HOA association approval." } },
-    { "@type": "Question", name: "How much does a rooftop deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Rooftop deck pricing in NoVA: compact balcony rebuilds 100–200 sqft run $18,000–$32,000. Townhome rooftop terraces 200–400 sqft run $28,000–$58,000. Condo building rooftop decks are typically common-area projects (board-budget governed, not individual). Pricing reflects pedestal/sleeper-system framing, AZEK or aluminum deck surface, 42-inch guardrails, electrical for lighting, and structural engineering coordination with the building." } },
+    { "@type": "Question", name: "How much does a rooftop deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Rooftop deck pricing in NoVA: compact balcony rebuilds 100–200 sqft are priced in a written estimate. Townhome rooftop terraces 200–400 sqft are priced in a written estimate. Condo building rooftop decks are typically common-area projects (board-budget governed, not individual). Pricing reflects pedestal/sleeper-system framing, AZEK or aluminum deck surface, 42-inch guardrails, electrical for lighting, and structural engineering coordination with the building." } },
     { "@type": "Question", name: "What's a pedestal system and why is it standard for rooftops?", acceptedAnswer: { "@type": "Answer", text: "A pedestal system supports the rooftop deck surface on adjustable polymer or metal pedestals that sit on top of the building's waterproof membrane — without penetrating it. This preserves the existing roof warranty, allows water to drain under the deck to roof drains, and keeps the membrane accessible for future maintenance. AZEK and Bison Pedestal are the two systems we install most. Pedestals are non-negotiable on any rooftop project — direct sleeper attachment voids the roof warranty in almost all multi-family buildings." } },
     { "@type": "Question", name: "What approvals do I need for a rooftop deck?", acceptedAnswer: { "@type": "Answer", text: "Four approvals stack on a typical NoVA rooftop project: (1) condo or HOA architectural review — material specs, drawings, sometimes in-person committee review. 2-4 weeks. (2) Building management coordination — confirms roof membrane access, drainage routing, weight loads. 1-2 weeks. (3) County building permit — Fairfax / Arlington / Loudoun depending on location, with engineered structural drawings. 3-5 weeks. (4) Roofing contractor coordination — if the building has an active roof warranty, the roof contractor must sign off on the pedestal installation. All four run in parallel from contract day." } },
     { "@type": "Question", name: "Which Northern Virginia communities have the most rooftop deck demand?", acceptedAnswer: { "@type": "Answer", text: "The Boro (Tysons) — 700+ unit mixed-use development, Meridian Group; many townhomes designed with rooftop terrace potential. One Park Crest (Tysons) — 19-story condo with 335 units; balcony rebuilds + rooftop access requests. Ovation at Park Crest — Tysons' first high-rise apartment. Arlington urban core — Ballston, Clarendon, Rosslyn, Pentagon City, Crystal City condos. Lerner-built Tysons townhomes. New Metro-corridor townhome developments throughout Loudoun and Fairfax." } },
@@ -44,14 +44,14 @@ export default function RooftopDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/rooftop-deck-builder-northern-virginia" name="Rooftop Deck Builder in Northern Virginia | Loudoun Decks" description="Rooftop terrace + balcony deck builder for Northern Virginia townhomes, condos, and mid-rise residential. AZEK pedestal systems, structural review, condo association approval." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/rooftop-deck-builder-northern-virginia" name="Rooftop Deck Builder in Northern Virginia | Loudoun Decks" description="Rooftop terrace + balcony deck builder for Northern Virginia townhomes, condos, and mid-rise residential. AZEK pedestal systems, structural review, condo association approval." speakable />
       <ArticleSchema
         title="Rooftop Deck Builder in Northern Virginia (2026)"
         description="Definitive guide to rooftop terrace + balcony deck construction in Northern Virginia. Pedestal systems, structural review, multi-stakeholder approval process, target communities (Tysons The Boro, Arlington urban core), and 2026 pricing."
         path="/rooftop-deck-builder-northern-virginia"
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
@@ -68,7 +68,7 @@ export default function RooftopDeckBuilderPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick answer:</p>
-          <p>Rooftop decks in Northern Virginia require <strong>pedestal-system framing</strong> (preserves roof warranty), <strong>engineered structural drawings</strong>, and <strong>four parallel approvals</strong> (condo/HOA ARC + building management + county permit + roofing contractor). Pricing: <strong>$18k–$58k</strong> depending on size and complexity. AZEK PVC is the standard material.</p>
+          <p>Rooftop decks in Northern Virginia require <strong>pedestal-system framing</strong> (preserves roof warranty), <strong>engineered structural drawings</strong>, and <strong>four parallel approvals</strong> (condo/HOA ARC + building management + county permit + roofing contractor). Pricing: <strong>a written estimate</strong> depending on size and complexity. AZEK PVC is the standard material.</p>
         </div>
       </section>
 
@@ -79,10 +79,10 @@ export default function RooftopDeckBuilderPage() {
           <p style={S.p}>Rooftop deck demand in Northern Virginia concentrates in two distinct contexts that require different design vocabularies and approval paths.</p>
 
           <h3 style={S.h3}>Townhome rooftop terraces (the Metro-corridor market)</h3>
-          <p style={S.p}>New-construction townhomes in The Boro (Tysons), Lerner-built Tysons communities, One Loudoun, and the broader Metro corridor are increasingly designed with rooftop terrace potential — sometimes with the framing pre-installed and the surface left to the homeowner, sometimes with an unfinished roof slab requiring full conversion. These projects are private-unit work coordinated with the community ARC + building management. Typical size 200–400 sqft, typical price $28k–$58k.</p>
+          <p style={S.p}>New-construction townhomes in The Boro (Tysons), Lerner-built Tysons communities, One Loudoun, and the broader Metro corridor are increasingly designed with rooftop terrace potential — sometimes with the framing pre-installed and the surface left to the homeowner, sometimes with an unfinished roof slab requiring full conversion. These projects are private-unit work coordinated with the community ARC + building management. Typical size 200–400 sqft, typical price a written estimate.</p>
 
           <h3 style={S.h3}>Condo balcony rebuilds + common-area rooftop decks (the urban core market)</h3>
-          <p style={S.p}>Arlington's Ballston, Clarendon, Rosslyn, Pentagon City, and Crystal City — plus Tysons' One Park Crest (335 units), Ovation at Park Crest, and similar mid-to-high-rise residential buildings — generate a steady volume of balcony rebuild and rooftop deck work. Individual balcony rebuilds (100–200 sqft, $18–32k) work with the unit owner + HOA ARC. Common-area rooftop decks (the building's amenity rooftop) are board-budget projects coordinated with the condo board, building management, and the building's structural engineer.</p>
+          <p style={S.p}>Arlington's Ballston, Clarendon, Rosslyn, Pentagon City, and Crystal City — plus Tysons' One Park Crest (335 units), Ovation at Park Crest, and similar mid-to-high-rise residential buildings — generate a steady volume of balcony rebuild and rooftop deck work. Individual balcony rebuilds (100–200 sqft, a written estimate) work with the unit owner + HOA ARC. Common-area rooftop decks (the building's amenity rooftop) are board-budget projects coordinated with the condo board, building management, and the building's structural engineer.</p>
 
           <h2 style={S.h2}>Why pedestal systems are non-negotiable</h2>
           <p style={S.p}>The most important decision on any rooftop project is how the deck attaches to the building. The standard — and in most cases the only acceptable — solution is a <strong>pedestal system</strong>: adjustable polymer or metal pedestals that sit on top of the existing waterproof membrane without penetrating it.</p>
@@ -122,10 +122,10 @@ export default function RooftopDeckBuilderPage() {
 
           <h2 style={S.h2}>Pricing — 2026 NoVA rooftop projects</h2>
           <ul style={S.list}>
-            <li style={S.listItem}><strong>Compact balcony rebuild</strong> (100–200 sqft): $18,000–$32,000</li>
-            <li style={S.listItem}><strong>Townhome rooftop terrace</strong> (200–400 sqft): $28,000–$58,000</li>
-            <li style={S.listItem}><strong>Premium rooftop with cable/glass railing + integrated lighting + planters</strong> (300–450 sqft): $42,000–$72,000</li>
-            <li style={S.listItem}><strong>Common-area condo rooftop deck</strong> (board-budget governed, 800–2,000 sqft): $80,000–$250,000+</li>
+            <li style={S.listItem}><strong>Compact balcony rebuild</strong> (100–200 sqft): a written estimate</li>
+            <li style={S.listItem}><strong>Townhome rooftop terrace</strong> (200–400 sqft): a written estimate</li>
+            <li style={S.listItem}><strong>Premium rooftop with cable/glass railing + integrated lighting + planters</strong> (300–450 sqft): a written estimate</li>
+            <li style={S.listItem}><strong>Common-area condo rooftop deck</strong> (board-budget governed, 800–2,000 sqft): a written estimate</li>
           </ul>
           <p style={S.p}>Pricing includes pedestal system, deck surface, railings (per spec), basic lighting, engineering coordination, four-stakeholder approvals, and written warranty terms.</p>
 
@@ -154,7 +154,7 @@ export default function RooftopDeckBuilderPage() {
 
       <SimpleCTA title="Tysons or Arlington rooftop project? Let's design it." buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/rooftop-deck-builder-northern-virginia" />
-      <NamedAuthor context="Northern Virginia rooftop terrace + balcony construction" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia rooftop terrace + balcony construction" lastUpdated="2026-10-18" />
       <ContactHome />
     </>
   );

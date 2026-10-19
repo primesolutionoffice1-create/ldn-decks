@@ -18,7 +18,7 @@ export const metadata = buildMetadata({
 export default function PressPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/press" name="Press &amp; Media Kit | Loudoun Decks" description="Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s trusted deck builder." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/press" name="Press &amp; Media Kit | Loudoun Decks" description="Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s trusted deck builder." speakable />
       <section style={{ background: 'var(--color-dark, #1a1a2e)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Press & Media Kit</h1>
@@ -66,12 +66,12 @@ export default function PressPage() {
             <li><strong>TimberTech and AZEK product planning</strong> qualified for all product lines</li>
             <li><strong>Permit and inspection coordination</strong> across Loudoun, Fairfax & Prince William counties</li>
             <li><strong>Written workmanship warranty terms</strong> provided with project paperwork in addition to manufacturer warranty information</li>
-            <li><strong>Average project value:</strong> $15,000–$65,000</li>
+            <li><strong>Average project value:</strong> a written estimate</li>
             <li><strong>Average build time:</strong> 1–4 weeks depending on scope</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Services</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.5rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '0.5rem', marginBottom: '2rem' }}>
             {[
               'Custom Composite Decks', 'Trex Deck Installation', 'TimberTech AZEK Decks',
               'Deck Replacement', 'Deck Resurfacing', 'Screened Porches',

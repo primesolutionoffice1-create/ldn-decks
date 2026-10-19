@@ -27,7 +27,7 @@ const reviewFaqs = [
   },
   {
     q: 'What kinds of projects do you build?',
-    a: 'We build custom composite decks (Trex, TimberTech, AZEK), screened porches, deck replacements, outdoor kitchens, pergolas, fencing, and full outdoor living spaces. Most projects range from $20,000 to $100,000+ depending on scope.',
+    a: 'We build custom composite decks (Trex, TimberTech, AZEK), screened porches, deck replacements, outdoor kitchens, pergolas, fencing, and full outdoor living spaces. Most projects range from a written estimate to a written estimate depending on scope.',
   },
   {
     q: 'Which areas do you serve?',
@@ -57,7 +57,7 @@ const S = {
 export default function ReviewsPage() {
   return (
     <>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/reviews" name="Loudoun Decks Reviews | Verify Public Review Profiles" description="Open Loudoun Decks public review profiles and verify current review text directly on Google, Yelp, and BBB." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/reviews" name="Loudoun Decks Reviews | Verify Public Review Profiles" description="Open Loudoun Decks public review profiles and verify current review text directly on Google, Yelp, and BBB." speakable />
       <JsonLd data={faqSchema} />
 
       {/* Hero */}
@@ -119,7 +119,7 @@ export default function ReviewsPage() {
 
           {/* Platform Links */}
           <h2 style={S.h2}>Read All Reviews on Public Platforms</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '3rem' }}>
             {[
               { name: 'Google Reviews', url: GOOGLE_REVIEW_URL, rating: 'Review profile', count: 'Verify current count' },
               { name: 'Yelp', url: YELP_URL, rating: 'Review profile', count: 'Public listing' },
@@ -178,7 +178,7 @@ export default function ReviewsPage() {
 
       <SimpleCTA title="Plan Your Deck, Porch, or Outdoor Living Project" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/reviews" />
-      <NamedAuthor context="Northern Virginia public review profile verification" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Northern Virginia public review profile verification" lastUpdated="2026-10-18" />
       <ContactHome />
     </>
   );

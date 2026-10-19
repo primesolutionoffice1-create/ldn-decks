@@ -25,7 +25,7 @@ const CORNERSTONE_GUIDES = [
   { path: '/composite-deck-vs-wood-deck-virginia', title: 'Composite vs Wood Deck', desc: '15-year cost comparison composite wins long-term.' },
   { path: '/does-a-deck-add-value-to-your-home', title: 'Does a Deck Add Home Value?', desc: 'ROI data 60-80% recoup at resale in Northern Virginia.' },
   { path: '/how-to-choose-a-deck-builder-northern-virginia', title: 'How to Choose a Deck Builder', desc: '10 questions to ask + 5 red flags to avoid.' },
-  { path: '/screened-porch-cost-northern-virginia', title: 'Screened Porch Cost Guide', desc: '$25k-$70k+ planning ranges with permit and material notes.' },
+  { path: '/screened-porch-cost-northern-virginia', title: 'Screened Porch Cost Guide', desc: 'What a porch estimate should include, with permit and material notes.' },
   { path: '/deck-permit-loudoun-county-virginia', title: 'Deck Permits in Loudoun County', desc: 'Permit requirements, review steps and inspection context for Loudoun homeowners.' },
   { path: '/deck-permit-fairfax-county-virginia', title: 'Deck Permits in Fairfax County', desc: 'Requirements, timeline, fees, and inspection process.' },
   { path: '/deck-permit-arlington-county-virginia', title: 'Deck Permits in Arlington County', desc: 'Permit, setback, inspection and urban-lot planning context for Arlington decks.' },
@@ -176,7 +176,7 @@ export default function RelatedGuides({ currentPath, category = null }) {
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1.5rem', color: '#111' }}>
             Guides Northern Virginia Homeowners Are Reading
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem' }}>
             {selected.map((guide) => (
               <Link
                 key={guide.path}
@@ -227,7 +227,7 @@ export default function RelatedGuides({ currentPath, category = null }) {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1.5rem', color: '#111' }}>
           Guides Northern Virginia Homeowners Are Reading
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem' }}>
           {selected.map((guide) => (
             <Link
               key={guide.path}

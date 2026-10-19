@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: 'How does Fiberon compare to Trex in price?',
-    a: 'Fiberon Symmetry (their mid-range line) runs approximately $5–$8 per linear foot for decking boards — similar to Trex Enhance. Fiberon Concordia (their premium) is priced near Trex Transcend at $8–$12 per linear foot. Installed costs in Northern Virginia are comparable for similarly sized projects.',
+    a: 'Fiberon Symmetry (their mid-range line) runs approximately a written estimate per linear foot for decking boards — similar to Trex Enhance. Fiberon Concordia (their premium) is priced near Trex Transcend at a written estimate per linear foot. Installed costs in Northern Virginia are comparable for similarly sized projects.',
   },
   {
     q: 'Is Fiberon decking good for the Northern Virginia climate?',
@@ -43,7 +43,7 @@ export default function FiberonReviewPage() {
   return (
     <main>
       <WebPageSchema
-        dateModified="2026-06-26"
+        dateModified="2026-10-18"
         url="https://ldndecks.com/fiberon-decking-review-northern-virginia"
         name="Fiberon Decking Review 2026 | How It Compares in Northern Virginia"
         description="Honest Fiberon composite decking review for Northern Virginia homeowners. How Fiberon Symmetry and Good Life compare to Trex and TimberTech in cost, heat, and durability."
@@ -72,12 +72,12 @@ export default function FiberonReviewPage() {
 
         <h3>Fiberon Symmetry (Mid-Range)</h3>
         <p>
-          Symmetry is their most popular line — four-sided PET (polyethylene terephthalate) cap, 16 colors including realistic wood-grain patterns, hidden fastener compatible. Warranty: 25 years fade/stain, 30 years structural. This is Fiberon's direct competitor to <Link href="/trex-decks">Trex Enhance</Link> and <Link href="/services/new-decks">TimberTech Terrain</Link>. Price point: $5–$8 per linear foot (materials only, 5/4x6 boards).
+          Symmetry is their most popular line — four-sided PET (polyethylene terephthalate) cap, 16 colors including realistic wood-grain patterns, hidden fastener compatible. Warranty: 25 years fade/stain, 30 years structural. This is Fiberon's direct competitor to <Link href="/trex-decks">Trex Enhance</Link> and <Link href="/services/new-decks">TimberTech Terrain</Link>. Price point: a written estimate per linear foot (materials only, 5/4x6 boards).
         </p>
 
         <h3>Fiberon Concordia (Premium)</h3>
         <p>
-          Concordia is Fiberon's answer to <Link href="/trex-transcend-review-northern-virginia">Trex Transcend</Link> and TimberTech Vintage Collection. Deep embossed wood grain, multi-tonal coloring, 30-year warranty. Price: $8–$12 per linear foot. Available in 8 colors. Concordia is the Fiberon line most comparable to what we install most frequently on Loudoun County and Fairfax County homes.
+          Concordia is Fiberon's answer to <Link href="/trex-transcend-review-northern-virginia">Trex Transcend</Link> and TimberTech Vintage Collection. Deep embossed wood grain, multi-tonal coloring, 30-year warranty. Price: a written estimate per linear foot. Available in 8 colors. Concordia is the Fiberon line most comparable to what we install most frequently on Loudoun County and Fairfax County homes.
         </p>
 
         <h2>How Fiberon Performs in Northern Virginia's Climate</h2>
@@ -132,9 +132,9 @@ export default function FiberonReviewPage() {
               </tr>
               <tr style={{ background: '#fafafa' }}>
                 <td style={{ padding: '9px', borderBottom: '1px solid #eee' }}>Board Price (mat.)</td>
-                <td style={{ padding: '9px', borderBottom: '1px solid #eee' }}>$8–$12 / lin. ft.</td>
-                <td style={{ padding: '9px', borderBottom: '1px solid #eee' }}>$8–$14 / lin. ft.</td>
-                <td style={{ padding: '9px', borderBottom: '1px solid #eee' }}>$9–$14 / lin. ft.</td>
+                <td style={{ padding: '9px', borderBottom: '1px solid #eee' }}>a written estimate / lin. ft.</td>
+                <td style={{ padding: '9px', borderBottom: '1px solid #eee' }}>a written estimate / lin. ft.</td>
+                <td style={{ padding: '9px', borderBottom: '1px solid #eee' }}>a written estimate / lin. ft.</td>
               </tr>
               <tr>
                 <td style={{ padding: '9px', borderBottom: '1px solid #eee' }}>NoVA Supplier Availability</td>
@@ -184,7 +184,7 @@ export default function FiberonReviewPage() {
 
       </article>
 
-      <NamedAuthor context="composite decking materials and installation in Northern Virginia" lastUpdated="2026-06-26" />
+      <NamedAuthor context="composite decking materials and installation in Northern Virginia" lastUpdated="2026-10-18" />
 
       <ServicesFAQ
         canonicalUrl="https://ldndecks.com/fiberon-decking-review-northern-virginia"

@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "Is a paver or flagstone patio cheaper?", acceptedAnswer: { "@type": "Answer", text: "Concrete pavers are 30-50% cheaper than natural flagstone. Pavers: $25-$40/sqft installed. Flagstone: $35-$65/sqft installed. For a 300 sqft patio, that's $7,500-$12,000 for pavers vs $10,500-$19,500 for flagstone." } },
+    { "@type": "Question", name: "Is a paver or flagstone patio cheaper?", acceptedAnswer: { "@type": "Answer", text: "Concrete pavers are often a different installed scope than natural flagstone. Pavers: priced in a written estimate. Flagstone: priced in a written estimate. For a 300 sqft patio, that's a written estimate for pavers vs a written estimate for flagstone." } },
     { "@type": "Question", name: "Which lasts longer pavers or flagstone?", acceptedAnswer: { "@type": "Answer", text: "Both last 25-50+ years with proper installation and base prep. Pavers are more uniform and easier to replace individually. Flagstone is natural stone that won't fade but can crack in severe freeze-thaw if not properly set." } },
     { "@type": "Question", name: "Which is better for Virginia's climate?", acceptedAnswer: { "@type": "Answer", text: "Both perform well. Pavers have slight edge for freeze-thaw because interlocking joints flex with ground movement. Flagstone set in mortar can crack; dry-set flagstone is more forgiving. We recommend proper base depth (8-12 inches) for both in Virginia." } },
   ],
@@ -31,7 +31,7 @@ export default function PaverVsFlagstonePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/paver-vs-flagstone-patio-northern-virginia" name="Paver Patio vs Flagstone Patio Northern Virginia | 2026" description="Paver patio contractor vs flagstone — cost, durability, maintenance, freeze-thaw performance in NoVA. 2026 installed pricing for Loudoun, Fairfax, Prince William. We build both." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/paver-vs-flagstone-patio-northern-virginia" name="Paver Patio vs Flagstone Patio Northern Virginia | 2026" description="Paver patio contractor vs flagstone — cost, durability, maintenance, freeze-thaw performance in NoVA. 2026 installed pricing for Loudoun, Fairfax, Prince William. We build both." speakable />
       {/* Full-width Hero Image Section */}
       <section style={{ position: 'relative', width: '100%', height: '70vh', minHeight: '500px', overflow: 'hidden' }}>
         <Image
@@ -58,7 +58,7 @@ export default function PaverVsFlagstonePage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Pavers</strong> for: budget, uniform look, easy repair, pool surrounds ($25–$40/sqft). <strong>Flagstone</strong> for: natural aesthetic, unique character, premium properties ($35–$65/sqft). Both last 25–50+ years. We build both.</p>
+          <p><strong>Pavers</strong> for: budget, uniform look, easy repair, pool surrounds (priced in a written estimate). <strong>Flagstone</strong> for: natural aesthetic, unique character, premium properties (priced in a written estimate). Both last 25–50+ years. We build both.</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -69,8 +69,8 @@ export default function PaverVsFlagstonePage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Factor', 'Concrete Pavers', 'Natural Flagstone'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Cost/sqft installed', '$25–$40', '$35–$65'],
-                  ['300 sqft total', '$7,500–$12,000', '$10,500–$19,500'],
+                  ['Cost/sqft installed', 'a written estimate', 'a written estimate'],
+                  ['300 sqft total', 'a written estimate', 'a written estimate'],
                   ['Look', 'Uniform, geometric, modern', 'Natural, organic, unique'],
                   ['Color options', 'Dozens (manufactured)', 'Limited (natural stone)'],
                   ['Durability', '25–50+ years', '25–50+ years'],
@@ -116,11 +116,11 @@ export default function PaverVsFlagstonePage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Stone', 'Cost/sqft', 'Color', 'Best For'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['PA Bluestone', '$35–$50', 'Blue-gray, natural', 'Most popular in NoVA classic, versatile'],
-                  ['Travertine', '$40–$65', 'Cream, tan, ivory', 'Pool surrounds, elegant patios'],
-                  ['Tennessee Fieldstone', '$30–$45', 'Tan, brown, warm', 'Rustic patios, garden paths'],
-                  ['Quartzite', '$35–$55', 'Gray, silver, gold', 'Modern natural look, very durable'],
-                  ['Concrete Pavers (Belgard/Unilock)', '$25–$40', 'Dozens of options', 'Best value, widest selection'],
+                  ['PA Bluestone', 'a written estimate', 'Blue-gray, natural', 'Most popular in NoVA classic, versatile'],
+                  ['Travertine', 'a written estimate', 'Cream, tan, ivory', 'Pool surrounds, elegant patios'],
+                  ['Tennessee Fieldstone', 'a written estimate', 'Tan, brown, warm', 'Rustic patios, garden paths'],
+                  ['Quartzite', 'a written estimate', 'Gray, silver, gold', 'Modern natural look, very durable'],
+                  ['Concrete Pavers (Belgard/Unilock)', 'a written estimate', 'Dozens of options', 'Best value, widest selection'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -132,7 +132,7 @@ export default function PaverVsFlagstonePage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "Is a paver or flagstone patio cheaper?", a: "Pavers: $25-$40/sqft. Flagstone: $35-$65/sqft. Pavers are 30-50% cheaper for the same area." },
+            { q: "Is a paver or flagstone patio cheaper?", a: "Pavers: priced in a written estimate. Flagstone: priced in a written estimate. Pavers are 30-50% cheaper for the same area." },
             { q: "Which lasts longer?", a: "Both last 25-50+ years. Pavers are easier to repair individually. Flagstone won't fade but can crack if improperly set." },
             { q: "Which is better for Virginia's climate?", a: "Both work well. Pavers have a slight edge for freeze-thaw due to flexible interlocking joints." },
           ].map((faq, i) => (
@@ -155,7 +155,7 @@ export default function PaverVsFlagstonePage() {
         </div>
       </article>
       <SimpleCTA title="Design Your Dream Patio" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/paver-vs-flagstone-patio-northern-virginia" />
 

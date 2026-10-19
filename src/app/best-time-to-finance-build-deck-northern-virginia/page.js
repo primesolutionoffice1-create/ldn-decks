@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: 'How does timing affect monthly payment?',
-    a: 'Promotional 0% APR offers cut interest cost to zero for the introductory period (typically 12–24 months). On a $25,000 deck, 12 months at 0% saves ~$1,500 in interest vs an 8.99% loan. If you pay off during the intro period, you avoid all interest. After the intro, the rate jumps to the lender\'s standard APR.',
+    a: 'Promotional 0% APR offers cut interest cost to zero for the introductory period (typically 12–24 months). On a a written estimate deck, 12 months at 0% saves ~a written estimate in interest vs an 8.99% loan. If you pay off during the intro period, you avoid all interest. After the intro, the rate jumps to the lender\'s standard APR.',
   },
   {
     q: 'How long is the full timeline from financing decision to finished deck?',
@@ -130,9 +130,9 @@ export default function BestTimeToFinanceBuildPage() {
         path={PATH}
         image="/showcase/img07.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-06-01" url={`https://ldndecks.com${PATH}`} name="When to Finance and Build a Deck in Northern Virginia (2026)" description="Best time of year to finance and build a deck in Northern Virginia. Pricing by season, permit timing, lender promotions, and material lead times." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="When to Finance and Build a Deck in Northern Virginia (2026)" description="Best time of year to finance and build a deck in Northern Virginia. Pricing by season, permit timing, lender promotions, and material lead times." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -278,7 +278,7 @@ export default function BestTimeToFinanceBuildPage() {
       </article>
 
       <SimpleCTA title="Schedule a Project Estimate" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

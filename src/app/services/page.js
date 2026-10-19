@@ -37,7 +37,7 @@ export default function ServicesPage() {
              Choosing the right <strong>deck contractor</strong> is the most critical decision in any home improvement project. In Northern Virginia, where the climate ranges from humid summers to freezing winters, your outdoor structure must be engineered for both beauty and extreme durability. At Loudoun Decks, we specialize in high-performance materials like Trex and TimberTech that deliver a maintenance-free lifestyle.
            </p>
 
-           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', marginTop: '3rem' }}>
+           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '3rem', marginTop: '3rem' }}>
              <div>
                <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Professional Porch Builder</h3>
                <p>

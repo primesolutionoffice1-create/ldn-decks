@@ -27,10 +27,10 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "Do I need HOA approval to build a deck in Sully Station?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every deck, screened porch, pergola, or exterior structure in Sully Station requires approval through the Sully Station II Community Association's architectural review process before construction begins. This is separate from the Fairfax County building permit, and both run in parallel from contract day for the fastest project timeline." } },
     { "@type": "Question", name: "How long does Sully Station ARC review take?", acceptedAnswer: { "@type": "Answer", text: "Sully Station's review averages 21-28 days when the submission packet is complete on first round. The Association's master-planned process is standardized but more detailed than newer Loudoun communities given Sully Station's scale and landscape design priorities. We prepare the packet around the current requirements before it is submitted." } },
-    { "@type": "Question", name: "What's Sully Station's architectural character?", acceptedAnswer: { "@type": "Answer", text: "Sully Station is an award-winning master-planned community covering 1,100+ landscaped acres in western Fairfax County, comprised of approximately 1,000 residences including single-family homes and townhomes. Home prices typically range $550,000 to $850,000. Architectural standards favor traditional design — warm-tone composites, composite balustrade or aluminum-traditional railings, proportions matching the home's existing footprint. The community's emphasis on landscape integration means new decks need to read as part of the home + landscape, not a bolt-on addition." } },
+    { "@type": "Question", name: "What's Sully Station's architectural character?", acceptedAnswer: { "@type": "Answer", text: "Sully Station is an award-winning master-planned community covering 1,100+ landscaped acres in western Fairfax County, comprised of approximately 1,000 residences including single-family homes and townhomes. Home prices typically range a written estimate to a written estimate. Architectural standards favor traditional design — warm-tone composites, composite balustrade or aluminum-traditional railings, proportions matching the home's existing footprint. The community's emphasis on landscape integration means new decks need to read as part of the home + landscape, not a bolt-on addition." } },
     { "@type": "Question", name: "What materials are approved in Sully Station?", acceptedAnswer: { "@type": "Answer", text: "Trex Transcend Spiced Rum, Havana Gold, Tiki Torch, Vintage Lantern are the most-requested colors. TimberTech AZEK Vintage Mahogany and PRO Legacy in similar warm tones also clear review consistently. Composite balustrade railings in deck-matching tones or aluminum-traditional railings in black or bronze. Cable rail is sometimes approved on lots backing to common-area landscape buffers — submit with photo documentation of the lot context." } },
-    { "@type": "Question", name: "How much does a Sully Station deck cost?", acceptedAnswer: { "@type": "Answer", text: "Standard composite deck (350-500 sqft): $32,000-$52,000. Multi-level deck (450-650 sqft): $42,000-$68,000. Deck + screened porch combo: $52,000-$88,000. Full outdoor-living package (deck + outdoor kitchen + pergola): $75,000-$125,000+. Sully Station's $550k-$850k home values support mid-to-premium material choices." } },
-    { "@type": "Question", name: "Are townhome decks treated differently in Sully Station?", acceptedAnswer: { "@type": "Answer", text: "Sully Station's townhome sub-sections follow the same ARC process as the detached-home sections, but the design vocabulary is narrower (smaller footprints, more standardized railing styles). Townhome rear decks typically run 180-280 sqft and $22-38k. Approval often clears in 18-21 days given the more constrained design space." } },
+    { "@type": "Question", name: "How much does a Sully Station deck cost?", acceptedAnswer: { "@type": "Answer", text: "Standard composite deck (350-500 sqft): a written estimate. Multi-level deck (450-650 sqft): a written estimate. Deck + screened porch combo: a written estimate. Full outdoor-living package (deck + outdoor kitchen + pergola): a written estimate. Sully Station's a written estimate home values support mid-to-premium material choices." } },
+    { "@type": "Question", name: "Are townhome decks treated differently in Sully Station?", acceptedAnswer: { "@type": "Answer", text: "Sully Station's townhome sub-sections follow the same ARC process as the detached-home sections, but the design vocabulary is narrower (smaller footprints, more standardized railing styles). Townhome rear decks typically run 180-280 sqft and a written estimate. Approval often clears in 18-21 days given the more constrained design space." } },
     { "@type": "Question", name: "Can Loudoun Decks handle the Sully Station ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. Sully Station is a close Centreville service area for our HQ at 13704 Winding Oak Cir. We prepare the full ARC packet with material samples, structural drawings, and landscape integration notes; file the Fairfax County building permit in parallel from contract day; and coordinate inspection sequencing. Call 571-655-7207." } },
   ],
 };
@@ -41,14 +41,14 @@ export default function SullyStationHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Sully Station HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Sully Station, Centreville? Architectural review for the 1,000-residence master-planned community on 1,100+ acres. 21-28 day timeline, material standards, Fairfax County permit coordination." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Sully Station HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Sully Station, Centreville? Architectural review for the 1,000-residence master-planned community on 1,100+ acres. 21-28 day timeline, material standards, Fairfax County permit coordination." speakable />
       <ArticleSchema
         title="Sully Station HOA Deck Rules and Approval Guide"
         description="Sully Station HOA deck approval, Fairfax County permit coordination, landscape integration notes, structural review points, and Centreville deck builder support."
         path={PATH}
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-06-04"
+        dateModified="2026-10-18"
       />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -67,7 +67,7 @@ export default function SullyStationHoaDeckRulesPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <h2 style={S.h2}>Building or Replacing a Deck in Sully Station</h2>
-          <p style={S.p}>Sully Station is an award-winning master-planned community covering 1,100+ landscaped acres in western Fairfax County — approximately 1,000 residences split across single-family homes and townhomes, with multiple pools, trails, and community centers. Home prices typically range $550,000 to $850,000. Established in the late 1980s through 1990s, Sully Station&apos;s housing stock is now at the 25-35 year mark, which means the original pressure-treated builder decks are well past design life. Sully Station is one of our most active Centreville sub-markets for deck replacement, resurface, and full-tear-down composite rebuilds.</p>
+          <p style={S.p}>Sully Station is an award-winning master-planned community covering 1,100+ landscaped acres in western Fairfax County — approximately 1,000 residences split across single-family homes and townhomes, with multiple pools, trails, and community centers. Home prices typically range a written estimate to a written estimate. Established in the late 1980s through 1990s, Sully Station&apos;s housing stock is now at the 25-35 year mark, which means the original pressure-treated builder decks are well past design life. Sully Station is one of our most active Centreville sub-markets for deck replacement, resurface, and full-tear-down composite rebuilds.</p>
           <p style={S.p}>Sully Station&apos;s approval path runs through the community ARC + the Fairfax County building permit. Our Centreville HQ at 13704 Winding Oak Cir is approximately 15 minutes from most Sully Station addresses — see our <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)' }}>Centreville deck builder page</Link> for broader context on the HQ sub-markets.</p>
 
           <h2 style={S.h2}>How Sully Station Architectural Review Works</h2>
@@ -98,12 +98,12 @@ export default function SullyStationHoaDeckRulesPage() {
 
           <h2 style={S.h2}>Typical Sully Station Deck Projects + Pricing</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Townhome rear deck</strong> (180-280 sqft): $22,000-$38,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Standard composite deck</strong> (350-500 sqft): $32,000-$52,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Multi-level deck</strong> (450-650 sqft): $42,000-$68,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck + screened porch combo</strong>: $52,000-$88,000</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Full outdoor-living package</strong>: $75,000-$125,000+</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Re-deck / resurface of original builder deck</strong> (if framing is sound): $18,000-$32,000</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Townhome rear deck</strong> (180-280 sqft): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Standard composite deck</strong> (350-500 sqft): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Multi-level deck</strong> (450-650 sqft): a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck + screened porch combo</strong>: a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Full outdoor-living package</strong>: a written estimate</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Re-deck / resurface of original builder deck</strong> (if framing is sound): a written estimate</li>
           </ul>
 
           <h2 style={S.h2}>How Loudoun Decks Handles Sully Station Approvals</h2>
@@ -130,7 +130,7 @@ export default function SullyStationHoaDeckRulesPage() {
         </div>
       </article>
       <SimpleCTA title="Sully Station deck project? Our HQ is 15 minutes away." buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Sully Station (Centreville) and Fairfax County" lastUpdated="2026-06-04" />
+      <NamedAuthor context="Sully Station (Centreville) and Fairfax County" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath="/sully-station-hoa-deck-rules" />
       <ContactHome />
     </>

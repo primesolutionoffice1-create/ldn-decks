@@ -13,7 +13,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/deck-cost-16x20-northern-virginia',
   title: '16x20 Deck Cost in Northern Virginia (2026)',
-  description: 'How much does a 16x20 deck (320 sq ft) cost in Northern Virginia in 2026? Pressure-treated wood $9,000-$17,000, composite $20,000-$32,000, premium PVC $26,000-$42,000. Permits and HOA notes included.',
+  description: 'How much does a 16x20 deck (320 sq ft) cost in Northern Virginia in 2026? Pressure-treated wood a written estimate, composite a written estimate, premium PVC a written estimate. Permits and HOA notes included.',
   image: '/social/deck-cost-16x20-northern-virginia-social.png',
 });
 
@@ -21,7 +21,7 @@ const articleSchema = {
   "@context": "https://schema.org", "@type": "Article",
   headline: "How Much Does a 16x20 Deck Cost in Northern Virginia (2026)",
   datePublished: "2026-05-23",
-  dateModified: "2026-05-23",
+  dateModified: "2026-10-18",
   author: { "@type": "Person", "@id": FOUNDER_ID, name: BUSINESS.founder.name, alternateName: "Nick", url: "https://ldndecks.com/team" },
   publisher: { "@type": "Organization", "@id": "https://ldndecks.com/#organization", name: "Loudoun Decks", url: "https://ldndecks.com" },
   about: "16x20 deck cost in Northern Virginia",
@@ -30,9 +30,9 @@ const articleSchema = {
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a 16x20 deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "As of May 2026, a 16x20 deck (320 sq ft) in Northern Virginia costs roughly $9,000-$17,000 in pressure-treated wood, $20,000-$32,000 in standard composite (Trex Enhance or Select), and $26,000-$42,000 in premium composite or PVC (Trex Transcend or TimberTech AZEK). Final pricing depends on elevation, railings, stairs, and HOA-required upgrades." } },
+    { "@type": "Question", name: "How much does a 16x20 deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "As of May 2026, a 16x20 deck (320 sq ft) in Northern Virginia costs roughly a written estimate in pressure-treated wood, a written estimate in standard composite (Trex Enhance or Select), and a written estimate in premium composite or PVC (Trex Transcend or TimberTech AZEK). Final pricing depends on elevation, railings, stairs, and HOA-required upgrades." } },
     { "@type": "Question", name: "Is a 16x20 deck big enough for a dining table and a seating area?", acceptedAnswer: { "@type": "Answer", text: "Yes. 320 sq ft comfortably fits a 6-person dining table on one half (about 140 sq ft including chair clearance) and a sofa/chair conversation set on the other (about 100 sq ft), with room for circulation. 16x20 is the most-requested family-deck size in Northern Virginia for exactly this reason." } },
-    { "@type": "Question", name: "What is the price per square foot for a 16x20 deck?", acceptedAnswer: { "@type": "Answer", text: "On a 320 sq ft footprint, expect about $28-$53 per sq ft in pressure-treated wood, $63-$100 per sq ft in standard composite, and $81-$131 per sq ft in premium composite or PVC. Per-sq-ft costs are slightly lower than a 12x20 because the fixed costs (design, permitting, footings, stair sets) are spread over more boards." } },
+    { "@type": "Question", name: "What is the price per square foot for a 16x20 deck?", acceptedAnswer: { "@type": "Answer", text: "On a 320 sq ft footprint, expect about a written estimate per sq ft in pressure-treated wood, a written estimate per sq ft in standard composite, and a written estimate per sq ft in premium composite or PVC. Per-sq-ft costs are slightly lower than a 12x20 because the fixed costs (design, permitting, footings, stair sets) are spread over more boards." } },
     { "@type": "Question", name: "How long does it take to build a 16x20 deck?", acceptedAnswer: { "@type": "Answer", text: "Construction is about 1.5-2.5 weeks for a 16x20 in Northern Virginia once permits are in hand. The full timeline including HOA architectural review and the county permit is typically 7-11 weeks from contract signing." } },
     { "@type": "Question", name: "Does a 16x20 deck need a permit in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes. Virginia requires a permit for any deck attached to the house with a ledger, and a 320 sq ft footprint is well above the 256 sq ft exemption threshold for freestanding low decks. See our Loudoun County deck permit guide for the local process." } },
     { "@type": "Question", name: "Does a 16x20 deck add resale value?", acceptedAnswer: { "@type": "Answer", text: "Yes, and 16x20 is often a sweet spot. National remodeling data shows decks recoup roughly 60-75% of cost at resale, and at 320 sq ft you have enough usable space to genuinely change how buyers see the backyard — without the elevation costs of a much larger deck." } },
@@ -45,7 +45,7 @@ export default function DeckCost16x20Page() {
   return (
     <>
       <JsonLd data={articleSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-cost-16x20-northern-virginia" name="16x20 Deck Cost in Northern Virginia (2026)" description="How much does a 16x20 deck (320 sq ft) cost in Northern Virginia in 2026? Pressure-treated wood $9,000-$17,000, composite $20,000-$32,000, premium PVC $26,000-$" speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-cost-16x20-northern-virginia" name="16x20 Deck Cost in Northern Virginia (2026)" description="How much does a 16x20 deck (320 sq ft) cost in Northern Virginia in 2026? Pressure-treated wood a written estimate, composite a written estimate, premium PVC a written estimate-$" speakable />
       <JsonLd data={faqSchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -64,7 +64,7 @@ export default function DeckCost16x20Page() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <section data-speakable="true" style={{ background: '#fff8f0', borderLeft: '4px solid var(--color-primary)', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
-            <p style={{ margin: 0, fontWeight: 600, lineHeight: 1.6 }}><strong>TL;DR:</strong> As of May 2026, a 16x20 deck (320 sq ft) in Northern Virginia costs about <strong>$9,000&ndash;$17,000 in pressure-treated wood</strong>, <strong>$20,000&ndash;$32,000 in standard composite</strong>, and <strong>$26,000&ndash;$42,000 in premium composite or PVC</strong>. 320 sq ft is the most-requested family-deck size in NoVA. Pricing source: LDN Decks 2026 Northern Virginia estimating logic and market-rate planning ranges.</p>
+            <p style={{ margin: 0, fontWeight: 600, lineHeight: 1.6 }}><strong>TL;DR:</strong> As of May 2026, a 16x20 deck (320 sq ft) in Northern Virginia costs about <strong>a written estimate&ndash;a written estimate in pressure-treated wood</strong>, <strong>a written estimate&ndash;a written estimate in standard composite</strong>, and <strong>a written estimate&ndash;a written estimate in premium composite or PVC</strong>. 320 sq ft is the most-requested family-deck size in NoVA. Pricing source: LDN Decks 2026 Northern Virginia estimating logic and market-rate planning ranges.</p>
           </section>
 
           <NamedAuthor context="Northern Virginia 16x20 deck builds" lastUpdated="May 2026" />
@@ -75,9 +75,9 @@ export default function DeckCost16x20Page() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Material', 'Total (16x20)', 'Per sq ft', 'Typical Lifespan'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Pressure-treated wood', '$9,000–$17,000', '$28–$53', '10–15 years (with annual maintenance)'],
-                  ['Standard composite (Trex Enhance / Select)', '$20,000–$32,000', '$63–$100', '25–30 years'],
-                  ['Premium composite / PVC (Trex Transcend, TimberTech AZEK)', '$26,000–$42,000', '$81–$131', '30–50 years (fade & stain warranty)'],
+                  ['Pressure-treated wood', 'a written estimate', 'a written estimate', '10–15 years (with annual maintenance)'],
+                  ['Standard composite (Trex Enhance / Select)', 'a written estimate', 'a written estimate', '25–30 years'],
+                  ['Premium composite / PVC (Trex Transcend, TimberTech AZEK)', 'a written estimate', 'a written estimate', '30–50 years (fade & stain warranty)'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -93,16 +93,16 @@ export default function DeckCost16x20Page() {
 
           <h2 style={S.h2}>What Drives the Final Price on a 16x20?</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Elevation</strong> &mdash; a ground-level 16x20 is the cheapest case. Second-story decks for walkout-basement homes need 6x6 posts and taller footings, adding $3,500&ndash;$8,000.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Railing perimeter</strong> &mdash; a 16x20 with three open sides is about 52 linear feet of rail. Aluminum or cable railing adds $2,000&ndash;$6,000 over composite balusters.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Stair configuration</strong> &mdash; a single short stair is cheapest. Wide cascading stairs or a switchback add $2,000&ndash;$5,000.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Picture-frame border</strong> &mdash; a contrasting border board around a 16x20 adds $700&ndash;$1,600 in material and labor; it visually anchors the larger field.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Integrated lighting</strong> &mdash; stair riser and post-cap lights on a low-voltage transformer add $1,400&ndash;$3,500.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Under-deck dry space</strong> &mdash; for elevated decks, an above-joist drainage system to keep the basement walkout dry adds $2,500&ndash;$5,000.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Elevation</strong> &mdash; a ground-level 16x20 is the cheapest case. Second-story decks for walkout-basement homes need 6x6 posts and taller footings, adding a written estimate&ndash;a written estimate.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Railing perimeter</strong> &mdash; a 16x20 with three open sides is about 52 linear feet of rail. Aluminum or cable railing adds a written estimate&ndash;a written estimate over composite balusters.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Stair configuration</strong> &mdash; a single short stair is cheapest. Wide cascading stairs or a switchback add a written estimate&ndash;a written estimate.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Picture-frame border</strong> &mdash; a contrasting border board around a 16x20 adds a written estimate&ndash;a written estimate in material and labor; it visually anchors the larger field.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Integrated lighting</strong> &mdash; stair riser and post-cap lights on a low-voltage transformer add a written estimate&ndash;a written estimate.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Under-deck dry space</strong> &mdash; for elevated decks, an above-joist drainage system to keep the basement walkout dry adds a written estimate&ndash;a written estimate.</li>
           </ol>
 
           <h2 style={S.h2}>Composite vs Pressure-Treated for a 16x20 &mdash; the 15-Year View</h2>
-          <p style={S.p}>On a 16x20 the upfront delta is roughly $11,000&ndash;$15,000 in favor of pressure-treated. But a 16x20 wood deck is bigger to maintain &mdash; budget $500&ndash;$1,000 to power-wash, sand, and restain every 2 years if you DIY, or $1,500&ndash;$2,500 professionally. Over 15 years that&apos;s $3,750&ndash;$18,750 in maintenance, plus likely board replacement around year 10&ndash;12. Composite removes almost all of it. Full breakdown in our <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)' }}>composite vs wood deck guide</Link>.</p>
+          <p style={S.p}>On a 16x20 the upfront delta is roughly a written estimate&ndash;a written estimate in favor of pressure-treated. But a 16x20 wood deck is bigger to maintain &mdash; budget a written estimate&ndash;a written estimate to power-wash, sand, and restain every 2 years if you DIY, or a written estimate&ndash;a written estimate professionally. Over 15 years that&apos;s a written estimate&ndash;a written estimate in maintenance, plus likely board replacement around year 10&ndash;12. Composite removes almost all of it. Full breakdown in our <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)' }}>composite vs wood deck guide</Link>.</p>
 
           <h2 style={S.h2}>16x20 Deck Planning Scenarios to Verify Before Case Study Use</h2>
           <p style={S.p}>
@@ -111,9 +111,9 @@ export default function DeckCost16x20Page() {
             and invoice-backed pricing.
           </p>
           {[
-            { price: '$22,000-$26,000', desc: '16x20 Trex Select, Ashburn-style scope', detail: 'Ground-level 16x20 planning scenario in Trex Select Pebble Gray with composite balusters, a single short stair set, and standard fascia. Verify Loudoun permit path and source evidence before use as a source-verified example.' },
-            { price: '$30,000-$35,000', desc: '16x20 Trex Transcend, Reston-style scope', detail: 'Second-story 16x20 planning scenario in Trex Transcend Island Mist with a Charcoal picture-frame border, black aluminum balusters, and stair LED allowance. Verify Fairfax permit, timeline, and photos before publishing as a formal case study.' },
-            { price: '$34,000-$40,000', desc: '16x20 TimberTech AZEK Vintage, McLean-style scope', detail: 'Second-story 16x20 planning scenario using TimberTech AZEK Vintage-style PVC over an above-joist drainage system. Confirm engineering, drainage scope, permit status, and final owner evidence before treating as a source-verified work example.' },
+            { price: 'a written estimate', desc: '16x20 Trex Select, Ashburn-style scope', detail: 'Ground-level 16x20 planning scenario in Trex Select Pebble Gray with composite balusters, a single short stair set, and standard fascia. Verify Loudoun permit path and source evidence before use as a source-verified example.' },
+            { price: 'a written estimate', desc: '16x20 Trex Transcend, Reston-style scope', detail: 'Second-story 16x20 planning scenario in Trex Transcend Island Mist with a Charcoal picture-frame border, black aluminum balusters, and stair LED allowance. Verify Fairfax permit, timeline, and photos before publishing as a formal case study.' },
+            { price: 'a written estimate', desc: '16x20 TimberTech AZEK Vintage, McLean-style scope', detail: 'Second-story 16x20 planning scenario using TimberTech AZEK Vintage-style PVC over an above-joist drainage system. Confirm engineering, drainage scope, permit status, and final owner evidence before treating as a source-verified work example.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem' }}>{p.price} &mdash; {p.desc}</h3>
@@ -127,9 +127,9 @@ export default function DeckCost16x20Page() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "How much does a 16x20 deck cost in Northern Virginia?", a: "Pressure-treated wood: $9,000-$17,000. Standard composite: $20,000-$32,000. Premium composite / PVC: $26,000-$42,000. As of May 2026 NoVA pricing." },
+            { q: "How much does a 16x20 deck cost in Northern Virginia?", a: "Pressure-treated wood: a written estimate. Standard composite: a written estimate. Premium composite / PVC: a written estimate. As of May 2026 NoVA pricing." },
             { q: "Is a 16x20 big enough for a dining table and a seating area?", a: "Yes. 320 sq ft fits a 6-person dining table (about 140 sq ft) plus a small sofa or two armchairs (about 100 sq ft) with real circulation space — the sweet spot for family decks." },
-            { q: "What is the price per square foot for a 16x20?", a: "About $28-$53/sqft in PT wood, $63-$100/sqft in standard composite, $81-$131/sqft in premium. Slightly lower than a 12x20 because fixed costs spread over more boards." },
+            { q: "What is the price per square foot for a 16x20?", a: "About priced in a written estimate in PT wood, priced in a written estimate in standard composite, priced in a written estimate in premium. Slightly lower than a 12x20 because fixed costs spread over more boards." },
             { q: "How long does it take to build?", a: "Construction is about 1.5-2.5 weeks once permits are in hand. Full timeline including HOA review and the county permit is typically 7-11 weeks from contract." },
             { q: "Does a 16x20 deck need a permit?", a: "Yes. Attached = permit required. At 320 sq ft, even a freestanding 16x20 is above the 256 sq ft exemption threshold and needs a permit." },
             { q: "Does a 16x20 deck add resale value?", a: "Yes, and 16x20 is often a sweet spot — large enough to genuinely change how buyers see the backyard without the elevation costs of a much larger build." },

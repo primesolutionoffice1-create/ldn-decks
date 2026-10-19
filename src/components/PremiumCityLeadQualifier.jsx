@@ -29,7 +29,7 @@ export default function PremiumCityLeadQualifier({
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem', marginTop: '1.75rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '1rem', marginTop: '1.75rem' }}>
           <div style={{ border: '1px solid rgba(255,255,255,0.16)', borderRadius: 8, padding: '1.2rem', background: 'rgba(255,255,255,0.06)' }}>
             <h3 style={{ margin: '0 0 0.75rem', fontSize: '1rem', fontWeight: 850 }}>Best-fit project types</h3>
             <ul style={{ margin: 0, paddingLeft: '1.1rem', color: '#e5e7eb', lineHeight: 1.65 }}>

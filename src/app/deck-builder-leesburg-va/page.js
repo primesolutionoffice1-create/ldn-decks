@@ -53,7 +53,7 @@ const leesburgFAQs = [
   },
   {
     q: "What does a deck cost in Leesburg?",
-    a: "Leesburg composite decks generally run $20,000 to $85,000+. Tavistock Farms / Potomac Station mid-tier: $28k-$48k. River Creek and Lansdowne sloped Potomac-facing lots with multi-level designs: $42k-$85k. Estate-tier builds in Lansdowne Conservancy or Beacon Hill with outdoor kitchens: $75k-$150k+."
+    a: "Leesburg composite decks generally are priced in a written estimate. Tavistock Farms / Potomac Station mid-tier: a written estimate. River Creek and Lansdowne sloped Potomac-facing lots with multi-level designs: a written estimate. Estate-tier builds in Lansdowne Conservancy or Beacon Hill with outdoor kitchens: a written estimate."
   },
   {
     q: "Which Leesburg HOAs have you worked with?",
@@ -69,7 +69,7 @@ const leesburgFAQs = [
   },
   {
     q: "What's special about Lansdowne deck projects?",
-    a: "Lansdowne is Loudoun's premier golf-community estate area, split into the Conservancy (the original estate tier, most detailed ARC) and Lansdowne Woods (55+ active-adult community with slightly streamlined review). Conservancy projects average $55k-$95k with detailed material samples and elevation drawings required. See our dedicated Lansdowne HOA deck rules guide for the full submission process."
+    a: "Lansdowne is Loudoun's premier golf-community estate area, split into the Conservancy (the original estate tier, most detailed ARC) and Lansdowne Woods (55+ active-adult community with slightly streamlined review). Conservancy projects average a written estimate with detailed material samples and elevation drawings required. See our dedicated Lansdowne HOA deck rules guide for the full submission process."
   },
   {
     q: "What's special about historic district deck projects?",
@@ -81,7 +81,7 @@ const leesburgFAQs = [
   },
   {
     q: "What's the difference between River Creek and Lansdowne projects?",
-    a: "Both are premier Loudoun communities, but with different character. River Creek favors a more naturalist aesthetic (cedar, IPE, cable rail to preserve Potomac and woods views) — projects average $48k-$85k. Lansdowne favors a traditional aesthetic (warm-tone composites, balustrade or aluminum-traditional railings) — projects average $55k-$95k in the Conservancy. Both require 21-30 day ARC review on average."
+    a: "Both are premier Loudoun communities, but with different character. River Creek favors a more naturalist aesthetic (cedar, IPE, cable rail to preserve Potomac and woods views) — projects average a written estimate. Lansdowne favors a traditional aesthetic (warm-tone composites, balustrade or aluminum-traditional railings) — projects average a written estimate in the Conservancy. Both require 21-30 day ARC review on average."
   }
 ];
 
@@ -105,7 +105,7 @@ const expansionSections = [
     title: "Composite, Cedar and the Leesburg View Lot",
     paragraphs: [
       "Material choice in Leesburg is more varied than in most NoVA towns. Composite leads for its low maintenance, and with Trex, TimberTech, and AZEK product-line planning, we help homeowners compare the top-tier lines. But River Creek homeowners often still choose cedar or IPE for a natural-wood aesthetic, and the historic district frequently calls for AZEK's premium boards where a traditional finish matters. We build all of them well.",
-      "Leesburg's larger, sloped lots shape the design as much as the material. Where a yard falls toward the Potomac, a multi-level deck turns an awkward grade into usable rooms, and cable or glass railing keeps the river or golf-course view intact. Leesburg projects typically start around $20,000 and scale with slope, levels and railing choice.",
+      "Leesburg's larger, sloped lots shape the design as much as the material. Where a yard falls toward the Potomac, a multi-level deck turns an awkward grade into usable rooms, and cable or glass railing keeps the river or golf-course view intact. Leesburg projects typically start around a written estimate and scale with slope, levels and railing choice.",
       "Composite boards ship with a long manufacturer material warranty; pairing it with a certified installation is what keeps that warranty enforceable a decade or two down the road."
     ],
     listItems: [
@@ -126,12 +126,12 @@ const expansionSections = [
   {
     title: "Leesburg Neighborhoods We Build In",
     paragraphs: [
-      "Lansdowne (Conservancy and Lansdowne Woods) is a master-planned golf community split between the original Conservancy estate section and the 55+ Lansdowne Woods sub-community. Conservancy projects often require detailed ARC review, and common scopes include 500-700 sqft multi-level composite decks in the $55k-$95k range. See our dedicated Lansdowne HOA deck rules guide for the full submission process.",
+      "Lansdowne (Conservancy and Lansdowne Woods) is a master-planned golf community split between the original Conservancy estate section and the 55+ Lansdowne Woods sub-community. Conservancy projects often require detailed ARC review, and common scopes include 500-700 sqft multi-level composite decks in the a written estimate range. See our dedicated Lansdowne HOA deck rules guide for the full submission process.",
       "River Creek is the Potomac-side gated community where naturalist aesthetics dominate. Cedar and IPE remain popular here despite the higher maintenance, and cable rail submissions usually need lot-context rationale such as Potomac views or mature woods. Architectural review timelines vary by packet completeness and committee schedule.",
       "Beacon Hill is South Leesburg estate territory with HOA review considerations tied to larger lots and multi-level deck designs.",
-      "Red Cedar is newer (2010+) development north of downtown with HOA review averaging 18 days. Common Red Cedar build: 400-500 sqft composite deck with aluminum railing, $35k-$52k.",
+      "Red Cedar is newer (2010+) development north of downtown with HOA review averaging 18 days. Common Red Cedar build: 400-500 sqft composite deck with aluminum railing, a written estimate.",
       "Brandon Park and Bellewood are mid-tier HOAs with 14-21 day review windows and flexible material approval policies — well-suited to the more value-conscious Leesburg deck budgets.",
-      "Greenway Farm sits in Loudoun County's higher-end estate area with mixed HOA / no-HOA properties. Larger lot sizes (3-10 acres) typical; projects scale to $60k-$200k.",
+      "Greenway Farm sits in Loudoun County's higher-end estate area with mixed HOA / no-HOA properties. Larger lot sizes (3-10 acres) typical; projects scale to a written estimate.",
       "The Downtown Historic District near King Street operates under the Town of Leesburg's Architectural Review Board (ARB) — an additional review layer beyond the standard Town building permit. ARB review adds 30-45 days; we coordinate the submission as part of every historic-district project.",
       "We also build regularly in Battlefield, Edwards Ferry, Stratford, Tavistock Farms, Tuscarora, Country Walk, Ashby Ponds, and Riverside. If your Leesburg HOA isn't listed here, contact us — we have submission templates for every major Loudoun HOA."
     ]
@@ -142,21 +142,21 @@ const expansionSections = [
       "Leesburg pricing reflects the sub-market more than the materials. The same Trex Transcend deck lands at very different totals depending on lot complexity, HOA review intensity, and the design vocabulary the community expects."
     ],
     listItems: [
-      { label: "Single-level composite deck (300-400 sqft, Tavistock / Potomac Station / Red Cedar)", text: "$28,000-$42,000 — Trex Transcend or TimberTech PRO" },
-      { label: "Multi-level composite deck (500-700 sqft, River Creek / Lansdowne)", text: "$52,000-$85,000 — Transcend, AZEK, or TimberTech PRO Legacy" },
-      { label: "PVC deck (350-500 sqft, premium tier)", text: "$36,000-$72,000 — AZEK Vintage Mahogany, Coastline, or Brownstone" },
-      { label: "Screened porch (250-350 sqft)", text: "$48,000-$78,000 — composite + EZE-Breeze + roof + electric" },
-      { label: "Deck replacement (400 sqft, framing salvaged)", text: "$22,000-$42,000 — resurface vs full rebuild flow" },
-      { label: "Patio + deck combo (Lansdowne / Beacon Hill estates)", text: "$58,000-$120,000+ — composite deck + paver patio + outdoor kitchen" },
-      { label: "Estate-tier outdoor living (Lansdowne Conservancy, Beacon Hill, Greenway Farm)", text: "$95,000-$180,000+ — multi-level deck + screened porch + outdoor kitchen + fire feature" }
+      { label: "Single-level composite deck (300-400 sqft, Tavistock / Potomac Station / Red Cedar)", text: "a written estimate — Trex Transcend or TimberTech PRO" },
+      { label: "Multi-level composite deck (500-700 sqft, River Creek / Lansdowne)", text: "a written estimate — Transcend, AZEK, or TimberTech PRO Legacy" },
+      { label: "PVC deck (350-500 sqft, premium tier)", text: "a written estimate — AZEK Vintage Mahogany, Coastline, or Brownstone" },
+      { label: "Screened porch (250-350 sqft)", text: "a written estimate — composite + EZE-Breeze + roof + electric" },
+      { label: "Deck replacement (400 sqft, framing salvaged)", text: "a written estimate — resurface vs full rebuild flow" },
+      { label: "Patio + deck combo (Lansdowne / Beacon Hill estates)", text: "a written estimate — composite deck + paver patio + outdoor kitchen" },
+      { label: "Estate-tier outdoor living (Lansdowne Conservancy, Beacon Hill, Greenway Farm)", text: "a written estimate — multi-level deck + screened porch + outdoor kitchen + fire feature" }
     ]
   },
   {
     title: "Town of Leesburg vs Loudoun County — the Permit Reality",
     paragraphs: [
       "Leesburg is unique among Loudoun towns: properties inside the Town of Leesburg corporate limits permit through the Town's building department; properties just outside the line permit through Loudoun County. The two operate independently with different timelines, fee structures, and submission portals.",
-      "Town of Leesburg permits average 2-4 weeks plan review through the Town building department. Town fees are flat-tier based on construction valuation (typically $150-$500 for residential deck work). The Town's reviewer staff is smaller than the County's but typically faster on revision cycles.",
-      "Loudoun County permits average 2-4 weeks through the LandMARC portal. County fees are valuation-scaled (typically $150-$700). The LandMARC system requires specific PDF plan formats; we prepare every submission to that standard so reviewer comments are easier to answer quickly.",
+      "Town of Leesburg permits average 2-4 weeks plan review through the Town building department. Town fees are flat-tier based on construction valuation (typically a written estimate for residential deck work). The Town's reviewer staff is smaller than the County's but typically faster on revision cycles.",
+      "Loudoun County permits average 2-4 weeks through the LandMARC portal. County fees are valuation-scaled (typically a written estimate). The LandMARC system requires specific PDF plan formats; we prepare every submission to that standard so reviewer comments are easier to answer quickly.",
       "Historic district properties downtown add a third layer: the Town's Architectural Review Board (ARB) reviews exterior changes. ARB review adds 30-45 days. The ARB submission requires elevation drawings, material samples, color specifications, and (often) a public hearing for visible exterior modifications.",
       "Our standard Leesburg estimate identifies which jurisdiction applies on the very first call and what (if any) ARB review will be required. The wrong filing path is the most common source of a delayed Leesburg deck. See our full Loudoun County deck permit guide for the county-side walkthrough."
     ]
@@ -167,7 +167,7 @@ export default function DeckBuilderLeesburgPage() {
   return (
     <main>
       <LocalBusinessSchema city="Leesburg" url="https://ldndecks.com/deck-builder-leesburg-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-leesburg-va" name="Deck Builder in Leesburg, VA | Composite Decks | Loudoun Decks" description="Deck builder in Leesburg, VA. Custom Trex &amp; cedar decks for River Creek, Lansdowne, Tavistock Farms &amp; the historic district. Town of Leesburg + Loudoun County permit planning support. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-leesburg-va" name="Deck Builder in Leesburg, VA | Composite Decks | Loudoun Decks" description="Deck builder in Leesburg, VA. Custom Trex &amp; cedar decks for River Creek, Lansdowne, Tavistock Farms &amp; the historic district. Town of Leesburg + Loudoun County permit planning support. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Leesburg, VA's Trusted Deck Company"
         title="Custom Deck Builder in Leesburg, VA"
@@ -176,7 +176,7 @@ export default function DeckBuilderLeesburgPage() {
       <ServiceMain
         subtitle="Historic Loudoun Craftsmanship"
         title="Deck Builder Leesburg VA  -  Premium Quality"
-        description="We build decks suited to Leesburg's two worlds  -  the historic district and the river communities. Slope-engineered designs, view-preserving railings, materials from $20k+."
+        description="We build decks suited to Leesburg's two worlds  -  the historic district and the river communities. Slope-engineered designs, view-preserving railings, materials from a written estimate."
         listItems={[
           "Trex, TimberTech, AZEK, cedar & IPE",
           "Town of Leesburg & Loudoun County permits confirmed and filed",
@@ -275,7 +275,7 @@ export default function DeckBuilderLeesburgPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Leesburg" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Leesburg" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-leesburg-va" />
-      <NamedAuthor context="Leesburg and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Leesburg and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

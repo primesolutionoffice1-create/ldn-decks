@@ -16,7 +16,7 @@ import { COVERAGE_SENTENCE } from '@/lib/serviceArea';
 export const metadata = buildMetadata({
   path: '/deck-resurfacing-northern-virginia',
   title: 'Deck Resurfacing in Northern Virginia',
-  description: 'Premium deck resurfacing in Northern Virginia. Keep your existing frame, install new composite boards & railings. Typical projects $15k–$30k+. Free inspection.',
+  description: 'Premium deck resurfacing in Northern Virginia. Keep your existing frame, install new composite boards & railings. Typical projects a written estimate. Free inspection.',
   image: '/social/deck-resurfacing-northern-virginia-social.png',
 });
 
@@ -29,7 +29,7 @@ const faqSchema = {
       name: 'How much does deck resurfacing cost in Northern Virginia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Premium deck resurfacing in Northern Virginia typically runs $15,000–$30,000+ for a 300–400 sqft deck. Pricing depends on board tier (Trex Enhance, Transcend, Signature or TimberTech AZEK), railing system, stair count, and lighting. Resurfacing usually saves 40–60% vs a full rebuild because the existing frame stays.',
+        text: 'Premium deck resurfacing in Northern Virginia typically is priced in a written estimate for a 300–400 sqft deck. Pricing depends on board tier (Trex Enhance, Transcend, Signature or TimberTech AZEK), railing system, stair count, and lighting. Resurfacing usually saves 40–60% vs a full rebuild because the existing frame stays.',
       },
     },
     {
@@ -84,20 +84,20 @@ const counties = [
 ];
 
 const costRows = [
-  ['250 sqft (10×25)', '$15,000–$22,000', '$18,000–$26,000', '$22,000–$30,000+'],
-  ['350 sqft (14×25)', '$18,000–$26,000', '$22,000–$32,000', '$28,000–$38,000+'],
-  ['450 sqft (15×30)', '$22,000–$30,000', '$28,000–$38,000', '$34,000–$46,000+'],
-  ['600 sqft (20×30)', '$26,000–$36,000', '$34,000–$46,000', '$42,000–$58,000+'],
+  ['250 sqft (10×25)', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['350 sqft (14×25)', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['450 sqft (15×30)', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['600 sqft (20×30)', 'a written estimate', 'a written estimate', 'a written estimate'],
 ];
 
 export default function DeckResurfacingNorthernVirginiaPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01"
+      <WebPageSchema dateModified="2026-10-18"
         url="https://ldndecks.com/deck-resurfacing-northern-virginia"
         name="Deck Resurfacing in Northern Virginia"
-        description="Premium deck resurfacing in Northern Virginia. Keep your existing frame, install new composite boards & railings. Typical projects $15k–$30k+. Free inspection."
+        description="Premium deck resurfacing in Northern Virginia. Keep your existing frame, install new composite boards & railings. Typical projects a written estimate. Free inspection."
         speakable
       />
 
@@ -129,7 +129,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p>
-            <strong>Deck resurfacing</strong> in Northern Virginia typically runs <strong>$15,000–$30,000+</strong>{' '}
+            <strong>Deck resurfacing</strong> in Northern Virginia typically runs <strong>a written estimate</strong>{' '}
             for a 300–400 sqft deck. We strip the old boards and railings, inspect the frame, then install new{' '}
             composite or PVC decking with new railings, fascia, and stairs. If the frame fails inspection, we recommend{' '}
             <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
@@ -219,7 +219,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
           </ul>
 
           <h2 style={S.h2}>Counties &amp; Cities We Cover</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {counties.map((c) => (
               <div key={c.name} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
                 <h3 style={{ fontWeight: 700, marginBottom: '0.5rem' }}>{c.name}</h3>
@@ -254,10 +254,10 @@ export default function DeckResurfacingNorthernVirginiaPage() {
             month/year, signed scope, before/after photos, permit or HOA status, and final estimate or invoice.
           </p>
           {[
-            { price: '$18,000-$22,000', loc: 'South Riding-style scope', detail: '280 sqft resurfacing scenario for an older pressure-treated surface with a sound frame after inspection. Budget assumes Trex Enhance Naturals, aluminum railings, stair-light allowance, and permit/HOA/timeline verification after scope review.' },
-            { price: '$21,000-$25,000', loc: 'Brambleton-style scope', detail: '300 sqft resurfacing scenario with mid-tier composite decking and composite railings. Use this for budget planning only until HOA status, inspection notes, and final material selections are verified.' },
-            { price: '$26,000-$31,000', loc: 'Ashburn-style scope', detail: '380 sqft premium resurfacing scenario using TimberTech AZEK Vintage-style PVC, black aluminum railing, recessed stair lighting, and a picture-frame border. Verify site access, framing condition, HOA status, and material quote before publishing as a source-verified example.' },
-            { price: '$30,000-$36,000', loc: 'Fairfax-style scope', detail: '420 sqft resurfacing scenario with two stair flights and mixed railing zones. County permit triggers, final inspection path, and project timeline must be confirmed from owner evidence before this becomes a formal case study.' },
+            { price: 'a written estimate', loc: 'South Riding-style scope', detail: '280 sqft resurfacing scenario for an older pressure-treated surface with a sound frame after inspection. Budget assumes Trex Enhance Naturals, aluminum railings, stair-light allowance, and permit/HOA/timeline verification after scope review.' },
+            { price: 'a written estimate', loc: 'Brambleton-style scope', detail: '300 sqft resurfacing scenario with mid-tier composite decking and composite railings. Use this for budget planning only until HOA status, inspection notes, and final material selections are verified.' },
+            { price: 'a written estimate', loc: 'Ashburn-style scope', detail: '380 sqft premium resurfacing scenario using TimberTech AZEK Vintage-style PVC, black aluminum railing, recessed stair lighting, and a picture-frame border. Verify site access, framing condition, HOA status, and material quote before publishing as a source-verified example.' },
+            { price: 'a written estimate', loc: 'Fairfax-style scope', detail: '420 sqft resurfacing scenario with two stair flights and mixed railing zones. County permit triggers, final inspection path, and project timeline must be confirmed from owner evidence before this becomes a formal case study.' },
           ].map((p, i) => (
             <div key={i} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '1rem', borderLeft: '4px solid var(--color-primary)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', flexWrap: 'wrap', gap: '0.5rem' }}>
@@ -270,7 +270,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
 
           <h2 style={S.h2}>FAQ</h2>
           {[
-            { q: 'How much does deck resurfacing cost in Northern Virginia?', a: 'Typical 300–400 sqft projects run $15,000–$30,000+ depending on board tier, railing system, and stair count. Bigger or premium-tier projects go higher.' },
+            { q: 'How much does deck resurfacing cost in Northern Virginia?', a: 'Typical 300–400 sqft projects are priced in a written estimate depending on board tier, railing system, and stair count. Bigger or premium-tier projects go higher.' },
             { q: "What's included?", a: 'Demolition of old boards and railings, frame inspection, new composite or PVC decking, new railings, fascia, stair treads, hidden fasteners, permits, and HOA submission.' },
             { q: 'Do I need a permit?', a: 'In Loudoun, Fairfax, Prince William, Arlington, and Alexandria, replacing the deck surface, railings, or stairs generally requires a permit. We handle the permit and HOA paperwork.' },
             { q: 'Can my deck be resurfaced?', a: 'Only if the frame passes structural inspection. Joists, beams, posts, footings, and ledger must all be sound. We offer free inspections.' },
@@ -318,7 +318,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
         buttonText="Schedule Free Inspection"
         link="/get-estimate"
       />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath="/deck-resurfacing-northern-virginia" />
       <ContactHome />
     </>

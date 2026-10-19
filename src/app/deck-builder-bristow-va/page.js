@@ -21,14 +21,14 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 export const metadata = buildMetadata({
   path: '/deck-builder-bristow-va',
   title: 'Deck Builder in Bristow VA | Composite Deck Resurfacing & New Builds',
-  description: "Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  save 40-60% by keeping a sound frame. New composite decks from $18k. Prince William permit planning support. Free estimate.",
+  description: "Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  keep a sound frame when inspection allows resurfacing. New composite decks from a written estimate. Prince William permit planning support. Free estimate.",
   image: '/social/deck-builder-bristow-va-social.png',
 });
 
 const inclusions = [
   {
-    title: "Resurfacing Specialists  -  Save 40-60%",
-    desc: "Bristow homes built 2005-2018 often have structurally sound PT wood frames with worn-out decking. We inspect the frame, replace only what is needed, and resurface with composite  -  cutting project cost by 40-60% compared to a full tear-down and rebuild."
+    title: "Resurfacing Specialists  -  Resurface when the frame passes inspection",
+    desc: "Bristow homes built 2005-2018 often have structurally sound PT wood frames with worn-out decking. We inspect the frame, replace only what is needed, and resurface with composite  -  replacing the worn boards and railings when the frame passes inspection."
   },
   {
     title: "Every Bristow HOA, Handled",
@@ -43,11 +43,11 @@ const inclusions = [
 const bristowFAQs = [
   {
     q: "How much does a new composite deck cost in Bristow, VA?",
-    a: "New composite decks in Bristow typically run $18,000 to $45,000, depending on size, material line and railing choice. Composite boards install at roughly $30-$52 per square foot. Prince William County pricing runs 10-20% lower than equivalent builds in Fairfax or Loudoun County for the same materials and scope."
+    a: "New composite decks in Bristow typically are priced in a written estimate, depending on size, material line and railing choice. Composite boards install at roughly a written estimate per square foot. Prince William County pricing runs 10-20% lower than equivalent builds in Fairfax or Loudoun County for the same materials and scope."
   },
   {
     q: "What does deck resurfacing cost in Bristow?",
-    a: "Resurfacing  -  removing old decking and railings while keeping the existing frame  -  runs $10,000 to $21,000 for a typical Bristow deck. The savings come from skipping the demolition, new footings and framing that a full replacement requires. We inspect every joist and beam before quoting; if the frame passes, resurfacing cuts total cost by 40-60%."
+    a: "Resurfacing  -  removing old decking and railings while keeping the existing frame  -  is priced in a written estimate for a typical Bristow deck. The savings come from skipping the demolition, new footings and framing that a full replacement requires. We inspect every joist and beam before quoting; if the frame passes, resurfacing limits the work to what the inspection says must be replaced."
   },
   {
     q: "How do I know if my Bristow deck frame can be resurfaced?",
@@ -73,7 +73,7 @@ const expansionSections = [
     paragraphs: [
       "Bristow's major communities  -  Bristow Manor, Braemar, Linton Hall, Victory Lakes  -  were built in a concentrated window from roughly 2005 to 2018. Nearly every home in those developments came with a builder-grade pressure-treated wood deck. Those decks are now 7-15 years old, and the upgrade cycle is well underway.",
       "The pattern is predictable: the original PT boards gray out within 3-5 years, splinter by year 7, and start showing structural soft spots by year 12-15 if they were not stained consistently. Homeowners who kept up with annual staining bought time, but the boards themselves have a finite lifespan. The good news is that the underlying frames  -  built with modern ground-contact rated PT lumber  -  often remain structurally sound.",
-      "That gap between a failing deck surface and a solid frame is exactly where resurfacing fits. Instead of demolishing and rebuilding from scratch, we strip the old decking and railings, inspect every joist and beam, replace any compromised members individually, and install composite decking on the existing structure. The result is a 25-year-warranty deck at 40-60% of the cost of a full new build."
+      "That gap between a failing deck surface and a solid frame is exactly where resurfacing fits. Instead of demolishing and rebuilding from scratch, we strip the old decking and railings, inspect every joist and beam, replace any compromised members individually, and install composite decking on the existing structure. The result is a 25-year-warranty deck without rebuilding every part of the structure."
     ]
   },
   {
@@ -89,7 +89,7 @@ const expansionSections = [
     paragraphs: [
       "The decision between resurfacing and full replacement comes down to the frame. If the joists, beams, ledger board and footings are structurally sound, resurfacing delivers a like-new deck at a fraction of the cost. If the frame has widespread rot, insect damage or undersized members that do not meet current code, a full replacement is the right call.",
       "In Bristow, resurfacing is viable more often than not. The homes are relatively new, the PT lumber used for framing in the 2005-2018 era was treated to ground-contact standards, and Prince William County's well-drained clay soils do not trap water against footings the way some Northern Virginia locations do. We see resurfacing rates above 70% on Bristow estimates.",
-      "A typical Bristow resurfacing  -  say a 300 square foot deck  -  runs $10,000 to $21,000 depending on composite line, railing style and lighting. A full new deck of the same size runs $18,000 to $30,000. The difference covers a lot of other home projects. We present both options at every estimate so the homeowner can make an informed decision."
+      "A typical Bristow resurfacing  -  say a 300 square foot deck  -  is priced in a written estimate depending on composite line, railing style and lighting. A full new deck of the same size is priced in a written estimate. The difference covers a lot of other home projects. We present both options at every estimate so the homeowner can make an informed decision."
     ]
   },
   {
@@ -97,7 +97,7 @@ const expansionSections = [
     paragraphs: [
       "Bristow lots are typically 0.1 to 0.25 acres  -  enough for a generous deck but not unlimited space. That makes smart layout essential. We design decks that create distinct zones  -  a dining area sized for a 6-person table, a lounge section for seating, and a grill station  -  without wasting square footage on dead corners or awkward transitions.",
       "Screened porches are a natural addition in Bristow. The communities sit in a corridor that sees heavy mosquito pressure from late May through September, and a screened-in section turns a seasonal deck into a three-season room. We frame the screen room into the deck structure from the start, which is cleaner and stronger than adding one later.",
-      "Stair lighting, post cap lights and under-rail LED strips finish the space for evening use  -  important in Bristow where families are often outside after work and school. These details add $800-$2,500 to a project but change how the deck functions after sunset."
+      "Stair lighting, post cap lights and under-rail LED strips finish the space for evening use  -  important in Bristow where families are often outside after work and school. These details add a written estimate to a project but change how the deck functions after sunset."
     ]
   }
 ];
@@ -106,7 +106,7 @@ export default function BristowDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="Bristow" url="https://ldndecks.com/deck-builder-bristow-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-bristow-va" name="Deck Builder in Bristow VA | Composite Deck Resurfacing & New Builds" description="Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  save 40-60% by keeping a sound frame. New composite decks from $18k. Prince William permit planning support. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-bristow-va" name="Deck Builder in Bristow VA | Composite Deck Resurfacing & New Builds" description="Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  keep a sound frame when inspection allows resurfacing. New composite decks from a written estimate. Prince William permit planning support. Free estimate." speakable />
       <ServicesHeader
         subtext="Bristow, VA's Trusted Deck Company"
         title="Custom Deck Builder in Bristow, VA"
@@ -115,10 +115,10 @@ export default function BristowDeckBuilderPage() {
       <ServiceMain
         subtitle="Resurfacing Specialists for Bristow's Upgrade Cycle"
         title="Deck Builder Bristow VA  -  New Builds & Resurfacing"
-        description="Bristow homes built 2005-2018 are entering the deck upgrade cycle. We inspect the frame, resurface with composite if it is sound, and build new when it is not. From $10k resurfacing to $45k new builds."
+        description="Bristow homes built 2005-2018 are entering the deck upgrade cycle. We inspect the frame, resurface with composite if it is sound, and build new when it is not. From a written estimate resurfacing to a written estimate new builds."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
-          "Resurfacing saves 40-60% when the frame is sound",
+          "Resurfacing keeps a sound frame instead of rebuilding it when the frame is sound",
           "Bristow Manor, Braemar, Linton Hall HOA packages prepared",
           "Prince William County permits  -  2-4 week plan review",
           "Public reviews - call (571) 655-7207"
@@ -187,7 +187,7 @@ export default function BristowDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Bristow" /></div></section>
       <SimpleCTA title="Upgrade Your Bristow Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-bristow-va" />
-      <NamedAuthor context="Bristow and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Bristow and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

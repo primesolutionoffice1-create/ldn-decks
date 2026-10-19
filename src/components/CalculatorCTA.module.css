@@ -151,7 +151,7 @@
 
 .materialToggle {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 4.75rem), 1fr));
   gap: 8px;
   background: #f7fafc;
   padding: 6px;

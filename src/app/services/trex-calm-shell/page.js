@@ -102,7 +102,7 @@ export default function TrexCalmShellPage() {
       <section style={{ padding: '60px 20px', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '15px' }}>See the Transformation</h2>
         <p style={{ marginBottom: '40px', fontSize: '18px', color: '#555' }}>From weathered wood to a beautiful Trex surface.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '20px' }}>
           <div style={{ position: 'relative', height: '400px', borderRadius: '8px', overflow: 'hidden' }}>
             <Image src="/showcase/img23.jpg" alt="Before Trex Calm Shell deck resurfacing — old wood deck in Northern Virginia" fill style={{ objectFit: 'cover' }} />
           </div>

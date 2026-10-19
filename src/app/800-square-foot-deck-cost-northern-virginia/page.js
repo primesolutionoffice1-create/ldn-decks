@@ -13,7 +13,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/800-square-foot-deck-cost-northern-virginia',
   title: '800 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks',
-  description: '2026 planning pricing for an 800 sqft estate-tier deck in Northern Virginia. Trex Transcend $38k–$58k. TimberTech AZEK $46k–$66k. Multi-level + outdoor kitchen + fire feature detailed.',
+  description: '2026 planning pricing for an 800 sqft estate-tier deck in Northern Virginia. Trex Transcend is priced in a written estimate. TimberTech AZEK is priced in a written estimate. Multi-level + outdoor kitchen + fire feature detailed.',
   image: '/social/800-square-foot-deck-cost-northern-virginia-social.png',
 });
 
@@ -21,7 +21,7 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does an 800 square foot composite deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "An 800 sqft composite deck in Northern Virginia costs $30,000–$80,000+ installed in 2026. Trex Enhance lands at $30k–$42k. Trex Transcend lands at $38k–$58k. TimberTech AZEK lands at $46k–$66k. Multi-level designs (almost universal at this size) add $8k–$15k. Outdoor kitchens, pergolas, and integrated lighting push complete packages to $75k–$130k+. Includes permit, framing, railings, and 3 required inspections." } },
+    { "@type": "Question", name: "How much does an 800 square foot composite deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "An 800 sqft composite deck in Northern Virginia is priced in a written estimate installed in 2026. Trex Enhance is priced in a written estimate. Trex Transcend is priced in a written estimate. TimberTech AZEK is priced in a written estimate. Multi-level designs (almost universal at this size) add a written estimate. Outdoor kitchens, pergolas, and integrated lighting push complete packages to a written estimate. Includes permit, framing, railings, and 3 required inspections." } },
     { "@type": "Question", name: "Who builds an 800 sqft deck — what's the typical profile?", acceptedAnswer: { "@type": "Answer", text: "Estate-tier homes with 0.5+ acre lots. Common locations in our portfolio: Virginia Run, Belmont Country Club premier estates, Loudoun Valley Estates, Lansdowne Conservancy, Brambleton Estate sections, Great Falls, McLean Langley Forest, Donaldson Run (Arlington). Households at this scale typically host 12-20+ guests routinely, want fully separated zones for dining/lounging/grilling/fire-feature, and treat the deck as the home's primary outdoor entertainment anchor." } },
     { "@type": "Question", name: "What's included in an 800 sqft deck quote?", acceptedAnswer: { "@type": "Answer", text: "Free 3D photorealistic design rendering with multiple viewing angles, engineered structural framing (sealed drawings for the larger load — 2×10 or 2×12 joists depending on spans, doubled beams, larger footings sized to soil bearing capacity), composite or wood surface boards with hidden fasteners on the field, picture-frame border (typical at this tier), premium railings, code-compliant stairs with handrails, integrated lighting (8–16 points), building permit, county inspections, and written warranty terms. Multi-level transition steps and additional stair sets included when designed in." } },
     { "@type": "Question", name: "How long does an 800 sqft deck project take?", acceptedAnswer: { "@type": "Answer", text: "From signed contract: 12–18 weeks. Engineered structural drawings: 1–2 weeks. County permit: 3–6 weeks (longer than smaller decks because of the sealed-drawings review). HOA approval in parallel: 2–4 weeks (the larger build often triggers in-person committee review at premium HOAs like Virginia Run or Belmont). Material delivery: 2–4 weeks. Construction on-site: 3–5 weeks for the deck alone; 5–8 weeks if the build includes an outdoor kitchen, pergola, or fire feature. Most 800 sqft projects break ground 6–8 weeks after contract." } },
@@ -47,14 +47,14 @@ export default function EightHundredSqftDeckCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/800-square-foot-deck-cost-northern-virginia" name="800 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks" description="2026 planning pricing for an 800 sqft estate-tier composite deck in Northern Virginia. Multi-level configurations, outdoor kitchen + pergola + fire feature integration, sealed structural drawings, permit, timeline." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/800-square-foot-deck-cost-northern-virginia" name="800 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks" description="2026 planning pricing for an 800 sqft estate-tier composite deck in Northern Virginia. Multi-level configurations, outdoor kitchen + pergola + fire feature integration, sealed structural drawings, permit, timeline." speakable />
       <ArticleSchema
         title="800 Square Foot Deck Cost in Northern Virginia (2026)"
         description="2026 planning pricing for an 800 sqft estate-tier composite deck in Northern Virginia. Engineered structural framing, outdoor kitchen pairing, hot tub integration, premium HOA review."
         path="/800-square-foot-deck-cost-northern-virginia"
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-05-27"
+        dateModified="2026-10-18"
       />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
@@ -71,7 +71,7 @@ export default function EightHundredSqftDeckCostPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick answer:</p>
-          <p>An 800 sqft composite deck in Northern Virginia costs <strong>$30,000–$80,000+</strong> installed in 2026. Trex Transcend $38k–$58k. TimberTech AZEK $46k–$66k. Multi-level adds $8–15k. Outdoor kitchen + pergola + fire feature packages reach $75k–$130k+. Estate-tier homes only.</p>
+          <p>An 800 sqft composite deck in Northern Virginia costs <strong>a written estimate</strong> installed in 2026. Trex Transcend is priced in a written estimate. TimberTech AZEK is priced in a written estimate. Multi-level adds a written estimate. Outdoor kitchen + pergola + fire feature packages reach a written estimate. Estate-tier homes only.</p>
         </div>
       </section>
 
@@ -79,7 +79,7 @@ export default function EightHundredSqftDeckCostPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <h2 style={S.h2}>2026 pricing for an 800 sqft estate-tier deck, by brand</h2>
-          <p style={S.p}>800 sqft is the estate-tier threshold in Northern Virginia. Almost every 800 sqft project we build is multi-level (90%+), almost every one includes either an outdoor kitchen or a fire feature, and almost every one requires engineered structural drawings. The pricing below covers the multi-level baseline; full outdoor-living packages with all the integrations push to $75k–$130k.</p>
+          <p style={S.p}>800 sqft is the estate-tier threshold in Northern Virginia. Almost every 800 sqft project we build is multi-level (90%+), almost every one includes either an outdoor kitchen or a fire feature, and almost every one requires engineered structural drawings. The pricing below covers the multi-level baseline; full outdoor-living packages with all the integrations push to a written estimate.</p>
 
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -92,12 +92,12 @@ export default function EightHundredSqftDeckCostPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td style={S.td}>Pressure-treated wood</td><td style={S.td}>Budget</td><td style={S.td}>$18,000–$32,000</td><td style={S.td}>+$30–55k</td></tr>
-                <tr><td style={S.td}>Trex Enhance</td><td style={S.td}>Value composite</td><td style={S.td}>$30,000–$42,000</td><td style={S.td}>+$30–55k</td></tr>
-                <tr><td style={S.td}>Trex Transcend</td><td style={S.td}>Mid-premium</td><td style={S.td}>$38,000–$58,000</td><td style={S.td}>+$35–65k</td></tr>
-                <tr><td style={S.td}>TimberTech PRO Legacy</td><td style={S.td}>Premium composite</td><td style={S.td}>$42,000–$60,000</td><td style={S.td}>+$35–65k</td></tr>
-                <tr><td style={S.td}>TimberTech AZEK Vintage Mahogany</td><td style={S.td}>Premium PVC</td><td style={S.td}>$46,000–$66,000</td><td style={S.td}>+$40–70k</td></tr>
-                <tr><td style={S.td}>TimberTech AZEK Coastline</td><td style={S.td}>Premium PVC (cool surface)</td><td style={S.td}>$48,000–$68,000</td><td style={S.td}>+$40–70k</td></tr>
+                <tr><td style={S.td}>Pressure-treated wood</td><td style={S.td}>Budget</td><td style={S.td}>a written estimate</td><td style={S.td}>priced in the written estimate</td></tr>
+                <tr><td style={S.td}>Trex Enhance</td><td style={S.td}>Value composite</td><td style={S.td}>a written estimate</td><td style={S.td}>priced in the written estimate</td></tr>
+                <tr><td style={S.td}>Trex Transcend</td><td style={S.td}>Mid-premium</td><td style={S.td}>a written estimate</td><td style={S.td}>priced in the written estimate</td></tr>
+                <tr><td style={S.td}>TimberTech PRO Legacy</td><td style={S.td}>Premium composite</td><td style={S.td}>a written estimate</td><td style={S.td}>priced in the written estimate</td></tr>
+                <tr><td style={S.td}>TimberTech AZEK Vintage Mahogany</td><td style={S.td}>Premium PVC</td><td style={S.td}>a written estimate</td><td style={S.td}>priced in the written estimate</td></tr>
+                <tr><td style={S.td}>TimberTech AZEK Coastline</td><td style={S.td}>Premium PVC (cool surface)</td><td style={S.td}>a written estimate</td><td style={S.td}>priced in the written estimate</td></tr>
               </tbody>
             </table>
           </div>
@@ -139,17 +139,17 @@ export default function EightHundredSqftDeckCostPage() {
 
           <h2 style={S.h2}>Estate communities where 800 sqft is the standard</h2>
           <ul style={S.list}>
-            <li style={S.listItem}><strong>Virginia Run</strong> (Centreville) — premier master-planned community with golf course, HOA $90-120/mo, the most detailed ARC in Centreville</li>
-            <li style={S.listItem}><strong>Belmont Country Club</strong> (Ashburn) — premium estate-tier, $1.5–3M+ home values, detailed committee review</li>
+            <li style={S.listItem}><strong>Virginia Run</strong> (Centreville) — premier master-planned community with golf course, HOA a lender-calculated payment, the most detailed ARC in Centreville</li>
+            <li style={S.listItem}><strong>Belmont Country Club</strong> (Ashburn) — premium estate-tier, a written estimateM+ home values, detailed committee review</li>
             <li style={S.listItem}><strong>Lansdowne Conservancy + Lansdowne Woods</strong> (Leesburg) — three sub-communities with separate ARC processes</li>
-            <li style={S.listItem}><strong>Loudoun Valley Estates</strong> (Ashburn) — multi-level deck country; common $55-95k builds</li>
+            <li style={S.listItem}><strong>Loudoun Valley Estates</strong> (Ashburn) — multi-level deck country; common a written estimate builds</li>
             <li style={S.listItem}><strong>Brambleton Estate</strong> sections (Ashburn) — larger lots backing to common-area wooded buffers</li>
             <li style={S.listItem}><strong>Great Falls</strong> + <strong>McLean Langley Forest</strong> — non-HOA estate territory; only county permit required, full design freedom</li>
             <li style={S.listItem}><strong>Donaldson Run</strong> (Arlington) — wooded ravines support some of our most ambitious Arlington builds with cable railings preserving tree-canopy views</li>
           </ul>
 
           <h2 style={S.h2}>Permit + sealed engineering (included)</h2>
-          <p style={S.p}>800 sqft triggers permit-ready planning plus typical 3-inspection requirements plus, in most cases, sealed engineering. Permit fees scale with construction valuation — typically $400–$1,200 at this size. We prepare permit documentation as part of the project schedule.</p>
+          <p style={S.p}>800 sqft triggers permit-ready planning plus typical 3-inspection requirements plus, in most cases, sealed engineering. Permit fees scale with construction valuation — typically a written estimate at this size. We prepare permit documentation as part of the project schedule.</p>
           <ul style={S.list}>
             <li style={S.listItem}><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County permit guide</Link></li>
             <li style={S.listItem}><Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County permit guide</Link></li>
@@ -184,7 +184,7 @@ export default function EightHundredSqftDeckCostPage() {
 
       <SimpleCTA title="Estate-tier deck project? Get a free 3D rendering + itemized 800 sqft estimate" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/800-square-foot-deck-cost-northern-virginia" />
-      <NamedAuthor context="Northern Virginia estate-tier deck pricing" lastUpdated="2026-05-27" />
+      <NamedAuthor context="Northern Virginia estate-tier deck pricing" lastUpdated="2026-10-18" />
       <ContactHome />
     </>
   );

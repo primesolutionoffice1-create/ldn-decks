@@ -43,7 +43,7 @@ const inclusions = [
 const springfieldFAQs = [
   {
     q: "How much does a new deck cost in Springfield, VA?",
-    a: "Springfield composite deck projects typically range from $22,000 to $50,000. A standard 300-350 sqft Trex Enhance or Transcend deck with aluminum railings runs $28,000-$38,000 installed. Townhome decks in Kingstowne tend toward the lower end of that range due to smaller footprints, while single-family homes in West Springfield and Saratoga with larger lots and multi-level designs reach higher."
+    a: "Springfield composite deck projects typically range from a written estimate to a written estimate. A standard 300-350 sqft Trex Enhance or Transcend deck with aluminum railings is priced in a written estimate installed. Townhome decks in Kingstowne tend toward the lower end of that range due to smaller footprints, while single-family homes in West Springfield and Saratoga with larger lots and multi-level designs reach higher."
   },
   {
     q: "Does Kingstowne HOA allow composite decking?",
@@ -81,7 +81,7 @@ const expansionSections = [
     paragraphs: [
       "Springfield sits in a value-conscious segment of the Northern Virginia market. Home prices are strong but below the peaks seen in western Loudoun or McLean, which means buyers here pay close attention to outdoor living space as a differentiator. A well-built composite deck is one of the most visible upgrades a Springfield home can carry, and it directly expands usable square footage.",
       "National remodeling data puts composite deck ROI at 65-75% of project cost at resale, and in Springfield's competitive market  -  where families commuting to Fort Belvoir, the Pentagon and the Springfield Metro are comparing similar homes  -  a finished deck can be the factor that moves a listing. The practical return goes beyond resale: a family that uses their deck three seasons a year gets years of daily value from the investment.",
-      "We size and specify Springfield decks with both the homeowner's use and the home's market position in mind. Overbuilding a $60,000 deck on a $550,000 Springfield home makes less sense than a well-designed $30,000 deck that hits the right balance."
+      "We size and specify Springfield decks with both the homeowner's use and the home's market position in mind. Overbuilding a a written estimate deck on a a written estimate Springfield home makes less sense than a well-designed a written estimate deck that hits the right balance."
     ]
   },
   {
@@ -97,7 +97,7 @@ const expansionSections = [
     paragraphs: [
       "Many Springfield lots have a gentle grade change from the back door to the yard  -  enough to make a raised deck practical and a patio below it useful. A deck-and-patio combination takes advantage of that grade: the composite deck extends from the main floor for dining and seating, while a paver or concrete patio at ground level serves as a second outdoor room.",
       "The key to making this work is under-deck drainage. A dry-joist system installed beneath the deck boards channels water to a gutter at the edge, keeping the patio below completely dry during rain. Without drainage, the lower patio gets wet every time it rains and accumulates debris  -  defeating the purpose of the covered space.",
-      "Combined deck-and-patio builds in Springfield typically run $35,000-$55,000 depending on total square footage, material tier and whether the patio is pavers or stamped concrete. It is a more involved project than a deck alone, but it effectively creates two distinct outdoor living zones from a single build."
+      "Combined deck-and-patio builds in Springfield typically are priced in a written estimate depending on total square footage, material tier and whether the patio is pavers or stamped concrete. It is a more involved project than a deck alone, but it effectively creates two distinct outdoor living zones from a single build."
     ]
   }
 ];
@@ -106,7 +106,7 @@ export default function DeckBuilderSpringfieldPage() {
   return (
     <main>
       <LocalBusinessSchema city="Springfield" url="https://ldndecks.com/deck-builder-springfield-va" />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-builder-springfield-va" name="Deck Builder in Springfield, VA | Composite Decks | Loudoun Decks" description="Deck builder in Springfield, VA. Custom Trex &amp; composite decks for Kingstowne, West Springfield, Franconia &amp; Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-springfield-va" name="Deck Builder in Springfield, VA | Composite Decks | Loudoun Decks" description="Deck builder in Springfield, VA. Custom Trex &amp; composite decks for Kingstowne, West Springfield, Franconia &amp; Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Springfield, VA's Trusted Deck Company"
         title="Custom Deck Builder in Springfield, VA"
@@ -115,7 +115,7 @@ export default function DeckBuilderSpringfieldPage() {
       <ServiceMain
         subtitle="Smart Outdoor Living for Springfield Families"
         title="Deck Builder Springfield VA  -  Premium Quality"
-        description="Springfield's mix of ranches, colonials and townhomes calls for decks designed to fit  -  not a template. Composite builds from Trex and TimberTech, Kingstowne HOA handled, projects from $22k+."
+        description="Springfield's mix of ranches, colonials and townhomes calls for decks designed to fit  -  not a template. Composite builds from Trex and TimberTech, Kingstowne HOA handled, projects from a written estimate."
         listItems={[
           "Trex, TimberTech and AZEK material planning",
           "Kingstowne & Springfield HOA submissions handled",
@@ -186,7 +186,7 @@ export default function DeckBuilderSpringfieldPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Springfield" /></div></section>
       <SimpleCTA title="Upgrade Your Springfield Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-springfield-va" />
-      <NamedAuthor context="Springfield and Northern Virginia" lastUpdated="2026-06-01" />
+      <NamedAuthor context="Springfield and Northern Virginia" lastUpdated="2026-10-18" />
       <ContactHome />
     </main>
   );

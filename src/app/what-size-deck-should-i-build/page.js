@@ -31,7 +31,7 @@ export default function DeckSizePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/what-size-deck-should-i-build" name="What Size Deck Should I Build? (Guide by Use + Budget)" description="Deck size guide: 150-200 sqft for couples, 300-400 for families, 500+ for entertaining. Recommendations by use and Northern Virginia lot sizes." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/what-size-deck-should-i-build" name="What Size Deck Should I Build? (Guide by Use + Budget)" description="Deck size guide: 150-200 sqft for couples, 300-400 for families, 500+ for entertaining. Recommendations by use and Northern Virginia lot sizes." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>What Size Deck Should I Build?</h1>
@@ -114,11 +114,11 @@ export default function DeckSizePage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Size', 'PT Wood', 'Trex Transcend', 'TimberTech AZEK'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['150 sqft', '$3k–$5k', '$7k–$10k', '$8k–$12k'],
-                  ['250 sqft', '$5k–$9k', '$11k–$16k', '$13k–$19k'],
-                  ['350 sqft', '$7k–$12k', '$16k–$23k', '$18k–$26k'],
-                  ['500 sqft', '$9k–$18k', '$23k–$33k', '$25k–$38k'],
-                  ['700 sqft (multi-level)', '$13k–$25k', '$32k–$46k', '$35k–$53k'],
+                  ['150 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['250 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['350 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['500 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['700 sqft (multi-level)', 'a written estimate', 'a written estimate', 'a written estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -157,7 +157,7 @@ export default function DeckSizePage() {
         </div>
       </article>
       <SimpleCTA title="Let's Design Your Perfect Size Deck" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/what-size-deck-should-i-build" />
 

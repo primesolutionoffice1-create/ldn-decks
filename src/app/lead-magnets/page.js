@@ -48,7 +48,7 @@ export default function LeadMagnetsPage() {
         </p>
       </section>
 
-      <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, marginBottom: 34 }}>
+      <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: 16, marginBottom: 34 }}>
         {resources.map((resource) => (
           <Link
             key={resource.href}

@@ -18,7 +18,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: "/services/new-decks",
   title: "Custom Deck Builder Northern Virginia | Design & Build | Loudoun Decks",
-  description: "Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood, permit planning, HOA support, footings and framing from $15,000+.",
+  description: "Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood, permit planning, HOA support, footings and framing from a written estimate.",
   image: "/social/new-decks-social.png",
 });
 
@@ -45,7 +45,7 @@ const expansionSections = [
       "Northern Virginia's climate — 90°F+ summers with 70%+ humidity, 50–80 freeze-thaw cycles per winter, heavy pollen in spring — punishes low-quality decking. Material selection is not a style decision; it is a performance decision. We install three categories of decking and guide homeowners to the right one based on budget, maintenance tolerance and aesthetic goals.",
     ],
     listItems: [
-      { label: "Trex composite", text: "A common premium composite choice. Capped polymer shell resists scratching, staining and fading. Transcend, Enhance and Select tiers from $15,000+. 25-year residential warranty. See the full [Trex product guide](/trex-decks)." },
+      { label: "Trex composite", text: "A common premium composite choice. Capped polymer shell resists scratching, staining and fading. Transcend, Enhance and Select tiers from a written estimate. 25-year residential warranty. See the full [Trex product guide](/trex-decks)." },
       { label: "TimberTech / AZEK", text: "Premium PVC and composite lines with deeper wood-grain textures and the lowest moisture absorption in the category. AZEK Vintage is the gold standard for shaded or wooded lots. See our [TimberTech page](/timbertech-decks)." },
       { label: "Pressure-treated wood", text: "Still the right choice for budget-conscious projects where the homeowner accepts annual staining. We use #1 grade Southern Yellow Pine with ground-contact-rated posts and hot-dipped galvanized hardware. See our [composite vs wood comparison](/composite-deck-vs-wood-deck-virginia)." },
     ],
@@ -64,9 +64,9 @@ const expansionSections = [
       "Deck pricing depends on size, elevation, materials, railing, stairs, lighting, demolition scope and site access. We publish transparent cost data because homeowners deserve pricing context before the first conversation — not after three appointments. Here is how our recent Northern Virginia projects have landed:",
     ],
     listItems: [
-      { label: "Entry composite (300–400 sq ft)", text: "$15,000–$24,000. Single-level Trex Enhance or TimberTech Pro, aluminum railing, basic low-voltage lighting. The starting point for most first-time deck buyers." },
-      { label: "Mid-range composite (400–600 sq ft)", text: "$24,000–$45,000. Trex Transcend or TimberTech AZEK, picture-frame border, upgraded railing, full lighting package, multi-level option." },
-      { label: "Premium outdoor living", text: "$45,000–$90,000+. Large multi-level deck with [screened porch](/screened-porch-builder-northern-virginia), [pergola](/louvered-pergola-northern-virginia), [outdoor kitchen](/outdoor-kitchen-builder-northern-virginia), built-in seating, or full electrical package." },
+      { label: "Entry composite (300–400 sq ft)", text: "a written estimate. Single-level Trex Enhance or TimberTech Pro, aluminum railing, basic low-voltage lighting. The starting point for most first-time deck buyers." },
+      { label: "Mid-range composite (400–600 sq ft)", text: "a written estimate. Trex Transcend or TimberTech AZEK, picture-frame border, upgraded railing, full lighting package, multi-level option." },
+      { label: "Premium outdoor living", text: "a written estimate. Large multi-level deck with [screened porch](/screened-porch-builder-northern-virginia), [pergola](/louvered-pergola-northern-virginia), [outdoor kitchen](/outdoor-kitchen-builder-northern-virginia), built-in seating, or full electrical package." },
     ],
   },
   {
@@ -107,7 +107,7 @@ const expansionSections = [
 const newDeckFAQs = [
   {
     q: "How much does a custom deck cost in Northern Virginia?",
-    a: "Most custom composite deck projects in Northern Virginia range from $15,000 to $45,000 for a single-level build and $45,000 to $90,000+ for multi-level outdoor living packages with screened porches, pergolas or outdoor kitchens. Final pricing depends on size, materials, elevation, railing, lighting and site conditions. We provide itemized written estimates after a property walkthrough.",
+    a: "Most custom composite deck projects in Northern Virginia range from a written estimate to a written estimate for a single-level build and a written estimate to a written estimate for multi-level outdoor living packages with screened porches, pergolas or outdoor kitchens. Final pricing depends on size, materials, elevation, railing, lighting and site conditions. We provide itemized written estimates after a property walkthrough.",
   },
   {
     q: "How long does it take to build a custom deck?",
@@ -148,10 +148,10 @@ const authorityLinks = [
 export default function NewDecksPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01"
+      <WebPageSchema dateModified="2026-10-18"
         url="https://ldndecks.com/services/new-decks"
         name="Custom Deck Builder Northern Virginia | Loudoun Decks"
-        description="Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood, permit planning, HOA support, footings and framing from $15,000+."
+        description="Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood, permit planning, HOA support, footings and framing from a written estimate."
         speakable
       />
       <ServiceSchema
@@ -169,13 +169,13 @@ export default function NewDecksPage() {
       />
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-06-01" />
+        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-10-18" />
       </section>
 
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p data-speakable="true" style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Custom deck projects from $15,000+</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Custom deck projects from a written estimate</strong>
             <br />
             Materials, size, elevation and design complexity affect pricing.{' '}
             <Link href="/deck-payment-estimator" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>Estimate monthly payments</Link>{' · '}

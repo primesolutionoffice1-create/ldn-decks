@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "How much does a deck permit cost in Fairfax County?",
-    a: "Fairfax County deck permits cost $150-$600 depending on project value and scope. We include permit costs in our estimates.",
+    a: "Fairfax County deck permits are priced in a written estimate depending on project value and scope. We include permit costs in our estimates.",
   },
   {
     q: "What inspections are required for a Fairfax County deck?",
@@ -61,14 +61,14 @@ export default function FairfaxPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-08" url={`https://ldndecks.com${PATH}`} name="Fairfax County Deck Permits Made Easy | Loudoun Decks" description="Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Fairfax County Deck Permits Made Easy | Loudoun Decks" description="Navigate the 2026 Fairfax County deck permit process without the headache. We handle drawings, county zoning approvals, and inspections from start to finish." speakable />
       <ArticleSchema
         title="Fairfax County Deck Permit Guide"
         description="Fairfax County deck permit requirements, FIDO submission planning, inspection sequence, HOA coordination, and structural detail guidance for Northern Virginia homeowners."
         path={PATH}
         image="/images/img20.jpeg"
         datePublished="2026-05-26"
-        dateModified="2026-06-08"
+        dateModified="2026-10-18"
       />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
@@ -81,7 +81,7 @@ export default function FairfaxPermitPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} data-speakable="true">
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p data-speakable><strong>Yes</strong> any deck attached to a house, over 200 sqft, or more than 18&quot; above grade needs a Fairfax County building permit. Plan review takes 3–6 weeks. Permit costs $150–$600. <strong>We handle everything.</strong></p>
+          <p data-speakable><strong>Yes</strong> any deck attached to a house, over 200 sqft, or more than 18&quot; above grade needs a Fairfax County building permit. Plan review takes 3–6 weeks. Permit is priced in a written estimate. <strong>We handle everything.</strong></p>
         </div>
       </section>
 
@@ -145,7 +145,7 @@ export default function FairfaxPermitPage() {
           <p style={S.p}><strong>Total from submission to build start:</strong> 4–8 weeks typically. We can submit HOA and permit applications in parallel to reduce wait time.</p>
 
           <h2 style={S.h2}>Permit Costs</h2>
-          <p style={S.p}>Fairfax County deck permits cost <strong>$150–$600</strong> based on project value. Additional fees may apply for expedited review or revised plans. We include all permit costs in our estimates no surprises.</p>
+          <p style={S.p}>Fairfax County deck permits cost <strong>a written estimate</strong> based on project value. Additional fees may apply for expedited review or revised plans. We include all permit costs in our estimates no surprises.</p>
 
           <h2 style={S.h2}>Common Reasons for Permit Denial</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
@@ -216,7 +216,7 @@ export default function FairfaxPermitPage() {
       </section>
 
       <SimpleCTA title="Skip the Permit Headache We Handle It" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Fairfax County" lastUpdated="2026-06-08" />
+      <NamedAuthor context="Fairfax County" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/deck-permit-fairfax-county-virginia" />
 

@@ -31,7 +31,7 @@ export default function FAQPage() {
         <h2 id="faq-key-numbers" style={{ fontSize: '1.7rem', fontWeight: 800, marginBottom: 14 }}>
           Deck building in Northern Virginia: the key numbers
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 14 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: 14 }}>
           {[
             'A written estimate is the price for a specific property. This page does not publish one price for every deck.',
             'Resurfacing is a fit only when the existing frame is sound. The site visit decides that.',
@@ -51,7 +51,7 @@ export default function FAQPage() {
         <h2 id="faq-how-to-start" style={{ fontSize: '1.7rem', fontWeight: 800, marginBottom: 14 }}>
           How to get from question to finished deck — 5 steps
         </h2>
-        <ol style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 14, listStyle: 'none', padding: 0, margin: 0 }}>
+        <ol style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: 14, listStyle: 'none', padding: 0, margin: 0 }}>
           {[
             'Step 1: Gather your inputs — photos of the space, rough dimensions, material preference, budget range and timeline.',
             'Step 2: Book the free consultation; we review grade, frame condition (for resurfacing) and permit or HOA triggers on site.',
