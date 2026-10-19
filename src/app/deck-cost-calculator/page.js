@@ -147,7 +147,7 @@ export default function DeckCostCalculator() {
             <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '1rem' }}>Learn More About Deck Costs</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem' }}>
               <Link href="/composite-deck-cost-northern-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
-                <p style={{ fontWeight: 600, color: '#d14817' }}>Deck Cost Guide 2026</p>
+                <p style={{ fontWeight: 600, color: '#d14817' }}>composite deck cost in Northern Virginia</p>
                 <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Full pricing breakdown by material</p>
               </Link>
               <Link href="/deck-cost-12x20-northern-virginia" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>

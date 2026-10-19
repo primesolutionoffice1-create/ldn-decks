@@ -347,19 +347,19 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### How Much Does a Deck Cost in Northern Virginia?
 - URL: https://ldndecks.com/composite-deck-cost-northern-virginia
-- Content: Definitive cost guide — priced in a written estimate. Planning price tables by material tier. Labor breakdown. What drives the price up or down.
+- Content: External 2026 planning ranges for a simple composite deck, resurfacing, demolition, and official permit fees. Not Loudoun Decks prices. A written estimate is the only project price.
 - Intent: Informational/commercial — cost research phase
-- Updated: 2026-05-25
+- Updated: 2026-10-19
 
 ### Composite Deck Cost Northern Virginia
 - URL: https://ldndecks.com/composite-deck-cost-northern-virginia
-- Content: Composite-specific cost breakdown. Trex vs TimberTech vs AZEK pricing. Material + labor + permit costs.
-- Updated: 2026-05-25
+- Content: Cited external benchmarks, including about $35–$80 per sq ft installed for a simple low-height composite deck with standard railing. Assumptions and sources sit next to the figures.
+- Updated: 2026-10-19
 
 ### Screened Porch Cost
 - URL: https://ldndecks.com/screened-porch-cost-northern-virginia
-- Content: a written estimate with planning scenarios. EZE-Breeze, retractable, and traditional options priced for estimating.
-- Updated: 2026-05-25
+- Content: External benchmark of about $5–$20 per sq ft for screening an existing structure with a sound roof. A new roofed porch total is not published. A written estimate is the only project price.
+- Updated: 2026-10-19
 
 ### 2026 Deck Cost Report
 - URL: https://ldndecks.com/composite-deck-cost-northern-virginia

@@ -83,7 +83,7 @@ const screenedPorchGeoAnswers = [
 const faqs = [
   {
     q: "How much does a screened porch cost in Northern Virginia?",
-    a: "Screened porch cost depends on size, roof design, foundation or deck condition, electrical work, railing, flooring, screens, doors, trim, permits, and HOA requirements. A simple screened enclosure costs less than a custom roofed porch or three-season room. Final pricing requires design scope and site evaluation."
+    a: "Screened porch cost depends on size, roof design, foundation or deck condition, electrical work, railing, flooring, screens, doors, trim, permits, and HOA requirements. This service page does not publish a project price. The screened porch cost page is the pricing page: it cites one external planning range for screening an existing structure that already has a sound roof, and it does not publish a total for a new porch with a new roof. Final pricing requires a written estimate."
   },
   {
     q: "Do I need a permit to build a screened porch in Virginia?",
@@ -283,7 +283,7 @@ export default function ScreenedPorchBuilderNovaPage() {
             'Decision path: compare screened porch, covered deck, three-season room, and open deck combinations',
           ]}
           links={[
-            { href: '/screened-porch-cost-northern-virginia', label: 'Screened porch cost guide' },
+            { href: '/screened-porch-cost-northern-virginia', label: 'screened porch cost in Northern Virginia' },
             { href: '/covered-deck-builder-northern-virginia', label: 'Covered deck builder' },
             { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
             { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
@@ -342,12 +342,51 @@ export default function ScreenedPorchBuilderNovaPage() {
           and enclosure options against the property's exposure and the seasons when you expect to use it.
         </p>
         <h2 id="screened-porch-room-comparison" data-speakable="screened-porch-room-comparison" style={{ fontSize: '1.55rem', fontWeight: 800, marginBottom: '0.8rem' }}>
-          Screened porch, three-season room, or sunroom
+          Screened porch, covered deck, or three-season room
         </h2>
         <p style={{ lineHeight: 1.7, marginBottom: '1rem' }}>
           A screened porch keeps airflow and bug protection. A three-season room adds EZE-Breeze-style vinyl or glass
           panels for wind and rain control. A sunroom becomes conditioned interior space, so the budget, insulation,
           HVAC, and permit path are materially different.
+        </p>
+        <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
+            <caption style={{ textAlign: 'left', fontWeight: 700, paddingBottom: '0.75rem' }}>Screened porch vs covered deck vs three-season room</caption>
+            <thead>
+              <tr>
+                {['Feature', 'Screened porch', 'Covered deck', 'Three-season room'].map((label) => (
+                  <th key={label} scope="col" style={{ textAlign: 'left', padding: '0.75rem', borderBottom: '2px solid #e5e7eb' }}>{label}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Enclosure', 'Mesh screens under a roof', 'Open sides under a roof', 'Panels that can close'],
+                ['Airflow', 'Open through the screen', 'Open air', 'Reduced when the panels are closed'],
+                ['Weather', 'Shade and fewer insects. Wind-driven rain can still enter. Not conditioned.', 'Shade and rain cover. Insects are not screened out.', 'More separation from wind and rain when closed. Not a fully conditioned addition.'],
+                ['Structure to confirm', 'Roof loads, footings, ledger, and electrical rough-in', 'Roof loads, posts, and footings', 'Whether the structure can carry the enclosure system'],
+              ].map((row) => (
+                <tr key={row[0]}>
+                  {row.map((cell, index) => (
+                    index === 0
+                      ? <th key={cell} scope="row" style={{ textAlign: 'left', padding: '0.75rem', borderBottom: '1px solid #e5e7eb', verticalAlign: 'top' }}>{cell}</th>
+                      : <td key={cell} style={{ padding: '0.75rem', borderBottom: '1px solid #e5e7eb', verticalAlign: 'top', lineHeight: 1.55 }}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <h2 id="screened-porch-cost-routing" style={{ fontSize: '1.55rem', fontWeight: 800, marginBottom: '0.8rem' }}>
+          Screened porch cost
+        </h2>
+        <p style={{ lineHeight: 1.7, marginBottom: '1rem' }}>
+          This page is the builder page. Published planning ranges for the cost question live on{' '}
+          <Link href="/screened-porch-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>screened porch cost in Northern Virginia</Link>.
+          That page cites an external range for screening an existing structure that already has a sound roof.
+          A new screened porch with a new roof is not given a published total. Porch services as a group are on the{' '}
+          <Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>porch hub</Link>.
+          A written estimate is the only Loudoun Decks price.
         </p>
         <h2 id="screened-porch-permit-hoa" data-speakable="screened-porch-permit-hoa" style={{ fontSize: '1.55rem', fontWeight: 800, marginBottom: '0.8rem' }}>
           Permit and HOA path for a roofed porch
@@ -372,7 +411,7 @@ export default function ScreenedPorchBuilderNovaPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Screened Porch Resources</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {[
-            ['/screened-porch-cost-northern-virginia', 'Screened Porch Cost Guide for Northern Virginia'],
+            ['/screened-porch-cost-northern-virginia', 'screened porch cost in Northern Virginia'],
             ['/three-season-room-northern-virginia', 'Three-Season Room Options in Northern Virginia'],
             ['/covered-deck-builder-northern-virginia', 'Covered Deck Builder in Northern Virginia'],
             ['/deck-enclosure-ideas-northern-virginia', 'Deck Enclosure Ideas for Northern Virginia Homes'],

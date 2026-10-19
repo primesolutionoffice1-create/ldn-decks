@@ -76,7 +76,12 @@ const links = [
   {
     href: '/screened-porch-builder-northern-virginia',
     title: 'Screened Porch Builder',
-    desc: 'Cost, timeline and design guidance for porch projects.',
+    desc: 'Custom screened porches, permits, and written estimates.',
+  },
+  {
+    href: '/screened-porch-cost-northern-virginia',
+    title: 'Screened Porch Cost',
+    desc: 'External planning range for screening an existing structure.',
   },
   {
     href: '/deck-builder-ashburn-va',

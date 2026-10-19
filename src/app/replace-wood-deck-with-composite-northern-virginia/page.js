@@ -11,6 +11,7 @@ import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
 import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
+import { PLANNING_DISCLAIMER, REPLACEMENT_RANGE_ANSWER } from '@/lib/externalPlanningRanges';
 
 const pagePath = '/replace-wood-deck-with-composite-northern-virginia';
 const pageUrl = `https://ldndecks.com${pagePath}`;
@@ -56,7 +57,7 @@ const faqs = [
   },
   {
     q: 'How much does wood-to-composite deck replacement cost in Northern Virginia?',
-    a: 'Serious wood-to-composite projects often start in the mid-five figures once demolition, structural correction, composite boards, railings, stairs, permits, and finish details are included. Larger premium projects can move much higher depending on size and options.',
+    a: REPLACEMENT_RANGE_ANSWER,
   },
   {
     q: 'Do I need a permit to replace a wood deck with composite?',
@@ -120,7 +121,7 @@ export default function ReplaceWoodDeckWithCompositePage() {
     <main>
       <WebPageSchema
         datePublished="2026-08-26"
-        dateModified="2026-09-21"
+        dateModified="2026-10-19"
         url={pageUrl}
         name="Replace Wood Deck With Composite | Northern Virginia"
         description="Replace an aging wood deck with composite decking in Northern Virginia. Trex, TimberTech, AZEK and Fiberon guidance, resurfacing vs full replacement, permits and written estimates."
@@ -132,8 +133,6 @@ export default function ReplaceWoodDeckWithCompositePage() {
         url={pageUrl}
         category="Deck Construction"
         serviceType="Composite deck replacement"
-        lowPrice="25000"
-        highPrice="120000"
         areaServed={[
           { '@type': 'AdministrativeArea', name: 'Northern Virginia' },
           { '@type': 'AdministrativeArea', name: 'Loudoun County' },
@@ -200,11 +199,12 @@ export default function ReplaceWoodDeckWithCompositePage() {
         facts={[
           'Best-fit intent: aging wood deck replacement, full composite upgrade, serious resurfacing decision, or premium outdoor living scope.',
           'Primary project signals: homeowner decision maker, visible wear, unsafe rails or stairs, repeated staining, and interest in Trex, TimberTech, AZEK, or Fiberon.',
-          'Lead quality filter: budget, timeline, address, photos, material interest, and HOA or permit constraints should be captured before proposal work.',
+          'Useful estimate details: budget, timeline, address, photos, material interest, and HOA or permit constraints.',
         ]}
         links={[
           { href: '/trex-vs-timbertech-vs-azek', label: 'Compare composite brands' },
           { href: '/fiberon-decking-review-northern-virginia', label: 'Fiberon review' },
+          { href: '/services/deck-replacement', label: 'deck replacement in Northern Virginia' },
           { href: '/deck-payment-estimator', label: 'Payment estimator' },
         ]}
       />
@@ -281,9 +281,9 @@ export default function ReplaceWoodDeckWithCompositePage() {
               </ul>
             </div>
             <div style={boxStyle}>
-              <h3 style={{ marginTop: 0 }}>Best lead-quality signal</h3>
+              <h3 style={{ marginTop: 0 }}>What to send with the estimate request</h3>
               <p style={{ margin: 0, color: '#4b5563', lineHeight: 1.65 }}>
-                A strong lead includes address, photos, budget range, timeline, material preference, and whether the homeowner is open to structural replacement if resurfacing is not safe.
+                Include the address, photos, budget range, timeline, material preference, and whether structural replacement is acceptable if resurfacing is not safe.
               </p>
             </div>
           </div>
@@ -296,7 +296,7 @@ export default function ReplaceWoodDeckWithCompositePage() {
             Composite Brands Homeowners Are Comparing
           </h2>
           <p style={{ maxWidth: 820, color: '#4b5563', lineHeight: 1.7, margin: '0 0 1.4rem' }}>
-            Searchers compare brand names before they call. The page has to answer that intent directly so paid traffic does not bounce back to competitors.
+            Homeowners often compare Trex, TimberTech, AZEK, and Fiberon before requesting an estimate.
           </p>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', border: '1px solid #e5e7eb' }}>
@@ -324,26 +324,19 @@ export default function ReplaceWoodDeckWithCompositePage() {
         </div>
       </section>
 
-      <section style={{ padding: '56px 20px', background: '#111827', color: '#fff' }}>
-        <div style={{ maxWidth: 1060, margin: '0 auto' }}>
-          <h2 style={{ margin: '0 0 0.75rem', fontSize: 'clamp(1.6rem, 3vw, 2.35rem)' }}>
-            Campaign Fit: Where This Page Should Receive Google Ads Traffic
+      <section style={{ padding: '56px 20px', background: '#f8fafc' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto' }}>
+          <h2 style={{ margin: '0 0 0.75rem', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}>
+            External planning ranges for a wood-to-composite project
           </h2>
-          <p style={{ maxWidth: 820, color: '#d1d5db', lineHeight: 1.7, margin: '0 0 1.4rem' }}>
-            This page should be used for high-intent searches tied to old wood deck replacement, composite upgrade, Trex replacement, TimberTech replacement, Fiberon comparison, and resurfacing versus full replacement.
+          <p style={{ color: '#4b5563', lineHeight: 1.7 }}>{PLANNING_DISCLAIMER}</p>
+          <p style={{ color: '#4b5563', lineHeight: 1.7 }}>{REPLACEMENT_RANGE_ANSWER}</p>
+          <p style={{ color: '#4b5563', lineHeight: 1.7 }}>
+            This page supports the wood-to-composite decision. The replacement service page is{' '}
+            <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 800 }}>deck replacement in Northern Virginia</Link>.
+            New-deck planning ranges are on{' '}
+            <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 800 }}>composite deck cost in Northern Virginia</Link>.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '1rem' }}>
-            {[
-              ['High priority', 'replace wood deck with composite, composite deck replacement, wood deck replacement, replace deck boards with composite'],
-              ['Premium modifier', 'Trex deck replacement, TimberTech deck replacement, AZEK deck replacement, Fiberon decking installer'],
-              ['Lead quality filter', 'Homeowner, written estimate, full project, structure, permit, HOA, budget range, timeline'],
-            ].map(([title, text]) => (
-              <div key={title} style={{ border: '1px solid rgba(255,255,255,0.16)', borderRadius: 8, padding: '1.15rem', background: 'rgba(255,255,255,0.06)' }}>
-                <h3 style={{ marginTop: 0, color: '#fb923c' }}>{title}</h3>
-                <p style={{ marginBottom: 0, color: '#e5e7eb', lineHeight: 1.65 }}>{text}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -368,7 +361,7 @@ export default function ReplaceWoodDeckWithCompositePage() {
 
       <ServicesFAQ canonicalUrl={pageUrl} title="Wood to Composite Replacement FAQs" faqs={faqs} />
       <RelatedGuides currentPath={pagePath} />
-      <NamedAuthor context="wood-to-composite deck replacement in Northern Virginia" lastUpdated="2026-09-21" />
+      <NamedAuthor context="wood-to-composite deck replacement in Northern Virginia" lastUpdated="2026-10-19" />
     </main>
   );
 }
