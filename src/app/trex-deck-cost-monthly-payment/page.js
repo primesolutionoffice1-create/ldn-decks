@@ -337,7 +337,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
             {[
               ['/trex-decks', 'Trex Composite Decks — Service Overview'],
               ['/deck-payment-estimator', 'Deck Payment Estimator'],
-              ['/composite-deck-cost-northern-virginia', 'Composite Deck Cost in Northern Virginia'],
+              ['/composite-deck-cost-northern-virginia', 'composite deck cost in Northern Virginia'],
               ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK'],
               ['/composite-deck-vs-wood-deck-virginia', 'Composite vs Wood Deck'],
               ['/deck-financing', 'Deck Financing in Northern Virginia'],

@@ -159,9 +159,13 @@ export default function PorchesPage() {
             <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.6', marginBottom: '16px' }}>
               Full protection from insects and light rain without sacrificing the outdoor feel. The most popular premium porch upgrade for Loudoun and Fairfax County homeowners.
             </p>
-            <span style={{ color: 'var(--site-color)', fontWeight: '700', fontSize: '14px' }}>Explore Screened Porch →</span>
+            <span style={{ color: 'var(--site-color)', fontWeight: '700', fontSize: '14px' }}>screened porch builder in Northern Virginia →</span>
           </Link>
         </div>
+        <p style={{ marginTop: '1.25rem', lineHeight: 1.7, color: '#444' }}>
+          This hub routes porch types. Hire from the builder page above. For the cited planning range, see{' '}
+          <Link href="/screened-porch-cost-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 700 }}>screened porch cost in Northern Virginia</Link>.
+        </p>
       </section>
 
       <ServiceMain

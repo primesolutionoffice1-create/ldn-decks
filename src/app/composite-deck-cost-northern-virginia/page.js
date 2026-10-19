@@ -11,13 +11,14 @@ import AboveFoldCTA from '@/components/AboveFoldCTA';
 import WebPageSchema from '@/components/WebPageSchema';
 import { buildMetadata } from '@/lib/seo';
 import { WRITTEN_ESTIMATE } from '@/lib/publicPricing';
+import { COMPOSITE_PLANNING_ROWS, NEW_COMPOSITE_ANSWER, PLANNING_DISCLAIMER } from '@/lib/externalPlanningRanges';
 
 const path = '/composite-deck-cost-northern-virginia';
-const updated = '2026-10-18';
-const description = 'Plan a Northern Virginia composite deck budget. Compare calculator scenarios, understand exclusions, and prepare a written Trex or TimberTech installation estimate.';
+const updated = '2026-10-19';
+const description = 'External 2026 benchmarks put a simple composite deck near $35–$80 per sq ft. Planning ranges only. A written estimate is the only project price.';
 export const metadata = buildMetadata({ path, title: 'How Much Does a Composite Deck Cost in Northern Virginia?', description, image: '/social/composite-deck-cost-northern-virginia-social.png' });
 
-const quickAnswer = `A 400-square-foot composite deck is a scope example, not a price. ${WRITTEN_ESTIMATE}`;
+const quickAnswer = NEW_COMPOSITE_ANSWER;
 
 const S = {
   container: { width: '100%', maxWidth: 960, margin: '0 auto', padding: '0 1.25rem', minWidth: 0 },
@@ -37,8 +38,8 @@ const answers = [
 ];
 
 const faqs = [
-  { q: 'How much does a 20x20 composite deck cost in Northern Virginia?', a: `A 20x20 deck is 400 square feet. ${WRITTEN_ESTIMATE} Confirm demolition, framing, footings, permits, electrical work, stairs, and railings in that estimate.` },
-  { q: 'Does the calculator include railings and stairs?', a: 'Only when you select those add-ons. The size table below shows both the base scenario and the scenario with one stair flight and composite railings. Neither output verifies the length of your railing, stair height, existing structure or local permit fees. Those details need an itemized estimate.' },
+  { q: 'How much does a 20x20 composite deck cost in Northern Virginia?', a: `A 20x20 deck is 400 square feet. External 2026 planning benchmarks for a simple, low-height composite deck with standard railing and without complex stairs are about $14,000–$32,000, or $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026). Permits, demolition, elevation, and complex stairs are excluded from that range. ${WRITTEN_ESTIMATE}` },
+  { q: 'Does the calculator include railings and stairs?', a: 'The calculator records the options you select. It does not calculate a dollar total. The planning table’s new-composite row includes a standard perimeter railing and excludes complex stairs, elevation, demolition, and permits. Railing length, stair height, and local permit fees still have to be itemized in a written estimate.' },
   { q: 'Is a manufacturer material estimate the same as an installed quote?', a: 'No. A material estimate covers its listed products and assumptions. The Trex material calculator explicitly separates labor. An installed proposal should also identify demolition, structure, labor, stairs, railings, permits and cleanup as applicable. Compare the included quantities and exclusions before comparing the totals.' },
   { q: 'Can the existing frame reduce the cost?', a: 'Reusing a suitable frame can reduce the work compared with rebuilding it, but eligibility depends on an inspection and the proposed design. New decking does not correct deteriorated framing, inadequate connections or unsuitable joist spacing. Ask for separate resurfacing and replacement scopes when both remain feasible after evaluation.' },
   { q: 'Can you pressure wash composite decking?', a: 'Follow the care guide for the exact product and generation. Trex and TimberTech publish different limits and cleaning procedures; one pressure setting is not a universal rule. Check the approved cleaner, nozzle, distance and technique before starting. Use the manufacturer care links below rather than treating warranty length as a cleaning instruction.' },
@@ -84,9 +85,9 @@ export default function CompositeDeckCostPage() {
         <div style={S.container}>
           <h2 style={S.h2}>How much should you budget for a composite deck?</h2>
           <p style={S.p}>{quickAnswer}</p>
-          <p style={{ ...S.p, fontSize: '0.9rem' }}>By Loudoun Decks Team. Updated October 18, 2026: removed unsourced calculator totals and kept the scope questions for a written estimate.</p>
+          <p style={{ ...S.p, fontSize: '0.9rem' }}>By Loudoun Decks Team. Updated October 19, 2026: added cited external planning ranges. Loudoun Decks prices remain a written estimate only.</p>
           <nav aria-label="Composite deck cost topics" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-            {[['#calculator', 'Calculator'], ['#cost-by-size', 'Cost by size'], ['#composite-estimate-routing', 'Compare quotes'], ['#trex-vs-timbertech', 'Materials'], ['#faqs', 'Questions']].map(([href, label]) => <a key={href} href={href} style={S.link}>{label}</a>)}
+            {[['#planning-ranges', 'Planning ranges'], ['#calculator', 'Calculator'], ['#cost-by-size', 'Cost by size'], ['#composite-estimate-routing', 'Compare quotes'], ['#trex-vs-timbertech', 'Materials'], ['#faqs', 'Questions']].map(([href, label]) => <a key={href} href={href} style={S.link}>{label}</a>)}
           </nav>
         </div>
       </section>
@@ -101,6 +102,59 @@ export default function CompositeDeckCostPage() {
           <p style={S.p}>Choose a size, material, and optional features. The planner records that scope. It does not calculate a dollar total, measure the property, or establish a supplier price.</p>
           <DeckCostCalculatorWidget defaultMaterial={3} defaultSqft={400} defaultAddons={[0, 1]} ctaLabel="Request a Written Estimate" ctaHref="/get-estimate" />
           <p style={{ ...S.p, marginTop: '1.5rem' }}><Link href="/deck-cost-calculator" style={S.link}>Open the standalone deck calculator</Link>.</p>
+        </div>
+      </section>
+
+      <section id="planning-ranges" style={S.section}>
+        <div style={S.container}>
+          <h2 style={S.h2}>External planning ranges for a composite deck</h2>
+          <p style={S.p}>{PLANNING_DISCLAIMER}</p>
+          <div style={{ overflowX: 'auto' }} tabIndex={0} role="region" aria-label="External composite deck planning ranges">
+            <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff' }}>
+              <caption style={{ textAlign: 'left', paddingBottom: '0.75rem', fontWeight: 600 }}>External market benchmarks, not Loudoun Decks prices</caption>
+              <thead>
+                <tr>
+                  {['Scenario', 'Assumptions', 'Published rate and source', '16×20 (320 sq ft)', '20×20 (400 sq ft)'].map((label) => (
+                    <th key={label} scope="col" style={S.cell}>{label}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {COMPOSITE_PLANNING_ROWS.map((row) => (
+                  <tr key={row.scenario}>
+                    <th scope="row" style={S.cell}>{row.scenario}</th>
+                    <td style={S.cell}>{row.assumptions}</td>
+                    <td style={S.cell}>
+                      <div>{row.rate}</div>
+                      <div><a href={row.sourceUrl} style={S.link}>{row.sourceLabel}</a></div>
+                      {row.corroboration ? <div style={{ marginTop: '0.5rem' }}>{row.corroboration}{' '}<a href={row.corroborationUrl} style={S.link}>Source</a>.</div> : null}
+                      {row.corroborationUrl2 ? <div><a href={row.corroborationUrl2} style={S.link}>{row.corroborationLabel2}</a></div> : null}
+                    </td>
+                    <td style={S.cell}>{row.size16}</td>
+                    <td style={S.cell}>{row.size20}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ ...S.p, marginTop: '1rem' }}>Size totals are the published per-square-foot bounds times 320 or 400 square feet. They are not an average and not a Loudoun Decks quote.</p>
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, margin: '1.25rem 0 0.75rem' }}>Size-specific guides</h3>
+          <ul style={{ lineHeight: 1.8, paddingLeft: '1.2rem' }}>
+            {[
+              ['/deck-cost-12x20-northern-virginia', '12×20 deck cost'],
+              ['/deck-cost-16x20-northern-virginia', '16×20 deck cost'],
+              ['/deck-cost-20x20-northern-virginia', '20×20 deck cost'],
+              ['/400-square-foot-deck-cost-northern-virginia', '400 square foot deck cost'],
+              ['/600-square-foot-deck-cost-northern-virginia', '600 square foot deck cost'],
+              ['/800-square-foot-deck-cost-northern-virginia', '800 square foot deck cost'],
+              ['/composite-deck-cost-by-size', 'Composite deck cost by size'],
+              ['/trex-deck-cost-monthly-payment', 'Trex deck cost and monthly payment'],
+              ['/timbertech-azek-deck-cost-northern-virginia', 'TimberTech and AZEK deck cost'],
+              ['/covered-deck-cost-northern-virginia', 'Covered deck cost'],
+            ].map(([href, label]) => (
+              <li key={href}><Link href={href} style={S.link}>{label}</Link></li>
+            ))}
+          </ul>
         </div>
       </section>
 

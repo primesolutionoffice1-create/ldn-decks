@@ -257,7 +257,7 @@ export default function CoveredDeckCostPage() {
             </li>
             <li style={{ marginBottom: '0.5rem' }}>
               <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
-                Composite Deck Cost in Northern Virginia →
+                composite deck cost in Northern Virginia →
               </Link>
             </li>
             <li style={{ marginBottom: '0.5rem' }}>

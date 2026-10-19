@@ -167,7 +167,7 @@ export default function EightHundredSqftDeckCostPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '3rem 0 1rem' }}>Related guides</h2>
           <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
-            <li>→ <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full Northern Virginia composite deck cost guide</Link></li>
+            <li>→ <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>composite deck cost in Northern Virginia</Link></li>
             <li>→ <Link href="/composite-deck-cost-by-size" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite cost by size (300/400/500/600 sqft)</Link></li>
             <li>→ <Link href="/deck-lighting-railings-stairs-addon-cost" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Lighting, railings &amp; stairs add-on cost</Link></li>
             <li>→ <Link href="/mclean-great-falls-premium-deck-budget" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>McLean &amp; Great Falls premium deck budget</Link></li>
