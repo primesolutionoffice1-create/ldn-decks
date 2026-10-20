@@ -101,6 +101,77 @@ assert.equal(layout.includes('ct.pinterest.com/v3/'), false, 'Pinterest noscript
 assert.match(consent, /persistAttributionCookies\(\)/, 'accepting consent must persist current attribution');
 assert.match(consent, /clearAttributionCookies\(\)/, 'declining consent must clear attribution storage');
 assert.match(clickIds, /hasAnalyticsConsent/, 'attribution reads must be consent-aware');
+assert.match(
+  layout,
+  /https:\/\/cdn\.callrail\.com\/companies\/651128722\/18c17fb63aefc9b12216\/12\/swap\.js/,
+  'CallRail swap.js must load over https from the company snippet'
+);
+assert.match(
+  layout,
+  /function ldnLoadCallRail\(\)\{if\(window\.__ldnCallRailLoaded\|\|!window\.ldnConsentGranted\)return;/,
+  'CallRail must not insert swap.js before optional tracking consent'
+);
+assert.match(
+  layout,
+  /addEventListener\("ldn:consent-accepted",ldnLoadCallRail\)/,
+  'CallRail must load when the visitor accepts optional tracking'
+);
+const callrailIndex = layout.indexOf('id="callrail-swap"');
+assert.ok(
+  callrailIndex > layout.indexOf('<body>') && callrailIndex < layout.lastIndexOf('</body>'),
+  'CallRail loader must sit in the root body, before </body>'
+);
+assert.match(
+  layout.slice(callrailIndex, callrailIndex + 180),
+  /strategy="afterInteractive"/,
+  'CallRail loader must use next/script afterInteractive'
+);
+const nextConfig = fs.readFileSync(new URL('../next.config.mjs', import.meta.url), 'utf8');
+for (const directive of ['script-src', 'connect-src']) {
+  const directiveLine = nextConfig.split('\n').find((line) => line.includes(`"${directive} `));
+  assert.ok(directiveLine, `${directive} must exist in the report-only CSP`);
+  assert.match(
+    directiveLine,
+    /https:\/\/cdn\.callrail\.com https:\/\/\*\.callrail\.com/,
+    `${directive} must allow cdn.callrail.com and *.callrail.com`
+  );
+}
+
+function runCallRailLoader(consent) {
+  const match = layout.match(/function ldnLoadCallRail\(\)\{[\s\S]*?addEventListener\("ldn:consent-accepted",ldnLoadCallRail\);/);
+  assert.ok(match, 'CallRail loader source must be executable');
+  const scripts = [];
+  const listeners = {};
+  const context = {
+    window: {
+      ldnConsentGranted: consent,
+      addEventListener(name, fn) { listeners[name] = fn; },
+    },
+    document: {
+      createElement() { return {}; },
+      body: { appendChild(node) { scripts.push(node); } },
+    },
+  };
+  vm.runInNewContext(match[0], context, { filename: 'callrail-swap.js' });
+  return { scripts, listeners, window: context.window };
+}
+
+const declinedCallRail = runCallRailLoader(false);
+assert.equal(declinedCallRail.scripts.length, 0, 'declined consent must not insert CallRail swap.js');
+declinedCallRail.window.ldnConsentGranted = true;
+declinedCallRail.listeners['ldn:consent-accepted']();
+assert.equal(declinedCallRail.scripts.length, 1, 'accepting consent must insert CallRail swap.js once');
+declinedCallRail.listeners['ldn:consent-accepted']();
+assert.equal(declinedCallRail.scripts.length, 1, 'a second consent event must not insert CallRail twice');
+assert.equal(
+  declinedCallRail.scripts[0].src,
+  'https://cdn.callrail.com/companies/651128722/18c17fb63aefc9b12216/12/swap.js'
+);
+assert.equal(declinedCallRail.scripts[0].async, false, 'CallRail swap.js must not be marked async');
+assert.equal(declinedCallRail.scripts[0].type, 'text/javascript');
+
+const acceptedCallRail = runCallRailLoader(true);
+assert.equal(acceptedCallRail.scripts.length, 1, 'stored consent must insert CallRail swap.js on load');
 
 for (const consentValue of ['accepted', 'declined']) {
   leadPrivacyContext.window = {
