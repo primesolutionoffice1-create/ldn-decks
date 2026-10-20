@@ -246,7 +246,7 @@ export default function HouzzProjectsPage() {
 
       <SimpleCTA 
         title="Ready to Start Your Outdoor Project?" 
-        subtitle="Serving Loudoun & Fairfax Since 2008" 
+        subtitle="Serving Loudoun & Fairfax Since 2022" 
         buttonText="Request Free Quote" 
         link="/get-estimate" 
       />

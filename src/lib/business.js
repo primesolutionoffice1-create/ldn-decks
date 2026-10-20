@@ -222,6 +222,7 @@ export function buildOrganizationSchema() {
     telephone: BUSINESS.telephone,
     email: BUSINESS.email,
     priceRange: BUSINESS.priceRange,
+    foundingDate: '2022',
     address: { '@type': 'PostalAddress', ...BUSINESS.address },
     geo: { '@type': 'GeoCoordinates', ...BUSINESS.geo },
     openingHoursSpecification: BUSINESS.openingHours.map(h => ({

@@ -22,7 +22,7 @@ export const metadata = buildMetadata({
 const chooseItems = [
   {
     title: "Trusted Local Experience",
-    desc: "Hundreds of projects completed across Northern Virginia with over 10 years of experience. We handle permits for every project when required."
+    desc: "Led by an owner with 15 years of deck-building experience. We handle permits for every project when required."
   },
   {
     title: "Quality Materials & Craftsmanship",

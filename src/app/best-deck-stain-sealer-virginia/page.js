@@ -87,7 +87,7 @@ export default function BestDeckStainSealerPage() {
 
           {/* ===== SECTION 1: Why Virginia Is Different ===== */}
           <p style={S.p}>Most &ldquo;best deck stain&rdquo; lists are written for national audiences. That&apos;s a problem if you live in Virginia, because our climate is uniquely punishing to deck finishes. We get scorching UV in summer (Zone 7 sun exposure), humidity that regularly exceeds 70%, over 40 inches of annual rainfall, and 60+ freeze-thaw cycles per winter in Northern Virginia. A stain that performs beautifully in Arizona or Minnesota may fail catastrophically here.</p>
-          <p style={S.p}>This guide is based on products we&apos;ve applied on hundreds of decks across Loudoun, Fairfax, and Prince William counties since 2018. Every recommendation below has been tested in Virginia&apos;s actual conditions not a lab.</p>
+          <p style={S.p}>This guide is based on products we&apos;ve applied on decks across Loudoun, Fairfax, and Prince William counties since 2022. Every recommendation below has been tested in Virginia&apos;s actual conditions not a lab.</p>
 
           {/* ===== SECTION 2: Top Product Comparison ===== */}
           <h2 style={S.h2}>Top 10 Deck Stains &amp; Sealers for Virginia (2026)</h2>
