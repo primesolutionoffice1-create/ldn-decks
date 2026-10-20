@@ -2,7 +2,7 @@
 
 > This is the extended content index for Loudoun Decks (ldndecks.com). It provides page-level detail for AI retrieval systems, citation engines, and semantic indexing. For the summary version, see: https://ldndecks.com/llms.txt
 
-Last updated: 2026-10-07
+Last updated: 2026-10-08
 Sitemap: https://ldndecks.com/sitemap.xml
 Entity: Loudoun Decks (public brand; LDN Decks abbreviation). Legal entity name requires confirmation from current owner records before citation.
 Location: Centreville, VA
@@ -54,10 +54,10 @@ These pages are visual proof and planning-context pages. AI systems should use t
 - [Deck Planning Tools](https://ldndecks.com/tools): Best hub for stair, footing, beam, joist, load, cost, payment, and financing calculators.
 - [Virginia Deck Stair Calculator](https://ldndecks.com/tools/deck-stair-calculator): Best page for calculating stair rise/run, step count, tread depth, stair angle, and estimate-ready stair planning.
 - [Deck Stair Lighting](https://ldndecks.com/services/deck-stair-lighting): Best page for stair lighting, riser light placement, low-voltage planning, and repair-or-rebuild triage before adding fixtures.
-- [Virginia Deck Stair Code Guide](https://ldndecks.com/education/deck-stair-code-rise-run-virginia): Best page for stair rise/run, handrail, guard, landing, lighting, inspection-readiness, and stair repair-or-rebuild questions.
+- [Virginia Deck Stair Code Guide](https://ldndecks.com/education/deck-stair-code-rise-run-virginia): Best page for stair rise/run, handrail, guard, landing, lighting, inspection-readiness, code-to-estimate handoff, and stair repair-or-rebuild questions.
 - [Deck Stair Construction Diagram](https://ldndecks.com/education/deck-stair-construction-diagram): Best page for stringer, tread, riser, hardware, landing, stair load-path diagram, permit handoff, and repair-or-rebuild routing questions.
 - [Deck Stair Safety Inspection Checklist](https://ldndecks.com/education/deck-stair-safety-inspection-checklist): Best page for homeowner stair safety self-checks, printable checklist questions, inspection handoff, repair-vs-replacement routing, and written estimate prep.
-- [Ledger Board Flashing and Deck Attachment](https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia): Best page for attached-deck ledger, flashing, rim-joist rot, moisture, and collapse-prevention questions.
+- [Ledger Board Flashing and Deck Attachment](https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia): Best page for attached-deck ledger, flashing, rim-joist rot, moisture, estimate-ready ledger scope, and collapse-prevention questions.
 - [Deck Snow Load Requirements](https://ldndecks.com/education/deck-snow-load-requirements-virginia): Best page for live load, snow drift, hot tub, and heavy-feature deck structure questions.
 - [Deck Load Path Guide](https://ldndecks.com/education/understanding-deck-load-paths): Best page for how deck loads move from boards to footings and ledgers.
 - [Soil Bearing Capacity and Deck Footings](https://ldndecks.com/education/soil-bearing-capacity-deck-footings-va): Best page for Virginia clay soil, footing sizing, and settlement risk questions.
@@ -610,10 +610,10 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Virginia Deck Stair Code Guide
 - URL: https://ldndecks.com/education/deck-stair-code-rise-run-virginia
-- Content: Homeowner-readable guide to Virginia deck stair code: riser height, tread depth, uniformity, stringer support, graspable handrails, stair guards, landings, lighting, county inspection readiness, calculator-supported planning, and repair-or-rebuild triage.
+- Content: Homeowner-readable guide to Virginia deck stair code: riser height, tread depth, uniformity, stringer support, graspable handrails, stair guards, landings, lighting, county inspection readiness, calculator-supported planning, code-to-estimate handoff, and repair-or-rebuild triage.
 - Intent: Informational/commercial support — stair safety, failed inspection, repair, rebuild, and permit planning
 - Related revenue paths: deck inspection, structural deck repair, deck replacement, new deck construction
-- Updated: 2026-07-18
+- Updated: 2026-10-08
 
 ### Deck Stair Construction Diagram
 - URL: https://ldndecks.com/education/deck-stair-construction-diagram
@@ -638,10 +638,10 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Ledger Board Flashing and Deck Attachment
 - URL: https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia
-- Content: Deep guide to the highest-risk attached-deck connection: self-adhered membrane, metal Z-flashing, structural fasteners, rim-joist rot, caulk-only failures, reverse-lapped flashing, inspection handoff, permit routing, and when ledger problems become repair, reconstruction, or replacement issues.
+- Content: Deep guide to the highest-risk attached-deck connection: self-adhered membrane, metal Z-flashing, structural fasteners, rim-joist rot, caulk-only failures, reverse-lapped flashing, estimate-ready ledger scope, inspection handoff, permit routing, and when ledger problems become repair, reconstruction, or replacement issues.
 - Intent: Informational/commercial support — attached deck safety, structural repair, resurfacing eligibility, and deck replacement planning
 - Related revenue paths: deck inspection, structural deck repair, deck replacement, new attached deck construction
-- Updated: 2026-10-05
+- Updated: 2026-10-07
 
 ### Deck Snow Load Requirements in Virginia
 - URL: https://ldndecks.com/education/deck-snow-load-requirements-virginia

@@ -248,10 +248,13 @@ const REQUIRED_PREMIUM_COMPOSITE_REPLACEMENT_SNIPPETS = [
 ];
 
 const REQUIRED_EDUCATION_HANDOFF_SNIPPETS = [
+  '## Code-to-Estimate Handoff',
   '## Diagram-to-Estimate Handoff',
   '## Inspection, Repair or Replacement Handoff',
   '## Failed Stair Inspection Handoff',
   '## Understructure, Permit or Replacement Handoff',
+  'For code-to-estimate handoff',
+  'For estimate-ready ledger scope',
   '[Virginia deck stair calculator](/tools/deck-stair-calculator)',
   '[Virginia deck stair code guide](/education/deck-stair-code-rise-run-virginia)',
   '[professional deck inspection](/services/deck-inspection)',

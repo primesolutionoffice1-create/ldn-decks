@@ -122,6 +122,19 @@ const PAGE_FRESHNESS_GUARDS = [
   },
   {
     path: 'src/lib/educationData.js',
+    label: 'Virginia Deck Stair Code Guide',
+    expectedDate: 'October 8, 2026',
+    dateSnippets: [
+      { label: 'article dateModified', template: (date) => `dateModified: '${date}'` },
+      { label: 'code-to-estimate handoff heading', template: () => '## Code-to-Estimate Handoff' },
+      { label: 'code-to-estimate answer block', template: () => 'For code-to-estimate handoff' },
+      { label: 'stair calculator handoff link', template: () => '[Virginia deck stair calculator](/tools/deck-stair-calculator)' },
+      { label: 'deck replacement handoff link', template: () => '[deck replacement](/services/deck-replacement)' },
+      { label: 'written estimate handoff link', template: () => '[written estimate](/get-estimate)' },
+    ],
+  },
+  {
+    path: 'src/lib/educationData.js',
     label: 'Deck Stair Construction Diagram',
     expectedDate: 'October 7, 2026',
     dateSnippets: [
@@ -147,10 +160,11 @@ const PAGE_FRESHNESS_GUARDS = [
   {
     path: 'src/lib/educationData.js',
     label: 'Ledger Board Flashing Guide',
-    expectedDate: 'October 5, 2026',
+    expectedDate: 'October 7, 2026',
     dateSnippets: [
       { label: 'article dateModified', template: (date) => `dateModified: '${date}'` },
       { label: 'inspection handoff heading', template: () => '## Inspection, Permit, Repair or Replacement Handoff' },
+      { label: 'estimate-ready scope answer block', template: () => 'For estimate-ready ledger scope' },
       { label: 'deck replacement handoff link', template: () => '[deck replacement](/services/deck-replacement)' },
       { label: 'written estimate handoff link', template: () => '[written estimate](/get-estimate)' },
     ],
