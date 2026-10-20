@@ -35,7 +35,7 @@ export default function PressPage() {
               <tbody>
                 {[
                   ['Company Name', 'Loudoun Decks (LDN Decks)'],
-                  ['Founded', 'Northern Virginia'],
+                  ['Founded', '2022, Northern Virginia'],
                   ['Industry', 'Custom Deck Building & Outdoor Living Construction'],
                   ['Service Area', 'Loudoun, Fairfax, Prince William, Arlington & Stafford Counties, Virginia'],
                   ['Headquarters', '13704 Winding Oak Cir, Centreville, VA 20121'],
