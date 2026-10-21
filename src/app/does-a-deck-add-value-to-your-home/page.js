@@ -12,16 +12,16 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/does-a-deck-add-value-to-your-home',
   title: 'Does a Deck Add Value to Your Home? (2026 ROI Data)',
-  description: 'A composite deck recoups 60-80% at resale in Northern Virginia. 2026 ROI data, what buyers look for, and when a deck hurts resale value.',
+  description: 'Resale recovery is not a fixed percentage, and this page does not publish one. A written estimate is the project price.',
   image: '/social/does-a-deck-add-value-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "Does a deck add value to a home in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes. A composite deck recoups 60-80% of its cost at resale in Northern Virginia. A a written estimate Trex deck can add a written estimate to your home's market value." } },
-    { "@type": "Question", name: "What type of deck has the best ROI?", acceptedAnswer: { "@type": "Answer", text: "Composite decks have the best ROI at not a fixed percentage. Wood decks recoup not a fixed percentage. Screened porches return not a fixed percentage." } },
-    { "@type": "Question", name: "Does a deck add more value than a patio?", acceptedAnswer: { "@type": "Answer", text: "Decks typically have higher ROI (not a fixed percentage) than patios (50-70%), especially for homes with walkout basements or sloped lots." } },
+    { "@type": "Question", name: "Does a deck add value to a home in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Resale recovery is not a fixed percentage, and this page does not publish one. A written estimate is the project price." } },
+    { "@type": "Question", name: "What type of deck has the best ROI?", acceptedAnswer: { "@type": "Answer", text: "Resale recovery is not a fixed percentage, and this page does not publish one for composite, wood, or a screened porch." } },
+    { "@type": "Question", name: "Does a deck add more value than a patio?", acceptedAnswer: { "@type": "Answer", text: "This page does not publish a resale percentage for a deck or a patio." } },
   ],
 };
 
@@ -31,7 +31,7 @@ export default function DeckValuePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/does-a-deck-add-value-to-your-home" name="Does a Deck Add Value to Your Home? (2026 ROI Data)" description="A composite deck recoups 60-80% at resale in Northern Virginia. 2026 ROI data, what buyers look for, and when a deck hurts resale value." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/does-a-deck-add-value-to-your-home" name="Does a Deck Add Value to Your Home? (2026 ROI Data)" description="Resale recovery is not a fixed percentage, and this page does not publish one. A written estimate is the project price." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -43,7 +43,7 @@ export default function DeckValuePage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Short Answer:</p>
-          <p><strong>Yes.</strong> A composite deck recoups <strong>60–80%</strong> at resale. A a written estimate Trex deck adds a written estimate to your home&apos;s value. In McLean, Great Falls, and Vienna, ROI is even higher because buyers expect outdoor living space.</p>
+          <p><strong>Resale recovery is not a fixed percentage, and this page does not publish one.</strong> A written estimate is the project price. Call (571) 655-7207 to schedule an estimate.</p>
         </div>
       </section>
 
@@ -68,10 +68,10 @@ export default function DeckValuePage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Deck Type', 'Avg. Cost (NoVA)', 'Resale Value Added', 'ROI'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['PT Wood Deck', 'a written estimate', 'a written estimate', 'not a fixed percentage'],
-                  ['Composite Deck', 'a written estimate', 'a written estimate', 'not a fixed percentage'],
-                  ['Screened Porch', 'a written estimate', 'a written estimate', 'not a fixed percentage'],
-                  ['Patio (Pavers)', 'a written estimate', 'a written estimate', 'not a fixed percentage'],
+                  ['PT Wood Deck', 'Not published', 'See the written estimate', 'Not published'],
+                  ['Composite Deck', 'Not published', 'See the written estimate', 'Not published'],
+                  ['Screened Porch', 'Not published', 'See the written estimate', 'Not published'],
+                  ['Patio (Pavers)', 'Not published', 'See the written estimate', 'Not published'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: i === 1 ? 600 : 400, color: i === 1 && j === 3 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>)}
@@ -108,9 +108,9 @@ export default function DeckValuePage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "Does a deck add value in Virginia?", a: "Yes. Composite decks recoup 60-80%. In competitive NoVA markets, a quality deck can add a written estimate to your home's value." },
-            { q: "What deck type has the best ROI?", a: "Composite (not a fixed percentage), then screened porches (not a fixed percentage). Wood decks return not a fixed percentage." },
-            { q: "Deck or patio which adds more value?", a: "Decks typically have higher ROI (not a fixed percentage) than patios (50-70%), especially on sloped lots or homes with walkout basements." },
+            { q: "Does a deck add value in Virginia?", a: "Resale recovery is not a fixed percentage, and this page does not publish one. A written estimate is the project price." },
+            { q: "What deck type has the best ROI?", a: "This page does not publish a resale percentage for composite, a screened porch, or wood." },
+            { q: "Deck or patio which adds more value?", a: "This page does not publish a resale percentage for a deck or a patio." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

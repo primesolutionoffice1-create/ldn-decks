@@ -180,7 +180,7 @@ export default function TrexTranscendReviewPage() {
               </thead>
               <tbody>
                 {[
-                  ['Cost/sqft (installed)', 'a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['Cost/sqft (installed)', 'Not published', 'See the written estimate', 'In that estimate', 'Same estimate'],
                   ['Wood grain realism', 'Very good', 'Good', 'Best in class', 'Very good'],
                   ['Warranty', '25 yr fade/stain', '25 yr fade/stain', '50 yr fade/stain', '50 yr fade/stain'],
                   ['Core material', 'Wood-plastic composite', 'Wood-plastic composite', 'Wood-plastic composite', 'Full PVC (no wood)'],
@@ -253,11 +253,11 @@ export default function TrexTranscendReviewPage() {
               </thead>
               <tbody>
                 {[
-                  ['200 sqft', 'a written estimate', 'a written estimate'],
-                  ['300 sqft', 'a written estimate', 'a written estimate'],
-                  ['400 sqft', 'a written estimate', 'a written estimate'],
-                  ['500 sqft', 'a written estimate', 'a written estimate'],
-                  ['600+ sqft (multi-level)', 'a written estimate', 'a written estimate'],
+                  ['200 sqft', 'Not published', 'See the written estimate'],
+                  ['300 sqft', 'Not published', 'See the written estimate'],
+                  ['400 sqft', 'Not published', 'See the written estimate'],
+                  ['500 sqft', 'Not published', 'See the written estimate'],
+                  ['600+ sqft (multi-level)', 'Not published', 'See the written estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: j === 2 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>)}

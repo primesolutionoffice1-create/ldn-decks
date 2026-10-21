@@ -106,7 +106,7 @@ const expansionSections = [
 const lightingFaqs = [
   {
     q: "How much does deck stair lighting cost in Northern Virginia?",
-    a: "A typical low-voltage LED stair lighting package for a residential deck in Loudoun, Fairfax, or Prince William County ranges from a written estimate to a written estimate installed, depending on the number of fixtures and whether wiring is pre-run during construction or retrofitted."
+    a: "A typical low-voltage LED stair lighting package for a residential deck in Loudoun, Fairfax, or Prince William County ranges from the amount in a written estimate installed, depending on the number of fixtures and whether wiring is pre-run during construction or retrofitted."
   },
   {
     q: "How long does a deck lighting installation take?",

@@ -60,8 +60,8 @@ const questions = [
   },
   {
     category: 'Design & Features', items: [
-      { q: 'Should I add a screened porch?', a: 'If bugs or weather limit your outdoor time: yes. Extends season from 5 months to 9-10. ROI: not a fixed percentage at resale. Many combine open deck + screened section.', link: '/screened-porch-cost-northern-virginia' },
-      { q: 'Will my deck add home value?', a: 'Yes. Composite: not a fixed percentage ROI. Screened porch: not a fixed percentage. In NoVA\'s competitive market, outdoor living space sells homes faster.', link: '/does-a-deck-add-value-to-your-home' },
+      { q: 'Should I add a screened porch?', a: 'If bugs or weather limit your outdoor time: yes. Extends season from 5 months to 9-10. Resale recovery is not a fixed percentage, and this page does not publish one. Many combine open deck + screened section.', link: '/screened-porch-cost-northern-virginia' },
+      { q: 'Will my deck add home value?', a: 'Resale recovery is not a fixed percentage, and this page does not publish one for composite or for a screened porch. In NoVA\'s competitive market, outdoor living space sells homes faster.', link: '/does-a-deck-add-value-to-your-home' },
       { q: 'Do I need stairs?', a: 'If deck is above grade: yes (code requirement for egress). Wider stairs (4 ft) feel more generous. Include lighting on every staircase.' },
       { q: 'What about the space under an elevated deck?', a: 'Add an under-deck ceiling/drainage system (a written estimate) to create a dry patio, storage, or hot tub area below. Doubles your outdoor space.', link: '/under-deck-ceiling-ideas' },
     ]

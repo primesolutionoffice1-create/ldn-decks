@@ -20,7 +20,7 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "Should I repair or replace my porch?", acceptedAnswer: { "@type": "Answer", text: "Repair if: damage is limited to surface boards, screens, or trim structure is solid. Replace if: posts are rotting at the base, roof is sagging, foundation is shifting, or framing is soft/spongy. When repair costs exceed 40-50% of replacement cost, replacement is the better long-term investment." } },
-    { "@type": "Question", name: "How much does porch repair cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Porch repairs in Northern Virginia: screen replacement a written estimate, board replacement a written estimate, post repair a written estimate, railing repair a written estimate. Most repairs fall between a written estimate and a written estimate." } },
+    { "@type": "Question", name: "How much does porch repair cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Porch repairs in Northern Virginia: screen replacement a written estimate, board replacement a written estimate, post repair a written estimate, railing repair a written estimate. Most repairs are priced in a written estimate." } },
     { "@type": "Question", name: "How much does a new porch cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A new screened porch in Northern Virginia is priced in a written estimate depending on size, materials, and features. Open porches: a written estimate. Full porch replacement including demolition of the old structure adds a written estimate." } },
   ],
 };

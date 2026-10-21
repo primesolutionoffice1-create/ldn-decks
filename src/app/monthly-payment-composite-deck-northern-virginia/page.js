@@ -12,44 +12,55 @@ import EnhancifyPaymentCalculator from '@/components/EnhancifyPaymentCalculator'
 import NamedAuthor from '@/components/NamedAuthor';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
-
-export const metadata = buildMetadata({
-  path: '/monthly-payment-composite-deck-northern-virginia',
-  title: 'Monthly Payment on a Composite Deck in Northern Virginia',
-  description: 'See realistic monthly payments for a composite deck in Northern Virginia. a written estimate planning examples at 8–10% APR over 10 and 15 years. Free estimator.',
-  image: '/social/monthly-payment-composite-deck-northern-virginia-social.png',
-});
+import { COMPOSITE_PLANNING_ROWS, NEW_COMPOSITE_ANSWER } from '@/lib/externalPlanningRanges';
 
 const PATH = '/monthly-payment-composite-deck-northern-virginia';
+const PAGE_TITLE = 'Monthly Payment on a Composite Deck in Northern Virginia';
+const UPDATED = '2026-10-21';
+const DESCRIPTION = 'A composite deck in Northern Virginia is priced in a written estimate. Dollar figures here are external benchmarks, not a Loudoun Decks price or an APR.';
+
+const paymentNote = 'This page does not publish a monthly payment or an example APR. Enter the amount from your written estimate in the deck payment estimator. The lender sets the rate and the term. The result is planning math, not a lender quote.';
+
+const benchmarkNote = `${NEW_COMPOSITE_ANSWER} Sources: https://remodelcalculators.com/deck-cost and https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm. These benchmarks are context for the project amount. They are not a monthly payment, and the rows in the table below are not added together.`;
+
+const quickAnswer = [DESCRIPTION, paymentNote, benchmarkNote].join(' ');
+
+const scopeItems = [
+  'Composite or PVC decking, using the collection named in the estimate',
+  'Framing, either kept when the structure is confirmed sound or replaced',
+  'Fasteners and joist tape when they are part of the scope',
+  'Railings and stairs',
+  'Lighting, when it is part of the scope',
+  'Demolition and haul-away, when an old deck is removed',
+  'Permit fees for the county where the deck is built',
+  'HOA submission, when the community requires it',
+  'Design, project management, and cleanup included in the estimate',
+];
 
 const faqs = [
   {
-    q: 'How much is the monthly payment on a a written estimate composite deck?',
-    a: 'At a sample 8.99% APR, a a written estimate composite deck financed over 10 years is roughly a lender-calculated paymentnth and roughly a lender-calculated paymentnth over 15 years. The longer term lowers the monthly payment but raises total interest. Your real rate and term come from a lender pre-qualification, not from the estimator.',
+    q: 'How much is the monthly payment on a composite deck?',
+    a: `${paymentNote} ${NEW_COMPOSITE_ANSWER}`,
   },
   {
-    q: 'What APR should I model for deck financing in Northern Virginia?',
-    a: 'Most home-improvement financing in Northern Virginia for credit scores in the 680–740 range models in the 8–11% APR band. Promotional 0% interest options exist for shorter payoff windows. Pre-qualification through a soft credit check returns the real number without affecting your credit score.',
+    q: 'What APR should I use for a composite deck?',
+    a: 'This page does not publish an example APR. The lender sets the rate after reviewing the application. The estimator can show planning math after you enter a rate the lender has given you.',
   },
   {
-    q: 'Can I use home equity instead of unsecured deck financing?',
-    a: 'Yes. Home equity loans and HELOCs typically carry lower APRs than unsecured home-improvement loans, but they take longer to close and put the home as collateral. Many Northern Virginia homeowners use unsecured financing for speed (project starts in days, not weeks), then refinance later if needed.',
+    q: 'Can I use home equity instead of another loan?',
+    a: 'A home equity loan or a HELOC is a separate product, and it uses the home as collateral. The lender sets the rate, the term, and the closing steps. This page does not compare those rates with any other loan.',
   },
   {
-    q: 'Does the monthly payment include permits, HOA, and railings?',
-    a: 'It should. The project amount you enter into the estimator should reflect the full written estimate — decking material, framing reuse or replacement, railings, stairs, lighting, demolition, permits, and HOA submission. Modeling only the deck boards understates the real monthly payment.',
+    q: 'Does the monthly payment include permits, HOA review, and railings?',
+    a: 'Put the full written estimate into the estimator. That amount should include the decking, framing, railings, stairs, lighting, demolition, permits, and HOA submission when those items are in the scope. Entering only the deck boards leaves those items out of the planning math.',
   },
   {
-    q: 'How quickly can a financed composite deck project start?',
-    a: 'Pre-qualification through a soft credit check usually returns offers in 60 seconds. Once a lender is selected and the loan funds, the construction timeline is the same as a cash project — typically 4–8 weeks from contract to finished deck, including permit review and HOA approval.',
+    q: 'How does financing change the cost compared with paying cash?',
+    a: 'Financing adds interest over the life of the loan. The lender calculates that interest from the rate and the term. This page does not publish an interest total.',
   },
   {
-    q: 'Does financing add cost vs paying cash?',
-    a: 'Yes. Financing adds interest cost over the life of the loan. The trade-off is keeping cash reserves intact and building the deck during the right season. Many homeowners model both: total interest over the term vs the opportunity cost of paying cash upfront.',
-  },
-  {
-    q: 'Will checking my financing options affect my credit?',
-    a: 'Pre-qualification uses a soft credit pull and does not affect your credit score. A hard inquiry only happens if you choose a specific lender offer and move forward with a full application. The estimator on this site does not check credit at all.',
+    q: 'Will the estimator check my credit?',
+    a: 'The estimator on this page does not check credit. Whether a lender uses a soft credit check, and when a hard inquiry happens, is set by that lender.',
   },
 ];
 
@@ -65,40 +76,63 @@ const faqSchema = {
   })),
 };
 
+export const metadata = buildMetadata({
+  path: PATH,
+  title: PAGE_TITLE,
+  description: DESCRIPTION,
+  image: '/social/monthly-payment-composite-deck-northern-virginia-social.png',
+});
+
 const S = {
   h2: { fontSize: '1.85rem', fontWeight: 800, marginBottom: '1.1rem', marginTop: '2.5rem', lineHeight: 1.2 },
-  h3: { fontSize: '1.25rem', fontWeight: 700, margin: '1.5rem 0 0.6rem' },
-  p: { marginBottom: '1rem', lineHeight: 1.75, fontSize: '1rem' },
-  th: { padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd', fontSize: '0.92rem', background: '#f5f5f5' },
-  td: { padding: '0.85rem', borderBottom: '1px solid #eee', fontSize: '0.92rem' },
+  h3: { fontSize: '1.2rem', fontWeight: 700, margin: '1.5rem 0 0.6rem' },
+  p: { marginBottom: '1rem', lineHeight: 1.75, fontSize: '1rem', overflowWrap: 'anywhere' },
+  th: { padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd', fontSize: '0.92rem', background: '#f5f5f5', verticalAlign: 'top' },
+  td: { padding: '0.85rem', borderBottom: '1px solid #eee', fontSize: '0.92rem', verticalAlign: 'top', overflowWrap: 'anywhere' },
   container: { maxWidth: 960, margin: '0 auto', padding: '0 1.5rem' },
+  link: { color: 'var(--color-primary)', fontWeight: 600, overflowWrap: 'anywhere' },
 };
 
-// Monthly figures use the same amortization math as the estimator at 8.99% APR
-// (a lender-calculated payment per a written estimate over 10 years, a lender-calculated payment per a written estimate over 15 years).
-// Total interest = (monthly × months) − principal.
-const scenarios = [
-  { amount: 'a written estimate', use: 'Composite resurfacing on existing frame', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
-  { amount: 'a written estimate', use: '250 sqft composite deck, mid tier', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
-  { amount: 'a written estimate', use: '350 sqft composite, mid tier, railings', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
-  { amount: 'a written estimate', use: '450 sqft composite, premium tier', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
-  { amount: 'a written estimate', use: '600 sqft composite + lighting + stairs', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
-  { amount: 'a written estimate', use: 'Covered composite deck w/ premium railings', ten: 'a written estimate', fifteen: 'a written estimate', interest10: 'a written estimate' },
-];
+function LinkedText({ text }) {
+  const urlRe = /https:\/\/[^\s),]+/g;
+  const nodes = [];
+  let last = 0;
+  let match;
+  let i = 0;
+  while ((match = urlRe.exec(text)) !== null) {
+    if (match.index > last) nodes.push(text.slice(last, match.index));
+    const url = match[0];
+    nodes.push(
+      <a key={`${i}-${url}`} href={url} target="_blank" rel="noopener noreferrer" style={S.link}>
+        {url}
+      </a>
+    );
+    last = match.index + url.length;
+    i += 1;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes;
+}
 
 export default function MonthlyPaymentCompositeDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
       <ArticleSchema
-        title="Monthly Payment on a Composite Deck in Northern Virginia"
-        description="See realistic monthly payments for a composite deck in Northern Virginia. a written estimate planning examples at 8–10% APR over 10 and 15 years."
+        title={PAGE_TITLE}
+        description={DESCRIPTION}
         path={PATH}
         image="/showcase/img15.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-10-18"
+        dateModified={UPDATED}
       />
-      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Monthly Payment on a Composite Deck in Northern Virginia" description="See realistic monthly payments for a composite deck in Northern Virginia. a written estimate planning examples at 8–10% APR over 10 and 15 years. Free estimator." speakable />
+      <WebPageSchema
+        dateModified={UPDATED}
+        url={`https://ldndecks.com${PATH}`}
+        name={PAGE_TITLE}
+        description={DESCRIPTION}
+        speakable
+      />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -106,11 +140,23 @@ export default function MonthlyPaymentCompositeDeckPage() {
             Financing &middot; Northern Virginia
           </p>
           <h1 style={{ fontSize: '2.4rem', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.15 }}>
-            How Much Is a Monthly Payment on a Composite Deck in Northern Virginia?
+            {PAGE_TITLE}
           </h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: 1.6 }}>
-            Real-world monthly payment examples for composite decks a written estimate, modeled at a typical 8–10% APR
-            over 10- and 15-year terms.
+        </div>
+      </section>
+
+      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} className="quick-answer">
+        <div style={S.container}>
+          <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
+          <p data-speakable style={S.p}>
+            <LinkedText text={quickAnswer} />
+          </p>
+          <p style={S.p}>
+            <Link href="/deck-payment-estimator" style={S.link}>
+              Open the deck payment estimator
+            </Link>
+            {' '}
+            after you have a written estimate.
           </p>
         </div>
       </section>
@@ -118,50 +164,18 @@ export default function MonthlyPaymentCompositeDeckPage() {
       <TrustBanner />
 
       <AboveFoldCTA
-        headline="Want the monthly payment on your written estimate amount? Run the numbers in seconds with the deck payment estimator."
+        headline="Start with a written estimate, then model the payment."
         estimateHref="/deck-payment-estimator"
-        estimateLabel="Estimate Monthly Payment"
+        estimateLabel="Open Deck Payment Estimator"
       />
-
-      <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} className="quick-answer">
-        <div style={S.container}>
-          <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p data-speakable>
-            A <strong>a written estimate composite deck</strong> in Northern Virginia financed at a sample 8.99% APR runs roughly{' '}
-            <strong>a lender-calculated paymentnth over 10 years</strong> or <strong>a lender-calculated paymentnth over 15 years</strong>. Pricing depends on
-            credit profile, lender, and term. Use the{' '}
-            <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
-              deck payment estimator
-            </Link>{' '}
-            to model your written estimate amount.
-          </p>
-        </div>
-      </section>
-
-      <section style={{ background: '#f6f9fc', borderLeft: '4px solid #2b6cb0', padding: '1.5rem 0' }}>
-        <div style={S.container}>
-          <p style={{ fontWeight: 700, marginBottom: '0.5rem', color: '#2b6cb0', fontSize: '0.85rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-            What We See on Loudoun &amp; Fairfax Financing
-          </p>
-          <p data-speakable style={{ marginBottom: 0, lineHeight: 1.7 }}>
-            Most of our financed deck clients in Loudoun and Fairfax counties land in the{' '}
-            <strong>a written estimate project range</strong>, with monthly payments typically{' '}
-            <strong>a written estimate at ~9% APR over 10 years</strong>. The <strong>10-year term is the most popular choice</strong>,
-            followed by 15-year terms for homeowners prioritizing lower monthly payment and short 5-year terms for cash-
-            flow flexible buyers who want to minimize total interest. Resurfacing projects (existing-frame composite
-            upgrades) tend to start around a written estimate; covered decks with premium railings and lighting can reach a written estimate.
-          </p>
-        </div>
-      </section>
 
       <section style={{ background: '#fafafa', padding: '3rem 0', borderBottom: '1px solid #eee' }}>
         <div style={{ ...S.container, maxWidth: 920 }}>
           <h2 style={{ ...S.h2, marginTop: 0, textAlign: 'center', marginBottom: '0.5rem' }}>
-            Estimate Your Monthly Payment
+            Estimate a monthly payment
           </h2>
-          <p style={{ textAlign: 'center', color: '#666', maxWidth: 640, margin: '0 auto 2rem', fontSize: '1rem', lineHeight: 1.6 }}>
-            Enter your project amount, term, and rate to see an estimated monthly payment. For illustration only —
-            actual rate and term depend on the lender and your credit profile.
+          <p style={{ textAlign: 'center', color: '#444', maxWidth: 680, margin: '0 auto 2rem', fontSize: '1rem', lineHeight: 1.6 }}>
+            {paymentNote}
           </p>
           <div style={{ background: '#fff', borderRadius: 14, padding: '2rem 1.5rem', border: '1px solid #e5e5e5', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
             <EnhancifyPaymentCalculator />
@@ -174,7 +188,7 @@ export default function MonthlyPaymentCompositeDeckPage() {
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
               src="/showcase/img15.jpeg"
-              alt="Composite deck financing options in Northern Virginia"
+              alt="Composite deck in Northern Virginia"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 960px) 100vw, 960px"
@@ -183,145 +197,121 @@ export default function MonthlyPaymentCompositeDeckPage() {
             />
           </div>
 
-          <h2 style={{ ...S.h2, marginTop: 0 }}>Composite Deck Monthly Payment by Project Size</h2>
+          <h2 style={{ ...S.h2, marginTop: 0 }}>What the written estimate should include</h2>
           <p style={S.p}>
-            Below are typical monthly payment scenarios for composite deck projects in Loudoun, Fairfax, Prince William,
-            Arlington, and Alexandria. Figures use a sample 8.99% APR — slide the{' '}
-            <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
-              deck payment estimator
-            </Link>{' '}
-            for your specific APR and term.
+            The project amount is the number you enter in the estimator. It should be the full written estimate, not the deck boards alone.
+          </p>
+          <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
+            {scopeItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+
+          <h2 style={S.h2}>External benchmarks for the project amount</h2>
+          <p style={S.p}>
+            Each row is a different scope. Do not add the rows together, and do not turn a row into a monthly payment. None of these figures is a Loudoun Decks price. The same composite figures are cited on the{' '}
+            <Link href="/composite-deck-cost-northern-virginia" style={S.link}>composite deck cost</Link>
+            {' '}page.
           </p>
           <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+              <caption style={{ textAlign: 'left', padding: '0 0 0.75rem', fontWeight: 600 }}>
+                External planning benchmarks and Loudoun County permit fees. Not Loudoun Decks prices and not monthly payments.
+              </caption>
               <thead>
                 <tr>
-                  <th style={S.th}>Project Amount</th>
-                  <th style={S.th}>Typical Use Case</th>
-                  <th style={S.th}>10-Year /mo</th>
-                  <th style={S.th}>15-Year /mo</th>
-                  <th style={S.th}>Total Interest (10y)</th>
+                  <th style={S.th} scope="col">Benchmark</th>
+                  <th style={S.th} scope="col">Figure</th>
+                  <th style={S.th} scope="col">16×20 (320 sq ft)</th>
+                  <th style={S.th} scope="col">20×20 (400 sq ft)</th>
+                  <th style={S.th} scope="col">Source</th>
                 </tr>
               </thead>
               <tbody>
-                {scenarios.map((row, i) => (
-                  <tr key={row.amount} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
-                    <td style={{ ...S.td, fontWeight: 700 }}>{row.amount}</td>
-                    <td style={S.td}>{row.use}</td>
-                    <td style={S.td}>{row.ten}</td>
-                    <td style={{ ...S.td, color: 'var(--color-primary)', fontWeight: 700 }}>{row.fifteen}</td>
-                    <td style={{ ...S.td, color: '#555' }}>{row.interest10}</td>
+                {COMPOSITE_PLANNING_ROWS.map((row, i) => (
+                  <tr key={row.scenario} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                    <th style={{ ...S.td, fontWeight: 700 }} scope="row">{row.scenario}</th>
+                    <td style={S.td}>{row.rate}</td>
+                    <td style={S.td}>{row.size16}</td>
+                    <td style={S.td}>{row.size20}</td>
+                    <td style={S.td}>
+                      <a href={row.sourceUrl} target="_blank" rel="noopener noreferrer" style={S.link}>{row.sourceLabel}</a>
+                      {row.corroboration ? (
+                        <p style={{ ...S.p, margin: '0.5rem 0 0', fontSize: '0.85rem' }}>
+                          <LinkedText text={row.corroboration} />
+                          {row.corroborationUrl ? (
+                            <>
+                              {' '}
+                              <a href={row.corroborationUrl} target="_blank" rel="noopener noreferrer" style={S.link}>{row.corroborationUrl}</a>
+                            </>
+                          ) : null}
+                          {row.corroborationUrl2 ? (
+                            <>
+                              {' '}
+                              <a href={row.corroborationUrl2} target="_blank" rel="noopener noreferrer" style={S.link}>
+                                {row.corroborationLabel2 || row.corroborationUrl2}
+                              </a>
+                            </>
+                          ) : null}
+                        </p>
+                      ) : null}
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 8, padding: '1rem 1.25rem', marginBottom: '1.25rem' }}>
-            <p data-speakable style={{ margin: 0, fontWeight: 600 }}>
-              At 8.99% APR over 10 years, a a written estimate composite deck costs approximately a written estimate total — a written estimate in
-              interest over the life of the loan. A 15-year term lowers the monthly payment to a written estimate but raises total
-              interest to roughly a written estimate.
-            </p>
-          </div>
-          <p style={{ ...S.p, fontSize: '0.85rem', color: '#777', fontStyle: 'italic' }}>
-            Illustrative only at a sample 8.99% APR. The longer term lowers the monthly payment but raises total
-            interest. Actual rate, term, and monthly payment are determined by your lender.
-          </p>
-
-          <h2 style={S.h2}>What Drives the Monthly Payment Up or Down</h2>
           <p style={S.p}>
-            Three variables move the monthly number: <strong>project amount, APR, and term</strong>. APR is set by the
-            lender based on your credit profile. Term is your choice — most home-improvement loans run 5, 10, or 15
-            years. Project amount is the part you control by scoping the deck correctly. For accurate pricing per
-            material tier, see our{' '}
-            <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
-              composite deck cost guide for Northern Virginia
-            </Link>.
+            The 320 sq ft and 400 sq ft totals are the published per-square-foot bounds times those areas. They assume the conditions named in each row. A written estimate after a site visit is the only project price.
           </p>
 
-          <h2 style={S.h2}>What the Project Amount Should Include</h2>
+          <h2 style={S.h2}>What changes the monthly payment</h2>
           <p style={S.p}>
-            The biggest source of error in a monthly payment estimate is a project amount that only covers the deck
-            boards. The number you put into the calculator should reflect a complete written estimate:
+            Three inputs change the planning math: the project amount, the rate, and the term. The project amount comes from the written estimate. The lender sets the rate and the term. This page does not publish a sample rate.
           </p>
-          <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
-            <li>Composite or PVC decking material (Trex, TimberTech, Fiberon)</li>
-            <li>Framing — either reuse on a sound frame or new pressure-treated lumber</li>
-            <li>Hidden fasteners and joist tape</li>
-            <li>Railings (composite, aluminum, or cable) and stairs</li>
-            <li>Lighting (post-cap, riser, recessed deck lights)</li>
-            <li>Demolition and haul-away of the old deck</li>
-            <li>Permits for your county (Loudoun, Fairfax, Prince William, Arlington, Alexandria)</li>
-            <li>HOA submission package and revisions</li>
-            <li>Project management, design, and final cleanup</li>
-          </ul>
 
-          <h2 style={S.h2}>Composite vs Wood: Long-Term Cost Matters More Than Monthly</h2>
+          <h2 style={S.h2}>Composite and wood</h2>
           <p style={S.p}>
-            A composite deck typically costs 20–40% more upfront than pressure-treated wood, which raises the monthly
-            payment slightly. Over 15 years the math reverses: composite avoids the a written estimate in cumulative
-            stain, seal, sand, and board replacement cost that pressure-treated wood requires. The{' '}
-            <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
-              composite vs wood comparison
-            </Link>{' '}
-            covers 15-year total cost in detail.
+            Composite and pressure-treated wood differ in upfront cost and in upkeep. This page does not publish a percentage difference. Maintenance depends on exposure, cleaning, and how long you own the deck. The{' '}
+            <Link href="/composite-deck-vs-wood-deck-virginia" style={S.link}>composite vs wood comparison</Link>
+            {' '}covers that decision.
           </p>
 
-          <h2 style={S.h2}>Soft-Pull Pre-Qualification (No Credit Impact)</h2>
-          <p style={S.p}>
-            The estimator on this site is a model — your real rate and term come from a lender pre-qualification. We
-            work with Enhancify, which returns multiple lender offers in roughly 60 seconds using a soft credit pull
-            that does not affect your credit score. See the full process on our{' '}
-            <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
-              deck financing page
-            </Link>.
-          </p>
-
-          <h2 style={S.h2}>How Northern Virginia Homeowners Typically Plan a Financed Deck</h2>
+          <h2 style={S.h2}>How to plan a financed deck</h2>
           <ol style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
-            <li>Use the estimator to find a monthly payment that fits the household budget.</li>
-            <li>Request a free on-site visit and a written, itemized project estimate.</li>
-            <li>Pre-qualify through Enhancify (soft credit pull) to confirm the real APR and term.</li>
-            <li>Compare offers — many homeowners pick the offer with the lowest total interest, not the lowest /mo.</li>
-            <li>Sign the contract and start the permit + HOA process while financing closes.</li>
-            <li>Build begins; final invoice is paid by the lender directly when the deck is complete.</li>
+            <li>Request an on-site visit and a written estimate.</li>
+            <li>Enter that amount in the deck payment estimator.</li>
+            <li>Ask the lender for the rate and the term. This page does not publish either one.</li>
+            <li>Use the lender&apos;s figures for interest. The lender calculates them.</li>
+            <li>Permit review and HOA review, when they apply, are separate from the financing application.</li>
           </ol>
+          <p style={S.p}>
+            <Link href="/deck-financing" style={S.link}>Deck financing</Link>
+            {' '}explains the application path.
+          </p>
 
           <h2 style={S.h2}>FAQ</h2>
-          {faqs.map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 10, padding: '1.25rem', marginBottom: '0.75rem', background: '#fff' }}>
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 10, padding: '1.25rem', marginBottom: '0.75rem', background: '#fff' }}>
               <summary style={{ fontWeight: 700, cursor: 'pointer', fontSize: '1rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.75, color: '#555', fontSize: '0.95rem' }}>{faq.a}</p>
+              <p style={{ marginTop: '1rem', lineHeight: 1.75, color: '#555', fontSize: '0.95rem', overflowWrap: 'anywhere' }}>
+                <LinkedText text={faq.a} />
+              </p>
             </details>
           ))}
-
-          <div style={{ background: 'var(--color-dark)', borderRadius: 14, padding: '2.5rem 2rem', textAlign: 'center', margin: '3rem 0 1rem' }}>
-            <h2 style={{ fontSize: '1.7rem', fontWeight: 800, color: '#fff', marginTop: 0, marginBottom: '0.75rem' }}>
-              Model Your Real Monthly Payment
-            </h2>
-            <p style={{ color: 'rgba(255,255,255,0.8)', maxWidth: 560, margin: '0 auto 1.75rem', fontSize: '1.02rem', lineHeight: 1.6 }}>
-              Move three sliders — project amount, APR, term — and the estimator returns your monthly payment in seconds.
-            </p>
-            <Link
-              href="/deck-payment-estimator"
-              style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '1rem 2rem', borderRadius: 10, fontWeight: 700, textDecoration: 'none', fontSize: '1.02rem' }}
-            >
-              Open the Deck Payment Estimator →
-            </Link>
-          </div>
         </div>
       </article>
 
       <section style={{ padding: '2rem 1.5rem', maxWidth: 960, margin: '0 auto' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Financing &amp; Planning Guides</h2>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related financing and planning guides</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/credit-score-deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>What Credit Score Do You Need for Deck Financing? →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/best-time-to-finance-build-deck-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Best Time of Year to Finance &amp; Build a Deck →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-deck-cost-monthly-payment" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Deck Cost vs Monthly Payment →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/timbertech-azek-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>TimberTech &amp; AZEK Deck Cost →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-by-size" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Cost by Size (300/400/500/600 sqft) →</Link></li>
-          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-lighting-railings-stairs-addon-cost" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Lighting, Railings &amp; Stairs Add-On Cost →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={S.link}>Deck payment estimator</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/credit-score-deck-financing" style={S.link}>Credit score and deck financing</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/best-time-to-finance-build-deck-northern-virginia" style={S.link}>Best time of year to finance and build a deck</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/trex-deck-cost-monthly-payment" style={S.link}>Trex deck cost and monthly payment</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/timbertech-azek-deck-cost-northern-virginia" style={S.link}>TimberTech and AZEK deck cost</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-by-size" style={S.link}>Composite deck cost by size</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-lighting-railings-stairs-addon-cost" style={S.link}>Lighting, railings, and stairs</Link></li>
         </ul>
       </section>
 
@@ -330,7 +320,7 @@ export default function MonthlyPaymentCompositeDeckPage() {
         buttonText="Get Free Written Estimate"
         link="/get-estimate"
       />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated={UPDATED} />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

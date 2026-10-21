@@ -93,9 +93,9 @@ export default function LouveredPergolaPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Size', 'Manual', 'Motorized', 'Typical Timeline'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['10x12 ft', 'a written estimate', 'a written estimate', '1 week'],
-                  ['12x14 ft', 'a written estimate', 'a written estimate', '1–2 weeks'],
-                  ['14x20 ft', 'a written estimate', 'a written estimate', '2 weeks'],
+                  ['10x12 ft', 'Not published', 'See the written estimate', '1 week'],
+                  ['12x14 ft', 'Not published', 'See the written estimate', '1–2 weeks'],
+                  ['14x20 ft', 'Not published', 'See the written estimate', '2 weeks'],
                   ['Large / sensor-equipped', '—', 'a written estimate', '2–3 weeks'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>

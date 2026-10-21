@@ -13,7 +13,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/deck-cost-20x20-northern-virginia',
   title: '20x20 Deck Cost in Northern Virginia (2026)',
-  description: 'How much does a 20x20 deck (400 sq ft) cost in Northern Virginia in 2026? Pressure-treated wood a written estimate, composite a written estimate, premium PVC a written estimate. Permits and HOA notes included.',
+  description: 'A 20x20 deck is 400 sq ft. Dollar figures on this page are external benchmarks, not a Loudoun Decks price.',
   image: '/social/deck-cost-20x20-northern-virginia-social.png',
 });
 
@@ -30,12 +30,12 @@ const articleSchema = {
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a 20x20 deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "As of May 2026, a 20x20 deck (400 sq ft) in Northern Virginia costs roughly a written estimate in pressure-treated wood, a written estimate in standard composite (Trex Enhance or Select), and a written estimate in premium composite or PVC (Trex Transcend or TimberTech AZEK). At this size many homeowners step up to a multi-level layout, which adds 20-40%." } },
+    { "@type": "Question", name: "How much does a 20x20 deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "This page does not publish a pressure-treated, composite, or PVC total for a 20x20 deck, and it does not publish a multi-level percentage. The summary cites external benchmarks with the publisher and date. Those figures are not a Loudoun Decks price. A written estimate is the project price." } },
     { "@type": "Question", name: "Is 20x20 too big for one level?", acceptedAnswer: { "@type": "Answer", text: "Not at all — a single-level 20x20 is a popular entertaining deck. But on a sloped Northern Virginia lot, a multi-level 20x20 (a dining tier plus a step-down lounge tier) often uses the grade better and creates clearer zones. The decision is driven by your yard, not the size itself." } },
-    { "@type": "Question", name: "What is the price per square foot for a 20x20 deck?", acceptedAnswer: { "@type": "Answer", text: "On a 400 sq ft footprint, expect about a written estimate per sq ft in pressure-treated wood, a written estimate per sq ft in standard composite, and a written estimate per sq ft in premium composite or PVC. Larger spans need bigger beams and more footings, so the per-sq-ft savings versus a 16x20 are modest." } },
+    { "@type": "Question", name: "What is the price per square foot for a 20x20 deck?", acceptedAnswer: { "@type": "Answer", text: "This page does not publish a Loudoun Decks price per square foot. The summary cites external benchmarks with the publisher and date. Larger spans need bigger beams and more footings. A written estimate is the project price." } },
     { "@type": "Question", name: "Does a 20x20 deck need extra structural support?", acceptedAnswer: { "@type": "Answer", text: "Often yes. A 20-ft span typically needs an intermediate beam line and additional posts, plus joists sized up (often 2x10 or 2x12 instead of 2x8). For composite, joist spacing usually tightens to 12 inches on-center for the recommended deflection. All of this is engineered to the Virginia Residential Code and verified at framing inspection." } },
     { "@type": "Question", name: "How long does it take to build a 20x20 deck?", acceptedAnswer: { "@type": "Answer", text: "Construction is about 2-3 weeks for a single-level 20x20 once permits are in hand, or 3-4 weeks for a multi-level version. Full timeline including HOA architectural review and the county permit is typically 8-12 weeks from contract signing." } },
-    { "@type": "Question", name: "Does a 20x20 deck add resale value?", acceptedAnswer: { "@type": "Answer", text: "Yes, especially on larger Northern Virginia lots where the backyard is a main selling feature. Decks generally recoup roughly 60-75% of cost at resale, and a 400 sq ft composite deck reads to buyers as a genuine outdoor room — not just a platform off the kitchen." } },
+    { "@type": "Question", name: "Does a 20x20 deck add resale value?", acceptedAnswer: { "@type": "Answer", text: "Resale recovery is not a fixed percentage, and this page does not publish one." } },
   ],
 };
 
@@ -45,7 +45,7 @@ export default function DeckCost20x20Page() {
   return (
     <>
       <JsonLd data={articleSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-cost-20x20-northern-virginia" name="20x20 Deck Cost in Northern Virginia (2026)" description="How much does a 20x20 deck (400 sq ft) cost in Northern Virginia in 2026? Pressure-treated wood a written estimate, composite a written estimate, premium PVC a written estimate-" speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-cost-20x20-northern-virginia" name="20x20 Deck Cost in Northern Virginia (2026)" description="A 20x20 deck is 400 sq ft. Dollar figures on this page are external benchmarks, not a Loudoun Decks price." speakable />
       <JsonLd data={faqSchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -64,7 +64,7 @@ export default function DeckCost20x20Page() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <section data-speakable="true" style={{ background: '#fff8f0', borderLeft: '4px solid var(--color-primary)', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
-            <p style={{ margin: 0, fontWeight: 600, lineHeight: 1.6 }}><strong>TL;DR:</strong> As of May 2026, a 20x20 deck (400 sq ft) in Northern Virginia costs about <strong>a written estimate&ndash;a written estimate in pressure-treated wood</strong>, <strong>a written estimate&ndash;a written estimate in standard composite</strong>, and <strong>a written estimate&ndash;a written estimate in premium composite or PVC</strong>. A multi-level layout at this size adds 20&ndash;40%. Pricing source: LDN Decks 2026 Northern Virginia estimating logic and market-rate planning ranges.</p>
+            <p style={{ margin: 0, fontWeight: 600, lineHeight: 1.6 }}><strong>TL;DR:</strong> A 20×20 deck is 400 sq ft. For a simple, low-height composite deck with standard railing and without complex stairs or elevation, external 2026 benchmarks put installed cost at $35–$80 per square foot, or about $14,000–$32,000 (RemodelCalculators, reviewed October 11, 2026, https://remodelcalculators.com/deck-cost). Angi lists $30–$60 per square foot for deck construction (updated September 24, 2026, https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm). These are national planning estimates, not Loudoun Decks prices. This page does not publish a pressure-treated total or a multi-level percentage. A written estimate is the only project price.</p>
           </section>
 
           <NamedAuthor context="Northern Virginia 20x20 deck builds" lastUpdated="May 2026" />
@@ -75,10 +75,10 @@ export default function DeckCost20x20Page() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Material', 'Total (20x20)', 'Per sq ft', 'Typical Lifespan'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Pressure-treated wood', 'a written estimate', 'a written estimate', '10–15 years (with annual maintenance)'],
-                  ['Standard composite (Trex Enhance / Select)', 'a written estimate', 'a written estimate', '25–30 years'],
-                  ['Premium composite / PVC (Trex Transcend, TimberTech AZEK)', 'a written estimate', 'a written estimate', '30–50 years (fade & stain warranty)'],
-                  ['Multi-level upgrade (any material)', '+20% to +40%', '—', 'Same as base material'],
+                  ['Pressure-treated wood', 'Not published', 'See the written estimate', 'See the manufacturer'],
+                  ['Standard composite (Trex Enhance / Select)', 'Not published', 'See the written estimate', 'See the manufacturer'],
+                  ['Premium composite / PVC (Trex Transcend, TimberTech AZEK)', 'Not published', 'See the written estimate', 'See the manufacturer'],
+                  ['Multi-level upgrade (any material)', 'Not published', '—', 'Same structure as the base'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -91,21 +91,21 @@ export default function DeckCost20x20Page() {
 
           <h2 style={S.h2}>Single-Level or Multi-Level at 20x20?</h2>
           <p style={S.p}>At 400 sq ft you can comfortably zone a single-level deck into dining, lounging, and a grill area without crowding. On a flat lot a single-level 20x20 is the most cost-effective answer.</p>
-          <p style={S.p}>On a sloped Northern Virginia lot, though, a <Link href="/multi-level-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)' }}>multi-level 20x20</Link> often uses the grade better &mdash; a higher dining tier off the kitchen, a step-down lounge tier closer to the yard. It costs 20&ndash;40% more than a single level, but it eliminates the visual problem of a deck floating 6 feet above the lawn.</p>
+          <p style={S.p}>On a sloped Northern Virginia lot, a <Link href="/multi-level-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)' }}>multi-level 20x20</Link> often uses the grade better: a higher dining tier off the kitchen and a step-down lounge tier closer to the yard. This page does not publish a percentage for that layout. The difference is in the written estimate.</p>
 
           <h2 style={S.h2}>What Drives the Final Price on a 20x20?</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Spans and structure</strong> &mdash; a 20-ft span needs an intermediate beam line, additional posts, and joists sized up (often 2x10 or 2x12). For composite, joists tighten to 12 inches on-center.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Elevation</strong> &mdash; a ground-level 20x20 is the cheapest. A second-story 20x20 with walkout-basement access adds a written estimate&ndash;a written estimate in posts, footings, and rail.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Multi-level layout</strong> &mdash; stepping the deck adds a second beam line, transition framing, and a connecting stair set, adding 20&ndash;40% to the base.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Railing perimeter</strong> &mdash; about 60 linear feet on a three-sided 20x20. Aluminum or cable adds a written estimate&ndash;a written estimate over composite balusters.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Integrated lighting</strong> &mdash; a more substantial low-voltage package (stairs, post caps, perimeter rail strips) adds a written estimate&ndash;a written estimate.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Under-deck dry space</strong> &mdash; for elevated 20x20s, an above-joist drainage system to create dry patio space below adds a written estimate&ndash;a written estimate.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Elevation</strong> &mdash; a ground-level 20x20 is the cheapest. A second-story 20x20 with walkout-basement access adds the amount in a written estimate in posts, footings, and rail.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Multi-level layout</strong> &mdash; stepping the deck adds a second beam line, transition framing, and a connecting stair set. This page does not publish a percentage for that work. The amount is in the written estimate.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Railing perimeter</strong> &mdash; about 60 linear feet on a three-sided 20x20. Aluminum or cable adds the amount in a written estimate over composite balusters.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Integrated lighting</strong> &mdash; a more substantial low-voltage package (stairs, post caps, perimeter rail strips) adds the amount in a written estimate.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Under-deck dry space</strong> &mdash; for elevated 20x20s, an above-joist drainage system to create dry patio space below adds the amount in a written estimate.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Built-in features</strong> &mdash; bench seating, planters, an outdoor kitchen rough-in, or a hot-tub-ready zone push the build further.</li>
           </ol>
 
           <h2 style={S.h2}>Composite vs Pressure-Treated for a 20x20 &mdash; the 15-Year View</h2>
-          <p style={S.p}>The upfront delta on a 20x20 is roughly a written estimate&ndash;a written estimate in favor of pressure-treated. But at this size the maintenance load on wood is real &mdash; budget a written estimate&ndash;a written estimate every 2 years to power-wash, sand, and restain DIY, or a written estimate&ndash;a written estimate professionally. Across 15 years that&apos;s a written estimate&ndash;a written estimate in maintenance, plus board replacement around year 10&ndash;12. Composite removes most of it and looks new the whole time. Full math in our <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)' }}>composite vs wood deck guide</Link>.</p>
+          <p style={S.p}>The upfront delta on a 20x20 is roughly the amount in a written estimate in favor of pressure-treated. But at this size the maintenance load on wood is real &mdash; budget the amount in a written estimate every 2 years to power-wash, sand, and restain DIY, or the amount in a written estimate professionally. Across 15 years that&apos;s the amount in a written estimate in maintenance, plus board replacement around year 10&ndash;12. Composite removes most of it and looks new the whole time. Full math in our <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)' }}>composite vs wood deck guide</Link>.</p>
 
           <h2 style={S.h2}>20x20 Deck Planning Scenarios to Verify Before Case Study Use</h2>
           <p style={S.p}>
@@ -130,12 +130,12 @@ export default function DeckCost20x20Page() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "How much does a 20x20 deck cost in Northern Virginia?", a: "Pressure-treated wood: a written estimate. Standard composite: a written estimate. Premium composite / PVC: a written estimate. Multi-level adds 20-40%. As of May 2026 NoVA pricing." },
+            { q: "How much does a 20x20 deck cost in Northern Virginia?", a: "This page does not publish a pressure-treated, composite, or PVC total for a 20x20 deck, and it does not publish a multi-level percentage. The summary cites external benchmarks with the publisher and date. Those figures are not a Loudoun Decks price. A written estimate is the project price." },
             { q: "Is 20x20 too big for one level?", a: "Not at all — single-level 20x20 is a popular entertaining deck. On a sloped lot, a multi-level 20x20 often uses the grade better. The decision is driven by your yard." },
-            { q: "What is the price per square foot for a 20x20?", a: "About priced in a written estimate in PT wood, priced in a written estimate in standard composite, priced in a written estimate in premium. Per-sqft savings versus a 16x20 are modest because larger spans need bigger framing." },
+            { q: "What is the price per square foot for a 20x20?", a: "This page does not publish a Loudoun Decks price per square foot. The summary cites external benchmarks with the publisher and date. Larger spans need bigger beams and more footings. A written estimate is the project price." },
             { q: "Does a 20x20 need extra structural support?", a: "Often yes. A 20-ft span typically needs an intermediate beam line, more posts, and joists sized up (2x10 or 2x12). For composite, joists usually tighten to 12 inches on-center." },
             { q: "How long does it take to build?", a: "Single-level: 2-3 weeks of construction. Multi-level: 3-4 weeks. Full timeline including HOA review and the county permit is typically 8-12 weeks from contract." },
-            { q: "Does a 20x20 deck add resale value?", a: "Yes, especially on larger lots. Decks recoup roughly 60-75% of cost at resale, and a 400 sq ft composite reads to buyers as a real outdoor room." },
+            { q: "Does a 20x20 deck add resale value?", a: "Resale recovery is not a fixed percentage, and this page does not publish one." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

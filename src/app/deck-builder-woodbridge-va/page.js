@@ -49,7 +49,7 @@ const woodbridgeFAQs = [
   },
   {
     q: "What is the cost of a composite deck in Woodbridge?",
-    a: "A professional composite deck in Woodbridge typically ranges from a written estimate to a written estimate, depending on size, materials, multi-level design, and add-ons like screened porches."
+    a: "A professional composite deck in Woodbridge typically ranges from the amount in a written estimate, depending on size, materials, multi-level design, and add-ons like screened porches."
   },
   {
     q: "Do Woodbridge HOAs approve composite deck designs?",

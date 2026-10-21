@@ -87,11 +87,11 @@ export default function DeckStainingPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Deck Size', 'Basic (transparent)', 'Semi-Transparent', 'Solid Stain'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['150 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['200 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['300 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['400 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['500+ sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['150 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['200 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['300 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['400 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['500+ sqft', 'Not published', 'See the written estimate', 'In that estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}

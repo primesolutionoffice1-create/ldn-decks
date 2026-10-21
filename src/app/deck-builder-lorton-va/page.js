@@ -43,7 +43,7 @@ const inclusions = [
 const lortonFAQs = [
   {
     q: "How much does a new deck cost in Lorton, VA?",
-    a: "Lorton composite deck projects typically range from a written estimate to a written estimate. A standard 300-350 sqft Trex Transcend deck with aluminum railings is priced in a written estimate installed. Laurel Hill builder-grade replacements tend toward the middle of that range, while larger builds with cable railing, multiple levels or screened-porch additions reach higher."
+    a: "Lorton composite deck projects are typically priced in a written estimate. A standard 300-350 sqft Trex Transcend deck with aluminum railings is priced in a written estimate installed. Laurel Hill builder-grade replacements tend toward the middle of that range, while larger builds with cable railing, multiple levels or screened-porch additions reach higher."
   },
   {
     q: "Do Laurel Hill and Crosspointe HOAs allow composite decking?",

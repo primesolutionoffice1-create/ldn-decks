@@ -45,7 +45,7 @@ const inclusions = [
 const fallsChurchFAQs = [
   {
     q: "How much does a custom deck cost in Falls Church, VA?",
-    a: "Falls Church deck projects typically range from a written estimate to a written estimate. Smaller lot sizes keep square footage modest, but homeowners in this market expect premium finishes — Trex Transcend, glass or cable railings, and integrated lighting. Composite decks are priced in a written estimate per square foot installed depending on material and complexity."
+    a: "Falls Church deck projects are typically priced in a written estimate. Smaller lot sizes keep square footage modest, but homeowners in this market expect premium finishes — Trex Transcend, glass or cable railings, and integrated lighting. Composite decks are priced in a written estimate per square foot installed depending on material and complexity."
   },
   {
     q: "Do I need a City of Falls Church permit or a Fairfax County permit?",
@@ -99,7 +99,7 @@ const expansionSections = [
   {
     title: "Premium Materials for a Premium Market",
     paragraphs: [
-      "Falls Church is one of Northern Virginia's highest-value real estate markets. Modest 1950s-era ramblers on small lots regularly sell for a written estimate to a written estimate million, and new construction teardowns push well beyond that. In this market, homeowners expect materials and finishes that match their property values. We exclusively use premium composite and PVC decking — Trex Transcend, TimberTech AZEK, and similar top-tier products — because they deliver the aesthetics and longevity this market demands.",
+      "Falls Church is one of Northern Virginia's highest-value real estate markets. Modest 1950s-era ramblers on small lots regularly sell for the amount in a written estimate million, and new construction teardowns push well beyond that. In this market, homeowners expect materials and finishes that match their property values. We exclusively use premium composite and PVC decking — Trex Transcend, TimberTech AZEK, and similar top-tier products — because they deliver the aesthetics and longevity this market demands.",
       "Glass railings and stainless steel cable systems are among the most popular choices for Falls Church projects. On a compact lot, transparent railings make a small deck feel significantly larger by preserving sight lines to the yard and beyond. Hidden fastener systems eliminate visible screws for a clean, furniture-grade surface. Integrated LED lighting extends the usable hours of your deck through Virginia's long summer evenings.",
       "These premium materials also eliminate the maintenance burden that traditional wood decks impose. In Virginia's humid climate, a pressure-treated wood deck needs sanding and staining every 1-2 years — a significant ongoing expense and inconvenience. Our composite builds are designed to look and perform beautifully for 25 years or more depending on product and care with nothing more than occasional cleaning."
     ]

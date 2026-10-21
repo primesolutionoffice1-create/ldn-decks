@@ -64,11 +64,11 @@ export default function PressureWashingDeckPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Deck Size', 'Wash Only', 'Wash + Brightener', 'Wash + Stain Prep'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Under 200 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['200–300 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['300–400 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['400–500 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['500+ sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['Under 200 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['200–300 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['300–400 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['400–500 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['500+ sqft', 'Not published', 'See the written estimate', 'In that estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}

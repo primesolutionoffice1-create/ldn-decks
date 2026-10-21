@@ -69,8 +69,8 @@ export default function PaverVsFlagstonePage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Factor', 'Concrete Pavers', 'Natural Flagstone'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Cost/sqft installed', 'a written estimate', 'a written estimate'],
-                  ['300 sqft total', 'a written estimate', 'a written estimate'],
+                  ['Cost/sqft installed', 'Not published', 'See the written estimate'],
+                  ['300 sqft total', 'Not published', 'See the written estimate'],
                   ['Look', 'Uniform, geometric, modern', 'Natural, organic, unique'],
                   ['Color options', 'Dozens (manufactured)', 'Limited (natural stone)'],
                   ['Durability', '25–50+ years', '25–50+ years'],

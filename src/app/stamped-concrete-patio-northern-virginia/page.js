@@ -70,10 +70,10 @@ export default function StampedConcretePage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Size', 'Basic (1 color)', 'Standard (2 colors)', 'Premium (borders + accents)'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['200 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['300 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['400 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['500 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['200 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['300 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['400 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['500 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -106,8 +106,8 @@ export default function StampedConcretePage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Factor', 'Stamped Concrete', 'Concrete Pavers', 'Natural Flagstone'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Cost/sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['300 sqft total', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['Cost/sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['300 sqft total', 'Not published', 'See the written estimate', 'In that estimate'],
                   ['Lifespan', '20–30 years', '25–50 years', '25–50+ years'],
                   ['Maintenance', 'Reseal every 2-3 yrs', 'Re-sand joints, minimal', 'Weed control, minimal'],
                   ['Freeze-thaw', 'Fair (can crack)', 'Excellent (joints flex)', 'Good (dry-set)'],

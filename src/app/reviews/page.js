@@ -27,7 +27,7 @@ const reviewFaqs = [
   },
   {
     q: 'What kinds of projects do you build?',
-    a: 'We build custom composite decks (Trex, TimberTech, AZEK), screened porches, deck replacements, outdoor kitchens, pergolas, fencing, and full outdoor living spaces. Most projects range from a written estimate to a written estimate depending on scope.',
+    a: 'We build custom composite decks (Trex, TimberTech, AZEK), screened porches, deck replacements, outdoor kitchens, pergolas, fencing, and full outdoor living spaces. Most projects are priced in a written estimate depending on scope.',
   },
   {
     q: 'Which areas do you serve?',

@@ -17,7 +17,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/trex-deck-cost-monthly-payment',
   title: 'Trex Deck Cost vs Monthly Payment: 2026 Budget Guide',
-  description: 'Real Trex deck costs by tier (Enhance, Transcend, Signature) and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia.',
+  description: 'Trex decks in Northern Virginia are priced in a written estimate. This page does not publish an example APR, a warranty term, or a monthly payment.',
   image: '/social/trex-deck-cost-monthly-payment-social.png',
 });
 
@@ -29,8 +29,8 @@ const faqs = [
     a: 'A Trex deck in Northern Virginia typically is priced in a written estimate per square foot installed, depending on tier. A 350 sqft Trex Enhance project lands a written estimate; Trex Transcend usually is priced in a written estimate; Trex Signature composite decking usually is priced in a written estimate for the same size.',
   },
   {
-    q: 'What is the monthly payment on a a written estimate Trex deck?',
-    a: 'At a sample 8.99% APR, a a written estimate Trex deck financed over 10 years is roughly a lender-calculated paymentnth and roughly a lender-calculated paymentnth over 15 years. Promotional 0% interest options exist for shorter payoff windows. Pre-qualification through a soft credit pull returns your real number without affecting your credit score.',
+    q: 'What is the monthly payment on a Trex deck?',
+    a: 'This page does not publish an example APR or a monthly payment. The lender sets the rate and the term from the written estimate.',
   },
   {
     q: 'Which Trex tier gives the best long-term value?',
@@ -79,39 +79,30 @@ const tiers = [
   {
     name: 'Trex Enhance',
     sub: 'Naturals & Basics — budget tier',
-    range: 'a written estimate /sqft installed',
-    warranty: '25-yr residential + 25-yr fade & stain',
-    project350: 'a written estimate',
-    project500: 'a written estimate',
-    monthly: 'a lender-calculated payment over 10y',
+    range: 'Priced in a written estimate',
+    warranty: 'See the manufacturer warranty. This page does not state a term.',
+    project350: 'Written estimate',
+    project500: 'Written estimate',
+    monthly: 'Set by the lender',
   },
   {
     name: 'Trex Transcend',
     sub: 'Premium composite tier — deeper grain and stronger warranty coverage',
-    range: 'a written estimate /sqft installed',
-    warranty: '50-yr limited residential fade & stain',
-    project350: 'a written estimate',
-    project500: 'a written estimate',
-    monthly: 'a lender-calculated payment over 10y',
+    range: 'Priced in a written estimate',
+    warranty: 'See the manufacturer warranty. This page does not state a term.',
+    project350: 'Written estimate',
+    project500: 'Written estimate',
+    monthly: 'Set by the lender',
   },
   {
     name: 'Trex Signature',
     sub: 'Luxury composite tier — newest high-end board profile',
-    range: 'a written estimate /sqft installed',
-    warranty: '50-yr limited residential fade & stain',
-    project350: 'a written estimate',
-    project500: 'a written estimate',
-    monthly: 'a lender-calculated payment over 10y',
+    range: 'Priced in a written estimate',
+    warranty: 'See the manufacturer warranty. This page does not state a term.',
+    project350: 'Written estimate',
+    project500: 'Written estimate',
+    monthly: 'Set by the lender',
   },
-];
-
-// 8.99% APR amortization: total = monthly × months; interest = total − principal
-const paymentMatrix = [
-  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
-  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
-  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
-  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
-  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
 ];
 
 export default function TrexDeckCostMonthlyPaymentPage() {
@@ -120,13 +111,13 @@ export default function TrexDeckCostMonthlyPaymentPage() {
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="Trex Deck Cost vs Monthly Payment: 2026 Budget Guide"
-        description="Real Trex deck costs by tier and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia."
+        description="Trex decks in Northern Virginia are priced in a written estimate. This page does not publish an example APR, a warranty term, or a monthly payment."
         path={PATH}
         image="/showcase/img11.jpeg"
         datePublished="2026-05-27"
         dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Trex Deck Cost vs Monthly Payment: 2026 Budget Guide" description="Real Trex deck costs by tier (Enhance, Transcend, Signature) and monthly payment examples at 8–10% APR. Plan a Trex deck budget in Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Trex Deck Cost vs Monthly Payment: 2026 Budget Guide" description="Trex decks in Northern Virginia are priced in a written estimate. This page does not publish an example APR, a warranty term, or a monthly payment." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -137,8 +128,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
             Trex Deck Cost vs Monthly Payment: What Northern Virginia Homeowners Should Budget
           </h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: 1.6 }}>
-            Trex cost by tier (Enhance, Transcend, Signature) and matching monthly payment examples. Compare payment
-            options before you commit to a project amount.
+            Trex collections are priced in a written estimate. This page does not publish an example APR or a monthly payment.
           </p>
         </div>
       </section>
@@ -155,9 +145,8 @@ export default function TrexDeckCostMonthlyPaymentPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            A <strong>350 sqft Trex deck</strong> in Northern Virginia runs <strong>a written estimate</strong>{' '}
-            depending on tier. At 8.99% APR over 10 years that&apos;s roughly <strong>a lender-calculated paymentnth</strong>.
-            Run your written estimate amount through the{' '}
+            This page does not publish a Trex project total, an example APR, or a monthly payment.
+            Run the written estimate through the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
             </Link>{' '}
@@ -168,7 +157,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
 
       <GeoAnswerBlock
         question="How much does a Trex deck cost per month in Northern Virginia?"
-        answer="A typical 350 sqft Trex deck in Northern Virginia runs about a written estimate to a written estimate depending on Trex tier, railing, stairs, lighting, frame condition, permits, and HOA scope. At the sample 8.99% APR used on this page, that maps to roughly a written estimate to a written estimate per month over 10 years. Homeowners should use the payment estimator with their written estimate amount because the lender, term, APR, and optional upgrades change the real monthly payment."
+        answer="This page does not publish a Trex project total, an example APR, or a monthly payment. The written estimate includes the tier, railing, stairs, lighting, frame work, permits, and HOA scope when those items apply. The lender sets the rate and the term."
         facts={[
           'Trex Enhance planning range: a written estimate per sqft installed',
           'Trex Transcend planning range: a written estimate per sqft installed',
@@ -213,9 +202,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
 
           <h2 style={{ ...S.h2, marginTop: 0 }}>Trex Cost by Tier — Northern Virginia (2026)</h2>
           <p style={S.p}>
-            Trex sells three main residential tiers. Each tier has a different price per square foot, warranty length,
-            and capping technology. The chart below shows installed cost in Northern Virginia, plus typical project
-            totals for 350 and 500 sqft decks and the matching monthly payment range at 8.99% APR over 10 years.
+            Trex sells more than one residential collection. This page does not publish an installed price, a warranty term, or a monthly payment for any collection. The written estimate names the collection and the scope.
           </p>
 
           {tiers.map((t, i) => (
@@ -234,42 +221,17 @@ export default function TrexDeckCostMonthlyPaymentPage() {
             </div>
           ))}
 
-          <h2 style={S.h2}>Monthly Payment by Project Amount (Trex)</h2>
+          <h2 style={S.h2}>Monthly payment</h2>
           <p style={S.p}>
-            The table below converts common Trex project amounts into monthly payments at a sample 8.99% APR. Longer
-            term = lower monthly, higher total interest.
+            This page does not publish sample project amounts or monthly payments. Enter the written estimate in the deck payment estimator. The lender sets the rate and the term.
           </p>
-          <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-              <thead>
-                <tr>
-                  <th style={S.th}>Project Amount</th>
-                  <th style={S.th}>10-Year /mo</th>
-                  <th style={S.th}>15-Year /mo</th>
-                  <th style={S.th}>Total Interest (10y)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {paymentMatrix.map((row, i) => (
-                  <tr key={row[0]} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
-                    <td style={{ ...S.td, fontWeight: 700 }}>{row[0]}</td>
-                    <td style={S.td}>{row[1]}</td>
-                    <td style={{ ...S.td, color: 'var(--color-primary)', fontWeight: 700 }}>{row[2]}</td>
-                    <td style={{ ...S.td, color: '#555' }}>{row[3]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
           <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 8, padding: '1rem 1.25rem', marginBottom: '1.25rem' }}>
             <p data-speakable style={{ margin: 0, fontWeight: 600 }}>
-              A a written estimate Trex Enhance deck financed at 8.99% APR over 10 years costs approximately a written estimate total —
-              a written estimate in interest. A 15-year term lowers the monthly payment to a written estimate but raises total interest to
-              roughly a written estimate.
+              This page does not publish an example APR, a monthly payment, or an interest total. The lender sets the rate and the term from the written estimate.
             </p>
           </div>
           <p style={{ ...S.p, fontSize: '0.85rem', color: '#777', fontStyle: 'italic' }}>
-            Illustrative only at 8.99% APR. Your real APR and term come from a lender pre-qualification.
+            The lender sets the APR and the term. This page does not publish an example.
           </p>
 
           <h2 style={S.h2}>How Trex Compares to Other Composite Brands</h2>

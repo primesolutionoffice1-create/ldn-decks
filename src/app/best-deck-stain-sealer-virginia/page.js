@@ -26,7 +26,7 @@ const faqSchema = {
     { "@type": "Question", name: "How often should you stain a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Most Virginia decks need re-staining every 2-3 years with semi-transparent stain, or every 3-5 years with solid stain. South-facing decks with full sun exposure may need attention every 18-24 months. Transparent sealers typically last only 1-2 years in Virginia's climate." } },
     { "@type": "Question", name: "Is oil-based or water-based deck stain better for Virginia?", acceptedAnswer: { "@type": "Answer", text: "Water-based stains are generally better for Virginia. They handle humidity better during application, dry faster (critical during unpredictable Virginia weather), resist mildew growth, and meet current VOC regulations. Oil-based stains penetrate deeper but take 24-48 hours to dry and are more prone to mildew in humid conditions." } },
     { "@type": "Question", name: "When is the best time to stain a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "The best months to stain a deck in Virginia are April-May and September-October. Temperatures should be 50-85°F with low humidity (below 50%) and no rain forecast for 48 hours. Avoid summer months when humidity regularly exceeds 70% and temperatures above 90°F cause stain to dry too quickly." } },
-    { "@type": "Question", name: "How much does professional deck staining cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck staining in Northern Virginia is priced in a written estimate per square foot, including pressure washing, prep, and two coats. A typical 300 sqft deck is priced in a written estimate depending on condition and product choice. DIY is priced in priced in a written estimate for materials only." } },
+    { "@type": "Question", name: "How much does professional deck staining cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck staining in Northern Virginia is priced in a written estimate per square foot, including pressure washing, prep, and two coats. A typical 300 sqft deck is priced in a written estimate depending on condition and product choice. DIY is priced in a written estimate for materials only." } },
     { "@type": "Question", name: "Should I stain or seal my new pressure-treated deck?", acceptedAnswer: { "@type": "Answer", text: "Wait 3-6 months before staining a new pressure-treated deck to let the wood dry and the treatment chemicals cure. Apply a water repellent sealer immediately if desired, but stain adhesion is poor on freshly treated lumber. Perform a water droplet test if water beads up, the wood isn't ready for stain." } },
   ],
 };
@@ -289,8 +289,8 @@ export default function BestDeckStainSealerPage() {
                   ['Brushes, rollers, tape', 'a written estimate', 'Included'],
                   ['Sander rental + sandpaper', 'a written estimate', 'Included'],
                   ['Labor', 'a written estimate (your time: 12-16 hrs)', 'a written estimate'],
-                  ['Total (300 sqft)', 'a written estimate', 'a written estimate'],
-                  ['Cost per sqft', 'a written estimate', 'a written estimate'],
+                  ['Total (300 sqft)', 'Not published', 'See the written estimate'],
+                  ['Cost per sqft', 'Not published', 'See the written estimate'],
                 ].map((row, i) => {
                   const isTotal = i >= 6;
                   return (

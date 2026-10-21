@@ -11,40 +11,43 @@ import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
-
-export const metadata = buildMetadata({
-  path: '/resurface-or-replace-deck-financing',
-  title: 'Resurface or Replace Before Financing? 2026 Decision Guide',
-  description: 'Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, and monthly payment math for Northern Virginia.',
-  image: '/social/resurface-or-replace-deck-financing-social.png',
-});
+import { NEW_COMPOSITE_ANSWER, REPLACEMENT_RANGE_ANSWER } from '@/lib/externalPlanningRanges';
 
 const PATH = '/resurface-or-replace-deck-financing';
+const PAGE_TITLE = 'Resurface or Replace Before Financing? 2026 Decision Guide';
+const UPDATED = '2026-10-21';
+const DESCRIPTION = 'Resurface a sound frame or replace a failed one. This page does not publish a savings percentage. A written estimate is the only project price.';
+
+const paymentNote = 'This page does not publish a monthly payment or an example APR. Enter the written estimate for the scope you choose in the deck payment estimator. The lender sets the rate and the term.';
+
+const savingsNote = 'This page does not publish a savings percentage for resurfacing. The external benchmarks below are different scopes. Do not subtract them to create a savings figure, and do not add them together.';
+
+const quickAnswer = [DESCRIPTION, savingsNote, REPLACEMENT_RANGE_ANSWER, paymentNote].join(' ');
 
 const faqs = [
   {
     q: 'Is resurfacing cheaper to finance than full replacement?',
-    a: 'Yes, when the existing frame passes inspection. A 350 sqft composite resurfacing typically is priced in a written estimate, while a full replacement is priced in a written estimate. Lower project amount = lower monthly payment at the same APR and term.',
+    a: `${savingsNote} ${REPLACEMENT_RANGE_ANSWER} ${paymentNote}`,
   },
   {
-    q: 'Can I finance just the resurfacing portion?',
-    a: 'Yes. Many lenders fund the full project amount regardless of whether you are resurfacing or replacing. The decision drives the project amount, not the financing eligibility. Soft-pull pre-qualification returns the same APR offers either way.',
+    q: 'Can the same lender review either scope?',
+    a: 'A lender reviews an approved project amount. Resurfacing and replacement are different scopes, so the written estimate amount can differ. The rate and the term come from the lender. This page does not publish an APR.',
   },
   {
     q: 'What disqualifies a deck from resurfacing?',
-    a: 'Rotting or soft joists, leaning or rotting posts, shifted or heaved footings, a pulling ledger board, or a deck that bounces when walked on. Any of these mean structural work is required — financing the full replacement is the correct decision.',
+    a: 'Soft or rotting joists, leaning or rotting posts, shifted or heaved footings, a ledger pulling away from the house, or a deck that bounces underfoot mean the frame needs structural work. Resurfacing those conditions is not a substitute for replacement.',
   },
   {
     q: 'Does replacement always cost more to finance?',
-    a: 'Total project amount is higher for replacement, so total interest paid over the loan term is higher. Monthly payment is also higher at the same term. However, replacement may be the only safe option — financing a resurface over an unsafe frame is not a real saving.',
+    a: 'Replacement includes structure that resurfacing leaves in place, so the written estimate is often higher. This page does not publish that difference as a percentage or as a monthly payment. If the frame is unsafe, replacement is the scope that gets financed.',
   },
   {
-    q: 'How do I know which one I need?',
-    a: 'Free on-site structural inspection. We check joists, beams, posts, footings, ledger, and flashing against current Virginia residential code. The inspection report tells you which path is safe and which monthly payment range you should model in the estimator.',
+    q: 'How do I know which scope I need?',
+    a: 'An on-site inspection checks joists, beams, posts, footings, the ledger, and flashing. The written estimate prices the scope that inspection supports. Use that amount in the deck payment estimator.',
   },
   {
     q: 'Does either option require a permit in Northern Virginia?',
-    a: 'Both. Loudoun, Fairfax, Prince William, Arlington, and Alexandria all require permits when you replace the deck surface, railings, or structure. We handle the permit application and HOA submission for both resurfacing and replacement projects.',
+    a: 'Loudoun, Fairfax, Prince William, Arlington, and Alexandria can require a permit when the work changes the deck surface, the railings, or the structure. The written estimate identifies the permit path for the address. Loudoun Decks prepares the permit submission for the projects it builds.',
   },
 ];
 
@@ -60,20 +63,56 @@ const faqSchema = {
   })),
 };
 
+export const metadata = buildMetadata({
+  path: PATH,
+  title: PAGE_TITLE,
+  description: DESCRIPTION,
+  image: '/social/resurface-or-replace-deck-financing-social.png',
+});
+
 const S = {
   h2: { fontSize: '1.85rem', fontWeight: 800, marginBottom: '1.1rem', marginTop: '2.5rem', lineHeight: 1.2 },
   h3: { fontSize: '1.2rem', fontWeight: 700, margin: '1.5rem 0 0.6rem' },
-  p: { marginBottom: '1rem', lineHeight: 1.75, fontSize: '1rem' },
-  th: { padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd', fontSize: '0.92rem', background: '#f5f5f5' },
-  td: { padding: '0.85rem', borderBottom: '1px solid #eee', fontSize: '0.92rem' },
+  p: { marginBottom: '1rem', lineHeight: 1.75, fontSize: '1rem', overflowWrap: 'anywhere' },
   container: { maxWidth: 960, margin: '0 auto', padding: '0 1.5rem' },
+  link: { color: 'var(--color-primary)', fontWeight: 600 },
 };
 
-const rows = [
-  ['350 sqft project', 'a written estimate', 'a written estimate', 'a written estimate saved'],
-  ['450 sqft project', 'a written estimate', 'a written estimate', 'a written estimate saved'],
-  ['600 sqft project', 'a written estimate', 'a written estimate', 'a written estimate saved'],
-  ['Monthly /mo @ 8.99% 10y (350 sqft mid)', 'a lender-calculated payment (resurface a written estimate)', 'a lender-calculated payment (replace a written estimate)', 'a lender-calculated payment less'],
+function LinkedText({ text }) {
+  const urlRe = /https:\/\/[^\s),]+/g;
+  const nodes = [];
+  let last = 0;
+  let match;
+  let i = 0;
+  while ((match = urlRe.exec(text)) !== null) {
+    if (match.index > last) nodes.push(text.slice(last, match.index));
+    const url = match[0];
+    nodes.push(
+      <a key={`${i}-${url}`} href={url} target="_blank" rel="noopener noreferrer" style={S.link}>
+        {url}
+      </a>
+    );
+    last = match.index + url.length;
+    i += 1;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes;
+}
+
+const resurfaceChecks = [
+  'Joists are firm, with no soft spots',
+  'Posts are straight and the bases are sound',
+  'Footings are stable',
+  'The ledger is mechanically attached',
+  'The deck does not bounce underfoot',
+];
+
+const replaceChecks = [
+  'Joists are soft, sagging, or rotting',
+  'Posts lean or the bases are rotting',
+  'Footings have shifted or heaved',
+  'The ledger is pulling away from the house',
+  'The deck bounces under load',
 ];
 
 export default function ResurfaceOrReplaceFinancingPage() {
@@ -82,13 +121,19 @@ export default function ResurfaceOrReplaceFinancingPage() {
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="Resurface or Replace Before Financing? Decision Guide"
-        description="Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, and monthly payment math for Northern Virginia."
+        description={DESCRIPTION}
         path={PATH}
         image="/images/img26.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-10-18"
+        dateModified={UPDATED}
       />
-      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Resurface or Replace Before Financing? 2026 Decision Guide" description="Should you resurface or replace your deck before financing? Cost comparison, structural inspection criteria, and monthly payment math for Northern Virginia." speakable />
+      <WebPageSchema
+        dateModified={UPDATED}
+        url={`https://ldndecks.com${PATH}`}
+        name={PAGE_TITLE}
+        description={DESCRIPTION}
+        speakable
+      />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -99,8 +144,7 @@ export default function ResurfaceOrReplaceFinancingPage() {
             Is It Better to Resurface or Replace a Deck Before Financing?
           </h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: 1.6 }}>
-            Resurfacing keeps the frame and saves 30–40% on the project amount. Replacement is the right call when the
-            frame fails inspection. Here&apos;s how the financing math compares.
+            Resurfacing keeps a frame that passes inspection. Replacement is the path when the frame does not. This page does not publish a savings percentage.
           </p>
         </div>
       </section>
@@ -108,19 +152,27 @@ export default function ResurfaceOrReplaceFinancingPage() {
       <TrustBanner />
 
       <AboveFoldCTA
-        headline="Not sure if your frame passes? Schedule a free structural inspection before you commit to a project amount."
+        headline="Not sure if your frame passes? Schedule an on-site inspection before you commit to a project amount."
         estimateHref="/get-estimate"
-        estimateLabel="Schedule Free Inspection"
+        estimateLabel="Schedule an Inspection"
       />
 
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} className="quick-answer">
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p data-speakable>
-            <strong>Resurface</strong> if the existing frame passes structural inspection — saves a written estimate and
-            lowers the monthly payment by a lender-calculated payment. <strong>Replace</strong> if joists, posts, footings, or ledger
-            fail — financing a resurface on an unsafe frame is not a real saving. Free inspection at{' '}
-            <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>/get-estimate</Link>.
+          <p data-speakable style={S.p}>
+            <LinkedText text={quickAnswer} />
+          </p>
+          <p style={S.p}>
+            Sources:{' '}
+            <a href="https://latestcost.com/composite-decking-cost-comparison-material-size-installation/" target="_blank" rel="noopener noreferrer" style={S.link}>
+              https://latestcost.com/composite-decking-cost-comparison-material-size-installation/
+            </a>
+            {' '}and{' '}
+            <a href="https://www.angi.com/articles/how-much-does-composite-decking-cost.htm" target="_blank" rel="noopener noreferrer" style={S.link}>
+              https://www.angi.com/articles/how-much-does-composite-decking-cost.htm
+            </a>
+            .
           </p>
         </div>
       </section>
@@ -130,7 +182,7 @@ export default function ResurfaceOrReplaceFinancingPage() {
           <div style={{ position: 'relative', width: '100%', height: '380px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
             <Image
               src="/images/img26.jpeg"
-              alt="Deck resurfacing vs replacement decision in Northern Virginia"
+              alt="Deck resurfacing and replacement decision in Northern Virginia"
               fill
               style={{ objectFit: 'cover' }}
               sizes="(max-width: 960px) 100vw, 960px"
@@ -139,123 +191,80 @@ export default function ResurfaceOrReplaceFinancingPage() {
             />
           </div>
 
-          <h2 style={{ ...S.h2, marginTop: 0 }}>Project Amount: Resurfacing vs Replacement</h2>
-          <p style={S.p}>
-            The decision drives the project amount, which drives the monthly payment. Below is the cost difference at
-            three common sizes for a mid-tier composite (Trex Transcend / TimberTech PRO Reserve) in Northern Virginia.
-          </p>
-          <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-              <thead>
-                <tr>
-                  <th style={S.th}>Scenario</th>
-                  <th style={S.th}>Resurfacing</th>
-                  <th style={S.th}>Replacement</th>
-                  <th style={S.th}>Difference</th>
-                </tr>
-              </thead>
-              <tbody>
-                {rows.map((row, i) => (
-                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
-                    <td style={{ ...S.td, fontWeight: 700 }}>{row[0]}</td>
-                    <td style={S.td}>{row[1]}</td>
-                    <td style={S.td}>{row[2]}</td>
-                    <td style={{ ...S.td, color: '#2e7d32', fontWeight: 700 }}>{row[3]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <h2 style={{ ...S.h2, marginTop: 0 }}>External benchmarks, not a savings percentage</h2>
+          <p style={S.p}><LinkedText text={REPLACEMENT_RANGE_ANSWER} /></p>
+          <p style={S.p}><LinkedText text={NEW_COMPOSITE_ANSWER} /></p>
+          <p style={S.p}>{savingsNote}</p>
 
-          <h2 style={S.h2}>The Frame Decides — Not the Budget</h2>
+          <h2 style={S.h2}>The frame decides the scope</h2>
           <p style={S.p}>
-            We don&apos;t recommend resurfacing because it&apos;s cheaper. We recommend it when the existing frame
-            passes structural inspection. Reusing a failing frame is a warranty problem and a safety risk — saving
-            a written estimate on the project amount means nothing if the deck fails inspection two years later. The decision tree
-            is binary:
+            Resurfacing is the smaller scope when the existing frame passes inspection. Reusing a failing frame is a safety problem. The inspection, not a percentage of the project, decides which list below applies.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             <div style={{ background: '#e8f5e9', borderRadius: 8, padding: '1.5rem' }}>
-              <h3 style={{ fontWeight: 700, color: '#2e7d32', marginTop: 0, marginBottom: '0.75rem' }}>RESURFACE ✓</h3>
+              <h3 style={{ fontWeight: 700, color: '#2e7d32', marginTop: 0, marginBottom: '0.75rem' }}>Resurface when</h3>
               <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem', margin: 0 }}>
-                <li>Joists firm, no soft spots</li>
-                <li>Posts straight, bases sound</li>
-                <li>Footings stable</li>
-                <li>Ledger mechanically attached</li>
-                <li>Deck does not bounce</li>
+                {resurfaceChecks.map((item) => <li key={item}>{item}</li>)}
               </ul>
             </div>
             <div style={{ background: '#ffebee', borderRadius: 8, padding: '1.5rem' }}>
-              <h3 style={{ fontWeight: 700, color: '#c62828', marginTop: 0, marginBottom: '0.75rem' }}>REPLACE ✗</h3>
+              <h3 style={{ fontWeight: 700, color: '#c62828', marginTop: 0, marginBottom: '0.75rem' }}>Replace when</h3>
               <ul style={{ paddingLeft: '1.25rem', fontSize: '0.95rem', margin: 0 }}>
-                <li>Joists soft, sagging, rotting</li>
-                <li>Posts leaning, base rot</li>
-                <li>Footings shifted or heaved</li>
-                <li>Ledger pulling from house</li>
-                <li>Deck bounces under load</li>
+                {replaceChecks.map((item) => <li key={item}>{item}</li>)}
               </ul>
             </div>
           </div>
 
-          <h2 style={S.h2}>Financing Math: Same APR, Different Principal</h2>
+          <h2 style={S.h2}>Financing follows the written estimate</h2>
           <p style={S.p}>
-            The APR a lender offers is based on your credit profile, not the project type. So a a written estimate resurface and a
-            a written estimate replacement, financed at the same APR over the same term, differ only in monthly payment and total
-            interest. At 8.99% over 10 years: resurface is a lender-calculated payment with ~a written estimate total interest; replacement is a lender-calculated payment
-            with ~a written estimate total interest. Same loan terms, different principal.
+            The rate a lender offers comes from the application, not from the project type. {paymentNote}{' '}
+            <Link href="/deck-payment-estimator" style={S.link}>Open the deck payment estimator</Link>
+            {' '}after the inspection.
           </p>
 
-          <h2 style={S.h2}>When Replacement Pays Off Long-Term</h2>
+          <h2 style={S.h2}>When replacement is the scope</h2>
           <p style={S.p}>
-            A full replacement adds new framing, footings, and ledger work — all of which carry warranty coverage and
-            reset the clock on structural lifespan. For a 25-year-old deck with marginal frame condition, the cost
-            premium of replacement often makes sense because resurfacing buys 5–10 years before the frame fails anyway.
-            For a 10-year-old deck with a sound frame, resurfacing usually wins.
+            A full replacement includes new framing, footings, and ledger work. This page does not state a warranty term and does not publish how many years a resurfaced frame will last. An older deck with a marginal frame may need replacement. A newer deck with a sound frame may be a resurfacing scope. The inspection decides.
           </p>
 
-          <h2 style={S.h2}>Free Structural Inspection Before You Commit</h2>
+          <h2 style={S.h2}>Inspection before the application</h2>
           <p style={S.p}>
-            Before you pre-qualify for financing on either path, schedule a free on-site inspection. We document frame
-            condition with photos and a written report, then quote both options when both are viable. That gives you
-            two written estimate amounts to run through the{' '}
-            <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
-              deck payment estimator
-            </Link>{' '}
-            before picking the path. Detailed breakdown of both services:{' '}
-            <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
-              resurfacing vs replacement comparison
-            </Link>.
+            Schedule an on-site inspection before applying for financing. The visit documents the frame and prices the scope that is safe. When both scopes are viable, the written estimate can price both so you can enter each amount in the estimator. See the{' '}
+            <Link href="/deck-resurfacing-vs-replacement" style={S.link}>resurfacing vs replacement comparison</Link>
+            {' '}for the construction difference.
           </p>
 
           <h2 style={S.h2}>FAQ</h2>
-          {faqs.map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 10, padding: '1.25rem', marginBottom: '0.75rem', background: '#fff' }}>
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 10, padding: '1.25rem', marginBottom: '0.75rem', background: '#fff' }}>
               <summary style={{ fontWeight: 700, cursor: 'pointer', fontSize: '1rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.75, color: '#555', fontSize: '0.95rem' }}>{faq.a}</p>
+              <p style={{ marginTop: '1rem', lineHeight: 1.75, color: '#555', fontSize: '0.95rem', overflowWrap: 'anywhere' }}>
+                <LinkedText text={faq.a} />
+              </p>
             </details>
           ))}
 
           <h2 style={S.h2}>Related</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
-              ['/deck-resurfacing-vs-replacement', 'Deck Resurfacing vs Replacement (full comparison)'],
-              ['/services/deck-resurfacing', 'Deck Resurfacing Service'],
-              ['/services/deck-replacement', 'Deck Replacement Service'],
-              ['/deck-resurfacing-northern-virginia', 'Deck Resurfacing in Northern Virginia'],
-              ['/deck-payment-estimator', 'Deck Payment Estimator'],
-              ['/deck-financing', 'Deck Financing in Northern Virginia'],
-              ['/deck-safety-inspection-checklist', 'Deck Safety Inspection Checklist'],
+              ['/deck-resurfacing-vs-replacement', 'Deck resurfacing vs replacement'],
+              ['/services/deck-resurfacing', 'Deck resurfacing service'],
+              ['/services/deck-replacement', 'Deck replacement service'],
+              ['/deck-resurfacing-northern-virginia', 'Deck resurfacing in Northern Virginia'],
+              ['/deck-payment-estimator', 'Deck payment estimator'],
+              ['/deck-financing', 'Deck financing in Northern Virginia'],
+              ['/deck-safety-inspection-checklist', 'Deck safety inspection checklist'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}>
-                <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
+                <Link href={href} style={S.link}>{text}</Link>
               </li>
             ))}
           </ul>
         </div>
       </article>
 
-      <SimpleCTA title="Price the Right Scope: Resurface or Replace?" buttonText="Schedule Free Inspection" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <SimpleCTA title="Price the Right Scope: Resurface or Replace?" buttonText="Schedule an Inspection" link="/get-estimate" />
+      <NamedAuthor context="Northern Virginia" lastUpdated={UPDATED} />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

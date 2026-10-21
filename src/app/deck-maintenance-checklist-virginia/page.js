@@ -118,9 +118,9 @@ export default function DeckMaintenancePage() {
                   ['Staining/sealing', 'Every 1-2 years (a written estimate)', 'Never'],
                   ['Sanding', 'Every 2-3 years', 'Never'],
                   ['Board replacement', 'As needed (rot, cracks)', 'Extremely rare'],
-                  ['Annual cost', 'a written estimate', 'a written estimate'],
+                  ['Annual cost', 'Not published', 'See the written estimate'],
                   ['Time per year', '8-15 hours', '1-2 hours'],
-                  ['15-year maintenance total', 'a written estimate', 'a written estimate'],
+                  ['15-year maintenance total', 'Not published', 'See the written estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     <td style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: 600 }}>{row[0]}</td>

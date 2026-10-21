@@ -46,7 +46,7 @@ const inclusions = [
 const oaktonFAQs = [
   {
     q: "How much does a custom deck cost in Oakton, VA?",
-    a: "Oakton deck projects typically range from a written estimate to a written estimate. This reflects the larger lot sizes, premium material expectations (Trex Transcend, TimberTech AZEK), and the multi-level designs common on Oakton's sloped, wooded properties. Composite decks are priced in a written estimate per square foot installed depending on material and complexity."
+    a: "Oakton deck projects are typically priced in a written estimate. This reflects the larger lot sizes, premium material expectations (Trex Transcend, TimberTech AZEK), and the multi-level designs common on Oakton's sloped, wooded properties. Composite decks are priced in a written estimate per square foot installed depending on material and complexity."
   },
   {
     q: "What permits does Oakton require for a deck?",

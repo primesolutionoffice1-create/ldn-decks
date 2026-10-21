@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: 'How does timing affect monthly payment?',
-    a: 'Promotional 0% APR offers cut interest cost to zero for the introductory period (typically 12–24 months). On a a written estimate deck, 12 months at 0% saves ~a written estimate in interest vs an 8.99% loan. If you pay off during the intro period, you avoid all interest. After the intro, the rate jumps to the lender\'s standard APR.',
+    a: 'This page does not publish promotional rates, an example APR, or an interest savings figure. The lender sets the rate, the term, and any introductory period.',
   },
   {
     q: 'How long is the full timeline from financing decision to finished deck?',

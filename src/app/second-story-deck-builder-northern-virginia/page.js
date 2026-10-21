@@ -65,7 +65,7 @@ export default function SecondStoryDeckBuilderPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Second-story decks in Northern Virginia cost <strong>a written estimate&ndash;a written estimate</strong> depending on size and material. They require <strong>engineered plans</strong>, <strong>deeper footings</strong>, <strong>lateral bracing</strong>, and <strong>42-inch railings</strong>. The elevation premium adds 25&ndash;40% over ground-level construction. With <strong>Trex RainEscape</strong>, you can create dry living space underneath &mdash; effectively doubling your outdoor square footage. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a consultation on your elevated deck project.</p>
+          <p>Second-story decks in Northern Virginia cost <strong>the amount in a written estimate</strong> depending on size and material. They require <strong>engineered plans</strong>, <strong>deeper footings</strong>, <strong>lateral bracing</strong>, and <strong>42-inch railings</strong>. The elevation premium adds 25&ndash;40% over ground-level construction. With <strong>Trex RainEscape</strong>, you can create dry living space underneath &mdash; effectively doubling your outdoor square footage. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a consultation on your elevated deck project.</p>
         </div>
       </section>
 
@@ -119,11 +119,11 @@ export default function SecondStoryDeckBuilderPage() {
               </thead>
               <tbody>
                 {[
-                  ['Ground-Level', '0–2 ft', 'a written estimate', 'a written estimate', 'Baseline', 'Rarely'],
-                  ['Low Elevated', '2–4 ft', 'a written estimate', 'a written estimate', '+15–20%', 'Sometimes'],
-                  ['Mid Elevated', '4–8 ft', 'a written estimate', 'a written estimate', '+25–35%', 'Yes'],
-                  ['Second-Story', '8–12 ft', 'a written estimate', 'a written estimate', '+35–50%', 'Always'],
-                  ['High Second-Story', '12+ ft', 'a written estimate', 'a written estimate', '+50%+', 'Always'],
+                  ['Ground-Level', '0–2 ft', 'Not published', 'See the written estimate', 'Baseline', 'Rarely'],
+                  ['Low Elevated', '2–4 ft', 'Not published', 'See the written estimate', '+15–20%', 'Sometimes'],
+                  ['Mid Elevated', '4–8 ft', 'Not published', 'See the written estimate', '+25–35%', 'Yes'],
+                  ['Second-Story', '8–12 ft', 'Not published', 'See the written estimate', '+35–50%', 'Always'],
+                  ['High Second-Story', '12+ ft', 'Not published', 'See the written estimate', '+50%+', 'Always'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i === 3 ? '#fff7ed' : (i % 2 ? '#fafafa' : '#fff') }}>
                     {row.map((cell, j) => (
@@ -150,7 +150,7 @@ export default function SecondStoryDeckBuilderPage() {
           <p style={S.p}>Elevated structures experience greater wind exposure. The engineer calculates wind forces based on the deck&apos;s height, exposure category, and local wind speed data. Lateral bracing and connection hardware are designed to resist these forces.</p>
 
           <h3 style={S.h3}>Structural Engineer Stamp</h3>
-          <p style={S.p}>Loudoun, Fairfax, and Prince William counties all require stamped engineering plans for elevated decks. The engineer specifies post sizes, beam dimensions, joist spacing, connection hardware, footing sizes, and lateral bracing requirements. Engineering is priced in a written estimate&ndash;a written estimate depending on project complexity. We work with trusted structural engineers who specialize in residential deck design and turn plans around in 1&ndash;2 weeks.</p>
+          <p style={S.p}>Loudoun, Fairfax, and Prince William counties all require stamped engineering plans for elevated decks. The engineer specifies post sizes, beam dimensions, joist spacing, connection hardware, footing sizes, and lateral bracing requirements. Engineering is priced in the amount in a written estimate depending on project complexity. We work with trusted structural engineers who specialize in residential deck design and turn plans around in 1&ndash;2 weeks.</p>
 
           {/* ===== SECTION 5: Permit Requirements ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Permit Requirements for Elevated Decks</h2>
@@ -171,7 +171,7 @@ export default function SecondStoryDeckBuilderPage() {
                   ['Footing inspection', 'Yes', 'Yes — more detailed'],
                   ['Framing inspection', 'Yes', 'Yes — includes bracing review'],
                   ['Final inspection', 'Yes', 'Yes — includes railing load test'],
-                  ['Permit fee', 'a written estimate', 'a written estimate'],
+                  ['Permit fee', 'Not published', 'See the written estimate'],
                   ['Review timeline', '2–4 weeks', '3–5 weeks'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
@@ -216,14 +216,14 @@ export default function SecondStoryDeckBuilderPage() {
           </ul>
 
           <h3 style={S.h3}>Under-Deck System Costs</h3>
-          <p style={S.p}>Trex RainEscape adds a written estimate&ndash;a written estimate to the project depending on area coverage. When you consider that you&apos;re effectively creating a second outdoor living area (which would otherwise require a separate covered structure costing a written estimate&ndash;a written estimate), the ROI is exceptional. See our <Link href="/under-deck-ceiling-ideas" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>under-deck ceiling guide</Link> for more design options.</p>
+          <p style={S.p}>Trex RainEscape adds the amount in a written estimate to the project depending on area coverage. When you consider that you&apos;re effectively creating a second outdoor living area (which would otherwise require a separate covered structure costing the amount in a written estimate), the ROI is exceptional. See our <Link href="/under-deck-ceiling-ideas" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>under-deck ceiling guide</Link> for more design options.</p>
 
           {/* ===== SECTION 8: Material Considerations ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Material Considerations for Elevated Decks</h2>
           <p style={S.p}>Elevation affects material selection in several ways:</p>
 
           <h3 style={S.h3}>Heavier Beams and Joists</h3>
-          <p style={S.p}>Where a ground-level deck might use 2x8 joists on 16-inch centers, an elevated deck often requires 2x10 or 2x12 joists, doubled or tripled beams, and 6x6 (or larger) posts. This additional structural lumber adds a written estimate&ndash;a written estimate to material costs.</p>
+          <p style={S.p}>Where a ground-level deck might use 2x8 joists on 16-inch centers, an elevated deck often requires 2x10 or 2x12 joists, doubled or tripled beams, and 6x6 (or larger) posts. This additional structural lumber adds the amount in a written estimate to material costs.</p>
 
           <h3 style={S.h3}>Larger Footings</h3>
           <p style={S.p}>Standard 12-inch diameter sonotube footings may not be sufficient for the loads transferred through tall posts. Engineers frequently specify 18&ndash;24 inch footings for second-story construction. Helical piers are an excellent alternative &mdash; they&apos;re driven into competent soil regardless of surface conditions and provide precise load-bearing capacity.</p>
@@ -296,7 +296,7 @@ export default function SecondStoryDeckBuilderPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Common Mistakes with Elevated Deck Construction</h2>
 
           <h3 style={S.h3}>Skipping Engineering</h3>
-          <p style={S.p}>Some contractors try to build elevated decks &ldquo;by experience&rdquo; without engineering. This is both a code violation and a safety hazard. Structural failures in elevated decks cause serious injuries. Engineering is priced in a written estimate&ndash;a written estimate &mdash; a tiny fraction of a a written estimate project and a non-negotiable investment in safety.</p>
+          <p style={S.p}>Some contractors try to build elevated decks &ldquo;by experience&rdquo; without engineering. This is both a code violation and a safety hazard. Structural failures in elevated decks cause serious injuries. Engineering is priced in the amount in a written estimate &mdash; a tiny fraction of a project and a non-negotiable investment in safety.</p>
 
           <h3 style={S.h3}>Undersized Posts</h3>
           <p style={S.p}>Using 4x4 posts on a second-story deck because &ldquo;that&apos;s what we always use.&rdquo; A 4x4 post spanning 10 feet has a fraction of the lateral rigidity of a 6x6. The engineer specifies the correct post size &mdash; trust the engineering, not habit.</p>
@@ -305,7 +305,7 @@ export default function SecondStoryDeckBuilderPage() {
           <p style={S.p}>The most dangerous shortcut. Without diagonal bracing between posts, an elevated deck can collapse laterally under dynamic loads. This is the failure mode responsible for most deck collapse injuries in the United States. Every elevated deck we build includes engineered lateral bracing.</p>
 
           <h3 style={S.h3}>Ignoring the Under-Deck Opportunity</h3>
-          <p style={S.p}>Building an elevated deck without a RainEscape system wastes the potential of the space below. Adding the drainage system during initial construction is priced in a written estimate&ndash;a written estimate. Retrofitting it later costs significantly more because you have to access the joist cavities from below, which requires scaffolding. Plan ahead.</p>
+          <p style={S.p}>Building an elevated deck without a RainEscape system wastes the potential of the space below. Adding the drainage system during initial construction is priced in the amount in a written estimate. Retrofitting it later costs significantly more because you have to access the joist cavities from below, which requires scaffolding. Plan ahead.</p>
 
           {/* ===== SECTION 12: FAQs ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>

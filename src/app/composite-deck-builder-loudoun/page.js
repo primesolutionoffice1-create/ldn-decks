@@ -73,7 +73,7 @@ const projectExamples = [
 const faqItems = [
   {
     q: 'How much does a composite deck cost in Loudoun County?',
-    a: 'Most full composite deck projects in Loudoun County start around a written estimate and commonly fall between a written estimate and a written estimate, depending on size, height, stairs, railing type, lighting, demolition, and material line. Premium multi-level outdoor living projects can exceed that range.',
+    a: 'Most full composite deck projects in Loudoun County start around a written estimate and commonly are priced in a written estimate, depending on size, height, stairs, railing type, lighting, demolition, and material line. Premium multi-level outdoor living projects can exceed that range.',
   },
   {
     q: 'Do I need a permit for a composite deck in Loudoun County?',

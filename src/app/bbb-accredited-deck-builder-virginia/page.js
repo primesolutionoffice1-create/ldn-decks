@@ -158,7 +158,7 @@ export default function BBBPage() {
 
           <h2 style={S.h2}>Why BBB Accreditation Matters When Choosing a Deck Builder</h2>
           <p style={S.p}>
-            For most homeowners, a deck is a a written estimate&ndash;a written estimate investment. The right contractor delivers a structure that lasts decades. The wrong contractor can leave you with code violations, voided manufacturer warranties, or unfinished work. That gap is why third-party verification matters.
+            For most homeowners, a deck is an investment. The right contractor delivers a structure that lasts decades. The wrong contractor can leave you with code violations, voided manufacturer warranties, or unfinished work. That gap is why third-party verification matters.
           </p>
           <p style={S.p}>
             The Better Business Bureau provides a separate, public profile where homeowners can review a company&apos;s contact information, listed credentials, and accreditation status. Accreditation reflects a business&apos;s commitment to the BBB&apos;s published Standards for Trust &mdash; including transparency, responsiveness, and honest representation.

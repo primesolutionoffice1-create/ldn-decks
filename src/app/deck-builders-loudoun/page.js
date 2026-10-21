@@ -54,7 +54,7 @@ const loudounFAQs = [
         },
         {
                 q: "What is the average cost of a custom composite deck in Ashburn?",
-                a: "A professional Trex deck in Ashburn generally ranges from a written estimate to a written estimate, depending on size, multi-level architecture, and integrated lighting."
+                a: "A professional Trex deck in Ashburn generally ranges from the amount in a written estimate, depending on size, multi-level architecture, and integrated lighting."
         },
         {
                 q: "Can I review public feedback before hiring Loudoun Decks?",

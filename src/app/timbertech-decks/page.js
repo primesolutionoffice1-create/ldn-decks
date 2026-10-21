@@ -182,8 +182,8 @@ export default function TimberTechDecksPage() {
           </h2>
           <p data-speakable style={{ marginBottom: '1.5rem', lineHeight: 1.7, color: '#2d3748' }}>
             TimberTech and AZEK decks in Northern Virginia run <strong>a written estimate per square foot installed</strong>,
-            depending on tier. EDGE Prime+ is priced in priced in a written estimate, PRO Reserve is priced in priced in a written estimate, and the premium AZEK
-            Vintage full-PVC line is priced in priced in a written estimate. A 350 sqft AZEK Vintage project typically lands
+            depending on tier. EDGE Prime+ is priced in a written estimate, PRO Reserve is priced in a written estimate, and the premium AZEK
+            Vintage full-PVC line is priced in a written estimate. A 350 sqft AZEK Vintage project typically lands
             <strong> a written estimate</strong> with the industry-longest 50-year residential warranty.
           </p>
           <div style={{ overflowX: 'auto', marginBottom: '1.25rem' }}>

@@ -44,7 +44,7 @@ const inclusions = [
 const burkeFAQs = [
   {
     q: "How much does a new deck cost in Burke, VA?",
-    a: "Burke composite deck projects typically range from a written estimate to a written estimate, depending on size, material tier and site conditions. A standard 300-400 sqft Trex Transcend deck with aluminum railings is priced in a written estimate installed. Full replacements that require new footings and framing sit at the higher end. We provide itemized estimates after a site visit  -  no ballpark numbers over the phone."
+    a: "Burke composite deck projects are typically priced in a written estimate, depending on size, material tier and site conditions. A standard 300-400 sqft Trex Transcend deck with aluminum railings is priced in a written estimate installed. Full replacements that require new footings and framing sit at the higher end. We provide itemized estimates after a site visit  -  no ballpark numbers over the phone."
   },
   {
     q: "Does Burke Centre HOA allow composite decking?",

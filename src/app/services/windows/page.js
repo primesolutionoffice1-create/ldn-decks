@@ -40,7 +40,7 @@ const windowInclusions = [
 const windowFAQs = [
   {
     q: "How much does a typical window replacement cost in Loudoun County?",
-    a: "Standard vinyl replacement windows in Loudoun County range from a written estimate to a written estimate per opening, while high-end wood or fiberglass can exceed a written estimate including installation."
+    a: "Standard vinyl replacement windows in Loudoun County are priced in a written estimate per opening, while high-end wood or fiberglass can exceed a written estimate including installation."
   },
   {
     q: "What is the best type of window for Northern Virginia's climate?",

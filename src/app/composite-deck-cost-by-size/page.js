@@ -29,7 +29,7 @@ const sizes = [
     budget: 'a written estimate',
     mid: 'a written estimate',
     premium: 'a written estimate',
-    monthlyMid: 'a lender-calculated payment (10y)',
+    monthlyMid: 'a payment the lender calculates (10y)',
   },
   {
     sqft: 400,
@@ -38,7 +38,7 @@ const sizes = [
     budget: 'a written estimate',
     mid: 'a written estimate',
     premium: 'a written estimate',
-    monthlyMid: 'a lender-calculated payment (10y)',
+    monthlyMid: 'a payment the lender calculates (10y)',
   },
   {
     sqft: 500,
@@ -47,7 +47,7 @@ const sizes = [
     budget: 'a written estimate',
     mid: 'a written estimate',
     premium: 'a written estimate',
-    monthlyMid: 'a lender-calculated payment (10y)',
+    monthlyMid: 'a payment the lender calculates (10y)',
   },
   {
     sqft: 600,
@@ -56,7 +56,7 @@ const sizes = [
     budget: 'a written estimate',
     mid: 'a written estimate',
     premium: 'a written estimate',
-    monthlyMid: 'a lender-calculated payment (10y)',
+    monthlyMid: 'a payment the lender calculates (10y)',
   },
 ];
 

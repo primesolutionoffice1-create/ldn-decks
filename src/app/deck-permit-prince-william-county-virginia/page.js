@@ -103,7 +103,7 @@ export default function PWCountyPermitPage() {
               <tbody>
                 {[
                   ['Plan review time', '2–4 weeks', '3–6 weeks'],
-                  ['Permit cost', 'a written estimate', 'a written estimate'],
+                  ['Permit cost', 'Not published', 'See the written estimate'],
                   ['Online submission', 'Yes', 'Yes'],
                   ['Inspections', '3 (same)', '3 (same)'],
                   ['Typical setback (rear)', '20–25 ft', '25–35 ft'],

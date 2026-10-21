@@ -27,7 +27,7 @@ export const metadata = buildMetadata({
 const faqs = [
   {
     q: 'How much does a composite deck cost in Fairfax Station?',
-    a: 'Most Fairfax Station composite deck projects start around a written estimate for a serious replacement and can are priced in a written estimate when the scope includes a larger footprint, stairs, lighting, premium railings, screened porch work, or complex wooded-lot access. The best estimate comes after checking the existing framing, ledger, footings, site slope, and permit requirements.',
+    a: 'Most Fairfax Station composite deck projects start around a written estimate for a serious replacement and are priced in a written estimate when the scope includes a larger footprint, stairs, lighting, premium railings, screened porch work, or complex wooded-lot access. The best estimate comes after checking the existing framing, ledger, footings, site slope, and permit requirements.',
   },
   {
     q: 'Do Fairfax Station deck projects need Fairfax County permits?',
@@ -155,7 +155,7 @@ export default function FairfaxStationDeckBuilderPage() {
           <div style={{ borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
             <p style={{ margin: 0, lineHeight: 1.7 }} data-speakable>
-              Fairfax Station deck projects should be planned as premium structural work, not basic deck add-ons. Most serious composite deck replacements start around a written estimate, with larger wooded-lot, screened porch, railing, lighting, and outdoor living scopes often reaching a written estimate to a written estimate. The key steps are confirming Fairfax County permit needs, checking the existing structure, planning drainage and access, and choosing materials that handle shade, moisture, and tree debris.
+              Fairfax Station deck projects should be planned as premium structural work, not basic deck add-ons. Most serious composite deck replacements start around a written estimate, with larger wooded-lot, screened porch, railing, lighting, and outdoor living scopes often reaching the amount in a written estimate. The key steps are confirming Fairfax County permit needs, checking the existing structure, planning drainage and access, and choosing materials that handle shade, moisture, and tree debris.
             </p>
           </div>
 

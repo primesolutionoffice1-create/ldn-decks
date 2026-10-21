@@ -66,11 +66,11 @@ export default function CableRailingPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Configuration', 'Cost/linear ft', '60 ft Total', 'Look', 'Maintenance'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['SS cable + aluminum posts', 'a written estimate', 'a written estimate', 'Modern, clean most popular', 'Re-tension cables yearly'],
-                  ['SS cable + wood posts', 'a written estimate', 'a written estimate', 'Warm modern blend', 'Re-tension + stain wood posts'],
-                  ['SS cable + SS posts (all stainless)', 'a written estimate', 'a written estimate', 'Premium contemporary', 'Re-tension only'],
-                  ['Vertical cables + aluminum', 'a written estimate', 'a written estimate', 'Traditional-modern hybrid', 'Minimal'],
-                  ['Cable + composite posts (Trex)', 'a written estimate', 'a written estimate', 'Matches composite deck', 'Re-tension only'],
+                  ['SS cable + aluminum posts', 'Not published', 'See the written estimate', 'Modern, clean most popular', 'Re-tension cables yearly'],
+                  ['SS cable + wood posts', 'Not published', 'See the written estimate', 'Warm modern blend', 'Re-tension + stain wood posts'],
+                  ['SS cable + SS posts (all stainless)', 'Not published', 'See the written estimate', 'Premium contemporary', 'Re-tension only'],
+                  ['Vertical cables + aluminum', 'Not published', 'See the written estimate', 'Traditional-modern hybrid', 'Minimal'],
+                  ['Cable + composite posts (Trex)', 'Not published', 'See the written estimate', 'Matches composite deck', 'Re-tension only'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: i === 0 && j === 0 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>)}
