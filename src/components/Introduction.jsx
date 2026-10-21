@@ -72,6 +72,9 @@ export default function Introduction() {
             <span className={styles.line}></span>
           </div>
           <h2 className={styles.title}>Northern Virginia's Trusted<br /> Deck Builder & Contractor</h2>
+          <p className={styles.description} data-speakable="true">
+            Loudoun Decks was founded in 2022 by Nick, who brings 15 years of deck-building experience; our crew adds 40+ years of combined experience.
+          </p>
           <p className={styles.description}>
             Loudoun Decks plans and builds custom outdoor living projects across Fairfax, Loudoun, and Prince William counties &mdash; from luxury decks in McLean and Vienna to townhome transformations in Sterling and Ashburn. As a local <strong>deck contractor</strong>, we help homeowners account for permits, HOA requirements, materials, access, and inspection timing before construction starts.
           </p>

@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Hero from "@/components/Hero";
+import TrustBanner from "@/components/TrustBanner";
 import MobileProofStrip from "@/components/MobileProofStrip";
 import Features from "@/components/Features";
 import CalculatorCTA from "@/components/CalculatorCTA";
@@ -148,6 +149,15 @@ export default function Home() {
           <main className={styles.main}>
       <JsonLd data={homepageSchema} />
             <Hero />
+            <TrustBanner
+              ariaLabel="Owner and company experience"
+              items={[
+                "Owner with 15 years in deck building",
+                "Team with 40+ years of combined experience",
+                "Virginia Class A contractor",
+                "Free written estimate",
+              ]}
+            />
             <MobileProofStrip />
             <DeferredPromoModal />
             <TrustSection />
