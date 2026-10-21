@@ -47,7 +47,7 @@ const inclusions = [
 const viennaFAQs = [
   {
     q: "How much does a custom deck cost in Vienna, VA?",
-    a: "Most professional deck projects in Vienna range from a written estimate to a written estimate. Composite decks (Trex/AZEK) typically average between a written estimate and a written estimate per square foot installed, depending on structural needs and railing choices."
+    a: "Most professional deck projects in Vienna are priced in a written estimate. Composite decks (Trex/AZEK) typically are priced in a written estimate per square foot installed, depending on structural needs and railing choices."
   },
   {
     q: "Do I need a permit for a deck in the Town of Vienna?",

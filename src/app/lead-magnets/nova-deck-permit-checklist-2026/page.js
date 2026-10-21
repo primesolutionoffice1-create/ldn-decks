@@ -55,7 +55,7 @@ export default function NovaPermitChecklist2026() {
       <H2>Stage 2 — Contractor verification</H2>
       <ul style={{ listStyle: 'none', padding: 0 }}>
         <Item>Verified Virginia Class A Contractor License (required for any project over a written estimate — search at <a href="https://dpor.virginia.gov">dpor.virginia.gov</a>)</Item>
-        <Item>Confirmed contractor carries general liability insurance (a written estimateM minimum recommended)</Item>
+        <Item>Confirmed contractor carries general liability insurance. This checklist does not publish a minimum limit</Item>
         <Item>Confirmed contractor carries workers comp coverage</Item>
         <Item>Read at least 10 recent Google reviews and one BBB profile</Item>
         <Item>Got 2 written estimates (NOT phone quotes) — itemized line items, not lump sums</Item>

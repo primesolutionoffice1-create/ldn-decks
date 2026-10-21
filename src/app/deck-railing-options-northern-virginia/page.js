@@ -61,12 +61,12 @@ export default function DeckRailingPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Railing Type', 'Cost/linear ft', '60 ft Total', 'Maintenance', 'Look', 'HOA Friendly'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Pressure-treated wood', 'a written estimate', 'a written estimate', 'Stain every 1-2 yrs', 'Traditional', 'Yes'],
-                  ['Composite (Trex/TimberTech)', 'a written estimate', 'a written estimate', 'None', 'Modern/traditional', 'Yes most popular'],
-                  ['Aluminum', 'a written estimate', 'a written estimate', 'None', 'Clean, modern', 'Yes'],
-                  ['Cable rail', 'a written estimate', 'a written estimate', 'Re-tension yearly', 'Modern, open view', 'Some restrict'],
-                  ['Glass panel', 'a written estimate', 'a written estimate', 'Clean glass 2x/yr', 'Contemporary, unobstructed', 'Some restrict'],
-                  ['Wrought iron', 'a written estimate', 'a written estimate', 'Paint every 3-5 yrs', 'Classic, ornate', 'Yes'],
+                  ['Pressure-treated wood', 'Not published', 'See the written estimate', 'Stain every 1-2 yrs', 'Traditional', 'Yes'],
+                  ['Composite (Trex/TimberTech)', 'Not published', 'See the written estimate', 'None', 'Modern/traditional', 'Yes most popular'],
+                  ['Aluminum', 'Not published', 'See the written estimate', 'None', 'Clean, modern', 'Yes'],
+                  ['Cable rail', 'Not published', 'See the written estimate', 'Re-tension yearly', 'Modern, open view', 'Some restrict'],
+                  ['Glass panel', 'Not published', 'See the written estimate', 'Clean glass 2x/yr', 'Contemporary, unobstructed', 'Some restrict'],
+                  ['Wrought iron', 'Not published', 'See the written estimate', 'Paint every 3-5 yrs', 'Classic, ornate', 'Yes'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: i === 1 && j === 0 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>)}

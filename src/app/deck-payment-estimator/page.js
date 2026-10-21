@@ -77,17 +77,6 @@ const S = {
   p: { marginBottom: '1rem', lineHeight: 1.7, fontSize: '1rem' },
 };
 
-// Quick-reference rows. Monthly figures use the same amortization math as the
-// calculator at a sample 8.99% APR — ~a written estimate per a written estimate over 10 years and
-// ~a written estimate per a written estimate over 15 years.
-const scenarios = [
-  { amount: 'a written estimate', ten: 'a written estimate', fifteen: 'a written estimate' },
-  { amount: 'a written estimate', ten: 'a written estimate', fifteen: 'a written estimate' },
-  { amount: 'a written estimate', ten: 'a written estimate', fifteen: 'a written estimate' },
-  { amount: 'a written estimate', ten: 'a written estimate', fifteen: 'a written estimate' },
-  { amount: 'a written estimate', ten: 'a written estimate', fifteen: 'a written estimate' },
-];
-
 const inputs = [
   {
     label: 'Project Amount',
@@ -95,7 +84,7 @@ const inputs = [
   },
   {
     label: 'Estimated APR',
-    desc: 'The annual interest rate on the loan. Model 8–10% if you have no offer yet; promotional 0% terms exist for shorter payoff windows.',
+    desc: 'The annual interest rate on the loan. This page does not publish an example APR. Enter the rate the lender gives you.',
   },
   {
     label: 'Loan Term',
@@ -219,32 +208,9 @@ export default function DeckPaymentEstimatorPage() {
           </div>
 
           {/* ============ QUICK-REFERENCE SCENARIOS ============ */}
-          <h2 style={S.h2}>Monthly Payment at a Glance</h2>
+          <h2 style={S.h2}>Monthly payment</h2>
           <p style={{ ...S.p, color: '#555' }}>
-            A quick reference for common project amounts, showing how the term changes the monthly payment. Figures use a sample 8.99% APR &mdash; slide the estimator above for your own numbers.
-          </p>
-          <div style={{ overflowX: 'auto', marginBottom: '0.75rem' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
-              <thead>
-                <tr style={{ background: '#f5f5f5' }}>
-                  <th style={{ padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project Amount</th>
-                  <th style={{ padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>~10-Year Term</th>
-                  <th style={{ padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>~15-Year Term</th>
-                </tr>
-              </thead>
-              <tbody>
-                {scenarios.map((row, i) => (
-                  <tr key={row.amount} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
-                    <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 600 }}>{row.amount}</td>
-                    <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>{row.ten}<span style={{ color: '#999', fontSize: '0.85rem' }}>/mo</span></td>
-                    <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', color: 'var(--color-primary)', fontWeight: 700 }}>{row.fifteen}<span style={{ color: '#999', fontSize: '0.85rem', fontWeight: 400 }}>/mo</span></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p style={{ fontSize: '0.8rem', color: '#777', fontStyle: 'italic', marginBottom: 0 }}>
-            Illustrative only at a sample 8.99% APR. The longer term lowers the monthly payment but raises total interest. Your real rate and term come from a soft-pull pre-qualification.
+            This page does not publish sample project amounts, an example APR, or monthly payments. Enter the written estimate in the estimator above. The lender sets the rate and the term. A longer term can lower the monthly payment and raise total interest. The lender calculates both.
           </p>
 
           <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 14, padding: '1.5rem', margin: '2rem 0 0' }}>

@@ -32,7 +32,7 @@ const manassasFAQs = [
   },
   {
     q: "What's the typical cost for a composite deck in Manassas?",
-    a: "Most Manassas projects land between a written estimate and a written estimate for a 300 to 450 sqft Trex Enhance or Transcend build with aluminum railings. Pricing in Prince William County typically runs 10 to 15 percent below comparable builds in Loudoun or Fairfax due to lower lot acquisition costs feeding into local trade rates."
+    a: "Most Manassas projects are priced in a written estimate for a 300 to 450 sqft Trex Enhance or Transcend build with aluminum railings. Pricing in Prince William County typically runs 10 to 15 percent below comparable builds in Loudoun or Fairfax due to lower lot acquisition costs feeding into local trade rates."
   },
   {
     q: "Can you handle HOA approvals in Wellington or Bull Run Mountain Estates?",
@@ -154,7 +154,7 @@ export default function ManassasDeckBuilderPage() {
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Composite is the right call for Manassas's climate. Bull Run watershed humidity, the freeze-thaw cycles in January, and the heavy summer pollen drops from the oaks around Sudley Springs all chew through pressure-treated wood inside a decade. Capped composite ignores all of it. We use hidden fasteners on every Trex install, breathable flashing tape at the ledger, and stainless lag connections rated for the loads our engineer specs into the structural drawings.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Deck Replacement and Resurfacing in Manassas, VA</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>A surprising number of Stonewall Heights and Sudley Springs homes still have their original pressure-treated decks from the late 80s. By the time a homeowner calls us, the surface boards are usually splintering, the railings are loose, and the joists may or may not be salvageable. Our first step is always a structural inspection. If the framing is sound, footings are intact, and the ledger is properly flashed, we can resurface with composite for a written estimate to a written estimate and give you a deck that performs like new.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>A surprising number of Stonewall Heights and Sudley Springs homes still have their original pressure-treated decks from the late 80s. By the time a homeowner calls us, the surface boards are usually splintering, the railings are loose, and the joists may or may not be salvageable. Our first step is always a structural inspection. If the framing is sound, footings are intact, and the ledger is properly flashed, we can resurface with composite for the amount in a written estimate and give you a deck that performs like new.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>If the framing is rotted, the ledger was nailed instead of bolted, or the footings have shifted, resurfacing isn't safe. We tear down and rebuild from new footings up. Full replacement on a 350 sqft Manassas project typically is priced in a written estimate depending on board selection and railing system. We'll tell you which path is appropriate before we quote, with photos.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Outdoor Living Services in Manassas</h2>

@@ -58,7 +58,7 @@ const pageFAQs = [
   },
   {
     q: "How do I know if my Loudoun County deck needs repair or full replacement?",
-    a: "If your deck's primary structural members - posts, beams, and ledger board - are sound, repair is usually cost-effective. If more than 30-40% of the structure shows rot or the ledger is compromised, a full replacement may be safer and more economical long-term. We provide honest assessments at every inspection."
+    a: "If the posts, beams, and ledger are sound, repair can be the right scope. If rot is widespread or the ledger is compromised, replacement may be safer. There is no fixed percentage of the structure that decides it. The on-site inspection documents which scope applies."
   },
   {
     q: "Can you repair composite decks in Loudoun County?",

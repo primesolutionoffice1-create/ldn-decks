@@ -64,7 +64,7 @@ const maintenanceExpansionSections = [
     paragraphs: [
       "Composite and wood decks share the same climate but require very different care routines. Understanding the distinction helps you budget accurately and avoid unnecessary work.",
       "Composite decking like Trex, TimberTech, and Fiberon needs periodic cleaning with a composite-safe cleaner to remove organic staining, but it never requires sanding, staining, or sealing. Over five years, composite maintenance typically is priced in a written estimate total.",
-      "Pressure-treated or hardwood decks need annual cleaning plus staining and sealing every one to two years. Over the same five-year period, professional wood maintenance averages a written estimate to a written estimate — but it preserves the natural beauty and structural life of the lumber.",
+      "Pressure-treated or hardwood decks need annual cleaning plus staining and sealing every one to two years. Over the same five-year period, professional wood maintenance averages the amount in a written estimate — but it preserves the natural beauty and structural life of the lumber.",
     ]
   },
   {
@@ -76,7 +76,7 @@ const maintenanceExpansionSections = [
       { label: "Rot and decay", text: "Unsealed wood absorbs moisture that feeds fungal growth inside the grain, leading to soft, structurally compromised boards and framing." },
       { label: "Structural failure", text: "Corroded fasteners, loose ledger connections, and weakened joists from water damage can lead to partial or full deck collapse." },
       { label: "Warranty voiding", text: "Most composite decking warranties require regular cleaning. Neglect can void coverage on products that cost thousands to install." },
-      { label: "Costly full replacement", text: "A a written estimate annual maintenance visit prevents the a written estimate to a written estimate cost of a full deck replacement. Our [deck maintenance checklist for Virginia](/deck-maintenance-checklist-virginia) walks you through what to watch for between professional visits." },
+      { label: "Costly full replacement", text: "An annual maintenance visit can limit the chance of a full deck replacement. The price of either scope is in a written estimate. Our [deck maintenance checklist for Virginia](/deck-maintenance-checklist-virginia) walks you through what to watch for between professional visits." },
     ]
   },
   {
@@ -91,7 +91,7 @@ const maintenanceExpansionSections = [
 const faqs = [
   {
     q: "How much does professional deck maintenance cost in Northern Virginia?",
-    a: "Deck maintenance in Loudoun County, Fairfax County, and Prince William County typically ranges from a written estimate to a written estimate depending on deck size, condition, and the services needed. A full clean, sand, and stain on a 400 sq ft wood deck averages around a written estimate."
+    a: "Deck maintenance in Loudoun County, Fairfax County, and Prince William County typically ranges from the amount in a written estimate depending on deck size, condition, and the services needed. A full clean, sand, and stain on a 400 sq ft wood deck averages around a written estimate."
   },
   {
     q: "How often should I have my deck professionally maintained?",
@@ -111,7 +111,7 @@ const faqs = [
   },
   {
     q: "What happens if I skip deck maintenance for several years?",
-    a: "Neglected decks in Northern Virginia's climate develop deep moisture damage, rot, and structural instability. What starts as a a written estimate maintenance job can escalate into a a written estimate full deck replacement. Annual or biannual maintenance is the most cost-effective way to protect your investment."
+    a: "Neglected decks in Northern Virginia's climate develop deep moisture damage, rot, and structural instability. What starts as a maintenance job can escalate into a full deck replacement. Annual or biannual maintenance is the most cost-effective way to protect your investment."
   }
 ];
 

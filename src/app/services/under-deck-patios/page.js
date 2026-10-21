@@ -77,7 +77,7 @@ const whyLdnDecks = [
 const faqs = [
   {
     q: "How much does an under deck patio system cost in Northern Virginia?",
-    a: "Under deck patio systems in Loudoun County and Fairfax County typically range from a written estimate to a written estimate per square foot installed, putting a 300 sq ft project between a written estimate and a written estimate. The final cost depends on the drainage system chosen, ceiling finish, lighting, and whether electrical work is needed."
+    a: "Under deck patio systems in Loudoun County and Fairfax County typically priced in a written estimate per square foot installed, putting a 300 sq ft project is priced in a written estimate. The final cost depends on the drainage system chosen, ceiling finish, lighting, and whether electrical work is needed."
   },
   {
     q: "What is the RainEscape drainage system and how does it work?",

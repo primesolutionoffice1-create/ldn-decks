@@ -139,8 +139,8 @@ export default function EightHundredSqftDeckCostPage() {
 
           <h2 style={S.h2}>Estate communities where 800 sqft is the standard</h2>
           <ul style={S.list}>
-            <li style={S.listItem}><strong>Virginia Run</strong> (Centreville) — premier master-planned community with golf course, HOA a lender-calculated payment, the most detailed ARC in Centreville</li>
-            <li style={S.listItem}><strong>Belmont Country Club</strong> (Ashburn) — premium estate-tier, a written estimateM+ home values, detailed committee review</li>
+            <li style={S.listItem}><strong>Virginia Run</strong> (Centreville) — premier master-planned community with golf course, and an HOA. This page does not publish the dues, the most detailed ARC in Centreville</li>
+            <li style={S.listItem}><strong>Belmont Country Club</strong> (Ashburn) — premium estate-tier, higher-priced home values, detailed committee review</li>
             <li style={S.listItem}><strong>Lansdowne Conservancy + Lansdowne Woods</strong> (Leesburg) — three sub-communities with separate ARC processes</li>
             <li style={S.listItem}><strong>Loudoun Valley Estates</strong> (Ashburn) — multi-level deck country; common a written estimate builds</li>
             <li style={S.listItem}><strong>Brambleton Estate</strong> sections (Ashburn) — larger lots backing to common-area wooded buffers</li>

@@ -26,7 +26,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "What is deck resurfacing?", acceptedAnswer: { "@type": "Answer", text: "Deck resurfacing means removing old deck boards and often railings while keeping the existing joists, beams, posts, and footings. New composite boards and railings are installed only if the existing structure is sound, properly flashed, and suitable for the selected decking system." } },
     { "@type": "Question", name: "When should I resurface vs replace my deck?", acceptedAnswer: { "@type": "Answer", text: "Resurface if joists are solid, posts are straight, footings are stable, and the ledger board is secure. Replace if joists are soft or rotting, posts lean, footings have moved, the deck feels bouncy, or the ledger is pulling away from the house. An inspection should decide the path." } },
-    { "@type": "Question", name: "How much does deck resurfacing cost vs replacement?", acceptedAnswer: { "@type": "Answer", text: "In Northern Virginia: premium resurfacing projects usually start around a written estimate and often land between a written estimate and a written estimate for a typical 300-400 sqft deck. Full replacement usually is priced in a written estimate for the same size. Resurfacing saves money when the existing frame is structurally sound." } },
+    { "@type": "Question", name: "How much does deck resurfacing cost vs replacement?", acceptedAnswer: { "@type": "Answer", text: "In Northern Virginia: premium resurfacing projects usually start around a written estimate and often are priced in a written estimate for a typical 300-400 sqft deck. Full replacement usually is priced in a written estimate for the same size. Resurfacing saves money when the existing frame is structurally sound." } },
     { "@type": "Question", name: "How long does resurfacing take vs replacement?", acceptedAnswer: { "@type": "Answer", text: "Resurfacing can be faster when no footing or framing work is needed. Full replacement usually takes longer because it can include demolition, new footings, framing, decking, railings, and inspections. Permit and HOA timing depends on county rules and the final scope." } },
   ],
 };
@@ -233,8 +233,8 @@ export default function ResurfacingVsReplacementPage() {
               <tbody>
                 {[
                   ['What happens', 'Remove old boards + railings, keep frame, install composite', 'Demolish everything, pour new footings, build from scratch'],
-                  ['Cost (300 sqft)', 'a written estimate', 'a written estimate'],
-                  ['Cost (500 sqft)', 'a written estimate', 'a written estimate'],
+                  ['Cost (300 sqft)', 'Not published', 'See the written estimate'],
+                  ['Cost (500 sqft)', 'Not published', 'See the written estimate'],
                   ['Savings', 'Can reduce scope and cost when the frame passes inspection', '—'],
                   ['Build time', '1–2 weeks', '2–4 weeks'],
                   ['Requires', 'Solid frame (joists, posts, footings)', 'Nothing all new'],

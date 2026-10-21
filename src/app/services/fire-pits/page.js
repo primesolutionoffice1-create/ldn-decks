@@ -76,7 +76,7 @@ const whyLdnDecks = [
 const faqs = [
   {
     q: "How much does a custom fire pit cost in Northern Virginia?",
-    a: "Custom fire pit installations in Loudoun County and Fairfax County typically range from a written estimate to a written estimate depending on size, materials, and fuel type. Gas fire pits with natural stone and integrated seating walls are on the higher end, while simple wood-burning paver designs start around a written estimate."
+    a: "Custom fire pit installations in Loudoun County and Fairfax County typically priced in a written estimate depending on size, materials, and fuel type. Gas fire pits with natural stone and integrated seating walls are on the higher end, while simple wood-burning paver designs start around a written estimate."
   },
   {
     q: "Do I need a permit to install a fire pit in Northern Virginia?",

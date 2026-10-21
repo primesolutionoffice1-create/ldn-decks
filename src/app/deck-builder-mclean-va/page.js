@@ -47,7 +47,7 @@ const inclusions = [
 const mcleanFAQs = [
   {
     q: "How much does a custom deck cost in McLean, VA?",
-    a: "Many serious McLean composite deck replacements and outdoor living projects plan around a written estimate to a written estimate, depending on size, framing condition, material tier, railing, lighting, stairs, drainage, and whether the scope includes a screened porch or covered structure. Smaller repair-only work should be evaluated separately."
+    a: "Many serious McLean composite deck replacements and outdoor living projects plan around the amount in a written estimate, depending on size, framing condition, material tier, railing, lighting, stairs, drainage, and whether the scope includes a screened porch or covered structure. Smaller repair-only work should be evaluated separately."
   },
   {
     q: "Do I need HOA approval for a deck in McLean?",

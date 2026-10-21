@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     q: 'Which add-on changes the monthly payment the most?',
-    a: 'Lighting packages and premium railing upgrades each add a written estimate to project amount — about a lender-calculated paymentnth in financing at typical rates. Wraparound or cascading stairs can add a written estimate, which moves monthly payment a written estimate. Plan add-ons knowing the financing impact upfront.',
+    a: 'Lighting packages and premium railing upgrades each add a written estimate to project amount — about a payment the lender calculates in financing at typical rates. Wraparound or cascading stairs can add a written estimate, which moves monthly payment a written estimate. Plan add-ons knowing the financing impact upfront.',
   },
   {
     q: 'Should I add lighting at build time or wait?',
@@ -201,8 +201,8 @@ export default function DeckAddOnCostPage() {
           <h2 style={S.h2}>How Add-Ons Move the Monthly Payment</h2>
           <p style={S.p}>
             Each add-on category typically adds a written estimate to project amount, which translates to roughly
-            a lender-calculated paymentnth in financing at typical rates over 10 years. A premium package (upgraded railings + full
-            lighting + entertainment stairs) can add a written estimate, which is a lender-calculated paymentnth. Build the budget
+            a payment the lender calculates in financing at typical rates over 10 years. A premium package (upgraded railings + full
+            lighting + entertainment stairs) can add a written estimate, which is a payment the lender calculates. Build the budget
             knowing the financing impact, not just the sticker price.
           </p>
 

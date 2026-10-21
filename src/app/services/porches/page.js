@@ -29,7 +29,7 @@ const inclusions = [
 ];
 
 const porchFAQs = [
-  { q: "How much does a custom porch cost in Fairfax County?", a: "Custom porch projects in Fairfax County typically range from a written estimate to a written estimate depending on roofing complexity, screening systems, and electrical integration." },
+  { q: "How much does a custom porch cost in Fairfax County?", a: "Custom porch projects in Fairfax County typically priced in a written estimate depending on roofing complexity, screening systems, and electrical integration." },
   { q: "Is a permit required for a screened-in porch in Loudoun County?", a: "Yes. Any structural addition like a porch requires a building permit in Loudoun County. We handle the entire engineering and application process for you." },
   { q: "Can I convert my existing deck into a screened porch?", a: "Often, yes. If the existing foundation and framing can support the additional dead load of a roof, we can resurface and screen your deck into a beautiful porch." },
   { q: "How long does porch construction take in Northern Virginia?", a: "Because porches involve roofing and often electrical work, the construction phase usually takes 3-5 weeks after permit approval." },

@@ -43,7 +43,7 @@ const inclusions = [
 const springfieldFAQs = [
   {
     q: "How much does a new deck cost in Springfield, VA?",
-    a: "Springfield composite deck projects typically range from a written estimate to a written estimate. A standard 300-350 sqft Trex Enhance or Transcend deck with aluminum railings is priced in a written estimate installed. Townhome decks in Kingstowne tend toward the lower end of that range due to smaller footprints, while single-family homes in West Springfield and Saratoga with larger lots and multi-level designs reach higher."
+    a: "Springfield composite deck projects are typically priced in a written estimate. A standard 300-350 sqft Trex Enhance or Transcend deck with aluminum railings is priced in a written estimate installed. Townhome decks in Kingstowne tend toward the lower end of that range due to smaller footprints, while single-family homes in West Springfield and Saratoga with larger lots and multi-level designs reach higher."
   },
   {
     q: "Does Kingstowne HOA allow composite decking?",
@@ -81,7 +81,7 @@ const expansionSections = [
     paragraphs: [
       "Springfield sits in a value-conscious segment of the Northern Virginia market. Home prices are strong but below the peaks seen in western Loudoun or McLean, which means buyers here pay close attention to outdoor living space as a differentiator. A well-built composite deck is one of the most visible upgrades a Springfield home can carry, and it directly expands usable square footage.",
       "National remodeling data puts composite deck ROI at 65-75% of project cost at resale, and in Springfield's competitive market  -  where families commuting to Fort Belvoir, the Pentagon and the Springfield Metro are comparing similar homes  -  a finished deck can be the factor that moves a listing. The practical return goes beyond resale: a family that uses their deck three seasons a year gets years of daily value from the investment.",
-      "We size and specify Springfield decks with both the homeowner's use and the home's market position in mind. Overbuilding a a written estimate deck on a a written estimate Springfield home makes less sense than a well-designed a written estimate deck that hits the right balance."
+      "We size and specify Springfield decks with both the homeowner's use and the home's market position in mind. Overbuilding a deck on a Springfield home makes less sense than a well-designed a written estimate deck that hits the right balance."
     ]
   },
   {

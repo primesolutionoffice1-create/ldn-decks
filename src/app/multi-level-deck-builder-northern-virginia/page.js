@@ -83,10 +83,10 @@ export default function MultiLevelDeckPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Total Size', 'PT Wood', 'Trex Transcend', 'TimberTech AZEK'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['350 sqft (2-level)', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['500 sqft (2-level)', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['600 sqft (3-level)', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['800+ sqft (wrap/cascade)', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['350 sqft (2-level)', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['500 sqft (2-level)', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['600 sqft (3-level)', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['800+ sqft (wrap/cascade)', 'Not published', 'See the written estimate', 'In that estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}

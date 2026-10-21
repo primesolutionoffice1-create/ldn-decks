@@ -110,7 +110,7 @@ export default function WoodDecksPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Wood decks in Northern Virginia cost <strong>a written estimate&ndash;priced in a written estimate</strong>. Pressure-treated a written estimate&ndash;a written estimate, cedar a written estimate&ndash;a written estimate, exotic hardwoods a written estimate&ndash;a written estimate. Last 10&ndash;40 years depending on species. Require annual sealing in Virginia&apos;s freeze-thaw climate. Lower upfront cost than composite, higher long-term cost due to maintenance.</p>
+          <p>Wood decks in Northern Virginia cost <strong>priced in a written estimate</strong>. Pressure-treated the amount in a written estimate, cedar the amount in a written estimate, exotic hardwoods the amount in a written estimate. Last 10&ndash;40 years depending on species. Require annual sealing in Virginia&apos;s freeze-thaw climate. Lower upfront cost than composite, higher long-term cost due to maintenance.</p>
         </div>
       </section>
 
@@ -145,19 +145,19 @@ export default function WoodDecksPage() {
           <h2 style={S.h2}>Wood Deck Options Explained</h2>
 
           <h3 style={S.h3}>Pressure-Treated Wood (Most Common)</h3>
-          <p style={S.p}>The default choice for budget-conscious homeowners. Southern yellow pine treated with copper-based preservatives to resist rot, decay, and insect damage. Most affordable option at a written estimate&ndash;priced in a written estimate. Lasts 10&ndash;15 years with annual staining; only 5&ndash;8 years without. Looks decent when new but turns gray within 12 months without stain.</p>
+          <p style={S.p}>The default choice for budget-conscious homeowners. Southern yellow pine treated with copper-based preservatives to resist rot, decay, and insect damage. Most affordable option at priced in a written estimate. Lasts 10&ndash;15 years with annual staining; only 5&ndash;8 years without. Looks decent when new but turns gray within 12 months without stain.</p>
 
           <h3 style={S.h3}>Western Red Cedar</h3>
-          <p style={S.p}>Natural beauty without chemical treatment. Cedar has natural rot resistance from oils in the wood. Stays cooler underfoot than PT (lighter color, lower density). Costs a written estimate&ndash;priced in a written estimate. Lasts 15&ndash;20 years with bi-annual sealing. Develops a silver patina over time if left unstained — many homeowners prefer this aged look.</p>
+          <p style={S.p}>Natural beauty without chemical treatment. Cedar has natural rot resistance from oils in the wood. Stays cooler underfoot than PT (lighter color, lower density). Costs priced in a written estimate. Lasts 15&ndash;20 years with bi-annual sealing. Develops a silver patina over time if left unstained — many homeowners prefer this aged look.</p>
 
           <h3 style={S.h3}>California Redwood</h3>
-          <p style={S.p}>Premium softwood with deep red color and natural rot resistance. More dimensionally stable than cedar (less warping/cupping). Costs a written estimate&ndash;priced in a written estimate. Lasts 20&ndash;25 years with proper care. Less common in Virginia due to East Coast availability and price.</p>
+          <p style={S.p}>Premium softwood with deep red color and natural rot resistance. More dimensionally stable than cedar (less warping/cupping). Costs priced in a written estimate. Lasts 20&ndash;25 years with proper care. Less common in Virginia due to East Coast availability and price.</p>
 
           <h3 style={S.h3}>Ipe (Brazilian Walnut) &mdash; The Premium Choice</h3>
-          <p style={S.p}>One of the densest, most durable woods available — naturally fire-resistant, rot-resistant, and insect-resistant without any treatment. Costs a written estimate&ndash;priced in a written estimate. Lasts 40+ years with minimal maintenance (annual oil application). Beautiful dark brown color that ages to gray if untreated. Ipe is heavy and hard to work with — installation requires specialty tools and skilled labor.</p>
+          <p style={S.p}>One of the densest, most durable woods available — naturally fire-resistant, rot-resistant, and insect-resistant without any treatment. Costs priced in a written estimate. Lasts 40+ years with minimal maintenance (annual oil application). Beautiful dark brown color that ages to gray if untreated. Ipe is heavy and hard to work with — installation requires specialty tools and skilled labor.</p>
 
           <h3 style={S.h3}>Cumaru &amp; Tigerwood (Mid-Premium Hardwoods)</h3>
-          <p style={S.p}>Brazilian hardwoods similar to Ipe but more affordable and easier to install. Cumaru (a written estimate&ndash;priced in a written estimate) is sometimes called &quot;Brazilian Teak&quot; — golden-brown with natural durability. Tigerwood (a written estimate&ndash;priced in a written estimate) features striking dark grain stripes. Both last 25&ndash;40 years with annual oil.</p>
+          <p style={S.p}>Brazilian hardwoods similar to Ipe but more affordable and easier to install. Cumaru (priced in a written estimate) is sometimes called &quot;Brazilian Teak&quot; — golden-brown with natural durability. Tigerwood (priced in a written estimate) features striking dark grain stripes. Both last 25&ndash;40 years with annual oil.</p>
 
           <div style={{ background: 'var(--color-primary)', color: '#fff', borderRadius: 8, padding: '2rem', marginTop: '2rem', marginBottom: '2rem', textAlign: 'center' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.75rem' }}>Get Your Wood Deck Estimate</h2>
@@ -197,7 +197,7 @@ export default function WoodDecksPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>UV exposure (200+ sunny days):</strong> Bleaches color, breaks down lignin fibers — UV-resistant stain helps</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Carpenter bees &amp; termites:</strong> Common in Virginia — annual inspection critical</li>
           </ul>
-          <p style={S.p}><strong>Annual maintenance schedule:</strong> Spring power wash + brightener + stain (a written estimate&ndash;a written estimate by deck size). Fall: clear leaves, inspect for damage. Plan to spend a written estimate&ndash;a written estimate/year on a 300 sqft wood deck.</p>
+          <p style={S.p}><strong>Annual maintenance schedule:</strong> Spring power wash + brightener + stain (the amount in a written estimate by deck size). Fall: clear leaves, inspect for damage. Plan to spend the amount in a written estimate/year on a 300 sqft wood deck.</p>
           <p style={S.p}><Link href="/deck-staining-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>See our deck staining services &rarr;</Link></p>
 
           <h2 style={S.h2}>Real Wood Deck Projects</h2>

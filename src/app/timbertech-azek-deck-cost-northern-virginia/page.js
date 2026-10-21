@@ -16,7 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/timbertech-azek-deck-cost-northern-virginia',
   title: 'TimberTech & AZEK Deck Cost: Premium PVC Budget Guide (2026)',
-  description: 'TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples.',
+  description: 'TimberTech and AZEK decks are priced in a written estimate. This page does not publish an APR, a warranty term, or a monthly payment.',
   image: '/social/timbertech-azek-deck-cost-northern-virginia-social.png',
 });
 
@@ -25,19 +25,19 @@ const PATH = '/timbertech-azek-deck-cost-northern-virginia';
 const faqs = [
   {
     q: 'How much does a TimberTech or AZEK deck cost in Northern Virginia?',
-    a: 'Installed cost in Northern Virginia: TimberTech EDGE Prime+ is priced in priced in a written estimate, TimberTech PRO Reserve is priced in priced in a written estimate, and TimberTech AZEK Vintage (full PVC) is priced in priced in a written estimate. A 350 sqft AZEK Vintage project typically lands a written estimate.',
+    a: 'Installed cost in Northern Virginia: TimberTech EDGE Prime+ is priced in a written estimate, TimberTech PRO Reserve is priced in a written estimate, and TimberTech AZEK Vintage (full PVC) is priced in a written estimate. A 350 sqft AZEK Vintage project typically lands a written estimate.',
   },
   {
     q: "What's the difference between TimberTech PRO and AZEK Vintage?",
-    a: 'TimberTech PRO is capped composite decking. TimberTech AZEK Vintage is Advanced PVC decking with no wood content, which helps with moisture resistance, dimensional stability, and a premium warranty package that currently includes limited lifetime product coverage and 50-year fade and stain coverage.',
+    a: 'TimberTech PRO is capped composite decking. TimberTech AZEK Vintage is Advanced PVC decking with no wood content. This page does not state a warranty term. Read the manufacturer warranty for the collection named in the estimate.',
   },
   {
     q: 'Is AZEK worth the premium over Trex Transcend?',
-    a: 'For Northern Virginia humidity and sun exposure, AZEK Vintage can be worth the premium for homeowners who prioritize Advanced PVC moisture resistance, lower-maintenance surface behavior, and the current limited lifetime product plus 50-year fade and stain warranty package. For many mid-range projects, Trex Transcend or TimberTech PRO Reserve can still be strong options at a lower price.',
+    a: 'AZEK Vintage is Advanced PVC decking with no wood content. Trex Transcend and TimberTech PRO Reserve are other collections homeowners compare. This page does not publish a price difference or a warranty term. The written estimate compares the collections for the same scope.',
   },
   {
-    q: 'What is the monthly payment on a a written estimate AZEK deck?',
-    a: 'At a sample 8.99% APR, a a written estimate AZEK deck financed over 10 years is roughly a lender-calculated paymentnth and roughly a lender-calculated paymentnth over 15 years. Pre-qualification through a soft credit pull returns your real APR and term without affecting your credit score.',
+    q: 'What is the monthly payment on a AZEK deck?',
+    a: 'This page does not publish an example APR or a monthly payment. The lender sets the rate and the term from the written estimate.',
   },
   {
     q: 'Does AZEK Vintage come in a board pattern that looks like real wood?',
@@ -78,39 +78,30 @@ const tiers = [
   {
     name: 'TimberTech EDGE',
     sub: 'Entry tier — capped composite (Prime+ collection)',
-    range: 'a written estimate /sqft installed',
+    range: 'Priced in a written estimate',
     construction: 'Capped composite, wood-flour core, PVC cap',
-    warranty: '25-yr residential + 25-yr fade & stain',
-    project350: 'a written estimate',
-    monthly: 'a lender-calculated payment over 10y',
+    warranty: 'See the manufacturer warranty. This page does not state a term.',
+    project350: 'Written estimate',
+    monthly: 'Set by the lender',
   },
   {
     name: 'TimberTech PRO',
     sub: 'Mid tier — Reserve & Legacy collections',
-    range: 'a written estimate /sqft installed',
+    range: 'Priced in a written estimate',
     construction: 'Capped composite, polymer-blend core, full PVC cap',
-    warranty: '30-yr residential + 30-yr fade & stain',
-    project350: 'a written estimate',
-    monthly: 'a lender-calculated payment over 10y',
+    warranty: 'See the manufacturer warranty. This page does not state a term.',
+    project350: 'Written estimate',
+    monthly: 'Set by the lender',
   },
   {
     name: 'TimberTech AZEK Vintage',
     sub: 'Premium tier — full PVC, hardwood-mimic pattern',
-    range: 'a written estimate /sqft installed',
+    range: 'Priced in a written estimate',
     construction: 'Full PVC (no wood content), Alloy Armour Technology',
-    warranty: 'Limited lifetime product + 50-yr fade & stain',
-    project350: 'a written estimate',
-    monthly: 'a lender-calculated payment over 10y',
+    warranty: 'See the manufacturer warranty. This page does not state a term.',
+    project350: 'Written estimate',
+    monthly: 'Set by the lender',
   },
-];
-
-// 8.99% APR amortization: total = monthly × months; interest = total − principal
-const paymentMatrix = [
-  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
-  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
-  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
-  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
-  ['a written estimate', 'a written estimate', 'a written estimate', 'a written estimate'],
 ];
 
 const colorways = [
@@ -127,13 +118,13 @@ export default function TimberTechAzekDeckCostPage() {
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="TimberTech & AZEK Deck Cost: Premium PVC Budget Guide (2026)"
-        description="TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples."
+        description="TimberTech and AZEK decks are priced in a written estimate. This page does not publish an APR, a warranty term, or a monthly payment."
         path={PATH}
         image="/showcase/img22.jpg"
         datePublished="2026-05-27"
         dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="TimberTech &amp; AZEK Deck Cost: Premium PVC Budget Guide (2026)" description="TimberTech and AZEK deck cost in Northern Virginia. PRO, EDGE, and Vintage tier pricing, 50-year warranty details, and monthly payment examples." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="TimberTech &amp; AZEK Deck Cost: Premium PVC Budget Guide (2026)" description="TimberTech and AZEK decks are priced in a written estimate. This page does not publish an APR, a warranty term, or a monthly payment." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -162,10 +153,8 @@ export default function TimberTechAzekDeckCostPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            A <strong>350 sqft TimberTech deck</strong> in Northern Virginia runs <strong>a written estimate</strong>{' '}
-            depending on tier (EDGE / PRO / AZEK Vintage). At 8.99% APR over 10 years that&apos;s roughly{' '}
-            <strong>a lender-calculated paymentnth</strong>. AZEK Vintage currently carries{' '}
-            <strong>limited lifetime product coverage plus 50-year fade and stain coverage</strong>. Run your project amount through the{' '}
+            This page does not publish a TimberTech project total, an example APR, a monthly payment, or a warranty term.
+            Run the written estimate through the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
             </Link>{' '}
@@ -176,7 +165,7 @@ export default function TimberTechAzekDeckCostPage() {
 
       <GeoAnswerBlock
         question="How much does a TimberTech or AZEK deck cost per month in Northern Virginia?"
-        answer="A typical 350 sqft TimberTech or AZEK deck in Northern Virginia runs about a written estimate to a written estimate depending on whether the project uses EDGE, PRO, or AZEK Vintage, plus railing, stairs, lighting, frame condition, permits, and HOA scope. At the sample 8.99% APR used on this page, that maps to roughly a written estimate to a written estimate per month over 10 years. Homeowners should model their written estimate amount before choosing a board line because premium PVC, railing, stairs, and financing terms change the real monthly payment."
+        answer="This page does not publish a TimberTech or AZEK project total, an example APR, or a monthly payment. The written estimate names the collection and includes railing, stairs, lighting, frame work, permits, and HOA scope when those items apply. The lender sets the rate and the term."
         facts={[
           'TimberTech EDGE planning range: a written estimate per sqft installed',
           'TimberTech PRO planning range: a written estimate per sqft installed',
@@ -235,8 +224,7 @@ export default function TimberTechAzekDeckCostPage() {
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
             <li><strong>Cooler underfoot in summer</strong> — full PVC reflects more heat than wood-core composites</li>
             <li><strong>Most dimensionally stable</strong> — no swelling or contracting from humidity cycles</li>
-            <li><strong>Premium warranty package</strong> — current AZEK Vintage coverage includes limited lifetime product coverage and 50-year fade and stain coverage</li>
-            <li><strong>50-year fade and stain protection</strong> — Alloy Armour Technology, no surface chalking</li>
+            <li><strong>Warranty</strong> — this page does not state a term. Read the manufacturer warranty for the collection named in the estimate.</li>
             <li><strong>Premium grain pattern</strong> — low-gloss multi-tonal streaking that mimics premium hardwoods</li>
           </ul>
 
@@ -250,49 +238,22 @@ export default function TimberTechAzekDeckCostPage() {
             ))}
           </div>
 
-          <h2 style={S.h2}>Monthly Payment by Project Amount (TimberTech / AZEK)</h2>
+          <h2 style={S.h2}>Monthly payment</h2>
           <p style={S.p}>
-            The table below converts typical TimberTech project amounts into monthly payments at a sample 8.99% APR.
-            Longer term = lower monthly, higher total interest.
+            This page does not publish sample project amounts or monthly payments. Enter the written estimate in the deck payment estimator. The lender sets the rate and the term.
           </p>
-          <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-              <thead>
-                <tr>
-                  <th style={S.th}>Project Amount</th>
-                  <th style={S.th}>10-Year /mo</th>
-                  <th style={S.th}>15-Year /mo</th>
-                  <th style={S.th}>Total Interest (10y)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {paymentMatrix.map((row, i) => (
-                  <tr key={row[0]} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
-                    <td style={{ ...S.td, fontWeight: 700 }}>{row[0]}</td>
-                    <td style={S.td}>{row[1]}</td>
-                    <td style={{ ...S.td, color: 'var(--color-primary)', fontWeight: 700 }}>{row[2]}</td>
-                    <td style={{ ...S.td, color: '#555' }}>{row[3]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
           <div style={{ background: '#fff8f1', border: '1px solid #f4d2bd', borderRadius: 8, padding: '1rem 1.25rem', marginBottom: '1.25rem' }}>
             <p data-speakable style={{ margin: 0, fontWeight: 600 }}>
-              A a written estimate TimberTech AZEK Vintage deck financed at 8.99% APR over 10 years costs approximately a written estimate
-              total — a written estimate in interest. A 15-year term lowers the monthly payment to a written estimate but raises total interest
-              to roughly a written estimate.
+              This page does not publish an example APR, a monthly payment, or an interest total. The lender sets the rate and the term from the written estimate.
             </p>
           </div>
           <p style={{ ...S.p, fontSize: '0.85rem', color: '#777', fontStyle: 'italic' }}>
-            Illustrative only at 8.99% APR. Your real APR and term come from a lender pre-qualification.
+            The lender sets the APR and the term. This page does not publish an example.
           </p>
 
           <h2 style={S.h2}>TimberTech vs Trex: Side-by-Side</h2>
           <p style={S.p}>
-            TimberTech PRO Reserve and Trex Transcend are usually within priced in a written estimate of each other on installed pricing.
-            The deciding factor is grain pattern and warranty: TimberTech PRO carries 30-year fade & stain (vs Trex
-            Transcend&apos;s 50-year current limited residential fade and stain coverage). AZEK Vintage&apos;s Advanced PVC warranty package is a premium reason to consider it. For a complete brand
+            This page does not publish an installed-price difference or a warranty-term comparison between TimberTech and Trex. Compare the collection named in the written estimate. For a brand
             comparison, see{' '}
             <Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
               Trex vs TimberTech vs AZEK

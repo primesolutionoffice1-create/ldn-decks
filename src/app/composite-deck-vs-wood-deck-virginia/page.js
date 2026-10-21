@@ -23,7 +23,7 @@ const faqSchema = {
     { "@type": "Question", name: "Is a composite deck cheaper than wood in the long run?", acceptedAnswer: { "@type": "Answer", text: "Yes. Over 15 years, composite is priced in a written estimate in total maintenance vs a written estimate for wood. The upfront premium is not given a published payback period." } },
     { "@type": "Question", name: "How long does a composite deck last vs wood?", acceptedAnswer: { "@type": "Answer", text: "Composite: 25-50 years. Pressure-treated wood: 10-15 years with annual maintenance. Cedar: 15-20 years with maintenance." } },
     { "@type": "Question", name: "Which is better for Virginia's climate?", acceptedAnswer: { "@type": "Answer", text: "Composite. Virginia's freeze-thaw cycles and humid summers accelerate wood deterioration. Capped composites are impervious to moisture penetration." } },
-    { "@type": "Question", name: "Does composite or wood have better resale value?", acceptedAnswer: { "@type": "Answer", text: "Composite recoups not a fixed percentage at resale vs not a fixed percentage for wood. Buyers prefer composite because it signals low maintenance." } },
+    { "@type": "Question", name: "Does composite or wood have better resale value?", acceptedAnswer: { "@type": "Answer", text: "Resale recovery is not a fixed percentage, and this page does not publish one for composite or for wood. Buyers prefer composite because it signals low maintenance." } },
   ],
 };
 
@@ -79,14 +79,14 @@ export default function CompositeVsWoodPage() {
                 {[
                   ['Upfront cost', 'priced in a written estimate', 'priced in a written estimate'],
                   ['Annual maintenance', 'a written estimate/year', 'a written estimate/year'],
-                  ['15-year total (300 sqft)', 'a written estimate', 'a written estimate'],
+                  ['15-year total (300 sqft)', 'Not published', 'See the written estimate'],
                   ['Lifespan', '10–15 years', '25–50 years'],
                   ['Maintenance', 'Stain/seal every 1–2 yrs, sand, replace rotted boards', 'Occasional soap & water wash'],
                   ['Splinters', 'Yes (worsens with age)', 'Never'],
                   ['Warping/cracking', 'Common after 3–5 years', 'Rare (capped technology)'],
                   ['Mold/rot resistance', 'Low without annual treatment', 'High (impervious cap)'],
                   ['Color retention', 'Fades to gray in 1–2 years', 'Minimal fade, stabilizes at 6 months'],
-                  ['Resale ROI', 'not a fixed percentage', 'not a fixed percentage'],
+                  ['Resale ROI', 'Not published', 'Not published'],
                   ['Warranty', 'None (labor only)', '25–50 years (manufacturer)'],
                   ['Environmental', 'Chemical treatment, shorter life', 'Trex = 95% recycled materials'],
                 ].map((row, i) => (
@@ -107,12 +107,12 @@ export default function CompositeVsWoodPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Cost Component', 'PT Wood', 'Trex Transcend'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Initial build (300 sqft)', 'a written estimate', 'a written estimate'],
-                  ['Staining/sealing (every 2 yrs × 7)', 'a written estimate', 'a written estimate'],
-                  ['Board replacement (yr 8–12)', 'a written estimate', 'a written estimate'],
-                  ['Power washing (annual)', 'a written estimate', 'a written estimate'],
+                  ['Initial build (300 sqft)', 'Not published', 'See the written estimate'],
+                  ['Staining/sealing (every 2 yrs × 7)', 'Not published', 'See the written estimate'],
+                  ['Board replacement (yr 8–12)', 'Not published', 'See the written estimate'],
+                  ['Power washing (annual)', 'Not published', 'See the written estimate'],
                   ['Your time (weekends maintaining)', '100+ hours', '~5 hours'],
-                  ['15-Year Total', 'a written estimate', 'a written estimate'],
+                  ['15-Year Total', 'Not published', 'See the written estimate'],
                 ].map((row, i) => {
                   const isTotal = i === 5;
                   return (
@@ -147,7 +147,7 @@ export default function CompositeVsWoodPage() {
           {[
             { q: "Is composite cheaper than wood long-term?", a: "Yes. Over 15 years, composite is priced in a written estimate in maintenance vs a written estimate for wood. The upfront premium is not given a published payback period." },
             { q: "How long does composite last vs wood?", a: "Composite: 25-50 years. PT wood: 10-15 years with annual maintenance, 5-8 years without. Cedar: 15-20 years." },
-            { q: "Which has better resale value?", a: "Composite recoups not a fixed percentage vs not a fixed percentage for wood. Buyers prefer composite because it signals low maintenance." },
+            { q: "Which has better resale value?", a: "Resale recovery is not a fixed percentage, and this page does not publish one for composite or for wood. Buyers prefer composite because it signals low maintenance." },
             { q: "Which is better for Virginia?", a: "Composite. Freeze-thaw cycles and humidity accelerate wood deterioration. Capped composites are impervious to moisture." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>

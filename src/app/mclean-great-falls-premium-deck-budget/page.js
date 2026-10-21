@@ -26,19 +26,19 @@ const tiers = [
     name: 'Premium Open Deck',
     range: 'a written estimate',
     desc: '500–700 sqft AZEK Vintage or Trex Signature with aluminum or cable railings and full lighting package',
-    monthly: 'a lender-calculated payment (10y)',
+    monthly: 'a payment the lender calculates (10y)',
   },
   {
     name: 'Premium with Pergola',
     range: 'a written estimate',
     desc: 'Premium deck with louvered or cedar pergola, integrated lighting, picture-frame border, and high-end railings',
-    monthly: 'a lender-calculated payment (10y)',
+    monthly: 'a payment the lender calculates (10y)',
   },
   {
     name: 'Covered Premium Deck',
     range: 'a written estimate',
     desc: 'Full hip or gable roof matching the house, AZEK Vintage or wide-plank PVC, integrated audio/lighting/heating',
-    monthly: 'a lender-calculated payment (10y)',
+    monthly: 'a payment the lender calculates (10y)',
   },
 ];
 
@@ -48,8 +48,8 @@ const faqs = [
     a: 'Premium decks in McLean and Great Falls typically are priced in a written estimate depending on size, roof type, and finish level. Most projects in these markets specify Trex Signature or TimberTech AZEK Vintage with aluminum or cable railings, full lighting packages, and frequently a pergola or full roof structure.',
   },
   {
-    q: 'What is the monthly payment on a a written estimate premium deck?',
-    a: 'At a sample 8.99% APR, a a written estimate deck financed over 10 years is roughly a lender-calculated paymentnth and roughly a lender-calculated paymentnth over 15 years. Premium deck projects often use longer terms (12–15 years) to keep monthly payment comfortable while preserving cash for landscaping and interior work.',
+    q: 'What is the monthly payment on a premium deck?',
+    a: 'This page does not publish an example APR or a monthly payment. The lender sets the rate and the term from the written estimate.',
   },
   {
     q: 'Why are decks more expensive in McLean and Great Falls than other NoVA areas?',
@@ -129,9 +129,7 @@ export default function MclenGreatFallsPremiumPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            Premium decks in <strong>McLean and Great Falls</strong> typically run <strong>a written estimate</strong>{' '}
-            depending on size, roof type, and finish. Premium open deck: a written estimate. With pergola: a written estimate. Covered
-            deck: a written estimate. At 8.99% APR over 10 years, that&apos;s roughly <strong>a lender-calculated paymentnth</strong>.
+            A premium deck in McLean or Great Falls is priced in a written estimate. This page does not publish an example APR or a monthly payment for an open deck, a pergola, or a covered deck.
           </p>
         </div>
       </section>

@@ -114,11 +114,11 @@ export default function DeckSizePage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Size', 'PT Wood', 'Trex Transcend', 'TimberTech AZEK'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['150 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['250 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['350 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['500 sqft', 'a written estimate', 'a written estimate', 'a written estimate'],
-                  ['700 sqft (multi-level)', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['150 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['250 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['350 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['500 sqft', 'Not published', 'See the written estimate', 'In that estimate'],
+                  ['700 sqft (multi-level)', 'Not published', 'See the written estimate', 'In that estimate'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}

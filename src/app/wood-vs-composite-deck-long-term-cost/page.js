@@ -29,7 +29,7 @@ const fifteenYear = [
   { item: 'Cleaning (15 yrs)', wood: 'a written estimate', composite: 'a written estimate', diff: 'Roughly equal' },
   { item: 'TOTAL 15-year cost', wood: 'a written estimate', composite: 'a written estimate', diff: 'Composite often equal or LESS' },
   { item: 'Lifespan after 15 yrs', wood: 'Near end of life', composite: '10–35 years remaining', diff: 'Composite wins long-term' },
-  { item: 'Resale recoup', wood: 'not a fixed percentage', composite: 'not a fixed percentage', diff: 'Composite adds a written estimate at resale' },
+  { item: 'Resale recoup', wood: 'Not published', composite: 'Not published', diff: 'Composite adds a written estimate at resale' },
 ];
 
 const faqs = [
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: 'Does composite add more home value than wood?',
-    a: 'Yes. Composite decks recoup not a fixed percentage of cost at resale in Northern Virginia; wood decks recoup not a fixed percentage. Homes with composite decks also tend to sell 3–5 days faster in the active NoVA market. A a written estimate composite deck typically adds a written estimate to resale value.',
+    a: 'Resale recovery is not a fixed percentage, and this page does not publish one for composite or for wood. This page does not publish a days-on-market figure or an amount added at resale.',
   },
   {
     q: 'Does the math change for short-term homeowners?',
@@ -181,17 +181,14 @@ export default function WoodVsCompositeLongTermPage() {
 
           <h2 style={S.h2}>Financing Math: Different Principal, Same APR</h2>
           <p style={S.p}>
-            A wood deck financed at a written estimate over 10 years at 8.99% APR is roughly a lender-calculated paymentnth. A composite deck financed
-            at a written estimate over the same terms is roughly a lender-calculated paymentnth. Composite is priced in a lender-calculated paymentnth more in financing — but
-            the wood deck adds a lender-calculated paymentnth in maintenance not on the loan. Real cost gap is usually a lender-calculated paymentnth,
-            not the a written estimate the loan suggests.
+            This page does not publish an example APR, a monthly payment, or a maintenance total. Composite and wood can have different project amounts. The lender sets the rate and the term from the written estimate for the scope you choose.
           </p>
 
           <h2 style={S.h2}>Resale Value Impact in Northern Virginia</h2>
           <p style={S.p}>
             Buyers in Loudoun, Fairfax, and Prince William increasingly expect composite decks. Listings with wood
             decks (especially older wood decks) sit longer on the market and get lower offers on the deck component.
-            Composite typically recoups not a fixed percentage of original cost at resale; wood recoups not a fixed percentage. On a a written estimate deck, that
+            Resale recovery is not a fixed percentage, and this page does not publish one for composite or for wood. On a deck, that
             gap is a written estimate at resale.
           </p>
 

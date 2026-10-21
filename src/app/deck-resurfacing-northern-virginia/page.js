@@ -84,10 +84,10 @@ const counties = [
 ];
 
 const costRows = [
-  ['250 sqft (10×25)', 'a written estimate', 'a written estimate', 'a written estimate'],
-  ['350 sqft (14×25)', 'a written estimate', 'a written estimate', 'a written estimate'],
-  ['450 sqft (15×30)', 'a written estimate', 'a written estimate', 'a written estimate'],
-  ['600 sqft (20×30)', 'a written estimate', 'a written estimate', 'a written estimate'],
+  ['250 sqft (10×25)', 'Not published', 'See the written estimate', 'In that estimate'],
+  ['350 sqft (14×25)', 'Not published', 'See the written estimate', 'In that estimate'],
+  ['450 sqft (15×30)', 'Not published', 'See the written estimate', 'In that estimate'],
+  ['600 sqft (20×30)', 'Not published', 'See the written estimate', 'In that estimate'],
 ];
 
 export default function DeckResurfacingNorthernVirginiaPage() {

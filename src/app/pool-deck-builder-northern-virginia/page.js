@@ -63,11 +63,11 @@ export default function PoolDeckPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Material', 'Cost/sqft', '500 sqft Total', 'Heat', 'Slip Resistance', 'Maintenance'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Pavers (concrete/brick)', 'a written estimate', 'a written estimate', 'Cool–moderate', 'Excellent', 'Re-level every 5-10 yrs'],
-                  ['Natural stone (bluestone/travertine)', 'a written estimate', 'a written estimate', 'Cool', 'Good', 'Seal every 2-3 yrs'],
-                  ['Composite (Trex/TimberTech)', 'a written estimate', 'a written estimate', 'Moderate (AZEK best)', 'Good', 'Occasional wash'],
-                  ['Stamped concrete', 'a written estimate', 'a written estimate', 'Hot', 'Fair (add non-slip finish)', 'Reseal every 2-3 yrs'],
-                  ['Wood (PT/cedar)', 'a written estimate', 'a written estimate', 'Moderate', 'Fair (when wet)', 'Stain/seal yearly, splinter risk'],
+                  ['Pavers (concrete/brick)', 'Not published', 'See the written estimate', 'Cool–moderate', 'Excellent', 'Re-level every 5-10 yrs'],
+                  ['Natural stone (bluestone/travertine)', 'Not published', 'See the written estimate', 'Cool', 'Good', 'Seal every 2-3 yrs'],
+                  ['Composite (Trex/TimberTech)', 'Not published', 'See the written estimate', 'Moderate (AZEK best)', 'Good', 'Occasional wash'],
+                  ['Stamped concrete', 'Not published', 'See the written estimate', 'Hot', 'Fair (add non-slip finish)', 'Reseal every 2-3 yrs'],
+                  ['Wood (PT/cedar)', 'Not published', 'See the written estimate', 'Moderate', 'Fair (when wet)', 'Stain/seal yearly, splinter risk'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}

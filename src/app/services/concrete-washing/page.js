@@ -69,7 +69,7 @@ const expansionSections = [
   {
     title: "Pricing and what affects cost",
     paragraphs: [
-      "Most residential concrete washing projects in Northern Virginia fall between a written estimate and a written estimate. The main cost drivers are total square footage, stain severity, surface type, and whether you add a protective sealer after cleaning. A standard two-car driveway with moderate algae staining typically lands in the lower portion of that range, while a large patio-plus-driveway project with oil pre-treatment and sealer application reaches the higher end.",
+      "Most residential concrete washing projects in Northern Virginia are priced in a written estimate. The main cost drivers are total square footage, stain severity, surface type, and whether you add a protective sealer after cleaning. A standard two-car driveway with moderate algae staining typically lands in the lower portion of that range, while a large patio-plus-driveway project with oil pre-treatment and sealer application reaches the higher end.",
       "We provide free on-site estimates so the price reflects your actual conditions rather than a generic quote. [Request a concrete washing estimate](/get-estimate) and we will walk the surfaces with you before any work begins."
     ]
   }
@@ -131,7 +131,7 @@ export default function ConcreteWashingPage() {
           { q: "Will pressure washing damage my concrete?", a: "We adjust pressure, nozzle distance and cleaning method based on the age and condition of the slab. Newer or softer concrete, spalled areas and decorative surfaces require more care than ordinary broom-finished driveway concrete." },
           { q: "Is concrete washing useful before patio or deck work?", a: "Yes. Cleaning the surrounding hardscape helps expose drainage problems, cracks, settled areas, algae growth and stains before a deck, patio, under-deck or outdoor living project is planned around it." },
           { q: "Which Northern Virginia surfaces do you clean?", a: "We clean driveways, walkways, patios, pool surrounds, under-deck patio areas and concrete aprons across Loudoun, Fairfax and Prince William County when the work fits an outdoor living or exterior refresh project." },
-          { q: "How much does concrete washing cost in Northern Virginia?", a: "Most residential concrete washing projects range from a written estimate to a written estimate. The final price depends on total square footage, the type and severity of staining, the surface material, and whether you add a protective sealer after cleaning. We provide free on-site estimates." },
+          { q: "How much does concrete washing cost in Northern Virginia?", a: "Most residential concrete washing projects are priced in a written estimate. The final price depends on total square footage, the type and severity of staining, the surface material, and whether you add a protective sealer after cleaning. We provide free on-site estimates." },
           { q: "How long does concrete washing take?", a: "Most driveway cleaning jobs take between 2 and 4 hours. Larger areas, heavily stained surfaces, or projects that include pre-treatment and sealer application may require a full day. We confirm the expected timeline during the estimate visit." }
         ]}
       />

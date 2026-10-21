@@ -63,7 +63,7 @@ export default function TariffsDeckPricesPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Material', '2025 Price/sqft', '2026 Price/sqft', 'Increase', 'Why'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Aluminum railings', 'a written estimate', 'a written estimate', '10–20%', 'Aluminum tariffs on imports'],
+                  ['Aluminum railings', 'Not published', 'See the written estimate', '10–20%', 'Aluminum tariffs on imports'],
                   ['Stainless steel hardware', 'a written estimate/pc', 'a written estimate/pc', '10–15%', 'Steel tariffs'],
                   ['Imported hardwood (Ipe, Cumaru)', 'priced in a written estimate', 'priced in a written estimate', '15–25%', 'Lumber tariffs + supply chain'],
                   ['Trex Composite', 'priced in a written estimate', 'priced in a written estimate', '5–8%', 'Domestic, recycled minimal impact'],

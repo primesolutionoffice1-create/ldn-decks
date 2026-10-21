@@ -40,8 +40,8 @@ const faqs = [
     a: 'Ashburn Village, Brambleton, Belmont Country Club, Broadlands, One Loudoun, and Stone Ridge all have architectural review processes for new deck projects. Material, color, railing style, and setbacks are typically the most restricted elements. We submit HOA packages weekly to all of these.',
   },
   {
-    q: 'What is the monthly payment on a a written estimate Ashburn deck?',
-    a: 'At a sample 8.99% APR, a a written estimate Ashburn composite deck financed over 10 years is roughly a lender-calculated paymentnth and roughly a lender-calculated paymentnth over 15 years. Pre-qualification through a soft credit pull returns your real number without affecting your credit score.',
+    q: 'What is the monthly payment on a Ashburn deck?',
+    a: 'This page does not publish an example APR or a monthly payment. The lender sets the rate and the term from the written estimate.',
   },
   {
     q: 'How long does HOA approval take in Ashburn Village or Brambleton?',
@@ -119,10 +119,7 @@ export default function AshburnCompositeDeckCostPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            A typical 300–400 sqft <strong>composite deck in Ashburn VA</strong> runs <strong>a written estimate</strong>{' '}
-            depending on tier and neighborhood. At 8.99% APR over 10 years that&apos;s roughly <strong>a written estimate
-            /month</strong>. Belmont Country Club and larger Brambleton lots are priced in a written estimate. HOA-aware planning
-            adds a written estimate in fees.
+            A composite deck in Ashburn is priced in a written estimate. This page does not publish an example APR, a monthly payment, or an HOA fee. Belmont Country Club and larger Brambleton lots are priced in that written estimate.
           </p>
         </div>
       </section>

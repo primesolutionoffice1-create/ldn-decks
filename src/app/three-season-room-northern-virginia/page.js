@@ -93,9 +93,9 @@ export default function ThreeSeasonRoomPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Size', 'Screened Porch', 'Three-Season Room', 'Timeline'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['12x14 ft (168 sqft)', 'a written estimate', 'a written estimate', '3–4 weeks'],
-                  ['14x18 ft (252 sqft)', 'a written estimate', 'a written estimate', '4–5 weeks'],
-                  ['16x20 ft (320 sqft)', 'a written estimate', 'a written estimate', '4–6 weeks'],
+                  ['12x14 ft (168 sqft)', 'Not published', 'See the written estimate', '3–4 weeks'],
+                  ['14x18 ft (252 sqft)', 'Not published', 'See the written estimate', '4–5 weeks'],
+                  ['16x20 ft (320 sqft)', 'Not published', 'See the written estimate', '4–6 weeks'],
                   ['Screened-porch conversion', '—', 'priced in the written estimate', '1–2 weeks'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
@@ -105,7 +105,7 @@ export default function ThreeSeasonRoomPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ fontSize: '0.85rem', color: '#888', fontStyle: 'italic' }}>A three-season room adds roughly a written estimate&ndash;a written estimate over a screened porch of the same size for the sliding-window system. <Link href="/screened-porch-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>Screened porch cost guide &rarr;</Link></p>
+          <p style={{ fontSize: '0.85rem', color: '#888', fontStyle: 'italic' }}>A three-season room adds roughly the amount in a written estimate over a screened porch of the same size for the sliding-window system. <Link href="/screened-porch-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>Screened porch cost guide &rarr;</Link></p>
 
           <h2 style={S.h2}>Design, Permits &amp; HOA</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>

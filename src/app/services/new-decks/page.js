@@ -107,7 +107,7 @@ const expansionSections = [
 const newDeckFAQs = [
   {
     q: "How much does a custom deck cost in Northern Virginia?",
-    a: "Most custom composite deck projects in Northern Virginia range from a written estimate to a written estimate for a single-level build and a written estimate to a written estimate for multi-level outdoor living packages with screened porches, pergolas or outdoor kitchens. Final pricing depends on size, materials, elevation, railing, lighting and site conditions. We provide itemized written estimates after a property walkthrough.",
+    a: "Most custom composite deck projects in Northern Virginia are priced in a written estimate for a single-level build and the amount in a written estimate for multi-level outdoor living packages with screened porches, pergolas or outdoor kitchens. Final pricing depends on size, materials, elevation, railing, lighting and site conditions. We provide itemized written estimates after a property walkthrough.",
   },
   {
     q: "How long does it take to build a custom deck?",

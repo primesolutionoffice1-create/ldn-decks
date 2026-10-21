@@ -81,7 +81,7 @@ const whyLdnDecks = [
 const faqs = [
   {
     q: "How much do Trex railings cost in Northern Virginia?",
-    a: "Trex railing installation in Loudoun County and Fairfax County typically ranges from a written estimate to a written estimate per linear foot installed, including labor. A standard 40-linear-foot deck railing project with cocktail top averages a written estimate depending on the Trex system (Transcend vs. Select) and infill style chosen."
+    a: "Trex railing installation in Loudoun County and Fairfax County typically ranges from the amount in a written estimate per linear foot installed, including labor. A standard 40-linear-foot deck railing project with cocktail top averages a written estimate depending on the Trex system (Transcend vs. Select) and infill style chosen."
   },
   {
     q: "What is the difference between cable, composite, and aluminum railings?",

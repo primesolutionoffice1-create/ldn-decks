@@ -39,7 +39,7 @@ const fairfaxFAQs = [
   },
   {
     q: "What's the typical cost for a composite deck in Fairfax?",
-    a: "Most Fairfax composite deck builds land between a written estimate and a written estimate for a 350 to 500 sqft footprint. Trex Enhance Naturals projects start near the bottom of that range, and TimberTech AZEK Vintage with cable rail and integrated lighting commonly runs to the top end."
+    a: "Most Fairfax composite deck builds are priced in a written estimate for a 350 to 500 sqft footprint. Trex Enhance Naturals projects start near the bottom of that range, and TimberTech AZEK Vintage with cable rail and integrated lighting commonly runs to the top end."
   },
   {
     q: "Do you replace old wood decks in Fairfax's 1950s-70s neighborhoods?",

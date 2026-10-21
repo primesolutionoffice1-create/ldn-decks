@@ -65,7 +65,7 @@ export default function DeckEnclosurePage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Feature', 'Screen Enclosure', 'EZE-Breeze 3-Season', 'Full Sunroom'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Cost (250 sqft)', 'a written estimate', 'a written estimate', 'a written estimate'],
+                  ['Cost (250 sqft)', 'Not published', 'See the written estimate', 'In that estimate'],
                   ['Usable months', '6–7 (Apr–Oct)', '9–10 (Mar–Nov)', '12 (year-round)'],
                   ['Bug protection', 'Full', 'Full', 'Full'],
                   ['Wind/rain protection', 'Minimal', 'Good (panels close)', 'Complete'],
@@ -74,7 +74,7 @@ export default function DeckEnclosurePage() {
                   ['Permit required', 'Usually yes', 'Yes', 'Yes + more complex'],
                   ['Construction time', '1–2 weeks', '2–3 weeks', '4–8 weeks'],
                   ['Best for', 'Bug-free dining', 'Extended 3-season living', 'Year-round room addition'],
-                  ['ROI at resale', '65–75%', 'not a fixed percentage', 'not a fixed percentage'],
+                  ['ROI at resale', 'Not published', 'Not published', 'Not published'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : (j === 2 ? 600 : 400), color: j === 2 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>)}
@@ -91,12 +91,12 @@ export default function DeckEnclosurePage() {
           <h2 style={S.h2}>EZE-Breeze 3-Season Room (a written estimate)</h2>
           <p style={S.p}><strong>Our most popular enclosure.</strong> EZE-Breeze vinyl-glazed panels replace traditional screens. They slide up like double-hung windows for full airflow in summer, then close tight for wind and rain protection in spring and fall. Extends your outdoor season from 6 months to 9–10 months.</p>
           <p style={S.p}><strong>Includes:</strong> Everything in screen enclosure + EZE-Breeze 4-track vertical sliding panels, tongue-and-groove ceiling, recessed lighting, multiple electrical outlets. Optional: ceiling heater (a written estimate) for chilly evenings.</p>
-          <p style={S.p}><strong>Why it&apos;s the sweet spot:</strong> not a fixed percentage ROI at resale (highest of any enclosure type), 40–60% cheaper than a full sunroom, and most Northern Virginia buyers specifically look for EZE-Breeze porches in listings.</p>
+          <p style={S.p}><strong>Why it&apos;s the sweet spot:</strong> This page does not publish an ROI percentage or a percentage savings versus a sunroom, and most Northern Virginia buyers specifically look for EZE-Breeze porches in listings.</p>
 
           <h2 style={S.h2}>Full Sunroom Conversion (a written estimate)</h2>
           <p style={S.p}>A permanent, climate-controlled room addition. Insulated walls, real windows (double/triple-pane), HVAC connection, and finished interior. Functions as a year-round living space essentially adding a room to your home.</p>
           <p style={S.p}><strong>Includes:</strong> Insulated framing, real windows, HVAC ductwork, electrical panel connection, insulated roof, drywall or finished ceiling, flooring (tile, LVP, or hardwood).</p>
-          <p style={S.p}><strong>Consideration:</strong> Full sunrooms have lower ROI (not a fixed percentage) because the cost is high relative to the appraised value increase. They make financial sense when you need the living space not as a pure investment play.</p>
+          <p style={S.p}><strong>Consideration:</strong> This page does not publish a sunroom ROI percentage because the cost is high relative to the appraised value increase. They make financial sense when you need the living space not as a pure investment play.</p>
 
           <h2 style={S.h2}>Can Your Existing Deck Handle an Enclosure?</h2>
           <p style={S.p}>Most decks built in the last 15 years can support a screen or EZE-Breeze enclosure if:</p>

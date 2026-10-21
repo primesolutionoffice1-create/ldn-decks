@@ -40,7 +40,7 @@ const inclusions = [
 const fenceFAQs = [
   {
     q: "How much does a privacy fence cost in Loudoun County?",
-    a: "Standard 6-foot wood privacy fences in Loudoun County typically cost between a written estimate and a written estimate per linear foot, while vinyl and aluminum options range from a written estimate to a written estimate."
+    a: "Standard 6-foot wood privacy fences in Loudoun County typically are priced in a written estimate per linear foot, while vinyl and aluminum options are priced in a written estimate."
   },
   {
     q: "Do I need a building permit for a fence in Fairfax County?",

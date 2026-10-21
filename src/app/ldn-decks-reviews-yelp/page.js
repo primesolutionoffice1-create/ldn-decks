@@ -107,7 +107,7 @@ export default function YelpReviewsPage() {
 
           {/* Why Reviews Matter */}
           <h2 style={S.h2}>Why Reviews Matter When Choosing a Contractor</h2>
-          <p style={S.p}>Online reviews are one of the strongest indicators of contractor quality. When you&apos;re investing a written estimate&ndash;a written estimate in an outdoor living project, you need to verify the company&apos;s reputation, licensing references, public profiles, project photos, and written estimate process.</p>
+          <p style={S.p}>Online reviews are one of the strongest indicators of contractor quality. When you&apos;re investing the amount in a written estimate in an outdoor living project, you need to verify the company&apos;s reputation, licensing references, public profiles, project photos, and written estimate process.</p>
           <p style={S.p}>When reviewing any contractor profile, check for:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Recent review activity</strong> &mdash; current feedback is more useful than old volume alone.</li>
