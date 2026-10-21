@@ -5,6 +5,10 @@ import styles from './FAQ.module.css';
 
 const faqsData = [
   {
+    question: "How long have you been in business?",
+    answer: "Loudoun Decks was founded in 2022. Our owner, Nick, has 15 years of hands-on deck-building experience, and our team brings 40+ years of combined experience. You work directly with the owner on every project."
+  },
+  {
     question: "How long does it typically take to build a new deck in Northern Virginia?",
     answer: "The timeline depends on the size and complexity of the deck, as well as weather conditions. On average, a standard deck builder project in Northern Virginia takes about 1 to 2 weeks from the day construction begins. We always provide a clear timeline during our consultation."
   },
@@ -86,7 +90,7 @@ export default function FAQ({ withSchema = true }) {
 
                 <div
                   className={styles.answerBlock}
-                  style={{ maxHeight: isOpen ? '250px' : '0px' }}
+                  style={{ maxHeight: isOpen ? '32rem' : '0px' }}
                 >
                   <p>{faq.answer}</p>
                 </div>

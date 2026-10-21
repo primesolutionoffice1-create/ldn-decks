@@ -20,6 +20,7 @@
   align-items: center;
   gap: 12px;
   flex: 1;
+  min-width: 0;
 }
 
 .icon {
@@ -34,7 +35,7 @@
 .text strong {
   font-size: 0.95rem;
   color: #d14817;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .text span {

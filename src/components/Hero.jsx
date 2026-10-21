@@ -43,7 +43,7 @@ export default function Hero() {
           </span>
         </a>
         <h1 className={styles.title}>Custom Deck Builder Near You in Northern Virginia</h1>
-        <p className={styles.subtitle}>Custom composite decks, deck replacements, and screened porches.</p>
+        <p className={styles.subtitle}>Led by owner Nick, with 15 years of hands-on deck building. You work directly with him, from the first visit to the final board.</p>
         <p className={styles.coverage}>
           {COVERAGE_SENTENCE}{' '}
           <Link href={AREAS_HUB_PATH} className={styles.coverageLink}>View all service areas</Link>

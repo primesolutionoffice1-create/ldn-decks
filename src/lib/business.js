@@ -261,15 +261,13 @@ export function buildOrganizationSchema() {
       // '@type': 'GeneralContractor' here minted a second contractor node.
       member: { '@id': ORG_ID },
     })),
-    // Founder Person entity — strengthens E-E-A-T by giving Google + AI
-    // engines a named, verifiable expert to attribute the organization's
-    // expertise to. Surfaces as `founder` on the org and as a reusable
-    // Person @id that ArticleSchema / NamedAuthor components can reference.
+    // Public owner on the organization node. Homepage copy uses this
+    // confirmed name and title. Article bylines still use BUSINESS.founder.
     founder: {
       '@type': 'Person',
       '@id': FOUNDER_ID,
-      name: BUSINESS.founder.name,
-      jobTitle: BUSINESS.founder.jobTitle,
+      name: 'Nick',
+      jobTitle: 'Owner',
       worksFor: { '@id': ORG_ID },
       knowsAbout: BUSINESS.founder.knowsAbout,
       hasCredential: {
