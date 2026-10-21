@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { localDateStamp } from './lib/local-date.mjs';
 
 const ROOT = process.cwd();
@@ -8,8 +9,22 @@ const OUTPUT_DIR = path.join(ROOT, 'scripts/output');
 const DATE = localDateStamp();
 
 const FILES = [
-  { path: 'public/llms.txt' },
-  { path: 'public/llms-full.txt' },
+  {
+    path: 'public/llms.txt',
+    requiredContentSnippets: [
+      'Last updated: 2026-10-08',
+      '[Virginia Deck Stair Code Guide](https://ldndecks.com/education/deck-stair-code-rise-run-virginia): Stair rise/run, handrails, guards, landings, lighting, inspection-readiness, code-to-estimate handoff, and repair-or-rebuild triage',
+      '[Ledger Board Flashing Guide](https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia): Attached-deck flashing, rim-joist moisture, structural fasteners, estimate-ready ledger scope, inspection handoff, permit routing, and repair-or-replacement triage',
+    ],
+  },
+  {
+    path: 'public/llms-full.txt',
+    requiredContentSnippets: [
+      'Last updated: 2026-10-08',
+      '[Virginia Deck Stair Code Guide](https://ldndecks.com/education/deck-stair-code-rise-run-virginia): Best page for stair rise/run, handrail, guard, landing, lighting, inspection-readiness, code-to-estimate handoff, and stair repair-or-rebuild questions.',
+      '[Ledger Board Flashing and Deck Attachment](https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia): Best page for attached-deck ledger, flashing, rim-joist rot, moisture, estimate-ready ledger scope, and collapse-prevention questions.',
+    ],
+  },
   {
     path: 'src/app/llms.txt/route.js',
     validatesContentFrom: 'public/llms.txt',
@@ -122,7 +137,22 @@ const PAGE_FRESHNESS_GUARDS = [
   },
   {
     path: 'src/lib/educationData.js',
+    label: 'Virginia Deck Stair Code Guide',
+    slug: 'deck-stair-code-rise-run-virginia',
+    expectedDate: 'October 8, 2026',
+    dateSnippets: [
+      { label: 'article dateModified', template: (date) => `dateModified: '${date}'` },
+      { label: 'code-to-estimate handoff heading', template: () => '## Code-to-Estimate Handoff' },
+      { label: 'code-to-estimate answer block', template: () => 'For code-to-estimate handoff' },
+      { label: 'stair calculator handoff link', template: () => '[Virginia deck stair calculator](/tools/deck-stair-calculator)' },
+      { label: 'deck replacement handoff link', template: () => '[deck replacement](/services/deck-replacement)' },
+      { label: 'written estimate handoff link', template: () => '[written estimate](/get-estimate)' },
+    ],
+  },
+  {
+    path: 'src/lib/educationData.js',
     label: 'Deck Stair Construction Diagram',
+    slug: 'deck-stair-construction-diagram',
     expectedDate: 'October 7, 2026',
     dateSnippets: [
       { label: 'article dateModified', template: (date) => `dateModified: '${date}'` },
@@ -135,6 +165,7 @@ const PAGE_FRESHNESS_GUARDS = [
   {
     path: 'src/lib/educationData.js',
     label: 'Deck Understructure Guide',
+    slug: 'deck-understructure-guide',
     expectedDate: 'October 6, 2026',
     dateSnippets: [
       { label: 'article dateModified', template: (date) => `dateModified: '${date}'` },
@@ -147,10 +178,12 @@ const PAGE_FRESHNESS_GUARDS = [
   {
     path: 'src/lib/educationData.js',
     label: 'Ledger Board Flashing Guide',
-    expectedDate: 'October 5, 2026',
+    slug: 'ledger-board-flashing-deck-attachment-virginia',
+    expectedDate: 'October 7, 2026',
     dateSnippets: [
       { label: 'article dateModified', template: (date) => `dateModified: '${date}'` },
       { label: 'inspection handoff heading', template: () => '## Inspection, Permit, Repair or Replacement Handoff' },
+      { label: 'estimate-ready scope answer block', template: () => 'For estimate-ready ledger scope' },
       { label: 'deck replacement handoff link', template: () => '[deck replacement](/services/deck-replacement)' },
       { label: 'written estimate handoff link', template: () => '[written estimate](/get-estimate)' },
     ],
@@ -158,6 +191,7 @@ const PAGE_FRESHNESS_GUARDS = [
   {
     path: 'src/lib/educationData.js',
     label: 'Deck Stair Safety Inspection Checklist',
+    slug: 'deck-stair-safety-inspection-checklist',
     expectedDate: 'October 5, 2026',
     dateSnippets: [
       { label: 'article dateModified', template: (date) => `dateModified: '${date}'` },
@@ -169,6 +203,7 @@ const PAGE_FRESHNESS_GUARDS = [
   {
     path: 'src/lib/educationData.js',
     label: 'Common Deck Stair Inspection Failures',
+    slug: 'common-deck-stair-inspection-failures-virginia',
     expectedDate: 'October 5, 2026',
     dateSnippets: [
       { label: 'article dateModified', template: (date) => `dateModified: '${date}'` },
@@ -249,12 +284,26 @@ function readIfExists(relativePath) {
   return fs.readFileSync(absolutePath, 'utf8');
 }
 
+let educationArticlesPromise;
+
+export async function loadEducationArticle(slug) {
+  if (!educationArticlesPromise) {
+    const sourcePath = path.join(ROOT, 'src/lib/educationData.js');
+    const sourceText = fs.readFileSync(sourcePath, 'utf8');
+    const moduleUrl = `data:text/javascript;base64,${Buffer.from(sourceText).toString('base64')}`;
+    educationArticlesPromise = import(moduleUrl).then((module) => module.educationArticles);
+  }
+
+  const articles = await educationArticlesPromise;
+  return articles.find((article) => article.slug === slug) || null;
+}
+
 function llmsLastUpdated(text) {
   const match = text?.match(/^Last updated:\s*(\d{4}-\d{2}-\d{2})\s*$/m);
   return match?.[1] || null;
 }
 
-function main() {
+async function main() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
   const errors = [];
@@ -288,6 +337,12 @@ function main() {
         if (!sourceText.includes(snippet)) {
           errors.push(`${relativePath} is not wired to the canonical source; missing route snippet: ${snippet}`);
         }
+      }
+    }
+
+    for (const snippet of file.requiredContentSnippets || []) {
+      if (!text.includes(snippet)) {
+        errors.push(`${relativePath} is missing required AI discovery content: ${snippet}`);
       }
     }
 
@@ -353,6 +408,10 @@ function main() {
 
   for (const guard of PAGE_FRESHNESS_GUARDS) {
     const pageText = readIfExists(guard.path);
+    const guardedArticle = guard.slug ? await loadEducationArticle(guard.slug) : null;
+    const guardedText = guard.slug
+      ? (guardedArticle ? `dateModified: '${guardedArticle.dateModified}'\n${JSON.stringify(guardedArticle)}` : null)
+      : pageText;
     const sourceText = guard.sourceFile ? readIfExists(guard.sourceFile) : null;
     const expectedDate = guard.expectedDate || llmsLastUpdated(sourceText);
     const guardErrors = [];
@@ -365,11 +424,15 @@ function main() {
       guardErrors.push(`Missing guarded source page: ${guard.path}`);
     }
 
+    if (guard.slug && !guardedArticle) {
+      guardErrors.push(`${guard.path} is missing guarded article slug: ${guard.slug}`);
+    }
+
     if (!expectedDate) {
       guardErrors.push(`${guard.sourceFile} is missing a parseable Last updated date.`);
     }
 
-    if (pageText && expectedDate) {
+    if (guardedText && expectedDate) {
       const requiredSnippets = (guard.dateSnippets || [
         { label: 'WebPageSchema dateModified', template: (date) => `dateModified="${date}"` },
       ]).map((requirement) => ({
@@ -378,7 +441,7 @@ function main() {
       }));
 
       for (const requirement of requiredSnippets) {
-        if (!pageText.includes(requirement.snippet)) {
+        if (!guardedText.includes(requirement.snippet)) {
           guardErrors.push(`${guard.label} page is missing ${requirement.label} aligned to ${guard.sourceFile} (${expectedDate}).`);
         }
       }
@@ -389,6 +452,7 @@ function main() {
       path: guard.path,
       label: guard.label,
       sourceFile: guard.sourceFile || null,
+      slug: guard.slug || null,
       expectedDate,
       ok: guardErrors.length === 0,
       errors: guardErrors,
@@ -472,4 +536,9 @@ function main() {
   if (!result.ok) process.exit(1);
 }
 
-main();
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}

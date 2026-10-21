@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { localDateStamp } from './lib/local-date.mjs';
+import { loadEducationArticle } from './validate-ai-discovery.mjs';
 
 const ROOT = process.cwd();
 const OUTPUT_DIR = path.join(ROOT, 'scripts/output');
@@ -154,8 +155,8 @@ const REQUIRED_ENTRIES = [
     label: 'Virginia deck stair code',
     url: 'https://ldndecks.com/education/deck-stair-code-rise-run-virginia',
     source: 'src/lib/educationData.js',
-    sourceDateSnippet: "dateModified: 'July 18, 2026'",
-    expectedLastmod: '2026-07-18',
+    sourceDateSnippet: "dateModified: 'October 8, 2026'",
+    expectedLastmod: '2026-10-08',
     expectedChangefreq: 'weekly',
     expectedPriority: '0.86',
   },
@@ -190,8 +191,8 @@ const REQUIRED_ENTRIES = [
     label: 'Ledger board flashing guide',
     url: 'https://ldndecks.com/education/ledger-board-flashing-deck-attachment-virginia',
     source: 'src/lib/educationData.js',
-    sourceDateSnippet: "dateModified: 'October 5, 2026'",
-    expectedLastmod: '2026-10-05',
+    sourceDateSnippet: "dateModified: 'October 7, 2026'",
+    expectedLastmod: '2026-10-07',
     expectedChangefreq: 'weekly',
     expectedPriority: '0.86',
   },
@@ -232,7 +233,7 @@ function readIfExists(filePath) {
   return fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') : '';
 }
 
-function main() {
+async function main() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
   const errors = [];
@@ -251,17 +252,29 @@ function main() {
   // target from the larger pre-pruning sitemap surface.
   assert(entries.length >= MIN_EXPECTED_SITEMAP_URLS, `Expected at least ${MIN_EXPECTED_SITEMAP_URLS} sitemap URLs, found ${entries.length}.`, errors);
 
-  const checkedEntries = REQUIRED_ENTRIES.map((required) => {
+  const checkedEntries = [];
+
+  for (const required of REQUIRED_ENTRIES) {
     const sourcePath = path.join(ROOT, required.source);
     const sourceText = readIfExists(sourcePath);
     const entry = entryByUrl.get(required.url) || null;
     const slug = required.url.split('/').pop();
+    const educationArticle = required.source === 'src/lib/educationData.js'
+      ? await loadEducationArticle(slug)
+      : null;
+    const expectedEducationDate = required.sourceDateSnippet.match(/dateModified:\s*['"]([^'"]+)['"]/)?.[1] || null;
+    const sourceDateSnippetPresent = educationArticle
+      ? educationArticle.dateModified === expectedEducationDate
+      : sourceText.includes(required.sourceDateSnippet);
 
     assert(Boolean(sourceText), `Missing source data file for ${required.label}: ${required.source}`, errors);
     if (required.sourceSlugCheck !== false) {
-      assert(sourceText.includes(`slug: '${slug}'`) || sourceText.includes(`slug: "${slug}"`), `${required.source} is missing slug for ${required.label}: ${slug}`, errors);
+      const slugPresent = required.source === 'src/lib/educationData.js'
+        ? Boolean(educationArticle)
+        : sourceText.includes(`slug: '${slug}'`) || sourceText.includes(`slug: "${slug}"`);
+      assert(slugPresent, `${required.source} is missing slug for ${required.label}: ${slug}`, errors);
     }
-    assert(sourceText.includes(required.sourceDateSnippet), `${required.source} is missing expected modified-date source for ${required.label}: ${required.sourceDateSnippet}`, errors);
+    assert(sourceDateSnippetPresent, `${required.source} is missing expected modified-date source for ${required.label}: ${required.sourceDateSnippet}`, errors);
 
     assert(Boolean(entry), `Missing priority sitemap URL: ${required.url}`, errors);
     if (entry) {
@@ -270,7 +283,7 @@ function main() {
       assert(entry.priority === required.expectedPriority, `${required.url} priority mismatch: expected ${required.expectedPriority}, found ${entry.priority}.`, errors);
     }
 
-    return {
+    checkedEntries.push({
       label: required.label,
       url: required.url,
       source: required.source,
@@ -280,10 +293,10 @@ function main() {
       actualChangefreq: entry?.changefreq || null,
       expectedPriority: required.expectedPriority,
       actualPriority: entry?.priority || null,
-      sourceDateSnippetPresent: sourceText.includes(required.sourceDateSnippet),
+      sourceDateSnippetPresent,
       present: Boolean(entry),
-    };
-  });
+    });
+  }
 
   const result = {
     ok: errors.length === 0,
@@ -332,4 +345,7 @@ function main() {
   if (!result.ok) process.exit(1);
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
