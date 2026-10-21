@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { localDateStamp } from './lib/local-date.mjs';
+import { loadEducationArticle } from './validate-ai-discovery.mjs';
 
 const ROOT = process.cwd();
 const OUTPUT_DIR = path.join(ROOT, 'scripts/output');
@@ -247,22 +248,62 @@ const REQUIRED_PREMIUM_COMPOSITE_REPLACEMENT_SNIPPETS = [
   'Structural, Stair, Permit and Estimate Handoff',
 ];
 
-const REQUIRED_EDUCATION_HANDOFF_SNIPPETS = [
-  '## Code-to-Estimate Handoff',
-  '## Diagram-to-Estimate Handoff',
-  '## Inspection, Repair or Replacement Handoff',
-  '## Failed Stair Inspection Handoff',
-  '## Understructure, Permit or Replacement Handoff',
-  'For code-to-estimate handoff',
-  'For estimate-ready ledger scope',
-  '[Virginia deck stair calculator](/tools/deck-stair-calculator)',
-  '[Virginia deck stair code guide](/education/deck-stair-code-rise-run-virginia)',
-  '[professional deck inspection](/services/deck-inspection)',
-  '[structural deck repair](/services/deck-repair)',
-  '[deck replacement](/services/deck-replacement)',
-  '[Loudoun County deck permit guide](/deck-permit-loudoun-county-virginia)',
-  '[Fairfax County deck permit guide](/deck-permit-fairfax-county-virginia)',
-  '[written estimate](/get-estimate)',
+const REQUIRED_EDUCATION_HANDOFF_GUARDS = [
+  {
+    slug: 'deck-stair-code-rise-run-virginia',
+    snippets: [
+      '## Code-to-Estimate Handoff',
+      'For code-to-estimate handoff',
+      '[Virginia deck stair calculator](/tools/deck-stair-calculator)',
+      '[deck replacement](/services/deck-replacement)',
+      '[written estimate](/get-estimate)',
+    ],
+  },
+  {
+    slug: 'deck-stair-construction-diagram',
+    snippets: [
+      '## Diagram-to-Estimate Handoff',
+      '[Virginia deck stair calculator](/tools/deck-stair-calculator)',
+      '[Virginia deck stair code guide](/education/deck-stair-code-rise-run-virginia)',
+      '[written estimate](/get-estimate)',
+    ],
+  },
+  {
+    slug: 'deck-stair-safety-inspection-checklist',
+    snippets: [
+      '## Inspection, Repair or Replacement Handoff',
+      '[professional deck inspection](/services/deck-inspection)',
+      '[structural deck repair](/services/deck-repair)',
+      '[deck replacement](/services/deck-replacement)',
+      '[written estimate](/get-estimate)',
+    ],
+  },
+  {
+    slug: 'common-deck-stair-inspection-failures-virginia',
+    snippets: [
+      '## Failed Stair Inspection Handoff',
+      '[professional deck inspection](/services/deck-inspection)',
+      '[written estimate](/get-estimate)',
+    ],
+  },
+  {
+    slug: 'deck-understructure-guide',
+    snippets: [
+      '## Understructure, Permit or Replacement Handoff',
+      '[Loudoun County deck permit guide](/deck-permit-loudoun-county-virginia)',
+      '[Fairfax County deck permit guide](/deck-permit-fairfax-county-virginia)',
+      '[written estimate](/get-estimate)',
+    ],
+  },
+  {
+    slug: 'ledger-board-flashing-deck-attachment-virginia',
+    snippets: [
+      '## Inspection, Permit, Repair or Replacement Handoff',
+      'For estimate-ready ledger scope',
+      '[deck replacement](/services/deck-replacement)',
+      '[written estimate](/get-estimate)',
+    ],
+  },
 ];
 
 const FORBIDDEN_LINKS = [
@@ -334,7 +375,7 @@ function requireCoverage(label, rows, errors) {
   }
 }
 
-function main() {
+async function main() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
   const errors = [];
@@ -425,9 +466,18 @@ function main() {
   requireCoverage('priority SEO link surface', siteWideCoverage, errors);
   validateToolsHubSchema(toolsHubPage, errors);
 
-  for (const snippet of REQUIRED_EDUCATION_HANDOFF_SNIPPETS) {
-    if (!educationData.includes(snippet)) {
-      errors.push(`${FILES.educationData} is missing stair inspection handoff snippet: ${snippet}`);
+  for (const guard of REQUIRED_EDUCATION_HANDOFF_GUARDS) {
+    const article = await loadEducationArticle(guard.slug);
+    if (!article) {
+      errors.push(`${FILES.educationData} is missing education article slug: ${guard.slug}`);
+      continue;
+    }
+    const articleText = JSON.stringify(article);
+
+    for (const snippet of guard.snippets) {
+      if (!articleText.includes(snippet)) {
+        errors.push(`${FILES.educationData} article ${guard.slug} is missing handoff snippet: ${snippet}`);
+      }
     }
   }
 
@@ -482,7 +532,7 @@ function main() {
     priorityLinksChecked: PRIORITY_LINKS.length,
     relatedGuideRequiredLinks: relatedGuideCoverage,
     educationRequiredLinks: educationCoverage,
-    educationHandoffSnippets: REQUIRED_EDUCATION_HANDOFF_SNIPPETS,
+    educationHandoffGuards: REQUIRED_EDUCATION_HANDOFF_GUARDS,
     cityAuthorityRequiredLinks: cityCoverage,
     stairCalculatorRequiredLinks: stairCalculatorCoverage,
     stairLightingRequiredLinks: stairLightingCoverage,
@@ -583,7 +633,10 @@ function main() {
     ]),
     '## Education Inspection Handoff Snippets',
     '',
-    ...REQUIRED_EDUCATION_HANDOFF_SNIPPETS.map((snippet) => `- \`${snippet}\``),
+    ...REQUIRED_EDUCATION_HANDOFF_GUARDS.flatMap((guard) => [
+      `- \`${guard.slug}\``,
+      ...guard.snippets.map((snippet) => `  - \`${snippet}\``),
+    ]),
     '',
     '## Deck Replacement Handoff Snippets',
     '',
@@ -627,4 +680,7 @@ function main() {
   if (!result.ok) process.exit(1);
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
