@@ -1,0 +1,36 @@
+name: GEO Claim Watchdog
+
+on:
+  schedule:
+    # Daily, after the 10:20 UTC local SEO watchdog. GitHub schedules this
+    # only from the default branch.
+    - cron: '50 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: geo-claim-watchdog
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  verify:
+    name: Verify live GEO claims
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+
+      - name: Check published GEO claims
+        run: npm run seo:geo-claim-watch
