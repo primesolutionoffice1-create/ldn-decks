@@ -35,11 +35,11 @@ const fairfaxFAQs = [
   },
   {
     q: "How long does the Fairfax County deck permit process take?",
-    a: "Fairfax County's Building Development Division currently averages 3 to 5 weeks for residential deck plan review, with structural drawings, ledger attachment specifications and setback calculations required up front. The City of Fairfax tends to run faster at 2 to 3 weeks because it's a smaller department with less queue depth."
+    a: "Review times vary; confirm current timelines with Fairfax County or the City of Fairfax. Residential deck plan review asks for structural drawings, ledger attachment specifications, and setback calculations up front."
   },
   {
     q: "What's the typical cost for a composite deck in Fairfax?",
-    a: "Most Fairfax composite deck builds are priced in a written estimate for a 350 to 500 sqft footprint. Trex Enhance Naturals projects start near the bottom of that range, and TimberTech AZEK Vintage with cable rail and integrated lighting commonly runs to the top end."
+    a: "External benchmarks list $35–$80 per square foot installed for a simple, low-height composite deck with standard railing (RemodelCalculators, reviewed October 11, 2026). A 400 sq ft deck at that rate is about $14,000–$32,000 before permits, demolition, elevation, and complex stairs. This is an external benchmark, not a Loudoun Decks price. The written estimate is the project price. The published benchmark is on /composite-deck-cost-northern-virginia."
   },
   {
     q: "Do you replace old wood decks in Fairfax's 1950s-70s neighborhoods?",
@@ -47,7 +47,7 @@ const fairfaxFAQs = [
   },
   {
     q: "Can you handle the structural drawings Fairfax County requires?",
-    a: "Yes. Fairfax County is one of the more demanding deck-permit jurisdictions in Northern Virginia. Our submissions include sealed structural drawings, ledger attachment details with bolt patterns, footing schedules tied to site conditions, and full setback analysis so reviewer questions can be resolved with fewer delays."
+    a: "Yes. Fairfax County is one of the more demanding deck-permit jurisdictions in Northern Virginia. A project may require engineered or sealed drawings depending on the design. We prepare ledger attachment details with bolt patterns, footing schedules tied to site conditions, and full setback analysis so reviewer questions can be resolved with fewer delays."
   }
 ];
 
@@ -63,14 +63,29 @@ const fairfaxFaqSchema = {
   }))
 };
 
+const COST_GUIDE_PATH = '/composite-deck-cost-northern-virginia';
+
 const fairfaxServices = [
-  { title: 'New Composite Decks', range: 'From a written estimate', link: '/services/new-decks' },
-  { title: 'Deck Resurfacing', range: 'From a written estimate', link: '/services/deck-resurfacing' },
-  { title: 'Screened Porches', range: 'From a written estimate', link: '/services/porches' },
-  { title: 'Pergolas & Gazebos', range: 'From a written estimate', link: '/services/gazebo-pergola' },
-  { title: 'Paver Patios', range: 'From a written estimate', link: '/services/patios' },
-  { title: 'Privacy Fencing', range: 'From a written estimate', link: '/services/fence' },
+  { title: 'New Composite Decks', range: 'Priced by written estimate', link: '/services/new-decks' },
+  { title: 'Deck Resurfacing', range: 'Priced by written estimate', link: '/services/deck-resurfacing' },
+  { title: 'Screened Porches', range: 'Priced by written estimate', link: '/services/porches' },
+  { title: 'Pergolas & Gazebos', range: 'Priced by written estimate', link: '/services/gazebo-pergola' },
+  { title: 'Paver Patios', range: 'Priced by written estimate', link: '/services/patios' },
+  { title: 'Privacy Fencing', range: 'Priced by written estimate', link: '/services/fence' },
 ];
+
+function FaqAnswer({ text }) {
+  const parts = text.split(COST_GUIDE_PATH);
+  if (parts.length === 1) return text;
+  return parts.map((part, index) => (
+    <React.Fragment key={index}>
+      {part}
+      {index < parts.length - 1 ? (
+        <Link href={COST_GUIDE_PATH} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{COST_GUIDE_PATH}</Link>
+      ) : null}
+    </React.Fragment>
+  ));
+}
 
 const fairfaxNeighborhoods = [
   { name: 'Old Town Fairfax', desc: 'Walkable historic core inside the City of Fairfax. Smaller lots and tighter setbacks favor compact 250 to 350 sqft single-level builds, often paired with a screened porch enclosure.' },
@@ -86,7 +101,7 @@ export default function FairfaxDeckBuilderPage() {
     <main>
       <JsonLd data={fairfaxFaqSchema} />
       <LocalBusinessSchema city="Fairfax" url="https://ldndecks.com/deck-builder-fairfax-va" />
-      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Fairfax VA Deck Builder | Class A Contractor | Loudoun Decks" description="Fairfax VA deck builder for composite decks, replacements, repairs, and screened porches with City of Fairfax and Fairfax County permit planning." speakable />
+      <WebPageSchema dateModified="2026-10-22" url={`https://ldndecks.com${PATH}`} name="Fairfax VA Deck Builder | Class A Contractor | Loudoun Decks" description="Fairfax VA deck builder for composite decks, replacements, repairs, and screened porches with City of Fairfax and Fairfax County permit planning." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -110,7 +125,7 @@ export default function FairfaxDeckBuilderPage() {
 
           <div style={{ borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
-            <p style={{ margin: 0, lineHeight: 1.65 }} data-speakable>A custom composite deck in Fairfax, VA typically is priced in a written estimate installed. Fairfax County permits run 3 to 5 weeks; City of Fairfax 2 to 3 weeks. Loudoun Decks is a Virginia Class A licensed deck contractor in Fairfax, Trex, TimberTech and AZEK material planning, with permit packages prepared for both jurisdictions.</p>
+            <p style={{ margin: 0, lineHeight: 1.65 }} data-speakable>External benchmarks list $35–$80 per square foot installed for a simple, low-height composite deck with standard railing (RemodelCalculators, reviewed October 11, 2026). A 400 sq ft deck at that rate is about $14,000–$32,000 before permits, demolition, elevation, and complex stairs. This is an external benchmark, not a Loudoun Decks price. The written estimate is the project price. The published figure is on our <Link href={COST_GUIDE_PATH} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>composite deck cost guide</Link>. Permit review times vary; confirm current timelines with the City of Fairfax or Fairfax County. Loudoun Decks is a Virginia Class A licensed deck contractor in Fairfax, with Trex, TimberTech, and AZEK material planning and permit packages prepared for both jurisdictions.</p>
           </div>
 
           <NamedAuthor context="Fairfax County and the City of Fairfax" />
@@ -176,10 +191,10 @@ export default function FairfaxDeckBuilderPage() {
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>What to Look For in a Deck Contractor in Fairfax, VA</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>A deck contractor working in Fairfax, VA needs three credentials before anything else: a current Virginia Class A contractor license (verifiable at <em>dpor.virginia.gov</em>), full liability and workers&apos; comp insurance, and a process for confirming whether a project belongs with the City of Fairfax Building Department or Fairfax County&apos;s Building Development Division. The two jurisdictions overlap geographically — the 22030, 22031 and 22032 zip codes straddle both — and a contractor who only understands one can file at the wrong desk. We verify jurisdiction before permit work begins, and the manufacturer credentials (Trex product-line planning, TimberTech and AZEK product planning) attached to our company are verifiable on each manufacturer&apos;s installer locator.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>A deck contractor working in Fairfax, VA needs three credentials before anything else: a current Virginia Class A contractor license (verifiable at <em>dpor.virginia.gov</em>), full liability and workers&apos; comp insurance, and a process for confirming whether a project belongs with the City of Fairfax Building Department or Fairfax County&apos;s Building Development Division. The two jurisdictions overlap geographically — the 22030, 22031 and 22032 zip codes straddle both — and a contractor who only understands one can file at the wrong desk. We verify jurisdiction before permit work begins. Homeowners can verify any contractor&apos;s manufacturer program status on the manufacturer&apos;s locator.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Custom Deck Builder Serving Fairfax Homeowners</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax is two markets stitched together. The City of Fairfax is an independent jurisdiction with its own building department, its own zoning, and its own architectural reviews around Old Town. Fairfax County wraps around the city and runs one of the more rigorous deck-permitting processes in Northern Virginia. Build a deck on the wrong side of Chain Bridge Road and you've filed with the wrong department. We handle this every week, and the first thing we do on any Fairfax project is verify which jurisdiction your parcel actually sits in.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax is two markets stitched together. The City of Fairfax is an independent jurisdiction with its own building department, its own zoning, and its own architectural reviews around Old Town. Fairfax County wraps around the city and runs one of the more rigorous deck-permitting processes in Northern Virginia. Build a deck on the wrong side of Chain Bridge Road and you've filed with the wrong department. The first thing we do on any Fairfax project is verify which jurisdiction your parcel actually sits in.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>The other defining feature of the Fairfax market is age. Mantua, Mosby Woods, Country Club Hills and large parts of Fairfax Station were built in the 1950s through 70s, which means a meaningful share of our work here is full structural deck replacement on properties where the original pressure-treated deck is now 25 to 30 years past its design life. These projects need real engineering, not improvisation, and our scope includes the structural drawings, ledger details and footing schedules Fairfax County's reviewers expect.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Trex and TimberTech Composite Decks in Fairfax</h2>
@@ -187,9 +202,9 @@ export default function FairfaxDeckBuilderPage() {
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>For Country Club Hills and Fairfax Station projects where homeowners want the absolute top of the market, we install TimberTech AZEK Vintage. The PVC core is highly moisture resistant, the grain has one of the strongest wood-look profiles in the category, and manufacturer warranty terms are documented before material selection. Every Trex and TimberTech deck we build in Fairfax ships with hidden fasteners on every board, butyl-tape ledger flashing, and stainless connectors at every load-critical joint. That's the install standard, not an upcharge.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Deck Repair, Replacement and Resurfacing in Fairfax, VA</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Deck repair in Fairfax, VA ranges from replacing individual boards and tightening loose ledger bolts to full structural rebuilds on aging pressure-treated decks. If a board is soft, a post has visible rot, or the deck feels bouncy underfoot, we start with a structural assessment before recommending repair vs. replacement. Partial repairs on structurally sound decks typically are priced in a written estimate; full structural replacements are priced in a written estimate. We give you the inspection photos so you can see exactly what needs attention before signing anything.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Deck repair in Fairfax, VA ranges from replacing individual boards and tightening loose ledger bolts to full structural rebuilds on aging pressure-treated decks. If a board is soft, a post has visible rot, or the deck feels bouncy underfoot, we start with a structural assessment before recommending repair vs. replacement. Partial repairs on structurally sound decks are priced by written estimate, and full structural replacements are priced by written estimate. We give you the inspection photos so you can see exactly what needs attention before signing anything.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The single most common call we get in Fairfax is some version of "my deck is 25 years old and the boards are splintering." That conversation almost always leads to a structural inspection, because at the 20-plus year mark the surface boards are usually telling you the framing has problems too. Bolted ledgers from the 90s frequently lack proper flashing and have water-damaged the rim joist behind them. Footings that met code in 1998 often don't meet current Fairfax County depth requirements.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>If the framing is sound, footings are intact and the ledger detail is safe, we resurface. A Trex Transcend resurface on a 380 sqft Mantua deck typically is priced in a written estimate and gives you a full new deck experience for two-thirds the cost of teardown. If the framing is past it, we tear down and rebuild from new footings. Full structural replacement on a typical Fairfax project is priced in a written estimate depending on size, board selection, and railing system. We send photos and a written structural assessment with every quote so you can see what we saw.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>If the framing is sound, footings are intact and the ledger detail is safe, we resurface, and that work is priced by written estimate. If the framing is past it, we tear down and rebuild from new footings. Full structural replacement on a typical Fairfax project is priced by written estimate depending on size, board selection, and railing system. We send photos and a written structural assessment with every quote so you can see what we saw.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Outdoor Living Services in Fairfax</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
@@ -214,15 +229,15 @@ export default function FairfaxDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Why Homeowners in Fairfax Choose Loudoun Decks</h2>
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Two-jurisdiction planning.</strong> City of Fairfax and Fairfax County are entirely separate building departments with different timelines and review standards. We verify which office controls your parcel before plans are submitted.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Engineered structural drawings.</strong> Fairfax County requires sealed plans with ledger details, bolt schedules and footing depths. We package those details up front so reviewer comments are easier to resolve.</li>
-            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Replacement specialists.</strong> Two-thirds of our Fairfax workload is deck replacement on aging mid-century homes. We've seen what fails and we know how to rebuild it correctly.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Engineered structural drawings.</strong> Fairfax County may require engineered or sealed drawings depending on the design, including ledger details, bolt schedules, and footing depths. We package those details up front so reviewer comments are easier to resolve.</li>
+            <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Replacement specialists.</strong> We replace decks on aging mid-century homes in Fairfax. We've seen what fails and we know how to rebuild it correctly.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Trex and TimberTech product planning.</strong> Full Trex catalog plus TimberTech AZEK Vintage and Pro lines available on every Fairfax quote.</li>
             <li style={{ marginBottom: '0.6rem', lineHeight: 1.7 }}><strong>Honest scoping.</strong> If your existing deck can be safely resurfaced, we'll tell you. If it can't, you'll get the photo evidence to understand why.</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Permits, HOA and Planning Support in Fairfax</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County's Building Development Division is the most documentation-heavy deck-permit jurisdiction in our service area. Standard residential plan review currently runs 3 to 5 weeks, and the county expects sealed structural drawings, ledger attachment specifications with bolt patterns, footing depth schedules tied to soils, beam and joist span tables, and a full setback analysis. We prepare at this level so the first review has the information it needs and revision comments can be answered without guesswork.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>The City of Fairfax runs its own building department, separate from the county, and tends to turn around deck permits in 2 to 3 weeks. The smaller queue and dedicated review staff also make for faster revision cycles when they do come up. HOA approvals run in parallel; Mosby Woods, Country Club Hills, Mantua and Fair Lakes each maintain published architectural standards we pre-screen designs against before submission. <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read our full Fairfax County deck permit guide</Link>.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County's Building Development Division is the most documentation-heavy deck-permit jurisdiction in our service area. Review times vary; confirm current timelines with Fairfax County. The county may require engineered or sealed drawings depending on the design, along with ledger attachment specifications with bolt patterns, footing depth schedules tied to soils, beam and joist span tables, and a full setback analysis. We prepare the submission details so the first review has the information it needs and revision comments can be answered without guesswork.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>The City of Fairfax runs its own building department, separate from the county. Review times vary; confirm current timelines with the City of Fairfax. HOA approvals run in parallel; Mosby Woods, Country Club Hills, Mantua and Fair Lakes each maintain published architectural standards we pre-screen designs against before submission. <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read our full Fairfax County deck permit guide</Link>.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>For Fairfax homeowners comparing HOA-controlled projects, the countywide <Link href="/hoa-deck-rules-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia HOA deck rules guide</Link> explains the approval packet, while the <Link href="/sully-station-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Sully Station</Link> and <Link href="/virginia-run-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia Run</Link> guides show how detailed Fairfax County ARC submissions connect to permit drawings, structural details, and inspection planning.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Common Deck Planning Scopes Near Fairfax</h2>
@@ -232,7 +247,7 @@ export default function FairfaxDeckBuilderPage() {
           {fairfaxFAQs.map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.1rem 1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.02rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '0.85rem', lineHeight: 1.7, color: '#444', marginBottom: 0 }}>{faq.a}</p>
+              <p style={{ marginTop: '0.85rem', lineHeight: 1.7, color: '#444', marginBottom: 0 }}><FaqAnswer text={faq.a} /></p>
             </details>
           ))}
 
@@ -250,7 +265,7 @@ export default function FairfaxDeckBuilderPage() {
             <li key="/deck-builder-fairfax-station-va" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-fairfax-station-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax Station Premium Deck Builder Guide →</Link></li>
             <li key="/deck-payment-estimator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
             <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Repair Service in Northern Virginia →</Link></li>
-            <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
+            <li key={COST_GUIDE_PATH} style={{ marginBottom: '0.5rem' }}><Link href={COST_GUIDE_PATH} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
             <li key="/deck-builder-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
             <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Request a Written Fairfax Estimate →</Link></li>
         </ul>
