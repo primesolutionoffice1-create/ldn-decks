@@ -29,8 +29,8 @@ export const metadata = buildMetadata({
 
 const inclusions = [
   {
-    title: "Two Permit Desks, One Contractor",
-    desc: "A Leesburg address can fall under the Town of Leesburg building department or Loudoun County, depending on where the corporate line runs. We confirm jurisdiction first and file with the correct office  -  no applications stalled at the wrong desk."
+    title: "Town Zoning and County Building Review",
+    desc: "Inside the Town of Leesburg, deck planning generally involves Town zoning approval and a Loudoun County building permit. A Leesburg mailing address alone does not establish Town jurisdiction. Confirm the property location and required approvals before filing."
   },
   {
     title: "Historic District to River Creek",
@@ -49,11 +49,11 @@ const leesburgFAQs = [
   },
   {
     q: "Will my Leesburg deck need a Town permit or a County permit?",
-    a: "It depends on the address. Properties inside the Town of Leesburg corporate limits permit through the Town's own building department; properties in the surrounding area go through Loudoun County. We confirm which jurisdiction applies before design and handle the filing either way."
+    a: "A property inside the Town of Leesburg generally needs Town zoning approval as well as a Loudoun County building permit. For properties outside the incorporated Town, confirm the applicable County requirements. Check the property address, proposed work, HOA rules and any historic-district requirements before filing."
   },
   {
     q: "What does a deck cost in Leesburg?",
-    a: "Leesburg composite decks generally are priced in a written estimate. Tavistock Farms / Potomac Station mid-tier: a written estimate. River Creek and Lansdowne sloped Potomac-facing lots with multi-level designs: a written estimate. Estate-tier builds in Lansdowne Conservancy or Beacon Hill with outdoor kitchens: a written estimate."
+    a: "Your installed price depends on the deck's size, demolition, framing, stairs, railings, materials and site access. Request a written estimate based on your property's scope rather than comparing incomplete per-square-foot figures."
   },
   {
     q: "Which Leesburg HOAs have you worked with?",
@@ -69,28 +69,28 @@ const leesburgFAQs = [
   },
   {
     q: "What's special about Lansdowne deck projects?",
-    a: "Lansdowne is Loudoun's premier golf-community estate area, split into the Conservancy (the original estate tier, most detailed ARC) and Lansdowne Woods (55+ active-adult community with slightly streamlined review). Conservancy projects average a written estimate with detailed material samples and elevation drawings required. See our dedicated Lansdowne HOA deck rules guide for the full submission process."
+    a: "Confirm the requirements of the association that governs your property before choosing materials or submitting drawings. Ask which plans, samples and approvals are needed for your scope. See our Lansdowne HOA deck rules guide as a starting point, then check the current association documents."
   },
   {
     q: "What's special about historic district deck projects?",
-    a: "Leesburg's historic district near King Street is governed by the Town of Leesburg's Architectural Review Board (ARB), which adds 4-6 weeks to the typical permit timeline. The ARB reviews material, scale, color, and how the deck reads from the public right-of-way. We prepare the ARB submission in parallel with the Town building permit so review questions can be answered quickly."
+    a: "Exterior changes in Leesburg's historic district may require additional Town architectural review. Confirm the applicable requirements for your property, including materials, scale, color and visibility from the public right-of-way. This review is separate from Town zoning approval and the County building permit; review dates are not guaranteed construction start dates."
   },
   {
     q: "How long does a Leesburg deck project take from contract?",
-    a: "8-14 weeks total depending on jurisdiction and HOA complexity. Town of Leesburg permit: 2-4 weeks. Loudoun County permit: 2-4 weeks. ARB review (historic district): adds 4-6 weeks. HOA review (Lansdowne, River Creek, etc.): 14-35 days in parallel. Material delivery: 1-3 weeks. Construction on-site: 1-4 weeks depending on size and complexity."
+    a: "The schedule depends on design, complete applications, zoning and building review, any HOA or historic-district approval, material availability and construction conditions. Request a project-specific sequence and confirm the current review requirements with the relevant authority. Do not treat an approval estimate as a guaranteed start date."
   },
   {
     q: "What's the difference between River Creek and Lansdowne projects?",
-    a: "Both are premier Loudoun communities, but with different character. River Creek favors a more naturalist aesthetic (cedar, IPE, cable rail to preserve Potomac and woods views) — projects average a written estimate. Lansdowne favors a traditional aesthetic (warm-tone composites, balustrade or aluminum-traditional railings) — projects average a written estimate in the Conservancy. Both require 21-30 day ARC review on average."
+    a: "Compare the requirements of the specific property and association rather than assuming one neighborhood has a fixed project price or review period. Lot slope, access, deck layout, railing, material choices and the current architectural-review requirements determine the scope."
   }
 ];
 
 const expansionSections = [
   {
-    title: "Two Jurisdictions, One Town: Permitting in Leesburg",
-    paragraphs: [
-      "Leesburg is unusual among Loudoun County towns: it runs its own building department. Whether your deck is reviewed by the Town of Leesburg or by Loudoun County depends entirely on whether your lot sits inside the town's corporate limits  -  and the line is not always where homeowners assume. Our first step on any Leesburg project is confirming jurisdiction, because filing with the wrong office is the most common cause of a delayed deck.",
-      "From there we manage the full process: drawings, structural details, the architectural review submission for your HOA, and the footing, framing and final inspections. A recent Leesburg project  -  a multi-level TimberTech deck stepping down a sloped lot in Lansdowne on the Potomac  -  ran through that exact sequence, with the HOA review handled in parallel with the permit so neither held up the build."
+    "title": "Deck Permits in Leesburg: Town Zoning and County Building Review",
+    "paragraphs": [
+      "For a property within the Town of Leesburg, deck planning generally involves a Town zoning permit and a building permit from Loudoun County. The Town reviews the proposed use and location, including setbacks; the County reviews building-code requirements and carries out building inspections. A Leesburg mailing address alone does not establish whether the property is within Town limits.",
+      "Confirm the property's jurisdiction before submitting plans. Historic-district requirements and HOA approval may add separate review steps. Approval dates depend on the application and the reviewing authority; they should not be treated as guaranteed construction start dates."
     ]
   },
   {
@@ -98,15 +98,15 @@ const expansionSections = [
     paragraphs: [
       "Leesburg is the historic seat of Loudoun County, and its housing reflects two centuries of building. Colonial and Federal homes line the historic district near King Street; larger-lot communities like River Creek, Lansdowne and Tavistock Farms spread toward the Potomac on a third of an acre and up. A deck that suits one rarely suits the other, and we design accordingly.",
       "We build for Leesburg the way the town itself was built  -  deliberately. Loudoun Decks keeps a limited roster of full Leesburg projects rather than chasing job volume, so a deck near Morven Park gets the same hands-on attention as one in River Creek: the owner on site, the same crew from footing to final board.",
-      "Hire a Leesburg deck builder who can tell you, before you sign anything, whether your address answers to the Town or the County and how your HOA expects drawings packaged. That answer is built into every Leesburg estimate we write."
+      "Hire a Leesburg deck builder who can tell you, before you sign anything, which Town and County approvals your property requires and how your HOA expects drawings packaged. That answer is built into every Leesburg estimate we write."
     ]
   },
   {
     title: "Composite, Cedar and the Leesburg View Lot",
     paragraphs: [
       "Material choice in Leesburg is more varied than in most NoVA towns. Composite leads for its low maintenance, and with Trex, TimberTech, and AZEK product-line planning, we help homeowners compare the top-tier lines. But River Creek homeowners often still choose cedar or IPE for a natural-wood aesthetic, and the historic district frequently calls for AZEK's premium boards where a traditional finish matters. We build all of them well.",
-      "Leesburg's larger, sloped lots shape the design as much as the material. Where a yard falls toward the Potomac, a multi-level deck turns an awkward grade into usable rooms, and cable or glass railing keeps the river or golf-course view intact. Leesburg projects typically start around a written estimate and scale with slope, levels and railing choice.",
-      "Composite boards ship with a long manufacturer material warranty; pairing it with a certified installation is what keeps that warranty enforceable a decade or two down the road."
+      "Leesburg's larger, sloped lots shape the design as much as the material. Where a yard falls toward the Potomac, a multi-level deck turns an awkward grade into usable rooms, and cable or glass railing keeps the river or golf-course view intact. Your written estimate should identify how slope, levels and railing choice affect the scope.",
+      "Review the current warranty and installation documents for the selected collection. Manufacturer product coverage and contractor workmanship coverage are separate; confirm the written terms that apply to your project."
     ],
     listItems: [
       { label: "Trex product planning", text: "Trex Transcend, Enhance and Select catalog options for Leesburg builds." },
@@ -124,41 +124,25 @@ const expansionSections = [
     ]
   },
   {
-    title: "Leesburg Neighborhoods We Build In",
-    paragraphs: [
-      "Lansdowne (Conservancy and Lansdowne Woods) is a master-planned golf community split between the original Conservancy estate section and the 55+ Lansdowne Woods sub-community. Conservancy projects often require detailed ARC review, and common scopes include 500-700 sqft multi-level composite decks in the a written estimate range. See our dedicated Lansdowne HOA deck rules guide for the full submission process.",
-      "River Creek is the Potomac-side gated community where naturalist aesthetics dominate. Cedar and IPE remain popular here despite the higher maintenance, and cable rail submissions usually need lot-context rationale such as Potomac views or mature woods. Architectural review timelines vary by packet completeness and committee schedule.",
-      "Beacon Hill is South Leesburg estate territory with HOA review considerations tied to larger lots and multi-level deck designs.",
-      "Red Cedar is newer (2010+) development north of downtown with HOA review averaging 18 days. Common Red Cedar build: 400-500 sqft composite deck with aluminum railing, a written estimate.",
-      "Brandon Park and Bellewood are mid-tier HOAs with 14-21 day review windows and flexible material approval policies — well-suited to the more value-conscious Leesburg deck budgets.",
-      "Greenway Farm sits in Loudoun County's higher-end estate area with mixed HOA / no-HOA properties. Larger lot sizes (3-10 acres) typical; projects scale to a written estimate.",
-      "The Downtown Historic District near King Street operates under the Town of Leesburg's Architectural Review Board (ARB) — an additional review layer beyond the standard Town building permit. ARB review adds 30-45 days; we coordinate the submission as part of every historic-district project.",
-      "We also build regularly in Battlefield, Edwards Ferry, Stratford, Tavistock Farms, Tuscarora, Country Walk, Ashby Ponds, and Riverside. If your Leesburg HOA isn't listed here, contact us — we have submission templates for every major Loudoun HOA."
+    "title": "Planning a Deck in Your Leesburg Neighborhood",
+    "paragraphs": [
+      "River Creek, Lansdowne, Tavistock Farms, Potomac Station, Exeter, Beacon Hill and other Leesburg-area neighborhoods can have different architectural-review requirements. Start with the current documents for the association governing your property; do not assume a neighboring community uses the same material rules or review schedule.",
+      "For a property in the Downtown Historic District, confirm whether the proposed exterior work needs Town architectural review in addition to zoning approval and the County building permit. Lot slope, access, drainage and the proposed layout should be reviewed before comparing estimates."
     ]
   },
   {
-    title: "Materials and Pricing Tiers by Leesburg Sub-Market",
-    paragraphs: [
-      "Leesburg pricing reflects the sub-market more than the materials. The same Trex Transcend deck lands at very different totals depending on lot complexity, HOA review intensity, and the design vocabulary the community expects."
-    ],
-    listItems: [
-      { label: "Single-level composite deck (300-400 sqft, Tavistock / Potomac Station / Red Cedar)", text: "a written estimate — Trex Transcend or TimberTech PRO" },
-      { label: "Multi-level composite deck (500-700 sqft, River Creek / Lansdowne)", text: "a written estimate — Transcend, AZEK, or TimberTech PRO Legacy" },
-      { label: "PVC deck (350-500 sqft, premium tier)", text: "a written estimate — AZEK Vintage Mahogany, Coastline, or Brownstone" },
-      { label: "Screened porch (250-350 sqft)", text: "a written estimate — composite + EZE-Breeze + roof + electric" },
-      { label: "Deck replacement (400 sqft, framing salvaged)", text: "a written estimate — resurface vs full rebuild flow" },
-      { label: "Patio + deck combo (Lansdowne / Beacon Hill estates)", text: "a written estimate — composite deck + paver patio + outdoor kitchen" },
-      { label: "Estate-tier outdoor living (Lansdowne Conservancy, Beacon Hill, Greenway Farm)", text: "a written estimate — multi-level deck + screened porch + outdoor kitchen + fire feature" }
+    "title": "What to Prepare for Your Leesburg Deck Estimate",
+    "paragraphs": [
+      "Start with your property address, a few photos and the type of project you are considering: a new deck, replacement, resurfacing or a screened porch. Note how you want to use the space and whether stairs, railings, shade or an area beneath the deck are part of your plan.",
+      "Use the written estimate to compare the complete scope. Look for the proposed decking collection, structural work, demolition, railings, stairs and permit responsibilities. For a resurfacing project, clarify what framing will be inspected and what happens if concealed damage is found after old boards are removed.",
+      "Before approving work, review the payment schedule, exclusions, change-order process and warranty terms in the project documents. Manufacturer product warranties and contractor workmanship coverage are separate; ask which written terms apply to your project."
     ]
   },
   {
-    title: "Town of Leesburg vs Loudoun County — the Permit Reality",
-    paragraphs: [
-      "Leesburg is unique among Loudoun towns: properties inside the Town of Leesburg corporate limits permit through the Town's building department; properties just outside the line permit through Loudoun County. The two operate independently with different timelines, fee structures, and submission portals.",
-      "Town of Leesburg permits average 2-4 weeks plan review through the Town building department. Town fees are flat-tier based on construction valuation (typically a written estimate for residential deck work). The Town's reviewer staff is smaller than the County's but typically faster on revision cycles.",
-      "Loudoun County permits average 2-4 weeks through the LandMARC portal. County fees are valuation-scaled (typically a written estimate). The LandMARC system requires specific PDF plan formats; we prepare every submission to that standard so reviewer comments are easier to answer quickly.",
-      "Historic district properties downtown add a third layer: the Town's Architectural Review Board (ARB) reviews exterior changes. ARB review adds 30-45 days. The ARB submission requires elevation drawings, material samples, color specifications, and (often) a public hearing for visible exterior modifications.",
-      "Our standard Leesburg estimate identifies which jurisdiction applies on the very first call and what (if any) ARB review will be required. The wrong filing path is the most common source of a delayed Leesburg deck. See our full Loudoun County deck permit guide for the county-side walkthrough."
+    "title": "Before Submitting Deck Plans",
+    "paragraphs": [
+      "Confirm the property location, proposed deck layout, setbacks and any HOA or historic-district requirements. Identify who will prepare and submit the plans and who will schedule required inspections.",
+      "For properties outside the incorporated Town, confirm the applicable Loudoun County zoning and building requirements. Check current application instructions with the relevant authority rather than relying on a fixed review period or a fee estimate from another project."
     ]
   }
 ];
@@ -167,16 +151,16 @@ export default function DeckBuilderLeesburgPage() {
   return (
     <main>
       <LocalBusinessSchema city="Leesburg" url="https://ldndecks.com/deck-builder-leesburg-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-leesburg-va" name="Deck Builder in Leesburg, VA | Composite Decks | Loudoun Decks" description="Deck builder in Leesburg, VA. Custom Trex &amp; cedar decks for River Creek, Lansdowne, Tavistock Farms &amp; the historic district. Town of Leesburg + Loudoun County permit planning support. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-24" url="https://ldndecks.com/deck-builder-leesburg-va" name="Deck Builder in Leesburg, VA | Composite Decks | Loudoun Decks" description="Deck builder in Leesburg, VA. Custom Trex &amp; cedar decks for River Creek, Lansdowne, Tavistock Farms &amp; the historic district. Town of Leesburg + Loudoun County permit planning support. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Leesburg, VA's Trusted Deck Company"
         title="Custom Deck Builder in Leesburg, VA"
-        description="Loudoun Decks builds composite, cedar and IPE decks across River Creek, Lansdowne and the historic district. Town of Leesburg + Loudoun County permit planning support. publicly documented reputation."
+        description="Loudoun Decks builds composite, cedar and IPE decks across River Creek, Lansdowne and the historic district. Town of Leesburg + Loudoun County permit planning support. "
       />
       <ServiceMain
         subtitle="Historic Loudoun Craftsmanship"
         title="Deck Builder Leesburg VA  -  Premium Quality"
-        description="We build decks suited to Leesburg's two worlds  -  the historic district and the river communities. Slope-engineered designs, view-preserving railings, materials from a written estimate."
+        description="We build decks suited to Leesburg's two worlds  -  the historic district and the river communities. Slope-aware designs, view-preserving railings and material options identified in your written estimate."
         listItems={[
           "Trex, TimberTech, AZEK, cedar & IPE",
           "Town of Leesburg & Loudoun County permits confirmed and filed",
@@ -195,7 +179,7 @@ export default function DeckBuilderLeesburgPage() {
       <PlanningUpdate
         market="Leesburg decks in 2026"
         notes={[
-          "Leesburg projects still start with a jurisdiction check because Town of Leesburg and Loudoun County permits follow separate paths.",
+          "Inside Town limits, confirm Town zoning approval and the Loudoun County building permit; a Leesburg mailing address alone does not establish jurisdiction.",
           "Historic district projects need earlier material, color, and visibility planning before the ARB review window begins.",
           "River Creek, Lansdowne, and Potomac-facing lots benefit from early railing and drainage decisions because slope and view preservation can change the budget."
         ]}
@@ -207,7 +191,7 @@ export default function DeckBuilderLeesburgPage() {
       />
       <GeoAnswerBlock
         question="What should Leesburg homeowners know before planning a deck?"
-        answer="Leesburg deck projects should start with a jurisdiction check because Town of Leesburg properties and nearby Loudoun County properties follow different permit paths. Historic district, River Creek, Lansdowne, Tavistock Farms, Beacon Hill, and Potomac-facing lots may also need earlier decisions on materials, railing visibility, slope, drainage, HOA or ARB review, and whether the existing deck can be resurfaced."
+        answer="Leesburg deck projects should start with a jurisdiction check. Inside Town limits, planning generally involves Town zoning approval and a Loudoun County building permit. Historic district, River Creek, Lansdowne, Tavistock Farms, Beacon Hill, and Potomac-facing lots may also need earlier decisions on materials, railing visibility, slope, drainage, HOA or ARB review, and whether the existing deck can be resurfaced."
         facts={[
           'Primary buyer intent: permit clarity, historic review, premium composite materials, and sloped-lot planning.',
           'Conversion path: written estimate plus permit and material planning.'
@@ -219,6 +203,10 @@ export default function DeckBuilderLeesburgPage() {
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
+      <section aria-label="Official deck permit resources" style={{ padding: '1rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <p>Official permit resources: <a href="https://www.leesburgva.gov/departments/community-development/community-development-faqs">Town of Leesburg zoning and building permit FAQ</a> and <a href="https://www.loudoun.gov/1166/Decks">Loudoun County deck permits and inspections</a>.</p>
+        <p><Link href="/get-estimate">Request a written Leesburg deck estimate</Link> or call <a href="tel:+15716557207">(571) 655-7207</a>.</p>
+      </section>
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
         <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
           <Image
@@ -275,7 +263,7 @@ export default function DeckBuilderLeesburgPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Leesburg" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Leesburg" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-leesburg-va" />
-      <NamedAuthor context="Leesburg and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Leesburg and Northern Virginia" lastUpdated="2026-10-24" />
       <ContactHome />
     </main>
   );
