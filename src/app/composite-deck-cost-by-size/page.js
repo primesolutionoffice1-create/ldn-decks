@@ -12,82 +12,77 @@ import NamedAuthor from '@/components/NamedAuthor';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
 
+const PATH = '/composite-deck-cost-by-size';
+const DESCRIPTION = 'Composite deck cost by size in Northern Virginia: external 2026 benchmark $35–$80/sq ft, about $14,000–$32,000 for 400 sq ft. Written estimate = price.';
+const TITLE = 'Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples';
+const UPDATED = '2026-10-24';
+
 export const metadata = buildMetadata({
-  path: '/composite-deck-cost-by-size',
-  title: 'Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples',
-  description: 'Composite deck cost by size — 2026 planning pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia. Per-tier breakdown plus monthly payment.',
+  path: PATH,
+  title: TITLE,
+  description: DESCRIPTION,
   image: '/social/composite-deck-cost-by-size-social.png',
 });
-
-const PATH = '/composite-deck-cost-by-size';
 
 const sizes = [
   {
     sqft: 300,
     label: '300 sqft (e.g. 15×20)',
     use: 'Standard family deck for a townhouse or smaller single-family yard.',
-    budget: 'a written estimate',
-    mid: 'a written estimate',
-    premium: 'a written estimate',
-    monthlyMid: 'a payment the lender calculates (10y)',
+    benchmark: '$10,500–$24,000',
   },
   {
     sqft: 400,
     label: '400 sqft (e.g. 20×20)',
     use: 'Mid-size deck with seating zone, grill area, and dining table.',
-    budget: 'a written estimate',
-    mid: 'a written estimate',
-    premium: 'a written estimate',
-    monthlyMid: 'a payment the lender calculates (10y)',
+    benchmark: '$14,000–$32,000',
   },
   {
     sqft: 500,
     label: '500 sqft (e.g. 25×20)',
     use: 'Large entertaining deck with multiple zones, pergola-ready.',
-    budget: 'a written estimate',
-    mid: 'a written estimate',
-    premium: 'a written estimate',
-    monthlyMid: 'a payment the lender calculates (10y)',
+    benchmark: '$17,500–$40,000',
   },
   {
     sqft: 600,
     label: '600 sqft (e.g. 20×30 or 24×25)',
     use: 'Premium outdoor living space — two zones, often two stair flights, room for built-ins.',
-    budget: 'a written estimate',
-    mid: 'a written estimate',
-    premium: 'a written estimate',
-    monthlyMid: 'a payment the lender calculates (10y)',
+    benchmark: '$21,000–$48,000',
   },
 ];
+
+function sizeFaqAnswer(sqft, total) {
+  return `For a simple, low-height composite deck with standard railing and no complex stairs, external 2026 benchmarks put installed cost at $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026; Angi lists $30–$60 per square foot for deck construction, updated September 24, 2026). Applied to ${sqft} sq ft, the simple arithmetic of $35–$80 per square foot times the floor area is about ${total}. Permits, demolition, elevation and complex stairs are excluded. These are external benchmarks, not Loudoun Decks prices, and a written estimate is the only project price.`;
+}
 
 const faqs = [
   {
     q: 'How much does a 300 sqft composite deck cost in Northern Virginia?',
-    a: 'A 300 sqft composite deck in Northern Virginia is priced in a written estimate depending on tier. Budget composite (Trex Enhance, Fiberon Good Life) lands a written estimate. Mid-tier (Trex Transcend, TimberTech PRO) is priced in a written estimate. Premium (Trex Signature, AZEK Vintage) is priced in a written estimate.',
+    a: sizeFaqAnswer(300, '$10,500–$24,000'),
   },
   {
     q: 'How much does a 400 sqft composite deck cost?',
-    a: 'A 400 sqft composite deck in Northern Virginia typically is priced in a written estimate. Pricing scales roughly linearly with size, but a 400 sqft deck often includes an extra stair flight, deeper joists, and more railing — which adds a written estimate over a strict per-square-foot calculation.',
+    a: sizeFaqAnswer(400, '$14,000–$32,000'),
   },
   {
     q: 'What does a 500 sqft composite deck cost installed?',
-    a: 'A 500 sqft composite deck in Northern Virginia is priced in a written estimate. At this size, picture-frame borders, multi-zone layouts, lighting packages, and railings become a larger share of the total cost. Most 500 sqft projects land in the mid-tier a written estimate range.',
+    a: sizeFaqAnswer(500, '$17,500–$40,000'),
   },
   {
     q: 'How much does a 600 sqft composite deck cost?',
-    a: 'A 600 sqft composite deck in Northern Virginia is priced in a written estimate installed. Decks this size almost always include two stair flights, a more complex framing plan, full railing system, and often built-in seating or planter benches that add to the project amount.',
+    a: sizeFaqAnswer(600, '$21,000–$48,000'),
   },
   {
     q: 'Does the cost scale linearly with size?',
-    a: 'No. Larger decks have proportionally more railing, more stairs, deeper framing requirements, and more lighting. A 600 sqft deck typically costs ~1.7–1.9× a 300 sqft deck of the same tier, not 2× — but it also adds features that smaller decks rarely include.',
+    a: 'No. Larger decks have proportionally more railing, more stairs, deeper framing requirements, and more lighting, and they often include features that smaller decks rarely include. The size totals on this page are only the simple arithmetic of the external $35–$80 per square foot benchmark times the floor area, so those extras sit outside that arithmetic. A written estimate is the only project price.',
   },
   {
     q: 'What size deck do most Northern Virginia homeowners build?',
-    a: 'Most new builds and replacements in Loudoun, Fairfax, and Prince William counties land in the 300–500 sqft range. Townhouse decks cluster at 200–300 sqft. Single-family backyards typically go 400–600 sqft. Custom estate properties build 600–1,000+ sqft.',
+    a: 'The right size depends on the lot, HOA rules, setbacks, and use.',
   },
   {
     q: 'How do I estimate the monthly payment for my size?',
-    a: 'Pick the size + tier from the table above to find the project amount range, then run that number through the deck payment estimator. Most lenders run 8–11% APR over 10 or 15 years for home-improvement financing in this credit range.',
+    a: 'The lender sets the rate and the term. Use the deck payment estimator after you have a written project amount.',
   },
 ];
 
@@ -110,6 +105,7 @@ const S = {
   th: { padding: '0.85rem', textAlign: 'left', borderBottom: '2px solid #ddd', fontSize: '0.92rem', background: '#f5f5f5' },
   td: { padding: '0.85rem', borderBottom: '1px solid #eee', fontSize: '0.92rem' },
   container: { maxWidth: 960, margin: '0 auto', padding: '0 1.5rem' },
+  link: { color: 'var(--color-primary)', fontWeight: 600 },
 };
 
 export default function CompositeDeckCostBySizePage() {
@@ -117,14 +113,14 @@ export default function CompositeDeckCostBySizePage() {
     <>
       <JsonLd data={faqSchema} />
       <ArticleSchema
-        title="Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples"
-        description="Composite deck cost by size — 2026 planning pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia."
+        title={TITLE}
+        description={DESCRIPTION}
         path={PATH}
         image="/showcase/img18.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-10-18"
+        dateModified={UPDATED}
       />
-      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples" description="Composite deck cost by size — 2026 planning pricing for 300, 400, 500, and 600 sqft decks in Northern Virginia. Per-tier breakdown plus monthly payment." speakable />
+      <WebPageSchema dateModified={UPDATED} url={`https://ldndecks.com${PATH}`} name={TITLE} description={DESCRIPTION} speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -135,8 +131,7 @@ export default function CompositeDeckCostBySizePage() {
             Composite Deck Cost by Size: 300, 400, 500, and 600 Sq Ft Examples
           </h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: 1.6 }}>
-            2026 planning pricing for composite decks in Northern Virginia by size and material tier, plus matching monthly
-            payment ranges.
+            External 2026 benchmarks for common composite deck sizes in Northern Virginia. These are not Loudoun Decks prices, and a written estimate is the only project price.
           </p>
         </div>
       </section>
@@ -153,14 +148,15 @@ export default function CompositeDeckCostBySizePage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            In Northern Virginia, composite decks land in these ranges by size:{' '}
-            <strong>300 sqft a written estimate</strong>, <strong>400 sqft a written estimate</strong>,{' '}
-            <strong>500 sqft a written estimate</strong>, <strong>600 sqft a written estimate</strong>. The wide ranges reflect material
-            tier (budget vs mid vs premium). Run your project amount through the{' '}
-            <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
-              payment estimator
-            </Link>{' '}
-            for the monthly number.
+            For a simple, low-height composite deck with standard railing and no complex stairs, external 2026 benchmarks put installed cost at $35–$80 per square foot (
+            <a href="https://remodelcalculators.com/deck-cost" style={S.link}>RemodelCalculators</a>
+            , reviewed October 11, 2026;{' '}
+            <a href="https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm" style={S.link}>Angi</a>
+            {' '}lists $30–$60 per square foot for deck construction, updated September 24, 2026). Applied to common sizes, that simple arithmetic of $35–$80 per square foot times the floor area is about $10,500–$24,000 for 300 sq ft, $14,000–$32,000 for 400 sq ft, $17,500–$40,000 for 500 sq ft and $21,000–$48,000 for 600 sq ft. Permits, demolition, elevation and complex stairs are excluded; these are external benchmarks, not Loudoun Decks prices (see{' '}
+            <Link href="/composite-deck-cost-northern-virginia" style={S.link}>
+              composite deck cost in Northern Virginia
+            </Link>
+            ), and a written estimate is the only project price.
           </p>
         </div>
       </section>
@@ -179,59 +175,61 @@ export default function CompositeDeckCostBySizePage() {
             />
           </div>
 
-          <h2 style={{ ...S.h2, marginTop: 0 }}>Composite Deck Cost by Size and Tier</h2>
+          <h2 style={{ ...S.h2, marginTop: 0 }}>Composite Deck Cost by Size</h2>
           <p style={S.p}>
-            Below are full installed costs for the four most common composite deck sizes in Loudoun, Fairfax, Prince
-            William, Arlington, and Alexandria. Tiers are budget (Trex Enhance / Fiberon Good Life), mid (Trex
-            Transcend / TimberTech PRO), and premium (Trex Signature / TimberTech AZEK Vintage).
+            Each total below is the simple arithmetic of $35–$80 per square foot times that floor area (RemodelCalculators, reviewed October 11, 2026). These are external benchmarks, not Loudoun Decks prices.
           </p>
 
           {sizes.map((s) => (
             <div key={s.sqft} style={{ background: '#f9f9f9', border: '1px solid #e5e5e5', borderRadius: 12, padding: '1.5rem', marginBottom: '1rem' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                <h3 style={{ ...S.h3, margin: 0 }}>{s.label}</h3>
-                <span style={{ fontWeight: 700, color: 'var(--color-primary)' }}>{s.monthlyMid}</span>
-              </div>
-              <p style={{ ...S.p, color: '#666', fontSize: '0.95rem', marginBottom: '0.75rem' }}>{s.use}</p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '0.5rem 1rem', fontSize: '0.9rem' }}>
-                <div><strong>Budget:</strong> {s.budget}</div>
-                <div><strong>Mid:</strong> {s.mid}</div>
-                <div><strong>Premium:</strong> {s.premium}</div>
-              </div>
+              <h3 style={{ ...S.h3, margin: 0 }}>{s.label}</h3>
+              <p style={{ ...S.p, color: '#666', fontSize: '0.95rem', marginBottom: '0.75rem', marginTop: '0.5rem' }}>{s.use}</p>
+              <p style={{ margin: 0, fontSize: '0.95rem', lineHeight: 1.6 }}>
+                <strong>External benchmark, $35–$80/sq ft (RemodelCalculators 2026):</strong> {s.benchmark}
+              </p>
             </div>
           ))}
 
+          <p style={S.p}>
+            RemodelCalculators places Trex Enhance at $35–$60 per sq ft and Transcend at $45–$80 per sq ft.
+          </p>
+
           <h2 style={S.h2}>Why Cost Doesn&apos;t Scale Strictly Per Square Foot</h2>
           <p style={S.p}>
-            A 600 sqft deck does not cost 2× a 300 sqft deck. Larger decks add features that smaller decks rarely need
-            — more railing linear feet, two stair flights, deeper framing, more concrete footings, and often built-in
-            seating or planters. Conversely, the per-square-foot cost on small decks (under 250 sqft) is often higher
-            because permits, mobilization, and design overhead are roughly fixed regardless of size.
+            A larger deck adds more than deck boards. It can add railing length, another stair flight, deeper framing, more footings, and sometimes built-in seating or planters. On a smaller deck, permits, mobilization, and design work are a larger share of the project because those items do not shrink with the floor area.
           </p>
           <ul style={{ paddingLeft: '1.25rem', marginBottom: '1.5rem', lineHeight: 1.85 }}>
-            <li><strong>Railings:</strong> a written estimate per linear foot — bigger decks have proportionally more</li>
-            <li><strong>Stairs:</strong> a written estimate per flight — bigger decks often need a second flight</li>
-            <li><strong>Lighting:</strong> a written estimate — scales with deck perimeter, not surface area</li>
-            <li><strong>Footings:</strong> One additional footing per ~100 sqft of new deck</li>
-            <li><strong>Permits:</strong> Roughly flat a written estimate across all sizes</li>
+            <li><strong>Railings:</strong> priced by linear foot, so larger perimeters add more railing</li>
+            <li><strong>Stairs:</strong> each additional flight adds cost</li>
+            <li><strong>Lighting:</strong> scales with perimeter</li>
+            <li><strong>Footings:</strong> more area usually means more footings, as set by the approved plan</li>
+            <li>
+              <strong>Permits:</strong> county fees are listed on{' '}
+              <Link href="/composite-deck-cost-northern-virginia" style={S.link}>/composite-deck-cost-northern-virginia</Link>
+              {' '}(
+              <a href="https://www.loudoun.gov/1166/Decks" style={S.link}>Loudoun Typical Deck $265</a>
+              ;{' '}
+              <a href="https://www.fairfaxcounty.gov/landdevelopment/sites/landdevelopment/files/assets/documents/fee-schedule.pdf" style={S.link}>Fairfax minimum base fee $141.75</a>
+              {' '}plus levy and surcharge, 2026) and are excluded from the ranges above
+            </li>
           </ul>
 
           <h2 style={S.h2}>What Drives the Tier Choice</h2>
           <p style={S.p}>
-            The tier (budget vs mid vs premium) is usually the biggest single driver of total cost. For Northern
-            Virginia homeowners staying in the home 10+ years, mid-tier is the sweet spot — Trex Transcend or
-            TimberTech PRO Reserve carry 25-30 year fade & stain warranties and look indistinguishable from premium
-            tiers at normal viewing distance. Premium pays off if you want the 50-year AZEK Vintage warranty or the
-            deepest grain pattern. See the{' '}
-            <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+            The material tier is a major cost driver. See the{' '}
+            <Link href="/trex-vs-timbertech-vs-azek" style={S.link}>
+              material comparison guide
+            </Link>{' '}
+            for product-specific warranty sources, and the{' '}
+            <Link href="/composite-deck-cost-northern-virginia" style={S.link}>
               full composite deck cost guide
             </Link>{' '}
-            for tier detail.
+            for the published external benchmarks.
           </p>
 
           <h2 style={S.h2}>Size-Specific Cost Guides</h2>
           <p style={S.p}>
-            We publish dedicated cost pages for the most common Northern Virginia deck sizes:
+            Dedicated cost pages for these Northern Virginia deck sizes:
           </p>
           <ul style={{ listStyle: 'none', padding: 0, marginBottom: '1.5rem' }}>
             <li style={{ marginBottom: '0.5rem' }}>
@@ -253,15 +251,15 @@ export default function CompositeDeckCostBySizePage() {
 
           <h2 style={S.h2}>Estimate Your Monthly Payment</h2>
           <p style={S.p}>
-            Once you have a size + tier picked, drop the project amount into the{' '}
+            After you have a written project amount, use the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
               deck payment estimator
-            </Link>{' '}
-            to see the monthly payment at different APRs and terms. Use the{' '}
+            </Link>
+            . The lender sets the rate and the term. Use the{' '}
             <Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
               deck cost calculator
             </Link>{' '}
-            first to refine the project amount itself.
+            to organize size and scope before you request that estimate.
           </p>
 
           <h2 style={S.h2}>Related Cost & Material Guides</h2>
@@ -316,7 +314,7 @@ export default function CompositeDeckCostBySizePage() {
       </article>
 
       <SimpleCTA title="Get a Written Estimate by Deck Size" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated={UPDATED} />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>
