@@ -13,7 +13,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 
 const pageTitle = 'Trex vs TimberTech vs AZEK: Northern Virginia Buyer Guide';
 const pageDescription = 'Compare Trex, TimberTech Composite and Advanced PVC (AZEK) by product, site conditions, warranty documents and written installed scope.';
-const modifiedDate = '2026-09-13';
+const modifiedDate = '2026-10-24';
 const pageImage = '/images/img05.jpeg';
 
 export const metadata = buildMetadata({
@@ -153,7 +153,7 @@ export default function TrexVsTimberTechPage() {
       <article style={{ padding: '2.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ color: '#555', lineHeight: 1.7 }}>
-            By <Link href="/team" style={S.link}>Nick (Nicolae Zugrav), Loudoun Decks</Link>. Published <time dateTime="2026-05-01">May 1, 2026</time>. Updated <time dateTime={modifiedDate}>September 13, 2026</time>.
+            By <Link href="/team" style={S.link}>Nick (Nicolae Zugrav), Loudoun Decks</Link>. Published <time dateTime="2026-05-01">May 1, 2026</time>. Updated <time dateTime={modifiedDate}>October 24, 2026</time>.
           </p>
           <p style={S.p}>This is a contractor's document-based buying guide, not a laboratory comparison or a record of product tests. Manufacturer links were checked on September 13, 2026. Written estimates establish project pricing; this page does not assign installed prices or performance scores to brands.</p>
 
@@ -234,12 +234,13 @@ export default function TrexVsTimberTechPage() {
           <p style={S.p}>Shortlist products by the look you want, site conditions and documented installation requirements. Then ask for alternatives on the same project. Changing the railing, stairs or framing at the same time as the board selection makes it harder to see what the material upgrade actually changes.</p>
           <ol style={{ paddingLeft: '1.25rem', lineHeight: 1.7 }}>
             <li><strong>Name the product.</strong> Record collection, color, profile, board direction, fasteners and trim.</li>
-            <li><strong>Hold the project constant.</strong> Use the same footprint, railing, stairs and demolition scope for each alternative.</li>
+            <li><strong>Hold the project constant.</strong> Use the same footprint, railing, stairs and demolition scope for each alternative. Identify fascia and disposal in each estimate, too.</li>
             <li><strong>Separate structural work.</strong> Identify retained framing, corrections and any conditions still awaiting inspection.</li>
             <li><strong>Expose uncertainty.</strong> List allowances and exclusions, plus who approves changes in price or scope.</li>
             <li><strong>Compare the total before the payment.</strong> Review financing against the same installed scope, not different projects with similar monthly payments.</li>
           </ol>
-          <p style={S.p}>Use the <Link href="/composite-deck-cost-northern-virginia" style={S.link}>composite deck cost guide</Link> to organize the estimate conversation. For payment planning, keep the <Link href="/deck-payment-estimator" style={S.link}>deck payment estimator</Link> separate from the written construction proposal. Bring the competing scopes, approximate dimensions and photos when you <Link href="/get-estimate" style={S.link}>request an estimate</Link>.</p>
+          <p style={S.p}>If traction, surface temperature or scratch resistance is a priority, ask for documentation for the specific product and the conditions used in the test. For traction, check whether results describe a wet or dry surface and which test method was used. Avoid choosing a whole brand based on a claim about one collection.</p>
+          <p style={S.p}>Use the <Link href="/composite-deck-cost-northern-virginia" style={S.link}>composite deck cost guide</Link> to organize the estimate conversation. For payment planning, keep the <Link href="/deck-payment-estimator" style={S.link}>deck payment estimator</Link> separate from the written construction proposal. Bring the competing scopes, approximate dimensions, photos, sun exposure, intended use and any HOA requirements when you <Link href="/get-estimate" style={S.link}>request an estimate</Link>.</p>
 
           <h2 style={S.h2}>Frequently Asked Questions</h2>
           {materialFaqs.map((faq) => (
