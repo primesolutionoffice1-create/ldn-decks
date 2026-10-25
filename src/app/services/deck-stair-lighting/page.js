@@ -189,7 +189,7 @@ export default function DeckStairLightingPage() {
 
       <ServiceInclusions
         title="Why Choose Us"
-        description="At LDN Decks, we provide licensed and insured lighting installations integrated into your build."
+        description="At LDN Decks, we provide lighting installations under our Virginia Class A contractor license integrated into your build."
         items={whyLdnDecks}
       />
 
