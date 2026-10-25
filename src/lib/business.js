@@ -3,7 +3,6 @@
 
 export const BUSINESS = {
   name: 'Loudoun Decks',
-  legalName: 'Prime Solution LLC',
   alternateName: 'LDN Decks',
   url: 'https://ldndecks.com',
   logo: 'https://ldndecks.com/ldndecks-logo.webp',
@@ -216,7 +215,6 @@ export function buildOrganizationSchema() {
     '@type': 'GeneralContractor',
     '@id': ORG_ID,
     name: BUSINESS.name,
-    legalName: BUSINESS.legalName,
     alternateName: BUSINESS.alternateName,
     url: BUSINESS.url,
     logo: BUSINESS.logo,
