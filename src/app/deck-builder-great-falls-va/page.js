@@ -79,7 +79,7 @@ export default function GreatFallsDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Licensed &amp; insured · Written scope and warranty details provided before contract · Premium project planning from site review</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Virginia Class A Contractor, Lic. #2705191673 · Written scope and warranty details provided before contract · Premium project planning from site review</p>
         </div>
       </section>
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>

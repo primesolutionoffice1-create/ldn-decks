@@ -60,8 +60,8 @@ const woodbridgeFAQs = [
     a: "Permitting in Prince William County takes about 2-4 weeks. Once approved, most standard deck builds are completed in 1-2 weeks. Complex projects may take 3-4 weeks."
   },
   {
-    q: "Are you a Trex certified contractor in Woodbridge VA?",
-    a: "Loudoun Decks plans Woodbridge projects with Trex product-line options, manufacturer warranty documentation, and installation practices aligned with published Trex requirements."
+    q: "Which composite brands do you install in Woodbridge VA?",
+    a: "We install Trex, TimberTech and other composite brands."
   },
   {
     q: "Do you build screened porches in Woodbridge?",

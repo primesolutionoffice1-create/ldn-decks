@@ -19,8 +19,8 @@ const DEFAULT_ITEMS = [
   },
   {
     icon: '✅',
-    title: 'Licensed & Insured',
-    detail: 'VA Class A Contractor',
+    title: 'Virginia Class A Contractor, Lic. #2705191673',
+    detail: '',
   },
 ];
 

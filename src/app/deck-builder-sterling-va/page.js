@@ -45,7 +45,7 @@ export default function SterlingDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Sterling" url="https://ldndecks.com/deck-builder-sterling-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-sterling-va" name="Deck Builder in Sterling, VA | Trex | Loudoun Decks" description="Trusted deck builder in Sterling, VA. Google reviews. Trex &amp; TimberTech decks, screened porches. Loudoun County permits &amp; HOA handled. Free estimate. (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-25" url="https://ldndecks.com/deck-builder-sterling-va" name="Deck Builder in Sterling, VA | Trex | Loudoun Decks" description="Trusted deck builder in Sterling, VA. Google reviews. Trex &amp; TimberTech decks, screened porches. Loudoun County permits &amp; HOA handled. Free estimate. (571) 655-7207." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Custom Deck Builder in Sterling, VA</h1>
@@ -54,7 +54,7 @@ export default function SterlingDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · Licensed &amp; Insured · Written scope and warranty details provided before contract</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · Virginia Class A Contractor, Lic. #2705191673 · Written scope and warranty details provided before contract</p>
         </div>
       </section>
       <CityLeadFormSection
@@ -105,7 +105,7 @@ export default function SterlingDeckBuilderPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Loudoun County fastest permits in NoVA:</strong> 10-15 business days vs 3-6 weeks in Fairfax</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Deck replacement specialists:</strong> Many Sterling decks built 2005-2010 are now due for replacement</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>HOA planning:</strong> Sugarland Run, Countryside, Cascades, and Potomac Falls each need community-specific requirements checked before submission</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Close to HQ:</strong> Sterling is a nearby service market, which helps with estimate scheduling and site review logistics</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Centreville base:</strong> Based in Centreville (13704 Winding Oak Cir). Estimate visits are scheduled by appointment.</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Services in Sterling</h2>
