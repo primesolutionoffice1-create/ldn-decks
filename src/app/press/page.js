@@ -6,19 +6,18 @@ import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import CallLink from '@/components/CallLink';
-import { BUSINESS } from '@/lib/business';
 
 export const metadata = buildMetadata({
   path: '/press',
   title: 'Press & Media Kit | Loudoun Decks',
-  description: 'Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s trusted deck builder.',
+  description: 'Press resources, company facts, logo, and media contact for Loudoun Decks, a Northern Virginia deck builder founded in 2022.',
   image: '/social/press-media-kit-social.png',
 });
 
 export default function PressPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-19" url="https://ldndecks.com/press" name="Press &amp; Media Kit | Loudoun Decks" description="Press resources, company facts, high-resolution logos, and media contact for Loudoun Decks Northern Virginia\'s trusted deck builder." speakable />
+      <WebPageSchema dateModified="2026-10-25" url="https://ldndecks.com/press" name="Press &amp; Media Kit | Loudoun Decks" description="Press resources, company facts, logo, and media contact for Loudoun Decks, a Northern Virginia deck builder founded in 2022." speakable />
       <section style={{ background: 'var(--color-dark, #1a1a2e)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Press & Media Kit</h1>
@@ -42,11 +41,9 @@ export default function PressPage() {
                   ['Phone', '(571) 655-7207'],
                   ['Email', 'office@ldndecks.com'],
                   ['Website', 'ldndecks.com'],
-                  ['Google Reviews', 'public Google review profile; verify current count and rating directly on Google Maps'],
-                  ['Certifications', 'Trex product-line planning, TimberTech and AZEK product planning'],
+                  ['Google Reviews', 'Public Google review profile. Verify the current count and rating on Google Maps.'],
                   ['License', 'Virginia Class A Contractor (DPOR Licensed)'],
-                  ['Insurance', 'A current insurance certificate is not published on this page'],
-                  ['Owner', `Nick ${BUSINESS.founder.jobTitle}`],
+                  ['Owner', 'Nick, Owner'],
                 ].map(([label, value], i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     <td style={{ padding: '0.75rem', fontWeight: 600, borderBottom: '1px solid #eee', width: '35%' }}>{label}</td>
@@ -57,17 +54,11 @@ export default function PressPage() {
             </table>
           </div>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Key Facts & Statistics</h2>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Key Facts</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem', lineHeight: 1.8 }}>
-            <li><strong>Experience duration</strong> is not published. A year count needs owner records before it can be cited.</li>
-            <li><strong>Google review profile</strong> with current count and rating verified directly on Google Maps</li>
-            <li><strong>Communities across Northern Virginia</strong> in Loudoun, Fairfax, Prince William, Arlington, and Stafford counties, plus Alexandria and Falls Church</li>
-            <li><strong>Trex profile</strong> verify current manufacturer directory details directly with Trex</li>
-            <li><strong>TimberTech and AZEK product planning</strong> is discussed by project. A manufacturer program level is not stated.</li>
-            <li><strong>Permit and inspection coordination</strong> across Loudoun, Fairfax & Prince William counties</li>
-            <li><strong>Written workmanship warranty terms</strong> provided with project paperwork in addition to manufacturer warranty information</li>
-            <li><strong>Average project value:</strong> a written estimate</li>
-            <li><strong>Average build time:</strong> 1–4 weeks depending on scope</li>
+            <li><strong>Founded</strong> in 2022 in Northern Virginia.</li>
+            <li><strong>Owner:</strong> Nick has 15 years of hands-on deck-building experience.</li>
+            <li><strong>Team:</strong> 40+ years of combined experience.</li>
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Services</h2>
@@ -114,7 +105,7 @@ export default function PressPage() {
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Media Contact</h2>
-          <p style={{ marginBottom: '0.5rem' }}><strong>Nick</strong> {BUSINESS.founder.jobTitle}</p>
+          <p style={{ marginBottom: '0.5rem' }}><strong>Nick</strong>, Owner</p>
           <p style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:office@ldndecks.com" style={{ color: 'var(--color-primary, #d14817)' }}>office@ldndecks.com</a></p>
           <p style={{ marginBottom: '2rem' }}>Phone: <CallLink style={{ color: 'var(--color-primary, #d14817)' }}>(571) 655-7207</CallLink></p>
           <p style={{ marginBottom: '2rem' }}>
@@ -125,7 +116,7 @@ export default function PressPage() {
             <h3 style={{ fontWeight: 700, marginBottom: '0.75rem' }}>Suggested Citation</h3>
             <p style={{ fontSize: '0.9rem', color: '#555', lineHeight: 1.7 }}>
               When citing Loudoun Decks in articles, please use:<br />
-              <em>&quot;According to Nick, owner of Loudoun Decks (ldndecks.com), a Trex product-line planning serving Northern Virginia...&quot;</em>
+              <em>&quot;According to Nick, owner of Loudoun Decks (ldndecks.com), a Northern Virginia deck builder founded in 2022...&quot;</em>
             </p>
           </div>
 
