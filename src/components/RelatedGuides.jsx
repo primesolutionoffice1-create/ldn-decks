@@ -51,7 +51,7 @@ const CORNERSTONE_GUIDES = [
   { path: '/bbb-accredited-deck-builder-virginia', title: 'BBB Accredited Deck Builder', desc: 'BBB profile, status context and third-party trust signals.' },
   { path: '/ldn-decks-reviews-yelp', title: 'LDN Decks Reviews on Yelp', desc: 'Yelp review profile and public reputation signals for homeowners.' },
   { path: '/review', title: 'Leave a Review for LDN Decks', desc: 'Customer review destination and public profile links.' },
-  { path: '/best-time-to-build-a-deck-northern-virginia', title: 'Best Time to Build a Deck', desc: 'Month-by-month calendar winter gets 10-15% better pricing.' },
+  { path: '/best-time-to-build-a-deck-northern-virginia', title: 'Best Time to Build a Deck', desc: 'Month-by-month calendar for weather, scheduling, permits, and HOA review.' },
   { path: '/deck-maintenance-checklist-virginia', title: 'Deck Maintenance Checklist', desc: 'Seasonal care guide for Virginia climate.' },
   { path: '/deck-railing-options-northern-virginia', title: 'Deck Railing Options & Costs', desc: 'Composite, aluminum, cable, glass compared.' },
   { path: '/services/fire-pits', title: 'Fire Pit Design & Costs', desc: 'Gas vs wood-burning integration tips.' },
