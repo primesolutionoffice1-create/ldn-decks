@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { buildMetadata, SITE_URL } from '@/lib/seo';
-import { getSoroArticles } from '@/lib/soro';
+import { getSoroArticles, insightDocumentTitle, fitInsightText } from '@/lib/soro';
 import { ORG_ID, WEBSITE_ID } from '@/lib/business';
 import WebPageSchema from '@/components/WebPageSchema';
 import JsonLd from '@/components/JsonLd';
@@ -17,7 +17,7 @@ export const revalidate = 3600;
 
 const PAGE_PATH = '/insights';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-const PAGE_TITLE = 'Deck Building Insights | Loudoun Decks';
+const PAGE_TITLE = insightDocumentTitle('Deck Building Insights');
 const PAGE_DESCRIPTION =
   'Deck building insights for Northern Virginia homeowners: materials, maintenance, planning and outdoor living articles from Loudoun Decks.';
 
@@ -45,7 +45,7 @@ function buildCollectionSchema(articles) {
         '@type': 'ListItem',
         position: i + 1,
         url: `${PAGE_URL}/${article.slug}`,
-        name: article.title,
+        name: insightDocumentTitle(article.title),
       })),
     },
   };
@@ -100,7 +100,7 @@ export default async function InsightsPage() {
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             src={article.image}
-                            alt={article.title}
+                            alt={fitInsightText(article.title)}
                             className={styles.cardImage}
                             loading="lazy"
                             decoding="async"
@@ -127,7 +127,7 @@ export default async function InsightsPage() {
                       )}
 
                       <Link href={href} className={listStyles.titleLink}>
-                        <h2 className={listStyles.title}>{article.title}</h2>
+                        <h2 className={listStyles.title}>{fitInsightText(article.title)}</h2>
                       </Link>
 
                       <p className={listStyles.excerpt}>{article.excerpt}</p>
