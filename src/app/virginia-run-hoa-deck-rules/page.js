@@ -32,7 +32,7 @@ const faqSchema = {
     { "@type": "Question", name: "What's the Virginia Run deck aesthetic?", acceptedAnswer: { "@type": "Answer", text: "Virginia Run's premier estate-tier character favors premium materials and sophisticated design throughout. Approved selections often skew premium: TimberTech AZEK Vintage Mahogany, Coastline, or Cypress; Trex Transcend Vintage Lantern or Spiced Rum; and railings such as composite balustrade, aluminum-traditional, or cable rail on lots backing to common-area woods or the golf course. Integrated lighting, picture-frame borders, and custom post wraps are common at this tier." } },
     { "@type": "Question", name: "How much does a Virginia Run deck cost?", acceptedAnswer: { "@type": "Answer", text: "Virginia Run projects routinely land in the premier estate tier: a written estimate for multi-level composite decks with screened porches. This page does not publish home prices for Virginia Run. Full outdoor-living packages with integrated outdoor kitchens, fire features, and pergolas: a written estimate. The premium pricing reflects the larger lot sizes, multi-level designs, premium materials, and the more detailed ARC + engineering process." } },
     { "@type": "Question", name: "Are engineered structural drawings required in Virginia Run?", acceptedAnswer: { "@type": "Answer", text: "Often yes. Virginia Run's premier-tier projects (multi-level decks 600+ sqft, decks with integrated hot tubs or outdoor kitchens, second-story decks, builds with concentrated point loads) require Virginia-licensed structural engineer's stamp on the framing plan, footing schedule, and load-path analysis. The ARC requires these drawings in addition to whatever the county requires. We coordinate engineering as part of the project total." } },
-    { "@type": "Question", name: "Can Loudoun Decks handle the Virginia Run ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. We prepare the full packet with physical material samples, coordinate in-person committee presentation needs when required, coordinate engineered structural drawings with a Virginia-licensed engineer, file the Fairfax County building permit in parallel, and manage inspection sequencing through the project lifecycle. Our Centreville HQ at 13704 Winding Oak Cir is approximately 10 minutes from Virginia Run. Call 571-655-7207." } },
+    { "@type": "Question", name: "Can Loudoun Decks handle the Virginia Run ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. We prepare the full packet with physical material samples, coordinate in-person committee presentation needs when required, coordinate engineered structural drawings with a Virginia-licensed engineer, file the Fairfax County building permit in parallel, and manage inspection sequencing through the project lifecycle. Based in Centreville (13704 Winding Oak Cir). Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment. Call 571-655-7207." } },
   ],
 };
 
@@ -42,14 +42,14 @@ export default function VirginiaRunHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Virginia Run HOA Deck Rules &amp; Approval Guide" description="Building a deck in Virginia Run, Centreville? The premier master-planned golf community. Most detailed ARC, 21-35 day in-person committee review, engineered drawings required. Premier estate-tier construction." speakable />
+      <WebPageSchema dateModified="2026-10-25" url={`https://ldndecks.com${PATH}`} name="Virginia Run HOA Deck Rules &amp; Approval Guide" description="Building a deck in Virginia Run, Centreville? The premier master-planned golf community. Most detailed ARC, 21-35 day in-person committee review, engineered drawings required. Premier estate-tier construction." speakable />
       <ArticleSchema
         title="Virginia Run HOA Deck Rules and Approval Guide"
         description="Virginia Run HOA deck approval, Fairfax County permit coordination, engineered drawing triggers, landscape integration, and estate-tier deck planning."
         path={PATH}
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-10-18"
+        dateModified="2026-10-25"
       />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -69,7 +69,7 @@ export default function VirginiaRunHoaDeckRulesPage() {
 
           <h2 style={S.h2}>Building a Deck in Virginia Run</h2>
           <p style={S.p}>Virginia Run is Centreville&apos;s premier master-planned golf community — anchored by an 18-hole golf course, with home values typically in the amount in a written estimate range, larger lot sizes that support multi-level designs and full outdoor-living packages, and the most detailed architectural review process in the Centreville area. The community is governed by the Virginia Run Community Association with HOA dues of approximately a written estimate per month covering pools, tennis courts, basketball courts, clubhouse, trails, tot lots, and common-area maintenance.</p>
-          <p style={S.p}>Deck projects in Virginia Run are estate-tier in every dimension: premium materials, sophisticated design, multi-level configurations, integrated outdoor kitchens, fire features, and engineered structural framing. The approval process is more involved than other Centreville HOAs, but the resulting deck quality and community fit reflects the investment. Our Centreville HQ at 13704 Winding Oak Cir is approximately 10 minutes from most Virginia Run addresses — see our <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)' }}>Centreville deck builder page</Link> for broader HQ context.</p>
+          <p style={S.p}>Deck projects in Virginia Run are estate-tier in every dimension: premium materials, sophisticated design, multi-level configurations, integrated outdoor kitchens, fire features, and engineered structural framing. The approval process is more involved than other Centreville HOAs. Based in Centreville (13704 Winding Oak Cir). Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment. See our <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)' }}>Centreville deck builder page</Link>.</p>
 
           <h2 style={S.h2}>How Virginia Run&apos;s ARC Works — the Most Detailed in Centreville</h2>
           <p style={S.p}>The Virginia Run Community Association Architectural Review Committee operates on a scheduled meeting cycle (typically monthly) and requires comprehensive submission packets at least 14 days before the next meeting. The review considers:</p>
@@ -115,7 +115,7 @@ export default function VirginiaRunHoaDeckRulesPage() {
           <p style={S.p}>Use our <Link href="/800-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>800 sqft deck cost guide</Link> for detailed breakdown of estate-tier configurations — Virginia Run is one of the named estate-community references in that guide.</p>
 
           <h2 style={S.h2}>How Loudoun Decks Handles Virginia Run Approvals</h2>
-          <p style={S.p}>We prepare the Virginia Run ARC packet with physical material samples, landscape integration notes, and structural drawings; coordinate engineered drawings with a Virginia-licensed engineer when required; file the Fairfax County permit in parallel; and manage inspection sequencing through the project lifecycle. Our Centreville HQ is about 10 minutes from Virginia Run. See more on our <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)' }}>Centreville deck builder page</Link>.</p>
+          <p style={S.p}>We prepare the Virginia Run ARC packet with physical material samples, landscape integration notes, and structural drawings; coordinate engineered drawings with a Virginia-licensed engineer when required; file the Fairfax County permit in parallel; and manage inspection sequencing through the project lifecycle. Based in Centreville (13704 Winding Oak Cir). Estimate visits are scheduled by appointment. See more on our <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)' }}>Centreville deck builder page</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ — Virginia Run HOA deck approval</h2>
           {faqSchema.mainEntity.map((q, i) => (
@@ -127,7 +127,7 @@ export default function VirginiaRunHoaDeckRulesPage() {
 
           <h2 style={{ fontSize: '1.4rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related guides</h2>
           <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
-            <li>→ <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Centreville deck builder (our HQ city)</Link></li>
+            <li>→ <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Centreville deck builder</Link></li>
             <li>→ <Link href="/sully-station-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Sully Station HOA deck rules</Link></li>
             <li>→ <Link href="/800-square-foot-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>800 sqft estate-tier deck cost</Link></li>
             <li>→ <Link href="/multi-level-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Multi-level deck builder</Link></li>

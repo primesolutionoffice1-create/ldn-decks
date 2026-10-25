@@ -13,7 +13,7 @@ import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import { BUSINESS, formatServiceArea } from '@/lib/business';
+import { formatServiceArea } from '@/lib/business';
 import AboutTrustExpansion from '@/components/AboutTrustExpansion';
 
 export const metadata = buildMetadata({
@@ -28,7 +28,7 @@ const aboutFaqSchema = {
   "@type": "FAQPage",
   "@id": "https://ldndecks.com/about#faq",
   "mainEntity": [
-    { "@type": "Question", "name": "Who owns Loudoun Decks?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks was founded and is operated by Nicolae Zugrav, a Virginia Class A Licensed contractor specializing in composite deck construction and outdoor living projects across Northern Virginia." } },
+    { "@type": "Question", "name": "Who owns Loudoun Decks?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks was founded by Nicolae Zugrav. Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Loudoun County building permits are filed under Prime Solution." } },
     { "@type": "Question", "name": "Is Loudoun Decks licensed and insured?", "acceptedAnswer": { "@type": "Answer", "text": "The published license is Virginia Class A Contractor License #2705191673. Verify the current record with Virginia DPOR. A current insurance certificate is not published on this page. TrexPro or TimberTech program status is not stated." } },
     { "@type": "Question", "name": "What areas does Loudoun Decks serve?", "acceptedAnswer": { "@type": "Answer", "text": `Loudoun Decks serves ${formatServiceArea()}.` } },
     { "@type": "Question", "name": "What is Loudoun Decks' Google reviews?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks maintains a public Google review profile from Northern Virginia homeowners. Review text, dates, counts, and ratings should be verified directly on the public Google profile before quoting them." } },
@@ -63,7 +63,7 @@ const aboutPageSchema = {
 export default function AboutPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-19" url="https://ldndecks.com/about" name="About Loudoun Decks | Trusted Deck Builder Northern Virginia" description="Meet the team behind Loudoun Decks. Verify Virginia DPOR license, Trex, TimberTech, BBB, Houzz, and public review profile links." speakable />
+      <WebPageSchema dateModified="2026-10-25" url="https://ldndecks.com/about" name="About Loudoun Decks | Trusted Deck Builder Northern Virginia" description="Meet the team behind Loudoun Decks. Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Verify the Virginia DPOR record and public profile links." speakable />
       <JsonLd data={aboutFaqSchema} />
       <JsonLd data={aboutPageSchema} />
       <AboutHeader />
@@ -74,7 +74,10 @@ export default function AboutPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-27" />
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem', marginTop: '2rem' }}>Founded by a Builder, Not a Salesman</h2>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem', marginTop: '2rem' }}>Who operates Loudoun Decks</h2>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Loudoun County building permits are filed under Prime Solution.</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Founded by a Builder, Not a Salesman</h2>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.5rem', marginBottom: '2rem' }}>
             <div>
               <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Loudoun Decks was founded by <strong>Nicolae Zugrav</strong>, a Virginia Class A Licensed contractor who started in construction framing houses and learned every phase of residential building before specializing in deck construction and outdoor living.</p>
@@ -124,7 +127,7 @@ export default function AboutPage() {
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Where We Work</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Loudoun Decks operates exclusively in Northern Virginia. We are based in Centreville and serve homeowners within a 40-mile radius — close enough that Nick can be on any jobsite within 45 minutes.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Loudoun Decks operates exclusively in Northern Virginia. Based in Centreville (13704 Winding Oak Cir). Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
             {[
               { county: 'Loudoun County', cities: 'Ashburn, Leesburg, Sterling, Brambleton, South Riding, Purcellville', href: '/areas-we-serve' },
@@ -162,17 +165,10 @@ export default function AboutPage() {
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Frequently Asked Questions</h2>
-          {[
-            { q: 'Who owns Loudoun Decks?', a: 'Loudoun Decks was founded and is operated by Nicolae Zugrav, a Virginia Class A Licensed contractor specializing in composite deck construction and outdoor living projects across Northern Virginia.' },
-            { q: 'Is Loudoun Decks licensed and insured?', a: 'The published license is Virginia Class A Contractor License #2705191673. Verify the current record with Virginia DPOR. A current insurance certificate is not published on this page. TrexPro or TimberTech program status is not stated.' },
-            { q: 'What areas does Loudoun Decks serve?', a: `Loudoun Decks serves ${formatServiceArea()}.` },
-            { q: 'What is your Google reviews?', a: 'Loudoun Decks maintains a public Google Business Profile. Verify current count, rating, and review text directly on Google Maps.' },
-            { q: 'What certifications do you hold?', a: 'We publish verification paths for Trex, TimberTech, BBB, Houzz, Virginia DPOR license, and NADRA profiles. Current profile details should be verified directly with each public source.' },
-            { q: 'Do you offer a warranty?', a: 'Yes. Project paperwork includes written workmanship warranty terms, and manufacturer material coverage depends on the selected product line. We review those documents with homeowners before signing.' },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {aboutFaqSchema.mainEntity.map((faq) => (
+            <details key={faq.name} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.name}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.acceptedAnswer.text}</p>
             </details>
           ))}
 

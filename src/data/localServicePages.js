@@ -271,12 +271,12 @@ export const cityProfiles = {
   },
   centreville: {
     neighborhoods: ['Sully Station', 'Virginia Run', 'Centre Ridge', 'Compton Village'],
-    context: 'LDN Decks showroom proximity, HOA communities, and strong deck replacement demand',
+    context: 'Fairfax County HOA communities and deck replacement demand near the Centreville base',
     permit: 'Fairfax County permit review with HOA approvals common across Centreville communities',
     homeStyle: 'colonials, townhomes, split-levels, and golf-community homes',
     affluentAreas: ['Virginia Run', 'Sully Station', 'Centre Ridge'],
     projectFit: 'composite decks, repairs, screened porches, patios, pergolas, and lighting',
-    proofAngle: 'Centreville homeowners are close to the showroom and can compare materials before deciding.',
+    proofAngle: 'Centreville homeowners compare materials during the free on-site estimate. Samples are brought to the home, and visits are scheduled by appointment.',
   },
   clifton: {
     neighborhoods: ['Clifton town center', 'Little Rocky Run edge', 'Balmoral Greens', 'Clifton Creek'],

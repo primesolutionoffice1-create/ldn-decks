@@ -11,7 +11,6 @@ import RatingBadge from '@/components/RatingBadge';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import { BUSINESS } from '@/lib/business';
 import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
@@ -20,19 +19,19 @@ import CityLeadFormSection from '@/components/CityLeadFormSection';
 export const metadata = buildMetadata({
   path: '/deck-builder-centreville-va',
   title: 'Deck Builder in Centreville, VA | Trex | Loudoun Decks',
-  description: 'Centreville deck builder for composite deck replacement, resurfacing, screened porches, railings, lighting, and showroom material planning.',
+  description: 'Centreville deck builder for composite deck replacement, resurfacing, screened porches, railings, and lighting. Based in Centreville. On-site estimates by appointment.',
   image: '/social/deck-builder-centreville-va-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "Where is Loudoun Decks located?", acceptedAnswer: { "@type": "Answer", text: "Our office and showroom are at 13704 Winding Oak Cir, Centreville, VA 20121. We're headquartered in Centreville and serve all of Northern Virginia — Loudoun, Fairfax, Prince William, Arlington, and Stafford counties. Centreville is the only city in our service area where we can offer in-person material sampling at our showroom by appointment." } },
+    { "@type": "Question", name: "Where is Loudoun Decks located?", acceptedAnswer: { "@type": "Answer", text: "Based in Centreville (13704 Winding Oak Cir, Centreville, VA 20121). Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment. Hours are Mon–Fri 7 AM–7 PM, Sat 8 AM–5 PM, Sun closed." } },
     { "@type": "Question", name: "How much does a deck cost in Centreville?", acceptedAnswer: { "@type": "Answer", text: "Centreville deck projects typically range from a written estimate. Sully Station and Centre Ridge townhomes: a written estimate. Country Club Manor / Chalet Woods single-family: a written estimate. Newgate townhomes and detached: a written estimate. Virginia Run premier estates: a written estimate. Composite decks are priced in a written estimate depending on material grade and design complexity." } },
-    { "@type": "Question", name: "Which Centreville neighborhoods do you build in most?", acceptedAnswer: { "@type": "Answer", text: "Our highest project volume in Centreville comes from Sully Station (~1,000 residences on 1,100 landscaped acres), Centre Ridge (family-friendly townhomes + detached), Newgate (807 homes), Country Club Manor / Chalet Woods (~1,200 large-lot single-family), and Virginia Run (premier master-planned community with golf course and an HOA. This page does not publish the dues). We also build regularly in Compton Village, London Towne, Centreville Farms, Bull Run, Cub Run, Rocky Run, Fair Lakes, and Clifton-adjacent properties." } },
+    { "@type": "Question", name: "Which Centreville neighborhoods do you build in?", acceptedAnswer: { "@type": "Answer", text: "We build in Sully Station, Centre Ridge, Newgate, Country Club Manor / Chalet Woods, and Virginia Run. We also build in Compton Village, London Towne, Centreville Farms, Bull Run, Cub Run, Rocky Run, Fair Lakes, and Clifton-adjacent properties." } },
     { "@type": "Question", name: "Do I need a permit in Centreville?", acceptedAnswer: { "@type": "Answer", text: "Yes. Centreville is in Fairfax County. Building permits are required for any deck attached to your house, over 256 sqft in size, or more than 16.5 inches above grade. Plan review through the Fairfax County Land Development Services portal averages 3-6 weeks. Inspections (footing, framing, final) coordinated through the Fairfax County Permit Application Center 703-222-0801. We file every package as part of the project." } },
-    { "@type": "Question", name: "Which Centreville HOA process is fastest?", acceptedAnswer: { "@type": "Answer", text: "It depends on the community. Centre Ridge and London Towne typically clear architectural review in 14-21 days when submitted with material samples and engineered drawings. Sully Station's master-planned process averages 21-28 days. Newgate runs 14-21 days. Virginia Run is the most detailed — material samples, color specs, structural drawings, and an in-person committee meeting — averaging 21-35 days. Country Club Manor / Chalet Woods has the fewest restrictions (no premium HOA), making it the fastest at ~14 days. We carry current submission templates for all major Centreville HOAs." } },
-    { "@type": "Question", name: "What does the Centreville showroom offer?", acceptedAnswer: { "@type": "Answer", text: "Our 13704 Winding Oak Cir showroom is the only place in the Loudoun-Fairfax-Prince William corridor where you can see and touch Trex Transcend, Trex Enhance, Trex Select, TimberTech AZEK Vintage / Harvest / Coastline, TimberTech PRO, full-color sample boards, every railing system we install (composite balustrade, aluminum traditional, cable, glass), full-height post wraps, integrated lighting fixtures, and pergola components — all side by side. Most clients save 1-2 design meetings by visiting the showroom early. By appointment, Mon-Sat 8 AM-6 PM." } },
+    { "@type": "Question", name: "How long does Centreville HOA review take?", acceptedAnswer: { "@type": "Answer", text: "It depends on the community. Centre Ridge and London Towne typically clear architectural review in 14-21 days when submitted with material samples and engineered drawings. Sully Station's master-planned process averages 21-28 days. Newgate runs 14-21 days. Virginia Run asks for material samples, color specs, structural drawings, and an in-person committee meeting, averaging 21-35 days. Country Club Manor / Chalet Woods has fewer association restrictions and often clears in about 14 days. We carry current submission templates for these Centreville HOAs." } },
+    { "@type": "Question", name: "How can I compare Trex and TimberTech samples?", acceptedAnswer: { "@type": "Answer", text: "We install Trex, TimberTech and other composite brands, including Trex Transcend, Trex Enhance, Trex Select, TimberTech AZEK, and TimberTech PRO. Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment. Hours are Mon–Fri 7 AM–7 PM, Sat 8 AM–5 PM, Sun closed." } },
     { "@type": "Question", name: "What materials work best for Centreville homes?", acceptedAnswer: { "@type": "Answer", text: "Centreville is a mid-range to premium market with diverse architectural styles. Sully Station and Centre Ridge (1990s-2000s suburban): Trex Transcend Spiced Rum, Tiki Torch, or Havana Gold with classic balustrade railings. Country Club Manor (1960s-70s established): Trex Enhance Foggy Wharf or Beach Dune for value, Transcend Vintage Lantern for premium. Newgate (2000s townhomes): Trex Enhance or TimberTech EDGE for value-conscious budgets. Virginia Run (premier estates): TimberTech AZEK Vintage Mahogany or Coastline with cable or glass railings, integrated outdoor kitchens, multi-level designs." } },
     { "@type": "Question", name: "How long does a Centreville deck project take from contract?", acceptedAnswer: { "@type": "Answer", text: "8-12 weeks total for most builds. That includes 3-4 weeks for the Fairfax County permit, 2-4 weeks for HOA approval (parallel with permit), 1-3 weeks for material delivery, and 1-3 weeks for construction. Sully Station and Centre Ridge townhome decks: 9-10 weeks. Country Club Manor full-rear decks: 10-12 weeks. Virginia Run multi-level estate builds: 12-16 weeks given the detailed HOA review." } },
     { "@type": "Question", name: "Do you build outdoor kitchens in Centreville?", acceptedAnswer: { "@type": "Answer", text: "Yes, especially in Virginia Run, Country Club Manor, and the larger Sully Station lots where backyard space supports a full outdoor cooking area. Typical Centreville outdoor kitchens are priced in a written estimate depending on built-in appliances, counter material, and electrical/gas/water infrastructure. We often combine outdoor kitchens with multi-level decks for the full outdoor-living experience." } },
@@ -45,7 +44,7 @@ export default function CentrevilleDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Centreville" url="https://ldndecks.com/deck-builder-centreville-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-centreville-va" name="Deck Builder in Centreville, VA | Trex | Loudoun Decks" description="Centreville deck builder for composite deck replacement, resurfacing, screened porches, railings, lighting, and showroom material planning." speakable />
+      <WebPageSchema dateModified="2026-10-25" url="https://ldndecks.com/deck-builder-centreville-va" name="Deck Builder in Centreville, VA | Trex | Loudoun Decks" description="Centreville deck builder for composite deck replacement, resurfacing, screened porches, railings, and lighting. Based in Centreville. On-site estimates by appointment." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -58,23 +57,23 @@ export default function CentrevilleDeckBuilderPage() {
             />
           </div>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem', letterSpacing: '-0.01em' }}>Custom Deck Builder in Centreville, VA</h1>
-          <p style={{ color: '#ccc', fontSize: '1.15rem' }}>Centreville expanding your outdoor potential — Loudoun Decks is headquartered right here. Visit our showroom for material samples.</p>
+          <p style={{ color: '#ccc', fontSize: '1.15rem' }}>Based in Centreville (13704 Winding Oak Cir). Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/contact" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Visit Our Showroom</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Book an on-site estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Public review profiles · 13704 Winding Oak Cir, Centreville, VA 20121 · Showroom by appointment</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>13704 Winding Oak Cir, Centreville, VA 20121 · Mon–Fri 7 AM–7 PM, Sat 8 AM–5 PM, Sun closed</p>
         </div>
       </section>
       <CityLeadFormSection
         city="Centreville"
         county="Fairfax County"
-        service="deck replacement, composite deck, or showroom planning visit"
+        service="deck replacement, composite deck, or on-site estimate"
       />
       <PlanningUpdate
         market="Centreville decks in 2026"
         notes={[
-          "Centreville projects should verify Fairfax County permit scope, HOA review path, and whether the homeowner wants showroom material selection before final pricing.",
+          "Centreville projects should verify Fairfax County permit scope, HOA review path, and material selections before final pricing.",
           "Sully Station, Centre Ridge, Newgate, Country Club Manor, and Virginia Run each need different material, color, and railing documentation.",
           "Deck-plus-screened-porch scopes should plan footing, framing, drainage, and electrical details before HOA or permit submission."
         ]}
@@ -88,7 +87,7 @@ export default function CentrevilleDeckBuilderPage() {
         question="Why is Centreville a strong deck replacement market?"
         answer="Centreville has many established Fairfax County communities where older wood decks, townhome decks, and HOA-managed outdoor spaces need resurfacing, replacement, or screened-porch planning. Loudoun Decks is based in Centreville, so the practical first step is a local site review that checks framing, HOA rules, Fairfax County permit needs, materials, stairs, railings, drainage, and the written estimate path."
         facts={[
-          'Primary buyer intent: local deck builder, deck replacement, HOA-ready composite upgrades, and showroom material selection.',
+          'Primary buyer intent: local deck builder, deck replacement, and HOA-ready composite upgrades.',
           'Conversion path: material comparison, Fairfax permit guide, and written Centreville estimate.'
         ]}
         links={[
@@ -100,9 +99,9 @@ export default function CentrevilleDeckBuilderPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Your Local Centreville Deck Builder — Headquarters &amp; Showroom</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We don&apos;t just serve Centreville — we&apos;re headquartered here. Our office and material showroom are at <strong>13704 Winding Oak Cir, Centreville, VA 20121</strong>. When you work with Loudoun Decks on a Centreville project, your project manager is minutes away — not across the metro area. We&apos;re typically on-site within 30 minutes of a service call, and material deliveries from our staging area drop directly to your driveway without crossing the Beltway.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Centreville is more than our office address — it&apos;s where most of our team lives. We&apos;ve built throughout Centreville&apos;s diverse neighborhoods, and the deck volume per zip code in 20120/20121 is consistently among the highest in our portfolio. We know the Fairfax County permitting process, the local HOA architectural reviews, the soil and grade conditions, and the property-line setbacks that affect deck construction here in a way no out-of-county contractor can match.</p>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Your Local Centreville Deck Builder</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Based in Centreville (13704 Winding Oak Cir). Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment. Hours are Mon–Fri 7 AM–7 PM, Sat 8 AM–5 PM, Sun closed.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We build throughout Centreville neighborhoods. Fairfax County permits, local HOA architectural reviews, soil and grade, and property-line setbacks are part of the written estimate.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>If you live in Sully Station, Centre Ridge, Country Club Manor, Newgate, Virginia Run, Compton Village, London Towne, Bull Run, Cub Run, Rocky Run, Fair Lakes, or anywhere in 20120/20121 — we&apos;ve almost certainly built within walking distance of your home. Ask for project references in your specific community when you call.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Centreville&apos;s deck market — what we see most</h2>
@@ -114,13 +113,13 @@ export default function CentrevilleDeckBuilderPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Clifton-adjacent estate lots</strong> — west of Compton Road, rural-zoned acreage. Custom multi-level decks, screened porches with mountain views, full outdoor kitchens.</li>
           </ul>
 
-          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Visit Our Showroom</h2>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Book an on-site estimate</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
-            <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Loudoun Decks Showroom</p>
+            <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Loudoun Decks, Centreville</p>
             <p style={{ marginBottom: '0.25rem' }}>13704 Winding Oak Cir, Centreville, VA 20121</p>
             <p style={{ marginBottom: '0.25rem' }}>Phone: <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink></p>
-            <p style={{ marginBottom: '0.5rem' }}>Hours: Mon–Sat 8:00 AM – 6:00 PM (by appointment recommended)</p>
-            <p style={{ fontSize: '0.9rem', color: '#555' }}>See and touch samples of Trex Transcend, Trex Enhance, TimberTech AZEK, railing systems, lighting options, and color swatches. Compare materials side by side before deciding.</p>
+            <p style={{ marginBottom: '0.5rem' }}>Hours: Mon–Fri 7 AM–7 PM, Sat 8 AM–5 PM, Sun closed</p>
+            <p style={{ fontSize: '0.9rem', color: '#555' }}>We install Trex, TimberTech and other composite brands. Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment.</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Services in Centreville</h2>
@@ -146,7 +145,7 @@ export default function CentrevilleDeckBuilderPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Centreville neighborhoods we serve</h2>
 
           <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '1.5rem', marginBottom: '0.75rem' }}>Virginia Run</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Virginia Run is Centreville&apos;s premier master-planned community — a golf-course-anchored neighborhood with pools, tennis, basketball courts, miles of trails, a clubhouse, and a strong HOA. This page does not publish home prices for Virginia Run. HOA dues are set by the association. This page does not publish them, and architectural review is the most detailed in Centreville: physical material samples, color specs, structural drawings, and an in-person committee meeting. The premium pays off — Virginia Run decks tend to be the largest in our Centreville portfolio (500–800 sqft multi-level builds, a written estimate, often with integrated outdoor kitchens and full lighting design). Submission packets ship 14 days before the next committee meeting; we maintain the current template.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Virginia Run is Centreville&apos;s premier master-planned community — a golf-course-anchored neighborhood with pools, tennis, basketball courts, miles of trails, a clubhouse, and a strong HOA. This page does not publish home prices for Virginia Run. HOA dues are set by the association. This page does not publish them, and architectural review is the most detailed in Centreville: physical material samples, color specs, structural drawings, and an in-person committee meeting. Projects are often multi-level, with integrated outdoor kitchens and lighting design priced in a written estimate. Submission packets ship 14 days before the next committee meeting; we maintain the current template.</p>
 
           <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '1.5rem', marginBottom: '0.75rem' }}>Sully Station</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>An award-winning planned community covering 1,100+ landscaped acres with roughly 1,000 residences — a mix of single-family homes and townhomes, pools, trails, and community centers. Home prices typically a written estimate. Architectural review averages 21–28 days. Our most common Sully Station builds: 350–500 sqft Trex Transcend rear decks with composite balustrade railings (often Spiced Rum or Tiki Torch), and screened porches added to homes whose original deck has reached end-of-life.</p>
@@ -195,7 +194,7 @@ export default function CentrevilleDeckBuilderPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Centreville homeowners can use the showroom to compare deck boards, railings, lighting, fascia, and porch options before final material selection. Need payment flexibility? See <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck financing options</Link>, subject to approval and provider terms.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Material samples are brought to your home during the free on-site estimate so you can compare deck boards, railings, lighting, fascia, and porch options before final material selection. Need payment flexibility? See <Link href="/deck-financing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck financing options</Link>, subject to approval and provider terms.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Centreville Project Planning Example</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', marginBottom: '2rem' }}>
@@ -204,21 +203,10 @@ export default function CentrevilleDeckBuilderPage() {
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ — building a deck in Centreville</h2>
-          {[
-            { q: "Where is Loudoun Decks located?", a: "13704 Winding Oak Cir, Centreville, VA 20121. Office + material showroom. Open Mon-Sat 8 AM - 6 PM by appointment. We're the only deck builder in the Loudoun-Fairfax-Prince William corridor with an in-person material sampling showroom." },
-            { q: "How much does a deck cost in Centreville?", a: "Centreville deck projects range from a written estimate. Sully Station and Centre Ridge townhomes: a written estimate. Country Club Manor / Chalet Woods: a written estimate. Newgate: a written estimate. Virginia Run premier estates: a written estimate. Composite: priced in a written estimate." },
-            { q: "Which Centreville neighborhoods do you build in most?", a: "Highest volume: Sully Station, Centre Ridge, Newgate, Country Club Manor / Chalet Woods, Virginia Run. Also: Compton Village, London Towne, Centreville Farms, Bull Run, Cub Run, Rocky Run, Fair Lakes, and Clifton-adjacent estates." },
-            { q: "Do I need a permit in Centreville?", a: "Yes. Centreville is Fairfax County. Plan review through Land Development Services averages 3-6 weeks. Inspections coordinated through the Fairfax County Permit Application Center 703-222-0801." },
-            { q: "Which Centreville HOA process is fastest?", a: "Country Club Manor / Chalet Woods has no premium HOA — fastest at ~14 days for permit-only. Centre Ridge and Newgate: 14-21 days. Sully Station: 21-28 days. Virginia Run: 21-35 days (most detailed review)." },
-            { q: "What does the Centreville showroom offer?", a: "See and touch Trex Transcend, Trex Enhance, Trex Select, TimberTech AZEK Vintage / Harvest / Coastline, TimberTech PRO, every railing system (composite balustrade, aluminum, cable, glass), post wraps, integrated lighting, pergola components. By appointment, Mon-Sat 8 AM - 6 PM." },
-            { q: "What materials work best for Centreville homes?", a: "Sully Station / Centre Ridge: Trex Transcend Spiced Rum, Tiki Torch, Havana Gold + balustrade railings. Country Club Manor: Trex Enhance Foggy Wharf or Beach Dune for value, Vintage Lantern for premium. Newgate: Trex Enhance or TimberTech EDGE. Virginia Run: TimberTech AZEK Vintage Mahogany or Coastline with cable/glass railings." },
-            { q: "How long does a Centreville deck project take from contract?", a: "8-12 weeks total. Sully Station / Centre Ridge: 9-10 weeks. Country Club Manor: 10-12 weeks. Virginia Run multi-level estates: 12-16 weeks given detailed HOA review." },
-            { q: "Do you build outdoor kitchens in Centreville?", a: "Yes, especially in Virginia Run, Country Club Manor, and larger Sully Station lots. Typical Centreville outdoor kitchens: a written estimate depending on built-in appliances, counter material, electrical/gas/water." },
-            { q: "Do you build screened porches in Centreville?", a: "Yes. Mature tree canopy and humid summers make screened porches especially valuable. Typical 250-350 sqft screened porch: a written estimate including foundation, decking, screen, roof, ceiling, electric, ceiling fans." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {faqSchema.mainEntity.map((faq) => (
+            <details key={faq.name} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.name}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.acceptedAnswer.text}</p>
             </details>
           ))}
 
@@ -248,9 +236,9 @@ export default function CentrevilleDeckBuilderPage() {
         </ul>
       </section>
 
-      <SimpleCTA title="Visit Our Centreville Showroom" buttonText="Get Free Estimate" link="/get-estimate" />
+      <SimpleCTA title="Book an on-site estimate" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-centreville-va" />
-      <NamedAuthor context="Centreville and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Centreville and Northern Virginia" lastUpdated="2026-10-25" />
       <ContactHome />
     </>
   );

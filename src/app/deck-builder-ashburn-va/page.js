@@ -45,7 +45,7 @@ const inclusions = [
 const ashburnFAQs = [
   {
     q: "Do you build custom decks in Ashburn, VA?",
-    a: "Yes. Loudoun Decks builds across every Ashburn community  -  Brambleton, Broadlands, Ashburn Village, Ashburn Farm, Moorefield Station and One Loudoun. Our Centreville HQ is roughly 20 minutes from most Ashburn neighborhoods."
+    a: "Yes. Loudoun Decks builds across every Ashburn community  -  Brambleton, Broadlands, Ashburn Village, Ashburn Farm, Moorefield Station and One Loudoun. Based in Centreville (13704 Winding Oak Cir). Estimate visits are scheduled by appointment."
   },
   {
     q: "What does a composite deck cost in Ashburn?",

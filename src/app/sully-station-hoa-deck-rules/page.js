@@ -31,7 +31,7 @@ const faqSchema = {
     { "@type": "Question", name: "What materials are approved in Sully Station?", acceptedAnswer: { "@type": "Answer", text: "Trex Transcend Spiced Rum, Havana Gold, Tiki Torch, Vintage Lantern are the most-requested colors. TimberTech AZEK Vintage Mahogany and PRO Legacy in similar warm tones also clear review consistently. Composite balustrade railings in deck-matching tones or aluminum-traditional railings in black or bronze. Cable rail is sometimes approved on lots backing to common-area landscape buffers — submit with photo documentation of the lot context." } },
     { "@type": "Question", name: "How much does a Sully Station deck cost?", acceptedAnswer: { "@type": "Answer", text: "Standard composite deck (350-500 sqft): a written estimate. Multi-level deck (450-650 sqft): a written estimate. Deck + screened porch combo: a written estimate. Full outdoor-living package (deck + outdoor kitchen + pergola): a written estimate. Sully Station's a written estimate home values support mid-to-premium material choices." } },
     { "@type": "Question", name: "Are townhome decks treated differently in Sully Station?", acceptedAnswer: { "@type": "Answer", text: "Sully Station's townhome sub-sections follow the same ARC process as the detached-home sections, but the design vocabulary is narrower (smaller footprints, more standardized railing styles). Townhome rear decks typically run 180-280 sqft and a written estimate. Approval often clears in 18-21 days given the more constrained design space." } },
-    { "@type": "Question", name: "Can Loudoun Decks handle the Sully Station ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. Sully Station is a close Centreville service area for our HQ at 13704 Winding Oak Cir. We prepare the full ARC packet with material samples, structural drawings, and landscape integration notes; file the Fairfax County building permit in parallel from contract day; and coordinate inspection sequencing. Call 571-655-7207." } },
+    { "@type": "Question", name: "Can Loudoun Decks handle the Sully Station ARC paperwork?", acceptedAnswer: { "@type": "Answer", text: "Yes. Based in Centreville (13704 Winding Oak Cir). Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment. We prepare the full ARC packet with material samples, structural drawings, and landscape integration notes; file the Fairfax County building permit in parallel from contract day; and coordinate inspection sequencing. Call 571-655-7207." } },
   ],
 };
 
@@ -41,14 +41,14 @@ export default function SullyStationHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Sully Station HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Sully Station, Centreville? Architectural review for the 1,000-residence master-planned community on 1,100+ acres. 21-28 day timeline, material standards, Fairfax County permit coordination." speakable />
+      <WebPageSchema dateModified="2026-10-25" url={`https://ldndecks.com${PATH}`} name="Sully Station HOA Deck Rules &amp; Approval Guide" description="Building or replacing a deck in Sully Station, Centreville? Architectural review for the 1,000-residence master-planned community on 1,100+ acres. 21-28 day timeline, material standards, Fairfax County permit coordination." speakable />
       <ArticleSchema
         title="Sully Station HOA Deck Rules and Approval Guide"
         description="Sully Station HOA deck approval, Fairfax County permit coordination, landscape integration notes, structural review points, and Centreville deck builder support."
         path={PATH}
         image="/images/img17.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-10-18"
+        dateModified="2026-10-25"
       />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -68,7 +68,7 @@ export default function SullyStationHoaDeckRulesPage() {
 
           <h2 style={S.h2}>Building or Replacing a Deck in Sully Station</h2>
           <p style={S.p}>Sully Station is an award-winning master-planned community covering 1,100+ landscaped acres in western Fairfax County — approximately 1,000 residences split across single-family homes and townhomes, with multiple pools, trails, and community centers. Home prices typically range the amount in a written estimate. Established in the late 1980s through 1990s, Sully Station&apos;s housing stock is now at the 25-35 year mark, which means the original pressure-treated builder decks are well past design life. Sully Station is one of our most active Centreville sub-markets for deck replacement, resurface, and full-tear-down composite rebuilds.</p>
-          <p style={S.p}>Sully Station&apos;s approval path runs through the community ARC + the Fairfax County building permit. Our Centreville HQ at 13704 Winding Oak Cir is approximately 15 minutes from most Sully Station addresses — see our <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)' }}>Centreville deck builder page</Link> for broader context on the HQ sub-markets.</p>
+          <p style={S.p}>Sully Station&apos;s approval path runs through the community ARC + the Fairfax County building permit. Based in Centreville (13704 Winding Oak Cir). Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment. See our <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)' }}>Centreville deck builder page</Link>.</p>
 
           <h2 style={S.h2}>How Sully Station Architectural Review Works</h2>
           <p style={S.p}>The Sully Station II Community Association ARC reviews every deck submission against community-specific architectural standards. The review considers:</p>
@@ -107,7 +107,7 @@ export default function SullyStationHoaDeckRulesPage() {
           </ul>
 
           <h2 style={S.h2}>How Loudoun Decks Handles Sully Station Approvals</h2>
-          <p style={S.p}>Sully Station is approximately 15 minutes from our Centreville HQ at 13704 Winding Oak Cir, which makes Sully Station one of our fastest-response sub-markets. We maintain the current Sully Station submission template, prepare the full ARC packet with material samples + structural drawings + landscape integration plan, file the Fairfax County permit in parallel from contract day, and coordinate every inspection (footing, framing, final). See more on our <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)' }}>Centreville deck builder page</Link> and <Link href="/near-you/fairfax-county" style={{ color: 'var(--color-primary)' }}>Fairfax County overview</Link>.</p>
+          <p style={S.p}>Based in Centreville (13704 Winding Oak Cir). Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment. We maintain the current Sully Station submission template, prepare the full ARC packet with material samples + structural drawings + landscape integration plan, file the Fairfax County permit in parallel from contract day, and coordinate every inspection (footing, framing, final). See more on our <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)' }}>Centreville deck builder page</Link> and <Link href="/near-you/fairfax-county" style={{ color: 'var(--color-primary)' }}>Fairfax County overview</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ — Sully Station HOA deck approval</h2>
           {faqSchema.mainEntity.map((q, i) => (
@@ -119,7 +119,7 @@ export default function SullyStationHoaDeckRulesPage() {
 
           <h2 style={{ fontSize: '1.4rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related guides</h2>
           <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
-            <li>→ <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Centreville deck builder (our HQ city)</Link></li>
+            <li>→ <Link href="/deck-builder-centreville-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Centreville deck builder</Link></li>
             <li>→ <Link href="/virginia-run-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Virginia Run HOA deck rules (Centreville premier)</Link></li>
             <li>→ <Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County permit guide</Link></li>
             <li>→ <Link href="/education/ledger-board-flashing-deck-attachment-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Ledger board flashing guide</Link></li>
@@ -129,7 +129,7 @@ export default function SullyStationHoaDeckRulesPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="Sully Station deck project? Our HQ is 15 minutes away." buttonText="Get Free Estimate" link="/get-estimate" />
+      <SimpleCTA title="Book an on-site estimate for a Sully Station deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Sully Station (Centreville) and Fairfax County" lastUpdated="2026-10-18" />
       <RelatedGuides currentPath="/sully-station-hoa-deck-rules" />
       <ContactHome />

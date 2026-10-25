@@ -94,7 +94,7 @@ export async function generateMetadata({ params }) {
   return buildMetadata({
     path: `/near-you/${county}/${city}`,
     title: `Best Deck Builder in ${data.cityName} VA | Custom Decks & Patios`,
-    description: `Searching for a trusted deck builder in ${data.cityName}, VA? Loudoun Decks offers premium custom composite decks, screened porches, and patio installations. Licensed & Insured. Get a free estimate today.`,
+    description: `Searching for a trusted deck builder in ${data.cityName}, VA? Loudoun Decks offers premium custom composite decks, screened porches, and patio installations. Virginia Class A Contractor, Lic. #2705191673. Get a free estimate today.`,
     image: '/social/near-you-city-deck-builder-social.png',
     robots: { index: false, follow: true }
   });

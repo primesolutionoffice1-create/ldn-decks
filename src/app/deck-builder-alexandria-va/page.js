@@ -25,7 +25,7 @@ import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 export const metadata = buildMetadata({
   path: '/deck-builder-alexandria-va',
   title: 'Deck Builder in Alexandria VA | Composite Decks | Loudoun Decks',
-  description: 'Trusted Alexandria, VA deck builder. Trex, TimberTech, and AZEK material planning. Custom composite decks, porches & pergolas. Licensed & insured. Free written estimate — (571) 655-7207.',
+  description: 'Trusted Alexandria, VA deck builder. Trex, TimberTech, and AZEK material planning. Custom composite decks, porches & pergolas. Virginia Class A Contractor, Lic. #2705191673. Free written estimate — (571) 655-7207.',
   image: '/social/deck-builder-alexandria-va-social.png',
 });
 
@@ -62,8 +62,8 @@ const alexandriaFAQs = [
     a: "Permitting typically takes about 2-4 weeks. Once approved by the county and your HOA, most standard deck builds are completed in 1-2 weeks. Complex projects may take 3-4 weeks."
   },
   {
-    q: "Are you a Trex certified contractor in Alexandria VA?",
-    a: "Loudoun Decks plans Alexandria projects with Trex product-line options, manufacturer warranty documentation, and installation practices aligned with published Trex requirements."
+    q: "Which composite brands do you install in Alexandria VA?",
+    a: "We install Trex, TimberTech and other composite brands."
   },
   {
     q: "Do you build screened porches in Alexandria?",
@@ -122,7 +122,7 @@ export default function DeckBuilderAlexandriaPage() {
   return (
     <main>
       <LocalBusinessSchema city="Alexandria" url="https://ldndecks.com/deck-builder-alexandria-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-alexandria-va" name="Deck Builder in Alexandria VA | Composite Decks | Loudoun Decks" description="Trusted Alexandria, VA deck builder. Trex, TimberTech, and AZEK material planning. Custom composite decks, porches &amp; pergolas. Licensed &amp; insured. Free written estimate — (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-alexandria-va" name="Deck Builder in Alexandria VA | Composite Decks | Loudoun Decks" description="Trusted Alexandria, VA deck builder. Trex, TimberTech, and AZEK material planning. Custom composite decks, porches &amp; pergolas. Virginia Class A Contractor, Lic. #2705191673. Free written estimate — (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Alexandria, VA's Trusted Deck Company"
         title="Custom Deck Builder in Alexandria, VA"

@@ -65,7 +65,7 @@ export default function WoodDecksPage() {
               <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
               <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.85rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
             </div>
-            <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#ddd' }}>Public Google review profile · Licensed &amp; Insured · 5-Year Warranty</p>
+            <p style={{ marginTop: '1.25rem', fontSize: '0.9rem', color: '#ddd' }}>Public Google review profile · Virginia Class A Contractor, Lic. #2705191673</p>
           </div>
         </div>
       </section>

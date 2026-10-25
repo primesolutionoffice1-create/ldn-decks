@@ -9,9 +9,9 @@ import TrustBanner from '@/components/TrustBanner';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
-import { PLANNING_DISCLAIMER, SCREEN_EXISTING_ANSWER } from '@/lib/externalPlanningRanges';
+import { PLANNING_DISCLAIMER, SCREEN_EXISTING_ANSWER, SCREENED_PORCH_ANGI_URL, SCREENED_PORCH_HOMEADVISOR_URL } from '@/lib/externalPlanningRanges';
 
-const description = 'Screening an existing porch is about $5–$20/sq ft in a 2026 HomeAdvisor benchmark. Not a Loudoun Decks price. A written estimate is the only project price.';
+const description = 'National 2026 data: a new screened porch is about $25–$120 per sq ft (Angi, updated Aug 3, 2026, and HomeAdvisor 2026). Loudoun Decks prices each porch in a written estimate.';
 
 export const metadata = buildMetadata({
   path: '/screened-porch-cost-northern-virginia',
@@ -22,8 +22,8 @@ export const metadata = buildMetadata({
 
 const faqs = [
   { q: 'How much does a screened porch cost in Northern Virginia?', a: SCREEN_EXISTING_ANSWER },
-  { q: 'Is a screened porch worth it?', a: 'Resale recovery is not a fixed percentage. The 2025 Cost vs Value report does not include a screened porch category, so this page does not publish an ROI figure. A written estimate is the only project price.' },
-  { q: 'Can you add screens to an existing deck?', a: 'Often yes, if the framing supports the added weight. HomeAdvisor’s $5–$20 per square foot range (updated June 17, 2026) assumes the roof and structure already exist and are sound. We inspect before quoting. A written estimate is the only project price.' },
+  { q: 'Is a screened porch worth it?', a: 'Resale recovery is not a fixed percentage. The 2025 Cost vs Value report does not include a screened porch category, so this page does not publish an ROI figure. Loudoun Decks prices each porch in a written estimate.' },
+  { q: 'Can you add screens to an existing deck?', a: 'Often yes, if the framing supports the added weight. National 2026 data puts screening an existing covered porch at about $5–$20 per sq ft (Angi, updated August 3, 2026; HomeAdvisor, 2026). That range assumes a covered porch already exists. We inspect before quoting. Loudoun Decks prices each porch in a written estimate.' },
   { q: 'What are EZE-Breeze windows?', a: 'Vinyl panels that convert a screened porch into a 3-season room. Slide up for airflow, close for wind and rain protection. This page does not publish an EZE-Breeze price.' },
 ];
 
@@ -43,12 +43,12 @@ export default function ScreenedPorchCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-19" url="https://ldndecks.com/screened-porch-cost-northern-virginia" name="2026 Screened Porch Cost NoVA | Pricing Scenarios" description={description} speakable />
+      <WebPageSchema dateModified="2026-10-25" url="https://ldndecks.com/screened-porch-cost-northern-virginia" name="2026 Screened Porch Cost NoVA | Pricing Scenarios" description={description} speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How Much Does a Screened Porch Cost in Northern Virginia?</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>External planning ranges for screening an existing structure. Not a Loudoun Decks price.</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>National 2026 data for a new screened porch and for screening an existing covered porch. Not a Loudoun Decks price.</p>
         </div>
       </section>
       <TrustBanner />
@@ -61,7 +61,7 @@ export default function ScreenedPorchCostPage() {
       </section>
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="October 19, 2026" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="October 25, 2026" />
       </section>
 
       <article style={{ padding: '4rem 0' }}>
@@ -79,33 +79,42 @@ export default function ScreenedPorchCostPage() {
             />
           </div>
 
-          <h2 style={S.h2}>External planning range: screen an existing structure</h2>
+          <h2 style={S.h2}>National 2026 data</h2>
           <p style={S.p}>{PLANNING_DISCLAIMER}</p>
+          <p style={S.p}>{SCREEN_EXISTING_ANSWER}</p>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-              <caption style={{ textAlign: 'left', padding: '0 0 0.75rem', fontWeight: 600 }}>External market benchmark, not a Loudoun Decks price</caption>
+              <caption style={{ textAlign: 'left', padding: '0 0 0.75rem', fontWeight: 600 }}>National 2026 data, not a Loudoun Decks price</caption>
               <thead>
                 <tr style={{ background: '#f5f5f5' }}>
-                  {['Scenario', 'Assumptions', 'Planning range', 'Source and year'].map((h) => <th key={h} style={S.th}>{h}</th>)}
+                  {['Scenario', 'Assumptions', 'National 2026 data', 'Source and year'].map((h) => <th key={h} style={S.th}>{h}</th>)}
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th style={S.td}>Screen an existing structure that already has a sound roof</th>
-                  <td style={S.td}>Roof and structure already exist and are sound. HomeAdvisor also mentions permit fees of about $150–$300 on that page. That permit mention is not the Loudoun County or Fairfax County fee. A new roof, new footings, and a new structure are outside this range.</td>
-                  <td style={S.td}>$5–$20 per sq ft (2025/2026). About $2,000–$4,000 total on the source page. 320 sq ft example: $1,600–$6,400.</td>
-                  <td style={S.td}><a href="https://www.homeadvisor.com/cost/outdoor-living/screened-in-porch/" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>HomeAdvisor, Screened-In Porch, updated June 17, 2026</a></td>
+                  <th style={S.td}>New screened porch</th>
+                  <td style={S.td}>Built from scratch. Northern Virginia labor, permits, HOA review, and roof tie-ins often push a project to the upper part of the range.</td>
+                  <td style={S.td}>About $25–$120 per sq ft. Roughly $7,000–$20,000 for 12x12 to 20x20.</td>
+                  <td style={S.td}>
+                    <a href={SCREENED_PORCH_ANGI_URL} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Angi, updated August 3, 2026</a>
+                    {' · '}
+                    <a href={SCREENED_PORCH_HOMEADVISOR_URL} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>HomeAdvisor, Build a Porch, 2026</a>
+                  </td>
                 </tr>
                 <tr style={{ background: '#fafafa' }}>
-                  <th style={S.td}>New screened porch with a new structure and roof</th>
-                  <td style={S.td}>Includes a new roofed structure. Published aggregator ranges for this scope are too wide to publish as a planning total.</td>
-                  <td style={S.td}>Not published. A written estimate is the only project price.</td>
-                  <td style={S.td}>Not published.</td>
+                  <th style={S.td}>Screen an existing covered porch</th>
+                  <td style={S.td}>A covered porch is already in place. A new roof, new footings, and a new structure are a different scope.</td>
+                  <td style={S.td}>About $5–$20 per sq ft.</td>
+                  <td style={S.td}>
+                    <a href={SCREENED_PORCH_ANGI_URL} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Angi, updated August 3, 2026</a>
+                    {' · '}
+                    <a href={SCREENED_PORCH_HOMEADVISOR_URL} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>HomeAdvisor, 2026</a>
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p style={S.p}>The 320 sq ft total is the published $5–$20 per sq ft bounds times 320. Loudoun County says its Typical Deck detail cannot be used for a screened porch, which needs a full plan set, so this page does not publish a flat Loudoun screened-porch permit fee. Fairfax County requires a permit for screen porches and calculates the fee in PLUS. The published minimum base fee is $141.75 plus levy and surcharge (<a href="https://www.fairfaxcounty.gov/landdevelopment/sites/landdevelopment/files/assets/documents/fee-schedule.pdf" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2026 fee schedule</a>). That minimum is not a porch total. See <a href="https://www.loudoun.gov/1166/Decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County Decks</a> (accessed October 18, 2026) and <a href="https://www.fairfaxcounty.gov/landdevelopment/when-permit-required" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County permit rules</a>.</p>
+          <p style={S.p}>Loudoun County says its Typical Deck detail cannot be used for a screened porch, which needs a full plan set, so this page does not publish a flat Loudoun screened-porch permit fee. Fairfax County requires a permit for screen porches and calculates the fee in PLUS. The published minimum base fee is $141.75 plus levy and surcharge (<a href="https://www.fairfaxcounty.gov/landdevelopment/sites/landdevelopment/files/assets/documents/fee-schedule.pdf" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>2026 fee schedule</a>). That minimum is not a porch total. See <a href="https://www.loudoun.gov/1166/Decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County Decks</a> (accessed October 18, 2026) and <a href="https://www.fairfaxcounty.gov/landdevelopment/when-permit-required" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County permit rules</a>.</p>
 
           <h2 style={S.h2}>Scope examples, not prices</h2>
           <p style={S.p}>These descriptions organize a written estimate. They are not priced tiers, and they are not the $5–$20 per sq ft screening range above.</p>

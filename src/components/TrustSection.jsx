@@ -87,12 +87,7 @@ export default function TrustSection() {
             VA Class A #2705191673
           </Link>
           <span className={styles.partnerPair}>
-            <Link href="/trex-performance-products" className={styles.credentialLink}>
-              Trex partner
-            </Link>
-            <Link href="/timbertech-decks" className={styles.credentialLink}>
-              TimberTech partner
-            </Link>
+            We install <Link href="/trex-decks" className={styles.credentialLink}>Trex</Link>, <Link href="/timbertech-decks" className={styles.credentialLink}>TimberTech</Link> and other composite brands.
           </span>
         </div>
       </div>

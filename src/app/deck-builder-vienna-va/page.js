@@ -97,7 +97,7 @@ const expansionSections = [
       { label: "Town of Vienna Specialist", text: "Expertise in navigating the Town's specific building department and zoning rules." },
       { label: "Fairfax County Compliant", text: "All projects outside town limits are built to the highest Fairfax County safety standards." },
       { label: "HOA Submission Management", text: "We provide full CAD drawings and site plans for your HOA's architectural review board." },
-      { label: "Licensed & Insured", text: "Class A Contractor status with full workers' comp and liability coverage for your protection." }
+      { label: "Virginia Class A Contractor, Lic. #2705191673", text: "Verify the current record with Virginia DPOR. An insurance certificate is not published on this page." }
     ]
   },
   {

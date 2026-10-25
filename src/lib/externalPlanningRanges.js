@@ -65,8 +65,15 @@ export const COMPOSITE_PLANNING_ROWS = [
   },
 ];
 
-export const SCREEN_EXISTING_ANSWER =
-  'Screening an existing structure that already has a sound roof is about $5–$20 per square foot in HomeAdvisor’s screened-porch guide (updated June 17, 2026), or about $2,000–$4,000 total on that page. A 320 sq ft example of that per-square-foot range is $1,600–$6,400. The range assumes the roof and structure already exist and are sound. A new screened porch with a new roof is not given a planning total here. These are external benchmarks, not Loudoun Decks prices. A written estimate is the only project price.';
+// National 2026 data. Angi "How Much Does a Screened-In Porch Cost?" updated 2026-08-03.
+// HomeAdvisor "Build a Porch" 2026. Not a Loudoun Decks price.
+export const SCREENED_PORCH_ANGI_URL = 'https://www.angi.com/articles/rescreening-your-porch-who-hire-and-what-it-costs.htm';
+export const SCREENED_PORCH_HOMEADVISOR_URL = 'https://www.homeadvisor.com/cost/outdoor-living/build-a-porch/';
+
+export const SCREENED_PORCH_NATIONAL_ANSWER =
+  'National 2026 cost guides put a new screened porch at about $25–$120 per sq ft (Angi, HomeAdvisor, 2026), or roughly $7,000–$20,000 for 12x12 to 20x20 (Angi, Aug 2026). Screening an existing covered porch runs about $5–$20 per sq ft. Northern Virginia labor, permits, HOA review and roof tie-ins often push projects to the upper part of these ranges. Loudoun Decks prices each porch in a written estimate.';
+
+export const SCREEN_EXISTING_ANSWER = SCREENED_PORCH_NATIONAL_ANSWER;
 
 export const REPLACEMENT_RANGE_ANSWER =
   'External 2026 planning benchmarks, not Loudoun Decks prices: resurfacing composite decking on a structure that has been confirmed sound is about $15–$45 per square foot (LatestCost, September 25, 2026), or about $4,800–$14,400 for 320 square feet and $6,000–$18,000 for 400 square feet. Demolition of an old deck, when it applies, is a separate about $5–$15 per square foot (Angi, updated September 29, 2026), or about $1,600–$4,800 for 320 square feet and $2,000–$6,000 for 400 square feet. Angi also publishes one 360-square-foot replacement example of $7,200–$16,900, combining demolition, materials, and labor. A written estimate after a site visit and measurements is the only project price.';

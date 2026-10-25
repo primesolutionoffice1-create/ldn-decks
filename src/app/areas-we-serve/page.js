@@ -62,7 +62,7 @@ export default function AreasWeServePage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Areas We Serve</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>{COMMUNITIES_LABEL}</p>
-          <p style={{ color: '#aaa', marginTop: '1rem', fontSize: '0.9rem' }}>Public Google review profile · Licensed &amp; Insured · Written warranty terms</p>
+          <p style={{ color: '#aaa', marginTop: '1rem', fontSize: '0.9rem' }}>Public Google review profile · Virginia Class A Contractor, Lic. #2705191673 · Written warranty terms</p>
         </div>
       </section>
 

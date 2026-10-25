@@ -83,7 +83,7 @@ const screenedPorchGeoAnswers = [
 const faqs = [
   {
     q: "How much does a screened porch cost in Northern Virginia?",
-    a: "Screened porch cost depends on size, roof design, foundation or deck condition, electrical work, railing, flooring, screens, doors, trim, permits, and HOA requirements. This service page does not publish a project price. The screened porch cost page is the pricing page: it cites one external planning range for screening an existing structure that already has a sound roof, and it does not publish a total for a new porch with a new roof. Final pricing requires a written estimate."
+    a: "This service page does not publish a project price. National 2026 data on the screened porch cost page puts a new screened porch at about $25–$120 per sq ft (Angi, updated August 3, 2026, and HomeAdvisor, 2026), or roughly $7,000–$20,000 for 12x12 to 20x20 (Angi, Aug 2026). Screening an existing covered porch runs about $5–$20 per sq ft. Northern Virginia labor, permits, HOA review and roof tie-ins often push projects to the upper part of these ranges. Loudoun Decks prices each porch in a written estimate."
   },
   {
     q: "Do I need a permit to build a screened porch in Virginia?",
@@ -194,7 +194,7 @@ const expansionSections = [
 export default function ScreenedPorchBuilderNovaPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-09-13" url={`https://ldndecks.com${PATH}`} name="Screened Porch Contractor & Builder Northern Virginia" description="Screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze planning, permit coordination, and written estimates." speakable />
+      <WebPageSchema dateModified="2026-10-25" url={`https://ldndecks.com${PATH}`} name="Screened Porch Contractor & Builder Northern Virginia" description="Screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze planning, permit coordination, and written estimates." speakable />
       <ArticleSchema
         title="Screened Porch Contractor and Builder in Northern Virginia"
         description="Screened porch contractor guidance for Northern Virginia homeowners comparing roof loads, permits, EZE-Breeze upgrades, open deck combinations, HOA approvals, and written estimates."
@@ -381,10 +381,9 @@ export default function ScreenedPorchBuilderNovaPage() {
           Screened porch cost
         </h2>
         <p style={{ lineHeight: 1.7, marginBottom: '1rem' }}>
-          This page is the builder page. Published planning ranges for the cost question live on{' '}
+          This page is the builder page. National 2026 data for a new screened porch and for screening an existing covered porch lives on{' '}
           <Link href="/screened-porch-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>screened porch cost in Northern Virginia</Link>.
-          That page cites an external range for screening an existing structure that already has a sound roof.
-          A new screened porch with a new roof is not given a published total. Porch services as a group are on the{' '}
+          Porch services as a group are on the{' '}
           <Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>porch hub</Link>.
           A written estimate is the only Loudoun Decks price.
         </p>

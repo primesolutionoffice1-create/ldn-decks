@@ -11,7 +11,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/about/certifications-and-licenses',
   title: 'Certifications & Licenses | Loudoun Decks | Verified Contractor',
-  description: 'Loudoun Decks publishes Virginia Class A license #2705191673 and a NADRA profile link. Insurance, BBB accreditation, and manufacturer program status are not stated here.',
+  description: 'Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Loudoun County building permits are filed under Prime Solution.',
   image: '/social/certifications-licenses-social.png',
 });
 
@@ -32,7 +32,7 @@ export default function CertificationsPage() {
 
   return (
     <>
-      <WebPageSchema dateModified="2026-10-19" url="https://ldndecks.com/about/certifications-and-licenses" name="Certifications &amp; Licenses | Loudoun Decks | Verified Contractor" description="Loudoun Decks publishes Virginia Class A license #2705191673 and a NADRA profile link. Insurance, BBB accreditation, and manufacturer program status are not stated here." speakable />
+      <WebPageSchema dateModified="2026-10-25" url="https://ldndecks.com/about/certifications-and-licenses" name="Certifications &amp; Licenses | Loudoun Decks | Verified Contractor" description="Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Loudoun County building permits are filed under Prime Solution." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Certifications &amp; Licenses</h1>
@@ -42,6 +42,7 @@ export default function CertificationsPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Loudoun County building permits are filed under Prime Solution.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
             {credentialCards.map((item) => (
               <div key={item.title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', border: '1px solid #e5e5e5' }}>
@@ -92,7 +93,7 @@ export default function CertificationsPage() {
             <p style={{ marginBottom: '0.5rem' }}>13704 Winding Oak Cir, Centreville, VA 20121</p>
             <p style={{ marginBottom: '0.5rem' }}>Phone: <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>(571) 655-7207</CallLink></p>
             <p style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:office@ldndecks.com" style={{ color: 'var(--color-primary)' }}>office@ldndecks.com</a></p>
-            <p>Hours: Monday–Saturday 8:00 AM – 6:00 PM</p>
+            <p>Hours: Mon–Fri 7 AM–7 PM, Sat 8 AM–5 PM, Sun closed</p>
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Related</h2>
@@ -111,7 +112,7 @@ export default function CertificationsPage() {
         </div>
       </article>
       <SimpleCTA title="Request a written estimate" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-19" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-25" />
 
       <ContactHome />
     </>
