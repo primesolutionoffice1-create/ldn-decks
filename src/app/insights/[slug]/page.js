@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { buildMetadata } from '@/lib/seo';
-import { getSoroArticles, getSoroArticleBySlug, stripTags } from '@/lib/soro';
+import { getSoroArticles, getSoroArticleBySlug, stripTags, insightDocumentTitle, fitInsightText } from '@/lib/soro';
 import { BUSINESS, ORG_ID, WEBSITE_ID } from '@/lib/business';
 import JsonLd from '@/components/JsonLd';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }) {
 
   const base = buildMetadata({
     path: `${SECTION_PATH}/${article.slug}`,
-    title: `${article.title} | Loudoun Decks`,
+    title: insightDocumentTitle(article.title),
     description: article.excerpt,
     image: article.image || FALLBACK_OG_IMAGE,
   });
@@ -60,7 +60,7 @@ function buildInsightArticleSchema(article) {
     '@type': 'Article',
     '@id': `${articleUrl}#article`,
     isPartOf: { '@id': WEBSITE_ID },
-    headline: article.title,
+    headline: fitInsightText(article.title),
     description: article.excerpt,
     ...(article.image ? { image: [article.image] } : {}),
     ...(article.date ? { datePublished: article.date, dateModified: article.date } : {}),
@@ -147,7 +147,7 @@ export default async function InsightArticlePage({ params }) {
               ))}
             </ul>
           )}
-          <h1 className={styles.title}>{article.title}</h1>
+          <h1 className={styles.title}>{fitInsightText(article.title)}</h1>
           <div className={styles.meta}>
             <span>By {BUSINESS.name}</span>
             {article.dateDisplay && (
@@ -173,7 +173,7 @@ export default async function InsightArticlePage({ params }) {
                     remotePatterns; a plain <img> avoids a config change per
                     upstream host. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={article.image} alt={article.title} decoding="async" />
+                <img src={article.image} alt={fitInsightText(article.title)} decoding="async" />
               </figure>
             )}
 

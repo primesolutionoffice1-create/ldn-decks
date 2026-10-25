@@ -102,6 +102,42 @@ export function truncateText(text, max = EXCERPT_MAX_CHARS) {
   return `${cut.replace(/[\s,;:\-–—]+$/g, '')}…`;
 }
 
+// Document titles must fit in 60 characters as a complete phrase. The brand
+// suffix stays only when the full string fits. Otherwise the article title is
+// used whole, still capped at 60, instead of being cut before a trailing word.
+export const INSIGHT_TITLE_LIMIT = 60;
+const INSIGHT_BRAND_SUFFIX = ' | Loudoun Decks';
+const INSIGHT_DANGLING_WORDS = new Set([
+  'a', 'an', 'the', 'for', 'to', 'of', 'in', 'on', 'and', 'or', 'your',
+  'with', 'vs', 'that', 'through', 'before', 'at', 'from', 'by',
+]);
+
+export function fitInsightText(value, limit = INSIGHT_TITLE_LIMIT) {
+  const clean = String(value || '').replace(/\s+/g, ' ').trim();
+  if (clean.length <= limit) return clean;
+
+  const window = clean.slice(0, limit + 1);
+  const lastSpace = window.lastIndexOf(' ');
+  let shortened = lastSpace > Math.floor(limit * 0.5)
+    ? window.slice(0, lastSpace)
+    : window.slice(0, limit);
+  shortened = shortened.replace(/[\s,;:\-–—|]+$/g, '').trim();
+
+  const words = shortened.split(' ').filter(Boolean);
+  while (words.length > 2 && INSIGHT_DANGLING_WORDS.has(words[words.length - 1].toLowerCase().replace(/[?.!,]+$/g, ''))) {
+    words.pop();
+  }
+  return words.join(' ');
+}
+
+export function insightDocumentTitle(articleTitle) {
+  const title = fitInsightText(articleTitle);
+  if (!title) return `Deck Insights${INSIGHT_BRAND_SUFFIX}`;
+  if (title.endsWith(INSIGHT_BRAND_SUFFIX)) return fitInsightText(title);
+  const withBrand = `${title}${INSIGHT_BRAND_SUFFIX}`;
+  return withBrand.length <= INSIGHT_TITLE_LIMIT ? withBrand : title;
+}
+
 export function slugify(value) {
   return String(value || '')
     .normalize('NFKD')

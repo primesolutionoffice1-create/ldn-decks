@@ -11,6 +11,9 @@ import {
   parseSoroFeed,
   sanitizeArticleHtml,
   slugify,
+  insightDocumentTitle,
+  fitInsightText,
+  INSIGHT_TITLE_LIMIT,
   getSoroArticles,
   getSoroFeedUrl,
   DEFAULT_SORO_RSS_URL,
@@ -108,6 +111,47 @@ check('stray "<" is escaped', sanitizeArticleHtml('<p>a < b</p>') === '<p>a &lt;
 check('data: image dropped', !/data:/.test(sanitizeArticleHtml('<img src="data:image/png;base64,AAAA" alt="x">')));
 check('unterminated <script> drops the rest', sanitizeArticleHtml('<p>ok</p><script>while(1){}') === '<p>ok</p>');
 check('slugify handles diacritics + symbols', slugify('Café Décor: 10% Off!') === 'cafe-decor-10-off', slugify('Café Décor: 10% Off!'));
+
+const insightTitles = [
+  'Can Decking Cover Damaged Framing Safely?',
+  'Choosing a Fairfax Deck Builder for Your Home',
+  'Trex vs TimberTech Decking for Northern Virginia',
+  'Northern Virginia Deck Permitting Guide for Homeowners',
+  'How to Plan Deck Replacement for Your Home',
+  'Covered Decks That Work Through Virginia Weather',
+  'Deck Resurfacing vs Replacement Decisions',
+  'Deck Replacement or Resurfacing? Know the Difference',
+  'PVC vs Composite Decking Durability Compared',
+  'Outdoor Kitchen on Deck Requirements to Plan First',
+  'How to Compare Deck Estimates in Northern Virginia',
+  'Composite Deck Skirting Options for a Finished Look',
+  'Questions to Ask a Deck Contractor Before Hiring',
+  'Second Story Deck Builder Northern Virginia',
+  'Prepare for a Northern Virginia Deck Consultation',
+  'Deck 3D Design Rendering Before Construction',
+  'Townhouse Deck Builder Northern Virginia Guide',
+  'Monthly Financing for Deck Construction',
+];
+for (const sourceTitle of insightTitles) {
+  const documentTitle = insightDocumentTitle(sourceTitle);
+  const headline = fitInsightText(sourceTitle);
+  const withBrand = `${sourceTitle} | Loudoun Decks`;
+  const expected = withBrand.length <= INSIGHT_TITLE_LIMIT ? withBrand : sourceTitle;
+  check(
+    `insight title fits: ${sourceTitle}`,
+    documentTitle === expected
+      && documentTitle.length <= INSIGHT_TITLE_LIMIT
+      && headline === sourceTitle,
+    `${documentTitle} (${documentTitle.length})`,
+  );
+}
+const longInsightTitle = insightDocumentTitle('Questions to Ask a Deck Contractor Before Hiring in Northern Virginia This Season');
+check(
+  'long insight title stays within 60 characters',
+  longInsightTitle.length <= INSIGHT_TITLE_LIMIT
+    && !/\s(for|to|of|in|on|and|or|your|with|the|a)$/i.test(longInsightTitle),
+  `${longInsightTitle} (${longInsightTitle.length})`,
+);
 
 // --- Degradation paths -------------------------------------------------------
 check('garbage XML → []', parseSoroFeed('<html><body>not a feed</body></html>').length === 0);
