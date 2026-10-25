@@ -34,7 +34,7 @@ const reviewProfiles = [
 export default function YelpReviewsPage() {
   return (
     <>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/ldn-decks-reviews-yelp" name="Loudoun Decks Reviews | Yelp Deck Builder Northern Virginia" description="Verify Loudoun Decks public review profiles on Yelp, Google, Houzz, and BBB before hiring a Northern Virginia deck builder." speakable />
+      <WebPageSchema dateModified="2026-10-25" url="https://ldndecks.com/ldn-decks-reviews-yelp" name="Loudoun Decks Reviews | Yelp Deck Builder Northern Virginia" description="Verify Loudoun Decks public review profiles on Yelp, Google, Houzz, and BBB before hiring a Northern Virginia deck builder." speakable />
       {/* Hero */}
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -107,7 +107,7 @@ export default function YelpReviewsPage() {
 
           {/* Why Reviews Matter */}
           <h2 style={S.h2}>Why Reviews Matter When Choosing a Contractor</h2>
-          <p style={S.p}>Online reviews are one of the strongest indicators of contractor quality. When you&apos;re investing the amount in a written estimate in an outdoor living project, you need to verify the company&apos;s reputation, licensing references, public profiles, project photos, and written estimate process.</p>
+          <p style={S.p}>Online reviews are one of the strongest indicators of contractor quality. When you are planning an outdoor living project, verify the company&apos;s reputation, licensing references, public profiles, project photos, and how the written estimate is prepared.</p>
           <p style={S.p}>When reviewing any contractor profile, check for:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Recent review activity</strong> &mdash; current feedback is more useful than old volume alone.</li>
@@ -121,12 +121,12 @@ export default function YelpReviewsPage() {
           <h2 style={S.h2}>Services to Review Before You Hire</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '3rem' }}>
             {[
-              { title: 'Custom Composite Decks', price: 'From a written estimate', href: '/composite-decks' },
-              { title: 'Trex Decks', price: 'From a written estimate', href: '/trex-decks' },
-              { title: 'Deck Replacement', price: 'From a written estimate', href: '/services/deck-replacement' },
-              { title: 'Screened Porches', price: 'From a written estimate', href: '/screened-porch-builder-northern-virginia' },
-              { title: 'Deck Resurfacing', price: 'From a written estimate', href: '/services/deck-resurfacing' },
-              { title: 'Pergolas & Gazebos', price: 'From a written estimate', href: '/services/gazebo-pergola' },
+              { title: 'Custom Composite Decks', price: 'Priced in a written estimate', href: '/composite-decks' },
+              { title: 'Trex Decks', price: 'Priced in a written estimate', href: '/trex-decks' },
+              { title: 'Deck Replacement', price: 'Priced in a written estimate', href: '/services/deck-replacement' },
+              { title: 'Screened Porches', price: 'Priced in a written estimate', href: '/screened-porch-builder-northern-virginia' },
+              { title: 'Deck Resurfacing', price: 'Priced in a written estimate', href: '/services/deck-resurfacing' },
+              { title: 'Pergolas & Gazebos', price: 'Priced in a written estimate', href: '/services/gazebo-pergola' },
             ].map(s => (
               <Link key={s.href} href={s.href} style={{ display: 'block', background: '#fff', borderRadius: 8, padding: '1.25rem', textDecoration: 'none', color: 'inherit', border: '1px solid #e5e5e5' }}>
                 <h3 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0.25rem' }}>{s.title}</h3>
