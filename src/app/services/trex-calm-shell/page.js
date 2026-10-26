@@ -54,7 +54,7 @@ const resurfacingProcess = [
 
 const whyLdnDecks = [
   { title: "Local Team", desc: "Proudly serving Loudoun County and Northern Virginia." },
-  { title: "Trusted", desc: "Fully licensed and insured professionals." },
+  { title: "Trusted", desc: "Virginia Class A licensed professionals." },
   { title: "Certified Builders", desc: "Extensive experience with Trex composite systems." },
   { title: "Craftsmanship", desc: "Clean, detail-oriented installation and high-quality finishes." },
   { title: "Satisfaction", desc: "Driven by public customer reviews and long-lasting durability." }

@@ -68,7 +68,7 @@ const underDeckProcess = [
 
 const whyLdnDecks = [
   { title: "Local Team", desc: "Loudoun County-based team." },
-  { title: "Trusted", desc: "Licensed and insured." },
+  { title: "Trusted", desc: "Virginia Class A licensed." },
   { title: "Experience", desc: "Experience with premium under-deck systems." },
   { title: "Craftsmanship", desc: "Clean, detail-focused installation." },
   { title: "Longevity", desc: "Built for long-term durability." }
