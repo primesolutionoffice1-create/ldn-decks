@@ -16,10 +16,79 @@ import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+
+const PAGE_DESCRIPTION =
+  'Deck resurfacing in Northern Virginia replaces worn boards with TimberTech composite on a sound frame, with 2026 cost benchmarks and a frame-check guide.';
+
+const CONTENT_UPDATED = '2026-10-27';
+
+// Same URLs as the composite resurfacing and old-deck demolition rows in src/lib/externalPlanningRanges.js.
+const LATEST_COST_RESURFACING_URL =
+  'https://latestcost.com/composite-decking-cost-comparison-material-size-installation/';
+const ANGI_DEMOLITION_URL =
+  'https://www.angi.com/articles/how-much-does-composite-decking-cost.htm';
+
+const inlineLinkStyle = { color: 'var(--color-primary)', fontWeight: 600 };
+
+const INLINE_LINKS = [
+  {
+    label: 'LatestCost, updated September 25, 2026',
+    href: LATEST_COST_RESURFACING_URL,
+    external: true,
+  },
+  {
+    label: 'Angi, updated September 29, 2026',
+    href: ANGI_DEMOLITION_URL,
+    external: true,
+  },
+  {
+    label: 'resurfacing versus replacement',
+    href: '/deck-resurfacing-vs-replacement',
+    external: false,
+  },
+];
+
+function renderLinkedText(text) {
+  const matches = INLINE_LINKS
+    .map((link) => ({ link, index: text.indexOf(link.label) }))
+    .filter((match) => match.index >= 0)
+    .sort((a, b) => a.index - b.index);
+
+  const parts = [];
+  let cursor = 0;
+  matches.forEach(({ link, index }) => {
+    if (index < cursor) return;
+    if (index > cursor) parts.push(text.slice(cursor, index));
+    parts.push(
+      link.external ? (
+        <a
+          key={link.href}
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={inlineLinkStyle}
+        >
+          {link.label}
+        </a>
+      ) : (
+        <Link key={link.href} href={link.href} style={inlineLinkStyle}>
+          {link.label}
+        </Link>
+      )
+    );
+    cursor = index + link.label.length;
+  });
+  if (cursor < text.length) parts.push(text.slice(cursor));
+  return parts;
+}
+
+const DIRECT_ANSWER =
+  'Deck resurfacing replaces the decking boards and railings on a structurally sound frame, and it makes sense only after the posts, beams, joists, ledger, and footings pass inspection. External 2026 benchmarks put resurfacing at about $15–$45 per square foot (LatestCost, updated September 25, 2026); these are external benchmarks, not Loudoun Decks prices. See the resurfacing versus replacement comparison before choosing a scope.';
+
 export const metadata = buildMetadata({
   path: "/services/deck-resurfacing",
   title: 'Premium Deck Resurfacing NoVA | TimberTech Vintage Experts',
-  description: 'Premium deck resurfacing in Northern Virginia from a written estimate. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options.',
+  description: PAGE_DESCRIPTION,
   image: "/social/deck-resurfacing-service-social.png",
 });
 
@@ -40,9 +109,9 @@ const expansionSections = [
     listItems: [
       { label: "Unmatched Aesthetics", text: "Wire-brushed texture that perfectly mimics the intricate grain patterns of premium hardwood." },
       { label: "Advanced PVC Core", text: "Zero organic material means zero food source for mold, mildew, or termites." },
-      { label: "Barefoot Friendly", text: "Stays up to 30% cooler than competitive composite products under the hot Virginia sun." },
+      { label: "Barefoot Friendly", text: "Lighter TimberTech colors are designed to stay cooler than darker boards in direct sun — check the manufacturer's heat data for the chosen color." },
       { label: "Fade Resistance", text: "Manufacturer fade and stain warranty terms are reviewed against the selected TimberTech or AZEK product line." },
-      { label: "Eco-Conscious", text: "Manufactured in the USA from over 50% recycled polymer material." }
+      { label: "Eco-Conscious", text: "Composite boards made with recycled content — see TimberTech's product documentation for exact percentages." }
     ]
   },
   {
@@ -81,8 +150,8 @@ const resurfacingProcess = [
 ];
 
 const resurfacingFAQs = [
-  { question: "How do I know if my deck is a candidate for resurfacing?", answer: "A deck is typically a good candidate if the foundational posts, beams, and joists are sturdy, free of deep rot, and built to modern safety codes. During our free evaluation, we structurally probe the wood. If your frame is over 25 years old or severely compromised by water damage, a full replacement will be necessary." },
-  { question: "How much does deck resurfacing cost compared to building a new deck?", answer: "On average, resurfacing your deck with premium composite material costs 25-40% less than building a brand new deck of the same size, primarily because you are saving significantly on foundational lumber and structural labor." },
+  { question: "How do I know if my deck is a candidate for resurfacing?", answer: "A deck is a candidate for resurfacing when the frame is sound, free of deep rot, properly attached, and meeting current code at inspection. During the evaluation, we structurally probe the posts, beams, joists, ledger, and footings. If the frame is not sound, is not properly attached, or does not meet current code, replacement is recommended." },
+  { question: "How much does deck resurfacing cost compared to building a new deck?", answer: "Resurfacing reuses a sound frame, so you pay for new decking, fasteners and trim rather than a new structure. External 2026 benchmarks put deck resurfacing at about $15–$45 per square foot (LatestCost, updated September 25, 2026), while removing an old deck is a separate line item of about $5–$15 per square foot (Angi, updated September 29, 2026). These are external benchmarks, not Loudoun Decks prices; the written estimate after the frame inspection is the only project price." },
   { question: "Do I need a building permit to resurface my deck in Virginia?", answer: "If you are strictly replacing the surface decking boards (the 'skin') on a one-for-one basis, many jurisdictions consider it a repair that does not require a permit. However, if the project involves altering the structural framing, changing the stairs, or installing a new railing system, a permit is almost always required. We navigate this entirely for you." },
   { question: "Can I change the layout or size of my deck during resurfacing?", answer: "Usually, yes. While the main body of the deck remains the same, we can often frame out extensions, widen stairs, or add specialized bumps-outs for a grill station while utilizing the main existing structure." }
 ];
@@ -116,10 +185,10 @@ export default function DeckResurfacingPage() {
     <main>
       {/* Dynamic SEO Schemas */}
       <JsonLd data={faqSchemaData} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/deck-resurfacing" name="Premium Deck Resurfacing NoVA | TimberTech Vintage Experts" description="Premium deck resurfacing in Northern Virginia from a written estimate. Upgrade a sound frame to TimberTech Vintage with permits, HOA, railing, and lighting options." speakable />
+      <WebPageSchema dateModified={CONTENT_UPDATED} url="https://ldndecks.com/services/deck-resurfacing" name="Premium Deck Resurfacing NoVA | TimberTech Vintage Experts" description={PAGE_DESCRIPTION} speakable />
       <ServiceSchema
         name="Custom Deck Resurfacing"
-        description="Professional deck resurfacing services utilizing TimberTech Vintage Collection composite boards, structural reinforcement, and aluminum railings in Northern Virginia."
+        description={PAGE_DESCRIPTION}
         url="https://ldndecks.com/services/deck-resurfacing"
         category="Deck Construction"
         lowPrice="15000"
@@ -129,7 +198,7 @@ export default function DeckResurfacingPage() {
 
       <div id="deck-resurfacing-estimate" style={{ scrollMarginTop: '24px' }}>
         <ServicesHeader
-          subtext="Projects from a written estimate"
+          subtext="Priced in a written estimate after a frame inspection"
           title="Deck Resurfacing in Northern Virginia"
           description="We inspect the existing frame first, then plan new composite or PVC decking, railings, stairs, fascia, lighting, permits, and HOA scope only when the structure is sound enough to keep."
           estimateHref="#deck-resurfacing-estimate"
@@ -140,8 +209,16 @@ export default function DeckResurfacingPage() {
           pageContext={PAGE_CONTEXT}
         />
       </div>
+      <section id="deck-resurfacing-direct-answer" style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
+        <h2 style={{ fontSize: '1.35rem', fontWeight: 800, margin: '0 0 0.75rem', color: '#111' }}>
+          What is deck resurfacing and when does it make sense?
+        </h2>
+        <p data-speakable="deck-resurfacing-direct-answer" style={{ fontSize: '17px', lineHeight: 1.7, color: '#333', margin: 0 }}>
+          {renderLinkedText(DIRECT_ANSWER)}
+        </p>
+      </section>
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated={CONTENT_UPDATED} />
       </section>
 
       <PlanningUpdate
@@ -162,7 +239,7 @@ export default function DeckResurfacingPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Full resurfacing projects from a written estimate</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Every resurfacing project is priced in a written estimate</strong>
             <br />
             On this page we focus on <strong style={{ color: '#111' }}>full surface conversions</strong> with composite boards, upgraded railings, fascia, stairs, and safety review. Need a few boards swapped, railings reinforced, or rot patched? See our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>
@@ -174,7 +251,7 @@ export default function DeckResurfacingPage() {
         title="Give Your Existing Deck a Second Life"
         description="Loudoun Decks specializes in premium deck resurfacing across Northern Virginia. Deck resurfacing is a highly efficient remodeling process that allows you to salvage your existing pressure-treated structural frame while replacing the aging surface boards, railings, stairs, and fascia with modern, zero-maintenance composite materials."
         listItems={[
-          "Save up to 40% vs a full tear-down and structural replacement",
+          "Keeps a sound existing frame, so demolition and new structure are not part of the project",
           "Significantly faster construction timeline with less yard disruption",
           "Instant architectural upgrade with premium aluminum railings",
           "Extend the functional lifespan of your outdoor space by decades"
@@ -219,7 +296,7 @@ export default function DeckResurfacingPage() {
           {resurfacingFAQs.map((faq, index) => (
             <div key={index} style={{ marginBottom: '20px', background: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
               <h3 style={{ fontSize: '20px', marginBottom: '10px', color: '#B58E3B' }}>{faq.question}</h3>
-              <p style={{ lineHeight: '1.6', color: '#444' }}>{faq.answer}</p>
+              <p style={{ lineHeight: '1.6', color: '#444' }}>{renderLinkedText(faq.answer)}</p>
             </div>
           ))}
         </div>
