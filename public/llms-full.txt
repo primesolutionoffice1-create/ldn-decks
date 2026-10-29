@@ -498,9 +498,9 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Best Time to Finance and Build a Deck
 - URL: https://ldndecks.com/best-time-to-finance-build-deck-northern-virginia
-- Content: Season-by-season breakdown of builder pricing (late Feb–Mar: 10–15% off peak), permit queue length, HOA committee availability, and lender promotional rate calendar. Step-by-step timeline from financing decision to finished deck (4–8 weeks).
+- Content: Season-by-season planning guide: late winter (February–March) is usually the best time to line up financing and book a deck, early fall is the second good window, and summer is the busiest season. Covers permit and HOA review timing by county, lender pre-qualification, and material availability. Loudoun Decks does not publish seasonal discounts; the written estimate states price and schedule, and the lender sets rates.
 - Intent: Informational planning — when to start the financing + build process
-- Updated: 2026-05-27
+- Updated: 2026-10-28
 
 ### Deck Lighting, Railings & Stairs Add-On Cost
 - URL: https://ldndecks.com/deck-lighting-railings-stairs-addon-cost
