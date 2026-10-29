@@ -182,6 +182,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <RedditPixelTracker />
                     <ConsentBanner />
         </ContactProvider>
+        <Script
+          id="xapp-widget"
+          src="https://widget.xapp.ai/xapp-chat-widget.js?key=ab9437fd-cfae-4e99-8d67-5ba6dd4a0f5d"
+          strategy="afterInteractive"
+        />
         {/* CallRail dynamic number insertion. CallRail requires the swap
             tag on every page, immediately before </body>. next/script
             afterInteractive runs after hydration, then this loader appends
