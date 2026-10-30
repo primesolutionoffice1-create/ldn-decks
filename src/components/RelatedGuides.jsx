@@ -23,7 +23,7 @@ const CORNERSTONE_GUIDES = [
   { path: '/trex-vs-timbertech-vs-azek', title: 'Trex vs TimberTech vs AZEK', desc: 'Side-by-side brand comparison for Virginia climate.' },
   { path: '/timbertech-decks', title: 'TimberTech & AZEK Decks', desc: 'Premium PVC and composite deck options for Northern Virginia.' },
   { path: '/composite-deck-vs-wood-deck-virginia', title: 'Composite vs Wood Deck', desc: '15-year cost comparison composite wins long-term.' },
-  { path: '/does-a-deck-add-value-to-your-home', title: 'Does a Deck Add Home Value?', desc: 'ROI data 60-80% recoup at resale in Northern Virginia.' },
+  { path: '/does-a-deck-add-value-to-your-home', title: 'Does a Deck Add Home Value?', desc: 'What affects resale value, and why no fixed ROI percentage is promised.' },
   { path: '/how-to-choose-a-deck-builder-northern-virginia', title: 'How to Choose a Deck Builder', desc: '10 questions to ask + 5 red flags to avoid.' },
   { path: '/screened-porch-cost-northern-virginia', title: 'Screened Porch Cost Guide', desc: 'What a porch estimate should include, with permit and material notes.' },
   { path: '/deck-permit-loudoun-county-virginia', title: 'Deck Permits in Loudoun County', desc: 'Permit requirements, review steps and inspection context for Loudoun homeowners.' },
