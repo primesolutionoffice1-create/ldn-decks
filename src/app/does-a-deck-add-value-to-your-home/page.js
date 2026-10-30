@@ -11,8 +11,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/does-a-deck-add-value-to-your-home',
-  title: 'Does a Deck Add Value to Your Home? (2026 ROI Data)',
-  description: 'Resale recovery is not a fixed percentage, and this page does not publish one. A written estimate is the project price.',
+  title: 'Does a Deck Add Value to Your Home?',
+  description: 'What affects deck resale value in Northern Virginia. A written estimate is the project price.',
   image: '/social/does-a-deck-add-value-social.png',
 });
 
@@ -31,12 +31,12 @@ export default function DeckValuePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/does-a-deck-add-value-to-your-home" name="Does a Deck Add Value to Your Home? (2026 ROI Data)" description="Resale recovery is not a fixed percentage, and this page does not publish one. A written estimate is the project price." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/does-a-deck-add-value-to-your-home" name="Does a Deck Add Value to Your Home?" description="What affects deck resale value in Northern Virginia. A written estimate is the project price." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Does a Deck Add Value to Your Home?</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>2026 ROI data for Northern Virginia homeowners</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>What affects deck resale value in Northern Virginia. A written estimate is the project price.</p>
         </div>
       </section>
 
