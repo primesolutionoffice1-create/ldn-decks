@@ -1,0 +1,79 @@
+.frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.short {
+  max-width: 22.5rem;
+  margin-inline: auto;
+  aspect-ratio: 9 / 16;
+}
+
+.playButton {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: #111;
+  cursor: pointer;
+}
+
+.playButton:focus-visible {
+  outline: 3px solid #d14817;
+  outline-offset: 3px;
+}
+
+.thumb {
+  object-fit: cover;
+}
+
+.playIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+.playIcon circle {
+  fill: rgba(0, 0, 0, 0.72);
+}
+
+.playIcon polygon {
+  fill: #fff;
+}
+
+.player {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.fallbackLink {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  color: #fff;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

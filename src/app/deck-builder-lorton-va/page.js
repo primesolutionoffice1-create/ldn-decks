@@ -17,6 +17,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-lorton-va',
@@ -112,6 +113,7 @@ export default function DeckBuilderLortonPage() {
         title="Custom Deck Builder in Lorton, VA"
         description="Loudoun Decks builds composite decks and outdoor living spaces across Laurel Hill, Crosspointe, Newington and the South County area. Fairfax County permits handled. publicly documented reputation."
       />
+      <YouTubeEmbed pagePath="/deck-builder-lorton-va" />
       <ServiceMain
         subtitle="Upgrading Lorton's Outdoor Living"
         title="Deck Builder Lorton VA  -  Premium Quality"

@@ -14,6 +14,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata = buildMetadata({
   path: "/services/new-decks",
@@ -171,6 +172,8 @@ export default function NewDecksPage() {
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
         <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-10-18" />
       </section>
+
+      <YouTubeEmbed pagePath="/services/new-decks" />
 
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>

@@ -9,6 +9,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import VerifiedProjectProofSection from '@/components/VerifiedProjectProofSection';
 import JsonLd from '@/components/JsonLd';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata = buildMetadata({
   path: '/showcase',
@@ -52,6 +53,7 @@ export default function ShowcasePage() {
       <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/showcase" name="Custom Deck Project Gallery | Trex Deck Designer &amp; Showcase" description="Explore our portfolio of custom deck, porch, and patio projects across Northern Virginia. See why we are the leading Trex deck designer in the region." speakable />
       <JsonLd data={faqSchema} />
       <ShowcaseHeader />
+      <YouTubeEmbed pagePath="/showcase" />
       <div style={{ maxWidth: 1180, margin: '0 auto', padding: '2rem 1.5rem 0' }}>
         <VerifiedProjectProofSection compact />
       </div>

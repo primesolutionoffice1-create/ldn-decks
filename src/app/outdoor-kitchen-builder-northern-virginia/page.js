@@ -10,6 +10,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata = buildMetadata({
   path: '/outdoor-kitchen-builder-northern-virginia',
@@ -56,6 +57,8 @@ export default function OutdoorKitchenPage() {
           </div>
         </div>
       </section>
+
+      <YouTubeEmbed pagePath="/outdoor-kitchen-builder-northern-virginia" />
 
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

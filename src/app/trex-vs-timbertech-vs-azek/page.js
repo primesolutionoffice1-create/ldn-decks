@@ -10,6 +10,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import ArticleSchema from '@/components/ArticleSchema';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 const pageTitle = 'Trex vs TimberTech vs AZEK: Northern Virginia Buyer Guide';
 const pageDescription = 'Compare Trex, TimberTech Composite and Advanced PVC (AZEK) by product, site conditions, warranty documents and written installed scope.';
@@ -149,6 +150,8 @@ export default function TrexVsTimberTechPage() {
           <CallLink style={S.link}>Discuss material options</CallLink>
         </div>
       </section>
+
+      <YouTubeEmbed pagePath="/trex-vs-timbertech-vs-azek" />
 
       <article style={{ padding: '2.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
