@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { showcaseProjects } from '@/lib/showcaseData';
+import { showcaseProjects, showcaseImageAlt } from '@/lib/showcaseData';
 import styles from './ShowcaseGrid.module.css';
 
 export default function ShowcaseGrid() {
@@ -17,7 +17,7 @@ export default function ShowcaseGrid() {
                    <div className={styles.imgWrapper}>
                       <Image 
                          src={project.image} 
-                         alt={project.title} 
+                         alt={showcaseImageAlt(project)} 
                          fill 
                          className={styles.cardImg} 
                          sizes="(max-width: 768px) 100vw, 33vw"
