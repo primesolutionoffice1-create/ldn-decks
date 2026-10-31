@@ -53,7 +53,7 @@ const trexFAQs = [
   },
   {
     q: "What is the lifespan of a Trex Transcend deck?",
-    a: "Trex Transcend decking carries current 50-year limited residential fade and stain coverage from Trex. Real-world lifespan still depends on frame condition, ventilation, fasteners, cleaning, sun exposure, and correct installation details."
+    a: "Trex's Decking, Fascia and Cladding Limited Warranty, read October 18, 2026, lists a 50-year residential product term for Transcend and Signature, and a 25-year residential product term for Enhance. Fade and stain coverage is conditional. Those are Trex product terms, not a Loudoun Decks labor warranty, and Loudoun Decks does not state a TrexPro level. Real-world lifespan still depends on frame condition, ventilation, fasteners, cleaning, sun exposure, and correct installation details."
   },
   {
     q: "Do Trex decks fade over time in the sun?",
@@ -77,7 +77,7 @@ const expansionSections = [
   {
     title: "The Gold Standard of Outdoor Living: Trex Decks in Northern Virginia",
     paragraphs: [
-      "When homeowners in Northern Virginia think of low-maintenance outdoor living, one name stands above the rest: Trex. As a Trex deck builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks has seen first-hand how this material has redefined the backyard experience. Our clients in Ashburn and Leesburg are increasingly opting for Trex because it provides the perfect balance of luxury aesthetics and rugged durability.",
+      "When homeowners in Northern Virginia think of low-maintenance outdoor living, one name stands above the rest: Trex. Loudoun Decks installs Trex in Loudoun County, Fairfax County, and Prince William County. The contractor answer is on the composite and Trex deck builder page. This page compares product lines. Clients in Ashburn and Leesburg often choose Trex for the look of the board and the maintenance difference from wood.",
       "We specialize in the full Trex ecosystem, from Transcend® decking boards to the sophisticated Trex Signature® aluminum railing systems. A Trex deck is not just a platform; it is a high-performance floor designed to handle the active lifestyles of Northern Virginia families, from summer graduation parties to quiet mornings with coffee in the crisp NoVA air.",
       "Choosing a custom deck builder who is familiar with the Trex product line is critical for warranty-compliant installation. Trex has specific requirements for joist spacing, gapping, ventilation, and approved fasteners. Our team builds to documented manufacturer installation standards so the finished deck is as durable as it is beautiful."
     ]
@@ -87,7 +87,7 @@ const expansionSections = [
     paragraphs: [
       "Trex offers a variety of product 'collections' to suit different architectural styles and budgets across areas like Fairfax Station and Arlington. The 'Transcend' line is our most requested collection for premium projects. It features the thickest protective 'cap,' making it virtually immune to scratches, stains, and mold. The Transcend Tropicals collection offers stunning, multi-tonal boards that capture the look of exotic hardwoods like Ipe or Mahogany without the ethical or maintenance concerns of real wood.",
       "For homeowners in Great Falls and Mclean, the ability to mix and match colors between the decking and the railing is a major design advantage. We often design decks with a 'picture frame' border in a darker Trex color, which creates a clean, sophisticated look that highlights the custom craftsmanship of your build. The 'Select' line remains a popular mid-tier option for families in Sterling and Herndon who want the Trex name and quality at a slightly more accessible price point.",
-      "As your dedicated Trex contractor, we guide you through these selections, helping you visualize how different colors and textures will integrate with your home’s existing siding and trim. For a side-by-side material breakdown, see our [Trex vs TimberTech vs AZEK comparison](/trex-vs-timbertech-vs-azek)."
+      "This product-line page walks through those selections and how colors and textures sit next to a home's siding and trim. For who installs the deck, see the [composite and Trex deck builder page](/composite-trex-deck-builder-northern-virginia). For a side-by-side material breakdown, see our [Trex vs TimberTech vs AZEK comparison](/trex-vs-timbertech-vs-azek)."
     ],
     listItems: [
       { label: "Trex Transcend®", text: "The flagship line featuring high-definition wood grain and the most robust scratch-resistance." },
@@ -194,25 +194,25 @@ export default function TrexDecksPage() {
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>Trex Enhance</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>25-yr residential + 25-yr fade &amp; stain</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>25-year residential product term. Fade and stain are conditional.</td>
                 </tr>
                 <tr style={{ background: '#fafafa' }}>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>Trex Transcend</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>25-yr residential + 25-yr fade &amp; stain</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>50-year residential product term. Fade and stain are conditional.</td>
                 </tr>
                 <tr>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', fontWeight: 700 }}>Trex Signature</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>a written estimate</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>50-yr residential + 50-yr fade &amp; stain</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>50-year residential product term. Fade and stain are conditional.</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p style={{ fontSize: '0.85rem', color: '#666', fontStyle: 'italic', marginBottom: '1rem' }}>
-            Pricing includes installation, hidden fasteners, and Trex railing. Composite or aluminum railings, picture-frame border, lighting, and stair flights are priced separately.
+            Residential product terms are from Trex&apos;s Decking, Fascia and Cladding Limited Warranty, read October 18, 2026 for the deck warranty guide. Fade and stain coverage is conditional. These are not a Loudoun Decks labor warranty, and Loudoun Decks does not state a TrexPro level. See the <Link href="/deck-warranty-guide-northern-virginia">deck warranty guide</Link>. Railings, picture-frame borders, lighting, and stair flights are priced in the written estimate.
           </p>
           <p style={{ marginBottom: 0 }}>
             <Link href="/trex-deck-cost-monthly-payment" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
