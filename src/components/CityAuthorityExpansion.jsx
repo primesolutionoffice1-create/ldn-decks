@@ -259,14 +259,12 @@ const CITY_DATA = {
     lot: 'established Loudoun communities with a mix of townhomes and single-family homes, many with 15-20 year old wood decks due for replacement',
     materials: 'Trex Transcend, TimberTech and composite overlay systems for solid existing frames, plus full rebuilds when structure requires it',
     projectTypes: ['deck replacement', 'composite resurfacing', 'screened porch conversions', 'townhome deck builds', 'HOA-compliant upgrades', 'stair rebuilds'],
-    localNotes: ['Loudoun County permits in 10-15 business days (fastest in NoVA)', 'Sugarland Run, Countryside, Cascades and Potomac Falls each have their own HOA requirements', 'many Sterling decks built 2005-2010 are now entering replacement age'],
-    premium: 'Sterling is a Loudoun County service area. Based in Centreville (13704 Winding Oak Cir). Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment. Sterling projects often preserve sound framing when it is sound, upgrade to composite surfaces and rails, and solve circulation and stair problems on older decks.',
-    cityFaqs: [
-      { q: "How quickly can you start a deck project in Sterling?", a: "Based in Centreville (13704 Winding Oak Cir). Estimate visits are scheduled by appointment. Many projects start within 4 to 8 weeks of contract — 2-4 weeks for Loudoun County permit, 2-3 weeks for HOA approval (parallel with permit), and 1-2 weeks for material delivery. Sterling decks typically take 1-2 weeks on-site." },
-      { q: "Which Sterling HOAs do you submit to?", a: "We regularly submit to Sugarland Run Homes Association, Countryside Proprietary, Cascades Community Association, Potomac Falls HOA, Sterling Park Civic Association, and several smaller townhome associations. Each has its own architectural review board with specific railing, color, and material guidelines — we map these before design starts." },
-      { q: "What composite materials work best for established Sterling homes?", a: "For 1990s-2000s Sterling homes with brick or vinyl siding, Trex Transcend in Spiced Rum or Tiki Torch reads warm and traditional. For newer 2010+ builds with cleaner exteriors, TimberTech AZEK Vintage in Mahogany or Coastline holds up better visually. Townhomes often look best with picture-frame board patterns to add visual depth on smaller decks." },
-      { q: "Do you build townhouse decks in Sterling?", a: "Yes — Sterling has a large townhome market and we build there regularly. Typical townhome deck: 180-280 sqft, composite, with HOA-compliant aluminum or composite railings. Cost range: the amount in a written estimate. The biggest challenges are ledger attachment on stucco or EIFS exteriors and second-story stair sequences — both we handle routinely." },
+    localNotes: [
+      'Sterling deck permits are Loudoun County permits filed through LandMARC. The county states that all decks require a building permit and a zoning permit. Review time is not a fixed number of days.',
+      'HOA review is common in Cascades and Lowes Island. Confirm the association for Sterling Park, Countryside, Sugarland Run, and Potomac Falls before materials are chosen.',
+      'Published housing context: split-levels, colonials, townhomes, and established suburban homes, with aging wood decks as a common starting point.',
     ],
+    premium: 'Sterling is a Loudoun County service area. Based in Centreville (13704 Winding Oak Cir). Material samples are brought to your home during the free on-site estimate; estimate visits are scheduled by appointment. A resurfacing recommendation follows a frame inspection.',
   },
   greatFalls: {
     name: 'Great Falls',

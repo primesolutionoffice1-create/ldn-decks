@@ -370,6 +370,7 @@ const nextConfig = {
       { source: '/deck-builder-ashburn', destination: '/deck-builder-ashburn-va', permanent: true },
       { source: '/deck-builder-herndon', destination: '/deck-builder-herndon-va', permanent: true },
       { source: '/deck-builder-leesburg', destination: '/deck-builder-leesburg-va', permanent: true },
+      { source: '/deck-builder-sterling', destination: '/deck-builder-sterling-va', permanent: true },
       { source: '/deck-builder-reston', destination: '/deck-builder-reston-va', permanent: true },
       { source: '/deck-builder-centreville', destination: '/deck-builder-centreville-va', permanent: true },
       { source: '/deck-builder-manassas', destination: '/deck-builder-manassas-va', permanent: true },
