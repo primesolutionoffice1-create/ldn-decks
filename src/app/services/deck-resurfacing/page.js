@@ -16,11 +16,13 @@ import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { QUOTE_SOURCE, RESURFACE_QUOTED, REVIEWED_ISO, REVIEWED_LABEL } from '@/lib/quotedPrices';
 
 const PAGE_DESCRIPTION =
-  'Deck resurfacing in Northern Virginia replaces worn boards with TimberTech composite on a sound frame, with 2026 cost benchmarks and a frame-check guide.';
+  'Deck resurfacing in Northern Virginia. Loudoun Decks 2026 quoted prices: Trex deck resurfacing $9,020–$12,678. External benchmarks are labeled below.';
 
-const CONTENT_UPDATED = '2026-10-27';
+const CONTENT_UPDATED = REVIEWED_ISO;
 
 // Same URLs as the composite resurfacing and old-deck demolition rows in src/lib/externalPlanningRanges.js.
 const LATEST_COST_RESURFACING_URL =
@@ -83,7 +85,7 @@ function renderLinkedText(text) {
 }
 
 const DIRECT_ANSWER =
-  'Deck resurfacing replaces the decking boards and railings on a structurally sound frame, and it makes sense only after the posts, beams, joists, ledger, and footings pass inspection. External 2026 benchmarks put resurfacing at about $15–$45 per square foot (LatestCost, updated September 25, 2026); these are external benchmarks, not Loudoun Decks prices. See the resurfacing versus replacement comparison before choosing a scope.';
+  `Deck resurfacing replaces the decking boards and railings on a structurally sound frame, and it makes sense only after the posts, beams, joists, ledger, and footings pass inspection. ${QUOTE_SOURCE} ${RESURFACE_QUOTED} External benchmarks put resurfacing at about $15–$45 per square foot (LatestCost, updated September 25, 2026); these are external benchmarks, not Loudoun Decks prices. See the resurfacing versus replacement comparison before choosing a scope.`;
 
 export const metadata = buildMetadata({
   path: "/services/deck-resurfacing",
@@ -151,7 +153,7 @@ const resurfacingProcess = [
 
 const resurfacingFAQs = [
   { question: "How do I know if my deck is a candidate for resurfacing?", answer: "A deck is a candidate for resurfacing when the frame is sound, free of deep rot, properly attached, and meeting current code at inspection. During the evaluation, we structurally probe the posts, beams, joists, ledger, and footings. If the frame is not sound, is not properly attached, or does not meet current code, replacement is recommended." },
-  { question: "How much does deck resurfacing cost compared to building a new deck?", answer: "Resurfacing reuses a sound frame, so you pay for new decking, fasteners and trim rather than a new structure. External 2026 benchmarks put deck resurfacing at about $15–$45 per square foot (LatestCost, updated September 25, 2026), while removing an old deck is a separate line item of about $5–$15 per square foot (Angi, updated September 29, 2026). These are external benchmarks, not Loudoun Decks prices; the written estimate after the frame inspection is the only project price." },
+  { question: "How much does deck resurfacing cost compared to building a new deck?", answer: `Resurfacing reuses a sound frame, so you pay for new decking, fasteners and trim rather than a new structure. ${QUOTE_SOURCE} ${RESURFACE_QUOTED} External benchmarks put deck resurfacing at about $15–$45 per square foot (LatestCost, updated September 25, 2026), while removing an old deck is a separate line item of about $5–$15 per square foot (Angi, updated September 29, 2026). These external benchmarks are not Loudoun Decks prices; the written estimate after the frame inspection is the only project price.` },
   { question: "Do I need a building permit to resurface my deck in Virginia?", answer: "If you are strictly replacing the surface decking boards (the 'skin') on a one-for-one basis, many jurisdictions consider it a repair that does not require a permit. However, if the project involves altering the structural framing, changing the stairs, or installing a new railing system, a permit is almost always required. We navigate this entirely for you." },
   { question: "Can I change the layout or size of my deck during resurfacing?", answer: "Usually, yes. While the main body of the deck remains the same, we can often frame out extensions, widen stairs, or add specialized bumps-outs for a grill station while utilizing the main existing structure." }
 ];
@@ -218,7 +220,8 @@ export default function DeckResurfacingPage() {
         </p>
       </section>
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated={CONTENT_UPDATED} />
+        <QuotedPricesBlock paragraphs={[RESURFACE_QUOTED]} />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated={REVIEWED_LABEL} />
       </section>
 
       <PlanningUpdate
@@ -239,7 +242,7 @@ export default function DeckResurfacingPage() {
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>Every resurfacing project is priced in a written estimate</strong>
+            <strong style={{ color: '#111', fontSize: '18px' }}>Loudoun Decks 2026 quoted prices: Trex deck resurfacing $9,020–$12,678. Every project is still priced in a written estimate after a frame inspection.</strong>
             <br />
             On this page we focus on <strong style={{ color: '#111' }}>full surface conversions</strong> with composite boards, upgraded railings, fascia, stairs, and safety review. Need a few boards swapped, railings reinforced, or rot patched? See our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a>.
           </p>

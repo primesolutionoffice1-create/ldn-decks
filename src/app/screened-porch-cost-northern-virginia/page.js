@@ -10,8 +10,11 @@ import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import { PLANNING_DISCLAIMER, SCREEN_EXISTING_ANSWER, SCREENED_PORCH_ANGI_URL, SCREENED_PORCH_HOMEADVISOR_URL } from '@/lib/externalPlanningRanges';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { PORCH_QUOTED, QUOTE_SOURCE, REVIEWED_ISO, REVIEWED_LABEL } from '@/lib/quotedPrices';
 
-const description = 'National 2026 data: a new screened porch is about $25–$120 per sq ft (Angi, updated Aug 3, 2026, and HomeAdvisor 2026). Loudoun Decks prices each porch in a written estimate.';
+const description = 'Loudoun Decks 2026 quoted prices: a roofed or screened porch with an attached open deck about $77,000–$112,500. External benchmarks are labeled below. A written estimate is the only project price.';
+const porchAnswer = `${QUOTE_SOURCE} ${PORCH_QUOTED} External benchmarks: ${SCREEN_EXISTING_ANSWER}`;
 
 export const metadata = buildMetadata({
   path: '/screened-porch-cost-northern-virginia',
@@ -21,10 +24,10 @@ export const metadata = buildMetadata({
 });
 
 const faqs = [
-  { q: 'How much does a screened porch cost in Northern Virginia?', a: SCREEN_EXISTING_ANSWER },
+  { q: 'How much does a screened porch cost in Northern Virginia?', a: porchAnswer },
   { q: 'Is a screened porch worth it?', a: 'Resale recovery is not a fixed percentage. The 2025 Cost vs Value report does not include a screened porch category, so this page does not publish an ROI figure. Loudoun Decks prices each porch in a written estimate.' },
-  { q: 'Can you add screens to an existing deck?', a: 'Often yes, if the framing supports the added weight. National 2026 data puts screening an existing covered porch at about $5–$20 per sq ft (Angi, updated August 3, 2026; HomeAdvisor, 2026). That range assumes a covered porch already exists. We inspect before quoting. Loudoun Decks prices each porch in a written estimate.' },
-  { q: 'What are EZE-Breeze windows?', a: 'Vinyl panels that convert a screened porch into a 3-season room. Slide up for airflow, close for wind and rain protection. This page does not publish an EZE-Breeze price.' },
+  { q: 'Can you add screens to an existing deck?', a: 'Often yes, if the framing supports the added weight. A roofed or screened porch with an attached open deck was about $77,000–$112,500 in Loudoun Decks\' recent written quotes (September–October 2026). Those are quoted prices, not guarantees. External benchmarks: national 2026 data puts screening an existing covered porch at about $5–$20 per sq ft (Angi, updated August 3, 2026; HomeAdvisor, 2026). That external range assumes a covered porch already exists and is not a Loudoun Decks price. We inspect before quoting. The written estimate after a site visit is the only project price.' },
+  { q: 'What are EZE-Breeze windows?', a: 'Vinyl panels that convert a screened porch into a 3-season room. Slide up for airflow, close for wind and rain protection. One recent quote for a 22×12 flat roof plus a 236 sq ft screened porch was $83,338, and the same scope with EZE-Breeze was $96,338. A 3-season version of that project was $110,000–$112,500. Those are quoted prices from September–October 2026, not a guarantee. The written estimate after a site visit is the only project price.' },
 ];
 
 const faqSchema = {
@@ -43,12 +46,12 @@ export default function ScreenedPorchCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-25" url="https://ldndecks.com/screened-porch-cost-northern-virginia" name="2026 Screened Porch Cost NoVA | Pricing Scenarios" description={description} speakable />
+      <WebPageSchema dateModified={REVIEWED_ISO} url="https://ldndecks.com/screened-porch-cost-northern-virginia" name="2026 Screened Porch Cost NoVA | Pricing Scenarios" description={description} speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How Much Does a Screened Porch Cost in Northern Virginia?</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>National 2026 data for a new screened porch and for screening an existing covered porch. Not a Loudoun Decks price.</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Loudoun Decks 2026 quoted prices for a roofed or screened porch with an attached open deck. External benchmarks are labeled below.</p>
         </div>
       </section>
       <TrustBanner />
@@ -56,12 +59,12 @@ export default function ScreenedPorchCostPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} data-speakable="true">
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p data-speakable>{SCREEN_EXISTING_ANSWER}</p>
+          <p data-speakable>{porchAnswer}</p>
         </div>
       </section>
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="October 25, 2026" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated={REVIEWED_LABEL} />
       </section>
 
       <article style={{ padding: '4rem 0' }}>
@@ -79,12 +82,13 @@ export default function ScreenedPorchCostPage() {
             />
           </div>
 
-          <h2 style={S.h2}>National 2026 data</h2>
+          <QuotedPricesBlock paragraphs={[PORCH_QUOTED]} />
+          <h2 style={S.h2}>External benchmarks</h2>
           <p style={S.p}>{PLANNING_DISCLAIMER}</p>
           <p style={S.p}>{SCREEN_EXISTING_ANSWER}</p>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-              <caption style={{ textAlign: 'left', padding: '0 0 0.75rem', fontWeight: 600 }}>National 2026 data, not a Loudoun Decks price</caption>
+              <caption style={{ textAlign: 'left', padding: '0 0 0.75rem', fontWeight: 600 }}>External benchmarks, not a Loudoun Decks price</caption>
               <thead>
                 <tr style={{ background: '#f5f5f5' }}>
                   {['Scenario', 'Assumptions', 'National 2026 data', 'Source and year'].map((h) => <th key={h} style={S.th}>{h}</th>)}
@@ -146,7 +150,7 @@ export default function ScreenedPorchCostPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Scope examples for a written estimate</h2>
           <p style={S.p}>
-            These examples describe scope. They are not published client case studies and they do not have a published price. Confirm site access, structural support, electrical scope, county permits, HOA review, and materials in the written estimate.
+            These examples describe scope. They are not the quoted projects in the Loudoun Decks 2026 quoted prices block. Confirm site access, structural support, electrical scope, county permits, HOA review, and materials in the written estimate.
           </p>
           {[
             { desc: '180 sq ft screened porch scope', detail: 'Composite floor, EZE-Breeze-style window package, beadboard-style ceiling finish, two ceiling fans, and permit coordination.' },

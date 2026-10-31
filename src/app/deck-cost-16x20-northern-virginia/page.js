@@ -9,11 +9,16 @@ import { buildMetadata } from '@/lib/seo';
 import { BUSINESS, FOUNDER_ID } from '@/lib/business';
 import WebPageSchema from '@/components/WebPageSchema';
 import CallLink from '@/components/CallLink';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { OPEN_DECK_QUOTED, QUOTE_SOURCE, REVIEWED_ISO, REVIEWED_LABEL, SIZE_320 } from '@/lib/quotedPrices';
+
+const COST_ANSWER = `${QUOTE_SOURCE} ${OPEN_DECK_QUOTED} ${SIZE_320} External benchmarks: for a simple, low-height composite deck with standard railing and without complex stairs or elevation, installed cost is about $35–$80 per square foot, or about $11,200–$25,600 for 320 sq ft (RemodelCalculators, reviewed October 11, 2026, https://remodelcalculators.com/deck-cost). Angi lists $30–$60 per square foot for deck construction (updated September 24, 2026, https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm). These external benchmarks are not Loudoun Decks prices. This page does not publish a separate pressure-treated total for 320 sq ft. A written estimate after a site visit is the only project price.`;
+const RATE_ANSWER = `In Loudoun Decks' recent written quotes, a new open deck was about $61–$102 per sq ft, most around $64–$68 per sq ft. ${SIZE_320} External benchmarks are $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026) and $30–$60 per square foot (Angi, updated September 24, 2026). Those external rates are not Loudoun Decks prices. The written estimate after a site visit is the only project price.`;
 
 export const metadata = buildMetadata({
   path: '/deck-cost-16x20-northern-virginia',
   title: '16x20 Deck Cost in Northern Virginia (2026)',
-  description: 'A 16x20 deck is 320 sq ft. Dollar figures on this page are external benchmarks, not a Loudoun Decks price.',
+  description: 'A 16x20 deck is 320 sq ft. Loudoun Decks 2026 quoted prices: about $61–$102 per sq ft, most around $64–$68. Nearby quotes are 304 and 327 sq ft. External benchmarks are labeled below.',
   image: '/social/deck-cost-16x20-northern-virginia-social.png',
 });
 
@@ -21,7 +26,7 @@ const articleSchema = {
   "@context": "https://schema.org", "@type": "Article",
   headline: "How Much Does a 16x20 Deck Cost in Northern Virginia (2026)",
   datePublished: "2026-05-23",
-  dateModified: "2026-10-18",
+  dateModified: REVIEWED_ISO,
   author: { "@type": "Person", "@id": FOUNDER_ID, name: BUSINESS.founder.name, alternateName: "Nick", url: "https://ldndecks.com/team" },
   publisher: { "@type": "Organization", "@id": "https://ldndecks.com/#organization", name: "Loudoun Decks", url: "https://ldndecks.com" },
   about: "16x20 deck cost in Northern Virginia",
@@ -30,9 +35,9 @@ const articleSchema = {
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a 16x20 deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "This page does not publish a pressure-treated, composite, or PVC total for a 16x20 deck. The summary cites external benchmarks with the publisher and date. Those figures are not a Loudoun Decks price. A written estimate is the project price." } },
+    { "@type": "Question", name: "How much does a 16x20 deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: COST_ANSWER } },
     { "@type": "Question", name: "Is a 16x20 deck big enough for a dining table and a seating area?", acceptedAnswer: { "@type": "Answer", text: "Yes. 320 sq ft fits a 6-person dining table on one half and a seating group on the other, with room to walk between them." } },
-    { "@type": "Question", name: "What is the price per square foot for a 16x20 deck?", acceptedAnswer: { "@type": "Answer", text: "This page does not publish a Loudoun Decks price per square foot. The summary cites external benchmarks with the publisher and date. A written estimate is the project price." } },
+    { "@type": "Question", name: "What is the price per square foot for a 16x20 deck?", acceptedAnswer: { "@type": "Answer", text: RATE_ANSWER } },
     { "@type": "Question", name: "How long does it take to build a 16x20 deck?", acceptedAnswer: { "@type": "Answer", text: "Construction is about 1.5-2.5 weeks for a 16x20 in Northern Virginia once permits are in hand. The full timeline including HOA architectural review and the county permit is typically 7-11 weeks from contract signing." } },
     { "@type": "Question", name: "Does a 16x20 deck need a permit in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes. Virginia requires a permit for any deck attached to the house with a ledger, and a 320 sq ft footprint is well above the 256 sq ft exemption threshold for freestanding low decks. See our Loudoun County deck permit guide for the local process." } },
     { "@type": "Question", name: "Does a 16x20 deck add resale value?", acceptedAnswer: { "@type": "Answer", text: "Resale recovery is not a fixed percentage, and this page does not publish one. At 320 sq ft the deck is large enough to change how the backyard is used." } },
@@ -45,7 +50,7 @@ export default function DeckCost16x20Page() {
   return (
     <>
       <JsonLd data={articleSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-cost-16x20-northern-virginia" name="16x20 Deck Cost in Northern Virginia (2026)" description="A 16x20 deck is 320 sq ft. Dollar figures on this page are external benchmarks, not a Loudoun Decks price." speakable />
+      <WebPageSchema dateModified={REVIEWED_ISO} url="https://ldndecks.com/deck-cost-16x20-northern-virginia" name="16x20 Deck Cost in Northern Virginia (2026)" description="A 16x20 deck is 320 sq ft. Loudoun Decks 2026 quoted prices: about $61–$102 per sq ft, most around $64–$68. External benchmarks are labeled below." speakable />
       <JsonLd data={faqSchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -64,10 +69,11 @@ export default function DeckCost16x20Page() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <section data-speakable="true" style={{ background: '#fff8f0', borderLeft: '4px solid var(--color-primary)', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
-            <p style={{ margin: 0, fontWeight: 600, lineHeight: 1.6 }}><strong>TL;DR:</strong> A 16×20 deck is 320 sq ft. For a simple, low-height composite deck with standard railing and without complex stairs or elevation, external 2026 benchmarks put installed cost at $35–$80 per square foot, or about $11,200–$25,600 (RemodelCalculators, reviewed October 11, 2026, https://remodelcalculators.com/deck-cost). Angi lists $30–$60 per square foot for deck construction (updated September 24, 2026, https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm). These are national planning estimates, not Loudoun Decks prices. This page does not publish a pressure-treated total. A written estimate is the only project price.</p>
+            <p style={{ margin: 0, fontWeight: 600, lineHeight: 1.6 }}><strong>TL;DR:</strong> {COST_ANSWER}</p>
           </section>
 
-          <NamedAuthor context="Northern Virginia 16x20 deck builds" lastUpdated="May 2026" />
+          <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED, SIZE_320]} />
+          <NamedAuthor context="Northern Virginia 16x20 deck builds" lastUpdated={REVIEWED_LABEL} />
 
           <h2 style={S.h2}>Base Price by Material for a 16x20 Deck</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
@@ -126,17 +132,10 @@ export default function DeckCost16x20Page() {
           <p style={S.p}>HOA architectural review is also almost always required &mdash; covering color, material, railing style, and placement &mdash; before construction. See our <Link href="/loudoun-county-hoa-deck-rules" style={{ color: 'var(--color-primary)' }}>Loudoun County HOA deck rules guide</Link> for the broader picture.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "How much does a 16x20 deck cost in Northern Virginia?", a: "This page does not publish a pressure-treated, composite, or PVC total for a 16x20 deck. The summary cites external benchmarks with the publisher and date. Those figures are not a Loudoun Decks price. A written estimate is the project price." },
-            { q: "Is a 16x20 big enough for a dining table and a seating area?", a: "Yes. 320 sq ft fits a 6-person dining table (about 140 sq ft) plus a small sofa or two armchairs (about 100 sq ft) with real circulation space — the sweet spot for family decks." },
-            { q: "What is the price per square foot for a 16x20?", a: "This page does not publish a Loudoun Decks price per square foot. The summary cites external benchmarks with the publisher and date. A written estimate is the project price." },
-            { q: "How long does it take to build?", a: "Construction is about 1.5-2.5 weeks once permits are in hand. Full timeline including HOA review and the county permit is typically 7-11 weeks from contract." },
-            { q: "Does a 16x20 deck need a permit?", a: "Yes. Attached = permit required. At 320 sq ft, even a freestanding 16x20 is above the 256 sq ft exemption threshold and needs a permit." },
-            { q: "Does a 16x20 deck add resale value?", a: "Resale recovery is not a fixed percentage, and this page does not publish one. At 320 sq ft the deck is large enough to change how the backyard is used." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {faqSchema.mainEntity.map((item) => (
+            <details key={item.name} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{item.name}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{item.acceptedAnswer.text}</p>
             </details>
           ))}
 
