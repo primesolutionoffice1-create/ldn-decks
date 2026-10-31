@@ -287,6 +287,7 @@ export default function ScreenedPorchBuilderNovaPage() {
             { href: '/covered-deck-builder-northern-virginia', label: 'Covered deck builder' },
             { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
             { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
+            { href: '/screened-porches/fairfax', label: 'Screened porch builder in Fairfax' },
             { href: '/get-estimate', label: 'Get a written estimate' },
           ]}
         />

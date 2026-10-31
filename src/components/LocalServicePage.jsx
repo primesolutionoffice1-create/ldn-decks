@@ -11,6 +11,11 @@ import { SITE_URL } from '@/lib/seo';
 import { getVerifiedReviewSourceSnippets } from '@/lib/verifiedProof';
 import { buildCityProfile, servicePageTypes } from '@/data/localServicePages';
 import { localServiceBuyerFaqs } from '@/data/localServiceBuyerFaqs';
+import {
+  FAIRFAX_PERMIT_URL,
+  FAIRFAX_SCREENED_PORCH_ANSWER,
+  fairfaxScreenedPorchFaqs,
+} from '@/data/fairfaxScreenedPorchCitation';
 import styles from './LocalServicePage.module.css';
 
 const STATIC_DECK_BUILDER_CITY_SLUGS = new Set([
@@ -49,7 +54,12 @@ function cityIntro(city, service) {
   return `${city.city} homeowners planning ${service.intro} need a contractor who understands ${profile.context}. Loudoun Decks designs and builds around ${profile.homeStyle}, with ${profile.permit} handled before crews arrive.`;
 }
 
-function buildFaqs(city, service) {
+function isFairfaxScreenedPorch(city, serviceKey) {
+  return serviceKey === 'screened-porches' && city.citySlug === 'fairfax';
+}
+
+function buildFaqs(city, service, serviceKey) {
+  if (isFairfaxScreenedPorch(city, serviceKey)) return fairfaxScreenedPorchFaqs;
   const profile = buildCityProfile(city);
   const buyerFaq = localServiceBuyerFaqs[`/${service.path}/${city.citySlug}`];
   return [
@@ -133,9 +143,10 @@ function labelForRelatedPath(path) {
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
-function schemaForPage({ city, service, path }) {
+function schemaForPage({ city, service, path, serviceKey }) {
   const url = `${SITE_URL}${path}`;
-  const faqs = buildFaqs(city, service);
+  const fairfaxScreened = isFairfaxScreenedPorch(city, serviceKey);
+  const faqs = buildFaqs(city, service, serviceKey);
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -144,16 +155,23 @@ function schemaForPage({ city, service, path }) {
     name: `${service.serviceName} in ${city.city}, VA`,
     serviceType: service.serviceName,
     category: service.category,
-    description: `${service.serviceName} for homeowners in ${city.city}, ${city.county}. ${service.valueProp}.`,
+    description: fairfaxScreened
+      ? 'Screened porch construction for Fairfax County and City of Fairfax addresses. Loudoun Decks confirms which office reviews the property. The project price is a written estimate.'
+      : `${service.serviceName} for homeowners in ${city.city}, ${city.county}. ${service.valueProp}.`,
     url,
     provider: { '@id': ORG_ID },
-    areaServed: {
-      '@type': 'City',
-      name: `${city.city}, VA`,
-      ...(city.administrativeParent
-        ? { containedInPlace: { '@type': 'AdministrativeArea', name: city.administrativeParent } }
-        : {}),
-    },
+    areaServed: fairfaxScreened
+      ? [
+          { '@type': 'AdministrativeArea', name: 'Fairfax County, VA' },
+          { '@type': 'City', name: 'City of Fairfax, VA' },
+        ]
+      : {
+          '@type': 'City',
+          name: `${city.city}, VA`,
+          ...(city.administrativeParent
+            ? { containedInPlace: { '@type': 'AdministrativeArea', name: city.administrativeParent } }
+            : {}),
+        },
     isRelatedTo: service.related.map((relatedUrl) => ({
       '@type': 'Service',
       '@id': `${SITE_URL}${relatedUrl}#service`,
@@ -186,8 +204,16 @@ export default function LocalServicePage({ city, serviceKey }) {
   const service = servicePageTypes[serviceKey];
   const profile = buildCityProfile(city);
   const path = `/${service.path}/${city.citySlug}`;
-  const { faqs, schemas } = schemaForPage({ city, service, path });
-  const quickAnswers = buildQuickAnswers(city, service);
+  const fairfaxScreened = isFairfaxScreenedPorch(city, serviceKey);
+  const { faqs, schemas } = schemaForPage({ city, service, path, serviceKey });
+  const quickAnswers = buildQuickAnswers(city, service).map((item) => (
+    fairfaxScreened && item.q === 'What material performs best in Northern Virginia?'
+      ? {
+          q: 'Which flooring brands can the porch use?',
+          a: 'We install Trex, TimberTech and other composite brands. The written estimate names the collection.',
+        }
+      : item
+  ));
   const nearbyCities = profile.neighborhoods.slice(0, 4);
   const proofAreas = profile.affluentAreas || profile.neighborhoods.slice(0, 3);
   const allServices = Object.values(servicePageTypes).filter((item) => item.path !== service.path);
@@ -224,14 +250,14 @@ export default function LocalServicePage({ city, serviceKey }) {
             <span>/</span>
             <span>{city.city}</span>
           </nav>
-          <p className={styles.kicker}>{city.county} Local Service Page</p>
+          <p className={styles.kicker}>{fairfaxScreened ? 'Fairfax County and the City of Fairfax' : `${city.county} Local Service Page`}</p>
           <h1>{service.h1Noun} in {city.city}, VA</h1>
-          <p className={styles.lead}>{cityIntro(city, service)}</p>
+          <p className={styles.lead} data-speakable={fairfaxScreened ? 'true' : undefined}>{fairfaxScreened ? FAIRFAX_SCREENED_PORCH_ANSWER : cityIntro(city, service)}</p>
           <div className={styles.trustStrip} aria-label="Loudoun Decks trust signals">
             <span>Trex product-line planning</span>
             <span>TimberTech and AZEK product planning</span>
             <span>VA Class A Licensed</span>
-            <span>BBB Accredited</span>
+            {fairfaxScreened ? <span>License #2705191673</span> : <span>BBB Accredited</span>}
           </div>
           <div className={styles.ctaRow}>
             <TrackedLink href="/get-estimate" ctaLocation={`${service.path}_${city.citySlug}_hero`} ctaLabel="Request a Written Estimate" pageContext={pageContext} className={styles.primaryCta}>
@@ -252,13 +278,43 @@ export default function LocalServicePage({ city, serviceKey }) {
         </div>
       </section>
 
+      {fairfaxScreened && (
+        <section className={styles.contentBand} aria-label="Fairfax screened porch answer">
+          <div className={styles.contentGrid}>
+            <article>
+              <h2>Fairfax County permit reality</h2>
+              <p>
+                Fairfax County publishes when a permit is required on its{' '}
+                <a href={FAIRFAX_PERMIT_URL}>Land Development Services permit page</a>.
+                Many screened porches need a permit when the work includes a roof, structural framing, electrical work, new footings, or a change to an existing deck. The property address decides whether Fairfax County or the City of Fairfax reviews the plans. The written estimate should state what permit handling is included. Our <Link href="/deck-permit-fairfax-county-virginia">Fairfax County deck permit guide</Link> covers the county path in more detail.
+              </p>
+              <h2>Screened porch design options</h2>
+              <p>
+                Design options include a roofed screened porch with mesh and airflow, a screened porch combined with an open deck, and enclosure panels such as EZE-Breeze when the homeowner wants more weather protection than mesh. Flooring can be composite. We install Trex, TimberTech and other composite brands. Ceiling fans and lighting are electrical scope and are confirmed in the written estimate. Compare the regional <Link href="/screened-porch-builder-northern-virginia">screened porch builder page</Link> and the <Link href="/three-season-room-northern-virginia">three-season room guide</Link>.
+              </p>
+              <h2>What affects screened porch cost in Fairfax</h2>
+              <p>
+                Cost depends on size, whether the porch needs a new roof or can use an existing roof, footing and framing conditions, whether an existing deck can carry a roof, roof tie-in complexity, flooring, screens or enclosure panels, electrical work, stairs, railings, site access, slope, trees, and permit or HOA review. This page does not publish a price. The written estimate is the project price. Material and scope planning for Northern Virginia is on the <Link href="/screened-porch-cost-northern-virginia">screened porch cost page</Link>.
+              </p>
+              <h2>Published porch example</h2>
+              <p>
+                No Fairfax screened porch case study is published on this site. The published screened porch example is a Trex Select porch in Purcellville, in Loudoun County, with a roof, screened openings, and backyard stairs. Eze-Breeze is not installed on that project, and the photos are digitally retouched. See the <Link href="/blog/screened-porch-trex-select-purcellville-va">Purcellville screened porch</Link>. For composite and Trex deck installation across Northern Virginia, see the <Link href="/composite-trex-deck-builder-northern-virginia">composite and Trex deck builder page</Link>.
+              </p>
+              <p>
+                Virginia Class A Contractor License #2705191673. Call <a href="tel:+15716557207">(571) 655-7207</a> or <Link href="/get-estimate">request a free on-site estimate</Link>.
+              </p>
+            </article>
+          </div>
+        </section>
+      )}
+
       <section className={styles.quickGrid} aria-label={`${service.label} planning facts for ${city.city}`}>
         <div>
           <span>Local Review</span>
           <strong>{profile.permit}</strong>
         </div>
         <div>
-          <span>Best Fit</span>
+          <span>{fairfaxScreened ? 'Homes' : 'Best Fit'}</span>
           <strong>{profile.homeStyle}</strong>
         </div>
         <div>
@@ -296,7 +352,9 @@ export default function LocalServicePage({ city, serviceKey }) {
               A strong {service.label.toLowerCase()} project in {city.city} starts before the first footing or base excavation. We look at access, drainage, sun exposure, existing elevations, stair placement, door thresholds, property lines, and how the new space will connect to daily life inside the home.
             </p>
             <p>
-              In {city.county}, the small details matter: permit notes, railing height, footing depth, ledger flashing, HOA color rules, stormwater patterns, and inspection expectations. Loudoun Decks builds these items into the design package so the finished project feels polished and passes review cleanly.
+              {fairfaxScreened
+                ? 'Permit notes, railing height, footing depth, ledger flashing, HOA color rules, stormwater patterns, and inspection expectations belong in the design package. Fairfax County and the City of Fairfax are different review offices. The address decides which one applies. The reviewing office decides whether the plans pass.'
+                : `In ${city.county}, the small details matter: permit notes, railing height, footing depth, ledger flashing, HOA color rules, stormwater patterns, and inspection expectations. Loudoun Decks builds these items into the design package so the finished project feels polished and passes review cleanly.`}
             </p>
             <p>
               For {city.city} addresses near {proofAreas.join(', ')}, we plan the scope around the way the property is actually used: sun exposure, privacy, stair traffic, furniture zones, maintenance expectations, and the level of finish the neighborhood supports.
@@ -435,7 +493,7 @@ export default function LocalServicePage({ city, serviceKey }) {
         </CallLink>
       </div>
 
-      <NamedAuthor context={`${service.label} in ${city.city}, ${city.county}`} lastUpdated="2026-06-01" />
+      <NamedAuthor context={fairfaxScreened ? 'Fairfax County and the City of Fairfax' : `${service.label} in ${city.city}, ${city.county}`} lastUpdated={fairfaxScreened ? '2026-10-31' : '2026-06-01'} />
       <RelatedGuides currentPath={path} />
       <ContactHome pageContext={pageContext} />
     </main>

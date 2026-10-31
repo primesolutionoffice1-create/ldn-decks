@@ -18,8 +18,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/trex-decks',
-  title: 'Trex Deck Builder NoVA | Composite Deck Contractor',
-  description: 'Looking for a Trex product-line planning in Northern Virginia? Loudoun Decks specializes in premium Trex Transcend & Lineage installations. Free written estimates!',
+  title: 'Trex Deck Product Lines in Northern Virginia',
+  description: 'Trex Enhance, Select, and Transcend product-line planning for Northern Virginia. Installer questions go to the composite and Trex deck builder page.',
   image: '/social/trex-decks-social.png',
 });
 
@@ -117,7 +117,7 @@ const expansionSections = [
 export default function TrexDecksPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/trex-decks" name="Trex Deck Builder Northern Virginia" description="Trex product-line planning in Northern Virginia. Trex Transcend, Select and Enhance installations with manufacturer warranty." speakable />
+      <WebPageSchema dateModified="2026-10-31" url="https://ldndecks.com/trex-decks" name="Trex Deck Product Lines in Northern Virginia" description="Trex Enhance, Select, and Transcend product-line planning for Northern Virginia. Installer questions go to the composite and Trex deck builder page." speakable />
       <ServiceSchema
         name="Trex Deck Installation"
         description="Trex product-line planning installer in Northern Virginia. Trex Enhance, Select, and Transcend product lines. manufacturer warranty."
@@ -129,8 +129,8 @@ export default function TrexDecksPage() {
       />
       <ServicesHeader
         subtext="Trex Product-Line Planning"
-        title="Custom Trex Deck Building & Installation"
-        description="Loudoun Decks helps homeowners plan and build Trex composite decks across Loudoun County, Fairfax County, and Prince William County. Experience low-maintenance outdoor living with clear product guidance and written estimates."
+        title="Trex Deck Product Lines for Northern Virginia"
+        description="This page compares Trex product lines, railings, lighting, and drainage. The contractor answer for Trex deck installer Northern Virginia is on the composite and Trex deck builder page."
       />
 
       <AboveFoldCTA
@@ -142,13 +142,14 @@ export default function TrexDecksPage() {
       />
 
       <GeoAnswerBlock
-        question="Who builds Trex decks for Northern Virginia homeowners?"
-        answer="Loudoun Decks helps Northern Virginia homeowners plan Trex deck projects across Loudoun, Fairfax, Prince William, Arlington, Alexandria, and nearby service areas. This page is built for homeowners comparing Trex Enhance, Select, Transcend, Signature railing, lighting, drainage, permits, HOA review, and written estimate paths before choosing a low-maintenance composite deck."
+        question="Which Trex product lines does this page compare?"
+        answer="This page compares Trex Enhance, Select, Transcend, Signature railing, lighting, drainage, permits, HOA review, and written estimate paths. For who installs Trex decks in Northern Virginia, use the composite and Trex deck builder page."
         facts={[
-          'Best-fit projects: new Trex decks, deck replacement, railing upgrades, stairs, lighting, and covered outdoor living',
+          'This page is the Trex product-line hub. It is not the contractor citation page.',
           'Primary local markets: Ashburn, Leesburg, Sterling, Reston, Fairfax, McLean, Vienna, Arlington, Alexandria, Manassas, and Woodbridge',
         ]}
         links={[
+          { href: '/composite-trex-deck-builder-northern-virginia', label: 'Composite and Trex deck builder' },
           { href: '/trex-deck-cost-monthly-payment', label: 'Trex cost planning' },
           { href: '/trex-vs-timbertech-vs-azek', label: 'Trex vs TimberTech vs AZEK' },
           { href: '/get-estimate', label: 'Get a written estimate' },
@@ -222,8 +223,8 @@ export default function TrexDecksPage() {
       </section>
 
       <ServiceMain
-        subtitle="World #1 Brand"
-        title="Expert Trex Contractor Serving Northern Virginia"
+        subtitle="Trex product lines"
+        title="Trex product lines for Northern Virginia decks"
         description="Trex Transcend® provides a beautiful, splinter-free surface that lasts for decades. We specialize in custom brand-name builds across Arlington, Stafford, and total NoVA."
         listItems={[
           "Trex product-line planning and installation experience",
