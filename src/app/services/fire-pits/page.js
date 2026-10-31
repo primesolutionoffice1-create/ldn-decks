@@ -17,7 +17,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/fire-pits",
-  title: "Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment",
+  title: "Fire Pit Installation in Loudoun VA | Loudoun Decks",
   description: "Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment.",
   image: "/social/fire-pits-service-social.png",
 });
@@ -103,7 +103,7 @@ const faqs = [
 export default function FirePitsPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/fire-pits" name="Custom Fire Pit Installation Loudoun VA | Outdoor Entertainment" description="Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/fire-pits" name="Fire Pit Installation in Loudoun VA | Loudoun Decks" description="Transform your backyard with a custom-built fire pit in Northern Virginia. We specialize in gas, wood-burning, and stone fire pits for year-round enjoyment." speakable />
       <ServiceSchema
         name="Custom Fire Pit Installation"
         description="Professional custom fire pit design and installation in Northern Virginia. Wood-burning, gas, and built-in stone fire pits with integrated seating areas."

@@ -10,7 +10,7 @@ import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/about/certifications-and-licenses',
-  title: 'Certifications & Licenses | Loudoun Decks | Verified Contractor',
+  title: 'Licenses and Certifications | Loudoun Decks',
   description: 'Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Loudoun County building permits are filed under Prime Solution.',
   image: '/social/certifications-licenses-social.png',
 });

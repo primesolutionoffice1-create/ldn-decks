@@ -11,7 +11,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/fiberon-decking-review-northern-virginia',
-  title: 'Fiberon Decking Review 2026 | How It Compares in Northern Virginia',
+  title: 'Fiberon Decking Review Northern Virginia | Loudoun Decks',
   description: 'Honest Fiberon composite decking review for Northern Virginia homeowners. How Fiberon Symmetry and Good Life compare to Trex and TimberTech in cost, heat, and durability.',
   image: '/images/img13.jpeg',
 });
@@ -45,7 +45,7 @@ export default function FiberonReviewPage() {
       <WebPageSchema
         dateModified="2026-10-18"
         url="https://ldndecks.com/fiberon-decking-review-northern-virginia"
-        name="Fiberon Decking Review 2026 | How It Compares in Northern Virginia"
+        name="Fiberon Decking Review Northern Virginia | Loudoun Decks"
         description="Honest Fiberon composite decking review for Northern Virginia homeowners. How Fiberon Symmetry and Good Life compare to Trex and TimberTech in cost, heat, and durability."
         speakable
       />

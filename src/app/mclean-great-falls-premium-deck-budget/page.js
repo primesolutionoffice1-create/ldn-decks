@@ -15,7 +15,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/mclean-great-falls-premium-deck-budget',
   title: 'McLean & Great Falls Premium Deck Budget Guide (2026)',
-  description: 'Premium deck cost in McLean and Great Falls VA — typical a written estimate projects with AZEK Vintage, cable railings, integrated lighting, and covered structures.',
+  description: 'Premium deck planning for McLean and Great Falls. See how materials, cable railings, lighting, and covered structures shape a written estimate.',
   image: '/social/mclean-great-falls-premium-deck-budget-social.png',
 });
 
@@ -94,13 +94,13 @@ export default function MclenGreatFallsPremiumPage() {
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="McLean & Great Falls Premium Deck Budget Guide (2026)"
-        description="Premium deck cost in McLean and Great Falls VA — typical a written estimate projects with AZEK Vintage, cable railings, integrated lighting, and covered structures."
+        description="Premium deck planning for McLean and Great Falls. See how materials, cable railings, lighting, and covered structures shape a written estimate."
         path={PATH}
         image="/showcase/img20.jpg"
         datePublished="2026-05-27"
         dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="McLean &amp; Great Falls Premium Deck Budget Guide (2026)" description="Premium deck cost in McLean and Great Falls VA — typical a written estimate projects with AZEK Vintage, cable railings, integrated lighting, and covered structures." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="McLean &amp; Great Falls Premium Deck Budget Guide (2026)" description="Premium deck planning for McLean and Great Falls. See how materials, cable railings, lighting, and covered structures shape a written estimate." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>

@@ -14,7 +14,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/louvered-pergola-northern-virginia',
   title: 'Louvered Pergola Builder in Northern Virginia',
-  description: 'Motorized and manual louvered pergolas in Northern Virginia — adjustable-roof shade structures over decks and patios. a written estimate. Free design consultation.',
+  description: 'Louvered pergola builder in Northern Virginia. Compare manual and motorized adjustable roofs for decks and patios, then request a written estimate.',
   image: '/social/louvered-pergola-northern-virginia-social.png',
 });
 
@@ -33,7 +33,7 @@ export default function LouveredPergolaPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/louvered-pergola-northern-virginia" name="Louvered Pergola Builder in Northern Virginia" description="Motorized and manual louvered pergolas in Northern Virginia — adjustable-roof shade structures over decks and patios. a written estimate. Free design consultation." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/louvered-pergola-northern-virginia" name="Louvered Pergola Builder in Northern Virginia" description="Louvered pergola builder in Northern Virginia. Compare manual and motorized adjustable roofs for decks and patios, then request a written estimate." speakable />
       <ServiceSchema
         name="Louvered Pergola Installation"
         description="Motorized louvered pergola systems in Northern Virginia. Adjustable aluminum roof structures for year-round outdoor living."

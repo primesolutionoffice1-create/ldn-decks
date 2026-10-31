@@ -11,8 +11,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/pressure-washing-deck-northern-virginia',
-  title: 'Deck Pressure Washing in Northern Virginia | a written estimate | LDN Decks',
-  description: 'Pro deck pressure washing in Northern Virginia. a written estimate for most decks. Removes mold, mildew, oxidation. Safe PSI for wood & composite.',
+  title: 'Deck Pressure Washing in Northern Virginia | LDN Decks',
+  description: 'Deck pressure washing in Northern Virginia for wood and composite. The wash removes mold, mildew, and oxidation using pressure matched to the deck surface.',
   image: '/social/pressure-washing-deck-northern-virginia-social.png',
 });
 
@@ -31,7 +31,7 @@ export default function PressureWashingDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/pressure-washing-deck-northern-virginia" name="Deck Pressure Washing in Northern Virginia | a written estimate | LDN Decks" description="Pro deck pressure washing in Northern Virginia. a written estimate for most decks. Removes mold, mildew, oxidation. Safe PSI for wood &amp; composite." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/pressure-washing-deck-northern-virginia" name="Deck Pressure Washing in Northern Virginia | LDN Decks" description="Deck pressure washing in Northern Virginia for wood and composite. The wash removes mold, mildew, and oxidation using pressure matched to the deck surface." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Pressure Washing in Northern Virginia</h1>

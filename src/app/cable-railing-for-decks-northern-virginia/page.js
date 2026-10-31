@@ -12,7 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/cable-railing-for-decks-northern-virginia',
   title: 'Cable Railing for Decks (NoVA)',
-  description: 'Cable railing a written estimate/linear ft in Northern Virginia. Horizontal vs vertical, VA code requirements & HOA considerations. We install all types.',
+  description: 'Cable railing for decks in Northern Virginia. Compare horizontal and vertical runs, Virginia guard rules, and HOA limits on open-view railings.',
   image: '/social/cable-railing-decks-northern-virginia-social.png',
 });
 

@@ -12,7 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/stamped-concrete-patio-northern-virginia',
   title: 'Stamped Concrete Patio Contractor Northern Virginia | 2026',
-  description: 'Stamped concrete patio contractor in Northern Virginia. 2026 cost: priced in a written estimate across Loudoun, Fairfax & Prince William. Slate, flagstone, brick, wood plank patterns. Freeze-thaw realities explained.',
+  description: 'Stamped concrete patio contractor in Northern Virginia. Compare slate, flagstone, brick, and wood-plank patterns and how freeze-thaw affects the finish.',
   image: '/social/stamped-concrete-patio-northern-virginia-social.png',
 });
 

@@ -14,7 +14,7 @@ import { PVC_QUOTED, QUOTE_SOURCE, REVIEWED_ISO, REVIEWED_LABEL } from '@/lib/qu
 export const metadata = buildMetadata({
   path: '/under-deck-ceiling-ideas',
   title: 'Under-Deck Ceiling Ideas (5 Options)',
-  description: 'Turn the space under your elevated deck into usable living area. Under-deck drainage systems, ceiling panels, lighting. a written estimate in Northern Virginia.',
+  description: 'Under-deck ceiling ideas for elevated decks in Northern Virginia. Compare drainage-only systems, vinyl panels, aluminum ceilings, and wood finishes.',
   image: '/social/under-deck-ceiling-ideas-social.png',
 });
 

@@ -16,7 +16,7 @@ const COST_ANSWER = `${QUOTE_SOURCE} ${OPEN_DECK_QUOTED} ${SIZE_800} This page d
 
 export const metadata = buildMetadata({
   path: '/800-square-foot-deck-cost-northern-virginia',
-  title: '800 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks',
+  title: '800 Sq Ft Deck Cost in Northern Virginia | Loudoun Decks',
   description: 'Loudoun Decks 2026 quoted prices: new open decks about $61–$102 per sq ft, most around $64–$68. This quote set has no 800 sq ft total. The written estimate is the project price.',
   image: '/social/800-square-foot-deck-cost-northern-virginia-social.png',
 });
@@ -51,7 +51,7 @@ export default function EightHundredSqftDeckCostPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified={REVIEWED_ISO} url="https://ldndecks.com/800-square-foot-deck-cost-northern-virginia" name="800 Square Foot Deck Cost in Northern Virginia (2026) | Loudoun Decks" description="Loudoun Decks 2026 quoted prices for a new open deck. This quote set has no 800 sq ft total. The written estimate is the project price." speakable />
+      <WebPageSchema dateModified={REVIEWED_ISO} url="https://ldndecks.com/800-square-foot-deck-cost-northern-virginia" name="800 Sq Ft Deck Cost in Northern Virginia | Loudoun Decks" description="Loudoun Decks 2026 quoted prices for a new open deck. This quote set has no 800 sq ft total. The written estimate is the project price." speakable />
       <ArticleSchema
         title="800 Square Foot Deck Cost in Northern Virginia (2026)"
         description="Loudoun Decks 2026 quoted prices for a new open deck. This quote set has no 800 sq ft total. The written estimate is the project price."

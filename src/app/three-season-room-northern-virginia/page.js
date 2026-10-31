@@ -14,7 +14,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/three-season-room-northern-virginia',
   title: 'Three-Season Room Builder in Northern Virginia',
-  description: 'Custom three-season rooms in Northern Virginia with Eze-Breeze windows — usable 9-10 months a year. a written estimate. Free design consultation.',
+  description: 'Three-season room builder in Northern Virginia. Eze-Breeze window rooms that extend the outdoor season, planned with a design consult and written estimate.',
   image: '/social/three-season-room-northern-virginia-social.png',
 });
 
@@ -33,7 +33,7 @@ export default function ThreeSeasonRoomPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/three-season-room-northern-virginia" name="Three-Season Room Builder in Northern Virginia" description="Custom three-season rooms in Northern Virginia with Eze-Breeze windows — usable 9-10 months a year. a written estimate. Free design consultation." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/three-season-room-northern-virginia" name="Three-Season Room Builder in Northern Virginia" description="Three-season room builder in Northern Virginia. Eze-Breeze window rooms that extend the outdoor season, planned with a design consult and written estimate." speakable />
       <ServiceSchema
         name="Three-Season Room Construction"
         description="Custom three-season room design and build in Northern Virginia. Enclosed outdoor rooms with EZE-Breeze windows for spring-to-fall enjoyment."

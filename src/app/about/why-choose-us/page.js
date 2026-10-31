@@ -14,7 +14,7 @@ import { WRITTEN_ESTIMATE } from '@/lib/publicPricing';
 
 export const metadata = buildMetadata({
   path: "/about/why-choose-us",
-  title: "Why Choose LDN Decks | Northern Virginia's Premier Deck Builder",
+  title: "Why Choose LDN Decks in Northern Virginia",
   description: "Why Northern Virginia homeowners choose LDN Decks: verified public profiles, local planning support, written warranty terms, and clear project scopes.",
   image: "/social/why-choose-loudoun-decks-social.png",
 });

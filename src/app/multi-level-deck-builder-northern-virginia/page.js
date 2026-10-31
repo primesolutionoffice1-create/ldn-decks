@@ -13,7 +13,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/multi-level-deck-builder-northern-virginia',
   title: 'Multi-Level Deck Builder Northern Virginia | LDN Decks',
-  description: 'Custom multi-level decks in Northern Virginia from a written estimate. Perfect for sloped lots and walkout basements. Trex & TimberTech. Free design consultation.',
+  description: 'Multi-level deck builder in Northern Virginia for sloped lots and walkout basements. Trex and TimberTech layouts are planned from a written estimate.',
   image: '/social/multi-level-deck-builder-northern-virginia-social.png',
 });
 

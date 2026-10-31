@@ -12,8 +12,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-permit-prince-william-county-virginia',
-  title: 'Prince William County Deck Permit Guide 2026 | Cost & Process',
-  description: 'Deck permits in Prince William County, VA: 2–4 week plan review, a written estimate cost, 3 required inspections. Full process explained — we handle it for you.',
+  title: 'Prince William County Deck Permit Guide | Loudoun Decks',
+  description: 'Prince William County deck permits: plan review, required inspections, and the application path. See what to prepare before you build a deck.',
   image: '/social/deck-permit-prince-william-county-social.png',
 });
 
@@ -61,7 +61,7 @@ export default function PWCountyPermitPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Deck permits in Prince William County, VA: 2–4 week plan review, a written estimate cost, 3 required inspections. Full process explained — we handle it for you." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-permit-prince-william-county-virginia" name="Prince William County Deck Permit Guide 2026 | Cost &amp; Process" description="Prince William County deck permits: plan review, required inspections, and the application path. See what to prepare before you build a deck." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Permit Guide: Prince William County, VA</h1>

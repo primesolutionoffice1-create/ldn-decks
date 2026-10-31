@@ -17,8 +17,8 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: "/services/new-decks",
-  title: "Custom Deck Builder Northern Virginia | Design & Build | Loudoun Decks",
-  description: "Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood, permit planning, HOA support, footings and framing from a written estimate.",
+  title: "New Deck Installation in Northern Virginia | Loudoun Decks",
+  description: "New deck installation in Northern Virginia. Design, footings, framing, Trex, TimberTech, and wood, with permit planning and a written estimate.",
   image: "/social/new-decks-social.png",
 });
 
@@ -151,7 +151,7 @@ export default function NewDecksPage() {
       <WebPageSchema dateModified="2026-10-18"
         url="https://ldndecks.com/services/new-decks"
         name="Custom Deck Builder Northern Virginia | Loudoun Decks"
-        description="Custom deck design and construction in Northern Virginia. Trex, TimberTech, wood, permit planning, HOA support, footings and framing from a written estimate."
+        description="New deck installation in Northern Virginia. Design, footings, framing, Trex, TimberTech, and wood, with permit planning and a written estimate."
         speakable
       />
       <ServiceSchema

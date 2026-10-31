@@ -12,7 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/porch-repair-vs-replacement-northern-virginia',
   title: 'Porch Repair vs Replacement: Costs & Inspection in NoVA',
-  description: 'Repair your porch for a written estimate or replace for a written estimate. When each makes sense, inspection checklist, and cost comparison for Northern Virginia.',
+  description: 'Porch repair versus replacement in Northern Virginia. Use an inspection checklist to see when repairs hold and when a rebuild is the safer scope.',
   image: '/social/porch-repair-vs-replacement-social.png',
 });
 
@@ -31,7 +31,7 @@ export default function PorchRepairPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/porch-repair-vs-replacement-northern-virginia" name="Porch Repair vs Replacement" description="Repair your porch for a written estimate or replace for a written estimate. When each makes sense, inspection checklist, and cost comparison for Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/porch-repair-vs-replacement-northern-virginia" name="Porch Repair vs Replacement" description="Porch repair versus replacement in Northern Virginia. Use an inspection checklist to see when repairs hold and when a rebuild is the safer scope." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Porch Repair vs Replacement: Which Saves You Money?</h1>
