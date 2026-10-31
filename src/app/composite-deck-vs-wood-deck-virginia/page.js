@@ -52,7 +52,7 @@ export default function CompositeVsWoodPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Bottom Line:</p>
-          <p data-speakable>Wood costs less upfront (priced in a written estimate vs priced in a written estimate), but composite is cheaper over 15 years when you add maintenance. Composite lasts 2–3x longer, requires zero staining, and has better resale value. For Virginia&apos;s climate, composite wins.</p>
+          <p data-speakable><Link href="/wood-decks">Wood</Link> costs less upfront (priced in a written estimate vs priced in a written estimate), but <Link href="/composite-decks">composite</Link> is cheaper over 15 years when you add maintenance. Composite lasts 2–3x longer, requires zero staining, and has better resale value. For Virginia&apos;s climate, composite wins.</p>
         </div>
       </section>
 

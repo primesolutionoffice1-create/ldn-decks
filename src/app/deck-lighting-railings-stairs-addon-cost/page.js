@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     q: 'Are HOA-restricted railing styles common in Northern Virginia?',
-    a: 'Yes, in some communities. Ashburn Village, Brambleton, and some Belmont sections restrict cable and glass railings to preserve neighborhood consistency. Loudoun&apos;s older communities (Lansdowne, parts of Sterling) restrict modern aluminum profiles. We submit material samples with every HOA package and confirm approval before ordering.',
+    a: "Yes, in some communities. Ashburn Village, Brambleton, and some Belmont sections restrict cable and glass railings to preserve neighborhood consistency. Loudoun's older communities (Lansdowne, parts of Sterling) restrict modern aluminum profiles. We submit material samples with every HOA package and confirm approval before ordering.",
   },
 ];
 
@@ -251,7 +251,13 @@ export default function DeckAddOnCostPage() {
           {faqs.map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 10, padding: '1.25rem', marginBottom: '0.75rem', background: '#fff' }}>
               <summary style={{ fontWeight: 700, cursor: 'pointer', fontSize: '1rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.75, color: '#555', fontSize: '0.95rem' }}>{faq.a}</p>
+              <p style={{ marginTop: '1rem', lineHeight: 1.75, color: '#555', fontSize: '0.95rem' }}>
+                {faq.q.startsWith('Are HOA') ? (
+                  <>
+                    Yes, in some communities. Ashburn Village, <Link href="/deck-builder-brambleton-va">Brambleton</Link>, and some Belmont sections restrict cable and glass railings to preserve neighborhood consistency. Loudoun&apos;s older communities (Lansdowne, parts of Sterling) restrict modern aluminum profiles. We submit material samples with every HOA package and confirm approval before ordering.
+                  </>
+                ) : faq.a}
+              </p>
             </details>
           ))}
         </div>

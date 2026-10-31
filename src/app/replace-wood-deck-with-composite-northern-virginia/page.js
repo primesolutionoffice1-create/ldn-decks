@@ -334,6 +334,7 @@ export default function ReplaceWoodDeckWithCompositePage() {
           <p style={{ color: '#4b5563', lineHeight: 1.7 }}>
             This page supports the wood-to-composite decision. The replacement service page is{' '}
             <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 800 }}>deck replacement in Northern Virginia</Link>.
+            Soft framing, <Link href="/deck-lighting-railings-stairs-addon-cost" style={{ color: 'var(--color-primary)', fontWeight: 800 }}>failing stairs</Link>, and <Link href="/services/trex-railings" style={{ color: 'var(--color-primary)', fontWeight: 800 }}>loose railings</Link> belong in that same replacement scope.
             New-deck planning ranges are on{' '}
             <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 800 }}>composite deck cost in Northern Virginia</Link>.
           </p>

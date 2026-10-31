@@ -103,7 +103,7 @@ export default function WoodVsCompositeLongTermPage() {
             Wood vs Composite Deck Long-Term Cost: Maintenance, Repairs, and Financing
           </h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: 1.6 }}>
-            Composite costs more upfront but often less over 15 years once stain, seal, sanding, and board replacement
+            <Link href="/composite-decks" style={{ color: '#fff' }}>Composite</Link> costs more upfront but often less over 15 years once stain, seal, sanding, and board replacement
             are added. Full 15-year cost breakdown for Northern Virginia.
           </p>
         </div>
@@ -121,8 +121,8 @@ export default function WoodVsCompositeLongTermPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            A 350 sqft <strong>wood deck</strong> is priced in a written estimate upfront but adds <strong>a written estimate</strong> in
-            15-year stain, seal, sand, and board replacement. A <strong>composite deck</strong> is priced in a written estimate upfront
+            A 350 sqft <strong><Link href="/wood-decks">wood deck</Link></strong> is priced in a written estimate upfront but adds <strong>a written estimate</strong> in
+            15-year stain, seal, sand, and board replacement. A <strong><Link href="/composite-decks">composite deck</Link></strong> is priced in a written estimate upfront
             and adds only a written estimate in 15-year maintenance. <strong>Total 15-year cost is often equal or favors
             composite</strong>, and composite typically lasts 10–35 more years after that.
           </p>
