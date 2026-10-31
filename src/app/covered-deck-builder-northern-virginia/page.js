@@ -18,7 +18,7 @@ import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: "/covered-deck-builder-northern-virginia",
-  title: "Covered Deck Builder Northern Virginia | Open-Air Outdoor Living",
+  title: "Covered Deck Builder in Northern Virginia | Loudoun Decks",
   description: "Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living.",
   image: "/social/covered-deck-builder-northern-virginia-social.png",
 });
@@ -94,7 +94,7 @@ const faqSchema = {
 export default function CoveredDeckPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/covered-deck-builder-northern-virginia" name="Covered Deck Builder Northern Virginia | Open-Air Outdoor Living" description="Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/covered-deck-builder-northern-virginia" name="Covered Deck Builder in Northern Virginia | Loudoun Decks" description="Custom covered deck design and construction in Northern Virginia. We build roofed open-air decks, covered porches, and pavilions for premium outdoor living." speakable />
       <ServiceSchema
         name="Covered Deck Construction"
         description="Custom covered deck and roof-covered outdoor structures in Northern Virginia. Engineered for weather protection with premium materials."

@@ -12,7 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-staining-northern-virginia',
   title: 'Deck Staining in Northern Virginia',
-  description: 'Professional deck staining in Northern Virginia. priced in a written estimate. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207.',
+  description: 'Deck staining in Northern Virginia for wood decks. See how stain and sealer stand up to freeze-thaw, sun, and humidity, then request a written estimate.',
   image: '/social/deck-staining-northern-virginia-social.png',
 });
 
@@ -32,7 +32,7 @@ export default function DeckStainingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-staining-northern-virginia" name="Deck Staining in Northern Virginia" description="Professional deck staining in Northern Virginia. priced in a written estimate. Protects against Virginia freeze-thaw, UV, and humidity. Free estimate. Call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-staining-northern-virginia" name="Deck Staining in Northern Virginia" description="Deck staining in Northern Virginia for wood decks. See how stain and sealer stand up to freeze-thaw, sun, and humidity, then request a written estimate." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

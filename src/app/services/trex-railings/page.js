@@ -17,7 +17,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/trex-railings",
-  title: "Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades",
+  title: "Trex Railings in Loudoun County | Loudoun Decks",
   description: "Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish.",
   image: "/social/trex-railings-service-social.png",
 });
@@ -108,7 +108,7 @@ const faqs = [
 export default function TrexRailingsPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/trex-railings" name="Trex Railings With Cocktail Top Loudoun VA | Custom Deck Upgrades" description="Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/trex-railings" name="Trex Railings in Loudoun County | Loudoun Decks" description="Upgrade your deck with modern Trex railing systems and a custom cocktail top in Northern Virginia. Perfect for entertaining and adding a premium finish." speakable />
       <ServiceSchema
         name="Trex Railing Installation"
         description="Trex composite and aluminum railing systems for Northern Virginia decks. Signature, Select, and Transcend rail lines."

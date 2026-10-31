@@ -12,8 +12,8 @@ import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/pool-deck-builder-northern-virginia',
-  title: 'Pool Deck Builder in Northern Virginia | Composite & Paver Pool Decks',
-  description: 'Custom pool decks NoVA: composite (priced in a written estimate), pavers (priced in a written estimate), stamped concrete (priced in a written estimate). Code-compliant. Free estimate.',
+  title: 'Pool Deck Builder in Northern Virginia | Loudoun Decks',
+  description: 'Pool deck builder in Northern Virginia for composite, pavers, and stamped concrete. Plan the surround for the site and request a written estimate.',
   image: '/social/pool-deck-builder-northern-virginia-social.png',
 });
 
@@ -32,7 +32,7 @@ export default function PoolDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/pool-deck-builder-northern-virginia" name="Pool Deck Builder in Northern Virginia | Composite &amp; Paver Pool Decks" description="Custom pool decks NoVA: composite (priced in a written estimate), pavers (priced in a written estimate), stamped concrete (priced in a written estimate). Code-compliant. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/pool-deck-builder-northern-virginia" name="Pool Deck Builder in Northern Virginia | Composite &amp; Paver Pool Decks" description="Pool deck builder in Northern Virginia for composite, pavers, and stamped concrete. Plan the surround for the site and request a written estimate." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>

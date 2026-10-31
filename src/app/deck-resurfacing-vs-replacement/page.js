@@ -17,7 +17,7 @@ import ArticleSchema from '@/components/ArticleSchema';
 export const metadata = buildMetadata({
   path: '/deck-resurfacing-vs-replacement',
   title: 'Deck Resurfacing vs Replacement',
-  description: 'Resurface a written estimate (keep frame) or replace a written estimate. When each makes sense, inspection guide, and Northern Virginia cost examples.',
+  description: 'Deck resurfacing versus replacement in Northern Virginia. Learn when a sound frame can stay and when soft framing or layout changes call for a rebuild.',
   image: '/social/deck-resurfacing-vs-replacement-social.png',
 });
 

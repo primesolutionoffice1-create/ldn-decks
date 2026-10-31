@@ -17,7 +17,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import ExteriorCleaningAuthority from '@/components/ExteriorCleaningAuthority';
 export const metadata = buildMetadata({
   path: "/services/house-siding-washing",
-  title: "Professional House Siding Washing NoVA | Safe Exterior Cleaning",
+  title: "House Siding Washing in Northern VA | Loudoun Decks",
   description: "Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement.",
   image: "/social/house-siding-washing-service-social.png",
 });
@@ -77,7 +77,7 @@ const expansionSections = [
 export default function HouseSidingWashingPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/house-siding-washing" name="Professional House Siding Washing NoVA | Safe Exterior Cleaning" description="Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/house-siding-washing" name="House Siding Washing in Northern VA | Loudoun Decks" description="Restore your home's curb appeal with professional house siding washing in Northern Virginia. We safely remove dirt, mold, and algae from vinyl and fiber cement." speakable />
       <ServiceSchema
         name="House Siding Washing"
         description="Professional house siding washing in Northern Virginia — safely removing dirt, mold, and algae from vinyl and fiber cement siding."

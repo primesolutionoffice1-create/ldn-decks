@@ -12,7 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-lighting-ideas-northern-virginia',
   title: 'Deck Lighting Ideas (Northern VA)',
-  description: '8 deck lighting options: post caps, stair risers, under-rail, string lights, recessed, landscape. Costs from a written estimate. Transform your deck for evening use.',
+  description: 'Deck lighting ideas for Northern Virginia: post caps, stair risers, under-rail lights, and recessed fixtures planned before the boards go down.',
   image: '/social/deck-lighting-ideas-northern-virginia-social.png',
 });
 
@@ -31,7 +31,7 @@ export default function DeckLightingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-lighting-ideas-northern-virginia" name="Deck Lighting Ideas (Northern VA)" description="8 deck lighting options: post caps, stair risers, under-rail, string lights, recessed, landscape. Costs from a written estimate. Transform your deck for evening use." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-lighting-ideas-northern-virginia" name="Deck Lighting Ideas (Northern VA)" description="Deck lighting ideas for Northern Virginia: post caps, stair risers, under-rail lights, and recessed fixtures planned before the boards go down." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>

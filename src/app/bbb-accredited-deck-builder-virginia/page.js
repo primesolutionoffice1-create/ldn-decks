@@ -12,8 +12,8 @@ import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/bbb-accredited-deck-builder-virginia',
-  title: 'BBB Accredited Deck Builder in Northern Virginia | Loudoun Decks',
-  description: 'Verify Loudoun Decks on BBB and review public profile details, licensing references, deck services, and Northern Virginia service areas.',
+  title: 'BBB Accredited Deck Builder in Virginia | Loudoun Decks',
+  description: 'Verify Loudoun Decks on BBB and review public profile details, licensing references, deck services, and the Northern Virginia service areas.',
   image: '/social/bbb-accredited-deck-builder-social.png',
 });
 
@@ -25,7 +25,7 @@ const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "BBB Accredited Deck Builder in Northern Virginia",
-  "description": "Verify Loudoun Decks on BBB and review public profile details, licensing references, deck services, and Northern Virginia service areas.",
+  "description": "Verify Loudoun Decks on BBB and review public profile details, licensing references, deck services, and the Northern Virginia service areas.",
   "url": "https://ldndecks.com/bbb-accredited-deck-builder-virginia",
   "isPartOf": { "@type": "WebSite", "@id": "https://ldndecks.com/#website" },
   "about": { "@id": "https://ldndecks.com/#organization" }
@@ -115,7 +115,7 @@ const cities = [
 export default function BBBPage() {
   return (
     <>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/bbb-accredited-deck-builder-virginia" name="BBB Accredited Deck Builder in Northern Virginia | Loudoun Decks" description="Verify Loudoun Decks on BBB and review public profile details, licensing references, deck services, and Northern Virginia service areas." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/bbb-accredited-deck-builder-virginia" name="BBB Accredited Deck Builder in Virginia | Loudoun Decks" description="Verify Loudoun Decks on BBB and review public profile details, licensing references, deck services, and the Northern Virginia service areas." speakable />
       <JsonLd data={webPageSchema} />
       <JsonLd data={faqSchema} />
 

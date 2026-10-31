@@ -14,7 +14,7 @@ import CallLink from '@/components/CallLink';
 export const metadata = buildMetadata({
   path: '/second-story-deck-builder-northern-virginia',
   title: 'Second Story Deck Builder | Elevated Decks in NoVA',
-  description: 'Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs (a written estimate), and safety requirements explained.',
+  description: 'Second-story and elevated deck builder in Northern Virginia. See how engineering, permits, guards, and stairs shape a written estimate for the project.',
   image: '/social/second-story-deck-builder-northern-virginia-social.png',
 });
 
@@ -43,7 +43,7 @@ export default function SecondStoryDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/second-story-deck-builder-northern-virginia" name="Second Story Deck Builder | Elevated Decks in NoVA" description="Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs (a written estimate), and safety requirements explained." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/second-story-deck-builder-northern-virginia" name="Second Story Deck Builder | Elevated Decks in NoVA" description="Second-story and elevated deck builder in Northern Virginia. See how engineering, permits, guards, and stairs shape a written estimate for the project." speakable />
       <ArticleSchema
         title="Second Story Deck Builder in Northern Virginia: Elevated Decks Explained"
         description="Everything you need to know about building a second-story or elevated deck in Northern Virginia. Engineering, permits, costs, safety, and under-deck living."

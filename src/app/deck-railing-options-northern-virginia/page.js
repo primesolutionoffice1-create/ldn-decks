@@ -12,7 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-railing-options-northern-virginia',
   title: 'Deck Railing Options for Northern Virginia',
-  description: 'Compare deck railing options: composite, aluminum, cable, glass, and wood. Prices from a written estimate/linear ft installed. Virginia code requirements included.',
+  description: 'Compare composite, aluminum, cable, glass, and wood deck railings in Northern Virginia, plus guard rules for a new deck or a full replacement.',
   image: '/social/deck-railing-options-northern-virginia-social.png',
 });
 
@@ -32,7 +32,7 @@ export default function DeckRailingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-railing-options-northern-virginia" name="Deck Railing Options for Northern Virginia" description="Compare deck railing options: composite, aluminum, cable, glass, and wood. Prices from a written estimate/linear ft installed. Virginia code requirements included." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-railing-options-northern-virginia" name="Deck Railing Options for Northern Virginia" description="Compare composite, aluminum, cable, glass, and wood deck railings in Northern Virginia, plus guard rules for a new deck or a full replacement." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>

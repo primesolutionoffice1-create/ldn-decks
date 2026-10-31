@@ -13,8 +13,8 @@ import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
   path: '/outdoor-kitchen-builder-northern-virginia',
-  title: 'Outdoor Kitchen Builder in Northern Virginia | Design & Build',
-  description: 'Custom outdoor kitchens in Northern Virginia from a written estimate. Grill islands, pizza ovens, bars, full kitchens. Permits handled. Free estimate.',
+  title: 'Outdoor Kitchen Builder in Northern Virginia | LDN Decks',
+  description: 'Outdoor kitchen builder in Northern Virginia. Grill islands, bars, and full kitchens are planned with the permit path and a written estimate.',
   image: '/social/outdoor-kitchen-builder-northern-virginia-social.png',
 });
 
@@ -35,7 +35,7 @@ export default function OutdoorKitchenPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/outdoor-kitchen-builder-northern-virginia" name="Outdoor Kitchen Builder in Northern Virginia | Design &amp; Build" description="Custom outdoor kitchens in Northern Virginia from a written estimate. Grill islands, pizza ovens, bars, full kitchens. Permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/outdoor-kitchen-builder-northern-virginia" name="Outdoor Kitchen Builder in Northern Virginia | Design &amp; Build" description="Outdoor kitchen builder in Northern Virginia. Grill islands, bars, and full kitchens are planned with the permit path and a written estimate." speakable />
       <ServiceSchema
         name="Outdoor Kitchen Construction"
         description="Custom outdoor kitchen design and build in Northern Virginia. Built-in grills, bars, pizza ovens, countertops, and island configurations."

@@ -16,7 +16,7 @@ import { COVERAGE_SENTENCE } from '@/lib/serviceArea';
 export const metadata = buildMetadata({
   path: '/deck-resurfacing-northern-virginia',
   title: 'Deck Resurfacing in Northern Virginia',
-  description: 'Premium deck resurfacing in Northern Virginia. Keep your existing frame, install new composite boards & railings. Typical projects a written estimate. Free inspection.',
+  description: 'Deck resurfacing in Northern Virginia. Keep a sound frame, install new boards and railings, and confirm the structure is fit to reuse first.',
   image: '/social/deck-resurfacing-northern-virginia-social.png',
 });
 
@@ -97,7 +97,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
       <WebPageSchema dateModified="2026-10-18"
         url="https://ldndecks.com/deck-resurfacing-northern-virginia"
         name="Deck Resurfacing in Northern Virginia"
-        description="Premium deck resurfacing in Northern Virginia. Keep your existing frame, install new composite boards & railings. Typical projects a written estimate. Free inspection."
+        description="Deck resurfacing in Northern Virginia. Keep a sound frame, install new boards and railings, and confirm the structure is fit to reuse first."
         speakable
       />
 

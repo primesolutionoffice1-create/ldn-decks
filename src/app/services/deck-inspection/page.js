@@ -91,15 +91,15 @@ const faqs = [
 
 export const metadata = buildMetadata({
   path: "/services/deck-inspection",
-      title: "Deck Inspection Loudoun VA | a written estimate Safety Audit | LDN Decks",
-  description: "Ensure your outdoor space is safe with a professional a written estimate deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards.",
+      title: "Deck Inspection in Loudoun County | Loudoun Decks",
+  description: "Deck inspection in Loudoun County and Northern Virginia. We check the ledger, posts, joists, railings, and stairs for rot, settling, and safety hazards.",
   image: "/social/deck-inspection-service-social.png",
 });
 
 export default function DeckInspectionPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/deck-inspection" name="Deck Inspection Loudoun VA | a written estimate Safety Audit | LDN Decks" description="Ensure your outdoor space is safe with a professional a written estimate deck inspection in Northern Virginia. We identify hidden structural rot, foundational settling, and safety hazards." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/deck-inspection" name="Deck Inspection in Loudoun County | Loudoun Decks" description="Deck inspection in Loudoun County and Northern Virginia. We check the ledger, posts, joists, railings, and stairs for rot, settling, and safety hazards." speakable />
       <ServiceSchema
         name="Deck Safety Inspection"
         description="Professional structural deck inspection in Northern Virginia. Ledger board, posts, joists, railings checked."
@@ -110,7 +110,7 @@ export default function DeckInspectionPage() {
       />
       <ServicesHeader
         subtext="Deck Inspection Services"
-        title="Comprehensive Deck Inspection for a written estimate"
+        title="Deck Inspection in Loudoun County"
         description="Ensure the safety, structural integrity, and longevity of your deck with our professional inspection services. We identify hidden rot, structural issues, and potential safety hazards."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
@@ -205,7 +205,7 @@ export default function DeckInspectionPage() {
       <Testimonials />
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/services/deck-inspection" />
-      <SimpleCTA title="Schedule Your a written estimate Deck Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
+      <SimpleCTA title="Schedule Your Deck Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

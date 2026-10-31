@@ -12,7 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/deck-enclosure-ideas-northern-virginia',
   title: 'Deck Enclosure Ideas (Northern VA)',
-  description: 'Enclose your existing deck: screens (a written estimate), EZE-Breeze 3-season (a written estimate), full sunroom (a written estimate). Extend outdoor season to 9-10 months.',
+  description: 'Deck enclosure ideas for Northern Virginia: screens, three-season rooms, and sunrooms. See how each option changes use, structure, and the permit path.',
   image: '/social/deck-enclosure-ideas-northern-virginia-social.png',
 });
 
@@ -31,7 +31,7 @@ export default function DeckEnclosurePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-enclosure-ideas-northern-virginia" name="Deck Enclosure Ideas (Northern VA)" description="Enclose your existing deck: screens (a written estimate), EZE-Breeze 3-season (a written estimate), full sunroom (a written estimate). Extend outdoor season to 9-10 months." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-enclosure-ideas-northern-virginia" name="Deck Enclosure Ideas (Northern VA)" description="Deck enclosure ideas for Northern Virginia: screens, three-season rooms, and sunrooms. See how each option changes use, structure, and the permit path." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Enclosure Ideas for Northern Virginia</h1>

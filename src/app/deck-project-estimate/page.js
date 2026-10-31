@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 
 export const metadata = buildMetadata({
   path: "/deck-project-estimate",
-  title: "Request a Northern Virginia Deck Consultation | Loudoun Decks",
+  title: "Request a Deck Consultation | Loudoun Decks",
   description: "Tell Loudoun Decks about your new deck, replacement, composite, covered deck, screened porch, or structural repair project in Northern Virginia.",
   image: "/og-default.webp",
   noIndex: true,

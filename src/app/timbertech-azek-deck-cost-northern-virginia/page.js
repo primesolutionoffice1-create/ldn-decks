@@ -16,7 +16,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/timbertech-azek-deck-cost-northern-virginia',
   title: 'TimberTech & AZEK Deck Cost: Premium PVC Budget Guide (2026)',
-  description: 'TimberTech and AZEK decks are priced in a written estimate. This page does not publish an APR, a warranty term, or a monthly payment.',
+  description: 'TimberTech and AZEK deck planning in Northern Virginia. Compare premium PVC options and request a written estimate. No monthly payment is published here.',
   image: '/social/timbertech-azek-deck-cost-northern-virginia-social.png',
 });
 
@@ -118,13 +118,13 @@ export default function TimberTechAzekDeckCostPage() {
       <JsonLd data={faqSchema} />
       <ArticleSchema
         title="TimberTech & AZEK Deck Cost: Premium PVC Budget Guide (2026)"
-        description="TimberTech and AZEK decks are priced in a written estimate. This page does not publish an APR, a warranty term, or a monthly payment."
+        description="TimberTech and AZEK deck planning in Northern Virginia. Compare premium PVC options and request a written estimate. No monthly payment is published here."
         path={PATH}
         image="/showcase/img22.jpg"
         datePublished="2026-05-27"
         dateModified="2026-10-18"
       />
-      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="TimberTech &amp; AZEK Deck Cost: Premium PVC Budget Guide (2026)" description="TimberTech and AZEK decks are priced in a written estimate. This page does not publish an APR, a warranty term, or a monthly payment." speakable />
+      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="TimberTech &amp; AZEK Deck Cost: Premium PVC Budget Guide (2026)" description="TimberTech and AZEK deck planning in Northern Virginia. Compare premium PVC options and request a written estimate. No monthly payment is published here." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>

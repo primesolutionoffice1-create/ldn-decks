@@ -16,7 +16,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: "/services/trex-calm-shell",
-  title: "Trex Clam Shell Deck Resurfacing Loudoun VA | Clean Modern Looks",
+  title: "Trex Clam Shell Resurfacing | Loudoun Decks",
   description: "Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing & installation.",
   image: "/social/trex-clam-shell-service-social.png",
 });
@@ -63,7 +63,7 @@ const whyLdnDecks = [
 export default function TrexCalmShellPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/trex-calm-shell" name="Trex Clam Shell Deck Resurfacing Loudoun VA | Clean Modern Looks" description="Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing &amp; installation." speakable />
+      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/services/trex-calm-shell" name="Trex Clam Shell Resurfacing | Loudoun Decks" description="Upgrade your existing deck with a fresh, modern look using Trex Clam Shell composite decking in Northern Virginia. Expert resurfacing &amp; installation." speakable />
       <ServiceSchema
         name="Trex Calm Shell Decking"
         description="Trex Calm Shell color installation and showcase for Northern Virginia decks. Premium composite decking in a warm beige tone."
