@@ -16,6 +16,8 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { PVC_QUOTED, QUOTE_SOURCE, REVIEWED_ISO, REVIEWED_LABEL } from '@/lib/quotedPrices';
 export const metadata = buildMetadata({
   path: "/services/under-deck-patios",
   title: "Under Deck Patio Systems Loudoun VA | Waterproofing & Ceilings",
@@ -77,7 +79,7 @@ const whyLdnDecks = [
 const faqs = [
   {
     q: "How much does an under deck patio system cost in Northern Virginia?",
-    a: "Under deck patio systems in Loudoun County and Fairfax County typically priced in a written estimate per square foot installed, putting a 300 sq ft project is priced in a written estimate. The final cost depends on the drainage system chosen, ceiling finish, lighting, and whether electrical work is needed."
+    a: `${QUOTE_SOURCE} ${PVC_QUOTED} Other under-deck patio systems depend on the drainage system, ceiling finish, lighting, and electrical work. The written estimate after a site visit is the only project price.`
   },
   {
     q: "What is the RainEscape drainage system and how does it work?",
@@ -104,7 +106,7 @@ const faqs = [
 export default function UnderDeckPatiosPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/under-deck-patios" name="Under Deck Patio Systems Loudoun VA | Waterproofing &amp; Ceilings" description="Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. Turn your under-deck space into a dry, stylish patio." speakable />
+      <WebPageSchema dateModified={REVIEWED_ISO} url="https://ldndecks.com/services/under-deck-patios" name="Under Deck Patio Systems Loudoun VA | Waterproofing &amp; Ceilings" description="Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. A PVC under-deck ceiling was $3,872–$5,632 in recent Loudoun Decks quotes." speakable />
       <ServiceSchema
         name="Under-Deck Patio Systems"
         description="Dry under-deck patio construction in Northern Virginia. Ceiling drainage systems that create usable space beneath elevated decks."
@@ -121,7 +123,8 @@ export default function UnderDeckPatiosPage() {
       />
       <AboveFoldCTA headline="Under-deck patio or dry-deck system in Northern Virginia? Talk to a NoVA outdoor-living specialist today." />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
+        <QuotedPricesBlock paragraphs={[PVC_QUOTED]} />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated={REVIEWED_LABEL} />
       </section>
       <ServiceMain
         subtitle="Double Your Outdoor Living Space"

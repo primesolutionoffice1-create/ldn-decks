@@ -12,13 +12,15 @@ import WebPageSchema from '@/components/WebPageSchema';
 import { buildMetadata } from '@/lib/seo';
 import { WRITTEN_ESTIMATE } from '@/lib/publicPricing';
 import { COMPOSITE_PLANNING_ROWS, NEW_COMPOSITE_ANSWER, PLANNING_DISCLAIMER } from '@/lib/externalPlanningRanges';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { OPEN_DECK_QUOTED, QUOTE_SOURCE, REVIEWED_ISO, REVIEWED_LABEL, SIZE_400 } from '@/lib/quotedPrices';
 
 const path = '/composite-deck-cost-northern-virginia';
-const updated = '2026-10-19';
-const description = 'External 2026 benchmarks put a simple composite deck near $35–$80 per sq ft. Planning ranges only. A written estimate is the only project price.';
+const updated = REVIEWED_ISO;
+const description = 'Loudoun Decks 2026 quoted prices: a new open deck about $61–$102 per sq ft, most around $64–$68. External benchmarks are labeled below. A written estimate is the only project price.';
 export const metadata = buildMetadata({ path, title: 'How Much Does a Composite Deck Cost in Northern Virginia?', description, image: '/social/composite-deck-cost-northern-virginia-social.png' });
 
-const quickAnswer = NEW_COMPOSITE_ANSWER;
+const quickAnswer = `${QUOTE_SOURCE} ${OPEN_DECK_QUOTED} External benchmarks: ${NEW_COMPOSITE_ANSWER}`;
 
 const S = {
   container: { width: '100%', maxWidth: 960, margin: '0 auto', padding: '0 1.25rem', minWidth: 0 },
@@ -38,7 +40,7 @@ const answers = [
 ];
 
 const faqs = [
-  { q: 'How much does a 20x20 composite deck cost in Northern Virginia?', a: `A 20x20 deck is 400 square feet. External 2026 planning benchmarks for a simple, low-height composite deck with standard railing and without complex stairs are about $14,000–$32,000, or $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026). Permits, demolition, elevation, and complex stairs are excluded from that range. ${WRITTEN_ESTIMATE}` },
+  { q: 'How much does a 20x20 composite deck cost in Northern Virginia?', a: `A 20x20 deck is 400 square feet. ${QUOTE_SOURCE} ${OPEN_DECK_QUOTED} ${SIZE_400} External benchmarks for a simple, low-height composite deck with standard railing and without complex stairs are about $14,000–$32,000, or $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026). Permits, demolition, elevation, and complex stairs are excluded from that external range. Those external figures are not Loudoun Decks prices. ${WRITTEN_ESTIMATE}` },
   { q: 'Does the calculator include railings and stairs?', a: 'The calculator records the options you select. It does not calculate a dollar total. The planning table’s new-composite row includes a standard perimeter railing and excludes complex stairs, elevation, demolition, and permits. Railing length, stair height, and local permit fees still have to be itemized in a written estimate.' },
   { q: 'Is a manufacturer material estimate the same as an installed quote?', a: 'No. A material estimate covers its listed products and assumptions. The Trex material calculator explicitly separates labor. An installed proposal should also identify demolition, structure, labor, stairs, railings, permits and cleanup as applicable. Compare the included quantities and exclusions before comparing the totals.' },
   { q: 'Can the existing frame reduce the cost?', a: 'Reusing a suitable frame can reduce the work compared with rebuilding it, but eligibility depends on an inspection and the proposed design. New decking does not correct deteriorated framing, inadequate connections or unsuitable joist spacing. Ask for separate resurfacing and replacement scopes when both remain feasible after evaluation.' },
@@ -85,9 +87,9 @@ export default function CompositeDeckCostPage() {
         <div style={S.container}>
           <h2 style={S.h2}>How much should you budget for a composite deck?</h2>
           <p style={S.p}>{quickAnswer}</p>
-          <p style={{ ...S.p, fontSize: '0.9rem' }}>By Loudoun Decks Team. Updated October 19, 2026: added cited external planning ranges. Loudoun Decks prices remain a written estimate only.</p>
+          <p style={{ ...S.p, fontSize: '0.9rem' }}>Last reviewed: {REVIEWED_LABEL}. Quoted prices are from Loudoun Decks&apos; recent written quotes. External benchmarks are labeled below.</p>
           <nav aria-label="Composite deck cost topics" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-            {[['#planning-ranges', 'Planning ranges'], ['#calculator', 'Calculator'], ['#cost-by-size', 'Cost by size'], ['#composite-estimate-routing', 'Compare quotes'], ['#trex-vs-timbertech', 'Materials'], ['#faqs', 'Questions']].map(([href, label]) => <a key={href} href={href} style={S.link}>{label}</a>)}
+            {[['#loudoun-decks-quoted-prices', 'Quoted prices'], ['#planning-ranges', 'External benchmarks'], ['#calculator', 'Calculator'], ['#cost-by-size', 'Cost by size'], ['#composite-estimate-routing', 'Compare quotes'], ['#trex-vs-timbertech', 'Materials'], ['#faqs', 'Questions']].map(([href, label]) => <a key={href} href={href} style={S.link}>{label}</a>)}
           </nav>
         </div>
       </section>
@@ -105,9 +107,15 @@ export default function CompositeDeckCostPage() {
         </div>
       </section>
 
+      <section id="loudoun-decks-quoted-prices" style={S.section}>
+        <div style={S.container}>
+          <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED]} />
+        </div>
+      </section>
+
       <section id="planning-ranges" style={S.section}>
         <div style={S.container}>
-          <h2 style={S.h2}>External planning ranges for a composite deck</h2>
+          <h2 style={S.h2}>External benchmarks for a composite deck</h2>
           <p style={S.p}>{PLANNING_DISCLAIMER}</p>
           <div style={{ overflowX: 'auto' }} tabIndex={0} role="region" aria-label="External composite deck planning ranges">
             <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff' }}>

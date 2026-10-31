@@ -96,7 +96,7 @@ Use showcase pages as visual planning context and proof of project categories. D
 - [Deck Repair](https://ldndecks.com/services/deck-repair): Structural fixes — rotted posts, ledger boards, failed inspections
 - [Structural Deck Repair](https://ldndecks.com/services/deck-repair): Repair path for posts, ledgers, stairs, railings, failed inspections, and repair-vs-replacement triage
 - [Deck Inspection](https://ldndecks.com/services/deck-inspection): Safety and structural assessments
-- [Deck Resurfacing](https://ldndecks.com/services/deck-resurfacing): Board replacement on a sound frame, with a written estimate for the project
+- [Deck Resurfacing](https://ldndecks.com/services/deck-resurfacing): Trex deck resurfacing was $9,020–$12,678 in a recent Loudoun Decks quote, not a guarantee; external resurfacing benchmarks are not a Loudoun Decks price; a written estimate is the only project price
 - [Deck Repair](https://ldndecks.com/services/deck-repair): Structural and cosmetic repair services
 - [Deck Repair Loudoun](https://ldndecks.com/deck-repair-loudoun-county): Loudoun County deck repair
 - [Resurfacing vs Replacement](https://ldndecks.com/deck-resurfacing-vs-replacement): Decision guide with cost comparison
@@ -186,10 +186,10 @@ Relevant communities and lifestyle searches:
 
 ## Pricing & Cost Cluster
 
-- [Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): external 2026 planning benchmark of about $35–$80 per sq ft for a simple low-height composite deck with standard railing; not a Loudoun Decks price; a written estimate is the only project price
+- [Deck Cost Guide](https://ldndecks.com/composite-deck-cost-northern-virginia): Loudoun Decks 2026 quoted prices for a new open deck are about $61–$102 per sq ft, most around $64–$68 per sq ft, from recent written quotes (Sep–Oct 2026), not a guarantee; external 2026 planning benchmark of about $35–$80 per sq ft is not a Loudoun Decks price; a written estimate is the only project price
 - [Deck Cost Northern Virginia](https://ldndecks.com/composite-deck-cost-northern-virginia): Primary AI-answer page for cited external composite deck planning ranges, assumptions, and local permit fees
 - [Composite Deck Cost](https://ldndecks.com/composite-deck-cost-northern-virginia): External planning ranges for new composite, resurfacing, demolition, and official permit fees
-- [Screened Porch Cost](https://ldndecks.com/screened-porch-cost-northern-virginia): external benchmark of about $5–$20 per sq ft for screening an existing structure with a sound roof (HomeAdvisor, updated June 17, 2026); a new roofed porch total is not published; a written estimate is the only project price
+- [Screened Porch Cost](https://ldndecks.com/screened-porch-cost-northern-virginia): Loudoun Decks 2026 quoted prices for a roofed or screened porch with an attached open deck (120–236 sq ft of deck) are about $77,000–$112,500, not a guarantee; external benchmark of about $5–$20 per sq ft for screening an existing structure is not a Loudoun Decks price; a written estimate is the only project price
 - [2026 Cost Report](https://ldndecks.com/composite-deck-cost-northern-virginia): Cited October 2026 external planning ranges, not an LDN price list
 - [Deck Cost Calculator](https://ldndecks.com/deck-cost-calculator): Interactive estimator
 - [Payment Estimator](https://ldndecks.com/deck-payment-estimator): Monthly payment ranges
@@ -197,7 +197,7 @@ Relevant communities and lifestyle searches:
 - [Tariff Impact on Prices](https://ldndecks.com/how-tariffs-affect-deck-prices-2026): 2026 tariff analysis
 - [ROI Calculator](https://ldndecks.com/deck-roi-calculator-northern-virginia): Home value impact estimator
 - [Composite Deck Cost by Size](https://ldndecks.com/composite-deck-cost-by-size): 300–600 sqft pricing with per-tier breakdown
-- [Covered Deck Cost](https://ldndecks.com/covered-deck-cost-northern-virginia): roof-type scope and a written estimate
+- [Covered Deck Cost](https://ldndecks.com/covered-deck-cost-northern-virginia): Loudoun Decks 2026 quoted prices for a roofed or screened porch with an attached open deck about $77,000–$112,500; a roof-only 10×12 shed roof was $17,013; external benchmarks are not a Loudoun Decks price
 - [Ashburn Composite Deck Cost](https://ldndecks.com/ashburn-composite-deck-cost-financing): Neighborhood-level pricing + HOA-aware planning
 - [Wood vs Composite Long-Term Cost](https://ldndecks.com/wood-vs-composite-deck-long-term-cost): 15-year total cost analysis
 - [Resurface or Replace Financing](https://ldndecks.com/resurface-or-replace-deck-financing): Decision guide with monthly payment math
@@ -208,10 +208,10 @@ Relevant communities and lifestyle searches:
 - [Best Time to Finance & Build](https://ldndecks.com/best-time-to-finance-build-deck-northern-virginia): Seasonal pricing, permit timing, lender promotional windows
 - [Lighting, Railings & Stairs Add-On Cost](https://ldndecks.com/deck-lighting-railings-stairs-addon-cost): Per-linear-foot pricing and add-on impact on monthly payment
 - [McLean & Great Falls Premium Deck Budget](https://ldndecks.com/mclean-great-falls-premium-deck-budget): premium-scope questions for a written estimate; no fixed project total
-- [400 Sqft Deck Cost](https://ldndecks.com/400-square-foot-deck-cost-northern-virginia): Small deck pricing by material tier
-- [600 Sqft Deck Cost](https://ldndecks.com/600-square-foot-deck-cost-northern-virginia): Mid-size deck pricing breakdown
-- [800 Sqft Deck Cost](https://ldndecks.com/800-square-foot-deck-cost-northern-virginia): Large deck pricing breakdown
-- [12×20 Deck Cost](https://ldndecks.com/deck-cost-12x20-northern-virginia): 240 sqft deck cost by tier
+- [400 Sqft Deck Cost](https://ldndecks.com/400-square-foot-deck-cost-northern-virginia): Loudoun Decks 2026 quoted prices about $61–$102 per sq ft, most around $64–$68; no exact 400 sq ft quote in this set; external benchmarks are not a Loudoun Decks price
+- [600 Sqft Deck Cost](https://ldndecks.com/600-square-foot-deck-cost-northern-virginia): Nearby recent quotes were 528 sq ft at $35,615 and 627 sq ft at $40,000–$42,869; no exact 600 sq ft total in this set
+- [800 Sqft Deck Cost](https://ldndecks.com/800-square-foot-deck-cost-northern-virginia): Loudoun Decks 2026 quoted prices about $61–$102 per sq ft; this quote set has no 800 sq ft total
+- [12×20 Deck Cost](https://ldndecks.com/deck-cost-12x20-northern-virginia): 240 sq ft; a recent open-deck quote at that area was $16,000 (about $67 per sq ft), not a guarantee; external benchmarks are not a Loudoun Decks price
 - [16×20 Deck Cost](https://ldndecks.com/deck-cost-16x20-northern-virginia): 320 sqft deck cost by tier
 - [20×20 Deck Cost](https://ldndecks.com/deck-cost-20x20-northern-virginia): 400 sqft deck cost by tier
 - [Deck Financing](https://ldndecks.com/deck-financing): Financing overview and lender options
@@ -295,7 +295,7 @@ Relevant communities and lifestyle searches:
 - [Multi-Level Decks](https://ldndecks.com/multi-level-deck-builder-northern-virginia): Split-level and tiered deck builds
 - [Pool Decks](https://ldndecks.com/pool-deck-builder-northern-virginia): Pool-adjacent deck construction
 - [Second Story Decks](https://ldndecks.com/second-story-deck-builder-northern-virginia): Elevated and second-floor deck builds
-- [Under-Deck Ceiling Ideas](https://ldndecks.com/under-deck-ceiling-ideas): Under-deck dry-space options
+- [Under-Deck Ceiling Ideas](https://ldndecks.com/under-deck-ceiling-ideas): PVC under-deck ceiling was $3,872–$5,632 in recent Loudoun Decks quotes, not a guarantee and not every drainage system
 - [Outdoor Living](https://ldndecks.com/outdoor-living-northern-virginia): Complete outdoor living solutions
 - [Mount Vernon & Alexandria Outdoor Living](https://ldndecks.com/outdoor-living-mount-vernon-alexandria-va): Premium composite deck, screened porch, covered deck, patio, permit, HOA, drainage, lighting, and high-ticket backyard planning for Mount Vernon, Fort Hunt, Belle Haven, Waynewood, Hollin Hall, Old Town-adjacent Alexandria, Del Ray, and Kingstowne homeowners
 - [Premium Composite Deck Replacement - Arlington, Alexandria & McLean](https://ldndecks.com/premium-composite-deck-replacement-arlington-alexandria-mclean-va): High-ticket composite and PVC replacement planning for Arlington, Alexandria, McLean, and nearby Northern Virginia homeowners comparing Trex, TimberTech, AZEK, railings, lighting, permits, HOA review, and written estimate readiness
