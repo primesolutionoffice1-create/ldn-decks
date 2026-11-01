@@ -72,7 +72,7 @@ const expansionSections = [
     title: "One Community, One Design Review Committee",
     paragraphs: [
       "South Riding is a single master-planned community of roughly 7,000 homes, all governed by South Riding Proprietary (SRP). Unlike areas with dozens of small HOAs, every exterior modification in South Riding goes through one Design Review Committee (DRC). The DRC cares about materials, colors and how a structure fits the community's visual standards, and it meets on a fixed schedule rather than reviewing on demand.",
-      "That fixed schedule means timing the submission correctly is as important as getting the drawings right. We prepare the full DRC package  -  site plan, material samples, color specifications  -  to match what the committee expects, and we submit early enough to land on the right agenda. Verified South Riding project examples should be added only after owner-supplied photos, scope, date, and DRC details are available.",
+      "That fixed schedule means timing the submission correctly is as important as getting the drawings right. We prepare the full DRC package  -  site plan, material samples, color specifications  -  to match what the committee expects, and we submit early enough to land on the right agenda.",
       "Working with one governing body rather than many also means we know the DRC's patterns. Certain composite colors and railing styles have a strong approval track record in South Riding, and we steer material selection toward those proven choices from the first design meeting."
     ]
   },

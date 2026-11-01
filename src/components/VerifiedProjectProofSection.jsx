@@ -67,18 +67,15 @@ const styles = {
 };
 
 export default function VerifiedProjectProofSection({ compact = false }) {
-  const { projects, reviewSources, skippedCount } = getVerifiedProofSummary();
+  const { projects } = getVerifiedProofSummary();
 
   if (!projects.length) {
     return (
       <section style={styles.section} aria-label="Verified project evidence status">
-        <p style={styles.eyebrow}>Verified project evidence</p>
-        <h2 style={styles.title}>Formal case studies are added after project records are confirmed.</h2>
+        <p style={styles.eyebrow}>Project case studies</p>
+        <h2 style={styles.title}>Detailed case studies are on the way.</h2>
         <p style={styles.text}>
-          We publish formal case studies only after scope, date, material selection, photo linkage, and permit or HOA status are confirmed in the evidence ledger. Current photo galleries may show transformations with verification notes; they are not treated as formal case studies until that review is complete.
-        </p>
-        <p style={{ ...styles.muted, margin: 0 }}>
-          Current verified project case studies: <strong>0</strong>. Public profile sources available for citation: <strong>{reviewSources.length}</strong>. Records awaiting owner evidence: <strong>{skippedCount}</strong>.
+          We publish a case study only after the project&apos;s scope, date, materials, photos, and permit or HOA status are documented. Until then, browse our project galleries or ask us for references from recent work near you.
         </p>
       </section>
     );
@@ -86,10 +83,10 @@ export default function VerifiedProjectProofSection({ compact = false }) {
 
   return (
     <section style={styles.section} aria-label="Verified project case studies">
-      <p style={styles.eyebrow}>Verified project evidence</p>
+      <p style={styles.eyebrow}>Project case studies</p>
       <h2 style={styles.title}>{compact ? 'Verified case studies' : 'Verified Northern Virginia case studies'}</h2>
       <p style={styles.text}>
-        These case studies are generated only from records marked verified in the evidence ledger.
+        Each case study below is based on a documented project record: scope, date, materials, photos, and permit status.
       </p>
       <div style={styles.grid}>
         {projects.map((project) => (

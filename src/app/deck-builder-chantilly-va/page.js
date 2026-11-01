@@ -74,7 +74,7 @@ const expansionSections = [
     title: "Why Chantilly Homeowners Choose Loudoun Decks",
     paragraphs: [
       "Chantilly neighborhoods each have unique characteristics and guidelines. We plan around Route 50 corridor site conditions, Fairfax County permit expectations, HOA requirements, and local building codes so the deck design fits the home and review path.",
-      "Chantilly project scopes often include multi-level TimberTech decks, screened porch additions near Pleasant Valley, and backyard transformations with Trex Transcend decks and under-deck patios. Specific project examples should be added only from verified owner-supplied evidence."
+      "Chantilly project scopes often include multi-level TimberTech decks, screened porch additions near Pleasant Valley, and backyard transformations with Trex Transcend decks and under-deck patios."
     ]
   },
   {

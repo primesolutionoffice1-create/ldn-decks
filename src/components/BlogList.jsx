@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { blogPosts } from '@/lib/blogData';
+import { getBlogPostPath } from '@/lib/blogRoutes';
 import styles from './BlogList.module.css';
 
 // SVG Icons for social sharing
@@ -42,7 +43,7 @@ export default function BlogList() {
         <div className={styles.grid}>
           {sortedPosts.map(post => (
             <div key={post.slug} className={styles.blogCard}>
-              <Link href={post.canonicalPath || `/blog/${post.slug}`} className={styles.imgLink}>
+              <Link href={getBlogPostPath(post)} className={styles.imgLink}>
                 <div className={styles.imgWrapper}>
                   <Image src={post.image} alt={post.title} fill className={styles.cardImg} sizes="(max-width: 900px) 100vw, 45vw" />
                 </div>
@@ -55,14 +56,14 @@ export default function BlogList() {
                    <span className={styles.author}>{post.author}</span>
                  </div>
                  
-                 <Link href={post.canonicalPath || `/blog/${post.slug}`} className={styles.titleLink}>
+                 <Link href={getBlogPostPath(post)} className={styles.titleLink}>
                    <h2 className={styles.title}>{post.title}</h2>
                  </Link>
                  
                  <p className={styles.excerpt}>{post.excerpt}</p>
                  
                  <div className={styles.cardFooter}>
-                   <Link href={post.canonicalPath || `/blog/${post.slug}`} className={styles.readMoreBtn}>
+                   <Link href={getBlogPostPath(post)} className={styles.readMoreBtn}>
                      Read Article
                    </Link>
                    

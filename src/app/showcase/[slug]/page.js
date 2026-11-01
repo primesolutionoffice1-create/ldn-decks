@@ -98,7 +98,7 @@ function getProjectPlanningNotes(project, related) {
   const faqs = [
     {
       q: `Is this ${related.cityName} project a verified case study?`,
-      a: 'This page is a public gallery record. It should not be used as a formal case study until project scope, photos, date, location, and owner permission are verified in the evidence ledger.',
+      a: 'No. This page is a photo gallery record, not a formal case study. We publish case studies only after the project scope, photos, date, location, and homeowner permission are documented.',
     },
     {
       q: `Can Loudoun Decks build a similar project in ${related.cityName}?`,

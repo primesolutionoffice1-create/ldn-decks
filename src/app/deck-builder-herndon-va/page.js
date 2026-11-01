@@ -75,7 +75,7 @@ const expansionSections = [
     title: "Why Herndon Homeowners Choose Loudoun Decks",
     paragraphs: [
       "Herndon neighborhoods \u2014 from the historic districts to newer developments near the Innovation Center \u2014 each have unique characteristics and guidelines. We plan around Town of Herndon, Fairfax County, HOA, and site constraints so the deck design complements the home while meeting local building codes.",
-      "Herndon project scopes often include multi-level TimberTech decks, screened porch additions near downtown, and backyard transformations with Trex Transcend decks and under-deck patios. Specific project examples should be added only from verified owner-supplied evidence."
+      "Herndon project scopes often include multi-level TimberTech decks, screened porch additions near downtown, and backyard transformations with Trex Transcend decks and under-deck patios."
     ]
   },
   {
