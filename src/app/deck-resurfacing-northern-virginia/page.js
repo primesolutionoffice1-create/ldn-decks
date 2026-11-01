@@ -77,9 +77,9 @@ const S = {
 };
 
 const counties = [
-  { name: 'Loudoun County', cities: 'Ashburn, Leesburg, Brambleton, South Riding, Sterling, Purcellville' },
-  { name: 'Fairfax County', cities: 'Fairfax, Reston, Herndon, Vienna, McLean, Great Falls, Oakton, Centreville, Chantilly' },
-  { name: 'Prince William County', cities: 'Haymarket, Gainesville, Bristow, Manassas' },
+  { name: 'Loudoun County', href: '/deck-resurfacing-loudoun-county', cities: 'Ashburn, Leesburg, Brambleton, South Riding, Sterling, Purcellville' },
+  { name: 'Fairfax County', href: '/deck-resurfacing-fairfax-county', cities: 'Fairfax, Reston, Herndon, Vienna, McLean, Great Falls, Oakton, Centreville, Chantilly' },
+  { name: 'Prince William County', href: '/deck-resurfacing-prince-william-county', cities: 'Haymarket, Gainesville, Bristow, Manassas' },
   { name: 'Arlington & Alexandria', cities: 'Arlington, Alexandria, Falls Church' },
 ];
 
@@ -222,7 +222,7 @@ export default function DeckResurfacingNorthernVirginiaPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {counties.map((c) => (
               <div key={c.name} style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.25rem' }}>
-                <h3 style={{ fontWeight: 700, marginBottom: '0.5rem' }}>{c.name}</h3>
+                <h3 style={{ fontWeight: 700, marginBottom: '0.5rem' }}>{c.href ? <Link href={c.href} style={{ color: 'var(--color-primary)' }}>{c.name}</Link> : c.name}</h3>
                 <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: 1.6 }}>{c.cities}</p>
               </div>
             ))}

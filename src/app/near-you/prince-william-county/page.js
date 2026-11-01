@@ -17,6 +17,8 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CountyConversionLinks from '@/components/CountyConversionLinks';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { OPEN_DECK_QUOTED } from '@/lib/quotedPrices';
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -88,7 +90,9 @@ export default function PrinceWilliamCountyPage() {
         ]}
         links={[
           { href: '/deck-permit-prince-william-county-virginia', label: 'Prince William permit guide' },
-          { href: '/deck-builder-manassas-va', label: 'Manassas decks' },
+          { href: '/screened-porch-contractor-prince-william-county', label: 'Prince William screened porch contractor' },
+          { href: '/patio-contractor-prince-william-county', label: 'Prince William patio contractor' },
+          { href: '/deck-resurfacing-prince-william-county', label: 'Prince William deck resurfacing' },
           { href: '/get-estimate', label: 'Get a Prince William estimate' }
         ]}
       />
@@ -129,12 +133,13 @@ export default function PrinceWilliamCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County may require building permits for decks over 200 sqft or 30 inches above grade. Review timing depends on scope and county workload. We help homeowners plan the permit path, submission requirements, plan-review coordination, and inspection milestones before construction begins.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Prince William County</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>A written estimate is the price for a Prince William County project. Size, structure, access, and material change the number, so this page does not publish a fixed range or a percentage comparison with other counties.</p>
+          <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED]} />
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We install Trex and TimberTech decking and work with both as partner brands. Those quotes are recent Northern Virginia open-deck prices, not a Prince William percentage. A written estimate is still the only project price.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects by Area</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Manassas and Manassas Park:</strong> These are independent cities next to the county, not county communities. The <Link href="/deck-builder-manassas-va">Manassas deck page</Link> covers city projects. County projects use the Prince William permit office.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Gainesville & Haymarket:</strong> New construction decks on recently built homes in Heritage Hunt, Dominion Valley, and Piedmont communities. Multi-level designs for walkout basements are especially popular on the rolling terrain.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Woodbridge and Lake Ridge:</strong> <Link href="/screened-porch-builder-northern-virginia">Screened porch additions</Link> and <Link href="/services/under-deck-patios">under-deck patio systems</Link> are common requests. The estimate names the product and the price.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Woodbridge and Lake Ridge:</strong> <Link href="/screened-porch-contractor-prince-william-county">Screened porch additions</Link> and <Link href="/patio-contractor-prince-william-county">under-deck patio systems</Link> are common requests. The estimate names the product and the price.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Bristow & Nokesville:</strong> Large estate decks with panoramic views, outdoor kitchens, and fire pit integration. The larger lot sizes in western Prince William allow for expansive outdoor living packages.</p>
         </div>
       </article>
@@ -188,6 +193,9 @@ export default function PrinceWilliamCountyPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Explore Our Services</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porch-contractor-prince-william-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Contractor in Prince William County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/patio-contractor-prince-william-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Patio Contractor in Prince William County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-prince-william-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Resurfacing in Prince William County →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/about" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>About Loudoun Decks →</Link></li>

@@ -17,6 +17,8 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CountyConversionLinks from '@/components/CountyConversionLinks';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { OPEN_DECK_QUOTED } from '@/lib/quotedPrices';
 
 const LocationIcon = () => (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -90,7 +92,9 @@ export default function FairfaxCountyPage() {
         ]}
         links={[
           { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
-          { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
+          { href: '/patio-contractor-fairfax-county', label: 'Fairfax County patio contractor' },
+          { href: '/deck-resurfacing-fairfax-county', label: 'Fairfax County deck resurfacing' },
+          { href: '/screened-porches/fairfax', label: 'Screened porch builder in Fairfax' },
           { href: '/get-estimate', label: 'Get a Fairfax County estimate' }
         ]}
       />
@@ -138,6 +142,8 @@ export default function FairfaxCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks handles the <strong>entire Fairfax County permit process</strong> including structural drawings, FIDO submission, and inspector coordination. We build to meet or exceed Fairfax County&apos;s typical deck detail specifications and address review comments when they arise.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Fairfax County (2026)</h3>
+          <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED]} />
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We install Trex and TimberTech decking and work with both as partner brands. The quoted range above is for recent Northern Virginia open-deck quotes. It is not a separate Fairfax County rate. The table below does not add one.</p>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead><tr style={{ background: '#f5f5f5' }}><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Cost Range</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Timeline</th></tr></thead>
@@ -216,6 +222,11 @@ export default function FairfaxCountyPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Explore Our Services</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/patio-contractor-fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Patio Contractor in Fairfax County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Resurfacing in Fairfax County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porches/fairfax" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Builder in Fairfax →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/services/patios" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Patio Service →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Resurfacing Service →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>

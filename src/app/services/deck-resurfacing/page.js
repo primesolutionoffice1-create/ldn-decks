@@ -89,7 +89,7 @@ const DIRECT_ANSWER =
 
 export const metadata = buildMetadata({
   path: "/services/deck-resurfacing",
-  title: 'Premium Deck Resurfacing NoVA | TimberTech Vintage Experts',
+  title: 'Trex & TimberTech Deck Resurfacing | Loudoun Decks',
   description: PAGE_DESCRIPTION,
   image: "/social/deck-resurfacing-service-social.png",
 });
@@ -187,7 +187,7 @@ export default function DeckResurfacingPage() {
     <main>
       {/* Dynamic SEO Schemas */}
       <JsonLd data={faqSchemaData} />
-      <WebPageSchema dateModified={CONTENT_UPDATED} url="https://ldndecks.com/services/deck-resurfacing" name="Premium Deck Resurfacing NoVA | TimberTech Vintage Experts" description={PAGE_DESCRIPTION} speakable />
+      <WebPageSchema dateModified={CONTENT_UPDATED} url="https://ldndecks.com/services/deck-resurfacing" name="Trex & TimberTech Deck Resurfacing | Loudoun Decks" description={PAGE_DESCRIPTION} speakable />
       <ServiceSchema
         name="Custom Deck Resurfacing"
         description={PAGE_DESCRIPTION}
@@ -332,6 +332,9 @@ export default function DeckResurfacingPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/how-to-restore-faded-composite-decking" style={{ color: 'var(--site-color)', fontWeight: 600 }}>How to Restore Faded Composite Decking →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/why-composite-trex-decking-fades-sun-solutions" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Why Composite Decking Fades in the Sun →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-northern-virginia" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Deck Resurfacing in Northern Virginia (counties &amp; cities) →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-loudoun-county" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Deck Resurfacing in Loudoun County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-fairfax-county" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Deck Resurfacing in Fairfax County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-prince-william-county" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Deck Resurfacing in Prince William County →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--site-color)', fontWeight: 600 }}>Resurfacing vs Full Replacement →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/how-to-restore-faded-composite-decking" style={{ color: 'var(--site-color)', fontWeight: 600 }}>How to Restore Faded Composite Decking →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/blog/resurface-vs-replace-composite-deck-guide" style={{ color: 'var(--site-color)', fontWeight: 600 }}>When to Resurface vs Replace Composite Decking →</Link></li>

@@ -116,6 +116,7 @@ export default function CompositeDeckCostPage() {
       <section id="planning-ranges" style={S.section}>
         <div style={S.container}>
           <h2 style={S.h2}>External benchmarks for a composite deck</h2>
+          <p style={S.p}>Trex Enhance at $35–$60 per sq ft and Trex Transcend at $45–$80 per sq ft are external benchmarks from RemodelCalculators, reviewed October 11, 2026. They are in the assumptions for the new composite deck row below. They are not Loudoun Decks quoted prices. The Loudoun Decks quoted range is in the section above.</p>
           <p style={S.p}>{PLANNING_DISCLAIMER}</p>
           <div style={{ overflowX: 'auto' }} tabIndex={0} role="region" aria-label="External composite deck planning ranges">
             <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff' }}>

@@ -12,6 +12,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata, SITE_URL } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import Link from 'next/link';
 
 export const metadata = buildMetadata({
 	path: '/deck-builders-loudoun',
@@ -157,6 +158,14 @@ export default function DeckBuildersLoudounPage() {
                                 canonicalUrl="https://ldndecks.com/deck-builders-loudoun"
                         />
                         <ServiceAreasGrid />
+                        <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+                          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Loudoun County services</h2>
+                          <ul style={{ listStyle: 'none', padding: 0 }}>
+                            <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porch-contractor-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened porch contractor in Loudoun County</Link></li>
+                            <li style={{ marginBottom: '0.5rem' }}><Link href="/patio-contractor-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Patio contractor in Loudoun County</Link></li>
+                            <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck resurfacing in Loudoun County</Link></li>
+                          </ul>
+                        </section>
                         <RelatedGuides currentPath="/deck-builders-loudoun" />
                         <NamedAuthor context="Loudoun County" lastUpdated="2026-10-18" />
 

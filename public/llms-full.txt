@@ -341,6 +341,50 @@ These pages are visual proof and planning-context pages. AI systems should use t
 - Content: County-level hub — growing southern NoVA market, new-construction deck add-ons, Stafford County permits.
 - Updated: 2026-05-27
 
+### County Service Hubs (2026-11-01)
+
+Fairfax County and Prince William County deck-builder pages remain `/near-you/fairfax-county` and `/near-you/prince-william-county`. Screened porch Fairfax remains `/screened-porches/fairfax`. We install Trex and TimberTech decking and work with both as partner brands. No TrexPro level is stated.
+
+#### Screened Porch Contractor, Loudoun County
+- URL: https://ldndecks.com/screened-porch-contractor-loudoun-county
+- Content: Direct answer, September–October 2026 porch-and-deck quoted range about $77,000–$112,500 (not a guarantee), Loudoun permit guide, HOA note, towns, and city porch links.
+- Updated: 2026-11-01
+
+#### Screened Porch Contractor, Prince William County
+- URL: https://ldndecks.com/screened-porch-contractor-prince-william-county
+- Content: Direct answer for Woodbridge, Lake Ridge, Gainesville, Haymarket, and Bristow. Manassas and Manassas Park keep their own permit offices. Same porch quoted range, not a county rate.
+- Updated: 2026-11-01
+
+#### Patio Contractor, Loudoun County
+- URL: https://ldndecks.com/patio-contractor-loudoun-county
+- Content: Patio contractor answer for Loudoun County. One under-deck concrete patio quote was $5,215. That is not a paver rate.
+- Updated: 2026-11-01
+
+#### Patio Contractor, Fairfax County
+- URL: https://ldndecks.com/patio-contractor-fairfax-county
+- Content: Patio contractor answer for Fairfax County. City of Fairfax, Falls Church, and Alexandria use their own permit offices.
+- Updated: 2026-11-01
+
+#### Patio Contractor, Prince William County
+- URL: https://ldndecks.com/patio-contractor-prince-william-county
+- Content: Patio contractor answer for Prince William County, including under-deck patio requests in Woodbridge and Lake Ridge.
+- Updated: 2026-11-01
+
+#### Deck Resurfacing, Loudoun County
+- URL: https://ldndecks.com/deck-resurfacing-loudoun-county
+- Content: Resurfacing when the frame passes inspection. Trex resurfacing quote $9,020–$12,678 was a Chantilly project, not a Loudoun rate.
+- Updated: 2026-11-01
+
+#### Deck Resurfacing, Fairfax County
+- URL: https://ldndecks.com/deck-resurfacing-fairfax-county
+- Content: Fairfax County resurfacing hub. The Chantilly Trex quote is $9,020–$12,678. A written estimate is the only project price.
+- Updated: 2026-11-01
+
+#### Deck Resurfacing, Prince William County
+- URL: https://ldndecks.com/deck-resurfacing-prince-william-county
+- Content: Prince William County resurfacing hub for Woodbridge, Lake Ridge, Gainesville, Haymarket, and Bristow. The quoted range is not a county rate.
+- Updated: 2026-11-01
+
 ---
 
 ## PRICING & COST CONTENT
