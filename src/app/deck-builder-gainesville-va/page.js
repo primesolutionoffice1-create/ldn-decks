@@ -18,6 +18,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-gainesville-va',
@@ -112,7 +113,7 @@ export default function DeckBuilderGainesvillePage() {
   return (
     <main>
       <LocalBusinessSchema city="Gainesville" url="https://ldndecks.com/deck-builder-gainesville-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-gainesville-va" name="Deck Builder in Gainesville, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Gainesville, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-gainesville-va" name="Deck Builder in Gainesville, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Gainesville, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Gainesville, VA's Trusted Deck Company"
         title="Custom Deck Builder in Gainesville, VA"
@@ -194,7 +195,8 @@ export default function DeckBuilderGainesvillePage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Gainesville" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Gainesville" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-gainesville-va" />
-      <NamedAuthor context="Gainesville and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Gainesville and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="prince-william-county" />
       <ContactHome />
     </main>
   );

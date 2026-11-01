@@ -17,6 +17,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-haymarket-va',
@@ -112,7 +113,7 @@ export default function DeckBuilderHaymarketPage() {
   return (
     <main>
       <LocalBusinessSchema city="Haymarket" url="https://ldndecks.com/deck-builder-haymarket-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-haymarket-va" name="Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots" description="Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William permit planning support. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-haymarket-va" name="Deck Builder in Haymarket VA | Multi-Level Decks for Sloped Lots" description="Deck builder in Haymarket, VA. Multi-level composite decks for sloped lots and mountain views  -  Dominion Valley, Piedmont, Heathcote, Winterwood. Prince William permit planning support. Free estimate." speakable />
       <ServicesHeader
         subtext="Haymarket, VA's Trusted Deck Company"
         title="Custom Deck Builder in Haymarket, VA"
@@ -193,7 +194,8 @@ export default function DeckBuilderHaymarketPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Haymarket" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Haymarket" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-haymarket-va" />
-      <NamedAuthor context="Haymarket and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Haymarket and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="prince-william-county" />
       <ContactHome />
     </main>
   );

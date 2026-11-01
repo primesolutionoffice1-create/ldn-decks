@@ -17,6 +17,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import { buildMetadata } from '@/lib/seo';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 const PATH = '/deck-builder-cascades-va';
 const URL = `https://ldndecks.com${PATH}`;
@@ -108,7 +109,7 @@ export default function DeckBuilderCascadesPage() {
     <main>
       <LocalBusinessSchema city="Cascades" url={URL} />
       <WebPageSchema
-        dateModified="2026-07-18"
+        dateModified="2026-11-01"
         url={URL}
         name="Deck Builder in Cascades, VA | Potomac Falls Decks"
         description="Cascades, VA deck builder for composite replacement, Cascades HOA planning, Loudoun County permits, railings, stairs, lighting, and written estimates."
@@ -203,7 +204,8 @@ export default function DeckBuilderCascadesPage() {
       </section>
       <ServiceAreasGrid />
       <RelatedGuides currentPath={PATH} />
-      <NamedAuthor context="Cascades, Potomac Falls, Sterling, and Loudoun County deck replacement planning" lastUpdated="2026-07-18" />
+      <NamedAuthor context="Cascades, Potomac Falls, Sterling, and Loudoun County deck replacement planning" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="loudoun-county" />
       <ContactHome />
     </main>
   );

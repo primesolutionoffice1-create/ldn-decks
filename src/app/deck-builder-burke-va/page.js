@@ -18,6 +18,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-burke-va',
@@ -106,7 +107,7 @@ export default function DeckBuilderBurkePage() {
   return (
     <main>
       <LocalBusinessSchema city="Burke" url="https://ldndecks.com/deck-builder-burke-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-burke-va" name="Deck Builder in Burke, VA | Composite Decks | Loudoun Decks" description="Deck builder in Burke, VA. Custom Trex composite decks replacing aging wood in Burke Centre, Lakewood Hills &amp; Rolling Valley. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-burke-va" name="Deck Builder in Burke, VA | Composite Decks | Loudoun Decks" description="Deck builder in Burke, VA. Custom Trex composite decks replacing aging wood in Burke Centre, Lakewood Hills &amp; Rolling Valley. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Burke, VA's Trusted Deck Company"
         title="Custom Deck Builder in Burke, VA"
@@ -199,7 +200,8 @@ export default function DeckBuilderBurkePage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Burke" /></div></section>
       <SimpleCTA title="Replace Your Aging Burke Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-burke-va" />
-      <NamedAuthor context="Burke and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Burke and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
     </main>
   );

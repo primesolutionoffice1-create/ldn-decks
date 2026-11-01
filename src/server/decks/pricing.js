@@ -1,5 +1,6 @@
-// Voice-agent material list. Loudoun Decks has no owner-approved public price
-// ledger, so this module does not return dollar ranges.
+// Voice-agent material list. This module does not calculate a project total.
+// The spoken line cites the owner-approved quoted range in src/lib/quotedPrices.js.
+import { OPEN_DECK_RANGE, QUOTE_LABEL } from '../../lib/quotedPrices';
 //
 // Materials the caller may name: PT Wood, Cedar, Trex Select, Trex Transcend,
 // Trex Lineage, TimberTech, Azek.
@@ -36,7 +37,7 @@ export function priceRange({ material, sqft, complexity = 'moderate', cableRailL
     complexity,
     cableRailLinearFeet: Number(cableRailLinearFeet) || 0,
     priced: false,
-    spoken: 'Loudoun Decks does not publish a fixed range. Request a written estimate for this project.',
+    spoken: `${QUOTE_LABEL}. ${OPEN_DECK_RANGE} Those are quoted prices, not a price for this project. Request a written estimate.`,
   };
 }
 

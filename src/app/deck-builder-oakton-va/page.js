@@ -20,6 +20,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-oakton-va',
@@ -126,7 +127,7 @@ export default function OaktonDeckBuilderPage() {
     <main>
       <JsonLd data={oaktonFaqSchema} />
       <LocalBusinessSchema city="Oakton" url="https://ldndecks.com/deck-builder-oakton-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-oakton-va" name="Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks" description="Custom deck builder in Oakton, VA. Google reviews. Trex Transcend &amp; TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-oakton-va" name="Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks" description="Custom deck builder in Oakton, VA. Google reviews. Trex Transcend &amp; TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate." speakable />
       <ServicesHeader
         subtext="Oakton, VA's Premium Deck Builder"
         title="Custom Deck Builder in Oakton, VA"
@@ -254,7 +255,8 @@ export default function OaktonDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Oakton" /></div></section>
       <SimpleCTA title="Build Your Premium Oakton Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-oakton-va" />
-      <NamedAuthor context="Oakton and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Oakton and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
     </main>
   );

@@ -17,6 +17,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-south-riding-va',
@@ -111,7 +112,7 @@ export default function SouthRidingDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="South Riding" url="https://ldndecks.com/deck-builder-south-riding-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-south-riding-va" name="Deck Builder in South Riding, VA | Custom Trex Decks" description="Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permit planning support. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-south-riding-va" name="Deck Builder in South Riding, VA | Custom Trex Decks" description="Deck builder in South Riding, VA. Composite decks built for South Riding Proprietary (SRP) Design Review Committee approval. Builder-grade upgrades, under-deck drainage, aluminum railings. Loudoun County permit planning support. Free estimate." speakable />
       <ServicesHeader
         subtext="South Riding, VA's Trusted Deck Company"
         title="Custom Deck Builder in South Riding, VA"
@@ -191,7 +192,8 @@ export default function SouthRidingDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="South Riding" /></div></section>
       <SimpleCTA title="Upgrade Your South Riding Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-south-riding-va" />
-      <NamedAuthor context="South Riding and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="South Riding and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="loudoun-county" />
       <ContactHome />
     </main>
   );

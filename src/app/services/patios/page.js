@@ -13,6 +13,7 @@ import JsonLd from '@/components/JsonLd';
 import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
+import { QUOTE_LABEL, UNDER_DECK_PATIO_QUOTED } from '@/lib/quotedPrices';
 
 export const metadata = buildMetadata({
   path: "/services/patios",
@@ -162,7 +163,7 @@ export default function PatiosPage() {
     <main>
       <JsonLd data={faqSchemaData} />
       <JsonLd data={materialItemListSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Virginia Class A patio contractor in Northern Virginia. Paver, stamped concrete, and stone patios. A written estimate is the project price." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Virginia Class A patio contractor in Northern Virginia. Paver, stamped concrete, and stone patios. A written estimate is the project price." speakable />
       <ServiceSchema
         name="Custom Patio Construction"
         description="Professional patio design and installation in Northern Virginia. Pavers, flagstone, stamped concrete, and natural stone patios."
@@ -190,7 +191,7 @@ export default function PatiosPage() {
             </p>
           </div>
 
-          <NamedAuthor context="Loudoun, Fairfax, Prince William and Arlington counties" lastUpdated="2026-10-18" />
+          <NamedAuthor context="Loudoun, Fairfax, Prince William and Arlington counties" lastUpdated="2026-11-01" />
 
           <h2 style={S.h2}>The Premier Patio Builder for Luxury Homes in Northern Virginia</h2>
           <p style={S.p}>
@@ -202,7 +203,7 @@ export default function PatiosPage() {
 
           <h2 style={S.h2}>2026 Patio Cost in Northern Virginia</h2>
           <p style={S.p}>
-            This page does not publish a patio price or a comparison with a national average. Permit documentation, labor, and the base and drainage for clay soil change the scope. The table below does not list dollar amounts. A written estimate is the project price.
+            {QUOTE_LABEL}: {UNDER_DECK_PATIO_QUOTED} That quote is not a paver, flagstone, or stamped-concrete range, and this page does not compare those materials with a national average. Permit documentation, labor, and the base and drainage for clay soil change the scope. The table below does not list dollar amounts. A written estimate is the project price. Last reviewed November 1, 2026.
           </p>
           <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', borderRadius: 8, overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>

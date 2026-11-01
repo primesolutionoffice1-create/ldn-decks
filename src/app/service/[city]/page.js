@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import LocalServicePage from '@/components/LocalServicePage';
 import { getCityBySlug, getLocalServiceParams, servicePageTypes, shouldIndexLocalServicePage } from '@/data/localServicePages';
 import { buildMetadata } from '@/lib/seo';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 const serviceKey = 'service';
 
@@ -26,6 +27,11 @@ export default async function Page({ params }) {
   const { city } = await params;
   const cityData = getCityBySlug(city);
   if (!cityData) notFound();
-  return <LocalServicePage city={cityData} serviceKey={serviceKey} />;
+  return (
+    <>
+      <LocalServicePage city={cityData} serviceKey={serviceKey} />
+      <CountyHubLinks countySlug={cityData.countySlug} />
+    </>
+  );
 }
 

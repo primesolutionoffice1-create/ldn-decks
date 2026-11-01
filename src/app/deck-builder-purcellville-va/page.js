@@ -18,6 +18,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-purcellville-va',
@@ -107,7 +108,7 @@ export default function PurcellvilleDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="Purcellville" url="https://ldndecks.com/deck-builder-purcellville-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-purcellville-va" name="Deck Builder in Purcellville, VA | Custom Trex & Cedar Decks" description="Deck builder in Purcellville, VA. Composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-purcellville-va" name="Deck Builder in Purcellville, VA | Custom Trex & Cedar Decks" description="Deck builder in Purcellville, VA. Composite and cedar decks for western Loudoun's larger lots and mountain views. Cable railings, pergolas, multi-level designs. Loudoun County permits handled. Free estimate." speakable />
       <ServicesHeader
         subtext="Purcellville, VA's Trusted Deck Company"
         title="Custom Deck Builder in Purcellville, VA"
@@ -199,7 +200,8 @@ export default function PurcellvilleDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Purcellville" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Purcellville" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-purcellville-va" />
-      <NamedAuthor context="Purcellville and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Purcellville and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="loudoun-county" />
       <ContactHome />
     </main>
   );

@@ -20,6 +20,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-reston-va',
@@ -114,7 +115,7 @@ export default function DeckBuilderRestonPage() {
   return (
     <main>
       <LocalBusinessSchema city="Reston" url="https://ldndecks.com/deck-builder-reston-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-reston-va" name="Expert Deck Builders in Reston VA | Custom Trex Decks" description="Deck builder in Reston, VA. Composite decks designed for wooded lots and Reston Association DRB review  -  Lake Anne, Lake Audubon, South Lakes, North Point. Fairfax County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-reston-va" name="Expert Deck Builders in Reston VA | Custom Trex Decks" description="Deck builder in Reston, VA. Composite decks designed for wooded lots and Reston Association DRB review  -  Lake Anne, Lake Audubon, South Lakes, North Point. Fairfax County permits handled. Free estimate." speakable />
       <ServicesHeader
         subtext="Reston, VA's Trusted Deck Company"
         title="Custom Deck Builder in Reston, VA"
@@ -241,7 +242,8 @@ export default function DeckBuilderRestonPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Reston" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Reston" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-reston-va" />
-      <NamedAuthor context="Reston and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Reston and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
     </main>
   );

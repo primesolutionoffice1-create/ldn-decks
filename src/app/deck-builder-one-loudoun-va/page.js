@@ -17,6 +17,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import { buildMetadata } from '@/lib/seo';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 const PATH = '/deck-builder-one-loudoun-va';
 const URL = `https://ldndecks.com${PATH}`;
@@ -108,7 +109,7 @@ export default function DeckBuilderOneLoudounPage() {
     <main>
       <LocalBusinessSchema city="One Loudoun" url={URL} />
       <WebPageSchema
-        dateModified="2026-07-18"
+        dateModified="2026-11-01"
         url={URL}
         name="Deck Builder in One Loudoun, VA | Ashburn Decks"
         description="One Loudoun deck builder for modern composite decks, townhome decks, rooftop terraces, HOA packets, Loudoun County permits, railings, lighting, and written estimates."
@@ -203,7 +204,8 @@ export default function DeckBuilderOneLoudounPage() {
       </section>
       <ServiceAreasGrid />
       <RelatedGuides currentPath={PATH} />
-      <NamedAuthor context="One Loudoun, Ashburn, and Loudoun County deck planning" lastUpdated="2026-07-18" />
+      <NamedAuthor context="One Loudoun, Ashburn, and Loudoun County deck planning" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="loudoun-county" />
       <ContactHome />
     </main>
   );

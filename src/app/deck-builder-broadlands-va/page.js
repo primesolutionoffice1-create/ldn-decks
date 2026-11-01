@@ -17,6 +17,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import { buildMetadata } from '@/lib/seo';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 const PATH = '/deck-builder-broadlands-va';
 const URL = `https://ldndecks.com${PATH}`;
@@ -108,7 +109,7 @@ export default function DeckBuilderBroadlandsPage() {
     <main>
       <LocalBusinessSchema city="Broadlands" url={URL} />
       <WebPageSchema
-        dateModified="2026-07-18"
+        dateModified="2026-11-01"
         url={URL}
         name="Deck Builder in Broadlands, VA | Composite Deck Replacement"
         description="Broadlands, VA deck builder for composite deck replacement, HOA packet planning, Loudoun County permits, railing upgrades, and written estimates."
@@ -203,7 +204,8 @@ export default function DeckBuilderBroadlandsPage() {
       </section>
       <ServiceAreasGrid />
       <RelatedGuides currentPath={PATH} />
-      <NamedAuthor context="Broadlands, Ashburn, and Loudoun County deck replacement planning" lastUpdated="2026-07-18" />
+      <NamedAuthor context="Broadlands, Ashburn, and Loudoun County deck replacement planning" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="loudoun-county" />
       <ContactHome />
     </main>
   );

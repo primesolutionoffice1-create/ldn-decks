@@ -17,6 +17,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import { buildMetadata } from '@/lib/seo';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 const PATH = '/deck-builder-aldie-va';
 const URL = `https://ldndecks.com${PATH}`;
@@ -108,7 +109,7 @@ export default function DeckBuilderAldiePage() {
     <main>
       <LocalBusinessSchema city="Aldie" url={URL} />
       <WebPageSchema
-        dateModified="2026-07-18"
+        dateModified="2026-11-01"
         url={URL}
         name="Deck Builder in Aldie, VA | Stone Ridge & Willowsford Decks"
         description="Aldie, VA deck builder for Stone Ridge, Willowsford, Route 50 communities, composite decks, screened porches, HOA packets, and Loudoun County permits."
@@ -203,7 +204,8 @@ export default function DeckBuilderAldiePage() {
       </section>
       <ServiceAreasGrid />
       <RelatedGuides currentPath={PATH} />
-      <NamedAuthor context="Aldie, Stone Ridge, Willowsford, and Loudoun County deck planning" lastUpdated="2026-07-18" />
+      <NamedAuthor context="Aldie, Stone Ridge, Willowsford, and Loudoun County deck planning" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="loudoun-county" />
       <ContactHome />
     </main>
   );

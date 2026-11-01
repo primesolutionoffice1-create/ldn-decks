@@ -17,6 +17,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-springfield-va',
@@ -106,7 +107,7 @@ export default function DeckBuilderSpringfieldPage() {
   return (
     <main>
       <LocalBusinessSchema city="Springfield" url="https://ldndecks.com/deck-builder-springfield-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-springfield-va" name="Deck Builder in Springfield, VA | Composite Decks | Loudoun Decks" description="Deck builder in Springfield, VA. Custom Trex &amp; composite decks for Kingstowne, West Springfield, Franconia &amp; Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-springfield-va" name="Deck Builder in Springfield, VA | Composite Decks | Loudoun Decks" description="Deck builder in Springfield, VA. Custom Trex &amp; composite decks for Kingstowne, West Springfield, Franconia &amp; Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Springfield, VA's Trusted Deck Company"
         title="Custom Deck Builder in Springfield, VA"
@@ -186,7 +187,8 @@ export default function DeckBuilderSpringfieldPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Springfield" /></div></section>
       <SimpleCTA title="Upgrade Your Springfield Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-springfield-va" />
-      <NamedAuthor context="Springfield and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Springfield and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
     </main>
   );
