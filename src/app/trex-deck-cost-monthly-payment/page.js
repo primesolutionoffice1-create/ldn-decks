@@ -13,11 +13,13 @@ import NamedAuthor from '@/components/NamedAuthor';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import { buildMetadata } from '@/lib/seo';
+import { PARTNER_SENTENCE } from '@/lib/partnerBrands';
+import { OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 
 export const metadata = buildMetadata({
   path: '/trex-deck-cost-monthly-payment',
   title: 'Trex Deck Cost vs Monthly Payment: 2026 Budget Guide',
-  description: 'Trex decks in Northern Virginia are priced in a written estimate. This page does not publish an example APR, a warranty term, or a monthly payment.',
+  description: `${QUOTE_LABEL}: a new open deck was about $61–$102 per sq ft in recent quotes. This page does not publish an example APR, a warranty term, or a monthly payment.`,
   image: '/social/trex-deck-cost-monthly-payment-social.png',
 });
 
@@ -115,9 +117,9 @@ export default function TrexDeckCostMonthlyPaymentPage() {
         path={PATH}
         image="/showcase/img11.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-10-18"
+        dateModified="2026-11-01"
       />
-      <WebPageSchema dateModified="2026-10-18" url={`https://ldndecks.com${PATH}`} name="Trex Deck Cost vs Monthly Payment: 2026 Budget Guide" description="Trex decks in Northern Virginia are priced in a written estimate. This page does not publish an example APR, a warranty term, or a monthly payment." speakable />
+      <WebPageSchema dateModified="2026-11-01" url={`https://ldndecks.com${PATH}`} name="Trex Deck Cost vs Monthly Payment: 2026 Budget Guide" description={`${QUOTE_LABEL}: a new open deck was about $61–$102 per sq ft in recent quotes. This page does not publish an example APR, a warranty term, or a monthly payment.`} speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={S.container}>
@@ -128,7 +130,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
             Trex Deck Cost vs Monthly Payment: What Northern Virginia Homeowners Should Budget
           </h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: 1.6 }}>
-            Trex collections are priced in a written estimate. This page does not publish an example APR or a monthly payment.
+            {QUOTE_LABEL}: {OPEN_DECK_RANGE} {PARTNER_SENTENCE} This page does not publish an example APR or a monthly payment. Last reviewed November 1, 2026.
           </p>
         </div>
       </section>
@@ -145,7 +147,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            This page does not publish a Trex project total, an example APR, or a monthly payment.
+            {QUOTE_LABEL}: {OPEN_DECK_RANGE} Those are quoted prices, not a total for one Trex collection, an example APR, or a monthly payment.
             Run the written estimate through the{' '}
             <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>
               deck payment estimator
@@ -157,11 +159,11 @@ export default function TrexDeckCostMonthlyPaymentPage() {
 
       <GeoAnswerBlock
         question="How much does a Trex deck cost per month in Northern Virginia?"
-        answer="This page does not publish a Trex project total, an example APR, or a monthly payment. The written estimate includes the tier, railing, stairs, lighting, frame work, permits, and HOA scope when those items apply. The lender sets the rate and the term."
+        answer={`${QUOTE_LABEL}: ${OPEN_DECK_RANGE} Those are quoted prices, not a total for one Trex collection, an example APR, or a monthly payment. The written estimate names the collection and includes railing, stairs, lighting, frame work, permits, and HOA scope when those items apply. The lender sets the rate and the term.`}
         facts={[
-          'Trex Enhance planning range: a written estimate per sqft installed',
-          'Trex Transcend planning range: a written estimate per sqft installed',
-          'Trex Signature planning range: a written estimate per sqft installed',
+          PARTNER_SENTENCE,
+          `${QUOTE_LABEL}: ${OPEN_DECK_RANGE}`,
+          'The recent quote set is not split by Trex collection. The written estimate names the collection.',
         ]}
         links={[
           { href: '/deck-payment-estimator', label: 'Deck payment estimator' },
@@ -202,7 +204,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
 
           <h2 style={{ ...S.h2, marginTop: 0 }}>Trex Cost by Tier — Northern Virginia (2026)</h2>
           <p style={S.p}>
-            Trex sells more than one residential collection. This page does not publish an installed price, a warranty term, or a monthly payment for any collection. The written estimate names the collection and the scope.
+            Trex sells more than one residential collection. {QUOTE_LABEL}: {OPEN_DECK_RANGE} That range is not split by collection. This page does not publish a warranty term or a monthly payment for any collection. The written estimate names the collection and the scope.
           </p>
 
           {tiers.map((t, i) => (
@@ -321,7 +323,7 @@ export default function TrexDeckCostMonthlyPaymentPage() {
         buttonText="Get Free Written Estimate"
         link="/get-estimate"
       />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-01" />
       <RelatedGuides currentPath={PATH} />
       <ContactHome />
     </>

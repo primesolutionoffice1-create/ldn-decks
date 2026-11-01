@@ -18,6 +18,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import { OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 import DecisionSupportSection from '@/components/DecisionSupportSection';
 import ArticleSchema from '@/components/ArticleSchema';
 import { PLANNING_DISCLAIMER, REPLACEMENT_RANGE_ANSWER, REPLACEMENT_TIMELINE } from '@/lib/externalPlanningRanges';
@@ -160,14 +161,14 @@ const replacementGeoAnswers = [
 export default function DeckReplacementPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-19" url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description={description} speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description={description} speakable />
       <ArticleSchema
         title="Deck Replacement in Northern Virginia"
         description="Deck replacement planning guide for Northern Virginia homeowners comparing repair, resurfacing, full rebuilds, structural code resets, local permit paths, composite materials, and written estimate routing."
         path="/services/deck-replacement"
         image="/social/deck-replacement-service-social.png"
         datePublished="2026-05-26"
-        dateModified="2026-10-19"
+        dateModified="2026-11-01"
         speakable={[
           '#deck-replacement-answer',
           '#deck-replacement-decision-support',
@@ -251,7 +252,7 @@ export default function DeckReplacementPage() {
       </div>
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-19" />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-11-01" />
       </section>
 
       <PlanningUpdate
@@ -384,8 +385,8 @@ export default function DeckReplacementPage() {
       <section style={{ backgroundColor: '#f9f9f9', padding: '24px 20px', borderBottom: '1px solid #eee' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', color: '#555', margin: 0 }}>
-            <strong style={{ color: '#222' }}>Loudoun Decks prices a full replacement only in a written estimate</strong>
-            {' '}— deck size, structural condition, materials, and railing upgrades affect that estimate.{' '}
+            <strong style={{ color: '#222' }}>{QUOTE_LABEL}: {OPEN_DECK_RANGE}</strong>
+            {' '}A full replacement is still priced in a written estimate after the site visit. Deck size, structural condition, materials, and railing upgrades change that estimate.{' '}
             <strong>Structural evaluation, permit guidance, and HOA coordination are confirmed in the written project scope.</strong>
           </p>
         </div>

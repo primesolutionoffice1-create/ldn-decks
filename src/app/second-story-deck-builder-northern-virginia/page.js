@@ -10,6 +10,9 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
+import { OPEN_DECK_RANGE, QUOTE_LABEL, SIZE_300 } from '@/lib/quotedPrices';
+
+const ELEVATED_COST_ANSWER = `A second-story deck costs more than a ground-level deck of the same size because of taller posts, deeper footings, extra bracing, and more railing. ${QUOTE_LABEL}: ${OPEN_DECK_RANGE} ${SIZE_300} Stairs, elevation, and railings can move a quote up. Those are quoted prices, not an elevation percentage and not a guarantee. The written estimate after a site visit is the only project price.`;
 
 export const metadata = buildMetadata({
   path: '/second-story-deck-builder-northern-virginia',
@@ -22,7 +25,7 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a second-story deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A second-story deck in Northern Virginia is priced in a written estimate depending on size, material, and complexity. A typical 300 sqft elevated composite deck is priced in a written estimate. Multi-level designs with under-deck living space can exceed a written estimate. The elevation premium adds 25-40% compared to a ground-level deck of the same size." } },
+    { "@type": "Question", name: "How much does a second-story deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: ELEVATED_COST_ANSWER } },
     { "@type": "Question", name: "Do second-story decks require engineering in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Yes. Virginia building code requires engineered plans for elevated structures, especially those exceeding 8 feet above grade. A licensed structural engineer must stamp the plans, which is priced in a written estimate depending on complexity. Engineering ensures proper load calculations, lateral bracing, and connection details for safety." } },
     { "@type": "Question", name: "What is the railing height requirement for a second-story deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Virginia building code requires 42-inch railings on any deck surface more than 30 inches above grade. Baluster spacing must not exceed 4 inches (so a 4-inch sphere cannot pass through). Guard posts must be anchored to resist a 200-pound lateral load. These requirements are strictly enforced for elevated decks." } },
     { "@type": "Question", name: "Can I create living space under my second-story deck?", acceptedAnswer: { "@type": "Answer", text: "Yes. Trex RainEscape or similar membrane systems capture water from the upper deck and channel it into gutters, creating a completely dry patio, outdoor living room, or storage area underneath. This effectively doubles your usable outdoor space. Cost for the drainage system adds a written estimate to the project." } },
@@ -43,14 +46,14 @@ export default function SecondStoryDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/second-story-deck-builder-northern-virginia" name="Second Story Deck Builder | Elevated Decks in NoVA" description="Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs (a written estimate), and safety requirements explained." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/second-story-deck-builder-northern-virginia" name="Second Story Deck Builder | Elevated Decks in NoVA" description="Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs (a written estimate), and safety requirements explained." speakable />
       <ArticleSchema
         title="Second Story Deck Builder in Northern Virginia: Elevated Decks Explained"
         description="Everything you need to know about building a second-story or elevated deck in Northern Virginia. Engineering, permits, costs, safety, and under-deck living."
         path="/second-story-deck-builder-northern-virginia"
         image="/images/img09.jpeg"
         datePublished="2026-04-26"
-        dateModified="2026-10-18"
+        dateModified="2026-11-01"
       />
 
       {/* Hero */}
@@ -310,7 +313,7 @@ export default function SecondStoryDeckBuilderPage() {
           {/* ===== SECTION 12: FAQs ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "How much does a second-story deck cost in Northern Virginia?", a: "a written estimate depending on size, material, and complexity. A typical 300 sqft elevated composite deck is priced in a written estimate. The elevation premium adds 25-40% over ground-level construction." },
+            { q: "How much does a second-story deck cost in Northern Virginia?", a: ELEVATED_COST_ANSWER },
             { q: "Do second-story decks require engineering?", a: "Yes. Virginia code requires PE-stamped engineered plans for elevated structures. Engineering is priced in a written estimate and ensures proper load calculations, bracing, and connection details. This is non-negotiable for safety." },
             { q: "What is the railing height for an elevated deck in Virginia?", a: "42 inches minimum for any deck surface more than 30 inches above grade. Baluster spacing must not exceed 4 inches. Guard posts must resist a 200-pound lateral load." },
             { q: "Can I create living space under my second-story deck?", a: "Yes. Trex RainEscape creates a completely dry space underneath for a written estimate additional. This gives you a covered patio, outdoor kitchen area, or storage that would otherwise are priced in a written estimate as a separate structure." },
@@ -345,7 +348,7 @@ export default function SecondStoryDeckBuilderPage() {
 
       <SimpleCTA title="Plan Your Elevated Deck Project" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/second-story-deck-builder-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-01" />
 
       <ContactHome />
     </>

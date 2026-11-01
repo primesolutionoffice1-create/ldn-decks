@@ -6,11 +6,12 @@ import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import { BUSINESS, FOUNDER_ID } from '@/lib/business';
+import { PARTNER_SENTENCE } from '@/lib/partnerBrands';
 
 export const metadata = buildMetadata({
   path: '/team',
   title: 'Our Team | Professional Deck Builders & Porch Specialists',
-  description: 'Meet the deck builders at LDN Decks. Virginia Class A licensed. Trex, TimberTech, and AZEK program status is not stated here.',
+  description: `Meet the deck builders at LDN Decks. Virginia Class A licensed. ${PARTNER_SENTENCE}`,
   image: '/social/team-social.png',
 });
 
@@ -44,8 +45,11 @@ export default function TeamPage() {
   return (
     <main>
       <JsonLd data={profilePageSchema} />
-      <WebPageSchema dateModified="2026-10-19" url="https://ldndecks.com/team" name="Our Team | Professional Deck Builders &amp; Porch Specialists" description="Meet the deck builders at LDN Decks. Virginia Class A licensed. Trex, TimberTech, and AZEK program status is not stated here." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/team" name="Our Team | Professional Deck Builders &amp; Porch Specialists" description={`Meet the deck builders at LDN Decks. Virginia Class A licensed. ${PARTNER_SENTENCE}`} speakable />
       <TeamHeader />
+      <p style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0', lineHeight: 1.7 }}>
+        {PARTNER_SENTENCE} Last reviewed <time dateTime="2026-11-01">November 1, 2026</time>.
+      </p>
       <TeamGrid />
       <ContactHome />
     </main>

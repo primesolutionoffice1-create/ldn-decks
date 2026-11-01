@@ -6,6 +6,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import { SERVICE_AREA_FAQ_ANSWER } from '@/lib/serviceArea';
+import { OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 
 export const metadata = buildMetadata({
   path: '/faqs',
@@ -17,7 +18,7 @@ export const metadata = buildMetadata({
 export default function FAQPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/faqs" name="Deck Building FAQs | Northern Virginia | Loudoun Decks" description="Answers to common questions about deck building, materials, permits, and HOA in Northern Virginia. Expert answers from Loudoun Decks." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/faqs" name="Deck Building FAQs | Northern Virginia | Loudoun Decks" description="Answers to common questions about deck building, materials, permits, and HOA in Northern Virginia. Expert answers from Loudoun Decks." speakable />
       <FAQHeader />
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -33,7 +34,7 @@ export default function FAQPage() {
         </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: 14 }}>
           {[
-            'A written estimate is the price for a specific property. This page does not publish one price for every deck.',
+            `${QUOTE_LABEL}: ${OPEN_DECK_RANGE} Those are quoted prices, not one price for every deck. Last reviewed November 1, 2026.`,
             'Resurfacing is a fit only when the existing frame is sound. The site visit decides that.',
             'The schedule depends on the scope and the permit office. The estimate states the timeline for that project.',
             'Footing depth follows the code that applies to the property. Confirm it on the plans, not from a ZIP code.',

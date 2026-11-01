@@ -18,7 +18,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import CountyConversionLinks from '@/components/CountyConversionLinks';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import QuotedPricesBlock from '@/components/QuotedPricesBlock';
-import { OPEN_DECK_QUOTED } from '@/lib/quotedPrices';
+import { OPEN_DECK_QUOTED, OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -51,7 +51,7 @@ const services = [
 
 const faqs = [
   { q: "Do you work throughout all of Prince William County?", a: "Yes. We serve homeowners in Prince William County, including Woodbridge, Dumfries, Haymarket, Gainesville, Bristow, Nokesville, Lake Ridge, Montclair, and Triangle. Manassas and Manassas Park are separate independent cities. We serve them too, and their permit offices are not the Prince William County office." },
-  { q: "How much does a new deck typically cost in Prince William County?", a: "The price depends on the property, the size, the structure, and the material. After a site visit, we provide a written estimate. This page does not publish one price or a percentage comparison for every Prince William project." },
+  { q: "How much does a new deck typically cost in Prince William County?", a: `${QUOTE_LABEL}: ${OPEN_DECK_RANGE} Those are quoted prices, not one price or a percentage comparison for every Prince William project. The written estimate after a site visit is the only project price.` },
   { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget. Composite upgrades from aging pressure-treated wood are a popular project in Manassas, Woodbridge, and Lake Ridge." },
   { q: "Do you help with permits for deck projects?", a: "Yes. Prince William County may require a permit for decks over 200 square feet or more than 30 inches above grade. We help homeowners identify permit triggers, plan submission requirements, coordinate plan-review questions, and understand inspection milestones before construction begins." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within a few weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
@@ -66,7 +66,7 @@ export default function PrinceWilliamCountyPage() {
         description="LDN Decks builds custom decks, porches, patios, pergolas, and outdoor living spaces throughout Prince William County, VA."
         url="https://ldndecks.com/near-you/prince-william-county"
       />
-      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/near-you/prince-william-county" name="Premium Deck Builder Prince William County VA | Free Quote" description="Professional deck contractor in Prince William County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/near-you/prince-william-county" name="Premium Deck Builder Prince William County VA | Free Quote" description="Professional deck contractor in Prince William County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Prince William County, VA"
@@ -186,7 +186,7 @@ export default function PrinceWilliamCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Prince William County" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Prince William County" lastUpdated="2026-11-01" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

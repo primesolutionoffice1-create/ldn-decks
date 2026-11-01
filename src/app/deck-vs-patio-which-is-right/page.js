@@ -8,6 +8,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import { OPEN_DECK_RANGE, QUOTE_LABEL, UNDER_DECK_PATIO_QUOTED } from '@/lib/quotedPrices';
 
 export const metadata = buildMetadata({
   path: '/deck-vs-patio-which-is-right',
@@ -17,7 +18,7 @@ export const metadata = buildMetadata({
 });
 
 const faqs = [
-  { q: "Is a deck or patio cheaper to build?", a: "It depends on size, base preparation, materials and site conditions, and we do not publish a fixed percentage difference. External 2026 benchmarks put a simple, low-height composite deck at $35–$80 per square foot installed (RemodelCalculators, reviewed October 11, 2026), about $10,500–$24,000 for 300 sq ft. These are national planning estimates, not Loudoun Decks prices. Your project price is set in a written estimate after a site visit." },
+  { q: "Is a deck or patio cheaper to build?", a: `It depends on size, base preparation, materials and site conditions, and we do not publish a fixed percentage difference. ${QUOTE_LABEL}: ${OPEN_DECK_RANGE} ${UNDER_DECK_PATIO_QUOTED} External 2026 benchmarks put a simple, low-height composite deck at $35–$80 per square foot installed (RemodelCalculators, reviewed October 11, 2026), about $10,500–$24,000 for 300 sq ft. These external figures are national planning estimates, not Loudoun Decks prices. The written estimate after a site visit is the only project price.` },
   { q: "Does a deck or patio add more value to a home?", a: "Resale value depends on the home, the lot and local market conditions, so we do not quote a fixed ROI percentage for either option. Decks suit elevated and walkout lots; ground-level patios suit flat lots and fire features." },
   { q: "Can you build both a deck and patio?", a: "Yes. A raised deck connected to a ground-level patio is a common layout. Whether a combined project costs less than two separate projects depends on shared site preparation and access; the written estimate shows the actual numbers." },
   { q: "Which lasts longer a deck or patio?", a: "A paver patio can last 25-50 years with minimal maintenance. A composite deck lasts 25-50 years. Pressure-treated wood decks last 10-15 years. For longevity, both composite decks and pavers are excellent." },
@@ -38,7 +39,7 @@ export default function DeckVsPatioPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-19" url="https://ldndecks.com/deck-vs-patio-which-is-right" name="Deck vs Patio: Which Is Right for You?" description="Deck vs patio cost, maintenance, ROI, and best use compared for Northern Virginia homeowners. We build both. Free consultation." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-vs-patio-which-is-right" name="Deck vs Patio: Which Is Right for You?" description="Deck vs patio cost, maintenance, ROI, and best use compared for Northern Virginia homeowners. We build both. Free consultation." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -75,7 +76,7 @@ export default function DeckVsPatioPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Factor', 'Deck (Composite)', 'Patio (Pavers)'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Cost (300 sqft)', 'About $10,500–$24,000 (external 2026 benchmark of $35–$80/sq ft; not a Loudoun Decks price)', 'Priced in a written estimate (no published range)'],
+                  ['Cost (300 sqft)', `${QUOTE_LABEL}: about $61–$102 per sq ft, most around $64–$68. A 300 sq ft total is not in that quote set. External benchmark about $10,500–$24,000 ($35–$80/sq ft; not a Loudoun Decks price).`, 'One under-deck concrete patio quote was $5,215 (Loudoun Decks 2026 quoted prices). That is not a paver range. Paver patios are priced in a written estimate.'],
                   ['Lifespan', '25–50 years', '25–50 years'],
                   ['Maintenance', 'Occasional wash', 'Re-leveling every 5–10 yrs, weed control'],
                   ['Best for', 'Elevated areas, dining, entertaining', 'Flat lots, fire pits, pool surrounds'],
@@ -118,7 +119,7 @@ export default function DeckVsPatioPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Cost Planning in Northern Virginia</h2>
           <p style={S.p}>For a simple, low-height composite deck with standard railing and without complex stairs or elevation, external 2026 benchmarks put installed cost at $35–$80 per square foot (<a href="https://remodelcalculators.com/deck-cost" target="_blank" rel="noopener noreferrer" style={S.link}>RemodelCalculators</a>, reviewed October 11, 2026; <a href="https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm" target="_blank" rel="noopener noreferrer" style={S.link}>Angi</a> lists $30–$60 per square foot for deck construction, updated September 24, 2026). For 300 sq ft that is about $10,500–$24,000. These are national planning estimates, not Loudoun Decks prices or quotes.</p>
           <p style={S.p}>Loudoun County requires building and zoning permits for all decks; the county&apos;s typical deck permit for decks under 1,000 sq ft outside incorporated towns is $265 (<a href="https://www.loudoun.gov/1166/Decks" target="_blank" rel="noopener noreferrer" style={S.link}>Loudoun County</a>, accessed October 18, 2026).</p>
-          <p style={S.p}>We do not publish ranges for paver, flagstone or stamped concrete patios or pressure-treated wood decks on this page. A written estimate after a site visit is the only project price.</p>
+          <p style={S.p}>{QUOTE_LABEL}: {OPEN_DECK_RANGE} {UNDER_DECK_PATIO_QUOTED} Paver, flagstone, and stamped concrete patios are not in that patio quote. Those materials are priced in a written estimate. A written estimate after a site visit is the only project price. Last reviewed November 1, 2026.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {faqs.map((faq, i) => (
@@ -148,7 +149,7 @@ export default function DeckVsPatioPage() {
       </article>
 
       <SimpleCTA title="Not Sure? We Build Both Free Consultation" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-19" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-01" />
 
       <RelatedGuides currentPath="/deck-vs-patio-which-is-right" />
 

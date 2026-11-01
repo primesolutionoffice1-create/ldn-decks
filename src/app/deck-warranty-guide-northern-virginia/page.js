@@ -9,6 +9,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import { OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -43,14 +44,14 @@ export default function DeckWarrantyGuidePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-warranty-guide-northern-virginia" name="Deck Warranty Guide | What\" description="We install Trex and TimberTech decking and work with both as partner brands. This guide does not state a TrexPro level." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-warranty-guide-northern-virginia" name="Deck Warranty Guide | What\" description="We install Trex and TimberTech decking and work with both as partner brands. This guide does not state a TrexPro level." speakable />
       <ArticleSchema
         title="Deck Warranty Guide: What's Covered in Northern Virginia"
         description="Trex product warranty terms by collection, the separate TrexPro labor warranty, and why written workmanship terms are a different document."
         path="/deck-warranty-guide-northern-virginia"
         image="/images/img36.jpeg"
         datePublished="2026-04-26"
-        dateModified="2026-10-18"
+        dateModified="2026-11-01"
       />
 
       {/* Hero */}
@@ -86,7 +87,7 @@ export default function DeckWarrantyGuidePage() {
           </div>
 
           {/* ===== SECTION 1: Why Warranties Matter ===== */}
-          <p style={S.p}>A new deck is a large project, and Loudoun Decks does not publish a fixed price for it. Warranty coverage still matters: homeowners should know what the product warranty covers, what a separate installer-program labor warranty requires, and what the signed workmanship terms say.</p>
+          <p style={S.p}>A new deck is a large project. {QUOTE_LABEL}: {OPEN_DECK_RANGE} Those are quoted prices, not a fixed price for every deck. Warranty coverage still matters: homeowners should know what the product warranty covers, what a separate installer-program labor warranty requires, and what the signed workmanship terms say. Last reviewed November 1, 2026.</p>
           <p style={S.p}>This guide breaks down every warranty layer that protects (or fails to protect) your deck: manufacturer product warranties, written installer workmanship terms, and the critical role that installer certification can play in keeping your coverage intact. We&apos;ll also cover how to file a claim, the difference between warranty and insurance, and the specific warranty pitfalls we see most often in Loudoun, Fairfax, and Prince William counties.</p>
           <p style={S.p}>Whether you&apos;re comparing quotes, evaluating contractors, or dealing with a deck issue years after installation, this guide gives you the knowledge to protect your investment.</p>
 
@@ -330,7 +331,7 @@ export default function DeckWarrantyGuidePage() {
 
       <SimpleCTA title="Get Deck Installation With Written Warranty Terms" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-warranty-guide-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-01" />
 
       <ContactHome />
     </>

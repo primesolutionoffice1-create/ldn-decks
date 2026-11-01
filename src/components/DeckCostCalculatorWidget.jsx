@@ -1,4 +1,5 @@
 'use client';
+import { OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import CallLink from '@/components/CallLink';
@@ -123,7 +124,7 @@ export default function DeckCostCalculatorWidget({
           <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid #e2e8f0' }}>
             <p style={{ fontWeight: 600, fontSize: '0.85rem', marginBottom: '0.5rem' }}>About this estimate</p>
             <p style={{ fontSize: '0.8rem', color: '#4a5568', lineHeight: 1.6 }}>
-              Loudoun Decks does not publish a per-square-foot rate or a typical project total. The selections above describe scope only. A written estimate prices demolition, structure, materials, stairs, railings, permits, and the measured site.
+              {QUOTE_LABEL}: {OPEN_DECK_RANGE} Those are quoted prices, not a total for the selections above. The selections describe scope only. A written estimate prices demolition, structure, materials, stairs, railings, permits, and the measured site.
             </p>
           </div>
         </div>

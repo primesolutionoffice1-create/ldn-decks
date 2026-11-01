@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import JsonLd from './JsonLd';
 import styles from './FAQ.module.css';
+import { PARTNER_SENTENCE } from '@/lib/partnerBrands';
+import { OPEN_DECK_RANGE, QUOTE_LABEL, RESURFACE_QUOTED } from '@/lib/quotedPrices';
 
 const faqsData = [
   {
@@ -22,11 +24,11 @@ const faqsData = [
   },
   {
     question: "Can you resurface my existing deck instead of replacing it?",
-    answer: "When the existing frame is structurally sound, resurfacing replaces the surface boards without rebuilding the whole structure. Whether it costs less than a full replacement depends on the frame, stairs, railings, and scope, so any saving is confirmed only in a written estimate after an inspection. We remove old surface boards and replace them with premium Trex or TimberTech composite."
+    answer: `When the existing frame is structurally sound, resurfacing replaces the surface boards without rebuilding the whole structure. ${QUOTE_LABEL}: ${RESURFACE_QUOTED} Whether that costs less than a full replacement depends on the frame, stairs, and railings, so any saving is confirmed in the written estimate after an inspection. We remove old surface boards and replace them with Trex or TimberTech composite. ${PARTNER_SENTENCE}`
   },
   {
     question: "What is the average cost to build a deck in NoVA?",
-    answer: "Loudoun Decks does not publish a fixed deck price. Size, materials, demolition, structure, stairs, railings, site access, and permits change the total. Request a written estimate after the scope is reviewed."
+    answer: `${QUOTE_LABEL}: ${OPEN_DECK_RANGE} Those are quoted prices, not a fixed price for every deck. Size, materials, demolition, structure, stairs, railings, site access, and permits change the total. Request a written estimate after the scope is reviewed.`
   }
 ];
 
