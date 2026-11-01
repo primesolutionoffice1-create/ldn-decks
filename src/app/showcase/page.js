@@ -81,7 +81,7 @@ export default function ShowcasePage() {
             {[
               ['Definition', 'A project gallery page shows visual scope, location context, and the planning questions a similar homeowner should ask before approving a deck or outdoor living proposal.'],
               ['Planning facts', 'The strongest estimate uses 7 inputs: photos, dimensions, existing frame condition, material preferences, permit or HOA notes, budget range, and timeline.'],
-              ['Proof rule', 'Customer quotes, ratings, detailed claims, and formal case-study labels are published only after the evidence ledger confirms permission and source details.'],
+              ['Proof rule', 'Customer quotes, ratings, and case-study details are published only with the homeowner\'s permission and a verifiable source.'],
               ['Next step', 'Follow 4 steps: compare examples, choose a service path, gather project inputs, then request a written estimate for a project-specific scope.'],
             ].map(([title, text]) => (
               <article key={title} style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: '1rem', background: '#fafafa' }}>

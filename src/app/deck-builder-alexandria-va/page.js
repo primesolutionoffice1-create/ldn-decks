@@ -76,7 +76,7 @@ const expansionSections = [
     title: "Why Alexandria Homeowners Choose Loudoun Decks",
     paragraphs: [
       "Alexandria neighborhoods \u2014 from the historic districts to newer developments near Kingstowne \u2014 each have unique characteristics and guidelines. We plan around City of Alexandria, Fairfax County, HOA, and site constraints so the deck design complements the home while meeting local building codes.",
-      "Alexandria project scopes often include multi-level TimberTech decks, screened porch additions, and backyard transformations with Trex Transcend decks and under-deck patios. Specific project examples should be added only from verified owner-supplied evidence."
+      "Alexandria project scopes often include multi-level TimberTech decks, screened porch additions, and backyard transformations with Trex Transcend decks and under-deck patios."
     ]
   },
   {

@@ -202,8 +202,7 @@ export default function FallsChurchDeckBuilderPage() {
         <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
           A compact Falls Church upgrade might replace an aging patio or small rear platform with a low-maintenance composite deck,
           glass or aluminum railing, and a layout designed around privacy and limited yard depth. Final scope should be confirmed
-          after jurisdiction, setbacks, height, drainage, and permit requirements are reviewed. Verified project examples should
-          be added here only after owner-supplied photos, scope, date, and permit details are available.
+          after jurisdiction, setbacks, height, drainage, and permit requirements are reviewed.
         </p>
       </div>
 

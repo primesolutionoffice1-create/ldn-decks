@@ -99,11 +99,8 @@ export default function ReviewsPage() {
 
           <h2 style={S.h2}>Verify Reviews on Public Platforms</h2>
           <div style={{ background: '#f9f9f9', borderRadius: 8, padding: '1.5rem', borderLeft: '4px solid var(--color-primary)', marginBottom: '3rem' }}>
-            <p style={{ ...S.p, marginBottom: '0.75rem' }}>
-              To avoid publishing unverifiable review excerpts, this page points homeowners to the original public profiles. Review text, dates, names, and ratings should be checked directly on Google, Yelp, and BBB.
-            </p>
             <p style={{ ...S.p, marginBottom: 0 }}>
-              If individual review excerpts are added later, they should be copied from the public profile or an owner-supplied evidence packet and recorded in the SEO evidence ledger.
+              To avoid publishing unverifiable review excerpts, this page points homeowners to the original public profiles. Review text, dates, names, and ratings should be checked directly on Google, Yelp, and BBB.
             </p>
           </div>
 

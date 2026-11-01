@@ -74,7 +74,7 @@ const expansionSections = [
     title: "Why Woodbridge Homeowners Choose Loudoun Decks",
     paragraphs: [
       "Woodbridge neighborhoods \u2014 from the established woods of Lake Ridge to the waterfront homes of Belmont Bay \u2014 each have unique characteristics and HOA guidelines. We plan around Prince William County permit requirements, HOA expectations, moisture exposure, and site grade so the deck design complements the home while meeting local building codes.",
-      "Woodbridge project scopes often include multi-level TimberTech decks in Lake Ridge, screened porch additions near Occoquan, and backyard transformations with Trex Transcend decks and under-deck patios in Montclair. Specific project examples should be added only from verified owner-supplied evidence."
+      "Woodbridge project scopes often include multi-level TimberTech decks in Lake Ridge, screened porch additions near Occoquan, and backyard transformations with Trex Transcend decks and under-deck patios in Montclair."
     ]
   },
   {
