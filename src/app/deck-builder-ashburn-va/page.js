@@ -140,7 +140,7 @@ const expansionSections = [
       "Roughly 60% of Ashburn deck calls today are NOT new builds — they're replacement, resurface, or full structural rebuild of the original 2000s-era builder pressure-treated deck. Knowing which path is right saves homeowners a written estimate.",
       "If your framing (joists, beams, ledger, posts) is structurally sound on inspection, resurfacing is the right call: tear off the surface boards and railings, replace with composite (Trex Transcend or TimberTech AZEK), upgrade the railings to cable or aluminum, optionally add lighting. Typical Ashburn resurface: a written estimate for 300-500 sqft, completed in 1-2 weeks. The original framing keeps the structural depreciation curve you've already paid for.",
       "If framing shows rot at the ledger (the most common 15-year failure point on Ashburn builder decks), or if posts are settling, or if joists show structural sag, the right path is full replacement: tear-down, new footings, new framing, new surface, new railings. Typical Ashburn full replacement: a written estimate for 400-600 sqft.",
-      "The diagnostic visit is free. We climb under the deck, inspect the ledger flashing, probe the joist ends, check post bases, and give you the honest call. Our resurface-vs-replace breakdown for Ashburn: roughly 40% resurface, 60% full replacement on builder decks 15+ years old."
+      "The diagnostic visit is free. We climb under the deck, inspect the ledger flashing, probe the joist ends, check post bases, and give you the honest call. Whether an Ashburn builder deck is resurfaced or fully replaced depends on what that inspection finds, not on a fixed percentage. For reference, in Loudoun Decks' recent written quotes in Northern Virginia (September–October 2026), a Trex deck resurfacing was $9,020–$12,678. These are quoted prices, not guarantees; the written estimate after the site visit is the only project price. See [resurfacing vs replacement](/deck-resurfacing-vs-replacement)."
     ]
   },
   {
@@ -157,7 +157,7 @@ const expansionSections = [
 export default function DeckBuilderAshburnPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-ashburn-va" name="Deck Builder in Ashburn, VA | Loudoun Decks" description="Custom composite deck builder in Ashburn serving Brambleton, Broadlands, Ashburn Village and One Loudoun. Trex product-line planning." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-ashburn-va" name="Deck Builder in Ashburn, VA | Loudoun Decks" description="Custom composite deck builder in Ashburn serving Brambleton, Broadlands, Ashburn Village and One Loudoun. Trex product-line planning." speakable />
       <LocalBusinessSchema city="Ashburn" url="https://ldndecks.com/deck-builder-ashburn-va" />
       <ServicesHeader
         subtext="Ashburn, VA Deck Builder"
@@ -185,7 +185,7 @@ export default function DeckBuilderAshburnPage() {
         formLocation="local_city_ashburn_deck_builder"
       />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Ashburn and Loudoun County" lastUpdated="2026-10-18" />
+        <NamedAuthor context="Ashburn and Loudoun County" lastUpdated="2026-11-01" />
       </div>
       <PlanningUpdate
         market="Ashburn deck projects"
