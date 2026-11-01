@@ -19,6 +19,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-chantilly-va',
@@ -113,7 +114,7 @@ export default function DeckBuilderChantillyPage() {
   return (
     <main>
       <LocalBusinessSchema city="Chantilly" url="https://ldndecks.com/deck-builder-chantilly-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-chantilly-va" name="Deck Builder in Chantilly, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Chantilly, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-chantilly-va" name="Deck Builder in Chantilly, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Chantilly, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Chantilly, VA's Trusted Deck Company"
         title="Custom Deck Builder in Chantilly, VA"
@@ -208,7 +209,8 @@ export default function DeckBuilderChantillyPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Chantilly" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Chantilly" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-chantilly-va" />
-      <NamedAuthor context="Chantilly and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Chantilly and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
     </main>
   );

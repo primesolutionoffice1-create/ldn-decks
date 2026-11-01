@@ -16,6 +16,7 @@ import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-great-falls-va',
@@ -61,7 +62,7 @@ export default function GreatFallsDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Great Falls" url="https://ldndecks.com/deck-builder-great-falls-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-great-falls-va" name="Deck Builder in Great Falls, VA | Premium Composite Decks" description="Premium deck builder in Great Falls, VA for estate composite deck replacement, Trex and AZEK planning, screened porches, RPA screening, and outdoor living projects." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-great-falls-va" name="Deck Builder in Great Falls, VA | Premium Composite Decks" description="Premium deck builder in Great Falls, VA for estate composite deck replacement, Trex and AZEK planning, screened porches, RPA screening, and outdoor living projects." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -241,7 +242,8 @@ export default function GreatFallsDeckBuilderPage() {
       </section>
       <SimpleCTA title="Get Your Great Falls Deck Quote" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-great-falls-va" />
-      <NamedAuthor context="Great Falls and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Great Falls and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
     </>
   );

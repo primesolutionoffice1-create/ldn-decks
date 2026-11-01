@@ -17,6 +17,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-bristow-va',
@@ -106,7 +107,7 @@ export default function BristowDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="Bristow" url="https://ldndecks.com/deck-builder-bristow-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-bristow-va" name="Deck Builder in Bristow VA | Composite Deck Resurfacing & New Builds" description="Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  keep a sound frame when inspection allows resurfacing. New composite decks from a written estimate. Prince William permit planning support. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-bristow-va" name="Deck Builder in Bristow VA | Composite Deck Resurfacing & New Builds" description="Deck builder in Bristow, VA. Resurfacing specialists for Bristow Manor, Braemar, Linton Hall  -  keep a sound frame when inspection allows resurfacing. New composite decks from a written estimate. Prince William permit planning support. Free estimate." speakable />
       <ServicesHeader
         subtext="Bristow, VA's Trusted Deck Company"
         title="Custom Deck Builder in Bristow, VA"
@@ -187,7 +188,8 @@ export default function BristowDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Bristow" /></div></section>
       <SimpleCTA title="Upgrade Your Bristow Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-bristow-va" />
-      <NamedAuthor context="Bristow and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Bristow and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="prince-william-county" />
       <ContactHome />
     </main>
   );

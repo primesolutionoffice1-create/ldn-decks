@@ -19,6 +19,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-falls-church-va',
@@ -119,7 +120,7 @@ export default function FallsChurchDeckBuilderPage() {
     <main>
       <JsonLd data={fallsChurchFaqSchema} />
       <LocalBusinessSchema city="Falls Church" url="https://ldndecks.com/deck-builder-falls-church-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-falls-church-va" name="Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks" description="Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex &amp; composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-falls-church-va" name="Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks" description="Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex &amp; composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate." speakable />
       <ServicesHeader
         subtext="Falls Church, VA's Compact Lot Deck Specialists"
         title="Custom Deck Builder in Falls Church, VA"
@@ -240,7 +241,8 @@ export default function FallsChurchDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Falls Church" /></div></section>
       <SimpleCTA title="Maximize Your Falls Church Outdoor Space" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-falls-church-va" />
-      <NamedAuthor context="Falls Church and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Falls Church and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
     </main>
   );

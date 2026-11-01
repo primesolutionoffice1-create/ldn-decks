@@ -20,6 +20,7 @@ import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-herndon-va',
@@ -114,7 +115,7 @@ export default function DeckBuilderHerndonPage() {
   return (
     <main>
       <LocalBusinessSchema city="Herndon" url="https://ldndecks.com/deck-builder-herndon-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-herndon-va" name="Deck Builder in Herndon, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Herndon, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-herndon-va" name="Deck Builder in Herndon, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Herndon, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Herndon, VA's Trusted Deck Company"
         title="Custom Deck Builder in Herndon, VA"
@@ -214,7 +215,8 @@ export default function DeckBuilderHerndonPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Herndon" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Herndon" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-herndon-va" />
-      <NamedAuthor context="Herndon and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Herndon and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
     </main>
   );

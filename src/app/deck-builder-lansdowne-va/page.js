@@ -17,6 +17,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import { buildMetadata } from '@/lib/seo';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 const PATH = '/deck-builder-lansdowne-va';
 const URL = `https://ldndecks.com${PATH}`;
@@ -108,7 +109,7 @@ export default function DeckBuilderLansdownePage() {
     <main>
       <LocalBusinessSchema city="Lansdowne" url={URL} />
       <WebPageSchema
-        dateModified="2026-07-18"
+        dateModified="2026-11-01"
         url={URL}
         name="Deck Builder in Lansdowne, VA | Premium Composite Decks"
         description="Premium deck builder for Lansdowne, VA. Composite decks, screened porches, HOA packet planning, Loudoun County permits, and written estimates for Lansdowne homeowners."
@@ -202,7 +203,8 @@ export default function DeckBuilderLansdownePage() {
       </section>
       <ServiceAreasGrid />
       <RelatedGuides currentPath={PATH} />
-      <NamedAuthor context="Lansdowne, Leesburg, and Loudoun County deck planning" lastUpdated="2026-07-18" />
+      <NamedAuthor context="Lansdowne, Leesburg, and Loudoun County deck planning" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="loudoun-county" />
       <ContactHome />
     </main>
   );

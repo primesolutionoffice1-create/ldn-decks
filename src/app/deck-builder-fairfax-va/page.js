@@ -14,6 +14,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-fairfax-va',
@@ -101,7 +102,7 @@ export default function FairfaxDeckBuilderPage() {
     <main>
       <JsonLd data={fairfaxFaqSchema} />
       <LocalBusinessSchema city="Fairfax" url="https://ldndecks.com/deck-builder-fairfax-va" />
-      <WebPageSchema dateModified="2026-10-22" url={`https://ldndecks.com${PATH}`} name="Fairfax VA Deck Builder | Class A Contractor | Loudoun Decks" description="Fairfax VA deck builder for composite decks, replacements, repairs, and screened porches with City of Fairfax and Fairfax County permit planning." speakable />
+      <WebPageSchema dateModified="2026-11-01" url={`https://ldndecks.com${PATH}`} name="Fairfax VA Deck Builder | Class A Contractor | Loudoun Decks" description="Fairfax VA deck builder for composite decks, replacements, repairs, and screened porches with City of Fairfax and Fairfax County permit planning." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -128,7 +129,7 @@ export default function FairfaxDeckBuilderPage() {
             <p style={{ margin: 0, lineHeight: 1.65 }} data-speakable>External benchmarks list $35–$80 per square foot installed for a simple, low-height composite deck with standard railing (RemodelCalculators, reviewed October 11, 2026). A 400 sq ft deck at that rate is about $14,000–$32,000 before permits, demolition, elevation, and complex stairs. This is an external benchmark, not a Loudoun Decks price. The written estimate is the project price. The published figure is on our <Link href={COST_GUIDE_PATH} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>composite deck cost guide</Link>. Permit review times vary; confirm current timelines with the City of Fairfax or Fairfax County. Loudoun Decks is a Virginia Class A licensed deck contractor in Fairfax, with Trex, TimberTech, and AZEK material planning and permit packages prepared for both jurisdictions.</p>
           </div>
 
-          <NamedAuthor context="Fairfax County and the City of Fairfax" />
+          <NamedAuthor context="Fairfax County and the City of Fairfax" lastUpdated="2026-11-01" />
 
           <PlanningUpdate
             market="Fairfax decks in 2026"
@@ -274,6 +275,7 @@ export default function FairfaxDeckBuilderPage() {
 
       <SimpleCTA title="Build Your Fairfax Deck With a Composite Deck Team" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-fairfax-va" />
+      <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
     </main>
   );

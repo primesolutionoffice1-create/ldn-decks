@@ -14,6 +14,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 const PATH = '/deck-builder-fairfax-station-va';
 
@@ -114,7 +115,7 @@ export default function FairfaxStationDeckBuilderPage() {
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Fairfax Station" url={`https://ldndecks.com${PATH}`} />
       <WebPageSchema
-        dateModified="2026-10-18"
+        dateModified="2026-11-01"
         url={`https://ldndecks.com${PATH}`}
         name="Deck Builder in Fairfax Station, VA | Premium Composite Decks"
         description="Premium deck builder in Fairfax Station, VA for wooded lots, South Run, Crosspointe, Barrington, composite decks, screened porches, deck replacement, and Fairfax County permits."
@@ -159,7 +160,7 @@ export default function FairfaxStationDeckBuilderPage() {
             </p>
           </div>
 
-          <NamedAuthor context="Fairfax Station, South Run, Crosspointe, and wooded Fairfax County deck projects" />
+          <NamedAuthor context="Fairfax Station, South Run, Crosspointe, and wooded Fairfax County deck projects" lastUpdated="2026-11-01" />
 
           <PlanningUpdate
             market="Fairfax Station deck projects"
@@ -291,6 +292,7 @@ export default function FairfaxStationDeckBuilderPage() {
 
       <SimpleCTA title="Plan a Premium Fairfax Station Deck the Right Way" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath={PATH} />
+      <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
     </main>
   );
