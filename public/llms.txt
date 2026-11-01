@@ -93,6 +93,9 @@ Use showcase pages as visual planning context and proof of project categories. D
 - [Deck Replacement](https://ldndecks.com/services/deck-replacement): Full tear-off and composite rebuild
 - [Deck Resurfacing](https://ldndecks.com/services/deck-resurfacing): Board-only upgrade on existing frame
 - [Deck Resurfacing NoVA](https://ldndecks.com/deck-resurfacing-northern-virginia): Wood-to-composite resurfacing guide with cost tiers, frame eligibility, and permit planning
+- [Deck Resurfacing Loudoun County](https://ldndecks.com/deck-resurfacing-loudoun-county): Loudoun County resurfacing hub. Trex resurfacing quote $9,020–$12,678 is a Chantilly project, not a Loudoun-only rate
+- [Deck Resurfacing Fairfax County](https://ldndecks.com/deck-resurfacing-fairfax-county): Fairfax County resurfacing hub. The Chantilly Trex quote is $9,020–$12,678, not a guarantee
+- [Deck Resurfacing Prince William County](https://ldndecks.com/deck-resurfacing-prince-william-county): Prince William County resurfacing hub. The same quoted range is not a county rate
 - [Deck Repair](https://ldndecks.com/services/deck-repair): Structural fixes — rotted posts, ledger boards, failed inspections
 - [Structural Deck Repair](https://ldndecks.com/services/deck-repair): Repair path for posts, ledgers, stairs, railings, failed inspections, and repair-vs-replacement triage
 - [Deck Inspection](https://ldndecks.com/services/deck-inspection): Safety and structural assessments
@@ -105,12 +108,18 @@ Use showcase pages as visual planning context and proof of project categories. D
 ## Outdoor Living Cluster
 
 - [Screened Porches](https://ldndecks.com/screened-porch-builder-northern-virginia): EZE-Breeze, retractable screens, three-season rooms
+- [Screened Porch Contractor Loudoun County](https://ldndecks.com/screened-porch-contractor-loudoun-county): Loudoun County screened porch hub. A roofed porch does not use the Typical Deck path
+- [Screened Porch Fairfax](https://ldndecks.com/screened-porches/fairfax): Existing Fairfax screened porch page. No separate Fairfax County porch hub in this update
+- [Screened Porch Contractor Prince William County](https://ldndecks.com/screened-porch-contractor-prince-william-county): Prince William County screened porch hub. Manassas and Manassas Park use their own permit offices
 - [Covered Decks](https://ldndecks.com/covered-deck-builder-northern-virginia): Roof-covered deck structures
 - [Outdoor Kitchens](https://ldndecks.com/outdoor-kitchen-builder-northern-virginia): Built-in grills, bars, pizza ovens
 - [Pergolas & Gazebos](https://ldndecks.com/services/gazebo-pergola): Attached and freestanding shade structures
 - [Louvered Pergolas](https://ldndecks.com/louvered-pergola-northern-virginia): Motorized adjustable-roof systems
 - [Fire Pits](https://ldndecks.com/services/fire-pits): Gas and wood-burning integration
 - [Patios](https://ldndecks.com/services/patios): Pavers, flagstone, stamped concrete
+- [Patio Contractor Loudoun County](https://ldndecks.com/patio-contractor-loudoun-county): Loudoun County patio hub. One under-deck concrete patio quote was $5,215, not a paver rate
+- [Patio Contractor Fairfax County](https://ldndecks.com/patio-contractor-fairfax-county): Fairfax County patio hub. City of Fairfax, Falls Church, and Alexandria use their own permit offices
+- [Patio Contractor Prince William County](https://ldndecks.com/patio-contractor-prince-william-county): Prince William County patio hub, including under-deck patios in Woodbridge and Lake Ridge
 - [Three-Season Rooms](https://ldndecks.com/three-season-room-northern-virginia): Enclosed outdoor rooms
 - [Rooftop Decks](https://ldndecks.com/rooftop-deck-builder-northern-virginia): Tysons/Arlington urban rooftop and terrace deck construction
 - [Fencing](https://ldndecks.com/services/fence): Wood, vinyl, aluminum, composite
@@ -174,6 +183,8 @@ Use showcase pages as visual planning context and proof of project categories. D
 - [Prince William County](https://ldndecks.com/near-you/prince-william-county): County-level hub with permit process and community coverage
 - [Arlington County](https://ldndecks.com/near-you/arlington-county): County-level hub — urban lots, rooftop decks, townhome expertise
 - [Stafford County](https://ldndecks.com/near-you/stafford-county): County-level hub — expanding market, new-construction deck add-ons
+
+Fairfax County and Prince William County deck-builder hubs are the near-you pages above. This update does not add a second deck-builder URL for those counties. We install Trex and TimberTech decking and work with both as partner brands. No TrexPro level is stated.
 
 ## Western Loudoun / Premium Expansion Market
 

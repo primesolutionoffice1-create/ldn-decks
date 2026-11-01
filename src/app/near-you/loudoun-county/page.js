@@ -218,6 +218,9 @@ export default function LoudounCountyPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Explore Our Services</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porch-contractor-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Contractor in Loudoun County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/patio-contractor-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Patio Contractor in Loudoun County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Resurfacing in Loudoun County →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porch-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Builder Northern Virginia →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Premium Composite Replacement Planning →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Composite Deck Cost Guide →</Link></li>

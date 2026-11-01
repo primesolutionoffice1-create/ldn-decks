@@ -410,6 +410,9 @@ export default function ScreenedPorchBuilderNovaPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Screened Porch Resources</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {[
+            ['/screened-porch-contractor-loudoun-county', 'Screened porch contractor in Loudoun County'],
+            ['/screened-porches/fairfax', 'Screened porch builder in Fairfax'],
+            ['/screened-porch-contractor-prince-william-county', 'Screened porch contractor in Prince William County'],
             ['/screened-porch-cost-northern-virginia', 'screened porch cost in Northern Virginia'],
             ['/three-season-room-northern-virginia', 'Three-Season Room Options in Northern Virginia'],
             ['/covered-deck-builder-northern-virginia', 'Covered Deck Builder in Northern Virginia'],

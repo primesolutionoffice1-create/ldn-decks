@@ -11,14 +11,20 @@ export const QUOTE_LABEL = 'Loudoun Decks 2026 quoted prices';
 export const QUOTE_SOURCE =
   "These figures come from Loudoun Decks' recent written quotes in Northern Virginia (September–October 2026). They are quoted prices, not guarantees. The written estimate after a site visit is the only project price.";
 
+export const OPEN_DECK_RANGE =
+  'A new open deck was about $61–$102 per sq ft in our recent quotes, most around $64–$68 per sq ft.';
+
 export const OPEN_DECK_QUOTED =
-  'A new open deck was about $61–$102 per sq ft in our recent quotes, most around $64–$68 per sq ft. Examples: 192 sq ft at $11,684 (about $11,700); 240 sq ft at $16,000 and 304 sq ft at $20,758 (about $16,000–$21,000); 528 sq ft at $35,615 and 627 sq ft at $40,000–$42,869 (about $35,600–$42,900). A 16×12 with two landings and 13 steps was quoted at $19,654. A 264 sq ft TimberTech Terrain deck with bronze railings was quoted at $23,932 (about $91 per sq ft). Stairs and landings, premium composite (for example TimberTech Terrain), and metal railings push toward the top of that range.';
+  `${OPEN_DECK_RANGE} Examples: 192 sq ft at $11,684 (about $11,700); 240 sq ft at $16,000 and 304 sq ft at $20,758 (about $16,000–$21,000); 528 sq ft at $35,615 and 627 sq ft at $40,000–$42,869 (about $35,600–$42,900). A 16×12 with two landings and 13 steps was quoted at $19,654. A 264 sq ft TimberTech Terrain deck with bronze railings was quoted at $23,932 (about $91 per sq ft). Stairs and landings, premium composite (for example TimberTech Terrain), and metal railings push toward the top of that range.`;
 
 export const PORCH_QUOTED =
   'A roofed or screened porch with an attached open deck (120–236 sq ft of deck) was about $77,000–$112,500 in recent quotes. A 3-season version was at the top of that range ($110,000–$112,500). A roof-only 10×12 shed roof was $17,013 (about $17,000). Quotes in that set include a 14×12 or 14×14 gable roof plus a 120 sq ft open deck at $76,737–$84,253, a 14×14 shed roof plus a 120 sq ft open deck at $83,660–$94,011, a 22×12 flat roof plus a 236 sq ft screened porch at $83,338 ($96,338 with EZE-Breeze), and an open deck with a porch at $99,958. A separate budget estimate for a 22×12 rear screen porch with pressure-treated deck resurfacing was $31,968 and sits outside that typical range.';
 
 export const RESURFACE_QUOTED =
-  'Trex deck resurfacing was $9,020–$12,678 (about $9,000–$12,700) in a recent quote.';
+  'Trex deck resurfacing was $9,020–$12,678 (about $9,000–$12,700) in a recent quote. That quote was a Chantilly project.';
+
+export const UNDER_DECK_PATIO_QUOTED =
+  'One under-deck concrete patio, 7×12, was quoted at $5,215. That figure is one written quote, not a rate for every patio, county, or material.';
 
 export const PVC_QUOTED =
   'A PVC under-deck ceiling was $3,872–$5,632 (about $3,900–$5,600) in recent quotes. That range is for a PVC under-deck ceiling, not every drainage system or finished patio.';

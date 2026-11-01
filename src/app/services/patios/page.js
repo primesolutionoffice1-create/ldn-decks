@@ -151,9 +151,9 @@ const materialItemListSchema = {
 };
 
 const neighborhoods = [
-  { county: 'Loudoun County', cities: 'Ashburn, Leesburg, Sterling, Brambleton, South Riding, Purcellville, Lansdowne, Aldie, Middleburg' },
-  { county: 'Fairfax County', cities: 'Vienna, McLean, Reston, Herndon, Fairfax, Great Falls, Oakton, Burke, Centreville, Chantilly, Tysons, Falls Church' },
-  { county: 'Prince William County', cities: 'Manassas, Gainesville, Haymarket, Bristow, Woodbridge' },
+  { county: 'Loudoun County', href: '/patio-contractor-loudoun-county', cities: 'Ashburn, Leesburg, Sterling, Brambleton, South Riding, Purcellville, Lansdowne, Aldie, Middleburg' },
+  { county: 'Fairfax County', href: '/patio-contractor-fairfax-county', cities: 'Vienna, McLean, Reston, Herndon, Fairfax, Great Falls, Oakton, Burke, Centreville, Chantilly, Tysons, Falls Church' },
+  { county: 'Prince William County', href: '/patio-contractor-prince-william-county', cities: 'Manassas, Gainesville, Haymarket, Bristow, Woodbridge' },
   { county: 'Arlington County', cities: 'Arlington, Rosslyn, Clarendon, Ballston' },
 ];
 
@@ -339,7 +339,9 @@ export default function PatiosPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {neighborhoods.map((n) => (
               <div key={n.county} style={{ background: '#fff', border: '1px solid #ececec', borderRadius: 8, padding: '1.2rem' }}>
-                <h3 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.4rem', color: 'var(--color-primary)' }}>{n.county}</h3>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.4rem', color: 'var(--color-primary)' }}>
+                  {n.href ? <Link href={n.href} style={{ color: 'var(--color-primary)' }}>{n.county}</Link> : n.county}
+                </h3>
                 <p style={{ margin: 0, fontSize: '0.92rem', color: '#555', lineHeight: 1.6 }}>{n.cities}</p>
               </div>
             ))}

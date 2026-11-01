@@ -14,6 +14,9 @@ import AboveFoldCTA from '@/components/AboveFoldCTA';
 import NamedAuthor from '@/components/NamedAuthor';
 import WebPageSchema from '@/components/WebPageSchema';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { OPEN_DECK_QUOTED } from '@/lib/quotedPrices';
+import { PARTNER_SENTENCE } from '@/lib/partnerBrands';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
@@ -173,11 +176,9 @@ export default function TrexDecksPage() {
             Trex Deck Cost in Northern Virginia (2026)
           </h2>
           <p data-speakable style={{ marginBottom: '1.5rem', lineHeight: 1.7, color: '#2d3748' }}>
-            A Trex deck in Northern Virginia typically runs <strong>a written estimate per square foot installed</strong>,
-            depending on tier. A 350 sqft Trex Enhance project lands a written estimate; Trex Transcend usually runs
-            a written estimate; Trex Signature composite decking usually is priced in a written estimate for the same
-            size.
+            {PARTNER_SENTENCE} The range below is Loudoun Decks 2026 quoted prices for a new open deck. It is not a separate Trex Enhance, Transcend, or Signature rate.
           </p>
+          <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED]} />
           <div style={{ overflowX: 'auto', marginBottom: '1.25rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
               <thead>
@@ -211,7 +212,7 @@ export default function TrexDecksPage() {
             </table>
           </div>
           <p style={{ fontSize: '0.85rem', color: '#666', fontStyle: 'italic', marginBottom: '1rem' }}>
-            Pricing includes installation, hidden fasteners, and Trex railing. Composite or aluminum railings, picture-frame border, lighting, and stair flights are priced separately.
+            The table does not publish a per-tier installed rate. Stairs, landings, premium composite, and metal railings can move a quote toward the top of the range above. The written estimate is the only project price.
           </p>
           <p style={{ marginBottom: 0 }}>
             <Link href="/trex-deck-cost-monthly-payment" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>

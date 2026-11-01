@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { BUSINESS } from '@/lib/business';
+import { OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 import styles from './MobileProofStrip.module.css';
 
 const MAPS_URL = BUSINESS.sameAs.find((url) => url.includes('google.com/maps/place/Loudoun+Decks'))
@@ -26,7 +27,7 @@ export default function MobileProofStrip() {
           </li>
         </ul>
         <p className={styles.note}>
-          Loudoun Decks does not publish a per-square-foot rate. Demolition, structure, stairs, railings, and permits are priced in a written estimate.
+          {QUOTE_LABEL}: {OPEN_DECK_RANGE} The written estimate is the only project price.
         </p>
         <div className={styles.links}>
           <Link href="/tools/deck-cost-estimator-northern-virginia">Open the cost estimator</Link>
