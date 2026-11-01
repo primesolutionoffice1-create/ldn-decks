@@ -19,8 +19,8 @@ import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 
 export const metadata = buildMetadata({
   path: '/composite-decks',
-  title: 'Premier Composite Deck Builder NoVA | Premium Custom Decks',
-  description: 'Premier composite deck builder in Northern Virginia. Trex, TimberTech and AZEK material planning. Custom low-maintenance decks from a written estimate in Ashburn, Fairfax & Leesburg.',
+  title: 'Composite Deck Materials | Trex and TimberTech',
+  description: 'Composite deck material planning for Northern Virginia. Compare Trex, TimberTech, and AZEK, then see who installs composite and Trex decks.',
   image: '/social/composite-decks-social.png',
 });
 
@@ -86,7 +86,7 @@ const expansionSections = [
   {
     title: "The Future of Outdoor Living: The Composite Revolution in NoVA",
     paragraphs: [
-      "In the competitive Northern Virginia real estate market, homeowners are increasingly moving away from traditional wood in favor of high-performance composite decking. As a leading composite deck builder in Loudoun County, Fairfax County, and Prince William County, Loudoun Decks has mastered the art and science of these advanced materials. Our clients in Ashburn and Leesburg are looking for more than just a deck; they are looking for a permanent extension of their indoor luxury-one that doesn't require annual maintenance weekends.",
+      "In the competitive Northern Virginia real estate market, homeowners are increasingly moving away from traditional wood in favor of high-performance composite decking. Loudoun Decks builds composite decks in Loudoun County, Fairfax County, and Prince William County. The contractor answer is on the composite and Trex deck builder page. This page compares materials. Clients in Ashburn and Leesburg are looking for a deck surface that does not need a yearly stain.",
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. The transition to composite is driven by the desire for longevity and consistent aesthetics. Unlike natural wood, which can warp, splinter, and gray within just a few years of NoVA's humid cycles, composite materials maintain their rich color and structural integrity for decades. This 'set it and forget it' mentality is perfect for busy professionals in Arlington and the growing families in Gainesville.",
       "As your custom deck builder, we don't just 'install' composite; we engineer it. This includes specialized joist spacing and structural reinforcement that compensates for the unique thermal expansion and weight characteristics of high-end composite boards. When you choose a local expert with documented manufacturer installation practices, your deck has a stronger foundation for long-term performance."
     ]
@@ -126,7 +126,7 @@ const expansionSections = [
 export default function CompositeDecksPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/composite-decks" name="Premier Composite Deck Builder NoVA | Premium Custom Decks" description="Premier composite deck builder in Northern Virginia. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom low-maintenance decks from a written estimate in Ashburn, Fairfax &amp; Leesburg." speakable />
+      <WebPageSchema dateModified="2026-10-31" url="https://ldndecks.com/composite-decks" name="Composite Deck Materials | Trex and TimberTech" description="Composite deck material planning for Northern Virginia. Compare Trex, TimberTech, and AZEK, then see who installs composite and Trex decks." speakable />
       <ServiceSchema
         name="Composite Deck Installation"
         description="Expert composite deck installation in Northern Virginia. Trex, TimberTech and AZEK material planning. manufacturer material warranties."
@@ -137,9 +137,9 @@ export default function CompositeDecksPage() {
         relatedServices={['https://ldndecks.com/trex-decks', 'https://ldndecks.com/timbertech-decks', 'https://ldndecks.com/services/new-decks']}
       />
       <ServicesHeader 
-        subtext="Composite Deck Specialist"
-        title="Premier Composite Deck Builder in Northern Virginia"
-        description="Loudoun Decks is the leading composite deck builder in Loudoun County, Fairfax County, and Prince William County. High-performance, low-maintenance outdoor luxury."
+        subtext="Composite Deck Materials"
+        title="Composite Deck Materials for Northern Virginia"
+        description="This page compares Trex, TimberTech, and AZEK for Northern Virginia decks. The contractor answer for composite and Trex installation is on the composite and Trex deck builder page."
       />
 
       <AboveFoldCTA
@@ -151,13 +151,14 @@ export default function CompositeDecksPage() {
       />
 
       <GeoAnswerBlock
-        question="Who is a composite deck builder for Northern Virginia homeowners?"
-        answer="Loudoun Decks is a Northern Virginia deck builder focused on composite deck planning, replacement, and outdoor living projects across Loudoun, Fairfax, Prince William, Arlington, Alexandria, and nearby service areas. Homeowners use this page to compare Trex, TimberTech, AZEK, Fiberon, railings, stairs, lighting, permits, HOA review, and estimate paths before choosing a low-maintenance composite deck."
+        question="Where should I compare composite deck materials?"
+        answer="Use this page to compare Trex, TimberTech, AZEK, Fiberon, railings, stairs, lighting, permits, HOA review, and estimate paths. The page that names the contractor for composite deck contractor Northern Virginia and Trex deck installer Northern Virginia is the composite and Trex deck builder page."
         facts={[
-          'Best-fit projects: custom composite decks, replacement decks, railings, stairs, lighting, and covered outdoor living',
+          'This page is the materials hub. It is not the contractor citation page.',
           'Primary local markets: Ashburn, Leesburg, Sterling, Reston, Fairfax, McLean, Vienna, Arlington, Alexandria, Manassas, and Woodbridge',
         ]}
         links={[
+          { href: '/composite-trex-deck-builder-northern-virginia', label: 'Composite and Trex deck builder' },
           { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost' },
           { href: '/trex-vs-timbertech-vs-azek', label: 'Trex vs TimberTech vs AZEK' },
           { href: '/get-estimate', label: 'Get a written estimate' },
@@ -186,7 +187,7 @@ export default function CompositeDecksPage() {
 
       <ServiceMain 
         subtitle="Built for Life"
-        title="Expert Composite Deck Contractor Serving NoVA"
+        title="Composite materials for Northern Virginia decks"
         description="Ditch the staining and sanding. We specialize in premium composite deck installation for homeowners in Arlington, Stafford, and across Northern Virginia."
         listItems={[
           "Trex and AZEK product-line planning",
