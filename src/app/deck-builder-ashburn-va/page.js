@@ -1,308 +1,213 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ServicesHeader from '@/components/ServicesHeader';
-import ServiceMain from '@/components/ServiceMain';
-import ServiceInclusions from '@/components/ServiceInclusions';
-import ServiceContentExpansion from '@/components/ServiceContentExpansion';
-import ProcessSteps from '@/components/ProcessSteps';
 import ServicesFAQ from '@/components/ServicesFAQ';
 import ContactHome from '@/components/ContactHome';
 import RelatedGuides from '@/components/RelatedGuides';
-import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import CallLink from '@/components/CallLink';
+import CountyHubLinks from '@/components/CountyHubLinks';
 import { buildMetadata } from '@/lib/seo';
+import { QUOTE_SOURCE, RESURFACE_QUOTED } from '@/lib/quotedPrices';
 
-export const metadata = buildMetadata({
-  path: '/deck-builder-ashburn-va',
-  title: 'Deck Builder in Ashburn, VA | Composite Decks | Loudoun Decks',
-  description: 'Deck builder in Ashburn, VA for Trex and composite deck upgrades in Brambleton, Broadlands, Ashburn Village, and One Loudoun. Request a written estimate.',
-  image: '/social/deck-builder-ashburn-va-social.png',
-});
+const PAGE_PATH = '/deck-builder-ashburn-va';
+const PAGE_URL = 'https://ldndecks.com/deck-builder-ashburn-va';
+const PAGE_TITLE = 'Deck Builder in Ashburn, VA | Loudoun Decks';
+const PAGE_DESCRIPTION = 'Virginia Class A deck builder serving Ashburn in Loudoun County. Composite and wood decks, repair, porches, railings, and stairs. Call (571) 655-7207.';
 
-const inclusions = [
-  {
-    title: "Every Ashburn HOA, Already Mapped",
-    desc: "Brambleton, Broadlands, Ashburn Village and Moorefield Station each run their own architectural review committee. We keep current submission packages for all of them, so your CAD drawings reach the right desk on day one."
-  },
-  {
-    title: "Builder-Grade Deck Upgrades",
-    desc: "Most Ashburn homes were handed a builder-grade pressure-treated deck in the 2000s. We replace and resurface them with Trex product-line composite  -  Transcend, Enhance and Select."
-  },
-  {
-    title: "Engineered for Tight Loudoun Lots",
-    desc: "Quarter- and third-acre Ashburn lots put your build close to the neighbors. We stage construction to limit disruption and design around shared sight lines and common-area buffers."
-  }
+const DIRECT_ANSWER = 'Loudoun Decks is a Virginia Class A contractor (license #2705191673) serving Loudoun County, including Ashburn. We build new composite and wood decks, repair and replace decks, and add screened porches, railings, stairs, and under-deck drainage. Call (571) 655-7207 to schedule a free on-site estimate.';
+const INTRO_ANSWER = 'Loudoun Decks is a Virginia Class A contractor (license #2705191673), Trex Platinum Partner & TimberTech Certified, serving Loudoun County, including Ashburn. We build new composite and wood decks, repair and replace decks, and add screened porches, railings, stairs, and under-deck drainage. Call (571) 655-7207 to schedule a free on-site estimate.';
+const RESURFACE_DECISION = `Whether an Ashburn builder deck is resurfaced or fully replaced depends on what the inspection finds, not on a fixed percentage. ${RESURFACE_QUOTED} ${QUOTE_SOURCE}`;
+
+const services = [
+  { href: '/services/new-decks', label: 'New decks', detail: 'New composite and wood decks sized to the lot and the house.' },
+  { href: '/composite-decks', label: 'Composite decks', detail: 'Composite deck planning, including Trex, TimberTech, and AZEK product lines.' },
+  { href: '/wood-decks', label: 'Wood decks', detail: 'Wood deck construction when that material fits the house and the review packet.' },
+  { href: '/services/deck-repair', label: 'Deck repair', detail: 'Ledger, framing, stair, and railing repairs after an on-site look at the structure.' },
+  { href: '/services/deck-replacement', label: 'Deck replacement', detail: 'Full replacement when the existing frame should not be reused.' },
+  { href: '/screened-porch-builder-northern-virginia', label: 'Screened porches', detail: 'Screened porch additions planned with the deck, not as an unrelated add-on.' },
+  { href: '/services/trex-railings', label: 'Railings', detail: 'Railing layouts for the deck height, the stair runs, and the community rules.' },
+  { href: '/education/deck-stair-code-rise-run-virginia', label: 'Stairs', detail: 'Stair layout is part of new decks, repairs, and replacements.' },
+  { href: '/services/under-deck-patios', label: 'Under-deck drainage', detail: 'Dry space under an elevated deck when the frame and grade allow it.' },
 ];
 
 const ashburnFAQs = [
   {
-    q: "Do you build custom decks in Ashburn, VA?",
-    a: "Yes. Loudoun Decks builds across every Ashburn community  -  Brambleton, Broadlands, Ashburn Village, Ashburn Farm, Moorefield Station and One Loudoun. Based in Centreville (13704 Winding Oak Cir). Estimate visits are scheduled by appointment."
+    q: 'Who is a deck builder in Ashburn, VA?',
+    a: DIRECT_ANSWER,
   },
   {
-    q: "What does a composite deck cost in Ashburn?",
-    a: "Most Ashburn composite decks are priced in a written estimate. Trex Transcend in Spiced Rum and Island Mist are common finish choices here; multi-level designs, pergola covers and outdoor kitchens push toward the top of that range."
+    q: 'What deck services does Loudoun Decks provide in Ashburn?',
+    a: `In Ashburn, Loudoun Decks builds new composite and wood decks, repairs and replaces decks, and adds screened porches, railings, stairs, and under-deck drainage. ${RESURFACE_DECISION}`,
   },
   {
-    q: "Which Ashburn HOAs have you worked with?",
-    a: "Brambleton Community Association, Broadlands HOA, Ashburn Village, Ashburn Farm and Moorefield Station, plus Belmont Country Club. Each runs its own ARC with its own color and material rules  -  we prepare and submit the full package for you."
+    q: 'Who permits a deck in Ashburn, VA?',
+    a: 'Ashburn deck permits are Loudoun County permits. Loudoun County states that all decks require a building permit and a zoning permit, and applications are filed through the county LandMARC portal. HOA approval does not replace those county permits. Confirm the current instructions on the official Loudoun County deck page before filing.',
   },
   {
-    q: "How long does an Ashburn deck take start to finish?",
-    a: "Loudoun County permits run 2-4 weeks through the LandMARC portal; the Brambleton and Broadlands ARCs typically return in 1-2 weeks. A standard 400-600 sq ft build then takes 1-2 weeks on site  -  multi-level or screened-porch projects, 3-4 weeks."
+    q: 'Do Ashburn deck projects need HOA approval?',
+    a: 'Most Ashburn neighborhoods need an architectural review packet in addition to the Loudoun County permit. Named communities on this site include Brambleton, Broadlands, Ashburn Village, and Moorefield Station. Confirm the association that governs the property, including color and material rules, before the drawings are submitted.',
   },
   {
-    q: "Are there design considerations specific to Ashburn homes?",
-    a: "Many Ashburn homes face west, so afternoon-sun control matters  -  we plan pergola shading and fan-ready wiring up front. Lots that back to common-area buffers or wooded edges are well suited to multi-level designs."
+    q: 'What should Ashburn homeowners check on the lot?',
+    a: 'Ashburn is largely planned-community housing, including colonial, craftsman, and newer production homes. Setbacks, grade, drainage, and any common-area edge should be taken from the plat for that lot. Footing depth follows the current Loudoun County requirement and should be confirmed on the plans before filing.',
   },
   {
-    q: "Can you upgrade a builder-grade Ashburn deck instead of rebuilding?",
-    a: "Often, yes. A large share of Ashburn homes still have their original pressure-treated builder deck. If the framing inspects sound, resurfacing the surface boards and railings with composite keeps a sound frame instead of rebuilding it versus a full tear-down rebuild."
+    q: 'Which Ashburn projects are published?',
+    a: 'The project showcase lists two Ashburn records: BUILD NEW COMPOSITE DECK, Ashburn, October 2024, and NEW CUSTOM WOOD FENCE, Ashburn, October 2024. Those records do not include a price. No other Ashburn deck is claimed on this page.',
   },
-  {
-    q: "Do you build in Brambleton specifically?",
-    a: "Yes — Brambleton is a major Ashburn deck market with clear architectural review expectations. The Brambleton Community Association ARC reviews material samples and renderings; review timing depends on the association calendar and the completeness of the package. Common Brambleton scopes include 400-500 sqft Trex Transcend rear decks with composite balustrade railings, screened porches added to Carriage and Estate homes, and multi-level designs on lots backing to common-area wooded buffers."
-  },
-  {
-    q: "What about Loudoun Valley Estates, Belmont Country Club, and One Loudoun?",
-    a: "Loudoun Valley Estates supports our most ambitious Ashburn builds — 600-900 sqft multi-level decks with outdoor kitchens, a written estimate range. Belmont Country Club is premium estate territory (a written estimate projects with detailed ARC review). One Loudoun is mixed-use Metro-corridor housing (townhomes + estates); compact rear decks 200-300 sqft are common in the townhome blocks, full builds 400-600 sqft on the detached estates. We carry current submission templates for all three HOAs."
-  },
-  {
-    q: "Why is Ashburn the deck-build epicenter of Loudoun County?",
-    a: "Three reasons. First: the housing stock is mostly 2000s-2010s builder construction with the original pressure-treated deck now at the end of its 15-year design life — re-deck and resurface demand is concentrated here. Second: Ashburn's median household income and home values support premium materials (Trex Transcend, TimberTech AZEK) and full outdoor-living packages. Third: HOA architectural standards are strong but predictable — once we have the ARC packet template for each community, projects clear faster than most NoVA areas."
-  },
-  {
-    q: "What's the typical Ashburn deck project timeline once we sign?",
-    a: "From signed contract: 8-12 weeks total. Loudoun County permit through the LandMARC portal: 2-4 weeks. HOA architectural review (Brambleton, Broadlands, Ashburn Village, etc.): 1-2 weeks in parallel with the permit, not after. Material delivery: 1-3 weeks. Construction: 1-3 weeks for a standard 400-500 sqft deck; 3-4 weeks for multi-level or screened-porch combinations. Most Ashburn projects break ground 4-5 weeks after contract."
-  }
 ];
 
-const expansionSections = [
-  {
-    title: "Ashburn's HOA Map  -  And How We Clear It",
-    paragraphs: [
-      "Almost every Ashburn home sits inside an HOA, and each major community runs its own architectural review committee with distinct rules. Brambleton's committee favors composite over wood for a consistent streetscape; Broadlands and Ashburn Village publish their own approved color lists; Moorefield Station has tighter setback expectations along its garage-loaded streets. We keep current submission packages for all of them and prepare the CAD drawings and color samples each ARC asks for.",
-      "Typical Ashburn planning examples include a Trex Transcend deck in Brambleton designed around a west-facing yard with an attached pergola for afternoon shade, a screened porch concept in One Loudoun, and a cable-railing deck replacement scope in Moorefield Station  -  each requiring coordination with Loudoun County's LandMARC permit process where structural work is involved."
-    ]
-  },
-  {
-    title: "Building in the Loudoun Tech Corridor",
-    paragraphs: [
-      "Ashburn grew up around the data-center corridor, and its housing stock reflects that  -  largely transitional and craftsman homes built from the early 2000s onward on compact, tightly platted lots. Outdoor space is at a premium, which is exactly why Ashburn homeowners invest in decks that work harder than the builder original.",
-      "Loudoun Decks is a selective, craftsmanship-first builder rather than a volume operation. We take on a limited number of full Ashburn projects each year so every build  -  from the One Loudoun and Loudoun Station neighborhoods to the established streets near Ashburn Village and the Ashburn Ice House  -  gets senior attention from design through final inspection.",
-      "If you want a deck builder near you in Ashburn who knows which ARC reviews which street and how Loudoun County reads a framing plan, that local fluency is what we bring to every estimate."
-    ]
-  },
-  {
-    title: "Composite Decking for Ashburn's West-Facing Yards",
-    paragraphs: [
-      "Ashburn homeowners overwhelmingly choose composite, and not only for the low maintenance. Many of these yards take direct western sun, and a quality composite board with good heat performance  -  paired with smart shade design  -  makes the difference between a deck you use and one you avoid in July. As a Trex product planning and TimberTech and AZEK product planning contractor, we install the top-tier lines built for that exposure.",
-      "Multi-level decks are especially popular on Ashburn lots that back to common areas or wooded buffers, where a stepped design captures more usable square footage than a single wide platform. Built-in seating, pergola covers and low-voltage lighting are standard requests, and Ashburn projects typically start around a written estimate and scale with size and features.",
-      "Every composite deck we build carries the manufacturer's material warranty backed by our installation certification  -  a meaningful pairing on a deck you expect to own for decades."
-    ],
-    listItems: [
-      { label: "Trex product planning", text: "Trex Transcend, Enhance and Select catalog options for Ashburn builds." },
-      { label: "TimberTech and AZEK product planning", text: "TimberTech Pro and AZEK product-line planning." },
-      { label: "ARC-Ready Drawings", text: "Full CAD plans and color samples prepared for every Ashburn HOA submission." },
-      { label: "Loudoun County Permits", text: "We file through the LandMARC portal and coordinate footing, framing and final inspections." }
-    ]
-  },
-  {
-    title: "Outdoor Kitchens, Pergolas and Screened Porches in Ashburn",
-    paragraphs: [
-      "For many Ashburn homeowners the deck is the anchor of a larger outdoor build. A screened porch turns a Loudoun County backyard into three-season living space, free of the insects and pollen; we frame screen rooms that integrate structurally with a new or existing deck rather than bolting on as an afterthought.",
-      "Pergolas do double duty in Ashburn  -  architectural definition plus genuine sun control for those west-facing yards. We build traditional open-rafter cedar pergolas and motorized louvered systems that adjust shade on demand.",
-      "Full outdoor-living packages  -  deck, screened porch, pergola and outdoor kitchen  -  are common Ashburn and Brambleton planning scopes, typically landing priced in a written estimate for a complete backyard transformation."
-    ]
-  },
-  {
-    title: "Brambleton, Broadlands, Belmont, One Loudoun  -  the Communities We Know by Name",
-    paragraphs: [
-      "Ashburn isn't one market — it's a network of master-planned communities with distinct character, distinct ARC processes, and distinct price points. Knowing which Ashburn you live in is the first step to estimating honestly.",
-      "Brambleton is the Carriage / Estate / Townhome blend on the western edge of Ashburn. The community association ARC reviews material samples plus rendering — typical approval in 14 days when our packet is complete. Common Brambleton builds: 400–550 sqft Trex Transcend rear decks with composite balustrade railings, screened porches added to Carriage homes, multi-level designs on the larger Estate lots that back to common-area wooded buffers. Brambleton clients often pair the deck with a paver patio extension or a low-voltage lighting design.",
-      "Broadlands is the established Ashburn community with a strong ARC presence. Architectural standards favor warm-tone composites (Trex Transcend Spiced Rum, Havana Gold; Vintage Lantern). Multi-level builds are popular on the lots backing to Hidden Lane and the western edges where the topography supports stepped designs.",
-      "Belmont Country Club is the premier estate-tier neighborhood — homes in the higher-priced range, larger lots, the most detailed ARC review in Ashburn (material samples, color specs, structural drawings, in-person committee review). Belmont projects routinely are priced in a written estimate for full outdoor-living packages with built-in outdoor kitchens, fire features, and multi-level designs that match the home's architecture.",
-      "One Loudoun is mixed-use Metro-corridor development. Townhome rear decks here are compact (200-280 sqft, a written estimate); detached homes support full 400-600 sqft builds. The community emphasizes modern design vocabulary — cable or aluminum railings, dark composite tones, integrated lighting.",
-      "Beyond these four anchor communities we also build regularly in Ashburn Village, Ashburn Farm, Moorefield Station, Loudoun Valley Estates, Goose Creek Village, and the smaller pocket neighborhoods. Each ARC has its own quirks; we keep current submission templates for every one."
-    ]
-  },
-  {
-    title: "Re-Deck or Resurface? The Builder-Grade Decision Tree for Ashburn Homes",
-    paragraphs: [
-      "Roughly 60% of Ashburn deck calls today are NOT new builds — they're replacement, resurface, or full structural rebuild of the original 2000s-era builder pressure-treated deck. Knowing which path is right saves homeowners a written estimate.",
-      "If your framing (joists, beams, ledger, posts) is structurally sound on inspection, resurfacing is the right call: tear off the surface boards and railings, replace with composite (Trex Transcend or TimberTech AZEK), upgrade the railings to cable or aluminum, optionally add lighting. Typical Ashburn resurface: a written estimate for 300-500 sqft, completed in 1-2 weeks. The original framing keeps the structural depreciation curve you've already paid for.",
-      "If framing shows rot at the ledger (the most common 15-year failure point on Ashburn builder decks), or if posts are settling, or if joists show structural sag, the right path is full replacement: tear-down, new footings, new framing, new surface, new railings. Typical Ashburn full replacement: a written estimate for 400-600 sqft.",
-      "The diagnostic visit is free. We climb under the deck, inspect the ledger flashing, probe the joist ends, check post bases, and give you the honest call. Whether an Ashburn builder deck is resurfaced or fully replaced depends on what that inspection finds, not on a fixed percentage. For reference, in Loudoun Decks' recent written quotes in Northern Virginia (September–October 2026), a Trex deck resurfacing was $9,020–$12,678. These are quoted prices, not guarantees; the written estimate after the site visit is the only project price. See [resurfacing vs replacement](/deck-resurfacing-vs-replacement)."
-    ]
-  },
-  {
-    title: "Loudoun County Permit + Inspection — What We File on Every Ashburn Build",
-    paragraphs: [
-      "Every Ashburn deck needs a Loudoun County building permit filed through the LandMARC portal, plus (in almost every case) an HOA architectural review approval. We file both in parallel from the day you sign — not serially — which saves 4-6 weeks compared to builders who wait for one approval before submitting the other.",
-      "The Loudoun County package: site plan with setbacks marked against your certified plat, structural drawings with ledger detail and footing schedule, deck details, and homeowner authorization. Plan review takes 2-4 weeks. Permit fees a written estimate depending on construction valuation. See the full county-side process in our Loudoun County deck permit guide.",
-      "The HOA package: material samples, color specs, deck renderings, structural drawings, and the community-specific application form. Each Ashburn ARC has its own submission packet — Brambleton requires the Brambleton ARC form, Broadlands its own, Ashburn Village its own. We prepare each package around the current community checklist so preventable review questions are reduced.",
-      "After approval, three required inspections: footing (before concrete), framing (before decking installs), final (when structure complete with railings + stairs). All coordinated through Loudoun County Building & Development. The homeowner never has to be on site for inspections — we meet the inspector and handle the walkthrough."
-    ]
-  }
-];
+export const metadata = buildMetadata({
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  image: '/social/deck-builder-ashburn-va-social.png',
+});
 
 export default function DeckBuilderAshburnPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-ashburn-va" name="Deck Builder in Ashburn, VA | Loudoun Decks" description="Custom composite deck builder in Ashburn serving Brambleton, Broadlands, Ashburn Village and One Loudoun. Trex product-line planning." speakable />
-      <LocalBusinessSchema city="Ashburn" url="https://ldndecks.com/deck-builder-ashburn-va" />
-      <ServicesHeader
-        subtext="Ashburn, VA Deck Builder"
-        title="Custom Deck Builder in Ashburn, VA"
-        description="Loudoun Decks builds premium composite and wood decks across Brambleton, Broadlands, Ashburn Village and One Loudoun. Trex product-line planning. publicly documented reputation."
+      <WebPageSchema
+        dateModified="2026-10-31"
+        url={PAGE_URL}
+        name={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        speakable
       />
-      <ServiceMain
-        subtitle="Ashburn's Trusted Choice"
-        title="Deck Builder Ashburn VA  -  Premium Craftsmanship"
-        description="We upgrade builder-grade Ashburn decks into outdoor spaces homeowners are proud to show off. HOA-ready CAD plans and Trex product-line materials from a written estimate."
-        listItems={[
-          "Trex, TimberTech and AZEK material planning",
-          "Brambleton, Broadlands & Ashburn Village ARC submissions handled",
-          "Builder-grade deck replacement & composite resurfacing",
-          "Multi-level designs for common-area-backing lots",
-          "Public reviews - call (571) 655-7207"
+      <LocalBusinessSchema
+        city="Ashburn"
+        url={PAGE_URL}
+        description="Loudoun Decks, a Virginia Class A contractor (license #2705191673), builds and repairs decks in Ashburn, Loudoun County. Call (571) 655-7207 for a free on-site estimate."
+      />
+      <header style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 1.5rem 2.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <p style={{ margin: '0 0 0.75rem', letterSpacing: '0.04em', textTransform: 'uppercase', fontSize: '0.8rem', color: '#d7e6f5' }}>
+            Ashburn, Loudoun County, VA
+          </p>
+          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.6rem)', lineHeight: 1.15, fontWeight: 800, margin: '0 0 1.25rem' }}>
+            {PAGE_TITLE}
+          </h1>
+          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 1.25rem', fontWeight: 700, borderRadius: 6, textDecoration: 'none' }}>
+              Call (571) 655-7207
+            </CallLink>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.7rem 1.25rem', fontWeight: 700, borderRadius: 6, textDecoration: 'none' }}>
+              Request a free on-site estimate
+            </Link>
+          </div>
+        </div>
+      </header>
+      <GeoAnswerBlock
+        question="Who is a deck builder in Ashburn, VA?"
+        answer={INTRO_ANSWER}
+        facts={[
+          'Business address: 13704 Winding Oak Cir, Centreville, VA 20121. Ashburn is a Loudoun County service area.',
+          'License: Virginia Class A Contractor License #2705191673. Verify current status with Virginia DPOR.',
         ]}
-        image1="/images/img36.jpeg"
-        image2="/images/img37.jpeg"
+        links={[
+          { href: '/get-estimate', label: 'Request an Ashburn estimate' },
+          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun County permit guide' },
+          { href: '/deck-builders-loudoun', label: 'Loudoun County deck builders' },
+        ]}
       />
+      <section style={{ padding: '2.5rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.7rem', fontWeight: 800, marginBottom: '0.75rem' }}>Deck services in Ashburn</h2>
+        <p style={{ lineHeight: 1.7, color: '#333', marginBottom: '1.25rem' }}>
+          The Ashburn scope is new composite and wood decks, deck repair, deck replacement, screened porches, railings, stairs, and under-deck drainage. Material lines such as Trex, TimberTech, and AZEK are product options. Manufacturer warranty terms are separate from the written workmanship terms in the project agreement.
+        </p>
+        <p style={{ lineHeight: 1.7, color: '#333', marginBottom: '1.25rem' }}>
+          {RESURFACE_DECISION}{' '}
+          <Link href="/deck-resurfacing-vs-replacement">Compare resurfacing and replacement</Link>.
+        </p>
+        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '0.75rem' }}>
+          {services.map((service) => (
+            <li key={service.href} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '0.9rem 1rem' }}>
+              <Link href={service.href} style={{ color: 'var(--color-primary)', fontWeight: 700 }}>{service.label}</Link>
+              <p style={{ margin: '0.35rem 0 0', lineHeight: 1.6, color: '#444' }}>{service.detail}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section style={{ padding: '0 1.5rem 2.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.7rem', fontWeight: 800, marginBottom: '0.75rem' }}>Ashburn permits, HOAs, and lots</h2>
+        <p style={{ lineHeight: 1.7, color: '#333', marginBottom: '1rem' }}>
+          Ashburn is in Loudoun County. Deck permits are county permits filed through LandMARC. Loudoun County states that all decks require a building permit and a zoning permit. Start with the <Link href="/deck-permit-loudoun-county-virginia">Loudoun County deck permit guide</Link> and the <a href="https://www.loudoun.gov/1166/Decks">official Loudoun County deck page</a>. Review time depends on the application and the county workload. This page does not state a number of days.
+        </p>
+        <p style={{ lineHeight: 1.7, color: '#333', marginBottom: '1rem' }}>
+          Most Ashburn neighborhoods also need an HOA architectural packet. Communities already named in the site data include Brambleton, Broadlands, Ashburn Village, and Moorefield Station, along with Belmont Country Club, One Loudoun, and Loudoun Valley Estates. Each association sets its own material and color rules. Related pages: <Link href="/ashburn-village-hoa-deck-rules">Ashburn Village HOA deck rules</Link>, <Link href="/deck-builder-brambleton-va">Brambleton</Link>, <Link href="/deck-builder-broadlands-va">Broadlands</Link>, <Link href="/deck-builder-one-loudoun-va">One Loudoun</Link>, and <Link href="/hoa-deck-rules-northern-virginia">HOA deck rules in Northern Virginia</Link>.
+        </p>
+        <p style={{ lineHeight: 1.7, color: '#333', marginBottom: 0 }}>
+          The housing stock is planned-community construction: colonial, craftsman, and newer production homes. Lot size, grade, drainage, and any shared edge should be read from that property&apos;s plat. Footing depth follows the current Loudoun County requirement and is confirmed on the plans before filing.
+        </p>
+      </section>
+      <section style={{ padding: '0 1.5rem 2.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.7rem', fontWeight: 800, marginBottom: '0.75rem' }}>Published Ashburn projects</h2>
+        <p style={{ lineHeight: 1.7, color: '#333', marginBottom: '1rem' }}>
+          These are the Ashburn records in the project showcase. Titles and dates are copied from that data. No price is attached.
+        </p>
+        <div style={{ display: 'grid', gap: '1rem' }}>
+          <article style={{ border: '1px solid #e5e5e5', borderRadius: 8, overflow: 'hidden' }}>
+            <div style={{ position: 'relative', width: '100%', height: 280 }}>
+              <Image src="/images/img13.jpeg" alt="New composite deck, Ashburn, October 2024" fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 100vw, 900px" />
+            </div>
+            <p style={{ margin: 0, padding: '0.9rem 1rem', lineHeight: 1.5 }}>
+              <Link href="/showcase/new-composite-deck-ashburn">BUILD NEW COMPOSITE DECK</Link>
+              {' '}— Ashburn, October 2024.
+            </p>
+          </article>
+          <article style={{ border: '1px solid #e5e5e5', borderRadius: 8, overflow: 'hidden' }}>
+            <div style={{ position: 'relative', width: '100%', height: 280 }}>
+              <Image src="/fence2.avif" alt="New custom wood fence, Ashburn, October 2024" fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 100vw, 900px" />
+            </div>
+            <p style={{ margin: 0, padding: '0.9rem 1rem', lineHeight: 1.5 }}>
+              <Link href="/showcase/custom-wood-fence-ashburn">NEW CUSTOM WOOD FENCE</Link>
+              {' '}— Ashburn, October 2024. This record is a fence, not a deck.
+            </p>
+          </article>
+        </div>
+      </section>
+      <ServicesFAQ
+        title="Ashburn deck builder questions"
+        faqs={ashburnFAQs}
+        canonicalUrl={PAGE_URL}
+      />
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.75rem' }}>Related Ashburn and Loudoun pages</h2>
+        <ul style={{ lineHeight: 1.8, paddingLeft: '1.2rem' }}>
+          <li><Link href="/composite-decks/ashburn">Composite decks in Ashburn</Link></li>
+          <li><Link href="/deck-repair/ashburn">Deck repair in Ashburn</Link></li>
+          <li><Link href="/screened-porches/ashburn">Screened porches in Ashburn</Link></li>
+          <li><Link href="/deck-resurfacing-vs-replacement">Resurface or replace a deck</Link></li>
+          <li><Link href="/services/deck-inspection">Deck inspection</Link></li>
+          <li><Link href="/deck-builder-leesburg-va">Deck builder in Leesburg, VA</Link></li>
+          <li><Link href="/deck-builder-sterling-va">Deck builder in Sterling, VA</Link></li>
+          <li><Link href="/get-estimate">Request a written estimate</Link></li>
+        </ul>
+      </section>
       <CityLeadFormSection
         city="Ashburn"
         county="Loudoun County"
-        service="deck replacement or composite deck"
+        service="deck replacement, deck repair, or composite deck"
         formLocation="local_city_ashburn_deck_builder"
       />
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Ashburn and Loudoun County" lastUpdated="2026-11-01" />
-      </div>
-      <PlanningUpdate
-        market="Ashburn deck projects"
-        notes={[
-          'Brambleton, Broadlands, Ashburn Village and One Loudoun projects should start with HOA packet planning before final material selection.',
-          'Many 2000s-era builder decks now need a repair-vs-resurface inspection before a homeowner chooses composite upgrades.',
-          'West-facing yards benefit from shade planning, lighter board-color options and early electrical rough-in for fans or lighting.',
-        ]}
-        links={[
-          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
-          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
-        ]}
-      />
-      <GeoAnswerBlock
-        question="Who is a deck builder in Ashburn, VA for composite deck replacement?"
-        answer="Loudoun Decks plans composite deck replacement and outdoor living projects for Ashburn homeowners in Brambleton, Broadlands, Ashburn Village, One Loudoun, Ashburn Farm, and nearby Loudoun County communities. The best first step is a framing, ledger, post-base, HOA, and permit review so the homeowner can choose between resurfacing, full replacement, Trex, TimberTech, AZEK, railing, lighting, and financing paths."
-        facts={[
-          'Primary buyer intent: composite deck replacement, resurfacing, HOA approval, and premium outdoor living.',
-          'Conversion path: written estimate, permit planning, and material comparison.'
-        ]}
-        links={[
-          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
-          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
-          { href: '/get-estimate', label: 'Get an Ashburn estimate' }
-        ]}
-      />
-      <ServiceContentExpansion sections={expansionSections} />
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-          <Image
-            src="/images/img17.jpeg"
-            alt="Premium custom Trex deck built by LDN Decks in Brambleton, Ashburn, Virginia"
-            fill
-            style={{ objectFit: 'cover' }}
-            sizes="(max-width: 900px) 100vw, 900px"
-          />
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="Ashburn" />
         </div>
-        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1rem', color: 'var(--color-primary)' }}>Deck Cost in Ashburn, VA (2026 Pricing)</h2>
-        <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-          Ashburn deck pricing reflects the community standards in Brambleton, Broadlands and <Link href="/deck-builder-one-loudoun-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>One Loudoun</Link> — most homeowners choose mid-to-premium composite materials. Here is how recent Ashburn projects have landed:
-        </p>
-        <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
-            <thead>
-              <tr style={{ background: '#f7f7f5', borderBottom: '2px solid #ddd' }}>
-                <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontWeight: 700 }}>Project Type</th>
-                <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontWeight: 700 }}>Typical Range</th>
-                <th style={{ padding: '0.75rem 1rem', textAlign: 'left', fontWeight: 700 }}>Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ borderBottom: '1px solid #eee' }}>
-                <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Trex Enhance Deck (300–400 sq ft)</td>
-                <td style={{ padding: '0.75rem 1rem' }}>a written estimate</td>
-                <td style={{ padding: '0.75rem 1rem', color: '#555' }}>Standard single-level, aluminum railing, basic lighting</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid #eee' }}>
-                <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Trex Transcend Deck (400–600 sq ft)</td>
-                <td style={{ padding: '0.75rem 1rem' }}>a written estimate</td>
-                <td style={{ padding: '0.75rem 1rem', color: '#555' }}>Multi-level option, picture-frame border, full lighting</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid #eee' }}>
-                <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Outdoor Living Package</td>
-                <td style={{ padding: '0.75rem 1rem' }}>a written estimate</td>
-                <td style={{ padding: '0.75rem 1rem', color: '#555' }}>Deck + screened porch, pergola, outdoor kitchen, full electrical</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
-          For detailed cost modeling, use our <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>monthly payment estimator</Link> or read the full <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia deck cost guide</Link>.
-        </p>
-      </div>
-      <SimpleCTA title="Get Your Free Ashburn Deck Estimate" buttonText="Request Estimate" link="/get-estimate" />
-      <ServiceInclusions
-        title="Why Ashburn Chooses Loudoun Decks"
-        description="We are not a franchise. We are a local Loudoun County team with deep roots in Ashburn and the credentials to back every build."
-        items={inclusions}
-      />
-      <ProcessSteps />
-      <ServicesFAQ
-        title="Deck Builder Ashburn VA  -  FAQs"
-        faqs={ashburnFAQs}
-        canonicalUrl="https://ldndecks.com/deck-builder-ashburn-va"
-      />
-      <ServiceAreasGrid />
-      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
-        <ul style={{ listStyle: 'none', padding: 0 }}>
-          {[
-            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
-            ['/ashburn-composite-deck-cost-financing', 'Ashburn Composite Deck Cost &amp; Financing Guide'],
-            ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
-            ['/deck-permit-loudoun-county-virginia', 'Loudoun County Deck Permit Guide'],
-            ['/deck-permit-hoa-cost-loudoun-county', 'Loudoun Permit + HOA Cost Breakdown'],
-            ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
-            ['/services/deck-repair', 'Deck Repair Service in Northern Virginia'],
-            ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
-            ['/deck-payment-estimator', 'Estimate Deck Costs by Monthly Payment'],
-            ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
-          ].map(([href, text]) => (
-            <li key={href} style={{ marginBottom: '0.5rem' }}>
-              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
-            </li>
-          ))}
-        
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
-            <li key="/bbb" style={{ marginBottom: '0.5rem' }}><Link href="/bbb-accredited-deck-builder-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>BBB Accredited Deck Builder →</Link></li>
-            <li key="/before-after" style={{ marginBottom: '0.5rem' }}><Link href="/before-and-after" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Before & After Ashburn-Style Projects →</Link></li>
-            <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Request a Written Ashburn Estimate →</Link></li>
-            <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
-          </ul>
       </section>
-      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Ashburn" /></div></section>
-      <SimpleCTA title="Build Your Dream Deck in Ashburn" buttonText="Get Free Estimate" link="/get-estimate" />
-      <RelatedGuides currentPath="/deck-builder-ashburn-va" />
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+        <NamedAuthor context="Ashburn and Loudoun County" lastUpdated="2026-10-31" />
+      </div>
+      <CountyHubLinks countySlug="loudoun-county" />
+      <RelatedGuides currentPath={PAGE_PATH} />
+      <SimpleCTA title="Request an Ashburn deck estimate" buttonText="Request Estimate" link="/get-estimate" />
       <ContactHome />
     </main>
   );

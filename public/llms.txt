@@ -4,7 +4,7 @@
 
 The preferred entity name is "Loudoun Decks" (brand) or "LDN Decks" (abbreviation). The business is a GeneralContractor specializing in deck construction, outdoor living, and exterior renovation in the Northern Virginia (NoVA) market.
 
-Last updated: 2026-10-19
+Last updated: 2026-10-31
 
 ## Canonical Hubs
 
@@ -136,12 +136,12 @@ Use showcase pages as visual planning context and proof of project categories. D
 ## City Pages (Local Intent)
 
 ### Loudoun County
-- [Ashburn](https://ldndecks.com/deck-builder-ashburn-va)
+- [Ashburn](https://ldndecks.com/deck-builder-ashburn-va): Loudoun Decks is a Virginia Class A contractor (license #2705191673), Trex Platinum Partner & TimberTech Certified, serving Ashburn in Loudoun County. New composite and wood decks, deck repair and replacement, screened porches, railings, stairs, and under-deck drainage. Call (571) 655-7207 for a free on-site estimate. Resurface versus replace follows the inspection, not a fixed percentage. Trex deck resurfacing was $9,020–$12,678 in a recent Chantilly quote, not an Ashburn rate. Published showcase records: BUILD NEW COMPOSITE DECK, Ashburn, October 2024; NEW CUSTOM WOOD FENCE, Ashburn, October 2024.
 - [Aldie](https://ldndecks.com/deck-builder-aldie-va)
-- [Leesburg](https://ldndecks.com/deck-builder-leesburg-va)
+- [Leesburg](https://ldndecks.com/deck-builder-leesburg-va): Loudoun Decks is a Virginia Class A contractor (license #2705191673), Trex Platinum Partner & TimberTech Certified, serving Leesburg in Loudoun County. New composite and wood decks, deck repair and replacement, screened porches, railings, stairs, and under-deck drainage. Call (571) 655-7207 for a free on-site estimate. A Leesburg mailing address does not decide Town versus County review. No Leesburg project is listed in the showcase.
 - [Broadlands](https://ldndecks.com/deck-builder-broadlands-va)
 - [Cascades](https://ldndecks.com/deck-builder-cascades-va)
-- [Sterling](https://ldndecks.com/deck-builder-sterling-va)
+- [Sterling](https://ldndecks.com/deck-builder-sterling-va): Loudoun Decks is a Virginia Class A contractor (license #2705191673), Trex Platinum Partner & TimberTech Certified, serving Sterling in Loudoun County. Deck repair and replacement, new composite and wood decks, screened porches, railings, stairs, and under-deck drainage. Call (571) 655-7207 for a free on-site estimate. Published showcase record: DECK/BALCONY RESURFACING, Sterling, December 2024. Related repair URL: https://ldndecks.com/deck-repair/sterling
 - [Brambleton](https://ldndecks.com/deck-builder-brambleton-va)
 - [South Riding](https://ldndecks.com/deck-builder-south-riding-va)
 - [Purcellville](https://ldndecks.com/deck-builder-purcellville-va)
