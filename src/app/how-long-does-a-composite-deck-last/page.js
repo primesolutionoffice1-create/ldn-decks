@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How long does a Trex deck last?", acceptedAnswer: { "@type": "Answer", text: "A Trex composite deck lasts 25-30+ years with minimal maintenance. Trex offers a 25-year limited warranty against structural failure, and their capped technology prevents moisture penetration, rot, and insect damage." } },
+    { "@type": "Question", name: "How long does a Trex deck last?", acceptedAnswer: { "@type": "Answer", text: "Trex backs its decking with limited residential warranties of 25 years (Enhance), 35 years (Select) and 50 years (Transcend). How long the deck lasts also depends on the framing underneath and on maintenance; capped composite boards resist moisture, rot and insects." } },
     { "@type": "Question", name: "How long does a wood deck last in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Pressure-treated wood lasts 10-15 years with annual staining/sealing, or 5-8 years without maintenance. Cedar lasts 15-20 years with maintenance. Virginia's freeze-thaw cycles and humidity accelerate wood deterioration." } },
     { "@type": "Question", name: "When should I replace vs resurface my deck?", acceptedAnswer: { "@type": "Answer", text: "Resurface if: the frame/joists are solid, only the surface boards are damaged or worn. Replace if: joists are soft, posts are rotting, footings are shifting, or the deck feels bouncy underfoot. We offer free inspections to determine which you need." } },
   ],
@@ -31,7 +31,7 @@ export default function DeckLifespanPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/how-long-does-a-composite-deck-last" name="How Long Does a Composite Deck Last? | Virginia Lifespan Guide" description="Composite decks last 25-50 years in Virginia. Trex: 25+ yrs, TimberTech AZEK: 50 yrs. See brand lifespans &amp; signs your deck needs replacement. Free inspection!" speakable />
+      <WebPageSchema dateModified="2026-11-02" url="https://ldndecks.com/how-long-does-a-composite-deck-last" name="How Long Does a Composite Deck Last? | Virginia Lifespan Guide" description="Composite decks last 25-50 years in Virginia. Trex: 25+ yrs, TimberTech AZEK: 50 yrs. See brand lifespans &amp; signs your deck needs replacement. Free inspection!" speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -71,7 +71,7 @@ export default function DeckLifespanPage() {
                   ['Pressure-Treated Wood', '10–15 years', 'None', 'Stain/seal every 1-2 yrs, sand, replace rotted boards'],
                   ['Cedar', '15–20 years', 'None', 'Stain/seal every 1-2 yrs, annual inspection'],
                   ['Trex Enhance', '25+ years', '25 years', 'Occasional soap & water wash'],
-                  ['Trex Transcend', '25–30+ years', '25 years', 'Occasional wash'],
+                  ['Trex Transcend', '25–30+ years', '50 years', 'Occasional wash'],
                   ['TimberTech PRO', '25–30+ years', '30 years', 'Occasional wash'],
                   ['TimberTech AZEK', '30–50 years', '50 years', 'Occasional wash'],
                 ].map((row, i) => (
@@ -81,6 +81,7 @@ export default function DeckLifespanPage() {
                 ))}
               </tbody>
             </table>
+            <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '0.75rem', marginBottom: 0 }}>Warranty column: manufacturer limited residential warranties. Trex: Enhance 25, Select 35, Transcend 50 years (<a href="https://www.trex.com/products/decking/" target="_blank" rel="noopener noreferrer">trex.com</a>, checked November 2, 2026). Lifespan depends on the framing underneath and on maintenance.</p>
           </div>
 
           <h2 style={S.h2}>What Kills a Deck in Virginia</h2>
@@ -112,7 +113,7 @@ export default function DeckLifespanPage() {
                 <li style={{ marginBottom: '0.5rem' }}>Footings are stable (no shifting or heaving)</li>
                 <li style={{ marginBottom: '0.5rem' }}>Ledger board connection is solid</li>
               </ul>
-              <p style={{ fontSize: '0.9rem', marginTop: '0.75rem' }}><strong>Cost:</strong> 40–60% of a full rebuild</p>
+              <p style={{ fontSize: '0.9rem', marginTop: '0.75rem' }}><strong>Cost:</strong> depends on board area and what the inspection finds. In Loudoun Decks&apos; recent written quotes in Northern Virginia (September–October 2026), a Trex deck resurfacing was $9,020–$12,678.</p>
             </div>
             <div style={{ background: '#ffebee', borderRadius: 8, padding: '1.5rem' }}>
               <h3 style={{ fontWeight: 700, marginBottom: '0.75rem', color: '#c62828' }}>Full Replace ✗</h3>
@@ -123,14 +124,15 @@ export default function DeckLifespanPage() {
                 <li style={{ marginBottom: '0.5rem' }}>Deck feels bouncy or unstable</li>
                 <li style={{ marginBottom: '0.5rem' }}>Ledger board is pulling away from house</li>
               </ul>
-              <p style={{ fontSize: '0.9rem', marginTop: '0.75rem' }}><strong>Cost:</strong> Full rebuild price</p>
+              <p style={{ fontSize: '0.9rem', marginTop: '0.75rem' }}><strong>Cost:</strong> in the same quotes, new open decks came to $61–$102 per sq ft (most $64–$68).</p>
             </div>
           </div>
+          <p style={S.p}>These are quoted prices, not guarantees; the written estimate after the site visit is the only project price. See <Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>resurfacing vs replacement</Link>.</p>
           <p style={S.p}><strong>Not sure which you need?</strong> We offer free deck inspections. We&apos;ll check every component and tell you honestly whether resurfacing will work or if a rebuild is the smarter investment.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "How long does a Trex deck last?", a: "25-30+ years with minimal maintenance. Trex offers a manufacturer warranty against structural failure." },
+            { q: "How long does a Trex deck last?", a: "Trex backs its decking with limited residential warranties of 25 years (Enhance), 35 years (Select) and 50 years (Transcend). How long the deck lasts also depends on the framing underneath and on maintenance; capped composite boards resist moisture, rot and insects." },
             { q: "How long does a wood deck last in Virginia?", a: "PT wood: 10-15 years with annual staining, 5-8 without. Cedar: 15-20 years. Virginia's freeze-thaw and humidity accelerate deterioration." },
             { q: "When to resurface vs replace?", a: "Resurface if the frame is solid and only boards are worn. Replace if joists are soft, posts rotting, or footings shifting. Free inspection to determine." },
           ].map((faq, i) => (
@@ -155,7 +157,7 @@ export default function DeckLifespanPage() {
       </article>
 
       <SimpleCTA title="Deck Past Its Prime? Free Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-02" />
 
       <RelatedGuides currentPath="/how-long-does-a-composite-deck-last" />
 
