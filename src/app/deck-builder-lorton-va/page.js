@@ -1,193 +1,201 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ServicesHeader from '@/components/ServicesHeader';
-import ServiceMain from '@/components/ServiceMain';
-import ServiceInclusions from '@/components/ServiceInclusions';
-import ServiceContentExpansion from '@/components/ServiceContentExpansion';
-import ProcessSteps from '@/components/ProcessSteps';
-import ServicesFAQ from '@/components/ServicesFAQ';
-import ContactHome from '@/components/ContactHome';
-import RelatedGuides from '@/components/RelatedGuides';
-import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import JsonLd from '@/components/JsonLd';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import PlanningUpdate from '@/components/PlanningUpdate';
+import CallLink from '@/components/CallLink';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
+
+const PATH = "/deck-builder-lorton-va";
+const PAGE_URL = "https://ldndecks.com/deck-builder-lorton-va";
+const PAGE_TITLE = "Deck Builder in Lorton, VA | Loudoun Decks";
+const PAGE_DESCRIPTION = "Lorton deck builder for builder-grade deck replacement and wooded-lot decks, with Fairfax County permits and Laurel Hill HOA review.";
 
 export const metadata = buildMetadata({
-  path: '/deck-builder-lorton-va',
-  title: 'Deck Builder in Lorton, VA | Composite Decks | Loudoun Decks',
-  description: 'Deck builder in Lorton, VA. Custom Trex & composite decks for Laurel Hill, Crosspointe, Newington & Gunston. Fairfax County permits handled. Free estimate  -  (571) 655-7207.',
-  image: '/social/deck-builder-lorton-va-social.png',
+  path: PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  image: "/social/deck-builder-lorton-va-social.png",
 });
 
-const inclusions = [
+const faqs = [
   {
-    title: "Laurel Hill Upgrade Specialists",
-    desc: "Laurel Hill homes were built starting in 2005, and their original builder-grade pressure-treated decks are now entering the upgrade window. We replace them with composite decking that matches the quality of the home  -  not the budget the builder had at closing."
+    "q": "Who builds decks in Lorton, VA?",
+    "a": "Loudoun Decks LLC is a Centreville-based residential deck contractor and a Virginia Class A contractor (DPOR license #2705191673), owned by Nicolae (Nick) Zugrav. Lorton is in Fairfax County."
   },
   {
-    title: "Designed for Wooded Conservation Lots",
-    desc: "Many Lorton properties back to wooded conservation easements and parkland. We design decks that frame those views with cable or glass railing rather than blocking them, and we work around mature trees and root zones during footing placement."
+    "q": "What should a deck project in Lorton plan for?",
+    "a": "Laurel Hill and Crosspointe projects should confirm HOA review before Fairfax County permit documents are final. Wooded and conservation-adjacent lots may need early RPA, setback, or footing-location screening. Laurel Hill was built from around 2005 on the former Lorton Prison site, and some lots back to Mason Neck State Park and Pohick Bay Regional Park. Builder-grade replacements should include ledger, post-base, and footing checks."
   },
   {
-    title: "Fairfax County Permits, Start to Finish",
-    desc: "Lorton falls under Fairfax County jurisdiction. We prepare structural drawings, file the permit application electronically and schedule all inspections  -  footing, framing and final  -  so the build stays on track without you visiting the county office."
+    "q": "What deck services does Loudoun Decks offer in Lorton?",
+    "a": "These are services named on the Loudoun Decks site, not a separate menu invented for Lorton. The work includes new custom decks, deck replacement, deck repair, and deck resurfacing when the existing frame is structurally sound. The homepage lists Trex, TimberTech, Fiberon, AZEK, and Wolf as composite and PVC options and labels the company a Trex Partner. Screened porches, open porches, and front porches are included, along with pergolas and gazebos. Patios, fencing, railings, under-deck patios, and fire pits are included when that scope is part of the project. Homeowners should verify current Trex profile details directly with Trex."
+  },
+  {
+    "q": "How are permits and HOA packages handled for Lorton?",
+    "a": "Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope. The permit note used here is the one published on the Loudoun Decks homepage. The table lists Fairfax County plan review at 3–5 weeks through PLUS / Building Development Division, calls Fairfax County the most documentation-heavy jurisdiction in Northern Virginia, and says sealed structural drawings, ledger bolt schedules, and footing depths are required up front. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."
+  },
+  {
+    "q": "Which documented project does this Lorton page cite?",
+    "a": "No Lorton project page was found. The documented project cited here is the November 2024 multi-level wood deck gallery record in Chantilly, not Lorton."
+  },
+  {
+    "q": "How do I contact Loudoun Decks about a Lorton deck?",
+    "a": "Lorton is listed by name under Fairfax County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville. Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."
   }
 ];
 
-const lortonFAQs = [
-  {
-    q: "How much does a new deck cost in Lorton, VA?",
-    a: "Lorton composite deck projects are typically priced in a written estimate. A standard 300-350 sqft Trex Transcend deck with aluminum railings is priced in a written estimate installed. Laurel Hill builder-grade replacements tend toward the middle of that range, while larger builds with cable railing, multiple levels or screened-porch additions reach higher."
-  },
-  {
-    q: "Do Laurel Hill and Crosspointe HOAs allow composite decking?",
-    a: "Yes. Both Laurel Hill Community Association and Crosspointe permit composite decking. Each has its own architectural review process with guidelines on board color, railing style and overall design. We prepare the full submission package and file it on your behalf  -  turnaround is typically 2-4 weeks."
-  },
-  {
-    q: "Do I need a permit for a deck in Lorton?",
-    a: "Yes. Lorton is in Fairfax County, and any new deck or structural replacement requires a building permit. Plan review runs 3-6 weeks. We handle the full process: structural drawings, electronic filing, and scheduling of footing, framing and final inspections."
-  },
-  {
-    q: "How long does a Lorton deck project take to build?",
-    a: "Construction typically takes 2 to 3 weeks once the permit is approved and materials are on site. The Fairfax County permit adds 3-6 weeks of plan review before construction starts. We submit HOA architectural review applications in parallel with the permit so both approvals arrive around the same time."
-  },
-  {
-    q: "Can you build a deck that preserves wooded views in Lorton?",
-    a: "Yes. Many Lorton lots  -  especially in Laurel Hill and near Mason Neck  -  back to wooded conservation areas. We use cable railing and glass panel systems to keep sight lines open rather than blocking them with solid picket railing. The view is often the best feature of these lots, and the deck should frame it."
-  },
-  {
-    q: "Is it worth replacing a 15-year-old builder-grade deck?",
-    a: "In most cases, yes. Builder-grade pressure-treated decks installed in Laurel Hill and similar communities were built to minimum standards  -  basic PT boards, simple railings, often undersized footings. By 12-15 years, the surface boards are splitting, the fasteners are rusting and the structure may not meet current code. A composite replacement provides a 25-year material warranty, zero maintenance and a finished look that matches the home."
-  }
-];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+};
 
-const expansionSections = [
-  {
-    title: "Laurel Hill's Builder-Grade Upgrade Cycle",
-    paragraphs: [
-      "Laurel Hill is the defining community in Lorton  -  a large-scale residential development built on the former Lorton Prison site starting around 2005. The homes are well-built, but the decks that came with them were not. Builders installed basic pressure-treated wood decks as standard features, using minimum-spec lumber, simple picket railings and the smallest footings that would pass inspection. These decks were designed to look finished on closing day, not to last two decades.",
-      "That upgrade cycle is now well underway. Homes built in 2005-2010 have decks that are 15-20 years old, and the PT lumber is showing its age: splitting surface boards, rusted fastener heads, wobbly railings and in some cases soft spots in the framing where moisture has settled. The good news is that the homes themselves are solid and the lots are generous, which means there is room to build a better deck  -  often larger than the original  -  without pushing against setback limits.",
-      "Laurel Hill replacement planning usually starts with the lot layout, rear-yard grade and HOA requirements. Many projects involve removing the old deck entirely, inspecting or replacing the ledger connection, and building a new composite deck on fresh framing engineered to current Virginia code."
-    ]
-  },
-  {
-    title: "Decks for Wooded Lorton Lots",
-    paragraphs: [
-      "Lorton's geography sets it apart from the rest of inner Fairfax County. Many properties back to wooded conservation easements, Mason Neck State Park and Pohick Bay Regional Park. These lots offer privacy and natural views that most Northern Virginia subdivisions cannot match  -  and the deck should take advantage of that rather than ignore it.",
-      "Cable railing is our most recommended option for Lorton's wooded lots. The thin horizontal cables virtually disappear from the seated eye level, letting the tree line serve as the backdrop instead of a wall of white pickets. For homeowners who want even less visual interruption, tempered glass panel systems eliminate the horizontal lines entirely. Both options meet Fairfax County code for guardrail height and opening size.",
-      "We also account for the trees themselves. Mature hardwoods close to the deck footprint have root zones that extend well beyond the drip line. Rather than cutting roots to place footings  -  which risks destabilizing the tree  -  we adjust footing locations or use helical piers that thread between major roots. The goal is a deck that coexists with the landscape, not one that compromises it."
-    ]
-  },
-  {
-    title: "Fairfax County Permits for Lorton Properties",
-    paragraphs: [
-      "Lorton is unincorporated Fairfax County, so all deck permits are processed through the county's Land Development Services office. The standard deck permit requires a site plan, structural drawings showing footing dimensions and spacing, ledger attachment details and guardrail specifications. Current plan review times run 3-6 weeks, with occasional delays during the spring peak.",
-      "Some Lorton properties  -  particularly those near Mason Neck and along Pohick Creek  -  fall within Resource Protection Areas (RPAs) or Environmental Protection Corridors. These zones carry additional setback and disturbance requirements that affect where deck footings can be placed. We identify RPA status early in the design process and adjust the deck footprint accordingly, so the permit application is not returned for revision.",
-      "The permit fee for a typical Lorton deck is priced in a written estimate depending on project valuation. We prepare and file the complete submission package electronically and schedule the three required inspections  -  footing, framing and final  -  at the appropriate build phases."
-    ]
-  },
-  {
-    title: "Outdoor Living for South County Homes",
-    paragraphs: [
-      "Lorton and the broader South County area have a stronger connection to the outdoors than most of inner Fairfax County. Mason Neck State Park, Pohick Bay Regional Park, and the Occoquan River are minutes away, and many homeowners chose Lorton specifically for that access. A well-designed deck extends that outdoor lifestyle to the backyard  -  a place to eat, relax and spend time outside without driving somewhere first.",
-      "For Lorton families, a deck-and-screened-porch combination is one of the most practical builds. The open deck section handles grilling and open-air seating, while the screened porch provides a bug-free zone from May through October  -  critical in Lorton's tree-heavy environment where mosquitoes are a fact of life. We frame the porch into the deck structure from the start so it reads as one intentional build rather than an addition.",
-      "Lorton's lot sizes  -  typically a quarter acre to a third of an acre in Laurel Hill and Crosspointe  -  support these larger builds without crowding the yard. Combined deck-and-screened-porch projects here typically are priced in a written estimate, creating a three-season outdoor room that adds genuine living space to the home."
-    ]
-  }
-];
-
-export default function DeckBuilderLortonPage() {
+export default function LortonDeckBuilderPage() {
   return (
-    <main>
-      <LocalBusinessSchema city="Lorton" url="https://ldndecks.com/deck-builder-lorton-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-lorton-va" name="Deck Builder in Lorton, VA | Composite Decks | Loudoun Decks" description="Deck builder in Lorton, VA. Custom Trex &amp; composite decks for Laurel Hill, Crosspointe, Newington &amp; Gunston. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
-      <ServicesHeader
-        subtext="Lorton, VA's Trusted Deck Company"
-        title="Custom Deck Builder in Lorton, VA"
-        description="Loudoun Decks builds composite decks and outdoor living spaces across Laurel Hill, Crosspointe, Newington and the South County area. Fairfax County permits handled. publicly documented reputation."
+    <>
+      <JsonLd data={faqSchema} />
+      <LocalBusinessSchema city="Lorton" url={PAGE_URL} description={PAGE_DESCRIPTION} />
+      <WebPageSchema
+        dateModified="2026-11-03"
+        url={PAGE_URL}
+        name={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        speakable
       />
-      <ServiceMain
-        subtitle="Upgrading Lorton's Outdoor Living"
-        title="Deck Builder Lorton VA  -  Premium Quality"
-        description="Lorton's newer communities have builder-grade decks ready for a real upgrade. We replace them with Trex and TimberTech composite  -  cable railing for wooded views, proper engineering for conservation lots. Projects from a written estimate."
-        listItems={[
-          "Trex, TimberTech and AZEK material planning",
-          "Laurel Hill & Crosspointe HOA submissions handled",
-          "Cable railing for wooded and conservation lot views",
-          "Fairfax County permits filed and inspected",
-          "Public reviews - call (571) 655-7207"
-        ]}
-        image1="/images/img36.jpeg"
-        image2="/images/img37.jpeg"
-      />
-      <PlanningUpdate
-        market="Lorton deck projects"
-        notes={[
-          'Laurel Hill and Crosspointe projects should confirm HOA review needs before Fairfax County permit documents are finalized.',
-          'Wooded and conservation-adjacent lots may need early screening for RPA, setback or footing-location constraints.',
-          'Builder-grade replacements should include ledger, post-base and footing checks before choosing repair, resurface or rebuild.',
-        ]}
-        links={[
-          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
-          { href: '/services/deck-inspection', label: 'Deck inspection' },
-        ]}
-      />
-      <ServiceContentExpansion sections={expansionSections} />
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-          <Image
-            src="/images/img17.jpeg"
-            alt="Composite deck built by LDN Decks in Lorton, Virginia with wooded views"
-            fill
-            style={{ objectFit: 'cover' }}
-            sizes="(max-width: 900px) 100vw, 900px"
-          />
+      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck builder in Lorton, VA</h1>
+          <p data-speakable="true" style={{ color: '#ccc', fontSize: '1.1rem' }}>{PAGE_DESCRIPTION}</p>
+          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+          </div>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Virginia Class A contractor, DPOR license #2705191673. Office: 13704 Winding Oak Cir, Centreville, VA 20121.</p>
         </div>
-        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Trex Deck Builder Lorton</h2>
-        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1.5rem' }}>Composite Decks for Laurel Hill, Crosspointe and South County</h3>
-      </div>
-      <ServiceInclusions
-        title="Why Lorton Chooses Loudoun Decks"
-        description="We are a local Northern Virginia team that understands Lorton's newer communities, its wooded lots and the Fairfax County permit process from start to finish."
-        items={inclusions}
-      />
-      <ProcessSteps />
-      <ServicesFAQ
-        title="Deck Builder Lorton VA  -  FAQs"
-        faqs={lortonFAQs}
-        canonicalUrl="https://ldndecks.com/deck-builder-lorton-va"
-      />
-      <ServiceAreasGrid />
-      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
-        <ul style={{ listStyle: 'none', padding: 0 }}>
-          {[
-            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
-            ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
-            ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
-            ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
-            ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
-          ].map(([href, text]) => (
-            <li key={href} style={{ marginBottom: '0.5rem' }}>
-              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
-            </li>
-          ))}
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
-            <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
-          </ul>
       </section>
-      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Lorton" /></div></section>
-      <SimpleCTA title="Get Your Lorton Deck Quote" buttonText="Get Free Estimate" link="/get-estimate" />
-      <RelatedGuides currentPath="/deck-builder-lorton-va" />
-      <NamedAuthor context="Lorton and Northern Virginia" lastUpdated="2026-10-18" />
-      <ContactHome />
-    </main>
+      <CityLeadFormSection
+        city="Lorton"
+        county="Fairfax County"
+        service="deck replacement, composite deck, or screened porch"
+      />
+      <GeoAnswerBlock
+        question="Who builds decks in Lorton, VA?"
+        answer={faqs[0].a}
+        facts={[faqs[1].a]}
+        links={[
+          { href: '/get-estimate', label: "Request a Lorton estimate" },
+          { href: "/showcase/wood-multi-level-deck-chantilly", label: "WOOD MULTI LEVEL DECK" },
+        ]}
+      />
+      <article style={{ padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img17.jpeg"
+              alt="Deck photo on the Loudoun Decks Lorton, VA page"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Planning a deck in Lorton</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[0].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{faqs[1].a}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Services in Lorton</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[2].a}</p>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2rem 0 1rem' }}>Permits and HOA paperwork</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope."}</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"The permit note used here is the one published on the Loudoun Decks homepage. The table lists Fairfax County plan review at 3–5 weeks through PLUS / Building Development Division, calls Fairfax County the most documentation-heavy jurisdiction in Northern Virginia, and says sealed structural drawings, ledger bolt schedules, and footing depths are required up front. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Homepage permit table</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>A documented project</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[4].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/showcase/wood-multi-level-deck-chantilly" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"WOOD MULTI LEVEL DECK"}</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Service area</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Lorton is listed by name under Fairfax County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville."}</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
+            <Link key="/deck-builder-springfield-va" href="/deck-builder-springfield-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Springfield</Link>
+            <Link key="/deck-builder-woodbridge-va" href="/deck-builder-woodbridge-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Woodbridge</Link>
+            <Link key="/deck-builder-alexandria-va" href="/deck-builder-alexandria-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Alexandria</Link>
+          </div>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Contact</h2>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{"Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>FAQ</h2>
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+            </details>
+          ))}
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related pages</h2>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/showcase/wood-multi-level-deck-chantilly" style={{ marginBottom: '0.5rem' }}><Link href="/showcase/wood-multi-level-deck-chantilly" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Chantilly wood deck gallery"}</Link></li>
+              <li key="/deck-permit-fairfax-county-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Fairfax County deck permit guide"}</Link></li>
+              <li key="/near-you/fairfax-county" style={{ marginBottom: '0.5rem' }}><Link href="/near-you/fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Fairfax County deck builder hub"}</Link></li>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
+        </div>
+      </article>
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="Lorton" />
+        </div>
+      </section>
+      <SimpleCTA title="Request a Lorton deck estimate" buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Lorton, VA" lastUpdated="2026-11-03" />
+      <ContactHome
+        pageContext={{
+          city: "Lorton",
+          county: "Fairfax County",
+          service: "Lorton deck replacement, composite deck, or screened porch",
+          pageType: 'local_city_landing_page',
+        }}
+      />
+    </>
   );
 }

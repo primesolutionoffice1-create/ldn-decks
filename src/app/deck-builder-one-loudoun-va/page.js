@@ -1,212 +1,204 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import ServicesHeader from '@/components/ServicesHeader';
-import ServiceMain from '@/components/ServiceMain';
-import ServiceInclusions from '@/components/ServiceInclusions';
-import ServiceContentExpansion from '@/components/ServiceContentExpansion';
-import ProcessSteps from '@/components/ProcessSteps';
-import ServicesFAQ from '@/components/ServicesFAQ';
-import ContactHome from '@/components/ContactHome';
-import RelatedGuides from '@/components/RelatedGuides';
-import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import SimpleCTA from '@/components/SimpleCTA';
+import JsonLd from '@/components/JsonLd';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import ContactHome from '@/components/ContactHome';
+import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import PlanningUpdate from '@/components/PlanningUpdate';
+import CallLink from '@/components/CallLink';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
-import { buildMetadata } from '@/lib/seo';
-import CountyHubLinks from '@/components/CountyHubLinks';
 
-const PATH = '/deck-builder-one-loudoun-va';
-const URL = `https://ldndecks.com${PATH}`;
+const PATH = "/deck-builder-one-loudoun-va";
+const PAGE_URL = "https://ldndecks.com/deck-builder-one-loudoun-va";
+const PAGE_TITLE = "Deck Builder in One Loudoun, VA | Loudoun Decks";
+const PAGE_DESCRIPTION = "One Loudoun deck builder for townhome decks, composite decks, and rooftop terraces, with Loudoun County permits and ARC packet planning.";
 
 export const metadata = buildMetadata({
   path: PATH,
-  title: 'Deck Builder in One Loudoun, VA | Ashburn Decks',
-  description: 'One Loudoun deck builder for modern composite decks, townhome decks, rooftop terraces, HOA packets, Loudoun County permits, railings, lighting, and written estimates.',
-  image: '/social/one-loudoun-hoa-deck-rules-social.png',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  image: "/social/one-loudoun-hoa-deck-rules-social.png",
 });
-
-const inclusions = [
-  {
-    title: 'One Loudoun ARC packet planning',
-    desc: 'We organize footprint, material, railing, color, lighting, and exterior-context details before the One Loudoun architectural review starts.',
-  },
-  {
-    title: 'Townhome, rooftop, and detached-home scopes',
-    desc: 'One Loudoun projects can involve compact rear decks, rooftop terraces, detached-home outdoor living, and premium railing or lighting upgrades.',
-  },
-  {
-    title: 'Loudoun County permit coordination',
-    desc: 'We align the community review path with Loudoun County permit requirements for framing, ledger attachment, stairs, railings, and inspections.',
-  },
-];
-
-const expansionSections = [
-  {
-    title: 'One Loudoun Is a Premium Ashburn Outdoor Living Market',
-    paragraphs: [
-      'One Loudoun is not a generic Ashburn subdivision. It is a mixed-use, walkable community with townhomes, detached homes, rooftop terraces, compact rear yards, modern exterior palettes, and a homeowner base that often wants a finished outdoor space that matches the architecture.',
-      'That makes the deck planning process different from a standard backyard build. The best One Loudoun projects consider HOA review, Loudoun County permits, structural details, material colors, railing style, lighting, privacy, and how the deck or terrace will be used for daily living.',
-    ],
-  },
-  {
-    title: 'Modern Materials and Clean Design Matter Here',
-    paragraphs: [
-      'One Loudoun homes often support a more modern deck vocabulary: composite or PVC decking, darker or warm-gray tones, black aluminum railing, cable railing where appropriate, integrated low-voltage lighting, clean fascia, and picture-frame borders.',
-      'Trex, TimberTech, and AZEK options should be compared by color, heat exposure, warranty, texture, railing compatibility, and how the final palette will read against the home exterior. A strong material plan is also easier to explain in the architectural packet.',
-    ],
-  },
-  {
-    title: 'Common One Loudoun Deck Project Types',
-    paragraphs: [
-      'The most common serious One Loudoun scopes fall into several buckets: compact townhome decks, detached-home composite decks, rooftop terrace planning, deck resurfacing after a frame inspection, railing upgrades, stair improvements, and lighting packages.',
-      'Townhome and rooftop work especially need clean documentation. Access, neighbor proximity, drainage, ledger attachment, waterproofing transitions, railing height, privacy, and inspection access should all be discussed before pricing is finalized.',
-    ],
-    listItems: [
-      { label: 'Townhome rear decks', text: 'Best with a clean footprint, HOA-ready material selections, and neighbor-aware construction access planning.' },
-      { label: 'Rooftop terrace work', text: 'Best when structural, waterproofing, railing, and access details are reviewed before design approval.' },
-      { label: 'Detached-home composite decks', text: 'Best for larger outdoor living plans with dining, grilling, stairs, lighting, and upgraded railings.' },
-      { label: 'Resurfacing or replacement', text: 'Best decided after posts, footings, joists, ledger attachment, flashing, stairs, and railings are inspected.' },
-    ],
-  },
-  {
-    title: 'Budget and Timeline Expectations',
-    paragraphs: [
-      'One Loudoun budgets depend heavily on project type. A compact townhome rear deck, a rooftop terrace, and a detached-home outdoor living package are different scopes even when the visible square footage is similar.',
-      'A practical estimate should separate base build scope from optional upgrades such as premium PVC boards, cable railing, lighting, privacy elements, stair changes, fascia, and screened or covered outdoor living features. That helps the homeowner approve the right investment without mixing must-have structural work with optional design upgrades.',
-    ],
-  },
-];
 
 const faqs = [
   {
-    q: 'Do One Loudoun deck projects need HOA approval?',
-    a: 'Most One Loudoun deck projects need architectural review before construction. The packet typically includes a site plan or footprint, drawings or elevations, material selections, color notes, railing details, lighting details when applicable, and exterior photos. Requirements should be confirmed for the specific property and final scope.',
+    "q": "Who builds decks in One Loudoun, VA?",
+    "a": "Loudoun Decks LLC is a Centreville-based residential deck contractor and a Virginia Class A contractor (DPOR license #2705191673), owned by Nicolae (Nick) Zugrav. One Loudoun is a mixed-use community in Ashburn, Loudoun County, and is planned separately from the broader Ashburn page."
   },
   {
-    q: 'Who issues the building permit for a One Loudoun deck?',
-    a: 'One Loudoun is in Loudoun County, so deck permits generally follow the Loudoun County building permit process. A typical structural permit package includes footing details, framing layout, ledger attachment, stair information, guardrail specifications, and inspection sequencing. Final requirements should be confirmed by address.',
+    "q": "What should a deck project in One Loudoun plan for?",
+    "a": "Projects should start with ARC packet planning before final material and railing selections. Townhome and rooftop terrace projects need clear structural, drainage, railing, and access details. Common scopes include compact townhome rear decks, detached-home composite decks, rooftop terraces, resurfacing, railing upgrades, and lighting."
   },
   {
-    q: 'Is composite decking a good fit for One Loudoun?',
-    a: 'Yes. Composite and PVC decking are strong fits for One Loudoun because homeowners usually want low maintenance, clean detailing, and a finish that matches the modern Ashburn community character. Trex, TimberTech, and AZEK should be compared by color, heat exposure, railing compatibility, warranty, and HOA presentation quality.',
+    "q": "What deck services does Loudoun Decks offer in One Loudoun?",
+    "a": "These are services named on the Loudoun Decks site, not a separate menu invented for One Loudoun. The work includes new custom decks, deck replacement, deck repair, and deck resurfacing when the existing frame is structurally sound. The homepage lists Trex, TimberTech, Fiberon, AZEK, and Wolf as composite and PVC options and labels the company a Trex Partner. Screened porches, open porches, and front porches are included, along with pergolas and gazebos. Patios, fencing, railings, under-deck patios, and fire pits are included when that scope is part of the project. Homeowners should verify current Trex profile details directly with Trex."
   },
   {
-    q: 'Can Loudoun Decks build One Loudoun townhome decks?',
-    a: 'Yes. Townhome decks need careful planning for HOA rules, footprint limits, neighbor proximity, rear access, railing style, stairs, and Loudoun County permit requirements. A complete packet reduces back-and-forth before construction scheduling.',
+    "q": "How are permits and HOA packages handled for One Loudoun?",
+    "a": "Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope. The permit note used here is the one published on the Loudoun Decks homepage. Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. The same table lists Loudoun County plan review at 2–4 weeks through the LOLA online portal. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."
   },
   {
-    q: 'Should a One Loudoun homeowner build a standard deck or rooftop terrace?',
-    a: 'The right answer depends on the home type and structure. Some One Loudoun homes are better suited to compact rear decks, while rooftop terrace work requires careful attention to structure, waterproofing, guardrails, access, drainage, and architectural review. The estimate should identify which path is feasible before design decisions are finalized.',
+    "q": "Which documented project does this One Loudoun page cite?",
+    "a": "No One Loudoun project page was found. The documented project cited here is the October 2024 composite deck gallery record in Ashburn, not One Loudoun."
   },
+  {
+    "q": "How do I contact Loudoun Decks about a One Loudoun deck?",
+    "a": "One Loudoun is listed by name under Loudoun County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville. Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."
+  }
 ];
 
-export default function DeckBuilderOneLoudounPage() {
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+};
+
+export default function OneLoudounDeckBuilderPage() {
   return (
-    <main>
-      <LocalBusinessSchema city="One Loudoun" url={URL} />
+    <>
+      <JsonLd data={faqSchema} />
+      <LocalBusinessSchema city="One Loudoun" url={PAGE_URL} description={PAGE_DESCRIPTION} />
       <WebPageSchema
-        dateModified="2026-11-01"
-        url={URL}
-        name="Deck Builder in One Loudoun, VA | Ashburn Decks"
-        description="One Loudoun deck builder for modern composite decks, townhome decks, rooftop terraces, HOA packets, Loudoun County permits, railings, lighting, and written estimates."
+        dateModified="2026-11-03"
+        url={PAGE_URL}
+        name={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
         speakable
       />
-      <ServicesHeader
-        subtext="One Loudoun Deck Builder"
-        title="Modern Composite Deck Builder in One Loudoun, VA"
-        description="Loudoun Decks plans composite decks, townhome decks, rooftop terraces, railings, lighting, and outdoor living upgrades for One Loudoun homeowners with HOA-aware planning and Loudoun County permit support."
-      />
-      <ServiceMain
-        subtitle="One Loudoun Outdoor Living"
-        title="HOA-Ready Decks, Rooftop Terraces, and Modern Composite Planning"
-        description="One Loudoun projects need a clean plan for community review, county permits, modern material selections, railing style, lighting, stairs, privacy, and how the outdoor space fits the home."
-        listTitle="One Loudoun project planning includes:"
-        listItems={[
-          'Composite and PVC decking options from Trex, TimberTech, and AZEK',
-          'One Loudoun ARC packet planning for footprint, color, railing, and materials',
-          'Townhome rear deck, rooftop terrace, and detached-home deck planning',
-          'Loudoun County permit coordination and inspection sequencing',
-          'Lighting, cable railing, fascia, stairs, privacy, and outdoor living upgrade options',
-        ]}
-        image1="/images/img17.jpeg"
-        image2="/images/img36.jpeg"
-        image1Alt="Modern composite deck planning for One Loudoun homeowners"
-        image2Alt="Premium outdoor living deck detail in Loudoun County"
-      />
+      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck builder in One Loudoun, VA</h1>
+          <p data-speakable="true" style={{ color: '#ccc', fontSize: '1.1rem' }}>{PAGE_DESCRIPTION}</p>
+          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+          </div>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Virginia Class A contractor, DPOR license #2705191673. Office: 13704 Winding Oak Cir, Centreville, VA 20121.</p>
+        </div>
+      </section>
       <CityLeadFormSection
         city="One Loudoun"
         county="Loudoun County"
-        service="composite deck, townhome deck, rooftop terrace, railing, lighting, or outdoor living project"
-      />
-      <PlanningUpdate
-        market="One Loudoun deck projects in 2026"
-        notes={[
-          'One Loudoun projects should start with ARC packet planning before final material and railing selections.',
-          'Modern composite and PVC materials are usually the strongest fit for low-maintenance Ashburn outdoor living.',
-          'Townhome and rooftop terrace projects need especially clear structural, drainage, railing, and access details before pricing is finalized.',
-        ]}
-        links={[
-          { href: '/one-loudoun-hoa-deck-rules', label: 'One Loudoun HOA guide' },
-          { href: '/deck-builder-ashburn-va', label: 'Ashburn deck builder' },
-          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
-        ]}
+        service="deck replacement, composite deck, or screened porch"
       />
       <GeoAnswerBlock
-        question="What should One Loudoun homeowners know before planning a deck?"
-        answer="One Loudoun homeowners should start with architectural review requirements, Loudoun County permit needs, material selection, and the right project type: compact townhome rear deck, detached-home composite deck, rooftop terrace, resurfacing, railing upgrade, or lighting package. A complete written scope should separate structural requirements from optional design upgrades."
-        facts={[
-          'Primary buyer intent: modern composite deck planning, HOA packet support, townhome decks, rooftop terraces, and premium outdoor living.',
-          'Best conversion path: written estimate with ARC packet, permit, material, railing, lighting, and optional upgrade details.',
-        ]}
+        question="Who builds decks in One Loudoun, VA?"
+        answer={faqs[0].a}
+        facts={[faqs[1].a]}
         links={[
-          { href: '/get-estimate', label: 'Request a One Loudoun estimate' },
-          { href: '/one-loudoun-hoa-deck-rules', label: 'One Loudoun HOA rules' },
-          { href: '/rooftop-deck-builder-northern-virginia', label: 'Rooftop deck planning' },
+          { href: '/get-estimate', label: "Request a One Loudoun estimate" },
+          { href: "/showcase/new-composite-deck-ashburn", label: "BUILD NEW COMPOSITE DECK" },
         ]}
       />
-      <ServiceContentExpansion sections={expansionSections} />
-      <ServiceInclusions
-        title="Why One Loudoun Homeowners Choose Loudoun Decks"
-        description="We focus on serious outdoor living projects where community review, structural safety, material selection, and modern finish details all matter."
-        items={inclusions}
-      />
-      <ProcessSteps />
-      <ServicesFAQ
-        title="One Loudoun Deck Builder FAQs"
-        faqs={faqs}
-        canonicalUrl={URL}
-      />
-      <SimpleCTA title="Plan a One Loudoun Deck or Rooftop Terrace" buttonText="Request Written Estimate" link="/get-estimate" />
-      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem' }}>Related One Loudoun and Ashburn Guides</h2>
-        <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
-          {[
-            ['/one-loudoun-hoa-deck-rules', 'One Loudoun HOA deck rules'],
-            ['/deck-builder-ashburn-va', 'Ashburn deck builder'],
-            ['/deck-builder-broadlands-va', 'Broadlands deck builder'],
-            ['/deck-builder-brambleton-va', 'Brambleton deck builder'],
-            ['/near-you/loudoun-county', 'Loudoun County deck builder hub'],
-            ['/deck-permit-loudoun-county-virginia', 'Loudoun County deck permit guide'],
-            ['/rooftop-deck-builder-northern-virginia', 'Rooftop deck builder Northern Virginia'],
-            ['/cable-railing-for-decks-northern-virginia', 'Cable railing for decks'],
-            ['/composite-deck-cost-northern-virginia', 'Composite deck cost guide'],
-            ['/reviews', 'Public review profiles'],
-          ].map(([href, text]) => (
-            <li key={href}>
-              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 700 }}>{text} -&gt;</Link>
-            </li>
+      <article style={{ padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img17.jpeg"
+              alt="Deck photo on the Loudoun Decks One Loudoun, VA page"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Planning a deck in One Loudoun</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[0].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{faqs[1].a}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Services in One Loudoun</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[2].a}</p>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2rem 0 1rem' }}>Permits and HOA paperwork</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope."}</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"The permit note used here is the one published on the Loudoun Decks homepage. Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. The same table lists Loudoun County plan review at 2–4 weeks through the LOLA online portal. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Homepage permit table</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>A documented project</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[4].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/showcase/new-composite-deck-ashburn" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"BUILD NEW COMPOSITE DECK"}</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Service area</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"One Loudoun is listed by name under Loudoun County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville."}</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
+            <Link key="/deck-builder-ashburn-va" href="/deck-builder-ashburn-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Ashburn</Link>
+            <Link key="/deck-builder-broadlands-va" href="/deck-builder-broadlands-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Broadlands</Link>
+            <Link key="/deck-builder-sterling-va" href="/deck-builder-sterling-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Sterling</Link>
+            <Link key="/deck-builder-leesburg-va" href="/deck-builder-leesburg-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Leesburg</Link>
+          </div>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Contact</h2>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{"Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>FAQ</h2>
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+            </details>
           ))}
-        </ul>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related pages</h2>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/one-loudoun-hoa-deck-rules" style={{ marginBottom: '0.5rem' }}><Link href="/one-loudoun-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"One Loudoun HOA deck rules"}</Link></li>
+              <li key="/showcase/new-composite-deck-ashburn" style={{ marginBottom: '0.5rem' }}><Link href="/showcase/new-composite-deck-ashburn" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Ashburn composite deck gallery"}</Link></li>
+              <li key="/deck-builder-ashburn-va" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-ashburn-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Ashburn deck builder"}</Link></li>
+              <li key="/deck-permit-loudoun-county-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Loudoun County deck permit guide"}</Link></li>
+              <li key="/near-you/loudoun-county" style={{ marginBottom: '0.5rem' }}><Link href="/near-you/loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Loudoun County deck builder hub"}</Link></li>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
+        </div>
+      </article>
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="One Loudoun" />
+        </div>
       </section>
-      <ServiceAreasGrid />
-      <RelatedGuides currentPath={PATH} />
-      <NamedAuthor context="One Loudoun, Ashburn, and Loudoun County deck planning" lastUpdated="2026-11-01" />
-      <CountyHubLinks countySlug="loudoun-county" />
-      <ContactHome />
-    </main>
+      <SimpleCTA title="Request a One Loudoun deck estimate" buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="One Loudoun, VA" lastUpdated="2026-11-03" />
+      <ContactHome
+        pageContext={{
+          city: "One Loudoun",
+          county: "Loudoun County",
+          service: "One Loudoun deck replacement, composite deck, or screened porch",
+          pageType: 'local_city_landing_page',
+        }}
+      />
+    </>
   );
 }

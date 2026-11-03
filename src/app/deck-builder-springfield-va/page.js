@@ -1,195 +1,202 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ServicesHeader from '@/components/ServicesHeader';
-import ServiceMain from '@/components/ServiceMain';
-import ServiceInclusions from '@/components/ServiceInclusions';
-import ServiceContentExpansion from '@/components/ServiceContentExpansion';
-import ProcessSteps from '@/components/ProcessSteps';
-import ServicesFAQ from '@/components/ServicesFAQ';
-import ContactHome from '@/components/ContactHome';
-import RelatedGuides from '@/components/RelatedGuides';
-import ServiceAreasGrid from '@/components/ServiceAreasGrid';
+import JsonLd from '@/components/JsonLd';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import SimpleCTA from '@/components/SimpleCTA';
 import GoogleMapEmbed from '@/components/GoogleMapEmbed';
-import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import PlanningUpdate from '@/components/PlanningUpdate';
-import CountyHubLinks from '@/components/CountyHubLinks';
+import CallLink from '@/components/CallLink';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
+
+const PATH = "/deck-builder-springfield-va";
+const PAGE_URL = "https://ldndecks.com/deck-builder-springfield-va";
+const PAGE_TITLE = "Deck Builder in Springfield, VA | Loudoun Decks";
+const PAGE_DESCRIPTION = "Springfield deck builder for deck replacement, townhome decks, and deck-and-patio combinations, with Fairfax County permits and Kingstowne ARC review.";
 
 export const metadata = buildMetadata({
-  path: '/deck-builder-springfield-va',
-  title: 'Deck Builder in Springfield, VA | Composite Decks | Loudoun Decks',
-  description: 'Deck builder in Springfield, VA. Custom Trex & composite decks for Kingstowne, West Springfield, Franconia & Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207.',
-  image: '/social/deck-builder-springfield-va-social.png',
+  path: PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  image: "/social/deck-builder-springfield-va-social.png",
 });
 
-const inclusions = [
+const faqs = [
   {
-    title: "Springfield's Diverse Housing Stock",
-    desc: "Springfield ranges from 1960s ranches in North Springfield to 2000s townhomes in Kingstowne. We design for both  -  compact, efficient layouts for townhome rear decks and larger multi-level builds for single-family lots in West Springfield and Saratoga."
+    "q": "Who builds decks in Springfield, VA?",
+    "a": "Loudoun Decks LLC is a Centreville-based residential deck contractor and a Virginia Class A contractor (DPOR license #2705191673), owned by Nicolae (Nick) Zugrav. Springfield is in Fairfax County."
   },
   {
-    title: "Kingstowne HOA Navigation",
-    desc: "Kingstowne is one of Fairfax County's largest planned communities with an active architectural review process. We prepare submissions that meet their standards for materials, colors and railing styles  -  and handle the back-and-forth so approvals move on schedule."
+    "q": "What should a deck project in Springfield plan for?",
+    "a": "Kingstowne and other HOA communities should be screened for architectural review before permit documents are final. The Kingstowne ARC application needs drawings, material specifications, color selections, and sometimes neighbor notification. North Springfield, Kings Park, West Springfield, Saratoga, Franconia, Kingstowne, and Daventry are the planning areas named here. Deck-and-patio combinations need early drainage planning."
   },
   {
-    title: "Strong Deck ROI in Springfield's Market",
-    desc: "Springfield offers solid home values with room for improvement. A composite deck addition typically returns 65-75% of its cost at resale in this market, and it converts underused backyard space into functional outdoor living  -  a feature buyers in this price range actively seek."
+    "q": "What deck services does Loudoun Decks offer in Springfield?",
+    "a": "These are services named on the Loudoun Decks site, not a separate menu invented for Springfield. The work includes new custom decks, deck replacement, deck repair, and deck resurfacing when the existing frame is structurally sound. The homepage lists Trex, TimberTech, Fiberon, AZEK, and Wolf as composite and PVC options and labels the company a Trex Partner. Screened porches, open porches, and front porches are included, along with pergolas and gazebos. Patios, fencing, railings, under-deck patios, and fire pits are included when that scope is part of the project. Homeowners should verify current Trex profile details directly with Trex."
+  },
+  {
+    "q": "How are permits and HOA packages handled for Springfield?",
+    "a": "Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope. The permit note used here is the one published on the Loudoun Decks homepage. The table lists Fairfax County plan review at 3–5 weeks through PLUS / Building Development Division, calls Fairfax County the most documentation-heavy jurisdiction in Northern Virginia, and says sealed structural drawings, ledger bolt schedules, and footing depths are required up front. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."
+  },
+  {
+    "q": "Which documented project does this Springfield page cite?",
+    "a": "No Springfield project page was found. The documented project cited here is the November 2024 multi-level wood deck gallery record in Chantilly, not Springfield."
+  },
+  {
+    "q": "How do I contact Loudoun Decks about a Springfield deck?",
+    "a": "Springfield is listed by name under Fairfax County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville. Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."
   }
 ];
 
-const springfieldFAQs = [
-  {
-    q: "How much does a new deck cost in Springfield, VA?",
-    a: "Springfield composite deck projects are typically priced in a written estimate. A standard 300-350 sqft Trex Enhance or Transcend deck with aluminum railings is priced in a written estimate installed. Townhome decks in Kingstowne tend toward the lower end of that range due to smaller footprints, while single-family homes in West Springfield and Saratoga with larger lots and multi-level designs reach higher."
-  },
-  {
-    q: "Does Kingstowne HOA allow composite decking?",
-    a: "Yes. Kingstowne's architectural review committee permits composite decking and has guidelines covering board color, railing material and overall design. We prepare the full submission package  -  drawings, material specifications and color samples  -  and file it on your behalf. Review typically takes 2-4 weeks."
-  },
-  {
-    q: "Do I need a permit for a deck in Springfield?",
-    a: "Yes. Springfield is in Fairfax County, and any new deck or structural replacement requires a building permit. The county's plan review currently runs 3-6 weeks. We prepare the structural drawings, file the application electronically and schedule all three inspections  -  footing, framing and final  -  so the process stays on track."
-  },
-  {
-    q: "How long does a Springfield deck project take?",
-    a: "Construction typically takes 2 to 3 weeks once materials arrive and the permit is in hand. The Fairfax County permit adds 3-6 weeks of plan review before that. If your property is in Kingstowne or another HOA community, we submit the architectural review application in parallel with the permit so they do not stack up sequentially."
-  },
-  {
-    q: "Can you build a deck and patio combination in Springfield?",
-    a: "Yes. Deck-and-patio combinations are common in Springfield, especially on lots where the grade drops away from the house. The deck extends from the main level, and a paver or stamped-concrete patio sits below at grade. Under-deck drainage systems keep the patio dry. This approach effectively doubles usable outdoor space."
-  },
-  {
-    q: "What materials work best for Springfield decks?",
-    a: "Composite decking  -  specifically Trex and TimberTech  -  leads in Springfield for its low maintenance and long warranty. Trex Enhance is the most popular line here, offering a good balance of appearance and value. For homeowners wanting a premium finish, Trex Transcend and TimberTech AZEK provide richer color depth and superior scratch resistance."
-  }
-];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+};
 
-const expansionSections = [
-  {
-    title: "Springfield's Diverse Housing Stock and What It Means for Decks",
-    paragraphs: [
-      "Springfield's neighborhoods span four decades of building  -  from the mid-century ranches of North Springfield and Kings Park built in the 1960s to the townhomes and single-family homes of Kingstowne completed in the early 2000s. That range creates very different deck projects depending on which part of Springfield you live in.",
-      "Older single-family homes in West Springfield, Saratoga and Franconia typically have larger lots with room for 400+ sqft multi-level decks, screened porches and stair runs to the yard. Many still have original wood decks from the 1980s or 1990s that need full replacement. Kingstowne and Daventry townhomes, on the other hand, call for compact, efficient designs  -  typically 200-300 sqft rear decks maximized with built-in benches, planter boxes and space-saving railing choices.",
-      "We design for both ends of that spectrum. The engineering is different, the permit drawings are different and the material selections often differ, but the build quality is the same."
-    ]
-  },
-  {
-    title: "Deck Value in Springfield's Real Estate Market",
-    paragraphs: [
-      "Springfield sits in a value-conscious segment of the Northern Virginia market. Home prices are strong but below the peaks seen in western Loudoun or McLean, which means buyers here pay close attention to outdoor living space as a differentiator. A well-built composite deck is one of the most visible upgrades a Springfield home can carry, and it directly expands usable square footage.",
-      "National remodeling data puts composite deck ROI at 65-75% of project cost at resale, and in Springfield's competitive market  -  where families commuting to Fort Belvoir, the Pentagon and the Springfield Metro are comparing similar homes  -  a finished deck can be the factor that moves a listing. The practical return goes beyond resale: a family that uses their deck three seasons a year gets years of daily value from the investment.",
-      "We size and specify Springfield decks with both the homeowner's use and the home's market position in mind. Overbuilding a deck on a Springfield home makes less sense than a well-designed a written estimate deck that hits the right balance."
-    ]
-  },
-  {
-    title: "Navigating Kingstowne's Architectural Review",
-    paragraphs: [
-      "Kingstowne is one of Fairfax County's largest planned communities, and its homeowner association maintains an active architectural review committee. Any exterior modification  -  including a new deck or deck replacement  -  requires an application with drawings, material specifications, color selections and sometimes a neighbor notification.",
-      "We handle the full Kingstowne ARC process. The submission includes dimensioned drawings showing the deck footprint relative to property lines and setbacks, the specific composite board and railing products with manufacturer color chips, and a description of the build timeline. Our packages are designed to answer the committee's questions upfront, which reduces the back-and-forth that delays approvals.",
-      "Turnaround varies by season  -  spring submissions take longer because more homeowners are applying  -  but 2-4 weeks is typical. We submit the ARC application at the same time we file the Fairfax County permit so the two review periods overlap rather than run in series."
-    ]
-  },
-  {
-    title: "Deck and Patio Combinations for Springfield Homes",
-    paragraphs: [
-      "Many Springfield lots have a gentle grade change from the back door to the yard  -  enough to make a raised deck practical and a patio below it useful. A deck-and-patio combination takes advantage of that grade: the composite deck extends from the main floor for dining and seating, while a paver or concrete patio at ground level serves as a second outdoor room.",
-      "The key to making this work is under-deck drainage. A dry-joist system installed beneath the deck boards channels water to a gutter at the edge, keeping the patio below completely dry during rain. Without drainage, the lower patio gets wet every time it rains and accumulates debris  -  defeating the purpose of the covered space.",
-      "Combined deck-and-patio builds in Springfield typically are priced in a written estimate depending on total square footage, material tier and whether the patio is pavers or stamped concrete. It is a more involved project than a deck alone, but it effectively creates two distinct outdoor living zones from a single build."
-    ]
-  }
-];
-
-export default function DeckBuilderSpringfieldPage() {
+export default function SpringfieldDeckBuilderPage() {
   return (
-    <main>
-      <LocalBusinessSchema city="Springfield" url="https://ldndecks.com/deck-builder-springfield-va" />
-      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-springfield-va" name="Deck Builder in Springfield, VA | Composite Decks | Loudoun Decks" description="Deck builder in Springfield, VA. Custom Trex &amp; composite decks for Kingstowne, West Springfield, Franconia &amp; Saratoga. Fairfax County permits handled. Free estimate  -  (571) 655-7207." speakable />
-      <ServicesHeader
-        subtext="Springfield, VA's Trusted Deck Company"
-        title="Custom Deck Builder in Springfield, VA"
-        description="Loudoun Decks builds composite decks and screened porches across Kingstowne, West Springfield, Franconia and Saratoga. Fairfax County permits handled. publicly documented reputation."
+    <>
+      <JsonLd data={faqSchema} />
+      <LocalBusinessSchema city="Springfield" url={PAGE_URL} description={PAGE_DESCRIPTION} />
+      <WebPageSchema
+        dateModified="2026-11-03"
+        url={PAGE_URL}
+        name={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        speakable
       />
-      <ServiceMain
-        subtitle="Smart Outdoor Living for Springfield Families"
-        title="Deck Builder Springfield VA  -  Premium Quality"
-        description="Springfield's mix of ranches, colonials and townhomes calls for decks designed to fit  -  not a template. Composite builds from Trex and TimberTech, Kingstowne HOA handled, projects from a written estimate."
-        listItems={[
-          "Trex, TimberTech and AZEK material planning",
-          "Kingstowne & Springfield HOA submissions handled",
-          "Deck + patio combinations with under-deck drainage",
-          "Fairfax County permits filed and inspected",
-          "Public reviews - call (571) 655-7207"
-        ]}
-        image1="/images/img36.jpeg"
-        image2="/images/img37.jpeg"
-      />
-      <PlanningUpdate
-        market="Springfield deck projects"
-        notes={[
-          'Kingstowne and other HOA communities should be screened for architectural review requirements before permit documents are finalized.',
-          'Deck-and-patio combinations need drainage planning early, especially where a raised deck covers usable patio space.',
-          'Older Springfield homes may need a repair-vs-replace inspection before budget ranges are treated as firm.',
-        ]}
-        links={[
-          { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
-          { href: '/deck-vs-patio-which-is-right', label: 'Deck vs patio guide' },
-        ]}
-      />
-      <ServiceContentExpansion sections={expansionSections} />
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-          <Image
-            src="/images/img17.jpeg"
-            alt="Composite deck built by LDN Decks in Springfield, Virginia"
-            fill
-            style={{ objectFit: 'cover' }}
-            sizes="(max-width: 900px) 100vw, 900px"
-          />
+      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck builder in Springfield, VA</h1>
+          <p data-speakable="true" style={{ color: '#ccc', fontSize: '1.1rem' }}>{PAGE_DESCRIPTION}</p>
+          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+          </div>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Virginia Class A contractor, DPOR license #2705191673. Office: 13704 Winding Oak Cir, Centreville, VA 20121.</p>
         </div>
-        <h2 style={{ fontSize: '2.2rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Trex Deck Builder Springfield</h2>
-        <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '1.5rem' }}>Composite Decks for Kingstowne, West Springfield, Franconia and Beyond</h3>
-      </div>
-      <ServiceInclusions
-        title="Why Springfield Chooses Loudoun Decks"
-        description="We are a local Northern Virginia team that builds across Springfield's diverse neighborhoods  -  from Kingstowne townhomes to West Springfield single-family homes."
-        items={inclusions}
-      />
-      <ProcessSteps />
-      <ServicesFAQ
-        title="Deck Builder Springfield VA  -  FAQs"
-        faqs={springfieldFAQs}
-        canonicalUrl="https://ldndecks.com/deck-builder-springfield-va"
-      />
-      <ServiceAreasGrid />
-      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
-        <ul style={{ listStyle: 'none', padding: 0 }}>
-          {[
-            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
-            ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
-            ['/hoa-deck-rules-northern-virginia', 'HOA Deck Rules in Northern Virginia'],
-            ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
-            ['/composite-deck-vs-wood-deck-virginia', 'Composite Deck vs Wood Deck'],
-          ].map(([href, text]) => (
-            <li key={href} style={{ marginBottom: '0.5rem' }}>
-              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
-            </li>
-          ))}
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
-            <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
-          </ul>
       </section>
-      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Springfield" /></div></section>
-      <SimpleCTA title="Upgrade Your Springfield Deck" buttonText="Get Free Estimate" link="/get-estimate" />
-      <RelatedGuides currentPath="/deck-builder-springfield-va" />
-      <NamedAuthor context="Springfield and Northern Virginia" lastUpdated="2026-11-01" />
-      <CountyHubLinks countySlug="fairfax-county" />
-      <ContactHome />
-    </main>
+      <CityLeadFormSection
+        city="Springfield"
+        county="Fairfax County"
+        service="deck replacement, composite deck, or screened porch"
+      />
+      <GeoAnswerBlock
+        question="Who builds decks in Springfield, VA?"
+        answer={faqs[0].a}
+        facts={[faqs[1].a]}
+        links={[
+          { href: '/get-estimate', label: "Request a Springfield estimate" },
+          { href: "/showcase/wood-multi-level-deck-chantilly", label: "WOOD MULTI LEVEL DECK" },
+        ]}
+      />
+      <article style={{ padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img17.jpeg"
+              alt="Deck photo on the Loudoun Decks Springfield, VA page"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Planning a deck in Springfield</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[0].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{faqs[1].a}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Services in Springfield</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[2].a}</p>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2rem 0 1rem' }}>Permits and HOA paperwork</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope."}</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"The permit note used here is the one published on the Loudoun Decks homepage. The table lists Fairfax County plan review at 3–5 weeks through PLUS / Building Development Division, calls Fairfax County the most documentation-heavy jurisdiction in Northern Virginia, and says sealed structural drawings, ledger bolt schedules, and footing depths are required up front. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Homepage permit table</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>A documented project</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[4].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/showcase/wood-multi-level-deck-chantilly" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"WOOD MULTI LEVEL DECK"}</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Service area</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Springfield is listed by name under Fairfax County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville."}</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
+            <Link key="/deck-builder-lorton-va" href="/deck-builder-lorton-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Lorton</Link>
+            <Link key="/deck-builder-alexandria-va" href="/deck-builder-alexandria-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Alexandria</Link>
+            <Link key="/deck-builder-fairfax-va" href="/deck-builder-fairfax-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Fairfax</Link>
+            <Link key="/deck-builder-burke-va" href="/deck-builder-burke-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Burke</Link>
+          </div>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Contact</h2>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{"Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>FAQ</h2>
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+            </details>
+          ))}
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related pages</h2>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/showcase/wood-multi-level-deck-chantilly" style={{ marginBottom: '0.5rem' }}><Link href="/showcase/wood-multi-level-deck-chantilly" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Chantilly wood deck gallery"}</Link></li>
+              <li key="/deck-permit-fairfax-county-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Fairfax County deck permit guide"}</Link></li>
+              <li key="/near-you/fairfax-county" style={{ marginBottom: '0.5rem' }}><Link href="/near-you/fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Fairfax County deck builder hub"}</Link></li>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
+        </div>
+      </article>
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="Springfield" />
+        </div>
+      </section>
+      <SimpleCTA title="Request a Springfield deck estimate" buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Springfield, VA" lastUpdated="2026-11-03" />
+      <ContactHome
+        pageContext={{
+          city: "Springfield",
+          county: "Fairfax County",
+          service: "Springfield deck replacement, composite deck, or screened porch",
+          pageType: 'local_city_landing_page',
+        }}
+      />
+    </>
   );
 }
