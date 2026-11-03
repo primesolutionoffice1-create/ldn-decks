@@ -491,7 +491,7 @@ const nextConfig = {
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.googletagservices.com https://www.googleadservices.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://analytics.ahrefs.com https://*.vercel-scripts.com https://va.vercel-scripts.com https://www.google.com https://www.gstatic.com https://s.pinimg.com https://connect.facebook.net https://www.clarity.ms https://*.clarity.ms https://www.redditstatic.com https://cdn.callrail.com https://*.callrail.com https://*.xapp.ai",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.redditstatic.com https://*.xapp.ai",
       "font-src 'self' https://fonts.gstatic.com data:",
-      "img-src 'self' data: blob: https://*.googleusercontent.com https://www.google-analytics.com https://*.google.com https://*.googletagmanager.com https://pagead2.googlesyndication.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://maps.gstatic.com https://maps.googleapis.com https://ct.pinterest.com https://*.pinimg.com https://www.facebook.com https://*.facebook.com https://alb.reddit.com https://*.xapp.ai",
+      "img-src 'self' data: blob: https://*.googleusercontent.com https://www.google-analytics.com https://*.google.com https://*.googletagmanager.com https://pagead2.googlesyndication.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://maps.gstatic.com https://maps.googleapis.com https://ct.pinterest.com https://*.pinimg.com https://www.facebook.com https://*.facebook.com https://alb.reddit.com https://*.xapp.ai https://i.ytimg.com https://*.ytimg.com",
       "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.ahrefs.com https://*.vercel-insights.com https://vitals.vercel-insights.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://td.doubleclick.net https://adservice.google.com https://ct.pinterest.com https://*.pinterest.com https://www.facebook.com https://*.facebook.com https://*.clarity.ms https://c.bing.com https://pixel-config.reddit.com https://ads.reddit.com https://www.redditstatic.com https://alb.reddit.com https://cdn.callrail.com https://*.callrail.com https://*.xapp.ai wss://*.xapp.ai",
       "frame-src 'self' https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://td.doubleclick.net https://www.youtube.com https://www.youtube-nocookie.com https://ct.pinterest.com https://*.xapp.ai",
       "object-src 'none'",
@@ -570,6 +570,13 @@ const nextConfig = {
     minimumCacheTTL: 31536000,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        pathname: '/vi/**',
+      },
+    ],
   },
 };
 

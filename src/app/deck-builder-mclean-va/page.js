@@ -21,6 +21,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-mclean-va',
@@ -158,6 +159,8 @@ export default function McLeanDeckBuilderPage() {
           </p>
         </div>
       </section>
+
+      <YouTubeEmbed pagePath="/deck-builder-mclean-va" />
 
       <ServiceMain
         subtitle="McLean's Trusted Choice"

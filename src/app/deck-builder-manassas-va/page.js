@@ -13,6 +13,7 @@ import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-manassas-va',
@@ -93,6 +94,7 @@ export default function ManassasDeckBuilderPage() {
           </div>
         </div>
       </section>
+      <YouTubeEmbed pagePath="/deck-builder-manassas-va" />
       <CityLeadFormSection
         city="Manassas"
         county="Prince William County / City of Manassas"

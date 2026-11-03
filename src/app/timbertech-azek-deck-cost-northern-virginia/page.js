@@ -12,6 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import { buildMetadata } from '@/lib/seo';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata = buildMetadata({
   path: '/timbertech-azek-deck-cost-northern-virginia',
@@ -142,6 +143,8 @@ export default function TimberTechAzekDeckCostPage() {
       </section>
 
       <TrustBanner />
+
+      <YouTubeEmbed pagePath="/timbertech-azek-deck-cost-northern-virginia" />
 
       <AboveFoldCTA
         headline="Plan a premium TimberTech or AZEK deck budget — model your project amount in the deck payment estimator."

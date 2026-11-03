@@ -11,6 +11,8 @@ import CallLink from '@/components/CallLink';
 import NamedAuthor from '@/components/NamedAuthor';
 import MidArticleCta from '@/components/MidArticleCta';
 import JsonLd from '@/components/JsonLd';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
+import { BLOG_VIDEOS, youtubeObjectId } from '@/lib/youtubeVideos';
 import { BUSINESS, FOUNDER_ID, ORG_ID, WEBSITE_ID } from '@/lib/business';
 import styles from './BlogContent.module.css';
 
@@ -216,6 +218,10 @@ export default async function SingleBlogPage({ params }) {
   const clampedModifiedDate = postModifiedDate > today ? today : postModifiedDate;
 
   const articleSchema = buildBlogPostingSchema(post, clampedDate, clampedModifiedDate);
+  const youtubeVideoId = BLOG_VIDEOS[post.slug];
+  if (youtubeVideoId) {
+    articleSchema.video = { '@id': youtubeObjectId(`/blog/${post.slug}`, youtubeVideoId) };
+  }
 
   const faqSchema = post.faq && post.faq.length > 0 ? {
     "@context": "https://schema.org",
@@ -268,6 +274,9 @@ export default async function SingleBlogPage({ params }) {
           <div className={styles.containerNarrow}>
              <div className={styles.contentBody}>
                <p className={styles.leadParagraph} data-speakable>{renderInline(post.excerpt, 'lead')}</p>
+               {youtubeVideoId ? (
+                 <YouTubeEmbed pagePath={`/blog/${post.slug}`} blogSlug={post.slug} />
+               ) : null}
                {paragraphs.map((para, idx) => {
                  if (para.startsWith('## ')) {
                    return (

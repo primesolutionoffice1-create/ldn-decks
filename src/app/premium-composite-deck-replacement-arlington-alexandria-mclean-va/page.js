@@ -16,6 +16,7 @@ import CityLeadFormSection from '@/components/CityLeadFormSection';
 import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 const pagePath = '/premium-composite-deck-replacement-arlington-alexandria-mclean-va';
 const pageUrl = `https://ldndecks.com${pagePath}`;
@@ -168,6 +169,8 @@ export default function PremiumCompositeReplacementCorridorPage() {
           </p>
         </div>
       </section>
+
+      <YouTubeEmbed pagePath="/premium-composite-deck-replacement-arlington-alexandria-mclean-va" />
 
       <GeoAnswerBlock
         question="Who should request a premium composite deck replacement estimate in Arlington, Alexandria, or McLean?"

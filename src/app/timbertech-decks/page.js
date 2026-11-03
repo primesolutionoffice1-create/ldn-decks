@@ -16,6 +16,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import WebPageSchema from '@/components/WebPageSchema';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import { buildMetadata } from '@/lib/seo';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata = buildMetadata({
   path: '/timbertech-decks',
@@ -163,6 +164,8 @@ export default function TimberTechDecksPage() {
           { href: '/get-estimate', label: 'Get a written estimate' },
         ]}
       />
+
+      <YouTubeEmbed pagePath="/timbertech-decks" />
 
       <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
