@@ -12,7 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 export const metadata = buildMetadata({
   path: '/how-long-does-a-composite-deck-last',
   title: 'How Long Does a Composite Deck Last? | Virginia Lifespan Guide',
-  description: 'Composite decks last 25-50 years in Virginia. Trex: 25+ yrs, TimberTech AZEK: 50 yrs. See brand lifespans & signs your deck needs replacement. Free inspection!',
+  description: 'How long composite decks last in Virginia: Trex warranties 25–50 yrs, TimberTech 25–30 yrs or lifetime (Advanced PVC). Brand lifespans & when to replace.',
   image: '/social/composite-deck-lifespan-virginia-social.png',
 });
 
@@ -31,7 +31,7 @@ export default function DeckLifespanPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-11-02" url="https://ldndecks.com/how-long-does-a-composite-deck-last" name="How Long Does a Composite Deck Last? | Virginia Lifespan Guide" description="Composite decks last 25-50 years in Virginia. Trex: 25+ yrs, TimberTech AZEK: 50 yrs. See brand lifespans &amp; signs your deck needs replacement. Free inspection!" speakable />
+      <WebPageSchema dateModified="2026-11-03" url="https://ldndecks.com/how-long-does-a-composite-deck-last" name="How Long Does a Composite Deck Last? | Virginia Lifespan Guide" description="How long composite decks last in Virginia: Trex warranties 25–50 yrs, TimberTech 25–30 yrs or lifetime (Advanced PVC). Brand lifespans &amp; when to replace." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -43,7 +43,7 @@ export default function DeckLifespanPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }} data-speakable="true">
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p data-speakable>Composite decks last <strong>25–50 years</strong> depending on brand. Trex: 25+ years. TimberTech AZEK: 50 years. Pressure-treated wood: 10–15 years with annual maintenance. The difference in Virginia&apos;s climate is even more dramatic due to freeze-thaw and humidity.</p>
+          <p data-speakable>Composite and PVC decking carry manufacturer limited residential warranties of <strong>25–50 years</strong> depending on brand and line: Trex 25 (Enhance), 35 (Select) and 50 years (Transcend); TimberTech Composite 25–30 years; TimberTech Advanced PVC (formerly AZEK) a limited lifetime product warranty with a 50-year fade &amp; stain warranty. Pressure-treated wood: 10–15 years with annual maintenance. In Virginia, freeze-thaw, summer humidity and the framing underneath decide how long a deck really lasts.</p>
         </div>
       </section>
 
@@ -72,8 +72,8 @@ export default function DeckLifespanPage() {
                   ['Cedar', '15–20 years', 'None', 'Stain/seal every 1-2 yrs, annual inspection'],
                   ['Trex Enhance', '25+ years', '25 years', 'Occasional soap & water wash'],
                   ['Trex Transcend', '25–30+ years', '50 years', 'Occasional wash'],
-                  ['TimberTech PRO', '25–30+ years', '30 years', 'Occasional wash'],
-                  ['TimberTech AZEK', '30–50 years', '50 years', 'Occasional wash'],
+                  ['TimberTech Composite (Legacy, Reserve, Terrain)', '25–30+ years', '30 years', 'Occasional wash'],
+                  ['TimberTech Advanced PVC (formerly AZEK)', '30–50 years', 'Lifetime (product); 50-yr fade & stain', 'Occasional wash'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: i >= 2 && j === 1 ? 'var(--color-primary)' : 'inherit' }}>{cell}</td>)}
@@ -81,13 +81,13 @@ export default function DeckLifespanPage() {
                 ))}
               </tbody>
             </table>
-            <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '0.75rem', marginBottom: 0 }}>Warranty column: manufacturer limited residential warranties. Trex: Enhance 25, Select 35, Transcend 50 years (<a href="https://www.trex.com/products/decking/" target="_blank" rel="noopener noreferrer">trex.com</a>, checked November 2, 2026). Lifespan depends on the framing underneath and on maintenance.</p>
+            <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '0.75rem', marginBottom: 0 }}>Warranty column: manufacturer limited residential warranties. Trex: Enhance 25, Select 35, Transcend 50 years (<a href="https://www.trex.com/products/decking/" target="_blank" rel="noopener noreferrer">trex.com</a>, checked November 2, 2026). TimberTech: Composite 25–30 years (Legacy, Reserve, Terrain 30; Prime+, Prime, Premier 25); Advanced PVC limited lifetime product warranty plus 50-year fade &amp; stain (35 for Solstice) (<a href="https://www.timbertech.com/about-warranties/" target="_blank" rel="noopener noreferrer">timbertech.com</a>, checked November 3, 2026). Lifespan depends on the framing underneath and on maintenance.</p>
           </div>
 
           <h2 style={S.h2}>What Kills a Deck in Virginia</h2>
-          <p style={S.p}><strong>Freeze-thaw cycles (50–80 per winter):</strong> Water enters wood grain, freezes, expands, splits the board. Repeat 50+ times per winter and boards crack within 3–5 years without sealing. Capped composite is impervious no water entry.</p>
-          <p style={S.p}><strong>Humidity (70–90% in summer):</strong> Sustained moisture breeds mold, mildew, and rot in wood. Even sealed wood eventually absorbs moisture through end cuts and fastener holes. Composite&apos;s plastic cap prevents penetration.</p>
-          <p style={S.p}><strong>UV exposure (200+ sunny days/year):</strong> Bleaches wood to gray within 12 months. Stain helps but must be reapplied every 1–2 years. Composite uses UV-stabilized pigments that fade minimally and stabilize.</p>
+          <p style={S.p}><strong>Freeze-thaw cycles:</strong> Northern Virginia winters swing above and below freezing again and again. Water that soaks into wood grain freezes, expands and opens checks and splits, so unsealed boards crack sooner. Capped composite boards have a protective shell that resists water absorption.</p>
+          <p style={S.p}><strong>Summer humidity:</strong> Sustained moisture breeds mold, mildew, and rot in wood. Even sealed wood eventually absorbs moisture through end cuts and fastener holes. A composite board&apos;s cap resists moisture penetration.</p>
+          <p style={S.p}><strong>UV exposure:</strong> Sunlight weathers unsealed wood to gray. Stain helps but must be reapplied every 1–2 years. Composite boards use UV-stabilized pigments, and manufacturers back their color with fade &amp; stain limited warranties (see the warranty sources under the table).</p>
           <p style={S.p}><strong>Insect damage:</strong> Carpenter bees, termites, and wood-boring beetles target untreated wood in Virginia. Composite has no organic food source for insects.</p>
 
           <h2 style={S.h2}>Signs Your Deck Is Aging</h2>
@@ -157,7 +157,7 @@ export default function DeckLifespanPage() {
       </article>
 
       <SimpleCTA title="Deck Past Its Prime? Free Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-02" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-03" />
 
       <RelatedGuides currentPath="/how-long-does-a-composite-deck-last" />
 
