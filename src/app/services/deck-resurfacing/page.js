@@ -17,6 +17,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import AnswerBlock from '@/components/AnswerBlock';
 import { QUOTE_SOURCE, RESURFACE_QUOTED, REVIEWED_ISO, REVIEWED_LABEL } from '@/lib/quotedPrices';
 
 const PAGE_DESCRIPTION =
@@ -209,7 +210,12 @@ export default function DeckResurfacingPage() {
           quickFormLocation="paid_search_resurfacing_above_fold"
           quickFormHeading="Want to know whether your frame can be resurfaced? Send the basics and we will call back."
           pageContext={PAGE_CONTEXT}
-        />
+        >
+          <AnswerBlock
+            where="Loudoun, Fairfax, and Prince William counties"
+            price="Trex resurfacing was $9,020–$12,678."
+          />
+        </ServicesHeader>
       </div>
       <section id="deck-resurfacing-direct-answer" style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
         <h2 style={{ fontSize: '1.35rem', fontWeight: 800, margin: '0 0 0.75rem', color: '#111' }}>
