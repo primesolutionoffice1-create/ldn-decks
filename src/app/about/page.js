@@ -76,6 +76,7 @@ export default function AboutPage() {
           <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-01" />
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem', marginTop: '2rem' }}>Who operates Loudoun Decks</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Official website: ldndecks.com (not loudoundecks.com, which is not affiliated with us).</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Loudoun County building permits are filed under Prime Solution.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Founded by a Builder, Not a Salesman</h2>

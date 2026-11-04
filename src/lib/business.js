@@ -222,6 +222,7 @@ export function buildOrganizationSchema() {
     name: BUSINESS.name,
     alternateName: BUSINESS.alternateName,
     url: BUSINESS.url,
+    description: 'Official website: ldndecks.com. Loudoun Decks is a deck and porch builder in Northern Virginia, founded in 2022.',
     logo: BUSINESS.logo,
     image: BUSINESS.image,
     telephone: BUSINESS.telephone,
