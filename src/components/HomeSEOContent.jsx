@@ -28,7 +28,7 @@ const HomeSEOContent = () => {
           <div className={styles.item}>
             <h2 className={styles.heading}>Deck Repair Near Me, Replacement & Resurfacing</h2>
             <p className={styles.text}>
-              Is your current deck unsafe, soft underfoot, or outdated? We specialize in <strong>deck repair near me</strong> searches that turn into structural repairs, inspections, resurfacing, and full replacement. Start with <Link href="/deck-repair-loudoun-county">deck repair in Loudoun County</Link>, review our <Link href="/services/deck-inspection">deck inspection service</Link>, or compare options in the <Link href="/deck-resurfacing-vs-replacement">resurfacing vs replacement guide</Link>.
+              Is your current deck unsafe, soft underfoot, or outdated? We specialize in <strong>deck repair near me</strong> searches that turn into structural repairs, inspections, resurfacing, and full replacement. Start with <Link href="/deck-repair-loudoun-county">deck repair in Loudoun County</Link>, review our <Link href="/services/deck-inspection">deck inspection service</Link>, see <Link href="/services/deck-replacement">deck replacement in Northern Virginia</Link>, or compare options in the <Link href="/deck-resurfacing-vs-replacement">resurfacing vs replacement guide</Link>.
             </p>
           </div>
           <div className={styles.item}>

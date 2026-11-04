@@ -218,6 +218,9 @@ export default function DeckResurfacingPage() {
         <p data-speakable="deck-resurfacing-direct-answer" style={{ fontSize: '17px', lineHeight: 1.7, color: '#333', margin: 0 }}>
           {renderLinkedText(DIRECT_ANSWER)}
         </p>
+        <p style={{ fontSize: '17px', lineHeight: 1.7, color: '#333', margin: '0.75rem 0 0' }}>
+          When the frame should come out, see <Link href="/services/deck-replacement">deck replacement in Northern Virginia</Link>.
+        </p>
       </section>
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
         <QuotedPricesBlock paragraphs={[RESURFACE_QUOTED]} />

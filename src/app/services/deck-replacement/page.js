@@ -18,16 +18,19 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import AnswerBlock from '@/components/AnswerBlock';
 import { OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 import DecisionSupportSection from '@/components/DecisionSupportSection';
 import ArticleSchema from '@/components/ArticleSchema';
 import { PLANNING_DISCLAIMER, REPLACEMENT_RANGE_ANSWER, REPLACEMENT_TIMELINE } from '@/lib/externalPlanningRanges';
 
-const description = 'Full deck replacement in Northern Virginia from a written estimate. Permits and HOA are in the scope. Build time follows approvals and materials.';
+const description = 'Deck replacement in Northern Virginia. Rebuilds were $61–$102 per sq ft. Trex resurfacing was $9,020–$12,678. The written estimate is the only price.';
+const REPLACEMENT_COMPARE =
+  'Trex resurfacing was $9,020–$12,678. A full rebuild was $61–$102 per sq ft, most $64–$68 per sq ft.';
 
 export const metadata = buildMetadata({
   path: "/services/deck-replacement",
-  title: "Professional Deck Replacement Northern Virginia | Rebuild & Remodel",
+  title: "Deck Replacement in Northern Virginia | Loudoun Decks",
   description,
   image: "/social/deck-replacement-service-social.png",
 });
@@ -98,6 +101,10 @@ const replacementFaq = [
     answer: REPLACEMENT_RANGE_ANSWER,
   },
   {
+    question: "How does resurfacing compare with a full deck replacement?",
+    answer: `${REPLACEMENT_COMPARE} Loudoun Decks 2026 quoted prices (Sep–Oct 2026 quotes); your written estimate is the only price.`,
+  },
+  {
     question: "How long does a deck replacement take?",
     answer: REPLACEMENT_TIMELINE,
   },
@@ -161,7 +168,7 @@ const replacementGeoAnswers = [
 export default function DeckReplacementPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/services/deck-replacement" name="Professional Deck Replacement Northern Virginia | Rebuild &amp; Remodel" description={description} speakable />
+      <WebPageSchema dateModified="2026-11-04" url="https://ldndecks.com/services/deck-replacement" name="Deck Replacement in Northern Virginia | Loudoun Decks" description={description} speakable />
       <ArticleSchema
         title="Deck Replacement in Northern Virginia"
         description="Deck replacement planning guide for Northern Virginia homeowners comparing repair, resurfacing, full rebuilds, structural code resets, local permit paths, composite materials, and written estimate routing."
@@ -240,7 +247,7 @@ export default function DeckReplacementPage() {
       <div id="deck-replacement-estimate" style={{ scrollMarginTop: '24px' }}>
         <ServicesHeader
           subtext="Projects from a written estimate"
-          title="Professional Deck Replacement in Northern Virginia"
+          title="Deck Replacement in Northern Virginia"
           description="Don't let an aging, splintering deck hold you back. We inspect old structures, separate repair from replacement, and build low-maintenance outdoor retreats with permit and HOA planning included in the written scope."
           estimateHref="#deck-replacement-estimate"
           showQuickForm
@@ -248,7 +255,12 @@ export default function DeckReplacementPage() {
           quickFormLocation="paid_search_replacement_above_fold"
           quickFormHeading="Need a deck replacement quote? Send the basics and we will call back."
           pageContext={PAGE_CONTEXT}
-        />
+        >
+          <AnswerBlock
+            where="Loudoun, Fairfax, and Prince William counties"
+            price={REPLACEMENT_COMPARE}
+          />
+        </ServicesHeader>
       </div>
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>

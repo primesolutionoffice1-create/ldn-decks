@@ -72,6 +72,9 @@ export default function PrinceWilliamCountyPage() {
         title="Deck Builder in Prince William County, VA"
         description="Loudoun Decks is a trusted local deck and outdoor living contractor serving homeowners throughout Prince William County. We design and build custom decks, patios, porches, and outdoor spaces."
       />
+      <p style={{ maxWidth: 900, margin: '1rem auto 0', padding: '0 1.5rem', lineHeight: 1.7 }}>
+        Planning a full rebuild in this county? See <Link href="/services/deck-replacement">deck replacement in Northern Virginia</Link>.
+      </p>
       <ServiceMain
         subtitle="Professional Excellence"
         title="Custom Outdoor Living for Prince William Homeowners"
