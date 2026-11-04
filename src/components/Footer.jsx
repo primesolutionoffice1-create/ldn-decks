@@ -86,6 +86,9 @@ export default function Footer() {
             <p className={styles.brandPitch}>
               We offer the Perfect Decking Solution for your home to live Your Outdoor Dreams.
             </p>
+            <p className={styles.brandPitch}>
+              Official website: ldndecks.com (not loudoundecks.com, which is not affiliated with us).
+            </p>
           </div>
 
           <div className={styles.col2}>
