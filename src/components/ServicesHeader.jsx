@@ -23,6 +23,7 @@ export default function ServicesHeader({
   quickFormHeading = 'Request a written estimate',
   pageContext,
   leadSource,
+  children,
 }) {
   const pathname = usePathname() || '';
   const quickFormId = `${quickFormLocation}-form`;
@@ -36,6 +37,7 @@ export default function ServicesHeader({
             <span className={styles.line}></span>
           </div>
           <h1 className={styles.title}>{title}</h1>
+          {children}
           <div className={styles.ctaWrapper}>
             <Link
               href={showQuickForm ? `#${quickFormId}` : estimateHref}

@@ -71,6 +71,9 @@ export default function LoudounCountyPage() {
         title="Deck Builder in Loudoun County, VA"
         description="Loudoun Decks is a trusted local deck and outdoor living contractor serving homeowners throughout Loudoun County. We design and build custom decks, patios, porches, and outdoor spaces."
       />
+      <p style={{ maxWidth: 900, margin: '1rem auto 0', padding: '0 1.5rem', lineHeight: 1.7 }}>
+        Planning a full rebuild in this county? See <Link href="/services/deck-replacement">deck replacement in Northern Virginia</Link>.
+      </p>
       <ServiceMain
         subtitle="Local Expertise"
         title="Custom Outdoor Living for Loudoun Homeowners"

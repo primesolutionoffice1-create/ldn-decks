@@ -152,6 +152,20 @@ function rotateGuides(guides, hash) {
   return guides.map((_, i) => guides[(startIdx + i) % guides.length]);
 }
 
+const REPLACEMENT_LINK_PATHS = new Set([
+  '/services/new-decks',
+  '/deck-resurfacing-northern-virginia',
+]);
+
+function ReplacementGuideLink({ currentPath }) {
+  if (!REPLACEMENT_LINK_PATHS.has(currentPath)) return null;
+  return (
+    <p style={{ margin: '0 0 1rem', lineHeight: 1.6, color: '#222' }}>
+      When the frame should come out, see <Link href="/services/deck-replacement">deck replacement in Northern Virginia</Link>.
+    </p>
+  );
+}
+
 export default function RelatedGuides({ currentPath, category = null }) {
   // Filter out current page
   const available = CORNERSTONE_GUIDES.filter(g => g.path !== currentPath);
@@ -176,6 +190,7 @@ export default function RelatedGuides({ currentPath, category = null }) {
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1.5rem', color: '#111' }}>
             Guides Northern Virginia Homeowners Are Reading
           </h2>
+          <ReplacementGuideLink currentPath={currentPath} />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem' }}>
             {selected.map((guide) => (
               <Link
@@ -227,6 +242,7 @@ export default function RelatedGuides({ currentPath, category = null }) {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1.5rem', color: '#111' }}>
           Guides Northern Virginia Homeowners Are Reading
         </h2>
+        <ReplacementGuideLink currentPath={currentPath} />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem' }}>
           {selected.map((guide) => (
             <Link
