@@ -17,6 +17,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CountyConversionLinks from '@/components/CountyConversionLinks';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import AnswerBlock from '@/components/AnswerBlock';
 import QuotedPricesBlock from '@/components/QuotedPricesBlock';
 import { OPEN_DECK_QUOTED, OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 
@@ -71,7 +72,12 @@ export default function PrinceWilliamCountyPage() {
         subtext="Serving Northern Virginia"
         title="Deck Builder in Prince William County, VA"
         description="Loudoun Decks is a trusted local deck and outdoor living contractor serving homeowners throughout Prince William County. We design and build custom decks, patios, porches, and outdoor spaces."
-      />
+      >
+        <AnswerBlock
+          where="Prince William County"
+          price="A new open deck was $61–$102 per sq ft, most $64–$68 per sq ft."
+        />
+      </ServicesHeader>
       <p style={{ maxWidth: 900, margin: '1rem auto 0', padding: '0 1.5rem', lineHeight: 1.7 }}>
         Planning a full rebuild in this county? See <Link href="/services/deck-replacement">deck replacement in Northern Virginia</Link>.
       </p>

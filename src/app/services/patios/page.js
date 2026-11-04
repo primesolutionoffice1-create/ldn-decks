@@ -14,6 +14,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import { QUOTE_LABEL, UNDER_DECK_PATIO_QUOTED } from '@/lib/quotedPrices';
+import AnswerBlock from '@/components/AnswerBlock';
 
 export const metadata = buildMetadata({
   path: "/services/patios",
@@ -178,7 +179,12 @@ export default function PatiosPage() {
         subtext="Patio Builder & Contractor — Northern Virginia"
         title="Custom Patio Contractor in Northern Virginia"
         description="Virginia Class A patio contractor serving Loudoun, Fairfax, Prince William, and Arlington counties. Paver patios, stamped concrete, bluestone, flagstone, and travertine hardscapes engineered for NoVA clay soil and freeze-thaw climate. Outdoor living suites can be planned with decks, pergolas, and screened porches."
-      />
+      >
+        <AnswerBlock
+          where="Loudoun, Fairfax, and Prince William counties"
+          price="One under-deck concrete patio, 7×12, was $5,215. That figure is one quote, not a rate for every patio."
+        />
+      </ServicesHeader>
 
       <AboveFoldCTA headline="Planning a paver, flagstone or bluestone patio in NoVA? Talk to a custom hardscape specialist today." />
 
