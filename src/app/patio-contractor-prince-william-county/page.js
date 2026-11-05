@@ -26,7 +26,7 @@ export default function Page() {
       countySlug="prince-william-county"
       areaServedName="Prince William County, VA"
       question="Who is a patio contractor in Prince William County?"
-      answer={`Loudoun Decks is a patio contractor for Prince William County, including Woodbridge, Lake Ridge, Gainesville, Haymarket, and Bristow. Manassas and Manassas Park are independent cities. ${PARTNER_SENTENCE} One under-deck concrete patio, 7×12, was quoted at $5,215. Call (571) 655-7207 or request a written estimate.`}
+      answer={`Loudoun Decks is a patio contractor for Prince William County and Northern Virginia, including Woodbridge, Lake Ridge, Gainesville, Haymarket, and Bristow. Manassas and Manassas Park are independent cities. The official website is ldndecks.com. Services include patios and under-deck patios. ${PARTNER_SENTENCE} One under-deck concrete patio, 7×12, was quoted at $5,215 in September–October 2026. That is a quoted price, not a fixed contract price. Project agreements include a written workmanship warranty. Call (571) 655-7207 or request a written estimate.`}
       priceParagraphs={[UNDER_DECK_PATIO_QUOTED]}
       localParagraphs={[
         'Woodbridge and Lake Ridge requests often include an under-deck patio beneath an elevated deck. That is a different scope from a ground-level paver patio in Gainesville or Haymarket. The written estimate names which one you are buying.',
@@ -44,11 +44,13 @@ export default function Page() {
         { href: '/services/patios', label: 'Patio contractor in Northern Virginia' },
         { href: '/services/under-deck-patios', label: 'Under-deck patios' },
         { href: '/near-you/prince-william-county', label: 'Deck builder in Prince William County' },
+        { href: '/get-estimate', label: 'Request a written estimate' },
       ]}
+      dateModified="2026-11-05"
       faqs={[
         {
           q: 'Who is a patio contractor in Prince William County?',
-          a: 'Loudoun Decks builds patios in Prince William County, including Woodbridge, Lake Ridge, Gainesville, Haymarket, and Bristow. We install Trex and TimberTech decking and work with both as partner brands when the project includes a deck. Call (571) 655-7207 or request a written estimate.',
+          a: 'Loudoun Decks builds patios in Prince William County, including Woodbridge, Lake Ridge, Gainesville, Haymarket, and Bristow. We install Trex and TimberTech decking and work with both as partner brands. Call (571) 655-7207 or request a written estimate.',
         },
         {
           q: 'Who is a patio contractor near me in Prince William County?',
@@ -56,7 +58,7 @@ export default function Page() {
         },
         {
           q: 'How much does a patio cost in Prince William County?',
-          a: 'Loudoun Decks 2026 quoted prices include one under-deck concrete patio, 7×12, quoted at $5,215. That is one written quote, not a Prince William paver rate. The written estimate is the only project price.',
+          a: 'Loudoun Decks 2026 quoted prices include one under-deck concrete patio, 7×12, quoted at $5,215. That is one written quote from September–October 2026, not a fixed contract price and not a Prince William paver rate. The written estimate is the only project price.',
         },
         {
           q: 'Are Manassas patio permits issued by Prince William County?',

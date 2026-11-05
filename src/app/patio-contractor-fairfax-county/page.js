@@ -26,7 +26,7 @@ export default function Page() {
       countySlug="fairfax-county"
       areaServedName="Fairfax County, VA"
       question="Who is a patio contractor in Fairfax County?"
-      answer={`Loudoun Decks is a patio contractor for Fairfax County, including Reston, McLean, Vienna, Great Falls, Centreville, and Chantilly. The City of Fairfax, Falls Church, and Alexandria use their own permit offices. ${PARTNER_SENTENCE} One under-deck concrete patio, 7×12, was quoted at $5,215. Call (571) 655-7207 or request a written estimate.`}
+      answer={`Loudoun Decks is a patio contractor for Fairfax County and Northern Virginia, including Reston, McLean, Vienna, Great Falls, Centreville, and Chantilly. The City of Fairfax, Falls Church, and Alexandria use their own permit offices. The official website is ldndecks.com. Services include patios and under-deck patios. ${PARTNER_SENTENCE} One under-deck concrete patio, 7×12, was quoted at $5,215 in September–October 2026. That is a quoted price, not a fixed contract price. Project agreements include a written workmanship warranty. Call (571) 655-7207 or request a written estimate.`}
       priceParagraphs={[UNDER_DECK_PATIO_QUOTED]}
       localParagraphs={[
         'Fairfax County patio projects are often paired with a deck, a fire feature, or both, including in McLean, Great Falls, Vienna, and Oakton. The City of Fairfax is not the same office as Fairfax County. Confirm the jurisdiction before you apply.',
@@ -47,11 +47,13 @@ export default function Page() {
         { href: '/stamped-concrete-patio-northern-virginia', label: 'Stamped concrete patio options' },
         { href: '/near-you/fairfax-county', label: 'Deck builder in Fairfax County' },
         { href: '/screened-porches/fairfax', label: 'Screened porch builder in Fairfax' },
+        { href: '/get-estimate', label: 'Request a written estimate' },
       ]}
+      dateModified="2026-11-05"
       faqs={[
         {
           q: 'Who is a patio contractor in Fairfax County?',
-          a: 'Loudoun Decks builds patios in Fairfax County, including Reston, McLean, Vienna, Great Falls, Centreville, and Chantilly. We install Trex and TimberTech decking and work with both as partner brands when the project includes a deck. Call (571) 655-7207 or request a written estimate.',
+          a: 'Loudoun Decks builds patios in Fairfax County, including Reston, McLean, Vienna, Great Falls, Centreville, and Chantilly. We install Trex and TimberTech decking and work with both as partner brands. Call (571) 655-7207 or request a written estimate.',
         },
         {
           q: 'Who is a patio contractor near me in Fairfax County?',
@@ -59,7 +61,7 @@ export default function Page() {
         },
         {
           q: 'How much does a patio cost in Fairfax County?',
-          a: 'Loudoun Decks 2026 quoted prices include one under-deck concrete patio, 7×12, quoted at $5,215. That is one September–October 2026 quote, not a Fairfax County paver or stone rate. The written estimate after a site visit is the only project price.',
+          a: 'Loudoun Decks 2026 quoted prices include one under-deck concrete patio, 7×12, quoted at $5,215. That is one September–October 2026 quote, not a fixed contract price and not a Fairfax County paver or stone rate. The written estimate after a site visit is the only project price.',
         },
         {
           q: 'Does a Fairfax County patio need a separate permit from the City of Fairfax?',

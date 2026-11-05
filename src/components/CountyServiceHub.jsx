@@ -39,6 +39,7 @@ export default function CountyServiceHub({
   serviceCityLinks = [],
   relatedLinks = [],
   faqs,
+  dateModified = '2026-11-01',
 }) {
   const url = `https://ldndecks.com${path}`;
   const towns = counties[countySlug]?.cities || [];
@@ -46,7 +47,7 @@ export default function CountyServiceHub({
   return (
     <main>
       <WebPageSchema
-        dateModified="2026-11-01"
+        dateModified={dateModified}
         url={url}
         name={name}
         description={description}
