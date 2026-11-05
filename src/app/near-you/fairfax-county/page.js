@@ -69,7 +69,7 @@ export default function FairfaxCountyPage() {
           description="LDN Decks builds custom decks, screened porches, patios, and outdoor living spaces throughout Fairfax County, VA."
           url="https://ldndecks.com/near-you/fairfax-county"
         />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Written Estimates" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-11-05" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Written Estimates" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
             <ServicesHeader
           subtext="Serving Northern Virginia"
           title="Deck Builder in Fairfax County, VA"
@@ -143,7 +143,7 @@ export default function FairfaxCountyPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Fairfax County Homeowners Trust LDN Decks</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County is the most populous county in Virginia with over 1.1 million residents and median home values exceeding a written estimate. The county&apos;s established neighborhoods — from Vienna and McLean to Burke and Springfield — represent decades of homeownership, and many properties are now due for outdoor living upgrades as original decks reach the end of their lifespan.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County is the most populous county in Virginia with over 1.1 million residents (U.S. Census Bureau). The county&apos;s established neighborhoods — from Vienna and McLean to Burke and Springfield — represent decades of homeownership, and many properties are now due for outdoor living upgrades as original decks reach the end of their lifespan.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks brings <strong>Trex, TimberTech, AZEK, and pressure-treated framing</strong> experience to every Fairfax County project. We understand the county&apos;s detailed building code requirements, HOA architectural review processes, and the high standards Fairfax homeowners expect.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Fairfax County Building Permits & Codes</h3>
