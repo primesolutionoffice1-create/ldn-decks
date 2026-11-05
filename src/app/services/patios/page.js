@@ -96,7 +96,7 @@ const patioProcess = [
 const patioFAQs = [
   {
     question: 'How much does a patio cost in Northern Virginia in 2026?',
-    answer: 'A custom patio in Loudoun, Fairfax, or Prince William County is priced in a written estimate. Material and footprint change the scope. Every Loudoun Decks estimate is itemized, written, and delivered after an on-site visit.'
+    answer: 'A custom patio in Loudoun, Fairfax, or Prince William County is priced in a written estimate. The only patio total in the September–October 2026 quote set is one under-deck concrete patio, 7×12, quoted at $5,215. That is a quoted price, not a fixed contract price, and not a paver, flagstone, or stamped-concrete range. Material and footprint change the scope. The written estimate after an on-site visit is the only project price.'
   },
   {
     question: 'Pavers vs stamped concrete vs natural stone — which is best for NoVA?',
@@ -164,14 +164,12 @@ export default function PatiosPage() {
     <main>
       <JsonLd data={faqSchemaData} />
       <JsonLd data={materialItemListSchema} />
-      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Virginia Class A patio contractor in Northern Virginia. Paver, stamped concrete, and stone patios. A written estimate is the project price." speakable />
+      <WebPageSchema dateModified="2026-11-05" url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Virginia Class A patio contractor in Northern Virginia. Paver, stamped concrete, and stone patios. A written estimate is the project price." speakable />
       <ServiceSchema
         name="Custom Patio Construction"
         description="Professional patio design and installation in Northern Virginia. Pavers, flagstone, stamped concrete, and natural stone patios."
         url="https://ldndecks.com/services/patios"
         category="Outdoor Living"
-        lowPrice="14000"
-        highPrice="160000"
         relatedServices={['https://ldndecks.com/services/fire-pits', 'https://ldndecks.com/services/under-deck-patios', 'https://ldndecks.com/outdoor-living-northern-virginia']}
       />
 
@@ -182,8 +180,11 @@ export default function PatiosPage() {
       >
         <AnswerBlock
           where="Loudoun, Fairfax, and Prince William counties"
-          price="One under-deck concrete patio, 7×12, was $5,215. That figure is one quote, not a rate for every patio."
+          price="One under-deck concrete patio, 7×12, was quoted at $5,215. That is a quoted price, not a fixed contract price and not a paver or stone rate."
         />
+        <p style={{ margin: '0.35rem 0 0', fontSize: '0.98rem', lineHeight: 1.55, textAlign: 'left' }}>
+          Services: patios and under-deck patios across Loudoun, Fairfax, and Prince William counties.
+        </p>
       </ServicesHeader>
 
       <AboveFoldCTA headline="Planning a paver, flagstone or bluestone patio in NoVA? Talk to a custom hardscape specialist today." />
@@ -197,7 +198,7 @@ export default function PatiosPage() {
             </p>
           </div>
 
-          <NamedAuthor context="Loudoun, Fairfax, Prince William and Arlington counties" lastUpdated="2026-11-01" />
+          <NamedAuthor context="Loudoun, Fairfax, Prince William and Arlington counties" lastUpdated="2026-11-05" />
 
           <h2 style={S.h2}>The Premier Patio Builder for Luxury Homes in Northern Virginia</h2>
           <p style={S.p}>
@@ -209,7 +210,7 @@ export default function PatiosPage() {
 
           <h2 style={S.h2}>2026 Patio Cost in Northern Virginia</h2>
           <p style={S.p}>
-            {QUOTE_LABEL}: {UNDER_DECK_PATIO_QUOTED} That quote is not a paver, flagstone, or stamped-concrete range, and this page does not compare those materials with a national average. Permit documentation, labor, and the base and drainage for clay soil change the scope. The table below does not list dollar amounts. A written estimate is the project price. Last reviewed November 1, 2026.
+            {QUOTE_LABEL}: {UNDER_DECK_PATIO_QUOTED} That quote is from September–October 2026. It is a quoted price, not a fixed contract price, and not a paver, flagstone, or stamped-concrete range. This page does not compare those materials with a national average. Permit documentation, labor, and the base and drainage for clay soil change the scope. The table below does not list dollar amounts. A written estimate is the project price. Last reviewed November 5, 2026.
           </p>
           <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', borderRadius: 8, overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
@@ -353,8 +354,11 @@ export default function PatiosPage() {
               </div>
             ))}
           </div>
-          <p style={{ marginTop: '1.5rem', fontSize: '0.92rem' }}>
-            <Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full NoVA service map →</Link>
+          <p style={{ marginTop: '1.5rem', fontSize: '0.92rem', lineHeight: 1.7 }}>
+            County hubs: <Link href="/near-you/loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County</Link>, <Link href="/near-you/fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County</Link>, and <Link href="/near-you/prince-william-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Prince William County</Link>.
+            {' '}Under-deck work is on <Link href="/services/under-deck-patios" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>under-deck patios</Link>.
+            {' '}<Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Request a written estimate</Link>.
+            {' '}<Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full NoVA service map →</Link>
           </p>
         </div>
       </section>
