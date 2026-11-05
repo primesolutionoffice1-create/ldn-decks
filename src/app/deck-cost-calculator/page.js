@@ -10,13 +10,13 @@ import { calculatorFaqs } from '@/data/deckCostCalculatorFaqs';
 // real estate blogs, home improvement sites, and local news.
 // Embeddable widget code is included so other sites can frame the calculator.
 //
-// Calculator UI + math now lives in DeckCostCalculatorWidget and is shared
+// Planner UI now lives in DeckCostCalculatorWidget and is shared
 // with /composite-deck-cost-northern-virginia.
 
 export const metadata = buildMetadata({
   path: '/deck-cost-calculator',
-  title: 'Deck Cost Calculator Northern Virginia | Budget Planner',
-  description: 'Explore an illustrative deck budget by size, material and selected add-ons. Review model assumptions, then request an itemized Northern Virginia project quote.',
+  title: 'Deck Project Planner Northern Virginia',
+  description: 'Describe deck size, material and options before requesting an itemized Northern Virginia project estimate.',
   image: '/social/deck-cost-calculator-social.png',
 });
 
@@ -25,8 +25,8 @@ export default function DeckCostCalculator() {
     <main style={{ background: '#fff' }}>
       <section style={{ background: '#1a202c', color: '#ffffff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Northern Virginia Deck Price Calculator</h1>
-          <p style={{ color: '#cbd5e0', fontSize: '1.1rem' }}>Explore an illustrative deck budget by size, material and selected add-ons. These assumptions are not verified Northern Virginia market rates.</p>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Northern Virginia Deck Project Planner</h1>
+          <p style={{ color: '#cbd5e0', fontSize: '1.1rem' }}>Describe your deck by size, material and selected options before requesting a written estimate.</p>
         </div>
       </section>
 
@@ -35,7 +35,7 @@ export default function DeckCostCalculator() {
           <div style={{ borderLeft: '4px solid #d14817', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 8, marginBottom: '1.5rem' }}>
             <p style={{ fontWeight: 700, margin: '0 0 0.5rem', color: '#1a202c' }}>Quick Answer</p>
             <p style={{ margin: 0, color: '#2d3748', lineHeight: 1.7 }}>
-              The calculator combines square footage, a material preset and selected add-ons, then applies a 25-35% model adjustment. Stairs and railings are included only when selected; there is no elevation or permit setting. Treat the result as an illustrative scenario, not a guaranteed price, and request an itemized written estimate for your property.
+              This planner records your selected size, material and options; it does not calculate a price. Stairs and railings can be selected as scope items. Elevation, permits and site conditions are reviewed in a written estimate.
             </p>
           </div>
           <NamedAuthor context="Loudoun, Fairfax, Prince William, Arlington, and Stafford counties" lastUpdated="2026-10-18" />
@@ -47,23 +47,23 @@ export default function DeckCostCalculator() {
 
           <DeckCostCalculatorWidget defaultMaterial={2} defaultSqft={350} ctaLabel="Get Your Free Detailed Quote" />
           <p style={{ marginTop: '1rem', color: '#4a5568', lineHeight: 1.7 }}>
-            Want the more consultation-focused version? Use the <Link href="/tools/deck-cost-estimator-northern-virginia" style={{ color: '#d14817', fontWeight: 700 }}>Deck Cost Estimator Northern Virginia</Link> to connect your range with permits, financing and the written estimate process.
+            Want the more consultation-focused version? Use the <Link href="/tools/deck-cost-estimator-northern-virginia" style={{ color: '#d14817', fontWeight: 700 }}>Deck Cost Estimator Northern Virginia</Link> to explore permits, financing and the written estimate process.
           </p>
 
           <div style={{ margin: '2rem 0' }}>
             <FinancingCTA
               title="Want to compare deck financing options after estimating cost?"
-              body="Use this calculator to explore an illustrative budget, then ask us about current financing options for eligible deck builds, resurfacing, repairs, and composite upgrades. Subject to approval. Terms may vary."
+              body="Use this planner to describe your project, then ask us about current financing options for eligible deck builds, resurfacing, repairs, and composite upgrades. Subject to approval. Terms may vary."
             />
           </div>
 
           <article style={{ marginTop: '4rem', lineHeight: 1.8, color: '#2d3748' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1.5rem', color: '#1a202c' }}>From an Illustrative Budget to a Written Deck Quote</h2>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1.5rem', color: '#1a202c' }}>From Project Scope to a Written Deck Quote</h2>
             <p>
-              A deck budget starts with scope, not a regional average. For a property in Fairfax, Loudoun or elsewhere in Northern Virginia, record the approximate size, preferred decking, stairs and railing needs before requesting a proposal. The calculator can compare those choices, but it cannot inspect the site or establish an installed price.
+              A deck budget starts with scope, not a regional average. For a property in Fairfax, Loudoun or elsewhere in Northern Virginia, record the approximate size, preferred decking, stairs and railing needs before requesting a proposal. The planner displays those choices, but it cannot inspect the site or establish an installed price.
             </p>
             <p>
-              Its material and add-on rates are preset assumptions, not supplier quotes or a dataset of completed local projects. The low scenario adds 25% to the base plus selected add-ons; the high scenario adds 35%. That adjustment is illustrative, not a measured Northern Virginia premium, an itemized fee schedule or a guarantee that every project expense is covered.
+              The selections describe project scope rather than a calculated budget. Ask for an itemized written estimate that addresses materials, structural work, access, permits, stairs and railings where applicable.
             </p>
 
             <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>What Does a Price per Square Foot Include?</h3>
@@ -86,7 +86,7 @@ export default function DeckCostCalculator() {
 
             <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Deck Replacement Cost: Resurfacing vs. Full Tear-Down</h3>
             <p>
-              Resurfacing replaces the walking surface while retaining suitable framing. It is an option only after the supports, connections, joist layout and proposed materials are reviewed. The calculator has no structural-condition assessment or separate resurfacing mode; it cannot decide whether your frame is reusable.
+              Resurfacing replaces the walking surface while retaining suitable framing. It is an option only after the supports, connections, joist layout and proposed materials are reviewed. The planner has no structural-condition assessment or separate resurfacing mode; it cannot decide whether your frame is reusable.
             </p>
             <p>
               Localized defects may call for defined repairs; extensive deterioration or unsuitable framing may call for replacement. Age alone does not settle that decision. Request separate scopes for feasible options, including how hidden damage will be documented and priced, rather than assuming a fixed savings percentage.
@@ -101,7 +101,7 @@ export default function DeckCostCalculator() {
                 <strong>Permits and HOA review:</strong> Confirm the exact work with the local authority using <a href="https://www.loudoun.gov/1166/Decks" style={{ color: '#d14817', textDecoration: 'underline' }}>Loudoun&apos;s deck guidance</a> or <a href="https://www.fairfaxcounty.gov/landdevelopment/when-permit-required" style={{ color: '#d14817', textDecoration: 'underline' }}>Fairfax&apos;s permit guidance</a>. Ask who handles drawings, applications, fees and inspections. Check HOA requirements separately.
               </li>
               <li style={{ marginBottom: '1rem' }}>
-                <strong>Selected add-ons:</strong> Stairs, railings and other options contribute only when checked. Their preset allowances do not measure stair dimensions, railing lengths or electrical work. Have quantities and specifications itemized in the proposal.
+                <strong>Selected add-ons:</strong> Stairs, railings and other checked options appear in the scope summary. The planner does not price them or measure stair dimensions, railing lengths or electrical work. Have quantities and specifications itemized in the proposal.
               </li>
             </ol>
             <p>
@@ -192,7 +192,7 @@ export default function DeckCostCalculator() {
               </Link>
               <Link href="/get-estimate" style={{ padding: '1rem', border: '1px solid #e2e8f0', borderRadius: 8, textDecoration: 'none', color: 'inherit' }}>
                 <p style={{ fontWeight: 600, color: '#d14817' }}>Get a Written Estimate</p>
-                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Turn the calculator range into an itemized project quote</p>
+                <p style={{ fontSize: '0.85rem', color: '#4a5568' }}>Request an itemized project quote</p>
               </Link>
             </div>
           </div>

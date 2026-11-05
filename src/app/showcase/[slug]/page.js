@@ -205,7 +205,7 @@ export default async function ProjectPage({ params }) {
                 <ul>
                   <li><strong>Location:</strong> {project.location.split(',')[0]}</li>
                   <li><strong>Date:</strong> {project.location.split(',')[1]}</li>
-                  <li><strong>Status:</strong> Completed</li>
+                  <li><strong>Verification:</strong> Gallery record; project details and status not confirmed</li>
                   <li><strong>Category:</strong> {project.title.toLowerCase().includes('deck') ? 'Decking' : 'Fencing'}</li>
                 </ul>
                 <Link href="/get-estimate" className={styles.ctaButton}>Interested in a similar project?</Link>
