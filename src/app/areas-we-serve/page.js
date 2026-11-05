@@ -144,6 +144,9 @@ export default function AreasWeServePage() {
           </div>
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Our Services Across All Areas</h2>
+          <p style={{ color: '#555', lineHeight: 1.7, marginBottom: '1rem' }}>
+            Planning a full rebuild in this service area? See <Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck replacement in Northern Virginia</Link>.
+          </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '0.75rem', marginBottom: '2rem' }}>
             {[
               ['/services/new-decks', 'Custom Deck Construction'],

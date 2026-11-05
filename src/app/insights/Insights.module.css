@@ -91,6 +91,18 @@
   overflow-wrap: anywhere;
 }
 
+.servicePointer {
+  margin: -4px 0 18px;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.servicePointer a {
+  color: var(--site-color);
+  font-weight: 700;
+}
+
 .meta {
   color: #666;
   font-size: 16px;

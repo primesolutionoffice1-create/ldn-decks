@@ -77,6 +77,7 @@ export default function GetEstimatePage() {
             <p style={{ color: '#ccc', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
               Tell us about your composite deck, deck replacement, repair, screened porch, or outdoor living project.
               Loudoun Decks helps homeowners plan the right scope, budget, permits, HOA path, and next step before construction.
+              Planning a full rebuild? See <Link href="/services/deck-replacement" style={{ color: '#fff', fontWeight: 700 }}>deck replacement in Northern Virginia</Link>.
             </p>
 
             {/* Trust Badges */}
