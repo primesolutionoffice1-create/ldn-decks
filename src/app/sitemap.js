@@ -4,7 +4,6 @@ import { resolve } from 'node:path';
 import { blogPosts } from '@/lib/blogData';
 import { isRedirectedBlogPost } from '@/lib/blogRoutes';
 import { educationArticles } from '@/lib/educationData';
-import { showcaseProjects } from '@/lib/showcaseData';
 import { getSoroArticles } from '@/lib/soro';
 import { SITE_URL } from '@/lib/seo';
 import { getIndexableLocalServicePages } from '@/data/localServicePages';
@@ -472,13 +471,9 @@ export default async function sitemap() {
                 freq: "monthly",
         }));
 
-        // Showcase projects — dynamically generated from showcaseData
-        const showcasePaths = showcaseProjects.map(project => ({
-                path: `/showcase/${project.slug}`,
-                priority: 0.60,
-                lastMod: TIER3,
-                freq: "monthly",
-        }));
+        // Individual /showcase/{slug} URLs are gallery records with one photo.
+        // They stay linked from /showcase and return 200, but they are noindex
+        // and are not submitted here. /showcase itself remains in staticPages.
 
         // Submit only vetted city-service pages that remain indexable. The
         // broader programmatic set stays live with noindex/follow until each
@@ -491,7 +486,7 @@ export default async function sitemap() {
                 freq: "monthly",
         }));
 
-        const allPages = [...staticPages, ...localServicePaths, ...blogPaths, ...educationPaths, ...insightPaths, ...showcasePaths]
+        const allPages = [...staticPages, ...localServicePaths, ...blogPaths, ...educationPaths, ...insightPaths]
                 .filter(p => !isExcluded(p.path));
 
         return allPages.map(({ path, lastMod, priority, freq, videos }) => ({

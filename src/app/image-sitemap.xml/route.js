@@ -1,4 +1,4 @@
-import { showcaseProjects } from '@/lib/showcaseData';
+import { showcaseProjects, showcaseImageAlt } from '@/lib/showcaseData';
 import { SITE_URL } from '@/lib/seo';
 
 // Image Sitemap helps Google Image Search index all project photos
@@ -8,18 +8,21 @@ import { SITE_URL } from '@/lib/seo';
 export async function GET() {
   const entries = [];
 
-  // Showcase project images
-  for (const project of showcaseProjects) {
-    entries.push(`
-    <url>
-      <loc>${SITE_URL}/showcase/${project.slug}</loc>
+  // Project photos are shown on the indexable gallery hub. The individual
+  // /showcase/{slug} URLs are noindex, so image sitemap locations stay on /showcase.
+  const showcaseImages = showcaseProjects.map((project) => {
+    const alt = showcaseImageAlt(project);
+    return `
       <image:image>
         <image:loc>${SITE_URL}${project.image}</image:loc>
-        <image:title>${escapeXml(project.title)} ${escapeXml(project.location)}</image:title>
-        <image:caption>${escapeXml(project.title)} by Loudoun Decks in ${escapeXml(project.location)}. Professional deck and outdoor living construction in Northern Virginia.</image:caption>
-      </image:image>
+        <image:title>${escapeXml(alt)}</image:title>
+        <image:caption>${escapeXml(alt)} by Loudoun Decks.</image:caption>
+      </image:image>`;
+  }).join('');
+  entries.push(`
+    <url>
+      <loc>${SITE_URL}/showcase</loc>${showcaseImages}
     </url>`);
-  }
 
   // Homepage hero
   entries.push(`

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { showcaseProjects } from '@/lib/showcaseData';
+import { showcaseProjects, showcaseImageAlt } from '@/lib/showcaseData';
 import { counties, slugify } from '@/data/cityData';
 
 /**
@@ -58,7 +58,7 @@ export default function CountyRecentProjects({ countySlug, limit = 6 }) {
                 <div style={{ position: 'relative', width: '100%', height: '200px' }}>
                   <Image
                     src={project.image}
-                    alt={`${project.title} in ${city}, Virginia`}
+                    alt={showcaseImageAlt(project)}
                     fill
                     style={{ objectFit: 'cover' }}
                     sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 33vw"
