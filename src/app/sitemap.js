@@ -169,6 +169,7 @@ export default async function sitemap() {
 		{ path: "/deck-builders-loudoun",        priority: 0.95, lastMod: TIER1, freq: "weekly" },
 		{ path: "/screened-porch-contractor-loudoun-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
 		{ path: "/screened-porch-contractor-prince-william-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
+		{ path: "/screened-porch-contractor-fairfax-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
 		{ path: "/patio-contractor-loudoun-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
 		{ path: "/patio-contractor-fairfax-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
 		{ path: "/patio-contractor-prince-william-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },

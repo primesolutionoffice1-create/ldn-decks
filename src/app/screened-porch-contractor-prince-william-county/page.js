@@ -43,6 +43,7 @@ export default function Page() {
         { href: '/screened-porch-cost-northern-virginia', label: 'Screened porch cost in Northern Virginia' },
         { href: '/near-you/prince-william-county', label: 'Deck builder in Prince William County' },
         { href: '/deck-builder-woodbridge-va', label: 'Deck builder in Woodbridge' },
+        { href: '/screened-porch-contractor-fairfax-county', label: 'Screened porch contractor in Fairfax County' },
       ]}
       faqs={[
         {

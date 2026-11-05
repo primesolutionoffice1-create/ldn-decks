@@ -233,6 +233,7 @@ export default function FairfaxCountyPage() {
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/patio-contractor-fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Patio Contractor in Fairfax County →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Resurfacing in Fairfax County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porch-contractor-fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Contractor in Fairfax County →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porches/fairfax" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Builder in Fairfax →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/patios" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Patio Service →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Resurfacing Service →</Link></li>
