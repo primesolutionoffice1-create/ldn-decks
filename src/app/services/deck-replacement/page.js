@@ -168,14 +168,14 @@ const replacementGeoAnswers = [
 export default function DeckReplacementPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-11-04" url="https://ldndecks.com/services/deck-replacement" name="Deck Replacement in Northern Virginia | Loudoun Decks" description={description} speakable />
+      <WebPageSchema dateModified="2026-11-05" url="https://ldndecks.com/services/deck-replacement" name="Deck Replacement in Northern Virginia | Loudoun Decks" description={description} speakable />
       <ArticleSchema
         title="Deck Replacement in Northern Virginia"
         description="Deck replacement planning guide for Northern Virginia homeowners comparing repair, resurfacing, full rebuilds, structural code resets, local permit paths, composite materials, and written estimate routing."
         path="/services/deck-replacement"
         image="/social/deck-replacement-service-social.png"
         datePublished="2026-05-26"
-        dateModified="2026-11-01"
+        dateModified="2026-11-05"
         speakable={[
           '#deck-replacement-answer',
           '#deck-replacement-decision-support',
@@ -264,7 +264,10 @@ export default function DeckReplacementPage() {
       </div>
 
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-11-01" />
+        <p style={{ lineHeight: 1.7, margin: '0 0 1rem', color: '#333' }}>
+          If the frame can stay, compare <Link href="/services/deck-resurfacing">deck resurfacing</Link> before a full rebuild. County planning for this work is on the <Link href="/near-you/loudoun-county">Loudoun County</Link>, <Link href="/near-you/fairfax-county">Fairfax County</Link>, and <Link href="/near-you/prince-william-county">Prince William County</Link> hubs. The next step is <Link href="/get-estimate">a written estimate</Link>.
+        </p>
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-11-05" />
       </section>
 
       <PlanningUpdate

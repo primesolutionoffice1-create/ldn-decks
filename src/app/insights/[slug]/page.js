@@ -24,6 +24,12 @@ export const dynamicParams = true;
 const SECTION_PATH = '/insights';
 const FALLBACK_OG_IMAGE = '/social/blog-social.png';
 const MID_CTA_MIN_WORDS = 600;
+const COMPARISON_SLUG = 'deck-replacement-or-resurfacing-know-the-difference';
+const COMPARISON_MODIFIED = '2026-11-05';
+const COMPARISON_DESCRIPTION =
+  'Compare deck replacement and resurfacing in Northern Virginia. Full rebuilds and keeping a sound frame are different scopes.';
+const COMPARISON_ANSWER =
+  'Full replacements are planned on the deck replacement page. Resurfacing-only work, when the frame can stay, is planned on the deck resurfacing page. This guide compares the two scopes, and the written estimate is the only price.';
 
 export async function generateStaticParams() {
   const articles = await getSoroArticles();
@@ -35,10 +41,11 @@ export async function generateMetadata({ params }) {
   const article = await getSoroArticleBySlug(slug);
   if (!article) return { title: 'Insight Not Found', robots: { index: false, follow: false } };
 
+  const isComparison = article.slug === COMPARISON_SLUG;
   const base = buildMetadata({
     path: `${SECTION_PATH}/${article.slug}`,
     title: insightDocumentTitle(article.title),
-    description: article.excerpt,
+    description: isComparison ? COMPARISON_DESCRIPTION : article.excerpt,
     image: article.image || FALLBACK_OG_IMAGE,
   });
 
@@ -47,7 +54,12 @@ export async function generateMetadata({ params }) {
     openGraph: {
       ...base.openGraph,
       type: 'article',
-      ...(article.date ? { publishedTime: article.date, modifiedTime: article.date } : {}),
+      ...(article.date || isComparison
+        ? {
+            ...(article.date ? { publishedTime: article.date } : {}),
+            modifiedTime: isComparison ? COMPARISON_MODIFIED : article.date,
+          }
+        : {}),
     },
   };
 }
@@ -61,9 +73,14 @@ function buildInsightArticleSchema(article) {
     '@id': `${articleUrl}#article`,
     isPartOf: { '@id': WEBSITE_ID },
     headline: fitInsightText(article.title),
-    description: article.excerpt,
+    description: article.slug === COMPARISON_SLUG ? COMPARISON_ANSWER : article.excerpt,
     ...(article.image ? { image: [article.image] } : {}),
-    ...(article.date ? { datePublished: article.date, dateModified: article.date } : {}),
+    ...(article.date || article.slug === COMPARISON_SLUG
+      ? {
+          ...(article.date ? { datePublished: article.date } : {}),
+          dateModified: article.slug === COMPARISON_SLUG ? COMPARISON_MODIFIED : article.date,
+        }
+      : {}),
     author: [
       {
         '@type': 'Organization',
@@ -129,7 +146,8 @@ export default async function InsightArticlePage({ params }) {
   const articleSchema = buildInsightArticleSchema(article);
   const bodyText = stripTags(article.contentHtml);
   const leadText = article.excerpt.replace(/…$/, '');
-  const showLead = Boolean(leadText) && !bodyText.startsWith(leadText);
+  const isComparison = article.slug === COMPARISON_SLUG;
+  const showLead = !isComparison && Boolean(leadText) && !bodyText.startsWith(leadText);
   const showHeroImage = Boolean(article.image) && !article.contentHtml.includes(article.image);
   const [bodyStart, bodyRest] = splitForMidCta(article.contentHtml, article.wordCount);
 
@@ -148,12 +166,25 @@ export default async function InsightArticlePage({ params }) {
             </ul>
           )}
           <h1 className={styles.title}>{fitInsightText(article.title)}</h1>
+          {isComparison && (
+            <p className={styles.servicePointer}>
+              Full replacements are planned on <Link href="/services/deck-replacement">deck replacement</Link>.
+              Resurfacing-only work, when the frame can stay, is planned on <Link href="/services/deck-resurfacing">deck resurfacing</Link>.
+              This guide compares the two scopes, and the written estimate is the only price.
+            </p>
+          )}
           <div className={styles.meta}>
             <span>By {BUSINESS.name}</span>
             {article.dateDisplay && (
               <>
                 <span className={styles.metaDivider}>•</span>
                 <time dateTime={article.date}>{article.dateDisplay}</time>
+              </>
+            )}
+            {isComparison && (
+              <>
+                <span className={styles.metaDivider}>•</span>
+                <time dateTime={COMPARISON_MODIFIED}>Updated November 5, 2026</time>
               </>
             )}
           </div>
