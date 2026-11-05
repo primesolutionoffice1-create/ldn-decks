@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { buildMetadata } from '@/lib/seo';
 import { getSoroArticles, getSoroArticleBySlug, stripTags, insightDocumentTitle, fitInsightText } from '@/lib/soro';
 import { BUSINESS, ORG_ID, WEBSITE_ID } from '@/lib/business';
+import { QUOTE_SOURCE, RESURFACE_QUOTED } from '@/lib/quotedPrices';
 import JsonLd from '@/components/JsonLd';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesHome from '@/components/ServicesHome';
@@ -26,6 +27,14 @@ const FALLBACK_OG_IMAGE = '/social/blog-social.png';
 const MID_CTA_MIN_WORDS = 600;
 const COMPARISON_SLUG = 'deck-replacement-or-resurfacing-know-the-difference';
 const COMPARISON_MODIFIED = '2026-11-05';
+const COST_DRIVERS_SLUG = 'what-drives-composite-deck-costs-in-virginia';
+const COST_DRIVERS_MODIFIED = '2026-11-05';
+
+function insightModified(slug) {
+  if (slug === COMPARISON_SLUG) return COMPARISON_MODIFIED;
+  if (slug === COST_DRIVERS_SLUG) return COST_DRIVERS_MODIFIED;
+  return null;
+}
 const COMPARISON_DESCRIPTION =
   'Compare deck replacement and resurfacing in Northern Virginia. Full rebuilds and keeping a sound frame are different scopes.';
 const COMPARISON_ANSWER =
@@ -42,6 +51,7 @@ export async function generateMetadata({ params }) {
   if (!article) return { title: 'Insight Not Found', robots: { index: false, follow: false } };
 
   const isComparison = article.slug === COMPARISON_SLUG;
+  const modified = insightModified(article.slug);
   const base = buildMetadata({
     path: `${SECTION_PATH}/${article.slug}`,
     title: insightDocumentTitle(article.title),
@@ -54,10 +64,10 @@ export async function generateMetadata({ params }) {
     openGraph: {
       ...base.openGraph,
       type: 'article',
-      ...(article.date || isComparison
+      ...(article.date || modified
         ? {
             ...(article.date ? { publishedTime: article.date } : {}),
-            modifiedTime: isComparison ? COMPARISON_MODIFIED : article.date,
+            modifiedTime: modified || article.date,
           }
         : {}),
     },
@@ -75,10 +85,10 @@ function buildInsightArticleSchema(article) {
     headline: fitInsightText(article.title),
     description: article.slug === COMPARISON_SLUG ? COMPARISON_ANSWER : article.excerpt,
     ...(article.image ? { image: [article.image] } : {}),
-    ...(article.date || article.slug === COMPARISON_SLUG
+    ...(article.date || insightModified(article.slug)
       ? {
           ...(article.date ? { datePublished: article.date } : {}),
-          dateModified: article.slug === COMPARISON_SLUG ? COMPARISON_MODIFIED : article.date,
+          dateModified: insightModified(article.slug) || article.date,
         }
       : {}),
     author: [
@@ -147,6 +157,8 @@ export default async function InsightArticlePage({ params }) {
   const bodyText = stripTags(article.contentHtml);
   const leadText = article.excerpt.replace(/…$/, '');
   const isComparison = article.slug === COMPARISON_SLUG;
+  const isCostDrivers = article.slug === COST_DRIVERS_SLUG;
+  const modified = insightModified(article.slug);
   const showLead = !isComparison && Boolean(leadText) && !bodyText.startsWith(leadText);
   const showHeroImage = Boolean(article.image) && !article.contentHtml.includes(article.image);
   const [bodyStart, bodyRest] = splitForMidCta(article.contentHtml, article.wordCount);
@@ -181,10 +193,10 @@ export default async function InsightArticlePage({ params }) {
                 <time dateTime={article.date}>{article.dateDisplay}</time>
               </>
             )}
-            {isComparison && (
+            {modified && (
               <>
                 <span className={styles.metaDivider}>•</span>
-                <time dateTime={COMPARISON_MODIFIED}>Updated November 5, 2026</time>
+                <time dateTime={modified}>Updated November 5, 2026</time>
               </>
             )}
           </div>
@@ -194,6 +206,21 @@ export default async function InsightArticlePage({ params }) {
       <div className={blogStyles.contentSection}>
         <div className={blogStyles.containerNarrow}>
           <div className={blogStyles.contentBody}>
+            {isCostDrivers && (
+              <section className={styles.quotedBlock} aria-labelledby="trex-resurfacing-quote">
+                <h2 id="trex-resurfacing-quote">Loudoun Decks 2026 quoted Trex resurfacing</h2>
+                <p>{QUOTE_SOURCE}</p>
+                <p data-speakable>{RESURFACE_QUOTED}</p>
+                <p>
+                  These are Northern Virginia quoted prices. The written estimate is the only project price.
+                  Plan the work on <Link href="/services/deck-resurfacing">deck resurfacing</Link>.
+                  County hubs: <Link href="/deck-resurfacing-loudoun-county">Loudoun County</Link>,{' '}
+                  <Link href="/deck-resurfacing-fairfax-county">Fairfax County</Link>, and{' '}
+                  <Link href="/deck-resurfacing-prince-william-county">Prince William County</Link>.
+                </p>
+              </section>
+            )}
+
             {showLead && (
               <p className={blogStyles.leadParagraph} data-speakable>{leadText}</p>
             )}
