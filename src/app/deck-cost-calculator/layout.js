@@ -8,8 +8,8 @@ import { calculatorFaqs } from '@/data/deckCostCalculatorFaqs';
 
 export const metadata = buildMetadata({
   path: '/deck-cost-calculator',
-  title: 'Deck Cost Calculator Northern Virginia | Budget Planner',
-  description: 'Explore an illustrative deck budget by size, material and selected add-ons. Review model assumptions, then request an itemized Northern Virginia project quote.',
+  title: 'Deck Project Planner Northern Virginia',
+  description: 'Describe deck size, material and options before requesting an itemized Northern Virginia project estimate.',
   image: '/social/deck-cost-calculator-social.png',
 });
 
@@ -19,14 +19,14 @@ const webApplicationSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   '@id': `${PAGE_URL}#webapp`,
-  name: 'Deck Cost Calculator',
+  name: 'Deck Project Planner',
   url: PAGE_URL,
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Any (web)',
   browserRequirements: 'Requires JavaScript',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   publisher: { '@id': ORG_ID },
-  description: 'Illustrative deck budget planner using preset material rates, size, optional add-ons and a model adjustment. Not a supplier quote or verified local price dataset; there are no elevation or permit controls.',
+  description: 'A scope planner for deck size, material and options. It does not calculate a price; elevation and permits are reviewed in a written estimate.',
 };
 
 const faqSchema = {
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
     <>
       <JsonLd data={webApplicationSchema} />
       <JsonLd data={faqSchema} />
-      <WebPageSchema url={PAGE_URL} name="Deck Cost Calculator Northern Virginia | Budget Planner" description="Illustrative deck budget by size, material and selected add-ons, with explicit model assumptions and a written-quote checklist." dateModified="2026-09-13" speakable />
+      <WebPageSchema url={PAGE_URL} name="Deck Project Planner Northern Virginia" description="Plan deck size, material and options before requesting a written project estimate." dateModified="2026-09-13" speakable />
       {children}
       <RelatedGuides currentPath="/deck-cost-calculator" category="deck-core" />
       <ContactHome />

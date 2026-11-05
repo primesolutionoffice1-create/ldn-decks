@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ShowcaseHeader from '@/components/ShowcaseHeader';
 import ShowcaseGrid from '@/components/ShowcaseGrid';
 import ShowcaseStats from '@/components/ShowcaseStats';
@@ -64,7 +65,7 @@ export default function ShowcasePage() {
             How to use the Loudoun Decks project gallery
           </h2>
           <p style={{ color: '#444', lineHeight: 1.75, fontSize: '1.05rem', marginBottom: '1rem' }}>
-            This gallery helps Northern Virginia homeowners compare deck, resurfacing, balcony, fence, and outdoor living project types before requesting a written estimate. Each gallery record should be read as visual planning context unless the project has been separately verified with owner permission, scope details, and evidence notes.
+            This gallery helps Northern Virginia homeowners compare deck, resurfacing, balcony, fence, and outdoor living project types before requesting a written estimate. Each gallery record should be read as visual planning context unless the project has been separately verified with owner permission, scope details, and evidence notes. For a documented project currently in progress, read the <Link href="/blog/deck-repair-or-rebuild-fairfax-station">Fairfax Station rebuild article</Link>.
           </p>
           <p style={{ color: '#444', lineHeight: 1.75, fontSize: '1.05rem', marginBottom: '1rem' }}>
             A Loudoun Decks project gallery is a planning resource that explains how similar outdoor living projects
