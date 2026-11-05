@@ -44,6 +44,7 @@ export default function Page() {
         { href: '/screened-porch-cost-northern-virginia', label: 'Screened porch cost in Northern Virginia' },
         { href: '/near-you/loudoun-county', label: 'Deck builder in Loudoun County' },
         { href: '/deck-builders-loudoun', label: 'Custom deck builders in Loudoun County' },
+        { href: '/screened-porch-contractor-fairfax-county', label: 'Screened porch contractor in Fairfax County' },
       ]}
       faqs={[
         {

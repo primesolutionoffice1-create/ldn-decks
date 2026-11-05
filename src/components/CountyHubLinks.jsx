@@ -14,7 +14,7 @@ const HUBS = {
     name: 'Fairfax County',
     links: [
       { href: '/near-you/fairfax-county', label: 'Deck builder' },
-      { href: '/screened-porches/fairfax', label: 'Screened porches' },
+      { href: '/screened-porch-contractor-fairfax-county', label: 'Screened porches' },
       { href: '/patio-contractor-fairfax-county', label: 'Patios' },
       { href: '/deck-resurfacing-fairfax-county', label: 'Deck resurfacing' },
     ],
@@ -52,7 +52,7 @@ export default function CountyHubLinks({ countySlug }) {
         ))}
       </ul>
       <p style={{ margin: '0.75rem 0 0', fontSize: '0.85rem', color: '#666' }}>
-        Last reviewed <time dateTime="2026-11-01">November 1, 2026</time>.
+        Last reviewed <time dateTime="2026-11-05">November 5, 2026</time>.
       </p>
     </section>
   );

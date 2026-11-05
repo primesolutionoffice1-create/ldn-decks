@@ -31,11 +31,11 @@ export default function WinterizeDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/winterize-your-deck-northern-virginia" name="Winterize Your Deck in Northern VA" description="Protect your deck from Virginia freeze-thaw. 10-step winterization checklist for wood and composite decks. Free inspection." speakable />
+      <WebPageSchema dateModified="2026-11-05" url="https://ldndecks.com/winterize-your-deck-northern-virginia" name="Winterize Your Deck in Northern VA" description="Protect your deck from Virginia freeze-thaw. 10-step winterization checklist for wood and composite decks. Free inspection." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How to Winterize Your Deck in Northern Virginia</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>10-step checklist to protect your deck from 50–80 freeze-thaw cycles per winter</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>10-step checklist to protect your deck when winters swing above and below freezing</p>
         </div>
       </section>
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
@@ -103,7 +103,7 @@ export default function WinterizeDeckPage() {
           </div>
 
           <h2 style={S.h2}>Wood vs Composite Winter Differences</h2>
-          <p style={S.p}><strong>Wood decks</strong> are vulnerable to freeze-thaw. Water enters the grain, freezes, expands, and cracks boards from the inside. A fresh stain/sealant coat before winter is essential it&apos;s the barrier between your wood and 50–80 freeze-thaw cycles.</p>
+          <p style={S.p}><strong>Wood decks</strong> are vulnerable when winters swing above and below freezing. Water enters the grain, freezes, expands, and cracks boards from the inside. A fresh stain/sealant coat before winter is essential. It is the barrier between your wood and that moisture.</p>
           <p style={S.p}><strong>Composite decks</strong> are largely immune to freeze-thaw because the capped surface prevents moisture entry. Winterization is simpler: clear debris, inspect hardware, done. This is the #1 reason homeowners switch to composite. <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read the full comparison</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
@@ -131,7 +131,7 @@ export default function WinterizeDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Deck Need Pre-Winter Repairs? Free Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-05" />
 
       <RelatedGuides currentPath="/winterize-your-deck-northern-virginia" />
 
