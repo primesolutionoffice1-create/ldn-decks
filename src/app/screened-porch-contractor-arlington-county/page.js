@@ -4,19 +4,34 @@ import { PORCH_QUOTED } from '@/lib/quotedPrices';
 import { buildMetadata } from '@/lib/seo';
 
 const path = '/screened-porch-contractor-arlington-county';
+const title = 'Screened Porch Contractor in Arlington County | Loudoun Decks';
 const description = 'Screened porch contractor in Arlington County. Recent quotes for a roofed porch with a deck: about $77,000–$112,500. Written estimate only.';
 
-export const metadata = buildMetadata({
-  path,
-  title: 'Screened Porch Contractor in Arlington County | Loudoun Decks',
-  description,
-});
+// buildMetadata trims titles to 60 characters and would drop "County".
+// The published title stays the full string.
+const metadataBase = buildMetadata({ path, title, description });
+
+export const metadata = {
+  ...metadataBase,
+  title,
+  openGraph: {
+    ...metadataBase.openGraph,
+    title,
+    images: (metadataBase.openGraph.images || []).map((image) => (
+      image && typeof image === 'object' ? { ...image, alt: title } : image
+    )),
+  },
+  twitter: {
+    ...metadataBase.twitter,
+    title,
+  },
+};
 
 export default function Page() {
   return (
     <CountyServiceHub
       path={path}
-      name="Screened Porch Contractor in Arlington County | Loudoun Decks"
+      name={title}
       description={description}
       h1="Screened Porch Contractor in Arlington County, VA"
       serviceName="Screened Porch Construction in Arlington County"
@@ -56,7 +71,7 @@ export default function Page() {
         },
         {
           q: 'Who is a screened porch contractor near me in Arlington County?',
-          a: 'Loudoun Decks serves Arlington County from its Centreville, VA office. If the property is in Alexandria, Falls Church, or McLean, say so when you call (571) 655-7207, because those places use a different permit office than Arlington County.',
+          a: 'Loudoun Decks serves Arlington County from its Centreville, VA office. If the property is in the City of Alexandria or the City of Falls Church, say so when you call (571) 655-7207, because those cities use their own permit offices. McLean is in Fairfax County.',
         },
         {
           q: 'Which permit office reviews an Arlington County screened porch?',
