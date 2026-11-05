@@ -180,6 +180,7 @@ export const SEGMENT_LABELS = {
   'screened-porch-contractor-loudoun-county': 'Screened Porch Contractor in Loudoun County',
   'screened-porch-contractor-prince-william-county': 'Screened Porch Contractor in Prince William County',
   'screened-porch-contractor-fairfax-county': 'Screened Porch Contractor in Fairfax County',
+  'screened-porch-contractor-arlington-county': 'Screened Porch Contractor in Arlington County',
   'patio-contractor-loudoun-county': 'Patio Contractor in Loudoun County',
   'patio-contractor-fairfax-county': 'Patio Contractor in Fairfax County',
   'patio-contractor-prince-william-county': 'Patio Contractor in Prince William County',
