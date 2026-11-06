@@ -17,7 +17,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
 import QuotedPricesBlock from '@/components/QuotedPricesBlock';
-import { PVC_QUOTED, QUOTE_SOURCE, REVIEWED_ISO, REVIEWED_LABEL } from '@/lib/quotedPrices';
+import { PVC_QUOTED, QUOTE_SOURCE, UNDER_DECK_PATIO_QUOTED } from '@/lib/quotedPrices';
 export const metadata = buildMetadata({
   path: "/services/under-deck-patios",
   title: "Under Deck Patio Systems Loudoun VA | Waterproofing & Ceilings",
@@ -79,7 +79,7 @@ const whyLdnDecks = [
 const faqs = [
   {
     q: "How much does an under deck patio system cost in Northern Virginia?",
-    a: `${QUOTE_SOURCE} ${PVC_QUOTED} Other under-deck patio systems depend on the drainage system, ceiling finish, lighting, and electrical work. The written estimate after a site visit is the only project price.`
+    a: `${QUOTE_SOURCE} ${PVC_QUOTED} ${UNDER_DECK_PATIO_QUOTED} Other under-deck patio systems depend on the drainage system, ceiling finish, lighting, and electrical work. The written estimate after a site visit is the only project price.`
   },
   {
     q: "What is the RainEscape drainage system and how does it work?",
@@ -106,7 +106,7 @@ const faqs = [
 export default function UnderDeckPatiosPage() {
   return (
     <main>
-      <WebPageSchema dateModified={REVIEWED_ISO} url="https://ldndecks.com/services/under-deck-patios" name="Under Deck Patio Systems Loudoun VA | Waterproofing &amp; Ceilings" description="Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. A PVC under-deck ceiling was $3,872–$5,632 in recent Loudoun Decks quotes." speakable />
+      <WebPageSchema dateModified="2026-11-06" url="https://ldndecks.com/services/under-deck-patios" name="Under Deck Patio Systems Loudoun VA | Waterproofing &amp; Ceilings" description="Maximize your outdoor living space with a custom waterproof under deck ceiling system in Northern Virginia. A PVC under-deck ceiling was $3,872–$5,632 in recent Loudoun Decks quotes. One under-deck concrete patio, 7×12, was quoted at $5,215." speakable />
       <ServiceSchema
         name="Under-Deck Patio Systems"
         description="Dry under-deck patio construction in Northern Virginia. Ceiling drainage systems that create usable space beneath elevated decks."
@@ -123,8 +123,8 @@ export default function UnderDeckPatiosPage() {
       />
       <AboveFoldCTA headline="Under-deck patio or dry-deck system in Northern Virginia? Talk to a NoVA outdoor-living specialist today." />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <QuotedPricesBlock paragraphs={[PVC_QUOTED]} />
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated={REVIEWED_LABEL} />
+        <QuotedPricesBlock paragraphs={[PVC_QUOTED, UNDER_DECK_PATIO_QUOTED]} />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="November 6, 2026" />
       </section>
       <ServiceMain
         subtitle="Double Your Outdoor Living Space"

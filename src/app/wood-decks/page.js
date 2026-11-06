@@ -35,7 +35,7 @@ export default function WoodDecksPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/wood-decks" name="Expert Wood Deck Builder NoVA | Cedar &amp; Hardwood Decks" description="The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax &amp; Prince William counties." speakable />
+      <WebPageSchema dateModified="2026-11-06" url="https://ldndecks.com/wood-decks" name="Expert Wood Deck Builder NoVA | Cedar &amp; Hardwood Decks" description="The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax &amp; Prince William counties." speakable />
       <ServiceSchema
         name="Wood Deck Construction"
         description="Custom wood deck building in Northern Virginia. Cedar, IPE, and pressure-treated lumber options with expert craftsmanship."
@@ -145,7 +145,7 @@ export default function WoodDecksPage() {
           <h2 style={S.h2}>Wood Deck Options Explained</h2>
 
           <h3 style={S.h3}>Pressure-Treated Wood (Most Common)</h3>
-          <p style={S.p}>The default choice for budget-conscious homeowners. Southern yellow pine treated with copper-based preservatives to resist rot, decay, and insect damage. Generally the most affordable option. Lasts 10&ndash;15 years with annual staining; only 5&ndash;8 years without. Looks decent when new but turns gray within 12 months without stain.</p>
+          <p style={S.p}>The default choice for budget-conscious homeowners. Southern yellow pine treated with copper-based preservatives to resist rot, decay, and insect damage. Generally the most affordable option. Lasts 10&ndash;15 years with annual staining; only 5&ndash;8 years without. Looks decent when new but weathers to gray without stain.</p>
 
           <h3 style={S.h3}>Western Red Cedar</h3>
           <p style={S.p}>Natural beauty without chemical treatment. Cedar has natural rot resistance from oils in the wood. Stays cooler underfoot than PT (lighter color, lower density). Lasts 15&ndash;20 years with bi-annual sealing. Develops a silver patina over time if left unstained — many homeowners prefer this aged look.</p>
@@ -230,7 +230,7 @@ export default function WoodDecksPage() {
         </div>
       </article>
       <SimpleCTA title="Build Your Custom Wood Deck" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="November 6, 2026" />
 
       <RelatedGuides currentPath="/wood-decks" />
 
