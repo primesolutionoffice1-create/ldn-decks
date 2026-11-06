@@ -23,8 +23,8 @@ const faqSchema = {
   "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "What is the best deck material for Virginia's climate?", acceptedAnswer: { "@type": "Answer", text: "Composite decking (Trex, TimberTech) is the best overall choice for Virginia's climate. It handles the freeze-thaw cycles, summer humidity, and UV exposure without the constant maintenance that wood requires. For premium builds, AZEK PVC is virtually impervious to moisture. For budget builds, pressure-treated pine works if you commit to annual maintenance." } },
-    { "@type": "Question", name: "How much does each deck material cost per square foot?", acceptedAnswer: { "@type": "Answer", text: "Installed prices in Northern Virginia: pressure-treated pine priced in a written estimate, cedar priced in a written estimate, Trex Enhance priced in a written estimate, Trex Transcend priced in a written estimate, TimberTech AZEK priced in a written estimate, IPE hardwood priced in a written estimate, and aluminum decking priced in a written estimate." } },
-    { "@type": "Question", name: "Is composite decking worth the extra cost over wood?", acceptedAnswer: { "@type": "Answer", text: "Yes for most homeowners. Composite can cost more upfront but requires zero staining, sealing, or board replacement. Over 15 years, composite actually costs less than wood when you factor in a written estimate/year in maintenance. Composite also lasts 25-50 years versus 10-15 for pressure-treated wood." } },
+    { "@type": "Question", name: "How much does each deck material cost per square foot?", acceptedAnswer: { "@type": "Answer", text: "Installed cost per square foot in Northern Virginia is not published on this page. Pressure-treated pine, cedar, Trex Enhance, Trex Transcend, TimberTech AZEK, IPE hardwood, and aluminum decking each vary by material, size, and site conditions. We give a free on-site estimate." } },
+    { "@type": "Question", name: "Is composite decking worth the extra cost over wood?", acceptedAnswer: { "@type": "Answer", text: "Yes for most homeowners. Composite can cost more upfront and does not need staining, sealing, or board replacement. Over 15 years, yearly maintenance is part of the comparison and that cost is in a written estimate. Composite lasts 25-50 years versus 10-15 for pressure-treated wood. Resale recovery is not a fixed percentage, and this page does not publish one for composite or for wood." } },
     { "@type": "Question", name: "What is the longest-lasting deck material?", acceptedAnswer: { "@type": "Answer", text: "AZEK PVC decking and IPE hardwood both last 50+ years with proper care. AZEK requires almost zero maintenance while IPE needs annual oiling. Among composites, Trex Lineage and TimberTech AZEK carry 50-year warranties. Aluminum decking can last 50+ years but is uncommon in residential applications." } },
     { "@type": "Question", name: "Does composite decking get hot in the sun?", acceptedAnswer: { "@type": "Answer", text: "Yes, composite decking gets hotter than wood in direct sun — typically 20-40°F above ambient temperature. Lighter colors stay cooler. AZEK PVC runs slightly cooler than wood-plastic composites. For pool surrounds or full-sun decks, choose lighter colors or consider AZEK's cooler-touch technology." } },
     { "@type": "Question", name: "What deck material is best for a pool deck?", acceptedAnswer: { "@type": "Answer", text: "AZEK PVC decking is the best pool deck material because it contains zero wood content, resists moisture and pool chemicals, and won't splinter. Trex composite also works well but the PVC core of AZEK makes it superior for constant water exposure. Avoid untreated wood near pools — it warps, splinters, and harbors algae." } },
@@ -43,7 +43,7 @@ export default function DeckMaterialsComparisonPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-materials-comparison-virginia" name="Deck Materials Compared | 2026 Virginia Buyer\" description="Compare every deck material: pressure-treated, cedar, Trex, TimberTech, AZEK, IPE, aluminum. Cost, lifespan, maintenance, and best use for Virginia." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-materials-comparison-virginia" name="Deck Materials Compared | 2026 Virginia Buyer's Guide" description="Compare every deck material: pressure-treated, cedar, Trex, TimberTech, AZEK, IPE, aluminum. Cost, lifespan, maintenance, and best use for Virginia." speakable />
       <ArticleSchema
         title="Deck Materials Compared: 2026 Virginia Buyer's Guide"
         description="Every deck material compared side-by-side: cost, lifespan, maintenance, heat retention, warranty, and best use case for Virginia homeowners."
@@ -65,7 +65,7 @@ export default function DeckMaterialsComparisonPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p><strong>Composite decking wins for most Northern Virginia homeowners</strong> &mdash; it balances cost, lifespan, and zero maintenance better than any other option. If budget is the top priority, pressure-treated pine at <strong>priced in a written estimate</strong> installed gets you a functional deck. If longevity and premium aesthetics matter most, <strong>TimberTech AZEK (priced in a written estimate)</strong> or <strong>Trex Lineage (priced in a written estimate)</strong> deliver 50-year performance. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for material recommendations tailored to your project.</p>
+          <p><strong>Composite decking wins for most Northern Virginia homeowners</strong> &mdash; it balances cost, lifespan, and zero maintenance better than any other option. If budget is the top priority, pressure-treated pine gets you a functional deck. If longevity and premium aesthetics matter most, TimberTech AZEK or Trex Lineage deliver 50-year performance. Costs vary by material, size and site conditions; we give a free on-site estimate. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for material recommendations tailored to your project.</p>
         </div>
       </section>
 
@@ -102,14 +102,14 @@ export default function DeckMaterialsComparisonPage() {
               </thead>
               <tbody>
                 {[
-                  ['Pressure-Treated Pine', 'a written estimate', '10–15 yrs', 'High', 'Low', 'Poor', 'Poor', 'None', 'Budget builds'],
-                  ['Cedar', 'a written estimate', '15–20 yrs', 'Medium-High', 'Low', 'Poor', 'Fair', 'None', 'Natural look'],
-                  ['Redwood', 'a written estimate', '20–25 yrs', 'Medium', 'Low', 'Fair', 'Fair', 'None', 'Premium natural'],
-                  ['Trex Composite', 'a written estimate', '25–50 yrs', 'Very Low', 'Medium-High', 'Good', 'Good', '25–50 yr', 'Most homeowners'],
-                  ['TimberTech Composite', 'a written estimate', '30 yrs', 'Very Low', 'Medium-High', 'Very Good', 'Good', '30 yr', 'Thicker cap preferred'],
-                  ['AZEK PVC', 'a written estimate', '50+ yrs', 'Minimal', 'Medium', 'Excellent', 'Excellent', '50 yr', 'Pool/waterfront'],
-                  ['IPE Hardwood', 'a written estimate', '50+ yrs', 'Medium', 'Low-Medium', 'Excellent', 'Fair*', 'Limited', 'Ultra-luxury'],
-                  ['Aluminum', 'a written estimate', '50+ yrs', 'Minimal', 'High', 'Good', 'Good', '20–lifetime', 'Commercial/dock'],
+                  ['Pressure-Treated Pine', 'See the written estimate', '10–15 yrs', 'High', 'Low', 'Poor', 'Poor', 'None', 'Budget builds'],
+                  ['Cedar', 'See the written estimate', '15–20 yrs', 'Medium-High', 'Low', 'Poor', 'Fair', 'None', 'Natural look'],
+                  ['Redwood', 'See the written estimate', '20–25 yrs', 'Medium', 'Low', 'Fair', 'Fair', 'None', 'Premium natural'],
+                  ['Trex Composite', 'See the written estimate', '25–50 yrs', 'Very Low', 'Medium-High', 'Good', 'Good', '25–50 yr', 'Most homeowners'],
+                  ['TimberTech Composite', 'See the written estimate', '30 yrs', 'Very Low', 'Medium-High', 'Very Good', 'Good', '30 yr', 'Thicker cap preferred'],
+                  ['AZEK PVC', 'See the written estimate', '50+ yrs', 'Minimal', 'Medium', 'Excellent', 'Excellent', '50 yr', 'Pool/waterfront'],
+                  ['IPE Hardwood', 'See the written estimate', '50+ yrs', 'Medium', 'Low-Medium', 'Excellent', 'Fair*', 'Limited', 'Ultra-luxury'],
+                  ['Aluminum', 'See the written estimate', '50+ yrs', 'Minimal', 'High', 'Good', 'Good', '20–lifetime', 'Commercial/dock'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i === 3 ? '#fff7ed' : (i % 2 ? '#fafafa' : '#fff') }}>
                     {row.map((cell, j) => (
@@ -120,25 +120,22 @@ export default function DeckMaterialsComparisonPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ ...S.p, fontSize: '0.85rem', color: '#777' }}>*IPE will silver/gray if not oiled annually. This is considered natural patina, not defect. All costs reflect Northern Virginia installed pricing including labor.</p>
+          <p style={{ ...S.p, fontSize: '0.85rem', color: '#777' }}>*IPE will silver/gray if not oiled annually. This is considered natural patina, not defect. Installed prices are not published in this table. Each material is priced in a written estimate for Northern Virginia work, including labor.</p>
 
           {/* ===== SECTION 3: Pressure-Treated Pine ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Pressure-Treated Pine: The Budget Standard</h2>
           <p style={S.p}>Pressure-treated (PT) pine is the most common deck material in America and the default &ldquo;builder grade&rdquo; option. It&apos;s significantly less expensive than every other option on this list, which is both its greatest strength and the reason many homeowners eventually wish they&apos;d spent more upfront.</p>
           <h3 style={S.h3}>Pros</h3>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem', lineHeight: 1.8 }}>
-            <li>Lowest upfront cost: priced in a written estimate</li>
+            <li>Lowest upfront cost of the materials compared; the installed price is in a written estimate</li>
             <li>Widely available at every lumber yard</li>
             <li>Can be stained any color</li>
             <li>Easy to repair (individual board replacement is simple)</li>
             <li>Stays cooler underfoot than composite in direct sun</li>
-          
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
-            <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           </ul>
           <h3 style={S.h3}>Cons</h3>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem', lineHeight: 1.8 }}>
-            <li>Requires staining/sealing every 1&ndash;2 years (the amount in a written estimate/year)</li>
+            <li>Requires staining or sealing every 1&ndash;2 years (yearly cost is in a written estimate)</li>
             <li>Splinters, warps, and cracks over time</li>
             <li>Susceptible to rot, especially in Virginia&apos;s humidity</li>
             <li>10&ndash;15 year realistic lifespan</li>
@@ -151,35 +148,35 @@ export default function DeckMaterialsComparisonPage() {
           {/* ===== SECTION 4: Cedar & Redwood ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Cedar and Redwood: Natural Beauty, Natural Cost</h2>
           <p style={S.p}>Cedar and redwood are the premium natural wood options. Both contain natural oils that resist rot and insects better than pine, and both deliver a warm, rich appearance that many homeowners love. However, they come at 40&ndash;60% more than PT pine and still require regular maintenance.</p>
-          <h3 style={S.h3}>Cedar (priced in a written estimate)</h3>
+          <h3 style={S.h3}>Cedar</h3>
           <p style={S.p}>Western red cedar is the most popular natural wood upgrade in Northern Virginia. Its tight grain and warm reddish-brown color look beautiful when freshly stained. Cedar is naturally resistant to rot and insects thanks to its oil content, and it&apos;s lighter than PT pine (easier to handle during installation). The downside: cedar is softer than pine and dents/scratches more easily, and it grays rapidly without UV-protective stain. Expect to stain every 1&ndash;2 years to maintain color. Lifespan with maintenance: 15&ndash;20 years.</p>
-          <h3 style={S.h3}>Redwood (priced in a written estimate)</h3>
-          <p style={S.p}>Redwood is denser and more durable than cedar with superior natural rot resistance. It&apos;s also increasingly expensive and harder to source on the East Coast (most redwood is harvested in California). The aesthetic is undeniably gorgeous, but at priced in a written estimate, you&apos;re approaching Trex Transcend pricing without any warranty or maintenance advantage. For most Virginia homeowners, composite makes more financial sense at this price point.</p>
+          <h3 style={S.h3}>Redwood</h3>
+          <p style={S.p}>Redwood is denser and more durable than cedar with superior natural rot resistance. It&apos;s also increasingly expensive and harder to source on the East Coast (most redwood is harvested in California). The aesthetic is undeniably gorgeous, but the installed price is in a written estimate and can approach Trex Transcend pricing without any warranty or maintenance advantage. For most Virginia homeowners, composite makes more financial sense at this price point.</p>
 
           {/* ===== SECTION 5: Trex Composite ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Trex Composite: Common Premium Material Choice</h2>
           <p style={S.p}>Trex is the world&apos;s largest composite decking manufacturer and one of the brands Northern Virginia homeowners ask about most often. Homeowners can verify current Trex product-line verification details through the manufacturer before selecting a builder. We help compare the major Trex product lines against budget, sun exposure, maintenance tolerance, and design goals.</p>
-          <h3 style={S.h3}>Trex Enhance (priced in a written estimate)</h3>
+          <h3 style={S.h3}>Trex Enhance</h3>
           <p style={S.p}>The entry point into composite. Basics offers solid colors; Naturals adds multi-tonal wood grain. Both carry 25-year warranties. Best for homeowners who want composite durability at the closest price to wood. The aesthetic gap between Enhance and Transcend has narrowed significantly in recent years.</p>
-          <h3 style={S.h3}>Trex Transcend (priced in a written estimate)</h3>
+          <h3 style={S.h3}>Trex Transcend</h3>
           <p style={S.p}>A commonly selected premium composite option. Deeper wood grain, thicker protective shell, and a color palette (Havana Gold, Spiced Rum, Island Mist, Lava Rock) designed to complement Virginia&apos;s red brick and stone architecture. 25-year warranty. This is the sweet spot for many Northern Virginia homeowners.</p>
-          <h3 style={S.h3}>Trex Lineage (priced in a written estimate)</h3>
-          <p style={S.p}>Launched in 2024, Lineage features the most realistic wood grain in composite decking. Backed by a 50-year warranty. The premium over Transcend is 10&ndash;15%, which is well worth it for homeowners who want the absolute best Trex appearance with half-century coverage. For a full Trex lineup review, see our <Link href="/trex-transcend-review-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Transcend review</Link>.</p>
+          <h3 style={S.h3}>Trex Lineage</h3>
+          <p style={S.p}>Launched in 2024, Lineage features the most realistic wood grain in composite decking. Backed by a 50-year warranty. Any premium over Transcend depends on color, size, and site conditions and is priced in a written estimate. Homeowners who want the most realistic Trex appearance with half-century coverage can compare both lines before they build. For a full Trex lineup review, see our <Link href="/trex-transcend-review-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex Transcend review</Link>.</p>
 
           {/* ===== SECTION 6: TimberTech/AZEK ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>TimberTech and AZEK: Premium Composite and PVC</h2>
-          <h3 style={S.h3}>TimberTech Pro and Edge (priced in a written estimate)</h3>
+          <h3 style={S.h3}>TimberTech Pro and Edge</h3>
           <p style={S.p}>Direct competitor to Trex Transcend. TimberTech&apos;s polymer cap is approximately 35% thicker, which some contractors argue provides better long-term scratch resistance. The Edge Prime+ line features a distinctive 5.5&rdquo; wide plank. 30-year warranty. Excellent choice for homeowners who want a slight edge in durability over standard composite.</p>
-          <h3 style={S.h3}>TimberTech AZEK (priced in a written estimate)</h3>
+          <h3 style={S.h3}>TimberTech AZEK</h3>
           <p style={S.p}>Full PVC decking with zero wood content. AZEK boards will not absorb moisture, swell, or rot &mdash; ever. The 50-year warranty reflects this durability. AZEK stays slightly cooler than wood-plastic composite and is virtually impervious to pool chemicals, making it the top choice for pool decks and waterfront properties. The Vintage collection (Mahogany, English Walnut, Coastline) delivers the deepest color saturation in the industry. For a full comparison, see our <Link href="/trex-vs-timbertech-vs-azek" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Trex vs TimberTech vs AZEK guide</Link>.</p>
 
           {/* ===== SECTION 7: Fiberon ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Fiberon: The Value Composite</h2>
           <p style={S.p}>Fiberon is the third-largest composite manufacturer and offers competitive products at price points slightly below Trex and TimberTech.</p>
-          <h3 style={S.h3}>Fiberon Good Life (priced in a written estimate)</h3>
+          <h3 style={S.h3}>Fiberon Good Life</h3>
           <p style={S.p}>Comparable to Trex Enhance with a 25-year warranty. Solid entry-level composite choice. Limited color palette compared to Trex.</p>
-          <h3 style={S.h3}>Fiberon Concordia (priced in a written estimate)</h3>
-          <p style={S.p}>Mid-range option competing with Trex Transcend. Good aesthetics and durability, though the wood grain realism doesn&apos;t quite match Transcend or Lineage. 25-year warranty. Fiberon is a solid choice for cost-conscious homeowners who want composite performance at 10&ndash;15% below the top brands.</p>
+          <h3 style={S.h3}>Fiberon Concordia</h3>
+          <p style={S.p}>Mid-range option competing with Trex Transcend. Good aesthetics and durability, though the wood grain realism doesn&apos;t quite match Transcend or Lineage. 25-year warranty. Fiberon is a solid choice for cost-conscious homeowners who want composite performance below the price of the top brands. The difference varies by material, size, and site conditions; we give a free on-site estimate.</p>
 
           {/* ===== SECTION 8: IPE Hardwood ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>IPE Hardwood: The Exotic Luxury Option</h2>
@@ -194,7 +191,7 @@ export default function DeckMaterialsComparisonPage() {
           </ul>
           <h3 style={S.h3}>Cons</h3>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem', lineHeight: 1.8 }}>
-            <li>priced in a written estimate (highest material cost)</li>
+            <li>Highest material cost of the options compared; priced in a written estimate</li>
             <li>Requires annual oiling to maintain color (will silver otherwise)</li>
             <li>Extremely dense &mdash; requires pre-drilling every screw hole</li>
             <li>Heavier than any other option (structural considerations)</li>
@@ -218,7 +215,7 @@ export default function DeckMaterialsComparisonPage() {
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem', lineHeight: 1.8 }}>
             <li>Gets very hot in direct sun (hotter than composite)</li>
             <li>Industrial appearance &mdash; doesn&apos;t look like wood</li>
-            <li>priced in a written estimate</li>
+            <li>Priced in a written estimate</li>
             <li>Limited color options</li>
             <li>Can be noisy in rain</li>
           </ul>
@@ -237,10 +234,10 @@ export default function DeckMaterialsComparisonPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Which Material Is Right for You? Decision Guide</h2>
           <p style={S.p}>Rather than a one-size-fits-all recommendation, here is how to match the right material to your specific situation:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', lineHeight: 2.2 }}>
-            <li><strong>Budget under a written estimate?</strong> &rarr; Pressure-treated pine with quality stain. Plan to maintain annually.</li>
-            <li><strong>Budget the amount in a written estimate?</strong> &rarr; Trex Enhance or Fiberon Good Life. Best value in composite.</li>
-            <li><strong>Budget the amount in a written estimate?</strong> &rarr; Trex Transcend or TimberTech Pro. The sweet spot for most NoVA homeowners.</li>
-            <li><strong>Budget the amount in a written estimate?</strong> &rarr; Trex Lineage or TimberTech AZEK. Premium aesthetics with 50-year warranties.</li>
+            <li><strong>Tightest budget?</strong> &rarr; Pressure-treated pine with quality stain. Plan to maintain annually.</li>
+            <li><strong>Want composite near a wood budget?</strong> &rarr; Trex Enhance or Fiberon Good Life. Best value in composite.</li>
+            <li><strong>Want the common premium composite choice?</strong> &rarr; Trex Transcend or TimberTech Pro. The sweet spot for most NoVA homeowners.</li>
+            <li><strong>Want the longest composite or PVC warranty?</strong> &rarr; Trex Lineage or TimberTech AZEK. Premium aesthetics with 50-year warranties.</li>
             <li><strong>Pool deck or waterfront?</strong> &rarr; TimberTech AZEK (full PVC, zero moisture absorption).</li>
             <li><strong>Ultra-luxury natural aesthetic?</strong> &rarr; IPE hardwood (with commitment to annual oiling).</li>
             <li><strong>Need dry space underneath?</strong> &rarr; Consider aluminum or composite with Trex RainEscape.</li>
@@ -267,8 +264,8 @@ export default function DeckMaterialsComparisonPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
             { q: "What is the best deck material for Virginia's climate?", a: "Composite decking (Trex, TimberTech) is the best overall choice. It handles freeze-thaw cycles, humidity, and UV exposure without constant maintenance. For premium builds, AZEK PVC is virtually impervious to moisture. For budgets, pressure-treated pine works with annual maintenance commitment." },
-            { q: "How much does each deck material cost per square foot?", a: "Installed in Northern Virginia: pressure-treated a written estimate, cedar a written estimate, Trex Enhance is priced in a written estimate, Trex Transcend is priced in a written estimate, TimberTech AZEK is priced in a written estimate, IPE a written estimate, aluminum a written estimate per square foot." },
-            { q: "Is composite decking worth the extra cost over wood?", a: "Yes. Over 15 years, composite costs less than wood when factoring a written estimate/year in maintenance. Composite lasts 25-50 years vs 10-15 for wood . Resale recovery is not a fixed percentage, and this page does not publish one for composite or for wood." },
+            { q: "How much does each deck material cost per square foot?", a: "Installed cost per square foot in Northern Virginia is not published on this page. Pressure-treated pine, cedar, Trex Enhance, Trex Transcend, TimberTech AZEK, IPE hardwood, and aluminum decking each vary by material, size, and site conditions. We give a free on-site estimate." },
+            { q: "Is composite decking worth the extra cost over wood?", a: "Yes for most homeowners. Composite can cost more upfront and does not need staining, sealing, or board replacement. Over 15 years, yearly maintenance is part of the comparison and that cost is in a written estimate. Composite lasts 25-50 years versus 10-15 for pressure-treated wood. Resale recovery is not a fixed percentage, and this page does not publish one for composite or for wood." },
             { q: "What is the longest-lasting deck material?", a: "AZEK PVC and IPE hardwood both last 50+ years. Among composites, Trex Lineage and TimberTech AZEK carry 50-year warranties. Aluminum can last 50+ years but isn't common in residential applications." },
             { q: "Does composite decking get hot in the sun?", a: "Yes, 20-40°F above ambient in direct sun. Lighter colors stay cooler. AZEK PVC runs slightly cooler than wood-plastic composites. For full-sun decks, choose lighter colors or AZEK's cooler-touch technology." },
             { q: "What deck material is best for a pool deck?", a: "AZEK PVC — zero wood content, moisture-proof, chemical-resistant, and splinter-free. Trex composite also works well. Avoid untreated wood near pools — it warps, splinters, and harbors algae." },
@@ -292,6 +289,8 @@ export default function DeckMaterialsComparisonPage() {
               ['/how-long-does-a-composite-deck-last', 'How Long Does a Composite Deck Last?'],
               ['/wood-decks', 'Wood Decks — Cedar, IPE & Pressure-Treated'],
               ['/wood-vs-composite-deck-long-term-cost', 'Wood vs Composite: 15-Year Cost Analysis'],
+              ['/reviews', 'Loudoun Decks Reviews (Google reviews)'],
+              ['/deck-cost-calculator', 'Free Deck Cost Calculator'],
             ].map(([href, text]) => (
               <li key={href} style={{ marginBottom: '0.5rem' }}>
                 <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} &rarr;</Link>
