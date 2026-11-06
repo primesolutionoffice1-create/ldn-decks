@@ -46,8 +46,10 @@ export default function Page() {
         { href: '/paver-vs-flagstone-patio-northern-virginia', label: 'Paver vs flagstone patio' },
         { href: '/near-you/loudoun-county', label: 'Deck builder in Loudoun County' },
         { href: '/get-estimate', label: 'Request a written estimate' },
+        { href: '/patio-contractor-fairfax-county', label: 'Patio contractor in Fairfax County' },
+        { href: '/patio-contractor-prince-william-county', label: 'Patio contractor in Prince William County' },
       ]}
-      dateModified="2026-11-05"
+      dateModified="2026-11-06"
       faqs={[
         {
           q: 'Who is a patio contractor in Loudoun County?',

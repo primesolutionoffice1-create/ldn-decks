@@ -45,8 +45,10 @@ export default function Page() {
         { href: '/services/under-deck-patios', label: 'Under-deck patios' },
         { href: '/near-you/prince-william-county', label: 'Deck builder in Prince William County' },
         { href: '/get-estimate', label: 'Request a written estimate' },
+        { href: '/patio-contractor-loudoun-county', label: 'Patio contractor in Loudoun County' },
+        { href: '/patio-contractor-fairfax-county', label: 'Patio contractor in Fairfax County' },
       ]}
-      dateModified="2026-11-05"
+      dateModified="2026-11-06"
       faqs={[
         {
           q: 'Who is a patio contractor in Prince William County?',

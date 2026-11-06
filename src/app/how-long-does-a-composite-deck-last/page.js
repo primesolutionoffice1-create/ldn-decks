@@ -16,13 +16,29 @@ export const metadata = buildMetadata({
   image: '/social/composite-deck-lifespan-virginia-social.png',
 });
 
+const lifespanFaqs = [
+  {
+    q: 'How long does a Trex deck last?',
+    a: 'Trex backs its decking with limited residential warranties of 25 years (Enhance), 35 years (Select) and 50 years (Transcend). How long the deck lasts also depends on the framing underneath and on maintenance; capped composite boards resist moisture, rot and insects.',
+  },
+  {
+    q: 'How long does a wood deck last in Virginia?',
+    a: 'Pressure-treated wood lasts 10-15 years with annual staining/sealing, or 5-8 years without maintenance. Cedar lasts 15-20 years with maintenance.',
+  },
+  {
+    q: 'When should I replace vs resurface my deck?',
+    a: 'Resurface if: the frame/joists are solid, only the surface boards are damaged or worn. Replace if: joists are soft, posts are rotting, footings are shifting, or the deck feels bouncy underfoot. We offer free inspections to determine which you need.',
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How long does a Trex deck last?", acceptedAnswer: { "@type": "Answer", text: "Trex backs its decking with limited residential warranties of 25 years (Enhance), 35 years (Select) and 50 years (Transcend). How long the deck lasts also depends on the framing underneath and on maintenance; capped composite boards resist moisture, rot and insects." } },
-    { "@type": "Question", name: "How long does a wood deck last in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Pressure-treated wood lasts 10-15 years with annual staining/sealing, or 5-8 years without maintenance. Cedar lasts 15-20 years with maintenance. Virginia's freeze-thaw cycles and humidity accelerate wood deterioration." } },
-    { "@type": "Question", name: "When should I replace vs resurface my deck?", acceptedAnswer: { "@type": "Answer", text: "Resurface if: the frame/joists are solid, only the surface boards are damaged or worn. Replace if: joists are soft, posts are rotting, footings are shifting, or the deck feels bouncy underfoot. We offer free inspections to determine which you need." } },
-  ],
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: lifespanFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 }, th: { padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }, td: { padding: '0.75rem', borderBottom: '1px solid #eee' } };
@@ -31,7 +47,7 @@ export default function DeckLifespanPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-11-03" url="https://ldndecks.com/how-long-does-a-composite-deck-last" name="How Long Does a Composite Deck Last? | Virginia Lifespan Guide" description="How long composite decks last in Virginia: Trex warranties 25–50 yrs, TimberTech 25–30 yrs or lifetime (Advanced PVC). Brand lifespans &amp; when to replace." speakable />
+      <WebPageSchema dateModified="2026-11-06" url="https://ldndecks.com/how-long-does-a-composite-deck-last" name="How Long Does a Composite Deck Last? | Virginia Lifespan Guide" description="How long composite decks last in Virginia: Trex warranties 25–50 yrs, TimberTech 25–30 yrs or lifetime (Advanced PVC). Brand lifespans &amp; when to replace." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -131,12 +147,8 @@ export default function DeckLifespanPage() {
           <p style={S.p}><strong>Not sure which you need?</strong> We offer free deck inspections. We&apos;ll check every component and tell you honestly whether resurfacing will work or if a rebuild is the smarter investment.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
-          {[
-            { q: "How long does a Trex deck last?", a: "Trex backs its decking with limited residential warranties of 25 years (Enhance), 35 years (Select) and 50 years (Transcend). How long the deck lasts also depends on the framing underneath and on maintenance; capped composite boards resist moisture, rot and insects." },
-            { q: "How long does a wood deck last in Virginia?", a: "PT wood: 10-15 years with annual staining, 5-8 without. Cedar: 15-20 years. Virginia's freeze-thaw and humidity accelerate deterioration." },
-            { q: "When to resurface vs replace?", a: "Resurface if the frame is solid and only boards are worn. Replace if joists are soft, posts rotting, or footings shifting. Free inspection to determine." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+          {lifespanFaqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
               <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
             </details>
@@ -157,7 +169,7 @@ export default function DeckLifespanPage() {
       </article>
 
       <SimpleCTA title="Deck Past Its Prime? Free Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-03" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-06" />
 
       <RelatedGuides currentPath="/how-long-does-a-composite-deck-last" />
 
