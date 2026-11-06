@@ -48,7 +48,10 @@ export default function Page() {
         { href: '/deck-resurfacing-northern-virginia', label: 'Resurfacing counties and cities' },
         { href: '/deck-resurfacing-vs-replacement', label: 'Resurfacing vs replacement' },
         { href: '/near-you/loudoun-county', label: 'Deck builder in Loudoun County' },
+        { href: '/deck-resurfacing-fairfax-county', label: 'Deck resurfacing in Fairfax County' },
+        { href: '/deck-resurfacing-prince-william-county', label: 'Deck resurfacing in Prince William County' },
       ]}
+      dateModified="2026-11-06"
       faqs={[
         {
           q: 'Who does deck resurfacing in Loudoun County?',
