@@ -177,7 +177,7 @@ export default function CableRailingPage() {
           </ul>
         </div>
       </article>
-      <SimpleCTA title="See Cable Railing Samples at Our Showroom" buttonText="Get Free Estimate" link="/get-estimate" />
+      <SimpleCTA title="See Cable Railing Samples at Your Free On-Site Estimate" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/cable-railing-for-decks-northern-virginia" />

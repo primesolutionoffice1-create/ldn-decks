@@ -72,7 +72,7 @@ const howWeInstall = [
 
 const whyLdnDecks = [
   { title: "Local Team", desc: "Loudoun County-based team." },
-  { title: "Trusted", desc: "Fully licensed and insured." },
+  { title: "Trusted", desc: "Virginia Class A licensed." },
   { title: "Professional", desc: "Clean, professional installs." },
   { title: "Specialists", desc: "Extensive experience with Trex systems." },
   { title: "Reliable", desc: "Built for durability and long-term use." }

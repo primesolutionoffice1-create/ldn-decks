@@ -67,7 +67,7 @@ const firePitProcess = [
 
 const whyLdnDecks = [
   { title: "Local Team", desc: "Loudoun County-based team." },
-  { title: "Trusted", desc: "Licensed and insured." },
+  { title: "Trusted", desc: "Virginia Class A licensed." },
   { title: "Custom", desc: "Custom design approach." },
   { title: "Professional", desc: "Clean, professional installation." },
   { title: "Longevity", desc: "Built for long-term durability." }

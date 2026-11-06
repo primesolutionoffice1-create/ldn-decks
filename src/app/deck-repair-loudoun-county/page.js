@@ -69,8 +69,8 @@ const pageFAQs = [
     a: "Minor repairs typically take 1-2 days. Major structural restoration or full resurfacing projects can take 3-7 days depending on scope. After a permit is issued by Loudoun County, most repair work is completed quickly to minimize disruption."
   },
   {
-    q: "Are you a licensed and insured deck repair contractor in Loudoun County?",
-    a: "Yes. Loudoun Decks is a licensed and insured contractor operating in Loudoun County, Virginia. Homeowners can verify our company profile, service area, and project documentation before approving repair work."
+    q: "Is Loudoun Decks a licensed deck repair contractor in Loudoun County?",
+    a: "Loudoun Decks works under a Virginia Class A contractor license (Lic. #2705191673). Homeowners can verify our company profile, service area, and project documentation before approving repair work."
   }
 ];
 

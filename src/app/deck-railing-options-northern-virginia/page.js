@@ -151,7 +151,7 @@ export default function DeckRailingPage() {
         </div>
       </article>
 
-      <SimpleCTA title="See Railing Samples at Our Showroom" buttonText="Get Free Estimate" link="/get-estimate" />
+      <SimpleCTA title="See Railing Samples at Your Free On-Site Estimate" buttonText="Get Free Estimate" link="/get-estimate" />
       <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
 
       <RelatedGuides currentPath="/deck-railing-options-northern-virginia" />
