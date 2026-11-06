@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { blogPosts } from '@/lib/blogData';
+import { getBlogPostPath } from '@/lib/blogRoutes';
 import styles from './BlogFeed.module.css';
 
 export default function BlogFeed() {
@@ -20,7 +21,7 @@ export default function BlogFeed() {
         
         <div className={styles.grid}>
           {latestPosts.map((post) => (
-            <Link href={`/blog/${post.slug}`} prefetch={false} key={post.slug} className={styles.card}>
+            <Link href={getBlogPostPath(post)} prefetch={false} key={post.slug} className={styles.card}>
               <div className={styles.imageWrapper}>
                 <Image 
                   src={post.image} 

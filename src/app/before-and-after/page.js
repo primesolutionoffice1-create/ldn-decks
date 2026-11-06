@@ -101,14 +101,14 @@ export default function BeforeAndAfterPage() {
   return (
     <>
       <JsonLd data={imageGallerySchema} />
-      <WebPageSchema dateModified="2026-09-13" url="https://ldndecks.com/before-and-after" name="Before &amp; After Deck Projects | Northern Virginia | LDN Decks" description="See before and after deck transformation photos across Northern Virginia with project details marked for verification where records are still needed." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/before-and-after" name="Before &amp; After Deck Projects | Northern Virginia | LDN Decks" description="See before and after deck transformation photos across Northern Virginia with project details marked for verification where records are still needed." speakable />
       <ArticleSchema
         title="Before & After Deck Projects Northern Virginia"
         description="Before and after deck transformation photos from LDN Decks projects across Northern Virginia, with project details marked for verification where records are still needed."
         path="/before-and-after"
         image="/images/img04.jpeg"
         datePublished="2026-04-21"
-        dateModified="2026-09-13"
+        dateModified="2026-11-01"
       />
 
       {/* Hero */}
@@ -235,7 +235,7 @@ export default function BeforeAndAfterPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 16rem), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
               { title: 'New Deck Construction', desc: 'Bare yard to custom outdoor living space.', link: '/services/new-decks' },
-              { title: 'Deck Resurfacing', desc: 'New composite surface on existing frame. Save 25-40%.', link: '/services/deck-resurfacing' },
+              { title: 'Deck Resurfacing', desc: 'New composite surface on a sound frame. Loudoun Decks 2026 quoted prices: a recent Trex resurfacing quote was $9,020–$12,678.', link: '/services/deck-resurfacing' },
               { title: 'Full Deck Replacement', desc: 'Complete tear-down and rebuild with modern materials.', link: '/deck-resurfacing-vs-replacement' },
               { title: 'Screened Porch Conversion', desc: 'Open deck to bug-free 3-season room.', link: '/screened-porch-builder-northern-virginia' },
               { title: 'Pool Deck Replacement', desc: 'Chlorine-resistant AZEK for poolside safety.', link: '/pool-deck-builder-northern-virginia' },
@@ -275,7 +275,7 @@ export default function BeforeAndAfterPage() {
 
       <SimpleCTA title="Ready to Transform Your Deck?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/before-and-after" />
-      <NamedAuthor context="Northern Virginia before-and-after project verification" lastUpdated="2026-09-13" />
+      <NamedAuthor context="Northern Virginia before-and-after project verification" lastUpdated="2026-11-01" />
       <ContactHome />
     </>
   );

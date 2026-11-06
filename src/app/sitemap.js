@@ -2,6 +2,7 @@ import { execSync } from 'node:child_process';
 import { existsSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { blogPosts } from '@/lib/blogData';
+import { isRedirectedBlogPost } from '@/lib/blogRoutes';
 import { educationArticles } from '@/lib/educationData';
 import { showcaseProjects } from '@/lib/showcaseData';
 import { getSoroArticles } from '@/lib/soro';
@@ -166,6 +167,15 @@ export default async function sitemap() {
 		},
 		{ path: "/deck-builder-northern-virginia", priority: 0.98, lastMod: TIER1, freq: "weekly" },
 		{ path: "/deck-builders-loudoun",        priority: 0.95, lastMod: TIER1, freq: "weekly" },
+		{ path: "/screened-porch-contractor-loudoun-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
+		{ path: "/screened-porch-contractor-prince-william-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
+		{ path: "/screened-porch-contractor-fairfax-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
+		{ path: "/patio-contractor-loudoun-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
+		{ path: "/patio-contractor-fairfax-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
+		{ path: "/patio-contractor-prince-william-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
+		{ path: "/deck-resurfacing-loudoun-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
+		{ path: "/deck-resurfacing-fairfax-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
+		{ path: "/deck-resurfacing-prince-william-county", priority: 0.9, lastMod: TIER1, freq: "weekly" },
 		{ path: "/deck-builder-ashburn-va",      priority: 0.92, lastMod: TIER1, freq: "weekly" },
 		{ path: "/deck-builder-leesburg-va",     priority: 0.92, lastMod: TIER1, freq: "weekly" },
 		{ path: "/deck-builder-lansdowne-va",    priority: 0.90, lastMod: TIER1, freq: "weekly" },
@@ -415,39 +425,14 @@ export default async function sitemap() {
         // The 5 indexable /near-you/{county} hubs remain in staticPages above.
 
         // Blog posts — dynamically generated from blogData with real publish dates
-        // CITY_DUPLICATE_BLOG_SLUGS: 22 posts 301-redirected to their canonical
-        // /deck-builder-*-va city pages (next.config.mjs, 2026-08-07) — kept out
-        // of the sitemap so we never submit redirecting URLs.
-        const CITY_DUPLICATE_BLOG_SLUGS = new Set([
-                'deck-builder-ashburn-va',
-                'deck-builder-reston-va',
-                'deck-builder-sterling-va',
-                'deck-builder-herndon-va',
-                'deck-builder-great-falls-va',
-                'deck-builder-centreville-va',
-                'deck-builder-chantilly-va',
-                'deck-builder-fairfax-va',
-                'deck-builder-burke-va',
-                'deck-builder-springfield-va',
-                'deck-builder-woodbridge-va',
-                'deck-builder-manassas-va',
-                'deck-builder-lorton-va',
-                'deck-builder-vienna-va',
-                'deck-builder-falls-church-va',
-                'deck-builder-oakton-va',
-                'deck-builder-gainesville-va',
-                'deck-builder-haymarket-va',
-                'deck-builder-purcellville-va',
-                'deck-builder-south-riding-va',
-                'deck-builder-brambleton-va',
-                'deck-builder-bristow-va',
-        ]);
+        // City posts moved to /deck-builder-*-va root pages are 301-redirected
+        // (next.config.mjs) and stay out of the sitemap; see lib/blogRoutes.js.
+
         const today = new Date();
         const blogPaths = blogPosts
                 .filter(post => {
                         const postDate = parseContentDate(post.date);
-                        return postDate && postDate <= today && !post.canonicalPath
-                                && !CITY_DUPLICATE_BLOG_SLUGS.has(post.slug);
+                        return postDate && postDate <= today && !isRedirectedBlogPost(post);
                 })
                 .map(post => {
                 return {

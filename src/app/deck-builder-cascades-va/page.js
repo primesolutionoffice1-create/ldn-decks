@@ -1,210 +1,203 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import ServicesHeader from '@/components/ServicesHeader';
-import ServiceMain from '@/components/ServiceMain';
-import ServiceInclusions from '@/components/ServiceInclusions';
-import ServiceContentExpansion from '@/components/ServiceContentExpansion';
-import ProcessSteps from '@/components/ProcessSteps';
-import ServicesFAQ from '@/components/ServicesFAQ';
-import ContactHome from '@/components/ContactHome';
-import RelatedGuides from '@/components/RelatedGuides';
-import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import SimpleCTA from '@/components/SimpleCTA';
+import JsonLd from '@/components/JsonLd';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import ContactHome from '@/components/ContactHome';
+import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import PlanningUpdate from '@/components/PlanningUpdate';
+import CallLink from '@/components/CallLink';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
-import { buildMetadata } from '@/lib/seo';
 
-const PATH = '/deck-builder-cascades-va';
-const URL = `https://ldndecks.com${PATH}`;
+const PATH = "/deck-builder-cascades-va";
+const PAGE_URL = "https://ldndecks.com/deck-builder-cascades-va";
+const PAGE_TITLE = "Deck Builder in Cascades, VA | Loudoun Decks";
+const PAGE_DESCRIPTION = "Cascades deck builder for composite replacement and resurfacing, with Loudoun County permits and Cascades Community Association review.";
 
 export const metadata = buildMetadata({
   path: PATH,
-  title: 'Deck Builder in Cascades, VA | Potomac Falls Decks',
-  description: 'Cascades, VA deck builder for composite replacement, Cascades HOA planning, Loudoun County permits, railings, stairs, lighting, and written estimates.',
-  image: '/social/deck-builder-leesburg-va-social.png',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  image: "/social/deck-builder-leesburg-va-social.png",
 });
-
-const inclusions = [
-  {
-    title: 'Cascades HOA packet planning',
-    desc: 'We prepare deck footprints, material selections, railing details, color notes, and exterior context for Cascades Community Association review.',
-  },
-  {
-    title: 'Replacement and resurfacing guidance',
-    desc: 'Cascades has many 1990s and early-2000s decks where framing, ledger flashing, stairs, and railings should be inspected before choosing resurfacing.',
-  },
-  {
-    title: 'Loudoun County permit coordination',
-    desc: 'We align the HOA review path with Loudoun County permit requirements, footing depth, framing details, and inspection sequencing.',
-  },
-];
-
-const expansionSections = [
-  {
-    title: 'Cascades Is a Mature Loudoun Replacement Market',
-    paragraphs: [
-      'Cascades sits in the Potomac Falls and Sterling corridor along Route 7, with established neighborhoods, townhomes, wooded lots, park-backed homes, and a large volume of original builder-grade decks. Many of those decks are now old enough that a simple surface refresh is not always the right answer.',
-      'For serious Cascades homeowners, the decision is usually between composite resurfacing, full replacement, upgraded railing, safer stairs, lighting, and a larger outdoor living plan. The best estimate starts with the structure, not just the square footage.',
-    ],
-  },
-  {
-    title: 'Cascades Community Association Review',
-    paragraphs: [
-      'Deck projects in Cascades should be planned with the Cascades Community Association review process in mind. A clean submission typically needs a site plan, proposed footprint, drawings or elevations, material specifications, colors, railing details, and photos that explain how the deck fits the home exterior.',
-      'Composite materials are usually a practical fit for Cascades replacement projects because homeowners want lower maintenance, consistent appearance, and a finish that supports the home value. Trex, TimberTech, and AZEK selections should be compared by color, heat exposure, railing compatibility, warranty terms, and HOA presentation quality.',
-    ],
-  },
-  {
-    title: 'What Cascades Homeowners Usually Need',
-    paragraphs: [
-      'Cascades deck projects often fall into four useful planning buckets: townhome deck replacement, single-family composite replacement, resurfacing after a frame inspection, and premium outdoor living upgrades for homes backing to trees, open space, or park areas.',
-      'The most important question is whether the existing frame is worth keeping. Posts, footings, beams, joists, ledger attachment, flashing, railing posts, and stair stringers all affect whether resurfacing is responsible or whether a full rebuild is the better long-term investment.',
-    ],
-    listItems: [
-      { label: 'Composite deck replacement', text: 'Best when the original pressure-treated deck is near the end of its practical service life.' },
-      { label: 'Deck resurfacing', text: 'Best when the existing frame, ledger, posts, footings, and stairs pass inspection.' },
-      { label: 'Townhome deck work', text: 'Best with clear HOA footprint rules, neighbor proximity, access planning, and material approval handled early.' },
-      { label: 'Premium upgrades', text: 'Best for wooded or park-backed lots where lighting, railings, wider stairs, and outdoor living zones add real daily use.' },
-    ],
-  },
-  {
-    title: 'Budget and Timeline Expectations',
-    paragraphs: [
-      'Cascades homeowners should budget after the frame condition, HOA path, permit requirements, railing choice, stair layout, and material tier are understood. A townhome deck replacement, a 300 square foot single-family composite replacement, and a premium wooded-lot deck with lighting can sit in very different price bands.',
-      'A useful written estimate should separate base scope from optional upgrades. That gives the homeowner a clean way to compare composite brands, railings, lighting, stair changes, fascia, resurfacing feasibility, and any structural repairs before committing to the final project.',
-    ],
-  },
-];
 
 const faqs = [
   {
-    q: 'Do Cascades deck projects need HOA approval?',
-    a: 'Most Cascades deck projects need Cascades Community Association architectural review before construction. The packet usually includes the proposed footprint, site context, drawings or elevations, material selections, colors, railing details, and photos. Requirements should be confirmed for the specific property and final scope.',
+    "q": "Who builds decks in Cascades, VA?",
+    "a": "Loudoun Decks LLC is a Centreville-based residential deck contractor and a Virginia Class A contractor (DPOR license #2705191673), owned by Nicolae (Nick) Zugrav. Cascades is in Loudoun County along the Route 7 Potomac Falls and Sterling corridor, and is planned separately from Sterling."
   },
   {
-    q: 'Who issues the building permit for a Cascades deck?',
-    a: 'Cascades is in unincorporated Loudoun County, so deck permits generally follow the Loudoun County building permit process. A typical permit package includes structural drawings, footing details, framing layout, ledger attachment, stair information, and guardrail specifications. Permit requirements should always be confirmed by address.',
+    "q": "What should a deck project in Cascades plan for?",
+    "a": "Many original builder-grade decks should be inspected before resurfacing is priced. Wooded, park-backed, and open-space lots often call for railing, lighting, and stair upgrades. A Cascades Community Association submission typically needs a site plan, footprint, drawings or elevations, material specs, colors, railing details, and photos."
   },
   {
-    q: 'Is composite decking a good fit for Cascades homes?',
-    a: 'Yes. Composite and PVC decking are strong fits for Cascades because many original wood decks are now aging and homeowners want a lower-maintenance outdoor space. Trex, TimberTech, and AZEK should be compared by color, texture, heat exposure, warranty, railing compatibility, and HOA presentation quality.',
+    "q": "What deck services does Loudoun Decks offer in Cascades?",
+    "a": "These are services named on the Loudoun Decks site, not a separate menu invented for Cascades. The work includes new custom decks, deck replacement, deck repair, and deck resurfacing when the existing frame is structurally sound. The homepage lists Trex, TimberTech, Fiberon, AZEK, and Wolf as composite and PVC options and labels the company a Trex Partner. Screened porches, open porches, and front porches are included, along with pergolas and gazebos. Patios, fencing, railings, under-deck patios, and fire pits are included when that scope is part of the project. Homeowners should verify current Trex profile details directly with Trex."
   },
   {
-    q: 'Can an old Cascades deck be resurfaced instead of replaced?',
-    a: 'Sometimes. Resurfacing only makes sense when posts, footings, beams, joists, ledger attachment, flashing, stairs, and railings are structurally sound. If the frame is undersized, water-damaged, poorly flashed, or no longer fits the desired layout, full replacement is usually the safer long-term path.',
+    "q": "How are permits and HOA packages handled for Cascades?",
+    "a": "Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope. The permit note used here is the one published on the Loudoun Decks homepage. Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. The same table lists Loudoun County plan review at 2–4 weeks through the LOLA online portal. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."
   },
   {
-    q: 'What makes Cascades different from a general Sterling deck project?',
-    a: 'Cascades is a more specific planned-community market within the Sterling and Potomac Falls area. It has its own HOA expectations, many mature builder-grade decks, townhome deck patterns, and wooded or park-backed lots where premium composite replacement and outdoor living upgrades are common planning topics.',
+    "q": "Which documented project does this Cascades page cite?",
+    "a": "No Cascades project page was found. The documented project cited here is the December 2024 deck and balcony resurfacing gallery record in Sterling, not Cascades. That gallery page says resurfacing is appropriate only when the existing frame, ledger, footings, stairs, and rails are safe to reuse."
   },
+  {
+    "q": "How do I contact Loudoun Decks about a Cascades deck?",
+    "a": "Cascades is listed by name under Loudoun County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville. Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."
+  }
 ];
 
-export default function DeckBuilderCascadesPage() {
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+};
+
+export default function CascadesDeckBuilderPage() {
   return (
-    <main>
-      <LocalBusinessSchema city="Cascades" url={URL} />
+    <>
+      <JsonLd data={faqSchema} />
+      <LocalBusinessSchema city="Cascades" url={PAGE_URL} description={PAGE_DESCRIPTION} />
       <WebPageSchema
-        dateModified="2026-07-18"
-        url={URL}
-        name="Deck Builder in Cascades, VA | Potomac Falls Decks"
-        description="Cascades, VA deck builder for composite replacement, Cascades HOA planning, Loudoun County permits, railings, stairs, lighting, and written estimates."
+        dateModified="2026-11-03"
+        url={PAGE_URL}
+        name={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
         speakable
       />
-      <ServicesHeader
-        subtext="Cascades, VA Deck Builder"
-        title="Composite Deck Builder in Cascades, VA"
-        description="Loudoun Decks helps Cascades and Potomac Falls homeowners replace aging builder-grade decks with low-maintenance composite outdoor living spaces, HOA-aware planning, and Loudoun County permit support."
-      />
-      <ServiceMain
-        subtitle="Cascades Deck Replacement"
-        title="HOA-Ready Composite Deck Replacement for Cascades Homeowners"
-        description="Cascades projects need a clear plan for HOA review, county permits, framing condition, railing style, stairs, lighting, and whether the existing deck should be resurfaced or fully rebuilt."
-        listTitle="Cascades project planning includes:"
-        listItems={[
-          'Composite and PVC decking options from Trex, TimberTech, and AZEK',
-          'Cascades Community Association packet planning',
-          'Loudoun County permit coordination and inspection sequencing',
-          'Deck resurfacing vs full replacement guidance after structural review',
-          'Townhome decks, railing upgrades, stair planning, lighting, fascia, and outdoor living add-ons',
-        ]}
-        image1="/images/img17.jpeg"
-        image2="/images/img36.jpeg"
-        image1Alt="Composite deck replacement planning for Cascades, Virginia homeowners"
-        image2Alt="Premium outdoor living deck detail for a Loudoun County home"
-      />
+      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck builder in Cascades, VA</h1>
+          <p data-speakable="true" style={{ color: '#ccc', fontSize: '1.1rem' }}>{PAGE_DESCRIPTION}</p>
+          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+          </div>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Virginia Class A contractor, DPOR license #2705191673. Office: 13704 Winding Oak Cir, Centreville, VA 20121.</p>
+        </div>
+      </section>
       <CityLeadFormSection
         city="Cascades"
         county="Loudoun County"
-        service="composite deck replacement, resurfacing, railing, stair, or outdoor living project"
-      />
-      <PlanningUpdate
-        market="Cascades deck projects in 2026"
-        notes={[
-          'Cascades homeowners should confirm HOA packet expectations before final material, railing, and color selections.',
-          'Many original builder-grade decks in Cascades should be inspected before resurfacing is priced as a responsible option.',
-          'Wooded, park-backed, and open-space lots often justify stronger composite, railing, lighting, and stair upgrades.',
-        ]}
-        links={[
-          { href: '/deck-builder-sterling-va', label: 'Sterling deck builder' },
-          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
-          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
-        ]}
+        service="deck replacement, composite deck, or screened porch"
       />
       <GeoAnswerBlock
-        question="What should Cascades homeowners know before replacing a deck?"
-        answer="Cascades homeowners should start with HOA packet planning, Loudoun County permit requirements, and a structural inspection. Many original decks in the Cascades and Potomac Falls area are old enough that resurfacing, composite replacement, railing upgrades, stairs, lighting, and ledger flashing should be compared before approving the final scope."
-        facts={[
-          'Primary buyer intent: composite deck replacement, resurfacing analysis, and HOA-ready planning.',
-          'Best conversion path: written estimate that separates frame condition, material choices, permit steps, and optional upgrades.',
-        ]}
+        question="Who builds decks in Cascades, VA?"
+        answer={faqs[0].a}
+        facts={[faqs[1].a]}
         links={[
-          { href: '/get-estimate', label: 'Request a Cascades estimate' },
-          { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost guide' },
-          { href: '/services/deck-replacement', label: 'Deck replacement services' },
+          { href: '/get-estimate', label: "Request a Cascades estimate" },
+          { href: "/showcase/deck-resurfacing-sterling", label: "DECK/BALCONY RESURFACING" },
         ]}
       />
-      <ServiceContentExpansion sections={expansionSections} />
-      <ServiceInclusions
-        title="Why Cascades Homeowners Choose Loudoun Decks"
-        description="We focus on replacement decisions where structure, materials, HOA approval, permit timing, and long-term usability all affect the final investment."
-        items={inclusions}
-      />
-      <ProcessSteps />
-      <ServicesFAQ
-        title="Cascades Deck Builder FAQs"
-        faqs={faqs}
-        canonicalUrl={URL}
-      />
-      <SimpleCTA title="Plan a Cascades Composite Deck Replacement" buttonText="Request Written Estimate" link="/get-estimate" />
-      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem' }}>Related Cascades and Loudoun Guides</h2>
-        <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
-          {[
-            ['/deck-builder-sterling-va', 'Sterling deck builder'],
-            ['/deck-builder-broadlands-va', 'Broadlands deck builder'],
-            ['/deck-builder-ashburn-va', 'Ashburn deck builder'],
-            ['/near-you/loudoun-county', 'Loudoun County deck builder hub'],
-            ['/deck-permit-loudoun-county-virginia', 'Loudoun County deck permit guide'],
-            ['/deck-resurfacing-vs-replacement', 'Deck resurfacing vs replacement'],
-            ['/composite-deck-cost-northern-virginia', 'Composite deck cost guide'],
-            ['/services/deck-replacement', 'Deck replacement services'],
-            ['/services/deck-resurfacing', 'Deck resurfacing services'],
-            ['/reviews', 'Public review profiles'],
-          ].map(([href, text]) => (
-            <li key={href}>
-              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 700 }}>{text} -&gt;</Link>
-            </li>
+      <article style={{ padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img17.jpeg"
+              alt="Deck photo on the Loudoun Decks Cascades, VA page"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Planning a deck in Cascades</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[0].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{faqs[1].a}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Services in Cascades</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[2].a}</p>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2rem 0 1rem' }}>Permits and HOA paperwork</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope."}</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"The permit note used here is the one published on the Loudoun Decks homepage. Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. The same table lists Loudoun County plan review at 2–4 weeks through the LOLA online portal. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Homepage permit table</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>A documented project</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[4].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/showcase/deck-resurfacing-sterling" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"DECK/BALCONY RESURFACING"}</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Service area</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Cascades is listed by name under Loudoun County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville."}</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
+            <Link key="/deck-builder-sterling-va" href="/deck-builder-sterling-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Sterling</Link>
+            <Link key="/deck-builder-herndon-va" href="/deck-builder-herndon-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Herndon</Link>
+            <Link key="/deck-builder-reston-va" href="/deck-builder-reston-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Reston</Link>
+            <Link key="/deck-builder-ashburn-va" href="/deck-builder-ashburn-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Ashburn</Link>
+          </div>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Contact</h2>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{"Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>FAQ</h2>
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+            </details>
           ))}
-        </ul>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related pages</h2>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/showcase/deck-resurfacing-sterling" style={{ marginBottom: '0.5rem' }}><Link href="/showcase/deck-resurfacing-sterling" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Sterling resurfacing gallery"}</Link></li>
+              <li key="/deck-builder-sterling-va" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-sterling-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Sterling deck builder"}</Link></li>
+              <li key="/deck-permit-loudoun-county-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Loudoun County deck permit guide"}</Link></li>
+              <li key="/near-you/loudoun-county" style={{ marginBottom: '0.5rem' }}><Link href="/near-you/loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Loudoun County deck builder hub"}</Link></li>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
+        </div>
+      </article>
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="Cascades" />
+        </div>
       </section>
-      <ServiceAreasGrid />
-      <RelatedGuides currentPath={PATH} />
-      <NamedAuthor context="Cascades, Potomac Falls, Sterling, and Loudoun County deck replacement planning" lastUpdated="2026-07-18" />
-      <ContactHome />
-    </main>
+      <SimpleCTA title="Request a Cascades deck estimate" buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Cascades, VA" lastUpdated="2026-11-03" />
+      <ContactHome
+        pageContext={{
+          city: "Cascades",
+          county: "Loudoun County",
+          service: "Cascades deck replacement, composite deck, or screened porch",
+          pageType: 'local_city_landing_page',
+        }}
+      />
+    </>
   );
 }

@@ -9,11 +9,16 @@ import { buildMetadata } from '@/lib/seo';
 import { BUSINESS, FOUNDER_ID } from '@/lib/business';
 import WebPageSchema from '@/components/WebPageSchema';
 import CallLink from '@/components/CallLink';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { OPEN_DECK_QUOTED, QUOTE_SOURCE, REVIEWED_ISO, REVIEWED_LABEL, SIZE_400 } from '@/lib/quotedPrices';
+
+const COST_ANSWER = `${QUOTE_SOURCE} ${OPEN_DECK_QUOTED} ${SIZE_400} External benchmarks: for a simple, low-height composite deck with standard railing and without complex stairs or elevation, installed cost is about $35–$80 per square foot, or about $14,000–$32,000 for 400 sq ft (RemodelCalculators, reviewed October 11, 2026, https://remodelcalculators.com/deck-cost). Angi lists $30–$60 per square foot for deck construction (updated September 24, 2026, https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm). These external benchmarks are not Loudoun Decks prices. This page does not publish a separate pressure-treated total or a multi-level percentage. A written estimate after a site visit is the only project price.`;
+const RATE_ANSWER = `In Loudoun Decks' recent written quotes, a new open deck was about $61–$102 per sq ft, most around $64–$68 per sq ft. ${SIZE_400} External benchmarks are $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026) and $30–$60 per square foot (Angi, updated September 24, 2026). Those external rates are not Loudoun Decks prices. Larger spans need bigger beams and more footings. The written estimate after a site visit is the only project price.`;
 
 export const metadata = buildMetadata({
   path: '/deck-cost-20x20-northern-virginia',
   title: '20x20 Deck Cost in Northern Virginia (2026)',
-  description: 'A 20x20 deck is 400 sq ft. Dollar figures on this page are external benchmarks, not a Loudoun Decks price.',
+  description: 'A 20x20 deck is 400 sq ft. Loudoun Decks 2026 quoted prices: about $61–$102 per sq ft, most around $64–$68. No exact 400 sq ft quote in this set. External benchmarks are labeled below.',
   image: '/social/deck-cost-20x20-northern-virginia-social.png',
 });
 
@@ -21,7 +26,7 @@ const articleSchema = {
   "@context": "https://schema.org", "@type": "Article",
   headline: "How Much Does a 20x20 Deck Cost in Northern Virginia (2026)",
   datePublished: "2026-05-23",
-  dateModified: "2026-10-18",
+  dateModified: REVIEWED_ISO,
   author: { "@type": "Person", "@id": FOUNDER_ID, name: BUSINESS.founder.name, alternateName: "Nick", url: "https://ldndecks.com/team" },
   publisher: { "@type": "Organization", "@id": "https://ldndecks.com/#organization", name: "Loudoun Decks", url: "https://ldndecks.com" },
   about: "20x20 deck cost in Northern Virginia",
@@ -30,9 +35,9 @@ const articleSchema = {
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a 20x20 deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "This page does not publish a pressure-treated, composite, or PVC total for a 20x20 deck, and it does not publish a multi-level percentage. The summary cites external benchmarks with the publisher and date. Those figures are not a Loudoun Decks price. A written estimate is the project price." } },
+    { "@type": "Question", name: "How much does a 20x20 deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: COST_ANSWER } },
     { "@type": "Question", name: "Is 20x20 too big for one level?", acceptedAnswer: { "@type": "Answer", text: "Not at all — a single-level 20x20 is a popular entertaining deck. But on a sloped Northern Virginia lot, a multi-level 20x20 (a dining tier plus a step-down lounge tier) often uses the grade better and creates clearer zones. The decision is driven by your yard, not the size itself." } },
-    { "@type": "Question", name: "What is the price per square foot for a 20x20 deck?", acceptedAnswer: { "@type": "Answer", text: "This page does not publish a Loudoun Decks price per square foot. The summary cites external benchmarks with the publisher and date. Larger spans need bigger beams and more footings. A written estimate is the project price." } },
+    { "@type": "Question", name: "What is the price per square foot for a 20x20 deck?", acceptedAnswer: { "@type": "Answer", text: RATE_ANSWER } },
     { "@type": "Question", name: "Does a 20x20 deck need extra structural support?", acceptedAnswer: { "@type": "Answer", text: "Often yes. A 20-ft span typically needs an intermediate beam line and additional posts, plus joists sized up (often 2x10 or 2x12 instead of 2x8). For composite, joist spacing usually tightens to 12 inches on-center for the recommended deflection. All of this is engineered to the Virginia Residential Code and verified at framing inspection." } },
     { "@type": "Question", name: "How long does it take to build a 20x20 deck?", acceptedAnswer: { "@type": "Answer", text: "Construction is about 2-3 weeks for a single-level 20x20 once permits are in hand, or 3-4 weeks for a multi-level version. Full timeline including HOA architectural review and the county permit is typically 8-12 weeks from contract signing." } },
     { "@type": "Question", name: "Does a 20x20 deck add resale value?", acceptedAnswer: { "@type": "Answer", text: "Resale recovery is not a fixed percentage, and this page does not publish one." } },
@@ -45,7 +50,7 @@ export default function DeckCost20x20Page() {
   return (
     <>
       <JsonLd data={articleSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-cost-20x20-northern-virginia" name="20x20 Deck Cost in Northern Virginia (2026)" description="A 20x20 deck is 400 sq ft. Dollar figures on this page are external benchmarks, not a Loudoun Decks price." speakable />
+      <WebPageSchema dateModified={REVIEWED_ISO} url="https://ldndecks.com/deck-cost-20x20-northern-virginia" name="20x20 Deck Cost in Northern Virginia (2026)" description="A 20x20 deck is 400 sq ft. Loudoun Decks 2026 quoted prices: about $61–$102 per sq ft, most around $64–$68. External benchmarks are labeled below." speakable />
       <JsonLd data={faqSchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -64,10 +69,11 @@ export default function DeckCost20x20Page() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
           <section data-speakable="true" style={{ background: '#fff8f0', borderLeft: '4px solid var(--color-primary)', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
-            <p style={{ margin: 0, fontWeight: 600, lineHeight: 1.6 }}><strong>TL;DR:</strong> A 20×20 deck is 400 sq ft. For a simple, low-height composite deck with standard railing and without complex stairs or elevation, external 2026 benchmarks put installed cost at $35–$80 per square foot, or about $14,000–$32,000 (RemodelCalculators, reviewed October 11, 2026, https://remodelcalculators.com/deck-cost). Angi lists $30–$60 per square foot for deck construction (updated September 24, 2026, https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm). These are national planning estimates, not Loudoun Decks prices. This page does not publish a pressure-treated total or a multi-level percentage. A written estimate is the only project price.</p>
+            <p style={{ margin: 0, fontWeight: 600, lineHeight: 1.6 }}><strong>TL;DR:</strong> {COST_ANSWER}</p>
           </section>
 
-          <NamedAuthor context="Northern Virginia 20x20 deck builds" lastUpdated="May 2026" />
+          <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED, SIZE_400]} />
+          <NamedAuthor context="Northern Virginia 20x20 deck builds" lastUpdated={REVIEWED_LABEL} />
 
           <h2 style={S.h2}>Base Price by Material for a 20x20 Deck</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
@@ -129,17 +135,10 @@ export default function DeckCost20x20Page() {
           <p style={S.p}>HOA architectural review is almost always required &mdash; covering color, material, railing style, and placement &mdash; and on a deck this size committees often look closely at lot coverage and the back-fence sight line. See our <Link href="/loudoun-county-hoa-deck-rules" style={{ color: 'var(--color-primary)' }}>Loudoun County HOA deck rules guide</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "How much does a 20x20 deck cost in Northern Virginia?", a: "This page does not publish a pressure-treated, composite, or PVC total for a 20x20 deck, and it does not publish a multi-level percentage. The summary cites external benchmarks with the publisher and date. Those figures are not a Loudoun Decks price. A written estimate is the project price." },
-            { q: "Is 20x20 too big for one level?", a: "Not at all — single-level 20x20 is a popular entertaining deck. On a sloped lot, a multi-level 20x20 often uses the grade better. The decision is driven by your yard." },
-            { q: "What is the price per square foot for a 20x20?", a: "This page does not publish a Loudoun Decks price per square foot. The summary cites external benchmarks with the publisher and date. Larger spans need bigger beams and more footings. A written estimate is the project price." },
-            { q: "Does a 20x20 need extra structural support?", a: "Often yes. A 20-ft span typically needs an intermediate beam line, more posts, and joists sized up (2x10 or 2x12). For composite, joists usually tighten to 12 inches on-center." },
-            { q: "How long does it take to build?", a: "Single-level: 2-3 weeks of construction. Multi-level: 3-4 weeks. Full timeline including HOA review and the county permit is typically 8-12 weeks from contract." },
-            { q: "Does a 20x20 deck add resale value?", a: "Resale recovery is not a fixed percentage, and this page does not publish one." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {faqSchema.mainEntity.map((item) => (
+            <details key={item.name} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{item.name}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{item.acceptedAnswer.text}</p>
             </details>
           ))}
 

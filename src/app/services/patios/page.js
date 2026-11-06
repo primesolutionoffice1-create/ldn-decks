@@ -13,6 +13,8 @@ import JsonLd from '@/components/JsonLd';
 import ServiceSchema from '@/components/ServiceSchema';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
+import { QUOTE_LABEL, UNDER_DECK_PATIO_QUOTED } from '@/lib/quotedPrices';
+import AnswerBlock from '@/components/AnswerBlock';
 
 export const metadata = buildMetadata({
   path: "/services/patios",
@@ -94,7 +96,7 @@ const patioProcess = [
 const patioFAQs = [
   {
     question: 'How much does a patio cost in Northern Virginia in 2026?',
-    answer: 'A custom patio in Loudoun, Fairfax, or Prince William County is priced in a written estimate. Material and footprint change the scope. Every Loudoun Decks estimate is itemized, written, and delivered after an on-site visit.'
+    answer: 'A custom patio in Loudoun, Fairfax, or Prince William County is priced in a written estimate. The only patio total in the September–October 2026 quote set is one under-deck concrete patio, 7×12, quoted at $5,215. That is a quoted price, not a fixed contract price, and not a paver, flagstone, or stamped-concrete range. Material and footprint change the scope. The written estimate after an on-site visit is the only project price.'
   },
   {
     question: 'Pavers vs stamped concrete vs natural stone — which is best for NoVA?',
@@ -151,9 +153,9 @@ const materialItemListSchema = {
 };
 
 const neighborhoods = [
-  { county: 'Loudoun County', cities: 'Ashburn, Leesburg, Sterling, Brambleton, South Riding, Purcellville, Lansdowne, Aldie, Middleburg' },
-  { county: 'Fairfax County', cities: 'Vienna, McLean, Reston, Herndon, Fairfax, Great Falls, Oakton, Burke, Centreville, Chantilly, Tysons, Falls Church' },
-  { county: 'Prince William County', cities: 'Manassas, Gainesville, Haymarket, Bristow, Woodbridge' },
+  { county: 'Loudoun County', href: '/patio-contractor-loudoun-county', cities: 'Ashburn, Leesburg, Sterling, Brambleton, South Riding, Purcellville, Lansdowne, Aldie, Middleburg' },
+  { county: 'Fairfax County', href: '/patio-contractor-fairfax-county', cities: 'Vienna, McLean, Reston, Herndon, Fairfax, Great Falls, Oakton, Burke, Centreville, Chantilly, Tysons, Falls Church' },
+  { county: 'Prince William County', href: '/patio-contractor-prince-william-county', cities: 'Manassas, Gainesville, Haymarket, Bristow, Woodbridge' },
   { county: 'Arlington County', cities: 'Arlington, Rosslyn, Clarendon, Ballston' },
 ];
 
@@ -162,14 +164,12 @@ export default function PatiosPage() {
     <main>
       <JsonLd data={faqSchemaData} />
       <JsonLd data={materialItemListSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Virginia Class A patio contractor in Northern Virginia. Paver, stamped concrete, and stone patios. A written estimate is the project price." speakable />
+      <WebPageSchema dateModified="2026-11-05" url="https://ldndecks.com/services/patios" name="Patio Contractor Northern Virginia | Paver, Stone &amp; Stamped" description="Virginia Class A patio contractor in Northern Virginia. Paver, stamped concrete, and stone patios. A written estimate is the project price." speakable />
       <ServiceSchema
         name="Custom Patio Construction"
         description="Professional patio design and installation in Northern Virginia. Pavers, flagstone, stamped concrete, and natural stone patios."
         url="https://ldndecks.com/services/patios"
         category="Outdoor Living"
-        lowPrice="14000"
-        highPrice="160000"
         relatedServices={['https://ldndecks.com/services/fire-pits', 'https://ldndecks.com/services/under-deck-patios', 'https://ldndecks.com/outdoor-living-northern-virginia']}
       />
 
@@ -177,7 +177,15 @@ export default function PatiosPage() {
         subtext="Patio Builder & Contractor — Northern Virginia"
         title="Custom Patio Contractor in Northern Virginia"
         description="Virginia Class A patio contractor serving Loudoun, Fairfax, Prince William, and Arlington counties. Paver patios, stamped concrete, bluestone, flagstone, and travertine hardscapes engineered for NoVA clay soil and freeze-thaw climate. Outdoor living suites can be planned with decks, pergolas, and screened porches."
-      />
+      >
+        <AnswerBlock
+          where="Loudoun, Fairfax, and Prince William counties"
+          price="One under-deck concrete patio, 7×12, was quoted at $5,215. That is a quoted price, not a fixed contract price and not a paver or stone rate."
+        />
+        <p style={{ margin: '0.35rem 0 0', fontSize: '0.98rem', lineHeight: 1.55, textAlign: 'left' }}>
+          Services: patios and under-deck patios across Loudoun, Fairfax, and Prince William counties.
+        </p>
+      </ServicesHeader>
 
       <AboveFoldCTA headline="Planning a paver, flagstone or bluestone patio in NoVA? Talk to a custom hardscape specialist today." />
 
@@ -190,7 +198,7 @@ export default function PatiosPage() {
             </p>
           </div>
 
-          <NamedAuthor context="Loudoun, Fairfax, Prince William and Arlington counties" lastUpdated="2026-10-18" />
+          <NamedAuthor context="Loudoun, Fairfax, Prince William and Arlington counties" lastUpdated="2026-11-05" />
 
           <h2 style={S.h2}>The Premier Patio Builder for Luxury Homes in Northern Virginia</h2>
           <p style={S.p}>
@@ -202,7 +210,7 @@ export default function PatiosPage() {
 
           <h2 style={S.h2}>2026 Patio Cost in Northern Virginia</h2>
           <p style={S.p}>
-            This page does not publish a patio price or a comparison with a national average. Permit documentation, labor, and the base and drainage for clay soil change the scope. The table below does not list dollar amounts. A written estimate is the project price.
+            {QUOTE_LABEL}: {UNDER_DECK_PATIO_QUOTED} That quote is from September–October 2026. It is a quoted price, not a fixed contract price, and not a paver, flagstone, or stamped-concrete range. This page does not compare those materials with a national average. Permit documentation, labor, and the base and drainage for clay soil change the scope. The table below does not list dollar amounts. A written estimate is the project price. Last reviewed November 5, 2026.
           </p>
           <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', borderRadius: 8, overflow: 'hidden', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
@@ -339,13 +347,18 @@ export default function PatiosPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {neighborhoods.map((n) => (
               <div key={n.county} style={{ background: '#fff', border: '1px solid #ececec', borderRadius: 8, padding: '1.2rem' }}>
-                <h3 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.4rem', color: 'var(--color-primary)' }}>{n.county}</h3>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.4rem', color: 'var(--color-primary)' }}>
+                  {n.href ? <Link href={n.href} style={{ color: 'var(--color-primary)' }}>{n.county}</Link> : n.county}
+                </h3>
                 <p style={{ margin: 0, fontSize: '0.92rem', color: '#555', lineHeight: 1.6 }}>{n.cities}</p>
               </div>
             ))}
           </div>
-          <p style={{ marginTop: '1.5rem', fontSize: '0.92rem' }}>
-            <Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full NoVA service map →</Link>
+          <p style={{ marginTop: '1.5rem', fontSize: '0.92rem', lineHeight: 1.7 }}>
+            County hubs: <Link href="/near-you/loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun County</Link>, <Link href="/near-you/fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax County</Link>, and <Link href="/near-you/prince-william-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Prince William County</Link>.
+            {' '}Under-deck work is on <Link href="/services/under-deck-patios" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>under-deck patios</Link>.
+            {' '}<Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Request a written estimate</Link>.
+            {' '}<Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Full NoVA service map →</Link>
           </p>
         </div>
       </section>

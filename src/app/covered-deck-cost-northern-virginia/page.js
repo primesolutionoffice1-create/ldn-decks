@@ -11,11 +11,13 @@ import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { OPEN_DECK_QUOTED, PORCH_QUOTED, QUOTE_SOURCE, REVIEWED_ISO } from '@/lib/quotedPrices';
 
 const PATH = '/covered-deck-cost-northern-virginia';
 const PAGE_TITLE = 'Covered Deck Cost in Northern Virginia';
-const UPDATED = '2026-10-21';
-const DESCRIPTION = 'A covered deck in Northern Virginia is priced only in a written estimate. Figures on this page are external planning benchmarks, not Loudoun Decks prices.';
+const UPDATED = REVIEWED_ISO;
+const DESCRIPTION = 'Loudoun Decks 2026 quoted prices: a roofed or screened porch with an attached open deck about $77,000–$112,500, and a roof-only 10×12 shed roof at $17,013. External benchmarks are labeled below.';
 
 const deckBenchmark = 'For a simple, low-height composite deck with standard railing and without complex stairs or elevation, external 2026 benchmarks put installed cost at $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026, https://remodelcalculators.com/deck-cost ; Angi lists $30–$60 per square foot for deck construction, updated September 24, 2026, https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm). For 300 sq ft that is about $10,500–$24,000 for the deck only. These are national planning estimates, not Loudoun Decks prices or quotes. The range excludes a roof, a pergola, screens, permits, demolition, and elevation.';
 
@@ -27,7 +29,7 @@ const permitBenchmark = 'Loudoun County requires a building permit and a zoning 
 
 const paymentNote = 'This page does not publish a monthly payment. Enter the amount from your written estimate in the deck payment estimator. The result is planning math, not a lender quote.';
 
-const quickAnswer = [DESCRIPTION, deckBenchmark, pergolaBenchmark, screenBenchmark, permitBenchmark, paymentNote].join(' ');
+const quickAnswer = [QUOTE_SOURCE, PORCH_QUOTED, OPEN_DECK_QUOTED, 'External benchmarks:', deckBenchmark, pergolaBenchmark, screenBenchmark, permitBenchmark, paymentNote].join(' ');
 
 const roofTypes = [
   {
@@ -38,17 +40,17 @@ const roofTypes = [
   {
     name: 'Solid or louvered roof',
     desc: 'A fixed shingle roof sheds rain. Adjustable louvers can open for light and close for cover.',
-    notes: 'This is a different structure from the open pergola in the Angi benchmark. This page does not publish a price for a louvered or shingle roof.',
+    notes: 'This is a different structure from the open pergola in the Angi benchmark. This quote set does not include a louvered roof price. A roof-only 10×12 shed roof was $17,013.',
   },
   {
     name: 'Hip or gable roof',
     desc: 'A pitched roof tied to the house gives full overhead weather cover.',
-    notes: 'Loudoun County\'s Typical Deck detail cannot be used for a roof. This page does not publish a price for a hip or gable roof.',
+    notes: 'Loudoun County\'s Typical Deck detail cannot be used for a roof. A 14×12 or 14×14 gable roof plus a 120 sq ft open deck was quoted at $76,737–$84,253. This quote set does not include a hip-roof-only price.',
   },
   {
     name: 'Screened porch',
     desc: 'Screens around a roofed structure keep insects out. A window package such as EZE-Breeze is a separate option.',
-    notes: 'The HomeAdvisor figure below applies only when a sound roof and structure already exist. A new roof is outside that range.',
+    notes: 'Recent roofed or screened porch quotes with an attached open deck were about $77,000–$112,500. The HomeAdvisor figure below applies only when a sound roof and structure already exist. A new roof is outside that external range.',
   },
 ];
 
@@ -91,7 +93,7 @@ const benchmarkRows = [
   ],
 ];
 
-const costAnswer = `${DESCRIPTION} ${deckBenchmark}`;
+const costAnswer = `${QUOTE_SOURCE} ${PORCH_QUOTED} External benchmarks: ${deckBenchmark}`;
 
 const faqs = [
   {
@@ -180,10 +182,10 @@ export default function CoveredDeckCostPage() {
         path={PATH}
         image="/showcase/img16.jpeg"
         datePublished="2026-05-27"
-        dateModified="2026-10-21"
+        dateModified={UPDATED}
       />
       <WebPageSchema
-        dateModified="2026-10-21"
+        dateModified={UPDATED}
         url={`https://ldndecks.com${PATH}`}
         name={PAGE_TITLE}
         description={DESCRIPTION}
@@ -239,9 +241,10 @@ export default function CoveredDeckCostPage() {
             />
           </div>
 
+          <QuotedPricesBlock paragraphs={[PORCH_QUOTED, OPEN_DECK_QUOTED]} />
           <h2 style={{ ...S.h2, marginTop: 0 }}>What each roof type provides</h2>
           <p style={S.p}>
-            The roof changes weather protection, the structure, and the permit drawings. These descriptions are not prices, and this page does not publish a 2026 add-on price list.
+            The roof changes weather protection, the structure, and the permit drawings. The quoted prices are in the block above. These descriptions are not a 2026 add-on price list.
           </p>
           {roofTypes.map((r) => (
             <div key={r.name} style={{ background: '#f9f9f9', border: '1px solid #e5e5e5', borderRadius: 12, padding: '1.5rem', marginBottom: '1rem' }}>
@@ -251,7 +254,7 @@ export default function CoveredDeckCostPage() {
             </div>
           ))}
 
-          <h2 style={S.h2}>External benchmarks, not a project total</h2>
+          <h2 style={S.h2}>External benchmarks</h2>
           <p style={S.p}>
             Each row is a different scope. Do not add the rows together. None of them is a Loudoun Decks covered-deck price. The same deck figures are cited on the{' '}
             <Link href="/composite-deck-cost-northern-virginia" style={S.link}>composite deck cost</Link>

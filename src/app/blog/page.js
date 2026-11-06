@@ -1,4 +1,5 @@
 import React from 'react';
+import { getBlogPostPath } from '@/lib/blogRoutes';
 import BlogHeader from '@/components/BlogHeader';
 import BlogList from '@/components/BlogList';
 import RelatedGuides from '@/components/RelatedGuides';
@@ -29,7 +30,7 @@ const blogCollectionSchema = {
     itemListElement: blogPosts.map((post, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      url: `https://ldndecks.com${post.canonicalPath || `/blog/${post.slug}`}`,
+      url: `https://ldndecks.com${getBlogPostPath(post)}`,
       name: post.title,
     })),
   },

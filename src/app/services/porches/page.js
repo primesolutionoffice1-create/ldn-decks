@@ -12,6 +12,7 @@ import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import SimpleCTA from '@/components/SimpleCTA';
 import JsonLd from '@/components/JsonLd';
 import { buildMetadata } from '@/lib/seo';
+import AnswerBlock from '@/components/AnswerBlock';
 import WebPageSchema from '@/components/WebPageSchema';
 
 import NamedAuthor from '@/components/NamedAuthor';
@@ -112,7 +113,12 @@ export default function PorchesPage() {
         subtext="Permit-Aware Porch Builder"
         title="Custom Porch Design & Construction"
         description="Loudoun Decks builds premium screened-in porches, open pavilions, and custom front porches across Loudoun County, Fairfax County, and Prince William County. Most custom porch projects start at a written estimate."
-      />
+      >
+        <AnswerBlock
+          where="Loudoun, Fairfax, and Prince William counties"
+          price="A roofed or screened porch with an attached open deck was $77,000–$112,500. A roof-only 10×12 was $17,013."
+        />
+      </ServicesHeader>
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
         <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated="2026-10-18" />
       </section>

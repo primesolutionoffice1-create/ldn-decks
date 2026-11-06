@@ -16,6 +16,7 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-tysons-va',
@@ -44,7 +45,7 @@ export default function TysonsDeckBuilderPage() {
     <>
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Tysons" url="https://ldndecks.com/deck-builder-tysons-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-tysons-va" name="Deck Builder in Tysons, VA | Modern Composite Decks | LDN Decks" description="Custom deck builder in Tysons, VA. Google reviews. Modern composite decks &amp; rooftop terraces for Tysons townhomes and condos. Free estimate. (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-tysons-va" name="Deck Builder in Tysons, VA | Modern Composite Decks | LDN Decks" description="Custom deck builder in Tysons, VA. Google reviews. Modern composite decks &amp; rooftop terraces for Tysons townhomes and condos. Free estimate. (571) 655-7207." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Modern Deck Builder in Tysons, VA</h1>
@@ -241,7 +242,8 @@ export default function TysonsDeckBuilderPage() {
 
       <SimpleCTA title="Modern Deck for Modern Living" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-tysons-va" />
-      <NamedAuthor context="Tysons and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Tysons and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
     </>
   );

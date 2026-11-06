@@ -19,6 +19,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import CityAuthorityExpansion from '@/components/CityAuthorityExpansion';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-woodbridge-va',
@@ -74,7 +75,7 @@ const expansionSections = [
     title: "Why Woodbridge Homeowners Choose Loudoun Decks",
     paragraphs: [
       "Woodbridge neighborhoods \u2014 from the established woods of Lake Ridge to the waterfront homes of Belmont Bay \u2014 each have unique characteristics and HOA guidelines. We plan around Prince William County permit requirements, HOA expectations, moisture exposure, and site grade so the deck design complements the home while meeting local building codes.",
-      "Woodbridge project scopes often include multi-level TimberTech decks in Lake Ridge, screened porch additions near Occoquan, and backyard transformations with Trex Transcend decks and under-deck patios in Montclair. Specific project examples should be added only from verified owner-supplied evidence."
+      "Woodbridge project scopes often include multi-level TimberTech decks in Lake Ridge, screened porch additions near Occoquan, and backyard transformations with Trex Transcend decks and under-deck patios in Montclair."
     ]
   },
   {
@@ -113,7 +114,7 @@ export default function DeckBuilderWoodbridgePage() {
   return (
     <main>
       <LocalBusinessSchema city="Woodbridge" url="https://ldndecks.com/deck-builder-woodbridge-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-woodbridge-va" name="Deck Builder in Woodbridge, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Woodbridge, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-woodbridge-va" name="Deck Builder in Woodbridge, VA | Composite Decks | Loudoun Decks" description="Trusted deck builder in Woodbridge, VA. Trex product-line planning &amp; TimberTech and AZEK product planning. Custom composite decks, screened porches &amp; pergolas. Free estimate  -  call (571) 655-7207." speakable />
       <ServicesHeader
         subtext="Woodbridge, VA's Trusted Deck Company"
         title="Custom Deck Builder in Woodbridge, VA"
@@ -199,7 +200,8 @@ export default function DeckBuilderWoodbridgePage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Woodbridge" /></div></section>
       <SimpleCTA title="Build Your Dream Deck in Woodbridge" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-woodbridge-va" />
-      <NamedAuthor context="Woodbridge and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Woodbridge and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="prince-william-county" />
       <ContactHome />
     </main>
   );

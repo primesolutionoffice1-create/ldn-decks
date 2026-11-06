@@ -10,6 +10,19 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
+import { OPEN_DECK_RANGE, QUOTE_LABEL, SIZE_300 } from '@/lib/quotedPrices';
+
+const ELEVATED_COST_ANSWER = `A second-story deck costs more than a ground-level deck of the same size because of taller posts, deeper footings, extra bracing, and more railing. ${QUOTE_LABEL}: ${OPEN_DECK_RANGE} ${SIZE_300} Stairs, elevation, and railings can move a quote up. Those are quoted prices, not an elevation percentage and not a guarantee. The written estimate after a site visit is the only project price.`;
+
+const ENGINEERING_ANSWER = "Often, yes. Elevated decks, roofed decks and other designs outside your county's standard deck details usually need engineered or custom plans, and your county plan reviewer decides what your permit requires. Confirm the requirement for your address on your county's deck permit page, and ask your contractor whether engineering is included in the written estimate.";
+
+const RAILING_ANSWER = "Under the model residential code that Virginia's code is based on, a guard is required where a walking surface is more than 30 inches above the grade below, and guards are at least 36 inches high, with openings small enough that a 4-inch sphere cannot pass through. Guard posts must also meet the code's load requirements. Confirm the current figures with your county plan reviewer, since the adopted Virginia code and local amendments govern.";
+
+const UNDER_DECK_ANSWER = "Yes. Trex RainEscape creates a dry space underneath at an added cost that your written estimate itemizes. This gives you a covered patio, outdoor kitchen area, or storage space.";
+
+const TIMELINE_ANSWER = "3-5 weeks of active construction, plus 6-8 weeks of pre-construction (engineering, permitting, HOA approval). Total timeline: 10-14 weeks from consultation to completion.";
+
+const SAFETY_ANSWER = "Absolutely, when properly engineered and built to code. Modern building codes require specific post sizes, lateral bracing, connection hardware, and footing depths. The key is hiring a licensed contractor who pulls permits and passes all inspections.";
 
 export const metadata = buildMetadata({
   path: '/second-story-deck-builder-northern-virginia',
@@ -22,12 +35,12 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does a second-story deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "A second-story deck is priced individually, depending on size, material, framing and footing requirements, stairs and railing. Elevated decks generally cost more than ground-level decks of the same size because they need heavier framing, deeper footings and longer stairs, and multi-level designs with under-deck living space add more. Your written estimate itemizes each of these." } },
-    { "@type": "Question", name: "Do second-story decks require engineering in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Often, yes. Elevated decks, roofed decks and other designs outside your county's standard deck details usually need engineered or custom plans, and your county plan reviewer decides what your permit requires. Confirm the requirement for your address on your county's deck permit page, and ask your contractor whether engineering is included in the written estimate." } },
-    { "@type": "Question", name: "What is the railing height requirement for a second-story deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Under the model residential code that Virginia's code is based on, a guard is required where a walking surface is more than 30 inches above the grade below, and guards are at least 36 inches high, with openings small enough that a 4-inch sphere cannot pass through. Guard posts must also meet the code's load requirements. Confirm the current figures with your county plan reviewer, since the adopted Virginia code and local amendments govern." } },
-    { "@type": "Question", name: "Can I create living space under my second-story deck?", acceptedAnswer: { "@type": "Answer", text: "Yes. Trex RainEscape or similar membrane systems capture water from the upper deck and channel it into gutters, creating a completely dry patio, outdoor living room, or storage area underneath. This effectively doubles your usable outdoor space. Cost for the drainage system adds a written estimate to the project." } },
-    { "@type": "Question", name: "How long does it take to build a second-story deck?", acceptedAnswer: { "@type": "Answer", text: "A second-story deck typically takes 3-5 weeks to build, compared to 1.5-3 weeks for a ground-level deck. The additional time accounts for deeper footings, taller post installation, more complex framing, and additional inspections required for elevated structures." } },
-    { "@type": "Question", name: "Is a second-story deck safe?", acceptedAnswer: { "@type": "Answer", text: "Yes, when properly engineered and built to code. Modern building codes require specific post sizes, lateral bracing, connection hardware, and footing depths that ensure structural safety. The key is hiring a licensed contractor who pulls proper permits and passes all inspections. An unpermitted elevated deck is a serious safety and liability risk." } },
+    { "@type": "Question", name: "How much does a second-story deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: ELEVATED_COST_ANSWER } },
+    { "@type": "Question", name: "Do second-story decks require engineering in Virginia?", acceptedAnswer: { "@type": "Answer", text: ENGINEERING_ANSWER } },
+    { "@type": "Question", name: "What is the railing height requirement for a second-story deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: RAILING_ANSWER } },
+    { "@type": "Question", name: "Can I create living space under my second-story deck?", acceptedAnswer: { "@type": "Answer", text: UNDER_DECK_ANSWER } },
+    { "@type": "Question", name: "How long does it take to build a second-story deck?", acceptedAnswer: { "@type": "Answer", text: TIMELINE_ANSWER } },
+    { "@type": "Question", name: "Is a second-story deck safe?", acceptedAnswer: { "@type": "Answer", text: SAFETY_ANSWER } },
   ],
 };
 
@@ -43,14 +56,14 @@ export default function SecondStoryDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/second-story-deck-builder-northern-virginia" name="Second Story Deck Builder | Elevated Decks in NoVA" description="Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs (a written estimate), and safety requirements explained." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/second-story-deck-builder-northern-virginia" name="Second Story Deck Builder | Elevated Decks in NoVA" description="Custom second-story and elevated deck construction in Northern Virginia. Engineering, permits, costs (a written estimate), and safety requirements explained." speakable />
       <ArticleSchema
         title="Second Story Deck Builder in Northern Virginia: Elevated Decks Explained"
         description="Everything you need to know about building a second-story or elevated deck in Northern Virginia. Engineering, permits, costs, safety, and under-deck living."
         path="/second-story-deck-builder-northern-virginia"
         image="/images/img09.jpeg"
         datePublished="2026-04-26"
-        dateModified="2026-10-18"
+        dateModified="2026-11-01"
       />
 
       {/* Hero */}
@@ -65,7 +78,7 @@ export default function SecondStoryDeckBuilderPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Second-story decks in Northern Virginia are priced individually, depending on size and material. They often need <strong>engineered plans</strong>, <strong>deeper footings</strong>, <strong>lateral bracing</strong> and code-compliant railings, which is why they usually cost more than ground-level construction. With <strong>Trex RainEscape</strong>, you can create dry living space underneath &mdash; effectively doubling your outdoor square footage. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a consultation on your elevated deck project.</p>
+          <p>{ELEVATED_COST_ANSWER} Elevated decks often need <strong>engineered plans</strong>, <strong>deeper footings</strong>, <strong>lateral bracing</strong>, and code-compliant railings. With <strong>Trex RainEscape</strong>, you can create dry living space underneath. <CallLink style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call (571) 655-7207</CallLink> for a consultation on your elevated deck project.</p>
         </div>
       </section>
 
@@ -108,22 +121,22 @@ export default function SecondStoryDeckBuilderPage() {
 
           {/* ===== SECTION 3: Cost Comparison Table ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Cost Comparison: Ground-Level vs. Elevated Decks</h2>
-          <p style={S.p}>Elevation is the single biggest cost multiplier in deck construction. Here is how pricing scales as you go higher:</p>
+          <p style={S.p}>Elevation changes the work: taller posts, deeper footings, extra bracing, and more railing. There is no published elevation percentage. Use the quoted-price answer above, then the written estimate after a site visit.</p>
 
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead>
                 <tr style={{ background: '#f5f5f5' }}>
-                  {['Deck Type', 'Height Above Grade', 'Cost/sqft (Composite)', '300 sqft Total', 'Premium vs Ground', 'Engineering Required'].map(h => <th key={h} style={S.th}>{h}</th>)}
+                  {['Deck Type', 'Height Above Grade', 'Cost/sqft (Composite)', '300 sqft Total', 'How cost is set', 'Engineering Required'].map(h => <th key={h} style={S.th}>{h}</th>)}
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ['Ground-Level', '0–2 ft', 'Not published', 'See the written estimate', 'Baseline', 'Rarely'],
-                  ['Low Elevated', '2–4 ft', 'Not published', 'See the written estimate', '+15–20%', 'Sometimes'],
-                  ['Mid Elevated', '4–8 ft', 'Not published', 'See the written estimate', '+25–35%', 'Yes'],
-                  ['Second-Story', '8–12 ft', 'Not published', 'See the written estimate', '+35–50%', 'Always'],
-                  ['High Second-Story', '12+ ft', 'Not published', 'See the written estimate', '+50%+', 'Always'],
+                  ['Ground-Level', '0–2 ft', 'Not published', 'See the written estimate', 'Quoted-price answer, then the written estimate', 'Rarely'],
+                  ['Low Elevated', '2–4 ft', 'Not published', 'See the written estimate', 'Quoted-price answer, then the written estimate', 'Sometimes'],
+                  ['Mid Elevated', '4–8 ft', 'Not published', 'See the written estimate', 'Quoted-price answer, then the written estimate', 'Yes'],
+                  ['Second-Story', '8–12 ft', 'Not published', 'See the written estimate', 'Quoted-price answer, then the written estimate', 'Always'],
+                  ['High Second-Story', '12+ ft', 'Not published', 'See the written estimate', 'Quoted-price answer, then the written estimate', 'Always'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i === 3 ? '#fff7ed' : (i % 2 ? '#fafafa' : '#fff') }}>
                     {row.map((cell, j) => (
@@ -305,17 +318,17 @@ export default function SecondStoryDeckBuilderPage() {
           <p style={S.p}>The most dangerous shortcut. Without diagonal bracing between posts, an elevated deck can collapse laterally under dynamic loads. This is the failure mode responsible for most deck collapse injuries in the United States. Every elevated deck we build includes engineered lateral bracing.</p>
 
           <h3 style={S.h3}>Ignoring the Under-Deck Opportunity</h3>
-          <p style={S.p}>Building an elevated deck without a RainEscape system wastes the potential of the space below. Adding the drainage system during initial construction is far easier during initial construction. Retrofitting it later costs significantly more because you have to access the joist cavities from below, which requires scaffolding. Plan ahead.</p>
+          <p style={S.p}>Building an elevated deck without a RainEscape system wastes the potential of the space below. Adding the drainage system is easier during initial construction. Retrofitting it later costs significantly more because you have to access the joist cavities from below, which requires scaffolding. Plan ahead.</p>
 
           {/* ===== SECTION 12: FAQs ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
           {[
-            { q: "How much does a second-story deck cost in Northern Virginia?", a: "Priced individually, depending on size, material, framing and stairs. Elevated decks generally cost more than ground-level decks of the same size; your written estimate itemizes each factor." },
-            { q: "Do second-story decks require engineering?", a: "Often, yes. Elevated decks usually need engineered or custom plans, and your county plan reviewer decides what your permit requires. Confirm it for your address and ask whether engineering is in your written estimate." },
-            { q: "What is the railing height for an elevated deck in Virginia?", a: "Under the model residential code, a guard is required where the walking surface is more than 30 inches above grade and must be at least 36 inches high, with openings that stop a 4-inch sphere. Confirm the current Virginia requirement with your county plan reviewer." },
-            { q: "Can I create living space under my second-story deck?", a: "Yes. Trex RainEscape creates a dry space underneath at an added cost that your written estimate itemizes. This gives you a covered patio, outdoor kitchen area, or storage space." },
-            { q: "How long does a second-story deck take to build?", a: "3-5 weeks of active construction, plus 6-8 weeks of pre-construction (engineering, permitting, HOA approval). Total timeline: 10-14 weeks from consultation to completion." },
-            { q: "Is a second-story deck safe?", a: "Absolutely, when properly engineered and built to code. Modern building codes require specific post sizes, lateral bracing, connection hardware, and footing depths. The key is hiring a licensed contractor who pulls permits and passes all inspections." },
+            { q: "How much does a second-story deck cost in Northern Virginia?", a: ELEVATED_COST_ANSWER },
+            { q: "Do second-story decks require engineering?", a: ENGINEERING_ANSWER },
+            { q: "What is the railing height for an elevated deck in Virginia?", a: RAILING_ANSWER },
+            { q: "Can I create living space under my second-story deck?", a: UNDER_DECK_ANSWER },
+            { q: "How long does a second-story deck take to build?", a: TIMELINE_ANSWER },
+            { q: "Is a second-story deck safe?", a: SAFETY_ANSWER },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
@@ -345,7 +358,7 @@ export default function SecondStoryDeckBuilderPage() {
 
       <SimpleCTA title="Plan Your Elevated Deck Project" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/second-story-deck-builder-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-01" />
 
       <ContactHome />
     </>

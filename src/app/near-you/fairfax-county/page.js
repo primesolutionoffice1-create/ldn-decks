@@ -17,6 +17,9 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CountyConversionLinks from '@/components/CountyConversionLinks';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import AnswerBlock from '@/components/AnswerBlock';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { OPEN_DECK_QUOTED } from '@/lib/quotedPrices';
 
 const LocationIcon = () => (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -66,12 +69,20 @@ export default function FairfaxCountyPage() {
           description="LDN Decks builds custom decks, screened porches, patios, and outdoor living spaces throughout Fairfax County, VA."
           url="https://ldndecks.com/near-you/fairfax-county"
         />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Written Estimates" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-11-05" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Written Estimates" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
             <ServicesHeader
           subtext="Serving Northern Virginia"
           title="Deck Builder in Fairfax County, VA"
           description="Loudoun Decks is a trusted local deck and outdoor living contractor serving homeowners throughout Fairfax County. We design and build custom decks, patios, porches, and outdoor spaces."
-        />
+        >
+          <AnswerBlock
+            where="Fairfax County"
+            price="A new open deck was $61–$102 per sq ft, most $64–$68 per sq ft."
+          />
+        </ServicesHeader>
+        <p style={{ maxWidth: 900, margin: '1rem auto 0', padding: '0 1.5rem', lineHeight: 1.7 }}>
+          Planning a full rebuild in this county? See <Link href="/services/deck-replacement">deck replacement in Northern Virginia</Link>.
+        </p>
                   <ServiceMain
           subtitle="Expert Craftsmanship"
           title="Custom Outdoor Living for Fairfax Homeowners"
@@ -90,7 +101,9 @@ export default function FairfaxCountyPage() {
         ]}
         links={[
           { href: '/deck-permit-fairfax-county-virginia', label: 'Fairfax permit guide' },
-          { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
+          { href: '/patio-contractor-fairfax-county', label: 'Fairfax County patio contractor' },
+          { href: '/deck-resurfacing-fairfax-county', label: 'Fairfax County deck resurfacing' },
+          { href: '/screened-porches/fairfax', label: 'Screened porch builder in Fairfax' },
           { href: '/get-estimate', label: 'Get a Fairfax County estimate' }
         ]}
       />
@@ -130,7 +143,7 @@ export default function FairfaxCountyPage() {
       <article style={{ padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Why Fairfax County Homeowners Trust LDN Decks</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County is the most populous county in Virginia with over 1.1 million residents and median home values exceeding a written estimate. The county&apos;s established neighborhoods — from Vienna and McLean to Burke and Springfield — represent decades of homeownership, and many properties are now due for outdoor living upgrades as original decks reach the end of their lifespan.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County is the most populous county in Virginia with over 1.1 million residents (U.S. Census Bureau). The county&apos;s established neighborhoods — from Vienna and McLean to Burke and Springfield — represent decades of homeownership, and many properties are now due for outdoor living upgrades as original decks reach the end of their lifespan.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks brings <strong>Trex, TimberTech, AZEK, and pressure-treated framing</strong> experience to every Fairfax County project. We understand the county&apos;s detailed building code requirements, HOA architectural review processes, and the high standards Fairfax homeowners expect.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Fairfax County Building Permits & Codes</h3>
@@ -138,6 +151,8 @@ export default function FairfaxCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks handles the <strong>entire Fairfax County permit process</strong> including structural drawings, FIDO submission, and inspector coordination. We build to meet or exceed Fairfax County&apos;s typical deck detail specifications and address review comments when they arise.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Fairfax County (2026)</h3>
+          <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED]} />
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We install Trex and TimberTech decking and work with both as partner brands. The quoted range above is for recent Northern Virginia open-deck quotes. It is not a separate Fairfax County rate. The table below does not add one.</p>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead><tr style={{ background: '#f5f5f5' }}><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Cost Range</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Timeline</th></tr></thead>
@@ -216,6 +231,12 @@ export default function FairfaxCountyPage() {
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Explore Our Services</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/patio-contractor-fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Patio Contractor in Fairfax County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-resurfacing-fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Resurfacing in Fairfax County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porch-contractor-fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Contractor in Fairfax County →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/screened-porches/fairfax" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Screened Porch Builder in Fairfax →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/services/patios" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Patio Service →</Link></li>
+          <li style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Resurfacing Service →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           <li style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Customer Reviews (Google reviews) →</Link></li>

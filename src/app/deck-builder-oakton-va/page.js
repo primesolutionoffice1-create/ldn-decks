@@ -1,261 +1,202 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ServicesHeader from '@/components/ServicesHeader';
-import ServiceMain from '@/components/ServiceMain';
-import ServiceInclusions from '@/components/ServiceInclusions';
-import ServiceContentExpansion from '@/components/ServiceContentExpansion';
-import ProcessSteps from '@/components/ProcessSteps';
-import ServicesFAQ from '@/components/ServicesFAQ';
-import ContactHome from '@/components/ContactHome';
-import RelatedGuides from '@/components/RelatedGuides';
-import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import SimpleCTA from '@/components/SimpleCTA';
-import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import PlanningUpdate from '@/components/PlanningUpdate';
+import CallLink from '@/components/CallLink';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
-import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
+
+const PATH = "/deck-builder-oakton-va";
+const PAGE_URL = "https://ldndecks.com/deck-builder-oakton-va";
+const PAGE_TITLE = "Deck Builder in Oakton, VA | Loudoun Decks";
+const PAGE_DESCRIPTION = "Oakton deck builder for wooded-lot deck replacement and composite decks, with Fairfax County permits and tree-root and RPA screening.";
 
 export const metadata = buildMetadata({
-  path: '/deck-builder-oakton-va',
-  title: 'Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks',
-  description: 'Custom deck builder in Oakton, VA. Google reviews. Trex Transcend & TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate.',
-  image: '/social/deck-builder-oakton-va-social.png',
+  path: PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  image: "/social/deck-builder-oakton-va-social.png",
 });
 
-const inclusions = [
+const faqs = [
   {
-    title: "Wooded Lot Specialists",
-    desc: "Oakton's mature tree canopy requires careful construction planning. We design around root systems and canopy lines to preserve your landscape while building a structurally sound deck."
+    "q": "Who builds decks in Oakton, VA?",
+    "a": "Loudoun Decks LLC is a Centreville-based residential deck contractor and a Virginia Class A contractor (DPOR license #2705191673), owned by Nicolae (Nick) Zugrav. Oakton is in Fairfax County, between Vienna and Fairfax."
   },
   {
-    title: "Fairfax County RPA Knowledge",
-    desc: "Properties near Difficult Run and other waterways may require Resource Protection Area review. We manage environmental assessments and mitigation plans as part of every applicable project."
+    "q": "What should a deck project in Oakton plan for?",
+    "a": "Projects should screen for wooded-lot constraints, mature tree root zones, slope, drainage, and Fairfax County permit requirements before design is final. RPA or waterway-adjacent properties need early environmental review. Blake Lane, Waples Mill, Vale, Fox Mill Estates, and the Oak Marr area are the planning areas named here. Replace-or-resurface decisions should rest on frame, ledger, footing, stair, and railing condition."
   },
   {
-    title: "Premium Material Standards",
-    desc: "Oakton homeowners expect the best. We build exclusively with Trex Transcend, TimberTech AZEK, and comparable top-tier composites paired with cable, glass, or custom metal railings."
+    "q": "What deck services does Loudoun Decks offer in Oakton?",
+    "a": "These are services named on the Loudoun Decks site, not a separate menu invented for Oakton. The work includes new custom decks, deck replacement, deck repair, and deck resurfacing when the existing frame is structurally sound. The homepage lists Trex, TimberTech, Fiberon, AZEK, and Wolf as composite and PVC options and labels the company a Trex Partner. Screened porches, open porches, and front porches are included, along with pergolas and gazebos. Patios, fencing, railings, under-deck patios, and fire pits are included when that scope is part of the project. Homeowners should verify current Trex profile details directly with Trex."
+  },
+  {
+    "q": "How are permits and HOA packages handled for Oakton?",
+    "a": "Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope. The permit note used here is the one published on the Loudoun Decks homepage. The table lists Fairfax County plan review at 3–5 weeks through PLUS / Building Development Division, calls Fairfax County the most documentation-heavy jurisdiction in Northern Virginia, and says sealed structural drawings, ledger bolt schedules, and footing depths are required up front. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."
+  },
+  {
+    "q": "Which documented project does this Oakton page cite?",
+    "a": "No Oakton project page was found. The documented project cited here is the February 2025 deck-construction gallery record in Reston, not Oakton. That record does not name a decking brand."
+  },
+  {
+    "q": "How do I contact Loudoun Decks about a Oakton deck?",
+    "a": "Oakton is listed by name under Fairfax County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville. Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."
   }
 ];
 
-const oaktonFAQs = [
-  {
-    q: "How much does a custom deck cost in Oakton, VA?",
-    a: "Oakton deck projects are typically priced in a written estimate. This reflects the larger lot sizes, premium material expectations (Trex Transcend, TimberTech AZEK), and the multi-level designs common on Oakton's sloped, wooded properties. Composite decks are priced in a written estimate per square foot installed depending on material and complexity."
-  },
-  {
-    q: "What permits does Oakton require for a deck?",
-    a: "Oakton falls under Fairfax County jurisdiction. All decks require building and zoning permits, with plan review typically taking 3-6 weeks. Properties near Difficult Run or other waterways may require additional Resource Protection Area (RPA) review. We handle all permit submissions and inspections."
-  },
-  {
-    q: "Can you build around mature trees on my Oakton property?",
-    a: "Yes — tree preservation is a core part of our Oakton work. Many properties here have mature oaks, hickories, and tulip poplars near the build zone. We design footing layouts that avoid critical root zones, use cantilevered framing where needed, and coordinate with Fairfax County's tree-save requirements to protect your landscape."
-  },
-  {
-    q: "Do Oakton neighborhoods have HOA or architectural review?",
-    a: "Fewer Oakton neighborhoods have formal HOAs compared to newer subdivisions, but many have deed restrictions or architectural review committees that govern exterior modifications. Fox Mill Estates, Vale area communities, and several others have specific guidelines. We research your property's restrictions before finalizing designs."
-  },
-  {
-    q: "What deck materials do you recommend for Oakton homes?",
-    a: "For Oakton's premium market, we primarily recommend Trex Transcend and TimberTech AZEK. Both offer realistic wood-grain textures, exceptional fade resistance, and manufacturer material warranties. We pair these with Trex Signature cable railings or glass panel systems. AZEK's PVC construction is especially well-suited for Oakton's shaded, wooded lots where moisture retention can be a concern."
-  },
-  {
-    q: "Can you build multi-level decks on sloped Oakton lots?",
-    a: "Multi-level design is one of our specialties, and Oakton's terrain makes it a frequent requirement. We engineer cascading deck structures that follow natural grade changes, creating distinct outdoor zones — dining, lounging, grilling — connected by code-compliant stairways. This approach turns a sloped backyard from a limitation into a design feature."
-  }
-];
-
-const oaktonFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": oaktonFAQs.map(({ q, a }) => ({
-    "@type": "Question",
-    "name": q,
-    "acceptedAnswer": { "@type": "Answer", "text": a }
-  }))
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
 };
-
-const expansionSections = [
-  {
-    title: "Oakton's Wooded Estate Lots",
-    paragraphs: [
-      "Oakton occupies a quiet, affluent corridor between Vienna and Fairfax, defined by its large wooded lots, established homes, and a character that feels distinctly different from the denser suburbs closer to DC. Properties in Oakton proper, Blake Lane, Waples Mill, Vale, Fox Mill Estates, and the Oak Marr area typically sit on half-acre to two-plus-acre lots shaded by mature hardwood canopy. This setting is exactly what draws homeowners to Oakton — and it shapes every deck project we build here.",
-      "Building on a wooded Oakton lot requires a deck builder who understands arboriculture as much as construction. Mature oaks, hickories, and tulip poplars often have root systems that extend 30 feet or more from the trunk. Standard footing placement can damage these root zones, leading to tree decline or loss — an outcome no Oakton homeowner wants. We survey the build area with tree protection in mind, positioning footings to avoid critical roots and using cantilevered framing to bridge sensitive zones.",
-      "The wooded setting also influences material selection. Shaded lots retain moisture longer than sun-exposed properties, which accelerates the deterioration of wood decking and makes mold growth a persistent maintenance issue. This is one reason we strongly recommend PVC-based products like TimberTech AZEK for Oakton builds — they are impervious to moisture absorption and resist mold without chemical treatments."
-    ]
-  },
-  {
-    title: "Premium Materials for Oakton Properties",
-    paragraphs: [
-      "Oakton's real estate market sets clear expectations for quality. Homes here range from a written estimate to well over a written estimate million, and homeowners invest accordingly in their outdoor spaces. We build exclusively with Trex Transcend, TimberTech AZEK, and comparable premium composites because these are the materials that match the caliber of Oakton properties. Standard-grade composite or pressure-treated lumber simply does not belong on homes in this market.",
-      "For Oakton projects, Trex Signature cable railings and glass panel systems are the most popular choices. Cable railings complement the wooded setting by preserving views of the tree canopy and natural landscape. Hidden fastener systems create a screw-free deck surface that feels like finished furniture. Integrated LED lighting — both in-deck and under-rail — extends the usable hours of your outdoor space through Virginia's long summer evenings and into the fall entertaining season.",
-      "The investment in premium materials pays for itself in two ways. First, you eliminate the ongoing maintenance costs that plague wood decks in Virginia's humid climate — no annual staining, no sanding, no board replacement. Second, in Oakton's competitive real estate market, a professionally built composite deck with modern railings and lighting is a genuine asset that buyers prioritize. Our Trex and TimberTech projects are designed to stay beautiful for 25 to 50 years with nothing more than occasional cleaning."
-    ]
-  },
-  {
-    title: "Environmental Considerations — Tree Protection and RPA",
-    paragraphs: [
-      "Several areas of Oakton are adjacent to Difficult Run, one of Fairfax County's significant stream corridors, and other tributaries that feed into the Potomac watershed. Properties near these waterways may fall within a Resource Protection Area (RPA) — an environmental overlay zone that restricts construction activity within 100 feet of the stream buffer. If your Oakton lot has an RPA designation, your deck project will require additional environmental review and potentially a water quality impact assessment.",
-      "We have extensive experience with Fairfax County's RPA process. We identify RPA boundaries early in the design phase, work with environmental consultants when required, and design deck footprints that minimize disturbance to the buffer zone. In some cases, we can design a deck that avoids the RPA entirely through strategic placement. In others, we prepare the mitigation plans that Fairfax County requires for approval. Either way, our familiarity with the process prevents the costly delays that catch less experienced builders off guard.",
-      "Beyond RPA, Fairfax County's tree-save ordinance applies to many Oakton lots. Mature trees above a certain caliper cannot be removed without replacement or mitigation. We coordinate with the county's tree-save requirements as part of every applicable Oakton project, ensuring that your deck is built in full compliance while preserving the wooded character that makes your property valuable."
-    ],
-    listItems: [
-      { label: "RPA Assessment", text: "Early identification of Resource Protection Area boundaries and environmental review requirements." },
-      { label: "Root-Zone Protection", text: "Footing layouts designed to avoid critical root systems of mature Oakton trees." },
-      { label: "Tree-Save Compliance", text: "Full coordination with Fairfax County's tree-save ordinance for protected specimens." },
-      { label: "Erosion Control", text: "Proper sediment and erosion measures during construction on sloped, wooded lots." }
-    ]
-  },
-  {
-    title: "Multi-Level Designs for Oakton's Terrain",
-    paragraphs: [
-      "Oakton's natural topography is one of its defining features — rolling terrain, gentle slopes, and grade changes that give properties character but also present construction challenges. A flat, single-level deck on a sloped Oakton lot wastes the site's potential and often looks out of place. Multi-level design is the solution, and it is one of our specialties.",
-      "We engineer cascading deck structures that follow the natural grade of your property, creating distinct outdoor zones at different elevations. A typical multi-level Oakton project might include an upper dining level adjacent to the home's kitchen, a mid-level lounging area with built-in seating, and a lower grilling station near grade level. Code-compliant stairways connect the levels, and integrated lighting ensures safe navigation after dark. The result transforms a sloped backyard from a limitation into the most compelling feature of your outdoor space.",
-      "Structural engineering is critical for multi-level builds. Each level requires its own footing and beam system, and the connections between levels must handle lateral loads as well as vertical. We work with licensed structural engineers on complex Oakton projects to ensure every element meets or exceeds Virginia building code. Our projects are designed to last decades, not just pass inspection."
-    ]
-  }
-];
 
 export default function OaktonDeckBuilderPage() {
   return (
-    <main>
-      <JsonLd data={oaktonFaqSchema} />
-      <LocalBusinessSchema city="Oakton" url="https://ldndecks.com/deck-builder-oakton-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-oakton-va" name="Deck Builder in Oakton, VA | Premium Composite Decks | Loudoun Decks" description="Custom deck builder in Oakton, VA. Google reviews. Trex Transcend &amp; TimberTech AZEK decks for Oakton estate homes. Multi-level designs, screened porches, outdoor kitchens. Free estimate." speakable />
-      <ServicesHeader
-        subtext="Oakton, VA's Premium Deck Builder"
-        title="Custom Deck Builder in Oakton, VA"
-        description="Loudoun Decks builds premium composite decks, multi-level structures, and screened porches for Oakton's wooded estate properties. Trex product-line planning. publicly documented reputation."
+    <>
+      <JsonLd data={faqSchema} />
+      <LocalBusinessSchema city="Oakton" url={PAGE_URL} description={PAGE_DESCRIPTION} />
+      <WebPageSchema
+        dateModified="2026-11-03"
+        url={PAGE_URL}
+        name={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        speakable
       />
-
-      {/* Pricing Anchor - Conversion Filtering */}
-      <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: a written estimate</strong>
-            <br />
-            We focus on <strong style={{ color: '#111' }}>full custom Oakton builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
-          </p>
+      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck builder in Oakton, VA</h1>
+          <p data-speakable="true" style={{ color: '#ccc', fontSize: '1.1rem' }}>{PAGE_DESCRIPTION}</p>
+          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+          </div>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Virginia Class A contractor, DPOR license #2705191673. Office: 13704 Winding Oak Cir, Centreville, VA 20121.</p>
         </div>
       </section>
-
-      <ServiceMain
-        subtitle="Oakton's Trusted Choice"
-        title="Deck Builder Oakton VA - Premium Builds for Wooded Estate Lots"
-        description="We design and build the luxury outdoor environments Oakton homeowners expect. Multi-level builds, premium composite, tree protection, and full Fairfax County permit management from a written estimate."
-        listItems={[
-          "Trex, TimberTech and AZEK material planning",
-          "Specialists in wooded lot construction and tree preservation",
-          "Custom multi-level designs for Oakton's sloped terrain",
-          "Fairfax County permits including RPA environmental review",
-          "Public reviews - call (571) 655-7207"
-        ]}
-        image1="/images/img64.jpeg"
-        image2="/images/img21.jpeg"
-      />
       <CityLeadFormSection
         city="Oakton"
         county="Fairfax County"
-        service="premium deck replacement or composite deck"
-        formLocation="local_city_oakton_deck_builder"
+        service="deck replacement, composite deck, or screened porch"
       />
-      <PlanningUpdate
-        market="Oakton decks in 2026"
-        notes={[
-          "Oakton projects should screen for wooded-lot constraints, mature tree root zones, slope, drainage, and Fairfax County permit requirements before design is finalized.",
-          "Deck replacement and resurfacing decisions should be based on the frame, ledger, footing, stair, and railing condition, not only surface-board age.",
-          "RPA or waterway-adjacent properties need early environmental review planning before premium deck features are priced."
-        ]}
+      <GeoAnswerBlock
+        question="Who builds decks in Oakton, VA?"
+        answer={faqs[0].a}
+        facts={[faqs[1].a]}
         links={[
-          { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
-          { href: "/deck-safety-inspection-checklist", label: "Safety checklist" },
-          { href: "/deck-resurfacing-vs-replacement", label: "Resurface vs replace" }
+          { href: '/get-estimate', label: "Request a Oakton estimate" },
+          { href: "/showcase/custom-deck-reston", label: "CUSTOM DECK INSTALLING" },
         ]}
       />
-      <PremiumCityLeadQualifier
-        city="Oakton"
-        county="Fairfax County"
-        intro="Oakton projects need early qualification around wooded-lot constraints, tree roots, grade change, drainage, RPA exposure, and whether the homeowner wants a premium composite replacement, multi-level structure, screened porch, or a repair path instead."
-        projectTypes={[
-          'Premium composite replacement on wooded estate lots',
-          'Multi-level decks for sloped Oakton backyards',
-          'Screened porch and deck combinations near mature tree canopy',
-          'RPA-aware or waterway-adjacent planning where extra review may apply',
-        ]}
-        planningSignals={[
-          'Photos showing the current deck, slope, trees, stairs, and equipment access',
-          'Any RPA, stream, drainage, or tree-save concerns already known',
-          'Existing frame age and whether resurfacing is being considered',
-          'Preferred material tier: Trex Transcend, TimberTech/AZEK, railing, lighting, and drainage',
-        ]}
-        links={[
-          { href: '/get-estimate', label: 'Request Oakton estimate', primary: true },
-          { href: '/deck-safety-inspection-checklist', label: 'Safety checklist' },
-          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
-        ]}
-      />
-      <ServiceContentExpansion sections={expansionSections} />
+      <article style={{ padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img17.jpeg"
+              alt="Deck photo on the Loudoun Decks Oakton, VA page"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Planning a deck in Oakton</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[0].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{faqs[1].a}</p>
 
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-          <Image
-            src="/images/img17.jpeg"
-            alt="Premium custom deck built by LDN Decks in Oakton, Virginia"
-            fill
-            style={{ objectFit: 'cover' }}
-            sizes="(max-width: 900px) 100vw, 900px"
-          />
-        </div>
-        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Oakton Project Planning Example: Fox Mill Estates Multi-Level Deck</h2>
-        <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
-          A typical Oakton multi-level deck concept might include TimberTech AZEK or Trex boards, cable or aluminum railing,
-          integrated lighting, and a layout that follows natural grade changes between an upper dining area and lower lounge level.
-          Wooded lots should be reviewed for tree root zones, footing locations, drainage, and Fairfax County permit requirements.
-          The right Oakton scope should be confirmed after a site visit, wooded-lot access review, root-zone planning, permit-path check, and structural inspection of any existing deck.
-        </p>
-      </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Services in Oakton</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[2].a}</p>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
 
-      <ServiceInclusions
-        title="Why Oakton Chooses Loudoun Decks"
-        description="Wooded lot expertise, premium materials, and a process built for Oakton's estate properties."
-        items={inclusions}
-      />
-      <ProcessSteps />
-      <ServicesFAQ canonicalUrl="https://ldndecks.com/deck-builder-oakton-va" withSchema={false}
-        title="Deck Builder Oakton VA - FAQs"
-        faqs={oaktonFAQs}
-      />
-      <ServiceAreasGrid />
-      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
-        <ul style={{ listStyle: 'none', padding: 0 }}>
-          {[
-            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
-            ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
-            ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
-            ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
-            ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Comparison'],
-          ].map(([href, text]) => (
-            <li key={href} style={{ marginBottom: '0.5rem' }}>
-              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
-            </li>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2rem 0 1rem' }}>Permits and HOA paperwork</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope."}</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"The permit note used here is the one published on the Loudoun Decks homepage. The table lists Fairfax County plan review at 3–5 weeks through PLUS / Building Development Division, calls Fairfax County the most documentation-heavy jurisdiction in Northern Virginia, and says sealed structural drawings, ledger bolt schedules, and footing depths are required up front. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Homepage permit table</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>A documented project</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[4].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/showcase/custom-deck-reston" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"CUSTOM DECK INSTALLING"}</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Service area</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Oakton is listed by name under Fairfax County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville."}</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
+            <Link key="/deck-builder-vienna-va" href="/deck-builder-vienna-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Vienna</Link>
+            <Link key="/deck-builder-fairfax-va" href="/deck-builder-fairfax-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Fairfax</Link>
+            <Link key="/deck-builder-reston-va" href="/deck-builder-reston-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Reston</Link>
+            <Link key="/deck-builder-great-falls-va" href="/deck-builder-great-falls-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Great Falls</Link>
+          </div>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Contact</h2>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{"Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>FAQ</h2>
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+            </details>
           ))}
 
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
-            <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related pages</h2>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/showcase/custom-deck-reston" style={{ marginBottom: '0.5rem' }}><Link href="/showcase/custom-deck-reston" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Reston deck gallery"}</Link></li>
+              <li key="/deck-permit-fairfax-county-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Fairfax County deck permit guide"}</Link></li>
+              <li key="/near-you/fairfax-county" style={{ marginBottom: '0.5rem' }}><Link href="/near-you/fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Fairfax County deck builder hub"}</Link></li>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
           </ul>
+        </div>
+      </article>
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="Oakton" />
+        </div>
       </section>
-      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Oakton" /></div></section>
-      <SimpleCTA title="Build Your Premium Oakton Deck" buttonText="Get Free Estimate" link="/get-estimate" />
-      <RelatedGuides currentPath="/deck-builder-oakton-va" />
-      <NamedAuthor context="Oakton and Northern Virginia" lastUpdated="2026-10-18" />
-      <ContactHome />
-    </main>
+      <SimpleCTA title="Request a Oakton deck estimate" buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Oakton, VA" lastUpdated="2026-11-03" />
+      <ContactHome
+        pageContext={{
+          city: "Oakton",
+          county: "Fairfax County",
+          service: "Oakton deck replacement, composite deck, or screened porch",
+          pageType: 'local_city_landing_page',
+        }}
+      />
+    </>
   );
 }

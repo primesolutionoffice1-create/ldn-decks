@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ShowcaseHeader from '@/components/ShowcaseHeader';
 import ShowcaseGrid from '@/components/ShowcaseGrid';
 import ShowcaseStats from '@/components/ShowcaseStats';
@@ -64,7 +65,7 @@ export default function ShowcasePage() {
             How to use the Loudoun Decks project gallery
           </h2>
           <p style={{ color: '#444', lineHeight: 1.75, fontSize: '1.05rem', marginBottom: '1rem' }}>
-            This gallery helps Northern Virginia homeowners compare deck, resurfacing, balcony, fence, and outdoor living project types before requesting a written estimate. Each gallery record should be read as visual planning context unless the project has been separately verified with owner permission, scope details, and evidence notes.
+            This gallery helps Northern Virginia homeowners compare deck, resurfacing, balcony, fence, and outdoor living project types before requesting a written estimate. Each gallery record should be read as visual planning context unless the project has been separately verified with owner permission, scope details, and evidence notes. For a documented project currently in progress, read the <Link href="/blog/deck-repair-or-rebuild-fairfax-station">Fairfax Station rebuild article</Link>.
           </p>
           <p style={{ color: '#444', lineHeight: 1.75, fontSize: '1.05rem', marginBottom: '1rem' }}>
             A Loudoun Decks project gallery is a planning resource that explains how similar outdoor living projects
@@ -81,7 +82,7 @@ export default function ShowcasePage() {
             {[
               ['Definition', 'A project gallery page shows visual scope, location context, and the planning questions a similar homeowner should ask before approving a deck or outdoor living proposal.'],
               ['Planning facts', 'The strongest estimate uses 7 inputs: photos, dimensions, existing frame condition, material preferences, permit or HOA notes, budget range, and timeline.'],
-              ['Proof rule', 'Customer quotes, ratings, detailed claims, and formal case-study labels are published only after the evidence ledger confirms permission and source details.'],
+              ['Proof rule', 'Customer quotes, ratings, and case-study details are published only with the homeowner\'s permission and a verifiable source.'],
               ['Next step', 'Follow 4 steps: compare examples, choose a service path, gather project inputs, then request a written estimate for a project-specific scope.'],
             ].map(([title, text]) => (
               <article key={title} style={{ border: '1px solid #e5e7eb', borderRadius: 8, padding: '1rem', background: '#fafafa' }}>

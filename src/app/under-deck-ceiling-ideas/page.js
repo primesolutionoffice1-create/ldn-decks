@@ -8,6 +8,8 @@ import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { PVC_QUOTED, QUOTE_SOURCE, REVIEWED_ISO, REVIEWED_LABEL } from '@/lib/quotedPrices';
 
 export const metadata = buildMetadata({
   path: '/under-deck-ceiling-ideas',
@@ -19,7 +21,7 @@ export const metadata = buildMetadata({
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does an under-deck ceiling system cost?", acceptedAnswer: { "@type": "Answer", text: "Under-deck ceiling systems in Northern Virginia are priced in a written estimate per square foot installed. For a typical 300 sqft under-deck area: basic gutter system a written estimate, vinyl ceiling panels a written estimate, premium aluminum ceiling with lighting a written estimate." } },
+    { "@type": "Question", name: "How much does an under-deck ceiling system cost?", acceptedAnswer: { "@type": "Answer", text: `${QUOTE_SOURCE} ${PVC_QUOTED} Other under-deck systems on this page are priced in the written estimate after a site visit.` } },
     { "@type": "Question", name: "What is the best under-deck drainage system?", acceptedAnswer: { "@type": "Answer", text: "Trex RainEscape and Zip-UP UnderDeck are the two leading systems. Trex RainEscape is a trough-and-tape system installed above the joists invisible from below. Zip-UP is a panel system that serves as both ceiling and drainage. Both keep the area below 100% dry." } },
     { "@type": "Question", name: "Can I finish the space under my deck?", acceptedAnswer: { "@type": "Answer", text: "Yes an under-deck drainage/ceiling system creates a dry, usable space below. Common uses: patio seating, outdoor kitchen, storage, dog run, hot tub placement. It effectively doubles your outdoor living area on a two-story deck." } },
   ],
@@ -31,7 +33,7 @@ export default function UnderDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/under-deck-ceiling-ideas" name="Under-Deck Ceiling Ideas (5 Options)" description="Turn the space under your elevated deck into usable living area. Under-deck drainage systems, ceiling panels, lighting. a written estimate in Northern Virginia." speakable />
+      <WebPageSchema dateModified={REVIEWED_ISO} url="https://ldndecks.com/under-deck-ceiling-ideas" name="Under-Deck Ceiling Ideas (5 Options)" description="Turn the space under your elevated deck into usable living area. A PVC under-deck ceiling was $3,872–$5,632 in recent Loudoun Decks quotes. The written estimate is the project price." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Under-Deck Ceiling Ideas</h1>
@@ -51,6 +53,8 @@ export default function UnderDeckPage() {
               priority
             />
           </div>
+          <QuotedPricesBlock paragraphs={[PVC_QUOTED]} />
+          <p style={S.p}>Last reviewed: {REVIEWED_LABEL}.</p>
           <h2 style={S.h2}>Standard vs. Premium Under-Deck Systems</h2>
           <p style={S.p}>If your deck is elevated (second-story or walkout basement), the space underneath is often wasted dark, damp, and dripping during rain. An under-deck ceiling system solves all three problems: it creates a <strong>dry, finished ceiling</strong> that turns dead space into a functional outdoor room.</p>
           <p style={S.p}>On a typical Northern Virginia two-story home, this means gaining <strong>200–400+ sqft of covered outdoor space at a fraction of the cost</strong> of building a separate covered structure.</p>
@@ -91,14 +95,10 @@ export default function UnderDeckPage() {
           <p style={S.p}>Under-deck spaces tend to be dark. With an aluminum or wood ceiling, you can add recessed LED lights (a written estimate for a typical area) that transform the space into an inviting evening room. Vinyl panels can accommodate surface-mount fixtures. Even the basic RainEscape system works with string lights hung from joists.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "How much does an under-deck ceiling cost?", a: "Basic drainage (RainEscape): a written estimate. Vinyl panels: a written estimate. Premium aluminum: a written estimate. For a typical 300 sqft under-deck area." },
-            { q: "Best under-deck drainage system?", a: "Trex RainEscape (hidden, affordable) or Zip-UP (ceiling + drainage in one). Both keep the space 100% dry." },
-            { q: "Can I finish the space under my deck?", a: "Yes drainage/ceiling system creates dry usable space. Common uses: patio seating, outdoor kitchen, hot tub, storage." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {faqSchema.mainEntity.map((item) => (
+            <details key={item.name} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{item.name}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{item.acceptedAnswer.text}</p>
             </details>
           ))}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
@@ -115,7 +115,7 @@ export default function UnderDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Double Your Outdoor Space" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated={REVIEWED_LABEL} />
 
       <RelatedGuides currentPath="/under-deck-ceiling-ideas" />
 

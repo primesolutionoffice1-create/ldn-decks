@@ -1,4 +1,5 @@
 import { SERVICE_AREA_FAQ_ANSWER } from './serviceArea';
+import { OPEN_DECK_RANGE, QUOTE_LABEL } from './quotedPrices';
 
 export const publicFaqCategories = [
   {
@@ -99,7 +100,7 @@ export const publicFaqCategories = [
       },
       {
         q: 'How much does a composite deck cost?',
-        a: 'The price depends on the property, the size, the structure, and the material. Request a written estimate for the project. This site does not publish one price that applies to every deck.',
+        a: `${QUOTE_LABEL}: ${OPEN_DECK_RANGE} Those are quoted prices, not one price for every deck. The written estimate after a site visit is the only project price.`,
       },
       {
         q: 'Do you provide free estimates?',

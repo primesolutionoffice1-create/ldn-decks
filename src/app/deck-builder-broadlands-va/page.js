@@ -1,210 +1,204 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import ServicesHeader from '@/components/ServicesHeader';
-import ServiceMain from '@/components/ServiceMain';
-import ServiceInclusions from '@/components/ServiceInclusions';
-import ServiceContentExpansion from '@/components/ServiceContentExpansion';
-import ProcessSteps from '@/components/ProcessSteps';
-import ServicesFAQ from '@/components/ServicesFAQ';
-import ContactHome from '@/components/ContactHome';
-import RelatedGuides from '@/components/RelatedGuides';
-import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import SimpleCTA from '@/components/SimpleCTA';
+import JsonLd from '@/components/JsonLd';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import ContactHome from '@/components/ContactHome';
+import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import PlanningUpdate from '@/components/PlanningUpdate';
+import CallLink from '@/components/CallLink';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
-import { buildMetadata } from '@/lib/seo';
 
-const PATH = '/deck-builder-broadlands-va';
-const URL = `https://ldndecks.com${PATH}`;
+const PATH = "/deck-builder-broadlands-va";
+const PAGE_URL = "https://ldndecks.com/deck-builder-broadlands-va";
+const PAGE_TITLE = "Deck Builder in Broadlands, VA | Loudoun Decks";
+const PAGE_DESCRIPTION = "Broadlands deck builder for composite replacement and resurfacing after frame inspection, with Loudoun County permits and Community Association review.";
 
 export const metadata = buildMetadata({
   path: PATH,
-  title: 'Deck Builder in Broadlands, VA | Composite Deck Replacement',
-  description: 'Broadlands, VA deck builder for composite deck replacement, HOA packet planning, Loudoun County permits, railing upgrades, and written estimates.',
-  image: '/social/deck-builder-leesburg-va-social.png',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  image: "/social/deck-builder-leesburg-va-social.png",
 });
-
-const inclusions = [
-  {
-    title: 'Broadlands HOA packet planning',
-    desc: 'We organize material selections, railing notes, footprint details, and drawing requirements before the Broadlands ARC review starts.',
-  },
-  {
-    title: 'Composite replacement strategy',
-    desc: 'Broadlands has many late-1990s and early-2000s pressure-treated decks that now need resurfacing analysis, structural review, or full replacement.',
-  },
-  {
-    title: 'Loudoun County permit coordination',
-    desc: 'We align Broadlands architectural review with the Loudoun County permit path so homeowners understand what must happen before construction.',
-  },
-];
-
-const expansionSections = [
-  {
-    title: 'A High-Intent Ashburn-Area Replacement Market',
-    paragraphs: [
-      'Broadlands is one of the strongest deck replacement markets in eastern Loudoun County because many homes were built during the late 1990s and early 2000s. Original pressure-treated decks in that age range are often entering the point where surface boards, railing posts, stairs, and ledger flashing should be inspected before the homeowner spends money on cosmetic repairs.',
-      'That makes Broadlands different from a new-construction market. Many homeowners are not simply asking for a small add-on deck. They are comparing composite deck replacement, resurfacing, railings, lighting, stair upgrades, and whether the existing frame is still worth keeping.',
-    ],
-  },
-  {
-    title: 'Broadlands Community Association Review',
-    paragraphs: [
-      'Broadlands deck projects should be planned around the Community Association architectural review process from the beginning. A clean packet usually includes the proposed deck footprint, material selections, railing style, color notes, elevation drawings, and photographs that make the scope clear before the county permit process begins.',
-      'Composite materials are usually a strong fit because they align with the community character and reduce ongoing maintenance. Natural wood-tone Trex, TimberTech, and AZEK/PVC selections tend to be easier to present than unusual colors or designs that do not match the home exterior.',
-    ],
-  },
-  {
-    title: 'What Broadlands Homeowners Usually Need',
-    paragraphs: [
-      'The most common Broadlands projects fall into four groups: full composite deck replacement, structural resurfacing after a frame inspection, townhouse deck additions, and larger outdoor living upgrades that combine deck, stairs, lighting, and patio space.',
-      'The right recommendation depends on the condition of posts, footings, joists, ledger attachment, flashing, stairs, and railings. A deck that looks worn from the top may still be a resurfacing candidate, but a deck with loose railing posts, water intrusion at the ledger, or undersized framing should be approached as a replacement project.',
-    ],
-    listItems: [
-      { label: 'Composite deck replacement', text: 'Best for older pressure-treated decks where structure and surface have reached the end of practical service life.' },
-      { label: 'Deck resurfacing', text: 'Best when the existing frame, ledger, posts, and footings are sound enough to support a new low-maintenance surface.' },
-      { label: 'Townhouse deck additions', text: 'Best when the homeowner needs HOA-friendly footprint planning and clean Loudoun County permit documentation.' },
-      { label: 'Railing and stair upgrades', text: 'Best when safety, access, and curb appeal matter as much as the deck boards themselves.' },
-    ],
-  },
-  {
-    title: 'Budget and Timeline Expectations',
-    paragraphs: [
-      'Broadlands homeowners should budget after the existing structure is inspected and the HOA/permit path is understood. A 300 square foot composite replacement can sit in a very different range than a multi-level deck with lighting, upgraded railing, a wider stair run, or drainage improvements.',
-      'A practical Broadlands planning range is usually from the high five figures for premium composite replacement and upward when larger outdoor living features are included. The written estimate should separate material selection, railing, stairs, framing assumptions, permits, and optional upgrades so the homeowner can make decisions without guesswork.',
-    ],
-  },
-];
 
 const faqs = [
   {
-    q: 'Do Broadlands deck projects need HOA approval?',
-    a: 'Yes. Broadlands deck projects typically need Broadlands Community Association architectural review before the Loudoun County permit application is finalized. The review packet should describe the proposed footprint, materials, colors, railing style, stairs, and visible exterior changes so the association can evaluate the project clearly.',
+    "q": "Who builds decks in Broadlands, VA?",
+    "a": "Loudoun Decks LLC is a Centreville-based residential deck contractor and a Virginia Class A contractor (DPOR license #2705191673), owned by Nicolae (Nick) Zugrav. Broadlands is in eastern Loudoun County and is planned separately from Ashburn."
   },
   {
-    q: 'Who issues the building permit for a Broadlands deck?',
-    a: 'Broadlands is in unincorporated Loudoun County, so structural deck permits generally follow the Loudoun County building permit process. A typical permit package includes structural drawings, footing details, framing layout, ledger attachment, stair information, and guardrail specifications. The exact requirement should always be confirmed by address and scope.',
+    "q": "What should a deck project in Broadlands plan for?",
+    "a": "Many Broadlands homes date from the late 1990s and early 2000s, so older pressure-treated frames should be inspected before choosing resurfacing. Projects should be planned around the Broadlands Community Association architectural review, with footprint, materials, railing style, color notes, elevation drawings, and photos in the packet."
   },
   {
-    q: 'Why are many Broadlands decks ready for replacement now?',
-    a: 'Many Broadlands homes were built from the late 1990s through the mid-2000s, which puts original pressure-treated decks in the 20 to 25 year range. At that age, homeowners commonly see worn boards, loose railing posts, stair movement, hardware corrosion, and possible ledger flashing concerns. Those symptoms should be inspected before pricing a simple resurfacing job.',
+    "q": "What deck services does Loudoun Decks offer in Broadlands?",
+    "a": "These are services named on the Loudoun Decks site, not a separate menu invented for Broadlands. The work includes new custom decks, deck replacement, deck repair, and deck resurfacing when the existing frame is structurally sound. The homepage lists Trex, TimberTech, Fiberon, AZEK, and Wolf as composite and PVC options and labels the company a Trex Partner. Screened porches, open porches, and front porches are included, along with pergolas and gazebos. Patios, fencing, railings, under-deck patios, and fire pits are included when that scope is part of the project. Homeowners should verify current Trex profile details directly with Trex."
   },
   {
-    q: 'Is composite decking a good fit for Broadlands homes?',
-    a: 'Composite and PVC decking are usually a strong fit for Broadlands because homeowners want a clean finished look without repeated sanding and staining. Trex, TimberTech, and AZEK choices should be compared by color, heat exposure, traction, railing compatibility, warranty, and how well the selected finish matches the home exterior and HOA expectations.',
+    "q": "How are permits and HOA packages handled for Broadlands?",
+    "a": "Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope. The permit note used here is the one published on the Loudoun Decks homepage. Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. The same table lists Loudoun County plan review at 2–4 weeks through the LOLA online portal. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."
   },
   {
-    q: 'Can an old Broadlands deck be resurfaced instead of replaced?',
-    a: 'Sometimes. Resurfacing only makes sense when posts, footings, beams, joists, ledger attachment, flashing, stairs, and railings are structurally sound. If the frame is undersized, water-damaged, poorly flashed, or no longer compliant with current expectations, full replacement is usually the safer long-term investment.',
+    "q": "Which documented project does this Broadlands page cite?",
+    "a": "No Broadlands project page was found. The documented project cited here is the October 2024 composite deck gallery record in Ashburn, not Broadlands."
   },
+  {
+    "q": "How do I contact Loudoun Decks about a Broadlands deck?",
+    "a": "Broadlands is listed by name under Loudoun County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville. Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."
+  }
 ];
 
-export default function DeckBuilderBroadlandsPage() {
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+};
+
+export default function BroadlandsDeckBuilderPage() {
   return (
-    <main>
-      <LocalBusinessSchema city="Broadlands" url={URL} />
+    <>
+      <JsonLd data={faqSchema} />
+      <LocalBusinessSchema city="Broadlands" url={PAGE_URL} description={PAGE_DESCRIPTION} />
       <WebPageSchema
-        dateModified="2026-07-18"
-        url={URL}
-        name="Deck Builder in Broadlands, VA | Composite Deck Replacement"
-        description="Broadlands, VA deck builder for composite deck replacement, HOA packet planning, Loudoun County permits, railing upgrades, and written estimates."
+        dateModified="2026-11-03"
+        url={PAGE_URL}
+        name={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
         speakable
       />
-      <ServicesHeader
-        subtext="Broadlands, VA Deck Builder"
-        title="Composite Deck Builder in Broadlands, VA"
-        description="Loudoun Decks helps Broadlands homeowners replace aging pressure-treated decks with low-maintenance composite outdoor living spaces, HOA-aware planning, and Loudoun County permit support."
-      />
-      <ServiceMain
-        subtitle="Broadlands Deck Replacement"
-        title="Composite Deck Replacement and HOA-Ready Planning for Broadlands"
-        description="Broadlands projects need a clear decision between resurfacing and full replacement. We inspect the existing structure, plan the HOA packet, compare composite materials, and prepare a written scope before construction begins."
-        listTitle="Broadlands project planning includes:"
-        listItems={[
-          'Composite and PVC decking options from Trex, TimberTech, and AZEK',
-          'Broadlands Community Association packet planning',
-          'Loudoun County permit coordination and inspection sequencing',
-          'Deck resurfacing vs full replacement guidance after framing review',
-          'Railing, stair, lighting, fascia, and patio add-on planning',
-        ]}
-        image1="/images/img17.jpeg"
-        image2="/images/img36.jpeg"
-        image1Alt="Composite deck replacement planning for Broadlands, Virginia homeowners"
-        image2Alt="Premium outdoor living deck detail for a Loudoun County home"
-      />
+      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck builder in Broadlands, VA</h1>
+          <p data-speakable="true" style={{ color: '#ccc', fontSize: '1.1rem' }}>{PAGE_DESCRIPTION}</p>
+          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+          </div>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Virginia Class A contractor, DPOR license #2705191673. Office: 13704 Winding Oak Cir, Centreville, VA 20121.</p>
+        </div>
+      </section>
       <CityLeadFormSection
         city="Broadlands"
         county="Loudoun County"
-        service="composite deck replacement, resurfacing, railing, or outdoor living project"
-      />
-      <PlanningUpdate
-        market="Broadlands deck projects in 2026"
-        notes={[
-          'Broadlands homeowners should inspect older pressure-treated frames before choosing resurfacing.',
-          'HOA packet planning should happen before final deck color, railing, and stair decisions.',
-          'Composite replacement is often the strongest fit for 20+ year old Broadlands decks where maintenance has become a recurring problem.',
-        ]}
-        links={[
-          { href: '/broadlands-hoa-deck-rules', label: 'Broadlands HOA guide' },
-          { href: '/deck-builder-ashburn-va', label: 'Ashburn deck builder' },
-          { href: '/deck-permit-loudoun-county-virginia', label: 'Loudoun permit guide' },
-        ]}
+        service="deck replacement, composite deck, or screened porch"
       />
       <GeoAnswerBlock
-        question="What should Broadlands homeowners know before replacing a deck?"
-        answer="Broadlands homeowners should start with a structural inspection and HOA packet plan. Many original pressure-treated decks are now old enough that resurfacing, railing replacement, stair upgrades, ledger flashing, and full composite replacement should be compared before approving a final written estimate."
-        facts={[
-          'Primary buyer intent: composite replacement, HOA approval support, and low-maintenance outdoor living.',
-          'Best conversion path: written estimate that separates framing condition, material choices, permit steps, and optional upgrades.',
-        ]}
+        question="Who builds decks in Broadlands, VA?"
+        answer={faqs[0].a}
+        facts={[faqs[1].a]}
         links={[
-          { href: '/get-estimate', label: 'Request a Broadlands estimate' },
-          { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
-          { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost guide' },
+          { href: '/get-estimate', label: "Request a Broadlands estimate" },
+          { href: "/showcase/new-composite-deck-ashburn", label: "BUILD NEW COMPOSITE DECK" },
         ]}
       />
-      <ServiceContentExpansion sections={expansionSections} />
-      <ServiceInclusions
-        title="Why Broadlands Homeowners Choose Loudoun Decks"
-        description="We focus on deck replacement decisions where structure, materials, HOA approval, and permit timing all affect the final investment."
-        items={inclusions}
-      />
-      <ProcessSteps />
-      <ServicesFAQ
-        title="Broadlands Deck Builder FAQs"
-        faqs={faqs}
-        canonicalUrl={URL}
-      />
-      <SimpleCTA title="Plan a Broadlands Composite Deck Replacement" buttonText="Request Written Estimate" link="/get-estimate" />
-      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem' }}>Related Broadlands and Loudoun Guides</h2>
-        <ul style={{ listStyle: 'none', padding: 0, lineHeight: 1.8 }}>
-          {[
-            ['/broadlands-hoa-deck-rules', 'Broadlands HOA deck rules'],
-            ['/deck-builder-aldie-va', 'Aldie deck builder'],
-            ['/deck-builder-ashburn-va', 'Ashburn deck builder'],
-            ['/deck-builder-brambleton-va', 'Brambleton deck builder'],
-            ['/deck-builder-lansdowne-va', 'Lansdowne deck builder'],
-            ['/near-you/loudoun-county', 'Loudoun County deck builder hub'],
-            ['/deck-permit-loudoun-county-virginia', 'Loudoun County deck permit guide'],
-            ['/services/deck-replacement', 'Deck replacement services'],
-            ['/services/deck-resurfacing', 'Deck resurfacing services'],
-            ['/reviews', 'Public review profiles'],
-          ].map(([href, text]) => (
-            <li key={href}>
-              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 700 }}>{text} -&gt;</Link>
-            </li>
+      <article style={{ padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img17.jpeg"
+              alt="Deck photo on the Loudoun Decks Broadlands, VA page"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Planning a deck in Broadlands</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[0].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{faqs[1].a}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Services in Broadlands</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[2].a}</p>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2rem 0 1rem' }}>Permits and HOA paperwork</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope."}</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"The permit note used here is the one published on the Loudoun Decks homepage. Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. The same table lists Loudoun County plan review at 2–4 weeks through the LOLA online portal. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Homepage permit table</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>A documented project</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[4].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/showcase/new-composite-deck-ashburn" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"BUILD NEW COMPOSITE DECK"}</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Service area</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Broadlands is listed by name under Loudoun County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville."}</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
+            <Link key="/deck-builder-ashburn-va" href="/deck-builder-ashburn-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Ashburn</Link>
+            <Link key="/deck-builder-brambleton-va" href="/deck-builder-brambleton-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Brambleton</Link>
+            <Link key="/deck-builder-one-loudoun-va" href="/deck-builder-one-loudoun-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>One Loudoun</Link>
+            <Link key="/deck-builder-leesburg-va" href="/deck-builder-leesburg-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Leesburg</Link>
+          </div>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Contact</h2>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{"Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>FAQ</h2>
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+            </details>
           ))}
-        </ul>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related pages</h2>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/broadlands-hoa-deck-rules" style={{ marginBottom: '0.5rem' }}><Link href="/broadlands-hoa-deck-rules" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Broadlands HOA deck rules"}</Link></li>
+              <li key="/showcase/new-composite-deck-ashburn" style={{ marginBottom: '0.5rem' }}><Link href="/showcase/new-composite-deck-ashburn" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Ashburn composite deck gallery"}</Link></li>
+              <li key="/deck-builder-ashburn-va" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-ashburn-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Ashburn deck builder"}</Link></li>
+              <li key="/deck-permit-loudoun-county-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Loudoun County deck permit guide"}</Link></li>
+              <li key="/near-you/loudoun-county" style={{ marginBottom: '0.5rem' }}><Link href="/near-you/loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Loudoun County deck builder hub"}</Link></li>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
+        </div>
+      </article>
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="Broadlands" />
+        </div>
       </section>
-      <ServiceAreasGrid />
-      <RelatedGuides currentPath={PATH} />
-      <NamedAuthor context="Broadlands, Ashburn, and Loudoun County deck replacement planning" lastUpdated="2026-07-18" />
-      <ContactHome />
-    </main>
+      <SimpleCTA title="Request a Broadlands deck estimate" buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Broadlands, VA" lastUpdated="2026-11-03" />
+      <ContactHome
+        pageContext={{
+          city: "Broadlands",
+          county: "Loudoun County",
+          service: "Broadlands deck replacement, composite deck, or screened porch",
+          pageType: 'local_city_landing_page',
+        }}
+      />
+    </>
   );
 }

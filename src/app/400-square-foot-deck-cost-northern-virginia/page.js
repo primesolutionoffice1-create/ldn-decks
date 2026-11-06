@@ -9,12 +9,14 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import { buildMetadata } from '@/lib/seo';
 import CallLink from '@/components/CallLink';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { OPEN_DECK_QUOTED, QUOTE_SOURCE, REVIEWED_ISO, REVIEWED_LABEL, SIZE_400 } from '@/lib/quotedPrices';
 
 const PATH = '/400-square-foot-deck-cost-northern-virginia';
-const UPDATED = '2026-10-25';
+const UPDATED = REVIEWED_ISO;
 const PAGE_NAME = '400 Square Foot Deck Cost in Northern Virginia (2026)';
 const META_TITLE = '400 Sq Ft Deck Cost in Northern Virginia | Loudoun Decks';
-const PAGE_DESCRIPTION = 'About $14,000–$32,000 for 400 sq ft at $35–$80/sq ft (RemodelCalculators, Oct 11, 2026). Angi lists $30–$60/sq ft. A written estimate is the project price.';
+const PAGE_DESCRIPTION = 'Loudoun Decks 2026 quoted prices: new open decks about $61–$102 per sq ft, most around $64–$68. No exact 400 sq ft quote in this set. External benchmarks are labeled below.';
 
 export const metadata = buildMetadata({
   path: PATH,
@@ -23,7 +25,7 @@ export const metadata = buildMetadata({
   image: '/social/400-square-foot-deck-cost-northern-virginia-social.png',
 });
 
-const BENCHMARK = 'For a simple, low-height composite deck with standard railing and without complex stairs or elevation, external 2026 benchmarks put installed cost at $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026). For 400 sq ft that is about $14,000–$32,000. Angi lists $30–$60 per square foot for deck construction, updated September 24, 2026. These are national planning estimates, not Loudoun Decks prices. Permits, demolition, elevation, and complex stairs are excluded. A written estimate after a site visit is the only project price.';
+const BENCHMARK = `${QUOTE_SOURCE} ${OPEN_DECK_QUOTED} ${SIZE_400} External benchmarks: for a simple, low-height composite deck with standard railing and without complex stairs or elevation, installed cost is about $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026). For 400 sq ft that is about $14,000–$32,000. Angi lists $30–$60 per square foot for deck construction, updated September 24, 2026. These external benchmarks are not Loudoun Decks prices. Permits, demolition, elevation, and complex stairs are excluded from that external range. A written estimate after a site visit is the only project price.`;
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -85,7 +87,7 @@ export default function FourHundredSqftDeckCostPage() {
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>400 Square Foot Deck Cost in Northern Virginia (2026)</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>External 2026 planning ranges for a 400 sq ft deck, plus the published Loudoun and Fairfax permit fees. The written estimate is the project price.</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Loudoun Decks 2026 quoted prices for a new open deck, then external benchmarks for 400 sq ft. The written estimate is the project price.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Free Estimate</Link>
@@ -96,21 +98,17 @@ export default function FourHundredSqftDeckCostPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick answer:</p>
-          <p>
-            For a simple, low-height composite deck with standard railing and without complex stairs or elevation, external 2026 benchmarks put installed cost at $35–$80 per square foot (
-            <a href="https://remodelcalculators.com/deck-cost" target="_blank" rel="noopener noreferrer" style={S.link}>RemodelCalculators</a>
-            , reviewed October 11, 2026). For 400 sq ft that is about $14,000–$32,000.{' '}
-            <a href="https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm" target="_blank" rel="noopener noreferrer" style={S.link}>Angi</a>
-            {' '}lists $30–$60 per square foot for deck construction, updated September 24, 2026. These are national planning estimates, not Loudoun Decks prices. Permits, demolition, elevation, and complex stairs are excluded. A written estimate after a site visit is the only project price.
-          </p>
+          <p>{BENCHMARK}</p>
         </div>
       </section>
 
       <article style={{ padding: '4rem 0', background: '#fff' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
 
-          <h2 style={S.h2}>2026 planning range for a 400 sq ft deck</h2>
-          <p style={S.p}>A 400 sq ft deck is a common footprint in Northern Virginia. Two configurations used at this size are 20 ft × 20 ft, which can hold dining and lounging in one zone, and 16 ft × 25 ft, which can separate dining from seating. The $35–$80 per square foot figure above is an external benchmark for a simple composite deck. It is not a Loudoun Decks price and it is not a brand-by-brand quote.</p>
+          <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED, SIZE_400]} />
+          <p style={S.p}>Last reviewed: {REVIEWED_LABEL}.</p>
+          <h2 style={S.h2}>External benchmarks for a 400 sq ft deck</h2>
+          <p style={S.p}>A 400 sq ft deck is a common footprint in Northern Virginia. Two configurations used at this size are 20 ft × 20 ft, which can hold dining and lounging in one zone, and 16 ft × 25 ft, which can separate dining from seating. The $35–$80 per square foot figure is an external benchmark for a simple composite deck. It is not a Loudoun Decks price and it is not a brand-by-brand quote.</p>
 
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -221,7 +219,7 @@ export default function FourHundredSqftDeckCostPage() {
 
       <SimpleCTA title="Get a 3D rendering and an itemized 400 sq ft estimate" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath={PATH} />
-      <NamedAuthor context="Northern Virginia deck pricing" lastUpdated="2026-10-25" />
+      <NamedAuthor context="Northern Virginia deck pricing" lastUpdated={REVIEWED_LABEL} />
       <ContactHome />
     </>
   );

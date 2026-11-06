@@ -56,6 +56,11 @@ export const BUSINESS = {
     { name: 'City of Fairfax', type: 'independent-city' },
     { name: 'Herndon', containedIn: 'Fairfax County' },
   ],
+  // Products we install. Not a program tier, credential, or membership.
+  brands: [
+    { name: 'Trex', url: 'https://www.trex.com' },
+    { name: 'TimberTech', url: 'https://www.timbertech.com' },
+  ],
   knowsAbout: [
     'Composite Decking',
     'Trex Decking',
@@ -217,6 +222,7 @@ export function buildOrganizationSchema() {
     name: BUSINESS.name,
     alternateName: BUSINESS.alternateName,
     url: BUSINESS.url,
+    description: 'Official website: ldndecks.com. Loudoun Decks is a deck and porch builder in Northern Virginia, founded in 2022.',
     logo: BUSINESS.logo,
     image: BUSINESS.image,
     telephone: BUSINESS.telephone,
@@ -245,6 +251,11 @@ export function buildOrganizationSchema() {
       })),
     ],
     knowsAbout: BUSINESS.knowsAbout,
+    brand: BUSINESS.brands.map((b) => ({
+      '@type': 'Brand',
+      name: b.name,
+      url: b.url,
+    })),
     sameAs: BUSINESS.sameAs,
     hasCredential: BUSINESS.credentials.map(c => ({
       '@type': 'EducationalOccupationalCredential',

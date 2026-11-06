@@ -192,9 +192,9 @@ export default function WoodDecksPage() {
           <h2 style={S.h2}>Wood Deck Maintenance in Virginia</h2>
           <p style={S.p}>Virginia&apos;s climate is hard on wood. Without proper maintenance, even pressure-treated wood deteriorates fast:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Freeze-thaw cycles:</strong> 50&ndash;80 cycles each winter — water enters wood grain, freezes, expands, splits boards</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Humidity (70&ndash;90% in summer):</strong> Promotes mold, mildew, and rot — sealing creates moisture barrier</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>UV exposure (200+ sunny days):</strong> Bleaches color, breaks down lignin fibers — UV-resistant stain helps</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Freeze-thaw:</strong> Winter freezing and thawing can drive moisture into the grain and split boards</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Humidity:</strong> Summer humidity promotes mold, mildew, and rot — sealing creates a moisture barrier</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>UV exposure:</strong> Sun bleaches color and breaks down lignin fibers — a UV-resistant stain helps</li>
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Carpenter bees &amp; termites:</strong> Common in Virginia — annual inspection critical</li>
           </ul>
           <p style={S.p}><strong>Annual maintenance schedule:</strong> Spring power wash + brightener + stain. Fall: clear leaves, inspect for damage. Ask for the annual upkeep cost of your chosen species when you compare estimates.</p>
@@ -203,10 +203,10 @@ export default function WoodDecksPage() {
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "Cost of a wood deck in Northern Virginia?", a: "Wood deck cost depends on species, size, framing condition, railing and stairs. Pressure-treated pine is generally the lowest-cost option and exotic hardwoods the highest. Your written estimate itemizes each for your deck."  },
-            { q: "How long does a wood deck last?", a: "PT pine: 10-15 years. Cedar: 15-20. Redwood: 20-25. Ipe: 40+. Annual sealing required for all in Virginia climate." },
-            { q: "Wood or composite?", a: "Composite is better long-term in Virginia (durability + zero maintenance). Wood makes sense for tight budgets, exotic aesthetic, or short-term ownership." },
-            { q: "Best wood for outdoor decks?", a: "Cedar (balance of cost and durability), PT pine (budget), or Ipe (premium, 40+ year life)." },
+            { q: "Cost of a wood deck in Northern Virginia?", a: "Wood deck cost depends on the species (pressure-treated pine, cedar, redwood or an exotic hardwood such as Ipe, Cumaru or Tigerwood), size, framing condition, railing and stairs. Pressure-treated pine is generally the lowest-cost option and exotic hardwoods the highest. Your written estimate itemizes each of these for your deck." },
+            { q: "How long does a wood deck last?", a: "Lifespan varies by wood type and maintenance: pressure-treated 10-15 years (5-8 without maintenance), cedar 15-20 years, redwood 20-25 years, ipe and other hardwoods 25-40+ years. Virginia's freeze-thaw cycles and humidity require annual sealing/staining for all wood types." },
+            { q: "Wood or composite?", a: "Wood generally costs less upfront but needs regular washing and sealing or staining, while composite costs more upfront and needs less upkeep. Which is better for you depends on budget, how long you plan to stay and how much maintenance you want to do. Ask for a written estimate for both so you can compare upfront cost and upkeep side by side." },
+            { q: "Best wood for outdoor decks?", a: "For Virginia climate: cedar (best balance of cost and durability), pressure-treated southern yellow pine (best budget), or ipe (best premium — naturally rot-resistant, 40+ year lifespan). Avoid untreated softwoods. Always seal/stain annually." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>

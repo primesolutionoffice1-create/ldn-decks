@@ -10,17 +10,19 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 
+const PAGE_DESCRIPTION = 'When to build a deck in Northern Virginia: month-by-month demand and weather, the HOA and permit timeline before construction, and when to plan financing.';
+
 export const metadata = buildMetadata({
   path: '/best-time-to-build-a-deck-northern-virginia',
   title: 'Best Time to Build a Deck in Northern Virginia (2026)',
-  description: 'Late winter/early spring gets the best pricing and fastest scheduling. Summer is peak season with 4-6 week waits. Month-by-month guide, hidden HOA + permit timeline, and how to time financing.',
+  description: PAGE_DESCRIPTION,
   image: '/social/best-time-to-build-deck-social.png',
 });
 
 const faqs = [
   {
     q: 'When is the best time to build a deck in Northern Virginia?',
-    a: 'February–April for the best pricing and the fastest scheduling. May–August is peak season with 4–6 week waits. September–November is the second-best window: scheduling has eased from the spring rush and a fall replacement leaves you with a finished deck ready for spring.',
+    a: 'Late winter and early spring are usually the best time to plan and book in Northern Virginia: builder calendars are lighter, and HOA review and the county permit can finish before spring weather. May through August is the busiest season, so start dates fill up sooner. September through November is the second good window: scheduling has eased from the spring rush, and a fall replacement can leave you with a finished deck ready for spring.',
   },
   {
     q: 'Can you build a deck in winter in Virginia?',
@@ -28,11 +30,11 @@ const faqs = [
   },
   {
     q: 'How far in advance should I book a deck builder?',
-    a: 'For a summer completion, start the consultation in February–March. For peak season (May–August), expect 4–6 week backlogs with most quality Northern Virginia builders. Off-peak, 2–3 weeks is realistic. Sooner is always better — the limiting factor is HOA review and the county permit, not the build itself.',
+    a: 'For a summer completion, start the consultation in February or March. During May through August, start dates fill up sooner. Off-peak months usually leave more choice of start dates. Sooner is better, because HOA review and the county permit come before construction.',
   },
   {
     q: 'Why does timing a deck project matter so much?',
-    a: 'Because construction is the last step, not the first. HOA architectural review and the county permit happen before any footings go in, and together they commonly add several weeks to a few months. Start late and those weeks land inside peak season — pushing the build into the busiest, slowest-to-schedule months instead of getting ahead of them.',
+    a: 'Because construction is the last step, not the first. HOA architectural review and the county permit happen before any footings go in. Start late and that approval time can land inside peak season, pushing the build into the busiest months instead of getting ahead of them.',
   },
   {
     q: 'When should I sort out deck financing?',
@@ -44,7 +46,7 @@ const faqs = [
   },
   {
     q: 'When is the busiest time for deck builders?',
-    a: 'May through August — about 60% of Northern Virginia deck projects are booked in this window. Demand climbs as the weather warms, which means longer lead times and tighter schedules. Planning in the off-season (late fall and winter) typically means more flexibility and a deck ready when warm weather arrives.',
+    a: 'May through August. Demand climbs as the weather warms, so start dates fill up sooner and schedules are tighter. Planning in late fall and winter usually means more flexibility and a deck that can be ready when warm weather arrives.',
   },
 ];
 
@@ -72,26 +74,27 @@ export default function BestTimeToBuildPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/best-time-to-build-a-deck-northern-virginia" name="Best Time to Build a Deck in Northern Virginia (2026)" description="Late winter/early spring gets the best pricing and fastest scheduling. Summer is peak season with 4-6 week waits. Month-by-month guide, hidden HOA + permit timeline, and how to time financing." speakable />
+      <WebPageSchema dateModified="2026-10-26" url="https://ldndecks.com/best-time-to-build-a-deck-northern-virginia" name="Best Time to Build a Deck in Northern Virginia (2026)" description={PAGE_DESCRIPTION} speakable />
       <ArticleSchema
         title="Best Time to Build a Deck in Northern Virginia (2026)"
-        description="Month-by-month guide to deck timing in Northern Virginia — pricing, wait times, weather, the hidden HOA + permit timeline before construction, and how to time financing."
+        description={PAGE_DESCRIPTION}
         path="/best-time-to-build-a-deck-northern-virginia"
         datePublished="2025-02-12"
-        dateModified="2026-05-21"
+        dateModified="2026-10-26"
       />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>When Is the Best Time to Build a Deck in Northern Virginia?</h1>
-          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Month-by-month guide: pricing, wait times, the hidden HOA + permit timeline, and how to time financing</p>
+          <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Month-by-month guide: demand, weather, the hidden HOA + permit timeline, and how to time financing</p>
+          <p style={{ color: '#aaa', fontSize: '0.9rem', marginTop: '0.75rem' }}><time dateTime="2026-10-26">Last reviewed October 26, 2026</time></p>
         </div>
       </section>
 
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p style={{ margin: 0 }}><strong>February–April</strong> for best pricing and availability. <strong>May–August</strong> is peak season with 4–6 week waits. <strong>September–November</strong> is the second-best window. Book 6–8 weeks before your desired start date — and remember that HOA review and the county permit happen <em>before</em> construction, so plan roughly one season ahead.</p>
+          <p style={{ margin: 0 }}>In Northern Virginia, late winter and early spring are usually the best time to plan and book a deck: builder calendars are lighter, and HOA review and the county permit can be finished before spring weather. Summer is the busiest season, so start-dates fill up sooner; fall is the second good window. Because HOA review and the permit come before construction, start planning about one season before you want to use the deck.</p>
         </div>
       </section>
 
@@ -113,18 +116,18 @@ export default function BestTimeToBuildPage() {
           <h2 style={S.h2}>Northern Virginia Deck Building Calendar</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-              <thead><tr style={{ background: '#f5f5f5' }}>{['Month', 'Demand', 'Wait Time', 'Pricing', 'Weather'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
+              <thead><tr style={{ background: '#f5f5f5' }}>{['Month', 'Demand', 'Weather'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Jan–Feb', 'Low', '1–2 weeks', 'Best (10–15% off)', 'Cold footings OK if ground not frozen'],
-                  ['Mar–Apr', 'Medium', '2–3 weeks', 'Good', 'Ideal mild temps, ground thawed'],
-                  ['May–Jun', 'Peak', '4–6 weeks', 'Standard', 'Great weather, high demand'],
-                  ['Jul–Aug', 'Peak', '4–6 weeks', 'Standard', 'Hot crews work early mornings'],
-                  ['Sep–Oct', 'Medium', '2–3 weeks', 'Good', 'Ideal cool and dry'],
-                  ['Nov–Dec', 'Low', '1–2 weeks', 'Best (10–15% off)', 'Cold shorter days, but doable'],
+                  ['Jan–Feb', 'Low', 'Cold footings OK if ground not frozen'],
+                  ['Mar–Apr', 'Medium', 'Ideal mild temps, ground thawed'],
+                  ['May–Jun', 'Peak', 'Great weather, high demand'],
+                  ['Jul–Aug', 'Peak', 'Hot crews work early mornings'],
+                  ['Sep–Oct', 'Medium', 'Ideal cool and dry'],
+                  ['Nov–Dec', 'Low', 'Cold shorter days, but doable'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
-                    {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: (i === 0 || i === 1 || i === 4 || i === 5) && j === 3 ? 'green' : 'inherit' }}>{cell}</td>)}
+                    {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
                   </tr>
                 ))}
               </tbody>
@@ -134,9 +137,9 @@ export default function BestTimeToBuildPage() {
           <h2 style={S.h2}>Why Winter/Spring Gets You the Best Deal</h2>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Lower demand = faster scheduling.</strong> Most homeowners wait until summer to think about decks. If you start the process in January/February, you skip the backlog entirely.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Potential pricing advantage.</strong> Some builders (including us) offer 10–15% off labor during slow months to keep crews working year-round.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Permits process during the wait.</strong> Start your consultation in January, submit permits in February, and break ground in March when weather cooperates. By May your deck is done while your neighbors are just starting their search.</li>
-            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Material availability.</strong> Popular Trex colors and TimberTech lines can sell out in peak season. Off-peak means full selection.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Scheduling flexibility.</strong> Off-peak months usually give more choice of start dates; the written estimate states the price and schedule for your project.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Permits process during the wait.</strong> Start your consultation in January, submit permits in February, and break ground in March when weather cooperates. By May your deck may be finished while your neighbors are just starting their search.</li>
+            <li style={{ marginBottom: '0.75rem', lineHeight: 1.7 }}><strong>Material availability.</strong> Specific colors or lines can be on longer lead times in busy months; we confirm availability when the estimate is written.</li>
           
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
           </ul>
@@ -155,14 +158,14 @@ export default function BestTimeToBuildPage() {
           </div>
 
           <h2 style={S.h2}>Summer Peak Season — What to Expect</h2>
-          <p style={S.p}>May through August is when about 60% of deck projects are booked in Northern Virginia. Expect:</p>
+          <p style={S.p}>May through August is the busiest season for deck projects in Northern Virginia. Expect:</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>4–6 week wait from signed contract to construction start</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Permit offices at full capacity (Loudoun: 10–15 business days; Fairfax: 3–6 weeks)</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Popular material colors may be backordered 2–4 weeks</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Afternoon thunderstorms can add 1–3 days to build time</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Start dates fill up sooner after a contract is signed</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Permit review times vary by county and season — see the <Link href="/deck-permit-loudoun-county-virginia" style={S.link}>Loudoun</Link>, <Link href="/deck-permit-fairfax-county-virginia" style={S.link}>Fairfax</Link>, and <Link href="/deck-permit-prince-william-county-virginia" style={S.link}>Prince William</Link> permit guides</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Specific colors or lines can be on longer lead times</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}>Afternoon thunderstorms can slow a build day</li>
           </ul>
-          <p style={S.p}><strong>Pro tip:</strong> If you want a summer completion, start the consultation process in February/March. By the time design, permits, and HOA approval are done (6–10 weeks), you&apos;re first in line for a May/June build start.</p>
+          <p style={S.p}><strong>Pro tip:</strong> If you want a summer completion, start the consultation in February or March. Design, HOA review, and the permit come before construction, so that earlier start is what lines up a May or June build.</p>
 
           <h2 style={S.h2}>How Far in Advance to Book</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
@@ -174,7 +177,7 @@ export default function BestTimeToBuildPage() {
                   ['Early Summer (Jun)', 'February', 'March'],
                   ['Mid Summer (Jul–Aug)', 'March–April', 'April–May'],
                   ['Fall (Sep–Oct)', 'June', 'July'],
-                  ['Winter (Nov–Feb)', '4–6 weeks before', '2–3 weeks before'],
+                  ['Winter (Nov–Feb)', 'Early fall', 'Late fall'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400 }}>{cell}</td>)}
@@ -240,7 +243,7 @@ export default function BestTimeToBuildPage() {
 
       <SimpleCTA title="Book Now for Spring/Summer Slots Filling Fast" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/best-time-to-build-a-deck-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-26" />
 
       <ContactHome />
     </>

@@ -1,248 +1,203 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ServicesHeader from '@/components/ServicesHeader';
-import ServiceMain from '@/components/ServiceMain';
-import ServiceInclusions from '@/components/ServiceInclusions';
-import ServiceContentExpansion from '@/components/ServiceContentExpansion';
-import ProcessSteps from '@/components/ProcessSteps';
-import ServicesFAQ from '@/components/ServicesFAQ';
-import ContactHome from '@/components/ContactHome';
-import RelatedGuides from '@/components/RelatedGuides';
-import ServiceAreasGrid from '@/components/ServiceAreasGrid';
-import SimpleCTA from '@/components/SimpleCTA';
-import GoogleMapEmbed from '@/components/GoogleMapEmbed';
 import JsonLd from '@/components/JsonLd';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import SimpleCTA from '@/components/SimpleCTA';
+import GoogleMapEmbed from '@/components/GoogleMapEmbed';
+import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
-import PlanningUpdate from '@/components/PlanningUpdate';
-import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
+import CallLink from '@/components/CallLink';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import CityLeadFormSection from '@/components/CityLeadFormSection';
+
+const PATH = "/deck-builder-falls-church-va";
+const PAGE_URL = "https://ldndecks.com/deck-builder-falls-church-va";
+const PAGE_TITLE = "Deck Builder in Falls Church, VA | Loudoun Decks";
+const PAGE_DESCRIPTION = "Falls Church deck builder for compact-lot deck replacement and screened porches, with jurisdiction checks for City of Falls Church or Fairfax County.";
 
 export const metadata = buildMetadata({
-  path: '/deck-builder-falls-church-va',
-  title: 'Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks',
-  description: 'Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex & composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate.',
-  image: '/social/deck-builder-falls-church-va-social.png',
+  path: PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  image: "/social/deck-builder-falls-church-va-social.png",
 });
 
-const inclusions = [
+const faqs = [
   {
-    title: "Compact Lot Design Experts",
-    desc: "Falls Church properties average 0.1-0.25 acres. We specialize in space-maximizing designs — multi-level builds, bump-outs, and L-shaped layouts that make every square foot count."
+    "q": "Who builds decks in Falls Church, VA?",
+    "a": "Loudoun Decks LLC is a Centreville-based residential deck contractor and a Virginia Class A contractor (DPOR license #2705191673), owned by Nicolae (Nick) Zugrav. Falls Church is listed on the areas page. The City of Falls Church and Fairfax County are separate jurisdictions, so the address must be checked first."
   },
   {
-    title: "Dual Jurisdiction Permitting",
-    desc: "We determine whether your address falls under the City of Falls Church or Fairfax County, then coordinate permit-ready documentation and inspection planning for the correct jurisdiction."
+    "q": "What should a deck project in Falls Church plan for?",
+    "a": "Verify City of Falls Church versus Fairfax County jurisdiction before plans are drawn. Compact lots need early planning for setbacks, privacy, railing type, stair placement, drainage, and neighbor-facing sightlines. Patio or deck replacements should confirm whether height, footprint, or railings change the permit scope."
   },
   {
-    title: "Privacy-Forward Design",
-    desc: "Close neighbors are a reality in Falls Church. We integrate glass railings, privacy screens, pergola shade structures, and strategic planting plans into every project."
+    "q": "What deck services does Loudoun Decks offer in Falls Church?",
+    "a": "These are services named on the Loudoun Decks site, not a separate menu invented for Falls Church. The work includes new custom decks, deck replacement, deck repair, and deck resurfacing when the existing frame is structurally sound. The homepage lists Trex, TimberTech, Fiberon, AZEK, and Wolf as composite and PVC options and labels the company a Trex Partner. Screened porches, open porches, and front porches are included, along with pergolas and gazebos. Patios, fencing, railings, under-deck patios, and fire pits are included when that scope is part of the project. Homeowners should verify current Trex profile details directly with Trex."
+  },
+  {
+    "q": "How are permits and HOA packages handled for Falls Church?",
+    "a": "Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope. For parcels in Fairfax County, the homepage table lists plan review at 3–5 weeks through PLUS / Building Development Division, with sealed structural drawings, ledger bolt schedules, and footing depths required up front. The homepage has no row for the City of Falls Church, so this page gives no timeline for city parcels. Loudoun Decks handles the submission."
+  },
+  {
+    "q": "Which documented project does this Falls Church page cite?",
+    "a": "No Falls Church project page was found. The documented project cited here is the February 2025 deck-construction gallery record in Reston, not Falls Church. That record does not name a decking brand. A fence-and-gate gallery record also exists in Falls Church. That record is not a deck project, so it is not used as the deck example."
+  },
+  {
+    "q": "How do I contact Loudoun Decks about a Falls Church deck?",
+    "a": "Falls Church is listed by name under Fairfax County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville. Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."
   }
 ];
 
-const fallsChurchFAQs = [
-  {
-    q: "How much does a custom deck cost in Falls Church, VA?",
-    a: "Falls Church deck projects are typically priced in a written estimate. Smaller lot sizes keep square footage modest, but homeowners in this market expect premium finishes — Trex Transcend, glass or cable railings, and integrated lighting. Composite decks are priced in a written estimate per square foot installed depending on material and complexity."
-  },
-  {
-    q: "Do I need a City of Falls Church permit or a Fairfax County permit?",
-    a: "It depends on your exact address. The City of Falls Church is an independent city with its own building department, but many addresses with Falls Church zip codes (22042, 22043, 22044) are actually in Fairfax County. We verify your jurisdiction before design begins and handle all permitting for whichever authority applies."
-  },
-  {
-    q: "Can you build a deck on a small Falls Church lot?",
-    a: "Absolutely — compact lot design is our specialty in Falls Church. We use multi-level builds, L-shaped layouts, bump-out extensions, and screened porch conversions to maximize outdoor living space on properties as small as 0.1 acres. Setback requirements vary by jurisdiction, and we factor those into every design."
-  },
-  {
-    q: "What about privacy with close neighbors?",
-    a: "Privacy is a top concern on smaller Falls Church lots. We address it through elevated deck heights with glass railings for sight-line management, integrated privacy screens or lattice panels, pergola shade structures, and strategic planting recommendations. The goal is creating an outdoor retreat that feels secluded despite the proximity."
-  },
-  {
-    q: "How long does a Falls Church deck project take?",
-    a: "Most Falls Church projects take 2-4 weeks for construction. City of Falls Church permits are often faster than Fairfax County — sometimes 10-15 business days versus 3-6 weeks. We manage the entire timeline including permit submissions, HOA coordination if applicable, and final inspections."
-  },
-  {
-    q: "Do Falls Church neighborhoods have HOA restrictions?",
-    a: "Fewer Falls Church neighborhoods have formal HOAs compared to outer suburbs, but some have deed covenants or architectural guidelines that affect deck design, materials, or placement. We research your specific property's restrictions before finalizing any plans."
-  }
-];
-
-const fallsChurchFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": fallsChurchFAQs.map(({ q, a }) => ({
-    "@type": "Question",
-    "name": q,
-    "acceptedAnswer": { "@type": "Answer", "text": a }
-  }))
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
 };
-
-const expansionSections = [
-  {
-    title: "Two Jurisdictions — City of Falls Church vs. Fairfax County",
-    paragraphs: [
-      "Falls Church presents a unique permitting situation that catches many homeowners off guard. The City of Falls Church is one of Virginia's independent cities — a self-governing municipality with its own building department, zoning code, and inspection staff. However, the vast majority of addresses that people consider 'Falls Church' are actually located in Fairfax County. The 22042, 22043, and 22044 zip codes span both jurisdictions, and the boundary is not always intuitive.",
-      "This distinction matters for your deck project. The City of Falls Church building department is smaller and often processes permits faster — sometimes in 10-15 business days. Fairfax County's plan review typically takes 3-6 weeks. Setback requirements, lot coverage limits, and zoning rules also differ between the two. A design that complies with City code may need modifications to meet County standards, or vice versa.",
-      "At Loudoun Decks, we verify your exact jurisdiction at the start of every Falls Church project. We have working relationships with both the City building department and Fairfax County's permitting office, and we design your deck to comply with the correct authority from day one. No surprises, no delays from filing with the wrong office."
-    ]
-  },
-  {
-    title: "Maximizing Small Falls Church Lots",
-    paragraphs: [
-      "Falls Church is one of the most land-constrained markets we serve. Properties in the City of Falls Church proper and surrounding neighborhoods like Pimmit Hills, Lake Barcroft, and Sleepy Hollow often sit on 0.1 to 0.25 acre lots — a fraction of the space available in Great Falls or Oakton. But smaller lots do not mean smaller ambitions. Falls Church homeowners want functional, beautiful outdoor living spaces, and achieving that requires design expertise that goes beyond standard deck plans.",
-      "We approach compact-lot design differently. Multi-level builds use vertical space to create distinct zones — a dining level, a lounging level, a grilling station — without consuming the entire backyard. L-shaped and wraparound layouts follow the home's footprint to add usable space without encroaching on setback lines. Screened porch conversions turn underused side yards into three-season rooms. Every design decision is driven by the goal of maximizing livable square footage.",
-      "Privacy is the other critical factor on smaller lots. When your neighbors are 20 feet away, a standard open deck can feel exposed. We integrate glass railings for unobstructed sight lines without sacrificing enclosure, privacy screens on neighbor-facing sides, and pergola structures that provide overhead cover. The result is a deck that feels like a private retreat, even in Falls Church's close-knit neighborhoods."
-    ]
-  },
-  {
-    title: "Premium Materials for a Premium Market",
-    paragraphs: [
-      "Falls Church is one of Northern Virginia's highest-value real estate markets. Modest 1950s-era ramblers on small lots regularly sell for the amount in a written estimate million, and new construction teardowns push well beyond that. In this market, homeowners expect materials and finishes that match their property values. We exclusively use premium composite and PVC decking — Trex Transcend, TimberTech AZEK, and similar top-tier products — because they deliver the aesthetics and longevity this market demands.",
-      "Glass railings and stainless steel cable systems are among the most popular choices for Falls Church projects. On a compact lot, transparent railings make a small deck feel significantly larger by preserving sight lines to the yard and beyond. Hidden fastener systems eliminate visible screws for a clean, furniture-grade surface. Integrated LED lighting extends the usable hours of your deck through Virginia's long summer evenings.",
-      "These premium materials also eliminate the maintenance burden that traditional wood decks impose. In Virginia's humid climate, a pressure-treated wood deck needs sanding and staining every 1-2 years — a significant ongoing expense and inconvenience. Our composite builds are designed to look and perform beautifully for 25 years or more depending on product and care with nothing more than occasional cleaning."
-    ]
-  },
-  {
-    title: "New Construction and Renovation Deck Integration",
-    paragraphs: [
-      "Falls Church is one of the most active teardown-and-rebuild markets in Northern Virginia. Buyers purchase older homes from the 1940s-1960s era for their lot value and location, then build new construction. This creates a unique opportunity for deck integration — designing the outdoor living space as part of the new home's architecture rather than as an afterthought.",
-      "For new construction, we collaborate with builders and architects during the design phase to ensure the deck's footings, ledger board connections, and drainage systems are incorporated into the home's structural plans. This produces a cleaner integration, better waterproofing, and more seamless indoor-outdoor transitions than retrofitting a deck onto an existing home. We work with several Falls Church builders and can coordinate timing to keep your overall project on schedule.",
-      "For existing homes, we specialize in replacing aging concrete patios, deteriorating wood decks, and underperforming outdoor spaces with modern composite builds. Many Falls Church homes still have their original 1950s-era concrete slab patios or first-generation wood decks that are well past their useful life. Our replacement projects typically transform these spaces into elevated composite decks with proper drainage, modern railings, and usable square footage that the original construction never provided."
-    ]
-  }
-];
 
 export default function FallsChurchDeckBuilderPage() {
   return (
-    <main>
-      <JsonLd data={fallsChurchFaqSchema} />
-      <LocalBusinessSchema city="Falls Church" url="https://ldndecks.com/deck-builder-falls-church-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-falls-church-va" name="Deck Builder in Falls Church, VA | Custom Composite Decks | Loudoun Decks" description="Trusted deck builder in Falls Church, VA. Google reviews. Custom Trex &amp; composite decks for compact lots. City of Falls Church + Fairfax County permits. Free estimate." speakable />
-      <ServicesHeader
-        subtext="Falls Church, VA's Compact Lot Deck Specialists"
-        title="Custom Deck Builder in Falls Church, VA"
-        description="Loudoun Decks builds premium composite decks, screened porches, and outdoor living spaces for Falls Church homeowners. City of Falls Church + Fairfax County permit planning support. publicly documented reputation."
+    <>
+      <JsonLd data={faqSchema} />
+      <LocalBusinessSchema city="Falls Church" url={PAGE_URL} description={PAGE_DESCRIPTION} />
+      <WebPageSchema
+        dateModified="2026-11-03"
+        url={PAGE_URL}
+        name={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        speakable
       />
-
-      {/* Pricing Anchor - Conversion Filtering */}
-      <section style={{ backgroundColor: '#fff5f2', padding: '24px 20px', borderBottom: '1px solid #ffdbd1' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontSize: '16px', color: '#d14817', margin: 0, fontWeight: '500' }}>
-            <strong style={{ color: '#111', fontSize: '18px' }}>New custom build minimum: a written estimate</strong>
-            <br />
-            We focus on <strong style={{ color: '#111' }}>full custom Falls Church builds</strong>. Need a repair instead? Visit our <a href="/services/deck-repair" style={{ color: '#d14817', textDecoration: 'underline', fontWeight: 600 }}>deck repair service</a> for board replacement, railings, and structural fixes.
-          </p>
+      <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck builder in Falls Church, VA</h1>
+          <p data-speakable="true" style={{ color: '#ccc', fontSize: '1.1rem' }}>{PAGE_DESCRIPTION}</p>
+          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+          </div>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Virginia Class A contractor, DPOR license #2705191673. Office: 13704 Winding Oak Cir, Centreville, VA 20121.</p>
         </div>
       </section>
-
-      <ServiceMain
-        subtitle="Falls Church's Trusted Choice"
-        title="Deck Builder Falls Church VA - Smart Design for Compact Lots"
-        description="We design and build premium outdoor living spaces that maximize Falls Church's smaller properties. Custom composite builds, dual-jurisdiction permitting, and privacy-first design from a written estimate."
-        listItems={[
-          "Trex, TimberTech and AZEK material planning",
-          "City of Falls Church + Fairfax County permit experts",
-          "Compact lot specialists — multi-level & L-shaped designs",
-          "Glass railings, privacy screens & integrated lighting",
-          "Public reviews - call (571) 655-7207"
-        ]}
-        image1="/images/img64.jpeg"
-        image2="/images/img21.jpeg"
-      />
-      <PlanningUpdate
-        market="Falls Church decks in 2026"
-        notes={[
-          "Falls Church projects should verify City of Falls Church vs Fairfax County jurisdiction before plans are drawn.",
-          "Compact lots need early planning around setbacks, privacy, railing type, stair placement, drainage, and neighbor-facing sightlines.",
-          "Older patio or deck replacements should confirm whether the new structure changes height, footprint, railings, or permit scope."
-        ]}
-        links={[
-          { href: "/deck-permit-fairfax-county-virginia", label: "Fairfax permit guide" },
-          { href: "/deck-vs-patio-which-is-right", label: "Deck vs patio" },
-          { href: "/deck-cost-calculator", label: "Deck cost calculator" }
-        ]}
-      />
-      <PremiumCityLeadQualifier
+      <CityLeadFormSection
         city="Falls Church"
-        county="City of Falls Church and Fairfax County"
-        intro="Falls Church leads need early filtering because compact lots, dual jurisdiction, setbacks, privacy, neighbor-facing sightlines, and older patio or deck conditions can change whether the right project is resurfacing, full replacement, screened porch, or a custom compact-lot outdoor living build."
-        projectTypes={[
-          'Compact-lot composite deck replacement',
-          'Townhome or small-yard layouts with privacy planning',
-          'Screened porch or covered-deck additions where setbacks allow',
-          'Patio-to-deck upgrades with drainage, height, and permit review',
-        ]}
-        planningSignals={[
-          'Exact address jurisdiction: City of Falls Church or Fairfax County',
-          'Photos showing lot depth, neighbor-facing sides, stairs, and current structure',
-          'HOA, deed covenant, or architectural-review requirements',
-          'Preferred path: resurface, full replacement, screened porch, or compact outdoor room',
-        ]}
+        county="Fairfax County"
+        service="deck replacement, composite deck, or screened porch"
+      />
+      <GeoAnswerBlock
+        question="Who builds decks in Falls Church, VA?"
+        answer={faqs[0].a}
+        facts={[faqs[1].a]}
         links={[
-          { href: '/get-estimate', label: 'Request Falls Church estimate', primary: true },
-          { href: '/deck-vs-patio-which-is-right', label: 'Deck vs patio planning' },
-          { href: '/composite-deck-cost-northern-virginia', label: 'Composite cost guide' },
+          { href: '/get-estimate', label: "Request a Falls Church estimate" },
+          { href: "/showcase/custom-deck-reston", label: "CUSTOM DECK INSTALLING" },
         ]}
       />
-      <ServiceContentExpansion sections={expansionSections} />
+      <article style={{ padding: '4rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
+            <Image
+              src="/images/img17.jpeg"
+              alt="Deck photo on the Loudoun Decks Falls Church, VA page"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 900px) 100vw, 900px"
+            />
+          </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Planning a deck in Falls Church</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[0].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{faqs[1].a}</p>
 
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
-          <Image
-            src="/images/img17.jpeg"
-            alt="Premium custom deck built by LDN Decks in Falls Church, Virginia"
-            fill
-            style={{ objectFit: 'cover' }}
-            sizes="(max-width: 900px) 100vw, 900px"
-          />
-        </div>
-        <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Falls Church Planning Example: Compact-Lot Patio-to-Deck Upgrade</h2>
-        <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
-          A compact Falls Church upgrade might replace an aging patio or small rear platform with a low-maintenance composite deck,
-          glass or aluminum railing, and a layout designed around privacy and limited yard depth. Final scope should be confirmed
-          after jurisdiction, setbacks, height, drainage, and permit requirements are reviewed. Verified project examples should
-          be added here only after owner-supplied photos, scope, date, and permit details are available.
-        </p>
-      </div>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Services in Falls Church</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[2].a}</p>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
+          </ul>
 
-      <ServiceInclusions
-        title="Why Falls Church Chooses Loudoun Decks"
-        description="Compact lot expertise, dual-jurisdiction permitting, and premium materials built for Falls Church properties."
-        items={inclusions}
-      />
-      <ProcessSteps />
-      <ServicesFAQ canonicalUrl="https://ldndecks.com/deck-builder-falls-church-va" withSchema={false}
-        title="Deck Builder Falls Church VA - FAQs"
-        faqs={fallsChurchFAQs}
-      />
-      <ServiceAreasGrid />
-      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Guides</h2>
-        <ul style={{ listStyle: 'none', padding: 0 }}>
-          {[
-            ['/composite-deck-builder-loudoun', 'Composite Deck Builder in Loudoun County'],
-            ['/screened-porch-builder-northern-virginia', 'Screened Porch Builder Northern Virginia'],
-            ['/deck-permit-fairfax-county-virginia', 'Fairfax County Deck Permit Guide'],
-            ['/composite-deck-cost-northern-virginia', 'How Much Does a Deck Cost in Northern Virginia?'],
-            ['/trex-vs-timbertech-vs-azek', 'Trex vs TimberTech vs AZEK Comparison'],
-          ].map(([href, text]) => (
-            <li key={href} style={{ marginBottom: '0.5rem' }}>
-              <Link href={href} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{text} →</Link>
-            </li>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2rem 0 1rem' }}>Permits and HOA paperwork</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope."}</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"For parcels in Fairfax County, the homepage table lists plan review at 3–5 weeks through PLUS / Building Development Division, with sealed structural drawings, ledger bolt schedules, and footing depths required up front. The homepage has no row for the City of Falls Church, so this page gives no timeline for city parcels. Loudoun Decks handles the submission."}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Homepage permit table</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>A documented project</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{faqs[4].a}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            <Link href="/showcase/custom-deck-reston" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"CUSTOM DECK INSTALLING"}</Link>
+          </p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Service area</h2>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Falls Church is listed by name under Fairfax County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville."}</p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
+            <Link key="/deck-builder-arlington-va" href="/deck-builder-arlington-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Arlington</Link>
+            <Link key="/deck-builder-vienna-va" href="/deck-builder-vienna-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Vienna</Link>
+            <Link key="/deck-builder-mclean-va" href="/deck-builder-mclean-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>McLean</Link>
+            <Link key="/deck-builder-alexandria-va" href="/deck-builder-alexandria-va" style={{ padding: '0.4rem 0.8rem', border: '1px solid #e5e5e5', borderRadius: 20, fontSize: '0.9rem', textDecoration: 'none', color: 'var(--color-dark)' }}>Alexandria</Link>
+          </div>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Contact</h2>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{"Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."}</p>
+
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>FAQ</h2>
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+            </details>
           ))}
 
-            <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
-            <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
-            <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Custom Deck Building Services →</Link></li>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2.5rem 0 1rem' }}>Related pages</h2>
+          <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li key="/showcase/custom-deck-reston" style={{ marginBottom: '0.5rem' }}><Link href="/showcase/custom-deck-reston" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Reston deck gallery"}</Link></li>
+              <li key="/showcase/fence-gate-falls-church" style={{ marginBottom: '0.5rem' }}><Link href="/showcase/fence-gate-falls-church" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Falls Church fence and gate gallery"}</Link></li>
+              <li key="/deck-permit-fairfax-county-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-fairfax-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Fairfax County deck permit guide"}</Link></li>
+              <li key="/near-you/fairfax-county" style={{ marginBottom: '0.5rem' }}><Link href="/near-you/fairfax-county" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Fairfax County deck builder hub"}</Link></li>
+              <li key="/services/new-decks" style={{ marginBottom: '0.5rem' }}><Link href="/services/new-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"New custom decks"}</Link></li>
+              <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck replacement"}</Link></li>
+              <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck repair"}</Link></li>
+              <li key="/services/deck-resurfacing" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-resurfacing" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Deck resurfacing"}</Link></li>
+              <li key="/services/porches" style={{ marginBottom: '0.5rem' }}><Link href="/services/porches" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Screened, open, and front porches"}</Link></li>
+              <li key="/services/gazebo-pergola" style={{ marginBottom: '0.5rem' }}><Link href="/services/gazebo-pergola" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Pergolas and gazebos"}</Link></li>
+              <li key="/services" style={{ marginBottom: '0.5rem' }}><Link href="/services" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Patios, fencing, railings, and outdoor living"}</Link></li>
+              <li key="/areas-we-serve" style={{ marginBottom: '0.5rem' }}><Link href="/areas-we-serve" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Areas we serve"}</Link></li>
+              <li key="/about/certifications-and-licenses" style={{ marginBottom: '0.5rem' }}><Link href="/about/certifications-and-licenses" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Licenses and Trex Partner note"}</Link></li>
+              <li key="/contact" style={{ marginBottom: '0.5rem' }}><Link href="/contact" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Contact"}</Link></li>
+              <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{"Request an estimate"}</Link></li>
           </ul>
+        </div>
+      </article>
+      <section style={{ padding: '2rem 1.5rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <GoogleMapEmbed city="Falls Church" />
+        </div>
       </section>
-      <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Falls Church" /></div></section>
-      <SimpleCTA title="Maximize Your Falls Church Outdoor Space" buttonText="Get Free Estimate" link="/get-estimate" />
-      <RelatedGuides currentPath="/deck-builder-falls-church-va" />
-      <NamedAuthor context="Falls Church and Northern Virginia" lastUpdated="2026-10-18" />
-      <ContactHome />
-    </main>
+      <SimpleCTA title="Request a Falls Church deck estimate" buttonText="Get Free Estimate" link="/get-estimate" />
+      <NamedAuthor context="Falls Church, VA" lastUpdated="2026-11-03" />
+      <ContactHome
+        pageContext={{
+          city: "Falls Church",
+          county: "Fairfax County",
+          service: "Falls Church deck replacement, composite deck, or screened porch",
+          pageType: 'local_city_landing_page',
+        }}
+      />
+    </>
   );
 }

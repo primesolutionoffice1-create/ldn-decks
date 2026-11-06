@@ -11,11 +11,20 @@ import RelatedGuides from '@/components/RelatedGuides';
 import NamedAuthor from '@/components/NamedAuthor';
 import AboveFoldCTA from '@/components/AboveFoldCTA';
 import { buildMetadata } from '@/lib/seo';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { OPEN_DECK_QUOTED, QUOTE_SOURCE, REVIEWED_ISO, SIZE_300, SIZE_400, SIZE_500, SIZE_600 } from '@/lib/quotedPrices';
 
 const PATH = '/composite-deck-cost-by-size';
-const DESCRIPTION = 'Composite deck cost by size in Northern Virginia: external 2026 benchmark $35–$80/sq ft, about $14,000–$32,000 for 400 sq ft. Written estimate = price.';
+const DESCRIPTION = 'Loudoun Decks 2026 quoted prices: new open decks about $61–$102 per sq ft, most around $64–$68. External size benchmarks are labeled below.';
 const TITLE = 'Composite Deck Cost by Size: 300, 400, 500, 600 Sq Ft Examples';
-const UPDATED = '2026-10-24';
+const UPDATED = REVIEWED_ISO;
+
+const sizeNotes = {
+  300: SIZE_300,
+  400: SIZE_400,
+  500: SIZE_500,
+  600: SIZE_600,
+};
 
 export const metadata = buildMetadata({
   path: PATH,
@@ -52,7 +61,7 @@ const sizes = [
 ];
 
 function sizeFaqAnswer(sqft, total) {
-  return `For a simple, low-height composite deck with standard railing and no complex stairs, external 2026 benchmarks put installed cost at $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026; Angi lists $30–$60 per square foot for deck construction, updated September 24, 2026). Applied to ${sqft} sq ft, the simple arithmetic of $35–$80 per square foot times the floor area is about ${total}. Permits, demolition, elevation and complex stairs are excluded. These are external benchmarks, not Loudoun Decks prices, and a written estimate is the only project price.`;
+  return `${QUOTE_SOURCE} ${OPEN_DECK_QUOTED} ${sizeNotes[sqft]} External benchmarks: for a simple, low-height composite deck with standard railing and no complex stairs, external 2026 benchmarks put installed cost at $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026; Angi lists $30–$60 per square foot for deck construction, updated September 24, 2026). Applied to ${sqft} sq ft, the simple arithmetic of $35–$80 per square foot times the floor area is about ${total}. Permits, demolition, elevation and complex stairs are excluded. These external benchmarks are not Loudoun Decks prices, and a written estimate is the only project price.`;
 }
 
 const faqs = [
@@ -131,7 +140,7 @@ export default function CompositeDeckCostBySizePage() {
             Composite Deck Cost by Size: 300, 400, 500, and 600 Sq Ft Examples
           </h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: 1.6 }}>
-            External 2026 benchmarks for common composite deck sizes in Northern Virginia. These are not Loudoun Decks prices, and a written estimate is the only project price.
+            Loudoun Decks 2026 quoted prices for a new open deck, then external benchmarks for common sizes. A written estimate is the only project price.
           </p>
         </div>
       </section>
@@ -148,11 +157,11 @@ export default function CompositeDeckCostBySizePage() {
         <div style={S.container}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
           <p data-speakable>
-            For a simple, low-height composite deck with standard railing and no complex stairs, external 2026 benchmarks put installed cost at $35–$80 per square foot (
+            {QUOTE_SOURCE} {OPEN_DECK_QUOTED} {SIZE_300} {SIZE_400} {SIZE_500} {SIZE_600} External benchmarks: for a simple, low-height composite deck with standard railing and no complex stairs, installed cost is about $35–$80 per square foot (
             <a href="https://remodelcalculators.com/deck-cost" style={S.link}>RemodelCalculators</a>
             , reviewed October 11, 2026;{' '}
             <a href="https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm" style={S.link}>Angi</a>
-            {' '}lists $30–$60 per square foot for deck construction, updated September 24, 2026). Applied to common sizes, that simple arithmetic of $35–$80 per square foot times the floor area is about $10,500–$24,000 for 300 sq ft, $14,000–$32,000 for 400 sq ft, $17,500–$40,000 for 500 sq ft and $21,000–$48,000 for 600 sq ft. Permits, demolition, elevation and complex stairs are excluded; these are external benchmarks, not Loudoun Decks prices (see{' '}
+            {' '}lists $30–$60 per square foot for deck construction, updated September 24, 2026). Applied to common sizes, that simple arithmetic of $35–$80 per square foot times the floor area is about $10,500–$24,000 for 300 sq ft, $14,000–$32,000 for 400 sq ft, $17,500–$40,000 for 500 sq ft and $21,000–$48,000 for 600 sq ft. Permits, demolition, elevation and complex stairs are excluded; these external benchmarks are not Loudoun Decks prices (see{' '}
             <Link href="/composite-deck-cost-northern-virginia" style={S.link}>
               composite deck cost in Northern Virginia
             </Link>
@@ -175,7 +184,8 @@ export default function CompositeDeckCostBySizePage() {
             />
           </div>
 
-          <h2 style={{ ...S.h2, marginTop: 0 }}>Composite Deck Cost by Size</h2>
+          <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED, SIZE_300, SIZE_400, SIZE_500, SIZE_600]} />
+          <h2 style={{ ...S.h2, marginTop: 0 }}>External benchmarks by size</h2>
           <p style={S.p}>
             Each total below is the simple arithmetic of $35–$80 per square foot times that floor area (RemodelCalculators, reviewed October 11, 2026). These are external benchmarks, not Loudoun Decks prices.
           </p>

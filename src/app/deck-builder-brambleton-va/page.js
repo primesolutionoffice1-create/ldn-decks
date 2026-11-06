@@ -17,6 +17,7 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-brambleton-va',
@@ -111,7 +112,7 @@ export default function BrambletonDeckBuilderPage() {
   return (
     <main>
       <LocalBusinessSchema city="Brambleton" url="https://ldndecks.com/deck-builder-brambleton-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-brambleton-va" name="Deck Builder in Brambleton, VA | Custom Trex Decks" description="Deck builder in Brambleton, VA. Composite decks built for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. Free estimate." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-builder-brambleton-va" name="Deck Builder in Brambleton, VA | Custom Trex Decks" description="Deck builder in Brambleton, VA. Composite decks built for Brambleton Community Association (BCA) Design Review Board approval. Builder-grade upgrades, composite railings, post cap lights. Loudoun County permits handled. Free estimate." speakable />
       <ServicesHeader
         subtext="Brambleton, VA's Trusted Deck Company"
         title="Custom Deck Builder in Brambleton, VA"
@@ -190,7 +191,8 @@ export default function BrambletonDeckBuilderPage() {
       <section style={{ padding: '2rem 1.5rem' }}><div style={{ maxWidth: 900, margin: '0 auto' }}><GoogleMapEmbed city="Brambleton" /></div></section>
       <SimpleCTA title="Upgrade Your Brambleton Deck" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-brambleton-va" />
-      <NamedAuthor context="Brambleton and Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Brambleton and Northern Virginia" lastUpdated="2026-11-01" />
+      <CountyHubLinks countySlug="loudoun-county" />
       <ContactHome />
     </main>
   );

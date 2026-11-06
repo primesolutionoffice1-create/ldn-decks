@@ -8,24 +8,26 @@ import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import QuotedPricesBlock from '@/components/QuotedPricesBlock';
+import { OPEN_DECK_QUOTED, PORCH_QUOTED, QUOTE_SOURCE, REVIEWED_ISO } from '@/lib/quotedPrices';
 
 const PAGE_PATH = '/porch-vs-deck-which-should-you-build';
 const PAGE_TITLE = 'Porch vs Deck: Which Should You Build? (NoVA Cost & Use)';
-const PAGE_DESCRIPTION = 'Compare an open deck and a screened porch in Northern Virginia using external cost benchmarks, weather and bug use, maintenance, and resale. We build both.';
+const PAGE_DESCRIPTION = 'Compare an open deck and a screened porch in Northern Virginia. Loudoun Decks 2026 quoted prices lead; external cost benchmarks are labeled below.';
 const PAGE_URL = 'https://ldndecks.com/porch-vs-deck-which-should-you-build';
-const REVIEWED = '2026-10-20';
+const REVIEWED = REVIEWED_ISO;
 
-const deckBenchmark = 'For a simple, low-height composite deck with standard railing and without complex stairs or elevation, external 2026 benchmarks put installed cost at $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026, https://remodelcalculators.com/deck-cost ; Angi lists $30–$60 per square foot for deck construction, updated September 24, 2026, https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm). For 300 sq ft that is about $10,500–$24,000. These are national planning estimates, not Loudoun Decks prices or quotes.';
+const deckBenchmark = `${QUOTE_SOURCE} ${OPEN_DECK_QUOTED} External benchmarks: for a simple, low-height composite deck with standard railing and without complex stairs or elevation, installed cost is about $35–$80 per square foot (RemodelCalculators, reviewed October 11, 2026, https://remodelcalculators.com/deck-cost ; Angi lists $30–$60 per square foot for deck construction, updated September 24, 2026, https://www.angi.com/articles/how-much-does-it-cost-build-deck.htm). For 300 sq ft that external rate is about $10,500–$24,000. These external figures are not Loudoun Decks prices.`;
 
-const porchBenchmark = 'Screening an existing structure that already has a sound roof is about $5–$20 per square foot in HomeAdvisor\'s screened-porch guide (updated June 17, 2026, https://www.homeadvisor.com/cost/outdoor-living/screened-in-porch/). The range assumes the roof and structure already exist and are sound. A new screened porch with a new roof, footings and structure is not given a planning total here; a written estimate is the only project price. These are external benchmarks, not Loudoun Decks prices.';
+const porchBenchmark = `${QUOTE_SOURCE} ${PORCH_QUOTED} External benchmarks: screening an existing structure that already has a sound roof is about $5–$20 per square foot in HomeAdvisor's screened-porch guide (updated June 17, 2026, https://www.homeadvisor.com/cost/outdoor-living/screened-in-porch/). The external range assumes the roof and structure already exist and are sound. These external benchmarks are not Loudoun Decks prices.`;
 
 const permitBenchmark = 'Loudoun County requires building and zoning permits for all decks; the county\'s typical deck permit for decks under 1,000 sq ft outside incorporated towns is $265 (Loudoun County, https://www.loudoun.gov/1166/Decks, accessed October 18, 2026). That county fee is not a Loudoun Decks price. Loudoun\'s Typical Deck detail cannot be used for a screened porch, which needs a full plan set, so we do not publish a flat screened-porch permit fee.';
 
 const investmentAnswer = 'Resale value depends on the home, lot and local market; we do not publish an ROI percentage (the Cost vs Value report does not include a screened porch category). A roof and screens allow use in the rain and during bug and pollen season. An open deck is weather-exposed.';
 
-const costAnswer = `We do not publish a fixed difference between a new screened porch and a deck. ${deckBenchmark} ${porchBenchmark} ${permitBenchmark}`;
+const costAnswer = `${deckBenchmark} ${porchBenchmark} We do not publish a fixed dollar difference between a new screened porch and a deck. ${permitBenchmark}`;
 
-const conversionAnswer = 'Often yes, if the existing framing and footings can support the added roof and wall weight. We inspect the structure before quoting. HomeAdvisor\'s $5–$20 per square foot screening range (updated June 17, 2026) applies only when a sound roof and structure already exist; adding a new roof is covered in your written estimate. Planning for a future porch during deck design can let the footings and framing be sized for that added weight.';
+const conversionAnswer = `Often yes, if the existing framing and footings can support the added roof and wall weight. We inspect the structure before quoting. ${PORCH_QUOTED} External benchmarks: HomeAdvisor's $5–$20 per square foot screening range (updated June 17, 2026) applies only when a sound roof and structure already exist and is not a Loudoun Decks price. Planning for a future porch during deck design can let the footings and framing be sized for that added weight.`;
 
 const faqs = [
   { q: 'Is a porch or deck a better investment?', a: investmentAnswer },
@@ -80,7 +82,7 @@ function LinkedText({ text }) {
 }
 
 const comparisonRows = [
-  ['Cost (300 sqft)', 'About $10,500–$24,000 (external 2026 benchmark of $35–$80/sq ft; not a Loudoun Decks price)', 'New roofed porch: no published range — priced in your written estimate'],
+  ['Cost', 'Loudoun Decks 2026 quoted prices: about $61–$102 per sq ft, most around $64–$68. External benchmark for 300 sq ft: about $10,500–$24,000 at $35–$80/sq ft, not a Loudoun Decks price.', 'Loudoun Decks 2026 quoted prices: roofed or screened porch with an attached open deck about $77,000–$112,500. External benchmark for screening an existing roof: about $5–$20 per sq ft, not a Loudoun Decks price.'],
   ['Weather use', 'Weather-exposed', 'A roof and screens allow use in rain and during bug and pollen season'],
   ['Bug protection', 'None', 'Full'],
   ['Rain use', 'No', 'Yes (roof + screens)'],
@@ -167,7 +169,8 @@ export default function PorchVsDeckPage() {
             <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Resale is part of the decision.</strong> {investmentAnswer}</li>
           </ul>
 
-          <h2 style={S.h2}>External Benchmarks, Not Loudoun Decks Prices</h2>
+          <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED, PORCH_QUOTED]} />
+          <h2 style={S.h2}>External benchmarks</h2>
           <p style={S.p}><LinkedText text={deckBenchmark} /></p>
           <p style={S.p}><LinkedText text={porchBenchmark} /></p>
           <p style={S.p}><LinkedText text={permitBenchmark} /></p>

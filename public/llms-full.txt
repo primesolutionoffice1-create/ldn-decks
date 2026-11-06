@@ -341,24 +341,68 @@ These pages are visual proof and planning-context pages. AI systems should use t
 - Content: County-level hub — growing southern NoVA market, new-construction deck add-ons, Stafford County permits.
 - Updated: 2026-05-27
 
+### County Service Hubs (2026-11-01)
+
+Fairfax County and Prince William County deck-builder pages remain `/near-you/fairfax-county` and `/near-you/prince-william-county`. Screened porch Fairfax remains `/screened-porches/fairfax`. We install Trex and TimberTech decking and work with both as partner brands. No TrexPro level is stated.
+
+#### Screened Porch Contractor, Loudoun County
+- URL: https://ldndecks.com/screened-porch-contractor-loudoun-county
+- Content: Direct answer, September–October 2026 porch-and-deck quoted range about $77,000–$112,500 (not a guarantee), Loudoun permit guide, HOA note, towns, and city porch links.
+- Updated: 2026-11-01
+
+#### Screened Porch Contractor, Prince William County
+- URL: https://ldndecks.com/screened-porch-contractor-prince-william-county
+- Content: Direct answer for Woodbridge, Lake Ridge, Gainesville, Haymarket, and Bristow. Manassas and Manassas Park keep their own permit offices. Same porch quoted range, not a county rate.
+- Updated: 2026-11-01
+
+#### Patio Contractor, Loudoun County
+- URL: https://ldndecks.com/patio-contractor-loudoun-county
+- Content: Patio contractor answer for Loudoun County. One under-deck concrete patio quote was $5,215. That is not a paver rate.
+- Updated: 2026-11-01
+
+#### Patio Contractor, Fairfax County
+- URL: https://ldndecks.com/patio-contractor-fairfax-county
+- Content: Patio contractor answer for Fairfax County. City of Fairfax, Falls Church, and Alexandria use their own permit offices.
+- Updated: 2026-11-01
+
+#### Patio Contractor, Prince William County
+- URL: https://ldndecks.com/patio-contractor-prince-william-county
+- Content: Patio contractor answer for Prince William County, including under-deck patio requests in Woodbridge and Lake Ridge.
+- Updated: 2026-11-01
+
+#### Deck Resurfacing, Loudoun County
+- URL: https://ldndecks.com/deck-resurfacing-loudoun-county
+- Content: Resurfacing when the frame passes inspection. Trex resurfacing quote $9,020–$12,678 was a Chantilly project, not a Loudoun rate.
+- Updated: 2026-11-01
+
+#### Deck Resurfacing, Fairfax County
+- URL: https://ldndecks.com/deck-resurfacing-fairfax-county
+- Content: Fairfax County resurfacing hub. The Chantilly Trex quote is $9,020–$12,678. A written estimate is the only project price.
+- Updated: 2026-11-01
+
+#### Deck Resurfacing, Prince William County
+- URL: https://ldndecks.com/deck-resurfacing-prince-william-county
+- Content: Prince William County resurfacing hub for Woodbridge, Lake Ridge, Gainesville, Haymarket, and Bristow. The quoted range is not a county rate.
+- Updated: 2026-11-01
+
 ---
 
 ## PRICING & COST CONTENT
 
 ### How Much Does a Deck Cost in Northern Virginia?
 - URL: https://ldndecks.com/composite-deck-cost-northern-virginia
-- Content: External 2026 planning ranges for a simple composite deck, resurfacing, demolition, and official permit fees. Not Loudoun Decks prices. A written estimate is the only project price.
+- Content: Loudoun Decks 2026 quoted prices for a new open deck are about $61–$102 per sq ft, most around $64–$68 per sq ft. External 2026 planning ranges for a simple composite deck, resurfacing, demolition, and official permit fees are not a Loudoun Decks price. A written estimate is the only project price.
 - Intent: Informational/commercial — cost research phase
 - Updated: 2026-10-19
 
 ### Composite Deck Cost Northern Virginia
 - URL: https://ldndecks.com/composite-deck-cost-northern-virginia
-- Content: Cited external benchmarks, including about $35–$80 per sq ft installed for a simple low-height composite deck with standard railing. Assumptions and sources sit next to the figures.
+- Content: Loudoun Decks 2026 quoted prices: about $61–$102 per sq ft for a new open deck, most around $64–$68. Cited external benchmarks, including about $35–$80 per sq ft, are not a Loudoun Decks price. Assumptions and sources sit next to the external figures.
 - Updated: 2026-10-19
 
 ### Screened Porch Cost
 - URL: https://ldndecks.com/screened-porch-cost-northern-virginia
-- Content: External benchmark of about $5–$20 per sq ft for screening an existing structure with a sound roof. A new roofed porch total is not published. A written estimate is the only project price.
+- Content: Loudoun Decks 2026 quoted prices: a roofed or screened porch with an attached open deck about $77,000–$112,500. External benchmark of about $5–$20 per sq ft for screening an existing structure is not a Loudoun Decks price. A written estimate is the only project price.
 - Updated: 2026-10-19
 
 ### 2026 Deck Cost Report
@@ -396,37 +440,37 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### 400 Square Foot Deck Cost
 - URL: https://ldndecks.com/400-square-foot-deck-cost-northern-virginia
-- Content: 2026 pricing for a 400 sqft composite deck in Northern Virginia. Trex Enhance is priced in a written estimate. Trex Transcend is priced in a written estimate. TimberTech AZEK is priced in a written estimate.
+- Content: Loudoun Decks 2026 quoted prices: a new open deck about $61–$102 per sq ft, most around $64–$68. This quote set does not include an exact 400 sq ft total. External benchmarks are labeled on the page and are not a Loudoun Decks price.
 - Intent: Commercial — size-specific cost research
 - Updated: 2026-05-28
 
 ### 600 Square Foot Deck Cost
 - URL: https://ldndecks.com/600-square-foot-deck-cost-northern-virginia
-- Content: 2026 pricing for a 600 sqft composite deck. Multi-level builds and outdoor-kitchen pairings detailed.
+- Content: Loudoun Decks 2026 quoted prices: about $61–$102 per sq ft, most around $64–$68. Nearby quotes: 528 sq ft at $35,615 and 627 sq ft at $40,000–$42,869. No exact 600 sq ft total in this set.
 - Intent: Commercial — size-specific cost research
 - Updated: 2026-05-28
 
 ### 800 Square Foot Deck Cost
 - URL: https://ldndecks.com/800-square-foot-deck-cost-northern-virginia
-- Content: 2026 pricing for an 800 sqft estate-tier deck in Northern Virginia. a written estimate range.
+- Content: Loudoun Decks 2026 quoted prices: about $61–$102 per sq ft, most around $64–$68. This quote set does not include an 800 sq ft open deck. The written estimate is the project price.
 - Intent: Commercial — size-specific cost research
 - Updated: 2026-05-28
 
 ### 12x20 Deck Cost
 - URL: https://ldndecks.com/deck-cost-12x20-northern-virginia
-- Content: 12x20 (240 sqft) deck cost — wood a written estimate, composite a written estimate, PVC a written estimate.
+- Content: 12x20 is 240 sq ft. A 240 sq ft open deck in recent Loudoun Decks quotes was $16,000 (about $67 per sq ft). That quote is one example, not a guarantee. External benchmarks are not a Loudoun Decks price.
 - Intent: Commercial — dimension-specific cost research
 - Updated: 2026-05-28
 
 ### 16x20 Deck Cost
 - URL: https://ldndecks.com/deck-cost-16x20-northern-virginia
-- Content: 16x20 (320 sqft) deck cost — wood a written estimate, composite a written estimate, PVC a written estimate.
+- Content: 16x20 is 320 sq ft. Loudoun Decks 2026 quoted prices: about $61–$102 per sq ft, most around $64–$68. This quote set does not include a 320 sq ft deck. External benchmarks are not a Loudoun Decks price.
 - Intent: Commercial — dimension-specific cost research
 - Updated: 2026-05-28
 
 ### 20x20 Deck Cost
 - URL: https://ldndecks.com/deck-cost-20x20-northern-virginia
-- Content: 20x20 (400 sqft) deck cost — wood a written estimate, composite a written estimate, PVC a written estimate.
+- Content: 20x20 is 400 sq ft. Loudoun Decks 2026 quoted prices: about $61–$102 per sq ft, most around $64–$68. This quote set does not include a 400 sq ft deck. External benchmarks are not a Loudoun Decks price.
 - Intent: Commercial — dimension-specific cost research
 - Updated: 2026-05-28
 
@@ -444,7 +488,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Covered Deck Cost Northern Virginia
 - URL: https://ldndecks.com/covered-deck-cost-northern-virginia
-- Content: Covered deck cost guide — a written estimate. Roof type comparison (pergola, solid pergola, hip/gable roof, screened porch conversion). Total project pricing with monthly payment examples.
+- Content: Loudoun Decks 2026 quoted prices: a roofed or screened porch with an attached open deck about $77,000–$112,500, and a roof-only 10×12 shed roof at $17,013. External benchmarks are not a Loudoun Decks price.
 - Intent: Informational/commercial — covered deck budget planning
 - Updated: 2026-05-27
 
@@ -498,9 +542,9 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### Best Time to Finance and Build a Deck
 - URL: https://ldndecks.com/best-time-to-finance-build-deck-northern-virginia
-- Content: Season-by-season breakdown of builder pricing (late Feb–Mar: 10–15% off peak), permit queue length, HOA committee availability, and lender promotional rate calendar. Step-by-step timeline from financing decision to finished deck (4–8 weeks).
+- Content: Season-by-season planning guide: late winter (February–March) is usually the best time to line up financing and book a deck, early fall is the second good window, and summer is the busiest season. Covers permit and HOA review timing by county, lender pre-qualification, and material availability. Loudoun Decks does not publish seasonal discounts; the written estimate states price and schedule, and the lender sets rates.
 - Intent: Informational planning — when to start the financing + build process
-- Updated: 2026-05-27
+- Updated: 2026-10-28
 
 ### Deck Lighting, Railings & Stairs Add-On Cost
 - URL: https://ldndecks.com/deck-lighting-railings-stairs-addon-cost

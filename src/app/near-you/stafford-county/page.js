@@ -17,6 +17,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CountyConversionLinks from '@/components/CountyConversionLinks';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import { OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -49,7 +50,7 @@ const services = [
 const faqs = [
   { q: "Do you build decks in Stafford County?", a: "Yes. LDN Decks serves all of Stafford County including Stafford, Aquia Harbour, Falmouth, Garrisonville, Brooke, Widewater, Embrey Mill, and surrounding neighborhoods." },
   { q: "Does Stafford County require a deck permit?", a: "Yes. Most decks attached to a home or over 30 inches above grade require a building permit. Stafford County's Department of Development Services has one of the fastest review times in our service area, typically 2 weeks. We handle all permits." },
-  { q: "How much does a deck cost in Stafford County?", a: "Stafford County deck cost depends on size, elevation, materials, railings, stairs, demolition, and site access. Loudoun Decks does not publish a fixed Stafford price. Use the Northern Virginia composite deck cost guide to prepare the scope, then request a written estimate for the property." },
+  { q: "How much does a deck cost in Stafford County?", a: `Stafford County deck cost depends on size, elevation, materials, railings, stairs, demolition, and site access. ${QUOTE_LABEL}: ${OPEN_DECK_RANGE} Those figures are not a Stafford-only total. Use the Northern Virginia composite deck cost guide to prepare the scope, then request a written estimate for the property.` },
   { q: "Do you work with Stafford HOAs?", a: "Yes. We prepare all architectural review board submission materials and design to your community's guidelines." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within 2-3 weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
 ];
@@ -63,7 +64,7 @@ export default function StaffordCountyPage() {
         description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Stafford County, VA."
         url="https://ldndecks.com/near-you/stafford-county"
       />
-      <WebPageSchema dateModified="2026-06-02" url="https://ldndecks.com/near-you/stafford-county" name="Premium Deck Builder Stafford County VA | Free Quote in 24h" description="Deck and outdoor living contractor in Stafford County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/near-you/stafford-county" name="Premium Deck Builder Stafford County VA | Free Quote in 24h" description="Deck and outdoor living contractor in Stafford County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Stafford County, VA"
@@ -131,7 +132,7 @@ export default function StaffordCountyPage() {
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Planning a Stafford County deck budget</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>
-            Stafford County deck cost depends on size, elevation, materials, railings, stairs, demolition, and site access. Loudoun Decks does not publish a fixed Stafford price. Use the{' '}
+            Stafford County deck cost depends on size, elevation, materials, railings, stairs, demolition, and site access. {QUOTE_LABEL}: {OPEN_DECK_RANGE} Those figures are not a Stafford-only total. Use the{' '}
             <Link href="/composite-deck-cost-northern-virginia">Northern Virginia composite deck cost guide</Link>{' '}
             to prepare the scope, then <Link href="/get-estimate">request a written estimate</Link> for the property.
           </p>
@@ -186,7 +187,7 @@ export default function StaffordCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-01" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

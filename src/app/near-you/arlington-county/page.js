@@ -50,7 +50,7 @@ const services = [
 const faqs = [
   { q: "Do you build decks in Arlington County?", a: "Yes. LDN Decks serves all of Arlington County including Arlington, Crystal City, Ballston, Clarendon, Rosslyn, Pentagon City, Shirlington, Cherrydale, Lyon Village, Bluemont, Fairlington, and surrounding neighborhoods." },
   { q: "Does Arlington County require a deck permit?", a: "Yes. Most decks attached to a home or over 30 inches above grade require a building permit. Arlington also has strict historic district overlays in some areas. We handle all permits." },
-  { q: "How much does a deck cost in Arlington?", a: "Arlington deck costs run 25-35% above the Virginia average due to tight urban lots and premium materials. A typical 300 sqft composite deck is priced in a written estimate depending on materials and complexity." },
+  { q: "How much does a deck cost in Arlington?", a: "Loudoun Decks 2026 quoted prices (Sep–Oct 2026): new open decks about $61–$102/sq ft (most $64–$68). These figures are NoVA quoted prices, not an Arlington premium %. The written estimate is the only project price." },
   { q: "Do you work with Arlington HOAs and community groups?", a: "Yes. We prepare all HOA submission documents and design within your community's architectural and historic overlay requirements." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within 2-4 weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
 ];
@@ -64,7 +64,7 @@ export default function ArlingtonCountyPage() {
         description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Arlington County, VA."
         url="https://ldndecks.com/near-you/arlington-county"
       />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/near-you/arlington-county" name="Premium Deck Builder Arlington County VA | Free Quote in 24h" description="Deck and outdoor living contractor in Arlington County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-11-05" url="https://ldndecks.com/near-you/arlington-county" name="Premium Deck Builder Arlington County VA | Free Quote in 24h" description="Deck and outdoor living contractor in Arlington County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Arlington County, VA"
@@ -146,7 +146,8 @@ export default function ArlingtonCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Clarendon & Ballston:</strong> High-end townhome <Link href="/services/deck-replacement">deck replacements</Link> and compact multi-tier composite decks designed to maximize private courtyard spaces. Privacy panels and custom integrated lighting are popular additions to block street noise and create cozy evening environments.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Rosslyn & Crystal City:</strong> Elevated decks and structural rooftop/balcony deck systems designed to offer gorgeous skyline and tree-canopy views. Capped polymer materials (AZEK) are widely used for their light weight and advanced thermal properties.</p>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Lyon Village & Cherrydale:</strong> Wraparound porches and craftsman-style <Link href="/screened-porch-builder-northern-virginia">screened porch additions</Link> that preserve the historic architectural charm of the neighborhoods. We match existing siding, paint profiles, and trim details to create seamless additions.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Shirlington & Fairlington:</strong> Walk-out composite decks and ground-level <Link href="/services/patios">patios</Link> that integrate into mature garden environments. Low-profile steps and curved designs work beautifully on the rolling terrain of these communities.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Shirlington & Fairlington:</strong> Walk-out composite decks and ground-level <Link href="/services/patios">patios</Link> that integrate into mature garden environments. Low-profile steps and curved designs work beautifully on the rolling terrain of these communities.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Arlington County screened porch work is scoped on the <Link href="/screened-porch-contractor-arlington-county">screened porch contractor in Arlington County</Link> page, including the recent Northern Virginia quoted range for a roofed porch with a deck.</p>
         </div>
       </article>
 
@@ -191,7 +192,7 @@ export default function ArlingtonCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-05" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

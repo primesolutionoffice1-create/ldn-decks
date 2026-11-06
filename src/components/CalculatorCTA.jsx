@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './CalculatorCTA.module.css';
+import { OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 
 export default function CalculatorCTA() {
   const [sqft, setSqft] = React.useState(250);
@@ -16,7 +17,7 @@ export default function CalculatorCTA() {
           <span className={styles.badge}>Budget & Estimate Tool</span>
           <h2 className={styles.title}>Plan your deck budget before you request an estimate</h2>
           <p className={styles.description}>
-            Choose a size and material, then request a written estimate. Loudoun Decks does not publish a per-square-foot rate.
+            Choose a size and material, then request a written estimate. {QUOTE_LABEL}: {OPEN_DECK_RANGE} Those are quoted prices, not a price for the size selected here.
           </p>
           <Link href="/deck-cost-calculator" className={styles.ctaButton}>
             Use Deck Cost Calculator
