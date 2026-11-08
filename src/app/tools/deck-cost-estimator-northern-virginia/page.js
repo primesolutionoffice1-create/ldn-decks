@@ -6,12 +6,13 @@ import NamedAuthor from '@/components/NamedAuthor';
 import DeckCostCalculatorWidget from '@/components/DeckCostCalculatorWidget';
 import { buildMetadata } from '@/lib/seo';
 import { BUSINESS, ORG_ID, WEBSITE_ID } from '@/lib/business';
+import { OPEN_DECK_RANGE, QUOTE_LABEL, QUOTE_SOURCE, RESURFACE_QUOTED } from '@/lib/quotedPrices';
 
 const path = '/tools/deck-cost-estimator-northern-virginia';
 const pageUrl = `${BUSINESS.url}${path}`;
 const pageTitle = 'Deck Cost Estimator Northern Virginia';
 const pageDescription =
-  'Estimate custom deck cost in Northern Virginia by size, material and add-ons, then compare next steps for permits, financing and a written deck estimate.';
+  'Recent Northern Virginia quotes: new open decks about $61–$102 per sq ft, most $64–$68. Describe your deck scope, then request a written estimate.';
 
 export const metadata = buildMetadata({
   path,
@@ -23,7 +24,7 @@ export const metadata = buildMetadata({
 const faqs = [
   {
     q: 'How accurate is this deck cost estimator?',
-    a: 'It gives a planning range based on common Northern Virginia deck sizes, materials and add-ons. A written estimate still requires site measurements, access review, structural conditions, permit scope, HOA needs and final material selections.',
+    a: `The planner does not calculate a price; it records size, material and add-ons so the written estimate starts from the right scope. For a price reference, ${OPEN_DECK_RANGE} The written estimate after a site visit is the only project price.`,
   },
   {
     q: 'What makes Northern Virginia deck pricing different?',
@@ -31,15 +32,19 @@ const faqs = [
   },
   {
     q: 'Does the estimate include permits and cleanup?',
-    a: 'The planning range is intended to reflect professional installed deck pricing with normal labor, materials, permits and cleanup. Unusual site conditions, engineering, demolition, roofs, kitchens or hot tubs can change the final scope.',
+    a: 'Permits, demolition, structure, stairs, railings and cleanup are scoped and priced in the written estimate.',
   },
   {
     q: 'Can this estimator price Trex and TimberTech decks?',
-    a: 'Yes. The estimator includes common pressure-treated, cedar, Trex and TimberTech AZEK planning ranges so homeowners can compare wood, standard composite and premium PVC options.',
+    a: 'You can select pressure-treated, cedar, Trex and TimberTech options to describe scope; the planner does not output a price for them.',
   },
   {
     q: 'What should I do after using the estimator?',
-    a: 'Save the range, compare monthly payment options if needed, then request a professional estimate so Loudoun Decks can verify size, structure, access, permits, HOA requirements and material details.',
+    a: 'Request a written estimate so Loudoun Decks can verify size, structure, access, permits, HOA requirements and material details. The planner records scope; it does not calculate a price.',
+  },
+  {
+    q: 'What have recent Northern Virginia deck quotes cost?',
+    a: `${OPEN_DECK_RANGE} ${RESURFACE_QUOTED} ${QUOTE_SOURCE}`,
   },
 ];
 
@@ -105,7 +110,7 @@ export default function DeckCostEstimatorNorthernVirginiaPage() {
     <main style={{ background: '#fff' }}>
       <JsonLd data={faqSchema} />
       <JsonLd data={webApplicationSchema} />
-      <WebPageSchema dateModified="2026-06-01" url={pageUrl} name={pageTitle} description={pageDescription} speakable />
+      <WebPageSchema dateModified="2026-11-08" url={pageUrl} name={pageTitle} description={pageDescription} speakable />
 
       <section style={{ background: '#17202a', color: '#fff', padding: '4rem 0 3rem' }}>
         <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -116,7 +121,7 @@ export default function DeckCostEstimatorNorthernVirginiaPage() {
             Deck Cost Estimator Northern Virginia
           </h1>
           <p style={{ maxWidth: 740, color: 'rgba(255,255,255,0.84)', fontSize: '1.08rem', lineHeight: 1.65, margin: 0 }} data-speakable="true">
-            Estimate a professional deck project range by size, material and add-ons, then use the result to plan permits, financing and a written estimate with Loudoun Decks.
+            {QUOTE_LABEL}: {OPEN_DECK_RANGE} The written estimate after a site visit is the only project price. Use the planner below to describe scope (size, material, add-ons) before you request that estimate.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', marginTop: '1.5rem' }}>
             <Link href="#estimator" style={{ background: '#d14817', color: '#fff', padding: '0.85rem 1.15rem', borderRadius: 8, fontWeight: 800, textDecoration: 'none' }}>
@@ -138,7 +143,7 @@ export default function DeckCostEstimatorNorthernVirginiaPage() {
             ctaHref="/get-estimate"
           />
           <p style={{ marginTop: '1rem', color: '#64748b', lineHeight: 1.65, fontSize: '0.9rem' }}>
-            Planning ranges are educational. Final pricing depends on field measurements, structure, access, permitting, HOA review, site conditions and selected materials.
+            This planner does not calculate a price. It records size, material and add-ons. Final pricing depends on field measurements, structure, access, permitting, HOA review, site conditions and selected materials.
           </p>
         </div>
       </section>
@@ -161,13 +166,13 @@ export default function DeckCostEstimatorNorthernVirginiaPage() {
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem', lineHeight: 1.75 }}>
           <h2 style={{ fontSize: '1.6rem', fontWeight: 800, marginBottom: '1rem' }}>How to Use the Estimate</h2>
           <p>
-            Start with a realistic deck size and the material level you would actually consider. If you are comparing a low-maintenance outdoor living upgrade, run the estimate once with Trex Transcend and once with TimberTech AZEK, then compare the range with the <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck payment estimator</Link>.
+            Start with a realistic deck size and the material level you would actually consider. You can select Trex or TimberTech to describe the material. The planner does not output a price for them. Payment options are on the <Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck payment estimator</Link>.
           </p>
           <p>
-            If your deck will be elevated, attached to the house, built on a slope, or connected to stairs, railings, lighting, a screened porch or outdoor kitchen, use the estimate as a starting point. The permit-ready scope should also account for <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>footings</Link>, <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>beam spans</Link>, <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>joist spans</Link> and local inspection requirements.
+            If your deck will be elevated, attached to the house, built on a slope, or connected to stairs, railings, lighting, a screened porch or outdoor kitchen, describe that scope in the planner. The permit-ready scope should also account for <Link href="/tools/deck-footing-depth-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>footings</Link>, <Link href="/tools/deck-beam-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>beam spans</Link>, <Link href="/tools/deck-joist-span-calculator-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>joist spans</Link> and local inspection requirements.
           </p>
           <p>
-            For the most useful next step, send the estimate range with your photos, approximate dimensions and city through the <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck estimate form</Link>. Loudoun Decks can turn the planning range into a scope that reflects your property, materials, approvals and timeline.
+            For the most useful next step, send your photos, approximate dimensions and city through the <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck estimate form</Link>. Loudoun Decks prepares a written estimate for the property, materials and approvals.
           </p>
         </div>
       </section>
@@ -223,7 +228,7 @@ export default function DeckCostEstimatorNorthernVirginiaPage() {
       </section>
 
       <div style={{ maxWidth: 900, margin: '2rem auto 0', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Northern Virginia deck cost planning" lastUpdated="2026-05-31" />
+        <NamedAuthor context="Northern Virginia deck cost planning" lastUpdated="2026-11-08" />
       </div>
       <RelatedGuides currentPath={path} />
     </main>
