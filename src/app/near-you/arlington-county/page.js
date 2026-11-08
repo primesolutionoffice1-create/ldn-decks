@@ -17,6 +17,30 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CountyConversionLinks from '@/components/CountyConversionLinks';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import {
+  OPEN_DECK_RANGE,
+  PORCH_QUOTED,
+  PVC_QUOTED,
+  QUOTE_SOURCE,
+  RESURFACE_QUOTED,
+  UNDER_DECK_PATIO_QUOTED,
+} from '@/lib/quotedPrices';
+
+function quotedPriceCell(source, display) {
+  const amounts = display.match(/\$[\d,]+/g) || [];
+  if (amounts.length === 0 || amounts.some((amount) => !source.includes(amount))) {
+    throw new Error(`Quoted price is not in quotedPrices.js: ${display}`);
+  }
+  return display;
+}
+
+const quotedPriceRows = [
+  ['New open deck', quotedPriceCell(OPEN_DECK_RANGE, '$61–$102 per sq ft (most $64–$68)'), 'Stairs, railings, height and premium boards push toward the top.'],
+  ['Roofed or screened porch with attached open deck', quotedPriceCell(PORCH_QUOTED, '$77,000–$112,500'), '3-season versions were at the top of the range.'],
+  ['Trex deck resurfacing', quotedPriceCell(RESURFACE_QUOTED, '$9,020–$12,678'), 'One recent Chantilly quote; frame must pass inspection.'],
+  ['Under-deck concrete patio (7×12)', quotedPriceCell(UNDER_DECK_PATIO_QUOTED, '$5,215'), 'One written quote, not a rate.'],
+  ['PVC under-deck ceiling', quotedPriceCell(PVC_QUOTED, '$3,872–$5,632'), 'Ceiling only, not a full drainage system.'],
+];
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -49,10 +73,10 @@ const services = [
 
 const faqs = [
   { q: "Do you build decks in Arlington County?", a: "Yes. LDN Decks serves all of Arlington County including Arlington, Crystal City, Ballston, Clarendon, Rosslyn, Pentagon City, Shirlington, Cherrydale, Lyon Village, Bluemont, Fairlington, and surrounding neighborhoods." },
-  { q: "Does Arlington County require a deck permit?", a: "Yes. Most decks attached to a home or over 30 inches above grade require a building permit. Arlington also has strict historic district overlays in some areas. We handle all permits." },
-  { q: "How much does a deck cost in Arlington?", a: "Loudoun Decks 2026 quoted prices (Sep–Oct 2026): new open decks about $61–$102/sq ft (most $64–$68). These figures are NoVA quoted prices, not an Arlington premium %. The written estimate is the only project price." },
-  { q: "Do you work with Arlington HOAs and community groups?", a: "Yes. We prepare all HOA submission documents and design within your community's architectural and historic overlay requirements." },
-  { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within 2-4 weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
+  { q: "Does Arlington County require a deck permit?", a: "Yes. Most decks attached to a home or over 30 inches above grade require a building permit. Permits are processed online through the Permit Arlington portal. Arlington also has historic district overlays in some areas. Review time varies with county workload; check current timing with Arlington County (Permit Arlington). LDN Decks helps homeowners plan the Arlington County permit path, including drawing needs, inspection milestones and HOA coordination where applicable. Permit scope, fees and responsibility are confirmed in the written project proposal before construction begins." },
+  { q: "How much does a deck cost in Arlington?", a: `${OPEN_DECK_RANGE} These are Northern Virginia quoted prices, not an Arlington County rate. ${QUOTE_SOURCE}` },
+  { q: "Do you work with Arlington HOAs and community groups?", a: "Yes. We prepare HOA submission documents and design within your community's architectural and historic overlay requirements." },
+  { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within a few weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
 ];
 
 export default function ArlingtonCountyPage() {
@@ -64,7 +88,7 @@ export default function ArlingtonCountyPage() {
         description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Arlington County, VA."
         url="https://ldndecks.com/near-you/arlington-county"
       />
-      <WebPageSchema dateModified="2026-11-05" url="https://ldndecks.com/near-you/arlington-county" name="Premium Deck Builder Arlington County VA | Free Quote in 24h" description="Deck and outdoor living contractor in Arlington County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-11-08" url="https://ldndecks.com/near-you/arlington-county" name="Premium Deck Builder Arlington County VA | Free Quote in 24h" description="Deck and outdoor living contractor in Arlington County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Arlington County, VA"
@@ -127,27 +151,36 @@ export default function ArlingtonCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks is a premier outdoor living specialist in Northern Virginia. We bring Trex, TimberTech, and AZEK material planning capabilities to Arlington. Our design-build approach ensures that your custom <Link href="/composite-decks">composite deck</Link> or <Link href="/screened-porch-builder-northern-virginia">screened porch</Link> is engineered for maximum durability, visual elegance, and long-term low maintenance.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Arlington County Building Permits & Codes</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Arlington County requires structural building permits for all decks attached to a building, as well as freestanding decks higher than 30 inches above the surrounding grade. Permits are processed online through the <strong>Permit Arlington</strong> portal. Review timelines generally run <strong>3–4 weeks</strong>.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Because lot sizes in Arlington are often compact, setback requirements, lot coverage ratios, and stormwater management guidelines are strictly enforced. Additionally, historic overlay districts in neighborhoods like Maywood require exterior modifications to match specific guidelines. LDN Decks handles the entire process — from zoning analysis and engineering layout to permit submission and inspection walkthroughs.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Arlington County requires structural building permits for all decks attached to a building, as well as freestanding decks higher than 30 inches above the surrounding grade. Permits are processed online through the <strong>Permit Arlington</strong> portal. Review time varies with county workload; check current timing with Arlington County (Permit Arlington).</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Because lot sizes in Arlington are often compact, setback requirements, lot coverage ratios, and stormwater management guidelines are strictly enforced. Additionally, historic overlay districts in neighborhoods like Maywood require exterior modifications to match specific guidelines. LDN Decks helps homeowners plan the Arlington County permit path, including drawing needs, inspection milestones and HOA coordination where applicable. Permit scope, fees and responsibility are confirmed in the written project proposal before construction begins.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Arlington County (2026)</h3>
-          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+          <div style={{ overflowX: 'auto', marginBottom: '1rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-              <thead><tr style={{ background: '#f5f5f5' }}><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project Type</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Estimated Cost Range</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Average Timeline</th></tr></thead>
+              <thead>
+                <tr style={{ background: '#f5f5f5' }}>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project type</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Recent quoted price (Sep–Oct 2026)</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Note</th>
+                </tr>
+              </thead>
               <tbody>
-                {[['300 sqft Composite Deck', 'a written estimate', '1-2 weeks'], ['500 sqft Multi-Level Deck', 'a written estimate', '2-4 weeks'], ['Screened Porch (250 sqft)', 'a written estimate', '3-5 weeks'], ['Deck Replacement (wood to composite)', 'a written estimate', '1-2 weeks'], ['Paver Patio (300 sqft)', 'a written estimate', '1-2 weeks']].map((r, i) => (
-                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>{r.map((c, j) => <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{c}</td>)}</tr>
+                {quotedPriceRows.map((row, i) => (
+                  <tr key={row[0]} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                    {row.map((cell, j) => (
+                      <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{cell}</td>
+                    ))}
+                  </tr>
                 ))}
               </tbody>
             </table>
           </div>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{QUOTE_SOURCE}</p>
 
-          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects by Arlington Neighborhood</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Clarendon & Ballston:</strong> High-end townhome <Link href="/services/deck-replacement">deck replacements</Link> and compact multi-tier composite decks designed to maximize private courtyard spaces. Privacy panels and custom integrated lighting are popular additions to block street noise and create cozy evening environments.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Rosslyn & Crystal City:</strong> Elevated decks and structural rooftop/balcony deck systems designed to offer gorgeous skyline and tree-canopy views. Capped polymer materials (AZEK) are widely used for their light weight and advanced thermal properties.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Lyon Village & Cherrydale:</strong> Wraparound porches and craftsman-style <Link href="/screened-porch-builder-northern-virginia">screened porch additions</Link> that preserve the historic architectural charm of the neighborhoods. We match existing siding, paint profiles, and trim details to create seamless additions.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Shirlington & Fairlington:</strong> Walk-out composite decks and ground-level <Link href="/services/patios">patios</Link> that integrate into mature garden environments. Low-profile steps and curved designs work beautifully on the rolling terrain of these communities.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Arlington County screened porch work is scoped on the <Link href="/screened-porch-contractor-arlington-county">screened porch contractor in Arlington County</Link> page, including the recent Northern Virginia quoted range for a roofed porch with a deck.</p>
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Project types we plan in Arlington County</h3>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            Homeowners in Arlington County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/screened-porch-builder-northern-virginia">screened porches</Link>, <Link href="/services/patios">patios</Link>, and <Link href="/screened-porch-contractor-arlington-county">Arlington County screened porch work</Link>.
+          </p>
         </div>
       </article>
 
@@ -192,7 +225,7 @@ export default function ArlingtonCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-05" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-08" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

@@ -19,7 +19,32 @@ import CountyConversionLinks from '@/components/CountyConversionLinks';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import AnswerBlock from '@/components/AnswerBlock';
 import QuotedPricesBlock from '@/components/QuotedPricesBlock';
-import { OPEN_DECK_QUOTED, OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
+import {
+  OPEN_DECK_QUOTED,
+  OPEN_DECK_RANGE,
+  PORCH_QUOTED,
+  PVC_QUOTED,
+  QUOTE_LABEL,
+  QUOTE_SOURCE,
+  RESURFACE_QUOTED,
+  UNDER_DECK_PATIO_QUOTED,
+} from '@/lib/quotedPrices';
+
+function quotedPriceCell(source, display) {
+  const amounts = display.match(/\$[\d,]+/g) || [];
+  if (amounts.length === 0 || amounts.some((amount) => !source.includes(amount))) {
+    throw new Error(`Quoted price is not in quotedPrices.js: ${display}`);
+  }
+  return display;
+}
+
+const quotedPriceRows = [
+  ['New open deck', quotedPriceCell(OPEN_DECK_RANGE, '$61–$102 per sq ft (most $64–$68)'), 'Stairs, railings, height and premium boards push toward the top.'],
+  ['Roofed or screened porch with attached open deck', quotedPriceCell(PORCH_QUOTED, '$77,000–$112,500'), '3-season versions were at the top of the range.'],
+  ['Trex deck resurfacing', quotedPriceCell(RESURFACE_QUOTED, '$9,020–$12,678'), 'One recent Chantilly quote; frame must pass inspection.'],
+  ['Under-deck concrete patio (7×12)', quotedPriceCell(UNDER_DECK_PATIO_QUOTED, '$5,215'), 'One written quote, not a rate.'],
+  ['PVC under-deck ceiling', quotedPriceCell(PVC_QUOTED, '$3,872–$5,632'), 'Ceiling only, not a full drainage system.'],
+];
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -53,7 +78,7 @@ const services = [
 const faqs = [
   { q: "Do you work throughout all of Prince William County?", a: "Yes. We serve homeowners in Prince William County, including Woodbridge, Dumfries, Haymarket, Gainesville, Bristow, Nokesville, Lake Ridge, Montclair, and Triangle. Manassas and Manassas Park are separate independent cities. We serve them too, and their permit offices are not the Prince William County office." },
   { q: "How much does a new deck typically cost in Prince William County?", a: `${QUOTE_LABEL}: ${OPEN_DECK_RANGE} Those are quoted prices, not one price or a percentage comparison for every Prince William project. The written estimate after a site visit is the only project price.` },
-  { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget. Composite upgrades from aging pressure-treated wood are a popular project in Manassas, Woodbridge, and Lake Ridge." },
+  { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget." },
   { q: "Do you help with permits for deck projects?", a: "Yes. Prince William County may require a permit for decks over 200 square feet or more than 30 inches above grade. We help homeowners identify permit triggers, plan submission requirements, coordinate plan-review questions, and understand inspection milestones before construction begins." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within a few weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
 ];
@@ -67,7 +92,7 @@ export default function PrinceWilliamCountyPage() {
         description="LDN Decks builds custom decks, porches, patios, pergolas, and outdoor living spaces throughout Prince William County, VA."
         url="https://ldndecks.com/near-you/prince-william-county"
       />
-      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/near-you/prince-william-county" name="Premium Deck Builder Prince William County VA | Free Quote" description="Professional deck contractor in Prince William County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-11-08" url="https://ldndecks.com/near-you/prince-william-county" name="Premium Deck Builder Prince William County VA | Free Quote" description="Professional deck contractor in Prince William County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Prince William County, VA"
@@ -139,17 +164,38 @@ export default function PrinceWilliamCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We build in Prince William County, from Gainesville and Haymarket to Bristow, Woodbridge, and Dale City. The written estimate names the permit office for the property.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Prince William County Permits</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County may require building permits for decks over 200 sqft or 30 inches above grade. Review timing depends on scope and county workload. We help homeowners plan the permit path, submission requirements, plan-review coordination, and inspection milestones before construction begins.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County may require building permits for decks over 200 sqft or 30 inches above grade. Review time varies with county workload; check current timing with Prince William County. LDN Decks helps homeowners plan the Prince William County permit path, including drawing needs, inspection milestones and HOA coordination where applicable. Permit scope, fees and responsibility are confirmed in the written project proposal before construction begins.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Prince William County</h3>
           <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED]} />
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We install Trex and TimberTech decking and work with both as partner brands. Those quotes are recent Northern Virginia open-deck prices, not a Prince William percentage. A written estimate is still the only project price.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The quoted range above is for recent Northern Virginia open-deck quotes. It is not a separate Prince William County rate.</p>
+          <div style={{ overflowX: 'auto', marginBottom: '1rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+              <thead>
+                <tr style={{ background: '#f5f5f5' }}>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project type</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Recent quoted price (Sep–Oct 2026)</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Note</th>
+                </tr>
+              </thead>
+              <tbody>
+                {quotedPriceRows.map((row, i) => (
+                  <tr key={row[0]} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                    {row.map((cell, j) => (
+                      <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{cell}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{QUOTE_SOURCE}</p>
 
-          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects by Area</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Manassas and Manassas Park:</strong> These are independent cities next to the county, not county communities. The <Link href="/deck-builder-manassas-va">Manassas deck page</Link> covers city projects. County projects use the Prince William permit office.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Gainesville & Haymarket:</strong> New construction decks on recently built homes in Heritage Hunt, Dominion Valley, and Piedmont communities. Multi-level designs for walkout basements are especially popular on the rolling terrain.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Woodbridge and Lake Ridge:</strong> <Link href="/screened-porch-contractor-prince-william-county">Screened porch additions</Link> and <Link href="/patio-contractor-prince-william-county">under-deck patio systems</Link> are common requests. The estimate names the product and the price.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Bristow & Nokesville:</strong> Large estate decks with panoramic views, outdoor kitchens, and fire pit integration. The larger lot sizes in western Prince William allow for expansive outdoor living packages.</p>
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Project types we plan in Prince William County</h3>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>
+            Homeowners in Prince William County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/screened-porch-contractor-prince-william-county">screened porches</Link>, <Link href="/patio-contractor-prince-william-county">patios</Link>, and <Link href="/deck-resurfacing-prince-william-county">deck resurfacing</Link>.
+          </p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Manassas and Manassas Park:</strong> These are independent cities next to the county, not county communities. The <Link href="/deck-builder-manassas-va">Manassas deck page</Link> covers city projects. County projects use the Prince William permit office.</p>
         </div>
       </article>
 
@@ -195,7 +241,7 @@ export default function PrinceWilliamCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Prince William County" lastUpdated="2026-11-01" />
+      <NamedAuthor context="Prince William County" lastUpdated="2026-11-08" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

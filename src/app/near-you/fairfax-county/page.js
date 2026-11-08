@@ -19,7 +19,31 @@ import CountyConversionLinks from '@/components/CountyConversionLinks';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import AnswerBlock from '@/components/AnswerBlock';
 import QuotedPricesBlock from '@/components/QuotedPricesBlock';
-import { OPEN_DECK_QUOTED } from '@/lib/quotedPrices';
+import {
+  OPEN_DECK_QUOTED,
+  OPEN_DECK_RANGE,
+  PORCH_QUOTED,
+  PVC_QUOTED,
+  QUOTE_SOURCE,
+  RESURFACE_QUOTED,
+  UNDER_DECK_PATIO_QUOTED,
+} from '@/lib/quotedPrices';
+
+function quotedPriceCell(source, display) {
+  const amounts = display.match(/\$[\d,]+/g) || [];
+  if (amounts.length === 0 || amounts.some((amount) => !source.includes(amount))) {
+    throw new Error(`Quoted price is not in quotedPrices.js: ${display}`);
+  }
+  return display;
+}
+
+const quotedPriceRows = [
+  ['New open deck', quotedPriceCell(OPEN_DECK_RANGE, '$61–$102 per sq ft (most $64–$68)'), 'Stairs, railings, height and premium boards push toward the top.'],
+  ['Roofed or screened porch with attached open deck', quotedPriceCell(PORCH_QUOTED, '$77,000–$112,500'), '3-season versions were at the top of the range.'],
+  ['Trex deck resurfacing', quotedPriceCell(RESURFACE_QUOTED, '$9,020–$12,678'), 'One recent Chantilly quote; frame must pass inspection.'],
+  ['Under-deck concrete patio (7×12)', quotedPriceCell(UNDER_DECK_PATIO_QUOTED, '$5,215'), 'One written quote, not a rate.'],
+  ['PVC under-deck ceiling', quotedPriceCell(PVC_QUOTED, '$3,872–$5,632'), 'Ceiling only, not a full drainage system.'],
+];
 
 const LocationIcon = () => (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -54,9 +78,9 @@ const services = [
 
 const faqs = [
   { q: "Do you work throughout all of Fairfax County?", a: "Yes. We serve homeowners across Fairfax County, including Alexandria, Fairfax, Vienna, Reston, Herndon, Mclean, Falls Church, Annandale, Burke, Springfield, Chantilly, Centreville, Oakton, Great Falls, Lorton, Tysons, West Springfield and nearby communities." },
-  { q: "How much does a new deck typically cost in Fairfax County?", a: "In Fairfax County, a 300 sq ft composite deck typically is priced in a written estimate and a 500 sq ft multi-level deck a written estimate. Final pricing depends on materials, design details, and site conditions. After a free on-site visit, we provide a clear written estimate so you know exactly what to expect." },
-  { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget. Deck replacements are especially common on the 1980s–1990s colonials throughout Vienna, Oakton, and Burke." },
-  { q: "Do you handle permits for deck projects?", a: "Yes. Fairfax County requires a permit for all attached decks and any deck over 200 square feet, submitted through the FIDO online system. Review typically takes 3–6 weeks plus footing, framing, and final inspections. We prepare the structural drawings and handle the entire FIDO submission and inspector coordination." },
+  { q: "How much does a new deck typically cost in Fairfax County?", a: `${OPEN_DECK_RANGE} Stairs, railings, height and premium boards push toward the top. ${QUOTE_SOURCE}` },
+  { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget." },
+  { q: "Do you handle permits for deck projects?", a: "Yes. Fairfax County requires a permit for all attached decks and any deck over 200 square feet, submitted through the FIDO online system. Review time varies with county workload; check current timing with Fairfax County (FIDO). Three inspections are required: footing, framing, and final. LDN Decks helps homeowners plan the Fairfax County permit path, including drawing needs, inspection milestones and HOA coordination where applicable. Permit scope, fees and responsibility are confirmed in the written project proposal before construction begins." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within a few weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
   ];
 
@@ -69,7 +93,7 @@ export default function FairfaxCountyPage() {
           description="LDN Decks builds custom decks, screened porches, patios, and outdoor living spaces throughout Fairfax County, VA."
           url="https://ldndecks.com/near-you/fairfax-county"
         />
-      <WebPageSchema dateModified="2026-11-05" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Written Estimates" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-11-08" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Written Estimates" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
             <ServicesHeader
           subtext="Serving Northern Virginia"
           title="Deck Builder in Fairfax County, VA"
@@ -147,29 +171,38 @@ export default function FairfaxCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks brings <strong>Trex, TimberTech, AZEK, and pressure-treated framing</strong> experience to every Fairfax County project. We understand the county&apos;s detailed building code requirements, HOA architectural review processes, and the high standards Fairfax homeowners expect.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Fairfax County Building Permits & Codes</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County requires building permits for all attached decks and any deck over 200 square feet. Applications are submitted through the <strong>FIDO online system</strong> (Fairfax Inspections Database Online). Processing time is <strong>3-6 weeks</strong> — longer than Loudoun or Prince William counties. Three inspections required: footing, framing, final.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks handles the <strong>entire Fairfax County permit process</strong> including structural drawings, FIDO submission, and inspector coordination. We build to meet or exceed Fairfax County&apos;s typical deck detail specifications and address review comments when they arise.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Fairfax County requires building permits for all attached decks and any deck over 200 square feet. Applications are submitted through the <strong>FIDO online system</strong> (Fairfax Inspections Database Online). Review time varies with county workload; check current timing with Fairfax County (FIDO). Three inspections required: footing, framing, final.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks helps homeowners plan the Fairfax County permit path, including drawing needs, inspection milestones and HOA coordination where applicable. Permit scope, fees and responsibility are confirmed in the written project proposal before construction begins.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Fairfax County (2026)</h3>
           <QuotedPricesBlock paragraphs={[OPEN_DECK_QUOTED]} />
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>We install Trex and TimberTech decking and work with both as partner brands. The quoted range above is for recent Northern Virginia open-deck quotes. It is not a separate Fairfax County rate. The table below does not add one.</p>
-          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The quoted range above is for recent Northern Virginia open-deck quotes. It is not a separate Fairfax County rate.</p>
+          <div style={{ overflowX: 'auto', marginBottom: '1rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-              <thead><tr style={{ background: '#f5f5f5' }}><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Cost Range</th><th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Timeline</th></tr></thead>
+              <thead>
+                <tr style={{ background: '#f5f5f5' }}>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project type</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Recent quoted price (Sep–Oct 2026)</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Note</th>
+                </tr>
+              </thead>
               <tbody>
-                {[['300 sqft Composite Deck', 'a written estimate', '1-2 weeks'], ['500 sqft Multi-Level Deck', 'a written estimate', '2-4 weeks'], ['Screened Porch', 'a written estimate', '3-5 weeks'], ['Deck Replacement', 'a written estimate', '1-2 weeks'], ['Paver Patio', 'a written estimate', '1-2 weeks']].map((r, i) => (
-                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>{r.map((c, j) => <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{c}</td>)}</tr>
+                {quotedPriceRows.map((row, i) => (
+                  <tr key={row[0]} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                    {row.map((cell, j) => (
+                      <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{cell}</td>
+                    ))}
+                  </tr>
                 ))}
               </tbody>
             </table>
           </div>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{QUOTE_SOURCE}</p>
 
-          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects by Fairfax Neighborhood</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>McLean & Great Falls:</strong> Premium AZEK and Trex Transcend decks on estate properties, <Link href="/outdoor-kitchen-builder-northern-virginia">outdoor kitchens</Link>, multi-zone entertainment areas combining deck + screened porch + patio. These high-value homes demand exceptional quality and design.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Vienna & Oakton:</strong> <Link href="/services/deck-replacement">Deck replacements</Link> on 1980s-1990s colonials, <Link href="/screened-porch-builder-northern-virginia">screened porch additions</Link>, and pergola installations. Many homes here have original wood decks that are now 25-30 years old — prime candidates for composite upgrades.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Reston & Herndon:</strong> Reston Association-approved composite builds, townhome deck/patio combos, and elevated deck designs for wooded lots with grade changes. We have extensive experience with Reston&apos;s architectural review requirements.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Burke, Springfield & Lorton:</strong> Family-oriented deck builds with integrated lighting, stair systems, and multi-level designs for sloped lots. Budget-friendly Trex Enhance projects are popular here at priced in a written estimate.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Centreville & Chantilly:</strong> Full deck replacements, composite resurfacing, and fence packages. HOA communities like <Link href="/virginia-run-hoa-deck-rules">Virginia Run</Link> and <Link href="/sully-station-hoa-deck-rules">Sully Station</Link> have specific requirements we know well.</p>
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Project types we plan in Fairfax County</h3>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            Homeowners in Fairfax County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/screened-porch-contractor-fairfax-county">screened porches</Link>, <Link href="/screened-porch-builder-northern-virginia">screened porch building</Link>, <Link href="/patio-contractor-fairfax-county">patios</Link>, <Link href="/services/patios">patio service</Link>, and <Link href="/services/deck-resurfacing">deck resurfacing</Link>.
+          </p>
         </div>
       </article>
 
@@ -224,7 +257,7 @@ export default function FairfaxCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Fairfax County" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Fairfax County" lastUpdated="2026-11-08" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

@@ -18,6 +18,30 @@ import AnswerBlock from '@/components/AnswerBlock';
 import { getCityLink } from '@/data/cityData';
 import styles from '../LocationPage.module.css';
 import { buildMetadata } from '@/lib/seo';
+import {
+  OPEN_DECK_RANGE,
+  PORCH_QUOTED,
+  PVC_QUOTED,
+  QUOTE_SOURCE,
+  RESURFACE_QUOTED,
+  UNDER_DECK_PATIO_QUOTED,
+} from '@/lib/quotedPrices';
+
+function quotedPriceCell(source, display) {
+  const amounts = display.match(/\$[\d,]+/g) || [];
+  if (amounts.length === 0 || amounts.some((amount) => !source.includes(amount))) {
+    throw new Error(`Quoted price is not in quotedPrices.js: ${display}`);
+  }
+  return display;
+}
+
+const quotedPriceRows = [
+  ['New open deck', quotedPriceCell(OPEN_DECK_RANGE, '$61–$102 per sq ft (most $64–$68)'), 'Stairs, railings, height and premium boards push toward the top.'],
+  ['Roofed or screened porch with attached open deck', quotedPriceCell(PORCH_QUOTED, '$77,000–$112,500'), '3-season versions were at the top of the range.'],
+  ['Trex deck resurfacing', quotedPriceCell(RESURFACE_QUOTED, '$9,020–$12,678'), 'One recent Chantilly quote; frame must pass inspection.'],
+  ['Under-deck concrete patio (7×12)', quotedPriceCell(UNDER_DECK_PATIO_QUOTED, '$5,215'), 'One written quote, not a rate.'],
+  ['PVC under-deck ceiling', quotedPriceCell(PVC_QUOTED, '$3,872–$5,632'), 'Ceiling only, not a full drainage system.'],
+];
 
 const LocationIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--site-color)', marginRight: '10px' }}>
@@ -51,8 +75,8 @@ const services = [
 
 const faqs = [
   { q: "Do you work throughout all of Loudoun County?", a: "Yes. We serve homeowners across Loudoun County, including Ashburn, Leesburg, Sterling, Aldie, Middleburg, Round Hill, Purcellville, Lovettsville, Hamilton, Waterford, Brambleton, South Riding, Stone Ridge, Broadlands and nearby communities." },
-  { q: "How much does a new deck typically cost in Loudoun County?", a: "In our recent written quotes (September–October 2026), new open decks ran about $61–$102 per sq ft, most around $64–$68 per sq ft. Two Broadlands examples: 528 sq ft at $35,615 and 627 sq ft at $40,000–$42,869. These are quoted prices, not final contract prices; stairs, railings, height and decking material change the total. After a free on-site visit, we provide a clear written estimate so you know exactly what to expect." },
-  { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget. Many original wood decks in Ashburn, Brambleton, and Broadlands are reaching the end of their life, which is when composite replacement is worth pricing." },
+  { q: "How much does a new deck typically cost in Loudoun County?", a: `${OPEN_DECK_RANGE} Stairs, railings, height and premium boards push toward the top. ${QUOTE_SOURCE}` },
+  { q: "Can you replace my old wood deck with composite?", a: "Yes. We can inspect your existing structure, let you know what can be reused, and design a new composite surface that fits your home and budget." },
   { q: "Do you handle permits for deck projects?", a: "Yes. Any deck attached to a home or more than 30 inches above grade requires a Loudoun County building permit and inspections (typically footings, framing, and final); review time varies, so confirm current timing with the county. We prepare the structural drawings and coordinate permit documentation planning as part of the project planning scope." },
   { q: "How long does a typical deck project take?", a: "Timelines vary with design and weather, but many projects are completed within a few weeks from permit approval. We'll give you a realistic schedule during the estimate process." }
 ];
@@ -60,7 +84,7 @@ const faqs = [
 export default function LoudounCountyPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-11-05" url="https://ldndecks.com/near-you/loudoun-county" name="Deck Builder in Loudoun County, VA" description="Deck contractor in Loudoun County with public review profile links, HOA planning support, county permit guidance, and written estimate requests." speakable />
+      <WebPageSchema dateModified="2026-11-08" url="https://ldndecks.com/near-you/loudoun-county" name="Deck Builder in Loudoun County, VA" description="Deck contractor in Loudoun County with public review profile links, HOA planning support, county permit guidance, and written estimate requests." speakable />
       <LocalBusinessSchema
         city="Loudoun County"
         areaType="AdministrativeArea"
@@ -103,7 +127,7 @@ export default function LoudounCountyPage() {
         ]}
       />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Loudoun County" lastUpdated="2026-11-04" />
+        <NamedAuthor context="Loudoun County" lastUpdated="2026-11-08" />
       </div>
       <section className={styles.permitSection}>
         <div className={styles.container}>
@@ -150,26 +174,19 @@ export default function LoudounCountyPage() {
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>LDN Decks helps homeowners plan the <strong>Loudoun County permit path</strong>, including structural drawing needs, inspection milestones, and HOA coordination where applicable. Permit scope, fees, and responsibility are confirmed in the written project proposal before construction begins.</p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Deck Cost in Loudoun County (2026 Pricing)</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>In our recent written quotes (September–October 2026), new open decks ran about <strong>$61–$102 per sq ft</strong>, most around $64–$68 per sq ft; roofed or screened porches built with a deck ran $77,000–$112,500. These are quoted prices, not final contract prices. Planning notes by project type:</p>
-          <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Recent Northern Virginia written quotes for these project types. They are not a separate Loudoun County rate.</p>
+          <div style={{ overflowX: 'auto', marginBottom: '1rem' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
               <thead>
                 <tr style={{ background: '#f5f5f5' }}>
-                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project Type</th>
-                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Typical Cost</th>
-                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Timeline</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Project type</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Recent quoted price (Sep–Oct 2026)</th>
+                  <th style={{ padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Note</th>
                 </tr>
               </thead>
               <tbody>
-                {[
-                  ['300 sqft Composite Deck', 'a written estimate', '1-2 weeks'],
-                  ['500 sqft Multi-Level Deck', 'a written estimate', '2-3 weeks'],
-                  ['Screened Porch (250 sqft)', 'a written estimate', '3-4 weeks'],
-                  ['Deck Replacement (wood → composite)', 'a written estimate', '1-2 weeks'],
-                  ['Pergola or Gazebo', 'a written estimate', '1 week'],
-                  ['Paver Patio (300 sqft)', 'a written estimate', '1-2 weeks'],
-                ].map((row, i) => (
-                  <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                {quotedPriceRows.map((row, i) => (
+                  <tr key={row[0]} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => (
                       <td key={j} style={{ padding: '0.75rem', borderBottom: '1px solid #eee', fontWeight: j === 1 ? 600 : 400 }}>{cell}</td>
                     ))}
@@ -178,12 +195,12 @@ export default function LoudounCountyPage() {
               </tbody>
             </table>
           </div>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{QUOTE_SOURCE}</p>
 
-          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Popular Projects in Loudoun County</h3>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Ashburn & Brambleton:</strong> Multi-level composite Trex and TimberTech decks with integrated <Link href="/screened-porch-builder-northern-virginia">screened porches</Link>. Homes in Brambleton, Broadlands, and Ashburn Village are reaching the age where original pressure-treated wood decks need replacement — <Link href="/composite-deck-builder-loudoun">composite deck upgrades</Link> are a common next step.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Leesburg:</strong> Front porch additions on historic in-town homes, screened porch construction on newer colonials, and estate-lot outdoor living packages combining deck + patio + fire feature.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Sterling & Cascades:</strong> Deck resurfacing for aging subdivisions, ground-level patios with pavers, and privacy fence installations to complement deck projects.</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}><strong>Purcellville & Western Loudoun:</strong> Large custom decks on estate properties with scenic views, pergola installations, and outdoor kitchen builds that take advantage of the rural landscape.</p>
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Project types we plan in Loudoun County</h3>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
+            Homeowners in Loudoun County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/screened-porch-contractor-loudoun-county">screened porches</Link>, <Link href="/patio-contractor-loudoun-county">patios</Link>, and <Link href="/deck-resurfacing-loudoun-county">deck resurfacing</Link>. Regional screened porch planning is on the <Link href="/screened-porch-builder-northern-virginia">screened porch builder</Link> page.
+          </p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Virginia Climate Considerations for Loudoun County Decks</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Loudoun County winters swing above and below freezing again and again, summers are long and humid, and most decks sit in full sun for much of the day. Water that soaks into wood grain freezes, expands and opens checks and splits; sustained moisture feeds mold, mildew and rot; and sunlight weathers unsealed wood to gray. Pressure-treated wood needs regular cleaning and resealing to hold up in these conditions.</p>
