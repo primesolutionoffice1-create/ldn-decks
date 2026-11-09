@@ -203,6 +203,7 @@ export default async function sitemap() {
 		{ path: "/services/new-decks",           priority: 0.85, lastMod: TIER2, freq: "weekly" },
 		{ path: "/services/deck-resurfacing",    priority: 0.85, lastMod: TIER2, freq: "weekly" },
 		{ path: "/services/deck-repair", priority: 0.90, lastMod: TIER2, freq: "weekly" },
+		{ path: "/services/deck-post-replacement", priority: 0.85, lastMod: TIER2, freq: "monthly" },
 		{ path: "/services/porches",             priority: 0.90, lastMod: TIER2, freq: "weekly" },
 		{ path: "/services/porches/front-porch", priority: 0.80, lastMod: TIER2, freq: "monthly" },
 		{ path: "/services/porches/open-porch",  priority: 0.80, lastMod: TIER2, freq: "monthly" },

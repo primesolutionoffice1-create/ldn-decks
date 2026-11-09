@@ -322,6 +322,11 @@ export default function DeckRepairPage() {
         image2="/images/img53.jpeg"
       />
 
+      <section style={{ maxWidth: 1100, margin: '0 auto', padding: '24px', lineHeight: 1.7 }}>
+        <h2>Planning a deck post replacement?</h2>
+        <p>See real project photographs, short videos and our pricing for one to five eligible post locations. Assessment and a written scope confirm the work your deck needs.</p>
+        <Link href="/services/deck-post-replacement" style={{ textDecoration: 'underline', fontWeight: 600 }}>View deck post replacement pricing and project work →</Link>
+      </section>
       <ServiceContentExpansion sections={expansionSections} />
 
       <section id="deck-repair-structural-guides" data-speakable="deck-repair-structural-guides" style={{ maxWidth: 980, margin: '0 auto', padding: '20px 20px 60px', lineHeight: 1.75 }}>
