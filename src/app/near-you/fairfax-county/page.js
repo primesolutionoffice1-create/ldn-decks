@@ -93,7 +93,7 @@ export default function FairfaxCountyPage() {
           description="LDN Decks builds custom decks, screened porches, patios, and outdoor living spaces throughout Fairfax County, VA."
           url="https://ldndecks.com/near-you/fairfax-county"
         />
-      <WebPageSchema dateModified="2026-11-08" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Written Estimates" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-11-09" url="https://ldndecks.com/near-you/fairfax-county" name="Premium Deck Builder Fairfax County VA | Written Estimates" description="Deck and outdoor living contractor in Fairfax County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
             <ServicesHeader
           subtext="Serving Northern Virginia"
           title="Deck Builder in Fairfax County, VA"
@@ -201,7 +201,7 @@ export default function FairfaxCountyPage() {
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Project types we plan in Fairfax County</h3>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
-            Homeowners in Fairfax County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/screened-porch-contractor-fairfax-county">screened porches</Link>, <Link href="/screened-porch-builder-northern-virginia">screened porch building</Link>, <Link href="/patio-contractor-fairfax-county">patios</Link>, <Link href="/services/patios">patio service</Link>, and <Link href="/services/deck-resurfacing">deck resurfacing</Link>.
+            Homeowners in Fairfax County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/services/deck-post-replacement">deck post replacement</Link>, <Link href="/screened-porch-contractor-fairfax-county">screened porches</Link>, <Link href="/screened-porch-builder-northern-virginia">screened porch building</Link>, <Link href="/patio-contractor-fairfax-county">patios</Link>, <Link href="/services/patios">patio service</Link>, and <Link href="/services/deck-resurfacing">deck resurfacing</Link>.
           </p>
         </div>
       </article>
@@ -257,7 +257,7 @@ export default function FairfaxCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Fairfax County" lastUpdated="2026-11-08" />
+      <NamedAuthor context="Fairfax County" lastUpdated="2026-11-09" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

@@ -18,12 +18,12 @@ import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import QuotedPricesBlock from '@/components/QuotedPricesBlock';
 import AnswerBlock from '@/components/AnswerBlock';
-import { QUOTE_SOURCE, RESURFACE_QUOTED, REVIEWED_ISO, REVIEWED_LABEL } from '@/lib/quotedPrices';
+import { QUOTE_SOURCE, RESURFACE_QUOTED } from '@/lib/quotedPrices';
 
 const PAGE_DESCRIPTION =
   'Deck resurfacing in Northern Virginia. Loudoun Decks 2026 quoted prices: Trex deck resurfacing $9,020–$12,678. External benchmarks are labeled below.';
 
-const CONTENT_UPDATED = REVIEWED_ISO;
+const CONTENT_UPDATED = '2026-11-09';
 
 // Same URLs as the composite resurfacing and old-deck demolition rows in src/lib/externalPlanningRanges.js.
 const LATEST_COST_RESURFACING_URL =
@@ -225,12 +225,12 @@ export default function DeckResurfacingPage() {
           {renderLinkedText(DIRECT_ANSWER)}
         </p>
         <p style={{ fontSize: '17px', lineHeight: 1.7, color: '#333', margin: '0.75rem 0 0' }}>
-          When the frame should come out, see <Link href="/services/deck-replacement">deck replacement in Northern Virginia</Link>.
+          When the frame should come out, see <Link href="/services/deck-replacement">deck replacement in Northern Virginia</Link>. If only a few support posts have deteriorated, see <Link href="/services/deck-post-replacement">deck post replacement</Link>.
         </p>
       </section>
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
         <QuotedPricesBlock paragraphs={[RESURFACE_QUOTED]} />
-        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated={REVIEWED_LABEL} />
+        <NamedAuthor context="Loudoun, Fairfax, and Prince William counties" lastUpdated={CONTENT_UPDATED} />
       </section>
 
       <PlanningUpdate

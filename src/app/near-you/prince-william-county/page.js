@@ -92,7 +92,7 @@ export default function PrinceWilliamCountyPage() {
         description="LDN Decks builds custom decks, porches, patios, pergolas, and outdoor living spaces throughout Prince William County, VA."
         url="https://ldndecks.com/near-you/prince-william-county"
       />
-      <WebPageSchema dateModified="2026-11-08" url="https://ldndecks.com/near-you/prince-william-county" name="Premium Deck Builder Prince William County VA | Free Quote" description="Professional deck contractor in Prince William County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-11-09" url="https://ldndecks.com/near-you/prince-william-county" name="Premium Deck Builder Prince William County VA | Free Quote" description="Professional deck contractor in Prince William County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Prince William County, VA"
@@ -193,7 +193,7 @@ export default function PrinceWilliamCountyPage() {
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Project types we plan in Prince William County</h3>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>
-            Homeowners in Prince William County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/screened-porch-contractor-prince-william-county">screened porches</Link>, <Link href="/patio-contractor-prince-william-county">patios</Link>, and <Link href="/deck-resurfacing-prince-william-county">deck resurfacing</Link>.
+            Homeowners in Prince William County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/services/deck-post-replacement">deck post replacement</Link>, <Link href="/screened-porch-contractor-prince-william-county">screened porches</Link>, <Link href="/patio-contractor-prince-william-county">patios</Link>, and <Link href="/deck-resurfacing-prince-william-county">deck resurfacing</Link>.
           </p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}><strong>Manassas and Manassas Park:</strong> These are independent cities next to the county, not county communities. The <Link href="/deck-builder-manassas-va">Manassas deck page</Link> covers city projects. County projects use the Prince William permit office.</p>
         </div>
@@ -241,7 +241,7 @@ export default function PrinceWilliamCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Prince William County" lastUpdated="2026-11-08" />
+      <NamedAuthor context="Prince William County" lastUpdated="2026-11-09" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
