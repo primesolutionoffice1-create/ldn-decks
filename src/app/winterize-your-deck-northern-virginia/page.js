@@ -31,7 +31,7 @@ export default function WinterizeDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-11-05" url="https://ldndecks.com/winterize-your-deck-northern-virginia" name="Winterize Your Deck in Northern VA" description="Protect your deck from Virginia freeze-thaw. 10-step winterization checklist for wood and composite decks. Free inspection." speakable />
+      <WebPageSchema dateModified="2026-11-09" url="https://ldndecks.com/winterize-your-deck-northern-virginia" name="Winterize Your Deck in Northern VA" description="Protect your deck from Virginia freeze-thaw. 10-step winterization checklist for wood and composite decks. Free inspection." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>How to Winterize Your Deck in Northern Virginia</h1>
@@ -63,7 +63,7 @@ export default function WinterizeDeckPage() {
               { step: 'Clear ALL leaves and debris', detail: 'Wet leaves trap moisture against the deck surface, promoting mold and rot over winter. Clear between board gaps with a putty knife or deck gap tool.' },
               { step: 'Deep clean the surface', detail: 'Sweep, then wash with deck cleaner and soft brush. Power wash wood decks at 1,200–1,500 PSI max. Composite: soap and water only.' },
               { step: 'Inspect every board', detail: 'Look for: soft spots (poke with screwdriver), cracks, splits, popped nails/screws, loose boards. Fix before winter damage worsens with freeze-thaw.' },
-              { step: 'Check railing posts', detail: 'Push-test every post. Wobbly posts mean water has entered the base connection. Tighten or replace before freeze-thaw makes it worse.' },
+              { step: 'Check railing posts', detail: <>Push-test every post. Wobbly posts mean water has entered the base connection. Tighten or replace before freeze-thaw makes it worse. For deteriorated deck support posts (not railing posts), see <Link href="/services/deck-post-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>deck post replacement</Link>.</> },
               { step: 'Inspect the ledger board', detail: 'Where the deck meets the house is the #1 failure point. Look for gaps, rusted flashing, water stains on the wall below. Seal any gaps with appropriate flashing and sealant.' },
               { step: 'Apply stain/sealant (wood decks only)', detail: 'If water no longer beads on the surface, apply a fresh coat. Needs 48 hours of above-50°F temps to cure. This is the single most important wood deck winterization step.' },
               { step: 'Clean gutters above the deck', detail: 'Clogged gutters pour water directly onto the deck surface all winter. Clean them now.' },
@@ -131,7 +131,7 @@ export default function WinterizeDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Deck Need Pre-Winter Repairs? Free Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-05" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-09" />
 
       <RelatedGuides currentPath="/winterize-your-deck-northern-virginia" />
 

@@ -88,12 +88,15 @@ export default function ArlingtonCountyPage() {
         description="LDN Decks builds custom decks, screened porches, patios, pergolas, and outdoor living spaces throughout Arlington County, VA."
         url="https://ldndecks.com/near-you/arlington-county"
       />
-      <WebPageSchema dateModified="2026-11-08" url="https://ldndecks.com/near-you/arlington-county" name="Premium Deck Builder Arlington County VA | Free Quote in 24h" description="Deck and outdoor living contractor in Arlington County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
+      <WebPageSchema dateModified="2026-11-09" url="https://ldndecks.com/near-you/arlington-county" name="Premium Deck Builder Arlington County VA | Free Quote in 24h" description="Deck and outdoor living contractor in Arlington County with public review profile links, permit guidance, and custom decks, patios, and porches." speakable />
       <ServicesHeader
         subtext="Serving Northern Virginia"
         title="Deck Builder in Arlington County, VA"
         description="Loudoun Decks is a trusted local deck and outdoor living contractor serving homeowners throughout Arlington County. We design and build custom decks, patios, porches, and outdoor spaces."
       />
+      <p style={{ maxWidth: 900, margin: '1rem auto 0', padding: '0 1.5rem', lineHeight: 1.7 }}>
+        Planning a full rebuild in this county? See <Link href="/services/deck-replacement">deck replacement in Northern Virginia</Link>.
+      </p>
       <ServiceMain
         subtitle="Expert Craftsmanship"
         title="Custom Outdoor Living for Arlington Homeowners"
@@ -179,7 +182,7 @@ export default function ArlingtonCountyPage() {
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Project types we plan in Arlington County</h3>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
-            Homeowners in Arlington County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/screened-porch-builder-northern-virginia">screened porches</Link>, <Link href="/services/patios">patios</Link>, and <Link href="/screened-porch-contractor-arlington-county">Arlington County screened porch work</Link>.
+            Homeowners in Arlington County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/services/deck-post-replacement">deck post replacement</Link>, <Link href="/screened-porch-builder-northern-virginia">screened porches</Link>, <Link href="/services/patios">patios</Link>, and <Link href="/screened-porch-contractor-arlington-county">Arlington County screened porch work</Link>.
           </p>
         </div>
       </article>
@@ -225,7 +228,7 @@ export default function ArlingtonCountyPage() {
         </div>
       </section>
 
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-08" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-09" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

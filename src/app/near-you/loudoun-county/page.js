@@ -84,7 +84,7 @@ const faqs = [
 export default function LoudounCountyPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-11-08" url="https://ldndecks.com/near-you/loudoun-county" name="Deck Builder in Loudoun County, VA" description="Deck contractor in Loudoun County with public review profile links, HOA planning support, county permit guidance, and written estimate requests." speakable />
+      <WebPageSchema dateModified="2026-11-09" url="https://ldndecks.com/near-you/loudoun-county" name="Deck Builder in Loudoun County, VA" description="Deck contractor in Loudoun County with public review profile links, HOA planning support, county permit guidance, and written estimate requests." speakable />
       <LocalBusinessSchema
         city="Loudoun County"
         areaType="AdministrativeArea"
@@ -127,7 +127,7 @@ export default function LoudounCountyPage() {
         ]}
       />
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Loudoun County" lastUpdated="2026-11-08" />
+        <NamedAuthor context="Loudoun County" lastUpdated="2026-11-09" />
       </div>
       <section className={styles.permitSection}>
         <div className={styles.container}>
@@ -199,7 +199,7 @@ export default function LoudounCountyPage() {
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Project types we plan in Loudoun County</h3>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
-            Homeowners in Loudoun County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/screened-porch-contractor-loudoun-county">screened porches</Link>, <Link href="/patio-contractor-loudoun-county">patios</Link>, and <Link href="/deck-resurfacing-loudoun-county">deck resurfacing</Link>. Regional screened porch planning is on the <Link href="/screened-porch-builder-northern-virginia">screened porch builder</Link> page.
+            Homeowners in Loudoun County can plan <Link href="/services/deck-replacement">deck replacement</Link>, <Link href="/services/deck-post-replacement">deck post replacement</Link>, <Link href="/screened-porch-contractor-loudoun-county">screened porches</Link>, <Link href="/patio-contractor-loudoun-county">patios</Link>, and <Link href="/deck-resurfacing-loudoun-county">deck resurfacing</Link>. Regional screened porch planning is on the <Link href="/screened-porch-builder-northern-virginia">screened porch builder</Link> page.
           </p>
 
           <h3 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '2rem 0 1rem' }}>Virginia Climate Considerations for Loudoun County Decks</h3>
