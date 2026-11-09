@@ -16,13 +16,29 @@ export const metadata = buildMetadata({
   image: '/social/winterize-deck-northern-virginia-social.png',
 });
 
+const faqs = [
+  {
+    question: "How do I winterize my deck in Virginia?",
+    answer: "Clean all debris, inspect for damage, apply stain/sealant (wood only), check flashing, move furniture, clear gutters above deck. Do this before first frost (typically late October in Northern Virginia). Composite decks need less just clean debris and inspect hardware.",
+  },
+  {
+    question: "Can I use salt on my deck in winter?",
+    answer: "No rock salt and calcium chloride can damage both wood and composite decking. Use sand or kitty litter for traction. For ice, use a plastic shovel and let sun/salt-free de-icer do the work.",
+  },
+  {
+    question: "Should I cover my deck in winter?",
+    answer: "No need to cover the entire deck that traps moisture and promotes mold. Do cover or store outdoor furniture, cushions, and grills. Leave the deck surface exposed for air circulation.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How do I winterize my deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Clean all debris, inspect for damage, apply stain/sealant (wood only), check flashing, move furniture, clear gutters above deck. Do this before first frost (typically late October in Northern Virginia). Composite decks need less just clean debris and inspect hardware." } },
-    { "@type": "Question", name: "Can I use salt on my deck in winter?", acceptedAnswer: { "@type": "Answer", text: "No rock salt and calcium chloride can damage both wood and composite decking. Use sand or kitty litter for traction. For ice, use a plastic shovel and let sun/salt-free de-icer do the work." } },
-    { "@type": "Question", name: "Should I cover my deck in winter?", acceptedAnswer: { "@type": "Answer", text: "No need to cover the entire deck that traps moisture and promotes mold. Do cover or store outdoor furniture, cushions, and grills. Leave the deck surface exposed for air circulation." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 } };
@@ -107,14 +123,10 @@ export default function WinterizeDeckPage() {
           <p style={S.p}><strong>Composite decks</strong> are largely immune to freeze-thaw because the capped surface prevents moisture entry. Winterization is simpler: clear debris, inspect hardware, done. This is the #1 reason homeowners switch to composite. <Link href="/composite-deck-vs-wood-deck-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Read the full comparison</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "How do I winterize my deck?", a: "Clean debris, inspect for damage, stain/seal (wood only), check flashing, store furniture. Do before first frost (late October in NoVA)." },
-            { q: "Can I use salt on my deck?", a: "No damages both wood and composite. Use sand or kitty litter for traction." },
-            { q: "Should I cover my deck?", a: "No covers trap moisture. Store furniture, but leave the deck surface exposed for air circulation." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {faqs.map((faq) => (
+            <details key={faq.question} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.question}</summary>
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.answer}</p>
             </details>
           ))}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
