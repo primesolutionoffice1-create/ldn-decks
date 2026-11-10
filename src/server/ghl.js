@@ -68,6 +68,7 @@ function canonicalProjectType(service) {
     case 'Deck Replacement':
       return 'Replacement';
     case 'Deck Resurfacing':
+    case 'Deck Post Replacement':
       return 'Repair';
     case 'Screened Porches':
       return 'Pergola/Cover'; // closest in GHL enum
