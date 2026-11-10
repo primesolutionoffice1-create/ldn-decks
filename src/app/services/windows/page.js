@@ -89,7 +89,7 @@ const expansionSections = [
       "Loudoun Decks is a trusted deck builder serving Loudoun County, Fairfax County, and Prince William County. As your custom deck builder and window specialist, we ensure that your new windows are perfectly integrated with your home’s existing architecture, whether you are in a classic brick colonial in Gainesville or a contemporary townhouse in Reston."
     ],
     listItems: [
-      { label: "Vinyl Windows", text: "Cost-effective, energy-efficient, and virtually maintenance-free; the #1 choice for NoVA families." },
+      { label: "Vinyl Windows", text: "Cost-effective, energy-efficient, and virtually maintenance-free; a common choice for Northern Virginia homes." },
       { label: "Fiberglass Windows", text: "Extremely strong, won't expand or contract, and allows for the largest possible glass views." },
       { label: "Wood Windows", text: "The premium aesthetic choice for historical homes and high-end luxury remodels." },
       { label: "Low-E Coatings", text: "Microscopic metallic layers that reflect heat while letting in natural light, mandatory for energy savings." }
@@ -116,7 +116,7 @@ const expansionSections = [
 export default function WindowsPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/services/windows" name="Window Replacement Loudoun County | LDN Decks" description="Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal." speakable />
+      <WebPageSchema dateModified="2026-11-10" url="https://ldndecks.com/services/windows" name="Window Replacement Loudoun County | LDN Decks" description="Loudoun Decks provides premium window replacement and installation across Northern Virginia. Improve energy efficiency, quiet, and curb appeal." speakable />
       <ServiceSchema
         name="Window Installation"
         description="Residential window replacement and installation in Northern Virginia. Energy-efficient vinyl, wood, and fiberglass windows."
@@ -128,10 +128,10 @@ export default function WindowsPage() {
       <ServicesHeader 
         subtext="Documented Installation Standards"
         title="Window Replacement & Installation"
-        description="Loudoun Decks provides premium energy-efficient window replacement for homeowners in Loudoun County, Fairfax County, and Prince William County. Enhance your home with 1,500+ words of expertise."
+        description="Loudoun Decks provides premium energy-efficient window replacement for homeowners in Loudoun County, Fairfax County, and Prince William County."
       />
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '1.5rem 1.5rem 0' }}>
-        <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+        <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-10" />
       </section>
 
       <ServiceMain 

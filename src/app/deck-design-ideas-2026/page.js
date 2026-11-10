@@ -18,7 +18,7 @@ export const metadata = buildMetadata({
 
 const designs = [
   { title: 'Multi-Level Step-Down', desc: 'Two or three levels following your yard\'s natural slope. Upper dining near the kitchen, lower lounge closer to the yard. Perfect for NoVA\'s hilly terrain.', range: 'a written estimate', link: '/multi-level-deck-builder-northern-virginia', tags: ['Trending', 'Best for slopes'], image: '/images/img01.jpeg' },
-  { title: 'Deck + Screened Porch Combo', desc: 'Open composite deck for grilling connected to a screened section for bug-free dining. Our #1 most-requested design. Extends usable season to 9-10 months.', range: 'a written estimate', link: '/screened-porch-cost-northern-virginia', tags: ['Most Popular'], image: '/images/img02.jpeg' },
+  { title: 'Deck + Screened Porch Combo', desc: 'Open composite deck for grilling connected to a screened section for bug-free dining. A practical layout for grilling next to a bug-free screened dining area.', range: 'a written estimate', link: '/screened-porch-cost-northern-virginia', tags: ['Most Popular'], image: '/images/img02.jpeg' },
   { title: 'Integrated Outdoor Kitchen', desc: 'Built-in grill island, bar seating, and prep counter integrated directly into the deck design. Stone or stucco island on reinforced deck framing.', range: 'a written estimate', link: '/outdoor-kitchen-builder-northern-virginia', tags: ['Premium', 'Entertaining'], image: '/images/img03.jpeg' },
   { title: 'Low-Profile Ground-Level', desc: 'Floating deck just inches above grade. No railings needed. Clean, modern look that blends with the landscape. Great for flat yards and pool surrounds.', range: 'a written estimate', tags: ['Budget-friendly', 'Modern'], image: '/images/img04.jpeg' },
   { title: 'Wraparound Deck', desc: 'Continuous deck wrapping two or more sides of the house. Multiple access points from different rooms. Creates a resort-like perimeter around your home.', range: 'a written estimate', tags: ['Estate homes'], image: '/images/img05.jpeg' },
@@ -34,13 +34,19 @@ const designs = [
   { title: 'Fire Feature Deck', desc: 'Deck designed around a fire element: gas fire pit built into a stone-topped table, or a fire bowl on a non-combustible pad.', range: 'a written estimate', link: '/services/fire-pits', tags: ['Evening living'], image: '/images/img16.jpeg' },
 ];
 
+const faqs = [
+  { q: "Most popular deck designs in 2026?", a: "Multi-level, deck + screened porch combo, integrated outdoor kitchens, cable railings, LED lighting, mixed material (deck + stone patio)." },
+  { q: "Most popular deck shape?", a: "Rectangular (cost-effective) and L-shaped (natural zones). Multi-level for sloped lots." },
+  { q: "Most popular deck color in 2026?", a: "Medium warm browns/grays. Trex Spiced Rum and Island Mist are popular choices." },
+];
+
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "What are the most popular deck designs in 2026?", acceptedAnswer: { "@type": "Answer", text: "Multi-level decks, deck + screened porch combos, integrated outdoor kitchens, cable railings, hidden LED lighting, mixed materials (composite deck + stone patio), and low-profile ground-level decks are the top trends in Northern Virginia for 2026." } },
-    { "@type": "Question", name: "What is the most popular deck shape?", acceptedAnswer: { "@type": "Answer", text: "Rectangular and L-shaped decks are most popular in Northern Virginia. Rectangular is most cost-effective. L-shaped creates natural zones (dining + lounge). Multi-level step-down designs are trending for sloped lots." } },
-    { "@type": "Question", name: "What deck color is most popular in 2026?", acceptedAnswer: { "@type": "Answer", text: "Medium-tone warm browns and grays dominate in 2026. Trex Transcend in Spiced Rum and Island Mist are our most-requested colors. Dark colors (Lava Rock, Dark Hickory) are popular for modern homes but get hotter in sun." } },
-  ],
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
 };
 
 const gallerySchema = {
@@ -65,7 +71,7 @@ export default function DeckDesignIdeasPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-design-ideas-2026" name="Deck Design Ideas 2026 | 15 Photos, Costs &amp; Trends" description="See 15 deck design ideas for 2026 with photos, price ranges, colors, and NoVA contractor tips for composite, porch, pergola, and outdoor kitchen builds." speakable />
+      <WebPageSchema dateModified="2026-11-10" url="https://ldndecks.com/deck-design-ideas-2026" name="Deck Design Ideas 2026 | 15 Photos, Costs &amp; Trends" description="See 15 deck design ideas for 2026 with photos, price ranges, colors, and NoVA contractor tips for composite, porch, pergola, and outdoor kitchen builds." speakable />
       <JsonLd data={gallerySchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -152,7 +158,7 @@ export default function DeckDesignIdeasPage() {
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>2026 Color Trends</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { color: '#8B7355', name: 'Spiced Rum', brand: 'Trex Transcend', note: '#1 most requested' },
+              { color: '#8B7355', name: 'Spiced Rum', brand: 'Trex Transcend', note: 'Warm brown tone' },
               { color: '#9CA3AF', name: 'Island Mist', brand: 'Trex Transcend', note: 'Cool gray tone' },
               { color: '#4A3728', name: 'Lava Rock', brand: 'Trex Transcend', note: 'Bold dark modern' },
               { color: '#5C4033', name: 'Dark Hickory', brand: 'TimberTech AZEK', note: 'Rich warm brown' },
@@ -171,11 +177,7 @@ export default function DeckDesignIdeasPage() {
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
-          {[
-            { q: "Most popular deck designs in 2026?", a: "Multi-level, deck + screened porch combo, integrated outdoor kitchens, cable railings, LED lighting, mixed material (deck + stone patio)." },
-            { q: "Most popular deck shape?", a: "Rectangular (cost-effective) and L-shaped (natural zones). Multi-level for sloped lots." },
-            { q: "Most popular deck color in 2026?", a: "Medium warm browns/grays. Trex Spiced Rum and Island Mist are #1 and #2 most requested." },
-          ].map((faq, i) => (
+          {faqs.map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
               <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
@@ -203,7 +205,7 @@ export default function DeckDesignIdeasPage() {
         </div>
       </article>
       <SimpleCTA title="Planning One of These Designs in Northern Virginia?" buttonText="Get a Local Deck Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-10" />
 
       <RelatedGuides currentPath="/deck-design-ideas-2026" />
 
