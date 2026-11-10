@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import ServicesHeader from '@/components/ServicesHeader';
+import Image from 'next/image';
+import CallLink from '@/components/CallLink';
+import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
+import styles from './page.module.css';
 import ServiceMain from '@/components/ServiceMain';
 import ServiceInclusions from '@/components/ServiceInclusions';
 import ServiceContentExpansion from '@/components/ServiceContentExpansion';
@@ -39,7 +42,7 @@ const inclusions = [
   },
   {
     title: "EZE-Breeze Window Systems",
-    desc: "Upgrade your screened porch to a 3-season room with EZE-Breeze sliding panels, offering the protection of glass with the ventilation of screens."
+    desc: "Optional EZE-Breeze vinyl panels can offer more separation from weather when closed. Fit, ventilation, exposure and structural requirements need review; this is not a conditioned sunroom."
   },
   {
     title: "Structural Engineering",
@@ -83,7 +86,7 @@ const screenedPorchGeoAnswers = [
 const faqs = [
   {
     q: "How much does a screened porch cost in Northern Virginia?",
-    a: "This service page does not publish a project price. National 2026 data on the screened porch cost page puts a new screened porch at about $25–$120 per sq ft (Angi, updated August 3, 2026, and HomeAdvisor, 2026), or roughly $7,000–$20,000 for 12x12 to 20x20 (Angi, Aug 2026). Screening an existing covered porch runs about $5–$20 per sq ft. Northern Virginia labor, permits, HOA review and roof tie-ins often push projects to the upper part of these ranges. Loudoun Decks prices each porch in a written estimate."
+    a: "Your screened porch needs a site-specific written estimate. Size, roof design, existing structure, footings, screening, electrical work, finishes, permits and HOA requirements affect the scope. Use our screened porch cost guide for planning context, then request a written estimate for your property; an open-deck price is not a porch quote."
   },
   {
     q: "Do I need a permit to build a screened porch in Virginia?",
@@ -99,7 +102,7 @@ const faqs = [
   },
   {
     q: "What are EZE-Breeze windows and are they worth it?",
-    a: "EZE-Breeze is a sliding vinyl panel system that looks like glass but is lighter than traditional glass panels. The panels open for screen-only airflow or close to block rain, wind and pollen. It may be a strong upgrade when homeowners want more seasonal flexibility without converting the porch into a fully conditioned addition."
+    a: "EZE-Breeze uses vinyl enclosure panels that can open for screened airflow or close for more separation from weather. Suitability depends on the selected system, exposure, ventilation goals, structure and permit scope. It does not make the porch a fully conditioned room; discuss realistic seasonal comfort before choosing it."
   },
   {
     q: "How long does it take to build a screened porch?",
@@ -194,14 +197,14 @@ const expansionSections = [
 export default function ScreenedPorchBuilderNovaPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-10-25" url={`https://ldndecks.com${PATH}`} name="Screened Porch Contractor & Builder Northern Virginia" description="Screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze planning, permit coordination, and written estimates." speakable />
+      <WebPageSchema dateModified="2026-11-09" url={`https://ldndecks.com${PATH}`} name="Screened Porch Contractor & Builder Northern Virginia" description="Screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze planning, permit coordination, and written estimates." speakable />
       <ArticleSchema
         title="Screened Porch Contractor and Builder in Northern Virginia"
         description="Screened porch contractor guidance for Northern Virginia homeowners comparing roof loads, permits, EZE-Breeze upgrades, open deck combinations, HOA approvals, and written estimates."
         path={PATH}
         image="/images/img01.jpeg"
         datePublished="2026-05-26"
-        dateModified="2026-09-13"
+        dateModified="2026-11-09"
         speakable={[
           '#screened-porch-builder-answer',
           '#screened-porch-contractor-selection',
@@ -262,16 +265,58 @@ export default function ScreenedPorchBuilderNovaPage() {
         relatedServices={['https://ldndecks.com/three-season-room-northern-virginia', 'https://ldndecks.com/covered-deck-builder-northern-virginia', 'https://ldndecks.com/services/porches']}
       />
 
-      <ServicesHeader
-        subtext="Northern Virginia's Premier Porch Contractor"
-        title="Screened Porch Contractor & Builder — Northern Virginia"
-        description="Screened porch contractor serving Loudoun, Fairfax and Prince William counties. Custom screened-in porches, EZE-Breeze planning, structural scope review, and permit or HOA coordination in the written proposal."
-        showQuickForm
-        quickFormService="Screened Porches"
-        quickFormLocation="paid_search_screened_porch_above_fold"
-        quickFormHeading="Planning a screened porch? Send the project basics and we will call back."
-        pageContext={PAGE_CONTEXT}
-      />
+      <section className={styles.hero} aria-labelledby="porch-heading">
+        <div className={styles.container}>
+          <div className={styles.heroGrid}>
+            <div className={styles.heroCopy}>
+              <p className={styles.eyebrow}>Loudoun Decks · Northern Virginia</p>
+              <h1 id="porch-heading" className={styles.title}>A screened porch. More room to enjoy your backyard.</h1>
+              <p className={styles.intro}>Plan a shaded outdoor space for slow mornings, family meals and fresh air with fewer insects. We build screened porches around your home, your priorities and a clear written scope.</p>
+              <p className={styles.coverage}>Serving homeowners in Fairfax, Loudoun and Prince William counties.</p>
+              <div className={styles.actions}>
+                <a className={styles.primary} href="#paid_search_screened_porch_above_fold-form">Request a written estimate</a>
+                <CallLink className={styles.secondary} ctaLocation="screened_porch_hero" pageContext={PAGE_CONTEXT}>Call Loudoun Decks</CallLink>
+              </div>
+              <p className={styles.trust}>Real local project photos · Scope before price · Permit and HOA needs discussed in planning</p>
+            </div>
+            <figure className={styles.heroFigure}>
+              <div className={styles.photoFrame}>
+                <Image src="/images/projects/annandale-screened-porch/wood-ceiling-in-progress.png" alt="Wood ceiling and exposed framing on the Loudoun Decks screened porch project under construction in Annandale" fill priority sizes="(min-width: 960px) 48vw, 100vw" className={styles.photo} />
+                <span className={styles.photoLabel}>Real Annandale project · In progress</span>
+              </div>
+              <figcaption className={styles.caption}>Wood ceiling details during construction. Screens and other work are not shown as complete.</figcaption>
+            </figure>
+          </div>
+          <div className={styles.proof}>
+            <div><p className={styles.eyebrow}>See the work behind the promise</p><h2>Our crew. A real project. Work in progress.</h2><p>Follow the Annandale build from framing to ceiling details, with photos and a 20-second progress video. Project in progress as of November 9, 2026.</p></div>
+            <Link href="/annandale-screened-porch-in-progress" className={styles.proofLink}>See the Annandale project <span aria-hidden="true">→</span></Link>
+          </div>
+        </div>
+      </section>
+      <section className={styles.planning} aria-labelledby="porch-plan-heading">
+        <div className={`${styles.container} ${styles.planningGrid}`}>
+          <div className={styles.planningCopy}>
+            <p className={styles.eyebrow}>Start with the right plan</p>
+            <h2 id="porch-plan-heading">Your porch, scoped for your home.</h2>
+            <ul className={styles.benefits}>
+              <li><strong>Shade and open airflow.</strong> A roof and screens can make outdoor meals more comfortable with fewer insects. Weather and temperature still matter.</li>
+              <li><strong>Options that fit how you live.</strong> Discuss screening, ceiling finishes, lighting and connections to an open deck before selecting the design.</li>
+              <li><strong>A written scope to compare.</strong> Review structural needs, finishes, permit responsibilities and HOA requirements before making a decision.</li>
+            </ul>
+            <p>Share your city and project basics in the form. Photos of your backyard, any HOA guidance and an idea of how you want to use the porch will help the next conversation.</p>
+            <Link href="/screened-porch-cost-northern-virginia" className={styles.textLink}>Explore screened porch cost considerations</Link>
+          </div>
+          <div className={styles.formWrap}>
+            <PaidSearchLeadForm
+              formId="paid_search_screened_porch_above_fold-form"
+              service="Screened Porches"
+              formLocation="paid_search_screened_porch_above_fold"
+              heading="Planning a screened porch? Send the project basics and we will call back."
+              pageContext={PAGE_CONTEXT}
+            />
+          </div>
+        </div>
+      </section>
 
       <section id="screened-porch-builder-answer" data-speakable="screened-porch-builder-answer">
         <GeoAnswerBlock
@@ -307,7 +352,7 @@ export default function ScreenedPorchBuilderNovaPage() {
       <ServiceMain
         subtitle="Bug-Free Outdoor Living"
         title="Expert Screened Porch Construction"
-        description="A screened porch combines a roof and mesh screening for shaded outdoor living with fewer insects. It remains an outdoor space: temperature, pollen and wind-driven rain can still affect comfort. Discuss screen selection, optional enclosure panels and structural requirements before choosing the design."
+        description="The project photos shown here document our Annandale porch while construction is in progress; they do not show a completed screened enclosure. A screened porch combines a roof and mesh screening for shaded outdoor living with fewer insects. It remains an outdoor space: temperature, pollen and wind-driven rain can still affect comfort. Discuss screen selection, optional enclosure panels and structural requirements before choosing the design."
         listTitle="Custom Features:"
         listItems={[
           "High-visibility and pet-resistant screening",
@@ -316,12 +361,12 @@ export default function ScreenedPorchBuilderNovaPage() {
           "Integrated electrical, lighting & ceiling fans",
           "Full HOA & County Permit management"
         ]}
-        image1="/images/img01.jpeg"
-        image2="/images/img11.jpeg"
+        image1="/images/projects/annandale-screened-porch/wood-ceiling-in-progress.png"
+        image2="/images/projects/annandale-screened-porch/exterior-in-progress.png"
       />
       
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-09-13" />
+        <NamedAuthor context="Loudoun, Fairfax and Prince William counties" lastUpdated="2026-11-09" />
       </div>
       <section style={{ maxWidth: 900, margin: '0 auto', padding: '2rem 1.5rem 0' }}>
         <h2 id="screened-porch-contractor-selection" data-speakable="screened-porch-contractor-selection" style={{ fontSize: '1.55rem', fontWeight: 800, marginBottom: '0.8rem' }}>
