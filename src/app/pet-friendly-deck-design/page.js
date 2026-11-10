@@ -31,7 +31,7 @@ export default function PetFriendlyDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/pet-friendly-deck-design" name="Pet-Friendly Deck Design: Build a Deck Your Dog Will Love (2026)" description="Design a pet-friendly deck: scratch-resistant composite, safe railings, shade zones, pet gates, easy-clean surfaces. Tips from Northern Virginia deck builders." speakable />
+      <WebPageSchema dateModified="2026-11-10" url="https://ldndecks.com/pet-friendly-deck-design" name="Pet-Friendly Deck Design: Build a Deck Your Dog Will Love (2026)" description="Design a pet-friendly deck: scratch-resistant composite, safe railings, shade zones, pet gates, easy-clean surfaces. Tips from Northern Virginia deck builders." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Pet-Friendly Deck Design</h1>
@@ -74,7 +74,7 @@ export default function PetFriendlyDeckPage() {
           <h2 style={S.h2}>7 Pet-Friendly Deck Features</h2>
           <ol style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
             {[
-              { title: 'Composite decking (capped)', detail: 'No splinters in paws, resists claw scratches, cleans pet messes easily with soap and water. The #1 pet-friendly upgrade.' },
+              { title: 'Composite decking (capped)', detail: 'No splinters in paws, resists claw scratches, cleans pet messes easily with soap and water. A strong pet-friendly upgrade.' },
               { title: 'Close-spaced balusters (3" or less)', detail: 'Standard code is 4" max, but for small dogs and puppies, specify 3" spacing. Prevents head entrapment. Avoid cable railings dogs can squeeze through or get caught.' },
               { title: 'Pet gates at stairs', detail: 'Built-in gate mounts at the top and bottom of deck stairs. Keeps dogs on the deck when unsupervised. We can integrate gate hardware into the railing design.' },
               { title: 'Shade zone', detail: 'A pergola or canopy section so your dog has escape from direct sun. Virginia summers hit 90°F+ deck surfaces can reach 130°F. Dogs need shade.' },
@@ -123,7 +123,7 @@ export default function PetFriendlyDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Design a Deck Your Whole Family Loves" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-10" />
 
       <RelatedGuides currentPath="/pet-friendly-deck-design" />
 
