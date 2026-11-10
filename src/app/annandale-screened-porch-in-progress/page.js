@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CallLink from '@/components/CallLink';
 import WebPageSchema from '@/components/WebPageSchema';
+import JsonLd from '@/components/JsonLd';
+import { BUSINESS, ORG_ID } from '@/lib/business';
 import { buildMetadata } from '@/lib/seo';
 
 const PATH = '/annandale-screened-porch-in-progress';
@@ -26,9 +28,25 @@ export const metadata = buildMetadata({
   image: `${ASSETS}/exterior-in-progress.png`,
 });
 
+const videoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  '@id': `${BUSINESS.url}${PATH}#progress-video`,
+  name: 'Annandale Screened Porch: Construction Progress | Loudoun Decks',
+  description: 'A captioned, 20-second update showing the real Loudoun Decks crew, framing and wood ceiling details on a screened porch under construction in Annandale, Virginia. Project in progress, not a completed porch reveal.',
+  thumbnailUrl: `${BUSINESS.url}${ASSETS}/exterior-in-progress.png`,
+  contentUrl: `${BUSINESS.url}/videos/projects/annandale-screened-porch-progress.mp4`,
+  uploadDate: '2026-11-09',
+  duration: 'PT20S',
+  publisher: { '@id': ORG_ID },
+  inLanguage: 'en-US',
+  isFamilyFriendly: true,
+};
+
 export default function AnnandalePorchProgressPage() {
   return (
     <main>
+      <JsonLd data={videoSchema} />
       <WebPageSchema url={`https://ldndecks.com${PATH}`} name={TITLE} description={DESCRIPTION} datePublished="2026-11-09" dateModified="2026-11-09" />
       <header style={{ background: '#0b202c', color: '#fff' }}>
         <div style={S.section}>

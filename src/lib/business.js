@@ -79,6 +79,8 @@ export const BUSINESS = {
   ],
   sameAs: [
     'https://x.com/ldndecks',
+    'https://www.youtube.com/@LDNDecks',
+    'https://www.pinterest.com/loudoundecks/',
     'https://www.instagram.com/loudoundecks/',
     'https://www.facebook.com/profile.php?id=61574201228967',
     'https://www.google.com/maps/place/Loudoun+Decks/',
@@ -182,7 +184,7 @@ export function buildWebSiteSchema() {
   };
 }
 
-// Hero intro video shown on the homepage (also referenced in sitemap.xml).
+// Intro video shown in the homepage VideoSection (also referenced in sitemap.xml).
 // Duration measured from the actual MP4 (mvhd atom): 12.12s → ISO 8601 PT12S.
 export const INTRO_VIDEO = {
   contentUrl: `${BUSINESS.url}/introvideo.mp4`,
@@ -194,8 +196,8 @@ export const INTRO_VIDEO = {
   durationISO: 'PT12S',
 };
 
-// Builds the VideoObject JSON-LD for the homepage hero video.
-// Emit once globally next to the Organization/WebSite nodes.
+// Builds the VideoObject JSON-LD for the homepage intro video.
+// Emit only on the homepage, where VideoSection displays this video.
 export function buildVideoObjectSchema() {
   return {
     '@context': 'https://schema.org',

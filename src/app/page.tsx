@@ -31,6 +31,7 @@ const VideoSection = dynamic(() => import("@/components/VideoSection"));
 
 import styles from "./page.module.css";
 import { buildMetadata } from "@/lib/seo";
+import { buildVideoObjectSchema } from "@/lib/business";
 
 export const metadata = buildMetadata({
   path: "/",
@@ -141,13 +142,13 @@ const homepageSchema = {
   }
 };
 
-// VideoObject is emitted by StructuredData (root layout) via buildVideoObjectSchema().
-// Emitting a second VideoObject here caused duplicate nodes with conflicting data.
+// The intro video is displayed by VideoSection on this page only.
 
 export default function Home() {
     return (
           <main className={styles.main}>
       <JsonLd data={homepageSchema} />
+      <JsonLd data={buildVideoObjectSchema()} />
             <Hero />
             <TrustBanner
               ariaLabel="Owner and company experience"
