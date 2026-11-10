@@ -8,7 +8,7 @@ import { createSubmissionGate } from '@/lib/submissionGate';
 import CallLink from '@/components/CallLink';
 import { formatServiceArea } from '@/lib/business';
 
-export default function ContactForm({ hideInfoCol = false, noPadding = false }) {
+export default function ContactForm({ hideInfoCol = false, noPadding = false, defaultService = "" }) {
   const [status, setStatus] = useState(null);
   const submissionGateRef = useRef(createSubmissionGate());
   const [submittedAt] = useState(() => Date.now());
@@ -128,10 +128,11 @@ export default function ContactForm({ hideInfoCol = false, noPadding = false }) 
               <div className={styles.row}>
                 <div className={styles.inputGroup}>
                   <label htmlFor={id('service')}>Service <span className={styles.req}>*</span></label>
-                  <select id={id('service')} name="service" required defaultValue="" className={styles.selectInput}>
+                  <select id={id('service')} name="service" required defaultValue={defaultService} className={styles.selectInput}>
                     <option value="" disabled>Select Service</option>
                     <option value="New Decks">New Decks</option>
                     <option value="Deck Replacement">Deck Replacement</option>
+                    <option value="Deck Post Replacement">Deck Post Replacement</option>
                     <option value="Composite Decks">Composite Decks</option>
                     <option value="Deck Resurfacing">Deck Resurfacing</option>
                     <option value="Screened Porches">Screened Porches</option>
