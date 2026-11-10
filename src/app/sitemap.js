@@ -252,6 +252,7 @@ export default async function sitemap() {
 
                 // Tier 1.5 - High-intent keyword/content pages (new)
                 { path: "/screened-porch-builder-northern-virginia",   priority: 0.95, lastMod: TIER1, freq: "weekly" },
+                { path: "/annandale-screened-porch-in-progress", priority: 0.70, lastMod: "2026-11-09", freq: "monthly" },
                 // /how-much-does-a-deck-cost-northern-virginia removed 2026-05-26:
                 // 301 → /composite-deck-cost-northern-virginia (cannibalization fix).
                 // Size-specific cost pages (size-keyword capture, complementary to canonical)

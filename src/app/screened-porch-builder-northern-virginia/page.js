@@ -405,6 +405,10 @@ export default function ScreenedPorchBuilderNovaPage() {
         </p>
       </section>
       <ServiceContentExpansion sections={expansionSections} />
+      <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>See a real porch project taking shape</h2>
+        <p style={{ lineHeight: 1.7 }}>Follow our <Link href="/annandale-screened-porch-in-progress" style={{ color: 'var(--color-primary)', fontWeight: 700, textDecoration: 'underline' }}>Annandale screened porch construction update</Link> for photos of the crew, framing and wood ceiling details. The project is in progress; these are not finished-porch photos.</p>
+      </section>
 
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>Related Screened Porch Resources</h2>
