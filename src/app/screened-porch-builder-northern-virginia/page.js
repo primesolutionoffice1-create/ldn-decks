@@ -288,7 +288,7 @@ export default function ScreenedPorchBuilderNovaPage() {
             </figure>
           </div>
           <div className={styles.proof}>
-            <div><p className={styles.eyebrow}>See the work behind the promise</p><h2>Our crew. A real project. Every stage visible.</h2><p>Follow the Annandale build from framing to ceiling details, with photos and a 20-second progress video. Project in progress as of November 9, 2026.</p></div>
+            <div><p className={styles.eyebrow}>See the work behind the promise</p><h2>Our crew. A real project. Work in progress.</h2><p>Follow the Annandale build from framing to ceiling details, with photos and a 20-second progress video. Project in progress as of November 9, 2026.</p></div>
             <Link href="/annandale-screened-porch-in-progress" className={styles.proofLink}>See the Annandale project <span aria-hidden="true">→</span></Link>
           </div>
         </div>
