@@ -352,7 +352,7 @@ export default function ScreenedPorchBuilderNovaPage() {
       <ServiceMain
         subtitle="Bug-Free Outdoor Living"
         title="Expert Screened Porch Construction"
-        description="A screened porch combines a roof and mesh screening for shaded outdoor living with fewer insects. It remains an outdoor space: temperature, pollen and wind-driven rain can still affect comfort. Discuss screen selection, optional enclosure panels and structural requirements before choosing the design."
+        description="The project photos shown here document our Annandale porch while construction is in progress; they do not show a completed screened enclosure. A screened porch combines a roof and mesh screening for shaded outdoor living with fewer insects. It remains an outdoor space: temperature, pollen and wind-driven rain can still affect comfort. Discuss screen selection, optional enclosure panels and structural requirements before choosing the design."
         listTitle="Custom Features:"
         listItems={[
           "High-visibility and pet-resistant screening",
@@ -361,8 +361,8 @@ export default function ScreenedPorchBuilderNovaPage() {
           "Integrated electrical, lighting & ceiling fans",
           "Full HOA & County Permit management"
         ]}
-        image1="/images/img01.jpeg"
-        image2="/images/img11.jpeg"
+        image1="/images/projects/annandale-screened-porch/wood-ceiling-in-progress.png"
+        image2="/images/projects/annandale-screened-porch/exterior-in-progress.png"
       />
       
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
