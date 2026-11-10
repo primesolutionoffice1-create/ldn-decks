@@ -35,4 +35,4 @@
 .formWrap { min-width: 0; scroll-margin-top: 6rem; }
 .formWrap form { scroll-margin-top: 6rem; }
 @media (max-width: 480px) { .actions { flex-direction: column; } .primary, .secondary { width: 100%; } }
-@media (min-width: 960px) { .hero { padding-top: 3.5rem; } .heroGrid { grid-template-columns: 1fr 1fr; gap: 3rem; } .photoFrame { aspect-ratio: 1 / 1; } .proof { grid-template-columns: 1fr auto; gap: 2rem; margin-top: 2.5rem; padding: 1.75rem 0; } .planningGrid { grid-template-columns: 1fr 1fr; gap: 3rem; } .planning { padding: 3.5rem 0; } }
+@media (min-width: 960px) { .hero { padding-top: 2rem; } .heroGrid { grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; } .title { font-size: 3.25rem; } .photoFrame { aspect-ratio: 1 / 1; } .proof { grid-template-columns: 1fr auto; gap: 2rem; margin-top: 2.5rem; padding: 1.75rem 0; } .planningGrid { grid-template-columns: 1fr 1fr; gap: 3rem; } .planning { padding: 3.5rem 0; } }
