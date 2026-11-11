@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { buildMetadata } from '@/lib/seo';
 import { getSoroArticles, getSoroArticleBySlug, stripTags, insightDocumentTitle, fitInsightText } from '@/lib/soro';
 import { BUSINESS, ORG_ID, WEBSITE_ID } from '@/lib/business';
-import { QUOTE_SOURCE, RESURFACE_QUOTED } from '@/lib/quotedPrices';
+import { OPEN_DECK_RANGE, QUOTE_LABEL, QUOTE_SOURCE, RESURFACE_QUOTED } from '@/lib/quotedPrices';
 import JsonLd from '@/components/JsonLd';
 import RelatedGuides from '@/components/RelatedGuides';
 import ServicesHome from '@/components/ServicesHome';
@@ -27,12 +27,20 @@ const FALLBACK_OG_IMAGE = '/social/blog-social.png';
 const MID_CTA_MIN_WORDS = 600;
 const COMPARISON_SLUG = 'deck-replacement-or-resurfacing-know-the-difference';
 const COMPARISON_MODIFIED = '2026-11-05';
+const COMPARISON_UPDATED_LABEL = 'Updated November 5, 2026';
 const COST_DRIVERS_SLUG = 'what-drives-composite-deck-costs-in-virginia';
-const COST_DRIVERS_MODIFIED = '2026-11-05';
+const COST_DRIVERS_MODIFIED = '2026-11-11';
+const COST_DRIVERS_UPDATED_LABEL = 'Updated November 11, 2026';
 
 function insightModified(slug) {
   if (slug === COMPARISON_SLUG) return COMPARISON_MODIFIED;
   if (slug === COST_DRIVERS_SLUG) return COST_DRIVERS_MODIFIED;
+  return null;
+}
+
+function insightUpdatedLabel(slug) {
+  if (slug === COMPARISON_SLUG) return COMPARISON_UPDATED_LABEL;
+  if (slug === COST_DRIVERS_SLUG) return COST_DRIVERS_UPDATED_LABEL;
   return null;
 }
 const COMPARISON_DESCRIPTION =
@@ -159,6 +167,7 @@ export default async function InsightArticlePage({ params }) {
   const isComparison = article.slug === COMPARISON_SLUG;
   const isCostDrivers = article.slug === COST_DRIVERS_SLUG;
   const modified = insightModified(article.slug);
+  const updatedLabel = insightUpdatedLabel(article.slug);
   const showLead = !isComparison && Boolean(leadText) && !bodyText.startsWith(leadText);
   const showHeroImage = Boolean(article.image) && !article.contentHtml.includes(article.image);
   const [bodyStart, bodyRest] = splitForMidCta(article.contentHtml, article.wordCount);
@@ -193,10 +202,10 @@ export default async function InsightArticlePage({ params }) {
                 <time dateTime={article.date}>{article.dateDisplay}</time>
               </>
             )}
-            {modified && (
+            {modified && updatedLabel && (
               <>
                 <span className={styles.metaDivider}>•</span>
-                <time dateTime={modified}>Updated November 5, 2026</time>
+                <time dateTime={modified}>{updatedLabel}</time>
               </>
             )}
           </div>
@@ -207,13 +216,15 @@ export default async function InsightArticlePage({ params }) {
         <div className={blogStyles.containerNarrow}>
           <div className={blogStyles.contentBody}>
             {isCostDrivers && (
-              <section className={styles.quotedBlock} aria-labelledby="trex-resurfacing-quote">
-                <h2 id="trex-resurfacing-quote">Loudoun Decks 2026 quoted Trex resurfacing</h2>
+              <section className={styles.quotedBlock} aria-labelledby="quoted-prices">
+                <h2 id="quoted-prices">{QUOTE_LABEL}</h2>
+                <p data-speakable>{OPEN_DECK_RANGE}</p>
                 <p>{QUOTE_SOURCE}</p>
                 <p data-speakable>{RESURFACE_QUOTED}</p>
                 <p>
                   These are Northern Virginia quoted prices. The written estimate is the only project price.
-                  Plan the work on <Link href="/services/deck-resurfacing">deck resurfacing</Link>.
+                  Plan the work on <Link href="/services/deck-resurfacing">deck resurfacing</Link>
+                  {' '}or the <Link href="/tools/deck-cost-estimator-northern-virginia">deck cost estimator</Link>.
                   County hubs: <Link href="/deck-resurfacing-loudoun-county">Loudoun County</Link>,{' '}
                   <Link href="/deck-resurfacing-fairfax-county">Fairfax County</Link>, and{' '}
                   <Link href="/deck-resurfacing-prince-william-county">Prince William County</Link>.
