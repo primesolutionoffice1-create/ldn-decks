@@ -9,29 +9,59 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 
+const TREX_SUSTAINABILITY_URL = 'https://www.trex.com/why-trex/sustainability/sustainable-products/';
+const PAGE_PATH = '/eco-friendly-composite-decking';
+const PAGE_TITLE = 'Eco-Friendly Composite Decking | Sustainable Deck Materials (2026)';
+const PAGE_DESCRIPTION = 'In 2025, Trex reports sourcing about 379 million pounds of plastic film and about 588 million pounds of reclaimed wood.';
+const UPDATED = '2026-11-12';
+
+const faqs = [
+  {
+    q: 'Is composite decking eco-friendly?',
+    a: 'Yes. Trex decking is made with 95% recycled and reclaimed materials, including plastic film such as grocery bags and pallet wrap. In 2025, Trex reports sourcing about 379 million pounds of plastic film and about 588 million pounds of reclaimed wood. And because composite lasts 25-50 years vs 10-15 for wood, fewer decks end up in landfills over time.',
+  },
+  {
+    q: 'Is composite decking better for the environment than wood?',
+    a: 'Yes, in several ways: composite uses recycled materials instead of harvesting new timber, lasts 2-3x longer (fewer replacements), requires no chemical stains or sealants (no toxic runoff), and is itself recyclable at end of life. Residential pressure-treated wood relies on copper-based chemical preservatives, and treated scraps should never be burned.',
+  },
+  {
+    q: 'Can composite decking be recycled?',
+    a: 'Some composite decking brands can be recycled at end of life. Trex operates a recycling program for its own products. Additionally, unused scraps from installation can be recycled. Check with the specific manufacturer for their recycling program.',
+  },
+];
+
 export const metadata = buildMetadata({
-  path: '/eco-friendly-composite-decking',
-  title: 'Eco-Friendly Composite Decking | Sustainable Deck Materials (2026)',
-  description: 'Trex is made from 95% recycled materials. Composite decking diverts 500M+ lbs of plastic from landfills yearly. Build green without sacrificing quality.',
+  path: PAGE_PATH,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   image: '/social/eco-friendly-composite-decking-social.png',
 });
 
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "Is composite decking eco-friendly?", acceptedAnswer: { "@type": "Answer", text: "Yes. Trex composite decking is made from 95% recycled materials reclaimed wood fibers and recycled plastic film (grocery bags, newspaper sleeves). Trex alone diverts 500+ million pounds of plastic and wood from landfills each year. And because composite lasts 25-50 years vs 10-15 for wood, fewer decks end up in landfills over time." } },
-    { "@type": "Question", name: "Is composite decking better for the environment than wood?", acceptedAnswer: { "@type": "Answer", text: "Yes, in several ways: composite uses recycled materials instead of harvesting new timber, lasts 2-3x longer (fewer replacements), requires no chemical stains or sealants (no toxic runoff), and is itself recyclable at end of life. Pressure-treated wood uses chromated copper arsenate and must be disposed of as hazardous waste." } },
-    { "@type": "Question", name: "Can composite decking be recycled?", acceptedAnswer: { "@type": "Answer", text: "Some composite decking brands can be recycled at end of life. Trex operates a recycling program for its own products. Additionally, unused scraps from installation can be recycled. Check with the specific manufacturer for their recycling program." } },
-  ],
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 }, th: { padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }, td: { padding: '0.75rem', borderBottom: '1px solid #eee' } };
+
+function TrexSourceLink() {
+  return (
+    <a href={TREX_SUSTAINABILITY_URL} target="_blank" rel="noopener" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>
+      Trex sustainable products
+    </a>
+  );
+}
 
 export default function EcoFriendlyDeckingPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/eco-friendly-composite-decking" name="Eco-Friendly Composite Decking | Sustainable Deck Materials (2026)" description="Trex is made from 95% recycled materials. Composite decking diverts 500M+ lbs of plastic from landfills yearly. Build green without sacrificing quality." speakable />
+      <WebPageSchema dateModified={UPDATED} url="https://ldndecks.com/eco-friendly-composite-decking" name={PAGE_TITLE} description={PAGE_DESCRIPTION} speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -52,7 +82,7 @@ export default function EcoFriendlyDeckingPage() {
       <section style={{ background: '#e8f5e9', borderLeft: '4px solid #2e7d32', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem', color: '#2e7d32' }}>The Green Choice:</p>
-          <p>Trex composite decking is made from <strong>95% recycled materials</strong> recycled plastic bags and reclaimed wood. Every 500 sqft Trex deck diverts ~140,000 plastic bags from landfills. Zero-maintenance = no chemical stains polluting your soil and waterways.</p>
+          <p>Trex decking is made with 95% recycled and reclaimed materials, including plastic film such as grocery bags and pallet wrap. In 2025, Trex reports sourcing about 379 million pounds of plastic film and about 588 million pounds of reclaimed wood. Zero-maintenance means no chemical stains polluting your soil and waterways. Source: <TrexSourceLink />.</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -69,7 +99,7 @@ export default function EcoFriendlyDeckingPage() {
                   ['Maintenance chemicals', 'Stain, sealant, stripper (annual)', 'Soap and water only'],
                   ['Lifespan', '10-15 years → landfill', '25-50 years'],
                   ['End of life', 'Cannot recycle (chemical-treated)', 'Recyclable (some brands)'],
-                  ['Plastic diverted from landfill', 'None', '500M+ lbs/year (Trex)'],
+                  ['Material Trex reports sourcing in 2025', 'None', 'About 379 million pounds of plastic film and about 588 million pounds of reclaimed wood'],
                   ['Carbon footprint (lifecycle)', 'Higher (short life + chemicals)', 'Lower (long life + recycled input)'],
                   ['Soil/water contamination', 'Stain runoff, wood treatment leaching', 'None'],
                 ].map((row, i) => (
@@ -92,11 +122,11 @@ export default function EcoFriendlyDeckingPage() {
           </ol>
 
           <h2 style={S.h2}>Sustainability by the Numbers</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1rem', marginBottom: '1rem' }}>
             {[
-              { stat: '500M+', label: 'Pounds of plastic and wood diverted from landfills each year by Trex' },
+              { stat: '~379M lb', label: 'Plastic film Trex reports sourcing in 2025' },
+              { stat: '~588M lb', label: 'Reclaimed wood Trex reports sourcing in 2025' },
               { stat: '95%', label: 'Recycled content in every Trex deck board' },
-              { stat: '140,000', label: 'Plastic bags diverted per average 500 sqft deck' },
               { stat: '25-50', label: 'Year lifespan vs 10-15 for wood fewer replacements over time' },
               { stat: '0', label: 'Gallons of chemical stain/sealant needed over the deck\'s lifetime' },
               { stat: '0', label: 'Trees harvested for your Trex deck (reclaimed wood only)' },
@@ -107,6 +137,7 @@ export default function EcoFriendlyDeckingPage() {
               </div>
             ))}
           </div>
+          <p style={S.p}>Source: <TrexSourceLink />.</p>
 
           <h2 style={S.h2}>Which Composite Brands Are Most Sustainable?</h2>
           <div style={{ overflowX: 'auto', marginBottom: '2rem' }}>
@@ -114,7 +145,7 @@ export default function EcoFriendlyDeckingPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Brand', 'Recycled Content', 'Manufacturing', 'Recyclable?'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Trex', '95% recycled (plastic + wood)', 'USA Winchester, VA & Fernley, NV', 'Yes (Trex recycling program)'],
+                  ['Trex', '95% recycled (plastic + wood)', 'USA (incl. Winchester, VA)', 'Yes (Trex recycling program)'],
                   ['TimberTech PRO', 'Partial recycled content', 'USA', 'Check with manufacturer'],
                   ['TimberTech AZEK', 'PVC-based (not recycled input)', 'USA', 'PVC is recyclable'],
                   ['Deckorators', 'Mineral-based composite', 'USA', 'Limited'],
@@ -127,15 +158,11 @@ export default function EcoFriendlyDeckingPage() {
               </tbody>
             </table>
           </div>
-          <p style={S.p}><strong>Our pick for sustainability:</strong> Trex highest recycled content (95%), USA-manufactured (two facilities including one in Virginia), and an active recycling program. As a Trex product-line planner, we&apos;re proud to build with the industry&apos;s most sustainable product. <Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Learn more about our Trex services</Link>.</p>
+          <p style={S.p}><strong>Our pick for sustainability:</strong> Trex highest recycled content (95%), USA-manufactured, including in Winchester, Virginia, and an active recycling program. As a Trex product-line planner, we&apos;re proud to build with the industry&apos;s most sustainable product. <Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Learn more about our Trex services</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "Is composite decking eco-friendly?", a: "Yes. Trex is 95% recycled (plastic bags + reclaimed wood). Diverts 500M+ lbs from landfills yearly. Zero chemical maintenance." },
-            { q: "Better for environment than wood?", a: "Yes recycled inputs, 2-3x longer lifespan, no chemical stains, no timber harvesting, recyclable at end of life." },
-            { q: "Can composite be recycled?", a: "Some brands yes. Trex has a recycling program. Installation scraps can also be recycled." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
               <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
               <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
             </details>
@@ -157,7 +184,7 @@ export default function EcoFriendlyDeckingPage() {
         </div>
       </article>
       <SimpleCTA title="Build Green Get Your Free Estimate" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated={UPDATED} />
 
       <RelatedGuides currentPath="/eco-friendly-composite-decking" />
 
