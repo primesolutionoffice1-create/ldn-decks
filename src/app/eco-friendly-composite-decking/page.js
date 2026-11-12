@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: 'Is composite decking better for the environment than wood?',
-    a: 'Yes, in several ways: composite uses recycled materials instead of harvesting new timber, lasts 2-3x longer (fewer replacements), requires no chemical stains or sealants (no toxic runoff), and is itself recyclable at end of life. Pressure-treated wood uses chromated copper arsenate and must be disposed of as hazardous waste.',
+    a: 'Yes, in several ways: composite uses recycled materials instead of harvesting new timber, lasts 2-3x longer (fewer replacements), requires no chemical stains or sealants (no toxic runoff), and is itself recyclable at end of life. Residential pressure-treated wood relies on copper-based chemical preservatives, and treated scraps should never be burned.',
   },
   {
     q: 'Can composite decking be recycled?',
@@ -145,7 +145,7 @@ export default function EcoFriendlyDeckingPage() {
               <thead><tr style={{ background: '#f5f5f5' }}>{['Brand', 'Recycled Content', 'Manufacturing', 'Recyclable?'].map(h => <th key={h} style={S.th}>{h}</th>)}</tr></thead>
               <tbody>
                 {[
-                  ['Trex', '95% recycled (plastic + wood)', 'USA Winchester, VA & Fernley, NV', 'Yes (Trex recycling program)'],
+                  ['Trex', '95% recycled (plastic + wood)', 'USA (incl. Winchester, VA)', 'Yes (Trex recycling program)'],
                   ['TimberTech PRO', 'Partial recycled content', 'USA', 'Check with manufacturer'],
                   ['TimberTech AZEK', 'PVC-based (not recycled input)', 'USA', 'PVC is recyclable'],
                   ['Deckorators', 'Mineral-based composite', 'USA', 'Limited'],
@@ -158,7 +158,7 @@ export default function EcoFriendlyDeckingPage() {
               </tbody>
             </table>
           </div>
-          <p style={S.p}><strong>Our pick for sustainability:</strong> Trex highest recycled content (95%), USA-manufactured (two facilities including one in Virginia), and an active recycling program. As a Trex product-line planner, we&apos;re proud to build with the industry&apos;s most sustainable product. <Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Learn more about our Trex services</Link>.</p>
+          <p style={S.p}><strong>Our pick for sustainability:</strong> Trex highest recycled content (95%), USA-manufactured, including in Winchester, Virginia, and an active recycling program. As a Trex product-line planner, we&apos;re proud to build with the industry&apos;s most sustainable product. <Link href="/trex-decks" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Learn more about our Trex services</Link>.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {faqs.map((faq) => (
