@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { showcaseProjects } from '@/lib/showcaseData';
+import { showcaseProjects, showcaseImageAlt } from '@/lib/showcaseData';
 import { canonicalCities, slugify } from '@/data/cityData';
 import ContactHome from '@/components/ContactHome';
 import JsonLd from '@/components/JsonLd';
@@ -126,14 +126,14 @@ export async function generateMetadata({ params }) {
   if (!project) return { title: "Project Not Found", robots: { index: false, follow: false } };
 
   const { buildMetadata } = await import('@/lib/seo');
-  const isNoIndex = slug === 'rooftop-deck-washington-dc';
-
   return buildMetadata({
     path: `/showcase/${project.slug}`,
     title: `${project.title} in ${project.location} | LDN Decks`,
     description: `View our ${project.title.toLowerCase()} project in ${project.location}. Quality composite & wood construction by Loudoun Decks. Free estimates.`,
     image: project.image,
-    noIndex: isNoIndex
+    // Gallery records are one photo and a short planning note. Keep them
+    // reachable from /showcase, but do not ask Google to index each URL.
+    noIndex: true
   });
 }
 
@@ -192,7 +192,7 @@ export default async function ProjectPage({ params }) {
             <div className={styles.mainImage}>
               <Image 
                 src={project.image} 
-                alt={project.title} 
+                alt={showcaseImageAlt(project)} 
                 width={1200} 
                 height={800} 
                 className={styles.img}

@@ -26,10 +26,11 @@ export async function generateMetadata({ params }) {
   const post = blogPosts.find(p => p.slug === resolvedParams.slug);
   if (!post) return { title: 'Post Not Found', robots: { index: false, follow: false } };
   const base = buildMetadata({
-    path: `/blog/${post.slug}`,
+    path: post.canonicalPath || `/blog/${post.slug}`,
     title: post.metaTitle || `${post.title} | Loudoun Decks`,
     description: post.metaDescription || post.excerpt,
     image: post.image,
+    noIndex: Boolean(post.canonicalPath),
   });
   return {
     ...base,
@@ -226,7 +227,7 @@ export default async function SingleBlogPage({ params }) {
       "acceptedAnswer": {
         "@type": "Answer",
         // Strip basic markdown out of the answer text for the schema payload
-        "text": item.a.replace(/\*\*([^*]+)\*\*/g, 'a written estimate').replace(/\[([^\]]+)\]\([^)]+\)/g, 'a written estimate'),
+        "text": item.a.replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
       },
     })),
   } : null;
