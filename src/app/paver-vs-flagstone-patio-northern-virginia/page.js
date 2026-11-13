@@ -16,13 +16,29 @@ export const metadata = buildMetadata({
   image: '/social/paver-vs-flagstone-patio-northern-virginia-social.png',
 });
 
+const faqs = [
+  {
+    q: "Is a paver or flagstone patio cheaper?",
+    a: "Concrete pavers are often a different installed scope than natural flagstone. Pavers: priced in a written estimate. Flagstone: priced in a written estimate. For a 300 sqft patio, that's a written estimate for pavers vs a written estimate for flagstone. Pavers are 30-50% cheaper for the same area.",
+  },
+  {
+    q: "Which lasts longer pavers or flagstone?",
+    a: "Both last 25-50+ years with proper installation and base prep. Pavers are more uniform and easier to replace individually. Flagstone is natural stone that won't fade but can crack in severe freeze-thaw if not properly set.",
+  },
+  {
+    q: "Which is better for Virginia's climate?",
+    a: "Both perform well. Pavers have slight edge for freeze-thaw because interlocking joints flex with ground movement. Flagstone set in mortar can crack; dry-set flagstone is more forgiving. We recommend proper base depth (8-12 inches) for both in Virginia.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "Is a paver or flagstone patio cheaper?", acceptedAnswer: { "@type": "Answer", text: "Concrete pavers are often a different installed scope than natural flagstone. Pavers: priced in a written estimate. Flagstone: priced in a written estimate. For a 300 sqft patio, that's a written estimate for pavers vs a written estimate for flagstone." } },
-    { "@type": "Question", name: "Which lasts longer pavers or flagstone?", acceptedAnswer: { "@type": "Answer", text: "Both last 25-50+ years with proper installation and base prep. Pavers are more uniform and easier to replace individually. Flagstone is natural stone that won't fade but can crack in severe freeze-thaw if not properly set." } },
-    { "@type": "Question", name: "Which is better for Virginia's climate?", acceptedAnswer: { "@type": "Answer", text: "Both perform well. Pavers have slight edge for freeze-thaw because interlocking joints flex with ground movement. Flagstone set in mortar can crack; dry-set flagstone is more forgiving. We recommend proper base depth (8-12 inches) for both in Virginia." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 }, th: { padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }, td: { padding: '0.75rem', borderBottom: '1px solid #eee' } };
@@ -31,7 +47,7 @@ export default function PaverVsFlagstonePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/paver-vs-flagstone-patio-northern-virginia" name="Paver Patio vs Flagstone Patio Northern Virginia | 2026" description="Paver patio contractor vs flagstone — cost, durability, maintenance, freeze-thaw performance in NoVA. 2026 installed pricing for Loudoun, Fairfax, Prince William. We build both." speakable />
+      <WebPageSchema dateModified="2026-11-13" url="https://ldndecks.com/paver-vs-flagstone-patio-northern-virginia" name="Paver Patio vs Flagstone Patio Northern Virginia | 2026" description="Paver patio contractor vs flagstone — cost, durability, maintenance, freeze-thaw performance in NoVA. 2026 installed pricing for Loudoun, Fairfax, Prince William. We build both." speakable />
       {/* Full-width Hero Image Section */}
       <section style={{ position: 'relative', width: '100%', height: '70vh', minHeight: '500px', overflow: 'hidden' }}>
         <Image
@@ -131,14 +147,11 @@ export default function PaverVsFlagstonePage() {
           </div>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "Is a paver or flagstone patio cheaper?", a: "Pavers: priced in a written estimate. Flagstone: priced in a written estimate. Pavers are 30-50% cheaper for the same area." },
-            { q: "Which lasts longer?", a: "Both last 25-50+ years. Pavers are easier to repair individually. Flagstone won't fade but can crack if improperly set." },
-            { q: "Which is better for Virginia's climate?", a: "Both work well. Pavers have a slight edge for freeze-thaw due to flexible interlocking joints." },
-          ].map((faq, i) => (
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
             </details>
           ))}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
@@ -155,7 +168,7 @@ export default function PaverVsFlagstonePage() {
         </div>
       </article>
       <SimpleCTA title="Design Your Dream Patio" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-13" />
 
       <RelatedGuides currentPath="/paver-vs-flagstone-patio-northern-virginia" />
 
