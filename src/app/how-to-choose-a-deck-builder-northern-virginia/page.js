@@ -18,14 +18,33 @@ export const metadata = buildMetadata({
   image: '/social/choose-deck-builder-northern-virginia-social.png',
 });
 
+const faqs = [
+  {
+    q: "How do I verify a deck builder's license in Virginia?",
+    a: "Visit the Virginia DPOR License Lookup at https://dfrnet.dpor.virginia.gov/. Search by company name or license number. Every contractor doing work over a written estimate in Virginia must have a Class A, B, or C contractor license.",
+  },
+  {
+    q: "What should I look for in a deck builder's estimate?",
+    a: "An itemized materials list (brand, model, color), separate labor cost, permit fees, dumpster/cleanup, project timeline, warranty terms in writing, and the contractor's Virginia license number.",
+  },
+  {
+    q: "Should I get multiple deck quotes?",
+    a: "Yes get 2-3 quotes from licensed contractors. Compare not just price, but scope, materials, warranty, timeline, and permit planning. The cheapest quote often excludes permits, cleanup, or uses inferior materials.",
+  },
+  {
+    q: "What are red flags when hiring a deck builder?",
+    a: "No Virginia contractor license, cash-only payment demands, no written warranty, no permit mentioned, can't provide recent local references, pressure to sign immediately, price significantly below all other quotes.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How do I verify a deck builder's license in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Visit the Virginia DPOR License Lookup at https://dfrnet.dpor.virginia.gov/. Search by company name or license number. Every contractor doing work over a written estimate in Virginia must have a Class A, B, or C contractor license." } },
-    { "@type": "Question", name: "What should I look for in a deck builder's estimate?", acceptedAnswer: { "@type": "Answer", text: "An itemized materials list (brand, model, color), separate labor cost, permit fees, dumpster/cleanup, project timeline, warranty terms in writing, and the contractor's Virginia license number." } },
-    { "@type": "Question", name: "Should I get multiple deck quotes?", acceptedAnswer: { "@type": "Answer", text: "Yes get 2-3 quotes from licensed contractors. Compare not just price, but scope, materials, warranty, timeline, and permit planning. The cheapest quote often excludes permits, cleanup, or uses inferior materials." } },
-    { "@type": "Question", name: "What are red flags when hiring a deck builder?", acceptedAnswer: { "@type": "Answer", text: "No Virginia contractor license, cash-only payment demands, no written warranty, no permit mentioned, can't provide recent local references, pressure to sign immediately, price significantly below all other quotes." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, h3: { fontSize: '1.2rem', fontWeight: 600, margin: '1.5rem 0 0.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 } };
@@ -34,7 +53,7 @@ export default function ChooseDeckBuilderPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia" name="How to Choose a Deck Builder in Northern Virginia (10 Questions + Red Flags)" description="10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license, warranty terms, and public profiles." speakable />
+      <WebPageSchema dateModified="2026-11-13" url="https://ldndecks.com/how-to-choose-a-deck-builder-northern-virginia" name="How to Choose a Deck Builder in Northern Virginia (10 Questions + Red Flags)" description="10 questions to ask before hiring a deck builder, 5 red flags to avoid, and how to verify a Virginia contractor license, warranty terms, and public profiles." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -126,15 +145,11 @@ export default function ChooseDeckBuilderPage() {
           </div>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
-          {[
-            { q: "How do I verify a contractor's license?", a: "Visit dpor.virginia.gov → License Lookup. Search by name or number. Must be active, Class A or B for projects over a written estimate." },
-            { q: "What should be in the estimate?", a: "Itemized materials (brand/model/color), labor, permits, dumpster, cleanup, timeline, and warranty all in writing." },
-            { q: "Should I get multiple quotes?", a: "Yes 2-3 quotes from licensed contractors. Compare scope, materials, and warranty, not just price." },
-            { q: "What are the biggest red flags?", a: "No license, cash-only demands, no written warranty, suggesting to skip permits, and prices far below other quotes." },
-          ].map((faq, i) => (
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
             </details>
           ))}
 
@@ -159,7 +174,7 @@ export default function ChooseDeckBuilderPage() {
       </article>
 
       <SimpleCTA title="We'll Answer All 10 Questions on the Phone" buttonText="Call (571) 655-7207" link="phone" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-13" />
 
       <RelatedGuides currentPath="/how-to-choose-a-deck-builder-northern-virginia" />
 
