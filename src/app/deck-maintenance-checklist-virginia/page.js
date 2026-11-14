@@ -16,13 +16,29 @@ export const metadata = buildMetadata({
   image: '/social/deck-maintenance-checklist-virginia-social.png',
 });
 
+const faqs = [
+  {
+    q: "How often should I maintain my deck in Virginia?",
+    a: "Wood decks: clean and inspect twice yearly (spring + fall), stain/seal every 1-2 years. Composite decks: clean once or twice yearly with soap and water no staining or sealing needed. Virginia's freeze-thaw and humidity require more frequent attention than milder climates.",
+  },
+  {
+    q: "What is the best time to clean a deck in Virginia?",
+    a: "Early spring (March-April) after winter debris and before pollen season. Second cleaning in fall (October) to remove leaves and prep for winter. Avoid cleaning in freezing temps or extreme heat.",
+  },
+  {
+    q: "Do composite decks need any maintenance?",
+    a: "Minimal. Clean with soap and water 1-2 times per year. Remove leaves/debris that can trap moisture. No staining, sealing, or sanding ever needed. Occasional mold from organic debris can be removed with composite deck cleaner.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How often should I maintain my deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Wood decks: clean and inspect twice yearly (spring + fall), stain/seal every 1-2 years. Composite decks: clean once or twice yearly with soap and water no staining or sealing needed. Virginia's freeze-thaw and humidity require more frequent attention than milder climates." } },
-    { "@type": "Question", name: "What is the best time to clean a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Early spring (March-April) after winter debris and before pollen season. Second cleaning in fall (October) to remove leaves and prep for winter. Avoid cleaning in freezing temps or extreme heat." } },
-    { "@type": "Question", name: "Do composite decks need any maintenance?", acceptedAnswer: { "@type": "Answer", text: "Minimal. Clean with soap and water 1-2 times per year. Remove leaves/debris that can trap moisture. No staining, sealing, or sanding ever needed. Occasional mold from organic debris can be removed with composite deck cleaner." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 // HowTo JSON-LD was removed 2026-05-27: Google deprecated HowTo rich
@@ -35,7 +51,7 @@ export default function DeckMaintenancePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-maintenance-checklist-virginia" name="Deck Maintenance Checklist for Virginia" description="Seasonal deck maintenance checklist for Virginia climate. Spring cleaning, summer care, fall prep, winter protection. Composite vs wood maintenance compared." speakable />
+      <WebPageSchema dateModified="2026-11-14" url="https://ldndecks.com/deck-maintenance-checklist-virginia" name="Deck Maintenance Checklist for Virginia" description="Seasonal deck maintenance checklist for Virginia climate. Spring cleaning, summer care, fall prep, winter protection. Composite vs wood maintenance compared." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Maintenance Checklist for Virginia</h1>
@@ -148,14 +164,11 @@ export default function DeckMaintenancePage() {
           </p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "How often should I maintain my deck?", a: "Wood: clean + inspect 2x/year, stain every 1-2 years. Composite: clean 1-2x/year with soap and water. No staining ever." },
-            { q: "Best time to clean?", a: "Early spring (March-April) and fall (October). Avoid freezing temps and extreme heat." },
-            { q: "Do composite decks need maintenance?", a: "Minimal soap and water 1-2x/year. Remove leaves/debris. No staining, sealing, or sanding." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
             </details>
           ))}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
@@ -180,7 +193,7 @@ export default function DeckMaintenancePage() {
         </div>
       </article>
       <SimpleCTA title="Deck Need More Than Maintenance? Free Inspection" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-14" />
 
       <RelatedGuides currentPath="/deck-maintenance-checklist-virginia" />
 

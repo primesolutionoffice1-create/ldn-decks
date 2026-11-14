@@ -19,14 +19,33 @@ export const metadata = buildMetadata({
   image: '/social/wood-decks-social.png',
 });
 
+const faqs = [
+  {
+    q: "How much does a wood deck cost in Northern Virginia?",
+    a: "Wood deck cost depends on the species (pressure-treated pine, cedar, redwood or an exotic hardwood such as Ipe, Cumaru or Tigerwood), size, framing condition, railing and stairs. Pressure-treated pine is generally the lowest-cost option and exotic hardwoods the highest. Your written estimate itemizes each of these for your deck.",
+  },
+  {
+    q: "How long does a wood deck last in Virginia?",
+    a: "Lifespan varies by wood type and maintenance: pressure-treated 10-15 years (5-8 without maintenance), cedar 15-20 years, redwood 20-25 years, ipe and other hardwoods 25-40+ years. Virginia's freeze-thaw cycles and humidity require annual sealing/staining for all wood types.",
+  },
+  {
+    q: "Wood deck or composite — which is better in Virginia?",
+    a: "Wood generally costs less upfront but needs regular washing and sealing or staining, while composite costs more upfront and needs less upkeep. Which is better for you depends on budget, how long you plan to stay and how much maintenance you want to do. Ask for a written estimate for both so you can compare upfront cost and upkeep side by side.",
+  },
+  {
+    q: "What is the best wood for outdoor decks?",
+    a: "For Virginia climate: cedar (best balance of cost and durability), pressure-treated southern yellow pine (best budget), or ipe (best premium — naturally rot-resistant, 40+ year lifespan). Avoid untreated softwoods. Always seal/stain annually.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much does a wood deck cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Wood deck cost depends on the species (pressure-treated pine, cedar, redwood or an exotic hardwood such as Ipe, Cumaru or Tigerwood), size, framing condition, railing and stairs. Pressure-treated pine is generally the lowest-cost option and exotic hardwoods the highest. Your written estimate itemizes each of these for your deck." } },
-    { "@type": "Question", name: "How long does a wood deck last in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Lifespan varies by wood type and maintenance: pressure-treated 10-15 years (5-8 without maintenance), cedar 15-20 years, redwood 20-25 years, ipe and other hardwoods 25-40+ years. Virginia's freeze-thaw cycles and humidity require annual sealing/staining for all wood types." } },
-    { "@type": "Question", name: "Wood deck or composite — which is better in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Wood generally costs less upfront but needs regular washing and sealing or staining, while composite costs more upfront and needs less upkeep. Which is better for you depends on budget, how long you plan to stay and how much maintenance you want to do. Ask for a written estimate for both so you can compare upfront cost and upkeep side by side." } },
-    { "@type": "Question", name: "What is the best wood for outdoor decks?", acceptedAnswer: { "@type": "Answer", text: "For Virginia climate: cedar (best balance of cost and durability), pressure-treated southern yellow pine (best budget), or ipe (best premium — naturally rot-resistant, 40+ year lifespan). Avoid untreated softwoods. Always seal/stain annually." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, h3: { fontSize: '1.2rem', fontWeight: 600, margin: '1.5rem 0 0.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 }, th: { padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }, td: { padding: '0.75rem', borderBottom: '1px solid #eee' } };
@@ -35,7 +54,7 @@ export default function WoodDecksPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-11-06" url="https://ldndecks.com/wood-decks" name="Expert Wood Deck Builder NoVA | Cedar &amp; Hardwood Decks" description="The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax &amp; Prince William counties." speakable />
+      <WebPageSchema dateModified="2026-11-14" url="https://ldndecks.com/wood-decks" name="Expert Wood Deck Builder NoVA | Cedar &amp; Hardwood Decks" description="The premier wood deck builder in Northern Virginia. Custom pressure-treated, cedar, and Ipe decks built to last. Serving Loudoun, Fairfax &amp; Prince William counties." speakable />
       <ServiceSchema
         name="Wood Deck Construction"
         description="Custom wood deck building in Northern Virginia. Cedar, IPE, and pressure-treated lumber options with expert craftsmanship."
@@ -202,15 +221,11 @@ export default function WoodDecksPage() {
 
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "Cost of a wood deck in Northern Virginia?", a: "Wood deck cost depends on the species (pressure-treated pine, cedar, redwood or an exotic hardwood such as Ipe, Cumaru or Tigerwood), size, framing condition, railing and stairs. Pressure-treated pine is generally the lowest-cost option and exotic hardwoods the highest. Your written estimate itemizes each of these for your deck." },
-            { q: "How long does a wood deck last?", a: "Lifespan varies by wood type and maintenance: pressure-treated 10-15 years (5-8 without maintenance), cedar 15-20 years, redwood 20-25 years, ipe and other hardwoods 25-40+ years. Virginia's freeze-thaw cycles and humidity require annual sealing/staining for all wood types." },
-            { q: "Wood or composite?", a: "Wood generally costs less upfront but needs regular washing and sealing or staining, while composite costs more upfront and needs less upkeep. Which is better for you depends on budget, how long you plan to stay and how much maintenance you want to do. Ask for a written estimate for both so you can compare upfront cost and upkeep side by side." },
-            { q: "Best wood for outdoor decks?", a: "For Virginia climate: cedar (best balance of cost and durability), pressure-treated southern yellow pine (best budget), or ipe (best premium — naturally rot-resistant, 40+ year lifespan). Avoid untreated softwoods. Always seal/stain annually." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
             </details>
           ))}
 
@@ -230,7 +245,7 @@ export default function WoodDecksPage() {
         </div>
       </article>
       <SimpleCTA title="Build Your Custom Wood Deck" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="November 6, 2026" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-14" />
 
       <RelatedGuides currentPath="/wood-decks" />
 

@@ -16,13 +16,29 @@ export const metadata = buildMetadata({
   image: '/social/questions-before-building-deck-social.png',
 });
 
+const faqs = [
+  {
+    q: "What is the first thing to consider before building a deck?",
+    a: "Budget. Know your realistic range before talking to contractors. In Northern Virginia, composite decks are priced in a written estimate for 300-500 sqft. This sets the scope for everything else: size, materials, and features.",
+  },
+  {
+    q: "Do I need a permit to build a deck?",
+    a: "Almost always yes in Northern Virginia. Any deck attached to your house or over 30 inches above grade requires a building permit from your county (Loudoun, Fairfax, Prince William). Plus HOA approval if applicable.",
+  },
+  {
+    q: "How do I know if my yard is suitable for a deck?",
+    a: "Almost any yard can accommodate a deck. Key factors: slope (multi-level designs work on hills), setback distances from property lines (varies by county), underground utilities (call 811 before digging), and drainage patterns. A contractor evaluates all of this during the free consultation.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "What is the first thing to consider before building a deck?", acceptedAnswer: { "@type": "Answer", text: "Budget. Know your realistic range before talking to contractors. In Northern Virginia, composite decks are priced in a written estimate for 300-500 sqft. This sets the scope for everything else: size, materials, and features." } },
-    { "@type": "Question", name: "Do I need a permit to build a deck?", acceptedAnswer: { "@type": "Answer", text: "Almost always yes in Northern Virginia. Any deck attached to your house or over 30 inches above grade requires a building permit from your county (Loudoun, Fairfax, Prince William). Plus HOA approval if applicable." } },
-    { "@type": "Question", name: "How do I know if my yard is suitable for a deck?", acceptedAnswer: { "@type": "Answer", text: "Almost any yard can accommodate a deck. Key factors: slope (multi-level designs work on hills), setback distances from property lines (varies by county), underground utilities (call 811 before digging), and drainage patterns. A contractor evaluates all of this during the free consultation." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const questions = [
@@ -72,7 +88,7 @@ export default function QuestionsPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/questions-to-ask-before-building-a-deck" name="20 Questions Before Building a Deck (2026)" description="20 questions every homeowner should answer before building a deck: budget, materials, permits, HOA, timeline. From a trusted NoVA builder." speakable />
+      <WebPageSchema dateModified="2026-11-14" url="https://ldndecks.com/questions-to-ask-before-building-a-deck" name="20 Questions Before Building a Deck (2026)" description="20 questions every homeowner should answer before building a deck: budget, materials, permits, HOA, timeline. From a trusted NoVA builder." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -104,6 +120,14 @@ export default function QuestionsPage() {
               ))}
             </div>
           ))}
+          <h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '1rem', marginTop: '2rem' }}>Frequently Asked Questions</h2>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
+            </details>
+          ))}
           <h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '1rem', marginTop: '2rem' }}>Related Guides</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {[
@@ -122,7 +146,7 @@ export default function QuestionsPage() {
         </div>
       </article>
       <SimpleCTA title="Ready? We'll Answer Every Question on the Phone" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-14" />
 
       <RelatedGuides currentPath="/questions-to-ask-before-building-a-deck" />
 

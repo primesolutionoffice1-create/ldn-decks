@@ -17,13 +17,29 @@ export const metadata = buildMetadata({
   image: '/social/deck-safety-inspection-checklist-social.png',
 });
 
+const faqs = [
+  {
+    q: "How do I know if my deck is safe?",
+    a: "Inspect these 5 critical areas: 1) Ledger board look for gaps between deck and house, rust stains, or water damage on the wall below. 2) Support posts check bases for rot (poke test with screwdriver). 3) Joists look under the deck for sagging, cracks, or soft wood. 4) Railings push-test every post; they should not wobble. 5) Deck surface check for soft spots, severe splintering, or boards that flex underfoot.",
+  },
+  {
+    q: "How often should I inspect my deck?",
+    a: "Inspect twice yearly spring (after winter damage) and fall (before winter). Wood decks over 10 years old should get a professional structural inspection annually. Composite decks need less frequent inspection but should still be checked yearly for hardware and connection points.",
+  },
+  {
+    q: "What is the most dangerous deck failure?",
+    a: "Ledger board failure is where the deck detaches from the house. It happens when the ledger attachment corrodes, rots, or was improperly installed. Check the ledger connection annually.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How do I know if my deck is safe?", acceptedAnswer: { "@type": "Answer", text: "Inspect these 5 critical areas: 1) Ledger board look for gaps between deck and house, rust stains, or water damage on the wall below. 2) Support posts check bases for rot (poke test with screwdriver). 3) Joists look under the deck for sagging, cracks, or soft wood. 4) Railings push-test every post; they should not wobble. 5) Deck surface check for soft spots, severe splintering, or boards that flex underfoot." } },
-    { "@type": "Question", name: "How often should I inspect my deck?", acceptedAnswer: { "@type": "Answer", text: "Inspect twice yearly spring (after winter damage) and fall (before winter). Wood decks over 10 years old should get a professional structural inspection annually. Composite decks need less frequent inspection but should still be checked yearly for hardware and connection points." } },
-    { "@type": "Question", name: "What is the most dangerous deck failure?", acceptedAnswer: { "@type": "Answer", text: "Ledger board failure where the deck detaches from the house. This causes the most injuries and fatalities of any deck failure type. It happens when the ledger attachment corrodes, rots, or was improperly installed. Check the ledger connection annually." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 export default function DeckInspectionPage() {
@@ -83,7 +99,7 @@ export default function DeckInspectionPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-safety-inspection-checklist" name="Deck Safety Inspection Checklist | Is Your Deck Safe? (2026)" description="15-point deck safety inspection checklist. Check for rot, structural issues, railing stability, and code compliance. Free professional inspection available." speakable />
+      <WebPageSchema dateModified="2026-11-14" url="https://ldndecks.com/deck-safety-inspection-checklist" name="Deck Safety Inspection Checklist | Is Your Deck Safe? (2026)" description="15-point deck safety inspection checklist. Check for rot, structural issues, railing stability, and code compliance. Free professional inspection available." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -165,14 +181,11 @@ export default function DeckInspectionPage() {
           </p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>FAQ</h2>
-          {[
-            { q: "How do I know if my deck is safe?", a: "Check 5 areas: ledger board (no gaps/rot), posts (poke test), joists (no sag), railings (push test), surface (no soft spots). Any structural failure = stop using it." },
-            { q: "How often should I inspect?", a: "Twice yearly (spring + fall). Wood decks over 10 years: get annual professional inspection." },
-            { q: "Most dangerous failure type?", a: "Ledger board failure deck detaches from house. Check this connection annually. #1 cause of deck collapse injuries." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
             </details>
           ))}
 
@@ -198,7 +211,7 @@ export default function DeckInspectionPage() {
         </div>
       </article>
       <SimpleCTA title="Free Professional Deck Inspection" buttonText="Schedule Inspection" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-14" />
 
       <RelatedGuides currentPath="/deck-safety-inspection-checklist" />
 

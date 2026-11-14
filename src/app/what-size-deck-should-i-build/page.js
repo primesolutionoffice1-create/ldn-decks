@@ -16,13 +16,29 @@ export const metadata = buildMetadata({
   image: '/social/what-size-deck-should-i-build-social.png',
 });
 
+const faqs = [
+  {
+    q: "What is the average deck size?",
+    a: "The average deck in Northern Virginia is 300-400 square feet. This fits a dining table for 6, a grill zone, and a seating area comfortably. Smaller decks (150-200 sqft) work for couples. Larger decks (500+ sqft) are common for families who entertain frequently.",
+  },
+  {
+    q: "How big should my deck be for a dining table?",
+    a: "Allow 12x12 feet (144 sqft) minimum for a 6-person dining table with chairs and walking room. For 8 people, plan 12x14 (168 sqft). Always add 3-4 feet around the table for comfortable chair pull-out.",
+  },
+  {
+    q: "How much of my yard should a deck take up?",
+    a: "A good rule: the deck should not exceed 20-25% of your total backyard area. In most Northern Virginia neighborhoods, this means 300-500 sqft on a typical quarter-acre lot. Check your county's lot coverage limits and HOA setback requirements.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "What is the average deck size?", acceptedAnswer: { "@type": "Answer", text: "The average deck in Northern Virginia is 300-400 square feet. This fits a dining table for 6, a grill zone, and a seating area comfortably. Smaller decks (150-200 sqft) work for couples. Larger decks (500+ sqft) are common for families who entertain frequently." } },
-    { "@type": "Question", name: "How big should my deck be for a dining table?", acceptedAnswer: { "@type": "Answer", text: "Allow 12x12 feet (144 sqft) minimum for a 6-person dining table with chairs and walking room. For 8 people, plan 12x14 (168 sqft). Always add 3-4 feet around the table for comfortable chair pull-out." } },
-    { "@type": "Question", name: "How much of my yard should a deck take up?", acceptedAnswer: { "@type": "Answer", text: "A good rule: the deck should not exceed 20-25% of your total backyard area. In most Northern Virginia neighborhoods, this means 300-500 sqft on a typical quarter-acre lot. Check your county's lot coverage limits and HOA setback requirements." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 }, th: { padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }, td: { padding: '0.75rem', borderBottom: '1px solid #eee' } };
@@ -31,7 +47,7 @@ export default function DeckSizePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/what-size-deck-should-i-build" name="What Size Deck Should I Build? (Guide by Use + Budget)" description="Deck size guide: 150-200 sqft for couples, 300-400 for families, 500+ for entertaining. Recommendations by use and Northern Virginia lot sizes." speakable />
+      <WebPageSchema dateModified="2026-11-14" url="https://ldndecks.com/what-size-deck-should-i-build" name="What Size Deck Should I Build? (Guide by Use + Budget)" description="Deck size guide: 150-200 sqft for couples, 300-400 for families, 500+ for entertaining. Recommendations by use and Northern Virginia lot sizes." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>What Size Deck Should I Build?</h1>
@@ -130,14 +146,11 @@ export default function DeckSizePage() {
           <p style={{ fontSize: '0.85rem', color: '#888', fontStyle: 'italic' }}>Includes materials, labor, standard railings, basic stairs. <Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)' }}>Full pricing guide →</Link></p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "What's the average deck size?", a: "300-400 sqft in Northern Virginia. Fits dining for 6, grill, and seating." },
-            { q: "How big for a dining table?", a: "12x12 ft (144 sqft) minimum for 6 people. 12x14 for 8. Add 3-4 ft around table for chairs." },
-            { q: "How much yard should a deck use?", a: "20-25% of your backyard. On a typical NoVA quarter-acre: 300-500 sqft." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
             </details>
           ))}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
@@ -157,7 +170,7 @@ export default function DeckSizePage() {
         </div>
       </article>
       <SimpleCTA title="Let's Design Your Perfect Size Deck" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-14" />
 
       <RelatedGuides currentPath="/what-size-deck-should-i-build" />
 
