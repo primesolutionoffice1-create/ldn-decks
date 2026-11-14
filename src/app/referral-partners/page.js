@@ -47,39 +47,34 @@ const pageSchema = {
   name: 'Referral Partners for Northern Virginia Deck Projects',
   description: 'Referral partner page for professionals who want to introduce homeowners to LDN Decks for deck, porch, patio, and outdoor living projects.',
   url: 'https://ldndecks.com/referral-partners',
+  dateModified: '2026-11-14',
   isPartOf: { '@type': 'WebSite', '@id': 'https://ldndecks.com/#website' },
   about: { '@id': 'https://ldndecks.com/#organization' },
 };
 
+const faqs = [
+  {
+    q: 'What makes a good referral for LDN Decks?',
+    a: 'A good referral is a homeowner in Northern Virginia who needs a deck replacement, new deck, screened porch, patio, pergola, railing, or outdoor living project and wants a licensed contractor.',
+  },
+  {
+    q: 'Which areas does LDN Decks serve?',
+    a: 'LDN Decks serves Loudoun County, Fairfax County, Prince William County, Arlington County, Stafford County, and nearby Northern Virginia communities.',
+  },
+  {
+    q: 'How should referral partners introduce a homeowner?',
+    a: 'The best introduction includes the homeowner name, phone number, project location, project type, timeline, and whether they are comparing estimates or ready to schedule a consultation.',
+  },
+];
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What makes a good referral for LDN Decks?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A good referral is a homeowner in Northern Virginia who needs a deck replacement, new deck, screened porch, patio, pergola, railing, or outdoor living project and wants a licensed, insured contractor.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which areas does LDN Decks serve?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'LDN Decks serves Loudoun County, Fairfax County, Prince William County, Arlington County, Stafford County, and nearby Northern Virginia communities.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How should referral partners introduce a homeowner?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The best introduction includes the homeowner name, phone number, project location, project type, timeline, and whether they are comparing estimates or ready to schedule a consultation.',
-      },
-    },
-  ],
+  mainEntity: faqs.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
 };
 
 const S = {
@@ -235,6 +230,19 @@ export default function ReferralPartnersPage() {
               Homeowner name, phone number, project address or city, project type, timeline, budget range if known, and whether the project involves HOA or permit questions.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section style={S.section}>
+        <div style={S.container}>
+          <h2 style={S.h2}>Frequently Asked Questions</h2>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ ...S.card, marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 700, cursor: 'pointer', fontSize: '1.05rem', color: '#2c241f' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ ...S.p, margin: '1rem 0 0' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
+            </details>
+          ))}
         </div>
       </section>
 

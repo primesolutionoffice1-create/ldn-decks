@@ -18,17 +18,41 @@ export const metadata = buildMetadata({
   image: '/social/deck-roi-calculator-northern-virginia-social.png',
 });
 
+const faqs = [
+  {
+    q: "How much value does a deck add to a home in Northern Virginia?",
+    a: "Resale recovery is not a fixed percentage, and this page does not publish one or a national-average comparison. A Trex Transcend deck does not have a published resale amount on this page. This page does not publish a wood-deck resale percentage.",
+  },
+  {
+    q: "What type of deck gives the best ROI?",
+    a: "This page does not publish a resale percentage for any deck material. A written estimate is the project price.",
+  },
+  {
+    q: "Does a screened porch have better ROI than a deck?",
+    a: "In Northern Virginia, this page does not publish a resale percentage for a screened porch or an open deck. However, screened porches cost significantly more (a written estimate).",
+  },
+  {
+    q: "Does deck ROI vary by county in Northern Virginia?",
+    a: "This page does not publish a county recovery rate. A written estimate is the project price.",
+  },
+  {
+    q: "Does a deck without a permit affect home value?",
+    a: "Yes, significantly. An unpermitted deck is flagged during home inspections and can reduce your home's value by a written estimate or more. Buyers may require removal or retrofitting as a condition of sale. In competitive Northern Virginia markets, unpermitted structures are a red flag that can kill deals.",
+  },
+  {
+    q: "What is the ROI sweet spot for deck investment?",
+    a: "This page does not publish an investment range or a resale percentage. A written estimate is the project price.",
+  },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How much value does a deck add to a home in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Resale recovery is not a fixed percentage, and this page does not publish one or a national-average comparison. A Trex Transcend deck does not have a published resale amount on this page. This page does not publish a wood-deck resale percentage." } },
-    { "@type": "Question", name: "What type of deck gives the best ROI?", acceptedAnswer: { "@type": "Answer", text: "This page does not publish a resale percentage for any deck material. A written estimate is the project price." } },
-    { "@type": "Question", name: "Does a screened porch have better ROI than a deck?", acceptedAnswer: { "@type": "Answer", text: "In Northern Virginia, this page does not publish a resale percentage for a screened porch or an open deck. However, screened porches cost significantly more (a written estimate), so the absolute dollar value added can be higher. The best ROI per dollar spent is an open composite deck." } },
-    { "@type": "Question", name: "Does deck ROI vary by county in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "This page does not publish a county recovery rate. A written estimate is the project price." } },
-    { "@type": "Question", name: "Does a deck without a permit affect home value?", acceptedAnswer: { "@type": "Answer", text: "Yes, significantly. An unpermitted deck is flagged during home inspections and can reduce your home's value by a written estimate or more. Buyers may require removal or retrofitting as a condition of sale. In competitive Northern Virginia markets, unpermitted structures are a red flag that can kill deals." } },
-    { "@type": "Question", name: "What is the ROI sweet spot for deck investment?", acceptedAnswer: { "@type": "Answer", text: "This page does not publish an investment range or a resale percentage. A written estimate is the project price." } },
-  ],
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = {
@@ -43,14 +67,14 @@ export default function DeckROICalculatorPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-roi-calculator-northern-virginia" name="Deck ROI in Northern Virginia (2026)" description="How much value does a deck add in Northern Virginia? Resale recovery is not a fixed percentage, and this page does not publish one." speakable />
+      <WebPageSchema dateModified="2026-11-14" url="https://ldndecks.com/deck-roi-calculator-northern-virginia" name="Deck ROI in Northern Virginia (2026)" description="How much value does a deck add in Northern Virginia? Resale recovery is not a fixed percentage, and this page does not publish one." speakable />
       <ArticleSchema
         title="Deck ROI in Northern Virginia: 2026 Home Value Data"
         description="How much value does a deck add in Northern Virginia? Real ROI data by material, project type, and county — plus the investment sweet spot."
         path="/deck-roi-calculator-northern-virginia"
         image="/images/img13.jpeg"
         datePublished="2026-04-26"
-        dateModified="2026-10-18"
+        dateModified="2026-11-14"
       />
 
       {/* Hero */}
@@ -291,17 +315,11 @@ export default function DeckROICalculatorPage() {
 
           {/* ===== SECTION 11: FAQs ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
-          {[
-            { q: "How much value does a deck add to a home in Northern Virginia?", a: "Resale recovery is not a fixed percentage, and this page does not publish one. A Trex Transcend deck does not have a published resale amount on this page. This page does not compare Northern Virginia resale recovery with a national average." },
-            { q: "What type of deck gives the best ROI?", a: "This page does not publish a resale percentage for a new deck or for resurfacing. A written estimate is the project price." },
-            { q: "Does a screened porch have better ROI than a deck?", a: "This page does not publish a resale percentage for a screened porch or an open deck. However, screened porches cost more (a written estimate), so absolute value added can be higher. The best ROI per dollar is an open composite deck." },
-            { q: "Does deck ROI vary by county?", a: "This page does not publish a county recovery rate. A written estimate is the project price." },
-            { q: "Does a deck without a permit affect home value?", a: "Significantly. Unpermitted decks are flagged during inspection and can reduce value by a written estimate. Buyers may demand removal or retrofitting. In competitive NoVA markets, unpermitted structures kill deals." },
-            { q: "What is the ROI sweet spot for deck investment?", a: "This page does not publish an investment range, a resale percentage, or a share of home value. A written estimate is the project price." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
             </details>
           ))}
 
@@ -327,7 +345,7 @@ export default function DeckROICalculatorPage() {
 
       <SimpleCTA title="Build a Deck That Adds Real Value" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-roi-calculator-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-14" />
 
       
       <section style={{ padding: '2rem 1.5rem', maxWidth: 900, margin: '0 auto' }}>

@@ -14,6 +14,33 @@ import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import hubStyles from '@/components/EducationHub.module.css';
 
+const educationFaqs = [
+  {
+    q: 'What should I learn before building a deck in Northern Virginia?',
+    a: 'Start with project scope, budget, material choice, county permit requirements, HOA rules, structural design, stairs, railings and long-term maintenance expectations.',
+  },
+  {
+    q: 'Should I start with materials or permits?',
+    a: 'For a new deck, start with scope and material preference, then confirm permit and HOA requirements. For an older or damaged deck, start with structure and safety before choosing finish materials.',
+  },
+  {
+    q: 'Can education pages help me get a better estimate?',
+    a: 'Yes. The more clearly you understand size, material, stairs, railings, drainage, lighting, HOA status and timeline, the easier it is to create an accurate estimate.',
+  },
+];
+
+function educationFaqPageSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: educationFaqs.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  };
+}
+
 export const metadata = buildMetadata({
   path: '/education',
   title: 'Northern Virginia Deck Education Center | Loudoun Decks',
@@ -159,36 +186,7 @@ function buildEducationHubSchema() {
         },
       ],
     },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What should I learn before building a deck in Northern Virginia?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Start with project scope, budget, material choice, county permit requirements, HOA rules, structural design, stairs, railings and long-term maintenance expectations.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Should I start with materials or permits?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'For a new deck, start with scope and material preference, then confirm permit and HOA requirements. For an older or damaged deck, start with structure and safety before choosing finish materials.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can education pages help me get a better estimate?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. The more clearly you understand size, material, stairs, railings, drainage, lighting, HOA status and timeline, the easier it is to create an accurate estimate.',
-          },
-        },
-      ],
-    },
+    educationFaqPageSchema(),
   ];
 }
 
@@ -201,7 +199,7 @@ export default function EducationPage() {
 
   return (
     <main className={hubStyles.educationPage}>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/education" name="Northern Virginia Deck Education Center | Loudoun Decks" description="Expert guides for deck safety, permits, materials, costs, HOA approvals and outdoor living decisions in Northern Virginia." speakable />
+      <WebPageSchema dateModified="2026-11-14" url="https://ldndecks.com/education" name="Northern Virginia Deck Education Center | Loudoun Decks" description="Expert guides for deck safety, permits, materials, costs, HOA approvals and outdoor living decisions in Northern Virginia." speakable />
       {educationHubSchema.map((schema, index) => (
         <script
           key={index}
@@ -216,6 +214,18 @@ export default function EducationPage() {
       <EducationLeadCTA />
       <EducationList />
       <EducationSourceNote />
+      <section style={{ padding: '1rem 1.5rem 3rem' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Frequently Asked Questions</h2>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {educationFaqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem', background: '#fff' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
+            </details>
+          ))}
+        </div>
+      </section>
       <RelatedGuides currentPath="/education" category="deck-core" />
     </main>
   );

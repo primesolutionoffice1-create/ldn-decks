@@ -19,17 +19,41 @@ export const metadata = buildMetadata({
   image: '/social/deck-warranty-guide-northern-virginia-social.png',
 });
 
+const faqs = [
+  {
+    q: "How long is the Trex decking warranty?",
+    a: "Trex's Decking, Fascia and Cladding Limited Warranty, checked October 18, 2026, lists residential terms by collection: Enhance decking and fascia 25 years, Select decking and fascia 35 years, and Transcend and Signature decking and fascia 50 years. Lineage is not named in that table. Fade and stain coverage has conditions, including Delta E limits and cleaning deadlines. Confirm the collection on the current Trex warranty.",
+  },
+  {
+    q: "What voids a composite deck warranty?",
+    a: "Common warranty-voiding actions include improper installation (wrong joist spacing, no gapping), using non-approved fasteners, lack of building permits, improper cleaning with harsh chemicals or pressure washers above 3100 PSI, and failure to maintain adequate ventilation beneath the deck surface.",
+  },
+  {
+    q: "Does a deck warranty cover labor costs?",
+    a: "We install Trex and TimberTech decking and work with both as partner brands. The Trex decking limited warranty's stated remedy is replacement of affected material or a refund of the product purchase price, not installation labor. A separate TrexPro Residential Limited Labor Warranty can cover reasonable labor only when a TrexPro contractor installs eligible products on an individual residence and the warranties are registered. Loudoun Decks does not state a TrexPro level, so that labor warranty is not part of the firm's offer.",
+  },
+  {
+    q: "Is a deck warranty transferable when I sell my home?",
+    a: "The current Trex decking limited warranty and the TrexPro residential labor warranty each say a residential warranty may be transferred one time within five years of the original purchase. That is a Trex condition, not a Loudoun Decks benefit. Confirm TimberTech or AZEK transfer rules in the current manufacturer warranty for the installed collection.",
+  },
+  {
+    q: "What does a workmanship warranty cover on a deck?",
+    a: "A written workmanship warranty can cover installation defects such as improper ledger board attachment, inadequate flashing, incorrect joist spacing, loose railings, or structural settling. The exact term, scope, exclusions, and remedy should be stated in the signed project paperwork.",
+  },
+  {
+    q: "How do I file a warranty claim on my Trex deck?",
+    a: "Contact Trex directly at 1-800-289-8739 or file online at trex.com/warranty. You will need your proof of purchase, installation date, photos of the issue, and your installer's information. If your deck was built by a contractor listed in Trex programs, verify current claim steps and documentation requirements directly with Trex.",
+  },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How long is the Trex decking warranty?", acceptedAnswer: { "@type": "Answer", text: "Trex's Decking, Fascia and Cladding Limited Warranty, checked October 18, 2026, lists residential terms by collection: Enhance decking and fascia 25 years, Select decking and fascia 35 years, and Transcend and Signature decking and fascia 50 years. Lineage is not named in that table. Fade and stain coverage has conditions, including Delta E limits and cleaning deadlines. Confirm the collection on the current Trex warranty." } },
-    { "@type": "Question", name: "What voids a composite deck warranty?", acceptedAnswer: { "@type": "Answer", text: "Common warranty-voiding actions include improper installation (wrong joist spacing, no gapping), using non-approved fasteners, lack of building permits, improper cleaning with harsh chemicals or pressure washers above 3100 PSI, and failure to maintain adequate ventilation beneath the deck surface." } },
-    { "@type": "Question", name: "Does a deck warranty cover labor costs?", acceptedAnswer: { "@type": "Answer", text: "We install Trex and TimberTech decking and work with both as partner brands. The Trex decking limited warranty's stated remedy is replacement of affected material or a refund of the product purchase price, not installation labor. A separate TrexPro Residential Limited Labor Warranty can cover reasonable labor only when a TrexPro contractor installs eligible products on an individual residence and the warranties are registered. Loudoun Decks does not state a TrexPro level, so that labor warranty is not part of the firm's offer." } },
-    { "@type": "Question", name: "Is a deck warranty transferable when I sell my home?", acceptedAnswer: { "@type": "Answer", text: "The current Trex decking limited warranty and the TrexPro residential labor warranty each say a residential warranty may be transferred one time within five years of the original purchase. That is a Trex condition, not a Loudoun Decks benefit. Confirm TimberTech or AZEK transfer rules in the current manufacturer warranty for the installed collection." } },
-    { "@type": "Question", name: "What does a workmanship warranty cover on a deck?", acceptedAnswer: { "@type": "Answer", text: "A workmanship warranty covers defects in the installation itself — things like improper ledger board attachment, inadequate flashing, incorrect joist spacing, loose railings, or structural settling. The exact term, scope, exclusions, and remedy should be stated in the signed project paperwork." } },
-    { "@type": "Question", name: "How do I file a warranty claim on my Trex deck?", acceptedAnswer: { "@type": "Answer", text: "Contact Trex directly at 1-800-289-8739 or file online at trex.com/warranty. You will need your proof of purchase, installation date, photos of the issue, and your installer's information. If your deck was built by a contractor listed in Trex programs, verify current claim steps and documentation requirements directly with Trex." } },
-  ],
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = {
@@ -44,14 +68,14 @@ export default function DeckWarrantyGuidePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/deck-warranty-guide-northern-virginia" name="Deck Warranty Guide | What\" description="We install Trex and TimberTech decking and work with both as partner brands. This guide does not state a TrexPro level." speakable />
+      <WebPageSchema dateModified="2026-11-14" url="https://ldndecks.com/deck-warranty-guide-northern-virginia" name="Deck Warranty Guide | What\" description="We install Trex and TimberTech decking and work with both as partner brands. This guide does not state a TrexPro level." speakable />
       <ArticleSchema
         title="Deck Warranty Guide: What's Covered in Northern Virginia"
         description="Trex product warranty terms by collection, the separate TrexPro labor warranty, and why written workmanship terms are a different document."
         path="/deck-warranty-guide-northern-virginia"
         image="/images/img36.jpeg"
         datePublished="2026-04-26"
-        dateModified="2026-11-01"
+        dateModified="2026-11-14"
       />
 
       {/* Hero */}
@@ -295,17 +319,11 @@ export default function DeckWarrantyGuidePage() {
 
           {/* ===== SECTION 12: FAQs ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
-          {[
-            { q: "How long is the Trex decking warranty?", a: "In the Trex decking warranty checked October 18, 2026, residential terms are 25 years for Enhance, 35 years for Select, and 50 years for Transcend and Signature. Lineage is not named. Fade and stain coverage has conditions. A residential warranty may transfer once within five years of purchase." },
-            { q: "What voids a composite deck warranty?", a: "Improper installation (wrong joist spacing, no gapping), non-approved fasteners, lack of building permits, harsh pressure washing above 3,100 PSI, chlorine bleach cleaning, painting or staining the surface, and inadequate ventilation underneath the deck." },
-            { q: "Does a deck warranty cover labor costs?", a: "We install Trex and TimberTech decking and work with both as partner brands. The Trex decking limited warranty's stated remedy is replacement of affected material or a refund of the product purchase price, not installation labor. A separate TrexPro Residential Limited Labor Warranty can cover reasonable labor only when a TrexPro contractor installs eligible products on an individual residence and the warranties are registered. Loudoun Decks does not state a TrexPro level, so that labor warranty is not part of the firm's offer." },
-            { q: "Is a deck warranty transferable when I sell my home?", a: "The current Trex residential product warranty and TrexPro labor warranty each allow one transfer within five years of the original purchase. Confirm TimberTech or AZEK transfer rules in the warranty for the installed collection." },
-            { q: "What does a workmanship warranty cover?", a: "Workmanship terms can cover installation defects such as ledger attachment, flashing, joist spacing, railing post connections, stair stringer separation, fastener failure, or structural settling. Exact coverage depends on the written term, scope, exclusions, and remedy in the signed paperwork." },
-            { q: "How do I file a Trex warranty claim?", a: "Contact Trex at 1-800-289-8739 or file at trex.com/warranty. Have your proof of purchase, installation date, photos, and installer information ready. Ask Trex directly whether installer-program status affects the current claim review process." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
             </details>
           ))}
 
@@ -331,7 +349,7 @@ export default function DeckWarrantyGuidePage() {
 
       <SimpleCTA title="Get Deck Installation With Written Warranty Terms" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-warranty-guide-northern-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-01" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-14" />
 
       <ContactHome />
     </>

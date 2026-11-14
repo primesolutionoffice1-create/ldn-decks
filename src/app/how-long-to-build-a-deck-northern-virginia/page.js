@@ -16,14 +16,33 @@ export const metadata = buildMetadata({
   image: '/social/deck-build-timeline-northern-virginia-social.png',
 });
 
+const faqs = [
+  {
+    q: "How long does it take to build a deck?",
+    a: "Construction takes 2-4 weeks for most decks in Northern Virginia. However, the full timeline from first call to completion is 6-12 weeks when you include consultation (1 week), design (1-2 weeks), permits (2-6 weeks), and construction (2-4 weeks).",
+  },
+  {
+    q: "What takes the longest in the deck building process?",
+    a: "Permits. Loudoun County takes 10-15 business days, Fairfax County 3-6 weeks. This is why we recommend starting the process 2-3 months before your desired completion date.",
+  },
+  {
+    q: "Can weather delay a deck build?",
+    a: "Yes. Rain days can add 1-3 days. Extended freezing (ground too hard for footings) can pause work for days. Summer thunderstorms rarely cause significant delays. We build through light rain and adjust schedules proactively.",
+  },
+  {
+    q: "How long does a screened porch take to build?",
+    a: "Screened porches take 3-6 weeks of construction time longer than a standard deck due to the roof structure, screening, and often electrical work. Total timeline including permits: 8-14 weeks.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "How long does it take to build a deck?", acceptedAnswer: { "@type": "Answer", text: "Construction takes 2-4 weeks for most decks in Northern Virginia. However, the full timeline from first call to completion is 6-12 weeks when you include consultation (1 week), design (1-2 weeks), permits (2-6 weeks), and construction (2-4 weeks)." } },
-    { "@type": "Question", name: "What takes the longest in the deck building process?", acceptedAnswer: { "@type": "Answer", text: "Permits. Loudoun County takes 10-15 business days, Fairfax County 3-6 weeks. This is why we recommend starting the process 2-3 months before your desired completion date." } },
-    { "@type": "Question", name: "Can weather delay a deck build?", acceptedAnswer: { "@type": "Answer", text: "Yes. Rain days can add 1-3 days. Extended freezing (ground too hard for footings) can pause work for days. Summer thunderstorms rarely cause significant delays. We build through light rain and adjust schedules proactively." } },
-    { "@type": "Question", name: "How long does a screened porch take to build?", acceptedAnswer: { "@type": "Answer", text: "Screened porches take 3-6 weeks of construction time longer than a standard deck due to the roof structure, screening, and often electrical work. Total timeline including permits: 8-14 weeks." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 }, th: { padding: '0.75rem', textAlign: 'left', borderBottom: '2px solid #ddd' }, td: { padding: '0.75rem', borderBottom: '1px solid #eee' } };
@@ -32,7 +51,7 @@ export default function HowLongToBuildPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/how-long-to-build-a-deck-northern-virginia" name="How Long to Build a Deck in Virginia" description="Most decks take 2-4 weeks to build after permits. Full timeline: consultation (1 week), permits (2-6 weeks), construction (2-4 weeks). Total: 6-12 weeks." speakable />
+      <WebPageSchema dateModified="2026-11-14" url="https://ldndecks.com/how-long-to-build-a-deck-northern-virginia" name="How Long to Build a Deck in Virginia" description="Most decks take 2-4 weeks to build after permits. Full timeline: consultation (1 week), permits (2-6 weeks), construction (2-4 weeks). Total: 6-12 weeks." speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -142,15 +161,11 @@ export default function HowLongToBuildPage() {
           </ol>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
-          {[
-            { q: "How long does it take to build a deck?", a: "Construction: 2-4 weeks. Full process including permits: 6-12 weeks." },
-            { q: "What takes the longest?", a: "Permits. Loudoun: 10-15 business days. Fairfax: 3-6 weeks." },
-            { q: "Can weather delay my deck?", a: "Rain adds 1-3 days. Freezing can pause footings. Summer storms rarely cause significant delays." },
-            { q: "How long for a screened porch?", a: "3-6 weeks of construction. Total with permits: 8-14 weeks." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
             </details>
           ))}
 
@@ -170,7 +185,7 @@ export default function HowLongToBuildPage() {
       </article>
 
       <SimpleCTA title="Ready to Start? Book Your Free Consultation" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-14" />
 
       <RelatedGuides currentPath="/how-long-to-build-a-deck-northern-virginia" />
 

@@ -16,13 +16,29 @@ export const metadata = buildMetadata({
   image: '/social/pet-friendly-deck-design-social.png',
 });
 
+const faqs = [
+  {
+    q: "What is the best decking material for dogs?",
+    a: "Capped composite (Trex Transcend or TimberTech AZEK) resists scratches from claws, doesn't splinter (safe for paws), and cleans easily with soap and water. Avoid uncapped or low-end composites that scratch more easily.",
+  },
+  {
+    q: "Will dog claws scratch composite decking?",
+    a: "Light surface scratches are possible but capped composites (Trex Transcend, TimberTech AZEK) are highly scratch-resistant. Any minor marks blend into the wood-grain texture over time. Pressure-treated wood shows claw marks more visibly and splinters into paws.",
+  },
+  {
+    q: "How do I keep my dog safe on a deck?",
+    a: "Key safety features: railing balusters spaced 3 inches or less (prevents head entrapment), pet gates at stairs, no toxic stains or treatments, shade area for hot days, and fresh water station. Avoid cable railings dogs can squeeze through or get tangled.",
+  },
+];
+
 const faqSchema = {
-  "@context": "https://schema.org", "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "What is the best decking material for dogs?", acceptedAnswer: { "@type": "Answer", text: "Capped composite (Trex Transcend or TimberTech AZEK) is the best decking for dogs. It resists scratches from claws, doesn't splinter (safe for paws), stays cooler than wood in sun, and cleans easily. Avoid uncapped or low-end composites that scratch more easily." } },
-    { "@type": "Question", name: "Will dog claws scratch composite decking?", acceptedAnswer: { "@type": "Answer", text: "Light surface scratches are possible but capped composites (Trex Transcend, TimberTech AZEK) are highly scratch-resistant. Any minor marks blend into the wood-grain texture over time. Pressure-treated wood shows claw marks more visibly and splinters into paws." } },
-    { "@type": "Question", name: "How do I keep my dog safe on a deck?", acceptedAnswer: { "@type": "Answer", text: "Key safety features: railing balusters spaced 3 inches or less (prevents head entrapment), pet gates at stairs, no toxic stains or treatments, shade area for hot days, and fresh water station. Avoid cable railings dogs can squeeze through or get tangled." } },
-  ],
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = { h2: { fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }, p: { marginBottom: '1rem', lineHeight: 1.7 } };
@@ -31,7 +47,7 @@ export default function PetFriendlyDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-11-10" url="https://ldndecks.com/pet-friendly-deck-design" name="Pet-Friendly Deck Design: Build a Deck Your Dog Will Love (2026)" description="Design a pet-friendly deck: scratch-resistant composite, safe railings, shade zones, pet gates, easy-clean surfaces. Tips from Northern Virginia deck builders." speakable />
+      <WebPageSchema dateModified="2026-11-14" url="https://ldndecks.com/pet-friendly-deck-design" name="Pet-Friendly Deck Design: Build a Deck Your Dog Will Love (2026)" description="Design a pet-friendly deck: scratch-resistant composite, safe railings, shade zones, pet gates, easy-clean surfaces. Tips from Northern Virginia deck builders." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Pet-Friendly Deck Design</h1>
@@ -99,14 +115,11 @@ export default function PetFriendlyDeckPage() {
           </ul>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
-          {[
-            { q: "Best decking for dogs?", a: "Capped composite (Trex Transcend or TimberTech AZEK). Scratch-resistant, splinter-free, easy to clean, no toxic treatments." },
-            { q: "Will dog claws scratch composite?", a: "Light scratches possible but capped composites are highly resistant. Marks blend into wood-grain texture. Far better than wood." },
-            { q: "How to keep dogs safe on a deck?", a: "3\" baluster spacing, pet gates at stairs, shade zone, no cable railings, lighter color for heat, fresh water station." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
             </details>
           ))}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Related</h2>
@@ -123,7 +136,7 @@ export default function PetFriendlyDeckPage() {
         </div>
       </article>
       <SimpleCTA title="Design a Deck Your Whole Family Loves" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-10" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-14" />
 
       <RelatedGuides currentPath="/pet-friendly-deck-design" />
 
