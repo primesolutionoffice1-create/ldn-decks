@@ -99,7 +99,7 @@ export default function DeckInspectionPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-11-14" url="https://ldndecks.com/deck-safety-inspection-checklist" name="Deck Safety Inspection Checklist | Is Your Deck Safe? (2026)" description="15-point deck safety inspection checklist. Check for rot, structural issues, railing stability, and code compliance. Free professional inspection available." speakable />
+      <WebPageSchema dateModified="2026-11-15" url="https://ldndecks.com/deck-safety-inspection-checklist" name="Deck Safety Inspection Checklist | Is Your Deck Safe? (2026)" description="15-point deck safety inspection checklist. Check for rot, structural issues, railing stability, and code compliance. Free professional inspection available." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden', marginBottom: '2rem' }}>
@@ -120,7 +120,7 @@ export default function DeckInspectionPage() {
       <section style={{ background: '#ffebee', borderLeft: '4px solid #c62828', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, color: '#c62828', marginBottom: '0.5rem' }}>Safety Warning:</p>
-          <p>Deck collapses injure thousands of people annually in the US. The #1 cause: <strong>ledger board failure</strong> (deck detaching from the house). If your deck is over 15 years old, has never been inspected, or shows any of the warning signs below get a professional inspection before your next gathering.</p>
+          <p>Deck collapses injure thousands of people annually in the US. One of the most common causes of deck collapse is <strong>ledger board failure</strong> (deck detaching from the house). If your deck is over 15 years old, has never been inspected, or shows any of the warning signs below get a professional inspection before your next gathering.</p>
         </div>
       </section>
       <article style={{ padding: '4rem 0' }}>
@@ -211,7 +211,7 @@ export default function DeckInspectionPage() {
         </div>
       </article>
       <SimpleCTA title="Free Professional Deck Inspection" buttonText="Schedule Inspection" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-14" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-15" />
 
       <RelatedGuides currentPath="/deck-safety-inspection-checklist" />
 
