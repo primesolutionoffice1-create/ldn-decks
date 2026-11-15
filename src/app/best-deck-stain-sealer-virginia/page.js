@@ -43,14 +43,14 @@ export default function BestDeckStainSealerPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/best-deck-stain-sealer-virginia" name="Best Deck Stain &amp; Sealer for Virginia Weather (2026)" description="Top deck stains and sealers tested in Virginia\'s climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks." speakable />
+      <WebPageSchema dateModified="2026-11-15" url="https://ldndecks.com/best-deck-stain-sealer-virginia" name="Best Deck Stain &amp; Sealer for Virginia Weather (2026)" description="Top deck stains and sealers tested in Virginia\'s climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks." speakable />
       <ArticleSchema
         title="Best Deck Stain & Sealer for Virginia Weather (2026)"
         description="Top deck stains and sealers tested in Virginia's climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks."
         path="/best-deck-stain-sealer-virginia"
         image="/images/img29.jpeg"
         datePublished="2026-04-23"
-        dateModified="2026-10-18"
+        dateModified="2026-11-15"
       />
 
       {/* Hero */}
@@ -237,7 +237,7 @@ export default function BestDeckStainSealerPage() {
           <p style={S.p}>Apply stain with a pump sprayer and immediately back-brush with a quality stain brush or stain pad. Work in manageable sections (2&ndash;3 boards at a time) to avoid lap marks. Apply in the direction of the wood grain. Start with railings and verticals, then do the deck surface last.</p>
 
           <h3 style={S.h3}>Step 5: Second Coat (Day 4-5)</h3>
-          <p style={S.p}>Most semi-transparent stains benefit from a second coat applied wet-on-wet (within 30&ndash;60 minutes of the first) or after the manufacturer&apos;s recommended recoat time. Two thin coats always outperform one thick coat thick application is the number one cause of peeling.</p>
+          <p style={S.p}>Most semi-transparent stains benefit from a second coat applied wet-on-wet (within 30&ndash;60 minutes of the first) or after the manufacturer&apos;s recommended recoat time. Two thin coats always outperform one thick coat thick application is a common cause of peeling.</p>
 
           {/* ===== SECTION 7: When to Stain ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Best Time to Stain a Deck in Virginia</h2>
@@ -362,7 +362,7 @@ export default function BestDeckStainSealerPage() {
 
       <SimpleCTA title="Need Your Deck Stained or Sealed?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/best-deck-stain-sealer-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-10-18" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-15" />
 
       <ContactHome />
     </>
