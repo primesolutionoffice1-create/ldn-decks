@@ -18,17 +18,41 @@ export const metadata = buildMetadata({
   image: '/social/best-deck-stain-sealer-virginia-social.png',
 });
 
+const faqs = [
+  {
+    q: "What is the best deck stain for Virginia weather?",
+    a: "For most Virginia decks, a semi-transparent water-based stain like TWP 1500 or Defy Extreme offers the best balance of UV protection, moisture resistance, and natural wood appearance. Semi-transparent formulas handle Virginia's humidity, UV exposure, and freeze-thaw cycles better than transparent or solid stains.",
+  },
+  {
+    q: "How often should you stain a deck in Virginia?",
+    a: "Most Virginia decks need re-staining every 2-3 years with semi-transparent stain, or every 3-5 years with solid stain. South-facing decks with full sun exposure may need attention every 18-24 months. Transparent sealers typically last only 1-2 years in Virginia's climate.",
+  },
+  {
+    q: "Is oil-based or water-based deck stain better for Virginia?",
+    a: "Water-based stains are generally better for Virginia. They handle humidity better during application, dry faster (critical during unpredictable Virginia weather), resist mildew growth, and meet current VOC regulations. Oil-based stains penetrate deeper but take 24-48 hours to dry and are more prone to mildew in humid conditions.",
+  },
+  {
+    q: "When is the best time to stain a deck in Virginia?",
+    a: "The best months to stain a deck in Virginia are April-May and September-October. Temperatures should be 50-85°F with low humidity (below 50%) and no rain forecast for 48 hours. Avoid summer months when humidity regularly exceeds 70% and temperatures above 90°F cause stain to dry too quickly.",
+  },
+  {
+    q: "How much does professional deck staining cost in Northern Virginia?",
+    a: "Professional deck staining in Northern Virginia is priced in a written estimate per square foot, including pressure washing, prep, and two coats. A typical 300 sqft deck is priced in a written estimate depending on condition and product choice. DIY is priced in a written estimate for materials only.",
+  },
+  {
+    q: "Should I stain or seal my new pressure-treated deck?",
+    a: "Wait 3-6 months before staining a new pressure-treated deck to let the wood dry and the treatment chemicals cure. Apply a water repellent sealer immediately if desired, but stain adhesion is poor on freshly treated lumber. Perform a water droplet test if water beads up, the wood isn't ready for stain.",
+  },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "What is the best deck stain for Virginia weather?", acceptedAnswer: { "@type": "Answer", text: "For most Virginia decks, a semi-transparent water-based stain like TWP 1500 or Defy Extreme offers the best balance of UV protection, moisture resistance, and natural wood appearance. Semi-transparent formulas handle Virginia's humidity, UV exposure, and freeze-thaw cycles better than transparent or solid stains." } },
-    { "@type": "Question", name: "How often should you stain a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Most Virginia decks need re-staining every 2-3 years with semi-transparent stain, or every 3-5 years with solid stain. South-facing decks with full sun exposure may need attention every 18-24 months. Transparent sealers typically last only 1-2 years in Virginia's climate." } },
-    { "@type": "Question", name: "Is oil-based or water-based deck stain better for Virginia?", acceptedAnswer: { "@type": "Answer", text: "Water-based stains are generally better for Virginia. They handle humidity better during application, dry faster (critical during unpredictable Virginia weather), resist mildew growth, and meet current VOC regulations. Oil-based stains penetrate deeper but take 24-48 hours to dry and are more prone to mildew in humid conditions." } },
-    { "@type": "Question", name: "When is the best time to stain a deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "The best months to stain a deck in Virginia are April-May and September-October. Temperatures should be 50-85°F with low humidity (below 50%) and no rain forecast for 48 hours. Avoid summer months when humidity regularly exceeds 70% and temperatures above 90°F cause stain to dry too quickly." } },
-    { "@type": "Question", name: "How much does professional deck staining cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck staining in Northern Virginia is priced in a written estimate per square foot, including pressure washing, prep, and two coats. A typical 300 sqft deck is priced in a written estimate depending on condition and product choice. DIY is priced in a written estimate for materials only." } },
-    { "@type": "Question", name: "Should I stain or seal my new pressure-treated deck?", acceptedAnswer: { "@type": "Answer", text: "Wait 3-6 months before staining a new pressure-treated deck to let the wood dry and the treatment chemicals cure. Apply a water repellent sealer immediately if desired, but stain adhesion is poor on freshly treated lumber. Perform a water droplet test if water beads up, the wood isn't ready for stain." } },
-  ],
+  mainEntity: faqs.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
 };
 
 const S = {
@@ -43,14 +67,14 @@ export default function BestDeckStainSealerPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-11-15" url="https://ldndecks.com/best-deck-stain-sealer-virginia" name="Best Deck Stain &amp; Sealer for Virginia Weather (2026)" description="Top deck stains and sealers tested in Virginia\'s climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks." speakable />
+      <WebPageSchema dateModified="2026-11-16" url="https://ldndecks.com/best-deck-stain-sealer-virginia" name="Best Deck Stain &amp; Sealer for Virginia Weather (2026)" description="Top deck stains and sealers tested in Virginia\'s climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks." speakable />
       <ArticleSchema
         title="Best Deck Stain & Sealer for Virginia Weather (2026)"
         description="Top deck stains and sealers tested in Virginia's climate. Oil vs water-based, transparent vs solid. Expert picks for pressure-treated and cedar decks."
         path="/best-deck-stain-sealer-virginia"
         image="/images/img29.jpeg"
         datePublished="2026-04-23"
-        dateModified="2026-11-15"
+        dateModified="2026-11-16"
       />
 
       {/* Hero */}
@@ -86,7 +110,7 @@ export default function BestDeckStainSealerPage() {
           </div>
 
           {/* ===== SECTION 1: Why Virginia Is Different ===== */}
-          <p style={S.p}>Most &ldquo;best deck stain&rdquo; lists are written for national audiences. That&apos;s a problem if you live in Virginia, because our climate is uniquely punishing to deck finishes. We get scorching UV in summer (Zone 7 sun exposure), humidity that regularly exceeds 70%, over 40 inches of annual rainfall, and 60+ freeze-thaw cycles per winter in Northern Virginia. A stain that performs beautifully in Arizona or Minnesota may fail catastrophically here.</p>
+          <p style={S.p}>Most &ldquo;best deck stain&rdquo; lists are written for national audiences. That&apos;s a problem if you live in Virginia, because our climate is uniquely punishing to deck finishes. We get scorching UV in summer (Zone 7 sun exposure), humidity that regularly exceeds 70%, heavy rainfall, and repeated freeze-thaw cycles each winter in Northern Virginia. A stain that performs beautifully in Arizona or Minnesota may fail catastrophically here.</p>
           <p style={S.p}>This guide is based on products we&apos;ve applied on decks across Loudoun, Fairfax, and Prince William counties since 2022. Every recommendation below has been tested in Virginia&apos;s actual conditions not a lab.</p>
 
           {/* ===== SECTION 2: Top Product Comparison ===== */}
@@ -157,7 +181,7 @@ export default function BestDeckStainSealerPage() {
               </tbody>
             </table>
           </div>
-          <p style={S.p}><strong>Our recommendation:</strong> Use water-based for 90% of Virginia deck projects. Reserve oil-based (like Cabot Australian Timber Oil) for hardwood decks (ipe, cumaru, mahogany) applied during dry October weather when humidity drops below 50%.</p>
+          <p style={S.p}><strong>Our recommendation:</strong> Use water-based for most Virginia deck projects. Reserve oil-based (like Cabot Australian Timber Oil) for hardwood decks (ipe, cumaru, mahogany) applied during dry October weather when humidity drops below 50%.</p>
 
           {/* ===== SECTION 4: Transparent vs Semi vs Solid ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Transparent vs Semi-Transparent vs Solid Stain</h2>
@@ -212,17 +236,17 @@ export default function BestDeckStainSealerPage() {
           <p style={S.p}>Virginia&apos;s average summer humidity exceeds 70%, with dew points regularly in the upper 60s and low 70s. This creates two problems: stain can&apos;t dry properly during application, and trapped moisture beneath the finish causes blistering and peeling. This is why oil-based stains which need 24+ hours of dry conditions are risky summer products in our market.</p>
 
           <h3 style={S.h3}>UV Exposure</h3>
-          <p style={S.p}>Northern Virginia receives 4.5&ndash;5.0 peak sun hours per day during summer. South-facing decks take the worst beating we&apos;ve seen transparent sealers fail in as little as 8 months on full-sun exposures. Stains with nano-zinc oxide (like Defy Extreme) provide significantly better UV blocking than standard pigment-only formulas.</p>
+          <p style={S.p}>South-facing decks take strong summer sun. We&apos;ve seen transparent sealers fail on full-sun exposures. Stains with nano-zinc oxide (like Defy Extreme) provide stronger UV blocking than standard pigment-only formulas.</p>
 
           <h3 style={S.h3}>Freeze-Thaw Cycles</h3>
-          <p style={S.p}>Northern Virginia experiences 60&ndash;80 freeze-thaw cycles per winter. Water penetrates wood fibers, freezes, expands, and cracks the finish from underneath. This is why penetrating stains (that soak into the wood) outperform film-forming stains (that sit on top) in our climate there&apos;s no surface film to crack.</p>
+          <p style={S.p}>Northern Virginia gets repeated freeze-thaw cycles each winter. Water penetrates wood fibers, freezes, expands, and cracks the finish from underneath. This is why penetrating stains (that soak into the wood) outperform film-forming stains (that sit on top) in our climate there&apos;s no surface film to crack.</p>
 
           <h3 style={S.h3}>Rainfall</h3>
-          <p style={S.p}>Virginia averages 42&ndash;44 inches of rain annually, well above the national average of 30 inches. Combined with spring pollen accumulation and fall leaf coverage, moisture sits on deck surfaces for extended periods. Products with strong mildew inhibitors are essential Thompson&apos;s original WaterSeal (without mildewcide) is a common failure we see on Virginia decks.</p>
+          <p style={S.p}>Virginia gets heavy annual rainfall. Combined with spring pollen accumulation and fall leaf coverage, moisture sits on deck surfaces for extended periods. Products with strong mildew inhibitors are essential Thompson&apos;s original WaterSeal (without mildewcide) is a common failure we see on Virginia decks.</p>
 
           {/* ===== SECTION 6: Application Process ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>How to Apply Deck Stain: Step-by-Step</h2>
-          <p style={S.p}>Whether you DIY or <Link href="/deck-staining-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>hire a professional</Link>, proper preparation is 80% of a successful stain job. Here&apos;s the process we follow:</p>
+          <p style={S.p}>Whether you DIY or <Link href="/deck-staining-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>hire a professional</Link>, proper preparation does most of the work in a successful stain job. Here&apos;s the process we follow:</p>
 
           <h3 style={S.h3}>Step 1: Pressure Wash (Day 1)</h3>
           <p style={S.p}><Link href="/pressure-washing-deck-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Pressure wash</Link> at 1,200&ndash;1,500 PSI with a 25-degree fan tip. Stay 6&ndash;8 inches from the surface. For grayed or mildewed wood, apply a deck cleaner/brightener first. Never exceed 2,000 PSI on softwood you&apos;ll shred the fibers and the stain will absorb unevenly.</p>
@@ -288,7 +312,7 @@ export default function BestDeckStainSealerPage() {
                   ['Deck cleaner/brightener', 'a written estimate', 'Included'],
                   ['Brushes, rollers, tape', 'a written estimate', 'Included'],
                   ['Sander rental + sandpaper', 'a written estimate', 'Included'],
-                  ['Labor', 'a written estimate (your time: 12-16 hrs)', 'a written estimate'],
+                  ['Labor', 'a written estimate (your time)', 'a written estimate'],
                   ['Total (300 sqft)', 'Not published', 'See the written estimate'],
                   ['Cost per sqft', 'Not published', 'See the written estimate'],
                 ].map((row, i) => {
@@ -322,21 +346,15 @@ export default function BestDeckStainSealerPage() {
           <p style={S.p}>Modern pressure-treated lumber uses micronized copper azole (MCA), which can react with certain oil-based stains. Always verify that your stain is compatible with MCA-treated wood. Water-based stains are universally compatible.</p>
 
           <h3 style={S.h3}>5. Ignoring Maintenance Between Stainings</h3>
-          <p style={S.p}>Annual cleaning with a garden hose and deck brush extends stain life by 30&ndash;50%. Leaves, pollen, and dirt trap moisture against the finish and accelerate breakdown. A 20-minute sweep and rinse in spring saves you hundreds in premature re-staining costs.</p>
+          <p style={S.p}>Annual cleaning with a garden hose and deck brush helps the finish last longer. Leaves, pollen, and dirt trap moisture against the finish and accelerate breakdown. A short sweep and rinse in spring helps you avoid premature re-staining.</p>
 
           {/* ===== SECTION 10: FAQs ===== */}
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>Frequently Asked Questions</h2>
-          {[
-            { q: "What is the best deck stain for Virginia weather?", a: "For most Virginia decks, a semi-transparent water-based stain like TWP 1500 or Defy Extreme offers the best balance of UV protection, moisture resistance, and natural wood appearance." },
-            { q: "How often should you stain a deck in Virginia?", a: "Every 2-3 years with semi-transparent stain, or 3-5 years with solid stain. South-facing full-sun decks may need re-staining every 18-24 months." },
-            { q: "Is oil-based or water-based deck stain better for Virginia?", a: "Water-based is better for 90% of Virginia applications. It handles humidity, dries faster, and resists mildew. Use oil-based only on hardwood decks during dry fall weather." },
-            { q: "When is the best time to stain a deck in Virginia?", a: "April-May and September-October are ideal. Temperatures 50-85°F, humidity below 50%, and 48 hours of dry weather are the key requirements." },
-            { q: "How much does professional deck staining cost in Northern Virginia?", a: "Professional deck staining is priced in a written estimate per square foot including prep, pressure washing, and two coats. A typical 300 sqft deck is priced in a written estimate." },
-            { q: "Should I stain or seal my new pressure-treated deck?", a: "Wait 3-6 months for the wood to dry and chemicals to cure. Perform a water droplet test if water beads, the wood isn't ready. You can apply a water repellent sealer immediately, but stain should wait." },
-          ].map((faq, i) => (
-            <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
-              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }}>{faq.q}</summary>
-              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }}>{faq.a}</p>
+          {/* Literal markup so apostrophes stay in the HTML source and match FAQPage text. */}
+          {faqs.map((faq) => (
+            <details key={faq.q} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
+              <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '1.05rem' }} dangerouslySetInnerHTML={{ __html: faq.q }} />
+              <p style={{ marginTop: '1rem', lineHeight: 1.7, color: '#555' }} dangerouslySetInnerHTML={{ __html: faq.a }} />
             </details>
           ))}
 
@@ -362,7 +380,7 @@ export default function BestDeckStainSealerPage() {
 
       <SimpleCTA title="Need Your Deck Stained or Sealed?" buttonText="Get Free Estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/best-deck-stain-sealer-virginia" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-15" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-16" />
 
       <ContactHome />
     </>
