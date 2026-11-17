@@ -49,8 +49,10 @@ export default function Page() {
         { href: '/near-you/fairfax-county', label: 'Deck builder in Fairfax County' },
         { href: '/deck-resurfacing-loudoun-county', label: 'Deck resurfacing in Loudoun County' },
         { href: '/deck-resurfacing-prince-william-county', label: 'Deck resurfacing in Prince William County' },
+        { href: '/patio-contractor-fairfax-county', label: 'Patio contractor in Fairfax County' },
+        { href: '/screened-porch-contractor-fairfax-county', label: 'Screened porch contractor in Fairfax County' },
       ]}
-      dateModified="2026-11-06"
+      dateModified="2026-11-17"
       faqs={[
         {
           q: 'Who does deck resurfacing in Fairfax County?',

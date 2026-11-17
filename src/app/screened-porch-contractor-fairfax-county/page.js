@@ -50,8 +50,10 @@ export default function Page() {
         { href: '/screened-porch-contractor-loudoun-county', label: 'Screened porch contractor in Loudoun County' },
         { href: '/screened-porch-contractor-prince-william-county', label: 'Screened porch contractor in Prince William County' },
         { href: '/screened-porch-contractor-arlington-county', label: 'Screened porch contractor in Arlington County' },
+        { href: '/deck-resurfacing-fairfax-county', label: 'Deck resurfacing in Fairfax County' },
+        { href: '/patio-contractor-fairfax-county', label: 'Patio contractor in Fairfax County' },
       ]}
-      dateModified="2026-11-06"
+      dateModified="2026-11-17"
       faqs={[
         {
           q: 'Who builds screened porches in Fairfax County?',

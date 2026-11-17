@@ -49,8 +49,10 @@ export default function Page() {
         { href: '/near-you/prince-william-county', label: 'Deck builder in Prince William County' },
         { href: '/deck-resurfacing-loudoun-county', label: 'Deck resurfacing in Loudoun County' },
         { href: '/deck-resurfacing-fairfax-county', label: 'Deck resurfacing in Fairfax County' },
+        { href: '/patio-contractor-prince-william-county', label: 'Patio contractor in Prince William County' },
+        { href: '/screened-porch-contractor-prince-william-county', label: 'Screened porch contractor in Prince William County' },
       ]}
-      dateModified="2026-11-06"
+      dateModified="2026-11-17"
       faqs={[
         {
           q: 'Who does deck resurfacing in Prince William County?',
