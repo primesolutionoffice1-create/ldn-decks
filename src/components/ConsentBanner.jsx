@@ -13,9 +13,10 @@ export default function ConsentBanner() {
   useEffect(() => {
     const timer = window.setTimeout(() => {
       try {
-        setVisible(!localStorage.getItem(CONSENT_KEY));
+        const choice = localStorage.getItem(CONSENT_KEY);
+        setVisible(choice !== 'accepted' && choice !== 'declined');
       } catch {
-        setVisible(false);
+        setVisible(true);
       }
     }, 0);
 
@@ -25,24 +26,34 @@ export default function ConsentBanner() {
   function updateConsent(value) {
     try {
       localStorage.setItem(CONSENT_KEY, value);
-      window.ldnConsentGranted = value === 'accepted';
-      if (typeof window.gtag === 'function') {
-        window.gtag('consent', 'update', {
-          ad_storage: value === 'accepted' ? 'granted' : 'denied',
-          ad_user_data: value === 'accepted' ? 'granted' : 'denied',
-          ad_personalization: value === 'accepted' ? 'granted' : 'denied',
-          analytics_storage: value === 'accepted' ? 'granted' : 'denied',
-        });
-      }
-      if (value === 'accepted') {
+    } catch {
+      // The explicit choice still applies to this page when storage is blocked.
+    }
+
+    const accepted = value === 'accepted';
+    window.ldnConsentGranted = accepted;
+    const state = accepted ? 'granted' : 'denied';
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        ad_storage: state,
+        ad_user_data: state,
+        ad_personalization: state,
+        analytics_storage: state,
+      });
+    }
+
+    try {
+      if (accepted) {
         persistAttributionCookies();
-        window.dispatchEvent(new Event('ldn:consent-accepted'));
       } else {
         clearAttributionCookies();
       }
     } catch {
-      // If storage is blocked, keep the user's immediate choice in memory.
-      window.ldnConsentGranted = value === 'accepted';
+      // Cookie access can also fail. Keep the consent choice and UI usable.
+    }
+
+    if (accepted) {
+      window.dispatchEvent(new Event('ldn:consent-accepted'));
     }
     setVisible(false);
   }
