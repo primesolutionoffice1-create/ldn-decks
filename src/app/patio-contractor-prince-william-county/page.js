@@ -47,8 +47,10 @@ export default function Page() {
         { href: '/get-estimate', label: 'Request a written estimate' },
         { href: '/patio-contractor-loudoun-county', label: 'Patio contractor in Loudoun County' },
         { href: '/patio-contractor-fairfax-county', label: 'Patio contractor in Fairfax County' },
+        { href: '/deck-resurfacing-prince-william-county', label: 'Deck resurfacing in Prince William County' },
+        { href: '/screened-porch-contractor-prince-william-county', label: 'Screened porch contractor in Prince William County' },
       ]}
-      dateModified="2026-11-06"
+      dateModified="2026-11-17"
       faqs={[
         {
           q: 'Who is a patio contractor in Prince William County?',

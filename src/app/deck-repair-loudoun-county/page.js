@@ -88,7 +88,7 @@ const expansionSections = [
     paragraphs: [
       "The single most dangerous deck failure point - and the most common issue we encounter in Loudoun County - is the ledger board connection. The ledger board is the structural member that bolts your deck to the house's rim joist. When this connection fails due to rot, inadequate fastening, or missing flashing, the deck can collapse. In Loudoun County, we frequently find ledger boards on older decks that were nailed rather than through-bolted, or that lack proper flashing to prevent water infiltration. Repairing and properly flashing the ledger is one of the most critical safety upgrades we perform.",
       "Railing instability is the second most common repair request from Loudoun County homeowners. Virginia building codes require deck railings to withstand 200 lbs of lateral force at the top rail - a standard that many older railings simply cannot meet. Railing posts that are face-mounted to the outer rim joist rather than through-bolted to the framing are particularly vulnerable. We upgrade railing post connections throughout Ashburn, Leesburg, and Sterling to meet or exceed current Loudoun County building code requirements.",
-      "Deck boards themselves - especially older pressure-treated pine - often show significant wear after 10-15 years in Loudoun County's climate. Cupping, checking, splintering, and the beginning of surface rot are all signs that resurfacing may be appropriate. Resurfacing your existing structure with new pressure-treated boards or upgrading to composite decking like Trex or TimberTech is one of the most cost-effective ways to extend your deck's life by 15-25 years."
+      "Deck boards themselves - especially older pressure-treated pine - often show significant wear after 10-15 years in Loudoun County's climate. Cupping, checking, splintering, and the beginning of surface rot are all signs that resurfacing may be appropriate. Resurfacing your existing structure with new pressure-treated boards or upgrading to composite decking like Trex or TimberTech is often a cost-effective way to extend your deck's life."
     ],
     listItems: [
       { label: "Ledger Board Rot & Improper Flashing", text: "The leading cause of deck collapse in Loudoun County - we repair, reinforce, and properly flash every ledger board we work on." },
@@ -101,7 +101,7 @@ const expansionSections = [
     title: "Deck Resurfacing in Loudoun County: The Cost-Effective Upgrade",
     paragraphs: [
       "For Loudoun County homeowners whose deck's substructure - posts, beams, and joists - is structurally sound but whose surface boards and railings are worn, deck resurfacing is an excellent alternative to full replacement. By removing the old decking surface and replacing it with new material, you can achieve a brand-new appearance and significantly improved safety at a fraction of the cost of demolishing and rebuilding the entire deck.",
-      "The most popular resurfacing upgrade in Loudoun County is replacing old pressure-treated pine boards with low-maintenance composite decking from Trex or TimberTech. As a Trex, TimberTech, and AZEK material planning, Loudoun Decks has access to the full range of premium composite products. Composite decking requires no sealing or staining, is highly resistant to moisture and insect damage, and comes with manufacturer warranties of 25-50 years - making it an ideal long-term solution for Loudoun County's climate.",
+      "The most popular resurfacing upgrade in Loudoun County is replacing old pressure-treated pine boards with low-maintenance composite decking from Trex or TimberTech. Loudoun Decks installs Trex and TimberTech decking and works with both as partner brands. Composite decking requires no sealing or staining, is highly resistant to moisture and insect damage, and comes with manufacturer warranties of 25-50 years - making it an ideal long-term solution for Loudoun County's climate.",
       "During any resurfacing project, we also take the opportunity to audit and reinforce the existing framing. We add joist hangers where they may be missing, upgrade rim board connections, and address any fastener corrosion we find. This comprehensive approach ensures that your resurfaced deck meets modern Loudoun County building standards and will serve your family safely for decades to come."
     ]
   },
@@ -118,7 +118,7 @@ const expansionSections = [
 export default function DeckRepairLoudounCountyPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-06-01" url="https://ldndecks.com/deck-repair-loudoun-county" name="Deck Repair Loudoun County | Fix Rot, Railings &amp; Ledger Boards" description="Expert deck repair in Loudoun County, VA. We fix rot, unstable railings, ledger board failures &amp; structural damage. Ashburn, Leesburg, Sterling." speakable />
+      <WebPageSchema dateModified="2026-11-17" url="https://ldndecks.com/deck-repair-loudoun-county" name="Deck Repair Loudoun County | Fix Rot, Railings &amp; Ledger Boards" description="Expert deck repair in Loudoun County, VA. We fix rot, unstable railings, ledger board failures &amp; structural damage. Ashburn, Leesburg, Sterling." speakable />
       <ServiceSchema
         name="Deck Repair in Loudoun County"
         description="Expert deck repair across Loudoun County — rot and ledger board repair, joist and beam replacement, railing and stair safety upgrades."
@@ -206,6 +206,7 @@ export default function DeckRepairLoudounCountyPage() {
           </p>
           <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '0.5rem' }}>
             <li><Link href="/deck-resurfacing-vs-replacement" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Compare resurfacing vs replacement →</Link></li>
+            <li><Link href="/deck-resurfacing-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Deck resurfacing in Loudoun County →</Link></li>
             <li><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Use the deck cost calculator for larger-scope planning →</Link></li>
             <li><Link href="/deck-permit-loudoun-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Review Loudoun County deck permit triggers →</Link></li>
           </ul>
@@ -223,7 +224,7 @@ export default function DeckRepairLoudounCountyPage() {
 
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/deck-repair-loudoun-county" />
-      <NamedAuthor context="Loudoun County" lastUpdated="2026-05-26" />
+      <NamedAuthor context="Loudoun County" lastUpdated="2026-11-17" />
 
       <ContactHome />
     </main>
