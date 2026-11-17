@@ -108,7 +108,7 @@ export default function SeoAdminPage() {
   return (
     <main style={styles.layout}>
       <aside style={styles.sidebar}>
-        <h1 style={styles.logo}>LDN SEO</h1>
+        <p style={styles.logo}>LDN SEO</p>
         {modules.map(([key, label]) => (
           <button key={key} style={key === active ? styles.navActive : styles.nav} onClick={() => setActive(key)} type="button">{label}</button>
         ))}
