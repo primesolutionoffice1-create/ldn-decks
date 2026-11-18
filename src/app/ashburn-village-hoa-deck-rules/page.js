@@ -9,6 +9,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import CountyHubLinks from '@/components/CountyHubLinks';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -57,14 +58,14 @@ export default function AshburnVillageHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Ashburn Village HOA Deck Rules &amp; Approval Guide" description="Replacing or building a deck in Ashburn Village? Learn how the Ashburn Village HOA review works, how it pairs with the Loudoun County permit, and how to get approved." speakable />
+      <WebPageSchema dateModified="2026-11-18" url={`https://ldndecks.com${PATH}`} name="Ashburn Village HOA Deck Rules &amp; Approval Guide" description="Replacing or building a deck in Ashburn Village? Learn how the Ashburn Village HOA review works, how it pairs with the Loudoun County permit, and how to get approved." speakable />
       <ArticleSchema
         title="Ashburn Village HOA Deck Rules and Approval Guide"
         description="Ashburn Village HOA deck replacement approval, composite upgrade review, Loudoun County permit coordination, structural review points, and local deck builder support."
         path={PATH}
         image="/images/img17.jpeg"
         datePublished="2026-05-26"
-        dateModified="2026-06-04"
+        dateModified="2026-11-18"
       />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -130,9 +131,10 @@ export default function AshburnVillageHoaDeckRulesPage() {
         </div>
       </article>
       <SimpleCTA title="Planning a Deck in Ashburn Village?" buttonText="Get Free Design Consultation" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-04" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-18" />
 
       <RelatedGuides currentPath="/ashburn-village-hoa-deck-rules" />
+      <CountyHubLinks countySlug="loudoun-county" />
 
       <ContactHome />
     </>

@@ -9,6 +9,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import CountyHubLinks from '@/components/CountyHubLinks';
 import CallLink from '@/components/CallLink';
 
 export const metadata = buildMetadata({
@@ -57,14 +58,14 @@ export default function BroadlandsHoaDeckRulesPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-06-04" url={`https://ldndecks.com${PATH}`} name="Broadlands HOA Deck Rules &amp; Approval Guide" description="Building a deck in Broadlands, Ashburn? Learn how the Broadlands HOA architectural review works, how it pairs with the Loudoun County permit, and how to get approved." speakable />
+      <WebPageSchema dateModified="2026-11-18" url={`https://ldndecks.com${PATH}`} name="Broadlands HOA Deck Rules &amp; Approval Guide" description="Building a deck in Broadlands, Ashburn? Learn how the Broadlands HOA architectural review works, how it pairs with the Loudoun County permit, and how to get approved." speakable />
       <ArticleSchema
         title="Broadlands HOA Deck Rules and Approval Guide"
         description="Broadlands HOA deck approval, wooded and sloped lot planning, Loudoun County permit coordination, structural review points, and local deck builder support."
         path={PATH}
         image="/images/img03.jpeg"
         datePublished="2026-05-26"
-        dateModified="2026-06-04"
+        dateModified="2026-11-18"
       />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -130,9 +131,10 @@ export default function BroadlandsHoaDeckRulesPage() {
         </div>
       </article>
       <SimpleCTA title="Planning a Deck in Broadlands?" buttonText="Get Free Design Consultation" link="/get-estimate" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-06-04" />
+      <NamedAuthor context="Northern Virginia" lastUpdated="2026-11-18" />
 
       <RelatedGuides currentPath="/broadlands-hoa-deck-rules" />
+      <CountyHubLinks countySlug="loudoun-county" />
 
       <ContactHome />
     </>
