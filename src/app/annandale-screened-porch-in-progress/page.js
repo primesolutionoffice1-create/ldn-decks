@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CallLink from '@/components/CallLink';
 import WebPageSchema from '@/components/WebPageSchema';
+import CountyHubLinks from '@/components/CountyHubLinks';
 import JsonLd from '@/components/JsonLd';
 import { BUSINESS, ORG_ID } from '@/lib/business';
 import { buildMetadata } from '@/lib/seo';
@@ -47,7 +48,7 @@ export default function AnnandalePorchProgressPage() {
   return (
     <main>
       <JsonLd data={videoSchema} />
-      <WebPageSchema url={`https://ldndecks.com${PATH}`} name={TITLE} description={DESCRIPTION} datePublished="2026-11-09" dateModified="2026-11-09" />
+      <WebPageSchema url={`https://ldndecks.com${PATH}`} name={TITLE} description={DESCRIPTION} datePublished="2026-11-09" dateModified="2026-11-18" />
       <header style={{ background: '#0b202c', color: '#fff' }}>
         <div style={S.section}>
           <p style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem', color: '#f4b58f' }}>Annandale, Virginia · Construction update</p>
@@ -92,6 +93,7 @@ export default function AnnandalePorchProgressPage() {
         </div>
       </section>
 
+      <CountyHubLinks countySlug="fairfax-county" />
       <section style={{ background: '#f5f5f1' }} aria-labelledby="annandale-planning">
         <div style={S.section}>
           <h2 id="annandale-planning" style={S.h2}>Thinking about a screened porch for your home?</h2>

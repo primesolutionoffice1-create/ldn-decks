@@ -8,6 +8,7 @@ const HUBS = {
       { href: '/screened-porch-contractor-loudoun-county', label: 'Screened porches' },
       { href: '/patio-contractor-loudoun-county', label: 'Patios' },
       { href: '/deck-resurfacing-loudoun-county', label: 'Deck resurfacing' },
+      { href: '/deck-repair-loudoun-county', label: 'Deck repair' },
     ],
   },
   'fairfax-county': {

@@ -9,6 +9,7 @@ import ContactHome from '@/components/ContactHome';
 import { buildMetadata } from '@/lib/seo';
 import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
+import CountyHubLinks from '@/components/CountyHubLinks';
 import CallLink from '@/components/CallLink';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
@@ -68,7 +69,7 @@ export default function CascadesDeckBuilderPage() {
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="Cascades" url={PAGE_URL} description={PAGE_DESCRIPTION} />
       <WebPageSchema
-        dateModified="2026-11-03"
+        dateModified="2026-11-18"
         url={PAGE_URL}
         name={PAGE_TITLE}
         description={PAGE_DESCRIPTION}
@@ -189,7 +190,8 @@ export default function CascadesDeckBuilderPage() {
         </div>
       </section>
       <SimpleCTA title="Request a Cascades deck estimate" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="Cascades, VA" lastUpdated="2026-11-03" />
+      <NamedAuthor context="Cascades, VA" lastUpdated="2026-11-18" />
+      <CountyHubLinks countySlug="loudoun-county" />
       <ContactHome
         pageContext={{
           city: "Cascades",
