@@ -15,6 +15,7 @@ export function sanitizeLeadUrl(value, baseUrl) {
 export function getOptionalTrackingConsent() {
   if (typeof window === 'undefined') return 'declined';
 
+  if (typeof window.ldnConsentGranted === 'boolean') return window.ldnConsentGranted ? 'accepted' : 'declined';
   try {
     return window.localStorage?.getItem(CONSENT_KEY) === 'accepted'
       ? 'accepted'

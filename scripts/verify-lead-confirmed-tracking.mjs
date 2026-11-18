@@ -32,6 +32,7 @@ function loadTracking({ gtagCalls = [], sessionStorage = makeSessionStorage() } 
   const source = stripImports(fs.readFileSync(TRACKING_PATH, 'utf8'))
     .replaceAll('export function ', 'function ');
   const vercelEvents = [];
+  const openAIEvents = [];
   const context = {
     BUSINESS: { telephone: '+17035550123' },
     console,
@@ -39,7 +40,12 @@ function loadTracking({ gtagCalls = [], sessionStorage = makeSessionStorage() } 
     recordDedupHit() {},
     getClickIds() { return {}; },
     getUtmParams() { return {}; },
+    getLeadAttributionContext() { return {}; },
+    hasAnalyticsConsent() { return true; },
+    safePagePath(value) { return value || ''; },
+    safeCampaign() { return 'unknown'; },
     async trackRedditConfirmedLead() {},
+    async trackOpenAIConfirmedLead(event) { openAIEvents.push(event); },
     trackVercelEvent(name, properties) { vercelEvents.push({ name, properties }); },
     window: {
       dataLayer: [],
@@ -52,6 +58,7 @@ function loadTracking({ gtagCalls = [], sessionStorage = makeSessionStorage() } 
       setTimeout(fn) { fn(); },
     },
     __vercelEvents: vercelEvents,
+    __openAIEvents: openAIEvents,
   };
 
   vm.runInNewContext(
@@ -70,13 +77,15 @@ class TestFormData {
   get(key) { return this.values.get(key) || ''; }
 }
 
-function loadLeadSubmit({ formLocation, googleAdsCalls = [], sessionStorage = makeSessionStorage() } = {}) {
+function loadLeadSubmit({ formLocation, googleAdsCalls = [], sessionStorage = makeSessionStorage(), verificationOk = true, deliveryResult = null } = {}) {
   const source = stripImports(fs.readFileSync(LEAD_SUBMIT_PATH, 'utf8'))
     .replaceAll('export function ', 'function ');
   const confirmationClientSource = fs.readFileSync(LEAD_CONFIRMATION_CLIENT_PATH, 'utf8')
     .replaceAll('export async function ', 'async function ')
     .replaceAll('export function ', 'function ');
   const routerDestinations = [];
+  const inlineEvents = [];
+  const deliveryCalls = [];
   const context = {
     CLICK_ID_KEYS: [],
     UTM_KEYS: [],
@@ -86,6 +95,10 @@ function loadLeadSubmit({ formLocation, googleAdsCalls = [], sessionStorage = ma
     getClickIds() { return {}; },
     getFbp() { return ''; },
     getUtmParams() { return {}; },
+    getLeadAttributionContext() { return {}; },
+    hasAnalyticsConsent() { return true; },
+    safePagePath(value) { return value || ''; },
+    safeCampaign() { return 'unknown'; },
     getOptionalTrackingConsent() { return 'declined'; },
     sanitizeLeadUrl(value) {
       if (!value) return '';
@@ -93,8 +106,9 @@ function loadLeadSubmit({ formLocation, googleAdsCalls = [], sessionStorage = ma
       return `${parsed.origin}${parsed.pathname}`;
     },
     markLeadConfirmationPending() {},
-    async sendContactEmail() {
-      return { success: true, confirmationToken: 'proof-token' };
+    async sendContactEmail(data) {
+      deliveryCalls.push(data);
+      return deliveryResult || { success: true, confirmationToken: 'proof-token' };
     },
     trackFormSubmit({ eventId, formType }) {
       return {
@@ -102,6 +116,8 @@ function loadLeadSubmit({ formLocation, googleAdsCalls = [], sessionStorage = ma
         attributionPayload: { form_type: formType, form_location: formLocation },
       };
     },
+    trackLeadConfirmed(event) { inlineEvents.push(event); },
+    async fetch() { return { ok: true, async json() { return { ok: verificationOk }; } }; },
     trackGoogleAdsLeadOnConfirmedSubmit(payload) { googleAdsCalls.push(payload); },
     useRef(initialValue) { return { current: initialValue }; },
     useRouter() { return { push(destination) { routerDestinations.push(destination); } }; },
@@ -110,6 +126,8 @@ function loadLeadSubmit({ formLocation, googleAdsCalls = [], sessionStorage = ma
       sessionStorage,
     },
     __routerDestinations: routerDestinations,
+    __inlineEvents: inlineEvents,
+    __deliveryCalls: deliveryCalls,
   };
 
   vm.runInNewContext(
@@ -168,6 +186,7 @@ async function verifyRouteDefersUntilConfirmation() {
     (event) => event.event === 'form_submit'
   );
   assert.equal(preConfirmationLeads.length, 0);
+  assert.equal(tracking.__openAIEvents.length, 0, "form_submit cannot dispatch an OpenAI conversion");
   assert.equal(formSubmits.length, 1);
   assert.equal(formSubmits[0].event_id, 'event-123');
   assert.equal(formSubmits[0].transaction_id, 'event-123');
@@ -178,6 +197,8 @@ async function verifyRouteDefersUntilConfirmation() {
 
   const confirmed = tracking.window.dataLayer.filter((event) => event.event === 'lead_confirmed');
   assert.equal(confirmed.length, 1);
+  assert.equal(tracking.__openAIEvents.length, 1, "confirmed lead reaches OpenAI adapter once");
+  assert.equal(tracking.__openAIEvents[0].eventId, "event-123");
   assert.equal(confirmed[0].event_id, 'event-123');
   assert.equal(confirmed[0].transaction_id, 'event-123');
   assert.equal('value' in confirmed[0], false, 'lead must not carry an artificial $1 value');
@@ -202,7 +223,26 @@ async function verifyStorageFailureKeepsSuccessInline() {
   const result = await submit(form);
 
   assert.equal(result.success, true, 'operational delivery must still succeed');
-  assert.equal(result.confirmationReady, false, 'conversion confirmation must fail closed');
+  assert.equal(result.confirmationReady, true, 'valid server proof must confirm inline when storage is blocked');
+  assert.equal(context.__inlineEvents.length, 1);
+  assert.equal(context.__inlineEvents[0].eventId, 'event-123');
+  assert.equal(context.__inlineEvents[0].confirmationPath, 'inline');
+  await submit(form);
+  assert.equal(context.__deliveryCalls.length, 1, 'repeat call after success must not submit another lead');
+  const rejected = loadLeadSubmit({ sessionStorage: unavailableStorage, verificationOk: false });
+  const denied = await rejected.context.__leadSubmitExports.useLeadSubmit()(rejected.form);
+  assert.equal(denied.success, true);
+  assert.equal(denied.confirmationReady, false);
+  assert.equal(rejected.context.__inlineEvents.length, 0, 'invalid inline proof cannot dispatch');
+  for (const deliveryResult of [{ success: false }, { success: true, skipped: true }]) {
+    const failed = loadLeadSubmit({ sessionStorage: unavailableStorage, deliveryResult });
+    await failed.context.__leadSubmitExports.useLeadSubmit()(failed.form);
+    assert.equal(failed.context.__inlineEvents.length, 0, 'failed or honeypot delivery cannot dispatch');
+  }
+  const concurrent = loadLeadSubmit();
+  const send = concurrent.context.__leadSubmitExports.useLeadSubmit();
+  await Promise.all([send(concurrent.form), send(concurrent.form)]);
+  assert.equal(concurrent.context.__deliveryCalls.length, 1, 'concurrent same-instance submits must send once');
   assert.deepEqual(context.__routerDestinations, [], 'storage failure must not navigate to a confirmation page');
 }
 
