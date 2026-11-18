@@ -223,7 +223,8 @@ async function verifyStorageFailureKeepsSuccessInline() {
   const result = await submit(form);
 
   assert.equal(result.success, true, 'operational delivery must still succeed');
-  assert.equal(result.confirmationReady, true, 'valid server proof must confirm inline when storage is blocked');
+  assert.equal(result.confirmationReady, false, 'inline confirmation must retain the form success UI instead of claiming navigation');
+  assert.equal(result.measurementConfirmed, true, 'valid proof must still dispatch measurement inline');
   assert.equal(context.__inlineEvents.length, 1);
   assert.equal(context.__inlineEvents[0].eventId, 'event-123');
   assert.equal(context.__inlineEvents[0].confirmationPath, 'inline');

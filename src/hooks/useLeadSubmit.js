@@ -167,7 +167,7 @@ export function useLeadSubmit({ formType = 'quote', pageContext } = {}) {
           // Delivery succeeded, but browser storage is unavailable. Keep the
           // user on the form for its inline success state rather than leaking
           // proof in the URL or showing an unverified confirmation page.
-          return { success: true, eventId, confirmationReady: inlineConfirmed, confirmationPath: 'inline' };
+          return { success: true, eventId, confirmationReady: false, measurementConfirmed: inlineConfirmed, confirmationPath: 'inline' };
         } else {
           // Fail conversion tracking closed if token signing is misconfigured.
           // Do not navigate to /thank-you without server-confirmed proof because
