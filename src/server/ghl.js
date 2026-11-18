@@ -187,7 +187,9 @@ export async function sendGhlLead(formData) {
       if (v) attribution[k] = String(v);
     });
 
-    const sourceTag = SOURCE_TAGS[leadSource]
+    const channel = formData.get('attribution_channel');
+    const chatgptTag = channel === 'chatgpt_paid' ? 'source-chatgpt-paid' : channel === 'chatgpt_organic' ? 'source-chatgpt-organic' : null;
+    const sourceTag = chatgptTag || SOURCE_TAGS[leadSource]
       || inferSourceTag(attribution.utm_source, attribution.gclid, attribution.fbclid, attribution.msclkid, attribution.utm_medium);
     const projectTag = PROJECT_TAGS[projectType] || null;
 
@@ -221,6 +223,10 @@ export async function sendGhlLead(formData) {
         timeline,
         hoa,
         lead_source: leadSource,
+        attribution_channel: channel || 'direct_or_unknown',
+        attribution_basis: formData.get('attribution_basis'),
+        first_landing_path: formData.get('first_landing_path'),
+        submit_page_path: formData.get('submit_page_path'),
         message,
         event_id: eventId,
         source_url: sourceUrl,

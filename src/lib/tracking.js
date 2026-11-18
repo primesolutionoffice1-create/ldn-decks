@@ -2,12 +2,15 @@
 // GTM dataLayer helpers for ldndecks.com - SSR safe
 
 import { recordDedupHit } from '@/lib/attribution-debug';
-import { getClickIds, getUtmParams } from '@/lib/clickIds';
+import { getClickIds, getUtmParams, hasAnalyticsConsent, claimChatGPTArrival, getLeadAttributionContext } from '@/lib/clickIds';
 import { BUSINESS } from '@/lib/business';
 import { trackRedditConfirmedLead } from '@/lib/redditTracking';
+import { safeCampaign, safePagePath } from '@/lib/leadAttribution';
+import { trackOpenAIConfirmedLead, isOpenAIMeasurementAllowed } from '@/lib/openaiTracking';
 import { track as trackVercelEvent } from '@vercel/analytics';
 
 const firedLeadIds = new Set();
+const pendingFunnelContexts = new Map();
 
 function ensureTagLayer() {
   if (typeof window === 'undefined') return;
@@ -254,6 +257,7 @@ export function trackFormSubmit({
   utmParams = {},
   eventId,
   pageContext,
+  funnelContext = getLeadAttributionContext(),
 } = {}) {
   if (typeof window === 'undefined') return;
   const leadEventId = eventId || `lead_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
@@ -287,7 +291,8 @@ export function trackFormSubmit({
     utm_content: utmParams.utm_content || null,
     utm_term: utmParams.utm_term || null,
   };
-  storeLeadAttributionPayload(leadEventId, attributionPayload);
+  pendingFunnelContexts.set(leadEventId, funnelContext);
+  storeLeadAttributionPayload(leadEventId, { ...attributionPayload, funnel_context: funnelContext });
 
   push({
     event: 'form_submit',
@@ -417,7 +422,7 @@ export function trackCtaClick({ ctaLocation, ctaLabel, href, pageContext } = {})
  * that this was a real submitted lead, so local pending state is consumed
  * when present but must not block a verified conversion.
  */
-export function trackLeadConfirmed({ eventId } = {}) {
+export function trackLeadConfirmed({ eventId, confirmationPath = 'thank_you' } = {}) {
   if (typeof window === 'undefined') return;
   if (!eventId) return;
 
@@ -458,10 +463,30 @@ export function trackLeadConfirmed({ eventId } = {}) {
     page_path: window.location.pathname,
     page: window.location.pathname,
   });
-  trackVercelEvent('lead_confirmed', {
-    path: window.location.pathname,
-  });
+  const funnel = pendingFunnelContexts.get(eventId) || attributionPayload.funnel_context || {};
+  pendingFunnelContexts.delete(eventId);
+  if (hasAnalyticsConsent()) {
+    trackVercelEvent('lead_confirmed', {
+      path: safePagePath(window.location.pathname),
+      channel: ['chatgpt_paid','chatgpt_organic','other_tagged','direct_or_unknown'].includes(funnel.attribution_channel) ? funnel.attribution_channel : 'direct_or_unknown',
+      attribution_basis: ['utm_session','persisted_last_non_direct','legacy_cookie','external_referral'].includes(funnel.attribution_basis) ? funnel.attribution_basis : 'unknown',
+      campaign: safeCampaign(funnel.campaign),
+      first_landing_path: safePagePath(funnel.first_landing_path),
+      submit_page_path: safePagePath(funnel.submit_page_path),
+      arrival_observed: funnel.arrival_observed === true,
+      arrival_campaign: safeCampaign(funnel.arrival_campaign),
+      arrival_channel: ['chatgpt_paid','chatgpt_organic'].includes(funnel.arrival_channel) ? funnel.arrival_channel : 'unknown',
+      confirmation_path: confirmationPath === 'inline' ? 'inline' : 'thank_you',
+    });
+  }
   trackMetaLead({ eventId });
   trackPinterestLead({ eventId });
   void trackRedditConfirmedLead({ eventId }).catch(() => {});
+  void trackOpenAIConfirmedLead({ eventId }).catch(() => {});
+}
+
+export function trackChatGPTArrival() {
+  if (!hasAnalyticsConsent() || !isOpenAIMeasurementAllowed()) return;
+  const properties = claimChatGPTArrival();
+  if (properties) trackVercelEvent('chatgpt_arrival', properties);
 }

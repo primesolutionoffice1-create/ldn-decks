@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '100px 20px', lineHeight: '1.6', color: '#333' }}>
       <h1>Privacy Policy</h1>
-      <p>Last Updated: October 2026</p>
+      <p>Last Updated: November 2026</p>
       
       <section style={{ marginTop: '40px' }}>
         <h2>1. Information We Collect</h2>
@@ -38,6 +38,33 @@ export default function PrivacyPolicy() {
         through this integration, and automatic email and phone matching is disabled.
       </p>
       <section style={{ marginTop: '30px' }}>
+        <h3>OpenAI advertising measurement</h3>
+        <p>
+          Where OpenAI advertising measurement is enabled, we load the OpenAI Pixel only after
+          you accept optional tracking. It uses advertising click references and browser identifiers
+          to help connect confirmed estimate requests to ads in ChatGPT. Its first-party cookies
+          include __oppref (30 days after it is written) and __obref (365 days after creation).
+          Browser restrictions or clearing cookies may shorten those periods.
+        </p>
+        <p>
+          OpenAI&apos;s automatic advanced matching may detect supported contact information
+          entered in recognizable forms or available elsewhere on the site. It normalizes and
+          hashes supported identifiers, such as email addresses and phone numbers, in your
+          browser before including them with conversion events. Hashing is not anonymization.
+          We ask for your privacy choice before loading this measurement tool, including its
+          automatic matching features.
+        </p>
+        <p>
+          Our conversion event identifies a confirmed request, not its project description or
+          estimated value. The Pixel may also send browser/device information and the site origin.
+          We request exclusion of these events from future user-level personalization using
+          OpenAI&apos;s event opt-out setting. Declining optional tracking prevents our OpenAI
+          integration from loading. You can reset your choice by clearing this site&apos;s browser
+          data and choosing again in the privacy banner. Learn more in the{' '}
+          <a href="https://help.openai.com/en/articles/20001409-conversion-measurement" target="_blank" rel="noopener noreferrer">OpenAI conversion measurement explanation</a>.
+        </p>
+      </section>
+      <section style={{ marginTop: '30px' }}>
         <h2>3. Google DoubleClick DART Cookie</h2>
         <p>
           Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to our site and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/ads</a>
@@ -53,6 +80,7 @@ export default function PrivacyPolicy() {
           <li>Google: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/ads</a></li>
           <li>Reddit: <a href="https://www.reddit.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">Reddit Privacy Policy</a></li>
           <li>Pinterest: <a href="https://policy.pinterest.com/en/privacy-policy" target="_blank" rel="noopener noreferrer">https://policy.pinterest.com/en/privacy-policy</a></li>
+          <li>OpenAI: <a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener noreferrer">OpenAI Privacy Policy</a></li>
         </ul>
       </section>
 

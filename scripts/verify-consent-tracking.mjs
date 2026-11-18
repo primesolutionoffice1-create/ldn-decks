@@ -41,6 +41,8 @@ class TestFormData {
   }
   append(key, value) { this.values.set(key, value); }
   get(key) { return this.values.get(key) || ''; }
+  set(key, value) { this.values.set(key, value); }
+  entries() { return this.values.entries(); }
 }
 
 async function captureLeadSubmission(consentValue, receiptStored = true) {
@@ -54,6 +56,7 @@ async function captureLeadSubmission(consentValue, receiptStored = true) {
     },
   };
   const context = {
+    getLeadAttributionContext() { return {}; },
     CLICK_ID_KEYS: [], UTM_KEYS: [], FormData: TestFormData,
     crypto: { randomUUID() { return 'event-consent'; } },
     document: { referrer: 'https://search.example/results?q=private#fragment' },
@@ -90,11 +93,8 @@ async function captureLeadSubmission(consentValue, receiptStored = true) {
   return { submittedFormData, confirmationOrder, result };
 }
 
-assert.match(
-  layout,
-  /if\(c!==['"]accepted['"]\)return/,
-  'click and campaign IDs must not be persisted before consent'
-);
+const capture = layout.match(/id="click-id-capture"[\s\S]*?<\/Script>/)[0];
+assert.equal(capture.includes('document.cookie'), false, 'initial capture must never write cookies');
 assert.equal(layout.includes('googletagmanager.com/ns.html'), false, 'GTM noscript bypass must be removed');
 assert.equal(layout.includes('facebook.com/tr?id='), false, 'Meta noscript bypass must be removed');
 assert.equal(layout.includes('ct.pinterest.com/v3/'), false, 'Pinterest noscript bypass must be removed');
@@ -243,11 +243,14 @@ assert.match(
   'the Meta CAPI transport boundary must reject every state except exact accepted consent'
 );
 
+const { normalizeLeadAttribution } = await import('data:text/javascript;base64,' + Buffer.from(fs.readFileSync(new URL('../src/lib/leadAttribution.js', import.meta.url), 'utf8')).toString('base64'));
 const sendEmailSource = stripImports(sendEmail)
   .replaceAll('export async function ', 'async function ');
 const callerMetaEvents = [];
 const sendEmailContext = {
   console,
+  FormData: TestFormData,
+  normalizeLeadAttribution,
   process: { env: { EMAIL_TO: 'office@example.com', EMAIL_FROM: 'office@example.com' } },
   async headers() {
     return {

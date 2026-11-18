@@ -26,7 +26,22 @@ f.window.ldnConsentGranted=false;await f.ctx.lead({eventId:'verified-2'});assert
 f=fixture({blockedStorage:true});a=f.ctx.lead({eventId:'verified-3'});f.scripts[0].onload();await a;await f.ctx.lead({eventId:'verified-3'});assert.equal(f.events().filter(e=>e[1]==='Lead').length,1);
 f=fixture();a=f.ctx.page();f.window.ldnConsentGranted=false;f.scripts[0].onload();await a;assert.equal(f.events().length,0);f.window.ldnConsentGranted=true;await f.ctx.page();assert.equal(f.events().length,2);
 f=fixture();a=f.ctx.lead({eventId:'verified-4'});f.scripts[0].onerror();assert.equal(await a,false);assert.equal(f.events().length,0);
+// Confirm the current receipt-based route; proof is no longer placed in the URL.
 const confirmation=fs.readFileSync('src/components/ThankYouTracking.jsx','utf8');
-assert(confirmation.indexOf('result?.ok') < confirmation.indexOf('window.history.replaceState'));
-assert(confirmation.indexOf('window.history.replaceState') < confirmation.indexOf('trackLeadConfirmed({ eventId })'));
-console.log('PASS: consent, sensitive routes, URL proof guard, load race, route events, deduplication, blocked storage, revocation, SDK failure, verified-proof ordering. No network or real leads generated.');
+const client=fs.readFileSync('src/lib/leadConfirmationClient.js','utf8').replace(/export /g,'');
+const ctx=vm.createContext({});
+vm.runInContext(client+'\nthis.verify=verifyLeadConfirmation;',ctx);
+for (const [httpOk,bodyOk,expected] of [[true,true,true],[false,true,false],[true,false,false]]) {
+  const calls=[];
+  const verified=await ctx.verify('verified-local','local-proof',async(url,options)=>{
+    calls.push({url,options});return {ok:httpOk,json:async()=>({ok:bodyOk})};
+  });
+  assert.equal(verified,expected);
+  assert.equal(calls[0].url,'/api/lead-confirmation/verify');
+  assert.equal(calls[0].options.method,'POST');
+  assert.deepEqual(JSON.parse(calls[0].options.body),{eventId:'verified-local',token:'local-proof'});
+}
+assert.match(confirmation,/consumeLeadConfirmationReceipt\(\)/);
+assert.match(confirmation,/if \(isVerified\) \{\s*trackLeadConfirmed\(\{ eventId: receipt.eventId \}\)/);
+assert(!confirmation.includes('window.location.search'),'confirmation must not take proof from URL');
+console.log('PASS: consent, sensitive routes, URL proof guard, load race, route events, deduplication, blocked storage, revocation, SDK failure, current server-verified receipt contract. No network or real leads generated.');

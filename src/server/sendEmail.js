@@ -6,7 +6,12 @@ import { createLeadConfirmationToken, verifyLeadConfirmationToken } from './lead
 import { sendGhlLead } from './ghl';
 import { sendN8nWebsiteLead } from './n8nLeadForwarder';
 import { sendLeadNotificationEmail } from './emailDelivery';
+import { normalizeLeadAttribution } from '@/lib/leadAttribution';
 import { deriveServerLeadSource, sanitizeLeadUrl } from '@/lib/leadPrivacy';
+
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>\"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', "'": '&#39;' }[c]));
+}
 
 export async function sendContactEmail(formData) {
   try {
@@ -32,6 +37,11 @@ export async function sendContactEmail(formData) {
       // moves on. No conversion enters the analytics pipeline.
       return { success: true, skipped: true };
     }
+
+    const normalized = new FormData();
+    for (const [key, value] of formData.entries()) normalized.append(key, value);
+    formData = normalized;
+    normalizeLeadAttribution(formData);
 
     const name = formData.get('name') || `${formData.get('firstName')} ${formData.get('lastName')}`;
     const email = formData.get('email');
@@ -82,6 +92,8 @@ export async function sendContactEmail(formData) {
     }
     const sourceUrl = deriveServerLeadSource({ requestReferrer, submittedSourceUrl });
     const referrer = sanitizeLeadUrl(submittedReferrer);
+    formData.set('source_url', sourceUrl);
+    formData.set('referrer', referrer);
 
     let fullAddress = '';
     if (address || city || state || zip) {
@@ -91,26 +103,26 @@ export async function sendContactEmail(formData) {
     // Click IDs surfaced for CRM ingestion + manual offline-conversion uploads.
     // Empty when the visitor arrived organically; populated when paid traffic.
     const clickIdRows = [
-      eventId && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>event_id:</strong> ${eventId}</p>`,
-      sourceUrl && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>landing_page:</strong> ${sourceUrl}</p>`,
-      referrer && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>referrer:</strong> ${referrer}</p>`,
-      formName && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>form_name:</strong> ${formName}</p>`,
-      pageType && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_type:</strong> ${pageType}</p>`,
-      pageCity && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_city:</strong> ${pageCity}</p>`,
-      pageCounty && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_county:</strong> ${pageCounty}</p>`,
-      gclid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>gclid:</strong> ${gclid}</p>`,
-      gbraid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>gbraid:</strong> ${gbraid}</p>`,
-      wbraid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>wbraid:</strong> ${wbraid}</p>`,
-      fbclid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>fbclid:</strong> ${fbclid}</p>`,
-      msclkid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>msclkid:</strong> ${msclkid}</p>`,
-      utmSource && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_source:</strong> ${utmSource}</p>`,
-      utmMedium && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_medium:</strong> ${utmMedium}</p>`,
-      utmCampaign && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_campaign:</strong> ${utmCampaign}</p>`,
-      utmContent && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_content:</strong> ${utmContent}</p>`,
-      utmTerm && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_term:</strong> ${utmTerm}</p>`,
+      eventId && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>event_id:</strong> ${escapeHtml(eventId)}</p>`,
+      sourceUrl && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>submit_page:</strong> ${escapeHtml(sourceUrl)}</p>`,
+      referrer && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>referrer:</strong> ${escapeHtml(referrer)}</p>`,
+      formName && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>form_name:</strong> ${escapeHtml(formName)}</p>`,
+      pageType && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_type:</strong> ${escapeHtml(pageType)}</p>`,
+      pageCity && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_city:</strong> ${escapeHtml(pageCity)}</p>`,
+      pageCounty && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>page_county:</strong> ${escapeHtml(pageCounty)}</p>`,
+      gclid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>gclid:</strong> ${escapeHtml(gclid)}</p>`,
+      gbraid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>gbraid:</strong> ${escapeHtml(gbraid)}</p>`,
+      wbraid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>wbraid:</strong> ${escapeHtml(wbraid)}</p>`,
+      fbclid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>fbclid:</strong> ${escapeHtml(fbclid)}</p>`,
+      msclkid && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>msclkid:</strong> ${escapeHtml(msclkid)}</p>`,
+      utmSource && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_source:</strong> ${escapeHtml(utmSource)}</p>`,
+      utmMedium && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_medium:</strong> ${escapeHtml(utmMedium)}</p>`,
+      utmCampaign && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_campaign:</strong> ${escapeHtml(utmCampaign)}</p>`,
+      utmContent && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_content:</strong> ${escapeHtml(utmContent)}</p>`,
+      utmTerm && `<p style="color:#666;font-size:11px;margin:2px 0"><strong>utm_term:</strong> ${escapeHtml(utmTerm)}</p>`,
     ].filter(Boolean).join('');
     const attributionBlock = clickIdRows
-      ? `<hr style="border:none;border-top:1px solid #ddd;margin:16px 0"/><p style="color:#666;font-size:11px;margin:0 0 4px"><strong>Attribution (paid ad click)</strong></p>${clickIdRows}`
+      ? `<hr style="border:none;border-top:1px solid #ddd;margin:16px 0"/><p style="color:#666;font-size:11px;margin:0 0 4px"><strong>Attribution (submitted source metadata)</strong></p>${clickIdRows}`
       : '';
 
     const recipient = process.env.EMAIL_TO || process.env.EMAIL_USER;
@@ -122,18 +134,18 @@ export async function sendContactEmail(formData) {
       subject: `New Lead: ${service} from ${name}`,
       html: `
         <h2>New Website Contact Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email || 'Not provided'}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Service Requested:</strong> ${service}</p>
-        ${timeline ? `<p><strong>Timeline:</strong> ${timeline}</p>` : ''}
-        ${budgetRange ? `<p><strong>Budget Range:</strong> ${budgetRange}</p>` : ''}
-        ${materialInterest ? `<p><strong>Material Interest:</strong> ${materialInterest}</p>` : ''}
-        ${homeownerStatus ? `<p><strong>Homeowner / Decision Maker:</strong> ${homeownerStatus}</p>` : ''}
-        ${hoa ? `<p><strong>HOA / Permit Status:</strong> ${hoa}</p>` : ''}
-        ${fullAddress ? `<p><strong>Address:</strong> ${fullAddress}</p>` : ''}
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email || 'Not provided')}</p>
+        <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
+        <p><strong>Service Requested:</strong> ${escapeHtml(service)}</p>
+        ${timeline ? `<p><strong>Timeline:</strong> ${escapeHtml(timeline)}</p>` : ''}
+        ${budgetRange ? `<p><strong>Budget Range:</strong> ${escapeHtml(budgetRange)}</p>` : ''}
+        ${materialInterest ? `<p><strong>Material Interest:</strong> ${escapeHtml(materialInterest)}</p>` : ''}
+        ${homeownerStatus ? `<p><strong>Homeowner / Decision Maker:</strong> ${escapeHtml(homeownerStatus)}</p>` : ''}
+        ${hoa ? `<p><strong>HOA / Permit Status:</strong> ${escapeHtml(hoa)}</p>` : ''}
+        ${fullAddress ? `<p><strong>Address:</strong> ${escapeHtml(fullAddress)}</p>` : ''}
         <h3>Message:</h3>
-        <p>${message}</p>
+        <p>${escapeHtml(message)}</p>
         ${attributionBlock}
       `,
     };
@@ -184,6 +196,7 @@ export async function sendContactEmail(formData) {
     return {
       success: true,
       confirmationToken: createLeadConfirmationToken(eventId),
+      deliveryAcknowledgments: { email: Boolean(emailResult.ok), ghl: Boolean(ghlResult.ok), n8n: Boolean(n8nResult.ok) },
     };
   } catch (error) {
     console.error('Email error:', error?.message || error);

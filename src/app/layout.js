@@ -8,6 +8,7 @@ import StructuredData from "../components/StructuredData";
 import WebVitalsReporter from "../components/WebVitalsReporter";
 import MetaPixelRouteTracker from "@/components/MetaPixelRouteTracker";
 import RedditPixelTracker from "@/components/RedditPixelTracker";
+import OpenAIMeasurement from "@/components/OpenAIMeasurement";
 import ConsentBanner from "../components/ConsentBanner";
 
 const outfit = Outfit({
@@ -90,7 +91,7 @@ export default function RootLayout({ children }) {
             visitor accepts optional tracking. Only then are first-party
             attribution cookies written for offline conversion matching. */}
         <Script id="click-id-capture" strategy="beforeInteractive">
-          {`(function(){try{var u=new URL(window.location.href);var keys=['gclid','gbraid','wbraid','fbclid','msclkid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];var pending=window.__ldnPendingAttribution||{};keys.forEach(function(k){var v=u.searchParams.get(k);if(v){pending[k]=v;}});window.__ldnPendingAttribution=pending;var c=localStorage.getItem('ldn_cookie_consent');if(c!=='accepted')return;var ttl=60*60*24*90;keys.forEach(function(k){var v=pending[k];if(v){document.cookie=k+'='+encodeURIComponent(v)+'; max-age='+ttl+'; path=/; SameSite=Lax; Secure';}});}catch(e){}})();`}
+          {`(function(){try{var u=new URL(window.location.href);var keys=['gclid','gbraid','wbraid','fbclid','msclkid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];window.__ldnFirstLanding=u.origin+u.pathname;var pending={};keys.forEach(function(k){var v=u.searchParams.get(k);if(v){pending[k]=v;}});window.__ldnPendingAttribution=pending;}catch(e){}})();`}
         </Script>
 
         {/* Consent Mode defaults — MUST run before the GTM container script
@@ -180,6 +181,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <WebVitalsReporter />
                     <MetaPixelRouteTracker />
                     <RedditPixelTracker />
+                    <OpenAIMeasurement />
                     <ConsentBanner />
         </ContactProvider>
         <Script
