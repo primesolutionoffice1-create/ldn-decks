@@ -1,8 +1,10 @@
 import { notFound } from 'next/navigation';
 import LocalServicePage from '@/components/LocalServicePage';
+import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import { getCityBySlug, getLocalServiceParams, servicePageTypes, shouldIndexLocalServicePage } from '@/data/localServicePages';
 import { buildMetadata } from '@/lib/seo';
 import CountyHubLinks from '@/components/CountyHubLinks';
+import { OPEN_DECK_RANGE, QUOTE_SOURCE } from '@/lib/quotedPrices';
 
 const serviceKey = 'composite-decks';
 
@@ -30,6 +32,15 @@ export default async function Page({ params }) {
   return (
     <>
       <LocalServicePage city={cityData} serviceKey={serviceKey} />
+      <GeoAnswerBlock
+        question={`What does a new deck cost in ${cityData.city}, VA?`}
+        answer={`${OPEN_DECK_RANGE} ${QUOTE_SOURCE}`}
+        facts={['Stairs and landings, premium composite and metal railings push toward the top of that range.']}
+        links={[
+          { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost in Northern Virginia' },
+          { href: '/get-estimate', label: 'Request a written estimate' },
+        ]}
+      />
       <CountyHubLinks countySlug={cityData.countySlug} />
     </>
   );

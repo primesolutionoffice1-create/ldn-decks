@@ -12,6 +12,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import CountyHubLinks from '@/components/CountyHubLinks';
 import CallLink from '@/components/CallLink';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import { OPEN_DECK_RANGE, QUOTE_SOURCE } from '@/lib/quotedPrices';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 
 const PATH = "/deck-builder-one-loudoun-va";
@@ -69,7 +70,7 @@ export default function OneLoudounDeckBuilderPage() {
       <JsonLd data={faqSchema} />
       <LocalBusinessSchema city="One Loudoun" url={PAGE_URL} description={PAGE_DESCRIPTION} />
       <WebPageSchema
-        dateModified="2026-11-18"
+        dateModified="2026-11-19"
         url={PAGE_URL}
         name={PAGE_TITLE}
         description={PAGE_DESCRIPTION}
@@ -98,6 +99,15 @@ export default function OneLoudounDeckBuilderPage() {
         links={[
           { href: '/get-estimate', label: "Request a One Loudoun estimate" },
           { href: "/showcase/new-composite-deck-ashburn", label: "BUILD NEW COMPOSITE DECK" },
+        ]}
+      />
+      <GeoAnswerBlock
+        question="What does a new deck cost in One Loudoun, VA?"
+        answer={`${OPEN_DECK_RANGE} ${QUOTE_SOURCE}`}
+        facts={['Stairs and landings, premium composite and metal railings push toward the top of that range.']}
+        links={[
+          { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost in Northern Virginia' },
+          { href: '/get-estimate', label: 'Request a written estimate' },
         ]}
       />
       <article style={{ padding: '4rem 0' }}>
@@ -191,7 +201,7 @@ export default function OneLoudounDeckBuilderPage() {
         </div>
       </section>
       <SimpleCTA title="Request a One Loudoun deck estimate" buttonText="Get Free Estimate" link="/get-estimate" />
-      <NamedAuthor context="One Loudoun, VA" lastUpdated="2026-11-18" />
+      <NamedAuthor context="One Loudoun, VA" lastUpdated="2026-11-19" />
       <CountyHubLinks countySlug="loudoun-county" />
       <ContactHome
         pageContext={{

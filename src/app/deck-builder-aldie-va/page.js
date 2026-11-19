@@ -15,6 +15,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
+import { OPEN_DECK_RANGE, QUOTE_SOURCE } from '@/lib/quotedPrices';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
 import { buildMetadata } from '@/lib/seo';
 import CountyHubLinks from '@/components/CountyHubLinks';
@@ -109,7 +110,7 @@ export default function DeckBuilderAldiePage() {
     <main>
       <LocalBusinessSchema city="Aldie" url={URL} />
       <WebPageSchema
-        dateModified="2026-11-01"
+        dateModified="2026-11-19"
         url={URL}
         name="Deck Builder in Aldie, VA | Stone Ridge & Willowsford Decks"
         description="Aldie, VA deck builder for Stone Ridge, Willowsford, Route 50 communities, composite decks, screened porches, HOA packets, and Loudoun County permits."
@@ -158,14 +159,19 @@ export default function DeckBuilderAldiePage() {
       <GeoAnswerBlock
         question="What should Aldie homeowners know before planning a deck?"
         answer="Aldie homeowners should start with HOA packet planning, Loudoun County permit requirements, and a clear decision between a deck addition, composite replacement, screened porch, or deck and patio combination. Stone Ridge, Willowsford, and Route 50 communities often need material and railing choices documented early."
-        facts={[
-          'Primary buyer intent: premium composite decks, planned-community HOA support, and outdoor living upgrades.',
-          'Best conversion path: written estimate with material, permit, HOA packet, and optional upgrade details.',
-        ]}
         links={[
           { href: '/get-estimate', label: 'Request an Aldie estimate' },
           { href: '/deck-resurfacing-vs-replacement', label: 'Resurface vs replace' },
           { href: '/screened-porch-builder-northern-virginia', label: 'Screened porch options' },
+        ]}
+      />
+      <GeoAnswerBlock
+        question="What does a new deck cost in Aldie, VA?"
+        answer={`${OPEN_DECK_RANGE} ${QUOTE_SOURCE}`}
+        facts={['Stairs and landings, premium composite and metal railings push toward the top of that range.']}
+        links={[
+          { href: '/composite-deck-cost-northern-virginia', label: 'Composite deck cost in Northern Virginia' },
+          { href: '/get-estimate', label: 'Request a written estimate' },
         ]}
       />
       <ServiceContentExpansion sections={expansionSections} />
@@ -204,7 +210,7 @@ export default function DeckBuilderAldiePage() {
       </section>
       <ServiceAreasGrid />
       <RelatedGuides currentPath={PATH} />
-      <NamedAuthor context="Aldie, Stone Ridge, Willowsford, and Loudoun County deck planning" lastUpdated="2026-11-01" />
+      <NamedAuthor context="Aldie, Stone Ridge, Willowsford, and Loudoun County deck planning" lastUpdated="2026-11-19" />
       <CountyHubLinks countySlug="loudoun-county" />
       <ContactHome />
     </main>
