@@ -11,8 +11,8 @@ import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/deck-design-ideas-2026',
-  title: 'Deck Design Ideas 2026 | 15 Photos, Costs & Trends',
-  description: 'See 15 deck design ideas for 2026 with photos, price ranges, colors, and NoVA contractor tips for composite, porch, pergola, and outdoor kitchen builds.',
+  title: 'Deck Design Ideas 2026 | 15 Photos & Layout Trends',
+  description: 'See 15 deck design ideas for 2026 with photos: multi-level, deck + screened porch, outdoor kitchen, pergola and cable railing layouts from a NoVA builder.',
   image: '/social/deck-design-ideas-2026-social.png',
 });
 
@@ -71,7 +71,7 @@ export default function DeckDesignIdeasPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-11-10" url="https://ldndecks.com/deck-design-ideas-2026" name="Deck Design Ideas 2026 | 15 Photos, Costs &amp; Trends" description="See 15 deck design ideas for 2026 with photos, price ranges, colors, and NoVA contractor tips for composite, porch, pergola, and outdoor kitchen builds." speakable />
+      <WebPageSchema dateModified="2026-11-10" url="https://ldndecks.com/deck-design-ideas-2026" name="Deck Design Ideas 2026 | 15 Photos &amp; Layout Trends" description="See 15 deck design ideas for 2026 with photos: multi-level, deck + screened porch, outdoor kitchen, pergola and cable railing layouts from a NoVA builder." speakable />
       <JsonLd data={gallerySchema} />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
