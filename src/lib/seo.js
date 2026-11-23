@@ -362,6 +362,9 @@ export function buildMetadata({
     imageWidth = undefined,
     imageHeight = undefined,
     noIndex = false,
+    // Optional: point the canonical (and hreflang) at a parent page when this
+    // route is a near-duplicate kept live for users (e.g. templated county hubs).
+    canonicalPath = null,
 }) {
     // Resolve image: explicit > path-based default > og-default.webp
     const resolvedImage = image || defaultOgImageForPath(path);
@@ -382,6 +385,7 @@ export function buildMetadata({
     }
 
     const url = `${SITE_URL}${path}`;
+    const canonicalUrl = canonicalPath ? `${SITE_URL}${canonicalPath}` : url;
     const seoTitle = trimToSeoLimit(removeDuplicateBrandSuffix(title), 60);
     const seoDescription = trimToSeoLimit(description, 155);
 
@@ -405,15 +409,15 @@ export function buildMetadata({
         // metadataBase is declared once in the root layout (app/layout.js)
         // and inherited by every route — no need to repeat it per page.
         alternates: {
-                canonical: url,
+                canonical: canonicalUrl,
                 // English-only single-region site. Declaring en-US AND x-default
                 // tells international Google indexes to serve this URL for any
                 // locale not explicitly mapped, instead of guessing language
                 // from origin or query parameters. Required for x-default per
                 // Google's hreflang guidelines even when only one language exists.
                 languages: {
-                        'en-US': url,
-                        'x-default': url,
+                        'en-US': canonicalUrl,
+                        'x-default': canonicalUrl,
                 },
         },
         robots: {
