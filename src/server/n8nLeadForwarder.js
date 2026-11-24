@@ -1,6 +1,6 @@
-'use server';
+import 'server-only';
 
-import crypto from 'node:crypto';
+import { forwardDurableIntake } from './n8nIntakeTransport.mjs';
 
 const CLICK_ID_FIELDS = ['gclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid'];
 const UTM_FIELDS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
@@ -16,16 +16,27 @@ function normalizeName(formData) {
   return [value(formData, 'firstName'), value(formData, 'lastName')].filter(Boolean).join(' ').trim();
 }
 
-function hashIp(ipAddress) {
-  if (!ipAddress) return '';
-  return crypto.createHash('sha256').update(String(ipAddress)).digest('hex');
+// Source URLs retain public route identity only; query/hash never enter DB.
+function canonicalPageUrl(raw) {
+  try {
+    const url = new URL(String(raw || ''));
+    if (url.protocol !== 'https:' || !['ldndecks.com', 'www.ldndecks.com'].includes(url.hostname)
+      || url.username || url.password || url.port || url.pathname.length > 500) return '';
+    return `https://ldndecks.com${url.pathname}`;
+  } catch { return ''; }
 }
 
 function buildN8nWebsiteLeadPayload(formData, context = {}) {
-  const eventId = value(formData, 'event_id') || `web-${Date.now()}`;
+  const eventId = value(formData, 'event_id').toLowerCase();
+  const recordedConsent = value(formData, 'optional_tracking_consent');
+  const consent = ['accepted', 'declined'].includes(recordedConsent) ? recordedConsent : 'unknown';
+  const pageUrl = canonicalPageUrl(value(formData, 'source_url'));
   const service = value(formData, 'service') || value(formData, 'projectType') || 'Deck project';
   const message = value(formData, 'message');
   const payload = {
+    company: 'LDN',
+    source: 'ldndecks.com',
+    optional_tracking_consent: consent,
     lead_id: `WEB-${eventId}`,
     event_id: eventId,
     lead_name: normalizeName(formData),
@@ -48,54 +59,42 @@ function buildN8nWebsiteLeadPayload(formData, context = {}) {
     attribution_basis: value(formData, 'attribution_basis'),
     first_landing_path: value(formData, 'first_landing_path'),
     submit_page_path: value(formData, 'submit_page_path'),
-    landing_page: value(formData, 'source_url') || process.env.NEXT_PUBLIC_SITE_URL || 'https://ldndecks.com',
-    page_url: value(formData, 'source_url') || process.env.NEXT_PUBLIC_SITE_URL || 'https://ldndecks.com',
+    landing_page: pageUrl,
+    page_url: pageUrl,
     page_type: value(formData, 'page_type'),
     page_city: value(formData, 'page_city'),
     page_county: value(formData, 'page_county'),
     form_name: value(formData, 'form_name') || value(formData, 'formLocation') || 'ldndecks.com lead form',
-    keyword: value(formData, 'utm_term'),
-    referrer: value(formData, 'referrer'),
-    ip_hash: hashIp(context.ipAddress),
-    user_agent: context.userAgent || '',
-    submitted_at: new Date().toISOString(),
+    keyword: consent === 'accepted' ? value(formData, 'utm_term') : '',
+    referrer: consent === 'accepted' ? canonicalPageUrl(value(formData, 'referrer')) : '',
+    // Server received_at/IP/user-agent belong in receiver audit, not semantic payload.
   };
 
-  for (const key of [...CLICK_ID_FIELDS, ...UTM_FIELDS]) {
-    payload[key] = value(formData, key);
+  for (const key of CLICK_ID_FIELDS) {
+    const raw = formData.get(key);
+    const id = raw == null ? '' : String(raw);
+    if (consent === 'accepted' && id !== '' && !/^[A-Za-z0-9_-]{1,256}$/.test(id)) {
+      throw new TypeError('INVALID_CLICK_IDENTIFIER');
+    }
+    payload[key] = consent === 'accepted' ? id : '';
+  }
+  for (const key of UTM_FIELDS) {
+    payload[key] = consent === 'accepted' ? value(formData, key).replace(/[\u0000-\u001f\u007f]/g, '').slice(0, 200) : '';
   }
 
   return payload;
 }
 
 export async function sendN8nWebsiteLead(formData, context = {}) {
-  const webhookUrl = process.env.N8N_WEBSITE_INTAKE_WEBHOOK_URL;
-  if (!webhookUrl) return { ok: false, skipped: true, reason: 'missing_webhook_url' };
-
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 3000);
-
-  try {
-    const headers = { 'Content-Type': 'application/json' };
-    if (process.env.N8N_WEBSITE_INTAKE_SECRET) {
-      headers['x-ldn-n8n-secret'] = process.env.N8N_WEBSITE_INTAKE_SECRET;
-    }
-
-    const response = await fetch(webhookUrl, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify(buildN8nWebsiteLeadPayload(formData, context)),
-      signal: controller.signal,
-    });
-
-    if (!response.ok) {
-      return { ok: false, status: response.status };
-    }
-
-    return { ok: true, status: response.status };
-  } catch (error) {
-    return { ok: false, error: error?.name === 'AbortError' ? 'timeout' : error?.message || String(error) };
-  } finally {
-    clearTimeout(timeout);
-  }
+  const enabled = process.env.N8N_WEBSITE_INTAKE_FORWARD_ENABLED === 'true';
+  if (!enabled) return { ok: false, skipped: true, state: 'disabled', reason: 'forwarding_disabled' };
+  let payload;
+  try { payload = buildN8nWebsiteLeadPayload(formData, context); }
+  catch { return { ok: false, skipped: true, state: 'held', reason: 'invalid_click_identifier' }; }
+  return forwardDurableIntake(payload, {
+    enabled: process.env.N8N_WEBSITE_INTAKE_FORWARD_ENABLED === 'true',
+    webhookUrl: process.env.N8N_WEBSITE_INTAKE_WEBHOOK_URL,
+    secret: process.env.N8N_WEBSITE_INTAKE_SECRET,
+    fetchImpl: fetch,
+  });
 }
