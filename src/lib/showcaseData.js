@@ -1,3 +1,23 @@
+export function showcaseImageAlt(project) {
+  const city = String(project.location || '').split(',')[0].trim() || 'Northern Virginia';
+  const place = /,\s*DC\b/i.test(project.location || '') ? `${city}, DC` : `${city}, Virginia`;
+  const title = String(project.title || '').toLowerCase();
+  let subject = 'Deck project';
+  if (title.includes('rooftop')) subject = 'Rooftop deck';
+  else if (title.includes('composite')) subject = 'New composite deck';
+  else if (title.includes('wood fence')) subject = 'Custom wood fence';
+  else if (title.includes('fence') && title.includes('gate')) subject = 'Custom fence and gate';
+  else if (title.includes('metal fence') || title.includes('fence')) subject = 'Metal fence installation';
+  else if (title.includes('resurfacing')) subject = 'Deck and balcony resurfacing';
+  else if (title.includes('balcony reconstruction')) subject = 'Balcony reconstruction';
+  else if (title.includes('multi') && title.includes('wood')) subject = 'Wood multi-level deck';
+  else if (title.includes('multi')) subject = 'Multi-level deck and balcony';
+  else if (title.includes('installing')) subject = 'Custom deck installation';
+  else if (title.includes('construction')) subject = 'Deck construction';
+  else if (title.includes('building')) subject = 'New deck build';
+  return `${subject} in ${place}`;
+}
+
 export const showcaseProjects = [
   {
     id: 1,
