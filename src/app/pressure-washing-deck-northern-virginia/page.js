@@ -11,15 +11,15 @@ import NamedAuthor from '@/components/NamedAuthor';
 
 export const metadata = buildMetadata({
   path: '/pressure-washing-deck-northern-virginia',
-  title: 'Deck Pressure Washing in Northern Virginia | a written estimate | LDN Decks',
-  description: 'Pro deck pressure washing in Northern Virginia. a written estimate for most decks. Removes mold, mildew, oxidation. Safe PSI for wood & composite.',
+  title: 'Deck Pressure Washing in Northern Virginia | LDN Decks',
+  description: 'Pro deck pressure washing in Northern Virginia. Cost depends on deck size and site conditions; we give a free on-site estimate. Removes mold, mildew, oxidation. Safe PSI for wood and composite.',
   image: '/social/pressure-washing-deck-northern-virginia-social.png',
 });
 
 const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "How much does deck pressure washing cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck pressure washing is priced in a written estimate in Northern Virginia depending on deck size. Small (under 200 sqft): a written estimate. Medium (200-400 sqft): a written estimate. Large (400+ sqft): a written estimate. Includes prep, washing, and rinse." } },
+    { "@type": "Question", name: "How much does deck pressure washing cost in Northern Virginia?", acceptedAnswer: { "@type": "Answer", text: "Professional deck pressure washing in Northern Virginia depends on deck size and site conditions. Small decks (under 200 sqft), medium decks (200-400 sqft), and large decks (400+ sqft) are each priced in a written estimate. The visit includes prep, washing, and rinse. We give a free on-site estimate." } },
     { "@type": "Question", name: "Can you pressure wash a composite deck?", acceptedAnswer: { "@type": "Answer", text: "Yes, but with caution. Composite decks should only be washed at 1,500 PSI max with a fan tip (40-degree). Higher pressure or direct nozzle can damage the cap surface. We recommend soft washing (low pressure + cleaning solution) for composite safer and equally effective." } },
     { "@type": "Question", name: "How often should I pressure wash my deck in Virginia?", acceptedAnswer: { "@type": "Answer", text: "Wood decks: wash annually (spring recommended) before staining. Composite decks: wash once or twice yearly to remove pollen, mold from organic debris. Virginia's humidity makes annual washing important for both materials." } },
   ],
@@ -31,7 +31,7 @@ export default function PressureWashingDeckPage() {
   return (
     <>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/pressure-washing-deck-northern-virginia" name="Deck Pressure Washing in Northern Virginia | a written estimate | LDN Decks" description="Pro deck pressure washing in Northern Virginia. a written estimate for most decks. Removes mold, mildew, oxidation. Safe PSI for wood &amp; composite." speakable />
+      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/pressure-washing-deck-northern-virginia" name="Deck Pressure Washing in Northern Virginia | LDN Decks" description="Pro deck pressure washing in Northern Virginia. Cost depends on deck size and site conditions; we give a free on-site estimate. Removes mold, mildew, oxidation. Safe PSI for wood and composite." speakable />
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Pressure Washing in Northern Virginia</h1>
@@ -41,7 +41,7 @@ export default function PressureWashingDeckPage() {
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 600, marginBottom: '0.5rem' }}>Quick Answer:</p>
-          <p>Deck pressure washing: <strong>a written estimate</strong> for most decks. Removes mold, mildew, pollen, gray oxidation. Wood decks: 1,200-1,500 PSI max with fan tip. Composite: soft wash (low pressure + cleaner) recommended. Annual washing in Virginia&apos;s humid climate.</p>
+          <p>Deck pressure washing cost depends on deck size and site conditions; we give a free on-site estimate. Removes mold, mildew, pollen, and gray oxidation. Wood decks: 1,200-1,500 PSI max with fan tip. Composite: soft wash (low pressure + cleaner) recommended. Annual washing in Virginia&apos;s humid climate.</p>
         </div>
       </section>
 
@@ -118,11 +118,11 @@ export default function PressureWashingDeckPage() {
           <h2 style={S.h2}>Combine with Other Services</h2>
           <p style={S.p}><strong>Wash + Stain:</strong> The most common combo we wash, brighten, dry 48 hrs, then stain. <Link href="/deck-staining-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>See staining services &amp; pricing</Link>.</p>
           <p style={S.p}><strong>Wash + Inspection:</strong> While washing, we inspect every board, joist connection, and fastener. If we find structural issues, we&apos;ll tell you before any damage spreads. <Link href="/deck-safety-inspection-checklist" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Safety inspection checklist</Link>.</p>
-          <p style={S.p}><strong>Deck + House + Concrete:</strong> Bundle deck washing with house siding and driveway/sidewalk pressure washing for package pricing (save 10-15%).</p>
+          <p style={S.p}><strong>Deck + House + Concrete:</strong> Bundle deck washing with house siding and driveway or sidewalk pressure washing. Package pricing varies by the surfaces and access; we give a free on-site estimate.</p>
 
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
-            { q: "Cost to pressure wash a deck?", a: "a written estimate depending on size. Medium deck (200-400 sqft): a written estimate." },
+            { q: "How much does deck pressure washing cost in Northern Virginia?", a: "Professional deck pressure washing in Northern Virginia depends on deck size and site conditions. Small decks (under 200 sqft), medium decks (200-400 sqft), and large decks (400+ sqft) are each priced in a written estimate. The visit includes prep, washing, and rinse. We give a free on-site estimate." },
             { q: "Can you pressure wash composite?", a: "Yes soft wash preferred (low pressure + cleaner). Max 1,500 PSI with fan tip. Never zero-degree nozzle." },
             { q: "How often in Virginia?", a: "Wood: annually (spring before stain). Composite: 1-2x yearly. Virginia humidity makes annual washing important." },
           ].map((faq, i) => (

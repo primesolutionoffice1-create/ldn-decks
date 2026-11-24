@@ -20,7 +20,7 @@ const faqSchema = {
   "@context": "https://schema.org", "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "Have tariffs increased deck prices in 2026?", acceptedAnswer: { "@type": "Answer", text: "Yes. Tariffs on imported lumber, steel, and aluminum have increased material costs 8-15% in 2026 compared to 2025. Composite decking has seen smaller increases (5-10%) because brands like Trex manufacture domestically using recycled materials. Pressure-treated lumber has been less affected." } },
-    { "@type": "Question", name: "Which deck materials are affected by tariffs?", acceptedAnswer: { "@type": "Answer", text: "Most affected: aluminum railings and hardware (10-20% increase), imported hardwood decking (15-25%), and stainless steel fasteners (10-15%). Least affected: Trex composite (made in USA from recycled materials, 5-8% increase), pressure-treated lumber (domestic, 3-5%)." } },
+    { "@type": "Question", name: "Which deck materials are affected by tariffs?", acceptedAnswer: { "@type": "Answer", text: "Most affected: aluminum railings and hardware (10-20% increase), imported hardwood decking (15-25%), and stainless steel fasteners. Fastener pricing varies by material, size and site conditions; we give a free on-site estimate. Least affected: Trex composite (made in USA from recycled materials, 5-8% increase), pressure-treated lumber (domestic, 3-5%)." } },
     { "@type": "Question", name: "Should I build my deck now or wait for tariffs to drop?", acceptedAnswer: { "@type": "Answer", text: "Build now. Material costs have historically only gone up waiting rarely saves money. Tariff reductions are unpredictable and may take years. Meanwhile, labor costs rise 3-5% annually regardless. Locking in today's price is almost always the better financial decision." } },
   ],
 };
@@ -64,12 +64,12 @@ export default function TariffsDeckPricesPage() {
               <tbody>
                 {[
                   ['Aluminum railings', 'Not published', 'See the written estimate', '10–20%', 'Aluminum tariffs on imports'],
-                  ['Stainless steel hardware', 'a written estimate/pc', 'a written estimate/pc', '10–15%', 'Steel tariffs'],
-                  ['Imported hardwood (Ipe, Cumaru)', 'priced in a written estimate', 'priced in a written estimate', '15–25%', 'Lumber tariffs + supply chain'],
-                  ['Trex Composite', 'priced in a written estimate', 'priced in a written estimate', '5–8%', 'Domestic, recycled minimal impact'],
-                  ['TimberTech AZEK', 'priced in a written estimate', 'priced in a written estimate', '5–10%', 'Mostly domestic PVC'],
-                  ['Pressure-treated lumber', 'priced in a written estimate', 'priced in a written estimate', '3–5%', 'Domestic supply, steady'],
-                  ['Cedar', 'priced in a written estimate', 'priced in a written estimate', '5–10%', 'Canadian supply, some tariff impact'],
+                  ['Stainless steel hardware', 'Not published', 'See the written estimate', 'See the written estimate', 'Steel tariffs'],
+                  ['Imported hardwood (Ipe, Cumaru)', 'Not published', 'See the written estimate', '15–25%', 'Lumber tariffs + supply chain'],
+                  ['Trex Composite', 'Not published', 'See the written estimate', '5–8%', 'Domestic, recycled minimal impact'],
+                  ['TimberTech AZEK', 'Not published', 'See the written estimate', '5–10%', 'Mostly domestic PVC'],
+                  ['Pressure-treated lumber', 'Not published', 'See the written estimate', '3–5%', 'Domestic supply, steady'],
+                  ['Cedar', 'Not published', 'See the written estimate', '5–10%', 'Canadian supply, some tariff impact'],
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                     {row.map((cell, j) => <td key={j} style={{ ...S.td, fontWeight: j === 0 ? 600 : 400, color: j === 3 && parseInt(cell) > 10 ? '#c62828' : (j === 3 && parseInt(cell) <= 8 ? '#2e7d32' : 'inherit') }}>{cell}</td>)}
@@ -80,12 +80,12 @@ export default function TariffsDeckPricesPage() {
           </div>
 
           <h2 style={S.h2}>How This Affects Your Project Cost</h2>
-          <p style={S.p}>For a typical a written estimate composite deck project in Northern Virginia:</p>
+          <p style={S.p}>For a typical composite deck project in Northern Virginia, costs vary by material, size and site conditions. We give a free on-site estimate.</p>
           <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem' }}>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Materials (~50% of cost):</strong> a written estimate → now a written estimate (priced in the written estimate)</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Labor (~40% of cost):</strong> a written estimate → up 3–5% regardless of tariffs (priced in the written estimate)</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Permits/overhead (~10%):</strong> a written estimate → relatively stable</li>
-            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Total impact:</strong> a written estimate more than the same project in 2025 (4–7% overall increase)</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Materials (~50% of cost):</strong> priced in the written estimate from the products specified for the job.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Labor (~40% of cost):</strong> up 3–5% regardless of tariffs, and priced in the written estimate.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Permits/overhead (~10%):</strong> relatively stable, and included in the written estimate.</li>
+            <li style={{ marginBottom: '0.5rem', lineHeight: 1.7 }}><strong>Total impact:</strong> a 4–7% overall increase versus the same project in 2025. The written estimate is the project price.</li>
           </ul>
 
           <h2 style={S.h2}>How to Minimize Tariff Impact</h2>
@@ -111,7 +111,7 @@ export default function TariffsDeckPricesPage() {
           <h2 style={{ ...S.h2, marginTop: '2.5rem' }}>FAQ</h2>
           {[
             { q: "Have tariffs increased deck prices?", a: "Yes 8-15% on materials overall. Aluminum and imported wood hit hardest. Domestic composites (Trex, TimberTech) least affected at 5-8%." },
-            { q: "Which materials are most affected?", a: "Aluminum railings (10-20%), imported hardwood (15-25%), steel hardware (10-15%). Domestic composite and PT lumber: minimal impact." },
+            { q: "Which deck materials are affected by tariffs?", a: "Most affected: aluminum railings and hardware (10-20% increase), imported hardwood decking (15-25%), and stainless steel fasteners. Fastener pricing varies by material, size and site conditions; we give a free on-site estimate. Least affected: Trex composite (made in USA from recycled materials, 5-8% increase), pressure-treated lumber (domestic, 3-5%)." },
             { q: "Should I wait for prices to drop?", a: "No. Material prices have only gone up since 2019. Tariff reductions are unpredictable. Labor rises 3-5% annually. Lock in today's price." },
           ].map((faq, i) => (
             <details key={i} style={{ border: '1px solid #e5e5e5', borderRadius: 8, padding: '1.25rem', marginBottom: '0.75rem' }}>
