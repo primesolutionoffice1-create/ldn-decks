@@ -8,6 +8,9 @@ const description = 'Patio contractor in Loudoun County, VA. One under-deck conc
 
 export const metadata = buildMetadata({
   path,
+  // Consolidated into the parent patio page (APPROVALS 2026-11-12): kept live for users,
+  // canonical to /services/patios and removed from the sitemap.
+  canonicalPath: '/services/patios',
   title: 'Patio Contractor in Loudoun County, VA | Loudoun Decks',
   description,
 });
