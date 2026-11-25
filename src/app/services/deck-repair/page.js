@@ -19,12 +19,34 @@ import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import DecisionSupportSection from '@/components/DecisionSupportSection';
 import ArticleSchema from '@/components/ArticleSchema';
 
-export const metadata = buildMetadata({
+const PAGE_TITLE = 'Deck Repair Near Me in Northern Virginia | Loudoun Decks';
+const PAGE_DESCRIPTION = 'Deck repair near you in Loudoun, Fairfax, and Prince William. Loudoun Decks inspects rot, railings, and ledgers first. Trex resurfacing was quoted $9,020–$12,678. Written estimate. Call (571) 655-7207.';
+const PAGE_UPDATED = '2026-11-25';
+
+// buildMetadata trims descriptions to 155 characters. The published title and
+// description stay the full approved strings.
+const metadataBase = buildMetadata({
   path: '/services/deck-repair',
-  title: 'Deck Repair Near Me Northern VA | Structural Deck Contractor',
-  description: 'Need deck repair near you in Northern Virginia? We inspect rotted posts, sinking decks, railings, ledgers, and failed-inspection issues before recommending repair or replacement.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   image: '/social/deck-repair-social.png',
 });
+
+export const metadata = {
+  ...metadataBase,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    ...metadataBase.openGraph,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  },
+  twitter: {
+    ...metadataBase.twitter,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  },
+};
 
 const repairInclusions = [
   {
@@ -204,14 +226,14 @@ export default function DeckRepairPage() {
   return (
     <main>
       <JsonLd data={structuralRepairTriageSchema} />
-      <WebPageSchema dateModified="2026-09-13" url="https://ldndecks.com/services/deck-repair" name="Deck Repair Near Me Northern VA | Structural Deck Contractor" description="Need deck repair near you in Northern Virginia? We inspect rotted posts, sinking decks, railings, ledgers, and failed-inspection issues before recommending repair or replacement." speakable />
+      <WebPageSchema dateModified={PAGE_UPDATED} url="https://ldndecks.com/services/deck-repair" name={PAGE_TITLE} description={PAGE_DESCRIPTION} speakable />
       <ArticleSchema
         title="Deck Repair in Northern Virginia"
         description="Inspection-first deck repair guide for deciding when an unsafe or aging deck needs targeted structural repair, resurfacing, or full replacement."
         path="/services/deck-repair"
         image="/social/deck-repair-social.png"
         datePublished="2026-06-02"
-        dateModified="2026-09-13"
+        dateModified={PAGE_UPDATED}
         speakable={[
           '[data-speakable]',
           '#deck-repair-answer',
@@ -259,6 +281,17 @@ export default function DeckRepairPage() {
         title="Deck Repair & Structural Maintenance"
         description="Do not let rot, loose railings, or failing stairs go unreviewed. We inspect structural repair issues, post replacements, and code-sensitive corrections for Northern Virginia homeowners."
       />
+
+      <section data-speakable style={{ background: '#fff8f1', borderLeft: '4px solid var(--color-primary)', padding: '1.25rem 1.5rem', maxWidth: 900, margin: '1.5rem auto', borderRadius: 8 }}>
+        <p style={{ margin: 0, lineHeight: 1.7 }}>
+          Loudoun Decks inspects rot, railings, and ledgers first. Loudoun Decks 2026 quoted prices: Trex deck resurfacing was $9,020–$12,678 in a recent Chantilly quote. The written estimate is the project price.{' '}
+          <Link href="/deck-repair-loudoun-county" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>Deck Repair in Loudoun County</Link>
+          {', '}
+          <Link href="/deck-repair/woodbridge" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>deck repair in Woodbridge</Link>
+          {', or '}
+          <Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 700 }}>get a written estimate</Link>.
+        </p>
+      </section>
 
       <div id="deck-repair-answer" data-speakable="deck-repair-answer">
         <GeoAnswerBlock
@@ -394,7 +427,7 @@ export default function DeckRepairPage() {
       </section>
 
       <RelatedGuides currentPath="/services/deck-repair" category="ai-retrieval" />
-      <NamedAuthor context="Northern Virginia" lastUpdated="2026-09-13" />
+      <NamedAuthor context="Northern Virginia" lastUpdated={PAGE_UPDATED} />
 
       <ContactHome />
     </main>

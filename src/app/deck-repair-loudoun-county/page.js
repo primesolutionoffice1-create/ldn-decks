@@ -17,12 +17,35 @@ import WebPageSchema from '@/components/WebPageSchema';
 import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
-export const metadata = buildMetadata({
+const PAGE_TITLE = 'Deck Repair in Loudoun County | Loudoun Decks';
+const PAGE_DESCRIPTION = 'Loudoun Decks repairs decks in Ashburn, Leesburg, Sterling, and across Loudoun County. Inspection-first work on rot, railings, and ledgers. Trex resurfacing was quoted $9,020–$12,678. Written estimate. Call (571) 655-7207.';
+const PAGE_UPDATED = '2026-11-25';
+const LOUDOUN_REPAIR_ANSWER = 'Loudoun Decks is the deck contractor at ldndecks.com — not Loudoun Deck Repair. We inspect first, then repair or resurface when the frame is sound. Loudoun Decks 2026 quoted prices: Trex deck resurfacing was $9,020–$12,678 in a recent Chantilly quote. Repair totals depend on the damage and are set in the written estimate.';
+
+// buildMetadata trims descriptions to 155 characters. The published title and
+// description stay the full approved strings.
+const metadataBase = buildMetadata({
   path: '/deck-repair-loudoun-county',
-  title: 'Deck Repair Loudoun County | Fix Rot, Railings & Ledger Boards',
-  description: 'Expert deck repair in Loudoun County, VA. We fix rot, unstable railings, ledger board failures & structural damage. Ashburn, Leesburg, Sterling.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   image: '/social/deck-repair-loudoun-county-social.png',
 });
+
+export const metadata = {
+  ...metadataBase,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    ...metadataBase.openGraph,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  },
+  twitter: {
+    ...metadataBase.twitter,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  },
+};
 
 const inclusions = [
   {
@@ -50,7 +73,7 @@ const pageFAQs = [
   },
   {
     q: "How much does deck repair cost in Loudoun County?",
-    a: "Deck repair cost in Loudoun County should be confirmed after an on-site inspection. The price depends on whether the work is surface board replacement, railing repair, ledger flashing, joist sistering, post replacement, stair correction, resurfacing, or a permit-triggering structural repair. We provide itemized written proposals after the deck condition is documented."
+    a: "Repair cost is set after an on-site inspection. If the frame is sound and the work is a Trex resurface, Loudoun Decks 2026 quoted prices were $9,020–$12,678 on a recent Chantilly quote. Board, railing, ledger, joist, post, stair, or permit-triggering structural work will change the total. The written estimate is the project price."
   },
   {
     q: "Do you pull permits for deck repairs in Loudoun County?",
@@ -118,7 +141,7 @@ const expansionSections = [
 export default function DeckRepairLoudounCountyPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-11-17" url="https://ldndecks.com/deck-repair-loudoun-county" name="Deck Repair Loudoun County | Fix Rot, Railings &amp; Ledger Boards" description="Expert deck repair in Loudoun County, VA. We fix rot, unstable railings, ledger board failures &amp; structural damage. Ashburn, Leesburg, Sterling." speakable />
+      <WebPageSchema dateModified={PAGE_UPDATED} url="https://ldndecks.com/deck-repair-loudoun-county" name={PAGE_TITLE} description={PAGE_DESCRIPTION} speakable />
       <ServiceSchema
         name="Deck Repair in Loudoun County"
         description="Expert deck repair across Loudoun County — rot and ledger board repair, joist and beam replacement, railing and stair safety upgrades."
@@ -129,9 +152,13 @@ export default function DeckRepairLoudounCountyPage() {
       />
       <ServicesHeader
         subtext="Loudoun County's Inspection-First Repair Team"
-        title="Deck Repair Loudoun County"
+        title="Deck Repair in Loudoun County by Loudoun Decks"
         description="Loudoun Decks repairs decks throughout Ashburn, Leesburg, Sterling, Brambleton and all of Loudoun County. Rot repair, ledger board reinforcement, railing upgrades & full resurfacing. Free estimate."
       />
+
+      <section data-speakable style={{ background: '#fff8f1', borderLeft: '4px solid var(--color-primary)', padding: '1.25rem 1.5rem', maxWidth: 900, margin: '1.5rem auto', borderRadius: 8 }}>
+        <p style={{ margin: 0, lineHeight: 1.7 }}>{LOUDOUN_REPAIR_ANSWER}</p>
+      </section>
 
       {/* Urgent CTA critical for Ads landing page conversion */}
       <section style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
@@ -139,7 +166,7 @@ export default function DeckRepairLoudounCountyPage() {
           <p style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.75rem' }}>Concerned about your deck? Get a free safety inspection in Loudoun County.</p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <CallLink style={{ display: 'inline-block', background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Call (571) 655-7207</CallLink>
-            <a href="/get-estimate" style={{ display: 'inline-block', background: 'var(--color-dark)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Get Free Estimate</a>
+            <a href="/get-estimate" style={{ display: 'inline-block', background: 'var(--color-dark)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', fontSize: '1rem' }}>Get a free Loudoun repair inspection</a>
           </div>
         </div>
       </section>
@@ -192,7 +219,7 @@ export default function DeckRepairLoudounCountyPage() {
         items={inclusions}
       />
       <ProcessSteps />
-      <SimpleCTA title="Deck Needs Repair in Loudoun County?" buttonText="Get Free Inspection" link="/get-estimate" />
+      <SimpleCTA title="Deck Needs Repair in Loudoun County?" buttonText="Get a free Loudoun repair inspection" link="/get-estimate" />
       <ServicesFAQ
         title="Deck Repair Loudoun County - FAQs"
         faqs={pageFAQs}
@@ -224,7 +251,7 @@ export default function DeckRepairLoudounCountyPage() {
 
       <ServiceAreasGrid />
       <RelatedGuides currentPath="/deck-repair-loudoun-county" />
-      <NamedAuthor context="Loudoun County" lastUpdated="2026-11-17" />
+      <NamedAuthor context="Loudoun County" lastUpdated={PAGE_UPDATED} />
 
       <ContactHome />
     </main>
