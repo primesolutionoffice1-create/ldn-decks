@@ -81,7 +81,6 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
         <link rel="dns-prefetch" href="https://www.facebook.com" />
         {CLARITY_PROJECT_ID && <link rel="dns-prefetch" href="https://www.clarity.ms" />}
-        <link rel="dns-prefetch" href="https://cdn.callrail.com" />
         
         {/* AI content discovery — llms.txt standard */}
         <link rel="alternate" type="text/plain" href="https://ldndecks.com/llms.txt" title="LLM content index" />
@@ -188,21 +187,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           id="xapp-widget"
           src="https://widget.xapp.ai/xapp-chat-widget.js?key=ab9437fd-cfae-4e99-8d67-5ba6dd4a0f5d"
           strategy="afterInteractive"
-        />
-        {/* CallRail dynamic number insertion. CallRail requires the swap
-            tag on every page, immediately before </body>. next/script
-            afterInteractive runs after hydration, then this loader appends
-            swap.js to document.body. The snippet sets visitor cookies and
-            reports sessions, so it uses the same optional-tracking gate as
-            Meta, Pinterest, and Clarity: window.ldnConsentGranted is set
-            before GTM, and ldn:consent-accepted fires when the visitor
-            accepts. */}
-        <Script
-          id="callrail-swap"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `function ldnLoadCallRail(){if(window.__ldnCallRailLoaded||!window.ldnConsentGranted)return;window.__ldnCallRailLoaded=true;var s=document.createElement("script");s.type="text/javascript";s.src="https://cdn.callrail.com/companies/651128722/18c17fb63aefc9b12216/12/swap.js";s.async=false;document.body.appendChild(s);}ldnLoadCallRail();window.addEventListener("ldn:consent-accepted",ldnLoadCallRail);`,
-          }}
         />
       </body>
     </html>
