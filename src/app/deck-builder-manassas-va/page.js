@@ -13,13 +13,36 @@ import CallLink from '@/components/CallLink';
 import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import CityLeadFormSection from '@/components/CityLeadFormSection';
+import CountyHubLinks from '@/components/CountyHubLinks';
 
-export const metadata = buildMetadata({
+const PAGE_TITLE = 'Deck Builders in Manassas, VA | Loudoun Decks';
+const PAGE_DESCRIPTION = 'Manassas and Prince William deck builders for Old Town, Wellington, Bull Run, and Sudley Springs. Quoted open decks $61–$102 per sq ft, most $64–$68. Written estimate. Call (571) 655-7207.';
+const PAGE_UPDATED = '2026-11-25';
+
+// buildMetadata trims descriptions to 155 characters. The published title and
+// description stay the full approved strings.
+const metadataBase = buildMetadata({
   path: '/deck-builder-manassas-va',
-  title: 'Deck Builder in Manassas, VA | Composite Decks | Loudoun Decks',
-  description: 'Manassas deck builder serving Old Town, Wellington, Bull Run and Sudley Springs. Trex and composite deck planning, screened porches and historic-district builds.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   image: '/social/deck-builder-manassas-va-social.png',
 });
+
+export const metadata = {
+  ...metadataBase,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    ...metadataBase.openGraph,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  },
+  twitter: {
+    ...metadataBase.twitter,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  },
+};
 
 const manassasFAQs = [
   {
@@ -28,11 +51,11 @@ const manassasFAQs = [
   },
   {
     q: "How long does the Prince William County deck permit process take?",
-    a: "Prince William County Department of Development Services is currently the fastest jurisdiction in Northern Virginia for deck plan review, typically 2 to 3 weeks for a standard residential submission. The City of Manassas runs slightly longer when the property sits inside the Old Town historic overlay because of the architectural review step."
+    a: "Review times vary; confirm current timelines with Prince William County or the City of Manassas. Old Town properties inside the historic overlay also go through architectural review."
   },
   {
     q: "What's the typical cost for a composite deck in Manassas?",
-    a: "Most Manassas projects are priced in a written estimate for a 300 to 450 sqft Trex Enhance or Transcend build with aluminum railings. Pricing in Prince William County typically runs 10 to 15 percent below comparable builds in Loudoun or Fairfax due to lower lot acquisition costs feeding into local trade rates."
+    a: "Loudoun Decks 2026 quoted prices for a new open deck are $61–$102 per sq ft, with most jobs around $64–$68. Totals vary with size, demolition, stairs, railings, access, historic-area details, and permits. The written estimate is the project price."
   },
   {
     q: "Can you handle HOA approvals in Wellington or Bull Run Mountain Estates?",
@@ -81,15 +104,15 @@ export default function ManassasDeckBuilderPage() {
     <main>
       <JsonLd data={manassasFaqSchema} />
       <LocalBusinessSchema city="Manassas" url="https://ldndecks.com/deck-builder-manassas-va" />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-manassas-va" name="Deck Builder in Manassas, VA | Composite Decks | Loudoun Decks" description="Manassas deck builder serving Old Town, Wellington, Bull Run and Sudley Springs. Trex and composite deck planning, screened porches and historic-district builds." speakable />
+      <WebPageSchema dateModified={PAGE_UPDATED} url="https://ldndecks.com/deck-builder-manassas-va" name={PAGE_TITLE} description={PAGE_DESCRIPTION} speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Builder in Manassas, VA</h1>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1rem' }}>Deck Builders in Manassas, VA</h1>
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Trex and composite deck planning, screened porches and historic-district outdoor living for Manassas, Manassas Park and Prince William County.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get a Manassas written estimate</Link>
           </div>
         </div>
       </section>
@@ -104,7 +127,7 @@ export default function ManassasDeckBuilderPage() {
 
           <div style={{ borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
-            <p style={{ margin: 0, lineHeight: 1.65 }}>A custom composite deck in Manassas typically is priced in a written estimate installed. Prince William County permits average 2 to 3 weeks. We plan Trex product-line options and coordinate Wellington HOA, Bull Run Mountain Estates, and Old Town Architectural Review submission details with the homeowner.</p>
+            <p style={{ margin: 0, lineHeight: 1.65 }}>Loudoun Decks 2026 quoted prices: a new open deck is $61–$102 per sq ft, and most jobs fall around $64–$68 per sq ft. The written estimate is the project price. We confirm whether the address is City of Manassas, Manassas Park, or Prince William County, and whether Old Town Architectural Review applies, before drawings.</p>
           </div>
 
           <PlanningUpdate
@@ -147,7 +170,7 @@ export default function ManassasDeckBuilderPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Custom Deck Builder Serving Manassas Homeowners</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Manassas is one of the more architecturally diverse pockets of Northern Virginia. Inside the city limits you have Old Town blocks where the streetscape hasn't changed much since the early 1900s, and ten minutes north you're in Wellington and Ashleigh where the homes were stamped out in the 90s and early 2000s. Building a deck here means knowing the difference between a corner-lot Victorian that needs Architectural Review Board approval and a colonial in Wellington Estates where the HOA already has a stock approved color palette.</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Loudoun Decks structures Manassas scopes around what local homeowners actually need: a clean, durable deck that respects the home's age and architecture without pricing the owner out of the project. Manassas project pricing typically lands 10 to 15 percent below comparable Loudoun and Fairfax builds, and that gap has nothing to do with quality. It's lot economics, trade rates and overhead.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Loudoun Decks structures Manassas scopes around what local homeowners actually need: a clean, durable deck that respects the home's age and architecture. The written estimate is the project price.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Trex and TimberTech Composite Decks in Manassas</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The vast majority of new builds we install in Prince William County are capped composite. Trex Enhance Naturals is the volume choice for Wellington, Ashleigh and Stonewall Heights homeowners who want a 25-year fade and stain warranty without pushing the budget past a written estimate on a 350 sqft footprint. When clients want the deeper grain pattern and the heavier board feel, we step them up to Trex Transcend in Spiced Rum or Lava Rock, or to TimberTech AZEK Vintage on Old Town historic projects where the visual match to the existing trim matters.</p>
@@ -187,7 +210,7 @@ export default function ManassasDeckBuilderPage() {
           </ul>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Permits, HOA and Planning Support in Manassas</h2>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County Department of Development Services handles plan review for the unincorporated areas surrounding the city, and they're currently one of the faster deck-permitting jurisdictions in Northern Virginia at roughly 2 to 3 weeks turnaround. Our submissions include sealed structural drawings, ledger attachment details, footing depths, and the full setback analysis their reviewers expect.</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Prince William County Department of Development Services handles plan review for the unincorporated areas surrounding the city. Review times vary; confirm current timelines with Prince William County or the City of Manassas. Our submissions include sealed structural drawings, ledger attachment details, footing depths, and the full setback analysis their reviewers expect.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Inside the City of Manassas the building department runs a similar timeline, but Old Town addresses inside the historic overlay add an Architectural Review Board step. The ARB looks at deck visibility from the street, railing style, and material color, especially on corner lots and rear decks that read from public right of way. We prepare the ARB packet alongside the building permit so the two reviews run in parallel where possible.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.25rem' }}>Common Deck Planning Scopes Near Manassas</h2>
@@ -209,13 +232,18 @@ export default function ManassasDeckBuilderPage() {
             <li key="/reviews" style={{ marginBottom: '0.5rem' }}><Link href="/reviews" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Loudoun Decks Reviews (Google reviews) →</Link></li>
             <li key="/deck-cost-calculator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-cost-calculator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Free Deck Cost Calculator →</Link></li>
             <li key="/composite-deck-cost-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/composite-deck-cost-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
+            <li key="/deck-permit-prince-william-county-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-permit-prince-william-county-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Prince William County Deck Permit Guide →</Link></li>
+            <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Repair Service in Northern Virginia →</Link></li>
+            <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Replacement in Northern Virginia →</Link></li>
+            <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Get a Manassas written estimate →</Link></li>
         </ul>
       </section>
 
 
-      <SimpleCTA title="Build Your Manassas Deck With a Composite Deck Team" buttonText="Get Free Estimate" link="/get-estimate" />
+      <SimpleCTA title="Build Your Manassas Deck With a Composite Deck Team" buttonText="Get a Manassas written estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-manassas-va" />
-      <NamedAuthor context="Manassas and Northern Virginia" lastUpdated="2026-10-18" />
+      <CountyHubLinks countySlug="prince-william-county" />
+      <NamedAuthor context="Manassas and Northern Virginia" lastUpdated={PAGE_UPDATED} />
       <ContactHome />
     </main>
   );

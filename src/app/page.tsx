@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Link from "next/link";
 import Hero from "@/components/Hero";
 import TrustBanner from "@/components/TrustBanner";
 import MobileProofStrip from "@/components/MobileProofStrip";
@@ -33,11 +34,33 @@ import styles from "./page.module.css";
 import { buildMetadata } from "@/lib/seo";
 import { buildVideoObjectSchema } from "@/lib/business";
 
-export const metadata = buildMetadata({
+const PAGE_TITLE = "Deck Contractors & Builders in Northern Virginia | Loudoun Decks";
+const PAGE_DESCRIPTION = "Deck contractors and builders for Loudoun, Fairfax, and Prince William. Quoted open decks $61–$102 per sq ft, most $64–$68. Written estimate. Call (571) 655-7207.";
+const PAGE_UPDATED = "2026-11-25";
+
+// buildMetadata trims titles to 60 characters and descriptions to 155.
+// The published title and description stay the full approved strings.
+const metadataBase = buildMetadata({
   path: "/",
-  title: 'Custom Deck Builder in Northern Virginia | Loudoun Decks',
-  description: 'Northern Virginia deck contractor for composite decks, Trex, TimberTech, deck replacement, screened porches, permit planning, and written estimates.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
 });
+
+export const metadata = {
+  ...metadataBase,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    ...metadataBase.openGraph,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  },
+  twitter: {
+    ...metadataBase.twitter,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  },
+};
 
 // Homepage-specific WebPage schema — tells Google this is the main landing page.
 // Org schema is emitted globally from StructuredData (rooted at @id: #organization);
@@ -47,8 +70,9 @@ const homepageSchema = {
   "@type": "WebPage",
   "@id": "https://ldndecks.com/#webpage",
   "url": "https://ldndecks.com",
-  "name": "Loudoun Decks — Custom Deck Builder in Northern Virginia",
-  "description": "Trusted deck contractor and composite deck builder serving Loudoun County, Fairfax County, Prince William County, and Northern Virginia. Deck replacement, resurfacing, screened porches, patios, pergolas, permit planning, and written estimates.",
+  "name": PAGE_TITLE,
+  "description": PAGE_DESCRIPTION,
+  "dateModified": PAGE_UPDATED,
   "isPartOf": { "@type": "WebSite", "@id": "https://ldndecks.com/#website" },
   "about": { "@id": "https://ldndecks.com/#organization" },
   "primaryImageOfPage": {
@@ -84,7 +108,11 @@ const homepageSchema = {
     "https://ldndecks.com/reviews",
     "https://ldndecks.com/deck-cost-calculator",
     "https://ldndecks.com/about",
-    "https://ldndecks.com/contact"
+    "https://ldndecks.com/contact",
+    "https://ldndecks.com/deck-builder-fairfax-va",
+    "https://ldndecks.com/deck-builder-manassas-va",
+    "https://ldndecks.com/deck-repair-loudoun-county",
+    "https://ldndecks.com/services/deck-repair"
   ],
   // Homepage main entity is the canonical organization, referenced by @id only.
   // knowsAbout / hasOfferCatalog merge onto #organization without redefining
@@ -150,6 +178,14 @@ export default function Home() {
       <JsonLd data={homepageSchema} />
       <JsonLd data={buildVideoObjectSchema()} />
             <Hero />
+            <nav aria-label="Deck builders and repair" style={{ maxWidth: 900, margin: "0 auto", padding: "1.25rem 1.5rem 0" }}>
+              <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexWrap: "wrap", gap: "0.75rem 1.25rem" }}>
+                <li><Link href="/deck-builder-fairfax-va" style={{ color: "var(--color-primary)", fontWeight: 700 }}>Deck builders in Fairfax, VA</Link></li>
+                <li><Link href="/deck-builder-manassas-va" style={{ color: "var(--color-primary)", fontWeight: 700 }}>Deck builders in Manassas, VA</Link></li>
+                <li><Link href="/deck-repair-loudoun-county" style={{ color: "var(--color-primary)", fontWeight: 700 }}>Deck repair in Loudoun County</Link></li>
+                <li><Link href="/services/deck-repair" style={{ color: "var(--color-primary)", fontWeight: 700 }}>Deck repair near you in Northern Virginia</Link></li>
+              </ul>
+            </nav>
             <TrustBanner
               ariaLabel="Owner and company experience"
               items={[
