@@ -16,12 +16,34 @@ import CityLeadFormSection from '@/components/CityLeadFormSection';
 import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 import CountyHubLinks from '@/components/CountyHubLinks';
 
-export const metadata = buildMetadata({
+const PAGE_TITLE = 'Deck Builders in Fairfax, VA | Loudoun Decks';
+const PAGE_DESCRIPTION = 'Fairfax VA deck builders for the City of Fairfax and Fairfax County. Quoted open decks $61–$102 per sq ft, most $64–$68. Permits, HOA packets, and a written estimate. Call (571) 655-7207.';
+const PAGE_UPDATED = '2026-11-25';
+
+// buildMetadata trims descriptions to 155 characters. The published title and
+// description stay the full approved strings.
+const metadataBase = buildMetadata({
   path: '/deck-builder-fairfax-va',
-  title: 'Fairfax VA Deck Builder | Class A Contractor | Loudoun Decks',
-  description: 'Fairfax VA deck builder for composite decks, replacements, repairs, and screened porches with City of Fairfax and Fairfax County permit planning.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   image: '/social/deck-builder-fairfax-va-social.png',
 });
+
+export const metadata = {
+  ...metadataBase,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    ...metadataBase.openGraph,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  },
+  twitter: {
+    ...metadataBase.twitter,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  },
+};
 
 const PATH = '/deck-builder-fairfax-va';
 
@@ -40,7 +62,7 @@ const fairfaxFAQs = [
   },
   {
     q: "What's the typical cost for a composite deck in Fairfax?",
-    a: "External benchmarks list $35–$80 per square foot installed for a simple, low-height composite deck with standard railing (RemodelCalculators, reviewed October 11, 2026). A 400 sq ft deck at that rate is about $14,000–$32,000 before permits, demolition, elevation, and complex stairs. This is an external benchmark, not a Loudoun Decks price. The written estimate is the project price. The published benchmark is on /composite-deck-cost-northern-virginia."
+    a: "Loudoun Decks 2026 quoted prices for a new open deck are $61–$102 per sq ft, with most jobs around $64–$68. Size, demolition, stairs, railings, access, and permits change the total. The written estimate is the project price. External benchmarks list $35–$80 per sq ft for a simple, low-height composite deck (RemodelCalculators, reviewed October 11, 2026); that figure is not a Loudoun Decks price."
   },
   {
     q: "Do you replace old wood decks in Fairfax's 1950s-70s neighborhoods?",
@@ -102,7 +124,7 @@ export default function FairfaxDeckBuilderPage() {
     <main>
       <JsonLd data={fairfaxFaqSchema} />
       <LocalBusinessSchema city="Fairfax" url="https://ldndecks.com/deck-builder-fairfax-va" />
-      <WebPageSchema dateModified="2026-11-01" url={`https://ldndecks.com${PATH}`} name="Fairfax VA Deck Builder | Class A Contractor | Loudoun Decks" description="Fairfax VA deck builder for composite decks, replacements, repairs, and screened porches with City of Fairfax and Fairfax County permit planning." speakable />
+      <WebPageSchema dateModified={PAGE_UPDATED} url={`https://ldndecks.com${PATH}`} name={PAGE_TITLE} description={PAGE_DESCRIPTION} speakable />
 
       <section style={{ background: 'var(--color-dark)', color: '#fff', padding: '4rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
@@ -110,7 +132,7 @@ export default function FairfaxDeckBuilderPage() {
           <p style={{ color: '#ccc', fontSize: '1.1rem' }}>Virginia Class A licensed deck builder and contractor serving the City of Fairfax, Fair Lakes, Mantua and Fairfax Station. New composite decks, deck repair, screened porches, and permit planning support.</p>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
-            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
+            <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get a Fairfax written estimate</Link>
           </div>
         </div>
       </section>
@@ -126,10 +148,10 @@ export default function FairfaxDeckBuilderPage() {
 
           <div style={{ borderLeft: '4px solid var(--color-primary)', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 6, marginBottom: '2rem' }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</strong>
-            <p style={{ margin: 0, lineHeight: 1.65 }} data-speakable>External benchmarks list $35–$80 per square foot installed for a simple, low-height composite deck with standard railing (RemodelCalculators, reviewed October 11, 2026). A 400 sq ft deck at that rate is about $14,000–$32,000 before permits, demolition, elevation, and complex stairs. This is an external benchmark, not a Loudoun Decks price. The written estimate is the project price. The published figure is on our <Link href={COST_GUIDE_PATH} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>composite deck cost guide</Link>. Permit review times vary; confirm current timelines with the City of Fairfax or Fairfax County. Loudoun Decks is a Virginia Class A licensed deck contractor in Fairfax, with Trex, TimberTech, and AZEK material planning and permit packages prepared for both jurisdictions.</p>
+            <p style={{ margin: 0, lineHeight: 1.65 }} data-speakable>Loudoun Decks 2026 quoted prices: a new open deck is $61–$102 per sq ft, and most jobs fall around $64–$68 per sq ft. The written estimate is the project price. External benchmarks list $35–$80 per sq ft installed for a simple, low-height composite deck with standard railing (RemodelCalculators, reviewed October 11, 2026); that is not a Loudoun Decks price. We verify whether your address is City of Fairfax or Fairfax County before drawings.</p>
           </div>
 
-          <NamedAuthor context="Fairfax County and the City of Fairfax" lastUpdated="2026-11-01" />
+          <NamedAuthor context="Fairfax County and the City of Fairfax" lastUpdated={PAGE_UPDATED} />
 
           <PlanningUpdate
             market="Fairfax decks in 2026"
@@ -266,6 +288,7 @@ export default function FairfaxDeckBuilderPage() {
             <li key="/deck-builder-fairfax-station-va" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-fairfax-station-va" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Fairfax Station Premium Deck Builder Guide →</Link></li>
             <li key="/deck-payment-estimator" style={{ marginBottom: '0.5rem' }}><Link href="/deck-payment-estimator" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Payment Estimator →</Link></li>
             <li key="/services/deck-repair" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-repair" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Repair Service in Northern Virginia →</Link></li>
+            <li key="/services/deck-replacement" style={{ marginBottom: '0.5rem' }}><Link href="/services/deck-replacement" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Deck Replacement in Northern Virginia →</Link></li>
             <li key={COST_GUIDE_PATH} style={{ marginBottom: '0.5rem' }}><Link href={COST_GUIDE_PATH} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>How Much Does a Deck Cost in Northern Virginia? →</Link></li>
             <li key="/deck-builder-northern-virginia" style={{ marginBottom: '0.5rem' }}><Link href="/deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Northern Virginia Deck Builder Guide →</Link></li>
             <li key="/get-estimate" style={{ marginBottom: '0.5rem' }}><Link href="/get-estimate" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Request a Written Fairfax Estimate →</Link></li>
@@ -273,7 +296,7 @@ export default function FairfaxDeckBuilderPage() {
       </section>
 
 
-      <SimpleCTA title="Build Your Fairfax Deck With a Composite Deck Team" buttonText="Get Free Estimate" link="/get-estimate" />
+      <SimpleCTA title="Build Your Fairfax Deck With a Composite Deck Team" buttonText="Get a Fairfax written estimate" link="/get-estimate" />
       <RelatedGuides currentPath="/deck-builder-fairfax-va" />
       <CountyHubLinks countySlug="fairfax-county" />
       <ContactHome />
