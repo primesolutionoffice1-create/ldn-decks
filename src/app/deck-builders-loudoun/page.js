@@ -129,7 +129,11 @@ export default function DeckBuildersLoudounPage() {
                         <ServicesHeader
                                 subtext="Loudoun's Premier Choice"
                                 title="Custom Deck Builders Serving Loudoun County"
-                                description="Loudoun Decks builds high-end composite and wood decks in Ashburn, Leesburg, and across Loudoun County with permit, HOA, and written estimate support."
+                                description={(
+                                  <>
+                                    Loudoun Decks builds high-end composite and wood decks in Ashburn, Leesburg, and across Loudoun County with permit, HOA, and written estimate support. For walkout and upper-level framing, see the <Link href="/insights/second-story-deck-builder-northern-virginia">second story deck builder in Northern Virginia</Link>. For a three-season room in Ashburn, see the <Link href="/screened-porches/ashburn">screened porch builder in Ashburn</Link>.
+                                  </>
+                                )}
                         />
                         <ServiceMain
                                 subtitle="Hyper-Local Expertise"

@@ -13,12 +13,28 @@ import { calculatorFaqs } from '@/data/deckCostCalculatorFaqs';
 // Planner UI now lives in DeckCostCalculatorWidget and is shared
 // with /composite-deck-cost-northern-virginia.
 
-export const metadata = buildMetadata({
+const PAGE_TITLE = 'Deck Cost Calculator Northern Virginia | Loudoun Decks';
+const PAGE_DESCRIPTION = 'Loudoun Decks 2026 quoted prices: a new open deck about $61–$102 per sq ft, most around $64–$68. Use the planner to record size and options, then request a written estimate.';
+
+const metadataBase = buildMetadata({
   path: '/deck-cost-calculator',
-  title: 'Deck Project Planner Northern Virginia',
-  description: 'Describe deck size, material and options before requesting an itemized Northern Virginia project estimate.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   image: '/social/deck-cost-calculator-social.png',
 });
+
+export const metadata = {
+  ...metadataBase,
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    ...metadataBase.openGraph,
+    description: PAGE_DESCRIPTION,
+  },
+  twitter: {
+    ...metadataBase.twitter,
+    description: PAGE_DESCRIPTION,
+  },
+};
 
 export default function DeckCostCalculator() {
   return (
@@ -35,10 +51,10 @@ export default function DeckCostCalculator() {
           <div style={{ borderLeft: '4px solid #d14817', background: '#fff8f1', padding: '1.25rem 1.5rem', borderRadius: 8, marginBottom: '1.5rem' }}>
             <p style={{ fontWeight: 700, margin: '0 0 0.5rem', color: '#1a202c' }}>Quick Answer</p>
             <p style={{ margin: 0, color: '#2d3748', lineHeight: 1.7 }}>
-              This planner records your selected size, material and options; it does not calculate a price. Stairs and railings can be selected as scope items. Elevation, permits and site conditions are reviewed in a written estimate.
+              Loudoun Decks 2026 quoted prices: a new open deck was about $61–$102 per sq ft in our recent quotes, most around $64–$68 per sq ft. Those are quoted prices, not a total from this planner. This planner records your selected size, material and options; it does not calculate a price. The written estimate after a site visit is the only project price.
             </p>
           </div>
-          <NamedAuthor context="Loudoun, Fairfax, Prince William, Arlington, and Stafford counties" lastUpdated="2026-10-18" />
+          <NamedAuthor context="Loudoun, Fairfax, Prince William, Arlington, and Stafford counties" lastUpdated="2026-11-27" />
         </div>
       </section>
 

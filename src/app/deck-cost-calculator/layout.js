@@ -6,12 +6,28 @@ import JsonLd from '@/components/JsonLd';
 import WebPageSchema from '@/components/WebPageSchema';
 import { calculatorFaqs } from '@/data/deckCostCalculatorFaqs';
 
-export const metadata = buildMetadata({
+const PAGE_TITLE = 'Deck Cost Calculator Northern Virginia | Loudoun Decks';
+const PAGE_DESCRIPTION = 'Loudoun Decks 2026 quoted prices: a new open deck about $61–$102 per sq ft, most around $64–$68. Use the planner to record size and options, then request a written estimate.';
+
+const metadataBase = buildMetadata({
   path: '/deck-cost-calculator',
-  title: 'Deck Project Planner Northern Virginia',
-  description: 'Describe deck size, material and options before requesting an itemized Northern Virginia project estimate.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   image: '/social/deck-cost-calculator-social.png',
 });
+
+export const metadata = {
+  ...metadataBase,
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    ...metadataBase.openGraph,
+    description: PAGE_DESCRIPTION,
+  },
+  twitter: {
+    ...metadataBase.twitter,
+    description: PAGE_DESCRIPTION,
+  },
+};
 
 const PAGE_URL = `${BUSINESS.url}/deck-cost-calculator`;
 
@@ -42,7 +58,7 @@ export default function Layout({ children }) {
     <>
       <JsonLd data={webApplicationSchema} />
       <JsonLd data={faqSchema} />
-      <WebPageSchema url={PAGE_URL} name="Deck Project Planner Northern Virginia" description="Plan deck size, material and options before requesting a written project estimate." dateModified="2026-09-13" speakable />
+      <WebPageSchema url={PAGE_URL} name="Deck Project Planner Northern Virginia" description="Plan deck size, material and options before requesting a written project estimate." dateModified="2026-11-27" speakable />
       {children}
       <RelatedGuides currentPath="/deck-cost-calculator" category="deck-core" />
       <ContactHome />
