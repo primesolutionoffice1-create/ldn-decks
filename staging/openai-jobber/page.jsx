@@ -106,6 +106,9 @@ export default function Page() {
               "insufficient",
               "delayed",
               "lost_response",
+              "vendor_other_reject",
+              "legitimate_other",
+              "mail_positive_control",
             ].map((v) => (
               <option key={v}>{v}</option>
             ))}

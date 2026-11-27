@@ -27,7 +27,7 @@ function guard() {
 }
 async function init() {
   return (initPromise ||= db().query(
-    `CREATE TABLE IF NOT EXISTS stage_operations(event_id text PRIMARY KEY,digest text NOT NULL,scenario text NOT NULL,action_ms bigint NOT NULL,state text NOT NULL DEFAULT 'pending',execution_id text,request_id text,dispatch_state text NOT NULL DEFAULT 'none',proof text NOT NULL,consent_at_submit boolean NOT NULL);CREATE TABLE IF NOT EXISTS stage_provider_attempts(id bigserial PRIMARY KEY,event_id text NOT NULL);CREATE TABLE IF NOT EXISTS stage_event_attempts(id bigserial PRIMARY KEY,event_id text NOT NULL);CREATE TABLE IF NOT EXISTS stage_nonces(nonce text PRIMARY KEY,created_at timestamptz NOT NULL DEFAULT now());CREATE TABLE IF NOT EXISTS stage_mock_requests(event_id text PRIMARY KEY,request_id text UNIQUE NOT NULL);CREATE TABLE IF NOT EXISTS stage_mock_events(event_id text PRIMARY KEY,action_ms bigint NOT NULL,received_at timestamptz NOT NULL DEFAULT now());CREATE TABLE IF NOT EXISTS stage_executions(event_id text PRIMARY KEY,execution_id text NOT NULL);`,
+    `CREATE TABLE IF NOT EXISTS stage_operations(event_id text PRIMARY KEY,digest text NOT NULL,scenario text NOT NULL,action_ms bigint NOT NULL,state text NOT NULL DEFAULT 'pending',disposition text NOT NULL DEFAULT 'unreviewed',execution_id text,request_id text,dispatch_state text NOT NULL DEFAULT 'none',proof text NOT NULL,consent_at_submit boolean NOT NULL);CREATE TABLE IF NOT EXISTS stage_provider_attempts(id bigserial PRIMARY KEY,event_id text NOT NULL);CREATE TABLE IF NOT EXISTS stage_event_attempts(id bigserial PRIMARY KEY,event_id text NOT NULL);CREATE TABLE IF NOT EXISTS stage_nonces(nonce text PRIMARY KEY,created_at timestamptz NOT NULL DEFAULT now());CREATE TABLE IF NOT EXISTS stage_mock_requests(event_id text PRIMARY KEY,request_id text UNIQUE NOT NULL);CREATE TABLE IF NOT EXISTS stage_mock_events(event_id text PRIMARY KEY,action_ms bigint NOT NULL,event_type text NOT NULL DEFAULT 'lead_created',received_at timestamptz NOT NULL DEFAULT now());CREATE TABLE IF NOT EXISTS stage_mock_mail_calls(id bigserial PRIMARY KEY,event_id text NOT NULL,execution_id text NOT NULL);CREATE TABLE IF NOT EXISTS stage_mock_mail_attempts(id bigserial PRIMARY KEY,event_id text NOT NULL,execution_id text NOT NULL);CREATE TABLE IF NOT EXISTS stage_mock_mail_received(event_id text PRIMARY KEY,execution_id text NOT NULL);CREATE TABLE IF NOT EXISTS stage_diagnostics(event_id text PRIMARY KEY,execution_id text NOT NULL,decision text NOT NULL,reason text NOT NULL,headline text NOT NULL,service text NOT NULL,authoritative_reject boolean NOT NULL,budget_known boolean NOT NULL,authoritative_score integer);CREATE TABLE IF NOT EXISTS stage_executions(event_id text PRIMARY KEY,execution_id text NOT NULL);`,
   ));
 }
 const proofFor = (id, time) => sign(`submission:${id}:${time}`);
@@ -133,6 +133,129 @@ export async function POST(req, { params }) {
           executionId: String(executionId),
         });
       }
+      if (path === "/api/bridge/disposition") {
+        if (
+          !["accept", "reject", "review"].includes(data.decision) ||
+          ![
+            "eligible_service",
+            "authoritative_reject",
+            "other_service_manual_review",
+          ].includes(data.reason) ||
+          (data.authoritativeReject === true && data.decision !== "reject") ||
+          !["Warm", "Low confidence"].includes(data.headline) ||
+          !["Other", "Deck replacement"].includes(data.service)
+        ) {
+          return send({ error: "invalid_disposition" }, 409);
+        }
+        const c = await db().connect();
+        try {
+          await c.query("BEGIN");
+          const r = await c.query(
+            "SELECT * FROM stage_operations WHERE event_id=$1 FOR UPDATE",
+            [eventId],
+          );
+          const row = r.rows[0];
+          if (
+            !row ||
+            row.state !== "processing" ||
+            row.execution_id !== String(executionId) ||
+            row.disposition !== "unreviewed"
+          )
+            throw Error("not_disposition_owner");
+          const state =
+            data.decision === "reject"
+              ? "rejected"
+              : data.decision === "review"
+                ? "manual_review_required"
+                : "processing";
+          await c.query(
+            "UPDATE stage_operations SET disposition=$2,state=$3 WHERE event_id=$1",
+            [eventId, data.decision, state],
+          );
+          if (data.decision !== "accept") {
+            await c.query(
+              "INSERT INTO stage_diagnostics(event_id,execution_id,decision,reason,headline,service,authoritative_reject,budget_known,authoritative_score) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)",
+              [
+                eventId,
+                String(executionId),
+                data.decision,
+                data.reason,
+                data.headline,
+                data.service,
+                data.authoritativeReject === true,
+                data.budgetKnown === true,
+                Number.isInteger(data.authoritativeScore)
+                  ? data.authoritativeScore
+                  : null,
+              ],
+            );
+          }
+          await c.query("COMMIT");
+          return send({
+            accepted: data.decision === "accept",
+            state,
+            decision: data.decision,
+            eventId,
+            executionId: String(executionId),
+            scenario: row.scenario,
+            actionTimestampMs: Number(row.action_ms),
+          });
+        } catch {
+          await c.query("ROLLBACK");
+          return send({ error: "invalid_disposition_transition" }, 409);
+        } finally {
+          c.release();
+        }
+      }
+      if (path === "/api/bridge/mock-mail") {
+        await db().query(
+          "INSERT INTO stage_mock_mail_calls(event_id,execution_id) VALUES($1,$2)",
+          [eventId, String(executionId)],
+        );
+        const row = (
+          await db().query("SELECT * FROM stage_operations WHERE event_id=$1", [
+            eventId,
+          ])
+        ).rows[0];
+        if (
+          !row ||
+          row.state !== "processing" ||
+          row.disposition !== "accept" ||
+          row.execution_id !== String(executionId) ||
+          row.scenario !== "mail_positive_control" ||
+          data.syntheticApproval !== true
+        ) {
+          return send({ error: "mock_mail_gate_closed" }, 409);
+        }
+        // Instrumented local stand-in for an EXTERNAL send; no SMTP or mail credentials exist.
+        await db().query(
+          "INSERT INTO stage_mock_mail_attempts(event_id,execution_id) VALUES($1,$2)",
+          [eventId, String(executionId)],
+        );
+        const c = await db().connect();
+        try {
+          await c.query("BEGIN");
+          await c.query(
+            "INSERT INTO stage_mock_mail_received(event_id,execution_id) VALUES($1,$2)",
+            [eventId, String(executionId)],
+          );
+          await c.query(
+            "UPDATE stage_operations SET state='mock_mail_control_complete' WHERE event_id=$1",
+            [eventId],
+          );
+          await c.query("COMMIT");
+          return send({
+            ok: true,
+            state: "mock_mail_control_complete",
+            eventId,
+          });
+        } catch {
+          await c.query("ROLLBACK");
+          return send({ error: "mock_mail_already_recorded" }, 409);
+        } finally {
+          c.release();
+        }
+      }
       if (path === "/api/bridge/mock-jobber-create") {
         const row = (
           await db().query("SELECT * FROM stage_operations WHERE event_id=$1", [
@@ -142,6 +265,7 @@ export async function POST(req, { params }) {
         if (
           !row ||
           row.state !== "processing" ||
+          row.disposition !== "accept" ||
           row.execution_id !== String(executionId)
         )
           return send({ error: "not_owner" }, 409);
@@ -175,6 +299,7 @@ export async function POST(req, { params }) {
             !row ||
             row.execution_id !== String(executionId) ||
             row.state !== "processing" ||
+            row.disposition !== "accept" ||
             String(data.actionTimestampMs) !== String(row.action_ms) ||
             ![
               "crm_request_confirmed",
@@ -222,6 +347,9 @@ export async function POST(req, { params }) {
           "insufficient",
           "delayed",
           "lost_response",
+          "vendor_other_reject",
+          "legitimate_other",
+          "mail_positive_control",
         ].includes(scenario) ||
         !Number.isSafeInteger(actionTimestampMs) ||
         actionTimestampMs <= 0
@@ -341,7 +469,7 @@ export async function POST(req, { params }) {
     }
     if (path === "/api/stats") {
       const r = await db().query(
-        "SELECT (SELECT count(*)::int FROM stage_provider_attempts WHERE event_id=$1) request_attempts,(SELECT count(*)::int FROM stage_event_attempts WHERE event_id=$1) event_attempts,(SELECT count(*)::int FROM stage_mock_requests WHERE event_id=$1) requests,(SELECT count(*)::int FROM stage_mock_events WHERE event_id=$1) events,(SELECT execution_id FROM stage_executions WHERE event_id=$1) execution_id",
+        "SELECT (SELECT count(*)::int FROM stage_mock_mail_calls WHERE event_id=$1) mail_transport_calls,(SELECT count(*)::int FROM stage_mock_events WHERE event_id=$1 AND event_type='lead_qualified') qualified_conversions,(SELECT count(*)::int FROM stage_mock_mail_attempts WHERE event_id=$1) mail_attempts,(SELECT count(*)::int FROM stage_mock_mail_received WHERE event_id=$1) customer_sends,(SELECT count(*)::int FROM stage_diagnostics WHERE event_id=$1) internal_diagnostics,(SELECT decision FROM stage_diagnostics WHERE event_id=$1) diagnostic_decision,(SELECT reason FROM stage_diagnostics WHERE event_id=$1) diagnostic_reason,(SELECT execution_id FROM stage_diagnostics WHERE event_id=$1) diagnostic_execution_id,(SELECT headline FROM stage_diagnostics WHERE event_id=$1) diagnostic_headline,(SELECT service FROM stage_diagnostics WHERE event_id=$1) diagnostic_service,(SELECT authoritative_reject FROM stage_diagnostics WHERE event_id=$1) diagnostic_authoritative_reject,(SELECT budget_known FROM stage_diagnostics WHERE event_id=$1) diagnostic_budget_known,(SELECT authoritative_score FROM stage_diagnostics WHERE event_id=$1) diagnostic_authoritative_score,(SELECT count(*)::int FROM stage_provider_attempts WHERE event_id=$1) request_attempts,(SELECT count(*)::int FROM stage_event_attempts WHERE event_id=$1) event_attempts,(SELECT count(*)::int FROM stage_mock_requests WHERE event_id=$1) requests,(SELECT count(*)::int FROM stage_mock_events WHERE event_id=$1) events,(SELECT execution_id FROM stage_executions WHERE event_id=$1) execution_id",
         [row.event_id],
       );
       return send({
@@ -350,7 +478,8 @@ export async function POST(req, { params }) {
         dispatch_state: row.dispatch_state,
         qualified: false,
         visit_scheduled: false,
-        customer_sends: 0,
+        disposition: row.disposition,
+        customer_writes: r.rows[0].customer_sends,
       });
     }
     return send({ error: "not_found" }, 404);

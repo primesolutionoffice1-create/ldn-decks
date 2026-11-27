@@ -17,7 +17,7 @@ test: full local integration and authentication assertions; reports in runtime/r
 production-check: separate production build/start must deny API even with STAGE_ONLY=true.
 refresh: copy only these staging sources and reimport only the local graph.
 down: stop/remove local containers and volumes, scrub generated compose secrets, retain sanitized reports.
-No dotenv files or production credentials are loaded. No SDK, real Jobber, Ads, customer sends or cloud n8n.
+No dotenv files or production credentials are loaded. No SDK, real Jobber, Ads, real customer sends or cloud n8n. Explicit synthetic mail control uses only an instrumented local HTTP sink.
 Next+n8n+PostgreSQL run on an internal network; secret-free ingress publishes127.0.0.1:13387 only.
 Production form/tracking files are never imported or modified by this harness.
 Browser: wait for 'React staging client ready' before submitting; only fake QA_STAGE_ fixtures are accepted.`);
@@ -319,7 +319,7 @@ if (cmd === "production-check") {
   const env={...process.env,NODE_ENV:'production',NEXT_TELEMETRY_DISABLED:'1'};
   const build=cp.spawnSync(process.execPath,['/app/node_modules/next/dist/bin/next','build','--webpack'],{cwd:dir,env,encoding:'utf8'});if(build.status!==0){console.error(build.stdout,build.stderr);process.exit(1);}
   const server=cp.spawn(process.execPath,['/app/node_modules/next/dist/bin/next','start','--hostname','127.0.0.1','--port','3100'],{cwd:dir,env,stdio:'ignore'});
-  (async()=>{try{for(let i=0;i<50;i++){try{const response=await fetch('http://127.0.0.1:3100/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});const body=await response.json();if(response.status!==404||body.error!=='staging_disabled')throw Error('production did not fail closed');console.log(JSON.stringify({productionModeDenied:true,stagingFlagStillTrue:env.STAGE_ONLY==='true',buildPassed:true}));return;}catch(e){if(e.message==='production did not fail closed')throw e;await new Promise(r=>setTimeout(r,200));}}throw Error('production server unavailable');}catch(e){console.error(e.message);process.exitCode=1;}finally{server.kill('SIGTERM');}})();`;
+  (async()=>{try{for(let i=0;i<50;i++){try{const response=await fetch('http://127.0.0.1:3100/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});const body=await response.json();if(response.status!==404||body.error!=='staging_disabled')throw Error('production did not fail closed');for(const path of ['/api/bridge/mock-mail','/api/bridge/disposition','/api/mock-event']){const denied=await fetch('http://127.0.0.1:3100'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});if(denied.status!==404||(await denied.json()).error!=='staging_disabled')throw Error('production did not fail closed');}console.log(JSON.stringify({productionModeDenied:true,stagingFlagStillTrue:env.STAGE_ONLY==='true',buildPassed:true,deniedPaths:['/api/submit','/api/bridge/mock-mail','/api/bridge/disposition','/api/mock-event']}));return;}catch(e){if(e.message==='production did not fail closed')throw e;await new Promise(r=>setTimeout(r,200));}}throw Error('production server unavailable');}catch(e){console.error(e.message);process.exitCode=1;}finally{server.kill('SIGTERM');}})();`;
   const result = run(
     [
       "docker",
@@ -598,6 +598,18 @@ if (cmd === "test") {
       ),
       loser = winner === "10001" ? "10002" : "10001";
     assert(
+      (await signed("bridge/disposition", {
+        eventId: id,
+        executionId: winner,
+        decision: "accept",
+        reason: "eligible_service",
+        authoritativeReject: false,
+        headline: "Warm",
+        service: "Deck replacement",
+      })) === 200,
+      "winner disposition denied",
+    );
+    assert(
       (await signed("bridge/mock-jobber-create", {
         eventId: id,
         executionId: loser,
@@ -697,11 +709,131 @@ if (cmd === "test") {
       "intake replay duplicated request",
     );
   });
+  const addendumEvidence = [];
+  const assertNoExternalEffects = (
+    t,
+    { allowDeniedTransport = false } = {},
+  ) => {
+    if (!allowDeniedTransport)
+      assert(
+        t.mail_transport_calls === 0,
+        "graph entered forbidden mock-mail transport",
+      );
+    assert(
+      t.mail_attempts === 0 &&
+        t.customer_sends === 0 &&
+        t.customer_writes === 0,
+      "mock customer mail/write escaped",
+    );
+    assert(
+      t.request_attempts === 0 && t.requests === 0,
+      "mock Jobber write escaped",
+    );
+    assert(
+      t.event_attempts === 0 && t.events === 0 && t.qualified_conversions === 0,
+      "conversion escaped",
+    );
+  };
+  await test("negative control Other + Warm + authoritative reject wins end-to-end", async () => {
+    const lead = await fixture("vendor_other_reject");
+    await dispatch(lead);
+    const t = await api("stats", lead);
+    assertNoExternalEffects(t);
+    assert(
+      t.state === "rejected" &&
+        t.disposition === "reject" &&
+        t.diagnostic_decision === "reject",
+      "authoritative reject lost",
+    );
+    assert(
+      t.diagnostic_headline === "Warm" &&
+        t.diagnostic_service === "Other" &&
+        t.diagnostic_authoritative_reject === true,
+      "conflicting fixture inputs not retained",
+    );
+    assert(
+      t.internal_diagnostics === 1 &&
+        t.diagnostic_execution_id === t.execution_id &&
+        /^\d+$/.test(t.execution_id),
+      "diagnostic not uniquely correlated",
+    );
+    addendumEvidence.push({ fixture: "vendor_other_reject", ...t });
+    await Promise.all(
+      Array.from({ length: 6 }, () => api("submit", lead.payload)),
+    );
+    await dispatch(lead);
+    const replay = await api("stats", lead);
+    assertNoExternalEffects(replay);
+    assert(replay.internal_diagnostics === 1, "replay duplicated diagnostic");
+  });
+  await test("legitimate Other with unknown budget remains manual review not spam", async () => {
+    const lead = await fixture("legitimate_other");
+    await dispatch(lead);
+    const t = await api("stats", lead);
+    assertNoExternalEffects(t);
+    assert(
+      t.state === "manual_review_required" &&
+        t.disposition === "review" &&
+        t.diagnostic_decision === "review",
+      "legitimate Other rejected",
+    );
+    assert(
+      t.diagnostic_headline === "Low confidence" &&
+        t.diagnostic_service === "Other" &&
+        t.diagnostic_authoritative_reject === false &&
+        t.diagnostic_budget_known === false &&
+        t.diagnostic_authoritative_score === 0,
+      "legitimate fixture missing",
+    );
+    assert(
+      t.internal_diagnostics === 1 &&
+        t.diagnostic_reason === "other_service_manual_review",
+      "manual diagnostic absent",
+    );
+    addendumEvidence.push({ fixture: "legitimate_other", ...t });
+  });
+  await test("explicit synthetic positive mail control reaches instrumented mock sink once", async () => {
+    const lead = await fixture("mail_positive_control");
+    await dispatch(lead);
+    const t = await api("stats", lead);
+    assert(
+      t.state === "mock_mail_control_complete" &&
+        t.mail_transport_calls === 1 &&
+        t.mail_attempts === 1 &&
+        t.customer_sends === 1 &&
+        t.customer_writes === 1,
+      "mock mail sink not exercised",
+    );
+    assert(
+      t.requests === 0 && t.events === 0 && t.qualified_conversions === 0,
+      "mail control affected CRM/conversion",
+    );
+    addendumEvidence.push({ fixture: "mail_positive_control", ...t });
+  });
+  await test("mock mail gate rejects bypass of rejected authoritative disposition", async () => {
+    const lead = await fixture("vendor_other_reject");
+    await status(lead);
+    const before = await api("stats", lead);
+    const code = await signed("bridge/mock-mail", {
+      eventId: lead.eventId,
+      executionId: before.execution_id,
+      syntheticApproval: true,
+    });
+    assert(code === 409, "rejected lead bypassed mail gate");
+    const after = await api("stats", lead);
+    assertNoExternalEffects(after, { allowDeniedTransport: true });
+    assert(
+      after.mail_transport_calls === 1,
+      "denied transport not instrumented",
+    );
+    assert(after.internal_diagnostics === 1, "bypass changed diagnostic");
+  });
   const report = {
     mode: "ACTUAL_NEXT_N8N_POSTGRES_LOCAL_MOCK",
     passed: results.filter((r) => r.status === "PASS").length,
     total: results.length,
     results,
+    addendumEvidence,
     images: { next: m.nodeImage, n8n: m.n8nImage, postgres: m.postgresImage },
     native_received_events: null,
     attributed_conversions: null,
