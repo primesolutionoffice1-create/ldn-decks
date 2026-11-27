@@ -1,0 +1,407 @@
+{
+  "id": "LDNLocalOpenAIStage",
+  "name": "LOCAL MOCK ONLY - LDN OpenAI Jobber receipt",
+  "active": false,
+  "nodes": [
+    {
+      "name": "Staging webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ldn-stage-intake",
+        "responseMode": "responseNode",
+        "options": {
+          "rawBody": true
+        }
+      },
+      "webhookId": "ldn-local-openai-stage",
+      "id": "local-stage-0"
+    },
+    {
+      "name": "Authenticate intake and sign claim",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [200, 0],
+      "parameters": {
+        "jsCode": "const crypto = require('crypto');\nconst raw = (await this.helpers.getBinaryDataBuffer(0,'data')).toString('utf8');\nconst intake=JSON.parse(raw);\nconst headers = $json.headers;\nconst t = headers['x-stage-time']; const nonce=headers['x-stage-nonce'];\nconst expected=crypto.createHmac('sha256',$env.STAGE_BRIDGE_KEY).update(`${t}.${nonce}.POST./webhook/ldn-stage-intake.${raw}`).digest('hex');\nif (!/^\\d+$/.test(t||'') || !/^[a-f0-9-]{36}$/.test(nonce||'') || Math.abs(Date.now()-Number(t))>60000 || !/^[a-f0-9]{64}$/.test(headers['x-stage-signature']||'') || !crypto.timingSafeEqual(Buffer.from(expected),Buffer.from(headers['x-stage-signature']))) throw new Error('Unauthorized staging intake');\nconst body=JSON.stringify({eventId:intake.eventId,executionId:String($execution.id),intakeNonce:nonce});\nconst time=String(Date.now()), callbackNonce=crypto.randomUUID(), path='/api/bridge/claim';\nconst signature=crypto.createHmac('sha256',$env.STAGE_BRIDGE_KEY).update(`${time}.${callbackNonce}.POST.${path}.${body}`).digest('hex');\nreturn [{json:{body,time,nonce:callbackNonce,signature}}];"
+      },
+      "id": "local-stage-1"
+    },
+    {
+      "name": "Claim operation",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [400, 0],
+      "parameters": {
+        "method": "POST",
+        "url": "http://next:3000/api/bridge/claim",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "x-stage-time",
+              "value": "={{ $json.time }}"
+            },
+            {
+              "name": "x-stage-nonce",
+              "value": "={{ $json.nonce }}"
+            },
+            {
+              "name": "x-stage-signature",
+              "value": "={{ $json.signature }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ $json.body }}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "retryOnFail": false,
+      "id": "local-stage-2"
+    },
+    {
+      "name": "Identity accepted?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [600, 0],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "accepted",
+              "leftValue": "={{ $json.accepted }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "local-stage-3"
+    },
+    {
+      "name": "Sign verified or held receipt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [800, -100],
+      "parameters": {
+        "jsCode": "const crypto=require('crypto');\nconst lead=$('Resolve exact Jobber identity').first().json;\nconst state=lead.identityReviewRequired?'identity_review_required':$json.requestId?'crm_request_confirmed':'unknown';\nconst body=JSON.stringify({eventId:lead.eventId,executionId:String($execution.id),actionTimestampMs:lead.actionTimestampMs,state,requestId:lead.identityReviewRequired?null:$json.requestId||null});\nconst time=String(Date.now()),nonce=crypto.randomUUID(),path='/api/bridge/complete';\nconst signature=crypto.createHmac('sha256',$env.STAGE_BRIDGE_KEY).update(`${time}.${nonce}.POST.${path}.${body}`).digest('hex');\nreturn [{json:{body,time,nonce,signature}}];"
+      },
+      "id": "local-stage-4"
+    },
+    {
+      "name": "Persist authenticated receipt",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1000, -100],
+      "parameters": {
+        "method": "POST",
+        "url": "http://next:3000/api/bridge/complete",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "x-stage-time",
+              "value": "={{ $json.time }}"
+            },
+            {
+              "name": "x-stage-nonce",
+              "value": "={{ $json.nonce }}"
+            },
+            {
+              "name": "x-stage-signature",
+              "value": "={{ $json.signature }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ $json.body }}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "retryOnFail": false,
+      "id": "local-stage-5"
+    },
+    {
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [1200, 0],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}"
+      },
+      "id": "local-stage-6"
+    },
+    {
+      "id": "local-stage-lookup",
+      "name": "Mock Jobber lookup",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [720, -100],
+      "parameters": {
+        "jsCode": "const input=$json;\nconst email=input.scenario==='insufficient'?'':'owner@example.invalid';\nconst phone='2025550100';\nlet candidates=[];\nif(input.scenario==='conflict')candidates=[{id:'MOCK-A',email,phone:'2025550101'},{id:'MOCK-B',email:'other@example.invalid',phone}];\nif(input.scenario==='shared_phone')candidates=[{id:'MOCK-B',email:'other@example.invalid',phone}];\nreturn [{json:{...input,email,phone,candidates,lookupComplete:input.scenario!=='insufficient'}}];"
+      }
+    },
+    {
+      "id": "local-stage-resolver",
+      "name": "Resolve exact Jobber identity",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [820, -100],
+      "parameters": {
+        "jsCode": "const lead=$json;\nconst normalizePhone=v=>String(v||'').replace(/\\D/g,'').replace(/^1(?=\\d{10}$)/,'');\nconst email=String(lead.email||'').trim().toLowerCase(); const phone=normalizePhone(lead.phone);\nconst emails=new Set(),phones=new Set();\nfor(const c of lead.candidates){if(email&&String(c.email||'').trim().toLowerCase()===email)emails.add(c.id);if(phone&&normalizePhone(c.phone)===phone)phones.add(c.id);}\nconst all=new Set([...emails,...phones]);\nconst consistent=emails.size===1&&(!phone||(phones.size===1&&[...phones][0]===[...emails][0]));\nconst review=!lead.lookupComplete||(!consistent&&(all.size>0||!email));\nreturn [{json:{...lead,identityReviewRequired:review,clientId:consistent&&!review?[...emails][0]:null,needsClientCreate:!review&&!consistent}}];"
+      }
+    },
+    {
+      "id": "local-stage-prepare-create",
+      "name": "Sign mock Jobber create",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1050, -100],
+      "parameters": {
+        "jsCode": "const crypto=require('crypto');const lead=$json;\nconst body=JSON.stringify({eventId:lead.eventId,executionId:String($execution.id)});\nconst time=String(Date.now()),nonce=crypto.randomUUID(),path='/api/bridge/mock-jobber-create';\nconst signature=crypto.createHmac('sha256',$env.STAGE_BRIDGE_KEY).update(`${time}.${nonce}.POST.${path}.${body}`).digest('hex');\nreturn [{json:{body,time,nonce,signature}}];"
+      }
+    },
+    {
+      "name": "Mock Jobber HTTP create",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1250, -100],
+      "parameters": {
+        "method": "POST",
+        "url": "http://next:3000/api/bridge/mock-jobber-create",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "x-stage-time",
+              "value": "={{ $json.time }}"
+            },
+            {
+              "name": "x-stage-nonce",
+              "value": "={{ $json.nonce }}"
+            },
+            {
+              "name": "x-stage-signature",
+              "value": "={{ $json.signature }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ $json.body }}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "retryOnFail": false,
+      "id": "local-stage-mock-create-http",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "local-stage-review",
+      "name": "Identity needs review?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [950, -100],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "review",
+              "leftValue": "={{ $json.identityReviewRequired }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Staging webhook": {
+      "main": [
+        [
+          {
+            "node": "Authenticate intake and sign claim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Authenticate intake and sign claim": {
+      "main": [
+        [
+          {
+            "node": "Claim operation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claim operation": {
+      "main": [
+        [
+          {
+            "node": "Identity accepted?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Identity accepted?": {
+      "main": [
+        [
+          {
+            "node": "Mock Jobber lookup",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Persist authenticated receipt": {
+      "main": [
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock Jobber lookup": {
+      "main": [
+        [
+          {
+            "node": "Resolve exact Jobber identity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resolve exact Jobber identity": {
+      "main": [
+        [
+          {
+            "node": "Identity needs review?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Identity needs review?": {
+      "main": [
+        [
+          {
+            "node": "Sign verified or held receipt",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Sign mock Jobber create",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sign mock Jobber create": {
+      "main": [
+        [
+          {
+            "node": "Mock Jobber HTTP create",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock Jobber HTTP create": {
+      "main": [
+        [
+          {
+            "node": "Sign verified or held receipt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sign verified or held receipt": {
+      "main": [
+        [
+          {
+            "node": "Persist authenticated receipt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "all",
+    "saveDataErrorExecution": "all",
+    "executionTimeout": 30
+  },
+  "pinData": {},
+  "versionId": "38d5438d-b20f-4d40-94c9-c23eb4bc9e3a"
+}
