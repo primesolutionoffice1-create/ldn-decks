@@ -115,7 +115,11 @@ export default function LoudounCountyPage() {
       />
       <GeoAnswerBlock
         question="Who builds composite decks across Loudoun County, VA?"
-        answer="Loudoun Decks plans composite deck replacement, resurfacing, screened porch, and outdoor living projects across Loudoun County, including Ashburn, Leesburg, Sterling, Purcellville, Brambleton, Broadlands, and nearby communities. Loudoun projects should start with HOA, LandMARC permit, framing, material, railing, lighting, and written estimate planning before public project claims or proof assets are used."
+        answer={
+          <>
+            Loudoun Decks plans composite deck replacement, resurfacing, screened porch, and outdoor living projects across Loudoun County, including Ashburn, Leesburg, Sterling, Purcellville, Brambleton, Broadlands, and nearby communities. Elevated and walkout work is covered on our <Link href="/insights/second-story-deck-builder-northern-virginia" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>second story deck builder in Northern Virginia</Link> page. Ashburn screened porches are planned on the <Link href="/screened-porches/ashburn" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>screened porch builder in Ashburn</Link> page. Loudoun projects should start with HOA, LandMARC permit, framing, material, railing, lighting, and written estimate planning before public project claims or proof assets are used.
+          </>
+        }
         facts={[
           'Primary buyer intent: Loudoun County deck builder, composite replacement, HOA-ready decks, and permit planning.',
           'Conversion path: Loudoun permit guide, city pages, and written estimate.'

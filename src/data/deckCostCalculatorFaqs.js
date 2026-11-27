@@ -1,5 +1,6 @@
 // One source for visible answers and the layout's FAQ schema.
 export const calculatorFaqs = [
+  { q: 'How much does a composite deck cost in Northern Virginia?', a: 'Loudoun Decks 2026 quoted prices for a new open deck are $61–$102 per sq ft, with most jobs around $64–$68. Totals vary with size, demolition, stairs, railings, access, and permits. This planner does not calculate a price. The written estimate is the project price.' },
   { q: 'Does this planner calculate a deck price?', a: 'No. It records the selected size, material and options. Request a written estimate for a project-specific price.' },
   { q: 'Does the planner include permits?', a: 'There is no permit setting or itemized permit allowance. Confirm drawings, fees, inspections and any HOA review in the written proposal.' },
   { q: 'Are stairs, railings and elevation included?', a: 'Stairs and railings can be selected as scope items. There is no elevation control. Dimensions, deck height and structural requirements need a site-specific estimate.' },

@@ -31,16 +31,22 @@ const COMPARISON_UPDATED_LABEL = 'Updated November 5, 2026';
 const COST_DRIVERS_SLUG = 'what-drives-composite-deck-costs-in-virginia';
 const COST_DRIVERS_MODIFIED = '2026-11-11';
 const COST_DRIVERS_UPDATED_LABEL = 'Updated November 11, 2026';
+const SECOND_STORY_SLUG = 'second-story-deck-builder-northern-virginia';
+const SECOND_STORY_MODIFIED = '2026-11-27';
+const SECOND_STORY_UPDATED_LABEL = 'Updated November 27, 2026';
+const ASHBURN_HOA_INSIGHT_SLUG = 'ashburn-hoa-deck-approval-steps-before-you-build';
 
 function insightModified(slug) {
   if (slug === COMPARISON_SLUG) return COMPARISON_MODIFIED;
   if (slug === COST_DRIVERS_SLUG) return COST_DRIVERS_MODIFIED;
+  if (slug === SECOND_STORY_SLUG) return SECOND_STORY_MODIFIED;
   return null;
 }
 
 function insightUpdatedLabel(slug) {
   if (slug === COMPARISON_SLUG) return COMPARISON_UPDATED_LABEL;
   if (slug === COST_DRIVERS_SLUG) return COST_DRIVERS_UPDATED_LABEL;
+  if (slug === SECOND_STORY_SLUG) return SECOND_STORY_UPDATED_LABEL;
   return null;
 }
 const COMPARISON_DESCRIPTION =
@@ -166,6 +172,8 @@ export default async function InsightArticlePage({ params }) {
   const leadText = article.excerpt.replace(/…$/, '');
   const isComparison = article.slug === COMPARISON_SLUG;
   const isCostDrivers = article.slug === COST_DRIVERS_SLUG;
+  const isSecondStory = article.slug === SECOND_STORY_SLUG;
+  const isAshburnHoaInsight = article.slug === ASHBURN_HOA_INSIGHT_SLUG;
   const modified = insightModified(article.slug);
   const updatedLabel = insightUpdatedLabel(article.slug);
   const showLead = !isComparison && Boolean(leadText) && !bodyText.startsWith(leadText);
@@ -232,8 +240,23 @@ export default async function InsightArticlePage({ params }) {
               </section>
             )}
 
+            {isSecondStory && (
+              <section className={styles.quotedBlock} aria-labelledby="second-story-quoted-prices">
+                <h2 id="second-story-quoted-prices">{QUOTE_LABEL}</h2>
+                <p data-speakable>
+                  {OPEN_DECK_RANGE} Stairs, elevation, and railings can move a quote up. Those are quoted prices, not an elevation percentage and not a guarantee. The written estimate after a site visit is the only project price. Walkout and upper-level homes in Ashburn, Brambleton, Broadlands, and One Loudoun often need this elevated framing, plus Loudoun County permits and HOA review. If you also want a three-season room, see our <Link href="/screened-porches/ashburn">screened porch builder in Ashburn</Link>.
+                </p>
+              </section>
+            )}
+
             {showLead && (
               <p className={blogStyles.leadParagraph} data-speakable>{leadText}</p>
+            )}
+
+            {isAshburnHoaInsight && (
+              <p className={styles.servicePointer}>
+                If the Ashburn project is an elevated or walkout deck, start with the <Link href="/insights/second-story-deck-builder-northern-virginia">second story deck builder in Northern Virginia</Link> guide. For a three-season room, use the <Link href="/screened-porches/ashburn">screened porch builder in Ashburn</Link> page.
+              </p>
             )}
 
             {showHeroImage && (
