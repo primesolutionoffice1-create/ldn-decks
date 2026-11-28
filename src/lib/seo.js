@@ -365,7 +365,9 @@ export function buildMetadata({
 }) {
     // Resolve image: explicit > path-based default > og-default.webp
     const resolvedImage = image || defaultOgImageForPath(path);
-    // Phase 1 cleanup: noindex redundant /near-you/* paths and broken showcase
+    // Phase 1 cleanup: noindex redundant /near-you/* paths and the DC rooftop
+    // showcase. Washington DC is outside the service area, so that page stays
+    // hidden from the index and out of sitemap.xml.
     let finalNoIndex = noIndex;
     const indexableCounties = [
         "/near-you/loudoun-county",

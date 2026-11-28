@@ -1,15 +1,4 @@
 import { SITE_URL } from '@/lib/seo';
-import { blogPosts } from '@/lib/blogData';
-
-function hasRecentNewsPosts() {
-  const twoDaysMs = 2 * 24 * 60 * 60 * 1000;
-  const now = Date.now();
-
-  return blogPosts.some((post) => {
-    const date = new Date(post.date);
-    return !Number.isNaN(date.getTime()) && now - date.getTime() <= twoDaysMs;
-  });
-}
 
 export default function robots() {
   // Only block if we KNOW it's a non-production Vercel env (preview/development)
@@ -91,7 +80,10 @@ export default function robots() {
     sitemap: [
       `${SITE_URL}/sitemap.xml`,
       `${SITE_URL}/image-sitemap.xml`,
-      ...(hasRecentNewsPosts() ? [`${SITE_URL}/news-sitemap.xml`] : []),
+      // Always declared. news-sitemap.xml is live and already submitted in
+      // Search Console. The route stays valid when no post is inside the
+      // 2-day Google News window (it falls back to the newest post).
+      `${SITE_URL}/news-sitemap.xml`,
     ],
     // host directive removed 2026-05-29: Yandex (the only parser that reads it)
     // wants a bare domain ('ldndecks.com'), not a URL with scheme. Google and
