@@ -3,8 +3,8 @@ import { BUSINESS } from '@/lib/business';
 import { OPEN_DECK_RANGE, QUOTE_LABEL } from '@/lib/quotedPrices';
 import styles from './MobileProofStrip.module.css';
 
-const MAPS_URL = BUSINESS.sameAs.find((url) => url.includes('google.com/maps/place/Loudoun+Decks'))
-  || 'https://www.google.com/maps/place/Loudoun+Decks/';
+const MAPS_URL = BUSINESS.sameAs.find((url) => url.includes('google.com/maps'))
+  || 'https://www.google.com/maps?cid=10508603141052545545';
 
 export default function MobileProofStrip() {
   return (

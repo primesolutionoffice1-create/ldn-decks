@@ -1,4 +1,4 @@
-// Owner-confirmed on 2026-11-01. Partnership only.
-// Do not add a tier, TrexPro level, certification, award, or memberOf claim.
+// Trex Platinum Partner and TimberTech Certified were confirmed by the owner
+// on 2026-10-31. This is not a TrexPro labor-warranty tier.
 export const PARTNER_SENTENCE =
-  'We install Trex and TimberTech decking and work with both as partner brands.';
+  'Loudoun Decks is a Trex Platinum Partner and TimberTech Certified. No TrexPro level is stated.';

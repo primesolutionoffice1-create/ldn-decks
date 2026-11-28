@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BUSINESS } from '@/lib/business';
+import { TRUST } from '@/lib/trust';
+import TrustBlock from '@/components/TrustBlock';
 
 // Surfaces a named project lead on commercial service pages.
 // AI Overviews extract named-provider snippets when they exist; Person schema is
@@ -10,7 +12,10 @@ import { BUSINESS } from '@/lib/business';
 // lastUpdated: optional freshness signal (e.g. "May 2026"). When present,
 // renders a small "Last reviewed/updated" line for AI citation confidence.
 export default function NamedAuthor({ context = 'Northern Virginia', lastUpdated = null }) {
+  const programLabels = TRUST.programs.map((program) => program.label).join(' and ');
+
   return (
+    <>
     <aside
       style={{
         display: 'flex',
@@ -46,7 +51,7 @@ export default function NamedAuthor({ context = 'Northern Virginia', lastUpdated
           <span style={{ fontWeight: 500, color: '#555' }} itemProp="jobTitle">{BUSINESS.founder.jobTitle}, Loudoun Decks</span>
         </p>
         <p style={{ margin: 0, fontSize: '0.85rem', color: '#555', lineHeight: 1.55 }} itemProp="description">
-          Virginia Class A Licensed Contractor. Deck planning in {context} is scoped in the written estimate. Trex and TimberTech program status is not stated here.{' '}
+          {BUSINESS.founder.hasCredential}. Deck planning in {context} is scoped in the written estimate. {programLabels}.{' '}
           <Link href="/team" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Meet the team</Link>
         </p>
         {lastUpdated && (
@@ -56,5 +61,7 @@ export default function NamedAuthor({ context = 'Northern Virginia', lastUpdated
         )}
       </div>
     </aside>
+    <TrustBlock />
+    </>
   );
 }

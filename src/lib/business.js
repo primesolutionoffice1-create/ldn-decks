@@ -83,6 +83,7 @@ export const BUSINESS = {
     'https://www.pinterest.com/loudoundecks/',
     'https://www.instagram.com/loudoundecks/',
     'https://www.facebook.com/profile.php?id=61574201228967',
+    'https://www.google.com/maps?cid=10508603141052545545',
     'https://www.google.com/maps/place/Loudoun+Decks/',
     'https://www.houzz.com/pro/webuser-782541997/loudoun-decks',
     'https://www.yelp.com/biz/loudoun-decks-centreville',
@@ -102,6 +103,16 @@ export const BUSINESS = {
       name: 'Class A Contractor License',
       category: 'license',
       recognizedBy: 'Virginia Department of Professional and Occupational Regulation',
+    },
+    {
+      name: 'Trex Platinum Partner',
+      category: 'program',
+      recognizedBy: 'Trex',
+    },
+    {
+      name: 'TimberTech Certified',
+      category: 'program',
+      recognizedBy: 'TimberTech',
     },
     {
       name: 'NADRA Builder/Contractor/Remodeler Membership',

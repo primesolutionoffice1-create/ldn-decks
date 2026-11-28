@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./variables.css";
 import "./globals.css";
 import Script from "next/script";
+import XappChatWidget from "@/components/XappChatWidget";
 import StructuredData from "../components/StructuredData";
 import WebVitalsReporter from "../components/WebVitalsReporter";
 import MetaPixelRouteTracker from "@/components/MetaPixelRouteTracker";
@@ -184,11 +185,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <OpenAIMeasurement />
                     <ConsentBanner />
         </ContactProvider>
-        <Script
-          id="xapp-widget"
-          src="https://widget.xapp.ai/xapp-chat-widget.js?key=ab9437fd-cfae-4e99-8d67-5ba6dd4a0f5d"
-          strategy="afterInteractive"
-        />
+        <XappChatWidget />
         {/* CallRail dynamic number insertion. CallRail requires the swap
             tag on every page, immediately before </body>. next/script
             afterInteractive runs after hydration, then this loader appends

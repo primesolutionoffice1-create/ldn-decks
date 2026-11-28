@@ -84,6 +84,7 @@ const homepageSchema = {
     "cssSelector": ["h1", "[data-speakable]"]
   },
   "significantLink": [
+    "https://ldndecks.com/deck-builder-northern-virginia",
     "https://ldndecks.com/services/new-decks",
     "https://ldndecks.com/composite-decks",
     "https://ldndecks.com/trex-decks",
@@ -180,6 +181,7 @@ export default function Home() {
             <Hero />
             <nav aria-label="Deck builders and repair" style={{ maxWidth: 900, margin: "0 auto", padding: "1.25rem 1.5rem 0" }}>
               <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexWrap: "wrap", gap: "0.75rem 1.25rem" }}>
+                <li><Link href="/deck-builder-northern-virginia" style={{ color: "var(--color-primary)", fontWeight: 700 }}>Deck builder in Northern Virginia</Link></li>
                 <li><Link href="/deck-builder-fairfax-va" style={{ color: "var(--color-primary)", fontWeight: 700 }}>Deck builders in Fairfax, VA</Link></li>
                 <li><Link href="/deck-builder-manassas-va" style={{ color: "var(--color-primary)", fontWeight: 700 }}>Deck builders in Manassas, VA</Link></li>
                 <li><Link href="/deck-repair-loudoun-county" style={{ color: "var(--color-primary)", fontWeight: 700 }}>Deck repair in Loudoun County</Link></li>

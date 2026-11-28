@@ -9,6 +9,7 @@ import ServicesHome from '@/components/ServicesHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import CallLink from '@/components/CallLink';
 import NamedAuthor from '@/components/NamedAuthor';
+import GuideCommercialLinks from '@/components/GuideCommercialLinks';
 import MidArticleCta from '@/components/MidArticleCta';
 import JsonLd from '@/components/JsonLd';
 import { BUSINESS, FOUNDER_ID, ORG_ID, WEBSITE_ID } from '@/lib/business';
@@ -369,6 +370,8 @@ export default async function SingleBlogPage({ params }) {
                    {post.disclaimer}
                  </p>
                )}
+
+               <GuideCommercialLinks path={`blog/${post.slug}`} />
 
                <div style={{ marginTop: '40px' }}>
                  <NamedAuthor context="Northern Virginia" lastUpdated={post.dateModified || post.date} />

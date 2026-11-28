@@ -9,6 +9,7 @@ import { getSoroArticles } from '@/lib/soro';
 import { SITE_URL } from '@/lib/seo';
 import { getIndexableLocalServicePages } from '@/data/localServicePages';
 import { localServiceBuyerFaqs } from '@/data/localServiceBuyerFaqs';
+import { publishedProjectCaseStudies } from '@/data/projectCaseStudies';
 
 // Tier dates are fallbacks for entries whose source file we cannot resolve
 // (blog posts, education articles, showcase projects come from data files,
@@ -493,7 +494,14 @@ export default async function sitemap() {
                 freq: "monthly",
         }));
 
-        const allPages = [...staticPages, ...localServicePaths, ...blogPaths, ...educationPaths, ...insightPaths, ...showcasePaths]
+        const projectPaths = publishedProjectCaseStudies().map((project) => ({
+                path: `/projects/${project.slug}`,
+                priority: 0.64,
+                lastMod: '2026-11-28',
+                freq: 'monthly',
+        }));
+
+        const allPages = [...staticPages, ...localServicePaths, ...blogPaths, ...educationPaths, ...insightPaths, ...showcasePaths, ...projectPaths]
                 .filter(p => !isExcluded(p.path));
 
         return allPages.map(({ path, lastMod, priority, freq, videos }) => ({

@@ -5,8 +5,8 @@ import HeroCTA from './HeroCTA';
 import { BUSINESS } from '@/lib/business';
 import { AREAS_HUB_PATH, COVERAGE_SENTENCE } from '@/lib/serviceArea';
 
-const MAPS_URL = BUSINESS.sameAs.find((url) => url.includes('google.com/maps/place/Loudoun+Decks'))
-  || 'https://www.google.com/maps/place/Loudoun+Decks/';
+const MAPS_URL = BUSINESS.sameAs.find((url) => url.includes('google.com/maps'))
+  || 'https://www.google.com/maps?cid=10508603141052545545';
 
 // Server component. The image, headline, and trust badge render at build time.
 // The two CTAs are isolated in HeroButtons (client) so only that subtree hydrates.
