@@ -1,0 +1,60 @@
+old_path,status,gsc_impressions,proposed_target,confidence,note
+/about-company,404,1368,/about,high,Old company-about slug; live page is /about. /about-loudoun-deck-company already 308s there.
+/blog/2x8-to-2x10-deck-beam,404,1,/blog/2x8-vs-2x10-deck-joists,medium,Typo/near-miss of the joist comparison; no live beam-span article in the sitemap.
+/blog/2x8-to-2x10-deck-joists,404,1,/blog/2x8-vs-2x10-deck-joists,high,Typo: 'to' instead of 'vs'.
+/blog/2x8-vs-2x10-deck-joist,404,2,/blog/2x8-vs-2x10-deck-joists,high,Singular 'joist' vs live plural slug.
+/blog/2x8-vs-2x10-joists,404,2,/blog/2x8-vs-2x10-deck-joists,high,Missing 'deck' in the slug.
+/blog/composite-dir-total-cost-20-years,404,1,/blog/composite-vs-pressure-treated-deck-total-cost-20-years,medium,Garbled slug ('dir'); closest 20-year cost article is the PT comparison.
+/blog/composite-railing-vs-aluminum-railing-which-is-better,404,1,/blog/composite-railing-vs-aluminum-railing,high,Same article with a 'which-is-better' suffix.
+/blog/composite-railing-vsa-aluminum-railing,404,1,/blog/composite-railing-vs-aluminum-railing,high,Typo: 'vsa' instead of 'vs'.
+/blog/composite-vs-wood-deck-total-cost-20-years,404,1,/blog/composite-vs-pressure-treated-deck-total-cost-20-years,medium,"Closest 20-year cost post; live slug uses pressure-treated, not 'wood'. Alternate: /wood-vs-composite-deck-long-term-cost."
+/blog/deck-footing-code-northern-virginia,404,1,/deck-footing-code-northern-virginia,high,Exact slug moved off /blog/ to the root guide.
+/blog/deck-ledger-board-problems-signs-raise,404,1,/blog/deck-ledger-board-problems-signs-repair,high,Typo: 'raise' instead of 'repair'.
+/blog/deck-permit-requirements-fairfax-homeowners,404,1,/blog/deck-permit-requirements-fairfax-county-2026,high,Same Fairfax permit article; live slug uses county-2026 instead of homeowners.
+/blog/deck-railing-code-requirements-northern-vinyl-2026,404,1,/blog/deck-railing-code-requirements-northern-virginia-2026,high,Typo: 'vinyl' instead of 'virginia'.
+/blog/how-to-restoration-faded-composite-decking,404,1,/blog/how-to-restore-faded-composite-decking,high,Typo: 'restoration' instead of 'restore'.
+/blog/how-to-restored-faded-composite-decking,404,1,/blog/how-to-restore-faded-composite-decking,high,Typo: 'restored' instead of 'restore'.
+/blog/multi-level-deck-design,404,1,/blog/multi-level-deck-design-northern-virginia,high,Shorter slug of the live multi-level design post.
+/blog/screened-patios-with-eze-breeze,404,1,/three-season-room-northern-virginia,medium,No Eze-Breeze page in the sitemap; that product is used in three-season rooms. Alternate: /blog/screened-porch-vs-three-season-room-northern-virginia.
+/blog/screened-porch-cost-northern-virginia,404,1,/blog/screened-porch-cost-northern-virginia-2026,high,Same blog topic with a 2026 suffix. Root /screened-porch-cost-northern-virginia is also live.
+/blog/trex-decking-colors-full-sun-northern-virginia,404,1,/blog/best-composite-deck-colors-full-sun-northern-virginia,medium,"Shares the full-sun slug; live title is generic composite, not Trex. Alternate Trex-specific: /blog/trex-deck-color-combinations-2026."
+/blog/trex-lineage-transcend-vs-signature,404,1,/blog/trex-lineage-vs-transcend-vs-signature,high,Missing 'vs' between Lineage and Transcend.
+/blog/trex-lineage-vs-transcend,404,1,/blog/trex-lineage-vs-transcend-vs-signature,high,Shorter slug of the live Lineage/Transcend/Signature comparison.
+/blog/trex-lineage-vs-transcend-signature,404,2,/blog/trex-lineage-vs-transcend-vs-signature,high,Missing 'vs' before Signature.
+/blog/trex-lineage-vs-transcend-via-signature,404,1,/blog/trex-lineage-vs-transcend-vs-signature,high,Typo: 'via' instead of 'vs'.
+/blog/trex-transcend-lineage,404,1,/blog/trex-lineage-vs-transcend-vs-signature,high,"Same product comparison, words reordered."
+/blog/trex-vs-timbertech-which-composite-northern-virginia,404,1,/trex-vs-timbertech-vs-azek,high,Main live brand-comparison page. Alternate: /insights/trex-vs-timbertech-decking-for-northern-virginia.
+/blog/trex-vs-wood-deck-including-framing,404,1,/blog/trex-vs-wood-decking,high,Closest live Trex-vs-wood blog slug.
+/blog/trex-vs-wood-decking-cost-maintenance-comparison,404,1,/blog/trex-vs-wood-decking,high,Same comparison with a cost/maintenance suffix. Alternate: /wood-vs-composite-deck-long-term-cost.
+/blog/why-does-composite-trex-decking-fades-sun-solutions,404,1,/blog/why-composite-trex-decking-fades-sun-solutions,high,Extra 'does' in the slug.
+/deck-railing-code-northern-virginia,404,1,/blog/deck-railing-code-requirements-northern-virginia-2026,high,Closest live 'railing code' article. /deck-railing-options-northern-virginia is a broader options page.
+/does-a-deck-add-home-value,404,1,/does-a-deck-add-value-to-your-home,high,Near-exact slug of the live ROI page.
+/education/deck-drainage-system,404,1,/education/deck-drainage-systems-guide,high,Singular/shorter slug of the live education guide.
+/education/deck-drainage-system-guide-dry-under-deck,404,1,/education/deck-drainage-systems-guide,high,Same education guide; live slug drops 'dry-under-deck'.
+/education/deck-shair-code-rise-run-virginia,404,1,/education/deck-stair-code-rise-run-virginia,high,Typo: 'shair' instead of 'stair'.
+/education/dx-stair-construction-diagram,404,1,/education/deck-stair-construction-diagram,high,Typo: 'dx' instead of 'deck'.
+/education/hoa-deck-approval-process,404,1,/education/hoa-deck-approval-guidelines-nova,high,Same education topic in-folder. Alternate closer process slug: /blog/hoa-deck-approval-process-northern-virginia.
+/education/ledger-board-flashing-guide-deck-to-house,404,1,/education/ledger-board-flashing-deck-attachment-virginia,high,Same flashing guide; live slug uses deck-attachment-virginia.
+/faq,404,77,/faqs,high,Singular /faq vs live /faqs. /faq-deck-building already 308s to /faqs.
+/how-affect-deck-prices-in-2026,404,1,/how-tariffs-affect-deck-prices-2026,medium,Missing the word 'tariffs'; otherwise the live 2026 prices article.
+/how-deck-prices-are-affected-by-tariffs-2026,404,1,/how-tariffs-affect-deck-prices-2026,high,Worded variant of the live tariffs article.
+/how-tariff-affect-deck-prices-2026,404,2,/how-tariffs-affect-deck-prices-2026,high,Singular 'tariff' typo.
+/how-tariffs-affect-prices-2026,404,1,/how-tariffs-affect-deck-prices-2026,high,Missing the word 'deck'.
+/how-the-tariffs-affect-deck-prices-2026,404,1,/how-tariffs-affect-deck-prices-2026,high,Extra 'the' in the slug.
+/how-trumps-tariffs-will-impact-lumber-prices-housing-market,404,1,/how-tariffs-affect-deck-prices-2026,medium,Broader lumber/housing wording; closest live tariffs/prices article.
+/ldndecks.com/under-deck-ceiling-ideas,404,1,/under-deck-ceiling-ideas,high,Malformed path with the hostname in the slug.
+/near-you/prince-william-county/yorkshire,404,3,/near-you/prince-william-county,low,No Yorkshire community page in the sitemap; nearest parent is the Prince William county page. Old /top-decks-build-near-you/deck-builder-in-yorkshire/ already 308s only as far as /near-you.
+/outdoor-deck-ceiling-ideas,404,1,/under-deck-ceiling-ideas,high,Same topic; live slug uses 'under-deck'.
+/paver-vs-patio-northern-virginia,404,1,/paver-vs-flagstone-patio-northern-virginia,high,Live slug inserts 'flagstone'.
+/porch-repair-vs-replacement-costs-inspection-in-nova,404,1,/porch-repair-vs-replacement-northern-virginia,high,Same repair-vs-replacement guide; live slug uses northern-virginia.
+/screened-porch-northern-virginia,404,2,/screened-porch-builder-northern-virginia,high,Generic service slug; live builder page is the closest sitemap match.
+/screened-porches-in-clifton-va,404,1,/screened-porch-contractor-fairfax-county,medium,No Clifton screened-porch page; Clifton is in Fairfax County. Alternate location post: /blog/deck-builder-clifton-va.
+/screened-porth-builder-northern-virginia,404,1,/screened-porch-builder-northern-virginia,high,Typo: 'porth' instead of 'porch'.
+/services/porches/front-porches,404,1,/services/porches/front-porch,high,Plural 'front-porches' vs live singular.
+/trex-timbertech-azek,404,1,/trex-vs-timbertech-vs-azek,high,Missing the 'vs' words in the live comparison slug.
+/trex-vs-timbertech-azek,404,16,/trex-vs-timbertech-vs-azek,high,"Missing 'vs' before Azek. Highest-impression typo of this cluster (16 GSC impressions, 1 click)."
+/trex-vs-timbertech-vs-azek-vs-fiberon,404,1,/trex-vs-timbertech-vs-azek,medium,Live comparison omits Fiberon. Alternate: /fiberon-decking-review-northern-virginia.
+/drafts,410,15,leave/410,high,"Already 410 Gone after a trailing-slash 308. Draft/preview URLs should stay Gone, not redirect to a public page."
+/wp-content/uploads/2025/12/Horizontal-Fence-640x640-1.webp,403,1,leave/410,high,"Orphaned WordPress fence image; 403 now. Prefer 410 over a guess. If a user-facing 301 is required, /showcase/custom-wood-fence-ashburn or /services/fence."
+/wp-content/uploads/2025/12/deck_002-edited-1-1024x640.webp,403,2,leave/410,high,"Orphaned WordPress deck image; 403 now. Prefer 410. If a 301 is required, /showcase."
+/wp-content/uploads/elementor/thumbs/custom-12-rfkdwsltx7ko6v2eecxbdn2s1t2e3z0ptbp3pl8tn4.webp,403,1,leave/410,high,Orphaned Elementor thumbnail; 403 now. Prefer 410. No reliable visual match in the current sitemap.

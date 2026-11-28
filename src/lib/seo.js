@@ -365,7 +365,8 @@ export function buildMetadata({
 }) {
     // Resolve image: explicit > path-based default > og-default.webp
     const resolvedImage = image || defaultOgImageForPath(path);
-    // Phase 1 cleanup: noindex redundant /near-you/* paths and broken showcase
+    // Phase 1 cleanup: noindex redundant /near-you/* paths.
+    // /showcase/rooftop-deck-washington-dc is indexable and listed from showcaseData.
     let finalNoIndex = noIndex;
     const indexableCounties = [
         "/near-you/loudoun-county",
@@ -376,8 +377,6 @@ export function buildMetadata({
     ];
     const isIndexableCounty = indexableCounties.includes(path);
     if (path.startsWith('/near-you/') && !isIndexableCounty) {
-        finalNoIndex = true;
-    } else if (path === '/showcase/rooftop-deck-washington-dc') {
         finalNoIndex = true;
     }
 
