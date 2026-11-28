@@ -4,12 +4,15 @@ import Link from 'next/link';
 // Information Gain section — surfaces verified NoVA permit timelines and fees
 // alongside primary-source guide links. Built per BEAST plan §9: passage-level
 // chunks for AI Overview extraction, each H3 reads as a standalone answer.
+const LANDMARC_URL = 'https://www.loudoun.gov/5823/LandMARC-Land-Management-Applications-Re';
+
 const jurisdictions = [
   {
     name: 'Loudoun County',
     timeline: '2–4 weeks',
     fee: 'See the current county fee schedule',
-    portal: 'LOLA online portal',
+    portal: 'LandMARC online portal',
+    portalHref: LANDMARC_URL,
     note: 'Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. Plan review runs faster in winter, slower at spring peak.',
     href: '/deck-permit-loudoun-county-virginia',
   },
@@ -77,7 +80,11 @@ export default function NoVAPermitTimeline() {
                   </td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>{j.timeline}</td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>{j.fee}</td>
-                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>{j.portal}</td>
+                  <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee' }}>
+                    {j.portalHref ? (
+                      <a href={j.portalHref} target="_blank" rel="noopener noreferrer">{j.portal}</a>
+                    ) : j.portal}
+                  </td>
                   <td style={{ padding: '0.85rem', borderBottom: '1px solid #eee', color: '#555', lineHeight: 1.55 }}>{j.note}</td>
                 </tr>
               ))}
@@ -86,7 +93,9 @@ export default function NoVAPermitTimeline() {
         </div>
 
         <p style={{ marginTop: '1.25rem', fontSize: '0.82rem', color: '#888', fontStyle: 'italic' }}>
-          Sources: Loudoun County Department of Building and Development (LOLA portal), Fairfax County Building Development Division (PLUS), City of Fairfax Building Department, Prince William County Office of Building Development. Fees vary with project valuation; ranges reflect typical residential deck builds of 250–550 sqft.
+          Sources: Loudoun County Department of Building and Development ({' '}
+          <a href={LANDMARC_URL} target="_blank" rel="noopener noreferrer">LandMARC: Land Management, Applications, Research, Coordination</a>
+          ), Fairfax County Building Development Division (PLUS), City of Fairfax Building Department, Prince William County Office of Building Development. Fees vary with project valuation; ranges reflect typical residential deck builds of 250–550 sqft.
         </p>
       </div>
     </section>

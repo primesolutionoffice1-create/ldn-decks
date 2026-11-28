@@ -59,7 +59,7 @@ const viennaFAQs = [
   },
   {
     q: "How long does it take to build a deck in Vienna?",
-    a: "Permit review usually takes 2-4 weeks. Once the permit is issued, construction of a standard composite deck typically takes 1-2 weeks. Screened porches or multi-level projects may take 3-4 weeks."
+    a: "Permit review usually takes 3–5 weeks for a Town of Vienna or Fairfax County address. Once the permit is issued, construction of a standard composite deck typically takes 1-2 weeks. Screened porches or multi-level projects may take 3-4 weeks."
   },
   {
     q: "Are you a licensed deck builder in Fairfax County?",
