@@ -16,12 +16,13 @@ import PlanningUpdate from '@/components/PlanningUpdate';
 import GeoAnswerBlock from '@/components/GeoAnswerBlock';
 import { BUSINESS } from '@/lib/business';
 import PaidSearchLeadForm from '@/components/PaidSearchLeadForm';
+import CallLink from '@/components/CallLink';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   path: '/deck-builder-northern-virginia',
-  title: 'Custom Deck Builder Northern Virginia | LDN Decks',
-  description: 'Custom deck builder in Northern Virginia for composite decks, Trex, TimberTech, deck replacement, permits and HOA approvals across Loudoun and Fairfax.',
+  title: 'Deck Builder Northern VA | Loudoun Decks',
+  description: 'Deck builder in Northern Virginia for Fairfax, Loudoun, and Prince William. Composite decks, permits, and a written estimate. Call (571) 655-7207.',
   image: '/social/deck-builder-northern-virginia-social.png',
 });
 
@@ -258,10 +259,10 @@ export default function DeckBuilderNorthernVirginiaPage() {
   return (
     <main>
       <JsonLd data={faqSchema} />
-      <WebPageSchema dateModified="2026-10-18" url="https://ldndecks.com/deck-builder-northern-virginia" name="Custom Deck Builder in Northern Virginia" description="Custom deck builder in Northern Virginia for composite, PVC, wood, replacement, permits and HOA approvals. Serving Loudoun, Fairfax and Prince William." speakable />
+      <WebPageSchema dateModified="2026-11-28" url="https://ldndecks.com/deck-builder-northern-virginia" name="Deck Builder in Northern Virginia" description="Deck builder in Northern Virginia for Fairfax, Loudoun, and Prince William counties. Composite decks, permits, and a written estimate." speakable />
       <ServiceSchema
         url="https://ldndecks.com/deck-builder-northern-virginia"
-        name="Custom Deck Builder in Northern Virginia"
+        name="Deck Builder in Northern Virginia"
         description="Custom composite, PVC and wood deck construction, deck replacement, permits, HOA support and outdoor living design across Northern Virginia."
         areaServed={[
           { '@type': 'Place', name: 'Northern Virginia' },
@@ -274,9 +275,19 @@ export default function DeckBuilderNorthernVirginiaPage() {
       />
       <ServicesHeader
         subtext="Northern Virginia Deck Builder"
-        title="Custom Deck Builder in Northern Virginia"
+        title="Deck Builder in Northern Virginia"
         description="Loudoun Decks designs and builds permitted custom decks for homeowners across Loudoun, Fairfax, Prince William, Arlington and Stafford counties."
       />
+      <section style={{ background: '#fff', padding: '2rem 1.5rem 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <p style={{ color: '#333', lineHeight: 1.7, fontSize: '1.05rem' }}>
+            Loudoun Decks is the deck builder for homeowners in Fairfax County, Loudoun County, and Prince William County. The work on this page is new decks, deck replacement, composite decking, railings, stairs, and the permit and HOA package that goes with them. Arlington and Stafford are also in the service area. A written estimate follows a look at the house, the grade, and the county.
+          </p>
+          <p style={{ marginTop: '0.8rem' }}>
+            <CallLink ctaLocation="deck_builder_northern_virginia_intro" pageContext={{ pageType: 'service', county: 'Northern Virginia', service: 'Deck builder' }} />
+          </p>
+        </div>
+      </section>
       <GeoAnswerBlock
         question="Who is the deck builder for Northern Virginia?"
         answer={`${BUSINESS.name} (${BUSINESS.alternateName}) designs and builds custom decks for homeowners in ${BUSINESS.areaServed.join(', ')}. The company is a Virginia Class A contractor, license #2705191673, based at ${BUSINESS.address.streetAddress}, ${BUSINESS.address.addressLocality}, ${BUSINESS.address.addressRegion} ${BUSINESS.address.postalCode}. A written estimate is the next step after the property, scope, and county requirements are reviewed.`}

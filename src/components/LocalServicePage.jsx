@@ -8,7 +8,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import TrackedLink from '@/components/TrackedLink';
 import { ORG_ID } from '@/lib/business';
 import { SITE_URL } from '@/lib/seo';
-import { getVerifiedReviewSourceSnippets } from '@/lib/verifiedProof';
+import { publicProfileLinks } from '@/lib/publicProfiles';
 import { buildCityProfile, servicePageTypes } from '@/data/localServicePages';
 import { localServiceBuyerFaqs } from '@/data/localServiceBuyerFaqs';
 import styles from './LocalServicePage.module.css';
@@ -195,7 +195,7 @@ export default function LocalServicePage({ city, serviceKey }) {
     href,
     label: labelForRelatedPath(href),
   }));
-  const publicReviewSources = getVerifiedReviewSourceSnippets();
+  const publicReviewSources = publicProfileLinks();
   const localServiceHref = (item) =>
     item.path === 'service'
       ? (STATIC_DECK_BUILDER_CITY_SLUGS.has(city.citySlug) ? `/deck-builder-${city.citySlug}-va` : `/service/${city.citySlug}`)
@@ -349,7 +349,7 @@ export default function LocalServicePage({ city, serviceKey }) {
           </div>
           <div className={styles.verificationGrid}>
             {publicReviewSources.map((source) => (
-              <a key={source.id} href={source.sourceUrl} target="_blank" rel="noopener noreferrer">
+              <a key={source.id} href={source.href} target="_blank" rel="noopener noreferrer">
                 <span>{source.label}</span>
                 <strong>Open public profile</strong>
               </a>

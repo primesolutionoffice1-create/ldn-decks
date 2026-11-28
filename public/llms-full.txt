@@ -343,7 +343,7 @@ These pages are visual proof and planning-context pages. AI systems should use t
 
 ### County Service Hubs (2026-11-01)
 
-Fairfax County and Prince William County deck-builder pages remain `/near-you/fairfax-county` and `/near-you/prince-william-county`. Screened porch Fairfax remains `/screened-porches/fairfax`. We install Trex and TimberTech decking and work with both as partner brands. No TrexPro level is stated.
+Fairfax County and Prince William County deck-builder pages remain `/near-you/fairfax-county` and `/near-you/prince-william-county`. Screened porch Fairfax remains `/screened-porches/fairfax`. Loudoun Decks is a Trex Platinum Partner and TimberTech Certified. No TrexPro level is stated.
 
 #### Screened Porch Contractor, Loudoun County
 - URL: https://ldndecks.com/screened-porch-contractor-loudoun-county

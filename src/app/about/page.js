@@ -19,7 +19,7 @@ import AboutTrustExpansion from '@/components/AboutTrustExpansion';
 
 export const metadata = buildMetadata({
   path: '/about',
-  title: 'About Loudoun Decks | Trusted Deck Builder Northern Virginia',
+  title: 'About Loudoun Decks | Licensed Virginia Contractor',
   description: "Meet the team behind Northern Virginia's trusted deck builder. VA Class A Licensed, Trex product-line planning, Google reviews. Founded by Nicolae Zugrav. Serving Loudoun, Fairfax & Prince William.",
   image: '/social/about-loudoun-decks-social.png',
 });
@@ -64,7 +64,7 @@ const aboutPageSchema = {
 export default function AboutPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/about" name="About Loudoun Decks | Trusted Deck Builder Northern Virginia" description="Meet the team behind Loudoun Decks. Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Verify the Virginia DPOR record and public profile links." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/about" name="About Loudoun Decks | Licensed Virginia Contractor" description="Meet the team behind Loudoun Decks. Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Verify the Virginia DPOR record and public profile links." speakable />
       <JsonLd data={aboutFaqSchema} />
       <JsonLd data={aboutPageSchema} />
       <AboutHeader />

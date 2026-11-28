@@ -10,6 +10,7 @@ import RelatedGuides from '@/components/RelatedGuides';
 import ServicesHome from '@/components/ServicesHome';
 import ServiceAreasGrid from '@/components/ServiceAreasGrid';
 import CallLink from '@/components/CallLink';
+import GuideCommercialLinks from '@/components/GuideCommercialLinks';
 import MidArticleCta from '@/components/MidArticleCta';
 import styles from '@/app/blog/[slug]/BlogContent.module.css';
 
@@ -401,6 +402,8 @@ export default async function SingleEducationPage({ params }) {
                    {article.disclaimer}
                  </p>
                )}
+
+               <GuideCommercialLinks path={`education/${article.slug}`} />
 
                <div className={styles.conclusionBox}>
                  <h3>Plan Your Northern Virginia Deck Project With Loudoun Decks</h3>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { TRUST } from '@/lib/trust';
 import styles from './Testimonials.module.css';
 
 const reviewProfiles = [
@@ -8,7 +9,7 @@ const reviewProfiles = [
     id: 1,
     name: "Google Business Profile",
     detail: "Public Google review profile. Verify current count, rating, and review text directly on Google Maps.",
-    href: "https://www.google.com/maps/place/Loudoun+Decks/",
+    href: TRUST.google.profileUrl,
     image: "/images/img01.jpeg"
   },
   {
@@ -73,7 +74,7 @@ export default function Testimonials() {
             Google Review Guidance &rarr;
           </Link>
           <a
-            href="https://www.google.com/maps/place/Loudoun+Decks/"
+            href={TRUST.google.profileUrl}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.googleLink}
