@@ -32,7 +32,7 @@ export default function ProcessPage() {
           {[
             'End-to-end timeline: typically 6–10 weeks from signed contract to final inspection — 2–4 weeks of permitting, then 1–2 weeks of construction for a standard deck.',
             (
-              <span>
+              <span key="permit-windows">
                 Permit review windows: Loudoun County ~2–4 weeks (
                 <a href="https://www.loudoun.gov/5823/LandMARC-Land-Management-Applications-Re" target="_blank" rel="noopener noreferrer">LandMARC</a>
                 ), Fairfax County ~3–5 weeks (FIDO), Prince William in a similar window.
