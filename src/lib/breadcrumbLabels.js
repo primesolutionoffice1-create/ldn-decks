@@ -8,6 +8,7 @@ export const SEGMENT_LABELS = {
   'blog': 'Blog',
   'insights': 'Insights',
   'showcase': 'Showcase',
+  'projects': 'Projects',
   'reviews': 'Reviews',
   'contact': 'Contact',
   'faqs': 'FAQs',

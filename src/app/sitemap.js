@@ -494,12 +494,20 @@ export default async function sitemap() {
                 freq: "monthly",
         }));
 
-        const projectPaths = publishedProjectCaseStudies().map((project) => ({
-                path: `/projects/${project.slug}`,
-                priority: 0.64,
-                lastMod: '2026-11-28',
-                freq: 'monthly',
-        }));
+        const projectPaths = [
+                {
+                        path: '/projects',
+                        priority: 0.62,
+                        lastMod: '2026-11-28',
+                        freq: 'monthly',
+                },
+                ...publishedProjectCaseStudies().map((project) => ({
+                        path: `/projects/${project.slug}`,
+                        priority: 0.64,
+                        lastMod: '2026-11-28',
+                        freq: 'monthly',
+                })),
+        ];
 
         const allPages = [...staticPages, ...localServicePaths, ...blogPaths, ...educationPaths, ...insightPaths, ...showcasePaths, ...projectPaths]
                 .filter(p => !isExcluded(p.path));

@@ -124,6 +124,8 @@ if (origin) {
   assert.match(moneyHtml, /<form[\s>]/i);
   assert.match(moneyHtml, /data-trust-block/);
 
+  const indexResponse = await fetch(new URL('/projects', origin), { redirect: 'manual' });
+  assert.equal(indexResponse.status, 200);
   const studyHtml = await (await fetch(new URL('/projects/new-composite-deck-ashburn', origin))).text();
   assert.match(studyHtml, /BUILD NEW COMPOSITE DECK/);
   assert.match(studyHtml, /Loudoun County/);
