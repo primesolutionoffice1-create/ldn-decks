@@ -29,8 +29,8 @@ const aboutFaqSchema = {
   "@type": "FAQPage",
   "@id": "https://ldndecks.com/about#faq",
   "mainEntity": [
-    { "@type": "Question", "name": "Who owns Loudoun Decks?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks was founded by Nicolae Zugrav. Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Loudoun County building permits are filed under Prime Solution." } },
-    { "@type": "Question", "name": "Is Loudoun Decks licensed and insured?", "acceptedAnswer": { "@type": "Answer", "text": `The published license is Virginia Class A Contractor License #2705191673. Verify the current record with Virginia DPOR. A current insurance certificate is not published on this page. ${PARTNER_SENTENCE}` } },
+    { "@type": "Question", "name": "Who owns Loudoun Decks?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks was founded by Nicolae Zugrav. Loudoun Decks is the public brand (d/b/a) of Prime Solution LLC. Virginia Class A contractor license #2705191673 held by Prime Solution LLC. Loudoun County building permits are filed under Prime Solution LLC." } },
+    { "@type": "Question", "name": "Is Loudoun Decks licensed and insured?", "acceptedAnswer": { "@type": "Answer", "text": `The published license is Virginia Class A contractor license #2705191673 held by Prime Solution LLC. Verify the current record with Virginia DPOR. A current insurance certificate is not published on this page. ${PARTNER_SENTENCE}` } },
     { "@type": "Question", "name": "What areas does Loudoun Decks serve?", "acceptedAnswer": { "@type": "Answer", "text": `Loudoun Decks serves ${formatServiceArea()}.` } },
     { "@type": "Question", "name": "What is Loudoun Decks' Google reviews?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks maintains a public Google review profile from Northern Virginia homeowners. Review text, dates, counts, and ratings should be verified directly on the public Google profile before quoting them." } },
     { "@type": "Question", "name": "What certifications does Loudoun Decks hold?", "acceptedAnswer": { "@type": "Answer", "text": "Loudoun Decks publishes verification paths for Trex, TimberTech, BBB, Houzz, Virginia DPOR license, and North American Deck and Railing Association (NADRA) profiles. Current profile details should be verified directly with each public source." } },
@@ -64,7 +64,7 @@ const aboutPageSchema = {
 export default function AboutPage() {
   return (
     <main>
-      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/about" name="About Loudoun Decks | Trusted Deck Builder Northern Virginia" description="Meet the team behind Loudoun Decks. Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Verify the Virginia DPOR record and public profile links." speakable />
+      <WebPageSchema dateModified="2026-11-01" url="https://ldndecks.com/about" name="About Loudoun Decks | Trusted Deck Builder Northern Virginia" description="Meet the team behind Loudoun Decks. Loudoun Decks is the public brand (d/b/a) of Prime Solution LLC. Virginia Class A contractor license #2705191673 held by Prime Solution LLC. Verify the Virginia DPOR record and public profile links." speakable />
       <JsonLd data={aboutFaqSchema} />
       <JsonLd data={aboutPageSchema} />
       <AboutHeader />
@@ -77,7 +77,7 @@ export default function AboutPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem', marginTop: '2rem' }}>Who operates Loudoun Decks</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>Official website: ldndecks.com (not loudoundecks.com, which is not affiliated with us).</p>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Loudoun Decks is operated by Prime Solution LLC (Virginia contractor license #2705191673). Loudoun County building permits are filed under Prime Solution.</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>Loudoun Decks is the public brand (d/b/a) of Prime Solution LLC. Virginia Class A contractor license #2705191673 held by Prime Solution LLC. Loudoun County building permits are filed under Prime Solution LLC.</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1.5rem' }}>Founded by a Builder, Not a Salesman</h2>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.5rem', marginBottom: '2rem' }}>

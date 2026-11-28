@@ -93,7 +93,7 @@ const pageFAQs = [
   },
   {
     q: "Is Loudoun Decks a licensed deck repair contractor in Loudoun County?",
-    a: "Loudoun Decks works under a Virginia Class A contractor license (Lic. #2705191673). Homeowners can verify our company profile, service area, and project documentation before approving repair work."
+    a: "Loudoun Decks is the public brand (d/b/a) of Prime Solution LLC. Virginia Class A contractor license #2705191673 held by Prime Solution LLC. Homeowners can verify the company profile, service area, and project documentation before approving repair work."
   }
 ];
 
