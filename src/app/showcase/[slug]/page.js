@@ -126,12 +126,14 @@ export async function generateMetadata({ params }) {
   if (!project) return { title: "Project Not Found", robots: { index: false, follow: false } };
 
   const { buildMetadata } = await import('@/lib/seo');
+  const isNoIndex = slug === 'rooftop-deck-washington-dc';
 
   return buildMetadata({
     path: `/showcase/${project.slug}`,
     title: `${project.title} in ${project.location} | LDN Decks`,
     description: `View our ${project.title.toLowerCase()} project in ${project.location}. Quality composite & wood construction by Loudoun Decks. Free estimates.`,
     image: project.image,
+    noIndex: isNoIndex
   });
 }
 

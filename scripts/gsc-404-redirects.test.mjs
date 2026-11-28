@@ -162,6 +162,13 @@ test('next.config redirects include every GSC mapping once, ahead of the slash s
   }
 });
 
+test('Washington DC rooftop showcase stays noindex and out of the sitemap', () => {
+  const seo = readFileSync(path.join(root, 'src/lib/seo.js'), 'utf8');
+  const sitemap = readFileSync(path.join(root, 'src/app/sitemap.js'), 'utf8');
+  assert.match(seo, /path === '\/showcase\/rooftop-deck-washington-dc'/);
+  assert.match(sitemap, /'\/showcase\/rooftop-deck-washington-dc'/);
+});
+
 test('redirect graph has no loops and GSC targets are canonical pages', async () => {
   const rules = await nextConfig.redirects();
   const apexRules = rules.filter((rule) => !rule.has);

@@ -137,8 +137,11 @@ async function checkSitemap() {
     return [];
   }
   const locs = [...xml.body.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => new URL(match[1]).pathname);
-  if (!locs.includes('/showcase/rooftop-deck-washington-dc')) {
-    fail('sitemap.xml is missing /showcase/rooftop-deck-washington-dc');
+  if (locs.includes('/showcase/rooftop-deck-washington-dc')) {
+    fail('sitemap.xml includes /showcase/rooftop-deck-washington-dc');
+  }
+  if (locs.length !== 411) {
+    fail(`sitemap.xml has ${locs.length} URLs, expected 411`);
   }
   const checked = await mapPool(locs, 8, async (pathname) => {
     const response = await request(pathname);
@@ -215,8 +218,8 @@ async function main() {
     req.on('error', reject);
     req.end();
   });
-  if (rooftop.status !== 200 || /noindex/i.test(rooftop.body)) {
-    fail(`rooftop showcase expected indexable 200, got ${rooftop.status} noindex=${/noindex/i.test(rooftop.body)}`);
+  if (rooftop.status !== 200 || rooftop.location || !/noindex/i.test(rooftop.body)) {
+    fail(`rooftop showcase expected noindex 200, got ${rooftop.status} location=${rooftop.location} noindex=${/noindex/i.test(rooftop.body)}`);
   }
 
   const sitemap = await checkSitemap();

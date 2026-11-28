@@ -122,8 +122,9 @@ const EXCLUDE_PATHS = [
   '/deck-builder-in-fairfax-county',
   '/deck-builder-in-prince-william-county',
   // Phase 1 Cleanup Exclusions
-  // /showcase/rooftop-deck-washington-dc is a live 200 project page (also in
-  // the image sitemap) and is emitted from showcaseData below.
+  // Washington DC is outside the service area. The page stays live and
+  // noindex, and is kept out of sitemap.xml. It remains in the image sitemap.
+  '/showcase/rooftop-deck-washington-dc',
   '/blog/trex-vs-timbertech-vs-azek',
 ];
 
