@@ -1,6 +1,7 @@
 import React from 'react';
 import JsonLd from './JsonLd';
 import { BUSINESS, ORG_ID } from '@/lib/business';
+import { withReviewSchema } from '@/lib/reviewSchema';
 
 const DEFAULT_AREA_SERVED = BUSINESS.areaServed.map(name => ({
   '@type': 'AdministrativeArea',
@@ -45,5 +46,5 @@ export default function ServiceSchema({
     }));
   }
 
-  return <JsonLd data={schema} />;
+  return <JsonLd data={withReviewSchema(schema)} />;
 }

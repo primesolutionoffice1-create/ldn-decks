@@ -7,6 +7,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import RelatedGuides from '@/components/RelatedGuides';
 import TrackedLink from '@/components/TrackedLink';
 import { ORG_ID } from '@/lib/business';
+import { withReviewSchema } from '@/lib/reviewSchema';
 import { SITE_URL } from '@/lib/seo';
 import { getVerifiedReviewSourceSnippets } from '@/lib/verifiedProof';
 import { buildCityProfile, servicePageTypes } from '@/data/localServicePages';
@@ -137,7 +138,7 @@ function schemaForPage({ city, service, path }) {
   const url = `${SITE_URL}${path}`;
   const faqs = buildFaqs(city, service);
 
-  const serviceSchema = {
+  const serviceSchema = withReviewSchema({
     '@context': 'https://schema.org',
     '@type': 'Service',
     '@id': `${url}#service`,
@@ -158,7 +159,7 @@ function schemaForPage({ city, service, path }) {
       '@type': 'Service',
       '@id': `${SITE_URL}${relatedUrl}#service`,
     })),
-  };
+  });
 
   const faqSchema = {
     '@context': 'https://schema.org',

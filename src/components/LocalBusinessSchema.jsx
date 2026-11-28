@@ -1,6 +1,7 @@
 import React from 'react';
 import JsonLd from './JsonLd';
 import { ORG_ID } from '@/lib/business';
+import { withReviewSchema } from '@/lib/reviewSchema';
 
 // City / county page schema.
 // Emits a Service node that REFERENCES the single canonical organization
@@ -23,5 +24,5 @@ export default function LocalBusinessSchema({ city, description, url, areaType =
     ...(url ? { url } : {}),
   };
 
-  return <JsonLd data={schema} />;
+  return <JsonLd data={withReviewSchema(schema)} />;
 }

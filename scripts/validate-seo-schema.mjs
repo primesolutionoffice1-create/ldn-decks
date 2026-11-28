@@ -2,6 +2,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { blogPosts } from '../src/lib/blogData.js';
 import { educationArticles } from '../src/lib/educationData.js';
+import { buildOrganizationSchema } from '../src/lib/business.js';
+import {
+  REVIEW_SCHEMA_CONFIG,
+  buildAggregateRating,
+  buildReviewNodes,
+  reviewSchemaErrors,
+  withReviewSchema,
+} from '../src/lib/reviewSchema.js';
 
 const appDir = path.resolve('src/app');
 const componentDir = path.resolve('src/components');
@@ -101,15 +109,89 @@ if (entityPolicyFiles.length) {
   fail(`Founder/entity policy regression. Use FOUNDER_ID / https://ldndecks.com/#founder and BUSINESS.founder.name instead of legacy #nick or simple Nick author schema:\n${entityPolicyFiles.join('\n')}`);
 }
 
-const reviewSchemaFiles = schemaTypeFiles.filter(file => {
-  const source = fs.readFileSync(file, 'utf8');
+const REVIEW_SCHEMA_MODULE = path.resolve('src/lib/reviewSchema.js');
+
+function sourceDeclaresReviewType(source) {
   return /['"]@type['"]\s*:\s*['"]AggregateRating['"]/.test(source)
     || /['"]@type['"]\s*:\s*['"]Review['"]/.test(source)
     || /(?:^|[,{]\s*)['"]review['"]\s*:/.test(source);
+}
+
+const reviewSchemaFiles = schemaTypeFiles.filter(file => {
+  if (path.resolve(file) === REVIEW_SCHEMA_MODULE) return false;
+  return sourceDeclaresReviewType(fs.readFileSync(file, 'utf8'));
 });
 
 if (reviewSchemaFiles.length) {
-  fail(`Review/AggregateRating JSON-LD policy regression. Keep visible review proof, but do not emit self-serving Review or AggregateRating schema unless policy-eligible and source-backed:\n${reviewSchemaFiles.join('\n')}`);
+  fail(`Review/AggregateRating JSON-LD may be defined only in src/lib/reviewSchema.js, and only from verified config values:\n${reviewSchemaFiles.join('\n')}`);
+}
+
+if (!fs.existsSync(REVIEW_SCHEMA_MODULE) || !sourceDeclaresReviewType(fs.readFileSync(REVIEW_SCHEMA_MODULE, 'utf8'))) {
+  fail('src/lib/reviewSchema.js must define the AggregateRating and Review builders.');
+}
+
+const reviewConfigErrors = reviewSchemaErrors(REVIEW_SCHEMA_CONFIG);
+if (reviewConfigErrors.length) {
+  fail(`REVIEW_SCHEMA_CONFIG is incomplete or invalid. Fix src/lib/reviewSchema.js or clear the unfinished values:\n${reviewConfigErrors.join('\n')}`);
+}
+
+const publishedAggregate = buildAggregateRating();
+const publishedReviews = buildReviewNodes();
+const organizationSchema = buildOrganizationSchema();
+const configIsEmpty = REVIEW_SCHEMA_CONFIG.ratingValue == null
+  && REVIEW_SCHEMA_CONFIG.reviewCount == null
+  && REVIEW_SCHEMA_CONFIG.reviews.length === 0;
+
+if (configIsEmpty) {
+  if (publishedAggregate || publishedReviews.length || organizationSchema.aggregateRating || organizationSchema.review) {
+    fail('Empty REVIEW_SCHEMA_CONFIG must not emit AggregateRating or Review JSON-LD.');
+  }
+} else if (!organizationSchema.aggregateRating && !organizationSchema.review) {
+  fail('Filled REVIEW_SCHEMA_CONFIG did not attach review schema to the organization node.');
+}
+
+const sampleReviewConfig = {
+  ratingValue: 5,
+  reviewCount: 1,
+  bestRating: 5,
+  worstRating: 1,
+  sourceName: 'Example profile',
+  sourceUrl: 'https://example.com/reviews',
+  reviews: [
+    {
+      author: 'Example Homeowner',
+      datePublished: '2026-01-15',
+      reviewBody: 'Example quote that is not published.',
+      ratingValue: 5,
+      sourceUrl: 'https://example.com/reviews/1',
+    },
+  ],
+};
+const sampleAggregate = buildAggregateRating(sampleReviewConfig);
+const sampleReviews = buildReviewNodes(sampleReviewConfig);
+const sampleService = withReviewSchema({ '@type': 'Service', name: 'Deck building' }, sampleReviewConfig);
+if (!sampleAggregate || sampleAggregate['@type'] !== 'AggregateRating' || sampleAggregate.ratingValue !== 5 || sampleAggregate.reviewCount !== 1) {
+  fail('AggregateRating builder did not emit a valid sample node.');
+}
+if (sampleReviews.length !== 1 || sampleReviews[0]['@type'] !== 'Review' || sampleReviews[0].author?.['@type'] !== 'Person' || sampleReviews[0].reviewRating?.['@type'] !== 'Rating') {
+  fail('Review builder did not emit a valid sample node.');
+}
+if (sampleService.aggregateRating?.['@type'] !== 'AggregateRating' || sampleService.aggregateRating.ratingValue !== 5 || sampleService.review?.[0]?.['@type'] !== 'Review') {
+  fail('withReviewSchema did not attach the sample aggregate rating and reviews.');
+}
+if (buildAggregateRating({ ...sampleReviewConfig, sourceUrl: null }) || buildReviewNodes({ ...REVIEW_SCHEMA_CONFIG, reviews: [{ author: '', reviewBody: '', ratingValue: null }] }).length) {
+  fail('Review schema builders emitted a node from an invalid config.');
+}
+
+for (const file of [
+  'src/lib/business.js',
+  'src/components/ServiceSchema.jsx',
+  'src/components/LocalBusinessSchema.jsx',
+  'src/components/LocalServicePage.jsx',
+]) {
+  if (!fs.readFileSync(path.resolve(file), 'utf8').includes('withReviewSchema')) {
+    fail(`${file} must attach review schema through withReviewSchema().`);
+  }
 }
 
 function assertSourceContains(file, snippets, label) {
