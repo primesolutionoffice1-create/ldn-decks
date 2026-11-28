@@ -140,8 +140,11 @@ async function checkSitemap() {
   if (locs.includes('/showcase/rooftop-deck-washington-dc')) {
     fail('sitemap.xml includes /showcase/rooftop-deck-washington-dc');
   }
-  if (locs.length !== 411) {
-    fail(`sitemap.xml has ${locs.length} URLs, expected 411`);
+  if (locs.length !== 413) {
+    fail(`sitemap.xml has ${locs.length} URLs, expected 413 (411 from the redirect pass plus /projects and /projects/new-composite-deck-ashburn)`);
+  }
+  for (const projectPath of ['/projects', '/projects/new-composite-deck-ashburn']) {
+    if (!locs.includes(projectPath)) fail(`sitemap.xml is missing ${projectPath}`);
   }
   const checked = await mapPool(locs, 8, async (pathname) => {
     const response = await request(pathname);
