@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     "q": "How are permits and HOA packages handled for Broadlands?",
-    "a": "Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope. The permit note used here is the one published on the Loudoun Decks homepage. Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. The same table lists Loudoun County plan review at 2–4 weeks through the LOLA online portal. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."
+    "a": "Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope. The permit note used here is the one published on the Loudoun Decks homepage. Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. The same table lists Loudoun County plan review at 2–4 weeks through the LandMARC online portal. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."
   },
   {
     "q": "Which documented project does this Broadlands page cite?",
@@ -143,7 +143,7 @@ export default function BroadlandsDeckBuilderPage() {
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: '2rem 0 1rem' }}>Permits and HOA paperwork</h2>
           <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"Loudoun Decks identifies permit triggers and structural-drawing needs, and prepares the county building permit and the HOA architectural review package so the two can run concurrently. What the written scope includes is confirmed in that scope."}</p>
-          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>{"The permit note used here is the one published on the Loudoun Decks homepage. Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. The same table lists Loudoun County plan review at 2–4 weeks through the LOLA online portal. Loudoun Decks handles every submission, so the homeowner does not log into the county portal."}</p>
+          <p style={{ marginBottom: '1rem', lineHeight: 1.7 }}>The permit note used here is the one published on the Loudoun Decks homepage. Decks over 256 sqft, attached to a house, or more than 16.5″ above grade require a permit. The same table lists Loudoun County plan review at 2–4 weeks through the <a href="https://www.loudoun.gov/5823/LandMARC-Land-Management-Applications-Re" target="_blank" rel="noopener noreferrer">LandMARC online portal</a>. Loudoun Decks handles every submission, so the homeowner does not log into the county portal.</p>
           <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>
             <Link href="/" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Homepage permit table</Link>
           </p>

@@ -31,13 +31,19 @@ export default function ProcessPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: 14 }}>
           {[
             'End-to-end timeline: typically 6–10 weeks from signed contract to final inspection — 2–4 weeks of permitting, then 1–2 weeks of construction for a standard deck.',
-            'Permit review windows: Loudoun County ~2–4 weeks (LOLA), Fairfax County ~3–5 weeks (FIDO), Prince William in a similar window.',
+            (
+              <span key="permit-windows">
+                Permit review windows: Loudoun County ~2–4 weeks (
+                <a href="https://www.loudoun.gov/5823/LandMARC-Land-Management-Applications-Re" target="_blank" rel="noopener noreferrer">LandMARC</a>
+                ), Fairfax County ~3–5 weeks (FIDO), Prince William in a similar window.
+              </span>
+            ),
             'Footings are poured to Virginia\u2019s 30-inch frost depth on undisturbed soil — the detail that keeps frames from heaving in January.',
             'Joists are sized to the decking manufacturer\u2019s deflection tables — composite boards often need tighter spacing than the generic wood chart.',
             'HOA-governed communities (Brambleton, Broadlands, Ashburn Village, South Riding and more): the ARC package can run concurrently with the county permit.',
             'Every project closes with a walkthrough, care guidance and written labor warranty terms — Virginia DPOR Class A License #2705191673.',
           ].map((fact) => (
-            <article key={fact} style={{ border: '1px solid #e5e7eb', borderRadius: 8, background: '#fafafa', padding: 18 }}>
+            <article key={typeof fact === 'string' ? fact : 'permit-windows'} style={{ border: '1px solid #e5e7eb', borderRadius: 8, background: '#fafafa', padding: 18 }}>
               <p style={{ margin: 0, color: '#444', lineHeight: 1.6 }}>{fact}</p>
             </article>
           ))}

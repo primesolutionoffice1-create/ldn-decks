@@ -70,7 +70,7 @@ export default function TeamGrid() {
       "Ledger flashing and deck-to-house attachment",
       "Northern Virginia residential building codes",
       "Fairfax County deck permitting",
-      "Loudoun County LOLA portal permitting",
+      "Loudoun County LandMARC portal permitting",
       "Prince William County deck permitting",
       "HOA architectural review submissions",
     ],
