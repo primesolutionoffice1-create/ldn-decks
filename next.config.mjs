@@ -1,17 +1,40 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { gsc404Redirects } from './src/lib/gsc404Redirects.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// Host-specific copies go before the www catch-all so www.ldndecks.com/old
+// lands on the apex target in one hop when this app sees the www host.
+const gscWwwRedirects = gsc404Redirects.map(({ source, destination }) => ({
+  source,
+  has: [{ type: 'host', value: 'www.ldndecks.com' }],
+  destination: `https://ldndecks.com${destination}`,
+  statusCode: 301,
+}));
+
+const gscPathRedirects = gsc404Redirects.map(({ source, destination }) => ({
+  source,
+  destination,
+  statusCode: 301,
+}));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: false,
+  // Next otherwise inserts `/:path+/` -> `/:path+` at the front of redirects().
+  // That 308 runs before every legacy rule, so /old/ becomes /old and then the
+  // real destination (two hops). Skipping it lets each rule match /old and
+  // /old/ itself — Next makes the trailing slash optional on redirect sources.
+  // The same strip is appended at the end of redirects() for every other URL.
+  skipTrailingSlashRedirect: true,
   outputFileTracingRoot: __dirname,
   turbopack: {
     root: __dirname,
   },
   async redirects() {
     return [
+      ...gscWwwRedirects,
       { source: '/review-request', destination: 'https://ldndecks.com/review', statusCode: 301 },
       // Primary Domain Normalization (www -> non-www)
       // Moving this to the top ensures 1-hop redirection for Googlebot.
@@ -464,10 +487,19 @@ const nextConfig = {
       { source: '/custom-fence-heavy-gate-falls-church-va', destination: '/showcase/fence-gate-falls-church', permanent: true },
       { source: '/deck-ledger-board-flashing', destination: '/education/ledger-board-flashing-deck-attachment-virginia', permanent: true },
 
+      // GSC 404 history (2026-11-27). Exact paths only. High, medium, and the
+      // one low-confidence Yorkshire URL. /drafts and the orphaned wp-content
+      // images are intentionally absent — they stay 410 / 403.
+      ...gscPathRedirects,
 
       // Single-hop www → non-www canonical redirect
       // Eliminates 2-hop chain: http://www → https://www → https://non-www
       // Now: http://www → https://non-www (1 hop)
+
+      // Trailing-slash strip for URLs that are not redirect sources above.
+      // Must stay last. With skipTrailingSlashRedirect, earlier rules already
+      // match their own /path and /path/ forms in one hop.
+      { source: '/:path+/', destination: '/:path+', permanent: true },
     ];
   },
   async headers() {

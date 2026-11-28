@@ -119,7 +119,9 @@
         "scaling:blocker-exit": "node scripts/generate-scaling-blocker-exit-checklist.mjs",
         "scaling:blocker-exit:validate": "node scripts/validate-scaling-blocker-exit-checklist.mjs",
         "seo:verify-ahrefs": "node scripts/verify-ahrefs-analytics.mjs",
-        "verify:blog-routes": "node scripts/verify-blog-routes.mjs"
+        "verify:blog-routes": "node scripts/verify-blog-routes.mjs",
+        "test:gsc-redirects": "node --test scripts/gsc-404-redirects.test.mjs",
+        "verify:gsc-redirects": "node scripts/verify-gsc-404-redirects.mjs"
     },
     "dependencies": {
         "@vercel/analytics": "^1.6.1",
