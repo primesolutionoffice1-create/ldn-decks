@@ -16,7 +16,7 @@ import CityLeadFormSection from '@/components/CityLeadFormSection';
 import CountyHubLinks from '@/components/CountyHubLinks';
 
 const PAGE_TITLE = 'Deck Builders in Manassas, VA | Loudoun Decks';
-const PAGE_DESCRIPTION = 'Manassas and Prince William deck builders for Old Town, Wellington, Bull Run, and Sudley Springs. Quoted open decks $61–$102 per sq ft, most $64–$68. Written estimate. Call (571) 655-7207.';
+const PAGE_DESCRIPTION = 'Manassas and Prince William deck builders for Old Town, Wellington, Bull Run, and Sudley Springs. Written estimate. Call (571) 655-7207.';
 const PAGE_UPDATED = '2026-11-25';
 
 // buildMetadata trims descriptions to 155 characters. The published title and

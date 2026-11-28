@@ -7,7 +7,7 @@ import WebPageSchema from '@/components/WebPageSchema';
 import { calculatorFaqs } from '@/data/deckCostCalculatorFaqs';
 
 const PAGE_TITLE = 'Deck Cost Calculator Northern Virginia | Loudoun Decks';
-const PAGE_DESCRIPTION = 'Loudoun Decks 2026 quoted prices: a new open deck about $61–$102 per sq ft, most around $64–$68. Use the planner to record size and options, then request a written estimate.';
+const PAGE_DESCRIPTION = 'Northern Virginia deck cost planner. Open decks quoted $61–$102 per sq ft, most $64–$68. Request a written Loudoun Decks estimate.';
 
 const metadataBase = buildMetadata({
   path: '/deck-cost-calculator',

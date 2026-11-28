@@ -34,8 +34,8 @@ import styles from "./page.module.css";
 import { buildMetadata } from "@/lib/seo";
 import { buildVideoObjectSchema } from "@/lib/business";
 
-const PAGE_TITLE = "Deck Contractors & Builders in Northern Virginia | Loudoun Decks";
-const PAGE_DESCRIPTION = "Deck contractors and builders for Loudoun, Fairfax, and Prince William. Quoted open decks $61–$102 per sq ft, most $64–$68. Written estimate. Call (571) 655-7207.";
+const PAGE_TITLE = "Deck Contractors in Northern Virginia | Loudoun Decks";
+const PAGE_DESCRIPTION = "Deck contractors and builders for Loudoun, Fairfax, and Prince William. Quoted open decks $61–$102 per sq ft, most $64–$68. Written estimate. (571) 655-7207.";
 const PAGE_UPDATED = "2026-11-25";
 
 // buildMetadata trims titles to 60 characters and descriptions to 155.

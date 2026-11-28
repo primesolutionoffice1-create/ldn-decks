@@ -17,7 +17,7 @@ import PremiumCityLeadQualifier from '@/components/PremiumCityLeadQualifier';
 import CountyHubLinks from '@/components/CountyHubLinks';
 
 const PAGE_TITLE = 'Deck Builders in Fairfax, VA | Loudoun Decks';
-const PAGE_DESCRIPTION = 'Fairfax VA deck builders for the City of Fairfax and Fairfax County. Quoted open decks $61–$102 per sq ft, most $64–$68. Permits, HOA packets, and a written estimate. Call (571) 655-7207.';
+const PAGE_DESCRIPTION = 'Fairfax VA deck builders for the City of Fairfax and Fairfax County. Quoted open decks $61–$102 per sq ft. Written estimate. Call (571) 655-7207.';
 const PAGE_UPDATED = '2026-11-25';
 
 // buildMetadata trims descriptions to 155 characters. The published title and

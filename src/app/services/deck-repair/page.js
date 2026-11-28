@@ -20,7 +20,7 @@ import DecisionSupportSection from '@/components/DecisionSupportSection';
 import ArticleSchema from '@/components/ArticleSchema';
 
 const PAGE_TITLE = 'Deck Repair Near Me in Northern Virginia | Loudoun Decks';
-const PAGE_DESCRIPTION = 'Deck repair near you in Loudoun, Fairfax, and Prince William. Loudoun Decks inspects rot, railings, and ledgers first. Trex resurfacing was quoted $9,020–$12,678. Written estimate. Call (571) 655-7207.';
+const PAGE_DESCRIPTION = 'Deck repair in Loudoun, Fairfax, and Prince William. Inspection of rot, railings, and ledgers. Written estimate. Call (571) 655-7207.';
 const PAGE_UPDATED = '2026-11-25';
 
 // buildMetadata trims descriptions to 155 characters. The published title and

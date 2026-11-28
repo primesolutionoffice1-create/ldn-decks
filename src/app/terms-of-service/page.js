@@ -4,7 +4,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata = buildMetadata({
   path: '/terms-of-service',
   title: 'Terms of Service | LDN Decks',
-  description: 'Terms and conditions for using Loudoun Decks services.',
+  description: 'Terms of service for the Loudoun Decks website and for deck projects in Northern Virginia, including estimates and contracts.',
   image: '/social/terms-of-service-social.png',
 });
 
