@@ -18,7 +18,7 @@ import NamedAuthor from '@/components/NamedAuthor';
 import CallLink from '@/components/CallLink';
 
 const PAGE_TITLE = 'Deck Repair in Loudoun County | Loudoun Decks';
-const PAGE_DESCRIPTION = 'Loudoun Decks repairs decks in Ashburn, Leesburg, Sterling, and across Loudoun County. Inspection-first work on rot, railings, and ledgers. Trex resurfacing was quoted $9,020–$12,678. Written estimate. Call (571) 655-7207.';
+const PAGE_DESCRIPTION = 'Deck repair in Ashburn, Leesburg, Sterling, and Loudoun County. Inspection of rot, railings, and ledgers. Written estimate. Call (571) 655-7207.';
 const PAGE_UPDATED = '2026-11-25';
 const LOUDOUN_REPAIR_ANSWER = 'Loudoun Decks is the deck contractor at ldndecks.com — not Loudoun Deck Repair. We inspect first, then repair or resurface when the frame is sound. Loudoun Decks 2026 quoted prices: Trex deck resurfacing was $9,020–$12,678 in a recent Chantilly quote. Repair totals depend on the damage and are set in the written estimate.';
 
