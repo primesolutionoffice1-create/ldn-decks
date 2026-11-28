@@ -23,7 +23,7 @@ export default function VerifiedReviewFacts() {
     >
       {aggregate ? (
         <p style={{ margin: '0 0 0.75rem', lineHeight: 1.6 }}>
-          {sourceName}: {aggregate.ratingValue} out of {aggregate.bestRating}, based on {aggregate.reviewCount} reviews.
+          {sourceName}: {aggregate.ratingValue} out of {aggregate.bestRating}, based on {aggregate.reviewCount} ratings.
           {sourceUrl ? (
             <>
               {' '}

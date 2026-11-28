@@ -150,6 +150,19 @@ if (configIsEmpty) {
   fail('Filled REVIEW_SCHEMA_CONFIG did not attach review schema to the organization node.');
 }
 
+if (publishedAggregate) {
+  const attached = organizationSchema.aggregateRating;
+  if (!attached || attached.ratingValue !== publishedAggregate.ratingValue || attached.reviewCount !== publishedAggregate.reviewCount || attached.bestRating !== 5 || attached.worstRating !== 1) {
+    fail('Organization aggregateRating does not match REVIEW_SCHEMA_CONFIG.');
+  }
+  if (REVIEW_SCHEMA_CONFIG.sourceName !== 'Google' || REVIEW_SCHEMA_CONFIG.sourceUrl !== 'https://www.google.com/maps/place/Loudoun+Decks/') {
+    fail('Aggregate rating source must stay the Google Business Profile URL already used in BUSINESS.sameAs.');
+  }
+}
+if (publishedReviews.length === 0 && organizationSchema.review) {
+  fail('Empty reviews list must not emit Review JSON-LD.');
+}
+
 const sampleReviewConfig = {
   ratingValue: 5,
   reviewCount: 1,

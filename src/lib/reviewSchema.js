@@ -1,23 +1,23 @@
 // Single source for Review and AggregateRating JSON-LD.
 //
-// The repository does not currently record a verified ratingValue, reviewCount,
-// reviewer name, or review quote. Public profile pages link out to Google, Yelp,
-// BBB, and Houzz and tell readers to verify the live count. Historical audit
-// notes that mention a rating are not a source. Leave this config empty until
-// each value is copied from a verified public profile or an owner evidence packet.
+// Aggregate numbers below were checked on 2026-11-27 via Google Places for the
+// Google Business Profile "Loudoun Decks", 13704 Winding Oak Cir, Centreville VA
+// 20121: rating 5.0 from 53 ratings. Refresh ratingValue and reviewCount when
+// that public count changes. sourceUrl is the Google Maps place URL already
+// used in BUSINESS.sameAs and Testimonials.
 //
-// buildAggregateRating() and buildReviewNodes() return null / [] while the
-// config is empty, so no Review or AggregateRating node is rendered.
-// withReviewSchema() returns the original node unchanged in that case.
+// reviews stays empty until a quote, reviewer name, and source URL are copied
+// from that profile. No Review nodes are emitted while it is empty.
+// withReviewSchema() adds aggregateRating only when this config validates.
 
 export const REVIEW_SCHEMA_CONFIG = {
-  ratingValue: null,
-  reviewCount: null,
+  // Google Places, checked 2026-11-27. Refresh with the live Google rating.
+  ratingValue: 5,
+  reviewCount: 53,
   bestRating: 5,
   worstRating: 1,
-  // Required together with the numbers above. Not emitted on their own.
-  sourceName: null,
-  sourceUrl: null,
+  sourceName: 'Google',
+  sourceUrl: 'https://www.google.com/maps/place/Loudoun+Decks/',
   reviews: [
     // {
     //   author: 'Name as published on the source',
