@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { buildAggregateRating, buildReviewNodes } from '../src/lib/reviewSchema.js';
 
 const origin = process.env.SEO_AUDIT_ORIGIN || 'http://127.0.0.1:3107';
 const canonicalOrigin = 'https://ldndecks.com';
@@ -41,7 +42,14 @@ for (const path of new Set([...paths, ...samplePaths])) {
   assert.ok(service && types(service).includes('Service'), `${path}: missing local Service`);
   assert.equal(service.provider?.['@id'], organizationId, `${path}: incorrect provider`);
   assert.ok(service.areaServed?.name, `${path}: missing service area`);
-  assert.ok(!nodes.some((node) => types(node).some((type) => ['Review', 'AggregateRating'].includes(type))), `${path}: review schema regression`);
+  const expectedAggregate = Boolean(buildAggregateRating());
+  const expectedReviews = buildReviewNodes().length > 0;
+  const hasReviewSchema = nodes.some((node) => types(node).some((type) => ['Review', 'AggregateRating'].includes(type)));
+  if (!expectedAggregate && !expectedReviews) {
+    assert.ok(!hasReviewSchema, `${path}: review schema emitted while REVIEW_SCHEMA_CONFIG is empty`);
+  } else if (expectedAggregate) {
+    assert.equal(service.aggregateRating?.['@type'], 'AggregateRating', `${path}: service is missing the configured aggregate rating`);
+  }
   results.push({ path, provider: service.provider['@id'], area: service.areaServed.name });
 }
 console.log(JSON.stringify({ status: 'PASS', origin, checked: results.length, results }, null, 2));

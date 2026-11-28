@@ -1,8 +1,11 @@
 import React from 'react';
 
 /**
- * RatingBadge — Shows public Google review count as visible trust content only.
- * AggregateRating schema is intentionally not emitted for self-serving reviews.
+ * RatingBadge — Shows the public Google review profile as visible trust content.
+ * Numeric AggregateRating JSON-LD is not hardcoded here. It is emitted only by
+ * withReviewSchema() in src/lib/reviewSchema.js, and only after that config
+ * holds a verified ratingValue and reviewCount. VerifiedReviewFacts renders
+ * the same config on the page so the markup matches visible text.
  */
 export default function RatingBadge() {
   return (

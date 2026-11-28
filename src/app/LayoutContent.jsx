@@ -11,6 +11,7 @@ import FloatingCallButton from "../components/FloatingCallButton";
 import StickyMobileCTA from "../components/StickyMobileCTA";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { installAttributionDebug } from "../lib/attribution-debug";
+import VerifiedReviewFacts from "../components/VerifiedReviewFacts";
 
 export default function LayoutContent({ children }) {
   const pathname = usePathname();
@@ -29,13 +30,19 @@ export default function LayoutContent({ children }) {
   if (isThankYouPage) {
     return (
       <main id="main">
+        <VerifiedReviewFacts />
         {children}
       </main>
     );
   }
 
   if (isFocusedLandingPage) {
-    return children;
+    return (
+      <>
+        <VerifiedReviewFacts />
+        {children}
+      </>
+    );
   }
 
   return (
@@ -44,6 +51,7 @@ export default function LayoutContent({ children }) {
       <Header />
       <Breadcrumbs />
       <main id="main">
+        <VerifiedReviewFacts />
         {children}
       </main>
       <Footer />

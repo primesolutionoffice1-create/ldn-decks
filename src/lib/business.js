@@ -1,5 +1,6 @@
 // Single source of truth for business identity.
 // All org-level Schema.org JSON-LD must derive from this module.
+import { withReviewSchema } from './reviewSchema.js';
 
 export const BUSINESS = {
   name: 'Loudoun Decks',
@@ -162,10 +163,9 @@ export const BUSINESS = {
     // explicitly represented vs the organization.
     sameAs: [],
   },
-  // Do not add individual review excerpts here unless they are copied from a
-  // verified public profile or owner-supplied evidence packet. Keeping this
-  // empty prevents accidentally publishing fabricated customer stories.
-  reviews: [],
+  // Review and AggregateRating JSON-LD live in src/lib/reviewSchema.js.
+  // That module renders nothing until ratingValue, reviewCount, and any
+  // review quotes are copied from a verified source. Do not hardcode them here.
 };
 
 export const ORG_ID = `${BUSINESS.url}/#organization`;
@@ -228,7 +228,7 @@ export function buildVideoObjectSchema() {
 // Builds the full GeneralContractor JSON-LD object.
 // Use this once in the root layout. All other surfaces should reference {"@id": ORG_ID} only.
 export function buildOrganizationSchema() {
-  return {
+  return withReviewSchema({
     '@context': 'https://schema.org',
     '@type': 'GeneralContractor',
     '@id': ORG_ID,
@@ -305,7 +305,7 @@ export function buildOrganizationSchema() {
         ? { sameAs: BUSINESS.founder.sameAs }
         : {}),
     },
-  };
+  });
 }
 
 // Standalone helper for Article / NamedAuthor components — emit only the
