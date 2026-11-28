@@ -35,7 +35,7 @@ export default function ProcessPage() {
             'Footings are poured to Virginia\u2019s 30-inch frost depth on undisturbed soil — the detail that keeps frames from heaving in January.',
             'Joists are sized to the decking manufacturer\u2019s deflection tables — composite boards often need tighter spacing than the generic wood chart.',
             'HOA-governed communities (Brambleton, Broadlands, Ashburn Village, South Riding and more): the ARC package can run concurrently with the county permit.',
-            'Every project closes with a walkthrough, care guidance and written labor warranty terms — Virginia DPOR Class A License #2705191673.',
+            'Every project closes with a walkthrough, care guidance and written labor warranty terms. Virginia Class A contractor license #2705191673 held by Prime Solution LLC.',
           ].map((fact) => (
             <article key={fact} style={{ border: '1px solid #e5e7eb', borderRadius: 8, background: '#fafafa', padding: 18 }}>
               <p style={{ margin: 0, color: '#444', lineHeight: 1.6 }}>{fact}</p>

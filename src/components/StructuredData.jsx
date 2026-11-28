@@ -6,10 +6,15 @@ import {
 import JsonLd from './JsonLd';
 
 export default function StructuredData() {
+  const organization = {
+    ...buildOrganizationSchema(),
+    // Public brand stays on `name` (Loudoun Decks). legalName is the contracting entity.
+    legalName: 'Prime Solution LLC',
+  };
   const graph = {
     '@context': 'https://schema.org',
     '@graph': [
-      buildOrganizationSchema(),
+      organization,
       buildWebSiteSchema(),
     ],
   };

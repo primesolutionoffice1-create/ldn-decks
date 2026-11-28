@@ -11,7 +11,7 @@ if (!LICENSE_NUMBER) {
   throw new Error('Virginia Class A license number is missing from site identity.');
 }
 
-const CONTRACTOR_FOOTER_LINE = `${BUSINESS.name} is a Virginia Class A contractor, license #${LICENSE_NUMBER}, at ${BUSINESS.address.streetAddress}, ${BUSINESS.address.addressLocality}, ${BUSINESS.address.addressRegion} ${BUSINESS.address.postalCode}.`;
+const CONTRACTOR_FOOTER_LINE = `Virginia Class A contractor license #${LICENSE_NUMBER} held by Prime Solution LLC. ${BUSINESS.name} is the public brand (d/b/a). Office: ${BUSINESS.address.streetAddress}, ${BUSINESS.address.addressLocality}, ${BUSINESS.address.addressRegion} ${BUSINESS.address.postalCode}.`;
 
 const PhoneIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

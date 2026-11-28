@@ -75,7 +75,7 @@ export default function StaffordCountyPage() {
         answer="Loudoun Decks plans and builds custom decks, screened porches, and outdoor living projects for Stafford County homeowners, including Stafford, Aquia Harbour, Falmouth, Garrisonville, Brooke, Widewater, and Embrey Mill. Stafford projects start with the county permit, the site conditions, and a written estimate."
         facts={[
           'Service area includes Stafford County, VA, from the company service-area list.',
-          'License: VA Class A Contractor License #2705191673. Verify current status with Virginia DPOR.',
+          'License: Virginia Class A contractor license #2705191673 held by Prime Solution LLC. Verify current status with Virginia DPOR.',
         ]}
         links={[
           { href: '/get-estimate', label: 'Request a Stafford estimate' },

@@ -279,7 +279,7 @@ export default function DeckBuilderNorthernVirginiaPage() {
       />
       <GeoAnswerBlock
         question="Who is the deck builder for Northern Virginia?"
-        answer={`${BUSINESS.name} (${BUSINESS.alternateName}) designs and builds custom decks for homeowners in ${BUSINESS.areaServed.join(', ')}. The company is a Virginia Class A contractor, license #2705191673, based at ${BUSINESS.address.streetAddress}, ${BUSINESS.address.addressLocality}, ${BUSINESS.address.addressRegion} ${BUSINESS.address.postalCode}. A written estimate is the next step after the property, scope, and county requirements are reviewed.`}
+        answer={`${BUSINESS.name} (${BUSINESS.alternateName}) is the public brand (d/b/a) of Prime Solution LLC and designs and builds custom decks for homeowners in ${BUSINESS.areaServed.join(', ')}. Virginia Class A contractor license #2705191673 held by Prime Solution LLC. Office: ${BUSINESS.address.streetAddress}, ${BUSINESS.address.addressLocality}, ${BUSINESS.address.addressRegion} ${BUSINESS.address.postalCode}. A written estimate is the next step after the property, scope, and county requirements are reviewed.`}
         facts={[
           `Phone: (571) 655-7207`,
           `License: ${BUSINESS.founder.hasCredential}`,

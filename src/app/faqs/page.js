@@ -23,7 +23,7 @@ export default function FAQPage() {
       <section data-speakable="true" style={{ background: '#fff3e0', borderLeft: '4px solid var(--color-primary)', padding: '1.5rem 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1.5rem' }}>
           <p style={{ fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.05rem' }}>Quick Answer</p>
-          <p data-speakable style={{ margin: 0, lineHeight: 1.65 }}>{SERVICE_AREA_FAQ_ANSWER} Loudoun Decks is a Virginia Class A contractor, license #2705191673, and builds custom composite decks, screened porches, pergolas, and outdoor living spaces. The written estimate names the scope, the product, and the permit office for that property.</p>
+          <p data-speakable style={{ margin: 0, lineHeight: 1.65 }}>{SERVICE_AREA_FAQ_ANSWER} Loudoun Decks is the public brand (d/b/a) of Prime Solution LLC. Virginia Class A contractor license #2705191673 held by Prime Solution LLC. Loudoun Decks builds custom composite decks, screened porches, pergolas, and outdoor living spaces. The written estimate names the scope, the product, and the permit office for that property.</p>
         </div>
       </section>
       <FAQCategorized />
@@ -39,7 +39,7 @@ export default function FAQPage() {
             'The schedule depends on the scope and the permit office. The estimate states the timeline for that project.',
             'Footing depth follows the code that applies to the property. Confirm it on the plans, not from a ZIP code.',
             'Manufacturer warranty terms vary by product line. Verify the current warranty for the product named in the estimate.',
-            'Licensed and verifiable: Virginia DPOR Class A Contractor License #2705191673.',
+            'Licensed and verifiable: Virginia Class A contractor license #2705191673 held by Prime Solution LLC.',
           ].map((fact) => (
             <article key={fact} style={{ border: '1px solid #e5e7eb', borderRadius: 8, background: '#fafafa', padding: 18 }}>
               <p style={{ margin: 0, color: '#444', lineHeight: 1.6 }}>{fact}</p>

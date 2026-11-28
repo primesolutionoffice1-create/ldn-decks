@@ -30,7 +30,7 @@ export const metadata = buildMetadata({
 const faqs = [
   {
     "q": "Who builds decks in Broadlands, VA?",
-    "a": "Loudoun Decks LLC is a Centreville-based residential deck contractor and a Virginia Class A contractor (DPOR license #2705191673), owned by Nicolae (Nick) Zugrav. Broadlands is in eastern Loudoun County and is planned separately from Ashburn."
+    "a": "Loudoun Decks is the public brand (d/b/a) of Prime Solution LLC, a Centreville-based residential deck contractor owned by Nicolae (Nick) Zugrav. Virginia Class A contractor license #2705191673 held by Prime Solution LLC. Broadlands is in eastern Loudoun County and is planned separately from Ashburn."
   },
   {
     "q": "What should a deck project in Broadlands plan for?",
@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     "q": "How do I contact Loudoun Decks about a Broadlands deck?",
-    "a": "Broadlands is listed by name under Loudoun County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville. Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."
+    "a": "Broadlands is listed by name under Loudoun County on the areas page. Loudoun Decks serves Loudoun, Fairfax, and Prince William Counties, plus Arlington and Stafford. The office is in Centreville. Prime Solution LLC, d/b/a Loudoun Decks, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."
   }
 ];
 
@@ -84,7 +84,7 @@ export default function BroadlandsDeckBuilderPage() {
             <CallLink style={{ background: 'var(--color-primary)', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Call (571) 655-7207</CallLink>
             <Link href="/get-estimate" style={{ border: '2px solid #fff', color: '#fff', padding: '0.75rem 2rem', fontWeight: 600, borderRadius: 6, textDecoration: 'none' }}>Get Free Estimate</Link>
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Virginia Class A contractor, DPOR license #2705191673. Office: 13704 Winding Oak Cir, Centreville, VA 20121.</p>
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#aaa' }}>Virginia Class A contractor license #2705191673 held by Prime Solution LLC. Loudoun Decks is the public brand (d/b/a). Office: 13704 Winding Oak Cir, Centreville, VA 20121.</p>
         </div>
       </section>
       <CityLeadFormSection
@@ -164,7 +164,7 @@ export default function BroadlandsDeckBuilderPage() {
           </div>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>Contact</h2>
-          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{"Loudoun Decks LLC, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."}</p>
+          <p style={{ marginBottom: '2rem', lineHeight: 1.7 }}>{"Prime Solution LLC, d/b/a Loudoun Decks, 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207. Email office@ldndecks.com. Free consultations and estimates are available for homeowners in the service area. The contact page says the team calls back within 1 business day."}</p>
 
           <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem' }}>FAQ</h2>
           {faqs.map((faq) => (

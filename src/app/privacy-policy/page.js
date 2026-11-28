@@ -13,6 +13,11 @@ export default function PrivacyPolicy() {
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '100px 20px', lineHeight: '1.6', color: '#333' }}>
       <h1>Privacy Policy</h1>
       <p>Last Updated: November 2026</p>
+      <p>
+        This website is operated by Prime Solution LLC, doing business as Loudoun Decks.
+        Virginia Class A contractor license #2705191673 held by Prime Solution LLC.
+        Office: 13704 Winding Oak Cir, Centreville, VA 20121. Phone (571) 655-7207.
+      </p>
       
       <section style={{ marginTop: '40px' }}>
         <h2>1. Information We Collect</h2>
